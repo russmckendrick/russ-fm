@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Disc, Calendar, Users, ExternalLink, Globe, Music, User } from 'lucide-react';
+import { ArrowLeft, Clock, Disc, Calendar, Users, ExternalLink, Globe, Music } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface Album {
   release_name: string;
@@ -534,19 +535,18 @@ export function AlbumDetailPage() {
         <div className="mt-8">
           <Card>
             <CardHeader>
-              <CardTitle className="text-2xl flex items-center gap-2">
-                <Users className="h-6 w-6" />
-                Artist
+              <CardTitle className="text-2xl flex items-center gap-3">
+                <Avatar className="h-8 w-8">
+                  <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
+                  <AvatarFallback>{album.release_artist.charAt(0)}</AvatarFallback>
+                </Avatar>
+                {album.release_artist}
               </CardTitle>
             </CardHeader>
             <CardContent>
               {detailedAlbum.artists.map((artist, index) => 
                 artist.biography && (
                   <div key={index} className="space-y-4">
-                    <h3 className="text-lg font-semibold flex items-center gap-2">
-                      <User className="h-5 w-5" />
-                      {artist.name}
-                    </h3>
                     <p className="text-muted-foreground leading-relaxed">
                       {cleanDescription(artist.biography.substring(0, 500))}
                       {artist.biography.length > 500 && '...'}
