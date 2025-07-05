@@ -123,6 +123,15 @@ python main.py release 123456 --force-refresh
 
 # Interactive mode - manually select matches from search results
 python main.py release 123456 --force-refresh --interactive
+
+# Override search query for enrichment services
+python main.py release 123456 --search "Custom Album Title"
+
+# Override album artwork with custom image URL
+python main.py release 123456 --custom-cover "https://example.com/custom-cover.jpg"
+
+# Combine custom search and cover
+python main.py release 123456 --force-refresh --interactive --search "Tim's Listening Party Part Two" --custom-cover "https://spindizzyrecords.com/cdn/shop/files/custom-cover.jpg"
 ```
 
 #### Artist Information
@@ -214,6 +223,54 @@ Interactive mode is especially useful for:
 - Remasters vs original releases
 - Different regional releases
 - Compilation albums vs studio albums
+
+### Advanced Options
+
+#### Custom Search Override
+
+Use `--search` to override the default artist + album search query for enrichment services:
+
+```bash
+# When the album title doesn't match what's in streaming services
+python main.py release 123456 --search "Tim's Listening Party Part Two"
+
+# For compilations or special releases
+python main.py release 123456 --search "Now That's What I Call Music 80s"
+```
+
+This is particularly useful for:
+- Compilation albums with different titles across services
+- Special editions or reissues
+- Albums where the Discogs title doesn't match streaming service titles
+- Various artist compilations
+
+#### Custom Cover Artwork
+
+Use `--custom-cover` to override album artwork with a custom image URL:
+
+```bash
+# Use higher quality artwork from a record store
+python main.py release 123456 --custom-cover "https://spindizzyrecords.com/cdn/shop/files/custom-cover.jpg"
+
+# Use signed or special edition artwork
+python main.py release 123456 --custom-cover "https://example.com/signed-edition-cover.jpg"
+```
+
+This is perfect for:
+- Higher quality artwork than available on streaming services
+- Special edition covers (signed prints, colored vinyl variants)
+- Record store exclusive artwork
+- Custom or fan-made artwork
+- Correcting incorrect artwork matches
+
+#### Combining Advanced Options
+
+```bash
+# Use both custom search and custom cover for maximum control
+python main.py release 123456 --force-refresh --interactive \
+  --search "Custom Search Term" \
+  --custom-cover "https://example.com/custom-cover.jpg"
+```
 
 ### Global Options
 
