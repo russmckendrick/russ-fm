@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Disc, Calendar, Users, ExternalLink, Globe, Music } from 'lucide-react';
+import { ArrowLeft, Clock, Disc, Calendar, Users, ExternalLink, Globe, Music, User } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -531,51 +531,34 @@ export function AlbumDetailPage() {
 
       {/* Artist Biography */}
       {detailedAlbum?.artists && detailedAlbum.artists.some(artist => artist.biography) && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl flex items-center gap-2">
-              <Users className="h-6 w-6" />
-              About the Artist
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            {detailedAlbum.artists.map((artist, index) => 
-              artist.biography && (
-                <div key={index} className="space-y-4">
-                  <h3 className="text-lg font-semibold">{artist.name}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {cleanDescription(artist.biography.substring(0, 500))}
-                    {artist.biography.length > 500 && '...'}
-                  </p>
-                </div>
-              )
-            )}
-          </CardContent>
-        </Card>
+        <div className="mt-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-2xl flex items-center gap-2">
+                <Users className="h-6 w-6" />
+                Artist
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {detailedAlbum.artists.map((artist, index) => 
+                artist.biography && (
+                  <div key={index} className="space-y-4">
+                    <h3 className="text-lg font-semibold flex items-center gap-2">
+                      <User className="h-5 w-5" />
+                      {artist.name}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {cleanDescription(artist.biography.substring(0, 500))}
+                      {artist.biography.length > 500 && '...'}
+                    </p>
+                  </div>
+                )
+              )}
+            </CardContent>
+          </Card>
+        </div>
       )}
 
-      {/* Additional Images Gallery */}
-      {detailedAlbum?.images && detailedAlbum.images.length > 1 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">Additional Images</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {detailedAlbum.images.slice(1, 7).map((image, index) => (
-                <div key={index} className="aspect-square">
-                  <img
-                    src={image.uri500 || image.uri}
-                    alt={`${album.release_name} - Image ${index + 2}`}
-                    className="w-full h-full object-cover rounded-lg"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
     </div>
   );
 }

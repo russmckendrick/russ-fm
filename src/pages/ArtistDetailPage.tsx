@@ -359,28 +359,6 @@ export function ArtistDetailPage() {
         </CardContent>
       </Card>
 
-      {/* Additional Images Gallery */}
-      {artistData?.images && artistData.images.length > 1 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl">Artist Photos</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {artistData.images.slice(1, 7).map((image, index) => (
-                <div key={index} className="aspect-square">
-                  <img
-                    src={image.uri500 || image.uri}
-                    alt={`${artist.release_artist} - Photo ${index + 2}`}
-                    className="w-full h-full object-cover rounded-lg"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      )}
     </div>
   );
 }

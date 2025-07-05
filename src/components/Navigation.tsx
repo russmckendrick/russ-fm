@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./theme-toggle";
 import { Search, Music, Users } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 
@@ -59,6 +60,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 Artists
               </Button>
             </Link>
+            <ThemeToggle />
               </div>
             </div>
           </nav>
