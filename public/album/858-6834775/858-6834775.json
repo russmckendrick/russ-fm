@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1168829355",
+  "apple_music_url": "https://music.apple.com/gb/album/8-58/1168829355",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T18:08:47.247274",
+  "created_at": "2025-07-05T19:16:46.252714",
   "date_added": "2015-08-09T08:30:37-07:00",
   "discogs_id": "6834775",
   "discogs_url": "https://www.discogs.com/release/6834775-858-858",
@@ -115,6 +115,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/XCC91oKS29axRwHzT2wGdYJzcxg9Sm8K6w1m6_Z081c/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTY4MzQ3/NzUtMTQyNzYyNDQw/OS01MDEwLmpwZWc.jpeg",
       "width": 500
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/67/03/d8/6703d8f3-2e0f-2564-c9ab-19fc148aa7f0/5060243325204.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -122,21 +129,69 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/8:58/8:58",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/858-6834775/858-6834775-hi-res.jpg",
+    "medium": "../public/album/858-6834775/858-6834775-medium.jpg",
+    "small": "../public/album/858-6834775/858-6834775-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T18:08:50.622838",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-05T19:16:58.345979",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "8: 58",
   "release_name_discogs": "8:58",
   "release_name_spotify": null,
   "released": "2015-03-28",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/67/03/d8/6703d8f3-2e0f-2564-c9ab-19fc148aa7f0/5060243325204.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2015 ACP Recordings",
+      "editorial_notes": null,
+      "id": "1168829355",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Paul Hartnoll",
+        "artwork": {
+          "bgColor": "686964",
+          "height": 1500,
+          "textColor1": "fcfcfa",
+          "textColor2": "fcfcfa",
+          "textColor3": "dfdfdc",
+          "textColor4": "dfdfdc",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/67/03/d8/6703d8f3-2e0f-2564-c9ab-19fc148aa7f0/5060243325204.jpg/{w}x{h}bb.jpg",
+          "width": 1500
+        },
+        "copyright": "℗ 2015 ACP Recordings",
+        "genreNames": [
+          "Dance",
+          "Music",
+          "Electronic"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": true,
+        "isSingle": false,
+        "name": "8: 58",
+        "playParams": {
+          "id": "1168829355",
+          "kind": "album"
+        },
+        "recordLabel": "ACP Recordings",
+        "releaseDate": "2015-03-30",
+        "trackCount": 17,
+        "upc": "5060243325204",
+        "url": "https://music.apple.com/gb/album/8-58/1168829355"
+      },
+      "url": "https://music.apple.com/gb/album/8-58/1168829355"
+    },
     "lastfm": {
       "images": [
         {
@@ -556,6 +611,6 @@
       "title": "Cemetery"
     }
   ],
-  "updated_at": "2025-07-05T18:08:50.622457",
+  "updated_at": "2025-07-05T19:16:57.062968",
   "year": 2015
 }
