@@ -22,7 +22,7 @@
     }
   },
   "country": null,
-  "created_at": "2025-07-05T14:35:52.863625",
+  "created_at": "2025-07-05T20:05:27.330116",
   "date_added": "2025-04-13T04:04:41-07:00",
   "discogs_id": "33683172",
   "discogs_url": "https://www.discogs.com/release/33683172-Various-Tommy-Original-Soundtrack-Recording",
@@ -62,23 +62,1828 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/tommy-original-soundtrack-recording-33683172/tommy-original-soundtrack-recording-33683172-hi-res.jpg",
+    "medium": "../public/album/tommy-original-soundtrack-recording-33683172/tommy-original-soundtrack-recording-33683172-medium.jpg",
+    "small": "../public/album/tommy-original-soundtrack-recording-33683172/tommy-original-soundtrack-recording-33683172-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T14:35:53.411381",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-05T20:05:36.629442",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Tommy (Original Soundtrack Recording)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Tommy (Original 1975 Motion Picture Soundtrack / 2000 Remaster)",
   "released": "2025-04-12",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2000 Polydor Ltd. (UK)",
+          "type": "C"
+        },
+        {
+          "text": "℗ 2000 Polydor Ltd. (UK)",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "00042284112123"
+      },
+      "id": "1PV8xNwDyx7T81gNOgjKRk",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730d1e840af7cc52fc9e068e00",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020d1e840af7cc52fc9e068e00",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510d1e840af7cc52fc9e068e00",
+          "width": 64
+        }
+      ],
+      "label": "Polydor Records",
+      "popularity": 35,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2000 Polydor Ltd. (UK)",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2000 Polydor Ltd. (UK)",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "00042284112123"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1PV8xNwDyx7T81gNOgjKRk"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/1PV8xNwDyx7T81gNOgjKRk?market=US",
+        "id": "1PV8xNwDyx7T81gNOgjKRk",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730d1e840af7cc52fc9e068e00",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020d1e840af7cc52fc9e068e00",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510d1e840af7cc52fc9e068e00",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Polydor Records",
+        "name": "Tommy (Original 1975 Motion Picture Soundtrack / 2000 Remaster)",
+        "popularity": 35,
+        "release_date": "2000-01-01",
+        "release_date_precision": "day",
+        "total_tracks": 32,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/1PV8xNwDyx7T81gNOgjKRk/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 301293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3MT0AxH3pudGaQFNyi1RNf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3MT0AxH3pudGaQFNyi1RNf",
+              "id": "3MT0AxH3pudGaQFNyi1RNf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Overture From Tommy - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3MT0AxH3pudGaQFNyi1RNf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/24Wa5wIZIo1sPkzVGP0B5p"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/24Wa5wIZIo1sPkzVGP0B5p",
+                  "id": "24Wa5wIZIo1sPkzVGP0B5p",
+                  "name": "Pete Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:24Wa5wIZIo1sPkzVGP0B5p"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 176986,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1nYvA6JP6cqsrimcE0AZTT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1nYvA6JP6cqsrimcE0AZTT",
+              "id": "1nYvA6JP6cqsrimcE0AZTT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Prologue - 1945 - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:1nYvA6JP6cqsrimcE0AZTT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/24Wa5wIZIo1sPkzVGP0B5p"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/24Wa5wIZIo1sPkzVGP0B5p",
+                  "id": "24Wa5wIZIo1sPkzVGP0B5p",
+                  "name": "Pete Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:24Wa5wIZIo1sPkzVGP0B5p"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0tDwGbLmIf9ZbFZvD9pcF6"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0tDwGbLmIf9ZbFZvD9pcF6",
+                  "id": "0tDwGbLmIf9ZbFZvD9pcF6",
+                  "name": "Margo Newman",
+                  "type": "artist",
+                  "uri": "spotify:artist:0tDwGbLmIf9ZbFZvD9pcF6"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5FqhblIotAFXFHOB8JfvOG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5FqhblIotAFXFHOB8JfvOG",
+                  "id": "5FqhblIotAFXFHOB8JfvOG",
+                  "name": "Vicki Brown",
+                  "type": "artist",
+                  "uri": "spotify:artist:5FqhblIotAFXFHOB8JfvOG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0FIUM6WZiG4nEzrYIQhOop"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0FIUM6WZiG4nEzrYIQhOop",
+              "id": "0FIUM6WZiG4nEzrYIQhOop",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Captain Walker / It's A Boy - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0FIUM6WZiG4nEzrYIQhOop"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4whcrHTqcdIcHNp5VpHbPG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4whcrHTqcdIcHNp5VpHbPG",
+                  "id": "4whcrHTqcdIcHNp5VpHbPG",
+                  "name": "Alison Dowling",
+                  "type": "artist",
+                  "uri": "spotify:artist:4whcrHTqcdIcHNp5VpHbPG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 222706,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2HJAbzQDjRYyM5l6N45BVH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2HJAbzQDjRYyM5l6N45BVH",
+              "id": "2HJAbzQDjRYyM5l6N45BVH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bernie's Holiday Camp - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2HJAbzQDjRYyM5l6N45BVH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 169053,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6eLREMcx73W3rm7ZDMJ6fM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6eLREMcx73W3rm7ZDMJ6fM",
+              "id": "6eLREMcx73W3rm7ZDMJ6fM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "1951 / What About The Boy? - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:6eLREMcx73W3rm7ZDMJ6fM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/24Wa5wIZIo1sPkzVGP0B5p"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/24Wa5wIZIo1sPkzVGP0B5p",
+                  "id": "24Wa5wIZIo1sPkzVGP0B5p",
+                  "name": "Pete Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:24Wa5wIZIo1sPkzVGP0B5p"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 198386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7I3t6Bl196StOkfOJHzeq4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7I3t6Bl196StOkfOJHzeq4",
+              "id": "7I3t6Bl196StOkfOJHzeq4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Amazing Journey - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7I3t6Bl196StOkfOJHzeq4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4whcrHTqcdIcHNp5VpHbPG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4whcrHTqcdIcHNp5VpHbPG",
+                  "id": "4whcrHTqcdIcHNp5VpHbPG",
+                  "name": "Alison Dowling",
+                  "type": "artist",
+                  "uri": "spotify:artist:4whcrHTqcdIcHNp5VpHbPG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 218160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5eslg0Ly3tmqUpy2FDfdqb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5eslg0Ly3tmqUpy2FDfdqb",
+              "id": "5eslg0Ly3tmqUpy2FDfdqb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Christmas - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:5eslg0Ly3tmqUpy2FDfdqb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6PAt558ZEZl0DmdXlnjMgD"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6PAt558ZEZl0DmdXlnjMgD",
+                  "id": "6PAt558ZEZl0DmdXlnjMgD",
+                  "name": "Eric Clapton",
+                  "type": "artist",
+                  "uri": "spotify:artist:6PAt558ZEZl0DmdXlnjMgD"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 200840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4ASN0Ae1pTSu0q4Aj2co1C"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4ASN0Ae1pTSu0q4Aj2co1C",
+              "id": "4ASN0Ae1pTSu0q4Aj2co1C",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Eyesight To The Blind - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:4ASN0Ae1pTSu0q4Aj2co1C"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1zuJe6b1roixEKMOtyrEak"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1zuJe6b1roixEKMOtyrEak",
+                  "id": "1zuJe6b1roixEKMOtyrEak",
+                  "name": "Tina Turner",
+                  "type": "artist",
+                  "uri": "spotify:artist:1zuJe6b1roixEKMOtyrEak"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 227773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/63y7inwd4SsIOEaA0pchsP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/63y7inwd4SsIOEaA0pchsP",
+              "id": "63y7inwd4SsIOEaA0pchsP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Acid Queen - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:63y7inwd4SsIOEaA0pchsP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 54693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2e23dMXd240jOtWU9r214B"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2e23dMXd240jOtWU9r214B",
+              "id": "2e23dMXd240jOtWU9r214B",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Do You Think It's Alright? (1) - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2e23dMXd240jOtWU9r214B"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0IZKN6jW1R51jYXBw6FC2V"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0IZKN6jW1R51jYXBw6FC2V",
+                  "id": "0IZKN6jW1R51jYXBw6FC2V",
+                  "name": "Paul Nicholas",
+                  "type": "artist",
+                  "uri": "spotify:artist:0IZKN6jW1R51jYXBw6FC2V"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6PzoY1Xqj69ndP2DBtynBt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6PzoY1Xqj69ndP2DBtynBt",
+              "id": "6PzoY1Xqj69ndP2DBtynBt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cousin Kevin - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:6PzoY1Xqj69ndP2DBtynBt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 44080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1AaCne9QXeyc3HNoPArtiQ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1AaCne9QXeyc3HNoPArtiQ",
+              "id": "1AaCne9QXeyc3HNoPArtiQ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Do You Think It's Alright? (2) - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:1AaCne9QXeyc3HNoPArtiQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7i9m03TFsX9pDuP4CFDw3o"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7i9m03TFsX9pDuP4CFDw3o",
+                  "id": "7i9m03TFsX9pDuP4CFDw3o",
+                  "name": "Keith Moon",
+                  "type": "artist",
+                  "uri": "spotify:artist:7i9m03TFsX9pDuP4CFDw3o"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 99840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7fYOLBI9ZevzdBSPRyXgeH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7fYOLBI9ZevzdBSPRyXgeH",
+              "id": "7fYOLBI9ZevzdBSPRyXgeH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fiddle About - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:7fYOLBI9ZevzdBSPRyXgeH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 28906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4GItbiCHjND9U7iMe8VVjw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4GItbiCHjND9U7iMe8VVjw",
+              "id": "4GItbiCHjND9U7iMe8VVjw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Do You Think It's Alright? (3) - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:4GItbiCHjND9U7iMe8VVjw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 185666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4yhVKY9PaK0G6xKAOEMB2T"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4yhVKY9PaK0G6xKAOEMB2T",
+              "id": "4yhVKY9PaK0G6xKAOEMB2T",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sparks - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:4yhVKY9PaK0G6xKAOEMB2T"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3laL2CZKuS2QEdq06u7xCh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3laL2CZKuS2QEdq06u7xCh",
+                  "id": "3laL2CZKuS2QEdq06u7xCh",
+                  "name": "Simon Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:3laL2CZKuS2QEdq06u7xCh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 33893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0atP1bKBBCce1zQfmdSM77"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0atP1bKBBCce1zQfmdSM77",
+              "id": "0atP1bKBBCce1zQfmdSM77",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Extra, Extra, Extra - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:0atP1bKBBCce1zQfmdSM77"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3PhoLpVuITZKcymswpck5b"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3PhoLpVuITZKcymswpck5b",
+                  "id": "3PhoLpVuITZKcymswpck5b",
+                  "name": "Elton John",
+                  "type": "artist",
+                  "uri": "spotify:artist:3PhoLpVuITZKcymswpck5b"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 314840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4bJy6DyKSba1wqGFUlRhQ3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4bJy6DyKSba1wqGFUlRhQ3",
+              "id": "4bJy6DyKSba1wqGFUlRhQ3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pinball Wizard - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:4bJy6DyKSba1wqGFUlRhQ3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 282200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4LUDPgk7Y2CpJxFo32tnxO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4LUDPgk7Y2CpJxFo32tnxO",
+              "id": "4LUDPgk7Y2CpJxFo32tnxO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Champagne - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:4LUDPgk7Y2CpJxFo32tnxO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 22253,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7aMPs3H1WnQs2D9i5avmG0"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7aMPs3H1WnQs2D9i5avmG0",
+              "id": "7aMPs3H1WnQs2D9i5avmG0",
+              "is_local": false,
+              "is_playable": true,
+              "name": "There's A Doctor - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7aMPs3H1WnQs2D9i5avmG0"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0egpEmGlE7waq8RGxD06WP"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0egpEmGlE7waq8RGxD06WP",
+                  "id": "0egpEmGlE7waq8RGxD06WP",
+                  "name": "Jack Nicholson",
+                  "type": "artist",
+                  "uri": "spotify:artist:0egpEmGlE7waq8RGxD06WP"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 237186,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7yVtyc7FhzC3aXx662Zkex"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7yVtyc7FhzC3aXx662Zkex",
+              "id": "7yVtyc7FhzC3aXx662Zkex",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Go To The Mirror - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:7yVtyc7FhzC3aXx662Zkex"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 55240,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6rFClaUwv66JSBsn7NzmvD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6rFClaUwv66JSBsn7NzmvD",
+              "id": "6rFClaUwv66JSBsn7NzmvD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tommy, Can You Hear Me? - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:6rFClaUwv66JSBsn7NzmvD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 83066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0pCqDjESPtxnVIop21xkwx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0pCqDjESPtxnVIop21xkwx",
+              "id": "0pCqDjESPtxnVIop21xkwx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Smash The Mirror - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0pCqDjESPtxnVIop21xkwx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 155880,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5hBv2wwKQfzHHL6Frj17cr"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5hBv2wwKQfzHHL6Frj17cr",
+              "id": "5hBv2wwKQfzHHL6Frj17cr",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Free - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5hBv2wwKQfzHHL6Frj17cr"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 206306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4BRbj7TKFBfSv1xvoWHMco"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4BRbj7TKFBfSv1xvoWHMco",
+              "id": "4BRbj7TKFBfSv1xvoWHMco",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mother And Son - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4BRbj7TKFBfSv1xvoWHMco"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 276493,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0tHBKb49ZHuoalhcbIZ7fE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0tHBKb49ZHuoalhcbIZ7fE",
+              "id": "0tHBKb49ZHuoalhcbIZ7fE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sensation - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:0tHBKb49ZHuoalhcbIZ7fE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3laL2CZKuS2QEdq06u7xCh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3laL2CZKuS2QEdq06u7xCh",
+                  "id": "3laL2CZKuS2QEdq06u7xCh",
+                  "name": "Simon Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:3laL2CZKuS2QEdq06u7xCh"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 23426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2o9ZqMZBSEpxsE4ThTo3UU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2o9ZqMZBSEpxsE4ThTo3UU",
+              "id": "2o9ZqMZBSEpxsE4ThTo3UU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Miracle Cure - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2o9ZqMZBSEpxsE4ThTo3UU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/24Wa5wIZIo1sPkzVGP0B5p"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/24Wa5wIZIo1sPkzVGP0B5p",
+                  "id": "24Wa5wIZIo1sPkzVGP0B5p",
+                  "name": "Pete Townshend",
+                  "type": "artist",
+                  "uri": "spotify:artist:24Wa5wIZIo1sPkzVGP0B5p"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 312053,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5c32mIImKKyeocr9QLOxs2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5c32mIImKKyeocr9QLOxs2",
+              "id": "5c32mIImKKyeocr9QLOxs2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sally Simpson - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:5c32mIImKKyeocr9QLOxs2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 254306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1400ZGAPMIhBIHD5IgIN8Z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1400ZGAPMIhBIHD5IgIN8Z",
+              "id": "1400ZGAPMIhBIHD5IgIN8Z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Welcome - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:1400ZGAPMIhBIHD5IgIN8Z"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6kYkSgu24BPZBQGsAtPOyG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6kYkSgu24BPZBQGsAtPOyG",
+                  "id": "6kYkSgu24BPZBQGsAtPOyG",
+                  "name": "Ann Margret",
+                  "type": "artist",
+                  "uri": "spotify:artist:6kYkSgu24BPZBQGsAtPOyG"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0qkQn7U3Y8yuT2N1mXI2rO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0qkQn7U3Y8yuT2N1mXI2rO",
+                  "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+                  "name": "Oliver Reed",
+                  "type": "artist",
+                  "uri": "spotify:artist:0qkQn7U3Y8yuT2N1mXI2rO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 74693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Wet2IUQr8gwV8rcCwKkUP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Wet2IUQr8gwV8rcCwKkUP",
+              "id": "3Wet2IUQr8gwV8rcCwKkUP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "T.V. Studio - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:3Wet2IUQr8gwV8rcCwKkUP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7i9m03TFsX9pDuP4CFDw3o"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7i9m03TFsX9pDuP4CFDw3o",
+                  "id": "7i9m03TFsX9pDuP4CFDw3o",
+                  "name": "Keith Moon",
+                  "type": "artist",
+                  "uri": "spotify:artist:7i9m03TFsX9pDuP4CFDw3o"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 90200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6m9Hme0mqu5zaUWnAkHluN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6m9Hme0mqu5zaUWnAkHluN",
+              "id": "6m9Hme0mqu5zaUWnAkHluN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tommy's Holiday Camp - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:6m9Hme0mqu5zaUWnAkHluN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Bu3DMTHHdXW4jnhoWHhPa"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Bu3DMTHHdXW4jnhoWHhPa",
+                  "id": "2Bu3DMTHHdXW4jnhoWHhPa",
+                  "name": "Chorus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Bu3DMTHHdXW4jnhoWHhPa"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 286520,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6sB31Wmk0VD7uhZLEB4Rqj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6sB31Wmk0VD7uhZLEB4Rqj",
+              "id": "6sB31Wmk0VD7uhZLEB4Rqj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "We're Not Gonna Take It - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:6sB31Wmk0VD7uhZLEB4Rqj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5odf7hjI7hyvAw66tmxhGF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5odf7hjI7hyvAw66tmxhGF",
+                  "id": "5odf7hjI7hyvAw66tmxhGF",
+                  "name": "Roger Daltrey",
+                  "type": "artist",
+                  "uri": "spotify:artist:5odf7hjI7hyvAw66tmxhGF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 259466,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1kP4voIdNShHqDyeLxC4pE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1kP4voIdNShHqDyeLxC4pE",
+              "id": "1kP4voIdNShHqDyeLxC4pE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "See Me, Feel Me / Listening To You - 2000 Remaster",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:1kP4voIdNShHqDyeLxC4pE"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 32
+        },
+        "type": "album",
+        "uri": "spotify:album:1PV8xNwDyx7T81gNOgjKRk"
+      },
+      "release_date": "2000-01-01",
+      "release_date_precision": "day",
+      "total_tracks": 32,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 301293,
+          "explicit": false,
+          "id": "3MT0AxH3pudGaQFNyi1RNf",
+          "name": "Overture From Tommy - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "24Wa5wIZIo1sPkzVGP0B5p",
+              "name": "Pete Townshend"
+            }
+          ],
+          "duration_ms": 176986,
+          "explicit": false,
+          "id": "1nYvA6JP6cqsrimcE0AZTT",
+          "name": "Prologue - 1945 - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "24Wa5wIZIo1sPkzVGP0B5p",
+              "name": "Pete Townshend"
+            },
+            {
+              "id": "0tDwGbLmIf9ZbFZvD9pcF6",
+              "name": "Margo Newman"
+            },
+            {
+              "id": "5FqhblIotAFXFHOB8JfvOG",
+              "name": "Vicki Brown"
+            }
+          ],
+          "duration_ms": 156333,
+          "explicit": false,
+          "id": "0FIUM6WZiG4nEzrYIQhOop",
+          "name": "Captain Walker / It's A Boy - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            },
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "4whcrHTqcdIcHNp5VpHbPG",
+              "name": "Alison Dowling"
+            }
+          ],
+          "duration_ms": 222706,
+          "explicit": false,
+          "id": "2HJAbzQDjRYyM5l6N45BVH",
+          "name": "Bernie's Holiday Camp - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            },
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            }
+          ],
+          "duration_ms": 169053,
+          "explicit": false,
+          "id": "6eLREMcx73W3rm7ZDMJ6fM",
+          "name": "1951 / What About The Boy? - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "24Wa5wIZIo1sPkzVGP0B5p",
+              "name": "Pete Townshend"
+            }
+          ],
+          "duration_ms": 198386,
+          "explicit": false,
+          "id": "7I3t6Bl196StOkfOJHzeq4",
+          "name": "Amazing Journey - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            },
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "4whcrHTqcdIcHNp5VpHbPG",
+              "name": "Alison Dowling"
+            }
+          ],
+          "duration_ms": 218160,
+          "explicit": false,
+          "id": "5eslg0Ly3tmqUpy2FDfdqb",
+          "name": "Christmas - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "6PAt558ZEZl0DmdXlnjMgD",
+              "name": "Eric Clapton"
+            }
+          ],
+          "duration_ms": 200840,
+          "explicit": false,
+          "id": "4ASN0Ae1pTSu0q4Aj2co1C",
+          "name": "Eyesight To The Blind - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "1zuJe6b1roixEKMOtyrEak",
+              "name": "Tina Turner"
+            }
+          ],
+          "duration_ms": 227773,
+          "explicit": false,
+          "id": "63y7inwd4SsIOEaA0pchsP",
+          "name": "The Acid Queen - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 54693,
+          "explicit": false,
+          "id": "2e23dMXd240jOtWU9r214B",
+          "name": "Do You Think It's Alright? (1) - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "0IZKN6jW1R51jYXBw6FC2V",
+              "name": "Paul Nicholas"
+            }
+          ],
+          "duration_ms": 187040,
+          "explicit": false,
+          "id": "6PzoY1Xqj69ndP2DBtynBt",
+          "name": "Cousin Kevin - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 44080,
+          "explicit": false,
+          "id": "1AaCne9QXeyc3HNoPArtiQ",
+          "name": "Do You Think It's Alright? (2) - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "7i9m03TFsX9pDuP4CFDw3o",
+              "name": "Keith Moon"
+            }
+          ],
+          "duration_ms": 99840,
+          "explicit": false,
+          "id": "7fYOLBI9ZevzdBSPRyXgeH",
+          "name": "Fiddle About - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 28906,
+          "explicit": false,
+          "id": "4GItbiCHjND9U7iMe8VVjw",
+          "name": "Do You Think It's Alright? (3) - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 185666,
+          "explicit": false,
+          "id": "4yhVKY9PaK0G6xKAOEMB2T",
+          "name": "Sparks - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "3laL2CZKuS2QEdq06u7xCh",
+              "name": "Simon Townshend"
+            }
+          ],
+          "duration_ms": 33893,
+          "explicit": false,
+          "id": "0atP1bKBBCce1zQfmdSM77",
+          "name": "Extra, Extra, Extra - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "3PhoLpVuITZKcymswpck5b",
+              "name": "Elton John"
+            }
+          ],
+          "duration_ms": 314840,
+          "explicit": false,
+          "id": "4bJy6DyKSba1wqGFUlRhQ3",
+          "name": "Pinball Wizard - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 282200,
+          "explicit": false,
+          "id": "4LUDPgk7Y2CpJxFo32tnxO",
+          "name": "Champagne - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 22253,
+          "explicit": false,
+          "id": "7aMPs3H1WnQs2D9i5avmG0",
+          "name": "There's A Doctor - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0egpEmGlE7waq8RGxD06WP",
+              "name": "Jack Nicholson"
+            },
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            },
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 237186,
+          "explicit": false,
+          "id": "7yVtyc7FhzC3aXx662Zkex",
+          "name": "Go To The Mirror - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            }
+          ],
+          "duration_ms": 55240,
+          "explicit": false,
+          "id": "6rFClaUwv66JSBsn7NzmvD",
+          "name": "Tommy, Can You Hear Me? - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            }
+          ],
+          "duration_ms": 83066,
+          "explicit": false,
+          "id": "0pCqDjESPtxnVIop21xkwx",
+          "name": "Smash The Mirror - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 155880,
+          "explicit": false,
+          "id": "5hBv2wwKQfzHHL6Frj17cr",
+          "name": "I'm Free - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 206306,
+          "explicit": false,
+          "id": "4BRbj7TKFBfSv1xvoWHMco",
+          "name": "Mother And Son - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 276493,
+          "explicit": false,
+          "id": "0tHBKb49ZHuoalhcbIZ7fE",
+          "name": "Sensation - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "3laL2CZKuS2QEdq06u7xCh",
+              "name": "Simon Townshend"
+            }
+          ],
+          "duration_ms": 23426,
+          "explicit": false,
+          "id": "2o9ZqMZBSEpxsE4ThTo3UU",
+          "name": "Miracle Cure - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "24Wa5wIZIo1sPkzVGP0B5p",
+              "name": "Pete Townshend"
+            },
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 312053,
+          "explicit": false,
+          "id": "5c32mIImKKyeocr9QLOxs2",
+          "name": "Sally Simpson - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 254306,
+          "explicit": false,
+          "id": "1400ZGAPMIhBIHD5IgIN8Z",
+          "name": "Welcome - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "6kYkSgu24BPZBQGsAtPOyG",
+              "name": "Ann Margret"
+            },
+            {
+              "id": "0qkQn7U3Y8yuT2N1mXI2rO",
+              "name": "Oliver Reed"
+            }
+          ],
+          "duration_ms": 74693,
+          "explicit": false,
+          "id": "3Wet2IUQr8gwV8rcCwKkUP",
+          "name": "T.V. Studio - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "7i9m03TFsX9pDuP4CFDw3o",
+              "name": "Keith Moon"
+            }
+          ],
+          "duration_ms": 90200,
+          "explicit": false,
+          "id": "6m9Hme0mqu5zaUWnAkHluN",
+          "name": "Tommy's Holiday Camp - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            },
+            {
+              "id": "2Bu3DMTHHdXW4jnhoWHhPa",
+              "name": "Chorus"
+            }
+          ],
+          "duration_ms": 286520,
+          "explicit": false,
+          "id": "6sB31Wmk0VD7uhZLEB4Rqj",
+          "name": "We're Not Gonna Take It - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "5odf7hjI7hyvAw66tmxhGF",
+              "name": "Roger Daltrey"
+            }
+          ],
+          "duration_ms": 259466,
+          "explicit": false,
+          "id": "1kP4voIdNShHqDyeLxC4pE",
+          "name": "See Me, Feel Me / Listening To You - 2000 Remaster",
+          "preview_url": null,
+          "track_number": 15
+        }
+      ],
+      "url": "https://open.spotify.com/album/1PV8xNwDyx7T81gNOgjKRk"
+    }
+  },
+  "spotify_id": "1PV8xNwDyx7T81gNOgjKRk",
+  "spotify_url": "https://open.spotify.com/album/1PV8xNwDyx7T81gNOgjKRk",
   "styles": [
     "Soundtrack",
     "Pop Rock"
@@ -272,6 +2077,6 @@
       "title": "Listening To You / See Me, Feel Me"
     }
   ],
-  "updated_at": "2025-07-05T14:35:53.410356",
+  "updated_at": "2025-07-05T20:05:36.504203",
   "year": 2025
 }
