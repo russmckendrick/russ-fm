@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Disc, Calendar, Users, ExternalLink, Globe, Music } from 'lucide-react';
+import { ArrowLeft, Clock, Disc, Calendar, ExternalLink, Globe, Music } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -291,7 +291,8 @@ export function AlbumDetailPage() {
         track_number: track.track_number || index + 1,
         name: track.name,
         duration_ms: track.duration_ms,
-        position: track.disc_number > 1 ? `${track.disc_number}-${track.track_number}` : undefined
+        position: track.disc_number > 1 ? `${track.disc_number}-${track.track_number}` : undefined,
+        artists: undefined
       }));
     }
     
@@ -302,7 +303,8 @@ export function AlbumDetailPage() {
         track_number: track['@attr']?.rank || index + 1,
         name: track.name,
         duration_ms: track.duration ? parseInt(track.duration) * 1000 : undefined,
-        position: undefined
+        position: undefined,
+        artists: undefined
       }));
     }
     
@@ -555,7 +557,7 @@ export function AlbumDetailPage() {
                       <span className="font-medium block truncate">{track.name}</span>
                       {track.artists && track.artists.length > 0 && (
                         <span className="text-sm text-muted-foreground block truncate">
-                          by {track.artists.map(artist => artist.name).join(', ')}
+                          by {track.artists.map((artist: any) => artist.name).join(', ')}
                         </span>
                       )}
                     </div>
