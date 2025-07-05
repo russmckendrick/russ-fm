@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1779806793",
+  "apple_music_url": "https://music.apple.com/gb/album/goodbye-horses-the-many-lives-of-q-lazzarus-music/1779806793",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T14:37:43.816916",
+  "created_at": "2025-07-05T20:06:47.686998",
   "date_added": "2025-02-20T22:02:58-08:00",
   "discogs_id": "33201309",
   "discogs_url": "https://www.discogs.com/release/33201309-Q-Lazzarus-Goodbye-Horses-The-Many-Lives-Of-Q-Lazzarus-Music-From-The-Motion-Picture",
@@ -71,6 +71,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/bXCL1DYz85rFN2cPbrSJvpFRJpZsZxtld4JovmJFbBc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjAx/MzA5LTE3NDA1MTUx/MzgtOTAzNy5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f3/aa/22/f3aa2298-901d-bf9a-5432-a3856596c986/50539.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -79,23 +86,1094 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309-hi-res.jpg",
+    "medium": "../public/album/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309-medium.jpg",
+    "small": "../public/album/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309/goodbye-horses-the-many-lives-of-q-lazzarus-music-from-the-motion-picture-33201309-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T14:37:45.344829",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-05T20:06:57.176019",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Goodbye Horses: The Many Lives of Q Lazzarus (Music From The Motion Picture)",
   "release_name_discogs": "Goodbye Horses: The Many Lives Of Q Lazzarus (Music From The Motion Picture)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Goodbye Horses: The Many Lives of Q Lazzarus (Music From The Motion Picture)",
   "released": "2025-02-21",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f3/aa/22/f3aa2298-901d-bf9a-5432-a3856596c986/50539.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+      "editorial_notes": null,
+      "id": "1779806793",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Q Lazzarus",
+        "artwork": {
+          "bgColor": "1d1c22",
+          "height": 3000,
+          "textColor1": "f7f3ea",
+          "textColor2": "f5eae9",
+          "textColor3": "ccc8c2",
+          "textColor4": "c9c1c1",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f3/aa/22/f3aa2298-901d-bf9a-5432-a3856596c986/50539.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "℗ 2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+        "editorialNotes": {
+          "short": "The cult NYC artist’s music is reborn—and soundtracks a doc about her life.",
+          "tagline": "New Soundtrack"
+        },
+        "genreNames": [
+          "Alternative",
+          "Music"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Goodbye Horses: The Many Lives of Q Lazzarus (Music From The Motion Picture)",
+        "playParams": {
+          "id": "1779806793",
+          "kind": "album"
+        },
+        "recordLabel": "Sacred Bones Records",
+        "releaseDate": "2025-02-21",
+        "trackCount": 21,
+        "upc": "843563182239",
+        "url": "https://music.apple.com/gb/album/goodbye-horses-the-many-lives-of-q-lazzarus-music/1779806793"
+      },
+      "url": "https://music.apple.com/gb/album/goodbye-horses-the-many-lives-of-q-lazzarus-music/1779806793"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+          "type": "C"
+        },
+        {
+          "text": "2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "843563182239"
+      },
+      "id": "5tiJmpd5cHOSgH82YApDcr",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730160cd211689490e3bb4d3f6",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020160cd211689490e3bb4d3f6",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510160cd211689490e3bb4d3f6",
+          "width": 64
+        }
+      ],
+      "label": "Sacred Bones Records",
+      "popularity": 29,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+            },
+            "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+            "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+            "name": "Q Lazzarus",
+            "type": "artist",
+            "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+            "type": "C"
+          },
+          {
+            "text": "2025 Diane Luckey Estate under exclusive license to Sacred Bones Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "843563182239"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5tiJmpd5cHOSgH82YApDcr"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/5tiJmpd5cHOSgH82YApDcr?market=US",
+        "id": "5tiJmpd5cHOSgH82YApDcr",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730160cd211689490e3bb4d3f6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020160cd211689490e3bb4d3f6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510160cd211689490e3bb4d3f6",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Sacred Bones Records",
+        "name": "Goodbye Horses: The Many Lives of Q Lazzarus (Music From The Motion Picture)",
+        "popularity": 29,
+        "release_date": "2025-02-21",
+        "release_date_precision": "day",
+        "total_tracks": 21,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/5tiJmpd5cHOSgH82YApDcr/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 304140,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1siikgU18m5rQPc3Yv9f6e"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1siikgU18m5rQPc3Yv9f6e",
+              "id": "1siikgU18m5rQPc3Yv9f6e",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Goodbye Horses - New Wave Version",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1siikgU18m5rQPc3Yv9f6e"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 273943,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/31FnmALuW1RawxqKDmQkxl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/31FnmALuW1RawxqKDmQkxl",
+              "id": "31FnmALuW1RawxqKDmQkxl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Heaven",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:31FnmALuW1RawxqKDmQkxl"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 326533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2kDvzWSfJvXrMURmnm1K5N"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2kDvzWSfJvXrMURmnm1K5N",
+              "id": "2kDvzWSfJvXrMURmnm1K5N",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I See Your Eyes",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2kDvzWSfJvXrMURmnm1K5N"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 252268,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5JiU2j9XvpZEffKPC3Z4dZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5JiU2j9XvpZEffKPC3Z4dZ",
+              "id": "5JiU2j9XvpZEffKPC3Z4dZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "A Fools Life",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:5JiU2j9XvpZEffKPC3Z4dZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 259203,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4PNKcf9n4dlcF2hdOo0qkU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4PNKcf9n4dlcF2hdOo0qkU",
+              "id": "4PNKcf9n4dlcF2hdOo0qkU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Summertime",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4PNKcf9n4dlcF2hdOo0qkU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 303303,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0i3IV3Lq5pbqueSBn5KcnG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0i3IV3Lq5pbqueSBn5KcnG",
+              "id": "0i3IV3Lq5pbqueSBn5KcnG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Mistake",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:0i3IV3Lq5pbqueSBn5KcnG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 324655,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2qCujppramV4H0yZOtCZiB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2qCujppramV4H0yZOtCZiB",
+              "id": "2qCujppramV4H0yZOtCZiB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hellfire",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:2qCujppramV4H0yZOtCZiB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 292749,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5sXy0vLDjAX3u4bKhDCHOC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5sXy0vLDjAX3u4bKhDCHOC",
+              "id": "5sXy0vLDjAX3u4bKhDCHOC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Don't Let Go",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5sXy0vLDjAX3u4bKhDCHOC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 231723,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1ilOADWMAJU1pjyWdGme4y"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1ilOADWMAJU1pjyWdGme4y",
+              "id": "1ilOADWMAJU1pjyWdGme4y",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bang Bang",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:1ilOADWMAJU1pjyWdGme4y"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 262135,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0WOjtA4d6teE6DEhjbbRny"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0WOjtA4d6teE6DEhjbbRny",
+              "id": "0WOjtA4d6teE6DEhjbbRny",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Flesh For Sale",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:0WOjtA4d6teE6DEhjbbRny"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 264389,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6bl3XTQoAwl8yEZdtMQ5ej"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6bl3XTQoAwl8yEZdtMQ5ej",
+              "id": "6bl3XTQoAwl8yEZdtMQ5ej",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Don't Want to Love You Anymore",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:6bl3XTQoAwl8yEZdtMQ5ej"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 318690,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/21b5fXzVB9ub3LSyNfIXHg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/21b5fXzVB9ub3LSyNfIXHg",
+              "id": "21b5fXzVB9ub3LSyNfIXHg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fathers, Mothers, and Children Dying in the Street",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:21b5fXzVB9ub3LSyNfIXHg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 313239,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/26EpW3YMi4V9oEdfYdT98N"
+              },
+              "href": "https://api.spotify.com/v1/tracks/26EpW3YMi4V9oEdfYdT98N",
+              "id": "26EpW3YMi4V9oEdfYdT98N",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Lust",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:26EpW3YMi4V9oEdfYdT98N"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 290564,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0WJIAiqlDORWpRZlCn3NkJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0WJIAiqlDORWpRZlCn3NkJ",
+              "id": "0WJIAiqlDORWpRZlCn3NkJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Home",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:0WJIAiqlDORWpRZlCn3NkJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 271143,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2csasmTSlLWDk2tyw4Djt4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2csasmTSlLWDk2tyw4Djt4",
+              "id": "2csasmTSlLWDk2tyw4Djt4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Momma Never Said",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:2csasmTSlLWDk2tyw4Djt4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 285655,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1JHmCVhjfbrqlBTmFzFAzo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1JHmCVhjfbrqlBTmFzFAzo",
+              "id": "1JHmCVhjfbrqlBTmFzFAzo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Time is Right (Dare)",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:1JHmCVhjfbrqlBTmFzFAzo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 316238,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7Ji0e0rXO34yVUjQqqkyT0"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7Ji0e0rXO34yVUjQqqkyT0",
+              "id": "7Ji0e0rXO34yVUjQqqkyT0",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Only You Can Light The Candle",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:7Ji0e0rXO34yVUjQqqkyT0"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 353241,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4JBINrctIzZGJY8qN3mNMM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4JBINrctIzZGJY8qN3mNMM",
+              "id": "4JBINrctIzZGJY8qN3mNMM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Dance",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:4JBINrctIzZGJY8qN3mNMM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 294823,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2nmO8kClCsxvoTLLkcqCom"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2nmO8kClCsxvoTLLkcqCom",
+              "id": "2nmO8kClCsxvoTLLkcqCom",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Take the Time",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:2nmO8kClCsxvoTLLkcqCom"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 277485,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3OXh8PWBdmXnZk4dJZAJFi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3OXh8PWBdmXnZk4dJZAJFi",
+              "id": "3OXh8PWBdmXnZk4dJZAJFi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Be Mine",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:3OXh8PWBdmXnZk4dJZAJFi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2EOrSEDPcZ9feKWSi8Fpdi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2EOrSEDPcZ9feKWSi8Fpdi",
+                  "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+                  "name": "Q Lazzarus",
+                  "type": "artist",
+                  "uri": "spotify:artist:2EOrSEDPcZ9feKWSi8Fpdi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 260673,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5OHXnxHgsuXbmdNKNLV2Mo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5OHXnxHgsuXbmdNKNLV2Mo",
+              "id": "5OHXnxHgsuXbmdNKNLV2Mo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "It Don't Mean Nothing",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:5OHXnxHgsuXbmdNKNLV2Mo"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 21
+        },
+        "type": "album",
+        "uri": "spotify:album:5tiJmpd5cHOSgH82YApDcr"
+      },
+      "release_date": "2025-02-21",
+      "release_date_precision": "day",
+      "total_tracks": 21,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 304140,
+          "explicit": false,
+          "id": "1siikgU18m5rQPc3Yv9f6e",
+          "name": "Goodbye Horses - New Wave Version",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 273943,
+          "explicit": false,
+          "id": "31FnmALuW1RawxqKDmQkxl",
+          "name": "Heaven",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 326533,
+          "explicit": false,
+          "id": "2kDvzWSfJvXrMURmnm1K5N",
+          "name": "I See Your Eyes",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 252268,
+          "explicit": false,
+          "id": "5JiU2j9XvpZEffKPC3Z4dZ",
+          "name": "A Fools Life",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 259203,
+          "explicit": false,
+          "id": "4PNKcf9n4dlcF2hdOo0qkU",
+          "name": "Summertime",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 303303,
+          "explicit": false,
+          "id": "0i3IV3Lq5pbqueSBn5KcnG",
+          "name": "My Mistake",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 324655,
+          "explicit": false,
+          "id": "2qCujppramV4H0yZOtCZiB",
+          "name": "Hellfire",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 292749,
+          "explicit": false,
+          "id": "5sXy0vLDjAX3u4bKhDCHOC",
+          "name": "Don't Let Go",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 231723,
+          "explicit": false,
+          "id": "1ilOADWMAJU1pjyWdGme4y",
+          "name": "Bang Bang",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 262135,
+          "explicit": false,
+          "id": "0WOjtA4d6teE6DEhjbbRny",
+          "name": "Flesh For Sale",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 264389,
+          "explicit": false,
+          "id": "6bl3XTQoAwl8yEZdtMQ5ej",
+          "name": "I Don't Want to Love You Anymore",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 318690,
+          "explicit": false,
+          "id": "21b5fXzVB9ub3LSyNfIXHg",
+          "name": "Fathers, Mothers, and Children Dying in the Street",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 313239,
+          "explicit": false,
+          "id": "26EpW3YMi4V9oEdfYdT98N",
+          "name": "Love Lust",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 290564,
+          "explicit": false,
+          "id": "0WJIAiqlDORWpRZlCn3NkJ",
+          "name": "Home",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 271143,
+          "explicit": false,
+          "id": "2csasmTSlLWDk2tyw4Djt4",
+          "name": "Momma Never Said",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 285655,
+          "explicit": false,
+          "id": "1JHmCVhjfbrqlBTmFzFAzo",
+          "name": "The Time is Right (Dare)",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 316238,
+          "explicit": false,
+          "id": "7Ji0e0rXO34yVUjQqqkyT0",
+          "name": "Only You Can Light The Candle",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 353241,
+          "explicit": false,
+          "id": "4JBINrctIzZGJY8qN3mNMM",
+          "name": "Love Dance",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 294823,
+          "explicit": false,
+          "id": "2nmO8kClCsxvoTLLkcqCom",
+          "name": "Take the Time",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 277485,
+          "explicit": false,
+          "id": "3OXh8PWBdmXnZk4dJZAJFi",
+          "name": "Be Mine",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "2EOrSEDPcZ9feKWSi8Fpdi",
+              "name": "Q Lazzarus"
+            }
+          ],
+          "duration_ms": 260673,
+          "explicit": false,
+          "id": "5OHXnxHgsuXbmdNKNLV2Mo",
+          "name": "It Don't Mean Nothing",
+          "preview_url": null,
+          "track_number": 21
+        }
+      ],
+      "url": "https://open.spotify.com/album/5tiJmpd5cHOSgH82YApDcr"
+    }
+  },
+  "spotify_id": "5tiJmpd5cHOSgH82YApDcr",
+  "spotify_url": "https://open.spotify.com/album/5tiJmpd5cHOSgH82YApDcr",
   "styles": [
     "New Wave",
     "Alternative Rock",
@@ -164,6 +1242,6 @@
       "title": "Goodbye Horses (New Wave Version)"
     }
   ],
-  "updated_at": "2025-07-05T14:37:45.344332",
+  "updated_at": "2025-07-05T20:06:54.713180",
   "year": 2025
 }
