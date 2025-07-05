@@ -26,6 +26,7 @@ class MusicDataOrchestrator:
         self.services = {}
         self.interactive_mode = False
         self.search_override = None
+        self.custom_cover = None
         
         # Initialize image manager with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -50,6 +51,10 @@ class MusicDataOrchestrator:
     def set_search_override(self, search_query: str):
         """Set a custom search query to override the default artist + album search."""
         self.search_override = search_query
+    
+    def set_custom_cover(self, cover_url: str):
+        """Set a custom cover URL to override the default album artwork."""
+        self.custom_cover = cover_url
     
     def _initialize_services(self):
         """Initialize all available services."""
@@ -307,23 +312,50 @@ class MusicDataOrchestrator:
         # Download artwork with fallback sources
         discogs_id = str(release.discogs_id) if release.discogs_id else "unknown"
         try:
-            image_sources = self.image_manager.extract_image_sources(release)
-            if image_sources:
+            # If custom cover is provided, use it instead of extracted sources
+            if self.custom_cover:
+                self.logger.info(f"Using custom cover URL: {self.custom_cover}")
+                # Add custom cover as an image source
+                from ..models import Image
+                custom_image = Image(
+                    url=self.custom_cover,
+                    type="custom_cover",
+                    width=2000,  # Assume high resolution
+                    height=2000
+                )
+                release.add_image(custom_image)
+                
+                # Download the custom cover
                 downloaded_images = self.image_manager.download_album_artwork_with_fallback(
                     release.title, 
                     discogs_id, 
-                    image_sources
+                    [{"url": self.custom_cover, "type": "custom_cover"}]
                 )
                 
-                # Log successful downloads
-                successful_downloads = [size for size, path in downloaded_images.items() if path]
-                if successful_downloads:
-                    self.logger.info(f"Downloaded artwork for {release.title}: {', '.join(successful_downloads)}")
-                
-                # Store local image paths in release
-                release.local_images = downloaded_images
+                if downloaded_images:
+                    self.logger.info(f"Downloaded custom cover for {release.title}")
+                    release.local_images = downloaded_images
+                else:
+                    self.logger.warning(f"Failed to download custom cover from {self.custom_cover}")
             else:
-                self.logger.warning(f"No image sources found for {release.title}")
+                # Use normal artwork extraction and download
+                image_sources = self.image_manager.extract_image_sources(release)
+                if image_sources:
+                    downloaded_images = self.image_manager.download_album_artwork_with_fallback(
+                        release.title, 
+                        discogs_id, 
+                        image_sources
+                    )
+                    
+                    # Log successful downloads
+                    successful_downloads = [size for size, path in downloaded_images.items() if path]
+                    if successful_downloads:
+                        self.logger.info(f"Downloaded artwork for {release.title}: {', '.join(successful_downloads)}")
+                    
+                    # Store local image paths in release
+                    release.local_images = downloaded_images
+                else:
+                    self.logger.warning(f"No image sources found for {release.title}")
                 
         except Exception as e:
             self.logger.warning(f"Failed to download artwork for {release.title}: {str(e)}")
