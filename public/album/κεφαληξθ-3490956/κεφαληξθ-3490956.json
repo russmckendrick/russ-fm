@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "297744447",
+  "apple_music_url": "https://music.apple.com/gb/album/psalm-69-the-way-to-succeed-and-the-way-to-suck-eggs/297744447",
   "artists": [
     {
       "apple_music_id": "609022",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T19:34:23.420071",
+  "created_at": "2025-07-05T20:40:06.955830",
   "date_added": "2015-08-09T08:43:46-07:00",
   "discogs_id": "3490956",
   "discogs_url": "https://www.discogs.com/release/3490956-Ministry-ΚΕΦΑΛΗΞΘ",
@@ -30,12 +30,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Rock",
-    "industrial metal",
-    "industrial",
-    "1992",
-    "metal",
-    "industrial rock"
+    "Rock"
   ],
   "id": "3490956",
   "images": [
@@ -87,6 +82,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/hG8QXF7kCJrkTFsvFlnJNz5pMZcjHifvip5c4x4CMdU/rs:fit/g:sm/q:90/h:600/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM0OTA5/NTYtMTQ4MjE1MDQ0/My0xOTcwLmpwZWc.jpeg",
       "width": 300
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1a/7d/cf/1a7dcf89-0fa5-607f-a5be-f2dd0f0922e5/mzi.gkmvpsud.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -94,291 +96,582 @@
     "Rhino Records (2)"
   ],
   "lastfm_mbid": null,
-  "lastfm_url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98",
-  "local_images": {},
+  "lastfm_url": null,
+  "local_images": {
+    "hi-res": "../public/album/κεφαληξθ-3490956/κεφαληξθ-3490956-hi-res.jpg",
+    "medium": "../public/album/κεφαληξθ-3490956/κεφαληξθ-3490956-medium.jpg",
+    "small": "../public/album/κεφαληξθ-3490956/κεφαληξθ-3490956-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:34:38.144029",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-05T20:40:14.819555",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Psalm 69: The Way to Succeed and the Way to Suck Eggs",
   "release_name_discogs": "ΚΕΦΑΛΗΞΘ",
-  "release_name_spotify": null,
+  "release_name_spotify": "KE*A*H** (Psalm 69)",
   "released": "2011-08-26",
   "services": {
-    "lastfm": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1a/7d/cf/1a7dcf89-0fa5-607f-a5be-f2dd0f0922e5/mzi.gkmvpsud.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 1991, 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+      "editorial_notes": null,
+      "id": "297744447",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Ministry",
+        "artwork": {
+          "bgColor": "2f1a19",
+          "height": 1425,
+          "textColor1": "f4dfc6",
+          "textColor2": "eadee5",
+          "textColor3": "cdb8a3",
+          "textColor4": "c5b7bc",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/1a/7d/cf/1a7dcf89-0fa5-607f-a5be-f2dd0f0922e5/mzi.gkmvpsud.jpg/{w}x{h}bb.jpg",
+          "width": 1425
+        },
+        "contentRating": "explicit",
+        "copyright": "℗ 1991, 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+        "genreNames": [
+          "Metal",
+          "Music",
+          "Rock",
+          "Dance",
+          "Hard Rock",
+          "Electronic",
+          "Industrial",
+          "Adult Alternative"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Psalm 69: The Way to Succeed and the Way to Suck Eggs",
+        "playParams": {
+          "id": "297744447",
+          "kind": "album"
+        },
+        "recordLabel": "Rhino",
+        "releaseDate": "1992-07-14",
+        "trackCount": 9,
+        "upc": "075992672764",
+        "url": "https://music.apple.com/gb/album/psalm-69-the-way-to-succeed-and-the-way-to-suck-eggs/297744447"
+      },
+      "url": "https://music.apple.com/gb/album/psalm-69-the-way-to-succeed-and-the-way-to-suck-eggs/297744447"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+          "type": "C"
+        },
+        {
+          "text": "℗ 1991, 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "075992672764"
+      },
+      "id": "2wz3P1w89gQd3iXdmF1IA5",
       "images": [
         {
-          "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27390edd2885a4865e0a4bf6f3c",
+          "width": 640
         },
         {
-          "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0290edd2885a4865e0a4bf6f3c",
+          "width": 300
         },
         {
-          "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
-        },
-        {
-          "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
-        },
-        {
-          "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
-        },
-        {
-          "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg"
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485190edd2885a4865e0a4bf6f3c",
+          "width": 64
         }
       ],
-      "listeners": 11213,
-      "mbid": "069a1f6e-cbb5-4408-8541-bd2a3f43adcf",
-      "playcount": 180591,
+      "label": "Rhino",
+      "popularity": 54,
+      "preview_url": null,
       "raw_data": {
-        "album": {
-          "artist": "Ministry",
-          "image": [
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+            },
+            "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+            "id": "1DXylZlWbVvlckNqwvjTEt",
+            "name": "Ministry",
+            "type": "artist",
+            "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+            "type": "C"
+          },
+          {
+            "text": "℗ 1991, 1992 Sire Records Company for the U.S. and WEA International Inc. for the world outside of the U.S.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "075992672764"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2wz3P1w89gQd3iXdmF1IA5"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2wz3P1w89gQd3iXdmF1IA5?market=US",
+        "id": "2wz3P1w89gQd3iXdmF1IA5",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27390edd2885a4865e0a4bf6f3c",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0290edd2885a4865e0a4bf6f3c",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485190edd2885a4865e0a4bf6f3c",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Rhino",
+        "name": "KE*A*H** (Psalm 69)",
+        "popularity": 54,
+        "release_date": "1992-07-10",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2wz3P1w89gQd3iXdmF1IA5/tracks?offset=0&limit=50&market=US",
+          "items": [
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/34s/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": "small"
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 330706,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2D9LxUcR9zWxQtxiHsMA0n"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2D9LxUcR9zWxQtxiHsMA0n",
+              "id": "2D9LxUcR9zWxQtxiHsMA0n",
+              "is_local": false,
+              "is_playable": true,
+              "name": "N.W.O.",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2D9LxUcR9zWxQtxiHsMA0n"
             },
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/64s/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": "medium"
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 310293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0Vcpo9El50PNNbZXfKbNti"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0Vcpo9El50PNNbZXfKbNti",
+              "id": "0Vcpo9El50PNNbZXfKbNti",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Just One Fix",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0Vcpo9El50PNNbZXfKbNti"
             },
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/174s/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": "large"
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 184866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5vmiOClFJzyx7lpgJnt2G4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5vmiOClFJzyx7lpgJnt2G4",
+              "id": "5vmiOClFJzyx7lpgJnt2G4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "TV II",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5vmiOClFJzyx7lpgJnt2G4"
             },
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": "extralarge"
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 251573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2xKuAjaMWVbSz8fUOQI4pu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2xKuAjaMWVbSz8fUOQI4pu",
+              "id": "2xKuAjaMWVbSz8fUOQI4pu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hero",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2xKuAjaMWVbSz8fUOQI4pu"
             },
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": "mega"
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 292586,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0BX3ysoHJvxmLEhPMAfb2z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0BX3ysoHJvxmLEhPMAfb2z",
+              "id": "0BX3ysoHJvxmLEhPMAfb2z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Jesus Built My Hotrod",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0BX3ysoHJvxmLEhPMAfb2z"
             },
             {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/2f24d384a0fe0c8fdc9c756b998c5888.jpg",
-              "size": ""
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 501600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1bv4fups31J6sGCY4m1qHu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1bv4fups31J6sGCY4m1qHu",
+              "id": "1bv4fups31J6sGCY4m1qHu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Scare Crow",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1bv4fups31J6sGCY4m1qHu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 329493,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3lP4QgKArqyUAMDFPv3zFk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3lP4QgKArqyUAMDFPv3zFk",
+              "id": "3lP4QgKArqyUAMDFPv3zFk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Psalm 69",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3lP4QgKArqyUAMDFPv3zFk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 296506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1m8pPuWEh4lNIvJG4MIYDl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1m8pPuWEh4lNIvJG4MIYDl",
+              "id": "1m8pPuWEh4lNIvJG4MIYDl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Corrosion",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:1m8pPuWEh4lNIvJG4MIYDl"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1DXylZlWbVvlckNqwvjTEt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1DXylZlWbVvlckNqwvjTEt",
+                  "id": "1DXylZlWbVvlckNqwvjTEt",
+                  "name": "Ministry",
+                  "type": "artist",
+                  "uri": "spotify:artist:1DXylZlWbVvlckNqwvjTEt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 185720,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2tBtMShYTQKRP3VlgrtoWt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2tBtMShYTQKRP3VlgrtoWt",
+              "id": "2tBtMShYTQKRP3VlgrtoWt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Grace",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2tBtMShYTQKRP3VlgrtoWt"
             }
           ],
-          "listeners": "11213",
-          "mbid": "069a1f6e-cbb5-4408-8541-bd2a3f43adcf",
-          "name": "ΚΕΦΑΛΗΞΘ",
-          "playcount": "180591",
-          "tags": {
-            "tag": [
-              {
-                "name": "industrial metal",
-                "url": "https://www.last.fm/tag/industrial+metal"
-              },
-              {
-                "name": "industrial",
-                "url": "https://www.last.fm/tag/industrial"
-              },
-              {
-                "name": "1992",
-                "url": "https://www.last.fm/tag/1992"
-              },
-              {
-                "name": "metal",
-                "url": "https://www.last.fm/tag/metal"
-              },
-              {
-                "name": "industrial rock",
-                "url": "https://www.last.fm/tag/industrial+rock"
-              }
-            ]
-          },
-          "tracks": {
-            "track": [
-              {
-                "@attr": {
-                  "rank": 1
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 328,
-                "name": "N.W.O",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/N.W.O"
-              },
-              {
-                "@attr": {
-                  "rank": 2
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 310,
-                "name": "Just One Fix",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Just+One+Fix"
-              },
-              {
-                "@attr": {
-                  "rank": 3
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 184,
-                "name": "TV II",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/TV+II"
-              },
-              {
-                "@attr": {
-                  "rank": 4
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 253,
-                "name": "Hero",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Hero"
-              },
-              {
-                "@attr": {
-                  "rank": 5
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 292,
-                "name": "Jesus Built My Hotrod",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Jesus+Built+My+Hotrod"
-              },
-              {
-                "@attr": {
-                  "rank": 6
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 501,
-                "name": "Scare Crow",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Scare+Crow"
-              },
-              {
-                "@attr": {
-                  "rank": 7
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 329,
-                "name": "Psalm 69",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Psalm+69"
-              },
-              {
-                "@attr": {
-                  "rank": 8
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 296,
-                "name": "Corrosion",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Corrosion"
-              },
-              {
-                "@attr": {
-                  "rank": 9
-                },
-                "artist": {
-                  "mbid": "13df2a46-f72f-40e7-aa63-26fcf62c7048",
-                  "name": "Ministry",
-                  "url": "https://www.last.fm/music/Ministry"
-                },
-                "duration": 185,
-                "name": "Grace",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98/Grace"
-              }
-            ]
-          },
-          "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98",
-          "wiki": {
-            "content": "Psalm 69: The Way to Succeed and the Way to Suck Eggs is the fifth studio album by industrial metal band Ministry, released in 1992 on Sire Records. \n\nThe actual title of the album is ΚΕΦΑΛΗΞΘ (a Greek word roughly pronounced as \"ke-fa-lee,\" meaning \"head\" or \"leader,\" and the number 69 in Greek numerals), though Psalm 69 is used for simplicity's sake. The album lead them into a more mainstream audience, with the track Jesus Built My Hotrod (featuring guest vocals by Gibby Haynes from the Butthole Surfers) receiving major airplay on MTV and various other music stations in the early 90's. It also marked Ministry's first release with guitarist Mike Scaccia, who was recruited by band frontman and founder Al Jourgensen in 1989.\n\nThe title of the album is directly linked to chapter 69 of The Book of Lies, a written work of Aleister Crowley, where he uses the expression \"The way to succeed and the way to suck eggs\" as a pun for the 69 sex position (\"suck seed\" and \"suck eggs\"). Moreover, Crowley titled the chapter ΚΕΦΑΛΗΞΘ, Greek κεφαλη or \"head\" and ΞΘ or \"69\" (both slang in English for oral sex - but not the original ancient Greek words). There is no direct link to the Old Testament passage Psalm 69.\n\nSubsequent to the album's release, Ministry put multiple references to the number 69 in future albums. For example, the albums Dark Side of the Spoon and Houses of the Molé both had hidden tracks with a track number of 69.\n\nN.W.O. was nominated for the Grammy Award for Best Metal Performance at the Grammy Awards of 1993, but lost to Nine Inch Nails' Wish. <a href=\"https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-            "published": "11 Nov 2014, 20:37",
-            "summary": "Psalm 69: The Way to Succeed and the Way to Suck Eggs is the fifth studio album by industrial metal band Ministry, released in 1992 on Sire Records. The actual title of the album is ΚΕΦΑΛΗΞΘ (a Greek word roughly pronounced as \"ke-fa-lee,\" meaning \"head\" or \"leader,\" and the number 69 in Greek numerals), though Psalm 69 is used for simplicity's sake. The album lead them into a more mainstream audience, with the track Jesus Built My Hotrod (featuring guest vocals by Gibby Haynes from the Butthole Surfers) receiving major airplay on MTV and various other music stations in the <a href=\"https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98\">Read more on Last.fm</a>."
-          }
-        }
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 9
+        },
+        "type": "album",
+        "uri": "spotify:album:2wz3P1w89gQd3iXdmF1IA5"
       },
-      "similar_artists": [],
-      "tags": [
-        "industrial metal",
-        "industrial",
-        "1992",
-        "metal",
-        "industrial rock"
+      "release_date": "1992-07-10",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 330706,
+          "explicit": false,
+          "id": "2D9LxUcR9zWxQtxiHsMA0n",
+          "name": "N.W.O.",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 310293,
+          "explicit": false,
+          "id": "0Vcpo9El50PNNbZXfKbNti",
+          "name": "Just One Fix",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 184866,
+          "explicit": false,
+          "id": "5vmiOClFJzyx7lpgJnt2G4",
+          "name": "TV II",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 251573,
+          "explicit": false,
+          "id": "2xKuAjaMWVbSz8fUOQI4pu",
+          "name": "Hero",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 292586,
+          "explicit": true,
+          "id": "0BX3ysoHJvxmLEhPMAfb2z",
+          "name": "Jesus Built My Hotrod",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 501600,
+          "explicit": false,
+          "id": "1bv4fups31J6sGCY4m1qHu",
+          "name": "Scare Crow",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 329493,
+          "explicit": false,
+          "id": "3lP4QgKArqyUAMDFPv3zFk",
+          "name": "Psalm 69",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 296506,
+          "explicit": false,
+          "id": "1m8pPuWEh4lNIvJG4MIYDl",
+          "name": "Corrosion",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "1DXylZlWbVvlckNqwvjTEt",
+              "name": "Ministry"
+            }
+          ],
+          "duration_ms": 185720,
+          "explicit": false,
+          "id": "2tBtMShYTQKRP3VlgrtoWt",
+          "name": "Grace",
+          "preview_url": null,
+          "track_number": 9
+        }
       ],
-      "top_albums": [],
-      "top_tracks": [],
-      "url": "https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98",
-      "wiki_content": "Psalm 69: The Way to Succeed and the Way to Suck Eggs is the fifth studio album by industrial metal band Ministry, released in 1992 on Sire Records. \n\nThe actual title of the album is ΚΕΦΑΛΗΞΘ (a Greek word roughly pronounced as \"ke-fa-lee,\" meaning \"head\" or \"leader,\" and the number 69 in Greek numerals), though Psalm 69 is used for simplicity's sake. The album lead them into a more mainstream audience, with the track Jesus Built My Hotrod (featuring guest vocals by Gibby Haynes from the Butthole Surfers) receiving major airplay on MTV and various other music stations in the early 90's. It also marked Ministry's first release with guitarist Mike Scaccia, who was recruited by band frontman and founder Al Jourgensen in 1989.\n\nThe title of the album is directly linked to chapter 69 of The Book of Lies, a written work of Aleister Crowley, where he uses the expression \"The way to succeed and the way to suck eggs\" as a pun for the 69 sex position (\"suck seed\" and \"suck eggs\"). Moreover, Crowley titled the chapter ΚΕΦΑΛΗΞΘ, Greek κεφαλη or \"head\" and ΞΘ or \"69\" (both slang in English for oral sex - but not the original ancient Greek words). There is no direct link to the Old Testament passage Psalm 69.\n\nSubsequent to the album's release, Ministry put multiple references to the number 69 in future albums. For example, the albums Dark Side of the Spoon and Houses of the Molé both had hidden tracks with a track number of 69.\n\nN.W.O. was nominated for the Grammy Award for Best Metal Performance at the Grammy Awards of 1993, but lost to Nine Inch Nails' Wish. <a href=\"https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "wiki_summary": "Psalm 69: The Way to Succeed and the Way to Suck Eggs is the fifth studio album by industrial metal band Ministry, released in 1992 on Sire Records. The actual title of the album is ΚΕΦΑΛΗΞΘ (a Greek word roughly pronounced as \"ke-fa-lee,\" meaning \"head\" or \"leader,\" and the number 69 in Greek numerals), though Psalm 69 is used for simplicity's sake. The album lead them into a more mainstream audience, with the track Jesus Built My Hotrod (featuring guest vocals by Gibby Haynes from the Butthole Surfers) receiving major airplay on MTV and various other music stations in the <a href=\"https://www.last.fm/music/Ministry/%CE%9A%CE%95%CE%A6%CE%91%CE%9B%CE%97%CE%9E%CE%98\">Read more on Last.fm</a>."
+      "url": "https://open.spotify.com/album/2wz3P1w89gQd3iXdmF1IA5"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "2wz3P1w89gQd3iXdmF1IA5",
+  "spotify_url": "https://open.spotify.com/album/2wz3P1w89gQd3iXdmF1IA5",
   "styles": [
     "Industrial Metal"
   ],
@@ -439,6 +732,6 @@
       "title": "Grace"
     }
   ],
-  "updated_at": "2025-07-05T19:34:38.143218",
+  "updated_at": "2025-07-05T20:40:13.934209",
   "year": 2011
 }
