@@ -34,6 +34,11 @@ interface Track {
   name: string;
   duration_ms?: number;
   position?: string;
+  artists?: Array<{
+    name: string;
+    discogs_id?: string;
+    spotify_id?: string;
+  }>;
 }
 
 interface DetailedAlbum {
@@ -176,6 +181,17 @@ export function AlbumDetailPage() {
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   };
 
+  const convertDurationToMs = (duration: string) => {
+    if (!duration) return undefined;
+    const parts = duration.split(':');
+    if (parts.length === 2) {
+      const minutes = parseInt(parts[0], 10);
+      const seconds = parseInt(parts[1], 10);
+      return (minutes * 60 + seconds) * 1000;
+    }
+    return undefined;
+  };
+
   const getTrackDuration = (track: Track) => {
     if (track.duration_ms) {
       return formatDuration(track.duration_ms);
@@ -250,9 +266,23 @@ export function AlbumDetailPage() {
       return detailedAlbum.services.spotify.tracks;
     }
     
-    // Try main tracklist
+    // Try main tracklist - check for compilation format first
     if (detailedAlbum?.tracklist && detailedAlbum.tracklist.length > 0) {
-      return detailedAlbum.tracklist;
+      // Check if this is a compilation with complex track structure
+      const firstTrack = detailedAlbum.tracklist[0];
+      if (firstTrack && typeof firstTrack === 'object' && 'title' in firstTrack && 'artists' in firstTrack) {
+        // This is a compilation format - convert to our standard format
+        return detailedAlbum.tracklist.map((track: any, index: number) => ({
+          track_number: index + 1,
+          name: track.title,
+          duration_ms: track.duration ? convertDurationToMs(track.duration) : undefined,
+          position: track.position,
+          artists: track.artists // Keep artist info for compilations
+        }));
+      } else {
+        // This is a regular tracklist format
+        return detailedAlbum.tracklist;
+      }
     }
     
     // Try raw Spotify data tracks
@@ -523,6 +553,11 @@ export function AlbumDetailPage() {
                     )}
                     <div className="min-w-0 flex-1">
                       <span className="font-medium block truncate">{track.name}</span>
+                      {track.artists && track.artists.length > 0 && (
+                        <span className="text-sm text-muted-foreground block truncate">
+                          by {track.artists.map(artist => artist.name).join(', ')}
+                        </span>
+                      )}
                     </div>
                   </div>
                   {getTrackDuration(track) && (
