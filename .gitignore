@@ -10,7 +10,9 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# Python lib directory (but not src/lib/)
+**/lib/
+!src/lib/
 lib64/
 parts/
 sdist/
