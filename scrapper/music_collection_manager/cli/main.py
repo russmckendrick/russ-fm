@@ -89,11 +89,15 @@ def cli(ctx, config, log_level, log_file, session_logs):
     is_flag=True, 
     help="Show search results and let user select correct matches (use with --force-refresh)"
 )
+@click.option(
+    "--search", 
+    help="Override search query for enrichment services (e.g., 'Tim\\'s Listening Party Part Two')"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search)
 
 
 @cli.command()
