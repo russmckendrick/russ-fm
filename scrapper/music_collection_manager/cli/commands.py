@@ -29,7 +29,7 @@ class BaseCommand:
 class ReleaseCommand(BaseCommand):
     """Command for handling single release operations."""
     
-    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None):
+    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None):
         """Execute the release command."""
         try:
             # Initialize orchestrator
@@ -51,6 +51,11 @@ class ReleaseCommand(BaseCommand):
             if search_override:
                 orchestrator.set_search_override(search_override)
                 self.console.print(f"[yellow]Using custom search query: '{search_override}'[/yellow]")
+            
+            # Set custom cover if provided
+            if custom_cover:
+                orchestrator.set_custom_cover(custom_cover)
+                self.console.print(f"[yellow]Using custom cover: '{custom_cover}'[/yellow]")
             
             self.console.print(f"[blue]Fetching release data for Discogs ID: {discogs_id}[/blue]")
             

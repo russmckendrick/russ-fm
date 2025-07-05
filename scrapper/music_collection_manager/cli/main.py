@@ -93,11 +93,15 @@ def cli(ctx, config, log_level, log_file, session_logs):
     "--search", 
     help="Override search query for enrichment services (e.g., 'Tim\\'s Listening Party Part Two')"
 )
+@click.option(
+    "--custom-cover", 
+    help="Override album artwork with custom image URL"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover)
 
 
 @cli.command()
