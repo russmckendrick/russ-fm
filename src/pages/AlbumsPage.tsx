@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Music } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AlbumCard } from '@/components/AlbumCard';
-import { CollectionStats } from '@/components/CollectionStats';
 import { FilterBar } from '@/components/FilterBar';
 import {
   Pagination,
@@ -212,12 +211,6 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
         years={getAllYears()}
       />
 
-      {/* Stats */}
-      <CollectionStats 
-        totalAlbums={filteredCollection.length}
-        totalArtists={new Set(filteredCollection.map(album => album.release_artist)).size}
-        totalGenres={new Set(filteredCollection.flatMap(album => album.genre_names)).size}
-      />
 
       {/* Collection Grid */}
       {filteredCollection.length === 0 ? (
