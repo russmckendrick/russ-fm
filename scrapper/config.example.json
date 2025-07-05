@@ -1,0 +1,53 @@
+{
+  "discogs": {
+    "access_token": "YOUR_DISCOGS_ACCESS_TOKEN",
+    "username": "YOUR_DISCOGS_USERNAME"
+  },
+  "apple_music": {
+    "key_id": "YOUR_APPLE_MUSIC_KEY_ID",
+    "team_id": "YOUR_APPLE_DEVELOPER_TEAM_ID",
+    "private_key_path": "path/to/apple_private_key.p8",
+    "storefront": "us"
+  },
+  "spotify": {
+    "client_id": "YOUR_SPOTIFY_CLIENT_ID",
+    "client_secret": "YOUR_SPOTIFY_CLIENT_SECRET",
+    "market": "US"
+  },
+  "lastfm": {
+    "api_key": "YOUR_LASTFM_API_KEY",
+    "shared_secret": "YOUR_LASTFM_SHARED_SECRET"
+  },
+  "wikipedia": {
+    "language": "en",
+    "user_agent": "MusicCollectionManager/1.0"
+  },
+  "database": {
+    "path": "collection_cache.db"
+  },
+  "data": {
+    "path": "data"
+  },
+  "releases": {
+    "path": "releases"
+  },
+  "artists": {
+    "path": "artists"
+  },
+  "image_sizes": {
+    "hi-res": "2000x2000",
+    "medium": "700x700",
+    "small": "300x300"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/music_collection_manager.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "processing": {
+    "batch_size": 10,
+    "retry_attempts": 3,
+    "retry_delay": 5,
+    "concurrent_requests": 1
+  }
+}

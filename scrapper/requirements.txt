@@ -1,0 +1,25 @@
+# Core dependencies
+requests>=2.31.0
+click>=8.1.0
+PyJWT>=2.8.0
+cryptography>=41.0.0
+pyyaml>=6.0
+
+# Rich output formatting
+rich>=13.0.0
+
+# Data handling
+python-dateutil>=2.8.0
+
+# Development dependencies
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Optional: for better HTTP handling
+httpx>=0.24.0
+
+# Discogs client (if you want to use the official client)
+# python3-discogs-client>=2.5.0

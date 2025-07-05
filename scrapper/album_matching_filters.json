@@ -1,0 +1,62 @@
+{
+  "description": "Configuration for filtering album name differences in matching reports",
+  "filters": {
+    "common_variations": [
+      "deluxe edition",
+      "deluxe",
+      "remaster",
+      "remastered",
+      "special edition",
+      "expanded edition",
+      "anniversary edition",
+      "collector's edition",
+      "limited edition",
+      "bonus track edition",
+      "bonus tracks",
+      "enhanced",
+      "digitally remastered",
+      "reissue",
+      "re-issue",
+      "vinyl edition",
+      "cd edition",
+      "original soundtrack",
+      "soundtrack",
+      "ost",
+      "explicit version",
+      "clean version",
+      "radio edit",
+      "extended version",
+      "director's cut",
+      "platinum edition",
+      "gold edition",
+      "ultimate edition",
+      "complete edition",
+      "definitive edition"
+    ],
+    "punctuation_ignore": [
+      ":",
+      ";",
+      "!",
+      "?",
+      ".",
+      ",",
+      "'",
+      "\"",
+      "-",
+      "_",
+      "&",
+      "and"
+    ],
+    "parentheses_content": true,
+    "brackets_content": true,
+    "case_sensitive": false,
+    "normalize_spaces": true,
+    "remove_leading_articles": ["the", "a", "an"]
+  },
+  "reporting": {
+    "similarity_threshold": 0.95,
+    "show_only_mismatches": true,
+    "include_partial_matches": false,
+    "max_results": 100
+  }
+}
