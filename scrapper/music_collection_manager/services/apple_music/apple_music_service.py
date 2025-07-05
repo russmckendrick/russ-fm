@@ -182,6 +182,56 @@ class AppleMusicService(BaseService):
             # Return empty result if both attempts fail
             return {"results": {"albums": {"data": []}}}
     
+    def search_release_by_query(self, query: str, **kwargs) -> Dict[str, Any]:
+        """Search for a release in Apple Music using a custom query."""
+        self.ensure_authenticated()
+        
+        try:
+            encoded_term = self._encode_search_term(query)
+            
+            # Build URL manually to avoid double encoding
+            base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
+            url = f"{base_url}?term={encoded_term}&types=albums&limit=10"
+            
+            # Add optional parameters
+            if "country" in kwargs:
+                url += f"&country={kwargs['country']}"
+            
+            headers = self._get_auth_headers()
+            response = self._make_request("GET", url, headers=headers)
+            
+            return response.json()
+            
+        except Exception as e:
+            # If the original search fails, try with normalized characters
+            self.logger.warning(f"Apple Music album search failed for '{query}': {str(e)}")
+            
+            # Try with normalized characters
+            normalized_query = self._normalize_search_term(query)
+            
+            if normalized_query != query:
+                self.logger.info(f"Trying normalized album search: '{normalized_query}'")
+                try:
+                    encoded_term = self._encode_search_term(normalized_query)
+                    base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
+                    url = f"{base_url}?term={encoded_term}&types=albums&limit=10"
+                    
+                    if "country" in kwargs:
+                        url += f"&country={kwargs['country']}"
+                    
+                    headers = self._get_auth_headers()
+                    response = self._make_request("GET", url, headers=headers)
+                    
+                    result = response.json()
+                    self.logger.info(f"Normalized album search succeeded for '{normalized_query}'")
+                    return result
+                    
+                except Exception as e2:
+                    self.logger.warning(f"Normalized album search also failed: {str(e2)}")
+            
+            # Return empty result if both attempts fail
+            return {"results": {"albums": {"data": []}}}
+    
     def get_release_details(self, release_id: str) -> Dict[str, Any]:
         """Get detailed information about a specific release."""
         self.ensure_authenticated()
