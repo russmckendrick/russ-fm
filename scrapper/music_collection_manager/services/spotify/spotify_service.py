@@ -86,6 +86,27 @@ class SpotifyService(BaseService):
         
         return response.json()
     
+    def search_release_by_query(self, query: str, **kwargs) -> Dict[str, Any]:
+        """Search for a release in Spotify using a custom query."""
+        self.ensure_authenticated()
+        
+        params = {
+            "q": query,
+            "type": "album",
+            "market": self.market,
+            "limit": 50,
+            "offset": 0
+        }
+        
+        # Add optional parameters
+        if "market" in kwargs:
+            params["market"] = kwargs["market"]
+        
+        headers = self._get_auth_headers()
+        response = self._make_request("GET", f"{self.BASE_URL}/search", headers=headers, params=params)
+        
+        return response.json()
+    
     def get_release_details(self, release_id: str) -> Dict[str, Any]:
         """Get detailed information about a specific release."""
         self.ensure_authenticated()

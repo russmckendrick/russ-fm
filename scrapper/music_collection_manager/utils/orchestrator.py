@@ -25,6 +25,7 @@ class MusicDataOrchestrator:
         self.logger = logger or logging.getLogger(__name__)
         self.services = {}
         self.interactive_mode = False
+        self.search_override = None
         
         # Initialize image manager with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -45,6 +46,10 @@ class MusicDataOrchestrator:
     def set_interactive_mode(self, enabled: bool):
         """Enable or disable interactive mode for manual match selection."""
         self.interactive_mode = enabled
+    
+    def set_search_override(self, search_query: str):
+        """Set a custom search query to override the default artist + album search."""
+        self.search_override = search_query
     
     def _initialize_services(self):
         """Initialize all available services."""
@@ -227,7 +232,11 @@ class MusicDataOrchestrator:
         
         # Enrich with Apple Music
         if "apple_music" in self.services:
-            apple_data = self._get_apple_music_data(primary_artist, release.title, release.year)
+            if self.search_override:
+                apple_data = self._get_apple_music_data_by_query(self.search_override)
+            else:
+                apple_data = self._get_apple_music_data(primary_artist, release.title, release.year)
+            
             if apple_data:
                 release.raw_data["apple_music"] = apple_data
                 
@@ -255,7 +264,11 @@ class MusicDataOrchestrator:
         
         # Enrich with Spotify
         if "spotify" in self.services:
-            spotify_data = self._get_spotify_data(primary_artist, release.title, release.year)
+            if self.search_override:
+                spotify_data = self._get_spotify_data_by_query(self.search_override)
+            else:
+                spotify_data = self._get_spotify_data(primary_artist, release.title, release.year)
+            
             if spotify_data:
                 release.raw_data["spotify"] = spotify_data
                 
@@ -271,7 +284,11 @@ class MusicDataOrchestrator:
         
         # Enrich with Last.fm
         if "lastfm" in self.services:
-            lastfm_data = self._get_lastfm_data(primary_artist, release.title)
+            if self.search_override:
+                lastfm_data = self._get_lastfm_data_by_query(self.search_override)
+            else:
+                lastfm_data = self._get_lastfm_data(primary_artist, release.title)
+            
             if lastfm_data:
                 release.raw_data["lastfm"] = lastfm_data
                 
@@ -323,7 +340,14 @@ class MusicDataOrchestrator:
         """Get Apple Music data for an album."""
         try:
             service = self.services["apple_music"]
-            search_results = service.search_release(artist, album)
+            
+            # Use search override if provided, otherwise use artist + album
+            if self.search_override:
+                search_results = service.search_release_by_query(self.search_override)
+                search_display = self.search_override
+            else:
+                search_results = service.search_release(artist, album)
+                search_display = f"{artist} - {album}"
             
             if self.interactive_mode:
                 selected_match = self._interactive_select_match("Apple Music", search_results, artist, album)
@@ -335,7 +359,8 @@ class MusicDataOrchestrator:
                     return service.create_apple_music_enrichment(best_match)
             
         except Exception as e:
-            self.logger.warning(f"Failed to get Apple Music data for {artist} - {album}: {str(e)}")
+            search_display = self.search_override if self.search_override else f"{artist} - {album}"
+            self.logger.warning(f"Failed to get Apple Music data for {search_display}: {str(e)}")
         
         return None
     
@@ -343,7 +368,14 @@ class MusicDataOrchestrator:
         """Get Spotify data for an album."""
         try:
             service = self.services["spotify"]
-            search_results = service.search_release(artist, album)
+            
+            # Use search override if provided, otherwise use artist + album
+            if self.search_override:
+                search_results = service.search_release_by_query(self.search_override)
+                search_display = self.search_override
+            else:
+                search_results = service.search_release(artist, album)
+                search_display = f"{artist} - {album}"
             
             if self.interactive_mode:
                 selected_match = self._interactive_select_match("Spotify", search_results, artist, album)
@@ -355,7 +387,8 @@ class MusicDataOrchestrator:
                     return service.create_spotify_enrichment(best_match)
             
         except Exception as e:
-            self.logger.warning(f"Failed to get Spotify data for {artist} - {album}: {str(e)}")
+            search_display = self.search_override if self.search_override else f"{artist} - {album}"
+            self.logger.warning(f"Failed to get Spotify data for {search_display}: {str(e)}")
         
         return None
     
@@ -363,10 +396,18 @@ class MusicDataOrchestrator:
         """Get Last.fm data for an album."""
         try:
             service = self.services["lastfm"]
-            return service.find_best_album_match(artist, album)
+            
+            # Use search override if provided, otherwise use artist + album
+            if self.search_override:
+                # For Last.fm, we need to handle search override differently since it expects artist and album separately
+                # We'll pass the search override as the album parameter and empty string as artist
+                return service.find_best_album_match("", self.search_override)
+            else:
+                return service.find_best_album_match(artist, album)
             
         except Exception as e:
-            self.logger.warning(f"Failed to get Last.fm data for {artist} - {album}: {str(e)}")
+            search_display = self.search_override if self.search_override else f"{artist} - {album}"
+            self.logger.warning(f"Failed to get Last.fm data for {search_display}: {str(e)}")
         
         return None
     
