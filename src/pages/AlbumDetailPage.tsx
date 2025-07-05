@@ -302,13 +302,21 @@ export function AlbumDetailPage() {
         </div>
         
         <div className="lg:col-span-2">
-          <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>
-          <Link 
-            to={album.uri_artist}
-            className="text-2xl text-muted-foreground hover:text-primary transition-colors mb-4 inline-block"
-          >
-            {album.release_artist}
-          </Link>
+          <div className="flex items-start gap-3 mb-4">
+            <Avatar className="h-16 w-16 mt-1">
+              <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
+              <AvatarFallback className="text-lg">{album.release_artist.charAt(0)}</AvatarFallback>
+            </Avatar>
+            <div className="flex-1 min-w-0">
+              <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>
+              <Link 
+                to={album.uri_artist}
+                className="text-2xl text-muted-foreground hover:text-primary transition-colors inline-block"
+              >
+                {album.release_artist}
+              </Link>
+            </div>
+          </div>
           
           <div className="space-y-6">
             {/* Basic Info */}
