@@ -73,7 +73,7 @@ class SpotifyService(BaseService):
             "q": query,
             "type": "album",
             "market": self.market,
-            "limit": 30,
+            "limit": 50,
             "offset": 0
         }
         
