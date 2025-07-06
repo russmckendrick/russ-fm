@@ -220,6 +220,32 @@ class ArtistDataOrchestrator:
                 elif hasattr(wiki_data, "extract"):
                     artist.biography = wiki_data.extract
                     artist.wikipedia_url = wiki_data.url
+
+        # Enrich with Discogs
+        if "discogs" in self.services:
+            discogs_data = self._get_discogs_artist_data(artist_name)
+            if discogs_data:
+                artist.raw_data["discogs"] = discogs_data
+                
+                if discogs_data.get("url"):
+                    artist.discogs_url = discogs_data["url"]
+                
+                # Add Discogs images if available
+                if discogs_data.get("cover_image"):
+                    from ..models import Image
+                    discogs_image = Image(
+                        url=discogs_data.get("cover_image", ""),
+                        type="discogs_artist_primary"
+                    )
+                    artist.add_image(discogs_image)
+                
+                if discogs_data.get("thumb"):
+                    from ..models import Image
+                    discogs_thumb = Image(
+                        url=discogs_data.get("thumb", ""),
+                        type="discogs_artist_thumb"
+                    )
+                    artist.add_image(discogs_thumb)
         
         # Download artist images with new priority logic
         self._download_artist_images(artist)
@@ -278,7 +304,18 @@ class ArtistDataOrchestrator:
         """Get Last.fm data for an artist."""
         try:
             service = self.services["lastfm"]
-            return service.get_artist_detailed_info(artist_name)
+            
+            if self.interactive_mode:
+                # Search for multiple artists first
+                search_results = service.search_artist(artist_name)
+                selected_match = self._interactive_select_artist_match("Last.fm", search_results, artist_name)
+                if selected_match:
+                    # Get detailed info for the selected artist
+                    return service.get_artist_detailed_info(selected_match.get("name", artist_name))
+                else:
+                    return None
+            else:
+                return service.get_artist_detailed_info(artist_name)
             
         except Exception as e:
             self.logger.warning(f"Failed to get Last.fm artist data for {artist_name}: {str(e)}")
@@ -289,13 +326,56 @@ class ArtistDataOrchestrator:
         """Get Wikipedia data for an artist."""
         try:
             service = self.services["wikipedia"]
-            return service.search_artist(artist_name)
+            
+            if self.interactive_mode:
+                # Search for multiple pages first
+                search_results = service.search_artist(artist_name)
+                selected_match = self._interactive_select_artist_match("Wikipedia", search_results, artist_name)
+                if selected_match:
+                    # Get detailed info for the selected page
+                    page_title = selected_match.get("title", "")
+                    if page_title:
+                        page_info = service.get_page_info(page_title)
+                        return service.create_wikipedia_enrichment(page_info, page_title)
+                else:
+                    return None
+            else:
+                # Use the existing non-interactive method
+                artist_info = service.get_artist_info(artist_name)
+                if artist_info:
+                    return service.create_wikipedia_enrichment(artist_info)
+                return None
             
         except Exception as e:
             self.logger.warning(f"Failed to get Wikipedia artist data for {artist_name}: {str(e)}")
         
         return None
-    
+
+    def _get_discogs_artist_data(self, artist_name: str) -> Optional[Dict[str, Any]]:
+        """Get Discogs data for an artist."""
+        try:
+            service = self.services["discogs"]
+            
+            if self.interactive_mode:
+                # Search for multiple artists first
+                search_results = service.search_artist(artist_name)
+                selected_match = self._interactive_select_artist_match("Discogs", search_results, artist_name)
+                if selected_match:
+                    return service.create_artist_enrichment(selected_match)
+                else:
+                    return None
+            else:
+                search_results = service.search_artist(artist_name)
+                best_match = service.find_best_artist_match(search_results, artist_name)
+                if best_match:
+                    return service.create_artist_enrichment(best_match)
+                return None
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to get Discogs artist data for {artist_name}: {str(e)}")
+        
+        return None
+
     def _download_artist_images(self, artist: Artist) -> None:
         """Download artist images with priority: Apple Music (no /Music[digits]/) > Spotify > Discogs."""
         try:
@@ -327,7 +407,7 @@ class ArtistDataOrchestrator:
                     self.logger.warning(f"🖼️ ❌ Failed to download custom image from {self.custom_image}")
                 return
             
-            # Extract image sources in priority order: Apple Music (no /Music[digits]/ pattern) > Spotify > Discogs
+            # Extract image sources in priority order: Apple Music (no /Music[digits]/) > Spotify > Discogs
             image_sources = self._extract_artist_image_sources(artist)
             
             if not image_sources:
@@ -493,26 +573,41 @@ class ArtistDataOrchestrator:
             artists = search_results.get("results", {}).get("artists", {}).get("data", [])
             for artist in artists:
                 attrs = artist.get("attributes", {})
+                artist_id = artist.get("id", "")
+                # Construct proper Apple Music URL format: https://music.apple.com/{storefront}/artist/{artist_id}
+                # Get storefront from Apple Music service if available
+                storefront = "gb"  # Default to GB
+                if "apple_music" in self.services:
+                    storefront = getattr(self.services["apple_music"], "storefront", "gb")
+                apple_music_url = f"https://music.apple.com/{storefront}/artist/{artist_id}" if artist_id else ""
                 candidates.append({
                     "data": artist,
                     "name": attrs.get("name", "Unknown"),
                     "genres": ", ".join(attrs.get("genreNames", [])[:3]),  # Show first 3 genres
-                    "url": attrs.get("url", ""),
+                    "url": apple_music_url,
                     "id": artist.get("id", "Unknown")
                 })
         elif service_name == "Spotify":
             artists = search_results.get("artists", {}).get("items", [])
             for artist in artists:
+                external_urls = artist.get("external_urls", {})
+                spotify_url = external_urls.get("spotify", "")
+                # If no external URL, construct from artist ID
+                if not spotify_url:
+                    artist_id = artist.get("id", "")
+                    if artist_id:
+                        spotify_url = f"https://open.spotify.com/artist/{artist_id}"
                 candidates.append({
                     "data": artist,
                     "name": artist.get("name", "Unknown"),
                     "genres": ", ".join(artist.get("genres", [])[:3]),  # Show first 3 genres
                     "followers": f"{artist.get('followers', {}).get('total', 0):,}",
                     "popularity": str(artist.get("popularity", 0)),
-                    "id": artist.get("id", "Unknown")
+                    "id": artist.get("id", "Unknown"),
+                    "url": spotify_url
                 })
         elif service_name == "Last.fm":
-            # Last.fm search results structure (if we add Last.fm interactive support later)
+            # Last.fm search results structure
             artists = search_results.get("results", {}).get("artistmatches", {}).get("artist", [])
             for artist in artists:
                 candidates.append({
@@ -521,6 +616,33 @@ class ArtistDataOrchestrator:
                     "listeners": f"{artist.get('listeners', 0):,}",
                     "url": artist.get("url", ""),
                     "mbid": artist.get("mbid", "Unknown")
+                })
+        elif service_name == "Wikipedia":
+            # Wikipedia search results structure
+            pages = search_results.get("query", {}).get("search", [])
+            for page in pages:
+                # Construct Wikipedia URL
+                page_title = page.get("title", "")
+                wiki_url = f"https://en.wikipedia.org/wiki/{page_title.replace(' ', '_')}" if page_title else ""
+                candidates.append({
+                    "data": page,
+                    "title": page.get("title", "Unknown"),
+                    "snippet": page.get("snippet", "").replace("<span class=\"searchmatch\">", "").replace("</span>", "")[:100] + "..." if len(page.get("snippet", "")) > 100 else page.get("snippet", "").replace("<span class=\"searchmatch\">", "").replace("</span>", ""),
+                    "size": f"{page.get('size', 0):,} bytes" if page.get('size') else "Unknown size",
+                    "url": wiki_url
+                })
+        elif service_name == "Discogs":
+            # Discogs search results structure
+            results = search_results.get("results", [])
+            for result in results:
+                artist_id = result.get("id", "")
+                discogs_url = f"https://www.discogs.com/artist/{artist_id}" if artist_id else ""
+                candidates.append({
+                    "data": result,
+                    "name": result.get("title", "Unknown"),
+                    "type": result.get("type", "Unknown"),
+                    "id": str(artist_id),
+                    "url": discogs_url
                 })
         
         if not candidates:
@@ -537,13 +659,24 @@ class ArtistDataOrchestrator:
         if service_name == "Apple Music":
             table.add_column("Genres", style="green")
             table.add_column("ID", style="yellow")
+            table.add_column("URL", style="blue")
         elif service_name == "Spotify":
             table.add_column("Genres", style="green")
             table.add_column("Followers", style="yellow")
             table.add_column("Popularity", style="blue")
+            table.add_column("URL", style="cyan")
         elif service_name == "Last.fm":
             table.add_column("Listeners", style="green")
             table.add_column("MBID", style="yellow")
+            table.add_column("URL", style="blue")
+        elif service_name == "Wikipedia":
+            table.add_column("Description", style="green")
+            table.add_column("Size", style="yellow")
+            table.add_column("URL", style="blue")
+        elif service_name == "Discogs":
+            table.add_column("Type", style="green")
+            table.add_column("ID", style="yellow")
+            table.add_column("URL", style="blue")
         
         for i, candidate in enumerate(candidates, 1):
             if service_name == "Apple Music":
@@ -551,7 +684,8 @@ class ArtistDataOrchestrator:
                     str(i),
                     candidate["name"],
                     candidate["genres"] or "No genres",
-                    candidate["id"]
+                    candidate["id"],
+                    candidate["url"]
                 )
             elif service_name == "Spotify":
                 table.add_row(
@@ -559,17 +693,45 @@ class ArtistDataOrchestrator:
                     candidate["name"],
                     candidate["genres"] or "No genres",
                     candidate["followers"],
-                    candidate["popularity"]
+                    candidate["popularity"],
+                    candidate["url"]
                 )
             elif service_name == "Last.fm":
                 table.add_row(
                     str(i),
                     candidate["name"],
                     candidate["listeners"],
-                    candidate["mbid"]
+                    candidate["mbid"],
+                    candidate["url"]
+                )
+            elif service_name == "Wikipedia":
+                table.add_row(
+                    str(i),
+                    candidate["title"],
+                    candidate["snippet"],
+                    candidate["size"],
+                    candidate["url"]
+                )
+            elif service_name == "Discogs":
+                table.add_row(
+                    str(i),
+                    candidate["name"],
+                    candidate["type"],
+                    candidate["id"],
+                    candidate["url"]
                 )
         
-        table.add_row("0", "[dim]Skip this service[/dim]", "", "", "" if service_name == "Spotify" else "")
+        # Add skip option with appropriate number of columns
+        if service_name == "Apple Music":
+            table.add_row("0", "[dim]Skip this service[/dim]", "", "", "")
+        elif service_name == "Spotify":
+            table.add_row("0", "[dim]Skip this service[/dim]", "", "", "", "")
+        elif service_name == "Last.fm":
+            table.add_row("0", "[dim]Skip this service[/dim]", "", "", "")
+        elif service_name == "Wikipedia":
+            table.add_row("0", "[dim]Skip this service[/dim]", "", "", "")
+        elif service_name == "Discogs":
+            table.add_row("0", "[dim]Skip this service[/dim]", "", "", "")
         console.print(table)
         
         # Get user selection
