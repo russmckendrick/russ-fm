@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1790229187",
+  "apple_music_url": "https://music.apple.com/gb/album/now-thats-what-i-call-an-era-sound-of-the-suburbs/1790229187",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T19:35:01.096636",
+  "created_at": "2025-07-06T08:42:59.731365",
   "date_added": "2025-02-16T03:14:38-08:00",
   "discogs_id": "33121413",
   "discogs_url": "https://www.discogs.com/release/33121413-Various-Now-Thats-What-I-Call-An-Era-The-Sound-Of-The-Suburbs-19771980",
@@ -47,6 +47,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/BNwsw9wJ-pqyZaQSwS-5gIDqtrKbLZ5XMPzu2oWrz1w/rs:fit/g:sm/q:90/h:579/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMTIx/NDEzLTE3Mzk1NTQy/NDUtODMxOC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/76/9c/d1769c56-cede-cd74-4bac-5538aead47df/196872324396.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -57,23 +64,466 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413-hi-res.jpg",
+    "medium": "../public/album/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413-medium.jpg",
+    "small": "../public/album/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413/now-thats-what-i-call-an-era-the-sound-of-the-suburbs-19771980-33121413-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:35:53.568373",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T08:43:13.617493",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Now That's What I Call An Era: Sound Of The Suburbs",
   "release_name_discogs": "Now That's What I Call An Era The Sound Of The Suburbs 1977~1980",
-  "release_name_spotify": null,
+  "release_name_spotify": "NOW That's What I Call Music Vol. 420",
   "released": "2025-02-07",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/76/9c/d1769c56-cede-cd74-4bac-5538aead47df/196872324396.jpg/2000x2000bb.jpg",
+      "content_rating": "clean",
+      "copyright": "℗ This compilation (P) 2025 Now That's What I Call Music LLP",
+      "editorial_notes": null,
+      "id": "1790229187",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "ffffff",
+          "height": 3000,
+          "textColor1": "030304",
+          "textColor2": "660308",
+          "textColor3": "353536",
+          "textColor4": "843539",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d1/76/9c/d1769c56-cede-cd74-4bac-5538aead47df/196872324396.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "contentRating": "clean",
+        "copyright": "℗ This compilation (P) 2025 Now That's What I Call Music LLP",
+        "genreNames": [
+          "Pop",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Now That's What I Call An Era: Sound Of The Suburbs",
+        "playParams": {
+          "id": "1790229187",
+          "kind": "album"
+        },
+        "recordLabel": "Now! Music",
+        "releaseDate": "2025-02-07",
+        "trackCount": 80,
+        "upc": "196872324396",
+        "url": "https://music.apple.com/gb/album/now-thats-what-i-call-an-era-sound-of-the-suburbs/1790229187"
+      },
+      "url": "https://music.apple.com/gb/album/now-thats-what-i-call-an-era-sound-of-the-suburbs/1790229187"
+    },
+    "spotify": {
+      "album_type": "single",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2017 Counter Intuitive Records",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2017 Counter Intuitive Records",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "0885014820802"
+      },
+      "id": "3ZAhwcHTeDUGz1GDx0UYAO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27320b0bf46457bed365b63e787",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0220b0bf46457bed365b63e787",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485120b0bf46457bed365b63e787",
+          "width": 64
+        }
+      ],
+      "label": "Counter Intuitive Records",
+      "popularity": 44,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6PsktPFR0UZptKdSqmlS5h"
+            },
+            "href": "https://api.spotify.com/v1/artists/6PsktPFR0UZptKdSqmlS5h",
+            "id": "6PsktPFR0UZptKdSqmlS5h",
+            "name": "Mom Jeans.",
+            "type": "artist",
+            "uri": "spotify:artist:6PsktPFR0UZptKdSqmlS5h"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3EYgeLZ0vtVHKkUL26Eu49"
+            },
+            "href": "https://api.spotify.com/v1/artists/3EYgeLZ0vtVHKkUL26Eu49",
+            "id": "3EYgeLZ0vtVHKkUL26Eu49",
+            "name": "Prince Daddy & the Hyena",
+            "type": "artist",
+            "uri": "spotify:artist:3EYgeLZ0vtVHKkUL26Eu49"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1uWO3WGCLeZJOQVPXjAERW"
+            },
+            "href": "https://api.spotify.com/v1/artists/1uWO3WGCLeZJOQVPXjAERW",
+            "id": "1uWO3WGCLeZJOQVPXjAERW",
+            "name": "Pictures of Vernon",
+            "type": "artist",
+            "uri": "spotify:artist:1uWO3WGCLeZJOQVPXjAERW"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2017 Counter Intuitive Records",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2017 Counter Intuitive Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "0885014820802"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3ZAhwcHTeDUGz1GDx0UYAO"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3ZAhwcHTeDUGz1GDx0UYAO?market=US",
+        "id": "3ZAhwcHTeDUGz1GDx0UYAO",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27320b0bf46457bed365b63e787",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0220b0bf46457bed365b63e787",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485120b0bf46457bed365b63e787",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Counter Intuitive Records",
+        "name": "NOW That's What I Call Music Vol. 420",
+        "popularity": 44,
+        "release_date": "2017-10-06",
+        "release_date_precision": "day",
+        "total_tracks": 6,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3ZAhwcHTeDUGz1GDx0UYAO/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3EYgeLZ0vtVHKkUL26Eu49"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3EYgeLZ0vtVHKkUL26Eu49",
+                  "id": "3EYgeLZ0vtVHKkUL26Eu49",
+                  "name": "Prince Daddy & the Hyena",
+                  "type": "artist",
+                  "uri": "spotify:artist:3EYgeLZ0vtVHKkUL26Eu49"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213252,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3TZyF0crnzBF15ewDbl4Wp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3TZyF0crnzBF15ewDbl4Wp",
+              "id": "3TZyF0crnzBF15ewDbl4Wp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thrashville 1/3",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3TZyF0crnzBF15ewDbl4Wp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1uWO3WGCLeZJOQVPXjAERW"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1uWO3WGCLeZJOQVPXjAERW",
+                  "id": "1uWO3WGCLeZJOQVPXjAERW",
+                  "name": "Pictures of Vernon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1uWO3WGCLeZJOQVPXjAERW"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 108019,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Y8aMlZHSFTNP0mjZnbe2Q"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Y8aMlZHSFTNP0mjZnbe2Q",
+              "id": "3Y8aMlZHSFTNP0mjZnbe2Q",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Sunshine Bus",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3Y8aMlZHSFTNP0mjZnbe2Q"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6PsktPFR0UZptKdSqmlS5h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6PsktPFR0UZptKdSqmlS5h",
+                  "id": "6PsktPFR0UZptKdSqmlS5h",
+                  "name": "Mom Jeans.",
+                  "type": "artist",
+                  "uri": "spotify:artist:6PsktPFR0UZptKdSqmlS5h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 319506,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0jcA0X8MlmG1AQn8d3etAN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0jcA0X8MlmG1AQn8d3etAN",
+              "id": "0jcA0X8MlmG1AQn8d3etAN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "YIKES (daddy wants wings)",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0jcA0X8MlmG1AQn8d3etAN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3EYgeLZ0vtVHKkUL26Eu49"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3EYgeLZ0vtVHKkUL26Eu49",
+                  "id": "3EYgeLZ0vtVHKkUL26Eu49",
+                  "name": "Prince Daddy & the Hyena",
+                  "type": "artist",
+                  "uri": "spotify:artist:3EYgeLZ0vtVHKkUL26Eu49"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 143777,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3TOdXqyPOVYzN7rhYtCgtB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3TOdXqyPOVYzN7rhYtCgtB",
+              "id": "3TOdXqyPOVYzN7rhYtCgtB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thrashville 2/3",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3TOdXqyPOVYzN7rhYtCgtB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1uWO3WGCLeZJOQVPXjAERW"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1uWO3WGCLeZJOQVPXjAERW",
+                  "id": "1uWO3WGCLeZJOQVPXjAERW",
+                  "name": "Pictures of Vernon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1uWO3WGCLeZJOQVPXjAERW"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 117632,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1lmrKbluTwhllYMpq0iuHX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1lmrKbluTwhllYMpq0iuHX",
+              "id": "1lmrKbluTwhllYMpq0iuHX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Camp Games 1.1",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:1lmrKbluTwhllYMpq0iuHX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6PsktPFR0UZptKdSqmlS5h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6PsktPFR0UZptKdSqmlS5h",
+                  "id": "6PsktPFR0UZptKdSqmlS5h",
+                  "name": "Mom Jeans.",
+                  "type": "artist",
+                  "uri": "spotify:artist:6PsktPFR0UZptKdSqmlS5h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208422,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1xstbgsiIPLA9FN6lU8fMN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1xstbgsiIPLA9FN6lU8fMN",
+              "id": "1xstbgsiIPLA9FN6lU8fMN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Vape Nation 2.0",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1xstbgsiIPLA9FN6lU8fMN"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 6
+        },
+        "type": "album",
+        "uri": "spotify:album:3ZAhwcHTeDUGz1GDx0UYAO"
+      },
+      "release_date": "2017-10-06",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "3EYgeLZ0vtVHKkUL26Eu49",
+              "name": "Prince Daddy & the Hyena"
+            }
+          ],
+          "duration_ms": 213252,
+          "explicit": true,
+          "id": "3TZyF0crnzBF15ewDbl4Wp",
+          "name": "Thrashville 1/3",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "1uWO3WGCLeZJOQVPXjAERW",
+              "name": "Pictures of Vernon"
+            }
+          ],
+          "duration_ms": 108019,
+          "explicit": true,
+          "id": "3Y8aMlZHSFTNP0mjZnbe2Q",
+          "name": "The Sunshine Bus",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "6PsktPFR0UZptKdSqmlS5h",
+              "name": "Mom Jeans."
+            }
+          ],
+          "duration_ms": 319506,
+          "explicit": true,
+          "id": "0jcA0X8MlmG1AQn8d3etAN",
+          "name": "YIKES (daddy wants wings)",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "3EYgeLZ0vtVHKkUL26Eu49",
+              "name": "Prince Daddy & the Hyena"
+            }
+          ],
+          "duration_ms": 143777,
+          "explicit": true,
+          "id": "3TOdXqyPOVYzN7rhYtCgtB",
+          "name": "Thrashville 2/3",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "1uWO3WGCLeZJOQVPXjAERW",
+              "name": "Pictures of Vernon"
+            }
+          ],
+          "duration_ms": 117632,
+          "explicit": true,
+          "id": "1lmrKbluTwhllYMpq0iuHX",
+          "name": "Camp Games 1.1",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "6PsktPFR0UZptKdSqmlS5h",
+              "name": "Mom Jeans."
+            }
+          ],
+          "duration_ms": 208422,
+          "explicit": true,
+          "id": "1xstbgsiIPLA9FN6lU8fMN",
+          "name": "Vape Nation 2.0",
+          "preview_url": null,
+          "track_number": 6
+        }
+      ],
+      "url": "https://open.spotify.com/album/3ZAhwcHTeDUGz1GDx0UYAO"
+    }
+  },
+  "spotify_id": "3ZAhwcHTeDUGz1GDx0UYAO",
+  "spotify_url": "https://open.spotify.com/album/3ZAhwcHTeDUGz1GDx0UYAO",
   "styles": [
     "Classic Rock",
     "Disco",
@@ -1066,6 +1516,6 @@
       "title": "Video Killed The Radio Star"
     }
   ],
-  "updated_at": "2025-07-05T19:35:53.567573",
+  "updated_at": "2025-07-06T08:43:11.956599",
   "year": 2025
 }
