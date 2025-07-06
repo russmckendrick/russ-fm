@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./theme-toggle";
+import { SearchOverlay } from "./SearchOverlay";
 import { Search, Menu, X, TrendingUp } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 
@@ -14,6 +15,22 @@ interface NavigationProps {
 export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
+
+  const handleSearchFocus = () => {
+    setSearchOverlayOpen(true);
+  };
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+    if (e.target.value.trim()) {
+      setSearchOverlayOpen(true);
+    }
+  };
+
+  const closeSearchOverlay = () => {
+    setSearchOverlayOpen(false);
+  };
 
   return (
     <div className="min-h-0">
@@ -69,7 +86,8 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     className="pl-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
                     placeholder="Search albums, artists, or genres..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={handleSearchChange}
+                    onFocus={handleSearchFocus}
                   />
                 </div>
 
@@ -102,7 +120,8 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     className="pl-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
                     placeholder="Search albums, artists, or genres..."
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    onChange={handleSearchChange}
+                    onFocus={handleSearchFocus}
                   />
                 </div>
 
@@ -153,6 +172,14 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
           )}
         </div>
       </div>
+
+      {/* Search Overlay */}
+      <SearchOverlay 
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
+        isVisible={searchOverlayOpen}
+        onClose={closeSearchOverlay}
+      />
     </div>
   );
 }
