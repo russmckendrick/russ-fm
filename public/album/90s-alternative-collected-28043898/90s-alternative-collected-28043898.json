@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T15:03:26.734887",
+  "created_at": "2025-07-06T18:04:02.056949",
   "date_added": "2023-09-08T04:42:40-07:00",
   "discogs_id": "28043898",
   "discogs_url": "https://www.discogs.com/release/28043898-Various-90s-Alternative-Collected",
@@ -40,6 +40,13 @@
       "type": "primary",
       "url": "https://i.discogs.com/0_16suk5AzAiMU_u7q6V9G2ch77gs7Uv2uda3StBv4I/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI4MDQz/ODk4LTE2OTI3Mjk2/MjgtMTkxMi5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/90-s-alternative-collected-28043898/90-s-alternative-collected-28043898.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -47,11 +54,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/90s-alternative-collected-28043898/90s-alternative-collected-28043898-hi-res.jpg",
+    "medium": "../public/album/90s-alternative-collected-28043898/90s-alternative-collected-28043898-medium.jpg",
+    "small": "../public/album/90s-alternative-collected-28043898/90s-alternative-collected-28043898-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:03:35.193642",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T18:04:05.945088",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -564,6 +575,6 @@
       "title": "Santeria"
     }
   ],
-  "updated_at": "2025-07-05T15:03:35.193155",
+  "updated_at": "2025-07-06T18:04:05.691412",
   "year": 2023
 }

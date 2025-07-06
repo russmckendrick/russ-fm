@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:18:32.701177",
+  "created_at": "2025-07-06T17:56:03.372704",
   "date_added": "2023-04-03T04:26:22-07:00",
   "discogs_id": "26536709",
   "discogs_url": "https://www.discogs.com/release/26536709-Various-Dance-Craze-The-Best-of-British-SkaLIVE",
@@ -142,6 +142,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/iIi3kk0Q_T9iRxJFPSMeoIiqf4TsmeWPe0Rp486yn-s/rs:fit/g:sm/q:90/h:252/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2NTM2/NzA5LTE2Nzk5NTg1/MjUtNzM4NS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://superdeluxeedition.com/wp-content/uploads/2023/02/cover-1.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -152,11 +159,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/dance-craze-the-best-of-british-skalive-26536709/dance-craze-the-best-of-british-skalive-26536709-hi-res.jpg",
+    "medium": "../public/album/dance-craze-the-best-of-british-skalive-26536709/dance-craze-the-best-of-british-skalive-26536709-medium.jpg",
+    "small": "../public/album/dance-craze-the-best-of-british-skalive-26536709/dance-craze-the-best-of-british-skalive-26536709-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:18:33.301305",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T17:56:06.500325",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -986,6 +997,6 @@
       "title": "Nite Klub"
     }
   ],
-  "updated_at": "2025-07-05T15:18:33.300605",
+  "updated_at": "2025-07-06T17:56:06.304015",
   "year": 2023
 }
