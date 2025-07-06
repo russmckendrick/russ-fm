@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T14:44:05.577222",
+  "created_at": "2025-07-06T17:26:17.657657",
   "date_added": "2024-05-31T09:20:36-07:00",
   "discogs_id": "30822024",
   "discogs_url": "https://www.discogs.com/release/30822024-Nordic-Giants-Origins",
@@ -61,6 +61,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/49lABO6r2D5LtLKsF5RFw-yVaO7_tWiShD6klhLEolg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwODIy/MDI0LTE3MTcwNzQx/MzEtNjg3NS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/origins-30822024/origins-30822024.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -68,11 +75,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/origins-30822024/origins-30822024-hi-res.jpg",
+    "medium": "../public/album/origins-30822024/origins-30822024-medium.jpg",
+    "small": "../public/album/origins-30822024/origins-30822024-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T14:44:07.421562",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T17:26:19.225929",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -139,6 +150,6 @@
       "title": "Dark Clouds Mean War (Rework)"
     }
   ],
-  "updated_at": "2025-07-05T14:44:07.420628",
+  "updated_at": "2025-07-06T17:26:18.961001",
   "year": 2024
 }
