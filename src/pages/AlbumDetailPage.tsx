@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Disc, Calendar, ExternalLink, Globe, Music, Plus, Star, Play, Users } from 'lucide-react';
+import { ArrowLeft, Clock, Disc, Calendar, ExternalLink, Globe, Music, Plus, Star, Play, Users, CalendarDays, MapPin } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
+import { FcCalendar, FcPlus, FcGlobe } from 'react-icons/fc';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -332,8 +333,8 @@ export function AlbumDetailPage() {
       </Link>
 
       {/* Album Header */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-        <div className="lg:col-span-1">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
+        <div className="lg:col-span-2">
           <img
             src={album.images_uri_release['hi-res']}
             alt={album.release_name}
@@ -341,7 +342,7 @@ export function AlbumDetailPage() {
           />
         </div>
         
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-3">
           <div className="flex items-start gap-3 mb-4">
             <Avatar className="h-16 w-16 mt-1">
               <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
@@ -363,47 +364,41 @@ export function AlbumDetailPage() {
             <div className="flex flex-wrap items-center gap-6 text-sm">
               {/* Added Date */}
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="h-4 w-4" />
-                <span>Added: {new Date(album.date_added).getFullYear()}</span>
+                <FcPlus className="h-4 w-4" />
+                <span>Added: {new Date(album.date_added).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' })}</span>
               </div>
               
               {/* Release Year */}
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="h-4 w-4" />
+                <FcCalendar className="h-4 w-4" />
                 <span>{year}</span>
               </div>
               
               {/* Country */}
               {detailedAlbum?.country && (
                 <div className="flex items-center gap-2 text-muted-foreground">
-                  <Globe className="h-4 w-4" />
+                  <FcGlobe className="h-4 w-4" />
                   <span>{detailedAlbum.country}</span>
                 </div>
               )}
 
-              {/* Spotify Stats */}
-              {detailedAlbum?.services?.spotify?.raw_data?.total_tracks && (
+              {/* Spotify Rating/Popularity */}
+              {detailedAlbum?.services?.spotify?.popularity && (
                 <div className="flex items-center gap-2">
                   <SiSpotify className="h-4 w-4 text-green-600" />
-                  <span>{detailedAlbum.services.spotify.raw_data.total_tracks} tracks</span>
+                  <span>{detailedAlbum.services.spotify.popularity}% popularity</span>
                 </div>
               )}
 
-              {/* Apple Music Stats */}
-              {detailedAlbum?.services?.apple_music?.raw_attributes?.trackCount && (
-                <div className="flex items-center gap-2">
-                  <SiApplemusic className="h-4 w-4" style={{color: '#FF4E6B'}} />
-                  <span>{detailedAlbum.services.apple_music.raw_attributes.trackCount} tracks</span>
-                </div>
-              )}
-
-              {/* Last.fm Stats */}
+              {/* Last.fm Listeners */}
               {detailedAlbum?.services?.lastfm?.listeners && (
                 <div className="flex items-center gap-2">
                   <SiLastdotfm className="h-4 w-4 text-red-600" />
                   <span>{formatNumber(detailedAlbum.services.lastfm.listeners)} listeners</span>
                 </div>
               )}
+
+              {/* Last.fm Plays */}
               {detailedAlbum?.services?.lastfm?.playcount && (
                 <div className="flex items-center gap-2">
                   <SiLastdotfm className="h-4 w-4 text-red-600" />
