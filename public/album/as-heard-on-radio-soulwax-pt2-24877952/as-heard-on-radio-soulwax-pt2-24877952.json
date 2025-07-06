@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1666746776",
+  "apple_music_url": "https://music.apple.com/gb/album/radio-soulwax-presents-as-heard-on-radio-soulwax-pt-2-dj-mix/1666746776",
   "artists": [
     {
       "apple_music_id": "537691055",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T15:23:09.162147",
+  "created_at": "2025-07-06T10:17:25.129955",
   "date_added": "2022-12-05T10:50:15-08:00",
   "discogs_id": "24877952",
   "discogs_url": "https://www.discogs.com/release/24877952-2manydjs-As-Heard-On-Radio-Soulwax-Pt2",
@@ -68,6 +68,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/TYixuGSbU0bouedUffedl89uW-0Fk5s8PTcLmz41izA/rs:fit/g:sm/q:90/h:600/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0ODc3/OTUyLTE2NjYyMTA3/ODQtNzc0NS5qcGVn.jpeg",
       "width": 527
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b8/62/47/b86247c2-18d2-480b-7330-f2cc2f5e69ca/899d4c41-7ba4-42e4-b0a1-e3f2eee134ee.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -75,21 +82,73 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/2+Many+DJ%27s/As+Heard+On+Radio+Soulwax+Pt.2",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/as-heard-on-radio-soulwax-pt2-24877952/as-heard-on-radio-soulwax-pt2-24877952-hi-res.jpg",
+    "medium": "../public/album/as-heard-on-radio-soulwax-pt2-24877952/as-heard-on-radio-soulwax-pt2-24877952-medium.jpg",
+    "small": "../public/album/as-heard-on-radio-soulwax-pt2-24877952/as-heard-on-radio-soulwax-pt2-24877952-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:23:11.711844",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T10:17:37.168450",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Radio Soulwax presents As Heard on Radio Soulwax, Pt. 2 (DJ Mix)",
   "release_name_discogs": "As Heard On Radio Soulwax Pt.2",
   "release_name_spotify": null,
   "released": "2022-11-25",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b8/62/47/b86247c2-18d2-480b-7330-f2cc2f5e69ca/899d4c41-7ba4-42e4-b0a1-e3f2eee134ee.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": null,
+      "editorial_notes": "Back around the turn of the millennium, pop music experienced an evolutionary leap in the form of the mash-up. At first, songs like The Freelance Hellraiser’s 2001 hit “A Stroke of Genius”—fusing Christina Aguilera’s “Genie in a Bottle” with The Strokes’ “Hard to Explain”—might have seemed like ironic novelties. But as MP3s grew in popularity, and people’s iPods filled with rock and rap and pop and dance and beyond, the walled gardens of genre began to feel quaintly irrelevant. What’s more, listeners found themselves jonesing for that frisson they experienced when two familiar yet unlike things came together.\n\n2manydjs’ 2002 mix <i>As Heard on Radio Soulwax, Pt. 2</i> shifted that evolutionary leap into overdrive. In the space of an hour, Belgian brothers David and Stephen Dewaele—also known as indie rockers Soulwax—not only blew through dozens of tracks; they made each blend feel like a brand-new song. (It reportedly took them only two weeks to make, but nine months to license all the tracks—and even then, the CD was legally available only in Belgium, the Netherlands and Luxembourg.)\n\nThe mix definitively dynamites the idea that different styles should be kept apart. The sleazy electroclash of Felix Da Housecat’s “Silver Screen (Shower Scene)” spills over into The Stooges’ “No Fun”, which overlaps with Salt-N-Pepa’s “Push It”, yielding a deliciously lascivious triptych. Later on, an almost imperceptible scrap of Nena’s New Wave classic “99 Luftballons” sets up a passage pairing Destiny’s Child’s “Independent Women, Pt. 1” a cappella with the borrowed reggae of yacht rockers 10cc’s “Dreadlock Holiday”, and then <i>that</i> song morphs into Dolly Parton’s “9 to 5”, of all things. It’s a dizzying cascade of references, yet <i>Radio Soulwax, Pt. 2</i> never feels like it’s trying to be clever for cleverness’ sake. What makes the mix so spellbinding is how flat-out musical it is. All the Y2K-era hype around mash-ups obscured the fact that DJs had been making recombinant magic for years. On <i>Radio Soulwax, Pt. 2</i>, 2manydjs just made that sleight of hand sound more effortless than ever.",
+      "id": "1666746776",
+      "is_complete": false,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "2manydjs",
+        "artwork": {
+          "bgColor": "000000",
+          "height": 1400,
+          "textColor1": "ffffff",
+          "textColor2": "c1c1c1",
+          "textColor3": "cbcbcb",
+          "textColor4": "9a9a9a",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/b8/62/47/b86247c2-18d2-480b-7330-f2cc2f5e69ca/899d4c41-7ba4-42e4-b0a1-e3f2eee134ee.jpg/{w}x{h}bb.jpg",
+          "width": 1400
+        },
+        "contentRating": "explicit",
+        "editorialNotes": {
+          "short": "The duo’s classic mix made high art of the mash-up.",
+          "standard": "Back around the turn of the millennium, pop music experienced an evolutionary leap in the form of the mash-up. At first, songs like The Freelance Hellraiser’s 2001 hit “A Stroke of Genius”—fusing Christina Aguilera’s “Genie in a Bottle” with The Strokes’ “Hard to Explain”—might have seemed like ironic novelties. But as MP3s grew in popularity, and people’s iPods filled with rock and rap and pop and dance and beyond, the walled gardens of genre began to feel quaintly irrelevant. What’s more, listeners found themselves jonesing for that frisson they experienced when two familiar yet unlike things came together.\n\n2manydjs’ 2002 mix <i>As Heard on Radio Soulwax, Pt. 2</i> shifted that evolutionary leap into overdrive. In the space of an hour, Belgian brothers David and Stephen Dewaele—also known as indie rockers Soulwax—not only blew through dozens of tracks; they made each blend feel like a brand-new song. (It reportedly took them only two weeks to make, but nine months to license all the tracks—and even then, the CD was legally available only in Belgium, the Netherlands and Luxembourg.)\n\nThe mix definitively dynamites the idea that different styles should be kept apart. The sleazy electroclash of Felix Da Housecat’s “Silver Screen (Shower Scene)” spills over into The Stooges’ “No Fun”, which overlaps with Salt-N-Pepa’s “Push It”, yielding a deliciously lascivious triptych. Later on, an almost imperceptible scrap of Nena’s New Wave classic “99 Luftballons” sets up a passage pairing Destiny’s Child’s “Independent Women, Pt. 1” a cappella with the borrowed reggae of yacht rockers 10cc’s “Dreadlock Holiday”, and then <i>that</i> song morphs into Dolly Parton’s “9 to 5”, of all things. It’s a dizzying cascade of references, yet <i>Radio Soulwax, Pt. 2</i> never feels like it’s trying to be clever for cleverness’ sake. What makes the mix so spellbinding is how flat-out musical it is. All the Y2K-era hype around mash-ups obscured the fact that DJs had been making recombinant magic for years. On <i>Radio Soulwax, Pt. 2</i>, 2manydjs just made that sleight of hand sound more effortless than ever."
+        },
+        "genreNames": [
+          "House",
+          "Music",
+          "Dance",
+          "Electronic"
+        ],
+        "isCompilation": true,
+        "isComplete": false,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Radio Soulwax presents As Heard on Radio Soulwax, Pt. 2 (DJ Mix)",
+        "playParams": {
+          "id": "1666746776",
+          "kind": "album"
+        },
+        "releaseDate": "2002-06-18",
+        "trackCount": 30,
+        "upc": "5056381877927",
+        "url": "https://music.apple.com/gb/album/radio-soulwax-presents-as-heard-on-radio-soulwax-pt-2-dj-mix/1666746776"
+      },
+      "url": "https://music.apple.com/gb/album/radio-soulwax-presents-as-heard-on-radio-soulwax-pt-2-dj-mix/1666746776"
+    },
     "lastfm": {
       "images": [
         {
@@ -1876,6 +1935,6 @@
       "title": "Start Button"
     }
   ],
-  "updated_at": "2025-07-05T15:23:11.710534",
+  "updated_at": "2025-07-06T10:17:35.923455",
   "year": 2022
 }

@@ -25,6 +25,7 @@ class ArtistDataOrchestrator:
         self.logger = logger or logging.getLogger(__name__)
         self.services = {}
         self.interactive_mode = False
+        self.custom_image = None
         
         # Initialize image manager for artists with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -89,6 +90,10 @@ class ArtistDataOrchestrator:
         """Enable or disable interactive mode for manual artist match selection."""
         self.interactive_mode = enabled
         self.logger.info(f"Artist interactive mode: {'enabled' if enabled else 'disabled'}")
+    
+    def set_custom_image(self, image_url: str):
+        """Set a custom image URL to override the default artist image."""
+        self.custom_image = image_url
     
     def get_artist_by_name(self, artist_name: str, force_refresh: bool = False, existing_artist: Optional[Artist] = None) -> Optional[Artist]:
         """Get comprehensive artist information by name."""
@@ -296,7 +301,33 @@ class ArtistDataOrchestrator:
         try:
             self.logger.info(f"🖼️ Starting image download process for artist: {artist.name}")
             
-            # Extract image sources in priority order: Apple Music (no /Music[digits]/) > Spotify > Discogs
+            # If custom image is provided, use it instead of extracted sources
+            if self.custom_image:
+                self.logger.info(f"🖼️ Using custom image URL: {self.custom_image}")
+                # Add custom image as an image source
+                from ..models import Image
+                custom_image = Image(
+                    url=self.custom_image,
+                    type="custom_artist_image",
+                    width=2000,  # Assume high resolution
+                    height=2000
+                )
+                artist.add_image(custom_image)
+                
+                # Download the custom image
+                downloaded_images = self.image_manager.download_artist_images_with_fallback(
+                    artist.name,
+                    [{"type": "custom", "images": [{"url": self.custom_image, "type": "custom_artist_image"}]}]
+                )
+                
+                if downloaded_images:
+                    self.logger.info(f"🖼️ ✅ Downloaded custom image for {artist.name}")
+                    artist.local_images = downloaded_images
+                else:
+                    self.logger.warning(f"🖼️ ❌ Failed to download custom image from {self.custom_image}")
+                return
+            
+            # Extract image sources in priority order: Apple Music (no /Music[digits]/ pattern) > Spotify > Discogs
             image_sources = self._extract_artist_image_sources(artist)
             
             if not image_sources:
@@ -661,6 +692,16 @@ class ArtistImageManager(ImageManager):
                     # Select primary Discogs image
                     sized_url = self._select_discogs_image(images)
                     if not sized_url:
+                        continue
+                elif source_type == "custom":
+                    # Handle custom image source
+                    if images and len(images) > 0:
+                        custom_image = images[0]
+                        if isinstance(custom_image, dict) and custom_image.get("url"):
+                            sized_url = custom_image.get("url")
+                        else:
+                            continue
+                    else:
                         continue
                 else:
                     continue

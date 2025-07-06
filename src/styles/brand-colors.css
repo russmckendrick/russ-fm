@@ -1,0 +1,72 @@
+/* Brand Colors for Music Services */
+
+/* Discogs Brand Colors */
+.btn-discogs {
+  border-color: #333333 !important;
+  color: #333333 !important;
+}
+
+.btn-discogs:hover {
+  background-color: #333333 !important;
+  color: white !important;
+}
+
+.dark .btn-discogs {
+  border-color: #666666 !important;
+  color: #cccccc !important;
+}
+
+.dark .btn-discogs:hover {
+  background-color: #666666 !important;
+  color: white !important;
+}
+
+/* Last.fm Brand Colors */
+.btn-lastfm {
+  border-color: #d51007 !important;
+  color: #d51007 !important;
+}
+
+.btn-lastfm:hover {
+  background-color: #d51007 !important;
+  color: white !important;
+}
+
+/* Spotify Brand Colors */
+.btn-spotify {
+  border-color: #1db954 !important;
+  color: #1db954 !important;
+}
+
+.btn-spotify:hover {
+  background-color: #1db954 !important;
+  color: white !important;
+}
+
+/* Apple Music Brand Colors */
+.btn-apple-music {
+  border-color: #FF4E6B !important;
+  color: #FF4E6B !important;
+}
+
+.btn-apple-music:hover {
+  background-color: #FF4E6B !important;
+  color: white !important;
+}
+
+/* Common button styling for service buttons */
+.btn-service {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-service .service-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.btn-service .service-text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
