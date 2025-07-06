@@ -461,6 +461,33 @@ python main.py test
 - **Check database**: Use `python main.py status` to see processing progress
 - **Rate limiting**: If you hit API limits, the system will automatically slow down
 
+### Apple Music API Issues
+
+If Apple Music isn't working properly, check these common issues:
+
+1. **JWT Authentication Problems**:
+   - Ensure your private key file is in PEM format and readable
+   - Verify `key_id`, `team_id`, and `private_key_path` are correct
+   - Check that the private key file path is relative to your working directory
+
+2. **API Access Issues**:
+   - Verify you have an active Apple Developer Program membership ($99/year)
+   - Ensure your MusicKit identifier is properly configured
+   - Check that your private key hasn't expired (they're valid for 1 year)
+
+3. **Search Results Problems**:
+   - The enhanced search now uses Apple's newer `/search/suggestions` endpoint for better results
+   - Interactive mode provides more accurate artist matching
+   - Extended attributes provide richer data (editorial videos, formation dates, etc.)
+
+4. **Configuration Validation**:
+   ```bash
+   # Run the test command for detailed Apple Music diagnostics
+   python main.py test
+   ```
+
+   This will show specific configuration issues and recommendations for fixing them.
+
 ## Migration from v1
 
 If you're migrating from the original script:

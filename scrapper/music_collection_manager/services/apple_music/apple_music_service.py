@@ -286,7 +286,7 @@ class AppleMusicService(BaseService):
             
             # Build URL manually to avoid double encoding
             base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
-            url = f"{base_url}?term={encoded_term}&types={types}&limit=30&offset=0"
+            url = f"{base_url}?term={encoded_term}&types={types}&limit=25&offset=0"
             
             headers = self._get_auth_headers()
             response = self._make_request("GET", url, headers=headers)
@@ -303,7 +303,7 @@ class AppleMusicService(BaseService):
                 try:
                     encoded_term = self._encode_search_term(normalized_query)
                     base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
-                    url = f"{base_url}?term={encoded_term}&types={types}&limit=30&offset=0"
+                    url = f"{base_url}?term={encoded_term}&types={types}&limit=25&offset=0"
                     
                     headers = self._get_auth_headers()
                     response = self._make_request("GET", url, headers=headers)
@@ -364,21 +364,50 @@ class AppleMusicService(BaseService):
     
     # Artist-specific methods
     
-    def search_artist(self, artist_name: str, limit: int = 30) -> Dict[str, Any]:
-        """Search for an artist in Apple Music."""
+    def search_artist(self, artist_name: str, limit: int = 25) -> Dict[str, Any]:
+        """Search for an artist in Apple Music using improved search methods."""
         self.ensure_authenticated()
         
-        # Try original search term first
+        # Try the newer search/suggestions endpoint first for better results
         try:
-            # Encode the search term properly
-            encoded_term = self._encode_search_term(artist_name)
-            
-            # Build URL manually to avoid double encoding
-            base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
-            url = f"{base_url}?term={encoded_term}&types=artists"
+            # Use search/suggestions for more accurate top results
+            base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search/suggestions"
+            params = {
+                "term": artist_name,  # Use unencoded term in params
+                "kinds": "topResults",
+                "types": "artists",
+                "limit": min(limit, 10)  # Keep suggestions limit lower for faster response
+            }
             
             headers = self._get_auth_headers()
-            response = self._make_request("GET", url, headers=headers)
+            response = self._make_request("GET", base_url, headers=headers, params=params)
+            
+            suggestions_result = response.json()
+            
+            # If we get good results from suggestions, use them
+            if (suggestions_result.get("results", {}).get("suggestions", []) and 
+                any(s.get("kind") == "topResults" for s in suggestions_result["results"]["suggestions"])):
+                
+                # Convert suggestions format to standard search format for compatibility
+                converted_result = self._convert_suggestions_to_search_format(suggestions_result)
+                if converted_result.get("results", {}).get("artists", {}).get("data"):
+                    self.logger.info(f"Using Apple Music search suggestions for '{artist_name}'")
+                    return converted_result
+            
+        except Exception as e:
+            self.logger.warning(f"Apple Music search suggestions failed for '{artist_name}': {str(e)}")
+        
+        # Fallback to traditional search with basic parameters
+        try:
+            base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
+            params = {
+                "term": artist_name,  # Use unencoded term in params
+                "types": "artists",
+                "limit": min(limit, 25)  # Apple Music API max limit is 25
+            }
+            
+            headers = self._get_auth_headers()
+            response = self._make_request("GET", base_url, headers=headers, params=params)
             
             return response.json()
             
@@ -391,12 +420,15 @@ class AppleMusicService(BaseService):
             if normalized_name != artist_name:
                 self.logger.info(f"Trying normalized search term: '{normalized_name}'")
                 try:
-                    encoded_term = self._encode_search_term(normalized_name)
                     base_url = f"{self.BASE_URL}/catalog/{self.storefront}/search"
-                    url = f"{base_url}?term={encoded_term}&types=artists"
+                    params = {
+                        "term": normalized_name,  # Use unencoded normalized term in params
+                        "types": "artists",
+                        "limit": min(limit, 25)  # Apple Music API max limit is 25
+                    }
                     
                     headers = self._get_auth_headers()
-                    response = self._make_request("GET", url, headers=headers)
+                    response = self._make_request("GET", base_url, headers=headers, params=params)
                     
                     result = response.json()
                     self.logger.info(f"Normalized search succeeded for '{normalized_name}'")
@@ -408,13 +440,37 @@ class AppleMusicService(BaseService):
             # Return empty result if both attempts fail
             return {"results": {"artists": {"data": []}}}
     
-    def get_artist_by_id(self, artist_id: str, include_albums: bool = False) -> Dict[str, Any]:
-        """Get artist details by Apple Music ID."""
+    def _convert_suggestions_to_search_format(self, suggestions_result: Dict[str, Any]) -> Dict[str, Any]:
+        """Convert search suggestions response to standard search format for compatibility."""
+        converted = {"results": {"artists": {"data": []}}}
+        
+        suggestions = suggestions_result.get("results", {}).get("suggestions", [])
+        
+        for suggestion in suggestions:
+            if suggestion.get("kind") == "topResults":
+                content = suggestion.get("content", {})
+                artists = content.get("artists", {}).get("data", [])
+                converted["results"]["artists"]["data"].extend(artists)
+        
+        return converted
+    
+    def get_artist_by_id(self, artist_id: str, include_albums: bool = False, include_views: bool = True) -> Dict[str, Any]:
+        """Get artist details by Apple Music ID with enhanced data using views and relationships."""
         self.ensure_authenticated()
         
         params = {}
+        
+        # Add relationships if requested
         if include_albums:
             params["include"] = "albums"
+        
+        # Add views for richer artist data (top songs, top albums, etc.)
+        if include_views:
+            # Use multiple views to get comprehensive artist data
+            views = ["top-songs", "featured-albums", "latest-release"]
+            params["views"] = ",".join(views)
+        
+        # Note: Extended attributes removed due to API compatibility issues
         
         headers = self._get_auth_headers()
         response = self._make_request(
@@ -454,7 +510,7 @@ class AppleMusicService(BaseService):
         return best_match
     
     def create_artist_enrichment(self, artist_data: Dict[str, Any]) -> ArtistAppleMusicData:
-        """Create ArtistAppleMusicData enrichment from raw data."""
+        """Create ArtistAppleMusicData enrichment from raw data with enhanced attributes."""
         attributes = artist_data.get("attributes", {})
         
         # Get artwork URL
@@ -465,13 +521,143 @@ class AppleMusicService(BaseService):
             if url_template:
                 artwork_url = self.get_high_res_artwork(url_template)
         
+        # Extract extended attributes that may be available (these may not be present in basic API responses)
+        born_or_formed = attributes.get("bornOrFormed")
+        origin = attributes.get("origin")
+        editorial_video = attributes.get("editorialVideo")
+        
+        # Enhanced genre extraction
+        genres = attributes.get("genreNames", [])
+        
+        # Extract editorial notes with fallback
+        editorial_notes = None
+        editorial_data = attributes.get("editorialNotes", {})
+        if editorial_data:
+            editorial_notes = editorial_data.get("standard") or editorial_data.get("short")
+        
         return ArtistAppleMusicData(
             id=artist_data.get("id"),
             url=attributes.get("url"),
             name=attributes.get("name"),
             artwork_url=artwork_url,
-            genres=attributes.get("genreNames", []),
-            origin=attributes.get("origin", ""),
-            editorial_notes=attributes.get("editorialNotes", {}).get("standard"),
+            genres=genres,
+            origin=origin or "",  # New field for artist origin
+            editorial_notes=editorial_notes,
+            born_or_formed=born_or_formed,  # New field for when artist was born/formed
+            editorial_video_url=editorial_video.get("url") if editorial_video else None,  # New field
             raw_data=artist_data,
         )
+
+    def _make_request(self, method: str, url: str, **kwargs) -> Any:
+        """Make HTTP request with enhanced error handling and logging."""
+        try:
+            # Log the request for debugging
+            self.logger.debug(f"Apple Music API request: {method} {url}")
+            
+            response = super()._make_request(method, url, **kwargs)
+            
+            # Check for Apple Music specific error responses
+            if response.status_code == 401:
+                self.logger.error("Apple Music API authentication failed - check JWT token")
+                raise AuthenticationError("Apple Music API authentication failed")
+            elif response.status_code == 403:
+                self.logger.error("Apple Music API access forbidden - check permissions")
+                raise AuthenticationError("Apple Music API access forbidden")
+            elif response.status_code == 429:
+                self.logger.warning("Apple Music API rate limit exceeded")
+                raise APIError("Apple Music API rate limit exceeded")
+            elif response.status_code >= 400:
+                try:
+                    error_data = response.json()
+                    error_msg = error_data.get("errors", [{}])[0].get("detail", "Unknown error")
+                    self.logger.error(f"Apple Music API error: {error_msg}")
+                    raise APIError(f"Apple Music API error: {error_msg}")
+                except:
+                    self.logger.error(f"Apple Music API HTTP {response.status_code}: {response.text}")
+                    raise APIError(f"Apple Music API HTTP {response.status_code}")
+            
+            # Log successful response
+            self.logger.debug(f"Apple Music API response: {response.status_code}")
+            return response
+            
+        except Exception as e:
+            if not isinstance(e, (AuthenticationError, APIError)):
+                self.logger.error(f"Apple Music API request failed: {str(e)}")
+                raise APIError(f"Apple Music API request failed: {str(e)}")
+            raise
+
+    def ensure_authenticated(self) -> None:
+        """Ensure we have a valid authentication token with better error handling."""
+        try:
+            if not self._auth_token or (
+                self._token_expires_at and 
+                datetime.now() >= self._token_expires_at
+            ):
+                self.logger.info("Apple Music JWT token expired or missing, regenerating...")
+                self.authenticate()
+        except Exception as e:
+            self.logger.error(f"Apple Music authentication failed: {str(e)}")
+            raise AuthenticationError(f"Apple Music authentication failed: {str(e)}")
+
+    def validate_configuration(self) -> Dict[str, Any]:
+        """Validate Apple Music API configuration and return diagnostic information."""
+        validation_result = {
+            "valid": False,
+            "issues": [],
+            "recommendations": []
+        }
+        
+        # Check required credentials
+        if not self.key_id:
+            validation_result["issues"].append("Missing key_id")
+            validation_result["recommendations"].append("Set key_id in Apple Music configuration")
+        
+        if not self.team_id:
+            validation_result["issues"].append("Missing team_id")
+            validation_result["recommendations"].append("Set team_id in Apple Music configuration")
+        
+        if not self.private_key_path:
+            validation_result["issues"].append("Missing private_key_path")
+            validation_result["recommendations"].append("Set private_key_path in Apple Music configuration")
+        
+        # Check private key file
+        if self.private_key_path:
+            key_path = Path(self.private_key_path)
+            if not key_path.is_absolute():
+                key_path = Path.cwd() / key_path
+            
+            if not key_path.exists():
+                validation_result["issues"].append(f"Private key file not found: {key_path}")
+                validation_result["recommendations"].append("Ensure the private key file exists and path is correct")
+            else:
+                try:
+                    with open(key_path, 'r') as f:
+                        key_content = f.read()
+                        if not key_content.strip().startswith("-----BEGIN PRIVATE KEY-----"):
+                            validation_result["issues"].append("Private key file format appears invalid")
+                            validation_result["recommendations"].append("Ensure private key is in PEM format")
+                except Exception as e:
+                    validation_result["issues"].append(f"Cannot read private key file: {str(e)}")
+        
+        # Test JWT generation
+        try:
+            self.authenticate()
+            validation_result["recommendations"].append("JWT token generated successfully")
+        except Exception as e:
+            validation_result["issues"].append(f"JWT generation failed: {str(e)}")
+            validation_result["recommendations"].append("Check Apple Music credentials and private key format")
+        
+        # Test API access
+        try:
+            test_response = self.search_catalog("test", limit=1)
+            if test_response.get("results"):
+                validation_result["recommendations"].append("API access test successful")
+            else:
+                validation_result["issues"].append("API access test returned no results")
+        except Exception as e:
+            validation_result["issues"].append(f"API access test failed: {str(e)}")
+            validation_result["recommendations"].append("Check network connectivity and Apple Music service status")
+        
+        validation_result["valid"] = len(validation_result["issues"]) == 0
+        
+        return validation_result

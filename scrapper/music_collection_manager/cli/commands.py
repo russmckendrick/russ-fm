@@ -403,16 +403,27 @@ class TestCommand(BaseCommand):
             results["discogs"] = False
             self.logger.error(f"discogs service: FAILED - {str(e)}")
         
-        # Test Apple Music
+        # Test Apple Music with enhanced validation
         try:
             apple_config = self.config.get_section("apple_music")
             if all(apple_config.get(k) for k in ["key_id", "team_id", "private_key_path"]):
                 service = AppleMusicService(apple_config, logger=self.logger)
-                service.authenticate()
-                results["apple_music"] = True
-                self.logger.info("apple_music service: OK")
+                
+                # Use the new validation method for detailed diagnostics
+                validation_result = service.validate_configuration()
+                
+                if validation_result["valid"]:
+                    results["apple_music"] = True
+                    self.logger.info("apple_music service: OK")
+                else:
+                    results["apple_music"] = False
+                    for issue in validation_result["issues"]:
+                        self.logger.error(f"apple_music service issue: {issue}")
+                    for rec in validation_result["recommendations"]:
+                        self.logger.info(f"apple_music service recommendation: {rec}")
             else:
                 results["apple_music"] = False
+                self.logger.error("apple_music service: Missing required configuration (key_id, team_id, private_key_path)")
         except Exception as e:
             results["apple_music"] = False
             self.logger.error(f"apple_music service: FAILED - {str(e)}")

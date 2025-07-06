@@ -164,6 +164,10 @@ class ArtistAppleMusicData:
     genres: List[str] = field(default_factory=list)
     origin: Optional[str] = None
     
+    # Enhanced fields from Apple Music API
+    born_or_formed: Optional[str] = None  # When the artist was born or band was formed
+    editorial_video_url: Optional[str] = None  # Editorial video URL if available
+    
     # Editorial content
     editorial_notes: Optional[str] = None
     
