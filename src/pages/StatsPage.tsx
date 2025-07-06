@@ -20,6 +20,7 @@ import {
   Cell
 } from 'recharts';
 import { Calendar, Disc, Music, TrendingUp, Users, Clock } from 'lucide-react';
+import { filterGenres } from '@/lib/filterGenres';
 
 interface Album {
   release_name: string;
@@ -59,8 +60,10 @@ export function StatsPage() {
     // Basic counts
     const totalAlbums = data.length;
     const uniqueArtists = new Set(data.map(album => album.release_artist)).size;
-    const allGenres = data.flatMap(album => album.genre_names);
-    const uniqueGenres = new Set(allGenres.map(g => g.toLowerCase())).size;
+    const allFilteredGenres = data.flatMap(album => 
+      filterGenres(album.genre_names, album.release_artist)
+    );
+    const uniqueGenres = new Set(allFilteredGenres).size;
 
     // Artists with most albums (excluding "Various")
     const artistCounts = data.reduce((acc: any, album) => {
@@ -83,10 +86,9 @@ export function StatsPage() {
         };
       });
 
-    // Genre distribution
-    const genreCounts = allGenres.reduce((acc: any, genre) => {
-      const normalized = genre.toLowerCase();
-      acc[normalized] = (acc[normalized] || 0) + 1;
+    // Genre distribution - filter out non-genre terms
+    const genreCounts = allFilteredGenres.reduce((acc: any, genre) => {
+      acc[genre] = (acc[genre] || 0) + 1;
       return acc;
     }, {});
     const topGenres = Object.entries(genreCounts)
@@ -317,52 +319,54 @@ export function StatsPage() {
           </CardContent>
         </Card>
 
-        {/* Top Styles */}
+        {/* Top Genres */}
         <Card>
           <CardHeader>
-            <CardTitle>Styles</CardTitle>
+            <CardTitle>Genres</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="relative">
-              <ResponsiveContainer width="100%" height={400}>
-                <PieChart>
-                  <Pie
-                    data={stats.topGenres}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    outerRadius={120}
-                    innerRadius={60}
-                    fill="#8884d8"
-                    dataKey="value"
-                    stroke="white"
-                    strokeWidth={2}
-                  >
-                    {stats.topGenres?.map((entry: any, index: number) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip 
-                    formatter={(value, name) => [`${value} albums`, name]}
-                    contentStyle={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                      border: 'none',
-                      borderRadius: '8px',
-                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                    }}
-                  />
-                </PieChart>
-              </ResponsiveContainer>
+            <div className="flex items-center gap-6">
+              <div className="flex-1">
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
+                    <Pie
+                      data={stats.topGenres}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      outerRadius={90}
+                      innerRadius={45}
+                      fill="#8884d8"
+                      dataKey="value"
+                      stroke="white"
+                      strokeWidth={2}
+                    >
+                      {stats.topGenres?.map((entry: any, index: number) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip 
+                      formatter={(value, name) => [`${value} albums`, name]}
+                      contentStyle={{
+                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        border: 'none',
+                        borderRadius: '8px',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                      }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
               
-              {/* Custom Legend */}
-              <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
+              {/* Compact Legend */}
+              <div className="w-48 space-y-2 text-sm">
                 {stats.topGenres?.slice(0, 8).map((entry: any, index: number) => (
                   <div key={index} className="flex items-center gap-2">
                     <div 
                       className="w-3 h-3 rounded-full flex-shrink-0"
                       style={{ backgroundColor: COLORS[index % COLORS.length] }}
                     />
-                    <span className="truncate font-medium">
+                    <span className="truncate font-medium capitalize">
                       {entry.name} ({((entry.value / stats.totalAlbums) * 100).toFixed(0)}%)
                     </span>
                   </div>

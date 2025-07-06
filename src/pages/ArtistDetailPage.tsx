@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { filterGenres } from '@/lib/filterGenres';
 
 interface Album {
   release_name: string;
@@ -266,22 +267,10 @@ export function ArtistDetailPage() {
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
                 {(() => {
-                  // Filter and deduplicate genres
-                  const filteredGenres = allGenres
-                    .filter(genre => {
-                      const lowerGenre = genre.toLowerCase().trim();
-                      // Filter out band names, years, decades, and common non-genre terms
-                      return !lowerGenre.includes(artist.release_artist.toLowerCase()) &&
-                             !/^\d+s$/.test(lowerGenre) && // Decades like 90s, 80s, 70s
-                             !/^(19|20)\d{2}$/.test(lowerGenre) && // Full years like 1985, 2023
-                             lowerGenre.length > 0; // Remove empty tags
-                    })
-                    .map(genre => genre.toLowerCase().trim());
+                  // Filter and deduplicate genres using the utility
+                  const filteredGenres = filterGenres(allGenres, artist.release_artist);
                   
-                  // Remove duplicates
-                  const uniqueGenres = [...new Set(filteredGenres)];
-                  
-                  return uniqueGenres.map((genre, index) => (
+                  return filteredGenres.map((genre, index) => (
                     <Badge key={index} variant="default" className="capitalize">
                       <Music className="h-3 w-3 mr-1" />
                       {genre}
