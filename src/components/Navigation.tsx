@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./theme-toggle";
-import { Search } from "lucide-react";
+import { Search, Menu, X } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 
 interface NavigationProps {
@@ -12,6 +13,7 @@ interface NavigationProps {
 
 export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
   const location = useLocation();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-0">
@@ -50,7 +52,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
               </div>
 
               <div className="flex items-center gap-4">
-                {/* Search bar */}
+                {/* Desktop Search bar */}
                 <div className="relative hidden md:block">
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
@@ -61,31 +63,58 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   />
                 </div>
 
-                {/* Mobile search button */}
+                {/* Desktop Theme Toggle */}
+                <div className="hidden md:block">
+                  <ThemeToggle />
+                </div>
+
+                {/* Mobile Burger Menu Button */}
                 <Button
                   size="icon"
-                  className="bg-muted text-foreground hover:bg-accent shadow-none rounded-full md:hidden"
+                  variant="ghost"
+                  className="md:hidden rounded-full"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                  <Search className="!h-5 !w-5" />
+                  {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                 </Button>
+              </div>
+            </div>
+          </nav>
 
-                {/* Mobile menu links */}
-                <div className="flex md:hidden items-center gap-4">
-                  <Link 
-                    to="/albums/1" 
-                    className={`text-sm font-medium ${
-                      location.pathname === '/' || location.pathname.startsWith('/albums') 
-                        ? 'text-foreground' 
+          {/* Mobile Menu Dropdown */}
+          {mobileMenuOpen && (
+            <div className="md:hidden mt-2 bg-background border dark:border-slate-700/70 rounded-lg shadow-lg">
+              <div className="p-4 space-y-4">
+                {/* Mobile Search */}
+                <div className="relative">
+                  <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
+                  <Input
+                    className="pl-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
+                    placeholder="Search albums, artists, or genres..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+                {/* Mobile Navigation Links */}
+                <div className="space-y-2">
+                  <Link
+                    to="/albums/1"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                      location.pathname === '/' || location.pathname.startsWith('/albums')
+                        ? 'text-foreground bg-muted'
                         : 'text-muted-foreground'
                     }`}
                   >
                     Albums
                   </Link>
-                  <Link 
-                    to="/artists/1" 
-                    className={`text-sm font-medium ${
-                      location.pathname.startsWith('/artists') 
-                        ? 'text-foreground' 
+                  <Link
+                    to="/artists/1"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                      location.pathname.startsWith('/artists')
+                        ? 'text-foreground bg-muted'
                         : 'text-muted-foreground'
                     }`}
                   >
@@ -93,10 +122,14 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   </Link>
                 </div>
 
-                <ThemeToggle />
+                {/* Mobile Theme Toggle */}
+                <div className="flex items-center justify-between px-4 py-2">
+                  <span className="text-sm font-medium">Theme</span>
+                  <ThemeToggle />
+                </div>
               </div>
             </div>
-          </nav>
+          )}
         </div>
       </div>
     </div>
