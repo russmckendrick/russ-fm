@@ -161,6 +161,9 @@ class ArtistDataOrchestrator:
                         height=2000
                     )
                     artist.add_image(apple_image)
+            else:
+                # If service was skipped, preserve existing Apple Music data
+                self.logger.info(f"Apple Music data not updated, preserving existing data for {artist_name}")
         
         # Enrich with Spotify
         if "spotify" in self.services:
@@ -191,6 +194,9 @@ class ArtistDataOrchestrator:
                             height=img_data.get("height")
                         )
                         artist.add_image(spotify_image)
+            else:
+                # If service was skipped, preserve existing Spotify data
+                self.logger.info(f"Spotify data not updated, preserving existing data for {artist_name}")
         
         # Enrich with Last.fm
         if "lastfm" in self.services:
@@ -217,6 +223,9 @@ class ArtistDataOrchestrator:
                             type=f"lastfm_artist_{img_data.get('size', 'unknown')}"
                         )
                         artist.add_image(lastfm_image)
+            else:
+                # If service was skipped, preserve existing Last.fm data
+                self.logger.info(f"Last.fm data not updated, preserving existing data for {artist_name}")
         
         # Enrich with Wikipedia
         if "wikipedia" in self.services and not artist.biography:
@@ -254,6 +263,9 @@ class ArtistDataOrchestrator:
                         type="discogs_artist_thumb"
                     )
                     artist.add_image(discogs_thumb)
+            else:
+                # If service was skipped, preserve existing Discogs data
+                self.logger.info(f"Discogs data not updated, preserving existing data for {artist_name}")
         
         # Download artist images with new priority logic
         self._download_artist_images(artist)
@@ -314,19 +326,26 @@ class ArtistDataOrchestrator:
             service = self.services["lastfm"]
             
             if self.interactive_mode:
+                self.logger.info(f"🎵 Last.fm interactive mode: searching for artist {artist_name}")
                 # Search for multiple artists first
                 search_results = service.search_artist(artist_name)
+                self.logger.info(f"🎵 Last.fm search completed, calling interactive selection")
                 selected_match = self._interactive_select_artist_match("Last.fm", search_results, artist_name)
                 if selected_match:
+                    self.logger.info(f"🎵 Last.fm artist selected: {selected_match.get('name', 'Unknown')}")
                     # Get detailed info for the selected artist
                     return service.get_artist_detailed_info(selected_match.get("name", artist_name))
                 else:
+                    self.logger.info(f"🎵 Last.fm artist selection skipped")
                     return None
             else:
+                self.logger.info(f"🎵 Last.fm non-interactive mode: getting artist info for {artist_name}")
                 return service.get_artist_detailed_info(artist_name)
             
         except Exception as e:
             self.logger.warning(f"Failed to get Last.fm artist data for {artist_name}: {str(e)}")
+            import traceback
+            self.logger.warning(f"Last.fm error traceback: {traceback.format_exc()}")
         
         return None
     
@@ -448,7 +467,7 @@ class ArtistDataOrchestrator:
                     self.logger.warning(f"🖼️ ❌ Failed to download custom image from {self.custom_image}")
                 return
             
-            # Extract image sources in priority order: Apple Music (no /Music[digits]/) > Spotify > Discogs
+            # Extract image sources in priority order: Apple Music (no /Music[digits]/ pattern) > Spotify > Discogs
             image_sources = self._extract_artist_image_sources(artist)
             
             if not image_sources:
