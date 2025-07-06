@@ -689,14 +689,26 @@ class DatabaseManager:
         """Get an artist by name from the database."""
         try:
             with sqlite3.connect(self.db_path) as conn:
+                self.logger.info(f"🔍 Looking up artist in database: '{name}'")
                 cursor = conn.execute("""
-                    SELECT * FROM artists WHERE name = ?
+                    SELECT * FROM artists 
+                    WHERE LOWER(name) = LOWER(?)
+                    ORDER BY 
+                        CASE WHEN discogs_id IS NOT NULL AND discogs_id != '' THEN 0 ELSE 1 END,
+                        created_at ASC
+                    LIMIT 1
                 """, (name,))
                 
                 row = cursor.fetchone()
                 if row:
+                    # Get the artist name and discogs_id from the row for logging
+                    columns = [col[0] for col in cursor.description]
+                    data = dict(zip(columns, row))
+                    self.logger.info(f"✅ Found artist in database: '{data.get('name')}', discogs_id: {data.get('discogs_id')}")
                     return self._row_to_artist(row, cursor.description)
-                return None
+                else:
+                    self.logger.info(f"❌ No artist found in database for: '{name}'")
+                    return None
                 
         except Exception as e:
             self.logger.error(f"Failed to get artist {name}: {str(e)}")
@@ -743,7 +755,7 @@ class DatabaseManager:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.execute("""
                     SELECT COUNT(*) FROM artists 
-                    WHERE name = ? AND enrichment_data IS NOT NULL AND enrichment_data != '{}'
+                    WHERE LOWER(name) = LOWER(?) AND enrichment_data IS NOT NULL AND enrichment_data != '{}'
                 """, (artist_name,))
                 
                 count = cursor.fetchone()[0]
