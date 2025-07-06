@@ -5,6 +5,7 @@ import { AlbumsPage } from '@/pages/AlbumsPage';
 import { ArtistsPage } from '@/pages/ArtistsPage';
 import { ArtistDetailPage } from '@/pages/ArtistDetailPage';
 import { AlbumDetailPage } from '@/pages/AlbumDetailPage';
+import { StatsPage } from '@/pages/StatsPage';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,6 +22,7 @@ function App() {
           <Route path="/artists/:page" element={<ArtistsPage searchTerm={searchTerm} />} />
           <Route path="/artist/:artistPath" element={<ArtistDetailPage />} />
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
+          <Route path="/stats" element={<StatsPage />} />
         </Routes>
       </main>
 

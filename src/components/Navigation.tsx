@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./theme-toggle";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, TrendingUp } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 
 interface NavigationProps {
@@ -47,6 +47,16 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     }`}
                   >
                     Artists
+                  </Link>
+                  <Link 
+                    to="/stats" 
+                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                      location.pathname === '/stats' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    Stats
                   </Link>
                 </div>
               </div>
@@ -119,6 +129,17 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     }`}
                   >
                     Artists
+                  </Link>
+                  <Link
+                    to="/stats"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                      location.pathname === '/stats'
+                        ? 'text-foreground bg-muted'
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    Stats
                   </Link>
                 </div>
 
