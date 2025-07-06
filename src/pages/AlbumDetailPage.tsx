@@ -344,9 +344,9 @@ export function AlbumDetailPage() {
         
         <div className="lg:col-span-3">
           <div className="flex items-start gap-3 mb-4">
-            <Avatar className="h-16 w-16 mt-1">
+            <Avatar className="h-20 w-20 mt-1">
               <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
-              <AvatarFallback className="text-lg">{album.release_artist.charAt(0)}</AvatarFallback>
+              <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
             </Avatar>
             <div className="flex-1 min-w-0">
               <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>
@@ -384,9 +384,17 @@ export function AlbumDetailPage() {
 
               {/* Spotify Rating/Popularity */}
               {detailedAlbum?.services?.spotify?.popularity && (
-                <div className="flex items-center gap-2">
-                  <SiSpotify className="h-4 w-4 text-green-600" />
-                  <span>{detailedAlbum.services.spotify.popularity}% popularity</span>
+                <div className="relative group">
+                  <div className="flex items-center gap-2 cursor-help">
+                    <SiSpotify className="h-4 w-4 text-green-600" />
+                    <span>{detailedAlbum.services.spotify.popularity}% popularity</span>
+                  </div>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-10 w-64">
+                    <div className="text-center">
+                      Spotify popularity (0-100) based on total plays and how recent they are. Albums being played a lot now rank higher than those played heavily in the past.
+                    </div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                  </div>
                 </div>
               )}
 
@@ -410,22 +418,36 @@ export function AlbumDetailPage() {
             {/* Genres and Styles */}
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
-                {album.genre_names.map((genre, index) => (
-                  <Badge key={index} variant="default" className="capitalize">
-                    <Music className="h-3 w-3 mr-1" />
-                    {genre.toLowerCase()}
-                  </Badge>
-                ))}
-              </div>
-              {detailedAlbum?.styles && detailedAlbum.styles.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {detailedAlbum.styles.map((style, index) => (
-                    <Badge key={index} variant="outline" className="capitalize">
-                      {style.toLowerCase()}
+                {(() => {
+                  // Combine and filter all genres and styles
+                  const allTags = [
+                    ...album.genre_names,
+                    ...(detailedAlbum?.styles || [])
+                  ];
+                  
+                  const filteredTags = allTags
+                    .filter(tag => {
+                      const lowerTag = tag.toLowerCase().trim();
+                      // Filter out band names, years, decades, and common non-genre terms
+                      return !lowerTag.includes(album.release_artist.toLowerCase()) &&
+                             !/^\d+s$/.test(lowerTag) && // Decades like 90s, 80s, 70s
+                             !/^(19|20)\d{2}$/.test(lowerTag) && // Full years like 1985, 2023
+                             !['new wave', 'china crisis'].includes(lowerTag) &&
+                             lowerTag.length > 0; // Remove empty tags
+                    })
+                    .map(tag => tag.toLowerCase().trim());
+                  
+                  // Remove duplicates by converting to Set and back to array
+                  const uniqueTags = [...new Set(filteredTags)];
+                  
+                  return uniqueTags.map((tag, index) => (
+                    <Badge key={index} variant="default" className="capitalize">
+                      <Music className="h-3 w-3 mr-1" />
+                      {tag}
                     </Badge>
-                  ))}
-                </div>
-              )}
+                  ));
+                })()}
+              </div>
             </div>
 
             {/* Service Buttons */}
