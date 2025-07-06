@@ -41,6 +41,19 @@ class DiscogsService(BaseService):
             "User-Agent": "MusicCollectionManager/1.0",
         }
     
+    def search_artist(self, artist_name: str, limit: int = 25) -> Dict[str, Any]:
+        """Search for artists in Discogs."""
+        params = {
+            "q": artist_name,
+            "type": "artist",
+            "per_page": min(limit, 100),  # Discogs allows up to 100 results per page
+        }
+        
+        headers = self._get_auth_headers()
+        response = self._make_request("GET", f"{self.BASE_URL}/database/search", headers=headers, params=params)
+        
+        return response.json()
+
     def search_release(self, artist: str, album: str, **kwargs) -> Dict[str, Any]:
         """Search for a release by artist and album."""
         params = {
@@ -125,6 +138,45 @@ class DiscogsService(BaseService):
         response = self._make_request("GET", f"{self.BASE_URL}/artists/{artist_id}", headers=headers)
         
         return response.json()
+
+    def find_best_artist_match(self, search_results: Dict[str, Any], target_artist: str) -> Optional[Dict[str, Any]]:
+        """Find the best matching artist from Discogs search results."""
+        results = search_results.get("results", [])
+        
+        if not results:
+            return None
+        
+        target_artist_lower = target_artist.lower()
+        best_match = None
+        best_score = 0
+        
+        for artist in results:
+            artist_title = artist.get("title", "").lower()
+            
+            score = 0
+            if target_artist_lower == artist_title:
+                score += 10  # Exact match
+            elif target_artist_lower in artist_title or artist_title in target_artist_lower:
+                score += 5   # Partial match
+            
+            if score > best_score:
+                best_score = score
+                best_match = artist
+        
+        return best_match
+
+    def create_artist_enrichment(self, artist_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Create artist enrichment data from Discogs search result."""
+        # For search results, we have limited data, but we can construct what we need
+        return {
+            "id": str(artist_data.get("id", "")),
+            "name": artist_data.get("title", ""),
+            "url": f"https://www.discogs.com/artist/{artist_data.get('id', '')}" if artist_data.get("id") else "",
+            "resource_url": artist_data.get("resource_url", ""),
+            "thumb": artist_data.get("thumb", ""),
+            "cover_image": artist_data.get("cover_image", ""),
+            "raw_data": artist_data
+        }
     
     def get_label_details(self, label_id: str) -> Dict[str, Any]:
         """Get detailed information about a label."""
