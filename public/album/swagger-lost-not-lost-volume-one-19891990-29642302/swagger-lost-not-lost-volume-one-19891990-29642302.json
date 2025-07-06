@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T14:47:28.285681",
+  "created_at": "2025-07-06T17:21:24.444834",
   "date_added": "2024-02-02T00:42:35-08:00",
   "discogs_id": "29642302",
   "discogs_url": "https://www.discogs.com/release/29642302-No-Man-Swagger-Lost-Not-Lost-Volume-One-19891990",
@@ -76,6 +76,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/k2NxLDKtiC8H26Xb98csgCRAWyoCvPl3WDTizI5gk0w/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjQy/MzAyLTE3MDgyNTMy/ODctMTU1Ni5qcGVn.jpeg",
       "width": 594
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/swagger-lost-not-lost-volume-one-1989-1990-29642302/swagger-lost-not-lost-volume-one-1989-1990-29642302.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -83,11 +90,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/swagger-lost-not-lost-volume-one-19891990-29642302/swagger-lost-not-lost-volume-one-19891990-29642302-hi-res.jpg",
+    "medium": "../public/album/swagger-lost-not-lost-volume-one-19891990-29642302/swagger-lost-not-lost-volume-one-19891990-29642302-medium.jpg",
+    "small": "../public/album/swagger-lost-not-lost-volume-one-19891990-29642302/swagger-lost-not-lost-volume-one-19891990-29642302-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T14:47:28.849938",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T17:21:30.240499",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -158,6 +169,6 @@
       "title": "Swirl"
     }
   ],
-  "updated_at": "2025-07-05T14:47:28.849520",
+  "updated_at": "2025-07-06T17:21:30.003140",
   "year": 2024
 }
