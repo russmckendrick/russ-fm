@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Music, Globe, Calendar, ExternalLink, Disc } from 'lucide-react';
-import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
+import { ArrowLeft, Music, Globe, Calendar, ExternalLink, Disc, Users, Play, Clock } from 'lucide-react';
+import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 'react-icons/si';
+import { FcCalendar, FcPlus, FcGlobe } from 'react-icons/fc';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -93,6 +94,7 @@ export function ArtistDetailPage() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [artistData, setArtistData] = useState<ArtistData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [biographyExpanded, setBiographyExpanded] = useState(false);
 
   // Set page title based on artist data
   const pageTitle = artistData 
@@ -200,139 +202,251 @@ export function ArtistDetailPage() {
           <h1 className="text-4xl font-bold mb-4">{artist.release_artist}</h1>
           
           <div className="space-y-6">
-            {/* Basic Info */}
-            <div className="flex items-center gap-4 text-muted-foreground">
-              <div className="flex items-center gap-2">
+            {/* Combined Info and Statistics */}
+            <div className="flex flex-wrap items-center gap-6 text-sm">
+              {/* Albums in Collection */}
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Disc className="h-4 w-4" />
                 <span>{albums.length} album{albums.length !== 1 ? 's' : ''} in collection</span>
               </div>
+              
+              {/* Country */}
               {artistData?.country && (
-                <div className="flex items-center gap-2">
-                  <Globe className="h-4 w-4" />
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <FcGlobe className="h-4 w-4" />
                   <span>{artistData.country}</span>
                 </div>
               )}
+              
+              {/* Formed Date */}
               {artistData?.formed_date && (
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <FcCalendar className="h-4 w-4" />
                   <span>Formed: {artistData.formed_date}</span>
                 </div>
               )}
-            </div>
 
-            {/* Statistics */}
-            <div className="flex items-center gap-6 text-sm">
+              {/* Spotify Followers */}
               {(artistData?.services?.spotify?.followers?.total || artistData?.followers) && (
                 <div className="flex items-center gap-2">
                   <SiSpotify className="h-4 w-4 text-green-600" />
                   <span>{((artistData.services?.spotify?.followers?.total || artistData.followers) || 0).toLocaleString()} followers</span>
                 </div>
               )}
+
+              {/* Spotify Popularity */}
               {(artistData?.services?.spotify?.popularity || artistData?.popularity) && (
-                <div className="flex items-center gap-2">
+                <div 
+                  className="flex items-center gap-2 cursor-help"
+                  title="Spotify popularity (0-100) based on total plays and how recent they are."
+                >
                   <SiSpotify className="h-4 w-4 text-green-600" />
-                  <span>Popularity: {artistData.services?.spotify?.popularity || artistData.popularity}/100</span>
+                  <span>{artistData.services?.spotify?.popularity || artistData.popularity}% popularity</span>
                 </div>
               )}
+
+              {/* Last.fm Listeners */}
               {artistData?.services?.lastfm?.listeners && (
                 <div className="flex items-center gap-2">
-                  <SiLastdotfm className="h-4 w-4 text-red-600" />
+                  <Users className="h-4 w-4 text-red-600" />
                   <span>{artistData.services.lastfm.listeners.toLocaleString()} listeners</span>
                 </div>
               )}
+
+              {/* Last.fm Plays */}
               {artistData?.services?.lastfm?.playcount && (
                 <div className="flex items-center gap-2">
-                  <SiLastdotfm className="h-4 w-4 text-red-600" />
+                  <Play className="h-4 w-4 text-red-600" />
                   <span>{artistData.services.lastfm.playcount.toLocaleString()} plays</span>
                 </div>
               )}
             </div>
 
-            {/* Biography */}
-            {(artistData?.biography || artistData?.services?.lastfm?.bio?.content) && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Biography</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {(artistData.biography || artistData.services?.lastfm?.bio?.content || '')
-                      .replace(/<[^>]*>/g, '')
-                      .substring(0, 800)}
-                    {(artistData.biography || artistData.services?.lastfm?.bio?.content || '').length > 800 && '...'}
-                  </p>
-                </CardContent>
-              </Card>
-            )}
-
-            {/* Genres */}
+            {/* Filtered Genres */}
             <div className="space-y-3">
-              <h3 className="text-sm font-medium text-muted-foreground">Genres</h3>
               <div className="flex flex-wrap gap-2">
-                {allGenres.map((genre, index) => (
-                  <Badge key={index} variant="default" className="capitalize">
-                    <Music className="h-3 w-3 mr-1" />
-                    {genre.toLowerCase()}
-                  </Badge>
-                ))}
+                {(() => {
+                  // Filter and deduplicate genres
+                  const filteredGenres = allGenres
+                    .filter(genre => {
+                      const lowerGenre = genre.toLowerCase().trim();
+                      // Filter out band names, years, decades, and common non-genre terms
+                      return !lowerGenre.includes(artist.release_artist.toLowerCase()) &&
+                             !/^\d+s$/.test(lowerGenre) && // Decades like 90s, 80s, 70s
+                             !/^(19|20)\d{2}$/.test(lowerGenre) && // Full years like 1985, 2023
+                             lowerGenre.length > 0; // Remove empty tags
+                    })
+                    .map(genre => genre.toLowerCase().trim());
+                  
+                  // Remove duplicates
+                  const uniqueGenres = [...new Set(filteredGenres)];
+                  
+                  return uniqueGenres.map((genre, index) => (
+                    <Badge key={index} variant="default" className="capitalize">
+                      <Music className="h-3 w-3 mr-1" />
+                      {genre}
+                    </Badge>
+                  ));
+                })()}
               </div>
             </div>
 
-            {/* External Links */}
-            {(artistData?.spotify_url || artistData?.services || artistData?.discogs_url) && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Listen & Explore</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {(artistData.spotify_url || artistData.services?.spotify?.url || artistData.services?.spotify?.external_urls?.spotify) && (
-                      <Button 
-                        variant="outline"
-                        className="btn-service btn-spotify justify-start h-12 p-3"
-                        onClick={() => window.open(artistData.spotify_url || artistData.services?.spotify?.url || artistData.services?.spotify?.external_urls?.spotify, '_blank')}
-                      >
-                        <SiSpotify className="service-icon" />
-                        <span className="service-text">Listen on Spotify</span>
-                      </Button>
-                    )}
-                    {artistData.services?.apple_music?.url && (
-                      <Button 
-                        variant="outline"
-                        className="btn-service btn-apple-music justify-start h-12 p-3"
-                        onClick={() => window.open(artistData.services.apple_music.url, '_blank')}
-                      >
-                        <SiApplemusic className="service-icon" />
-                        <span className="service-text">Listen on Apple Music</span>
-                      </Button>
-                    )}
-                    {artistData.services?.lastfm?.url && (
-                      <Button 
-                        variant="outline"
-                        className="btn-service btn-lastfm justify-start h-12 p-3"
-                        onClick={() => window.open(artistData.services.lastfm.url, '_blank')}
-                      >
-                        <SiLastdotfm className="service-icon" />
-                        <span className="service-text">View on Last.fm</span>
-                      </Button>
-                    )}
-                    {(artistData.discogs_url || artistData.discogs_id || artistData.services?.discogs?.url) && (
-                      <Button 
-                        variant="outline"
-                        className="btn-service btn-discogs justify-start h-12 p-3"
-                        onClick={() => window.open(artistData.discogs_url || artistData.services?.discogs?.url || `https://www.discogs.com/artist/${artistData.discogs_id || artistData.services?.discogs?.id}`, '_blank')}
-                      >
-                        <SiDiscogs className="service-icon" />
-                        <span className="service-text">View on Discogs</span>
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
+            {/* Service Buttons */}
+            <div className="space-y-3 mt-6">
+              {/* View on Discogs - Always spans full width */}
+              {(artistData?.discogs_url || artistData?.discogs_id || artistData?.services?.discogs?.url) && (
+                <Button 
+                  variant="outline"
+                  className="w-full btn-service btn-discogs h-12"
+                  onClick={() => window.open(artistData?.discogs_url || artistData?.services?.discogs?.url || `https://www.discogs.com/artist/${artistData?.discogs_id || artistData?.services?.discogs?.id}`, '_blank')}
+                >
+                  <SiDiscogs className="service-icon" />
+                  <span className="service-text">View on Discogs</span>
+                </Button>
+              )}
+
+              {(() => {
+                const serviceButtons = [];
+
+                // Listen on Apple Music
+                if (artistData?.services?.apple_music?.url) {
+                  serviceButtons.push(
+                    <Button 
+                      key="apple"
+                      variant="outline"
+                      className="btn-service btn-apple-music h-12"
+                      onClick={() => window.open(artistData.services.apple_music.url, '_blank')}
+                    >
+                      <SiApplemusic className="service-icon" />
+                      <span className="service-text">Listen on Apple Music</span>
+                    </Button>
+                  );
+                }
+
+                // Listen on Spotify
+                if (artistData?.spotify_url || artistData?.services?.spotify?.url || artistData?.services?.spotify?.external_urls?.spotify) {
+                  serviceButtons.push(
+                    <Button 
+                      key="spotify"
+                      variant="outline"
+                      className="btn-service btn-spotify h-12"
+                      onClick={() => window.open(artistData?.spotify_url || artistData?.services?.spotify?.url || artistData?.services?.spotify?.external_urls?.spotify, '_blank')}
+                    >
+                      <SiSpotify className="service-icon" />
+                      <span className="service-text">Listen on Spotify</span>
+                    </Button>
+                  );
+                }
+
+                // View on Last.fm
+                if (artistData?.services?.lastfm?.url) {
+                  serviceButtons.push(
+                    <Button 
+                      key="lastfm"
+                      variant="outline"
+                      className="btn-service btn-lastfm h-12"
+                      onClick={() => window.open(artistData.services.lastfm.url, '_blank')}
+                    >
+                      <SiLastdotfm className="service-icon" />
+                      <span className="service-text">View on Last.fm</span>
+                    </Button>
+                  );
+                }
+
+                // View on Wikipedia
+                serviceButtons.push(
+                  <Button 
+                    key="wikipedia"
+                    variant="outline"
+                    className="btn-service btn-wikipedia h-12"
+                    onClick={() => window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(artist.release_artist)}`, '_blank')}
+                  >
+                    <SiWikipedia className="service-icon" />
+                    <span className="service-text">View on Wikipedia</span>
+                  </Button>
+                );
+
+                if (serviceButtons.length === 0) return null;
+
+                const isOdd = serviceButtons.length % 2 === 1;
+                const pairs = [];
+                
+                for (let i = 0; i < serviceButtons.length - (isOdd ? 1 : 0); i += 2) {
+                  pairs.push(
+                    <div key={`pair-${i}`} className="grid grid-cols-2 gap-3">
+                      {serviceButtons[i]}
+                      {serviceButtons[i + 1]}
+                    </div>
+                  );
+                }
+
+                if (isOdd) {
+                  pairs.push(
+                    <div key="last-button" className="w-full">
+                      {React.cloneElement(serviceButtons[serviceButtons.length - 1], { 
+                        className: serviceButtons[serviceButtons.length - 1].props.className.replace('btn-service', 'w-full btn-service')
+                      })}
+                    </div>
+                  );
+                }
+
+                return pairs;
+              })()}
+            </div>
+
           </div>
         </div>
       </div>
+
+      {/* Artist Biography */}
+      {artistData?.biography && (
+        <Card className="overflow-hidden mb-8">
+          <CardHeader>
+            <CardTitle className="text-lg">Biography</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className={`relative ${!biographyExpanded ? 'max-h-48 overflow-hidden' : ''}`}>
+              <div className="text-muted-foreground leading-relaxed">
+                {(() => {
+                  let bio = artistData.biography?.replace(/<[^>]*>/g, '').trim();
+                  
+                  // Remove everything from "Read more on Last.fm" onwards
+                  const readMoreIndex = bio?.indexOf('Read more on Last.fm');
+                  if (readMoreIndex !== -1) {
+                    bio = bio?.substring(0, readMoreIndex).trim();
+                  }
+                  
+                  // Remove everything from "Full Wikipedia article:" onwards
+                  const wikiIndex = bio?.indexOf('Full Wikipedia article:');
+                  if (wikiIndex !== -1) {
+                    bio = bio?.substring(0, wikiIndex).trim();
+                  }
+                  
+                  // Split by double newlines and create paragraphs
+                  return bio?.split(/\n\s*\n/).map((paragraph, index) => (
+                    <p key={index} className="mb-4 last:mb-0">
+                      {paragraph.trim()}
+                    </p>
+                  ));
+                })()}
+              </div>
+              {!biographyExpanded && (
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent dark:from-gray-950 pointer-events-none"></div>
+              )}
+            </div>
+            <div className="mt-4 text-center">
+              <Button 
+                variant="ghost" 
+                size="sm"
+                onClick={() => setBiographyExpanded(!biographyExpanded)}
+                className="text-primary hover:text-primary-dark"
+              >
+                {biographyExpanded ? 'Show Less' : 'Read More'}
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Albums Grid */}
       <Card>
@@ -348,7 +462,7 @@ export function ArtistDetailPage() {
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {albums
-              .sort((a, b) => new Date(a.date_release_year).getTime() - new Date(b.date_release_year).getTime())
+              .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
               .map((album) => (
                 <AlbumCard
                   key={album.uri_release}

@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T15:07:09.240336",
+  "created_at": "2025-07-06T11:01:24.256905",
   "date_added": "2025-05-08T03:29:18-07:00",
   "discogs_id": "33642066",
   "discogs_url": "https://www.discogs.com/release/33642066-Solstice-4-Clann",
@@ -40,6 +40,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/9a7RI2bW1LZfiZtvrdfTYUlQzUHzi7fEDK-XaRYR-II/rs:fit/g:sm/q:90/h:600/w:589/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNjQy/MDY2LTE3NDQxNDk1/MzktMTcxNS5qcGVn.jpeg",
       "width": 589
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://www.russ.fm/albums/clann-33642066/clann-33642066.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -47,11 +54,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/clann-33642066/clann-33642066-hi-res.jpg",
+    "medium": "../public/album/clann-33642066/clann-33642066-medium.jpg",
+    "small": "../public/album/clann-33642066/clann-33642066-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:07:28.299982",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T11:01:30.240393",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -102,6 +113,6 @@
       "title": "Twin Peaks"
     }
   ],
-  "updated_at": "2025-07-05T15:07:28.299564",
+  "updated_at": "2025-07-06T11:01:30.025075",
   "year": 2025
 }
