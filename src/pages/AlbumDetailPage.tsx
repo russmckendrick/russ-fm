@@ -141,10 +141,15 @@ export function AlbumDetailPage() {
   const [album, setAlbum] = useState<Album | null>(null);
   const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
   const [loading, setLoading] = useState(true);
+  const [biographyExpanded, setBiographyExpanded] = useState(false);
 
   // Set page title based on album data
   const pageTitle = detailedAlbum 
-    ? `${detailedAlbum.title} by ${detailedAlbum.artists[0]?.name || album?.release_artist || 'Unknown Artist'} | Russ.fm`
+    ? `${detailedAlbum.title} by ${
+        detailedAlbum.artists && detailedAlbum.artists.length > 1 
+          ? detailedAlbum.artists.map(artist => artist.name).join(' & ')
+          : detailedAlbum.artists[0]?.name || album?.release_artist || 'Unknown Artist'
+      } | Russ.fm`
     : 'Loading Album... | Russ.fm';
   
   usePageTitle(pageTitle);
@@ -351,12 +356,29 @@ export function AlbumDetailPage() {
             </Avatar>
             <div className="flex-1 min-w-0">
               <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>
-              <Link 
-                to={album.uri_artist}
-                className="text-2xl text-muted-foreground hover:text-primary transition-colors inline-block"
-              >
-                {album.release_artist}
-              </Link>
+              <div className="text-2xl text-muted-foreground">
+                {detailedAlbum?.artists && detailedAlbum.artists.length > 1 ? (
+                  <div className="flex flex-wrap items-center gap-1">
+                    {detailedAlbum.artists.map((artist, index) => (
+                      <React.Fragment key={index}>
+                        <span className="hover:text-primary transition-colors cursor-pointer">
+                          {artist.name}
+                        </span>
+                        {index < detailedAlbum.artists.length - 1 && (
+                          <span className="text-muted-foreground/60">&</span>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                ) : (
+                  <Link 
+                    to={album.uri_artist}
+                    className="hover:text-primary transition-colors inline-block"
+                  >
+                    {album.release_artist}
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
           
@@ -621,42 +643,72 @@ export function AlbumDetailPage() {
         </Card>
       )}
 
-      {/* Artist Biography */}
+      {/* Artist Biographies */}
       {detailedAlbum?.artists && detailedAlbum.artists.some(artist => artist.biography) && (
-        <div className="mt-8">
-          <Card className="overflow-hidden">
-            <div className="flex">
-              <img
-                src={album.images_uri_artist['hi-res']}
-                alt={album.release_artist}
-                className="w-[300px] h-auto object-cover flex-shrink-0"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = album.images_uri_artist['medium'] || album.images_uri_artist['small'] || '';
-                }}
-              />
-              <div className="flex-1 p-6">
-                <h3 className="text-2xl font-bold mb-3">{album.release_artist}</h3>
-                {detailedAlbum.artists.map((artist, index) => 
-                  artist.biography && (
-                    <div key={index}>
-                      <p className="text-muted-foreground leading-relaxed">
+        <div className="mt-8 space-y-8">
+          {detailedAlbum.artists.map((artist, index) => 
+            artist.biography && (
+              <Card key={index} className="overflow-hidden">
+                <div className="flex">
+                  <img
+                    src={album.images_uri_artist['hi-res']}
+                    alt={artist.name}
+                    className="w-[300px] h-auto object-cover flex-shrink-0"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = album.images_uri_artist['medium'] || album.images_uri_artist['small'] || '';
+                    }}
+                  />
+                  <div className="flex-1 p-6">
+                    <h3 className="text-2xl font-bold mb-3">{artist.name} Biography</h3>
+                    <div className={`relative ${!biographyExpanded ? 'max-h-48 overflow-hidden' : ''}`}>
+                      <div className="text-muted-foreground leading-relaxed">
                         {(() => {
-                          let bio = cleanDescription(artist.biography);
+                          let bio = artist.biography?.replace(/<[^>]*>/g, '').trim();
+                          
                           // Remove everything from "Read more on Last.fm" onwards
-                          const readMoreIndex = bio.indexOf('Read more on Last.fm');
+                          const readMoreIndex = bio?.indexOf('Read more on Last.fm');
                           if (readMoreIndex !== -1) {
-                            bio = bio.substring(0, readMoreIndex).trim();
+                            bio = bio?.substring(0, readMoreIndex).trim();
                           }
-                          return bio;
+                          
+                          // Remove everything from "Full Wikipedia article:" onwards
+                          const wikiIndex = bio?.indexOf('Full Wikipedia article:');
+                          if (wikiIndex !== -1) {
+                            bio = bio?.substring(0, wikiIndex).trim();
+                          }
+                          
+                          // Split by double newlines and create paragraphs
+                          return bio?.split(/\n\s*\n/).map((paragraph, index) => (
+                            <p key={index} className="mb-4 last:mb-0">
+                              {paragraph.trim()}
+                            </p>
+                          ));
                         })()}
-                      </p>
+                      </div>
+                      {!biographyExpanded && (
+                        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent dark:from-gray-950 pointer-events-none"></div>
+                      )}
                     </div>
-                  )
-                )}
-              </div>
-            </div>
-          </Card>
+                    <div className="mt-4 text-center">
+                      <Button 
+                        variant="ghost" 
+                        size="sm"
+                        className="text-primary hover:text-primary-dark"
+                        onClick={() => {
+                          // For now, just use the main artist page link
+                          // In the future, this could link to individual artist pages
+                          window.location.href = album.uri_artist;
+                        }}
+                      >
+                        Goto {artist.name} Page
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            )
+          )}
         </div>
       )}
 
@@ -708,11 +760,24 @@ export function AlbumDetailPage() {
                   {/* Service IDs */}
                   {(detailedAlbum?.discogs_id || detailedAlbum?.id) && (
                     <div className="grid grid-cols-3 gap-4">
-                      <span className="font-semibold text-sm">Discogs ID:</span>
+                      <span className="font-semibold text-sm">Album Discogs ID:</span>
                       <span className="col-span-2 text-muted-foreground font-mono text-sm">
                         {detailedAlbum.discogs_id || detailedAlbum.id}
                       </span>
                     </div>
+                  )}
+                  {/* Artist Discogs IDs */}
+                  {detailedAlbum?.artists && detailedAlbum.artists.length > 0 && detailedAlbum.artists.some(artist => (artist as any).discogs_id) && (
+                    detailedAlbum.artists.map((artist, index) => 
+                      (artist as any).discogs_id && (
+                        <div key={index} className="grid grid-cols-3 gap-4">
+                          <span className="font-semibold text-sm">{artist.name} Discogs ID:</span>
+                          <span className="col-span-2 text-muted-foreground font-mono text-sm">
+                            {(artist as any).discogs_id}
+                          </span>
+                        </div>
+                      )
+                    )
                   )}
                   {detailedAlbum?.services?.spotify?.id && (
                     <div className="grid grid-cols-3 gap-4">
