@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { AlbumsPage } from '@/pages/AlbumsPage';
 import { ArtistsPage } from '@/pages/ArtistsPage';
@@ -7,6 +7,20 @@ import { ArtistDetailPage } from '@/pages/ArtistDetailPage';
 import { AlbumDetailPage } from '@/pages/AlbumDetailPage';
 import { StatsPage } from '@/pages/StatsPage';
 import { SearchResultsPage } from '@/pages/SearchResultsPage';
+
+// Component to handle "Various" artist route interception
+function ArtistRouteHandler() {
+  const { artistPath } = useParams<{ artistPath: string }>();
+  
+  // Check if this is a "Various" artist route
+  if (artistPath && decodeURIComponent(artistPath).toLowerCase() === 'various') {
+    // Redirect to artists page instead of showing Various artist page
+    return <Navigate to="/artists" replace />;
+  }
+  
+  // For all other artists, show the normal artist detail page
+  return <ArtistDetailPage />;
+}
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,7 +35,7 @@ function App() {
           <Route path="/albums/:page?" element={<AlbumsPage searchTerm={searchTerm} />} />
           <Route path="/artists" element={<ArtistsPage searchTerm={searchTerm} />} />
           <Route path="/artists/:page" element={<ArtistsPage searchTerm={searchTerm} />} />
-          <Route path="/artist/:artistPath" element={<ArtistDetailPage />} />
+          <Route path="/artist/:artistPath" element={<ArtistRouteHandler />} />
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="/search" element={<SearchResultsPage searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />

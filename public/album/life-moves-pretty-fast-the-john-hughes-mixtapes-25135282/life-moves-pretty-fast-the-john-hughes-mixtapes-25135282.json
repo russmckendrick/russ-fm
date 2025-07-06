@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:24:05.011541",
+  "created_at": "2025-07-06T18:22:58.560009",
   "date_added": "2022-11-12T02:26:14-08:00",
   "discogs_id": "25135282",
   "discogs_url": "https://www.discogs.com/release/25135282-Various-Life-Moves-Pretty-Fast-The-John-Hughes-Mixtapes",
@@ -136,6 +136,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/-UhNQlmdHPITzownqWI30PdPeXyWP-DcpES7eUdJzl8/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1MTM1/MjgyLTE3MDk0Mjkx/MDAtNTM3Ny5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://vinylstylus.wordpress.com/wp-content/uploads/2022/12/rita1129.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -144,11 +151,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282-hi-res.jpg",
+    "medium": "../public/album/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282-medium.jpg",
+    "small": "../public/album/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282/life-moves-pretty-fast-the-john-hughes-mixtapes-25135282-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:24:05.820697",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T18:23:02.169244",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -1596,6 +1607,6 @@
       "title": "Red River Rock"
     }
   ],
-  "updated_at": "2025-07-05T15:24:05.819152",
+  "updated_at": "2025-07-06T18:23:01.987599",
   "year": 2022
 }

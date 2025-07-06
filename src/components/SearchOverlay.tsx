@@ -141,6 +141,11 @@ export function SearchOverlay({ searchTerm, setSearchTerm, isVisible, onClose }:
       // Process individual artists for artist results
       if (album.artists && album.artists.length > 0) {
         album.artists.forEach(artist => {
+          // Skip "Various" artists
+          if (artist.name.toLowerCase() === 'various') {
+            return;
+          }
+          
           if (artist.name.toLowerCase().includes(searchLower)) {
             const artistKey = artist.name.toLowerCase();
             if (artistResults.has(artistKey)) {
@@ -161,6 +166,11 @@ export function SearchOverlay({ searchTerm, setSearchTerm, isVisible, onClose }:
         });
       } else {
         // Handle albums without artists array (backward compatibility)
+        // Skip "Various" artists
+        if (album.release_artist.toLowerCase() === 'various') {
+          return;
+        }
+        
         if (album.release_artist.toLowerCase().includes(searchLower)) {
           const artistKey = album.release_artist.toLowerCase();
           if (artistResults.has(artistKey)) {
@@ -265,7 +275,10 @@ export function SearchOverlay({ searchTerm, setSearchTerm, isVisible, onClose }:
                             <div className="relative flex-shrink-0">
                               {result.type === 'artist' ? (
                                 <Avatar className="h-20 w-20">
-                                  <AvatarImage src={result.image} alt={result.title} />
+                                  <AvatarImage 
+                                    src={result.title.toLowerCase() === 'various' ? '/images/various.png' : result.image} 
+                                    alt={result.title} 
+                                  />
                                   <AvatarFallback className="text-lg">
                                     {result.title.charAt(0)}
                                   </AvatarFallback>

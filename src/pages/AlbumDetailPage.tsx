@@ -364,14 +364,20 @@ export function AlbumDetailPage() {
               <div className="flex gap-2 mt-1">
                 {album.artists.map((artist, index) => (
                   <Avatar key={index} className="h-20 w-20">
-                    <AvatarImage src={artist.images_uri_artist['hi-res']} alt={artist.name} />
+                    <AvatarImage 
+                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['hi-res']} 
+                      alt={artist.name} 
+                    />
                     <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
                   </Avatar>
                 ))}
               </div>
             ) : (
               <Avatar className="h-20 w-20 mt-1">
-                <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
+                <AvatarImage 
+                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['hi-res']} 
+                  alt={album.release_artist} 
+                />
                 <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
               </Avatar>
             )}
@@ -382,12 +388,16 @@ export function AlbumDetailPage() {
                   <div className="flex flex-wrap items-center gap-1">
                     {album.artists.map((artist, index) => (
                       <React.Fragment key={index}>
-                        <Link 
-                          to={artist.uri_artist}
-                          className="hover:text-primary transition-colors"
-                        >
-                          {artist.name}
-                        </Link>
+                        {artist.name.toLowerCase() === 'various' ? (
+                          <span className="text-muted-foreground">{artist.name}</span>
+                        ) : (
+                          <Link 
+                            to={artist.uri_artist}
+                            className="hover:text-primary transition-colors"
+                          >
+                            {artist.name}
+                          </Link>
+                        )}
                         {index < album.artists.length - 1 && (
                           <span className="text-muted-foreground/60">&</span>
                         )}
@@ -395,12 +405,16 @@ export function AlbumDetailPage() {
                     ))}
                   </div>
                 ) : (
-                  <Link 
-                    to={album.uri_artist}
-                    className="hover:text-primary transition-colors inline-block"
-                  >
-                    {album.release_artist}
-                  </Link>
+                  album.release_artist.toLowerCase() === 'various' ? (
+                    <span className="text-muted-foreground">{album.release_artist}</span>
+                  ) : (
+                    <Link 
+                      to={album.uri_artist}
+                      className="hover:text-primary transition-colors inline-block"
+                    >
+                      {album.release_artist}
+                    </Link>
+                  )
                 )}
               </div>
             </div>
@@ -668,10 +682,10 @@ export function AlbumDetailPage() {
       )}
 
       {/* Artist Biographies */}
-      {detailedAlbum?.artists && detailedAlbum.artists.some(artist => artist.biography) && (
+      {detailedAlbum?.artists && detailedAlbum.artists.some(artist => artist.biography && artist.name.toLowerCase() !== 'various') && (
         <div className="mt-8 space-y-8">
           {detailedAlbum.artists.map((artist, index) => 
-            artist.biography && (
+            artist.biography && artist.name.toLowerCase() !== 'various' && (
               <Card key={index} className="overflow-hidden">
                 <div className="flex">
                   <img
@@ -734,20 +748,31 @@ export function AlbumDetailPage() {
                       )}
                     </div>
                     <div className="mt-4 text-center">
-                      <Link 
-                        to={
-                          album.artists && album.artists.find(a => a.name === artist.name)?.uri_artist ||
-                          album.uri_artist
-                        }
-                      >
+                      {artist.name.toLowerCase() === 'various' ? (
                         <Button 
                           variant="ghost" 
                           size="sm"
-                          className="text-primary hover:text-primary-dark"
+                          disabled
+                          className="text-muted-foreground"
                         >
-                          Goto {artist.name} Page
+                          {artist.name} (Compilation)
                         </Button>
-                      </Link>
+                      ) : (
+                        <Link 
+                          to={
+                            album.artists && album.artists.find(a => a.name === artist.name)?.uri_artist ||
+                            album.uri_artist
+                          }
+                        >
+                          <Button 
+                            variant="ghost" 
+                            size="sm"
+                            className="text-primary hover:text-primary-dark"
+                          >
+                            Goto {artist.name} Page
+                          </Button>
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
