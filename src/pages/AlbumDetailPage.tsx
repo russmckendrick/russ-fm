@@ -636,28 +636,38 @@ export function AlbumDetailPage() {
       {/* Artist Biography */}
       {detailedAlbum?.artists && detailedAlbum.artists.some(artist => artist.biography) && (
         <div className="mt-8">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl flex items-center gap-3">
-                <Avatar className="h-8 w-8">
-                  <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
-                  <AvatarFallback>{album.release_artist.charAt(0)}</AvatarFallback>
-                </Avatar>
-                {album.release_artist}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              {detailedAlbum.artists.map((artist, index) => 
-                artist.biography && (
-                  <div key={index} className="space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                      {cleanDescription(artist.biography.substring(0, 500))}
-                      {artist.biography.length > 500 && '...'}
-                    </p>
-                  </div>
-                )
-              )}
-            </CardContent>
+          <Card className="overflow-hidden">
+            <div className="flex">
+              <img
+                src={album.images_uri_artist['hi-res']}
+                alt={album.release_artist}
+                className="w-[300px] h-auto object-cover flex-shrink-0"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = album.images_uri_artist['medium'] || album.images_uri_artist['small'] || '';
+                }}
+              />
+              <div className="flex-1 p-6">
+                <h3 className="text-2xl font-bold mb-3">{album.release_artist}</h3>
+                {detailedAlbum.artists.map((artist, index) => 
+                  artist.biography && (
+                    <div key={index}>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {(() => {
+                          let bio = cleanDescription(artist.biography);
+                          // Remove everything from "Read more on Last.fm" onwards
+                          const readMoreIndex = bio.indexOf('Read more on Last.fm');
+                          if (readMoreIndex !== -1) {
+                            bio = bio.substring(0, readMoreIndex).trim();
+                          }
+                          return bio;
+                        })()}
+                      </p>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
           </Card>
         </div>
       )}
