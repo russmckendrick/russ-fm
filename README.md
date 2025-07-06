@@ -2,7 +2,7 @@
 
 A modern, full-stack music collection management and showcase system that combines a powerful Python-based data enrichment engine with a beautiful React frontend to display your Discogs record collection.
 
-See is at [Russ.fm](https://www.russ.fm).
+See it in action at [Russ.fm](https://www.russ.fm).
 
 ## 🎵 Project Overview
 
