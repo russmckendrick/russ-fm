@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:20:41.738983",
+  "created_at": "2025-07-06T20:05:51.024463",
   "date_added": "2017-04-14T14:01:00-07:00",
   "discogs_id": "1838415",
   "discogs_url": "https://www.discogs.com/release/1838415-Back-To-The-Planet-Mind-Soul-Collaborators",
@@ -62,6 +62,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/Xxac8ipYmalyrRHa6qlVio2Xwuz08gPa7taQkjsmJfU/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Mzg0/MTUtMTQzNzgwMTMz/OS01OTY5LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://f4.bcbits.com/img/a0342700205_10.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -69,11 +76,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Back+To+The+Planet/Mind+%252B+Soul+Collaborators",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/mind-soul-collaborators-1838415/mind-soul-collaborators-1838415-hi-res.jpg",
+    "medium": "../public/album/mind-soul-collaborators-1838415/mind-soul-collaborators-1838415-medium.jpg",
+    "small": "../public/album/mind-soul-collaborators-1838415/mind-soul-collaborators-1838415-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:20:43.127146",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T20:05:59.411769",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -459,6 +470,6 @@
       "title": "Sleepless Nights"
     }
   ],
-  "updated_at": "2025-07-05T17:20:43.126768",
+  "updated_at": "2025-07-06T20:05:59.167318",
   "year": 1993
 }
