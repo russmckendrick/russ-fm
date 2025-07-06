@@ -1,153 +1,163 @@
-# CLAUDE.md - Russ.fm Record Collection Showcase
+# CLAUDE.md
 
-This is a React + TypeScript + Vite application showcasing a record collection with modern UI components and comprehensive filtering capabilities.
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
 
-A Single Page Application (SPA) that displays a curated record collection with album and artist browsing, detailed views, search functionality, and pagination. Built with React 19, TypeScript, and shadcn/ui components.
+A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a sophisticated Python backend.
 
 ## Technology Stack
 
-- **Frontend**: React 19.1.0 with TypeScript
-- **Build Tool**: Vite 7.0.0 with Fast Refresh
-- **Styling**: Tailwind CSS 3.4.17 with custom design system
-- **UI Components**: shadcn/ui (Radix UI primitives)
-- **Routing**: React Router DOM 7.6.3 (client-side routing)
-- **Icons**: Lucide React + React Icons (for music service brands)
-- **Data**: Static JSON files in public directory
+- **Frontend**: React 19 + TypeScript + Vite + shadcn/ui + Tailwind CSS
+- **Backend**: Python 3.8+ with SQLite caching and multi-API integration
+- **Build Tool**: Vite 7.0.0 with React plugin and path aliases
+- **Routing**: React Router DOM 7.6.3 (client-side SPA routing)
+- **UI Components**: shadcn/ui (Radix UI primitives) + Lucide React icons
 
 ## Common Commands
 
+### Frontend Development
 ```bash
-# Development
 npm run dev              # Start development server (http://localhost:5173)
-
-# Build
 npm run build           # TypeScript compilation + Vite build (outputs to dist/)
-
-# Code Quality
 npm run lint            # Run ESLint
 npm run preview         # Preview production build locally
 ```
 
+### Backend Data Collection
+```bash
+cd scrapper
+python -m venv venv && source venv/bin/activate  # Setup virtual environment
+pip install -r requirements.txt && pip install -e .
+
+# Core commands
+python main.py test                    # Test API connections
+python main.py collection            # Process entire collection
+python main.py collection --resume   # Resume processing with existing cache
+python main.py release 123456 --save # Process specific Discogs release
+python main.py artist "Artist Name" --save  # Get artist information
+
+# Maintenance
+python main.py backup                 # Backup SQLite database
+python main.py status                 # Check processing status
+```
+
+## High-Level Architecture
+
+### Data Flow Architecture
+1. **Python Backend** (`/scrapper/`) - Orchestrates data collection from multiple APIs
+2. **Static JSON Generation** - Creates structured data files in `/public/`
+3. **React Frontend** (`/src/`) - Consumes static JSON data for display
+
+### Key Architectural Patterns
+
+**Backend Data Pipeline:**
+- **Orchestrator Pattern**: `utils/orchestrator.py` coordinates multi-service data enrichment
+- **Service Layer**: Standardized API clients for Discogs, Apple Music, Spotify, Wikipedia, Last.fm
+- **Database Layer**: SQLite with models for caching and resume capability
+- **Configuration Management**: Centralized config with API credentials and processing options
+
+**Frontend SPA Architecture:**
+- **Page-Based Routing**: Dedicated pages for Albums, Artists, Search, and Details
+- **Component Composition**: Reusable UI components with shadcn/ui base components
+- **Static Data Consumption**: All data fetched from `/public/` JSON files
+- **Client-Side Navigation**: React Router handles all routing without server roundtrips
+
+### Critical Integration Points
+
+**Data Structure Dependencies:**
+- Frontend expects specific JSON schema from backend data generation
+- Album slugs must match between collection.json and individual album files
+- Image paths follow convention: `{slug}-{size}.jpg` (hi-res, medium, small)
+
+**Routing Configuration:**
+- SPA requires server configuration to redirect all routes to `index.html`
+- Static file serving must handle `/public/album/` and `/public/artist/` directories
+- Vite config includes custom middleware for static file vs route disambiguation
+
+**Multi-Artist Support:**
+- Backend handles artist collaboration detection and individual artist creation
+- Frontend displays multiple artist avatars and links to individual artist pages
+- Special handling for "Various Artists" compilation albums
+
 ## Project Structure
 
 ```
-src/
-├── components/
-│   ├── ui/             # shadcn/ui components (Button, Card, Select, etc.)
-│   ├── Navigation.tsx  # Top navigation with search
-│   ├── AlbumCard.tsx   # Album display component
-│   ├── FilterBar.tsx   # Filtering and sorting controls
-│   └── ...
-├── pages/
-│   ├── AlbumsPage.tsx     # Main albums grid (home page)
-│   ├── ArtistsPage.tsx    # Artists grid
-│   ├── AlbumDetailPage.tsx # Individual album view
-│   └── ArtistDetailPage.tsx # Individual artist view
-├── config/
-│   └── app.config.ts   # App configuration (pagination, features, external links)
-├── lib/
-│   └── utils.ts        # Utility functions (className merging)
-└── main.tsx           # Application entry point
-
-public/
-├── collection.json     # Main collection data (29 albums)
-├── album/             # Album data directories
-│   └── [slug]/
-│       ├── [slug].json        # Detailed album metadata
-│       ├── [slug]-hi-res.jpg  # High resolution cover
-│       ├── [slug]-medium.jpg  # Medium resolution cover
-│       └── [slug]-small.jpg   # Small resolution cover
-└── artist/            # Artist data directories
-    └── [slug]/
-        ├── [slug].json        # Detailed artist metadata
-        ├── [slug]-hi-res.jpg  # High resolution image
-        ├── [slug]-medium.jpg  # Medium resolution image
-        └── [slug]-small.jpg   # Small resolution image
+/
+├── src/                          # React frontend
+│   ├── components/
+│   │   ├── ui/                   # shadcn/ui base components
+│   │   ├── Navigation.tsx        # Top nav with search integration
+│   │   ├── AlbumCard.tsx         # Album display with service links
+│   │   └── FilterBar.tsx         # Search/filter/sort controls
+│   ├── pages/                    # Route-level components
+│   ├── hooks/                    # Custom React hooks
+│   ├── config/app.config.ts      # App configuration (pagination, external URLs)
+│   └── lib/                      # Utilities (className merging, genre filtering)
+├── scrapper/                     # Python data collection engine
+│   ├── music_collection_manager/ # Core Python package
+│   │   ├── services/             # API service implementations
+│   │   ├── utils/               # Orchestration and database management
+│   │   └── models/              # Data models and serialization
+│   ├── main.py                  # CLI entry point
+│   └── config.json              # API credentials (not in git)
+└── public/                      # Generated static data
+    ├── collection.json          # Main collection index
+    ├── album/{slug}/           # Individual album data and images
+    └── artist/{slug}/          # Individual artist data and images
 ```
-
-## Key Configuration Files
-
-- **vite.config.ts**: Vite configuration with path aliases (`@` → `./src`)
-- **src/config/app.config.ts**: Application settings (pagination: 20 albums, 24 artists per page)
-- **tailwind.config.js**: Tailwind CSS configuration with custom design system
-- **components.json**: shadcn/ui configuration file
-
-## Data Structure
-
-The application consumes JSON data from the public directory:
-
-- **collection.json**: Main collection file with basic album metadata and URLs
-- **album/[slug]/[slug].json**: Detailed album data with tracks, services, statistics
-- **artist/[slug]/[slug].json**: Detailed artist data with discography, biography, services
-
-## URL Structure
-
-- `/` - Albums page (home)
-- `/artists` - Artists page
-- `/album/[album-slug]` - Album detail page
-- `/artist/[artist-slug]` - Artist detail page
 
 ## Important Implementation Details
 
-### Client-Side Routing
-This is a SPA with React Router. Server must redirect all non-file requests to index.html for proper routing.
+### Build and Development Workflow
+- **Frontend-only changes**: Use `npm run dev` for hot reload development
+- **Data changes**: Run backend processing, then refresh frontend to see updates
+- **TypeScript**: Strict mode enabled with path aliases (`@` → `./src`)
+- **Linting**: ESLint configured for React 19 + TypeScript with modern rules
 
-### Data Fetching
-All data is fetched from static JSON files in the public directory using fetch() calls to root paths (e.g., `/collection.json`, not `/public/collection.json`).
+### Data Processing Workflow
+- **Resume Capability**: SQLite database tracks processing state for large collections
+- **Multi-Service Enrichment**: Combines data from 5+ music APIs with intelligent matching
+- **Image Management**: Downloads and resizes images to 3 different resolutions
+- **Artist Orchestration**: Complex logic for handling multi-artist albums and collaborations
 
-### Image Handling
-Multiple image sizes available: `-hi-res.jpg`, `-medium.jpg`, `-small.jpg`. Components use appropriate sizes based on context.
+### Frontend Routing and Data Patterns
+- **Static Data Loading**: All API calls use `fetch()` to load JSON from `/public/`
+- **URL Structure**: `/album/{slug}` and `/artist/{slug}` with client-side routing
+- **Search Integration**: Real-time search with overlay results across multiple data types
+- **Responsive Design**: Mobile-first with Tailwind responsive utilities
 
-### Pagination
-Configurable via `src/config/app.config.ts`:
-- Albums: 20 per page
-- Artists: 24 per page
-- Page numbers shown: 5 before ellipsis
+### Configuration Management
+- **Frontend Config**: `src/config/app.config.ts` for pagination, features, external URLs
+- **Backend Config**: `scrapper/config.json` for API credentials (use `config.example.json` as template)
+- **Build Config**: Vite configuration with React plugin and static file handling middleware
 
-### Search & Filtering
-Real-time search across:
-- Album titles, artists, genres
-- Multiple sort options: date added, name, year, album count
-- Genre filtering with dynamic badge display
+## Key Technical Considerations
 
-### Error Handling
-Comprehensive fallback systems for missing data:
-- Album tracklists fall back to service APIs
-- Missing images use placeholder or first available size
-- Service URLs checked across multiple data sources
+### Database and Caching Strategy
+- SQLite database in `scrapper/collection_cache.db` maintains processing state
+- Resume capability allows processing large collections incrementally
+- Comprehensive logging in `scrapper/logs/` for debugging data processing issues
 
-## Known Technical Considerations
+### Multi-Artist Album Handling
+- Backend detects collaborations and creates individual artist entries
+- Frontend displays artist avatars and handles navigation to individual artist pages
+- Special filtering logic excludes "Various Artists" from artist listings
 
-### Build Issues Previously Resolved
-1. **PostCSS ES Module Error**: Fixed by using `export default` instead of `module.exports`
-2. **Path Alias Issues**: Resolved with proper Vite configuration for `@` alias
-3. **Select Component Empty Values**: Fixed by using "all" instead of empty strings
-4. **Double URL Prefixes**: Resolved by removing redundant path segments
+### Image and Asset Management
+- Three image sizes: hi-res (1400px), medium (800px), small (400px)
+- Images stored in structured directories: `/public/album/{slug}/` and `/public/artist/{slug}/`
+- Frontend components select appropriate image size based on display context
 
-### Dependencies Note
-- Uses Tailwind CSS v3 (not v4) for better shadcn/ui compatibility
-- React 19 with TypeScript for modern React features
-- No test framework currently configured
+### Error Handling and Fallbacks
+- Comprehensive fallback systems for missing data, images, and service failures
+- Backend includes retry logic and graceful degradation for API failures
+- Frontend handles missing data gracefully with placeholder content
 
-## Deployment
+### Performance Optimization
+- Static JSON files enable fast loading and CDN caching
+- Client-side routing eliminates server roundtrips for navigation
+- Lazy loading and image optimization for large collections
+- Configurable pagination to manage large dataset rendering
 
-Built files output to `dist/` directory. See DEPLOYMENT.md for server configuration examples for SPA routing support.
-
-## Common Development Tasks
-
-When adding new features:
-1. Check existing patterns in similar components
-2. Use existing UI components from `src/components/ui/`
-3. Follow TypeScript interfaces and data structures
-4. Update `src/config/app.config.ts` for new configuration options
-5. Test with real data from public directory JSON files
-
-When debugging:
-1. Check browser network tab for failed JSON requests
-2. Verify image paths match actual file structure
-3. Ensure client-side routing is working correctly
-4. Check console for TypeScript errors
-
-This application demonstrates modern React development with TypeScript, comprehensive data handling, and a well-organized component architecture.
+This architecture demonstrates clean separation between data collection and presentation, with robust error handling and comprehensive tooling for both development and production deployment.
