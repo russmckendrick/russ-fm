@@ -174,6 +174,13 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       );
     }
 
+    // Apply letter filter
+    if (selectedLetter && selectedLetter !== 'all') {
+      filtered = filtered.filter(artist =>
+        artist.name.toLowerCase().startsWith(selectedLetter.toLowerCase())
+      );
+    }
+
     // Sort artists
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -188,6 +195,23 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
     });
 
     setFilteredArtists(filtered);
+  };
+
+  // Get available letters from artist names
+  const getAvailableLetters = () => {
+    const letters = new Set<string>();
+    artists.forEach(artist => {
+      const firstLetter = artist.name.charAt(0).toUpperCase();
+      if (firstLetter.match(/[A-Z]/)) {
+        letters.add(firstLetter);
+      }
+    });
+    return Array.from(letters).sort();
+  };
+
+  // Get all letters A-Z
+  const getAllLetters = () => {
+    return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
   };
 
   // Pagination calculations
@@ -243,7 +267,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Filter Bar */}
-      <div className="flex flex-wrap gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
         <div className="flex items-center gap-2">
           <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
           <Select value={sortBy} onValueChange={(value) => {
@@ -260,6 +284,52 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
             </SelectContent>
           </Select>
         </div>
+        
+        {/* Letter Filter */}
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-muted-foreground whitespace-nowrap">Filter:</span>
+          <div className="flex flex-wrap gap-1">
+            <button
+              onClick={() => {
+                setSelectedLetter('all');
+                if (currentPage !== 1) navigate('/artists/1');
+              }}
+              className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
+                selectedLetter === 'all'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground'
+              }`}
+            >
+              All
+            </button>
+            {getAllLetters().map((letter) => {
+              const isAvailable = getAvailableLetters().includes(letter);
+              const isSelected = selectedLetter === letter;
+              
+              return (
+                <button
+                  key={letter}
+                  onClick={() => {
+                    if (isAvailable) {
+                      setSelectedLetter(letter);
+                      if (currentPage !== 1) navigate('/artists/1');
+                    }
+                  }}
+                  disabled={!isAvailable}
+                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
+                    isSelected
+                      ? 'bg-primary text-primary-foreground'
+                      : isAvailable
+                      ? 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground cursor-pointer'
+                      : 'bg-muted/50 text-muted-foreground/50 cursor-not-allowed'
+                  }`}
+                >
+                  {letter}
+                </button>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       {/* Artists Grid */}
@@ -274,8 +344,8 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedArtists.map((artist) => (
-            <Link key={artist.uri} to={artist.uri}>
-              <Card className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden group">
+            <Link key={artist.uri} to={artist.uri} className="h-full">
+              <Card className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden group h-full flex flex-col">
                 <div className="aspect-square relative overflow-hidden">
                   <img
                     src={artist.image}
@@ -284,7 +354,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
                     loading="lazy"
                   />
                 </div>
-                <CardContent className="p-4">
+                <CardContent className="p-4 flex-1 flex flex-col">
                   <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
                     {artist.name}
                   </h3>
@@ -294,7 +364,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
                       {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-1">
+                  <div className="flex flex-wrap gap-1 mt-auto">
                     {artist.genres.slice(0, 3).map((genre, index) => (
                       <Badge 
                         key={index} 
