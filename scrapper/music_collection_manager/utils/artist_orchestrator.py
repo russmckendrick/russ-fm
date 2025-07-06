@@ -232,7 +232,6 @@ class ArtistDataOrchestrator:
                 
                 # Add Discogs images if available
                 if discogs_data.get("cover_image"):
-                    from ..models import Image
                     discogs_image = Image(
                         url=discogs_data.get("cover_image", ""),
                         type="discogs_artist_primary"
@@ -240,7 +239,6 @@ class ArtistDataOrchestrator:
                     artist.add_image(discogs_image)
                 
                 if discogs_data.get("thumb"):
-                    from ..models import Image
                     discogs_thumb = Image(
                         url=discogs_data.get("thumb", ""),
                         type="discogs_artist_thumb"
@@ -385,7 +383,6 @@ class ArtistDataOrchestrator:
             if self.custom_image:
                 self.logger.info(f"🖼️ Using custom image URL: {self.custom_image}")
                 # Add custom image as an image source
-                from ..models import Image
                 custom_image = Image(
                     url=self.custom_image,
                     type="custom_artist_image",
@@ -610,10 +607,17 @@ class ArtistDataOrchestrator:
             # Last.fm search results structure
             artists = search_results.get("results", {}).get("artistmatches", {}).get("artist", [])
             for artist in artists:
+                # Safe formatting for listeners count
+                listeners_count = artist.get('listeners', 0)
+                try:
+                    listeners_formatted = f"{int(listeners_count):,}" if listeners_count else "0"
+                except (ValueError, TypeError):
+                    listeners_formatted = str(listeners_count) if listeners_count else "0"
+                
                 candidates.append({
                     "data": artist,
                     "name": artist.get("name", "Unknown"),
-                    "listeners": f"{artist.get('listeners', 0):,}",
+                    "listeners": listeners_formatted,
                     "url": artist.get("url", ""),
                     "mbid": artist.get("mbid", "Unknown")
                 })
