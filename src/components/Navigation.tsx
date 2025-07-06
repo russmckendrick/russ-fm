@@ -17,13 +17,22 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
 
+  // Check if we're on a page where search overlay should be disabled
+  const isSearchOverlayDisabled = () => {
+    return location.pathname === '/' || 
+           location.pathname.startsWith('/albums') || 
+           location.pathname.startsWith('/artists');
+  };
+
   const handleSearchFocus = () => {
-    setSearchOverlayOpen(true);
+    if (!isSearchOverlayDisabled()) {
+      setSearchOverlayOpen(true);
+    }
   };
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
-    if (e.target.value.trim()) {
+    if (e.target.value.trim() && !isSearchOverlayDisabled()) {
       setSearchOverlayOpen(true);
     }
   };
@@ -177,7 +186,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
       <SearchOverlay 
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
-        isVisible={searchOverlayOpen}
+        isVisible={searchOverlayOpen && !isSearchOverlayDisabled()}
         onClose={closeSearchOverlay}
       />
     </div>

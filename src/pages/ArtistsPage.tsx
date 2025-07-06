@@ -19,6 +19,16 @@ import { appConfig } from '@/config/app.config';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    json_detailed_artist: string;
+    images_uri_artist: {
+      'hi-res': string;
+      medium: string;
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -127,35 +137,73 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
     const artistMap = new Map<string, Artist>();
 
     collection.forEach(album => {
-      const artistName = album.release_artist;
-      
-      if (!artistMap.has(artistName)) {
-        artistMap.set(artistName, {
-          name: artistName,
-          uri: album.uri_artist,
-          albums: [],
-          albumCount: 0,
-          genres: [],
-          image: album.images_uri_artist.medium,
-          latestAlbum: album.date_added
+      // Handle albums with multiple artists
+      if (album.artists && album.artists.length > 0) {
+        // Process each individual artist
+        album.artists.forEach(artistInfo => {
+          const artistName = artistInfo.name;
+          
+          if (!artistMap.has(artistName)) {
+            artistMap.set(artistName, {
+              name: artistName,
+              uri: artistInfo.uri_artist,
+              albums: [],
+              albumCount: 0,
+              genres: [],
+              image: artistInfo.images_uri_artist.medium,
+              latestAlbum: album.date_added
+            });
+          }
+
+          const artist = artistMap.get(artistName)!;
+          artist.albums.push(album);
+          artist.albumCount++;
+          
+          // Add unique genres
+          album.genre_names.forEach(genre => {
+            if (!artist.genres.includes(genre)) {
+              artist.genres.push(genre);
+            }
+          });
+
+          // Update latest album if this one is newer
+          if (album.date_added > artist.latestAlbum) {
+            artist.latestAlbum = album.date_added;
+            artist.image = artistInfo.images_uri_artist.medium;
+          }
         });
-      }
-
-      const artist = artistMap.get(artistName)!;
-      artist.albums.push(album);
-      artist.albumCount++;
-      
-      // Add unique genres
-      album.genre_names.forEach(genre => {
-        if (!artist.genres.includes(genre)) {
-          artist.genres.push(genre);
+      } else {
+        // Fallback to original artist field for backward compatibility
+        const artistName = album.release_artist;
+        
+        if (!artistMap.has(artistName)) {
+          artistMap.set(artistName, {
+            name: artistName,
+            uri: album.uri_artist,
+            albums: [],
+            albumCount: 0,
+            genres: [],
+            image: album.images_uri_artist.medium,
+            latestAlbum: album.date_added
+          });
         }
-      });
 
-      // Update latest album if this one is newer
-      if (album.date_added > artist.latestAlbum) {
-        artist.latestAlbum = album.date_added;
-        artist.image = album.images_uri_artist.medium;
+        const artist = artistMap.get(artistName)!;
+        artist.albums.push(album);
+        artist.albumCount++;
+        
+        // Add unique genres
+        album.genre_names.forEach(genre => {
+          if (!artist.genres.includes(genre)) {
+            artist.genres.push(genre);
+          }
+        });
+
+        // Update latest album if this one is newer
+        if (album.date_added > artist.latestAlbum) {
+          artist.latestAlbum = album.date_added;
+          artist.image = album.images_uri_artist.medium;
+        }
       }
     });
 

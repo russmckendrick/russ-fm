@@ -82,13 +82,17 @@ class CollectionGenerator:
         date_added = self._get_date_added_from_object(release)
         date_release_year = self._get_release_year_from_object(release)
         
+        # Get individual artists array
+        artists_array = self._get_artists_array_from_object(release)
+        
         # Create entry
         entry = {
             "release_name": release_name,
-            "release_artist": release_artist,
+            "release_artist": release_artist,  # Keep for backward compatibility
+            "artists": artists_array,  # New array of individual artists
             "genre_names": genre_names,
             "uri_release": f"/{self.releases_path}/{release_folder}/",
-            "uri_artist": f"/{self.artists_path}/{artist_folder}/",
+            "uri_artist": f"/{self.artists_path}/{artist_folder}/",  # Keep primary artist for backward compatibility
             "date_added": date_added or "1900-01-01",
             "date_release_year": date_release_year or "1900-01-01",
             "json_detailed_release": f"/{self.releases_path}/{release_folder}/{release_folder}.json",
@@ -112,14 +116,43 @@ class CollectionGenerator:
         return None
     
     def _get_release_artist_from_object(self, release) -> Optional[str]:
-        """Extract main artist name from Release object."""
+        """Extract artist name(s) from Release object - supports multiple artists."""
         # Try artists array first
         if hasattr(release, 'artists') and release.artists:
-            first_artist = release.artists[0]
-            if hasattr(first_artist, 'name') and first_artist.name:
-                return first_artist.name
+            # Get all artist names
+            artist_names = []
+            for artist in release.artists:
+                if hasattr(artist, 'name') and artist.name:
+                    artist_names.append(artist.name)
+            
+            if artist_names:
+                # If multiple artists, join them with " & "
+                if len(artist_names) > 1:
+                    return " & ".join(artist_names)
+                else:
+                    return artist_names[0]
                 
         return None
+    
+    def _get_artists_array_from_object(self, release) -> List[Dict[str, str]]:
+        """Extract array of individual artists from Release object."""
+        artists_array = []
+        
+        if hasattr(release, 'artists') and release.artists:
+            for artist in release.artists:
+                if hasattr(artist, 'name') and artist.name:
+                    # Create sanitized folder name for each artist
+                    artist_folder = self._sanitize_filename(artist.name)
+                    
+                    artist_entry = {
+                        "name": artist.name,
+                        "uri_artist": f"/{self.artists_path}/{artist_folder}/",
+                        "json_detailed_artist": f"/{self.artists_path}/{artist_folder}/{artist_folder}.json",
+                        "images_uri_artist": self._get_artist_image_uris_from_object(artist.name, artist_folder)
+                    }
+                    artists_array.append(artist_entry)
+        
+        return artists_array
     
     def _get_genre_names_from_object(self, release) -> List[str]:
         """Extract genre names from Release object."""

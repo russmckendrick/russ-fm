@@ -13,6 +13,16 @@ import { filterGenres } from '@/lib/filterGenres';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    json_detailed_artist: string;
+    images_uri_artist: {
+      'hi-res': string;
+      medium: string;
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -116,16 +126,47 @@ export function ArtistDetailPage() {
       
       // Filter albums by this artist (decode the artistPath)
       const decodedArtistPath = decodeURIComponent(artistPath || '');
-      const artistAlbums = collection.filter((album: Album) => 
-        album.uri_artist === `/artist/${decodedArtistPath}/`
-      );
+      const targetUri = `/artist/${decodedArtistPath}/`;
+      
+      const artistAlbums = collection.filter((album: Album) => {
+        // Check if this album has the artist as the primary artist
+        if (album.uri_artist === targetUri) {
+          return true;
+        }
+        
+        // Check if this album has the artist in the artists array
+        if (album.artists) {
+          return album.artists.some(artist => artist.uri_artist === targetUri);
+        }
+        
+        return false;
+      });
       
       setAlbums(artistAlbums);
 
       // Load detailed artist information if available
       if (artistAlbums.length > 0) {
         try {
-          const artistDetailResponse = await fetch(`${artistAlbums[0].json_detailed_artist}`);
+          // Try to get the specific artist's JSON file from the artists array
+          let artistJsonUrl = null;
+          
+          // Look for this specific artist in the artists array of any album
+          for (const album of artistAlbums) {
+            if (album.artists) {
+              const foundArtist = album.artists.find(artist => artist.uri_artist === targetUri);
+              if (foundArtist) {
+                artistJsonUrl = foundArtist.json_detailed_artist;
+                break;
+              }
+            }
+          }
+          
+          // Fallback to the first album's artist JSON if not found in artists array
+          if (!artistJsonUrl) {
+            artistJsonUrl = artistAlbums[0].json_detailed_artist;
+          }
+          
+          const artistDetailResponse = await fetch(artistJsonUrl);
           const artistDetail = await artistDetailResponse.json();
           setArtistData(artistDetail);
         } catch (error) {
@@ -173,6 +214,69 @@ export function ArtistDetailPage() {
   }
 
   const artist = albums[0];
+  
+  // Get the correct artist name for individual artists
+  const getArtistName = () => {
+    if (artistData?.name) {
+      return artistData.name;
+    }
+    
+    // Extract artist name from path if available in artists array
+    const decodedArtistPath = decodeURIComponent(artistPath || '');
+    const targetUri = `/artist/${decodedArtistPath}/`;
+    
+    for (const album of albums) {
+      if (album.artists) {
+        const foundArtist = album.artists.find(artist => artist.uri_artist === targetUri);
+        if (foundArtist) {
+          return foundArtist.name;
+        }
+      }
+    }
+    
+    return artist.release_artist;
+  };
+  
+  const artistName = getArtistName();
+  
+  // Get the correct artist images for individual artists
+  const getArtistImages = () => {
+    // Find the specific artist's images from the artists array FIRST
+    const decodedArtistPath = decodeURIComponent(artistPath || '');
+    const targetUri = `/artist/${decodedArtistPath}/`;
+    
+    for (const album of albums) {
+      if (album.artists) {
+        const foundArtist = album.artists.find(artist => artist.uri_artist === targetUri);
+        if (foundArtist) {
+          return foundArtist.images_uri_artist;
+        }
+      }
+    }
+    
+    // Fallback to the first album's artist images
+    if (artist?.images_uri_artist) {
+      return artist.images_uri_artist;
+    }
+    
+    // Last resort: use artistData local_images if available
+    if (artistData?.local_images) {
+      return artistData.local_images;
+    }
+    
+    // Final fallback
+    return {
+      'hi-res': '',
+      'medium': '',
+      'small': ''
+    };
+  };
+  
+  const artistImages = getArtistImages();
+  
+  console.log('DEBUG: Raw artistImages =', artistImages);
+  console.log('DEBUG: hi-res path =', artistImages['hi-res']);
+  console.log('DEBUG: artistData local_images =', artistData?.local_images);
   const allGenres = [...new Set(albums.flatMap(album => album.genre_names))];
 
   return (
@@ -189,18 +293,19 @@ export function ArtistDetailPage() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
         <div className="lg:col-span-1">
           <img
-            src={artistData?.local_images?.['hi-res'] || artist.images_uri_artist['hi-res']}
-            alt={artist.release_artist}
+            src={artistImages['hi-res']}
+            alt={artistName}
             className="w-full rounded-lg shadow-lg"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = artist.images_uri_artist['medium'] || artist.images_uri_artist['small'] || '';
+              const fallbackSrc = artistImages['medium'] || artistImages['small'] || '';
+              target.src = fallbackSrc;
             }}
           />
         </div>
         
         <div className="lg:col-span-2">
-          <h1 className="text-4xl font-bold mb-4">{artist.release_artist}</h1>
+          <h1 className="text-4xl font-bold mb-4">{artistName}</h1>
           
           <div className="space-y-6">
             {/* Combined Info and Statistics */}
@@ -268,7 +373,7 @@ export function ArtistDetailPage() {
               <div className="flex flex-wrap gap-2">
                 {(() => {
                   // Filter and deduplicate genres using the utility
-                  const filteredGenres = filterGenres(allGenres, artist.release_artist);
+                  const filteredGenres = filterGenres(allGenres, artistName);
                   
                   return filteredGenres.map((genre, index) => (
                     <Badge key={index} variant="default" className="capitalize">
@@ -348,7 +453,7 @@ export function ArtistDetailPage() {
                     key="wikipedia"
                     variant="outline"
                     className="btn-service btn-wikipedia h-12"
-                    onClick={() => window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(artist.release_artist)}`, '_blank')}
+                    onClick={() => window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`, '_blank')}
                   >
                     <SiWikipedia className="service-icon" />
                     <span className="service-text">View on Wikipedia</span>
