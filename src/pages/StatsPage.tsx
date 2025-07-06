@@ -99,36 +99,31 @@ export function StatsPage() {
       const year = new Date(album.date_release_year).getFullYear();
       const decade = Math.floor(year / 10) * 10;
       const decadeLabel = `${decade}s`;
-      acc[decadeLabel] = (acc[decadeLabel] || 0) + 1;
+      // Exclude 1900s and 1950s
+      if (decade >= 1960) {
+        acc[decadeLabel] = (acc[decadeLabel] || 0) + 1;
+      }
       return acc;
     }, {});
     const decadeData = Object.entries(decadeCounts)
       .sort(([a], [b]) => a.localeCompare(b))
       .map(([decade, count]) => ({ decade, count }));
 
-    // Collection growth over time
-    const growthData = data
-      .map(album => ({
-        date: album.date_added,
-        timestamp: new Date(album.date_added).getTime()
-      }))
-      .sort((a, b) => a.timestamp - b.timestamp)
-      .reduce((acc: any[], item, index) => {
-        const date = new Date(item.date);
-        const monthYear = `${date.getMonth() + 1}/${date.getFullYear()}`;
-        const lastEntry = acc[acc.length - 1];
-        
-        if (!lastEntry || lastEntry.month !== monthYear) {
-          acc.push({
-            month: monthYear,
-            count: index + 1
-          });
-        } else {
-          lastEntry.count = index + 1;
-        }
-        
-        return acc;
-      }, []);
+    // Additions per month
+    const additionsPerMonth = data.reduce((acc: any, album) => {
+      const date = new Date(album.date_added);
+      const monthYear = `${date.getMonth() + 1}/${date.getFullYear()}`;
+      acc[monthYear] = (acc[monthYear] || 0) + 1;
+      return acc;
+    }, {});
+    
+    const additionsData = Object.entries(additionsPerMonth)
+      .map(([month, count]) => ({ month, count }))
+      .sort((a, b) => {
+        const [monthA, yearA] = a.month.split('/').map(Number);
+        const [monthB, yearB] = b.month.split('/').map(Number);
+        return yearA - yearB || monthA - monthB;
+      });
 
     // Find oldest and newest albums
     const sortedByYear = [...data].sort((a, b) => 
@@ -140,7 +135,12 @@ export function StatsPage() {
     // Recent additions
     const recentAdditions = [...data]
       .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
-      .slice(0, 7);
+      .slice(0, 9);
+
+    // Oldest additions
+    const oldestAdditions = [...data]
+      .sort((a, b) => new Date(a.date_added).getTime() - new Date(b.date_added).getTime())
+      .slice(0, 9);
 
     setStats({
       totalAlbums,
@@ -150,14 +150,15 @@ export function StatsPage() {
       topArtists,
       topGenres,
       decadeData,
-      growthData,
+      additionsData,
       oldestAlbum,
       newestAlbum,
-      recentAdditions
+      recentAdditions,
+      oldestAdditions
     });
   };
 
-  const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D', '#FFC658', '#FF6B6B', '#4ECDC4', '#45B7D1'];
+  const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899', '#84CC16', '#6366F1'];
 
   if (loading) {
     return (
@@ -224,7 +225,7 @@ export function StatsPage() {
       <div className="mb-6">
         <h2 className="text-2xl font-bold mb-4">Artists with Most Albums</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.topArtists?.slice(0, 6).map((artist: any, index: number) => (
+          {stats.topArtists?.slice(0, 9).map((artist: any, index: number) => (
             <Link
               key={index}
               to={artist.uri}
@@ -258,34 +259,40 @@ export function StatsPage() {
         <h2 className="text-2xl font-bold mb-4">Recent Additions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {stats.recentAdditions?.map((album: Album, index: number) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
-                    <img
-                      src={album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
-                      alt={album.release_name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = album.images_uri_release?.medium || album.images_uri_release?.['hi-res'] || '';
-                      }}
-                    />
+            <Link
+              key={index}
+              to={album.uri_release}
+              className="block"
+            >
+              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src={album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        alt={album.release_name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = album.images_uri_release?.medium || album.images_uri_release?.['hi-res'] || '';
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium truncate">{album.release_name}</p>
+                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
+                      <p className="text-xs text-muted-foreground">
+                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
+                          day: '2-digit', 
+                          month: '2-digit', 
+                          year: 'numeric' 
+                        })}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-medium truncate">{album.release_name}</p>
-                    <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                    <p className="text-xs text-muted-foreground">
-                      Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
-                        day: '2-digit', 
-                        month: '2-digit', 
-                        year: 'numeric' 
-                      })}
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
@@ -310,31 +317,58 @@ export function StatsPage() {
           </CardContent>
         </Card>
 
-        {/* Top Genres */}
+        {/* Top Styles */}
         <Card>
           <CardHeader>
-            <CardTitle>Top Genres</CardTitle>
+            <CardTitle>Styles</CardTitle>
           </CardHeader>
           <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <PieChart>
-                <Pie
-                  data={stats.topGenres}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  outerRadius={80}
-                  fill="#8884d8"
-                  dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                >
-                  {stats.topGenres?.map((entry: any, index: number) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
-            </ResponsiveContainer>
+            <div className="relative">
+              <ResponsiveContainer width="100%" height={400}>
+                <PieChart>
+                  <Pie
+                    data={stats.topGenres}
+                    cx="50%"
+                    cy="50%"
+                    labelLine={false}
+                    outerRadius={120}
+                    innerRadius={60}
+                    fill="#8884d8"
+                    dataKey="value"
+                    stroke="white"
+                    strokeWidth={2}
+                  >
+                    {stats.topGenres?.map((entry: any, index: number) => (
+                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip 
+                    formatter={(value, name) => [`${value} albums`, name]}
+                    contentStyle={{
+                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                      border: 'none',
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                    }}
+                  />
+                </PieChart>
+              </ResponsiveContainer>
+              
+              {/* Custom Legend */}
+              <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
+                {stats.topGenres?.slice(0, 8).map((entry: any, index: number) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <div 
+                      className="w-3 h-3 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                    />
+                    <span className="truncate font-medium">
+                      {entry.name} ({((entry.value / stats.totalAlbums) * 100).toFixed(0)}%)
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>
@@ -346,16 +380,62 @@ export function StatsPage() {
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={stats.growthData}>
+            <BarChart data={stats.additionsData}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="month" />
               <YAxis />
               <Tooltip />
-              <Line type="monotone" dataKey="count" stroke="#8884d8" />
-            </LineChart>
+              <Bar dataKey="count" fill="#8884d8" />
+            </BarChart>
           </ResponsiveContainer>
         </CardContent>
       </Card>
+
+      {/* Oldest Additions */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Clock className="h-6 w-6" />
+          Oldest Additions
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stats.oldestAdditions?.map((album: Album, index: number) => (
+            <Link
+              key={index}
+              to={album.uri_release}
+              className="block"
+            >
+              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src={album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        alt={album.release_name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = album.images_uri_release?.medium || album.images_uri_release?.['hi-res'] || '';
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium truncate">{album.release_name}</p>
+                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
+                      <p className="text-xs text-muted-foreground">
+                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
+                          day: '2-digit', 
+                          month: '2-digit', 
+                          year: 'numeric' 
+                        })}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
 
     </div>
   );
