@@ -97,18 +97,28 @@ class ArtistDataOrchestrator:
     
     def get_artist_by_name(self, artist_name: str, force_refresh: bool = False, existing_artist: Optional[Artist] = None) -> Optional[Artist]:
         """Get comprehensive artist information by name."""
-        # Check database first if not forcing refresh
-        if not force_refresh:
-            cached_artist = self.db_manager.get_artist_by_name(artist_name)
-            if cached_artist and self.db_manager.has_enriched_artist(artist_name):
+        # Always check database first to get existing artist data (including discogs_id)
+        cached_artist = self.db_manager.get_artist_by_name(artist_name)
+        if cached_artist:
+            self.logger.info(f"Found cached artist: {cached_artist.name}, discogs_id: {cached_artist.discogs_id}")
+            # If not forcing refresh and artist is enriched, return cached data
+            if not force_refresh and self.db_manager.has_enriched_artist(artist_name):
                 self.logger.info(f"Using cached data for artist: {artist_name}")
                 return cached_artist
+        else:
+            self.logger.info(f"No cached artist found for: {artist_name}")
         
-        # Use existing artist if provided (with Discogs ID), otherwise create new
+        # Use existing artist if provided (with Discogs ID), otherwise use cached or create new
         if existing_artist:
             artist = existing_artist
+            self.logger.info(f"Using existing artist: {artist.name}, discogs_id: {artist.discogs_id}")
+        elif cached_artist:
+            # Use cached artist as base (preserves discogs_id and other data)
+            artist = cached_artist
+            self.logger.info(f"Using cached artist as base: {artist.name}, discogs_id: {artist.discogs_id}")
         else:
             artist = Artist(name=artist_name)
+            self.logger.info(f"Created new artist: {artist.name}, discogs_id: {artist.discogs_id}")
         
         # Enrich with data from all services
         artist = self.enrich_artist(artist)
@@ -223,7 +233,7 @@ class ArtistDataOrchestrator:
 
         # Enrich with Discogs
         if "discogs" in self.services:
-            discogs_data = self._get_discogs_artist_data(artist_name)
+            discogs_data = self._get_discogs_artist_data(artist)
             if discogs_data:
                 artist.raw_data["discogs"] = discogs_data
                 
@@ -349,11 +359,45 @@ class ArtistDataOrchestrator:
         
         return None
 
-    def _get_discogs_artist_data(self, artist_name: str) -> Optional[Dict[str, Any]]:
+    def _get_discogs_artist_data(self, artist: Artist) -> Optional[Dict[str, Any]]:
         """Get Discogs data for an artist."""
         try:
             service = self.services["discogs"]
             
+            self.logger.info(f"🔍 Getting Discogs data for artist: {artist.name}")
+            self.logger.info(f"🔍 Artist discogs_id: {artist.discogs_id}")
+            
+            # If artist has a discogs_id, fetch detailed data directly
+            if artist.discogs_id:
+                self.logger.info(f"✅ Using existing Discogs ID {artist.discogs_id} for artist: {artist.name}")
+                try:
+                    artist_details = service.get_artist_details(artist.discogs_id)
+                    self.logger.info(f"✅ Successfully fetched artist details from Discogs API for ID: {artist.discogs_id}")
+                    
+                    # Create enrichment data from the detailed artist response
+                    return {
+                        "id": str(artist_details.get("id", "")),
+                        "name": artist_details.get("name", artist.name),
+                        "url": artist_details.get("uri", ""),
+                        "resource_url": artist_details.get("resource_url", ""),
+                        "profile": artist_details.get("profile", ""),
+                        "images": artist_details.get("images", []),
+                        "urls": artist_details.get("urls", []),
+                        "namevariations": artist_details.get("namevariations", []),
+                        "members": artist_details.get("members", []),
+                        "cover_image": artist_details.get("images", [{}])[0].get("resource_url", "") if artist_details.get("images") else "",
+                        "thumb": artist_details.get("images", [{}])[0].get("uri150", "") if artist_details.get("images") else "",
+                        "raw_data": artist_details
+                    }
+                except Exception as e:
+                    self.logger.warning(f"❌ Failed to get Discogs artist details for ID {artist.discogs_id}: {str(e)}")
+                    # Fall back to search if direct ID lookup fails
+            else:
+                self.logger.info(f"❌ No discogs_id found for artist: {artist.name}, falling back to search")
+            
+            # Fall back to search if no discogs_id or direct lookup failed
+            self.logger.info(f"🔍 Falling back to Discogs search for artist: {artist.name}")
+            artist_name = artist.name
             if self.interactive_mode:
                 # Search for multiple artists first
                 search_results = service.search_artist(artist_name)
@@ -370,7 +414,7 @@ class ArtistDataOrchestrator:
                 return None
             
         except Exception as e:
-            self.logger.warning(f"Failed to get Discogs artist data for {artist_name}: {str(e)}")
+            self.logger.warning(f"Failed to get Discogs artist data for {artist.name}: {str(e)}")
         
         return None
 
