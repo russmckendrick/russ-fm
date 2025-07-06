@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { filterGenres } from '@/lib/filterGenres';
 
 interface Album {
   release_name: string;
@@ -425,22 +426,9 @@ export function AlbumDetailPage() {
                     ...(detailedAlbum?.styles || [])
                   ];
                   
-                  const filteredTags = allTags
-                    .filter(tag => {
-                      const lowerTag = tag.toLowerCase().trim();
-                      // Filter out band names, years, decades, and common non-genre terms
-                      return !lowerTag.includes(album.release_artist.toLowerCase()) &&
-                             !/^\d+s$/.test(lowerTag) && // Decades like 90s, 80s, 70s
-                             !/^(19|20)\d{2}$/.test(lowerTag) && // Full years like 1985, 2023
-                             !['new wave', 'china crisis'].includes(lowerTag) &&
-                             lowerTag.length > 0; // Remove empty tags
-                    })
-                    .map(tag => tag.toLowerCase().trim());
+                  const filteredTags = filterGenres(allTags, album.release_artist);
                   
-                  // Remove duplicates by converting to Set and back to array
-                  const uniqueTags = [...new Set(filteredTags)];
-                  
-                  return uniqueTags.map((tag, index) => (
+                  return filteredTags.map((tag, index) => (
                     <Badge key={index} variant="default" className="capitalize">
                       <Music className="h-3 w-3 mr-1" />
                       {tag}
