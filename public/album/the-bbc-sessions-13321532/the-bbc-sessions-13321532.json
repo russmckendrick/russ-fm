@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:35:10.304873",
+  "created_at": "2025-07-06T19:46:16.521603",
   "date_added": "2022-04-23T02:30:16-07:00",
   "discogs_id": "13321532",
   "discogs_url": "https://www.discogs.com/release/13321532-Belle-And-Sebastian-The-BBC-Sessions",
@@ -103,6 +103,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/8RHsfUFfiC7CQ2I6ROB0Ii0fbqa3adL_eLiCBw6hlIU/rs:fit/g:sm/q:90/h:600/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMzIx/NTMyLTE2NDQ5MzA0/NzUtMTY5OS5qcGVn.jpeg",
       "width": 564
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://m.media-amazon.com/images/I/81iQeUpsfnL._UF894,1000_QL80_.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -110,11 +117,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-bbc-sessions-13321532/the-bbc-sessions-13321532-hi-res.jpg",
+    "medium": "../public/album/the-bbc-sessions-13321532/the-bbc-sessions-13321532-medium.jpg",
+    "small": "../public/album/the-bbc-sessions-13321532/the-bbc-sessions-13321532-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:35:10.898816",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T19:46:21.317669",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -217,6 +228,6 @@
       "title": "(My Girl's Got) Miraculous Technique"
     }
   ],
-  "updated_at": "2025-07-05T15:35:10.898233",
+  "updated_at": "2025-07-06T19:46:21.088119",
   "year": 2014
 }
