@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:19:34.375610",
+  "created_at": "2025-07-06T14:18:14.419511",
   "date_added": "2017-04-25T08:35:16-07:00",
   "discogs_id": "8395860",
   "discogs_url": "https://www.discogs.com/release/8395860-Alan-Partridge-Knowing-Me-Knowing-You",
@@ -47,6 +47,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/-Fiv4NYYnZmLKQqz638ehpiUPe0A8sQBPmRqANyc-ew/rs:fit/g:sm/q:90/h:600/w:589/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTgzOTU4/NjAtMTQ2MTM5NzQz/Mi0zMDc2LmpwZWc.jpeg",
       "width": 589
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://www.russ.fm/albums/knowing-me-knowing-you-8395860/knowing-me-knowing-you-8395860.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -54,11 +61,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/knowing-me-knowing-you-8395860/knowing-me-knowing-you-8395860-hi-res.jpg",
+    "medium": "../public/album/knowing-me-knowing-you-8395860/knowing-me-knowing-you-8395860-medium.jpg",
+    "small": "../public/album/knowing-me-knowing-you-8395860/knowing-me-knowing-you-8395860-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:19:35.613042",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T14:18:19.821631",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -89,6 +100,6 @@
       "title": "Knowing Me Knowing You, Broadcast BBC Radio 4, 5 January 1993"
     }
   ],
-  "updated_at": "2025-07-05T17:19:35.612728",
+  "updated_at": "2025-07-06T14:18:19.631065",
   "year": 2016
 }
