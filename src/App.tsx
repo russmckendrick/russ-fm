@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { AlbumsPage } from '@/pages/AlbumsPage';
 import { ArtistsPage } from '@/pages/ArtistsPage';
@@ -9,6 +9,20 @@ import { StatsPage } from '@/pages/StatsPage';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
+  const [cameFromStats, setCameFromStats] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Redirect to albums page when searching from stats page
+  useEffect(() => {
+    if (searchTerm.trim() && location.pathname === '/stats') {
+      setCameFromStats(true);
+      navigate('/albums/1');
+    } else if (!searchTerm.trim() && cameFromStats && location.pathname.startsWith('/albums')) {
+      setCameFromStats(false);
+      navigate('/stats');
+    }
+  }, [searchTerm, location.pathname, navigate, cameFromStats]);
 
   return (
     <div className="min-h-screen bg-background">

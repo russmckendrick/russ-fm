@@ -42,7 +42,7 @@ export function Logo({ className = "" }: LogoProps) {
           </g>
         </svg>
       </div>
-      <span className="text-xl font-bold">Russ.fm</span>
+      <span className="text-xl font-bold">RussFM</span>
     </div>
   );
 }

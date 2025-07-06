@@ -27,7 +27,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
   if (onClick) {
     return (
       <Card 
-        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden"
+        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden h-full flex flex-col"
         onClick={onClick}
       >
       <div className="aspect-square relative overflow-hidden">
@@ -38,7 +38,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           loading="lazy"
         />
       </div>
-      <CardContent className="p-4">
+      <CardContent className="p-4 flex-1 flex flex-col">
         <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
           {album.release_name}
         </h3>
@@ -48,7 +48,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
         <p className="text-sm text-muted-foreground mb-3">
           {year}
         </p>
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 mt-auto">
           {displayGenres.map((genre, index) => (
             <Badge 
               key={index} 
@@ -72,7 +72,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
   return (
     <Link to={`/album/${albumPath}`}>
       <Card 
-        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden"
+        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden h-full flex flex-col"
       >
         <div className="aspect-square relative overflow-hidden">
           <img
@@ -82,7 +82,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             loading="lazy"
           />
         </div>
-        <CardContent className="p-4">
+        <CardContent className="p-4 flex-1 flex flex-col">
           <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
             {album.release_name}
           </h3>
@@ -92,7 +92,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           <p className="text-sm text-muted-foreground mb-3">
             {year}
           </p>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1 mt-auto">
             {displayGenres.map((genre, index) => (
               <Badge 
                 key={index} 
