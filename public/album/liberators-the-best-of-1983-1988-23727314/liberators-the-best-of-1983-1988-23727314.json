@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:31:14.744044",
+  "created_at": "2025-07-06T19:38:46.759555",
   "date_added": "2022-07-03T07:55:58-07:00",
   "discogs_id": "23727314",
   "discogs_url": "https://www.discogs.com/release/23727314-Spear-Of-Destiny-Liberators-The-Best-Of-1983-1988",
@@ -89,6 +89,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/EyDLBM5SDfJrGFMi22KBTWgYHwxf0odFse54XqHeuBA/rs:fit/g:sm/q:90/h:600/w:566/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzNzI3/MzE0LTE2NTgyMjI1/OTUtOTg2OS5qcGVn.jpeg",
       "width": 566
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://m.media-amazon.com/images/I/71cpAg9zbhL._UF894,1000_QL80_.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -96,11 +103,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/liberators-the-best-of-1983-1988-23727314/liberators-the-best-of-1983-1988-23727314-hi-res.jpg",
+    "medium": "../public/album/liberators-the-best-of-1983-1988-23727314/liberators-the-best-of-1983-1988-23727314-medium.jpg",
+    "small": "../public/album/liberators-the-best-of-1983-1988-23727314/liberators-the-best-of-1983-1988-23727314-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:31:16.194547",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T19:38:53.547125",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -192,6 +203,6 @@
       "title": "Radio Radio"
     }
   ],
-  "updated_at": "2025-07-05T15:31:16.193536",
+  "updated_at": "2025-07-06T19:38:53.410084",
   "year": 2022
 }
