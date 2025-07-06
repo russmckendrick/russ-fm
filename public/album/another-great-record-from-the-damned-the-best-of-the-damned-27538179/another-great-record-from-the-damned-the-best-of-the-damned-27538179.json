@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:11:23.964935",
+  "created_at": "2025-07-06T18:01:46.247999",
   "date_added": "2023-07-15T02:29:42-07:00",
   "discogs_id": "27538179",
   "discogs_url": "https://www.discogs.com/release/27538179-The-Damned-Another-Great-Record-From-The-Damned-The-Best-Of-The-Damned",
@@ -80,6 +80,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/dRT9sIYcV9r1RfqpMig10I4AM3L_r0B-X1WQHhtNwis/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3NTM4/MTc5LTE2ODgxMzcz/MzYtMTA5NS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://cdn.shopify.com/s/files/1/0867/1120/6219/files/DAM_1_-_BEST_OF_THE_DAMNED_LP_65d62a73_thumbnail_4096.jpg?v=1728040963&w=1200&q=75",
+      "width": 2000
     }
   ],
   "labels": [
@@ -87,11 +94,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/The+Damned/Another+Great+Record+from+the+Damned:+the+Best+of+the+Damned",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/another-great-record-from-the-damned-the-best-of-the-damned-27538179/another-great-record-from-the-damned-the-best-of-the-damned-27538179-hi-res.jpg",
+    "medium": "../public/album/another-great-record-from-the-damned-the-best-of-the-damned-27538179/another-great-record-from-the-damned-the-best-of-the-damned-27538179-medium.jpg",
+    "small": "../public/album/another-great-record-from-the-damned-the-best-of-the-damned-27538179/another-great-record-from-the-damned-the-best-of-the-damned-27538179-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:11:38.245875",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T18:01:49.344205",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -649,6 +660,6 @@
       "title": "History Of The World Part 1"
     }
   ],
-  "updated_at": "2025-07-05T15:11:38.244595",
+  "updated_at": "2025-07-06T18:01:49.114835",
   "year": 2023
 }

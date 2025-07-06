@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:13:22.914719",
+  "created_at": "2025-07-06T18:05:19.836215",
   "date_added": "2023-09-03T09:28:35-07:00",
   "discogs_id": "28160602",
   "discogs_url": "https://www.discogs.com/release/28160602-Deacon-Blue-All-The-Old-45s-The-Very-Best-Of-Deacon-Blue",
@@ -92,6 +92,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/GoeKRANvN2AtYzsbe-uFekCLvQlJyeY67FHQJrZqt6s/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI4MTYw/NjAyLTE2OTQ1MjE5/MjItNjU5MS5qcGVn.jpeg",
       "width": 599
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://m.media-amazon.com/images/I/619X3TEYAEL.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -100,11 +107,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/all-the-old-45s-the-very-best-of-deacon-blue-28160602/all-the-old-45s-the-very-best-of-deacon-blue-28160602-hi-res.jpg",
+    "medium": "../public/album/all-the-old-45s-the-very-best-of-deacon-blue-28160602/all-the-old-45s-the-very-best-of-deacon-blue-28160602-medium.jpg",
+    "small": "../public/album/all-the-old-45s-the-very-best-of-deacon-blue-28160602/all-the-old-45s-the-very-best-of-deacon-blue-28160602-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:13:35.298652",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T18:05:23.174518",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -268,6 +279,6 @@
       "title": "City Of Love"
     }
   ],
-  "updated_at": "2025-07-05T15:13:35.298174",
+  "updated_at": "2025-07-06T18:05:23.026847",
   "year": 2023
 }

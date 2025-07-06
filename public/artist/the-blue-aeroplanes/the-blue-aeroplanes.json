@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:38:30.029970",
   "discogs_id": "94895",
-  "discogs_url": "https://www.discogs.com/artist/94895",
-  "followers": 12770,
+  "discogs_url": "https://www.discogs.com/artist/94895-The-Blue-Aeroplanes",
+  "followers": 12772,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -18,7 +18,7 @@
     "british",
     "rock"
   ],
-  "id": null,
+  "id": "the-blue-aeroplanes-1751722710",
   "images": [
     {
       "height": 2000,
@@ -85,14 +85,32 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/8-p_qbOkCP4mhblXphLoWYtsyhjXrreTX6m6FMHLuQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": 2000,
+      "type": "custom_artist_image",
+      "url": "https://writewyattuk.com/wp-content/uploads/2017/01/blueaeroplanes-2368.jpg",
+      "width": 2000
     }
   ],
   "lastfm_mbid": "935295a6-8b6c-4de6-819c-da5113dac8fc",
   "lastfm_url": "https://www.last.fm/music/The+Blue+Aeroplanes",
   "local_images": {
-    "hi-res": "public/artist/the-blue-aeroplanes/the-blue-aeroplanes-hi-res.jpg",
-    "medium": "public/artist/the-blue-aeroplanes/the-blue-aeroplanes-medium.jpg",
-    "small": "public/artist/the-blue-aeroplanes/the-blue-aeroplanes-small.jpg"
+    "hi-res": "../public/artist/the-blue-aeroplanes/the-blue-aeroplanes-hi-res.jpg",
+    "medium": "../public/artist/the-blue-aeroplanes/the-blue-aeroplanes-medium.jpg",
+    "small": "../public/artist/the-blue-aeroplanes/the-blue-aeroplanes-small.jpg"
   },
   "name": "The Blue Aeroplanes",
   "popularity": 28,
@@ -109,9 +127,780 @@
       "url": "https://music.apple.com/gb/artist/the-blue-aeroplanes/3033571"
     },
     "discogs": {
-      "id": 94895,
-      "original_name": "The Blue Aeroplanes",
-      "role": ""
+      "cover_image": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "94895",
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8-p_qbOkCP4mhblXphLoWYtsyhjXrreTX6m6FMHLuQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/sM-lnI-ahAEtsG0vJspxUVFN8fi7rvfOa7ueE54emnw/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sM-lnI-ahAEtsG0vJspxUVFN8fi7rvfOa7ueE54emnw/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/7dRQ4pN3nCe8RdfSrG4-3KlbqS4Yt8-A1dP-IVpgKwU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 277,
+          "resource_url": "https://i.discogs.com/eQOy_tIyXlkkrxIp60QogZKY_iq4K1p1G1ktQTQhK8A/rs:fit/g:sm/q:90/h:277/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eQOy_tIyXlkkrxIp60QogZKY_iq4K1p1G1ktQTQhK8A/rs:fit/g:sm/q:90/h:277/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+          "uri150": "https://i.discogs.com/lnsBvivCvfwZYH-QMkEX8H-9CPvqxPtzmmEVlNsecfE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 197,
+          "resource_url": "https://i.discogs.com/zaSguJp7TigYL5mmSv_q7On1E8BV1Ld8234gbD1DF7o/rs:fit/g:sm/q:90/h:197/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zaSguJp7TigYL5mmSv_q7On1E8BV1Ld8234gbD1DF7o/rs:fit/g:sm/q:90/h:197/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/pm0gyxf6Ix6k7C8DOOwm7cdiN2xjGD6i6bPSsqkfGJ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+          "width": 200
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 23033,
+          "name": "John Stapleton",
+          "resource_url": "https://api.discogs.com/artists/23033",
+          "thumbnail_url": "https://i.discogs.com/J5fOZ2ERP1vXZUT3tjELzlwzEW1bKAION4pF_BLhkAE/rs:fit/g:sm/q:40/h:160/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMDMz/LTEyNzk4MjY2NTku/anBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 46407,
+          "name": "Bill Cargill",
+          "resource_url": "https://api.discogs.com/artists/46407",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 116108,
+          "name": "Tim Keegan",
+          "resource_url": "https://api.discogs.com/artists/116108",
+          "thumbnail_url": "https://i.discogs.com/-WCZ5oSmOG1BG6v4Q_fskiOYlkXTYkkVdpphgGZ75tE/rs:fit/g:sm/q:40/h:327/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNjEw/OC0xMzUzMzk3MTI4/LTM0MDguanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 185821,
+          "name": "Bob Bradley",
+          "resource_url": "https://api.discogs.com/artists/185821",
+          "thumbnail_url": "https://i.discogs.com/K6rYaIKe1PtNB_IspBVXBEf25bkDXOlCQIIUz04eg0E/rs:fit/g:sm/q:40/h:454/w:537/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NTgy/MS0xMzA5MDg2NTI0/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 268517,
+          "name": "Gerard Langley",
+          "resource_url": "https://api.discogs.com/artists/268517",
+          "thumbnail_url": "https://i.discogs.com/Amdt0knVlJFdg63FqST4aKKOq9-TfG7Ex00C7FyxK0Q/rs:fit/g:sm/q:40/h:600/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODUx/Ny0xMTQ4ODUxNjc1/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 273999,
+          "name": "Ian Kearey",
+          "resource_url": "https://api.discogs.com/artists/273999",
+          "thumbnail_url": "https://i.discogs.com/rUn7bbJ5Z0b6z09OJPcd45V1QblFXUePUA6Wp2nLY8s/rs:fit/g:sm/q:40/h:640/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mzk5/OS0xNzAxMjAxMjYw/LTczNjYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 277642,
+          "name": "Rita Lynch",
+          "resource_url": "https://api.discogs.com/artists/277642",
+          "thumbnail_url": "https://i.discogs.com/Hm6ZX6s28ZoVBX_CqI31ecm-TErdKd4DoWBe4EF01EU/rs:fit/g:sm/q:40/h:363/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NzY0/Mi0xMzQ3NzkxNjM1/LTIzODMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 362062,
+          "name": "Richard Bell (3)",
+          "resource_url": "https://api.discogs.com/artists/362062",
+          "thumbnail_url": "https://i.discogs.com/TFcisAW4dzUMxp_Qr8xuAGGknS9pqlA_xP9GGjrMzZA/rs:fit/g:sm/q:40/h:521/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2MjA2/Mi0xMjY2ODYzNjc5/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 379580,
+          "name": "Paul Wigens",
+          "resource_url": "https://api.discogs.com/artists/379580",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 395459,
+          "name": "David Newton",
+          "resource_url": "https://api.discogs.com/artists/395459",
+          "thumbnail_url": "https://i.discogs.com/9ow2lhZi8uN3GE9r1wHb9GvXfk6n7BLx5HWWN6u_hps/rs:fit/g:sm/q:40/h:310/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5NTQ1/OS0xMzEzNTcxMzY3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 396267,
+          "name": "Marcus Williams",
+          "resource_url": "https://api.discogs.com/artists/396267",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 450408,
+          "name": "Charlie Llewellin",
+          "resource_url": "https://api.discogs.com/artists/450408",
+          "thumbnail_url": "https://i.discogs.com/Ym4tds_tzIRRn3OrRSxuXvan2YUvJ8rUbT2YEwRgHwc/rs:fit/g:sm/q:40/h:381/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MDQw/OC0xNTk2ODI1NDQx/LTUzMjYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 462361,
+          "name": "Julian Poole",
+          "resource_url": "https://api.discogs.com/artists/462361",
+          "thumbnail_url": "https://i.discogs.com/vP0RgrsUNxoFXdxmWAOVjAjL6wGKd2AlgUz6SubqKH0/rs:fit/g:sm/q:40/h:327/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2MjM2/MS0xNzE0OTQyNjA2/LTc0MjYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 486578,
+          "name": "Angelo Bruschini",
+          "resource_url": "https://api.discogs.com/artists/486578",
+          "thumbnail_url": "https://i.discogs.com/LxRmwRzyuhL7-x6hTRkx22WlyhMrTIQAEhLN5GJbNOQ/rs:fit/g:sm/q:40/h:290/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NjU3/OC0xNDczMzkwOTQ1/LTcwODcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 503901,
+          "name": "Susie Hug",
+          "resource_url": "https://api.discogs.com/artists/503901",
+          "thumbnail_url": "https://i.discogs.com/YOt8o_08_k9-0Dm5JppyavEZ5yDNInrEkpxfu_r7N88/rs:fit/g:sm/q:40/h:399/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMzkw/MS0xNDk2MzI0OTA1/LTcxMDkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 532821,
+          "name": "Roger Power",
+          "resource_url": "https://api.discogs.com/artists/532821",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 532822,
+          "name": "Graham Russell",
+          "resource_url": "https://api.discogs.com/artists/532822",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 532823,
+          "name": "Max Noble",
+          "resource_url": "https://api.discogs.com/artists/532823",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 532824,
+          "name": "Paul Mulreany",
+          "resource_url": "https://api.discogs.com/artists/532824",
+          "thumbnail_url": "https://i.discogs.com/BqvL8vopYcPXCrITdsRAgfeOCDOOikFloNHBAA7OjfU/rs:fit/g:sm/q:40/h:367/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjgy/NC0xNjYzMTg1MTgy/LTYzODEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 532833,
+          "name": "Alex Lee (3)",
+          "resource_url": "https://api.discogs.com/artists/532833",
+          "thumbnail_url": "https://i.discogs.com/VN-Il6kO4XmnUd4c77IrLHqjpQ6uj2C1j6a-QI4VkPE/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjgz/My0xNzE0OTQwNzc4/LTc3MTYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 571836,
+          "name": "John Langley",
+          "resource_url": "https://api.discogs.com/artists/571836",
+          "thumbnail_url": "https://i.discogs.com/r4pyVV9ba5vr5LXQdREX706b6E2vdsmtBx7DY4D6LfY/rs:fit/g:sm/q:40/h:222/w:211/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3MTgz/Ni0xNzE0OTQ2NzEy/LTM5ODQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 642609,
+          "name": "Rodney Allen",
+          "resource_url": "https://api.discogs.com/artists/642609",
+          "thumbnail_url": "https://i.discogs.com/vtnPLSfqF0S3_3k1k8hzXK50PW3Qfrth7xD1YnootC4/rs:fit/g:sm/q:40/h:354/w:251/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjYw/OS0xNDUzOTIzNTI2/LTk1MDIucG5n.jpeg"
+        },
+        {
+          "active": false,
+          "id": 642610,
+          "name": "Andy McCreeth",
+          "resource_url": "https://api.discogs.com/artists/642610",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 642611,
+          "name": "Nick Jacobs",
+          "resource_url": "https://api.discogs.com/artists/642611",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 735839,
+          "name": "Ruth Cochrane",
+          "resource_url": "https://api.discogs.com/artists/735839",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 740016,
+          "name": "Shaun Mccrindle",
+          "resource_url": "https://api.discogs.com/artists/740016",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 767760,
+          "name": "Robin Key",
+          "resource_url": "https://api.discogs.com/artists/767760",
+          "thumbnail_url": "https://i.discogs.com/0-lGdbLkkBbnUleoHNvQPtDGmASxdb7nEkzq4lDJoAE/rs:fit/g:sm/q:40/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2Nzc2/MC0xNDI4NzU4Njgz/LTIxMTkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 810591,
+          "name": "Jon Wygens (2)",
+          "resource_url": "https://api.discogs.com/artists/810591",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 884837,
+          "name": "Dave Chapman (2)",
+          "resource_url": "https://api.discogs.com/artists/884837",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 893995,
+          "name": "Hazel Winter",
+          "resource_url": "https://api.discogs.com/artists/893995",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 934784,
+          "name": "Christian Clarke",
+          "resource_url": "https://api.discogs.com/artists/934784",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 956395,
+          "name": "Wojtek Dmochowski",
+          "resource_url": "https://api.discogs.com/artists/956395",
+          "thumbnail_url": "https://i.discogs.com/J9xFTQsOxviVfg1S7nefuYvIGXD2ytLxoaPXtSb8mCw/rs:fit/g:sm/q:40/h:604/w:403/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1NjM5/NS0xNDI4NzU4NTg3/LTQxODIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 971206,
+          "name": "Jake Kyle",
+          "resource_url": "https://api.discogs.com/artists/971206",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1197464,
+          "name": "Gerard Starkie",
+          "resource_url": "https://api.discogs.com/artists/1197464",
+          "thumbnail_url": "https://i.discogs.com/pp9kyA55BXgGzokxar2gNkdxq1oI21I_IH3x8jFA98A/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExOTc0/NjQtMTY0Mzk2NTk2/MC01MDE1LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1215612,
+          "name": "Calvin Talbot",
+          "resource_url": "https://api.discogs.com/artists/1215612",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1224515,
+          "name": "Simon Robinson (3)",
+          "resource_url": "https://api.discogs.com/artists/1224515",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1702313,
+          "name": "Joe Allen (4)",
+          "resource_url": "https://api.discogs.com/artists/1702313",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1717422,
+          "name": "Caroline Trettine",
+          "resource_url": "https://api.discogs.com/artists/1717422",
+          "thumbnail_url": "https://i.discogs.com/GhtzNmHRwjvEhBVYf-s5RT47HGDJ_U8T5xTQzmxf1oM/rs:fit/g:sm/q:40/h:260/w:260/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTc0/MjItMTQ0NTMyOTkw/Mi0yMjUzLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1778489,
+          "name": "Simon Heathfield",
+          "resource_url": "https://api.discogs.com/artists/1778489",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 1999689,
+          "name": "Chris Sharp (3)",
+          "resource_url": "https://api.discogs.com/artists/1999689",
+          "thumbnail_url": "https://i.discogs.com/VBMh8-SpJmi8uxP9m-6C-ksUs0F0ABtU5rEiJ2I0A6c/rs:fit/g:sm/q:40/h:180/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTk2/ODktMTQ2MTY5MTUz/NC00NDY2LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2242961,
+          "name": "Baz Larder",
+          "resource_url": "https://api.discogs.com/artists/2242961",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 2410806,
+          "name": "Bill Bell (3)",
+          "resource_url": "https://api.discogs.com/artists/2410806",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 3768073,
+          "name": "Richard Whitehead",
+          "resource_url": "https://api.discogs.com/artists/3768073",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 5009533,
+          "name": "Dawn Larder",
+          "resource_url": "https://api.discogs.com/artists/5009533",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 5009535,
+          "name": "Joff Lowson",
+          "resource_url": "https://api.discogs.com/artists/5009535",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5017881,
+          "name": "Bec Jevons",
+          "resource_url": "https://api.discogs.com/artists/5017881",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5025425,
+          "name": "Mike Youe",
+          "resource_url": "https://api.discogs.com/artists/5025425",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "The Blue Aeroplanes",
+      "namevariations": [
+        "Blue Aeroplanes",
+        "Blue Areoplanes"
+      ],
+      "profile": "English indie rock band founded in 1981 in Bristol by ex-members of short-lived punk band [a=Art Objects] by brothers Gerard and John, along with dancer Wojtek.  The name Blue Aeroplanes comes from the Polish \"Niebieske Samoloty\" which was originally going to be the name of Wojtek's brother's band. \r\n\r\nThe band feature an ever-changing lineup, which (as of 2016) includes 41 ex-members, a feat only beaten by [a=The Fall].  Gerard, John and Wojtek have been the only mainstays since the band's inception, although John left the band between 1990 and 2004 and went on to be drummer for [a=Strangelove] during this time.  Ex (and current) members have gone on to be members of [a=Primal Scream], [a=Witness], [a=Massive Attack] and [a=Strangelove].  \r\n\r\nThe band tend to end their live sets with \"Breaking In My Heart\", which has been known to feature multiple guest guitarists on stage playing the main riff, this included members of [a=R.E.M.] in the early 1990s when the Aeroplanes were tour support, where they also had a total of 15 guitarists playing simultaneously.  REM's famous song \"Losing My Religion\" is also said to be written about Gerard.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 94895,
+        "images": [
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/Lo7Wx8QVCArcEneb_SR_h7jJNupnDqQQ186nUNNpsZc/rs:fit/g:sm/q:90/h:400/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/8-p_qbOkCP4mhblXphLoWYtsyhjXrreTX6m6FMHLuQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 473,
+            "resource_url": "https://i.discogs.com/sM-lnI-ahAEtsG0vJspxUVFN8fi7rvfOa7ueE54emnw/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sM-lnI-ahAEtsG0vJspxUVFN8fi7rvfOa7ueE54emnw/rs:fit/g:sm/q:90/h:473/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/7dRQ4pN3nCe8RdfSrG4-3KlbqS4Yt8-A1dP-IVpgKwU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0OTAwNDk0Mjgt/Mjk1NC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 277,
+            "resource_url": "https://i.discogs.com/eQOy_tIyXlkkrxIp60QogZKY_iq4K1p1G1ktQTQhK8A/rs:fit/g:sm/q:90/h:277/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eQOy_tIyXlkkrxIp60QogZKY_iq4K1p1G1ktQTQhK8A/rs:fit/g:sm/q:90/h:277/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+            "uri150": "https://i.discogs.com/lnsBvivCvfwZYH-QMkEX8H-9CPvqxPtzmmEVlNsecfE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0Njku/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 197,
+            "resource_url": "https://i.discogs.com/zaSguJp7TigYL5mmSv_q7On1E8BV1Ld8234gbD1DF7o/rs:fit/g:sm/q:90/h:197/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/zaSguJp7TigYL5mmSv_q7On1E8BV1Ld8234gbD1DF7o/rs:fit/g:sm/q:90/h:197/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/pm0gyxf6Ix6k7C8DOOwm7cdiN2xjGD6i6bPSsqkfGJ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTExMTAxMDA0OTAu/anBn.jpeg",
+            "width": 200
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 23033,
+            "name": "John Stapleton",
+            "resource_url": "https://api.discogs.com/artists/23033",
+            "thumbnail_url": "https://i.discogs.com/J5fOZ2ERP1vXZUT3tjELzlwzEW1bKAION4pF_BLhkAE/rs:fit/g:sm/q:40/h:160/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMDMz/LTEyNzk4MjY2NTku/anBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 46407,
+            "name": "Bill Cargill",
+            "resource_url": "https://api.discogs.com/artists/46407",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 116108,
+            "name": "Tim Keegan",
+            "resource_url": "https://api.discogs.com/artists/116108",
+            "thumbnail_url": "https://i.discogs.com/-WCZ5oSmOG1BG6v4Q_fskiOYlkXTYkkVdpphgGZ75tE/rs:fit/g:sm/q:40/h:327/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNjEw/OC0xMzUzMzk3MTI4/LTM0MDguanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 185821,
+            "name": "Bob Bradley",
+            "resource_url": "https://api.discogs.com/artists/185821",
+            "thumbnail_url": "https://i.discogs.com/K6rYaIKe1PtNB_IspBVXBEf25bkDXOlCQIIUz04eg0E/rs:fit/g:sm/q:40/h:454/w:537/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NTgy/MS0xMzA5MDg2NTI0/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 268517,
+            "name": "Gerard Langley",
+            "resource_url": "https://api.discogs.com/artists/268517",
+            "thumbnail_url": "https://i.discogs.com/Amdt0knVlJFdg63FqST4aKKOq9-TfG7Ex00C7FyxK0Q/rs:fit/g:sm/q:40/h:600/w:524/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODUx/Ny0xMTQ4ODUxNjc1/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 273999,
+            "name": "Ian Kearey",
+            "resource_url": "https://api.discogs.com/artists/273999",
+            "thumbnail_url": "https://i.discogs.com/rUn7bbJ5Z0b6z09OJPcd45V1QblFXUePUA6Wp2nLY8s/rs:fit/g:sm/q:40/h:640/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mzk5/OS0xNzAxMjAxMjYw/LTczNjYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 277642,
+            "name": "Rita Lynch",
+            "resource_url": "https://api.discogs.com/artists/277642",
+            "thumbnail_url": "https://i.discogs.com/Hm6ZX6s28ZoVBX_CqI31ecm-TErdKd4DoWBe4EF01EU/rs:fit/g:sm/q:40/h:363/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NzY0/Mi0xMzQ3NzkxNjM1/LTIzODMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 362062,
+            "name": "Richard Bell (3)",
+            "resource_url": "https://api.discogs.com/artists/362062",
+            "thumbnail_url": "https://i.discogs.com/TFcisAW4dzUMxp_Qr8xuAGGknS9pqlA_xP9GGjrMzZA/rs:fit/g:sm/q:40/h:521/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2MjA2/Mi0xMjY2ODYzNjc5/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 379580,
+            "name": "Paul Wigens",
+            "resource_url": "https://api.discogs.com/artists/379580",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 395459,
+            "name": "David Newton",
+            "resource_url": "https://api.discogs.com/artists/395459",
+            "thumbnail_url": "https://i.discogs.com/9ow2lhZi8uN3GE9r1wHb9GvXfk6n7BLx5HWWN6u_hps/rs:fit/g:sm/q:40/h:310/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5NTQ1/OS0xMzEzNTcxMzY3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 396267,
+            "name": "Marcus Williams",
+            "resource_url": "https://api.discogs.com/artists/396267",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 450408,
+            "name": "Charlie Llewellin",
+            "resource_url": "https://api.discogs.com/artists/450408",
+            "thumbnail_url": "https://i.discogs.com/Ym4tds_tzIRRn3OrRSxuXvan2YUvJ8rUbT2YEwRgHwc/rs:fit/g:sm/q:40/h:381/w:381/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MDQw/OC0xNTk2ODI1NDQx/LTUzMjYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 462361,
+            "name": "Julian Poole",
+            "resource_url": "https://api.discogs.com/artists/462361",
+            "thumbnail_url": "https://i.discogs.com/vP0RgrsUNxoFXdxmWAOVjAjL6wGKd2AlgUz6SubqKH0/rs:fit/g:sm/q:40/h:327/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2MjM2/MS0xNzE0OTQyNjA2/LTc0MjYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 486578,
+            "name": "Angelo Bruschini",
+            "resource_url": "https://api.discogs.com/artists/486578",
+            "thumbnail_url": "https://i.discogs.com/LxRmwRzyuhL7-x6hTRkx22WlyhMrTIQAEhLN5GJbNOQ/rs:fit/g:sm/q:40/h:290/w:218/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NjU3/OC0xNDczMzkwOTQ1/LTcwODcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 503901,
+            "name": "Susie Hug",
+            "resource_url": "https://api.discogs.com/artists/503901",
+            "thumbnail_url": "https://i.discogs.com/YOt8o_08_k9-0Dm5JppyavEZ5yDNInrEkpxfu_r7N88/rs:fit/g:sm/q:40/h:399/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMzkw/MS0xNDk2MzI0OTA1/LTcxMDkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 532821,
+            "name": "Roger Power",
+            "resource_url": "https://api.discogs.com/artists/532821",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 532822,
+            "name": "Graham Russell",
+            "resource_url": "https://api.discogs.com/artists/532822",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 532823,
+            "name": "Max Noble",
+            "resource_url": "https://api.discogs.com/artists/532823",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 532824,
+            "name": "Paul Mulreany",
+            "resource_url": "https://api.discogs.com/artists/532824",
+            "thumbnail_url": "https://i.discogs.com/BqvL8vopYcPXCrITdsRAgfeOCDOOikFloNHBAA7OjfU/rs:fit/g:sm/q:40/h:367/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjgy/NC0xNjYzMTg1MTgy/LTYzODEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 532833,
+            "name": "Alex Lee (3)",
+            "resource_url": "https://api.discogs.com/artists/532833",
+            "thumbnail_url": "https://i.discogs.com/VN-Il6kO4XmnUd4c77IrLHqjpQ6uj2C1j6a-QI4VkPE/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMjgz/My0xNzE0OTQwNzc4/LTc3MTYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 571836,
+            "name": "John Langley",
+            "resource_url": "https://api.discogs.com/artists/571836",
+            "thumbnail_url": "https://i.discogs.com/r4pyVV9ba5vr5LXQdREX706b6E2vdsmtBx7DY4D6LfY/rs:fit/g:sm/q:40/h:222/w:211/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3MTgz/Ni0xNzE0OTQ2NzEy/LTM5ODQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 642609,
+            "name": "Rodney Allen",
+            "resource_url": "https://api.discogs.com/artists/642609",
+            "thumbnail_url": "https://i.discogs.com/vtnPLSfqF0S3_3k1k8hzXK50PW3Qfrth7xD1YnootC4/rs:fit/g:sm/q:40/h:354/w:251/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjYw/OS0xNDUzOTIzNTI2/LTk1MDIucG5n.jpeg"
+          },
+          {
+            "active": false,
+            "id": 642610,
+            "name": "Andy McCreeth",
+            "resource_url": "https://api.discogs.com/artists/642610",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 642611,
+            "name": "Nick Jacobs",
+            "resource_url": "https://api.discogs.com/artists/642611",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 735839,
+            "name": "Ruth Cochrane",
+            "resource_url": "https://api.discogs.com/artists/735839",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 740016,
+            "name": "Shaun Mccrindle",
+            "resource_url": "https://api.discogs.com/artists/740016",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 767760,
+            "name": "Robin Key",
+            "resource_url": "https://api.discogs.com/artists/767760",
+            "thumbnail_url": "https://i.discogs.com/0-lGdbLkkBbnUleoHNvQPtDGmASxdb7nEkzq4lDJoAE/rs:fit/g:sm/q:40/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2Nzc2/MC0xNDI4NzU4Njgz/LTIxMTkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 810591,
+            "name": "Jon Wygens (2)",
+            "resource_url": "https://api.discogs.com/artists/810591",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 884837,
+            "name": "Dave Chapman (2)",
+            "resource_url": "https://api.discogs.com/artists/884837",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 893995,
+            "name": "Hazel Winter",
+            "resource_url": "https://api.discogs.com/artists/893995",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 934784,
+            "name": "Christian Clarke",
+            "resource_url": "https://api.discogs.com/artists/934784",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 956395,
+            "name": "Wojtek Dmochowski",
+            "resource_url": "https://api.discogs.com/artists/956395",
+            "thumbnail_url": "https://i.discogs.com/J9xFTQsOxviVfg1S7nefuYvIGXD2ytLxoaPXtSb8mCw/rs:fit/g:sm/q:40/h:604/w:403/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1NjM5/NS0xNDI4NzU4NTg3/LTQxODIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 971206,
+            "name": "Jake Kyle",
+            "resource_url": "https://api.discogs.com/artists/971206",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1197464,
+            "name": "Gerard Starkie",
+            "resource_url": "https://api.discogs.com/artists/1197464",
+            "thumbnail_url": "https://i.discogs.com/pp9kyA55BXgGzokxar2gNkdxq1oI21I_IH3x8jFA98A/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExOTc0/NjQtMTY0Mzk2NTk2/MC01MDE1LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1215612,
+            "name": "Calvin Talbot",
+            "resource_url": "https://api.discogs.com/artists/1215612",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1224515,
+            "name": "Simon Robinson (3)",
+            "resource_url": "https://api.discogs.com/artists/1224515",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1702313,
+            "name": "Joe Allen (4)",
+            "resource_url": "https://api.discogs.com/artists/1702313",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1717422,
+            "name": "Caroline Trettine",
+            "resource_url": "https://api.discogs.com/artists/1717422",
+            "thumbnail_url": "https://i.discogs.com/GhtzNmHRwjvEhBVYf-s5RT47HGDJ_U8T5xTQzmxf1oM/rs:fit/g:sm/q:40/h:260/w:260/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTc0/MjItMTQ0NTMyOTkw/Mi0yMjUzLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1778489,
+            "name": "Simon Heathfield",
+            "resource_url": "https://api.discogs.com/artists/1778489",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 1999689,
+            "name": "Chris Sharp (3)",
+            "resource_url": "https://api.discogs.com/artists/1999689",
+            "thumbnail_url": "https://i.discogs.com/VBMh8-SpJmi8uxP9m-6C-ksUs0F0ABtU5rEiJ2I0A6c/rs:fit/g:sm/q:40/h:180/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTk2/ODktMTQ2MTY5MTUz/NC00NDY2LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2242961,
+            "name": "Baz Larder",
+            "resource_url": "https://api.discogs.com/artists/2242961",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 2410806,
+            "name": "Bill Bell (3)",
+            "resource_url": "https://api.discogs.com/artists/2410806",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 3768073,
+            "name": "Richard Whitehead",
+            "resource_url": "https://api.discogs.com/artists/3768073",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 5009533,
+            "name": "Dawn Larder",
+            "resource_url": "https://api.discogs.com/artists/5009533",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 5009535,
+            "name": "Joff Lowson",
+            "resource_url": "https://api.discogs.com/artists/5009535",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5017881,
+            "name": "Bec Jevons",
+            "resource_url": "https://api.discogs.com/artists/5017881",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5025425,
+            "name": "Mike Youe",
+            "resource_url": "https://api.discogs.com/artists/5025425",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "The Blue Aeroplanes",
+        "namevariations": [
+          "Blue Aeroplanes",
+          "Blue Areoplanes"
+        ],
+        "profile": "English indie rock band founded in 1981 in Bristol by ex-members of short-lived punk band [a=Art Objects] by brothers Gerard and John, along with dancer Wojtek.  The name Blue Aeroplanes comes from the Polish \"Niebieske Samoloty\" which was originally going to be the name of Wojtek's brother's band. \r\n\r\nThe band feature an ever-changing lineup, which (as of 2016) includes 41 ex-members, a feat only beaten by [a=The Fall].  Gerard, John and Wojtek have been the only mainstays since the band's inception, although John left the band between 1990 and 2004 and went on to be drummer for [a=Strangelove] during this time.  Ex (and current) members have gone on to be members of [a=Primal Scream], [a=Witness], [a=Massive Attack] and [a=Strangelove].  \r\n\r\nThe band tend to end their live sets with \"Breaking In My Heart\", which has been known to feature multiple guest guitarists on stage playing the main riff, this included members of [a=R.E.M.] in the early 1990s when the Aeroplanes were tour support, where they also had a total of 15 guitarists playing simultaneously.  REM's famous song \"Losing My Religion\" is also said to be written about Gerard.",
+        "releases_url": "https://api.discogs.com/artists/94895/releases",
+        "resource_url": "https://api.discogs.com/artists/94895",
+        "uri": "https://www.discogs.com/artist/94895-The-Blue-Aeroplanes",
+        "urls": [
+          "http://www.theblueaeroplanes.com/",
+          "https://www.facebook.com/theblueaeroplanes",
+          "https://www.instagram.com/theblueaeroplanes",
+          "https://www.youtube.com/user/TheBlueAeroplanes",
+          "http://www.myspace.com/blueaeroplanes",
+          "https://en.wikipedia.org/wiki/The_Blue_Aeroplanes",
+          "https://www.imdb.com/name/nm7428721/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/94895",
+      "thumb": "https://i.discogs.com/8-p_qbOkCP4mhblXphLoWYtsyhjXrreTX6m6FMHLuQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0ODk1/LTE0NjExMTUzNTQt/NDI1Ny5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/94895-The-Blue-Aeroplanes",
+      "urls": [
+        "http://www.theblueaeroplanes.com/",
+        "https://www.facebook.com/theblueaeroplanes",
+        "https://www.instagram.com/theblueaeroplanes",
+        "https://www.youtube.com/user/TheBlueAeroplanes",
+        "http://www.myspace.com/blueaeroplanes",
+        "https://en.wikipedia.org/wiki/The_Blue_Aeroplanes",
+        "https://www.imdb.com/name/nm7428721/"
+      ]
     },
     "lastfm": {
       "bio_content": "The Blue Aeroplanes are an English rock group from Bristol, that has drawn comparisons to critically acclaimed rock bands like the Velvet Underground because of their eclectic style and the songwriting sensibility of group leader Gerard Langley. Their musical style combines jangling guitars and energetic beats with Langley's spoken-word vocal style.\n\nThe original core of the band included Langley's brother John  on drums, Nick Jacobs on guitar, and multi-instrumentalist Dave Chapman. However, personnel other than Langley  has varied, and (on both records and in performances) they have always been augmented by a large cast of semi-regular sidemen. (By the time of their 1991 album, Beatsongs, the Aeroplanes' lineup included guitarist Angelo Bruschini, guitarist Rodney Allen, bassist Andy McCreeth, drummer Paul Mulreany, and guitarist/keyboard player Alex Lee, with another eight musicians listed in the credits.) The group released Bop Art on the Abstract Records label in April 1984, then signed to Fire Records, for which they recorded their second album, Tolerance  (October 1986), and their third, Spitting Out Miracles (1987), plus several EPs. Spitting Out Miracles was their first U.S. release, followed by the compilation album Friendloverplane  (1988), a double LP on Fire in the U.K. that was reduced to a single LP on Restless in the U.S. The Blue Aeroplanes then signed to the Ensign division of Chrysalis Records and charted in the U.K. with two 1989 singles, \"Jacket Hangs\" and \"...And Stones,\" as well as their 1990 and 1991 albums, Swagger  and Beatsongs. <a href=\"https://www.last.fm/music/The+Blue+Aeroplanes\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -142,10 +931,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 39923,
+      "listeners": 39940,
       "mbid": "935295a6-8b6c-4de6-819c-da5113dac8fc",
       "name": "The Blue Aeroplanes",
-      "playcount": 404012,
+      "playcount": 404178,
       "similar_artists": [
         {
           "name": "Julian Cope",
@@ -178,7 +967,7 @@
       "url": "https://www.last.fm/music/The+Blue+Aeroplanes"
     },
     "spotify": {
-      "followers": 12770,
+      "followers": 12772,
       "genres": [
         "jangle pop",
         "madchester"
@@ -213,6 +1002,6 @@
   },
   "spotify_id": "4MTSrVgHNfGtYV9pek8vY5",
   "spotify_url": "https://open.spotify.com/artist/4MTSrVgHNfGtYV9pek8vY5",
-  "updated_at": "2025-07-05T14:38:30.813177",
+  "updated_at": "2025-07-06T17:45:02.129668",
   "wikipedia_url": null
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1671243296",
+  "apple_music_url": "https://music.apple.com/gb/album/the-endless-coloured-ways-the-songs-of-nick-drake/1671243296",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Worldwide",
-  "created_at": "2025-07-05T14:55:11.015320",
+  "created_at": "2025-07-06T18:02:22.946600",
   "date_added": "2023-07-10T13:24:22-07:00",
   "discogs_id": "27634329",
   "discogs_url": "https://www.discogs.com/release/27634329-Various-The-Endless-Coloured-Ways-The-Songs-Of-Nick-Drake",
@@ -177,6 +177,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/P1OgEVesIhd8jeaPkfh7sKFwyull3OZyE5tRnV0tBXY/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3NjM0/MzI5LTE2ODg5OTY0/NDgtNTI0Mi5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1e/ea/93/1eea930d-eec2-9c06-b6a0-e479d0b73db0/37899.jpg/2000x2000bb.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -186,23 +193,1307 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-endless-coloured-ways-the-songs-of-nick-drake-27634329/the-endless-coloured-ways-the-songs-of-nick-drake-27634329-hi-res.jpg",
+    "medium": "../public/album/the-endless-coloured-ways-the-songs-of-nick-drake-27634329/the-endless-coloured-ways-the-songs-of-nick-drake-27634329-medium.jpg",
+    "small": "../public/album/the-endless-coloured-ways-the-songs-of-nick-drake-27634329/the-endless-coloured-ways-the-songs-of-nick-drake-27634329-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T14:55:11.667341",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T18:02:29.410766",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "The Endless Coloured Ways: The Songs of Nick Drake",
   "release_name_discogs": "The Endless Coloured Ways (The Songs Of Nick Drake)",
-  "release_name_spotify": null,
+  "release_name_spotify": "The Endless Coloured Ways: The Songs of Nick Drake",
   "released": "2023-07-07",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1e/ea/93/1eea930d-eec2-9c06-b6a0-e479d0b73db0/37899.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+      "editorial_notes": null,
+      "id": "1671243296",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Nick Drake",
+        "artwork": {
+          "bgColor": "aea391",
+          "height": 3000,
+          "textColor1": "0c0c0b",
+          "textColor2": "42140f",
+          "textColor3": "2c2a26",
+          "textColor4": "573129",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/1e/ea/93/1eea930d-eec2-9c06-b6a0-e479d0b73db0/37899.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "℗ 2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+        "editorialNotes": {
+          "short": "The iconic artist’s vast influence shows on this covers collection.",
+          "tagline": "Album We Like"
+        },
+        "genreNames": [
+          "Folk",
+          "Music",
+          "Singer/Songwriter"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "The Endless Coloured Ways: The Songs of Nick Drake",
+        "playParams": {
+          "id": "1671243296",
+          "kind": "album"
+        },
+        "recordLabel": "Chrysalis Records",
+        "releaseDate": "2023-07-07",
+        "trackCount": 23,
+        "upc": "0810098500135",
+        "url": "https://music.apple.com/gb/album/the-endless-coloured-ways-the-songs-of-nick-drake/1671243296"
+      },
+      "url": "https://music.apple.com/gb/album/the-endless-coloured-ways-the-songs-of-nick-drake/1671243296"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+          "type": "C"
+        },
+        {
+          "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "0810098500135"
+      },
+      "id": "41NPRAXWRq1a5JKOfxvkfE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2735d7f0f12bd438d0fbe0ab558",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e025d7f0f12bd438d0fbe0ab558",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048515d7f0f12bd438d0fbe0ab558",
+          "width": 64
+        }
+      ],
+      "label": "Chrysalis Records",
+      "popularity": 36,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5c3GLXai8YOMid29ZEuR9y"
+            },
+            "href": "https://api.spotify.com/v1/artists/5c3GLXai8YOMid29ZEuR9y",
+            "id": "5c3GLXai8YOMid29ZEuR9y",
+            "name": "Nick Drake",
+            "type": "artist",
+            "uri": "spotify:artist:5c3GLXai8YOMid29ZEuR9y"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+            "type": "C"
+          },
+          {
+            "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "0810098500135"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/41NPRAXWRq1a5JKOfxvkfE"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/41NPRAXWRq1a5JKOfxvkfE?market=US",
+        "id": "41NPRAXWRq1a5JKOfxvkfE",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735d7f0f12bd438d0fbe0ab558",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025d7f0f12bd438d0fbe0ab558",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515d7f0f12bd438d0fbe0ab558",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Chrysalis Records",
+        "name": "The Endless Coloured Ways: The Songs of Nick Drake",
+        "popularity": 36,
+        "release_date": "2023-07-07",
+        "release_date_precision": "day",
+        "total_tracks": 23,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/41NPRAXWRq1a5JKOfxvkfE/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3SXwqSqAoBz9WCI9PDQzY6"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3SXwqSqAoBz9WCI9PDQzY6",
+                  "id": "3SXwqSqAoBz9WCI9PDQzY6",
+                  "name": "Fontaines D.C.",
+                  "type": "artist",
+                  "uri": "spotify:artist:3SXwqSqAoBz9WCI9PDQzY6"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 304310,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6JIyD3ykQupzABOOFI3qpY"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6JIyD3ykQupzABOOFI3qpY",
+              "id": "6JIyD3ykQupzABOOFI3qpY",
+              "is_local": false,
+              "is_playable": true,
+              "name": "' Cello Song",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:6JIyD3ykQupzABOOFI3qpY"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0gOsZcHl7H3ewXVIEnWFZX"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0gOsZcHl7H3ewXVIEnWFZX",
+                  "id": "0gOsZcHl7H3ewXVIEnWFZX",
+                  "name": "Camille",
+                  "type": "artist",
+                  "uri": "spotify:artist:0gOsZcHl7H3ewXVIEnWFZX"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 247106,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/01xNojHAEu0JBNxFNQwEan"
+              },
+              "href": "https://api.spotify.com/v1/tracks/01xNojHAEu0JBNxFNQwEan",
+              "id": "01xNojHAEu0JBNxFNQwEan",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hazey Jane II",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:01xNojHAEu0JBNxFNQwEan"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7JY39clELNh1MLQBJs6MAk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7JY39clELNh1MLQBJs6MAk",
+                  "id": "7JY39clELNh1MLQBJs6MAk",
+                  "name": "Mike Lindsay",
+                  "type": "artist",
+                  "uri": "spotify:artist:7JY39clELNh1MLQBJs6MAk"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2j3K3e7Jnnmd2KwlFgCC5u"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2j3K3e7Jnnmd2KwlFgCC5u",
+                  "id": "2j3K3e7Jnnmd2KwlFgCC5u",
+                  "name": "Guy Garvey",
+                  "type": "artist",
+                  "uri": "spotify:artist:2j3K3e7Jnnmd2KwlFgCC5u"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 315974,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6SSlj0SrpIayyeKo3tCoUk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6SSlj0SrpIayyeKo3tCoUk",
+              "id": "6SSlj0SrpIayyeKo3tCoUk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Saturday Sun",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6SSlj0SrpIayyeKo3tCoUk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3pTE9iaJTkWns3mxpNQlJV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3pTE9iaJTkWns3mxpNQlJV",
+                  "id": "3pTE9iaJTkWns3mxpNQlJV",
+                  "name": "Bombay Bicycle Club",
+                  "type": "artist",
+                  "uri": "spotify:artist:3pTE9iaJTkWns3mxpNQlJV"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5G49Sq5mMzAkGL4ZP6eVPY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5G49Sq5mMzAkGL4ZP6eVPY",
+                  "id": "5G49Sq5mMzAkGL4ZP6eVPY",
+                  "name": "The Staves",
+                  "type": "artist",
+                  "uri": "spotify:artist:5G49Sq5mMzAkGL4ZP6eVPY"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156689,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7ADoiwMvYOLgpPvo9URlCO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7ADoiwMvYOLgpPvo9URlCO",
+              "id": "7ADoiwMvYOLgpPvo9URlCO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Road",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7ADoiwMvYOLgpPvo9URlCO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4qNZw759AdHSMugyDMrIlF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4qNZw759AdHSMugyDMrIlF",
+                  "id": "4qNZw759AdHSMugyDMrIlF",
+                  "name": "Let's Eat Grandma",
+                  "type": "artist",
+                  "uri": "spotify:artist:4qNZw759AdHSMugyDMrIlF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 220397,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5cyft7nZq3y3GxWYhPlIPF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5cyft7nZq3y3GxWYhPlIPF",
+              "id": "5cyft7nZq3y3GxWYhPlIPF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "From The Morning",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:5cyft7nZq3y3GxWYhPlIPF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7J2lZBANizgPNfUzux31PV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7J2lZBANizgPNfUzux31PV",
+                  "id": "7J2lZBANizgPNfUzux31PV",
+                  "name": "David Gray",
+                  "type": "artist",
+                  "uri": "spotify:artist:7J2lZBANizgPNfUzux31PV"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 211266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4zelRNv6fHTkuJYfzxAlpI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4zelRNv6fHTkuJYfzxAlpI",
+              "id": "4zelRNv6fHTkuJYfzxAlpI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Place To Be",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4zelRNv6fHTkuJYfzxAlpI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1UAM4fJFTeyMZbhTVUKiXk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1UAM4fJFTeyMZbhTVUKiXk",
+                  "id": "1UAM4fJFTeyMZbhTVUKiXk",
+                  "name": "John Parish",
+                  "type": "artist",
+                  "uri": "spotify:artist:1UAM4fJFTeyMZbhTVUKiXk"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3lmR0qMiGuoIF9UC54egcG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3lmR0qMiGuoIF9UC54egcG",
+                  "id": "3lmR0qMiGuoIF9UC54egcG",
+                  "name": "Aldous Harding",
+                  "type": "artist",
+                  "uri": "spotify:artist:3lmR0qMiGuoIF9UC54egcG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 272567,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/18B288Egj84rkUmPgSGw20"
+              },
+              "href": "https://api.spotify.com/v1/tracks/18B288Egj84rkUmPgSGw20",
+              "id": "18B288Egj84rkUmPgSGw20",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Three Hours",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:18B288Egj84rkUmPgSGw20"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4rSwFTxoQwxwKjeQlSiLP7"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4rSwFTxoQwxwKjeQlSiLP7",
+                  "id": "4rSwFTxoQwxwKjeQlSiLP7",
+                  "name": "Stick in the Wheel",
+                  "type": "artist",
+                  "uri": "spotify:artist:4rSwFTxoQwxwKjeQlSiLP7"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 291548,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2QW3adx3WGj6PUTCLIPNlf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2QW3adx3WGj6PUTCLIPNlf",
+              "id": "2QW3adx3WGj6PUTCLIPNlf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Parasite",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2QW3adx3WGj6PUTCLIPNlf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/45lorWzrKLxfKlWpV7r9CN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/45lorWzrKLxfKlWpV7r9CN",
+                  "id": "45lorWzrKLxfKlWpV7r9CN",
+                  "name": "Ben Harper",
+                  "type": "artist",
+                  "uri": "spotify:artist:45lorWzrKLxfKlWpV7r9CN"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 239527,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2m55HB8bJI1AXY601Z6y45"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2m55HB8bJI1AXY601Z6y45",
+              "id": "2m55HB8bJI1AXY601Z6y45",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time Has Told Me",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2m55HB8bJI1AXY601Z6y45"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7sfgqEdoeBTjd8lQsPT3Cy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7sfgqEdoeBTjd8lQsPT3Cy",
+                  "id": "7sfgqEdoeBTjd8lQsPT3Cy",
+                  "name": "Emeli Sandé",
+                  "type": "artist",
+                  "uri": "spotify:artist:7sfgqEdoeBTjd8lQsPT3Cy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219593,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7CBeBUMXF3YBQUmDfwIy87"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7CBeBUMXF3YBQUmDfwIy87",
+              "id": "7CBeBUMXF3YBQUmDfwIy87",
+              "is_local": false,
+              "is_playable": true,
+              "name": "One Of These Things First",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:7CBeBUMXF3YBQUmDfwIy87"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5WS3dnCZR6MuN6m3dTMuwF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5WS3dnCZR6MuN6m3dTMuwF",
+                  "id": "5WS3dnCZR6MuN6m3dTMuwF",
+                  "name": "Karine Polwart",
+                  "type": "artist",
+                  "uri": "spotify:artist:5WS3dnCZR6MuN6m3dTMuwF"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/14T0l4AeAGbmAZjpQNdcqk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/14T0l4AeAGbmAZjpQNdcqk",
+                  "id": "14T0l4AeAGbmAZjpQNdcqk",
+                  "name": "Kris Drever",
+                  "type": "artist",
+                  "uri": "spotify:artist:14T0l4AeAGbmAZjpQNdcqk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 252269,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3jhE9ugxLeW3BtpYyvey1D"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3jhE9ugxLeW3BtpYyvey1D",
+              "id": "3jhE9ugxLeW3BtpYyvey1D",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Northern Sky",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:3jhE9ugxLeW3BtpYyvey1D"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/526q7RxT5KA1VGeQ5GMSHO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/526q7RxT5KA1VGeQ5GMSHO",
+                  "id": "526q7RxT5KA1VGeQ5GMSHO",
+                  "name": "Craig Armstrong",
+                  "type": "artist",
+                  "uri": "spotify:artist:526q7RxT5KA1VGeQ5GMSHO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3K9muOlJVKLgH4SIwwZiDe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3K9muOlJVKLgH4SIwwZiDe",
+                  "id": "3K9muOlJVKLgH4SIwwZiDe",
+                  "name": "Self Esteem",
+                  "type": "artist",
+                  "uri": "spotify:artist:3K9muOlJVKLgH4SIwwZiDe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 225709,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6kUOCar6XSInSnDjocSjzE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6kUOCar6XSInSnDjocSjzE",
+              "id": "6kUOCar6XSInSnDjocSjzE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Black Eyed Dog",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:6kUOCar6XSInSnDjocSjzE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6ZoRg8NnEtVmtUhgCTSCrn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6ZoRg8NnEtVmtUhgCTSCrn",
+                  "id": "6ZoRg8NnEtVmtUhgCTSCrn",
+                  "name": "Nadia Reid",
+                  "type": "artist",
+                  "uri": "spotify:artist:6ZoRg8NnEtVmtUhgCTSCrn"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 275926,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4hA0oh7FRL3ygloHCPgoVJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4hA0oh7FRL3ygloHCPgoVJ",
+              "id": "4hA0oh7FRL3ygloHCPgoVJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Poor Boy",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:4hA0oh7FRL3ygloHCPgoVJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5B7NeaqVrmXPyF05C9tnZ3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5B7NeaqVrmXPyF05C9tnZ3",
+                  "id": "5B7NeaqVrmXPyF05C9tnZ3",
+                  "name": "Christian Lee Hutson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5B7NeaqVrmXPyF05C9tnZ3"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zyFWHrZsZXBupeqrDkLtz"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zyFWHrZsZXBupeqrDkLtz",
+                  "id": "0zyFWHrZsZXBupeqrDkLtz",
+                  "name": "Elanor Moss",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zyFWHrZsZXBupeqrDkLtz"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 244274,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7BdNJ8yEf8mfSGh1uxjEZi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7BdNJ8yEf8mfSGh1uxjEZi",
+              "id": "7BdNJ8yEf8mfSGh1uxjEZi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Which Will",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7BdNJ8yEf8mfSGh1uxjEZi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1GUaQ6GpaxFPKZ0SCSsnwD"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1GUaQ6GpaxFPKZ0SCSsnwD",
+                  "id": "1GUaQ6GpaxFPKZ0SCSsnwD",
+                  "name": "Skullcrusher",
+                  "type": "artist",
+                  "uri": "spotify:artist:1GUaQ6GpaxFPKZ0SCSsnwD"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7fnMav7xXJwwjbyWbSjF4C"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7fnMav7xXJwwjbyWbSjF4C",
+                  "id": "7fnMav7xXJwwjbyWbSjF4C",
+                  "name": "Gia Margaret",
+                  "type": "artist",
+                  "uri": "spotify:artist:7fnMav7xXJwwjbyWbSjF4C"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 168079,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0uH2TCItT4LRkmlAn5fPcI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0uH2TCItT4LRkmlAn5fPcI",
+              "id": "0uH2TCItT4LRkmlAn5fPcI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Harvest Breed",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0uH2TCItT4LRkmlAn5fPcI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/102dPAntS5rtgPwkSZPB41"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/102dPAntS5rtgPwkSZPB41",
+                  "id": "102dPAntS5rtgPwkSZPB41",
+                  "name": "Katherine Priddy",
+                  "type": "artist",
+                  "uri": "spotify:artist:102dPAntS5rtgPwkSZPB41"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 272386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4dYWg4ULhEryDvZpX46JHI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4dYWg4ULhEryDvZpX46JHI",
+              "id": "4dYWg4ULhEryDvZpX46JHI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Think They're Leaving Me Behind",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:4dYWg4ULhEryDvZpX46JHI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1WgXqy2Dd70QQOU7Ay074N"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1WgXqy2Dd70QQOU7Ay074N",
+                  "id": "1WgXqy2Dd70QQOU7Ay074N",
+                  "name": "AURORA",
+                  "type": "artist",
+                  "uri": "spotify:artist:1WgXqy2Dd70QQOU7Ay074N"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 126902,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7fHzjaSpIqRPXP2s5hJS1M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7fHzjaSpIqRPXP2s5hJS1M",
+              "id": "7fHzjaSpIqRPXP2s5hJS1M",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pink Moon",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:7fHzjaSpIqRPXP2s5hJS1M"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0TeVWuc8Sw05X4Qkl3AA5r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0TeVWuc8Sw05X4Qkl3AA5r",
+                  "id": "0TeVWuc8Sw05X4Qkl3AA5r",
+                  "name": "Joe Henry",
+                  "type": "artist",
+                  "uri": "spotify:artist:0TeVWuc8Sw05X4Qkl3AA5r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0uZRjholJ0fVC2J9EvnYnj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0uZRjholJ0fVC2J9EvnYnj",
+                  "id": "0uZRjholJ0fVC2J9EvnYnj",
+                  "name": "Meshell Ndegeocello",
+                  "type": "artist",
+                  "uri": "spotify:artist:0uZRjholJ0fVC2J9EvnYnj"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 244935,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/38pQdLHzsTBJ4ES3K7sg9n"
+              },
+              "href": "https://api.spotify.com/v1/tracks/38pQdLHzsTBJ4ES3K7sg9n",
+              "id": "38pQdLHzsTBJ4ES3K7sg9n",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time Of No Reply",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:38pQdLHzsTBJ4ES3K7sg9n"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3RNKAeUickjAWDBaRecVGQ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3RNKAeUickjAWDBaRecVGQ",
+                  "id": "3RNKAeUickjAWDBaRecVGQ",
+                  "name": "Famous Blue Cable",
+                  "type": "artist",
+                  "uri": "spotify:artist:3RNKAeUickjAWDBaRecVGQ"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6CWTBjOJK75cTE8Xv8u1kj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6CWTBjOJK75cTE8Xv8u1kj",
+                  "id": "6CWTBjOJK75cTE8Xv8u1kj",
+                  "name": "Feist",
+                  "type": "artist",
+                  "uri": "spotify:artist:6CWTBjOJK75cTE8Xv8u1kj"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 238433,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ilYxWruhfHlQFN8bx0sef"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ilYxWruhfHlQFN8bx0sef",
+              "id": "2ilYxWruhfHlQFN8bx0sef",
+              "is_local": false,
+              "is_playable": true,
+              "name": "River Man",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:2ilYxWruhfHlQFN8bx0sef"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2LXeJdQVcFkhkWydphLI74"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2LXeJdQVcFkhkWydphLI74",
+                  "id": "2LXeJdQVcFkhkWydphLI74",
+                  "name": "Liz Phair",
+                  "type": "artist",
+                  "uri": "spotify:artist:2LXeJdQVcFkhkWydphLI74"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 167278,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5J7Fh0MD68vwwrEjFzVdaJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5J7Fh0MD68vwwrEjFzVdaJ",
+              "id": "5J7Fh0MD68vwwrEjFzVdaJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Free Ride",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5J7Fh0MD68vwwrEjFzVdaJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2A59wav3PGiJij2rK7HQYH"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2A59wav3PGiJij2rK7HQYH",
+                  "id": "2A59wav3PGiJij2rK7HQYH",
+                  "name": "Philip Selway",
+                  "type": "artist",
+                  "uri": "spotify:artist:2A59wav3PGiJij2rK7HQYH"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 305740,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/79RTduDt6oTsDYCfIWevV4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/79RTduDt6oTsDYCfIWevV4",
+              "id": "79RTduDt6oTsDYCfIWevV4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fly",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:79RTduDt6oTsDYCfIWevV4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3TScZ6zJkavDy0tqoGqiCf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3TScZ6zJkavDy0tqoGqiCf",
+                  "id": "3TScZ6zJkavDy0tqoGqiCf",
+                  "name": "John Grant",
+                  "type": "artist",
+                  "uri": "spotify:artist:3TScZ6zJkavDy0tqoGqiCf"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 386319,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/18dzIiuH0TPARQKGobB7qx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/18dzIiuH0TPARQKGobB7qx",
+              "id": "18dzIiuH0TPARQKGobB7qx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Day Is Done",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:18dzIiuH0TPARQKGobB7qx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6E8ghf5EmMGSLx5yAjpMDl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6E8ghf5EmMGSLx5yAjpMDl",
+                  "id": "6E8ghf5EmMGSLx5yAjpMDl",
+                  "name": "The Wandering Hearts",
+                  "type": "artist",
+                  "uri": "spotify:artist:6E8ghf5EmMGSLx5yAjpMDl"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 267013,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0G0Vuc7cTm0XV7oxa3n1FU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0G0Vuc7cTm0XV7oxa3n1FU",
+              "id": "0G0Vuc7cTm0XV7oxa3n1FU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Voices",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:0G0Vuc7cTm0XV7oxa3n1FU"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 23
+        },
+        "type": "album",
+        "uri": "spotify:album:41NPRAXWRq1a5JKOfxvkfE"
+      },
+      "release_date": "2023-07-07",
+      "release_date_precision": "day",
+      "total_tracks": 23,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "3SXwqSqAoBz9WCI9PDQzY6",
+              "name": "Fontaines D.C."
+            }
+          ],
+          "duration_ms": 304310,
+          "explicit": false,
+          "id": "6JIyD3ykQupzABOOFI3qpY",
+          "name": "' Cello Song",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0gOsZcHl7H3ewXVIEnWFZX",
+              "name": "Camille"
+            }
+          ],
+          "duration_ms": 247106,
+          "explicit": false,
+          "id": "01xNojHAEu0JBNxFNQwEan",
+          "name": "Hazey Jane II",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "7JY39clELNh1MLQBJs6MAk",
+              "name": "Mike Lindsay"
+            },
+            {
+              "id": "2j3K3e7Jnnmd2KwlFgCC5u",
+              "name": "Guy Garvey"
+            }
+          ],
+          "duration_ms": 315974,
+          "explicit": false,
+          "id": "6SSlj0SrpIayyeKo3tCoUk",
+          "name": "Saturday Sun",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "3pTE9iaJTkWns3mxpNQlJV",
+              "name": "Bombay Bicycle Club"
+            },
+            {
+              "id": "5G49Sq5mMzAkGL4ZP6eVPY",
+              "name": "The Staves"
+            }
+          ],
+          "duration_ms": 156689,
+          "explicit": false,
+          "id": "7ADoiwMvYOLgpPvo9URlCO",
+          "name": "Road",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4qNZw759AdHSMugyDMrIlF",
+              "name": "Let's Eat Grandma"
+            }
+          ],
+          "duration_ms": 220397,
+          "explicit": false,
+          "id": "5cyft7nZq3y3GxWYhPlIPF",
+          "name": "From The Morning",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "7J2lZBANizgPNfUzux31PV",
+              "name": "David Gray"
+            }
+          ],
+          "duration_ms": 211266,
+          "explicit": false,
+          "id": "4zelRNv6fHTkuJYfzxAlpI",
+          "name": "Place To Be",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "1UAM4fJFTeyMZbhTVUKiXk",
+              "name": "John Parish"
+            },
+            {
+              "id": "3lmR0qMiGuoIF9UC54egcG",
+              "name": "Aldous Harding"
+            }
+          ],
+          "duration_ms": 272567,
+          "explicit": false,
+          "id": "18B288Egj84rkUmPgSGw20",
+          "name": "Three Hours",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4rSwFTxoQwxwKjeQlSiLP7",
+              "name": "Stick in the Wheel"
+            }
+          ],
+          "duration_ms": 291548,
+          "explicit": false,
+          "id": "2QW3adx3WGj6PUTCLIPNlf",
+          "name": "Parasite",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "45lorWzrKLxfKlWpV7r9CN",
+              "name": "Ben Harper"
+            }
+          ],
+          "duration_ms": 239527,
+          "explicit": false,
+          "id": "2m55HB8bJI1AXY601Z6y45",
+          "name": "Time Has Told Me",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "7sfgqEdoeBTjd8lQsPT3Cy",
+              "name": "Emeli Sandé"
+            }
+          ],
+          "duration_ms": 219593,
+          "explicit": false,
+          "id": "7CBeBUMXF3YBQUmDfwIy87",
+          "name": "One Of These Things First",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5WS3dnCZR6MuN6m3dTMuwF",
+              "name": "Karine Polwart"
+            },
+            {
+              "id": "14T0l4AeAGbmAZjpQNdcqk",
+              "name": "Kris Drever"
+            }
+          ],
+          "duration_ms": 252269,
+          "explicit": false,
+          "id": "3jhE9ugxLeW3BtpYyvey1D",
+          "name": "Northern Sky",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "526q7RxT5KA1VGeQ5GMSHO",
+              "name": "Craig Armstrong"
+            },
+            {
+              "id": "3K9muOlJVKLgH4SIwwZiDe",
+              "name": "Self Esteem"
+            }
+          ],
+          "duration_ms": 225709,
+          "explicit": false,
+          "id": "6kUOCar6XSInSnDjocSjzE",
+          "name": "Black Eyed Dog",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "6ZoRg8NnEtVmtUhgCTSCrn",
+              "name": "Nadia Reid"
+            }
+          ],
+          "duration_ms": 275926,
+          "explicit": false,
+          "id": "4hA0oh7FRL3ygloHCPgoVJ",
+          "name": "Poor Boy",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5B7NeaqVrmXPyF05C9tnZ3",
+              "name": "Christian Lee Hutson"
+            },
+            {
+              "id": "0zyFWHrZsZXBupeqrDkLtz",
+              "name": "Elanor Moss"
+            }
+          ],
+          "duration_ms": 244274,
+          "explicit": false,
+          "id": "7BdNJ8yEf8mfSGh1uxjEZi",
+          "name": "Which Will",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1GUaQ6GpaxFPKZ0SCSsnwD",
+              "name": "Skullcrusher"
+            },
+            {
+              "id": "7fnMav7xXJwwjbyWbSjF4C",
+              "name": "Gia Margaret"
+            }
+          ],
+          "duration_ms": 168079,
+          "explicit": false,
+          "id": "0uH2TCItT4LRkmlAn5fPcI",
+          "name": "Harvest Breed",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "102dPAntS5rtgPwkSZPB41",
+              "name": "Katherine Priddy"
+            }
+          ],
+          "duration_ms": 272386,
+          "explicit": false,
+          "id": "4dYWg4ULhEryDvZpX46JHI",
+          "name": "I Think They're Leaving Me Behind",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "1WgXqy2Dd70QQOU7Ay074N",
+              "name": "AURORA"
+            }
+          ],
+          "duration_ms": 126902,
+          "explicit": false,
+          "id": "7fHzjaSpIqRPXP2s5hJS1M",
+          "name": "Pink Moon",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0TeVWuc8Sw05X4Qkl3AA5r",
+              "name": "Joe Henry"
+            },
+            {
+              "id": "0uZRjholJ0fVC2J9EvnYnj",
+              "name": "Meshell Ndegeocello"
+            }
+          ],
+          "duration_ms": 244935,
+          "explicit": false,
+          "id": "38pQdLHzsTBJ4ES3K7sg9n",
+          "name": "Time Of No Reply",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "3RNKAeUickjAWDBaRecVGQ",
+              "name": "Famous Blue Cable"
+            },
+            {
+              "id": "6CWTBjOJK75cTE8Xv8u1kj",
+              "name": "Feist"
+            }
+          ],
+          "duration_ms": 238433,
+          "explicit": false,
+          "id": "2ilYxWruhfHlQFN8bx0sef",
+          "name": "River Man",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "2LXeJdQVcFkhkWydphLI74",
+              "name": "Liz Phair"
+            }
+          ],
+          "duration_ms": 167278,
+          "explicit": false,
+          "id": "5J7Fh0MD68vwwrEjFzVdaJ",
+          "name": "Free Ride",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2A59wav3PGiJij2rK7HQYH",
+              "name": "Philip Selway"
+            }
+          ],
+          "duration_ms": 305740,
+          "explicit": false,
+          "id": "79RTduDt6oTsDYCfIWevV4",
+          "name": "Fly",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "3TScZ6zJkavDy0tqoGqiCf",
+              "name": "John Grant"
+            }
+          ],
+          "duration_ms": 386319,
+          "explicit": false,
+          "id": "18dzIiuH0TPARQKGobB7qx",
+          "name": "Day Is Done",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "6E8ghf5EmMGSLx5yAjpMDl",
+              "name": "The Wandering Hearts"
+            }
+          ],
+          "duration_ms": 267013,
+          "explicit": false,
+          "id": "0G0Vuc7cTm0XV7oxa3n1FU",
+          "name": "Voices",
+          "preview_url": null,
+          "track_number": 11
+        }
+      ],
+      "url": "https://open.spotify.com/album/41NPRAXWRq1a5JKOfxvkfE"
+    }
+  },
+  "spotify_id": "41NPRAXWRq1a5JKOfxvkfE",
+  "spotify_url": "https://open.spotify.com/album/41NPRAXWRq1a5JKOfxvkfE",
   "styles": [
     "Alt-Pop",
     "Alternative Rock"
@@ -812,6 +2103,6 @@
       "title": "Tomorrow Is A Long Time"
     }
   ],
-  "updated_at": "2025-07-05T14:55:11.666400",
+  "updated_at": "2025-07-06T18:02:27.689360",
   "year": 2023
 }
