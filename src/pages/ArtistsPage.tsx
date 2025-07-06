@@ -4,7 +4,6 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { CollectionStats } from '@/components/CollectionStats';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -55,6 +54,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
   const [filteredArtists, setFilteredArtists] = useState<Artist[]>([]);
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState('name');
+  const [selectedLetter, setSelectedLetter] = useState('all');
   const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.artists;
@@ -108,7 +108,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
         navigate('/artists/1');
       }
     }
-  }, [artists, searchTerm, sortBy]);
+  }, [artists, searchTerm, sortBy, selectedLetter]);
 
 
   const loadCollection = async () => {
@@ -242,38 +242,25 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Sort Controls */}
-      <Card className="mb-8">
-        <CardContent className="p-6">
-          <div className="flex items-center gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-muted-foreground">
-                Sort by
-              </label>
-              <Select value={sortBy} onValueChange={(value) => {
-                setSortBy(value);
-                if (currentPage !== 1) navigate('/artists/1');
-              }}>
-                <SelectTrigger className="w-48">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="name">Artist Name</SelectItem>
-                  <SelectItem value="albums">Album Count</SelectItem>
-                  <SelectItem value="latest">Latest Addition</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Stats */}
-      <CollectionStats 
-        totalAlbums={collection.length}
-        totalArtists={filteredArtists.length}
-        totalGenres={new Set(collection.flatMap(album => album.genre_names)).size}
-      />
+      {/* Filter Bar */}
+      <div className="flex flex-wrap gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
+          <Select value={sortBy} onValueChange={(value) => {
+            setSortBy(value);
+            if (currentPage !== 1) navigate('/artists/1');
+          }}>
+            <SelectTrigger className="w-[140px] h-8">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="name">Artist Name</SelectItem>
+              <SelectItem value="albums">Album Count</SelectItem>
+              <SelectItem value="latest">Latest Addition</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
 
       {/* Artists Grid */}
       {filteredArtists.length === 0 ? (
@@ -287,54 +274,45 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {paginatedArtists.map((artist) => (
-            <Card 
-              key={artist.uri} 
-              className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden"
-            >
-              <div className="aspect-square relative overflow-hidden">
-                <img
-                  src={artist.image}
-                  alt={artist.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                  loading="lazy"
-                />
-              </div>
-              <CardContent className="p-4">
-                <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
-                  {artist.name}
-                </h3>
-                <div className="flex items-center gap-2 text-muted-foreground mb-3">
-                  <Music className="h-4 w-4" />
-                  <span className="text-sm">
-                    {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
-                  </span>
+            <Link key={artist.uri} to={artist.uri}>
+              <Card className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden group">
+                <div className="aspect-square relative overflow-hidden">
+                  <img
+                    src={artist.image}
+                    alt={artist.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="flex flex-wrap gap-1">
-                  {artist.genres.slice(0, 3).map((genre, index) => (
-                    <Badge 
-                      key={index} 
-                      variant="secondary" 
-                      className="text-xs capitalize"
-                    >
-                      {genre.toLowerCase()}
-                    </Badge>
-                  ))}
-                  {artist.genres.length > 3 && (
-                    <Badge variant="outline" className="text-xs">
-                      +{artist.genres.length - 3}
-                    </Badge>
-                  )}
-                </div>
-                <div className="mt-3">
-                  <Link
-                    to={artist.uri}
-                    className="text-sm text-primary hover:underline"
-                  >
-                    View all albums →
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
+                    {artist.name}
+                  </h3>
+                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
+                    <Music className="h-4 w-4" />
+                    <span className="text-sm">
+                      {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
+                    </span>
+                  </div>
+                  <div className="flex flex-wrap gap-1">
+                    {artist.genres.slice(0, 3).map((genre, index) => (
+                      <Badge 
+                        key={index} 
+                        variant="secondary" 
+                        className="text-xs capitalize"
+                      >
+                        {genre.toLowerCase()}
+                      </Badge>
+                    ))}
+                    {artist.genres.length > 3 && (
+                      <Badge variant="outline" className="text-xs">
+                        +{artist.genres.length - 3}
+                      </Badge>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       )}

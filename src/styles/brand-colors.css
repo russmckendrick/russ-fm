@@ -54,6 +54,17 @@
   color: white !important;
 }
 
+/* Wikipedia Brand Colors */
+.btn-wikipedia {
+  border-color: #636466 !important;
+  color: #636466 !important;
+}
+
+.btn-wikipedia:hover {
+  background-color: #636466 !important;
+  color: white !important;
+}
+
 /* Common button styling for service buttons */
 .btn-service {
   transition: all 0.2s ease-in-out;
