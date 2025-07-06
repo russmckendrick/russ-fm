@@ -143,6 +143,11 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
         album.artists.forEach(artistInfo => {
           const artistName = artistInfo.name;
           
+          // Skip "Various" artists
+          if (artistName.toLowerCase() === 'various') {
+            return;
+          }
+          
           if (!artistMap.has(artistName)) {
             artistMap.set(artistName, {
               name: artistName,
@@ -175,6 +180,11 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       } else {
         // Fallback to original artist field for backward compatibility
         const artistName = album.release_artist;
+        
+        // Skip "Various" artists
+        if (artistName.toLowerCase() === 'various') {
+          return;
+        }
         
         if (!artistMap.has(artistName)) {
           artistMap.set(artistName, {
