@@ -20,7 +20,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
           <nav className="h-16 bg-background border dark:border-slate-700/70 rounded-full">
             <div className="h-full flex items-center justify-between px-6">
               <div className="flex items-center gap-2 md:gap-6">
-            <Link to="/">
+            <Link to="/albums/1">
               <Logo className="shrink-0" />
             </Link>
 
@@ -42,18 +42,18 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
             >
               <Search className="!h-5 !w-5" />
             </Button>
-            <Link to="/">
+            <Link to="/albums/1">
               <Button
-                variant={location.pathname === '/' ? 'default' : 'outline'}
+                variant={location.pathname === '/' || location.pathname.startsWith('/albums') ? 'default' : 'outline'}
                 className="hidden sm:inline-flex rounded-full"
               >
                 <Music className="h-4 w-4 mr-2" />
                 Albums
               </Button>
             </Link>
-            <Link to="/artists">
+            <Link to="/artists/1">
               <Button
-                variant={location.pathname === '/artists' ? 'default' : 'outline'}
+                variant={location.pathname.startsWith('/artists') ? 'default' : 'outline'}
                 className="rounded-full"
               >
                 <Users className="h-4 w-4 mr-2" />

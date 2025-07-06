@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Music } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AlbumCard } from '@/components/AlbumCard';
 import { FilterBar } from '@/components/FilterBar';
+import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
   PaginationContent,
@@ -41,15 +43,44 @@ interface AlbumsPageProps {
 }
 
 export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
+  const { page } = useParams<{ page?: string }>();
+  const navigate = useNavigate();
   const [collection, setCollection] = useState<Album[]>([]);
   const [filteredCollection, setFilteredCollection] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedGenre, setSelectedGenre] = useState('all');
   const [selectedYear, setSelectedYear] = useState('all');
   const [sortBy, setSortBy] = useState('date_added');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.albums;
+  const currentPage = page ? parseInt(page, 10) : 1;
+
+  // Generate dynamic page title
+  const getPageTitle = () => {
+    const parts = ['Record Collection'];
+    
+    if (selectedGenre !== 'all') {
+      parts.push(selectedGenre);
+    }
+    
+    if (selectedYear !== 'all') {
+      parts.push(`${selectedYear} Releases`);
+    }
+    
+    if (searchTerm) {
+      parts.push(`Search: "${searchTerm}"`);
+    }
+    
+    if (currentPage > 1) {
+      parts.push(`Page ${currentPage}`);
+    }
+    
+    parts.push('Russ.fm');
+    return parts.join(' | ');
+  };
+  
+  usePageTitle(getPageTitle());
 
   useEffect(() => {
     loadCollection();
@@ -57,12 +88,16 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
 
   useEffect(() => {
     filterAndSortCollection();
+    
+    // Only navigate to page 1 if search term actually changed
+    if (searchTerm !== prevSearchTerm) {
+      setPrevSearchTerm(searchTerm);
+      if (currentPage !== 1) {
+        navigate('/albums/1');
+      }
+    }
   }, [collection, searchTerm, selectedGenre, selectedYear, sortBy]);
 
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchTerm, selectedGenre, selectedYear, sortBy]);
 
   const loadCollection = async () => {
     try {
@@ -202,11 +237,20 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
       {/* Filters */}
       <FilterBar
         sortBy={sortBy}
-        setSortBy={setSortBy}
+        setSortBy={(value) => {
+          setSortBy(value);
+          if (currentPage !== 1) navigate('/albums/1');
+        }}
         selectedGenre={selectedGenre}
-        setSelectedGenre={setSelectedGenre}
+        setSelectedGenre={(value) => {
+          setSelectedGenre(value);
+          if (currentPage !== 1) navigate('/albums/1');
+        }}
         selectedYear={selectedYear}
-        setSelectedYear={setSelectedYear}
+        setSelectedYear={(value) => {
+          setSelectedYear(value);
+          if (currentPage !== 1) navigate('/albums/1');
+        }}
         genres={getAllGenres()}
         years={getAllYears()}
       />
@@ -239,7 +283,7 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious 
-                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  onClick={() => navigate(`/albums/${Math.max(1, currentPage - 1)}`)}
                   className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
@@ -250,7 +294,7 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
                     <PaginationEllipsis />
                   ) : (
                     <PaginationLink
-                      onClick={() => setCurrentPage(page as number)}
+                      onClick={() => navigate(`/albums/${page}`)}
                       isActive={currentPage === page}
                       className="cursor-pointer"
                     >
@@ -262,7 +306,7 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
               
               <PaginationItem>
                 <PaginationNext 
-                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  onClick={() => navigate(`/albums/${Math.min(totalPages, currentPage + 1)}`)}
                   className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>

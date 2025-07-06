@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 interface Album {
   release_name: string;
@@ -138,6 +139,13 @@ export function AlbumDetailPage() {
   const [album, setAlbum] = useState<Album | null>(null);
   const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
   const [loading, setLoading] = useState(true);
+
+  // Set page title based on album data
+  const pageTitle = detailedAlbum 
+    ? `${detailedAlbum.title} by ${detailedAlbum.artists[0]?.name || album?.release_artist || 'Unknown Artist'} | Russ.fm`
+    : 'Loading Album... | Russ.fm';
+  
+  usePageTitle(pageTitle);
 
   useEffect(() => {
     loadAlbumData();
