@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1818663889",
-  "apple_music_url": "https://music.apple.com/gb/album/g-love-has-gone-country/1818663889",
+  "apple_music_id": "158469825",
+  "apple_music_url": "https://music.apple.com/gb/album/g-love-and-special-sauce/158469825",
   "artists": [
     {
       "apple_music_id": "1891784",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T14:39:14.665679",
+  "created_at": "2025-07-06T17:40:48.294277",
   "date_added": "2024-12-15T05:12:57-08:00",
   "discogs_id": "30359294",
   "discogs_url": "https://www.discogs.com/release/30359294-G-Love-Special-Sauce-G-Love-Special-Sauce",
@@ -78,7 +78,7 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/a2/5e/0ba25e65-64ab-c546-f462-2b86c8943214/0.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/7c/f8/12/7cf812c8-acec-75d2-ac76-17c62a7b019b/dj.jkpvpcou.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -88,14 +88,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/G.+Love+&+Special+Sauce/G.+Love+&+Special+Sauce",
   "local_images": {
-    "hi-res": "public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-hi-res.jpg",
-    "medium": "public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-medium.jpg",
-    "small": "public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-small.jpg"
+    "hi-res": "../public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-hi-res.jpg",
+    "medium": "../public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-medium.jpg",
+    "small": "../public/album/g-love-special-sauce-30359294/g-love-special-sauce-30359294-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T14:39:18.174098",
+    "processed_at": "2025-07-06T17:40:57.385340",
     "services_used": [
       "discogs",
       "apple_music",
@@ -103,53 +103,61 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "G. Love Has Gone Country",
+  "release_name_apple_music": "G. Love and Special Sauce",
   "release_name_discogs": "G. Love & Special Sauce",
-  "release_name_spotify": "G. Love & Special Sauce (30th Anniversary Expanded Edition)",
+  "release_name_spotify": "G. Love And Special Sauce",
   "released": "2024-04-20",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/a2/5e/0ba25e65-64ab-c546-f462-2b86c8943214/0.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2025 GLove Records",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/7c/f8/12/7cf812c8-acec-75d2-ac76-17c62a7b019b/dj.jkpvpcou.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 1994 Sony Music Entertainment Inc.",
       "editorial_notes": null,
-      "id": "1818663889",
+      "id": "158469825",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "G. Love & Special Sauce",
         "artwork": {
-          "bgColor": "a96e31",
-          "height": 3000,
-          "textColor1": "080502",
-          "textColor2": "161513",
-          "textColor3": "281a0c",
-          "textColor4": "342719",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/0b/a2/5e/0ba25e65-64ab-c546-f462-2b86c8943214/0.jpg/{w}x{h}bb.jpg",
-          "width": 3000
+          "bgColor": "bbb8b3",
+          "height": 600,
+          "textColor1": "080505",
+          "textColor2": "221f1f",
+          "textColor3": "2c2928",
+          "textColor4": "403e3d",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/7c/f8/12/7cf812c8-acec-75d2-ac76-17c62a7b019b/dj.jkpvpcou.jpg/{w}x{h}bb.jpg",
+          "width": 600
         },
-        "copyright": "℗ 2025 GLove Records",
+        "contentRating": "explicit",
+        "copyright": "℗ 1994 Sony Music Entertainment Inc.",
         "genreNames": [
-          "Country",
+          "Pop",
           "Music",
-          "Americana"
+          "Rock",
+          "Alternative",
+          "Hip-Hop/Rap",
+          "Alternative Rap",
+          "Metal",
+          "Jazz",
+          "Adult Alternative",
+          "Rap"
         ],
         "isCompilation": false,
         "isComplete": true,
         "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "G. Love Has Gone Country",
+        "name": "G. Love and Special Sauce",
         "playParams": {
-          "id": "1818663889",
+          "id": "158469825",
           "kind": "album"
         },
-        "recordLabel": "GLove Records",
-        "releaseDate": "2025-06-27",
-        "trackCount": 11,
-        "upc": "730941773595",
-        "url": "https://music.apple.com/gb/album/g-love-has-gone-country/1818663889"
+        "recordLabel": "Okeh/Epic",
+        "releaseDate": "1994-05-05",
+        "trackCount": 14,
+        "upc": "074645785127",
+        "url": "https://music.apple.com/gb/album/g-love-and-special-sauce/158469825"
       },
-      "url": "https://music.apple.com/gb/album/g-love-has-gone-country/1818663889"
+      "url": "https://music.apple.com/gb/album/g-love-and-special-sauce/158469825"
     },
     "lastfm": {
       "images": [
@@ -180,7 +188,7 @@
       ],
       "listeners": 258937,
       "mbid": "a9bc984c-c725-4fc7-8864-7835b7bc255b",
-      "playcount": 1395962,
+      "playcount": 1395964,
       "raw_data": {
         "album": {
           "artist": "G. Love & Special Sauce",
@@ -213,7 +221,7 @@
           "listeners": "258937",
           "mbid": "a9bc984c-c725-4fc7-8864-7835b7bc255b",
           "name": "G. Love & Special Sauce",
-          "playcount": "1395962",
+          "playcount": "1395964",
           "tags": {
             "tag": [
               {
@@ -502,34 +510,34 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(P) 2024 Epic Records, a division of Sony Music Entertainment",
+          "text": "(P) 1994 Sony Music Entertainment Inc.",
           "type": "P"
         }
       ],
       "explicit": true,
       "external_ids": {
-        "upc": "196871671668"
+        "upc": "074645785127"
       },
-      "id": "76IqHvS37OvwXviTLbOx4Q",
+      "id": "6K6iycuUPM1HT5sxnwp6Ek",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2734b1bfd8f85fd8a25134f8252",
+          "url": "https://i.scdn.co/image/ab67616d0000b2737923b2156563568de6115187",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e024b1bfd8f85fd8a25134f8252",
+          "url": "https://i.scdn.co/image/ab67616d00001e027923b2156563568de6115187",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048514b1bfd8f85fd8a25134f8252",
+          "url": "https://i.scdn.co/image/ab67616d000048517923b2156563568de6115187",
           "width": 64
         }
       ],
-      "label": "Epic/Legacy",
-      "popularity": 27,
+      "label": "Okeh/Epic",
+      "popularity": 47,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
@@ -547,45 +555,45 @@
         ],
         "copyrights": [
           {
-            "text": "(P) 2024 Epic Records, a division of Sony Music Entertainment",
+            "text": "(P) 1994 Sony Music Entertainment Inc.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "196871671668"
+          "upc": "074645785127"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/76IqHvS37OvwXviTLbOx4Q"
+          "spotify": "https://open.spotify.com/album/6K6iycuUPM1HT5sxnwp6Ek"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/76IqHvS37OvwXviTLbOx4Q?market=US",
-        "id": "76IqHvS37OvwXviTLbOx4Q",
+        "href": "https://api.spotify.com/v1/albums/6K6iycuUPM1HT5sxnwp6Ek?market=US",
+        "id": "6K6iycuUPM1HT5sxnwp6Ek",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2734b1bfd8f85fd8a25134f8252",
+            "url": "https://i.scdn.co/image/ab67616d0000b2737923b2156563568de6115187",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e024b1bfd8f85fd8a25134f8252",
+            "url": "https://i.scdn.co/image/ab67616d00001e027923b2156563568de6115187",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048514b1bfd8f85fd8a25134f8252",
+            "url": "https://i.scdn.co/image/ab67616d000048517923b2156563568de6115187",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Epic/Legacy",
-        "name": "G. Love & Special Sauce (30th Anniversary Expanded Edition)",
-        "popularity": 27,
-        "release_date": "2024-01-12",
+        "label": "Okeh/Epic",
+        "name": "G. Love And Special Sauce",
+        "popularity": 47,
+        "release_date": "1994-05-10",
         "release_date_precision": "day",
-        "total_tracks": 25,
+        "total_tracks": 14,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/76IqHvS37OvwXviTLbOx4Q/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/6K6iycuUPM1HT5sxnwp6Ek/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -604,17 +612,17 @@
               "duration_ms": 213293,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4w1GcxT13CJNDmcTwA4Y4u"
+                "spotify": "https://open.spotify.com/track/3T9Uc8jc7RayIwvqlt5fKn"
               },
-              "href": "https://api.spotify.com/v1/tracks/4w1GcxT13CJNDmcTwA4Y4u",
-              "id": "4w1GcxT13CJNDmcTwA4Y4u",
+              "href": "https://api.spotify.com/v1/tracks/3T9Uc8jc7RayIwvqlt5fKn",
+              "id": "3T9Uc8jc7RayIwvqlt5fKn",
               "is_local": false,
               "is_playable": true,
               "name": "The Things That I Used To Do",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:4w1GcxT13CJNDmcTwA4Y4u"
+              "uri": "spotify:track:3T9Uc8jc7RayIwvqlt5fKn"
             },
             {
               "artists": [
@@ -633,17 +641,17 @@
               "duration_ms": 255426,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5fGuVMsWgFkV2ggulb5In7"
+                "spotify": "https://open.spotify.com/track/4fUyndBmTsfMmJdwQvf8bT"
               },
-              "href": "https://api.spotify.com/v1/tracks/5fGuVMsWgFkV2ggulb5In7",
-              "id": "5fGuVMsWgFkV2ggulb5In7",
+              "href": "https://api.spotify.com/v1/tracks/4fUyndBmTsfMmJdwQvf8bT",
+              "id": "4fUyndBmTsfMmJdwQvf8bT",
               "is_local": false,
               "is_playable": true,
               "name": "Blues Music",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:5fGuVMsWgFkV2ggulb5In7"
+              "uri": "spotify:track:4fUyndBmTsfMmJdwQvf8bT"
             },
             {
               "artists": [
@@ -662,17 +670,17 @@
               "duration_ms": 290160,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/242YYR0z8M0MG6t3V7MV6O"
+                "spotify": "https://open.spotify.com/track/0wSL3Kd615yX7nifGHpYUI"
               },
-              "href": "https://api.spotify.com/v1/tracks/242YYR0z8M0MG6t3V7MV6O",
-              "id": "242YYR0z8M0MG6t3V7MV6O",
+              "href": "https://api.spotify.com/v1/tracks/0wSL3Kd615yX7nifGHpYUI",
+              "id": "0wSL3Kd615yX7nifGHpYUI",
               "is_local": false,
               "is_playable": true,
               "name": "Garbage Man",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:242YYR0z8M0MG6t3V7MV6O"
+              "uri": "spotify:track:0wSL3Kd615yX7nifGHpYUI"
             },
             {
               "artists": [
@@ -691,17 +699,17 @@
               "duration_ms": 319000,
               "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3vOBhyrmeCv0y4flgX6eQ3"
+                "spotify": "https://open.spotify.com/track/2UrPKc9a7SQkHbNkmNBPml"
               },
-              "href": "https://api.spotify.com/v1/tracks/3vOBhyrmeCv0y4flgX6eQ3",
-              "id": "3vOBhyrmeCv0y4flgX6eQ3",
+              "href": "https://api.spotify.com/v1/tracks/2UrPKc9a7SQkHbNkmNBPml",
+              "id": "2UrPKc9a7SQkHbNkmNBPml",
               "is_local": false,
               "is_playable": true,
               "name": "Eyes Have Miles",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:3vOBhyrmeCv0y4flgX6eQ3"
+              "uri": "spotify:track:2UrPKc9a7SQkHbNkmNBPml"
             },
             {
               "artists": [
@@ -720,17 +728,17 @@
               "duration_ms": 233960,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0QyV50baT051qmX9grSAZG"
+                "spotify": "https://open.spotify.com/track/7MXK7DwU1DpGFTA31AZW6S"
               },
-              "href": "https://api.spotify.com/v1/tracks/0QyV50baT051qmX9grSAZG",
-              "id": "0QyV50baT051qmX9grSAZG",
+              "href": "https://api.spotify.com/v1/tracks/7MXK7DwU1DpGFTA31AZW6S",
+              "id": "7MXK7DwU1DpGFTA31AZW6S",
               "is_local": false,
               "is_playable": true,
               "name": "Baby's Got Sauce",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:0QyV50baT051qmX9grSAZG"
+              "uri": "spotify:track:7MXK7DwU1DpGFTA31AZW6S"
             },
             {
               "artists": [
@@ -749,17 +757,17 @@
               "duration_ms": 186066,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0BP1SnUpXenfdaYx3KOZ5U"
+                "spotify": "https://open.spotify.com/track/1I4OmGhhaaDHx6b6IplsfT"
               },
-              "href": "https://api.spotify.com/v1/tracks/0BP1SnUpXenfdaYx3KOZ5U",
-              "id": "0BP1SnUpXenfdaYx3KOZ5U",
+              "href": "https://api.spotify.com/v1/tracks/1I4OmGhhaaDHx6b6IplsfT",
+              "id": "1I4OmGhhaaDHx6b6IplsfT",
               "is_local": false,
               "is_playable": true,
               "name": "Rhyme for the Summertime",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:0BP1SnUpXenfdaYx3KOZ5U"
+              "uri": "spotify:track:1I4OmGhhaaDHx6b6IplsfT"
             },
             {
               "artists": [
@@ -778,17 +786,17 @@
               "duration_ms": 153893,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1A0j2Bu0pJduOzI8DK9ZAy"
+                "spotify": "https://open.spotify.com/track/53QFfxB7PbI8YxfAElIdbZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/1A0j2Bu0pJduOzI8DK9ZAy",
-              "id": "1A0j2Bu0pJduOzI8DK9ZAy",
+              "href": "https://api.spotify.com/v1/tracks/53QFfxB7PbI8YxfAElIdbZ",
+              "id": "53QFfxB7PbI8YxfAElIdbZ",
               "is_local": false,
               "is_playable": true,
               "name": "Cold Beverage",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:1A0j2Bu0pJduOzI8DK9ZAy"
+              "uri": "spotify:track:53QFfxB7PbI8YxfAElIdbZ"
             },
             {
               "artists": [
@@ -807,17 +815,17 @@
               "duration_ms": 253266,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6I6qmSEEuzDxR1o6q0cDWq"
+                "spotify": "https://open.spotify.com/track/6T3uGccoprFNOHhiLQ4egx"
               },
-              "href": "https://api.spotify.com/v1/tracks/6I6qmSEEuzDxR1o6q0cDWq",
-              "id": "6I6qmSEEuzDxR1o6q0cDWq",
+              "href": "https://api.spotify.com/v1/tracks/6T3uGccoprFNOHhiLQ4egx",
+              "id": "6T3uGccoprFNOHhiLQ4egx",
               "is_local": false,
               "is_playable": true,
               "name": "Fatman",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:6I6qmSEEuzDxR1o6q0cDWq"
+              "uri": "spotify:track:6T3uGccoprFNOHhiLQ4egx"
             },
             {
               "artists": [
@@ -836,17 +844,17 @@
               "duration_ms": 392573,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3olhZmUGDOWAf8o6uUn2K1"
+                "spotify": "https://open.spotify.com/track/36wSw6bW96i3gzjB3EPyLC"
               },
-              "href": "https://api.spotify.com/v1/tracks/3olhZmUGDOWAf8o6uUn2K1",
-              "id": "3olhZmUGDOWAf8o6uUn2K1",
+              "href": "https://api.spotify.com/v1/tracks/36wSw6bW96i3gzjB3EPyLC",
+              "id": "36wSw6bW96i3gzjB3EPyLC",
               "is_local": false,
               "is_playable": true,
               "name": "This Ain't Living - Official Audio",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:3olhZmUGDOWAf8o6uUn2K1"
+              "uri": "spotify:track:36wSw6bW96i3gzjB3EPyLC"
             },
             {
               "artists": [
@@ -865,17 +873,17 @@
               "duration_ms": 268400,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6CoVOfVFlNKRMkjE6VdEyz"
+                "spotify": "https://open.spotify.com/track/41EACoU6fGTau2zfbKng3I"
               },
-              "href": "https://api.spotify.com/v1/tracks/6CoVOfVFlNKRMkjE6VdEyz",
-              "id": "6CoVOfVFlNKRMkjE6VdEyz",
+              "href": "https://api.spotify.com/v1/tracks/41EACoU6fGTau2zfbKng3I",
+              "id": "41EACoU6fGTau2zfbKng3I",
               "is_local": false,
               "is_playable": true,
               "name": "Walk To Slide",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:6CoVOfVFlNKRMkjE6VdEyz"
+              "uri": "spotify:track:41EACoU6fGTau2zfbKng3I"
             },
             {
               "artists": [
@@ -894,17 +902,17 @@
               "duration_ms": 208293,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2oaMan7ScoRFAf4CjhcAvn"
+                "spotify": "https://open.spotify.com/track/0gsFtv4YvS6DQieNmc9Rc3"
               },
-              "href": "https://api.spotify.com/v1/tracks/2oaMan7ScoRFAf4CjhcAvn",
-              "id": "2oaMan7ScoRFAf4CjhcAvn",
+              "href": "https://api.spotify.com/v1/tracks/0gsFtv4YvS6DQieNmc9Rc3",
+              "id": "0gsFtv4YvS6DQieNmc9Rc3",
               "is_local": false,
               "is_playable": true,
               "name": "Shooting Hoops",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:2oaMan7ScoRFAf4CjhcAvn"
+              "uri": "spotify:track:0gsFtv4YvS6DQieNmc9Rc3"
             },
             {
               "artists": [
@@ -923,17 +931,17 @@
               "duration_ms": 288266,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/435Ct22th1nKZQdwYenrCR"
+                "spotify": "https://open.spotify.com/track/7AFxqu6LBtxNeoFcKETolc"
               },
-              "href": "https://api.spotify.com/v1/tracks/435Ct22th1nKZQdwYenrCR",
-              "id": "435Ct22th1nKZQdwYenrCR",
+              "href": "https://api.spotify.com/v1/tracks/7AFxqu6LBtxNeoFcKETolc",
+              "id": "7AFxqu6LBtxNeoFcKETolc",
               "is_local": false,
               "is_playable": true,
               "name": "Some Peoples Like That",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:435Ct22th1nKZQdwYenrCR"
+              "uri": "spotify:track:7AFxqu6LBtxNeoFcKETolc"
             },
             {
               "artists": [
@@ -952,17 +960,17 @@
               "duration_ms": 204573,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Pgi47Dfa7m3oirhq11LLo"
+                "spotify": "https://open.spotify.com/track/14S0T7YGqn75gjNrBrHDCZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/3Pgi47Dfa7m3oirhq11LLo",
-              "id": "3Pgi47Dfa7m3oirhq11LLo",
+              "href": "https://api.spotify.com/v1/tracks/14S0T7YGqn75gjNrBrHDCZ",
+              "id": "14S0T7YGqn75gjNrBrHDCZ",
               "is_local": false,
               "is_playable": true,
               "name": "Town To Town",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:3Pgi47Dfa7m3oirhq11LLo"
+              "uri": "spotify:track:14S0T7YGqn75gjNrBrHDCZ"
             },
             {
               "artists": [
@@ -981,350 +989,31 @@
               "duration_ms": 211866,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3gJJ9iokcI8grrrSLOqFFs"
+                "spotify": "https://open.spotify.com/track/4Oq9pMzxIL2t5NQA2FtuSO"
               },
-              "href": "https://api.spotify.com/v1/tracks/3gJJ9iokcI8grrrSLOqFFs",
-              "id": "3gJJ9iokcI8grrrSLOqFFs",
+              "href": "https://api.spotify.com/v1/tracks/4Oq9pMzxIL2t5NQA2FtuSO",
+              "id": "4Oq9pMzxIL2t5NQA2FtuSO",
               "is_local": false,
               "is_playable": true,
               "name": "I Love You",
               "preview_url": null,
               "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:3gJJ9iokcI8grrrSLOqFFs"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 296510,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1RKUB5WB7w9txxeaPOVhff"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1RKUB5WB7w9txxeaPOVhff",
-              "id": "1RKUB5WB7w9txxeaPOVhff",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Move Me - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 2)",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:1RKUB5WB7w9txxeaPOVhff"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 367318,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/258M1locYA3bCPSAjtpFpL"
-              },
-              "href": "https://api.spotify.com/v1/tracks/258M1locYA3bCPSAjtpFpL",
-              "id": "258M1locYA3bCPSAjtpFpL",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Just Like Trains - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 2)",
-              "preview_url": null,
-              "track_number": 16,
-              "type": "track",
-              "uri": "spotify:track:258M1locYA3bCPSAjtpFpL"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 298040,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2jEBAgMU9Mhb0tpaEUxE5o"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2jEBAgMU9Mhb0tpaEUxE5o",
-              "id": "2jEBAgMU9Mhb0tpaEUxE5o",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Blues Music - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 1)",
-              "preview_url": null,
-              "track_number": 17,
-              "type": "track",
-              "uri": "spotify:track:2jEBAgMU9Mhb0tpaEUxE5o"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 172062,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3HJiAP54gXQkA5U8Du64K0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3HJiAP54gXQkA5U8Du64K0",
-              "id": "3HJiAP54gXQkA5U8Du64K0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Rhyme for the Summertime - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 1)",
-              "preview_url": null,
-              "track_number": 18,
-              "type": "track",
-              "uri": "spotify:track:3HJiAP54gXQkA5U8Du64K0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 352117,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/76Gx2KmLYvPEycezDwT6lI"
-              },
-              "href": "https://api.spotify.com/v1/tracks/76Gx2KmLYvPEycezDwT6lI",
-              "id": "76Gx2KmLYvPEycezDwT6lI",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Yo! I Think I Heard That - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 19,
-              "type": "track",
-              "uri": "spotify:track:76Gx2KmLYvPEycezDwT6lI"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 186655,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2KLZnPgYHWdIgz6utnTu5W"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2KLZnPgYHWdIgz6utnTu5W",
-              "id": "2KLZnPgYHWdIgz6utnTu5W",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Will It Ever Be The Same - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 20,
-              "type": "track",
-              "uri": "spotify:track:2KLZnPgYHWdIgz6utnTu5W"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 269893,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0kq6iYzneHAoM0EtROfeID"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0kq6iYzneHAoM0EtROfeID",
-              "id": "0kq6iYzneHAoM0EtROfeID",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Garbage Man - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 21,
-              "type": "track",
-              "uri": "spotify:track:0kq6iYzneHAoM0EtROfeID"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 234495,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6SNa4HVMqPYJb9bs8Cpkf1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6SNa4HVMqPYJb9bs8Cpkf1",
-              "id": "6SNa4HVMqPYJb9bs8Cpkf1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Can't Be Satisfied - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 22,
-              "type": "track",
-              "uri": "spotify:track:6SNa4HVMqPYJb9bs8Cpkf1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 286602,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1OSTVikBu5xIK5xVvztK9f"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1OSTVikBu5xIK5xVvztK9f",
-              "id": "1OSTVikBu5xIK5xVvztK9f",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Find My Peace - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 23,
-              "type": "track",
-              "uri": "spotify:track:1OSTVikBu5xIK5xVvztK9f"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 273735,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2nbqYo4GefTcH3KvUArmj1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2nbqYo4GefTcH3KvUArmj1",
-              "id": "2nbqYo4GefTcH3KvUArmj1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Walk To Slide - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 24,
-              "type": "track",
-              "uri": "spotify:track:2nbqYo4GefTcH3KvUArmj1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74fkl73HDlCXw0l6cemB89"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74fkl73HDlCXw0l6cemB89",
-                  "id": "74fkl73HDlCXw0l6cemB89",
-                  "name": "G. Love & Special Sauce",
-                  "type": "artist",
-                  "uri": "spotify:artist:74fkl73HDlCXw0l6cemB89"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 184776,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7CwRYhN6IzXphQH2vLBNUP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7CwRYhN6IzXphQH2vLBNUP",
-              "id": "7CwRYhN6IzXphQH2vLBNUP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cold Beverage - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-              "preview_url": null,
-              "track_number": 25,
-              "type": "track",
-              "uri": "spotify:track:7CwRYhN6IzXphQH2vLBNUP"
+              "uri": "spotify:track:4Oq9pMzxIL2t5NQA2FtuSO"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 25
+          "total": 14
         },
         "type": "album",
-        "uri": "spotify:album:76IqHvS37OvwXviTLbOx4Q"
+        "uri": "spotify:album:6K6iycuUPM1HT5sxnwp6Ek"
       },
-      "release_date": "2024-01-12",
+      "release_date": "1994-05-10",
       "release_date_precision": "day",
-      "total_tracks": 25,
+      "total_tracks": 14,
       "tracks": [
         {
           "artists": [
@@ -1335,7 +1024,7 @@
           ],
           "duration_ms": 213293,
           "explicit": false,
-          "id": "4w1GcxT13CJNDmcTwA4Y4u",
+          "id": "3T9Uc8jc7RayIwvqlt5fKn",
           "name": "The Things That I Used To Do",
           "preview_url": null,
           "track_number": 1
@@ -1349,7 +1038,7 @@
           ],
           "duration_ms": 255426,
           "explicit": false,
-          "id": "5fGuVMsWgFkV2ggulb5In7",
+          "id": "4fUyndBmTsfMmJdwQvf8bT",
           "name": "Blues Music",
           "preview_url": null,
           "track_number": 2
@@ -1363,7 +1052,7 @@
           ],
           "duration_ms": 290160,
           "explicit": false,
-          "id": "242YYR0z8M0MG6t3V7MV6O",
+          "id": "0wSL3Kd615yX7nifGHpYUI",
           "name": "Garbage Man",
           "preview_url": null,
           "track_number": 3
@@ -1377,7 +1066,7 @@
           ],
           "duration_ms": 319000,
           "explicit": true,
-          "id": "3vOBhyrmeCv0y4flgX6eQ3",
+          "id": "2UrPKc9a7SQkHbNkmNBPml",
           "name": "Eyes Have Miles",
           "preview_url": null,
           "track_number": 4
@@ -1391,7 +1080,7 @@
           ],
           "duration_ms": 233960,
           "explicit": false,
-          "id": "0QyV50baT051qmX9grSAZG",
+          "id": "7MXK7DwU1DpGFTA31AZW6S",
           "name": "Baby's Got Sauce",
           "preview_url": null,
           "track_number": 5
@@ -1405,7 +1094,7 @@
           ],
           "duration_ms": 186066,
           "explicit": false,
-          "id": "0BP1SnUpXenfdaYx3KOZ5U",
+          "id": "1I4OmGhhaaDHx6b6IplsfT",
           "name": "Rhyme for the Summertime",
           "preview_url": null,
           "track_number": 6
@@ -1419,7 +1108,7 @@
           ],
           "duration_ms": 153893,
           "explicit": false,
-          "id": "1A0j2Bu0pJduOzI8DK9ZAy",
+          "id": "53QFfxB7PbI8YxfAElIdbZ",
           "name": "Cold Beverage",
           "preview_url": null,
           "track_number": 7
@@ -1433,7 +1122,7 @@
           ],
           "duration_ms": 253266,
           "explicit": false,
-          "id": "6I6qmSEEuzDxR1o6q0cDWq",
+          "id": "6T3uGccoprFNOHhiLQ4egx",
           "name": "Fatman",
           "preview_url": null,
           "track_number": 8
@@ -1447,7 +1136,7 @@
           ],
           "duration_ms": 392573,
           "explicit": false,
-          "id": "3olhZmUGDOWAf8o6uUn2K1",
+          "id": "36wSw6bW96i3gzjB3EPyLC",
           "name": "This Ain't Living - Official Audio",
           "preview_url": null,
           "track_number": 9
@@ -1461,7 +1150,7 @@
           ],
           "duration_ms": 268400,
           "explicit": false,
-          "id": "6CoVOfVFlNKRMkjE6VdEyz",
+          "id": "41EACoU6fGTau2zfbKng3I",
           "name": "Walk To Slide",
           "preview_url": null,
           "track_number": 10
@@ -1475,7 +1164,7 @@
           ],
           "duration_ms": 208293,
           "explicit": false,
-          "id": "2oaMan7ScoRFAf4CjhcAvn",
+          "id": "0gsFtv4YvS6DQieNmc9Rc3",
           "name": "Shooting Hoops",
           "preview_url": null,
           "track_number": 11
@@ -1489,7 +1178,7 @@
           ],
           "duration_ms": 288266,
           "explicit": false,
-          "id": "435Ct22th1nKZQdwYenrCR",
+          "id": "7AFxqu6LBtxNeoFcKETolc",
           "name": "Some Peoples Like That",
           "preview_url": null,
           "track_number": 12
@@ -1503,7 +1192,7 @@
           ],
           "duration_ms": 204573,
           "explicit": false,
-          "id": "3Pgi47Dfa7m3oirhq11LLo",
+          "id": "14S0T7YGqn75gjNrBrHDCZ",
           "name": "Town To Town",
           "preview_url": null,
           "track_number": 13
@@ -1517,171 +1206,17 @@
           ],
           "duration_ms": 211866,
           "explicit": false,
-          "id": "3gJJ9iokcI8grrrSLOqFFs",
+          "id": "4Oq9pMzxIL2t5NQA2FtuSO",
           "name": "I Love You",
           "preview_url": null,
           "track_number": 14
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 296510,
-          "explicit": false,
-          "id": "1RKUB5WB7w9txxeaPOVhff",
-          "name": "Move Me - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 2)",
-          "preview_url": null,
-          "track_number": 15
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 367318,
-          "explicit": false,
-          "id": "258M1locYA3bCPSAjtpFpL",
-          "name": "Just Like Trains - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 2)",
-          "preview_url": null,
-          "track_number": 16
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 298040,
-          "explicit": false,
-          "id": "2jEBAgMU9Mhb0tpaEUxE5o",
-          "name": "Blues Music - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 1)",
-          "preview_url": null,
-          "track_number": 17
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 172062,
-          "explicit": false,
-          "id": "3HJiAP54gXQkA5U8Du64K0",
-          "name": "Rhyme for the Summertime - Live at the Knitting Factory, NYC, NY - 7/20/1994 (Set 1)",
-          "preview_url": null,
-          "track_number": 18
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 352117,
-          "explicit": false,
-          "id": "76Gx2KmLYvPEycezDwT6lI",
-          "name": "Yo! I Think I Heard That - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 19
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 186655,
-          "explicit": false,
-          "id": "2KLZnPgYHWdIgz6utnTu5W",
-          "name": "Will It Ever Be The Same - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 20
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 269893,
-          "explicit": false,
-          "id": "0kq6iYzneHAoM0EtROfeID",
-          "name": "Garbage Man - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 21
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 234495,
-          "explicit": false,
-          "id": "6SNa4HVMqPYJb9bs8Cpkf1",
-          "name": "I Can't Be Satisfied - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 22
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 286602,
-          "explicit": false,
-          "id": "1OSTVikBu5xIK5xVvztK9f",
-          "name": "Find My Peace - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 23
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 273735,
-          "explicit": false,
-          "id": "2nbqYo4GefTcH3KvUArmj1",
-          "name": "Walk To Slide - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 24
-        },
-        {
-          "artists": [
-            {
-              "id": "74fkl73HDlCXw0l6cemB89",
-              "name": "G. Love & Special Sauce"
-            }
-          ],
-          "duration_ms": 184776,
-          "explicit": false,
-          "id": "7CwRYhN6IzXphQH2vLBNUP",
-          "name": "Cold Beverage - Live at the Knitting Factory, NYC, NY - 7/20/1994",
-          "preview_url": null,
-          "track_number": 25
         }
       ],
-      "url": "https://open.spotify.com/album/76IqHvS37OvwXviTLbOx4Q"
+      "url": "https://open.spotify.com/album/6K6iycuUPM1HT5sxnwp6Ek"
     }
   },
-  "spotify_id": "76IqHvS37OvwXviTLbOx4Q",
-  "spotify_url": "https://open.spotify.com/album/76IqHvS37OvwXviTLbOx4Q",
+  "spotify_id": "6K6iycuUPM1HT5sxnwp6Ek",
+  "spotify_url": "https://open.spotify.com/album/6K6iycuUPM1HT5sxnwp6Ek",
   "styles": [
     "Indie Pop"
   ],
@@ -1796,6 +1331,6 @@
       "title": "Just Like Trains (Live)"
     }
   ],
-  "updated_at": "2025-07-05T14:39:16.952757",
+  "updated_at": "2025-07-06T17:40:57.007531",
   "year": 2024
 }
