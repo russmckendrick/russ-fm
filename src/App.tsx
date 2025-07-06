@@ -16,7 +16,9 @@ function App() {
       <main className="pt-28">
         <Routes>
           <Route path="/" element={<AlbumsPage searchTerm={searchTerm} />} />
+          <Route path="/albums/:page?" element={<AlbumsPage searchTerm={searchTerm} />} />
           <Route path="/artists" element={<ArtistsPage searchTerm={searchTerm} />} />
+          <Route path="/artists/:page" element={<ArtistsPage searchTerm={searchTerm} />} />
           <Route path="/artist/:artistPath" element={<ArtistDetailPage />} />
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
         </Routes>

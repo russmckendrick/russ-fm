@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T16:55:15.538467",
+  "created_at": "2025-07-06T09:18:25.030317",
   "date_added": "2018-02-15T19:24:32-08:00",
   "discogs_id": "432985",
   "discogs_url": "https://www.discogs.com/release/432985-Pop-Will-Eat-Itself-X-Y-Zee",
@@ -81,6 +81,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/c9sjfMM2D0YqMfZiKaDOfa8rzT9yrjRVD97N_0s9_5E/rs:fit/g:sm/q:90/h:403/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQzMjk4/NS0xMTU1OTI1MTY5/LmpwZWc.jpeg",
       "width": 400
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://www.russ.fm/albums/x-y-zee-432985/x-y-zee-432985.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -88,11 +95,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Pop+Will+Eat+Itself/X+Y+&+Zee",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/x-y-zee-432985/x-y-zee-432985-hi-res.jpg",
+    "medium": "../public/album/x-y-zee-432985/x-y-zee-432985-medium.jpg",
+    "small": "../public/album/x-y-zee-432985/x-y-zee-432985-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:55:16.185590",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-06T09:18:27.421930",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -290,6 +301,6 @@
       "title": "X Y & Zee (Sensory Amplification Mix)"
     }
   ],
-  "updated_at": "2025-07-05T16:55:16.185360",
+  "updated_at": "2025-07-06T09:18:27.241353",
   "year": 1991
 }

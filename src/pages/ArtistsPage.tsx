@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Users, Music } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { CollectionStats } from '@/components/CollectionStats';
+import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
   PaginationContent,
@@ -47,14 +48,45 @@ interface ArtistsPageProps {
 }
 
 export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
+  const { page } = useParams<{ page?: string }>();
+  const navigate = useNavigate();
   const [collection, setCollection] = useState<Album[]>([]);
   const [artists, setArtists] = useState<Artist[]>([]);
   const [filteredArtists, setFilteredArtists] = useState<Artist[]>([]);
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState('name');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.artists;
+  const currentPage = page ? parseInt(page, 10) : 1;
+
+  // Generate dynamic page title
+  const getPageTitle = () => {
+    const parts = ['Artists'];
+    
+    const sortLabels: Record<string, string> = {
+      'name': 'A-Z',
+      'albums': 'Most Albums',
+      'latest': 'Recently Added'
+    };
+    
+    if (sortBy !== 'name') {
+      parts.push(`Sorted by ${sortLabels[sortBy]}`);  
+    }
+    
+    if (searchTerm) {
+      parts.push(`Search: "${searchTerm}"`);
+    }
+    
+    if (currentPage > 1) {
+      parts.push(`Page ${currentPage}`);
+    }
+    
+    parts.push('Russ.fm');
+    return parts.join(' | ');
+  };
+  
+  usePageTitle(getPageTitle());
 
   useEffect(() => {
     loadCollection();
@@ -68,12 +100,16 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
 
   useEffect(() => {
     filterAndSortArtists();
+    
+    // Only navigate to page 1 if search term actually changed
+    if (searchTerm !== prevSearchTerm) {
+      setPrevSearchTerm(searchTerm);
+      if (currentPage !== 1) {
+        navigate('/artists/1');
+      }
+    }
   }, [artists, searchTerm, sortBy]);
 
-  // Reset to first page when filters change
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [searchTerm, sortBy]);
 
   const loadCollection = async () => {
     try {
@@ -214,7 +250,10 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               <label className="text-sm font-medium text-muted-foreground">
                 Sort by
               </label>
-              <Select value={sortBy} onValueChange={setSortBy}>
+              <Select value={sortBy} onValueChange={(value) => {
+                setSortBy(value);
+                if (currentPage !== 1) navigate('/artists/1');
+              }}>
                 <SelectTrigger className="w-48">
                   <SelectValue />
                 </SelectTrigger>
@@ -307,7 +346,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
             <PaginationContent>
               <PaginationItem>
                 <PaginationPrevious 
-                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  onClick={() => navigate(`/artists/${Math.max(1, currentPage - 1)}`)}
                   className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
@@ -318,7 +357,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
                     <PaginationEllipsis />
                   ) : (
                     <PaginationLink
-                      onClick={() => setCurrentPage(page as number)}
+                      onClick={() => navigate(`/artists/${page}`)}
                       isActive={currentPage === page}
                       className="cursor-pointer"
                     >
@@ -330,7 +369,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               
               <PaginationItem>
                 <PaginationNext 
-                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  onClick={() => navigate(`/artists/${Math.min(totalPages, currentPage + 1)}`)}
                   className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
