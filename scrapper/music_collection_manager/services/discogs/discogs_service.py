@@ -36,10 +36,14 @@ class DiscogsService(BaseService):
     
     def _get_auth_headers(self) -> Dict[str, str]:
         """Get authentication headers."""
-        return {
+        # Debug: Check the actual token value
+        self.logger.info(f"🔑 Using Discogs token: {self.access_token[:10]}...{self.access_token[-10:]}")
+        headers = {
             "Authorization": f"Discogs token={self.access_token}",
             "User-Agent": "MusicCollectionManager/1.0",
         }
+        self.logger.info(f"🔑 Full headers: {headers}")
+        return headers
     
     def search_artist(self, artist_name: str, limit: int = 25) -> Dict[str, Any]:
         """Search for artists in Discogs."""
@@ -50,9 +54,53 @@ class DiscogsService(BaseService):
         }
         
         headers = self._get_auth_headers()
-        response = self._make_request("GET", f"{self.BASE_URL}/database/search", headers=headers, params=params)
+        url = f"{self.BASE_URL}/database/search"
         
-        return response.json()
+        self.logger.info(f"🔍 Making Discogs search request to: {url}")
+        self.logger.info(f"🔍 Headers: {headers}")
+        self.logger.info(f"🔍 Params: {params}")
+        
+        # Use direct requests instead of the session to avoid retry/adapter issues
+        import requests
+        import time
+        
+        # Add a small delay to avoid potential timing issues
+        time.sleep(0.5)
+        
+        self.logger.info(f"🔄 Making direct search request to: {url}")
+        try:
+            response = requests.get(url, headers=headers, params=params, timeout=30)
+            self.logger.info(f"📊 Search response status: {response.status_code}")
+            self.logger.info(f"📊 Search response headers: {dict(response.headers)}")
+            
+            if response.status_code != 200:
+                self.logger.error(f"📊 Search response body: {response.text[:200]}...")
+            
+            # Check for rate limiting
+            if response.status_code == 429:
+                from ..base.exceptions import RateLimitError
+                retry_after = response.headers.get("Retry-After", 60)
+                raise RateLimitError(
+                    f"Rate limit exceeded for {url}",
+                    retry_after=int(retry_after)
+                )
+            
+            # Check for authentication errors
+            if response.status_code in [401, 403]:
+                from ..base.exceptions import AuthenticationError
+                raise AuthenticationError(
+                    f"Authentication failed for {url}: {response.status_code}"
+                )
+            
+            # Check for other errors
+            response.raise_for_status()
+            
+            return response.json()
+            
+        except requests.exceptions.RequestException as e:
+            self.logger.error(f"Request failed for {url}: {str(e)}")
+            from ..base.exceptions import APIError
+            raise APIError(f"Request failed: {str(e)}")
 
     def search_release(self, artist: str, album: str, **kwargs) -> Dict[str, Any]:
         """Search for a release by artist and album."""
@@ -135,9 +183,50 @@ class DiscogsService(BaseService):
     def get_artist_details(self, artist_id: str) -> Dict[str, Any]:
         """Get detailed information about an artist."""
         headers = self._get_auth_headers()
-        response = self._make_request("GET", f"{self.BASE_URL}/artists/{artist_id}", headers=headers)
+        url = f"{self.BASE_URL}/artists/{artist_id}"
         
-        return response.json()
+        # Use direct requests instead of the session to avoid retry/adapter issues
+        import requests
+        import time
+        
+        # Add a small delay to avoid potential timing issues
+        time.sleep(0.5)
+        
+        self.logger.info(f"🔄 Making direct request to: {url}")
+        try:
+            response = requests.get(url, headers=headers, timeout=30)
+            self.logger.info(f"📊 Response status: {response.status_code}")
+            self.logger.info(f"📊 Response headers: {dict(response.headers)}")
+            
+            if response.status_code != 200:
+                self.logger.error(f"📊 Response body: {response.text[:200]}...")
+            
+            
+            # Check for rate limiting
+            if response.status_code == 429:
+                from ..base.exceptions import RateLimitError
+                retry_after = response.headers.get("Retry-After", 60)
+                raise RateLimitError(
+                    f"Rate limit exceeded for {url}",
+                    retry_after=int(retry_after)
+                )
+            
+            # Check for authentication errors
+            if response.status_code in [401, 403]:
+                from ..base.exceptions import AuthenticationError
+                raise AuthenticationError(
+                    f"Authentication failed for {url}: {response.status_code}"
+                )
+            
+            # Check for other errors
+            response.raise_for_status()
+            
+            return response.json()
+            
+        except requests.exceptions.RequestException as e:
+            self.logger.error(f"Request failed for {url}: {str(e)}")
+            from ..base.exceptions import APIError
+            raise APIError(f"Request failed: {str(e)}")
 
     def find_best_artist_match(self, search_results: Dict[str, Any], target_artist: str) -> Optional[Dict[str, Any]]:
         """Find the best matching artist from Discogs search results."""
