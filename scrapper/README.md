@@ -263,6 +263,25 @@ This is perfect for:
 - Custom or fan-made artwork
 - Correcting incorrect artwork matches
 
+#### Custom Artist Images
+
+Use `--custom-image` to override artist images with a custom image URL:
+
+```bash
+# Use higher quality artist photo from a record store
+python main.py artist "Claudia Brücken" --custom-image "https://www.russ.fm/artists/claudia-brucken/claudia-brucken.jpg"
+
+# Use official artist photo from band website
+python main.py artist "Pink Floyd" --custom-image "https://example.com/official-band-photo.jpg"
+```
+
+This is perfect for:
+- Higher quality artist photos than available on streaming services
+- Official artist photos from band websites
+- Professional press photos
+- Custom or fan-made artwork
+- Correcting incorrect artist image matches
+
 #### Combining Advanced Options
 
 ```bash
@@ -270,6 +289,10 @@ This is perfect for:
 python main.py release 123456 --force-refresh --interactive \
   --search "Custom Search Term" \
   --custom-cover "https://example.com/custom-cover.jpg"
+
+# Use custom image with artist enrichment
+python main.py artist "Claudia Brücken" --force-refresh --interactive \
+  --custom-image "https://www.russ.fm/artists/claudia-brucken/claudia-brucken.jpg"
 ```
 
 ### Global Options

@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Disc, Calendar, ExternalLink, Globe, Music } from 'lucide-react';
+import { ArrowLeft, Clock, Disc, Calendar, ExternalLink, Globe, Music, Plus, Star, Play, Users } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs } from 'react-icons/si';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -267,14 +267,9 @@ export function AlbumDetailPage() {
 
   const year = new Date(album.date_release_year).getFullYear();
   
-  // Get tracks from multiple sources with fallbacks
+  // Get tracks from multiple sources with fallbacks - prioritize Discogs
   const getTracks = () => {
-    // Try Spotify tracks first (usually has durations)
-    if (detailedAlbum?.services?.spotify?.tracks && detailedAlbum.services.spotify.tracks.length > 0) {
-      return detailedAlbum.services.spotify.tracks;
-    }
-    
-    // Try main tracklist - check for compilation format first
+    // Try Discogs tracklist first (main tracklist from Discogs data)
     if (detailedAlbum?.tracklist && detailedAlbum.tracklist.length > 0) {
       // Check if this is a compilation with complex track structure
       const firstTrack = detailedAlbum.tracklist[0];
@@ -293,7 +288,12 @@ export function AlbumDetailPage() {
       }
     }
     
-    // Try raw Spotify data tracks
+    // Fallback to Spotify tracks (only if Discogs tracklist not available)
+    if (detailedAlbum?.services?.spotify?.tracks && detailedAlbum.services.spotify.tracks.length > 0) {
+      return detailedAlbum.services.spotify.tracks;
+    }
+    
+    // Fallback to raw Spotify data tracks
     if (detailedAlbum?.services?.spotify?.raw_data?.tracks?.items && detailedAlbum.services.spotify.raw_data.tracks.items.length > 0) {
       return detailedAlbum.services.spotify.raw_data.tracks.items.map((track: any, index: number) => ({
         track_number: track.track_number || index + 1,
@@ -304,7 +304,7 @@ export function AlbumDetailPage() {
       }));
     }
     
-    // Try Last.fm tracks
+    // Last fallback to Last.fm tracks
     if (detailedAlbum?.services?.lastfm?.raw_data?.album?.tracks?.track) {
       const lastfmTracks = detailedAlbum.services.lastfm.raw_data.album.tracks.track;
       return (Array.isArray(lastfmTracks) ? lastfmTracks : [lastfmTracks]).map((track: any, index: number) => ({
@@ -359,57 +359,58 @@ export function AlbumDetailPage() {
           </div>
           
           <div className="space-y-6">
-            {/* Basic Info */}
-            <div className="flex items-center gap-4 text-muted-foreground">
-              <div className="flex items-center gap-2">
+            {/* Combined Info and Statistics */}
+            <div className="flex flex-wrap items-center gap-6 text-sm">
+              {/* Added Date */}
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Calendar className="h-4 w-4" />
+                <span>Added: {new Date(album.date_added).getFullYear()}</span>
+              </div>
+              
+              {/* Release Year */}
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Calendar className="h-4 w-4" />
                 <span>{year}</span>
               </div>
+              
+              {/* Country */}
               {detailedAlbum?.country && (
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 text-muted-foreground">
                   <Globe className="h-4 w-4" />
                   <span>{detailedAlbum.country}</span>
                 </div>
               )}
+
+              {/* Spotify Stats */}
+              {detailedAlbum?.services?.spotify?.raw_data?.total_tracks && (
+                <div className="flex items-center gap-2">
+                  <SiSpotify className="h-4 w-4 text-green-600" />
+                  <span>{detailedAlbum.services.spotify.raw_data.total_tracks} tracks</span>
+                </div>
+              )}
+
+              {/* Apple Music Stats */}
+              {detailedAlbum?.services?.apple_music?.raw_attributes?.trackCount && (
+                <div className="flex items-center gap-2">
+                  <SiApplemusic className="h-4 w-4" style={{color: '#FF4E6B'}} />
+                  <span>{detailedAlbum.services.apple_music.raw_attributes.trackCount} tracks</span>
+                </div>
+              )}
+
+              {/* Last.fm Stats */}
+              {detailedAlbum?.services?.lastfm?.listeners && (
+                <div className="flex items-center gap-2">
+                  <SiLastdotfm className="h-4 w-4 text-red-600" />
+                  <span>{formatNumber(detailedAlbum.services.lastfm.listeners)} listeners</span>
+                </div>
+              )}
+              {detailedAlbum?.services?.lastfm?.playcount && (
+                <div className="flex items-center gap-2">
+                  <SiLastdotfm className="h-4 w-4 text-red-600" />
+                  <span>{formatNumber(detailedAlbum.services.lastfm.playcount)} plays</span>
+                </div>
+              )}
             </div>
-
-            {/* Statistics */}
-            {detailedAlbum?.services && (
-              <div className="flex items-center gap-6 text-sm">
-                {detailedAlbum.services.spotify?.popularity && (
-                  <div className="flex items-center gap-2">
-                    <SiSpotify className="h-4 w-4 text-green-600" />
-                    <span>Popularity: {detailedAlbum.services.spotify.popularity}/100</span>
-                  </div>
-                )}
-                {detailedAlbum.services.lastfm?.listeners && (
-                  <div className="flex items-center gap-2">
-                    <SiLastdotfm className="h-4 w-4 text-red-600" />
-                    <span>{formatNumber(detailedAlbum.services.lastfm.listeners)} listeners</span>
-                  </div>
-                )}
-                {detailedAlbum.services.lastfm?.playcount && (
-                  <div className="flex items-center gap-2">
-                    <SiLastdotfm className="h-4 w-4 text-red-600" />
-                    <span>{formatNumber(detailedAlbum.services.lastfm.playcount)} plays</span>
-                  </div>
-                )}
-              </div>
-            )}
-
-            {/* Description */}
-            {getAlbumDescription() && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">About This Album</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {getAlbumDescription()}
-                  </p>
-                </CardContent>
-              </Card>
-            )}
 
             {/* Genres and Styles */}
             <div className="space-y-3">
@@ -432,109 +433,133 @@ export function AlbumDetailPage() {
               )}
             </div>
 
-            {/* Album Details */}
-            {detailedAlbum && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Release Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {detailedAlbum.labels && detailedAlbum.labels.length > 0 && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium min-w-[80px]">Label:</span>
-                      <span className="text-muted-foreground">{detailedAlbum.labels.join(', ')}</span>
-                    </div>
-                  )}
-                  {detailedAlbum.formats && detailedAlbum.formats.length > 0 && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium min-w-[80px]">Format:</span>
-                      <span className="text-muted-foreground">{detailedAlbum.formats.join(', ')}</span>
-                    </div>
-                  )}
-                  {detailedAlbum.services?.spotify?.external_ids?.upc && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium min-w-[80px]">UPC:</span>
-                      <span className="text-muted-foreground font-mono text-xs">
-                        {detailedAlbum.services.spotify.external_ids.upc}
-                      </span>
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            )}
+            {/* Service Buttons */}
+            <div className="space-y-3 mt-6">
+              {/* Last.fm Scrobble Button - Always spans full width */}
+              <Button 
+                onClick={() => {
+                  const discogsId = detailedAlbum?.discogs_id || detailedAlbum?.id || album.uri_release.match(/\/(\d+)\//)?.[1];
+                  if (discogsId) {
+                    window.open(
+                      `https://scrobbler.russ.fm/embed/${discogsId}/`,
+                      'lastfm-scrobbler',
+                      'width=400,height=600,scrollbars=no,resizable=no'
+                    );
+                  }
+                }}
+                className="w-full btn-service btn-lastfm h-12"
+                variant="outline"
+              >
+                <SiLastdotfm className="service-icon" />
+                <span className="service-text">Scrobble to Last.fm</span>
+              </Button>
 
-            {/* Enhanced External Links */}
-            {detailedAlbum?.services && (
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Listen & Explore</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {(detailedAlbum.spotify_url || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.spotify?.raw_data?.external_urls?.spotify) && (
-                      <a 
-                        href={detailedAlbum.spotify_url || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.spotify?.raw_data?.external_urls?.spotify}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-green-50 hover:bg-green-100 text-green-700 transition-colors"
-                      >
-                        <SiSpotify className="h-4 w-4" />
-                        <span className="text-sm font-medium">Spotify</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
-                    )}
-                    {detailedAlbum.services?.apple_music?.url && (
-                      <a 
-                        href={detailedAlbum.services.apple_music.url}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 text-gray-700 transition-colors"
-                      >
-                        <SiApplemusic className="h-4 w-4" />
-                        <span className="text-sm font-medium">Apple Music</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
-                    )}
-                    {detailedAlbum.services?.lastfm?.url && (
-                      <a 
-                        href={detailedAlbum.services.lastfm.url}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-red-50 hover:bg-red-100 text-red-700 transition-colors"
-                      >
-                        <SiLastdotfm className="h-4 w-4" />
-                        <span className="text-sm font-medium">Last.fm</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
-                    )}
-                    {(detailedAlbum.discogs_url || detailedAlbum.discogs_id || detailedAlbum.services?.discogs?.url || detailedAlbum.services?.discogs?.id) && (
-                      <a 
-                        href={detailedAlbum.discogs_url || detailedAlbum.services?.discogs?.url || `https://www.discogs.com/release/${detailedAlbum.discogs_id || detailedAlbum.services?.discogs?.id}`}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-700 transition-colors"
-                      >
-                        <SiDiscogs className="h-4 w-4" />
-                        <span className="text-sm font-medium">Discogs</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
+              {/* View on Discogs - Always spans full width */}
+              {(detailedAlbum?.discogs_url || detailedAlbum?.discogs_id || detailedAlbum?.services?.discogs?.url || detailedAlbum?.services?.discogs?.id) && (
+                <Button 
+                  variant="outline"
+                  className="w-full btn-service btn-discogs h-12"
+                  onClick={() => window.open(detailedAlbum?.discogs_url || detailedAlbum?.services?.discogs?.url || `https://www.discogs.com/release/${detailedAlbum?.discogs_id || detailedAlbum?.services?.discogs?.id}`, '_blank')}
+                >
+                  <SiDiscogs className="service-icon" />
+                  <span className="service-text">View on Discogs</span>
+                </Button>
+              )}
 
-            {/* Copyright Information */}
-            {detailedAlbum?.services?.spotify?.copyrights && detailedAlbum.services.spotify.copyrights.length > 0 && (
-              <div className="text-xs text-muted-foreground space-y-1">
-                {detailedAlbum.services.spotify.copyrights.map((copyright, index) => (
-                  <p key={index}>{copyright.text}</p>
-                ))}
-              </div>
-            )}
+              {(() => {
+                const serviceButtons = [];
+
+                // Listen on Apple Music
+                if (detailedAlbum?.services?.apple_music?.url) {
+                  serviceButtons.push(
+                    <Button 
+                      key="apple"
+                      variant="outline"
+                      className="btn-service btn-apple-music h-12"
+                      onClick={() => window.open(detailedAlbum.services.apple_music.url, '_blank')}
+                    >
+                      <SiApplemusic className="service-icon" />
+                      <span className="service-text">Listen on Apple Music</span>
+                    </Button>
+                  );
+                }
+
+                // Listen on Spotify
+                if (detailedAlbum?.spotify_url || detailedAlbum?.services?.spotify?.url || detailedAlbum?.services?.spotify?.raw_data?.external_urls?.spotify) {
+                  serviceButtons.push(
+                    <Button 
+                      key="spotify"
+                      variant="outline"
+                      className="btn-service btn-spotify h-12"
+                      onClick={() => window.open(detailedAlbum?.spotify_url || detailedAlbum?.services?.spotify?.url || detailedAlbum?.services?.spotify?.raw_data?.external_urls?.spotify, '_blank')}
+                    >
+                      <SiSpotify className="service-icon" />
+                      <span className="service-text">Listen on Spotify</span>
+                    </Button>
+                  );
+                }
+
+                // View on Last.fm
+                if (detailedAlbum?.services?.lastfm?.url) {
+                  serviceButtons.push(
+                    <Button 
+                      key="lastfm"
+                      variant="outline"
+                      className="btn-service btn-lastfm h-12"
+                      onClick={() => window.open(detailedAlbum.services.lastfm.url, '_blank')}
+                    >
+                      <SiLastdotfm className="service-icon" />
+                      <span className="service-text">View on Last.fm</span>
+                    </Button>
+                  );
+                }
+
+                if (serviceButtons.length === 0) return null;
+
+                const isOdd = serviceButtons.length % 2 === 1;
+                const pairs = [];
+                
+                for (let i = 0; i < serviceButtons.length - (isOdd ? 1 : 0); i += 2) {
+                  pairs.push(
+                    <div key={`pair-${i}`} className="grid grid-cols-2 gap-3">
+                      {serviceButtons[i]}
+                      {serviceButtons[i + 1]}
+                    </div>
+                  );
+                }
+
+                if (isOdd) {
+                  pairs.push(
+                    <div key="last-button" className="w-full">
+                      {React.cloneElement(serviceButtons[serviceButtons.length - 1], { 
+                        className: serviceButtons[serviceButtons.length - 1].props.className.replace('btn-service', 'w-full btn-service')
+                      })}
+                    </div>
+                  );
+                }
+
+                return pairs;
+              })()}
+            </div>
+
+
           </div>
         </div>
       </div>
+
+      {/* Description */}
+      {getAlbumDescription() && (
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="text-lg">About This Album</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground leading-relaxed">
+              {getAlbumDescription()}
+            </p>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Tracklist */}
       {tracks.length > 0 && (
@@ -550,34 +575,42 @@ export function AlbumDetailPage() {
           </CardHeader>
           <CardContent className="p-0">
             <div className="divide-y divide-border">
-              {tracks.map((track, index) => (
-                <div key={index} className="flex items-center justify-between p-4 hover:bg-muted/50 transition-colors">
-                  <div className="flex items-center gap-4 flex-1 min-w-0">
-                    <span className="text-muted-foreground font-mono text-sm w-8 flex-shrink-0">
-                      {track.track_number || index + 1}
-                    </span>
-                    {track.position && (
-                      <span className="text-muted-foreground font-mono text-xs bg-muted px-2 py-1 rounded flex-shrink-0">
-                        {track.position}
+              {tracks.map((track, index) => {
+                // Check if this is a side/section title (empty position and duration)
+                const isSectionTitle = !track.position && !getTrackDuration(track);
+                
+                if (isSectionTitle) {
+                  return (
+                    <div key={index} className="bg-muted/30 p-4 border-l-4 border-l-primary">
+                      <h3 className="font-semibold text-lg text-primary">{track.name}</h3>
+                    </div>
+                  );
+                }
+                
+                return (
+                  <div key={index} className="flex items-center justify-between p-4 hover:bg-muted/50 transition-colors">
+                    <div className="flex items-center gap-4 flex-1 min-w-0">
+                      <span className="text-muted-foreground font-mono text-sm w-12 flex-shrink-0">
+                        {track.position || track.track_number || index + 1}
                       </span>
+                      <div className="min-w-0 flex-1">
+                        <span className="font-medium block truncate">{track.name}</span>
+                        {track.artists && track.artists.length > 0 && (
+                          <span className="text-sm text-muted-foreground block truncate">
+                            by {track.artists.map((artist: any) => artist.name).join(', ')}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                    {getTrackDuration(track) && (
+                      <div className="flex items-center gap-1 text-muted-foreground text-sm font-mono flex-shrink-0">
+                        <Clock className="h-3 w-3" />
+                        {getTrackDuration(track)}
+                      </div>
                     )}
-                    <div className="min-w-0 flex-1">
-                      <span className="font-medium block truncate">{track.name}</span>
-                      {track.artists && track.artists.length > 0 && (
-                        <span className="text-sm text-muted-foreground block truncate">
-                          by {track.artists.map((artist: any) => artist.name).join(', ')}
-                        </span>
-                      )}
-                    </div>
                   </div>
-                  {getTrackDuration(track) && (
-                    <div className="flex items-center gap-1 text-muted-foreground text-sm font-mono flex-shrink-0">
-                      <Clock className="h-3 w-3" />
-                      {getTrackDuration(track)}
-                    </div>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
           </CardContent>
         </Card>
@@ -607,6 +640,83 @@ export function AlbumDetailPage() {
                   </div>
                 )
               )}
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
+      {/* Release Information */}
+      {detailedAlbum && (
+        <div className="mt-8">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Release Information</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  {detailedAlbum.labels && detailedAlbum.labels.length > 0 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Label:</span>
+                      <span className="col-span-2 text-muted-foreground">{detailedAlbum.labels.join(', ')}</span>
+                    </div>
+                  )}
+                  {detailedAlbum.formats && detailedAlbum.formats.length > 0 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Format:</span>
+                      <span className="col-span-2 text-muted-foreground">{detailedAlbum.formats.join(', ')}</span>
+                    </div>
+                  )}
+                  {detailedAlbum.services?.spotify?.external_ids?.upc && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">UPC:</span>
+                      <span className="col-span-2 text-muted-foreground font-mono text-sm">
+                        {detailedAlbum.services.spotify.external_ids.upc}
+                      </span>
+                    </div>
+                  )}
+                  {/* Copyright Information */}
+                  {detailedAlbum?.services?.spotify?.copyrights && detailedAlbum.services.spotify.copyrights.length > 0 && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Copyright:</span>
+                      <div className="col-span-2 space-y-1">
+                        {detailedAlbum.services.spotify.copyrights.map((copyright, index) => (
+                          <div key={index} className="text-sm text-muted-foreground">
+                            {copyright.text}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className="space-y-4">
+                  {/* Service IDs */}
+                  {(detailedAlbum?.discogs_id || detailedAlbum?.id) && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Discogs ID:</span>
+                      <span className="col-span-2 text-muted-foreground font-mono text-sm">
+                        {detailedAlbum.discogs_id || detailedAlbum.id}
+                      </span>
+                    </div>
+                  )}
+                  {detailedAlbum?.services?.spotify?.id && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Spotify ID:</span>
+                      <span className="col-span-2 text-muted-foreground font-mono text-sm">
+                        {detailedAlbum.services.spotify.id}
+                      </span>
+                    </div>
+                  )}
+                  {detailedAlbum?.apple_music_id && (
+                    <div className="grid grid-cols-3 gap-4">
+                      <span className="font-semibold text-sm">Apple Music ID:</span>
+                      <span className="col-span-2 text-muted-foreground font-mono text-sm">
+                        {detailedAlbum.apple_music_id}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>

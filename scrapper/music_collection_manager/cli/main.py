@@ -285,8 +285,12 @@ def backup(ctx, backup_path):
     is_flag=True, 
     help="Enable interactive mode for manual artist selection"
 )
+@click.option(
+    "--custom-image", 
+    help="Override artist image with custom image URL"
+)
 @click.pass_context
-def artist(ctx, artist_name, save, output, force_refresh, interactive):
+def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image):
     """Get comprehensive artist information."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.serializers import ArtistSerializer
@@ -308,6 +312,11 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive):
     if interactive:
         orchestrator.set_interactive_mode(True)
         console.print(f"[cyan]Interactive mode enabled - you'll be prompted to select artist matches[/cyan]")
+    
+    # Set custom image if provided
+    if custom_image:
+        orchestrator.set_custom_image(custom_image)
+        console.print(f"[yellow]Using custom image: '{custom_image}'[/yellow]")
     
     with console.status(f"[bold green]Fetching artist data for: {artist_name}"):
         # Get artist data

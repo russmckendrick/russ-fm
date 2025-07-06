@@ -285,54 +285,46 @@ export function ArtistDetailPage() {
                   <CardTitle className="text-lg">Listen & Explore</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {(artistData.spotify_url || artistData.services?.spotify?.url || artistData.services?.spotify?.external_urls?.spotify) && (
-                      <a 
-                        href={artistData.spotify_url || artistData.services?.spotify?.url || artistData.services?.spotify?.external_urls?.spotify}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-green-50 hover:bg-green-100 text-green-700 transition-colors"
+                      <Button 
+                        variant="outline"
+                        className="btn-service btn-spotify justify-start h-12 p-3"
+                        onClick={() => window.open(artistData.spotify_url || artistData.services?.spotify?.url || artistData.services?.spotify?.external_urls?.spotify, '_blank')}
                       >
-                        <SiSpotify className="h-4 w-4" />
-                        <span className="text-sm font-medium">Spotify</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
+                        <SiSpotify className="service-icon" />
+                        <span className="service-text">Listen on Spotify</span>
+                      </Button>
                     )}
                     {artistData.services?.apple_music?.url && (
-                      <a 
-                        href={artistData.services.apple_music.url}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 text-gray-700 transition-colors"
+                      <Button 
+                        variant="outline"
+                        className="btn-service btn-apple-music justify-start h-12 p-3"
+                        onClick={() => window.open(artistData.services.apple_music.url, '_blank')}
                       >
-                        <SiApplemusic className="h-4 w-4" />
-                        <span className="text-sm font-medium">Apple Music</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
+                        <SiApplemusic className="service-icon" />
+                        <span className="service-text">Listen on Apple Music</span>
+                      </Button>
                     )}
                     {artistData.services?.lastfm?.url && (
-                      <a 
-                        href={artistData.services.lastfm.url}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-red-50 hover:bg-red-100 text-red-700 transition-colors"
+                      <Button 
+                        variant="outline"
+                        className="btn-service btn-lastfm justify-start h-12 p-3"
+                        onClick={() => window.open(artistData.services.lastfm.url, '_blank')}
                       >
-                        <SiLastdotfm className="h-4 w-4" />
-                        <span className="text-sm font-medium">Last.fm</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
+                        <SiLastdotfm className="service-icon" />
+                        <span className="service-text">View on Last.fm</span>
+                      </Button>
                     )}
                     {(artistData.discogs_url || artistData.discogs_id || artistData.services?.discogs?.url) && (
-                      <a 
-                        href={artistData.discogs_url || artistData.services?.discogs?.url || `https://www.discogs.com/artist/${artistData.discogs_id || artistData.services?.discogs?.id}`}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 text-orange-700 transition-colors"
+                      <Button 
+                        variant="outline"
+                        className="btn-service btn-discogs justify-start h-12 p-3"
+                        onClick={() => window.open(artistData.discogs_url || artistData.services?.discogs?.url || `https://www.discogs.com/artist/${artistData.discogs_id || artistData.services?.discogs?.id}`, '_blank')}
                       >
-                        <SiDiscogs className="h-4 w-4" />
-                        <span className="text-sm font-medium">Discogs</span>
-                        <ExternalLink className="h-3 w-3 ml-auto" />
-                      </a>
+                        <SiDiscogs className="service-icon" />
+                        <span className="service-text">View on Discogs</span>
+                      </Button>
                     )}
                   </div>
                 </CardContent>
