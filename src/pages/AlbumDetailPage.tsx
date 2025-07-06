@@ -13,6 +13,16 @@ import { filterGenres } from '@/lib/filterGenres';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    json_detailed_artist: string;
+    images_uri_artist: {
+      'hi-res': string;
+      medium: string;
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -146,9 +156,9 @@ export function AlbumDetailPage() {
   // Set page title based on album data
   const pageTitle = detailedAlbum 
     ? `${detailedAlbum.title} by ${
-        detailedAlbum.artists && detailedAlbum.artists.length > 1 
-          ? detailedAlbum.artists.map(artist => artist.name).join(' & ')
-          : detailedAlbum.artists[0]?.name || album?.release_artist || 'Unknown Artist'
+        album?.artists && album.artists.length > 1 
+          ? album.artists.map(artist => artist.name).join(' & ')
+          : album?.release_artist || 'Unknown Artist'
       } | Russ.fm`
     : 'Loading Album... | Russ.fm';
   
@@ -350,21 +360,35 @@ export function AlbumDetailPage() {
         
         <div className="lg:col-span-3">
           <div className="flex items-start gap-3 mb-4">
-            <Avatar className="h-20 w-20 mt-1">
-              <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
-              <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
-            </Avatar>
+            {album.artists && album.artists.length > 1 ? (
+              <div className="flex gap-2 mt-1">
+                {album.artists.map((artist, index) => (
+                  <Avatar key={index} className="h-20 w-20">
+                    <AvatarImage src={artist.images_uri_artist['hi-res']} alt={artist.name} />
+                    <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                ))}
+              </div>
+            ) : (
+              <Avatar className="h-20 w-20 mt-1">
+                <AvatarImage src={album.images_uri_artist['hi-res']} alt={album.release_artist} />
+                <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
+              </Avatar>
+            )}
             <div className="flex-1 min-w-0">
               <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>
               <div className="text-2xl text-muted-foreground">
-                {detailedAlbum?.artists && detailedAlbum.artists.length > 1 ? (
+                {album.artists && album.artists.length > 1 ? (
                   <div className="flex flex-wrap items-center gap-1">
-                    {detailedAlbum.artists.map((artist, index) => (
+                    {album.artists.map((artist, index) => (
                       <React.Fragment key={index}>
-                        <span className="hover:text-primary transition-colors cursor-pointer">
+                        <Link 
+                          to={artist.uri_artist}
+                          className="hover:text-primary transition-colors"
+                        >
                           {artist.name}
-                        </span>
-                        {index < detailedAlbum.artists.length - 1 && (
+                        </Link>
+                        {index < album.artists.length - 1 && (
                           <span className="text-muted-foreground/60">&</span>
                         )}
                       </React.Fragment>
@@ -651,11 +675,30 @@ export function AlbumDetailPage() {
               <Card key={index} className="overflow-hidden">
                 <div className="flex">
                   <img
-                    src={album.images_uri_artist['hi-res']}
+                    src={(() => {
+                      // Find the matching artist image from the artists array
+                      if (album.artists) {
+                        const foundArtist = album.artists.find(a => a.name === artist.name);
+                        if (foundArtist) {
+                          return foundArtist.images_uri_artist['hi-res'];
+                        }
+                      }
+                      // Fallback to combined artist image
+                      return album.images_uri_artist['hi-res'];
+                    })()}
                     alt={artist.name}
                     className="w-[300px] h-auto object-cover flex-shrink-0"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
+                      // Use individual artist medium/small images if available
+                      if (album.artists) {
+                        const foundArtist = album.artists.find(a => a.name === artist.name);
+                        if (foundArtist) {
+                          target.src = foundArtist.images_uri_artist['medium'] || foundArtist.images_uri_artist['small'] || '';
+                          return;
+                        }
+                      }
+                      // Fallback to combined artist images
                       target.src = album.images_uri_artist['medium'] || album.images_uri_artist['small'] || '';
                     }}
                   />
@@ -691,18 +734,20 @@ export function AlbumDetailPage() {
                       )}
                     </div>
                     <div className="mt-4 text-center">
-                      <Button 
-                        variant="ghost" 
-                        size="sm"
-                        className="text-primary hover:text-primary-dark"
-                        onClick={() => {
-                          // For now, just use the main artist page link
-                          // In the future, this could link to individual artist pages
-                          window.location.href = album.uri_artist;
-                        }}
+                      <Link 
+                        to={
+                          album.artists && album.artists.find(a => a.name === artist.name)?.uri_artist ||
+                          album.uri_artist
+                        }
                       >
-                        Goto {artist.name} Page
-                      </Button>
+                        <Button 
+                          variant="ghost" 
+                          size="sm"
+                          className="text-primary hover:text-primary-dark"
+                        >
+                          Goto {artist.name} Page
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </div>

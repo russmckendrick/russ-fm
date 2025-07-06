@@ -9,6 +9,16 @@ import { filterGenres } from '@/lib/filterGenres';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    json_detailed_artist: string;
+    images_uri_artist: {
+      'hi-res': string;
+      medium: string;
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -103,39 +113,70 @@ export function SearchOverlay({ searchTerm, setSearchTerm, isVisible, onClose }:
     const artistResults: Map<string, SearchResult> = new Map();
 
     collection.forEach(album => {
-      const albumMatches = 
+      // Check if album name or genres match
+      const albumNameMatches = 
         album.release_name.toLowerCase().includes(searchLower) ||
-        album.release_artist.toLowerCase().includes(searchLower) ||
         album.genre_names.some(genre => genre.toLowerCase().includes(searchLower));
+      
+      // Check if any individual artist matches
+      const artistMatches = album.release_artist.toLowerCase().includes(searchLower) ||
+        (album.artists && album.artists.some(artist => artist.name.toLowerCase().includes(searchLower)));
 
-      if (albumMatches) {
+      if (albumNameMatches || artistMatches) {
         // Add album result
         albumResults.push({
           type: 'album',
           id: album.uri_release,
           title: album.release_name,
-          subtitle: album.release_artist,
+          subtitle: album.artists && album.artists.length > 1 
+            ? album.artists.map(artist => artist.name).join(' & ')
+            : album.release_artist,
           image: album.images_uri_release.medium,
           url: album.uri_release,
           year: new Date(album.date_release_year).getFullYear().toString(),
           genres: filterGenres(album.genre_names, album.release_artist).slice(0, 3)
         });
+      }
 
-        // Add/update artist result
-        const artistKey = album.release_artist.toLowerCase();
-        if (artistResults.has(artistKey)) {
-          const existing = artistResults.get(artistKey)!;
-          existing.albumCount = (existing.albumCount || 0) + 1;
-        } else {
-          artistResults.set(artistKey, {
-            type: 'artist',
-            id: album.uri_artist,
-            title: album.release_artist,
-            subtitle: `Artist in collection`,
-            image: album.images_uri_artist.medium,
-            url: album.uri_artist,
-            albumCount: 1
-          });
+      // Process individual artists for artist results
+      if (album.artists && album.artists.length > 0) {
+        album.artists.forEach(artist => {
+          if (artist.name.toLowerCase().includes(searchLower)) {
+            const artistKey = artist.name.toLowerCase();
+            if (artistResults.has(artistKey)) {
+              const existing = artistResults.get(artistKey)!;
+              existing.albumCount = (existing.albumCount || 0) + 1;
+            } else {
+              artistResults.set(artistKey, {
+                type: 'artist',
+                id: artist.uri_artist,
+                title: artist.name,
+                subtitle: `Artist in collection`,
+                image: artist.images_uri_artist.medium,
+                url: artist.uri_artist,
+                albumCount: 1
+              });
+            }
+          }
+        });
+      } else {
+        // Handle albums without artists array (backward compatibility)
+        if (album.release_artist.toLowerCase().includes(searchLower)) {
+          const artistKey = album.release_artist.toLowerCase();
+          if (artistResults.has(artistKey)) {
+            const existing = artistResults.get(artistKey)!;
+            existing.albumCount = (existing.albumCount || 0) + 1;
+          } else {
+            artistResults.set(artistKey, {
+              type: 'artist',
+              id: album.uri_artist,
+              title: album.release_artist,
+              subtitle: `Artist in collection`,
+              image: album.images_uri_artist.medium,
+              url: album.uri_artist,
+              albumCount: 1
+            });
+          }
         }
       }
     });
