@@ -162,8 +162,11 @@ class ArtistDataOrchestrator:
                     )
                     artist.add_image(apple_image)
             else:
-                # If service was skipped, preserve existing Apple Music data
-                self.logger.info(f"Apple Music data not updated, preserving existing data for {artist_name}")
+                # If service was skipped or returned no data, clear Apple Music metadata
+                self.logger.info(f"Apple Music data not available, clearing Apple Music metadata for {artist_name}")
+                artist.raw_data["apple_music"] = {}
+                artist.apple_music_id = None
+                artist.apple_music_url = None
         
         # Enrich with Spotify
         if "spotify" in self.services:
@@ -195,8 +198,13 @@ class ArtistDataOrchestrator:
                         )
                         artist.add_image(spotify_image)
             else:
-                # If service was skipped, preserve existing Spotify data
-                self.logger.info(f"Spotify data not updated, preserving existing data for {artist_name}")
+                # If service was skipped or returned no data, clear Spotify metadata
+                self.logger.info(f"Spotify data not available, clearing Spotify metadata for {artist_name}")
+                artist.raw_data["spotify"] = {}
+                artist.spotify_id = None
+                artist.spotify_url = None
+                artist.popularity = None
+                artist.followers = None
         
         # Enrich with Last.fm
         if "lastfm" in self.services:
@@ -208,8 +216,7 @@ class ArtistDataOrchestrator:
                     artist.lastfm_mbid = lastfm_data.mbid
                 if lastfm_data.url:
                     artist.lastfm_url = lastfm_data.url
-                if lastfm_data.bio_content and not artist.biography:
-                    artist.biography = lastfm_data.bio_content
+                # Note: Don't set biography from Last.fm here - we'll prioritize Discogs profile later
                 if lastfm_data.tags:
                     for tag in lastfm_data.tags[:5]:  # Limit to top 5 tags
                         if tag not in artist.genres:
@@ -224,8 +231,11 @@ class ArtistDataOrchestrator:
                         )
                         artist.add_image(lastfm_image)
             else:
-                # If service was skipped, preserve existing Last.fm data
-                self.logger.info(f"Last.fm data not updated, preserving existing data for {artist_name}")
+                # If service was skipped or returned no data, clear Last.fm metadata
+                self.logger.info(f"Last.fm data not available, clearing Last.fm metadata for {artist_name}")
+                artist.raw_data["lastfm"] = {}
+                artist.lastfm_mbid = None
+                artist.lastfm_url = None
         
         # Enrich with Wikipedia
         if "wikipedia" in self.services and not artist.biography:
@@ -379,57 +389,91 @@ class ArtistDataOrchestrator:
         return None
 
     def _get_discogs_artist_data(self, artist: Artist) -> Optional[Dict[str, Any]]:
-        """Get Discogs data for an artist."""
+        """Get Discogs data for an artist - first check cache, then fetch automatically."""
         try:
-            service = self.services["discogs"]
-            
             self.logger.info(f"🔍 Getting Discogs data for artist: {artist.name}")
             self.logger.info(f"🔍 Artist discogs_id: {artist.discogs_id}")
             
-            # If artist has a discogs_id, fetch detailed data directly
+            # If artist has a discogs_id, check for cached data first
             if artist.discogs_id:
                 self.logger.info(f"✅ Using existing Discogs ID {artist.discogs_id} for artist: {artist.name}")
+                
+                # Check for pre-fetched cached data
+                from pathlib import Path
+                import json
+                import subprocess
+                
+                cache_file = Path("discogs_cache") / f"artist_{artist.discogs_id}.json"
+                if cache_file.exists():
+                    try:
+                        with open(cache_file, 'r', encoding='utf-8') as f:
+                            cached_data = json.load(f)
+                        
+                        self.logger.info(f"✅ Found cached Discogs data for artist ID: {artist.discogs_id}")
+                        self.logger.info(f"🔍 Cached data profile: {len(cached_data.get('profile', ''))} chars")
+                        self.logger.info(f"🔍 Cached data images: {len(cached_data.get('images', []))} items")
+                        
+                        return cached_data
+                        
+                    except Exception as e:
+                        self.logger.warning(f"⚠️ Failed to load cached Discogs data: {e}")
+                
+                # No cached data found, run the fetch script automatically
+                self.logger.info(f"🚀 No cached data found, fetching Discogs data for artist ID: {artist.discogs_id}")
                 try:
-                    artist_details = service.get_artist_details(artist.discogs_id)
-                    self.logger.info(f"✅ Successfully fetched artist details from Discogs API for ID: {artist.discogs_id}")
+                    result = subprocess.run(
+                        ["python", "fetch_discogs_artist.py", str(artist.discogs_id)],
+                        capture_output=True,
+                        text=True,
+                        timeout=30
+                    )
                     
-                    # Create enrichment data from the detailed artist response
-                    return {
-                        "id": str(artist_details.get("id", "")),
-                        "name": artist_details.get("name", artist.name),
-                        "url": artist_details.get("uri", ""),
-                        "resource_url": artist_details.get("resource_url", ""),
-                        "profile": artist_details.get("profile", ""),
-                        "images": artist_details.get("images", []),
-                        "urls": artist_details.get("urls", []),
-                        "namevariations": artist_details.get("namevariations", []),
-                        "members": artist_details.get("members", []),
-                        "cover_image": artist_details.get("images", [{}])[0].get("resource_url", "") if artist_details.get("images") else "",
-                        "thumb": artist_details.get("images", [{}])[0].get("uri150", "") if artist_details.get("images") else "",
-                        "raw_data": artist_details
-                    }
+                    if result.returncode == 0:
+                        self.logger.info(f"✅ Successfully fetched Discogs data for artist ID: {artist.discogs_id}")
+                        
+                        # Now try to load the cached data
+                        if cache_file.exists():
+                            try:
+                                with open(cache_file, 'r', encoding='utf-8') as f:
+                                    cached_data = json.load(f)
+                                
+                                self.logger.info(f"✅ Loaded fresh Discogs data for artist ID: {artist.discogs_id}")
+                                self.logger.info(f"🔍 Fresh data profile: {len(cached_data.get('profile', ''))} chars")
+                                self.logger.info(f"🔍 Fresh data images: {len(cached_data.get('images', []))} items")
+                                
+                                return cached_data
+                                
+                            except Exception as e:
+                                self.logger.warning(f"⚠️ Failed to load fresh cached Discogs data: {e}")
+                    else:
+                        self.logger.warning(f"⚠️ Failed to fetch Discogs data: {result.stderr}")
+                        
+                except subprocess.TimeoutExpired:
+                    self.logger.warning(f"⚠️ Timeout while fetching Discogs data for artist ID: {artist.discogs_id}")
                 except Exception as e:
-                    self.logger.warning(f"❌ Failed to get Discogs artist details for ID {artist.discogs_id}: {str(e)}")
-                    # Fall back to search if direct ID lookup fails
+                    self.logger.warning(f"⚠️ Error running fetch script: {e}")
+                
+                # Return minimal data if fetch failed
+                return {
+                    "id": str(artist.discogs_id),
+                    "name": artist.name,
+                    "url": f"https://www.discogs.com/artist/{artist.discogs_id}",
+                    "resource_url": f"https://api.discogs.com/artists/{artist.discogs_id}",
+                    "profile": "",
+                    "images": [],
+                    "urls": [],
+                    "namevariations": [],
+                    "members": [],
+                    "cover_image": "",
+                    "thumb": "",
+                    "raw_data": {
+                        "id": artist.discogs_id,
+                        "resource_url": f"https://api.discogs.com/artists/{artist.discogs_id}",
+                        "note": f"Failed to fetch data automatically"
+                    }
+                }
             else:
-                self.logger.info(f"❌ No discogs_id found for artist: {artist.name}, falling back to search")
-            
-            # Fall back to search if no discogs_id or direct lookup failed
-            self.logger.info(f"🔍 Falling back to Discogs search for artist: {artist.name}")
-            artist_name = artist.name
-            if self.interactive_mode:
-                # Search for multiple artists first
-                search_results = service.search_artist(artist_name)
-                selected_match = self._interactive_select_artist_match("Discogs", search_results, artist_name)
-                if selected_match:
-                    return service.create_artist_enrichment(selected_match)
-                else:
-                    return None
-            else:
-                search_results = service.search_artist(artist_name)
-                best_match = service.find_best_artist_match(search_results, artist_name)
-                if best_match:
-                    return service.create_artist_enrichment(best_match)
+                self.logger.info(f"❌ No discogs_id found for artist: {artist.name}")
                 return None
             
         except Exception as e:
