@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "164362427",
+  "apple_music_url": "https://music.apple.com/gb/album/lost-in-translation-original-motion-picture-soundtrack/164362427",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK, Europe & US",
-  "created_at": "2025-07-05T16:31:38.909030",
+  "created_at": "2025-07-07T15:30:59.259911",
   "date_added": "2019-04-17T18:38:51-07:00",
   "discogs_id": "13468045",
   "discogs_url": "https://www.discogs.com/release/13468045-Various-Lost-In-Translation-Music-From-The-Motion-Picture-Soundtrack",
@@ -84,6 +84,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/tuNMBWTe1gClKKJwXIQZq1PPMAfQdHvnPcqqOskDw9E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDY4/MDQ1LTE1NTU2ODU4/NzAtNDU3Mi5wbmc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/dc/f4/11dcf4a2-28fb-59bd-a660-6d50474d0f7c/mzi.ncxnbkxd.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -91,23 +105,747 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045-hi-res.jpg",
+    "medium": "../public/album/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045-medium.jpg",
+    "small": "../public/album/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045/lost-in-translation-music-from-the-motion-picture-soundtrack-13468045-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:31:39.612393",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:31:07.430077",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Lost In Translation (Original Motion Picture Soundtrack)",
   "release_name_discogs": "Lost In Translation (Music From The Motion Picture Soundtrack)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Lost In Translation",
   "released": "2019-04-13",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/dc/f4/11dcf4a2-28fb-59bd-a660-6d50474d0f7c/mzi.ncxnbkxd.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2003 Emperor Norton Records. Manufactured and marketed by Rykodisc, Inc under exclusive license.",
+      "editorial_notes": "There's a hazy dream-pop sheen that coats the soundtrack to Sofia Coppola's cinematic musing on alienation in a crowd. My Bloody Valentine's Kevin Shields provides several meditative washes of guitar noise, while his band's scuzzy-yet-shimmering \"Sometimes\" perfectly captures the flick’s lonely and displaced vibe. Ambient electronic support comes from Air's gently melancholic \"Alone in Kyoto\" and the celestial calm of Squarepusher's \"Tommib\". French rockers Phoenix, led by Coppola's future husband, Thomas Mars, provide the wistful indie-pop gem \"Too Young\".",
+      "id": "164362427",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "1c201f",
+          "height": 1425,
+          "textColor1": "e7d8cf",
+          "textColor2": "cfa97f",
+          "textColor3": "beb3ac",
+          "textColor4": "ab8e6c",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/11/dc/f4/11dcf4a2-28fb-59bd-a660-6d50474d0f7c/mzi.ncxnbkxd.jpg/{w}x{h}bb.jpg",
+          "width": 1425
+        },
+        "copyright": "℗ 2003 Emperor Norton Records. Manufactured and marketed by Rykodisc, Inc under exclusive license.",
+        "editorialNotes": {
+          "short": "Mood music whether you're alone in Tokyo or late-night chilling at home.",
+          "standard": "There's a hazy dream-pop sheen that coats the soundtrack to Sofia Coppola's cinematic musing on alienation in a crowd. My Bloody Valentine's Kevin Shields provides several meditative washes of guitar noise, while his band's scuzzy-yet-shimmering \"Sometimes\" perfectly captures the flick’s lonely and displaced vibe. Ambient electronic support comes from Air's gently melancholic \"Alone in Kyoto\" and the celestial calm of Squarepusher's \"Tommib\". French rockers Phoenix, led by Coppola's future husband, Thomas Mars, provide the wistful indie-pop gem \"Too Young\"."
+        },
+        "genreNames": [
+          "Soundtrack",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Lost In Translation (Original Motion Picture Soundtrack)",
+        "playParams": {
+          "id": "164362427",
+          "kind": "album"
+        },
+        "recordLabel": "Ryko/WEA",
+        "releaseDate": "2003-09-09",
+        "trackCount": 15,
+        "upc": "014431706868",
+        "url": "https://music.apple.com/gb/album/lost-in-translation-original-motion-picture-soundtrack/164362427"
+      },
+      "url": "https://music.apple.com/gb/album/lost-in-translation-original-motion-picture-soundtrack/164362427"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2021 Ozer/Audio Vandals",
+          "type": "C"
+        },
+        {
+          "text": "2021 Ozer/Audio Vandals",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "196252414440"
+      },
+      "id": "0rZadqtF1P0kQqadODfmd5",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739e54fc0c83b6bfb52c900aad",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029e54fc0c83b6bfb52c900aad",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519e54fc0c83b6bfb52c900aad",
+          "width": 64
+        }
+      ],
+      "label": "Ozer/Audio Vandals",
+      "popularity": 48,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+            },
+            "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+            "id": "3J0qyBq8miao9sTXOlAkWp",
+            "name": "Ozer",
+            "type": "artist",
+            "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2021 Ozer/Audio Vandals",
+            "type": "C"
+          },
+          {
+            "text": "2021 Ozer/Audio Vandals",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "196252414440"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0rZadqtF1P0kQqadODfmd5"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/0rZadqtF1P0kQqadODfmd5?market=US",
+        "id": "0rZadqtF1P0kQqadODfmd5",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2739e54fc0c83b6bfb52c900aad",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e029e54fc0c83b6bfb52c900aad",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048519e54fc0c83b6bfb52c900aad",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Ozer/Audio Vandals",
+        "name": "Lost In Translation",
+        "popularity": 48,
+        "release_date": "2021-07-30",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/0rZadqtF1P0kQqadODfmd5/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 144402,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Cc8UFi18y381JadMlcYUq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Cc8UFi18y381JadMlcYUq",
+              "id": "2Cc8UFi18y381JadMlcYUq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Purposeful",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2Cc8UFi18y381JadMlcYUq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SKWSaWfjWEP3ziVB5GQuE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SKWSaWfjWEP3ziVB5GQuE",
+                  "id": "5SKWSaWfjWEP3ziVB5GQuE",
+                  "name": "The Jealous Guys",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SKWSaWfjWEP3ziVB5GQuE"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 191037,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3izfMeonpyMbFM71EGaLUF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3izfMeonpyMbFM71EGaLUF",
+              "id": "3izfMeonpyMbFM71EGaLUF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "D & A",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3izfMeonpyMbFM71EGaLUF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2yQYYGk1INA9FzwpYhdLcS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2yQYYGk1INA9FzwpYhdLcS",
+                  "id": "2yQYYGk1INA9FzwpYhdLcS",
+                  "name": "Sussy",
+                  "type": "artist",
+                  "uri": "spotify:artist:2yQYYGk1INA9FzwpYhdLcS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 227600,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2wn3panLbzOY3EPZm5o5gk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2wn3panLbzOY3EPZm5o5gk",
+              "id": "2wn3panLbzOY3EPZm5o5gk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blow My High",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2wn3panLbzOY3EPZm5o5gk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XbSfsGjk20wyw6aYH46Ry"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XbSfsGjk20wyw6aYH46Ry",
+                  "id": "4XbSfsGjk20wyw6aYH46Ry",
+                  "name": "Professa Gabel",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XbSfsGjk20wyw6aYH46Ry"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 181500,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3goXDAm8UraboLyW11KPBc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3goXDAm8UraboLyW11KPBc",
+              "id": "3goXDAm8UraboLyW11KPBc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Still Purrin'",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3goXDAm8UraboLyW11KPBc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4LtaPW8xCjZcNmhq5rx9Rd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4LtaPW8xCjZcNmhq5rx9Rd",
+                  "id": "4LtaPW8xCjZcNmhq5rx9Rd",
+                  "name": "LEX Culture",
+                  "type": "artist",
+                  "uri": "spotify:artist:4LtaPW8xCjZcNmhq5rx9Rd"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 322666,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/35EcPoY1FX4tjDHXJvDap1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/35EcPoY1FX4tjDHXJvDap1",
+              "id": "35EcPoY1FX4tjDHXJvDap1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "All Falls Down",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:35EcPoY1FX4tjDHXJvDap1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0FKsM4EJH6tIeq9qO0HRDZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0FKsM4EJH6tIeq9qO0HRDZ",
+                  "id": "0FKsM4EJH6tIeq9qO0HRDZ",
+                  "name": "Big Pat",
+                  "type": "artist",
+                  "uri": "spotify:artist:0FKsM4EJH6tIeq9qO0HRDZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 289018,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7k8qYZW68IJBwW6NfTgQxl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7k8qYZW68IJBwW6NfTgQxl",
+              "id": "7k8qYZW68IJBwW6NfTgQxl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stay Up",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7k8qYZW68IJBwW6NfTgQxl"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3MqUjNACQwmMI3SmWjJMo2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3MqUjNACQwmMI3SmWjJMo2",
+                  "id": "3MqUjNACQwmMI3SmWjJMo2",
+                  "name": "Kaly Jay",
+                  "type": "artist",
+                  "uri": "spotify:artist:3MqUjNACQwmMI3SmWjJMo2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213389,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3drnva5BGjJzSESWWAy2Z5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3drnva5BGjJzSESWWAy2Z5",
+              "id": "3drnva5BGjJzSESWWAy2Z5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Real Love",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3drnva5BGjJzSESWWAy2Z5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5X87P62rUtwVemfthW8VBG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5X87P62rUtwVemfthW8VBG",
+                  "id": "5X87P62rUtwVemfthW8VBG",
+                  "name": "Xiomara",
+                  "type": "artist",
+                  "uri": "spotify:artist:5X87P62rUtwVemfthW8VBG"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219200,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ltBvNKZaGUNJOeF3qC71m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ltBvNKZaGUNJOeF3qC71m",
+              "id": "2ltBvNKZaGUNJOeF3qC71m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Addiction",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2ltBvNKZaGUNJOeF3qC71m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2KwElG45pWw0wew3dXKYq5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2KwElG45pWw0wew3dXKYq5",
+                  "id": "2KwElG45pWw0wew3dXKYq5",
+                  "name": "EaSWay",
+                  "type": "artist",
+                  "uri": "spotify:artist:2KwElG45pWw0wew3dXKYq5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 181124,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4SgNEdIy7Q6l12tjIYXuZn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4SgNEdIy7Q6l12tjIYXuZn",
+              "id": "4SgNEdIy7Q6l12tjIYXuZn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Coming Or Going",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4SgNEdIy7Q6l12tjIYXuZn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0qyBq8miao9sTXOlAkWp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0qyBq8miao9sTXOlAkWp",
+                  "id": "3J0qyBq8miao9sTXOlAkWp",
+                  "name": "Ozer",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0qyBq8miao9sTXOlAkWp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3x1JkjjuhuSXjIhr45BAou"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3x1JkjjuhuSXjIhr45BAou",
+                  "id": "3x1JkjjuhuSXjIhr45BAou",
+                  "name": "Scion Rae",
+                  "type": "artist",
+                  "uri": "spotify:artist:3x1JkjjuhuSXjIhr45BAou"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 189477,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5gmqIUiSsnADV8bpOKFX0H"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5gmqIUiSsnADV8bpOKFX0H",
+              "id": "5gmqIUiSsnADV8bpOKFX0H",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Polo Fendi",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:5gmqIUiSsnADV8bpOKFX0H"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 10
+        },
+        "type": "album",
+        "uri": "spotify:album:0rZadqtF1P0kQqadODfmd5"
+      },
+      "release_date": "2021-07-30",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            }
+          ],
+          "duration_ms": 144402,
+          "explicit": true,
+          "id": "2Cc8UFi18y381JadMlcYUq",
+          "name": "Purposeful",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "5SKWSaWfjWEP3ziVB5GQuE",
+              "name": "The Jealous Guys"
+            }
+          ],
+          "duration_ms": 191037,
+          "explicit": true,
+          "id": "3izfMeonpyMbFM71EGaLUF",
+          "name": "D & A",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "2yQYYGk1INA9FzwpYhdLcS",
+              "name": "Sussy"
+            }
+          ],
+          "duration_ms": 227600,
+          "explicit": true,
+          "id": "2wn3panLbzOY3EPZm5o5gk",
+          "name": "Blow My High",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "4XbSfsGjk20wyw6aYH46Ry",
+              "name": "Professa Gabel"
+            }
+          ],
+          "duration_ms": 181500,
+          "explicit": true,
+          "id": "3goXDAm8UraboLyW11KPBc",
+          "name": "Still Purrin'",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "4LtaPW8xCjZcNmhq5rx9Rd",
+              "name": "LEX Culture"
+            }
+          ],
+          "duration_ms": 322666,
+          "explicit": true,
+          "id": "35EcPoY1FX4tjDHXJvDap1",
+          "name": "All Falls Down",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "0FKsM4EJH6tIeq9qO0HRDZ",
+              "name": "Big Pat"
+            }
+          ],
+          "duration_ms": 289018,
+          "explicit": true,
+          "id": "7k8qYZW68IJBwW6NfTgQxl",
+          "name": "Stay Up",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "3MqUjNACQwmMI3SmWjJMo2",
+              "name": "Kaly Jay"
+            }
+          ],
+          "duration_ms": 213389,
+          "explicit": true,
+          "id": "3drnva5BGjJzSESWWAy2Z5",
+          "name": "Real Love",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "5X87P62rUtwVemfthW8VBG",
+              "name": "Xiomara"
+            }
+          ],
+          "duration_ms": 219200,
+          "explicit": true,
+          "id": "2ltBvNKZaGUNJOeF3qC71m",
+          "name": "Addiction",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "2KwElG45pWw0wew3dXKYq5",
+              "name": "EaSWay"
+            }
+          ],
+          "duration_ms": 181124,
+          "explicit": true,
+          "id": "4SgNEdIy7Q6l12tjIYXuZn",
+          "name": "Coming Or Going",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "3J0qyBq8miao9sTXOlAkWp",
+              "name": "Ozer"
+            },
+            {
+              "id": "3x1JkjjuhuSXjIhr45BAou",
+              "name": "Scion Rae"
+            }
+          ],
+          "duration_ms": 189477,
+          "explicit": true,
+          "id": "5gmqIUiSsnADV8bpOKFX0H",
+          "name": "Polo Fendi",
+          "preview_url": null,
+          "track_number": 10
+        }
+      ],
+      "url": "https://open.spotify.com/album/0rZadqtF1P0kQqadODfmd5"
+    }
+  },
+  "spotify_id": "0rZadqtF1P0kQqadODfmd5",
+  "spotify_url": "https://open.spotify.com/album/0rZadqtF1P0kQqadODfmd5",
   "styles": [
     "Soundtrack",
     "Downtempo",
@@ -426,6 +1164,6 @@
       "title": "Just Like Honey"
     }
   ],
-  "updated_at": "2025-07-05T16:31:39.612102",
+  "updated_at": "2025-07-07T15:31:06.553368",
   "year": 2019
 }

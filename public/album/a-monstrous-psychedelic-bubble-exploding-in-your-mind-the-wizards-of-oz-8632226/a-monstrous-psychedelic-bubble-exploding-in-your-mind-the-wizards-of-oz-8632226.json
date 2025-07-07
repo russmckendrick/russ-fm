@@ -38,7 +38,7 @@
     }
   },
   "country": "Australia",
-  "created_at": "2025-07-05T19:13:56.332170",
+  "created_at": "2025-07-07T15:42:52.800925",
   "date_added": "2017-04-22T10:00:59-07:00",
   "discogs_id": "8632226",
   "discogs_url": "https://www.discogs.com/release/8632226-Various-Compiled-By-The-Amorphous-Androgynous-A-Monstrous-Psychedelic-Bubble-Exploding-In-Your-Mind-",
@@ -65,6 +65,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/TjpeYabTasHZr5kX4bQxwU1e79S32V4z9tUh-BJm8eQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg2MzIy/MjYtMTU1NzE1OTcy/NS01MDgyLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -73,11 +80,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226-hi-res.jpg",
+    "medium": "../public/album/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226-medium.jpg",
+    "small": "../public/album/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226/a-monstrous-psychedelic-bubble-exploding-in-your-mind-the-wizards-of-oz-8632226-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:14:05.494077",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:42:59.919443",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -428,6 +439,6 @@
       "title": "Eyes Of The Witness"
     }
   ],
-  "updated_at": "2025-07-05T19:14:05.493192",
+  "updated_at": "2025-07-07T15:42:59.562266",
   "year": 2016
 }

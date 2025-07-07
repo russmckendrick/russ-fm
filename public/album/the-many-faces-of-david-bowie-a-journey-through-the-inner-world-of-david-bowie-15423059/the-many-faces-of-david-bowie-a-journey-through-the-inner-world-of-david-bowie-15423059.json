@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T15:50:25.178263",
+  "created_at": "2025-07-07T14:48:42.867743",
   "date_added": "2021-06-07T10:54:47-07:00",
   "discogs_id": "15423059",
   "discogs_url": "https://www.discogs.com/release/15423059-Various-The-Many-Faces-Of-David-Bowie-A-Journey-Through-The-Inner-World-Of-David-Bowie",
@@ -95,6 +95,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/NWlBtiwImOCNLfGjNbw6MVXDajHanX8zFtCRuqcuk2E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NDIz/MDU5LTE1OTIzMzk0/OTgtNDg2MS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -102,11 +109,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059-hi-res.jpg",
+    "medium": "../public/album/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059-medium.jpg",
+    "small": "../public/album/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059/the-many-faces-of-david-bowie-a-journey-through-the-inner-world-of-david-bowie-15423059-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:50:25.922498",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T14:48:55.570588",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -656,6 +667,6 @@
       "title": "La Mort (My Death)"
     }
   ],
-  "updated_at": "2025-07-05T15:50:25.920210",
+  "updated_at": "2025-07-07T14:48:54.394227",
   "year": 2020
 }

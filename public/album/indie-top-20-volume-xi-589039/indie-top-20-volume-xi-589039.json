@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:20:50.756739",
+  "created_at": "2025-07-07T15:43:11.130240",
   "date_added": "2017-04-14T14:01:00-07:00",
   "discogs_id": "589039",
   "discogs_url": "https://www.discogs.com/release/589039-Various-Indie-Top-20-Volume-XI",
@@ -104,6 +104,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/G2sU6guCf6_yhgHjLU2GKKofiRY_Y2kyZCcjX8IF1fo/rs:fit/g:sm/q:90/h:591/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4OTAz/OS0xNjA3MzQ0Mjkz/LTk2NDEuanBlZw.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/indie-top-20-volume-xi-589039/indie-top-20-volume-xi-589039.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -111,11 +118,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/indie-top-20-volume-xi-589039/indie-top-20-volume-xi-589039-hi-res.jpg",
+    "medium": "../public/album/indie-top-20-volume-xi-589039/indie-top-20-volume-xi-589039-medium.jpg",
+    "small": "../public/album/indie-top-20-volume-xi-589039/indie-top-20-volume-xi-589039-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:20:51.320762",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:43:18.342148",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -521,6 +532,6 @@
       "title": "Dig For Fire"
     }
   ],
-  "updated_at": "2025-07-05T17:20:51.320550",
+  "updated_at": "2025-07-07T15:43:17.297132",
   "year": 1991
 }

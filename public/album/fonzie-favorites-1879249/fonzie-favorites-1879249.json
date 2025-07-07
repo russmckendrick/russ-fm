@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:06:13.963050",
+  "created_at": "2025-07-07T14:53:31.224103",
   "date_added": "2020-08-02T13:44:33-07:00",
   "discogs_id": "1879249",
   "discogs_url": "https://www.discogs.com/release/1879249-Various-Fonzie-Favorites",
@@ -85,6 +85,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/-D_NMjE5Rlt8GRLtEo5K4uRbYldvAu83BivwZPN6NaY/rs:fit/g:sm/q:90/h:495/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4Nzky/NDktMTY4MjE3NDc2/Ni0yNTcyLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/fonzie-favorites-1879249/fonzie-favorites-1879249.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -94,286 +101,26 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-hi-res.jpg",
-    "medium": "public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-medium.jpg",
-    "small": "public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-small.jpg"
+    "hi-res": "../public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-hi-res.jpg",
+    "medium": "../public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-medium.jpg",
+    "small": "../public/album/fonzie-favorites-1879249/fonzie-favorites-1879249-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:06:15.180754",
+    "processed_at": "2025-07-07T14:53:38.297479",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Fonzie Favorites",
-  "release_name_spotify": "Favorite",
+  "release_name_spotify": null,
   "released": "1976",
-  "services": {
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2018 Walnut Media",
-          "type": "C"
-        },
-        {
-          "text": "2018 Walnut Media",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "3616557447877"
-      },
-      "id": "5oDsX0OR8iFkD7F89P1vhu",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273aceceede3c76f88a174491d9",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02aceceede3c76f88a174491d9",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851aceceede3c76f88a174491d9",
-          "width": 64
-        }
-      ],
-      "label": "Walnut Studios",
-      "popularity": 41,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
-            },
-            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
-            "id": "0LyfQWJT6nXafLPZqxe9Of",
-            "name": "Various Artists",
-            "type": "artist",
-            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2018 Walnut Media",
-            "type": "C"
-          },
-          {
-            "text": "2018 Walnut Media",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "3616557447877"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5oDsX0OR8iFkD7F89P1vhu"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/5oDsX0OR8iFkD7F89P1vhu?market=US",
-        "id": "5oDsX0OR8iFkD7F89P1vhu",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273aceceede3c76f88a174491d9",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02aceceede3c76f88a174491d9",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851aceceede3c76f88a174491d9",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Walnut Studios",
-        "name": "Favorite",
-        "popularity": 41,
-        "release_date": "2018-02-28",
-        "release_date_precision": "day",
-        "total_tracks": 3,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/5oDsX0OR8iFkD7F89P1vhu/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5efKihafekkUH7UjW5XUPt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5efKihafekkUH7UjW5XUPt",
-                  "id": "5efKihafekkUH7UjW5XUPt",
-                  "name": "Shuja Haider",
-                  "type": "artist",
-                  "uri": "spotify:artist:5efKihafekkUH7UjW5XUPt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 221680,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7C8e5UsA6xKfnpqhzRbCGC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7C8e5UsA6xKfnpqhzRbCGC",
-              "id": "7C8e5UsA6xKfnpqhzRbCGC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Baaghi - From \"Baaghi\"",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7C8e5UsA6xKfnpqhzRbCGC"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/40mptgZdmTpnns58ofiK7Y"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/40mptgZdmTpnns58ofiK7Y",
-                  "id": "40mptgZdmTpnns58ofiK7Y",
-                  "name": "Damia Farooq",
-                  "type": "artist",
-                  "uri": "spotify:artist:40mptgZdmTpnns58ofiK7Y"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/30kzESB1dp6YHMFZc5cZ4Y"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/30kzESB1dp6YHMFZc5cZ4Y",
-                  "id": "30kzESB1dp6YHMFZc5cZ4Y",
-                  "name": "Hamza Malik",
-                  "type": "artist",
-                  "uri": "spotify:artist:30kzESB1dp6YHMFZc5cZ4Y"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 198934,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6v6y4lYJuA8TgrndE2yjwL"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6v6y4lYJuA8TgrndE2yjwL",
-              "id": "6v6y4lYJuA8TgrndE2yjwL",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Paimanay - From \"Paimanay\"",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:6v6y4lYJuA8TgrndE2yjwL"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0A6gD0gQYdSvb7NwbUumwc"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0A6gD0gQYdSvb7NwbUumwc",
-                  "id": "0A6gD0gQYdSvb7NwbUumwc",
-                  "name": "Beena Khan",
-                  "type": "artist",
-                  "uri": "spotify:artist:0A6gD0gQYdSvb7NwbUumwc"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 142960,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5GofrPfVyQFSTmirsSKTWC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5GofrPfVyQFSTmirsSKTWC",
-              "id": "5GofrPfVyQFSTmirsSKTWC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Meherbaan - From \"Meherbaan\"",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:5GofrPfVyQFSTmirsSKTWC"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 3
-        },
-        "type": "album",
-        "uri": "spotify:album:5oDsX0OR8iFkD7F89P1vhu"
-      },
-      "release_date": "2018-02-28",
-      "release_date_precision": "day",
-      "total_tracks": 3,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "5efKihafekkUH7UjW5XUPt",
-              "name": "Shuja Haider"
-            }
-          ],
-          "duration_ms": 221680,
-          "explicit": false,
-          "id": "7C8e5UsA6xKfnpqhzRbCGC",
-          "name": "Baaghi - From \"Baaghi\"",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "40mptgZdmTpnns58ofiK7Y",
-              "name": "Damia Farooq"
-            },
-            {
-              "id": "30kzESB1dp6YHMFZc5cZ4Y",
-              "name": "Hamza Malik"
-            }
-          ],
-          "duration_ms": 198934,
-          "explicit": false,
-          "id": "6v6y4lYJuA8TgrndE2yjwL",
-          "name": "Paimanay - From \"Paimanay\"",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0A6gD0gQYdSvb7NwbUumwc",
-              "name": "Beena Khan"
-            }
-          ],
-          "duration_ms": 142960,
-          "explicit": false,
-          "id": "5GofrPfVyQFSTmirsSKTWC",
-          "name": "Meherbaan - From \"Meherbaan\"",
-          "preview_url": null,
-          "track_number": 3
-        }
-      ],
-      "url": "https://open.spotify.com/album/5oDsX0OR8iFkD7F89P1vhu"
-    }
-  },
-  "spotify_id": "5oDsX0OR8iFkD7F89P1vhu",
-  "spotify_url": "https://open.spotify.com/album/5oDsX0OR8iFkD7F89P1vhu",
+  "services": {},
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Rock & Roll",
     "Ballad",
@@ -838,6 +585,6 @@
       "title": "Happy Days Theme"
     }
   ],
-  "updated_at": "2025-07-05T16:06:15.053132",
+  "updated_at": "2025-07-07T14:53:37.339311",
   "year": 1976
 }
