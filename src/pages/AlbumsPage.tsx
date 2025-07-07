@@ -45,6 +45,15 @@ interface AlbumsPageProps {
 export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   const { page } = useParams<{ page?: string }>();
   const navigate = useNavigate();
+  
+  // Check if page parameter is a non-numeric string and redirect to album detail
+  useEffect(() => {
+    if (page && isNaN(parseInt(page, 10))) {
+      // If it's not a number, redirect to /album/${page}
+      navigate(`/album/${page}`, { replace: true });
+    }
+  }, [page, navigate]);
+  
   const [collection, setCollection] = useState<Album[]>([]);
   const [filteredCollection, setFilteredCollection] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);

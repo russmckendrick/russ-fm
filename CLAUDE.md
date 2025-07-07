@@ -124,6 +124,7 @@ python main.py status                 # Check processing status
 ### Frontend Routing and Data Patterns
 - **Static Data Loading**: All API calls use `fetch()` to load JSON from `/public/`
 - **URL Structure**: `/album/{slug}` and `/artist/{slug}` with client-side routing
+- **Legacy URL Handling**: Old `/albums/{album-slug}` URLs automatically redirect to `/album/{album-slug}` via AlbumsPage component logic
 - **Search Integration**: Real-time search with overlay results across multiple data types
 - **Responsive Design**: Mobile-first with Tailwind responsive utilities
 
