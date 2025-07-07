@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1708982526",
-  "apple_music_url": "https://music.apple.com/gb/album/out-of-touch-avangart-tabldot-remix-single/1708982526",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "180586",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T17:43:21.044899",
+  "created_at": "2025-07-07T19:05:22.328987",
   "date_added": "2016-08-13T09:39:29-07:00",
   "discogs_id": "8863457",
   "discogs_url": "https://www.discogs.com/release/8863457-Daryl-Hall-John-Oates-The-Very-Best-Of",
@@ -95,8 +95,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/63/3a/d7/633ad757-02cd-0431-98e7-9756c75b91e6/196871456593.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-very-best-of-8863457/the-very-best-of-8863457.jpg",
       "width": 2000
     }
   ],
@@ -108,109 +108,61 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/the-very-best-of-8863457/the-very-best-of-8863457-hi-res.jpg",
-    "medium": "public/album/the-very-best-of-8863457/the-very-best-of-8863457-medium.jpg",
-    "small": "public/album/the-very-best-of-8863457/the-very-best-of-8863457-small.jpg"
+    "hi-res": "../public/album/the-very-best-of-8863457/the-very-best-of-8863457-hi-res.jpg",
+    "medium": "../public/album/the-very-best-of-8863457/the-very-best-of-8863457-medium.jpg",
+    "small": "../public/album/the-very-best-of-8863457/the-very-best-of-8863457-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:43:23.845101",
+    "processed_at": "2025-07-07T19:05:36.002784",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Out of Touch (Avangart Tabldot Remix) - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "The Very Best Of",
-  "release_name_spotify": "Live in Dublin",
+  "release_name_spotify": "The Very Best of Daryl Hall / John Oates",
   "released": "2016-08-12",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/63/3a/d7/633ad757-02cd-0431-98e7-9756c75b91e6/196871456593.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2023 RCA Records, a division of Sony Music Entertainment",
-      "editorial_notes": null,
-      "id": "1708982526",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Daryl Hall & John Oates",
-        "artwork": {
-          "bgColor": "38261a",
-          "height": 3000,
-          "textColor1": "e6bfde",
-          "textColor2": "e8936a",
-          "textColor3": "c3a0b7",
-          "textColor4": "c57d5a",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/63/3a/d7/633ad757-02cd-0431-98e7-9756c75b91e6/196871456593.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "℗ 2023 RCA Records, a division of Sony Music Entertainment",
-        "genreNames": [
-          "Dance",
-          "Music",
-          "Pop"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": true,
-        "name": "Out of Touch (Avangart Tabldot Remix) - Single",
-        "playParams": {
-          "id": "1708982526",
-          "kind": "album"
-        },
-        "recordLabel": "RCA/Legacy",
-        "releaseDate": "2023-10-06",
-        "trackCount": 1,
-        "upc": "196871456593",
-        "url": "https://music.apple.com/gb/album/out-of-touch-avangart-tabldot-remix-single/1708982526"
-      },
-      "url": "https://music.apple.com/gb/album/out-of-touch-avangart-tabldot-remix-single/1708982526"
-    },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 2015 Eagle Rock Entertainment",
-          "type": "C"
-        },
-        {
-          "text": "℗ 2015 Eagle Rock Entertainment",
+          "text": "(P) 2001 RCA Records, a division of Sony Music Entertainment",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "00670211002294"
+        "upc": "078636931920"
       },
-      "id": "0Xp6SFQ4zVcn7HQpKIjMGm",
+      "id": "4tUyNf5dGXwY4TaMaxwhqF",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273396d1f656a83b83e59cdbec0",
+          "url": "https://i.scdn.co/image/ab67616d0000b273f43547de689aabc4c44ab62d",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02396d1f656a83b83e59cdbec0",
+          "url": "https://i.scdn.co/image/ab67616d00001e02f43547de689aabc4c44ab62d",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851396d1f656a83b83e59cdbec0",
+          "url": "https://i.scdn.co/image/ab67616d00004851f43547de689aabc4c44ab62d",
           "width": 64
         }
       ],
-      "label": "Eagle Rock",
-      "popularity": 35,
+      "label": "RCA Records Label",
+      "popularity": 63,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -225,49 +177,45 @@
         ],
         "copyrights": [
           {
-            "text": "© 2015 Eagle Rock Entertainment",
-            "type": "C"
-          },
-          {
-            "text": "℗ 2015 Eagle Rock Entertainment",
+            "text": "(P) 2001 RCA Records, a division of Sony Music Entertainment",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "00670211002294"
+          "upc": "078636931920"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0Xp6SFQ4zVcn7HQpKIjMGm"
+          "spotify": "https://open.spotify.com/album/4tUyNf5dGXwY4TaMaxwhqF"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0Xp6SFQ4zVcn7HQpKIjMGm?market=US",
-        "id": "0Xp6SFQ4zVcn7HQpKIjMGm",
+        "href": "https://api.spotify.com/v1/albums/4tUyNf5dGXwY4TaMaxwhqF?market=US",
+        "id": "4tUyNf5dGXwY4TaMaxwhqF",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273396d1f656a83b83e59cdbec0",
+            "url": "https://i.scdn.co/image/ab67616d0000b273f43547de689aabc4c44ab62d",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02396d1f656a83b83e59cdbec0",
+            "url": "https://i.scdn.co/image/ab67616d00001e02f43547de689aabc4c44ab62d",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851396d1f656a83b83e59cdbec0",
+            "url": "https://i.scdn.co/image/ab67616d00004851f43547de689aabc4c44ab62d",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Eagle Rock",
-        "name": "Live in Dublin",
-        "popularity": 35,
-        "release_date": "2015-01-01",
+        "label": "RCA Records Label",
+        "name": "The Very Best of Daryl Hall / John Oates",
+        "popularity": 63,
+        "release_date": "2001-01-23",
         "release_date_precision": "day",
-        "total_tracks": 15,
+        "total_tracks": 18,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0Xp6SFQ4zVcn7HQpKIjMGm/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4tUyNf5dGXwY4TaMaxwhqF/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -283,20 +231,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 369280,
+              "duration_ms": 187933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0hPkD3pMtK57mmDy0sbi2O"
+                "spotify": "https://open.spotify.com/track/6CCIS8toYWbIKWlWwWqu1v"
               },
-              "href": "https://api.spotify.com/v1/tracks/0hPkD3pMtK57mmDy0sbi2O",
-              "id": "0hPkD3pMtK57mmDy0sbi2O",
+              "href": "https://api.spotify.com/v1/tracks/6CCIS8toYWbIKWlWwWqu1v",
+              "id": "6CCIS8toYWbIKWlWwWqu1v",
               "is_local": false,
               "is_playable": true,
-              "name": "Maneater - Live",
+              "name": "Sara Smile",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:0hPkD3pMtK57mmDy0sbi2O"
+              "uri": "spotify:track:6CCIS8toYWbIKWlWwWqu1v"
             },
             {
               "artists": [
@@ -312,20 +260,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 290800,
+              "duration_ms": 144973,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5kyYVFJMjTxgp2ilTtjy8f"
+                "spotify": "https://open.spotify.com/track/6OkzvCIvK69VDFHq1G2jhN"
               },
-              "href": "https://api.spotify.com/v1/tracks/5kyYVFJMjTxgp2ilTtjy8f",
-              "id": "5kyYVFJMjTxgp2ilTtjy8f",
+              "href": "https://api.spotify.com/v1/tracks/6OkzvCIvK69VDFHq1G2jhN",
+              "id": "6OkzvCIvK69VDFHq1G2jhN",
               "is_local": false,
               "is_playable": true,
-              "name": "Out Of Touch - Live",
+              "name": "Rich Girl",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:5kyYVFJMjTxgp2ilTtjy8f"
+              "uri": "spotify:track:6OkzvCIvK69VDFHq1G2jhN"
             },
             {
               "artists": [
@@ -341,20 +289,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 423160,
+              "duration_ms": 224360,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/61nCGYiKiX8zCR7zbNERVO"
+                "spotify": "https://open.spotify.com/track/5N9slLpaxu4JwDXJerRDZF"
               },
-              "href": "https://api.spotify.com/v1/tracks/61nCGYiKiX8zCR7zbNERVO",
-              "id": "61nCGYiKiX8zCR7zbNERVO",
+              "href": "https://api.spotify.com/v1/tracks/5N9slLpaxu4JwDXJerRDZF",
+              "id": "5N9slLpaxu4JwDXJerRDZF",
               "is_local": false,
               "is_playable": true,
-              "name": "Say It Isn't So - Live",
+              "name": "It's a Laugh",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:61nCGYiKiX8zCR7zbNERVO"
+              "uri": "spotify:track:5N9slLpaxu4JwDXJerRDZF"
             },
             {
               "artists": [
@@ -370,20 +318,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 291840,
+              "duration_ms": 247093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/643piNvNyRnKioLpKM5OnV"
+                "spotify": "https://open.spotify.com/track/6g8WWi9euV5uIjzsOfHRAo"
               },
-              "href": "https://api.spotify.com/v1/tracks/643piNvNyRnKioLpKM5OnV",
-              "id": "643piNvNyRnKioLpKM5OnV",
+              "href": "https://api.spotify.com/v1/tracks/6g8WWi9euV5uIjzsOfHRAo",
+              "id": "6g8WWi9euV5uIjzsOfHRAo",
               "is_local": false,
               "is_playable": true,
-              "name": "Family Man - Live",
+              "name": "Wait for Me",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:643piNvNyRnKioLpKM5OnV"
+              "uri": "spotify:track:6g8WWi9euV5uIjzsOfHRAo"
             },
             {
               "artists": [
@@ -399,20 +347,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 379200,
+              "duration_ms": 277373,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/563px02YiqUj9EYAiTMLkp"
+                "spotify": "https://open.spotify.com/track/6o4Yrg6EeCXdcSVjUWALKu"
               },
-              "href": "https://api.spotify.com/v1/tracks/563px02YiqUj9EYAiTMLkp",
-              "id": "563px02YiqUj9EYAiTMLkp",
+              "href": "https://api.spotify.com/v1/tracks/6o4Yrg6EeCXdcSVjUWALKu",
+              "id": "6o4Yrg6EeCXdcSVjUWALKu",
               "is_local": false,
               "is_playable": true,
-              "name": "It's Uncanny - Live",
+              "name": "You've Lost That Lovin' Feeling",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:563px02YiqUj9EYAiTMLkp"
+              "uri": "spotify:track:6o4Yrg6EeCXdcSVjUWALKu"
             },
             {
               "artists": [
@@ -428,20 +376,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 285400,
+              "duration_ms": 263306,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4DJQdf1i2rsqHKvPFyofbw"
+                "spotify": "https://open.spotify.com/track/3QDMOnNZKEUrKNniv3LNmz"
               },
-              "href": "https://api.spotify.com/v1/tracks/4DJQdf1i2rsqHKvPFyofbw",
-              "id": "4DJQdf1i2rsqHKvPFyofbw",
+              "href": "https://api.spotify.com/v1/tracks/3QDMOnNZKEUrKNniv3LNmz",
+              "id": "3QDMOnNZKEUrKNniv3LNmz",
               "is_local": false,
               "is_playable": true,
-              "name": "Back Together Again - Live",
+              "name": "Kiss On My List",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:4DJQdf1i2rsqHKvPFyofbw"
+              "uri": "spotify:track:3QDMOnNZKEUrKNniv3LNmz"
             },
             {
               "artists": [
@@ -457,20 +405,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 290600,
+              "duration_ms": 187600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/42UqvPcHuRqpxcdQSyW6Ic"
+                "spotify": "https://open.spotify.com/track/7HX9f8AMBl0vQxAoAzLqhS"
               },
-              "href": "https://api.spotify.com/v1/tracks/42UqvPcHuRqpxcdQSyW6Ic",
-              "id": "42UqvPcHuRqpxcdQSyW6Ic",
+              "href": "https://api.spotify.com/v1/tracks/7HX9f8AMBl0vQxAoAzLqhS",
+              "id": "7HX9f8AMBl0vQxAoAzLqhS",
               "is_local": false,
               "is_playable": true,
-              "name": "Las Vegas Turnaround - Live",
+              "name": "You Make My Dreams (Come True)",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:42UqvPcHuRqpxcdQSyW6Ic"
+              "uri": "spotify:track:7HX9f8AMBl0vQxAoAzLqhS"
             },
             {
               "artists": [
@@ -486,20 +434,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 402560,
+              "duration_ms": 217800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1OPFfSjEDncXzFJ2Fnccl7"
+                "spotify": "https://open.spotify.com/track/3SlqYesF211Fi7t2YYXTlK"
               },
-              "href": "https://api.spotify.com/v1/tracks/1OPFfSjEDncXzFJ2Fnccl7",
-              "id": "1OPFfSjEDncXzFJ2Fnccl7",
+              "href": "https://api.spotify.com/v1/tracks/3SlqYesF211Fi7t2YYXTlK",
+              "id": "3SlqYesF211Fi7t2YYXTlK",
               "is_local": false,
               "is_playable": true,
-              "name": "She's Gone - Live",
+              "name": "Private Eyes",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:1OPFfSjEDncXzFJ2Fnccl7"
+              "uri": "spotify:track:3SlqYesF211Fi7t2YYXTlK"
             },
             {
               "artists": [
@@ -515,20 +463,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 454000,
+              "duration_ms": 309266,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6TSXCpXWiWKxXzI9liKHd7"
+                "spotify": "https://open.spotify.com/track/0yT3JBkQzJNaS2mCXSPI8Z"
               },
-              "href": "https://api.spotify.com/v1/tracks/6TSXCpXWiWKxXzI9liKHd7",
-              "id": "6TSXCpXWiWKxXzI9liKHd7",
+              "href": "https://api.spotify.com/v1/tracks/0yT3JBkQzJNaS2mCXSPI8Z",
+              "id": "0yT3JBkQzJNaS2mCXSPI8Z",
               "is_local": false,
               "is_playable": true,
-              "name": "Sara Smile - Live",
+              "name": "I Can't Go for That (No Can Do)",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:6TSXCpXWiWKxXzI9liKHd7"
+              "uri": "spotify:track:0yT3JBkQzJNaS2mCXSPI8Z"
             },
             {
               "artists": [
@@ -543,21 +491,21 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 356760,
+              "disc_number": 1,
+              "duration_ms": 218093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0X7DSmjZ8wFTNsGSFbfa1d"
+                "spotify": "https://open.spotify.com/track/6hHf43J8jIXM0q9DOZCYmp"
               },
-              "href": "https://api.spotify.com/v1/tracks/0X7DSmjZ8wFTNsGSFbfa1d",
-              "id": "0X7DSmjZ8wFTNsGSFbfa1d",
+              "href": "https://api.spotify.com/v1/tracks/6hHf43J8jIXM0q9DOZCYmp",
+              "id": "6hHf43J8jIXM0q9DOZCYmp",
               "is_local": false,
               "is_playable": true,
-              "name": "Do What You Want, Be What You Are - Live",
+              "name": "Did It In a Minute",
               "preview_url": null,
-              "track_number": 1,
+              "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:0X7DSmjZ8wFTNsGSFbfa1d"
+              "uri": "spotify:track:6hHf43J8jIXM0q9DOZCYmp"
             },
             {
               "artists": [
@@ -572,21 +520,21 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 851000,
+              "disc_number": 1,
+              "duration_ms": 271960,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0l0C2woujxL8CilqY78BJl"
+                "spotify": "https://open.spotify.com/track/3xkG5WXCnSYxastDq3pmKn"
               },
-              "href": "https://api.spotify.com/v1/tracks/0l0C2woujxL8CilqY78BJl",
-              "id": "0l0C2woujxL8CilqY78BJl",
+              "href": "https://api.spotify.com/v1/tracks/3xkG5WXCnSYxastDq3pmKn",
+              "id": "3xkG5WXCnSYxastDq3pmKn",
               "is_local": false,
               "is_playable": true,
-              "name": "I Can't Go For That (No Can Do) - Live",
+              "name": "Maneater",
               "preview_url": null,
-              "track_number": 2,
+              "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:0l0C2woujxL8CilqY78BJl"
+              "uri": "spotify:track:3xkG5WXCnSYxastDq3pmKn"
             },
             {
               "artists": [
@@ -601,21 +549,21 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 211600,
+              "disc_number": 1,
+              "duration_ms": 258293,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2eDa9FuVBczFmJ1ACAWOLk"
+                "spotify": "https://open.spotify.com/track/6eC4sNMBJi1e6F5kheD5K3"
               },
-              "href": "https://api.spotify.com/v1/tracks/2eDa9FuVBczFmJ1ACAWOLk",
-              "id": "2eDa9FuVBczFmJ1ACAWOLk",
+              "href": "https://api.spotify.com/v1/tracks/6eC4sNMBJi1e6F5kheD5K3",
+              "id": "6eC4sNMBJi1e6F5kheD5K3",
               "is_local": false,
               "is_playable": true,
-              "name": "Rich Girl - Live",
+              "name": "One On One",
               "preview_url": null,
-              "track_number": 3,
+              "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:2eDa9FuVBczFmJ1ACAWOLk"
+              "uri": "spotify:track:6eC4sNMBJi1e6F5kheD5K3"
             },
             {
               "artists": [
@@ -630,21 +578,21 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 511520,
+              "disc_number": 1,
+              "duration_ms": 205293,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3GfJmGM09WLvXIdgvPuQdf"
+                "spotify": "https://open.spotify.com/track/1qwTi5Ypo8HkX4Nsxxz7S4"
               },
-              "href": "https://api.spotify.com/v1/tracks/3GfJmGM09WLvXIdgvPuQdf",
-              "id": "3GfJmGM09WLvXIdgvPuQdf",
+              "href": "https://api.spotify.com/v1/tracks/1qwTi5Ypo8HkX4Nsxxz7S4",
+              "id": "1qwTi5Ypo8HkX4Nsxxz7S4",
               "is_local": false,
               "is_playable": true,
-              "name": "You Make My Dreams - Live",
+              "name": "Family Man",
               "preview_url": null,
-              "track_number": 4,
+              "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:3GfJmGM09WLvXIdgvPuQdf"
+              "uri": "spotify:track:1qwTi5Ypo8HkX4Nsxxz7S4"
             },
             {
               "artists": [
@@ -659,21 +607,70 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 260519,
+              "disc_number": 1,
+              "duration_ms": 257466,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/45VtegWNf78jLMenZx2RKo"
+                "spotify": "https://open.spotify.com/track/2bZswvNGESo7MKeg7SQ9rp"
               },
-              "href": "https://api.spotify.com/v1/tracks/45VtegWNf78jLMenZx2RKo",
-              "id": "45VtegWNf78jLMenZx2RKo",
+              "href": "https://api.spotify.com/v1/tracks/2bZswvNGESo7MKeg7SQ9rp",
+              "id": "2bZswvNGESo7MKeg7SQ9rp",
               "is_local": false,
               "is_playable": true,
-              "name": "Kiss On My List - Live",
+              "name": "Say It Isn't So",
               "preview_url": null,
-              "track_number": 5,
+              "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:45VtegWNf78jLMenZx2RKo"
+              "uri": "spotify:track:2bZswvNGESo7MKeg7SQ9rp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/77tT1kLj6mCWtFNqiOmP9H"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/77tT1kLj6mCWtFNqiOmP9H",
+                  "id": "77tT1kLj6mCWtFNqiOmP9H",
+                  "name": "Daryl Hall & John Oates",
+                  "type": "artist",
+                  "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7iWYCIyfxwVyVae6u7qJaO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7iWYCIyfxwVyVae6u7qJaO",
+                  "id": "7iWYCIyfxwVyVae6u7qJaO",
+                  "name": "Bob Clearmountain",
+                  "type": "artist",
+                  "uri": "spotify:artist:7iWYCIyfxwVyVae6u7qJaO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yDIp0kaq9EFKe07X1X2rz"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yDIp0kaq9EFKe07X1X2rz",
+                  "id": "3yDIp0kaq9EFKe07X1X2rz",
+                  "name": "Nile Rodgers",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yDIp0kaq9EFKe07X1X2rz"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 274973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7ADFqIjMLrhRXyWoxeEhGf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7ADFqIjMLrhRXyWoxeEhGf",
+              "id": "7ADFqIjMLrhRXyWoxeEhGf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Adult Education - Special Rock Mix",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:7ADFqIjMLrhRXyWoxeEhGf"
             },
             {
               "artists": [
@@ -688,35 +685,93 @@
                   "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 242680,
+              "disc_number": 1,
+              "duration_ms": 249573,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6sTQ9rgpCxpXrqqiiEgqZN"
+                "spotify": "https://open.spotify.com/track/7o67roCVsFiCt7Cf0ZLOJq"
               },
-              "href": "https://api.spotify.com/v1/tracks/6sTQ9rgpCxpXrqqiiEgqZN",
-              "id": "6sTQ9rgpCxpXrqqiiEgqZN",
+              "href": "https://api.spotify.com/v1/tracks/7o67roCVsFiCt7Cf0ZLOJq",
+              "id": "7o67roCVsFiCt7Cf0ZLOJq",
               "is_local": false,
               "is_playable": true,
-              "name": "Private Eyes - Live",
+              "name": "Out of Touch",
               "preview_url": null,
-              "track_number": 6,
+              "track_number": 16,
               "type": "track",
-              "uri": "spotify:track:6sTQ9rgpCxpXrqqiiEgqZN"
+              "uri": "spotify:track:7o67roCVsFiCt7Cf0ZLOJq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/77tT1kLj6mCWtFNqiOmP9H"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/77tT1kLj6mCWtFNqiOmP9H",
+                  "id": "77tT1kLj6mCWtFNqiOmP9H",
+                  "name": "Daryl Hall & John Oates",
+                  "type": "artist",
+                  "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 333266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2njsIA3AqnSHABMowO13Li"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2njsIA3AqnSHABMowO13Li",
+              "id": "2njsIA3AqnSHABMowO13Li",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Method of Modern Love",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:2njsIA3AqnSHABMowO13Li"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/77tT1kLj6mCWtFNqiOmP9H"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/77tT1kLj6mCWtFNqiOmP9H",
+                  "id": "77tT1kLj6mCWtFNqiOmP9H",
+                  "name": "Daryl Hall & John Oates",
+                  "type": "artist",
+                  "uri": "spotify:artist:77tT1kLj6mCWtFNqiOmP9H"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 326560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3ID0h4YkqBrwqb6hQDTNVh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3ID0h4YkqBrwqb6hQDTNVh",
+              "id": "3ID0h4YkqBrwqb6hQDTNVh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Some Things Are Better Left Unsaid",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:3ID0h4YkqBrwqb6hQDTNVh"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 15
+          "total": 18
         },
         "type": "album",
-        "uri": "spotify:album:0Xp6SFQ4zVcn7HQpKIjMGm"
+        "uri": "spotify:album:4tUyNf5dGXwY4TaMaxwhqF"
       },
-      "release_date": "2015-01-01",
+      "release_date": "2001-01-23",
       "release_date_precision": "day",
-      "total_tracks": 15,
+      "total_tracks": 18,
       "tracks": [
         {
           "artists": [
@@ -725,10 +780,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 369280,
+          "duration_ms": 187933,
           "explicit": false,
-          "id": "0hPkD3pMtK57mmDy0sbi2O",
-          "name": "Maneater - Live",
+          "id": "6CCIS8toYWbIKWlWwWqu1v",
+          "name": "Sara Smile",
           "preview_url": null,
           "track_number": 1
         },
@@ -739,10 +794,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 290800,
+          "duration_ms": 144973,
           "explicit": false,
-          "id": "5kyYVFJMjTxgp2ilTtjy8f",
-          "name": "Out Of Touch - Live",
+          "id": "6OkzvCIvK69VDFHq1G2jhN",
+          "name": "Rich Girl",
           "preview_url": null,
           "track_number": 2
         },
@@ -753,10 +808,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 423160,
+          "duration_ms": 224360,
           "explicit": false,
-          "id": "61nCGYiKiX8zCR7zbNERVO",
-          "name": "Say It Isn't So - Live",
+          "id": "5N9slLpaxu4JwDXJerRDZF",
+          "name": "It's a Laugh",
           "preview_url": null,
           "track_number": 3
         },
@@ -767,10 +822,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 291840,
+          "duration_ms": 247093,
           "explicit": false,
-          "id": "643piNvNyRnKioLpKM5OnV",
-          "name": "Family Man - Live",
+          "id": "6g8WWi9euV5uIjzsOfHRAo",
+          "name": "Wait for Me",
           "preview_url": null,
           "track_number": 4
         },
@@ -781,10 +836,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 379200,
+          "duration_ms": 277373,
           "explicit": false,
-          "id": "563px02YiqUj9EYAiTMLkp",
-          "name": "It's Uncanny - Live",
+          "id": "6o4Yrg6EeCXdcSVjUWALKu",
+          "name": "You've Lost That Lovin' Feeling",
           "preview_url": null,
           "track_number": 5
         },
@@ -795,10 +850,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 285400,
+          "duration_ms": 263306,
           "explicit": false,
-          "id": "4DJQdf1i2rsqHKvPFyofbw",
-          "name": "Back Together Again - Live",
+          "id": "3QDMOnNZKEUrKNniv3LNmz",
+          "name": "Kiss On My List",
           "preview_url": null,
           "track_number": 6
         },
@@ -809,10 +864,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 290600,
+          "duration_ms": 187600,
           "explicit": false,
-          "id": "42UqvPcHuRqpxcdQSyW6Ic",
-          "name": "Las Vegas Turnaround - Live",
+          "id": "7HX9f8AMBl0vQxAoAzLqhS",
+          "name": "You Make My Dreams (Come True)",
           "preview_url": null,
           "track_number": 7
         },
@@ -823,10 +878,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 402560,
+          "duration_ms": 217800,
           "explicit": false,
-          "id": "1OPFfSjEDncXzFJ2Fnccl7",
-          "name": "She's Gone - Live",
+          "id": "3SlqYesF211Fi7t2YYXTlK",
+          "name": "Private Eyes",
           "preview_url": null,
           "track_number": 8
         },
@@ -837,10 +892,10 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 454000,
+          "duration_ms": 309266,
           "explicit": false,
-          "id": "6TSXCpXWiWKxXzI9liKHd7",
-          "name": "Sara Smile - Live",
+          "id": "0yT3JBkQzJNaS2mCXSPI8Z",
+          "name": "I Can't Go for That (No Can Do)",
           "preview_url": null,
           "track_number": 9
         },
@@ -851,12 +906,12 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 356760,
+          "duration_ms": 218093,
           "explicit": false,
-          "id": "0X7DSmjZ8wFTNsGSFbfa1d",
-          "name": "Do What You Want, Be What You Are - Live",
+          "id": "6hHf43J8jIXM0q9DOZCYmp",
+          "name": "Did It In a Minute",
           "preview_url": null,
-          "track_number": 1
+          "track_number": 10
         },
         {
           "artists": [
@@ -865,12 +920,12 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 851000,
+          "duration_ms": 271960,
           "explicit": false,
-          "id": "0l0C2woujxL8CilqY78BJl",
-          "name": "I Can't Go For That (No Can Do) - Live",
+          "id": "3xkG5WXCnSYxastDq3pmKn",
+          "name": "Maneater",
           "preview_url": null,
-          "track_number": 2
+          "track_number": 11
         },
         {
           "artists": [
@@ -879,12 +934,12 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 211600,
+          "duration_ms": 258293,
           "explicit": false,
-          "id": "2eDa9FuVBczFmJ1ACAWOLk",
-          "name": "Rich Girl - Live",
+          "id": "6eC4sNMBJi1e6F5kheD5K3",
+          "name": "One On One",
           "preview_url": null,
-          "track_number": 3
+          "track_number": 12
         },
         {
           "artists": [
@@ -893,12 +948,12 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 511520,
+          "duration_ms": 205293,
           "explicit": false,
-          "id": "3GfJmGM09WLvXIdgvPuQdf",
-          "name": "You Make My Dreams - Live",
+          "id": "1qwTi5Ypo8HkX4Nsxxz7S4",
+          "name": "Family Man",
           "preview_url": null,
-          "track_number": 4
+          "track_number": 13
         },
         {
           "artists": [
@@ -907,12 +962,34 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 260519,
+          "duration_ms": 257466,
           "explicit": false,
-          "id": "45VtegWNf78jLMenZx2RKo",
-          "name": "Kiss On My List - Live",
+          "id": "2bZswvNGESo7MKeg7SQ9rp",
+          "name": "Say It Isn't So",
           "preview_url": null,
-          "track_number": 5
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "77tT1kLj6mCWtFNqiOmP9H",
+              "name": "Daryl Hall & John Oates"
+            },
+            {
+              "id": "7iWYCIyfxwVyVae6u7qJaO",
+              "name": "Bob Clearmountain"
+            },
+            {
+              "id": "3yDIp0kaq9EFKe07X1X2rz",
+              "name": "Nile Rodgers"
+            }
+          ],
+          "duration_ms": 274973,
+          "explicit": false,
+          "id": "7ADFqIjMLrhRXyWoxeEhGf",
+          "name": "Adult Education - Special Rock Mix",
+          "preview_url": null,
+          "track_number": 15
         },
         {
           "artists": [
@@ -921,19 +998,47 @@
               "name": "Daryl Hall & John Oates"
             }
           ],
-          "duration_ms": 242680,
+          "duration_ms": 249573,
           "explicit": false,
-          "id": "6sTQ9rgpCxpXrqqiiEgqZN",
-          "name": "Private Eyes - Live",
+          "id": "7o67roCVsFiCt7Cf0ZLOJq",
+          "name": "Out of Touch",
           "preview_url": null,
-          "track_number": 6
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "77tT1kLj6mCWtFNqiOmP9H",
+              "name": "Daryl Hall & John Oates"
+            }
+          ],
+          "duration_ms": 333266,
+          "explicit": false,
+          "id": "2njsIA3AqnSHABMowO13Li",
+          "name": "Method of Modern Love",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "77tT1kLj6mCWtFNqiOmP9H",
+              "name": "Daryl Hall & John Oates"
+            }
+          ],
+          "duration_ms": 326560,
+          "explicit": false,
+          "id": "3ID0h4YkqBrwqb6hQDTNVh",
+          "name": "Some Things Are Better Left Unsaid",
+          "preview_url": null,
+          "track_number": 18
         }
       ],
-      "url": "https://open.spotify.com/album/0Xp6SFQ4zVcn7HQpKIjMGm"
+      "url": "https://open.spotify.com/album/4tUyNf5dGXwY4TaMaxwhqF"
     }
   },
-  "spotify_id": "0Xp6SFQ4zVcn7HQpKIjMGm",
-  "spotify_url": "https://open.spotify.com/album/0Xp6SFQ4zVcn7HQpKIjMGm",
+  "spotify_id": "4tUyNf5dGXwY4TaMaxwhqF",
+  "spotify_url": "https://open.spotify.com/album/4tUyNf5dGXwY4TaMaxwhqF",
   "styles": [
     "Pop Rock",
     "Soul",
@@ -1050,6 +1155,6 @@
       "title": "Some Things Are Better Left Unsaid"
     }
   ],
-  "updated_at": "2025-07-05T17:43:22.087232",
+  "updated_at": "2025-07-07T19:05:35.208455",
   "year": 2016
 }
