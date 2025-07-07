@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:50:56.679441",
+  "created_at": "2025-07-07T17:44:13.557801",
   "date_added": "2016-03-24T19:08:12-07:00",
   "discogs_id": "449135",
   "discogs_url": "https://www.discogs.com/release/449135-Various-Indie-Top-20-Vol-X",
@@ -98,6 +98,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/FbmIJpCvIg1xiEREeGrgT0nXoXkwplNiQ7M6iLJwMz4/rs:fit/g:sm/q:90/h:600/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ0OTEz/NS0xNjA3MzQwNzM3/LTcxNTMuanBlZw.jpeg",
       "width": 594
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/indie-top-20-vol-x-449135/indie-top-20-vol-x-449135.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -105,11 +112,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/indie-top-20-vol-x-449135/indie-top-20-vol-x-449135-hi-res.jpg",
+    "medium": "../public/album/indie-top-20-vol-x-449135/indie-top-20-vol-x-449135-medium.jpg",
+    "small": "../public/album/indie-top-20-vol-x-449135/indie-top-20-vol-x-449135-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:50:57.313829",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T17:44:19.032372",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -511,6 +522,6 @@
       "title": "Rent"
     }
   ],
-  "updated_at": "2025-07-05T17:50:57.313307",
+  "updated_at": "2025-07-07T17:44:18.678847",
   "year": 1990
 }
