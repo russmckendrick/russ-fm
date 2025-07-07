@@ -16,7 +16,7 @@
     "folk",
     "singer-songwriter"
   ],
-  "id": null,
+  "id": "danny-cavanagh-1751731464",
   "images": [
     {
       "height": null,
@@ -53,11 +53,21 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": 2000,
+      "type": "custom_artist_image",
+      "url": "https://v1.russ.fm/artist/danny-cavanagh/danny-cavanagh.jpg",
+      "width": 2000
     }
   ],
   "lastfm_mbid": "f4709d99-be19-42e4-b92d-99db48ded93f",
   "lastfm_url": "https://www.last.fm/music/Danny+Cavanagh",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/artist/danny-cavanagh/danny-cavanagh-hi-res.jpg",
+    "medium": "../public/artist/danny-cavanagh/danny-cavanagh-medium.jpg",
+    "small": "../public/artist/danny-cavanagh/danny-cavanagh-small.jpg"
+  },
   "name": "Danny Cavanagh",
   "popularity": 9,
   "services": {
@@ -73,9 +83,22 @@
       "url": "https://music.apple.com/gb/artist/danny-cavanagh/303946603"
     },
     "discogs": {
-      "id": 278359,
-      "original_name": "Danny Cavanagh",
-      "role": ""
+      "cover_image": "",
+      "id": "278359",
+      "images": [],
+      "members": [],
+      "name": "Danny Cavanagh",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "278359",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/278359"
+      },
+      "resource_url": "https://api.discogs.com/artists/278359",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/278359",
+      "urls": []
     },
     "lastfm": {
       "bio_content": "Daniel Cavanagh (born October 6, 1972) is a British guitarist and songwriter, one of the founding members of Anathema - a band that began in a death doom metal style, before changing to a more atmospheric rock-based sound. Danny also worked with Lid, Antimatter and Leafblade. In 2005, he released a Nick Drake tribute album, called \"A Place to Be\". \n\nHe played several acoustic shows made of covers from Anathema or others artists alone, or as Danny & Vincent Cavanagh and Anneke van Giersbergen & Danny Cavanagh.\n\n <a href=\"https://www.last.fm/music/Danny+Cavanagh\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -109,7 +132,7 @@
       "listeners": 4726,
       "mbid": "f4709d99-be19-42e4-b92d-99db48ded93f",
       "name": "Danny Cavanagh",
-      "playcount": 113106,
+      "playcount": 113107,
       "similar_artists": [
         {
           "name": "Tim Bowness",
@@ -153,6 +176,6 @@
   },
   "spotify_id": "1NduqottncdzGh32CrREG5",
   "spotify_url": "https://open.spotify.com/artist/1NduqottncdzGh32CrREG5",
-  "updated_at": "2025-07-05T17:04:24.643320",
+  "updated_at": "2025-07-07T19:51:55.088015",
   "wikipedia_url": null
 }
