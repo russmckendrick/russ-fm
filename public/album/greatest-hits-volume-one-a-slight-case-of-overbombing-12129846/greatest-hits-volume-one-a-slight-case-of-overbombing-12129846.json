@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1384587799",
+  "apple_music_url": "https://music.apple.com/gb/album/greatest-hits-vol-one-a-slight-case-of/1384587799",
   "artists": [
     {
       "apple_music_id": "702929",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:48:41.836738",
+  "created_at": "2025-07-07T20:13:19.578816",
   "date_added": "2018-06-21T18:16:52-07:00",
   "discogs_id": "12129846",
   "discogs_url": "https://www.discogs.com/release/12129846-The-Sisters-Of-Mercy-Greatest-Hits-Volume-One-A-Slight-Case-Of-Overbombing",
@@ -88,6 +88,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/qgGMOKWAy0gd6IclA6YHwbuzvoVSm_CJuyNL2udJh5g/rs:fit/g:sm/q:90/h:600/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTI5/ODQ2LTE1MzA0NTk3/MTAtODkzOC5qcGVn.jpeg",
       "width": 580
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b4/f4/d5/b4f4d55e-eae5-59f3-681a-bef5c0070683/190295690175.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -97,25 +111,73 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/The+Sisters+of+Mercy/Greatest+Hits+Volume+One+-+A+Slight+Case+Of+Overbombing",
   "local_images": {
-    "hi-res": "public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-hi-res.jpg",
-    "medium": "public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-medium.jpg",
-    "small": "public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-small.jpg"
+    "hi-res": "../public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-hi-res.jpg",
+    "medium": "../public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-medium.jpg",
+    "small": "../public/album/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846/greatest-hits-volume-one-a-slight-case-of-overbombing-12129846-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:48:43.125934",
+    "processed_at": "2025-07-07T20:13:23.737752",
     "services_used": [
       "discogs",
+      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Greatest Hits, Vol. One: A Slight Case of Overbombing (2018 Remaster)",
   "release_name_discogs": "Greatest Hits Volume One - A Slight Case Of Overbombing",
-  "release_name_spotify": "Floodland",
+  "release_name_spotify": "Greatest Hits Volume One: A Slight Case Of Overbombing (2018 Remaster)",
   "released": "2018-06-15",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b4/f4/d5/b4f4d55e-eae5-59f3-681a-bef5c0070683/190295690175.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 1993, 2018 This Compilation Warner Music UK Ltd, a Warner Music Group Company",
+      "editorial_notes": null,
+      "id": "1384587799",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "The Sisters of Mercy",
+        "artwork": {
+          "bgColor": "000711",
+          "height": 2400,
+          "textColor1": "f9632d",
+          "textColor2": "f84d5c",
+          "textColor3": "c75127",
+          "textColor4": "c63f4d",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/b4/f4/d5/b4f4d55e-eae5-59f3-681a-bef5c0070683/190295690175.jpg/{w}x{h}bb.jpg",
+          "width": 2400
+        },
+        "contentRating": "explicit",
+        "copyright": "℗ 1993, 2018 This Compilation Warner Music UK Ltd, a Warner Music Group Company",
+        "genreNames": [
+          "Rock",
+          "Music",
+          "Alternative",
+          "College Rock",
+          "Adult Alternative",
+          "Goth Rock"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": true,
+        "isSingle": false,
+        "name": "Greatest Hits, Vol. One: A Slight Case of Overbombing (2018 Remaster)",
+        "playParams": {
+          "id": "1384587799",
+          "kind": "album"
+        },
+        "recordLabel": "Parlophone UK",
+        "releaseDate": "1993-08-23",
+        "trackCount": 12,
+        "upc": "190295690175",
+        "url": "https://music.apple.com/gb/album/greatest-hits-vol-one-a-slight-case-of/1384587799"
+      },
+      "url": "https://music.apple.com/gb/album/greatest-hits-vol-one-a-slight-case-of/1384587799"
+    },
     "lastfm": {
       "images": [
         {
@@ -145,7 +207,7 @@
       ],
       "listeners": 371,
       "mbid": "",
-      "playcount": 11055,
+      "playcount": 11057,
       "raw_data": {
         "album": {
           "artist": "The Sisters of Mercy",
@@ -178,7 +240,7 @@
           "listeners": "371",
           "mbid": "",
           "name": "Greatest Hits Volume One - A Slight Case Of Overbombing",
-          "playcount": "11055",
+          "playcount": "11057",
           "tags": {
             "tag": [
               {
@@ -429,45 +491,45 @@
       "wiki_summary": ""
     },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 1987 Warner Music UK Ltd",
+          "text": "© 2018 Warner Music UK Ltd, a Warner Music Group Company",
           "type": "C"
         },
         {
-          "text": "℗ 1987 Warner Music UK Ltd",
+          "text": "℗ 1993, 2018 This Compilation Warner Music UK Ltd, a Warner Music Group Company",
           "type": "P"
         }
       ],
       "explicit": true,
       "external_ids": {
-        "upc": "825646021345"
+        "upc": "190295690182"
       },
-      "id": "2I5WCmOZo17YkcEwjXbLvc",
+      "id": "5qjUHQuDQfh8UwkQ9C5udu",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2737f16b5473cc45f755ec03c82",
+          "url": "https://i.scdn.co/image/ab67616d0000b273227e14b63f340d3f61c8f012",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e027f16b5473cc45f755ec03c82",
+          "url": "https://i.scdn.co/image/ab67616d00001e02227e14b63f340d3f61c8f012",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048517f16b5473cc45f755ec03c82",
+          "url": "https://i.scdn.co/image/ab67616d00004851227e14b63f340d3f61c8f012",
           "width": 64
         }
       ],
       "label": "Rhino",
-      "popularity": 57,
+      "popularity": 45,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -482,49 +544,49 @@
         ],
         "copyrights": [
           {
-            "text": "© 1987 Warner Music UK Ltd",
+            "text": "© 2018 Warner Music UK Ltd, a Warner Music Group Company",
             "type": "C"
           },
           {
-            "text": "℗ 1987 Warner Music UK Ltd",
+            "text": "℗ 1993, 2018 This Compilation Warner Music UK Ltd, a Warner Music Group Company",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "825646021345"
+          "upc": "190295690182"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/2I5WCmOZo17YkcEwjXbLvc"
+          "spotify": "https://open.spotify.com/album/5qjUHQuDQfh8UwkQ9C5udu"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2I5WCmOZo17YkcEwjXbLvc?market=US",
-        "id": "2I5WCmOZo17YkcEwjXbLvc",
+        "href": "https://api.spotify.com/v1/albums/5qjUHQuDQfh8UwkQ9C5udu?market=US",
+        "id": "5qjUHQuDQfh8UwkQ9C5udu",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2737f16b5473cc45f755ec03c82",
+            "url": "https://i.scdn.co/image/ab67616d0000b273227e14b63f340d3f61c8f012",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e027f16b5473cc45f755ec03c82",
+            "url": "https://i.scdn.co/image/ab67616d00001e02227e14b63f340d3f61c8f012",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048517f16b5473cc45f755ec03c82",
+            "url": "https://i.scdn.co/image/ab67616d00004851227e14b63f340d3f61c8f012",
             "width": 64
           }
         ],
         "is_playable": true,
         "label": "Rhino",
-        "name": "Floodland",
-        "popularity": 57,
-        "release_date": "1987",
-        "release_date_precision": "year",
-        "total_tracks": 8,
+        "name": "Greatest Hits Volume One: A Slight Case Of Overbombing (2018 Remaster)",
+        "popularity": 45,
+        "release_date": "1993-08-23",
+        "release_date_precision": "day",
+        "total_tracks": 12,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2I5WCmOZo17YkcEwjXbLvc/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/5qjUHQuDQfh8UwkQ9C5udu/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -540,20 +602,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 420300,
+              "duration_ms": 344169,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/286oOUWsKLgh9DMcOqKkkQ"
+                "spotify": "https://open.spotify.com/track/4wbhTQsJY9UfK7zSpGKTcO"
               },
-              "href": "https://api.spotify.com/v1/tracks/286oOUWsKLgh9DMcOqKkkQ",
-              "id": "286oOUWsKLgh9DMcOqKkkQ",
+              "href": "https://api.spotify.com/v1/tracks/4wbhTQsJY9UfK7zSpGKTcO",
+              "id": "4wbhTQsJY9UfK7zSpGKTcO",
               "is_local": false,
               "is_playable": true,
-              "name": "Dominion / Mother Russia",
+              "name": "Under the Gun - 2018 Remaster",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:286oOUWsKLgh9DMcOqKkkQ"
+              "uri": "spotify:track:4wbhTQsJY9UfK7zSpGKTcO"
             },
             {
               "artists": [
@@ -569,20 +631,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 377649,
+              "duration_ms": 487503,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6iaPtCRwLrhpx5sgGj8PAL"
+                "spotify": "https://open.spotify.com/track/1sTBgoilMy9KnQSftwcjeJ"
               },
-              "href": "https://api.spotify.com/v1/tracks/6iaPtCRwLrhpx5sgGj8PAL",
-              "id": "6iaPtCRwLrhpx5sgGj8PAL",
+              "href": "https://api.spotify.com/v1/tracks/1sTBgoilMy9KnQSftwcjeJ",
+              "id": "1sTBgoilMy9KnQSftwcjeJ",
               "is_local": false,
               "is_playable": true,
-              "name": "Flood I",
+              "name": "Temple of Love (1992) - 2018 Remaster",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:6iaPtCRwLrhpx5sgGj8PAL"
+              "uri": "spotify:track:1sTBgoilMy9KnQSftwcjeJ"
             },
             {
               "artists": [
@@ -598,20 +660,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 295250,
-              "explicit": false,
+              "duration_ms": 456898,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/20goDx14UZviYtCPtLbqvs"
+                "spotify": "https://open.spotify.com/track/0YbVynU0lfptNkSkvJrrG9"
               },
-              "href": "https://api.spotify.com/v1/tracks/20goDx14UZviYtCPtLbqvs",
-              "id": "20goDx14UZviYtCPtLbqvs",
+              "href": "https://api.spotify.com/v1/tracks/0YbVynU0lfptNkSkvJrrG9",
+              "id": "0YbVynU0lfptNkSkvJrrG9",
               "is_local": false,
               "is_playable": true,
-              "name": "Lucretia My Reflection - Vinyl Version",
+              "name": "Vision Thing - 2018 Remaster",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:20goDx14UZviYtCPtLbqvs"
+              "uri": "spotify:track:0YbVynU0lfptNkSkvJrrG9"
             },
             {
               "artists": [
@@ -627,20 +689,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 252205,
+              "duration_ms": 230430,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6338DTvCNXat8wvWtBjdSy"
+                "spotify": "https://open.spotify.com/track/3TUQXxyTu9J3Kj2lmMBxos"
               },
-              "href": "https://api.spotify.com/v1/tracks/6338DTvCNXat8wvWtBjdSy",
-              "id": "6338DTvCNXat8wvWtBjdSy",
+              "href": "https://api.spotify.com/v1/tracks/3TUQXxyTu9J3Kj2lmMBxos",
+              "id": "3TUQXxyTu9J3Kj2lmMBxos",
               "is_local": false,
               "is_playable": true,
-              "name": "1959",
+              "name": "Detonation Boulevard - 2018 Remaster",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:6338DTvCNXat8wvWtBjdSy"
+              "uri": "spotify:track:3TUQXxyTu9J3Kj2lmMBxos"
             },
             {
               "artists": [
@@ -656,20 +718,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 570694,
+              "duration_ms": 182972,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2ZiAhZOpTjNgh3JpTGYAyh"
+                "spotify": "https://open.spotify.com/track/3PGDY79ILyxwBsjNmEiFAh"
               },
-              "href": "https://api.spotify.com/v1/tracks/2ZiAhZOpTjNgh3JpTGYAyh",
-              "id": "2ZiAhZOpTjNgh3JpTGYAyh",
+              "href": "https://api.spotify.com/v1/tracks/3PGDY79ILyxwBsjNmEiFAh",
+              "id": "3PGDY79ILyxwBsjNmEiFAh",
               "is_local": false,
               "is_playable": true,
-              "name": "This Corrosion",
+              "name": "Doctor Jeep - 2018 Remaster",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:2ZiAhZOpTjNgh3JpTGYAyh"
+              "uri": "spotify:track:3PGDY79ILyxwBsjNmEiFAh"
             },
             {
               "artists": [
@@ -685,20 +747,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 374426,
+              "duration_ms": 504885,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0l7fvsURe131rP19pYhzRI"
+                "spotify": "https://open.spotify.com/track/52RW6UA0iUApp0NBLdKuxu"
               },
-              "href": "https://api.spotify.com/v1/tracks/0l7fvsURe131rP19pYhzRI",
-              "id": "0l7fvsURe131rP19pYhzRI",
+              "href": "https://api.spotify.com/v1/tracks/52RW6UA0iUApp0NBLdKuxu",
+              "id": "52RW6UA0iUApp0NBLdKuxu",
               "is_local": false,
               "is_playable": true,
-              "name": "Flood II - Vinyl Version",
+              "name": "More - 2018 Remaster",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:0l7fvsURe131rP19pYhzRI"
+              "uri": "spotify:track:52RW6UA0iUApp0NBLdKuxu"
             },
             {
               "artists": [
@@ -714,20 +776,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 278173,
-              "explicit": true,
+              "duration_ms": 523989,
+              "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7qmqs3jG9Mjr2GRIja8ZEj"
+                "spotify": "https://open.spotify.com/track/52PMeKpMnfn7w0aETAMD3a"
               },
-              "href": "https://api.spotify.com/v1/tracks/7qmqs3jG9Mjr2GRIja8ZEj",
-              "id": "7qmqs3jG9Mjr2GRIja8ZEj",
+              "href": "https://api.spotify.com/v1/tracks/52PMeKpMnfn7w0aETAMD3a",
+              "id": "52PMeKpMnfn7w0aETAMD3a",
               "is_local": false,
               "is_playable": true,
-              "name": "Driven Like the Snow - Vinyl Version",
+              "name": "Lucretia My Reflection - 2018 Remaster",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:7qmqs3jG9Mjr2GRIja8ZEj"
+              "uri": "spotify:track:52PMeKpMnfn7w0aETAMD3a"
             },
             {
               "artists": [
@@ -743,34 +805,150 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 168918,
+              "duration_ms": 425457,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4FYevPDL4eOhlPyOHzjFC1"
+                "spotify": "https://open.spotify.com/track/59CqI2P58BOhnlt6NB7P8D"
               },
-              "href": "https://api.spotify.com/v1/tracks/4FYevPDL4eOhlPyOHzjFC1",
-              "id": "4FYevPDL4eOhlPyOHzjFC1",
+              "href": "https://api.spotify.com/v1/tracks/59CqI2P58BOhnlt6NB7P8D",
+              "id": "59CqI2P58BOhnlt6NB7P8D",
               "is_local": false,
               "is_playable": true,
-              "name": "Never Land - A Fragment",
+              "name": "Dominion / Mother Russia - 2018 Remaster",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:4FYevPDL4eOhlPyOHzjFC1"
+              "uri": "spotify:track:59CqI2P58BOhnlt6NB7P8D"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4HxBVyHaUa60eCSsJWxwWR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4HxBVyHaUa60eCSsJWxwWR",
+                  "id": "4HxBVyHaUa60eCSsJWxwWR",
+                  "name": "Sisters of Mercy",
+                  "type": "artist",
+                  "uri": "spotify:artist:4HxBVyHaUa60eCSsJWxwWR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 617489,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2JOAxHYCYFiFF5YmOxQ5O9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2JOAxHYCYFiFF5YmOxQ5O9",
+              "id": "2JOAxHYCYFiFF5YmOxQ5O9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "This Corrosion - 2018 Remaster",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2JOAxHYCYFiFF5YmOxQ5O9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4HxBVyHaUa60eCSsJWxwWR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4HxBVyHaUa60eCSsJWxwWR",
+                  "id": "4HxBVyHaUa60eCSsJWxwWR",
+                  "name": "Sisters of Mercy",
+                  "type": "artist",
+                  "uri": "spotify:artist:4HxBVyHaUa60eCSsJWxwWR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 237955,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5DA71KWYVOUoFuu0cFcyG9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5DA71KWYVOUoFuu0cFcyG9",
+              "id": "5DA71KWYVOUoFuu0cFcyG9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "No Time to Cry - 2018 Remaster",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:5DA71KWYVOUoFuu0cFcyG9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4HxBVyHaUa60eCSsJWxwWR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4HxBVyHaUa60eCSsJWxwWR",
+                  "id": "4HxBVyHaUa60eCSsJWxwWR",
+                  "name": "Sisters of Mercy",
+                  "type": "artist",
+                  "uri": "spotify:artist:4HxBVyHaUa60eCSsJWxwWR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 203919,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2yPJOQanOLFgB03R9Y9ZL3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2yPJOQanOLFgB03R9Y9ZL3",
+              "id": "2yPJOQanOLFgB03R9Y9ZL3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Walk Away - 2018 Remaster",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2yPJOQanOLFgB03R9Y9ZL3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4HxBVyHaUa60eCSsJWxwWR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4HxBVyHaUa60eCSsJWxwWR",
+                  "id": "4HxBVyHaUa60eCSsJWxwWR",
+                  "name": "Sisters of Mercy",
+                  "type": "artist",
+                  "uri": "spotify:artist:4HxBVyHaUa60eCSsJWxwWR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213132,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4E83HmDjFdbsqGU6r6nJKH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4E83HmDjFdbsqGU6r6nJKH",
+              "id": "4E83HmDjFdbsqGU6r6nJKH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Body and Soul - 2018 Remaster",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:4E83HmDjFdbsqGU6r6nJKH"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 8
+          "total": 12
         },
         "type": "album",
-        "uri": "spotify:album:2I5WCmOZo17YkcEwjXbLvc"
+        "uri": "spotify:album:5qjUHQuDQfh8UwkQ9C5udu"
       },
-      "release_date": "1987",
-      "release_date_precision": "year",
-      "total_tracks": 8,
+      "release_date": "1993-08-23",
+      "release_date_precision": "day",
+      "total_tracks": 12,
       "tracks": [
         {
           "artists": [
@@ -779,10 +957,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 420300,
+          "duration_ms": 344169,
           "explicit": false,
-          "id": "286oOUWsKLgh9DMcOqKkkQ",
-          "name": "Dominion / Mother Russia",
+          "id": "4wbhTQsJY9UfK7zSpGKTcO",
+          "name": "Under the Gun - 2018 Remaster",
           "preview_url": null,
           "track_number": 1
         },
@@ -793,10 +971,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 377649,
+          "duration_ms": 487503,
           "explicit": false,
-          "id": "6iaPtCRwLrhpx5sgGj8PAL",
-          "name": "Flood I",
+          "id": "1sTBgoilMy9KnQSftwcjeJ",
+          "name": "Temple of Love (1992) - 2018 Remaster",
           "preview_url": null,
           "track_number": 2
         },
@@ -807,10 +985,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 295250,
-          "explicit": false,
-          "id": "20goDx14UZviYtCPtLbqvs",
-          "name": "Lucretia My Reflection - Vinyl Version",
+          "duration_ms": 456898,
+          "explicit": true,
+          "id": "0YbVynU0lfptNkSkvJrrG9",
+          "name": "Vision Thing - 2018 Remaster",
           "preview_url": null,
           "track_number": 3
         },
@@ -821,10 +999,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 252205,
+          "duration_ms": 230430,
           "explicit": false,
-          "id": "6338DTvCNXat8wvWtBjdSy",
-          "name": "1959",
+          "id": "3TUQXxyTu9J3Kj2lmMBxos",
+          "name": "Detonation Boulevard - 2018 Remaster",
           "preview_url": null,
           "track_number": 4
         },
@@ -835,10 +1013,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 570694,
+          "duration_ms": 182972,
           "explicit": false,
-          "id": "2ZiAhZOpTjNgh3JpTGYAyh",
-          "name": "This Corrosion",
+          "id": "3PGDY79ILyxwBsjNmEiFAh",
+          "name": "Doctor Jeep - 2018 Remaster",
           "preview_url": null,
           "track_number": 5
         },
@@ -849,10 +1027,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 374426,
+          "duration_ms": 504885,
           "explicit": false,
-          "id": "0l7fvsURe131rP19pYhzRI",
-          "name": "Flood II - Vinyl Version",
+          "id": "52RW6UA0iUApp0NBLdKuxu",
+          "name": "More - 2018 Remaster",
           "preview_url": null,
           "track_number": 6
         },
@@ -863,10 +1041,10 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 278173,
-          "explicit": true,
-          "id": "7qmqs3jG9Mjr2GRIja8ZEj",
-          "name": "Driven Like the Snow - Vinyl Version",
+          "duration_ms": 523989,
+          "explicit": false,
+          "id": "52PMeKpMnfn7w0aETAMD3a",
+          "name": "Lucretia My Reflection - 2018 Remaster",
           "preview_url": null,
           "track_number": 7
         },
@@ -877,19 +1055,75 @@
               "name": "Sisters of Mercy"
             }
           ],
-          "duration_ms": 168918,
+          "duration_ms": 425457,
           "explicit": false,
-          "id": "4FYevPDL4eOhlPyOHzjFC1",
-          "name": "Never Land - A Fragment",
+          "id": "59CqI2P58BOhnlt6NB7P8D",
+          "name": "Dominion / Mother Russia - 2018 Remaster",
           "preview_url": null,
           "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4HxBVyHaUa60eCSsJWxwWR",
+              "name": "Sisters of Mercy"
+            }
+          ],
+          "duration_ms": 617489,
+          "explicit": false,
+          "id": "2JOAxHYCYFiFF5YmOxQ5O9",
+          "name": "This Corrosion - 2018 Remaster",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4HxBVyHaUa60eCSsJWxwWR",
+              "name": "Sisters of Mercy"
+            }
+          ],
+          "duration_ms": 237955,
+          "explicit": false,
+          "id": "5DA71KWYVOUoFuu0cFcyG9",
+          "name": "No Time to Cry - 2018 Remaster",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "4HxBVyHaUa60eCSsJWxwWR",
+              "name": "Sisters of Mercy"
+            }
+          ],
+          "duration_ms": 203919,
+          "explicit": false,
+          "id": "2yPJOQanOLFgB03R9Y9ZL3",
+          "name": "Walk Away - 2018 Remaster",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "4HxBVyHaUa60eCSsJWxwWR",
+              "name": "Sisters of Mercy"
+            }
+          ],
+          "duration_ms": 213132,
+          "explicit": false,
+          "id": "4E83HmDjFdbsqGU6r6nJKH",
+          "name": "Body and Soul - 2018 Remaster",
+          "preview_url": null,
+          "track_number": 12
         }
       ],
-      "url": "https://open.spotify.com/album/2I5WCmOZo17YkcEwjXbLvc"
+      "url": "https://open.spotify.com/album/5qjUHQuDQfh8UwkQ9C5udu"
     }
   },
-  "spotify_id": "2I5WCmOZo17YkcEwjXbLvc",
-  "spotify_url": "https://open.spotify.com/album/2I5WCmOZo17YkcEwjXbLvc",
+  "spotify_id": "5qjUHQuDQfh8UwkQ9C5udu",
+  "spotify_url": "https://open.spotify.com/album/5qjUHQuDQfh8UwkQ9C5udu",
   "styles": [
     "Goth Rock"
   ],
@@ -968,6 +1202,6 @@
       "title": "Body And Soul"
     }
   ],
-  "updated_at": "2025-07-05T16:48:43.028120",
+  "updated_at": "2025-07-07T20:13:23.491651",
   "year": 2018
 }

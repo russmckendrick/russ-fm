@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:37:52.233344",
+  "created_at": "2025-07-07T20:17:43.701885",
   "date_added": "2018-12-22T10:29:49-08:00",
   "discogs_id": "10461741",
   "discogs_url": "https://www.discogs.com/release/10461741-Pretty-Things-Latest-Writs-The-Best-Of-Greatest-Hits",
@@ -47,6 +47,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/6gsUOsX1BMDMDZUC8dwFbxd7VGmA52vd6VLtYqZRD0g/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNDYx/NzQxLTE0OTc5NzA0/ODMtMzEwNS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -55,14 +62,14 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-hi-res.jpg",
-    "medium": "public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-medium.jpg",
-    "small": "public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-small.jpg"
+    "hi-res": "../public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-hi-res.jpg",
+    "medium": "../public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-medium.jpg",
+    "small": "../public/album/latest-writs-the-best-of-greatest-hits-10461741/latest-writs-the-best-of-greatest-hits-10461741-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:37:55.999885",
+    "processed_at": "2025-07-07T20:17:58.452797",
     "services_used": [
       "discogs",
       "spotify",
@@ -71,49 +78,49 @@
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Latest Writs The Best Of... Greatest Hits",
-  "release_name_spotify": "Live at the BBC",
+  "release_name_spotify": "Greatest Hits",
   "released": "2017-06-16",
   "services": {
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(C) 2021 Repertoire Records (UK) Limited",
+          "text": "(C) 2017 Snapper IPR Ltd",
           "type": "C"
         },
         {
-          "text": "(P) 2021 BBC Licensed courtesy of BBC Studios",
+          "text": "(P) 1965 Snapper Music plc",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "4009910137321"
+        "upc": "636551808361"
       },
-      "id": "1d6pNy1RFbTghyLOzPjLGR",
+      "id": "3O7fTDDtJ3IBSDguugo2CR",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273b044c851cefb0f5bd3012f0d",
+          "url": "https://i.scdn.co/image/ab67616d0000b273adcd42c6974fc97b30f5ba2b",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02b044c851cefb0f5bd3012f0d",
+          "url": "https://i.scdn.co/image/ab67616d00001e02adcd42c6974fc97b30f5ba2b",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851b044c851cefb0f5bd3012f0d",
+          "url": "https://i.scdn.co/image/ab67616d00004851adcd42c6974fc97b30f5ba2b",
           "width": 64
         }
       ],
-      "label": "Repertoire Records (UK) Limited",
-      "popularity": 12,
+      "label": "Madfish",
+      "popularity": 13,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -128,49 +135,49 @@
         ],
         "copyrights": [
           {
-            "text": "(C) 2021 Repertoire Records (UK) Limited",
+            "text": "(C) 2017 Snapper IPR Ltd",
             "type": "C"
           },
           {
-            "text": "(P) 2021 BBC Licensed courtesy of BBC Studios",
+            "text": "(P) 1965 Snapper Music plc",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "4009910137321"
+          "upc": "636551808361"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/1d6pNy1RFbTghyLOzPjLGR"
+          "spotify": "https://open.spotify.com/album/3O7fTDDtJ3IBSDguugo2CR"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/1d6pNy1RFbTghyLOzPjLGR?market=US",
-        "id": "1d6pNy1RFbTghyLOzPjLGR",
+        "href": "https://api.spotify.com/v1/albums/3O7fTDDtJ3IBSDguugo2CR?market=US",
+        "id": "3O7fTDDtJ3IBSDguugo2CR",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b044c851cefb0f5bd3012f0d",
+            "url": "https://i.scdn.co/image/ab67616d0000b273adcd42c6974fc97b30f5ba2b",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b044c851cefb0f5bd3012f0d",
+            "url": "https://i.scdn.co/image/ab67616d00001e02adcd42c6974fc97b30f5ba2b",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b044c851cefb0f5bd3012f0d",
+            "url": "https://i.scdn.co/image/ab67616d00004851adcd42c6974fc97b30f5ba2b",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Repertoire Records (UK) Limited",
-        "name": "Live at the BBC",
-        "popularity": 12,
-        "release_date": "2021-05-28",
+        "label": "Madfish",
+        "name": "Greatest Hits",
+        "popularity": 13,
+        "release_date": "2017-10-13",
         "release_date_precision": "day",
-        "total_tracks": 111,
+        "total_tracks": 25,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/1d6pNy1RFbTghyLOzPjLGR/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/3O7fTDDtJ3IBSDguugo2CR/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -186,59 +193,49 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 180606,
+              "duration_ms": 140946,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/04yvlDAaXKmw2uXIyJrB4a"
+                "spotify": "https://open.spotify.com/track/5M3RZVrYo5fDb818QX4JVj"
               },
-              "href": "https://api.spotify.com/v1/tracks/04yvlDAaXKmw2uXIyJrB4a",
-              "id": "04yvlDAaXKmw2uXIyJrB4a",
+              "href": "https://api.spotify.com/v1/tracks/5M3RZVrYo5fDb818QX4JVj",
+              "id": "5M3RZVrYo5fDb818QX4JVj",
               "is_local": false,
               "is_playable": true,
-              "name": "Big Boss Man - Saturday Club Presented by Brian Matthew, October 1964",
+              "name": "Rosalyn",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:04yvlDAaXKmw2uXIyJrB4a"
+              "uri": "spotify:track:5M3RZVrYo5fDb818QX4JVj"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6zCEhRNNWqDu59v8w5DAWH"
+                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6zCEhRNNWqDu59v8w5DAWH",
-                  "id": "6zCEhRNNWqDu59v8w5DAWH",
-                  "name": "Phil May",
+                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
+                  "id": "5U16QlMnlSAhkQxBZpLyLO",
+                  "name": "The Pretty Things",
                   "type": "artist",
-                  "uri": "spotify:artist:6zCEhRNNWqDu59v8w5DAWH"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5SyArLAOWWrzh200gdJtPW"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5SyArLAOWWrzh200gdJtPW",
-                  "id": "5SyArLAOWWrzh200gdJtPW",
-                  "name": "Dick Taylor",
-                  "type": "artist",
-                  "uri": "spotify:artist:5SyArLAOWWrzh200gdJtPW"
+                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 66213,
+              "duration_ms": 130093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3AdeGRcuvAlu3CnUk7ktBZ"
+                "spotify": "https://open.spotify.com/track/33pCUtu1jTrgLB8LXe8a80"
               },
-              "href": "https://api.spotify.com/v1/tracks/3AdeGRcuvAlu3CnUk7ktBZ",
-              "id": "3AdeGRcuvAlu3CnUk7ktBZ",
+              "href": "https://api.spotify.com/v1/tracks/33pCUtu1jTrgLB8LXe8a80",
+              "id": "33pCUtu1jTrgLB8LXe8a80",
               "is_local": false,
               "is_playable": true,
-              "name": "Interview with Phil May & Dick Taylor - Saturday Club Presented by Brian Matthew, October 1964",
+              "name": "Don't Bring Me Down",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:3AdeGRcuvAlu3CnUk7ktBZ"
+              "uri": "spotify:track:33pCUtu1jTrgLB8LXe8a80"
             },
             {
               "artists": [
@@ -254,20 +251,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 127520,
+              "duration_ms": 119706,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1QWibdiGJ51KbWA2I6PXnn"
+                "spotify": "https://open.spotify.com/track/1OmmO6psLMUsn8xmxJraI6"
               },
-              "href": "https://api.spotify.com/v1/tracks/1QWibdiGJ51KbWA2I6PXnn",
-              "id": "1QWibdiGJ51KbWA2I6PXnn",
+              "href": "https://api.spotify.com/v1/tracks/1OmmO6psLMUsn8xmxJraI6",
+              "id": "1OmmO6psLMUsn8xmxJraI6",
               "is_local": false,
               "is_playable": true,
-              "name": "Don't Bring Me Down - Saturday Club Presented by Brian Matthew, October 1964",
+              "name": "Honey, I Need",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:1QWibdiGJ51KbWA2I6PXnn"
+              "uri": "spotify:track:1OmmO6psLMUsn8xmxJraI6"
             },
             {
               "artists": [
@@ -283,20 +280,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 145453,
+              "duration_ms": 172693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6Xt2ssCbOw8T836FYdCPyX"
+                "spotify": "https://open.spotify.com/track/5TmMVQRicJv7IOaI3pGIHR"
               },
-              "href": "https://api.spotify.com/v1/tracks/6Xt2ssCbOw8T836FYdCPyX",
-              "id": "6Xt2ssCbOw8T836FYdCPyX",
+              "href": "https://api.spotify.com/v1/tracks/5TmMVQRicJv7IOaI3pGIHR",
+              "id": "5TmMVQRicJv7IOaI3pGIHR",
               "is_local": false,
               "is_playable": true,
-              "name": "Mama, Keep Your Big Mouth Shut - Saturday Club Presented by Brian Matthew, October 1964",
+              "name": "Cry To Me",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:6Xt2ssCbOw8T836FYdCPyX"
+              "uri": "spotify:track:5TmMVQRicJv7IOaI3pGIHR"
             },
             {
               "artists": [
@@ -312,20 +309,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 135026,
+              "duration_ms": 139826,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6S95avOlVcFTvLcnFRrNSx"
+                "spotify": "https://open.spotify.com/track/5C4Fhu82xbFZIwC1eWe3tG"
               },
-              "href": "https://api.spotify.com/v1/tracks/6S95avOlVcFTvLcnFRrNSx",
-              "id": "6S95avOlVcFTvLcnFRrNSx",
+              "href": "https://api.spotify.com/v1/tracks/5C4Fhu82xbFZIwC1eWe3tG",
+              "id": "5C4Fhu82xbFZIwC1eWe3tG",
               "is_local": false,
               "is_playable": true,
-              "name": "Road Runner - Saturday Club Presented by Brian Matthew, October 1964",
+              "name": "Midnight To Six Man",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:6S95avOlVcFTvLcnFRrNSx"
+              "uri": "spotify:track:5C4Fhu82xbFZIwC1eWe3tG"
             },
             {
               "artists": [
@@ -341,20 +338,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 117106,
+              "duration_ms": 160013,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/47azeyNecwCV8wRgI7WKJx"
+                "spotify": "https://open.spotify.com/track/6jp7H1uN6Gvos7LXUYIEZ3"
               },
-              "href": "https://api.spotify.com/v1/tracks/47azeyNecwCV8wRgI7WKJx",
-              "id": "47azeyNecwCV8wRgI7WKJx",
+              "href": "https://api.spotify.com/v1/tracks/6jp7H1uN6Gvos7LXUYIEZ3",
+              "id": "6jp7H1uN6Gvos7LXUYIEZ3",
               "is_local": false,
               "is_playable": true,
-              "name": "Big City - Saturday Club Presented by Brian Matthew, November 1964",
+              "name": "Come See Me",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:47azeyNecwCV8wRgI7WKJx"
+              "uri": "spotify:track:6jp7H1uN6Gvos7LXUYIEZ3"
             },
             {
               "artists": [
@@ -370,20 +367,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 138826,
+              "duration_ms": 161200,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7vUMZ5V8mY205kImO3xqAp"
+                "spotify": "https://open.spotify.com/track/6LIJ8YaVSgCBZujscUp6Y1"
               },
-              "href": "https://api.spotify.com/v1/tracks/7vUMZ5V8mY205kImO3xqAp",
-              "id": "7vUMZ5V8mY205kImO3xqAp",
+              "href": "https://api.spotify.com/v1/tracks/6LIJ8YaVSgCBZujscUp6Y1",
+              "id": "6LIJ8YaVSgCBZujscUp6Y1",
               "is_local": false,
               "is_playable": true,
-              "name": "Don't Bring Me Down - Beat Room Presented by Pat Campbell, 24 December 1964",
+              "name": "Can't Stand The Pain",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:7vUMZ5V8mY205kImO3xqAp"
+              "uri": "spotify:track:6LIJ8YaVSgCBZujscUp6Y1"
             },
             {
               "artists": [
@@ -399,20 +396,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 194266,
+              "duration_ms": 167706,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6uY3CwImep1Rp0pEPNup0z"
+                "spotify": "https://open.spotify.com/track/2lvZqw8aZK3S6nwXohFDVe"
               },
-              "href": "https://api.spotify.com/v1/tracks/6uY3CwImep1Rp0pEPNup0z",
-              "id": "6uY3CwImep1Rp0pEPNup0z",
+              "href": "https://api.spotify.com/v1/tracks/2lvZqw8aZK3S6nwXohFDVe",
+              "id": "2lvZqw8aZK3S6nwXohFDVe",
               "is_local": false,
               "is_playable": true,
-              "name": "Mama, Keep Your Big Mouth Shut - Beat Room Presented by Pat Campbell, 24 December 1964",
+              "name": "Sittin' All Alone",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:6uY3CwImep1Rp0pEPNup0z"
+              "uri": "spotify:track:2lvZqw8aZK3S6nwXohFDVe"
             },
             {
               "artists": [
@@ -428,20 +425,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 108080,
+              "duration_ms": 116080,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5RqFeUgn2IUNjgNJJgnVVs"
+                "spotify": "https://open.spotify.com/track/389i4Sy2dGaw70TDByKFyP"
               },
-              "href": "https://api.spotify.com/v1/tracks/5RqFeUgn2IUNjgNJJgnVVs",
-              "id": "5RqFeUgn2IUNjgNJJgnVVs",
+              "href": "https://api.spotify.com/v1/tracks/389i4Sy2dGaw70TDByKFyP",
+              "id": "389i4Sy2dGaw70TDByKFyP",
               "is_local": false,
               "is_playable": true,
-              "name": "Johnny B. Goode - Beat Room Presented by Pat Campbell, 24 December 1964",
+              "name": "Get The Picture?",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:5RqFeUgn2IUNjgNJJgnVVs"
+              "uri": "spotify:track:389i4Sy2dGaw70TDByKFyP"
             },
             {
               "artists": [
@@ -457,49 +454,49 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 151773,
+              "duration_ms": 143160,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1sNbhJNtQkbauMYAuzGe1n"
+                "spotify": "https://open.spotify.com/track/0xwb6xTbQffKT08AInUAQw"
               },
-              "href": "https://api.spotify.com/v1/tracks/1sNbhJNtQkbauMYAuzGe1n",
-              "id": "1sNbhJNtQkbauMYAuzGe1n",
+              "href": "https://api.spotify.com/v1/tracks/0xwb6xTbQffKT08AInUAQw",
+              "id": "0xwb6xTbQffKT08AInUAQw",
               "is_local": false,
               "is_playable": true,
-              "name": "We'll Be Together - Saturday Club Presented by Brian Matthew, 9 February 1965",
+              "name": "You Don't Believe Me",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:1sNbhJNtQkbauMYAuzGe1n"
+              "uri": "spotify:track:0xwb6xTbQffKT08AInUAQw"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6zCEhRNNWqDu59v8w5DAWH"
+                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6zCEhRNNWqDu59v8w5DAWH",
-                  "id": "6zCEhRNNWqDu59v8w5DAWH",
-                  "name": "Phil May",
+                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
+                  "id": "5U16QlMnlSAhkQxBZpLyLO",
+                  "name": "The Pretty Things",
                   "type": "artist",
-                  "uri": "spotify:artist:6zCEhRNNWqDu59v8w5DAWH"
+                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 60986,
+              "duration_ms": 156933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5BGWlX6yXVjQ47oRRAVTtN"
+                "spotify": "https://open.spotify.com/track/0Pj5wdiwWaSUZQ2FLSMJw4"
               },
-              "href": "https://api.spotify.com/v1/tracks/5BGWlX6yXVjQ47oRRAVTtN",
-              "id": "5BGWlX6yXVjQ47oRRAVTtN",
+              "href": "https://api.spotify.com/v1/tracks/0Pj5wdiwWaSUZQ2FLSMJw4",
+              "id": "0Pj5wdiwWaSUZQ2FLSMJw4",
               "is_local": false,
               "is_playable": true,
-              "name": "Interview with Phil May - Saturday Club Presented by Brian Matthew, 10 October 1965",
+              "name": "I Can Never Say",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:5BGWlX6yXVjQ47oRRAVTtN"
+              "uri": "spotify:track:0Pj5wdiwWaSUZQ2FLSMJw4"
             },
             {
               "artists": [
@@ -515,20 +512,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 175840,
+              "duration_ms": 146200,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3h2414zVP9335mdDXvKBeR"
+                "spotify": "https://open.spotify.com/track/6hewn0Fi182hDngYvsgRMl"
               },
-              "href": "https://api.spotify.com/v1/tracks/3h2414zVP9335mdDXvKBeR",
-              "id": "3h2414zVP9335mdDXvKBeR",
+              "href": "https://api.spotify.com/v1/tracks/6hewn0Fi182hDngYvsgRMl",
+              "id": "6hewn0Fi182hDngYvsgRMl",
               "is_local": false,
               "is_playable": true,
-              "name": "Sitting All Alone - Saturday Club Presented by Brian Matthew, 10 October 1965",
+              "name": "L.S.D.",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:3h2414zVP9335mdDXvKBeR"
+              "uri": "spotify:track:6hewn0Fi182hDngYvsgRMl"
             },
             {
               "artists": [
@@ -544,20 +541,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 117360,
+              "duration_ms": 309720,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0zbFsHiGHbYtHGR6cNPvx9"
+                "spotify": "https://open.spotify.com/track/17TfIINtABA2HmTHfCXjta"
               },
-              "href": "https://api.spotify.com/v1/tracks/0zbFsHiGHbYtHGR6cNPvx9",
-              "id": "0zbFsHiGHbYtHGR6cNPvx9",
+              "href": "https://api.spotify.com/v1/tracks/17TfIINtABA2HmTHfCXjta",
+              "id": "17TfIINtABA2HmTHfCXjta",
               "is_local": false,
               "is_playable": true,
-              "name": "Big City - Saturday Club Presented by Brian Matthew, 10 October 1965",
+              "name": "Defecting Grey",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:0zbFsHiGHbYtHGR6cNPvx9"
+              "uri": "spotify:track:17TfIINtABA2HmTHfCXjta"
             },
             {
               "artists": [
@@ -573,20 +570,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 88426,
+              "duration_ms": 222053,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7wwOjQmQ7zftLz4Bb2ahIA"
+                "spotify": "https://open.spotify.com/track/3XcwaQmuRsN1c9IMQ0ls0Q"
               },
-              "href": "https://api.spotify.com/v1/tracks/7wwOjQmQ7zftLz4Bb2ahIA",
-              "id": "7wwOjQmQ7zftLz4Bb2ahIA",
+              "href": "https://api.spotify.com/v1/tracks/3XcwaQmuRsN1c9IMQ0ls0Q",
+              "id": "3XcwaQmuRsN1c9IMQ0ls0Q",
               "is_local": false,
               "is_playable": true,
-              "name": "Buzz the Jerk - Saturday Club Presented by Brian Matthew, 10 October 1965",
+              "name": "Talkin' About The Good Times",
               "preview_url": null,
               "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:7wwOjQmQ7zftLz4Bb2ahIA"
+              "uri": "spotify:track:3XcwaQmuRsN1c9IMQ0ls0Q"
             },
             {
               "artists": [
@@ -602,20 +599,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 148653,
+              "duration_ms": 209240,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3n6aUos9OF23Tbpb7yjneX"
+                "spotify": "https://open.spotify.com/track/6L6vjP0J6Htln94JccUrmG"
               },
-              "href": "https://api.spotify.com/v1/tracks/3n6aUos9OF23Tbpb7yjneX",
-              "id": "3n6aUos9OF23Tbpb7yjneX",
+              "href": "https://api.spotify.com/v1/tracks/6L6vjP0J6Htln94JccUrmG",
+              "id": "6L6vjP0J6Htln94JccUrmG",
               "is_local": false,
               "is_playable": true,
-              "name": "Rainin' in My Heart - Saturday Club Presented by Brian Matthew, 10 October 1965",
+              "name": "Mr. Evasion",
               "preview_url": null,
               "track_number": 15,
               "type": "track",
-              "uri": "spotify:track:3n6aUos9OF23Tbpb7yjneX"
+              "uri": "spotify:track:6L6vjP0J6Htln94JccUrmG"
             },
             {
               "artists": [
@@ -631,49 +628,49 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 148373,
+              "duration_ms": 217373,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0ybimvXocmZ26Q3LHzAFTB"
+                "spotify": "https://open.spotify.com/track/3lbH0mvIH2HYcd68uSDeL0"
               },
-              "href": "https://api.spotify.com/v1/tracks/0ybimvXocmZ26Q3LHzAFTB",
-              "id": "0ybimvXocmZ26Q3LHzAFTB",
+              "href": "https://api.spotify.com/v1/tracks/3lbH0mvIH2HYcd68uSDeL0",
+              "id": "3lbH0mvIH2HYcd68uSDeL0",
               "is_local": false,
               "is_playable": true,
-              "name": "L.S.D. - Saturday Club Presented by Brian Matthew, May 1966",
+              "name": "Walking Through My Dreams",
               "preview_url": null,
               "track_number": 16,
               "type": "track",
-              "uri": "spotify:track:0ybimvXocmZ26Q3LHzAFTB"
+              "uri": "spotify:track:3lbH0mvIH2HYcd68uSDeL0"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6zCEhRNNWqDu59v8w5DAWH"
+                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6zCEhRNNWqDu59v8w5DAWH",
-                  "id": "6zCEhRNNWqDu59v8w5DAWH",
-                  "name": "Phil May",
+                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
+                  "id": "5U16QlMnlSAhkQxBZpLyLO",
+                  "name": "The Pretty Things",
                   "type": "artist",
-                  "uri": "spotify:artist:6zCEhRNNWqDu59v8w5DAWH"
+                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 70600,
+              "duration_ms": 189600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5mqu4CVP2iDbkOoZZqVrbE"
+                "spotify": "https://open.spotify.com/track/4N6K9UtHimQKvGx6kOFkrR"
               },
-              "href": "https://api.spotify.com/v1/tracks/5mqu4CVP2iDbkOoZZqVrbE",
-              "id": "5mqu4CVP2iDbkOoZZqVrbE",
+              "href": "https://api.spotify.com/v1/tracks/4N6K9UtHimQKvGx6kOFkrR",
+              "id": "4N6K9UtHimQKvGx6kOFkrR",
               "is_local": false,
               "is_playable": true,
-              "name": "Interview with Phil May - Saturday Club Presented by Brian Matthew, May 1966",
+              "name": "S.F. Sorrow Is Born",
               "preview_url": null,
               "track_number": 17,
               "type": "track",
-              "uri": "spotify:track:5mqu4CVP2iDbkOoZZqVrbE"
+              "uri": "spotify:track:4N6K9UtHimQKvGx6kOFkrR"
             },
             {
               "artists": [
@@ -689,20 +686,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 143106,
+              "duration_ms": 165600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2flDHcTw1cnR5a3KSfkqyl"
+                "spotify": "https://open.spotify.com/track/7jijK5wi3f5RTdBnqklknU"
               },
-              "href": "https://api.spotify.com/v1/tracks/2flDHcTw1cnR5a3KSfkqyl",
-              "id": "2flDHcTw1cnR5a3KSfkqyl",
+              "href": "https://api.spotify.com/v1/tracks/7jijK5wi3f5RTdBnqklknU",
+              "id": "7jijK5wi3f5RTdBnqklknU",
               "is_local": false,
               "is_playable": true,
-              "name": "Midnight to Six Man - Saturday Club Presented by Brian Matthew, May 1966",
+              "name": "Trust",
               "preview_url": null,
               "track_number": 18,
               "type": "track",
-              "uri": "spotify:track:2flDHcTw1cnR5a3KSfkqyl"
+              "uri": "spotify:track:7jijK5wi3f5RTdBnqklknU"
             },
             {
               "artists": [
@@ -718,20 +715,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 101306,
+              "duration_ms": 187760,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6AcbqKFOoHfOnvnfH0DWP7"
+                "spotify": "https://open.spotify.com/track/3MOhjCciKakUbRDCTXcxFU"
               },
-              "href": "https://api.spotify.com/v1/tracks/6AcbqKFOoHfOnvnfH0DWP7",
-              "id": "6AcbqKFOoHfOnvnfH0DWP7",
+              "href": "https://api.spotify.com/v1/tracks/3MOhjCciKakUbRDCTXcxFU",
+              "id": "3MOhjCciKakUbRDCTXcxFU",
               "is_local": false,
               "is_playable": true,
-              "name": "Buzz the Jerk - Saturday Club Presented by Brian Matthew, May 1966",
+              "name": "Old Man Going",
               "preview_url": null,
               "track_number": 19,
               "type": "track",
-              "uri": "spotify:track:6AcbqKFOoHfOnvnfH0DWP7"
+              "uri": "spotify:track:3MOhjCciKakUbRDCTXcxFU"
             },
             {
               "artists": [
@@ -747,20 +744,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 140186,
+              "duration_ms": 86746,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5zE2uH47X7lN4Tq7Vao7Eg"
+                "spotify": "https://open.spotify.com/track/7qMX28zBwLb7OYjVqhsO8z"
               },
-              "href": "https://api.spotify.com/v1/tracks/5zE2uH47X7lN4Tq7Vao7Eg",
-              "id": "5zE2uH47X7lN4Tq7Vao7Eg",
+              "href": "https://api.spotify.com/v1/tracks/7qMX28zBwLb7OYjVqhsO8z",
+              "id": "7qMX28zBwLb7OYjVqhsO8z",
               "is_local": false,
               "is_playable": true,
-              "name": "Midnight to Six Man - A Whole Scene Going Presented by Barry Fantoni, 12 January 1966",
+              "name": "Loneliest Person",
               "preview_url": null,
               "track_number": 20,
               "type": "track",
-              "uri": "spotify:track:5zE2uH47X7lN4Tq7Vao7Eg"
+              "uri": "spotify:track:7qMX28zBwLb7OYjVqhsO8z"
             },
             {
               "artists": [
@@ -776,20 +773,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 177722,
+              "duration_ms": 111693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3rJIqgqoZR3suQnfNZCerP"
+                "spotify": "https://open.spotify.com/track/5T0V6WcSvVgceR6PKGGVTO"
               },
-              "href": "https://api.spotify.com/v1/tracks/3rJIqgqoZR3suQnfNZCerP",
-              "id": "3rJIqgqoZR3suQnfNZCerP",
+              "href": "https://api.spotify.com/v1/tracks/5T0V6WcSvVgceR6PKGGVTO",
+              "id": "5T0V6WcSvVgceR6PKGGVTO",
               "is_local": false,
               "is_playable": true,
-              "name": "Turn My Head - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+              "name": "Scene One",
               "preview_url": null,
               "track_number": 21,
               "type": "track",
-              "uri": "spotify:track:3rJIqgqoZR3suQnfNZCerP"
+              "uri": "spotify:track:5T0V6WcSvVgceR6PKGGVTO"
             },
             {
               "artists": [
@@ -805,20 +802,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 166383,
+              "duration_ms": 260693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2wgBACiiMYA6eNjwyjbc31"
+                "spotify": "https://open.spotify.com/track/3FSoFgM6UHNLHxIzuTysfQ"
               },
-              "href": "https://api.spotify.com/v1/tracks/2wgBACiiMYA6eNjwyjbc31",
-              "id": "2wgBACiiMYA6eNjwyjbc31",
+              "href": "https://api.spotify.com/v1/tracks/3FSoFgM6UHNLHxIzuTysfQ",
+              "id": "3FSoFgM6UHNLHxIzuTysfQ",
               "is_local": false,
               "is_playable": true,
-              "name": "Walking Through My Dreams - Top Gear. 3 December 1967 (Presented by Brian Matthew)",
+              "name": "Grass",
               "preview_url": null,
               "track_number": 22,
               "type": "track",
-              "uri": "spotify:track:2wgBACiiMYA6eNjwyjbc31"
+              "uri": "spotify:track:3FSoFgM6UHNLHxIzuTysfQ"
             },
             {
               "artists": [
@@ -834,20 +831,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 256040,
+              "duration_ms": 190440,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7jDx0mQ0bJObMf1KXTfuWA"
+                "spotify": "https://open.spotify.com/track/2yEav5Xak2JVTOTaJnLgkw"
               },
-              "href": "https://api.spotify.com/v1/tracks/7jDx0mQ0bJObMf1KXTfuWA",
-              "id": "7jDx0mQ0bJObMf1KXTfuWA",
+              "href": "https://api.spotify.com/v1/tracks/2yEav5Xak2JVTOTaJnLgkw",
+              "id": "2yEav5Xak2JVTOTaJnLgkw",
               "is_local": false,
               "is_playable": true,
-              "name": "Defecting Grey (Unabridged) - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+              "name": "Cold Stone",
               "preview_url": null,
               "track_number": 23,
               "type": "track",
-              "uri": "spotify:track:7jDx0mQ0bJObMf1KXTfuWA"
+              "uri": "spotify:track:2yEav5Xak2JVTOTaJnLgkw"
             },
             {
               "artists": [
@@ -863,20 +860,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 300746,
+              "duration_ms": 295213,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7HRs7ef4EfqHKNoJ5nd78P"
+                "spotify": "https://open.spotify.com/track/0tmmorvvlsc2JMJwmc89rH"
               },
-              "href": "https://api.spotify.com/v1/tracks/7HRs7ef4EfqHKNoJ5nd78P",
-              "id": "7HRs7ef4EfqHKNoJ5nd78P",
+              "href": "https://api.spotify.com/v1/tracks/0tmmorvvlsc2JMJwmc89rH",
+              "id": "0tmmorvvlsc2JMJwmc89rH",
               "is_local": false,
               "is_playable": true,
-              "name": "Talking About the Good Times - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+              "name": "October 26",
               "preview_url": null,
               "track_number": 24,
               "type": "track",
-              "uri": "spotify:track:7HRs7ef4EfqHKNoJ5nd78P"
+              "uri": "spotify:track:0tmmorvvlsc2JMJwmc89rH"
             },
             {
               "artists": [
@@ -892,759 +889,34 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 198413,
+              "duration_ms": 261906,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4BbTlo8V4M310R8t9gGXwG"
+                "spotify": "https://open.spotify.com/track/2pW5pF07DXF7I3FcCreAiv"
               },
-              "href": "https://api.spotify.com/v1/tracks/4BbTlo8V4M310R8t9gGXwG",
-              "id": "4BbTlo8V4M310R8t9gGXwG",
+              "href": "https://api.spotify.com/v1/tracks/2pW5pF07DXF7I3FcCreAiv",
+              "id": "2pW5pF07DXF7I3FcCreAiv",
               "is_local": false,
               "is_playable": true,
-              "name": "Sf Sorrow is Born - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
+              "name": "Mr. Tambourine Man",
               "preview_url": null,
               "track_number": 25,
               "type": "track",
-              "uri": "spotify:track:4BbTlo8V4M310R8t9gGXwG"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 184893,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2TkGZKCnYwsgVrzAAkCmxg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2TkGZKCnYwsgVrzAAkCmxg",
-              "id": "2TkGZKCnYwsgVrzAAkCmxg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "She Says Good Morning - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 26,
-              "type": "track",
-              "uri": "spotify:track:2TkGZKCnYwsgVrzAAkCmxg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 210466,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7htROJTUeAeaUjbjMSTVGc"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7htROJTUeAeaUjbjMSTVGc",
-              "id": "7htROJTUeAeaUjbjMSTVGc",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Balloon Burning - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 27,
-              "type": "track",
-              "uri": "spotify:track:7htROJTUeAeaUjbjMSTVGc"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 198640,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3WIqnM153FPnpjs8PcgKaz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3WIqnM153FPnpjs8PcgKaz",
-              "id": "3WIqnM153FPnpjs8PcgKaz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Old Man Going - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 28,
-              "type": "track",
-              "uri": "spotify:track:3WIqnM153FPnpjs8PcgKaz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 131691,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0VGIlhf3oaGz2VXJwXFpOt"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0VGIlhf3oaGz2VXJwXFpOt",
-              "id": "0VGIlhf3oaGz2VXJwXFpOt",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Spring - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 29,
-              "type": "track",
-              "uri": "spotify:track:0VGIlhf3oaGz2VXJwXFpOt"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 167555,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6p5r48nDQoNA9SwbFQBJ7v"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6p5r48nDQoNA9SwbFQBJ7v",
-              "id": "6p5r48nDQoNA9SwbFQBJ7v",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Send You with (Unabridged) - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 30,
-              "type": "track",
-              "uri": "spotify:track:6p5r48nDQoNA9SwbFQBJ7v"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 82187,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2CKyXOYezCA5sapaUTo5Vq"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2CKyXOYezCA5sapaUTo5Vq",
-              "id": "2CKyXOYezCA5sapaUTo5Vq",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Loneliest Person - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 31,
-              "type": "track",
-              "uri": "spotify:track:2CKyXOYezCA5sapaUTo5Vq"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 181432,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5jTy0KL4S4uD5ORCWa6hsa"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5jTy0KL4S4uD5ORCWa6hsa",
-              "id": "5jTy0KL4S4uD5ORCWa6hsa",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Alexander - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 32,
-              "type": "track",
-              "uri": "spotify:track:5jTy0KL4S4uD5ORCWa6hsa"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 193054,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1p6dPMXX84fOy2LMxS1rvS"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1p6dPMXX84fOy2LMxS1rvS",
-              "id": "1p6dPMXX84fOy2LMxS1rvS",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Marilyn - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 33,
-              "type": "track",
-              "uri": "spotify:track:1p6dPMXX84fOy2LMxS1rvS"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 141453,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0M4LFQg5p92UKlD5DNAQrq"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0M4LFQg5p92UKlD5DNAQrq",
-              "id": "0M4LFQg5p92UKlD5DNAQrq",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Blue Serge Blues - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 34,
-              "type": "track",
-              "uri": "spotify:track:0M4LFQg5p92UKlD5DNAQrq"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 238946,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7aejLY4Df4EjrlVjcgDOnC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7aejLY4Df4EjrlVjcgDOnC",
-              "id": "7aejLY4Df4EjrlVjcgDOnC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "She's a Lover - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 35,
-              "type": "track",
-              "uri": "spotify:track:7aejLY4Df4EjrlVjcgDOnC"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 142200,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4nkJk9y1Q9HcyfEaTCfjLv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4nkJk9y1Q9HcyfEaTCfjLv",
-              "id": "4nkJk9y1Q9HcyfEaTCfjLv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "In the Square - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 36,
-              "type": "track",
-              "uri": "spotify:track:4nkJk9y1Q9HcyfEaTCfjLv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 93961,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1ZRvVGxX6sEa4ZQIyApdOV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1ZRvVGxX6sEa4ZQIyApdOV",
-              "id": "1ZRvVGxX6sEa4ZQIyApdOV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Letter - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 37,
-              "type": "track",
-              "uri": "spotify:track:1ZRvVGxX6sEa4ZQIyApdOV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 204051,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5v0e2toaVv4tJmhh3gXE6N"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5v0e2toaVv4tJmhh3gXE6N",
-              "id": "5v0e2toaVv4tJmhh3gXE6N",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Rain - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 38,
-              "type": "track",
-              "uri": "spotify:track:5v0e2toaVv4tJmhh3gXE6N"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 444440,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2mSj161A4k9jutHAR5VwI3"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2mSj161A4k9jutHAR5VwI3",
-              "id": "2mSj161A4k9jutHAR5VwI3",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sickle Clowns - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 39,
-              "type": "track",
-              "uri": "spotify:track:2mSj161A4k9jutHAR5VwI3"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 356600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4ZppBE8ZqGaEwMLn6qi1ru"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4ZppBE8ZqGaEwMLn6qi1ru",
-              "id": "4ZppBE8ZqGaEwMLn6qi1ru",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Old Man Going - John Peel Sunday Concert, 14 June 1970",
-              "preview_url": null,
-              "track_number": 40,
-              "type": "track",
-              "uri": "spotify:track:4ZppBE8ZqGaEwMLn6qi1ru"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 195098,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1ehCwwY1BAl4Sb9dOljLKg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1ehCwwY1BAl4Sb9dOljLKg",
-              "id": "1ehCwwY1BAl4Sb9dOljLKg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "She's a Lover - Sounds of the 70s, 6 July 1970 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 41,
-              "type": "track",
-              "uri": "spotify:track:1ehCwwY1BAl4Sb9dOljLKg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 262701,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/22pAiap25Obzv8CQlbHh9i"
-              },
-              "href": "https://api.spotify.com/v1/tracks/22pAiap25Obzv8CQlbHh9i",
-              "id": "22pAiap25Obzv8CQlbHh9i",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sickle Clowns - Sounds of the 70s, 6 July 1970 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 42,
-              "type": "track",
-              "uri": "spotify:track:22pAiap25Obzv8CQlbHh9i"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 35668,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1ovLcFLtZ0tUpHc2s5JWLC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1ovLcFLtZ0tUpHc2s5JWLC",
-              "id": "1ovLcFLtZ0tUpHc2s5JWLC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Trailer for Sounds of the 70s - 11 August 1970",
-              "preview_url": null,
-              "track_number": 43,
-              "type": "track",
-              "uri": "spotify:track:1ovLcFLtZ0tUpHc2s5JWLC"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 319210,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4FYd4v25H8LVYqkVFUNKX8"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4FYd4v25H8LVYqkVFUNKX8",
-              "id": "4FYd4v25H8LVYqkVFUNKX8",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cries from the Midnight Circus - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-              "preview_url": null,
-              "track_number": 44,
-              "type": "track",
-              "uri": "spotify:track:4FYd4v25H8LVYqkVFUNKX8"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 419126,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0ArN3UnoKHd6PRH1zLNrSh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0ArN3UnoKHd6PRH1zLNrSh",
-              "id": "0ArN3UnoKHd6PRH1zLNrSh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sickle Clowns - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-              "preview_url": null,
-              "track_number": 45,
-              "type": "track",
-              "uri": "spotify:track:0ArN3UnoKHd6PRH1zLNrSh"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 425875,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4E3cPjPPa3sVhHjgcDZTc3"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4E3cPjPPa3sVhHjgcDZTc3",
-              "id": "4E3cPjPPa3sVhHjgcDZTc3",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cries from the Midnight Circus (2) - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-              "preview_url": null,
-              "track_number": 46,
-              "type": "track",
-              "uri": "spotify:track:4E3cPjPPa3sVhHjgcDZTc3"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 215109,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5w2g2YqHiAmoUQMdkr4EnV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5w2g2YqHiAmoUQMdkr4EnV",
-              "id": "5w2g2YqHiAmoUQMdkr4EnV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cold Stone - Top Gear, 15 May 1971 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 47,
-              "type": "track",
-              "uri": "spotify:track:5w2g2YqHiAmoUQMdkr4EnV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 174097,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1aBqoxuSeFtXCbLDO4zcQU"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1aBqoxuSeFtXCbLDO4zcQU",
-              "id": "1aBqoxuSeFtXCbLDO4zcQU",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Stone-Hearted Mama - Top Gear, 15 May 1971 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 48,
-              "type": "track",
-              "uri": "spotify:track:1aBqoxuSeFtXCbLDO4zcQU"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 272358,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7nnbMeBIN04F4T6oGwBUQM"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7nnbMeBIN04F4T6oGwBUQM",
-              "id": "7nnbMeBIN04F4T6oGwBUQM",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Summertime - Sounds of the 70s, 29 June 1971 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 49,
-              "type": "track",
-              "uri": "spotify:track:7nnbMeBIN04F4T6oGwBUQM"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5U16QlMnlSAhkQxBZpLyLO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5U16QlMnlSAhkQxBZpLyLO",
-                  "id": "5U16QlMnlSAhkQxBZpLyLO",
-                  "name": "The Pretty Things",
-                  "type": "artist",
-                  "uri": "spotify:artist:5U16QlMnlSAhkQxBZpLyLO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 432472,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1UkgkiCiq8ucKucFjiP3G1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1UkgkiCiq8ucKucFjiP3G1",
-              "id": "1UkgkiCiq8ucKucFjiP3G1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cries from the Midnight Circus - Sounds of the 70s, 29 June 1971 (Presented by Brian Matthew)",
-              "preview_url": null,
-              "track_number": 50,
-              "type": "track",
-              "uri": "spotify:track:1UkgkiCiq8ucKucFjiP3G1"
+              "uri": "spotify:track:2pW5pF07DXF7I3FcCreAiv"
             }
           ],
           "limit": 50,
-          "next": "https://api.spotify.com/v1/albums/1d6pNy1RFbTghyLOzPjLGR/tracks?offset=50&limit=50&market=US",
+          "next": null,
           "offset": 0,
           "previous": null,
-          "total": 111
+          "total": 25
         },
         "type": "album",
-        "uri": "spotify:album:1d6pNy1RFbTghyLOzPjLGR"
+        "uri": "spotify:album:3O7fTDDtJ3IBSDguugo2CR"
       },
-      "release_date": "2021-05-28",
+      "release_date": "2017-10-13",
       "release_date_precision": "day",
-      "total_tracks": 111,
+      "total_tracks": 25,
       "tracks": [
         {
           "artists": [
@@ -1653,28 +925,24 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 180606,
+          "duration_ms": 140946,
           "explicit": false,
-          "id": "04yvlDAaXKmw2uXIyJrB4a",
-          "name": "Big Boss Man - Saturday Club Presented by Brian Matthew, October 1964",
+          "id": "5M3RZVrYo5fDb818QX4JVj",
+          "name": "Rosalyn",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "6zCEhRNNWqDu59v8w5DAWH",
-              "name": "Phil May"
-            },
-            {
-              "id": "5SyArLAOWWrzh200gdJtPW",
-              "name": "Dick Taylor"
+              "id": "5U16QlMnlSAhkQxBZpLyLO",
+              "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 66213,
+          "duration_ms": 130093,
           "explicit": false,
-          "id": "3AdeGRcuvAlu3CnUk7ktBZ",
-          "name": "Interview with Phil May & Dick Taylor - Saturday Club Presented by Brian Matthew, October 1964",
+          "id": "33pCUtu1jTrgLB8LXe8a80",
+          "name": "Don't Bring Me Down",
           "preview_url": null,
           "track_number": 2
         },
@@ -1685,10 +953,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 127520,
+          "duration_ms": 119706,
           "explicit": false,
-          "id": "1QWibdiGJ51KbWA2I6PXnn",
-          "name": "Don't Bring Me Down - Saturday Club Presented by Brian Matthew, October 1964",
+          "id": "1OmmO6psLMUsn8xmxJraI6",
+          "name": "Honey, I Need",
           "preview_url": null,
           "track_number": 3
         },
@@ -1699,10 +967,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 145453,
+          "duration_ms": 172693,
           "explicit": false,
-          "id": "6Xt2ssCbOw8T836FYdCPyX",
-          "name": "Mama, Keep Your Big Mouth Shut - Saturday Club Presented by Brian Matthew, October 1964",
+          "id": "5TmMVQRicJv7IOaI3pGIHR",
+          "name": "Cry To Me",
           "preview_url": null,
           "track_number": 4
         },
@@ -1713,10 +981,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 135026,
+          "duration_ms": 139826,
           "explicit": false,
-          "id": "6S95avOlVcFTvLcnFRrNSx",
-          "name": "Road Runner - Saturday Club Presented by Brian Matthew, October 1964",
+          "id": "5C4Fhu82xbFZIwC1eWe3tG",
+          "name": "Midnight To Six Man",
           "preview_url": null,
           "track_number": 5
         },
@@ -1727,10 +995,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 117106,
+          "duration_ms": 160013,
           "explicit": false,
-          "id": "47azeyNecwCV8wRgI7WKJx",
-          "name": "Big City - Saturday Club Presented by Brian Matthew, November 1964",
+          "id": "6jp7H1uN6Gvos7LXUYIEZ3",
+          "name": "Come See Me",
           "preview_url": null,
           "track_number": 6
         },
@@ -1741,10 +1009,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 138826,
+          "duration_ms": 161200,
           "explicit": false,
-          "id": "7vUMZ5V8mY205kImO3xqAp",
-          "name": "Don't Bring Me Down - Beat Room Presented by Pat Campbell, 24 December 1964",
+          "id": "6LIJ8YaVSgCBZujscUp6Y1",
+          "name": "Can't Stand The Pain",
           "preview_url": null,
           "track_number": 7
         },
@@ -1755,10 +1023,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 194266,
+          "duration_ms": 167706,
           "explicit": false,
-          "id": "6uY3CwImep1Rp0pEPNup0z",
-          "name": "Mama, Keep Your Big Mouth Shut - Beat Room Presented by Pat Campbell, 24 December 1964",
+          "id": "2lvZqw8aZK3S6nwXohFDVe",
+          "name": "Sittin' All Alone",
           "preview_url": null,
           "track_number": 8
         },
@@ -1769,10 +1037,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 108080,
+          "duration_ms": 116080,
           "explicit": false,
-          "id": "5RqFeUgn2IUNjgNJJgnVVs",
-          "name": "Johnny B. Goode - Beat Room Presented by Pat Campbell, 24 December 1964",
+          "id": "389i4Sy2dGaw70TDByKFyP",
+          "name": "Get The Picture?",
           "preview_url": null,
           "track_number": 9
         },
@@ -1783,24 +1051,24 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 151773,
+          "duration_ms": 143160,
           "explicit": false,
-          "id": "1sNbhJNtQkbauMYAuzGe1n",
-          "name": "We'll Be Together - Saturday Club Presented by Brian Matthew, 9 February 1965",
+          "id": "0xwb6xTbQffKT08AInUAQw",
+          "name": "You Don't Believe Me",
           "preview_url": null,
           "track_number": 10
         },
         {
           "artists": [
             {
-              "id": "6zCEhRNNWqDu59v8w5DAWH",
-              "name": "Phil May"
+              "id": "5U16QlMnlSAhkQxBZpLyLO",
+              "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 60986,
+          "duration_ms": 156933,
           "explicit": false,
-          "id": "5BGWlX6yXVjQ47oRRAVTtN",
-          "name": "Interview with Phil May - Saturday Club Presented by Brian Matthew, 10 October 1965",
+          "id": "0Pj5wdiwWaSUZQ2FLSMJw4",
+          "name": "I Can Never Say",
           "preview_url": null,
           "track_number": 11
         },
@@ -1811,10 +1079,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 175840,
+          "duration_ms": 146200,
           "explicit": false,
-          "id": "3h2414zVP9335mdDXvKBeR",
-          "name": "Sitting All Alone - Saturday Club Presented by Brian Matthew, 10 October 1965",
+          "id": "6hewn0Fi182hDngYvsgRMl",
+          "name": "L.S.D.",
           "preview_url": null,
           "track_number": 12
         },
@@ -1825,10 +1093,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 117360,
+          "duration_ms": 309720,
           "explicit": false,
-          "id": "0zbFsHiGHbYtHGR6cNPvx9",
-          "name": "Big City - Saturday Club Presented by Brian Matthew, 10 October 1965",
+          "id": "17TfIINtABA2HmTHfCXjta",
+          "name": "Defecting Grey",
           "preview_url": null,
           "track_number": 13
         },
@@ -1839,10 +1107,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 88426,
+          "duration_ms": 222053,
           "explicit": false,
-          "id": "7wwOjQmQ7zftLz4Bb2ahIA",
-          "name": "Buzz the Jerk - Saturday Club Presented by Brian Matthew, 10 October 1965",
+          "id": "3XcwaQmuRsN1c9IMQ0ls0Q",
+          "name": "Talkin' About The Good Times",
           "preview_url": null,
           "track_number": 14
         },
@@ -1853,10 +1121,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 148653,
+          "duration_ms": 209240,
           "explicit": false,
-          "id": "3n6aUos9OF23Tbpb7yjneX",
-          "name": "Rainin' in My Heart - Saturday Club Presented by Brian Matthew, 10 October 1965",
+          "id": "6L6vjP0J6Htln94JccUrmG",
+          "name": "Mr. Evasion",
           "preview_url": null,
           "track_number": 15
         },
@@ -1867,24 +1135,24 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 148373,
+          "duration_ms": 217373,
           "explicit": false,
-          "id": "0ybimvXocmZ26Q3LHzAFTB",
-          "name": "L.S.D. - Saturday Club Presented by Brian Matthew, May 1966",
+          "id": "3lbH0mvIH2HYcd68uSDeL0",
+          "name": "Walking Through My Dreams",
           "preview_url": null,
           "track_number": 16
         },
         {
           "artists": [
             {
-              "id": "6zCEhRNNWqDu59v8w5DAWH",
-              "name": "Phil May"
+              "id": "5U16QlMnlSAhkQxBZpLyLO",
+              "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 70600,
+          "duration_ms": 189600,
           "explicit": false,
-          "id": "5mqu4CVP2iDbkOoZZqVrbE",
-          "name": "Interview with Phil May - Saturday Club Presented by Brian Matthew, May 1966",
+          "id": "4N6K9UtHimQKvGx6kOFkrR",
+          "name": "S.F. Sorrow Is Born",
           "preview_url": null,
           "track_number": 17
         },
@@ -1895,10 +1163,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 143106,
+          "duration_ms": 165600,
           "explicit": false,
-          "id": "2flDHcTw1cnR5a3KSfkqyl",
-          "name": "Midnight to Six Man - Saturday Club Presented by Brian Matthew, May 1966",
+          "id": "7jijK5wi3f5RTdBnqklknU",
+          "name": "Trust",
           "preview_url": null,
           "track_number": 18
         },
@@ -1909,10 +1177,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 101306,
+          "duration_ms": 187760,
           "explicit": false,
-          "id": "6AcbqKFOoHfOnvnfH0DWP7",
-          "name": "Buzz the Jerk - Saturday Club Presented by Brian Matthew, May 1966",
+          "id": "3MOhjCciKakUbRDCTXcxFU",
+          "name": "Old Man Going",
           "preview_url": null,
           "track_number": 19
         },
@@ -1923,10 +1191,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 140186,
+          "duration_ms": 86746,
           "explicit": false,
-          "id": "5zE2uH47X7lN4Tq7Vao7Eg",
-          "name": "Midnight to Six Man - A Whole Scene Going Presented by Barry Fantoni, 12 January 1966",
+          "id": "7qMX28zBwLb7OYjVqhsO8z",
+          "name": "Loneliest Person",
           "preview_url": null,
           "track_number": 20
         },
@@ -1937,10 +1205,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 177722,
+          "duration_ms": 111693,
           "explicit": false,
-          "id": "3rJIqgqoZR3suQnfNZCerP",
-          "name": "Turn My Head - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+          "id": "5T0V6WcSvVgceR6PKGGVTO",
+          "name": "Scene One",
           "preview_url": null,
           "track_number": 21
         },
@@ -1951,10 +1219,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 166383,
+          "duration_ms": 260693,
           "explicit": false,
-          "id": "2wgBACiiMYA6eNjwyjbc31",
-          "name": "Walking Through My Dreams - Top Gear. 3 December 1967 (Presented by Brian Matthew)",
+          "id": "3FSoFgM6UHNLHxIzuTysfQ",
+          "name": "Grass",
           "preview_url": null,
           "track_number": 22
         },
@@ -1965,10 +1233,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 256040,
+          "duration_ms": 190440,
           "explicit": false,
-          "id": "7jDx0mQ0bJObMf1KXTfuWA",
-          "name": "Defecting Grey (Unabridged) - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+          "id": "2yEav5Xak2JVTOTaJnLgkw",
+          "name": "Cold Stone",
           "preview_url": null,
           "track_number": 23
         },
@@ -1979,10 +1247,10 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 300746,
+          "duration_ms": 295213,
           "explicit": false,
-          "id": "7HRs7ef4EfqHKNoJ5nd78P",
-          "name": "Talking About the Good Times - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
+          "id": "0tmmorvvlsc2JMJwmc89rH",
+          "name": "October 26",
           "preview_url": null,
           "track_number": 24
         },
@@ -1993,369 +1261,19 @@
               "name": "The Pretty Things"
             }
           ],
-          "duration_ms": 198413,
+          "duration_ms": 261906,
           "explicit": false,
-          "id": "4BbTlo8V4M310R8t9gGXwG",
-          "name": "Sf Sorrow is Born - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
+          "id": "2pW5pF07DXF7I3FcCreAiv",
+          "name": "Mr. Tambourine Man",
           "preview_url": null,
           "track_number": 25
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 184893,
-          "explicit": false,
-          "id": "2TkGZKCnYwsgVrzAAkCmxg",
-          "name": "She Says Good Morning - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 26
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 210466,
-          "explicit": false,
-          "id": "7htROJTUeAeaUjbjMSTVGc",
-          "name": "Balloon Burning - Top Gear, 17 November 1968 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 27
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 198640,
-          "explicit": false,
-          "id": "3WIqnM153FPnpjs8PcgKaz",
-          "name": "Old Man Going - Top Gear, 3 December 1967 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 28
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 131691,
-          "explicit": false,
-          "id": "0VGIlhf3oaGz2VXJwXFpOt",
-          "name": "Spring - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 29
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 167555,
-          "explicit": false,
-          "id": "6p5r48nDQoNA9SwbFQBJ7v",
-          "name": "Send You with (Unabridged) - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 30
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 82187,
-          "explicit": false,
-          "id": "2CKyXOYezCA5sapaUTo5Vq",
-          "name": "Loneliest Person - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 31
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 181432,
-          "explicit": false,
-          "id": "5jTy0KL4S4uD5ORCWa6hsa",
-          "name": "Alexander - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 32
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 193054,
-          "explicit": false,
-          "id": "1p6dPMXX84fOy2LMxS1rvS",
-          "name": "Marilyn - Top Gear, 25 May 1969 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 33
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 141453,
-          "explicit": false,
-          "id": "0M4LFQg5p92UKlD5DNAQrq",
-          "name": "Blue Serge Blues - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 34
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 238946,
-          "explicit": false,
-          "id": "7aejLY4Df4EjrlVjcgDOnC",
-          "name": "She's a Lover - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 35
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 142200,
-          "explicit": false,
-          "id": "4nkJk9y1Q9HcyfEaTCfjLv",
-          "name": "In the Square - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 36
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 93961,
-          "explicit": false,
-          "id": "1ZRvVGxX6sEa4ZQIyApdOV",
-          "name": "The Letter - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 37
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 204051,
-          "explicit": false,
-          "id": "5v0e2toaVv4tJmhh3gXE6N",
-          "name": "Rain - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 38
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 444440,
-          "explicit": false,
-          "id": "2mSj161A4k9jutHAR5VwI3",
-          "name": "Sickle Clowns - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 39
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 356600,
-          "explicit": false,
-          "id": "4ZppBE8ZqGaEwMLn6qi1ru",
-          "name": "Old Man Going - John Peel Sunday Concert, 14 June 1970",
-          "preview_url": null,
-          "track_number": 40
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 195098,
-          "explicit": false,
-          "id": "1ehCwwY1BAl4Sb9dOljLKg",
-          "name": "She's a Lover - Sounds of the 70s, 6 July 1970 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 41
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 262701,
-          "explicit": false,
-          "id": "22pAiap25Obzv8CQlbHh9i",
-          "name": "Sickle Clowns - Sounds of the 70s, 6 July 1970 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 42
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 35668,
-          "explicit": false,
-          "id": "1ovLcFLtZ0tUpHc2s5JWLC",
-          "name": "Trailer for Sounds of the 70s - 11 August 1970",
-          "preview_url": null,
-          "track_number": 43
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 319210,
-          "explicit": false,
-          "id": "4FYd4v25H8LVYqkVFUNKX8",
-          "name": "Cries from the Midnight Circus - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-          "preview_url": null,
-          "track_number": 44
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 419126,
-          "explicit": false,
-          "id": "0ArN3UnoKHd6PRH1zLNrSh",
-          "name": "Sickle Clowns - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-          "preview_url": null,
-          "track_number": 45
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 425875,
-          "explicit": false,
-          "id": "4E3cPjPPa3sVhHjgcDZTc3",
-          "name": "Cries from the Midnight Circus (2) - Sounds of the 70s Presented by Alan Black, 11 September 1970",
-          "preview_url": null,
-          "track_number": 46
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 215109,
-          "explicit": false,
-          "id": "5w2g2YqHiAmoUQMdkr4EnV",
-          "name": "Cold Stone - Top Gear, 15 May 1971 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 47
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 174097,
-          "explicit": false,
-          "id": "1aBqoxuSeFtXCbLDO4zcQU",
-          "name": "Stone-Hearted Mama - Top Gear, 15 May 1971 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 48
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 272358,
-          "explicit": false,
-          "id": "7nnbMeBIN04F4T6oGwBUQM",
-          "name": "Summertime - Sounds of the 70s, 29 June 1971 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 49
-        },
-        {
-          "artists": [
-            {
-              "id": "5U16QlMnlSAhkQxBZpLyLO",
-              "name": "The Pretty Things"
-            }
-          ],
-          "duration_ms": 432472,
-          "explicit": false,
-          "id": "1UkgkiCiq8ucKucFjiP3G1",
-          "name": "Cries from the Midnight Circus - Sounds of the 70s, 29 June 1971 (Presented by Brian Matthew)",
-          "preview_url": null,
-          "track_number": 50
         }
       ],
-      "url": "https://open.spotify.com/album/1d6pNy1RFbTghyLOzPjLGR"
+      "url": "https://open.spotify.com/album/3O7fTDDtJ3IBSDguugo2CR"
     }
   },
-  "spotify_id": "1d6pNy1RFbTghyLOzPjLGR",
-  "spotify_url": "https://open.spotify.com/album/1d6pNy1RFbTghyLOzPjLGR",
+  "spotify_id": "3O7fTDDtJ3IBSDguugo2CR",
+  "spotify_url": "https://open.spotify.com/album/3O7fTDDtJ3IBSDguugo2CR",
   "styles": [
     "Classic Rock"
   ],
@@ -2440,6 +1358,6 @@
       "title": "Cries From The Midnight Circus"
     }
   ],
-  "updated_at": "2025-07-05T16:37:55.874364",
+  "updated_at": "2025-07-07T20:17:58.183137",
   "year": 2017
 }

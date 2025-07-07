@@ -38,7 +38,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T19:10:03.818300",
+  "created_at": "2025-07-07T20:29:54.892194",
   "date_added": "2019-10-30T17:52:51-07:00",
   "discogs_id": "14326864",
   "discogs_url": "https://www.discogs.com/release/14326864-XTC-As-The-Dukes-Of-Stratosphear-25-OClock",
@@ -84,6 +84,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/CpJjcbHtDHWmqv4xK0JDYAwN81xkzQXcn5X-ESn-_Pc/rs:fit/g:sm/q:90/h:592/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MzI2/ODY0LTE1NzU3MzMx/NTQtNTE5OC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/25-o-clock-14326864/25-o-clock-14326864.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -91,11 +98,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/25-oclock-14326864/25-oclock-14326864-hi-res.jpg",
+    "medium": "../public/album/25-oclock-14326864/25-oclock-14326864-medium.jpg",
+    "small": "../public/album/25-oclock-14326864/25-oclock-14326864-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:10:18.448478",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:30:04.803485",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -151,6 +162,6 @@
       "title": "The Mole From The Ministry"
     }
   ],
-  "updated_at": "2025-07-05T19:10:18.447732",
+  "updated_at": "2025-07-07T20:30:04.470561",
   "year": 2019
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:11:04.663149",
+  "created_at": "2025-07-07T20:33:51.626707",
   "date_added": "2020-07-17T12:25:03-07:00",
   "discogs_id": "15622185",
   "discogs_url": "https://www.discogs.com/release/15622185-Joy-Division-Atmosphere",
@@ -87,6 +87,13 @@
       "type": "apple_music_artwork",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/1c/a2/f1/1ca2f153-8339-fa32-8157-a80f54e4b6c7/190295274597.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/atmosphere-15622185/atmosphere-15622185.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -96,14 +103,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Joy+Division/Atmosphere",
   "local_images": {
-    "hi-res": "public/album/atmosphere-15622185/atmosphere-15622185-hi-res.jpg",
-    "medium": "public/album/atmosphere-15622185/atmosphere-15622185-medium.jpg",
-    "small": "public/album/atmosphere-15622185/atmosphere-15622185-small.jpg"
+    "hi-res": "../public/album/atmosphere-15622185/atmosphere-15622185-hi-res.jpg",
+    "medium": "../public/album/atmosphere-15622185/atmosphere-15622185-medium.jpg",
+    "small": "../public/album/atmosphere-15622185/atmosphere-15622185-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:11:10.563470",
+    "processed_at": "2025-07-07T20:33:57.753715",
     "services_used": [
       "discogs",
       "apple_music",
@@ -187,9 +194,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/a94d06521f37477aa07a5866c268be8e.jpg"
         }
       ],
-      "listeners": 148045,
+      "listeners": 148190,
       "mbid": "0156c704-0674-432e-8dbe-7447ba833910",
-      "playcount": 674973,
+      "playcount": 675835,
       "raw_data": {
         "album": {
           "artist": "Joy Division",
@@ -219,10 +226,10 @@
               "size": ""
             }
           ],
-          "listeners": "148045",
+          "listeners": "148190",
           "mbid": "0156c704-0674-432e-8dbe-7447ba833910",
           "name": "Atmosphere",
-          "playcount": "674973",
+          "playcount": "675835",
           "tags": {
             "tag": [
               {
@@ -525,6 +532,6 @@
       "title": "She's Lost Control"
     }
   ],
-  "updated_at": "2025-07-05T16:11:08.501684",
+  "updated_at": "2025-07-07T20:33:56.894814",
   "year": 2020
 }

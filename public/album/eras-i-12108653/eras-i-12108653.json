@@ -22,7 +22,7 @@
     }
   },
   "country": "USA & Europe",
-  "created_at": "2025-07-05T16:49:23.060007",
+  "created_at": "2025-07-07T20:13:00.284675",
   "date_added": "2018-06-09T12:45:09-07:00",
   "discogs_id": "12108653",
   "discogs_url": "https://www.discogs.com/release/12108653-Devin-Townsend-Eras-I",
@@ -50,6 +50,13 @@
       "type": "primary",
       "url": "https://i.discogs.com/bL7l_fVUUOnHeKACsCfzLKljLXJFbMSu_y2d1T6IDx4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA4/NjUzLTE1Mjg0NzYw/NTQtMjQ1NC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/eras-i-12108653/eras-i-12108653.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -59,23 +66,22 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Devin+Townsend/Eras+I",
   "local_images": {
-    "hi-res": "public/album/eras-i-12108653/eras-i-12108653-hi-res.jpg",
-    "medium": "public/album/eras-i-12108653/eras-i-12108653-medium.jpg",
-    "small": "public/album/eras-i-12108653/eras-i-12108653-small.jpg"
+    "hi-res": "../public/album/eras-i-12108653/eras-i-12108653-hi-res.jpg",
+    "medium": "../public/album/eras-i-12108653/eras-i-12108653-medium.jpg",
+    "small": "../public/album/eras-i-12108653/eras-i-12108653-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:49:24.276123",
+    "processed_at": "2025-07-07T20:13:08.695566",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Eras I",
-  "release_name_spotify": "Empath",
+  "release_name_spotify": null,
   "released": "2018-06-07",
   "services": {
     "lastfm": {
@@ -933,547 +939,10 @@
       "url": "https://www.last.fm/music/Devin+Townsend/Eras+I",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "(P) 2019 HevyDevy Records. Issued under license from HevyDevy Records to InsideOutMusic",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "886447440315"
-      },
-      "id": "7MPJRyMFbWbgezRP2Pj4TZ",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273df6ec30f70a001f7d7b74909",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02df6ec30f70a001f7d7b74909",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851df6ec30f70a001f7d7b74909",
-          "width": 64
-        }
-      ],
-      "label": "InsideOutMusic",
-      "popularity": 37,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-            },
-            "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-            "id": "6uejjWIOshliv2Ho0OJAQN",
-            "name": "Devin Townsend",
-            "type": "artist",
-            "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "(P) 2019 HevyDevy Records. Issued under license from HevyDevy Records to InsideOutMusic",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "886447440315"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/7MPJRyMFbWbgezRP2Pj4TZ"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/7MPJRyMFbWbgezRP2Pj4TZ?market=US",
-        "id": "7MPJRyMFbWbgezRP2Pj4TZ",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273df6ec30f70a001f7d7b74909",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02df6ec30f70a001f7d7b74909",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851df6ec30f70a001f7d7b74909",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "InsideOutMusic",
-        "name": "Empath",
-        "popularity": 37,
-        "release_date": "2019-03-29",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/7MPJRyMFbWbgezRP2Pj4TZ/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 148549,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0uNEN3dCMLI6tqXKNp3mjc"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0uNEN3dCMLI6tqXKNp3mjc",
-              "id": "0uNEN3dCMLI6tqXKNp3mjc",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Castaway",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:0uNEN3dCMLI6tqXKNp3mjc"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 365861,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6ISti9YnfSA7lzMj7aWuH1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6ISti9YnfSA7lzMj7aWuH1",
-              "id": "6ISti9YnfSA7lzMj7aWuH1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Genesis",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:6ISti9YnfSA7lzMj7aWuH1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 279911,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Woz4yXgXOSTs6Yc0Oh2Es"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3Woz4yXgXOSTs6Yc0Oh2Es",
-              "id": "3Woz4yXgXOSTs6Yc0Oh2Es",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Spirits Will Collide",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:3Woz4yXgXOSTs6Yc0Oh2Es"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 330437,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0gWMGaWBLPoMsQRiu9vvEO"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0gWMGaWBLPoMsQRiu9vvEO",
-              "id": "0gWMGaWBLPoMsQRiu9vvEO",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Evermore",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:0gWMGaWBLPoMsQRiu9vvEO"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 397298,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0I5xWwMOuxSZd7HIh9XYKA"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0I5xWwMOuxSZd7HIh9XYKA",
-              "id": "0I5xWwMOuxSZd7HIh9XYKA",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sprite",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:0I5xWwMOuxSZd7HIh9XYKA"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 390282,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0pqsn1MROs6yalO9hVykVN"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0pqsn1MROs6yalO9hVykVN",
-              "id": "0pqsn1MROs6yalO9hVykVN",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Hear Me",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:0pqsn1MROs6yalO9hVykVN"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 299185,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5VlcX1KejMHE5fpYmsKtqW"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5VlcX1KejMHE5fpYmsKtqW",
-              "id": "5VlcX1KejMHE5fpYmsKtqW",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Why?",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:5VlcX1KejMHE5fpYmsKtqW"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 662789,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/27YWlqNEXuC16nLpr5uQr0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/27YWlqNEXuC16nLpr5uQr0",
-              "id": "27YWlqNEXuC16nLpr5uQr0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Borderlands",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:27YWlqNEXuC16nLpr5uQr0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 166779,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/197d8rjt6Nx4rPFSJS7CR8"
-              },
-              "href": "https://api.spotify.com/v1/tracks/197d8rjt6Nx4rPFSJS7CR8",
-              "id": "197d8rjt6Nx4rPFSJS7CR8",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Requiem",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:197d8rjt6Nx4rPFSJS7CR8"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
-                  "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 1412685,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6lUEeF62McRG0g57k2n5tK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6lUEeF62McRG0g57k2n5tK",
-              "id": "6lUEeF62McRG0g57k2n5tK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Singularity",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:6lUEeF62McRG0g57k2n5tK"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 10
-        },
-        "type": "album",
-        "uri": "spotify:album:7MPJRyMFbWbgezRP2Pj4TZ"
-      },
-      "release_date": "2019-03-29",
-      "release_date_precision": "day",
-      "total_tracks": 10,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 148549,
-          "explicit": false,
-          "id": "0uNEN3dCMLI6tqXKNp3mjc",
-          "name": "Castaway",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 365861,
-          "explicit": false,
-          "id": "6ISti9YnfSA7lzMj7aWuH1",
-          "name": "Genesis",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 279911,
-          "explicit": false,
-          "id": "3Woz4yXgXOSTs6Yc0Oh2Es",
-          "name": "Spirits Will Collide",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 330437,
-          "explicit": false,
-          "id": "0gWMGaWBLPoMsQRiu9vvEO",
-          "name": "Evermore",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 397298,
-          "explicit": false,
-          "id": "0I5xWwMOuxSZd7HIh9XYKA",
-          "name": "Sprite",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 390282,
-          "explicit": false,
-          "id": "0pqsn1MROs6yalO9hVykVN",
-          "name": "Hear Me",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 299185,
-          "explicit": false,
-          "id": "5VlcX1KejMHE5fpYmsKtqW",
-          "name": "Why?",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 662789,
-          "explicit": false,
-          "id": "27YWlqNEXuC16nLpr5uQr0",
-          "name": "Borderlands",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 166779,
-          "explicit": false,
-          "id": "197d8rjt6Nx4rPFSJS7CR8",
-          "name": "Requiem",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            }
-          ],
-          "duration_ms": 1412685,
-          "explicit": false,
-          "id": "6lUEeF62McRG0g57k2n5tK",
-          "name": "Singularity",
-          "preview_url": null,
-          "track_number": 10
-        }
-      ],
-      "url": "https://open.spotify.com/album/7MPJRyMFbWbgezRP2Pj4TZ"
     }
   },
-  "spotify_id": "7MPJRyMFbWbgezRP2Pj4TZ",
-  "spotify_url": "https://open.spotify.com/album/7MPJRyMFbWbgezRP2Pj4TZ",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Blues Rock",
     "Hard Rock",
@@ -2350,6 +1819,6 @@
       "title": "As You Were"
     }
   ],
-  "updated_at": "2025-07-05T16:49:24.185388",
+  "updated_at": "2025-07-07T20:13:08.321906",
   "year": 2018
 }

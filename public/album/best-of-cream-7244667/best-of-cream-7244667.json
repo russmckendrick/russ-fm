@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1440830708",
-  "apple_music_url": "https://music.apple.com/gb/album/wheels-of-fire/1440830708",
+  "apple_music_id": "1440920886",
+  "apple_music_url": "https://music.apple.com/gb/album/the-very-best-of-cream/1440920886",
   "artists": [
     {
       "apple_music_id": "120593",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:07:08.789963",
+  "created_at": "2025-07-07T20:37:38.530588",
   "date_added": "2020-08-02T13:37:10-07:00",
   "discogs_id": "7244667",
   "discogs_url": "https://www.discogs.com/release/7244667-Cream-2-Best-Of-Cream",
@@ -72,7 +72,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c3/3d/f7/c33df7d6-72be-fefe-d517-907633e2aa59/00602537803163.rgb.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3b/00/c3/3b00c3be-7a86-2dfc-4450-b64df12bcab1/00731452375223.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/best-of-cream-7244667/best-of-cream-7244667.jpg",
       "width": 2000
     }
   ],
@@ -82,14 +89,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Cream/Best+Of+Cream",
   "local_images": {
-    "hi-res": "public/album/best-of-cream-7244667/best-of-cream-7244667-hi-res.jpg",
-    "medium": "public/album/best-of-cream-7244667/best-of-cream-7244667-medium.jpg",
-    "small": "public/album/best-of-cream-7244667/best-of-cream-7244667-small.jpg"
+    "hi-res": "../public/album/best-of-cream-7244667/best-of-cream-7244667-hi-res.jpg",
+    "medium": "../public/album/best-of-cream-7244667/best-of-cream-7244667-medium.jpg",
+    "small": "../public/album/best-of-cream-7244667/best-of-cream-7244667-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:07:13.324072",
+    "processed_at": "2025-07-07T20:37:47.248497",
     "services_used": [
       "discogs",
       "apple_music",
@@ -97,58 +104,58 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Wheels of Fire",
+  "release_name_apple_music": "The Very Best of Cream",
   "release_name_discogs": "Best Of Cream",
-  "release_name_spotify": "Goodbye",
+  "release_name_spotify": "The Very Best Of Cream",
   "released": "1969",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c3/3d/f7/c33df7d6-72be-fefe-d517-907633e2aa59/00602537803163.rgb.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3b/00/c3/3b00c3be-7a86-2dfc-4450-b64df12bcab1/00731452375223.rgb.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 1968 Universal International Music B.V.",
+      "copyright": "This Compilation ℗ 1995 Universal International Music B.V.",
       "editorial_notes": null,
-      "id": "1440830708",
+      "id": "1440920886",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Cream",
         "artwork": {
-          "bgColor": "a8acad",
+          "bgColor": "faf8f9",
           "height": 1411,
-          "textColor1": "090b0c",
-          "textColor2": "1e1f1e",
-          "textColor3": "292b2c",
-          "textColor4": "393b3b",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c3/3d/f7/c33df7d6-72be-fefe-d517-907633e2aa59/00602537803163.rgb.jpg/{w}x{h}bb.jpg",
+          "textColor1": "0b0a0c",
+          "textColor2": "421e3d",
+          "textColor3": "3b3a3b",
+          "textColor4": "664962",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/3b/00/c3/3b00c3be-7a86-2dfc-4450-b64df12bcab1/00731452375223.rgb.jpg/{w}x{h}bb.jpg",
           "width": 1423
         },
-        "copyright": "℗ 1968 Universal International Music B.V.",
+        "copyright": "This Compilation ℗ 1995 Universal International Music B.V.",
         "genreNames": [
           "Rock",
           "Music",
+          "Blues-Rock",
+          "Arena Rock",
           "Blues",
           "Hard Rock",
-          "Psychedelic",
           "Country Blues",
-          "Blues-Rock",
-          "Arena Rock"
+          "Psychedelic"
         ],
-        "isCompilation": false,
+        "isCompilation": true,
         "isComplete": true,
-        "isMasteredForItunes": true,
+        "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "Wheels of Fire",
+        "name": "The Very Best of Cream",
         "playParams": {
-          "id": "1440830708",
+          "id": "1440920886",
           "kind": "album"
         },
         "recordLabel": "Polydor Records",
-        "releaseDate": "1968-01-01",
-        "trackCount": 14,
-        "upc": "00602537803163",
-        "url": "https://music.apple.com/gb/album/wheels-of-fire/1440830708"
+        "releaseDate": "1995-05-09",
+        "trackCount": 20,
+        "upc": "00731452375223",
+        "url": "https://music.apple.com/gb/album/the-very-best-of-cream/1440920886"
       },
-      "url": "https://music.apple.com/gb/album/wheels-of-fire/1440830708"
+      "url": "https://music.apple.com/gb/album/the-very-best-of-cream/1440920886"
     },
     "lastfm": {
       "images": [
@@ -179,7 +186,7 @@
       ],
       "listeners": 1297,
       "mbid": "2f5f71fd-c7e5-4a0a-9eff-d9c161ca8d0a",
-      "playcount": 13394,
+      "playcount": 13395,
       "raw_data": {
         "album": {
           "artist": "Cream",
@@ -212,7 +219,7 @@
           "listeners": "1297",
           "mbid": "2f5f71fd-c7e5-4a0a-9eff-d9c161ca8d0a",
           "name": "Best Of Cream",
-          "playcount": "13394",
+          "playcount": "13395",
           "tags": {
             "tag": [
               {
@@ -429,45 +436,45 @@
       "wiki_summary": ""
     },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 1997 Universal International Music B.V.",
+          "text": "© 1995 Universal International Music B.V.",
           "type": "C"
         },
         {
-          "text": "℗ 1969 Universal International Music B.V.",
+          "text": "This Compilation ℗ 1995 Universal International Music B.V.",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "00731453181526"
+        "upc": "00731452375223"
       },
-      "id": "2tVc8PhqDSRkpgiGOw7Ukb",
+      "id": "4MjvgrLG57gPHWTREFZRrT",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2736e14114e634f57610bc24170",
+          "url": "https://i.scdn.co/image/ab67616d0000b273389b913c29b0d8ad0590d776",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e026e14114e634f57610bc24170",
+          "url": "https://i.scdn.co/image/ab67616d00001e02389b913c29b0d8ad0590d776",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048516e14114e634f57610bc24170",
+          "url": "https://i.scdn.co/image/ab67616d00004851389b913c29b0d8ad0590d776",
           "width": 64
         }
       ],
       "label": "Polydor Records",
-      "popularity": 46,
+      "popularity": 41,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -482,49 +489,49 @@
         ],
         "copyrights": [
           {
-            "text": "© 1997 Universal International Music B.V.",
+            "text": "© 1995 Universal International Music B.V.",
             "type": "C"
           },
           {
-            "text": "℗ 1969 Universal International Music B.V.",
+            "text": "This Compilation ℗ 1995 Universal International Music B.V.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "00731453181526"
+          "upc": "00731452375223"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/2tVc8PhqDSRkpgiGOw7Ukb"
+          "spotify": "https://open.spotify.com/album/4MjvgrLG57gPHWTREFZRrT"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2tVc8PhqDSRkpgiGOw7Ukb?market=US",
-        "id": "2tVc8PhqDSRkpgiGOw7Ukb",
+        "href": "https://api.spotify.com/v1/albums/4MjvgrLG57gPHWTREFZRrT?market=US",
+        "id": "4MjvgrLG57gPHWTREFZRrT",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2736e14114e634f57610bc24170",
+            "url": "https://i.scdn.co/image/ab67616d0000b273389b913c29b0d8ad0590d776",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e026e14114e634f57610bc24170",
+            "url": "https://i.scdn.co/image/ab67616d00001e02389b913c29b0d8ad0590d776",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048516e14114e634f57610bc24170",
+            "url": "https://i.scdn.co/image/ab67616d00004851389b913c29b0d8ad0590d776",
             "width": 64
           }
         ],
         "is_playable": true,
         "label": "Polydor Records",
-        "name": "Goodbye",
-        "popularity": 46,
-        "release_date": "1969-03-01",
+        "name": "The Very Best Of Cream",
+        "popularity": 41,
+        "release_date": "1995-01-01",
         "release_date_precision": "day",
-        "total_tracks": 6,
+        "total_tracks": 20,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2tVc8PhqDSRkpgiGOw7Ukb/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4MjvgrLG57gPHWTREFZRrT/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -540,20 +547,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 553266,
+              "duration_ms": 141706,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4NN7QebrqYxqDNHDFN8CN1"
+                "spotify": "https://open.spotify.com/track/2BHytg2H34vFGwHiYrM9b1"
               },
-              "href": "https://api.spotify.com/v1/tracks/4NN7QebrqYxqDNHDFN8CN1",
-              "id": "4NN7QebrqYxqDNHDFN8CN1",
+              "href": "https://api.spotify.com/v1/tracks/2BHytg2H34vFGwHiYrM9b1",
+              "id": "2BHytg2H34vFGwHiYrM9b1",
               "is_local": false,
               "is_playable": true,
-              "name": "I'm So Glad - Live",
+              "name": "Wrapping Paper",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:4NN7QebrqYxqDNHDFN8CN1"
+              "uri": "spotify:track:2BHytg2H34vFGwHiYrM9b1"
             },
             {
               "artists": [
@@ -569,20 +576,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 380333,
+              "duration_ms": 171266,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/770RHsvKyRnGLWvFr71ORs"
+                "spotify": "https://open.spotify.com/track/0qB7OWu6p2vn7ENfKRHr3S"
               },
-              "href": "https://api.spotify.com/v1/tracks/770RHsvKyRnGLWvFr71ORs",
-              "id": "770RHsvKyRnGLWvFr71ORs",
+              "href": "https://api.spotify.com/v1/tracks/0qB7OWu6p2vn7ENfKRHr3S",
+              "id": "0qB7OWu6p2vn7ENfKRHr3S",
               "is_local": false,
               "is_playable": true,
-              "name": "Politician - Live",
+              "name": "I Feel Free",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:770RHsvKyRnGLWvFr71ORs"
+              "uri": "spotify:track:0qB7OWu6p2vn7ENfKRHr3S"
             },
             {
               "artists": [
@@ -598,20 +605,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 301600,
+              "duration_ms": 163493,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/412gXXG3XTY1VOtNkTd6jz"
+                "spotify": "https://open.spotify.com/track/34NCvOoA42HkusLZPYdS5B"
               },
-              "href": "https://api.spotify.com/v1/tracks/412gXXG3XTY1VOtNkTd6jz",
-              "id": "412gXXG3XTY1VOtNkTd6jz",
+              "href": "https://api.spotify.com/v1/tracks/34NCvOoA42HkusLZPYdS5B",
+              "id": "34NCvOoA42HkusLZPYdS5B",
               "is_local": false,
               "is_playable": true,
-              "name": "Sitting On Top Of The World - Live At The Forum, Los Angeles / 1968",
+              "name": "N.S.U.",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:412gXXG3XTY1VOtNkTd6jz"
+              "uri": "spotify:track:34NCvOoA42HkusLZPYdS5B"
             },
             {
               "artists": [
@@ -627,92 +634,498 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 164706,
+              "duration_ms": 197640,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/08xsXR637CEqbxJmpFcuSA"
+                "spotify": "https://open.spotify.com/track/46VtxjwNbjot1LgH8n6vKm"
               },
-              "href": "https://api.spotify.com/v1/tracks/08xsXR637CEqbxJmpFcuSA",
-              "id": "08xsXR637CEqbxJmpFcuSA",
+              "href": "https://api.spotify.com/v1/tracks/46VtxjwNbjot1LgH8n6vKm",
+              "id": "46VtxjwNbjot1LgH8n6vKm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sweet Wine",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:46VtxjwNbjot1LgH8n6vKm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 237973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1GRq4aA691cGAT9lUpj7cJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1GRq4aA691cGAT9lUpj7cJ",
+              "id": "1GRq4aA691cGAT9lUpj7cJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm So Glad",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:1GRq4aA691cGAT9lUpj7cJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 390693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2h0kQA4sihb5RSlUZfBXpc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2h0kQA4sihb5RSlUZfBXpc",
+              "id": "2h0kQA4sihb5RSlUZfBXpc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Spoonful",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2h0kQA4sihb5RSlUZfBXpc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4PjmmpOQVklBlIz2L23XOK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4PjmmpOQVklBlIz2L23XOK",
+              "id": "4PjmmpOQVklBlIz2L23XOK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Strange Brew",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4PjmmpOQVklBlIz2L23XOK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 250733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/28KRPwiw64NNwk8Mp8fihZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/28KRPwiw64NNwk8Mp8fihZ",
+              "id": "28KRPwiw64NNwk8Mp8fihZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sunshine Of Your Love",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:28KRPwiw64NNwk8Mp8fihZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166613,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7tkskqf5SK3YUOJnJjOOkt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7tkskqf5SK3YUOJnJjOOkt",
+              "id": "7tkskqf5SK3YUOJnJjOOkt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tales Of Brave Ulysses",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:7tkskqf5SK3YUOJnJjOOkt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 151653,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6RiBDDrIE9TFNsfmDy7yIG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6RiBDDrIE9TFNsfmDy7yIG",
+              "id": "6RiBDDrIE9TFNsfmDy7yIG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "SWLABR",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:6RiBDDrIE9TFNsfmDy7yIG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 207080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4yxXNjNpsFWBiVACj515of"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4yxXNjNpsFWBiVACj515of",
+              "id": "4yxXNjNpsFWBiVACj515of",
+              "is_local": false,
+              "is_playable": true,
+              "name": "We're Going Wrong",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4yxXNjNpsFWBiVACj515of"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 298226,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0mA8YVcK3fYTot54K1abTq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0mA8YVcK3fYTot54K1abTq",
+              "id": "0mA8YVcK3fYTot54K1abTq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "White Room",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:0mA8YVcK3fYTot54K1abTq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 298386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0XiS12Z9MCm3M5xDLZ1iKA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0XiS12Z9MCm3M5xDLZ1iKA",
+              "id": "0XiS12Z9MCm3M5xDLZ1iKA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sitting On Top Of The World",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0XiS12Z9MCm3M5xDLZ1iKA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 251933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3FwV1RwDPdPoUIRgMkwD2v"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3FwV1RwDPdPoUIRgMkwD2v",
+              "id": "3FwV1RwDPdPoUIRgMkwD2v",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Politician",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:3FwV1RwDPdPoUIRgMkwD2v"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 173666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0CL5YJI5k8oFurrzQ4GLnc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0CL5YJI5k8oFurrzQ4GLnc",
+              "id": "0CL5YJI5k8oFurrzQ4GLnc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Those Were The Days",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:0CL5YJI5k8oFurrzQ4GLnc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 189613,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3D6R7NsCl3xdqtGZ9xrihk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3D6R7NsCl3xdqtGZ9xrihk",
+              "id": "3D6R7NsCl3xdqtGZ9xrihk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Born Under A Bad Sign",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:3D6R7NsCl3xdqtGZ9xrihk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 218306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/46PTDPBhMm3CNnDT85p6Mj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/46PTDPBhMm3CNnDT85p6Mj",
+              "id": "46PTDPBhMm3CNnDT85p6Mj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Deserted Cities Of The Heart",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:46PTDPBhMm3CNnDT85p6Mj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 255706,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1J1h1hp8sEOr4gjnHhEUfH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1J1h1hp8sEOr4gjnHhEUfH",
+              "id": "1J1h1hp8sEOr4gjnHhEUfH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Crossroads - Live",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:1J1h1hp8sEOr4gjnHhEUfH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 158253,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6vJ7Eh9EnJ8i4RXUV1usRz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6vJ7Eh9EnJ8i4RXUV1usRz",
+              "id": "6vJ7Eh9EnJ8i4RXUV1usRz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Anyone For Tennis",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:6vJ7Eh9EnJ8i4RXUV1usRz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
+                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
+                  "name": "Cream",
+                  "type": "artist",
+                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 164866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3oKzaTg2qzg0tdnb4Hic4M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3oKzaTg2qzg0tdnb4Hic4M",
+              "id": "3oKzaTg2qzg0tdnb4Hic4M",
               "is_local": false,
               "is_playable": true,
               "name": "Badge",
               "preview_url": null,
-              "track_number": 4,
+              "track_number": 20,
               "type": "track",
-              "uri": "spotify:track:08xsXR637CEqbxJmpFcuSA"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
-                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
-                  "name": "Cream",
-                  "type": "artist",
-                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 195400,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3F0H6MqGb5dPy3Z6T8iOOP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3F0H6MqGb5dPy3Z6T8iOOP",
-              "id": "3F0H6MqGb5dPy3Z6T8iOOP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Doing That Scrapyard Thing",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:3F0H6MqGb5dPy3Z6T8iOOP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/74oJ4qxwOZvX6oSsu1DGnw"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/74oJ4qxwOZvX6oSsu1DGnw",
-                  "id": "74oJ4qxwOZvX6oSsu1DGnw",
-                  "name": "Cream",
-                  "type": "artist",
-                  "uri": "spotify:artist:74oJ4qxwOZvX6oSsu1DGnw"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 237600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5DBEWS86BGEwAkVkhHRpuK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5DBEWS86BGEwAkVkhHRpuK",
-              "id": "5DBEWS86BGEwAkVkhHRpuK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "What A Bringdown",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:5DBEWS86BGEwAkVkhHRpuK"
+              "uri": "spotify:track:3oKzaTg2qzg0tdnb4Hic4M"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 6
+          "total": 20
         },
         "type": "album",
-        "uri": "spotify:album:2tVc8PhqDSRkpgiGOw7Ukb"
+        "uri": "spotify:album:4MjvgrLG57gPHWTREFZRrT"
       },
-      "release_date": "1969-03-01",
+      "release_date": "1995-01-01",
       "release_date_precision": "day",
-      "total_tracks": 6,
+      "total_tracks": 20,
       "tracks": [
         {
           "artists": [
@@ -721,10 +1134,10 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 553266,
+          "duration_ms": 141706,
           "explicit": false,
-          "id": "4NN7QebrqYxqDNHDFN8CN1",
-          "name": "I'm So Glad - Live",
+          "id": "2BHytg2H34vFGwHiYrM9b1",
+          "name": "Wrapping Paper",
           "preview_url": null,
           "track_number": 1
         },
@@ -735,10 +1148,10 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 380333,
+          "duration_ms": 171266,
           "explicit": false,
-          "id": "770RHsvKyRnGLWvFr71ORs",
-          "name": "Politician - Live",
+          "id": "0qB7OWu6p2vn7ENfKRHr3S",
+          "name": "I Feel Free",
           "preview_url": null,
           "track_number": 2
         },
@@ -749,10 +1162,10 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 301600,
+          "duration_ms": 163493,
           "explicit": false,
-          "id": "412gXXG3XTY1VOtNkTd6jz",
-          "name": "Sitting On Top Of The World - Live At The Forum, Los Angeles / 1968",
+          "id": "34NCvOoA42HkusLZPYdS5B",
+          "name": "N.S.U.",
           "preview_url": null,
           "track_number": 3
         },
@@ -763,10 +1176,10 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 164706,
+          "duration_ms": 197640,
           "explicit": false,
-          "id": "08xsXR637CEqbxJmpFcuSA",
-          "name": "Badge",
+          "id": "46VtxjwNbjot1LgH8n6vKm",
+          "name": "Sweet Wine",
           "preview_url": null,
           "track_number": 4
         },
@@ -777,10 +1190,10 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 195400,
+          "duration_ms": 237973,
           "explicit": false,
-          "id": "3F0H6MqGb5dPy3Z6T8iOOP",
-          "name": "Doing That Scrapyard Thing",
+          "id": "1GRq4aA691cGAT9lUpj7cJ",
+          "name": "I'm So Glad",
           "preview_url": null,
           "track_number": 5
         },
@@ -791,19 +1204,215 @@
               "name": "Cream"
             }
           ],
-          "duration_ms": 237600,
+          "duration_ms": 390693,
           "explicit": false,
-          "id": "5DBEWS86BGEwAkVkhHRpuK",
-          "name": "What A Bringdown",
+          "id": "2h0kQA4sihb5RSlUZfBXpc",
+          "name": "Spoonful",
           "preview_url": null,
           "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 166533,
+          "explicit": false,
+          "id": "4PjmmpOQVklBlIz2L23XOK",
+          "name": "Strange Brew",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 250733,
+          "explicit": false,
+          "id": "28KRPwiw64NNwk8Mp8fihZ",
+          "name": "Sunshine Of Your Love",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 166613,
+          "explicit": false,
+          "id": "7tkskqf5SK3YUOJnJjOOkt",
+          "name": "Tales Of Brave Ulysses",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 151653,
+          "explicit": false,
+          "id": "6RiBDDrIE9TFNsfmDy7yIG",
+          "name": "SWLABR",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 207080,
+          "explicit": false,
+          "id": "4yxXNjNpsFWBiVACj515of",
+          "name": "We're Going Wrong",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 298226,
+          "explicit": false,
+          "id": "0mA8YVcK3fYTot54K1abTq",
+          "name": "White Room",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 298386,
+          "explicit": false,
+          "id": "0XiS12Z9MCm3M5xDLZ1iKA",
+          "name": "Sitting On Top Of The World",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 251933,
+          "explicit": false,
+          "id": "3FwV1RwDPdPoUIRgMkwD2v",
+          "name": "Politician",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 173666,
+          "explicit": false,
+          "id": "0CL5YJI5k8oFurrzQ4GLnc",
+          "name": "Those Were The Days",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 189613,
+          "explicit": false,
+          "id": "3D6R7NsCl3xdqtGZ9xrihk",
+          "name": "Born Under A Bad Sign",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 218306,
+          "explicit": false,
+          "id": "46PTDPBhMm3CNnDT85p6Mj",
+          "name": "Deserted Cities Of The Heart",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 255706,
+          "explicit": false,
+          "id": "1J1h1hp8sEOr4gjnHhEUfH",
+          "name": "Crossroads - Live",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 158253,
+          "explicit": false,
+          "id": "6vJ7Eh9EnJ8i4RXUV1usRz",
+          "name": "Anyone For Tennis",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "74oJ4qxwOZvX6oSsu1DGnw",
+              "name": "Cream"
+            }
+          ],
+          "duration_ms": 164866,
+          "explicit": false,
+          "id": "3oKzaTg2qzg0tdnb4Hic4M",
+          "name": "Badge",
+          "preview_url": null,
+          "track_number": 20
         }
       ],
-      "url": "https://open.spotify.com/album/2tVc8PhqDSRkpgiGOw7Ukb"
+      "url": "https://open.spotify.com/album/4MjvgrLG57gPHWTREFZRrT"
     }
   },
-  "spotify_id": "2tVc8PhqDSRkpgiGOw7Ukb",
-  "spotify_url": "https://open.spotify.com/album/2tVc8PhqDSRkpgiGOw7Ukb",
+  "spotify_id": "4MjvgrLG57gPHWTREFZRrT",
+  "spotify_url": "https://open.spotify.com/album/4MjvgrLG57gPHWTREFZRrT",
   "styles": [
     "Blues Rock",
     "Psychedelic Rock"
@@ -871,6 +1480,6 @@
       "title": "I Feel Free"
     }
   ],
-  "updated_at": "2025-07-05T16:07:12.120624",
+  "updated_at": "2025-07-07T20:37:46.300613",
   "year": 1969
 }

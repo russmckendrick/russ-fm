@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "724168925",
-  "apple_music_url": "https://music.apple.com/gb/album/dream-sequence/724168925",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "10507",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:41:54.333223",
+  "created_at": "2025-07-07T20:15:00.493620",
   "date_added": "2018-10-24T11:41:07-07:00",
   "discogs_id": "3077549",
   "discogs_url": "https://www.discogs.com/release/3077549-Tangerine-Dream-Rubycon",
@@ -84,8 +84,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/85/40/24/85402471-3a5a-6179-17ad-74587eadd38c/00077778672654.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/rubycon-3077549/rubycon-3077549.jpg",
       "width": 2000
     }
   ],
@@ -96,73 +96,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Tangerine+Dream/Rubycon",
   "local_images": {
-    "hi-res": "public/album/rubycon-3077549/rubycon-3077549-hi-res.jpg",
-    "medium": "public/album/rubycon-3077549/rubycon-3077549-medium.jpg",
-    "small": "public/album/rubycon-3077549/rubycon-3077549-small.jpg"
+    "hi-res": "../public/album/rubycon-3077549/rubycon-3077549-hi-res.jpg",
+    "medium": "../public/album/rubycon-3077549/rubycon-3077549-medium.jpg",
+    "small": "../public/album/rubycon-3077549/rubycon-3077549-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:41:56.288582",
+    "processed_at": "2025-07-07T20:15:11.481214",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Dream Sequence",
+  "release_name_apple_music": null,
   "release_name_discogs": "Rubycon",
   "release_name_spotify": "Rubycon (Deluxe Version)",
   "released": "1975-03-00",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/85/40/24/85402471-3a5a-6179-17ad-74587eadd38c/00077778672654.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "This Compilation ℗ 1985 Virgin Records Limited",
-      "editorial_notes": null,
-      "id": "724168925",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Tangerine Dream",
-        "artwork": {
-          "bgColor": "3e0a12",
-          "height": 1772,
-          "textColor1": "fcfaff",
-          "textColor2": "bdbfec",
-          "textColor3": "d5cacf",
-          "textColor4": "a39bc0",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/85/40/24/85402471-3a5a-6179-17ad-74587eadd38c/00077778672654.jpg/{w}x{h}bb.jpg",
-          "width": 1772
-        },
-        "copyright": "This Compilation ℗ 1985 Virgin Records Limited",
-        "genreNames": [
-          "Electronic",
-          "Music",
-          "Classical",
-          "Modern Era",
-          "Ambient",
-          "Rock",
-          "Prog-Rock/Art Rock"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Dream Sequence",
-        "playParams": {
-          "id": "724168925",
-          "kind": "album"
-        },
-        "recordLabel": "Virgin Records",
-        "releaseDate": "1985-01-01",
-        "trackCount": 19,
-        "upc": "00077778672654",
-        "url": "https://music.apple.com/gb/album/dream-sequence/724168925"
-      },
-      "url": "https://music.apple.com/gb/album/dream-sequence/724168925"
-    },
     "lastfm": {
       "images": [
         {
@@ -190,9 +142,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/9b4c9fac21587aa47fd01fbc31a92c87.jpg"
         }
       ],
-      "listeners": 24439,
+      "listeners": 24442,
       "mbid": "1d16698f-e1fc-48b3-ab4a-941c2ecec5bb",
-      "playcount": 166667,
+      "playcount": 166705,
       "raw_data": {
         "album": {
           "artist": "Tangerine Dream",
@@ -222,10 +174,10 @@
               "size": ""
             }
           ],
-          "listeners": "24439",
+          "listeners": "24442",
           "mbid": "1d16698f-e1fc-48b3-ab4a-941c2ecec5bb",
           "name": "Rubycon",
-          "playcount": "166667",
+          "playcount": "166705",
           "tags": {
             "tag": [
               {
@@ -576,6 +528,6 @@
       "title": "Rubycon (Part II)"
     }
   ],
-  "updated_at": "2025-07-05T16:41:55.406082",
+  "updated_at": "2025-07-07T20:15:10.815349",
   "year": 1975
 }

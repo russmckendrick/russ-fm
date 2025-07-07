@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "336541923",
-  "apple_music_url": "https://music.apple.com/gb/album/live-in-65/336541923",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "392092",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:35:47.981009",
+  "created_at": "2025-07-07T20:27:04.117901",
   "date_added": "2019-01-19T10:36:49-08:00",
   "discogs_id": "2943563",
   "discogs_url": "https://www.discogs.com/release/2943563-Pete-Seeger-Where-Have-All-The-Flowers-Gone",
@@ -70,8 +70,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1c/4a/d9/1c4ad96f-d05c-5f49-9b8c-ba873a16798f/611587111821.png/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563.jpg",
       "width": 2000
     }
   ],
@@ -82,71 +82,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Pete+Seeger/Where+Have+All+the+Flowers+Gone%3F",
   "local_images": {
-    "hi-res": "public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-hi-res.jpg",
-    "medium": "public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-medium.jpg",
-    "small": "public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-small.jpg"
+    "hi-res": "../public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-hi-res.jpg",
+    "medium": "../public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-medium.jpg",
+    "small": "../public/album/where-have-all-the-flowers-gone-2943563/where-have-all-the-flowers-gone-2943563-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:35:54.541166",
+    "processed_at": "2025-07-07T20:27:10.167385",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Live In '65",
+  "release_name_apple_music": null,
   "release_name_discogs": "Where Have All The Flowers Gone?",
-  "release_name_spotify": "Where Have All the Flowers Gone?",
+  "release_name_spotify": null,
   "released": null,
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1c/4a/d9/1c4ad96f-d05c-5f49-9b8c-ba873a16798f/611587111821.png/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2009 Appleseed",
-      "editorial_notes": null,
-      "id": "336541923",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Pete Seeger",
-        "artwork": {
-          "bgColor": "f4d2ac",
-          "height": 1400,
-          "textColor1": "231215",
-          "textColor2": "28120f",
-          "textColor3": "4c3833",
-          "textColor4": "51382e",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/1c/4a/d9/1c4ad96f-d05c-5f49-9b8c-ba873a16798f/611587111821.png/{w}x{h}bb.jpg",
-          "width": 1400
-        },
-        "copyright": "℗ 2009 Appleseed",
-        "genreNames": [
-          "Singer/Songwriter",
-          "Music",
-          "Contemporary Folk",
-          "Traditional Folk",
-          "Children's Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Live In '65",
-        "playParams": {
-          "id": "336541923",
-          "kind": "album"
-        },
-        "recordLabel": "Appleseed",
-        "releaseDate": "2009-11-10",
-        "trackCount": 31,
-        "upc": "611587111821",
-        "url": "https://music.apple.com/gb/album/live-in-65/336541923"
-      },
-      "url": "https://music.apple.com/gb/album/live-in-65/336541923"
-    },
     "lastfm": {
       "images": [
         {
@@ -424,192 +377,10 @@
       "url": "https://www.last.fm/music/Pete+Seeger/Where+Have+All+the+Flowers+Gone%3F",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "(C) 2020 Bright Shiny Things",
-          "type": "C"
-        },
-        {
-          "text": "(P) 2020 Bright Shiny Things",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "195081161068"
-      },
-      "id": "2ue75Cel9sD94D5MI7W592",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273fbc162dd4b509256e86936a4",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02fbc162dd4b509256e86936a4",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851fbc162dd4b509256e86936a4",
-          "width": 64
-        }
-      ],
-      "label": "Bright Shiny Things",
-      "popularity": 1,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1P9syEkl41IFowWIJN7ZBY"
-            },
-            "href": "https://api.spotify.com/v1/artists/1P9syEkl41IFowWIJN7ZBY",
-            "id": "1P9syEkl41IFowWIJN7ZBY",
-            "name": "Pete Seeger",
-            "type": "artist",
-            "uri": "spotify:artist:1P9syEkl41IFowWIJN7ZBY"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/3ARyhbeNWaIZTGRTDZ8IG1"
-            },
-            "href": "https://api.spotify.com/v1/artists/3ARyhbeNWaIZTGRTDZ8IG1",
-            "id": "3ARyhbeNWaIZTGRTDZ8IG1",
-            "name": "Sybarite5",
-            "type": "artist",
-            "uri": "spotify:artist:3ARyhbeNWaIZTGRTDZ8IG1"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "(C) 2020 Bright Shiny Things",
-            "type": "C"
-          },
-          {
-            "text": "(P) 2020 Bright Shiny Things",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "195081161068"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2ue75Cel9sD94D5MI7W592"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2ue75Cel9sD94D5MI7W592?market=US",
-        "id": "2ue75Cel9sD94D5MI7W592",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273fbc162dd4b509256e86936a4",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02fbc162dd4b509256e86936a4",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851fbc162dd4b509256e86936a4",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Bright Shiny Things",
-        "name": "Where Have All the Flowers Gone?",
-        "popularity": 1,
-        "release_date": "2020-03-20",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2ue75Cel9sD94D5MI7W592/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1P9syEkl41IFowWIJN7ZBY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1P9syEkl41IFowWIJN7ZBY",
-                  "id": "1P9syEkl41IFowWIJN7ZBY",
-                  "name": "Pete Seeger",
-                  "type": "artist",
-                  "uri": "spotify:artist:1P9syEkl41IFowWIJN7ZBY"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3ARyhbeNWaIZTGRTDZ8IG1"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3ARyhbeNWaIZTGRTDZ8IG1",
-                  "id": "3ARyhbeNWaIZTGRTDZ8IG1",
-                  "name": "Sybarite5",
-                  "type": "artist",
-                  "uri": "spotify:artist:3ARyhbeNWaIZTGRTDZ8IG1"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 168643,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2b3ss1TKT5A5dO5OkgCvx1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2b3ss1TKT5A5dO5OkgCvx1",
-              "id": "2b3ss1TKT5A5dO5OkgCvx1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Where Have All the Flowers Gone?",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:2b3ss1TKT5A5dO5OkgCvx1"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 1
-        },
-        "type": "album",
-        "uri": "spotify:album:2ue75Cel9sD94D5MI7W592"
-      },
-      "release_date": "2020-03-20",
-      "release_date_precision": "day",
-      "total_tracks": 1,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "1P9syEkl41IFowWIJN7ZBY",
-              "name": "Pete Seeger"
-            },
-            {
-              "id": "3ARyhbeNWaIZTGRTDZ8IG1",
-              "name": "Sybarite5"
-            }
-          ],
-          "duration_ms": 168643,
-          "explicit": false,
-          "id": "2b3ss1TKT5A5dO5OkgCvx1",
-          "name": "Where Have All the Flowers Gone?",
-          "preview_url": null,
-          "track_number": 1
-        }
-      ],
-      "url": "https://open.spotify.com/album/2ue75Cel9sD94D5MI7W592"
     }
   },
-  "spotify_id": "2ue75Cel9sD94D5MI7W592",
-  "spotify_url": "https://open.spotify.com/album/2ue75Cel9sD94D5MI7W592",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Folk"
   ],
@@ -676,6 +447,6 @@
       "title": "Don't You Weep After Me"
     }
   ],
-  "updated_at": "2025-07-05T16:35:51.711194",
+  "updated_at": "2025-07-07T20:27:09.151848",
   "year": 0
 }

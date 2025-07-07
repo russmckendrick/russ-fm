@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1392201092",
-  "apple_music_url": "https://music.apple.com/gb/album/were-not-done-end-title-from-the-kin-original-motion/1392201092",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "2989748",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:45:31.326693",
+  "created_at": "2025-07-07T20:14:15.947001",
   "date_added": "2018-09-03T17:51:16-07:00",
   "discogs_id": "12452058",
   "discogs_url": "https://www.discogs.com/release/12452058-Mogwai-Kin-Original-Motion-Picture-Soundtrack",
@@ -91,8 +91,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7f/25/e0/7f25e016-df8c-b708-5295-3419d656d2d9/5051083133876_cover.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058.jpg",
       "width": 2000
     }
   ],
@@ -103,69 +103,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Mogwai/KIN+(Original+Motion+Picture+Soundtrack)",
   "local_images": {
-    "hi-res": "public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-hi-res.jpg",
-    "medium": "public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-medium.jpg",
-    "small": "public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-small.jpg"
+    "hi-res": "../public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-hi-res.jpg",
+    "medium": "../public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-medium.jpg",
+    "small": "../public/album/kin-original-motion-picture-soundtrack-12452058/kin-original-motion-picture-soundtrack-12452058-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:45:34.189887",
+    "processed_at": "2025-07-07T20:14:23.474679",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "We're Not Done (End Title) [From the \"Kin\" Original Motion Picture Soundtrack] - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "Kin (Original Motion Picture Soundtrack)",
   "release_name_spotify": "KIN",
   "released": "2018-08-31",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7f/25/e0/7f25e016-df8c-b708-5295-3419d656d2d9/5051083133876_cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2018 Summit Entertainment, LLC",
-      "editorial_notes": null,
-      "id": "1392201092",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Mogwai",
-        "artwork": {
-          "bgColor": "010b20",
-          "height": 1500,
-          "textColor1": "e1ffff",
-          "textColor2": "fc7c91",
-          "textColor3": "b4ced2",
-          "textColor4": "ca667b",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/7f/25/e0/7f25e016-df8c-b708-5295-3419d656d2d9/5051083133876_cover.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "copyright": "℗ 2018 Summit Entertainment, LLC",
-        "genreNames": [
-          "Soundtrack",
-          "Music",
-          "Alternative"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": true,
-        "name": "We're Not Done (End Title) [From the \"Kin\" Original Motion Picture Soundtrack] - Single",
-        "playParams": {
-          "id": "1392201092",
-          "kind": "album"
-        },
-        "recordLabel": "Rock Action Records",
-        "releaseDate": "2018-06-21",
-        "trackCount": 1,
-        "upc": "5051083133876",
-        "url": "https://music.apple.com/gb/album/were-not-done-end-title-from-the-kin-original-motion/1392201092"
-      },
-      "url": "https://music.apple.com/gb/album/were-not-done-end-title-from-the-kin-original-motion/1392201092"
-    },
     "lastfm": {
       "images": [
         {
@@ -193,9 +149,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/8f82b1194e008f9c0c6be2fefac21265.jpg"
         }
       ],
-      "listeners": 958,
+      "listeners": 959,
       "mbid": "242d5e6d-78e2-4430-9eff-4299cbc6654a",
-      "playcount": 14740,
+      "playcount": 14744,
       "raw_data": {
         "album": {
           "artist": "Mogwai",
@@ -225,10 +181,10 @@
               "size": ""
             }
           ],
-          "listeners": "958",
+          "listeners": "959",
           "mbid": "242d5e6d-78e2-4430-9eff-4299cbc6654a",
           "name": "KIN (Original Motion Picture Soundtrack)",
-          "playcount": "14740",
+          "playcount": "14744",
           "tags": {
             "tag": [
               {
@@ -992,6 +948,6 @@
       "title": "We're Not Done (End Title)"
     }
   ],
-  "updated_at": "2025-07-05T16:45:32.364429",
+  "updated_at": "2025-07-07T20:14:23.008374",
   "year": 2018
 }

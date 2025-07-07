@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1485022871",
-  "apple_music_url": "https://music.apple.com/gb/album/black-velvet-stripped-down-mixes-ep/1485022871",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "206064023",
@@ -38,7 +38,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T16:40:37.775247",
+  "created_at": "2025-07-07T20:16:12.102021",
   "date_added": "2018-11-09T19:15:48-08:00",
   "discogs_id": "12768110",
   "discogs_url": "https://www.discogs.com/release/12768110-Charles-Bradley-Featuring-The-Menahan-Street-Band-Black-Velvet",
@@ -107,8 +107,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/7a/9d/b0/7a9db0cf-2059-7c67-35b4-f359d94d0152/193483492797.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/black-velvet-12768110/black-velvet-12768110.jpg",
       "width": 2000
     }
   ],
@@ -118,69 +118,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Charles+Bradley/Black+Velvet",
   "local_images": {
-    "hi-res": "public/album/black-velvet-12768110/black-velvet-12768110-hi-res.jpg",
-    "medium": "public/album/black-velvet-12768110/black-velvet-12768110-medium.jpg",
-    "small": "public/album/black-velvet-12768110/black-velvet-12768110-small.jpg"
+    "hi-res": "../public/album/black-velvet-12768110/black-velvet-12768110-hi-res.jpg",
+    "medium": "../public/album/black-velvet-12768110/black-velvet-12768110-medium.jpg",
+    "small": "../public/album/black-velvet-12768110/black-velvet-12768110-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:40:45.705342",
+    "processed_at": "2025-07-07T20:16:21.928123",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Black Velvet: Stripped-Down Mixes - EP",
+  "release_name_apple_music": null,
   "release_name_discogs": "Black Velvet",
   "release_name_spotify": "Black Velvet",
   "released": "2018-11-09",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/7a/9d/b0/7a9db0cf-2059-7c67-35b4-f359d94d0152/193483492797.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2019 Daptone Records",
-      "editorial_notes": null,
-      "id": "1485022871",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Charles Bradley",
-        "artwork": {
-          "bgColor": "171612",
-          "height": 1400,
-          "textColor1": "efdcc9",
-          "textColor2": "c7b8a6",
-          "textColor3": "c3b5a4",
-          "textColor4": "a49888",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/7a/9d/b0/7a9db0cf-2059-7c67-35b4-f359d94d0152/193483492797.jpg/{w}x{h}bb.jpg",
-          "width": 1400
-        },
-        "copyright": "℗ 2019 Daptone Records",
-        "genreNames": [
-          "R&B/Soul",
-          "Music",
-          "Soul"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Black Velvet: Stripped-Down Mixes - EP",
-        "playParams": {
-          "id": "1485022871",
-          "kind": "album"
-        },
-        "recordLabel": "Daptone Records",
-        "releaseDate": "2019-02-21",
-        "trackCount": 5,
-        "upc": "193483492797",
-        "url": "https://music.apple.com/gb/album/black-velvet-stripped-down-mixes-ep/1485022871"
-      },
-      "url": "https://music.apple.com/gb/album/black-velvet-stripped-down-mixes-ep/1485022871"
-    },
     "lastfm": {
       "images": [
         {
@@ -208,9 +164,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/0e9a7408ee6ad74c58e1b9d90b150f03.jpg"
         }
       ],
-      "listeners": 44362,
+      "listeners": 44403,
       "mbid": "3504a7f3-8b67-4108-b8c5-4292972af9ef",
-      "playcount": 265201,
+      "playcount": 265368,
       "raw_data": {
         "album": {
           "artist": "Charles Bradley",
@@ -240,10 +196,10 @@
               "size": ""
             }
           ],
-          "listeners": "44362",
+          "listeners": "44403",
           "mbid": "3504a7f3-8b67-4108-b8c5-4292972af9ef",
           "name": "Black Velvet",
-          "playcount": "265201",
+          "playcount": "265368",
           "tags": {
             "tag": [
               {
@@ -1172,6 +1128,6 @@
       "title": "Victim Of Love (Electric Version)"
     }
   ],
-  "updated_at": "2025-07-05T16:40:45.022147",
+  "updated_at": "2025-07-07T20:16:21.175330",
   "year": 2018
 }

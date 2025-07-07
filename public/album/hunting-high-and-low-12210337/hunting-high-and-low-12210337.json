@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1035047659",
-  "apple_music_url": "https://music.apple.com/gb/album/hunting-high-and-low-30th-anniversary-super-deluxe/1035047659",
+  "apple_music_id": "1037562339",
+  "apple_music_url": "https://music.apple.com/gb/album/hunting-high-low-remastered/1037562339",
   "artists": [
     {
       "apple_music_id": "166566",
@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T16:46:24.746090",
+  "created_at": "2025-07-07T20:14:06.214917",
   "date_added": "2018-08-17T18:07:56-07:00",
   "discogs_id": "12210337",
   "discogs_url": "https://www.discogs.com/release/12210337-a-ha-Hunting-High-And-Low",
@@ -127,7 +127,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/9c/a0/279ca055-f1aa-7b22-5dd5-1158b6da8afe/603497888207.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0b/5b/69/0b5b6991-cd46-7222-fca7-680b17318721/603497888191.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/hunting-high-and-low-12210337/hunting-high-and-low-12210337.jpg",
       "width": 2000
     }
   ],
@@ -138,14 +145,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/a-ha/Hunting+High+and+Low",
   "local_images": {
-    "hi-res": "public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-hi-res.jpg",
-    "medium": "public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-medium.jpg",
-    "small": "public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-small.jpg"
+    "hi-res": "../public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-hi-res.jpg",
+    "medium": "../public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-medium.jpg",
+    "small": "../public/album/hunting-high-and-low-12210337/hunting-high-and-low-12210337-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:46:26.866556",
+    "processed_at": "2025-07-07T20:14:13.802003",
     "services_used": [
       "discogs",
       "apple_music",
@@ -153,56 +160,53 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Hunting High and Low (30th Anniversary Super Deluxe)",
+  "release_name_apple_music": "Hunting High & Low (Remastered)",
   "release_name_discogs": "Hunting High And Low",
   "release_name_spotify": "Hunting High and Low",
   "released": "2018-07-03",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/9c/a0/279ca055-f1aa-7b22-5dd5-1158b6da8afe/603497888207.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0b/5b/69/0b5b6991-cd46-7222-fca7-680b17318721/603497888191.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 2015 Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved. Marketed by Rhino Entertainment Company.",
+      "copyright": "℗ 1985 Warner Records Inc. Marketed By Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved.",
       "editorial_notes": null,
-      "id": "1035047659",
+      "id": "1037562339",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "a-ha",
         "artwork": {
-          "bgColor": "050508",
-          "height": 1600,
-          "textColor1": "f1edee",
-          "textColor2": "d4d4d4",
-          "textColor3": "c2bec0",
-          "textColor4": "ababab",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/27/9c/a0/279ca055-f1aa-7b22-5dd5-1158b6da8afe/603497888207.jpg/{w}x{h}bb.jpg",
-          "width": 1600
+          "bgColor": "1e1e1e",
+          "height": 2400,
+          "textColor1": "e6e6e6",
+          "textColor2": "c9c9c9",
+          "textColor3": "bebebe",
+          "textColor4": "a7a7a7",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/0b/5b/69/0b5b6991-cd46-7222-fca7-680b17318721/603497888191.jpg/{w}x{h}bb.jpg",
+          "width": 2400
         },
-        "copyright": "℗ 2015 Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved. Marketed by Rhino Entertainment Company.",
+        "copyright": "℗ 1985 Warner Records Inc. Marketed By Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved.",
         "genreNames": [
           "Pop",
           "Music",
-          "Pop/Rock",
-          "Alternative",
-          "New Wave",
           "Adult Contemporary"
         ],
         "isCompilation": false,
         "isComplete": true,
-        "isMasteredForItunes": false,
+        "isMasteredForItunes": true,
         "isSingle": false,
-        "name": "Hunting High and Low (30th Anniversary Super Deluxe)",
+        "name": "Hunting High & Low (Remastered)",
         "playParams": {
-          "id": "1035047659",
+          "id": "1037562339",
           "kind": "album"
         },
         "recordLabel": "Rhino/Warner Records",
         "releaseDate": "1985-06-01",
-        "trackCount": 66,
-        "upc": "603497888207",
-        "url": "https://music.apple.com/gb/album/hunting-high-and-low-30th-anniversary-super-deluxe/1035047659"
+        "trackCount": 10,
+        "upc": "603497888191",
+        "url": "https://music.apple.com/gb/album/hunting-high-low-remastered/1037562339"
       },
-      "url": "https://music.apple.com/gb/album/hunting-high-and-low-30th-anniversary-super-deluxe/1035047659"
+      "url": "https://music.apple.com/gb/album/hunting-high-low-remastered/1037562339"
     },
     "lastfm": {
       "images": [
@@ -231,9 +235,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/b61c0246b523481a92428dc3310ce5fb.png"
         }
       ],
-      "listeners": 1891465,
+      "listeners": 1893469,
       "mbid": "023cb64f-8366-4a63-9f47-de1cc35102a7",
-      "playcount": 18448580,
+      "playcount": 18470345,
       "raw_data": {
         "album": {
           "artist": "a-ha",
@@ -263,10 +267,10 @@
               "size": ""
             }
           ],
-          "listeners": "1891465",
+          "listeners": "1893469",
           "mbid": "023cb64f-8366-4a63-9f47-de1cc35102a7",
           "name": "Hunting High and Low",
-          "playcount": "18448580",
+          "playcount": "18470345",
           "tags": {
             "tag": [
               {
@@ -1101,6 +1105,6 @@
       "title": "Here I Stand And Face The Rain"
     }
   ],
-  "updated_at": "2025-07-05T16:46:25.954575",
+  "updated_at": "2025-07-07T20:14:12.738376",
   "year": 2018
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1321519468",
+  "apple_music_url": "https://music.apple.com/gb/album/hormonally-yours/1321519468",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:31:05.592111",
+  "created_at": "2025-07-07T20:28:59.470561",
   "date_added": "2019-04-26T12:44:14-07:00",
   "discogs_id": "8958853",
   "discogs_url": "https://www.discogs.com/release/8958853-Shakespears-Sister-Hormonally-Yours",
@@ -67,6 +67,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/ODU2M2wOsWViMAXPb4ri4olukV_m-qP-O7RDWEFkX8Y/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg5NTg4/NTMtMTQ3MjczODcy/NC0xMzQzLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9d/dd/07/9ddd07ec-daad-dc6e-0a91-9bb50c769f38/603497059966.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/hormonally-yours-8958853/hormonally-yours-8958853.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -76,25 +90,69 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Shakespear%27s+Sister/Hormonally+Yours",
   "local_images": {
-    "hi-res": "public/album/hormonally-yours-8958853/hormonally-yours-8958853-hi-res.jpg",
-    "medium": "public/album/hormonally-yours-8958853/hormonally-yours-8958853-medium.jpg",
-    "small": "public/album/hormonally-yours-8958853/hormonally-yours-8958853-small.jpg"
+    "hi-res": "../public/album/hormonally-yours-8958853/hormonally-yours-8958853-hi-res.jpg",
+    "medium": "../public/album/hormonally-yours-8958853/hormonally-yours-8958853-medium.jpg",
+    "small": "../public/album/hormonally-yours-8958853/hormonally-yours-8958853-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:31:07.542315",
+    "processed_at": "2025-07-07T20:29:05.728996",
     "services_used": [
       "discogs",
+      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Hormonally Yours",
   "release_name_discogs": "Hormonally Yours",
-  "release_name_spotify": "Sister Self Doubt",
+  "release_name_spotify": "Hormonally Yours",
   "released": "1992",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9d/dd/07/9ddd07ec-daad-dc6e-0a91-9bb50c769f38/603497059966.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 1992 London Records Ltd",
+      "editorial_notes": null,
+      "id": "1321519468",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Shakespears Sister",
+        "artwork": {
+          "bgColor": "ffffff",
+          "height": 1500,
+          "textColor1": "030304",
+          "textColor2": "1c1c38",
+          "textColor3": "353536",
+          "textColor4": "4a4a60",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/9d/dd/07/9ddd07ec-daad-dc6e-0a91-9bb50c769f38/603497059966.jpg/{w}x{h}bb.jpg",
+          "width": 1500
+        },
+        "copyright": "℗ 1992 London Records Ltd",
+        "genreNames": [
+          "Rock",
+          "Music",
+          "Adult Alternative"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Hormonally Yours",
+        "playParams": {
+          "id": "1321519468",
+          "kind": "album"
+        },
+        "recordLabel": "London Music Stream/Because Music",
+        "releaseDate": "1992-06-19",
+        "trackCount": 12,
+        "upc": "190295716028",
+        "url": "https://music.apple.com/gb/album/hormonally-yours/1321519468"
+      },
+      "url": "https://music.apple.com/gb/album/hormonally-yours/1321519468"
+    },
     "lastfm": {
       "images": [
         {
@@ -124,7 +182,7 @@
       ],
       "listeners": 55908,
       "mbid": "0984d167-321f-3dcf-a2c9-d947231d8fc9",
-      "playcount": 413473,
+      "playcount": 413482,
       "raw_data": {
         "album": {
           "artist": "Shakespear's Sister",
@@ -157,7 +215,7 @@
           "listeners": "55908",
           "mbid": "0984d167-321f-3dcf-a2c9-d947231d8fc9",
           "name": "Hormonally Yours",
-          "playcount": "413473",
+          "playcount": "413482",
           "tags": {
             "tag": [
               {
@@ -412,377 +470,635 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(C) 2007 Shakes Recording Ltd",
+          "text": "© 1992 London Records Ltd",
           "type": "C"
         },
         {
-          "text": "(P) 2007 Shakes Recording Ltd",
+          "text": "℗ 1992 London Records Ltd",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "0842108016725"
+        "upc": "190295716028"
       },
-      "id": "0oLX4RjfS8mlSAqHFxA4Uk",
+      "id": "3tXyP8SOJNAmhaSM2VggI9",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2733dc637f83012e16c79db70df",
+          "url": "https://i.scdn.co/image/ab67616d0000b273e4bf40f179d543503f9b697e",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e023dc637f83012e16c79db70df",
+          "url": "https://i.scdn.co/image/ab67616d00001e02e4bf40f179d543503f9b697e",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048513dc637f83012e16c79db70df",
+          "url": "https://i.scdn.co/image/ab67616d00004851e4bf40f179d543503f9b697e",
           "width": 64
         }
       ],
-      "label": "Shakes Recording Ltd",
-      "popularity": 10,
+      "label": "London Music Stream/Because Music",
+      "popularity": 45,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+              "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
             },
-            "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-            "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-            "name": "Shakes",
+            "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+            "id": "7ooOn6bokl4mGV4CEaUz6A",
+            "name": "Shakespears Sister",
             "type": "artist",
-            "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+            "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
           }
         ],
         "copyrights": [
           {
-            "text": "(C) 2007 Shakes Recording Ltd",
+            "text": "© 1992 London Records Ltd",
             "type": "C"
           },
           {
-            "text": "(P) 2007 Shakes Recording Ltd",
+            "text": "℗ 1992 London Records Ltd",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "0842108016725"
+          "upc": "190295716028"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0oLX4RjfS8mlSAqHFxA4Uk"
+          "spotify": "https://open.spotify.com/album/3tXyP8SOJNAmhaSM2VggI9"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0oLX4RjfS8mlSAqHFxA4Uk?market=US",
-        "id": "0oLX4RjfS8mlSAqHFxA4Uk",
+        "href": "https://api.spotify.com/v1/albums/3tXyP8SOJNAmhaSM2VggI9?market=US",
+        "id": "3tXyP8SOJNAmhaSM2VggI9",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2733dc637f83012e16c79db70df",
+            "url": "https://i.scdn.co/image/ab67616d0000b273e4bf40f179d543503f9b697e",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e023dc637f83012e16c79db70df",
+            "url": "https://i.scdn.co/image/ab67616d00001e02e4bf40f179d543503f9b697e",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048513dc637f83012e16c79db70df",
+            "url": "https://i.scdn.co/image/ab67616d00004851e4bf40f179d543503f9b697e",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Shakes Recording Ltd",
-        "name": "Sister Self Doubt",
-        "popularity": 10,
-        "release_date": "2007-03-05",
+        "label": "London Music Stream/Because Music",
+        "name": "Hormonally Yours",
+        "popularity": 45,
+        "release_date": "1992-06-19",
         "release_date_precision": "day",
-        "total_tracks": 6,
+        "total_tracks": 12,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0oLX4RjfS8mlSAqHFxA4Uk/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/3tXyP8SOJNAmhaSM2VggI9/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 265893,
+              "duration_ms": 245026,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/27ln5MqPT6BejCQ4h1Lhxx"
+                "spotify": "https://open.spotify.com/track/7MYgVpPahZyfbrDTvLFdPt"
               },
-              "href": "https://api.spotify.com/v1/tracks/27ln5MqPT6BejCQ4h1Lhxx",
-              "id": "27ln5MqPT6BejCQ4h1Lhxx",
+              "href": "https://api.spotify.com/v1/tracks/7MYgVpPahZyfbrDTvLFdPt",
+              "id": "7MYgVpPahZyfbrDTvLFdPt",
               "is_local": false,
               "is_playable": true,
-              "name": "Sister Self Doubt",
+              "name": "Goodbye Cruel World",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:27ln5MqPT6BejCQ4h1Lhxx"
+              "uri": "spotify:track:7MYgVpPahZyfbrDTvLFdPt"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 397253,
+              "duration_ms": 256440,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/264HLbR5bQtWinvleeXPpC"
+                "spotify": "https://open.spotify.com/track/3V7d1rj2Tmd4PAWI1jiDLL"
               },
-              "href": "https://api.spotify.com/v1/tracks/264HLbR5bQtWinvleeXPpC",
-              "id": "264HLbR5bQtWinvleeXPpC",
+              "href": "https://api.spotify.com/v1/tracks/3V7d1rj2Tmd4PAWI1jiDLL",
+              "id": "3V7d1rj2Tmd4PAWI1jiDLL",
               "is_local": false,
               "is_playable": true,
-              "name": "Sister Self Doubt - Alternative Version",
+              "name": "I Don't Care",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:264HLbR5bQtWinvleeXPpC"
+              "uri": "spotify:track:3V7d1rj2Tmd4PAWI1jiDLL"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 400120,
+              "duration_ms": 256398,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Lrh9EvtITvpihR5N6vxWF"
+                "spotify": "https://open.spotify.com/track/5GsB0Od29uj043b7ntm7HI"
               },
-              "href": "https://api.spotify.com/v1/tracks/1Lrh9EvtITvpihR5N6vxWF",
-              "id": "1Lrh9EvtITvpihR5N6vxWF",
+              "href": "https://api.spotify.com/v1/tracks/5GsB0Od29uj043b7ntm7HI",
+              "id": "5GsB0Od29uj043b7ntm7HI",
               "is_local": false,
               "is_playable": true,
-              "name": "Air - Instrumental",
+              "name": "My 16th Apology",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:1Lrh9EvtITvpihR5N6vxWF"
+              "uri": "spotify:track:5GsB0Od29uj043b7ntm7HI"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 274400,
+              "duration_ms": 224173,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2ntqrT4FluazmR6Afu7ysb"
+                "spotify": "https://open.spotify.com/track/2hh5I3swXC8euaTkX5krMc"
               },
-              "href": "https://api.spotify.com/v1/tracks/2ntqrT4FluazmR6Afu7ysb",
-              "id": "2ntqrT4FluazmR6Afu7ysb",
+              "href": "https://api.spotify.com/v1/tracks/2hh5I3swXC8euaTkX5krMc",
+              "id": "2hh5I3swXC8euaTkX5krMc",
               "is_local": false,
               "is_playable": true,
-              "name": "Disneyland (Part One)",
+              "name": "Are We in Love Yet",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:2ntqrT4FluazmR6Afu7ysb"
+              "uri": "spotify:track:2hh5I3swXC8euaTkX5krMc"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 379066,
+              "duration_ms": 228133,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7t5RRqs89uqbsmSCQw6EyD"
+                "spotify": "https://open.spotify.com/track/3kYXD6D9c98qpQcOYZpkly"
               },
-              "href": "https://api.spotify.com/v1/tracks/7t5RRqs89uqbsmSCQw6EyD",
-              "id": "7t5RRqs89uqbsmSCQw6EyD",
+              "href": "https://api.spotify.com/v1/tracks/3kYXD6D9c98qpQcOYZpkly",
+              "id": "3kYXD6D9c98qpQcOYZpkly",
               "is_local": false,
               "is_playable": true,
-              "name": "Disneyland (Part Two)",
+              "name": "Emotional Thing",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:7t5RRqs89uqbsmSCQw6EyD"
+              "uri": "spotify:track:3kYXD6D9c98qpQcOYZpkly"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2r5oxYEmuQ1T4Z4p3Ymk7C"
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-                  "name": "Shakes",
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
                   "type": "artist",
-                  "uri": "spotify:artist:2r5oxYEmuQ1T4Z4p3Ymk7C"
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 218560,
+              "duration_ms": 229000,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1e9KkKWVjHbgANLfsvHbR0"
+                "spotify": "https://open.spotify.com/track/6Mcoqi1iK28djC2EClVwDj"
               },
-              "href": "https://api.spotify.com/v1/tracks/1e9KkKWVjHbgANLfsvHbR0",
-              "id": "1e9KkKWVjHbgANLfsvHbR0",
+              "href": "https://api.spotify.com/v1/tracks/6Mcoqi1iK28djC2EClVwDj",
+              "id": "6Mcoqi1iK28djC2EClVwDj",
               "is_local": false,
               "is_playable": true,
-              "name": "Disneyland (Audition)",
+              "name": "Stay",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:1e9KkKWVjHbgANLfsvHbR0"
+              "uri": "spotify:track:6Mcoqi1iK28djC2EClVwDj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 243586,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5AvFLPaIw5KGCmJrwo1Jzf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5AvFLPaIw5KGCmJrwo1Jzf",
+              "id": "5AvFLPaIw5KGCmJrwo1Jzf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Black Sky",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:5AvFLPaIw5KGCmJrwo1Jzf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 282520,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/29bvxfcFDlUrdwtkRqljuo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/29bvxfcFDlUrdwtkRqljuo",
+              "id": "29bvxfcFDlUrdwtkRqljuo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Trouble with Andre",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:29bvxfcFDlUrdwtkRqljuo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 267200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4d19WFK5CblkChVuo1lpzc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4d19WFK5CblkChVuo1lpzc",
+              "id": "4d19WFK5CblkChVuo1lpzc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Moonchild",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4d19WFK5CblkChVuo1lpzc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 239026,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3R5w5Vdsa1YLiNq1GdqGAp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3R5w5Vdsa1YLiNq1GdqGAp",
+              "id": "3R5w5Vdsa1YLiNq1GdqGAp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Catwoman",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:3R5w5Vdsa1YLiNq1GdqGAp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 284440,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2B8FceaXIS9kDrvw0F271R"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2B8FceaXIS9kDrvw0F271R",
+              "id": "2B8FceaXIS9kDrvw0F271R",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Let Me Entertain You",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2B8FceaXIS9kDrvw0F271R"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ooOn6bokl4mGV4CEaUz6A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ooOn6bokl4mGV4CEaUz6A",
+                  "id": "7ooOn6bokl4mGV4CEaUz6A",
+                  "name": "Shakespears Sister",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ooOn6bokl4mGV4CEaUz6A"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 245800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/28CbxqvoML43nJMU68VPx1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/28CbxqvoML43nJMU68VPx1",
+              "id": "28CbxqvoML43nJMU68VPx1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hello - Turn Your Radio On",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:28CbxqvoML43nJMU68VPx1"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 6
+          "total": 12
         },
         "type": "album",
-        "uri": "spotify:album:0oLX4RjfS8mlSAqHFxA4Uk"
+        "uri": "spotify:album:3tXyP8SOJNAmhaSM2VggI9"
       },
-      "release_date": "2007-03-05",
+      "release_date": "1992-06-19",
       "release_date_precision": "day",
-      "total_tracks": 6,
+      "total_tracks": 12,
       "tracks": [
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 265893,
+          "duration_ms": 245026,
           "explicit": false,
-          "id": "27ln5MqPT6BejCQ4h1Lhxx",
-          "name": "Sister Self Doubt",
+          "id": "7MYgVpPahZyfbrDTvLFdPt",
+          "name": "Goodbye Cruel World",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 397253,
+          "duration_ms": 256440,
           "explicit": false,
-          "id": "264HLbR5bQtWinvleeXPpC",
-          "name": "Sister Self Doubt - Alternative Version",
+          "id": "3V7d1rj2Tmd4PAWI1jiDLL",
+          "name": "I Don't Care",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 400120,
+          "duration_ms": 256398,
           "explicit": false,
-          "id": "1Lrh9EvtITvpihR5N6vxWF",
-          "name": "Air - Instrumental",
+          "id": "5GsB0Od29uj043b7ntm7HI",
+          "name": "My 16th Apology",
           "preview_url": null,
           "track_number": 3
         },
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 274400,
+          "duration_ms": 224173,
           "explicit": false,
-          "id": "2ntqrT4FluazmR6Afu7ysb",
-          "name": "Disneyland (Part One)",
+          "id": "2hh5I3swXC8euaTkX5krMc",
+          "name": "Are We in Love Yet",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 379066,
+          "duration_ms": 228133,
           "explicit": false,
-          "id": "7t5RRqs89uqbsmSCQw6EyD",
-          "name": "Disneyland (Part Two)",
+          "id": "3kYXD6D9c98qpQcOYZpkly",
+          "name": "Emotional Thing",
           "preview_url": null,
           "track_number": 5
         },
         {
           "artists": [
             {
-              "id": "2r5oxYEmuQ1T4Z4p3Ymk7C",
-              "name": "Shakes"
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
             }
           ],
-          "duration_ms": 218560,
+          "duration_ms": 229000,
           "explicit": false,
-          "id": "1e9KkKWVjHbgANLfsvHbR0",
-          "name": "Disneyland (Audition)",
+          "id": "6Mcoqi1iK28djC2EClVwDj",
+          "name": "Stay",
           "preview_url": null,
           "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 243586,
+          "explicit": false,
+          "id": "5AvFLPaIw5KGCmJrwo1Jzf",
+          "name": "Black Sky",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 282520,
+          "explicit": false,
+          "id": "29bvxfcFDlUrdwtkRqljuo",
+          "name": "The Trouble with Andre",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 267200,
+          "explicit": false,
+          "id": "4d19WFK5CblkChVuo1lpzc",
+          "name": "Moonchild",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 239026,
+          "explicit": false,
+          "id": "3R5w5Vdsa1YLiNq1GdqGAp",
+          "name": "Catwoman",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 284440,
+          "explicit": false,
+          "id": "2B8FceaXIS9kDrvw0F271R",
+          "name": "Let Me Entertain You",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "7ooOn6bokl4mGV4CEaUz6A",
+              "name": "Shakespears Sister"
+            }
+          ],
+          "duration_ms": 245800,
+          "explicit": false,
+          "id": "28CbxqvoML43nJMU68VPx1",
+          "name": "Hello - Turn Your Radio On",
+          "preview_url": null,
+          "track_number": 12
         }
       ],
-      "url": "https://open.spotify.com/album/0oLX4RjfS8mlSAqHFxA4Uk"
+      "url": "https://open.spotify.com/album/3tXyP8SOJNAmhaSM2VggI9"
     }
   },
-  "spotify_id": "0oLX4RjfS8mlSAqHFxA4Uk",
-  "spotify_url": "https://open.spotify.com/album/0oLX4RjfS8mlSAqHFxA4Uk",
+  "spotify_id": "3tXyP8SOJNAmhaSM2VggI9",
+  "spotify_url": "https://open.spotify.com/album/3tXyP8SOJNAmhaSM2VggI9",
   "styles": [],
   "title": "Hormonally Yours",
   "tracklist": [
@@ -859,6 +1175,6 @@
       "title": "Hello (Turn Your Radio On)"
     }
   ],
-  "updated_at": "2025-07-05T16:31:07.372139",
+  "updated_at": "2025-07-07T20:29:04.840040",
   "year": 1992
 }

@@ -1,12 +1,12 @@
 {
-  "apple_music_id": "20883318",
-  "apple_music_url": "https://music.apple.com/gb/artist/bob-stanley/20883318",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "biography": null,
   "country": null,
   "created_at": "2025-07-05T16:16:28.275769",
   "discogs_id": "438155",
-  "discogs_url": "https://www.discogs.com/artist/438155",
-  "followers": 77,
+  "discogs_url": "https://www.discogs.com/artist/438155-Bob-Stanley",
+  "followers": null,
   "formed_date": null,
   "genres": [
     "Worldwide",
@@ -14,40 +14,163 @@
     "seen live",
     "dj"
   ],
-  "id": null,
+  "id": "bob-stanley-1751728591",
   "images": [
     {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/S2Xe21-wUBjQS8sPLBbU-kH5_prsiMvz6xoHN7sswHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+      "width": null
+    },
+    {
       "height": 2000,
-      "type": "apple_music_artist",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/ca/72/ec/mzi.aotkiixu.jpg/2000x2000ac.jpg",
+      "type": "custom_artist_image",
+      "url": "https://cdn.prod.website-files.com/5ee10044c8ef9b97a404acdc/5ee7ae5906d3c69ec2c4e971_5ee7ae4324aa1f43ff0d9d2a_Bob%2BStanley.png",
       "width": 2000
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Bob+Stanley",
   "local_images": {
-    "hi-res": "public/artist/bob-stanley/bob-stanley-hi-res.jpg",
-    "medium": "public/artist/bob-stanley/bob-stanley-medium.jpg",
-    "small": "public/artist/bob-stanley/bob-stanley-small.jpg"
+    "hi-res": "../public/artist/bob-stanley/bob-stanley-hi-res.jpg",
+    "medium": "../public/artist/bob-stanley/bob-stanley-medium.jpg",
+    "small": "../public/artist/bob-stanley/bob-stanley-small.jpg"
   },
   "name": "Bob Stanley",
-  "popularity": 14,
+  "popularity": null,
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/ca/72/ec/mzi.aotkiixu.jpg/2000x2000ac.jpg",
-      "editorial_notes": null,
-      "genres": [
-        "Worldwide"
-      ],
-      "id": "20883318",
-      "name": "Bob Stanley",
-      "origin": "",
-      "url": "https://music.apple.com/gb/artist/bob-stanley/20883318"
-    },
+    "apple_music": {},
     "discogs": {
-      "id": 438155,
-      "original_name": "Bob Stanley",
-      "role": ""
+      "cover_image": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "438155",
+      "images": [
+        {
+          "height": 899,
+          "resource_url": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/S2Xe21-wUBjQS8sPLBbU-kH5_prsiMvz6xoHN7sswHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 628,
+          "resource_url": "https://i.discogs.com/2U4TQmP9oE1_q4qIveV-KL4cgwkJLCnNmIb2tFiqFGQ/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2U4TQmP9oE1_q4qIveV-KL4cgwkJLCnNmIb2tFiqFGQ/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+          "uri150": "https://i.discogs.com/XF2PUU0qF3l9OHAzhy5IPclcp7UeQChELSUfHiBSIiE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Bob Stanley",
+      "namevariations": [
+        "B. Stanley",
+        "B.Stanley",
+        "Bob",
+        "R.Stanley",
+        "Robert",
+        "Robert Stanley",
+        "Satnlley",
+        "Stanley",
+        "Stanlley",
+        "ボブ・スタンレイ"
+      ],
+      "profile": "As well as being a member of Saint Etienne and a DJ, Bob was the founder of the [url=http://www.discogs.com/label/Caff+Corporation]Caff[/url] fanzine/record label, [l=Royal Mint] and [l=EMIDISC]. Alongside fellow Saint Etienne member Pete Wiggs, he ran [l=Icerink]. He was also A&R for the first releases by [l=iT Records (7)]. [l=Eclipse (2)] is the latest label started in 2006.\r\nStanley has also complied, curated and/or written liner notes for numerous compilations and re-issues, often with his Saint Etienne bandmates.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 2807,
+            "name": "Saint Etienne",
+            "resource_url": "https://api.discogs.com/artists/2807",
+            "thumbnail_url": "https://i.discogs.com/vmEEOF3yU6G1DOIuZh1XLCALDd-bhQkVfg9rBuzwam8/rs:fit/g:sm/q:40/h:276/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDct/MTMzNjczMTUyMy01/Nzk1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 25930,
+            "name": "Cola Boy",
+            "resource_url": "https://api.discogs.com/artists/25930",
+            "thumbnail_url": "https://i.discogs.com/SsWqvxGvQkDx0zZiDKfOj00ZQuPgH0IfzuNGraH1ZX8/rs:fit/g:sm/q:40/h:473/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTMw/LTEyOTA0NjQ3OTQu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 295503,
+            "name": "St. Etienne Daho",
+            "resource_url": "https://api.discogs.com/artists/295503",
+            "thumbnail_url": "https://i.discogs.com/N58MiAh5_DJ6G26PIfS5V0b_KlyNc0G3DoVAhQ2VMKU/rs:fit/g:sm/q:40/h:269/w:220/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NTUw/My0xMzg0MDgxOTk0/LTMwODIucG5n.jpeg"
+          },
+          {
+            "active": true,
+            "id": 8529816,
+            "name": "50 Year Void",
+            "resource_url": "https://api.discogs.com/artists/8529816",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 438155,
+        "images": [
+          {
+            "height": 899,
+            "resource_url": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/S2Xe21-wUBjQS8sPLBbU-kH5_prsiMvz6xoHN7sswHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 628,
+            "resource_url": "https://i.discogs.com/2U4TQmP9oE1_q4qIveV-KL4cgwkJLCnNmIb2tFiqFGQ/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/2U4TQmP9oE1_q4qIveV-KL4cgwkJLCnNmIb2tFiqFGQ/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+            "uri150": "https://i.discogs.com/XF2PUU0qF3l9OHAzhy5IPclcp7UeQChELSUfHiBSIiE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1Njkx/LTg3NzIucG5n.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Bob Stanley",
+        "namevariations": [
+          "B. Stanley",
+          "B.Stanley",
+          "Bob",
+          "R.Stanley",
+          "Robert",
+          "Robert Stanley",
+          "Satnlley",
+          "Stanley",
+          "Stanlley",
+          "ボブ・スタンレイ"
+        ],
+        "profile": "As well as being a member of Saint Etienne and a DJ, Bob was the founder of the [url=http://www.discogs.com/label/Caff+Corporation]Caff[/url] fanzine/record label, [l=Royal Mint] and [l=EMIDISC]. Alongside fellow Saint Etienne member Pete Wiggs, he ran [l=Icerink]. He was also A&R for the first releases by [l=iT Records (7)]. [l=Eclipse (2)] is the latest label started in 2006.\r\nStanley has also complied, curated and/or written liner notes for numerous compilations and re-issues, often with his Saint Etienne bandmates.",
+        "realname": "Robert Andrew Shukman",
+        "releases_url": "https://api.discogs.com/artists/438155/releases",
+        "resource_url": "https://api.discogs.com/artists/438155",
+        "uri": "https://www.discogs.com/artist/438155-Bob-Stanley",
+        "urls": [
+          "http://www.bobstanley.co.uk",
+          "http://croydonmunicipal.blogspot.co.uk",
+          "http://twitter.com/rocking_bob",
+          "http://www.saintetiennedisco.com",
+          "https://en.wikipedia.org/wiki/Bob_Stanley_(musician)"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/438155",
+      "thumb": "https://i.discogs.com/S2Xe21-wUBjQS8sPLBbU-kH5_prsiMvz6xoHN7sswHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/438155-Bob-Stanley",
+      "urls": [
+        "http://www.bobstanley.co.uk",
+        "http://croydonmunicipal.blogspot.co.uk",
+        "http://twitter.com/rocking_bob",
+        "http://www.saintetiennedisco.com",
+        "https://en.wikipedia.org/wiki/Bob_Stanley_(musician)"
+      ]
     },
     "lastfm": {
       "bio_content": null,
@@ -98,20 +221,10 @@
       ],
       "url": "https://www.last.fm/music/Bob+Stanley"
     },
-    "spotify": {
-      "followers": 77,
-      "genres": [
-        "ragtime"
-      ],
-      "id": "1fPaSpcmCOEWEIsa3Hu1Aj",
-      "images": [],
-      "name": "Bob Stanley",
-      "popularity": 14,
-      "url": "https://open.spotify.com/artist/1fPaSpcmCOEWEIsa3Hu1Aj"
-    }
+    "spotify": {}
   },
-  "spotify_id": "1fPaSpcmCOEWEIsa3Hu1Aj",
-  "spotify_url": "https://open.spotify.com/artist/1fPaSpcmCOEWEIsa3Hu1Aj",
-  "updated_at": "2025-07-05T16:16:31.808566",
+  "spotify_id": null,
+  "spotify_url": null,
+  "updated_at": "2025-07-07T20:57:01.499615",
   "wikipedia_url": null
 }

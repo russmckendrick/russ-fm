@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:38:17.969463",
+  "created_at": "2025-07-07T20:17:05.212377",
   "date_added": "2018-12-17T19:15:09-08:00",
   "discogs_id": "3142113",
   "discogs_url": "https://www.discogs.com/release/3142113-Skin-4-Skin",
@@ -73,6 +73,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/ZpN6TpPE5ohpn-3r2f5PxRa_xisi56ispcP-BFKCD10/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNDIx/MTMtMTY1MjU2MTUz/OS00Nzg1LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/skin-3142113/skin-3142113.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -82,23 +89,22 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Skin/Skin",
   "local_images": {
-    "hi-res": "public/album/skin-3142113/skin-3142113-hi-res.jpg",
-    "medium": "public/album/skin-3142113/skin-3142113-medium.jpg",
-    "small": "public/album/skin-3142113/skin-3142113-small.jpg"
+    "hi-res": "../public/album/skin-3142113/skin-3142113-hi-res.jpg",
+    "medium": "../public/album/skin-3142113/skin-3142113-medium.jpg",
+    "small": "../public/album/skin-3142113/skin-3142113-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:38:20.024727",
+    "processed_at": "2025-07-07T20:17:14.611603",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Skin",
-  "release_name_spotify": "Filoxiny",
+  "release_name_spotify": null,
   "released": "1994",
   "services": {
     "lastfm": {
@@ -128,9 +134,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/292850ccfc374f99aa37dce7f3a7120d.jpg"
         }
       ],
-      "listeners": 3484,
+      "listeners": 3485,
       "mbid": "14212665-fc9d-44bc-aecf-af9bc7fdc2d5",
-      "playcount": 34723,
+      "playcount": 34738,
       "raw_data": {
         "album": {
           "artist": "Skin",
@@ -160,10 +166,10 @@
               "size": ""
             }
           ],
-          "listeners": "3484",
+          "listeners": "3485",
           "mbid": "14212665-fc9d-44bc-aecf-af9bc7fdc2d5",
           "name": "Skin",
-          "playcount": "34723",
+          "playcount": "34738",
           "tags": {
             "tag": [
               {
@@ -565,469 +571,10 @@
       "url": "https://www.last.fm/music/Skin/Skin",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2018 Skinshape",
-          "type": "C"
-        },
-        {
-          "text": "2025 Skinshape",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "4069493256741"
-      },
-      "id": "5PdK3ZxCKMZxeVDp2rrqKM",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2738475e1e86776b4d75acfe069",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e028475e1e86776b4d75acfe069",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048518475e1e86776b4d75acfe069",
-          "width": 64
-        }
-      ],
-      "label": "Music From Swanage",
-      "popularity": 54,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-            },
-            "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-            "id": "1itM5tXaK5THggpXA7ovAe",
-            "name": "Skinshape",
-            "type": "artist",
-            "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2018 Skinshape",
-            "type": "C"
-          },
-          {
-            "text": "2025 Skinshape",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "4069493256741"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5PdK3ZxCKMZxeVDp2rrqKM"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/5PdK3ZxCKMZxeVDp2rrqKM?market=US",
-        "id": "5PdK3ZxCKMZxeVDp2rrqKM",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2738475e1e86776b4d75acfe069",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e028475e1e86776b4d75acfe069",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048518475e1e86776b4d75acfe069",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Music From Swanage",
-        "name": "Filoxiny",
-        "popularity": 54,
-        "release_date": "2018-11-23",
-        "release_date_precision": "day",
-        "total_tracks": 8,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/5PdK3ZxCKMZxeVDp2rrqKM/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 283107,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3gBgb5uKNagroBb5iDZ9ia"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3gBgb5uKNagroBb5iDZ9ia",
-              "id": "3gBgb5uKNagroBb5iDZ9ia",
-              "is_local": false,
-              "is_playable": true,
-              "name": "After Midnight",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:3gBgb5uKNagroBb5iDZ9ia"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 218626,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/368jqoWXcn9BOTo4A6sOwe"
-              },
-              "href": "https://api.spotify.com/v1/tracks/368jqoWXcn9BOTo4A6sOwe",
-              "id": "368jqoWXcn9BOTo4A6sOwe",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Didn't Know",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:368jqoWXcn9BOTo4A6sOwe"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 243659,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6jOZ6PuD8SPYQEPIyjhIZ1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6jOZ6PuD8SPYQEPIyjhIZ1",
-              "id": "6jOZ6PuD8SPYQEPIyjhIZ1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Metanoia",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:6jOZ6PuD8SPYQEPIyjhIZ1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 280166,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4yAvZF4Tpf9fVVUHTgSSOH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4yAvZF4Tpf9fVVUHTgSSOH",
-              "id": "4yAvZF4Tpf9fVVUHTgSSOH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Shimmer",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:4yAvZF4Tpf9fVVUHTgSSOH"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 183061,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1NwmZy6jKoxLf2YQHt03ms"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1NwmZy6jKoxLf2YQHt03ms",
-              "id": "1NwmZy6jKoxLf2YQHt03ms",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Breathe",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:1NwmZy6jKoxLf2YQHt03ms"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 257872,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5eMjdwl5jguG5E64bHTJMx"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5eMjdwl5jguG5E64bHTJMx",
-              "id": "5eMjdwl5jguG5E64bHTJMx",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Life as One",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:5eMjdwl5jguG5E64bHTJMx"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 265179,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/19YvAZys5aAsDY3asUE9uR"
-              },
-              "href": "https://api.spotify.com/v1/tracks/19YvAZys5aAsDY3asUE9uR",
-              "id": "19YvAZys5aAsDY3asUE9uR",
-              "is_local": false,
-              "is_playable": true,
-              "name": "We Lose",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:19YvAZys5aAsDY3asUE9uR"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1itM5tXaK5THggpXA7ovAe"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1itM5tXaK5THggpXA7ovAe",
-                  "id": "1itM5tXaK5THggpXA7ovAe",
-                  "name": "Skinshape",
-                  "type": "artist",
-                  "uri": "spotify:artist:1itM5tXaK5THggpXA7ovAe"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 223602,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4vHqVnonCqY6vI2jSSaZDI"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4vHqVnonCqY6vI2jSSaZDI",
-              "id": "4vHqVnonCqY6vI2jSSaZDI",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Filoxiny",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:4vHqVnonCqY6vI2jSSaZDI"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 8
-        },
-        "type": "album",
-        "uri": "spotify:album:5PdK3ZxCKMZxeVDp2rrqKM"
-      },
-      "release_date": "2018-11-23",
-      "release_date_precision": "day",
-      "total_tracks": 8,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 283107,
-          "explicit": false,
-          "id": "3gBgb5uKNagroBb5iDZ9ia",
-          "name": "After Midnight",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 218626,
-          "explicit": false,
-          "id": "368jqoWXcn9BOTo4A6sOwe",
-          "name": "I Didn't Know",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 243659,
-          "explicit": false,
-          "id": "6jOZ6PuD8SPYQEPIyjhIZ1",
-          "name": "Metanoia",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 280166,
-          "explicit": false,
-          "id": "4yAvZF4Tpf9fVVUHTgSSOH",
-          "name": "Shimmer",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 183061,
-          "explicit": false,
-          "id": "1NwmZy6jKoxLf2YQHt03ms",
-          "name": "Breathe",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 257872,
-          "explicit": false,
-          "id": "5eMjdwl5jguG5E64bHTJMx",
-          "name": "Life as One",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 265179,
-          "explicit": false,
-          "id": "19YvAZys5aAsDY3asUE9uR",
-          "name": "We Lose",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "1itM5tXaK5THggpXA7ovAe",
-              "name": "Skinshape"
-            }
-          ],
-          "duration_ms": 223602,
-          "explicit": false,
-          "id": "4vHqVnonCqY6vI2jSSaZDI",
-          "name": "Filoxiny",
-          "preview_url": null,
-          "track_number": 8
-        }
-      ],
-      "url": "https://open.spotify.com/album/5PdK3ZxCKMZxeVDp2rrqKM"
     }
   },
-  "spotify_id": "5PdK3ZxCKMZxeVDp2rrqKM",
-  "spotify_url": "https://open.spotify.com/album/5PdK3ZxCKMZxeVDp2rrqKM",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Hard Rock"
   ],
@@ -1100,6 +647,6 @@
       "title": "Wings Of An Angel"
     }
   ],
-  "updated_at": "2025-07-05T16:38:19.898106",
+  "updated_at": "2025-07-07T20:17:14.258842",
   "year": 1994
 }

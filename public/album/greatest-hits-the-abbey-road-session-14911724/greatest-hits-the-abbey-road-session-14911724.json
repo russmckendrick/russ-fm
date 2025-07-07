@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:57:13.585188",
+  "created_at": "2025-07-07T20:39:38.644690",
   "date_added": "2021-02-18T07:59:34-08:00",
   "discogs_id": "14911724",
   "discogs_url": "https://www.discogs.com/release/14911724-Therapy-Greatest-Hits-The-Abbey-Road-Session",
@@ -101,6 +101,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/-k65QFCmMp81xd1xbmfEqpUkjG7yDMBI1wvg0T5dUJ0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0OTEx/NzI0LTE1ODQwOTYz/MzMtMzYxOC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/greatest-hits-the-abbey-road-session-14911724/greatest-hits-the-abbey-road-session-14911724.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -108,11 +115,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Therapy%3F/Greatest+Hits+(The+Abbey+Road+Session)",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/greatest-hits-the-abbey-road-session-14911724/greatest-hits-the-abbey-road-session-14911724-hi-res.jpg",
+    "medium": "../public/album/greatest-hits-the-abbey-road-session-14911724/greatest-hits-the-abbey-road-session-14911724-medium.jpg",
+    "small": "../public/album/greatest-hits-the-abbey-road-session-14911724/greatest-hits-the-abbey-road-session-14911724-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:57:14.279867",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:39:45.758680",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -516,6 +527,6 @@
       "title": "Lonely, Cryin' Only"
     }
   ],
-  "updated_at": "2025-07-05T15:57:14.278910",
+  "updated_at": "2025-07-07T20:39:45.553235",
   "year": 2020
 }
