@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1168928018",
+  "apple_music_url": "https://music.apple.com/gb/album/theyesandeye/1168928018",
   "artists": [
     {
       "apple_music_id": "5528338",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T17:44:05.471609",
+  "created_at": "2025-07-07T19:08:40.784673",
   "date_added": "2016-07-25T18:37:38-07:00",
   "discogs_id": "8812487",
   "discogs_url": "https://www.discogs.com/release/8812487-Lou-Rhodes-Theyesandeye",
@@ -75,6 +75,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/Dt4JuOFOmm45OnM2wSPKfFcHzYK9WDhJWkWC53zBIhU/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg4MTI0/ODctMTQ2OTI5NjA5/MS0zNjEyLmpwZWc.jpeg",
       "width": 598
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/0b/d0/c3/0bd0c3e0-58d2-5126-bb4b-5f8bd6b5bf4e/5060463412197.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/theyesandeye-8812487/theyesandeye-8812487.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -82,21 +96,71 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/theyesandeye-8812487/theyesandeye-8812487-hi-res.jpg",
+    "medium": "../public/album/theyesandeye-8812487/theyesandeye-8812487-medium.jpg",
+    "small": "../public/album/theyesandeye-8812487/theyesandeye-8812487-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:44:06.742944",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:08:45.578771",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Theyesandeye",
   "release_name_discogs": "Theyesandeye",
   "release_name_spotify": null,
   "released": "2016-07-22",
-  "services": {},
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/0b/d0/c3/0bd0c3e0-58d2-5126-bb4b-5f8bd6b5bf4e/5060463412197.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2016 Lou Rhodes with licensing arrangement to Nude Music Ltd",
+      "editorial_notes": null,
+      "id": "1168928018",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Lou Rhodes",
+        "artwork": {
+          "bgColor": "3f3422",
+          "height": 1500,
+          "textColor1": "f8eab7",
+          "textColor2": "eddcba",
+          "textColor3": "d3c599",
+          "textColor4": "caba9b",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music71/v4/0b/d0/c3/0bd0c3e0-58d2-5126-bb4b-5f8bd6b5bf4e/5060463412197.jpg/{w}x{h}bb.jpg",
+          "width": 1500
+        },
+        "copyright": "℗ 2016 Lou Rhodes with licensing arrangement to Nude Music Ltd",
+        "genreNames": [
+          "Singer/Songwriter",
+          "Music",
+          "Rock",
+          "Contemporary Singer/Songwriter"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Theyesandeye",
+        "playParams": {
+          "id": "1168928018",
+          "kind": "album"
+        },
+        "recordLabel": "Nude",
+        "releaseDate": "2016-07-22",
+        "trackCount": 11,
+        "upc": "5060463412197",
+        "url": "https://music.apple.com/gb/album/theyesandeye/1168928018"
+      },
+      "url": "https://music.apple.com/gb/album/theyesandeye/1168928018"
+    }
+  },
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -171,6 +235,6 @@
       "title": "Magic Ride"
     }
   ],
-  "updated_at": "2025-07-05T17:44:06.742672",
+  "updated_at": "2025-07-07T19:08:44.895467",
   "year": 2016
 }

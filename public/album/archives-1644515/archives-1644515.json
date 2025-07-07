@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1639058155",
-  "apple_music_url": "https://music.apple.com/gb/album/cara-a-cara-single/1639058155",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "50526",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:51:35.091757",
+  "created_at": "2025-07-07T19:12:09.278156",
   "date_added": "2016-03-09T18:39:33-08:00",
   "discogs_id": "1644515",
   "discogs_url": "https://www.discogs.com/release/1644515-Rush-Archives",
@@ -126,8 +126,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4f/b6/c9/4fb6c9bf-2aee-11b8-c721-caf08947646d/0.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/archives-1644515/archives-1644515.jpg",
       "width": 2000
     }
   ],
@@ -137,70 +137,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Rush/Archives",
   "local_images": {
-    "hi-res": "public/album/archives-1644515/archives-1644515-hi-res.jpg",
-    "medium": "public/album/archives-1644515/archives-1644515-medium.jpg",
-    "small": "public/album/archives-1644515/archives-1644515-small.jpg"
+    "hi-res": "../public/album/archives-1644515/archives-1644515-hi-res.jpg",
+    "medium": "../public/album/archives-1644515/archives-1644515-medium.jpg",
+    "small": "../public/album/archives-1644515/archives-1644515-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:51:39.402043",
+    "processed_at": "2025-07-07T19:12:16.291280",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Cara a Cara - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "Archives",
-  "release_name_spotify": "Hemispheres",
+  "release_name_spotify": null,
   "released": "1978-05-00",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4f/b6/c9/4fb6c9bf-2aee-11b8-c721-caf08947646d/0.jpg/2000x2000bb.jpg",
-      "content_rating": "explicit",
-      "copyright": "℗ 2022 Gluv",
-      "editorial_notes": null,
-      "id": "1639058155",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Big Rush Archives",
-        "artwork": {
-          "bgColor": "211813",
-          "height": 3000,
-          "textColor1": "e8e8e8",
-          "textColor2": "d58c65",
-          "textColor3": "c0bebd",
-          "textColor4": "b17554",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/4f/b6/c9/4fb6c9bf-2aee-11b8-c721-caf08947646d/0.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "contentRating": "explicit",
-        "copyright": "℗ 2022 Gluv",
-        "genreNames": [
-          "Hip-Hop/Rap",
-          "Music",
-          "Brazilian"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": true,
-        "name": "Cara a Cara - Single",
-        "playParams": {
-          "id": "1639058155",
-          "kind": "album"
-        },
-        "recordLabel": "Big Rush Archives",
-        "releaseDate": "2022-08-13",
-        "trackCount": 1,
-        "upc": "733428685350",
-        "url": "https://music.apple.com/gb/album/cara-a-cara-single/1639058155"
-      },
-      "url": "https://music.apple.com/gb/album/cara-a-cara-single/1639058155"
-    },
     "lastfm": {
       "images": [
         {
@@ -614,297 +568,10 @@
       "url": "https://www.last.fm/music/Rush/Archives",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "© 1978 The Island Def Jam Music Group Inc.",
-          "type": "C"
-        },
-        {
-          "text": "℗ 1978 The Island Def Jam Music Group Inc.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "00731453462922"
-      },
-      "id": "2vrM9ltjKIvNg3nkwXoJuc",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273fe148db2d296efd0f703e61f",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02fe148db2d296efd0f703e61f",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851fe148db2d296efd0f703e61f",
-          "width": 64
-        }
-      ],
-      "label": "Island Mercury",
-      "popularity": 49,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/2Hkut4rAAyrQxRdof7FVJq"
-            },
-            "href": "https://api.spotify.com/v1/artists/2Hkut4rAAyrQxRdof7FVJq",
-            "id": "2Hkut4rAAyrQxRdof7FVJq",
-            "name": "Rush",
-            "type": "artist",
-            "uri": "spotify:artist:2Hkut4rAAyrQxRdof7FVJq"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 1978 The Island Def Jam Music Group Inc.",
-            "type": "C"
-          },
-          {
-            "text": "℗ 1978 The Island Def Jam Music Group Inc.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "00731453462922"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2vrM9ltjKIvNg3nkwXoJuc"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2vrM9ltjKIvNg3nkwXoJuc?market=US",
-        "id": "2vrM9ltjKIvNg3nkwXoJuc",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273fe148db2d296efd0f703e61f",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02fe148db2d296efd0f703e61f",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851fe148db2d296efd0f703e61f",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Island Mercury",
-        "name": "Hemispheres",
-        "popularity": 49,
-        "release_date": "1978-10-29",
-        "release_date_precision": "day",
-        "total_tracks": 4,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2vrM9ltjKIvNg3nkwXoJuc/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2Hkut4rAAyrQxRdof7FVJq"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2Hkut4rAAyrQxRdof7FVJq",
-                  "id": "2Hkut4rAAyrQxRdof7FVJq",
-                  "name": "Rush",
-                  "type": "artist",
-                  "uri": "spotify:artist:2Hkut4rAAyrQxRdof7FVJq"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 1084266,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7xxZUTxxlkiFEMzL6lYXtF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7xxZUTxxlkiFEMzL6lYXtF",
-              "id": "7xxZUTxxlkiFEMzL6lYXtF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cygnus X-1 Book II: Hemispheres",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7xxZUTxxlkiFEMzL6lYXtF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2Hkut4rAAyrQxRdof7FVJq"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2Hkut4rAAyrQxRdof7FVJq",
-                  "id": "2Hkut4rAAyrQxRdof7FVJq",
-                  "name": "Rush",
-                  "type": "artist",
-                  "uri": "spotify:artist:2Hkut4rAAyrQxRdof7FVJq"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 220333,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4lShKS7ee6aoC8hbUVOhYG"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4lShKS7ee6aoC8hbUVOhYG",
-              "id": "4lShKS7ee6aoC8hbUVOhYG",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Circumstances",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4lShKS7ee6aoC8hbUVOhYG"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2Hkut4rAAyrQxRdof7FVJq"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2Hkut4rAAyrQxRdof7FVJq",
-                  "id": "2Hkut4rAAyrQxRdof7FVJq",
-                  "name": "Rush",
-                  "type": "artist",
-                  "uri": "spotify:artist:2Hkut4rAAyrQxRdof7FVJq"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 282506,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5cHnoalJPx909Umw8EoroV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5cHnoalJPx909Umw8EoroV",
-              "id": "5cHnoalJPx909Umw8EoroV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Trees",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:5cHnoalJPx909Umw8EoroV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2Hkut4rAAyrQxRdof7FVJq"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2Hkut4rAAyrQxRdof7FVJq",
-                  "id": "2Hkut4rAAyrQxRdof7FVJq",
-                  "name": "Rush",
-                  "type": "artist",
-                  "uri": "spotify:artist:2Hkut4rAAyrQxRdof7FVJq"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 574733,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4CyElmiM9EF9aURGWlPZLi"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4CyElmiM9EF9aURGWlPZLi",
-              "id": "4CyElmiM9EF9aURGWlPZLi",
-              "is_local": false,
-              "is_playable": true,
-              "name": "La Villa Strangiato",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:4CyElmiM9EF9aURGWlPZLi"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 4
-        },
-        "type": "album",
-        "uri": "spotify:album:2vrM9ltjKIvNg3nkwXoJuc"
-      },
-      "release_date": "1978-10-29",
-      "release_date_precision": "day",
-      "total_tracks": 4,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "2Hkut4rAAyrQxRdof7FVJq",
-              "name": "Rush"
-            }
-          ],
-          "duration_ms": 1084266,
-          "explicit": false,
-          "id": "7xxZUTxxlkiFEMzL6lYXtF",
-          "name": "Cygnus X-1 Book II: Hemispheres",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "2Hkut4rAAyrQxRdof7FVJq",
-              "name": "Rush"
-            }
-          ],
-          "duration_ms": 220333,
-          "explicit": false,
-          "id": "4lShKS7ee6aoC8hbUVOhYG",
-          "name": "Circumstances",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "2Hkut4rAAyrQxRdof7FVJq",
-              "name": "Rush"
-            }
-          ],
-          "duration_ms": 282506,
-          "explicit": false,
-          "id": "5cHnoalJPx909Umw8EoroV",
-          "name": "The Trees",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "2Hkut4rAAyrQxRdof7FVJq",
-              "name": "Rush"
-            }
-          ],
-          "duration_ms": 574733,
-          "explicit": false,
-          "id": "4CyElmiM9EF9aURGWlPZLi",
-          "name": "La Villa Strangiato",
-          "preview_url": null,
-          "track_number": 4
-        }
-      ],
-      "url": "https://open.spotify.com/album/2vrM9ltjKIvNg3nkwXoJuc"
     }
   },
-  "spotify_id": "2vrM9ltjKIvNg3nkwXoJuc",
-  "spotify_url": "https://open.spotify.com/album/2vrM9ltjKIvNg3nkwXoJuc",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Hard Rock",
     "Prog Rock"
@@ -1056,6 +723,6 @@
       "title": "The Fountain Of Lamneth"
     }
   ],
-  "updated_at": "2025-07-05T17:51:36.741350",
+  "updated_at": "2025-07-07T19:12:15.700511",
   "year": 1978
 }

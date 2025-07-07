@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1440838810",
+  "apple_music_url": "https://music.apple.com/gb/album/luke-cage-original-soundtrack-album/1440838810",
   "artists": [
     {
       "apple_music_id": "333961452",
@@ -38,7 +38,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T17:35:57.126897",
+  "created_at": "2025-07-07T19:14:48.628428",
   "date_added": "2016-11-10T18:26:31-08:00",
   "discogs_id": "9299784",
   "discogs_url": "https://www.discogs.com/release/9299784-Adrian-Younge-Ali-Shaheed-Muhammad-Luke-Cage-Original-Soundtrack",
@@ -79,6 +79,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/bXi7tt-x2Cy34GPf6NRTdylX1fBkqbqY9MXJ2zFgrBY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkyOTk3/ODQtMTUwNDQxMjI5/Ni01MDczLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/29/07/ed/2907edb0-f1f9-f9c0-a65c-82dea07f0bb4/16UMGIM69098.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -87,243 +101,172 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-hi-res.jpg",
-    "medium": "public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-medium.jpg",
-    "small": "public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-small.jpg"
+    "hi-res": "../public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-hi-res.jpg",
+    "medium": "../public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-medium.jpg",
+    "small": "../public/album/luke-cage-original-soundtrack-9299784/luke-cage-original-soundtrack-9299784-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:36:01.999528",
+    "processed_at": "2025-07-07T19:14:56.331892",
     "services_used": [
       "discogs",
+      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Luke Cage (Original Soundtrack Album)",
   "release_name_discogs": "Luke Cage - Original Soundtrack",
-  "release_name_spotify": "The Midnight Hour",
+  "release_name_spotify": "Luke Cage",
   "released": "2016",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/29/07/ed/2907edb0-f1f9-f9c0-a65c-82dea07f0bb4/16UMGIM69098.rgb.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "This Compilation ℗ 2016 MARVEL and ABC Studios",
+      "editorial_notes": "The superhero’s score blends '90s hip-hop with cinematic drama.",
+      "id": "1440838810",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "010101",
+          "height": 3000,
+          "textColor1": "ffffff",
+          "textColor2": "fbb728",
+          "textColor3": "cccccc",
+          "textColor4": "c99220",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/29/07/ed/2907edb0-f1f9-f9c0-a65c-82dea07f0bb4/16UMGIM69098.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "This Compilation ℗ 2016 MARVEL and ABC Studios",
+        "editorialNotes": {
+          "short": "The superhero’s score blends '90s hip-hop with cinematic drama.",
+          "standard": "The superhero’s score blends '90s hip-hop with cinematic drama."
+        },
+        "genreNames": [
+          "Soundtrack",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": true,
+        "isSingle": false,
+        "name": "Luke Cage (Original Soundtrack Album)",
+        "playParams": {
+          "id": "1440838810",
+          "kind": "album"
+        },
+        "recordLabel": "Hollywood Records",
+        "releaseDate": "2016-10-07",
+        "trackCount": 51,
+        "upc": "00050087353193",
+        "url": "https://music.apple.com/gb/album/luke-cage-original-soundtrack-album/1440838810"
+      },
+      "url": "https://music.apple.com/gb/album/luke-cage-original-soundtrack-album/1440838810"
+    },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "2018 Linear Labs",
+          "text": "© 2016 MARVEL",
           "type": "C"
         },
         {
-          "text": "2018 Linear Labs",
+          "text": "This Compilation ℗ 2016 MARVEL and ABC Studios",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "0856040005839"
+        "upc": "00050087348731"
       },
-      "id": "2qBSJip5Hh3GoyLD0tw77d",
+      "id": "3YQGCWFtg6mh8S6x6JxdgB",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273ec4b40030bac39354a3e3eed",
+          "url": "https://i.scdn.co/image/ab67616d0000b27324892b16bf5091cfeb6d020b",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02ec4b40030bac39354a3e3eed",
+          "url": "https://i.scdn.co/image/ab67616d00001e0224892b16bf5091cfeb6d020b",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851ec4b40030bac39354a3e3eed",
+          "url": "https://i.scdn.co/image/ab67616d0000485124892b16bf5091cfeb6d020b",
           "width": 64
         }
       ],
-      "label": "Linear Labs",
-      "popularity": 35,
+      "label": "Hollywood Records",
+      "popularity": 31,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
             },
-            "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-            "id": "4aMeIY7MkJoZg7O91cmDDd",
-            "name": "Adrian Younge",
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
             "type": "artist",
-            "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-            },
-            "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-            "id": "6adBZwsyxZuWDoty0Tg0lt",
-            "name": "Ali Shaheed Muhammad",
-            "type": "artist",
-            "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
           }
         ],
         "copyrights": [
           {
-            "text": "2018 Linear Labs",
+            "text": "© 2016 MARVEL",
             "type": "C"
           },
           {
-            "text": "2018 Linear Labs",
+            "text": "This Compilation ℗ 2016 MARVEL and ABC Studios",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "0856040005839"
+          "upc": "00050087348731"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/2qBSJip5Hh3GoyLD0tw77d"
+          "spotify": "https://open.spotify.com/album/3YQGCWFtg6mh8S6x6JxdgB"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2qBSJip5Hh3GoyLD0tw77d?market=US",
-        "id": "2qBSJip5Hh3GoyLD0tw77d",
+        "href": "https://api.spotify.com/v1/albums/3YQGCWFtg6mh8S6x6JxdgB?market=US",
+        "id": "3YQGCWFtg6mh8S6x6JxdgB",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273ec4b40030bac39354a3e3eed",
+            "url": "https://i.scdn.co/image/ab67616d0000b27324892b16bf5091cfeb6d020b",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02ec4b40030bac39354a3e3eed",
+            "url": "https://i.scdn.co/image/ab67616d00001e0224892b16bf5091cfeb6d020b",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851ec4b40030bac39354a3e3eed",
+            "url": "https://i.scdn.co/image/ab67616d0000485124892b16bf5091cfeb6d020b",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Linear Labs",
-        "name": "The Midnight Hour",
-        "popularity": 35,
-        "release_date": "2018-06-08",
+        "label": "Hollywood Records",
+        "name": "Luke Cage",
+        "popularity": 31,
+        "release_date": "2016-10-07",
         "release_date_precision": "day",
-        "total_tracks": 33,
+        "total_tracks": 51,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2qBSJip5Hh3GoyLD0tw77d/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/3YQGCWFtg6mh8S6x6JxdgB/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 240146,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5zh8GLudk0h172bgY8OkaW"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5zh8GLudk0h172bgY8OkaW",
-              "id": "5zh8GLudk0h172bgY8OkaW",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Black Beacon",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:5zh8GLudk0h172bgY8OkaW"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2gbAU1PZLHR6eSPh0diTuX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2gbAU1PZLHR6eSPh0diTuX",
-                  "id": "2gbAU1PZLHR6eSPh0diTuX",
-                  "name": "Ladybug Mecca",
-                  "type": "artist",
-                  "uri": "spotify:artist:2gbAU1PZLHR6eSPh0diTuX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 65680,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/54tLfOW20IzcLeM8mYi5V2"
-              },
-              "href": "https://api.spotify.com/v1/tracks/54tLfOW20IzcLeM8mYi5V2",
-              "id": "54tLfOW20IzcLeM8mYi5V2",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Maré",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:54tLfOW20IzcLeM8mYi5V2"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
                 {
                   "external_urls": {
                     "spotify": "https://open.spotify.com/artist/6g0Wah2YFtb1rFgKhUktlo"
@@ -336,970 +279,96 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 296400,
+              "duration_ms": 225679,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2YiPyOMW5zuLK1LfO5KHVg"
+                "spotify": "https://open.spotify.com/track/2yGS3dVa2IUxalXtZe2ksv"
               },
-              "href": "https://api.spotify.com/v1/tracks/2YiPyOMW5zuLK1LfO5KHVg",
-              "id": "2YiPyOMW5zuLK1LfO5KHVg",
+              "href": "https://api.spotify.com/v1/tracks/5jJOShacQWvCDHZgMhl8Zu",
+              "id": "5jJOShacQWvCDHZgMhl8Zu",
               "is_local": false,
               "is_playable": true,
-              "name": "It's You",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:2YiPyOMW5zuLK1LfO5KHVg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/2yGS3dVa2IUxalXtZe2ksv"
                 },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5nLYd9ST4Cnwy6NHaCxbj8"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5nLYd9ST4Cnwy6NHaCxbj8",
-                  "id": "5nLYd9ST4Cnwy6NHaCxbj8",
-                  "name": "CeeLo Green",
-                  "type": "artist",
-                  "uri": "spotify:artist:5nLYd9ST4Cnwy6NHaCxbj8"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 207293,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/625CwUt7hpqcCGKEkUJSzP"
+                "href": "https://api.spotify.com/v1/tracks/2yGS3dVa2IUxalXtZe2ksv",
+                "id": "2yGS3dVa2IUxalXtZe2ksv",
+                "type": "track",
+                "uri": "spotify:track:2yGS3dVa2IUxalXtZe2ksv"
               },
-              "href": "https://api.spotify.com/v1/tracks/625CwUt7hpqcCGKEkUJSzP",
-              "id": "625CwUt7hpqcCGKEkUJSzP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Questions",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:625CwUt7hpqcCGKEkUJSzP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/19y5MFBH7gohEdGwKM7QsP"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/19y5MFBH7gohEdGwKM7QsP",
-                  "id": "19y5MFBH7gohEdGwKM7QsP",
-                  "name": "Luther Vandross",
-                  "type": "artist",
-                  "uri": "spotify:artist:19y5MFBH7gohEdGwKM7QsP"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 252920,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2AYxbxWRB1swuxR473XCRZ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2AYxbxWRB1swuxR473XCRZ",
-              "id": "2AYxbxWRB1swuxR473XCRZ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "So Amazing",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:2AYxbxWRB1swuxR473XCRZ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 243880,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7xjUaoW5hn06YelRthl6Fp"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7xjUaoW5hn06YelRthl6Fp",
-              "id": "7xjUaoW5hn06YelRthl6Fp",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Gate 54",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:7xjUaoW5hn06YelRthl6Fp"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4jCbgl5Dmt3uOh8WRQfpPs"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4jCbgl5Dmt3uOh8WRQfpPs",
-                  "id": "4jCbgl5Dmt3uOh8WRQfpPs",
-                  "name": "Bilal",
-                  "type": "artist",
-                  "uri": "spotify:artist:4jCbgl5Dmt3uOh8WRQfpPs"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 188880,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7AusVwwqU9kwEt9Fo9n1Hp"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7AusVwwqU9kwEt9Fo9n1Hp",
-              "id": "7AusVwwqU9kwEt9Fo9n1Hp",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Do It Together",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:7AusVwwqU9kwEt9Fo9n1Hp"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 168320,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2Lr30Z6vVLk6hzskuiDwtz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2Lr30Z6vVLk6hzskuiDwtz",
-              "id": "2Lr30Z6vVLk6hzskuiDwtz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Redneph In B Minor",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:2Lr30Z6vVLk6hzskuiDwtz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 168480,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7Kzo1C6Ix7cLkhOaczQTDM"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7Kzo1C6Ix7cLkhOaczQTDM",
-              "id": "7Kzo1C6Ix7cLkhOaczQTDM",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Better Endeavor",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:7Kzo1C6Ix7cLkhOaczQTDM"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1h40NvcAHSbG4O2r3932kB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1h40NvcAHSbG4O2r3932kB",
-                  "id": "1h40NvcAHSbG4O2r3932kB",
-                  "name": "Karolina",
-                  "type": "artist",
-                  "uri": "spotify:artist:1h40NvcAHSbG4O2r3932kB"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 182906,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Mi2SP2V0XmrSoCQZxljQH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1Mi2SP2V0XmrSoCQZxljQH",
-              "id": "1Mi2SP2V0XmrSoCQZxljQH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Smiling For Me",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:1Mi2SP2V0XmrSoCQZxljQH"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/46VWDbmWmzvPBTmkSr25gM"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/46VWDbmWmzvPBTmkSr25gM",
-                  "id": "46VWDbmWmzvPBTmkSr25gM",
-                  "name": "Marsha Ambrosius",
-                  "type": "artist",
-                  "uri": "spotify:artist:46VWDbmWmzvPBTmkSr25gM"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 197586,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6VHdEvdCWB0ytjewbUyGf7"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6VHdEvdCWB0ytjewbUyGf7",
-              "id": "6VHdEvdCWB0ytjewbUyGf7",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Don't Keep Me Waiting",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:6VHdEvdCWB0ytjewbUyGf7"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0LYpHdjPJEKhjh3euGHngh"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0LYpHdjPJEKhjh3euGHngh",
-                  "id": "0LYpHdjPJEKhjh3euGHngh",
-                  "name": "Angela Muñoz",
-                  "type": "artist",
-                  "uri": "spotify:artist:0LYpHdjPJEKhjh3euGHngh"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 53746,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/27emwi7CtdiBjIIdPINck6"
-              },
-              "href": "https://api.spotify.com/v1/tracks/27emwi7CtdiBjIIdPINck6",
-              "id": "27emwi7CtdiBjIIdPINck6",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Bitches Do Voodoo",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:27emwi7CtdiBjIIdPINck6"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5xI4mPixKfrCCspATqbpy3"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5xI4mPixKfrCCspATqbpy3",
-                  "id": "5xI4mPixKfrCCspATqbpy3",
-                  "name": "Eryn Allen Kane",
-                  "type": "artist",
-                  "uri": "spotify:artist:5xI4mPixKfrCCspATqbpy3"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 191986,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5aZ2FDR2GI9kD4kWELTklv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5aZ2FDR2GI9kD4kWELTklv",
-              "id": "5aZ2FDR2GI9kD4kWELTklv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Possibilities",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:5aZ2FDR2GI9kD4kWELTklv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 175946,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2wlaZrOW6NIgJXKQ6vAwN1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2wlaZrOW6NIgJXKQ6vAwN1",
-              "id": "2wlaZrOW6NIgJXKQ6vAwN1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Mission",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:2wlaZrOW6NIgJXKQ6vAwN1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5s8mrbpjYHWIuGYUzNTpEb"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5s8mrbpjYHWIuGYUzNTpEb",
-                  "id": "5s8mrbpjYHWIuGYUzNTpEb",
-                  "name": "Laetitia Sadier",
-                  "type": "artist",
-                  "uri": "spotify:artist:5s8mrbpjYHWIuGYUzNTpEb"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1h2OVSKRdJHnVqyCKqCLkf"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1h2OVSKRdJHnVqyCKqCLkf",
-                  "id": "1h2OVSKRdJHnVqyCKqCLkf",
-                  "name": "?uestlove",
-                  "type": "artist",
-                  "uri": "spotify:artist:1h2OVSKRdJHnVqyCKqCLkf"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4JG781pl96pL2h0AoERgOA"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4JG781pl96pL2h0AoERgOA",
-                  "id": "4JG781pl96pL2h0AoERgOA",
-                  "name": "Keyon Harrold",
-                  "type": "artist",
-                  "uri": "spotify:artist:4JG781pl96pL2h0AoERgOA"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 182640,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/22LT1tAkMsDqa38sO7nrcK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/22LT1tAkMsDqa38sO7nrcK",
-              "id": "22LT1tAkMsDqa38sO7nrcK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dans Un Moment D'errance",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:22LT1tAkMsDqa38sO7nrcK"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5xI4mPixKfrCCspATqbpy3"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5xI4mPixKfrCCspATqbpy3",
-                  "id": "5xI4mPixKfrCCspATqbpy3",
-                  "name": "Eryn Allen Kane",
-                  "type": "artist",
-                  "uri": "spotify:artist:5xI4mPixKfrCCspATqbpy3"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 163986,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Yd6J4x4tpf4pRmljjU3Pk"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3Yd6J4x4tpf4pRmljjU3Pk",
-              "id": "3Yd6J4x4tpf4pRmljjU3Pk",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Love Is Free",
-              "preview_url": null,
-              "track_number": 16,
-              "type": "track",
-              "uri": "spotify:track:3Yd6J4x4tpf4pRmljjU3Pk"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4TNLCgKNImRbj2bb7g52wH"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4TNLCgKNImRbj2bb7g52wH",
-                  "id": "4TNLCgKNImRbj2bb7g52wH",
-                  "name": "No ID",
-                  "type": "artist",
-                  "uri": "spotify:artist:4TNLCgKNImRbj2bb7g52wH"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0OoOBeRsejOlI6XucsBAXP"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0OoOBeRsejOlI6XucsBAXP",
-                  "id": "0OoOBeRsejOlI6XucsBAXP",
-                  "name": "James Poyser",
-                  "type": "artist",
-                  "uri": "spotify:artist:0OoOBeRsejOlI6XucsBAXP"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 200653,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5WhJXddcmca9JYfLhZsDNQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5WhJXddcmca9JYfLhZsDNQ",
-              "id": "5WhJXddcmca9JYfLhZsDNQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Together Again",
-              "preview_url": null,
-              "track_number": 17,
-              "type": "track",
-              "uri": "spotify:track:5WhJXddcmca9JYfLhZsDNQ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1h40NvcAHSbG4O2r3932kB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1h40NvcAHSbG4O2r3932kB",
-                  "id": "1h40NvcAHSbG4O2r3932kB",
-                  "name": "Karolina",
-                  "type": "artist",
-                  "uri": "spotify:artist:1h40NvcAHSbG4O2r3932kB"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6FAJyMDeXJXCRryVAUXNkQ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6FAJyMDeXJXCRryVAUXNkQ",
-                  "id": "6FAJyMDeXJXCRryVAUXNkQ",
-                  "name": "Loren Oden",
-                  "type": "artist",
-                  "uri": "spotify:artist:6FAJyMDeXJXCRryVAUXNkQ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 176866,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6C3pr2S0wibgUoPqmH7LOb"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6C3pr2S0wibgUoPqmH7LOb",
-              "id": "6C3pr2S0wibgUoPqmH7LOb",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Feel Alive",
-              "preview_url": null,
-              "track_number": 18,
-              "type": "track",
-              "uri": "spotify:track:6C3pr2S0wibgUoPqmH7LOb"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6FAJyMDeXJXCRryVAUXNkQ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6FAJyMDeXJXCRryVAUXNkQ",
-                  "id": "6FAJyMDeXJXCRryVAUXNkQ",
-                  "name": "Loren Oden",
-                  "type": "artist",
-                  "uri": "spotify:artist:6FAJyMDeXJXCRryVAUXNkQ"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2kVRAKfoCbvfsbGtrCrlTS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2kVRAKfoCbvfsbGtrCrlTS",
-                  "id": "2kVRAKfoCbvfsbGtrCrlTS",
-                  "name": "Saudia Yasmein",
-                  "type": "artist",
-                  "uri": "spotify:artist:2kVRAKfoCbvfsbGtrCrlTS"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 139360,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/10LAWPn3F4grFOw3qde6Jk"
-              },
-              "href": "https://api.spotify.com/v1/tracks/10LAWPn3F4grFOw3qde6Jk",
-              "id": "10LAWPn3F4grFOw3qde6Jk",
-              "is_local": false,
-              "is_playable": true,
-              "name": "There Is No Greater Love",
-              "preview_url": null,
-              "track_number": 19,
-              "type": "track",
-              "uri": "spotify:track:10LAWPn3F4grFOw3qde6Jk"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 144400,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1ehelmnHHdqooVovk45vdg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1ehelmnHHdqooVovk45vdg",
-              "id": "1ehelmnHHdqooVovk45vdg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ravens",
-              "preview_url": null,
-              "track_number": 20,
-              "type": "track",
-              "uri": "spotify:track:1ehelmnHHdqooVovk45vdg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
-                  "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 65680,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7w8EE0261Er12W2tyM5oz7"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7w8EE0261Er12W2tyM5oz7",
-              "id": "7w8EE0261Er12W2tyM5oz7",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Maré - Instrumental",
+              "name": "Good Man",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:7w8EE0261Er12W2tyM5oz7"
+              "uri": "spotify:track:5jJOShacQWvCDHZgMhl8Zu"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                    "spotify": "https://open.spotify.com/artist/5NDMothbpdpq2xHqSjrrWn"
                   },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
+                  "href": "https://api.spotify.com/v1/artists/5NDMothbpdpq2xHqSjrrWn",
+                  "id": "5NDMothbpdpq2xHqSjrrWn",
+                  "name": "Faith Evans",
                   "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                  "uri": "spotify:artist:5NDMothbpdpq2xHqSjrrWn"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 296400,
+              "disc_number": 1,
+              "duration_ms": 247951,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6zUxyxEez9OEl2JNTc4EUN"
+                "spotify": "https://open.spotify.com/track/7sfxfiyVWL2IVOGWxUkI89"
               },
-              "href": "https://api.spotify.com/v1/tracks/6zUxyxEez9OEl2JNTc4EUN",
-              "id": "6zUxyxEez9OEl2JNTc4EUN",
+              "href": "https://api.spotify.com/v1/tracks/7sfxfiyVWL2IVOGWxUkI89",
+              "id": "7sfxfiyVWL2IVOGWxUkI89",
               "is_local": false,
               "is_playable": true,
-              "name": "It's You - Instrumental",
+              "name": "Mesmerized - Original Soundtrack Version",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:6zUxyxEez9OEl2JNTc4EUN"
+              "uri": "spotify:track:7sfxfiyVWL2IVOGWxUkI89"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                    "spotify": "https://open.spotify.com/artist/462T0buQ5ScBUQCRpodDRf"
                   },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
+                  "href": "https://api.spotify.com/v1/artists/462T0buQ5ScBUQCRpodDRf",
+                  "id": "462T0buQ5ScBUQCRpodDRf",
+                  "name": "Charles Bradley",
                   "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                  "uri": "spotify:artist:462T0buQ5ScBUQCRpodDRf"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 203386,
+              "disc_number": 1,
+              "duration_ms": 230226,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7MRyhTrrN9dEvnZAWV0sPy"
+                "spotify": "https://open.spotify.com/track/2gY2ruBUu8DYTKIy1lBuzh"
               },
-              "href": "https://api.spotify.com/v1/tracks/7MRyhTrrN9dEvnZAWV0sPy",
-              "id": "7MRyhTrrN9dEvnZAWV0sPy",
+              "href": "https://api.spotify.com/v1/tracks/1o1ccUQ66Cbb77itc7wicp",
+              "id": "1o1ccUQ66Cbb77itc7wicp",
               "is_local": false,
               "is_playable": true,
-              "name": "Questions - Instrumental",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/2gY2ruBUu8DYTKIy1lBuzh"
+                },
+                "href": "https://api.spotify.com/v1/tracks/2gY2ruBUu8DYTKIy1lBuzh",
+                "id": "2gY2ruBUu8DYTKIy1lBuzh",
+                "type": "track",
+                "uri": "spotify:track:2gY2ruBUu8DYTKIy1lBuzh"
+              },
+              "name": "Ain't It a Sin",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:7MRyhTrrN9dEvnZAWV0sPy"
+              "uri": "spotify:track:1o1ccUQ66Cbb77itc7wicp"
             },
             {
               "artists": [
@@ -1315,69 +384,77 @@
                 },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                    "spotify": "https://open.spotify.com/artist/6YPRXu1dazGYcSZv4HJEH4"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
+                  "href": "https://api.spotify.com/v1/artists/6YPRXu1dazGYcSZv4HJEH4",
+                  "id": "6YPRXu1dazGYcSZv4HJEH4",
+                  "name": "The Delfonics",
                   "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                  "uri": "spotify:artist:6YPRXu1dazGYcSZv4HJEH4"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 252920,
+              "disc_number": 1,
+              "duration_ms": 166320,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0RBdbbbDA0PhWvC5dkxVV4"
+                "spotify": "https://open.spotify.com/track/75hZfHTG7rOthfKK5SK5wW"
               },
-              "href": "https://api.spotify.com/v1/tracks/0RBdbbbDA0PhWvC5dkxVV4",
-              "id": "0RBdbbbDA0PhWvC5dkxVV4",
+              "href": "https://api.spotify.com/v1/tracks/62O22vUP112FgIibBffSNw",
+              "id": "62O22vUP112FgIibBffSNw",
               "is_local": false,
               "is_playable": true,
-              "name": "So Amazing - Instrumental",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/75hZfHTG7rOthfKK5SK5wW"
+                },
+                "href": "https://api.spotify.com/v1/tracks/75hZfHTG7rOthfKK5SK5wW",
+                "id": "75hZfHTG7rOthfKK5SK5wW",
+                "type": "track",
+                "uri": "spotify:track:75hZfHTG7rOthfKK5SK5wW"
+              },
+              "name": "Stop And Look (And You Have Found Love)",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:0RBdbbbDA0PhWvC5dkxVV4"
+              "uri": "spotify:track:62O22vUP112FgIibBffSNw"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                    "spotify": "https://open.spotify.com/artist/6LufpoVlIYKQCu9Gjpk8B7"
                   },
-                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
-                  "id": "4aMeIY7MkJoZg7O91cmDDd",
-                  "name": "Adrian Younge",
+                  "href": "https://api.spotify.com/v1/artists/6LufpoVlIYKQCu9Gjpk8B7",
+                  "id": "6LufpoVlIYKQCu9Gjpk8B7",
+                  "name": "Sharon Jones & The Dap-Kings",
                   "type": "artist",
-                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
-                  "id": "6adBZwsyxZuWDoty0Tg0lt",
-                  "name": "Ali Shaheed Muhammad",
-                  "type": "artist",
-                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                  "uri": "spotify:artist:6LufpoVlIYKQCu9Gjpk8B7"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 188880,
+              "disc_number": 1,
+              "duration_ms": 223093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3CvhBgE8fJKv6o9IJNxCCF"
+                "spotify": "https://open.spotify.com/track/2MWJJPovP4mwRcv7VDocwD"
               },
-              "href": "https://api.spotify.com/v1/tracks/3CvhBgE8fJKv6o9IJNxCCF",
-              "id": "3CvhBgE8fJKv6o9IJNxCCF",
+              "href": "https://api.spotify.com/v1/tracks/03PkUC7cfsjFERRSPxK0Eh",
+              "id": "03PkUC7cfsjFERRSPxK0Eh",
               "is_local": false,
               "is_playable": true,
-              "name": "Do It Together - Instrumental",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/2MWJJPovP4mwRcv7VDocwD"
+                },
+                "href": "https://api.spotify.com/v1/tracks/2MWJJPovP4mwRcv7VDocwD",
+                "id": "2MWJJPovP4mwRcv7VDocwD",
+                "type": "track",
+                "uri": "spotify:track:2MWJJPovP4mwRcv7VDocwD"
+              },
+              "name": "100 Days, 100 Nights",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:3CvhBgE8fJKv6o9IJNxCCF"
+              "uri": "spotify:track:03PkUC7cfsjFERRSPxK0Eh"
             },
             {
               "artists": [
@@ -1402,21 +479,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 182906,
+              "disc_number": 1,
+              "duration_ms": 172546,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/47PVFeAhjoZ932M4j8SYEH"
+                "spotify": "https://open.spotify.com/track/3RQz2iyHkQnQbxBpYGrx6p"
               },
-              "href": "https://api.spotify.com/v1/tracks/47PVFeAhjoZ932M4j8SYEH",
-              "id": "47PVFeAhjoZ932M4j8SYEH",
+              "href": "https://api.spotify.com/v1/tracks/3RQz2iyHkQnQbxBpYGrx6p",
+              "id": "3RQz2iyHkQnQbxBpYGrx6p",
               "is_local": false,
               "is_playable": true,
-              "name": "Smiling For Me - Instrumental",
+              "name": "Diamondback Arrives",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:47PVFeAhjoZ932M4j8SYEH"
+              "uri": "spotify:track:3RQz2iyHkQnQbxBpYGrx6p"
             },
             {
               "artists": [
@@ -1441,21 +518,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 197586,
+              "disc_number": 1,
+              "duration_ms": 104266,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/59SAN1vaaXHEmXGIE7EzQY"
+                "spotify": "https://open.spotify.com/track/0H4Q7odhjxBDjpVCGlbDgW"
               },
-              "href": "https://api.spotify.com/v1/tracks/59SAN1vaaXHEmXGIE7EzQY",
-              "id": "59SAN1vaaXHEmXGIE7EzQY",
+              "href": "https://api.spotify.com/v1/tracks/0H4Q7odhjxBDjpVCGlbDgW",
+              "id": "0H4Q7odhjxBDjpVCGlbDgW",
               "is_local": false,
               "is_playable": true,
-              "name": "Don't Keep Me Waiting - Instrumental",
+              "name": "Final Battle - Part 1",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:59SAN1vaaXHEmXGIE7EzQY"
+              "uri": "spotify:track:0H4Q7odhjxBDjpVCGlbDgW"
             },
             {
               "artists": [
@@ -1480,21 +557,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 53746,
+              "disc_number": 1,
+              "duration_ms": 142040,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4l06Zd7yIFFmEXQEts22Ec"
+                "spotify": "https://open.spotify.com/track/0LiAII9ZQC0eHXsgiDMuij"
               },
-              "href": "https://api.spotify.com/v1/tracks/4l06Zd7yIFFmEXQEts22Ec",
-              "id": "4l06Zd7yIFFmEXQEts22Ec",
+              "href": "https://api.spotify.com/v1/tracks/0LiAII9ZQC0eHXsgiDMuij",
+              "id": "0LiAII9ZQC0eHXsgiDMuij",
               "is_local": false,
               "is_playable": true,
-              "name": "Bitches Do Voodoo - Instrumental",
+              "name": "In the Wind",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:4l06Zd7yIFFmEXQEts22Ec"
+              "uri": "spotify:track:0LiAII9ZQC0eHXsgiDMuij"
             },
             {
               "artists": [
@@ -1519,21 +596,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 191986,
+              "disc_number": 1,
+              "duration_ms": 102173,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/38XWCqFTnni2H9Xm157U52"
+                "spotify": "https://open.spotify.com/track/2D29XwgY4Ay4aU2nArgz7S"
               },
-              "href": "https://api.spotify.com/v1/tracks/38XWCqFTnni2H9Xm157U52",
-              "id": "38XWCqFTnni2H9Xm157U52",
+              "href": "https://api.spotify.com/v1/tracks/2D29XwgY4Ay4aU2nArgz7S",
+              "id": "2D29XwgY4Ay4aU2nArgz7S",
               "is_local": false,
               "is_playable": true,
-              "name": "Possibilities - Instrumental",
+              "name": "Diamondback's Trap",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:38XWCqFTnni2H9Xm157U52"
+              "uri": "spotify:track:2D29XwgY4Ay4aU2nArgz7S"
             },
             {
               "artists": [
@@ -1558,21 +635,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 182653,
+              "disc_number": 1,
+              "duration_ms": 161720,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5N6LOgMOuP0ITmGP57nkzI"
+                "spotify": "https://open.spotify.com/track/0dv2bnGAD3wvCAx38xJRkH"
               },
-              "href": "https://api.spotify.com/v1/tracks/5N6LOgMOuP0ITmGP57nkzI",
-              "id": "5N6LOgMOuP0ITmGP57nkzI",
+              "href": "https://api.spotify.com/v1/tracks/0dv2bnGAD3wvCAx38xJRkH",
+              "id": "0dv2bnGAD3wvCAx38xJRkH",
               "is_local": false,
               "is_playable": true,
-              "name": "Dans Un Moment D'errance - Instrumental",
+              "name": "Blue Fusion",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:5N6LOgMOuP0ITmGP57nkzI"
+              "uri": "spotify:track:0dv2bnGAD3wvCAx38xJRkH"
             },
             {
               "artists": [
@@ -1597,21 +674,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 163973,
+              "disc_number": 1,
+              "duration_ms": 134306,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5bJGpSw9QBIqLPPk7zkLWg"
+                "spotify": "https://open.spotify.com/track/42GU5h2B1oGYV7MOZAwHr5"
               },
-              "href": "https://api.spotify.com/v1/tracks/5bJGpSw9QBIqLPPk7zkLWg",
-              "id": "5bJGpSw9QBIqLPPk7zkLWg",
+              "href": "https://api.spotify.com/v1/tracks/42GU5h2B1oGYV7MOZAwHr5",
+              "id": "42GU5h2B1oGYV7MOZAwHr5",
               "is_local": false,
               "is_playable": true,
-              "name": "Love Is Free - Instrumental",
+              "name": "Final Battle - Part 2",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:5bJGpSw9QBIqLPPk7zkLWg"
+              "uri": "spotify:track:42GU5h2B1oGYV7MOZAwHr5"
             },
             {
               "artists": [
@@ -1636,21 +713,21 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 176866,
+              "disc_number": 1,
+              "duration_ms": 77053,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/43RtA1hDfgroS0ENjEQamM"
+                "spotify": "https://open.spotify.com/track/07qVmZo4Fo3QZN3geMFGBd"
               },
-              "href": "https://api.spotify.com/v1/tracks/43RtA1hDfgroS0ENjEQamM",
-              "id": "43RtA1hDfgroS0ENjEQamM",
+              "href": "https://api.spotify.com/v1/tracks/07qVmZo4Fo3QZN3geMFGBd",
+              "id": "07qVmZo4Fo3QZN3geMFGBd",
               "is_local": false,
               "is_playable": true,
-              "name": "Feel Alive - Instrumental",
+              "name": "I'm Luke Cage",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:43RtA1hDfgroS0ENjEQamM"
+              "uri": "spotify:track:07qVmZo4Fo3QZN3geMFGBd"
             },
             {
               "artists": [
@@ -1675,95 +752,1528 @@
                   "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
                 }
               ],
-              "disc_number": 2,
-              "duration_ms": 139360,
+              "disc_number": 1,
+              "duration_ms": 98000,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2OuCz9C7XxnZYXxMaGTGhk"
+                "spotify": "https://open.spotify.com/track/6sWHTPX1X2xBvsGMiOhlTp"
               },
-              "href": "https://api.spotify.com/v1/tracks/2OuCz9C7XxnZYXxMaGTGhk",
-              "id": "2OuCz9C7XxnZYXxMaGTGhk",
+              "href": "https://api.spotify.com/v1/tracks/6sWHTPX1X2xBvsGMiOhlTp",
+              "id": "6sWHTPX1X2xBvsGMiOhlTp",
               "is_local": false,
               "is_playable": true,
-              "name": "There Is No Greater Love - Instrumental",
+              "name": "Street Cleaning",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:2OuCz9C7XxnZYXxMaGTGhk"
+              "uri": "spotify:track:6sWHTPX1X2xBvsGMiOhlTp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 125626,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/17nnG6OkJQwPHEpE8NeyMX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/17nnG6OkJQwPHEpE8NeyMX",
+              "id": "17nnG6OkJQwPHEpE8NeyMX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Ambush",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:17nnG6OkJQwPHEpE8NeyMX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 101007,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5jKk4prgkRwajzpByx1lXW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5jKk4prgkRwajzpByx1lXW",
+              "id": "5jKk4prgkRwajzpByx1lXW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "End Theme",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:5jKk4prgkRwajzpByx1lXW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 91146,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5cGx9e4TOaMi1GHKqiGi5D"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5cGx9e4TOaMi1GHKqiGi5D",
+              "id": "5cGx9e4TOaMi1GHKqiGi5D",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Coffee at Midnight",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:5cGx9e4TOaMi1GHKqiGi5D"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 177373,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3xkKnBXJErw3diW0dsNNhg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3xkKnBXJErw3diW0dsNNhg",
+              "id": "3xkKnBXJErw3diW0dsNNhg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Red-Handedly Blameless",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:3xkKnBXJErw3diW0dsNNhg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 79493,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0ag4JYiuOIo1PRsmaUykTz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0ag4JYiuOIo1PRsmaUykTz",
+              "id": "0ag4JYiuOIo1PRsmaUykTz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Always Forward Pops",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:0ag4JYiuOIo1PRsmaUykTz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 106895,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5zZOfkNIawjEGMQhbw0VHi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5zZOfkNIawjEGMQhbw0VHi",
+              "id": "5zZOfkNIawjEGMQhbw0VHi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Unveil the Bride",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:5zZOfkNIawjEGMQhbw0VHi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 139236,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/31ulvZK1FNn502LFZsMnVX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/31ulvZK1FNn502LFZsMnVX",
+              "id": "31ulvZK1FNn502LFZsMnVX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Shameek's Death",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:31ulvZK1FNn502LFZsMnVX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 108175,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5vcYJZeCW47VdGsk1mty2v"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5vcYJZeCW47VdGsk1mty2v",
+              "id": "5vcYJZeCW47VdGsk1mty2v",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Plan",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:5vcYJZeCW47VdGsk1mty2v"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 223546,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5XWUdLN40Ne93LKMH22caf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5XWUdLN40Ne93LKMH22caf",
+              "id": "5XWUdLN40Ne93LKMH22caf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Requiem for Phife",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:5XWUdLN40Ne93LKMH22caf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 55866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5XM6JZ1cGPQDRFcwrXei7R"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5XM6JZ1cGPQDRFcwrXei7R",
+              "id": "5XM6JZ1cGPQDRFcwrXei7R",
+              "is_local": false,
+              "is_playable": true,
+              "name": "We Had Coffee",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:5XM6JZ1cGPQDRFcwrXei7R"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 168066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3cXNjFiDfA53MKAMd0Nho3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3cXNjFiDfA53MKAMd0Nho3",
+              "id": "3cXNjFiDfA53MKAMd0Nho3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pops Is Gone",
+              "preview_url": null,
+              "track_number": 24,
+              "type": "track",
+              "uri": "spotify:track:3cXNjFiDfA53MKAMd0Nho3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 69160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0ldqqFB8HUQCxuAhGIwlQG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0ldqqFB8HUQCxuAhGIwlQG",
+              "id": "0ldqqFB8HUQCxuAhGIwlQG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Theme",
+              "preview_url": null,
+              "track_number": 25,
+              "type": "track",
+              "uri": "spotify:track:0ldqqFB8HUQCxuAhGIwlQG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 35920,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1OBJtUw7i2O9HPMFmWUcce"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1OBJtUw7i2O9HPMFmWUcce",
+              "id": "1OBJtUw7i2O9HPMFmWUcce",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Greed Becomes Me",
+              "preview_url": null,
+              "track_number": 26,
+              "type": "track",
+              "uri": "spotify:track:1OBJtUw7i2O9HPMFmWUcce"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4VmEWwd8y9MCLwexFMdpwt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4VmEWwd8y9MCLwexFMdpwt",
+                  "id": "4VmEWwd8y9MCLwexFMdpwt",
+                  "name": "Method Man",
+                  "type": "artist",
+                  "uri": "spotify:artist:4VmEWwd8y9MCLwexFMdpwt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 132146,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4OrOmys1k4aLtXTSKnvPrL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4OrOmys1k4aLtXTSKnvPrL",
+              "id": "4OrOmys1k4aLtXTSKnvPrL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bulletproof Love",
+              "preview_url": null,
+              "track_number": 27,
+              "type": "track",
+              "uri": "spotify:track:4OrOmys1k4aLtXTSKnvPrL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 56207,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6M5eFoKou0EMKCOtkHIThD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6M5eFoKou0EMKCOtkHIThD",
+              "id": "6M5eFoKou0EMKCOtkHIThD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Microphone Check Five'O",
+              "preview_url": null,
+              "track_number": 28,
+              "type": "track",
+              "uri": "spotify:track:6M5eFoKou0EMKCOtkHIThD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 292751,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6G1wfRqLW3fJrpjhVppE03"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6G1wfRqLW3fJrpjhVppE03",
+              "id": "6G1wfRqLW3fJrpjhVppE03",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Luke's Freedom",
+              "preview_url": null,
+              "track_number": 29,
+              "type": "track",
+              "uri": "spotify:track:6G1wfRqLW3fJrpjhVppE03"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 43746,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0HrG89WqtK5v0BU3gx2aih"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0HrG89WqtK5v0BU3gx2aih",
+              "id": "0HrG89WqtK5v0BU3gx2aih",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Uptown Claire",
+              "preview_url": null,
+              "track_number": 30,
+              "type": "track",
+              "uri": "spotify:track:0HrG89WqtK5v0BU3gx2aih"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 44906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0U5FTJODohg12gADNiXO3H"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0U5FTJODohg12gADNiXO3H",
+              "id": "0U5FTJODohg12gADNiXO3H",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Shades Beware",
+              "preview_url": null,
+              "track_number": 31,
+              "type": "track",
+              "uri": "spotify:track:0U5FTJODohg12gADNiXO3H"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 88840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3OyJGk2YD2BDXjoWyewCC5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3OyJGk2YD2BDXjoWyewCC5",
+              "id": "3OyJGk2YD2BDXjoWyewCC5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Misty Resolute",
+              "preview_url": null,
+              "track_number": 32,
+              "type": "track",
+              "uri": "spotify:track:3OyJGk2YD2BDXjoWyewCC5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 84282,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0SQeJhndUb3Uq7mG1yARC9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0SQeJhndUb3Uq7mG1yARC9",
+              "id": "0SQeJhndUb3Uq7mG1yARC9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fresh Air",
+              "preview_url": null,
+              "track_number": 33,
+              "type": "track",
+              "uri": "spotify:track:0SQeJhndUb3Uq7mG1yARC9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 37946,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ym2MNgccL3dXibCtCoFpJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ym2MNgccL3dXibCtCoFpJ",
+              "id": "2ym2MNgccL3dXibCtCoFpJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Kinda Strong",
+              "preview_url": null,
+              "track_number": 34,
+              "type": "track",
+              "uri": "spotify:track:2ym2MNgccL3dXibCtCoFpJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 66040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4lZyxqjeYp3Td2fXWPYTJg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4lZyxqjeYp3Td2fXWPYTJg",
+              "id": "4lZyxqjeYp3Td2fXWPYTJg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Big Man Little Jacket",
+              "preview_url": null,
+              "track_number": 35,
+              "type": "track",
+              "uri": "spotify:track:4lZyxqjeYp3Td2fXWPYTJg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 137253,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2KDsdRYUTDlUjZlbTDFDZs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2KDsdRYUTDlUjZlbTDFDZs",
+              "id": "2KDsdRYUTDlUjZlbTDFDZs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Scarfe's Dying",
+              "preview_url": null,
+              "track_number": 36,
+              "type": "track",
+              "uri": "spotify:track:2KDsdRYUTDlUjZlbTDFDZs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 73413,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5MEZtfVTtgShxdnZwhrNAX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5MEZtfVTtgShxdnZwhrNAX",
+              "id": "5MEZtfVTtgShxdnZwhrNAX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Claire's Wisdom",
+              "preview_url": null,
+              "track_number": 37,
+              "type": "track",
+              "uri": "spotify:track:5MEZtfVTtgShxdnZwhrNAX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 160911,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/71mOCMMB3Dasl7TbuobsVa"
+              },
+              "href": "https://api.spotify.com/v1/tracks/71mOCMMB3Dasl7TbuobsVa",
+              "id": "71mOCMMB3Dasl7TbuobsVa",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Gun Threat",
+              "preview_url": null,
+              "track_number": 38,
+              "type": "track",
+              "uri": "spotify:track:71mOCMMB3Dasl7TbuobsVa"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 76800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4QKDEJAAdHEKTxLW9r0kRu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4QKDEJAAdHEKTxLW9r0kRu",
+              "id": "4QKDEJAAdHEKTxLW9r0kRu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bad Love",
+              "preview_url": null,
+              "track_number": 39,
+              "type": "track",
+              "uri": "spotify:track:4QKDEJAAdHEKTxLW9r0kRu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 82234,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0n8HCYoA3M1atcxTXfGERU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0n8HCYoA3M1atcxTXfGERU",
+              "id": "0n8HCYoA3M1atcxTXfGERU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Finding Chico",
+              "preview_url": null,
+              "track_number": 40,
+              "type": "track",
+              "uri": "spotify:track:0n8HCYoA3M1atcxTXfGERU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 64680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4YUBJTmLFqBxvT7JadUS5S"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4YUBJTmLFqBxvT7JadUS5S",
+              "id": "4YUBJTmLFqBxvT7JadUS5S",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Am Carl Lucas",
+              "preview_url": null,
+              "track_number": 41,
+              "type": "track",
+              "uri": "spotify:track:4YUBJTmLFqBxvT7JadUS5S"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 47247,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4gQ4eU9z7Hj8ulZjLhs7kv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4gQ4eU9z7Hj8ulZjLhs7kv",
+              "id": "4gQ4eU9z7Hj8ulZjLhs7kv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Crispus Attucks",
+              "preview_url": null,
+              "track_number": 42,
+              "type": "track",
+              "uri": "spotify:track:4gQ4eU9z7Hj8ulZjLhs7kv"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 142479,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6OglI9oOPU2Y3IWAAyfC2D"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6OglI9oOPU2Y3IWAAyfC2D",
+              "id": "6OglI9oOPU2Y3IWAAyfC2D",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hideout",
+              "preview_url": null,
+              "track_number": 43,
+              "type": "track",
+              "uri": "spotify:track:6OglI9oOPU2Y3IWAAyfC2D"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 44226,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3skBTUKqWiXZC2s1rssujt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3skBTUKqWiXZC2s1rssujt",
+              "id": "3skBTUKqWiXZC2s1rssujt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cuban Coffee",
+              "preview_url": null,
+              "track_number": 44,
+              "type": "track",
+              "uri": "spotify:track:3skBTUKqWiXZC2s1rssujt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 84106,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3AI7NgS67HidkIE1XklKup"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3AI7NgS67HidkIE1XklKup",
+              "id": "3AI7NgS67HidkIE1XklKup",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Like a Brother",
+              "preview_url": null,
+              "track_number": 45,
+              "type": "track",
+              "uri": "spotify:track:3AI7NgS67HidkIE1XklKup"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 98826,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5ygAVn0RBG8QdEW9qOeeJY"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5ygAVn0RBG8QdEW9qOeeJY",
+              "id": "5ygAVn0RBG8QdEW9qOeeJY",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cottonmouth's Clamp",
+              "preview_url": null,
+              "track_number": 46,
+              "type": "track",
+              "uri": "spotify:track:5ygAVn0RBG8QdEW9qOeeJY"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 61839,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5rA7WizcY9sNYrUJOXkNoT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5rA7WizcY9sNYrUJOXkNoT",
+              "id": "5rA7WizcY9sNYrUJOXkNoT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Survival",
+              "preview_url": null,
+              "track_number": 47,
+              "type": "track",
+              "uri": "spotify:track:5rA7WizcY9sNYrUJOXkNoT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 19813,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4F95Jp16gggut6n9EeJX3b"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4F95Jp16gggut6n9EeJX3b",
+              "id": "4F95Jp16gggut6n9EeJX3b",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cottonmouth Theme",
+              "preview_url": null,
+              "track_number": 48,
+              "type": "track",
+              "uri": "spotify:track:4F95Jp16gggut6n9EeJX3b"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 72786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0t5pZ6P8DVoa5cXK3P6g62"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0t5pZ6P8DVoa5cXK3P6g62",
+              "id": "0t5pZ6P8DVoa5cXK3P6g62",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Luke Cops",
+              "preview_url": null,
+              "track_number": 49,
+              "type": "track",
+              "uri": "spotify:track:0t5pZ6P8DVoa5cXK3P6g62"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4aMeIY7MkJoZg7O91cmDDd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4aMeIY7MkJoZg7O91cmDDd",
+                  "id": "4aMeIY7MkJoZg7O91cmDDd",
+                  "name": "Adrian Younge",
+                  "type": "artist",
+                  "uri": "spotify:artist:4aMeIY7MkJoZg7O91cmDDd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6adBZwsyxZuWDoty0Tg0lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6adBZwsyxZuWDoty0Tg0lt",
+                  "id": "6adBZwsyxZuWDoty0Tg0lt",
+                  "name": "Ali Shaheed Muhammad",
+                  "type": "artist",
+                  "uri": "spotify:artist:6adBZwsyxZuWDoty0Tg0lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 67213,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5Y7KxAUIChwb291GZA1VYT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5Y7KxAUIChwb291GZA1VYT",
+              "id": "5Y7KxAUIChwb291GZA1VYT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Crushin' On Reva",
+              "preview_url": null,
+              "track_number": 50,
+              "type": "track",
+              "uri": "spotify:track:5Y7KxAUIChwb291GZA1VYT"
             }
           ],
           "limit": 50,
-          "next": null,
+          "next": "https://api.spotify.com/v1/albums/3YQGCWFtg6mh8S6x6JxdgB/tracks?offset=50&limit=50&market=US",
           "offset": 0,
           "previous": null,
-          "total": 33
+          "total": 51
         },
         "type": "album",
-        "uri": "spotify:album:2qBSJip5Hh3GoyLD0tw77d"
+        "uri": "spotify:album:3YQGCWFtg6mh8S6x6JxdgB"
       },
-      "release_date": "2018-06-08",
+      "release_date": "2016-10-07",
       "release_date_precision": "day",
-      "total_tracks": 33,
+      "total_tracks": 51,
       "tracks": [
         {
           "artists": [
             {
-              "id": "4aMeIY7MkJoZg7O91cmDDd",
-              "name": "Adrian Younge"
-            },
-            {
-              "id": "6adBZwsyxZuWDoty0Tg0lt",
-              "name": "Ali Shaheed Muhammad"
+              "id": "6g0Wah2YFtb1rFgKhUktlo",
+              "name": "Raphael Saadiq"
             }
           ],
-          "duration_ms": 240146,
+          "duration_ms": 225679,
           "explicit": false,
-          "id": "5zh8GLudk0h172bgY8OkaW",
-          "name": "Black Beacon",
+          "id": "5jJOShacQWvCDHZgMhl8Zu",
+          "name": "Good Man",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "4aMeIY7MkJoZg7O91cmDDd",
-              "name": "Adrian Younge"
-            },
-            {
-              "id": "6adBZwsyxZuWDoty0Tg0lt",
-              "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "2gbAU1PZLHR6eSPh0diTuX",
-              "name": "Ladybug Mecca"
+              "id": "5NDMothbpdpq2xHqSjrrWn",
+              "name": "Faith Evans"
             }
           ],
-          "duration_ms": 65680,
+          "duration_ms": 247951,
           "explicit": false,
-          "id": "54tLfOW20IzcLeM8mYi5V2",
-          "name": "Maré",
+          "id": "7sfxfiyVWL2IVOGWxUkI89",
+          "name": "Mesmerized - Original Soundtrack Version",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "4aMeIY7MkJoZg7O91cmDDd",
-              "name": "Adrian Younge"
-            },
-            {
-              "id": "6adBZwsyxZuWDoty0Tg0lt",
-              "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "6g0Wah2YFtb1rFgKhUktlo",
-              "name": "Raphael Saadiq"
+              "id": "462T0buQ5ScBUQCRpodDRf",
+              "name": "Charles Bradley"
             }
           ],
-          "duration_ms": 296400,
+          "duration_ms": 230226,
           "explicit": false,
-          "id": "2YiPyOMW5zuLK1LfO5KHVg",
-          "name": "It's You",
+          "id": "1o1ccUQ66Cbb77itc7wicp",
+          "name": "Ain't It a Sin",
           "preview_url": null,
           "track_number": 3
         },
@@ -1774,40 +2284,28 @@
               "name": "Adrian Younge"
             },
             {
-              "id": "6adBZwsyxZuWDoty0Tg0lt",
-              "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "5nLYd9ST4Cnwy6NHaCxbj8",
-              "name": "CeeLo Green"
+              "id": "6YPRXu1dazGYcSZv4HJEH4",
+              "name": "The Delfonics"
             }
           ],
-          "duration_ms": 207293,
+          "duration_ms": 166320,
           "explicit": false,
-          "id": "625CwUt7hpqcCGKEkUJSzP",
-          "name": "Questions",
+          "id": "62O22vUP112FgIibBffSNw",
+          "name": "Stop And Look (And You Have Found Love)",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "4aMeIY7MkJoZg7O91cmDDd",
-              "name": "Adrian Younge"
-            },
-            {
-              "id": "6adBZwsyxZuWDoty0Tg0lt",
-              "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "19y5MFBH7gohEdGwKM7QsP",
-              "name": "Luther Vandross"
+              "id": "6LufpoVlIYKQCu9Gjpk8B7",
+              "name": "Sharon Jones & The Dap-Kings"
             }
           ],
-          "duration_ms": 252920,
+          "duration_ms": 223093,
           "explicit": false,
-          "id": "2AYxbxWRB1swuxR473XCRZ",
-          "name": "So Amazing",
+          "id": "03PkUC7cfsjFERRSPxK0Eh",
+          "name": "100 Days, 100 Nights",
           "preview_url": null,
           "track_number": 5
         },
@@ -1822,10 +2320,10 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 243880,
+          "duration_ms": 172546,
           "explicit": false,
-          "id": "7xjUaoW5hn06YelRthl6Fp",
-          "name": "Gate 54",
+          "id": "3RQz2iyHkQnQbxBpYGrx6p",
+          "name": "Diamondback Arrives",
           "preview_url": null,
           "track_number": 6
         },
@@ -1838,16 +2336,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "4jCbgl5Dmt3uOh8WRQfpPs",
-              "name": "Bilal"
             }
           ],
-          "duration_ms": 188880,
+          "duration_ms": 104266,
           "explicit": false,
-          "id": "7AusVwwqU9kwEt9Fo9n1Hp",
-          "name": "Do It Together",
+          "id": "0H4Q7odhjxBDjpVCGlbDgW",
+          "name": "Final Battle - Part 1",
           "preview_url": null,
           "track_number": 7
         },
@@ -1862,10 +2356,10 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 168320,
+          "duration_ms": 142040,
           "explicit": false,
-          "id": "2Lr30Z6vVLk6hzskuiDwtz",
-          "name": "Redneph In B Minor",
+          "id": "0LiAII9ZQC0eHXsgiDMuij",
+          "name": "In the Wind",
           "preview_url": null,
           "track_number": 8
         },
@@ -1880,10 +2374,10 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 168480,
+          "duration_ms": 102173,
           "explicit": false,
-          "id": "7Kzo1C6Ix7cLkhOaczQTDM",
-          "name": "Better Endeavor",
+          "id": "2D29XwgY4Ay4aU2nArgz7S",
+          "name": "Diamondback's Trap",
           "preview_url": null,
           "track_number": 9
         },
@@ -1896,16 +2390,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "1h40NvcAHSbG4O2r3932kB",
-              "name": "Karolina"
             }
           ],
-          "duration_ms": 182906,
+          "duration_ms": 161720,
           "explicit": false,
-          "id": "1Mi2SP2V0XmrSoCQZxljQH",
-          "name": "Smiling For Me",
+          "id": "0dv2bnGAD3wvCAx38xJRkH",
+          "name": "Blue Fusion",
           "preview_url": null,
           "track_number": 10
         },
@@ -1918,16 +2408,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "46VWDbmWmzvPBTmkSr25gM",
-              "name": "Marsha Ambrosius"
             }
           ],
-          "duration_ms": 197586,
+          "duration_ms": 134306,
           "explicit": false,
-          "id": "6VHdEvdCWB0ytjewbUyGf7",
-          "name": "Don't Keep Me Waiting",
+          "id": "42GU5h2B1oGYV7MOZAwHr5",
+          "name": "Final Battle - Part 2",
           "preview_url": null,
           "track_number": 11
         },
@@ -1940,16 +2426,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "0LYpHdjPJEKhjh3euGHngh",
-              "name": "Angela Muñoz"
             }
           ],
-          "duration_ms": 53746,
+          "duration_ms": 77053,
           "explicit": false,
-          "id": "27emwi7CtdiBjIIdPINck6",
-          "name": "Bitches Do Voodoo",
+          "id": "07qVmZo4Fo3QZN3geMFGBd",
+          "name": "I'm Luke Cage",
           "preview_url": null,
           "track_number": 12
         },
@@ -1962,16 +2444,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "5xI4mPixKfrCCspATqbpy3",
-              "name": "Eryn Allen Kane"
             }
           ],
-          "duration_ms": 191986,
+          "duration_ms": 98000,
           "explicit": false,
-          "id": "5aZ2FDR2GI9kD4kWELTklv",
-          "name": "Possibilities",
+          "id": "6sWHTPX1X2xBvsGMiOhlTp",
+          "name": "Street Cleaning",
           "preview_url": null,
           "track_number": 13
         },
@@ -1986,10 +2464,10 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 175946,
+          "duration_ms": 125626,
           "explicit": false,
-          "id": "2wlaZrOW6NIgJXKQ6vAwN1",
-          "name": "Mission",
+          "id": "17nnG6OkJQwPHEpE8NeyMX",
+          "name": "The Ambush",
           "preview_url": null,
           "track_number": 14
         },
@@ -2002,24 +2480,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "5s8mrbpjYHWIuGYUzNTpEb",
-              "name": "Laetitia Sadier"
-            },
-            {
-              "id": "1h2OVSKRdJHnVqyCKqCLkf",
-              "name": "?uestlove"
-            },
-            {
-              "id": "4JG781pl96pL2h0AoERgOA",
-              "name": "Keyon Harrold"
             }
           ],
-          "duration_ms": 182640,
+          "duration_ms": 101007,
           "explicit": false,
-          "id": "22LT1tAkMsDqa38sO7nrcK",
-          "name": "Dans Un Moment D'errance",
+          "id": "5jKk4prgkRwajzpByx1lXW",
+          "name": "End Theme",
           "preview_url": null,
           "track_number": 15
         },
@@ -2032,16 +2498,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "5xI4mPixKfrCCspATqbpy3",
-              "name": "Eryn Allen Kane"
             }
           ],
-          "duration_ms": 163986,
+          "duration_ms": 91146,
           "explicit": false,
-          "id": "3Yd6J4x4tpf4pRmljjU3Pk",
-          "name": "Love Is Free",
+          "id": "5cGx9e4TOaMi1GHKqiGi5D",
+          "name": "Coffee at Midnight",
           "preview_url": null,
           "track_number": 16
         },
@@ -2054,20 +2516,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "4TNLCgKNImRbj2bb7g52wH",
-              "name": "No ID"
-            },
-            {
-              "id": "0OoOBeRsejOlI6XucsBAXP",
-              "name": "James Poyser"
             }
           ],
-          "duration_ms": 200653,
+          "duration_ms": 177373,
           "explicit": false,
-          "id": "5WhJXddcmca9JYfLhZsDNQ",
-          "name": "Together Again",
+          "id": "3xkKnBXJErw3diW0dsNNhg",
+          "name": "Red-Handedly Blameless",
           "preview_url": null,
           "track_number": 17
         },
@@ -2080,20 +2534,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "1h40NvcAHSbG4O2r3932kB",
-              "name": "Karolina"
-            },
-            {
-              "id": "6FAJyMDeXJXCRryVAUXNkQ",
-              "name": "Loren Oden"
             }
           ],
-          "duration_ms": 176866,
+          "duration_ms": 79493,
           "explicit": false,
-          "id": "6C3pr2S0wibgUoPqmH7LOb",
-          "name": "Feel Alive",
+          "id": "0ag4JYiuOIo1PRsmaUykTz",
+          "name": "Always Forward Pops",
           "preview_url": null,
           "track_number": 18
         },
@@ -2106,20 +2552,12 @@
             {
               "id": "6adBZwsyxZuWDoty0Tg0lt",
               "name": "Ali Shaheed Muhammad"
-            },
-            {
-              "id": "6FAJyMDeXJXCRryVAUXNkQ",
-              "name": "Loren Oden"
-            },
-            {
-              "id": "2kVRAKfoCbvfsbGtrCrlTS",
-              "name": "Saudia Yasmein"
             }
           ],
-          "duration_ms": 139360,
+          "duration_ms": 106895,
           "explicit": false,
-          "id": "10LAWPn3F4grFOw3qde6Jk",
-          "name": "There Is No Greater Love",
+          "id": "5zZOfkNIawjEGMQhbw0VHi",
+          "name": "Unveil the Bride",
           "preview_url": null,
           "track_number": 19
         },
@@ -2134,10 +2572,10 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 144400,
+          "duration_ms": 139236,
           "explicit": false,
-          "id": "1ehelmnHHdqooVovk45vdg",
-          "name": "Ravens",
+          "id": "31ulvZK1FNn502LFZsMnVX",
+          "name": "Shameek's Death",
           "preview_url": null,
           "track_number": 20
         },
@@ -2152,12 +2590,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 65680,
+          "duration_ms": 108175,
           "explicit": false,
-          "id": "7w8EE0261Er12W2tyM5oz7",
-          "name": "Maré - Instrumental",
+          "id": "5vcYJZeCW47VdGsk1mty2v",
+          "name": "The Plan",
           "preview_url": null,
-          "track_number": 1
+          "track_number": 21
         },
         {
           "artists": [
@@ -2170,12 +2608,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 296400,
+          "duration_ms": 223546,
           "explicit": false,
-          "id": "6zUxyxEez9OEl2JNTc4EUN",
-          "name": "It's You - Instrumental",
+          "id": "5XWUdLN40Ne93LKMH22caf",
+          "name": "Requiem for Phife",
           "preview_url": null,
-          "track_number": 2
+          "track_number": 22
         },
         {
           "artists": [
@@ -2188,12 +2626,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 203386,
+          "duration_ms": 55866,
           "explicit": false,
-          "id": "7MRyhTrrN9dEvnZAWV0sPy",
-          "name": "Questions - Instrumental",
+          "id": "5XM6JZ1cGPQDRFcwrXei7R",
+          "name": "We Had Coffee",
           "preview_url": null,
-          "track_number": 3
+          "track_number": 23
         },
         {
           "artists": [
@@ -2206,12 +2644,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 252920,
+          "duration_ms": 168066,
           "explicit": false,
-          "id": "0RBdbbbDA0PhWvC5dkxVV4",
-          "name": "So Amazing - Instrumental",
+          "id": "3cXNjFiDfA53MKAMd0Nho3",
+          "name": "Pops Is Gone",
           "preview_url": null,
-          "track_number": 4
+          "track_number": 24
         },
         {
           "artists": [
@@ -2224,12 +2662,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 188880,
+          "duration_ms": 69160,
           "explicit": false,
-          "id": "3CvhBgE8fJKv6o9IJNxCCF",
-          "name": "Do It Together - Instrumental",
+          "id": "0ldqqFB8HUQCxuAhGIwlQG",
+          "name": "Theme",
           "preview_url": null,
-          "track_number": 5
+          "track_number": 25
         },
         {
           "artists": [
@@ -2242,12 +2680,34 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 182906,
+          "duration_ms": 35920,
           "explicit": false,
-          "id": "47PVFeAhjoZ932M4j8SYEH",
-          "name": "Smiling For Me - Instrumental",
+          "id": "1OBJtUw7i2O9HPMFmWUcce",
+          "name": "Greed Becomes Me",
           "preview_url": null,
-          "track_number": 6
+          "track_number": 26
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            },
+            {
+              "id": "4VmEWwd8y9MCLwexFMdpwt",
+              "name": "Method Man"
+            }
+          ],
+          "duration_ms": 132146,
+          "explicit": false,
+          "id": "4OrOmys1k4aLtXTSKnvPrL",
+          "name": "Bulletproof Love",
+          "preview_url": null,
+          "track_number": 27
         },
         {
           "artists": [
@@ -2260,12 +2720,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 197586,
+          "duration_ms": 56207,
           "explicit": false,
-          "id": "59SAN1vaaXHEmXGIE7EzQY",
-          "name": "Don't Keep Me Waiting - Instrumental",
+          "id": "6M5eFoKou0EMKCOtkHIThD",
+          "name": "Microphone Check Five'O",
           "preview_url": null,
-          "track_number": 7
+          "track_number": 28
         },
         {
           "artists": [
@@ -2278,12 +2738,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 53746,
+          "duration_ms": 292751,
           "explicit": false,
-          "id": "4l06Zd7yIFFmEXQEts22Ec",
-          "name": "Bitches Do Voodoo - Instrumental",
+          "id": "6G1wfRqLW3fJrpjhVppE03",
+          "name": "Luke's Freedom",
           "preview_url": null,
-          "track_number": 8
+          "track_number": 29
         },
         {
           "artists": [
@@ -2296,12 +2756,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 191986,
+          "duration_ms": 43746,
           "explicit": false,
-          "id": "38XWCqFTnni2H9Xm157U52",
-          "name": "Possibilities - Instrumental",
+          "id": "0HrG89WqtK5v0BU3gx2aih",
+          "name": "Uptown Claire",
           "preview_url": null,
-          "track_number": 9
+          "track_number": 30
         },
         {
           "artists": [
@@ -2314,12 +2774,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 182653,
+          "duration_ms": 44906,
           "explicit": false,
-          "id": "5N6LOgMOuP0ITmGP57nkzI",
-          "name": "Dans Un Moment D'errance - Instrumental",
+          "id": "0U5FTJODohg12gADNiXO3H",
+          "name": "Shades Beware",
           "preview_url": null,
-          "track_number": 10
+          "track_number": 31
         },
         {
           "artists": [
@@ -2332,12 +2792,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 163973,
+          "duration_ms": 88840,
           "explicit": false,
-          "id": "5bJGpSw9QBIqLPPk7zkLWg",
-          "name": "Love Is Free - Instrumental",
+          "id": "3OyJGk2YD2BDXjoWyewCC5",
+          "name": "Misty Resolute",
           "preview_url": null,
-          "track_number": 11
+          "track_number": 32
         },
         {
           "artists": [
@@ -2350,12 +2810,12 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 176866,
+          "duration_ms": 84282,
           "explicit": false,
-          "id": "43RtA1hDfgroS0ENjEQamM",
-          "name": "Feel Alive - Instrumental",
+          "id": "0SQeJhndUb3Uq7mG1yARC9",
+          "name": "Fresh Air",
           "preview_url": null,
-          "track_number": 12
+          "track_number": 33
         },
         {
           "artists": [
@@ -2368,19 +2828,307 @@
               "name": "Ali Shaheed Muhammad"
             }
           ],
-          "duration_ms": 139360,
+          "duration_ms": 37946,
           "explicit": false,
-          "id": "2OuCz9C7XxnZYXxMaGTGhk",
-          "name": "There Is No Greater Love - Instrumental",
+          "id": "2ym2MNgccL3dXibCtCoFpJ",
+          "name": "Kinda Strong",
           "preview_url": null,
-          "track_number": 13
+          "track_number": 34
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 66040,
+          "explicit": false,
+          "id": "4lZyxqjeYp3Td2fXWPYTJg",
+          "name": "Big Man Little Jacket",
+          "preview_url": null,
+          "track_number": 35
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 137253,
+          "explicit": false,
+          "id": "2KDsdRYUTDlUjZlbTDFDZs",
+          "name": "Scarfe's Dying",
+          "preview_url": null,
+          "track_number": 36
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 73413,
+          "explicit": false,
+          "id": "5MEZtfVTtgShxdnZwhrNAX",
+          "name": "Claire's Wisdom",
+          "preview_url": null,
+          "track_number": 37
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 160911,
+          "explicit": false,
+          "id": "71mOCMMB3Dasl7TbuobsVa",
+          "name": "Gun Threat",
+          "preview_url": null,
+          "track_number": 38
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 76800,
+          "explicit": false,
+          "id": "4QKDEJAAdHEKTxLW9r0kRu",
+          "name": "Bad Love",
+          "preview_url": null,
+          "track_number": 39
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 82234,
+          "explicit": false,
+          "id": "0n8HCYoA3M1atcxTXfGERU",
+          "name": "Finding Chico",
+          "preview_url": null,
+          "track_number": 40
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 64680,
+          "explicit": false,
+          "id": "4YUBJTmLFqBxvT7JadUS5S",
+          "name": "I Am Carl Lucas",
+          "preview_url": null,
+          "track_number": 41
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 47247,
+          "explicit": false,
+          "id": "4gQ4eU9z7Hj8ulZjLhs7kv",
+          "name": "Crispus Attucks",
+          "preview_url": null,
+          "track_number": 42
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 142479,
+          "explicit": false,
+          "id": "6OglI9oOPU2Y3IWAAyfC2D",
+          "name": "Hideout",
+          "preview_url": null,
+          "track_number": 43
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 44226,
+          "explicit": false,
+          "id": "3skBTUKqWiXZC2s1rssujt",
+          "name": "Cuban Coffee",
+          "preview_url": null,
+          "track_number": 44
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 84106,
+          "explicit": false,
+          "id": "3AI7NgS67HidkIE1XklKup",
+          "name": "Like a Brother",
+          "preview_url": null,
+          "track_number": 45
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 98826,
+          "explicit": false,
+          "id": "5ygAVn0RBG8QdEW9qOeeJY",
+          "name": "Cottonmouth's Clamp",
+          "preview_url": null,
+          "track_number": 46
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 61839,
+          "explicit": false,
+          "id": "5rA7WizcY9sNYrUJOXkNoT",
+          "name": "Survival",
+          "preview_url": null,
+          "track_number": 47
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 19813,
+          "explicit": false,
+          "id": "4F95Jp16gggut6n9EeJX3b",
+          "name": "Cottonmouth Theme",
+          "preview_url": null,
+          "track_number": 48
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 72786,
+          "explicit": false,
+          "id": "0t5pZ6P8DVoa5cXK3P6g62",
+          "name": "Luke Cops",
+          "preview_url": null,
+          "track_number": 49
+        },
+        {
+          "artists": [
+            {
+              "id": "4aMeIY7MkJoZg7O91cmDDd",
+              "name": "Adrian Younge"
+            },
+            {
+              "id": "6adBZwsyxZuWDoty0Tg0lt",
+              "name": "Ali Shaheed Muhammad"
+            }
+          ],
+          "duration_ms": 67213,
+          "explicit": false,
+          "id": "5Y7KxAUIChwb291GZA1VYT",
+          "name": "Crushin' On Reva",
+          "preview_url": null,
+          "track_number": 50
         }
       ],
-      "url": "https://open.spotify.com/album/2qBSJip5Hh3GoyLD0tw77d"
+      "url": "https://open.spotify.com/album/3YQGCWFtg6mh8S6x6JxdgB"
     }
   },
-  "spotify_id": "2qBSJip5Hh3GoyLD0tw77d",
-  "spotify_url": "https://open.spotify.com/album/2qBSJip5Hh3GoyLD0tw77d",
+  "spotify_id": "3YQGCWFtg6mh8S6x6JxdgB",
+  "spotify_url": "https://open.spotify.com/album/3YQGCWFtg6mh8S6x6JxdgB",
   "styles": [
     "Soundtrack"
   ],
@@ -2663,6 +3411,6 @@
       "title": "Beloved Reva"
     }
   ],
-  "updated_at": "2025-07-05T17:36:01.812074",
+  "updated_at": "2025-07-07T19:14:55.565670",
   "year": 2016
 }
