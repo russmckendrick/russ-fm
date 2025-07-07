@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:55:31.284092",
+  "created_at": "2025-07-07T19:44:33.388289",
   "date_added": "2018-02-15T19:24:32-08:00",
   "discogs_id": "1210486",
   "discogs_url": "https://www.discogs.com/release/1210486-Senseless-Things-Homophobic-Asshole",
@@ -66,6 +66,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/_ITHT0Ke-Trb0fIlhSIu1gTxhcckvptOLPXqhzH04mg/rs:fit/g:sm/q:90/h:562/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMTA0/ODYtMTIwNTQzNTYw/Mi5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/homophobic-asshole-1210486/homophobic-asshole-1210486.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -73,11 +80,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Senseless+Things/Homophobic+Asshole",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/homophobic-asshole-1210486/homophobic-asshole-1210486-hi-res.jpg",
+    "medium": "../public/album/homophobic-asshole-1210486/homophobic-asshole-1210486-medium.jpg",
+    "small": "../public/album/homophobic-asshole-1210486/homophobic-asshole-1210486-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:55:31.921851",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:44:37.905411",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -275,6 +286,6 @@
       "title": "Just Flirting"
     }
   ],
-  "updated_at": "2025-07-05T16:55:31.921636",
+  "updated_at": "2025-07-07T19:44:37.270285",
   "year": 1992
 }

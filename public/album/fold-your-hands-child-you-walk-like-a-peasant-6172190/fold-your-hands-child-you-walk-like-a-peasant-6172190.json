@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1669033817",
+  "apple_music_url": "https://music.apple.com/gb/album/fold-your-hands-child-you-walk-like-a-peasant/1669033817",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "USA & Canada",
-  "created_at": "2025-07-05T17:19:37.139356",
+  "created_at": "2025-07-07T19:39:04.598942",
   "date_added": "2017-04-25T08:34:43-07:00",
   "discogs_id": "6172190",
   "discogs_url": "https://www.discogs.com/release/6172190-Belle-Sebastian-Fold-Your-Hands-Child-You-Walk-Like-A-Peasant",
@@ -40,6 +40,20 @@
       "type": "primary",
       "url": "https://i.discogs.com/HdbJnZx8Uds5-PrbJmgMYEF0DnbwouxMbAOL1d0pmUk/rs:fit/g:sm/q:90/h:360/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYxNzIx/OTAtMTQxMzQyMDYw/OS02MTY3LmpwZWc.jpeg",
       "width": 360
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c4/27/c0/c427c0ec-440e-56ce-a2a9-1cc510c3216d/197187589838.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/fold-your-hands-child-you-walk-like-a-peasant-6172190/fold-your-hands-child-you-walk-like-a-peasant-6172190.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -47,23 +61,667 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/fold-your-hands-child-you-walk-like-a-peasant-6172190/fold-your-hands-child-you-walk-like-a-peasant-6172190-hi-res.jpg",
+    "medium": "../public/album/fold-your-hands-child-you-walk-like-a-peasant-6172190/fold-your-hands-child-you-walk-like-a-peasant-6172190-medium.jpg",
+    "small": "../public/album/fold-your-hands-child-you-walk-like-a-peasant-6172190/fold-your-hands-child-you-walk-like-a-peasant-6172190-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:19:37.754771",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:39:09.349175",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Fold Your Hands Child, You Walk Like a Peasant",
   "release_name_discogs": "Fold Your Hands Child, You Walk Like A Peasant",
-  "release_name_spotify": null,
+  "release_name_spotify": "Fold Your Hands Child, You Walk Like a Peasant",
   "released": "2014",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c4/27/c0/c427c0ec-440e-56ce-a2a9-1cc510c3216d/197187589838.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 2000 Jeepster Recordings Ltd",
+      "editorial_notes": null,
+      "id": "1669033817",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Belle and Sebastian",
+        "artwork": {
+          "bgColor": "1f1c17",
+          "height": 3000,
+          "textColor1": "f9de91",
+          "textColor2": "d9c177",
+          "textColor3": "cdb779",
+          "textColor4": "b3a064",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/c4/27/c0/c427c0ec-440e-56ce-a2a9-1cc510c3216d/197187589838.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "contentRating": "explicit",
+        "copyright": "℗ 2000 Jeepster Recordings Ltd",
+        "genreNames": [
+          "Indie Rock",
+          "Music",
+          "Alternative",
+          "Rock",
+          "Adult Alternative",
+          "Pop",
+          "Pop/Rock",
+          "Britpop"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Fold Your Hands Child, You Walk Like a Peasant",
+        "playParams": {
+          "id": "1669033817",
+          "kind": "album"
+        },
+        "recordLabel": "Jeepster Recordings",
+        "releaseDate": "2000-06-05",
+        "trackCount": 11,
+        "upc": "197187589838",
+        "url": "https://music.apple.com/gb/album/fold-your-hands-child-you-walk-like-a-peasant/1669033817"
+      },
+      "url": "https://music.apple.com/gb/album/fold-your-hands-child-you-walk-like-a-peasant/1669033817"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2000 Jeepster Recordings Ltd",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2000 Jeepster Recordings Ltd",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "197187589838"
+      },
+      "id": "4fzo0zlnGOAiuB6ybFPlvz",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273cc16ef08bd35ad57fff8810c",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02cc16ef08bd35ad57fff8810c",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851cc16ef08bd35ad57fff8810c",
+          "width": 64
+        }
+      ],
+      "label": "Jeepster Recordings",
+      "popularity": 45,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+            },
+            "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+            "id": "4I2BJf80C0skQpp1sQmA0h",
+            "name": "Belle and Sebastian",
+            "type": "artist",
+            "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2000 Jeepster Recordings Ltd",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2000 Jeepster Recordings Ltd",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "197187589838"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4fzo0zlnGOAiuB6ybFPlvz"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4fzo0zlnGOAiuB6ybFPlvz?market=US",
+        "id": "4fzo0zlnGOAiuB6ybFPlvz",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273cc16ef08bd35ad57fff8810c",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02cc16ef08bd35ad57fff8810c",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851cc16ef08bd35ad57fff8810c",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Jeepster Recordings",
+        "name": "Fold Your Hands Child, You Walk Like a Peasant",
+        "popularity": 45,
+        "release_date": "2000-06-05",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4fzo0zlnGOAiuB6ybFPlvz/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 249600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1bRO6pwlvZtFeA6CX50mRq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1bRO6pwlvZtFeA6CX50mRq",
+              "id": "1bRO6pwlvZtFeA6CX50mRq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Fought in a War",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1bRO6pwlvZtFeA6CX50mRq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0PK85svBka8vzcNZNOl8UF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0PK85svBka8vzcNZNOl8UF",
+              "id": "0PK85svBka8vzcNZNOl8UF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Model",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0PK85svBka8vzcNZNOl8UF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 249600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5AUKPyWnV1zdDfmHk3ODYH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5AUKPyWnV1zdDfmHk3ODYH",
+              "id": "5AUKPyWnV1zdDfmHk3ODYH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Beyond the Sunrise",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5AUKPyWnV1zdDfmHk3ODYH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 192973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7semgIC6w9dYTF5lxWSQYg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7semgIC6w9dYTF5lxWSQYg",
+              "id": "7semgIC6w9dYTF5lxWSQYg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Waiting for the Moon to Rise",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7semgIC6w9dYTF5lxWSQYg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 281066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0aJc1cb2FYiEEYySpCxlMC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0aJc1cb2FYiEEYySpCxlMC",
+              "id": "0aJc1cb2FYiEEYySpCxlMC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Don't Leave the Light on, Baby",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0aJc1cb2FYiEEYySpCxlMC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 202866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/64iB4MLng8D6dG6x2OEYJT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/64iB4MLng8D6dG6x2OEYJT",
+              "id": "64iB4MLng8D6dG6x2OEYJT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Wrong Girl",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:64iB4MLng8D6dG6x2OEYJT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153626,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3eOdKTbVC0DTZOgAEl1F0x"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3eOdKTbVC0DTZOgAEl1F0x",
+              "id": "3eOdKTbVC0DTZOgAEl1F0x",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Chalet Lines",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3eOdKTbVC0DTZOgAEl1F0x"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 154373,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5KhoHOoCtwkHC1kuK1KQTq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5KhoHOoCtwkHC1kuK1KQTq",
+              "id": "5KhoHOoCtwkHC1kuK1KQTq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nice Day for a Sulk",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5KhoHOoCtwkHC1kuK1KQTq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 275560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7IWlZ4U0dL9wSoo0UoUD2d"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7IWlZ4U0dL9wSoo0UoUD2d",
+              "id": "7IWlZ4U0dL9wSoo0UoUD2d",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Women's Realm",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:7IWlZ4U0dL9wSoo0UoUD2d"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 244333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4zHCRAkkDu6pK3IiXyZ2Kh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4zHCRAkkDu6pK3IiXyZ2Kh",
+              "id": "4zHCRAkkDu6pK3IiXyZ2Kh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Family Tree",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4zHCRAkkDu6pK3IiXyZ2Kh"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 207066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7kkDvoGvoVPtLD3Ef61E62"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7kkDvoGvoVPtLD3Ef61E62",
+              "id": "7kkDvoGvoVPtLD3Ef61E62",
+              "is_local": false,
+              "is_playable": true,
+              "name": "There's Too Much Love",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:7kkDvoGvoVPtLD3Ef61E62"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 11
+        },
+        "type": "album",
+        "uri": "spotify:album:4fzo0zlnGOAiuB6ybFPlvz"
+      },
+      "release_date": "2000-06-05",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 249600,
+          "explicit": false,
+          "id": "1bRO6pwlvZtFeA6CX50mRq",
+          "name": "I Fought in a War",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 240200,
+          "explicit": false,
+          "id": "0PK85svBka8vzcNZNOl8UF",
+          "name": "The Model",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 249600,
+          "explicit": false,
+          "id": "5AUKPyWnV1zdDfmHk3ODYH",
+          "name": "Beyond the Sunrise",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 192973,
+          "explicit": false,
+          "id": "7semgIC6w9dYTF5lxWSQYg",
+          "name": "Waiting for the Moon to Rise",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 281066,
+          "explicit": false,
+          "id": "0aJc1cb2FYiEEYySpCxlMC",
+          "name": "Don't Leave the Light on, Baby",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 202866,
+          "explicit": false,
+          "id": "64iB4MLng8D6dG6x2OEYJT",
+          "name": "The Wrong Girl",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 153626,
+          "explicit": true,
+          "id": "3eOdKTbVC0DTZOgAEl1F0x",
+          "name": "The Chalet Lines",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 154373,
+          "explicit": false,
+          "id": "5KhoHOoCtwkHC1kuK1KQTq",
+          "name": "Nice Day for a Sulk",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 275560,
+          "explicit": false,
+          "id": "7IWlZ4U0dL9wSoo0UoUD2d",
+          "name": "Women's Realm",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 244333,
+          "explicit": false,
+          "id": "4zHCRAkkDu6pK3IiXyZ2Kh",
+          "name": "Family Tree",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 207066,
+          "explicit": false,
+          "id": "7kkDvoGvoVPtLD3Ef61E62",
+          "name": "There's Too Much Love",
+          "preview_url": null,
+          "track_number": 11
+        }
+      ],
+      "url": "https://open.spotify.com/album/4fzo0zlnGOAiuB6ybFPlvz"
+    }
+  },
+  "spotify_id": "4fzo0zlnGOAiuB6ybFPlvz",
+  "spotify_url": "https://open.spotify.com/album/4fzo0zlnGOAiuB6ybFPlvz",
   "styles": [
     "Indie Rock"
   ],
@@ -136,6 +794,6 @@
       "title": "There's Too Much Love"
     }
   ],
-  "updated_at": "2025-07-05T17:19:37.754463",
+  "updated_at": "2025-07-07T19:39:08.681943",
   "year": 2014
 }

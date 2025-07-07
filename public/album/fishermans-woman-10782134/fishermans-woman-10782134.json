@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "259865722",
+  "apple_music_url": "https://music.apple.com/gb/album/fishermans-woman/259865722",
   "artists": [
     {
       "apple_music_id": "205128673",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T17:08:30.880186",
+  "created_at": "2025-07-07T19:37:06.784170",
   "date_added": "2017-09-01T20:52:16-07:00",
   "discogs_id": "10782134",
   "discogs_url": "https://www.discogs.com/release/10782134-Emiliana-Torrini-Fishermans-Woman",
@@ -75,6 +75,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/DSwXAwgYhcbB0z5yM-jyvxV4nTS317vY8paYeRscONM/rs:fit/g:sm/q:90/h:392/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNzgy/MTM0LTE2NzE4MDY5/NzAtMTUyMS5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/5c/62/d05c624a-b94f-1e32-ea05-4620d4716ad9/609008259467.png/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/fisherman-s-woman-10782134/fisherman-s-woman-10782134.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -82,23 +96,708 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/fishermans-woman-10782134/fishermans-woman-10782134-hi-res.jpg",
+    "medium": "../public/album/fishermans-woman-10782134/fishermans-woman-10782134-medium.jpg",
+    "small": "../public/album/fishermans-woman-10782134/fishermans-woman-10782134-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:08:31.438724",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:37:15.833371",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Fisherman's Woman",
   "release_name_discogs": "Fisherman's Woman",
-  "release_name_spotify": null,
+  "release_name_spotify": "Fisherman's Woman",
   "released": "2017-09-01",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/5c/62/d05c624a-b94f-1e32-ea05-4620d4716ad9/609008259467.png/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2004 Rough Trade Records Ltd",
+      "editorial_notes": null,
+      "id": "259865722",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Emilíana Torrini",
+        "artwork": {
+          "bgColor": "e6d1d0",
+          "height": 4000,
+          "textColor1": "100305",
+          "textColor2": "1f1113",
+          "textColor3": "3a2c2d",
+          "textColor4": "473739",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/5c/62/d05c624a-b94f-1e32-ea05-4620d4716ad9/609008259467.png/{w}x{h}bb.jpg",
+          "width": 4000
+        },
+        "copyright": "℗ 2004 Rough Trade Records Ltd",
+        "genreNames": [
+          "Alternative",
+          "Music",
+          "Singer/Songwriter",
+          "Contemporary Singer/Songwriter",
+          "Rock",
+          "Adult Alternative",
+          "Contemporary Folk"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Fisherman's Woman",
+        "playParams": {
+          "id": "259865722",
+          "kind": "album"
+        },
+        "recordLabel": "Rough Trade",
+        "releaseDate": "2005-01-31",
+        "trackCount": 12,
+        "upc": "609008259467",
+        "url": "https://music.apple.com/gb/album/fishermans-woman/259865722"
+      },
+      "url": "https://music.apple.com/gb/album/fishermans-woman/259865722"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2004 Rough Trade Records Ltd",
+          "type": "C"
+        },
+        {
+          "text": "2004 Rough Trade Records Ltd",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "609008259467"
+      },
+      "id": "5fPGV2BBurhFEE2d5AAWaq",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273992a4cd54537466369c859bd",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02992a4cd54537466369c859bd",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851992a4cd54537466369c859bd",
+          "width": 64
+        }
+      ],
+      "label": "Rough Trade",
+      "popularity": 44,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+            },
+            "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+            "id": "08j69Ndyx1P7RLO3Janb5P",
+            "name": "Emilíana Torrini",
+            "type": "artist",
+            "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2004 Rough Trade Records Ltd",
+            "type": "C"
+          },
+          {
+            "text": "2004 Rough Trade Records Ltd",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "609008259467"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5fPGV2BBurhFEE2d5AAWaq"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/5fPGV2BBurhFEE2d5AAWaq?market=US",
+        "id": "5fPGV2BBurhFEE2d5AAWaq",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273992a4cd54537466369c859bd",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02992a4cd54537466369c859bd",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851992a4cd54537466369c859bd",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Rough Trade",
+        "name": "Fisherman's Woman",
+        "popularity": 44,
+        "release_date": "2005-01-31",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/5fPGV2BBurhFEE2d5AAWaq/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 235973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/600VsykvDpmmIJNn7IFrCg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/600VsykvDpmmIJNn7IFrCg",
+              "id": "600VsykvDpmmIJNn7IFrCg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nothing Brings Me Down",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:600VsykvDpmmIJNn7IFrCg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 184533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1QhN6ZjGqeRO6cDuE1H76q"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1QhN6ZjGqeRO6cDuE1H76q",
+              "id": "1QhN6ZjGqeRO6cDuE1H76q",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sunny Road",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:1QhN6ZjGqeRO6cDuE1H76q"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 118893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3jJMsQGSmL4aJ6bfUoeCBd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3jJMsQGSmL4aJ6bfUoeCBd",
+              "id": "3jJMsQGSmL4aJ6bfUoeCBd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Snow",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:3jJMsQGSmL4aJ6bfUoeCBd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0Takwo4Fv9tbZl8e8PvNVz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0Takwo4Fv9tbZl8e8PvNVz",
+              "id": "0Takwo4Fv9tbZl8e8PvNVz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lifesaver",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:0Takwo4Fv9tbZl8e8PvNVz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 189133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2QmLcNrn4kIZ8EaNQILxdB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2QmLcNrn4kIZ8EaNQILxdB",
+              "id": "2QmLcNrn4kIZ8EaNQILxdB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Honeymoon Child",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:2QmLcNrn4kIZ8EaNQILxdB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 211573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6R0h2t4N4LhdEiqxLmFqpP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6R0h2t4N4LhdEiqxLmFqpP",
+              "id": "6R0h2t4N4LhdEiqxLmFqpP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Today Has Been OK",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:6R0h2t4N4LhdEiqxLmFqpP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 216560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/51rVc0T1Y7nNgJGRzjFQ0Z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/51rVc0T1Y7nNgJGRzjFQ0Z",
+              "id": "51rVc0T1Y7nNgJGRzjFQ0Z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Next Time Around",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:51rVc0T1Y7nNgJGRzjFQ0Z"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 182466,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3pPyheFr81GDSQCpzWyXuj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3pPyheFr81GDSQCpzWyXuj",
+              "id": "3pPyheFr81GDSQCpzWyXuj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Heartstopper",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3pPyheFr81GDSQCpzWyXuj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 258532,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2PIyYRApzCJ6Jo0TR3oWl4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2PIyYRApzCJ6Jo0TR3oWl4",
+              "id": "2PIyYRApzCJ6Jo0TR3oWl4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "At Least It Was",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2PIyYRApzCJ6Jo0TR3oWl4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 111173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0WwPOFbpfnmDZaw1jyGduE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0WwPOFbpfnmDZaw1jyGduE",
+              "id": "0WwPOFbpfnmDZaw1jyGduE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fisherman's Woman",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:0WwPOFbpfnmDZaw1jyGduE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 201600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/10sLaCP1j5sxxixcdzEMaD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/10sLaCP1j5sxxixcdzEMaD",
+              "id": "10sLaCP1j5sxxixcdzEMaD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thinking Out Loud",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:10sLaCP1j5sxxixcdzEMaD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08j69Ndyx1P7RLO3Janb5P"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08j69Ndyx1P7RLO3Janb5P",
+                  "id": "08j69Ndyx1P7RLO3Janb5P",
+                  "name": "Emilíana Torrini",
+                  "type": "artist",
+                  "uri": "spotify:artist:08j69Ndyx1P7RLO3Janb5P"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 217293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1CPAVhOAozB7D7QwkceBz7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1CPAVhOAozB7D7QwkceBz7",
+              "id": "1CPAVhOAozB7D7QwkceBz7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Serenade",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:1CPAVhOAozB7D7QwkceBz7"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 12
+        },
+        "type": "album",
+        "uri": "spotify:album:5fPGV2BBurhFEE2d5AAWaq"
+      },
+      "release_date": "2005-01-31",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 235973,
+          "explicit": false,
+          "id": "600VsykvDpmmIJNn7IFrCg",
+          "name": "Nothing Brings Me Down",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 184533,
+          "explicit": false,
+          "id": "1QhN6ZjGqeRO6cDuE1H76q",
+          "name": "Sunny Road",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 118893,
+          "explicit": false,
+          "id": "3jJMsQGSmL4aJ6bfUoeCBd",
+          "name": "Snow",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 240000,
+          "explicit": false,
+          "id": "0Takwo4Fv9tbZl8e8PvNVz",
+          "name": "Lifesaver",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 189133,
+          "explicit": false,
+          "id": "2QmLcNrn4kIZ8EaNQILxdB",
+          "name": "Honeymoon Child",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 211573,
+          "explicit": false,
+          "id": "6R0h2t4N4LhdEiqxLmFqpP",
+          "name": "Today Has Been OK",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 216560,
+          "explicit": false,
+          "id": "51rVc0T1Y7nNgJGRzjFQ0Z",
+          "name": "Next Time Around",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 182466,
+          "explicit": false,
+          "id": "3pPyheFr81GDSQCpzWyXuj",
+          "name": "Heartstopper",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 258532,
+          "explicit": false,
+          "id": "2PIyYRApzCJ6Jo0TR3oWl4",
+          "name": "At Least It Was",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 111173,
+          "explicit": false,
+          "id": "0WwPOFbpfnmDZaw1jyGduE",
+          "name": "Fisherman's Woman",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 201600,
+          "explicit": false,
+          "id": "10sLaCP1j5sxxixcdzEMaD",
+          "name": "Thinking Out Loud",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "08j69Ndyx1P7RLO3Janb5P",
+              "name": "Emilíana Torrini"
+            }
+          ],
+          "duration_ms": 217293,
+          "explicit": false,
+          "id": "1CPAVhOAozB7D7QwkceBz7",
+          "name": "Serenade",
+          "preview_url": null,
+          "track_number": 12
+        }
+      ],
+      "url": "https://open.spotify.com/album/5fPGV2BBurhFEE2d5AAWaq"
+    }
+  },
+  "spotify_id": "5fPGV2BBurhFEE2d5AAWaq",
+  "spotify_url": "https://open.spotify.com/album/5fPGV2BBurhFEE2d5AAWaq",
   "styles": [
     "Folk Rock",
     "Acoustic"
@@ -178,6 +877,6 @@
       "title": "Serenade"
     }
   ],
-  "updated_at": "2025-07-05T17:08:31.437056",
+  "updated_at": "2025-07-07T19:37:15.131776",
   "year": 2017
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:55:30.296299",
+  "created_at": "2025-07-07T19:44:42.872260",
   "date_added": "2018-02-15T19:24:32-08:00",
   "discogs_id": "1776360",
   "discogs_url": "https://www.discogs.com/release/1776360-Senseless-Things-Something-To-Miss",
@@ -66,6 +66,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/IzVS0GoNI3IuB9RTKeeXLW9TuVjS9o2HVpKX5Vz4wsA/rs:fit/g:sm/q:90/h:600/w:582/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3NzYz/NjAtMTYyODU2OTEw/Ni0xMDM3LmpwZWc.jpeg",
       "width": 582
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/something-to-miss-1776360/something-to-miss-1776360.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -73,11 +80,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Senseless+Things/Something+to+Miss",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/something-to-miss-1776360/something-to-miss-1776360-hi-res.jpg",
+    "medium": "../public/album/something-to-miss-1776360/something-to-miss-1776360-medium.jpg",
+    "small": "../public/album/something-to-miss-1776360/something-to-miss-1776360-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:55:30.935984",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:44:48.257016",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -297,6 +308,6 @@
       "title": "Answering Machine"
     }
   ],
-  "updated_at": "2025-07-05T16:55:30.935553",
+  "updated_at": "2025-07-07T19:44:47.543556",
   "year": 1995
 }

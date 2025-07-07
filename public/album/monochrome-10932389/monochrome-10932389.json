@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1273863411",
+  "apple_music_url": "https://music.apple.com/gb/album/monochrome/1273863411",
   "artists": [
     {
       "apple_music_id": "303946603",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:07:43.817141",
+  "created_at": "2025-07-07T19:46:04.759211",
   "date_added": "2017-10-14T10:09:24-07:00",
   "discogs_id": "10932389",
   "discogs_url": "https://www.discogs.com/release/10932389-Danny-Cavanagh-Monochrome",
@@ -101,6 +101,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/3S1t2jb5YfxYEMWnDgBBv4W0UjLqLbQjyTnCgXvUS3g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwOTMy/Mzg5LTE3MDI5Mjc2/MjMtMjA0MC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/89/13/61/8913617e-352e-aea2-e0a0-7ad9116c216a/802644802961.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/monochrome-10932389/monochrome-10932389.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -108,21 +122,69 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Danny+Cavanagh/Monochrome",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/monochrome-10932389/monochrome-10932389-hi-res.jpg",
+    "medium": "../public/album/monochrome-10932389/monochrome-10932389-medium.jpg",
+    "small": "../public/album/monochrome-10932389/monochrome-10932389-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:07:44.469877",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:46:12.764737",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Monochrome",
   "release_name_discogs": "Monochrome",
-  "release_name_spotify": null,
+  "release_name_spotify": "Monochrome",
   "released": "2017-10-13",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/89/13/61/8913617e-352e-aea2-e0a0-7ad9116c216a/802644802961.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2017 Kscope",
+      "editorial_notes": null,
+      "id": "1273863411",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Daniel Cavanagh",
+        "artwork": {
+          "bgColor": "120e14",
+          "height": 1500,
+          "textColor1": "f9f8fd",
+          "textColor2": "d3d0d2",
+          "textColor3": "cbc9ce",
+          "textColor4": "aca9ac",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/89/13/61/8913617e-352e-aea2-e0a0-7ad9116c216a/802644802961.jpg/{w}x{h}bb.jpg",
+          "width": 1500
+        },
+        "copyright": "℗ 2017 Kscope",
+        "genreNames": [
+          "Rock",
+          "Music"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Monochrome",
+        "playParams": {
+          "id": "1273863411",
+          "kind": "album"
+        },
+        "recordLabel": "Kscope",
+        "releaseDate": "2017-10-13",
+        "trackCount": 7,
+        "upc": "802644802961",
+        "url": "https://music.apple.com/gb/album/monochrome/1273863411"
+      },
+      "url": "https://music.apple.com/gb/album/monochrome/1273863411"
+    },
     "lastfm": {
       "images": [
         {
@@ -349,10 +411,426 @@
       "url": "https://www.last.fm/music/Danny+Cavanagh/Monochrome",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2017 Kscope",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2017 Kscope",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "802644802961"
+      },
+      "id": "6bnSZbbv8gbjc0Y3yAcFSE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273e027a20a3e9115bcff081a75",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02e027a20a3e9115bcff081a75",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851e027a20a3e9115bcff081a75",
+          "width": 64
+        }
+      ],
+      "label": "Kscope",
+      "popularity": 30,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+            },
+            "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+            "id": "5HAculFU4ScJVhfwXKK0hr",
+            "name": "Daniel Cavanagh",
+            "type": "artist",
+            "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2017 Kscope",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2017 Kscope",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "802644802961"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6bnSZbbv8gbjc0Y3yAcFSE"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/6bnSZbbv8gbjc0Y3yAcFSE?market=US",
+        "id": "6bnSZbbv8gbjc0Y3yAcFSE",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e027a20a3e9115bcff081a75",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e027a20a3e9115bcff081a75",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e027a20a3e9115bcff081a75",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Kscope",
+        "name": "Monochrome",
+        "popularity": 30,
+        "release_date": "2017-10-13",
+        "release_date_precision": "day",
+        "total_tracks": 7,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/6bnSZbbv8gbjc0Y3yAcFSE/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 406534,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5T0EaBOQt297qkKHyDD6HB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5T0EaBOQt297qkKHyDD6HB",
+              "id": "5T0EaBOQt297qkKHyDD6HB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Exorcist",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:5T0EaBOQt297qkKHyDD6HB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 292919,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0QCYKS2focxUzzPiRfCLyq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0QCYKS2focxUzzPiRfCLyq",
+              "id": "0QCYKS2focxUzzPiRfCLyq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "This Music",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0QCYKS2focxUzzPiRfCLyq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 461725,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/08FM5N3CeJig093sudO0oN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/08FM5N3CeJig093sudO0oN",
+              "id": "08FM5N3CeJig093sudO0oN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Soho",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:08FM5N3CeJig093sudO0oN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 553157,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/60ycI4KqMLKsZuVPQJI45x"
+              },
+              "href": "https://api.spotify.com/v1/tracks/60ycI4KqMLKsZuVPQJI45x",
+              "id": "60ycI4KqMLKsZuVPQJI45x",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Silent Flight Of The Raven Winged Hours",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:60ycI4KqMLKsZuVPQJI45x"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166510,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2iifmNNAoWJ2hoawNe7st5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2iifmNNAoWJ2hoawNe7st5",
+              "id": "2iifmNNAoWJ2hoawNe7st5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dawn",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:2iifmNNAoWJ2hoawNe7st5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 494579,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7LhEmVaISALAkFh7Su5yxp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7LhEmVaISALAkFh7Su5yxp",
+              "id": "7LhEmVaISALAkFh7Su5yxp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Oceans Of Time",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7LhEmVaISALAkFh7Su5yxp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HAculFU4ScJVhfwXKK0hr"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HAculFU4ScJVhfwXKK0hr",
+                  "id": "5HAculFU4ScJVhfwXKK0hr",
+                  "name": "Daniel Cavanagh",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HAculFU4ScJVhfwXKK0hr"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 516631,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0YKvGAHT0HigkBH71m8IMZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0YKvGAHT0HigkBH71m8IMZ",
+              "id": "0YKvGAHT0HigkBH71m8IMZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Some Dreams Come True",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:0YKvGAHT0HigkBH71m8IMZ"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 7
+        },
+        "type": "album",
+        "uri": "spotify:album:6bnSZbbv8gbjc0Y3yAcFSE"
+      },
+      "release_date": "2017-10-13",
+      "release_date_precision": "day",
+      "total_tracks": 7,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 406534,
+          "explicit": false,
+          "id": "5T0EaBOQt297qkKHyDD6HB",
+          "name": "The Exorcist",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 292919,
+          "explicit": false,
+          "id": "0QCYKS2focxUzzPiRfCLyq",
+          "name": "This Music",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 461725,
+          "explicit": false,
+          "id": "08FM5N3CeJig093sudO0oN",
+          "name": "Soho",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 553157,
+          "explicit": false,
+          "id": "60ycI4KqMLKsZuVPQJI45x",
+          "name": "The Silent Flight Of The Raven Winged Hours",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 166510,
+          "explicit": false,
+          "id": "2iifmNNAoWJ2hoawNe7st5",
+          "name": "Dawn",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 494579,
+          "explicit": false,
+          "id": "7LhEmVaISALAkFh7Su5yxp",
+          "name": "Oceans Of Time",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5HAculFU4ScJVhfwXKK0hr",
+              "name": "Daniel Cavanagh"
+            }
+          ],
+          "duration_ms": 516631,
+          "explicit": false,
+          "id": "0YKvGAHT0HigkBH71m8IMZ",
+          "name": "Some Dreams Come True",
+          "preview_url": null,
+          "track_number": 7
+        }
+      ],
+      "url": "https://open.spotify.com/album/6bnSZbbv8gbjc0Y3yAcFSE"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "6bnSZbbv8gbjc0Y3yAcFSE",
+  "spotify_url": "https://open.spotify.com/album/6bnSZbbv8gbjc0Y3yAcFSE",
   "styles": [
     "Prog Rock"
   ],
@@ -401,6 +879,6 @@
       "title": "Some Dreams Come True"
     }
   ],
-  "updated_at": "2025-07-05T17:07:44.469725",
+  "updated_at": "2025-07-07T19:46:11.899250",
   "year": 2017
 }

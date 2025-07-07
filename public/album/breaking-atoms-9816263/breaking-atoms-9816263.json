@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T17:26:20.357855",
+  "created_at": "2025-07-07T19:33:50.776831",
   "date_added": "2017-02-15T18:30:30-08:00",
   "discogs_id": "9816263",
   "discogs_url": "https://www.discogs.com/release/9816263-Main-Source-Breaking-Atoms",
@@ -207,6 +207,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/LxDrw_oasullw3YR5G4qB7sUNvsjwAVa5Xk6BgiMOyA/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk4MTYy/NjMtMTYyODYzODQy/OC01NTA1LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/breaking-atoms-9816263/breaking-atoms-9816263.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -214,11 +221,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Main+Source/Breaking+Atoms",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/breaking-atoms-9816263/breaking-atoms-9816263-hi-res.jpg",
+    "medium": "../public/album/breaking-atoms-9816263/breaking-atoms-9816263-medium.jpg",
+    "small": "../public/album/breaking-atoms-9816263/breaking-atoms-9816263-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:26:21.953089",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:34:03.758899",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -256,9 +267,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/e19635057b4f294ff39111760fbe9780.jpg"
         }
       ],
-      "listeners": 103335,
+      "listeners": 103336,
       "mbid": "186f55bf-73c2-4d6d-acc9-c8986685dc7e",
-      "playcount": 734496,
+      "playcount": 734517,
       "raw_data": {
         "album": {
           "artist": "Main Source",
@@ -288,10 +299,10 @@
               "size": ""
             }
           ],
-          "listeners": "103335",
+          "listeners": "103336",
           "mbid": "186f55bf-73c2-4d6d-acc9-c8986685dc7e",
           "name": "Breaking Atoms",
-          "playcount": "734496",
+          "playcount": "734517",
           "tags": {
             "tag": [
               {
@@ -628,6 +639,6 @@
       "title": "How My Man Went Down In The Game"
     }
   ],
-  "updated_at": "2025-07-05T17:26:21.952761",
+  "updated_at": "2025-07-07T19:34:02.792869",
   "year": 2017
 }
