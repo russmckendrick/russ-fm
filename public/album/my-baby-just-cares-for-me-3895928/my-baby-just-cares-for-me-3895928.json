@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "590241536",
-  "apple_music_url": "https://music.apple.com/gb/album/the-voice-of-nina-simone-my-baby-just-cares-for-me/590241536",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "79798",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:41:19.691779",
+  "created_at": "2025-07-07T19:03:42.466582",
   "date_added": "2016-09-19T15:13:43-07:00",
   "discogs_id": "3895928",
   "discogs_url": "https://www.discogs.com/release/3895928-Nina-Simone-My-Baby-Just-Cares-For-Me",
@@ -105,8 +105,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d2/a0/bc/d2a0bc5c-c331-dd18-be21-e3423b867752/cover.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928.jpg",
       "width": 2000
     }
   ],
@@ -116,68 +116,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Nina+Simone/My+Baby+Just+Cares+for+Me",
   "local_images": {
-    "hi-res": "public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-hi-res.jpg",
-    "medium": "public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-medium.jpg",
-    "small": "public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-small.jpg"
+    "hi-res": "../public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-hi-res.jpg",
+    "medium": "../public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-medium.jpg",
+    "small": "../public/album/my-baby-just-cares-for-me-3895928/my-baby-just-cares-for-me-3895928-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:41:21.448186",
+    "processed_at": "2025-07-07T19:03:52.167693",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "The Voice of Nina Simone (My Baby Just Cares for Me and All Her Great Classics)",
+  "release_name_apple_music": null,
   "release_name_discogs": "My Baby Just Cares For Me",
-  "release_name_spotify": "Little Girl Blue (2013 - Remaster)",
+  "release_name_spotify": null,
   "released": "2012",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d2/a0/bc/d2a0bc5c-c331-dd18-be21-e3423b867752/cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2012 The Restoration Project",
-      "editorial_notes": null,
-      "id": "590241536",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Nina Simone",
-        "artwork": {
-          "bgColor": "43c7dd",
-          "height": 1440,
-          "textColor1": "020607",
-          "textColor2": "0b2023",
-          "textColor3": "0f2d31",
-          "textColor4": "164248",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/d2/a0/bc/d2a0bc5c-c331-dd18-be21-e3423b867752/cover.jpg/{w}x{h}bb.jpg",
-          "width": 1440
-        },
-        "copyright": "℗ 2012 The Restoration Project",
-        "genreNames": [
-          "Jazz",
-          "Music"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "The Voice of Nina Simone (My Baby Just Cares for Me and All Her Great Classics)",
-        "playParams": {
-          "id": "590241536",
-          "kind": "album"
-        },
-        "recordLabel": "The Restoration Project",
-        "releaseDate": "2013-01-21",
-        "trackCount": 19,
-        "upc": "3610152173827",
-        "url": "https://music.apple.com/gb/album/the-voice-of-nina-simone-my-baby-just-cares-for-me/590241536"
-      },
-      "url": "https://music.apple.com/gb/album/the-voice-of-nina-simone-my-baby-just-cares-for-me/590241536"
-    },
     "lastfm": {
       "images": [
         {
@@ -205,9 +161,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/5c2eb4bfb33d49bf9a29754ffa3f6578.jpg"
         }
       ],
-      "listeners": 58744,
+      "listeners": 58748,
       "mbid": "02546372-b56f-4f42-988a-2cd6717a3d2e",
-      "playcount": 550147,
+      "playcount": 550164,
       "raw_data": {
         "album": {
           "artist": "Nina Simone",
@@ -237,10 +193,10 @@
               "size": ""
             }
           ],
-          "listeners": "58744",
+          "listeners": "58748",
           "mbid": "02546372-b56f-4f42-988a-2cd6717a3d2e",
           "name": "My Baby Just Cares for Me",
-          "playcount": "550147",
+          "playcount": "550164",
           "tags": {
             "tag": [
               {
@@ -489,555 +445,10 @@
       "url": "https://www.last.fm/music/Nina+Simone/My+Baby+Just+Cares+for+Me",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2013 BMG Rights Management (US) LLC",
-          "type": "C"
-        },
-        {
-          "text": "2013 BMG Rights Management (US) LLC",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "4050538271553"
-      },
-      "id": "01NGiVifTgrJzdwtgHyfU3",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27379d4b738f89a33471c9e0aa6",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0279d4b738f89a33471c9e0aa6",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485179d4b738f89a33471c9e0aa6",
-          "width": 64
-        }
-      ],
-      "label": "Bethlehem Jazz",
-      "popularity": 64,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-            },
-            "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-            "id": "7G1GBhoKtEPnP86X2PvEYO",
-            "name": "Nina Simone",
-            "type": "artist",
-            "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2013 BMG Rights Management (US) LLC",
-            "type": "C"
-          },
-          {
-            "text": "2013 BMG Rights Management (US) LLC",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "4050538271553"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/01NGiVifTgrJzdwtgHyfU3"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/01NGiVifTgrJzdwtgHyfU3?market=US",
-        "id": "01NGiVifTgrJzdwtgHyfU3",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27379d4b738f89a33471c9e0aa6",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0279d4b738f89a33471c9e0aa6",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485179d4b738f89a33471c9e0aa6",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Bethlehem Jazz",
-        "name": "Little Girl Blue (2013 - Remaster)",
-        "popularity": 64,
-        "release_date": "2013-08-27",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/01NGiVifTgrJzdwtgHyfU3/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 240610,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3rlEbh8f1o88gsBFkwV6bh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3rlEbh8f1o88gsBFkwV6bh",
-              "id": "3rlEbh8f1o88gsBFkwV6bh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Mood Indigo (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:3rlEbh8f1o88gsBFkwV6bh"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 190370,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/32wq8cLbp3qaOlkNcDneIT"
-              },
-              "href": "https://api.spotify.com/v1/tracks/32wq8cLbp3qaOlkNcDneIT",
-              "id": "32wq8cLbp3qaOlkNcDneIT",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Don't Smoke in Bed (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:32wq8cLbp3qaOlkNcDneIT"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 149330,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7dfKrqvN9GDE6pzsrdI9uN"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7dfKrqvN9GDE6pzsrdI9uN",
-              "id": "7dfKrqvN9GDE6pzsrdI9uN",
-              "is_local": false,
-              "is_playable": true,
-              "name": "He Needs Me (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:7dfKrqvN9GDE6pzsrdI9uN"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 257624,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0fpohcklLKNLo3FyjVjEsE"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0fpohcklLKNLo3FyjVjEsE",
-              "id": "0fpohcklLKNLo3FyjVjEsE",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Little Girl Blue (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:0fpohcklLKNLo3FyjVjEsE"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 201390,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3EW11ZQ2feJf0sILCZnqGV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3EW11ZQ2feJf0sILCZnqGV",
-              "id": "3EW11ZQ2feJf0sILCZnqGV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Love Me or Leave Me (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:3EW11ZQ2feJf0sILCZnqGV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 215746,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5Lhjlnly9Ynhf52ojQS534"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5Lhjlnly9Ynhf52ojQS534",
-              "id": "5Lhjlnly9Ynhf52ojQS534",
-              "is_local": false,
-              "is_playable": true,
-              "name": "My Baby Just Cares for Me (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:5Lhjlnly9Ynhf52ojQS534"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 327193,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1U5x2J1o03WIsYpviaqMUy"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1U5x2J1o03WIsYpviaqMUy",
-              "id": "1U5x2J1o03WIsYpviaqMUy",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Good Bait (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:1U5x2J1o03WIsYpviaqMUy"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 228104,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/476RII5Mde9Ih5xqYLSqtS"
-              },
-              "href": "https://api.spotify.com/v1/tracks/476RII5Mde9Ih5xqYLSqtS",
-              "id": "476RII5Mde9Ih5xqYLSqtS",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Plain Gold Ring (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:476RII5Mde9Ih5xqYLSqtS"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 225401,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/11QyYNMhpKfrcaQZIEZagz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/11QyYNMhpKfrcaQZIEZagz",
-              "id": "11QyYNMhpKfrcaQZIEZagz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "You'll Never Walk Alone (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:11QyYNMhpKfrcaQZIEZagz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7G1GBhoKtEPnP86X2PvEYO"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7G1GBhoKtEPnP86X2PvEYO",
-                  "id": "7G1GBhoKtEPnP86X2PvEYO",
-                  "name": "Nina Simone",
-                  "type": "artist",
-                  "uri": "spotify:artist:7G1GBhoKtEPnP86X2PvEYO"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 249781,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4FAlUftWQumDz5tatkN9VH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4FAlUftWQumDz5tatkN9VH",
-              "id": "4FAlUftWQumDz5tatkN9VH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Loves You Porgy (2013 - Remaster)",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:4FAlUftWQumDz5tatkN9VH"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 10
-        },
-        "type": "album",
-        "uri": "spotify:album:01NGiVifTgrJzdwtgHyfU3"
-      },
-      "release_date": "2013-08-27",
-      "release_date_precision": "day",
-      "total_tracks": 10,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 240610,
-          "explicit": false,
-          "id": "3rlEbh8f1o88gsBFkwV6bh",
-          "name": "Mood Indigo (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 190370,
-          "explicit": false,
-          "id": "32wq8cLbp3qaOlkNcDneIT",
-          "name": "Don't Smoke in Bed (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 149330,
-          "explicit": false,
-          "id": "7dfKrqvN9GDE6pzsrdI9uN",
-          "name": "He Needs Me (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 257624,
-          "explicit": false,
-          "id": "0fpohcklLKNLo3FyjVjEsE",
-          "name": "Little Girl Blue (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 201390,
-          "explicit": false,
-          "id": "3EW11ZQ2feJf0sILCZnqGV",
-          "name": "Love Me or Leave Me (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 215746,
-          "explicit": false,
-          "id": "5Lhjlnly9Ynhf52ojQS534",
-          "name": "My Baby Just Cares for Me (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 327193,
-          "explicit": false,
-          "id": "1U5x2J1o03WIsYpviaqMUy",
-          "name": "Good Bait (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 228104,
-          "explicit": false,
-          "id": "476RII5Mde9Ih5xqYLSqtS",
-          "name": "Plain Gold Ring (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 225401,
-          "explicit": false,
-          "id": "11QyYNMhpKfrcaQZIEZagz",
-          "name": "You'll Never Walk Alone (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "7G1GBhoKtEPnP86X2PvEYO",
-              "name": "Nina Simone"
-            }
-          ],
-          "duration_ms": 249781,
-          "explicit": false,
-          "id": "4FAlUftWQumDz5tatkN9VH",
-          "name": "I Loves You Porgy (2013 - Remaster)",
-          "preview_url": null,
-          "track_number": 10
-        }
-      ],
-      "url": "https://open.spotify.com/album/01NGiVifTgrJzdwtgHyfU3"
     }
   },
-  "spotify_id": "01NGiVifTgrJzdwtgHyfU3",
-  "spotify_url": "https://open.spotify.com/album/01NGiVifTgrJzdwtgHyfU3",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Soul-Jazz"
   ],
@@ -1164,6 +575,6 @@
       "title": "Summertime"
     }
   ],
-  "updated_at": "2025-07-05T17:41:20.689559",
+  "updated_at": "2025-07-07T19:03:51.199922",
   "year": 2012
 }

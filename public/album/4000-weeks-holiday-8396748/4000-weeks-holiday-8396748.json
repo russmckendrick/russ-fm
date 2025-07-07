@@ -17,7 +17,7 @@
   ],
   "artists_wikipedia": {},
   "country": "Europe",
-  "created_at": "2025-07-05T19:12:49.354065",
+  "created_at": "2025-07-07T19:03:04.774576",
   "date_added": "2016-09-21T18:13:35-07:00",
   "discogs_id": "8396748",
   "discogs_url": "https://www.discogs.com/release/8396748-Ian-Dury-And-The-Music-Students-4000-Weeks-Holiday",
@@ -29,17 +29,29 @@
     "Rock"
   ],
   "id": "8396748",
-  "images": [],
+  "images": [
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/4-000-weeks-holiday-8396748",
+      "width": 2000
+    }
+  ],
   "labels": [
     "Demon Records"
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-hi-res.jpg",
+    "medium": "../public/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-medium.jpg",
+    "small": "../public/album/4000-weeks-holiday-8396748/4000-weeks-holiday-8396748-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:13:01.234419",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:03:13.322676",
     "services_used": [
       "discogs"
     ]
@@ -118,6 +130,6 @@
       "title": "Really Glad You Came"
     }
   ],
-  "updated_at": "2025-07-05T19:13:01.233589",
+  "updated_at": "2025-07-07T19:03:12.630318",
   "year": 2014
 }

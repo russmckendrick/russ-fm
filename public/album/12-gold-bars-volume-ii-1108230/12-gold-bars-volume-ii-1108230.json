@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T18:47:37.399576",
+  "created_at": "2025-07-07T18:59:48.625620",
   "date_added": "2015-10-14T18:38:58-07:00",
   "discogs_id": "1108230",
   "discogs_url": "https://www.discogs.com/release/1108230-Status-Quo-12-Gold-Bars-Volume-II",
@@ -117,6 +117,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/NmlWFm5KyHgV5FnuEvX-LnjOoJTNj3fvjrSkKB1FgPQ/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDgy/MzAtMTc0MDQ3OTAy/MS01OTQ5LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/12-gold-bars-volume-i-i-1108230/12-gold-bars-volume-i-i-1108230.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -125,11 +132,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/12-gold-bars-volume-ii-1108230/12-gold-bars-volume-ii-1108230-hi-res.jpg",
+    "medium": "../public/album/12-gold-bars-volume-ii-1108230/12-gold-bars-volume-ii-1108230-medium.jpg",
+    "small": "../public/album/12-gold-bars-volume-ii-1108230/12-gold-bars-volume-ii-1108230-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T18:47:48.948646",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T18:59:53.107680",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -307,6 +318,6 @@
       "title": "Caroline (Live At The N.E.C.)"
     }
   ],
-  "updated_at": "2025-07-05T18:47:48.947738",
+  "updated_at": "2025-07-07T18:59:52.265397",
   "year": 1984
 }

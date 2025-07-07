@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1576926251",
-  "apple_music_url": "https://music.apple.com/gb/album/northeast-corridor-steely-dan-live-live/1576926251",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59606",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T18:04:27.618727",
+  "created_at": "2025-07-07T19:01:05.507964",
   "date_added": "2015-09-11T18:02:24-07:00",
   "discogs_id": "434956",
   "discogs_url": "https://www.discogs.com/release/434956-Steely-Dan-Greatest-Hits",
@@ -112,8 +112,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ec/61/38/ec613884-b4bd-e8ed-4b57-e28a77625240/21UMGIM29947.rgb.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/greatest-hits-434956/greatest-hits-434956.jpg",
       "width": 2000
     }
   ],
@@ -123,68 +123,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Steely+Dan/Greatest+Hits",
   "local_images": {
-    "hi-res": "public/album/greatest-hits-434956/greatest-hits-434956-hi-res.jpg",
-    "medium": "public/album/greatest-hits-434956/greatest-hits-434956-medium.jpg",
-    "small": "public/album/greatest-hits-434956/greatest-hits-434956-small.jpg"
+    "hi-res": "../public/album/greatest-hits-434956/greatest-hits-434956-hi-res.jpg",
+    "medium": "../public/album/greatest-hits-434956/greatest-hits-434956-medium.jpg",
+    "small": "../public/album/greatest-hits-434956/greatest-hits-434956-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T18:04:31.366682",
+    "processed_at": "2025-07-07T19:01:21.418366",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "NORTHEAST CORRIDOR: STEELY DAN LIVE (Live)",
+  "release_name_apple_music": null,
   "release_name_discogs": "Greatest Hits",
-  "release_name_spotify": "Can't Buy A Thrill",
+  "release_name_spotify": null,
   "released": null,
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ec/61/38/ec613884-b4bd-e8ed-4b57-e28a77625240/21UMGIM29947.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "A Universal Music Enterprises release; This Compilation ℗ 2021 Nightfly Productions, Inc., under exclusive license to UMG Recordings, Inc.",
-      "editorial_notes": null,
-      "id": "1576926251",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Steely Dan",
-        "artwork": {
-          "bgColor": "221b15",
-          "height": 3000,
-          "textColor1": "fbfbfb",
-          "textColor2": "a3c6f1",
-          "textColor3": "d0cecd",
-          "textColor4": "89a3c5",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ec/61/38/ec613884-b4bd-e8ed-4b57-e28a77625240/21UMGIM29947.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "A Universal Music Enterprises release; This Compilation ℗ 2021 Nightfly Productions, Inc., under exclusive license to UMG Recordings, Inc.",
-        "genreNames": [
-          "Rock",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": true,
-        "isSingle": false,
-        "name": "NORTHEAST CORRIDOR: STEELY DAN LIVE (Live)",
-        "playParams": {
-          "id": "1576926251",
-          "kind": "album"
-        },
-        "recordLabel": "Geffen",
-        "releaseDate": "2021-09-24",
-        "trackCount": 12,
-        "upc": "00602438350988",
-        "url": "https://music.apple.com/gb/album/northeast-corridor-steely-dan-live-live/1576926251"
-      },
-      "url": "https://music.apple.com/gb/album/northeast-corridor-steely-dan-live-live/1576926251"
-    },
     "lastfm": {
       "images": [
         {
@@ -214,7 +170,7 @@
       ],
       "listeners": 4434,
       "mbid": "6643687c-ed5d-42b5-9655-c8b6c2c1ca20",
-      "playcount": 43693,
+      "playcount": 43697,
       "raw_data": {
         "album": {
           "artist": "Steely Dan",
@@ -247,7 +203,7 @@
           "listeners": "4434",
           "mbid": "6643687c-ed5d-42b5-9655-c8b6c2c1ca20",
           "name": "Greatest Hits",
-          "playcount": "43693",
+          "playcount": "43697",
           "tags": {
             "tag": [
               {
@@ -598,555 +554,10 @@
       "url": "https://www.last.fm/music/Steely+Dan/Greatest+Hits",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "© 2022 UMG Recordings, Inc.",
-          "type": "C"
-        },
-        {
-          "text": "℗ 2022 UMG Recordings, Inc.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "00602448574596"
-      },
-      "id": "6DlSUW5gmq6Byc3osKDJ2p",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2730ddd7e736f870994f4707947",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e020ddd7e736f870994f4707947",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048510ddd7e736f870994f4707947",
-          "width": 64
-        }
-      ],
-      "label": "Geffen",
-      "popularity": 75,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-            },
-            "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-            "id": "6P7H3ai06vU1sGvdpBwDmE",
-            "name": "Steely Dan",
-            "type": "artist",
-            "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 2022 UMG Recordings, Inc.",
-            "type": "C"
-          },
-          {
-            "text": "℗ 2022 UMG Recordings, Inc.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "00602448574596"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6DlSUW5gmq6Byc3osKDJ2p"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/6DlSUW5gmq6Byc3osKDJ2p?market=US",
-        "id": "6DlSUW5gmq6Byc3osKDJ2p",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2730ddd7e736f870994f4707947",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e020ddd7e736f870994f4707947",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048510ddd7e736f870994f4707947",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Geffen",
-        "name": "Can't Buy A Thrill",
-        "popularity": 75,
-        "release_date": "1972-11-01",
-        "release_date_precision": "day",
-        "total_tracks": 10,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/6DlSUW5gmq6Byc3osKDJ2p/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 357041,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2LXISHBkx8FyoxCBkckh19"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2LXISHBkx8FyoxCBkckh19",
-              "id": "2LXISHBkx8FyoxCBkckh19",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Do It Again",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:2LXISHBkx8FyoxCBkckh19"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 190065,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3IvTwPCCjfZczCN2k4qPiH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3IvTwPCCjfZczCN2k4qPiH",
-              "id": "3IvTwPCCjfZczCN2k4qPiH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dirty Work",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:3IvTwPCCjfZczCN2k4qPiH"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 227788,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5nTxjFOvyjXoOIqcZsiy5E"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5nTxjFOvyjXoOIqcZsiy5E",
-              "id": "5nTxjFOvyjXoOIqcZsiy5E",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Kings",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:5nTxjFOvyjXoOIqcZsiy5E"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 252327,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7y5nJToPWMjtJLcLEGxyGf"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7y5nJToPWMjtJLcLEGxyGf",
-              "id": "7y5nJToPWMjtJLcLEGxyGf",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Midnite Cruiser",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:7y5nJToPWMjtJLcLEGxyGf"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 175273,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7GVvj4zJNVuBJSl6StEfn5"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7GVvj4zJNVuBJSl6StEfn5",
-              "id": "7GVvj4zJNVuBJSl6StEfn5",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Only A Fool Would Say That",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:7GVvj4zJNVuBJSl6StEfn5"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 277467,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1x1XQqhBViz4opcpwc7FVs"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1x1XQqhBViz4opcpwc7FVs",
-              "id": "1x1XQqhBViz4opcpwc7FVs",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Reelin' In The Years",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:1x1XQqhBViz4opcpwc7FVs"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 209767,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1CZR9j4cF4r2uuCpiMdsX5"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1CZR9j4cF4r2uuCpiMdsX5",
-              "id": "1CZR9j4cF4r2uuCpiMdsX5",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Fire In The Hole",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:1CZR9j4cF4r2uuCpiMdsX5"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 261940,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0t9IrTpcOWuTBKfjlQhuyF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0t9IrTpcOWuTBKfjlQhuyF",
-              "id": "0t9IrTpcOWuTBKfjlQhuyF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Brooklyn (Owes The Charmer Under Me)",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:0t9IrTpcOWuTBKfjlQhuyF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 219716,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1hKDXDtgKCgdVi0L6wtXN0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1hKDXDtgKCgdVi0L6wtXN0",
-              "id": "1hKDXDtgKCgdVi0L6wtXN0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Change Of The Guard",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:1hKDXDtgKCgdVi0L6wtXN0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6P7H3ai06vU1sGvdpBwDmE"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6P7H3ai06vU1sGvdpBwDmE",
-                  "id": "6P7H3ai06vU1sGvdpBwDmE",
-                  "name": "Steely Dan",
-                  "type": "artist",
-                  "uri": "spotify:artist:6P7H3ai06vU1sGvdpBwDmE"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 298832,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/32Cb6Yj9sfVcNjqqXJxYC4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/32Cb6Yj9sfVcNjqqXJxYC4",
-              "id": "32Cb6Yj9sfVcNjqqXJxYC4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Turn That Heartbeat Over Again",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:32Cb6Yj9sfVcNjqqXJxYC4"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 10
-        },
-        "type": "album",
-        "uri": "spotify:album:6DlSUW5gmq6Byc3osKDJ2p"
-      },
-      "release_date": "1972-11-01",
-      "release_date_precision": "day",
-      "total_tracks": 10,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 357041,
-          "explicit": false,
-          "id": "2LXISHBkx8FyoxCBkckh19",
-          "name": "Do It Again",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 190065,
-          "explicit": false,
-          "id": "3IvTwPCCjfZczCN2k4qPiH",
-          "name": "Dirty Work",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 227788,
-          "explicit": false,
-          "id": "5nTxjFOvyjXoOIqcZsiy5E",
-          "name": "Kings",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 252327,
-          "explicit": false,
-          "id": "7y5nJToPWMjtJLcLEGxyGf",
-          "name": "Midnite Cruiser",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 175273,
-          "explicit": false,
-          "id": "7GVvj4zJNVuBJSl6StEfn5",
-          "name": "Only A Fool Would Say That",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 277467,
-          "explicit": false,
-          "id": "1x1XQqhBViz4opcpwc7FVs",
-          "name": "Reelin' In The Years",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 209767,
-          "explicit": false,
-          "id": "1CZR9j4cF4r2uuCpiMdsX5",
-          "name": "Fire In The Hole",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 261940,
-          "explicit": false,
-          "id": "0t9IrTpcOWuTBKfjlQhuyF",
-          "name": "Brooklyn (Owes The Charmer Under Me)",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 219716,
-          "explicit": false,
-          "id": "1hKDXDtgKCgdVi0L6wtXN0",
-          "name": "Change Of The Guard",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "6P7H3ai06vU1sGvdpBwDmE",
-              "name": "Steely Dan"
-            }
-          ],
-          "duration_ms": 298832,
-          "explicit": false,
-          "id": "32Cb6Yj9sfVcNjqqXJxYC4",
-          "name": "Turn That Heartbeat Over Again",
-          "preview_url": null,
-          "track_number": 10
-        }
-      ],
-      "url": "https://open.spotify.com/album/6DlSUW5gmq6Byc3osKDJ2p"
     }
   },
-  "spotify_id": "6DlSUW5gmq6Byc3osKDJ2p",
-  "spotify_url": "https://open.spotify.com/album/6DlSUW5gmq6Byc3osKDJ2p",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Classic Rock"
   ],
@@ -1261,6 +672,6 @@
       "title": "Josie"
     }
   ],
-  "updated_at": "2025-07-05T18:04:28.675167",
+  "updated_at": "2025-07-07T19:01:21.136952",
   "year": 0
 }

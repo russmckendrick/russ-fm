@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1751195189",
-  "apple_music_url": "https://music.apple.com/gb/album/black-gives-way-to-blue/1751195189",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "462221",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T17:39:58.014963",
+  "created_at": "2025-07-07T19:02:40.323280",
   "date_added": "2016-10-01T10:34:46-07:00",
   "discogs_id": "3566414",
   "discogs_url": "https://www.discogs.com/release/3566414-Alice-In-Chains-Jar-Of-Flies-Sap",
@@ -177,8 +177,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/93/f0/5693f0a1-6f94-f25e-9429-003d8684dcb6/24CRGIM42051.rgb.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414.jpg",
       "width": 2000
     }
   ],
@@ -189,69 +189,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Alice+in+Chains/Jar+of+Flies+%2F+Sap",
   "local_images": {
-    "hi-res": "public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-hi-res.jpg",
-    "medium": "public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-medium.jpg",
-    "small": "public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-small.jpg"
+    "hi-res": "../public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-hi-res.jpg",
+    "medium": "../public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-medium.jpg",
+    "small": "../public/album/jar-of-flies-sap-3566414/jar-of-flies-sap-3566414-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:40:00.196031",
+    "processed_at": "2025-07-07T19:02:49.957176",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Black Gives Way To Blue",
+  "release_name_apple_music": null,
   "release_name_discogs": "Jar Of Flies / Sap",
-  "release_name_spotify": "Jar Of Flies",
+  "release_name_spotify": null,
   "released": "2010-04-06",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/93/f0/5693f0a1-6f94-f25e-9429-003d8684dcb6/24CRGIM42051.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": "explicit",
-      "copyright": "℗ 2009 Craft Recordings., Distributed by Concord.",
-      "editorial_notes": null,
-      "id": "1751195189",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Alice In Chains",
-        "artwork": {
-          "bgColor": "0c0d0f",
-          "height": 3000,
-          "textColor1": "ddd9c7",
-          "textColor2": "c3c3b3",
-          "textColor3": "b3b0a2",
-          "textColor4": "9e9e92",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/93/f0/5693f0a1-6f94-f25e-9429-003d8684dcb6/24CRGIM42051.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "contentRating": "explicit",
-        "copyright": "℗ 2009 Craft Recordings., Distributed by Concord.",
-        "genreNames": [
-          "Rock",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Black Gives Way To Blue",
-        "playParams": {
-          "id": "1751195189",
-          "kind": "album"
-        },
-        "recordLabel": "Craft Recordings",
-        "releaseDate": "2009-09-29",
-        "trackCount": 13,
-        "upc": "00197187154159",
-        "url": "https://music.apple.com/gb/album/black-gives-way-to-blue/1751195189"
-      },
-      "url": "https://music.apple.com/gb/album/black-gives-way-to-blue/1751195189"
-    },
     "lastfm": {
       "images": [
         {
@@ -281,7 +236,7 @@
       ],
       "listeners": 2271,
       "mbid": "0c73b051-7536-4f8f-a96b-424f58db31b3",
-      "playcount": 26979,
+      "playcount": 26984,
       "raw_data": {
         "album": {
           "artist": "Alice in Chains",
@@ -314,7 +269,7 @@
           "listeners": "2271",
           "mbid": "0c73b051-7536-4f8f-a96b-424f58db31b3",
           "name": "Jar of Flies / Sap",
-          "playcount": "26979",
+          "playcount": "26984",
           "tags": {
             "tag": [
               {
@@ -563,418 +518,10 @@
       "url": "https://www.last.fm/music/Alice+in+Chains/Jar+of+Flies+%2F+Sap",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "(P) 1993 Sony Music Entertainment Inc.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "5099747485527"
-      },
-      "id": "4FCoFSNIFhK36holxHWCnc",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27325b42be683b8d3c6500db726",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0225b42be683b8d3c6500db726",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485125b42be683b8d3c6500db726",
-          "width": 64
-        }
-      ],
-      "label": "Columbia",
-      "popularity": 75,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-            },
-            "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-            "id": "64tNsm6TnZe2zpcMVMOoHL",
-            "name": "Alice In Chains",
-            "type": "artist",
-            "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "(P) 1993 Sony Music Entertainment Inc.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "5099747485527"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4FCoFSNIFhK36holxHWCnc"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/4FCoFSNIFhK36holxHWCnc?market=US",
-        "id": "4FCoFSNIFhK36holxHWCnc",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27325b42be683b8d3c6500db726",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0225b42be683b8d3c6500db726",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485125b42be683b8d3c6500db726",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Columbia",
-        "name": "Jar Of Flies",
-        "popularity": 75,
-        "release_date": "1994",
-        "release_date_precision": "year",
-        "total_tracks": 7,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/4FCoFSNIFhK36holxHWCnc/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 418466,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7Fm3NhbAYHvTQUhboim9FB"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7Fm3NhbAYHvTQUhboim9FB",
-              "id": "7Fm3NhbAYHvTQUhboim9FB",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Rotten Apple",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7Fm3NhbAYHvTQUhboim9FB"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 259200,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2JuasWPUodaUxf5nwNpciQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2JuasWPUodaUxf5nwNpciQ",
-              "id": "2JuasWPUodaUxf5nwNpciQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Nutshell",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:2JuasWPUodaUxf5nwNpciQ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 254400,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6HnZsLUDrG3HTSbh8sq2u3"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6HnZsLUDrG3HTSbh8sq2u3",
-              "id": "6HnZsLUDrG3HTSbh8sq2u3",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Stay Away",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:6HnZsLUDrG3HTSbh8sq2u3"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 255573,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4PtZE0h5oyPhCtPjg3NeYQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4PtZE0h5oyPhCtPjg3NeYQ",
-              "id": "4PtZE0h5oyPhCtPjg3NeYQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "No Excuses",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:4PtZE0h5oyPhCtPjg3NeYQ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 157026,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6sINqYye7GkRMmTRGlHnY7"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6sINqYye7GkRMmTRGlHnY7",
-              "id": "6sINqYye7GkRMmTRGlHnY7",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Whale & Wasp",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:6sINqYye7GkRMmTRGlHnY7"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 262133,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7CI0VS6ETno5mgHi4PoCrY"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7CI0VS6ETno5mgHi4PoCrY",
-              "id": "7CI0VS6ETno5mgHi4PoCrY",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Don't Follow",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:7CI0VS6ETno5mgHi4PoCrY"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/64tNsm6TnZe2zpcMVMOoHL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/64tNsm6TnZe2zpcMVMOoHL",
-                  "id": "64tNsm6TnZe2zpcMVMOoHL",
-                  "name": "Alice In Chains",
-                  "type": "artist",
-                  "uri": "spotify:artist:64tNsm6TnZe2zpcMVMOoHL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 244373,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2Gw3Xa08XleghwGUmNcPLK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2Gw3Xa08XleghwGUmNcPLK",
-              "id": "2Gw3Xa08XleghwGUmNcPLK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Swing On This",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:2Gw3Xa08XleghwGUmNcPLK"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 7
-        },
-        "type": "album",
-        "uri": "spotify:album:4FCoFSNIFhK36holxHWCnc"
-      },
-      "release_date": "1994",
-      "release_date_precision": "year",
-      "total_tracks": 7,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 418466,
-          "explicit": false,
-          "id": "7Fm3NhbAYHvTQUhboim9FB",
-          "name": "Rotten Apple",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 259200,
-          "explicit": false,
-          "id": "2JuasWPUodaUxf5nwNpciQ",
-          "name": "Nutshell",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 254400,
-          "explicit": false,
-          "id": "6HnZsLUDrG3HTSbh8sq2u3",
-          "name": "I Stay Away",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 255573,
-          "explicit": false,
-          "id": "4PtZE0h5oyPhCtPjg3NeYQ",
-          "name": "No Excuses",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 157026,
-          "explicit": false,
-          "id": "6sINqYye7GkRMmTRGlHnY7",
-          "name": "Whale & Wasp",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 262133,
-          "explicit": false,
-          "id": "7CI0VS6ETno5mgHi4PoCrY",
-          "name": "Don't Follow",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "64tNsm6TnZe2zpcMVMOoHL",
-              "name": "Alice In Chains"
-            }
-          ],
-          "duration_ms": 244373,
-          "explicit": false,
-          "id": "2Gw3Xa08XleghwGUmNcPLK",
-          "name": "Swing On This",
-          "preview_url": null,
-          "track_number": 7
-        }
-      ],
-      "url": "https://open.spotify.com/album/4FCoFSNIFhK36holxHWCnc"
     }
   },
-  "spotify_id": "4FCoFSNIFhK36holxHWCnc",
-  "spotify_url": "https://open.spotify.com/album/4FCoFSNIFhK36holxHWCnc",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Grunge"
   ],
@@ -1221,6 +768,6 @@
       "title": "Love Song"
     }
   ],
-  "updated_at": "2025-07-05T17:39:59.011714",
+  "updated_at": "2025-07-07T19:02:49.142702",
   "year": 2010
 }

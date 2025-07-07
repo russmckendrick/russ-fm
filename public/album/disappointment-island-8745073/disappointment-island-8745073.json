@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T17:42:38.585875",
+  "created_at": "2025-07-07T19:04:22.637847",
   "date_added": "2016-08-30T16:04:51-07:00",
   "discogs_id": "8745073",
   "discogs_url": "https://www.discogs.com/release/8745073-TTNG-Disappointment-Island",
@@ -54,6 +54,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/lXW5LvWbJsCf42R_P7NGan8EAZO6CfMm8XwIBIlCr9k/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg3NDUw/NzMtMTYzNjQ4NTgy/NS03ODIyLnBuZw.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/disappointment-island-8745073/disappointment-island-8745073.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -61,23 +68,574 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/disappointment-island-8745073/disappointment-island-8745073-hi-res.jpg",
+    "medium": "../public/album/disappointment-island-8745073/disappointment-island-8745073-medium.jpg",
+    "small": "../public/album/disappointment-island-8745073/disappointment-island-8745073-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:42:42.148463",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:04:27.590392",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Disappointment Island",
-  "release_name_spotify": null,
+  "release_name_spotify": "Disappointment Island",
   "released": "2016-07-08",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2016 Sargent House",
+          "type": "C"
+        },
+        {
+          "text": "2016 Sargent House",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "634457718920"
+      },
+      "id": "4mhni2BF52EZlZQlvvGaHx",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27330a55747eb33663330d79a43",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0230a55747eb33663330d79a43",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485130a55747eb33663330d79a43",
+          "width": 64
+        }
+      ],
+      "label": "Sargent House",
+      "popularity": 32,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+            },
+            "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+            "id": "5TUa95aB5Vu2CzwCnZd6t0",
+            "name": "TTNG",
+            "type": "artist",
+            "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2016 Sargent House",
+            "type": "C"
+          },
+          {
+            "text": "2016 Sargent House",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "634457718920"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4mhni2BF52EZlZQlvvGaHx"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4mhni2BF52EZlZQlvvGaHx?market=US",
+        "id": "4mhni2BF52EZlZQlvvGaHx",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27330a55747eb33663330d79a43",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0230a55747eb33663330d79a43",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485130a55747eb33663330d79a43",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Sargent House",
+        "name": "Disappointment Island",
+        "popularity": 32,
+        "release_date": "2016-07-08",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4mhni2BF52EZlZQlvvGaHx/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 232893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3s92PyZb2AmQXcBKYL5csD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3s92PyZb2AmQXcBKYL5csD",
+              "id": "3s92PyZb2AmQXcBKYL5csD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Coconut Crab",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3s92PyZb2AmQXcBKYL5csD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 174680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/22hFP39c9kSRoEsh3vqiKf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/22hFP39c9kSRoEsh3vqiKf",
+              "id": "22hFP39c9kSRoEsh3vqiKf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "A Chase of Sorts",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:22hFP39c9kSRoEsh3vqiKf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 253933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4mHsxZ9tv71NVGmnkAHvq6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4mHsxZ9tv71NVGmnkAHvq6",
+              "id": "4mHsxZ9tv71NVGmnkAHvq6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Consoling Ghosts",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:4mHsxZ9tv71NVGmnkAHvq6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 256186,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/54Zs1Tdy6Rl8BDZk0dZD1Y"
+              },
+              "href": "https://api.spotify.com/v1/tracks/54Zs1Tdy6Rl8BDZk0dZD1Y",
+              "id": "54Zs1Tdy6Rl8BDZk0dZD1Y",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In Praise of Idleness",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:54Zs1Tdy6Rl8BDZk0dZD1Y"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 337146,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4IPJGhEfmcmpUl2uz4mr6U"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4IPJGhEfmcmpUl2uz4mr6U",
+              "id": "4IPJGhEfmcmpUl2uz4mr6U",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Whatever, Whenever",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4IPJGhEfmcmpUl2uz4mr6U"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 271400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4jHXCdhWuhP8w79D0kUcv4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4jHXCdhWuhP8w79D0kUcv4",
+              "id": "4jHXCdhWuhP8w79D0kUcv4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bliss Quest",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4jHXCdhWuhP8w79D0kUcv4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 232040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6rUDE8e1z24XIMhOXo4NrP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6rUDE8e1z24XIMhOXo4NrP",
+              "id": "6rUDE8e1z24XIMhOXo4NrP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "There's no 'I' in Time",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:6rUDE8e1z24XIMhOXo4NrP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 236146,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/08rOvglpC2npu9WriHlo2A"
+              },
+              "href": "https://api.spotify.com/v1/tracks/08rOvglpC2npu9WriHlo2A",
+              "id": "08rOvglpC2npu9WriHlo2A",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Destroy the Tabernacle!",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:08rOvglpC2npu9WriHlo2A"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 192773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6JdhnCcGEvYwNzX391Xxdq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6JdhnCcGEvYwNzX391Xxdq",
+              "id": "6JdhnCcGEvYwNzX391Xxdq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sponkulus Nodge",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:6JdhnCcGEvYwNzX391Xxdq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5TUa95aB5Vu2CzwCnZd6t0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5TUa95aB5Vu2CzwCnZd6t0",
+                  "id": "5TUa95aB5Vu2CzwCnZd6t0",
+                  "name": "TTNG",
+                  "type": "artist",
+                  "uri": "spotify:artist:5TUa95aB5Vu2CzwCnZd6t0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 303133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1j1PSByh2HB4bg34yPfd8F"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1j1PSByh2HB4bg34yPfd8F",
+              "id": "1j1PSByh2HB4bg34yPfd8F",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Empty Palms",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1j1PSByh2HB4bg34yPfd8F"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 10
+        },
+        "type": "album",
+        "uri": "spotify:album:4mhni2BF52EZlZQlvvGaHx"
+      },
+      "release_date": "2016-07-08",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 232893,
+          "explicit": false,
+          "id": "3s92PyZb2AmQXcBKYL5csD",
+          "name": "Coconut Crab",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 174680,
+          "explicit": false,
+          "id": "22hFP39c9kSRoEsh3vqiKf",
+          "name": "A Chase of Sorts",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 253933,
+          "explicit": false,
+          "id": "4mHsxZ9tv71NVGmnkAHvq6",
+          "name": "Consoling Ghosts",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 256186,
+          "explicit": false,
+          "id": "54Zs1Tdy6Rl8BDZk0dZD1Y",
+          "name": "In Praise of Idleness",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 337146,
+          "explicit": false,
+          "id": "4IPJGhEfmcmpUl2uz4mr6U",
+          "name": "Whatever, Whenever",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 271400,
+          "explicit": false,
+          "id": "4jHXCdhWuhP8w79D0kUcv4",
+          "name": "Bliss Quest",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 232040,
+          "explicit": false,
+          "id": "6rUDE8e1z24XIMhOXo4NrP",
+          "name": "There's no 'I' in Time",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 236146,
+          "explicit": false,
+          "id": "08rOvglpC2npu9WriHlo2A",
+          "name": "Destroy the Tabernacle!",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 192773,
+          "explicit": false,
+          "id": "6JdhnCcGEvYwNzX391Xxdq",
+          "name": "Sponkulus Nodge",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "5TUa95aB5Vu2CzwCnZd6t0",
+              "name": "TTNG"
+            }
+          ],
+          "duration_ms": 303133,
+          "explicit": false,
+          "id": "1j1PSByh2HB4bg34yPfd8F",
+          "name": "Empty Palms",
+          "preview_url": null,
+          "track_number": 10
+        }
+      ],
+      "url": "https://open.spotify.com/album/4mhni2BF52EZlZQlvvGaHx"
+    }
+  },
+  "spotify_id": "4mhni2BF52EZlZQlvvGaHx",
+  "spotify_url": "https://open.spotify.com/album/4mhni2BF52EZlZQlvvGaHx",
   "styles": [
     "Emo",
     "Indie Rock"
@@ -145,6 +703,6 @@
       "title": "Empty Palms"
     }
   ],
-  "updated_at": "2025-07-05T17:42:42.148189",
+  "updated_at": "2025-07-07T19:04:27.083622",
   "year": 2016
 }
