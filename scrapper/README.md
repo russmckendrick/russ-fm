@@ -130,6 +130,9 @@ python main.py release 123456 --search "Custom Album Title"
 # Override album artwork with custom image URL
 python main.py release 123456 --custom-cover "https://example.com/custom-cover.jpg"
 
+# Fetch album artwork from v1.russ.fm site
+python main.py release 123456 --v1
+
 # Combine custom search and cover
 python main.py release 123456 --force-refresh --interactive --search "Tim's Listening Party Part Two" --custom-cover "https://spindizzyrecords.com/cdn/shop/files/custom-cover.jpg"
 ```
@@ -148,6 +151,9 @@ python main.py artist "The Beatles" --output yaml
 
 # Force refresh from APIs
 python main.py artist "The Beatles" --force-refresh
+
+# Fetch artist image from v1.russ.fm site
+python main.py artist "The Beatles" --v1
 ```
 
 #### Collection Processing
@@ -263,6 +269,32 @@ This is perfect for:
 - Custom or fan-made artwork
 - Correcting incorrect artwork matches
 
+#### V1 Site Integration
+
+Use `--v1` to fetch images from your v1.russ.fm site collection:
+
+```bash
+# Fetch release artwork from v1 site
+python main.py release 21874351 --v1
+
+# Fetch artist image from v1 site  
+python main.py artist "Motörhead" --v1
+```
+
+The system automatically:
+- Downloads and caches the v1 site index (3,076+ entries)
+- Searches by exact Discogs release ID for albums
+- Searches by artist name (case-insensitive) for artists
+- Handles special characters and URL formatting automatically
+- Uses exact image URLs from the v1 site index
+- Caches the index for 24 hours to avoid repeated downloads
+
+This is perfect for:
+- Using your existing high-quality v1 site images
+- Maintaining consistency with your previous collection
+- Getting exact matches without URL guessing
+- Handling special characters (Motörhead, etc.) correctly
+
 #### Custom Artist Images
 
 Use `--custom-image` to override artist images with a custom image URL:
@@ -293,6 +325,12 @@ python main.py release 123456 --force-refresh --interactive \
 # Use custom image with artist enrichment
 python main.py artist "Claudia Brücken" --force-refresh --interactive \
   --custom-image "https://www.russ.fm/artists/claudia-brucken/claudia-brucken.jpg"
+
+# Use v1 site image for existing collection consistency
+python main.py artist "Motörhead" --v1
+
+# Combine v1 with custom options for releases
+python main.py release 21874351 --v1 --force-refresh --interactive
 ```
 
 ### Global Options

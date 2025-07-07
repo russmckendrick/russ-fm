@@ -29,7 +29,7 @@ class BaseCommand:
 class ReleaseCommand(BaseCommand):
     """Command for handling single release operations."""
     
-    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None):
+    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False):
         """Execute the release command."""
         try:
             # Initialize orchestrator
@@ -56,6 +56,31 @@ class ReleaseCommand(BaseCommand):
             if custom_cover:
                 orchestrator.set_custom_cover(custom_cover)
                 self.console.print(f"[yellow]Using custom cover: '{custom_cover}'[/yellow]")
+            
+            # Handle v1 flag - fetch image from v1.russ.fm
+            if v1:
+                from ..utils.v1_site_helper import V1SiteHelper
+                
+                self.console.print(f"[blue]Searching v1.russ.fm for release {discogs_id}...[/blue]")
+                try:
+                    # First try with cached data
+                    release_found = V1SiteHelper.find_release_by_discogs_id(discogs_id)
+                    
+                    # If not found, try forcing a fresh download
+                    if not release_found:
+                        self.console.print(f"[yellow]Not found in cache, forcing fresh download...[/yellow]")
+                        release_found = V1SiteHelper.find_release_by_discogs_id(discogs_id, force_refresh=True)
+                    
+                    if release_found and release_found.get("coverImage"):
+                        v1_image_url = release_found["coverImage"]
+                        orchestrator.set_custom_cover(v1_image_url)
+                        self.console.print(f"[green]Found release in v1 index: {release_found.get('title', 'Unknown')}")
+                        self.console.print(f"[yellow]Using v1.russ.fm image: {v1_image_url}[/yellow]")
+                    else:
+                        self.console.print(f"[red]Release {discogs_id} not found in v1.russ.fm index[/red]")
+                        
+                except Exception as e:
+                    self.console.print(f"[red]Error accessing v1.russ.fm data: {str(e)}[/red]")
             
             self.console.print(f"[blue]Fetching release data for Discogs ID: {discogs_id}[/blue]")
             
