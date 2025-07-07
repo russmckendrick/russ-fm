@@ -22,6 +22,7 @@ function ArtistRouteHandler() {
   return <ArtistDetailPage />;
 }
 
+
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -32,13 +33,14 @@ function App() {
       <main className="pt-28">
         <Routes>
           <Route path="/" element={<AlbumsPage searchTerm={searchTerm} />} />
-          <Route path="/albums/:page?" element={<AlbumsPage searchTerm={searchTerm} />} />
+          <Route path="/albums" element={<AlbumsPage searchTerm={searchTerm} />} />
+          <Route path="/albums/:page" element={<AlbumsPage searchTerm={searchTerm} />} />
           <Route path="/artists" element={<ArtistsPage searchTerm={searchTerm} />} />
           <Route path="/artists/:page" element={<ArtistsPage searchTerm={searchTerm} />} />
           <Route path="/artist/:artistPath" element={<ArtistRouteHandler />} />
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
           <Route path="/stats" element={<StatsPage />} />
-          <Route path="/search" element={<SearchResultsPage searchTerm={searchTerm} setSearchTerm={setSearchTerm} />} />
+          <Route path="/search" element={<SearchResultsPage searchTerm={searchTerm} setSearchTerm={searchTerm} />} />
         </Routes>
       </main>
 
