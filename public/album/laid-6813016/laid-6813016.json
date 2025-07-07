@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1445872484",
-  "apple_music_url": "https://music.apple.com/gb/album/laid-deluxe-edition/1445872484",
+  "apple_music_id": "1440923637",
+  "apple_music_url": "https://music.apple.com/gb/album/laid-remastered/1440923637",
   "artists": [
     {
       "apple_music_id": "130451",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T17:18:30.627742",
+  "created_at": "2025-07-07T19:38:45.230630",
   "date_added": "2017-05-04T21:09:51-07:00",
   "discogs_id": "6813016",
   "discogs_url": "https://www.discogs.com/release/6813016-James-Laid",
@@ -134,7 +134,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/db/2f/a2/db2fa272-f3f9-6ccb-e746-6bb3bea7a1d6/14UMGIM45419.rgb.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/3b/68/6f3b6807-d9ff-5db0-82a5-19102e2fd985/06UMGIM58936.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/laid-6813016/laid-6813016.jpg",
       "width": 2000
     }
   ],
@@ -144,14 +151,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/James/Laid",
   "local_images": {
-    "hi-res": "public/album/laid-6813016/laid-6813016-hi-res.jpg",
-    "medium": "public/album/laid-6813016/laid-6813016-medium.jpg",
-    "small": "public/album/laid-6813016/laid-6813016-small.jpg"
+    "hi-res": "../public/album/laid-6813016/laid-6813016-hi-res.jpg",
+    "medium": "../public/album/laid-6813016/laid-6813016-medium.jpg",
+    "small": "../public/album/laid-6813016/laid-6813016-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:18:33.034139",
+    "processed_at": "2025-07-07T19:38:51.125775",
     "services_used": [
       "discogs",
       "apple_music",
@@ -159,52 +166,55 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Laid (Deluxe Edition)",
+  "release_name_apple_music": "Laid (Remastered)",
   "release_name_discogs": "Laid",
   "release_name_spotify": "Laid",
   "released": "2015",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/db/2f/a2/db2fa272-f3f9-6ccb-e746-6bb3bea7a1d6/14UMGIM45419.rgb.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/3b/68/6f3b6807-d9ff-5db0-82a5-19102e2fd985/06UMGIM58936.rgb.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 2014 Mercury Records Limited",
+      "copyright": "This Compilation ℗ 2001 Mercury Records Limited",
       "editorial_notes": null,
-      "id": "1445872484",
+      "id": "1440923637",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "James",
         "artwork": {
-          "bgColor": "a4352c",
-          "height": 1500,
-          "textColor1": "f7ead1",
-          "textColor2": "e1d1a2",
-          "textColor3": "e6c6b0",
-          "textColor4": "d5b18b",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/db/2f/a2/db2fa272-f3f9-6ccb-e746-6bb3bea7a1d6/14UMGIM45419.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 1500
+          "bgColor": "2c1912",
+          "height": 1411,
+          "textColor1": "fbcc3d",
+          "textColor2": "e59b46",
+          "textColor3": "d2a835",
+          "textColor4": "c0813b",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/6f/3b/68/6f3b6807-d9ff-5db0-82a5-19102e2fd985/06UMGIM58936.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 1423
         },
-        "copyright": "℗ 2014 Mercury Records Limited",
+        "copyright": "This Compilation ℗ 2001 Mercury Records Limited",
         "genreNames": [
           "Rock",
-          "Music"
+          "Music",
+          "Alternative",
+          "College Rock",
+          "Adult Alternative"
         ],
         "isCompilation": false,
         "isComplete": true,
-        "isMasteredForItunes": true,
+        "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "Laid (Deluxe Edition)",
+        "name": "Laid (Remastered)",
         "playParams": {
-          "id": "1445872484",
+          "id": "1440923637",
           "kind": "album"
         },
-        "recordLabel": "UMC (Universal Music Catalogue)",
-        "releaseDate": "2015-03-20",
-        "trackCount": 32,
-        "upc": "00602547096524",
-        "url": "https://music.apple.com/gb/album/laid-deluxe-edition/1445872484"
+        "recordLabel": "EMI",
+        "releaseDate": "2001-01-01",
+        "trackCount": 17,
+        "upc": "00731454878722",
+        "url": "https://music.apple.com/gb/album/laid-remastered/1440923637"
       },
-      "url": "https://music.apple.com/gb/album/laid-deluxe-edition/1445872484"
+      "url": "https://music.apple.com/gb/album/laid-remastered/1440923637"
     },
     "lastfm": {
       "images": [
@@ -233,9 +243,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/9a7484bee0df0d75af4eb58bdc181a30.jpg"
         }
       ],
-      "listeners": 426600,
+      "listeners": 426923,
       "mbid": "3b0efac9-5f5f-4d89-a179-8cfdbc84c9ba",
-      "playcount": 3229102,
+      "playcount": 3232361,
       "raw_data": {
         "album": {
           "artist": "James",
@@ -265,10 +275,10 @@
               "size": ""
             }
           ],
-          "listeners": "426600",
+          "listeners": "426923",
           "mbid": "3b0efac9-5f5f-4d89-a179-8cfdbc84c9ba",
           "name": "Laid",
-          "playcount": "3229102",
+          "playcount": "3232361",
           "tags": {
             "tag": [
               {
@@ -474,7 +484,7 @@
                   "name": "James",
                   "url": "https://www.last.fm/music/James"
                 },
-                "duration": 239,
+                "duration": 157,
                 "name": "Laid",
                 "streamable": {
                   "#text": "0",
@@ -1474,6 +1484,6 @@
       "title": "Skindiving"
     }
   ],
-  "updated_at": "2025-07-05T17:18:31.658174",
+  "updated_at": "2025-07-07T19:38:50.853961",
   "year": 2015
 }

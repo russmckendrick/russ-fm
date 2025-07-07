@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "516530926",
+  "apple_music_url": "https://music.apple.com/gb/album/if-youre-feeling-sinister/516530926",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T17:19:36.175091",
+  "created_at": "2025-07-07T19:39:11.702203",
   "date_added": "2017-04-25T08:35:04-07:00",
   "discogs_id": "6242307",
   "discogs_url": "https://www.discogs.com/release/6242307-Belle-And-Sebastian-If-Youre-Feeling-Sinister",
@@ -89,6 +89,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/EqGLLWUeWmUHZazkGKDj8Q5J0FxT_-h_LFAXipdWAu8/rs:fit/g:sm/q:90/h:495/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTYyNDIz/MDctMTU0MTY3MjAz/OS03ODk5LmpwZWc.jpeg",
       "width": 500
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/7d/63/e6/7d63e620-bfa3-173c-d82e-b564b11fd18b/cover.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/if-you-re-feeling-sinister-6242307/if-you-re-feeling-sinister-6242307.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -96,23 +110,626 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/if-youre-feeling-sinister-6242307/if-youre-feeling-sinister-6242307-hi-res.jpg",
+    "medium": "../public/album/if-youre-feeling-sinister-6242307/if-youre-feeling-sinister-6242307-medium.jpg",
+    "small": "../public/album/if-youre-feeling-sinister-6242307/if-youre-feeling-sinister-6242307-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:19:36.811500",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:39:18.391763",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "If You're Feeling Sinister",
   "release_name_discogs": "If You're Feeling Sinister",
-  "release_name_spotify": null,
+  "release_name_spotify": "If You're Feeling Sinister",
   "released": "2014",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/7d/63/e6/7d63e620-bfa3-173c-d82e-b564b11fd18b/cover.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 1996 Jeepster Recordings Ltd",
+      "editorial_notes": "With intimate storytelling, intricate orchestration, and catchy melodies, <i>If You’re Feeling Sinister</i> established the Scottish collective among the most eloquent indie bands of the ‘90s. Using a breezy mix of influences (mid-century French pop, Brit folk and ‘80s indie pop, to name a few) songwriter Stuart Murdoch creates characters who cast the mould for Wes Anderson’s twee, bookish heroes—they’re pensive and precocious, maudlin and mischievous. But ultimately it’s the shimmering melodies of songs like “Dylan in the Movies” and “The Fox in the Snow” that make the album an unforgettable triumph.\n",
+      "id": "516530926",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Belle and Sebastian",
+        "artwork": {
+          "bgColor": "2a0d10",
+          "height": 1440,
+          "textColor1": "fdfdff",
+          "textColor2": "df717c",
+          "textColor3": "d2cccf",
+          "textColor4": "bb5d66",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/7d/63/e6/7d63e620-bfa3-173c-d82e-b564b11fd18b/cover.jpg/{w}x{h}bb.jpg",
+          "width": 1440
+        },
+        "copyright": "℗ 1996 Jeepster Recordings Ltd",
+        "editorialNotes": {
+          "short": "The album that established B&S as one of the most elegant indie bands of the ‘90s.",
+          "standard": "With intimate storytelling, intricate orchestration, and catchy melodies, <i>If You’re Feeling Sinister</i> established the Scottish collective among the most eloquent indie bands of the ‘90s. Using a breezy mix of influences (mid-century French pop, Brit folk and ‘80s indie pop, to name a few) songwriter Stuart Murdoch creates characters who cast the mould for Wes Anderson’s twee, bookish heroes—they’re pensive and precocious, maudlin and mischievous. But ultimately it’s the shimmering melodies of songs like “Dylan in the Movies” and “The Fox in the Snow” that make the album an unforgettable triumph.\n"
+        },
+        "genreNames": [
+          "Pop",
+          "Music",
+          "Alternative",
+          "Pop/Rock",
+          "Rock",
+          "Adult Alternative",
+          "Britpop"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "If You're Feeling Sinister",
+        "playParams": {
+          "id": "516530926",
+          "kind": "album"
+        },
+        "recordLabel": "Jeepster Recordings Ltd",
+        "releaseDate": "1996-11-18",
+        "trackCount": 10,
+        "upc": "5027731785018",
+        "url": "https://music.apple.com/gb/album/if-youre-feeling-sinister/516530926"
+      },
+      "url": "https://music.apple.com/gb/album/if-youre-feeling-sinister/516530926"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "1998 Jeepster Recordings under exclusive license to Matador Records",
+          "type": "C"
+        },
+        {
+          "text": "1998 Jeepster Recordings under exclusive license to Matador Records",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "744861029663"
+      },
+      "id": "3e9VtbXnl6tqrFKrnNyxaI",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f34d475c7d683a9d7b5d1ae2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f34d475c7d683a9d7b5d1ae2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f34d475c7d683a9d7b5d1ae2",
+          "width": 64
+        }
+      ],
+      "label": "Matador",
+      "popularity": 45,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+            },
+            "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+            "id": "4I2BJf80C0skQpp1sQmA0h",
+            "name": "Belle and Sebastian",
+            "type": "artist",
+            "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "1998 Jeepster Recordings under exclusive license to Matador Records",
+            "type": "C"
+          },
+          {
+            "text": "1998 Jeepster Recordings under exclusive license to Matador Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "744861029663"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3e9VtbXnl6tqrFKrnNyxaI"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3e9VtbXnl6tqrFKrnNyxaI?market=US",
+        "id": "3e9VtbXnl6tqrFKrnNyxaI",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273f34d475c7d683a9d7b5d1ae2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02f34d475c7d683a9d7b5d1ae2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851f34d475c7d683a9d7b5d1ae2",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Matador",
+        "name": "If You're Feeling Sinister",
+        "popularity": 45,
+        "release_date": "1998-02-02",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3e9VtbXnl6tqrFKrnNyxaI/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 288293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6q28LN1KJpsYqG5jNFy6rX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6q28LN1KJpsYqG5jNFy6rX",
+              "id": "6q28LN1KJpsYqG5jNFy6rX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Stars of Track and Field",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:6q28LN1KJpsYqG5jNFy6rX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 228040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3XKpwWlhg8sDQrtKqryE74"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3XKpwWlhg8sDQrtKqryE74",
+              "id": "3XKpwWlhg8sDQrtKqryE74",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Seeing Other People",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3XKpwWlhg8sDQrtKqryE74"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 231866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6LgLdukvV66FrzqPfgRngV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6LgLdukvV66FrzqPfgRngV",
+              "id": "6LgLdukvV66FrzqPfgRngV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Me and the Major",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6LgLdukvV66FrzqPfgRngV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 254360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2AXuXJT9Rg6SxlGh2lIGsP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2AXuXJT9Rg6SxlGh2lIGsP",
+              "id": "2AXuXJT9Rg6SxlGh2lIGsP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Like Dylan in the Movies",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2AXuXJT9Rg6SxlGh2lIGsP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 251306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5isoPm20BjbeDOm2iZbT2P"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5isoPm20BjbeDOm2iZbT2P",
+              "id": "5isoPm20BjbeDOm2iZbT2P",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Fox in the Snow",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:5isoPm20BjbeDOm2iZbT2P"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 205360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0T3j1KHC2U00Gw4gaLQBh9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0T3j1KHC2U00Gw4gaLQBh9",
+              "id": "0T3j1KHC2U00Gw4gaLQBh9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get Me Away from Here, I'm Dying",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:0T3j1KHC2U00Gw4gaLQBh9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 321400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4UMNkcouzvSn4Bm3YAxQEb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4UMNkcouzvSn4Bm3YAxQEb",
+              "id": "4UMNkcouzvSn4Bm3YAxQEb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "If You're Feeling Sinister",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4UMNkcouzvSn4Bm3YAxQEb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 222133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1ov6Nnp8ej8aHI6lss1ZEn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1ov6Nnp8ej8aHI6lss1ZEn",
+              "id": "1ov6Nnp8ej8aHI6lss1ZEn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mayfly",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:1ov6Nnp8ej8aHI6lss1ZEn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 257693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7wAqT6YLsw5tXLNS0NLaLQ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7wAqT6YLsw5tXLNS0NLaLQ",
+              "id": "7wAqT6YLsw5tXLNS0NLaLQ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Boy Done Wrong Again",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:7wAqT6YLsw5tXLNS0NLaLQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 220506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2fYbwzIKDvNt6DVaMTXFCD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2fYbwzIKDvNt6DVaMTXFCD",
+              "id": "2fYbwzIKDvNt6DVaMTXFCD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Judy and the Dream of Horses",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2fYbwzIKDvNt6DVaMTXFCD"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 10
+        },
+        "type": "album",
+        "uri": "spotify:album:3e9VtbXnl6tqrFKrnNyxaI"
+      },
+      "release_date": "1998-02-02",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 288293,
+          "explicit": false,
+          "id": "6q28LN1KJpsYqG5jNFy6rX",
+          "name": "The Stars of Track and Field",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 228040,
+          "explicit": false,
+          "id": "3XKpwWlhg8sDQrtKqryE74",
+          "name": "Seeing Other People",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 231866,
+          "explicit": false,
+          "id": "6LgLdukvV66FrzqPfgRngV",
+          "name": "Me and the Major",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 254360,
+          "explicit": false,
+          "id": "2AXuXJT9Rg6SxlGh2lIGsP",
+          "name": "Like Dylan in the Movies",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 251306,
+          "explicit": false,
+          "id": "5isoPm20BjbeDOm2iZbT2P",
+          "name": "The Fox in the Snow",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 205360,
+          "explicit": false,
+          "id": "0T3j1KHC2U00Gw4gaLQBh9",
+          "name": "Get Me Away from Here, I'm Dying",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 321400,
+          "explicit": false,
+          "id": "4UMNkcouzvSn4Bm3YAxQEb",
+          "name": "If You're Feeling Sinister",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 222133,
+          "explicit": false,
+          "id": "1ov6Nnp8ej8aHI6lss1ZEn",
+          "name": "Mayfly",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 257693,
+          "explicit": false,
+          "id": "7wAqT6YLsw5tXLNS0NLaLQ",
+          "name": "The Boy Done Wrong Again",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 220506,
+          "explicit": false,
+          "id": "2fYbwzIKDvNt6DVaMTXFCD",
+          "name": "Judy and the Dream of Horses",
+          "preview_url": null,
+          "track_number": 10
+        }
+      ],
+      "url": "https://open.spotify.com/album/3e9VtbXnl6tqrFKrnNyxaI"
+    }
+  },
+  "spotify_id": "3e9VtbXnl6tqrFKrnNyxaI",
+  "spotify_url": "https://open.spotify.com/album/3e9VtbXnl6tqrFKrnNyxaI",
   "styles": [
     "Indie Rock"
   ],
@@ -179,6 +796,6 @@
       "title": "Judy And The Dream Of Horses"
     }
   ],
-  "updated_at": "2025-07-05T17:19:36.811248",
+  "updated_at": "2025-07-07T19:39:17.612941",
   "year": 2014
 }

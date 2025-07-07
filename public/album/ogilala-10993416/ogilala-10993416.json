@@ -22,7 +22,7 @@
     }
   },
   "country": "USA & Europe",
-  "created_at": "2025-07-05T17:07:44.813362",
+  "created_at": "2025-07-07T19:46:14.646494",
   "date_added": "2017-10-14T10:09:07-07:00",
   "discogs_id": "10993416",
   "discogs_url": "https://www.discogs.com/release/10993416-WPC-Ogilala",
@@ -76,6 +76,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/n4MhX90hJFec_xmfTYe4tQTyGK0iBEDes_G38tlNjLU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwOTkz/NDE2LTE1NTI2MDI5/NjMtNDk0Ni5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/ogilala-10993416/ogilala-10993416.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -84,11 +91,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/WPC/Ogilala",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/ogilala-10993416/ogilala-10993416-hi-res.jpg",
+    "medium": "../public/album/ogilala-10993416/ogilala-10993416-medium.jpg",
+    "small": "../public/album/ogilala-10993416/ogilala-10993416-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:07:45.418114",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:46:22.167539",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -257,6 +268,6 @@
       "title": "Archer"
     }
   ],
-  "updated_at": "2025-07-05T17:07:45.417953",
+  "updated_at": "2025-07-07T19:46:21.519225",
   "year": 2017
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:55:32.309550",
+  "created_at": "2025-07-07T19:44:24.841457",
   "date_added": "2018-02-15T19:24:32-08:00",
   "discogs_id": "1468779",
   "discogs_url": "https://www.discogs.com/release/1468779-Senseless-Things-Easy-To-Smile",
@@ -73,6 +73,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/KYA-WfEm88QX1FZ6blVPN3sXN2Q1Z2K7640WGLfihVc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0Njg3/NzktMTY0ODQ3Nzk5/OC03NDk3LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/easy-to-smile-1468779/easy-to-smile-1468779.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -80,11 +87,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Senseless+Things/Easy+to+Smile",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/easy-to-smile-1468779/easy-to-smile-1468779-hi-res.jpg",
+    "medium": "../public/album/easy-to-smile-1468779/easy-to-smile-1468779-medium.jpg",
+    "small": "../public/album/easy-to-smile-1468779/easy-to-smile-1468779-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:55:32.930236",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:44:30.586900",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -124,7 +135,7 @@
       ],
       "listeners": 252,
       "mbid": "42f5052c-1384-4201-b86b-2708e30f1cc5",
-      "playcount": 2278,
+      "playcount": 2281,
       "raw_data": {
         "album": {
           "artist": "Senseless Things",
@@ -157,7 +168,7 @@
           "listeners": "252",
           "mbid": "42f5052c-1384-4201-b86b-2708e30f1cc5",
           "name": "Easy to Smile",
-          "playcount": "2278",
+          "playcount": "2281",
           "tags": {
             "tag": [
               {
@@ -298,6 +309,6 @@
       "title": "Mollylove"
     }
   ],
-  "updated_at": "2025-07-05T16:55:32.930005",
+  "updated_at": "2025-07-07T19:44:29.979256",
   "year": 1991
 }

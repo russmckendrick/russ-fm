@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:15:48.305890",
+  "created_at": "2025-07-07T19:38:02.434936",
   "date_added": "2017-05-27T15:32:26-07:00",
   "discogs_id": "1660021",
   "discogs_url": "https://www.discogs.com/release/1660021-The-Moody-Blues-Octave",
@@ -101,6 +101,13 @@
       "type": "apple_music_artwork",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/ee/2d/1b/ee2d1b88-3464-2f5b-c349-c2353c33a5b3/00602567756729.rgb.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/octave-1660021/octave-1660021.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -109,14 +116,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/The+Moody+Blues/Octave",
   "local_images": {
-    "hi-res": "public/album/octave-1660021/octave-1660021-hi-res.jpg",
-    "medium": "public/album/octave-1660021/octave-1660021-medium.jpg",
-    "small": "public/album/octave-1660021/octave-1660021-small.jpg"
+    "hi-res": "../public/album/octave-1660021/octave-1660021-hi-res.jpg",
+    "medium": "../public/album/octave-1660021/octave-1660021-medium.jpg",
+    "small": "../public/album/octave-1660021/octave-1660021-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:15:53.840873",
+    "processed_at": "2025-07-07T19:38:09.661492",
     "services_used": [
       "discogs",
       "apple_music",
@@ -198,9 +205,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/82ff8b57be914961c98adffb1ade6fa4.png"
         }
       ],
-      "listeners": 42356,
+      "listeners": 42383,
       "mbid": "02c72542-9c16-440c-b963-8c2e38d68626",
-      "playcount": 245956,
+      "playcount": 246221,
       "raw_data": {
         "album": {
           "artist": "The Moody Blues",
@@ -230,10 +237,10 @@
               "size": ""
             }
           ],
-          "listeners": "42356",
+          "listeners": "42383",
           "mbid": "02c72542-9c16-440c-b963-8c2e38d68626",
           "name": "Octave",
-          "playcount": "245956",
+          "playcount": "246221",
           "tags": {
             "tag": [
               {
@@ -1070,6 +1077,6 @@
       "title": "The Day We Meet Again"
     }
   ],
-  "updated_at": "2025-07-05T17:15:52.229977",
+  "updated_at": "2025-07-07T19:38:09.395138",
   "year": 1978
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T16:52:52.683277",
+  "created_at": "2025-07-07T19:42:03.753220",
   "date_added": "2018-03-30T17:22:37-07:00",
   "discogs_id": "11647743",
   "discogs_url": "https://www.discogs.com/release/11647743-Levellers-We-The-Extras",
@@ -48,6 +48,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/MFOVg-KVDzg56ILom6EVfbmO1cT28lUL6afrbEpGq3s/rs:fit/g:sm/q:90/h:345/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNjQ3/NzQzLTE1MjI1MTcx/NzEtMTkzNC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/we-the-extras-11647743/we-the-extras-11647743.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -55,11 +62,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/we-the-extras-11647743/we-the-extras-11647743-hi-res.jpg",
+    "medium": "../public/album/we-the-extras-11647743/we-the-extras-11647743-medium.jpg",
+    "small": "../public/album/we-the-extras-11647743/we-the-extras-11647743-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:52:53.336961",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:42:08.208369",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -104,6 +115,6 @@
       "title": "Said And Done"
     }
   ],
-  "updated_at": "2025-07-05T16:52:53.336480",
+  "updated_at": "2025-07-07T19:42:07.558467",
   "year": 2018
 }

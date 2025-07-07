@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1770501176",
-  "apple_music_url": "https://music.apple.com/gb/album/wide-open-space-perfecto-mix-single/1770501176",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "14632478",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:51:07.454801",
+  "created_at": "2025-07-07T19:41:01.684487",
   "date_added": "2018-04-26T17:55:35-07:00",
   "discogs_id": "11894962",
   "discogs_url": "https://www.discogs.com/release/11894962-Mansun-Wide-Open-Space",
@@ -112,8 +112,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/97/89/ca9789f7-d856-d20f-b175-8c1ac93dee7e/802644370620.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/wide-open-space-11894962/wide-open-space-11894962.jpg",
       "width": 2000
     }
   ],
@@ -123,68 +123,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Mansun/Wide+Open+Space",
   "local_images": {
-    "hi-res": "public/album/wide-open-space-11894962/wide-open-space-11894962-hi-res.jpg",
-    "medium": "public/album/wide-open-space-11894962/wide-open-space-11894962-medium.jpg",
-    "small": "public/album/wide-open-space-11894962/wide-open-space-11894962-small.jpg"
+    "hi-res": "../public/album/wide-open-space-11894962/wide-open-space-11894962-hi-res.jpg",
+    "medium": "../public/album/wide-open-space-11894962/wide-open-space-11894962-medium.jpg",
+    "small": "../public/album/wide-open-space-11894962/wide-open-space-11894962-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:51:11.208144",
+    "processed_at": "2025-07-07T19:41:13.802865",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Wide Open Space (Perfecto Mix) - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "Wide Open Space",
   "release_name_spotify": "Wide Open Space (2018 Remastered)",
   "released": "2018-04-21",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/97/89/ca9789f7-d856-d20f-b175-8c1ac93dee7e/802644370620.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 1998 Kscope",
-      "editorial_notes": null,
-      "id": "1770501176",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Mansun",
-        "artwork": {
-          "bgColor": "000000",
-          "height": 3000,
-          "textColor1": "ffffff",
-          "textColor2": "58e061",
-          "textColor3": "cbcbcb",
-          "textColor4": "47b34d",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/ca/97/89/ca9789f7-d856-d20f-b175-8c1ac93dee7e/802644370620.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "℗ 1998 Kscope",
-        "genreNames": [
-          "Alternative",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Wide Open Space (Perfecto Mix) - Single",
-        "playParams": {
-          "id": "1770501176",
-          "kind": "album"
-        },
-        "recordLabel": "Kscope",
-        "releaseDate": "1998",
-        "trackCount": 2,
-        "upc": "802644370620",
-        "url": "https://music.apple.com/gb/album/wide-open-space-perfecto-mix-single/1770501176"
-      },
-      "url": "https://music.apple.com/gb/album/wide-open-space-perfecto-mix-single/1770501176"
-    },
     "lastfm": {
       "images": [
         {
@@ -397,7 +354,7 @@
         }
       ],
       "label": "Kscope",
-      "popularity": 5,
+      "popularity": 4,
       "preview_url": null,
       "raw_data": {
         "album_type": "single",
@@ -452,7 +409,7 @@
         "is_playable": true,
         "label": "Kscope",
         "name": "Wide Open Space (2018 Remastered)",
-        "popularity": 5,
+        "popularity": 4,
         "release_date": "2018-05-25",
         "release_date_precision": "day",
         "total_tracks": 1,
@@ -571,6 +528,6 @@
       "title": "Lemonade Secret Drinker (Acoustic Version)"
     }
   ],
-  "updated_at": "2025-07-05T16:51:08.933102",
+  "updated_at": "2025-07-07T19:41:12.603023",
   "year": 2018
 }
