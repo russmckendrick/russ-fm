@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:18:05.636606",
   "discogs_id": "129348",
-  "discogs_url": "https://www.discogs.com/artist/129348",
-  "followers": 112,
+  "discogs_url": "https://www.discogs.com/artist/129348-Booker-T-The-MGs",
+  "followers": 331098,
   "formed_date": null,
   "genres": [
     "R&B/Soul",
@@ -14,9 +14,11 @@
     "instrumental",
     "60s",
     "funk",
-    "hammond organ"
+    "hammond organ",
+    "rhythm and blues",
+    "blues"
   ],
-  "id": null,
+  "id": "booker-t-&-the-mg's-1751732287",
   "images": [
     {
       "height": 2000,
@@ -25,21 +27,27 @@
       "width": 2000
     },
     {
-      "height": 640,
+      "height": 653,
       "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d0000b273f979907ef5b21ee3a69f2629",
+      "url": "https://i.scdn.co/image/386f66b89b4b1ca0e9b5b2d0ffce9ce3a66a7101",
+      "width": 1000
+    },
+    {
+      "height": 418,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/99990becabb08ca98877631d0e14fe92326721e3",
       "width": 640
     },
     {
-      "height": 300,
+      "height": 131,
       "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d00001e02f979907ef5b21ee3a69f2629",
-      "width": 300
+      "url": "https://i.scdn.co/image/5594e8563ac891f9102d64014eb9f66587f79bc1",
+      "width": 200
     },
     {
-      "height": 64,
+      "height": 42,
       "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d00004851f979907ef5b21ee3a69f2629",
+      "url": "https://i.scdn.co/image/ef5570fb14a8db0b2df87cc462daef63daf24475",
       "width": 64
     },
     {
@@ -77,17 +85,35 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/W9sp8HXZO5fTvN7_fctmGUo_mme1Xc7r9vzO93pJSJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": 2000,
+      "type": "custom_artist_image",
+      "url": "https://v1.russ.fm/artist/booker-t-the-mg-s/booker-t-the-mg-s.jpg",
+      "width": 2000
     }
   ],
-  "lastfm_mbid": null,
-  "lastfm_url": "https://www.last.fm/music/+noredirect/Booker+T+&+The+MG%27s",
+  "lastfm_mbid": "377015fb-c02f-4b05-960b-e0df6a7ea99e",
+  "lastfm_url": "https://www.last.fm/music/Booker+T.+&+the+MG%27s",
   "local_images": {
-    "hi-res": "public/artist/booker-t-the-mgs/booker-t-the-mgs-hi-res.jpg",
-    "medium": "public/artist/booker-t-the-mgs/booker-t-the-mgs-medium.jpg",
-    "small": "public/artist/booker-t-the-mgs/booker-t-the-mgs-small.jpg"
+    "hi-res": "../public/artist/booker-t-the-mgs/booker-t-the-mgs-hi-res.jpg",
+    "medium": "../public/artist/booker-t-the-mgs/booker-t-the-mgs-medium.jpg",
+    "small": "../public/artist/booker-t-the-mgs/booker-t-the-mgs-small.jpg"
   },
   "name": "Booker T & The MG's",
-  "popularity": null,
+  "popularity": 59,
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/y2004/m12/d26/h21/s06.vvbyhdlv.jpg/2000x2000ac.jpg",
@@ -101,13 +127,486 @@
       "url": "https://music.apple.com/gb/artist/booker-t-the-mgs/40286867"
     },
     "discogs": {
-      "id": 129348,
-      "original_name": "Booker T & The MG's",
-      "role": ""
+      "cover_image": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "129348",
+      "images": [
+        {
+          "height": 743,
+          "resource_url": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/W9sp8HXZO5fTvN7_fctmGUo_mme1Xc7r9vzO93pJSJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DEQzNlKNjmRhov2NUOATNsGliqYUkWH4bD3uSqspL8g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DEQzNlKNjmRhov2NUOATNsGliqYUkWH4bD3uSqspL8g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gXBq8vhQmze6YihyTTaah2hEqP_XbxlD_gY4WzPocmE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 361,
+          "resource_url": "https://i.discogs.com/E-bxNBUml0JJEcJrEYuwGGE2XoT4rCYBL906Nj9ZZ2w/rs:fit/g:sm/q:90/h:361/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/E-bxNBUml0JJEcJrEYuwGGE2XoT4rCYBL906Nj9ZZ2w/rs:fit/g:sm/q:90/h:361/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/wZjp16GV7UfskTGGfZcguMk_tZKP_ZSmSOHqSyt-Cmw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+          "width": 583
+        },
+        {
+          "height": 440,
+          "resource_url": "https://i.discogs.com/whRDxk0ToKEnVMIcNo6k-9nZjQ8eT-Dtcel8YEg-gsc/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/whRDxk0ToKEnVMIcNo6k-9nZjQ8eT-Dtcel8YEg-gsc/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/H_a9RuiNtcIKlvVglNvG2utOVNnNkU0zuNPqI7SqhK0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 198,
+          "resource_url": "https://i.discogs.com/0Zw0Pnij6uk8aCD1nd3Ed5W4-qzW_QQu8KTj0DJOItU/rs:fit/g:sm/q:90/h:198/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0Zw0Pnij6uk8aCD1nd3Ed5W4-qzW_QQu8KTj0DJOItU/rs:fit/g:sm/q:90/h:198/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/-b1wvNG1PDM1X2IgE9bvaduPvYS9NEEAR4IP-UAgjFc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+          "width": 320
+        },
+        {
+          "height": 322,
+          "resource_url": "https://i.discogs.com/VTissz7-B9nhwgJw_x1fTe4ah7zp3MuWVtMQNb2CwfQ/rs:fit/g:sm/q:90/h:322/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VTissz7-B9nhwgJw_x1fTe4ah7zp3MuWVtMQNb2CwfQ/rs:fit/g:sm/q:90/h:322/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/zIC4A2B8YSNvVHmX4GrMtjNqiU9x0M55iQ49-4jLZ6Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+          "width": 432
+        },
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/4g2aPadnzcyLLrmTo1EpGJaE--xXjkELTKWW0mn6A0I/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4g2aPadnzcyLLrmTo1EpGJaE--xXjkELTKWW0mn6A0I/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/mXh2ZKJLjdMc8avX4wUgTjaQoxWI8NYlqyqDEx2iDsY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 448,
+          "resource_url": "https://i.discogs.com/xj32kXOggzu4gyxRrqhWZn0uFLct0UJRfIXDKm7h6Uw/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xj32kXOggzu4gyxRrqhWZn0uFLct0UJRfIXDKm7h6Uw/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/mTQU66MM5h_8JBXtNjIM_fGeAGXTkLcY991gFpiVG1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 418,
+          "resource_url": "https://i.discogs.com/NQe9L3uixF_kPmrr8aiG6tV4jIf_djnHi6v_eNsNoDU/rs:fit/g:sm/q:90/h:418/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NQe9L3uixF_kPmrr8aiG6tV4jIf_djnHi6v_eNsNoDU/rs:fit/g:sm/q:90/h:418/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7TBJn7QcD89HXlyI5ys3Hhi4KPuu40Jro1A6_V68f2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 248403,
+          "name": "Booker T. Jones",
+          "resource_url": "https://api.discogs.com/artists/248403",
+          "thumbnail_url": "https://i.discogs.com/ts2JeG3ixFOs8gOs9XZRggOind8KrGgBSoSYjbtCHU4/rs:fit/g:sm/q:40/h:608/w:538/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODQw/My0xNjcwMTU4NjA0/LTM5ODgucG5n.jpeg"
+        },
+        {
+          "active": true,
+          "id": 292375,
+          "name": "Steve Cropper",
+          "resource_url": "https://api.discogs.com/artists/292375",
+          "thumbnail_url": "https://i.discogs.com/vpqKSV_qqNE2s411MI1KK5Jmu6GW_Ktv3i5wjjyFDQU/rs:fit/g:sm/q:40/h:769/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MjM3/NS0xNjg4NDA4OTcz/LTYyNzUuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 298089,
+          "name": "Donald \"Duck\" Dunn",
+          "resource_url": "https://api.discogs.com/artists/298089",
+          "thumbnail_url": "https://i.discogs.com/GUU7_tdBcSlZ09DXvrZhdnMxryGI2E0uVD28K3QhruE/rs:fit/g:sm/q:40/h:449/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5ODA4/OS0xNTY3MDk4MTE5/LTM5NTEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 358683,
+          "name": "Al Jackson Jr.",
+          "resource_url": "https://api.discogs.com/artists/358683",
+          "thumbnail_url": "https://i.discogs.com/gbelAfysyHVE3W0U5kv_BvonNM-8R8f9RUgAnydDJ5s/rs:fit/g:sm/q:40/h:380/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1ODY4/My0xMTQ1NjIwMDMx/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 364594,
+          "name": "Lewis Steinberg",
+          "resource_url": "https://api.discogs.com/artists/364594",
+          "thumbnail_url": "https://i.discogs.com/VA7F9YoMqAXLWswIxrxASZh6bxaxmQ2jZy5z8WQTpyY/rs:fit/g:sm/q:40/h:212/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDU5/NC0xNDY5MTU5MjIx/LTM0NDIuanBlZw.jpeg"
+        }
+      ],
+      "name": "Booker T & The MG's",
+      "namevariations": [
+        "Booker 'T' & The M.G.'s",
+        "Booker 'T' & The MG's",
+        "Booker T",
+        "Booker T  & The M.G.'s",
+        "Booker T & M.G.'s",
+        "Booker T & M.G.s",
+        "Booker T & MG's",
+        "Booker T & MGS",
+        "Booker T & MGs",
+        "Booker T & Mgs",
+        "Booker T & The M. G.'s",
+        "Booker T & The M.G's",
+        "Booker T & The M.G.'s",
+        "Booker T & The M.G.S.",
+        "Booker T & The M.G.s",
+        "Booker T & The MG's",
+        "Booker T & The MGS",
+        "Booker T & The MGs",
+        "Booker T & the M.G's",
+        "Booker T And  The MGs",
+        "Booker T And MG's",
+        "Booker T And MGs",
+        "Booker T And The M.G.'S",
+        "Booker T And The M.G.'s",
+        "Booker T And The M.G.s",
+        "Booker T And The MG's",
+        "Booker T And The MGs",
+        "Booker T And The Mg's",
+        "Booker T and The MG's",
+        "Booker T and the M.G.'s",
+        "Booker T and the MG's",
+        "Booker T, And The MG's",
+        "Booker T.",
+        "Booker T.  &  The MG's",
+        "Booker T.  And The M. G.'s",
+        "Booker T. & M. G. S.",
+        "Booker T. & M.G.'S",
+        "Booker T. & M.G.'s",
+        "Booker T. & MG's",
+        "Booker T. & Mg's",
+        "Booker T. & The M. G's",
+        "Booker T. & The M. G. 'S",
+        "Booker T. & The M. G. 's",
+        "Booker T. & The M. G. S",
+        "Booker T. & The M. G. s",
+        "Booker T. & The M. G.'S",
+        "Booker T. & The M. G.'s",
+        "Booker T. & The M. G.´s",
+        "Booker T. & The M. G.’s",
+        "Booker T. & The M.G's",
+        "Booker T. & The M.G's.",
+        "Booker T. & The M.G.",
+        "Booker T. & The M.G. 'S",
+        "Booker T. & The M.G. 's",
+        "Booker T. & The M.G.'S",
+        "Booker T. & The M.G.'s",
+        "Booker T. & The M.G.S",
+        "Booker T. & The M.G.S.",
+        "Booker T. & The M.G.s",
+        "Booker T. & The M.G.‘s",
+        "Booker T. & The M.G.’s",
+        "Booker T. & The M.G’S",
+        "Booker T. & The MG'S",
+        "Booker T. & The MG's",
+        "Booker T. & The MGs",
+        "Booker T. & The MG’s",
+        "Booker T. & The Mg's",
+        "Booker T. & the M.G.'s",
+        "Booker T. & the MG's",
+        "Booker T. + The  MG's",
+        "Booker T. And MG's",
+        "Booker T. And The M. G.'s",
+        "Booker T. And The M.G's",
+        "Booker T. And The M.G.'S",
+        "Booker T. And The M.G.'s",
+        "Booker T. And The M.G.S",
+        "Booker T. And The M.G.s",
+        "Booker T. And The M.G.’s",
+        "Booker T. And The MG'S",
+        "Booker T. And The MG's",
+        "Booker T. And The MGs",
+        "Booker T. And The MG’s",
+        "Booker T. And The Mg's",
+        "Booker T. E The MG's",
+        "Booker T. Jones & The M.G.'s",
+        "Booker T. Jones And MG's",
+        "Booker T. Jones And The M.G.'s",
+        "Booker T. Jones And The MG's",
+        "Booker T. Y Los M. G's",
+        "Booker T. Y Los M.G.'s",
+        "Booker T. and The MG's",
+        "Booker T. and the MG's",
+        "Booker T.& The MG's",
+        "Booker Ts--MGs",
+        "Booker-T",
+        "Booker-T. & The MG's",
+        "Bookert & M.G.S.",
+        "Bookert E HG's",
+        "Booket T & The MG's",
+        "Booket T. & The MGs",
+        "Brooker T. & The M.G.'s",
+        "MG'S",
+        "MG's",
+        "Mg's",
+        "The M.G's",
+        "The M.G.'s",
+        "The MG's",
+        "The MGs",
+        "The Memphis Group",
+        "The Mgs",
+        "ブッカーT&M.G.'s"
+      ],
+      "profile": "American instrumental rhythm & blues and soul combo, formed 1962 in Memphis, Tennessee. Best remembered as the in-house backing band of the [l=Stax] record label. \r\nThe band’s name is a combination of organist [a248403]'s first names and the acronym for “Memphis Group”, MG. Other members were [a358683] (drums), [a292375] (guitar), and [a364594] (bass guitar) who was replaced by [a298089] in 1963.\r\n\r\nAs well as playing on and producing a large amount of records, working with vocalists like [a=Otis Redding], [a=Wilson Pickett] and [a=Sam & Dave], they were successful as a band in their own right, with hits like “Green Onions” (1962) and “Hip Hug-Her” (1967).\r\nThe band was effectively disbanded in the early 1970s, when both Cropper and Jones had left the label. A planned reunion in 1975 did not happen, as Jackson was murdered in October that year. The three remaining members did reunite several times since the late 1980s, often with Jackson’s cousin [a=Steve Potts (2)] serving as a drummer.\r\n\r\nBooker T & The MG's were inducted into the Rock & Roll Hall of Fame in 1992.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 129348,
+        "images": [
+          {
+            "height": 743,
+            "resource_url": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/Wap8l5MfVY9A9ptiwoesRyGMH6FCMHjeLcpP8hp5XYY/rs:fit/g:sm/q:90/h:743/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/W9sp8HXZO5fTvN7_fctmGUo_mme1Xc7r9vzO93pJSJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/DEQzNlKNjmRhov2NUOATNsGliqYUkWH4bD3uSqspL8g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DEQzNlKNjmRhov2NUOATNsGliqYUkWH4bD3uSqspL8g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/gXBq8vhQmze6YihyTTaah2hEqP_XbxlD_gY4WzPocmE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTg4OTM1Mjcy/LTM0MzAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 361,
+            "resource_url": "https://i.discogs.com/E-bxNBUml0JJEcJrEYuwGGE2XoT4rCYBL906Nj9ZZ2w/rs:fit/g:sm/q:90/h:361/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/E-bxNBUml0JJEcJrEYuwGGE2XoT4rCYBL906Nj9ZZ2w/rs:fit/g:sm/q:90/h:361/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/wZjp16GV7UfskTGGfZcguMk_tZKP_ZSmSOHqSyt-Cmw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTUwMDcyMDI2/LTM3ODAuanBlZw.jpeg",
+            "width": 583
+          },
+          {
+            "height": 440,
+            "resource_url": "https://i.discogs.com/whRDxk0ToKEnVMIcNo6k-9nZjQ8eT-Dtcel8YEg-gsc/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/whRDxk0ToKEnVMIcNo6k-9nZjQ8eT-Dtcel8YEg-gsc/rs:fit/g:sm/q:90/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/H_a9RuiNtcIKlvVglNvG2utOVNnNkU0zuNPqI7SqhK0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTkwMDc1MjMx/LTY0NDYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 198,
+            "resource_url": "https://i.discogs.com/0Zw0Pnij6uk8aCD1nd3Ed5W4-qzW_QQu8KTj0DJOItU/rs:fit/g:sm/q:90/h:198/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0Zw0Pnij6uk8aCD1nd3Ed5W4-qzW_QQu8KTj0DJOItU/rs:fit/g:sm/q:90/h:198/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/-b1wvNG1PDM1X2IgE9bvaduPvYS9NEEAR4IP-UAgjFc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTI0NzEwNjMw/LmpwZw.jpeg",
+            "width": 320
+          },
+          {
+            "height": 322,
+            "resource_url": "https://i.discogs.com/VTissz7-B9nhwgJw_x1fTe4ah7zp3MuWVtMQNb2CwfQ/rs:fit/g:sm/q:90/h:322/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/VTissz7-B9nhwgJw_x1fTe4ah7zp3MuWVtMQNb2CwfQ/rs:fit/g:sm/q:90/h:322/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/zIC4A2B8YSNvVHmX4GrMtjNqiU9x0M55iQ49-4jLZ6Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQyMzAxMTc1/LmpwZWc.jpeg",
+            "width": 432
+          },
+          {
+            "height": 387,
+            "resource_url": "https://i.discogs.com/4g2aPadnzcyLLrmTo1EpGJaE--xXjkELTKWW0mn6A0I/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4g2aPadnzcyLLrmTo1EpGJaE--xXjkELTKWW0mn6A0I/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/mXh2ZKJLjdMc8avX4wUgTjaQoxWI8NYlqyqDEx2iDsY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTUxODc3Nzg4/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 448,
+            "resource_url": "https://i.discogs.com/xj32kXOggzu4gyxRrqhWZn0uFLct0UJRfIXDKm7h6Uw/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xj32kXOggzu4gyxRrqhWZn0uFLct0UJRfIXDKm7h6Uw/rs:fit/g:sm/q:90/h:448/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/mTQU66MM5h_8JBXtNjIM_fGeAGXTkLcY991gFpiVG1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xMTQ5NDI4MzA1/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 418,
+            "resource_url": "https://i.discogs.com/NQe9L3uixF_kPmrr8aiG6tV4jIf_djnHi6v_eNsNoDU/rs:fit/g:sm/q:90/h:418/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/NQe9L3uixF_kPmrr8aiG6tV4jIf_djnHi6v_eNsNoDU/rs:fit/g:sm/q:90/h:418/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/7TBJn7QcD89HXlyI5ys3Hhi4KPuu40Jro1A6_V68f2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNzQ5ODM4NzM3/LTk1NjUuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 248403,
+            "name": "Booker T. Jones",
+            "resource_url": "https://api.discogs.com/artists/248403",
+            "thumbnail_url": "https://i.discogs.com/ts2JeG3ixFOs8gOs9XZRggOind8KrGgBSoSYjbtCHU4/rs:fit/g:sm/q:40/h:608/w:538/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODQw/My0xNjcwMTU4NjA0/LTM5ODgucG5n.jpeg"
+          },
+          {
+            "active": true,
+            "id": 292375,
+            "name": "Steve Cropper",
+            "resource_url": "https://api.discogs.com/artists/292375",
+            "thumbnail_url": "https://i.discogs.com/vpqKSV_qqNE2s411MI1KK5Jmu6GW_Ktv3i5wjjyFDQU/rs:fit/g:sm/q:40/h:769/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MjM3/NS0xNjg4NDA4OTcz/LTYyNzUuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 298089,
+            "name": "Donald \"Duck\" Dunn",
+            "resource_url": "https://api.discogs.com/artists/298089",
+            "thumbnail_url": "https://i.discogs.com/GUU7_tdBcSlZ09DXvrZhdnMxryGI2E0uVD28K3QhruE/rs:fit/g:sm/q:40/h:449/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5ODA4/OS0xNTY3MDk4MTE5/LTM5NTEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 358683,
+            "name": "Al Jackson Jr.",
+            "resource_url": "https://api.discogs.com/artists/358683",
+            "thumbnail_url": "https://i.discogs.com/gbelAfysyHVE3W0U5kv_BvonNM-8R8f9RUgAnydDJ5s/rs:fit/g:sm/q:40/h:380/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1ODY4/My0xMTQ1NjIwMDMx/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 364594,
+            "name": "Lewis Steinberg",
+            "resource_url": "https://api.discogs.com/artists/364594",
+            "thumbnail_url": "https://i.discogs.com/VA7F9YoMqAXLWswIxrxASZh6bxaxmQ2jZy5z8WQTpyY/rs:fit/g:sm/q:40/h:212/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDU5/NC0xNDY5MTU5MjIx/LTM0NDIuanBlZw.jpeg"
+          }
+        ],
+        "name": "Booker T & The MG's",
+        "namevariations": [
+          "Booker 'T' & The M.G.'s",
+          "Booker 'T' & The MG's",
+          "Booker T",
+          "Booker T  & The M.G.'s",
+          "Booker T & M.G.'s",
+          "Booker T & M.G.s",
+          "Booker T & MG's",
+          "Booker T & MGS",
+          "Booker T & MGs",
+          "Booker T & Mgs",
+          "Booker T & The M. G.'s",
+          "Booker T & The M.G's",
+          "Booker T & The M.G.'s",
+          "Booker T & The M.G.S.",
+          "Booker T & The M.G.s",
+          "Booker T & The MG's",
+          "Booker T & The MGS",
+          "Booker T & The MGs",
+          "Booker T & the M.G's",
+          "Booker T And  The MGs",
+          "Booker T And MG's",
+          "Booker T And MGs",
+          "Booker T And The M.G.'S",
+          "Booker T And The M.G.'s",
+          "Booker T And The M.G.s",
+          "Booker T And The MG's",
+          "Booker T And The MGs",
+          "Booker T And The Mg's",
+          "Booker T and The MG's",
+          "Booker T and the M.G.'s",
+          "Booker T and the MG's",
+          "Booker T, And The MG's",
+          "Booker T.",
+          "Booker T.  &  The MG's",
+          "Booker T.  And The M. G.'s",
+          "Booker T. & M. G. S.",
+          "Booker T. & M.G.'S",
+          "Booker T. & M.G.'s",
+          "Booker T. & MG's",
+          "Booker T. & Mg's",
+          "Booker T. & The M. G's",
+          "Booker T. & The M. G. 'S",
+          "Booker T. & The M. G. 's",
+          "Booker T. & The M. G. S",
+          "Booker T. & The M. G. s",
+          "Booker T. & The M. G.'S",
+          "Booker T. & The M. G.'s",
+          "Booker T. & The M. G.´s",
+          "Booker T. & The M. G.’s",
+          "Booker T. & The M.G's",
+          "Booker T. & The M.G's.",
+          "Booker T. & The M.G.",
+          "Booker T. & The M.G. 'S",
+          "Booker T. & The M.G. 's",
+          "Booker T. & The M.G.'S",
+          "Booker T. & The M.G.'s",
+          "Booker T. & The M.G.S",
+          "Booker T. & The M.G.S.",
+          "Booker T. & The M.G.s",
+          "Booker T. & The M.G.‘s",
+          "Booker T. & The M.G.’s",
+          "Booker T. & The M.G’S",
+          "Booker T. & The MG'S",
+          "Booker T. & The MG's",
+          "Booker T. & The MGs",
+          "Booker T. & The MG’s",
+          "Booker T. & The Mg's",
+          "Booker T. & the M.G.'s",
+          "Booker T. & the MG's",
+          "Booker T. + The  MG's",
+          "Booker T. And MG's",
+          "Booker T. And The M. G.'s",
+          "Booker T. And The M.G's",
+          "Booker T. And The M.G.'S",
+          "Booker T. And The M.G.'s",
+          "Booker T. And The M.G.S",
+          "Booker T. And The M.G.s",
+          "Booker T. And The M.G.’s",
+          "Booker T. And The MG'S",
+          "Booker T. And The MG's",
+          "Booker T. And The MGs",
+          "Booker T. And The MG’s",
+          "Booker T. And The Mg's",
+          "Booker T. E The MG's",
+          "Booker T. Jones & The M.G.'s",
+          "Booker T. Jones And MG's",
+          "Booker T. Jones And The M.G.'s",
+          "Booker T. Jones And The MG's",
+          "Booker T. Y Los M. G's",
+          "Booker T. Y Los M.G.'s",
+          "Booker T. and The MG's",
+          "Booker T. and the MG's",
+          "Booker T.& The MG's",
+          "Booker Ts--MGs",
+          "Booker-T",
+          "Booker-T. & The MG's",
+          "Bookert & M.G.S.",
+          "Bookert E HG's",
+          "Booket T & The MG's",
+          "Booket T. & The MGs",
+          "Brooker T. & The M.G.'s",
+          "MG'S",
+          "MG's",
+          "Mg's",
+          "The M.G's",
+          "The M.G.'s",
+          "The MG's",
+          "The MGs",
+          "The Memphis Group",
+          "The Mgs",
+          "ブッカーT&M.G.'s"
+        ],
+        "profile": "American instrumental rhythm & blues and soul combo, formed 1962 in Memphis, Tennessee. Best remembered as the in-house backing band of the [l=Stax] record label. \r\nThe band’s name is a combination of organist [a248403]'s first names and the acronym for “Memphis Group”, MG. Other members were [a358683] (drums), [a292375] (guitar), and [a364594] (bass guitar) who was replaced by [a298089] in 1963.\r\n\r\nAs well as playing on and producing a large amount of records, working with vocalists like [a=Otis Redding], [a=Wilson Pickett] and [a=Sam & Dave], they were successful as a band in their own right, with hits like “Green Onions” (1962) and “Hip Hug-Her” (1967).\r\nThe band was effectively disbanded in the early 1970s, when both Cropper and Jones had left the label. A planned reunion in 1975 did not happen, as Jackson was murdered in October that year. The three remaining members did reunite several times since the late 1980s, often with Jackson’s cousin [a=Steve Potts (2)] serving as a drummer.\r\n\r\nBooker T & The MG's were inducted into the Rock & Roll Hall of Fame in 1992.",
+        "releases_url": "https://api.discogs.com/artists/129348/releases",
+        "resource_url": "https://api.discogs.com/artists/129348",
+        "uri": "https://www.discogs.com/artist/129348-Booker-T-The-MGs",
+        "urls": [
+          "https://en.wikipedia.org/wiki/Booker_T._%26_the_M.G.%27s",
+          "https://www.whosampled.com/Booker-T.-%26-the-M.G.%27s/",
+          "https://www.theguardian.com/music/2019/mar/11/green-onions-booker-t-and-the-mgs-steve-cropper-booker-t-jones?CMP=share_btn_link"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/129348",
+      "thumb": "https://i.discogs.com/W9sp8HXZO5fTvN7_fctmGUo_mme1Xc7r9vzO93pJSJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM0/OC0xNTU5MjE3NjY0/LTc4NjIuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/129348-Booker-T-The-MGs",
+      "urls": [
+        "https://en.wikipedia.org/wiki/Booker_T._%26_the_M.G.%27s",
+        "https://www.whosampled.com/Booker-T.-%26-the-M.G.%27s/",
+        "https://www.theguardian.com/music/2019/mar/11/green-onions-booker-t-and-the-mgs-steve-cropper-booker-t-jones?CMP=share_btn_link"
+      ]
     },
     "lastfm": {
-      "bio_content": "same as  Booker T. & The MG's <a href=\"https://www.last.fm/music/+noredirect/Booker+T+&+The+MG%27s\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-      "bio_summary": "same as  Booker T. & The MG's <a href=\"https://www.last.fm/music/+noredirect/Booker+T+&+The+MG%27s\">Read more on Last.fm</a>",
+      "bio_content": "Booker T. & the M.G.'s is an instrumental rhythm & blues band that was influential in shaping the sound of Southern soul and Memphis soul. The original members of the group were Booker T. Jones (organ, piano), Steve Cropper (guitar), Lewie Steinberg (bass), and Al Jackson, Jr. (drums). In the 1960s, as members of the house band of Stax Records, they played on hundreds of recordings by artists such as Wilson Pickett, Otis Redding, Bill Withers, Sam & Dave, Carla Thomas, Rufus Thomas, Johnnie Taylor and Albert King. They also released instrumental records under their own name, of which the best known is the 1962 hit single \"Green Onions\". As originators of the unique Stax sound, the group was one of the most prolific, respected, and imitated of its era. By the mid-1960s, bands on both sides of the Atlantic were trying to sound like Booker T. & the M.G.'s.\nIn 1965, Steinberg was replaced by Donald \"Duck\" Dunn, who played with the group until his death in 2012. Al Jackson, Jr. was murdered in 1975, after which Dunn, Cropper and Jones reunited on numerous occasions using various drummers, including Willie Hall, Anton Fig, Steve Jordan and Steve Potts.\nThe band was inducted into the Rock and Roll Hall of Fame in 1992, the Musicians Hall of Fame and Museum in Nashville, Tennessee, in 2008, and the Memphis Music Hall of Fame in 2012.\nHaving two white members (Cropper and Dunn), Booker T. & the M.G.'s was one of the first racially integrated rock groups, at a time when soul music and the Memphis music scene in particular were generally considered the preserve of black culture.\n\nFormed in 1962 in Memphis, Tennessee, Booker T and the MG's (\"MG\" officially stood for \"Memphis Group\", and is usually punctuated correctly on LP covers as \"M.G.\") became one of the most important soul outfits in the history of music. They were indispensable as the house band for Stax Records, backing many rising artists (Otis Redding, Sam & Dave, Albert King, and many others), but it was the MGs themselves that put Stax on the map with such singles as \"Green Onions\", which reached number three on the Pop Charts, and \"Hip Hug-Her\", which reached number six on the Pop Charts. \n\nThe group consisted of four core members: Booker T. Jones on keyboards and organ (as well as many other instruments), Steve Cropper on guitar, Al Jackson Jr. on drums, and Donald \"Duck\" Dunn on bass. Cropper and Dunn were originally in the first house band for Stax, The Mar-Keys, and later were part of the Blues Brothers, both in the band and in the movie. Various others added horns and other instruments, and a young Isaac Hayes covered the keys on at least one session.\n\nNot only were they blazing new trails with their funky instrumental soul music, but also with their integration of races, as two of them were white (Donald \"Duck\" Dunn and Steve Cropper) and two of them were black (Booker T. Jones and Al Jackson), which was very unusual for 1962. \n\nIn 2007 the documentary Respect Yourself: The Stax Records Story was released, with interviews and footage in which Booker T. Jones, Steve Cropper, Wayne Jackson and Donald Duck Dunn are interviewed about the history and successes of Stax, among many others Stax' people.\n\nDonald Duck Dunn died in his sleep at age 70 on Sunday, May 13, 2012.\nLewie Steinberg died on July 21, 2016 in Memphis at the age of 82.\n\n(2) As the house band at Stax Records in Memphis, Tennessee, Booker T. & the MG's may have been the single greatest factor in the lasting value of that label's soul music, not to mention Southern soul as a whole. Their tight, impeccable grooves could be heard on classic hits by Otis Redding, Wilson Pickett, Carla Thomas, Albert King, and Sam & Dave, and for that reason alone, they would deserve their subsequent induction into the Rock & Roll Hall of Fame. But in addition to their formidable skills as a house band, on their own they were one of the top instrumental outfits of the rock era, cutting classics like \"Green Onions,\" \"Time Is Tight,\" and \"Hang 'em High.\" \n\n The anchors of the Booker T. sound were Steve Cropper, whose slicing, economic riffs influenced many other guitar players, and Booker T. Jones himself, who provided much of the groove with his floating organ lines. In 1960, Jones started working as a session man for Stax, where he met Cropper. Cropper had been in the Mar-Keys, famous for the 1961 instrumental hit \"Last Night,\" which laid out the prototype for much of the MG's (and indeed Memphis soul's) sound with its organ-sax-guitar combo. With the addition of drummer Al Jackson and bassist Lewis Steinberg, they became Booker T. & the MG's. Within a couple years, Steinberg was replaced permanently by Donald \"Duck\" Dunn, who, like Cropper, had also played with the Mar-Keys. \n\n The band's first and biggest hit, \"Green Onions\" (a number three single in 1962), came about by accident. Jamming in the studio while fruitlessly waiting for Billy Lee Riley to show up for a session, they came up with a classic minor-key, bluesy soul instrumental, distinguished by its nervous organ bounce and ferocious bursts of guitar. For the next five years, they'd have trouble recapturing its commercial success, though the standard of their records remained fairly high, and Stax's dependence upon them as the house band ensured a decent living. \n\n In the late '60s, the MG's really hit their stride with \"Hip Hug-Her,\" \"Groovin',\" \"Soul-Limbo,\" \"Hang 'em High,\" and \"Time Is Tight,\" all of which were Top 40 charters between 1967 and 1969. Since the presence of black and white musicians made them a biracial band, the MG's set a somewhat under-appreciated example of both how integrated, self-contained bands could succeed, and how both black and white musicians could play funky soul music. As is the case with most instrumental rock bands, their singles contained their best material, and the band's music is now best appreciated via anthologies. But their albums were far from inconsequential, and occasionally veered into ambitious territory (they did an entire instrumental version of the Beatles' Abbey Road, which they titled McLemore Avenue in honor of the location of Stax's studios). \n\n Though they'd become established stars by the end of the decade, the group began finding it difficult to work together, not so much because of personnel problems, but because of logistical difficulties. Cropper was often playing sessions in Los Angeles, and Jones was often absent from Memphis while he finished his music studies at Indiana University. The band decided to break up in 1971, but were working on a reunion album in 1975 when Al Jackson was tragically shot and killed in his Memphis home by a burglar. The remaining members were active as recording artists and session musicians in the following years, with Cropper and Dunn joining the Blues Brothers for a stint in the late '70s. \n\n The MG's got back into the spotlight in early 1992, when they were the house band for an extravagant Bob Dylan tribute at Madison Square Garden. More significantly, in 1993 they served as the backup band for a Neil Young tour, one which brought both them (and Young) high critical marks. The following year, they released a comeback album, arranged in much the style of their vintage '60s sides, which proved that their instrumental skills were still intact. Like most such efforts, though, it ultimately failed to re-create the spark and spontaneity it so obviously wanted to achieve. Jones continued with his own musical output through the following decades, often lending his instrumental skills to other artists and occasionally issuing his own albums, such as the 2009 solo effort Potato Hole. Bassist Dunn, intermittently active with festival and tour appearances after the turn of the millennium, had been touring with Cropper and Eddie Floyd in Japan during May 2012 when he died in his sleep in a Tokyo hotel. ~ Richie Unterberger, Rovi <a href=\"https://www.last.fm/music/Booker+T.+&+the+MG%27s\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+      "bio_summary": "Booker T. & the M.G.'s is an instrumental rhythm & blues band that was influential in shaping the sound of Southern soul and Memphis soul. The original members of the group were Booker T. Jones (organ, piano), Steve Cropper (guitar), Lewie Steinberg (bass), and Al Jackson, Jr. (drums). In the 1960s, as members of the house band of Stax Records, they played on hundreds of recordings by artists such as Wilson Pickett, Otis Redding, Bill Withers, Sam & Dave, Carla Thomas, Rufus Thomas, Johnnie Taylor and Albert King. <a href=\"https://www.last.fm/music/Booker+T.+&+the+MG%27s\">Read more on Last.fm</a>",
       "images": [
         {
           "size": "small",
@@ -134,48 +633,74 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 2646,
-      "mbid": null,
-      "name": "Booker T & The MG's",
-      "playcount": 21295,
-      "similar_artists": [],
+      "listeners": 654964,
+      "mbid": "377015fb-c02f-4b05-960b-e0df6a7ea99e",
+      "name": "Booker T. & the MG's",
+      "playcount": 5790665,
+      "similar_artists": [
+        {
+          "name": "The Mar-Keys",
+          "url": "https://www.last.fm/music/The+Mar-Keys"
+        },
+        {
+          "name": "Rufus Thomas",
+          "url": "https://www.last.fm/music/Rufus+Thomas"
+        },
+        {
+          "name": "Eddie Floyd",
+          "url": "https://www.last.fm/music/Eddie+Floyd"
+        },
+        {
+          "name": "Sam & Dave",
+          "url": "https://www.last.fm/music/Sam+&+Dave"
+        },
+        {
+          "name": "Carla Thomas",
+          "url": "https://www.last.fm/music/Carla+Thomas"
+        }
+      ],
       "tags": [
         "soul",
-        "instrumental",
-        "60s",
         "funk",
-        "hammond organ"
+        "rhythm and blues",
+        "blues",
+        "instrumental"
       ],
-      "url": "https://www.last.fm/music/+noredirect/Booker+T+&+The+MG%27s"
+      "url": "https://www.last.fm/music/Booker+T.+&+the+MG%27s"
     },
     "spotify": {
-      "followers": 112,
+      "followers": 331098,
       "genres": [],
-      "id": "7E58znIDpNwk7cHc6FNs8S",
+      "id": "2vDV0T8sxx2ENnKXds75e5",
       "images": [
         {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273f979907ef5b21ee3a69f2629",
+          "height": 653,
+          "url": "https://i.scdn.co/image/386f66b89b4b1ca0e9b5b2d0ffce9ce3a66a7101",
+          "width": 1000
+        },
+        {
+          "height": 418,
+          "url": "https://i.scdn.co/image/99990becabb08ca98877631d0e14fe92326721e3",
           "width": 640
         },
         {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02f979907ef5b21ee3a69f2629",
-          "width": 300
+          "height": 131,
+          "url": "https://i.scdn.co/image/5594e8563ac891f9102d64014eb9f66587f79bc1",
+          "width": 200
         },
         {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851f979907ef5b21ee3a69f2629",
+          "height": 42,
+          "url": "https://i.scdn.co/image/ef5570fb14a8db0b2df87cc462daef63daf24475",
           "width": 64
         }
       ],
-      "name": "The Mar-Keys & Booker T & The MG's",
-      "popularity": 0,
-      "url": "https://open.spotify.com/artist/7E58znIDpNwk7cHc6FNs8S"
+      "name": "Booker T. & the M.G.'s",
+      "popularity": 59,
+      "url": "https://open.spotify.com/artist/2vDV0T8sxx2ENnKXds75e5"
     }
   },
-  "spotify_id": "7E58znIDpNwk7cHc6FNs8S",
-  "spotify_url": "https://open.spotify.com/artist/7E58znIDpNwk7cHc6FNs8S",
-  "updated_at": "2025-07-05T17:18:07.685190",
+  "spotify_id": "2vDV0T8sxx2ENnKXds75e5",
+  "spotify_url": "https://open.spotify.com/artist/2vDV0T8sxx2ENnKXds75e5",
+  "updated_at": "2025-07-07T19:53:29.992663",
   "wikipedia_url": null
 }
