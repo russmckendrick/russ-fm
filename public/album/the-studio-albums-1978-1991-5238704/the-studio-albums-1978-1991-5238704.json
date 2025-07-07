@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1440566256",
-  "apple_music_url": "https://music.apple.com/gb/album/making-movies/1440566256",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "648427",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:00:47.597822",
+  "created_at": "2025-07-07T20:38:49.910511",
   "date_added": "2020-10-12T12:25:49-07:00",
   "discogs_id": "5238704",
   "discogs_url": "https://www.discogs.com/release/5238704-Dire-Straits-The-Studio-Albums-1978-1991",
@@ -259,8 +259,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/55/c1/b955c130-6735-8f3c-3806-a361eaa860ae/06UMGIM38898.rgb.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704.jpg",
       "width": 2000
     }
   ],
@@ -271,72 +271,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Dire+Straits/The+Studio+Albums+1978+-+1991",
   "local_images": {
-    "hi-res": "public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-hi-res.jpg",
-    "medium": "public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-medium.jpg",
-    "small": "public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-small.jpg"
+    "hi-res": "../public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-hi-res.jpg",
+    "medium": "../public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-medium.jpg",
+    "small": "../public/album/the-studio-albums-1978-1991-5238704/the-studio-albums-1978-1991-5238704-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:00:51.326995",
+    "processed_at": "2025-07-07T20:38:55.739320",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Making Movies",
+  "release_name_apple_music": null,
   "release_name_discogs": "The Studio Albums 1978 - 1991",
-  "release_name_spotify": "Dire Straits",
+  "release_name_spotify": null,
   "released": "2013-11-25",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/55/c1/b955c130-6735-8f3c-3806-a361eaa860ae/06UMGIM38898.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 1980 Mercury Records Limited",
-      "editorial_notes": null,
-      "id": "1440566256",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Dire Straits",
-        "artwork": {
-          "bgColor": "ae1111",
-          "height": 1411,
-          "textColor1": "deedfa",
-          "textColor2": "9ae1f3",
-          "textColor3": "d5c1cb",
-          "textColor4": "9eb7c6",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/b9/55/c1/b955c130-6735-8f3c-3806-a361eaa860ae/06UMGIM38898.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 1423
-        },
-        "copyright": "℗ 1980 Mercury Records Limited",
-        "genreNames": [
-          "Rock",
-          "Music",
-          "Pop",
-          "Pop/Rock",
-          "Arena Rock",
-          "Rock & Roll"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Making Movies",
-        "playParams": {
-          "id": "1440566256",
-          "kind": "album"
-        },
-        "recordLabel": "EMI",
-        "releaseDate": "1980-01-01",
-        "trackCount": 7,
-        "upc": "00042280005023",
-        "url": "https://music.apple.com/gb/album/making-movies/1440566256"
-      },
-      "url": "https://music.apple.com/gb/album/making-movies/1440566256"
-    },
     "lastfm": {
       "images": [
         {
@@ -1311,512 +1263,10 @@
       "url": "https://www.last.fm/music/Dire+Straits/The+Studio+Albums+1978+-+1991",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "© 1978, 2000 Warner Records Inc.",
-          "type": "C"
-        },
-        {
-          "text": "℗ 1978 Warner Records Inc.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "093624776963"
-      },
-      "id": "4dKdxly4ji1vfl7sEYuqBe",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27305b07080bdc2dd0e2cf6f008",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0205b07080bdc2dd0e2cf6f008",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485105b07080bdc2dd0e2cf6f008",
-          "width": 64
-        }
-      ],
-      "label": "Warner Records",
-      "popularity": 69,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-            },
-            "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-            "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-            "name": "Dire Straits",
-            "type": "artist",
-            "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 1978, 2000 Warner Records Inc.",
-            "type": "C"
-          },
-          {
-            "text": "℗ 1978 Warner Records Inc.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "093624776963"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4dKdxly4ji1vfl7sEYuqBe"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/4dKdxly4ji1vfl7sEYuqBe?market=US",
-        "id": "4dKdxly4ji1vfl7sEYuqBe",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27305b07080bdc2dd0e2cf6f008",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0205b07080bdc2dd0e2cf6f008",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485105b07080bdc2dd0e2cf6f008",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Warner Records",
-        "name": "Dire Straits",
-        "popularity": 69,
-        "release_date": "1978-10-07",
-        "release_date_precision": "day",
-        "total_tracks": 9,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/4dKdxly4ji1vfl7sEYuqBe/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 242600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0NnuQYRXNIzncgftfbTV3P"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0NnuQYRXNIzncgftfbTV3P",
-              "id": "0NnuQYRXNIzncgftfbTV3P",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Down to the Waterline",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:0NnuQYRXNIzncgftfbTV3P"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 326640,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2whYf5duw5d3N48wEseuXJ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2whYf5duw5d3N48wEseuXJ",
-              "id": "2whYf5duw5d3N48wEseuXJ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Water of Love",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:2whYf5duw5d3N48wEseuXJ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 199600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0k6KE0DIlGGmGK6yL54shP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0k6KE0DIlGGmGK6yL54shP",
-              "id": "0k6KE0DIlGGmGK6yL54shP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Setting Me Up",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:0k6KE0DIlGGmGK6yL54shP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 253426,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7f8mgCngOGhoRNAmhN6GIo"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7f8mgCngOGhoRNAmhN6GIo",
-              "id": "7f8mgCngOGhoRNAmhN6GIo",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Six Blade Knife",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:7f8mgCngOGhoRNAmhN6GIo"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 179506,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6MzKPuwhG9cFVRkKQ7RrtH"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6MzKPuwhG9cFVRkKQ7RrtH",
-              "id": "6MzKPuwhG9cFVRkKQ7RrtH",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Southbound Again",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:6MzKPuwhG9cFVRkKQ7RrtH"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 348760,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6cr6UDpkjEaMQ80OjWqEBQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6cr6UDpkjEaMQ80OjWqEBQ",
-              "id": "6cr6UDpkjEaMQ80OjWqEBQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sultans of Swing",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:6cr6UDpkjEaMQ80OjWqEBQ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 376706,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2XvGUsoEFpDsmfxlNsL5lL"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2XvGUsoEFpDsmfxlNsL5lL",
-              "id": "2XvGUsoEFpDsmfxlNsL5lL",
-              "is_local": false,
-              "is_playable": true,
-              "name": "In the Gallery",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:2XvGUsoEFpDsmfxlNsL5lL"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 281600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5EoD2H4HEX3lQd0l7CsHA1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5EoD2H4HEX3lQd0l7CsHA1",
-              "id": "5EoD2H4HEX3lQd0l7CsHA1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Wild West End",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:5EoD2H4HEX3lQd0l7CsHA1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0WwSkZ7LtFUFjGjMZBMt6T"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0WwSkZ7LtFUFjGjMZBMt6T",
-                  "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-                  "name": "Dire Straits",
-                  "type": "artist",
-                  "uri": "spotify:artist:0WwSkZ7LtFUFjGjMZBMt6T"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 303826,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/62KeChWhY7Inuu8CPSHE3w"
-              },
-              "href": "https://api.spotify.com/v1/tracks/62KeChWhY7Inuu8CPSHE3w",
-              "id": "62KeChWhY7Inuu8CPSHE3w",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Lions",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:62KeChWhY7Inuu8CPSHE3w"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 9
-        },
-        "type": "album",
-        "uri": "spotify:album:4dKdxly4ji1vfl7sEYuqBe"
-      },
-      "release_date": "1978-10-07",
-      "release_date_precision": "day",
-      "total_tracks": 9,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 242600,
-          "explicit": false,
-          "id": "0NnuQYRXNIzncgftfbTV3P",
-          "name": "Down to the Waterline",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 326640,
-          "explicit": false,
-          "id": "2whYf5duw5d3N48wEseuXJ",
-          "name": "Water of Love",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 199600,
-          "explicit": false,
-          "id": "0k6KE0DIlGGmGK6yL54shP",
-          "name": "Setting Me Up",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 253426,
-          "explicit": false,
-          "id": "7f8mgCngOGhoRNAmhN6GIo",
-          "name": "Six Blade Knife",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 179506,
-          "explicit": false,
-          "id": "6MzKPuwhG9cFVRkKQ7RrtH",
-          "name": "Southbound Again",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 348760,
-          "explicit": false,
-          "id": "6cr6UDpkjEaMQ80OjWqEBQ",
-          "name": "Sultans of Swing",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 376706,
-          "explicit": false,
-          "id": "2XvGUsoEFpDsmfxlNsL5lL",
-          "name": "In the Gallery",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 281600,
-          "explicit": false,
-          "id": "5EoD2H4HEX3lQd0l7CsHA1",
-          "name": "Wild West End",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0WwSkZ7LtFUFjGjMZBMt6T",
-              "name": "Dire Straits"
-            }
-          ],
-          "duration_ms": 303826,
-          "explicit": false,
-          "id": "62KeChWhY7Inuu8CPSHE3w",
-          "name": "Lions",
-          "preview_url": null,
-          "track_number": 9
-        }
-      ],
-      "url": "https://open.spotify.com/album/4dKdxly4ji1vfl7sEYuqBe"
     }
   },
-  "spotify_id": "4dKdxly4ji1vfl7sEYuqBe",
-  "spotify_url": "https://open.spotify.com/album/4dKdxly4ji1vfl7sEYuqBe",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Classic Rock"
   ],
@@ -2165,6 +1615,6 @@
       "title": "How Long"
     }
   ],
-  "updated_at": "2025-07-05T16:00:50.733054",
+  "updated_at": "2025-07-07T20:38:55.444190",
   "year": 2013
 }

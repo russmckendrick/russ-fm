@@ -6,7 +6,7 @@
   "created_at": "2025-07-05T15:44:24.611121",
   "discogs_id": "3712038",
   "discogs_url": "https://www.discogs.com/artist/3712038",
-  "followers": 13606,
+  "followers": null,
   "formed_date": null,
   "genres": [
     "drum and bass",
@@ -16,26 +16,8 @@
     "ambient",
     "chillout"
   ],
-  "id": null,
+  "id": "casualties-of-cool-1751726665",
   "images": [
-    {
-      "height": 640,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab6761610000e5ebaed919eb4ee07581ff4bc623",
-      "width": 640
-    },
-    {
-      "height": 320,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616100005174aed919eb4ee07581ff4bc623",
-      "width": 320
-    },
-    {
-      "height": 160,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab6761610000f178aed919eb4ee07581ff4bc623",
-      "width": 160
-    },
     {
       "height": null,
       "type": "lastfm_artist_small",
@@ -71,22 +53,42 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": 2000,
+      "type": "custom_artist_image",
+      "url": "https://v1.russ.fm/artist/casualties-of-cool/casualties-of-cool.jpg",
+      "width": 2000
     }
   ],
   "lastfm_mbid": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
   "lastfm_url": "https://www.last.fm/music/Casualties+of+Cool",
   "local_images": {
-    "hi-res": "public/artist/casualties-of-cool/casualties-of-cool-hi-res.jpg",
-    "medium": "public/artist/casualties-of-cool/casualties-of-cool-medium.jpg",
-    "small": "public/artist/casualties-of-cool/casualties-of-cool-small.jpg"
+    "hi-res": "../public/artist/casualties-of-cool/casualties-of-cool-hi-res.jpg",
+    "medium": "../public/artist/casualties-of-cool/casualties-of-cool-medium.jpg",
+    "small": "../public/artist/casualties-of-cool/casualties-of-cool-small.jpg"
   },
   "name": "Casualties Of Cool",
-  "popularity": 46,
+  "popularity": null,
   "services": {
+    "apple_music": {},
     "discogs": {
-      "id": 3712038,
-      "original_name": "Casualties Of Cool",
-      "role": ""
+      "cover_image": "",
+      "id": "3712038",
+      "images": [],
+      "members": [],
+      "name": "Casualties Of Cool",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "3712038",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/3712038"
+      },
+      "resource_url": "https://api.discogs.com/artists/3712038",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/3712038",
+      "urls": []
     },
     "lastfm": {
       "bio_content": "Casualties of Cool is a duo consisting of Devin Townsend and Ché Aimee (from Devin Townsend Project’s Ki album).\n\nTownsend stated that “it sounds like haunted Johnny Cash songs. Late night music, completely isolated sounding and different than anything I’ve done. Che sings most of the leads, and it’s probably the truest reflection of who I am in life at this point.” <a href=\"https://www.last.fm/music/Casualties+of+Cool\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -117,10 +119,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 9103,
+      "listeners": 9104,
       "mbid": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
       "name": "Casualties of Cool",
-      "playcount": 594923,
+      "playcount": 594939,
       "similar_artists": [
         {
           "name": "Devin Townsend",
@@ -152,36 +154,10 @@
       ],
       "url": "https://www.last.fm/music/Casualties+of+Cool"
     },
-    "spotify": {
-      "followers": 13606,
-      "genres": [
-        "drum and bass"
-      ],
-      "id": "1YrGu3E2y8jG5JJFlDEWFE",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab6761610000e5ebaed919eb4ee07581ff4bc623",
-          "width": 640
-        },
-        {
-          "height": 320,
-          "url": "https://i.scdn.co/image/ab67616100005174aed919eb4ee07581ff4bc623",
-          "width": 320
-        },
-        {
-          "height": 160,
-          "url": "https://i.scdn.co/image/ab6761610000f178aed919eb4ee07581ff4bc623",
-          "width": 160
-        }
-      ],
-      "name": "Circadian",
-      "popularity": 46,
-      "url": "https://open.spotify.com/artist/1YrGu3E2y8jG5JJFlDEWFE"
-    }
+    "spotify": {}
   },
-  "spotify_id": "1YrGu3E2y8jG5JJFlDEWFE",
-  "spotify_url": "https://open.spotify.com/artist/1YrGu3E2y8jG5JJFlDEWFE",
-  "updated_at": "2025-07-05T15:44:25.398231",
+  "spotify_id": null,
+  "spotify_url": null,
+  "updated_at": "2025-07-07T20:46:45.001242",
   "wikipedia_url": null
 }

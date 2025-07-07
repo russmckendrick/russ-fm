@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "135141613",
-  "apple_music_url": "https://music.apple.com/gb/album/operation-mindcrime-ii/135141613",
+  "apple_music_id": "715912112",
+  "apple_music_url": "https://music.apple.com/gb/album/operation-mindcrime-deluxe-edition/715912112",
   "artists": [
     {
       "apple_music_id": "165176",
@@ -22,7 +22,7 @@
     }
   },
   "country": "USA & Europe",
-  "created_at": "2025-07-05T15:48:24.854313",
+  "created_at": "2025-07-07T20:42:07.376050",
   "date_added": "2021-06-25T08:52:27-07:00",
   "discogs_id": "19270393",
   "discogs_url": "https://www.discogs.com/release/19270393-Queensrÿche-Operation-Mindcrime",
@@ -120,7 +120,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/4a/ed/89/mzi.vplvhcmh.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/77/da/93/77da938b-dd52-0ca6-8bbe-5e831394c865/00094636012858.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/operation-mindcrime-19270393/operation-mindcrime-19270393.jpg",
       "width": 2000
     }
   ],
@@ -131,14 +138,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Queensr%C3%BFche/Operation:+Mindcrime",
   "local_images": {
-    "hi-res": "public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-hi-res.jpg",
-    "medium": "public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-medium.jpg",
-    "small": "public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-small.jpg"
+    "hi-res": "../public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-hi-res.jpg",
+    "medium": "../public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-medium.jpg",
+    "small": "../public/album/operation-mindcrime-19270393/operation-mindcrime-19270393-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:48:27.529814",
+    "processed_at": "2025-07-07T20:42:16.437573",
     "services_used": [
       "discogs",
       "apple_music",
@@ -146,56 +153,60 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Operation: Mindcrime II",
+  "release_name_apple_music": "Operation: Mindcrime (Deluxe Edition)",
   "release_name_discogs": "Operation: Mindcrime",
-  "release_name_spotify": "Operation: Mindcrime II",
+  "release_name_spotify": "Operation: Mindcrime (Deluxe Edition)",
   "released": "2021-06-25",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/4a/ed/89/mzi.vplvhcmh.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2006 Tri-Ryche, under exclusive license to Rhino Entertainment Co., A Warner Music Group Co.",
-      "editorial_notes": null,
-      "id": "135141613",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/77/da/93/77da938b-dd52-0ca6-8bbe-5e831394c865/00094636012858.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 2006 Capitol Records, LLC",
+      "editorial_notes": "Queensryche hit its career peak when hair metal was also at its commercial apex. Ironic, maybe, considering that 1988’s <i>Operation: Mindcrime</i> is a much less escapist product than those of, say, Poison. A concept album whose storyline takes place in a futuristic dystopia in which music is illegal and “the rich control the government, the media, the law” (“Speak”), the record builds on the ideas of Rush’s <i>2112</i> with a marked leftist perspective. Its epic scope is matched by the band’s wide palette, which offers everything from thrash (the cautionary “The Needle Lies”) to the operatic (the 10-minute “Suite Sister Mary”). The album’s expanse found many welcoming listeners, eventually going platinum and setting Queensryche on the path to even bigger success with its followup, <i>Empire</i>. This remastered edition contains two live tracks along with a London concert version of the entire album.",
+      "id": "715912112",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Queensrÿche",
         "artwork": {
-          "bgColor": "000000",
-          "height": 1419,
-          "textColor1": "ffffff",
-          "textColor2": "d8d8d8",
-          "textColor3": "cbcbcb",
-          "textColor4": "adadad",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/4a/ed/89/mzi.vplvhcmh.jpg/{w}x{h}bb.jpg",
-          "width": 1425
+          "bgColor": "191f1f",
+          "height": 1500,
+          "textColor1": "fefffb",
+          "textColor2": "fbdd27",
+          "textColor3": "d0d2ce",
+          "textColor4": "ceb725",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/77/da/93/77da938b-dd52-0ca6-8bbe-5e831394c865/00094636012858.jpg/{w}x{h}bb.jpg",
+          "width": 1500
         },
-        "copyright": "℗ 2006 Tri-Ryche, under exclusive license to Rhino Entertainment Co., A Warner Music Group Co.",
+        "contentRating": "explicit",
+        "copyright": "℗ 2006 Capitol Records, LLC",
+        "editorialNotes": {
+          "standard": "Queensryche hit its career peak when hair metal was also at its commercial apex. Ironic, maybe, considering that 1988’s <i>Operation: Mindcrime</i> is a much less escapist product than those of, say, Poison. A concept album whose storyline takes place in a futuristic dystopia in which music is illegal and “the rich control the government, the media, the law” (“Speak”), the record builds on the ideas of Rush’s <i>2112</i> with a marked leftist perspective. Its epic scope is matched by the band’s wide palette, which offers everything from thrash (the cautionary “The Needle Lies”) to the operatic (the 10-minute “Suite Sister Mary”). The album’s expanse found many welcoming listeners, eventually going platinum and setting Queensryche on the path to even bigger success with its followup, <i>Empire</i>. This remastered edition contains two live tracks along with a London concert version of the entire album."
+        },
         "genreNames": [
           "Hard Rock",
           "Music",
           "Rock",
-          "Prog-Rock/Art Rock",
           "Metal",
-          "Arena Rock"
+          "Arena Rock",
+          "Pop"
         ],
         "isCompilation": false,
         "isComplete": true,
         "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "Operation: Mindcrime II",
+        "name": "Operation: Mindcrime (Deluxe Edition)",
         "playParams": {
-          "id": "135141613",
+          "id": "715912112",
           "kind": "album"
         },
-        "recordLabel": "Rhino",
-        "releaseDate": "2006-04-03",
-        "trackCount": 17,
-        "upc": "603497182763",
-        "url": "https://music.apple.com/gb/album/operation-mindcrime-ii/135141613"
+        "recordLabel": "Capitol Records",
+        "releaseDate": "1988-05-03",
+        "trackCount": 32,
+        "upc": "00094636012858",
+        "url": "https://music.apple.com/gb/album/operation-mindcrime-deluxe-edition/715912112"
       },
-      "url": "https://music.apple.com/gb/album/operation-mindcrime-ii/135141613"
+      "url": "https://music.apple.com/gb/album/operation-mindcrime-deluxe-edition/715912112"
     },
     "lastfm": {
       "images": [
@@ -224,9 +235,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/131a6c7981bee3849f785df75440df86.png"
         }
       ],
-      "listeners": 145315,
+      "listeners": 145325,
       "mbid": "077e9e62-7a5b-404c-b0d1-2f1178211333",
-      "playcount": 3043250,
+      "playcount": 3043596,
       "raw_data": {
         "album": {
           "artist": "Queensrÿche",
@@ -256,10 +267,10 @@
               "size": ""
             }
           ],
-          "listeners": "145315",
+          "listeners": "145325",
           "mbid": "077e9e62-7a5b-404c-b0d1-2f1178211333",
           "name": "Operation: Mindcrime",
-          "playcount": "3043250",
+          "playcount": "3043596",
           "tags": {
             "tag": [
               {
@@ -570,38 +581,38 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 2006 Rhino Entertainment Co., A Warner Music Group Co.",
+          "text": "© 2006 Capitol Records, LLC",
           "type": "C"
         },
         {
-          "text": "℗ 2006 Tri-Ryche, under exclusive license to Rhino Entertainment Co., A Warner Music Group Co.",
+          "text": "℗ 2006 Capitol Records, LLC",
           "type": "P"
         }
       ],
-      "explicit": false,
+      "explicit": true,
       "external_ids": {
-        "upc": "081227330668"
+        "upc": "00094636012858"
       },
-      "id": "0TYoFZEECtMXKsOxBopww8",
+      "id": "4eEQ3aNA8mptFIfbFdX79p",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273c8b4d733131aaa2d371dc33b",
+          "url": "https://i.scdn.co/image/ab67616d0000b273dcd00578b5f2c8f12ad62b84",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02c8b4d733131aaa2d371dc33b",
+          "url": "https://i.scdn.co/image/ab67616d00001e02dcd00578b5f2c8f12ad62b84",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851c8b4d733131aaa2d371dc33b",
+          "url": "https://i.scdn.co/image/ab67616d00004851dcd00578b5f2c8f12ad62b84",
           "width": 64
         }
       ],
-      "label": "Rhino",
-      "popularity": 24,
+      "label": "Capitol Records",
+      "popularity": 53,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
@@ -619,49 +630,49 @@
         ],
         "copyrights": [
           {
-            "text": "© 2006 Rhino Entertainment Co., A Warner Music Group Co.",
+            "text": "© 2006 Capitol Records, LLC",
             "type": "C"
           },
           {
-            "text": "℗ 2006 Tri-Ryche, under exclusive license to Rhino Entertainment Co., A Warner Music Group Co.",
+            "text": "℗ 2006 Capitol Records, LLC",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "081227330668"
+          "upc": "00094636012858"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0TYoFZEECtMXKsOxBopww8"
+          "spotify": "https://open.spotify.com/album/4eEQ3aNA8mptFIfbFdX79p"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0TYoFZEECtMXKsOxBopww8?market=US",
-        "id": "0TYoFZEECtMXKsOxBopww8",
+        "href": "https://api.spotify.com/v1/albums/4eEQ3aNA8mptFIfbFdX79p?market=US",
+        "id": "4eEQ3aNA8mptFIfbFdX79p",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273c8b4d733131aaa2d371dc33b",
+            "url": "https://i.scdn.co/image/ab67616d0000b273dcd00578b5f2c8f12ad62b84",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02c8b4d733131aaa2d371dc33b",
+            "url": "https://i.scdn.co/image/ab67616d00001e02dcd00578b5f2c8f12ad62b84",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851c8b4d733131aaa2d371dc33b",
+            "url": "https://i.scdn.co/image/ab67616d00004851dcd00578b5f2c8f12ad62b84",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Rhino",
-        "name": "Operation: Mindcrime II",
-        "popularity": 24,
-        "release_date": "2006-03-28",
-        "release_date_precision": "day",
-        "total_tracks": 17,
+        "label": "Capitol Records",
+        "name": "Operation: Mindcrime (Deluxe Edition)",
+        "popularity": 53,
+        "release_date": "1988",
+        "release_date_precision": "year",
+        "total_tracks": 32,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0TYoFZEECtMXKsOxBopww8/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4eEQ3aNA8mptFIfbFdX79p/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -677,20 +688,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 95693,
+              "duration_ms": 77400,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6NwjxuJl9yAObuceKFakyy"
+                "spotify": "https://open.spotify.com/track/5b85fn016yCsXMCMKuL87C"
               },
-              "href": "https://api.spotify.com/v1/tracks/6NwjxuJl9yAObuceKFakyy",
-              "id": "6NwjxuJl9yAObuceKFakyy",
+              "href": "https://api.spotify.com/v1/tracks/5b85fn016yCsXMCMKuL87C",
+              "id": "5b85fn016yCsXMCMKuL87C",
               "is_local": false,
               "is_playable": true,
-              "name": "Freiheit Ouverture",
+              "name": "I Remember Now - Remastered 2003",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:6NwjxuJl9yAObuceKFakyy"
+              "uri": "spotify:track:5b85fn016yCsXMCMKuL87C"
             },
             {
               "artists": [
@@ -706,20 +717,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 8706,
+              "duration_ms": 87492,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/58KBzF34Ur75q3aXRlhe0T"
+                "spotify": "https://open.spotify.com/track/7yGEsUF0xXmWR5Iv3Z5sFH"
               },
-              "href": "https://api.spotify.com/v1/tracks/58KBzF34Ur75q3aXRlhe0T",
-              "id": "58KBzF34Ur75q3aXRlhe0T",
+              "href": "https://api.spotify.com/v1/tracks/7yGEsUF0xXmWR5Iv3Z5sFH",
+              "id": "7yGEsUF0xXmWR5Iv3Z5sFH",
               "is_local": false,
               "is_playable": true,
-              "name": "Convict",
+              "name": "Anarchy-X - Remastered 2003",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:58KBzF34Ur75q3aXRlhe0T"
+              "uri": "spotify:track:7yGEsUF0xXmWR5Iv3Z5sFH"
             },
             {
               "artists": [
@@ -735,20 +746,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 173160,
-              "explicit": false,
+              "duration_ms": 279826,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6MRYtEup2n4QQgDqOwJAhy"
+                "spotify": "https://open.spotify.com/track/0GoQdU4T7AwJrrhE1WKFww"
               },
-              "href": "https://api.spotify.com/v1/tracks/6MRYtEup2n4QQgDqOwJAhy",
-              "id": "6MRYtEup2n4QQgDqOwJAhy",
+              "href": "https://api.spotify.com/v1/tracks/0GoQdU4T7AwJrrhE1WKFww",
+              "id": "0GoQdU4T7AwJrrhE1WKFww",
               "is_local": false,
               "is_playable": true,
-              "name": "I'm American",
+              "name": "Revolution Calling - Remastered 2003",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:6MRYtEup2n4QQgDqOwJAhy"
+              "uri": "spotify:track:0GoQdU4T7AwJrrhE1WKFww"
             },
             {
               "artists": [
@@ -764,20 +775,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 252640,
+              "duration_ms": 285306,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3ABnVFVY6MH0lEl6YyDaga"
+                "spotify": "https://open.spotify.com/track/3UD6pyEQwqp2YcfSNvmsoT"
               },
-              "href": "https://api.spotify.com/v1/tracks/3ABnVFVY6MH0lEl6YyDaga",
-              "id": "3ABnVFVY6MH0lEl6YyDaga",
+              "href": "https://api.spotify.com/v1/tracks/3UD6pyEQwqp2YcfSNvmsoT",
+              "id": "3UD6pyEQwqp2YcfSNvmsoT",
               "is_local": false,
               "is_playable": true,
-              "name": "One Foot in Hell",
+              "name": "Operation Mindcrime - Remastered 2003",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:3ABnVFVY6MH0lEl6YyDaga"
+              "uri": "spotify:track:3UD6pyEQwqp2YcfSNvmsoT"
             },
             {
               "artists": [
@@ -793,20 +804,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 269426,
+              "duration_ms": 222560,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2Q8sCZ4Y9sgOcikEEJro6c"
+                "spotify": "https://open.spotify.com/track/18BdRreb7IPnj1xJEECNCn"
               },
-              "href": "https://api.spotify.com/v1/tracks/2Q8sCZ4Y9sgOcikEEJro6c",
-              "id": "2Q8sCZ4Y9sgOcikEEJro6c",
+              "href": "https://api.spotify.com/v1/tracks/18BdRreb7IPnj1xJEECNCn",
+              "id": "18BdRreb7IPnj1xJEECNCn",
               "is_local": false,
               "is_playable": true,
-              "name": "Hostage",
+              "name": "Speak - Remastered 2003",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:2Q8sCZ4Y9sgOcikEEJro6c"
+              "uri": "spotify:track:18BdRreb7IPnj1xJEECNCn"
             },
             {
               "artists": [
@@ -822,20 +833,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 276800,
-              "explicit": false,
+              "duration_ms": 247173,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4rEueMMzMN5lL31KSdYcvN"
+                "spotify": "https://open.spotify.com/track/0yaUb3q4NrMvAd5G3sFqpU"
               },
-              "href": "https://api.spotify.com/v1/tracks/4rEueMMzMN5lL31KSdYcvN",
-              "id": "4rEueMMzMN5lL31KSdYcvN",
+              "href": "https://api.spotify.com/v1/tracks/0yaUb3q4NrMvAd5G3sFqpU",
+              "id": "0yaUb3q4NrMvAd5G3sFqpU",
               "is_local": false,
               "is_playable": true,
-              "name": "The Hands",
+              "name": "Spreading The Disease - Remastered 2003",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:4rEueMMzMN5lL31KSdYcvN"
+              "uri": "spotify:track:0yaUb3q4NrMvAd5G3sFqpU"
             },
             {
               "artists": [
@@ -851,20 +862,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 192106,
+              "duration_ms": 347834,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0p8JH3PxpVATB47MxeDG33"
+                "spotify": "https://open.spotify.com/track/5OXE5BYGHWhg1orfKMkO4h"
               },
-              "href": "https://api.spotify.com/v1/tracks/0p8JH3PxpVATB47MxeDG33",
-              "id": "0p8JH3PxpVATB47MxeDG33",
+              "href": "https://api.spotify.com/v1/tracks/5OXE5BYGHWhg1orfKMkO4h",
+              "id": "5OXE5BYGHWhg1orfKMkO4h",
               "is_local": false,
               "is_playable": true,
-              "name": "Speed of Light",
+              "name": "The Mission - Remastered 2003",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:0p8JH3PxpVATB47MxeDG33"
+              "uri": "spotify:track:5OXE5BYGHWhg1orfKMkO4h"
             },
             {
               "artists": [
@@ -880,20 +891,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 196866,
+              "duration_ms": 639826,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6QDJAmeuGSq3auFkzLfDoZ"
+                "spotify": "https://open.spotify.com/track/7CTcWcNpBnTungYuQgCg2w"
               },
-              "href": "https://api.spotify.com/v1/tracks/6QDJAmeuGSq3auFkzLfDoZ",
-              "id": "6QDJAmeuGSq3auFkzLfDoZ",
+              "href": "https://api.spotify.com/v1/tracks/7CTcWcNpBnTungYuQgCg2w",
+              "id": "7CTcWcNpBnTungYuQgCg2w",
               "is_local": false,
               "is_playable": true,
-              "name": "Signs Say Go",
+              "name": "Suite Sister Mary - Remastered 2003",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:6QDJAmeuGSq3auFkzLfDoZ"
+              "uri": "spotify:track:7CTcWcNpBnTungYuQgCg2w"
             },
             {
               "artists": [
@@ -909,20 +920,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 191066,
+              "duration_ms": 188973,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/03YvITnk7R2Gkr8KJFNtvI"
+                "spotify": "https://open.spotify.com/track/6D56362n3CmvFqPPqrujqc"
               },
-              "href": "https://api.spotify.com/v1/tracks/03YvITnk7R2Gkr8KJFNtvI",
-              "id": "03YvITnk7R2Gkr8KJFNtvI",
+              "href": "https://api.spotify.com/v1/tracks/6D56362n3CmvFqPPqrujqc",
+              "id": "6D56362n3CmvFqPPqrujqc",
               "is_local": false,
               "is_playable": true,
-              "name": "Re-Arrange You",
+              "name": "The Needle Lies - Remastered 2003",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:03YvITnk7R2Gkr8KJFNtvI"
+              "uri": "spotify:track:6D56362n3CmvFqPPqrujqc"
             },
             {
               "artists": [
@@ -938,20 +949,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 188466,
+              "duration_ms": 82626,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5neK3dhmssAKS3NgIbRtDu"
+                "spotify": "https://open.spotify.com/track/5kKvQ5ZKNX6banf204Ae9z"
               },
-              "href": "https://api.spotify.com/v1/tracks/5neK3dhmssAKS3NgIbRtDu",
-              "id": "5neK3dhmssAKS3NgIbRtDu",
+              "href": "https://api.spotify.com/v1/tracks/5kKvQ5ZKNX6banf204Ae9z",
+              "id": "5kKvQ5ZKNX6banf204Ae9z",
               "is_local": false,
               "is_playable": true,
-              "name": "The Chase",
+              "name": "Electric Requiem - Remastered 2003",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:5neK3dhmssAKS3NgIbRtDu"
+              "uri": "spotify:track:5kKvQ5ZKNX6banf204Ae9z"
             },
             {
               "artists": [
@@ -967,20 +978,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 273773,
+              "duration_ms": 274373,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6mdB4wxsLEYJ5j1USNowiP"
+                "spotify": "https://open.spotify.com/track/2O9U63xI18zLcqbAK2d2aD"
               },
-              "href": "https://api.spotify.com/v1/tracks/6mdB4wxsLEYJ5j1USNowiP",
-              "id": "6mdB4wxsLEYJ5j1USNowiP",
+              "href": "https://api.spotify.com/v1/tracks/2O9U63xI18zLcqbAK2d2aD",
+              "id": "2O9U63xI18zLcqbAK2d2aD",
               "is_local": false,
               "is_playable": true,
-              "name": "Murderer?",
+              "name": "Breaking The Silence - Remastered 2003",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:6mdB4wxsLEYJ5j1USNowiP"
+              "uri": "spotify:track:2O9U63xI18zLcqbAK2d2aD"
             },
             {
               "artists": [
@@ -996,20 +1007,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 178000,
+              "duration_ms": 263560,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7A1hk7bcXv0JukrhAppyoc"
+                "spotify": "https://open.spotify.com/track/0U2TocFjqul3sis3sE5jZl"
               },
-              "href": "https://api.spotify.com/v1/tracks/7A1hk7bcXv0JukrhAppyoc",
-              "id": "7A1hk7bcXv0JukrhAppyoc",
+              "href": "https://api.spotify.com/v1/tracks/0U2TocFjqul3sis3sE5jZl",
+              "id": "0U2TocFjqul3sis3sE5jZl",
               "is_local": false,
               "is_playable": true,
-              "name": "Circles",
+              "name": "I Don't Believe In Love - Remastered 2003",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:7A1hk7bcXv0JukrhAppyoc"
+              "uri": "spotify:track:0U2TocFjqul3sis3sE5jZl"
             },
             {
               "artists": [
@@ -1025,20 +1036,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 267933,
+              "duration_ms": 65840,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/52eYpiOTtdh3jUynza7CxX"
+                "spotify": "https://open.spotify.com/track/0ElgX6SBHTVKJhe3qqk19t"
               },
-              "href": "https://api.spotify.com/v1/tracks/52eYpiOTtdh3jUynza7CxX",
-              "id": "52eYpiOTtdh3jUynza7CxX",
+              "href": "https://api.spotify.com/v1/tracks/0ElgX6SBHTVKJhe3qqk19t",
+              "id": "0ElgX6SBHTVKJhe3qqk19t",
               "is_local": false,
               "is_playable": true,
-              "name": "If I Could Change It All",
+              "name": "Waiting For 22 - Remastered 2003",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:52eYpiOTtdh3jUynza7CxX"
+              "uri": "spotify:track:0ElgX6SBHTVKJhe3qqk19t"
             },
             {
               "artists": [
@@ -1054,20 +1065,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 152333,
+              "duration_ms": 92360,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5ltQ0vXAhjip888anp8sPK"
+                "spotify": "https://open.spotify.com/track/22zm0xIH9niNiUeZE1aMKi"
               },
-              "href": "https://api.spotify.com/v1/tracks/5ltQ0vXAhjip888anp8sPK",
-              "id": "5ltQ0vXAhjip888anp8sPK",
+              "href": "https://api.spotify.com/v1/tracks/22zm0xIH9niNiUeZE1aMKi",
+              "id": "22zm0xIH9niNiUeZE1aMKi",
               "is_local": false,
               "is_playable": true,
-              "name": "An International Confrontation",
+              "name": "My Empty Room - Remastered 2003",
               "preview_url": null,
               "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:5ltQ0vXAhjip888anp8sPK"
+              "uri": "spotify:track:22zm0xIH9niNiUeZE1aMKi"
             },
             {
               "artists": [
@@ -1083,20 +1094,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 221693,
+              "duration_ms": 413733,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4j7roDTTJzi6XnZidcVgav"
+                "spotify": "https://open.spotify.com/track/1OHNBBNgDsHdmSg7T9iIqq"
               },
-              "href": "https://api.spotify.com/v1/tracks/4j7roDTTJzi6XnZidcVgav",
-              "id": "4j7roDTTJzi6XnZidcVgav",
+              "href": "https://api.spotify.com/v1/tracks/1OHNBBNgDsHdmSg7T9iIqq",
+              "id": "1OHNBBNgDsHdmSg7T9iIqq",
               "is_local": false,
               "is_playable": true,
-              "name": "A Junkie's Blues",
+              "name": "Eyes Of A Stranger - Remastered 2003",
               "preview_url": null,
               "track_number": 15,
               "type": "track",
-              "uri": "spotify:track:4j7roDTTJzi6XnZidcVgav"
+              "uri": "spotify:track:1OHNBBNgDsHdmSg7T9iIqq"
             },
             {
               "artists": [
@@ -1112,20 +1123,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 298173,
+              "duration_ms": 371533,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7aTbvD299eERGyd5ZhVjGs"
+                "spotify": "https://open.spotify.com/track/3l2yb5LnMyOJYLlQsXvRRX"
               },
-              "href": "https://api.spotify.com/v1/tracks/7aTbvD299eERGyd5ZhVjGs",
-              "id": "7aTbvD299eERGyd5ZhVjGs",
+              "href": "https://api.spotify.com/v1/tracks/3l2yb5LnMyOJYLlQsXvRRX",
+              "id": "3l2yb5LnMyOJYLlQsXvRRX",
               "is_local": false,
               "is_playable": true,
-              "name": "Fear City Slide",
+              "name": "The Mission - Live At Hammersmith Odeon, London, England/11/15/90 / Remastered 2006",
               "preview_url": null,
               "track_number": 16,
               "type": "track",
-              "uri": "spotify:track:7aTbvD299eERGyd5ZhVjGs"
+              "uri": "spotify:track:3l2yb5LnMyOJYLlQsXvRRX"
             },
             {
               "artists": [
@@ -1141,34 +1152,469 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 310733,
+              "duration_ms": 163173,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2oKeUvQdCI9uK9gxvIMFTu"
+                "spotify": "https://open.spotify.com/track/0ANXZeNhSxMcdhkoplppFk"
               },
-              "href": "https://api.spotify.com/v1/tracks/2oKeUvQdCI9uK9gxvIMFTu",
-              "id": "2oKeUvQdCI9uK9gxvIMFTu",
+              "href": "https://api.spotify.com/v1/tracks/0ANXZeNhSxMcdhkoplppFk",
+              "id": "0ANXZeNhSxMcdhkoplppFk",
               "is_local": false,
               "is_playable": true,
-              "name": "All the Promises",
+              "name": "My Empty Room - Live At The Astoria Theatre, London, England/1994 / Remastered 2006",
               "preview_url": null,
               "track_number": 17,
               "type": "track",
-              "uri": "spotify:track:2oKeUvQdCI9uK9gxvIMFTu"
+              "uri": "spotify:track:0ANXZeNhSxMcdhkoplppFk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 72200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3N2uc3QDQn6qXyCe0uAlk3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3N2uc3QDQn6qXyCe0uAlk3",
+              "id": "3N2uc3QDQn6qXyCe0uAlk3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Remember Now - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3N2uc3QDQn6qXyCe0uAlk3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 88200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7micf17yMxqYVJqQHwXhfX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7micf17yMxqYVJqQHwXhfX",
+              "id": "7micf17yMxqYVJqQHwXhfX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Anarchy-X - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7micf17yMxqYVJqQHwXhfX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 291317,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5heBlGBB9Qfq3NH4IzTYML"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5heBlGBB9Qfq3NH4IzTYML",
+              "id": "5heBlGBB9Qfq3NH4IzTYML",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Revolution Calling - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5heBlGBB9Qfq3NH4IzTYML"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 256160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/71eKg9rtoaV2K6JA1DAlTF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/71eKg9rtoaV2K6JA1DAlTF",
+              "id": "71eKg9rtoaV2K6JA1DAlTF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Operation: Mindcrime - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:71eKg9rtoaV2K6JA1DAlTF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 227276,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Oqsro5Fm0Wy80FPlsy9UD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Oqsro5Fm0Wy80FPlsy9UD",
+              "id": "3Oqsro5Fm0Wy80FPlsy9UD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Speak - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:3Oqsro5Fm0Wy80FPlsy9UD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 313200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2XLV2NCab4acqkexMoQL2x"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2XLV2NCab4acqkexMoQL2x",
+              "id": "2XLV2NCab4acqkexMoQL2x",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Spreading The Disease - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2XLV2NCab4acqkexMoQL2x"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 350533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1nn1UL32HoNXwoQjXb2d2r"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1nn1UL32HoNXwoQjXb2d2r",
+              "id": "1nn1UL32HoNXwoQjXb2d2r",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Mission - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:1nn1UL32HoNXwoQjXb2d2r"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 724733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5wUZGfIEEGlnsXrKOC6ID8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5wUZGfIEEGlnsXrKOC6ID8",
+              "id": "5wUZGfIEEGlnsXrKOC6ID8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Suite Sister Mary - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5wUZGfIEEGlnsXrKOC6ID8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 207266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/77hx3VbTetZ9NMNp5Iud4B"
+              },
+              "href": "https://api.spotify.com/v1/tracks/77hx3VbTetZ9NMNp5Iud4B",
+              "id": "77hx3VbTetZ9NMNp5Iud4B",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Needle Lies - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:77hx3VbTetZ9NMNp5Iud4B"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 76400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5Jc8J6MzZ5lmZSGoVoyVfO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5Jc8J6MzZ5lmZSGoVoyVfO",
+              "id": "5Jc8J6MzZ5lmZSGoVoyVfO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Electric Requiem - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:5Jc8J6MzZ5lmZSGoVoyVfO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 274533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4GnAI9Msym0BagrK0BJ5Gq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4GnAI9Msym0BagrK0BJ5Gq",
+              "id": "4GnAI9Msym0BagrK0BJ5Gq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Breaking The Silence - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4GnAI9Msym0BagrK0BJ5Gq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 269266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2SMxJPtV7XvSeoaGLOis3Z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2SMxJPtV7XvSeoaGLOis3Z",
+              "id": "2SMxJPtV7XvSeoaGLOis3Z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Don't Believe In Love - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:2SMxJPtV7XvSeoaGLOis3Z"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 72293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4yMUToDD6O0DXP4EkmNzqx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4yMUToDD6O0DXP4EkmNzqx",
+              "id": "4yMUToDD6O0DXP4EkmNzqx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Waiting For 22 - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:4yMUToDD6O0DXP4EkmNzqx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 87214,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6f9JazUKZX0xbqnVUrkCFI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6f9JazUKZX0xbqnVUrkCFI",
+              "id": "6f9JazUKZX0xbqnVUrkCFI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Empty Room - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:6f9JazUKZX0xbqnVUrkCFI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2OgUPVlWYgGBGMefZgGvCO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2OgUPVlWYgGBGMefZgGvCO",
+                  "id": "2OgUPVlWYgGBGMefZgGvCO",
+                  "name": "Queensrÿche",
+                  "type": "artist",
+                  "uri": "spotify:artist:2OgUPVlWYgGBGMefZgGvCO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 473493,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/74Oea9JZ8fAEB1RfO5t5wt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/74Oea9JZ8fAEB1RfO5t5wt",
+              "id": "74Oea9JZ8fAEB1RfO5t5wt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Eyes Of A Stranger - Live At Hammersmith Odeon, London, England 11/15/90",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:74Oea9JZ8fAEB1RfO5t5wt"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 17
+          "total": 32
         },
         "type": "album",
-        "uri": "spotify:album:0TYoFZEECtMXKsOxBopww8"
+        "uri": "spotify:album:4eEQ3aNA8mptFIfbFdX79p"
       },
-      "release_date": "2006-03-28",
-      "release_date_precision": "day",
-      "total_tracks": 17,
+      "release_date": "1988",
+      "release_date_precision": "year",
+      "total_tracks": 32,
       "tracks": [
         {
           "artists": [
@@ -1177,10 +1623,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 95693,
+          "duration_ms": 77400,
           "explicit": false,
-          "id": "6NwjxuJl9yAObuceKFakyy",
-          "name": "Freiheit Ouverture",
+          "id": "5b85fn016yCsXMCMKuL87C",
+          "name": "I Remember Now - Remastered 2003",
           "preview_url": null,
           "track_number": 1
         },
@@ -1191,10 +1637,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 8706,
+          "duration_ms": 87492,
           "explicit": false,
-          "id": "58KBzF34Ur75q3aXRlhe0T",
-          "name": "Convict",
+          "id": "7yGEsUF0xXmWR5Iv3Z5sFH",
+          "name": "Anarchy-X - Remastered 2003",
           "preview_url": null,
           "track_number": 2
         },
@@ -1205,10 +1651,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 173160,
-          "explicit": false,
-          "id": "6MRYtEup2n4QQgDqOwJAhy",
-          "name": "I'm American",
+          "duration_ms": 279826,
+          "explicit": true,
+          "id": "0GoQdU4T7AwJrrhE1WKFww",
+          "name": "Revolution Calling - Remastered 2003",
           "preview_url": null,
           "track_number": 3
         },
@@ -1219,10 +1665,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 252640,
+          "duration_ms": 285306,
           "explicit": false,
-          "id": "3ABnVFVY6MH0lEl6YyDaga",
-          "name": "One Foot in Hell",
+          "id": "3UD6pyEQwqp2YcfSNvmsoT",
+          "name": "Operation Mindcrime - Remastered 2003",
           "preview_url": null,
           "track_number": 4
         },
@@ -1233,10 +1679,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 269426,
+          "duration_ms": 222560,
           "explicit": false,
-          "id": "2Q8sCZ4Y9sgOcikEEJro6c",
-          "name": "Hostage",
+          "id": "18BdRreb7IPnj1xJEECNCn",
+          "name": "Speak - Remastered 2003",
           "preview_url": null,
           "track_number": 5
         },
@@ -1247,10 +1693,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 276800,
-          "explicit": false,
-          "id": "4rEueMMzMN5lL31KSdYcvN",
-          "name": "The Hands",
+          "duration_ms": 247173,
+          "explicit": true,
+          "id": "0yaUb3q4NrMvAd5G3sFqpU",
+          "name": "Spreading The Disease - Remastered 2003",
           "preview_url": null,
           "track_number": 6
         },
@@ -1261,10 +1707,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 192106,
+          "duration_ms": 347834,
           "explicit": false,
-          "id": "0p8JH3PxpVATB47MxeDG33",
-          "name": "Speed of Light",
+          "id": "5OXE5BYGHWhg1orfKMkO4h",
+          "name": "The Mission - Remastered 2003",
           "preview_url": null,
           "track_number": 7
         },
@@ -1275,10 +1721,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 196866,
+          "duration_ms": 639826,
           "explicit": false,
-          "id": "6QDJAmeuGSq3auFkzLfDoZ",
-          "name": "Signs Say Go",
+          "id": "7CTcWcNpBnTungYuQgCg2w",
+          "name": "Suite Sister Mary - Remastered 2003",
           "preview_url": null,
           "track_number": 8
         },
@@ -1289,10 +1735,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 191066,
+          "duration_ms": 188973,
           "explicit": false,
-          "id": "03YvITnk7R2Gkr8KJFNtvI",
-          "name": "Re-Arrange You",
+          "id": "6D56362n3CmvFqPPqrujqc",
+          "name": "The Needle Lies - Remastered 2003",
           "preview_url": null,
           "track_number": 9
         },
@@ -1303,10 +1749,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 188466,
+          "duration_ms": 82626,
           "explicit": false,
-          "id": "5neK3dhmssAKS3NgIbRtDu",
-          "name": "The Chase",
+          "id": "5kKvQ5ZKNX6banf204Ae9z",
+          "name": "Electric Requiem - Remastered 2003",
           "preview_url": null,
           "track_number": 10
         },
@@ -1317,10 +1763,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 273773,
+          "duration_ms": 274373,
           "explicit": false,
-          "id": "6mdB4wxsLEYJ5j1USNowiP",
-          "name": "Murderer?",
+          "id": "2O9U63xI18zLcqbAK2d2aD",
+          "name": "Breaking The Silence - Remastered 2003",
           "preview_url": null,
           "track_number": 11
         },
@@ -1331,10 +1777,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 178000,
+          "duration_ms": 263560,
           "explicit": false,
-          "id": "7A1hk7bcXv0JukrhAppyoc",
-          "name": "Circles",
+          "id": "0U2TocFjqul3sis3sE5jZl",
+          "name": "I Don't Believe In Love - Remastered 2003",
           "preview_url": null,
           "track_number": 12
         },
@@ -1345,10 +1791,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 267933,
+          "duration_ms": 65840,
           "explicit": false,
-          "id": "52eYpiOTtdh3jUynza7CxX",
-          "name": "If I Could Change It All",
+          "id": "0ElgX6SBHTVKJhe3qqk19t",
+          "name": "Waiting For 22 - Remastered 2003",
           "preview_url": null,
           "track_number": 13
         },
@@ -1359,10 +1805,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 152333,
+          "duration_ms": 92360,
           "explicit": false,
-          "id": "5ltQ0vXAhjip888anp8sPK",
-          "name": "An International Confrontation",
+          "id": "22zm0xIH9niNiUeZE1aMKi",
+          "name": "My Empty Room - Remastered 2003",
           "preview_url": null,
           "track_number": 14
         },
@@ -1373,10 +1819,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 221693,
+          "duration_ms": 413733,
           "explicit": false,
-          "id": "4j7roDTTJzi6XnZidcVgav",
-          "name": "A Junkie's Blues",
+          "id": "1OHNBBNgDsHdmSg7T9iIqq",
+          "name": "Eyes Of A Stranger - Remastered 2003",
           "preview_url": null,
           "track_number": 15
         },
@@ -1387,10 +1833,10 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 298173,
+          "duration_ms": 371533,
           "explicit": false,
-          "id": "7aTbvD299eERGyd5ZhVjGs",
-          "name": "Fear City Slide",
+          "id": "3l2yb5LnMyOJYLlQsXvRRX",
+          "name": "The Mission - Live At Hammersmith Odeon, London, England/11/15/90 / Remastered 2006",
           "preview_url": null,
           "track_number": 16
         },
@@ -1401,19 +1847,229 @@
               "name": "Queensrÿche"
             }
           ],
-          "duration_ms": 310733,
+          "duration_ms": 163173,
           "explicit": false,
-          "id": "2oKeUvQdCI9uK9gxvIMFTu",
-          "name": "All the Promises",
+          "id": "0ANXZeNhSxMcdhkoplppFk",
+          "name": "My Empty Room - Live At The Astoria Theatre, London, England/1994 / Remastered 2006",
           "preview_url": null,
           "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 72200,
+          "explicit": false,
+          "id": "3N2uc3QDQn6qXyCe0uAlk3",
+          "name": "I Remember Now - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 88200,
+          "explicit": false,
+          "id": "7micf17yMxqYVJqQHwXhfX",
+          "name": "Anarchy-X - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 291317,
+          "explicit": false,
+          "id": "5heBlGBB9Qfq3NH4IzTYML",
+          "name": "Revolution Calling - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 256160,
+          "explicit": false,
+          "id": "71eKg9rtoaV2K6JA1DAlTF",
+          "name": "Operation: Mindcrime - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 227276,
+          "explicit": false,
+          "id": "3Oqsro5Fm0Wy80FPlsy9UD",
+          "name": "Speak - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 313200,
+          "explicit": false,
+          "id": "2XLV2NCab4acqkexMoQL2x",
+          "name": "Spreading The Disease - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 350533,
+          "explicit": false,
+          "id": "1nn1UL32HoNXwoQjXb2d2r",
+          "name": "The Mission - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 724733,
+          "explicit": false,
+          "id": "5wUZGfIEEGlnsXrKOC6ID8",
+          "name": "Suite Sister Mary - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 207266,
+          "explicit": false,
+          "id": "77hx3VbTetZ9NMNp5Iud4B",
+          "name": "The Needle Lies - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 76400,
+          "explicit": false,
+          "id": "5Jc8J6MzZ5lmZSGoVoyVfO",
+          "name": "Electric Requiem - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 274533,
+          "explicit": false,
+          "id": "4GnAI9Msym0BagrK0BJ5Gq",
+          "name": "Breaking The Silence - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 269266,
+          "explicit": false,
+          "id": "2SMxJPtV7XvSeoaGLOis3Z",
+          "name": "I Don't Believe In Love - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 72293,
+          "explicit": false,
+          "id": "4yMUToDD6O0DXP4EkmNzqx",
+          "name": "Waiting For 22 - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 87214,
+          "explicit": false,
+          "id": "6f9JazUKZX0xbqnVUrkCFI",
+          "name": "My Empty Room - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "2OgUPVlWYgGBGMefZgGvCO",
+              "name": "Queensrÿche"
+            }
+          ],
+          "duration_ms": 473493,
+          "explicit": false,
+          "id": "74Oea9JZ8fAEB1RfO5t5wt",
+          "name": "Eyes Of A Stranger - Live At Hammersmith Odeon, London, England 11/15/90",
+          "preview_url": null,
+          "track_number": 15
         }
       ],
-      "url": "https://open.spotify.com/album/0TYoFZEECtMXKsOxBopww8"
+      "url": "https://open.spotify.com/album/4eEQ3aNA8mptFIfbFdX79p"
     }
   },
-  "spotify_id": "0TYoFZEECtMXKsOxBopww8",
-  "spotify_url": "https://open.spotify.com/album/0TYoFZEECtMXKsOxBopww8",
+  "spotify_id": "4eEQ3aNA8mptFIfbFdX79p",
+  "spotify_url": "https://open.spotify.com/album/4eEQ3aNA8mptFIfbFdX79p",
   "styles": [
     "Heavy Metal",
     "Progressive Metal"
@@ -1511,6 +2167,6 @@
       "title": "Eyes Of A Stranger"
     }
   ],
-  "updated_at": "2025-07-05T15:48:26.179834",
+  "updated_at": "2025-07-07T20:42:15.728430",
   "year": 2021
 }

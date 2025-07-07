@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1535560790",
+  "apple_music_url": "https://music.apple.com/gb/album/tea-for-the-tillerman-2020-remaster/1535560790",
   "artists": [
     {
       "apple_music_id": "1331318",
@@ -38,7 +38,7 @@
     }
   },
   "country": "USA & Europe",
-  "created_at": "2025-07-05T16:02:09.771544",
+  "created_at": "2025-07-07T20:38:26.195427",
   "date_added": "2020-09-19T09:36:07-07:00",
   "discogs_id": "15934691",
   "discogs_url": "https://www.discogs.com/release/15934691-Yusuf-Cat-Stevens-Tea-For-The-Tillerman²",
@@ -134,6 +134,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/2CM0im6ZzGaXdw9ZuncfCC54FfpTY8iuyQH8fVFngyc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1OTM0/NjkxLTE2MDA2MjM4/NzgtNzkzOC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/e6/a9/fce6a952-aa1b-4c75-50d5-da7716d1bd5c/20UMGIM86272.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/tea-for-the-tillerman-15934691/tea-for-the-tillerman-15934691.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -144,745 +158,664 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-hi-res.jpg",
-    "medium": "public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-medium.jpg",
-    "small": "public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-small.jpg"
+    "hi-res": "../public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-hi-res.jpg",
+    "medium": "../public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-medium.jpg",
+    "small": "../public/album/tea-for-the-tillerman²-15934691/tea-for-the-tillerman²-15934691-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:02:17.830429",
+    "processed_at": "2025-07-07T20:38:35.621484",
     "services_used": [
       "discogs",
+      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Tea for the Tillerman (2020 Remaster)",
   "release_name_discogs": "Tea For The Tillerman²",
-  "release_name_spotify": "Footsteps in the Light",
+  "release_name_spotify": "Tea For The Tillerman²",
   "released": "2020-09-18",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/e6/a9/fce6a952-aa1b-4c75-50d5-da7716d1bd5c/20UMGIM86272.rgb.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "An Island Records release; ℗ 2020 Universal Music Operations Limited",
+      "editorial_notes": null,
+      "id": "1535560790",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Cat Stevens",
+        "artwork": {
+          "bgColor": "fce7c8",
+          "height": 3000,
+          "textColor1": "020302",
+          "textColor2": "0e1c1f",
+          "textColor3": "34302a",
+          "textColor4": "3e4441",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/e6/a9/fce6a952-aa1b-4c75-50d5-da7716d1bd5c/20UMGIM86272.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "An Island Records release; ℗ 2020 Universal Music Operations Limited",
+        "genreNames": [
+          "Singer/Songwriter",
+          "Music",
+          "Pop",
+          "Adult Contemporary",
+          "Soft Rock",
+          "Rock",
+          "Singer/Songwriter"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Tea for the Tillerman (2020 Remaster)",
+        "playParams": {
+          "id": "1535560790",
+          "kind": "album"
+        },
+        "recordLabel": "UMC (Universal Music Catalogue)",
+        "releaseDate": "1970-11-23",
+        "trackCount": 11,
+        "upc": "00602435325910",
+        "url": "https://music.apple.com/gb/album/tea-for-the-tillerman-2020-remaster/1535560790"
+      },
+      "url": "https://music.apple.com/gb/album/tea-for-the-tillerman-2020-remaster/1535560790"
+    },
     "spotify": {
       "album_type": "album",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(C) 2006 Yusuf Islam",
+          "text": "© 2020 Cat-O-Log Records, under exclusive licence to Universal Music Operations Limited",
           "type": "C"
         },
         {
-          "text": "(P) 2006 Yusuf Islam",
+          "text": "℗ 2020 Cat-O-Log Records, under exclusive licence to Universal Music Operations Limited",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "5054526319912"
+        "upc": "00602508887017"
       },
-      "id": "0xzTrAtvSbPF7MAabJe34I",
+      "id": "4d0yYXHa2zt2vZgfm7t8yP",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273f245759272c9c10893d3ec05",
+          "url": "https://i.scdn.co/image/ab67616d0000b273bd99dbad22272b5748bd7cae",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02f245759272c9c10893d3ec05",
+          "url": "https://i.scdn.co/image/ab67616d00001e02bd99dbad22272b5748bd7cae",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851f245759272c9c10893d3ec05",
+          "url": "https://i.scdn.co/image/ab67616d00004851bd99dbad22272b5748bd7cae",
           "width": 64
         }
       ],
-      "label": "Yusuf Islam",
-      "popularity": 29,
+      "label": "UMC (Universal Music Catalogue)",
+      "popularity": 41,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+              "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
             },
-            "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-            "id": "5OC5mCMdUlT4F8H9knv2AD",
-            "name": "Yusuf Islam",
+            "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+            "id": "08F3Y3SctIlsOEmKd6dnH8",
+            "name": "Yusuf / Cat Stevens",
             "type": "artist",
-            "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+            "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
           }
         ],
         "copyrights": [
           {
-            "text": "(C) 2006 Yusuf Islam",
+            "text": "© 2020 Cat-O-Log Records, under exclusive licence to Universal Music Operations Limited",
             "type": "C"
           },
           {
-            "text": "(P) 2006 Yusuf Islam",
+            "text": "℗ 2020 Cat-O-Log Records, under exclusive licence to Universal Music Operations Limited",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "5054526319912"
+          "upc": "00602508887017"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0xzTrAtvSbPF7MAabJe34I"
+          "spotify": "https://open.spotify.com/album/4d0yYXHa2zt2vZgfm7t8yP"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0xzTrAtvSbPF7MAabJe34I?market=US",
-        "id": "0xzTrAtvSbPF7MAabJe34I",
+        "href": "https://api.spotify.com/v1/albums/4d0yYXHa2zt2vZgfm7t8yP?market=US",
+        "id": "4d0yYXHa2zt2vZgfm7t8yP",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273f245759272c9c10893d3ec05",
+            "url": "https://i.scdn.co/image/ab67616d0000b273bd99dbad22272b5748bd7cae",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02f245759272c9c10893d3ec05",
+            "url": "https://i.scdn.co/image/ab67616d00001e02bd99dbad22272b5748bd7cae",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851f245759272c9c10893d3ec05",
+            "url": "https://i.scdn.co/image/ab67616d00004851bd99dbad22272b5748bd7cae",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Yusuf Islam",
-        "name": "Footsteps in the Light",
-        "popularity": 29,
-        "release_date": "2006-12-18",
+        "label": "UMC (Universal Music Catalogue)",
+        "name": "Tea For The Tillerman²",
+        "popularity": 41,
+        "release_date": "2020-09-18",
         "release_date_precision": "day",
-        "total_tracks": 14,
+        "total_tracks": 11,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0xzTrAtvSbPF7MAabJe34I/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4d0yYXHa2zt2vZgfm7t8yP/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 88012,
+              "duration_ms": 249066,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/67UnrBZnEAkIfzlsfRJOD6"
+                "spotify": "https://open.spotify.com/track/33Tddvs926mVxwg08J3lQt"
               },
-              "href": "https://api.spotify.com/v1/tracks/67UnrBZnEAkIfzlsfRJOD6",
-              "id": "67UnrBZnEAkIfzlsfRJOD6",
+              "href": "https://api.spotify.com/v1/tracks/33Tddvs926mVxwg08J3lQt",
+              "id": "33Tddvs926mVxwg08J3lQt",
               "is_local": false,
               "is_playable": true,
-              "name": "The Wind",
+              "name": "Where Do The Children Play?",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:67UnrBZnEAkIfzlsfRJOD6"
+              "uri": "spotify:track:33Tddvs926mVxwg08J3lQt"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 223066,
+              "duration_ms": 211533,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Hosz5zdgTckrrh3y3pkk0"
+                "spotify": "https://open.spotify.com/track/3k19BuktFdvlZ4KHS57j6a"
               },
-              "href": "https://api.spotify.com/v1/tracks/3Hosz5zdgTckrrh3y3pkk0",
-              "id": "3Hosz5zdgTckrrh3y3pkk0",
+              "href": "https://api.spotify.com/v1/tracks/3k19BuktFdvlZ4KHS57j6a",
+              "id": "3k19BuktFdvlZ4KHS57j6a",
               "is_local": false,
               "is_playable": true,
-              "name": "The White Moon",
+              "name": "Hard Headed Woman",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:3Hosz5zdgTckrrh3y3pkk0"
+              "uri": "spotify:track:3k19BuktFdvlZ4KHS57j6a"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 182012,
+              "duration_ms": 226826,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4yi0vneaDzP0leWZbwUS4I"
+                "spotify": "https://open.spotify.com/track/72NSLecZFdTGJBGCb27QVR"
               },
-              "href": "https://api.spotify.com/v1/tracks/4yi0vneaDzP0leWZbwUS4I",
-              "id": "4yi0vneaDzP0leWZbwUS4I",
+              "href": "https://api.spotify.com/v1/tracks/72NSLecZFdTGJBGCb27QVR",
+              "id": "72NSLecZFdTGJBGCb27QVR",
               "is_local": false,
               "is_playable": true,
-              "name": "If You Ask Me",
+              "name": "Wild World",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:4yi0vneaDzP0leWZbwUS4I"
+              "uri": "spotify:track:72NSLecZFdTGJBGCb27QVR"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 222012,
+              "duration_ms": 237786,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/13tduHM5AF2ATgAQ5HVPo7"
+                "spotify": "https://open.spotify.com/track/4wEiuLPlURAWMZMvq6gRjF"
               },
-              "href": "https://api.spotify.com/v1/tracks/13tduHM5AF2ATgAQ5HVPo7",
-              "id": "13tduHM5AF2ATgAQ5HVPo7",
+              "href": "https://api.spotify.com/v1/tracks/4wEiuLPlURAWMZMvq6gRjF",
+              "id": "4wEiuLPlURAWMZMvq6gRjF",
               "is_local": false,
               "is_playable": true,
-              "name": "I Look, I See",
+              "name": "Sad Lisa",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:13tduHM5AF2ATgAQ5HVPo7"
+              "uri": "spotify:track:4wEiuLPlURAWMZMvq6gRjF"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 324012,
+              "duration_ms": 241733,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2e11Cx6qOKWtWPl2WScOSf"
+                "spotify": "https://open.spotify.com/track/1sZnHfyffvnssdFfHNpTFU"
               },
-              "href": "https://api.spotify.com/v1/tracks/2e11Cx6qOKWtWPl2WScOSf",
-              "id": "2e11Cx6qOKWtWPl2WScOSf",
+              "href": "https://api.spotify.com/v1/tracks/1sZnHfyffvnssdFfHNpTFU",
+              "id": "1sZnHfyffvnssdFfHNpTFU",
               "is_local": false,
               "is_playable": true,
-              "name": "Tala'al Badru Alayna",
+              "name": "Miles From Nowhere",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:2e11Cx6qOKWtWPl2WScOSf"
+              "uri": "spotify:track:1sZnHfyffvnssdFfHNpTFU"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 220012,
+              "duration_ms": 192813,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7mE8oeyMO7O6VfuF3IRW5J"
+                "spotify": "https://open.spotify.com/track/5Mgt18unCmq2A253BqQPuC"
               },
-              "href": "https://api.spotify.com/v1/tracks/7mE8oeyMO7O6VfuF3IRW5J",
-              "id": "7mE8oeyMO7O6VfuF3IRW5J",
+              "href": "https://api.spotify.com/v1/tracks/5Mgt18unCmq2A253BqQPuC",
+              "id": "5Mgt18unCmq2A253BqQPuC",
               "is_local": false,
               "is_playable": true,
-              "name": "Seal Of The Prophets",
+              "name": "But I Might Die Tonight",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:7mE8oeyMO7O6VfuF3IRW5J"
+              "uri": "spotify:track:5Mgt18unCmq2A253BqQPuC"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 200012,
+              "duration_ms": 149933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6R6Hly7RcgToeAhSPScxC2"
+                "spotify": "https://open.spotify.com/track/52Ya3BnikjhgMKCBjAzOXD"
               },
-              "href": "https://api.spotify.com/v1/tracks/6R6Hly7RcgToeAhSPScxC2",
-              "id": "6R6Hly7RcgToeAhSPScxC2",
+              "href": "https://api.spotify.com/v1/tracks/52Ya3BnikjhgMKCBjAzOXD",
+              "id": "52Ya3BnikjhgMKCBjAzOXD",
               "is_local": false,
               "is_playable": true,
-              "name": "Wild World (Bana, Bana)",
+              "name": "Longer Boats",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:6R6Hly7RcgToeAhSPScxC2"
+              "uri": "spotify:track:52Ya3BnikjhgMKCBjAzOXD"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 268012,
+              "duration_ms": 222746,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/74w1CKd8TEQFetw2WcsKxq"
+                "spotify": "https://open.spotify.com/track/6Go6QErWDUByUVluRf5rAs"
               },
-              "href": "https://api.spotify.com/v1/tracks/74w1CKd8TEQFetw2WcsKxq",
-              "id": "74w1CKd8TEQFetw2WcsKxq",
+              "href": "https://api.spotify.com/v1/tracks/6Go6QErWDUByUVluRf5rAs",
+              "id": "6Go6QErWDUByUVluRf5rAs",
               "is_local": false,
               "is_playable": true,
-              "name": "Angel Of War",
+              "name": "Into White",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:74w1CKd8TEQFetw2WcsKxq"
+              "uri": "spotify:track:6Go6QErWDUByUVluRf5rAs"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 340012,
+              "duration_ms": 348493,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1YXzewykljqXPmYX0JVdNB"
+                "spotify": "https://open.spotify.com/track/5EbunDkCMaBRcuRTTY29SF"
               },
-              "href": "https://api.spotify.com/v1/tracks/1YXzewykljqXPmYX0JVdNB",
-              "id": "1YXzewykljqXPmYX0JVdNB",
+              "href": "https://api.spotify.com/v1/tracks/5EbunDkCMaBRcuRTTY29SF",
+              "id": "5EbunDkCMaBRcuRTTY29SF",
               "is_local": false,
               "is_playable": true,
-              "name": "In'Nilta",
+              "name": "On The Road To Find Out",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:1YXzewykljqXPmYX0JVdNB"
+              "uri": "spotify:track:5EbunDkCMaBRcuRTTY29SF"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 204012,
+              "duration_ms": 229933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/38twXK9j4HaG9NfTy1NoTn"
+                "spotify": "https://open.spotify.com/track/20y3DqwhOEWft7nQncfc9O"
               },
-              "href": "https://api.spotify.com/v1/tracks/38twXK9j4HaG9NfTy1NoTn",
-              "id": "38twXK9j4HaG9NfTy1NoTn",
+              "href": "https://api.spotify.com/v1/tracks/20y3DqwhOEWft7nQncfc9O",
+              "id": "20y3DqwhOEWft7nQncfc9O",
               "is_local": false,
               "is_playable": true,
-              "name": "Salli Ala Muhammad",
+              "name": "Father And Son",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:38twXK9j4HaG9NfTy1NoTn"
+              "uri": "spotify:track:20y3DqwhOEWft7nQncfc9O"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
+                    "spotify": "https://open.spotify.com/artist/08F3Y3SctIlsOEmKd6dnH8"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
+                  "href": "https://api.spotify.com/v1/artists/08F3Y3SctIlsOEmKd6dnH8",
+                  "id": "08F3Y3SctIlsOEmKd6dnH8",
+                  "name": "Yusuf / Cat Stevens",
                   "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
+                  "uri": "spotify:artist:08F3Y3SctIlsOEmKd6dnH8"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 220012,
+              "duration_ms": 59800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2iap1EDTOfXZPxEbX35But"
+                "spotify": "https://open.spotify.com/track/5fUMqHnQIm1rOxtLAxKGMv"
               },
-              "href": "https://api.spotify.com/v1/tracks/2iap1EDTOfXZPxEbX35But",
-              "id": "2iap1EDTOfXZPxEbX35But",
+              "href": "https://api.spotify.com/v1/tracks/5fUMqHnQIm1rOxtLAxKGMv",
+              "id": "5fUMqHnQIm1rOxtLAxKGMv",
               "is_local": false,
               "is_playable": true,
-              "name": "God Is The Light",
+              "name": "Tea For The Tillerman",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:2iap1EDTOfXZPxEbX35But"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
-                  "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 310012,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3D4U6kuAyURgJTfgNQjoMj"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3D4U6kuAyURgJTfgNQjoMj",
-              "id": "3D4U6kuAyURgJTfgNQjoMj",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Peace Train",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:3D4U6kuAyURgJTfgNQjoMj"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
-                  "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 284012,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0bb2UK14zXoK6prdb4XYby"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0bb2UK14zXoK6prdb4XYby",
-              "id": "0bb2UK14zXoK6prdb4XYby",
-              "is_local": false,
-              "is_playable": true,
-              "name": "A Is For Allah",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:0bb2UK14zXoK6prdb4XYby"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5OC5mCMdUlT4F8H9knv2AD"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5OC5mCMdUlT4F8H9knv2AD",
-                  "id": "5OC5mCMdUlT4F8H9knv2AD",
-                  "name": "Yusuf Islam",
-                  "type": "artist",
-                  "uri": "spotify:artist:5OC5mCMdUlT4F8H9knv2AD"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 114012,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6DNAjfJDteD9c8lwVkHze4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6DNAjfJDteD9c8lwVkHze4",
-              "id": "6DNAjfJDteD9c8lwVkHze4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Adhan (Call To Prayer)",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:6DNAjfJDteD9c8lwVkHze4"
+              "uri": "spotify:track:5fUMqHnQIm1rOxtLAxKGMv"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 14
+          "total": 11
         },
         "type": "album",
-        "uri": "spotify:album:0xzTrAtvSbPF7MAabJe34I"
+        "uri": "spotify:album:4d0yYXHa2zt2vZgfm7t8yP"
       },
-      "release_date": "2006-12-18",
+      "release_date": "2020-09-18",
       "release_date_precision": "day",
-      "total_tracks": 14,
+      "total_tracks": 11,
       "tracks": [
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 88012,
+          "duration_ms": 249066,
           "explicit": false,
-          "id": "67UnrBZnEAkIfzlsfRJOD6",
-          "name": "The Wind",
+          "id": "33Tddvs926mVxwg08J3lQt",
+          "name": "Where Do The Children Play?",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 223066,
+          "duration_ms": 211533,
           "explicit": false,
-          "id": "3Hosz5zdgTckrrh3y3pkk0",
-          "name": "The White Moon",
+          "id": "3k19BuktFdvlZ4KHS57j6a",
+          "name": "Hard Headed Woman",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 182012,
+          "duration_ms": 226826,
           "explicit": false,
-          "id": "4yi0vneaDzP0leWZbwUS4I",
-          "name": "If You Ask Me",
+          "id": "72NSLecZFdTGJBGCb27QVR",
+          "name": "Wild World",
           "preview_url": null,
           "track_number": 3
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 222012,
+          "duration_ms": 237786,
           "explicit": false,
-          "id": "13tduHM5AF2ATgAQ5HVPo7",
-          "name": "I Look, I See",
+          "id": "4wEiuLPlURAWMZMvq6gRjF",
+          "name": "Sad Lisa",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 324012,
+          "duration_ms": 241733,
           "explicit": false,
-          "id": "2e11Cx6qOKWtWPl2WScOSf",
-          "name": "Tala'al Badru Alayna",
+          "id": "1sZnHfyffvnssdFfHNpTFU",
+          "name": "Miles From Nowhere",
           "preview_url": null,
           "track_number": 5
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 220012,
+          "duration_ms": 192813,
           "explicit": false,
-          "id": "7mE8oeyMO7O6VfuF3IRW5J",
-          "name": "Seal Of The Prophets",
+          "id": "5Mgt18unCmq2A253BqQPuC",
+          "name": "But I Might Die Tonight",
           "preview_url": null,
           "track_number": 6
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 200012,
+          "duration_ms": 149933,
           "explicit": false,
-          "id": "6R6Hly7RcgToeAhSPScxC2",
-          "name": "Wild World (Bana, Bana)",
+          "id": "52Ya3BnikjhgMKCBjAzOXD",
+          "name": "Longer Boats",
           "preview_url": null,
           "track_number": 7
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 268012,
+          "duration_ms": 222746,
           "explicit": false,
-          "id": "74w1CKd8TEQFetw2WcsKxq",
-          "name": "Angel Of War",
+          "id": "6Go6QErWDUByUVluRf5rAs",
+          "name": "Into White",
           "preview_url": null,
           "track_number": 8
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 340012,
+          "duration_ms": 348493,
           "explicit": false,
-          "id": "1YXzewykljqXPmYX0JVdNB",
-          "name": "In'Nilta",
+          "id": "5EbunDkCMaBRcuRTTY29SF",
+          "name": "On The Road To Find Out",
           "preview_url": null,
           "track_number": 9
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 204012,
+          "duration_ms": 229933,
           "explicit": false,
-          "id": "38twXK9j4HaG9NfTy1NoTn",
-          "name": "Salli Ala Muhammad",
+          "id": "20y3DqwhOEWft7nQncfc9O",
+          "name": "Father And Son",
           "preview_url": null,
           "track_number": 10
         },
         {
           "artists": [
             {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
+              "id": "08F3Y3SctIlsOEmKd6dnH8",
+              "name": "Yusuf / Cat Stevens"
             }
           ],
-          "duration_ms": 220012,
+          "duration_ms": 59800,
           "explicit": false,
-          "id": "2iap1EDTOfXZPxEbX35But",
-          "name": "God Is The Light",
+          "id": "5fUMqHnQIm1rOxtLAxKGMv",
+          "name": "Tea For The Tillerman",
           "preview_url": null,
           "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
-            }
-          ],
-          "duration_ms": 310012,
-          "explicit": false,
-          "id": "3D4U6kuAyURgJTfgNQjoMj",
-          "name": "Peace Train",
-          "preview_url": null,
-          "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
-            }
-          ],
-          "duration_ms": 284012,
-          "explicit": false,
-          "id": "0bb2UK14zXoK6prdb4XYby",
-          "name": "A Is For Allah",
-          "preview_url": null,
-          "track_number": 13
-        },
-        {
-          "artists": [
-            {
-              "id": "5OC5mCMdUlT4F8H9knv2AD",
-              "name": "Yusuf Islam"
-            }
-          ],
-          "duration_ms": 114012,
-          "explicit": false,
-          "id": "6DNAjfJDteD9c8lwVkHze4",
-          "name": "The Adhan (Call To Prayer)",
-          "preview_url": null,
-          "track_number": 14
         }
       ],
-      "url": "https://open.spotify.com/album/0xzTrAtvSbPF7MAabJe34I"
+      "url": "https://open.spotify.com/album/4d0yYXHa2zt2vZgfm7t8yP"
     }
   },
-  "spotify_id": "0xzTrAtvSbPF7MAabJe34I",
-  "spotify_url": "https://open.spotify.com/album/0xzTrAtvSbPF7MAabJe34I",
+  "spotify_id": "4d0yYXHa2zt2vZgfm7t8yP",
+  "spotify_url": "https://open.spotify.com/album/4d0yYXHa2zt2vZgfm7t8yP",
   "styles": [
     "Pop Rock",
     "Folk Rock"
@@ -956,6 +889,6 @@
       "title": "Tea For The Tillerman"
     }
   ],
-  "updated_at": "2025-07-05T16:02:17.700115",
+  "updated_at": "2025-07-07T20:38:34.996077",
   "year": 2020
 }

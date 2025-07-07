@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1669026397",
+  "apple_music_url": "https://music.apple.com/gb/album/tigermilk/1669026397",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:11:57.424715",
+  "created_at": "2025-07-07T20:32:39.748079",
   "date_added": "2020-07-03T12:36:17-07:00",
   "discogs_id": "15530773",
   "discogs_url": "https://www.discogs.com/release/15530773-Belle-And-Sebastian-Tigermilk",
@@ -76,6 +76,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/txTecpF1HIzn_8ira98FmYumffa6rxwXpIvSon1nTLU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NTMw/NzczLTE1OTMxMDU5/MzEtMTkyNy5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/67/fe/a4/67fea445-eaf1-231e-5651-c3a57e4cf22d/197187620128.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/tigermilk-15530773/tigermilk-15530773.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -84,23 +98,622 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/tigermilk-15530773/tigermilk-15530773-hi-res.jpg",
+    "medium": "../public/album/tigermilk-15530773/tigermilk-15530773-medium.jpg",
+    "small": "../public/album/tigermilk-15530773/tigermilk-15530773-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:11:58.293735",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:32:44.550751",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Tigermilk",
   "release_name_discogs": "Tigermilk",
-  "release_name_spotify": null,
+  "release_name_spotify": "Tigermilk",
   "released": "2020-06-26",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/67/fe/a4/67fea445-eaf1-231e-5651-c3a57e4cf22d/197187620128.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 1996 Jeepster Recordings Ltd",
+      "editorial_notes": null,
+      "id": "1669026397",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Belle and Sebastian",
+        "artwork": {
+          "bgColor": "a0a9b8",
+          "height": 3000,
+          "textColor1": "191818",
+          "textColor2": "1b1b1d",
+          "textColor3": "343538",
+          "textColor4": "35373c",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/67/fe/a4/67fea445-eaf1-231e-5651-c3a57e4cf22d/197187620128.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "℗ 1996 Jeepster Recordings Ltd",
+        "genreNames": [
+          "Alternative",
+          "Music",
+          "Rock",
+          "Adult Alternative",
+          "Pop",
+          "Pop/Rock",
+          "Britpop"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Tigermilk",
+        "playParams": {
+          "id": "1669026397",
+          "kind": "album"
+        },
+        "recordLabel": "Jeepster Recordings",
+        "releaseDate": "1996-06-06",
+        "trackCount": 10,
+        "upc": "197187620128",
+        "url": "https://music.apple.com/gb/album/tigermilk/1669026397"
+      },
+      "url": "https://music.apple.com/gb/album/tigermilk/1669026397"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 1996 Jeepster Recordings Ltd",
+          "type": "C"
+        },
+        {
+          "text": "(P) 1996 Jeepster Recordings Ltd",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "197187620128"
+      },
+      "id": "3lgjPYJjH70HtpxrpVFH8U",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731c9167925843a1d1c05ccdf2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021c9167925843a1d1c05ccdf2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511c9167925843a1d1c05ccdf2",
+          "width": 64
+        }
+      ],
+      "label": "Jeepster Recordings",
+      "popularity": 47,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+            },
+            "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+            "id": "4I2BJf80C0skQpp1sQmA0h",
+            "name": "Belle and Sebastian",
+            "type": "artist",
+            "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 1996 Jeepster Recordings Ltd",
+            "type": "C"
+          },
+          {
+            "text": "(P) 1996 Jeepster Recordings Ltd",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "197187620128"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3lgjPYJjH70HtpxrpVFH8U"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3lgjPYJjH70HtpxrpVFH8U?market=US",
+        "id": "3lgjPYJjH70HtpxrpVFH8U",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731c9167925843a1d1c05ccdf2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021c9167925843a1d1c05ccdf2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511c9167925843a1d1c05ccdf2",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Jeepster Recordings",
+        "name": "Tigermilk",
+        "popularity": 47,
+        "release_date": "1996-06-06",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3lgjPYJjH70HtpxrpVFH8U/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 297986,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5dZ4wJvPJbbuLge49vjTG1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5dZ4wJvPJbbuLge49vjTG1",
+              "id": "5dZ4wJvPJbbuLge49vjTG1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The State I Am In",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:5dZ4wJvPJbbuLge49vjTG1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 214466,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2kiGDKtcjPtWRBHVcRAuJF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2kiGDKtcjPtWRBHVcRAuJF",
+              "id": "2kiGDKtcjPtWRBHVcRAuJF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Expectations",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2kiGDKtcjPtWRBHVcRAuJF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 142306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5LtBiYOjy2cEOPs5QxpOSp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5LtBiYOjy2cEOPs5QxpOSp",
+              "id": "5LtBiYOjy2cEOPs5QxpOSp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "She's Losing It",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5LtBiYOjy2cEOPs5QxpOSp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 221853,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6SFzaTwzOG2HPPCqiFRBUh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6SFzaTwzOG2HPPCqiFRBUh",
+              "id": "6SFzaTwzOG2HPPCqiFRBUh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You're Just a Baby",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:6SFzaTwzOG2HPPCqiFRBUh"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 290920,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1WvPGcBaRNQ7dztD7Dmmqk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1WvPGcBaRNQ7dztD7Dmmqk",
+              "id": "1WvPGcBaRNQ7dztD7Dmmqk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Electronic Renaissance",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:1WvPGcBaRNQ7dztD7Dmmqk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 356200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0butW9H4gUV595RlZAUvrb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0butW9H4gUV595RlZAUvrb",
+              "id": "0butW9H4gUV595RlZAUvrb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Could Be Dreaming",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:0butW9H4gUV595RlZAUvrb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 207360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/58MVMCOqaqsPcCamb6VTvA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/58MVMCOqaqsPcCamb6VTvA",
+              "id": "58MVMCOqaqsPcCamb6VTvA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "We Rule the School",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:58MVMCOqaqsPcCamb6VTvA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 325866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3EV4hgX4tFtmjrPQwkIpdV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3EV4hgX4tFtmjrPQwkIpdV",
+              "id": "3EV4hgX4tFtmjrPQwkIpdV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Wandering Days Are Over",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3EV4hgX4tFtmjrPQwkIpdV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 236773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1StPYhcoPWpDnldk6BtgN9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1StPYhcoPWpDnldk6BtgN9",
+              "id": "1StPYhcoPWpDnldk6BtgN9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Don't Love Anyone",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:1StPYhcoPWpDnldk6BtgN9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4I2BJf80C0skQpp1sQmA0h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4I2BJf80C0skQpp1sQmA0h",
+                  "id": "4I2BJf80C0skQpp1sQmA0h",
+                  "name": "Belle and Sebastian",
+                  "type": "artist",
+                  "uri": "spotify:artist:4I2BJf80C0skQpp1sQmA0h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 209680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/11B3FMvhZSeqTNfOAGy2Kb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/11B3FMvhZSeqTNfOAGy2Kb",
+              "id": "11B3FMvhZSeqTNfOAGy2Kb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mary Jo",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:11B3FMvhZSeqTNfOAGy2Kb"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 10
+        },
+        "type": "album",
+        "uri": "spotify:album:3lgjPYJjH70HtpxrpVFH8U"
+      },
+      "release_date": "1996-06-06",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 297986,
+          "explicit": false,
+          "id": "5dZ4wJvPJbbuLge49vjTG1",
+          "name": "The State I Am In",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 214466,
+          "explicit": false,
+          "id": "2kiGDKtcjPtWRBHVcRAuJF",
+          "name": "Expectations",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 142306,
+          "explicit": false,
+          "id": "5LtBiYOjy2cEOPs5QxpOSp",
+          "name": "She's Losing It",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 221853,
+          "explicit": false,
+          "id": "6SFzaTwzOG2HPPCqiFRBUh",
+          "name": "You're Just a Baby",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 290920,
+          "explicit": false,
+          "id": "1WvPGcBaRNQ7dztD7Dmmqk",
+          "name": "Electronic Renaissance",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 356200,
+          "explicit": false,
+          "id": "0butW9H4gUV595RlZAUvrb",
+          "name": "I Could Be Dreaming",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 207360,
+          "explicit": false,
+          "id": "58MVMCOqaqsPcCamb6VTvA",
+          "name": "We Rule the School",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 325866,
+          "explicit": false,
+          "id": "3EV4hgX4tFtmjrPQwkIpdV",
+          "name": "My Wandering Days Are Over",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 236773,
+          "explicit": false,
+          "id": "1StPYhcoPWpDnldk6BtgN9",
+          "name": "I Don't Love Anyone",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4I2BJf80C0skQpp1sQmA0h",
+              "name": "Belle and Sebastian"
+            }
+          ],
+          "duration_ms": 209680,
+          "explicit": false,
+          "id": "11B3FMvhZSeqTNfOAGy2Kb",
+          "name": "Mary Jo",
+          "preview_url": null,
+          "track_number": 10
+        }
+      ],
+      "url": "https://open.spotify.com/album/3lgjPYJjH70HtpxrpVFH8U"
+    }
+  },
+  "spotify_id": "3lgjPYJjH70HtpxrpVFH8U",
+  "spotify_url": "https://open.spotify.com/album/3lgjPYJjH70HtpxrpVFH8U",
   "styles": [
     "Indie Rock"
   ],
@@ -167,6 +780,6 @@
       "title": "Mary Jo"
     }
   ],
-  "updated_at": "2025-07-05T16:11:58.292968",
+  "updated_at": "2025-07-07T20:32:44.323243",
   "year": 2020
 }

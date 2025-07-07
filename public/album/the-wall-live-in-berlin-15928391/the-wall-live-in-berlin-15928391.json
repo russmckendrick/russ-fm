@@ -22,7 +22,7 @@
     }
   },
   "country": "Worldwide",
-  "created_at": "2025-07-05T16:01:38.772783",
+  "created_at": "2025-07-07T20:38:39.502856",
   "date_added": "2020-09-29T12:06:08-07:00",
   "discogs_id": "15928391",
   "discogs_url": "https://www.discogs.com/release/15928391-Roger-Waters-The-Wall-Live-In-Berlin",
@@ -166,6 +166,13 @@
       "type": "apple_music_artwork",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/39/63/c5/3963c512-795e-39cb-185c-f6b9ed0ad813/00602527670010.rgb.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -175,14 +182,14 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-hi-res.jpg",
-    "medium": "public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-medium.jpg",
-    "small": "public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-small.jpg"
+    "hi-res": "../public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-hi-res.jpg",
+    "medium": "../public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-medium.jpg",
+    "small": "../public/album/the-wall-live-in-berlin-15928391/the-wall-live-in-berlin-15928391-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:01:40.834821",
+    "processed_at": "2025-07-07T20:38:47.684408",
     "services_used": [
       "discogs",
       "apple_music",
@@ -192,7 +199,7 @@
   },
   "release_name_apple_music": "The Wall (Live In Berlin)",
   "release_name_discogs": "The Wall (Live In Berlin)",
-  "release_name_spotify": "Us + Them",
+  "release_name_spotify": "The Wall: Live In Berlin",
   "released": "2020-09-26",
   "services": {
     "apple_music": {
@@ -257,34 +264,38 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(P) 2020 Us & Them Productions Limited, under exclusive license to Columbia Records, a division of Sony Music Entertainment",
+          "text": "© 1990 Universal International Music B.V.",
+          "type": "C"
+        },
+        {
+          "text": "℗ 1990 Roger Waters",
           "type": "P"
         }
       ],
-      "explicit": false,
+      "explicit": true,
       "external_ids": {
-        "upc": "886448144458"
+        "upc": "00042284661126"
       },
-      "id": "6t2iNN1eyys71UV7eW9i7O",
+      "id": "2x0jjg2Pw98wHDixqzCeqy",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2731bfa791b5f61234efc9f4ce0",
+          "url": "https://i.scdn.co/image/ab67616d0000b2733d7cb662f3ee3829021a79b2",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e021bfa791b5f61234efc9f4ce0",
+          "url": "https://i.scdn.co/image/ab67616d00001e023d7cb662f3ee3829021a79b2",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048511bfa791b5f61234efc9f4ce0",
+          "url": "https://i.scdn.co/image/ab67616d000048513d7cb662f3ee3829021a79b2",
           "width": 64
         }
       ],
-      "label": "Columbia/Legacy",
-      "popularity": 43,
+      "label": "EMI",
+      "popularity": 39,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
@@ -302,45 +313,49 @@
         ],
         "copyrights": [
           {
-            "text": "(P) 2020 Us & Them Productions Limited, under exclusive license to Columbia Records, a division of Sony Music Entertainment",
+            "text": "© 1990 Universal International Music B.V.",
+            "type": "C"
+          },
+          {
+            "text": "℗ 1990 Roger Waters",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "886448144458"
+          "upc": "00042284661126"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/6t2iNN1eyys71UV7eW9i7O"
+          "spotify": "https://open.spotify.com/album/2x0jjg2Pw98wHDixqzCeqy"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/6t2iNN1eyys71UV7eW9i7O?market=US",
-        "id": "6t2iNN1eyys71UV7eW9i7O",
+        "href": "https://api.spotify.com/v1/albums/2x0jjg2Pw98wHDixqzCeqy?market=US",
+        "id": "2x0jjg2Pw98wHDixqzCeqy",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2731bfa791b5f61234efc9f4ce0",
+            "url": "https://i.scdn.co/image/ab67616d0000b2733d7cb662f3ee3829021a79b2",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e021bfa791b5f61234efc9f4ce0",
+            "url": "https://i.scdn.co/image/ab67616d00001e023d7cb662f3ee3829021a79b2",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048511bfa791b5f61234efc9f4ce0",
+            "url": "https://i.scdn.co/image/ab67616d000048513d7cb662f3ee3829021a79b2",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Columbia/Legacy",
-        "name": "Us + Them",
-        "popularity": 43,
-        "release_date": "2020-10-02",
+        "label": "EMI",
+        "name": "The Wall: Live In Berlin",
+        "popularity": 39,
+        "release_date": "1990-01-01",
         "release_date_precision": "day",
-        "total_tracks": 23,
+        "total_tracks": 25,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/6t2iNN1eyys71UV7eW9i7O/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/2x0jjg2Pw98wHDixqzCeqy/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -353,23 +368,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/27T030eWyCQRmDyuvr1kxY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/27T030eWyCQRmDyuvr1kxY",
+                  "id": "27T030eWyCQRmDyuvr1kxY",
+                  "name": "Scorpions",
+                  "type": "artist",
+                  "uri": "spotify:artist:27T030eWyCQRmDyuvr1kxY"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 102240,
+              "duration_ms": 246600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1FhFpHIc0rpl8I6ldlt4Vj"
+                "spotify": "https://open.spotify.com/track/0hmgGkd1goC5SR55wnolVb"
               },
-              "href": "https://api.spotify.com/v1/tracks/1FhFpHIc0rpl8I6ldlt4Vj",
-              "id": "1FhFpHIc0rpl8I6ldlt4Vj",
+              "href": "https://api.spotify.com/v1/tracks/0hmgGkd1goC5SR55wnolVb",
+              "id": "0hmgGkd1goC5SR55wnolVb",
               "is_local": false,
               "is_playable": true,
-              "name": "Intro - Live in Amsterdam, June, 2018",
+              "name": "In The Flesh (Part 1) - Live In Berlin",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:1FhFpHIc0rpl8I6ldlt4Vj"
+              "uri": "spotify:track:0hmgGkd1goC5SR55wnolVb"
             },
             {
               "artists": [
@@ -382,23 +407,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7DbmkhVKGV7UiwrbegHL9t"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7DbmkhVKGV7UiwrbegHL9t",
+                  "id": "7DbmkhVKGV7UiwrbegHL9t",
+                  "name": "Ute Lemper",
+                  "type": "artist",
+                  "uri": "spotify:artist:7DbmkhVKGV7UiwrbegHL9t"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 29533,
+              "duration_ms": 188893,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5YREGMls2WxV3GPmHLUiUm"
+                "spotify": "https://open.spotify.com/track/0Snc9rxHLfHw7UvFAVmWv6"
               },
-              "href": "https://api.spotify.com/v1/tracks/5YREGMls2WxV3GPmHLUiUm",
-              "id": "5YREGMls2WxV3GPmHLUiUm",
+              "href": "https://api.spotify.com/v1/tracks/0Snc9rxHLfHw7UvFAVmWv6",
+              "id": "0Snc9rxHLfHw7UvFAVmWv6",
               "is_local": false,
               "is_playable": true,
-              "name": "Speak to Me - Live in Amsterdam, June, 2018",
+              "name": "The Thin Ice - Live In Berlin",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:5YREGMls2WxV3GPmHLUiUm"
+              "uri": "spotify:track:0Snc9rxHLfHw7UvFAVmWv6"
             },
             {
               "artists": [
@@ -411,23 +446,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Krw5EvLS5prCEDNmmospt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Krw5EvLS5prCEDNmmospt",
+                  "id": "4Krw5EvLS5prCEDNmmospt",
+                  "name": "Garth Hudson",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Krw5EvLS5prCEDNmmospt"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 168173,
+              "duration_ms": 218000,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4vbU8jreOOJyY9w3LqisJP"
+                "spotify": "https://open.spotify.com/track/5L2ggMJ2VGr97aZTkOYz5q"
               },
-              "href": "https://api.spotify.com/v1/tracks/4vbU8jreOOJyY9w3LqisJP",
-              "id": "4vbU8jreOOJyY9w3LqisJP",
+              "href": "https://api.spotify.com/v1/tracks/5L2ggMJ2VGr97aZTkOYz5q",
+              "id": "5L2ggMJ2VGr97aZTkOYz5q",
               "is_local": false,
               "is_playable": true,
-              "name": "Breathe - Live in Amsterdam, June, 2018",
+              "name": "Another Brick In The Wall (Part 1) - Live In Berlin",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:4vbU8jreOOJyY9w3LqisJP"
+              "uri": "spotify:track:5L2ggMJ2VGr97aZTkOYz5q"
             },
             {
               "artists": [
@@ -440,23 +485,63 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3q52DATzulLeYQQO7BehN4"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3q52DATzulLeYQQO7BehN4",
+                  "id": "3q52DATzulLeYQQO7BehN4",
+                  "name": "Stan Farber",
+                  "type": "artist",
+                  "uri": "spotify:artist:3q52DATzulLeYQQO7BehN4"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3UviXZUZVOpBi0TzmjqRvd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3UviXZUZVOpBi0TzmjqRvd",
+                  "id": "3UviXZUZVOpBi0TzmjqRvd",
+                  "name": "Jim Haas",
+                  "type": "artist",
+                  "uri": "spotify:artist:3UviXZUZVOpBi0TzmjqRvd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/45Ns7JqhI7s0YtG3k9pQxe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/45Ns7JqhI7s0YtG3k9pQxe",
+                  "id": "45Ns7JqhI7s0YtG3k9pQxe",
+                  "name": "John Joyce",
+                  "type": "artist",
+                  "uri": "spotify:artist:45Ns7JqhI7s0YtG3k9pQxe"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4EhhzVX3bG33grRUrV8wQ3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4EhhzVX3bG33grRUrV8wQ3",
+                  "id": "4EhhzVX3bG33grRUrV8wQ3",
+                  "name": "Joe Chemay",
+                  "type": "artist",
+                  "uri": "spotify:artist:4EhhzVX3bG33grRUrV8wQ3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 327866,
+              "duration_ms": 80773,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/60iwOGElFXPCQfuBEbece8"
+                "spotify": "https://open.spotify.com/track/4WxLJn7DoxQIr7dVd560E3"
               },
-              "href": "https://api.spotify.com/v1/tracks/60iwOGElFXPCQfuBEbece8",
-              "id": "60iwOGElFXPCQfuBEbece8",
+              "href": "https://api.spotify.com/v1/tracks/4WxLJn7DoxQIr7dVd560E3",
+              "id": "4WxLJn7DoxQIr7dVd560E3",
               "is_local": false,
               "is_playable": true,
-              "name": "One of These Days - Live in Amsterdam, June, 2018",
+              "name": "The Happiest Days Of Our Lives - Live In Berlin",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:60iwOGElFXPCQfuBEbece8"
+              "uri": "spotify:track:4WxLJn7DoxQIr7dVd560E3"
             },
             {
               "artists": [
@@ -469,23 +554,53 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2BTZIqw0ntH9MvilQ3ewNY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2BTZIqw0ntH9MvilQ3ewNY",
+                  "id": "2BTZIqw0ntH9MvilQ3ewNY",
+                  "name": "Cyndi Lauper",
+                  "type": "artist",
+                  "uri": "spotify:artist:2BTZIqw0ntH9MvilQ3ewNY"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3OSKnQ0rpRX32lsFHC3Bki"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3OSKnQ0rpRX32lsFHC3Bki",
+                  "id": "3OSKnQ0rpRX32lsFHC3Bki",
+                  "name": "The Bleeding Heart Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:3OSKnQ0rpRX32lsFHC3Bki"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Uz58cSxlJgefDaSikxYQ7"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Uz58cSxlJgefDaSikxYQ7",
+                  "id": "2Uz58cSxlJgefDaSikxYQ7",
+                  "name": "Thomas Dolby",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Uz58cSxlJgefDaSikxYQ7"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 353200,
+              "duration_ms": 386133,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4DuKoUGjqXSsZ25BuAAFKB"
+                "spotify": "https://open.spotify.com/track/67Mmbb5Oa9lhfu928w4yqJ"
               },
-              "href": "https://api.spotify.com/v1/tracks/4DuKoUGjqXSsZ25BuAAFKB",
-              "id": "4DuKoUGjqXSsZ25BuAAFKB",
+              "href": "https://api.spotify.com/v1/tracks/67Mmbb5Oa9lhfu928w4yqJ",
+              "id": "67Mmbb5Oa9lhfu928w4yqJ",
               "is_local": false,
               "is_playable": true,
-              "name": "Time - Live in Amsterdam, June, 2018",
+              "name": "Another Brick In The Wall (Part 2) - Live In Berlin",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:4DuKoUGjqXSsZ25BuAAFKB"
+              "uri": "spotify:track:67Mmbb5Oa9lhfu928w4yqJ"
             },
             {
               "artists": [
@@ -498,23 +613,43 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4sD9znwiVFx9cgRPZ42aQ1"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4sD9znwiVFx9cgRPZ42aQ1",
+                  "id": "4sD9znwiVFx9cgRPZ42aQ1",
+                  "name": "Sinéad O'Connor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4sD9znwiVFx9cgRPZ42aQ1"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vpDg7Y7fU982Ds30zawDA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vpDg7Y7fU982Ds30zawDA",
+                  "id": "4vpDg7Y7fU982Ds30zawDA",
+                  "name": "The Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vpDg7Y7fU982Ds30zawDA"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 69786,
+              "duration_ms": 397933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4j6RABkSPwIIXkVGaPnO9B"
+                "spotify": "https://open.spotify.com/track/2Rfux1H0BXVlAKlp87Zhkt"
               },
-              "href": "https://api.spotify.com/v1/tracks/4j6RABkSPwIIXkVGaPnO9B",
-              "id": "4j6RABkSPwIIXkVGaPnO9B",
+              "href": "https://api.spotify.com/v1/tracks/2Rfux1H0BXVlAKlp87Zhkt",
+              "id": "2Rfux1H0BXVlAKlp87Zhkt",
               "is_local": false,
               "is_playable": true,
-              "name": "Breathe (Reprise) - Live in Amsterdam, June, 2018",
+              "name": "Mother - Live In Berlin",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:4j6RABkSPwIIXkVGaPnO9B"
+              "uri": "spotify:track:2Rfux1H0BXVlAKlp87Zhkt"
             },
             {
               "artists": [
@@ -527,23 +662,43 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5hW4L92KnC6dX9t7tYM4Ve"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5hW4L92KnC6dX9t7tYM4Ve",
+                  "id": "5hW4L92KnC6dX9t7tYM4Ve",
+                  "name": "Joni Mitchell",
+                  "type": "artist",
+                  "uri": "spotify:artist:5hW4L92KnC6dX9t7tYM4Ve"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/774mHr909NkDVeyyXQBQfZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/774mHr909NkDVeyyXQBQfZ",
+                  "id": "774mHr909NkDVeyyXQBQfZ",
+                  "name": "James Galway",
+                  "type": "artist",
+                  "uri": "spotify:artist:774mHr909NkDVeyyXQBQfZ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 297693,
+              "duration_ms": 232693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0jFE49q7cnUGdYSQTVxUyU"
+                "spotify": "https://open.spotify.com/track/1sNsU0aOPkhloRCQBiI0nd"
               },
-              "href": "https://api.spotify.com/v1/tracks/0jFE49q7cnUGdYSQTVxUyU",
-              "id": "0jFE49q7cnUGdYSQTVxUyU",
+              "href": "https://api.spotify.com/v1/tracks/1sNsU0aOPkhloRCQBiI0nd",
+              "id": "1sNsU0aOPkhloRCQBiI0nd",
               "is_local": false,
               "is_playable": true,
-              "name": "The Great Gig In the Sky - Live in Amsterdam, June, 2018",
+              "name": "Goodbye Blue Sky - Live In Berlin",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:0jFE49q7cnUGdYSQTVxUyU"
+              "uri": "spotify:track:1sNsU0aOPkhloRCQBiI0nd"
             },
             {
               "artists": [
@@ -556,23 +711,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Z02hBLubJxuFJfhacLSDc"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Z02hBLubJxuFJfhacLSDc",
+                  "id": "3Z02hBLubJxuFJfhacLSDc",
+                  "name": "Bryan Adams",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Z02hBLubJxuFJfhacLSDc"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 482426,
+              "duration_ms": 227306,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0gp4ebNvHmfhywxWoKlXuT"
+                "spotify": "https://open.spotify.com/track/6Fz911z0m4w98epHgxPCFu"
               },
-              "href": "https://api.spotify.com/v1/tracks/0gp4ebNvHmfhywxWoKlXuT",
-              "id": "0gp4ebNvHmfhywxWoKlXuT",
+              "href": "https://api.spotify.com/v1/tracks/6Fz911z0m4w98epHgxPCFu",
+              "id": "6Fz911z0m4w98epHgxPCFu",
               "is_local": false,
               "is_playable": true,
-              "name": "Welcome to the Machine - Live in Amsterdam, June, 2018",
+              "name": "Empty Spaces - Live In Berlin",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:0gp4ebNvHmfhywxWoKlXuT"
+              "uri": "spotify:track:6Fz911z0m4w98epHgxPCFu"
             },
             {
               "artists": [
@@ -585,23 +750,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Z02hBLubJxuFJfhacLSDc"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Z02hBLubJxuFJfhacLSDc",
+                  "id": "3Z02hBLubJxuFJfhacLSDc",
+                  "name": "Bryan Adams",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Z02hBLubJxuFJfhacLSDc"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 284680,
+              "duration_ms": 368560,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6lXE7UFKxyezrY62PQoDbF"
+                "spotify": "https://open.spotify.com/track/2jBl8jEvsyjG2LiNNxdBFz"
               },
-              "href": "https://api.spotify.com/v1/tracks/6lXE7UFKxyezrY62PQoDbF",
-              "id": "6lXE7UFKxyezrY62PQoDbF",
+              "href": "https://api.spotify.com/v1/tracks/2jBl8jEvsyjG2LiNNxdBFz",
+              "id": "2jBl8jEvsyjG2LiNNxdBFz",
               "is_local": false,
               "is_playable": true,
-              "name": "Déjà Vu - Live in Amsterdam, June, 2018",
+              "name": "Young Lust - Live Version",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:6lXE7UFKxyezrY62PQoDbF"
+              "uri": "spotify:track:2jBl8jEvsyjG2LiNNxdBFz"
             },
             {
               "artists": [
@@ -617,20 +792,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 262533,
+              "duration_ms": 164666,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7yDwWw8H8lfcmBryBTjDdm"
+                "spotify": "https://open.spotify.com/track/3MRJYS1pYaawXP5sXfAH4N"
               },
-              "href": "https://api.spotify.com/v1/tracks/7yDwWw8H8lfcmBryBTjDdm",
-              "id": "7yDwWw8H8lfcmBryBTjDdm",
+              "href": "https://api.spotify.com/v1/tracks/3MRJYS1pYaawXP5sXfAH4N",
+              "id": "3MRJYS1pYaawXP5sXfAH4N",
               "is_local": false,
               "is_playable": true,
-              "name": "The Last Refugee - Live in Amsterdam, June, 2018",
+              "name": "One Of My Turns - Live In Berlin",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:7yDwWw8H8lfcmBryBTjDdm"
+              "uri": "spotify:track:3MRJYS1pYaawXP5sXfAH4N"
             },
             {
               "artists": [
@@ -646,20 +821,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 407413,
+              "duration_ms": 311666,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1qmaDLhEIZzgB9IdasPy7M"
+                "spotify": "https://open.spotify.com/track/7CkW2OMmwAknSftZkz38aU"
               },
-              "href": "https://api.spotify.com/v1/tracks/1qmaDLhEIZzgB9IdasPy7M",
-              "id": "1qmaDLhEIZzgB9IdasPy7M",
+              "href": "https://api.spotify.com/v1/tracks/7CkW2OMmwAknSftZkz38aU",
+              "id": "7CkW2OMmwAknSftZkz38aU",
               "is_local": false,
               "is_playable": true,
-              "name": "Picture That - Live in Amsterdam, June, 2018",
+              "name": "Don't Leave Me Now - Live In Berlin",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:1qmaDLhEIZzgB9IdasPy7M"
+              "uri": "spotify:track:7CkW2OMmwAknSftZkz38aU"
             },
             {
               "artists": [
@@ -675,20 +850,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 301226,
+              "duration_ms": 204840,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/27yzF5eINp6noN8giZYtBf"
+                "spotify": "https://open.spotify.com/track/4Z8y3zsyGmlRekLZzj6UT5"
               },
-              "href": "https://api.spotify.com/v1/tracks/27yzF5eINp6noN8giZYtBf",
-              "id": "27yzF5eINp6noN8giZYtBf",
+              "href": "https://api.spotify.com/v1/tracks/4Z8y3zsyGmlRekLZzj6UT5",
+              "id": "4Z8y3zsyGmlRekLZzj6UT5",
               "is_local": false,
               "is_playable": true,
-              "name": "Wish You Were Here - Live in Amsterdam, June, 2018",
+              "name": "Another Brick In The Wall (Part 3) - Live In Berlin",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:27yzF5eINp6noN8giZYtBf"
+              "uri": "spotify:track:4Z8y3zsyGmlRekLZzj6UT5"
             },
             {
               "artists": [
@@ -704,20 +879,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 96226,
+              "duration_ms": 97560,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2uEPJd5L6avFbkKNo0qDoR"
+                "spotify": "https://open.spotify.com/track/3bBZinn689YlUYuX58HqSZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/2uEPJd5L6avFbkKNo0qDoR",
-              "id": "2uEPJd5L6avFbkKNo0qDoR",
+              "href": "https://api.spotify.com/v1/tracks/3bBZinn689YlUYuX58HqSZ",
+              "id": "3bBZinn689YlUYuX58HqSZ",
               "is_local": false,
               "is_playable": true,
-              "name": "Happiest Days of Our Lives - Live in Amsterdam, June, 2018",
+              "name": "Goodbye Cruel World - Live In Berlin",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:2uEPJd5L6avFbkKNo0qDoR"
+              "uri": "spotify:track:3bBZinn689YlUYuX58HqSZ"
             },
             {
               "artists": [
@@ -730,81 +905,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 216880,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3RHA1WAU99fvTa7Uy10kYt"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3RHA1WAU99fvTa7Uy10kYt",
-              "id": "3RHA1WAU99fvTa7Uy10kYt",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Another Brick In the Wall (Part 2) - Live in Amsterdam, June, 2018",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:3RHA1WAU99fvTa7Uy10kYt"
-            },
-            {
-              "artists": [
+                },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
+                    "spotify": "https://open.spotify.com/artist/0FFuvdY7fuiuTmHN9unYoz"
                   },
-                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
-                  "id": "40DqL6Tv84cKT2pH2NMs9r",
-                  "name": "Roger Waters",
+                  "href": "https://api.spotify.com/v1/artists/0FFuvdY7fuiuTmHN9unYoz",
+                  "id": "0FFuvdY7fuiuTmHN9unYoz",
+                  "name": "Paul Carrack",
                   "type": "artist",
-                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 96133,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4ROuVw1Oa09rszxmRiMrqO"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4ROuVw1Oa09rszxmRiMrqO",
-              "id": "4ROuVw1Oa09rszxmRiMrqO",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Another Brick In the Wall (Part 3) - Live in Amsterdam, June, 2018",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:4ROuVw1Oa09rszxmRiMrqO"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
-                  "id": "40DqL6Tv84cKT2pH2NMs9r",
-                  "name": "Roger Waters",
-                  "type": "artist",
-                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                  "uri": "spotify:artist:0FFuvdY7fuiuTmHN9unYoz"
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 959266,
+              "duration_ms": 302533,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/45M51GNDEaAEBsKmOoYneR"
+                "spotify": "https://open.spotify.com/track/2QrvE0Dim0PPOG4jB1iu8Q"
               },
-              "href": "https://api.spotify.com/v1/tracks/45M51GNDEaAEBsKmOoYneR",
-              "id": "45M51GNDEaAEBsKmOoYneR",
+              "href": "https://api.spotify.com/v1/tracks/2QrvE0Dim0PPOG4jB1iu8Q",
+              "id": "2QrvE0Dim0PPOG4jB1iu8Q",
               "is_local": false,
               "is_playable": true,
-              "name": "Dogs - Live in Amsterdam, June, 2018",
+              "name": "Hey You - Live In Berlin",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:45M51GNDEaAEBsKmOoYneR"
+              "uri": "spotify:track:2QrvE0Dim0PPOG4jB1iu8Q"
             },
             {
               "artists": [
@@ -820,20 +947,20 @@
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 697080,
+              "duration_ms": 181933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7pApLPckLShNeO5j5ftnLP"
+                "spotify": "https://open.spotify.com/track/73l6LQQ67MyHqVcNfXiAXS"
               },
-              "href": "https://api.spotify.com/v1/tracks/7pApLPckLShNeO5j5ftnLP",
-              "id": "7pApLPckLShNeO5j5ftnLP",
+              "href": "https://api.spotify.com/v1/tracks/73l6LQQ67MyHqVcNfXiAXS",
+              "id": "73l6LQQ67MyHqVcNfXiAXS",
               "is_local": false,
               "is_playable": true,
-              "name": "Pigs (Three Different Ones) - Live in Amsterdam, June, 2018",
+              "name": "Is There Anybody Out There - Live In Berlin",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:7pApLPckLShNeO5j5ftnLP"
+              "uri": "spotify:track:73l6LQQ67MyHqVcNfXiAXS"
             },
             {
               "artists": [
@@ -846,23 +973,33 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4DMlDJn7CPSSS0DuUf1vrH"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4DMlDJn7CPSSS0DuUf1vrH",
+                  "id": "4DMlDJn7CPSSS0DuUf1vrH",
+                  "name": "Snowy White",
+                  "type": "artist",
+                  "uri": "spotify:artist:4DMlDJn7CPSSS0DuUf1vrH"
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 443266,
-              "explicit": false,
+              "duration_ms": 285866,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6rBhX3g5OFHYcqkqY0tUjP"
+                "spotify": "https://open.spotify.com/track/2QUmGZcIGJhCOBYzZg3bMV"
               },
-              "href": "https://api.spotify.com/v1/tracks/6rBhX3g5OFHYcqkqY0tUjP",
-              "id": "6rBhX3g5OFHYcqkqY0tUjP",
+              "href": "https://api.spotify.com/v1/tracks/2QUmGZcIGJhCOBYzZg3bMV",
+              "id": "2QUmGZcIGJhCOBYzZg3bMV",
               "is_local": false,
               "is_playable": true,
-              "name": "Money - Live in Amsterdam, June, 2018",
+              "name": "Nobody Home - Live In Berlin",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:6rBhX3g5OFHYcqkqY0tUjP"
+              "uri": "spotify:track:2QUmGZcIGJhCOBYzZg3bMV"
             },
             {
               "artists": [
@@ -878,20 +1015,20 @@
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 473893,
+              "duration_ms": 71733,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7pQQv2aBVLivi1KpvdESkZ"
+                "spotify": "https://open.spotify.com/track/6nHZcjgQ0CHGXAq5WkOtPF"
               },
-              "href": "https://api.spotify.com/v1/tracks/7pQQv2aBVLivi1KpvdESkZ",
-              "id": "7pQQv2aBVLivi1KpvdESkZ",
+              "href": "https://api.spotify.com/v1/tracks/6nHZcjgQ0CHGXAq5WkOtPF",
+              "id": "6nHZcjgQ0CHGXAq5WkOtPF",
               "is_local": false,
               "is_playable": true,
-              "name": "Us & Them - Live in Amsterdam, June, 2018",
+              "name": "Vera - Live In Berlin",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:7pQQv2aBVLivi1KpvdESkZ"
+              "uri": "spotify:track:6nHZcjgQ0CHGXAq5WkOtPF"
             },
             {
               "artists": [
@@ -907,20 +1044,20 @@
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 272373,
+              "duration_ms": 160666,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3DlXrDADnHuVBsbM24eT1h"
+                "spotify": "https://open.spotify.com/track/4ijlKZ4QO7v3vn0zHeqjj0"
               },
-              "href": "https://api.spotify.com/v1/tracks/3DlXrDADnHuVBsbM24eT1h",
-              "id": "3DlXrDADnHuVBsbM24eT1h",
+              "href": "https://api.spotify.com/v1/tracks/4ijlKZ4QO7v3vn0zHeqjj0",
+              "id": "4ijlKZ4QO7v3vn0zHeqjj0",
               "is_local": false,
               "is_playable": true,
-              "name": "Brain Damage - Live in Amsterdam, June, 2018",
+              "name": "Bring The Boys Back Home - Live In Berlin",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:3DlXrDADnHuVBsbM24eT1h"
+              "uri": "spotify:track:4ijlKZ4QO7v3vn0zHeqjj0"
             },
             {
               "artists": [
@@ -933,23 +1070,43 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44NX2ffIYHr6D4n7RaZF7A"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44NX2ffIYHr6D4n7RaZF7A",
+                  "id": "44NX2ffIYHr6D4n7RaZF7A",
+                  "name": "Van Morrison",
+                  "type": "artist",
+                  "uri": "spotify:artist:44NX2ffIYHr6D4n7RaZF7A"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vpDg7Y7fU982Ds30zawDA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vpDg7Y7fU982Ds30zawDA",
+                  "id": "4vpDg7Y7fU982Ds30zawDA",
+                  "name": "The Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vpDg7Y7fU982Ds30zawDA"
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 270346,
+              "duration_ms": 482160,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Fpa5hMjSNWqy9vzZhKHNt"
+                "spotify": "https://open.spotify.com/track/7xbxxRZuxcrntSh7ytgsT3"
               },
-              "href": "https://api.spotify.com/v1/tracks/3Fpa5hMjSNWqy9vzZhKHNt",
-              "id": "3Fpa5hMjSNWqy9vzZhKHNt",
+              "href": "https://api.spotify.com/v1/tracks/7xbxxRZuxcrntSh7ytgsT3",
+              "id": "7xbxxRZuxcrntSh7ytgsT3",
               "is_local": false,
               "is_playable": true,
-              "name": "Eclipse - Live in Amsterdam, June, 2018",
+              "name": "Comfortably Numb - Live In Berlin",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:3Fpa5hMjSNWqy9vzZhKHNt"
+              "uri": "spotify:track:7xbxxRZuxcrntSh7ytgsT3"
             },
             {
               "artists": [
@@ -962,23 +1119,229 @@
                   "name": "Roger Waters",
                   "type": "artist",
                   "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3OSKnQ0rpRX32lsFHC3Bki"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3OSKnQ0rpRX32lsFHC3Bki",
+                  "id": "3OSKnQ0rpRX32lsFHC3Bki",
+                  "name": "The Bleeding Heart Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:3OSKnQ0rpRX32lsFHC3Bki"
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 88240,
+              "duration_ms": 310600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/48yaJk9X5qaoIGktZrPIZp"
+                "spotify": "https://open.spotify.com/track/3AtGRDRWYxJDcykpgp1edw"
               },
-              "href": "https://api.spotify.com/v1/tracks/48yaJk9X5qaoIGktZrPIZp",
-              "id": "48yaJk9X5qaoIGktZrPIZp",
+              "href": "https://api.spotify.com/v1/tracks/3AtGRDRWYxJDcykpgp1edw",
+              "id": "3AtGRDRWYxJDcykpgp1edw",
               "is_local": false,
               "is_playable": true,
-              "name": "The Last Refugee (Reprise) - Live in Amsterdam, June, 2018",
+              "name": "In The Flesh (Part 2) - Live In Berlin",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:48yaJk9X5qaoIGktZrPIZp"
+              "uri": "spotify:track:3AtGRDRWYxJDcykpgp1edw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
+                  "id": "40DqL6Tv84cKT2pH2NMs9r",
+                  "name": "Roger Waters",
+                  "type": "artist",
+                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3OSKnQ0rpRX32lsFHC3Bki"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3OSKnQ0rpRX32lsFHC3Bki",
+                  "id": "3OSKnQ0rpRX32lsFHC3Bki",
+                  "name": "The Bleeding Heart Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:3OSKnQ0rpRX32lsFHC3Bki"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 291640,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1OM1OODr6DEw5nz0tf0Wyw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1OM1OODr6DEw5nz0tf0Wyw",
+              "id": "1OM1OODr6DEw5nz0tf0Wyw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Run Like Hell - Live In Berlin",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:1OM1OODr6DEw5nz0tf0Wyw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
+                  "id": "40DqL6Tv84cKT2pH2NMs9r",
+                  "name": "Roger Waters",
+                  "type": "artist",
+                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3OSKnQ0rpRX32lsFHC3Bki"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3OSKnQ0rpRX32lsFHC3Bki",
+                  "id": "3OSKnQ0rpRX32lsFHC3Bki",
+                  "name": "The Bleeding Heart Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:3OSKnQ0rpRX32lsFHC3Bki"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 249893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6xQNRvZBZqhbCuhW2KiZwt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6xQNRvZBZqhbCuhW2KiZwt",
+              "id": "6xQNRvZBZqhbCuhW2KiZwt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Waiting For The Worms - Live In Berlin",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:6xQNRvZBZqhbCuhW2KiZwt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
+                  "id": "40DqL6Tv84cKT2pH2NMs9r",
+                  "name": "Roger Waters",
+                  "type": "artist",
+                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3OSKnQ0rpRX32lsFHC3Bki"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3OSKnQ0rpRX32lsFHC3Bki",
+                  "id": "3OSKnQ0rpRX32lsFHC3Bki",
+                  "name": "The Bleeding Heart Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:3OSKnQ0rpRX32lsFHC3Bki"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 23040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6t4UTNPPl1HipuIgklFsgL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6t4UTNPPl1HipuIgklFsgL",
+              "id": "6t4UTNPPl1HipuIgklFsgL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stop - Live In Berlin / Instrumental Version",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:6t4UTNPPl1HipuIgklFsgL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/40DqL6Tv84cKT2pH2NMs9r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/40DqL6Tv84cKT2pH2NMs9r",
+                  "id": "40DqL6Tv84cKT2pH2NMs9r",
+                  "name": "Roger Waters",
+                  "type": "artist",
+                  "uri": "spotify:artist:40DqL6Tv84cKT2pH2NMs9r"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5upLeyz8OjRZcbFuXOF59B"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5upLeyz8OjRZcbFuXOF59B",
+                  "id": "5upLeyz8OjRZcbFuXOF59B",
+                  "name": "Tim Curry",
+                  "type": "artist",
+                  "uri": "spotify:artist:5upLeyz8OjRZcbFuXOF59B"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Uz58cSxlJgefDaSikxYQ7"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Uz58cSxlJgefDaSikxYQ7",
+                  "id": "2Uz58cSxlJgefDaSikxYQ7",
+                  "name": "Thomas Dolby",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Uz58cSxlJgefDaSikxYQ7"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7DbmkhVKGV7UiwrbegHL9t"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7DbmkhVKGV7UiwrbegHL9t",
+                  "id": "7DbmkhVKGV7UiwrbegHL9t",
+                  "name": "Ute Lemper",
+                  "type": "artist",
+                  "uri": "spotify:artist:7DbmkhVKGV7UiwrbegHL9t"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7mlge4peaoNgzTsY6M32RB"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7mlge4peaoNgzTsY6M32RB",
+                  "id": "7mlge4peaoNgzTsY6M32RB",
+                  "name": "Marianne Faithfull",
+                  "type": "artist",
+                  "uri": "spotify:artist:7mlge4peaoNgzTsY6M32RB"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1kwtda1NFJAsoM03y1Z5LH"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1kwtda1NFJAsoM03y1Z5LH",
+                  "id": "1kwtda1NFJAsoM03y1Z5LH",
+                  "name": "Albert Finney",
+                  "type": "artist",
+                  "uri": "spotify:artist:1kwtda1NFJAsoM03y1Z5LH"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 352400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7KmPmAhKxlqHeqcXsXyjF6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7KmPmAhKxlqHeqcXsXyjF6",
+              "id": "7KmPmAhKxlqHeqcXsXyjF6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Trial - Live In Berlin / Instrumental Version",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:7KmPmAhKxlqHeqcXsXyjF6"
             },
             {
               "artists": [
@@ -994,46 +1357,50 @@
                 }
               ],
               "disc_number": 2,
-              "duration_ms": 150933,
+              "duration_ms": 441360,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2AwBjd86WK2Xoh0W7cMqJB"
+                "spotify": "https://open.spotify.com/track/7JTBPorWRgEhEXhaFSYjb8"
               },
-              "href": "https://api.spotify.com/v1/tracks/2AwBjd86WK2Xoh0W7cMqJB",
-              "id": "2AwBjd86WK2Xoh0W7cMqJB",
+              "href": "https://api.spotify.com/v1/tracks/7JTBPorWRgEhEXhaFSYjb8",
+              "id": "7JTBPorWRgEhEXhaFSYjb8",
               "is_local": false,
               "is_playable": true,
-              "name": "Déjà Vu (Reprise) - Live in Amsterdam, June, 2018",
+              "name": "The Tide Is Turning - Live In Berlin / Instrumental Version",
               "preview_url": null,
-              "track_number": 8,
+              "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:2AwBjd86WK2Xoh0W7cMqJB"
+              "uri": "spotify:track:7JTBPorWRgEhEXhaFSYjb8"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 23
+          "total": 25
         },
         "type": "album",
-        "uri": "spotify:album:6t2iNN1eyys71UV7eW9i7O"
+        "uri": "spotify:album:2x0jjg2Pw98wHDixqzCeqy"
       },
-      "release_date": "2020-10-02",
+      "release_date": "1990-01-01",
       "release_date_precision": "day",
-      "total_tracks": 23,
+      "total_tracks": 25,
       "tracks": [
         {
           "artists": [
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "27T030eWyCQRmDyuvr1kxY",
+              "name": "Scorpions"
             }
           ],
-          "duration_ms": 102240,
+          "duration_ms": 246600,
           "explicit": false,
-          "id": "1FhFpHIc0rpl8I6ldlt4Vj",
-          "name": "Intro - Live in Amsterdam, June, 2018",
+          "id": "0hmgGkd1goC5SR55wnolVb",
+          "name": "In The Flesh (Part 1) - Live In Berlin",
           "preview_url": null,
           "track_number": 1
         },
@@ -1042,12 +1409,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "7DbmkhVKGV7UiwrbegHL9t",
+              "name": "Ute Lemper"
             }
           ],
-          "duration_ms": 29533,
+          "duration_ms": 188893,
           "explicit": false,
-          "id": "5YREGMls2WxV3GPmHLUiUm",
-          "name": "Speak to Me - Live in Amsterdam, June, 2018",
+          "id": "0Snc9rxHLfHw7UvFAVmWv6",
+          "name": "The Thin Ice - Live In Berlin",
           "preview_url": null,
           "track_number": 2
         },
@@ -1056,12 +1427,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "4Krw5EvLS5prCEDNmmospt",
+              "name": "Garth Hudson"
             }
           ],
-          "duration_ms": 168173,
+          "duration_ms": 218000,
           "explicit": false,
-          "id": "4vbU8jreOOJyY9w3LqisJP",
-          "name": "Breathe - Live in Amsterdam, June, 2018",
+          "id": "5L2ggMJ2VGr97aZTkOYz5q",
+          "name": "Another Brick In The Wall (Part 1) - Live In Berlin",
           "preview_url": null,
           "track_number": 3
         },
@@ -1070,12 +1445,28 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "3q52DATzulLeYQQO7BehN4",
+              "name": "Stan Farber"
+            },
+            {
+              "id": "3UviXZUZVOpBi0TzmjqRvd",
+              "name": "Jim Haas"
+            },
+            {
+              "id": "45Ns7JqhI7s0YtG3k9pQxe",
+              "name": "John Joyce"
+            },
+            {
+              "id": "4EhhzVX3bG33grRUrV8wQ3",
+              "name": "Joe Chemay"
             }
           ],
-          "duration_ms": 327866,
+          "duration_ms": 80773,
           "explicit": false,
-          "id": "60iwOGElFXPCQfuBEbece8",
-          "name": "One of These Days - Live in Amsterdam, June, 2018",
+          "id": "4WxLJn7DoxQIr7dVd560E3",
+          "name": "The Happiest Days Of Our Lives - Live In Berlin",
           "preview_url": null,
           "track_number": 4
         },
@@ -1084,12 +1475,24 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "2BTZIqw0ntH9MvilQ3ewNY",
+              "name": "Cyndi Lauper"
+            },
+            {
+              "id": "3OSKnQ0rpRX32lsFHC3Bki",
+              "name": "The Bleeding Heart Band"
+            },
+            {
+              "id": "2Uz58cSxlJgefDaSikxYQ7",
+              "name": "Thomas Dolby"
             }
           ],
-          "duration_ms": 353200,
+          "duration_ms": 386133,
           "explicit": false,
-          "id": "4DuKoUGjqXSsZ25BuAAFKB",
-          "name": "Time - Live in Amsterdam, June, 2018",
+          "id": "67Mmbb5Oa9lhfu928w4yqJ",
+          "name": "Another Brick In The Wall (Part 2) - Live In Berlin",
           "preview_url": null,
           "track_number": 5
         },
@@ -1098,12 +1501,20 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "4sD9znwiVFx9cgRPZ42aQ1",
+              "name": "Sinéad O'Connor"
+            },
+            {
+              "id": "4vpDg7Y7fU982Ds30zawDA",
+              "name": "The Band"
             }
           ],
-          "duration_ms": 69786,
+          "duration_ms": 397933,
           "explicit": false,
-          "id": "4j6RABkSPwIIXkVGaPnO9B",
-          "name": "Breathe (Reprise) - Live in Amsterdam, June, 2018",
+          "id": "2Rfux1H0BXVlAKlp87Zhkt",
+          "name": "Mother - Live In Berlin",
           "preview_url": null,
           "track_number": 6
         },
@@ -1112,12 +1523,20 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "5hW4L92KnC6dX9t7tYM4Ve",
+              "name": "Joni Mitchell"
+            },
+            {
+              "id": "774mHr909NkDVeyyXQBQfZ",
+              "name": "James Galway"
             }
           ],
-          "duration_ms": 297693,
+          "duration_ms": 232693,
           "explicit": false,
-          "id": "0jFE49q7cnUGdYSQTVxUyU",
-          "name": "The Great Gig In the Sky - Live in Amsterdam, June, 2018",
+          "id": "1sNsU0aOPkhloRCQBiI0nd",
+          "name": "Goodbye Blue Sky - Live In Berlin",
           "preview_url": null,
           "track_number": 7
         },
@@ -1126,12 +1545,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "3Z02hBLubJxuFJfhacLSDc",
+              "name": "Bryan Adams"
             }
           ],
-          "duration_ms": 482426,
+          "duration_ms": 227306,
           "explicit": false,
-          "id": "0gp4ebNvHmfhywxWoKlXuT",
-          "name": "Welcome to the Machine - Live in Amsterdam, June, 2018",
+          "id": "6Fz911z0m4w98epHgxPCFu",
+          "name": "Empty Spaces - Live In Berlin",
           "preview_url": null,
           "track_number": 8
         },
@@ -1140,12 +1563,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "3Z02hBLubJxuFJfhacLSDc",
+              "name": "Bryan Adams"
             }
           ],
-          "duration_ms": 284680,
+          "duration_ms": 368560,
           "explicit": false,
-          "id": "6lXE7UFKxyezrY62PQoDbF",
-          "name": "Déjà Vu - Live in Amsterdam, June, 2018",
+          "id": "2jBl8jEvsyjG2LiNNxdBFz",
+          "name": "Young Lust - Live Version",
           "preview_url": null,
           "track_number": 9
         },
@@ -1156,10 +1583,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 262533,
+          "duration_ms": 164666,
           "explicit": false,
-          "id": "7yDwWw8H8lfcmBryBTjDdm",
-          "name": "The Last Refugee - Live in Amsterdam, June, 2018",
+          "id": "3MRJYS1pYaawXP5sXfAH4N",
+          "name": "One Of My Turns - Live In Berlin",
           "preview_url": null,
           "track_number": 10
         },
@@ -1170,10 +1597,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 407413,
+          "duration_ms": 311666,
           "explicit": false,
-          "id": "1qmaDLhEIZzgB9IdasPy7M",
-          "name": "Picture That - Live in Amsterdam, June, 2018",
+          "id": "7CkW2OMmwAknSftZkz38aU",
+          "name": "Don't Leave Me Now - Live In Berlin",
           "preview_url": null,
           "track_number": 11
         },
@@ -1184,10 +1611,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 301226,
+          "duration_ms": 204840,
           "explicit": false,
-          "id": "27yzF5eINp6noN8giZYtBf",
-          "name": "Wish You Were Here - Live in Amsterdam, June, 2018",
+          "id": "4Z8y3zsyGmlRekLZzj6UT5",
+          "name": "Another Brick In The Wall (Part 3) - Live In Berlin",
           "preview_url": null,
           "track_number": 12
         },
@@ -1198,10 +1625,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 96226,
+          "duration_ms": 97560,
           "explicit": false,
-          "id": "2uEPJd5L6avFbkKNo0qDoR",
-          "name": "Happiest Days of Our Lives - Live in Amsterdam, June, 2018",
+          "id": "3bBZinn689YlUYuX58HqSZ",
+          "name": "Goodbye Cruel World - Live In Berlin",
           "preview_url": null,
           "track_number": 13
         },
@@ -1210,40 +1637,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
-            }
-          ],
-          "duration_ms": 216880,
-          "explicit": false,
-          "id": "3RHA1WAU99fvTa7Uy10kYt",
-          "name": "Another Brick In the Wall (Part 2) - Live in Amsterdam, June, 2018",
-          "preview_url": null,
-          "track_number": 14
-        },
-        {
-          "artists": [
+            },
             {
-              "id": "40DqL6Tv84cKT2pH2NMs9r",
-              "name": "Roger Waters"
+              "id": "0FFuvdY7fuiuTmHN9unYoz",
+              "name": "Paul Carrack"
             }
           ],
-          "duration_ms": 96133,
+          "duration_ms": 302533,
           "explicit": false,
-          "id": "4ROuVw1Oa09rszxmRiMrqO",
-          "name": "Another Brick In the Wall (Part 3) - Live in Amsterdam, June, 2018",
-          "preview_url": null,
-          "track_number": 15
-        },
-        {
-          "artists": [
-            {
-              "id": "40DqL6Tv84cKT2pH2NMs9r",
-              "name": "Roger Waters"
-            }
-          ],
-          "duration_ms": 959266,
-          "explicit": false,
-          "id": "45M51GNDEaAEBsKmOoYneR",
-          "name": "Dogs - Live in Amsterdam, June, 2018",
+          "id": "2QrvE0Dim0PPOG4jB1iu8Q",
+          "name": "Hey You - Live In Berlin",
           "preview_url": null,
           "track_number": 1
         },
@@ -1254,10 +1657,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 697080,
+          "duration_ms": 181933,
           "explicit": false,
-          "id": "7pApLPckLShNeO5j5ftnLP",
-          "name": "Pigs (Three Different Ones) - Live in Amsterdam, June, 2018",
+          "id": "73l6LQQ67MyHqVcNfXiAXS",
+          "name": "Is There Anybody Out There - Live In Berlin",
           "preview_url": null,
           "track_number": 2
         },
@@ -1266,12 +1669,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "4DMlDJn7CPSSS0DuUf1vrH",
+              "name": "Snowy White"
             }
           ],
-          "duration_ms": 443266,
-          "explicit": false,
-          "id": "6rBhX3g5OFHYcqkqY0tUjP",
-          "name": "Money - Live in Amsterdam, June, 2018",
+          "duration_ms": 285866,
+          "explicit": true,
+          "id": "2QUmGZcIGJhCOBYzZg3bMV",
+          "name": "Nobody Home - Live In Berlin",
           "preview_url": null,
           "track_number": 3
         },
@@ -1282,10 +1689,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 473893,
+          "duration_ms": 71733,
           "explicit": false,
-          "id": "7pQQv2aBVLivi1KpvdESkZ",
-          "name": "Us & Them - Live in Amsterdam, June, 2018",
+          "id": "6nHZcjgQ0CHGXAq5WkOtPF",
+          "name": "Vera - Live In Berlin",
           "preview_url": null,
           "track_number": 4
         },
@@ -1296,10 +1703,10 @@
               "name": "Roger Waters"
             }
           ],
-          "duration_ms": 272373,
+          "duration_ms": 160666,
           "explicit": false,
-          "id": "3DlXrDADnHuVBsbM24eT1h",
-          "name": "Brain Damage - Live in Amsterdam, June, 2018",
+          "id": "4ijlKZ4QO7v3vn0zHeqjj0",
+          "name": "Bring The Boys Back Home - Live In Berlin",
           "preview_url": null,
           "track_number": 5
         },
@@ -1308,12 +1715,20 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "44NX2ffIYHr6D4n7RaZF7A",
+              "name": "Van Morrison"
+            },
+            {
+              "id": "4vpDg7Y7fU982Ds30zawDA",
+              "name": "The Band"
             }
           ],
-          "duration_ms": 270346,
+          "duration_ms": 482160,
           "explicit": false,
-          "id": "3Fpa5hMjSNWqy9vzZhKHNt",
-          "name": "Eclipse - Live in Amsterdam, June, 2018",
+          "id": "7xbxxRZuxcrntSh7ytgsT3",
+          "name": "Comfortably Numb - Live In Berlin",
           "preview_url": null,
           "track_number": 6
         },
@@ -1322,12 +1737,16 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "3OSKnQ0rpRX32lsFHC3Bki",
+              "name": "The Bleeding Heart Band"
             }
           ],
-          "duration_ms": 88240,
+          "duration_ms": 310600,
           "explicit": false,
-          "id": "48yaJk9X5qaoIGktZrPIZp",
-          "name": "The Last Refugee (Reprise) - Live in Amsterdam, June, 2018",
+          "id": "3AtGRDRWYxJDcykpgp1edw",
+          "name": "In The Flesh (Part 2) - Live In Berlin",
           "preview_url": null,
           "track_number": 7
         },
@@ -1336,21 +1755,109 @@
             {
               "id": "40DqL6Tv84cKT2pH2NMs9r",
               "name": "Roger Waters"
+            },
+            {
+              "id": "3OSKnQ0rpRX32lsFHC3Bki",
+              "name": "The Bleeding Heart Band"
             }
           ],
-          "duration_ms": 150933,
+          "duration_ms": 291640,
           "explicit": false,
-          "id": "2AwBjd86WK2Xoh0W7cMqJB",
-          "name": "Déjà Vu (Reprise) - Live in Amsterdam, June, 2018",
+          "id": "1OM1OODr6DEw5nz0tf0Wyw",
+          "name": "Run Like Hell - Live In Berlin",
           "preview_url": null,
           "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "40DqL6Tv84cKT2pH2NMs9r",
+              "name": "Roger Waters"
+            },
+            {
+              "id": "3OSKnQ0rpRX32lsFHC3Bki",
+              "name": "The Bleeding Heart Band"
+            }
+          ],
+          "duration_ms": 249893,
+          "explicit": false,
+          "id": "6xQNRvZBZqhbCuhW2KiZwt",
+          "name": "Waiting For The Worms - Live In Berlin",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "40DqL6Tv84cKT2pH2NMs9r",
+              "name": "Roger Waters"
+            },
+            {
+              "id": "3OSKnQ0rpRX32lsFHC3Bki",
+              "name": "The Bleeding Heart Band"
+            }
+          ],
+          "duration_ms": 23040,
+          "explicit": false,
+          "id": "6t4UTNPPl1HipuIgklFsgL",
+          "name": "Stop - Live In Berlin / Instrumental Version",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "40DqL6Tv84cKT2pH2NMs9r",
+              "name": "Roger Waters"
+            },
+            {
+              "id": "5upLeyz8OjRZcbFuXOF59B",
+              "name": "Tim Curry"
+            },
+            {
+              "id": "2Uz58cSxlJgefDaSikxYQ7",
+              "name": "Thomas Dolby"
+            },
+            {
+              "id": "7DbmkhVKGV7UiwrbegHL9t",
+              "name": "Ute Lemper"
+            },
+            {
+              "id": "7mlge4peaoNgzTsY6M32RB",
+              "name": "Marianne Faithfull"
+            },
+            {
+              "id": "1kwtda1NFJAsoM03y1Z5LH",
+              "name": "Albert Finney"
+            }
+          ],
+          "duration_ms": 352400,
+          "explicit": false,
+          "id": "7KmPmAhKxlqHeqcXsXyjF6",
+          "name": "The Trial - Live In Berlin / Instrumental Version",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "40DqL6Tv84cKT2pH2NMs9r",
+              "name": "Roger Waters"
+            }
+          ],
+          "duration_ms": 441360,
+          "explicit": false,
+          "id": "7JTBPorWRgEhEXhaFSYjb8",
+          "name": "The Tide Is Turning - Live In Berlin / Instrumental Version",
+          "preview_url": null,
+          "track_number": 12
         }
       ],
-      "url": "https://open.spotify.com/album/6t2iNN1eyys71UV7eW9i7O"
+      "url": "https://open.spotify.com/album/2x0jjg2Pw98wHDixqzCeqy"
     }
   },
-  "spotify_id": "6t2iNN1eyys71UV7eW9i7O",
-  "spotify_url": "https://open.spotify.com/album/6t2iNN1eyys71UV7eW9i7O",
+  "spotify_id": "2x0jjg2Pw98wHDixqzCeqy",
+  "spotify_url": "https://open.spotify.com/album/2x0jjg2Pw98wHDixqzCeqy",
   "styles": [
     "Pop Rock",
     "Classic Rock",
@@ -1527,6 +2034,6 @@
       "title": "The Tide Is Turning"
     }
   ],
-  "updated_at": "2025-07-05T16:01:39.838668",
+  "updated_at": "2025-07-07T20:38:46.740751",
   "year": 2020
 }

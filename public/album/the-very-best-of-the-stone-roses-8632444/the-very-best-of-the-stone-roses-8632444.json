@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1444418949",
-  "apple_music_url": "https://music.apple.com/gb/album/all-for-one-single/1444418949",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "158384403",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:11:23.823584",
+  "created_at": "2025-07-07T20:32:47.695488",
   "date_added": "2020-07-15T10:37:43-07:00",
   "discogs_id": "8632444",
   "discogs_url": "https://www.discogs.com/release/8632444-The-Stone-Roses-The-Very-Best-Of-The-Stone-Roses",
@@ -105,8 +105,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/76/44/d1/7644d17e-bcbb-75a7-7cca-464a85f647a7/00602547960474.rgb.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444.jpg",
       "width": 2000
     }
   ],
@@ -117,72 +117,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/The+Stone+Roses/The+Very+Best+of+The+Stone+Roses",
   "local_images": {
-    "hi-res": "public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-hi-res.jpg",
-    "medium": "public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-medium.jpg",
-    "small": "public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-small.jpg"
+    "hi-res": "../public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-hi-res.jpg",
+    "medium": "../public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-medium.jpg",
+    "small": "../public/album/the-very-best-of-the-stone-roses-8632444/the-very-best-of-the-stone-roses-8632444-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:11:26.695542",
+    "processed_at": "2025-07-07T20:33:01.505106",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "All for One - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "The Very Best Of The Stone Roses",
-  "release_name_spotify": "The Stone Roses",
+  "release_name_spotify": "The Very Best Of The Stone Roses",
   "released": "2016",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/76/44/d1/7644d17e-bcbb-75a7-7cca-464a85f647a7/00602547960474.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2016 The Stone Roses, under exclusive license to Virgin EMI Records, a division of Universal Music Operations Ltd",
-      "editorial_notes": null,
-      "id": "1444418949",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "The Stone Roses",
-        "artwork": {
-          "bgColor": "d4d2d5",
-          "height": 3000,
-          "textColor1": "211f1e",
-          "textColor2": "352722",
-          "textColor3": "454343",
-          "textColor4": "554945",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/76/44/d1/7644d17e-bcbb-75a7-7cca-464a85f647a7/00602547960474.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "℗ 2016 The Stone Roses, under exclusive license to Virgin EMI Records, a division of Universal Music Operations Ltd",
-        "editorialNotes": {
-          "short": "Rejoice! A joyous return brimming with bravado and brotherly love."
-        },
-        "genreNames": [
-          "Alternative",
-          "Music",
-          "Rock"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": true,
-        "isSingle": true,
-        "name": "All for One - Single",
-        "playParams": {
-          "id": "1444418949",
-          "kind": "album"
-        },
-        "recordLabel": "EMI",
-        "releaseDate": "2016-05-12",
-        "trackCount": 1,
-        "upc": "00602547960474",
-        "url": "https://music.apple.com/gb/album/all-for-one-single/1444418949"
-      },
-      "url": "https://music.apple.com/gb/album/all-for-one-single/1444418949"
-    },
     "lastfm": {
       "images": [
         {
@@ -210,9 +163,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/568c061ead41494cc92522ef0af92c32.jpg"
         }
       ],
-      "listeners": 91365,
+      "listeners": 91377,
       "mbid": "1d41b1fe-a2ba-44cc-9f84-b1332d071f6a",
-      "playcount": 1971295,
+      "playcount": 1971468,
       "raw_data": {
         "album": {
           "artist": "The Stone Roses",
@@ -242,10 +195,10 @@
               "size": ""
             }
           ],
-          "listeners": "91365",
+          "listeners": "91377",
           "mbid": "1d41b1fe-a2ba-44cc-9f84-b1332d071f6a",
           "name": "The Very Best of The Stone Roses",
-          "playcount": "1971295",
+          "playcount": "1971468",
           "tags": {
             "tag": [
               {
@@ -547,41 +500,41 @@
       "wiki_summary": ""
     },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(P) 2009 Silvertone Records Limited",
+          "text": "(P) 2002 Silvertone Records Ltd.",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "888880916815"
+        "upc": "012414184429"
       },
-      "id": "0um9FI6BLBldL5POP4D4Cw",
+      "id": "1RB1lMsMcQQmcqUyP23T5f",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273cf1f6466a493eb73d6d9d280",
+          "url": "https://i.scdn.co/image/ab67616d0000b273e622a0939f5ff3315743303d",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02cf1f6466a493eb73d6d9d280",
+          "url": "https://i.scdn.co/image/ab67616d00001e02e622a0939f5ff3315743303d",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851cf1f6466a493eb73d6d9d280",
+          "url": "https://i.scdn.co/image/ab67616d00004851e622a0939f5ff3315743303d",
           "width": 64
         }
       ],
-      "label": "Sony Music UK",
-      "popularity": 70,
+      "label": "Silvertone",
+      "popularity": 24,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -596,45 +549,45 @@
         ],
         "copyrights": [
           {
-            "text": "(P) 2009 Silvertone Records Limited",
+            "text": "(P) 2002 Silvertone Records Ltd.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "888880916815"
+          "upc": "012414184429"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0um9FI6BLBldL5POP4D4Cw"
+          "spotify": "https://open.spotify.com/album/1RB1lMsMcQQmcqUyP23T5f"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0um9FI6BLBldL5POP4D4Cw?market=US",
-        "id": "0um9FI6BLBldL5POP4D4Cw",
+        "href": "https://api.spotify.com/v1/albums/1RB1lMsMcQQmcqUyP23T5f?market=US",
+        "id": "1RB1lMsMcQQmcqUyP23T5f",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273cf1f6466a493eb73d6d9d280",
+            "url": "https://i.scdn.co/image/ab67616d0000b273e622a0939f5ff3315743303d",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02cf1f6466a493eb73d6d9d280",
+            "url": "https://i.scdn.co/image/ab67616d00001e02e622a0939f5ff3315743303d",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851cf1f6466a493eb73d6d9d280",
+            "url": "https://i.scdn.co/image/ab67616d00004851e622a0939f5ff3315743303d",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Sony Music UK",
-        "name": "The Stone Roses",
-        "popularity": 70,
-        "release_date": "1989-05-02",
+        "label": "Silvertone",
+        "name": "The Very Best Of The Stone Roses",
+        "popularity": 24,
+        "release_date": "2002-11-04",
         "release_date_precision": "day",
-        "total_tracks": 12,
+        "total_tracks": 15,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0um9FI6BLBldL5POP4D4Cw/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/1RB1lMsMcQQmcqUyP23T5f/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -650,20 +603,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 292800,
+              "duration_ms": 292693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/758wEKVqfYopJIHYWdLVd4"
+                "spotify": "https://open.spotify.com/track/1gjufRR7ar0OWMyowwfDkN"
               },
-              "href": "https://api.spotify.com/v1/tracks/758wEKVqfYopJIHYWdLVd4",
-              "id": "758wEKVqfYopJIHYWdLVd4",
+              "href": "https://api.spotify.com/v1/tracks/1gjufRR7ar0OWMyowwfDkN",
+              "id": "1gjufRR7ar0OWMyowwfDkN",
               "is_local": false,
               "is_playable": true,
-              "name": "I Wanna Be Adored - Remastered 2009",
+              "name": "I Wanna Be Adored",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:758wEKVqfYopJIHYWdLVd4"
+              "uri": "spotify:track:1gjufRR7ar0OWMyowwfDkN"
             },
             {
               "artists": [
@@ -679,20 +632,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 232333,
+              "duration_ms": 230426,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3clIHVzJ9J2rvvrFUKLICo"
+                "spotify": "https://open.spotify.com/track/28ndmDCRKWr3NCeRj1qB5P"
               },
-              "href": "https://api.spotify.com/v1/tracks/3clIHVzJ9J2rvvrFUKLICo",
-              "id": "3clIHVzJ9J2rvvrFUKLICo",
+              "href": "https://api.spotify.com/v1/tracks/28ndmDCRKWr3NCeRj1qB5P",
+              "id": "28ndmDCRKWr3NCeRj1qB5P",
               "is_local": false,
               "is_playable": true,
-              "name": "She Bangs the Drums - Remastered 2009",
+              "name": "She Bangs the Drums",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:3clIHVzJ9J2rvvrFUKLICo"
+              "uri": "spotify:track:28ndmDCRKWr3NCeRj1qB5P"
             },
             {
               "artists": [
@@ -708,20 +661,29 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 278826,
+              "duration_ms": 262040,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4CWgqHRJjDLd2PCedMz8eY"
+                "spotify": "https://open.spotify.com/track/6PBQHhVEN7RKUqTToflkIn"
               },
-              "href": "https://api.spotify.com/v1/tracks/4CWgqHRJjDLd2PCedMz8eY",
-              "id": "4CWgqHRJjDLd2PCedMz8eY",
+              "href": "https://api.spotify.com/v1/tracks/0se4Vq1NigeLfnnd8xI91p",
+              "id": "0se4Vq1NigeLfnnd8xI91p",
               "is_local": false,
               "is_playable": true,
-              "name": "Waterfall - Remastered 2009",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/6PBQHhVEN7RKUqTToflkIn"
+                },
+                "href": "https://api.spotify.com/v1/tracks/6PBQHhVEN7RKUqTToflkIn",
+                "id": "6PBQHhVEN7RKUqTToflkIn",
+                "type": "track",
+                "uri": "spotify:track:6PBQHhVEN7RKUqTToflkIn"
+              },
+              "name": "Ten Storey Love Song",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:4CWgqHRJjDLd2PCedMz8eY"
+              "uri": "spotify:track:0se4Vq1NigeLfnnd8xI91p"
             },
             {
               "artists": [
@@ -737,20 +699,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 320586,
+              "duration_ms": 278733,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2Kwf8mUygPEriB7GVErizM"
+                "spotify": "https://open.spotify.com/track/1cMVLpjzWJy81KmMv3wKJL"
               },
-              "href": "https://api.spotify.com/v1/tracks/2Kwf8mUygPEriB7GVErizM",
-              "id": "2Kwf8mUygPEriB7GVErizM",
+              "href": "https://api.spotify.com/v1/tracks/1cMVLpjzWJy81KmMv3wKJL",
+              "id": "1cMVLpjzWJy81KmMv3wKJL",
               "is_local": false,
               "is_playable": true,
-              "name": "Don't Stop - Remastered 2009",
+              "name": "Waterfall",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:2Kwf8mUygPEriB7GVErizM"
+              "uri": "spotify:track:1cMVLpjzWJy81KmMv3wKJL"
             },
             {
               "artists": [
@@ -766,20 +728,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 243986,
+              "duration_ms": 253040,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2r0Cx2vW1wn2K3PogcdcPX"
+                "spotify": "https://open.spotify.com/track/2jPNLyQDqq7ynpobi9uAL6"
               },
-              "href": "https://api.spotify.com/v1/tracks/2r0Cx2vW1wn2K3PogcdcPX",
-              "id": "2r0Cx2vW1wn2K3PogcdcPX",
+              "href": "https://api.spotify.com/v1/tracks/2jPNLyQDqq7ynpobi9uAL6",
+              "id": "2jPNLyQDqq7ynpobi9uAL6",
               "is_local": false,
               "is_playable": true,
-              "name": "Bye Bye Bad Man - Remastered 2009",
+              "name": "Made of Stone",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:2r0Cx2vW1wn2K3PogcdcPX"
+              "uri": "spotify:track:2jPNLyQDqq7ynpobi9uAL6"
             },
             {
               "artists": [
@@ -795,20 +757,29 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 53120,
+              "duration_ms": 346893,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/395XURgt6hWMx9XNOfIxia"
+                "spotify": "https://open.spotify.com/track/309kW66efNK72kb0IF6EpZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/395XURgt6hWMx9XNOfIxia",
-              "id": "395XURgt6hWMx9XNOfIxia",
+              "href": "https://api.spotify.com/v1/tracks/6JvEXmRh3l2acBzvqavgT9",
+              "id": "6JvEXmRh3l2acBzvqavgT9",
               "is_local": false,
               "is_playable": true,
-              "name": "Elizabeth My Dear - Remastered 2009",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/309kW66efNK72kb0IF6EpZ"
+                },
+                "href": "https://api.spotify.com/v1/tracks/309kW66efNK72kb0IF6EpZ",
+                "id": "309kW66efNK72kb0IF6EpZ",
+                "type": "track",
+                "uri": "spotify:track:309kW66efNK72kb0IF6EpZ"
+              },
+              "name": "Love Spreads",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:395XURgt6hWMx9XNOfIxia"
+              "uri": "spotify:track:6JvEXmRh3l2acBzvqavgT9"
             },
             {
               "artists": [
@@ -824,20 +795,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 206786,
+              "duration_ms": 231293,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3WEDBjYdFN9anBLB87w9b8"
+                "spotify": "https://open.spotify.com/track/0jxBfnwteHV4t3ybY329ZQ"
               },
-              "href": "https://api.spotify.com/v1/tracks/3WEDBjYdFN9anBLB87w9b8",
-              "id": "3WEDBjYdFN9anBLB87w9b8",
+              "href": "https://api.spotify.com/v1/tracks/0jxBfnwteHV4t3ybY329ZQ",
+              "id": "0jxBfnwteHV4t3ybY329ZQ",
               "is_local": false,
               "is_playable": true,
-              "name": "(Song for My) Sugar Spun Sister - Remastered 2009",
+              "name": "What the World Is Waiting For",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:3WEDBjYdFN9anBLB87w9b8"
+              "uri": "spotify:track:0jxBfnwteHV4t3ybY329ZQ"
             },
             {
               "artists": [
@@ -853,20 +824,29 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 254640,
+              "duration_ms": 204706,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0bZelokqNQicLQfLU1Ayw8"
+                "spotify": "https://open.spotify.com/track/3N9A5quSyb4Rf68qVf0UJa"
               },
-              "href": "https://api.spotify.com/v1/tracks/0bZelokqNQicLQfLU1Ayw8",
-              "id": "0bZelokqNQicLQfLU1Ayw8",
+              "href": "https://api.spotify.com/v1/tracks/4aVoIvZzHb1Pkp8uq9CvuV",
+              "id": "4aVoIvZzHb1Pkp8uq9CvuV",
               "is_local": false,
               "is_playable": true,
-              "name": "Made of Stone - Remastered 2009",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/3N9A5quSyb4Rf68qVf0UJa"
+                },
+                "href": "https://api.spotify.com/v1/tracks/3N9A5quSyb4Rf68qVf0UJa",
+                "id": "3N9A5quSyb4Rf68qVf0UJa",
+                "type": "track",
+                "uri": "spotify:track:3N9A5quSyb4Rf68qVf0UJa"
+              },
+              "name": "Sally Cinnamon",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:0bZelokqNQicLQfLU1Ayw8"
+              "uri": "spotify:track:4aVoIvZzHb1Pkp8uq9CvuV"
             },
             {
               "artists": [
@@ -882,20 +862,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 253453,
+              "duration_ms": 594026,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2erQ477GekpdP5l3xp5adl"
+                "spotify": "https://open.spotify.com/track/4GiGKbfMhy4fILu7VtTNeR"
               },
-              "href": "https://api.spotify.com/v1/tracks/2erQ477GekpdP5l3xp5adl",
-              "id": "2erQ477GekpdP5l3xp5adl",
+              "href": "https://api.spotify.com/v1/tracks/4GiGKbfMhy4fILu7VtTNeR",
+              "id": "4GiGKbfMhy4fILu7VtTNeR",
               "is_local": false,
               "is_playable": true,
-              "name": "Shoot You Down - Remastered 2009",
+              "name": "Fools Gold",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:2erQ477GekpdP5l3xp5adl"
+              "uri": "spotify:track:4GiGKbfMhy4fILu7VtTNeR"
             },
             {
               "artists": [
@@ -911,20 +891,29 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 299320,
+              "duration_ms": 293533,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/433EQGQOsQjWvD5eImXkHf"
+                "spotify": "https://open.spotify.com/track/5roxemGXZlxoZAzP8XJVuX"
               },
-              "href": "https://api.spotify.com/v1/tracks/433EQGQOsQjWvD5eImXkHf",
-              "id": "433EQGQOsQjWvD5eImXkHf",
+              "href": "https://api.spotify.com/v1/tracks/4E9l0zjjmiB3AUfGY4YtYE",
+              "id": "4E9l0zjjmiB3AUfGY4YtYE",
               "is_local": false,
               "is_playable": true,
-              "name": "This Is the One - Remastered 2009",
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/5roxemGXZlxoZAzP8XJVuX"
+                },
+                "href": "https://api.spotify.com/v1/tracks/5roxemGXZlxoZAzP8XJVuX",
+                "id": "5roxemGXZlxoZAzP8XJVuX",
+                "type": "track",
+                "uri": "spotify:track:5roxemGXZlxoZAzP8XJVuX"
+              },
+              "name": "Begging You",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:433EQGQOsQjWvD5eImXkHf"
+              "uri": "spotify:track:4E9l0zjjmiB3AUfGY4YtYE"
             },
             {
               "artists": [
@@ -940,20 +929,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 492946,
+              "duration_ms": 290493,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5ikdUUm6JbnEVnp35c7dvy"
+                "spotify": "https://open.spotify.com/track/4yOxhl2OdiTEVgNOwZ6FN6"
               },
-              "href": "https://api.spotify.com/v1/tracks/5ikdUUm6JbnEVnp35c7dvy",
-              "id": "5ikdUUm6JbnEVnp35c7dvy",
+              "href": "https://api.spotify.com/v1/tracks/4yOxhl2OdiTEVgNOwZ6FN6",
+              "id": "4yOxhl2OdiTEVgNOwZ6FN6",
               "is_local": false,
               "is_playable": true,
-              "name": "I Am the Resurrection - Remastered 2009",
+              "name": "Elephant Stone",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:5ikdUUm6JbnEVnp35c7dvy"
+              "uri": "spotify:track:4yOxhl2OdiTEVgNOwZ6FN6"
             },
             {
               "artists": [
@@ -969,34 +958,124 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 594453,
+              "duration_ms": 419200,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2mv6GY70UsHiTCGQZ4JfgC"
+                "spotify": "https://open.spotify.com/track/0W2xfQ0Z7dyGjuVusSXjiq"
               },
-              "href": "https://api.spotify.com/v1/tracks/2mv6GY70UsHiTCGQZ4JfgC",
-              "id": "2mv6GY70UsHiTCGQZ4JfgC",
+              "href": "https://api.spotify.com/v1/tracks/0W2xfQ0Z7dyGjuVusSXjiq",
+              "id": "0W2xfQ0Z7dyGjuVusSXjiq",
               "is_local": false,
-              "is_playable": true,
-              "name": "Fools Gold - Remastered 2009",
+              "is_playable": false,
+              "name": "Breaking into Heaven",
               "preview_url": null,
+              "restrictions": {
+                "reason": "market"
+              },
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:2mv6GY70UsHiTCGQZ4JfgC"
+              "uri": "spotify:track:0W2xfQ0Z7dyGjuVusSXjiq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1lYT0A0LV5DUfxr6doRP3d"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1lYT0A0LV5DUfxr6doRP3d",
+                  "id": "1lYT0A0LV5DUfxr6doRP3d",
+                  "name": "The Stone Roses",
+                  "type": "artist",
+                  "uri": "spotify:artist:1lYT0A0LV5DUfxr6doRP3d"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 214360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6p32V9FzR79KgxktFC2By5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6p32V9FzR79KgxktFC2By5",
+              "id": "6p32V9FzR79KgxktFC2By5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "One Love",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:6p32V9FzR79KgxktFC2By5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1lYT0A0LV5DUfxr6doRP3d"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1lYT0A0LV5DUfxr6doRP3d",
+                  "id": "1lYT0A0LV5DUfxr6doRP3d",
+                  "name": "The Stone Roses",
+                  "type": "artist",
+                  "uri": "spotify:artist:1lYT0A0LV5DUfxr6doRP3d"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 299626,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5cwFqRdtvLhWkAzPbYUPJf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5cwFqRdtvLhWkAzPbYUPJf",
+              "id": "5cwFqRdtvLhWkAzPbYUPJf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "This Is the One",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:5cwFqRdtvLhWkAzPbYUPJf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1lYT0A0LV5DUfxr6doRP3d"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1lYT0A0LV5DUfxr6doRP3d",
+                  "id": "1lYT0A0LV5DUfxr6doRP3d",
+                  "name": "The Stone Roses",
+                  "type": "artist",
+                  "uri": "spotify:artist:1lYT0A0LV5DUfxr6doRP3d"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 493506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5OunzKQG7Jx9zamBSiYM4o"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5OunzKQG7Jx9zamBSiYM4o",
+              "id": "5OunzKQG7Jx9zamBSiYM4o",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Am The Resurrection",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:5OunzKQG7Jx9zamBSiYM4o"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 12
+          "total": 15
         },
         "type": "album",
-        "uri": "spotify:album:0um9FI6BLBldL5POP4D4Cw"
+        "uri": "spotify:album:1RB1lMsMcQQmcqUyP23T5f"
       },
-      "release_date": "1989-05-02",
+      "release_date": "2002-11-04",
       "release_date_precision": "day",
-      "total_tracks": 12,
+      "total_tracks": 15,
       "tracks": [
         {
           "artists": [
@@ -1005,10 +1084,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 292800,
+          "duration_ms": 292693,
           "explicit": false,
-          "id": "758wEKVqfYopJIHYWdLVd4",
-          "name": "I Wanna Be Adored - Remastered 2009",
+          "id": "1gjufRR7ar0OWMyowwfDkN",
+          "name": "I Wanna Be Adored",
           "preview_url": null,
           "track_number": 1
         },
@@ -1019,10 +1098,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 232333,
+          "duration_ms": 230426,
           "explicit": false,
-          "id": "3clIHVzJ9J2rvvrFUKLICo",
-          "name": "She Bangs the Drums - Remastered 2009",
+          "id": "28ndmDCRKWr3NCeRj1qB5P",
+          "name": "She Bangs the Drums",
           "preview_url": null,
           "track_number": 2
         },
@@ -1033,10 +1112,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 278826,
+          "duration_ms": 262040,
           "explicit": false,
-          "id": "4CWgqHRJjDLd2PCedMz8eY",
-          "name": "Waterfall - Remastered 2009",
+          "id": "0se4Vq1NigeLfnnd8xI91p",
+          "name": "Ten Storey Love Song",
           "preview_url": null,
           "track_number": 3
         },
@@ -1047,10 +1126,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 320586,
+          "duration_ms": 278733,
           "explicit": false,
-          "id": "2Kwf8mUygPEriB7GVErizM",
-          "name": "Don't Stop - Remastered 2009",
+          "id": "1cMVLpjzWJy81KmMv3wKJL",
+          "name": "Waterfall",
           "preview_url": null,
           "track_number": 4
         },
@@ -1061,10 +1140,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 243986,
+          "duration_ms": 253040,
           "explicit": false,
-          "id": "2r0Cx2vW1wn2K3PogcdcPX",
-          "name": "Bye Bye Bad Man - Remastered 2009",
+          "id": "2jPNLyQDqq7ynpobi9uAL6",
+          "name": "Made of Stone",
           "preview_url": null,
           "track_number": 5
         },
@@ -1075,10 +1154,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 53120,
+          "duration_ms": 346893,
           "explicit": false,
-          "id": "395XURgt6hWMx9XNOfIxia",
-          "name": "Elizabeth My Dear - Remastered 2009",
+          "id": "6JvEXmRh3l2acBzvqavgT9",
+          "name": "Love Spreads",
           "preview_url": null,
           "track_number": 6
         },
@@ -1089,10 +1168,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 206786,
+          "duration_ms": 231293,
           "explicit": false,
-          "id": "3WEDBjYdFN9anBLB87w9b8",
-          "name": "(Song for My) Sugar Spun Sister - Remastered 2009",
+          "id": "0jxBfnwteHV4t3ybY329ZQ",
+          "name": "What the World Is Waiting For",
           "preview_url": null,
           "track_number": 7
         },
@@ -1103,10 +1182,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 254640,
+          "duration_ms": 204706,
           "explicit": false,
-          "id": "0bZelokqNQicLQfLU1Ayw8",
-          "name": "Made of Stone - Remastered 2009",
+          "id": "4aVoIvZzHb1Pkp8uq9CvuV",
+          "name": "Sally Cinnamon",
           "preview_url": null,
           "track_number": 8
         },
@@ -1117,10 +1196,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 253453,
+          "duration_ms": 594026,
           "explicit": false,
-          "id": "2erQ477GekpdP5l3xp5adl",
-          "name": "Shoot You Down - Remastered 2009",
+          "id": "4GiGKbfMhy4fILu7VtTNeR",
+          "name": "Fools Gold",
           "preview_url": null,
           "track_number": 9
         },
@@ -1131,10 +1210,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 299320,
+          "duration_ms": 293533,
           "explicit": false,
-          "id": "433EQGQOsQjWvD5eImXkHf",
-          "name": "This Is the One - Remastered 2009",
+          "id": "4E9l0zjjmiB3AUfGY4YtYE",
+          "name": "Begging You",
           "preview_url": null,
           "track_number": 10
         },
@@ -1145,10 +1224,10 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 492946,
+          "duration_ms": 290493,
           "explicit": false,
-          "id": "5ikdUUm6JbnEVnp35c7dvy",
-          "name": "I Am the Resurrection - Remastered 2009",
+          "id": "4yOxhl2OdiTEVgNOwZ6FN6",
+          "name": "Elephant Stone",
           "preview_url": null,
           "track_number": 11
         },
@@ -1159,19 +1238,61 @@
               "name": "The Stone Roses"
             }
           ],
-          "duration_ms": 594453,
+          "duration_ms": 419200,
           "explicit": false,
-          "id": "2mv6GY70UsHiTCGQZ4JfgC",
-          "name": "Fools Gold - Remastered 2009",
+          "id": "0W2xfQ0Z7dyGjuVusSXjiq",
+          "name": "Breaking into Heaven",
           "preview_url": null,
           "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "1lYT0A0LV5DUfxr6doRP3d",
+              "name": "The Stone Roses"
+            }
+          ],
+          "duration_ms": 214360,
+          "explicit": false,
+          "id": "6p32V9FzR79KgxktFC2By5",
+          "name": "One Love",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "1lYT0A0LV5DUfxr6doRP3d",
+              "name": "The Stone Roses"
+            }
+          ],
+          "duration_ms": 299626,
+          "explicit": false,
+          "id": "5cwFqRdtvLhWkAzPbYUPJf",
+          "name": "This Is the One",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "1lYT0A0LV5DUfxr6doRP3d",
+              "name": "The Stone Roses"
+            }
+          ],
+          "duration_ms": 493506,
+          "explicit": false,
+          "id": "5OunzKQG7Jx9zamBSiYM4o",
+          "name": "I Am The Resurrection",
+          "preview_url": null,
+          "track_number": 15
         }
       ],
-      "url": "https://open.spotify.com/album/0um9FI6BLBldL5POP4D4Cw"
+      "url": "https://open.spotify.com/album/1RB1lMsMcQQmcqUyP23T5f"
     }
   },
-  "spotify_id": "0um9FI6BLBldL5POP4D4Cw",
-  "spotify_url": "https://open.spotify.com/album/0um9FI6BLBldL5POP4D4Cw",
+  "spotify_id": "1RB1lMsMcQQmcqUyP23T5f",
+  "spotify_url": "https://open.spotify.com/album/1RB1lMsMcQQmcqUyP23T5f",
   "styles": [
     "Indie Rock"
   ],
@@ -1268,6 +1389,6 @@
       "title": "I Am The Resurrection"
     }
   ],
-  "updated_at": "2025-07-05T16:11:24.941892",
+  "updated_at": "2025-07-07T20:33:00.705509",
   "year": 2016
 }

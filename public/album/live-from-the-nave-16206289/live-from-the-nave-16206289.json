@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:59:49.349460",
+  "created_at": "2025-07-07T20:39:14.214795",
   "date_added": "2020-11-14T12:07:02-08:00",
   "discogs_id": "16206289",
   "discogs_url": "https://www.discogs.com/release/16206289-bdrmm-Live-From-The-Nave",
@@ -68,6 +68,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/avopimHtZms0jryka89N5Nqkvy0Zgxa4-HEIUhGigqo/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MjA2/Mjg5LTE2MzQ5OTMz/MjQtMjQyMy5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/live-from-the-nave-16206289/live-from-the-nave-16206289.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -76,23 +83,22 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave",
   "local_images": {
-    "hi-res": "public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-hi-res.jpg",
-    "medium": "public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-medium.jpg",
-    "small": "public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-small.jpg"
+    "hi-res": "../public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-hi-res.jpg",
+    "medium": "../public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-medium.jpg",
+    "small": "../public/album/live-from-the-nave-16206289/live-from-the-nave-16206289-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:59:51.130824",
+    "processed_at": "2025-07-07T20:39:24.371659",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Live From The Nave",
-  "release_name_spotify": "Shame",
+  "release_name_spotify": null,
   "released": "2020-11-10",
   "services": {
     "lastfm": {
@@ -287,168 +293,10 @@
       "url": "https://www.last.fm/music/BDRMM/Live+From+The+Nave",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2019 bdrmm under exclusive licence to Sonic Cathedral",
-          "type": "C"
-        },
-        {
-          "text": "2019 bdrmm under exclusive licence to Sonic Cathedral",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "3616400862970"
-      },
-      "id": "7xZibynGOWCsgU1oemXTyV",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2739371a64faabb385b3eb60598",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e029371a64faabb385b3eb60598",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048519371a64faabb385b3eb60598",
-          "width": 64
-        }
-      ],
-      "label": "Sonic Cathedral",
-      "popularity": 16,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-            },
-            "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-            "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-            "name": "bdrmm",
-            "type": "artist",
-            "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2019 bdrmm under exclusive licence to Sonic Cathedral",
-            "type": "C"
-          },
-          {
-            "text": "2019 bdrmm under exclusive licence to Sonic Cathedral",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "3616400862970"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/7xZibynGOWCsgU1oemXTyV"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/7xZibynGOWCsgU1oemXTyV?market=US",
-        "id": "7xZibynGOWCsgU1oemXTyV",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2739371a64faabb385b3eb60598",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e029371a64faabb385b3eb60598",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048519371a64faabb385b3eb60598",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Sonic Cathedral",
-        "name": "Shame",
-        "popularity": 16,
-        "release_date": "2019-09-18",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/7xZibynGOWCsgU1oemXTyV/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4Cx5LnF4WNJIn9SSqyeq9C"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4Cx5LnF4WNJIn9SSqyeq9C",
-                  "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-                  "name": "bdrmm",
-                  "type": "artist",
-                  "uri": "spotify:artist:4Cx5LnF4WNJIn9SSqyeq9C"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 297567,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7d8QZJYKSsQ1cO9S3cwddQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7d8QZJYKSsQ1cO9S3cwddQ",
-              "id": "7d8QZJYKSsQ1cO9S3cwddQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Shame",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7d8QZJYKSsQ1cO9S3cwddQ"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 1
-        },
-        "type": "album",
-        "uri": "spotify:album:7xZibynGOWCsgU1oemXTyV"
-      },
-      "release_date": "2019-09-18",
-      "release_date_precision": "day",
-      "total_tracks": 1,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "4Cx5LnF4WNJIn9SSqyeq9C",
-              "name": "bdrmm"
-            }
-          ],
-          "duration_ms": 297567,
-          "explicit": false,
-          "id": "7d8QZJYKSsQ1cO9S3cwddQ",
-          "name": "Shame",
-          "preview_url": null,
-          "track_number": 1
-        }
-      ],
-      "url": "https://open.spotify.com/album/7xZibynGOWCsgU1oemXTyV"
     }
   },
-  "spotify_id": "7xZibynGOWCsgU1oemXTyV",
-  "spotify_url": "https://open.spotify.com/album/7xZibynGOWCsgU1oemXTyV",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Shoegaze",
     "Indie Pop",
@@ -487,6 +335,6 @@
       "title": "Shame"
     }
   ],
-  "updated_at": "2025-07-05T15:59:51.018976",
+  "updated_at": "2025-07-07T20:39:23.563433",
   "year": 2020
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T16:19:18.534750",
+  "created_at": "2025-07-07T20:31:04.692825",
   "date_added": "2020-01-03T18:30:41-08:00",
   "discogs_id": "1178217",
   "discogs_url": "https://www.discogs.com/release/1178217-Snuff-3-Flibbiddydibbiddydob",
@@ -66,6 +66,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/RNPnNllb8SOwZo6qh6xgt_8bzHKBFsWT2rf92RgfGfo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNzgy/MTctMTQzNTc1MDE5/MC0yNjU0LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -75,23 +82,22 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Snuff/Flibbiddydibbiddydob",
   "local_images": {
-    "hi-res": "public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-hi-res.jpg",
-    "medium": "public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-medium.jpg",
-    "small": "public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-small.jpg"
+    "hi-res": "../public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-hi-res.jpg",
+    "medium": "../public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-medium.jpg",
+    "small": "../public/album/flibbiddydibbiddydob-1178217/flibbiddydibbiddydob-1178217-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:19:23.763662",
+    "processed_at": "2025-07-07T20:31:09.674595",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Flibbiddydibbiddydob",
-  "release_name_spotify": "Smoke",
+  "release_name_spotify": null,
   "released": "1990",
   "services": {
     "lastfm": {
@@ -123,7 +129,7 @@
       ],
       "listeners": 5557,
       "mbid": "99dfbe4b-a978-477a-a8ad-da8b4a7804c9",
-      "playcount": 54161,
+      "playcount": 54163,
       "raw_data": {
         "album": {
           "artist": "Snuff",
@@ -156,7 +162,7 @@
           "listeners": "5557",
           "mbid": "99dfbe4b-a978-477a-a8ad-da8b4a7804c9",
           "name": "Flibbiddydibbiddydob",
-          "playcount": "54161",
+          "playcount": "54163",
           "tags": {
             "tag": [
               {
@@ -388,553 +394,10 @@
       "url": "https://www.last.fm/music/Snuff/Flibbiddydibbiddydob",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2023 Maggot Stomp & Creator-Destructor Records",
-          "type": "C"
-        },
-        {
-          "text": "2023 Maggot Stomp & Creator-Destructor Records",
-          "type": "P"
-        }
-      ],
-      "explicit": true,
-      "external_ids": {
-        "upc": "197851219528"
-      },
-      "id": "4BoskktnSGCU6IiticpApm",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2737ceaadbc11a92a7ed251d7be",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e027ceaadbc11a92a7ed251d7be",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048517ceaadbc11a92a7ed251d7be",
-          "width": 64
-        }
-      ],
-      "label": "Maggot Stomp & Creator-Destructor Records",
-      "popularity": 43,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-            },
-            "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-            "id": "7o56ORTn1ftm2wC0l3INdg",
-            "name": "Snuffed on Sight",
-            "type": "artist",
-            "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2023 Maggot Stomp & Creator-Destructor Records",
-            "type": "C"
-          },
-          {
-            "text": "2023 Maggot Stomp & Creator-Destructor Records",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "197851219528"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4BoskktnSGCU6IiticpApm"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/4BoskktnSGCU6IiticpApm?market=US",
-        "id": "4BoskktnSGCU6IiticpApm",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2737ceaadbc11a92a7ed251d7be",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e027ceaadbc11a92a7ed251d7be",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048517ceaadbc11a92a7ed251d7be",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Maggot Stomp & Creator-Destructor Records",
-        "name": "Smoke",
-        "popularity": 43,
-        "release_date": "2023-07-07",
-        "release_date_precision": "day",
-        "total_tracks": 8,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/4BoskktnSGCU6IiticpApm/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 57376,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6zLIorDsUKdk15gh3T806K"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6zLIorDsUKdk15gh3T806K",
-              "id": "6zLIorDsUKdk15gh3T806K",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Intro",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:6zLIorDsUKdk15gh3T806K"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/40DbKvYvADTiks7hZIUPHG"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/40DbKvYvADTiks7hZIUPHG",
-                  "id": "40DbKvYvADTiks7hZIUPHG",
-                  "name": "PeelingFlesh",
-                  "type": "artist",
-                  "uri": "spotify:artist:40DbKvYvADTiks7hZIUPHG"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 78548,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5EZm059y1yZoMlQHOtnN1Q"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5EZm059y1yZoMlQHOtnN1Q",
-              "id": "5EZm059y1yZoMlQHOtnN1Q",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Time 2 Dip",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:5EZm059y1yZoMlQHOtnN1Q"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 161178,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/35KBQzpKqf9jjv7PEdiMmd"
-              },
-              "href": "https://api.spotify.com/v1/tracks/35KBQzpKqf9jjv7PEdiMmd",
-              "id": "35KBQzpKqf9jjv7PEdiMmd",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Slippin",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:35KBQzpKqf9jjv7PEdiMmd"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4KNivmUcgaar8yZvjYRoqv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4KNivmUcgaar8yZvjYRoqv",
-                  "id": "4KNivmUcgaar8yZvjYRoqv",
-                  "name": "Disfiguring The Goddess",
-                  "type": "artist",
-                  "uri": "spotify:artist:4KNivmUcgaar8yZvjYRoqv"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 103772,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0WDRSmTPOtXDlhzUeE2gxP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0WDRSmTPOtXDlhzUeE2gxP",
-              "id": "0WDRSmTPOtXDlhzUeE2gxP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "DTD (Slumped)",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:0WDRSmTPOtXDlhzUeE2gxP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0lcFNl4eBE4NcQATqbKEtc"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0lcFNl4eBE4NcQATqbKEtc",
-                  "id": "0lcFNl4eBE4NcQATqbKEtc",
-                  "name": "Deergod",
-                  "type": "artist",
-                  "uri": "spotify:artist:0lcFNl4eBE4NcQATqbKEtc"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 78031,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6fRQfYl0tox6X8L89z4XiB"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6fRQfYl0tox6X8L89z4XiB",
-              "id": "6fRQfYl0tox6X8L89z4XiB",
-              "is_local": false,
-              "is_playable": true,
-              "name": "(smoke break)",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:6fRQfYl0tox6X8L89z4XiB"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7FauDKMDbUkCa6SuNfI0GP"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7FauDKMDbUkCa6SuNfI0GP",
-                  "id": "7FauDKMDbUkCa6SuNfI0GP",
-                  "name": "Vomit Forth",
-                  "type": "artist",
-                  "uri": "spotify:artist:7FauDKMDbUkCa6SuNfI0GP"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 112369,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0aw5SuL4CTgFaWrai5aqBc"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0aw5SuL4CTgFaWrai5aqBc",
-              "id": "0aw5SuL4CTgFaWrai5aqBc",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Repeat Offender",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:0aw5SuL4CTgFaWrai5aqBc"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 140862,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1N5D1PLZiQBDFcv6LBe3px"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1N5D1PLZiQBDFcv6LBe3px",
-              "id": "1N5D1PLZiQBDFcv6LBe3px",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dummy",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:1N5D1PLZiQBDFcv6LBe3px"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7o56ORTn1ftm2wC0l3INdg"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7o56ORTn1ftm2wC0l3INdg",
-                  "id": "7o56ORTn1ftm2wC0l3INdg",
-                  "name": "Snuffed on Sight",
-                  "type": "artist",
-                  "uri": "spotify:artist:7o56ORTn1ftm2wC0l3INdg"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3YXFE0G1DXtgM6u1whyPQ5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3YXFE0G1DXtgM6u1whyPQ5",
-                  "id": "3YXFE0G1DXtgM6u1whyPQ5",
-                  "name": "Mescaline Maniacs",
-                  "type": "artist",
-                  "uri": "spotify:artist:3YXFE0G1DXtgM6u1whyPQ5"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7DHEVu8mFuQP14XdDIFhss"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7DHEVu8mFuQP14XdDIFhss",
-                  "id": "7DHEVu8mFuQP14XdDIFhss",
-                  "name": "Ingrown",
-                  "type": "artist",
-                  "uri": "spotify:artist:7DHEVu8mFuQP14XdDIFhss"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 173558,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/35BoVBilYqNhkTA3K9IguI"
-              },
-              "href": "https://api.spotify.com/v1/tracks/35BoVBilYqNhkTA3K9IguI",
-              "id": "35BoVBilYqNhkTA3K9IguI",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Smoke",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:35BoVBilYqNhkTA3K9IguI"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 8
-        },
-        "type": "album",
-        "uri": "spotify:album:4BoskktnSGCU6IiticpApm"
-      },
-      "release_date": "2023-07-07",
-      "release_date_precision": "day",
-      "total_tracks": 8,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            }
-          ],
-          "duration_ms": 57376,
-          "explicit": true,
-          "id": "6zLIorDsUKdk15gh3T806K",
-          "name": "Intro",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            },
-            {
-              "id": "40DbKvYvADTiks7hZIUPHG",
-              "name": "PeelingFlesh"
-            }
-          ],
-          "duration_ms": 78548,
-          "explicit": true,
-          "id": "5EZm059y1yZoMlQHOtnN1Q",
-          "name": "Time 2 Dip",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            }
-          ],
-          "duration_ms": 161178,
-          "explicit": true,
-          "id": "35KBQzpKqf9jjv7PEdiMmd",
-          "name": "Slippin",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            },
-            {
-              "id": "4KNivmUcgaar8yZvjYRoqv",
-              "name": "Disfiguring The Goddess"
-            }
-          ],
-          "duration_ms": 103772,
-          "explicit": true,
-          "id": "0WDRSmTPOtXDlhzUeE2gxP",
-          "name": "DTD (Slumped)",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            },
-            {
-              "id": "0lcFNl4eBE4NcQATqbKEtc",
-              "name": "Deergod"
-            }
-          ],
-          "duration_ms": 78031,
-          "explicit": false,
-          "id": "6fRQfYl0tox6X8L89z4XiB",
-          "name": "(smoke break)",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            },
-            {
-              "id": "7FauDKMDbUkCa6SuNfI0GP",
-              "name": "Vomit Forth"
-            }
-          ],
-          "duration_ms": 112369,
-          "explicit": true,
-          "id": "0aw5SuL4CTgFaWrai5aqBc",
-          "name": "Repeat Offender",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            }
-          ],
-          "duration_ms": 140862,
-          "explicit": true,
-          "id": "1N5D1PLZiQBDFcv6LBe3px",
-          "name": "Dummy",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "7o56ORTn1ftm2wC0l3INdg",
-              "name": "Snuffed on Sight"
-            },
-            {
-              "id": "3YXFE0G1DXtgM6u1whyPQ5",
-              "name": "Mescaline Maniacs"
-            },
-            {
-              "id": "7DHEVu8mFuQP14XdDIFhss",
-              "name": "Ingrown"
-            }
-          ],
-          "duration_ms": 173558,
-          "explicit": true,
-          "id": "35BoVBilYqNhkTA3K9IguI",
-          "name": "Smoke",
-          "preview_url": null,
-          "track_number": 8
-        }
-      ],
-      "url": "https://open.spotify.com/album/4BoskktnSGCU6IiticpApm"
     }
   },
-  "spotify_id": "4BoskktnSGCU6IiticpApm",
-  "spotify_url": "https://open.spotify.com/album/4BoskktnSGCU6IiticpApm",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Punk"
   ],
@@ -1007,6 +470,6 @@
       "title": "In Sickness & In Health"
     }
   ],
-  "updated_at": "2025-07-05T16:19:23.618778",
+  "updated_at": "2025-07-07T20:31:09.239719",
   "year": 1990
 }

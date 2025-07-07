@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:19:54.017832",
+  "created_at": "2025-07-07T20:30:44.357762",
   "date_added": "2019-12-24T13:17:21-08:00",
   "discogs_id": "14199596",
   "discogs_url": "https://www.discogs.com/release/14199596-Thunder-3-The-Greatest-Hits",
@@ -129,6 +129,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/GuDdQuBfWEQnEaIcJUGGxNpVHOqcUseO23AVwIynqeg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MTk5/NTk2LTE1Njk3NDQw/MTgtODM5Ny5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-greatest-hits-14199596/the-greatest-hits-14199596.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -137,23 +144,22 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Thunder/The+Greatest+Hits",
   "local_images": {
-    "hi-res": "public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-hi-res.jpg",
-    "medium": "public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-medium.jpg",
-    "small": "public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-small.jpg"
+    "hi-res": "../public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-hi-res.jpg",
+    "medium": "../public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-medium.jpg",
+    "small": "../public/album/the-greatest-hits-14199596/the-greatest-hits-14199596-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:19:55.258669",
+    "processed_at": "2025-07-07T20:31:01.126104",
     "services_used": [
       "discogs",
-      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "The Greatest Hits",
-  "release_name_spotify": "Thunder Jackson",
+  "release_name_spotify": null,
   "released": "2019-09-27",
   "services": {
     "lastfm": {
@@ -185,7 +191,7 @@
       ],
       "listeners": 181,
       "mbid": "03fcf257-b64d-42e4-b257-1571a72eb0d6",
-      "playcount": 4661,
+      "playcount": 4662,
       "raw_data": {
         "album": {
           "artist": "Thunder",
@@ -218,7 +224,7 @@
           "listeners": "181",
           "mbid": "03fcf257-b64d-42e4-b257-1571a72eb0d6",
           "name": "The Greatest Hits",
-          "playcount": "4661",
+          "playcount": "4662",
           "tags": {
             "tag": [
               {
@@ -739,598 +745,10 @@
       "url": "https://www.last.fm/music/Thunder/The+Greatest+Hits",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2020 Thunder Jackson under exclusive license to VERO Music",
-          "type": "C"
-        },
-        {
-          "text": "2020 Thunder Jackson under exclusive license to VERO Music",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "190296849442"
-      },
-      "id": "4uTtdXFQolr4CMgSTEa8Tb",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27359e532675eefa84e47b00025",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0259e532675eefa84e47b00025",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485159e532675eefa84e47b00025",
-          "width": 64
-        }
-      ],
-      "label": "VERO Music",
-      "popularity": 57,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-            },
-            "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-            "id": "3o0xJMKswwtXz2PhrRCHhJ",
-            "name": "Thunder Jackson",
-            "type": "artist",
-            "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2020 Thunder Jackson under exclusive license to VERO Music",
-            "type": "C"
-          },
-          {
-            "text": "2020 Thunder Jackson under exclusive license to VERO Music",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "190296849442"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4uTtdXFQolr4CMgSTEa8Tb"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/4uTtdXFQolr4CMgSTEa8Tb?market=US",
-        "id": "4uTtdXFQolr4CMgSTEa8Tb",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27359e532675eefa84e47b00025",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0259e532675eefa84e47b00025",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485159e532675eefa84e47b00025",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "VERO Music",
-        "name": "Thunder Jackson",
-        "popularity": 57,
-        "release_date": "2020-10-01",
-        "release_date_precision": "day",
-        "total_tracks": 11,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/4uTtdXFQolr4CMgSTEa8Tb/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 235947,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7hVhiOV3ucOLVJ8ZGU05pm"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7hVhiOV3ucOLVJ8ZGU05pm",
-              "id": "7hVhiOV3ucOLVJ8ZGU05pm",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Institution",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7hVhiOV3ucOLVJ8ZGU05pm"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 208950,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3nNay8aL7iGXw5KguUzSI6"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3nNay8aL7iGXw5KguUzSI6",
-              "id": "3nNay8aL7iGXw5KguUzSI6",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Find Yourself",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:3nNay8aL7iGXw5KguUzSI6"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 189613,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3kllGiimMMnxHunCyhvLSf"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3kllGiimMMnxHunCyhvLSf",
-              "id": "3kllGiimMMnxHunCyhvLSf",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Guilty Party",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:3kllGiimMMnxHunCyhvLSf"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 238937,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Z0stBhqyUKCwHD29lrTGz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1Z0stBhqyUKCwHD29lrTGz",
-              "id": "1Z0stBhqyUKCwHD29lrTGz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Let It Roll In",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:1Z0stBhqyUKCwHD29lrTGz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 270362,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3GwtpWM2xEzDpHZ2n3Lnzw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3GwtpWM2xEzDpHZ2n3Lnzw",
-              "id": "3GwtpWM2xEzDpHZ2n3Lnzw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Caroline",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:3GwtpWM2xEzDpHZ2n3Lnzw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 219416,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6dV2OpEpPUKWUAjvSZRXRw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6dV2OpEpPUKWUAjvSZRXRw",
-              "id": "6dV2OpEpPUKWUAjvSZRXRw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Colours",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:6dV2OpEpPUKWUAjvSZRXRw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 182598,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5E7qjB3mtS9r8X52rerv53"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5E7qjB3mtS9r8X52rerv53",
-              "id": "5E7qjB3mtS9r8X52rerv53",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Protection",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:5E7qjB3mtS9r8X52rerv53"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 228479,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4xuxl0seUoYvvA58kqdcyw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4xuxl0seUoYvvA58kqdcyw",
-              "id": "4xuxl0seUoYvvA58kqdcyw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Led Astray",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:4xuxl0seUoYvvA58kqdcyw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 206903,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Rr6ZvP3UoimSMFMWwgil9"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1Rr6ZvP3UoimSMFMWwgil9",
-              "id": "1Rr6ZvP3UoimSMFMWwgil9",
-              "is_local": false,
-              "is_playable": true,
-              "name": "S.O.S.",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:1Rr6ZvP3UoimSMFMWwgil9"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 209254,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7dZGKKXuq4xqJYvO0ubGUl"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7dZGKKXuq4xqJYvO0ubGUl",
-              "id": "7dZGKKXuq4xqJYvO0ubGUl",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Love Sick Doctor",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:7dZGKKXuq4xqJYvO0ubGUl"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3o0xJMKswwtXz2PhrRCHhJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3o0xJMKswwtXz2PhrRCHhJ",
-                  "id": "3o0xJMKswwtXz2PhrRCHhJ",
-                  "name": "Thunder Jackson",
-                  "type": "artist",
-                  "uri": "spotify:artist:3o0xJMKswwtXz2PhrRCHhJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 111960,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5p9JQquUsLgU7G5PgMvSg9"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5p9JQquUsLgU7G5PgMvSg9",
-              "id": "5p9JQquUsLgU7G5PgMvSg9",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Lucky",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:5p9JQquUsLgU7G5PgMvSg9"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 11
-        },
-        "type": "album",
-        "uri": "spotify:album:4uTtdXFQolr4CMgSTEa8Tb"
-      },
-      "release_date": "2020-10-01",
-      "release_date_precision": "day",
-      "total_tracks": 11,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 235947,
-          "explicit": false,
-          "id": "7hVhiOV3ucOLVJ8ZGU05pm",
-          "name": "Institution",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 208950,
-          "explicit": false,
-          "id": "3nNay8aL7iGXw5KguUzSI6",
-          "name": "Find Yourself",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 189613,
-          "explicit": false,
-          "id": "3kllGiimMMnxHunCyhvLSf",
-          "name": "Guilty Party",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 238937,
-          "explicit": false,
-          "id": "1Z0stBhqyUKCwHD29lrTGz",
-          "name": "Let It Roll In",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 270362,
-          "explicit": false,
-          "id": "3GwtpWM2xEzDpHZ2n3Lnzw",
-          "name": "Caroline",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 219416,
-          "explicit": false,
-          "id": "6dV2OpEpPUKWUAjvSZRXRw",
-          "name": "Colours",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 182598,
-          "explicit": false,
-          "id": "5E7qjB3mtS9r8X52rerv53",
-          "name": "Protection",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 228479,
-          "explicit": false,
-          "id": "4xuxl0seUoYvvA58kqdcyw",
-          "name": "Led Astray",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 206903,
-          "explicit": false,
-          "id": "1Rr6ZvP3UoimSMFMWwgil9",
-          "name": "S.O.S.",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 209254,
-          "explicit": false,
-          "id": "7dZGKKXuq4xqJYvO0ubGUl",
-          "name": "Love Sick Doctor",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "3o0xJMKswwtXz2PhrRCHhJ",
-              "name": "Thunder Jackson"
-            }
-          ],
-          "duration_ms": 111960,
-          "explicit": false,
-          "id": "5p9JQquUsLgU7G5PgMvSg9",
-          "name": "Lucky",
-          "preview_url": null,
-          "track_number": 11
-        }
-      ],
-      "url": "https://open.spotify.com/album/4uTtdXFQolr4CMgSTEa8Tb"
     }
   },
-  "spotify_id": "4uTtdXFQolr4CMgSTEa8Tb",
-  "spotify_url": "https://open.spotify.com/album/4uTtdXFQolr4CMgSTEa8Tb",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Hard Rock"
   ],
@@ -1505,6 +923,6 @@
       "title": "Your Time Is Gonna Come"
     }
   ],
-  "updated_at": "2025-07-05T16:19:55.143386",
+  "updated_at": "2025-07-07T20:31:00.858785",
   "year": 2019
 }

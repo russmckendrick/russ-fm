@@ -17,7 +17,7 @@
   ],
   "artists_wikipedia": {},
   "country": "UK",
-  "created_at": "2025-07-05T16:05:08.980108",
+  "created_at": "2025-07-07T20:36:34.254695",
   "date_added": "2020-08-02T13:49:47-07:00",
   "discogs_id": "4025684",
   "discogs_url": "https://www.discogs.com/release/4025684-The-Mississippi-Moons-Deep-South-Blues",
@@ -43,6 +43,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/fNhc4kHUStS2dr2DeHG--JUZRRf6ybYF5pNRXpqKJXQ/rs:fit/g:sm/q:90/h:566/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwMjU2/ODQtMTcxMjY4MzI2/Ni0yNTI1LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/deep-south-blues-4025684/deep-south-blues-4025684.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -51,11 +58,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/deep-south-blues-4025684/deep-south-blues-4025684-hi-res.jpg",
+    "medium": "../public/album/deep-south-blues-4025684/deep-south-blues-4025684-medium.jpg",
+    "small": "../public/album/deep-south-blues-4025684/deep-south-blues-4025684-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:05:11.551446",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:36:39.868646",
     "services_used": [
       "discogs"
     ]
@@ -131,6 +142,6 @@
       "title": "Farewell Blues"
     }
   ],
-  "updated_at": "2025-07-05T16:05:11.550525",
+  "updated_at": "2025-07-07T20:36:39.637707",
   "year": 1964
 }

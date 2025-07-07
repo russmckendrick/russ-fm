@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "429822858",
-  "apple_music_url": "https://music.apple.com/gb/album/love-will-tear-us-apart-single/429822858",
+  "apple_music_id": "1511732884",
+  "apple_music_url": "https://music.apple.com/gb/album/love-will-tear-us-apart-2020-digital-remaster-single/1511732884",
   "artists": [
     {
       "apple_music_id": "722383",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T16:11:11.623417",
+  "created_at": "2025-07-07T20:33:43.046403",
   "date_added": "2020-07-17T12:24:17-07:00",
   "discogs_id": "15622231",
   "discogs_url": "https://www.discogs.com/release/15622231-Joy-Division-Love-Will-Tear-Us-Apart",
@@ -78,7 +78,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Features/83/71/b9/dj.wpsulcoa.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d8/1b/ab/d81bab25-6c62-0963-c703-629f7cd7c776/190295262402.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231.jpg",
       "width": 2000
     }
   ],
@@ -88,14 +95,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Joy+Division/Love+Will+Tear+Us+Apart",
   "local_images": {
-    "hi-res": "public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-hi-res.jpg",
-    "medium": "public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-medium.jpg",
-    "small": "public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-small.jpg"
+    "hi-res": "../public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-hi-res.jpg",
+    "medium": "../public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-medium.jpg",
+    "small": "../public/album/love-will-tear-us-apart-15622231/love-will-tear-us-apart-15622231-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:11:13.945120",
+    "processed_at": "2025-07-07T20:33:49.118804",
     "services_used": [
       "discogs",
       "apple_music",
@@ -103,54 +110,55 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Love Will Tear Us Apart - Single",
+  "release_name_apple_music": "Love Will Tear Us Apart (2020 Digital Remaster) - Single",
   "release_name_discogs": "Love Will Tear Us Apart",
   "release_name_spotify": "Love Will Tear Us Apart",
   "released": "2020-07-17",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features/83/71/b9/dj.wpsulcoa.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d8/1b/ab/d81bab25-6c62-0963-c703-629f7cd7c776/190295262402.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 2011 Cleopatra Records",
+      "copyright": "℗ 1980, 2020 Warner Music UK Ltd",
       "editorial_notes": null,
-      "id": "429822858",
+      "id": "1511732884",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Joy Division",
         "artwork": {
-          "bgColor": "323232",
-          "height": 1500,
-          "textColor1": "fefefe",
-          "textColor2": "e5e5e5",
-          "textColor3": "d5d5d5",
-          "textColor4": "c1c1c1",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features/83/71/b9/dj.wpsulcoa.jpg/{w}x{h}bb.jpg",
-          "width": 1500
+          "bgColor": "0d0802",
+          "height": 3691,
+          "textColor1": "dadad8",
+          "textColor2": "c5c4be",
+          "textColor3": "b1b0ad",
+          "textColor4": "a09e98",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d8/1b/ab/d81bab25-6c62-0963-c703-629f7cd7c776/190295262402.jpg/{w}x{h}bb.jpg",
+          "width": 3691
         },
-        "copyright": "℗ 2011 Cleopatra Records",
+        "copyright": "℗ 1980, 2020 Warner Music UK Ltd",
         "genreNames": [
-          "Alternative",
-          "Music",
           "Rock",
+          "Music",
+          "Alternative",
+          "Punk",
           "Adult Alternative"
         ],
         "isCompilation": false,
         "isComplete": true,
         "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "Love Will Tear Us Apart - Single",
+        "name": "Love Will Tear Us Apart (2020 Digital Remaster) - Single",
         "playParams": {
-          "id": "429822858",
+          "id": "1511732884",
           "kind": "album"
         },
-        "recordLabel": "Cleopatra Records",
-        "releaseDate": "1995",
+        "recordLabel": "WM UK",
+        "releaseDate": "1980-06-01",
         "trackCount": 3,
-        "upc": "885686708750",
-        "url": "https://music.apple.com/gb/album/love-will-tear-us-apart-single/429822858"
+        "upc": "190295262402",
+        "url": "https://music.apple.com/gb/album/love-will-tear-us-apart-2020-digital-remaster-single/1511732884"
       },
-      "url": "https://music.apple.com/gb/album/love-will-tear-us-apart-single/429822858"
+      "url": "https://music.apple.com/gb/album/love-will-tear-us-apart-2020-digital-remaster-single/1511732884"
     },
     "lastfm": {
       "images": [
@@ -179,9 +187,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/f2aca38cd25e4f3e3327d643f9b9c0ad.png"
         }
       ],
-      "listeners": 753959,
+      "listeners": 754572,
       "mbid": "0464389e-7c6a-43a7-88b0-e95aa88b899e",
-      "playcount": 6989751,
+      "playcount": 6997945,
       "raw_data": {
         "album": {
           "artist": "Joy Division",
@@ -211,10 +219,10 @@
               "size": ""
             }
           ],
-          "listeners": "753959",
+          "listeners": "754572",
           "mbid": "0464389e-7c6a-43a7-88b0-e95aa88b899e",
           "name": "Love Will Tear Us Apart",
-          "playcount": "6989751",
+          "playcount": "6997945",
           "tags": {
             "tag": [
               {
@@ -583,6 +591,6 @@
       "title": "Love Will Tear Us Apart"
     }
   ],
-  "updated_at": "2025-07-05T16:11:12.690126",
+  "updated_at": "2025-07-07T20:33:48.270803",
   "year": 2020
 }

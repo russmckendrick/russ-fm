@@ -17,7 +17,7 @@
   ],
   "artists_wikipedia": {},
   "country": "UK & Europe",
-  "created_at": "2025-07-05T16:32:01.694956",
+  "created_at": "2025-07-07T20:27:55.164976",
   "date_added": "2019-04-15T11:47:49-07:00",
   "discogs_id": "13493663",
   "discogs_url": "https://www.discogs.com/release/13493663-Steve-Lamacq-Lost-Alternatives",
@@ -47,6 +47,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/CKXkRQ2AUisBMcpZ06QKaTfjozQEXEE5GYrYvwTM8oQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDkz/NjYzLTE1NzExNTYw/OTAtNTcyOC5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/lost-alternatives-13493663/lost-alternatives-13493663.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -54,11 +61,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Steve+Lamacq/Lost+Alternatives",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/lost-alternatives-13493663/lost-alternatives-13493663-hi-res.jpg",
+    "medium": "../public/album/lost-alternatives-13493663/lost-alternatives-13493663-medium.jpg",
+    "small": "../public/album/lost-alternatives-13493663/lost-alternatives-13493663-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:32:03.561861",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:27:57.091133",
     "services_used": [
       "discogs"
     ]
@@ -1089,6 +1100,6 @@
       "title": "Strachan"
     }
   ],
-  "updated_at": "2025-07-05T16:32:03.561629",
+  "updated_at": "2025-07-07T20:27:56.447196",
   "year": 2019
 }

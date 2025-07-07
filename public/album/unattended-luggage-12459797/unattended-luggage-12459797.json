@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T15:43:57.459859",
+  "created_at": "2025-07-07T20:43:54.385942",
   "date_added": "2021-09-25T15:07:23-07:00",
   "discogs_id": "12459797",
   "discogs_url": "https://www.discogs.com/release/12459797-Nick-Mason-Unattended-Luggage",
@@ -195,6 +195,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/WmSnVXDrt9PtN2-ocshFmYgn542xtRwInzNe5Zop7-Y/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDU5/Nzk3LTE3NTAzMjUx/MTEtMTk4OS5qcGVn.jpeg",
       "width": 599
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/unattended-luggage-12459797/unattended-luggage-12459797.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -203,11 +210,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Nick+Mason/Unattended+Luggage",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/unattended-luggage-12459797/unattended-luggage-12459797-hi-res.jpg",
+    "medium": "../public/album/unattended-luggage-12459797/unattended-luggage-12459797-medium.jpg",
+    "small": "../public/album/unattended-luggage-12459797/unattended-luggage-12459797-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T15:43:59.094632",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:43:59.697303",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -1839,6 +1850,6 @@
       "title": "White Of The Eye"
     }
   ],
-  "updated_at": "2025-07-05T15:43:59.093967",
+  "updated_at": "2025-07-07T20:43:58.980855",
   "year": 2018
 }

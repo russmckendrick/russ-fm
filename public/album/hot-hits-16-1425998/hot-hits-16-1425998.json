@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:06:23.112758",
+  "created_at": "2025-07-07T20:36:23.661344",
   "date_added": "2020-08-02T13:41:27-07:00",
   "discogs_id": "1425998",
   "discogs_url": "https://www.discogs.com/release/1425998-Unknown-Artist-Hot-Hits-16",
@@ -63,6 +63,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/RnA5S7mIzXKClJNtzdxBwK9IDFow_9Y3viDGStprC-g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0MjU5/OTgtMTQ0NzYwMzA5/Ny00MTkxLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/hot-hits-16-1425998/hot-hits-16-1425998.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -70,11 +77,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/hot-hits-16-1425998/hot-hits-16-1425998-hi-res.jpg",
+    "medium": "../public/album/hot-hits-16-1425998/hot-hits-16-1425998-medium.jpg",
+    "small": "../public/album/hot-hits-16-1425998/hot-hits-16-1425998-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:06:24.793356",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T20:36:31.320601",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -168,6 +179,6 @@
       "title": "Wishing Well"
     }
   ],
-  "updated_at": "2025-07-05T16:06:24.792499",
+  "updated_at": "2025-07-07T20:36:30.506065",
   "year": 1973
 }
