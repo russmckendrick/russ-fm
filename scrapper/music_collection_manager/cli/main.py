@@ -97,11 +97,16 @@ def cli(ctx, config, log_level, log_file, session_logs):
     "--custom-cover", 
     help="Override album artwork with custom image URL"
 )
+@click.option(
+    "--v1", 
+    is_flag=True, 
+    help="Fetch album artwork from v1.russ.fm site"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1)
 
 
 @cli.command()
@@ -289,8 +294,13 @@ def backup(ctx, backup_path):
     "--custom-image", 
     help="Override artist image with custom image URL"
 )
+@click.option(
+    "--v1", 
+    is_flag=True, 
+    help="Fetch artist image from v1.russ.fm site"
+)
 @click.pass_context
-def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image):
+def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1):
     """Get comprehensive artist information."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.serializers import ArtistSerializer
@@ -317,6 +327,27 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
     if custom_image:
         orchestrator.set_custom_image(custom_image)
         console.print(f"[yellow]Using custom image: '{custom_image}'[/yellow]")
+    
+    # Handle v1 flag - fetch image from v1.russ.fm
+    if v1:
+        from ..utils.v1_site_helper import V1SiteHelper
+        
+        console.print(f"[blue]Searching v1.russ.fm for artist images...[/blue]")
+        try:
+            artist_images = V1SiteHelper.find_artist_images(artist_name)
+            
+            if artist_images:
+                # Get the first matching artist image
+                artist_key = list(artist_images.keys())[0]
+                v1_image_url = artist_images[artist_key]
+                orchestrator.set_custom_image(v1_image_url)
+                console.print(f"[green]Found artist in v1 index: {artist_key}")
+                console.print(f"[yellow]Using v1.russ.fm image: {v1_image_url}[/yellow]")
+            else:
+                console.print(f"[red]Artist '{artist_name}' not found in v1.russ.fm index[/red]")
+                
+        except Exception as e:
+            console.print(f"[red]Error accessing v1.russ.fm data: {str(e)}[/red]")
     
     with console.status(f"[bold green]Fetching artist data for: {artist_name}"):
         # Get artist data
