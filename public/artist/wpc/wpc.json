@@ -6,31 +6,13 @@
   "created_at": "2025-07-05T16:17:22.206097",
   "discogs_id": "3925212",
   "discogs_url": "https://www.discogs.com/artist/3925212",
-  "followers": 1,
+  "followers": null,
   "formed_date": null,
   "genres": [
     "ambient"
   ],
-  "id": null,
+  "id": "wpc-1751728643",
   "images": [
-    {
-      "height": 640,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d0000b273e63484cc28191031e76f3e71",
-      "width": 640
-    },
-    {
-      "height": 300,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d00001e02e63484cc28191031e76f3e71",
-      "width": 300
-    },
-    {
-      "height": 64,
-      "type": "spotify_artist",
-      "url": "https://i.scdn.co/image/ab67616d00004851e63484cc28191031e76f3e71",
-      "width": 64
-    },
     {
       "height": null,
       "type": "lastfm_artist_small",
@@ -66,22 +48,42 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": 2000,
+      "type": "custom_artist_image",
+      "url": "https://v1.russ.fm/artist/wpc/wpc.jpg",
+      "width": 2000
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/WPC",
   "local_images": {
-    "hi-res": "public/artist/wpc/wpc-hi-res.jpg",
-    "medium": "public/artist/wpc/wpc-medium.jpg",
-    "small": "public/artist/wpc/wpc-small.jpg"
+    "hi-res": "../public/artist/wpc/wpc-hi-res.jpg",
+    "medium": "../public/artist/wpc/wpc-medium.jpg",
+    "small": "../public/artist/wpc/wpc-small.jpg"
   },
   "name": "WPC",
   "popularity": null,
   "services": {
+    "apple_music": {},
     "discogs": {
-      "id": 3925212,
-      "original_name": "WPC",
-      "role": ""
+      "cover_image": "",
+      "id": "3925212",
+      "images": [],
+      "members": [],
+      "name": "WPC",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "3925212",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/3925212"
+      },
+      "resource_url": "https://api.discogs.com/artists/3925212",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/3925212",
+      "urls": []
     },
     "lastfm": {
       "bio_content": "WPC are the initials of William Patrick Corgan, III (born March 17, 1967 in Elk Grove Village, Illinois, U.S.A.), most commonly known as Billy Corgan, is an American vocalist, guitarist, and songwriter best known for his work in the alternative rock band The Smashing Pumpkins (and, briefly, as the frontman for alt-rock supergroup Zwan).\n\nCorgan released his first solo album TheFutureEmbrace on June 21st, 2005. It warranted mostly lukewarm reviews from the press and only sold 69,000 copies. It was followed by a tour of Europe, USA, Australia, and Japan.  <a href=\"https://www.last.fm/music/WPC\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -143,34 +145,10 @@
       ],
       "url": "https://www.last.fm/music/WPC"
     },
-    "spotify": {
-      "followers": 1,
-      "genres": [],
-      "id": "5ccoHi9Es88ooAPE6tojVh",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273e63484cc28191031e76f3e71",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02e63484cc28191031e76f3e71",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851e63484cc28191031e76f3e71",
-          "width": 64
-        }
-      ],
-      "name": "WPC",
-      "popularity": 0,
-      "url": "https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh"
-    }
+    "spotify": {}
   },
-  "spotify_id": "5ccoHi9Es88ooAPE6tojVh",
-  "spotify_url": "https://open.spotify.com/artist/5ccoHi9Es88ooAPE6tojVh",
-  "updated_at": "2025-07-05T16:17:23.956326",
+  "spotify_id": null,
+  "spotify_url": null,
+  "updated_at": "2025-07-07T19:50:10.119515",
   "wikipedia_url": null
 }
