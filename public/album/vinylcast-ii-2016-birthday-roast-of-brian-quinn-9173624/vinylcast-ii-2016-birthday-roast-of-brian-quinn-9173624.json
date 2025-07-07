@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T17:38:31.340281",
+  "created_at": "2025-07-07T19:14:09.628325",
   "date_added": "2016-10-19T17:04:07-07:00",
   "discogs_id": "9173624",
   "discogs_url": "https://www.discogs.com/release/9173624-Tell-Em-Steve-Dave-Vinylcast-II-2016-Birthday-Roast-of-Brian-Quinn",
@@ -89,6 +89,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/5tCRQSVanTP2j8PzI1zHKlh4nDy0atBcJhvaLh3fr-8/rs:fit/g:sm/q:90/h:395/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkxNzM2/MjQtMTU4MjUzNDUz/OS0zMTE3LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -96,11 +103,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624-hi-res.jpg",
+    "medium": "../public/album/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624-medium.jpg",
+    "small": "../public/album/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624/vinylcast-ii-2016-birthday-roast-of-brian-quinn-9173624-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:38:34.570795",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:14:14.108190",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -231,6 +242,6 @@
       "title": "Faccia Bella"
     }
   ],
-  "updated_at": "2025-07-05T17:38:34.569946",
+  "updated_at": "2025-07-07T19:14:13.193330",
   "year": 2016
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "404842205",
-  "apple_music_url": "https://music.apple.com/gb/album/the-pleasure-principle-live/404842205",
+  "apple_music_id": "331564777",
+  "apple_music_url": "https://music.apple.com/gb/album/the-pleasure-principle-30th-anniversary-edition/331564777",
   "artists": [
     {
       "apple_music_id": "2780160",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:32:44.410718",
+  "created_at": "2025-07-07T19:15:27.364776",
   "date_added": "2016-12-08T18:38:02-08:00",
   "discogs_id": "7654481",
   "discogs_url": "https://www.discogs.com/release/7654481-Gary-Numan-The-Pleasure-Principle",
@@ -92,7 +92,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/18/c3/4e/mzi.pajlavet.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2d/9e/91/2d9e9131-13d1-3ddc-c4e8-e764530c362e/607618206352.png/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-pleasure-principle-7654481/the-pleasure-principle-7654481.jpg",
       "width": 2000
     }
   ],
@@ -102,14 +109,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Gary+Numan/The+Pleasure+Principle",
   "local_images": {
-    "hi-res": "public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-hi-res.jpg",
-    "medium": "public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-medium.jpg",
-    "small": "public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-small.jpg"
+    "hi-res": "../public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-hi-res.jpg",
+    "medium": "../public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-medium.jpg",
+    "small": "../public/album/the-pleasure-principle-7654481/the-pleasure-principle-7654481-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:32:46.210217",
+    "processed_at": "2025-07-07T19:15:35.723206",
     "services_used": [
       "discogs",
       "apple_music",
@@ -117,53 +124,55 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "The Pleasure Principle Live",
+  "release_name_apple_music": "The Pleasure Principle (30th Anniversary Edition)",
   "release_name_discogs": "The Pleasure Principle",
   "release_name_spotify": "The Pleasure Principle",
   "released": "2015-10-15",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/18/c3/4e/mzi.pajlavet.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2d/9e/91/2d9e9131-13d1-3ddc-c4e8-e764530c362e/607618206352.png/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 2010 Mortal Records",
+      "copyright": "℗ 2009 Beggars Banquet Records Ltd",
       "editorial_notes": null,
-      "id": "404842205",
+      "id": "331564777",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Gary Numan",
         "artwork": {
-          "bgColor": "171614",
-          "height": 620,
-          "textColor1": "fffdf6",
-          "textColor2": "e4d7d2",
-          "textColor3": "d0cec8",
-          "textColor4": "bbb0ac",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/18/c3/4e/mzi.pajlavet.jpg/{w}x{h}bb.jpg",
-          "width": 620
+          "bgColor": "121519",
+          "height": 4001,
+          "textColor1": "cbc8cd",
+          "textColor2": "b7c5c1",
+          "textColor3": "a6a5a9",
+          "textColor4": "96a29f",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/2d/9e/91/2d9e9131-13d1-3ddc-c4e8-e764530c362e/607618206352.png/{w}x{h}bb.jpg",
+          "width": 4000
         },
-        "copyright": "℗ 2010 Mortal Records",
+        "copyright": "℗ 2009 Beggars Banquet Records Ltd",
         "genreNames": [
-          "Rock",
+          "New Wave",
           "Music",
-          "Adult Alternative"
+          "Alternative",
+          "Pop",
+          "Pop/Rock"
         ],
         "isCompilation": false,
         "isComplete": true,
         "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "The Pleasure Principle Live",
+        "name": "The Pleasure Principle (30th Anniversary Edition)",
         "playParams": {
-          "id": "404842205",
+          "id": "331564777",
           "kind": "album"
         },
-        "recordLabel": "Mortal Records",
-        "releaseDate": "2010-10-18",
-        "trackCount": 21,
-        "upc": "5014249101034",
-        "url": "https://music.apple.com/gb/album/the-pleasure-principle-live/404842205"
+        "recordLabel": "Beggars Banquet",
+        "releaseDate": "1979-09-07",
+        "trackCount": 27,
+        "upc": "607618206352",
+        "url": "https://music.apple.com/gb/album/the-pleasure-principle-30th-anniversary-edition/331564777"
       },
-      "url": "https://music.apple.com/gb/album/the-pleasure-principle-live/404842205"
+      "url": "https://music.apple.com/gb/album/the-pleasure-principle-30th-anniversary-edition/331564777"
     },
     "lastfm": {
       "images": [
@@ -192,9 +201,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/fd2f4aaf2f1d66e1ca93db1dfd5ff9c2.png"
         }
       ],
-      "listeners": 534397,
+      "listeners": 534892,
       "mbid": "39057e7a-ef07-4477-bafb-5465de8b5436",
-      "playcount": 5419226,
+      "playcount": 5425991,
       "raw_data": {
         "album": {
           "artist": "Gary Numan",
@@ -224,10 +233,10 @@
               "size": ""
             }
           ],
-          "listeners": "534397",
+          "listeners": "534892",
           "mbid": "39057e7a-ef07-4477-bafb-5465de8b5436",
           "name": "The Pleasure Principle",
-          "playcount": "5419226",
+          "playcount": "5425991",
           "tags": {
             "tag": [
               {
@@ -1364,6 +1373,6 @@
       "title": "Engineers"
     }
   ],
-  "updated_at": "2025-07-05T17:32:45.478645",
+  "updated_at": "2025-07-07T19:15:34.695411",
   "year": 2015
 }

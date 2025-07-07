@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "40886657",
+  "apple_music_url": "https://music.apple.com/gb/album/lift-your-skinny-fists-like-antennas-to-heaven/40886657",
   "artists": [
     {
       "apple_music_id": null,
@@ -22,7 +22,7 @@
     }
   },
   "country": "Canada",
-  "created_at": "2025-07-05T17:31:09.040674",
+  "created_at": "2025-07-07T19:16:22.292191",
   "date_added": "2016-12-27T12:09:06-08:00",
   "discogs_id": "74260",
   "discogs_url": "https://www.discogs.com/release/74260-Godspeed-You-Black-Emperor-Lift-Your-Skinny-Fists-Like-Antennas-To-Heaven",
@@ -145,6 +145,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/Yu8WQrsfzkfY8fc9kz8Rmiy3mR2EB0_pUVOgyRZwdBk/rs:fit/g:sm/q:90/h:172/w:437/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc0MjYw/LTE2MDg5NTI3MTQt/OTg1My5wbmc.jpeg",
       "width": 437
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/6a/db/69/6adb69ea-e00d-03d5-14dd-d5d59e68c40a/dj.zcsmbohm.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/lift-your-skinny-fists-like-antennas-to-heaven-74260/lift-your-skinny-fists-like-antennas-to-heaven-74260.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -152,23 +166,362 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/lift-your-skinny-fists-like-antennas-to-heaven-74260/lift-your-skinny-fists-like-antennas-to-heaven-74260-hi-res.jpg",
+    "medium": "../public/album/lift-your-skinny-fists-like-antennas-to-heaven-74260/lift-your-skinny-fists-like-antennas-to-heaven-74260-medium.jpg",
+    "small": "../public/album/lift-your-skinny-fists-like-antennas-to-heaven-74260/lift-your-skinny-fists-like-antennas-to-heaven-74260-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:31:09.660507",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:16:27.912231",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Lift Your Skinny Fists Like Antennas to Heaven",
   "release_name_discogs": "Lift Your Skinny Fists Like Antennas To Heaven",
-  "release_name_spotify": null,
+  "release_name_spotify": "Lift Your Skinny Fists Like Antennas to Heaven",
   "released": "2000-10-09",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/6a/db/69/6adb69ea-e00d-03d5-14dd-d5d59e68c40a/dj.zcsmbohm.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2000 kranky",
+      "editorial_notes": null,
+      "id": "40886657",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Godspeed You! Black Emperor",
+        "artwork": {
+          "bgColor": "74493d",
+          "height": 600,
+          "textColor1": "f9cfd5",
+          "textColor2": "f6cedb",
+          "textColor3": "deb4b7",
+          "textColor4": "dcb3bc",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/6a/db/69/6adb69ea-e00d-03d5-14dd-d5d59e68c40a/dj.zcsmbohm.jpg/{w}x{h}bb.jpg",
+          "width": 600
+        },
+        "copyright": "℗ 2000 kranky",
+        "genreNames": [
+          "Alternative",
+          "Music",
+          "Indie Rock",
+          "Rock",
+          "Prog-Rock/Art Rock"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Lift Your Skinny Fists Like Antennas to Heaven",
+        "playParams": {
+          "id": "40886657",
+          "kind": "album"
+        },
+        "recordLabel": "Kranky",
+        "releaseDate": "2000-10-09",
+        "trackCount": 4,
+        "upc": "796441804320",
+        "url": "https://music.apple.com/gb/album/lift-your-skinny-fists-like-antennas-to-heaven/40886657"
+      },
+      "url": "https://music.apple.com/gb/album/lift-your-skinny-fists-like-antennas-to-heaven/40886657"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2000 kranky",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2000 godspeed you black emperor!",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "887396825833"
+      },
+      "id": "2rT82YYlV9UoxBYLIezkRq",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730791c8a2dc44008c52b4883a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020791c8a2dc44008c52b4883a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510791c8a2dc44008c52b4883a",
+          "width": 64
+        }
+      ],
+      "label": "kranky",
+      "popularity": 46,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4svpOyfmQKuWpHLjgy4cdK"
+            },
+            "href": "https://api.spotify.com/v1/artists/4svpOyfmQKuWpHLjgy4cdK",
+            "id": "4svpOyfmQKuWpHLjgy4cdK",
+            "name": "Godspeed You! Black Emperor",
+            "type": "artist",
+            "uri": "spotify:artist:4svpOyfmQKuWpHLjgy4cdK"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2000 kranky",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2000 godspeed you black emperor!",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "887396825833"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2rT82YYlV9UoxBYLIezkRq"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2rT82YYlV9UoxBYLIezkRq?market=US",
+        "id": "2rT82YYlV9UoxBYLIezkRq",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730791c8a2dc44008c52b4883a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020791c8a2dc44008c52b4883a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510791c8a2dc44008c52b4883a",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "kranky",
+        "name": "Lift Your Skinny Fists Like Antennas to Heaven",
+        "popularity": 46,
+        "release_date": "2000-10-09",
+        "release_date_precision": "day",
+        "total_tracks": 4,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2rT82YYlV9UoxBYLIezkRq/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4svpOyfmQKuWpHLjgy4cdK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4svpOyfmQKuWpHLjgy4cdK",
+                  "id": "4svpOyfmQKuWpHLjgy4cdK",
+                  "name": "Godspeed You! Black Emperor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4svpOyfmQKuWpHLjgy4cdK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 1352413,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1HfJV18PHF2UQqh4TuySBJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1HfJV18PHF2UQqh4TuySBJ",
+              "id": "1HfJV18PHF2UQqh4TuySBJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Storm",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1HfJV18PHF2UQqh4TuySBJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4svpOyfmQKuWpHLjgy4cdK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4svpOyfmQKuWpHLjgy4cdK",
+                  "id": "4svpOyfmQKuWpHLjgy4cdK",
+                  "name": "Godspeed You! Black Emperor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4svpOyfmQKuWpHLjgy4cdK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 1355946,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1mVrFcCEpYcF6ISXGsyRk5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1mVrFcCEpYcF6ISXGsyRk5",
+              "id": "1mVrFcCEpYcF6ISXGsyRk5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Static",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:1mVrFcCEpYcF6ISXGsyRk5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4svpOyfmQKuWpHLjgy4cdK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4svpOyfmQKuWpHLjgy4cdK",
+                  "id": "4svpOyfmQKuWpHLjgy4cdK",
+                  "name": "Godspeed You! Black Emperor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4svpOyfmQKuWpHLjgy4cdK"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 1397746,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/05JqOBN6XW4eFUVQlgR0I3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/05JqOBN6XW4eFUVQlgR0I3",
+              "id": "05JqOBN6XW4eFUVQlgR0I3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sleep",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:05JqOBN6XW4eFUVQlgR0I3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4svpOyfmQKuWpHLjgy4cdK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4svpOyfmQKuWpHLjgy4cdK",
+                  "id": "4svpOyfmQKuWpHLjgy4cdK",
+                  "name": "Godspeed You! Black Emperor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4svpOyfmQKuWpHLjgy4cdK"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 1137586,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/31pLszBSGG3ToeXcPIgyXF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/31pLszBSGG3ToeXcPIgyXF",
+              "id": "31pLszBSGG3ToeXcPIgyXF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Like Antennas To Heaven…",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:31pLszBSGG3ToeXcPIgyXF"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 4
+        },
+        "type": "album",
+        "uri": "spotify:album:2rT82YYlV9UoxBYLIezkRq"
+      },
+      "release_date": "2000-10-09",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4svpOyfmQKuWpHLjgy4cdK",
+              "name": "Godspeed You! Black Emperor"
+            }
+          ],
+          "duration_ms": 1352413,
+          "explicit": false,
+          "id": "1HfJV18PHF2UQqh4TuySBJ",
+          "name": "Storm",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4svpOyfmQKuWpHLjgy4cdK",
+              "name": "Godspeed You! Black Emperor"
+            }
+          ],
+          "duration_ms": 1355946,
+          "explicit": false,
+          "id": "1mVrFcCEpYcF6ISXGsyRk5",
+          "name": "Static",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4svpOyfmQKuWpHLjgy4cdK",
+              "name": "Godspeed You! Black Emperor"
+            }
+          ],
+          "duration_ms": 1397746,
+          "explicit": false,
+          "id": "05JqOBN6XW4eFUVQlgR0I3",
+          "name": "Sleep",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4svpOyfmQKuWpHLjgy4cdK",
+              "name": "Godspeed You! Black Emperor"
+            }
+          ],
+          "duration_ms": 1137586,
+          "explicit": false,
+          "id": "31pLszBSGG3ToeXcPIgyXF",
+          "name": "Like Antennas To Heaven…",
+          "preview_url": null,
+          "track_number": 2
+        }
+      ],
+      "url": "https://open.spotify.com/album/2rT82YYlV9UoxBYLIezkRq"
+    }
+  },
+  "spotify_id": "2rT82YYlV9UoxBYLIezkRq",
+  "spotify_url": "https://open.spotify.com/album/2rT82YYlV9UoxBYLIezkRq",
   "styles": [
     "Post Rock",
     "Experimental"
@@ -200,6 +553,6 @@
       "title": "Antennas To Heaven..."
     }
   ],
-  "updated_at": "2025-07-05T17:31:09.660238",
+  "updated_at": "2025-07-07T19:16:27.168427",
   "year": 2000
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "714727396",
-  "apple_music_url": "https://music.apple.com/gb/album/orchestral-manoeuvres-in-the-dark/714727396",
+  "apple_music_id": "714551637",
+  "apple_music_url": "https://music.apple.com/gb/album/the-best-of-orchestral-manoeuvres-in-the-dark/714551637",
   "artists": [
     {
       "apple_music_id": "74157865",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:45:34.763345",
+  "created_at": "2025-07-07T19:09:07.592627",
   "date_added": "2016-07-05T18:10:33-07:00",
   "discogs_id": "522821",
   "discogs_url": "https://www.discogs.com/release/522821-Orchestral-Manoeuvres-In-The-Dark-The-Best-Of-OMD",
@@ -79,7 +79,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/e8/14/19e814d4-fdf1-1df5-f0cb-d1a5182169ed/00724358150551.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d0/9e/fa/d09efa3b-f49a-f456-d26d-5a1cca158344/00094636459752.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-best-of-omd-522821/the-best-of-omd-522821.jpg",
       "width": 2000
     }
   ],
@@ -89,14 +96,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Orchestral+Manoeuvres+in+the+Dark/The+Best+of+OMD",
   "local_images": {
-    "hi-res": "public/album/the-best-of-omd-522821/the-best-of-omd-522821-hi-res.jpg",
-    "medium": "public/album/the-best-of-omd-522821/the-best-of-omd-522821-medium.jpg",
-    "small": "public/album/the-best-of-omd-522821/the-best-of-omd-522821-small.jpg"
+    "hi-res": "../public/album/the-best-of-omd-522821/the-best-of-omd-522821-hi-res.jpg",
+    "medium": "../public/album/the-best-of-omd-522821/the-best-of-omd-522821-medium.jpg",
+    "small": "../public/album/the-best-of-omd-522821/the-best-of-omd-522821-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:45:36.352447",
+    "processed_at": "2025-07-07T19:09:21.169524",
     "services_used": [
       "discogs",
       "apple_music",
@@ -104,56 +111,58 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Orchestral Manoeuvres In the Dark",
+  "release_name_apple_music": "The Best Of Orchestral Manoeuvres In The Dark",
   "release_name_discogs": "The Best Of OMD",
-  "release_name_spotify": "The Pacific Age",
+  "release_name_spotify": "The Best Of Orchestral Manoeuvres In The Dark",
   "released": "1988",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/e8/14/19e814d4-fdf1-1df5-f0cb-d1a5182169ed/00724358150551.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d0/9e/fa/d09efa3b-f49a-f456-d26d-5a1cca158344/00094636459752.rgb.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "This Compilation ℗ 2003 Virgin Records Limited",
+      "copyright": "This Compilation ℗ 1988 Virgin Records Limited",
       "editorial_notes": null,
-      "id": "714727396",
+      "id": "714551637",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Orchestral Manoeuvres In the Dark",
         "artwork": {
-          "bgColor": "00678b",
-          "height": 1416,
-          "textColor1": "e5eff3",
-          "textColor2": "f9e697",
-          "textColor3": "b7d4de",
-          "textColor4": "c7cd94",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/19/e8/14/19e814d4-fdf1-1df5-f0cb-d1a5182169ed/00724358150551.jpg/{w}x{h}bb.jpg",
-          "width": 1416
+          "bgColor": "00241c",
+          "height": 4000,
+          "textColor1": "fefef6",
+          "textColor2": "cbddd6",
+          "textColor3": "cbd2cb",
+          "textColor4": "a2b8b1",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/d0/9e/fa/d09efa3b-f49a-f456-d26d-5a1cca158344/00094636459752.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 4000
         },
-        "copyright": "This Compilation ℗ 2003 Virgin Records Limited",
+        "copyright": "This Compilation ℗ 1988 Virgin Records Limited",
         "genreNames": [
-          "Rock",
-          "Music",
-          "Adult Alternative",
-          "Alternative",
           "Electronic",
-          "New Wave"
+          "Music",
+          "Alternative",
+          "New Wave",
+          "Pop",
+          "Pop/Rock",
+          "Rock",
+          "Adult Alternative"
         ],
-        "isCompilation": false,
+        "isCompilation": true,
         "isComplete": true,
         "isMasteredForItunes": false,
         "isSingle": false,
-        "name": "Orchestral Manoeuvres In the Dark",
+        "name": "The Best Of Orchestral Manoeuvres In The Dark",
         "playParams": {
-          "id": "714727396",
+          "id": "714551637",
           "kind": "album"
         },
-        "recordLabel": "EMI Marketing",
-        "releaseDate": "1980-02-22",
-        "trackCount": 16,
-        "upc": "00724358150551",
-        "url": "https://music.apple.com/gb/album/orchestral-manoeuvres-in-the-dark/714727396"
+        "recordLabel": "Virgin Records",
+        "releaseDate": "1988-01-01",
+        "trackCount": 18,
+        "upc": "00094636459752",
+        "url": "https://music.apple.com/gb/album/the-best-of-orchestral-manoeuvres-in-the-dark/714551637"
       },
-      "url": "https://music.apple.com/gb/album/orchestral-manoeuvres-in-the-dark/714727396"
+      "url": "https://music.apple.com/gb/album/the-best-of-orchestral-manoeuvres-in-the-dark/714551637"
     },
     "lastfm": {
       "images": [
@@ -182,9 +191,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/d37b72ab06d32891c8205abdd718f6af.jpg"
         }
       ],
-      "listeners": 295223,
+      "listeners": 295227,
       "mbid": "5d6c2a57-8203-4eb1-b7f2-002d1aab5d69",
-      "playcount": 2079246,
+      "playcount": 2079356,
       "raw_data": {
         "album": {
           "artist": "Orchestral Manoeuvres in the Dark",
@@ -214,10 +223,10 @@
               "size": ""
             }
           ],
-          "listeners": "295223",
+          "listeners": "295227",
           "mbid": "5d6c2a57-8203-4eb1-b7f2-002d1aab5d69",
           "name": "The Best of OMD",
-          "playcount": "2079246",
+          "playcount": "2079356",
           "tags": {
             "tag": [
               {
@@ -389,7 +398,7 @@
                   "name": "Orchestral Manoeuvres in the Dark",
                   "url": "https://www.last.fm/music/Orchestral+Manoeuvres+in+the+Dark"
                 },
-                "duration": 215,
+                "duration": 233,
                 "name": "Locomotion",
                 "streamable": {
                   "#text": "0",
@@ -507,45 +516,45 @@
       "wiki_summary": "The Best of OMD is a compilation album by English electronic band Orchestral Manoeuvres in the Dark (OMD), released in 1988; marking a decade since the band's beginnings. The record essentially delineates the group's experimental early years from their pop-oriented later work: side one features recordings from 1979 to 1984, while side two is drawn from the group's 1984–1988 efforts. It was a worldwide success, becoming a Top 5 hit across Europe and achieving 3x platinum sales in the United Kingdom and gold status in the United States. Dreaming was released as a single and made little impact on the <a href=\"https://www.last.fm/music/Orchestral+Manoeuvres+in+the+Dark/The+Best+of+OMD\">Read more on Last.fm</a>."
     },
     "spotify": {
-      "album_type": "album",
+      "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 1989 Virgin Records Limited",
+          "text": "© 1992 Virgin Records Limited",
           "type": "C"
         },
         {
-          "text": "℗ 1986 Virgin Records Limited",
+          "text": "This Compilation ℗ 1988 Virgin Records Limited",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "00077778670551"
+        "upc": "00094636459752"
       },
-      "id": "0gqlZbP2vl664AEAclVZCd",
+      "id": "4nkiw1CUhCOS1ueYjvOxUQ",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273bebe2a14c9a2a439ef37b7a4",
+          "url": "https://i.scdn.co/image/ab67616d0000b27346c913077ad733cf423eab13",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02bebe2a14c9a2a439ef37b7a4",
+          "url": "https://i.scdn.co/image/ab67616d00001e0246c913077ad733cf423eab13",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851bebe2a14c9a2a439ef37b7a4",
+          "url": "https://i.scdn.co/image/ab67616d0000485146c913077ad733cf423eab13",
           "width": 64
         }
       ],
       "label": "Virgin Records",
-      "popularity": 45,
+      "popularity": 56,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "compilation",
         "artists": [
           {
             "external_urls": {
@@ -560,49 +569,49 @@
         ],
         "copyrights": [
           {
-            "text": "© 1989 Virgin Records Limited",
+            "text": "© 1992 Virgin Records Limited",
             "type": "C"
           },
           {
-            "text": "℗ 1986 Virgin Records Limited",
+            "text": "This Compilation ℗ 1988 Virgin Records Limited",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "00077778670551"
+          "upc": "00094636459752"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0gqlZbP2vl664AEAclVZCd"
+          "spotify": "https://open.spotify.com/album/4nkiw1CUhCOS1ueYjvOxUQ"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0gqlZbP2vl664AEAclVZCd?market=US",
-        "id": "0gqlZbP2vl664AEAclVZCd",
+        "href": "https://api.spotify.com/v1/albums/4nkiw1CUhCOS1ueYjvOxUQ?market=US",
+        "id": "4nkiw1CUhCOS1ueYjvOxUQ",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273bebe2a14c9a2a439ef37b7a4",
+            "url": "https://i.scdn.co/image/ab67616d0000b27346c913077ad733cf423eab13",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02bebe2a14c9a2a439ef37b7a4",
+            "url": "https://i.scdn.co/image/ab67616d00001e0246c913077ad733cf423eab13",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851bebe2a14c9a2a439ef37b7a4",
+            "url": "https://i.scdn.co/image/ab67616d0000485146c913077ad733cf423eab13",
             "width": 64
           }
         ],
         "is_playable": true,
         "label": "Virgin Records",
-        "name": "The Pacific Age",
-        "popularity": 45,
-        "release_date": "1986-09-29",
+        "name": "The Best Of Orchestral Manoeuvres In The Dark",
+        "popularity": 56,
+        "release_date": "1988-01-01",
         "release_date_precision": "day",
-        "total_tracks": 10,
+        "total_tracks": 18,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0gqlZbP2vl664AEAclVZCd/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4nkiw1CUhCOS1ueYjvOxUQ/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -618,20 +627,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 263200,
+              "duration_ms": 212160,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1vFvylW7c2gCiegE3coBQX"
+                "spotify": "https://open.spotify.com/track/0rbgYthugGm0YW2C0RMxYZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/1vFvylW7c2gCiegE3coBQX",
-              "id": "1vFvylW7c2gCiegE3coBQX",
+              "href": "https://api.spotify.com/v1/tracks/0rbgYthugGm0YW2C0RMxYZ",
+              "id": "0rbgYthugGm0YW2C0RMxYZ",
               "is_local": false,
               "is_playable": true,
-              "name": "Stay (The Black Rose And The Universal Wheel)",
+              "name": "Electricity",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:1vFvylW7c2gCiegE3coBQX"
+              "uri": "spotify:track:0rbgYthugGm0YW2C0RMxYZ"
             },
             {
               "artists": [
@@ -647,20 +656,368 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 218133,
+              "duration_ms": 285706,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7pFydJbDEToJHtvl6g579k"
+                "spotify": "https://open.spotify.com/track/7e6cyOZcTm622usm5ST05T"
               },
-              "href": "https://api.spotify.com/v1/tracks/7pFydJbDEToJHtvl6g579k",
-              "id": "7pFydJbDEToJHtvl6g579k",
+              "href": "https://api.spotify.com/v1/tracks/7e6cyOZcTm622usm5ST05T",
+              "id": "7e6cyOZcTm622usm5ST05T",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Messages",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7e6cyOZcTm622usm5ST05T"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 212400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7bJSbd2Upa4iYVHlbRKEJm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7bJSbd2Upa4iYVHlbRKEJm",
+              "id": "7bJSbd2Upa4iYVHlbRKEJm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Enola Gay",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:7bJSbd2Upa4iYVHlbRKEJm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 218333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0eKV8ORa8VRaBgQEak6smi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0eKV8ORa8VRaBgQEak6smi",
+              "id": "0eKV8ORa8VRaBgQEak6smi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Souvenir",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:0eKV8ORa8VRaBgQEak6smi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 228293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3k61ZhyGGjLsOHQWnXCCSz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3k61ZhyGGjLsOHQWnXCCSz",
+              "id": "3k61ZhyGGjLsOHQWnXCCSz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Joan Of Arc",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:3k61ZhyGGjLsOHQWnXCCSz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 252306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2RKRJ63BU2LCB1G30dAa6P"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2RKRJ63BU2LCB1G30dAa6P",
+              "id": "2RKRJ63BU2LCB1G30dAa6P",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Joan Of Arc (Maid Of Orleans)",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2RKRJ63BU2LCB1G30dAa6P"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 223533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7918LcX79UVMeKyyvbbSjm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7918LcX79UVMeKyyvbbSjm",
+              "id": "7918LcX79UVMeKyyvbbSjm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Telegraph",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:7918LcX79UVMeKyyvbbSjm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/72RWkPBX9WV2l8fuxEDt8h"
+              },
+              "href": "https://api.spotify.com/v1/tracks/72RWkPBX9WV2l8fuxEDt8h",
+              "id": "72RWkPBX9WV2l8fuxEDt8h",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tesla Girls",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:72RWkPBX9WV2l8fuxEDt8h"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 233893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0HKhvraBYUEWbGF6GOzNoc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0HKhvraBYUEWbGF6GOzNoc",
+              "id": "0HKhvraBYUEWbGF6GOzNoc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Locomotion",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:0HKhvraBYUEWbGF6GOzNoc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 235173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2VDFovNY050q7XgM4642MH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2VDFovNY050q7XgM4642MH",
+              "id": "2VDFovNY050q7XgM4642MH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Talking Loud And Clear",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2VDFovNY050q7XgM4642MH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 209866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4Dxd5XM7vTPu5ECDCB1kNp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4Dxd5XM7vTPu5ECDCB1kNp",
+              "id": "4Dxd5XM7vTPu5ECDCB1kNp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "So In Love",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4Dxd5XM7vTPu5ECDCB1kNp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 237133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3hElpOCgN9mah6Iz27bPX9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3hElpOCgN9mah6Iz27bPX9",
+              "id": "3hElpOCgN9mah6Iz27bPX9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Secret",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:3hElpOCgN9mah6Iz27bPX9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 270866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0COmTZuFm3W2g6ZzUTnQi1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0COmTZuFm3W2g6ZzUTnQi1",
+              "id": "0COmTZuFm3W2g6ZzUTnQi1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "If You Leave - From \"Pretty In Pink\"",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0COmTZuFm3W2g6ZzUTnQi1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
+                  "id": "7wJ9NwdRWtN92NunmXuwBk",
+                  "name": "Orchestral Manoeuvres In The Dark",
+                  "type": "artist",
+                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 215160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4pXsRou0ldzfFB18hM61Sd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4pXsRou0ldzfFB18hM61Sd",
+              "id": "4pXsRou0ldzfFB18hM61Sd",
               "is_local": false,
               "is_playable": true,
               "name": "(Forever) Live And Die",
               "preview_url": null,
-              "track_number": 2,
+              "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:7pFydJbDEToJHtvl6g579k"
+              "uri": "spotify:track:4pXsRou0ldzfFB18hM61Sd"
             },
             {
               "artists": [
@@ -676,20 +1033,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 239293,
+              "duration_ms": 237958,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0f86Fj9akgR0VRdwwmmm0s"
+                "spotify": "https://open.spotify.com/track/6IaYWVDGyEMo7erXpWUCBm"
               },
-              "href": "https://api.spotify.com/v1/tracks/0f86Fj9akgR0VRdwwmmm0s",
-              "id": "0f86Fj9akgR0VRdwwmmm0s",
+              "href": "https://api.spotify.com/v1/tracks/6IaYWVDGyEMo7erXpWUCBm",
+              "id": "6IaYWVDGyEMo7erXpWUCBm",
               "is_local": false,
               "is_playable": true,
-              "name": "The Pacific Age",
+              "name": "Dreaming",
               "preview_url": null,
-              "track_number": 3,
+              "track_number": 15,
               "type": "track",
-              "uri": "spotify:track:0f86Fj9akgR0VRdwwmmm0s"
+              "uri": "spotify:track:6IaYWVDGyEMo7erXpWUCBm"
             },
             {
               "artists": [
@@ -705,20 +1062,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 288533,
+              "duration_ms": 215800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0TSDFg5PUhB0tp6deHSDEw"
+                "spotify": "https://open.spotify.com/track/5TalBEcwmn9Bru9N6uvR5Y"
               },
-              "href": "https://api.spotify.com/v1/tracks/0TSDFg5PUhB0tp6deHSDEw",
-              "id": "0TSDFg5PUhB0tp6deHSDEw",
+              "href": "https://api.spotify.com/v1/tracks/5TalBEcwmn9Bru9N6uvR5Y",
+              "id": "5TalBEcwmn9Bru9N6uvR5Y",
               "is_local": false,
               "is_playable": true,
-              "name": "The Dead Girls",
+              "name": "Genetic Engineering",
               "preview_url": null,
-              "track_number": 4,
+              "track_number": 16,
               "type": "track",
-              "uri": "spotify:track:0TSDFg5PUhB0tp6deHSDEw"
+              "uri": "spotify:track:5TalBEcwmn9Bru9N6uvR5Y"
             },
             {
               "artists": [
@@ -731,23 +1088,33 @@
                   "name": "Orchestral Manoeuvres In The Dark",
                   "type": "artist",
                   "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/32ckuKo8LrZhQMyCehYKkt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/32ckuKo8LrZhQMyCehYKkt",
+                  "id": "32ckuKo8LrZhQMyCehYKkt",
+                  "name": "Tom Lord-Alge",
+                  "type": "artist",
+                  "uri": "spotify:artist:32ckuKo8LrZhQMyCehYKkt"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 256333,
+              "duration_ms": 374800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5sOdDmQkZlCXJfFruezERb"
+                "spotify": "https://open.spotify.com/track/5asGqTqDfnz7JyY6C6uLOd"
               },
-              "href": "https://api.spotify.com/v1/tracks/5sOdDmQkZlCXJfFruezERb",
-              "id": "5sOdDmQkZlCXJfFruezERb",
+              "href": "https://api.spotify.com/v1/tracks/5asGqTqDfnz7JyY6C6uLOd",
+              "id": "5asGqTqDfnz7JyY6C6uLOd",
               "is_local": false,
               "is_playable": true,
-              "name": "Shame",
+              "name": "We Love You - 12'' Version",
               "preview_url": null,
-              "track_number": 5,
+              "track_number": 17,
               "type": "track",
-              "uri": "spotify:track:5sOdDmQkZlCXJfFruezERb"
+              "uri": "spotify:track:5asGqTqDfnz7JyY6C6uLOd"
             },
             {
               "artists": [
@@ -760,153 +1127,47 @@
                   "name": "Orchestral Manoeuvres In The Dark",
                   "type": "artist",
                   "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 221933,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3trbVZwxeU4vJBxv8zwmgg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3trbVZwxeU4vJBxv8zwmgg",
-              "id": "3trbVZwxeU4vJBxv8zwmgg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Southern",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:3trbVZwxeU4vJBxv8zwmgg"
-            },
-            {
-              "artists": [
+                },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
+                    "spotify": "https://open.spotify.com/artist/32ckuKo8LrZhQMyCehYKkt"
                   },
-                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
-                  "id": "7wJ9NwdRWtN92NunmXuwBk",
-                  "name": "Orchestral Manoeuvres In The Dark",
+                  "href": "https://api.spotify.com/v1/artists/32ckuKo8LrZhQMyCehYKkt",
+                  "id": "32ckuKo8LrZhQMyCehYKkt",
+                  "name": "Tom Lord-Alge",
                   "type": "artist",
-                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
+                  "uri": "spotify:artist:32ckuKo8LrZhQMyCehYKkt"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 160266,
+              "duration_ms": 376933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2jE1N4IRPAOFKJ0JrVB3DS"
+                "spotify": "https://open.spotify.com/track/67w3FWXALbQCwz0crDb40a"
               },
-              "href": "https://api.spotify.com/v1/tracks/2jE1N4IRPAOFKJ0JrVB3DS",
-              "id": "2jE1N4IRPAOFKJ0JrVB3DS",
+              "href": "https://api.spotify.com/v1/tracks/67w3FWXALbQCwz0crDb40a",
+              "id": "67w3FWXALbQCwz0crDb40a",
               "is_local": false,
               "is_playable": true,
-              "name": "Flame Of Hope",
+              "name": "La Femme Accident - 12'' Version",
               "preview_url": null,
-              "track_number": 7,
+              "track_number": 18,
               "type": "track",
-              "uri": "spotify:track:2jE1N4IRPAOFKJ0JrVB3DS"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
-                  "id": "7wJ9NwdRWtN92NunmXuwBk",
-                  "name": "Orchestral Manoeuvres In The Dark",
-                  "type": "artist",
-                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 270933,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0k8aUzgy8NG7rXN0wlCLGx"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0k8aUzgy8NG7rXN0wlCLGx",
-              "id": "0k8aUzgy8NG7rXN0wlCLGx",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Goddess Of Love",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:0k8aUzgy8NG7rXN0wlCLGx"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
-                  "id": "7wJ9NwdRWtN92NunmXuwBk",
-                  "name": "Orchestral Manoeuvres In The Dark",
-                  "type": "artist",
-                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 250266,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2uCMN1aoCBxlUV0xWKmKhu"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2uCMN1aoCBxlUV0xWKmKhu",
-              "id": "2uCMN1aoCBxlUV0xWKmKhu",
-              "is_local": false,
-              "is_playable": true,
-              "name": "We Love You",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:2uCMN1aoCBxlUV0xWKmKhu"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7wJ9NwdRWtN92NunmXuwBk"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7wJ9NwdRWtN92NunmXuwBk",
-                  "id": "7wJ9NwdRWtN92NunmXuwBk",
-                  "name": "Orchestral Manoeuvres In The Dark",
-                  "type": "artist",
-                  "uri": "spotify:artist:7wJ9NwdRWtN92NunmXuwBk"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 253973,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2C73GCtUrajDh7a0Efcu7c"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2C73GCtUrajDh7a0Efcu7c",
-              "id": "2C73GCtUrajDh7a0Efcu7c",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Watch Us Fall",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:2C73GCtUrajDh7a0Efcu7c"
+              "uri": "spotify:track:67w3FWXALbQCwz0crDb40a"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 10
+          "total": 18
         },
         "type": "album",
-        "uri": "spotify:album:0gqlZbP2vl664AEAclVZCd"
+        "uri": "spotify:album:4nkiw1CUhCOS1ueYjvOxUQ"
       },
-      "release_date": "1986-09-29",
+      "release_date": "1988-01-01",
       "release_date_precision": "day",
-      "total_tracks": 10,
+      "total_tracks": 18,
       "tracks": [
         {
           "artists": [
@@ -915,10 +1176,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 263200,
+          "duration_ms": 212160,
           "explicit": false,
-          "id": "1vFvylW7c2gCiegE3coBQX",
-          "name": "Stay (The Black Rose And The Universal Wheel)",
+          "id": "0rbgYthugGm0YW2C0RMxYZ",
+          "name": "Electricity",
           "preview_url": null,
           "track_number": 1
         },
@@ -929,10 +1190,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 218133,
+          "duration_ms": 285706,
           "explicit": false,
-          "id": "7pFydJbDEToJHtvl6g579k",
-          "name": "(Forever) Live And Die",
+          "id": "7e6cyOZcTm622usm5ST05T",
+          "name": "Messages",
           "preview_url": null,
           "track_number": 2
         },
@@ -943,10 +1204,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 239293,
+          "duration_ms": 212400,
           "explicit": false,
-          "id": "0f86Fj9akgR0VRdwwmmm0s",
-          "name": "The Pacific Age",
+          "id": "7bJSbd2Upa4iYVHlbRKEJm",
+          "name": "Enola Gay",
           "preview_url": null,
           "track_number": 3
         },
@@ -957,10 +1218,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 288533,
+          "duration_ms": 218333,
           "explicit": false,
-          "id": "0TSDFg5PUhB0tp6deHSDEw",
-          "name": "The Dead Girls",
+          "id": "0eKV8ORa8VRaBgQEak6smi",
+          "name": "Souvenir",
           "preview_url": null,
           "track_number": 4
         },
@@ -971,10 +1232,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 256333,
+          "duration_ms": 228293,
           "explicit": false,
-          "id": "5sOdDmQkZlCXJfFruezERb",
-          "name": "Shame",
+          "id": "3k61ZhyGGjLsOHQWnXCCSz",
+          "name": "Joan Of Arc",
           "preview_url": null,
           "track_number": 5
         },
@@ -985,10 +1246,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 221933,
+          "duration_ms": 252306,
           "explicit": false,
-          "id": "3trbVZwxeU4vJBxv8zwmgg",
-          "name": "Southern",
+          "id": "2RKRJ63BU2LCB1G30dAa6P",
+          "name": "Joan Of Arc (Maid Of Orleans)",
           "preview_url": null,
           "track_number": 6
         },
@@ -999,10 +1260,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 160266,
+          "duration_ms": 223533,
           "explicit": false,
-          "id": "2jE1N4IRPAOFKJ0JrVB3DS",
-          "name": "Flame Of Hope",
+          "id": "7918LcX79UVMeKyyvbbSjm",
+          "name": "Telegraph",
           "preview_url": null,
           "track_number": 7
         },
@@ -1013,10 +1274,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 270933,
+          "duration_ms": 213866,
           "explicit": false,
-          "id": "0k8aUzgy8NG7rXN0wlCLGx",
-          "name": "Goddess Of Love",
+          "id": "72RWkPBX9WV2l8fuxEDt8h",
+          "name": "Tesla Girls",
           "preview_url": null,
           "track_number": 8
         },
@@ -1027,10 +1288,10 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 250266,
+          "duration_ms": 233893,
           "explicit": false,
-          "id": "2uCMN1aoCBxlUV0xWKmKhu",
-          "name": "We Love You",
+          "id": "0HKhvraBYUEWbGF6GOzNoc",
+          "name": "Locomotion",
           "preview_url": null,
           "track_number": 9
         },
@@ -1041,19 +1302,139 @@
               "name": "Orchestral Manoeuvres In The Dark"
             }
           ],
-          "duration_ms": 253973,
+          "duration_ms": 235173,
           "explicit": false,
-          "id": "2C73GCtUrajDh7a0Efcu7c",
-          "name": "Watch Us Fall",
+          "id": "2VDFovNY050q7XgM4642MH",
+          "name": "Talking Loud And Clear",
           "preview_url": null,
           "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 209866,
+          "explicit": false,
+          "id": "4Dxd5XM7vTPu5ECDCB1kNp",
+          "name": "So In Love",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 237133,
+          "explicit": false,
+          "id": "3hElpOCgN9mah6Iz27bPX9",
+          "name": "Secret",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 270866,
+          "explicit": false,
+          "id": "0COmTZuFm3W2g6ZzUTnQi1",
+          "name": "If You Leave - From \"Pretty In Pink\"",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 215160,
+          "explicit": false,
+          "id": "4pXsRou0ldzfFB18hM61Sd",
+          "name": "(Forever) Live And Die",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 237958,
+          "explicit": false,
+          "id": "6IaYWVDGyEMo7erXpWUCBm",
+          "name": "Dreaming",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            }
+          ],
+          "duration_ms": 215800,
+          "explicit": false,
+          "id": "5TalBEcwmn9Bru9N6uvR5Y",
+          "name": "Genetic Engineering",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            },
+            {
+              "id": "32ckuKo8LrZhQMyCehYKkt",
+              "name": "Tom Lord-Alge"
+            }
+          ],
+          "duration_ms": 374800,
+          "explicit": false,
+          "id": "5asGqTqDfnz7JyY6C6uLOd",
+          "name": "We Love You - 12'' Version",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "7wJ9NwdRWtN92NunmXuwBk",
+              "name": "Orchestral Manoeuvres In The Dark"
+            },
+            {
+              "id": "32ckuKo8LrZhQMyCehYKkt",
+              "name": "Tom Lord-Alge"
+            }
+          ],
+          "duration_ms": 376933,
+          "explicit": false,
+          "id": "67w3FWXALbQCwz0crDb40a",
+          "name": "La Femme Accident - 12'' Version",
+          "preview_url": null,
+          "track_number": 18
         }
       ],
-      "url": "https://open.spotify.com/album/0gqlZbP2vl664AEAclVZCd"
+      "url": "https://open.spotify.com/album/4nkiw1CUhCOS1ueYjvOxUQ"
     }
   },
-  "spotify_id": "0gqlZbP2vl664AEAclVZCd",
-  "spotify_url": "https://open.spotify.com/album/0gqlZbP2vl664AEAclVZCd",
+  "spotify_id": "4nkiw1CUhCOS1ueYjvOxUQ",
+  "spotify_url": "https://open.spotify.com/album/4nkiw1CUhCOS1ueYjvOxUQ",
   "styles": [
     "Synth-pop",
     "New Wave",
@@ -1146,6 +1527,6 @@
       "title": "Dreaming"
     }
   ],
-  "updated_at": "2025-07-05T17:45:36.228544",
+  "updated_at": "2025-07-07T19:09:20.860636",
   "year": 1988
 }

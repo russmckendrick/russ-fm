@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T19:10:29.858764",
+  "created_at": "2025-07-07T19:11:07.320941",
   "date_added": "2016-04-28T16:40:39-07:00",
   "discogs_id": "4593269",
   "discogs_url": "https://www.discogs.com/release/4593269-Public-Enemy-25th-Anniversary-Vinyl-Collection-",
@@ -79,6 +79,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/7nxrc-37CVcFjdQbF6BroK56QzjSFhhVoi1mxFJTzqc/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ1OTMy/NjktMTM2OTM3NTQ3/MS04NDc1LmpwZWc.jpeg",
       "width": 450
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/25th-anniversary-vinyl-collection-4593269/25th-anniversary-vinyl-collection-4593269.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -86,11 +93,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Public+Enemy/25th+Anniversary+Vinyl+Collection",
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/25th-anniversary-vinyl-collection-4593269/25th-anniversary-vinyl-collection-4593269-hi-res.jpg",
+    "medium": "../public/album/25th-anniversary-vinyl-collection-4593269/25th-anniversary-vinyl-collection-4593269-medium.jpg",
+    "small": "../public/album/25th-anniversary-vinyl-collection-4593269/25th-anniversary-vinyl-collection-4593269-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T19:10:41.348883",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:11:11.152380",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -130,7 +141,7 @@
       ],
       "listeners": 373,
       "mbid": "3fa49009-aed7-4c75-b25d-978f02ef3dde",
-      "playcount": 2067,
+      "playcount": 2069,
       "raw_data": {
         "album": {
           "artist": "Public Enemy",
@@ -163,7 +174,7 @@
           "listeners": "373",
           "mbid": "3fa49009-aed7-4c75-b25d-978f02ef3dde",
           "name": "25th Anniversary Vinyl Collection",
-          "playcount": "2067",
+          "playcount": "2069",
           "tags": {
             "tag": [
               {
@@ -2368,6 +2379,6 @@
       "title": "Sudden Death"
     }
   ],
-  "updated_at": "2025-07-05T19:10:41.348104",
+  "updated_at": "2025-07-07T19:11:10.947755",
   "year": 2013
 }

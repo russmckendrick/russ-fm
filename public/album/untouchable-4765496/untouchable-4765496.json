@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1238312364",
-  "apple_music_url": "https://music.apple.com/gb/album/untouchable-pt-2-single/1238312364",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "428003344",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T17:32:04.078118",
+  "created_at": "2025-07-07T19:15:57.539873",
   "date_added": "2016-12-13T17:50:48-08:00",
   "discogs_id": "4765496",
   "discogs_url": "https://www.discogs.com/release/4765496-Anathema-Untouchable",
@@ -77,8 +77,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/44/c7/7f/44c77fc4-4769-f14d-01cb-54f4c2700adb/802644527765.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/untouchable-4765496/untouchable-4765496.jpg",
       "width": 2000
     }
   ],
@@ -89,68 +89,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Anathema/Untouchable",
   "local_images": {
-    "hi-res": "public/album/untouchable-4765496/untouchable-4765496-hi-res.jpg",
-    "medium": "public/album/untouchable-4765496/untouchable-4765496-medium.jpg",
-    "small": "public/album/untouchable-4765496/untouchable-4765496-small.jpg"
+    "hi-res": "../public/album/untouchable-4765496/untouchable-4765496-hi-res.jpg",
+    "medium": "../public/album/untouchable-4765496/untouchable-4765496-medium.jpg",
+    "small": "../public/album/untouchable-4765496/untouchable-4765496-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:32:06.492475",
+    "processed_at": "2025-07-07T19:16:06.699064",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Untouchable Pt. 2 - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "Untouchable",
-  "release_name_spotify": "Universal",
+  "release_name_spotify": null,
   "released": "2013-07-15",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/44/c7/7f/44c77fc4-4769-f14d-01cb-54f4c2700adb/802644527765.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2013 Anathema",
-      "editorial_notes": null,
-      "id": "1238312364",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Anathema",
-        "artwork": {
-          "bgColor": "181f23",
-          "height": 1500,
-          "textColor1": "b6cdbd",
-          "textColor2": "adb9d1",
-          "textColor3": "96aa9e",
-          "textColor4": "8f9bae",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music117/v4/44/c7/7f/44c77fc4-4769-f14d-01cb-54f4c2700adb/802644527765.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "copyright": "℗ 2013 Anathema",
-        "genreNames": [
-          "Rock",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Untouchable Pt. 2 - Single",
-        "playParams": {
-          "id": "1238312364",
-          "kind": "album"
-        },
-        "recordLabel": "Kscope",
-        "releaseDate": "2013-09-16",
-        "trackCount": 2,
-        "upc": "802644527765",
-        "url": "https://music.apple.com/gb/album/untouchable-pt-2-single/1238312364"
-      },
-      "url": "https://music.apple.com/gb/album/untouchable-pt-2-single/1238312364"
-    },
     "lastfm": {
       "images": [
         {
@@ -180,7 +136,7 @@
       ],
       "listeners": 677,
       "mbid": "79125e7d-1ef8-4b76-90dd-691bbe2fb74f",
-      "playcount": 9270,
+      "playcount": 9272,
       "raw_data": {
         "album": {
           "artist": "Anathema",
@@ -213,7 +169,7 @@
           "listeners": "677",
           "mbid": "79125e7d-1ef8-4b76-90dd-691bbe2fb74f",
           "name": "Untouchable",
-          "playcount": "9270",
+          "playcount": "9272",
           "tags": {
             "tag": [
               {
@@ -462,641 +418,10 @@
       "url": "https://www.last.fm/music/Anathema/Untouchable",
       "wiki_content": "",
       "wiki_summary": ""
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "(C) 2013 Anathema",
-          "type": "C"
-        },
-        {
-          "text": "(P) 2013 Anathema",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "0802644826622"
-      },
-      "id": "78livMFiP8Jlf4z3s7Q4YW",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273af3f8841a36997d8ef420f69",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02af3f8841a36997d8ef420f69",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851af3f8841a36997d8ef420f69",
-          "width": 64
-        }
-      ],
-      "label": "Kscope",
-      "popularity": 40,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-            },
-            "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-            "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-            "name": "Anathema",
-            "type": "artist",
-            "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "(C) 2013 Anathema",
-            "type": "C"
-          },
-          {
-            "text": "(P) 2013 Anathema",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "0802644826622"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/78livMFiP8Jlf4z3s7Q4YW"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/78livMFiP8Jlf4z3s7Q4YW?market=US",
-        "id": "78livMFiP8Jlf4z3s7Q4YW",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273af3f8841a36997d8ef420f69",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02af3f8841a36997d8ef420f69",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851af3f8841a36997d8ef420f69",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Kscope",
-        "name": "Universal",
-        "popularity": 40,
-        "release_date": "2013-09-23",
-        "release_date_precision": "day",
-        "total_tracks": 12,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/78livMFiP8Jlf4z3s7Q4YW/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 416413,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0EBvRI3CqPYRWAkzHdGaeU"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0EBvRI3CqPYRWAkzHdGaeU",
-              "id": "0EBvRI3CqPYRWAkzHdGaeU",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Untouchable, Pt. 1 - Live",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:0EBvRI3CqPYRWAkzHdGaeU"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 343333,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4lx2YbTuYzKq23dqkDJlfA"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4lx2YbTuYzKq23dqkDJlfA",
-              "id": "4lx2YbTuYzKq23dqkDJlfA",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Untouchable, Pt. 2 - Live",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4lx2YbTuYzKq23dqkDJlfA"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 351133,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1SLZXfHsqN0QW3vtDYP1FE"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1SLZXfHsqN0QW3vtDYP1FE",
-              "id": "1SLZXfHsqN0QW3vtDYP1FE",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Thin Air - Live",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:1SLZXfHsqN0QW3vtDYP1FE"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 339360,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7hDFs0a6KRamy7fhn8MjPg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7hDFs0a6KRamy7fhn8MjPg",
-              "id": "7hDFs0a6KRamy7fhn8MjPg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dreaming Light - Live",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:7hDFs0a6KRamy7fhn8MjPg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 552786,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3qPxIz97nFl2Sbqe1jYvUX"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3qPxIz97nFl2Sbqe1jYvUX",
-              "id": "3qPxIz97nFl2Sbqe1jYvUX",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Storm Before the Calm - Live",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:3qPxIz97nFl2Sbqe1jYvUX"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 335506,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6BITfbKl4ap3MD1kzU8urV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6BITfbKl4ap3MD1kzU8urV",
-              "id": "6BITfbKl4ap3MD1kzU8urV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Everything - Live",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:6BITfbKl4ap3MD1kzU8urV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 490746,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/41rSGP0BLBNYGccxOfB7fW"
-              },
-              "href": "https://api.spotify.com/v1/tracks/41rSGP0BLBNYGccxOfB7fW",
-              "id": "41rSGP0BLBNYGccxOfB7fW",
-              "is_local": false,
-              "is_playable": true,
-              "name": "A Simple Mistake - Live",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:41rSGP0BLBNYGccxOfB7fW"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 281346,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/010q9eG6p4mn49HfukjhLo"
-              },
-              "href": "https://api.spotify.com/v1/tracks/010q9eG6p4mn49HfukjhLo",
-              "id": "010q9eG6p4mn49HfukjhLo",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Beginning and the End - Live",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:010q9eG6p4mn49HfukjhLo"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 446093,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/57Y31yixedHRfATwidyh5K"
-              },
-              "href": "https://api.spotify.com/v1/tracks/57Y31yixedHRfATwidyh5K",
-              "id": "57Y31yixedHRfATwidyh5K",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Universal - Live",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:57Y31yixedHRfATwidyh5K"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 342826,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2HXD5cPp44bKNDp9CwiEHx"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2HXD5cPp44bKNDp9CwiEHx",
-              "id": "2HXD5cPp44bKNDp9CwiEHx",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Closer - Live",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:2HXD5cPp44bKNDp9CwiEHx"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 378120,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1WgZH5bq7J4DyZpEe1CiV4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1WgZH5bq7J4DyZpEe1CiV4",
-              "id": "1WgZH5bq7J4DyZpEe1CiV4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "A Natural Disaster - Live",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:1WgZH5bq7J4DyZpEe1CiV4"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0ZXKT0FCsLWkSLCjoBJgBX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0ZXKT0FCsLWkSLCjoBJgBX",
-                  "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-                  "name": "Anathema",
-                  "type": "artist",
-                  "uri": "spotify:artist:0ZXKT0FCsLWkSLCjoBJgBX"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 490186,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0AK0OU50z7fCrYvySPVjAz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0AK0OU50z7fCrYvySPVjAz",
-              "id": "0AK0OU50z7fCrYvySPVjAz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Flying - Live",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:0AK0OU50z7fCrYvySPVjAz"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 12
-        },
-        "type": "album",
-        "uri": "spotify:album:78livMFiP8Jlf4z3s7Q4YW"
-      },
-      "release_date": "2013-09-23",
-      "release_date_precision": "day",
-      "total_tracks": 12,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 416413,
-          "explicit": false,
-          "id": "0EBvRI3CqPYRWAkzHdGaeU",
-          "name": "Untouchable, Pt. 1 - Live",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 343333,
-          "explicit": false,
-          "id": "4lx2YbTuYzKq23dqkDJlfA",
-          "name": "Untouchable, Pt. 2 - Live",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 351133,
-          "explicit": false,
-          "id": "1SLZXfHsqN0QW3vtDYP1FE",
-          "name": "Thin Air - Live",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 339360,
-          "explicit": false,
-          "id": "7hDFs0a6KRamy7fhn8MjPg",
-          "name": "Dreaming Light - Live",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 552786,
-          "explicit": false,
-          "id": "3qPxIz97nFl2Sbqe1jYvUX",
-          "name": "The Storm Before the Calm - Live",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 335506,
-          "explicit": false,
-          "id": "6BITfbKl4ap3MD1kzU8urV",
-          "name": "Everything - Live",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 490746,
-          "explicit": false,
-          "id": "41rSGP0BLBNYGccxOfB7fW",
-          "name": "A Simple Mistake - Live",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 281346,
-          "explicit": false,
-          "id": "010q9eG6p4mn49HfukjhLo",
-          "name": "The Beginning and the End - Live",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 446093,
-          "explicit": false,
-          "id": "57Y31yixedHRfATwidyh5K",
-          "name": "Universal - Live",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 342826,
-          "explicit": false,
-          "id": "2HXD5cPp44bKNDp9CwiEHx",
-          "name": "Closer - Live",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 378120,
-          "explicit": false,
-          "id": "1WgZH5bq7J4DyZpEe1CiV4",
-          "name": "A Natural Disaster - Live",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "0ZXKT0FCsLWkSLCjoBJgBX",
-              "name": "Anathema"
-            }
-          ],
-          "duration_ms": 490186,
-          "explicit": false,
-          "id": "0AK0OU50z7fCrYvySPVjAz",
-          "name": "Flying - Live",
-          "preview_url": null,
-          "track_number": 12
-        }
-      ],
-      "url": "https://open.spotify.com/album/78livMFiP8Jlf4z3s7Q4YW"
     }
   },
-  "spotify_id": "78livMFiP8Jlf4z3s7Q4YW",
-  "spotify_url": "https://open.spotify.com/album/78livMFiP8Jlf4z3s7Q4YW",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Alternative Rock"
   ],
@@ -1175,6 +500,6 @@
       "title": "Flying"
     }
   ],
-  "updated_at": "2025-07-05T17:32:05.105607",
+  "updated_at": "2025-07-07T19:16:05.729975",
   "year": 2013
 }

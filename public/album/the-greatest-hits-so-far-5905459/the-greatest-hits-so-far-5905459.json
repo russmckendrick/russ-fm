@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "714765153",
+  "apple_music_url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153",
   "artists": [
     {
       "apple_music_id": "1515240368",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T17:49:18.178380",
+  "created_at": "2025-07-07T19:10:53.682031",
   "date_added": "2016-04-25T21:06:35-07:00",
   "discogs_id": "5905459",
   "discogs_url": "https://www.discogs.com/release/5905459-Public-Image-Ltd-The-Greatest-Hits-So-Far",
@@ -41,6 +41,20 @@
       "type": "primary",
       "url": "https://i.discogs.com/PuPYVwBeiGmVmDQPFQ7zLpu-pD7tzAyGJhOpmODQHU0/rs:fit/g:sm/q:90/h:574/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU5MDU0/NTktMTQwNTk1MjI0/OC03MTU3LmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-greatest-hits-so-far-5905459/the-greatest-hits-so-far-5905459.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -48,21 +62,74 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-greatest-hits-so-far-5905459/the-greatest-hits-so-far-5905459-hi-res.jpg",
+    "medium": "../public/album/the-greatest-hits-so-far-5905459/the-greatest-hits-so-far-5905459-medium.jpg",
+    "small": "../public/album/the-greatest-hits-so-far-5905459/the-greatest-hits-so-far-5905459-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:49:19.525284",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:11:03.503279",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "The Greatest Hits, So Far (Remastered)",
   "release_name_discogs": "The Greatest Hits, So Far",
   "release_name_spotify": null,
   "released": "2014",
-  "services": {},
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "This Compilation ℗ 2011 Virgin Records Limited",
+      "editorial_notes": null,
+      "id": "714765153",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Public Image Ltd.",
+        "artwork": {
+          "bgColor": "fbc024",
+          "height": 1429,
+          "textColor1": "0d0a0e",
+          "textColor2": "2e2a1d",
+          "textColor3": "3c2e13",
+          "textColor4": "57481e",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/{w}x{h}bb.jpg",
+          "width": 1429
+        },
+        "copyright": "This Compilation ℗ 2011 Virgin Records Limited",
+        "genreNames": [
+          "Adult Alternative",
+          "Music",
+          "Rock",
+          "Alternative",
+          "College Rock",
+          "Electronic",
+          "Prog-Rock/Art Rock"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "The Greatest Hits, So Far (Remastered)",
+        "playParams": {
+          "id": "714765153",
+          "kind": "album"
+        },
+        "recordLabel": "Virgin Catalogue",
+        "releaseDate": "2011-01-01",
+        "trackCount": 14,
+        "upc": "05099908801654",
+        "url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153"
+      },
+      "url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153"
+    }
+  },
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -156,6 +223,6 @@
       "title": "Don't Ask Me"
     }
   ],
-  "updated_at": "2025-07-05T17:49:19.524652",
+  "updated_at": "2025-07-07T19:11:03.195448",
   "year": 2014
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1726652232",
+  "apple_music_url": "https://music.apple.com/gb/album/rarities/1726652232",
   "artists": [
     {
       "apple_music_id": "205128673",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:34:32.977838",
+  "created_at": "2025-07-07T19:14:58.782815",
   "date_added": "2016-11-21T12:14:42-08:00",
   "discogs_id": "2768249",
   "discogs_url": "https://www.discogs.com/release/2768249-Emiliana-Torrini-Rarities",
@@ -146,6 +146,20 @@
       "type": "secondary",
       "url": "https://i.discogs.com/9pr3nNmuESFE87HkIijPVJeoPWkVkfNC04fNkS4QQ0M/rs:fit/g:sm/q:90/h:600/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3Njgy/NDktMTY3MTgwODE1/Ny04MzM4LmpwZWc.jpeg",
       "width": 596
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/46/58/d04658ff-e7f1-e7c4-1a08-b984c9f48c95/5016958107024.png/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/rarities-2768249/rarities-2768249.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -153,21 +167,72 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/rarities-2768249/rarities-2768249-hi-res.jpg",
+    "medium": "../public/album/rarities-2768249/rarities-2768249-medium.jpg",
+    "small": "../public/album/rarities-2768249/rarities-2768249-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:34:33.627065",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T19:15:13.381532",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Rarities",
   "release_name_discogs": "Rarities",
   "release_name_spotify": null,
   "released": "2011-02-14",
-  "services": {},
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/46/58/d04658ff-e7f1-e7c4-1a08-b984c9f48c95/5016958107024.png/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2001 One Little Independent Records",
+      "editorial_notes": null,
+      "id": "1726652232",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Emilíana Torrini",
+        "artwork": {
+          "bgColor": "ebebf5",
+          "height": 1440,
+          "textColor1": "0c0c0e",
+          "textColor2": "292435",
+          "textColor3": "38393c",
+          "textColor4": "504b5b",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d0/46/58/d04658ff-e7f1-e7c4-1a08-b984c9f48c95/5016958107024.png/{w}x{h}bb.jpg",
+          "width": 1440
+        },
+        "copyright": "℗ 2001 One Little Independent Records",
+        "genreNames": [
+          "Dance",
+          "Music",
+          "Rock",
+          "Adult Alternative",
+          "Singer/Songwriter"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Rarities",
+        "playParams": {
+          "id": "1726652232",
+          "kind": "album"
+        },
+        "recordLabel": "One Little Independent Records",
+        "releaseDate": "2001-01-01",
+        "trackCount": 9,
+        "upc": "5016958107024",
+        "url": "https://music.apple.com/gb/album/rarities/1726652232"
+      },
+      "url": "https://music.apple.com/gb/album/rarities/1726652232"
+    }
+  },
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -346,6 +411,6 @@
       "title": "Unemployed In Summertime (Dreemhouse Unemployed Club Mix)"
     }
   ],
-  "updated_at": "2025-07-05T17:34:33.626168",
+  "updated_at": "2025-07-07T19:15:13.076954",
   "year": 2011
 }

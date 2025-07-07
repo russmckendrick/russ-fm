@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1517448191",
-  "apple_music_url": "https://music.apple.com/gb/album/good-vibrations-live-on-the-ed-sullivan-show-october/1517448191",
+  "apple_music_id": "716240038",
+  "apple_music_url": "https://music.apple.com/gb/album/good-vibrations-40th-anniversary-ep/716240038",
   "artists": [
     {
       "apple_music_id": "562555",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-05T17:37:07.041401",
+  "created_at": "2025-07-07T19:14:34.465719",
   "date_added": "2016-10-28T18:30:24-07:00",
   "discogs_id": "9268345",
   "discogs_url": "https://www.discogs.com/release/9268345-The-Beach-Boys-Good-Vibrations",
@@ -78,7 +78,14 @@
       "height": 2000,
       "resource_url": null,
       "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/81/4a/8b/814a8beb-4a06-8102-8cfd-54917e64b8a0/20UMGIM47464.rgb.jpg/2000x2000bb.jpg",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/74/51/f6/7451f63d-c36c-c263-3d99-6f3cbd97ea5c/13UABIM51478.rgb.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/good-vibrations-9268345/good-vibrations-9268345.jpg",
       "width": 2000
     }
   ],
@@ -88,14 +95,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/The+Beach+Boys/Good+Vibrations",
   "local_images": {
-    "hi-res": "public/album/good-vibrations-9268345/good-vibrations-9268345-hi-res.jpg",
-    "medium": "public/album/good-vibrations-9268345/good-vibrations-9268345-medium.jpg",
-    "small": "public/album/good-vibrations-9268345/good-vibrations-9268345-small.jpg"
+    "hi-res": "../public/album/good-vibrations-9268345/good-vibrations-9268345-hi-res.jpg",
+    "medium": "../public/album/good-vibrations-9268345/good-vibrations-9268345-medium.jpg",
+    "small": "../public/album/good-vibrations-9268345/good-vibrations-9268345-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:37:09.798151",
+    "processed_at": "2025-07-07T19:14:46.273406",
     "services_used": [
       "discogs",
       "apple_music",
@@ -103,52 +110,57 @@
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Good Vibrations (Live On The Ed Sullivan Show, October 13, 1968) - Single",
+  "release_name_apple_music": "Good Vibrations (40th Anniversary) - EP",
   "release_name_discogs": "Good Vibrations",
-  "release_name_spotify": "The Beach Boys: Music From The Documentary",
+  "release_name_spotify": "Good Vibrations 40th Anniversary",
   "released": "2016-10-28",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/81/4a/8b/814a8beb-4a06-8102-8cfd-54917e64b8a0/20UMGIM47464.rgb.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/74/51/f6/7451f63d-c36c-c263-3d99-6f3cbd97ea5c/13UABIM51478.rgb.jpg/2000x2000bb.jpg",
       "content_rating": null,
-      "copyright": "℗ 2020 SOFA Entertainment, under exclusive license to Universal Music Enterprises, a division of UMG Recordings, Inc.",
+      "copyright": "℗ 2006 Capitol Records, LLC",
       "editorial_notes": null,
-      "id": "1517448191",
+      "id": "716240038",
       "is_complete": true,
       "preview_url": null,
       "raw_attributes": {
         "artistName": "The Beach Boys",
         "artwork": {
-          "bgColor": "020205",
-          "height": 3000,
-          "textColor1": "ffffff",
-          "textColor2": "fbb71c",
-          "textColor3": "cccccc",
-          "textColor4": "c99317",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/81/4a/8b/814a8beb-4a06-8102-8cfd-54917e64b8a0/20UMGIM47464.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 3000
+          "bgColor": "100a0a",
+          "height": 1500,
+          "textColor1": "fdeee9",
+          "textColor2": "f54624",
+          "textColor3": "cdc0bc",
+          "textColor4": "c73a1f",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/74/51/f6/7451f63d-c36c-c263-3d99-6f3cbd97ea5c/13UABIM51478.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 1500
         },
-        "copyright": "℗ 2020 SOFA Entertainment, under exclusive license to Universal Music Enterprises, a division of UMG Recordings, Inc.",
+        "copyright": "℗ 2006 Capitol Records, LLC",
         "genreNames": [
+          "Pop",
+          "Music",
+          "Pop/Rock",
           "Rock",
-          "Music"
+          "Soft Rock",
+          "Adult Contemporary",
+          "Psychedelic"
         ],
         "isCompilation": false,
         "isComplete": true,
         "isMasteredForItunes": false,
-        "isSingle": true,
-        "name": "Good Vibrations (Live On The Ed Sullivan Show, October 13, 1968) - Single",
+        "isSingle": false,
+        "name": "Good Vibrations (40th Anniversary) - EP",
         "playParams": {
-          "id": "1517448191",
+          "id": "716240038",
           "kind": "album"
         },
-        "recordLabel": "SOFA - AV Catalog DD",
-        "releaseDate": "2020-06-12",
-        "trackCount": 1,
-        "upc": "00602507345914",
-        "url": "https://music.apple.com/gb/album/good-vibrations-live-on-the-ed-sullivan-show-october/1517448191"
+        "recordLabel": "Capitol Records",
+        "releaseDate": "2006-06-27",
+        "trackCount": 6,
+        "upc": "00094634496353",
+        "url": "https://music.apple.com/gb/album/good-vibrations-40th-anniversary-ep/716240038"
       },
-      "url": "https://music.apple.com/gb/album/good-vibrations-live-on-the-ed-sullivan-show-october/1517448191"
+      "url": "https://music.apple.com/gb/album/good-vibrations-40th-anniversary-ep/716240038"
     },
     "lastfm": {
       "images": [
@@ -177,9 +189,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/30c2e252415f45e9c584879a1c47a562.png"
         }
       ],
-      "listeners": 15208,
+      "listeners": 15216,
       "mbid": "01d23afc-8581-46a7-ade9-1605309b1df5",
-      "playcount": 86454,
+      "playcount": 86469,
       "raw_data": {
         "album": {
           "artist": "The Beach Boys",
@@ -209,10 +221,10 @@
               "size": ""
             }
           ],
-          "listeners": "15208",
+          "listeners": "15216",
           "mbid": "01d23afc-8581-46a7-ade9-1605309b1df5",
           "name": "Good Vibrations",
-          "playcount": "86454",
+          "playcount": "86469",
           "tags": {
             "tag": [
               {
@@ -327,45 +339,45 @@
       "wiki_summary": ""
     },
     "spotify": {
-      "album_type": "album",
+      "album_type": "single",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 2024 UMG Recordings, Inc.",
+          "text": "© 2006 Capitol Records, LLC",
           "type": "C"
         },
         {
-          "text": "℗ 2024 UMG Recordings, Inc.",
+          "text": "℗ 2006 Capitol Records, LLC",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "00602475002567"
+        "upc": "00094634496353"
       },
-      "id": "5KDmDV7mN5MOZm7A1cj9IK",
+      "id": "2kgmLqUim1JdglABNIc5zn",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27330b793f98fa01283dc96303d",
+          "url": "https://i.scdn.co/image/ab67616d0000b2735478ee4e266859d6428905e1",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0230b793f98fa01283dc96303d",
+          "url": "https://i.scdn.co/image/ab67616d00001e025478ee4e266859d6428905e1",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485130b793f98fa01283dc96303d",
+          "url": "https://i.scdn.co/image/ab67616d000048515478ee4e266859d6428905e1",
           "width": 64
         }
       ],
-      "label": "CAPITOL CATALOG MKT (C92)",
-      "popularity": 48,
+      "label": "Capitol Records",
+      "popularity": 54,
       "preview_url": null,
       "raw_data": {
-        "album_type": "album",
+        "album_type": "single",
         "artists": [
           {
             "external_urls": {
@@ -380,49 +392,49 @@
         ],
         "copyrights": [
           {
-            "text": "© 2024 UMG Recordings, Inc.",
+            "text": "© 2006 Capitol Records, LLC",
             "type": "C"
           },
           {
-            "text": "℗ 2024 UMG Recordings, Inc.",
+            "text": "℗ 2006 Capitol Records, LLC",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "00602475002567"
+          "upc": "00094634496353"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/5KDmDV7mN5MOZm7A1cj9IK"
+          "spotify": "https://open.spotify.com/album/2kgmLqUim1JdglABNIc5zn"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/5KDmDV7mN5MOZm7A1cj9IK?market=US",
-        "id": "5KDmDV7mN5MOZm7A1cj9IK",
+        "href": "https://api.spotify.com/v1/albums/2kgmLqUim1JdglABNIc5zn?market=US",
+        "id": "2kgmLqUim1JdglABNIc5zn",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27330b793f98fa01283dc96303d",
+            "url": "https://i.scdn.co/image/ab67616d0000b2735478ee4e266859d6428905e1",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0230b793f98fa01283dc96303d",
+            "url": "https://i.scdn.co/image/ab67616d00001e025478ee4e266859d6428905e1",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485130b793f98fa01283dc96303d",
+            "url": "https://i.scdn.co/image/ab67616d000048515478ee4e266859d6428905e1",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "CAPITOL CATALOG MKT (C92)",
-        "name": "The Beach Boys: Music From The Documentary",
-        "popularity": 48,
-        "release_date": "2024-05-24",
+        "label": "Capitol Records",
+        "name": "Good Vibrations 40th Anniversary",
+        "popularity": 54,
+        "release_date": "2006-01-01",
         "release_date_precision": "day",
-        "total_tracks": 18,
+        "total_tracks": 6,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/5KDmDV7mN5MOZm7A1cj9IK/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/2kgmLqUim1JdglABNIc5zn/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -438,20 +450,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 137816,
+              "duration_ms": 217746,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/74S4872vnbJ9HYK7DCmHN1"
+                "spotify": "https://open.spotify.com/track/2oF7FZHIJbzjeEXZ3D0Ku4"
               },
-              "href": "https://api.spotify.com/v1/tracks/74S4872vnbJ9HYK7DCmHN1",
-              "id": "74S4872vnbJ9HYK7DCmHN1",
+              "href": "https://api.spotify.com/v1/tracks/2oF7FZHIJbzjeEXZ3D0Ku4",
+              "id": "2oF7FZHIJbzjeEXZ3D0Ku4",
               "is_local": false,
               "is_playable": true,
-              "name": "Surfin' Safari - Original Long Version / Mono / Remastered 2013",
+              "name": "Good Vibrations - Remastered 2001",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:74S4872vnbJ9HYK7DCmHN1"
+              "uri": "spotify:track:2oF7FZHIJbzjeEXZ3D0Ku4"
             },
             {
               "artists": [
@@ -467,20 +479,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 133727,
+              "duration_ms": 416333,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2GR8SvytwyVyPJTwwt0HSg"
+                "spotify": "https://open.spotify.com/track/3PjUF21gMg1cYdvnqOBSai"
               },
-              "href": "https://api.spotify.com/v1/tracks/2GR8SvytwyVyPJTwwt0HSg",
-              "id": "2GR8SvytwyVyPJTwwt0HSg",
+              "href": "https://api.spotify.com/v1/tracks/3PjUF21gMg1cYdvnqOBSai",
+              "id": "3PjUF21gMg1cYdvnqOBSai",
               "is_local": false,
               "is_playable": true,
-              "name": "I Get Around - 2021 Stereo Mix",
+              "name": "Good Vibrations (Various Sessions) - Remastered",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:2GR8SvytwyVyPJTwwt0HSg"
+              "uri": "spotify:track:3PjUF21gMg1cYdvnqOBSai"
             },
             {
               "artists": [
@@ -496,20 +508,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 168107,
+              "duration_ms": 214733,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5ztl21y9jNd6fYZTdXxVN5"
+                "spotify": "https://open.spotify.com/track/5E8d4Gg0cgN6CoxVkGP6Pj"
               },
-              "href": "https://api.spotify.com/v1/tracks/5ztl21y9jNd6fYZTdXxVN5",
-              "id": "5ztl21y9jNd6fYZTdXxVN5",
+              "href": "https://api.spotify.com/v1/tracks/5E8d4Gg0cgN6CoxVkGP6Pj",
+              "id": "5E8d4Gg0cgN6CoxVkGP6Pj",
               "is_local": false,
               "is_playable": true,
-              "name": "Help Me, Rhonda - 2021 Stereo Mix",
+              "name": "Good Vibrations - Alternate Take",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:5ztl21y9jNd6fYZTdXxVN5"
+              "uri": "spotify:track:5E8d4Gg0cgN6CoxVkGP6Pj"
             },
             {
               "artists": [
@@ -525,20 +537,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 148993,
+              "duration_ms": 233106,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/04iAF5rdQTtaWdaMM7Caic"
+                "spotify": "https://open.spotify.com/track/75SQHTleomODyvFNRzEMsy"
               },
-              "href": "https://api.spotify.com/v1/tracks/04iAF5rdQTtaWdaMM7Caic",
-              "id": "04iAF5rdQTtaWdaMM7Caic",
+              "href": "https://api.spotify.com/v1/tracks/75SQHTleomODyvFNRzEMsy",
+              "id": "75SQHTleomODyvFNRzEMsy",
               "is_local": false,
               "is_playable": true,
-              "name": "Surfer Girl - 2021 Stereo Mix",
+              "name": "Good Vibrations - Instrumental",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:04iAF5rdQTtaWdaMM7Caic"
+              "uri": "spotify:track:75SQHTleomODyvFNRzEMsy"
             },
             {
               "artists": [
@@ -554,20 +566,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 154648,
+              "duration_ms": 249853,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/06nWHp3NevciyxvYKpwtMJ"
+                "spotify": "https://open.spotify.com/track/6iKUa5127EqO0vsgnMG6F7"
               },
-              "href": "https://api.spotify.com/v1/tracks/06nWHp3NevciyxvYKpwtMJ",
-              "id": "06nWHp3NevciyxvYKpwtMJ",
+              "href": "https://api.spotify.com/v1/tracks/6iKUa5127EqO0vsgnMG6F7",
+              "id": "6iKUa5127EqO0vsgnMG6F7",
               "is_local": false,
               "is_playable": true,
-              "name": "Do You Wanna Dance? - 2021 Stereo Mix",
+              "name": "Good Vibrations - Live Concert Rehearsal / Remastered",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:06nWHp3NevciyxvYKpwtMJ"
+              "uri": "spotify:track:6iKUa5127EqO0vsgnMG6F7"
             },
             {
               "artists": [
@@ -583,382 +595,34 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 100153,
+              "duration_ms": 142720,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/34h1lvqOc7WSbASmA5DIMD"
+                "spotify": "https://open.spotify.com/track/1NGyygm4FpvtIAJ0MZt0mQ"
               },
-              "href": "https://api.spotify.com/v1/tracks/34h1lvqOc7WSbASmA5DIMD",
-              "id": "34h1lvqOc7WSbASmA5DIMD",
+              "href": "https://api.spotify.com/v1/tracks/1NGyygm4FpvtIAJ0MZt0mQ",
+              "id": "1NGyygm4FpvtIAJ0MZt0mQ",
               "is_local": false,
               "is_playable": true,
-              "name": "Little Deuce Coupe",
+              "name": "Let's Go Away For Awhile",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:34h1lvqOc7WSbASmA5DIMD"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 147868,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/19uLrdjvV1vy3d0AwPCOZm"
-              },
-              "href": "https://api.spotify.com/v1/tracks/19uLrdjvV1vy3d0AwPCOZm",
-              "id": "19uLrdjvV1vy3d0AwPCOZm",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Surfin' U.S.A. - 2021 Stereo Mix",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:19uLrdjvV1vy3d0AwPCOZm"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 166118,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6KzTAfmNavMdppaxl4Gg7t"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6KzTAfmNavMdppaxl4Gg7t",
-              "id": "6KzTAfmNavMdppaxl4Gg7t",
-              "is_local": false,
-              "is_playable": true,
-              "name": "California Girls - Remastered 2001",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:6KzTAfmNavMdppaxl4Gg7t"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 171462,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5Rrb6KjtXdPQd3dVQhXRke"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5Rrb6KjtXdPQd3dVQhXRke",
-              "id": "5Rrb6KjtXdPQd3dVQhXRke",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Don't Worry Baby - 2021 Stereo Mix",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:5Rrb6KjtXdPQd3dVQhXRke"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 137403,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0fq7CW2sbiDKiQh0imQhKm"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0fq7CW2sbiDKiQh0imQhKm",
-              "id": "0fq7CW2sbiDKiQh0imQhKm",
-              "is_local": false,
-              "is_playable": true,
-              "name": "In My Room - 2021 Stereo Mix",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:0fq7CW2sbiDKiQh0imQhKm"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 153726,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7D1Ux8BFf1tiKu3dYgjqqg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7D1Ux8BFf1tiKu3dYgjqqg",
-              "id": "7D1Ux8BFf1tiKu3dYgjqqg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Wouldn't It Be Nice - Remastered 2012",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:7D1Ux8BFf1tiKu3dYgjqqg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 175993,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0rZEkctNipTaLmkA9enbzr"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0rZEkctNipTaLmkA9enbzr",
-              "id": "0rZEkctNipTaLmkA9enbzr",
-              "is_local": false,
-              "is_playable": true,
-              "name": "God Only Knows - Remastered 1996",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:0rZEkctNipTaLmkA9enbzr"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 223006,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4cj4ggzoNTmIZDeWvHIbYF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4cj4ggzoNTmIZDeWvHIbYF",
-              "id": "4cj4ggzoNTmIZDeWvHIbYF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Good Vibrations - 2021 Stereo Mix",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:4cj4ggzoNTmIZDeWvHIbYF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 156212,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/79Xsd3ckoMCpA33K33x1Vq"
-              },
-              "href": "https://api.spotify.com/v1/tracks/79Xsd3ckoMCpA33K33x1Vq",
-              "id": "79Xsd3ckoMCpA33K33x1Vq",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Can Hear Music",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:79Xsd3ckoMCpA33K33x1Vq"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 164386,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6UcYzf9BMIW8at1OkIA2hh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6UcYzf9BMIW8at1OkIA2hh",
-              "id": "6UcYzf9BMIW8at1OkIA2hh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Forever",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:6UcYzf9BMIW8at1OkIA2hh"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 212435,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6k4TKCiLygitz52xL8ReBJ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6k4TKCiLygitz52xL8ReBJ",
-              "id": "6k4TKCiLygitz52xL8ReBJ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Long Promised Road",
-              "preview_url": null,
-              "track_number": 16,
-              "type": "track",
-              "uri": "spotify:track:6k4TKCiLygitz52xL8ReBJ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3oDbviiivRWhXwIE8hxkVV"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3oDbviiivRWhXwIE8hxkVV",
-                  "id": "3oDbviiivRWhXwIE8hxkVV",
-                  "name": "The Beach Boys",
-                  "type": "artist",
-                  "uri": "spotify:artist:3oDbviiivRWhXwIE8hxkVV"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 134289,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5tyrQMpWpWs3zjwULMHhl1"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5tyrQMpWpWs3zjwULMHhl1",
-              "id": "5tyrQMpWpWs3zjwULMHhl1",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Darlin' - 2021 Stereo Mix",
-              "preview_url": null,
-              "track_number": 17,
-              "type": "track",
-              "uri": "spotify:track:5tyrQMpWpWs3zjwULMHhl1"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5XKFrudbV4IiuE5WuTPRmT"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5XKFrudbV4IiuE5WuTPRmT",
-                  "id": "5XKFrudbV4IiuE5WuTPRmT",
-                  "name": "Stephen Sanchez",
-                  "type": "artist",
-                  "uri": "spotify:artist:5XKFrudbV4IiuE5WuTPRmT"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 195068,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0GEulhPIWg7NjbEMUNJ5iO"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0GEulhPIWg7NjbEMUNJ5iO",
-              "id": "0GEulhPIWg7NjbEMUNJ5iO",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Baby Blue Bathing Suit - Bonus Track",
-              "preview_url": null,
-              "track_number": 18,
-              "type": "track",
-              "uri": "spotify:track:0GEulhPIWg7NjbEMUNJ5iO"
+              "uri": "spotify:track:1NGyygm4FpvtIAJ0MZt0mQ"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 18
+          "total": 6
         },
         "type": "album",
-        "uri": "spotify:album:5KDmDV7mN5MOZm7A1cj9IK"
+        "uri": "spotify:album:2kgmLqUim1JdglABNIc5zn"
       },
-      "release_date": "2024-05-24",
+      "release_date": "2006-01-01",
       "release_date_precision": "day",
-      "total_tracks": 18,
+      "total_tracks": 6,
       "tracks": [
         {
           "artists": [
@@ -967,10 +631,10 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 137816,
+          "duration_ms": 217746,
           "explicit": false,
-          "id": "74S4872vnbJ9HYK7DCmHN1",
-          "name": "Surfin' Safari - Original Long Version / Mono / Remastered 2013",
+          "id": "2oF7FZHIJbzjeEXZ3D0Ku4",
+          "name": "Good Vibrations - Remastered 2001",
           "preview_url": null,
           "track_number": 1
         },
@@ -981,10 +645,10 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 133727,
+          "duration_ms": 416333,
           "explicit": false,
-          "id": "2GR8SvytwyVyPJTwwt0HSg",
-          "name": "I Get Around - 2021 Stereo Mix",
+          "id": "3PjUF21gMg1cYdvnqOBSai",
+          "name": "Good Vibrations (Various Sessions) - Remastered",
           "preview_url": null,
           "track_number": 2
         },
@@ -995,10 +659,10 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 168107,
+          "duration_ms": 214733,
           "explicit": false,
-          "id": "5ztl21y9jNd6fYZTdXxVN5",
-          "name": "Help Me, Rhonda - 2021 Stereo Mix",
+          "id": "5E8d4Gg0cgN6CoxVkGP6Pj",
+          "name": "Good Vibrations - Alternate Take",
           "preview_url": null,
           "track_number": 3
         },
@@ -1009,10 +673,10 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 148993,
+          "duration_ms": 233106,
           "explicit": false,
-          "id": "04iAF5rdQTtaWdaMM7Caic",
-          "name": "Surfer Girl - 2021 Stereo Mix",
+          "id": "75SQHTleomODyvFNRzEMsy",
+          "name": "Good Vibrations - Instrumental",
           "preview_url": null,
           "track_number": 4
         },
@@ -1023,10 +687,10 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 154648,
+          "duration_ms": 249853,
           "explicit": false,
-          "id": "06nWHp3NevciyxvYKpwtMJ",
-          "name": "Do You Wanna Dance? - 2021 Stereo Mix",
+          "id": "6iKUa5127EqO0vsgnMG6F7",
+          "name": "Good Vibrations - Live Concert Rehearsal / Remastered",
           "preview_url": null,
           "track_number": 5
         },
@@ -1037,187 +701,19 @@
               "name": "The Beach Boys"
             }
           ],
-          "duration_ms": 100153,
+          "duration_ms": 142720,
           "explicit": false,
-          "id": "34h1lvqOc7WSbASmA5DIMD",
-          "name": "Little Deuce Coupe",
+          "id": "1NGyygm4FpvtIAJ0MZt0mQ",
+          "name": "Let's Go Away For Awhile",
           "preview_url": null,
           "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 147868,
-          "explicit": false,
-          "id": "19uLrdjvV1vy3d0AwPCOZm",
-          "name": "Surfin' U.S.A. - 2021 Stereo Mix",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 166118,
-          "explicit": false,
-          "id": "6KzTAfmNavMdppaxl4Gg7t",
-          "name": "California Girls - Remastered 2001",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 171462,
-          "explicit": false,
-          "id": "5Rrb6KjtXdPQd3dVQhXRke",
-          "name": "Don't Worry Baby - 2021 Stereo Mix",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 137403,
-          "explicit": false,
-          "id": "0fq7CW2sbiDKiQh0imQhKm",
-          "name": "In My Room - 2021 Stereo Mix",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 153726,
-          "explicit": false,
-          "id": "7D1Ux8BFf1tiKu3dYgjqqg",
-          "name": "Wouldn't It Be Nice - Remastered 2012",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 175993,
-          "explicit": false,
-          "id": "0rZEkctNipTaLmkA9enbzr",
-          "name": "God Only Knows - Remastered 1996",
-          "preview_url": null,
-          "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 223006,
-          "explicit": false,
-          "id": "4cj4ggzoNTmIZDeWvHIbYF",
-          "name": "Good Vibrations - 2021 Stereo Mix",
-          "preview_url": null,
-          "track_number": 13
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 156212,
-          "explicit": false,
-          "id": "79Xsd3ckoMCpA33K33x1Vq",
-          "name": "I Can Hear Music",
-          "preview_url": null,
-          "track_number": 14
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 164386,
-          "explicit": false,
-          "id": "6UcYzf9BMIW8at1OkIA2hh",
-          "name": "Forever",
-          "preview_url": null,
-          "track_number": 15
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 212435,
-          "explicit": false,
-          "id": "6k4TKCiLygitz52xL8ReBJ",
-          "name": "Long Promised Road",
-          "preview_url": null,
-          "track_number": 16
-        },
-        {
-          "artists": [
-            {
-              "id": "3oDbviiivRWhXwIE8hxkVV",
-              "name": "The Beach Boys"
-            }
-          ],
-          "duration_ms": 134289,
-          "explicit": false,
-          "id": "5tyrQMpWpWs3zjwULMHhl1",
-          "name": "Darlin' - 2021 Stereo Mix",
-          "preview_url": null,
-          "track_number": 17
-        },
-        {
-          "artists": [
-            {
-              "id": "5XKFrudbV4IiuE5WuTPRmT",
-              "name": "Stephen Sanchez"
-            }
-          ],
-          "duration_ms": 195068,
-          "explicit": false,
-          "id": "0GEulhPIWg7NjbEMUNJ5iO",
-          "name": "Baby Blue Bathing Suit - Bonus Track",
-          "preview_url": null,
-          "track_number": 18
         }
       ],
-      "url": "https://open.spotify.com/album/5KDmDV7mN5MOZm7A1cj9IK"
+      "url": "https://open.spotify.com/album/2kgmLqUim1JdglABNIc5zn"
     }
   },
-  "spotify_id": "5KDmDV7mN5MOZm7A1cj9IK",
-  "spotify_url": "https://open.spotify.com/album/5KDmDV7mN5MOZm7A1cj9IK",
+  "spotify_id": "2kgmLqUim1JdglABNIc5zn",
+  "spotify_url": "https://open.spotify.com/album/2kgmLqUim1JdglABNIc5zn",
   "styles": [
     "Pop Rock"
   ],
@@ -1260,6 +756,6 @@
       "title": "Let's Go Away For Awhile (Original B-Side)"
     }
   ],
-  "updated_at": "2025-07-05T17:37:08.138942",
+  "updated_at": "2025-07-07T19:14:45.266625",
   "year": 2016
 }
