@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1440848539",
-  "apple_music_url": "https://music.apple.com/gb/album/alvin-and-the-chipmunks-the-road-chip-original/1440848539",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T16:45:04.462733",
+  "created_at": "2025-07-07T15:38:36.009168",
   "date_added": "2018-09-13T18:16:45-07:00",
   "discogs_id": "12488063",
   "discogs_url": "https://www.discogs.com/release/12488063-Various-True-Romance-Motion-Picture-Soundtrack",
@@ -102,8 +102,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/ca/b0/2fcab0ac-c31b-08bb-ebbb-38faa2454d39/15UMGIM66180.rgb.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063.jpg",
       "width": 2000
     }
   ],
@@ -113,105 +113,62 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-hi-res.jpg",
-    "medium": "public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-medium.jpg",
-    "small": "public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-small.jpg"
+    "hi-res": "../public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-hi-res.jpg",
+    "medium": "../public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-medium.jpg",
+    "small": "../public/album/true-romance-motion-picture-soundtrack-12488063/true-romance-motion-picture-soundtrack-12488063-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:45:06.301632",
+    "processed_at": "2025-07-07T15:38:47.238533",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Alvin and the Chipmunks: The Road Chip (Original Motion Picture Soundtrack)",
+  "release_name_apple_music": null,
   "release_name_discogs": "True Romance (Motion Picture Soundtrack)",
-  "release_name_spotify": "Crazy Ex-Girlfriend: Season 3 (Original Television Soundtrack)",
+  "release_name_spotify": "True Romance (Original Motion Picture Soundtrack)",
   "released": "2018-09-07",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/ca/b0/2fcab0ac-c31b-08bb-ebbb-38faa2454d39/15UMGIM66180.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "This Compilation ℗ 2015 Republic Records, a division of UMG Recordings, Inc.",
-      "editorial_notes": null,
-      "id": "1440848539",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "000000",
-          "height": 1500,
-          "textColor1": "ffffff",
-          "textColor2": "f2371d",
-          "textColor3": "cbcbcb",
-          "textColor4": "c22c17",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/2f/ca/b0/2fcab0ac-c31b-08bb-ebbb-38faa2454d39/15UMGIM66180.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "copyright": "This Compilation ℗ 2015 Republic Records, a division of UMG Recordings, Inc.",
-        "genreNames": [
-          "Soundtrack",
-          "Music"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": true,
-        "isSingle": false,
-        "name": "Alvin and the Chipmunks: The Road Chip (Original Motion Picture Soundtrack)",
-        "playParams": {
-          "id": "1440848539",
-          "kind": "album"
-        },
-        "recordLabel": "Republic/Fox/Alvin",
-        "releaseDate": "2015-12-11",
-        "trackCount": 9,
-        "upc": "00602547684936",
-        "url": "https://music.apple.com/gb/album/alvin-and-the-chipmunks-the-road-chip-original/1440848539"
-      },
-      "url": "https://music.apple.com/gb/album/alvin-and-the-chipmunks-the-road-chip-original/1440848539"
-    },
     "spotify": {
       "album_type": "compilation",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "© 2018 MMXVIII CBS Studios Inc. and Warner Bros. Entertainment Inc.",
+          "text": "© 1993 Morgan Creek Music Group. Marketed by Shout! Factory, 2034 Armacost Ave., Los Angeles, CA 90025. All Rights Reserved.",
           "type": "C"
         },
         {
-          "text": "℗ 2018 This compilation WaterTower Music as licensee for MMXVIII CBS Studios Inc.",
+          "text": "This Compilation ℗ 1993 Morgan Creek Music Group. Marketed by Shout! Factory, 2034 Armacost Ave., Los Angeles, CA 90025. All Rights Reserved.",
           "type": "P"
         }
       ],
-      "explicit": true,
+      "explicit": false,
       "external_ids": {
-        "upc": "794043194399"
+        "upc": "00826663137491"
       },
-      "id": "61qQpAsfOVhFo5iDnKth4o",
+      "id": "5RyWJx6ASGDuaEwVe0aWvG",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273dcd351471164deba8bdc33fa",
+          "url": "https://i.scdn.co/image/ab67616d0000b2735e28c13bb4b2b94aa7fc607e",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02dcd351471164deba8bdc33fa",
+          "url": "https://i.scdn.co/image/ab67616d00001e025e28c13bb4b2b94aa7fc607e",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851dcd351471164deba8bdc33fa",
+          "url": "https://i.scdn.co/image/ab67616d000048515e28c13bb4b2b94aa7fc607e",
           "width": 64
         }
       ],
-      "label": "WaterTower Music",
-      "popularity": 41,
+      "label": "Shout! Factory Records",
+      "popularity": 34,
       "preview_url": null,
       "raw_data": {
         "album_type": "compilation",
@@ -229,2348 +186,586 @@
         ],
         "copyrights": [
           {
-            "text": "© 2018 MMXVIII CBS Studios Inc. and Warner Bros. Entertainment Inc.",
+            "text": "© 1993 Morgan Creek Music Group. Marketed by Shout! Factory, 2034 Armacost Ave., Los Angeles, CA 90025. All Rights Reserved.",
             "type": "C"
           },
           {
-            "text": "℗ 2018 This compilation WaterTower Music as licensee for MMXVIII CBS Studios Inc.",
+            "text": "This Compilation ℗ 1993 Morgan Creek Music Group. Marketed by Shout! Factory, 2034 Armacost Ave., Los Angeles, CA 90025. All Rights Reserved.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "794043194399"
+          "upc": "00826663137491"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/61qQpAsfOVhFo5iDnKth4o"
+          "spotify": "https://open.spotify.com/album/5RyWJx6ASGDuaEwVe0aWvG"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/61qQpAsfOVhFo5iDnKth4o?market=US",
-        "id": "61qQpAsfOVhFo5iDnKth4o",
+        "href": "https://api.spotify.com/v1/albums/5RyWJx6ASGDuaEwVe0aWvG?market=US",
+        "id": "5RyWJx6ASGDuaEwVe0aWvG",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273dcd351471164deba8bdc33fa",
+            "url": "https://i.scdn.co/image/ab67616d0000b2735e28c13bb4b2b94aa7fc607e",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02dcd351471164deba8bdc33fa",
+            "url": "https://i.scdn.co/image/ab67616d00001e025e28c13bb4b2b94aa7fc607e",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851dcd351471164deba8bdc33fa",
+            "url": "https://i.scdn.co/image/ab67616d000048515e28c13bb4b2b94aa7fc607e",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "WaterTower Music",
-        "name": "Crazy Ex-Girlfriend: Season 3 (Original Television Soundtrack)",
-        "popularity": 41,
-        "release_date": "2018-07-20",
+        "label": "Shout! Factory Records",
+        "name": "True Romance (Original Motion Picture Soundtrack)",
+        "popularity": 34,
+        "release_date": "1993-01-01",
         "release_date_precision": "day",
-        "total_tracks": 38,
+        "total_tracks": 12,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/61qQpAsfOVhFo5iDnKth4o/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/5RyWJx6ASGDuaEwVe0aWvG/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/0YC192cP3KPCRWx8zr8MfZ"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/0YC192cP3KPCRWx8zr8MfZ",
+                  "id": "0YC192cP3KPCRWx8zr8MfZ",
+                  "name": "Hans Zimmer",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:0YC192cP3KPCRWx8zr8MfZ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 240312,
+              "duration_ms": 220040,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6x98PVTwm4pMexZGoW0M8t"
+                "spotify": "https://open.spotify.com/track/5pcBRYIIxevEGUeGFJQ4hY"
               },
-              "href": "https://api.spotify.com/v1/tracks/6x98PVTwm4pMexZGoW0M8t",
-              "id": "6x98PVTwm4pMexZGoW0M8t",
+              "href": "https://api.spotify.com/v1/tracks/5pcBRYIIxevEGUeGFJQ4hY",
+              "id": "5pcBRYIIxevEGUeGFJQ4hY",
               "is_local": false,
               "is_playable": true,
-              "name": "Where's Rebecca Bunch? (feat. Rachel Bloom)",
+              "name": "You're So Cool",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:6x98PVTwm4pMexZGoW0M8t"
+              "uri": "spotify:track:5pcBRYIIxevEGUeGFJQ4hY"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/132XHXfIbAJi5jQKmH986p"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/132XHXfIbAJi5jQKmH986p",
+                  "id": "132XHXfIbAJi5jQKmH986p",
+                  "name": "Charlie Sexton",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4W6kSTuYNVuHw97QMvb2TB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4W6kSTuYNVuHw97QMvb2TB",
-                  "id": "4W6kSTuYNVuHw97QMvb2TB",
-                  "name": "Donna Lynne Champlin",
-                  "type": "artist",
-                  "uri": "spotify:artist:4W6kSTuYNVuHw97QMvb2TB"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5MVEzr4FAatsTTkPhDXkHj"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5MVEzr4FAatsTTkPhDXkHj",
-                  "id": "5MVEzr4FAatsTTkPhDXkHj",
-                  "name": "Gabrielle Ruiz",
-                  "type": "artist",
-                  "uri": "spotify:artist:5MVEzr4FAatsTTkPhDXkHj"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4QLs1KUSQaafoB2dGnxvmR"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4QLs1KUSQaafoB2dGnxvmR",
-                  "id": "4QLs1KUSQaafoB2dGnxvmR",
-                  "name": "Vella Lovell",
-                  "type": "artist",
-                  "uri": "spotify:artist:4QLs1KUSQaafoB2dGnxvmR"
+                  "uri": "spotify:artist:132XHXfIbAJi5jQKmH986p"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 158459,
+              "duration_ms": 205600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/73hr344AmxNViy6IgFw6QL"
+                "spotify": "https://open.spotify.com/track/6uvs2pw75LSJjH5tCvpyGR"
               },
-              "href": "https://api.spotify.com/v1/tracks/73hr344AmxNViy6IgFw6QL",
-              "id": "73hr344AmxNViy6IgFw6QL",
+              "href": "https://api.spotify.com/v1/tracks/6uvs2pw75LSJjH5tCvpyGR",
+              "id": "6uvs2pw75LSJjH5tCvpyGR",
               "is_local": false,
               "is_playable": true,
-              "name": "Let's Generalize About Men (feat. Rachel Bloom, Donna Lynne Champlin, Vella Lovell & Gabrielle Ruiz)",
+              "name": "Graceland",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:73hr344AmxNViy6IgFw6QL"
+              "uri": "spotify:track:6uvs2pw75LSJjH5tCvpyGR"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/2TPyCsRoh2tjeZLTQ2ojlj"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/2TPyCsRoh2tjeZLTQ2ojlj",
+                  "id": "2TPyCsRoh2tjeZLTQ2ojlj",
+                  "name": "John Waite",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:2TPyCsRoh2tjeZLTQ2ojlj"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 34600,
+              "duration_ms": 225466,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4Ehfb4E8OvPY3EdN7DEI5F"
+                "spotify": "https://open.spotify.com/track/5W78nbmHcX8zGbrGib0Dou"
               },
-              "href": "https://api.spotify.com/v1/tracks/4Ehfb4E8OvPY3EdN7DEI5F",
-              "id": "4Ehfb4E8OvPY3EdN7DEI5F",
+              "href": "https://api.spotify.com/v1/tracks/5W78nbmHcX8zGbrGib0Dou",
+              "id": "5W78nbmHcX8zGbrGib0Dou",
               "is_local": false,
               "is_playable": true,
-              "name": "You Do / You Don't Want To Be Crazy (feat. Rachel Bloom)",
+              "name": "In Dreams",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:4Ehfb4E8OvPY3EdN7DEI5F"
+              "uri": "spotify:track:5W78nbmHcX8zGbrGib0Dou"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/5rIhaCHkbFVvLJpKHWwOJD"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/5rIhaCHkbFVvLJpKHWwOJD",
+                  "id": "5rIhaCHkbFVvLJpKHWwOJD",
+                  "name": "Charles & Eddie",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4XhLFUTEjpYtLhGNsgzAB5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4XhLFUTEjpYtLhGNsgzAB5",
-                  "id": "4XhLFUTEjpYtLhGNsgzAB5",
-                  "name": "Vincent Rodriguez III",
-                  "type": "artist",
-                  "uri": "spotify:artist:4XhLFUTEjpYtLhGNsgzAB5"
+                  "uri": "spotify:artist:5rIhaCHkbFVvLJpKHWwOJD"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 136625,
+              "duration_ms": 310533,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1s4ucwO4HJiLqiDqfaHdPM"
+                "spotify": "https://open.spotify.com/track/0q9DVb32rqxiBBmos3lkHh"
               },
-              "href": "https://api.spotify.com/v1/tracks/1s4ucwO4HJiLqiDqfaHdPM",
-              "id": "1s4ucwO4HJiLqiDqfaHdPM",
+              "href": "https://api.spotify.com/v1/tracks/0q9DVb32rqxiBBmos3lkHh",
+              "id": "0q9DVb32rqxiBBmos3lkHh",
               "is_local": false,
               "is_playable": true,
-              "name": "I've Got My Head In The Clouds (feat. Vincent Rodriguez III)",
+              "name": "Wounded Bird",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:1s4ucwO4HJiLqiDqfaHdPM"
+              "uri": "spotify:track:0q9DVb32rqxiBBmos3lkHh"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/2gA8mpcqoWuwlXBmtBrxH1"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/2gA8mpcqoWuwlXBmtBrxH1",
+                  "id": "2gA8mpcqoWuwlXBmtBrxH1",
+                  "name": "Nymphomania",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:2gA8mpcqoWuwlXBmtBrxH1"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 144173,
+              "duration_ms": 258093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5OiPNpd5t2MhBMLt64h7lO"
+                "spotify": "https://open.spotify.com/track/5keVHhRytkZTQ6tukYtXS9"
               },
-              "href": "https://api.spotify.com/v1/tracks/5OiPNpd5t2MhBMLt64h7lO",
-              "id": "5OiPNpd5t2MhBMLt64h7lO",
+              "href": "https://api.spotify.com/v1/tracks/5keVHhRytkZTQ6tukYtXS9",
+              "id": "5keVHhRytkZTQ6tukYtXS9",
               "is_local": false,
               "is_playable": true,
-              "name": "Strip Away My Conscience (feat. Rachel Bloom)",
+              "name": "I Want Your Body",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:5OiPNpd5t2MhBMLt64h7lO"
+              "uri": "spotify:track:5keVHhRytkZTQ6tukYtXS9"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/0YC192cP3KPCRWx8zr8MfZ"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/0YC192cP3KPCRWx8zr8MfZ",
+                  "id": "0YC192cP3KPCRWx8zr8MfZ",
+                  "name": "Hans Zimmer",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3LaxXjSdqm7y8sWO6YySOP"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3LaxXjSdqm7y8sWO6YySOP",
-                  "id": "3LaxXjSdqm7y8sWO6YySOP",
-                  "name": "Michael McMillian",
-                  "type": "artist",
-                  "uri": "spotify:artist:3LaxXjSdqm7y8sWO6YySOP"
+                  "uri": "spotify:artist:0YC192cP3KPCRWx8zr8MfZ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 156339,
+              "duration_ms": 124066,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/65y17hnyKKV1AjQiaAXhfa"
+                "spotify": "https://open.spotify.com/track/2OMWijWLeEbRdMoMkzmlnB"
               },
-              "href": "https://api.spotify.com/v1/tracks/65y17hnyKKV1AjQiaAXhfa",
-              "id": "65y17hnyKKV1AjQiaAXhfa",
+              "href": "https://api.spotify.com/v1/tracks/2OMWijWLeEbRdMoMkzmlnB",
+              "id": "2OMWijWLeEbRdMoMkzmlnB",
               "is_local": false,
               "is_playable": true,
-              "name": "The Buzzing From The Bathroom (feat. Michael McMillian)",
+              "name": "Stars At Dawn",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:65y17hnyKKV1AjQiaAXhfa"
+              "uri": "spotify:track:2OMWijWLeEbRdMoMkzmlnB"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/3xx17YXYvPl9PBx6Jzalk4"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/3xx17YXYvPl9PBx6Jzalk4",
+                  "id": "3xx17YXYvPl9PBx6Jzalk4",
+                  "name": "Shelby Lynne",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:3xx17YXYvPl9PBx6Jzalk4"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 120695,
+              "duration_ms": 260906,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6oLgJcx32uP6b41q7FebgD"
+                "spotify": "https://open.spotify.com/track/6SxEeGhBOoE3lVKqP81q3e"
               },
-              "href": "https://api.spotify.com/v1/tracks/6oLgJcx32uP6b41q7FebgD",
-              "id": "6oLgJcx32uP6b41q7FebgD",
+              "href": "https://api.spotify.com/v1/tracks/6SxEeGhBOoE3lVKqP81q3e",
+              "id": "6SxEeGhBOoE3lVKqP81q3e",
               "is_local": false,
               "is_playable": true,
-              "name": "After Everything You Made Me Do (That You Didn't Ask For) [feat. Rachel Bloom]",
+              "name": "I Need A Heart To Come Home To",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:6oLgJcx32uP6b41q7FebgD"
+              "uri": "spotify:track:6SxEeGhBOoE3lVKqP81q3e"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/3Hf08nPu2dPY3sdngyHQei"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/3Hf08nPu2dPY3sdngyHQei",
+                  "id": "3Hf08nPu2dPY3sdngyHQei",
+                  "name": "Howard Blake",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4QLs1KUSQaafoB2dGnxvmR"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4QLs1KUSQaafoB2dGnxvmR",
-                  "id": "4QLs1KUSQaafoB2dGnxvmR",
-                  "name": "Vella Lovell",
-                  "type": "artist",
-                  "uri": "spotify:artist:4QLs1KUSQaafoB2dGnxvmR"
+                  "uri": "spotify:artist:3Hf08nPu2dPY3sdngyHQei"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 128655,
+              "duration_ms": 236493,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1nu4KzNLIq06wYqfnUh6Cp"
+                "spotify": "https://open.spotify.com/track/1cXKvVWM24YaLlM5DzrPy4"
               },
-              "href": "https://api.spotify.com/v1/tracks/1nu4KzNLIq06wYqfnUh6Cp",
-              "id": "1nu4KzNLIq06wYqfnUh6Cp",
+              "href": "https://api.spotify.com/v1/tracks/1cXKvVWM24YaLlM5DzrPy4",
+              "id": "1cXKvVWM24YaLlM5DzrPy4",
               "is_local": false,
               "is_playable": true,
-              "name": "The Moment Is Me (feat. Vella Lovell)",
+              "name": "Viens Mallika Sous Le Dome Edais From Lakme",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:1nu4KzNLIq06wYqfnUh6Cp"
+              "uri": "spotify:track:1cXKvVWM24YaLlM5DzrPy4"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/530Sdm7eqqzWBdDmILMgnu"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/530Sdm7eqqzWBdDmILMgnu",
+                  "id": "530Sdm7eqqzWBdDmILMgnu",
+                  "name": "Robert Palmer",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
+                  "uri": "spotify:artist:530Sdm7eqqzWBdDmILMgnu"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 139462,
+              "duration_ms": 157106,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4dWWAxU1jpVyaWKKVR0LIR"
+                "spotify": "https://open.spotify.com/track/0FsEaPi87f0DViihgPuq9X"
               },
-              "href": "https://api.spotify.com/v1/tracks/4dWWAxU1jpVyaWKKVR0LIR",
-              "id": "4dWWAxU1jpVyaWKKVR0LIR",
+              "href": "https://api.spotify.com/v1/tracks/0FsEaPi87f0DViihgPuq9X",
+              "id": "0FsEaPi87f0DViihgPuq9X",
               "is_local": false,
               "is_playable": true,
-              "name": "I Go To The Zoo (feat. Scott Michael Foster)",
+              "name": "(Love Is) The Tender Trap",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:4dWWAxU1jpVyaWKKVR0LIR"
+              "uri": "spotify:track:0FsEaPi87f0DViihgPuq9X"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/5xUf6j4upBrXZPg6AI4MRK"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/5xUf6j4upBrXZPg6AI4MRK",
+                  "id": "5xUf6j4upBrXZPg6AI4MRK",
+                  "name": "Soundgarden",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
+                  "uri": "spotify:artist:5xUf6j4upBrXZPg6AI4MRK"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 139462,
-              "explicit": true,
+              "duration_ms": 312226,
+              "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5Pv5UhboXvjXv5WQtHtbBb"
+                "spotify": "https://open.spotify.com/track/35QWh7wQ7Z0miTJZ9PXV8Y"
               },
-              "href": "https://api.spotify.com/v1/tracks/5Pv5UhboXvjXv5WQtHtbBb",
-              "id": "5Pv5UhboXvjXv5WQtHtbBb",
+              "href": "https://api.spotify.com/v1/tracks/35QWh7wQ7Z0miTJZ9PXV8Y",
+              "id": "35QWh7wQ7Z0miTJZ9PXV8Y",
               "is_local": false,
               "is_playable": true,
-              "name": "I Go To The Zoo (feat. Scott Michael Foster)",
+              "name": "Outshined",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:5Pv5UhboXvjXv5WQtHtbBb"
+              "uri": "spotify:track:35QWh7wQ7Z0miTJZ9PXV8Y"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/0YC192cP3KPCRWx8zr8MfZ"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/0YC192cP3KPCRWx8zr8MfZ",
+                  "id": "0YC192cP3KPCRWx8zr8MfZ",
+                  "name": "Hans Zimmer",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:0YC192cP3KPCRWx8zr8MfZ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 57298,
+              "duration_ms": 294200,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4HnGOHLJt4ujA1Bbzzbavy"
+                "spotify": "https://open.spotify.com/track/5ff3NjQ0mdRAlXMhoWnGkp"
               },
-              "href": "https://api.spotify.com/v1/tracks/4HnGOHLJt4ujA1Bbzzbavy",
-              "id": "4HnGOHLJt4ujA1Bbzzbavy",
+              "href": "https://api.spotify.com/v1/tracks/5ff3NjQ0mdRAlXMhoWnGkp",
+              "id": "5ff3NjQ0mdRAlXMhoWnGkp",
               "is_local": false,
               "is_playable": true,
-              "name": "Scary Scary Sexy Lady (feat. Rachel Bloom)",
+              "name": "Amid The Chaos Of The Day",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:4HnGOHLJt4ujA1Bbzzbavy"
+              "uri": "spotify:track:5ff3NjQ0mdRAlXMhoWnGkp"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
+                    "spotify": "https://open.spotify.com/artist/7290H8m1Dwt8G7jm1y9CQx"
                   },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
+                  "href": "https://api.spotify.com/v1/artists/7290H8m1Dwt8G7jm1y9CQx",
+                  "id": "7290H8m1Dwt8G7jm1y9CQx",
+                  "name": "Chris Isaak",
                   "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
+                  "uri": "spotify:artist:7290H8m1Dwt8G7jm1y9CQx"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 169629,
+              "duration_ms": 213800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4agvx9mLiYTcbycQbafbLR"
+                "spotify": "https://open.spotify.com/track/6KkQXByxduGSpHWiBn6Lvt"
               },
-              "href": "https://api.spotify.com/v1/tracks/4agvx9mLiYTcbycQbafbLR",
-              "id": "4agvx9mLiYTcbycQbafbLR",
+              "href": "https://api.spotify.com/v1/tracks/6KkQXByxduGSpHWiBn6Lvt",
+              "id": "6KkQXByxduGSpHWiBn6Lvt",
               "is_local": false,
               "is_playable": true,
-              "name": "Maybe She's Not Such A Heinous Bitch After All (feat. Rachel Bloom)",
+              "name": "Two Hearts",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:4agvx9mLiYTcbycQbafbLR"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0zleUdjvOvVd1vwhoYdEvy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0zleUdjvOvVd1vwhoYdEvy",
-                  "id": "0zleUdjvOvVd1vwhoYdEvy",
-                  "name": "Bayne Gibby",
-                  "type": "artist",
-                  "uri": "spotify:artist:0zleUdjvOvVd1vwhoYdEvy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 70270,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Z1A3cZLjD0BsEYGLioYLw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3Z1A3cZLjD0BsEYGLioYLw",
-              "id": "3Z1A3cZLjD0BsEYGLioYLw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Feel Like This Isn't About Me (feat. Bayne Gibby)",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:3Z1A3cZLjD0BsEYGLioYLw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 178074,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2jfvq4wNR2TD4O14gcnpOG"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2jfvq4wNR2TD4O14gcnpOG",
-              "id": "2jfvq4wNR2TD4O14gcnpOG",
-              "is_local": false,
-              "is_playable": true,
-              "name": "A Diagnosis (feat. Rachel Bloom)",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:2jfvq4wNR2TD4O14gcnpOG"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5MVEzr4FAatsTTkPhDXkHj"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5MVEzr4FAatsTTkPhDXkHj",
-                  "id": "5MVEzr4FAatsTTkPhDXkHj",
-                  "name": "Gabrielle Ruiz",
-                  "type": "artist",
-                  "uri": "spotify:artist:5MVEzr4FAatsTTkPhDXkHj"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 108256,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0nr9gIWPkkGvZWVgSQnETZ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0nr9gIWPkkGvZWVgSQnETZ",
-              "id": "0nr9gIWPkkGvZWVgSQnETZ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "This Is My Movement (feat. Gabrielle Ruiz)",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:0nr9gIWPkkGvZWVgSQnETZ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4W6kSTuYNVuHw97QMvb2TB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4W6kSTuYNVuHw97QMvb2TB",
-                  "id": "4W6kSTuYNVuHw97QMvb2TB",
-                  "name": "Donna Lynne Champlin",
-                  "type": "artist",
-                  "uri": "spotify:artist:4W6kSTuYNVuHw97QMvb2TB"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 162959,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2UfI2KemuJbxsIS0l3qTJj"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2UfI2KemuJbxsIS0l3qTJj",
-              "id": "2UfI2KemuJbxsIS0l3qTJj",
-              "is_local": false,
-              "is_playable": true,
-              "name": "First Penis I Saw (feat. Donna Lynne Champlin)",
-              "preview_url": null,
-              "track_number": 16,
-              "type": "track",
-              "uri": "spotify:track:2UfI2KemuJbxsIS0l3qTJj"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/57lVXgoJxITBNlObGmaFav"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/57lVXgoJxITBNlObGmaFav",
-                  "id": "57lVXgoJxITBNlObGmaFav",
-                  "name": "Eddie Pepitone",
-                  "type": "artist",
-                  "uri": "spotify:artist:57lVXgoJxITBNlObGmaFav"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 88636,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4ECArbBs5JomwRKgeI4ZWB"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4ECArbBs5JomwRKgeI4ZWB",
-              "id": "4ECArbBs5JomwRKgeI4ZWB",
-              "is_local": false,
-              "is_playable": true,
-              "name": "My Friend's Dad (feat. Rachel Bloom & Eddie Pepitone)",
-              "preview_url": null,
-              "track_number": 17,
-              "type": "track",
-              "uri": "spotify:track:4ECArbBs5JomwRKgeI4ZWB"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/15H6uI2Z29vaQ2OoBDp8VJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/15H6uI2Z29vaQ2OoBDp8VJ",
-                  "id": "15H6uI2Z29vaQ2OoBDp8VJ",
-                  "name": "Pete Gardner",
-                  "type": "artist",
-                  "uri": "spotify:artist:15H6uI2Z29vaQ2OoBDp8VJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 100513,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2uLrb8UTGHYKmUWWE3U6er"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2uLrb8UTGHYKmUWWE3U6er",
-              "id": "2uLrb8UTGHYKmUWWE3U6er",
-              "is_local": false,
-              "is_playable": true,
-              "name": "My Sperm Is Healthy (feat. Pete Gardner)",
-              "preview_url": null,
-              "track_number": 18,
-              "type": "track",
-              "uri": "spotify:track:2uLrb8UTGHYKmUWWE3U6er"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/15H6uI2Z29vaQ2OoBDp8VJ"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/15H6uI2Z29vaQ2OoBDp8VJ",
-                  "id": "15H6uI2Z29vaQ2OoBDp8VJ",
-                  "name": "Pete Gardner",
-                  "type": "artist",
-                  "uri": "spotify:artist:15H6uI2Z29vaQ2OoBDp8VJ"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 100513,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6TNHZKpg5YUed6zofyIEZr"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6TNHZKpg5YUed6zofyIEZr",
-              "id": "6TNHZKpg5YUed6zofyIEZr",
-              "is_local": false,
-              "is_playable": true,
-              "name": "My Sperm Is Healthy (feat. Pete Gardner)",
-              "preview_url": null,
-              "track_number": 19,
-              "type": "track",
-              "uri": "spotify:track:6TNHZKpg5YUed6zofyIEZr"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1vk56l7eCqru7UdKvUjIUo"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1vk56l7eCqru7UdKvUjIUo",
-                  "id": "1vk56l7eCqru7UdKvUjIUo",
-                  "name": "Amy Hill",
-                  "type": "artist",
-                  "uri": "spotify:artist:1vk56l7eCqru7UdKvUjIUo"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 142492,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6Xq2pDptS5f1usjHSKWNmh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6Xq2pDptS5f1usjHSKWNmh",
-              "id": "6Xq2pDptS5f1usjHSKWNmh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Get Your Ass Out Of My House (feat. Amy Hill)",
-              "preview_url": null,
-              "track_number": 20,
-              "type": "track",
-              "uri": "spotify:track:6Xq2pDptS5f1usjHSKWNmh"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 171890,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0z3buqdWDIphJYAI9fwAIK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0z3buqdWDIphJYAI9fwAIK",
-              "id": "0z3buqdWDIphJYAI9fwAIK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Without Love You Can Save The World (feat. Rachel Bloom)",
-              "preview_url": null,
-              "track_number": 21,
-              "type": "track",
-              "uri": "spotify:track:0z3buqdWDIphJYAI9fwAIK"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6tGv3x242OJRBKtOr8nqzz"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6tGv3x242OJRBKtOr8nqzz",
-                  "id": "6tGv3x242OJRBKtOr8nqzz",
-                  "name": "David Hull",
-                  "type": "artist",
-                  "uri": "spotify:artist:6tGv3x242OJRBKtOr8nqzz"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4XhLFUTEjpYtLhGNsgzAB5"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4XhLFUTEjpYtLhGNsgzAB5",
-                  "id": "4XhLFUTEjpYtLhGNsgzAB5",
-                  "name": "Vincent Rodriguez III",
-                  "type": "artist",
-                  "uri": "spotify:artist:4XhLFUTEjpYtLhGNsgzAB5"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 193478,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6D0eerSAtzm6h8v4DjCLjw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6D0eerSAtzm6h8v4DjCLjw",
-              "id": "6D0eerSAtzm6h8v4DjCLjw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Fit Hot Guys Have Problems Too (feat. Scott Michael Foster, David Hull & Vincent Rodriguez III)",
-              "preview_url": null,
-              "track_number": 22,
-              "type": "track",
-              "uri": "spotify:track:6D0eerSAtzm6h8v4DjCLjw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 89858,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/43FlxL43EeXtg0jcGMDkBP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/43FlxL43EeXtg0jcGMDkBP",
-              "id": "43FlxL43EeXtg0jcGMDkBP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "He's The New Guy (feat. Rachel Bloom)",
-              "preview_url": null,
-              "track_number": 23,
-              "type": "track",
-              "uri": "spotify:track:43FlxL43EeXtg0jcGMDkBP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 109409,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1mem7z5ClWF79bJvkgaHdP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1mem7z5ClWF79bJvkgaHdP",
-              "id": "1mem7z5ClWF79bJvkgaHdP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Horny Angry Tango (feat. Rachel Bloom & Scott Michael Foster)",
-              "preview_url": null,
-              "track_number": 24,
-              "type": "track",
-              "uri": "spotify:track:1mem7z5ClWF79bJvkgaHdP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 104031,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0wM2CIAdqsUaPLVwK6I1zt"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0wM2CIAdqsUaPLVwK6I1zt",
-              "id": "0wM2CIAdqsUaPLVwK6I1zt",
-              "is_local": false,
-              "is_playable": true,
-              "name": "This Session Is Going To Be Different",
-              "preview_url": null,
-              "track_number": 25,
-              "type": "track",
-              "uri": "spotify:track:0wM2CIAdqsUaPLVwK6I1zt"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 104031,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0AG1yD08EOGzMdTqoDNEUN"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0AG1yD08EOGzMdTqoDNEUN",
-              "id": "0AG1yD08EOGzMdTqoDNEUN",
-              "is_local": false,
-              "is_playable": true,
-              "name": "This Session Is Going To Be Different",
-              "preview_url": null,
-              "track_number": 26,
-              "type": "track",
-              "uri": "spotify:track:0AG1yD08EOGzMdTqoDNEUN"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 54355,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2zRRA02O905PFXWgA2zR8q"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2zRRA02O905PFXWgA2zR8q",
-              "id": "2zRRA02O905PFXWgA2zR8q",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Face Your Fears (feat. Rachel Bloom) - Reprise",
-              "preview_url": null,
-              "track_number": 27,
-              "type": "track",
-              "uri": "spotify:track:2zRRA02O905PFXWgA2zR8q"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 139935,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6QPuW8Z5jq0Ee5DP4GOWyb"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6QPuW8Z5jq0Ee5DP4GOWyb",
-              "id": "6QPuW8Z5jq0Ee5DP4GOWyb",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Buttload Of Cats (feat. Rachel Bloom)",
-              "preview_url": null,
-              "track_number": 28,
-              "type": "track",
-              "uri": "spotify:track:6QPuW8Z5jq0Ee5DP4GOWyb"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 139935,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2tySXJunavvbyof3wCJsYv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2tySXJunavvbyof3wCJsYv",
-              "id": "2tySXJunavvbyof3wCJsYv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Fuckton Of Cats (feat. Rachel Bloom)",
-              "preview_url": null,
-              "track_number": 29,
-              "type": "track",
-              "uri": "spotify:track:2tySXJunavvbyof3wCJsYv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/77fCyJtM9xtEuiqu2xumbu"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/77fCyJtM9xtEuiqu2xumbu",
-                  "id": "77fCyJtM9xtEuiqu2xumbu",
-                  "name": "Paul Welsh",
-                  "type": "artist",
-                  "uri": "spotify:artist:77fCyJtM9xtEuiqu2xumbu"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 26300,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3awOYwxiLdTQX8KKXf4g1N"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3awOYwxiLdTQX8KKXf4g1N",
-              "id": "3awOYwxiLdTQX8KKXf4g1N",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I'm Just A Boy In Love (feat. Paul Welsh)",
-              "preview_url": null,
-              "track_number": 30,
-              "type": "track",
-              "uri": "spotify:track:3awOYwxiLdTQX8KKXf4g1N"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4W6kSTuYNVuHw97QMvb2TB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4W6kSTuYNVuHw97QMvb2TB",
-                  "id": "4W6kSTuYNVuHw97QMvb2TB",
-                  "name": "Donna Lynne Champlin",
-                  "type": "artist",
-                  "uri": "spotify:artist:4W6kSTuYNVuHw97QMvb2TB"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 82410,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4zUDybaFkdX3iSz0CvNCJP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4zUDybaFkdX3iSz0CvNCJP",
-              "id": "4zUDybaFkdX3iSz0CvNCJP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Back In Action (feat. Rachel Bloom & Donna Lynne Champlin)",
-              "preview_url": null,
-              "track_number": 31,
-              "type": "track",
-              "uri": "spotify:track:4zUDybaFkdX3iSz0CvNCJP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4W6kSTuYNVuHw97QMvb2TB"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4W6kSTuYNVuHw97QMvb2TB",
-                  "id": "4W6kSTuYNVuHw97QMvb2TB",
-                  "name": "Donna Lynne Champlin",
-                  "type": "artist",
-                  "uri": "spotify:artist:4W6kSTuYNVuHw97QMvb2TB"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 182037,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6jhT3xgEEknLa5rnyIOtdn"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6jhT3xgEEknLa5rnyIOtdn",
-              "id": "6jhT3xgEEknLa5rnyIOtdn",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Miracle Of Birth (feat. Donna Lynne Champlin)",
-              "preview_url": null,
-              "track_number": 32,
-              "type": "track",
-              "uri": "spotify:track:6jhT3xgEEknLa5rnyIOtdn"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 191351,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3ezYwcPa8MaRjDBxqaq5Ar"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3ezYwcPa8MaRjDBxqaq5Ar",
-              "id": "3ezYwcPa8MaRjDBxqaq5Ar",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Nothing Is Ever Anyone's Fault (feat. Rachel Bloom & Scott Michael Foster)",
-              "preview_url": null,
-              "track_number": 33,
-              "type": "track",
-              "uri": "spotify:track:3ezYwcPa8MaRjDBxqaq5Ar"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2rO9L8VYkT25Ira3hCRw9d"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2rO9L8VYkT25Ira3hCRw9d",
-                  "id": "2rO9L8VYkT25Ira3hCRw9d",
-                  "name": "Adam Schlesinger",
-                  "type": "artist",
-                  "uri": "spotify:artist:2rO9L8VYkT25Ira3hCRw9d"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 136989,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4yd20MTfB8UI7utuwCaQr4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4yd20MTfB8UI7utuwCaQr4",
-              "id": "4yd20MTfB8UI7utuwCaQr4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The End of the Movie (feat. Adam Schlesinger) - Adam Schlesinger Demo",
-              "preview_url": null,
-              "track_number": 34,
-              "type": "track",
-              "uri": "spotify:track:4yd20MTfB8UI7utuwCaQr4"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1tw9Vw4tBuEVKyRIckEdKz"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1tw9Vw4tBuEVKyRIckEdKz",
-                  "id": "1tw9Vw4tBuEVKyRIckEdKz",
-                  "name": "Ilana Peña",
-                  "type": "artist",
-                  "uri": "spotify:artist:1tw9Vw4tBuEVKyRIckEdKz"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 129482,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/754c8W6ItG2PZDC8hj50oo"
-              },
-              "href": "https://api.spotify.com/v1/tracks/754c8W6ItG2PZDC8hj50oo",
-              "id": "754c8W6ItG2PZDC8hj50oo",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Moment is Me (feat. Ilana Peña) - Earnest Version",
-              "preview_url": null,
-              "track_number": 35,
-              "type": "track",
-              "uri": "spotify:track:754c8W6ItG2PZDC8hj50oo"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 27511,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6uoITLbco3QiHEY6DDkEJd"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6uoITLbco3QiHEY6DDkEJd",
-              "id": "6uoITLbco3QiHEY6DDkEJd",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Spiral (feat. Rachel Bloom) - Rachel Bloom Demo",
-              "preview_url": null,
-              "track_number": 36,
-              "type": "track",
-              "uri": "spotify:track:6uoITLbco3QiHEY6DDkEJd"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7IQ4HhHJ2yQIzyl8PkKqjv"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-                  "name": "Scott Michael Foster",
-                  "type": "artist",
-                  "uri": "spotify:artist:7IQ4HhHJ2yQIzyl8PkKqjv"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 85538,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/35ojlep1J8t5WOltw491mq"
-              },
-              "href": "https://api.spotify.com/v1/tracks/35ojlep1J8t5WOltw491mq",
-              "id": "35ojlep1J8t5WOltw491mq",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Settle for Her (feat. Scott Michael Foster) - Cut Song",
-              "preview_url": null,
-              "track_number": 37,
-              "type": "track",
-              "uri": "spotify:track:35ojlep1J8t5WOltw491mq"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5TVgLn3yhvSe3h2pBTEzsy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5TVgLn3yhvSe3h2pBTEzsy",
-                  "id": "5TVgLn3yhvSe3h2pBTEzsy",
-                  "name": "Crazy Ex-Girlfriend Cast",
-                  "type": "artist",
-                  "uri": "spotify:artist:5TVgLn3yhvSe3h2pBTEzsy"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3IowqMRUHXLx2BhcJ5BOrf"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/3IowqMRUHXLx2BhcJ5BOrf",
-                  "id": "3IowqMRUHXLx2BhcJ5BOrf",
-                  "name": "Jack Dolgen",
-                  "type": "artist",
-                  "uri": "spotify:artist:3IowqMRUHXLx2BhcJ5BOrf"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2tCT4ybLKzhFYsDF6ZOKAY"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2tCT4ybLKzhFYsDF6ZOKAY",
-                  "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-                  "name": "Rachel Bloom",
-                  "type": "artist",
-                  "uri": "spotify:artist:2tCT4ybLKzhFYsDF6ZOKAY"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 106019,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1gcfdFKRJkJ4bC1BpmlLbh"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1gcfdFKRJkJ4bC1BpmlLbh",
-              "id": "1gcfdFKRJkJ4bC1BpmlLbh",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Horny Angry Tango (feat. Rachel Bloom & Jack Dolgen) - A Cappella Demo",
-              "preview_url": null,
-              "track_number": 38,
-              "type": "track",
-              "uri": "spotify:track:1gcfdFKRJkJ4bC1BpmlLbh"
+              "uri": "spotify:track:6KkQXByxduGSpHWiBn6Lvt"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 38
+          "total": 12
         },
         "type": "album",
-        "uri": "spotify:album:61qQpAsfOVhFo5iDnKth4o"
+        "uri": "spotify:album:5RyWJx6ASGDuaEwVe0aWvG"
       },
-      "release_date": "2018-07-20",
+      "release_date": "1993-01-01",
       "release_date_precision": "day",
-      "total_tracks": 38,
+      "total_tracks": 12,
       "tracks": [
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "0YC192cP3KPCRWx8zr8MfZ",
+              "name": "Hans Zimmer"
             }
           ],
-          "duration_ms": 240312,
+          "duration_ms": 220040,
           "explicit": false,
-          "id": "6x98PVTwm4pMexZGoW0M8t",
-          "name": "Where's Rebecca Bunch? (feat. Rachel Bloom)",
+          "id": "5pcBRYIIxevEGUeGFJQ4hY",
+          "name": "You're So Cool",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4W6kSTuYNVuHw97QMvb2TB",
-              "name": "Donna Lynne Champlin"
-            },
-            {
-              "id": "5MVEzr4FAatsTTkPhDXkHj",
-              "name": "Gabrielle Ruiz"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            },
-            {
-              "id": "4QLs1KUSQaafoB2dGnxvmR",
-              "name": "Vella Lovell"
+              "id": "132XHXfIbAJi5jQKmH986p",
+              "name": "Charlie Sexton"
             }
           ],
-          "duration_ms": 158459,
+          "duration_ms": 205600,
           "explicit": false,
-          "id": "73hr344AmxNViy6IgFw6QL",
-          "name": "Let's Generalize About Men (feat. Rachel Bloom, Donna Lynne Champlin, Vella Lovell & Gabrielle Ruiz)",
+          "id": "6uvs2pw75LSJjH5tCvpyGR",
+          "name": "Graceland",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "2TPyCsRoh2tjeZLTQ2ojlj",
+              "name": "John Waite"
             }
           ],
-          "duration_ms": 34600,
+          "duration_ms": 225466,
           "explicit": false,
-          "id": "4Ehfb4E8OvPY3EdN7DEI5F",
-          "name": "You Do / You Don't Want To Be Crazy (feat. Rachel Bloom)",
+          "id": "5W78nbmHcX8zGbrGib0Dou",
+          "name": "In Dreams",
           "preview_url": null,
           "track_number": 3
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4XhLFUTEjpYtLhGNsgzAB5",
-              "name": "Vincent Rodriguez III"
+              "id": "5rIhaCHkbFVvLJpKHWwOJD",
+              "name": "Charles & Eddie"
             }
           ],
-          "duration_ms": 136625,
+          "duration_ms": 310533,
           "explicit": false,
-          "id": "1s4ucwO4HJiLqiDqfaHdPM",
-          "name": "I've Got My Head In The Clouds (feat. Vincent Rodriguez III)",
+          "id": "0q9DVb32rqxiBBmos3lkHh",
+          "name": "Wounded Bird",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "2gA8mpcqoWuwlXBmtBrxH1",
+              "name": "Nymphomania"
             }
           ],
-          "duration_ms": 144173,
+          "duration_ms": 258093,
           "explicit": false,
-          "id": "5OiPNpd5t2MhBMLt64h7lO",
-          "name": "Strip Away My Conscience (feat. Rachel Bloom)",
+          "id": "5keVHhRytkZTQ6tukYtXS9",
+          "name": "I Want Your Body",
           "preview_url": null,
           "track_number": 5
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "3LaxXjSdqm7y8sWO6YySOP",
-              "name": "Michael McMillian"
+              "id": "0YC192cP3KPCRWx8zr8MfZ",
+              "name": "Hans Zimmer"
             }
           ],
-          "duration_ms": 156339,
+          "duration_ms": 124066,
           "explicit": false,
-          "id": "65y17hnyKKV1AjQiaAXhfa",
-          "name": "The Buzzing From The Bathroom (feat. Michael McMillian)",
+          "id": "2OMWijWLeEbRdMoMkzmlnB",
+          "name": "Stars At Dawn",
           "preview_url": null,
           "track_number": 6
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "3xx17YXYvPl9PBx6Jzalk4",
+              "name": "Shelby Lynne"
             }
           ],
-          "duration_ms": 120695,
+          "duration_ms": 260906,
           "explicit": false,
-          "id": "6oLgJcx32uP6b41q7FebgD",
-          "name": "After Everything You Made Me Do (That You Didn't Ask For) [feat. Rachel Bloom]",
+          "id": "6SxEeGhBOoE3lVKqP81q3e",
+          "name": "I Need A Heart To Come Home To",
           "preview_url": null,
           "track_number": 7
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4QLs1KUSQaafoB2dGnxvmR",
-              "name": "Vella Lovell"
+              "id": "3Hf08nPu2dPY3sdngyHQei",
+              "name": "Howard Blake"
             }
           ],
-          "duration_ms": 128655,
+          "duration_ms": 236493,
           "explicit": false,
-          "id": "1nu4KzNLIq06wYqfnUh6Cp",
-          "name": "The Moment Is Me (feat. Vella Lovell)",
+          "id": "1cXKvVWM24YaLlM5DzrPy4",
+          "name": "Viens Mallika Sous Le Dome Edais From Lakme",
           "preview_url": null,
           "track_number": 8
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
+              "id": "530Sdm7eqqzWBdDmILMgnu",
+              "name": "Robert Palmer"
             }
           ],
-          "duration_ms": 139462,
+          "duration_ms": 157106,
           "explicit": false,
-          "id": "4dWWAxU1jpVyaWKKVR0LIR",
-          "name": "I Go To The Zoo (feat. Scott Michael Foster)",
+          "id": "0FsEaPi87f0DViihgPuq9X",
+          "name": "(Love Is) The Tender Trap",
           "preview_url": null,
           "track_number": 9
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
+              "id": "5xUf6j4upBrXZPg6AI4MRK",
+              "name": "Soundgarden"
             }
           ],
-          "duration_ms": 139462,
-          "explicit": true,
-          "id": "5Pv5UhboXvjXv5WQtHtbBb",
-          "name": "I Go To The Zoo (feat. Scott Michael Foster)",
+          "duration_ms": 312226,
+          "explicit": false,
+          "id": "35QWh7wQ7Z0miTJZ9PXV8Y",
+          "name": "Outshined",
           "preview_url": null,
           "track_number": 10
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "0YC192cP3KPCRWx8zr8MfZ",
+              "name": "Hans Zimmer"
             }
           ],
-          "duration_ms": 57298,
+          "duration_ms": 294200,
           "explicit": false,
-          "id": "4HnGOHLJt4ujA1Bbzzbavy",
-          "name": "Scary Scary Sexy Lady (feat. Rachel Bloom)",
+          "id": "5ff3NjQ0mdRAlXMhoWnGkp",
+          "name": "Amid The Chaos Of The Day",
           "preview_url": null,
           "track_number": 11
         },
         {
           "artists": [
             {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
+              "id": "7290H8m1Dwt8G7jm1y9CQx",
+              "name": "Chris Isaak"
             }
           ],
-          "duration_ms": 169629,
+          "duration_ms": 213800,
           "explicit": false,
-          "id": "4agvx9mLiYTcbycQbafbLR",
-          "name": "Maybe She's Not Such A Heinous Bitch After All (feat. Rachel Bloom)",
+          "id": "6KkQXByxduGSpHWiBn6Lvt",
+          "name": "Two Hearts",
           "preview_url": null,
           "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "0zleUdjvOvVd1vwhoYdEvy",
-              "name": "Bayne Gibby"
-            }
-          ],
-          "duration_ms": 70270,
-          "explicit": false,
-          "id": "3Z1A3cZLjD0BsEYGLioYLw",
-          "name": "I Feel Like This Isn't About Me (feat. Bayne Gibby)",
-          "preview_url": null,
-          "track_number": 13
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 178074,
-          "explicit": false,
-          "id": "2jfvq4wNR2TD4O14gcnpOG",
-          "name": "A Diagnosis (feat. Rachel Bloom)",
-          "preview_url": null,
-          "track_number": 14
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "5MVEzr4FAatsTTkPhDXkHj",
-              "name": "Gabrielle Ruiz"
-            }
-          ],
-          "duration_ms": 108256,
-          "explicit": false,
-          "id": "0nr9gIWPkkGvZWVgSQnETZ",
-          "name": "This Is My Movement (feat. Gabrielle Ruiz)",
-          "preview_url": null,
-          "track_number": 15
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4W6kSTuYNVuHw97QMvb2TB",
-              "name": "Donna Lynne Champlin"
-            }
-          ],
-          "duration_ms": 162959,
-          "explicit": false,
-          "id": "2UfI2KemuJbxsIS0l3qTJj",
-          "name": "First Penis I Saw (feat. Donna Lynne Champlin)",
-          "preview_url": null,
-          "track_number": 16
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "57lVXgoJxITBNlObGmaFav",
-              "name": "Eddie Pepitone"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 88636,
-          "explicit": false,
-          "id": "4ECArbBs5JomwRKgeI4ZWB",
-          "name": "My Friend's Dad (feat. Rachel Bloom & Eddie Pepitone)",
-          "preview_url": null,
-          "track_number": 17
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "15H6uI2Z29vaQ2OoBDp8VJ",
-              "name": "Pete Gardner"
-            }
-          ],
-          "duration_ms": 100513,
-          "explicit": false,
-          "id": "2uLrb8UTGHYKmUWWE3U6er",
-          "name": "My Sperm Is Healthy (feat. Pete Gardner)",
-          "preview_url": null,
-          "track_number": 18
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "15H6uI2Z29vaQ2OoBDp8VJ",
-              "name": "Pete Gardner"
-            }
-          ],
-          "duration_ms": 100513,
-          "explicit": true,
-          "id": "6TNHZKpg5YUed6zofyIEZr",
-          "name": "My Sperm Is Healthy (feat. Pete Gardner)",
-          "preview_url": null,
-          "track_number": 19
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "1vk56l7eCqru7UdKvUjIUo",
-              "name": "Amy Hill"
-            }
-          ],
-          "duration_ms": 142492,
-          "explicit": false,
-          "id": "6Xq2pDptS5f1usjHSKWNmh",
-          "name": "Get Your Ass Out Of My House (feat. Amy Hill)",
-          "preview_url": null,
-          "track_number": 20
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 171890,
-          "explicit": false,
-          "id": "0z3buqdWDIphJYAI9fwAIK",
-          "name": "Without Love You Can Save The World (feat. Rachel Bloom)",
-          "preview_url": null,
-          "track_number": 21
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "6tGv3x242OJRBKtOr8nqzz",
-              "name": "David Hull"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
-            },
-            {
-              "id": "4XhLFUTEjpYtLhGNsgzAB5",
-              "name": "Vincent Rodriguez III"
-            }
-          ],
-          "duration_ms": 193478,
-          "explicit": false,
-          "id": "6D0eerSAtzm6h8v4DjCLjw",
-          "name": "Fit Hot Guys Have Problems Too (feat. Scott Michael Foster, David Hull & Vincent Rodriguez III)",
-          "preview_url": null,
-          "track_number": 22
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 89858,
-          "explicit": false,
-          "id": "43FlxL43EeXtg0jcGMDkBP",
-          "name": "He's The New Guy (feat. Rachel Bloom)",
-          "preview_url": null,
-          "track_number": 23
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
-            }
-          ],
-          "duration_ms": 109409,
-          "explicit": false,
-          "id": "1mem7z5ClWF79bJvkgaHdP",
-          "name": "Horny Angry Tango (feat. Rachel Bloom & Scott Michael Foster)",
-          "preview_url": null,
-          "track_number": 24
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            }
-          ],
-          "duration_ms": 104031,
-          "explicit": false,
-          "id": "0wM2CIAdqsUaPLVwK6I1zt",
-          "name": "This Session Is Going To Be Different",
-          "preview_url": null,
-          "track_number": 25
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            }
-          ],
-          "duration_ms": 104031,
-          "explicit": true,
-          "id": "0AG1yD08EOGzMdTqoDNEUN",
-          "name": "This Session Is Going To Be Different",
-          "preview_url": null,
-          "track_number": 26
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 54355,
-          "explicit": false,
-          "id": "2zRRA02O905PFXWgA2zR8q",
-          "name": "Face Your Fears (feat. Rachel Bloom) - Reprise",
-          "preview_url": null,
-          "track_number": 27
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 139935,
-          "explicit": false,
-          "id": "6QPuW8Z5jq0Ee5DP4GOWyb",
-          "name": "Buttload Of Cats (feat. Rachel Bloom)",
-          "preview_url": null,
-          "track_number": 28
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 139935,
-          "explicit": true,
-          "id": "2tySXJunavvbyof3wCJsYv",
-          "name": "Fuckton Of Cats (feat. Rachel Bloom)",
-          "preview_url": null,
-          "track_number": 29
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "77fCyJtM9xtEuiqu2xumbu",
-              "name": "Paul Welsh"
-            }
-          ],
-          "duration_ms": 26300,
-          "explicit": false,
-          "id": "3awOYwxiLdTQX8KKXf4g1N",
-          "name": "I'm Just A Boy In Love (feat. Paul Welsh)",
-          "preview_url": null,
-          "track_number": 30
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4W6kSTuYNVuHw97QMvb2TB",
-              "name": "Donna Lynne Champlin"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 82410,
-          "explicit": false,
-          "id": "4zUDybaFkdX3iSz0CvNCJP",
-          "name": "Back In Action (feat. Rachel Bloom & Donna Lynne Champlin)",
-          "preview_url": null,
-          "track_number": 31
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "4W6kSTuYNVuHw97QMvb2TB",
-              "name": "Donna Lynne Champlin"
-            }
-          ],
-          "duration_ms": 182037,
-          "explicit": false,
-          "id": "6jhT3xgEEknLa5rnyIOtdn",
-          "name": "The Miracle Of Birth (feat. Donna Lynne Champlin)",
-          "preview_url": null,
-          "track_number": 32
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
-            }
-          ],
-          "duration_ms": 191351,
-          "explicit": false,
-          "id": "3ezYwcPa8MaRjDBxqaq5Ar",
-          "name": "Nothing Is Ever Anyone's Fault (feat. Rachel Bloom & Scott Michael Foster)",
-          "preview_url": null,
-          "track_number": 33
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2rO9L8VYkT25Ira3hCRw9d",
-              "name": "Adam Schlesinger"
-            }
-          ],
-          "duration_ms": 136989,
-          "explicit": false,
-          "id": "4yd20MTfB8UI7utuwCaQr4",
-          "name": "The End of the Movie (feat. Adam Schlesinger) - Adam Schlesinger Demo",
-          "preview_url": null,
-          "track_number": 34
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "1tw9Vw4tBuEVKyRIckEdKz",
-              "name": "Ilana Peña"
-            }
-          ],
-          "duration_ms": 129482,
-          "explicit": false,
-          "id": "754c8W6ItG2PZDC8hj50oo",
-          "name": "The Moment is Me (feat. Ilana Peña) - Earnest Version",
-          "preview_url": null,
-          "track_number": 35
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 27511,
-          "explicit": false,
-          "id": "6uoITLbco3QiHEY6DDkEJd",
-          "name": "Spiral (feat. Rachel Bloom) - Rachel Bloom Demo",
-          "preview_url": null,
-          "track_number": 36
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "7IQ4HhHJ2yQIzyl8PkKqjv",
-              "name": "Scott Michael Foster"
-            }
-          ],
-          "duration_ms": 85538,
-          "explicit": false,
-          "id": "35ojlep1J8t5WOltw491mq",
-          "name": "Settle for Her (feat. Scott Michael Foster) - Cut Song",
-          "preview_url": null,
-          "track_number": 37
-        },
-        {
-          "artists": [
-            {
-              "id": "5TVgLn3yhvSe3h2pBTEzsy",
-              "name": "Crazy Ex-Girlfriend Cast"
-            },
-            {
-              "id": "3IowqMRUHXLx2BhcJ5BOrf",
-              "name": "Jack Dolgen"
-            },
-            {
-              "id": "2tCT4ybLKzhFYsDF6ZOKAY",
-              "name": "Rachel Bloom"
-            }
-          ],
-          "duration_ms": 106019,
-          "explicit": false,
-          "id": "1gcfdFKRJkJ4bC1BpmlLbh",
-          "name": "Horny Angry Tango (feat. Rachel Bloom & Jack Dolgen) - A Cappella Demo",
-          "preview_url": null,
-          "track_number": 38
         }
       ],
-      "url": "https://open.spotify.com/album/61qQpAsfOVhFo5iDnKth4o"
+      "url": "https://open.spotify.com/album/5RyWJx6ASGDuaEwVe0aWvG"
     }
   },
-  "spotify_id": "61qQpAsfOVhFo5iDnKth4o",
-  "spotify_url": "https://open.spotify.com/album/61qQpAsfOVhFo5iDnKth4o",
+  "spotify_id": "5RyWJx6ASGDuaEwVe0aWvG",
+  "spotify_url": "https://open.spotify.com/album/5RyWJx6ASGDuaEwVe0aWvG",
   "styles": [
     "Soundtrack",
     "Pop Rock",
@@ -2821,6 +1016,6 @@
       "title": "Two Hearts"
     }
   ],
-  "updated_at": "2025-07-05T16:45:05.554873",
+  "updated_at": "2025-07-07T15:38:46.323650",
   "year": 2018
 }

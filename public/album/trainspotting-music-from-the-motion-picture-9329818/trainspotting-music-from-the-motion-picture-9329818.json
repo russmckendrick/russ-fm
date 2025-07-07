@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1493581254",
-  "apple_music_url": "https://music.apple.com/gb/album/birds-of-prey-the-album/1493581254",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK, Europe & US",
-  "created_at": "2025-07-05T17:35:50.758148",
+  "created_at": "2025-07-07T15:44:41.328402",
   "date_added": "2016-11-11T17:35:29-08:00",
   "discogs_id": "9329818",
   "discogs_url": "https://www.discogs.com/release/9329818-Various-Trainspotting-Music-From-The-Motion-Picture",
@@ -81,8 +81,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/70/08/787008fa-2397-e58b-042c-43695543935c/075679834485.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818.jpg",
       "width": 2000
     }
   ],
@@ -93,72 +93,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-hi-res.jpg",
-    "medium": "public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-medium.jpg",
-    "small": "public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-small.jpg"
+    "hi-res": "../public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-hi-res.jpg",
+    "medium": "../public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-medium.jpg",
+    "small": "../public/album/trainspotting-music-from-the-motion-picture-9329818/trainspotting-music-from-the-motion-picture-9329818-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:35:52.659495",
+    "processed_at": "2025-07-07T15:44:48.172097",
     "services_used": [
       "discogs",
-      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Birds of Prey: The Album",
+  "release_name_apple_music": null,
   "release_name_discogs": "Trainspotting (Music From The Motion Picture)",
   "release_name_spotify": null,
   "released": "2016-11-11",
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/70/08/787008fa-2397-e58b-042c-43695543935c/075679834485.jpg/2000x2000bb.jpg",
-      "content_rating": "explicit",
-      "copyright": "℗ 2020 Atlantic Recording Corporation and Warner Bros. Entertainment Inc.",
-      "editorial_notes": null,
-      "id": "1493581254",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "020001",
-          "height": 1425,
-          "textColor1": "1fe07b",
-          "textColor2": "33dc40",
-          "textColor3": "19b362",
-          "textColor4": "29b033",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/78/70/08/787008fa-2397-e58b-042c-43695543935c/075679834485.jpg/{w}x{h}bb.jpg",
-          "width": 1425
-        },
-        "contentRating": "explicit",
-        "copyright": "℗ 2020 Atlantic Recording Corporation and Warner Bros. Entertainment Inc.",
-        "editorialNotes": {
-          "short": "A soundtrack as thrilling, provocative and star-studded as the film."
-        },
-        "genreNames": [
-          "Soundtrack",
-          "Music"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": true,
-        "isSingle": false,
-        "name": "Birds of Prey: The Album",
-        "playParams": {
-          "id": "1493581254",
-          "kind": "album"
-        },
-        "recordLabel": "Atlantic Records",
-        "releaseDate": "2020-02-07",
-        "trackCount": 15,
-        "upc": "075679834485",
-        "url": "https://music.apple.com/gb/album/birds-of-prey-the-album/1493581254"
-      },
-      "url": "https://music.apple.com/gb/album/birds-of-prey-the-album/1493581254"
-    }
-  },
+  "services": {},
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -449,6 +401,6 @@
       "title": "Closet Romantic"
     }
   ],
-  "updated_at": "2025-07-05T17:35:51.383632",
+  "updated_at": "2025-07-07T15:44:46.952539",
   "year": 2016
 }

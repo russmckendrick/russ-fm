@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1811232914",
-  "apple_music_url": "https://music.apple.com/gb/album/loaded/1811232914",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:59:39.199163",
+  "created_at": "2025-07-07T15:44:26.114392",
   "date_added": "2015-12-07T11:50:16-08:00",
   "discogs_id": "1420886",
   "discogs_url": "https://www.discogs.com/release/1420886-Various-Loaded",
@@ -52,8 +52,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/loaded-1420886/loaded-1420886.jpg",
       "width": 2000
     }
   ],
@@ -64,292 +64,26 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/loaded-1420886/loaded-1420886-hi-res.jpg",
-    "medium": "public/album/loaded-1420886/loaded-1420886-medium.jpg",
-    "small": "public/album/loaded-1420886/loaded-1420886-small.jpg"
+    "hi-res": "../public/album/loaded-1420886/loaded-1420886-hi-res.jpg",
+    "medium": "../public/album/loaded-1420886/loaded-1420886-medium.jpg",
+    "small": "../public/album/loaded-1420886/loaded-1420886-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:59:40.367814",
+    "processed_at": "2025-07-07T15:44:30.341534",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Loaded",
+  "release_name_apple_music": null,
   "release_name_discogs": "Loaded",
-  "release_name_spotify": "LOADED",
+  "release_name_spotify": null,
   "released": "1993",
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2025 AUDIOSPARX",
-      "editorial_notes": null,
-      "id": "1811232914",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "341a08",
-          "height": 1440,
-          "textColor1": "f6dcbd",
-          "textColor2": "fbc89c",
-          "textColor3": "cfb599",
-          "textColor4": "d3a57e",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/{w}x{h}bb.jpg",
-          "width": 1440
-        },
-        "copyright": "℗ 2025 AUDIOSPARX",
-        "genreNames": [
-          "House",
-          "Music",
-          "Dance"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Loaded",
-        "playParams": {
-          "id": "1811232914",
-          "kind": "album"
-        },
-        "recordLabel": "Audiosparx",
-        "releaseDate": "2025-05-09",
-        "trackCount": 9,
-        "upc": "0751993269072",
-        "url": "https://music.apple.com/gb/album/loaded/1811232914"
-      },
-      "url": "https://music.apple.com/gb/album/loaded/1811232914"
-    },
-    "spotify": {
-      "album_type": "single",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "2022 Hits Only Music Entertainment LLC",
-          "type": "P"
-        }
-      ],
-      "explicit": true,
-      "external_ids": {
-        "upc": "702338858895"
-      },
-      "id": "0ORcQ7O04dyZGDWTzg6CuM",
-      "images": [
-        {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2735f1d66dacd11474f8fe1e7be",
-          "width": 640
-        },
-        {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e025f1d66dacd11474f8fe1e7be",
-          "width": 300
-        },
-        {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048515f1d66dacd11474f8fe1e7be",
-          "width": 64
-        }
-      ],
-      "label": "Hits Only Music Entertainment LLC",
-      "popularity": 0,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "single",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
-            },
-            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
-            "id": "0LyfQWJT6nXafLPZqxe9Of",
-            "name": "Various Artists",
-            "type": "artist",
-            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "2022 Hits Only Music Entertainment LLC",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "702338858895"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/0ORcQ7O04dyZGDWTzg6CuM"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0ORcQ7O04dyZGDWTzg6CuM?market=US",
-        "id": "0ORcQ7O04dyZGDWTzg6CuM",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735f1d66dacd11474f8fe1e7be",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025f1d66dacd11474f8fe1e7be",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515f1d66dacd11474f8fe1e7be",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Hits Only Music Entertainment LLC",
-        "name": "LOADED",
-        "popularity": 0,
-        "release_date": "2022-01-08",
-        "release_date_precision": "day",
-        "total_tracks": 1,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0ORcQ7O04dyZGDWTzg6CuM/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1XJvKRPbhlgHUlIJwj92gP"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1XJvKRPbhlgHUlIJwj92gP",
-                  "id": "1XJvKRPbhlgHUlIJwj92gP",
-                  "name": "Big c",
-                  "type": "artist",
-                  "uri": "spotify:artist:1XJvKRPbhlgHUlIJwj92gP"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/42wF85aQ9cD1BqB48xd503"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/42wF85aQ9cD1BqB48xd503",
-                  "id": "42wF85aQ9cD1BqB48xd503",
-                  "name": "MCMG Don",
-                  "type": "artist",
-                  "uri": "spotify:artist:42wF85aQ9cD1BqB48xd503"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1LCcUKcBqct6su3uY6kVsp"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1LCcUKcBqct6su3uY6kVsp",
-                  "id": "1LCcUKcBqct6su3uY6kVsp",
-                  "name": "Money Grip Flyerr",
-                  "type": "artist",
-                  "uri": "spotify:artist:1LCcUKcBqct6su3uY6kVsp"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2EO0SpTuUfK2STmYwi3skh"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/2EO0SpTuUfK2STmYwi3skh",
-                  "id": "2EO0SpTuUfK2STmYwi3skh",
-                  "name": "TrayG",
-                  "type": "artist",
-                  "uri": "spotify:artist:2EO0SpTuUfK2STmYwi3skh"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6qBcCgX7s35OHzfwIlURHo"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6qBcCgX7s35OHzfwIlURHo",
-                  "id": "6qBcCgX7s35OHzfwIlURHo",
-                  "name": "Suave Da Juice",
-                  "type": "artist",
-                  "uri": "spotify:artist:6qBcCgX7s35OHzfwIlURHo"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7Mv3kKoLeowG6LZlQAuzHa"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7Mv3kKoLeowG6LZlQAuzHa",
-                  "id": "7Mv3kKoLeowG6LZlQAuzHa",
-                  "name": "Kp On Da Beat",
-                  "type": "artist",
-                  "uri": "spotify:artist:7Mv3kKoLeowG6LZlQAuzHa"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 185496,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7IL8btKvo3NgQ6qXxBnGvo"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7IL8btKvo3NgQ6qXxBnGvo",
-              "id": "7IL8btKvo3NgQ6qXxBnGvo",
-              "is_local": false,
-              "is_playable": true,
-              "name": "LOADED",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7IL8btKvo3NgQ6qXxBnGvo"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 1
-        },
-        "type": "album",
-        "uri": "spotify:album:0ORcQ7O04dyZGDWTzg6CuM"
-      },
-      "release_date": "2022-01-08",
-      "release_date_precision": "day",
-      "total_tracks": 1,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "1XJvKRPbhlgHUlIJwj92gP",
-              "name": "Big c"
-            },
-            {
-              "id": "42wF85aQ9cD1BqB48xd503",
-              "name": "MCMG Don"
-            },
-            {
-              "id": "1LCcUKcBqct6su3uY6kVsp",
-              "name": "Money Grip Flyerr"
-            },
-            {
-              "id": "2EO0SpTuUfK2STmYwi3skh",
-              "name": "TrayG"
-            },
-            {
-              "id": "6qBcCgX7s35OHzfwIlURHo",
-              "name": "Suave Da Juice"
-            },
-            {
-              "id": "7Mv3kKoLeowG6LZlQAuzHa",
-              "name": "Kp On Da Beat"
-            }
-          ],
-          "duration_ms": 185496,
-          "explicit": true,
-          "id": "7IL8btKvo3NgQ6qXxBnGvo",
-          "name": "LOADED",
-          "preview_url": null,
-          "track_number": 1
-        }
-      ],
-      "url": "https://open.spotify.com/album/0ORcQ7O04dyZGDWTzg6CuM"
-    }
-  },
-  "spotify_id": "0ORcQ7O04dyZGDWTzg6CuM",
-  "spotify_url": "https://open.spotify.com/album/0ORcQ7O04dyZGDWTzg6CuM",
+  "services": {},
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Britpop",
     "Hard Rock",
@@ -701,6 +435,6 @@
       "title": "I'm Easy"
     }
   ],
-  "updated_at": "2025-07-05T17:59:40.240910",
+  "updated_at": "2025-07-07T15:44:29.488979",
   "year": 1993
 }

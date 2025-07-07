@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1570547230",
+  "apple_music_url": "https://music.apple.com/gb/album/the-rick-and-morty-soundtrack/1570547230",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T16:41:04.843204",
+  "created_at": "2025-07-07T15:39:58.745077",
   "date_added": "2018-11-04T14:48:53-08:00",
   "discogs_id": "12575433",
   "discogs_url": "https://www.discogs.com/release/12575433-Various-The-Rick-And-Morty-Soundtrack",
@@ -40,6 +40,20 @@
       "type": "primary",
       "url": "https://i.discogs.com/u-PKstYtH_Xn7ZScCK5EWxmyU1NbiZ40kTcrcsMYdVE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNTc1/NDMzLTE1MzkwNDgz/NTItNzExNi5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/92/fb/3692fb2c-c241-4816-7a8e-e4f941ff64ca/794043208225.jpg/2000x2000bb.jpg",
+      "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-rick-and-morty-soundtrack-12575433/the-rick-and-morty-soundtrack-12575433.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -48,23 +62,1481 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-rick-and-morty-soundtrack-12575433/the-rick-and-morty-soundtrack-12575433-hi-res.jpg",
+    "medium": "../public/album/the-rick-and-morty-soundtrack-12575433/the-rick-and-morty-soundtrack-12575433-medium.jpg",
+    "small": "../public/album/the-rick-and-morty-soundtrack-12575433/the-rick-and-morty-soundtrack-12575433-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:41:05.589994",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:40:14.086790",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "The Rick and Morty Soundtrack",
   "release_name_discogs": "The Rick And Morty Soundtrack",
-  "release_name_spotify": null,
+  "release_name_spotify": "The Rick and Morty Soundtrack",
   "released": "2018-09-28",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/92/fb/3692fb2c-c241-4816-7a8e-e4f941ff64ca/794043208225.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 2018 Turner Music Publishing, Inc. /  2018 Cartoon Network, Inc.  All Rights Reserved.",
+      "editorial_notes": null,
+      "id": "1570547230",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Rick and Morty",
+        "artwork": {
+          "bgColor": "000000",
+          "height": 3000,
+          "textColor1": "3bd5e9",
+          "textColor2": "f84323",
+          "textColor3": "2faabb",
+          "textColor4": "c6351c",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/36/92/fb/3692fb2c-c241-4816-7a8e-e4f941ff64ca/794043208225.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "contentRating": "explicit",
+        "copyright": "℗ 2018 Turner Music Publishing, Inc. /  2018 Cartoon Network, Inc.  All Rights Reserved.",
+        "genreNames": [
+          "Soundtrack",
+          "Music"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "The Rick and Morty Soundtrack",
+        "playParams": {
+          "id": "1570547230",
+          "kind": "album"
+        },
+        "recordLabel": "Adult Swim / WaterTower Music",
+        "releaseDate": "2018-09-18",
+        "trackCount": 19,
+        "upc": "794043208225",
+        "url": "https://music.apple.com/gb/album/the-rick-and-morty-soundtrack/1570547230"
+      },
+      "url": "https://music.apple.com/gb/album/the-rick-and-morty-soundtrack/1570547230"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2018 ADULT SWIM, [as], RICK AND MORTY TM & © 2018 The Cartoon Network, Inc. A WarnerMedia Company. All Rights Reserved.",
+          "type": "C"
+        },
+        {
+          "text": "℗ 2018 Turner Music Publishing, Inc. / 2018 Cartoon Network, Inc. All Rights Reserved.",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "794043208225"
+      },
+      "id": "49YTYyBoRVoUTl6GaVJRar",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273682fb725a20b826645c640eb",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02682fb725a20b826645c640eb",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851682fb725a20b826645c640eb",
+          "width": 64
+        }
+      ],
+      "label": "Adult Swim / WaterTower Music",
+      "popularity": 50,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+            },
+            "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+            "id": "2M0kKcVuBsLFH5d12pW215",
+            "name": "Rick and Morty",
+            "type": "artist",
+            "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2018 ADULT SWIM, [as], RICK AND MORTY TM & © 2018 The Cartoon Network, Inc. A WarnerMedia Company. All Rights Reserved.",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2018 Turner Music Publishing, Inc. / 2018 Cartoon Network, Inc. All Rights Reserved.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "794043208225"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/49YTYyBoRVoUTl6GaVJRar"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/49YTYyBoRVoUTl6GaVJRar?market=US",
+        "id": "49YTYyBoRVoUTl6GaVJRar",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273682fb725a20b826645c640eb",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02682fb725a20b826645c640eb",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851682fb725a20b826645c640eb",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Adult Swim / WaterTower Music",
+        "name": "The Rick and Morty Soundtrack",
+        "popularity": 50,
+        "release_date": "2018-09-18",
+        "release_date_precision": "day",
+        "total_tracks": 19,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/49YTYyBoRVoUTl6GaVJRar/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 35986,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Y6Pxm8LFw1zJBc3ZW3Stt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Y6Pxm8LFw1zJBc3ZW3Stt",
+              "id": "1Y6Pxm8LFw1zJBc3ZW3Stt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rick and Morty Theme",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1Y6Pxm8LFw1zJBc3ZW3Stt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 178080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0xnzR2IhgBW3XroQMaOqbm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0xnzR2IhgBW3XroQMaOqbm",
+              "id": "0xnzR2IhgBW3XroQMaOqbm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Jerry's Rick",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0xnzR2IhgBW3XroQMaOqbm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1SlSKEVYLSPKXqPxj4Kirg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1SlSKEVYLSPKXqPxj4Kirg",
+                  "id": "1SlSKEVYLSPKXqPxj4Kirg",
+                  "name": "Dan Harmon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1SlSKEVYLSPKXqPxj4Kirg"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 36724,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2UuvaXaBOFVDJaL1WRBTKj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2UuvaXaBOFVDJaL1WRBTKj",
+              "id": "2UuvaXaBOFVDJaL1WRBTKj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Small Intestine Song",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2UuvaXaBOFVDJaL1WRBTKj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1SlSKEVYLSPKXqPxj4Kirg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1SlSKEVYLSPKXqPxj4Kirg",
+                  "id": "1SlSKEVYLSPKXqPxj4Kirg",
+                  "name": "Dan Harmon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1SlSKEVYLSPKXqPxj4Kirg"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 113178,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Zjax1610irexE8MLUJQom"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Zjax1610irexE8MLUJQom",
+              "id": "6Zjax1610irexE8MLUJQom",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Flu Hatin' Rap",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:6Zjax1610irexE8MLUJQom"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 162034,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2M95dwAS9LExGCexemy1uz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2M95dwAS9LExGCexemy1uz",
+              "id": "2M95dwAS9LExGCexemy1uz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "African Dream Pop",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:2M95dwAS9LExGCexemy1uz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0uvsnVeqO2EKJTuUYkXEp0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0uvsnVeqO2EKJTuUYkXEp0",
+                  "id": "0uvsnVeqO2EKJTuUYkXEp0",
+                  "name": "Lauren Hillman",
+                  "type": "artist",
+                  "uri": "spotify:artist:0uvsnVeqO2EKJTuUYkXEp0"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 46539,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7M4cYcqV4ETiCKWGKHAUAH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7M4cYcqV4ETiCKWGKHAUAH",
+              "id": "7M4cYcqV4ETiCKWGKHAUAH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Rick Dance",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7M4cYcqV4ETiCKWGKHAUAH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1Ymky4GOgYA1NI96FCY8yE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1Ymky4GOgYA1NI96FCY8yE",
+                  "id": "1Ymky4GOgYA1NI96FCY8yE",
+                  "name": "Jemaine Clement",
+                  "type": "artist",
+                  "uri": "spotify:artist:1Ymky4GOgYA1NI96FCY8yE"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 141263,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4lcM7UhovQcCa9efiHgPU7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4lcM7UhovQcCa9efiHgPU7",
+              "id": "4lcM7UhovQcCa9efiHgPU7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Goodbye Moonmen",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4lcM7UhovQcCa9efiHgPU7"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4CN7jn6DiWNaDnaJdhBMKp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4CN7jn6DiWNaDnaJdhBMKp",
+                  "id": "4CN7jn6DiWNaDnaJdhBMKp",
+                  "name": "Tara Strong",
+                  "type": "artist",
+                  "uri": "spotify:artist:4CN7jn6DiWNaDnaJdhBMKp"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/46dINH4b60IKlh9tavw9ak"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/46dINH4b60IKlh9tavw9ak",
+                  "id": "46dINH4b60IKlh9tavw9ak",
+                  "name": "Jevin Smith",
+                  "type": "artist",
+                  "uri": "spotify:artist:46dINH4b60IKlh9tavw9ak"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 51565,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4d9CqCIEZn1CBnBYXKM6UZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4d9CqCIEZn1CBnBYXKM6UZ",
+              "id": "4d9CqCIEZn1CBnBYXKM6UZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Summer and Tinkles",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:4d9CqCIEZn1CBnBYXKM6UZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 141483,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4wEUjBRfqHQ3cJOq1bP3dg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4wEUjBRfqHQ3cJOq1bP3dg",
+              "id": "4wEUjBRfqHQ3cJOq1bP3dg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Unity Says Goodbye",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4wEUjBRfqHQ3cJOq1bP3dg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 60154,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1EISpHrGu1GGP8XndYvutD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1EISpHrGu1GGP8XndYvutD",
+              "id": "1EISpHrGu1GGP8XndYvutD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get Schwifty (C-131)",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1EISpHrGu1GGP8XndYvutD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 51999,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4twrTsgl63diONB4iyF7cl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4twrTsgl63diONB4iyF7cl",
+              "id": "4twrTsgl63diONB4iyF7cl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Raised Up (C-131)",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4twrTsgl63diONB4iyF7cl"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 39643,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5b8PgFn4si4meh2GsYAi2n"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5b8PgFn4si4meh2GsYAi2n",
+              "id": "5b8PgFn4si4meh2GsYAi2n",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Help Me I'm Gonna Die",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:5b8PgFn4si4meh2GsYAi2n"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0kUdoLw1gHA76hUCqKhYeO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0kUdoLw1gHA76hUCqKhYeO",
+                  "id": "0kUdoLw1gHA76hUCqKhYeO",
+                  "name": "Justin Roiland",
+                  "type": "artist",
+                  "uri": "spotify:artist:0kUdoLw1gHA76hUCqKhYeO"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 33836,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1l11HTodGSr2zsblnnWz68"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1l11HTodGSr2zsblnnWz68",
+              "id": "1l11HTodGSr2zsblnnWz68",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Let Me Out",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:1l11HTodGSr2zsblnnWz68"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6D6rjLdxyE5vwhMlkuQq0E"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6D6rjLdxyE5vwhMlkuQq0E",
+                  "id": "6D6rjLdxyE5vwhMlkuQq0E",
+                  "name": "Chaos Chaos",
+                  "type": "artist",
+                  "uri": "spotify:artist:6D6rjLdxyE5vwhMlkuQq0E"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208363,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6qWzb9aBTePeHDUKkBAUzz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6qWzb9aBTePeHDUKkBAUzz",
+              "id": "6qWzb9aBTePeHDUKkBAUzz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Memories",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:6qWzb9aBTePeHDUKkBAUzz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1SlSKEVYLSPKXqPxj4Kirg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1SlSKEVYLSPKXqPxj4Kirg",
+                  "id": "1SlSKEVYLSPKXqPxj4Kirg",
+                  "name": "Dan Harmon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1SlSKEVYLSPKXqPxj4Kirg"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 59410,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5NezLDpPzg93azB7Q5F90s"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5NezLDpPzg93azB7Q5F90s",
+              "id": "5NezLDpPzg93azB7Q5F90s",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Alien Jazz Rap",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:5NezLDpPzg93azB7Q5F90s"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1SlSKEVYLSPKXqPxj4Kirg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1SlSKEVYLSPKXqPxj4Kirg",
+                  "id": "1SlSKEVYLSPKXqPxj4Kirg",
+                  "name": "Dan Harmon",
+                  "type": "artist",
+                  "uri": "spotify:artist:1SlSKEVYLSPKXqPxj4Kirg"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/61n9sOIRfmZTOKxwzHKYQy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/61n9sOIRfmZTOKxwzHKYQy",
+                  "id": "61n9sOIRfmZTOKxwzHKYQy",
+                  "name": "Asya Saavedra",
+                  "type": "artist",
+                  "uri": "spotify:artist:61n9sOIRfmZTOKxwzHKYQy"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1XTUskgTkqfmBtc054iA98"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1XTUskgTkqfmBtc054iA98",
+                  "id": "1XTUskgTkqfmBtc054iA98",
+                  "name": "Chloe Saavedra",
+                  "type": "artist",
+                  "uri": "spotify:artist:1XTUskgTkqfmBtc054iA98"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 116190,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1MSp9xvLhJ3qAPAjySa2VB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1MSp9xvLhJ3qAPAjySa2VB",
+              "id": "1MSp9xvLhJ3qAPAjySa2VB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fathers and Daughters",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:1MSp9xvLhJ3qAPAjySa2VB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 184365,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6dB3oDs8TZk4c32KV7fBRW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6dB3oDs8TZk4c32KV7fBRW",
+              "id": "6dB3oDs8TZk4c32KV7fBRW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tales from the Citadel",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:6dB3oDs8TZk4c32KV7fBRW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 284512,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4VAPxtQVbPgKQ0KratHGwr"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4VAPxtQVbPgKQ0KratHGwr",
+              "id": "4VAPxtQVbPgKQ0KratHGwr",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rick and Morty Score Medley",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:4VAPxtQVbPgKQ0KratHGwr"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2M0kKcVuBsLFH5d12pW215"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2M0kKcVuBsLFH5d12pW215",
+                  "id": "2M0kKcVuBsLFH5d12pW215",
+                  "name": "Rick and Morty",
+                  "type": "artist",
+                  "uri": "spotify:artist:2M0kKcVuBsLFH5d12pW215"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4Pb4bahbtpK9nkdfp4bHgi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4Pb4bahbtpK9nkdfp4bHgi",
+                  "id": "4Pb4bahbtpK9nkdfp4bHgi",
+                  "name": "Ryan Elder",
+                  "type": "artist",
+                  "uri": "spotify:artist:4Pb4bahbtpK9nkdfp4bHgi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 40056,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/71bfoCBOjm3lx9ITh2tC0e"
+              },
+              "href": "https://api.spotify.com/v1/tracks/71bfoCBOjm3lx9ITh2tC0e",
+              "id": "71bfoCBOjm3lx9ITh2tC0e",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Human Music",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:71bfoCBOjm3lx9ITh2tC0e"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 19
+        },
+        "type": "album",
+        "uri": "spotify:album:49YTYyBoRVoUTl6GaVJRar"
+      },
+      "release_date": "2018-09-18",
+      "release_date_precision": "day",
+      "total_tracks": 19,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 35986,
+          "explicit": false,
+          "id": "1Y6Pxm8LFw1zJBc3ZW3Stt",
+          "name": "Rick and Morty Theme",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 178080,
+          "explicit": false,
+          "id": "0xnzR2IhgBW3XroQMaOqbm",
+          "name": "Jerry's Rick",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "1SlSKEVYLSPKXqPxj4Kirg",
+              "name": "Dan Harmon"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 36724,
+          "explicit": false,
+          "id": "2UuvaXaBOFVDJaL1WRBTKj",
+          "name": "The Small Intestine Song",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "1SlSKEVYLSPKXqPxj4Kirg",
+              "name": "Dan Harmon"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 113178,
+          "explicit": false,
+          "id": "6Zjax1610irexE8MLUJQom",
+          "name": "The Flu Hatin' Rap",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 162034,
+          "explicit": false,
+          "id": "2M95dwAS9LExGCexemy1uz",
+          "name": "African Dream Pop",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "0uvsnVeqO2EKJTuUYkXEp0",
+              "name": "Lauren Hillman"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 46539,
+          "explicit": true,
+          "id": "7M4cYcqV4ETiCKWGKHAUAH",
+          "name": "The Rick Dance",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "1Ymky4GOgYA1NI96FCY8yE",
+              "name": "Jemaine Clement"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 141263,
+          "explicit": true,
+          "id": "4lcM7UhovQcCa9efiHgPU7",
+          "name": "Goodbye Moonmen",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4CN7jn6DiWNaDnaJdhBMKp",
+              "name": "Tara Strong"
+            },
+            {
+              "id": "46dINH4b60IKlh9tavw9ak",
+              "name": "Jevin Smith"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 51565,
+          "explicit": true,
+          "id": "4d9CqCIEZn1CBnBYXKM6UZ",
+          "name": "Summer and Tinkles",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 141483,
+          "explicit": false,
+          "id": "4wEUjBRfqHQ3cJOq1bP3dg",
+          "name": "Unity Says Goodbye",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 60154,
+          "explicit": true,
+          "id": "1EISpHrGu1GGP8XndYvutD",
+          "name": "Get Schwifty (C-131)",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 51999,
+          "explicit": false,
+          "id": "4twrTsgl63diONB4iyF7cl",
+          "name": "Raised Up (C-131)",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 39643,
+          "explicit": false,
+          "id": "5b8PgFn4si4meh2GsYAi2n",
+          "name": "Help Me I'm Gonna Die",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "0kUdoLw1gHA76hUCqKhYeO",
+              "name": "Justin Roiland"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 33836,
+          "explicit": false,
+          "id": "1l11HTodGSr2zsblnnWz68",
+          "name": "Let Me Out",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "6D6rjLdxyE5vwhMlkuQq0E",
+              "name": "Chaos Chaos"
+            }
+          ],
+          "duration_ms": 208363,
+          "explicit": false,
+          "id": "6qWzb9aBTePeHDUKkBAUzz",
+          "name": "Memories",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "1SlSKEVYLSPKXqPxj4Kirg",
+              "name": "Dan Harmon"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 59410,
+          "explicit": false,
+          "id": "5NezLDpPzg93azB7Q5F90s",
+          "name": "Alien Jazz Rap",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "1SlSKEVYLSPKXqPxj4Kirg",
+              "name": "Dan Harmon"
+            },
+            {
+              "id": "61n9sOIRfmZTOKxwzHKYQy",
+              "name": "Asya Saavedra"
+            },
+            {
+              "id": "1XTUskgTkqfmBtc054iA98",
+              "name": "Chloe Saavedra"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 116190,
+          "explicit": false,
+          "id": "1MSp9xvLhJ3qAPAjySa2VB",
+          "name": "Fathers and Daughters",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 184365,
+          "explicit": false,
+          "id": "6dB3oDs8TZk4c32KV7fBRW",
+          "name": "Tales from the Citadel",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 284512,
+          "explicit": false,
+          "id": "4VAPxtQVbPgKQ0KratHGwr",
+          "name": "Rick and Morty Score Medley",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "2M0kKcVuBsLFH5d12pW215",
+              "name": "Rick and Morty"
+            },
+            {
+              "id": "4Pb4bahbtpK9nkdfp4bHgi",
+              "name": "Ryan Elder"
+            }
+          ],
+          "duration_ms": 40056,
+          "explicit": false,
+          "id": "71bfoCBOjm3lx9ITh2tC0e",
+          "name": "Human Music",
+          "preview_url": null,
+          "track_number": 19
+        }
+      ],
+      "url": "https://open.spotify.com/album/49YTYyBoRVoUTl6GaVJRar"
+    }
+  },
+  "spotify_id": "49YTYyBoRVoUTl6GaVJRar",
+  "spotify_url": "https://open.spotify.com/album/49YTYyBoRVoUTl6GaVJRar",
   "styles": [
     "Soundtrack"
   ],
@@ -769,6 +2241,6 @@
       "title": "Human Music"
     }
   ],
-  "updated_at": "2025-07-05T16:41:05.589677",
+  "updated_at": "2025-07-07T15:40:12.877999",
   "year": 2018
 }

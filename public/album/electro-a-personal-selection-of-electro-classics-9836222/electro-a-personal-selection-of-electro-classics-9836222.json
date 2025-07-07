@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "959973250",
-  "apple_music_url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:25:50.770389",
+  "created_at": "2025-07-07T15:46:47.218903",
   "date_added": "2017-02-22T18:01:26-08:00",
   "discogs_id": "9836222",
   "discogs_url": "https://www.discogs.com/release/9836222-Various-Electro-A-Personal-Selection-Of-Electro-Classics",
@@ -94,8 +94,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222.jpg",
       "width": 2000
     }
   ],
@@ -105,69 +105,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-hi-res.jpg",
-    "medium": "public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-medium.jpg",
-    "small": "public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-small.jpg"
+    "hi-res": "../public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-hi-res.jpg",
+    "medium": "../public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-medium.jpg",
+    "small": "../public/album/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:25:52.815747",
+    "processed_at": "2025-07-07T15:46:54.688635",
     "services_used": [
       "discogs",
-      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Electro Classics (House, Deep-House, Techno, Minimal, Electro, French Touch and Many More...)",
+  "release_name_apple_music": null,
   "release_name_discogs": "Electro (A Personal Selection Of Electro Classics)",
   "release_name_spotify": null,
   "released": "2017-02-17",
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/2000x2000bb.jpg",
-      "content_rating": "explicit",
-      "copyright": "℗ 2015 My Classics",
-      "editorial_notes": null,
-      "id": "959973250",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "000000",
-          "height": 1440,
-          "textColor1": "ffffff",
-          "textColor2": "11d0fa",
-          "textColor3": "cbcbcb",
-          "textColor4": "0da6c8",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/{w}x{h}bb.jpg",
-          "width": 1440
-        },
-        "contentRating": "explicit",
-        "copyright": "℗ 2015 My Classics",
-        "genreNames": [
-          "Electronic",
-          "Music"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Electro Classics (House, Deep-House, Techno, Minimal, Electro, French Touch and Many More...)",
-        "playParams": {
-          "id": "959973250",
-          "kind": "album"
-        },
-        "recordLabel": "Believe digital",
-        "releaseDate": "2015-02-02",
-        "trackCount": 26,
-        "upc": "3614590842369",
-        "url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250"
-      },
-      "url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250"
-    }
-  },
+  "services": {},
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -352,6 +307,6 @@
       "title": "The Smurf"
     }
   ],
-  "updated_at": "2025-07-05T17:25:51.654677",
+  "updated_at": "2025-07-07T15:46:53.583926",
   "year": 2017
 }

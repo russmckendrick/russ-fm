@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1154238159",
-  "apple_music_url": "https://music.apple.com/gb/album/trolls-original-motion-picture-soundtrack/1154238159",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:35:25.920880",
+  "created_at": "2025-07-07T15:45:21.511366",
   "date_added": "2016-11-16T13:03:18-08:00",
   "discogs_id": "547494",
   "discogs_url": "https://www.discogs.com/release/547494-Various-Doing-It-For-The-Kids",
@@ -72,8 +72,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/68/19/43/68194388-efa7-3afe-8a15-a4c3eebef1f6/886445915211.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494.jpg",
       "width": 2000
     }
   ],
@@ -83,74 +83,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-hi-res.jpg",
-    "medium": "public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-medium.jpg",
-    "small": "public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-small.jpg"
+    "hi-res": "../public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-hi-res.jpg",
+    "medium": "../public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-medium.jpg",
+    "small": "../public/album/doing-it-for-the-kids-547494/doing-it-for-the-kids-547494-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:35:27.080710",
+    "processed_at": "2025-07-07T15:45:31.323071",
     "services_used": [
       "discogs",
-      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "TROLLS (Original Motion Picture Soundtrack)",
+  "release_name_apple_music": null,
   "release_name_discogs": "Doing It For The Kids",
   "release_name_spotify": null,
   "released": "1988-08-08",
-  "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/68/19/43/68194388-efa7-3afe-8a15-a4c3eebef1f6/886445915211.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ This Compilation (P) 2016 RCA Records, a division of Sony Music Entertainment",
-      "editorial_notes": "Under the guidance of executive producer Justin Timberlake—who sings on almost every track—<i>Trolls</i> is stacked with colourful, catchy melodies and playful pop-culture references. After launching to life with a Gwen Stefani-assisted “Hair Up” (which adds a maniacal dance beat to “In the Hall of the Mountain King”), the undeniable highlight is Timberlake’s infectious “CAN’T STOP THE FEELING!” Among the clever mash-ups and goofy lyrics, there are moments of genuine sweetness too, like Zooey Deschanel's heartfelt cover of Lionel Richie’s “Hello\".",
-      "id": "1154238159",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "42296e",
-          "height": 1500,
-          "textColor1": "ffffff",
-          "textColor2": "f4d631",
-          "textColor3": "d9d4e1",
-          "textColor4": "d1b33d",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/68/19/43/68194388-efa7-3afe-8a15-a4c3eebef1f6/886445915211.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "copyright": "℗ This Compilation (P) 2016 RCA Records, a division of Sony Music Entertainment",
-        "editorialNotes": {
-          "short": "A set of catchy hooks, with plenty of Justin.",
-          "standard": "Under the guidance of executive producer Justin Timberlake—who sings on almost every track—<i>Trolls</i> is stacked with colourful, catchy melodies and playful pop-culture references. After launching to life with a Gwen Stefani-assisted “Hair Up” (which adds a maniacal dance beat to “In the Hall of the Mountain King”), the undeniable highlight is Timberlake’s infectious “CAN’T STOP THE FEELING!” Among the clever mash-ups and goofy lyrics, there are moments of genuine sweetness too, like Zooey Deschanel's heartfelt cover of Lionel Richie’s “Hello\"."
-        },
-        "genreNames": [
-          "Musicals",
-          "Music",
-          "Soundtrack",
-          "Children's Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": true,
-        "isSingle": false,
-        "name": "TROLLS (Original Motion Picture Soundtrack)",
-        "playParams": {
-          "id": "1154238159",
-          "kind": "album"
-        },
-        "recordLabel": "Villa 40/RCA Records",
-        "releaseDate": "2016-09-23",
-        "trackCount": 13,
-        "upc": "886445915211",
-        "url": "https://music.apple.com/gb/album/trolls-original-motion-picture-soundtrack/1154238159"
-      },
-      "url": "https://music.apple.com/gb/album/trolls-original-motion-picture-soundtrack/1154238159"
-    }
-  },
+  "services": {},
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -445,6 +395,6 @@
       "title": "Brighter Now"
     }
   ],
-  "updated_at": "2025-07-05T17:35:26.560318",
+  "updated_at": "2025-07-07T15:45:30.273811",
   "year": 1988
 }

@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T17:59:37.283699",
+  "created_at": "2025-07-07T15:49:16.011477",
   "date_added": "2015-12-07T18:46:42-08:00",
   "discogs_id": "7782037",
   "discogs_url": "https://www.discogs.com/release/7782037-Various-Transformers-The-Movie-Original-Motion-Picture-Soundtrack",
@@ -121,6 +121,13 @@
       "type": "apple_music_artwork",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/48/95/40/489540ee-215c-5dd9-3b2d-e3acbe7b390b/mzi.johqrqsm.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -130,14 +137,14 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-hi-res.jpg",
-    "medium": "public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-medium.jpg",
-    "small": "public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-small.jpg"
+    "hi-res": "../public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-hi-res.jpg",
+    "medium": "../public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-medium.jpg",
+    "small": "../public/album/transformers-the-movie-original-motion-picture-soundtrack-7782037/transformers-the-movie-original-motion-picture-soundtrack-7782037-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:59:38.895535",
+    "processed_at": "2025-07-07T15:49:29.114676",
     "services_used": [
       "discogs",
       "apple_music",
@@ -147,7 +154,7 @@
   },
   "release_name_apple_music": "Transformers: The Movie (Original Motion Picture Soundtrack)",
   "release_name_discogs": "Transformers: The Movie (Original Motion Picture Soundtrack)",
-  "release_name_spotify": "Magnatron",
+  "release_name_spotify": "Transformers",
   "released": "2015-11-27",
   "services": {
     "apple_music": {
@@ -193,653 +200,545 @@
       "url": "https://music.apple.com/gb/album/transformers-the-movie-original-motion-picture/254632798"
     },
     "spotify": {
-      "album_type": "compilation",
+      "album_type": "album",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "2015 NRW Records, under licence to NewRetroWave, LLC",
-          "type": "C"
-        },
-        {
-          "text": "2015 NRW Records, under licence to NewRetroWave, LLC",
+          "text": "(P) 1986 Volcano Entertainment, III, L.L.C.",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "040232265884"
+        "upc": "614223201528"
       },
-      "id": "7LFFQrgPPbPzS6Q61Y3o4F",
+      "id": "6MB5ahz8dvKcoO3DVHrmgU",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2732c02d9bf7b58ed0ba8f1aadb",
+          "url": "https://i.scdn.co/image/ab67616d0000b273c2ff63ad19194dc36f77229f",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e022c02d9bf7b58ed0ba8f1aadb",
+          "url": "https://i.scdn.co/image/ab67616d00001e02c2ff63ad19194dc36f77229f",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048512c02d9bf7b58ed0ba8f1aadb",
+          "url": "https://i.scdn.co/image/ab67616d00004851c2ff63ad19194dc36f77229f",
           "width": 64
         }
       ],
-      "label": "NRW Records, under licence to NewRetroWave, LLC",
-      "popularity": 45,
+      "label": "Volcano",
+      "popularity": 42,
       "preview_url": null,
       "raw_data": {
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+              "spotify": "https://open.spotify.com/artist/3huVQoEWdqUTvlYpFVUHcF"
             },
-            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
-            "id": "0LyfQWJT6nXafLPZqxe9Of",
-            "name": "Various Artists",
+            "href": "https://api.spotify.com/v1/artists/3huVQoEWdqUTvlYpFVUHcF",
+            "id": "3huVQoEWdqUTvlYpFVUHcF",
+            "name": "Original Soundtrack",
             "type": "artist",
-            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+            "uri": "spotify:artist:3huVQoEWdqUTvlYpFVUHcF"
           }
         ],
         "copyrights": [
           {
-            "text": "2015 NRW Records, under licence to NewRetroWave, LLC",
-            "type": "C"
-          },
-          {
-            "text": "2015 NRW Records, under licence to NewRetroWave, LLC",
+            "text": "(P) 1986 Volcano Entertainment, III, L.L.C.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "040232265884"
+          "upc": "614223201528"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/7LFFQrgPPbPzS6Q61Y3o4F"
+          "spotify": "https://open.spotify.com/album/6MB5ahz8dvKcoO3DVHrmgU"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/7LFFQrgPPbPzS6Q61Y3o4F?market=US",
-        "id": "7LFFQrgPPbPzS6Q61Y3o4F",
+        "href": "https://api.spotify.com/v1/albums/6MB5ahz8dvKcoO3DVHrmgU?market=US",
+        "id": "6MB5ahz8dvKcoO3DVHrmgU",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2732c02d9bf7b58ed0ba8f1aadb",
+            "url": "https://i.scdn.co/image/ab67616d0000b273c2ff63ad19194dc36f77229f",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e022c02d9bf7b58ed0ba8f1aadb",
+            "url": "https://i.scdn.co/image/ab67616d00001e02c2ff63ad19194dc36f77229f",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048512c02d9bf7b58ed0ba8f1aadb",
+            "url": "https://i.scdn.co/image/ab67616d00004851c2ff63ad19194dc36f77229f",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "NRW Records, under licence to NewRetroWave, LLC",
-        "name": "Magnatron",
-        "popularity": 45,
-        "release_date": "2015-07-14",
-        "release_date_precision": "day",
-        "total_tracks": 12,
+        "label": "Volcano",
+        "name": "Transformers",
+        "popularity": 42,
+        "release_date": "1986",
+        "release_date_precision": "year",
+        "total_tracks": 10,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/7LFFQrgPPbPzS6Q61Y3o4F/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/6MB5ahz8dvKcoO3DVHrmgU/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4N55TE3vFODMR4BX5B9fnM"
+                    "spotify": "https://open.spotify.com/artist/7qT1EPkli4RDJ2KNynkQyQ"
                   },
-                  "href": "https://api.spotify.com/v1/artists/4N55TE3vFODMR4BX5B9fnM",
-                  "id": "4N55TE3vFODMR4BX5B9fnM",
-                  "name": "Waveshaper",
+                  "href": "https://api.spotify.com/v1/artists/7qT1EPkli4RDJ2KNynkQyQ",
+                  "id": "7qT1EPkli4RDJ2KNynkQyQ",
+                  "name": "Stan Bush",
                   "type": "artist",
-                  "uri": "spotify:artist:4N55TE3vFODMR4BX5B9fnM"
+                  "uri": "spotify:artist:7qT1EPkli4RDJ2KNynkQyQ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 232000,
+              "duration_ms": 235413,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5vnwZmz6YEt4mPCZH4icpO"
+                "spotify": "https://open.spotify.com/track/0YLC29DmVxF0UGPI8S5vRu"
               },
-              "href": "https://api.spotify.com/v1/tracks/5vnwZmz6YEt4mPCZH4icpO",
-              "id": "5vnwZmz6YEt4mPCZH4icpO",
+              "href": "https://api.spotify.com/v1/tracks/0YLC29DmVxF0UGPI8S5vRu",
+              "id": "0YLC29DmVxF0UGPI8S5vRu",
               "is_local": false,
               "is_playable": true,
-              "name": "Crystal Protocol",
+              "name": "The Touch",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:5vnwZmz6YEt4mPCZH4icpO"
+              "uri": "spotify:track:0YLC29DmVxF0UGPI8S5vRu"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0OTY72l7CC7ynKzp6N2o5b"
+                    "spotify": "https://open.spotify.com/artist/4Sn3FvmbkpF4NHNpOUVid3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/0OTY72l7CC7ynKzp6N2o5b",
-                  "id": "0OTY72l7CC7ynKzp6N2o5b",
-                  "name": "Daniel Deluxe",
+                  "href": "https://api.spotify.com/v1/artists/4Sn3FvmbkpF4NHNpOUVid3",
+                  "id": "4Sn3FvmbkpF4NHNpOUVid3",
+                  "name": "N.R.G.",
                   "type": "artist",
-                  "uri": "spotify:artist:0OTY72l7CC7ynKzp6N2o5b"
+                  "uri": "spotify:artist:4Sn3FvmbkpF4NHNpOUVid3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 272855,
+              "duration_ms": 201693,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/018SQDupRTRsl1Wolu1X0c"
+                "spotify": "https://open.spotify.com/track/3vJ7lqX60lrJZCW4E2eKyZ"
               },
-              "href": "https://api.spotify.com/v1/tracks/018SQDupRTRsl1Wolu1X0c",
-              "id": "018SQDupRTRsl1Wolu1X0c",
+              "href": "https://api.spotify.com/v1/tracks/3vJ7lqX60lrJZCW4E2eKyZ",
+              "id": "3vJ7lqX60lrJZCW4E2eKyZ",
               "is_local": false,
               "is_playable": true,
-              "name": "Star Eater",
+              "name": "Instruments of Destruction",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:018SQDupRTRsl1Wolu1X0c"
+              "uri": "spotify:track:3vJ7lqX60lrJZCW4E2eKyZ"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3r5rHoyzqZHGJkU8fGZtNO"
+                    "spotify": "https://open.spotify.com/artist/5Q2nBzXfyXGIEf8KpHqeHn"
                   },
-                  "href": "https://api.spotify.com/v1/artists/3r5rHoyzqZHGJkU8fGZtNO",
-                  "id": "3r5rHoyzqZHGJkU8fGZtNO",
-                  "name": "Tonebox",
+                  "href": "https://api.spotify.com/v1/artists/5Q2nBzXfyXGIEf8KpHqeHn",
+                  "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+                  "name": "Vince DiCola",
                   "type": "artist",
-                  "uri": "spotify:artist:3r5rHoyzqZHGJkU8fGZtNO"
+                  "uri": "spotify:artist:5Q2nBzXfyXGIEf8KpHqeHn"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 260679,
+              "duration_ms": 177400,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2KEFx0hCS72nCN3rrt9xbP"
+                "spotify": "https://open.spotify.com/track/1qYOyu0wVLjZKVLpfMWulg"
               },
-              "href": "https://api.spotify.com/v1/tracks/2KEFx0hCS72nCN3rrt9xbP",
-              "id": "2KEFx0hCS72nCN3rrt9xbP",
+              "href": "https://api.spotify.com/v1/tracks/1qYOyu0wVLjZKVLpfMWulg",
+              "id": "1qYOyu0wVLjZKVLpfMWulg",
               "is_local": false,
               "is_playable": true,
-              "name": "Refractor",
+              "name": "Death of Optimus Prime",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:2KEFx0hCS72nCN3rrt9xbP"
+              "uri": "spotify:track:1qYOyu0wVLjZKVLpfMWulg"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/72naL8vQVNsx85zPLuTSWf"
+                    "spotify": "https://open.spotify.com/artist/7qT1EPkli4RDJ2KNynkQyQ"
                   },
-                  "href": "https://api.spotify.com/v1/artists/72naL8vQVNsx85zPLuTSWf",
-                  "id": "72naL8vQVNsx85zPLuTSWf",
-                  "name": "Zombie Hyperdrive",
+                  "href": "https://api.spotify.com/v1/artists/7qT1EPkli4RDJ2KNynkQyQ",
+                  "id": "7qT1EPkli4RDJ2KNynkQyQ",
+                  "name": "Stan Bush",
                   "type": "artist",
-                  "uri": "spotify:artist:72naL8vQVNsx85zPLuTSWf"
+                  "uri": "spotify:artist:7qT1EPkli4RDJ2KNynkQyQ"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 236146,
+              "duration_ms": 241240,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6RIqpY1oeSLGLHrdMIyrKn"
+                "spotify": "https://open.spotify.com/track/7DZcrMqgQiO4kotOGucIM7"
               },
-              "href": "https://api.spotify.com/v1/tracks/6RIqpY1oeSLGLHrdMIyrKn",
-              "id": "6RIqpY1oeSLGLHrdMIyrKn",
+              "href": "https://api.spotify.com/v1/tracks/7DZcrMqgQiO4kotOGucIM7",
+              "id": "7DZcrMqgQiO4kotOGucIM7",
               "is_local": false,
               "is_playable": true,
-              "name": "Gigawatt",
+              "name": "Dare",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:6RIqpY1oeSLGLHrdMIyrKn"
+              "uri": "spotify:track:7DZcrMqgQiO4kotOGucIM7"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1Gjcge8sS4hbBKnFQBIIdy"
+                    "spotify": "https://open.spotify.com/artist/5iaIdC1jRAqg7XZGIjYvMA"
                   },
-                  "href": "https://api.spotify.com/v1/artists/1Gjcge8sS4hbBKnFQBIIdy",
-                  "id": "1Gjcge8sS4hbBKnFQBIIdy",
-                  "name": "Let Em Riot",
+                  "href": "https://api.spotify.com/v1/artists/5iaIdC1jRAqg7XZGIjYvMA",
+                  "id": "5iaIdC1jRAqg7XZGIjYvMA",
+                  "name": "Spectre General",
                   "type": "artist",
-                  "uri": "spotify:artist:1Gjcge8sS4hbBKnFQBIIdy"
+                  "uri": "spotify:artist:5iaIdC1jRAqg7XZGIjYvMA"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 283870,
+              "duration_ms": 218026,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6FgmeqOqVDxZCx8FO43u8b"
+                "spotify": "https://open.spotify.com/track/1FZ3shpfYLi8iriNH9xPMM"
               },
-              "href": "https://api.spotify.com/v1/tracks/6FgmeqOqVDxZCx8FO43u8b",
-              "id": "6FgmeqOqVDxZCx8FO43u8b",
+              "href": "https://api.spotify.com/v1/tracks/1FZ3shpfYLi8iriNH9xPMM",
+              "id": "1FZ3shpfYLi8iriNH9xPMM",
               "is_local": false,
               "is_playable": true,
-              "name": "Traces",
+              "name": "Nothin's Gonna Stand In Our Way",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:6FgmeqOqVDxZCx8FO43u8b"
+              "uri": "spotify:track:1FZ3shpfYLi8iriNH9xPMM"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6BZQniy7PacCOXp9sk2vhQ"
+                    "spotify": "https://open.spotify.com/artist/2AzIaYaTZGfOYaimW2ng5B"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6BZQniy7PacCOXp9sk2vhQ",
-                  "id": "6BZQniy7PacCOXp9sk2vhQ",
-                  "name": "Mk-Ultra",
+                  "href": "https://api.spotify.com/v1/artists/2AzIaYaTZGfOYaimW2ng5B",
+                  "id": "2AzIaYaTZGfOYaimW2ng5B",
+                  "name": "Lion",
                   "type": "artist",
-                  "uri": "spotify:artist:6BZQniy7PacCOXp9sk2vhQ"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1KbKAmFfjBl4EgEW71ZvNo"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1KbKAmFfjBl4EgEW71ZvNo",
-                  "id": "1KbKAmFfjBl4EgEW71ZvNo",
-                  "name": "Vidcomm",
-                  "type": "artist",
-                  "uri": "spotify:artist:1KbKAmFfjBl4EgEW71ZvNo"
+                  "uri": "spotify:artist:2AzIaYaTZGfOYaimW2ng5B"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 262564,
+              "duration_ms": 214506,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3XSVU9GIoRs2qS87isxAdM"
+                "spotify": "https://open.spotify.com/track/71hSdipWyFm6dHBtljSyij"
               },
-              "href": "https://api.spotify.com/v1/tracks/3XSVU9GIoRs2qS87isxAdM",
-              "id": "3XSVU9GIoRs2qS87isxAdM",
+              "href": "https://api.spotify.com/v1/tracks/71hSdipWyFm6dHBtljSyij",
+              "id": "71hSdipWyFm6dHBtljSyij",
               "is_local": false,
               "is_playable": true,
-              "name": "Coast to Coast (feat. Vidcomm)",
+              "name": "The Transformers (Theme)",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:3XSVU9GIoRs2qS87isxAdM"
+              "uri": "spotify:track:71hSdipWyFm6dHBtljSyij"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2b1hXFWmxGOqr7Y0yxKkI5"
+                    "spotify": "https://open.spotify.com/artist/5Q2nBzXfyXGIEf8KpHqeHn"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2b1hXFWmxGOqr7Y0yxKkI5",
-                  "id": "2b1hXFWmxGOqr7Y0yxKkI5",
-                  "name": "Miami Beach Force",
+                  "href": "https://api.spotify.com/v1/artists/5Q2nBzXfyXGIEf8KpHqeHn",
+                  "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+                  "name": "Vince DiCola",
                   "type": "artist",
-                  "uri": "spotify:artist:2b1hXFWmxGOqr7Y0yxKkI5"
+                  "uri": "spotify:artist:5Q2nBzXfyXGIEf8KpHqeHn"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 199024,
+              "duration_ms": 286106,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4Rtl7cIzwc5eQQVd45Yv5K"
+                "spotify": "https://open.spotify.com/track/691lWpy2FsBew083z5QYNW"
               },
-              "href": "https://api.spotify.com/v1/tracks/4Rtl7cIzwc5eQQVd45Yv5K",
-              "id": "4Rtl7cIzwc5eQQVd45Yv5K",
+              "href": "https://api.spotify.com/v1/tracks/691lWpy2FsBew083z5QYNW",
+              "id": "691lWpy2FsBew083z5QYNW",
               "is_local": false,
               "is_playable": true,
-              "name": "Hard to Catch",
+              "name": "Escape",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:4Rtl7cIzwc5eQQVd45Yv5K"
+              "uri": "spotify:track:691lWpy2FsBew083z5QYNW"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/2KtnZQwMQJN3uyI8eHZRvm"
+                    "spotify": "https://open.spotify.com/artist/5iaIdC1jRAqg7XZGIjYvMA"
                   },
-                  "href": "https://api.spotify.com/v1/artists/2KtnZQwMQJN3uyI8eHZRvm",
-                  "id": "2KtnZQwMQJN3uyI8eHZRvm",
-                  "name": "Dance With the Dead",
+                  "href": "https://api.spotify.com/v1/artists/5iaIdC1jRAqg7XZGIjYvMA",
+                  "id": "5iaIdC1jRAqg7XZGIjYvMA",
+                  "name": "Spectre General",
                   "type": "artist",
-                  "uri": "spotify:artist:2KtnZQwMQJN3uyI8eHZRvm"
+                  "uri": "spotify:artist:5iaIdC1jRAqg7XZGIjYvMA"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 279915,
+              "duration_ms": 224333,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0PqwIcIjaTGHVXAk08tIPU"
+                "spotify": "https://open.spotify.com/track/0q6TAJQqnSopBs3DssFRrr"
               },
-              "href": "https://api.spotify.com/v1/tracks/0PqwIcIjaTGHVXAk08tIPU",
-              "id": "0PqwIcIjaTGHVXAk08tIPU",
+              "href": "https://api.spotify.com/v1/tracks/0q6TAJQqnSopBs3DssFRrr",
+              "id": "0q6TAJQqnSopBs3DssFRrr",
               "is_local": false,
               "is_playable": true,
-              "name": "Skeletons in the Attic",
+              "name": "Hunger",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:0PqwIcIjaTGHVXAk08tIPU"
+              "uri": "spotify:track:0q6TAJQqnSopBs3DssFRrr"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/3kwoPkICT4iPkNjr6mL13N"
+                    "spotify": "https://open.spotify.com/artist/5Q2nBzXfyXGIEf8KpHqeHn"
                   },
-                  "href": "https://api.spotify.com/v1/artists/3kwoPkICT4iPkNjr6mL13N",
-                  "id": "3kwoPkICT4iPkNjr6mL13N",
-                  "name": "TOKYO ROSE",
+                  "href": "https://api.spotify.com/v1/artists/5Q2nBzXfyXGIEf8KpHqeHn",
+                  "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+                  "name": "Vince DiCola",
                   "type": "artist",
-                  "uri": "spotify:artist:3kwoPkICT4iPkNjr6mL13N"
+                  "uri": "spotify:artist:5Q2nBzXfyXGIEf8KpHqeHn"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 183191,
+              "duration_ms": 257600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1u32OSzm05naBciIjAxpwk"
+                "spotify": "https://open.spotify.com/track/1TnGUkh1rWweHk0MlnOw4T"
               },
-              "href": "https://api.spotify.com/v1/tracks/1u32OSzm05naBciIjAxpwk",
-              "id": "1u32OSzm05naBciIjAxpwk",
+              "href": "https://api.spotify.com/v1/tracks/1TnGUkh1rWweHk0MlnOw4T",
+              "id": "1TnGUkh1rWweHk0MlnOw4T",
               "is_local": false,
               "is_playable": true,
-              "name": "The Wraith",
+              "name": "Autobot / Decepticon Battle",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:1u32OSzm05naBciIjAxpwk"
+              "uri": "spotify:track:1TnGUkh1rWweHk0MlnOw4T"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1j0ithcigqOGIxBumPtAqX"
+                    "spotify": "https://open.spotify.com/artist/1bDWGdIC2hardyt55nlQgG"
                   },
-                  "href": "https://api.spotify.com/v1/artists/1j0ithcigqOGIxBumPtAqX",
-                  "id": "1j0ithcigqOGIxBumPtAqX",
-                  "name": "Turboslash",
+                  "href": "https://api.spotify.com/v1/artists/1bDWGdIC2hardyt55nlQgG",
+                  "id": "1bDWGdIC2hardyt55nlQgG",
+                  "name": "\"Weird Al\" Yankovic",
                   "type": "artist",
-                  "uri": "spotify:artist:1j0ithcigqOGIxBumPtAqX"
+                  "uri": "spotify:artist:1bDWGdIC2hardyt55nlQgG"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 300394,
+              "duration_ms": 207920,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0D3r03TVUJqYmqH3wsj5JT"
+                "spotify": "https://open.spotify.com/track/5I2vBoTiqMQAyxkhGlJwGp"
               },
-              "href": "https://api.spotify.com/v1/tracks/0D3r03TVUJqYmqH3wsj5JT",
-              "id": "0D3r03TVUJqYmqH3wsj5JT",
+              "href": "https://api.spotify.com/v1/tracks/5I2vBoTiqMQAyxkhGlJwGp",
+              "id": "5I2vBoTiqMQAyxkhGlJwGp",
               "is_local": false,
               "is_playable": true,
-              "name": "Transphere",
+              "name": "Dare to Be Stupid",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:0D3r03TVUJqYmqH3wsj5JT"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1WvDvicIZrQVB2gFXZHIBN"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1WvDvicIZrQVB2gFXZHIBN",
-                  "id": "1WvDvicIZrQVB2gFXZHIBN",
-                  "name": "Kick Puncher",
-                  "type": "artist",
-                  "uri": "spotify:artist:1WvDvicIZrQVB2gFXZHIBN"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 184000,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7AaM3qK1PnqW2JkQxq6TeQ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7AaM3qK1PnqW2JkQxq6TeQ",
-              "id": "7AaM3qK1PnqW2JkQxq6TeQ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Resolution",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:7AaM3qK1PnqW2JkQxq6TeQ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6tlyNmvYttsFm44WqrYEf0"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/6tlyNmvYttsFm44WqrYEf0",
-                  "id": "6tlyNmvYttsFm44WqrYEf0",
-                  "name": "Orax",
-                  "type": "artist",
-                  "uri": "spotify:artist:6tlyNmvYttsFm44WqrYEf0"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 427645,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2KwxdLkkztuVG1WaElZI6k"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2KwxdLkkztuVG1WaElZI6k",
-              "id": "2KwxdLkkztuVG1WaElZI6k",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Missing",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:2KwxdLkkztuVG1WaElZI6k"
+              "uri": "spotify:track:5I2vBoTiqMQAyxkhGlJwGp"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 12
+          "total": 10
         },
         "type": "album",
-        "uri": "spotify:album:7LFFQrgPPbPzS6Q61Y3o4F"
+        "uri": "spotify:album:6MB5ahz8dvKcoO3DVHrmgU"
       },
-      "release_date": "2015-07-14",
-      "release_date_precision": "day",
-      "total_tracks": 12,
+      "release_date": "1986",
+      "release_date_precision": "year",
+      "total_tracks": 10,
       "tracks": [
         {
           "artists": [
             {
-              "id": "4N55TE3vFODMR4BX5B9fnM",
-              "name": "Waveshaper"
+              "id": "7qT1EPkli4RDJ2KNynkQyQ",
+              "name": "Stan Bush"
             }
           ],
-          "duration_ms": 232000,
+          "duration_ms": 235413,
           "explicit": false,
-          "id": "5vnwZmz6YEt4mPCZH4icpO",
-          "name": "Crystal Protocol",
+          "id": "0YLC29DmVxF0UGPI8S5vRu",
+          "name": "The Touch",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "0OTY72l7CC7ynKzp6N2o5b",
-              "name": "Daniel Deluxe"
+              "id": "4Sn3FvmbkpF4NHNpOUVid3",
+              "name": "N.R.G."
             }
           ],
-          "duration_ms": 272855,
+          "duration_ms": 201693,
           "explicit": false,
-          "id": "018SQDupRTRsl1Wolu1X0c",
-          "name": "Star Eater",
+          "id": "3vJ7lqX60lrJZCW4E2eKyZ",
+          "name": "Instruments of Destruction",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "3r5rHoyzqZHGJkU8fGZtNO",
-              "name": "Tonebox"
+              "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+              "name": "Vince DiCola"
             }
           ],
-          "duration_ms": 260679,
+          "duration_ms": 177400,
           "explicit": false,
-          "id": "2KEFx0hCS72nCN3rrt9xbP",
-          "name": "Refractor",
+          "id": "1qYOyu0wVLjZKVLpfMWulg",
+          "name": "Death of Optimus Prime",
           "preview_url": null,
           "track_number": 3
         },
         {
           "artists": [
             {
-              "id": "72naL8vQVNsx85zPLuTSWf",
-              "name": "Zombie Hyperdrive"
+              "id": "7qT1EPkli4RDJ2KNynkQyQ",
+              "name": "Stan Bush"
             }
           ],
-          "duration_ms": 236146,
+          "duration_ms": 241240,
           "explicit": false,
-          "id": "6RIqpY1oeSLGLHrdMIyrKn",
-          "name": "Gigawatt",
+          "id": "7DZcrMqgQiO4kotOGucIM7",
+          "name": "Dare",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "1Gjcge8sS4hbBKnFQBIIdy",
-              "name": "Let Em Riot"
+              "id": "5iaIdC1jRAqg7XZGIjYvMA",
+              "name": "Spectre General"
             }
           ],
-          "duration_ms": 283870,
+          "duration_ms": 218026,
           "explicit": false,
-          "id": "6FgmeqOqVDxZCx8FO43u8b",
-          "name": "Traces",
+          "id": "1FZ3shpfYLi8iriNH9xPMM",
+          "name": "Nothin's Gonna Stand In Our Way",
           "preview_url": null,
           "track_number": 5
         },
         {
           "artists": [
             {
-              "id": "6BZQniy7PacCOXp9sk2vhQ",
-              "name": "Mk-Ultra"
-            },
-            {
-              "id": "1KbKAmFfjBl4EgEW71ZvNo",
-              "name": "Vidcomm"
+              "id": "2AzIaYaTZGfOYaimW2ng5B",
+              "name": "Lion"
             }
           ],
-          "duration_ms": 262564,
+          "duration_ms": 214506,
           "explicit": false,
-          "id": "3XSVU9GIoRs2qS87isxAdM",
-          "name": "Coast to Coast (feat. Vidcomm)",
+          "id": "71hSdipWyFm6dHBtljSyij",
+          "name": "The Transformers (Theme)",
           "preview_url": null,
           "track_number": 6
         },
         {
           "artists": [
             {
-              "id": "2b1hXFWmxGOqr7Y0yxKkI5",
-              "name": "Miami Beach Force"
+              "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+              "name": "Vince DiCola"
             }
           ],
-          "duration_ms": 199024,
+          "duration_ms": 286106,
           "explicit": false,
-          "id": "4Rtl7cIzwc5eQQVd45Yv5K",
-          "name": "Hard to Catch",
+          "id": "691lWpy2FsBew083z5QYNW",
+          "name": "Escape",
           "preview_url": null,
           "track_number": 7
         },
         {
           "artists": [
             {
-              "id": "2KtnZQwMQJN3uyI8eHZRvm",
-              "name": "Dance With the Dead"
+              "id": "5iaIdC1jRAqg7XZGIjYvMA",
+              "name": "Spectre General"
             }
           ],
-          "duration_ms": 279915,
+          "duration_ms": 224333,
           "explicit": false,
-          "id": "0PqwIcIjaTGHVXAk08tIPU",
-          "name": "Skeletons in the Attic",
+          "id": "0q6TAJQqnSopBs3DssFRrr",
+          "name": "Hunger",
           "preview_url": null,
           "track_number": 8
         },
         {
           "artists": [
             {
-              "id": "3kwoPkICT4iPkNjr6mL13N",
-              "name": "TOKYO ROSE"
+              "id": "5Q2nBzXfyXGIEf8KpHqeHn",
+              "name": "Vince DiCola"
             }
           ],
-          "duration_ms": 183191,
+          "duration_ms": 257600,
           "explicit": false,
-          "id": "1u32OSzm05naBciIjAxpwk",
-          "name": "The Wraith",
+          "id": "1TnGUkh1rWweHk0MlnOw4T",
+          "name": "Autobot / Decepticon Battle",
           "preview_url": null,
           "track_number": 9
         },
         {
           "artists": [
             {
-              "id": "1j0ithcigqOGIxBumPtAqX",
-              "name": "Turboslash"
+              "id": "1bDWGdIC2hardyt55nlQgG",
+              "name": "\"Weird Al\" Yankovic"
             }
           ],
-          "duration_ms": 300394,
+          "duration_ms": 207920,
           "explicit": false,
-          "id": "0D3r03TVUJqYmqH3wsj5JT",
-          "name": "Transphere",
+          "id": "5I2vBoTiqMQAyxkhGlJwGp",
+          "name": "Dare to Be Stupid",
           "preview_url": null,
           "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "1WvDvicIZrQVB2gFXZHIBN",
-              "name": "Kick Puncher"
-            }
-          ],
-          "duration_ms": 184000,
-          "explicit": false,
-          "id": "7AaM3qK1PnqW2JkQxq6TeQ",
-          "name": "Resolution",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "6tlyNmvYttsFm44WqrYEf0",
-              "name": "Orax"
-            }
-          ],
-          "duration_ms": 427645,
-          "explicit": false,
-          "id": "2KwxdLkkztuVG1WaElZI6k",
-          "name": "Missing",
-          "preview_url": null,
-          "track_number": 12
         }
       ],
-      "url": "https://open.spotify.com/album/7LFFQrgPPbPzS6Q61Y3o4F"
+      "url": "https://open.spotify.com/album/6MB5ahz8dvKcoO3DVHrmgU"
     }
   },
-  "spotify_id": "7LFFQrgPPbPzS6Q61Y3o4F",
-  "spotify_url": "https://open.spotify.com/album/7LFFQrgPPbPzS6Q61Y3o4F",
+  "spotify_id": "6MB5ahz8dvKcoO3DVHrmgU",
+  "spotify_url": "https://open.spotify.com/album/6MB5ahz8dvKcoO3DVHrmgU",
   "styles": [
     "Soundtrack",
     "Score",
@@ -1041,6 +940,6 @@
       "title": "Dare To Be Stupid"
     }
   ],
-  "updated_at": "2025-07-05T17:59:38.316689",
+  "updated_at": "2025-07-07T15:49:28.082799",
   "year": 2015
 }

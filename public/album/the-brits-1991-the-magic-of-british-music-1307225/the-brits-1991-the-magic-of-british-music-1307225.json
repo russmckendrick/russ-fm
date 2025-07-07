@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:37:07.403257",
+  "created_at": "2025-07-07T15:35:06.647995",
   "date_added": "2019-01-05T11:38:49-08:00",
   "discogs_id": "1307225",
   "discogs_url": "https://www.discogs.com/release/1307225-Various-The-Brits-1991-The-Magic-Of-British-Music-",
@@ -65,6 +65,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/8vccu8eFSq9viICRgLagZHnsehmjhPsZ5B8rdrrZhA8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzMDcy/MjUtMTYzNDU0MzQx/My0xOTgzLmpwZWc.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/the-brits-1991-the-magic-of-british-music-1307225/the-brits-1991-the-magic-of-british-music-1307225.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -72,11 +79,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/the-brits-1991-the-magic-of-british-music-1307225/the-brits-1991-the-magic-of-british-music-1307225-hi-res.jpg",
+    "medium": "../public/album/the-brits-1991-the-magic-of-british-music-1307225/the-brits-1991-the-magic-of-british-music-1307225-medium.jpg",
+    "small": "../public/album/the-brits-1991-the-magic-of-british-music-1307225/the-brits-1991-the-magic-of-british-music-1307225-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:37:08.446744",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:35:15.867638",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -659,6 +670,6 @@
       "title": "Life's What You Make It"
     }
   ],
-  "updated_at": "2025-07-05T16:37:08.446334",
+  "updated_at": "2025-07-07T15:35:15.090590",
   "year": 1991
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "376490136",
-  "apple_music_url": "https://music.apple.com/gb/album/castles-in-the-sky-soundtrack-from-the-motion-picture/376490136",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Worldwide",
-  "created_at": "2025-07-05T17:14:46.892386",
+  "created_at": "2025-07-07T15:42:01.527919",
   "date_added": "2017-06-06T17:29:01-07:00",
   "discogs_id": "10174777",
   "discogs_url": "https://www.discogs.com/release/10174777-Various-Quadrophenia-Music-From-The-Soundtrack-Of-The-Who-Film",
@@ -131,8 +131,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/f6/74/6e/mzi.faxwugjv.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777.jpg",
       "width": 2000
     }
   ],
@@ -143,70 +143,1270 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-hi-res.jpg",
-    "medium": "public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-medium.jpg",
-    "small": "public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-small.jpg"
+    "hi-res": "../public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-hi-res.jpg",
+    "medium": "../public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-medium.jpg",
+    "small": "../public/album/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777/quadrophenia-music-from-the-soundtrack-of-the-who-film-10174777-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:14:48.395834",
+    "processed_at": "2025-07-07T15:42:11.095244",
     "services_used": [
       "discogs",
-      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Castles In The Sky (Soundtrack from the Motion Picture)",
+  "release_name_apple_music": null,
   "release_name_discogs": "Quadrophenia (Music From The Soundtrack Of The Who Film)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Quadrophenia (Original Motion Picture Soundtrack)",
   "released": "2017-04-22",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/f6/74/6e/mzi.faxwugjv.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2010 Manaloft Records",
-      "editorial_notes": null,
-      "id": "376490136",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Various Artists",
-        "artwork": {
-          "bgColor": "ffffff",
-          "height": 600,
-          "textColor1": "180808",
-          "textColor2": "252525",
-          "textColor3": "463939",
-          "textColor4": "515151",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/f6/74/6e/mzi.faxwugjv.jpg/{w}x{h}bb.jpg",
-          "width": 600
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2024 Polydor Ltd. (UK)",
+          "type": "C"
         },
-        "copyright": "℗ 2010 Manaloft Records",
-        "genreNames": [
-          "Soundtrack",
-          "Music"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Castles In The Sky (Soundtrack from the Motion Picture)",
-        "playParams": {
-          "id": "376490136",
-          "kind": "album"
-        },
-        "recordLabel": "Manaloft Records",
-        "releaseDate": "2010-06-04",
-        "trackCount": 5,
-        "upc": "859703867966",
-        "url": "https://music.apple.com/gb/album/castles-in-the-sky-soundtrack-from-the-motion-picture/376490136"
+        {
+          "text": "℗ 2024 Polydor Ltd. (UK)",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "00602465562484"
       },
-      "url": "https://music.apple.com/gb/album/castles-in-the-sky-soundtrack-from-the-motion-picture/376490136"
+      "id": "4PT7IpWiskpao1njOB7hjF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d16cc9c104ed64081b96d0e7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d16cc9c104ed64081b96d0e7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d16cc9c104ed64081b96d0e7",
+          "width": 64
+        }
+      ],
+      "label": "Polydor Records",
+      "popularity": 38,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+            },
+            "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+            "id": "67ea9eGLXYMsO2eYQRui3w",
+            "name": "The Who",
+            "type": "artist",
+            "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2024 Polydor Ltd. (UK)",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2024 Polydor Ltd. (UK)",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "00602465562484"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4PT7IpWiskpao1njOB7hjF"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4PT7IpWiskpao1njOB7hjF?market=US",
+        "id": "4PT7IpWiskpao1njOB7hjF",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d16cc9c104ed64081b96d0e7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d16cc9c104ed64081b96d0e7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d16cc9c104ed64081b96d0e7",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Polydor Records",
+        "name": "Quadrophenia (Original Motion Picture Soundtrack)",
+        "popularity": 38,
+        "release_date": "1979-10-05",
+        "release_date_precision": "day",
+        "total_tracks": 23,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4PT7IpWiskpao1njOB7hjF/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/454DZfyFjpl8NGssSb24Bw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/454DZfyFjpl8NGssSb24Bw",
+                  "id": "454DZfyFjpl8NGssSb24Bw",
+                  "name": "Cy Langston",
+                  "type": "artist",
+                  "uri": "spotify:artist:454DZfyFjpl8NGssSb24Bw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 123878,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5WtYp4zv0uPqGht2KkQNW4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5WtYp4zv0uPqGht2KkQNW4",
+              "id": "5WtYp4zv0uPqGht2KkQNW4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Am The Sea",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:5WtYp4zv0uPqGht2KkQNW4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/454DZfyFjpl8NGssSb24Bw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/454DZfyFjpl8NGssSb24Bw",
+                  "id": "454DZfyFjpl8NGssSb24Bw",
+                  "name": "Cy Langston",
+                  "type": "artist",
+                  "uri": "spotify:artist:454DZfyFjpl8NGssSb24Bw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208545,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/24unnhMjLTxOKFOplApBB6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/24unnhMjLTxOKFOplApBB6",
+              "id": "24unnhMjLTxOKFOplApBB6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Real Me",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:24unnhMjLTxOKFOplApBB6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/454DZfyFjpl8NGssSb24Bw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/454DZfyFjpl8NGssSb24Bw",
+                  "id": "454DZfyFjpl8NGssSb24Bw",
+                  "name": "Cy Langston",
+                  "type": "artist",
+                  "uri": "spotify:artist:454DZfyFjpl8NGssSb24Bw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 160385,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4GlDmHH6RNYMwpCgdpG5Zx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4GlDmHH6RNYMwpCgdpG5Zx",
+              "id": "4GlDmHH6RNYMwpCgdpG5Zx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm One",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:4GlDmHH6RNYMwpCgdpG5Zx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/454DZfyFjpl8NGssSb24Bw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/454DZfyFjpl8NGssSb24Bw",
+                  "id": "454DZfyFjpl8NGssSb24Bw",
+                  "name": "Cy Langston",
+                  "type": "artist",
+                  "uri": "spotify:artist:454DZfyFjpl8NGssSb24Bw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 290612,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7kT5l2t6uHtvblYuhz8lev"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7kT5l2t6uHtvblYuhz8lev",
+              "id": "7kT5l2t6uHtvblYuhz8lev",
+              "is_local": false,
+              "is_playable": true,
+              "name": "5:15",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7kT5l2t6uHtvblYuhz8lev"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 310998,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6rO1clQOR4UDVbJsn1FcIL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6rO1clQOR4UDVbJsn1FcIL",
+              "id": "6rO1clQOR4UDVbJsn1FcIL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Reign O'er Me",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:6rO1clQOR4UDVbJsn1FcIL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 295305,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4AuBD49QqGNRo96XVXKiu9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4AuBD49QqGNRo96XVXKiu9",
+              "id": "4AuBD49QqGNRo96XVXKiu9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bell Boy",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4AuBD49QqGNRo96XVXKiu9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/454DZfyFjpl8NGssSb24Bw"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/454DZfyFjpl8NGssSb24Bw",
+                  "id": "454DZfyFjpl8NGssSb24Bw",
+                  "name": "Cy Langston",
+                  "type": "artist",
+                  "uri": "spotify:artist:454DZfyFjpl8NGssSb24Bw"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 371038,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3HQfY1l3hI3MU1iKmG6Bbz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3HQfY1l3hI3MU1iKmG6Bbz",
+              "id": "3HQfY1l3hI3MU1iKmG6Bbz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I've Had Enough",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3HQfY1l3hI3MU1iKmG6Bbz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 22052,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6mYwnwzAr8jDqXg6NVMt6M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6mYwnwzAr8jDqXg6NVMt6M",
+              "id": "6mYwnwzAr8jDqXg6NVMt6M",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Helpless Dancer",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6mYwnwzAr8jDqXg6NVMt6M"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 449652,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/48OANBAm5rFMcV7cLX5uak"
+              },
+              "href": "https://api.spotify.com/v1/tracks/48OANBAm5rFMcV7cLX5uak",
+              "id": "48OANBAm5rFMcV7cLX5uak",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Doctor Jimmy",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:48OANBAm5rFMcV7cLX5uak"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/23v7cVwWDv8VhPWTAePufN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/23v7cVwWDv8VhPWTAePufN",
+                  "id": "23v7cVwWDv8VhPWTAePufN",
+                  "name": "The High Numbers",
+                  "type": "artist",
+                  "uri": "spotify:artist:23v7cVwWDv8VhPWTAePufN"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 119465,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6qBykIDcJ3fR6TmWETTmGM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6qBykIDcJ3fR6TmWETTmGM",
+              "id": "6qBykIDcJ3fR6TmWETTmGM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Zoot Suit",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:6qBykIDcJ3fR6TmWETTmGM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7rEKy13jNcHKs1CdTPdvqt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7rEKy13jNcHKs1CdTPdvqt",
+                  "id": "7rEKy13jNcHKs1CdTPdvqt",
+                  "name": "Cross Section",
+                  "type": "artist",
+                  "uri": "spotify:artist:7rEKy13jNcHKs1CdTPdvqt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166505,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2wSYwS2YnCWVpp7aBIKXnp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2wSYwS2YnCWVpp7aBIKXnp",
+              "id": "2wSYwS2YnCWVpp7aBIKXnp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hi Heel Sneakers",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2wSYwS2YnCWVpp7aBIKXnp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 146945,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/75oOS5jxzftT3A6LSDSqU3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/75oOS5jxzftT3A6LSDSqU3",
+              "id": "75oOS5jxzftT3A6LSDSqU3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get Out And Stay Out",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:75oOS5jxzftT3A6LSDSqU3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 200145,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0JsoeMbiiM5yA37oM3AeXo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0JsoeMbiiM5yA37oM3AeXo",
+              "id": "0JsoeMbiiM5yA37oM3AeXo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Four Faces",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0JsoeMbiiM5yA37oM3AeXo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 193105,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/66s9dWlbINvDvUZ8QPwrNs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/66s9dWlbINvDvUZ8QPwrNs",
+              "id": "66s9dWlbINvDvUZ8QPwrNs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Joker James",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:66s9dWlbINvDvUZ8QPwrNs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67ea9eGLXYMsO2eYQRui3w",
+                  "id": "67ea9eGLXYMsO2eYQRui3w",
+                  "name": "The Who",
+                  "type": "artist",
+                  "uri": "spotify:artist:67ea9eGLXYMsO2eYQRui3w"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 321052,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1KoXEgbdvVpp6v3HB86vAx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1KoXEgbdvVpp6v3HB86vAx",
+              "id": "1KoXEgbdvVpp6v3HB86vAx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Punk And The Godfather",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:1KoXEgbdvVpp6v3HB86vAx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7GaxyUddsPok8BuhxN6OUW"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7GaxyUddsPok8BuhxN6OUW",
+                  "id": "7GaxyUddsPok8BuhxN6OUW",
+                  "name": "James Brown",
+                  "type": "artist",
+                  "uri": "spotify:artist:7GaxyUddsPok8BuhxN6OUW"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 218838,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2uZvytBSJ87Egkv8o1uvkO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2nV6LVdwqzy8qWO8WRmTZb",
+              "id": "2nV6LVdwqzy8qWO8WRmTZb",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/2uZvytBSJ87Egkv8o1uvkO"
+                },
+                "href": "https://api.spotify.com/v1/tracks/2uZvytBSJ87Egkv8o1uvkO",
+                "id": "2uZvytBSJ87Egkv8o1uvkO",
+                "type": "track",
+                "uri": "spotify:track:2uZvytBSJ87Egkv8o1uvkO"
+              },
+              "name": "Night Train",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:2nV6LVdwqzy8qWO8WRmTZb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2iIn8H3l2NNBNHFpYKWbfo"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2iIn8H3l2NNBNHFpYKWbfo",
+                  "id": "2iIn8H3l2NNBNHFpYKWbfo",
+                  "name": "The Kingsmen",
+                  "type": "artist",
+                  "uri": "spotify:artist:2iIn8H3l2NNBNHFpYKWbfo"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 161612,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3c4TLvUZtfAwVGhQ7sOwk6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0iA3xXSkSCiJywKyo1UKjQ",
+              "id": "0iA3xXSkSCiJywKyo1UKjQ",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/3c4TLvUZtfAwVGhQ7sOwk6"
+                },
+                "href": "https://api.spotify.com/v1/tracks/3c4TLvUZtfAwVGhQ7sOwk6",
+                "id": "3c4TLvUZtfAwVGhQ7sOwk6",
+                "type": "track",
+                "uri": "spotify:track:3c4TLvUZtfAwVGhQ7sOwk6"
+              },
+              "name": "Louie Louie",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:0iA3xXSkSCiJywKyo1UKjQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2vDV0T8sxx2ENnKXds75e5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2vDV0T8sxx2ENnKXds75e5",
+                  "id": "2vDV0T8sxx2ENnKXds75e5",
+                  "name": "Booker T. & the M.G.'s",
+                  "type": "artist",
+                  "uri": "spotify:artist:2vDV0T8sxx2ENnKXds75e5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166465,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4MDZSwX7dhFgWn34ovIxf4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4fQMGlCawbTkH9yPPZ49kP",
+              "id": "4fQMGlCawbTkH9yPPZ49kP",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/4MDZSwX7dhFgWn34ovIxf4"
+                },
+                "href": "https://api.spotify.com/v1/tracks/4MDZSwX7dhFgWn34ovIxf4",
+                "id": "4MDZSwX7dhFgWn34ovIxf4",
+                "type": "track",
+                "uri": "spotify:track:4MDZSwX7dhFgWn34ovIxf4"
+              },
+              "name": "Green Onions",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:4fQMGlCawbTkH9yPPZ49kP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6qF0CJP412Gd50Rn1sFg2o"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6qF0CJP412Gd50Rn1sFg2o",
+                  "id": "6qF0CJP412Gd50Rn1sFg2o",
+                  "name": "The Cascades",
+                  "type": "artist",
+                  "uri": "spotify:artist:6qF0CJP412Gd50Rn1sFg2o"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 148545,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6qOftgQTCmcMyW32SHa6sX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7GHf8dQ2wA71wYOuRsQCZP",
+              "id": "7GHf8dQ2wA71wYOuRsQCZP",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/6qOftgQTCmcMyW32SHa6sX"
+                },
+                "href": "https://api.spotify.com/v1/tracks/6qOftgQTCmcMyW32SHa6sX",
+                "id": "6qOftgQTCmcMyW32SHa6sX",
+                "type": "track",
+                "uri": "spotify:track:6qOftgQTCmcMyW32SHa6sX"
+              },
+              "name": "Rhythm Of The Rain",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:7GHf8dQ2wA71wYOuRsQCZP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/05sIdEkXAYDbDDdv3T56Oj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/05sIdEkXAYDbDDdv3T56Oj",
+                  "id": "05sIdEkXAYDbDDdv3T56Oj",
+                  "name": "The Chiffons",
+                  "type": "artist",
+                  "uri": "spotify:artist:05sIdEkXAYDbDDdv3T56Oj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 112785,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4tQ3Xs1dTYrDWTFDbn9ZjS"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4tQ3Xs1dTYrDWTFDbn9ZjS",
+              "id": "4tQ3Xs1dTYrDWTFDbn9ZjS",
+              "is_local": false,
+              "is_playable": true,
+              "name": "He's So Fine",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:4tQ3Xs1dTYrDWTFDbn9ZjS"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7CyeXFnOrfC1N6z4naIpgo"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7CyeXFnOrfC1N6z4naIpgo",
+                  "id": "7CyeXFnOrfC1N6z4naIpgo",
+                  "name": "The Ronettes",
+                  "type": "artist",
+                  "uri": "spotify:artist:7CyeXFnOrfC1N6z4naIpgo"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 150758,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2y09mEc1iYk51uZDzXyRT9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1WN4uNclrDuczTO3bCr8s1",
+              "id": "1WN4uNclrDuczTO3bCr8s1",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/2y09mEc1iYk51uZDzXyRT9"
+                },
+                "href": "https://api.spotify.com/v1/tracks/2y09mEc1iYk51uZDzXyRT9",
+                "id": "2y09mEc1iYk51uZDzXyRT9",
+                "type": "track",
+                "uri": "spotify:track:2y09mEc1iYk51uZDzXyRT9"
+              },
+              "name": "Be My Baby",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:1WN4uNclrDuczTO3bCr8s1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7rewR1TVjhisjI6gauUamf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7rewR1TVjhisjI6gauUamf",
+                  "id": "7rewR1TVjhisjI6gauUamf",
+                  "name": "The Crystals",
+                  "type": "artist",
+                  "uri": "spotify:artist:7rewR1TVjhisjI6gauUamf"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/38ZC5U32FQ1VZ3OW45F3bE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/38ZC5U32FQ1VZ3OW45F3bE",
+                  "id": "38ZC5U32FQ1VZ3OW45F3bE",
+                  "name": "La La Brooks",
+                  "type": "artist",
+                  "uri": "spotify:artist:38ZC5U32FQ1VZ3OW45F3bE"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 129438,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1nlxoPiGsOvgmT2d66Eio9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0fonScmHUzC0MglSLn9saA",
+              "id": "0fonScmHUzC0MglSLn9saA",
+              "is_local": false,
+              "is_playable": true,
+              "linked_from": {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/1nlxoPiGsOvgmT2d66Eio9"
+                },
+                "href": "https://api.spotify.com/v1/tracks/1nlxoPiGsOvgmT2d66Eio9",
+                "id": "1nlxoPiGsOvgmT2d66Eio9",
+                "type": "track",
+                "uri": "spotify:track:1nlxoPiGsOvgmT2d66Eio9"
+              },
+              "name": "Da Doo Ron Ron",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:0fonScmHUzC0MglSLn9saA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/23v7cVwWDv8VhPWTAePufN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/23v7cVwWDv8VhPWTAePufN",
+                  "id": "23v7cVwWDv8VhPWTAePufN",
+                  "name": "The High Numbers",
+                  "type": "artist",
+                  "uri": "spotify:artist:23v7cVwWDv8VhPWTAePufN"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 149812,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/47LZM2eaoJu5yuavKPrpxl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/47LZM2eaoJu5yuavKPrpxl",
+              "id": "47LZM2eaoJu5yuavKPrpxl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm The Face",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:47LZM2eaoJu5yuavKPrpxl"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 23
+        },
+        "type": "album",
+        "uri": "spotify:album:4PT7IpWiskpao1njOB7hjF"
+      },
+      "release_date": "1979-10-05",
+      "release_date_precision": "day",
+      "total_tracks": 23,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "454DZfyFjpl8NGssSb24Bw",
+              "name": "Cy Langston"
+            }
+          ],
+          "duration_ms": 123878,
+          "explicit": false,
+          "id": "5WtYp4zv0uPqGht2KkQNW4",
+          "name": "I Am The Sea",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "454DZfyFjpl8NGssSb24Bw",
+              "name": "Cy Langston"
+            }
+          ],
+          "duration_ms": 208545,
+          "explicit": false,
+          "id": "24unnhMjLTxOKFOplApBB6",
+          "name": "The Real Me",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "454DZfyFjpl8NGssSb24Bw",
+              "name": "Cy Langston"
+            }
+          ],
+          "duration_ms": 160385,
+          "explicit": false,
+          "id": "4GlDmHH6RNYMwpCgdpG5Zx",
+          "name": "I'm One",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "454DZfyFjpl8NGssSb24Bw",
+              "name": "Cy Langston"
+            }
+          ],
+          "duration_ms": 290612,
+          "explicit": false,
+          "id": "7kT5l2t6uHtvblYuhz8lev",
+          "name": "5:15",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 310998,
+          "explicit": false,
+          "id": "6rO1clQOR4UDVbJsn1FcIL",
+          "name": "Love Reign O'er Me",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 295305,
+          "explicit": false,
+          "id": "4AuBD49QqGNRo96XVXKiu9",
+          "name": "Bell Boy",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            },
+            {
+              "id": "454DZfyFjpl8NGssSb24Bw",
+              "name": "Cy Langston"
+            }
+          ],
+          "duration_ms": 371038,
+          "explicit": false,
+          "id": "3HQfY1l3hI3MU1iKmG6Bbz",
+          "name": "I've Had Enough",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 22052,
+          "explicit": false,
+          "id": "6mYwnwzAr8jDqXg6NVMt6M",
+          "name": "Helpless Dancer",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 449652,
+          "explicit": true,
+          "id": "48OANBAm5rFMcV7cLX5uak",
+          "name": "Doctor Jimmy",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "23v7cVwWDv8VhPWTAePufN",
+              "name": "The High Numbers"
+            }
+          ],
+          "duration_ms": 119465,
+          "explicit": false,
+          "id": "6qBykIDcJ3fR6TmWETTmGM",
+          "name": "Zoot Suit",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "7rEKy13jNcHKs1CdTPdvqt",
+              "name": "Cross Section"
+            }
+          ],
+          "duration_ms": 166505,
+          "explicit": false,
+          "id": "2wSYwS2YnCWVpp7aBIKXnp",
+          "name": "Hi Heel Sneakers",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 146945,
+          "explicit": false,
+          "id": "75oOS5jxzftT3A6LSDSqU3",
+          "name": "Get Out And Stay Out",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 200145,
+          "explicit": false,
+          "id": "0JsoeMbiiM5yA37oM3AeXo",
+          "name": "Four Faces",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 193105,
+          "explicit": false,
+          "id": "66s9dWlbINvDvUZ8QPwrNs",
+          "name": "Joker James",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "67ea9eGLXYMsO2eYQRui3w",
+              "name": "The Who"
+            }
+          ],
+          "duration_ms": 321052,
+          "explicit": false,
+          "id": "1KoXEgbdvVpp6v3HB86vAx",
+          "name": "The Punk And The Godfather",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "7GaxyUddsPok8BuhxN6OUW",
+              "name": "James Brown"
+            }
+          ],
+          "duration_ms": 218838,
+          "explicit": false,
+          "id": "2nV6LVdwqzy8qWO8WRmTZb",
+          "name": "Night Train",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "2iIn8H3l2NNBNHFpYKWbfo",
+              "name": "The Kingsmen"
+            }
+          ],
+          "duration_ms": 161612,
+          "explicit": false,
+          "id": "0iA3xXSkSCiJywKyo1UKjQ",
+          "name": "Louie Louie",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "2vDV0T8sxx2ENnKXds75e5",
+              "name": "Booker T. & the M.G.'s"
+            }
+          ],
+          "duration_ms": 166465,
+          "explicit": false,
+          "id": "4fQMGlCawbTkH9yPPZ49kP",
+          "name": "Green Onions",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "6qF0CJP412Gd50Rn1sFg2o",
+              "name": "The Cascades"
+            }
+          ],
+          "duration_ms": 148545,
+          "explicit": false,
+          "id": "7GHf8dQ2wA71wYOuRsQCZP",
+          "name": "Rhythm Of The Rain",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "05sIdEkXAYDbDDdv3T56Oj",
+              "name": "The Chiffons"
+            }
+          ],
+          "duration_ms": 112785,
+          "explicit": false,
+          "id": "4tQ3Xs1dTYrDWTFDbn9ZjS",
+          "name": "He's So Fine",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "7CyeXFnOrfC1N6z4naIpgo",
+              "name": "The Ronettes"
+            }
+          ],
+          "duration_ms": 150758,
+          "explicit": false,
+          "id": "1WN4uNclrDuczTO3bCr8s1",
+          "name": "Be My Baby",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "7rewR1TVjhisjI6gauUamf",
+              "name": "The Crystals"
+            },
+            {
+              "id": "38ZC5U32FQ1VZ3OW45F3bE",
+              "name": "La La Brooks"
+            }
+          ],
+          "duration_ms": 129438,
+          "explicit": false,
+          "id": "0fonScmHUzC0MglSLn9saA",
+          "name": "Da Doo Ron Ron",
+          "preview_url": null,
+          "track_number": 22
+        },
+        {
+          "artists": [
+            {
+              "id": "23v7cVwWDv8VhPWTAePufN",
+              "name": "The High Numbers"
+            }
+          ],
+          "duration_ms": 149812,
+          "explicit": false,
+          "id": "47LZM2eaoJu5yuavKPrpxl",
+          "name": "I'm The Face",
+          "preview_url": null,
+          "track_number": 23
+        }
+      ],
+      "url": "https://open.spotify.com/album/4PT7IpWiskpao1njOB7hjF"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "4PT7IpWiskpao1njOB7hjF",
+  "spotify_url": "https://open.spotify.com/album/4PT7IpWiskpao1njOB7hjF",
   "styles": [
     "Garage Rock",
     "Soul",
@@ -636,6 +1836,6 @@
       "title": "Da Doo Ron Ron"
     }
   ],
-  "updated_at": "2025-07-05T17:14:47.690893",
+  "updated_at": "2025-07-07T15:42:10.278384",
   "year": 2017
 }

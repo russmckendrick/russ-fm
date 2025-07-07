@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T16:33:03.839122",
+  "created_at": "2025-07-07T15:31:53.003683",
   "date_added": "2019-03-24T13:15:48-07:00",
   "discogs_id": "1205378",
   "discogs_url": "https://www.discogs.com/release/1205378-Various-Soft-Metal-It-Aint-Heavy--",
@@ -61,6 +61,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/Jzo5xPziGxlvkES-PilGf5kq9Hr8YCACBwKVY8FY-bo/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyMDUz/NzgtMTI5OTkwOTkx/Ny5qcGVn.jpeg",
       "width": 600
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/soft-metal-it-ain-t-heavy-1205378/soft-metal-it-ain-t-heavy-1205378.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -68,11 +75,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/soft-metal-it-aint-heavy-1205378/soft-metal-it-aint-heavy-1205378-hi-res.jpg",
+    "medium": "../public/album/soft-metal-it-aint-heavy-1205378/soft-metal-it-aint-heavy-1205378-medium.jpg",
+    "small": "../public/album/soft-metal-it-aint-heavy-1205378/soft-metal-it-aint-heavy-1205378-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T16:33:04.681712",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:32:03.459048",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -433,6 +444,6 @@
       "title": "St. Elmo's Fire (Man In Motion)"
     }
   ],
-  "updated_at": "2025-07-05T16:33:04.681064",
+  "updated_at": "2025-07-07T15:32:03.142861",
   "year": 1988
 }

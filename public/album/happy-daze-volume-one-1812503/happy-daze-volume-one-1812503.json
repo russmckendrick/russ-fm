@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:01:33.704574",
+  "created_at": "2025-07-07T15:41:31.826295",
   "date_added": "2017-12-07T20:58:26-08:00",
   "discogs_id": "1812503",
   "discogs_url": "https://www.discogs.com/release/1812503-Various-Happy-Daze-Volume-One",
@@ -61,6 +61,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/-262t0UO81XkYYSJVB_ozUP7JCbb6ZSm2yJ3zJkl8dg/rs:fit/g:sm/q:90/h:600/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE4MTI1/MDMtMTYwNTc4Njc2/OS0yMDIyLmpwZWc.jpeg",
       "width": 588
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/happy-daze-volume-one-1812503/happy-daze-volume-one-1812503.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -69,11 +76,15 @@
   ],
   "lastfm_mbid": null,
   "lastfm_url": null,
-  "local_images": {},
+  "local_images": {
+    "hi-res": "../public/album/happy-daze-volume-one-1812503/happy-daze-volume-one-1812503-hi-res.jpg",
+    "medium": "../public/album/happy-daze-volume-one-1812503/happy-daze-volume-one-1812503-medium.jpg",
+    "small": "../public/album/happy-daze-volume-one-1812503/happy-daze-volume-one-1812503-small.jpg"
+  },
   "processing_info": {
-    "has_local_images": false,
-    "local_images_count": 0,
-    "processed_at": "2025-07-05T17:01:34.284698",
+    "has_local_images": true,
+    "local_images_count": 3,
+    "processed_at": "2025-07-07T15:41:38.825517",
     "services_used": [
       "discogs",
       "wikipedia"
@@ -379,6 +390,6 @@
       "title": "I'm Free"
     }
   ],
-  "updated_at": "2025-07-05T17:01:34.284478",
+  "updated_at": "2025-07-07T15:41:37.928001",
   "year": 1990
 }
