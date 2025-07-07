@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1606863181",
-  "apple_music_url": "https://music.apple.com/gb/album/tim-finn-the-escapade-band-live-at-the-venue-st-kilda-1983/1606863181",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "282627",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Australia",
-  "created_at": "2025-07-05T18:00:51.441314",
+  "created_at": "2025-07-07T18:57:44.233382",
   "date_added": "2015-10-14T18:38:58-07:00",
   "discogs_id": "2733922",
   "discogs_url": "https://www.discogs.com/release/2733922-Tim-Finn-Escapade",
@@ -86,8 +86,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0b/37/66/0b376687-4d12-0102-8f77-958ddfbf0128/TI102994_cover.jpg/2000x2000bb.jpg",
+      "type": "custom_cover",
+      "url": "https://v1.russ.fm/albums/escapade-2733922/escapade-2733922.jpg",
       "width": 2000
     }
   ],
@@ -97,68 +97,25 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Tim+Finn/Escapade",
   "local_images": {
-    "hi-res": "public/album/escapade-2733922/escapade-2733922-hi-res.jpg",
-    "medium": "public/album/escapade-2733922/escapade-2733922-medium.jpg",
-    "small": "public/album/escapade-2733922/escapade-2733922-small.jpg"
+    "hi-res": "../public/album/escapade-2733922/escapade-2733922-hi-res.jpg",
+    "medium": "../public/album/escapade-2733922/escapade-2733922-medium.jpg",
+    "small": "../public/album/escapade-2733922/escapade-2733922-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T18:00:55.807047",
+    "processed_at": "2025-07-07T18:57:50.650692",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Tim Finn & the Escapade Band LIVE at the Venue, St Kilda, 1983",
+  "release_name_apple_music": null,
   "release_name_discogs": "Escapade",
   "release_name_spotify": "Escapade",
   "released": "1983",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0b/37/66/0b376687-4d12-0102-8f77-958ddfbf0128/TI102994_cover.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2022 ARCA",
-      "editorial_notes": null,
-      "id": "1606863181",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Tim Finn",
-        "artwork": {
-          "bgColor": "a1a1a1",
-          "height": 3000,
-          "textColor1": "060606",
-          "textColor2": "400000",
-          "textColor3": "252525",
-          "textColor4": "532020",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/0b/37/66/0b376687-4d12-0102-8f77-958ddfbf0128/TI102994_cover.jpg/{w}x{h}bb.jpg",
-          "width": 3000
-        },
-        "copyright": "℗ 2022 ARCA",
-        "genreNames": [
-          "Rock",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Tim Finn & the Escapade Band LIVE at the Venue, St Kilda, 1983",
-        "playParams": {
-          "id": "1606863181",
-          "kind": "album"
-        },
-        "recordLabel": "Tim Finn",
-        "releaseDate": "2022-02-01",
-        "trackCount": 16,
-        "upc": "9324690204724",
-        "url": "https://music.apple.com/gb/album/tim-finn-the-escapade-band-live-at-the-venue-st-kilda-1983/1606863181"
-      },
-      "url": "https://music.apple.com/gb/album/tim-finn-the-escapade-band-live-at-the-venue-st-kilda-1983/1606863181"
-    },
     "lastfm": {
       "images": [
         {
@@ -186,9 +143,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/deecfdca0ee2418fb332317f71204aef.jpg"
         }
       ],
-      "listeners": 4599,
+      "listeners": 4600,
       "mbid": "57c53e03-41dc-4818-8fce-9649e649267c",
-      "playcount": 38370,
+      "playcount": 38383,
       "raw_data": {
         "album": {
           "artist": "Tim Finn",
@@ -218,10 +175,10 @@
               "size": ""
             }
           ],
-          "listeners": "4599",
+          "listeners": "4600",
           "mbid": "57c53e03-41dc-4818-8fce-9649e649267c",
           "name": "Escapade",
-          "playcount": "38370",
+          "playcount": "38383",
           "tags": {
             "tag": [
               {
@@ -1059,6 +1016,6 @@
       "title": "Through The Years"
     }
   ],
-  "updated_at": "2025-07-05T18:00:52.434087",
+  "updated_at": "2025-07-07T18:57:50.423095",
   "year": 1983
 }
