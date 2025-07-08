@@ -427,6 +427,8 @@ class ArtistSerializer:
         # Add enrichment data if requested
         if include_enrichment and artist.raw_data:
             data['services'] = ArtistSerializer._serialize_enrichment_data(artist)
+            # Also include raw_data for debugging and data access
+            data['raw_data'] = artist.raw_data
         
         return data
     
@@ -454,6 +456,10 @@ class ArtistSerializer:
             # Discogs data (including original name)
             if 'discogs' in artist.raw_data:
                 services['discogs'] = artist.raw_data['discogs']
+            
+            # TheAudioDB data
+            if 'theaudiodb' in artist.raw_data:
+                services['theaudiodb'] = artist.raw_data['theaudiodb']
         
         return services
     
