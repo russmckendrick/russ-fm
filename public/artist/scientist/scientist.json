@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:40:18.907089",
   "discogs_id": "33468",
-  "discogs_url": "https://www.discogs.com/artist/33468",
-  "followers": 76110,
+  "discogs_url": "https://www.discogs.com/artist/33468-Scientist",
+  "followers": 76156,
   "formed_date": null,
   "genres": [
     "Reggae",
@@ -18,7 +18,7 @@
     "dub reggae",
     "jamaica"
   ],
-  "id": null,
+  "id": "scientist-1751726419",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/dPqQsE98Syhyxl2CRiguIm13AI3hje_xhpNz0vn54JY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "90d63976-5e70-4c73-a500-eb67997d6ed2",
   "lastfm_url": "https://www.last.fm/music/Scientist",
   "local_images": {
-    "hi-res": "public/artist/scientist/scientist-hi-res.jpg",
-    "medium": "public/artist/scientist/scientist-medium.jpg",
-    "small": "public/artist/scientist/scientist-small.jpg"
+    "hi-res": "../public/artist/scientist/scientist-hi-res.jpg",
+    "medium": "../public/artist/scientist/scientist-medium.jpg",
+    "small": "../public/artist/scientist/scientist-small.jpg"
   },
   "name": "Scientist",
   "popularity": 42,
@@ -103,9 +115,392 @@
       "url": "https://music.apple.com/gb/artist/scientist/572706907"
     },
     "discogs": {
-      "id": 33468,
-      "original_name": "Scientist",
-      "role": ""
+      "cover_image": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "33468",
+      "images": [
+        {
+          "height": 514,
+          "resource_url": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dPqQsE98Syhyxl2CRiguIm13AI3hje_xhpNz0vn54JY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+          "width": 514
+        },
+        {
+          "height": 385,
+          "resource_url": "https://i.discogs.com/AKn3GKZaNZaxt1zW00IyGJVdqhyTt4QsWoOY8Dz_-eM/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AKn3GKZaNZaxt1zW00IyGJVdqhyTt4QsWoOY8Dz_-eM/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/grmpYMQbephbGF7zMcCP5_PNNh0pWyMAf_0X74FURkM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 509,
+          "resource_url": "https://i.discogs.com/bdjkoMq8GFuvq5OlvMh5jt7PGcLw109AgMNXkhaUzwk/rs:fit/g:sm/q:90/h:509/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bdjkoMq8GFuvq5OlvMh5jt7PGcLw109AgMNXkhaUzwk/rs:fit/g:sm/q:90/h:509/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/VawqSwTIorkg2OegA0PNqj-lHEw1WFdTgkl6iSPbhhE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+          "width": 555
+        },
+        {
+          "height": 410,
+          "resource_url": "https://i.discogs.com/tC8o0fVo47aBfu5pkHCVggr1ks8qCzZoFK4Ur2swM9s/rs:fit/g:sm/q:90/h:410/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tC8o0fVo47aBfu5pkHCVggr1ks8qCzZoFK4Ur2swM9s/rs:fit/g:sm/q:90/h:410/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/bOYKasao5JWf2mAhPAraSM8HxClNyjnqmiHJmbnmfeA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+          "width": 545
+        },
+        {
+          "height": 315,
+          "resource_url": "https://i.discogs.com/rW3Ej8eXU6RcGZ9mueWBRigil-iAo_jFTOIhUwe4NuA/rs:fit/g:sm/q:90/h:315/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rW3Ej8eXU6RcGZ9mueWBRigil-iAo_jFTOIhUwe4NuA/rs:fit/g:sm/q:90/h:315/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/3AnK1OfBnnvPoS585qIHfS8onAcR9YMeb9rlQDRnvLY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+          "width": 444
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/aLJAI_jAKoE_u5u23RpsrfwPDWy9aferpVFd6IgQa8Q/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aLJAI_jAKoE_u5u23RpsrfwPDWy9aferpVFd6IgQa8Q/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hLM-IJqeddR-QVN4m7zyblKizMAoLKV7iXgtLapS3z8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/EhqDBfnl5VePbO5AM8XISCEk9cQpJBLbGA5WUQyFMyE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EhqDBfnl5VePbO5AM8XISCEk9cQpJBLbGA5WUQyFMyE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mYA6Tz2993q6nT6-_FOtKJqKq3CeETLth3dV6vO8uw4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Ab8KEkVzn0ngWPz3Gg7kfl4jOIEppzTkisP51l_61SU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ab8KEkVzn0ngWPz3Gg7kfl4jOIEppzTkisP51l_61SU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ZKBc9x6r1bbPsjzi_aHfXHIX33DepdmxP29MLaYr9_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Adcfb9lqob07Kq9zBJW5z2shfQUPiQuAzt8wvclcMJM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Adcfb9lqob07Kq9zBJW5z2shfQUPiQuAzt8wvclcMJM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kvVhAxgErBdwW31-du84jglcJCJazJ2NmMwBlWkSOf4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/STCuSq0__w7CwGam2ydOYKFT0OanSipHIIxI_TPVuzQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/STCuSq0__w7CwGam2ydOYKFT0OanSipHIIxI_TPVuzQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/V2XjPbFon6P19omKRlwbiaSjK-BQbC0xxdWPPyc4FJM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/RXB1HpALmXc8egyUWdvygkQ6VDp0YhRljAbYX0FyO78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RXB1HpALmXc8egyUWdvygkQ6VDp0YhRljAbYX0FyO78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Rm9WLPmCuEY0ICJqx0HiP0cmwigQ6kt9k33FN9L2qKo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/-T7Ftf56xGj6wHX8Lv-LXDdDVeCyUIHg1GSg_zwHGvA/rs:fit/g:sm/q:90/h:350/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-T7Ftf56xGj6wHX8Lv-LXDdDVeCyUIHg1GSg_zwHGvA/rs:fit/g:sm/q:90/h:350/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/b-eKT8B_J9LbeSPIycA0Xabi5hj2HZxYc4riW9vS-6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+          "width": 235
+        },
+        {
+          "height": 195,
+          "resource_url": "https://i.discogs.com/MZhXDFW0uJ1qxsHh5dwosOEZ5BYFgC6rDAxzr0_LOJU/rs:fit/g:sm/q:90/h:195/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/MZhXDFW0uJ1qxsHh5dwosOEZ5BYFgC6rDAxzr0_LOJU/rs:fit/g:sm/q:90/h:195/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/qV2xLl9S5Jy7d2UgYfoF_5P1PkVOoebbgLi2Age4Qro/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+          "width": 200
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/ux-SmFW9siz4Zi_QIkfdFBngr4w2cWwAu6A0KUeMrJo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ux-SmFW9siz4Zi_QIkfdFBngr4w2cWwAu6A0KUeMrJo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/5nK_mvfXhnwpXFH2ClfyHo5Sc-a7C1BI7Ndv8iSWrOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/eLmkZ-iwOSz67dbAa2HfQyRGM4w6FJMgN-A8emFLJOk/rs:fit/g:sm/q:90/h:398/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eLmkZ-iwOSz67dbAa2HfQyRGM4w6FJMgN-A8emFLJOk/rs:fit/g:sm/q:90/h:398/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8yYb6L1kXxrNLnqyJx988z_YsZ6treZAxUQzgwuaqWg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+          "width": 460
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/CVoNy0EuGIrnd17T-QGEXGeYNB0kZbtJL5M1autzXD8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CVoNy0EuGIrnd17T-QGEXGeYNB0kZbtJL5M1autzXD8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/I08qPMe7uege2Yw_lWuEQPw0TOVBDT8Djrhs8oNd0_o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 297,
+          "resource_url": "https://i.discogs.com/CxQZ31e2f6TAFPvbgL3rPgSZu0scHi6sID3Q2udQiCY/rs:fit/g:sm/q:90/h:297/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CxQZ31e2f6TAFPvbgL3rPgSZu0scHi6sID3Q2udQiCY/rs:fit/g:sm/q:90/h:297/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/esQT-k33S9doedJJTrNawI5WeW2R3IiFmkkSWAe_mRo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/Vt3z9mjIVMmEWhZODohM0y0QD4lGqQ36VojEesGplwE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Vt3z9mjIVMmEWhZODohM0y0QD4lGqQ36VojEesGplwE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wUQgyQO0-QRhfCapsRpm6lZS_dNXr_VFUZIy93Zsvjs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Scientist",
+      "namevariations": [
+        "\"Scientist\"",
+        "\"Scientist\" Overton Brown",
+        "'Scientist'",
+        "Hopeton Brown (Scientist)",
+        "King Tubby's Sciencetis",
+        "Sciencetis",
+        "Scienhish",
+        "Scientis",
+        "Scientist (Hopeton Brown)",
+        "Scientist - Hopeton Brown",
+        "Scientist - The Dub Chemist",
+        "Scientist The Dub Chemist",
+        "Scientist The Dub Specialist",
+        "Scientist The Greatest",
+        "Scientist aka Overton Brown",
+        "Scientists",
+        "Scientit",
+        "Seintist",
+        "Sientist",
+        "The Dub Chemist",
+        "The Great \"Scientist\"",
+        "The Scientist"
+      ],
+      "profile": "Born: April 18th, 1960 in Kingston, Jamaica.\r\n\r\nBiography\r\nHopeton Brown better known as Scientist and sometimes known as Overton Brown, from Kingston, Jamaica was a protégé of King Tubby (Osbourne Ruddock), one of the originators of dub music. The Scientist burst onto the reggae scene in the mid ’70s with a reckless mixing style that seemed to outdo even King Tubby’s wildest extravaganzas. He began his career as an engineer at Studio One and soon after at Tubby’s in the late 70’s. Shortly afterwards, he gained a reputation with a distinctive mixing style.\r\n\r\nHe left King Tubby's studio in 1982 and became the principal engineer for Channel One Studio, giving him the chance to work on a 16-track mixing desk rather than the four tracks at Tubby's. He came to prominence in the early 1980s and produced many albums, his mixes featuring on many releases in the first part of the decade. In particular, he was the favourite engineer of Henry \"Junjo\" Lawes, for whom he mixed several albums featuring the Roots Radics, many based on tracks by Barrington Levy.  He also did a lot of work for Linval Thompson and Jah Thomas. In 1983 he left Channel One to work at Tuff Gong studio.\r\n\r\nHe made a series of albums in the early to mid 1980s, released on Greensleeves Records with titles themed around Scientist's fictional achievements in fighting Space Invaders, Pac-Men, and Vampires, and winning the World Cup.  The music on these albums was played by Roots Radics, his most frequent collaborators.\r\n\r\nFive of his songs from the album The Scientist Rids the World of the Evil Curse of the Vampires were used as the playlist songs on the K-Jah radio station in the 2001 video game Grand Theft Auto 3.\r\n \r\n“In the ’70s, I started building sound system audio amplifiers. I would then test the amplifier with test instruments to determine how the amplifier was performing. Everything would look normal, but when I played reggae music through the amplifier, it would over heat and the plates of the KT88 would run red, especially when I played a mix from the great King Tubby’s that had subsonic drum and bass frequencies as well as razor sharp high frequencies I would have to re -bias the KT88 and make other changes in order to accommodate reggae’s wide frequency response and high slew rate needs. I noticed when I played other types of music the amplifier would respond normal. I found that to be strange so I used King Tubby’s mixes as a platform to ensure that the amplifiers would not break down under extreme conditions.\r\n \r\nI was fascinated by his exclusive style of mixing and unique sound effects. It was the “Roots of Dub” dub album produced by Bunny Lee that became my favourite test album and also inspired me to want to meet him. One day, I was repairing a television for a friend who had worked for King Tubby’s, we needed a transformer and King Tubby’s was the only place who had those particular types of transformers I was so excited to meet this brilliant man and considered myself very lucky to have had this opportunity. After that, it became a regular place for me to buy special made power and output transformers for the amplifiers that I was building. King Tubby’s became impressed with my electronic skills and abilities at such a young age. I told him I wanted to build a mixing console, at first, it sounded like a joke to him we joked about making mixing consoles with moving faders and automation. Years later it became a reality in Neve’s moving faders and SSL’s automation with total recall.”\r\n \r\nContact 1818-582-6734",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 148869,
+            "name": "Overton 'Scientist' Brown",
+            "resource_url": "https://api.discogs.com/artists/148869",
+            "thumbnail_url": "https://i.discogs.com/ASomwyrA5k15xH1iTgcpki7B8A4oeqWzUPhxM1ln2h8/rs:fit/g:sm/q:40/h:195/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0ODg2/OS0xMzQyMzg0MTUx/LTk3MDAuanBlZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 33468,
+        "images": [
+          {
+            "height": 514,
+            "resource_url": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/SAaLBqidIryk92HaU9tNDVTrpvi3iiaZrVhASg4UbnU/rs:fit/g:sm/q:90/h:514/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/dPqQsE98Syhyxl2CRiguIm13AI3hje_xhpNz0vn54JY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+            "width": 514
+          },
+          {
+            "height": 385,
+            "resource_url": "https://i.discogs.com/AKn3GKZaNZaxt1zW00IyGJVdqhyTt4QsWoOY8Dz_-eM/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AKn3GKZaNZaxt1zW00IyGJVdqhyTt4QsWoOY8Dz_-eM/rs:fit/g:sm/q:90/h:385/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/grmpYMQbephbGF7zMcCP5_PNNh0pWyMAf_0X74FURkM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjUt/MzcxMy5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 509,
+            "resource_url": "https://i.discogs.com/bdjkoMq8GFuvq5OlvMh5jt7PGcLw109AgMNXkhaUzwk/rs:fit/g:sm/q:90/h:509/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bdjkoMq8GFuvq5OlvMh5jt7PGcLw109AgMNXkhaUzwk/rs:fit/g:sm/q:90/h:509/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/VawqSwTIorkg2OegA0PNqj-lHEw1WFdTgkl6iSPbhhE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNTct/MjA5Ny5qcGVn.jpeg",
+            "width": 555
+          },
+          {
+            "height": 410,
+            "resource_url": "https://i.discogs.com/tC8o0fVo47aBfu5pkHCVggr1ks8qCzZoFK4Ur2swM9s/rs:fit/g:sm/q:90/h:410/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/tC8o0fVo47aBfu5pkHCVggr1ks8qCzZoFK4Ur2swM9s/rs:fit/g:sm/q:90/h:410/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/bOYKasao5JWf2mAhPAraSM8HxClNyjnqmiHJmbnmfeA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY5MTct/MjYwNy5qcGVn.jpeg",
+            "width": 545
+          },
+          {
+            "height": 315,
+            "resource_url": "https://i.discogs.com/rW3Ej8eXU6RcGZ9mueWBRigil-iAo_jFTOIhUwe4NuA/rs:fit/g:sm/q:90/h:315/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rW3Ej8eXU6RcGZ9mueWBRigil-iAo_jFTOIhUwe4NuA/rs:fit/g:sm/q:90/h:315/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/3AnK1OfBnnvPoS585qIHfS8onAcR9YMeb9rlQDRnvLY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxNjAt/MTEwNy5qcGVn.jpeg",
+            "width": 444
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/aLJAI_jAKoE_u5u23RpsrfwPDWy9aferpVFd6IgQa8Q/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aLJAI_jAKoE_u5u23RpsrfwPDWy9aferpVFd6IgQa8Q/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/hLM-IJqeddR-QVN4m7zyblKizMAoLKV7iXgtLapS3z8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTIxMDQt/ODc2My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/EhqDBfnl5VePbO5AM8XISCEk9cQpJBLbGA5WUQyFMyE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/EhqDBfnl5VePbO5AM8XISCEk9cQpJBLbGA5WUQyFMyE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/mYA6Tz2993q6nT6-_FOtKJqKq3CeETLth3dV6vO8uw4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTM0NTMt/NzExNS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/Ab8KEkVzn0ngWPz3Gg7kfl4jOIEppzTkisP51l_61SU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ab8KEkVzn0ngWPz3Gg7kfl4jOIEppzTkisP51l_61SU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/ZKBc9x6r1bbPsjzi_aHfXHIX33DepdmxP29MLaYr9_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTE4MDEt/MTIwOC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/Adcfb9lqob07Kq9zBJW5z2shfQUPiQuAzt8wvclcMJM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Adcfb9lqob07Kq9zBJW5z2shfQUPiQuAzt8wvclcMJM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/kvVhAxgErBdwW31-du84jglcJCJazJ2NmMwBlWkSOf4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTEyNjQt/NDIzNi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/STCuSq0__w7CwGam2ydOYKFT0OanSipHIIxI_TPVuzQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/STCuSq0__w7CwGam2ydOYKFT0OanSipHIIxI_TPVuzQ/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/V2XjPbFon6P19omKRlwbiaSjK-BQbC0xxdWPPyc4FJM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MTIt/NDYxMy5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/RXB1HpALmXc8egyUWdvygkQ6VDp0YhRljAbYX0FyO78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RXB1HpALmXc8egyUWdvygkQ6VDp0YhRljAbYX0FyO78/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Rm9WLPmCuEY0ICJqx0HiP0cmwigQ6kt9k33FN9L2qKo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTQ1NTQt/MjI3Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/-T7Ftf56xGj6wHX8Lv-LXDdDVeCyUIHg1GSg_zwHGvA/rs:fit/g:sm/q:90/h:350/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-T7Ftf56xGj6wHX8Lv-LXDdDVeCyUIHg1GSg_zwHGvA/rs:fit/g:sm/q:90/h:350/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/b-eKT8B_J9LbeSPIycA0Xabi5hj2HZxYc4riW9vS-6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTkt/Mzk2Ni5qcGVn.jpeg",
+            "width": 235
+          },
+          {
+            "height": 195,
+            "resource_url": "https://i.discogs.com/MZhXDFW0uJ1qxsHh5dwosOEZ5BYFgC6rDAxzr0_LOJU/rs:fit/g:sm/q:90/h:195/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/MZhXDFW0uJ1qxsHh5dwosOEZ5BYFgC6rDAxzr0_LOJU/rs:fit/g:sm/q:90/h:195/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/qV2xLl9S5Jy7d2UgYfoF_5P1PkVOoebbgLi2Age4Qro/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTExNDEyMDIyNjku/anBlZw.jpeg",
+            "width": 200
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/ux-SmFW9siz4Zi_QIkfdFBngr4w2cWwAu6A0KUeMrJo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ux-SmFW9siz4Zi_QIkfdFBngr4w2cWwAu6A0KUeMrJo/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/5nK_mvfXhnwpXFH2ClfyHo5Sc-a7C1BI7Ndv8iSWrOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDkt/ODIxOS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 398,
+            "resource_url": "https://i.discogs.com/eLmkZ-iwOSz67dbAa2HfQyRGM4w6FJMgN-A8emFLJOk/rs:fit/g:sm/q:90/h:398/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eLmkZ-iwOSz67dbAa2HfQyRGM4w6FJMgN-A8emFLJOk/rs:fit/g:sm/q:90/h:398/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/8yYb6L1kXxrNLnqyJx988z_YsZ6treZAxUQzgwuaqWg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjIt/NjEzMC5qcGVn.jpeg",
+            "width": 460
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/CVoNy0EuGIrnd17T-QGEXGeYNB0kZbtJL5M1autzXD8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CVoNy0EuGIrnd17T-QGEXGeYNB0kZbtJL5M1autzXD8/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/I08qPMe7uege2Yw_lWuEQPw0TOVBDT8Djrhs8oNd0_o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4NjUt/MzMzOS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 297,
+            "resource_url": "https://i.discogs.com/CxQZ31e2f6TAFPvbgL3rPgSZu0scHi6sID3Q2udQiCY/rs:fit/g:sm/q:90/h:297/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CxQZ31e2f6TAFPvbgL3rPgSZu0scHi6sID3Q2udQiCY/rs:fit/g:sm/q:90/h:297/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/esQT-k33S9doedJJTrNawI5WeW2R3IiFmkkSWAe_mRo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODcwMTct/MjExOS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/Vt3z9mjIVMmEWhZODohM0y0QD4lGqQ36VojEesGplwE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Vt3z9mjIVMmEWhZODohM0y0QD4lGqQ36VojEesGplwE/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/wUQgyQO0-QRhfCapsRpm6lZS_dNXr_VFUZIy93Zsvjs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE0MTEyODY4MDct/NzQxMy5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Scientist",
+        "namevariations": [
+          "\"Scientist\"",
+          "\"Scientist\" Overton Brown",
+          "'Scientist'",
+          "Hopeton Brown (Scientist)",
+          "King Tubby's Sciencetis",
+          "Sciencetis",
+          "Scienhish",
+          "Scientis",
+          "Scientist (Hopeton Brown)",
+          "Scientist - Hopeton Brown",
+          "Scientist - The Dub Chemist",
+          "Scientist The Dub Chemist",
+          "Scientist The Dub Specialist",
+          "Scientist The Greatest",
+          "Scientist aka Overton Brown",
+          "Scientists",
+          "Scientit",
+          "Seintist",
+          "Sientist",
+          "The Dub Chemist",
+          "The Great \"Scientist\"",
+          "The Scientist"
+        ],
+        "profile": "Born: April 18th, 1960 in Kingston, Jamaica.\r\n\r\nBiography\r\nHopeton Brown better known as Scientist and sometimes known as Overton Brown, from Kingston, Jamaica was a protégé of King Tubby (Osbourne Ruddock), one of the originators of dub music. The Scientist burst onto the reggae scene in the mid ’70s with a reckless mixing style that seemed to outdo even King Tubby’s wildest extravaganzas. He began his career as an engineer at Studio One and soon after at Tubby’s in the late 70’s. Shortly afterwards, he gained a reputation with a distinctive mixing style.\r\n\r\nHe left King Tubby's studio in 1982 and became the principal engineer for Channel One Studio, giving him the chance to work on a 16-track mixing desk rather than the four tracks at Tubby's. He came to prominence in the early 1980s and produced many albums, his mixes featuring on many releases in the first part of the decade. In particular, he was the favourite engineer of Henry \"Junjo\" Lawes, for whom he mixed several albums featuring the Roots Radics, many based on tracks by Barrington Levy.  He also did a lot of work for Linval Thompson and Jah Thomas. In 1983 he left Channel One to work at Tuff Gong studio.\r\n\r\nHe made a series of albums in the early to mid 1980s, released on Greensleeves Records with titles themed around Scientist's fictional achievements in fighting Space Invaders, Pac-Men, and Vampires, and winning the World Cup.  The music on these albums was played by Roots Radics, his most frequent collaborators.\r\n\r\nFive of his songs from the album The Scientist Rids the World of the Evil Curse of the Vampires were used as the playlist songs on the K-Jah radio station in the 2001 video game Grand Theft Auto 3.\r\n \r\n“In the ’70s, I started building sound system audio amplifiers. I would then test the amplifier with test instruments to determine how the amplifier was performing. Everything would look normal, but when I played reggae music through the amplifier, it would over heat and the plates of the KT88 would run red, especially when I played a mix from the great King Tubby’s that had subsonic drum and bass frequencies as well as razor sharp high frequencies I would have to re -bias the KT88 and make other changes in order to accommodate reggae’s wide frequency response and high slew rate needs. I noticed when I played other types of music the amplifier would respond normal. I found that to be strange so I used King Tubby’s mixes as a platform to ensure that the amplifiers would not break down under extreme conditions.\r\n \r\nI was fascinated by his exclusive style of mixing and unique sound effects. It was the “Roots of Dub” dub album produced by Bunny Lee that became my favourite test album and also inspired me to want to meet him. One day, I was repairing a television for a friend who had worked for King Tubby’s, we needed a transformer and King Tubby’s was the only place who had those particular types of transformers I was so excited to meet this brilliant man and considered myself very lucky to have had this opportunity. After that, it became a regular place for me to buy special made power and output transformers for the amplifiers that I was building. King Tubby’s became impressed with my electronic skills and abilities at such a young age. I told him I wanted to build a mixing console, at first, it sounded like a joke to him we joked about making mixing consoles with moving faders and automation. Years later it became a reality in Neve’s moving faders and SSL’s automation with total recall.”\r\n \r\nContact 1818-582-6734",
+        "realname": "Hopeton Overton  Brown",
+        "releases_url": "https://api.discogs.com/artists/33468/releases",
+        "resource_url": "https://api.discogs.com/artists/33468",
+        "uri": "https://www.discogs.com/artist/33468-Scientist",
+        "urls": [
+          "http://www.dubmusic.com",
+          "http://www.last.fm/music/scientist",
+          "http://en.wikipedia.org/wiki/Scientist_(musician)",
+          "https://www.facebook.com/dubbscientist?ref=hl",
+          "https://twitter.com/scientistfans",
+          "http://www.youtube.com/channel/UC9OQumbepn0zz7bu08xzLUA",
+          "http://www.youtube.com/channel/UCKvhoN7me1RJeIP2JW4yulQ"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/33468",
+      "thumb": "https://i.discogs.com/dPqQsE98Syhyxl2CRiguIm13AI3hje_xhpNz0vn54JY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNDY4/LTE2MjQ5MTI2NDAt/ODM3OS5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/33468-Scientist",
+      "urls": [
+        "http://www.dubmusic.com",
+        "http://www.last.fm/music/scientist",
+        "http://en.wikipedia.org/wiki/Scientist_(musician)",
+        "https://www.facebook.com/dubbscientist?ref=hl",
+        "https://twitter.com/scientistfans",
+        "http://www.youtube.com/channel/UC9OQumbepn0zz7bu08xzLUA",
+        "http://www.youtube.com/channel/UCKvhoN7me1RJeIP2JW4yulQ"
+      ]
     },
     "lastfm": {
       "bio_content": "Scientist is a name of at least two acts:\n\n[[b]1] A pseudonym of dub musician Hopeton Brown (aka Overton Brown),  from Kingston, Jamaica).  Brown burst onto the reggae scene in the early '70s with a reckless mixing style that seemed to outdo even King Tubby's wildest extravaganzas. He began his career as an engineer at Tubby's in 1978. Shortly afterwards he became a Tubby protégé and, by 1980, had gained a reputation with a distinctive mixing style.\n\nHe became worldwide known after Rockstar Games used his album 'Scientist Rids the World of the Curse Of the Vampires' in 2001.\nSites: Facebook and DubMusic.com (official)\n\n[[b]2] Chicago born metal/sludge/punk/experimental noise project featuring ex-member of Yakuza Eric Plonka (guitar/vox) and ex- Fireisborn members Justin Cape (drums) and Patrick Auclair (bass). Their new album 'advanced idea mechanics' produced by Sanford Parker who has done work for bands like, Nachtmystium, Voivod, Bison A.D, and Indian as well as being a member of Nachtmystium, Buried At Sea, The High Confessions and Minsk. A.I.M includes guest appearances by Stavros Giannopolous of The Atlas Moth, Bruce Lamont of Yakuza and Jeff Lyman of Dead Sheriff. <a href=\"https://www.last.fm/music/Scientist\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +531,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 207720,
+      "listeners": 207763,
       "mbid": "90d63976-5e70-4c73-a500-eb67997d6ed2",
       "name": "Scientist",
-      "playcount": 3962902,
+      "playcount": 3963750,
       "similar_artists": [
         {
           "name": "King Tubby",
@@ -172,7 +567,7 @@
       "url": "https://www.last.fm/music/Scientist"
     },
     "spotify": {
-      "followers": 76110,
+      "followers": 76156,
       "genres": [
         "dub",
         "reggae",
@@ -204,6 +599,6 @@
   },
   "spotify_id": "1edl5fzpdS471TaQ8Bgs3w",
   "spotify_url": "https://open.spotify.com/artist/1edl5fzpdS471TaQ8Bgs3w",
-  "updated_at": "2025-07-05T15:40:19.675389",
+  "updated_at": "2025-07-08T09:54:39.106051",
   "wikipedia_url": null
 }

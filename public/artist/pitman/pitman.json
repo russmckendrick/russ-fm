@@ -5,7 +5,7 @@
   "country": null,
   "created_at": "2025-07-05T14:49:49.432011",
   "discogs_id": "98641",
-  "discogs_url": "https://www.discogs.com/artist/98641",
+  "discogs_url": "https://www.discogs.com/artist/98641-Pitman",
   "followers": 4,
   "formed_date": null,
   "genres": [
@@ -16,7 +16,7 @@
     "Hip-Hop",
     "UK hip hop"
   ],
-  "id": null,
+  "id": "pitman-1751723390",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "099b3139-487f-4610-89e7-8ee706b13749",
   "lastfm_url": "https://www.last.fm/music/Pitman",
   "local_images": {
-    "hi-res": "public/artist/pitman/pitman-hi-res.jpg",
-    "medium": "public/artist/pitman/pitman-medium.jpg",
-    "small": "public/artist/pitman/pitman-small.jpg"
+    "hi-res": "../public/artist/pitman/pitman-hi-res.jpg",
+    "medium": "../public/artist/pitman/pitman-medium.jpg",
+    "small": "../public/artist/pitman/pitman-small.jpg"
   },
   "name": "Pitman",
   "popularity": null,
@@ -101,9 +113,114 @@
       "url": "https://music.apple.com/gb/artist/pitman/102879833"
     },
     "discogs": {
-      "id": 98641,
-      "original_name": "Pitman",
-      "role": ""
+      "cover_image": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "98641",
+      "images": [
+        {
+          "height": 169,
+          "resource_url": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "width": 172
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YDMKep6558-ZsO8a1XXRAIYIh3_2AaOLLE0qolLc69Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Cs9U50Q8VI-ZVxmEh6YmdKXEbPXDBUodLQc4mgJWjqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 914,
+          "resource_url": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/3agKeBlWkq0T7lD3e3OczTZucakOT0Xcw5ffLkQNeq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Pitman",
+      "namevariations": [
+        "Mc Pitman"
+      ],
+      "profile": "Comedic alter-ego of Nottingham rapper Styly Cee. Pitman is a rapping miner fresh out of the pits. Many of his tracks are parodies of hip-hop classics such as 'Simon Says', 'It Takes Two' or 'Sucker MC's. He is well-known for his fondness of tea and biscuits.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 39947,
+            "name": "Styly Cee",
+            "resource_url": "https://api.discogs.com/artists/39947",
+            "thumbnail_url": "https://i.discogs.com/9CMBiuEvKNwgvJPvxbc_ltRoS3zkxz_5i8mPGmTfbEU/rs:fit/g:sm/q:40/h:173/w:120/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5OTQ3/LTEwNzg0NDc3NDgu/Z2lm.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 98641,
+        "images": [
+          {
+            "height": 169,
+            "resource_url": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "width": 172
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/YDMKep6558-ZsO8a1XXRAIYIh3_2AaOLLE0qolLc69Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 401,
+            "resource_url": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Cs9U50Q8VI-ZVxmEh6YmdKXEbPXDBUodLQc4mgJWjqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 914,
+            "resource_url": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/3agKeBlWkq0T7lD3e3OczTZucakOT0Xcw5ffLkQNeq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Pitman",
+        "namevariations": [
+          "Mc Pitman"
+        ],
+        "profile": "Comedic alter-ego of Nottingham rapper Styly Cee. Pitman is a rapping miner fresh out of the pits. Many of his tracks are parodies of hip-hop classics such as 'Simon Says', 'It Takes Two' or 'Sucker MC's. He is well-known for his fondness of tea and biscuits.",
+        "realname": "Paul Carlisle",
+        "releases_url": "https://api.discogs.com/artists/98641/releases",
+        "resource_url": "https://api.discogs.com/artists/98641",
+        "uri": "https://www.discogs.com/artist/98641-Pitman",
+        "urls": [
+          "https://pitman.bandcamp.com/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/98641",
+      "thumb": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/98641-Pitman",
+      "urls": [
+        "https://pitman.bandcamp.com/"
+      ]
     },
     "lastfm": {
       "bio_content": "MC Pitman is the comic creation of one Styly Cee, a hip hop producer and performer from the city of Nottingham in England's East Midlands.\n\nA miner from the town of Coalville in Leicestershire, he raps morosely in a distinct regional accent about many aspects of modern life, from his distaste for celebrity worship and traffic congestion, to his great affection for tea and biscuits. His most extreme polemic however is targeted at Mike Skinner aka The Streets. Pitman often adapts well known rap hits. Hence \"Witness the Fitness\" by Roots Manuva became \"Witness the Pitness\" (like the original song produced by Lord Gosh), while Run-DMC's \"Sucker MCs\" was recast as \"Sugar On Ya Peas\". His first album It Takes A Nation of Tossers was released in 2003 by Son Records. It also included a cover version of LL Cool J's \"Mama Said Knock You Out\", called \"Mam Sed\". Its follow-up, Pit Closure, appeared in November 2004. <a href=\"https://www.last.fm/music/Pitman\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -197,6 +314,6 @@
   },
   "spotify_id": "4Gr7aEsinqimIJ10I78VQf",
   "spotify_url": "https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf",
-  "updated_at": "2025-07-05T14:49:50.498510",
+  "updated_at": "2025-07-08T09:51:10.243907",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:01:41.812728",
   "discogs_id": "196766",
-  "discogs_url": "https://www.discogs.com/artist/196766",
-  "followers": 5725668,
+  "discogs_url": "https://www.discogs.com/artist/196766-The-Who",
+  "followers": 5727873,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -16,7 +16,7 @@
     "60s",
     "hard rock"
   ],
-  "id": null,
+  "id": "the-who-1751727708",
   "images": [
     {
       "height": 2000,
@@ -83,17 +83,29 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/XjfCGUSH52vHiRj-zfH3H47D3Hc8G64a52iP91J5oCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "f2fa2f0c-b6d7-4d09-be35-910c110bb342",
   "lastfm_url": "https://www.last.fm/music/The+Who",
   "local_images": {
-    "hi-res": "public/artist/the-who/the-who-hi-res.jpg",
-    "medium": "public/artist/the-who/the-who-medium.jpg",
-    "small": "public/artist/the-who/the-who-small.jpg"
+    "hi-res": "../public/artist/the-who/the-who-hi-res.jpg",
+    "medium": "../public/artist/the-who/the-who-medium.jpg",
+    "small": "../public/artist/the-who/the-who-small.jpg"
   },
   "name": "The Who",
-  "popularity": 70,
+  "popularity": 71,
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/ac/59/7b/ac597b34-6000-517d-1539-b36bb9615365/mza_1773004640466423292.png/2000x2000bb.jpg",
@@ -107,9 +119,452 @@
       "url": "https://music.apple.com/gb/artist/the-who/61499"
     },
     "discogs": {
-      "id": 196766,
-      "original_name": "The Who",
-      "role": ""
+      "cover_image": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "196766",
+      "images": [
+        {
+          "height": 410,
+          "resource_url": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/XjfCGUSH52vHiRj-zfH3H47D3Hc8G64a52iP91J5oCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 415,
+          "resource_url": "https://i.discogs.com/pICPf1bURbkYva6YtIgWt8A4r8hp5oR9rFxb1bvfmOc/rs:fit/g:sm/q:90/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pICPf1bURbkYva6YtIgWt8A4r8hp5oR9rFxb1bvfmOc/rs:fit/g:sm/q:90/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/q3g740tewghBGTRItopfS_GVSORa40Lgq-9y-s5o_bE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 474,
+          "resource_url": "https://i.discogs.com/4o8lJtZMKE69F8LFLA9ZVuPooL1O9q2pZK78TOc7N6c/rs:fit/g:sm/q:90/h:474/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4o8lJtZMKE69F8LFLA9ZVuPooL1O9q2pZK78TOc7N6c/rs:fit/g:sm/q:90/h:474/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/wyUZXT4hE9LdwO4jBYqYBiA7NNSTgAPh0u-uKgTGXsM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+          "width": 474
+        },
+        {
+          "height": 545,
+          "resource_url": "https://i.discogs.com/rtoLAe4zJiVgzjWIi4orK23-WN15N2YpJxeWjUwEIus/rs:fit/g:sm/q:90/h:545/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rtoLAe4zJiVgzjWIi4orK23-WN15N2YpJxeWjUwEIus/rs:fit/g:sm/q:90/h:545/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/O_XbO2tWXI-MDXqVGNmk1b0vWf3ZZ2X132bL-_d4vxE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+          "width": 555
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ZAfg9u2fPV75c_ljkio0YnnaKxmgSOn63aStgn8JLu4/rs:fit/g:sm/q:90/h:600/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZAfg9u2fPV75c_ljkio0YnnaKxmgSOn63aStgn8JLu4/rs:fit/g:sm/q:90/h:600/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iTI8R44qU5A9HSLDEbGsPQf2PFVHzUOIoPOXTB8dDbE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+          "width": 444
+        },
+        {
+          "height": 496,
+          "resource_url": "https://i.discogs.com/1XWJ0gMDJKHOqlWDK8yuQNZS6DWHOALgoEh7Fz7owdA/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1XWJ0gMDJKHOqlWDK8yuQNZS6DWHOALgoEh7Fz7owdA/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ZQ6YOcxSlACMtPXvDeLSzIHFmmT-BOFrX2iN60a9RnM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/XJ52gXbyiaE1rPJLAOOxFWAiMhIA9f-G-NA0p4BBB7Y/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XJ52gXbyiaE1rPJLAOOxFWAiMhIA9f-G-NA0p4BBB7Y/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/QdUXsom0p6zIFCL4Qdont3fqvfLl5Wbpp8x-S935jKU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/mC2tZxWgB_Tkk0wctpjlrfw6Ko6_O224EM8n5-Vh1Xc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mC2tZxWgB_Tkk0wctpjlrfw6Ko6_O224EM8n5-Vh1Xc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/JijDdrr0l1YP2uWXwwlAKnqzf-oLp_Zni7LpOqMXxzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/FvvdqQViV9oFdHpWWpe6TmXnsRfNquaBM1f5WpHbuZg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FvvdqQViV9oFdHpWWpe6TmXnsRfNquaBM1f5WpHbuZg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+          "uri150": "https://i.discogs.com/DtKHetlEfpF-gza_dpEGfW5J5rXZwBncocn-CnkVriY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 686,
+          "resource_url": "https://i.discogs.com/-Sw1_pLOP-6Jns_rknNlW_78FXxMJE9P9i9Jvu5EJ0k/rs:fit/g:sm/q:90/h:686/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-Sw1_pLOP-6Jns_rknNlW_78FXxMJE9P9i9Jvu5EJ0k/rs:fit/g:sm/q:90/h:686/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/B_wgyRjx74TA9HWI_EjE6qnf6OEnouJ-u2P5BCsHlAU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 720,
+          "resource_url": "https://i.discogs.com/Wk-jdY6f7PV-eaP3l-TYX8pdL-hpjFQMADVQcFBtHVw/rs:fit/g:sm/q:90/h:720/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Wk-jdY6f7PV-eaP3l-TYX8pdL-hpjFQMADVQcFBtHVw/rs:fit/g:sm/q:90/h:720/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/wnA45bFU1ikc8YcqmZ5J_fA8brvJGlrzB60zjtRm-Bs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+          "width": 435
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/sM7MY-HYR1Nm1rxXPOMUT2AhuYZ89zw58ysbjVqXbfc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sM7MY-HYR1Nm1rxXPOMUT2AhuYZ89zw58ysbjVqXbfc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+          "uri150": "https://i.discogs.com/R0EwdYbWA_000kzT0BIaQdoYwVQSqVgr2pIKg7G2uqE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 446,
+          "resource_url": "https://i.discogs.com/XDmVnaN4jkVmqg46UMbXbZbgcx-eU47_7d9YwQyP3qM/rs:fit/g:sm/q:90/h:446/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XDmVnaN4jkVmqg46UMbXbZbgcx-eU47_7d9YwQyP3qM/rs:fit/g:sm/q:90/h:446/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/buHrCAJwyKOsl8mj1q85gwIfAo1J6vuwCen85fJ8z8A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 396,
+          "resource_url": "https://i.discogs.com/E59Eb45i3egeE0sytFpwihpm7Cjy4farvjS_KtQf5-E/rs:fit/g:sm/q:90/h:396/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/E59Eb45i3egeE0sytFpwihpm7Cjy4farvjS_KtQf5-E/rs:fit/g:sm/q:90/h:396/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/K7-RjMKibybKDrxp9kEg-r9TO9mcNkKOwCpzr8zI6ok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+          "width": 599
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Hcz-P4u16JdV3Wq3pe0kQyfI0ZGbwvSq9dWUsGH6FkY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hcz-P4u16JdV3Wq3pe0kQyfI0ZGbwvSq9dWUsGH6FkY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/UH4jK8O7DPhRJ794MqxVAQy4SCuLBBB0w1pacfo1dCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 527,
+          "resource_url": "https://i.discogs.com/6UP6orqKZ0jPeY2myRn1oifT3IcZAhEpBd_Jn3T3yT4/rs:fit/g:sm/q:90/h:527/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6UP6orqKZ0jPeY2myRn1oifT3IcZAhEpBd_Jn3T3yT4/rs:fit/g:sm/q:90/h:527/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/D-rWsXWtRwDW5_I4EyJIrH9Q4Ztvn3WzcOEpmFXPGbU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 396,
+          "resource_url": "https://i.discogs.com/bxHa_T9YSAgtU5sKBPBCYidQba_G7HKiRDFHQrI_Jts/rs:fit/g:sm/q:90/h:396/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bxHa_T9YSAgtU5sKBPBCYidQba_G7HKiRDFHQrI_Jts/rs:fit/g:sm/q:90/h:396/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/IdkDFwkAQ327LSNAaC38JNyuIYsW4gNtBRxITs7_e28/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/kMn42aNzRgmBjtCS4FwVMe_ypWwuTYEMUKApTO_2Mh8/rs:fit/g:sm/q:90/h:450/w:353/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kMn42aNzRgmBjtCS4FwVMe_ypWwuTYEMUKApTO_2Mh8/rs:fit/g:sm/q:90/h:450/w:353/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GI3ze9Y8oIZMSM4ZXsylg68v_rDuifsXrGJpFUOX8Lk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+          "width": 353
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 176121,
+          "name": "Kenny Jones",
+          "resource_url": "https://api.discogs.com/artists/176121",
+          "thumbnail_url": "https://i.discogs.com/0tyYcYCMBVWpUT4wSWqkd8QUaFRHhd37-eo4VhT3T1M/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NjEy/MS0xNTg0NTQxMDgy/LTEzODAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 256053,
+          "name": "Pete Townshend",
+          "resource_url": "https://api.discogs.com/artists/256053",
+          "thumbnail_url": "https://i.discogs.com/lpwUnN7gEv3IVEYej0ly6iS3XZ9uohRM5T1mUGJPSL0/rs:fit/g:sm/q:40/h:799/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NjA1/My0xNzE2MjIwNjMy/LTMwNTYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 259770,
+          "name": "John Entwistle",
+          "resource_url": "https://api.discogs.com/artists/259770",
+          "thumbnail_url": "https://i.discogs.com/Un4ySuEs9QToFLWP2TN51LfExD8PhaSNOm2d78LiKyE/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc3/MC0xNjUxOTMyNzU3/LTc5MjQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 259772,
+          "name": "Keith Moon",
+          "resource_url": "https://api.discogs.com/artists/259772",
+          "thumbnail_url": "https://i.discogs.com/HVeBy3DWVmFB71pnkfmx9eLaOg_qmhleMNKX2hMHkro/rs:fit/g:sm/q:40/h:750/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc3/Mi0xNjYyODM2NjU1/LTYxOTcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 266348,
+          "name": "Roger Daltrey",
+          "resource_url": "https://api.discogs.com/artists/266348",
+          "thumbnail_url": "https://i.discogs.com/Io9yMUmS6FrBvYlAwSQc8JHotDk4QBlfw6vPgvnoGPU/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NjM0/OC0xMzY1MjY4Nzk5/LTkzODYuanBlZw.jpeg"
+        }
+      ],
+      "name": "The Who",
+      "namevariations": [
+        "Les Who",
+        "Los Who",
+        "The High Numbers",
+        "The Tho",
+        "The Who & Special Guests",
+        "Thewho",
+        "WHO",
+        "Who",
+        "Who's",
+        "ザ・フゥー",
+        "ザ・フー",
+        "후"
+      ],
+      "profile": "English rock band formed in Hammersmith, London in 1964.\r\n\r\nThey were inducted into Rock And Roll Hall of Fame in 1990 (Performer).\r\n\r\nMembers:\r\nRoger Daltrey – lead and backing vocals, rhythm guitar, harmonica, percussion (1964–1983, 1985, 1988, 1989, 1996–present), bass guitar (2025–present)\r\nPete Townshend – lead and rhythm guitar, backing and lead vocals, keyboards (1964–1983, 1985, 1988, 1989, 1996–present)\r\n\r\n\r\nCurrent touring musicians:\r\nSimon Townshend – guitar, backing vocals (1996–1997, 2002–present)\r\nLoren Gold – keyboards, backing vocals (2012–present)\r\nJon Button – bass guitar (2017–present)\r\nScott Devours – drums, percussion (2013, 2025)\r\n\r\nFormer members:\r\nJohn Entwistle – bass guitar, horns, keyboards, backing and lead vocals (1964–1983, 1985, 1988, 1989, 1996–2002; died 2002)\r\nDoug Sandom – drums (1964; died 2019)\r\nKeith Moon – drums, backing and lead vocals (1964–1978; died 1978)\r\nKenny Jones – drums (1978–1983, 1985, 1988, 2014)",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 280864,
+            "name": "The High Numbers",
+            "resource_url": "https://api.discogs.com/artists/280864",
+            "thumbnail_url": "https://i.discogs.com/0rszZ6YWQNcAi93qcqH1IHjmEKOsoHsH-8HVaO9dCfE/rs:fit/g:sm/q:40/h:424/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg2/NC0xMzc1NDg0NzEz/LTM3MTUuanBlZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 196766,
+        "images": [
+          {
+            "height": 410,
+            "resource_url": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/XjfCGUSH52vHiRj-zfH3H47D3Hc8G64a52iP91J5oCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 415,
+            "resource_url": "https://i.discogs.com/pICPf1bURbkYva6YtIgWt8A4r8hp5oR9rFxb1bvfmOc/rs:fit/g:sm/q:90/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pICPf1bURbkYva6YtIgWt8A4r8hp5oR9rFxb1bvfmOc/rs:fit/g:sm/q:90/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/q3g740tewghBGTRItopfS_GVSORa40Lgq-9y-s5o_bE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjgxMDQ2MzIx/LTM1NjQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 474,
+            "resource_url": "https://i.discogs.com/4o8lJtZMKE69F8LFLA9ZVuPooL1O9q2pZK78TOc7N6c/rs:fit/g:sm/q:90/h:474/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4o8lJtZMKE69F8LFLA9ZVuPooL1O9q2pZK78TOc7N6c/rs:fit/g:sm/q:90/h:474/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/wyUZXT4hE9LdwO4jBYqYBiA7NNSTgAPh0u-uKgTGXsM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODY1NDE2/LTI5MzMuanBlZw.jpeg",
+            "width": 474
+          },
+          {
+            "height": 545,
+            "resource_url": "https://i.discogs.com/rtoLAe4zJiVgzjWIi4orK23-WN15N2YpJxeWjUwEIus/rs:fit/g:sm/q:90/h:545/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rtoLAe4zJiVgzjWIi4orK23-WN15N2YpJxeWjUwEIus/rs:fit/g:sm/q:90/h:545/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/O_XbO2tWXI-MDXqVGNmk1b0vWf3ZZ2X132bL-_d4vxE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjM5ODYyMDk0/LTI2OTMuanBlZw.jpeg",
+            "width": 555
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/ZAfg9u2fPV75c_ljkio0YnnaKxmgSOn63aStgn8JLu4/rs:fit/g:sm/q:90/h:600/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZAfg9u2fPV75c_ljkio0YnnaKxmgSOn63aStgn8JLu4/rs:fit/g:sm/q:90/h:600/w:444/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/iTI8R44qU5A9HSLDEbGsPQf2PFVHzUOIoPOXTB8dDbE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMTQxNTc0NDk4/LmpwZWc.jpeg",
+            "width": 444
+          },
+          {
+            "height": 496,
+            "resource_url": "https://i.discogs.com/1XWJ0gMDJKHOqlWDK8yuQNZS6DWHOALgoEh7Fz7owdA/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1XWJ0gMDJKHOqlWDK8yuQNZS6DWHOALgoEh7Fz7owdA/rs:fit/g:sm/q:90/h:496/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ZQ6YOcxSlACMtPXvDeLSzIHFmmT-BOFrX2iN60a9RnM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDk0NjU3MjIz/LTg5ODAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 428,
+            "resource_url": "https://i.discogs.com/XJ52gXbyiaE1rPJLAOOxFWAiMhIA9f-G-NA0p4BBB7Y/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XJ52gXbyiaE1rPJLAOOxFWAiMhIA9f-G-NA0p4BBB7Y/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/QdUXsom0p6zIFCL4Qdont3fqvfLl5Wbpp8x-S935jKU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjA3MjUyOTU3/LTgyNTQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/mC2tZxWgB_Tkk0wctpjlrfw6Ko6_O224EM8n5-Vh1Xc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/mC2tZxWgB_Tkk0wctpjlrfw6Ko6_O224EM8n5-Vh1Xc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/JijDdrr0l1YP2uWXwwlAKnqzf-oLp_Zni7LpOqMXxzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDgyODYwNTgx/LTc2NTguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 595,
+            "resource_url": "https://i.discogs.com/FvvdqQViV9oFdHpWWpe6TmXnsRfNquaBM1f5WpHbuZg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FvvdqQViV9oFdHpWWpe6TmXnsRfNquaBM1f5WpHbuZg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+            "uri150": "https://i.discogs.com/DtKHetlEfpF-gza_dpEGfW5J5rXZwBncocn-CnkVriY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMTk5NDUz/LTI2NDgucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 686,
+            "resource_url": "https://i.discogs.com/-Sw1_pLOP-6Jns_rknNlW_78FXxMJE9P9i9Jvu5EJ0k/rs:fit/g:sm/q:90/h:686/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-Sw1_pLOP-6Jns_rknNlW_78FXxMJE9P9i9Jvu5EJ0k/rs:fit/g:sm/q:90/h:686/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/B_wgyRjx74TA9HWI_EjE6qnf6OEnouJ-u2P5BCsHlAU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3MTAw/LTc1NjUuanBlZw.jpeg",
+            "width": 500
+          },
+          {
+            "height": 720,
+            "resource_url": "https://i.discogs.com/Wk-jdY6f7PV-eaP3l-TYX8pdL-hpjFQMADVQcFBtHVw/rs:fit/g:sm/q:90/h:720/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Wk-jdY6f7PV-eaP3l-TYX8pdL-hpjFQMADVQcFBtHVw/rs:fit/g:sm/q:90/h:720/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/wnA45bFU1ikc8YcqmZ5J_fA8brvJGlrzB60zjtRm-Bs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY3OTEz/LTM0MjEuanBlZw.jpeg",
+            "width": 435
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/sM7MY-HYR1Nm1rxXPOMUT2AhuYZ89zw58ysbjVqXbfc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sM7MY-HYR1Nm1rxXPOMUT2AhuYZ89zw58ysbjVqXbfc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+            "uri150": "https://i.discogs.com/R0EwdYbWA_000kzT0BIaQdoYwVQSqVgr2pIKg7G2uqE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjIxMjAzNzQz/LTIyNzAucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 446,
+            "resource_url": "https://i.discogs.com/XDmVnaN4jkVmqg46UMbXbZbgcx-eU47_7d9YwQyP3qM/rs:fit/g:sm/q:90/h:446/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XDmVnaN4jkVmqg46UMbXbZbgcx-eU47_7d9YwQyP3qM/rs:fit/g:sm/q:90/h:446/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/buHrCAJwyKOsl8mj1q85gwIfAo1J6vuwCen85fJ8z8A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTgxMjc3MzYw/LTEwNjguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 396,
+            "resource_url": "https://i.discogs.com/E59Eb45i3egeE0sytFpwihpm7Cjy4farvjS_KtQf5-E/rs:fit/g:sm/q:90/h:396/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/E59Eb45i3egeE0sytFpwihpm7Cjy4farvjS_KtQf5-E/rs:fit/g:sm/q:90/h:396/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/K7-RjMKibybKDrxp9kEg-r9TO9mcNkKOwCpzr8zI6ok/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMzQwMzcwMDMz/LTU4MDMuanBlZw.jpeg",
+            "width": 599
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/Hcz-P4u16JdV3Wq3pe0kQyfI0ZGbwvSq9dWUsGH6FkY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Hcz-P4u16JdV3Wq3pe0kQyfI0ZGbwvSq9dWUsGH6FkY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/UH4jK8O7DPhRJ794MqxVAQy4SCuLBBB0w1pacfo1dCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDIwNjUyNjU4/LTExOTguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 527,
+            "resource_url": "https://i.discogs.com/6UP6orqKZ0jPeY2myRn1oifT3IcZAhEpBd_Jn3T3yT4/rs:fit/g:sm/q:90/h:527/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6UP6orqKZ0jPeY2myRn1oifT3IcZAhEpBd_Jn3T3yT4/rs:fit/g:sm/q:90/h:527/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/D-rWsXWtRwDW5_I4EyJIrH9Q4Ztvn3WzcOEpmFXPGbU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNDUzMjkwMzcx/LTEwNzkuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 396,
+            "resource_url": "https://i.discogs.com/bxHa_T9YSAgtU5sKBPBCYidQba_G7HKiRDFHQrI_Jts/rs:fit/g:sm/q:90/h:396/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bxHa_T9YSAgtU5sKBPBCYidQba_G7HKiRDFHQrI_Jts/rs:fit/g:sm/q:90/h:396/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/IdkDFwkAQ327LSNAaC38JNyuIYsW4gNtBRxITs7_e28/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNjI0MjQxMTMz/LTgwNTEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/kMn42aNzRgmBjtCS4FwVMe_ypWwuTYEMUKApTO_2Mh8/rs:fit/g:sm/q:90/h:450/w:353/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/kMn42aNzRgmBjtCS4FwVMe_ypWwuTYEMUKApTO_2Mh8/rs:fit/g:sm/q:90/h:450/w:353/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/GI3ze9Y8oIZMSM4ZXsylg68v_rDuifsXrGJpFUOX8Lk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xMjU3Mzk2NzAy/LmpwZWc.jpeg",
+            "width": 353
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 176121,
+            "name": "Kenny Jones",
+            "resource_url": "https://api.discogs.com/artists/176121",
+            "thumbnail_url": "https://i.discogs.com/0tyYcYCMBVWpUT4wSWqkd8QUaFRHhd37-eo4VhT3T1M/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NjEy/MS0xNTg0NTQxMDgy/LTEzODAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 256053,
+            "name": "Pete Townshend",
+            "resource_url": "https://api.discogs.com/artists/256053",
+            "thumbnail_url": "https://i.discogs.com/lpwUnN7gEv3IVEYej0ly6iS3XZ9uohRM5T1mUGJPSL0/rs:fit/g:sm/q:40/h:799/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NjA1/My0xNzE2MjIwNjMy/LTMwNTYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 259770,
+            "name": "John Entwistle",
+            "resource_url": "https://api.discogs.com/artists/259770",
+            "thumbnail_url": "https://i.discogs.com/Un4ySuEs9QToFLWP2TN51LfExD8PhaSNOm2d78LiKyE/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc3/MC0xNjUxOTMyNzU3/LTc5MjQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 259772,
+            "name": "Keith Moon",
+            "resource_url": "https://api.discogs.com/artists/259772",
+            "thumbnail_url": "https://i.discogs.com/HVeBy3DWVmFB71pnkfmx9eLaOg_qmhleMNKX2hMHkro/rs:fit/g:sm/q:40/h:750/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc3/Mi0xNjYyODM2NjU1/LTYxOTcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 266348,
+            "name": "Roger Daltrey",
+            "resource_url": "https://api.discogs.com/artists/266348",
+            "thumbnail_url": "https://i.discogs.com/Io9yMUmS6FrBvYlAwSQc8JHotDk4QBlfw6vPgvnoGPU/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NjM0/OC0xMzY1MjY4Nzk5/LTkzODYuanBlZw.jpeg"
+          }
+        ],
+        "name": "The Who",
+        "namevariations": [
+          "Les Who",
+          "Los Who",
+          "The High Numbers",
+          "The Tho",
+          "The Who & Special Guests",
+          "Thewho",
+          "WHO",
+          "Who",
+          "Who's",
+          "ザ・フゥー",
+          "ザ・フー",
+          "후"
+        ],
+        "profile": "English rock band formed in Hammersmith, London in 1964.\r\n\r\nThey were inducted into Rock And Roll Hall of Fame in 1990 (Performer).\r\n\r\nMembers:\r\nRoger Daltrey – lead and backing vocals, rhythm guitar, harmonica, percussion (1964–1983, 1985, 1988, 1989, 1996–present), bass guitar (2025–present)\r\nPete Townshend – lead and rhythm guitar, backing and lead vocals, keyboards (1964–1983, 1985, 1988, 1989, 1996–present)\r\n\r\n\r\nCurrent touring musicians:\r\nSimon Townshend – guitar, backing vocals (1996–1997, 2002–present)\r\nLoren Gold – keyboards, backing vocals (2012–present)\r\nJon Button – bass guitar (2017–present)\r\nScott Devours – drums, percussion (2013, 2025)\r\n\r\nFormer members:\r\nJohn Entwistle – bass guitar, horns, keyboards, backing and lead vocals (1964–1983, 1985, 1988, 1989, 1996–2002; died 2002)\r\nDoug Sandom – drums (1964; died 2019)\r\nKeith Moon – drums, backing and lead vocals (1964–1978; died 1978)\r\nKenny Jones – drums (1978–1983, 1985, 1988, 2014)",
+        "releases_url": "https://api.discogs.com/artists/196766/releases",
+        "resource_url": "https://api.discogs.com/artists/196766",
+        "uri": "https://www.discogs.com/artist/196766-The-Who",
+        "urls": [
+          "https://www.thewho.com/",
+          "https://www.facebook.com/thewho",
+          "https://x.com/TheWho",
+          "https://www.youtube.com/channel/UCUtwj-3S97bj3lYDVxDKtlQ",
+          "https://www.instagram.com/officialthewho/",
+          "https://www.thewho.info/",
+          "https://thewho.net/",
+          "https://en.wikipedia.org/wiki/The_Who",
+          "https://www.imdb.com/name/nm1277963/",
+          "https://adp.library.ucsb.edu/index.php/mastertalent/detail/350776/Who_The",
+          "https://musicbrainz.org/artist/9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/196766",
+      "thumb": "https://i.discogs.com/XjfCGUSH52vHiRj-zfH3H47D3Hc8G64a52iP91J5oCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/196766-The-Who",
+      "urls": [
+        "https://www.thewho.com/",
+        "https://www.facebook.com/thewho",
+        "https://x.com/TheWho",
+        "https://www.youtube.com/channel/UCUtwj-3S97bj3lYDVxDKtlQ",
+        "https://www.instagram.com/officialthewho/",
+        "https://www.thewho.info/",
+        "https://thewho.net/",
+        "https://en.wikipedia.org/wiki/The_Who",
+        "https://www.imdb.com/name/nm1277963/",
+        "https://adp.library.ucsb.edu/index.php/mastertalent/detail/350776/Who_The",
+        "https://musicbrainz.org/artist/9fdaa16b-a6c4-4831-b87c-bc9ca8ce7eaa"
+      ]
     },
     "lastfm": {
       "bio_content": "The Who is an English rock band formed in Acton, Middlesex in 1964. Their classic line-up consisted of lead singer Roger Daltrey, guitarist and singer Pete Townshend, bass guitarist John Entwistle, and drummer Keith Moon. They are considered one of the most influential rock bands of the 20th century, selling over 100 million records worldwide and holding a reputation for their live shows and studio work.\n\nThe Who developed from an earlier group, the Detours, and established themselves as part of the pop art and mod movements, featuring auto-destructive art by destroying guitars and drums on stage. Their first single as the Who, \"I Can't Explain\", reached the UK top ten, followed by a string of singles including \"My Generation\", \"Substitute\" and \"Happy Jack\". In 1967, they performed at the Monterey Pop Festival and released the US top ten single \"I Can See for Miles\", while touring extensively. The group's fourth album, 1969's rock opera Tommy, included the single \"Pinball Wizard\" and was a critical and commercial success. Live appearances at Woodstock and the Isle of Wight Festival, along with the live album Live at Leeds, cemented their reputation as a respected rock act. With their success came increased pressure on lead songwriter Townshend, and the follow-up to Tommy, Lifehouse, was abandoned. Songs from the project made up 1971's Who's Next, which included the hit \"Won't Get Fooled Again\". The group released the album Quadrophenia in 1973 as a celebration of their mod roots, and oversaw the film adaptation of Tommy in 1975. They continued to tour to large audiences before semi-retiring from live performances at the end of 1976. The release of Who Are You in 1978 was overshadowed by the death of Moon shortly after.\n\nKenney Jones replaced Moon and the group resumed activity, releasing a film adaptation of Quadrophenia and the retrospective documentary The Kids Are Alright. After Townshend became weary of touring, the group split in 1982. The Who occasionally re-formed for live appearances such as Live Aid in 1985, a 25th anniversary tour in 1989 and a tour of Quadrophenia in 1996–1997. They resumed regular touring in 1999, with drummer Zak Starkey. After Entwistle's death in 2002, plans for a new album were delayed. Townshend and Daltrey continued as the Who, releasing Endless Wire in 2006, and continued to play live regularly.\n\nThe Who's major contributions to rock music include the development of the Marshall stack, large PA systems, use of the synthesizer, Entwistle and Moon's lead playing styles, Townshend's feedback and power chord guitar technique, and the development of the rock opera. They are cited as an influence by hard rock, punk rock and mod bands, and their songs still receive regular exposure. \n\nThe Who is one of the most influential rock bands of the 20th century. Their appearances at Monterey and Woodstock helped give them a reputation as one of the greatest live rock acts and they have been credited with originating the \"rock opera\". The band has sold over 100 million records worldwide.\n\nThe group's contributions to rock include the power chord, windmill strum and the use of non-musical instrument noise such as feedback. The band influenced fashion from their earliest days with their embrace of pop art and the use of the Union Jack for clothing. The guitar-smashing incident at the Railway Hotel in 1964 is one of Rolling Stone magazine's \"50 Moments That Changed the History of Rock 'n' Roll\".\n\nPink Floyd began to use feedback from their early shows in 1966, inspired by the Who, whom they considered a formative influence. Shortly after arriving in London in 1966, Jimi Hendrix visited Marshall's music shop demanding an amp setup like Townshend's and manipulated electronic noises in ways that Townshend had pioneered. The Beatles were fans and socialised with Moon in particular during the mid-1960s. In 1965, Paul McCartney said the Who \"are the most exciting thing around\" and was inspired to write \"Helter Skelter\" in the group's \"heavy\" style; John Lennon borrowed the acoustic guitar style in \"Pinball Wizard\" for \"Polythene Pam\".\n\nThe loud volume of the band's live show influenced the approach of hard rock and heavy metal. Proto punk and punk rock bands such as the MC5, the Stooges, the Ramones, the Sex Pistols, the Clash and Green Day cite the Who as an influence. The Who inspired mod revival bands, particularly the Jam, which helped other groups influenced by the Who become popular. The Who influenced hard rock bands such as Guns N' Roses. In the mid-1990s, Britpop bands such as Blur and Oasis were influenced by the Who. The Who have also influenced pop punk band Panic! at the Disco.\n\nThe Who has inspired many tribute bands; Daltrey has endorsed the Whodlums, who raise money for the Teenage Cancer Trust. Many bands have covered Who songs; Elton John's version of \"Pinball Wizard\" reached No. 7 in the UK. <a href=\"https://www.last.fm/music/The+Who\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -140,10 +595,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3574581,
+      "listeners": 3576178,
       "mbid": "f2fa2f0c-b6d7-4d09-be35-910c110bb342",
       "name": "The Who",
-      "playcount": 99712763,
+      "playcount": 99761827,
       "similar_artists": [
         {
           "name": "Pete Townshend",
@@ -176,7 +631,7 @@
       "url": "https://www.last.fm/music/The+Who"
     },
     "spotify": {
-      "followers": 5725668,
+      "followers": 5727873,
       "genres": [
         "classic rock",
         "rock"
@@ -205,12 +660,12 @@
         }
       ],
       "name": "The Who",
-      "popularity": 70,
+      "popularity": 71,
       "url": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w"
     }
   },
   "spotify_id": "67ea9eGLXYMsO2eYQRui3w",
   "spotify_url": "https://open.spotify.com/artist/67ea9eGLXYMsO2eYQRui3w",
-  "updated_at": "2025-07-05T16:01:48.689463",
+  "updated_at": "2025-07-08T09:21:48.913607",
   "wikipedia_url": null
 }

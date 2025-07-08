@@ -5,7 +5,7 @@
   "country": null,
   "created_at": "2025-07-05T15:39:43.483605",
   "discogs_id": "272902",
-  "discogs_url": "https://www.discogs.com/artist/272902",
+  "discogs_url": "https://www.discogs.com/artist/272902-Paul-Draper",
   "followers": 7704,
   "formed_date": null,
   "genres": [
@@ -16,7 +16,7 @@
     "alternative",
     "britpop"
   ],
-  "id": null,
+  "id": "paul-draper-1751726384",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/AIX6fH8tkZGhfKEXEWD0nMDEN51xjY3bzYQ32-9EwJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Paul+Draper",
   "local_images": {
-    "hi-res": "public/artist/paul-draper/paul-draper-hi-res.jpg",
-    "medium": "public/artist/paul-draper/paul-draper-medium.jpg",
-    "small": "public/artist/paul-draper/paul-draper-small.jpg"
+    "hi-res": "../public/artist/paul-draper/paul-draper-hi-res.jpg",
+    "medium": "../public/artist/paul-draper/paul-draper-medium.jpg",
+    "small": "../public/artist/paul-draper/paul-draper-small.jpg"
   },
   "name": "Paul Draper",
   "popularity": 11,
@@ -101,9 +113,132 @@
       "url": "https://music.apple.com/gb/artist/paul-draper/1110532313"
     },
     "discogs": {
-      "id": 272902,
-      "original_name": "Paul Draper",
-      "role": ""
+      "cover_image": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "272902",
+      "images": [
+        {
+          "height": 194,
+          "resource_url": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/AIX6fH8tkZGhfKEXEWD0nMDEN51xjY3bzYQ32-9EwJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+          "width": 259
+        },
+        {
+          "height": 906,
+          "resource_url": "https://i.discogs.com/XDSK6r78C1JspsTe1G-1OYfzn9BmOs-CQiMdpcLzmCk/rs:fit/g:sm/q:90/h:906/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XDSK6r78C1JspsTe1G-1OYfzn9BmOs-CQiMdpcLzmCk/rs:fit/g:sm/q:90/h:906/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-eBjYBABX4q0JgBttyKHSj8fr77oe9UvhWtNdvYZJlM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 327,
+          "resource_url": "https://i.discogs.com/YPtINyUwCuECHqlFncLMfNYwhBrfGccOVtxHS2ajp2E/rs:fit/g:sm/q:90/h:327/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YPtINyUwCuECHqlFncLMfNYwhBrfGccOVtxHS2ajp2E/rs:fit/g:sm/q:90/h:327/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/n9XLe_irv_Emv5TR7zg2_jGoLMU5dLnKKCGJD8EII08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+          "width": 240
+        },
+        {
+          "height": 308,
+          "resource_url": "https://i.discogs.com/YBWRznYNhNN1MsNcFzOAApoKiZQiHPG-Rob0TjDYmUU/rs:fit/g:sm/q:90/h:308/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YBWRznYNhNN1MsNcFzOAApoKiZQiHPG-Rob0TjDYmUU/rs:fit/g:sm/q:90/h:308/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EfQ8lC6e_Z-AV73L78r2cD4qphDCohm5XO9HulHPJOU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+          "width": 439
+        }
+      ],
+      "members": [],
+      "name": "Paul Draper",
+      "namevariations": [
+        "Draper",
+        "P Draper",
+        "P. Draper",
+        "Paul Edward Draper",
+        "ポール・ドレイパー"
+      ],
+      "profile": "Vocalist, guitar player and songwriter for [a=Mansun], also sound engineer, producer, he owns [l763227]. He released two EPs in 2016 and released his debut solo album in 2017.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 18841,
+            "name": "Mansun",
+            "resource_url": "https://api.discogs.com/artists/18841",
+            "thumbnail_url": "https://i.discogs.com/l1zhoFfk1d4hOs5pDfYh1KrtIQNqJvhujVuS810KuSw/rs:fit/g:sm/q:40/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1349299,
+            "name": "Grind (5)",
+            "resource_url": "https://api.discogs.com/artists/1349299",
+            "thumbnail_url": "https://i.discogs.com/zaN7Dzpnte3VjiubLr_kYDCIPj9Mbi7ei-vAQGI5vPA/rs:fit/g:sm/q:40/h:421/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNDky/OTktMTMyNzQ2MTMx/NS5qcGVn.jpeg"
+          }
+        ],
+        "id": 272902,
+        "images": [
+          {
+            "height": 194,
+            "resource_url": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/smrZED8BYoNpg2cX98d1gGVR8OeUA9Tama0ULMExfj0/rs:fit/g:sm/q:90/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/AIX6fH8tkZGhfKEXEWD0nMDEN51xjY3bzYQ32-9EwJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+            "width": 259
+          },
+          {
+            "height": 906,
+            "resource_url": "https://i.discogs.com/XDSK6r78C1JspsTe1G-1OYfzn9BmOs-CQiMdpcLzmCk/rs:fit/g:sm/q:90/h:906/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XDSK6r78C1JspsTe1G-1OYfzn9BmOs-CQiMdpcLzmCk/rs:fit/g:sm/q:90/h:906/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/-eBjYBABX4q0JgBttyKHSj8fr77oe9UvhWtNdvYZJlM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNzAxMjAzMDIy/LTc1NDguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 327,
+            "resource_url": "https://i.discogs.com/YPtINyUwCuECHqlFncLMfNYwhBrfGccOVtxHS2ajp2E/rs:fit/g:sm/q:90/h:327/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/YPtINyUwCuECHqlFncLMfNYwhBrfGccOVtxHS2ajp2E/rs:fit/g:sm/q:90/h:327/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/n9XLe_irv_Emv5TR7zg2_jGoLMU5dLnKKCGJD8EII08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMTQ5MjA0MTA5/LmpwZWc.jpeg",
+            "width": 240
+          },
+          {
+            "height": 308,
+            "resource_url": "https://i.discogs.com/YBWRznYNhNN1MsNcFzOAApoKiZQiHPG-Rob0TjDYmUU/rs:fit/g:sm/q:90/h:308/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/YBWRznYNhNN1MsNcFzOAApoKiZQiHPG-Rob0TjDYmUU/rs:fit/g:sm/q:90/h:308/w:439/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/EfQ8lC6e_Z-AV73L78r2cD4qphDCohm5XO9HulHPJOU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xMjE0NDM4NzY3/LmpwZWc.jpeg",
+            "width": 439
+          }
+        ],
+        "name": "Paul Draper",
+        "namevariations": [
+          "Draper",
+          "P Draper",
+          "P. Draper",
+          "Paul Edward Draper",
+          "ポール・ドレイパー"
+        ],
+        "profile": "Vocalist, guitar player and songwriter for [a=Mansun], also sound engineer, producer, he owns [l763227]. He released two EPs in 2016 and released his debut solo album in 2017.",
+        "realname": "Paul Edward Draper",
+        "releases_url": "https://api.discogs.com/artists/272902/releases",
+        "resource_url": "https://api.discogs.com/artists/272902",
+        "uri": "https://www.discogs.com/artist/272902-Paul-Draper",
+        "urls": [
+          "https://www.facebook.com/pauldraperofficial",
+          "https://pauldraperofficial.com/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/272902",
+      "thumb": "https://i.discogs.com/AIX6fH8tkZGhfKEXEWD0nMDEN51xjY3bzYQ32-9EwJQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/272902-Paul-Draper",
+      "urls": [
+        "https://www.facebook.com/pauldraperofficial",
+        "https://pauldraperofficial.com/"
+      ]
     },
     "lastfm": {
       "bio_content": "Paul Edward Draper (born 26 September 1970 in Wavertree, Liverpool) is an English singer-songwriter and was the lead singer for the rock band Mansun.\n\nAlong with bassist Stove King, and guitarist Dominic Chad, Draper was a founding member of Mansun.\n\nIn an uncredited role, he has worked with Paul Oakenfold on his album Bunkka. They recorded an instrumental trance song called \"Descent\" in 2000 which appeared on Oakenfold's record Perfecto Presents Travelling.\n\nDuring 2004 Paul compiled and mixed the aborted 4th album sessions for their release in the Kleptomania box set.\n\nIn October 2005, Alone in My Room a single by Skin (ex-Skunk Anansie) , co-written and co-produced by Draper, was released; his first involvement in any musical project since Kleptomania. He also worked on several other tracks on her second album, including the single .\n\nHe has also produced for the Derby band Komakino, the fruits of which should be heard in 2007, and worked on the 2006 Ibiza anthem \"Exceeder\" with Dutch DJ Mason.\n\nOn May 16th, 2006, Paul revealed on his website that during the recording of Kleptomania he was diagnosed with a malignant form of cancer on his middle finger. He successfully underwent chemotherapy and is currently writing and recording for an upcoming solo project and has been providing updates for his fanbase through regular online diary entries.\n\nIn April of 2016, Paul announced EP One would arrive on June 10th, 2016. Along with this announcement the first single \"Feeling My Heart Run Slow\" off EP One was made available made available as a pre-order bonus, it also appeared on many streaming services the same day.\n\nSign up to his mailing list at www.pauldraper.info <a href=\"https://www.last.fm/music/Paul+Draper\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +269,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 11627,
+      "listeners": 11629,
       "mbid": null,
       "name": "Paul Draper",
-      "playcount": 136243,
+      "playcount": 136259,
       "similar_artists": [
         {
           "name": "Mansun",
@@ -197,6 +332,6 @@
   },
   "spotify_id": "3dIKM8eLSgfOV9sd43VywG",
   "spotify_url": "https://open.spotify.com/artist/3dIKM8eLSgfOV9sd43VywG",
-  "updated_at": "2025-07-05T15:39:44.493986",
+  "updated_at": "2025-07-08T09:23:35.910127",
   "wikipedia_url": null
 }

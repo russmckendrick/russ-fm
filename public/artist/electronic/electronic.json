@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:51:07.702481",
   "discogs_id": "4868",
-  "discogs_url": "https://www.discogs.com/artist/4868",
-  "followers": 156189,
+  "discogs_url": "https://www.discogs.com/artist/4868-Electronic",
+  "followers": 156201,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -18,7 +18,7 @@
     "electronic",
     "electronica"
   ],
-  "id": null,
+  "id": "electronic-1751723469",
   "images": [
     {
       "height": 2000,
@@ -85,14 +85,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/FKA3QZRk-3PSmdMQRm6ZWWbLtluRT6pKDvqX2o72AqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "3cdb360e-d0a2-459f-92f6-f0f28e62127d",
   "lastfm_url": "https://www.last.fm/music/Electronic",
   "local_images": {
-    "hi-res": "public/artist/electronic/electronic-hi-res.jpg",
-    "medium": "public/artist/electronic/electronic-medium.jpg",
-    "small": "public/artist/electronic/electronic-small.jpg"
+    "hi-res": "../public/artist/electronic/electronic-hi-res.jpg",
+    "medium": "../public/artist/electronic/electronic-medium.jpg",
+    "small": "../public/artist/electronic/electronic-small.jpg"
   },
   "name": "Electronic",
   "popularity": 43,
@@ -109,9 +121,189 @@
       "url": "https://music.apple.com/gb/artist/electronic/496921"
     },
     "discogs": {
-      "id": 4868,
-      "original_name": "Electronic",
-      "role": ""
+      "cover_image": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "4868",
+      "images": [
+        {
+          "height": 328,
+          "resource_url": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/FKA3QZRk-3PSmdMQRm6ZWWbLtluRT6pKDvqX2o72AqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+          "width": 250
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/WlbjU6VLJj2cRBB-DbkLCrr-HZhW0FPVJvvG7K1mq5Y/rs:fit/g:sm/q:90/h:600/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WlbjU6VLJj2cRBB-DbkLCrr-HZhW0FPVJvvG7K1mq5Y/rs:fit/g:sm/q:90/h:600/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/E9OBmpPaEaqQzIcGb70kdXhBB-Rr44ReUBXvXa0DL5I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+          "width": 486
+        },
+        {
+          "height": 475,
+          "resource_url": "https://i.discogs.com/enbLRTYgMtGBywF36d8Pch1YbXnBQOuU9mcYahgNAhQ/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/enbLRTYgMtGBywF36d8Pch1YbXnBQOuU9mcYahgNAhQ/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/xSxw7cs4FVC04jVeeYsOXdAfBlR266dOU7sH9Em3YFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 755,
+          "resource_url": "https://i.discogs.com/S6_-DdK2r7ICpo1bggCBuTjzY0I6HkFWj1t--TbRvCY/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S6_-DdK2r7ICpo1bggCBuTjzY0I6HkFWj1t--TbRvCY/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8aqNUjrEMZR1ltGCgN0xeUfI4xOdl8U0Mh63K2cebKo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/oXTNCOezIZgirMnz1btAep7Qd985ycqR3MeAKmcVcO0/rs:fit/g:sm/q:90/h:300/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oXTNCOezIZgirMnz1btAep7Qd985ycqR3MeAKmcVcO0/rs:fit/g:sm/q:90/h:300/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/9SCmLDHE8NRm94PuIfp9K8TtZUsDqNz7-rHyJvneRs4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+          "width": 350
+        },
+        {
+          "height": 212,
+          "resource_url": "https://i.discogs.com/xrCE3CkniuEFrLNDKkl3Ld1J-LNxNyoZ7Y3J6n28z4Y/rs:fit/g:sm/q:90/h:212/w:179/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xrCE3CkniuEFrLNDKkl3Ld1J-LNxNyoZ7Y3J6n28z4Y/rs:fit/g:sm/q:90/h:212/w:179/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+          "uri150": "https://i.discogs.com/eCotWPw9TDbJuDR4dVeW7-0R9zkKpb3eRIGuL3nOR9Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+          "width": 179
+        },
+        {
+          "height": 150,
+          "resource_url": "https://i.discogs.com/c5XYwybR0bvaiAGAW9aDI6Xu9iMe7Jmt0JM-U-Wd_Uo/rs:fit/g:sm/q:90/h:150/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c5XYwybR0bvaiAGAW9aDI6Xu9iMe7Jmt0JM-U-Wd_Uo/rs:fit/g:sm/q:90/h:150/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/nsffV5fk2ZHTHl0iJjZOZdwTEoPB9Oqs8SZgXzAeR5k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+          "width": 200
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 33928,
+          "name": "Bernard Sumner",
+          "resource_url": "https://api.discogs.com/artists/33928",
+          "thumbnail_url": "https://i.discogs.com/8JxH6xSMMjfezE_8CNqhFZTcyF-szlrgXxjheVbLUl4/rs:fit/g:sm/q:40/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzOTI4/LTE1MTEwMTkzMTYt/MzYwOC5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 37120,
+          "name": "Johnny Marr",
+          "resource_url": "https://api.discogs.com/artists/37120",
+          "thumbnail_url": "https://i.discogs.com/IwlrJ_6OfS6R5hSKFII7qB9eXXG_HqhfI3N3Eq-HoKQ/rs:fit/g:sm/q:40/h:744/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/LTE0MzcyMzUyODUt/OTE2MS5qcGVn.jpeg"
+        }
+      ],
+      "name": "Electronic",
+      "namevariations": [
+        "אלקטרוניק"
+      ],
+      "profile": "\"Electronic\" began as a [a33928] ([a3898], [a3909]) solo project, but became a duo in 1989 with [a37120] ([a83080]) aiming to follow a more \"electronic\" style of music, blending synthesizers with guitars and rock with contemporary dance music.\r\nFirst signed to [l857], later to [l2294].\r\nDespite international commercial success and collaborations with [a62963], the band is on indefinite hiatus since 1999. ",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 4868,
+        "images": [
+          {
+            "height": 328,
+            "resource_url": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/TOtbIVtEV3aGvYTtxrw_WRmfeKDspt_8Cmf4l6116QM/rs:fit/g:sm/q:90/h:328/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/FKA3QZRk-3PSmdMQRm6ZWWbLtluRT6pKDvqX2o72AqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+            "width": 250
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/WlbjU6VLJj2cRBB-DbkLCrr-HZhW0FPVJvvG7K1mq5Y/rs:fit/g:sm/q:90/h:600/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/WlbjU6VLJj2cRBB-DbkLCrr-HZhW0FPVJvvG7K1mq5Y/rs:fit/g:sm/q:90/h:600/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/E9OBmpPaEaqQzIcGb70kdXhBB-Rr44ReUBXvXa0DL5I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTI3ODAwNjAxMy5q/cGVn.jpeg",
+            "width": 486
+          },
+          {
+            "height": 475,
+            "resource_url": "https://i.discogs.com/enbLRTYgMtGBywF36d8Pch1YbXnBQOuU9mcYahgNAhQ/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/enbLRTYgMtGBywF36d8Pch1YbXnBQOuU9mcYahgNAhQ/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/xSxw7cs4FVC04jVeeYsOXdAfBlR266dOU7sH9Em3YFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTI3MC0z/MzIzLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 755,
+            "resource_url": "https://i.discogs.com/S6_-DdK2r7ICpo1bggCBuTjzY0I6HkFWj1t--TbRvCY/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/S6_-DdK2r7ICpo1bggCBuTjzY0I6HkFWj1t--TbRvCY/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/8aqNUjrEMZR1ltGCgN0xeUfI4xOdl8U0Mh63K2cebKo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTUwODU5OTQ4Ny00/NTcxLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/oXTNCOezIZgirMnz1btAep7Qd985ycqR3MeAKmcVcO0/rs:fit/g:sm/q:90/h:300/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/oXTNCOezIZgirMnz1btAep7Qd985ycqR3MeAKmcVcO0/rs:fit/g:sm/q:90/h:300/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/9SCmLDHE8NRm94PuIfp9K8TtZUsDqNz7-rHyJvneRs4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MDAxLmpwZw.jpeg",
+            "width": 350
+          },
+          {
+            "height": 212,
+            "resource_url": "https://i.discogs.com/xrCE3CkniuEFrLNDKkl3Ld1J-LNxNyoZ7Y3J6n28z4Y/rs:fit/g:sm/q:90/h:212/w:179/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xrCE3CkniuEFrLNDKkl3Ld1J-LNxNyoZ7Y3J6n28z4Y/rs:fit/g:sm/q:90/h:212/w:179/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+            "uri150": "https://i.discogs.com/eCotWPw9TDbJuDR4dVeW7-0R9zkKpb3eRIGuL3nOR9Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2MjcxMi5n/aWY.jpeg",
+            "width": 179
+          },
+          {
+            "height": 150,
+            "resource_url": "https://i.discogs.com/c5XYwybR0bvaiAGAW9aDI6Xu9iMe7Jmt0JM-U-Wd_Uo/rs:fit/g:sm/q:90/h:150/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/c5XYwybR0bvaiAGAW9aDI6Xu9iMe7Jmt0JM-U-Wd_Uo/rs:fit/g:sm/q:90/h:150/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/nsffV5fk2ZHTHl0iJjZOZdwTEoPB9Oqs8SZgXzAeR5k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTE2ODg2Mjc4NS5q/cGVn.jpeg",
+            "width": 200
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 33928,
+            "name": "Bernard Sumner",
+            "resource_url": "https://api.discogs.com/artists/33928",
+            "thumbnail_url": "https://i.discogs.com/8JxH6xSMMjfezE_8CNqhFZTcyF-szlrgXxjheVbLUl4/rs:fit/g:sm/q:40/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzOTI4/LTE1MTEwMTkzMTYt/MzYwOC5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 37120,
+            "name": "Johnny Marr",
+            "resource_url": "https://api.discogs.com/artists/37120",
+            "thumbnail_url": "https://i.discogs.com/IwlrJ_6OfS6R5hSKFII7qB9eXXG_HqhfI3N3Eq-HoKQ/rs:fit/g:sm/q:40/h:744/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3MTIw/LTE0MzcyMzUyODUt/OTE2MS5qcGVn.jpeg"
+          }
+        ],
+        "name": "Electronic",
+        "namevariations": [
+          "אלקטרוניק"
+        ],
+        "profile": "\"Electronic\" began as a [a33928] ([a3898], [a3909]) solo project, but became a duo in 1989 with [a37120] ([a83080]) aiming to follow a more \"electronic\" style of music, blending synthesizers with guitars and rock with contemporary dance music.\r\nFirst signed to [l857], later to [l2294].\r\nDespite international commercial success and collaborations with [a62963], the band is on indefinite hiatus since 1999. ",
+        "realname": "Bernard Sumner & Johnny Marr",
+        "releases_url": "https://api.discogs.com/artists/4868/releases",
+        "resource_url": "https://api.discogs.com/artists/4868",
+        "uri": "https://www.discogs.com/artist/4868-Electronic",
+        "urls": [
+          "http://www.facebook.com/electronicband",
+          "http://twitter.com/ElectronicBand",
+          "http://en.wikipedia.org/wiki/Electronic_(band)"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/4868",
+      "thumb": "https://i.discogs.com/FKA3QZRk-3PSmdMQRm6ZWWbLtluRT6pKDvqX2o72AqA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4Njgt/MTU1MjIwNTc3Ny04/MDg3LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/4868-Electronic",
+      "urls": [
+        "http://www.facebook.com/electronicband",
+        "http://twitter.com/ElectronicBand",
+        "http://en.wikipedia.org/wiki/Electronic_(band)"
+      ]
     },
     "lastfm": {
       "bio_content": "Electronic were a duo formed in Manchester, UK in 1989 consisting of New Order vocalist Bernard Sumner and ex-The Smiths guitarist Johnny Marr. Neil Tennant and Chris Lowe from Pet Shop Boys and Karl Bartos of Kraftwerk also collaborated with the band.\n\nThey released three albums during the '90s, with their debut Electronic selling over a million copies worldwide. However, the follow-up Raise the Pressure, despite debuting in the UK Top 10, was a commercial flop by comparison. The group's highest charting singles is 1992's Disappointed, which reached #6 in the UK. The band's biggest American hit was 1989's Getting Away With It which reached #38 on the Billboard Hot 100.\n\nTwisted Tenderness was released in 1999 and again hit the UK Top 10. This third and final studio album was co-produced by influential New York club DJ and dance producer Arthur Baker, with whom Sumner had previously worked on New Order's 1983 hit Confusion, amongst other songs. Marr and Sumner remained the only official members of the band, but were joined by Doves Jimi Goodwin on bass and Black Grape drummer Ged Lynch.\n\nIn September 2006 the duo's work was compiled on the album Get The Message - The Best Of Electronic. <a href=\"https://www.last.fm/music/Electronic\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -142,10 +334,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 295388,
+      "listeners": 295475,
       "mbid": "3cdb360e-d0a2-459f-92f6-f0f28e62127d",
       "name": "Electronic",
-      "playcount": 3227072,
+      "playcount": 3228697,
       "similar_artists": [
         {
           "name": "New Order",
@@ -178,7 +370,7 @@
       "url": "https://www.last.fm/music/Electronic"
     },
     "spotify": {
-      "followers": 156189,
+      "followers": 156201,
       "genres": [
         "madchester",
         "synthpop",
@@ -216,6 +408,6 @@
   },
   "spotify_id": "3xYNGCooNIzKMAtJYKSOyq",
   "spotify_url": "https://open.spotify.com/artist/3xYNGCooNIzKMAtJYKSOyq",
-  "updated_at": "2025-07-05T14:51:09.382881",
+  "updated_at": "2025-07-08T09:34:13.454407",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:56:36.568691",
   "discogs_id": "158676",
-  "discogs_url": "https://www.discogs.com/artist/158676",
-  "followers": 374697,
+  "discogs_url": "https://www.discogs.com/artist/158676-Nico-3",
+  "followers": 374870,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -18,7 +18,7 @@
     "singer-songwriter",
     "alternative"
   ],
-  "id": null,
+  "id": "nico-1751734601",
   "images": [
     {
       "height": 2000,
@@ -85,14 +85,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/rvyaeScb03jqv2nXx0M_YSaMRvHRPyiWJh8uJDgYio4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "fa690c23-512b-4cad-aa32-c318f4228947",
   "lastfm_url": "https://www.last.fm/music/Nico",
   "local_images": {
-    "hi-res": "public/artist/nico/nico-hi-res.jpg",
-    "medium": "public/artist/nico/nico-medium.jpg",
-    "small": "public/artist/nico/nico-small.jpg"
+    "hi-res": "../public/artist/nico/nico-hi-res.jpg",
+    "medium": "../public/artist/nico/nico-medium.jpg",
+    "small": "../public/artist/nico/nico-small.jpg"
   },
   "name": "Nico",
   "popularity": 60,
@@ -109,9 +121,498 @@
       "url": "https://music.apple.com/gb/artist/nico/136825"
     },
     "discogs": {
-      "id": 158676,
-      "original_name": "Nico (3)",
-      "role": ""
+      "cover_image": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "158676",
+      "images": [
+        {
+          "height": 798,
+          "resource_url": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/rvyaeScb03jqv2nXx0M_YSaMRvHRPyiWJh8uJDgYio4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 764,
+          "resource_url": "https://i.discogs.com/lZl9DaL2PzjBV3Y_srgffeLFW1BClzQAguSv2CCbK2k/rs:fit/g:sm/q:90/h:764/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lZl9DaL2PzjBV3Y_srgffeLFW1BClzQAguSv2CCbK2k/rs:fit/g:sm/q:90/h:764/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yB9XGJO3vO5iZ3FQQoYppvwxks_a0Af7xLY5WnkKOAg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 601,
+          "resource_url": "https://i.discogs.com/TQU1wVC4HQ52riTXhULr7GPsWDDz-gASMPoQEO41Mo4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TQU1wVC4HQ52riTXhULr7GPsWDDz-gASMPoQEO41Mo4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-batWMcMe9n9lCri4bDI5wjPoNKxbOt0zXy9PKEXYE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 815,
+          "resource_url": "https://i.discogs.com/8NkDT_HOc1Z7VIdL23e0wPrne4Kg4_d0zWlkeuA3KzI/rs:fit/g:sm/q:90/h:815/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8NkDT_HOc1Z7VIdL23e0wPrne4Kg4_d0zWlkeuA3KzI/rs:fit/g:sm/q:90/h:815/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+          "uri150": "https://i.discogs.com/WdSBeylQvbfn_4jqmMMAPMpXypX3AfPPq7zxXCfbI7Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+          "width": 555
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/OFsbx5Js0Sqec73BZTV2QL67Pu9ewYJckXTaREnSWtg/rs:fit/g:sm/q:90/h:225/w:224/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OFsbx5Js0Sqec73BZTV2QL67Pu9ewYJckXTaREnSWtg/rs:fit/g:sm/q:90/h:225/w:224/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/i_kdF2kQCELe3SS3xwcuc-VCi0DsoTEtaXQ2vLgsYKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+          "width": 224
+        },
+        {
+          "height": 758,
+          "resource_url": "https://i.discogs.com/TfBmiQ-UTLT_6tLWbVqzCo0PxvBfRnUe0XRjhObDddc/rs:fit/g:sm/q:90/h:758/w:566/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TfBmiQ-UTLT_6tLWbVqzCo0PxvBfRnUe0XRjhObDddc/rs:fit/g:sm/q:90/h:758/w:566/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+          "uri150": "https://i.discogs.com/JHbkP-2U637bvxYLVWjpis9t4c77OhMAAVnThCrNXhI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+          "width": 566
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/z5DWTszScSyyoDCLl5c2KIvdWKV3XyPhotEJdTasMNg/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z5DWTszScSyyoDCLl5c2KIvdWKV3XyPhotEJdTasMNg/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/nPyv88_SkLTHc39SK0_bh-Vr2QYsgCYG0CP3f7j8y2Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/68BGoI2Ugj6H21BvSsG99bocPSyEPRcylqm2_tFdQzc/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/68BGoI2Ugj6H21BvSsG99bocPSyEPRcylqm2_tFdQzc/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/23Z0Sb7Zilck8jOZUsYZ1fKi1HFunuKluoQNpoxBpRs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 758,
+          "resource_url": "https://i.discogs.com/AwRoN7cTf6nST1M-jNn_w9OD8iEPGr05Mg7HkyaN6ak/rs:fit/g:sm/q:90/h:758/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AwRoN7cTf6nST1M-jNn_w9OD8iEPGr05Mg7HkyaN6ak/rs:fit/g:sm/q:90/h:758/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+          "uri150": "https://i.discogs.com/5WKCfnA1pHjFnxfLfMHMN58iwYYgtZBIXxfGJQ6FywI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+          "width": 522
+        },
+        {
+          "height": 470,
+          "resource_url": "https://i.discogs.com/rjjBLjMUS4MZW73Lwy-ISIjX89lvtkOnqgYT0JGrAgE/rs:fit/g:sm/q:90/h:470/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rjjBLjMUS4MZW73Lwy-ISIjX89lvtkOnqgYT0JGrAgE/rs:fit/g:sm/q:90/h:470/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/XcISRnmyGO-WXcJ9r2jtKIJ04l2TDCluEHw3XUp1m-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+          "width": 319
+        },
+        {
+          "height": 746,
+          "resource_url": "https://i.discogs.com/cykv_B9PUW9F5NqQo6aUFxA-p5BJMlkWDXCblwPpAWI/rs:fit/g:sm/q:90/h:746/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cykv_B9PUW9F5NqQo6aUFxA-p5BJMlkWDXCblwPpAWI/rs:fit/g:sm/q:90/h:746/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+          "uri150": "https://i.discogs.com/BAhNIj54MDWmXPHtN7XCQ3yHVeNjmMltFXXhap2JM7w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 601,
+          "resource_url": "https://i.discogs.com/ycxToh4a-hNtV2fCTP--HtUvhLuDx5-zV2eFfb6qKI4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ycxToh4a-hNtV2fCTP--HtUvhLuDx5-zV2eFfb6qKI4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/HHJXEhdljliTzV8-XAku96uXHMDzYSbi76L03X2tRyI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 338,
+          "resource_url": "https://i.discogs.com/5Zrp56Y6nBkh1rcUdXNxHJuBtH8LWSaOaT67_8Gus5E/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5Zrp56Y6nBkh1rcUdXNxHJuBtH8LWSaOaT67_8Gus5E/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/oEvTAFN9E9NFZylyLDHwlgZGx4hIH6m9CpHUYRAC1JI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 909,
+          "resource_url": "https://i.discogs.com/ptuj6jbp3V_dg13G1MlcPI1ZGgE0uMY_omAqEM7gMVo/rs:fit/g:sm/q:90/h:909/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ptuj6jbp3V_dg13G1MlcPI1ZGgE0uMY_omAqEM7gMVo/rs:fit/g:sm/q:90/h:909/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/jly5VdvCKxpxAiMPrb1ZRuu1TSUs_L2fJFBIahFzKdc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 740,
+          "resource_url": "https://i.discogs.com/vdK-7nCynqp67aTWhSBwyunqMowIjHFF8WkUBmpJOko/rs:fit/g:sm/q:90/h:740/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vdK-7nCynqp67aTWhSBwyunqMowIjHFF8WkUBmpJOko/rs:fit/g:sm/q:90/h:740/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/VHiJLs68qG1WR54g_vLEMS6WpzdoKhWRjZt0vQki8is/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+          "width": 527
+        },
+        {
+          "height": 212,
+          "resource_url": "https://i.discogs.com/Au9guFXhg8UPaZKvmBKEuoC73YRecZHtbBs6_7YCc2I/rs:fit/g:sm/q:90/h:212/w:180/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Au9guFXhg8UPaZKvmBKEuoC73YRecZHtbBs6_7YCc2I/rs:fit/g:sm/q:90/h:212/w:180/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pLF1oMTijDB7JRY4co__RxDVcfe2OETRVWQEDacEfZY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+          "width": 180
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/a9JSSBf31G0B8rbBr2mSPrnUB5Ah_2DFHn9xw_gDBIc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/a9JSSBf31G0B8rbBr2mSPrnUB5Ah_2DFHn9xw_gDBIc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9FBSiPBXLbUdAxZOPnPkKZHhHTf0n2gP0uQF2qG8RtE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 469,
+          "resource_url": "https://i.discogs.com/RL12L3vo67Kuit8mMv0CEPNephEFBi3fFEpui7Vsalc/rs:fit/g:sm/q:90/h:469/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RL12L3vo67Kuit8mMv0CEPNephEFBi3fFEpui7Vsalc/rs:fit/g:sm/q:90/h:469/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/CLwYbdg_xqgsSViq8h_NLmlUhpqUvuA81uIh7enyviU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 888,
+          "resource_url": "https://i.discogs.com/hPO9GtMnxCushPyptxXwAxAl-19A8vuAhvT6DW1YFy8/rs:fit/g:sm/q:90/h:888/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hPO9GtMnxCushPyptxXwAxAl-19A8vuAhvT6DW1YFy8/rs:fit/g:sm/q:90/h:888/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ODdYUea5Q2Z4G-ujNkio5RungmTg7RNW_mvTgCQQ0ck/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+          "width": 592
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/HqZbghvpAsbrKgUwxiexcppr-blMCEv6KK2Ibq5SK8U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HqZbghvpAsbrKgUwxiexcppr-blMCEv6KK2Ibq5SK8U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/Cfvz15va7xTSRCD4Nlg1n3o9tA6yZNn9f904SBgWFCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 346,
+          "resource_url": "https://i.discogs.com/wdxhrr-Ci5bDMMAhFrvuUI99h2XDSzAr-VD4TteG8kY/rs:fit/g:sm/q:90/h:346/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wdxhrr-Ci5bDMMAhFrvuUI99h2XDSzAr-VD4TteG8kY/rs:fit/g:sm/q:90/h:346/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/MfWM9_8DkCTjLZ9SnqdaZXwz6fw3lLIqAG2bElM2ZD0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+          "width": 385
+        },
+        {
+          "height": 444,
+          "resource_url": "https://i.discogs.com/PQpnPcDvgUQQ7PgFL_-5TzpMleqpouivSRJbdyhejUU/rs:fit/g:sm/q:90/h:444/w:548/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PQpnPcDvgUQQ7PgFL_-5TzpMleqpouivSRJbdyhejUU/rs:fit/g:sm/q:90/h:444/w:548/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/D7sjzMMuhGFy7GM9pskQJOLAB0_M45c0RCTcLRNcGcE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+          "width": 548
+        },
+        {
+          "height": 817,
+          "resource_url": "https://i.discogs.com/AZR43c1M_KRtS3h9ShhOHeZjR0djTS0yQf5XHYZ7ymI/rs:fit/g:sm/q:90/h:817/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AZR43c1M_KRtS3h9ShhOHeZjR0djTS0yQf5XHYZ7ymI/rs:fit/g:sm/q:90/h:817/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/yqlD6ublkAUWrvezBsnim4xn5LY97KiUT5WZbs6wD_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 544,
+          "resource_url": "https://i.discogs.com/cd6Ezn4CBwDGBcoheOd1ZpuCbF5FvtWM62sXMlPlyOs/rs:fit/g:sm/q:90/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cd6Ezn4CBwDGBcoheOd1ZpuCbF5FvtWM62sXMlPlyOs/rs:fit/g:sm/q:90/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/VmuppZgIMzMcayGlSOvP39Z09JZUQjVJ4kKRWamZd34/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 418,
+          "resource_url": "https://i.discogs.com/mb3v_LhkraZ_Vt0KEevWF0Ghnn778WFFo4uzN-bgF5s/rs:fit/g:sm/q:90/h:418/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mb3v_LhkraZ_Vt0KEevWF0Ghnn778WFFo4uzN-bgF5s/rs:fit/g:sm/q:90/h:418/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0hG2bYk3K7xGKUoz3Qs7HH-d78TB7Fj0qOz1geS-0is/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+          "width": 594
+        },
+        {
+          "height": 378,
+          "resource_url": "https://i.discogs.com/vKlJ2-51xmEnyzPQYHRsswpasoHVUFzKC-E5gsCS_To/rs:fit/g:sm/q:90/h:378/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vKlJ2-51xmEnyzPQYHRsswpasoHVUFzKC-E5gsCS_To/rs:fit/g:sm/q:90/h:378/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Lu2GgvZd1jnt0DX-GG5Qvm58NHG6X3NGrkzB0MgsXr0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 751,
+          "resource_url": "https://i.discogs.com/bwuGz1h0bgCoc4HEGkJRCw4O_pC4Ilm3008bPmgjQtw/rs:fit/g:sm/q:90/h:751/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bwuGz1h0bgCoc4HEGkJRCw4O_pC4Ilm3008bPmgjQtw/rs:fit/g:sm/q:90/h:751/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/yFm1uODLs8eYE1lb53PbuXUuaaYKyEBQ03Si2-oq3eE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "members": [],
+      "name": "Nico (3)",
+      "namevariations": [
+        "Christa Paffgen",
+        "Nice",
+        "Nico",
+        "Nicò",
+        "妮可",
+        "니코"
+      ],
+      "profile": "Nico was a German singer, songwriter, musician, model and actress, born in Köln (Cologne) on 18 October 1938. She died in a bicycle accident on Ibiza, Balearic Islands, Spain, on 18 July 1988. According to her autobiography, her Catholic father Wilhelm Päffgen was an archeologist, stemming from a wealthy Bavarian brew master dynasty. But that can't be correct: Gisela Päffgen proved that there wasn't any relative named \"Wilhelm Päffgen\" - but an employee called \"Hermann Willhelm Päffgen\". Nico's father died in WWII in 1942, and her mother Margarete (née Schulze, 1910-70) moved to Berlin-Schöneberg. Due to the heavy bombings, they soon moved again, to Lübbenau in Brandenburg, a small town in the eastern part of Germany.\r\n\r\nAfter the war, mother and daughter moved to Berlin where Nico, aged 15 and already 175 cm (5'9\") tall, was discovered by photographer Herbert Tobias while she worked as a sales person at the KaDeWe department store. He supposedly gave her the nickname Nico after his lover, the Greek movie maker Nikos Papatakis. At first, she called herself both Christa Nico and Nico Otzak, but settled for Nico. The modelling career soon set off for the statuesque brunette-turned-blonde, which allowed her to work in Berlin, Paris, London and Rome. Already in the late 1950s she had an unprecedented modelling career for a German (with a contract with the Eileen Ford Agency), which enabled her to buy a house for her mother (already suffering from Parkinson's) on Ibiza in 1962. And it was in Rome where she had her first movie appearance as \"Nico\" in [a=Federico Fellini]'s \"La Dolce Vita\". In 1959 she moved to Paris where she had an affair with [a=Alain Delon] and in 1962 gave birth to her only son, the troubled [a=Ari Boulogne] whose father never acknowledged him.\r\n\r\nIn London she met [url=https://www.discogs.com/artist/Brian+Jones+(5)]Brian Jones[/url] and recorded her first single \"[r=1171100]\", produced by Rolling Stones manager [a=Andrew Loog Oldham]. While modeling in New York, [a=Bob Dylan] introduced her to [a=Andy Warhol] and [a=The Velvet Underground]. She sang three songs on the Velvet Underground's debut LP and played roles in several Warhol films. Following the release of her debut album, \"[m=35096]\", her friend [a=Jim Morrison] encouraged her to write her own material.\r\n\r\nShe toured extensively in Europe, United States, Australia and Japan in the 1980s. After a concert in Berlin in June 1988, she went on holiday in Ibiza to rest. There she fell dead off a bicycle while taking a ride. At the time it happened, the story was that she was already dead from a stroke (brain hemmorhage) falling off the bike, whereas the narrative nowadays has been changed to \"an accident\" after which she died. Her ashes are buried at Friedhof Grunewald-Forst in Berlin at a place historically known as \"Cemetery of the Unknown\" or \"The Suicide Cemetery\".",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 1730335,
+            "name": "Christa Päffgen",
+            "resource_url": "https://api.discogs.com/artists/1730335",
+            "thumbnail_url": "https://i.discogs.com/Hxp1sekLWHfrlRKKvDziwclGx-FBaeQTKM-cxPuzGh8/rs:fit/g:sm/q:40/h:481/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MzAz/MzUtMTMyMzA5MjA4/OS5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 158676,
+        "images": [
+          {
+            "height": 798,
+            "resource_url": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/qcUQnK-2i0A3Mlfvj6m-EIqpdvQ4bFo2wspfCzsPLM4/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/rvyaeScb03jqv2nXx0M_YSaMRvHRPyiWJh8uJDgYio4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 764,
+            "resource_url": "https://i.discogs.com/lZl9DaL2PzjBV3Y_srgffeLFW1BClzQAguSv2CCbK2k/rs:fit/g:sm/q:90/h:764/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/lZl9DaL2PzjBV3Y_srgffeLFW1BClzQAguSv2CCbK2k/rs:fit/g:sm/q:90/h:764/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/yB9XGJO3vO5iZ3FQQoYppvwxks_a0Af7xLY5WnkKOAg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjI3NjcwMDU4/LTY5ODYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 601,
+            "resource_url": "https://i.discogs.com/TQU1wVC4HQ52riTXhULr7GPsWDDz-gASMPoQEO41Mo4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/TQU1wVC4HQ52riTXhULr7GPsWDDz-gASMPoQEO41Mo4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/-batWMcMe9n9lCri4bDI5wjPoNKxbOt0zXy9PKEXYE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDUx/LTQyMTQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 815,
+            "resource_url": "https://i.discogs.com/8NkDT_HOc1Z7VIdL23e0wPrne4Kg4_d0zWlkeuA3KzI/rs:fit/g:sm/q:90/h:815/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/8NkDT_HOc1Z7VIdL23e0wPrne4Kg4_d0zWlkeuA3KzI/rs:fit/g:sm/q:90/h:815/w:555/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+            "uri150": "https://i.discogs.com/WdSBeylQvbfn_4jqmMMAPMpXypX3AfPPq7zxXCfbI7Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODEy/LTU2NzEucG5n.jpeg",
+            "width": 555
+          },
+          {
+            "height": 225,
+            "resource_url": "https://i.discogs.com/OFsbx5Js0Sqec73BZTV2QL67Pu9ewYJckXTaREnSWtg/rs:fit/g:sm/q:90/h:225/w:224/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/OFsbx5Js0Sqec73BZTV2QL67Pu9ewYJckXTaREnSWtg/rs:fit/g:sm/q:90/h:225/w:224/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/i_kdF2kQCELe3SS3xwcuc-VCi0DsoTEtaXQ2vLgsYKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk1/LTUyNDUuanBlZw.jpeg",
+            "width": 224
+          },
+          {
+            "height": 758,
+            "resource_url": "https://i.discogs.com/TfBmiQ-UTLT_6tLWbVqzCo0PxvBfRnUe0XRjhObDddc/rs:fit/g:sm/q:90/h:758/w:566/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/TfBmiQ-UTLT_6tLWbVqzCo0PxvBfRnUe0XRjhObDddc/rs:fit/g:sm/q:90/h:758/w:566/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+            "uri150": "https://i.discogs.com/JHbkP-2U637bvxYLVWjpis9t4c77OhMAAVnThCrNXhI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MTc3/LTU3MjgucG5n.jpeg",
+            "width": 566
+          },
+          {
+            "height": 402,
+            "resource_url": "https://i.discogs.com/z5DWTszScSyyoDCLl5c2KIvdWKV3XyPhotEJdTasMNg/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/z5DWTszScSyyoDCLl5c2KIvdWKV3XyPhotEJdTasMNg/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/nPyv88_SkLTHc39SK0_bh-Vr2QYsgCYG0CP3f7j8y2Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMzI5/LTQ1OTcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 595,
+            "resource_url": "https://i.discogs.com/68BGoI2Ugj6H21BvSsG99bocPSyEPRcylqm2_tFdQzc/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/68BGoI2Ugj6H21BvSsG99bocPSyEPRcylqm2_tFdQzc/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/23Z0Sb7Zilck8jOZUsYZ1fKi1HFunuKluoQNpoxBpRs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU2NjMwNTI2/LTQ3NDkuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 758,
+            "resource_url": "https://i.discogs.com/AwRoN7cTf6nST1M-jNn_w9OD8iEPGr05Mg7HkyaN6ak/rs:fit/g:sm/q:90/h:758/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AwRoN7cTf6nST1M-jNn_w9OD8iEPGr05Mg7HkyaN6ak/rs:fit/g:sm/q:90/h:758/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+            "uri150": "https://i.discogs.com/5WKCfnA1pHjFnxfLfMHMN58iwYYgtZBIXxfGJQ6FywI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjIwMTA5/LTc5NzEucG5n.jpeg",
+            "width": 522
+          },
+          {
+            "height": 470,
+            "resource_url": "https://i.discogs.com/rjjBLjMUS4MZW73Lwy-ISIjX89lvtkOnqgYT0JGrAgE/rs:fit/g:sm/q:90/h:470/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rjjBLjMUS4MZW73Lwy-ISIjX89lvtkOnqgYT0JGrAgE/rs:fit/g:sm/q:90/h:470/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/XcISRnmyGO-WXcJ9r2jtKIJ04l2TDCluEHw3XUp1m-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTI2ODMuanBlZw.jpeg",
+            "width": 319
+          },
+          {
+            "height": 746,
+            "resource_url": "https://i.discogs.com/cykv_B9PUW9F5NqQo6aUFxA-p5BJMlkWDXCblwPpAWI/rs:fit/g:sm/q:90/h:746/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/cykv_B9PUW9F5NqQo6aUFxA-p5BJMlkWDXCblwPpAWI/rs:fit/g:sm/q:90/h:746/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+            "uri150": "https://i.discogs.com/BAhNIj54MDWmXPHtN7XCQ3yHVeNjmMltFXXhap2JM7w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5ODE0/LTYwNjAucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 601,
+            "resource_url": "https://i.discogs.com/ycxToh4a-hNtV2fCTP--HtUvhLuDx5-zV2eFfb6qKI4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ycxToh4a-hNtV2fCTP--HtUvhLuDx5-zV2eFfb6qKI4/rs:fit/g:sm/q:90/h:601/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/HHJXEhdljliTzV8-XAku96uXHMDzYSbi76L03X2tRyI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNDM0MzM4MDg1/LTE1MzMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 338,
+            "resource_url": "https://i.discogs.com/5Zrp56Y6nBkh1rcUdXNxHJuBtH8LWSaOaT67_8Gus5E/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5Zrp56Y6nBkh1rcUdXNxHJuBtH8LWSaOaT67_8Gus5E/rs:fit/g:sm/q:90/h:338/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/oEvTAFN9E9NFZylyLDHwlgZGx4hIH6m9CpHUYRAC1JI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ5NzcwMDk2/LTYwNzguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 909,
+            "resource_url": "https://i.discogs.com/ptuj6jbp3V_dg13G1MlcPI1ZGgE0uMY_omAqEM7gMVo/rs:fit/g:sm/q:90/h:909/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ptuj6jbp3V_dg13G1MlcPI1ZGgE0uMY_omAqEM7gMVo/rs:fit/g:sm/q:90/h:909/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/jly5VdvCKxpxAiMPrb1ZRuu1TSUs_L2fJFBIahFzKdc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjA2/LTc2MDMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 740,
+            "resource_url": "https://i.discogs.com/vdK-7nCynqp67aTWhSBwyunqMowIjHFF8WkUBmpJOko/rs:fit/g:sm/q:90/h:740/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vdK-7nCynqp67aTWhSBwyunqMowIjHFF8WkUBmpJOko/rs:fit/g:sm/q:90/h:740/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/VHiJLs68qG1WR54g_vLEMS6WpzdoKhWRjZt0vQki8is/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzczMzc0ODA5/LTYzMzYuanBlZw.jpeg",
+            "width": 527
+          },
+          {
+            "height": 212,
+            "resource_url": "https://i.discogs.com/Au9guFXhg8UPaZKvmBKEuoC73YRecZHtbBs6_7YCc2I/rs:fit/g:sm/q:90/h:212/w:180/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Au9guFXhg8UPaZKvmBKEuoC73YRecZHtbBs6_7YCc2I/rs:fit/g:sm/q:90/h:212/w:180/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/pLF1oMTijDB7JRY4co__RxDVcfe2OETRVWQEDacEfZY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTQxMDUzOTE5/LmpwZWc.jpeg",
+            "width": 180
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/a9JSSBf31G0B8rbBr2mSPrnUB5Ah_2DFHn9xw_gDBIc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/a9JSSBf31G0B8rbBr2mSPrnUB5Ah_2DFHn9xw_gDBIc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/9FBSiPBXLbUdAxZOPnPkKZHhHTf0n2gP0uQF2qG8RtE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjUxMTYyMzAy/LTU0MDAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 469,
+            "resource_url": "https://i.discogs.com/RL12L3vo67Kuit8mMv0CEPNephEFBi3fFEpui7Vsalc/rs:fit/g:sm/q:90/h:469/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RL12L3vo67Kuit8mMv0CEPNephEFBi3fFEpui7Vsalc/rs:fit/g:sm/q:90/h:469/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/CLwYbdg_xqgsSViq8h_NLmlUhpqUvuA81uIh7enyviU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3MDc1/LTE4MzEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 888,
+            "resource_url": "https://i.discogs.com/hPO9GtMnxCushPyptxXwAxAl-19A8vuAhvT6DW1YFy8/rs:fit/g:sm/q:90/h:888/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/hPO9GtMnxCushPyptxXwAxAl-19A8vuAhvT6DW1YFy8/rs:fit/g:sm/q:90/h:888/w:592/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ODdYUea5Q2Z4G-ujNkio5RungmTg7RNW_mvTgCQQ0ck/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NzY0/LmpwZWc.jpeg",
+            "width": 592
+          },
+          {
+            "height": 394,
+            "resource_url": "https://i.discogs.com/HqZbghvpAsbrKgUwxiexcppr-blMCEv6KK2Ibq5SK8U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HqZbghvpAsbrKgUwxiexcppr-blMCEv6KK2Ibq5SK8U/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/Cfvz15va7xTSRCD4Nlg1n3o9tA6yZNn9f904SBgWFCc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTAyODcyNTA5/LmpwZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 346,
+            "resource_url": "https://i.discogs.com/wdxhrr-Ci5bDMMAhFrvuUI99h2XDSzAr-VD4TteG8kY/rs:fit/g:sm/q:90/h:346/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wdxhrr-Ci5bDMMAhFrvuUI99h2XDSzAr-VD4TteG8kY/rs:fit/g:sm/q:90/h:346/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/MfWM9_8DkCTjLZ9SnqdaZXwz6fw3lLIqAG2bElM2ZD0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMTYxMjA0NDEw/LmpwZWc.jpeg",
+            "width": 385
+          },
+          {
+            "height": 444,
+            "resource_url": "https://i.discogs.com/PQpnPcDvgUQQ7PgFL_-5TzpMleqpouivSRJbdyhejUU/rs:fit/g:sm/q:90/h:444/w:548/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/PQpnPcDvgUQQ7PgFL_-5TzpMleqpouivSRJbdyhejUU/rs:fit/g:sm/q:90/h:444/w:548/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/D7sjzMMuhGFy7GM9pskQJOLAB0_M45c0RCTcLRNcGcE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ4/LTE1MjUuanBlZw.jpeg",
+            "width": 548
+          },
+          {
+            "height": 817,
+            "resource_url": "https://i.discogs.com/AZR43c1M_KRtS3h9ShhOHeZjR0djTS0yQf5XHYZ7ymI/rs:fit/g:sm/q:90/h:817/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AZR43c1M_KRtS3h9ShhOHeZjR0djTS0yQf5XHYZ7ymI/rs:fit/g:sm/q:90/h:817/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/yqlD6ublkAUWrvezBsnim4xn5LY97KiUT5WZbs6wD_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjAyOTQyNDI5/LTkyMzMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 544,
+            "resource_url": "https://i.discogs.com/cd6Ezn4CBwDGBcoheOd1ZpuCbF5FvtWM62sXMlPlyOs/rs:fit/g:sm/q:90/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/cd6Ezn4CBwDGBcoheOd1ZpuCbF5FvtWM62sXMlPlyOs/rs:fit/g:sm/q:90/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+            "uri150": "https://i.discogs.com/VmuppZgIMzMcayGlSOvP39Z09JZUQjVJ4kKRWamZd34/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjQ1MjE5MjQ5/LTI2NjcucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 418,
+            "resource_url": "https://i.discogs.com/mb3v_LhkraZ_Vt0KEevWF0Ghnn778WFFo4uzN-bgF5s/rs:fit/g:sm/q:90/h:418/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/mb3v_LhkraZ_Vt0KEevWF0Ghnn778WFFo4uzN-bgF5s/rs:fit/g:sm/q:90/h:418/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0hG2bYk3K7xGKUoz3Qs7HH-d78TB7Fj0qOz1geS-0is/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzU4MTk4NDY4/LTMxMDMuanBlZw.jpeg",
+            "width": 594
+          },
+          {
+            "height": 378,
+            "resource_url": "https://i.discogs.com/vKlJ2-51xmEnyzPQYHRsswpasoHVUFzKC-E5gsCS_To/rs:fit/g:sm/q:90/h:378/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vKlJ2-51xmEnyzPQYHRsswpasoHVUFzKC-E5gsCS_To/rs:fit/g:sm/q:90/h:378/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Lu2GgvZd1jnt0DX-GG5Qvm58NHG6X3NGrkzB0MgsXr0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMzgzNTk5OTYz/LTk2MjQuanBlZw.jpeg",
+            "width": 500
+          },
+          {
+            "height": 751,
+            "resource_url": "https://i.discogs.com/bwuGz1h0bgCoc4HEGkJRCw4O_pC4Ilm3008bPmgjQtw/rs:fit/g:sm/q:90/h:751/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bwuGz1h0bgCoc4HEGkJRCw4O_pC4Ilm3008bPmgjQtw/rs:fit/g:sm/q:90/h:751/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/yFm1uODLs8eYE1lb53PbuXUuaaYKyEBQ03Si2-oq3eE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xMjUwOTM3NDE0/LmpwZWc.jpeg",
+            "width": 591
+          }
+        ],
+        "name": "Nico (3)",
+        "namevariations": [
+          "Christa Paffgen",
+          "Nice",
+          "Nico",
+          "Nicò",
+          "妮可",
+          "니코"
+        ],
+        "profile": "Nico was a German singer, songwriter, musician, model and actress, born in Köln (Cologne) on 18 October 1938. She died in a bicycle accident on Ibiza, Balearic Islands, Spain, on 18 July 1988. According to her autobiography, her Catholic father Wilhelm Päffgen was an archeologist, stemming from a wealthy Bavarian brew master dynasty. But that can't be correct: Gisela Päffgen proved that there wasn't any relative named \"Wilhelm Päffgen\" - but an employee called \"Hermann Willhelm Päffgen\". Nico's father died in WWII in 1942, and her mother Margarete (née Schulze, 1910-70) moved to Berlin-Schöneberg. Due to the heavy bombings, they soon moved again, to Lübbenau in Brandenburg, a small town in the eastern part of Germany.\r\n\r\nAfter the war, mother and daughter moved to Berlin where Nico, aged 15 and already 175 cm (5'9\") tall, was discovered by photographer Herbert Tobias while she worked as a sales person at the KaDeWe department store. He supposedly gave her the nickname Nico after his lover, the Greek movie maker Nikos Papatakis. At first, she called herself both Christa Nico and Nico Otzak, but settled for Nico. The modelling career soon set off for the statuesque brunette-turned-blonde, which allowed her to work in Berlin, Paris, London and Rome. Already in the late 1950s she had an unprecedented modelling career for a German (with a contract with the Eileen Ford Agency), which enabled her to buy a house for her mother (already suffering from Parkinson's) on Ibiza in 1962. And it was in Rome where she had her first movie appearance as \"Nico\" in [a=Federico Fellini]'s \"La Dolce Vita\". In 1959 she moved to Paris where she had an affair with [a=Alain Delon] and in 1962 gave birth to her only son, the troubled [a=Ari Boulogne] whose father never acknowledged him.\r\n\r\nIn London she met [url=https://www.discogs.com/artist/Brian+Jones+(5)]Brian Jones[/url] and recorded her first single \"[r=1171100]\", produced by Rolling Stones manager [a=Andrew Loog Oldham]. While modeling in New York, [a=Bob Dylan] introduced her to [a=Andy Warhol] and [a=The Velvet Underground]. She sang three songs on the Velvet Underground's debut LP and played roles in several Warhol films. Following the release of her debut album, \"[m=35096]\", her friend [a=Jim Morrison] encouraged her to write her own material.\r\n\r\nShe toured extensively in Europe, United States, Australia and Japan in the 1980s. After a concert in Berlin in June 1988, she went on holiday in Ibiza to rest. There she fell dead off a bicycle while taking a ride. At the time it happened, the story was that she was already dead from a stroke (brain hemmorhage) falling off the bike, whereas the narrative nowadays has been changed to \"an accident\" after which she died. Her ashes are buried at Friedhof Grunewald-Forst in Berlin at a place historically known as \"Cemetery of the Unknown\" or \"The Suicide Cemetery\".",
+        "realname": "Christa Päffgen",
+        "releases_url": "https://api.discogs.com/artists/158676/releases",
+        "resource_url": "https://api.discogs.com/artists/158676",
+        "uri": "https://www.discogs.com/artist/158676-Nico-3",
+        "urls": [
+          "https://www.findagrave.com/memorial/4411/christa-paffgen",
+          "https://www.imdb.com/name/nm0630113/",
+          "https://www.gettyimages.com/photos/christa-paffgen",
+          "https://en.wikipedia.org/wiki/Nico"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/158676",
+      "thumb": "https://i.discogs.com/rvyaeScb03jqv2nXx0M_YSaMRvHRPyiWJh8uJDgYio4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODY3/Ni0xNjYzNDQ3Mjk2/LTE4NDEuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/158676-Nico-3",
+      "urls": [
+        "https://www.findagrave.com/memorial/4411/christa-paffgen",
+        "https://www.imdb.com/name/nm0630113/",
+        "https://www.gettyimages.com/photos/christa-paffgen",
+        "https://en.wikipedia.org/wiki/Nico"
+      ]
     },
     "lastfm": {
       "bio_content": "Nico (16 October 1938 – 18 July 1988) was a German model, actress, singer, and songwriter. She was born Christa Päffgen in Cologne, Germany.\nNico started a successful career as a model in Berlin and Paris, studied acting at Lee Strasberg's New York Actor Studio. She then became part of the Swinging London scene, and had a short relationship with The Rolling Stones' Brian Jones and she recorded her first record in London in 1965, the single I'm Not Saying/The Last Mile, produced by Jimmy Page, for Rolling Stones manager Andrew Loog Oldham's label Immediate Records. Thanks to Jones she met Andy Warhol in New York City and became part of Warhol's Factory, and Warhol introduced her to the Rock band The Velvet Underground, with whom she recorded the album \"The Velvet Underground & Nico\", featuring the legendary banana cover designed by Andy Warhol. The album has been named by numerous publications as one of the top 100 albums of all time, and is often considered one of history's 10 most influential albums by critics. \n\nNico later recorded several solo albums, including the folksy Chelsea Girl in 1967, followed by original albums such as The Marble Index and Desertshore, which were much darker and avant garde in style. She released several more albums throughout the 1970s and 1980s, including The End..., but died in 1988 from a cerebral hemorrhage after falling from her bike in Ibiza, Spain. She is buried in Berlin, next to her mother.\n\nSolo studio discography:\n1967 - Chelsea Girl\n1969 - The Marble Index\n1970 - Desertshore\n1974 - The End...\n1981 - Drama of Exile\n1985 - Camera Obscura\n\nLive discography:\n1974 - June 1, 1974 (with Kevin Ayers, John Cale, and Brian Eno)\n1986 - Behind the Iron Curtain\n1986 - Live Heroes\n1986 - Nico in Tokyo\n1989 - Hanging Gardens\n1993 - Do or Die!\n1994 - Heroine\n1994 - Fata Morgana\n1994 - Live in Pécs 1985\n2000 - In Europe: Do or Die, Diary 1982\n2001 - Janitor of Lunacy\n2003 - 1972-01-29: Le Bataclan, Paris, France (with Lou Reed and John Cale)\n2007 - All Tomorrow's Parties: Live <a href=\"https://www.last.fm/music/Nico\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -142,10 +643,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1057970,
+      "listeners": 1058505,
       "mbid": "fa690c23-512b-4cad-aa32-c318f4228947",
       "name": "Nico",
-      "playcount": 16766205,
+      "playcount": 16777292,
       "similar_artists": [
         {
           "name": "John Cale",
@@ -178,7 +679,7 @@
       "url": "https://www.last.fm/music/Nico"
     },
     "spotify": {
-      "followers": 374697,
+      "followers": 374870,
       "genres": [
         "proto-punk",
         "art rock"
@@ -213,6 +714,6 @@
   },
   "spotify_id": "0IwlY33zbBXN7zlS9DP2Cj",
   "spotify_url": "https://open.spotify.com/artist/0IwlY33zbBXN7zlS9DP2Cj",
-  "updated_at": "2025-07-05T17:56:41.626853",
+  "updated_at": "2025-07-08T10:14:30.968619",
   "wikipedia_url": null
 }

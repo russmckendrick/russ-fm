@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:20:35.479254",
   "discogs_id": "48819",
-  "discogs_url": "https://www.discogs.com/artist/48819",
-  "followers": 228580,
+  "discogs_url": "https://www.discogs.com/artist/48819-Ash",
+  "followers": 228779,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -16,7 +16,7 @@
     "britpop",
     "alternative"
   ],
-  "id": null,
+  "id": "ash-1751725242",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/cE7X_EyWCtvus08ek1V0hf5_ygUEIbqqSltmW9aXijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "c3f93741-ba7c-4f13-b3e4-b21c482f1960",
   "lastfm_url": "https://www.last.fm/music/Ash",
   "local_images": {
-    "hi-res": "public/artist/ash/ash-hi-res.jpg",
-    "medium": "public/artist/ash/ash-medium.jpg",
-    "small": "public/artist/ash/ash-small.jpg"
+    "hi-res": "../public/artist/ash/ash-hi-res.jpg",
+    "medium": "../public/artist/ash/ash-medium.jpg",
+    "small": "../public/artist/ash/ash-small.jpg"
   },
   "name": "Ash",
   "popularity": 61,
@@ -101,9 +113,234 @@
       "url": "https://music.apple.com/gb/artist/ash/721451"
     },
     "discogs": {
-      "id": 48819,
-      "original_name": "Ash",
-      "role": ""
+      "cover_image": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "48819",
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/cE7X_EyWCtvus08ek1V0hf5_ygUEIbqqSltmW9aXijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 750,
+          "resource_url": "https://i.discogs.com/IInVUg_-6u_rJuLs5xtVHQigIM4hmARSbK9cWb9Hqec/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IInVUg_-6u_rJuLs5xtVHQigIM4hmARSbK9cWb9Hqec/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/l9nQDoZXtXZir5w6hDXxfsIFwJXkpAlJFnn96LEcY7g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 499,
+          "resource_url": "https://i.discogs.com/dZwdAACg1hKTuCa0ZPFjwlOG6QwWvmg5W8x3szQ284E/rs:fit/g:sm/q:90/h:499/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dZwdAACg1hKTuCa0ZPFjwlOG6QwWvmg5W8x3szQ284E/rs:fit/g:sm/q:90/h:499/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/s0pC1Xd9PLcsmDkjCycgstpHprv6iLEBQ3LHGO-f6Q0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 548,
+          "resource_url": "https://i.discogs.com/JlZmHag8nar01L1l6KHjgTSQxGeIEL69CQoQLScM4nY/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/JlZmHag8nar01L1l6KHjgTSQxGeIEL69CQoQLScM4nY/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/jObdRQ3H4LVbzVHtd337zoEe3l9qPWl5hiC6hiQqxs8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 640,
+          "resource_url": "https://i.discogs.com/I26cnOgVIDIXvVNd6cih-tNSOoqLXc0wLpCCRTeS6Hs/rs:fit/g:sm/q:90/h:640/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/I26cnOgVIDIXvVNd6cih-tNSOoqLXc0wLpCCRTeS6Hs/rs:fit/g:sm/q:90/h:640/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/XA2bqLQ-BEFSk13vBtomOBNW9_TShOn1JJ3gLBM5qNI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 236,
+          "resource_url": "https://i.discogs.com/8L9nUejM8QrGYxnosjYrf_lRhSwi_2p_owcN33CIPBA/rs:fit/g:sm/q:90/h:236/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8L9nUejM8QrGYxnosjYrf_lRhSwi_2p_owcN33CIPBA/rs:fit/g:sm/q:90/h:236/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/wPnSwaB0XUZWMWAIbc7hBCPDsm3rtMH79c07I6upsoM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/4JAGU1XPRoUxLNfY3ftfViQxTnRz70OLWsYM4skh3kg/rs:fit/g:sm/q:90/h:200/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4JAGU1XPRoUxLNfY3ftfViQxTnRz70OLWsYM4skh3kg/rs:fit/g:sm/q:90/h:200/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/BqCyVO4c8y5JaX6fv2uCNZ_EsllmyynelQGPko_zt-I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/B5Lxlz6SCk_Q9WpSsJjE1RhmPJYjakD1OTmjauGSmsI/rs:fit/g:sm/q:90/h:600/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/B5Lxlz6SCk_Q9WpSsJjE1RhmPJYjakD1OTmjauGSmsI/rs:fit/g:sm/q:90/h:600/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/tV7hMhlb5B8134WUZ_CgoeSCA1IEyr_YhbrVD2fTubo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+          "width": 531
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 254632,
+          "name": "Charlotte Hatherley",
+          "resource_url": "https://api.discogs.com/artists/254632",
+          "thumbnail_url": "https://i.discogs.com/kxvVa5wg36gn6PD-95AwD4ruM0V0M-29TaQVwT5Kg4s/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDYz/Mi0xNjgwMjMzMjIz/LTYxNjMuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 296261,
+          "name": "Tim Wheeler",
+          "resource_url": "https://api.discogs.com/artists/296261",
+          "thumbnail_url": "https://i.discogs.com/YqJPM5EkayV4kVveinLyu7bnikndEu3g9YSlyamFW8E/rs:fit/g:sm/q:40/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjI2/MS0xNjgwMjMzMzEz/LTk5ODYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 357530,
+          "name": "Mark Hamilton",
+          "resource_url": "https://api.discogs.com/artists/357530",
+          "thumbnail_url": "https://i.discogs.com/f1VOIBk33BwKDRvu3haReHDWrQVbQzS5roSp5Lq0Gf0/rs:fit/g:sm/q:40/h:371/w:262/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NzUz/MC0xMTQ2MjMwNDU3/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 357531,
+          "name": "Rick McMurray",
+          "resource_url": "https://api.discogs.com/artists/357531",
+          "thumbnail_url": "https://i.discogs.com/7dICAVotC974qqJ3FJqzT3GnRPS663TfvqMvCTwxj3M/rs:fit/g:sm/q:40/h:352/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NzUz/MS0xMTQ2MjMwNTMx/LmdpZg.jpeg"
+        }
+      ],
+      "name": "Ash",
+      "namevariations": [
+        "Ash.",
+        "Asr",
+        "灰燼合唱團"
+      ],
+      "profile": "Alternative rock band from Downpatrick, Northern Ireland.\r\nFormed 1992\r\n\r\n[b]Current Members:[/b]\r\nTim Wheeler – Lead vocals/Guitar/Keys\\Programming (1992–)\r\nMark Hamilton – Bass/Synthesizer (1992–)\r\nRick McMurray – Drums/Backing vocals (1992–)\r\n\r\n[b]Former Members:[/b]\r\nCharlotte Hatherley – Guitar/Piano\\Backing vocals (1997–2006, 2011, 2022)",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 48819,
+        "images": [
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/eROSr9qkggKjunOp__8syoiOKkOT6sHOHskL7h4ps68/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/cE7X_EyWCtvus08ek1V0hf5_ygUEIbqqSltmW9aXijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 750,
+            "resource_url": "https://i.discogs.com/IInVUg_-6u_rJuLs5xtVHQigIM4hmARSbK9cWb9Hqec/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IInVUg_-6u_rJuLs5xtVHQigIM4hmARSbK9cWb9Hqec/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/l9nQDoZXtXZir5w6hDXxfsIFwJXkpAlJFnn96LEcY7g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzgt/MTIxMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 499,
+            "resource_url": "https://i.discogs.com/dZwdAACg1hKTuCa0ZPFjwlOG6QwWvmg5W8x3szQ284E/rs:fit/g:sm/q:90/h:499/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dZwdAACg1hKTuCa0ZPFjwlOG6QwWvmg5W8x3szQ284E/rs:fit/g:sm/q:90/h:499/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/s0pC1Xd9PLcsmDkjCycgstpHprv6iLEBQ3LHGO-f6Q0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU1OTMt/MTU5Mi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 548,
+            "resource_url": "https://i.discogs.com/JlZmHag8nar01L1l6KHjgTSQxGeIEL69CQoQLScM4nY/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/JlZmHag8nar01L1l6KHjgTSQxGeIEL69CQoQLScM4nY/rs:fit/g:sm/q:90/h:548/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/jObdRQ3H4LVbzVHtd337zoEe3l9qPWl5hiC6hiQqxs8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU2NzAt/MTYxNi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 640,
+            "resource_url": "https://i.discogs.com/I26cnOgVIDIXvVNd6cih-tNSOoqLXc0wLpCCRTeS6Hs/rs:fit/g:sm/q:90/h:640/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/I26cnOgVIDIXvVNd6cih-tNSOoqLXc0wLpCCRTeS6Hs/rs:fit/g:sm/q:90/h:640/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/XA2bqLQ-BEFSk13vBtomOBNW9_TShOn1JJ3gLBM5qNI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE2Mzg5OTE3NzUt/NjYxMS5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 236,
+            "resource_url": "https://i.discogs.com/8L9nUejM8QrGYxnosjYrf_lRhSwi_2p_owcN33CIPBA/rs:fit/g:sm/q:90/h:236/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/8L9nUejM8QrGYxnosjYrf_lRhSwi_2p_owcN33CIPBA/rs:fit/g:sm/q:90/h:236/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/wPnSwaB0XUZWMWAIbc7hBCPDsm3rtMH79c07I6upsoM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMDUzNzY0NjQu/anBn.jpeg",
+            "width": 300
+          },
+          {
+            "height": 200,
+            "resource_url": "https://i.discogs.com/4JAGU1XPRoUxLNfY3ftfViQxTnRz70OLWsYM4skh3kg/rs:fit/g:sm/q:90/h:200/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4JAGU1XPRoUxLNfY3ftfViQxTnRz70OLWsYM4skh3kg/rs:fit/g:sm/q:90/h:200/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/BqCyVO4c8y5JaX6fv2uCNZ_EsllmyynelQGPko_zt-I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExMTI2NjczNzUu/anBn.jpeg",
+            "width": 300
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/B5Lxlz6SCk_Q9WpSsJjE1RhmPJYjakD1OTmjauGSmsI/rs:fit/g:sm/q:90/h:600/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/B5Lxlz6SCk_Q9WpSsJjE1RhmPJYjakD1OTmjauGSmsI/rs:fit/g:sm/q:90/h:600/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/tV7hMhlb5B8134WUZ_CgoeSCA1IEyr_YhbrVD2fTubo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTExNDIzNTc5ODku/anBlZw.jpeg",
+            "width": 531
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 254632,
+            "name": "Charlotte Hatherley",
+            "resource_url": "https://api.discogs.com/artists/254632",
+            "thumbnail_url": "https://i.discogs.com/kxvVa5wg36gn6PD-95AwD4ruM0V0M-29TaQVwT5Kg4s/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDYz/Mi0xNjgwMjMzMjIz/LTYxNjMuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 296261,
+            "name": "Tim Wheeler",
+            "resource_url": "https://api.discogs.com/artists/296261",
+            "thumbnail_url": "https://i.discogs.com/YqJPM5EkayV4kVveinLyu7bnikndEu3g9YSlyamFW8E/rs:fit/g:sm/q:40/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjI2/MS0xNjgwMjMzMzEz/LTk5ODYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 357530,
+            "name": "Mark Hamilton",
+            "resource_url": "https://api.discogs.com/artists/357530",
+            "thumbnail_url": "https://i.discogs.com/f1VOIBk33BwKDRvu3haReHDWrQVbQzS5roSp5Lq0Gf0/rs:fit/g:sm/q:40/h:371/w:262/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NzUz/MC0xMTQ2MjMwNDU3/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 357531,
+            "name": "Rick McMurray",
+            "resource_url": "https://api.discogs.com/artists/357531",
+            "thumbnail_url": "https://i.discogs.com/7dICAVotC974qqJ3FJqzT3GnRPS663TfvqMvCTwxj3M/rs:fit/g:sm/q:40/h:352/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NzUz/MS0xMTQ2MjMwNTMx/LmdpZg.jpeg"
+          }
+        ],
+        "name": "Ash",
+        "namevariations": [
+          "Ash.",
+          "Asr",
+          "灰燼合唱團"
+        ],
+        "profile": "Alternative rock band from Downpatrick, Northern Ireland.\r\nFormed 1992\r\n\r\n[b]Current Members:[/b]\r\nTim Wheeler – Lead vocals/Guitar/Keys\\Programming (1992–)\r\nMark Hamilton – Bass/Synthesizer (1992–)\r\nRick McMurray – Drums/Backing vocals (1992–)\r\n\r\n[b]Former Members:[/b]\r\nCharlotte Hatherley – Guitar/Piano\\Backing vocals (1997–2006, 2011, 2022)",
+        "releases_url": "https://api.discogs.com/artists/48819/releases",
+        "resource_url": "https://api.discogs.com/artists/48819",
+        "uri": "https://www.discogs.com/artist/48819-Ash",
+        "urls": [
+          "http://www.ash-official.com/",
+          "http://en.wikipedia.org/wiki/Ash_(band)"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/48819",
+      "thumb": "https://i.discogs.com/cE7X_EyWCtvus08ek1V0hf5_ygUEIbqqSltmW9aXijQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODE5/LTE3MjY3NDU0Mzct/NzIxNi5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/48819-Ash",
+      "urls": [
+        "http://www.ash-official.com/",
+        "http://en.wikipedia.org/wiki/Ash_(band)"
+      ]
     },
     "lastfm": {
       "bio_content": "There are 4 artists with this name.\n\n1) Ash is an alternative rock band that formed in Downpatrick, Northern Ireland in 1992. The media originally pegged Ash's music as Britpop when the band first found mainstream success.\n\nThe current line-up of the group is as follows: Tim Wheeler (vocals and guitar), Mark Hamilton (bass guitar) and Rick McMurray (drums).\n\nAsh's full-length debut \"1977\" was released in 1996 and followed 1994's mini album \"Trailer\". Named after the year they were all born (and in honour of the year Star Wars was released), \"1977\" displayed Wheeler and Hamilton's full-fledged love for all things extra-terrestrial and science fiction-related.  In autumn 1997, guitarist Charlotte Hatherley was added to the existing trio. Hatherley was recruited from the band Nightnurse.\n\nThe new quartet's sophomore effort - \"Nu-Clear Sounds\" was released in 1998 to a mixed critical reaction. \"Free All Angels\" followed in April 2001, gaining a U.S. release in the following summer. \n\nMeltdown, the band's first Stateside release for Record Collection, arrived in spring 2005. A year later, and after nine years with Ash, Charlotte Hatherley announced her departure from the band to concentrate on a solo career. The split was amicable and the members of the band have mentioned that they are open to Charlotte returning.\n\nIn 2007 the remaining trio (and original line-up) released the album \"Twilight Of The Innocents\".\n\n2009: Nearly 12 months of work at their Manhattan command centre has produced an enviable payload of new tunes: the ultimate singles band are about to unveil the ultimate singles collection. \n\nThe band announces what amounts to a creative Everest, the ‘A-Z Series’: 26 singles in one year, a single for each letter of the alphabet, one release every fortnight.  The first taster is free download Return Of White Rabbit, and the UK press loves it; a refreshing electro take on the unstoppable Ash formula, it suggests the ambitious new release schedule has revitalized the band. \n\nThe unique subscription service run from the band’s website and own label ‘Atomic Heart Records’ is kicked off with ballad True Love 1980 and is promptly followed by another Ash innovation, the A to Z Tour.   The band embark on an alphabetical tour of the UK, a brave – if not foolish – trip around the British Isles from Aldershot to Zennor, bringing the Rock back to some of the nation’s lesser known music venues. \n\nAsh were joined by Bloc Party guitarist Russell Lissack for live performances in 2010 while Bloc Party was on hiatus.\n\n2) Ash, an emerging Atlanta-based artist, made her television debut on the reality show Chasing Destiny by Kelly Rowland but she’s no newcomer to the performance art. If you’ve ever seen her perform behind Janelle Monáe, it is likely that you were instantly captivated by her warm energy and obvious star quality. The singer/songwriter is keeping feel good love songs alive in her solo work with a refreshing amalgamation of futuristic and classic instrumentation. Ash’s debut project The Perfect EP and sophomore release The Please Like Me EP each consist of four endearingly electrifying songs.\n\nASH. is an American dream-Pop artist who is gradually winning the hearts of listeners all over the world. She is a songstress and a writer of both prose and poetry with a unique perspective on love. With her mesmerizing lyrics and enchanting voice, she and her writing partner, T. Brown, have created songs and melodies that will live in your heart forever; harkening to sounds of nostalgia all the while remaining fresh and refreshing. \nHer two independent releases, The Please Like Me EP and The Perfect EP were so impactful that they amassed features in over 30 publications, including Galore, Saint Heron, Perez Hilton, Essence, VIBE, BET, PYNK, and Hello Beautiful, just to name a few.\nThis success was coupled with numerous requests of the budding star to perform at notable events such as opening for Grammy nominated singer and super producer Ryan Leslie at Atlanta’s CenterStage,The Revival hosted by hit producer Bryan-Michael Cox, and the Atlanta Dogwood Festival, just to name a few. \nA former vocalist and dancer for artist Janelle Monae, ASH. has a history of notable performances alongside the Grammy nominated singer at The White House, on Good Morning America, on a plethora of late night shows such as Letterman and Fallon, Coachella, Essence Music Fest, SNL, Black Girls Rock, the 18th Annual Nobel Peace Prize Ceremony, and many many others. That opportunity also landed her the honor of performing on stage with musical icons, Stevie Wonder and the late Prince Rogers Nelson.\nIn Spring of 2016, ASH. orchestrated her first high school tour allowing her an opportunity to interact with, impact and encourage young lives. In fact, her music is filled with metaphorical references to dream chasing.\nIn August of 2016, ASH., began her uniquely created, \" THE PLEASE LIKE ME LIVING ROOM TOUR,\" where she traveled to Memphis, Nashville, Cleveland, Atlanta and Brooklyn with her band, creating a stage in the living rooms of her most dedicated fans to provide an opportunity for people to experience her live. The tour proved to be highly innovative, packing out the living rooms in each city. In fact, a well known Brooklyn Blog, \"Music and Other Drugs,\" called the tour, \"genius,\" and stated that \"..the intimate vibe connected the audience to ASH.,...everyone in the room sang along...it shows the impact that her artistry and music has on fans...\" .\n\n3) ASH Is an artist from Paris, France. ( SoundCloud )\nHailing from Cairo, Egypt and currently based in Montréal, Ash fuses melodic Middle Eastern sounds and Electronic music in a style reminiscent to that of his versatile influences.\n\nHis repertoire can be traced back to his first original track Lost, released in 2012, which garnered attention from numerous producers for its intricate fusion of middle eastern and electronic music. \n\nIn 2016, Ash released his hit Mosaïque. The song has amassed over 90 million streams to date and charted in the Top 50 of many countries including Turkey, Greece, Romania and Ukraine.\n\nFollowing Mosaique’s success, Ash released many more hits such as, Give a Little, Daydream and Dans La Peau, reaching altogether over 350 million streams on digital music platforms.\n\n4) ASH is a singer-songwriter based in Cape Town, South Africa.\nKnown for her dynamically enchanting live performances and captivating audiences of all ages with her lovable authenticity, ASH is a Kommetjie-raised Canadian singer-songwriter aspiring to inspire a message of compassion and kindness through her music.\nHer sound is infused with warm classic country-folk influences and is accompanied by passionate poetic lyrics.\nAfter being inspired by her natural love of connecting with others through music, ASH has been prolifically performing all over the Western Cape and Gauteng\nShe loves to perform her own original material as well as old-school sing-a-long favourites that everyone knows. She has recorded her debut single \"Homeless Hearts\" in collaboration with Jon Shaban at Sit the Folk Down Studios in Woodstock and will be releasing it on the 22nd of April 2022. ASH is certainly making waves and is only just getting started. <a href=\"https://www.last.fm/music/Ash\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +371,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 850132,
+      "listeners": 850675,
       "mbid": "c3f93741-ba7c-4f13-b3e4-b21c482f1960",
       "name": "Ash",
-      "playcount": 13511193,
+      "playcount": 13518544,
       "similar_artists": [
         {
           "name": "Feeder",
@@ -170,7 +407,7 @@
       "url": "https://www.last.fm/music/Ash"
     },
     "spotify": {
-      "followers": 228580,
+      "followers": 228779,
       "genres": [],
       "id": "4nkuNzBcYGlNmAqFWbHLqS",
       "images": [
@@ -197,6 +434,6 @@
   },
   "spotify_id": "4nkuNzBcYGlNmAqFWbHLqS",
   "spotify_url": "https://open.spotify.com/artist/4nkuNzBcYGlNmAqFWbHLqS",
-  "updated_at": "2025-07-05T15:20:42.997739",
+  "updated_at": "2025-07-08T09:26:32.697507",
   "wikipedia_url": null
 }

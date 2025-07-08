@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:34:05.336719",
   "discogs_id": "72608",
-  "discogs_url": "https://www.discogs.com/artist/72608",
-  "followers": 16318,
+  "discogs_url": "https://www.discogs.com/artist/72608-Dubstar-2",
+  "followers": 16327,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -17,7 +17,7 @@
     "pop",
     "electronica"
   ],
-  "id": null,
+  "id": "dubstar-1751726046",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/8gBwighAW-G2nDi9VB6fpA0iR9aRlEZQ4WZH39-yfNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "aab13e56-7587-4377-9b8e-ef399b425add",
   "lastfm_url": "https://www.last.fm/music/Dubstar",
   "local_images": {
-    "hi-res": "public/artist/dubstar/dubstar-hi-res.jpg",
-    "medium": "public/artist/dubstar/dubstar-medium.jpg",
-    "small": "public/artist/dubstar/dubstar-small.jpg"
+    "hi-res": "../public/artist/dubstar/dubstar-hi-res.jpg",
+    "medium": "../public/artist/dubstar/dubstar-medium.jpg",
+    "small": "../public/artist/dubstar/dubstar-small.jpg"
   },
   "name": "Dubstar",
   "popularity": 28,
@@ -102,9 +114,177 @@
       "url": "https://music.apple.com/gb/artist/dubstar/14706115"
     },
     "discogs": {
-      "id": 72608,
-      "original_name": "Dubstar (2)",
-      "role": ""
+      "cover_image": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "72608",
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8gBwighAW-G2nDi9VB6fpA0iR9aRlEZQ4WZH39-yfNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 252,
+          "resource_url": "https://i.discogs.com/tAxVr6MZbTjUQiXfL5K8VN-zTfG7busE06mVNJqSfzU/rs:fit/g:sm/q:90/h:252/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tAxVr6MZbTjUQiXfL5K8VN-zTfG7busE06mVNJqSfzU/rs:fit/g:sm/q:90/h:252/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4x-i450DqrU7Za2njSZ7tZg68GJo0o_BLw8oDEWMY7E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/RJpmuylp9REP6zzDxhkkGCSYT3yP6VlcLSUqR0hDnew/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RJpmuylp9REP6zzDxhkkGCSYT3yP6VlcLSUqR0hDnew/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/m54eS-sdvDdjkaOsZ_cgPlfXb_Gi7R_Y0xOrIj0O-Nw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+          "width": 504
+        },
+        {
+          "height": 198,
+          "resource_url": "https://i.discogs.com/R5AGzewO91eep0CGJRHNInB9B6NHbREyG23THiVPxWA/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/R5AGzewO91eep0CGJRHNInB9B6NHbREyG23THiVPxWA/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/N_bXGQgT8cfBvZjfKWGmuph_zfYxW4o4vvk2lVlQhIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 240,
+          "resource_url": "https://i.discogs.com/x7NtzLIALftdWJvDumRi8eWecfL0F00Eh2t8Vg8Jexg/rs:fit/g:sm/q:90/h:240/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/x7NtzLIALftdWJvDumRi8eWecfL0F00Eh2t8Vg8Jexg/rs:fit/g:sm/q:90/h:240/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+          "uri150": "https://i.discogs.com/hJ5ESS7BAX6RofKn3kegeTt1Q-4JQUFXiJ75YoyYjY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+          "width": 514
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 14912,
+          "name": "Steve Hillier",
+          "resource_url": "https://api.discogs.com/artists/14912",
+          "thumbnail_url": "https://i.discogs.com/iGtlpJzEIaW2ffRHv9IrQ5erMu2i8Ejhde7-20kfHK4/rs:fit/g:sm/q:40/h:269/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTEy/LTEzMzU5NjY5NzAu/anBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 133928,
+          "name": "Sarah Blackwood",
+          "resource_url": "https://api.discogs.com/artists/133928",
+          "thumbnail_url": "https://i.discogs.com/rw4-V3dEK0MoRKvQmY_thGGUYHJbWTy1iVKgEJUFfz4/rs:fit/g:sm/q:40/h:720/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzky/OC0xMjIxOTg3MDY3/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 573783,
+          "name": "Chris Wilkie",
+          "resource_url": "https://api.discogs.com/artists/573783",
+          "thumbnail_url": "https://i.discogs.com/CGuqHoB66iZIqDR_k-i21Xv-mg_6CzypVD6bl0Yiwpw/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mzc4/My0xNTM0MzE4Njc3/LTE3NDMuanBlZw.jpeg"
+        }
+      ],
+      "name": "Dubstar (2)",
+      "namevariations": [
+        "Dubstars"
+      ],
+      "profile": "British synth pop/dream pop band formed in 1992 in Newcastle-upon-Tyne.\r\n\r\n",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 72608,
+        "images": [
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/waT6KUagm2m6DcIKbJ6t1LUwX73-UgyZVCysAkmkp8M/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/8gBwighAW-G2nDi9VB6fpA0iR9aRlEZQ4WZH39-yfNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 252,
+            "resource_url": "https://i.discogs.com/tAxVr6MZbTjUQiXfL5K8VN-zTfG7busE06mVNJqSfzU/rs:fit/g:sm/q:90/h:252/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/tAxVr6MZbTjUQiXfL5K8VN-zTfG7busE06mVNJqSfzU/rs:fit/g:sm/q:90/h:252/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/4x-i450DqrU7Za2njSZ7tZg68GJo0o_BLw8oDEWMY7E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNTQ3NTczMTcu/anBlZw.jpeg",
+            "width": 400
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/RJpmuylp9REP6zzDxhkkGCSYT3yP6VlcLSUqR0hDnew/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RJpmuylp9REP6zzDxhkkGCSYT3yP6VlcLSUqR0hDnew/rs:fit/g:sm/q:90/h:600/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/m54eS-sdvDdjkaOsZ_cgPlfXb_Gi7R_Y0xOrIj0O-Nw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTExNjIwNTg2MDku/anBlZw.jpeg",
+            "width": 504
+          },
+          {
+            "height": 198,
+            "resource_url": "https://i.discogs.com/R5AGzewO91eep0CGJRHNInB9B6NHbREyG23THiVPxWA/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/R5AGzewO91eep0CGJRHNInB9B6NHbREyG23THiVPxWA/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+            "uri150": "https://i.discogs.com/N_bXGQgT8cfBvZjfKWGmuph_zfYxW4o4vvk2lVlQhIo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTAwMi5qcGc.jpeg",
+            "width": 300
+          },
+          {
+            "height": 240,
+            "resource_url": "https://i.discogs.com/x7NtzLIALftdWJvDumRi8eWecfL0F00Eh2t8Vg8Jexg/rs:fit/g:sm/q:90/h:240/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/x7NtzLIALftdWJvDumRi8eWecfL0F00Eh2t8Vg8Jexg/rs:fit/g:sm/q:90/h:240/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+            "uri150": "https://i.discogs.com/hJ5ESS7BAX6RofKn3kegeTt1Q-4JQUFXiJ75YoyYjY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE2MjQxMzM1ODQt/NTIxNC5naWY.jpeg",
+            "width": 514
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 14912,
+            "name": "Steve Hillier",
+            "resource_url": "https://api.discogs.com/artists/14912",
+            "thumbnail_url": "https://i.discogs.com/iGtlpJzEIaW2ffRHv9IrQ5erMu2i8Ejhde7-20kfHK4/rs:fit/g:sm/q:40/h:269/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTEy/LTEzMzU5NjY5NzAu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 133928,
+            "name": "Sarah Blackwood",
+            "resource_url": "https://api.discogs.com/artists/133928",
+            "thumbnail_url": "https://i.discogs.com/rw4-V3dEK0MoRKvQmY_thGGUYHJbWTy1iVKgEJUFfz4/rs:fit/g:sm/q:40/h:720/w:514/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzky/OC0xMjIxOTg3MDY3/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 573783,
+            "name": "Chris Wilkie",
+            "resource_url": "https://api.discogs.com/artists/573783",
+            "thumbnail_url": "https://i.discogs.com/CGuqHoB66iZIqDR_k-i21Xv-mg_6CzypVD6bl0Yiwpw/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mzc4/My0xNTM0MzE4Njc3/LTE3NDMuanBlZw.jpeg"
+          }
+        ],
+        "name": "Dubstar (2)",
+        "namevariations": [
+          "Dubstars"
+        ],
+        "profile": "British synth pop/dream pop band formed in 1992 in Newcastle-upon-Tyne.\r\n\r\n",
+        "realname": "Sarah Blackwood, Steve Hillier and Chris Wilkie",
+        "releases_url": "https://api.discogs.com/artists/72608/releases",
+        "resource_url": "https://api.discogs.com/artists/72608",
+        "uri": "https://www.discogs.com/artist/72608-Dubstar-2",
+        "urls": [
+          "http://www.dubstarofficial.co",
+          "http://www.facebook.com/dubstaruk",
+          "https://www.instagram.com/dubstaruk",
+          "http://www.twitter.com/dubstaruk",
+          "https://www.youtube.com/@DubstarOfficial",
+          "http://en.wikipedia.org/wiki/Dubstar"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/72608",
+      "thumb": "https://i.discogs.com/8gBwighAW-G2nDi9VB6fpA0iR9aRlEZQ4WZH39-yfNc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNjA4/LTE1Mjg0NjQ4NzEt/MTM2Ni5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/72608-Dubstar-2",
+      "urls": [
+        "http://www.dubstarofficial.co",
+        "http://www.facebook.com/dubstaruk",
+        "https://www.instagram.com/dubstaruk",
+        "http://www.twitter.com/dubstaruk",
+        "https://www.youtube.com/@DubstarOfficial",
+        "http://en.wikipedia.org/wiki/Dubstar"
+      ]
     },
     "lastfm": {
       "bio_content": "Sarah Blackwood, Steve Hillier and Chris Wilkie first appeared as Dubstar in 1994.  Hillier's floating synths, Wilkie's chiming guitar and the ever-plaintive vocals from Sarah Blackwood drew comparisons to Pet Shop Boys, The Smiths and Kirsty MacColl, while the band regularly added Cocteau Twins and One Dove among their greatest influences.\n \t\nDubstar released their debut album 'Disgraceful' on Food Records in the Autumn of 1995 to worldwide critical and commercial success. Disgraceful features four UK Top 40 singles including the dreampop classic Stars, perennial radio favourite Not So Manic Now and The Day I see You Again, a ballad that revisits a broken relationship that's been covered by artists as diverse as Claudia Brücken and Bon Bob Club. A timely female led version of Billy Bragg's St Swithin's Day caught the imagination of the music press; an instrumental version was even used as the theme for the BBC's coverage of the Euro '96 football championship. \n \nThe follow up album Goodbye was released two years later and spawned another three UK Top 40 singles including No More Talk, a number one radio hit in the UK. Both albums were produced by Stephen Hague. \n \nThird album Make It Better was released in 2000 and includes the fan-favourite Self Same Thing, their last single for Food Records. A belated compilation 'Stars…the best of Dubstar' was released by EMI in 2004.\n \nFollowing a twelve year hiatus, Dubstar announced the recording of new material in 2012 and release their fourth, as yet untitled album in 2013, again working with Stephen Hague. <a href=\"https://www.last.fm/music/Dubstar\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +315,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 124671,
+      "listeners": 124711,
       "mbid": "aab13e56-7587-4377-9b8e-ef399b425add",
       "name": "Dubstar",
-      "playcount": 1178296,
+      "playcount": 1178889,
       "similar_artists": [
         {
           "name": "Echobelly",
@@ -171,7 +351,7 @@
       "url": "https://www.last.fm/music/Dubstar"
     },
     "spotify": {
-      "followers": 16318,
+      "followers": 16327,
       "genres": [
         "britpop",
         "alternative dance"
@@ -201,6 +381,6 @@
   },
   "spotify_id": "3SRTWBeGhX3o5DCQ2zzTdI",
   "spotify_url": "https://open.spotify.com/artist/3SRTWBeGhX3o5DCQ2zzTdI",
-  "updated_at": "2025-07-05T15:34:06.446619",
+  "updated_at": "2025-07-08T09:41:22.030031",
   "wikipedia_url": null
 }

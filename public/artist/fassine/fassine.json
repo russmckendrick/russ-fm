@@ -6,7 +6,7 @@
   "created_at": "2025-07-05T16:14:56.463870",
   "discogs_id": "4641430",
   "discogs_url": "https://www.discogs.com/artist/4641430",
-  "followers": null,
+  "followers": 1980,
   "formed_date": null,
   "genres": [
     "Electronic",
@@ -16,13 +16,31 @@
     "alternative",
     "female vocalists"
   ],
-  "id": null,
+  "id": "fassine-1751728503",
   "images": [
     {
       "height": 2000,
       "type": "apple_music_artist",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Features113/v4/9a/0c/9b/9a0c9b58-f354-4329-2240-edaa957930cb/mzl.gbynvhal.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 640,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab6761610000e5eb2139272e1d64bdf47bc0b953",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab676161000051742139272e1d64bdf47bc0b953",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab6761610000f1782139272e1d64bdf47bc0b953",
+      "width": 160
     },
     {
       "height": null,
@@ -64,12 +82,12 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Fassine",
   "local_images": {
-    "hi-res": "public/artist/fassine/fassine-hi-res.jpg",
-    "medium": "public/artist/fassine/fassine-medium.jpg",
-    "small": "public/artist/fassine/fassine-small.jpg"
+    "hi-res": "../public/artist/fassine/fassine-hi-res.jpg",
+    "medium": "../public/artist/fassine/fassine-medium.jpg",
+    "small": "../public/artist/fassine/fassine-small.jpg"
   },
   "name": "Fassine",
-  "popularity": null,
+  "popularity": 12,
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features113/v4/9a/0c/9b/9a0c9b58-f354-4329-2240-edaa957930cb/mzl.gbynvhal.jpg/2000x2000bb.jpg",
@@ -83,9 +101,22 @@
       "url": "https://music.apple.com/gb/artist/fassine/977765463"
     },
     "discogs": {
-      "id": 4641430,
-      "original_name": "Fassine",
-      "role": ""
+      "cover_image": "",
+      "id": "4641430",
+      "images": [],
+      "members": [],
+      "name": "Fassine",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "4641430",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/4641430"
+      },
+      "resource_url": "https://api.discogs.com/artists/4641430",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/4641430",
+      "urls": []
     },
     "lastfm": {
       "bio_content": null,
@@ -116,10 +147,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3386,
+      "listeners": 3389,
       "mbid": null,
       "name": "Fassine",
-      "playcount": 26711,
+      "playcount": 26721,
       "similar_artists": [
         {
           "name": "SPELLES",
@@ -150,10 +181,35 @@
         "female vocalists"
       ],
       "url": "https://www.last.fm/music/Fassine"
+    },
+    "spotify": {
+      "followers": 1980,
+      "genres": [],
+      "id": "4lfV41yIcFsuMWzFRhIeMe",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb2139272e1d64bdf47bc0b953",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051742139272e1d64bdf47bc0b953",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1782139272e1d64bdf47bc0b953",
+          "width": 160
+        }
+      ],
+      "name": "Fassine",
+      "popularity": 12,
+      "url": "https://open.spotify.com/artist/4lfV41yIcFsuMWzFRhIeMe"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
-  "updated_at": "2025-07-05T16:15:03.175146",
+  "spotify_id": "4lfV41yIcFsuMWzFRhIeMe",
+  "spotify_url": "https://open.spotify.com/artist/4lfV41yIcFsuMWzFRhIeMe",
+  "updated_at": "2025-07-08T09:58:16.696682",
   "wikipedia_url": null
 }

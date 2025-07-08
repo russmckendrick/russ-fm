@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:43:13.307607",
   "discogs_id": "46481",
-  "discogs_url": "https://www.discogs.com/artist/46481",
-  "followers": 6505687,
+  "discogs_url": "https://www.discogs.com/artist/46481-John-Lennon",
+  "followers": 6507957,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -17,7 +17,7 @@
     "british",
     "pop"
   ],
-  "id": null,
+  "id": "john-lennon-1751722994",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/1baFUSnOp0p_zHQycOFUQL7caSdUg71alOidscymJDw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "4d5447d7-c61c-4120-ba1b-d7f471d385b9",
   "lastfm_url": "https://www.last.fm/music/John+Lennon",
   "local_images": {
-    "hi-res": "public/artist/john-lennon/john-lennon-hi-res.jpg",
-    "medium": "public/artist/john-lennon/john-lennon-medium.jpg",
-    "small": "public/artist/john-lennon/john-lennon-small.jpg"
+    "hi-res": "../public/artist/john-lennon/john-lennon-hi-res.jpg",
+    "medium": "../public/artist/john-lennon/john-lennon-medium.jpg",
+    "small": "../public/artist/john-lennon/john-lennon-small.jpg"
   },
   "name": "John Lennon",
   "popularity": 71,
@@ -102,9 +114,839 @@
       "url": "https://music.apple.com/gb/artist/john-lennon/4416594"
     },
     "discogs": {
-      "id": 46481,
-      "original_name": "John Lennon",
-      "role": ""
+      "cover_image": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "46481",
+      "images": [
+        {
+          "height": 612,
+          "resource_url": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1baFUSnOp0p_zHQycOFUQL7caSdUg71alOidscymJDw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+          "width": 394
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/Uty4HK7lmJ-Z80RsFfpTyBCsO8sVRV-NO2Esexs74fM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Uty4HK7lmJ-Z80RsFfpTyBCsO8sVRV-NO2Esexs74fM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ukZ-vhyGceoK07XBagcIAqhNiPfXuJ5WUhjtLElhmKY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 721,
+          "resource_url": "https://i.discogs.com/Hf_5ffwV2bhUJqLUBP0YtwBBShiKB-pmGvwMoiWenR8/rs:fit/g:sm/q:90/h:721/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Hf_5ffwV2bhUJqLUBP0YtwBBShiKB-pmGvwMoiWenR8/rs:fit/g:sm/q:90/h:721/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PeVo9nGwVR_UOT4ggYvbSjPXkLcZA-xo01f7OmdMhjQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 324,
+          "resource_url": "https://i.discogs.com/Q7b2rpqnlXDQ6IwswPlRZQL_E97WkRUKyKwfmvWVM_U/rs:fit/g:sm/q:90/h:324/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Q7b2rpqnlXDQ6IwswPlRZQL_E97WkRUKyKwfmvWVM_U/rs:fit/g:sm/q:90/h:324/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/RDdDq7sVSxBoexj3zi6HSFvmU1ol2qVGGRPUVfgtZG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+          "width": 318
+        },
+        {
+          "height": 376,
+          "resource_url": "https://i.discogs.com/G2oOp0XwaPTNwZ0AKy09TLn-xtVAI9nMCrxpQM_7vNA/rs:fit/g:sm/q:90/h:376/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/G2oOp0XwaPTNwZ0AKy09TLn-xtVAI9nMCrxpQM_7vNA/rs:fit/g:sm/q:90/h:376/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/RXyNndhfKsYCHBwq1rvVfZIL_u5JeTd8-x2ZWbszVig/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+          "width": 436
+        },
+        {
+          "height": 484,
+          "resource_url": "https://i.discogs.com/FBnPBCNjsceLWpzD1D5mxA2IuE1MGMU4PrCgoyDmWtw/rs:fit/g:sm/q:90/h:484/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FBnPBCNjsceLWpzD1D5mxA2IuE1MGMU4PrCgoyDmWtw/rs:fit/g:sm/q:90/h:484/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YBWVUWGaR8nzKbCjVQiZWpZ_tBZvSrQEd0B7RaC7TF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+          "width": 475
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/iy3FJHRLnliP8DauRfUt7pzyLZqSpMzSXoRAFTTxlpo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iy3FJHRLnliP8DauRfUt7pzyLZqSpMzSXoRAFTTxlpo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Be6NVww4z8PjtrCPdEHmLJE24ZXnVZAAvAwyBD2dit0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 458,
+          "resource_url": "https://i.discogs.com/_EPRS1-amuV_CA-_6h3QpXC6Xy8WEoBv3FPn3ejv_W0/rs:fit/g:sm/q:90/h:458/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_EPRS1-amuV_CA-_6h3QpXC6Xy8WEoBv3FPn3ejv_W0/rs:fit/g:sm/q:90/h:458/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/BdAQmv7RlScAC_9_eIU8lxWbv-5d909eQJg4wGWLEio/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 628,
+          "resource_url": "https://i.discogs.com/GxrzIKDPrMV5CQ7dcmyR5dm_xbZ6x9_bIpjO6ZMR49s/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GxrzIKDPrMV5CQ7dcmyR5dm_xbZ6x9_bIpjO6ZMR49s/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zGxfaoKbLno0kA5AA5wPbVO-2qvvRhUpXHB0PNgaNJs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 309,
+          "resource_url": "https://i.discogs.com/ZXRlIDEBBkLWOgwmbyzt5ZdEiyq1CI4HS78LmBs2jC4/rs:fit/g:sm/q:90/h:309/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZXRlIDEBBkLWOgwmbyzt5ZdEiyq1CI4HS78LmBs2jC4/rs:fit/g:sm/q:90/h:309/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/a3iuoSP3ME63fy05lLfF2H9Z88gFXS9NiAMCGclzD5s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+          "width": 235
+        },
+        {
+          "height": 404,
+          "resource_url": "https://i.discogs.com/yRiKMd7Ll2I8cMY7hCdBf5YukwVv3Q6Ktd8Mf-QaObs/rs:fit/g:sm/q:90/h:404/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yRiKMd7Ll2I8cMY7hCdBf5YukwVv3Q6Ktd8Mf-QaObs/rs:fit/g:sm/q:90/h:404/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/il7Yg6PNC0d-MUf9BkxdnVyLQUC_rluj-XgcpCEm5Lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/V6iorvJDexQLqAEC5CNEDec51B8AJ-coL1U157Wtoi0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/V6iorvJDexQLqAEC5CNEDec51B8AJ-coL1U157Wtoi0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hAOtBsfbhZ0D2Gk-RmwIqv4_Mo8O78eqTcaxmXRUCCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 213,
+          "resource_url": "https://i.discogs.com/hW7QjHvX877v6vEBfnv4toTfDaJqeNXyYSS1RyzGvVs/rs:fit/g:sm/q:90/h:213/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hW7QjHvX877v6vEBfnv4toTfDaJqeNXyYSS1RyzGvVs/rs:fit/g:sm/q:90/h:213/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/IxtXJ--KRHK1FCnHmykTJTHyKiQz-xOPNVZDU1QS3_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+          "width": 320
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/aQ2-_DImM7kaX5a0Klsyqec_a3D9kELEdBOTmVWKrBc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aQ2-_DImM7kaX5a0Klsyqec_a3D9kELEdBOTmVWKrBc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/SliFsmE5ahGxg2IQn7eVYN9_-w87_R17Al2-qjNbZ1o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 242,
+          "resource_url": "https://i.discogs.com/3kdJ4lTlPtcEKj8jpo0WVNAkWRqZBvfg0VGo5g2tIG8/rs:fit/g:sm/q:90/h:242/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3kdJ4lTlPtcEKj8jpo0WVNAkWRqZBvfg0VGo5g2tIG8/rs:fit/g:sm/q:90/h:242/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/hR3S7JGszQxvGEiFAx7Z3vqXt-MdxJyTq-2uTEOpYFs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+          "width": 360
+        },
+        {
+          "height": 512,
+          "resource_url": "https://i.discogs.com/XYSrjgMMTB3mEcI_0MyejVbkqcqsOAmf5qoBfifEDEw/rs:fit/g:sm/q:90/h:512/w:497/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XYSrjgMMTB3mEcI_0MyejVbkqcqsOAmf5qoBfifEDEw/rs:fit/g:sm/q:90/h:512/w:497/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RKD-KYv2ORq5NFMQqO9UacQ_5nQ9BjQFWj9JJH8BFak/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+          "width": 497
+        },
+        {
+          "height": 165,
+          "resource_url": "https://i.discogs.com/Z4qA-Louvl_Kc7mBtcXAuE2SQLKOCtlD1SioYDcdFX4/rs:fit/g:sm/q:90/h:165/w:221/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Z4qA-Louvl_Kc7mBtcXAuE2SQLKOCtlD1SioYDcdFX4/rs:fit/g:sm/q:90/h:165/w:221/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8uyaacOd8MhOus7eOUpdkdzKfeITygS51wpbNvT7Yps/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+          "width": 221
+        },
+        {
+          "height": 637,
+          "resource_url": "https://i.discogs.com/dcYr9NvvjCONeTu5kxVaNBS0asEyFMP6dJlfJyxEbFg/rs:fit/g:sm/q:90/h:637/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dcYr9NvvjCONeTu5kxVaNBS0asEyFMP6dJlfJyxEbFg/rs:fit/g:sm/q:90/h:637/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PezFbj4QKUxKeDIXTjPjCixHOdWVAl6JxxQv2pESL6w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+          "width": 482
+        },
+        {
+          "height": 564,
+          "resource_url": "https://i.discogs.com/BGJc3b2N8ghLSRS9dzugY5L-Av82WX_qzp9MT3OMcFM/rs:fit/g:sm/q:90/h:564/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/BGJc3b2N8ghLSRS9dzugY5L-Av82WX_qzp9MT3OMcFM/rs:fit/g:sm/q:90/h:564/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dzUI3BkrQhW4i42Obd2P1mNpk59RPKITO0jLvuDoADg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 892,
+          "resource_url": "https://i.discogs.com/L-5ovvfvoVSeZmEnJmL6KSnSFJRcrD6paaNVImvzK-c/rs:fit/g:sm/q:90/h:892/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/L-5ovvfvoVSeZmEnJmL6KSnSFJRcrD6paaNVImvzK-c/rs:fit/g:sm/q:90/h:892/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/359DRDjyzhkI2bGYah3rMdd7cnpgxQ7uWMqG7m8eK2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 513,
+          "resource_url": "https://i.discogs.com/RXrv3BrM0OgztBVK4Hb1-g04EqVWZdh2JGSyulreKsE/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RXrv3BrM0OgztBVK4Hb1-g04EqVWZdh2JGSyulreKsE/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/tkZo8ildu2hPUY2_LXZ0dWn_gaPGDS6fvHkvCh-_--M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 403,
+          "resource_url": "https://i.discogs.com/yGnqFTJ55s-d___Md-kjYRQhpL5jWZRn2gDekAKDG4M/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yGnqFTJ55s-d___Md-kjYRQhpL5jWZRn2gDekAKDG4M/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rhN3NOVT08LBlNlMY8rGmpxW_Iq0vD7KPUkFumoqfwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 654,
+          "resource_url": "https://i.discogs.com/N-5twXu4Yx4M5V_mKUU7xxmkteziXhdS8UHBZGUuXO8/rs:fit/g:sm/q:90/h:654/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N-5twXu4Yx4M5V_mKUU7xxmkteziXhdS8UHBZGUuXO8/rs:fit/g:sm/q:90/h:654/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ift230iFfiMsKvwCqs6YVXu5P9eeRiGdO16P2E9BEEc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+          "width": 469
+        },
+        {
+          "height": 640,
+          "resource_url": "https://i.discogs.com/2AuRApP6-j7Q2Z8D9XEnSqWcRndAv9djJvQw7TuWyHA/rs:fit/g:sm/q:90/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2AuRApP6-j7Q2Z8D9XEnSqWcRndAv9djJvQw7TuWyHA/rs:fit/g:sm/q:90/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/ltGYqlinj6rld5bW_7_Hkxsv2DskRLVpDbHBszrQrh0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+          "width": 480
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/wpqvOnbjsP70s9oliAtf0quJJCFWNZOm_XxvFTR0RHU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wpqvOnbjsP70s9oliAtf0quJJCFWNZOm_XxvFTR0RHU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aO-ULNEw2QtkRjg4ETBuQ5fQg2rhQyBRFXLNzQHy2-Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 673,
+          "resource_url": "https://i.discogs.com/FPe3fnnfJSzhx2mQFMdWt4SAQs41UhY1wwixfcFpflE/rs:fit/g:sm/q:90/h:673/w:455/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FPe3fnnfJSzhx2mQFMdWt4SAQs41UhY1wwixfcFpflE/rs:fit/g:sm/q:90/h:673/w:455/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/c7Duiw6Uv12C3N6NWGh6xjHZMJZ1Qb1muS76aQHhkec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+          "width": 455
+        },
+        {
+          "height": 595,
+          "resource_url": "https://i.discogs.com/CJDzzFVMim5JGv00D78YhmdcnhCxHR6GqH5NUBhOj_o/rs:fit/g:sm/q:90/h:595/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CJDzzFVMim5JGv00D78YhmdcnhCxHR6GqH5NUBhOj_o/rs:fit/g:sm/q:90/h:595/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/ZaZayWGcU9xXvDmkVDT_uEpDx2rAOaGy4W6HbcdEdSk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+          "width": 596
+        },
+        {
+          "height": 551,
+          "resource_url": "https://i.discogs.com/8l_JYNwXsyUfiAmYl5LUc2_Fb-w6xthvbZ3GboPQE6I/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8l_JYNwXsyUfiAmYl5LUc2_Fb-w6xthvbZ3GboPQE6I/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PYN5yc5gHR-NqLy_0AcpFVOkSNNvcEsO25tHhCvs8zI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "John Lennon",
+      "namevariations": [
+        "Beatle John",
+        "Dad",
+        "J",
+        "J Lennon",
+        "J. L.",
+        "J. Lennnon",
+        "J. Lennob",
+        "J. Lennon",
+        "J. Lennon-P. McCartney",
+        "J. Lennon/P. McCartney",
+        "J. Lennone",
+        "J. Lenon",
+        "J. Lenons",
+        "J. O. Lennon",
+        "J. Ono Lennon",
+        "J. W. Lennon",
+        "J. Winston Lennon",
+        "J. レノン",
+        "J.L.",
+        "J.Lennon",
+        "J.Lennon/P.Mc.Cartney",
+        "J.Lenonn",
+        "J.W. Lennon",
+        "J.レノン",
+        "JL",
+        "Jhon Lennon",
+        "Jhon Ono Lennon",
+        "Joel Nohnn",
+        "Joel Nojnn",
+        "Johm",
+        "John",
+        "John Lemmon",
+        "John Lennan",
+        "John Lennon Winston",
+        "John Lennon-Paul McCartney",
+        "John Lennon.",
+        "John Lennone",
+        "John Lenon",
+        "John Ono Lennon",
+        "John W Lennon",
+        "John W. Lennon",
+        "John Winston Lennon",
+        "John Winston Lenon",
+        "Johnewnon",
+        "Jonh Lennon",
+        "Julio Juanito Lenono",
+        "J・レノン",
+        "Lemmon",
+        "Lennon",
+        "Lennon John Winston",
+        "Lennon, Winston",
+        "Lenon",
+        "Lenonn",
+        "Lenono",
+        "Mac Cartney",
+        "War Is Over",
+        "me",
+        "Τζον Λεννον",
+        "Д. Леннон",
+        "Д.Леннон",
+        "Дж. Ленен",
+        "Дж. Леннон",
+        "Дж. Ленон",
+        "Дж. Ленън",
+        "Джон",
+        "Джон Леннон",
+        "Леннон",
+        "Ленон",
+        "Ленън",
+        "ג'ון לנון",
+        "جون لينون",
+        "ジョン•レノン",
+        "ジョンレノン",
+        "ジョン・レノン",
+        "列农",
+        "約翰·列農",
+        "約翰藍儂",
+        "존·레넌"
+      ],
+      "profile": "Songwriter, rock singer and guitar player, best known for his work with [a=The Beatles] during the 1960s and 1970s. Inducted into Songwriters Hall of Fame in 1987. Inducted into Rock And Roll Hall Of Fame in 1994 (Performer).\r\n\r\nBorn: 9 October 1940 in Liverpool, Lancashire, UK. \r\nDied: 8 December 1980 in NYC, NY, USA.\r\n\r\nJohn Winston Ono Lennon (MBE, gave it back) was an English singer, songwriter, and peace activist, who gained worldwide fame as the founder, co-lead vocalist, and rhythm guitarist of the Beatles. His songwriting partnership with [a=Paul McCartney] remains the most successful in musical history. In 1969, he started the [a=Plastic Ono Band] with his second wife, [a=Yoko Ono] (parents of [a=Sean Lennon]). After the Beatles disbanded in 1970, Lennon continued as a solo artist and as Ono's collaborator.\r\n\r\nBorn in Liverpool, Lennon became involved in the skiffle craze as a teenager. In 1956, he formed his first band, [a=The Quarrymen], which evolved into the Beatles in 1960. He was initially the group's de facto leader, a role gradually ceded to McCartney. Lennon was characterized for the rebellious nature and acerbic wit in his music, writing, drawings, on film and in interviews. In 1957 Lennon meets his first wife Cynthia Lennon at the Liverpool College of Art and then married her on the 23rd of August, 1962. On the 8th of April, 1963, Cynthia gave birth to Lennon's first son, [a=Julian Lennon]. In the mid-1960s, he had two books published: In His Own Write and A Spaniard in the Works, both collections of nonsensical writings and line drawings. Starting with 1967s [r=476958], his songs were adopted as anthems by the anti-war movement and the larger counterculture.\r\n\r\nFrom 1968 to 1972, Lennon produced more than a dozen records with Ono, including a trilogy of avant-garde albums, his first solo LP [m=72864], and the international top 10 singles \"[r=1222236]\", \"[r=390001]\", \"[r=5324554]\" and \"[r=628431]\". Controversial through his political and peace activism, after moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year attempt by the Nixon administration to deport him. In 1975, Lennon disengaged from the music business to raise his infant son Sean, and in 1980, returned with the Ono collaboration [m=73013]. He was shot and killed in the archway of his Manhattan apartment building by a Beatles fan, [a=Mark David Chapman], three weeks after the album's release. Lennon's ashes were scattered in New York's Central Park. A memorial was erected at the site of his ashes being scattered, named after a Beatles' song written by Lennon, \"[r=7278398].\"",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 452259,
+            "name": "Dr. Winston O'Boogie",
+            "resource_url": "https://api.discogs.com/artists/452259",
+            "thumbnail_url": "https://i.discogs.com/8YzPRZ4kYVCl_4jh_oHEqti23YdBVQlPIUUvk_MMvw8/rs:fit/g:sm/q:40/h:222/w:226/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MjI1/OS0xMTkxNzA1MDEw/LmpwZWc.jpeg"
+          },
+          {
+            "id": 684639,
+            "name": "Dwarf McDougal",
+            "resource_url": "https://api.discogs.com/artists/684639",
+            "thumbnail_url": "https://i.discogs.com/h5I_gwDhDh0oZyiNC5jHF7ggUsV2AYDekMF8Qwpzcrk/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NDYz/OS0xMTkxNzA1MTA5/LmpwZWc.jpeg"
+          },
+          {
+            "id": 927297,
+            "name": "Kaptain Kundalini",
+            "resource_url": "https://api.discogs.com/artists/927297",
+            "thumbnail_url": "https://i.discogs.com/l-70_RVemTxg1JanCVkdOt80LQbIkr9mgb2fz5fiP_E/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzI5/Ny0xMzg2NTgwNDIw/LTU5ODAuanBlZw.jpeg"
+          },
+          {
+            "id": 927298,
+            "name": "Rev. Fred Ghurkin",
+            "resource_url": "https://api.discogs.com/artists/927298",
+            "thumbnail_url": "https://i.discogs.com/V-dZ37NmVRhWjV8BcNAdXAJDN90XxTwr2sWLcHIuRZQ/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzI5/OC0xNDEzNjc1NDkx/LTQ5MTkuanBlZw.jpeg"
+          },
+          {
+            "id": 927299,
+            "name": "Dr. Dream (2)",
+            "resource_url": "https://api.discogs.com/artists/927299",
+            "thumbnail_url": "https://i.discogs.com/hSzwbRDQz4ssaGqBCmL5qFLV8nfadAvzqYlGOTe36Yk/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzI5/OS0xNDEzNjc1NTU4/LTQ2NTguanBlZw.jpeg"
+          },
+          {
+            "id": 927300,
+            "name": "Rev. Thumbs Ghurkin",
+            "resource_url": "https://api.discogs.com/artists/927300",
+            "thumbnail_url": "https://i.discogs.com/i9Q6U3LNZfaQHLjUTpd1PUHiSpgCQaUZ5Ccd_2JCz8U/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzMw/MC0xNDEzNjc1ODYx/LTY3ODIuanBlZw.jpeg"
+          },
+          {
+            "id": 927301,
+            "name": "Mel Torment",
+            "resource_url": "https://api.discogs.com/artists/927301",
+            "thumbnail_url": "https://i.discogs.com/L8_r-zXPFJno4-fG39ubheohWL85CYmWzIxejxkSd8Y/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzMw/MS0xMzg2NTgwMzM5/LTcyMzUuanBlZw.jpeg"
+          },
+          {
+            "id": 927302,
+            "name": "Dr. Winston O'Ghurkin",
+            "resource_url": "https://api.discogs.com/artists/927302",
+            "thumbnail_url": "https://i.discogs.com/4V-J7PKwnqCG3AkPd6axcFr8D_Bq7gxtyaHOzBfyD6Y/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzMw/Mi0xMzg2NTgwMzU3/LTU1MDIuanBlZw.jpeg"
+          },
+          {
+            "id": 927304,
+            "name": "Dr. Winston O'Reggae",
+            "resource_url": "https://api.discogs.com/artists/927304",
+            "thumbnail_url": "https://i.discogs.com/zSjhgam1eEyiLo2m2yeVuL2zO-aKgBGkEfXfNvCJF8w/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkyNzMw/NC0xNDEzNjc1Njcz/LTQ2MTkuanBlZw.jpeg"
+          },
+          {
+            "id": 1052656,
+            "name": "Joel Nohnn",
+            "resource_url": "https://api.discogs.com/artists/1052656",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 1210292,
+            "name": "John O'Cean",
+            "resource_url": "https://api.discogs.com/artists/1210292",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 1303971,
+            "name": "Dad (3)",
+            "resource_url": "https://api.discogs.com/artists/1303971",
+            "thumbnail_url": "https://i.discogs.com/rwUuszs9RA7Hfatj8FtIcNBrfnposoff-44reLHnSjo/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDM5/NzEtMTQxMzY3NTU5/NS02MjQ1LmpwZWc.jpeg"
+          },
+          {
+            "id": 1394324,
+            "name": "Hon. John St. John Johnson",
+            "resource_url": "https://api.discogs.com/artists/1394324",
+            "thumbnail_url": "https://i.discogs.com/noO1r0h03V21LLbvMYxCj9f3mdJq4992baAKpt59M1U/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTQz/MjQtMTM4NjU4MDQw/NS05NDc0LmpwZWc.jpeg"
+          },
+          {
+            "id": 1394325,
+            "name": "Dr. Winston",
+            "resource_url": "https://api.discogs.com/artists/1394325",
+            "thumbnail_url": "https://i.discogs.com/_H2zl3PsQ7rX_jnslq7aAare2X8ctAM80K8iLUuBKYg/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzOTQz/MjUtMTQxMzY3NTYz/Mi03NDM0LmpwZWc.jpeg"
+          },
+          {
+            "id": 1739005,
+            "name": "Dr. Winston And Booker Table And The Maitre d's",
+            "resource_url": "https://api.discogs.com/artists/1739005",
+            "thumbnail_url": "https://i.discogs.com/0I_6EVmOp3B4LS0x-KzDTprHShVOOHwcDMCDZSJ5wj0/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Mzkw/MDUtMTQxMzY3NTY1/NC0zMzc1LmpwZWc.jpeg"
+          },
+          {
+            "id": 2053803,
+            "name": "Booker Table And The Maitre D's",
+            "resource_url": "https://api.discogs.com/artists/2053803",
+            "thumbnail_url": "https://i.discogs.com/1G0W5hSVzohteCKWd1lBgxzzzNvH2zTdAxmjlUi28Bk/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNTM4/MDMtMTQxMzY3NTYx/Mi03NDAwLmpwZWc.jpeg"
+          },
+          {
+            "id": 2505427,
+            "name": "Musketeer Gripweed & The Third Troop",
+            "resource_url": "https://api.discogs.com/artists/2505427",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 2707251,
+            "name": "Johnny Silver (2)",
+            "resource_url": "https://api.discogs.com/artists/2707251",
+            "thumbnail_url": "https://i.discogs.com/--Bc1xndo1LlzLCkqGuLNTNHy49J80bO7faHT7lMnGg/rs:fit/g:sm/q:40/h:320/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MDcy/NTEtMTM4NjU4MDM4/OC04NzM2LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 82730,
+            "name": "The Beatles",
+            "resource_url": "https://api.discogs.com/artists/82730",
+            "thumbnail_url": "https://i.discogs.com/Bvqzzqemys1UnRiV6DaVWFcPDMxumLKLc9g7eOgOB6Y/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyNzMw/LTE0MTk3MTQ5ODgt/OTY3NS5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 256190,
+            "name": "The Plastic Ono Band",
+            "resource_url": "https://api.discogs.com/artists/256190",
+            "thumbnail_url": "https://i.discogs.com/dNMgG3iMKzuwZVBRofmPyb1pG1ixt57OiSWKNJ7Y1HE/rs:fit/g:sm/q:40/h:395/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NjE5/MC0xNDU4MDAwNTg1/LTU4NzYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 356120,
+            "name": "The Quarrymen",
+            "resource_url": "https://api.discogs.com/artists/356120",
+            "thumbnail_url": "https://i.discogs.com/fk1Du3OaO_eMeR6Fw54DM2TlFRQmyi-Ky9BDCX55-z0/rs:fit/g:sm/q:40/h:258/w:492/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1NjEy/MC0xMTk0NDc0MTgx/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 380838,
+            "name": "The Beat Brothers (2)",
+            "resource_url": "https://api.discogs.com/artists/380838",
+            "thumbnail_url": "https://i.discogs.com/L34JveI2a1THQ8cdFcsMCskb7yp4FrZiUWnVM8fyoNs/rs:fit/g:sm/q:40/h:301/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDgz/OC0xMTk4OTU3NjE5/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 451329,
+            "name": "John Lennon & Yoko Ono",
+            "resource_url": "https://api.discogs.com/artists/451329",
+            "thumbnail_url": "https://i.discogs.com/GjDWR1MObtcLf-NuBzJZxPiMTpc194CSJejEdxnWvCY/rs:fit/g:sm/q:40/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MTMy/OS0xNzE5MTQ5MDAx/LTY1NTguanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 452834,
+            "name": "The Dirty Mac",
+            "resource_url": "https://api.discogs.com/artists/452834",
+            "thumbnail_url": "https://i.discogs.com/NrtCjToOs1t_uzjM_UErAAoyEdSTlfWgzZbuznZqsII/rs:fit/g:sm/q:40/h:391/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Mjgz/NC0xNTYwMTU2ODA5/LTM2NjcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 779927,
+            "name": "Lennon-McCartney",
+            "resource_url": "https://api.discogs.com/artists/779927",
+            "thumbnail_url": "https://i.discogs.com/tEpcBuTsN1UjPK-8slZHNgxxQhC_YC298xhaKa1gkvU/rs:fit/g:sm/q:40/h:709/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc3OTky/Ny0xNjA4NzQ5MTkz/LTE2MjkuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1629736,
+            "name": "Johnny And The Moondogs",
+            "resource_url": "https://api.discogs.com/artists/1629736",
+            "thumbnail_url": "https://i.discogs.com/lRptj0NRw4kqXZ0qhMtAx5DiyO5WDWHVHWlJ-LJf9Zo/rs:fit/g:sm/q:40/h:373/w:512/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2Mjk3/MzYtMTYyOTU4ODAx/MC0zODY2LnBuZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1986516,
+            "name": "The 44th Street Fairies",
+            "resource_url": "https://api.discogs.com/artists/1986516",
+            "thumbnail_url": "https://i.discogs.com/JgbvKmBAlLVafyf83yyjuUG4t8YIF_LJBVw61wBU62I/rs:fit/g:sm/q:40/h:579/w:579/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5ODY1/MTYtMTYxNDc2ODEz/Ny0zODYwLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1986519,
+            "name": "The J & P Duo",
+            "resource_url": "https://api.discogs.com/artists/1986519",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 8656707,
+            "name": "JL & Friends",
+            "resource_url": "https://api.discogs.com/artists/8656707",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 46481,
+        "images": [
+          {
+            "height": 612,
+            "resource_url": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/XnxSnjn7UX9wB53snfTX6kG6wrm0-kudKco5ywJwZ0g/rs:fit/g:sm/q:90/h:612/w:394/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/1baFUSnOp0p_zHQycOFUQL7caSdUg71alOidscymJDw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+            "width": 394
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/Uty4HK7lmJ-Z80RsFfpTyBCsO8sVRV-NO2Esexs74fM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Uty4HK7lmJ-Z80RsFfpTyBCsO8sVRV-NO2Esexs74fM/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ukZ-vhyGceoK07XBagcIAqhNiPfXuJ5WUhjtLElhmKY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyODY2MjY2MDEu/anBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 721,
+            "resource_url": "https://i.discogs.com/Hf_5ffwV2bhUJqLUBP0YtwBBShiKB-pmGvwMoiWenR8/rs:fit/g:sm/q:90/h:721/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Hf_5ffwV2bhUJqLUBP0YtwBBShiKB-pmGvwMoiWenR8/rs:fit/g:sm/q:90/h:721/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/PeVo9nGwVR_UOT4ggYvbSjPXkLcZA-xo01f7OmdMhjQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3MzgwODA0MjMt/ODIzMC5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 324,
+            "resource_url": "https://i.discogs.com/Q7b2rpqnlXDQ6IwswPlRZQL_E97WkRUKyKwfmvWVM_U/rs:fit/g:sm/q:90/h:324/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Q7b2rpqnlXDQ6IwswPlRZQL_E97WkRUKyKwfmvWVM_U/rs:fit/g:sm/q:90/h:324/w:318/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/RDdDq7sVSxBoexj3zi6HSFvmU1ol2qVGGRPUVfgtZG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MTMu/anBn.jpeg",
+            "width": 318
+          },
+          {
+            "height": 376,
+            "resource_url": "https://i.discogs.com/G2oOp0XwaPTNwZ0AKy09TLn-xtVAI9nMCrxpQM_7vNA/rs:fit/g:sm/q:90/h:376/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/G2oOp0XwaPTNwZ0AKy09TLn-xtVAI9nMCrxpQM_7vNA/rs:fit/g:sm/q:90/h:376/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/RXyNndhfKsYCHBwq1rvVfZIL_u5JeTd8-x2ZWbszVig/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzMzOS5qcGVn.jpeg",
+            "width": 436
+          },
+          {
+            "height": 484,
+            "resource_url": "https://i.discogs.com/FBnPBCNjsceLWpzD1D5mxA2IuE1MGMU4PrCgoyDmWtw/rs:fit/g:sm/q:90/h:484/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FBnPBCNjsceLWpzD1D5mxA2IuE1MGMU4PrCgoyDmWtw/rs:fit/g:sm/q:90/h:484/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/YBWVUWGaR8nzKbCjVQiZWpZ_tBZvSrQEd0B7RaC7TF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1Mjg0MjM3MTMt/NTQ0Mi5qcGVn.jpeg",
+            "width": 475
+          },
+          {
+            "height": 402,
+            "resource_url": "https://i.discogs.com/iy3FJHRLnliP8DauRfUt7pzyLZqSpMzSXoRAFTTxlpo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/iy3FJHRLnliP8DauRfUt7pzyLZqSpMzSXoRAFTTxlpo/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Be6NVww4z8PjtrCPdEHmLJE24ZXnVZAAvAwyBD2dit0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/NzY1MC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 458,
+            "resource_url": "https://i.discogs.com/_EPRS1-amuV_CA-_6h3QpXC6Xy8WEoBv3FPn3ejv_W0/rs:fit/g:sm/q:90/h:458/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/_EPRS1-amuV_CA-_6h3QpXC6Xy8WEoBv3FPn3ejv_W0/rs:fit/g:sm/q:90/h:458/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/BdAQmv7RlScAC_9_eIU8lxWbv-5d909eQJg4wGWLEio/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1MDQwMzkyNTgt/NDQ3NC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 628,
+            "resource_url": "https://i.discogs.com/GxrzIKDPrMV5CQ7dcmyR5dm_xbZ6x9_bIpjO6ZMR49s/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GxrzIKDPrMV5CQ7dcmyR5dm_xbZ6x9_bIpjO6ZMR49s/rs:fit/g:sm/q:90/h:628/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/zGxfaoKbLno0kA5AA5wPbVO-2qvvRhUpXHB0PNgaNJs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEzOTU1ODY4NTQt/MzM0Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 309,
+            "resource_url": "https://i.discogs.com/ZXRlIDEBBkLWOgwmbyzt5ZdEiyq1CI4HS78LmBs2jC4/rs:fit/g:sm/q:90/h:309/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZXRlIDEBBkLWOgwmbyzt5ZdEiyq1CI4HS78LmBs2jC4/rs:fit/g:sm/q:90/h:309/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+            "uri150": "https://i.discogs.com/a3iuoSP3ME63fy05lLfF2H9Z88gFXS9NiAMCGclzD5s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTAwMS5qcGc.jpeg",
+            "width": 235
+          },
+          {
+            "height": 404,
+            "resource_url": "https://i.discogs.com/yRiKMd7Ll2I8cMY7hCdBf5YukwVv3Q6Ktd8Mf-QaObs/rs:fit/g:sm/q:90/h:404/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yRiKMd7Ll2I8cMY7hCdBf5YukwVv3Q6Ktd8Mf-QaObs/rs:fit/g:sm/q:90/h:404/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/il7Yg6PNC0d-MUf9BkxdnVyLQUC_rluj-XgcpCEm5Lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExMDUzNzM5MjQu/anBn.jpeg",
+            "width": 300
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/V6iorvJDexQLqAEC5CNEDec51B8AJ-coL1U157Wtoi0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/V6iorvJDexQLqAEC5CNEDec51B8AJ-coL1U157Wtoi0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/hAOtBsfbhZ0D2Gk-RmwIqv4_Mo8O78eqTcaxmXRUCCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NjMt/NjIwNS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 213,
+            "resource_url": "https://i.discogs.com/hW7QjHvX877v6vEBfnv4toTfDaJqeNXyYSS1RyzGvVs/rs:fit/g:sm/q:90/h:213/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/hW7QjHvX877v6vEBfnv4toTfDaJqeNXyYSS1RyzGvVs/rs:fit/g:sm/q:90/h:213/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/IxtXJ--KRHK1FCnHmykTJTHyKiQz-xOPNVZDU1QS3_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3MzMu/anBlZw.jpeg",
+            "width": 320
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/aQ2-_DImM7kaX5a0Klsyqec_a3D9kELEdBOTmVWKrBc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aQ2-_DImM7kaX5a0Klsyqec_a3D9kELEdBOTmVWKrBc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/SliFsmE5ahGxg2IQn7eVYN9_-w87_R17Al2-qjNbZ1o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDAyNTkzMDAt/MjE5OC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 242,
+            "resource_url": "https://i.discogs.com/3kdJ4lTlPtcEKj8jpo0WVNAkWRqZBvfg0VGo5g2tIG8/rs:fit/g:sm/q:90/h:242/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3kdJ4lTlPtcEKj8jpo0WVNAkWRqZBvfg0VGo5g2tIG8/rs:fit/g:sm/q:90/h:242/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/hR3S7JGszQxvGEiFAx7Z3vqXt-MdxJyTq-2uTEOpYFs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTExNDg1NTc3ODUu/anBlZw.jpeg",
+            "width": 360
+          },
+          {
+            "height": 512,
+            "resource_url": "https://i.discogs.com/XYSrjgMMTB3mEcI_0MyejVbkqcqsOAmf5qoBfifEDEw/rs:fit/g:sm/q:90/h:512/w:497/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XYSrjgMMTB3mEcI_0MyejVbkqcqsOAmf5qoBfifEDEw/rs:fit/g:sm/q:90/h:512/w:497/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/RKD-KYv2ORq5NFMQqO9UacQ_5nQ9BjQFWj9JJH8BFak/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTEyMjI0NTA5OTMu/anBlZw.jpeg",
+            "width": 497
+          },
+          {
+            "height": 165,
+            "resource_url": "https://i.discogs.com/Z4qA-Louvl_Kc7mBtcXAuE2SQLKOCtlD1SioYDcdFX4/rs:fit/g:sm/q:90/h:165/w:221/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Z4qA-Louvl_Kc7mBtcXAuE2SQLKOCtlD1SioYDcdFX4/rs:fit/g:sm/q:90/h:165/w:221/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/8uyaacOd8MhOus7eOUpdkdzKfeITygS51wpbNvT7Yps/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE0NzI2MjcwNzMt/NDE3NS5qcGVn.jpeg",
+            "width": 221
+          },
+          {
+            "height": 637,
+            "resource_url": "https://i.discogs.com/dcYr9NvvjCONeTu5kxVaNBS0asEyFMP6dJlfJyxEbFg/rs:fit/g:sm/q:90/h:637/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dcYr9NvvjCONeTu5kxVaNBS0asEyFMP6dJlfJyxEbFg/rs:fit/g:sm/q:90/h:637/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/PezFbj4QKUxKeDIXTjPjCixHOdWVAl6JxxQv2pESL6w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE1OTg4MTcxOTYt/NDY1NC5qcGVn.jpeg",
+            "width": 482
+          },
+          {
+            "height": 564,
+            "resource_url": "https://i.discogs.com/BGJc3b2N8ghLSRS9dzugY5L-Av82WX_qzp9MT3OMcFM/rs:fit/g:sm/q:90/h:564/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/BGJc3b2N8ghLSRS9dzugY5L-Av82WX_qzp9MT3OMcFM/rs:fit/g:sm/q:90/h:564/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/dzUI3BkrQhW4i42Obd2P1mNpk59RPKITO0jLvuDoADg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2MzgzMzMwODEt/MzUzMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 892,
+            "resource_url": "https://i.discogs.com/L-5ovvfvoVSeZmEnJmL6KSnSFJRcrD6paaNVImvzK-c/rs:fit/g:sm/q:90/h:892/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/L-5ovvfvoVSeZmEnJmL6KSnSFJRcrD6paaNVImvzK-c/rs:fit/g:sm/q:90/h:892/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/359DRDjyzhkI2bGYah3rMdd7cnpgxQ7uWMqG7m8eK2s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDUt/MzcwMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 513,
+            "resource_url": "https://i.discogs.com/RXrv3BrM0OgztBVK4Hb1-g04EqVWZdh2JGSyulreKsE/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RXrv3BrM0OgztBVK4Hb1-g04EqVWZdh2JGSyulreKsE/rs:fit/g:sm/q:90/h:513/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/tkZo8ildu2hPUY2_LXZ0dWn_gaPGDS6fvHkvCh-_--M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/NDY3My5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 403,
+            "resource_url": "https://i.discogs.com/yGnqFTJ55s-d___Md-kjYRQhpL5jWZRn2gDekAKDG4M/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yGnqFTJ55s-d___Md-kjYRQhpL5jWZRn2gDekAKDG4M/rs:fit/g:sm/q:90/h:403/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/rhN3NOVT08LBlNlMY8rGmpxW_Iq0vD7KPUkFumoqfwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NDE3NTA4NDYt/ODc4OS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 654,
+            "resource_url": "https://i.discogs.com/N-5twXu4Yx4M5V_mKUU7xxmkteziXhdS8UHBZGUuXO8/rs:fit/g:sm/q:90/h:654/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/N-5twXu4Yx4M5V_mKUU7xxmkteziXhdS8UHBZGUuXO8/rs:fit/g:sm/q:90/h:654/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/ift230iFfiMsKvwCqs6YVXu5P9eeRiGdO16P2E9BEEc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NjM1OS5qcGVn.jpeg",
+            "width": 469
+          },
+          {
+            "height": 640,
+            "resource_url": "https://i.discogs.com/2AuRApP6-j7Q2Z8D9XEnSqWcRndAv9djJvQw7TuWyHA/rs:fit/g:sm/q:90/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/2AuRApP6-j7Q2Z8D9XEnSqWcRndAv9djJvQw7TuWyHA/rs:fit/g:sm/q:90/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/ltGYqlinj6rld5bW_7_Hkxsv2DskRLVpDbHBszrQrh0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/MTY0OC5qcGVn.jpeg",
+            "width": 480
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/wpqvOnbjsP70s9oliAtf0quJJCFWNZOm_XxvFTR0RHU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wpqvOnbjsP70s9oliAtf0quJJCFWNZOm_XxvFTR0RHU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/aO-ULNEw2QtkRjg4ETBuQ5fQg2rhQyBRFXLNzQHy2-Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2ODcyNjc3Mzgt/NDEyNC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 673,
+            "resource_url": "https://i.discogs.com/FPe3fnnfJSzhx2mQFMdWt4SAQs41UhY1wwixfcFpflE/rs:fit/g:sm/q:90/h:673/w:455/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FPe3fnnfJSzhx2mQFMdWt4SAQs41UhY1wwixfcFpflE/rs:fit/g:sm/q:90/h:673/w:455/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/c7Duiw6Uv12C3N6NWGh6xjHZMJZ1Qb1muS76aQHhkec/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE2NjcwMjc2NDUt/NzUxNC5qcGVn.jpeg",
+            "width": 455
+          },
+          {
+            "height": 595,
+            "resource_url": "https://i.discogs.com/CJDzzFVMim5JGv00D78YhmdcnhCxHR6GqH5NUBhOj_o/rs:fit/g:sm/q:90/h:595/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CJDzzFVMim5JGv00D78YhmdcnhCxHR6GqH5NUBhOj_o/rs:fit/g:sm/q:90/h:595/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/ZaZayWGcU9xXvDmkVDT_uEpDx2rAOaGy4W6HbcdEdSk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDQ5NDM5MjYt/NzI3NC5wbmc.jpeg",
+            "width": 596
+          },
+          {
+            "height": 551,
+            "resource_url": "https://i.discogs.com/8l_JYNwXsyUfiAmYl5LUc2_Fb-w6xthvbZ3GboPQE6I/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/8l_JYNwXsyUfiAmYl5LUc2_Fb-w6xthvbZ3GboPQE6I/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/PYN5yc5gHR-NqLy_0AcpFVOkSNNvcEsO25tHhCvs8zI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3NDU1NDU4NzQt/MzM2MS5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "John Lennon",
+        "namevariations": [
+          "Beatle John",
+          "Dad",
+          "J",
+          "J Lennon",
+          "J. L.",
+          "J. Lennnon",
+          "J. Lennob",
+          "J. Lennon",
+          "J. Lennon-P. McCartney",
+          "J. Lennon/P. McCartney",
+          "J. Lennone",
+          "J. Lenon",
+          "J. Lenons",
+          "J. O. Lennon",
+          "J. Ono Lennon",
+          "J. W. Lennon",
+          "J. Winston Lennon",
+          "J. レノン",
+          "J.L.",
+          "J.Lennon",
+          "J.Lennon/P.Mc.Cartney",
+          "J.Lenonn",
+          "J.W. Lennon",
+          "J.レノン",
+          "JL",
+          "Jhon Lennon",
+          "Jhon Ono Lennon",
+          "Joel Nohnn",
+          "Joel Nojnn",
+          "Johm",
+          "John",
+          "John Lemmon",
+          "John Lennan",
+          "John Lennon Winston",
+          "John Lennon-Paul McCartney",
+          "John Lennon.",
+          "John Lennone",
+          "John Lenon",
+          "John Ono Lennon",
+          "John W Lennon",
+          "John W. Lennon",
+          "John Winston Lennon",
+          "John Winston Lenon",
+          "Johnewnon",
+          "Jonh Lennon",
+          "Julio Juanito Lenono",
+          "J・レノン",
+          "Lemmon",
+          "Lennon",
+          "Lennon John Winston",
+          "Lennon, Winston",
+          "Lenon",
+          "Lenonn",
+          "Lenono",
+          "Mac Cartney",
+          "War Is Over",
+          "me",
+          "Τζον Λεννον",
+          "Д. Леннон",
+          "Д.Леннон",
+          "Дж. Ленен",
+          "Дж. Леннон",
+          "Дж. Ленон",
+          "Дж. Ленън",
+          "Джон",
+          "Джон Леннон",
+          "Леннон",
+          "Ленон",
+          "Ленън",
+          "ג'ון לנון",
+          "جون لينون",
+          "ジョン•レノン",
+          "ジョンレノン",
+          "ジョン・レノン",
+          "列农",
+          "約翰·列農",
+          "約翰藍儂",
+          "존·레넌"
+        ],
+        "profile": "Songwriter, rock singer and guitar player, best known for his work with [a=The Beatles] during the 1960s and 1970s. Inducted into Songwriters Hall of Fame in 1987. Inducted into Rock And Roll Hall Of Fame in 1994 (Performer).\r\n\r\nBorn: 9 October 1940 in Liverpool, Lancashire, UK. \r\nDied: 8 December 1980 in NYC, NY, USA.\r\n\r\nJohn Winston Ono Lennon (MBE, gave it back) was an English singer, songwriter, and peace activist, who gained worldwide fame as the founder, co-lead vocalist, and rhythm guitarist of the Beatles. His songwriting partnership with [a=Paul McCartney] remains the most successful in musical history. In 1969, he started the [a=Plastic Ono Band] with his second wife, [a=Yoko Ono] (parents of [a=Sean Lennon]). After the Beatles disbanded in 1970, Lennon continued as a solo artist and as Ono's collaborator.\r\n\r\nBorn in Liverpool, Lennon became involved in the skiffle craze as a teenager. In 1956, he formed his first band, [a=The Quarrymen], which evolved into the Beatles in 1960. He was initially the group's de facto leader, a role gradually ceded to McCartney. Lennon was characterized for the rebellious nature and acerbic wit in his music, writing, drawings, on film and in interviews. In 1957 Lennon meets his first wife Cynthia Lennon at the Liverpool College of Art and then married her on the 23rd of August, 1962. On the 8th of April, 1963, Cynthia gave birth to Lennon's first son, [a=Julian Lennon]. In the mid-1960s, he had two books published: In His Own Write and A Spaniard in the Works, both collections of nonsensical writings and line drawings. Starting with 1967s [r=476958], his songs were adopted as anthems by the anti-war movement and the larger counterculture.\r\n\r\nFrom 1968 to 1972, Lennon produced more than a dozen records with Ono, including a trilogy of avant-garde albums, his first solo LP [m=72864], and the international top 10 singles \"[r=1222236]\", \"[r=390001]\", \"[r=5324554]\" and \"[r=628431]\". Controversial through his political and peace activism, after moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year attempt by the Nixon administration to deport him. In 1975, Lennon disengaged from the music business to raise his infant son Sean, and in 1980, returned with the Ono collaboration [m=73013]. He was shot and killed in the archway of his Manhattan apartment building by a Beatles fan, [a=Mark David Chapman], three weeks after the album's release. Lennon's ashes were scattered in New York's Central Park. A memorial was erected at the site of his ashes being scattered, named after a Beatles' song written by Lennon, \"[r=7278398].\"",
+        "realname": "John Winston Ono Lennon",
+        "releases_url": "https://api.discogs.com/artists/46481/releases",
+        "resource_url": "https://api.discogs.com/artists/46481",
+        "uri": "https://www.discogs.com/artist/46481-John-Lennon",
+        "urls": [
+          "https://www.johnlennon.com/",
+          "https://www.facebook.com/johnlennon/",
+          "https://en.wikipedia.org/wiki/John_Lennon",
+          "https://www.songhall.org/profile/John_Lennon"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/46481",
+      "thumb": "https://i.discogs.com/1baFUSnOp0p_zHQycOFUQL7caSdUg71alOidscymJDw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2NDgx/LTE3Mzg1ODU2NDkt/Mjg1OS5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/46481-John-Lennon",
+      "urls": [
+        "https://www.johnlennon.com/",
+        "https://www.facebook.com/johnlennon/",
+        "https://en.wikipedia.org/wiki/John_Lennon",
+        "https://www.songhall.org/profile/John_Lennon"
+      ]
     },
     "lastfm": {
       "bio_content": "John Winston Ono Lennon (born John Winston Lennon; 9 October 1940 – 8 December 1980) was an English singer, songwriter and musician who gained worldwide fame as the founder, co-songwriter, co-lead vocalist and rhythm guitarist of the Beatles. His work included music, writing, drawings and film. His songwriting partnership with Paul McCartney remains the most successful in history.\n\nBorn in Liverpool, Lennon became involved in the skiffle craze as a teenager. In 1956, he formed The Quarrymen, which evolved into the Beatles in 1960. Sometimes called \"the smart Beatle\", Lennon initially was the group's de facto leader, a role he gradually ceded to McCartney. Through his songwriting in the Beatles, he embraced myriad musical influences, initially writing and co-writing rock and pop-oriented hit songs in the band's early years, then later incorporating experimental elements into his compositions in the latter half of the Beatles' career as his songs became known for their increasing innovation. Lennon soon expanded his work into other media by participating in numerous films, including How I Won the War, and authoring In His Own Write and A Spaniard in the Works, both collections of nonsense writings and line drawings. Starting with \"All You Need Is Love\", his songs were adopted as anthems by the anti-war movement and the larger counterculture of the 1960s. In 1969, he started the Plastic Ono Band with his second wife, multimedia artist Yoko Ono, held the two-week-long anti-war demonstration Bed-ins for Peace and left the Beatles to embark on a solo career.\n\nBetween 1968 and 1972, Lennon and Ono collaborated on many works, including a trilogy of avant-garde albums, several more films, his solo debut John Lennon/Plastic Ono Band and the international top-10 singles \"Give Peace a Chance\", \"Instant Karma!\", \"Imagine\", and \"Happy Xmas (War Is Over)\". Moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year deportation attempt by the Nixon administration. Lennon and Ono separated from 1973 to 1975, during which time he produced Harry Nilsson's album Pussy Cats. He also had chart-topping collaborations with Elton John (\"Whatever Gets You thru the Night\") and David Bowie (\"Fame\"). Following a five-year hiatus, Lennon returned to music in 1980 with the Ono collaboration Double Fantasy. He was murdered by a Beatles fan, Mark David Chapman, three weeks after the album's release.\n\nAs a performer, writer or co-writer, Lennon had 25 number-one singles in the Billboard Hot 100 chart. Double Fantasy, his best-selling album, won the 1981 Grammy Award for Album of the Year. That year, he won the Brit Award for Outstanding Contribution to Music. In 2002, Lennon was voted eighth in a BBC history poll of the 100 Greatest Britons. Rolling Stone ranked him the fifth-greatest singer and 38th greatest artist of all time. He was inducted into the Songwriters Hall of Fame (in 1997) and the Rock and Roll Hall of Fame (twice, as a member of the Beatles in 1988 and as a solo artist in 1994).\n\nStudio albums\nJohn Lennon/Plastic Ono Band (1970)\nImagine (1971)\nSome Time in New York City (with Yoko Ono, 1972)\nMind Games (1973)\nWalls and Bridges (1974)\nRock 'n' Roll (1975)\nDouble Fantasy (with Yoko Ono, 1980)\nMilk and Honey (Posthumous with Yoko Ono, 1984)\n\nExperimental studio albums with Yoko Ono\nUnfinished Music No. 1: Two Virgins (1968)\nUnfinished Music No. 2: Life with the Lions (1969)\nWedding Album (1969) <a href=\"https://www.last.fm/music/John+Lennon\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +977,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3577133,
+      "listeners": 3579065,
       "mbid": "4d5447d7-c61c-4120-ba1b-d7f471d385b9",
       "name": "John Lennon",
-      "playcount": 69126505,
+      "playcount": 69195901,
       "similar_artists": [
         {
           "name": "The Beatles",
@@ -171,7 +1013,7 @@
       "url": "https://www.last.fm/music/John+Lennon"
     },
     "spotify": {
-      "followers": 6505687,
+      "followers": 6507957,
       "genres": [
         "christmas"
       ],
@@ -200,6 +1042,6 @@
   },
   "spotify_id": "4x1nvY2FN8jxqAFA0DA02H",
   "spotify_url": "https://open.spotify.com/artist/4x1nvY2FN8jxqAFA0DA02H",
-  "updated_at": "2025-07-05T14:43:14.498285",
+  "updated_at": "2025-07-08T09:38:33.105583",
   "wikipedia_url": null
 }

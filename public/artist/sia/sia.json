@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:41:28.567748",
   "discogs_id": "21991",
-  "discogs_url": "https://www.discogs.com/artist/21991",
-  "followers": 30042246,
+  "discogs_url": "https://www.discogs.com/artist/21991-Sia",
+  "followers": 30050355,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -16,7 +16,7 @@
     "trip-hop",
     "downtempo"
   ],
-  "id": null,
+  "id": "sia-1751722889",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/hydOtzDcwHQh_mnNeiHbQmOu7oRcs1i9P5WLIDWW27k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "2f548675-008d-4332-876c-108b0c7ab9c5",
   "lastfm_url": "https://www.last.fm/music/Sia",
   "local_images": {
-    "hi-res": "public/artist/sia/sia-hi-res.jpg",
-    "medium": "public/artist/sia/sia-medium.jpg",
-    "small": "public/artist/sia/sia-small.jpg"
+    "hi-res": "../public/artist/sia/sia-hi-res.jpg",
+    "medium": "../public/artist/sia/sia-medium.jpg",
+    "small": "../public/artist/sia/sia-small.jpg"
   },
   "name": "Sia",
   "popularity": 87,
@@ -101,9 +113,256 @@
       "url": "https://music.apple.com/gb/artist/sia/28721078"
     },
     "discogs": {
-      "id": 21991,
-      "original_name": "Sia",
-      "role": ""
+      "cover_image": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "21991",
+      "images": [
+        {
+          "height": 782,
+          "resource_url": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/hydOtzDcwHQh_mnNeiHbQmOu7oRcs1i9P5WLIDWW27k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 626,
+          "resource_url": "https://i.discogs.com/sroNa3iJKtwJ4Cz0zV_cI9-u5KAxCugYOgFM2ANQYYQ/rs:fit/g:sm/q:90/h:626/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sroNa3iJKtwJ4Cz0zV_cI9-u5KAxCugYOgFM2ANQYYQ/rs:fit/g:sm/q:90/h:626/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/yDnx_2rg0sX-fKr03x6ZL-1qbOtUSpQ2eAhyeTecmF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/akJBFCQSqUbpk4vM6FiuyoY9q_rN5vSngGvzWRupeIk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/akJBFCQSqUbpk4vM6FiuyoY9q_rN5vSngGvzWRupeIk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/15zzaUdkgXETFvWyeuwuqnP0VzrqybsaoGXnDi2L8JI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Qs4-QDUp7Fhf0AzWRtbxSSK2nin1tdsOQ9FovonJcso/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Qs4-QDUp7Fhf0AzWRtbxSSK2nin1tdsOQ9FovonJcso/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/UV-R0_fuMWOoucHy-ND1gpnL9igqKUNRROmoCJNR5gE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/Wclno1oQ54m1o78w8w22peEH3PSCFIe3xKy39gBIGdU/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Wclno1oQ54m1o78w8w22peEH3PSCFIe3xKy39gBIGdU/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CZRzCUQRqu3GZMJmhs77LCDLt0d7JQ7XXDtDWrxd_4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+          "width": 483
+        },
+        {
+          "height": 308,
+          "resource_url": "https://i.discogs.com/tgaWi8gNg71y1-qiYsf3uZRQTsdNq06SuLDJYYsJoC8/rs:fit/g:sm/q:90/h:308/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tgaWi8gNg71y1-qiYsf3uZRQTsdNq06SuLDJYYsJoC8/rs:fit/g:sm/q:90/h:308/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/nZzwJM5tB7oow_5CAAdW5mbGx8hu-FcKv6VFrXH0XJ0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+          "width": 399
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/tYA62lxn1j_AZzQYjwfEOC95SmgLg_95dwoKWW6OhGo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tYA62lxn1j_AZzQYjwfEOC95SmgLg_95dwoKWW6OhGo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/agUOSGdpZEj7Vkb6s23Z361RoM90ETxsQ9_f_nDEt_s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/Kj_t2JyQmCrYfmEvr36UtNanAMMpJStlUSftgRRtNxc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Kj_t2JyQmCrYfmEvr36UtNanAMMpJStlUSftgRRtNxc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kwCwDw_4_qLRUUSlvOl73hEk24nZEYN7RHB7UblS6yA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 772,
+          "resource_url": "https://i.discogs.com/CmRx2vDeXtT3u9IUnNqhPs8VjqyvECWcueg_UHmP4lg/rs:fit/g:sm/q:90/h:772/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CmRx2vDeXtT3u9IUnNqhPs8VjqyvECWcueg_UHmP4lg/rs:fit/g:sm/q:90/h:772/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/7EhoQiaSg41Hdrgw57165JgDcIZVGcRIPnCuBjFQ4Ow/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 594,
+          "resource_url": "https://i.discogs.com/YkEGIqQRvBv6ZDgGknUeBtMxtq9-S2c7kwdGuEnEEHY/rs:fit/g:sm/q:90/h:594/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YkEGIqQRvBv6ZDgGknUeBtMxtq9-S2c7kwdGuEnEEHY/rs:fit/g:sm/q:90/h:594/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/rW1RecVnl905K3kwJsmGWb2CGfSexo9viad3ng7njk0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+          "width": 599
+        }
+      ],
+      "members": [],
+      "name": "Sia",
+      "namevariations": [
+        ".Sia",
+        "S",
+        "S.I.A",
+        "S.I.A.",
+        "S.i.A",
+        "S.i.A.",
+        "Sia 2",
+        "Sia F.",
+        "Sia Titanium",
+        "Songbird Serenade (Sia)",
+        "シーア",
+        "希雅"
+      ],
+      "profile": "Australian singer and songwriter, born 18 December 1975 in Adelaide, Australia. Mezzo-soprano; vocal range: 3 octaves and a semitone B2–B5. [b]For full-name credits, please see [a=Sia Furler].[/b]\r\n\r\nIn the early 1990s, Furler started gigging in the Adelaide acid jazz scene and at the age of 17, she joined the jazz-funk band [url=/artist/1065885-Crisp-3]Crisp[/url]. By 1997, Furler had left Crisp and debuted as a solo artist with \"[r=5058458]\", a trip-hop album released under her full name and which sold 1200 copies, mostly in Adelaide. In 2000, Furler (now only releasing under the mononym Sia) scored a top 10 hit with her debut single \"Taken For Granted\", pairing her unique Australian drawl with the strident strings from Prokofiev's \"Romeo & Juliet\".\r\n\r\nThree more mostly downtempo solo albums followed, but most of her international recognition as an alternative pop artist came from her jazzy vocal contributions to several [a=Zero 7] albums, as well as in early 2006 when the track \"Breathe Me\" became popular on alternative radio, following its feature as the closing song in the series finale of the HBO drama Six Feet Under.\r\n\r\nHer fifth album, \"We Are Born\" (2010), moved into a more upbeat pop direction and spawned minor hits. International mainstream success quickly followed when she was featured on a trio of EDM hits by [a=David Guetta] and [a=Flo Rida]. In 2014, now hiding her face in all videos and public appearances, Sia released her million-selling EDM-inspired album (bolstered by iconic videos featuring young dancer Maddie Ziegler choreographed by [a=Ryan Heffington]), and simultaneously became pop's most in-demand songwriter. Furler's songwriting credits include [a=Christina Aguilera], [a=Rihanna], [a=Ne-Yo], [a=Céline Dion], [a=Beyoncé], [a=Katy Perry], [a=Britney Spears] and [a=Eminem].\r\n\r\nIn 2016, she released her seventh album, \"This Is Acting\" was released, and featured many \"reject\" songs, that Sia had written for other artists, but they didn't want them. The album featured the US #1 single, [m=982566]. A deluxe edition was released later in 2016.\r\n\r\nIn November 2017, Sia released her latest album, [m=1269653], which featured 10 original festive songs, released on CD and Vinyl. In November 2018, a Target Exclusive Deluxe CD was released, which features 3 bonus tracks.\r\n\r\nIn 2018, [a=Labrinth], Sia & [a=Diplo] collaborated to form supergroup [a=LSD (53)]. An album, [m=1531968], was released in April 2019. \r\n\r\n[a=Peter Furler] is Sia's first cousin.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 44758,
+            "name": "Sia Furler",
+            "resource_url": "https://api.discogs.com/artists/44758",
+            "thumbnail_url": "https://i.discogs.com/5uPgK4B2uxrR49GvmdDML1_OY1Vyi4Txk_iIoU0YCis/rs:fit/g:sm/q:40/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0NzU4/LTE1NzU3MTczMjct/NzQ2Ny5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 21991,
+        "images": [
+          {
+            "height": 782,
+            "resource_url": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/vpfbYhnXSZvtBJ7v8gvPHPkcudNI6AwBwnBoQohL86c/rs:fit/g:sm/q:90/h:782/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/hydOtzDcwHQh_mnNeiHbQmOu7oRcs1i9P5WLIDWW27k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 626,
+            "resource_url": "https://i.discogs.com/sroNa3iJKtwJ4Cz0zV_cI9-u5KAxCugYOgFM2ANQYYQ/rs:fit/g:sm/q:90/h:626/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sroNa3iJKtwJ4Cz0zV_cI9-u5KAxCugYOgFM2ANQYYQ/rs:fit/g:sm/q:90/h:626/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/yDnx_2rg0sX-fKr03x6ZL-1qbOtUSpQ2eAhyeTecmF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3MzcxMDYxODgt/NjU4NC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/akJBFCQSqUbpk4vM6FiuyoY9q_rN5vSngGvzWRupeIk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/akJBFCQSqUbpk4vM6FiuyoY9q_rN5vSngGvzWRupeIk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/15zzaUdkgXETFvWyeuwuqnP0VzrqybsaoGXnDi2L8JI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTMyNTkwODQt/MjI1OS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/Qs4-QDUp7Fhf0AzWRtbxSSK2nin1tdsOQ9FovonJcso/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Qs4-QDUp7Fhf0AzWRtbxSSK2nin1tdsOQ9FovonJcso/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/UV-R0_fuMWOoucHy-ND1gpnL9igqKUNRROmoCJNR5gE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE0ODM5MjgwMzgt/NTk1My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/Wclno1oQ54m1o78w8w22peEH3PSCFIe3xKy39gBIGdU/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Wclno1oQ54m1o78w8w22peEH3PSCFIe3xKy39gBIGdU/rs:fit/g:sm/q:90/h:600/w:483/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/CZRzCUQRqu3GZMJmhs77LCDLt0d7JQ7XXDtDWrxd_4w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEzODg1MTYwOTkt/OTkxNC5qcGVn.jpeg",
+            "width": 483
+          },
+          {
+            "height": 308,
+            "resource_url": "https://i.discogs.com/tgaWi8gNg71y1-qiYsf3uZRQTsdNq06SuLDJYYsJoC8/rs:fit/g:sm/q:90/h:308/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/tgaWi8gNg71y1-qiYsf3uZRQTsdNq06SuLDJYYsJoC8/rs:fit/g:sm/q:90/h:308/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/nZzwJM5tB7oow_5CAAdW5mbGx8hu-FcKv6VFrXH0XJ0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTEwNzY4OTY5MjEu/anBn.jpeg",
+            "width": 399
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/tYA62lxn1j_AZzQYjwfEOC95SmgLg_95dwoKWW6OhGo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/tYA62lxn1j_AZzQYjwfEOC95SmgLg_95dwoKWW6OhGo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/agUOSGdpZEj7Vkb6s23Z361RoM90ETxsQ9_f_nDEt_s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE1Njc5NjQzMjQt/MTcwNC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/Kj_t2JyQmCrYfmEvr36UtNanAMMpJStlUSftgRRtNxc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Kj_t2JyQmCrYfmEvr36UtNanAMMpJStlUSftgRRtNxc/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/kwCwDw_4_qLRUUSlvOl73hEk24nZEYN7RHB7UblS6yA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/NjA4OC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 772,
+            "resource_url": "https://i.discogs.com/CmRx2vDeXtT3u9IUnNqhPs8VjqyvECWcueg_UHmP4lg/rs:fit/g:sm/q:90/h:772/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CmRx2vDeXtT3u9IUnNqhPs8VjqyvECWcueg_UHmP4lg/rs:fit/g:sm/q:90/h:772/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/7EhoQiaSg41Hdrgw57165JgDcIZVGcRIPnCuBjFQ4Ow/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE2MTA5MDQ2MDEt/ODY3OS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 594,
+            "resource_url": "https://i.discogs.com/YkEGIqQRvBv6ZDgGknUeBtMxtq9-S2c7kwdGuEnEEHY/rs:fit/g:sm/q:90/h:594/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/YkEGIqQRvBv6ZDgGknUeBtMxtq9-S2c7kwdGuEnEEHY/rs:fit/g:sm/q:90/h:594/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/rW1RecVnl905K3kwJsmGWb2CGfSexo9viad3ng7njk0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/NzMzMC5qcGVn.jpeg",
+            "width": 599
+          }
+        ],
+        "name": "Sia",
+        "namevariations": [
+          ".Sia",
+          "S",
+          "S.I.A",
+          "S.I.A.",
+          "S.i.A",
+          "S.i.A.",
+          "Sia 2",
+          "Sia F.",
+          "Sia Titanium",
+          "Songbird Serenade (Sia)",
+          "シーア",
+          "希雅"
+        ],
+        "profile": "Australian singer and songwriter, born 18 December 1975 in Adelaide, Australia. Mezzo-soprano; vocal range: 3 octaves and a semitone B2–B5. [b]For full-name credits, please see [a=Sia Furler].[/b]\r\n\r\nIn the early 1990s, Furler started gigging in the Adelaide acid jazz scene and at the age of 17, she joined the jazz-funk band [url=/artist/1065885-Crisp-3]Crisp[/url]. By 1997, Furler had left Crisp and debuted as a solo artist with \"[r=5058458]\", a trip-hop album released under her full name and which sold 1200 copies, mostly in Adelaide. In 2000, Furler (now only releasing under the mononym Sia) scored a top 10 hit with her debut single \"Taken For Granted\", pairing her unique Australian drawl with the strident strings from Prokofiev's \"Romeo & Juliet\".\r\n\r\nThree more mostly downtempo solo albums followed, but most of her international recognition as an alternative pop artist came from her jazzy vocal contributions to several [a=Zero 7] albums, as well as in early 2006 when the track \"Breathe Me\" became popular on alternative radio, following its feature as the closing song in the series finale of the HBO drama Six Feet Under.\r\n\r\nHer fifth album, \"We Are Born\" (2010), moved into a more upbeat pop direction and spawned minor hits. International mainstream success quickly followed when she was featured on a trio of EDM hits by [a=David Guetta] and [a=Flo Rida]. In 2014, now hiding her face in all videos and public appearances, Sia released her million-selling EDM-inspired album (bolstered by iconic videos featuring young dancer Maddie Ziegler choreographed by [a=Ryan Heffington]), and simultaneously became pop's most in-demand songwriter. Furler's songwriting credits include [a=Christina Aguilera], [a=Rihanna], [a=Ne-Yo], [a=Céline Dion], [a=Beyoncé], [a=Katy Perry], [a=Britney Spears] and [a=Eminem].\r\n\r\nIn 2016, she released her seventh album, \"This Is Acting\" was released, and featured many \"reject\" songs, that Sia had written for other artists, but they didn't want them. The album featured the US #1 single, [m=982566]. A deluxe edition was released later in 2016.\r\n\r\nIn November 2017, Sia released her latest album, [m=1269653], which featured 10 original festive songs, released on CD and Vinyl. In November 2018, a Target Exclusive Deluxe CD was released, which features 3 bonus tracks.\r\n\r\nIn 2018, [a=Labrinth], Sia & [a=Diplo] collaborated to form supergroup [a=LSD (53)]. An album, [m=1531968], was released in April 2019. \r\n\r\n[a=Peter Furler] is Sia's first cousin.",
+        "realname": "Sia Kate Isobelle Furler",
+        "releases_url": "https://api.discogs.com/artists/21991/releases",
+        "resource_url": "https://api.discogs.com/artists/21991",
+        "uri": "https://www.discogs.com/artist/21991-Sia",
+        "urls": [
+          "http://siamusic.net/",
+          "https://sia-music.bandcamp.com/",
+          "http://www.bandsintown.com/Sia",
+          "http://www.facebook.com/SiaMusic",
+          "https://www.instagram.com/siamusic/",
+          "http://instagram.com/siathisisacting",
+          "http://soundcloud.com/siamusic",
+          "http://twitter.com/Sia",
+          "http://en.wikipedia.org/wiki/Sia_Furler",
+          "http://www.youtube.com/sia",
+          "http://www.youtube.com/user/SiaVEVO",
+          "http://www.youtube.com/user/siavideos",
+          "https://www.tiktok.com/@sia"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/21991",
+      "thumb": "https://i.discogs.com/hydOtzDcwHQh_mnNeiHbQmOu7oRcs1i9P5WLIDWW27k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTkx/LTE3Mzg2NjY3MzAt/ODE1Ni5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/21991-Sia",
+      "urls": [
+        "http://siamusic.net/",
+        "https://sia-music.bandcamp.com/",
+        "http://www.bandsintown.com/Sia",
+        "http://www.facebook.com/SiaMusic",
+        "https://www.instagram.com/siamusic/",
+        "http://instagram.com/siathisisacting",
+        "http://soundcloud.com/siamusic",
+        "http://twitter.com/Sia",
+        "http://en.wikipedia.org/wiki/Sia_Furler",
+        "http://www.youtube.com/sia",
+        "http://www.youtube.com/user/SiaVEVO",
+        "http://www.youtube.com/user/siavideos",
+        "https://www.tiktok.com/@sia"
+      ]
     },
     "lastfm": {
       "bio_content": "Sia Kate Isobelle Furler (/ˈsiːə/; born 18 December 1975) is an Australian singer-songwriter, record producer and music video director. She started her career as a singer in the local Adelaide acid jazz band Crisp in the mid-1990s. In 1997, when Crisp disbanded, she released her debut studio album titled OnlySee in Australia. She then moved to London, England, and provided lead vocals for the British duo Zero 7.\n\nIn 2000, Sia signed to Sony Music's sub-label Dance Pool and released her second studio album, Healing Is Difficult, the following year. Displeased with the promotion of the record, she signed to Go! Beat and released her third studio album, Colour the Small One, in 2004. The project struggled to connect with a mainstream audience, and so Sia relocated to New York City in 2005 and began touring across the United States. She released her fourth and fifth studio releases, Some People Have Real Problems and We Are Born, in 2008 and 2010, respectively. She then took a hiatus from performing, during which she focused on songwriting for other artists. Her catalogue includes the successful collaborations \"Titanium\" (with David Guetta), \"Diamonds\" (with Rihanna) and \"Wild Ones\" (with Flo Rida).\n\nIn 2014, Sia released her sixth studio album 1000 Forms of Fear, which debuted at No 1 in the U.S. Billboard 200 and generated the top-ten breakthrough single \"Chandelier\" and a trilogy of music videos starring child dancer Maddie Ziegler. In 2016, she released her seventh studio album This Is Acting, which spawned her first Hot 100 number one single, \"Cheap Thrills\". The same year, Sia gave her Nostalgic for the Present Tour, which incorporated performance art elements. Sia has received an array of accolades, including ARIA Awards and an MTV Video Music Award. <a href=\"https://www.last.fm/music/Sia\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +393,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3898833,
+      "listeners": 3901122,
       "mbid": "2f548675-008d-4332-876c-108b0c7ab9c5",
       "name": "Sia",
-      "playcount": 142948815,
+      "playcount": 143027326,
       "similar_artists": [
         {
           "name": "Bebe Rexha",
@@ -170,7 +429,7 @@
       "url": "https://www.last.fm/music/Sia"
     },
     "spotify": {
-      "followers": 30042246,
+      "followers": 30050355,
       "genres": [],
       "id": "5WUlDfRSoLAfcVSX1WnrxN",
       "images": [
@@ -197,6 +456,6 @@
   },
   "spotify_id": "5WUlDfRSoLAfcVSX1WnrxN",
   "spotify_url": "https://open.spotify.com/artist/5WUlDfRSoLAfcVSX1WnrxN",
-  "updated_at": "2025-07-05T14:41:29.366772",
+  "updated_at": "2025-07-08T09:49:34.672067",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:40:14.623907",
   "discogs_id": "1280",
-  "discogs_url": "https://www.discogs.com/artist/1280",
-  "followers": 700299,
+  "discogs_url": "https://www.discogs.com/artist/1280-Underworld",
+  "followers": 701132,
   "formed_date": null,
   "genres": [
     "Electronic",
@@ -17,7 +17,7 @@
     "dance",
     "trance"
   ],
-  "id": null,
+  "id": "underworld-1751722815",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/avCzJe6DCJ7HQiCNXD40I5v0SxHpplE2stlv-Sj4geM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "ba2f4f3b-0293-4bc8-bb94-2f73b5207343",
   "lastfm_url": "https://www.last.fm/music/Underworld",
   "local_images": {
-    "hi-res": "public/artist/underworld/underworld-hi-res.jpg",
-    "medium": "public/artist/underworld/underworld-medium.jpg",
-    "small": "public/artist/underworld/underworld-small.jpg"
+    "hi-res": "../public/artist/underworld/underworld-hi-res.jpg",
+    "medium": "../public/artist/underworld/underworld-medium.jpg",
+    "small": "../public/artist/underworld/underworld-small.jpg"
   },
   "name": "Underworld",
   "popularity": 61,
@@ -102,9 +114,458 @@
       "url": "https://music.apple.com/gb/artist/underworld/996876"
     },
     "discogs": {
-      "id": 1280,
-      "original_name": "Underworld",
-      "role": ""
+      "cover_image": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1280",
+      "images": [
+        {
+          "height": 749,
+          "resource_url": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/avCzJe6DCJ7HQiCNXD40I5v0SxHpplE2stlv-Sj4geM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/wRn9HM99ch4yF71u4lnGcWqo8kyQfJ2hPJWddwuZVMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wRn9HM99ch4yF71u4lnGcWqo8kyQfJ2hPJWddwuZVMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dtIjg47rnASIsVjzaWugHnzvQoDTTQhlrleqhVuMwE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/HDGfURKdCB1ydlWlLqdisFBFw511D1A2Whme_cToC7M/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HDGfURKdCB1ydlWlLqdisFBFw511D1A2Whme_cToC7M/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/-3NuCR5VlTpXjFQaWODfZoGbIBBxW9trvj0HxTj_keI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/6Pu6VdiD42NQCgJT3y9efkFBFT5b3us9sRet83FzgFM/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6Pu6VdiD42NQCgJT3y9efkFBFT5b3us9sRet83FzgFM/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XW2truye8iF1iAQUmOkNPbIZhDOhU5qyCL-59DIxMUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/i-A6HHkaruY3EAdX-P0YTXdt6RHYGmhjVSRNch7SmDw/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/i-A6HHkaruY3EAdX-P0YTXdt6RHYGmhjVSRNch7SmDw/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/93pP6dXNDoxjsXDF5t7t-H-CED0a5d9hxzVwkSM9yog/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/m-cdPGvbCqFV7kuGClhiw7sQ1IhZBzM97euqx_KDarQ/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/m-cdPGvbCqFV7kuGClhiw7sQ1IhZBzM97euqx_KDarQ/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jK2xpwOKcvww31-I3PpskeBU7cI6xGf7zoz4rgw_v8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 472,
+          "resource_url": "https://i.discogs.com/J4_3y9ZQq8R0OT1N3nuVmjN12DnY0wB5XGIFfvLMyIY/rs:fit/g:sm/q:90/h:472/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J4_3y9ZQq8R0OT1N3nuVmjN12DnY0wB5XGIFfvLMyIY/rs:fit/g:sm/q:90/h:472/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/GDZA6lQyaVHzm1UtVFFVB3gbQL2gixjPZjWLuPjo-9I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/dl2eYfqxG51ugy2eXIQ8NMvtOSPBKN6rZ8ou-zAyucs/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dl2eYfqxG51ugy2eXIQ8NMvtOSPBKN6rZ8ou-zAyucs/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/qShEHcrYGUoP3CiMMDVwnMQIwmydgQl_KxaOYrjA6dE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 210,
+          "resource_url": "https://i.discogs.com/KWEhSdj1vGBrwFDhwp7ViPdPb-Esmt-PpXIts-pDlWg/rs:fit/g:sm/q:90/h:210/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KWEhSdj1vGBrwFDhwp7ViPdPb-Esmt-PpXIts-pDlWg/rs:fit/g:sm/q:90/h:210/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/akVqEa15BtwHnydWUjyLvPcIPzRUQl0PfbzEhN8vGwk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+          "width": 312
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/u6ezzsTSEE8CCTg4w6sfE4je69_8WinqRJMj3s6nz94/rs:fit/g:sm/q:90/h:394/w:503/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/u6ezzsTSEE8CCTg4w6sfE4je69_8WinqRJMj3s6nz94/rs:fit/g:sm/q:90/h:394/w:503/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/FBmCmOKScZauhnLnc8KPJU5MTCk9FH2S-SE11-o0Yyw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+          "width": 503
+        },
+        {
+          "height": 280,
+          "resource_url": "https://i.discogs.com/uwiYgelgpLJ-SjZVAMDrbVXHbavrVgnnDI5sQ8zC6a8/rs:fit/g:sm/q:90/h:280/w:442/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uwiYgelgpLJ-SjZVAMDrbVXHbavrVgnnDI5sQ8zC6a8/rs:fit/g:sm/q:90/h:280/w:442/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/rDtMc3cNS1EUca25k0s788qbDr7T_PmUq_yR56mgoNQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+          "width": 442
+        },
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/49Hfwbn43xd-kMFPW0LMCReHmSTmdrazE-t9zKgu3R0/rs:fit/g:sm/q:90/h:266/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/49Hfwbn43xd-kMFPW0LMCReHmSTmdrazE-t9zKgu3R0/rs:fit/g:sm/q:90/h:266/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/qxsnA8jm1cTjxezh9EauiQqWZuGzHAFvkOJXc-KKIGU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+          "width": 340
+        },
+        {
+          "height": 303,
+          "resource_url": "https://i.discogs.com/Ykg_l96twE-4gKVgbWWfnYWmaVSZlf2oz1_TSIwMfSc/rs:fit/g:sm/q:90/h:303/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ykg_l96twE-4gKVgbWWfnYWmaVSZlf2oz1_TSIwMfSc/rs:fit/g:sm/q:90/h:303/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/SxBMlVQBhgIXYTTYwYaZ5gg6L_bzWpWHENS00gBZmpY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 454,
+          "resource_url": "https://i.discogs.com/FjpS9erkcQgxPimMfcpiorqPaav2Zs7s-kwjpTO5RyQ/rs:fit/g:sm/q:90/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FjpS9erkcQgxPimMfcpiorqPaav2Zs7s-kwjpTO5RyQ/rs:fit/g:sm/q:90/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8i_w0KdmmsekE2hQnRFFhLvzBk9nWBqruzJkeYksfRc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 393,
+          "resource_url": "https://i.discogs.com/VQPIwNQI6Ee2B_u7Ke-HeyoKwaYAXVKutU0KVtvbqUg/rs:fit/g:sm/q:90/h:393/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VQPIwNQI6Ee2B_u7Ke-HeyoKwaYAXVKutU0KVtvbqUg/rs:fit/g:sm/q:90/h:393/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SiFEi5RizszrGrcZy_6nvJIRNliegI8gc_8BCR2Gf5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+          "width": 393
+        },
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/1Yb-k6YUa_U8HH51Upyo1KEeK8V4m_7Y9Fyt_-bEnTI/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1Yb-k6YUa_U8HH51Upyo1KEeK8V4m_7Y9Fyt_-bEnTI/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RRyXusf2fh04ZFouuOmHxipPYxAn3Ufn0qBfYon84hk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 2906,
+          "name": "Darren Emerson",
+          "resource_url": "https://api.discogs.com/artists/2906",
+          "thumbnail_url": "https://i.discogs.com/Jk_Hxh5Rd4xZlfSM09XTD-5KuOmEWX7IqMapDOQm_8o/rs:fit/g:sm/q:40/h:497/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MDYt/MTY2MTk3MzkzOC00/NTExLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 6522,
+          "name": "Rick Smith",
+          "resource_url": "https://api.discogs.com/artists/6522",
+          "thumbnail_url": "https://i.discogs.com/dcl-WvQoQLQ-VaS0hLw4llOKpZE3RWQBGybA1cF7J5g/rs:fit/g:sm/q:40/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1MjIt/MDAxLmpwZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 39117,
+          "name": "Karl Hyde",
+          "resource_url": "https://api.discogs.com/artists/39117",
+          "thumbnail_url": "https://i.discogs.com/1mcCDbZ0bD4Pn0iriOe9-YGu39e8i_v0qKuXKAQ4pP8/rs:fit/g:sm/q:40/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MTE3/LTEzNjY4MjMwNjEt/NTc3NS5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 496805,
+          "name": "Baz Allen",
+          "resource_url": "https://api.discogs.com/artists/496805",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 496806,
+          "name": "Alfie Thomas",
+          "resource_url": "https://api.discogs.com/artists/496806",
+          "thumbnail_url": "https://i.discogs.com/ozmkrFe45Y6YWkf5HeTZBS3Loj3mQTDkvp85AAnB1Xs/rs:fit/g:sm/q:40/h:500/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgw/Ni0xMTgyMjY5NzAz/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 496807,
+          "name": "Bryn B. Burrows",
+          "resource_url": "https://api.discogs.com/artists/496807",
+          "thumbnail_url": "https://i.discogs.com/tdZffS-5xcGLjb1masbMUVG17a1ws8FYnff1WdCr8sE/rs:fit/g:sm/q:40/h:157/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgw/Ny0xMjQwOTQ0MDI4/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 496817,
+          "name": "Pascal Consoli",
+          "resource_url": "https://api.discogs.com/artists/496817",
+          "thumbnail_url": "https://i.discogs.com/FlNEnqMibbpIW_bRl_x6Xq7kr_sUfuhXnykIsCExSHE/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgx/Ny0xMzE4NzgyMTc4/LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Underworld",
+      "namevariations": [
+        "The Underworld",
+        "Under The World",
+        "Under World",
+        "Under Worlds",
+        "Underw Orld",
+        "Underworld (Darren Emerson And Rick Smith)",
+        "Underworld (Emerson/Hyde/Smith)",
+        "Underworld (Smith/Hyde/Emerson)",
+        "Underworld Live",
+        "Underworld: Emerson / Hyde / Smith",
+        "Underworld: Smith / Hyde / Emerson",
+        "Uoder World",
+        "アンダーワールド",
+        "地底世界樂團"
+      ],
+      "profile": "UK electronic music act formed by [a=Rick Smith] and [a=Karl Hyde] in 1987 after their former band [a=Freur] disbanded. The first line-up released more song oriented funky guitar based pop over the course of two albums. In 1991 the core duo returned with a new track oriented technoid direction and a new ally: DJ [a=Darren Emerson]. In 1996 the former b-side \"Born Slippy NUXX\" was used in Danny Boyle's film \"Trainspotting\" and became an instant anthem of the mid to late 1990's. Emerson left in 2000 after the release of \"Everything, Everything\" to pursue a solo career and was replaced on tour DJ duties by [a=Darren Price]. Price became a performing member of Underworld Live in 2005. ",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 6517,
+            "name": "Lemon Interupt",
+            "resource_url": "https://api.discogs.com/artists/6517",
+            "thumbnail_url": "https://i.discogs.com/AGOvI1rNScCl0sHy8YAQmZhT073EczC5wP09TxM8cYY/rs:fit/g:sm/q:40/h:530/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1MTct/MTEwNjI5OTIyMS5q/cGc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 1280,
+        "images": [
+          {
+            "height": 749,
+            "resource_url": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/5W-uFD_IeqMpqw7pGEYJ17oGtcDQBHHarhbIbd2T1qA/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/avCzJe6DCJ7HQiCNXD40I5v0SxHpplE2stlv-Sj4geM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/wRn9HM99ch4yF71u4lnGcWqo8kyQfJ2hPJWddwuZVMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wRn9HM99ch4yF71u4lnGcWqo8kyQfJ2hPJWddwuZVMc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/dtIjg47rnASIsVjzaWugHnzvQoDTTQhlrleqhVuMwE8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyNzA1MDY3Ny05/MTg1LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/HDGfURKdCB1ydlWlLqdisFBFw511D1A2Whme_cToC7M/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HDGfURKdCB1ydlWlLqdisFBFw511D1A2Whme_cToC7M/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+            "uri150": "https://i.discogs.com/-3NuCR5VlTpXjFQaWODfZoGbIBBxW9trvj0HxTj_keI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTU5NDI4OTg2MS04/MzA1LnBuZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/6Pu6VdiD42NQCgJT3y9efkFBFT5b3us9sRet83FzgFM/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6Pu6VdiD42NQCgJT3y9efkFBFT5b3us9sRet83FzgFM/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/XW2truye8iF1iAQUmOkNPbIZhDOhU5qyCL-59DIxMUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQ2MTc4MDE5OC02/NzcwLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 360,
+            "resource_url": "https://i.discogs.com/i-A6HHkaruY3EAdX-P0YTXdt6RHYGmhjVSRNch7SmDw/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/i-A6HHkaruY3EAdX-P0YTXdt6RHYGmhjVSRNch7SmDw/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/93pP6dXNDoxjsXDF5t7t-H-CED0a5d9hxzVwkSM9yog/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk0OC01/NDQxLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/m-cdPGvbCqFV7kuGClhiw7sQ1IhZBzM97euqx_KDarQ/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/m-cdPGvbCqFV7kuGClhiw7sQ1IhZBzM97euqx_KDarQ/rs:fit/g:sm/q:90/h:369/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/jK2xpwOKcvww31-I3PpskeBU7cI6xGf7zoz4rgw_v8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTUyMjIyMzk3MC05/ODA2LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 472,
+            "resource_url": "https://i.discogs.com/J4_3y9ZQq8R0OT1N3nuVmjN12DnY0wB5XGIFfvLMyIY/rs:fit/g:sm/q:90/h:472/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/J4_3y9ZQq8R0OT1N3nuVmjN12DnY0wB5XGIFfvLMyIY/rs:fit/g:sm/q:90/h:472/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/GDZA6lQyaVHzm1UtVFFVB3gbQL2gixjPZjWLuPjo-9I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTI3Nzc4MDE5MS5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 489,
+            "resource_url": "https://i.discogs.com/dl2eYfqxG51ugy2eXIQ8NMvtOSPBKN6rZ8ou-zAyucs/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dl2eYfqxG51ugy2eXIQ8NMvtOSPBKN6rZ8ou-zAyucs/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/qShEHcrYGUoP3CiMMDVwnMQIwmydgQl_KxaOYrjA6dE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTE5MDUyNDM0Ny5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 210,
+            "resource_url": "https://i.discogs.com/KWEhSdj1vGBrwFDhwp7ViPdPb-Esmt-PpXIts-pDlWg/rs:fit/g:sm/q:90/h:210/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/KWEhSdj1vGBrwFDhwp7ViPdPb-Esmt-PpXIts-pDlWg/rs:fit/g:sm/q:90/h:210/w:312/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/akVqEa15BtwHnydWUjyLvPcIPzRUQl0PfbzEhN8vGwk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTY0MS5q/cGVn.jpeg",
+            "width": 312
+          },
+          {
+            "height": 394,
+            "resource_url": "https://i.discogs.com/u6ezzsTSEE8CCTg4w6sfE4je69_8WinqRJMj3s6nz94/rs:fit/g:sm/q:90/h:394/w:503/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/u6ezzsTSEE8CCTg4w6sfE4je69_8WinqRJMj3s6nz94/rs:fit/g:sm/q:90/h:394/w:503/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/FBmCmOKScZauhnLnc8KPJU5MTCk9FH2S-SE11-o0Yyw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEzMzU2OTA4NS5q/cGVn.jpeg",
+            "width": 503
+          },
+          {
+            "height": 280,
+            "resource_url": "https://i.discogs.com/uwiYgelgpLJ-SjZVAMDrbVXHbavrVgnnDI5sQ8zC6a8/rs:fit/g:sm/q:90/h:280/w:442/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uwiYgelgpLJ-SjZVAMDrbVXHbavrVgnnDI5sQ8zC6a8/rs:fit/g:sm/q:90/h:280/w:442/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/rDtMc3cNS1EUca25k0s788qbDr7T_PmUq_yR56mgoNQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NTczMi5q/cGVn.jpeg",
+            "width": 442
+          },
+          {
+            "height": 266,
+            "resource_url": "https://i.discogs.com/49Hfwbn43xd-kMFPW0LMCReHmSTmdrazE-t9zKgu3R0/rs:fit/g:sm/q:90/h:266/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/49Hfwbn43xd-kMFPW0LMCReHmSTmdrazE-t9zKgu3R0/rs:fit/g:sm/q:90/h:266/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/qxsnA8jm1cTjxezh9EauiQqWZuGzHAFvkOJXc-KKIGU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTIxNjU3NjE1MS5q/cGVn.jpeg",
+            "width": 340
+          },
+          {
+            "height": 303,
+            "resource_url": "https://i.discogs.com/Ykg_l96twE-4gKVgbWWfnYWmaVSZlf2oz1_TSIwMfSc/rs:fit/g:sm/q:90/h:303/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ykg_l96twE-4gKVgbWWfnYWmaVSZlf2oz1_TSIwMfSc/rs:fit/g:sm/q:90/h:303/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/SxBMlVQBhgIXYTTYwYaZ5gg6L_bzWpWHENS00gBZmpY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTEwNjI5OTMzNC5q/cGc.jpeg",
+            "width": 400
+          },
+          {
+            "height": 454,
+            "resource_url": "https://i.discogs.com/FjpS9erkcQgxPimMfcpiorqPaav2Zs7s-kwjpTO5RyQ/rs:fit/g:sm/q:90/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FjpS9erkcQgxPimMfcpiorqPaav2Zs7s-kwjpTO5RyQ/rs:fit/g:sm/q:90/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/8i_w0KdmmsekE2hQnRFFhLvzBk9nWBqruzJkeYksfRc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny00/NDM0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 393,
+            "resource_url": "https://i.discogs.com/VQPIwNQI6Ee2B_u7Ke-HeyoKwaYAXVKutU0KVtvbqUg/rs:fit/g:sm/q:90/h:393/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/VQPIwNQI6Ee2B_u7Ke-HeyoKwaYAXVKutU0KVtvbqUg/rs:fit/g:sm/q:90/h:393/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/SiFEi5RizszrGrcZy_6nvJIRNliegI8gc_8BCR2Gf5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTQxOTg2MzY4Ny02/MjI2LmpwZWc.jpeg",
+            "width": 393
+          },
+          {
+            "height": 374,
+            "resource_url": "https://i.discogs.com/1Yb-k6YUa_U8HH51Upyo1KEeK8V4m_7Y9Fyt_-bEnTI/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1Yb-k6YUa_U8HH51Upyo1KEeK8V4m_7Y9Fyt_-bEnTI/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/RRyXusf2fh04ZFouuOmHxipPYxAn3Ufn0qBfYon84hk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY5ODM3ODk3MC02/MDYwLmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 2906,
+            "name": "Darren Emerson",
+            "resource_url": "https://api.discogs.com/artists/2906",
+            "thumbnail_url": "https://i.discogs.com/Jk_Hxh5Rd4xZlfSM09XTD-5KuOmEWX7IqMapDOQm_8o/rs:fit/g:sm/q:40/h:497/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MDYt/MTY2MTk3MzkzOC00/NTExLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 6522,
+            "name": "Rick Smith",
+            "resource_url": "https://api.discogs.com/artists/6522",
+            "thumbnail_url": "https://i.discogs.com/dcl-WvQoQLQ-VaS0hLw4llOKpZE3RWQBGybA1cF7J5g/rs:fit/g:sm/q:40/h:250/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1MjIt/MDAxLmpwZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 39117,
+            "name": "Karl Hyde",
+            "resource_url": "https://api.discogs.com/artists/39117",
+            "thumbnail_url": "https://i.discogs.com/1mcCDbZ0bD4Pn0iriOe9-YGu39e8i_v0qKuXKAQ4pP8/rs:fit/g:sm/q:40/h:360/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5MTE3/LTEzNjY4MjMwNjEt/NTc3NS5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 496805,
+            "name": "Baz Allen",
+            "resource_url": "https://api.discogs.com/artists/496805",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 496806,
+            "name": "Alfie Thomas",
+            "resource_url": "https://api.discogs.com/artists/496806",
+            "thumbnail_url": "https://i.discogs.com/ozmkrFe45Y6YWkf5HeTZBS3Loj3mQTDkvp85AAnB1Xs/rs:fit/g:sm/q:40/h:500/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgw/Ni0xMTgyMjY5NzAz/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 496807,
+            "name": "Bryn B. Burrows",
+            "resource_url": "https://api.discogs.com/artists/496807",
+            "thumbnail_url": "https://i.discogs.com/tdZffS-5xcGLjb1masbMUVG17a1ws8FYnff1WdCr8sE/rs:fit/g:sm/q:40/h:157/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgw/Ny0xMjQwOTQ0MDI4/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 496817,
+            "name": "Pascal Consoli",
+            "resource_url": "https://api.discogs.com/artists/496817",
+            "thumbnail_url": "https://i.discogs.com/FlNEnqMibbpIW_bRl_x6Xq7kr_sUfuhXnykIsCExSHE/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Njgx/Ny0xMzE4NzgyMTc4/LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Underworld",
+        "namevariations": [
+          "The Underworld",
+          "Under The World",
+          "Under World",
+          "Under Worlds",
+          "Underw Orld",
+          "Underworld (Darren Emerson And Rick Smith)",
+          "Underworld (Emerson/Hyde/Smith)",
+          "Underworld (Smith/Hyde/Emerson)",
+          "Underworld Live",
+          "Underworld: Emerson / Hyde / Smith",
+          "Underworld: Smith / Hyde / Emerson",
+          "Uoder World",
+          "アンダーワールド",
+          "地底世界樂團"
+        ],
+        "profile": "UK electronic music act formed by [a=Rick Smith] and [a=Karl Hyde] in 1987 after their former band [a=Freur] disbanded. The first line-up released more song oriented funky guitar based pop over the course of two albums. In 1991 the core duo returned with a new track oriented technoid direction and a new ally: DJ [a=Darren Emerson]. In 1996 the former b-side \"Born Slippy NUXX\" was used in Danny Boyle's film \"Trainspotting\" and became an instant anthem of the mid to late 1990's. Emerson left in 2000 after the release of \"Everything, Everything\" to pursue a solo career and was replaced on tour DJ duties by [a=Darren Price]. Price became a performing member of Underworld Live in 2005. ",
+        "releases_url": "https://api.discogs.com/artists/1280/releases",
+        "resource_url": "https://api.discogs.com/artists/1280",
+        "uri": "https://www.discogs.com/artist/1280-Underworld",
+        "urls": [
+          "https://www.underworldlive.com",
+          "http://www.underworld-print.com",
+          "https://www.borndirty.org",
+          "https://equipboard.com/pros/underworld",
+          "https://www.facebook.com/underworldlive",
+          "https://www.instagram.com/underworld",
+          "https://www.tiktok.com/@underworldlive",
+          "https://linktr.ee/UnderworldLive",
+          "https://soundcloud.com/underworld",
+          "https://www.mixcloud.com/UnderworldLive",
+          "https://twitter.com/underworldlive",
+          "https://en.wikipedia.org/wiki/Underworld_(band)",
+          "https://www.youtube.com/user/UnderworldLiveTV",
+          "https://underworld.bandcamp.com"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1280",
+      "thumb": "https://i.discogs.com/avCzJe6DCJ7HQiCNXD40I5v0SxHpplE2stlv-Sj4geM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODAt/MTY4MjI3ODA4Ni0y/NzE5LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/1280-Underworld",
+      "urls": [
+        "https://www.underworldlive.com",
+        "http://www.underworld-print.com",
+        "https://www.borndirty.org",
+        "https://equipboard.com/pros/underworld",
+        "https://www.facebook.com/underworldlive",
+        "https://www.instagram.com/underworld",
+        "https://www.tiktok.com/@underworldlive",
+        "https://linktr.ee/UnderworldLive",
+        "https://soundcloud.com/underworld",
+        "https://www.mixcloud.com/UnderworldLive",
+        "https://twitter.com/underworldlive",
+        "https://en.wikipedia.org/wiki/Underworld_(band)",
+        "https://www.youtube.com/user/UnderworldLiveTV",
+        "https://underworld.bandcamp.com"
+      ]
     },
     "lastfm": {
       "bio_content": "Underworld are a British electronic group formed in 1986 in Romford, Essex, England, by Karl Hyde (vocals, guitar, production) and Rick Smith (keyboards, production). DJ Darren Price (keyboards, production) accompanied the two in live performances between 2005-2016. They are best known for their unique mix of techno, trance, dance, ambient and sometimes drum and bass, the vocal parts performed by Hyde as spoken-word streams of consciousness, and for their outstanding live shows. The band gained worldwide fame with Born Slippy .NUXX from the Trainspotting soundtrack. \n\nBefore Underworld, Hyde and Smith started out in 1979 on The Screen Gemz band while working together in a diner in the city of Cardiff, where both had been studying. In 1983 they recorded two albums for CBS Records with a new wave synthpop band whose name was a graphic squiggle, later entitled Freur.\n\nIn 1986 Hyde and Smith formed Underworld, after disbanding of Freur. They tried a more guitar-oriented funky electropop sound on their two albums released on Sire Records: Underneath the Radar (1987) and Change the Weather (1989). This initial lineup (also called Underworld Mk1) consisted of Karl Hyde, Rick Smith, Alfie Thomas, Bryn Burrows, Baz Allen and Pascal Consoli before sinking back into obscurity and disbanding in 1990.\n\nBritish DJ Darren Emerson hooked up with Hyde and Smith in 1992 and helped them refine their sound into something more sleek and beat-oriented, yet still shot through with tinges of blues, rock and spoken-word streams of consciousness. After several releases on Junior Boy's Own as Lemon Interupt, the trio re-adopted the Underworld name in 1992. Two songs from this era are Rez and Spikee.\n\nIn addition to their music, Hyde and Smith are members of Tomato, a graphic design company which has done high-profile work for clients around the world as well as art for all of Underworld's releases. Hyde, along with former Freur keyboardist John Warwicker, has also published two typographic journals, Mmm... Skyscraper, I Love You (1994) and In The Belly Of Saint Paul (2003).\n\nTheir first full-length, dubnobasswithmyheadman, was released in 1994 to rave reviews and is still considered a landmark. It spawned several hit singles (Dark & Long, Cowgirl, Dirty Epic) and was followed a couple years later by the Born Slippy single.\n\nThe sophomore album Second Toughest in the Infants was released in 1996. This album showed Underworld maturing as a trio, mixing elements of techno, house, drum and bass and pop music to spectacular effect. The first track Juanita/Kiteless/To Dream of Love (three parts) is one of the longest songs recorded by Underworld, with a length of over 16 minutes.\n\nIn the same year they issued an EP Pearl's Girl, containing various mixes of the song Pearl's Girl and five new tracks (one of them is Cherry Pie, an early version of Rowla). Underworld's much-praised remixography also grew, including Björk, Saint Etienne, Simply Red, Massive Attack and Leftfield.\n\nAfter licensing out a remix of Born Slippy (entitled Born Slippy .NUXX) for the 1996 cult classic film Trainspotting, Underworld gained instant worldwide fame and found themselves touring the world. Their fame continued to run high into the release of Beaucoup Fish in 1999. Five singles were released: Moaner, Push Upstairs, Jumbo, King of Snake, and Bruce Lee.\n\nUnderworld issued a live set and a DVD named Everything, Everything in 2000, after which Emerson left the group to concentrate more on his DJ career. The mellower album A Hundred Days Off followed in 2002. It was promoted by two singles: Two Months Off and Dinosaur Adventure 3D.\n\nIn 2003 Underworld released a 2 CD compilation entitled 1992-2002, comprising some of their best songs. Also since 2003 the group has been trickling out new music on their official website www.underworldlive.com via a series of downloadable mp3s dubbed \"The Riverrun Project\". Each mp3 bundle features 25-or-so-minute of mixed new material, hundreds of photographs and traditional album art.\n\nIn 2005 the band issued another live album, Live in Tokyo 25th November 2005, a recording of Underworld's live performance at the Electraglide festival in Tokyo on 25 November 2005. There were apparently only 7000 copies of the album made.\n\nOblivion with Bells, their fifth studio album was released in October 2007, the first with additional collaboration with Darren Price who joined the band's live setup in 2005. It spawned four singles: Crocodile, Boy, Boy, Boy, Beautiful Burnout, and Ring Road.\n\nOn 13 May 2010, Underworld released a new single Scribble (Radio Edit), available for free download on their official site. This single was followed by a new album later that year, called Barking, which is still in the process of releasing singles, beginning with the aforementioned Scribble, Always Loved a Film and finally Diamond Jigsaw. Also released on a beatport remix contest was Bird 1 where amateur producers were able to put their take on Underworld's collaboration with Dubfire. As of 2011, the duo can also attach to their resumes soundtracking a live stage play. Frankenstein, produced and directed by Danny Boyle, starring both Johnny Lee Miller & Benedict Cumberbatch  who are, on alternating nights, both Frankenstein, or the Creature. The Soundtrack is available through Underworld's Website.\n\nJanuary 2016 saw the release of I Exhale, in advance of Barbara Barbara, we face a shining future, released in March 2016.\n\nIn April 2018, Underworld released a standalone single, Brilliant Yes That Would Be, an ambient piece with its accompanying video inspired by the Icelandic landscape and their first performance in Reykjavík since 1994.\n\nIn May 2018, Underworld unveiled the World of Underworld project, which focuses on reflecting and re-imagining their nearly 30 year body of work. It also serves as an outlet for experimentation, new releases and spontaneous creativity. Brilliant Yes That Would Be was the first track to be released through the World of Underworld, which was recorded and mixed just days before it was released.\n\nLater in that same month, Underworld debuted a new collaboration with Iggy Pop titled Bells & Circles, live at the BBC Biggest Weekend 2018. Shortly after, a four-track collaborative EP with the two artists was released, Teatime Dub Encounters.\n\nOn November 1st, 2018, Underworld announced the Drift project, an ongoing music-and-video experiment that publishes new Underworld material on their official website every week. The first instalment began with Another Silent Way, also released on the same day.\n\nOn November 1st, 2019, Underworld released Drift Series 1, their tenth studio album. It is the conclusion of the first year of the band's year-long music-and-video experiment Drift. Underworld announced the Drift project will continue on for another year. The now-renamed Drift Series 1, was released exactly one year after the launch of the series, as a box set featuring 7 CDs, a Blu-ray, and an 80-page book documenting the creative process around Drift. A single-disc Drift Series 1 Sampler Edition was also released simultaneously. <a href=\"https://www.last.fm/music/Underworld\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +596,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1428056,
+      "listeners": 1429198,
       "mbid": "ba2f4f3b-0293-4bc8-bb94-2f73b5207343",
       "name": "Underworld",
-      "playcount": 29042478,
+      "playcount": 29071262,
       "similar_artists": [
         {
           "name": "Orbital",
@@ -171,7 +632,7 @@
       "url": "https://www.last.fm/music/Underworld"
     },
     "spotify": {
-      "followers": 700299,
+      "followers": 701132,
       "genres": [
         "big beat",
         "electronica"
@@ -201,6 +662,6 @@
   },
   "spotify_id": "1PXHzxRDiLnjqNrRn2Xbsa",
   "spotify_url": "https://open.spotify.com/artist/1PXHzxRDiLnjqNrRn2Xbsa",
-  "updated_at": "2025-07-05T14:40:15.336100",
+  "updated_at": "2025-07-08T09:33:11.853436",
   "wikipedia_url": null
 }

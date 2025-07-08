@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:44:58.020752",
   "discogs_id": "384455",
-  "discogs_url": "https://www.discogs.com/artist/384455",
-  "followers": 37103,
+  "discogs_url": "https://www.discogs.com/artist/384455-Cedric-Burnside",
+  "followers": 37163,
   "formed_date": null,
   "genres": [
     "Blues",
@@ -20,7 +20,7 @@
     "american",
     "hill country blues"
   ],
-  "id": null,
+  "id": "cedric-burnside-1751730300",
   "images": [
     {
       "height": 2000,
@@ -81,14 +81,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/uZzXIRncbma7XPbzwLwSN6jphgk00hAGfMzkL791rc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Cedric+Burnside",
   "local_images": {
-    "hi-res": "public/artist/cedric-burnside/cedric-burnside-hi-res.jpg",
-    "medium": "public/artist/cedric-burnside/cedric-burnside-medium.jpg",
-    "small": "public/artist/cedric-burnside/cedric-burnside-small.jpg"
+    "hi-res": "../public/artist/cedric-burnside/cedric-burnside-hi-res.jpg",
+    "medium": "../public/artist/cedric-burnside/cedric-burnside-medium.jpg",
+    "small": "../public/artist/cedric-burnside/cedric-burnside-small.jpg"
   },
   "name": "Cedric Burnside",
   "popularity": 46,
@@ -105,9 +117,82 @@
       "url": "https://music.apple.com/gb/artist/cedric-burnside/292160072"
     },
     "discogs": {
-      "id": 384455,
-      "original_name": "Cedric Burnside",
-      "role": ""
+      "cover_image": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "384455",
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/uZzXIRncbma7XPbzwLwSN6jphgk00hAGfMzkL791rc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Cedric Burnside",
+      "namevariations": [
+        "CB",
+        "Cederic Burnside",
+        "Cedric",
+        "Cedric Burnside Project",
+        "Mr. Cedric Burnside"
+      ],
+      "profile": " American blues drummer, guitarist singer, songwriter and father of [a9549787]. He is the grandson of [a262901] and son of [a2018914].",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 915120,
+            "name": "Cedrick Jackson",
+            "resource_url": "https://api.discogs.com/artists/915120",
+            "thumbnail_url": ""
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 5281615,
+            "name": "Burnside Exploration",
+            "resource_url": "https://api.discogs.com/artists/5281615",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 384455,
+        "images": [
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/--sAWh-V9ZUZsYSKkRJ55GzChtbuQ0-B0Q57bVIOnxY/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/uZzXIRncbma7XPbzwLwSN6jphgk00hAGfMzkL791rc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Cedric Burnside",
+        "namevariations": [
+          "CB",
+          "Cederic Burnside",
+          "Cedric",
+          "Cedric Burnside Project",
+          "Mr. Cedric Burnside"
+        ],
+        "profile": " American blues drummer, guitarist singer, songwriter and father of [a9549787]. He is the grandson of [a262901] and son of [a2018914].",
+        "releases_url": "https://api.discogs.com/artists/384455/releases",
+        "resource_url": "https://api.discogs.com/artists/384455",
+        "uri": "https://www.discogs.com/artist/384455-Cedric-Burnside",
+        "urls": [
+          "https://www.cedricburnside.net/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/384455",
+      "thumb": "https://i.discogs.com/uZzXIRncbma7XPbzwLwSN6jphgk00hAGfMzkL791rc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDQ1/NS0xNDUzODMzNjk1/LTY0NjIuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/384455-Cedric-Burnside",
+      "urls": [
+        "https://www.cedricburnside.net/"
+      ]
     },
     "lastfm": {
       "bio_content": "Cedric Burnside (born August 26, 1978) is an American electric blues drummer, guitarist, singer and songwriter.\n\nHe is the grandson of North Mississippi blues legend R.L. Burnside. He is the winner of the Blues Music Awards \"Best New Artist Debut\" for the record: 'The Two Man Wrecking Crew' in 2009 and \"Drummer of the Year\" in 2010. \n\nAfter many successful years of touring the world with Lightnin' Malcolm as 'the Juke Joint Duo', Burnside started the band Cedric Burnside Project. <a href=\"https://www.last.fm/music/Cedric+Burnside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -138,10 +223,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 52801,
+      "listeners": 52959,
       "mbid": null,
       "name": "Cedric Burnside",
-      "playcount": 248161,
+      "playcount": 248745,
       "similar_artists": [
         {
           "name": "Sue Foley",
@@ -174,7 +259,7 @@
       "url": "https://www.last.fm/music/Cedric+Burnside"
     },
     "spotify": {
-      "followers": 37103,
+      "followers": 37163,
       "genres": [
         "blues",
         "modern blues",
@@ -207,6 +292,6 @@
   },
   "spotify_id": "5tuhrLilxNi6N7D6VeQZnc",
   "spotify_url": "https://open.spotify.com/artist/5tuhrLilxNi6N7D6VeQZnc",
-  "updated_at": "2025-07-05T16:45:00.605854",
+  "updated_at": "2025-07-08T10:02:17.878677",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:34:58.947245",
   "discogs_id": "3194",
-  "discogs_url": "https://www.discogs.com/artist/3194",
-  "followers": 395145,
+  "discogs_url": "https://www.discogs.com/artist/3194-UNKLE",
+  "followers": 395245,
   "formed_date": null,
   "genres": [
     "Electronic",
@@ -17,7 +17,7 @@
     "alternative",
     "electronica"
   ],
-  "id": null,
+  "id": "unkle-1751729702",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/i-t7QUBpggSmC6GhlblBJ0-SJt5u3cJbIyB-GZQjSOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "6648391e-7890-4f6c-b939-976f215195d3",
   "lastfm_url": "https://www.last.fm/music/UNKLE",
   "local_images": {
-    "hi-res": "public/artist/unkle/unkle-hi-res.jpg",
-    "medium": "public/artist/unkle/unkle-medium.jpg",
-    "small": "public/artist/unkle/unkle-small.jpg"
+    "hi-res": "../public/artist/unkle/unkle-hi-res.jpg",
+    "medium": "../public/artist/unkle/unkle-medium.jpg",
+    "small": "../public/artist/unkle/unkle-small.jpg"
   },
   "name": "UNKLE",
   "popularity": 52,
@@ -102,9 +114,434 @@
       "url": "https://music.apple.com/gb/artist/unkle/133444"
     },
     "discogs": {
-      "id": 3194,
-      "original_name": "UNKLE",
-      "role": ""
+      "cover_image": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "3194",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/i-t7QUBpggSmC6GhlblBJ0-SJt5u3cJbIyB-GZQjSOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 509,
+          "resource_url": "https://i.discogs.com/B0jMON4-j64GBovqMCiLR33yP-boJ5Yk_lX73fIJTE0/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/B0jMON4-j64GBovqMCiLR33yP-boJ5Yk_lX73fIJTE0/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/zAhWxUygUS1zSwHwY6_6g7Xuh81b6iPVb1-nfEZgpzg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ays5NIXJ5yj8k756jDxsZCSQ0YJPgFf60y6QmHPsqF4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ays5NIXJ5yj8k756jDxsZCSQ0YJPgFf60y6QmHPsqF4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0Z5yHIZ_1Yiq93OR22UCtmVN6_HabCkAHz-At5W3zG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 668,
+          "resource_url": "https://i.discogs.com/cITzziCXB_rguL-kqSVwYR0wtICge5OylkcS6rNCMKc/rs:fit/g:sm/q:90/h:668/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cITzziCXB_rguL-kqSVwYR0wtICge5OylkcS6rNCMKc/rs:fit/g:sm/q:90/h:668/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/UbbpkGhLD_PEBSmomi4B_OCxyyWTHhcaeZurue5vyYc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/CtbyEupVk45jB7UNx3bNywlv-nx4ZlCReuo9Uw_sYuA/rs:fit/g:sm/q:90/h:398/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CtbyEupVk45jB7UNx3bNywlv-nx4ZlCReuo9Uw_sYuA/rs:fit/g:sm/q:90/h:398/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/aWl7zFUAsPbyUv6Zf6edxkGquHUZCZqZ8UxedHaT8f8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 801,
+          "resource_url": "https://i.discogs.com/ry5xi40Egm_pbiGe_UGGJVDWWw2HiqDOkzKsSGmN38w/rs:fit/g:sm/q:90/h:801/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ry5xi40Egm_pbiGe_UGGJVDWWw2HiqDOkzKsSGmN38w/rs:fit/g:sm/q:90/h:801/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/8Ib8PBGH5GlqL5w6hLsMyOcn9n6aVmu2U4roYz17wBg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 325,
+          "resource_url": "https://i.discogs.com/eZs-WkfJybIvuaoc51jHkxQgvfDZCMiXYozu4Oyrww0/rs:fit/g:sm/q:90/h:325/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eZs-WkfJybIvuaoc51jHkxQgvfDZCMiXYozu4Oyrww0/rs:fit/g:sm/q:90/h:325/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/wjkETdYDgCes2LDfZPV_JlP3uZ4HSShTpeFTy7jWg-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 700,
+          "resource_url": "https://i.discogs.com/ultcdZKzJR5TtVcb7juF5ktijHwLbS-FKh9dYAggg9o/rs:fit/g:sm/q:90/h:700/w:466/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ultcdZKzJR5TtVcb7juF5ktijHwLbS-FKh9dYAggg9o/rs:fit/g:sm/q:90/h:700/w:466/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/8V9Vs7_Qjlwd7Rzj15ILGOiZZBOTdlT2qd8xCgwAezc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+          "width": 466
+        },
+        {
+          "height": 280,
+          "resource_url": "https://i.discogs.com/J8sOZGGG3sgMF1aUrsV9G_3nzR9AuhZMtkXl3Qk2D_Q/rs:fit/g:sm/q:90/h:280/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J8sOZGGG3sgMF1aUrsV9G_3nzR9AuhZMtkXl3Qk2D_Q/rs:fit/g:sm/q:90/h:280/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/KwvcAjR_J9IMowiKbmFWhQNUyzHtZatePhw7oaRMXxI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+          "width": 280
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/KS8PdYWW0JarNyiXrMdoCW46EDPe5x1Ja1Foy06yYi8/rs:fit/g:sm/q:90/h:427/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KS8PdYWW0JarNyiXrMdoCW46EDPe5x1Ja1Foy06yYi8/rs:fit/g:sm/q:90/h:427/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/UTn_7lzu3B0im7nOGm8-iyP7VO9f95dmqrBVRIwMim4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+          "width": 425
+        },
+        {
+          "height": 774,
+          "resource_url": "https://i.discogs.com/g4V0L3-GOyyjJzbwkau-sA90xq02wYV_tdFDMI57l88/rs:fit/g:sm/q:90/h:774/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g4V0L3-GOyyjJzbwkau-sA90xq02wYV_tdFDMI57l88/rs:fit/g:sm/q:90/h:774/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/Y63iTOZSPD1C5ggyOQYaYna3iaCE1cPEVwA4LXbBnBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 287,
+          "resource_url": "https://i.discogs.com/WBxrRz3QwyfvzYaTgCK7sb_ng99VizXGsDqYYamG1fM/rs:fit/g:sm/q:90/h:287/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WBxrRz3QwyfvzYaTgCK7sb_ng99VizXGsDqYYamG1fM/rs:fit/g:sm/q:90/h:287/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+          "uri150": "https://i.discogs.com/nEhgoid1qzs59qlD7qKFf3hnPSzaCYXbqLC4X8K7I2c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+          "width": 600
+        },
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/dGn5RZgKYBxRcIoW6LI1QuIN69K69Cv_wSxtxEAC1pI/rs:fit/g:sm/q:90/h:266/w:207/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dGn5RZgKYBxRcIoW6LI1QuIN69K69Cv_wSxtxEAC1pI/rs:fit/g:sm/q:90/h:266/w:207/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/VMai_K3NtO32wah-jzfgyaUSKX_wN4eThaszGK5cvKE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+          "width": 207
+        },
+        {
+          "height": 291,
+          "resource_url": "https://i.discogs.com/mQ-Dsv-aPFYyYpcDghyFlkIdlINcrf7CN8j84ruJFCE/rs:fit/g:sm/q:90/h:291/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mQ-Dsv-aPFYyYpcDghyFlkIdlINcrf7CN8j84ruJFCE/rs:fit/g:sm/q:90/h:291/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/_v7DByVNlGs6SwZK8dLf_f1aIJlOsuGmygQ8Dvt60QM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+          "width": 200
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 21209,
+          "name": "James Lavelle",
+          "resource_url": "https://api.discogs.com/artists/21209",
+          "thumbnail_url": "https://i.discogs.com/0Xi9E8euEnT7Tc8MZ5bDxqykuOw8cnAjjYULk07eQGg/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxMjA5/LTE1NDM4MzA2MTYt/NTg3OC5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 67374,
+          "name": "Tim Goldsworthy",
+          "resource_url": "https://api.discogs.com/artists/67374",
+          "thumbnail_url": "https://i.discogs.com/9MTYWZECqFZqYlrnMkJPf4KQW9bBWHLrCAUW3r6uxu8/rs:fit/g:sm/q:40/h:226/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3Mzc0/LTExNzYyMTY4ODcu/anBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 204992,
+          "name": "Richard File",
+          "resource_url": "https://api.discogs.com/artists/204992",
+          "thumbnail_url": "https://i.discogs.com/HOt4xNgy-qVDonfOvg6M4va6lu21oZOvK9UOJDsUoRU/rs:fit/g:sm/q:40/h:541/w:389/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNDk5/Mi0xMjkyNTI0MTk0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 219560,
+          "name": "Josh Davis",
+          "resource_url": "https://api.discogs.com/artists/219560",
+          "thumbnail_url": "https://i.discogs.com/XMgEp_aWRWOfr4VkIAZHlo5B9raQY3ACR22R3tylVYU/rs:fit/g:sm/q:40/h:455/w:367/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTU2/MC0xNTg0NTMxODkz/LTEyMTIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 332767,
+          "name": "Masayuki Kudo",
+          "resource_url": "https://api.discogs.com/artists/332767",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 342386,
+          "name": "Pablo Clements",
+          "resource_url": "https://api.discogs.com/artists/342386",
+          "thumbnail_url": "https://i.discogs.com/08XyOK_7kCsrb_a1acJH4uApIijTdmjI0GAIdgIkl1o/rs:fit/g:sm/q:40/h:570/w:336/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0MjM4/Ni0xNDUyMDk1NzE3/LTM1MDMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 501836,
+          "name": "Matthew Puffett",
+          "resource_url": "https://api.discogs.com/artists/501836",
+          "thumbnail_url": "https://i.discogs.com/2hDPcTnW-X4hhlr3X4J8c5fqKeJwGaPTzBMKC96k-pk/rs:fit/g:sm/q:40/h:519/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMTgz/Ni0xNTkwNzUzMDk1/LTI3NzkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 5881573,
+          "name": "Jack Leonard (4)",
+          "resource_url": "https://api.discogs.com/artists/5881573",
+          "thumbnail_url": "https://i.discogs.com/SXlGhwjc3jn43l-QX3adlYZ962ZWyhHbi7oOQMLWs5U/rs:fit/g:sm/q:40/h:481/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODE1/NzMtMTU2MTk4OTcx/My04MzIyLmpwZWc.jpeg"
+        }
+      ],
+      "name": "UNKLE",
+      "namevariations": [
+        "O.N.KL.E.",
+        "U N K L E",
+        "U.N.K.L.E",
+        "U.N.K.L.E.",
+        "U.N.K.LE.",
+        "UNCLE",
+        "UNKLE Entertainment",
+        "UNKLE Productions",
+        "UNKLE:LIVE",
+        "UNKLEntertaiment",
+        "UNKLEntertainment",
+        "u.n.k.l.e.",
+        "アンクル",
+        "安可樂團"
+      ],
+      "profile": "UNKLE (or sometimes stylised as U.N.K.L.E. in the early days) are a British band founded in 1992 by James Lavelle and Tim Goldsworthy as [a=Men From U.N.K.L.E.].\r\n\r\nCurrent members:\r\nJames Lavelle - production, instruments (1992–present)\r\n\r\nFormer members:\r\nTim Goldsworthy - production (1992–1996)\r\nToshio Nakanishi - production (1994–1996)\r\nK.U.D.O. (Masayuki Kudo) - production (1994–1996)\r\nDJ Shadow (Josh Davis) - production, turntables (1997–1999)\r\nRich File - vocals, guitar, production (1999-2008)\r\nPablo Clements - production, instruments (2003-2011)\r\nJack Leonard - vocals, guitar, bass, production (2014-2018) (session member 2018-2020)\r\nMatthew Puffett (Future Beat Alliance) - keyboards (2016-2018) (session member 2018-2020)\r\n\r\nCurrent touring members:\r\nAlex Thomas (Squarepusher, Air) - drums (2015-present)\r\nLiela Moss (The Duke Spirit) - vocals, keyboards (2016-present)\r\nSteve Weston - engineering, keyboards, guitar, bass, visuals (2016-present)\r\n\r\nFormer touring members:\r\nThe Scratch Perverts (First Rate, Tony Vegas & Prime Cuts) - turntables, visuals (1999)\r\nBob Knight (Kylie Minogue) - drums (2003-2004)\r\nAntony Genn (Pulp, The Hours) - bass (2003-2004)\r\nRich Fownes - guitar (2007-2008)\r\nJames Griffith - bass, guitar, vocals (2007-2014)\r\nMike Lowry - drums (2007-2014)\r\nMatt Pierce - keyboards (2007-2014)\r\nSteven Young - bass (2010-2017)\r\nJack Leonard - vocals, guitar, bass, production (2018-2020) (band member 2014-2018)\r\nMatthew Puffett (Future Beat Alliance) - keyboards (2018-2020) (band member 2016-2018)\r\n\r\nWhen playing live they were also joined by The Scratch Perverts DJs [a=First Rate] & [a=Tony Vegas] & [a=Prime Cuts].\r\nThe current (2023) live show line-up is James Lavelle and [a4209271].",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 40558,
+            "name": "Men From U.N.K.L.E.",
+            "resource_url": "https://api.discogs.com/artists/40558",
+            "thumbnail_url": "https://i.discogs.com/oergmstQrPOOnM38vfOPXNJY4TQ6XjcThqSr3OAAzEw/rs:fit/g:sm/q:40/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNTU4/LTE0NDUzODk4MzUt/NjEyNi5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 3194,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/oz8O6RnS9iZ2aT-bMLIrseaiRO1v6xdBp8H_44swA_g/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/i-t7QUBpggSmC6GhlblBJ0-SJt5u3cJbIyB-GZQjSOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 509,
+            "resource_url": "https://i.discogs.com/B0jMON4-j64GBovqMCiLR33yP-boJ5Yk_lX73fIJTE0/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/B0jMON4-j64GBovqMCiLR33yP-boJ5Yk_lX73fIJTE0/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/zAhWxUygUS1zSwHwY6_6g7Xuh81b6iPVb1-nfEZgpzg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ5MTA3MDE0MS0x/OTM1LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/ays5NIXJ5yj8k756jDxsZCSQ0YJPgFf60y6QmHPsqF4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ays5NIXJ5yj8k756jDxsZCSQ0YJPgFf60y6QmHPsqF4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0Z5yHIZ_1Yiq93OR22UCtmVN6_HabCkAHz-At5W3zG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTQ4NzE2NzEwMy05/OTY5LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 668,
+            "resource_url": "https://i.discogs.com/cITzziCXB_rguL-kqSVwYR0wtICge5OylkcS6rNCMKc/rs:fit/g:sm/q:90/h:668/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/cITzziCXB_rguL-kqSVwYR0wtICge5OylkcS6rNCMKc/rs:fit/g:sm/q:90/h:668/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/UbbpkGhLD_PEBSmomi4B_OCxyyWTHhcaeZurue5vyYc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MzA2OC5q/cGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 398,
+            "resource_url": "https://i.discogs.com/CtbyEupVk45jB7UNx3bNywlv-nx4ZlCReuo9Uw_sYuA/rs:fit/g:sm/q:90/h:398/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CtbyEupVk45jB7UNx3bNywlv-nx4ZlCReuo9Uw_sYuA/rs:fit/g:sm/q:90/h:398/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/aWl7zFUAsPbyUv6Zf6edxkGquHUZCZqZ8UxedHaT8f8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjgxNS5q/cGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 801,
+            "resource_url": "https://i.discogs.com/ry5xi40Egm_pbiGe_UGGJVDWWw2HiqDOkzKsSGmN38w/rs:fit/g:sm/q:90/h:801/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ry5xi40Egm_pbiGe_UGGJVDWWw2HiqDOkzKsSGmN38w/rs:fit/g:sm/q:90/h:801/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/8Ib8PBGH5GlqL5w6hLsMyOcn9n6aVmu2U4roYz17wBg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI3NDQ0MzIyMC5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 325,
+            "resource_url": "https://i.discogs.com/eZs-WkfJybIvuaoc51jHkxQgvfDZCMiXYozu4Oyrww0/rs:fit/g:sm/q:90/h:325/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eZs-WkfJybIvuaoc51jHkxQgvfDZCMiXYozu4Oyrww0/rs:fit/g:sm/q:90/h:325/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/wjkETdYDgCes2LDfZPV_JlP3uZ4HSShTpeFTy7jWg-w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIxNzE5MDAyMC5q/cGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 700,
+            "resource_url": "https://i.discogs.com/ultcdZKzJR5TtVcb7juF5ktijHwLbS-FKh9dYAggg9o/rs:fit/g:sm/q:90/h:700/w:466/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ultcdZKzJR5TtVcb7juF5ktijHwLbS-FKh9dYAggg9o/rs:fit/g:sm/q:90/h:700/w:466/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/8V9Vs7_Qjlwd7Rzj15ILGOiZZBOTdlT2qd8xCgwAezc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjg0My5q/cGVn.jpeg",
+            "width": 466
+          },
+          {
+            "height": 280,
+            "resource_url": "https://i.discogs.com/J8sOZGGG3sgMF1aUrsV9G_3nzR9AuhZMtkXl3Qk2D_Q/rs:fit/g:sm/q:90/h:280/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/J8sOZGGG3sgMF1aUrsV9G_3nzR9AuhZMtkXl3Qk2D_Q/rs:fit/g:sm/q:90/h:280/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/KwvcAjR_J9IMowiKbmFWhQNUyzHtZatePhw7oaRMXxI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3MjcxMC5q/cGVn.jpeg",
+            "width": 280
+          },
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/KS8PdYWW0JarNyiXrMdoCW46EDPe5x1Ja1Foy06yYi8/rs:fit/g:sm/q:90/h:427/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/KS8PdYWW0JarNyiXrMdoCW46EDPe5x1Ja1Foy06yYi8/rs:fit/g:sm/q:90/h:427/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/UTn_7lzu3B0im7nOGm8-iyP7VO9f95dmqrBVRIwMim4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTIwMDg4MjIxMC5q/cGVn.jpeg",
+            "width": 425
+          },
+          {
+            "height": 774,
+            "resource_url": "https://i.discogs.com/g4V0L3-GOyyjJzbwkau-sA90xq02wYV_tdFDMI57l88/rs:fit/g:sm/q:90/h:774/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/g4V0L3-GOyyjJzbwkau-sA90xq02wYV_tdFDMI57l88/rs:fit/g:sm/q:90/h:774/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/Y63iTOZSPD1C5ggyOQYaYna3iaCE1cPEVwA4LXbBnBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3NDAwNC5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 287,
+            "resource_url": "https://i.discogs.com/WBxrRz3QwyfvzYaTgCK7sb_ng99VizXGsDqYYamG1fM/rs:fit/g:sm/q:90/h:287/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/WBxrRz3QwyfvzYaTgCK7sb_ng99VizXGsDqYYamG1fM/rs:fit/g:sm/q:90/h:287/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+            "uri150": "https://i.discogs.com/nEhgoid1qzs59qlD7qKFf3hnPSzaCYXbqLC4X8K7I2c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTI5MDc3Mjc1NS5n/aWY.jpeg",
+            "width": 600
+          },
+          {
+            "height": 266,
+            "resource_url": "https://i.discogs.com/dGn5RZgKYBxRcIoW6LI1QuIN69K69Cv_wSxtxEAC1pI/rs:fit/g:sm/q:90/h:266/w:207/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dGn5RZgKYBxRcIoW6LI1QuIN69K69Cv_wSxtxEAC1pI/rs:fit/g:sm/q:90/h:266/w:207/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/VMai_K3NtO32wah-jzfgyaUSKX_wN4eThaszGK5cvKE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTA5ODE3NTM3OS5q/cGc.jpeg",
+            "width": 207
+          },
+          {
+            "height": 291,
+            "resource_url": "https://i.discogs.com/mQ-Dsv-aPFYyYpcDghyFlkIdlINcrf7CN8j84ruJFCE/rs:fit/g:sm/q:90/h:291/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/mQ-Dsv-aPFYyYpcDghyFlkIdlINcrf7CN8j84ruJFCE/rs:fit/g:sm/q:90/h:291/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/_v7DByVNlGs6SwZK8dLf_f1aIJlOsuGmygQ8Dvt60QM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MDAxLmpwZw.jpeg",
+            "width": 200
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 21209,
+            "name": "James Lavelle",
+            "resource_url": "https://api.discogs.com/artists/21209",
+            "thumbnail_url": "https://i.discogs.com/0Xi9E8euEnT7Tc8MZ5bDxqykuOw8cnAjjYULk07eQGg/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxMjA5/LTE1NDM4MzA2MTYt/NTg3OC5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 67374,
+            "name": "Tim Goldsworthy",
+            "resource_url": "https://api.discogs.com/artists/67374",
+            "thumbnail_url": "https://i.discogs.com/9MTYWZECqFZqYlrnMkJPf4KQW9bBWHLrCAUW3r6uxu8/rs:fit/g:sm/q:40/h:226/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3Mzc0/LTExNzYyMTY4ODcu/anBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 204992,
+            "name": "Richard File",
+            "resource_url": "https://api.discogs.com/artists/204992",
+            "thumbnail_url": "https://i.discogs.com/HOt4xNgy-qVDonfOvg6M4va6lu21oZOvK9UOJDsUoRU/rs:fit/g:sm/q:40/h:541/w:389/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNDk5/Mi0xMjkyNTI0MTk0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 219560,
+            "name": "Josh Davis",
+            "resource_url": "https://api.discogs.com/artists/219560",
+            "thumbnail_url": "https://i.discogs.com/XMgEp_aWRWOfr4VkIAZHlo5B9raQY3ACR22R3tylVYU/rs:fit/g:sm/q:40/h:455/w:367/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxOTU2/MC0xNTg0NTMxODkz/LTEyMTIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 332767,
+            "name": "Masayuki Kudo",
+            "resource_url": "https://api.discogs.com/artists/332767",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 342386,
+            "name": "Pablo Clements",
+            "resource_url": "https://api.discogs.com/artists/342386",
+            "thumbnail_url": "https://i.discogs.com/08XyOK_7kCsrb_a1acJH4uApIijTdmjI0GAIdgIkl1o/rs:fit/g:sm/q:40/h:570/w:336/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM0MjM4/Ni0xNDUyMDk1NzE3/LTM1MDMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 501836,
+            "name": "Matthew Puffett",
+            "resource_url": "https://api.discogs.com/artists/501836",
+            "thumbnail_url": "https://i.discogs.com/2hDPcTnW-X4hhlr3X4J8c5fqKeJwGaPTzBMKC96k-pk/rs:fit/g:sm/q:40/h:519/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMTgz/Ni0xNTkwNzUzMDk1/LTI3NzkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 5881573,
+            "name": "Jack Leonard (4)",
+            "resource_url": "https://api.discogs.com/artists/5881573",
+            "thumbnail_url": "https://i.discogs.com/SXlGhwjc3jn43l-QX3adlYZ962ZWyhHbi7oOQMLWs5U/rs:fit/g:sm/q:40/h:481/w:486/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4ODE1/NzMtMTU2MTk4OTcx/My04MzIyLmpwZWc.jpeg"
+          }
+        ],
+        "name": "UNKLE",
+        "namevariations": [
+          "O.N.KL.E.",
+          "U N K L E",
+          "U.N.K.L.E",
+          "U.N.K.L.E.",
+          "U.N.K.LE.",
+          "UNCLE",
+          "UNKLE Entertainment",
+          "UNKLE Productions",
+          "UNKLE:LIVE",
+          "UNKLEntertaiment",
+          "UNKLEntertainment",
+          "u.n.k.l.e.",
+          "アンクル",
+          "安可樂團"
+        ],
+        "profile": "UNKLE (or sometimes stylised as U.N.K.L.E. in the early days) are a British band founded in 1992 by James Lavelle and Tim Goldsworthy as [a=Men From U.N.K.L.E.].\r\n\r\nCurrent members:\r\nJames Lavelle - production, instruments (1992–present)\r\n\r\nFormer members:\r\nTim Goldsworthy - production (1992–1996)\r\nToshio Nakanishi - production (1994–1996)\r\nK.U.D.O. (Masayuki Kudo) - production (1994–1996)\r\nDJ Shadow (Josh Davis) - production, turntables (1997–1999)\r\nRich File - vocals, guitar, production (1999-2008)\r\nPablo Clements - production, instruments (2003-2011)\r\nJack Leonard - vocals, guitar, bass, production (2014-2018) (session member 2018-2020)\r\nMatthew Puffett (Future Beat Alliance) - keyboards (2016-2018) (session member 2018-2020)\r\n\r\nCurrent touring members:\r\nAlex Thomas (Squarepusher, Air) - drums (2015-present)\r\nLiela Moss (The Duke Spirit) - vocals, keyboards (2016-present)\r\nSteve Weston - engineering, keyboards, guitar, bass, visuals (2016-present)\r\n\r\nFormer touring members:\r\nThe Scratch Perverts (First Rate, Tony Vegas & Prime Cuts) - turntables, visuals (1999)\r\nBob Knight (Kylie Minogue) - drums (2003-2004)\r\nAntony Genn (Pulp, The Hours) - bass (2003-2004)\r\nRich Fownes - guitar (2007-2008)\r\nJames Griffith - bass, guitar, vocals (2007-2014)\r\nMike Lowry - drums (2007-2014)\r\nMatt Pierce - keyboards (2007-2014)\r\nSteven Young - bass (2010-2017)\r\nJack Leonard - vocals, guitar, bass, production (2018-2020) (band member 2014-2018)\r\nMatthew Puffett (Future Beat Alliance) - keyboards (2018-2020) (band member 2016-2018)\r\n\r\nWhen playing live they were also joined by The Scratch Perverts DJs [a=First Rate] & [a=Tony Vegas] & [a=Prime Cuts].\r\nThe current (2023) live show line-up is James Lavelle and [a4209271].",
+        "releases_url": "https://api.discogs.com/artists/3194/releases",
+        "resource_url": "https://api.discogs.com/artists/3194",
+        "uri": "https://www.discogs.com/artist/3194-UNKLE",
+        "urls": [
+          "http://www.unkle.com",
+          "http://unkleofficial.blogspot.com",
+          "http://unkle.bandcamp.com",
+          "http://www.facebook.com/unkle",
+          "http://myspace.com/unkle",
+          "http://soundcloud.com/unkleofficial",
+          "http://twitter.com/unkleofficial",
+          "http://vimeo.com/unkleofficial",
+          "http://www.whosampled.com/Unkle",
+          "http://en.wikipedia.org/wiki/Unkle",
+          "http://www.youtube.com/user/UNKLEofficial"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/3194",
+      "thumb": "https://i.discogs.com/i-t7QUBpggSmC6GhlblBJ0-SJt5u3cJbIyB-GZQjSOQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxOTQt/MTU1Mzk1NjQxMS03/MzQ3LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/3194-UNKLE",
+      "urls": [
+        "http://www.unkle.com",
+        "http://unkleofficial.blogspot.com",
+        "http://unkle.bandcamp.com",
+        "http://www.facebook.com/unkle",
+        "http://myspace.com/unkle",
+        "http://soundcloud.com/unkleofficial",
+        "http://twitter.com/unkleofficial",
+        "http://vimeo.com/unkleofficial",
+        "http://www.whosampled.com/Unkle",
+        "http://en.wikipedia.org/wiki/Unkle",
+        "http://www.youtube.com/user/UNKLEofficial"
+      ]
     },
     "lastfm": {
       "bio_content": "UNKLE, a musical outfit founded in 1994 in London, England, United Kingdom. Originally categorized as trip-hop, the group once included producer DJ Shadow and has employed a variety of guest artists and producers.\n\nFrom the sleeve notes for the latest release End Titles...Stories For Film released in July 2008, the current line-up is stated as James Lavelle and Pablo Clements, also a member of the Psychonauts.\n\nThe original line-up was James Lavelle, Tim Goldsworthy (now a member of DFA) and Kudo (Major Force West, Skylab).  This incarnation released several EPs and singles, usually involving collaborations with other Mo'Wax affiliated artists.\n\nIn 1998, after the departure of Goldsworthy and Kudo, Lavelle enlisted US producer DJ Shadow to help complete UNKLE's debut album, \"Psyence Fiction\".  On this album they collaborated with a variety of guest artists including Thom Yorke (Radiohead), Mike D (Beastie Boys), Badly Drawn Boy and Richard Ashcroft (The Verve). The album contained songs which merged indie-rock with hip hop.\n\nIn 2003 UNKLE released \"Never, Never, Land\".  At this time UNKLE consisted of Lavelle and new collaborator Richard File, and the album also featured Ian Brown (The Stone Roses), Josh Homme (Queens of the Stone Age), Robert Del Naja (Massive Attack), Mani (The Stone Roses, Primal Scream) and others.\n\nA third album entitled \"War Stories\" was released in July 2007.  It features collaborations with Josh Homme (Queens of the Stone Age), Ian Astbury (The Cult), Autolux, Robert Del Naja (Massive Attack), The Duke Spirit, and Gavin Clark, and is far more strongly rock-influenced than previous releases.   The album was preceded by an EP, Nights Temper, of which a limited pressing was released in May 2007.  \n\nLavelle has also released several mix albums and remixes under his own name and under the name UNKLEsounds (together with Richard File).\n\nUNKLE is known for remixing music from artists such as Explosions in the Sky, Massive Attack, and Oasis. <a href=\"https://www.last.fm/music/UNKLE\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +572,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1323393,
+      "listeners": 1323675,
       "mbid": "6648391e-7890-4f6c-b939-976f215195d3",
       "name": "UNKLE",
-      "playcount": 37185367,
+      "playcount": 37192589,
       "similar_artists": [
         {
           "name": "DJ Shadow",
@@ -171,7 +608,7 @@
       "url": "https://www.last.fm/music/UNKLE"
     },
     "spotify": {
-      "followers": 395145,
+      "followers": 395245,
       "genres": [
         "trip hop",
         "downtempo"
@@ -201,6 +638,6 @@
   },
   "spotify_id": "2nszamLjZFgu3Yx77mKxuC",
   "spotify_url": "https://open.spotify.com/artist/2nszamLjZFgu3Yx77mKxuC",
-  "updated_at": "2025-07-05T16:35:02.287212",
+  "updated_at": "2025-07-08T10:00:44.280722",
   "wikipedia_url": null
 }

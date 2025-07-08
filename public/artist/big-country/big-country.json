@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:15:34.062156",
   "discogs_id": "91685",
-  "discogs_url": "https://www.discogs.com/artist/91685",
-  "followers": 257169,
+  "discogs_url": "https://www.discogs.com/artist/91685-Big-Country",
+  "followers": 257222,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -17,7 +17,7 @@
     "Scottish",
     "alternative"
   ],
-  "id": null,
+  "id": "big-country-1751732137",
   "images": [
     {
       "height": 2000,
@@ -84,14 +84,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/MJYFq-JbOEdB2OG_groNeN46cJeRqphb8gFGb7tWAl8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "b4013ff1-d7ce-4b1a-af6e-e0b19ca7f378",
   "lastfm_url": "https://www.last.fm/music/Big+Country",
   "local_images": {
-    "hi-res": "public/artist/big-country/big-country-hi-res.jpg",
-    "medium": "public/artist/big-country/big-country-medium.jpg",
-    "small": "public/artist/big-country/big-country-small.jpg"
+    "hi-res": "../public/artist/big-country/big-country-hi-res.jpg",
+    "medium": "../public/artist/big-country/big-country-medium.jpg",
+    "small": "../public/artist/big-country/big-country-small.jpg"
   },
   "name": "Big Country",
   "popularity": 51,
@@ -108,9 +120,382 @@
       "url": "https://music.apple.com/gb/artist/big-country/373911"
     },
     "discogs": {
-      "id": 91685,
-      "original_name": "Big Country",
-      "role": ""
+      "cover_image": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "91685",
+      "images": [
+        {
+          "height": 607,
+          "resource_url": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/MJYFq-JbOEdB2OG_groNeN46cJeRqphb8gFGb7tWAl8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 325,
+          "resource_url": "https://i.discogs.com/Rz6J8AY2e-Vs31sO8DLnFeT8-oQi5_dkZf5kT1NMohI/rs:fit/g:sm/q:90/h:325/w:286/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Rz6J8AY2e-Vs31sO8DLnFeT8-oQi5_dkZf5kT1NMohI/rs:fit/g:sm/q:90/h:325/w:286/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/Vb_W73cKWwIfpFG9Q-JZNQGCdBOZJ03kXi-Q2GFCHwQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+          "width": 286
+        },
+        {
+          "height": 204,
+          "resource_url": "https://i.discogs.com/qkHIK8si8sD-60Mf1l7YLWs_EkwIPFSCN7uNIDGFF5Q/rs:fit/g:sm/q:90/h:204/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qkHIK8si8sD-60Mf1l7YLWs_EkwIPFSCN7uNIDGFF5Q/rs:fit/g:sm/q:90/h:204/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/5pjrSTE7Tbr0fReh5eAmvmHQwwmuRkTLHrrKUvA395k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 151,
+          "resource_url": "https://i.discogs.com/Nfg7xo1QD1xvTXg4-3T-fcagd2ak0NFZo5Lolg26Q0Y/rs:fit/g:sm/q:90/h:151/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Nfg7xo1QD1xvTXg4-3T-fcagd2ak0NFZo5Lolg26Q0Y/rs:fit/g:sm/q:90/h:151/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/DUTNV2TpCyGFoK-7HgKyNk40mstJgAZulKldQqRXQQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 152,
+          "resource_url": "https://i.discogs.com/aHmAB_Qu3Gz-IeIx3QRBa3p-B_s7HN6J3RHFd5z73co/rs:fit/g:sm/q:90/h:152/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aHmAB_Qu3Gz-IeIx3QRBa3p-B_s7HN6J3RHFd5z73co/rs:fit/g:sm/q:90/h:152/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+          "uri150": "https://i.discogs.com/VTIi8fBGkt--d64RrHkIoV3JFMyHLsyurDAd5gaPv_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 244,
+          "resource_url": "https://i.discogs.com/0945An3ifbLsIsqu4rKHsiyshpawuFFRrP3AYbkeGtU/rs:fit/g:sm/q:90/h:244/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0945An3ifbLsIsqu4rKHsiyshpawuFFRrP3AYbkeGtU/rs:fit/g:sm/q:90/h:244/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/dcI1KsFkf7JnQMhvrHdZIxEr_AlMbdlfVTEXLB9X420/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+          "width": 246
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/z75h7IlKNOs5OpsGIgauMAy0EVbNdWzVrXe4o-I3Cu4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/z75h7IlKNOs5OpsGIgauMAy0EVbNdWzVrXe4o-I3Cu4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9D6-WWYEikkifBXqr1n9b-NTfecXR5ACO0prdIhHZdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 375,
+          "resource_url": "https://i.discogs.com/6cPjp4Nqc0BwP9fMz1hG0XBZLDPX3gI8cfb_VjW62-c/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6cPjp4Nqc0BwP9fMz1hG0XBZLDPX3gI8cfb_VjW62-c/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Wre0KUTWuuo95QGDRF9ArKo3uHRuv0IKBxjyN-a7XbI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/6SlooGmur3FmlK2p_Xd0iRzpW-cPGPKCYesoeIqu9FA/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6SlooGmur3FmlK2p_Xd0iRzpW-cPGPKCYesoeIqu9FA/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/f-2l04owguG9CnXcrgLLgU56Iq8WfDYjzvkPjhIhoDU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 285,
+          "resource_url": "https://i.discogs.com/VunTPoAvae-l5wgIPBC7ROVHHOvBsU9BEVQmfoCqAwk/rs:fit/g:sm/q:90/h:285/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VunTPoAvae-l5wgIPBC7ROVHHOvBsU9BEVQmfoCqAwk/rs:fit/g:sm/q:90/h:285/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/f1Z6iFykGHmRbMIXHkzT6aQ7mgyHZmu_7XOTzUCXFnk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 112841,
+          "name": "Mark Brzezicki",
+          "resource_url": "https://api.discogs.com/artists/112841",
+          "thumbnail_url": "https://i.discogs.com/nVgZExQMx9jaOH7K5mxwH-J7U1x_50UDKTv5S5ddWfk/rs:fit/g:sm/q:40/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjg0/MS0xMjU0NTYwODEy/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 232842,
+          "name": "Mike Peters",
+          "resource_url": "https://api.discogs.com/artists/232842",
+          "thumbnail_url": "https://i.discogs.com/p67j5Ozcg6t-86oRaroLwo7lcSc0vYFc_TCzPsX8kfo/rs:fit/g:sm/q:40/h:572/w:316/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMjg0/Mi0xNTUzMzM2NzM1/LTgzMzAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 253622,
+          "name": "Stuart Adamson",
+          "resource_url": "https://api.discogs.com/artists/253622",
+          "thumbnail_url": "https://i.discogs.com/OFbsHwQUDQHKgvdxupZ2guRUOkPVKoTE7ATTDhVZJdc/rs:fit/g:sm/q:40/h:548/w:520/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzYy/Mi0xNDQxNTc3MzQy/LTIwMjkuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 255730,
+          "name": "Bruce Watson",
+          "resource_url": "https://api.discogs.com/artists/255730",
+          "thumbnail_url": "https://i.discogs.com/3S-6O8M28JKR2zlsvFKE6LxGLHNRVs9y0RFf3XMOjFg/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NTcz/MC0xMjU0NTYwNjc4/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 287983,
+          "name": "Derek Forbes",
+          "resource_url": "https://api.discogs.com/artists/287983",
+          "thumbnail_url": "https://i.discogs.com/lJNVcYKKywy8QYoGQODJK0zSE7WrVSIJry13skfoamc/rs:fit/g:sm/q:40/h:416/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4Nzk4/My0xMTQ4MjU1MjQ0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 418624,
+          "name": "Tony Butler",
+          "resource_url": "https://api.discogs.com/artists/418624",
+          "thumbnail_url": "https://i.discogs.com/WsJeFgarPIudPUl3DL_c-RDcEIiu51ISImrmxmwA65w/rs:fit/g:sm/q:40/h:600/w:593/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxODYy/NC0xMjU0NTYwOTA4/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 544449,
+          "name": "Peter Wishart",
+          "resource_url": "https://api.discogs.com/artists/544449",
+          "thumbnail_url": "https://i.discogs.com/3tuLmAiFbO66QIXqpP94L_knLyCM-f7SPyV0LXvzhnA/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NDQ0/OS0xNzA3MTQwODE3/LTU2NzAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 724275,
+          "name": "Clive Parker",
+          "resource_url": "https://api.discogs.com/artists/724275",
+          "thumbnail_url": "https://i.discogs.com/okzcID4ts0NaJJjj_aovPfPmaf_quZdTnV_lD6SetyY/rs:fit/g:sm/q:40/h:502/w:451/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNDI3/NS0xNjg0MjUzMjY3/LTUzNjcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2527264,
+          "name": "Jamie Watson (6)",
+          "resource_url": "https://api.discogs.com/artists/2527264",
+          "thumbnail_url": "https://i.discogs.com/uvlZTldZfzFKmP-6hfmsSFovlcpSrUGq1VqAF6-pQaY/rs:fit/g:sm/q:40/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mjcy/NjQtMTM5ODM1Mzg4/OC05NDI1LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 3214655,
+          "name": "Scott Whitley",
+          "resource_url": "https://api.discogs.com/artists/3214655",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 4005619,
+          "name": "Simon Hough",
+          "resource_url": "https://api.discogs.com/artists/4005619",
+          "thumbnail_url": "https://i.discogs.com/aQGHBAiYeArpTJvxQB0WIZRpE10KGnqlo51EX9ROQIA/rs:fit/g:sm/q:40/h:960/w:546/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMDU2/MTktMTUwNDg2MzY4/Mi03NDE4LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Big Country",
+      "namevariations": [
+        "Adamson/Watson/Butler/Brzezicki",
+        "B. Country",
+        "Big Country Hats",
+        "The Big Country",
+        "ビッグ・カントリー"
+      ],
+      "profile": "Scottish rock band formed in the early 1980s.\r\nManaged By [a=Ian Grant] of [a=Grant Edwards Management]\r\n[b]Lineup:[/b]\r\nStuart Adamson: Vocals, Guitar, Synthesizer. Born April 11, 1958, died December 16, 2001 (suicide)\r\nBruce Watson: Guitar\r\nTony Butler: Bass (until 2012)\r\nMark Brzezicki: Drums\r\nMike Peters: Vocals, Guitar (2010 - 2013; died 2025)\r\nJamie Watson (Son of Bruce): Guitar (since 2010)\r\nDerek Forbes: Bass (2012 - 2015)\r\nSimon Hough: Vocals, Acoustic Guitar (2014 - 2024)\r\nScott Whitley: Bass (2015 - 2021)\r\nGil Allan: Bass (since 2021)\r\nTommie Paxton: Vocals, Guitar (since 2024)\r\nYears active:\t1981–2000, 2007, 2010–present\r\n\r\n[b]Please note that the UK releases during the '80s should be on the Mercury label, this is not actually mentioned on the label or sleeves of the earliest singles. The only information refers to Phonogram who were the publishing house for Mercury at that time, which is why their name and logo will appear.[/b]",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 91685,
+        "images": [
+          {
+            "height": 607,
+            "resource_url": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/IVOI2h7KERL6tMQ8w8QhIk-F2PrKSl-Kxp30Uixk5sc/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/MJYFq-JbOEdB2OG_groNeN46cJeRqphb8gFGb7tWAl8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 325,
+            "resource_url": "https://i.discogs.com/Rz6J8AY2e-Vs31sO8DLnFeT8-oQi5_dkZf5kT1NMohI/rs:fit/g:sm/q:90/h:325/w:286/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Rz6J8AY2e-Vs31sO8DLnFeT8-oQi5_dkZf5kT1NMohI/rs:fit/g:sm/q:90/h:325/w:286/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/Vb_W73cKWwIfpFG9Q-JZNQGCdBOZJ03kXi-Q2GFCHwQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEwNzQwNzI4MDIu/anBn.jpeg",
+            "width": 286
+          },
+          {
+            "height": 204,
+            "resource_url": "https://i.discogs.com/qkHIK8si8sD-60Mf1l7YLWs_EkwIPFSCN7uNIDGFF5Q/rs:fit/g:sm/q:90/h:204/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qkHIK8si8sD-60Mf1l7YLWs_EkwIPFSCN7uNIDGFF5Q/rs:fit/g:sm/q:90/h:204/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/5pjrSTE7Tbr0fReh5eAmvmHQwwmuRkTLHrrKUvA395k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc3Nzcu/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 151,
+            "resource_url": "https://i.discogs.com/Nfg7xo1QD1xvTXg4-3T-fcagd2ak0NFZo5Lolg26Q0Y/rs:fit/g:sm/q:90/h:151/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Nfg7xo1QD1xvTXg4-3T-fcagd2ak0NFZo5Lolg26Q0Y/rs:fit/g:sm/q:90/h:151/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/DUTNV2TpCyGFoK-7HgKyNk40mstJgAZulKldQqRXQQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4NDgu/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 152,
+            "resource_url": "https://i.discogs.com/aHmAB_Qu3Gz-IeIx3QRBa3p-B_s7HN6J3RHFd5z73co/rs:fit/g:sm/q:90/h:152/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aHmAB_Qu3Gz-IeIx3QRBa3p-B_s7HN6J3RHFd5z73co/rs:fit/g:sm/q:90/h:152/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+            "uri150": "https://i.discogs.com/VTIi8fBGkt--d64RrHkIoV3JFMyHLsyurDAd5gaPv_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTExMDc3ODc4Nzku/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 244,
+            "resource_url": "https://i.discogs.com/0945An3ifbLsIsqu4rKHsiyshpawuFFRrP3AYbkeGtU/rs:fit/g:sm/q:90/h:244/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0945An3ifbLsIsqu4rKHsiyshpawuFFRrP3AYbkeGtU/rs:fit/g:sm/q:90/h:244/w:246/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/dcI1KsFkf7JnQMhvrHdZIxEr_AlMbdlfVTEXLB9X420/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyMzA5NzIwMDUu/anBlZw.jpeg",
+            "width": 246
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/z75h7IlKNOs5OpsGIgauMAy0EVbNdWzVrXe4o-I3Cu4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/z75h7IlKNOs5OpsGIgauMAy0EVbNdWzVrXe4o-I3Cu4/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/9D6-WWYEikkifBXqr1n9b-NTfecXR5ACO0prdIhHZdk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTEyNTQ1NjI4MDYu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 375,
+            "resource_url": "https://i.discogs.com/6cPjp4Nqc0BwP9fMz1hG0XBZLDPX3gI8cfb_VjW62-c/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6cPjp4Nqc0BwP9fMz1hG0XBZLDPX3gI8cfb_VjW62-c/rs:fit/g:sm/q:90/h:375/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Wre0KUTWuuo95QGDRF9ArKo3uHRuv0IKBxjyN-a7XbI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0MjgzODU1NjIt/OTIyOS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/6SlooGmur3FmlK2p_Xd0iRzpW-cPGPKCYesoeIqu9FA/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6SlooGmur3FmlK2p_Xd0iRzpW-cPGPKCYesoeIqu9FA/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/f-2l04owguG9CnXcrgLLgU56Iq8WfDYjzvkPjhIhoDU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE0NjIzMjg1MDQt/NTY5Mi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 285,
+            "resource_url": "https://i.discogs.com/VunTPoAvae-l5wgIPBC7ROVHHOvBsU9BEVQmfoCqAwk/rs:fit/g:sm/q:90/h:285/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/VunTPoAvae-l5wgIPBC7ROVHHOvBsU9BEVQmfoCqAwk/rs:fit/g:sm/q:90/h:285/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/f1Z6iFykGHmRbMIXHkzT6aQ7mgyHZmu_7XOTzUCXFnk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE1MDc5MzM1NzMt/MjExMC5qcGVn.jpeg",
+            "width": 400
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 112841,
+            "name": "Mark Brzezicki",
+            "resource_url": "https://api.discogs.com/artists/112841",
+            "thumbnail_url": "https://i.discogs.com/nVgZExQMx9jaOH7K5mxwH-J7U1x_50UDKTv5S5ddWfk/rs:fit/g:sm/q:40/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjg0/MS0xMjU0NTYwODEy/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 232842,
+            "name": "Mike Peters",
+            "resource_url": "https://api.discogs.com/artists/232842",
+            "thumbnail_url": "https://i.discogs.com/p67j5Ozcg6t-86oRaroLwo7lcSc0vYFc_TCzPsX8kfo/rs:fit/g:sm/q:40/h:572/w:316/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMjg0/Mi0xNTUzMzM2NzM1/LTgzMzAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 253622,
+            "name": "Stuart Adamson",
+            "resource_url": "https://api.discogs.com/artists/253622",
+            "thumbnail_url": "https://i.discogs.com/OFbsHwQUDQHKgvdxupZ2guRUOkPVKoTE7ATTDhVZJdc/rs:fit/g:sm/q:40/h:548/w:520/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MzYy/Mi0xNDQxNTc3MzQy/LTIwMjkuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 255730,
+            "name": "Bruce Watson",
+            "resource_url": "https://api.discogs.com/artists/255730",
+            "thumbnail_url": "https://i.discogs.com/3S-6O8M28JKR2zlsvFKE6LxGLHNRVs9y0RFf3XMOjFg/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NTcz/MC0xMjU0NTYwNjc4/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 287983,
+            "name": "Derek Forbes",
+            "resource_url": "https://api.discogs.com/artists/287983",
+            "thumbnail_url": "https://i.discogs.com/lJNVcYKKywy8QYoGQODJK0zSE7WrVSIJry13skfoamc/rs:fit/g:sm/q:40/h:416/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4Nzk4/My0xMTQ4MjU1MjQ0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 418624,
+            "name": "Tony Butler",
+            "resource_url": "https://api.discogs.com/artists/418624",
+            "thumbnail_url": "https://i.discogs.com/WsJeFgarPIudPUl3DL_c-RDcEIiu51ISImrmxmwA65w/rs:fit/g:sm/q:40/h:600/w:593/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxODYy/NC0xMjU0NTYwOTA4/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 544449,
+            "name": "Peter Wishart",
+            "resource_url": "https://api.discogs.com/artists/544449",
+            "thumbnail_url": "https://i.discogs.com/3tuLmAiFbO66QIXqpP94L_knLyCM-f7SPyV0LXvzhnA/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NDQ0/OS0xNzA3MTQwODE3/LTU2NzAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 724275,
+            "name": "Clive Parker",
+            "resource_url": "https://api.discogs.com/artists/724275",
+            "thumbnail_url": "https://i.discogs.com/okzcID4ts0NaJJjj_aovPfPmaf_quZdTnV_lD6SetyY/rs:fit/g:sm/q:40/h:502/w:451/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyNDI3/NS0xNjg0MjUzMjY3/LTUzNjcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2527264,
+            "name": "Jamie Watson (6)",
+            "resource_url": "https://api.discogs.com/artists/2527264",
+            "thumbnail_url": "https://i.discogs.com/uvlZTldZfzFKmP-6hfmsSFovlcpSrUGq1VqAF6-pQaY/rs:fit/g:sm/q:40/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mjcy/NjQtMTM5ODM1Mzg4/OC05NDI1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 3214655,
+            "name": "Scott Whitley",
+            "resource_url": "https://api.discogs.com/artists/3214655",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 4005619,
+            "name": "Simon Hough",
+            "resource_url": "https://api.discogs.com/artists/4005619",
+            "thumbnail_url": "https://i.discogs.com/aQGHBAiYeArpTJvxQB0WIZRpE10KGnqlo51EX9ROQIA/rs:fit/g:sm/q:40/h:960/w:546/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMDU2/MTktMTUwNDg2MzY4/Mi03NDE4LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Big Country",
+        "namevariations": [
+          "Adamson/Watson/Butler/Brzezicki",
+          "B. Country",
+          "Big Country Hats",
+          "The Big Country",
+          "ビッグ・カントリー"
+        ],
+        "profile": "Scottish rock band formed in the early 1980s.\r\nManaged By [a=Ian Grant] of [a=Grant Edwards Management]\r\n[b]Lineup:[/b]\r\nStuart Adamson: Vocals, Guitar, Synthesizer. Born April 11, 1958, died December 16, 2001 (suicide)\r\nBruce Watson: Guitar\r\nTony Butler: Bass (until 2012)\r\nMark Brzezicki: Drums\r\nMike Peters: Vocals, Guitar (2010 - 2013; died 2025)\r\nJamie Watson (Son of Bruce): Guitar (since 2010)\r\nDerek Forbes: Bass (2012 - 2015)\r\nSimon Hough: Vocals, Acoustic Guitar (2014 - 2024)\r\nScott Whitley: Bass (2015 - 2021)\r\nGil Allan: Bass (since 2021)\r\nTommie Paxton: Vocals, Guitar (since 2024)\r\nYears active:\t1981–2000, 2007, 2010–present\r\n\r\n[b]Please note that the UK releases during the '80s should be on the Mercury label, this is not actually mentioned on the label or sleeves of the earliest singles. The only information refers to Phonogram who were the publishing house for Mercury at that time, which is why their name and logo will appear.[/b]",
+        "releases_url": "https://api.discogs.com/artists/91685/releases",
+        "resource_url": "https://api.discogs.com/artists/91685",
+        "uri": "https://www.discogs.com/artist/91685-Big-Country",
+        "urls": [
+          "http://www.bigcountry.co.uk/",
+          "https://www.facebook.com/inabigcountry",
+          "https://twitter.com/BigCountryUK",
+          "https://www.instagram.com/bigcountryofficial",
+          "https://www.youtube.com/@BigCountry",
+          "https://soundcloud.com/big-country-music",
+          "http://en.wikipedia.org/wiki/Big_Country",
+          "http://www.bigcountryinfo.com/",
+          "https://www.imdb.com/name/nm0081691/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/91685",
+      "thumb": "https://i.discogs.com/MJYFq-JbOEdB2OG_groNeN46cJeRqphb8gFGb7tWAl8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNjg1/LTE2ODQ4ODIxMzYt/MjE1OS5wbmc.jpeg",
+      "url": "https://www.discogs.com/artist/91685-Big-Country",
+      "urls": [
+        "http://www.bigcountry.co.uk/",
+        "https://www.facebook.com/inabigcountry",
+        "https://twitter.com/BigCountryUK",
+        "https://www.instagram.com/bigcountryofficial",
+        "https://www.youtube.com/@BigCountry",
+        "https://soundcloud.com/big-country-music",
+        "http://en.wikipedia.org/wiki/Big_Country",
+        "http://www.bigcountryinfo.com/",
+        "https://www.imdb.com/name/nm0081691/"
+      ]
     },
     "lastfm": {
       "bio_content": "Big Country are a new wave/alternative rock band which formed in Dunfermline, Scotland in 1981. The original band consisted of Stuart Adamson (vocals, guitar), Bruce Watson (guitar, vocals), Tony Butler (bass) and Mark Brzezicki (drums). Adamson was a former member of the Scottish punk band The Skids. The band's music incorporated Scottish folk and martial music styles, and the band engineered their guitar-driven sound to evoke the sound of bagpipes, fiddles, and other traditional folk instruments. \n\nFollowing Adamson's death in 2001, the band reformed in 2007, with the surviving members. Between 2010 and 2013, the band reformed with Mike Peters of The Alarm on lead vocals. Since then the band has continued with only two of the original members (Watson and Brzezicki).\n\nBig Country's first single was \"Harvest Home\", recorded and released in 1982. It was a modest success, although it did not reach the UK Singles Chart. Their next single was 1983's \"Fields Of Fire (400 Miles)\", which reached the UK's Top Ten and was followed by the album The Crossing. The album was a hit in the United States (reaching the Top 20 in the Billboard 200), powered by \"In a Big Country\", their only US Top 40 single.\n\nStuart Adamson was found dead in a room at the Best Western Plaza Hotel in Honolulu, Hawaii on 16 December 2001, having been believed to have died by suicide.\n\nOn 24 May 2024 the band announced that singer Tommie Paxton would being \"helping them out\" for the year. Paxton is guitar player and singer with the Big Country tribute band Restless Natives. <a href=\"https://www.last.fm/music/Big+Country\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -141,10 +526,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 298997,
+      "listeners": 299090,
       "mbid": "b4013ff1-d7ce-4b1a-af6e-e0b19ca7f378",
       "name": "Big Country",
-      "playcount": 3336472,
+      "playcount": 3338014,
       "similar_artists": [
         {
           "name": "The Skids",
@@ -177,7 +562,7 @@
       "url": "https://www.last.fm/music/Big+Country"
     },
     "spotify": {
-      "followers": 257169,
+      "followers": 257222,
       "genres": [
         "new wave",
         "celtic rock"
@@ -212,6 +597,6 @@
   },
   "spotify_id": "1h8YIw9HLr6E8gdXVDRbVJ",
   "spotify_url": "https://open.spotify.com/artist/1h8YIw9HLr6E8gdXVDRbVJ",
-  "updated_at": "2025-07-05T17:15:37.206690",
+  "updated_at": "2025-07-08T10:06:24.069671",
   "wikipedia_url": null
 }

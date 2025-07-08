@@ -1,12 +1,12 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
-  "biography": null,
+  "apple_music_id": "20883318",
+  "apple_music_url": "https://music.apple.com/gb/artist/bob-stanley/20883318",
+  "biography": "Bob Stanley is a British musician, journalist, author, and film producer. He is a member of the indie pop group Saint Etienne and has had a parallel career as a music journalist and author, writing for NME, Melody Maker, Mojo, The Guardian and The Times, as well as writing several books on music and football. His second publication, Yeah! Yeah! Yeah!: The Story of Modern Pop, was published by Faber & Faber in 2013. His third publication Let's Do It: The Birth of Pop Music: A History was published by Pegasus in 2022. He also has a career as a DJ and as a producer of record labels, and has collaborated on a series of films about London.",
   "country": null,
   "created_at": "2025-07-05T16:16:28.275769",
   "discogs_id": "438155",
   "discogs_url": "https://www.discogs.com/artist/438155-Bob-Stanley",
-  "followers": null,
+  "followers": 77,
   "formed_date": null,
   "genres": [
     "Worldwide",
@@ -16,6 +16,12 @@
   ],
   "id": "bob-stanley-1751728591",
   "images": [
+    {
+      "height": 2000,
+      "type": "apple_music_artist",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/ca/72/ec/mzi.aotkiixu.jpg/2000x2000ac.jpg",
+      "width": 2000
+    },
     {
       "height": null,
       "type": "discogs_artist_primary",
@@ -27,12 +33,6 @@
       "type": "discogs_artist_thumb",
       "url": "https://i.discogs.com/S2Xe21-wUBjQS8sPLBbU-kH5_prsiMvz6xoHN7sswHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
       "width": null
-    },
-    {
-      "height": 2000,
-      "type": "custom_artist_image",
-      "url": "https://cdn.prod.website-files.com/5ee10044c8ef9b97a404acdc/5ee7ae5906d3c69ec2c4e971_5ee7ae4324aa1f43ff0d9d2a_Bob%2BStanley.png",
-      "width": 2000
     }
   ],
   "lastfm_mbid": null,
@@ -43,9 +43,19 @@
     "small": "../public/artist/bob-stanley/bob-stanley-small.jpg"
   },
   "name": "Bob Stanley",
-  "popularity": null,
+  "popularity": 14,
   "services": {
-    "apple_music": {},
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/ca/72/ec/mzi.aotkiixu.jpg/2000x2000ac.jpg",
+      "editorial_notes": null,
+      "genres": [
+        "Worldwide"
+      ],
+      "id": "20883318",
+      "name": "Bob Stanley",
+      "origin": "",
+      "url": "https://music.apple.com/gb/artist/bob-stanley/20883318"
+    },
     "discogs": {
       "cover_image": "https://i.discogs.com/Co-GU0DQO5dZqPwSMtWK0VUWeh_5iurQBiG3Ia-Ic-0/rs:fit/g:sm/q:90/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODE1/NS0xNjY4MDA1NjY0/LTQzODguanBlZw.jpeg",
       "fetch_timestamp": "2025-07-06T13:50:00Z",
@@ -221,10 +231,20 @@
       ],
       "url": "https://www.last.fm/music/Bob+Stanley"
     },
-    "spotify": {}
+    "spotify": {
+      "followers": 77,
+      "genres": [
+        "ragtime"
+      ],
+      "id": "1fPaSpcmCOEWEIsa3Hu1Aj",
+      "images": [],
+      "name": "Bob Stanley",
+      "popularity": 14,
+      "url": "https://open.spotify.com/artist/1fPaSpcmCOEWEIsa3Hu1Aj"
+    }
   },
-  "spotify_id": null,
-  "spotify_url": null,
-  "updated_at": "2025-07-07T20:57:01.499615",
-  "wikipedia_url": null
+  "spotify_id": "1fPaSpcmCOEWEIsa3Hu1Aj",
+  "spotify_url": "https://open.spotify.com/artist/1fPaSpcmCOEWEIsa3Hu1Aj",
+  "updated_at": "2025-07-08T10:16:15.791086",
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Bob_Stanley_(musician)"
 }

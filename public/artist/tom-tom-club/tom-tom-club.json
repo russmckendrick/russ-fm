@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:03:29.550870",
   "discogs_id": "48404",
-  "discogs_url": "https://www.discogs.com/artist/48404",
-  "followers": 168754,
+  "discogs_url": "https://www.discogs.com/artist/48404-Tom-Tom-Club",
+  "followers": 168854,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -16,7 +16,7 @@
     "synth pop",
     "pop"
   ],
-  "id": null,
+  "id": "tom-tom-club-1751727811",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/nPExk0C6N96MR7jAuWWvo-QuGPkqzwd383ZhSmsC56Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "3dc66525-d359-406d-9cdf-cdd3a7de289c",
   "lastfm_url": "https://www.last.fm/music/Tom+Tom+Club",
   "local_images": {
-    "hi-res": "public/artist/tom-tom-club/tom-tom-club-hi-res.jpg",
-    "medium": "public/artist/tom-tom-club/tom-tom-club-medium.jpg",
-    "small": "public/artist/tom-tom-club/tom-tom-club-small.jpg"
+    "hi-res": "../public/artist/tom-tom-club/tom-tom-club-hi-res.jpg",
+    "medium": "../public/artist/tom-tom-club/tom-tom-club-medium.jpg",
+    "small": "../public/artist/tom-tom-club/tom-tom-club-small.jpg"
   },
   "name": "Tom Tom Club",
   "popularity": 48,
@@ -101,9 +113,375 @@
       "url": "https://music.apple.com/gb/artist/tom-tom-club/205492"
     },
     "discogs": {
-      "id": 48404,
-      "original_name": "Tom Tom Club",
-      "role": ""
+      "cover_image": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "48404",
+      "images": [
+        {
+          "height": 352,
+          "resource_url": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/nPExk0C6N96MR7jAuWWvo-QuGPkqzwd383ZhSmsC56Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+          "width": 522
+        },
+        {
+          "height": 424,
+          "resource_url": "https://i.discogs.com/whnPAwfB9F26JQkYKfGVEIUkdQOwu7kcNonsV2B4JDw/rs:fit/g:sm/q:90/h:424/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/whnPAwfB9F26JQkYKfGVEIUkdQOwu7kcNonsV2B4JDw/rs:fit/g:sm/q:90/h:424/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/zYDd-RBnu3Y9u46wpm1OQqjTmHqH8m6DhFqg8N4TqOs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+          "width": 435
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/CyUNbmdjOb7LZkSD9SEV7OcNGYRODtkyUTbU0VF4Ey0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CyUNbmdjOb7LZkSD9SEV7OcNGYRODtkyUTbU0VF4Ey0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/xWobNRr9wo8ZePEzQdPT2IXE8EpcyTOLWc33tFE9t9c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/6js40dYxGaKGytjTqDfZeuZsSs1-zR9OQa6Z4fxjc7Q/rs:fit/g:sm/q:90/h:461/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6js40dYxGaKGytjTqDfZeuZsSs1-zR9OQa6Z4fxjc7Q/rs:fit/g:sm/q:90/h:461/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/XbhU1F98BcFiv3FppZLtPwsB_NOTaPML-D4FIiIRlnw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+          "width": 441
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 9051,
+          "name": "Wally Badarou",
+          "resource_url": "https://api.discogs.com/artists/9051",
+          "thumbnail_url": "https://i.discogs.com/DRsbqiqImjCDygpYOkL1QWPPrRFkTUmtgwLtqYbDG2w/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkwNTEt/MTM2ODgzNjc0MS03/MjA1LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 15826,
+          "name": "Steven Stanley",
+          "resource_url": "https://api.discogs.com/artists/15826",
+          "thumbnail_url": "https://i.discogs.com/NpEDOporPG9M9BTr8glnDzagFNOZxbKuxiAU5EYDdWU/rs:fit/g:sm/q:40/h:529/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODI2/LTE0OTQ1NDIwMDQt/ODM5OC5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 47110,
+          "name": "Chris Frantz",
+          "resource_url": "https://api.discogs.com/artists/47110",
+          "thumbnail_url": "https://i.discogs.com/PwcZj0w3mSVw7YSNKV4oKiwD2RYelBlUNTEoevL15uA/rs:fit/g:sm/q:40/h:322/w:238/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MTEw/LTE0NTA0NDQ0MjYt/NTI2OS5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 47111,
+          "name": "Tina Weymouth",
+          "resource_url": "https://api.discogs.com/artists/47111",
+          "thumbnail_url": "https://i.discogs.com/96oErWQjy3tgdrDdTm3v2AJpOG9CmnD31WhwQ1x0HZU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MTEx/LTEzMTk0NzEwODEu/anBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 55902,
+          "name": "Adrian Belew",
+          "resource_url": "https://api.discogs.com/artists/55902",
+          "thumbnail_url": "https://i.discogs.com/iCNMKWlm7re_cuX41IxIOnNUDRpwccesQ61ZbaIldnk/rs:fit/g:sm/q:40/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1OTAy/LTE2NDEzNDkxMzkt/Mjc1OC5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 75184,
+          "name": "Rupert Hine",
+          "resource_url": "https://api.discogs.com/artists/75184",
+          "thumbnail_url": "https://i.discogs.com/JSOB_lxovN-gEZSgXI-Jl-Z5lPCES-VxkWAqsrp_-wI/rs:fit/g:sm/q:40/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc1MTg0/LTE0MDM4OTc3NjMt/NDI4NC5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 170856,
+          "name": "Gary Pozner",
+          "resource_url": "https://api.discogs.com/artists/170856",
+          "thumbnail_url": "https://i.discogs.com/bVx1_VGtA-z3AXuWC4SmvKfFsV190bfgq8OZMZsK6sk/rs:fit/g:sm/q:40/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MDg1/Ni0xNDI3Mzg3Njky/LTE0MTEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 268616,
+          "name": "Raymond Jones",
+          "resource_url": "https://api.discogs.com/artists/268616",
+          "thumbnail_url": "https://i.discogs.com/24dB17hGkVZGVUXSQjaXV-4bTdgoKPw-jWJNAB5P0sI/rs:fit/g:sm/q:40/h:324/w:189/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODYx/Ni0xMTQ0OTE0MDQy/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 275838,
+          "name": "Alex Weir",
+          "resource_url": "https://api.discogs.com/artists/275838",
+          "thumbnail_url": "https://i.discogs.com/C6aJZKwXM3OaG368YFSE2qfiOGNuDh8IGGvm7HlOMR0/rs:fit/g:sm/q:40/h:214/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTgz/OC0xMzE4NzY0ODU3/LnBuZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 275840,
+          "name": "Steve Scales",
+          "resource_url": "https://api.discogs.com/artists/275840",
+          "thumbnail_url": "https://i.discogs.com/lCbbeGoSd5dayoLg410km9lqRvSs_9jp8pm3SOVuybY/rs:fit/g:sm/q:40/h:345/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTg0/MC0xMTQ5NDIyNzQw/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 298170,
+          "name": "Tyrone Downie",
+          "resource_url": "https://api.discogs.com/artists/298170",
+          "thumbnail_url": "https://i.discogs.com/cSZDaw-Sp_6oEtY_A-WVpUskCq4kgR2z7rjpGM7XPvM/rs:fit/g:sm/q:40/h:680/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5ODE3/MC0xNDY0Mjk4NDI0/LTkzMjAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 442582,
+          "name": "Mystic Bowie",
+          "resource_url": "https://api.discogs.com/artists/442582",
+          "thumbnail_url": "https://i.discogs.com/L7cmu51yWZP9F4CVtBhsoAcO99pit6O48a0l9Jtw3D0/rs:fit/g:sm/q:40/h:442/w:335/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0MjU4/Mi0xMTY3NTYxNzg1/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 474018,
+          "name": "Laura Weymouth",
+          "resource_url": "https://api.discogs.com/artists/474018",
+          "thumbnail_url": "https://i.discogs.com/YK26tue3O-hbKNsSc4Sqpvgdh6gj9y0fZ5Jn7GqtX_Q/rs:fit/g:sm/q:40/h:290/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NDAx/OC0xNjE5MzcwNTM0/LTg1ODQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 537249,
+          "name": "Charles Pettigrew",
+          "resource_url": "https://api.discogs.com/artists/537249",
+          "thumbnail_url": "https://i.discogs.com/U7GJOeqbTGl3oGxm6rhac6mqS2PvqVSUZbu02XfmPLE/rs:fit/g:sm/q:40/h:566/w:383/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNzI0/OS0xNjI2MDA4OTA5/LTU5ODkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 663264,
+          "name": "Roddy Frantz",
+          "resource_url": "https://api.discogs.com/artists/663264",
+          "thumbnail_url": "https://i.discogs.com/h2hluThv5YV-cn7d16EuHB-kvO9aB3kayzfMjmzF2o0/rs:fit/g:sm/q:40/h:500/w:322/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MzI2/NC0xMzMwMjY2NDI5/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 736339,
+          "name": "Lani Weymouth",
+          "resource_url": "https://api.discogs.com/artists/736339",
+          "thumbnail_url": "https://i.discogs.com/vDhXrHVHH9BUG4uo-y2AmAPid9Bar2TIb42O53sEWzc/rs:fit/g:sm/q:40/h:283/w:209/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNjMz/OS0xNjE2NzA2MzQ0/LTg0NDYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 835037,
+          "name": "Loric Weymouth",
+          "resource_url": "https://api.discogs.com/artists/835037",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 4048338,
+          "name": "Bruce Martin (7)",
+          "resource_url": "https://api.discogs.com/artists/4048338",
+          "thumbnail_url": "https://i.discogs.com/4xEDEcmYwhxaQDjfIrvqhs9yovVsnHvhq-PT9YYkcRg/rs:fit/g:sm/q:40/h:490/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNDgz/MzgtMTU1NTU4NzY3/OC03OTU2LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Tom Tom Club",
+      "namevariations": [
+        "Bom-Bom Club",
+        "The Tom Tom Club",
+        "TomTom Club",
+        "Ton Ton Clube",
+        "トム・トム・クラブ"
+      ],
+      "profile": "U.S. group formed at the start of the '80's by Tina Weymouth and Chris Frantz of Talking Heads. Other members of the group were Steve Scales, Alex Weir, Tyrone Downie and Tina's sisters Loric, Lani and Laura.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 48404,
+        "images": [
+          {
+            "height": 352,
+            "resource_url": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/mupgEFbtFLJC29do-ho9BMQ24C5AgJQ4UynypsZJ3rc/rs:fit/g:sm/q:90/h:352/w:522/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/nPExk0C6N96MR7jAuWWvo-QuGPkqzwd383ZhSmsC56Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+            "width": 522
+          },
+          {
+            "height": 424,
+            "resource_url": "https://i.discogs.com/whnPAwfB9F26JQkYKfGVEIUkdQOwu7kcNonsV2B4JDw/rs:fit/g:sm/q:90/h:424/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/whnPAwfB9F26JQkYKfGVEIUkdQOwu7kcNonsV2B4JDw/rs:fit/g:sm/q:90/h:424/w:435/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/zYDd-RBnu3Y9u46wpm1OQqjTmHqH8m6DhFqg8N4TqOs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwNTEu/anBn.jpeg",
+            "width": 435
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/CyUNbmdjOb7LZkSD9SEV7OcNGYRODtkyUTbU0VF4Ey0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CyUNbmdjOb7LZkSD9SEV7OcNGYRODtkyUTbU0VF4Ey0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/xWobNRr9wo8ZePEzQdPT2IXE8EpcyTOLWc33tFE9t9c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTE2OTU2NDM5NjEt/MjU0Mi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 461,
+            "resource_url": "https://i.discogs.com/6js40dYxGaKGytjTqDfZeuZsSs1-zR9OQa6Z4fxjc7Q/rs:fit/g:sm/q:90/h:461/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6js40dYxGaKGytjTqDfZeuZsSs1-zR9OQa6Z4fxjc7Q/rs:fit/g:sm/q:90/h:461/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/XbhU1F98BcFiv3FppZLtPwsB_NOTaPML-D4FIiIRlnw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTEyNDIxMTg5ODku/anBlZw.jpeg",
+            "width": 441
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 9051,
+            "name": "Wally Badarou",
+            "resource_url": "https://api.discogs.com/artists/9051",
+            "thumbnail_url": "https://i.discogs.com/DRsbqiqImjCDygpYOkL1QWPPrRFkTUmtgwLtqYbDG2w/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkwNTEt/MTM2ODgzNjc0MS03/MjA1LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 15826,
+            "name": "Steven Stanley",
+            "resource_url": "https://api.discogs.com/artists/15826",
+            "thumbnail_url": "https://i.discogs.com/NpEDOporPG9M9BTr8glnDzagFNOZxbKuxiAU5EYDdWU/rs:fit/g:sm/q:40/h:529/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1ODI2/LTE0OTQ1NDIwMDQt/ODM5OC5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 47110,
+            "name": "Chris Frantz",
+            "resource_url": "https://api.discogs.com/artists/47110",
+            "thumbnail_url": "https://i.discogs.com/PwcZj0w3mSVw7YSNKV4oKiwD2RYelBlUNTEoevL15uA/rs:fit/g:sm/q:40/h:322/w:238/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MTEw/LTE0NTA0NDQ0MjYt/NTI2OS5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 47111,
+            "name": "Tina Weymouth",
+            "resource_url": "https://api.discogs.com/artists/47111",
+            "thumbnail_url": "https://i.discogs.com/96oErWQjy3tgdrDdTm3v2AJpOG9CmnD31WhwQ1x0HZU/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MTEx/LTEzMTk0NzEwODEu/anBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 55902,
+            "name": "Adrian Belew",
+            "resource_url": "https://api.discogs.com/artists/55902",
+            "thumbnail_url": "https://i.discogs.com/iCNMKWlm7re_cuX41IxIOnNUDRpwccesQ61ZbaIldnk/rs:fit/g:sm/q:40/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1OTAy/LTE2NDEzNDkxMzkt/Mjc1OC5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 75184,
+            "name": "Rupert Hine",
+            "resource_url": "https://api.discogs.com/artists/75184",
+            "thumbnail_url": "https://i.discogs.com/JSOB_lxovN-gEZSgXI-Jl-Z5lPCES-VxkWAqsrp_-wI/rs:fit/g:sm/q:40/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc1MTg0/LTE0MDM4OTc3NjMt/NDI4NC5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 170856,
+            "name": "Gary Pozner",
+            "resource_url": "https://api.discogs.com/artists/170856",
+            "thumbnail_url": "https://i.discogs.com/bVx1_VGtA-z3AXuWC4SmvKfFsV190bfgq8OZMZsK6sk/rs:fit/g:sm/q:40/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MDg1/Ni0xNDI3Mzg3Njky/LTE0MTEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 268616,
+            "name": "Raymond Jones",
+            "resource_url": "https://api.discogs.com/artists/268616",
+            "thumbnail_url": "https://i.discogs.com/24dB17hGkVZGVUXSQjaXV-4bTdgoKPw-jWJNAB5P0sI/rs:fit/g:sm/q:40/h:324/w:189/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODYx/Ni0xMTQ0OTE0MDQy/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 275838,
+            "name": "Alex Weir",
+            "resource_url": "https://api.discogs.com/artists/275838",
+            "thumbnail_url": "https://i.discogs.com/C6aJZKwXM3OaG368YFSE2qfiOGNuDh8IGGvm7HlOMR0/rs:fit/g:sm/q:40/h:214/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTgz/OC0xMzE4NzY0ODU3/LnBuZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 275840,
+            "name": "Steve Scales",
+            "resource_url": "https://api.discogs.com/artists/275840",
+            "thumbnail_url": "https://i.discogs.com/lCbbeGoSd5dayoLg410km9lqRvSs_9jp8pm3SOVuybY/rs:fit/g:sm/q:40/h:345/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTg0/MC0xMTQ5NDIyNzQw/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 298170,
+            "name": "Tyrone Downie",
+            "resource_url": "https://api.discogs.com/artists/298170",
+            "thumbnail_url": "https://i.discogs.com/cSZDaw-Sp_6oEtY_A-WVpUskCq4kgR2z7rjpGM7XPvM/rs:fit/g:sm/q:40/h:680/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5ODE3/MC0xNDY0Mjk4NDI0/LTkzMjAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 442582,
+            "name": "Mystic Bowie",
+            "resource_url": "https://api.discogs.com/artists/442582",
+            "thumbnail_url": "https://i.discogs.com/L7cmu51yWZP9F4CVtBhsoAcO99pit6O48a0l9Jtw3D0/rs:fit/g:sm/q:40/h:442/w:335/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0MjU4/Mi0xMTY3NTYxNzg1/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 474018,
+            "name": "Laura Weymouth",
+            "resource_url": "https://api.discogs.com/artists/474018",
+            "thumbnail_url": "https://i.discogs.com/YK26tue3O-hbKNsSc4Sqpvgdh6gj9y0fZ5Jn7GqtX_Q/rs:fit/g:sm/q:40/h:290/w:235/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NDAx/OC0xNjE5MzcwNTM0/LTg1ODQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 537249,
+            "name": "Charles Pettigrew",
+            "resource_url": "https://api.discogs.com/artists/537249",
+            "thumbnail_url": "https://i.discogs.com/U7GJOeqbTGl3oGxm6rhac6mqS2PvqVSUZbu02XfmPLE/rs:fit/g:sm/q:40/h:566/w:383/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNzI0/OS0xNjI2MDA4OTA5/LTU5ODkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 663264,
+            "name": "Roddy Frantz",
+            "resource_url": "https://api.discogs.com/artists/663264",
+            "thumbnail_url": "https://i.discogs.com/h2hluThv5YV-cn7d16EuHB-kvO9aB3kayzfMjmzF2o0/rs:fit/g:sm/q:40/h:500/w:322/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MzI2/NC0xMzMwMjY2NDI5/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 736339,
+            "name": "Lani Weymouth",
+            "resource_url": "https://api.discogs.com/artists/736339",
+            "thumbnail_url": "https://i.discogs.com/vDhXrHVHH9BUG4uo-y2AmAPid9Bar2TIb42O53sEWzc/rs:fit/g:sm/q:40/h:283/w:209/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNjMz/OS0xNjE2NzA2MzQ0/LTg0NDYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 835037,
+            "name": "Loric Weymouth",
+            "resource_url": "https://api.discogs.com/artists/835037",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 4048338,
+            "name": "Bruce Martin (7)",
+            "resource_url": "https://api.discogs.com/artists/4048338",
+            "thumbnail_url": "https://i.discogs.com/4xEDEcmYwhxaQDjfIrvqhs9yovVsnHvhq-PT9YYkcRg/rs:fit/g:sm/q:40/h:490/w:567/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNDgz/MzgtMTU1NTU4NzY3/OC03OTU2LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Tom Tom Club",
+        "namevariations": [
+          "Bom-Bom Club",
+          "The Tom Tom Club",
+          "TomTom Club",
+          "Ton Ton Clube",
+          "トム・トム・クラブ"
+        ],
+        "profile": "U.S. group formed at the start of the '80's by Tina Weymouth and Chris Frantz of Talking Heads. Other members of the group were Steve Scales, Alex Weir, Tyrone Downie and Tina's sisters Loric, Lani and Laura.",
+        "realname": "Chris Frantz & Tina Weymouth",
+        "releases_url": "https://api.discogs.com/artists/48404/releases",
+        "resource_url": "https://api.discogs.com/artists/48404",
+        "uri": "https://www.discogs.com/artist/48404-Tom-Tom-Club",
+        "urls": [
+          "http://tomtomclub.com",
+          "https://www.facebook.com/TheTomTomClub",
+          "https://en.wikipedia.org/wiki/Tom_Tom_Club",
+          "https://tomtomclub.bandcamp.com/music"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/48404",
+      "thumb": "https://i.discogs.com/nPExk0C6N96MR7jAuWWvo-QuGPkqzwd383ZhSmsC56Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDA0/LTExMDc2ODgwMDUu/anBn.jpeg",
+      "url": "https://www.discogs.com/artist/48404-Tom-Tom-Club",
+      "urls": [
+        "http://tomtomclub.com",
+        "https://www.facebook.com/TheTomTomClub",
+        "https://en.wikipedia.org/wiki/Tom_Tom_Club",
+        "https://tomtomclub.bandcamp.com/music"
+      ]
     },
     "lastfm": {
       "bio_content": "Tom Tom Club is a project by Tina Weymouth and Chris Frantz, who were also members of Talking Heads. They began recording albums in 1981 and have enjoyed some success with classic songs such as \"Genius of Love\" \"Under the Boardwalk\" \"Wordy Rappinghood\" and \"Pleasure of Love\". <a href=\"https://www.last.fm/music/Tom+Tom+Club\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +512,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 462725,
+      "listeners": 463150,
       "mbid": "3dc66525-d359-406d-9cdf-cdd3a7de289c",
       "name": "Tom Tom Club",
-      "playcount": 3748886,
+      "playcount": 3752723,
       "similar_artists": [
         {
           "name": "Talking Heads",
@@ -170,7 +548,7 @@
       "url": "https://www.last.fm/music/Tom+Tom+Club"
     },
     "spotify": {
-      "followers": 168754,
+      "followers": 168854,
       "genres": [],
       "id": "1m24736Bdew1oQVxTePOCo",
       "images": [
@@ -197,6 +575,6 @@
   },
   "spotify_id": "1m24736Bdew1oQVxTePOCo",
   "spotify_url": "https://open.spotify.com/artist/1m24736Bdew1oQVxTePOCo",
-  "updated_at": "2025-07-05T16:03:31.268436",
+  "updated_at": "2025-07-08T09:56:32.819826",
   "wikipedia_url": null
 }

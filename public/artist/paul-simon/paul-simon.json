@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:15:55.119688",
   "discogs_id": "106474",
-  "discogs_url": "https://www.discogs.com/artist/106474",
-  "followers": 2502252,
+  "discogs_url": "https://www.discogs.com/artist/106474-Paul-Simon",
+  "followers": 2503488,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -16,7 +16,7 @@
     "acoustic",
     "rock"
   ],
-  "id": null,
+  "id": "paul-simon-1751724961",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/0jFf2gn1ndLyv2QH23ZllGmg21MkkLp8YSIWmYG4IVI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "05517043-ff78-4988-9c22-88c68588ebb9",
   "lastfm_url": "https://www.last.fm/music/Paul+Simon",
   "local_images": {
-    "hi-res": "public/artist/paul-simon/paul-simon-hi-res.jpg",
-    "medium": "public/artist/paul-simon/paul-simon-medium.jpg",
-    "small": "public/artist/paul-simon/paul-simon-small.jpg"
+    "hi-res": "../public/artist/paul-simon/paul-simon-hi-res.jpg",
+    "medium": "../public/artist/paul-simon/paul-simon-medium.jpg",
+    "small": "../public/artist/paul-simon/paul-simon-small.jpg"
   },
   "name": "Paul Simon",
   "popularity": 72,
@@ -101,9 +113,357 @@
       "url": "https://music.apple.com/gb/artist/paul-simon/152016"
     },
     "discogs": {
-      "id": 106474,
-      "original_name": "Paul Simon",
-      "role": ""
+      "cover_image": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "106474",
+      "images": [
+        {
+          "height": 465,
+          "resource_url": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0jFf2gn1ndLyv2QH23ZllGmg21MkkLp8YSIWmYG4IVI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+          "width": 407
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/dV5NpIFeBS05ytMSwYBhkPmhQnPpfMG8C8qRX-12Gms/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dV5NpIFeBS05ytMSwYBhkPmhQnPpfMG8C8qRX-12Gms/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/r_3PrvUQr6Z06L864fGCMd2dLEK00hPvUVHHXXS0hUY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/QeGKnisS91Xw9Q3uT40GmycdWSSX2ocjEKkPIEwQSrA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/QeGKnisS91Xw9Q3uT40GmycdWSSX2ocjEKkPIEwQSrA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/g3yatEE256qXU_liv8YDwpJpuMD3N7-x0z6nfpseehU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 611,
+          "resource_url": "https://i.discogs.com/YrgEfuQ6r3lf-4aqGviwff12tvAEiRiSQxGa8tugbUo/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YrgEfuQ6r3lf-4aqGviwff12tvAEiRiSQxGa8tugbUo/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kLV0lnjt5d6Z-pSXJxtD_do_VNJfWPeN5b0367RQ9gU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 368,
+          "resource_url": "https://i.discogs.com/To8rU7XHsbgBwlWW7HsKG2DYxwWTqstB5lUtIts21qU/rs:fit/g:sm/q:90/h:368/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/To8rU7XHsbgBwlWW7HsKG2DYxwWTqstB5lUtIts21qU/rs:fit/g:sm/q:90/h:368/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0mYTGQ6v7VsBzXH2W4sW2EGqnXOPiNnqcfY9VKEaypM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+          "width": 564
+        },
+        {
+          "height": 754,
+          "resource_url": "https://i.discogs.com/XzsoBE4aAQXi0WiHQXJmjSdGbzFZWtDi8IPs8FTNhPc/rs:fit/g:sm/q:90/h:754/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XzsoBE4aAQXi0WiHQXJmjSdGbzFZWtDi8IPs8FTNhPc/rs:fit/g:sm/q:90/h:754/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3CwTSpvSLR9o2tvPm6_0RWj1P8VJAlDFEPYuLb3upqk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 603,
+          "resource_url": "https://i.discogs.com/TIAGgv7osbdYXktTkKFsJ6XnArWXv7ROC--kyAEc5cc/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TIAGgv7osbdYXktTkKFsJ6XnArWXv7ROC--kyAEc5cc/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MrKAdYIBOq0n00w58592if9TBF5dkinMDUBJoH9GQ54/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Ni1pqqkqWaK5z1_PEWoxGIwrDosQS5VUuj_bgJH8ZOU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ni1pqqkqWaK5z1_PEWoxGIwrDosQS5VUuj_bgJH8ZOU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_lMLl3e-DTcc21ZJwKJF0HMQfOv1tMY5erQDcXb2ep8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Paul Simon",
+      "namevariations": [
+        "/サイモン",
+        "Collins",
+        "Lou Simon",
+        "P .Simon",
+        "P Simon",
+        "P- Simon",
+        "P.  Simon",
+        "P. SImon",
+        "P. Saimon",
+        "P. Siimon",
+        "P. Simmon",
+        "P. Simon",
+        "P. Simon -",
+        "P. Simon.",
+        "P. Simone",
+        "P. Simón",
+        "P. Somon",
+        "P. Symon",
+        "P. サイモン",
+        "P..Simon",
+        "P.S.",
+        "P.Simmon",
+        "P.Simon",
+        "P.l Simon",
+        "Parel Simon",
+        "Paul",
+        "Paul \"Rhymin\" Simon",
+        "Paul - Simon",
+        "Paul Frederic Simon",
+        "Paul Simmon",
+        "Paul Simond",
+        "Paul Simons",
+        "Paul Simón",
+        "Paul · Simon",
+        "Pol Sajmon",
+        "Poul Simon",
+        "R. Simon",
+        "SImon",
+        "Saimons",
+        "Simmons",
+        "Simon",
+        "Simon Garfunkel",
+        "Simon P",
+        "Simon Paul",
+        "Simon, Paul",
+        "Simon/Simon",
+        "Simons",
+        "Simón",
+        "T. Simon",
+        "П. Саймон",
+        "Пол Саймон",
+        "Поль Симон",
+        "Саймон",
+        "Саймон И Гарфункель",
+        "פול סיימון",
+        "サイモン",
+        "ポール•サイモン",
+        "ポール・サイモン",
+        "西蒙",
+        "폴 사이몬"
+      ],
+      "profile": "American singer-songwriter born October 13, 1941, Newark, New Jersey, USA, who rose to fame as one part of [a232157]. After splitting up with [a=Art Garfunkel], he went on to have a successful solo career. Inducted into Rock And Roll Hall of Fame in 2001 (Performer). His first marriage was to [a=Peggy Harper] with whom he had a son [a906246]. He was then briefly married to [a637386] from 1983 until their divorce in 1984. His third wife is folk singer [a408641].",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 309748,
+            "name": "Jerry Landis",
+            "resource_url": "https://api.discogs.com/artists/309748",
+            "thumbnail_url": "https://i.discogs.com/AZludQPN4ethD7AGtYkhb6QFtINdu5LH-uiYJaMutaA/rs:fit/g:sm/q:40/h:809/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwOTc0/OC0xMzI3MjMwNTY3/LmpwZWc.jpeg"
+          },
+          {
+            "id": 309750,
+            "name": "True Taylor",
+            "resource_url": "https://api.discogs.com/artists/309750",
+            "thumbnail_url": "https://i.discogs.com/ywJYGRKJUxrSMbhTOx17Z_ImLGeTUdt4IPSFdbgPsRI/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwOTc1/MC0xMTUxODAxNjM5/LmpwZWc.jpeg"
+          },
+          {
+            "id": 1574256,
+            "name": "Paul Kane (3)",
+            "resource_url": "https://api.discogs.com/artists/1574256",
+            "thumbnail_url": "https://i.discogs.com/F6FiVrqcVpdtkA0Gp5a65JmDkKJ09-4W-KSjFXqUhhQ/rs:fit/g:sm/q:40/h:309/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1NzQy/NTYtMTI5NTAzNDQ4/Mi5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 151313,
+            "name": "USA For Africa",
+            "resource_url": "https://api.discogs.com/artists/151313",
+            "thumbnail_url": "https://i.discogs.com/0jtvipm-j2qv1xeoOrOpldoEuuJ_uXbnqGuJK4uJawI/rs:fit/g:sm/q:40/h:387/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MTMx/My0xNDk0MzE4NjA1/LTM5NjAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 194564,
+            "name": "Tom & Jerry",
+            "resource_url": "https://api.discogs.com/artists/194564",
+            "thumbnail_url": "https://i.discogs.com/dgHEKnoxkx98Def3MHyPEtejqGHbK0w0HFW4k2B9oqo/rs:fit/g:sm/q:40/h:407/w:315/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5NDU2/NC0xMjgzMTAzNTA3/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 232157,
+            "name": "Simon & Garfunkel",
+            "resource_url": "https://api.discogs.com/artists/232157",
+            "thumbnail_url": "https://i.discogs.com/ueIJRDqgnvBcEWdbxPUK0ZSh652SeKi3a4AiFMU-VVY/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMjE1/Ny0xNDUxNjYxMDcx/LTY0NjAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1174803,
+            "name": "Tico And The Triumphs",
+            "resource_url": "https://api.discogs.com/artists/1174803",
+            "thumbnail_url": "https://i.discogs.com/YVWRJVrREOZ6UtgUE8ssC6amTr-KIiNzvjQo5Vmykik/rs:fit/g:sm/q:40/h:374/w:547/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNzQ4/MDMtMTMwMDExODEw/MS5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2607137,
+            "name": "The Cosines",
+            "resource_url": "https://api.discogs.com/artists/2607137",
+            "thumbnail_url": "https://i.discogs.com/W6VNA1f3M6E4HW-km7SSSVNM0NPl2Va3x8xSBJtTrXg/rs:fit/g:sm/q:40/h:584/w:546/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MDcx/MzctMTUyNzYyMDcz/OC01MTcwLmpwZWc.jpeg"
+          }
+        ],
+        "id": 106474,
+        "images": [
+          {
+            "height": 465,
+            "resource_url": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/WKqvaPdt1hf1AAbb2nGYZIJ-vLD8nPwij1uY66cyOMc/rs:fit/g:sm/q:90/h:465/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0jFf2gn1ndLyv2QH23ZllGmg21MkkLp8YSIWmYG4IVI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+            "width": 407
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/dV5NpIFeBS05ytMSwYBhkPmhQnPpfMG8C8qRX-12Gms/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dV5NpIFeBS05ytMSwYBhkPmhQnPpfMG8C8qRX-12Gms/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/r_3PrvUQr6Z06L864fGCMd2dLEK00hPvUVHHXXS0hUY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMTM4MTMyNTAy/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/QeGKnisS91Xw9Q3uT40GmycdWSSX2ocjEKkPIEwQSrA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/QeGKnisS91Xw9Q3uT40GmycdWSSX2ocjEKkPIEwQSrA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/g3yatEE256qXU_liv8YDwpJpuMD3N7-x0z6nfpseehU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjUwMTAxNDY0/LTU3NzEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 611,
+            "resource_url": "https://i.discogs.com/YrgEfuQ6r3lf-4aqGviwff12tvAEiRiSQxGa8tugbUo/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/YrgEfuQ6r3lf-4aqGviwff12tvAEiRiSQxGa8tugbUo/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/kLV0lnjt5d6Z-pSXJxtD_do_VNJfWPeN5b0367RQ9gU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDc2/LTQzODMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 368,
+            "resource_url": "https://i.discogs.com/To8rU7XHsbgBwlWW7HsKG2DYxwWTqstB5lUtIts21qU/rs:fit/g:sm/q:90/h:368/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/To8rU7XHsbgBwlWW7HsKG2DYxwWTqstB5lUtIts21qU/rs:fit/g:sm/q:90/h:368/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0mYTGQ6v7VsBzXH2W4sW2EGqnXOPiNnqcfY9VKEaypM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzM1MTczMzI3/LmpwZWc.jpeg",
+            "width": 564
+          },
+          {
+            "height": 754,
+            "resource_url": "https://i.discogs.com/XzsoBE4aAQXi0WiHQXJmjSdGbzFZWtDi8IPs8FTNhPc/rs:fit/g:sm/q:90/h:754/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XzsoBE4aAQXi0WiHQXJmjSdGbzFZWtDi8IPs8FTNhPc/rs:fit/g:sm/q:90/h:754/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/3CwTSpvSLR9o2tvPm6_0RWj1P8VJAlDFEPYuLb3upqk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyNzc5/LTQ2MzkuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 603,
+            "resource_url": "https://i.discogs.com/TIAGgv7osbdYXktTkKFsJ6XnArWXv7ROC--kyAEc5cc/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/TIAGgv7osbdYXktTkKFsJ6XnArWXv7ROC--kyAEc5cc/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/MrKAdYIBOq0n00w58592if9TBF5dkinMDUBJoH9GQ54/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xMzY2MTQ2MDcy/LTczOTIuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/Ni1pqqkqWaK5z1_PEWoxGIwrDosQS5VUuj_bgJH8ZOU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ni1pqqkqWaK5z1_PEWoxGIwrDosQS5VUuj_bgJH8ZOU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/_lMLl3e-DTcc21ZJwKJF0HMQfOv1tMY5erQDcXb2ep8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjYxOTQyNTYy/LTQxMzUuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Paul Simon",
+        "namevariations": [
+          "/サイモン",
+          "Collins",
+          "Lou Simon",
+          "P .Simon",
+          "P Simon",
+          "P- Simon",
+          "P.  Simon",
+          "P. SImon",
+          "P. Saimon",
+          "P. Siimon",
+          "P. Simmon",
+          "P. Simon",
+          "P. Simon -",
+          "P. Simon.",
+          "P. Simone",
+          "P. Simón",
+          "P. Somon",
+          "P. Symon",
+          "P. サイモン",
+          "P..Simon",
+          "P.S.",
+          "P.Simmon",
+          "P.Simon",
+          "P.l Simon",
+          "Parel Simon",
+          "Paul",
+          "Paul \"Rhymin\" Simon",
+          "Paul - Simon",
+          "Paul Frederic Simon",
+          "Paul Simmon",
+          "Paul Simond",
+          "Paul Simons",
+          "Paul Simón",
+          "Paul · Simon",
+          "Pol Sajmon",
+          "Poul Simon",
+          "R. Simon",
+          "SImon",
+          "Saimons",
+          "Simmons",
+          "Simon",
+          "Simon Garfunkel",
+          "Simon P",
+          "Simon Paul",
+          "Simon, Paul",
+          "Simon/Simon",
+          "Simons",
+          "Simón",
+          "T. Simon",
+          "П. Саймон",
+          "Пол Саймон",
+          "Поль Симон",
+          "Саймон",
+          "Саймон И Гарфункель",
+          "פול סיימון",
+          "サイモン",
+          "ポール•サイモン",
+          "ポール・サイモン",
+          "西蒙",
+          "폴 사이몬"
+        ],
+        "profile": "American singer-songwriter born October 13, 1941, Newark, New Jersey, USA, who rose to fame as one part of [a232157]. After splitting up with [a=Art Garfunkel], he went on to have a successful solo career. Inducted into Rock And Roll Hall of Fame in 2001 (Performer). His first marriage was to [a=Peggy Harper] with whom he had a son [a906246]. He was then briefly married to [a637386] from 1983 until their divorce in 1984. His third wife is folk singer [a408641].",
+        "realname": "Paul Frederic Simon",
+        "releases_url": "https://api.discogs.com/artists/106474/releases",
+        "resource_url": "https://api.discogs.com/artists/106474",
+        "uri": "https://www.discogs.com/artist/106474-Paul-Simon",
+        "urls": [
+          "https://www.paulsimon.com/",
+          "https://paulsimon.komi.io/",
+          "https://www.facebook.com/paulsimon",
+          "https://www.imdb.com/name/nm0800328/",
+          "https://www.instagram.com/paulsimonofficial/",
+          "https://en.wikipedia.org/wiki/Paul_Simon",
+          "https://www.youtube.com/@officialpaulsimon"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/106474",
+      "thumb": "https://i.discogs.com/0jFf2gn1ndLyv2QH23ZllGmg21MkkLp8YSIWmYG4IVI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjQ3/NC0xNjEwMTMyODI1/LTM5MzIuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/106474-Paul-Simon",
+      "urls": [
+        "https://www.paulsimon.com/",
+        "https://paulsimon.komi.io/",
+        "https://www.facebook.com/paulsimon",
+        "https://www.imdb.com/name/nm0800328/",
+        "https://www.instagram.com/paulsimonofficial/",
+        "https://en.wikipedia.org/wiki/Paul_Simon",
+        "https://www.youtube.com/@officialpaulsimon"
+      ]
     },
     "lastfm": {
       "bio_content": "Paul Frederic Simon (born October 13, 1941) is an American singer-songwriter. One of the most celebrated artists of the twentieth century, Simon's career has spanned six decades. Born in New Jersey, Simon grew up in the borough of Queens in New York City and developed an interest in rock music in his teens.\n\nHe began performing with his schoolfriend Art Garfunkel in 1956; together the two came to prominence in the 1960s as Simon & Garfunkel. The duo's blend of folk and rock music in hits like \"The Sound of Silence\", \"Mrs. Robinson\", \"America\", and \"The Boxer\" served as a soundtrack to the counterculture movement. Their career together peaked with their last album, Bridge over Troubled Water (1970), at one point the best-selling album of all time. Throughout his subsequent solo career, Simon has continued to explore an eclectic mixture of genres, including gospel, reggae, soul, and more. His celebrated 1970s output—comprising Paul Simon (1972), There Goes Rhymin' Simon (1973), and Still Crazy After All These Years (1975)—kept him in the public spotlight and saw critical and commercial acclaim, spawning the hits \"Mother and Child Reunion\", \"Me and Julio Down by the Schoolyard\", and \"50 Ways to Leave Your Lover\".\n\nAcross his life, Simon has intermittently reunited with Garfunkel for several tours, including the famed Concert in Central Park. The widely lauded Graceland (1986) became Simon's biggest album of his career, melding his rock sound with worldbeat flavors; its single \"You Can Call Me Al\" became one of Simon's top hits. A sequel of sorts, The Rhythm of the Saints (1990), preceded his own successful Concert in the Park, attended by a half-million fans. That decade, Simon focused his energies on a Broadway musical The Capeman (1997), which was poorly received. In the first quarter of the next century, Simon continued to record and tour; his later albums, such as You're the One (2000), So Beautiful or So What (2011), and Stranger to Stranger (2016), have introduced him to new generations. He retired from touring in 2018. His most recent work, Seven Psalms, will see release in May 2023.\n\nSimon is among the most acclaimed musicians and songwriters in popular music, and one of the world's best-selling music artists, both for his solo work and with Garfunkel. He is a two-time inductee into the Rock and Roll Hall of Fame, and has been the recipient of sixteen Grammy Awards, including three for Album of the Year. Two of his works, Sounds of Silence and Graceland, have seen induction into National Recording Registry for their cultural significance, and in 2007, the Library of Congress crowned him the inaugural winner of the Gershwin Prize for Popular Song. He is a co-founder of the Children's Health Fund, a nonprofit that provides medical care to children.\n\nIn an in-depth interview reprinted in American Songwriter, Simon discusses the craft of songwriting with music journalist Tom Moon. In the interview, Simon explains the basic themes in his songwriting: love, family and social commentary (as well as the overarching messages of religion, spirituality and God in his lyrics). Simon explains the process of how he goes about writing songs in the interview: \"The music always precedes the words. The words often come from the sound of the music and eventually evolve into coherent thoughts. Or incoherent thoughts. Rhythm plays a crucial part in the lyric-making as well. It's like a puzzle to find the right words to express what the music is saying.\" <a href=\"https://www.last.fm/music/Paul+Simon\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +494,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1926416,
+      "listeners": 1927952,
       "mbid": "05517043-ff78-4988-9c22-88c68588ebb9",
       "name": "Paul Simon",
-      "playcount": 44963710,
+      "playcount": 45006438,
       "similar_artists": [
         {
           "name": "Simon & Garfunkel",
@@ -170,7 +530,7 @@
       "url": "https://www.last.fm/music/Paul+Simon"
     },
     "spotify": {
-      "followers": 2502252,
+      "followers": 2503488,
       "genres": [
         "singer-songwriter"
       ],
@@ -199,6 +559,6 @@
   },
   "spotify_id": "2CvCyf1gEVhI0mX6aFXmVI",
   "spotify_url": "https://open.spotify.com/artist/2CvCyf1gEVhI0mX6aFXmVI",
-  "updated_at": "2025-07-05T15:16:01.774981",
+  "updated_at": "2025-07-08T09:22:41.053160",
   "wikipedia_url": null
 }

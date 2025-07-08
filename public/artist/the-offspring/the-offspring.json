@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:03:54.762428",
   "discogs_id": "133707",
-  "discogs_url": "https://www.discogs.com/artist/133707",
-  "followers": 6397770,
+  "discogs_url": "https://www.discogs.com/artist/133707-The-Offspring",
+  "followers": 6402524,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -17,7 +17,7 @@
     "alternative",
     "alternative rock"
   ],
-  "id": null,
+  "id": "the-offspring-1751731438",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/l4ovs7m2j8-n5GQ2Qt2Uu6UsspO56Tr9SUyOJvJavsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "23a03e33-a603-404e-bcbf-2c00159d7067",
   "lastfm_url": "https://www.last.fm/music/The+Offspring",
   "local_images": {
-    "hi-res": "public/artist/the-offspring/the-offspring-hi-res.jpg",
-    "medium": "public/artist/the-offspring/the-offspring-medium.jpg",
-    "small": "public/artist/the-offspring/the-offspring-small.jpg"
+    "hi-res": "../public/artist/the-offspring/the-offspring-hi-res.jpg",
+    "medium": "../public/artist/the-offspring/the-offspring-medium.jpg",
+    "small": "../public/artist/the-offspring/the-offspring-small.jpg"
   },
   "name": "The Offspring",
   "popularity": 80,
@@ -102,9 +114,390 @@
       "url": "https://music.apple.com/gb/artist/the-offspring/2820865"
     },
     "discogs": {
-      "id": 133707,
-      "original_name": "The Offspring",
-      "role": ""
+      "cover_image": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "133707",
+      "images": [
+        {
+          "height": 414,
+          "resource_url": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+          "uri150": "https://i.discogs.com/l4ovs7m2j8-n5GQ2Qt2Uu6UsspO56Tr9SUyOJvJavsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/ZBiMBxKDpbHncLAcxqHeeEkCAWgiHsDbzvipNR86x5s/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZBiMBxKDpbHncLAcxqHeeEkCAWgiHsDbzvipNR86x5s/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/K9etmXjo7eTJtsOvEKN03LQeqFCve_aAoxX-zfI5zWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/GtvP-5uUjl1T0w2NWYS_uHv7FOKwnPI5WMJQTZ-tfQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GtvP-5uUjl1T0w2NWYS_uHv7FOKwnPI5WMJQTZ-tfQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/vzPMu76AB8K0nKi4Dy8WXK2NoFZsPDzzTn2m7J6kI5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 518,
+          "resource_url": "https://i.discogs.com/0A8A_pX3rorBZlzn2wTyMm2DgWQmnXz8SkwX2qeK0Y8/rs:fit/g:sm/q:90/h:518/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0A8A_pX3rorBZlzn2wTyMm2DgWQmnXz8SkwX2qeK0Y8/rs:fit/g:sm/q:90/h:518/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/JcekJ2wKknDFOoQHLvfp3eOPYsXw0UBSp05JLcQsh40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 813,
+          "resource_url": "https://i.discogs.com/9nn0uFMI295rFg3ZsL9RnHMcpJlvVSyiJ1Q4ruKVuAQ/rs:fit/g:sm/q:90/h:813/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9nn0uFMI295rFg3ZsL9RnHMcpJlvVSyiJ1Q4ruKVuAQ/rs:fit/g:sm/q:90/h:813/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vzee70YpS9TfLpt9IgGZaJuEpdqkWUMDfMoorCm35zA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+          "width": 576
+        },
+        {
+          "height": 198,
+          "resource_url": "https://i.discogs.com/LPyvVp_kgt69coj3EfFdk_ZB2r7sArQdvrn97NjS4QI/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LPyvVp_kgt69coj3EfFdk_ZB2r7sArQdvrn97NjS4QI/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/-mkc1HrTswRT-W183OvSspBrOIeF4d8JlnkuYdC2cps/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 531,
+          "resource_url": "https://i.discogs.com/KxolgUe42yOtZ3bVrDuY13dUH9RQnokrBIhBMKIfLQA/rs:fit/g:sm/q:90/h:531/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KxolgUe42yOtZ3bVrDuY13dUH9RQnokrBIhBMKIfLQA/rs:fit/g:sm/q:90/h:531/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/4FIRiv_-HG6YyDwnrFXGDyRUpLKvvVrhSM3CqnEid5Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/lI2YBrRHyD-JVP24v-eQhPhP4xxRv3sQRrcm5PrffZk/rs:fit/g:sm/q:90/h:369/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lI2YBrRHyD-JVP24v-eQhPhP4xxRv3sQRrcm5PrffZk/rs:fit/g:sm/q:90/h:369/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/mSnMtpYLUI8jZOWv6knrGAgGtO6hJycE8X5aeSZ2Orw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 277,
+          "resource_url": "https://i.discogs.com/nl3ftYaJEYUzQitC4fouD4xplP2x9XYvfwnRbZKBUJs/rs:fit/g:sm/q:90/h:277/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nl3ftYaJEYUzQitC4fouD4xplP2x9XYvfwnRbZKBUJs/rs:fit/g:sm/q:90/h:277/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/NTzOOTb5qkOcCd6oYT3aPFU9TGL1rBgm6ywCMWv70EI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+          "width": 350
+        },
+        {
+          "height": 373,
+          "resource_url": "https://i.discogs.com/qyvtWhMpTtJoefxjEEOTcFscAW14Z8yvLKSRqJlI-fo/rs:fit/g:sm/q:90/h:373/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qyvtWhMpTtJoefxjEEOTcFscAW14Z8yvLKSRqJlI-fo/rs:fit/g:sm/q:90/h:373/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/2shZ6H_xzbeXY4JRB-Z9q-rkeG5FCo9xWauu2Sa-zkY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 516,
+          "resource_url": "https://i.discogs.com/f_IQwXyWdGKTV-HOvxoQhQhsHHLtYosVxvv1DybOu1I/rs:fit/g:sm/q:90/h:516/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/f_IQwXyWdGKTV-HOvxoQhQhsHHLtYosVxvv1DybOu1I/rs:fit/g:sm/q:90/h:516/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0CyEqnyUp-Xr_1QcH1OGWOZ6_DVZNNQGNgUbu9X6IaU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 273986,
+          "name": "Josh Freese",
+          "resource_url": "https://api.discogs.com/artists/273986",
+          "thumbnail_url": "https://i.discogs.com/dSY6wmw1WQTM96HeFOiOSmNK2V7JqDhELYDGDa1q3fI/rs:fit/g:sm/q:40/h:235/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mzk4/Ni0xNjA0ODQ0NTg2/LTk3OTkucG5n.jpeg"
+        },
+        {
+          "active": false,
+          "id": 406346,
+          "name": "Ron Welty",
+          "resource_url": "https://api.discogs.com/artists/406346",
+          "thumbnail_url": "https://i.discogs.com/BZHu_0VC7TAssuqRZJ2fH3cbWffBuG5mPRF8pu0kJlg/rs:fit/g:sm/q:40/h:519/w:451/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNjM0/Ni0xMjAxMzY2MjQ3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 406347,
+          "name": "Greg Kriesel",
+          "resource_url": "https://api.discogs.com/artists/406347",
+          "thumbnail_url": "https://i.discogs.com/exifyP6PXZJ09JYwj7FsaWgUwPSaGk-Z3Ixo_n9Bs4g/rs:fit/g:sm/q:40/h:313/w:229/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNjM0/Ny0xMjAxMzY1OTYw/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 436754,
+          "name": "Todd Morse",
+          "resource_url": "https://api.discogs.com/artists/436754",
+          "thumbnail_url": "https://i.discogs.com/KtRLNkV1dgKA4u9Rp0wLj7dQzgP4-VkCilM1xBErDAA/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNjc1/NC0xMTU5NjkyMTgx/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 499343,
+          "name": "Atom Willard",
+          "resource_url": "https://api.discogs.com/artists/499343",
+          "thumbnail_url": "https://i.discogs.com/YLW4r3qKUnyRKzLcUFFAvxx8EoztNTiQeT9Ldl_5R4I/rs:fit/g:sm/q:40/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5OTM0/My0xNjg3NDA5ODgy/LTkwMDUuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 591905,
+          "name": "Pete Parada",
+          "resource_url": "https://api.discogs.com/artists/591905",
+          "thumbnail_url": "https://i.discogs.com/mi4bc-cS37ccTgzHtLONrZu9dqkwRcz37re1Nwabh7s/rs:fit/g:sm/q:40/h:448/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MTkw/NS0xMjAxMzY2MTky/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 789775,
+          "name": "Kevin Wasserman",
+          "resource_url": "https://api.discogs.com/artists/789775",
+          "thumbnail_url": "https://i.discogs.com/DRKuRX3euUytOk2zJaNJPSbWkkRSMnb0pMWQcpwr3JA/rs:fit/g:sm/q:40/h:509/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc4OTc3/NS0xMjAxMzY2MTA2/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2277411,
+          "name": "Bryan Holland (2)",
+          "resource_url": "https://api.discogs.com/artists/2277411",
+          "thumbnail_url": "https://i.discogs.com/uDdZ9bY8M0D7WhvNn13qMbMjKNfhpQoZNqU8jp7gmow/rs:fit/g:sm/q:40/h:720/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyNzc0/MTEtMTUwMjE3NjU3/OS0zNjc2LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 4797324,
+          "name": "Jonah Nimoy",
+          "resource_url": "https://api.discogs.com/artists/4797324",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 6029273,
+          "name": "Brandon Pertzborn",
+          "resource_url": "https://api.discogs.com/artists/6029273",
+          "thumbnail_url": "https://i.discogs.com/_XPCUKXm-0Y1Ub0tx23Zu9wZB6mKflklpftzQW4DHgI/rs:fit/g:sm/q:40/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwMjky/NzMtMTU3NTAwMjI1/My01NDMxLmpwZWc.jpeg"
+        }
+      ],
+      "name": "The Offspring",
+      "namevariations": [
+        "Off Spring",
+        "Offspring",
+        "The Offespring",
+        "The Offsprings",
+        "The Oггspring",
+        "Želvy",
+        "オフスプリング",
+        "後裔合唱團",
+        "오프스프링"
+      ],
+      "profile": "American punk rock band from Garden Grove, California, formed in 1984. Originally called [a=Manic Subsidal], they began performing in 1984, composed of Bryan Holland (vocals, guitar), Greg Kriesel (bass, vocals) and James Frederick Lilja (drums). Changed their name to The Offspring in 1986.\r\n\r\nCurrent members:\r\nBryan \"Dexter\" Holland : Vocals, guitar\r\nKevin \"Noodles\" Wasserman : Guitar, vocals\r\nTodd Morse: Bass\r\nBrandon Pertzborn: Drums\r\n\r\nFormer members:\r\nGregory \"Greg K\" Kriesel : Bass, vocals (1984–2018)\r\nJames Lilja: Drums (1984-1987)\r\nRon Welty : Drums, vocals (1987-2003)\r\nAdam \"Atom\" Willard: Drums (2003-2007)\r\nPete Parada: Drums (2007-2021)",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 1035466,
+            "name": "Manic Subsidal",
+            "resource_url": "https://api.discogs.com/artists/1035466",
+            "thumbnail_url": "https://i.discogs.com/nZPzHSyPirfCNah7e_p0DrqvN-YMOhhd8BDnxp5iwd8/rs:fit/g:sm/q:40/h:240/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzU0/NjYtMTY3MjYzNDg2/MS02NDYzLnBuZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 133707,
+        "images": [
+          {
+            "height": 414,
+            "resource_url": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/RyfvevAiKup06QcvH4cjUdXpnNRz9aSZpZDX60Pnmuo/rs:fit/g:sm/q:90/h:414/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+            "uri150": "https://i.discogs.com/l4ovs7m2j8-n5GQ2Qt2Uu6UsspO56Tr9SUyOJvJavsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/ZBiMBxKDpbHncLAcxqHeeEkCAWgiHsDbzvipNR86x5s/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZBiMBxKDpbHncLAcxqHeeEkCAWgiHsDbzvipNR86x5s/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/K9etmXjo7eTJtsOvEKN03LQeqFCve_aAoxX-zfI5zWY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTY5MTUuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/GtvP-5uUjl1T0w2NWYS_uHv7FOKwnPI5WMJQTZ-tfQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GtvP-5uUjl1T0w2NWYS_uHv7FOKwnPI5WMJQTZ-tfQM/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/vzPMu76AB8K0nKi4Dy8WXK2NoFZsPDzzTn2m7J6kI5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNTgyNzg0MzAy/LTM2NTEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 518,
+            "resource_url": "https://i.discogs.com/0A8A_pX3rorBZlzn2wTyMm2DgWQmnXz8SkwX2qeK0Y8/rs:fit/g:sm/q:90/h:518/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0A8A_pX3rorBZlzn2wTyMm2DgWQmnXz8SkwX2qeK0Y8/rs:fit/g:sm/q:90/h:518/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/JcekJ2wKknDFOoQHLvfp3eOPYsXw0UBSp05JLcQsh40/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwNDc0/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 813,
+            "resource_url": "https://i.discogs.com/9nn0uFMI295rFg3ZsL9RnHMcpJlvVSyiJ1Q4ruKVuAQ/rs:fit/g:sm/q:90/h:813/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9nn0uFMI295rFg3ZsL9RnHMcpJlvVSyiJ1Q4ruKVuAQ/rs:fit/g:sm/q:90/h:813/w:576/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/vzee70YpS9TfLpt9IgGZaJuEpdqkWUMDfMoorCm35zA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMjQ0MzYwODc1/LmpwZWc.jpeg",
+            "width": 576
+          },
+          {
+            "height": 198,
+            "resource_url": "https://i.discogs.com/LPyvVp_kgt69coj3EfFdk_ZB2r7sArQdvrn97NjS4QI/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/LPyvVp_kgt69coj3EfFdk_ZB2r7sArQdvrn97NjS4QI/rs:fit/g:sm/q:90/h:198/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/-mkc1HrTswRT-W183OvSspBrOIeF4d8JlnkuYdC2cps/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA0NDk2MjY0/LmpwZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 531,
+            "resource_url": "https://i.discogs.com/KxolgUe42yOtZ3bVrDuY13dUH9RQnokrBIhBMKIfLQA/rs:fit/g:sm/q:90/h:531/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/KxolgUe42yOtZ3bVrDuY13dUH9RQnokrBIhBMKIfLQA/rs:fit/g:sm/q:90/h:531/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/4FIRiv_-HG6YyDwnrFXGDyRUpLKvvVrhSM3CqnEid5Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTg4/LmpwZw.jpeg",
+            "width": 400
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/lI2YBrRHyD-JVP24v-eQhPhP4xxRv3sQRrcm5PrffZk/rs:fit/g:sm/q:90/h:369/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/lI2YBrRHyD-JVP24v-eQhPhP4xxRv3sQRrcm5PrffZk/rs:fit/g:sm/q:90/h:369/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/mSnMtpYLUI8jZOWv6knrGAgGtO6hJycE8X5aeSZ2Orw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTgx/LmpwZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 277,
+            "resource_url": "https://i.discogs.com/nl3ftYaJEYUzQitC4fouD4xplP2x9XYvfwnRbZKBUJs/rs:fit/g:sm/q:90/h:277/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/nl3ftYaJEYUzQitC4fouD4xplP2x9XYvfwnRbZKBUJs/rs:fit/g:sm/q:90/h:277/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/NTzOOTb5qkOcCd6oYT3aPFU9TGL1rBgm6ywCMWv70EI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTk5/LmpwZw.jpeg",
+            "width": 350
+          },
+          {
+            "height": 373,
+            "resource_url": "https://i.discogs.com/qyvtWhMpTtJoefxjEEOTcFscAW14Z8yvLKSRqJlI-fo/rs:fit/g:sm/q:90/h:373/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qyvtWhMpTtJoefxjEEOTcFscAW14Z8yvLKSRqJlI-fo/rs:fit/g:sm/q:90/h:373/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/2shZ6H_xzbeXY4JRB-Z9q-rkeG5FCo9xWauu2Sa-zkY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xMTA2MTM4MTkz/LmpwZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 516,
+            "resource_url": "https://i.discogs.com/f_IQwXyWdGKTV-HOvxoQhQhsHHLtYosVxvv1DybOu1I/rs:fit/g:sm/q:90/h:516/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/f_IQwXyWdGKTV-HOvxoQhQhsHHLtYosVxvv1DybOu1I/rs:fit/g:sm/q:90/h:516/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0CyEqnyUp-Xr_1QcH1OGWOZ6_DVZNNQGNgUbu9X6IaU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNDIzNjc3MzEx/LTM2MjYuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 273986,
+            "name": "Josh Freese",
+            "resource_url": "https://api.discogs.com/artists/273986",
+            "thumbnail_url": "https://i.discogs.com/dSY6wmw1WQTM96HeFOiOSmNK2V7JqDhELYDGDa1q3fI/rs:fit/g:sm/q:40/h:235/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mzk4/Ni0xNjA0ODQ0NTg2/LTk3OTkucG5n.jpeg"
+          },
+          {
+            "active": false,
+            "id": 406346,
+            "name": "Ron Welty",
+            "resource_url": "https://api.discogs.com/artists/406346",
+            "thumbnail_url": "https://i.discogs.com/BZHu_0VC7TAssuqRZJ2fH3cbWffBuG5mPRF8pu0kJlg/rs:fit/g:sm/q:40/h:519/w:451/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNjM0/Ni0xMjAxMzY2MjQ3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 406347,
+            "name": "Greg Kriesel",
+            "resource_url": "https://api.discogs.com/artists/406347",
+            "thumbnail_url": "https://i.discogs.com/exifyP6PXZJ09JYwj7FsaWgUwPSaGk-Z3Ixo_n9Bs4g/rs:fit/g:sm/q:40/h:313/w:229/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwNjM0/Ny0xMjAxMzY1OTYw/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 436754,
+            "name": "Todd Morse",
+            "resource_url": "https://api.discogs.com/artists/436754",
+            "thumbnail_url": "https://i.discogs.com/KtRLNkV1dgKA4u9Rp0wLj7dQzgP4-VkCilM1xBErDAA/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNjc1/NC0xMTU5NjkyMTgx/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 499343,
+            "name": "Atom Willard",
+            "resource_url": "https://api.discogs.com/artists/499343",
+            "thumbnail_url": "https://i.discogs.com/YLW4r3qKUnyRKzLcUFFAvxx8EoztNTiQeT9Ldl_5R4I/rs:fit/g:sm/q:40/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5OTM0/My0xNjg3NDA5ODgy/LTkwMDUuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 591905,
+            "name": "Pete Parada",
+            "resource_url": "https://api.discogs.com/artists/591905",
+            "thumbnail_url": "https://i.discogs.com/mi4bc-cS37ccTgzHtLONrZu9dqkwRcz37re1Nwabh7s/rs:fit/g:sm/q:40/h:448/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5MTkw/NS0xMjAxMzY2MTky/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 789775,
+            "name": "Kevin Wasserman",
+            "resource_url": "https://api.discogs.com/artists/789775",
+            "thumbnail_url": "https://i.discogs.com/DRKuRX3euUytOk2zJaNJPSbWkkRSMnb0pMWQcpwr3JA/rs:fit/g:sm/q:40/h:509/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc4OTc3/NS0xMjAxMzY2MTA2/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2277411,
+            "name": "Bryan Holland (2)",
+            "resource_url": "https://api.discogs.com/artists/2277411",
+            "thumbnail_url": "https://i.discogs.com/uDdZ9bY8M0D7WhvNn13qMbMjKNfhpQoZNqU8jp7gmow/rs:fit/g:sm/q:40/h:720/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyNzc0/MTEtMTUwMjE3NjU3/OS0zNjc2LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4797324,
+            "name": "Jonah Nimoy",
+            "resource_url": "https://api.discogs.com/artists/4797324",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 6029273,
+            "name": "Brandon Pertzborn",
+            "resource_url": "https://api.discogs.com/artists/6029273",
+            "thumbnail_url": "https://i.discogs.com/_XPCUKXm-0Y1Ub0tx23Zu9wZB6mKflklpftzQW4DHgI/rs:fit/g:sm/q:40/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwMjky/NzMtMTU3NTAwMjI1/My01NDMxLmpwZWc.jpeg"
+          }
+        ],
+        "name": "The Offspring",
+        "namevariations": [
+          "Off Spring",
+          "Offspring",
+          "The Offespring",
+          "The Offsprings",
+          "The Oггspring",
+          "Želvy",
+          "オフスプリング",
+          "後裔合唱團",
+          "오프스프링"
+        ],
+        "profile": "American punk rock band from Garden Grove, California, formed in 1984. Originally called [a=Manic Subsidal], they began performing in 1984, composed of Bryan Holland (vocals, guitar), Greg Kriesel (bass, vocals) and James Frederick Lilja (drums). Changed their name to The Offspring in 1986.\r\n\r\nCurrent members:\r\nBryan \"Dexter\" Holland : Vocals, guitar\r\nKevin \"Noodles\" Wasserman : Guitar, vocals\r\nTodd Morse: Bass\r\nBrandon Pertzborn: Drums\r\n\r\nFormer members:\r\nGregory \"Greg K\" Kriesel : Bass, vocals (1984–2018)\r\nJames Lilja: Drums (1984-1987)\r\nRon Welty : Drums, vocals (1987-2003)\r\nAdam \"Atom\" Willard: Drums (2003-2007)\r\nPete Parada: Drums (2007-2021)",
+        "releases_url": "https://api.discogs.com/artists/133707/releases",
+        "resource_url": "https://api.discogs.com/artists/133707",
+        "uri": "https://www.discogs.com/artist/133707-The-Offspring",
+        "urls": [
+          "http://www.offspring.com/",
+          "http://www.myspace.com/offspring",
+          "https://en.wikipedia.org/wiki/The_Offspring",
+          "https://www.instagram.com/offspring?igsh=MWtsd2Jiank1OTNkOQ=="
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/133707",
+      "thumb": "https://i.discogs.com/l4ovs7m2j8-n5GQ2Qt2Uu6UsspO56Tr9SUyOJvJavsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzcw/Ny0xNjE0MTg3ODEz/LTYxNzkucG5n.jpeg",
+      "url": "https://www.discogs.com/artist/133707-The-Offspring",
+      "urls": [
+        "http://www.offspring.com/",
+        "http://www.myspace.com/offspring",
+        "https://en.wikipedia.org/wiki/The_Offspring",
+        "https://www.instagram.com/offspring?igsh=MWtsd2Jiank1OTNkOQ=="
+      ]
     },
     "lastfm": {
       "bio_content": "The Offspring are a punk rock band formed in Huntington Beach, California, United States in 1984. From 1987 to 2003, the band's line-up included Dexter Holland (lead vocals, guitar), Noodles (lead and rhythm guitars, back vocals), Greg K. (bass, back vocals), and Ron Welty (drums, percussion), who was fired in 2003. Their current drummer is Brandon Pertzborn of Marilyn Manson who has been with the band since 2023. Greg K was fired from the band in 2018 and was replaced by Todd Morse.\n\nAlong with fellow California punk bands Green Day and Rancid, The Offspring have been credited with reviving mainstream interest in punk rock in the United States during the mid-1990s. To date, The Offspring has released eight studio albums, one compilation, four EPs and three DVDs. They have sold over 34 million albums worldwide, making them one of the best-selling punk rock acts of all time. Each album since the release of their 1994 album Smash has sold over a million units.\n\nSince the release of Smash, which is the best-selling independent label album of all time, The Offspring has achieved commercial success over five albums, with singles such as \"Come Out and Play\" and \"Self Esteem\". The band’s next three albums, Ixnay on the Hombre, Americana, and Conspiracy of One, were also successful, with Ixnay on the Hombre and Conspiracy of One reaching platinum certification, and Americana achieving multi-platinum status. Longtime drummer Ron Welty left The Offspring in early 2003, and was replaced by Atom Willard. Later that year, the band released their next album, Splinter, to moderate sales and fairly warm reviews. In 2005, The Offspring released a Greatest Hits album and toured in support of the compilation. Their eighth studio album, Rise and Fall, Rage and Grace, was released on June 17, 2008 with the hit singles \"You're Gonna Go Far, Kid\" and \"Hammerhead.\" \n\nDays Go By is the band’s ninth studio album and was released on June 26, 2012. The Days Go By Songfacts reports that the title track was released as the first single and was premiered on KROQ on April 27, 2012.\n\nIn 2021 they released Let the Bad Times Roll and in 2024 they followed it up with Supercharged.\n\n2. Offspring were a short-lived English pop duo of the early 1970s, consisting of Mike Brayn and John Howard, who met at Hurstpierpoint College in Sussex, United Kingdom. They released just one single, 'Windfall' (1972). Their planned studio album was never completed. <a href=\"https://www.last.fm/music/The+Offspring\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +528,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 4104844,
+      "listeners": 4107553,
       "mbid": "23a03e33-a603-404e-bcbf-2c00159d7067",
       "name": "The Offspring",
-      "playcount": 179954176,
+      "playcount": 180088183,
       "similar_artists": [
         {
           "name": "Pennywise",
@@ -171,7 +564,7 @@
       "url": "https://www.last.fm/music/The+Offspring"
     },
     "spotify": {
-      "followers": 6397770,
+      "followers": 6402524,
       "genres": [
         "punk",
         "skate punk"
@@ -201,6 +594,6 @@
   },
   "spotify_id": "5LfGQac0EIXyAN8aUwmNAQ",
   "spotify_url": "https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ",
-  "updated_at": "2025-07-05T17:03:58.170591",
+  "updated_at": "2025-07-08T10:05:15.932607",
   "wikipedia_url": null
 }

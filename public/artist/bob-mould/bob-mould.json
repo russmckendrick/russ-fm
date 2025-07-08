@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:37:23.558579",
   "discogs_id": "254538",
-  "discogs_url": "https://www.discogs.com/artist/254538",
-  "followers": 79359,
+  "discogs_url": "https://www.discogs.com/artist/254538-Bob-Mould",
+  "followers": 79373,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -17,7 +17,7 @@
     "rock",
     "indie"
   ],
-  "id": null,
+  "id": "bob-mould-1751722644",
   "images": [
     {
       "height": 2000,
@@ -78,17 +78,29 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/wFmCIzILudlaMi9mWCKFvCB8v-RU53ByzHxIPsmj5Oc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "d7f5305a-15fc-4af4-a61b-f6f45510cc8f",
   "lastfm_url": "https://www.last.fm/music/Bob+Mould",
   "local_images": {
-    "hi-res": "public/artist/bob-mould/bob-mould-hi-res.jpg",
-    "medium": "public/artist/bob-mould/bob-mould-medium.jpg",
-    "small": "public/artist/bob-mould/bob-mould-small.jpg"
+    "hi-res": "../public/artist/bob-mould/bob-mould-hi-res.jpg",
+    "medium": "../public/artist/bob-mould/bob-mould-medium.jpg",
+    "small": "../public/artist/bob-mould/bob-mould-small.jpg"
   },
   "name": "Bob Mould",
-  "popularity": 37,
+  "popularity": 36,
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/b1/a2/ce/b1a2ce9a-2be0-8d16-ba89-4f17cb386424/pr_source.png/2000x2000bb.jpg",
@@ -102,9 +114,189 @@
       "url": "https://music.apple.com/gb/artist/bob-mould/524371"
     },
     "discogs": {
-      "id": 254538,
-      "original_name": "Bob Mould",
-      "role": ""
+      "cover_image": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "254538",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/wFmCIzILudlaMi9mWCKFvCB8v-RU53ByzHxIPsmj5Oc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 540,
+          "resource_url": "https://i.discogs.com/x5mwk9ic4jZMMLykVMeyVaXYvYsqwpASRynDCUvOnOY/rs:fit/g:sm/q:90/h:540/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/x5mwk9ic4jZMMLykVMeyVaXYvYsqwpASRynDCUvOnOY/rs:fit/g:sm/q:90/h:540/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/h0kWznY4p1GiPwKZaK1EoMilQ7nwmA6KAsCC3Mokf4U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+          "width": 540
+        },
+        {
+          "height": 710,
+          "resource_url": "https://i.discogs.com/aZkzoJBOwYvIu-n99BXlPST5c3lTb1Z1rfi8BMKq49o/rs:fit/g:sm/q:90/h:710/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aZkzoJBOwYvIu-n99BXlPST5c3lTb1Z1rfi8BMKq49o/rs:fit/g:sm/q:90/h:710/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zsefXzFY3fdyaAuazS4oBy41IHNRtdpbC83ywnG1S7Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+          "width": 581
+        },
+        {
+          "height": 426,
+          "resource_url": "https://i.discogs.com/_Lnwby5jGQnjm5MK5kZpi4yPLLDhOV1mf5zgQ4hPPjo/rs:fit/g:sm/q:90/h:426/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_Lnwby5jGQnjm5MK5kZpi4yPLLDhOV1mf5zgQ4hPPjo/rs:fit/g:sm/q:90/h:426/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+          "uri150": "https://i.discogs.com/jVZZZkF_XvZfkDQ22gco-AVYbjZtdOp8Mp1FWHQ2ZAw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+          "width": 426
+        },
+        {
+          "height": 160,
+          "resource_url": "https://i.discogs.com/HZYI93GveKopYc7QjuPO54Nkc79PVt7IofTwzLM9geo/rs:fit/g:sm/q:90/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HZYI93GveKopYc7QjuPO54Nkc79PVt7IofTwzLM9geo/rs:fit/g:sm/q:90/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/L5LFIy8SaheHr2mgxRmeZP-fQ5z-aunZIaETBrhQ-I4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+          "width": 160
+        }
+      ],
+      "members": [],
+      "name": "Bob Mould",
+      "namevariations": [
+        "B Mould",
+        "B. Mould",
+        "Bob",
+        "Bob Moulder",
+        "Mould",
+        "courtesy of Mr. and Mrs. Roland"
+      ],
+      "profile": "American guitarist, producer and singer-songwriter born October 16, 1960 in Malone, New York.\r\nAs well as his own well-known musical projects, Mould also co-founded [l=Singles Only Label].",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 1117703,
+            "name": "LoudBomb",
+            "resource_url": "https://api.discogs.com/artists/1117703",
+            "thumbnail_url": "https://i.discogs.com/I4caY3ygwlML5wd_1NZPGYr9YAK_jTK2nMqfXtkJ2EI/rs:fit/g:sm/q:40/h:320/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMTc3/MDMtMTIxMDQ3OTE2/NC5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 129885,
+            "name": "Hüsker Dü",
+            "resource_url": "https://api.discogs.com/artists/129885",
+            "thumbnail_url": "https://i.discogs.com/Mdi1wnKJ88o-lbhOPKib4evnoFi_XHlVuSw7_YaaiFo/rs:fit/g:sm/q:40/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTg4/NS0xNjExNjIyMjc5/LTc5NDguanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 251659,
+            "name": "Sugar (5)",
+            "resource_url": "https://api.discogs.com/artists/251659",
+            "thumbnail_url": "https://i.discogs.com/o3UZL5e-aDAk36GqSSotrS7QEt7e0OgCftVw7BSbV7I/rs:fit/g:sm/q:40/h:304/w:466/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTY1/OS0xMTA1ODc5NjAz/LmdpZg.jpeg"
+          },
+          {
+            "active": true,
+            "id": 797944,
+            "name": "Blowoff",
+            "resource_url": "https://api.discogs.com/artists/797944",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 1082926,
+            "name": "BobMouldBand",
+            "resource_url": "https://api.discogs.com/artists/1082926",
+            "thumbnail_url": "https://i.discogs.com/f7fIi1FWOw8uVrKxYK4E2_3oM3r7v8NyTDzX6P7X7p0/rs:fit/g:sm/q:40/h:398/w:541/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwODI5/MjYtMTcwNTY1ODA0/Ni0zNTgwLnBuZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4986246,
+            "name": "Granary Music",
+            "resource_url": "https://api.discogs.com/artists/4986246",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 254538,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/HxAWcpMW_ZPcXItR59KqkFFsobbKZ4A0CO5CJ59ogl0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/wFmCIzILudlaMi9mWCKFvCB8v-RU53ByzHxIPsmj5Oc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 540,
+            "resource_url": "https://i.discogs.com/x5mwk9ic4jZMMLykVMeyVaXYvYsqwpASRynDCUvOnOY/rs:fit/g:sm/q:90/h:540/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/x5mwk9ic4jZMMLykVMeyVaXYvYsqwpASRynDCUvOnOY/rs:fit/g:sm/q:90/h:540/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/h0kWznY4p1GiPwKZaK1EoMilQ7nwmA6KAsCC3Mokf4U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTc4MDQuanBlZw.jpeg",
+            "width": 540
+          },
+          {
+            "height": 710,
+            "resource_url": "https://i.discogs.com/aZkzoJBOwYvIu-n99BXlPST5c3lTb1Z1rfi8BMKq49o/rs:fit/g:sm/q:90/h:710/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aZkzoJBOwYvIu-n99BXlPST5c3lTb1Z1rfi8BMKq49o/rs:fit/g:sm/q:90/h:710/w:581/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/zsefXzFY3fdyaAuazS4oBy41IHNRtdpbC83ywnG1S7Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ0MDIxMDQ5/LTE1NTIuanBlZw.jpeg",
+            "width": 581
+          },
+          {
+            "height": 426,
+            "resource_url": "https://i.discogs.com/_Lnwby5jGQnjm5MK5kZpi4yPLLDhOV1mf5zgQ4hPPjo/rs:fit/g:sm/q:90/h:426/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/_Lnwby5jGQnjm5MK5kZpi4yPLLDhOV1mf5zgQ4hPPjo/rs:fit/g:sm/q:90/h:426/w:426/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+            "uri150": "https://i.discogs.com/jVZZZkF_XvZfkDQ22gco-AVYbjZtdOp8Mp1FWHQ2ZAw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNTQ4MDE3MTg4/LTU5MDAucG5n.jpeg",
+            "width": 426
+          },
+          {
+            "height": 160,
+            "resource_url": "https://i.discogs.com/HZYI93GveKopYc7QjuPO54Nkc79PVt7IofTwzLM9geo/rs:fit/g:sm/q:90/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HZYI93GveKopYc7QjuPO54Nkc79PVt7IofTwzLM9geo/rs:fit/g:sm/q:90/h:160/w:160/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/L5LFIy8SaheHr2mgxRmeZP-fQ5z-aunZIaETBrhQ-I4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xMTMyMTU2NDcx/LmpwZWc.jpeg",
+            "width": 160
+          }
+        ],
+        "name": "Bob Mould",
+        "namevariations": [
+          "B Mould",
+          "B. Mould",
+          "Bob",
+          "Bob Moulder",
+          "Mould",
+          "courtesy of Mr. and Mrs. Roland"
+        ],
+        "profile": "American guitarist, producer and singer-songwriter born October 16, 1960 in Malone, New York.\r\nAs well as his own well-known musical projects, Mould also co-founded [l=Singles Only Label].",
+        "realname": "Robert Arthur Mould",
+        "releases_url": "https://api.discogs.com/artists/254538/releases",
+        "resource_url": "https://api.discogs.com/artists/254538",
+        "uri": "https://www.discogs.com/artist/254538-Bob-Mould",
+        "urls": [
+          "http://www.bobmould.com",
+          "http://en.wikipedia.org/wiki/Bob_Mould",
+          "https://www.youtube.com/user/BobMouldMusic",
+          "https://twitter.com/bobmouldmusic",
+          "https://www.facebook.com/bobmouldmusic/",
+          "https://www.instagram.com/bobmouldmusic/",
+          "https://soundcloud.com/bobmouldmusic"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/254538",
+      "thumb": "https://i.discogs.com/wFmCIzILudlaMi9mWCKFvCB8v-RU53ByzHxIPsmj5Oc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NDUz/OC0xNjQ1NjM1Mjg3/LTc2OTAuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/254538-Bob-Mould",
+      "urls": [
+        "http://www.bobmould.com",
+        "http://en.wikipedia.org/wiki/Bob_Mould",
+        "https://www.youtube.com/user/BobMouldMusic",
+        "https://twitter.com/bobmouldmusic",
+        "https://www.facebook.com/bobmouldmusic/",
+        "https://www.instagram.com/bobmouldmusic/",
+        "https://soundcloud.com/bobmouldmusic"
+      ]
     },
     "lastfm": {
       "bio_content": "Bob Mould (born October 16, 1960, in Malone, New York) is an American musician, principally known for his work as guitarist, vocalist and songwriter for influential rock bands Hüsker Dü in the 1980s and Sugar in the 1990s.\n\nBorn in Malone, New York, Mould lived in several places, including Pine City, Minnesota and the Minneapolis-St. Paul area, where he attended Macalester College. There, he formed Hüsker Dü in the late 1970s, with drummer/singer Grant Hart and bass guitarist Greg Norton.\n\nMould released his first solo album after Hüsker Dü broke up; 1989's Workbook eschewed Mould's trademark wall-of-noise guitar for a stripped-down sound featuring acoustic guitars and cellos. 1991's jagged Black Sheets of Rain put Mould in more familiar territory, recalling Hüsker Dü's loudest, angriest moments. Mould also started a record label, Singles Only Label, which released singles from up and coming bands such as Grant Lee Buffalo.\n\nMould then formed the group Sugar, a college/alternative radio favorite in the mid-1990s. Along with extensive touring, Sugar released two albums, an EP and a B-sides collection before splitting.\n\nMould returned to solo recording, releasing a self-titled album in 1996 (which is often referred to as Hubcap because of the cover photo) and 1998's The Last Dog and Pony Show. During a stint living in New York City in the late-1990s, Mould's tastes took a detour into dance music and electronica. Those influences were clear on his 2002 release Modulate, which featured a strong electronica influence to mixed critical reviews. To pursue this sound, Mould also began recording under the pseudonym LoudBomb (an anagram of his name). He has released one CD so far under this name.\n\nMould took a brief break from the music world to get involved with another passion of his, professional wrestling, when he joined WCW as a scriptwriter for a brief period. Creative differences with some of the other writers of the league led to Mould leaving the company and returning to music. The liner notes for Modulate thank some of the wrestlers he associated with, most notably Kevin Nash and Kevin Sullivan.\n\nIn addition to his solo work, Mould is also a live DJ in collaboration with Washington DC-area dance music artist Richard Morel, under the collective banner Blowoff. A recording under that banner was released in September 2006. Mould has been asked to do remixes for a variety of dance and alternative rock artists. A recent remix of the Interpol song \"Length Of Love\" has led to more critical acclaim for the veteran artist.\n \nFor much of the 1990s, Mould toured playing solo acoustic renditions of his catalog (occasionally switching to electric guitar midway through his set). In 2005 his solo album Body of Song was cross-announced with his first band tour since 1998. Brendan Canty, best known as the drummer for Fugazi, and Mould's Blowoff collaborator, Morel, played drums and keyboards, respectively, for the 2005 tour. Mould's latest album, District Line, was released in February 2008.\n\nThough his homosexuality was previously something of an open secret, Mould was outed in the early 1990s; he is now openly gay. Though it was often rumored during his Hüsker Dü days that he and bandmate Hart were an item (Hart was also gay, and both acknowledge taking partners on tour), both have flatly denied ever having been romantically involved.\n\nIn 2006, Mould contributed the song \"If I Can't Change Your Mind\" to the album Wed-Rock, an album to promote same-sex marriage.\n\nOn September 29, 2005, Mould's song \"Circles\" was featured on The OC as Marissa Cooper was starting her first day at her public school in Season 3. Mould's song \"Dog on Fire\" is the theme song for The Daily Show. They Might Be Giants perform the current version. The song \"See a Little Light\" has been used more than once in various television applications: It was used in the closing scene of the original un-aired test pilot episode of Buffy The Vampire Slayer, it became one of the principal theme songs for the HBO series The Mind of the Married Man and was also used in a television commercial for TIAA-CREF (August 2007). Mould also composed the theme for the TLC program, In a Fix.\n\nMould and director Cameron Crowe are close friends; the character Bob Sugar (played by Jay Mohr) in Crowe's 1996 film Jerry Maguire is named for both Mould and his former band, Sugar.\n\nMould appeared on an episode of IFC's The Henry Rollins Show on June 15, 2007.\n\nMould also played lead guitar in the house band for the film of John Cameron Mitchell's Hedwig and the Angry Inch. Mould also participated in a Hedwig tribute album, Wig in a Box, on which he covered the song \"Nailed.\"\n\nSolo Discography\nWorkbook LP (Virgin, 1989) \nSee A Little Light Single (Virgin, 1989) \nWishing Well + 4 Tracks Single (Virgin, 1989) \nBlack Sheets of Rain LP (Virgin, 1990) \nPoison Years Compilation LP (Virgin, 1994) \nEgøverride Single (Rykodisc, 1995) \nBob Mould LP (Rykodisc, 1996) \nThe Last Dog and Pony Show LP (Rykodisc, 1998) \nModulate LP (Granary Music, 2002) \nLive Dog 98: The Forum, London UK Live LP (Granary Music, 2002) \nLong Playing Grooves (released under anagram LoudBomb) LP (Granary Music, 2002) \nBody of Song (Yep Roc, 2005) \nDistrict Line (Granary Music, 2008)\nSilver Age (Edsel 2012)\nBeauty & Ruin (Merge Records, 2014)\nPatch the Sky (Merge Records, 2016)\nSunshine Rock (Merge Records, 2019)\n\nBootlegs\nThe Calm Before the Storm (Kiss The Stone, 1994) \n\nBands Produced\nSoul Asylum, Made To Be Broken LP \nArticles of Faith, Give Thanks and In this Life LPs \nMagnapop, Hot Boxing LP \nVerbow, Chronicles LP \nThe Zulus, Down on the Floor LP \nImpaler, If We Had Brains... We'd Be Dangerous LP \nLow, Tonight the Monkeys Die Remixes EP \n\nhttp://www.bobmould.com\nhttp://modulate.blogspot.com\n <a href=\"https://www.last.fm/music/Bob+Mould\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +327,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 193647,
+      "listeners": 193685,
       "mbid": "d7f5305a-15fc-4af4-a61b-f6f45510cc8f",
       "name": "Bob Mould",
-      "playcount": 3278406,
+      "playcount": 3279312,
       "similar_artists": [
         {
           "name": "Sugar",
@@ -171,7 +363,7 @@
       "url": "https://www.last.fm/music/Bob+Mould"
     },
     "spotify": {
-      "followers": 79359,
+      "followers": 79373,
       "genres": [
         "power pop"
       ],
@@ -194,12 +386,12 @@
         }
       ],
       "name": "Bob Mould",
-      "popularity": 37,
+      "popularity": 36,
       "url": "https://open.spotify.com/artist/0fWvSXbvztkeHEnEuYvU2A"
     }
   },
   "spotify_id": "0fWvSXbvztkeHEnEuYvU2A",
   "spotify_url": "https://open.spotify.com/artist/0fWvSXbvztkeHEnEuYvU2A",
-  "updated_at": "2025-07-05T14:37:24.201931",
+  "updated_at": "2025-07-08T09:25:22.322959",
   "wikipedia_url": null
 }

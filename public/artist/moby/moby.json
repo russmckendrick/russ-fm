@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:54:54.730252",
   "discogs_id": "1031",
-  "discogs_url": "https://www.discogs.com/artist/1031",
-  "followers": 2024512,
+  "discogs_url": "https://www.discogs.com/artist/1031-Moby",
+  "followers": 2025478,
   "formed_date": null,
   "genres": [
     "Electronic",
@@ -18,7 +18,7 @@
     "alternative",
     "electronica"
   ],
-  "id": null,
+  "id": "moby-1751723697",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/pPTCHozRgWs8T8I5El0NKsYgFPrqx0luO0eWTu6f9B4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "8970d868-0723-483b-a75b-51088913d3d4",
   "lastfm_url": "https://www.last.fm/music/Moby",
   "local_images": {
-    "hi-res": "public/artist/moby/moby-hi-res.jpg",
-    "medium": "public/artist/moby/moby-medium.jpg",
-    "small": "public/artist/moby/moby-small.jpg"
+    "hi-res": "../public/artist/moby/moby-hi-res.jpg",
+    "medium": "../public/artist/moby/moby-medium.jpg",
+    "small": "../public/artist/moby/moby-small.jpg"
   },
   "name": "Moby",
   "popularity": 72,
@@ -103,9 +115,376 @@
       "url": "https://music.apple.com/gb/artist/moby/789023"
     },
     "discogs": {
-      "id": 1031,
-      "original_name": "Moby",
-      "role": ""
+      "cover_image": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1031",
+      "images": [
+        {
+          "height": 509,
+          "resource_url": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pPTCHozRgWs8T8I5El0NKsYgFPrqx0luO0eWTu6f9B4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/RO7_YKK_bWMVpeo9j37O5Klk16lh0H2gFni5gcoDUQo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RO7_YKK_bWMVpeo9j37O5Klk16lh0H2gFni5gcoDUQo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QESTiZOUfgrVabW5VwjCjZHwDGTQjR_iNLjvvgeL_Q8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/DcvOfgbEnT2VVuRD1_oFwJKq2rkltG2Ay727u8HObFc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DcvOfgbEnT2VVuRD1_oFwJKq2rkltG2Ay727u8HObFc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/ksWtCvgO-c9Bmrhlh_-7pJxxQpITfuZ9R04Ngb6alzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 528,
+          "resource_url": "https://i.discogs.com/fTFlZVXKeByGqi0EQn7bAIfnSrHN7wfsNOPJrA8CZUw/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fTFlZVXKeByGqi0EQn7bAIfnSrHN7wfsNOPJrA8CZUw/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/C-jklDcX6LBvJdOdd8tX50TCEhZAGFijRkiSSEPD9SA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/D-tahvJTJdwT1v-TT-r5TQK3EqlcS9WNcyGDaxwwacQ/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D-tahvJTJdwT1v-TT-r5TQK3EqlcS9WNcyGDaxwwacQ/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/Xa-JWMnDmpy3xTv6oyAjUiokCAX--Kl_VshEyVyR9jg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+          "width": 568
+        },
+        {
+          "height": 709,
+          "resource_url": "https://i.discogs.com/xUC7evvgRNiTNCuEQB1fnMvQt4sz7SEC71fMx3FGEyQ/rs:fit/g:sm/q:90/h:709/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xUC7evvgRNiTNCuEQB1fnMvQt4sz7SEC71fMx3FGEyQ/rs:fit/g:sm/q:90/h:709/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/T8lfD1IqfR4s8XDlvt4qBk4Z7Mgu1m-_mJ3vNTEdo8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/ze-sJf5oh8aZq4z4TqDocjhe6Up_2PkLEqK5YT4i1Ao/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ze-sJf5oh8aZq4z4TqDocjhe6Up_2PkLEqK5YT4i1Ao/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/mSvE8ATmuW0Lw34tSQdkmeSPWOWgW4boCfE5t8LfZXg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 303,
+          "resource_url": "https://i.discogs.com/6evvJdCdzLjc74h67cWS1lbnCtoKVuljs3BCyToomUY/rs:fit/g:sm/q:90/h:303/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6evvJdCdzLjc74h67cWS1lbnCtoKVuljs3BCyToomUY/rs:fit/g:sm/q:90/h:303/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/2w2kEhOIc6m0mqnPY_-v5_BDqI2GLPUv3zxCKE2eEtk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+          "width": 240
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/kqz_JCO1Ed8_cq59IUJzTc0Ew0xUSEseOPA60vRcncM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kqz_JCO1Ed8_cq59IUJzTc0Ew0xUSEseOPA60vRcncM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/ySmRxk8YhK6BQTQMDSC_F8H3xRvQJLuYdyEN7F9tVJc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+          "width": 408
+        },
+        {
+          "height": 613,
+          "resource_url": "https://i.discogs.com/Juz68DgHFTpw-NX2cJ7uZ9or6UNljQVedFDUR_DKpo4/rs:fit/g:sm/q:90/h:613/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Juz68DgHFTpw-NX2cJ7uZ9or6UNljQVedFDUR_DKpo4/rs:fit/g:sm/q:90/h:613/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/GdKCoa3Oqz2-8F9lldDm3aiZ0npdh99U998FXGsNN5s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+          "width": 510
+        },
+        {
+          "height": 404,
+          "resource_url": "https://i.discogs.com/Cx9CuUF0nHvdbr2jQlscF22CZ9Kg4GV0650P8bGojtg/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Cx9CuUF0nHvdbr2jQlscF22CZ9Kg4GV0650P8bGojtg/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/-oMmHlByAms1zLRtd-CAGKGQWpVXu1TR1SruPk6u5AQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 317,
+          "resource_url": "https://i.discogs.com/jJEJ6-D1KXVrRhHBEpwl0EjpL7uAwQDJjJM9UoCW7sg/rs:fit/g:sm/q:90/h:317/w:214/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jJEJ6-D1KXVrRhHBEpwl0EjpL7uAwQDJjJM9UoCW7sg/rs:fit/g:sm/q:90/h:317/w:214/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/QEkw84aBKV-uQfepsla2OOyWAbCDgt_Fk4SWtbwXJ5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+          "width": 214
+        },
+        {
+          "height": 395,
+          "resource_url": "https://i.discogs.com/K0y8P_Ku0O0Gn68p1mpV9iy55NImDYQbIx06QGpMuC0/rs:fit/g:sm/q:90/h:395/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/K0y8P_Ku0O0Gn68p1mpV9iy55NImDYQbIx06QGpMuC0/rs:fit/g:sm/q:90/h:395/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/UBtcoaoYzOdbSMhw_wUKa-khk7IKvbQNxB2qx2kA5zI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+          "width": 395
+        },
+        {
+          "height": 505,
+          "resource_url": "https://i.discogs.com/6a8NBNe3I1SUCDABqbuesSkgsTrvZWFdyt9T8aeewPk/rs:fit/g:sm/q:90/h:505/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6a8NBNe3I1SUCDABqbuesSkgsTrvZWFdyt9T8aeewPk/rs:fit/g:sm/q:90/h:505/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/GjzAZilJUg7dxr_Vk_ZcRvjjIPnTQFmvwcm2sVjPxm8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+          "width": 368
+        }
+      ],
+      "members": [],
+      "name": "Moby",
+      "namevariations": [
+        "DJ Moby",
+        "DJ摩比",
+        "Evil Ninja Moby",
+        "M Oby",
+        "Mob9",
+        "Mobey",
+        "Mobi",
+        "Moby (as Jim Biscuit)",
+        "Moby's",
+        "Moby.",
+        "Mody",
+        "Möby",
+        "R.Hall",
+        "R.M. Moby",
+        "The Little Idiot Moby",
+        "モービー",
+        "摩比",
+        "魔比",
+        "모비"
+      ],
+      "profile": "Multi-instrumentalist, singer-songwriter, music producer, and DJ.\r\nBorn: September 11, 1965, Harlem, New York, NY, USA. Grew up in Darien, CT, USA. Now lives in Los Angeles, CA, USA.\r\nFounded the labels [l=Little Idiot] & [l=Always Centered At Night].",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 653,
+            "name": "Voodoo Child",
+            "resource_url": "https://api.discogs.com/artists/653",
+            "thumbnail_url": "https://i.discogs.com/qKRCKDQ4l4xLwEEYXaz20CZ98sTv6lzpZy-R70OQ9sM/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1My0x/NTEyNTA5MjA5LTU5/MDEuanBlZw.jpeg"
+          },
+          {
+            "id": 12712,
+            "name": "U.H.F.",
+            "resource_url": "https://api.discogs.com/artists/12712",
+            "thumbnail_url": "https://i.discogs.com/YkUgJchy16A08UsEsdgu2cM8EIsG7m_7Dvxlk70Z2CQ/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNzEy/LTE1MTI1MDkxOTUt/ODE4Ni5qcGVn.jpeg"
+          },
+          {
+            "id": 21236,
+            "name": "Barracuda",
+            "resource_url": "https://api.discogs.com/artists/21236",
+            "thumbnail_url": "https://i.discogs.com/8xRfGJaS_JnCIrGFqQcxEHIGfuokFvNisqRcw-wkwNk/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIxMjM2/LTE1MTI1MDkxMzIt/ODA5OC5qcGVn.jpeg"
+          },
+          {
+            "id": 44848,
+            "name": "Lopez",
+            "resource_url": "https://api.discogs.com/artists/44848",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 46038,
+            "name": "Mindstorm (2)",
+            "resource_url": "https://api.discogs.com/artists/46038",
+            "thumbnail_url": "https://i.discogs.com/YiI8LG-hEi4UYnE0XzFHnfSTGLDuIbWzDaVNcuZYXcg/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2MDM4/LTE1MTI1MDkxNzUt/NDYyMy5qcGVn.jpeg"
+          },
+          {
+            "id": 74978,
+            "name": "DJ Cake",
+            "resource_url": "https://api.discogs.com/artists/74978",
+            "thumbnail_url": "https://i.discogs.com/NmR0ieiw-AvAo8JLhazryySc0yfNEEJUxQbrxSQAQ1w/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0OTc4/LTE1MTI1MDkxNTYt/NDEyOS5qcGVn.jpeg"
+          },
+          {
+            "id": 114326,
+            "name": "Brainstorm (3)",
+            "resource_url": "https://api.discogs.com/artists/114326",
+            "thumbnail_url": "https://i.discogs.com/s3cX-J8zIWwoqfWC12Uk8o94CkVSMwAcHv9AoGDndC0/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNDMy/Ni0xNTEyNTA5MTQ2/LTY2ODUuanBlZw.jpeg"
+          },
+          {
+            "id": 459457,
+            "name": "Richard M. Hall",
+            "resource_url": "https://api.discogs.com/artists/459457",
+            "thumbnail_url": "https://i.discogs.com/6PUDE4evRelTewTz09EzfujoMg95SadKKesL3zZbIOQ/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1OTQ1/Ny0xNTEyNTA5MTg2/LTE0NTAuanBlZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 1031,
+        "images": [
+          {
+            "height": 509,
+            "resource_url": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/MetwxJgfwkwo9n6gX6YdKFzdg159fJ35q1zEuvPtIIo/rs:fit/g:sm/q:90/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/pPTCHozRgWs8T8I5El0NKsYgFPrqx0luO0eWTu6f9B4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/RO7_YKK_bWMVpeo9j37O5Klk16lh0H2gFni5gcoDUQo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RO7_YKK_bWMVpeo9j37O5Klk16lh0H2gFni5gcoDUQo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/QESTiZOUfgrVabW5VwjCjZHwDGTQjR_iNLjvvgeL_Q8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY1MjYyNDEzOC03/NzY5LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/DcvOfgbEnT2VVuRD1_oFwJKq2rkltG2Ay727u8HObFc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DcvOfgbEnT2VVuRD1_oFwJKq2rkltG2Ay727u8HObFc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+            "uri150": "https://i.discogs.com/ksWtCvgO-c9Bmrhlh_-7pJxxQpITfuZ9R04Ngb6alzc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTY0NDYxNTQwNi01/Mzg0LnBuZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 528,
+            "resource_url": "https://i.discogs.com/fTFlZVXKeByGqi0EQn7bAIfnSrHN7wfsNOPJrA8CZUw/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/fTFlZVXKeByGqi0EQn7bAIfnSrHN7wfsNOPJrA8CZUw/rs:fit/g:sm/q:90/h:528/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/C-jklDcX6LBvJdOdd8tX50TCEhZAGFijRkiSSEPD9SA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQ3NDU3MjM3Ny02/OTQ0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/D-tahvJTJdwT1v-TT-r5TQK3EqlcS9WNcyGDaxwwacQ/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/D-tahvJTJdwT1v-TT-r5TQK3EqlcS9WNcyGDaxwwacQ/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/Xa-JWMnDmpy3xTv6oyAjUiokCAX--Kl_VshEyVyR9jg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI5NTY0OTYzOS5q/cGVn.jpeg",
+            "width": 568
+          },
+          {
+            "height": 709,
+            "resource_url": "https://i.discogs.com/xUC7evvgRNiTNCuEQB1fnMvQt4sz7SEC71fMx3FGEyQ/rs:fit/g:sm/q:90/h:709/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xUC7evvgRNiTNCuEQB1fnMvQt4sz7SEC71fMx3FGEyQ/rs:fit/g:sm/q:90/h:709/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/T8lfD1IqfR4s8XDlvt4qBk4Z7Mgu1m-_mJ3vNTEdo8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUzNDcwMjI5OS0x/NzY2LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/ze-sJf5oh8aZq4z4TqDocjhe6Up_2PkLEqK5YT4i1Ao/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ze-sJf5oh8aZq4z4TqDocjhe6Up_2PkLEqK5YT4i1Ao/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/mSvE8ATmuW0Lw34tSQdkmeSPWOWgW4boCfE5t8LfZXg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTM4MDAzOTczMS0x/MzA4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 303,
+            "resource_url": "https://i.discogs.com/6evvJdCdzLjc74h67cWS1lbnCtoKVuljs3BCyToomUY/rs:fit/g:sm/q:90/h:303/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6evvJdCdzLjc74h67cWS1lbnCtoKVuljs3BCyToomUY/rs:fit/g:sm/q:90/h:303/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/2w2kEhOIc6m0mqnPY_-v5_BDqI2GLPUv3zxCKE2eEtk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MDAxLmpwZw.jpeg",
+            "width": 240
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/kqz_JCO1Ed8_cq59IUJzTc0Ew0xUSEseOPA60vRcncM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/kqz_JCO1Ed8_cq59IUJzTc0Ew0xUSEseOPA60vRcncM/rs:fit/g:sm/q:90/h:600/w:408/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/ySmRxk8YhK6BQTQMDSC_F8H3xRvQJLuYdyEN7F9tVJc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTE2Mjg1MDMyMC5q/cGVn.jpeg",
+            "width": 408
+          },
+          {
+            "height": 613,
+            "resource_url": "https://i.discogs.com/Juz68DgHFTpw-NX2cJ7uZ9or6UNljQVedFDUR_DKpo4/rs:fit/g:sm/q:90/h:613/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Juz68DgHFTpw-NX2cJ7uZ9or6UNljQVedFDUR_DKpo4/rs:fit/g:sm/q:90/h:613/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/GdKCoa3Oqz2-8F9lldDm3aiZ0npdh99U998FXGsNN5s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTIxNTE5NDUxNC5q/cGVn.jpeg",
+            "width": 510
+          },
+          {
+            "height": 404,
+            "resource_url": "https://i.discogs.com/Cx9CuUF0nHvdbr2jQlscF22CZ9Kg4GV0650P8bGojtg/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Cx9CuUF0nHvdbr2jQlscF22CZ9Kg4GV0650P8bGojtg/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/-oMmHlByAms1zLRtd-CAGKGQWpVXu1TR1SruPk6u5AQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTQxODYwNTgxNC05/MDE2LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 317,
+            "resource_url": "https://i.discogs.com/jJEJ6-D1KXVrRhHBEpwl0EjpL7uAwQDJjJM9UoCW7sg/rs:fit/g:sm/q:90/h:317/w:214/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jJEJ6-D1KXVrRhHBEpwl0EjpL7uAwQDJjJM9UoCW7sg/rs:fit/g:sm/q:90/h:317/w:214/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/QEkw84aBKV-uQfepsla2OOyWAbCDgt_Fk4SWtbwXJ5U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwOTQzODAxNS00/NDczLmpwZWc.jpeg",
+            "width": 214
+          },
+          {
+            "height": 395,
+            "resource_url": "https://i.discogs.com/K0y8P_Ku0O0Gn68p1mpV9iy55NImDYQbIx06QGpMuC0/rs:fit/g:sm/q:90/h:395/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/K0y8P_Ku0O0Gn68p1mpV9iy55NImDYQbIx06QGpMuC0/rs:fit/g:sm/q:90/h:395/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/UBtcoaoYzOdbSMhw_wUKa-khk7IKvbQNxB2qx2kA5zI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTU1MzE1MzY1Ny03/Mjk3LmpwZWc.jpeg",
+            "width": 395
+          },
+          {
+            "height": 505,
+            "resource_url": "https://i.discogs.com/6a8NBNe3I1SUCDABqbuesSkgsTrvZWFdyt9T8aeewPk/rs:fit/g:sm/q:90/h:505/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6a8NBNe3I1SUCDABqbuesSkgsTrvZWFdyt9T8aeewPk/rs:fit/g:sm/q:90/h:505/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/GjzAZilJUg7dxr_Vk_ZcRvjjIPnTQFmvwcm2sVjPxm8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTI1MTY2ODM2MC5q/cGVn.jpeg",
+            "width": 368
+          }
+        ],
+        "name": "Moby",
+        "namevariations": [
+          "DJ Moby",
+          "DJ摩比",
+          "Evil Ninja Moby",
+          "M Oby",
+          "Mob9",
+          "Mobey",
+          "Mobi",
+          "Moby (as Jim Biscuit)",
+          "Moby's",
+          "Moby.",
+          "Mody",
+          "Möby",
+          "R.Hall",
+          "R.M. Moby",
+          "The Little Idiot Moby",
+          "モービー",
+          "摩比",
+          "魔比",
+          "모비"
+        ],
+        "profile": "Multi-instrumentalist, singer-songwriter, music producer, and DJ.\r\nBorn: September 11, 1965, Harlem, New York, NY, USA. Grew up in Darien, CT, USA. Now lives in Los Angeles, CA, USA.\r\nFounded the labels [l=Little Idiot] & [l=Always Centered At Night].",
+        "realname": "Richard Melville Hall",
+        "releases_url": "https://api.discogs.com/artists/1031/releases",
+        "resource_url": "https://api.discogs.com/artists/1031",
+        "uri": "https://www.discogs.com/artist/1031-Moby",
+        "urls": [
+          "http://www.moby.com",
+          "http://moby.bandcamp.com",
+          "http://www.facebook.com/mobymusic",
+          "http://www.mixcloud.com/Moby",
+          "http://myspace.com/moby",
+          "http://soundcloud.com/moby",
+          "http://twitter.com/thelittleidiot",
+          "http://vimeo.com/moby",
+          "http://vk.com/moby",
+          "http://en.wikipedia.org/wiki/Moby",
+          "http://www.youtube.com/user/MobyStuff",
+          "http://www.youtube.com/user/mobyVEVO",
+          "http://web.archive.org/web/20100418185747/http://moby.org:80"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1031",
+      "thumb": "https://i.discogs.com/pPTCHozRgWs8T8I5El0NKsYgFPrqx0luO0eWTu6f9B4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzEt/MTUwMDIwMTcxMi0x/MjA4LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/1031-Moby",
+      "urls": [
+        "http://www.moby.com",
+        "http://moby.bandcamp.com",
+        "http://www.facebook.com/mobymusic",
+        "http://www.mixcloud.com/Moby",
+        "http://myspace.com/moby",
+        "http://soundcloud.com/moby",
+        "http://twitter.com/thelittleidiot",
+        "http://vimeo.com/moby",
+        "http://vk.com/moby",
+        "http://en.wikipedia.org/wiki/Moby",
+        "http://www.youtube.com/user/MobyStuff",
+        "http://www.youtube.com/user/mobyVEVO",
+        "http://web.archive.org/web/20100418185747/http://moby.org:80"
+      ]
     },
     "lastfm": {
       "bio_content": "Richard Melville Hall (born September 11, 1965), known professionally as Moby, is an American musician, songwriter, singer, producer, and animal rights activist. He has sold 20 million records worldwide. AllMusic considers him to be \"among the most important dance music figures of the early 1990s, helping bring dance music to a mainstream audience both in the United States and the United Kingdom.\" After taking up guitar and piano at age nine, he played in several underground punk rock bands through the 1980s before turning to electronic dance music. In 1989, he moved to New York City and became a prolific figure as a DJ, producer, and remixer. His 1991 single \"Go\" was his mainstream breakthrough, especially in Europe, where it peaked within the top ten of the charts in the Netherlands and the United Kingdom. Between 1992 and 1997, he scored eight top 10 hits on the Billboard Dance Club Songs chart including \"Move (You Make Me Feel So Good)\", \"Feeling So Real\", and \"James Bond Theme (Moby Re-Version)\". Throughout the decade, he also produced music under various pseudonyms, released the critically acclaimed Everything Is Wrong (1995), and composed music for films. His punk-oriented album Animal Rights (1996) alienated much of his fan base.\n\nMoby found commercial and critical success with his fifth album Play (1999), which, after receiving little recognition, became an unexpected global hit in 2000 after each track was licensed to films, television shows, and commercials. It remains his highest selling album with 12 million copies sold. Its seventh single, \"South Side\", featuring Gwen Stefani, remains his only one to appear on the US Billboard Hot 100, reaching No. 14. Moby followed Play with albums of varied styles including electronic, dance, rock, and downtempo music, starting with 18 (2002), Hotel (2005), and Last Night (2008). His later albums saw him explore ambient music, including the almost four-hour release Long Ambients 1: Calm. Sleep. (2016). Moby continues to record and release albums; his twenty-first studio album, Resound NYC, was released in May 2023.\n\nIn addition to his music career, Moby is known for his veganism and support for animal rights and humanitarian aid. He was the owner of TeaNY, a vegan cafe in Manhattan, and Little Pine, a vegan restaurant in Los Angeles, and organized the vegan music and food festival Circle V. He is the author of four books, including a collection of his photography and two memoirs: Porcelain: A Memoir (2016) and Then It Fell Apart (2019).\n\nFull Wikipedia article: https://en.wikipedia.org/wiki/Moby\n\nDiscography\nMoby (1992)\nAmbient (1993)\nEverything Is Wrong (1995)\nAnimal Rights (1996)\nPlay (1999)\n18 (2002)\nHotel (2005)\nLast Night (2008)\nWait for Me (2009)\nDestroyed (2011)\nInnocents (2013)\nLong Ambients 1: Calm. Sleep. (2016)\nThese Systems Are Failing (2016)\nMore Fast Songs About the Apocalypse (2017)\nEverything Was Beautiful, and Nothing Hurt (2018)\nLong Ambients 2 (2019)\nAll Visible Objects (2020)\nLive Ambient Improvised Recordings Vol. 1 (2020)\nReprise (2021)\nAmbient 23 (2023)\nResound NYC (2023) <a href=\"https://www.last.fm/music/Moby\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +515,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3244291,
+      "listeners": 3245799,
       "mbid": "8970d868-0723-483b-a75b-51088913d3d4",
       "name": "Moby",
-      "playcount": 117595391,
+      "playcount": 117640717,
       "similar_artists": [
         {
           "name": "Faithless",
@@ -172,7 +551,7 @@
       "url": "https://www.last.fm/music/Moby"
     },
     "spotify": {
-      "followers": 2024512,
+      "followers": 2025478,
       "genres": [
         "downtempo",
         "trip hop"
@@ -202,6 +581,6 @@
   },
   "spotify_id": "3OsRAKCvk37zwYcnzRf5XF",
   "spotify_url": "https://open.spotify.com/artist/3OsRAKCvk37zwYcnzRf5XF",
-  "updated_at": "2025-07-05T14:54:57.843524",
+  "updated_at": "2025-07-08T09:22:38.951209",
   "wikipedia_url": null
 }

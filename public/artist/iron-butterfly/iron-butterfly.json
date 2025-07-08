@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:27:55.226023",
   "discogs_id": "48412",
-  "discogs_url": "https://www.discogs.com/artist/48412",
-  "followers": 428560,
+  "discogs_url": "https://www.discogs.com/artist/48412-Iron-Butterfly",
+  "followers": 428651,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -18,7 +18,7 @@
     "Progressive rock",
     "rock"
   ],
-  "id": null,
+  "id": "iron-butterfly-1751732877",
   "images": [
     {
       "height": 2000,
@@ -85,14 +85,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/pkpS-BPIKcO2RIReep4wqlFNMRXfUmSZAPx_kxHtaLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "3da3e7e1-e817-47e8-8624-635df4aedbe6",
   "lastfm_url": "https://www.last.fm/music/Iron+Butterfly",
   "local_images": {
-    "hi-res": "public/artist/iron-butterfly/iron-butterfly-hi-res.jpg",
-    "medium": "public/artist/iron-butterfly/iron-butterfly-medium.jpg",
-    "small": "public/artist/iron-butterfly/iron-butterfly-small.jpg"
+    "hi-res": "../public/artist/iron-butterfly/iron-butterfly-hi-res.jpg",
+    "medium": "../public/artist/iron-butterfly/iron-butterfly-medium.jpg",
+    "small": "../public/artist/iron-butterfly/iron-butterfly-small.jpg"
   },
   "name": "Iron Butterfly",
   "popularity": 44,
@@ -109,9 +121,550 @@
       "url": "https://music.apple.com/gb/artist/iron-butterfly/855027"
     },
     "discogs": {
-      "id": 48412,
-      "original_name": "Iron Butterfly",
-      "role": ""
+      "cover_image": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "48412",
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/pkpS-BPIKcO2RIReep4wqlFNMRXfUmSZAPx_kxHtaLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+          "width": 452
+        },
+        {
+          "height": 583,
+          "resource_url": "https://i.discogs.com/AeXn1VRmt_MgLlxiNnXlPc6arZf_d3_2XI2x6UEAmLg/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AeXn1VRmt_MgLlxiNnXlPc6arZf_d3_2XI2x6UEAmLg/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YM_ovYkvdDUmtDCXkG5eQ_tfzRHGqdIkSARm0GN4sOY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 392,
+          "resource_url": "https://i.discogs.com/t9km_i6Qa-ja4o48wWz5F8jl4beUpI7r0rVUGTI5CPs/rs:fit/g:sm/q:90/h:392/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/t9km_i6Qa-ja4o48wWz5F8jl4beUpI7r0rVUGTI5CPs/rs:fit/g:sm/q:90/h:392/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/-smuxrMT5yKHXGU46_6HV1-tm9ZvRiDWS51CaIx02_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 301,
+          "resource_url": "https://i.discogs.com/ZVcKHxe6DrrEFbImESeEkuQe-b2WLv1pRfnWEiWub6w/rs:fit/g:sm/q:90/h:301/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZVcKHxe6DrrEFbImESeEkuQe-b2WLv1pRfnWEiWub6w/rs:fit/g:sm/q:90/h:301/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PIpM0EApteaiB-MVyVOXNRPa1E2bsZsDyMRjjtTAP4g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 276,
+          "resource_url": "https://i.discogs.com/EhEkgmqb06xw1rqQCPTyk-XZit64_1MdK9vXEKeYsKE/rs:fit/g:sm/q:90/h:276/w:414/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EhEkgmqb06xw1rqQCPTyk-XZit64_1MdK9vXEKeYsKE/rs:fit/g:sm/q:90/h:276/w:414/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kZ1v5y_co8E57FhEiEZ-mTlf3TU4WYln0b5je6XbdnY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+          "width": 414
+        },
+        {
+          "height": 431,
+          "resource_url": "https://i.discogs.com/nSYzGuJ04tJDk72zzc_w4K4Doq47MflD5xDWxASpQUQ/rs:fit/g:sm/q:90/h:431/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nSYzGuJ04tJDk72zzc_w4K4Doq47MflD5xDWxASpQUQ/rs:fit/g:sm/q:90/h:431/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/htcorvGMazqMRSFQuvm-W8P0Bx1MRmGOJ_GWCANEtO4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 236,
+          "resource_url": "https://i.discogs.com/zvBXYMRZ2DAChGCZh2_1m1wdZ1QrhZicO2GVafSRDOI/rs:fit/g:sm/q:90/h:236/w:330/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zvBXYMRZ2DAChGCZh2_1m1wdZ1QrhZicO2GVafSRDOI/rs:fit/g:sm/q:90/h:236/w:330/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/V7LjR5GNiISgsQDpINcB6BpXnE1OB-ewGJkx83-qI8g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+          "width": 330
+        },
+        {
+          "height": 351,
+          "resource_url": "https://i.discogs.com/UFrT88fRM-C8dFX7JkLaGhc3SIN4fC6I7c82kfMhLyI/rs:fit/g:sm/q:90/h:351/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UFrT88fRM-C8dFX7JkLaGhc3SIN4fC6I7c82kfMhLyI/rs:fit/g:sm/q:90/h:351/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/_jjIqMD9KNhdEBniIOyZgemuFoPvGJzebNB8AOekTms/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/Ib_7tjQItVytibdaTbkMHPIrMjVTB7pihApXMOIS28s/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ib_7tjQItVytibdaTbkMHPIrMjVTB7pihApXMOIS28s/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Jq3uYtM-kiSxbr7JB-cxmRYCEXVBj6Shs0ufgZtReAc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 333,
+          "resource_url": "https://i.discogs.com/629DRxHfyzPWbKuGw0oQe2aQY-Z_EmeInE44eJPG1uA/rs:fit/g:sm/q:90/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/629DRxHfyzPWbKuGw0oQe2aQY-Z_EmeInE44eJPG1uA/rs:fit/g:sm/q:90/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/2lutpRJaEyPR_zydjhdN6ikQwRi3Ux-bbxu01LBOMqo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 110650,
+          "name": "Doug Ingle",
+          "resource_url": "https://api.discogs.com/artists/110650",
+          "thumbnail_url": "https://i.discogs.com/PEKiSiwBs5m6mNDOSKb6TBQxnjMWFztmc65vJWfTAvM/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMDY1/MC0xNzE2ODI5NzI3/LTgyMDAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 149352,
+          "name": "Robert Tepper",
+          "resource_url": "https://api.discogs.com/artists/149352",
+          "thumbnail_url": "https://i.discogs.com/PKr1eoq0tUCGDyyEk0BdnEN79gRs4Z88Ik_ZmPdaWHE/rs:fit/g:sm/q:40/h:280/w:209/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTM1/Mi0xMjM0OTYzMzg5/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 269798,
+          "name": "Danny Weis",
+          "resource_url": "https://api.discogs.com/artists/269798",
+          "thumbnail_url": "https://i.discogs.com/UgefHDOoadMPvAtByE8rqrJAg2Jg2znfzxQflsOcDSM/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTc5/OC0xNDI3MjY4NTgx/LTY5MDAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 271386,
+          "name": "Guy Babylon",
+          "resource_url": "https://api.discogs.com/artists/271386",
+          "thumbnail_url": "https://i.discogs.com/1srQ70GPuxzin9iz1e80OPyyWcUTpk3m-S_EGeGtyXI/rs:fit/g:sm/q:40/h:577/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTM4/Ni0xMjUyMDg1MzE5/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 369513,
+          "name": "Dave Meros",
+          "resource_url": "https://api.discogs.com/artists/369513",
+          "thumbnail_url": "https://i.discogs.com/HdBYdudwcbpVqn_IyS89og6bTdrULwmKBiS_Ke295yc/rs:fit/g:sm/q:40/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTUx/My0xMjkzODg3MDc0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 424207,
+          "name": "Erik Brann",
+          "resource_url": "https://api.discogs.com/artists/424207",
+          "thumbnail_url": "https://i.discogs.com/xHzjtrRgUL718SOcDhFdy38NtnDJJUejNuwNoeMm_-o/rs:fit/g:sm/q:40/h:221/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/Ny0xMTQ4MjQ5NTAz/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 424208,
+          "name": "Ron Bushy",
+          "resource_url": "https://api.discogs.com/artists/424208",
+          "thumbnail_url": "https://i.discogs.com/OL1HVNkwcxmzv7cSn2QBSvpKpwsp3hRgcPT8XtJ-KMs/rs:fit/g:sm/q:40/h:573/w:572/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/OC0xNjMwMjg5NzEy/LTQzMTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 424209,
+          "name": "Lee Dorman",
+          "resource_url": "https://api.discogs.com/artists/424209",
+          "thumbnail_url": "https://i.discogs.com/IhPlN7CwW-nzA9Ey3RuZvAStl0pCjsPo2JULGsxgshs/rs:fit/g:sm/q:40/h:180/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/OS0xMjM0OTY4NzAw/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 424405,
+          "name": "Jack Pinney",
+          "resource_url": "https://api.discogs.com/artists/424405",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 425988,
+          "name": "Phil Parlapiano",
+          "resource_url": "https://api.discogs.com/artists/425988",
+          "thumbnail_url": "https://i.discogs.com/vHQxOmCY-qMakKwUzRaY491vgi5iKA7UPBZH2RJOOGA/rs:fit/g:sm/q:40/h:480/w:457/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNTk4/OC0xNDg4NzkxMTU2/LTczNjIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 533034,
+          "name": "Mike Pinera",
+          "resource_url": "https://api.discogs.com/artists/533034",
+          "thumbnail_url": "https://i.discogs.com/3g1NNuX-e9dZBsWrNuJtkbyDDf_xY73oKqRyaTPg3UY/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzAz/NC0xNTUzNDMxMzE0/LTc4NDIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 572778,
+          "name": "Darryl DeLoach",
+          "resource_url": "https://api.discogs.com/artists/572778",
+          "thumbnail_url": "https://i.discogs.com/HciAazQLvervM3Co5ZS_JTBndURQysvJy6_-A-nJ0cs/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mjc3/OC0xMjYzODI2NzQ2/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 572779,
+          "name": "Jerry Penrod",
+          "resource_url": "https://api.discogs.com/artists/572779",
+          "thumbnail_url": "https://i.discogs.com/c-qT5Bg5MTiJS_L-z5A-t4aE754_l3tBNCHZ4h403wI/rs:fit/g:sm/q:40/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mjc3/OS0xNjYyODQ4MTc2/LTIzMTkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 635966,
+          "name": "Phil Kramer",
+          "resource_url": "https://api.discogs.com/artists/635966",
+          "thumbnail_url": "https://i.discogs.com/EF1EkybCWQHi6FEe3RGm-t4wNn5OnmJZjeq04aHw38Q/rs:fit/g:sm/q:40/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzNTk2/Ni0xNjE5NjYzNzIy/LTI0OTgucG5n.jpeg"
+        },
+        {
+          "active": true,
+          "id": 736826,
+          "name": "Ray Weston",
+          "resource_url": "https://api.discogs.com/artists/736826",
+          "thumbnail_url": "https://i.discogs.com/sBvWmSi0M6GiiIYuaj6dchpq8-MdOPHknLrJla3vtis/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNjgy/Ni0xNjMxOTIyNTY5/LTUzNzIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1049584,
+          "name": "Larry Reinhardt",
+          "resource_url": "https://api.discogs.com/artists/1049584",
+          "thumbnail_url": "https://i.discogs.com/sNBcHvY02dkkz_y_bdbQ0XKNlXrP4NS-W6LdAMNcZRE/rs:fit/g:sm/q:40/h:368/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNDk1/ODQtMTMyNTcxMjcx/OS5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1263178,
+          "name": "Greg Willis (2)",
+          "resource_url": "https://api.discogs.com/artists/1263178",
+          "thumbnail_url": "https://i.discogs.com/M_5jQ5SnQ3l8osfLuZxm_YWJFALgOUhIc0By0gKtQek/rs:fit/g:sm/q:40/h:465/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNjMx/NzgtMTYyMjU2NTE3/NC0yNTE1LnBuZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1324078,
+          "name": "Bill DeMartines",
+          "resource_url": "https://api.discogs.com/artists/1324078",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 1475009,
+          "name": "Martin Gerschwitz",
+          "resource_url": "https://api.discogs.com/artists/1475009",
+          "thumbnail_url": "https://i.discogs.com/SCaa12MPtChkJIBUBwWUg9aDmSnot8KyNb-8uLQYXUI/rs:fit/g:sm/q:40/h:300/w:210/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzUw/MDktMTI0NjEzMjA3/Mi5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2982404,
+          "name": "Howard Reitzes",
+          "resource_url": "https://api.discogs.com/artists/2982404",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5832839,
+          "name": "Eric Barnett (4)",
+          "resource_url": "https://api.discogs.com/artists/5832839",
+          "thumbnail_url": "https://i.discogs.com/HBE20EAM6u6H194SaLW_NwP-cEr-cigJEh0QJMq09T0/rs:fit/g:sm/q:40/h:253/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzI4/MzktMTQ5Nzk2NjM1/OC01MjI0LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 5833255,
+          "name": "Larry Rust (3)",
+          "resource_url": "https://api.discogs.com/artists/5833255",
+          "thumbnail_url": "https://i.discogs.com/bHa7GVxV80RD-O9P3KRG1J5yW3xGbe-q8bKz-Mfy0lk/rs:fit/g:sm/q:40/h:343/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzMy/NTUtMTQ5Nzk4MzAz/OC04NDMzLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 6734816,
+          "name": "John Leimseider",
+          "resource_url": "https://api.discogs.com/artists/6734816",
+          "thumbnail_url": "https://i.discogs.com/i2tg2U54V7KWTGi8aCWyFH_B2u8nHHanyIWpRFhpdYk/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MzQ4/MTYtMTY5NDIyNTY0/MC0zODU3LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Iron Butterfly",
+      "namevariations": [
+        "Butterfly",
+        "I Ron Butterfly",
+        "I. Butterfly",
+        "Iron Butterfly Group",
+        "Ironbutterfly",
+        "The Group",
+        "The Iron Butterfly",
+        "アイアン・バタフライ"
+      ],
+      "profile": "American psychedelic rock band, formed in San Diego in 1966.\r\n\r\n[b]Current lineup:[/b]\r\nMichael Green - Percussion / Vocals\r\nEric Barnett - Lead Guitar / Vocals\r\nDave Meros - Bass Guitar / Vocals\r\nRay Weston - Drums\r\nMartin Gerschwitz - Keyboards / Vocals\r\n\r\n[b]Classic lineup (1966-71):[/b]\r\nDoug Ingle - Organ / Lead Vocals (1966-71)\r\nRon Bushy - Drums / Percussion\r\nLee Dorman - Bass / Backing vocals\r\nErik Brann - Guitars / Backing vocals / Occasional Lead vocal (1967-69)\r\nMike Pinera - Guitar / Vocals (1969-71)\r\nLarry \"Rhino\" Reinhardt - Guitar (1969-71)",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 48412,
+        "images": [
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/LmEnU5g_yzeWESPcv_JKuotWm8JG6F9ojUMsV7zxujM/rs:fit/g:sm/q:90/h:500/w:452/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/pkpS-BPIKcO2RIReep4wqlFNMRXfUmSZAPx_kxHtaLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+            "width": 452
+          },
+          {
+            "height": 583,
+            "resource_url": "https://i.discogs.com/AeXn1VRmt_MgLlxiNnXlPc6arZf_d3_2XI2x6UEAmLg/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AeXn1VRmt_MgLlxiNnXlPc6arZf_d3_2XI2x6UEAmLg/rs:fit/g:sm/q:90/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/YM_ovYkvdDUmtDCXkG5eQ_tfzRHGqdIkSARm0GN4sOY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MTU4MjUwNzAt/OTA5MC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 392,
+            "resource_url": "https://i.discogs.com/t9km_i6Qa-ja4o48wWz5F8jl4beUpI7r0rVUGTI5CPs/rs:fit/g:sm/q:90/h:392/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/t9km_i6Qa-ja4o48wWz5F8jl4beUpI7r0rVUGTI5CPs/rs:fit/g:sm/q:90/h:392/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/-smuxrMT5yKHXGU46_6HV1-tm9ZvRiDWS51CaIx02_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0MDct/Mzk1NC5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 301,
+            "resource_url": "https://i.discogs.com/ZVcKHxe6DrrEFbImESeEkuQe-b2WLv1pRfnWEiWub6w/rs:fit/g:sm/q:90/h:301/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZVcKHxe6DrrEFbImESeEkuQe-b2WLv1pRfnWEiWub6w/rs:fit/g:sm/q:90/h:301/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/PIpM0EApteaiB-MVyVOXNRPa1E2bsZsDyMRjjtTAP4g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzY0NjUt/OTMwOC5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 276,
+            "resource_url": "https://i.discogs.com/EhEkgmqb06xw1rqQCPTyk-XZit64_1MdK9vXEKeYsKE/rs:fit/g:sm/q:90/h:276/w:414/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/EhEkgmqb06xw1rqQCPTyk-XZit64_1MdK9vXEKeYsKE/rs:fit/g:sm/q:90/h:276/w:414/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/kZ1v5y_co8E57FhEiEZ-mTlf3TU4WYln0b5je6XbdnY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNDgyNDk4NDQu/anBlZw.jpeg",
+            "width": 414
+          },
+          {
+            "height": 431,
+            "resource_url": "https://i.discogs.com/nSYzGuJ04tJDk72zzc_w4K4Doq47MflD5xDWxASpQUQ/rs:fit/g:sm/q:90/h:431/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/nSYzGuJ04tJDk72zzc_w4K4Doq47MflD5xDWxASpQUQ/rs:fit/g:sm/q:90/h:431/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/htcorvGMazqMRSFQuvm-W8P0Bx1MRmGOJ_GWCANEtO4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExNzY0NTc1NDgu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 236,
+            "resource_url": "https://i.discogs.com/zvBXYMRZ2DAChGCZh2_1m1wdZ1QrhZicO2GVafSRDOI/rs:fit/g:sm/q:90/h:236/w:330/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/zvBXYMRZ2DAChGCZh2_1m1wdZ1QrhZicO2GVafSRDOI/rs:fit/g:sm/q:90/h:236/w:330/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/V7LjR5GNiISgsQDpINcB6BpXnE1OB-ewGJkx83-qI8g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTExMjQ4MDU3MzMu/anBn.jpeg",
+            "width": 330
+          },
+          {
+            "height": 351,
+            "resource_url": "https://i.discogs.com/UFrT88fRM-C8dFX7JkLaGhc3SIN4fC6I7c82kfMhLyI/rs:fit/g:sm/q:90/h:351/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UFrT88fRM-C8dFX7JkLaGhc3SIN4fC6I7c82kfMhLyI/rs:fit/g:sm/q:90/h:351/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/_jjIqMD9KNhdEBniIOyZgemuFoPvGJzebNB8AOekTms/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzNjMt/MzA4MC5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 599,
+            "resource_url": "https://i.discogs.com/Ib_7tjQItVytibdaTbkMHPIrMjVTB7pihApXMOIS28s/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ib_7tjQItVytibdaTbkMHPIrMjVTB7pihApXMOIS28s/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Jq3uYtM-kiSxbr7JB-cxmRYCEXVBj6Shs0ufgZtReAc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2NjI4NDk2MzAt/ODAyOC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 333,
+            "resource_url": "https://i.discogs.com/629DRxHfyzPWbKuGw0oQe2aQY-Z_EmeInE44eJPG1uA/rs:fit/g:sm/q:90/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/629DRxHfyzPWbKuGw0oQe2aQY-Z_EmeInE44eJPG1uA/rs:fit/g:sm/q:90/h:333/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/2lutpRJaEyPR_zydjhdN6ikQwRi3Ux-bbxu01LBOMqo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE3MzQ1NTc5MTkt/OTAyNC5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 110650,
+            "name": "Doug Ingle",
+            "resource_url": "https://api.discogs.com/artists/110650",
+            "thumbnail_url": "https://i.discogs.com/PEKiSiwBs5m6mNDOSKb6TBQxnjMWFztmc65vJWfTAvM/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMDY1/MC0xNzE2ODI5NzI3/LTgyMDAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 149352,
+            "name": "Robert Tepper",
+            "resource_url": "https://api.discogs.com/artists/149352",
+            "thumbnail_url": "https://i.discogs.com/PKr1eoq0tUCGDyyEk0BdnEN79gRs4Z88Ik_ZmPdaWHE/rs:fit/g:sm/q:40/h:280/w:209/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTM1/Mi0xMjM0OTYzMzg5/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 269798,
+            "name": "Danny Weis",
+            "resource_url": "https://api.discogs.com/artists/269798",
+            "thumbnail_url": "https://i.discogs.com/UgefHDOoadMPvAtByE8rqrJAg2Jg2znfzxQflsOcDSM/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2OTc5/OC0xNDI3MjY4NTgx/LTY5MDAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 271386,
+            "name": "Guy Babylon",
+            "resource_url": "https://api.discogs.com/artists/271386",
+            "thumbnail_url": "https://i.discogs.com/1srQ70GPuxzin9iz1e80OPyyWcUTpk3m-S_EGeGtyXI/rs:fit/g:sm/q:40/h:577/w:432/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTM4/Ni0xMjUyMDg1MzE5/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 369513,
+            "name": "Dave Meros",
+            "resource_url": "https://api.discogs.com/artists/369513",
+            "thumbnail_url": "https://i.discogs.com/HdBYdudwcbpVqn_IyS89og6bTdrULwmKBiS_Ke295yc/rs:fit/g:sm/q:40/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2OTUx/My0xMjkzODg3MDc0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 424207,
+            "name": "Erik Brann",
+            "resource_url": "https://api.discogs.com/artists/424207",
+            "thumbnail_url": "https://i.discogs.com/xHzjtrRgUL718SOcDhFdy38NtnDJJUejNuwNoeMm_-o/rs:fit/g:sm/q:40/h:221/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/Ny0xMTQ4MjQ5NTAz/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 424208,
+            "name": "Ron Bushy",
+            "resource_url": "https://api.discogs.com/artists/424208",
+            "thumbnail_url": "https://i.discogs.com/OL1HVNkwcxmzv7cSn2QBSvpKpwsp3hRgcPT8XtJ-KMs/rs:fit/g:sm/q:40/h:573/w:572/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/OC0xNjMwMjg5NzEy/LTQzMTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 424209,
+            "name": "Lee Dorman",
+            "resource_url": "https://api.discogs.com/artists/424209",
+            "thumbnail_url": "https://i.discogs.com/IhPlN7CwW-nzA9Ey3RuZvAStl0pCjsPo2JULGsxgshs/rs:fit/g:sm/q:40/h:180/w:170/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDIw/OS0xMjM0OTY4NzAw/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 424405,
+            "name": "Jack Pinney",
+            "resource_url": "https://api.discogs.com/artists/424405",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 425988,
+            "name": "Phil Parlapiano",
+            "resource_url": "https://api.discogs.com/artists/425988",
+            "thumbnail_url": "https://i.discogs.com/vHQxOmCY-qMakKwUzRaY491vgi5iKA7UPBZH2RJOOGA/rs:fit/g:sm/q:40/h:480/w:457/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNTk4/OC0xNDg4NzkxMTU2/LTczNjIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 533034,
+            "name": "Mike Pinera",
+            "resource_url": "https://api.discogs.com/artists/533034",
+            "thumbnail_url": "https://i.discogs.com/3g1NNuX-e9dZBsWrNuJtkbyDDf_xY73oKqRyaTPg3UY/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzAz/NC0xNTUzNDMxMzE0/LTc4NDIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 572778,
+            "name": "Darryl DeLoach",
+            "resource_url": "https://api.discogs.com/artists/572778",
+            "thumbnail_url": "https://i.discogs.com/HciAazQLvervM3Co5ZS_JTBndURQysvJy6_-A-nJ0cs/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mjc3/OC0xMjYzODI2NzQ2/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 572779,
+            "name": "Jerry Penrod",
+            "resource_url": "https://api.discogs.com/artists/572779",
+            "thumbnail_url": "https://i.discogs.com/c-qT5Bg5MTiJS_L-z5A-t4aE754_l3tBNCHZ4h403wI/rs:fit/g:sm/q:40/h:440/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3Mjc3/OS0xNjYyODQ4MTc2/LTIzMTkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 635966,
+            "name": "Phil Kramer",
+            "resource_url": "https://api.discogs.com/artists/635966",
+            "thumbnail_url": "https://i.discogs.com/EF1EkybCWQHi6FEe3RGm-t4wNn5OnmJZjeq04aHw38Q/rs:fit/g:sm/q:40/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzNTk2/Ni0xNjE5NjYzNzIy/LTI0OTgucG5n.jpeg"
+          },
+          {
+            "active": true,
+            "id": 736826,
+            "name": "Ray Weston",
+            "resource_url": "https://api.discogs.com/artists/736826",
+            "thumbnail_url": "https://i.discogs.com/sBvWmSi0M6GiiIYuaj6dchpq8-MdOPHknLrJla3vtis/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNjgy/Ni0xNjMxOTIyNTY5/LTUzNzIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1049584,
+            "name": "Larry Reinhardt",
+            "resource_url": "https://api.discogs.com/artists/1049584",
+            "thumbnail_url": "https://i.discogs.com/sNBcHvY02dkkz_y_bdbQ0XKNlXrP4NS-W6LdAMNcZRE/rs:fit/g:sm/q:40/h:368/w:368/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNDk1/ODQtMTMyNTcxMjcx/OS5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1263178,
+            "name": "Greg Willis (2)",
+            "resource_url": "https://api.discogs.com/artists/1263178",
+            "thumbnail_url": "https://i.discogs.com/M_5jQ5SnQ3l8osfLuZxm_YWJFALgOUhIc0By0gKtQek/rs:fit/g:sm/q:40/h:465/w:504/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNjMx/NzgtMTYyMjU2NTE3/NC0yNTE1LnBuZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1324078,
+            "name": "Bill DeMartines",
+            "resource_url": "https://api.discogs.com/artists/1324078",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 1475009,
+            "name": "Martin Gerschwitz",
+            "resource_url": "https://api.discogs.com/artists/1475009",
+            "thumbnail_url": "https://i.discogs.com/SCaa12MPtChkJIBUBwWUg9aDmSnot8KyNb-8uLQYXUI/rs:fit/g:sm/q:40/h:300/w:210/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzUw/MDktMTI0NjEzMjA3/Mi5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2982404,
+            "name": "Howard Reitzes",
+            "resource_url": "https://api.discogs.com/artists/2982404",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5832839,
+            "name": "Eric Barnett (4)",
+            "resource_url": "https://api.discogs.com/artists/5832839",
+            "thumbnail_url": "https://i.discogs.com/HBE20EAM6u6H194SaLW_NwP-cEr-cigJEh0QJMq09T0/rs:fit/g:sm/q:40/h:253/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzI4/MzktMTQ5Nzk2NjM1/OC01MjI0LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 5833255,
+            "name": "Larry Rust (3)",
+            "resource_url": "https://api.discogs.com/artists/5833255",
+            "thumbnail_url": "https://i.discogs.com/bHa7GVxV80RD-O9P3KRG1J5yW3xGbe-q8bKz-Mfy0lk/rs:fit/g:sm/q:40/h:343/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzMy/NTUtMTQ5Nzk4MzAz/OC04NDMzLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 6734816,
+            "name": "John Leimseider",
+            "resource_url": "https://api.discogs.com/artists/6734816",
+            "thumbnail_url": "https://i.discogs.com/i2tg2U54V7KWTGi8aCWyFH_B2u8nHHanyIWpRFhpdYk/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MzQ4/MTYtMTY5NDIyNTY0/MC0zODU3LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Iron Butterfly",
+        "namevariations": [
+          "Butterfly",
+          "I Ron Butterfly",
+          "I. Butterfly",
+          "Iron Butterfly Group",
+          "Ironbutterfly",
+          "The Group",
+          "The Iron Butterfly",
+          "アイアン・バタフライ"
+        ],
+        "profile": "American psychedelic rock band, formed in San Diego in 1966.\r\n\r\n[b]Current lineup:[/b]\r\nMichael Green - Percussion / Vocals\r\nEric Barnett - Lead Guitar / Vocals\r\nDave Meros - Bass Guitar / Vocals\r\nRay Weston - Drums\r\nMartin Gerschwitz - Keyboards / Vocals\r\n\r\n[b]Classic lineup (1966-71):[/b]\r\nDoug Ingle - Organ / Lead Vocals (1966-71)\r\nRon Bushy - Drums / Percussion\r\nLee Dorman - Bass / Backing vocals\r\nErik Brann - Guitars / Backing vocals / Occasional Lead vocal (1967-69)\r\nMike Pinera - Guitar / Vocals (1969-71)\r\nLarry \"Rhino\" Reinhardt - Guitar (1969-71)",
+        "releases_url": "https://api.discogs.com/artists/48412/releases",
+        "resource_url": "https://api.discogs.com/artists/48412",
+        "uri": "https://www.discogs.com/artist/48412-Iron-Butterfly",
+        "urls": [
+          "https://ironbutterfly.com/",
+          "https://twitter.com/IronButterflyOF",
+          "https://www.facebook.com/ironbutterflyband/",
+          "https://en.wikipedia.org/wiki/Iron_Butterfly",
+          "https://www.imdb.com/name/nm1663611/",
+          "https://de.wikipedia.org/wiki/Iron_Butterfly"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/48412",
+      "thumb": "https://i.discogs.com/pkpS-BPIKcO2RIReep4wqlFNMRXfUmSZAPx_kxHtaLI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4NDEy/LTE2MzcxMzYzOTYt/OTQ3My5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/48412-Iron-Butterfly",
+      "urls": [
+        "https://ironbutterfly.com/",
+        "https://twitter.com/IronButterflyOF",
+        "https://www.facebook.com/ironbutterflyband/",
+        "https://en.wikipedia.org/wiki/Iron_Butterfly",
+        "https://www.imdb.com/name/nm1663611/",
+        "https://de.wikipedia.org/wiki/Iron_Butterfly"
+      ]
     },
     "lastfm": {
       "bio_content": "Iron Butterfly is an American psychedelic rock band, well known for their 1968 hit \"In-A-Gadda-Da-Vida\". They are considered a very-early heavy metal band as a result of this song and others like it as well as the title of their debut album, 'Heavy'. Their heyday was the late-60s, but the band has been reincarnated several times with various members. Also known for being the first RIAA certified platinum group, VH1 ranks them as number 19 on their list of top 100 \"one hit wonders\".\n\nThe band was formed in 1966 in San Diego, and they released their aforementioned debut album, 'Heavy', in 1968, after signing a deal with an Atlantic Records subsidiary called ATCO. The original members were Doug Ingle (vocals, keyboards), Jack Pinney (drums), Greg Willis (bass), and Danny Weis (guitar). They were soon joined by singer-songwriter frontman Darryl DeLoach.\n\nJerry \"The Bear\" Penrod and Bruce Morris replaced Willis and Pinney after the band relocated to Los Angeles, California in 1966, and Ron Bushy then came aboard when Morris' tenure proved to be a short one. All but Ingle and Bushy left the band after recording the first album in late 1967; the remaining musicians, faced with the possibility of the record not being released, quickly found replacements in bassist Lee Dorman and guitarist Erik Brann (aka Erik Braunn) and resumed touring.\n\nWeis and Penrod almost immediately went on to form the group Rhinoceros. Iron Butterfly focused on putting their energies into their second album. The 17-minute \"In-A-Gadda-Da-Vida\", the title track of their second album, became a Top Thirty hit in the U.S. and also gained serious airplay internationally. Doug Ingle is reported to have said the title was an alcohol-slurred version of \"In the Garden of Eden\", although this is possibly apocryphal. The members when In-A-Gadda-Da-Vida was recorded were Doug Ingle (keyboards and vocals), Lee Dorman (bass guitar), Ron Bushy (drums) and 17-year-old Erik Brann, also Braunn (guitar). The song has been a radio staple for decades and also has prominently featured in several films.\n\nThe band had been booked to play at Woodstock, but got stuck at an airport. When their manager called the promoters of the concert, they explained the incredible situation they had been dealt and asked for patience. However, the manager demanded that the Butterfly be flown in by helicopter whereupon they would \"immediately\" take the stage. After their set they would be paid and flown back to the airport. The manager was told that this would be taken into consideration and he would be called back. In truth, his outrageous demands were never given a second thought. Dorman later expressed regret at this turn of events feeling the band's career may have gone further had they played the festival.\n\nThe next album, Ball, topped the charts but more lineup changes followed. In 1970 with Erik Braunn gone, Iron Butterfly released their fourth album, Metamorphosis with two new members, guitarist / vocalist / songwriter Mike Pinera (whose Blues Image had opened for the Butterfly's Vida tour and who later led Ramatam and played with Alice Cooper) and guitarist Larry \"Rhino\" Reinhardt. The album only managed to get into the top twenty. The band broke up after playing a final show on May 23, 1971. Dorman and Reinhardt later became members of the supergroup Captain Beyond.\n\nThe band re-formed in 1974 with Ron Bushy and Eric Braunn joined by bassist Philip Taylor Kramer and keyboardist Howard Reitzes. (Kramer later made news with his 1995 disappearance and the discovery of his bones and minivan at the bottom of Decker Canyon in 1999). The albums released during this lineup: Scorching Beauty in January 1975 with Reitzes and Sun and Steel in October 1975 with Bill DeMartines replacing Reitzes.\n\nFrom 1977 on Dorman took over the IB moniker and has led several lineups since then(see below for a chronology of IB's lineups) with former members(including Bushy, Ingle, Braunn, etc., coming and going). Other than another brief break between late 1985 and early 1987, the group has continued to this day with Dorman & Bushy currently leading the charge.\n\nThe famous line-up of In-A-Gadda-Da-Vida got together for the Atlantic Recording Corporation's 40th anniversary concert and celebration, appearing on stage along with the surviving members of Led Zeppelin, and with Aretha Franklin among many other acts of the company's roster on May 14th, 1988. The reunited foursome also played a 30 city tour that same year.\n\nOn October 3, 2002, original guitarist/vocalist Darryl DeLoach died of liver cancer at the age of 56.\n\nOn July 25, 2003 Erik Brann died of cardiac failure at the age of 52. He was working on a new solo album at the time of his death. The album to date remains unreleased, although friends and family of Brann are working on seeing its release.\n\nIron Butterfly is now working on a new album. <a href=\"https://www.last.fm/music/Iron+Butterfly\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -142,10 +695,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 505698,
+      "listeners": 505846,
       "mbid": "3da3e7e1-e817-47e8-8624-635df4aedbe6",
       "name": "Iron Butterfly",
-      "playcount": 3483728,
+      "playcount": 3485201,
       "similar_artists": [
         {
           "name": "Blue Cheer",
@@ -178,7 +731,7 @@
       "url": "https://www.last.fm/music/Iron+Butterfly"
     },
     "spotify": {
-      "followers": 428560,
+      "followers": 428651,
       "genres": [
         "acid rock",
         "psychedelic rock"
@@ -213,6 +766,6 @@
   },
   "spotify_id": "3cdvlbCYf4WoBdy89RWkNS",
   "spotify_url": "https://open.spotify.com/artist/3cdvlbCYf4WoBdy89RWkNS",
-  "updated_at": "2025-07-05T17:27:57.513822",
+  "updated_at": "2025-07-08T10:08:10.986361",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:24:53.408476",
   "discogs_id": "95251",
-  "discogs_url": "https://www.discogs.com/artist/95251",
-  "followers": 946554,
+  "discogs_url": "https://www.discogs.com/artist/95251-HIM-2",
+  "followers": 948544,
   "formed_date": null,
   "genres": [
     "Hard Rock",
@@ -19,7 +19,7 @@
     "finnish",
     "metal"
   ],
-  "id": null,
+  "id": "him-1751725495",
   "images": [
     {
       "height": 2000,
@@ -86,14 +86,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/u4bxX8zI9dWf1KVYh904wTUXdl3bGcWTQ3h8YeMHLUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "8ceb3468-5cee-4948-9178-0dce86cfdf41",
   "lastfm_url": "https://www.last.fm/music/Him",
   "local_images": {
-    "hi-res": "public/artist/him/him-hi-res.jpg",
-    "medium": "public/artist/him/him-medium.jpg",
-    "small": "public/artist/him/him-small.jpg"
+    "hi-res": "../public/artist/him/him-hi-res.jpg",
+    "medium": "../public/artist/him/him-medium.jpg",
+    "small": "../public/artist/him/him-small.jpg"
   },
   "name": "HIM",
   "popularity": 65,
@@ -110,9 +122,320 @@
       "url": "https://music.apple.com/gb/artist/him/4471986"
     },
     "discogs": {
-      "id": 95251,
-      "original_name": "HIM (2)",
-      "role": ""
+      "cover_image": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "95251",
+      "images": [
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/u4bxX8zI9dWf1KVYh904wTUXdl3bGcWTQ3h8YeMHLUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 394,
+          "resource_url": "https://i.discogs.com/jmoZpl68ztiJm1QBCIgu98Lcuqp6_HEG8W0Z5NHA3g0/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jmoZpl68ztiJm1QBCIgu98Lcuqp6_HEG8W0Z5NHA3g0/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/l_F_I8BTrOeKNz2CU-idprQyA4Zv5j-kEr9TC7SM5_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 637,
+          "resource_url": "https://i.discogs.com/SNm2OVJ25CZo0qMkp9T_NhJwcBxV-XapLEujC3vEfKY/rs:fit/g:sm/q:90/h:637/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SNm2OVJ25CZo0qMkp9T_NhJwcBxV-XapLEujC3vEfKY/rs:fit/g:sm/q:90/h:637/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dkrafJqEGA0EcMx_yPvt9zqxpisCEA8rZ0iAWypTqEU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/wMa1McBeF48g27ctYKl2glys9fLH3T0nT_kDWyOD5YU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wMa1McBeF48g27ctYKl2glys9fLH3T0nT_kDWyOD5YU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/uiJWzxCnBkZZ9V3c_ajE5Xgpbc62fCaq-6qOnw9F0-E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 373,
+          "resource_url": "https://i.discogs.com/qtN2JPqTWGkKqHDmZoSvUUNzB09gG_OVCIZKMu33xsk/rs:fit/g:sm/q:90/h:373/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qtN2JPqTWGkKqHDmZoSvUUNzB09gG_OVCIZKMu33xsk/rs:fit/g:sm/q:90/h:373/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/sZqr97P0cAFeq-suWc4YfHnHq39FLfbYvaDOsRI7ed4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+          "width": 560
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 374717,
+          "name": "Ville Valo",
+          "resource_url": "https://api.discogs.com/artists/374717",
+          "thumbnail_url": "https://i.discogs.com/xFdZkF5o67RWxHPS2SvC5nAlwLJWMFMupAa5J_uY9tU/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NDcx/Ny0xNjcwODY4MzM5/LTkxNjMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 438239,
+          "name": "Antto Melasniemi",
+          "resource_url": "https://api.discogs.com/artists/438239",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 515014,
+          "name": "Mika Karppinen",
+          "resource_url": "https://api.discogs.com/artists/515014",
+          "thumbnail_url": "https://i.discogs.com/Rs4fAYyVp2Ai8td5_WooZeuP2hT00488TNYcYFlG5ns/rs:fit/g:sm/q:40/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxNTAx/NC0xMTk0NjI2NDc1/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 655278,
+          "name": "Mikko Lindström",
+          "resource_url": "https://api.discogs.com/artists/655278",
+          "thumbnail_url": "https://i.discogs.com/GPCxJQdCYKYHPW02aU9zAYMtYol9hQsN_N6nTqgyECM/rs:fit/g:sm/q:40/h:600/w:467/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1NTI3/OC0xMTk5ODM0MDE1/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 698181,
+          "name": "Mikko Paananen",
+          "resource_url": "https://api.discogs.com/artists/698181",
+          "thumbnail_url": "https://i.discogs.com/4539isKzYLP_ANQGlO4E47NbGpYRw7AIyR1BCdUwjAk/rs:fit/g:sm/q:40/h:382/w:255/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODE4/MS0xMTk5ODM0MDUx/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 698182,
+          "name": "Juhana Rantala",
+          "resource_url": "https://api.discogs.com/artists/698182",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 1060872,
+          "name": "Jukka Kröger",
+          "resource_url": "https://api.discogs.com/artists/1060872",
+          "thumbnail_url": "https://i.discogs.com/bOJ3I8LhQevOuTfNktc1TiGjxQaGY1oYeOIk4ClYdoI/rs:fit/g:sm/q:40/h:380/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjA4/NzItMTU2Njk3NDM3/MC01NTkyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1379165,
+          "name": "Oskari Kymäläinen",
+          "resource_url": "https://api.discogs.com/artists/1379165",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1620871,
+          "name": "Juska Salminen",
+          "resource_url": "https://api.discogs.com/artists/1620871",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5237150,
+          "name": "Janne Puurtinen",
+          "resource_url": "https://api.discogs.com/artists/5237150",
+          "thumbnail_url": "https://i.discogs.com/NlzZeAJHKLIWFGmQFbG1HZSsPPoHwEcH4nV83FD0VCQ/rs:fit/g:sm/q:40/h:445/w:315/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyMzcx/NTAtMTY5NjgyOTM1/MS01NTQ3LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 7281833,
+          "name": "Juha Tarvonen",
+          "resource_url": "https://api.discogs.com/artists/7281833",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "HIM (2)",
+      "namevariations": [
+        "H I M",
+        "H. I. M.",
+        "H.I.M",
+        "H.I.M.",
+        "H.I.M. (His Infernal Majesty)",
+        "HER"
+      ],
+      "profile": "HIM (originally [a8894800]) was a Finnish rock band founded in 1991 by singer/frontman Ville Valo and bass player Migé Amour. Their first release was the demo EP [i]666 Ways To Love: Prologue[/i], which was released in 1996 and is the only thing they released under their original name. By the time they released their debut full-length [i]Greatest Love Songs Vol. 666[/i] in 1997, the name had been shortened to HIM to make their name easier on the Finnish tongue as well as to tone down the more occult elements of their public image. With their second album, [i]Razorblade Romance[/i], HIM gained exposure all over Europe as the track \"Join Me\" was included in the European version of the movie [i]The Thirteenth Floor[/i]. Their fourth album, [i]Love Metal[/i], expanded their popularity to the U.S., giving them the status of world-wide rock stars. The album [i]Dark Light[/i] spawned the hit \"Wings of a Butterfly\", which became the band's biggest US hit and made [i]Dark Light[/i] the first album by a Finnish act to go gold in the US. The band disbanded in 2017.\r\n\r\nFinal lineup:\r\nVille Valo - vocals (1991-2017)\r\nMigé Amour (Mikko Paananen) - bass (1991-1992, 1995-2017)\r\nLily Lazer (Mikko Lindström) - guitar (1993-2017)\r\nEmerson Burton (Janne Puurtinen) - keyboards (2001-2017)\r\nJukka \"Kosmo\" Kröger - drums (2015-2017)",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 2640202,
+            "name": "HER (7)",
+            "resource_url": "https://api.discogs.com/artists/2640202",
+            "thumbnail_url": "https://i.discogs.com/w0m1CnjwmG91f59K7EOUBRvSEAgs9h6SU5ho3byab1c/rs:fit/g:sm/q:40/h:329/w:333/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NDAy/MDItMTUwMjczNjc0/Ny02NDkzLmpwZWc.jpeg"
+          },
+          {
+            "id": 4788865,
+            "name": "Thulsa D",
+            "resource_url": "https://api.discogs.com/artists/4788865",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 6840191,
+            "name": "Walter Payton (3)",
+            "resource_url": "https://api.discogs.com/artists/6840191",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 8894800,
+            "name": "His Infernal Majesty (2)",
+            "resource_url": "https://api.discogs.com/artists/8894800",
+            "thumbnail_url": "https://i.discogs.com/fFvpbaqSJnqoXN3T3lu8B_hK9MpYZxqQgAv02cOQNjQ/rs:fit/g:sm/q:40/h:500/w:493/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4OTQ4/MDAtMTczODQwMTQ2/Ny00ODA2LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 95251,
+        "images": [
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/ykV8qTMOZLS1wvoReeRMzdzyMXlGdskifNArZ9Uog6E/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/u4bxX8zI9dWf1KVYh904wTUXdl3bGcWTQ3h8YeMHLUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 394,
+            "resource_url": "https://i.discogs.com/jmoZpl68ztiJm1QBCIgu98Lcuqp6_HEG8W0Z5NHA3g0/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jmoZpl68ztiJm1QBCIgu98Lcuqp6_HEG8W0Z5NHA3g0/rs:fit/g:sm/q:90/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/l_F_I8BTrOeKNz2CU-idprQyA4Zv5j-kEr9TC7SM5_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzIxODgt/NDQxMC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 637,
+            "resource_url": "https://i.discogs.com/SNm2OVJ25CZo0qMkp9T_NhJwcBxV-XapLEujC3vEfKY/rs:fit/g:sm/q:90/h:637/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SNm2OVJ25CZo0qMkp9T_NhJwcBxV-XapLEujC3vEfKY/rs:fit/g:sm/q:90/h:637/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/dkrafJqEGA0EcMx_yPvt9zqxpisCEA8rZ0iAWypTqEU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0ODIzMjQwNjEt/MTAwMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/wMa1McBeF48g27ctYKl2glys9fLH3T0nT_kDWyOD5YU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wMa1McBeF48g27ctYKl2glys9fLH3T0nT_kDWyOD5YU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/uiJWzxCnBkZZ9V3c_ajE5Xgpbc62fCaq-6qOnw9F0-E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE0NDY5MjA3ODIt/MTg2OS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 373,
+            "resource_url": "https://i.discogs.com/qtN2JPqTWGkKqHDmZoSvUUNzB09gG_OVCIZKMu33xsk/rs:fit/g:sm/q:90/h:373/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qtN2JPqTWGkKqHDmZoSvUUNzB09gG_OVCIZKMu33xsk/rs:fit/g:sm/q:90/h:373/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/sZqr97P0cAFeq-suWc4YfHnHq39FLfbYvaDOsRI7ed4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTEzOTAzNjIzMTUt/NzE4Ny5qcGVn.jpeg",
+            "width": 560
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 374717,
+            "name": "Ville Valo",
+            "resource_url": "https://api.discogs.com/artists/374717",
+            "thumbnail_url": "https://i.discogs.com/xFdZkF5o67RWxHPS2SvC5nAlwLJWMFMupAa5J_uY9tU/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NDcx/Ny0xNjcwODY4MzM5/LTkxNjMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 438239,
+            "name": "Antto Melasniemi",
+            "resource_url": "https://api.discogs.com/artists/438239",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 515014,
+            "name": "Mika Karppinen",
+            "resource_url": "https://api.discogs.com/artists/515014",
+            "thumbnail_url": "https://i.discogs.com/Rs4fAYyVp2Ai8td5_WooZeuP2hT00488TNYcYFlG5ns/rs:fit/g:sm/q:40/h:600/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxNTAx/NC0xMTk0NjI2NDc1/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 655278,
+            "name": "Mikko Lindström",
+            "resource_url": "https://api.discogs.com/artists/655278",
+            "thumbnail_url": "https://i.discogs.com/GPCxJQdCYKYHPW02aU9zAYMtYol9hQsN_N6nTqgyECM/rs:fit/g:sm/q:40/h:600/w:467/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1NTI3/OC0xMTk5ODM0MDE1/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 698181,
+            "name": "Mikko Paananen",
+            "resource_url": "https://api.discogs.com/artists/698181",
+            "thumbnail_url": "https://i.discogs.com/4539isKzYLP_ANQGlO4E47NbGpYRw7AIyR1BCdUwjAk/rs:fit/g:sm/q:40/h:382/w:255/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5ODE4/MS0xMTk5ODM0MDUx/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 698182,
+            "name": "Juhana Rantala",
+            "resource_url": "https://api.discogs.com/artists/698182",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 1060872,
+            "name": "Jukka Kröger",
+            "resource_url": "https://api.discogs.com/artists/1060872",
+            "thumbnail_url": "https://i.discogs.com/bOJ3I8LhQevOuTfNktc1TiGjxQaGY1oYeOIk4ClYdoI/rs:fit/g:sm/q:40/h:380/w:545/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNjA4/NzItMTU2Njk3NDM3/MC01NTkyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1379165,
+            "name": "Oskari Kymäläinen",
+            "resource_url": "https://api.discogs.com/artists/1379165",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1620871,
+            "name": "Juska Salminen",
+            "resource_url": "https://api.discogs.com/artists/1620871",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5237150,
+            "name": "Janne Puurtinen",
+            "resource_url": "https://api.discogs.com/artists/5237150",
+            "thumbnail_url": "https://i.discogs.com/NlzZeAJHKLIWFGmQFbG1HZSsPPoHwEcH4nV83FD0VCQ/rs:fit/g:sm/q:40/h:445/w:315/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyMzcx/NTAtMTY5NjgyOTM1/MS01NTQ3LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 7281833,
+            "name": "Juha Tarvonen",
+            "resource_url": "https://api.discogs.com/artists/7281833",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "HIM (2)",
+        "namevariations": [
+          "H I M",
+          "H. I. M.",
+          "H.I.M",
+          "H.I.M.",
+          "H.I.M. (His Infernal Majesty)",
+          "HER"
+        ],
+        "profile": "HIM (originally [a8894800]) was a Finnish rock band founded in 1991 by singer/frontman Ville Valo and bass player Migé Amour. Their first release was the demo EP [i]666 Ways To Love: Prologue[/i], which was released in 1996 and is the only thing they released under their original name. By the time they released their debut full-length [i]Greatest Love Songs Vol. 666[/i] in 1997, the name had been shortened to HIM to make their name easier on the Finnish tongue as well as to tone down the more occult elements of their public image. With their second album, [i]Razorblade Romance[/i], HIM gained exposure all over Europe as the track \"Join Me\" was included in the European version of the movie [i]The Thirteenth Floor[/i]. Their fourth album, [i]Love Metal[/i], expanded their popularity to the U.S., giving them the status of world-wide rock stars. The album [i]Dark Light[/i] spawned the hit \"Wings of a Butterfly\", which became the band's biggest US hit and made [i]Dark Light[/i] the first album by a Finnish act to go gold in the US. The band disbanded in 2017.\r\n\r\nFinal lineup:\r\nVille Valo - vocals (1991-2017)\r\nMigé Amour (Mikko Paananen) - bass (1991-1992, 1995-2017)\r\nLily Lazer (Mikko Lindström) - guitar (1993-2017)\r\nEmerson Burton (Janne Puurtinen) - keyboards (2001-2017)\r\nJukka \"Kosmo\" Kröger - drums (2015-2017)",
+        "releases_url": "https://api.discogs.com/artists/95251/releases",
+        "resource_url": "https://api.discogs.com/artists/95251",
+        "uri": "https://www.discogs.com/artist/95251-HIM-2",
+        "urls": [
+          "http://www.heartagram.com/",
+          "https://www.facebook.com/theheartagram",
+          "https://en.wikipedia.org/wiki/HIM_(Finnish_band)",
+          "https://www.imdb.com/name/nm1367079/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/95251",
+      "thumb": "https://i.discogs.com/u4bxX8zI9dWf1KVYh904wTUXdl3bGcWTQ3h8YeMHLUw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk1MjUx/LTE2MjE5NzE4NDAt/NDczMC5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/95251-HIM-2",
+      "urls": [
+        "http://www.heartagram.com/",
+        "https://www.facebook.com/theheartagram",
+        "https://en.wikipedia.org/wiki/HIM_(Finnish_band)",
+        "https://www.imdb.com/name/nm1367079/"
+      ]
     },
     "lastfm": {
       "bio_content": "There are multiple artists with this name;\n\n1) HIM (sometimes stylized as H.I.M.) were a Finnish gothic rock band from Helsinki, Finland. Formed in 1991 by vocalist Ville Valo and bassist Mikko \"Mige\" Paananen under the name His Infernal Majesty, the band broke up in 1993, before being reformed in 1995 by Valo and guitarist Mikko \"Linde\" Lindström. After being rejoined by Mige, as well as new additions keyboardist Antto Melasniemi and drummer Juhana \"Pätkä\" Rantala, the band, now called HIM, released their debut album Greatest Lovesongs Vol. 666 in 1997. In 2000, now with drummer Mika \"Gas Lipstick\" Karppinen and keyboardist Juska Salminen, the band released the album Razorblade Romance, which reached the number one spot in Finland, Austria and Germany. Their first single, \"Join Me in Death\", also charted at number one in Finland and Germany, eventually going platinum and gold respectively. Following the addition of Janne \"Burton\" Puurtinen on keyboards, HIM released Deep Shadows and Brilliant Highlights and Love Metal in 2001 and 2003 respectively. Both cracked the top ten in several countries, and allowed the band to tour the United Kingdom and the United States for the first time.\n\nIn 2005, HIM released Dark Light, which became the group's most commercially successful album to date, charting in fifteen countries. With Dark Light, HIM also became the first Finnish group to receive a gold record in the US. In 2007, HIM released Venus Doom, the making of which was marred by problems in Valo's personal life. Despite this, the album gave the band their highest chart position in the US at number twelve. After 2010's Screamworks: Love in Theory and Practice, HIM went on hiatus as drummer Gas Lipstick took medical leave. Following several months of uncertainty, the band regrouped and eventually released the album Tears on Tape in 2013. In 2015, Gas Lipstick announced his departure from the band to pursue other musical projects, and was subsequently replaced by Jukka \"Kosmo\" Kröger. On 5 March 2017, HIM announced that the band would be disbanding following a farewell tour in 2017. The band played their final show on New Year's Eve 2017 as a part of their annual Helldone Festival.\n\nHIM is one of the most commercially successful Finnish bands of all time, with sales of over ten million records. The band have released eight studio albums, five compilations, three video releases, and two box sets, along with one live and one remix album. HIM has also received numerous accolades, including eight Emma Awards.\n\nCritics have referred to the music of HIM as gothic rock, gothic metal, alternative rock, alternative metal, and dark rock. The band themselves have referred to their music as \"love metal\", the title of their fourth studio album. According to Ville Valo, the term \"love metal\" was coined as a response to people having difficulties categorizing their music.\n\nA central of part of HIM's image has been the heartagram. The heartagram is the trademarked symbol of the band, which was created by vocalist Ville Valo on his twentieth birthday in 1996. A combination of a heart and a pentagram, the heartagram is meant to represent the juxtaposition of \"the soft and the hard, the male and the female, the yin and the yang\" according to Valo. Musically the heart is also meant to represent the softer side of the band, while the pentagram symbolizes their heavier influences. This juxtaposition was also prevalent in the band's album titles. On their first album, HIM used a heart with \"666\" inside it as their logo, which Valo later felt was \"a bit boring\". The heartagram was first predominantly used on the cover of HIM's 2003 album Love Metal, and has since appeared on numerous releases from the band. Valo has later stated that the heartagram \"is probably the best thing I've ever come-up with\", and that it's \"worth a lot more than money\" and is \"bigger than our band\". The heartagram has also made several appearances on TV, including Charmed, LA Ink, Viva La Bam, and Criminal Minds.\n\n2) HiM are a dub influenced post-rock group formed in 1995 by Doug Scharin, drummer for the bands Codeine, Rex and June of 44. Their first album, Egg, was their most dub-based effort. Each successive album has gone more in a quasi-world music direction. After some recording for Crooklyn Dub Consortium and Wordsound, \"Interpretive Belief System\", HiM settled on a lineup of Scharin with Bundy K. Brown, Rob Mazurek and Jeff Parker, members or occasional members of Tortoise and Isotope 217. Their first album was the underground hit Sworn Eyes, produced by Doug Scharin. A few personnel changes followed, and the revamped lineup including members of June of 44. Golden released Our Point of Departure in 1999, which signified a very clear shift toward a more jazz-like sound, followed by a major American and European tour. In 2003, HiM released Many In High Places Are Not Well on Fat Cat Records, which was received as their most successful and fully realized release. Peoples was released in mid-2006, featuring a cleaner sound with more vocals than any of HiM's previous releases. Included in this line-up are Martin Perna and Jordan McLean from Antibalas, Griffin Rodriguez from Need New Body/Icy Demons, Adam Pierce (Mice Parade). \n\nThe latest HiM records, \"1110\" and ん,released in 2008 and 2009 on Afterhours in Tokyo, are collaborations between Doug Scharin, Josh Larue and the Tokyo-based group, Ultra Living. \n\n3) A Japanese band. The group was composed of the following main members:\n\n* Shizuka Nakajima (vocals）\n* Shungo Makihashi (vocals)\n* Non (dancer)\n* Yocco (dancer)\n\n4) H.I.M. (Her in Mind) an r&b singer best known for his reply album to H.E.R.'s album in 2017. <a href=\"https://www.last.fm/music/Him\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -143,10 +466,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1363054,
+      "listeners": 1364696,
       "mbid": "8ceb3468-5cee-4948-9178-0dce86cfdf41",
       "name": "Him",
-      "playcount": 81051957,
+      "playcount": 81145558,
       "similar_artists": [],
       "tags": [
         "Love Metal",
@@ -158,7 +481,7 @@
       "url": "https://www.last.fm/music/Him"
     },
     "spotify": {
-      "followers": 946554,
+      "followers": 948544,
       "genres": [
         "gothic metal",
         "gothic rock",
@@ -194,6 +517,6 @@
   },
   "spotify_id": "74aLweE8FHHf4yN5TWv1GM",
   "spotify_url": "https://open.spotify.com/artist/74aLweE8FHHf4yN5TWv1GM",
-  "updated_at": "2025-07-05T15:24:55.650355",
+  "updated_at": "2025-07-08T09:53:14.090775",
   "wikipedia_url": null
 }

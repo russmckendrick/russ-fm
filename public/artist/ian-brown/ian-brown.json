@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:27:46.776325",
   "discogs_id": "9967",
-  "discogs_url": "https://www.discogs.com/artist/9967",
-  "followers": 360162,
+  "discogs_url": "https://www.discogs.com/artist/9967-Ian-Brown",
+  "followers": 360232,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -17,7 +17,7 @@
     "british",
     "seen live"
   ],
-  "id": null,
+  "id": "ian-brown-1751732870",
   "images": [
     {
       "height": 2000,
@@ -84,14 +84,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/ZF22TsvtcW3pFpTlLffZaL-mAnb3nYIEUwoIiCQBtEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "182d5d8a-94c7-4ef4-8222-a1838353a37b",
   "lastfm_url": "https://www.last.fm/music/Ian+Brown",
   "local_images": {
-    "hi-res": "public/artist/ian-brown/ian-brown-hi-res.jpg",
-    "medium": "public/artist/ian-brown/ian-brown-medium.jpg",
-    "small": "public/artist/ian-brown/ian-brown-small.jpg"
+    "hi-res": "../public/artist/ian-brown/ian-brown-hi-res.jpg",
+    "medium": "../public/artist/ian-brown/ian-brown-medium.jpg",
+    "small": "../public/artist/ian-brown/ian-brown-small.jpg"
   },
   "name": "Ian Brown",
   "popularity": 48,
@@ -108,9 +120,188 @@
       "url": "https://music.apple.com/gb/artist/ian-brown/401694"
     },
     "discogs": {
-      "id": 9967,
-      "original_name": "Ian Brown",
-      "role": ""
+      "cover_image": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "9967",
+      "images": [
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZF22TsvtcW3pFpTlLffZaL-mAnb3nYIEUwoIiCQBtEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 167,
+          "resource_url": "https://i.discogs.com/pX-68GCGNPOv8fLuQy-QAt4EC6XN9VJ_SBT-vqYpzMk/rs:fit/g:sm/q:90/h:167/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pX-68GCGNPOv8fLuQy-QAt4EC6XN9VJ_SBT-vqYpzMk/rs:fit/g:sm/q:90/h:167/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/IAmpyrtG9VRKdleB85yaMmP9IwZ-triWirDN38ShaY8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+          "width": 150
+        },
+        {
+          "height": 237,
+          "resource_url": "https://i.discogs.com/9jC8t7oX_5hQ6EgrHRz7EKoBiEySnYDnwI6psiP3TP4/rs:fit/g:sm/q:90/h:237/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9jC8t7oX_5hQ6EgrHRz7EKoBiEySnYDnwI6psiP3TP4/rs:fit/g:sm/q:90/h:237/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/65N7_78bcAcW1rc-hm1ok3xBvgk2YWDaY8-6qo2AtbM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+          "width": 355
+        },
+        {
+          "height": 150,
+          "resource_url": "https://i.discogs.com/1Hun4qQdf2VNjRBfLtMAMc3XQ2rN1x6dF1PDCy5zYl8/rs:fit/g:sm/q:90/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1Hun4qQdf2VNjRBfLtMAMc3XQ2rN1x6dF1PDCy5zYl8/rs:fit/g:sm/q:90/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+          "uri150": "https://i.discogs.com/uACr_trHlXqmZWXHxW6RicjUcK0UOBYMPB11vgWSgwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+          "width": 150
+        },
+        {
+          "height": 199,
+          "resource_url": "https://i.discogs.com/gPzGBMRTqrrYnlCnzAkMeOrSzQv-DATMW6f_pfIYPeo/rs:fit/g:sm/q:90/h:199/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/gPzGBMRTqrrYnlCnzAkMeOrSzQv-DATMW6f_pfIYPeo/rs:fit/g:sm/q:90/h:199/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+          "uri150": "https://i.discogs.com/sJj01K6T6-49T4ZbViCRsAbyQ8GOaB2GDNRcShqOXlg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+          "width": 300
+        },
+        {
+          "height": 373,
+          "resource_url": "https://i.discogs.com/kglAtBxaqy2orBoC9KOS1e53ir_UnvsCTqaCseFlKbc/rs:fit/g:sm/q:90/h:373/w:276/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kglAtBxaqy2orBoC9KOS1e53ir_UnvsCTqaCseFlKbc/rs:fit/g:sm/q:90/h:373/w:276/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/z_dehaTNZitG22kuhICs9kmTey6UuE_t827EabrEjXM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+          "width": 276
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/ga-DiZCDerpbLyu2H5H_E9mt-GpqL1S_y2qcQbLwjZQ/rs:fit/g:sm/q:90/h:402/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ga-DiZCDerpbLyu2H5H_E9mt-GpqL1S_y2qcQbLwjZQ/rs:fit/g:sm/q:90/h:402/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/MDNcpNMnCZhJyGymlUhcNQmtsdLgrNkkRKwfJfWKc5g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+          "width": 540
+        }
+      ],
+      "members": [],
+      "name": "Ian Brown",
+      "namevariations": [
+        "Brown",
+        "Errol Brown",
+        "I Brown",
+        "I. Brown",
+        "I.Brown",
+        "Ian",
+        "Ian Brown And The Celestial Militia",
+        "Ian George Brown",
+        "Jan Brown"
+      ],
+      "profile": "Born: February 20, 1963, Warrington, Cheshire, England.\r\n\r\nFor the classical pianist, see [a=Ian Brown (4)].\r\nFor the Australian designer, see [a=Ian Brown (6)]\r\n",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 7298,
+            "name": "The Stone Roses",
+            "resource_url": "https://api.discogs.com/artists/7298",
+            "thumbnail_url": "https://i.discogs.com/MkZeeDQ_9xc8NsHFA7CB_6OVk2OaE2fAXO-Ml08E3GE/rs:fit/g:sm/q:40/h:540/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyOTgt/MTUxODg1NzEyMC02/NTI3LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 247541,
+            "name": "The Garage Flowers",
+            "resource_url": "https://api.discogs.com/artists/247541",
+            "thumbnail_url": "https://i.discogs.com/xMbz6qHvCpoG1_AnzT_eSHTLlVcLYi5w0z-D6W0u4ME/rs:fit/g:sm/q:40/h:467/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0NzU0/MS0xMTc2ODI1NzQ3/LmpwZWc.jpeg"
+          }
+        ],
+        "id": 9967,
+        "images": [
+          {
+            "height": 599,
+            "resource_url": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/0qH2-tjIJ6DyKz4XNenyQMAVG5WnR-hjB5NcmG32Ons/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ZF22TsvtcW3pFpTlLffZaL-mAnb3nYIEUwoIiCQBtEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 167,
+            "resource_url": "https://i.discogs.com/pX-68GCGNPOv8fLuQy-QAt4EC6XN9VJ_SBT-vqYpzMk/rs:fit/g:sm/q:90/h:167/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pX-68GCGNPOv8fLuQy-QAt4EC6XN9VJ_SBT-vqYpzMk/rs:fit/g:sm/q:90/h:167/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/IAmpyrtG9VRKdleB85yaMmP9IwZ-triWirDN38ShaY8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MDAxLmpwZw.jpeg",
+            "width": 150
+          },
+          {
+            "height": 237,
+            "resource_url": "https://i.discogs.com/9jC8t7oX_5hQ6EgrHRz7EKoBiEySnYDnwI6psiP3TP4/rs:fit/g:sm/q:90/h:237/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9jC8t7oX_5hQ6EgrHRz7EKoBiEySnYDnwI6psiP3TP4/rs:fit/g:sm/q:90/h:237/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/65N7_78bcAcW1rc-hm1ok3xBvgk2YWDaY8-6qo2AtbM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTY2MC5q/cGVn.jpeg",
+            "width": 355
+          },
+          {
+            "height": 150,
+            "resource_url": "https://i.discogs.com/1Hun4qQdf2VNjRBfLtMAMc3XQ2rN1x6dF1PDCy5zYl8/rs:fit/g:sm/q:90/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1Hun4qQdf2VNjRBfLtMAMc3XQ2rN1x6dF1PDCy5zYl8/rs:fit/g:sm/q:90/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+            "uri150": "https://i.discogs.com/uACr_trHlXqmZWXHxW6RicjUcK0UOBYMPB11vgWSgwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTcyNS5n/aWY.jpeg",
+            "width": 150
+          },
+          {
+            "height": 199,
+            "resource_url": "https://i.discogs.com/gPzGBMRTqrrYnlCnzAkMeOrSzQv-DATMW6f_pfIYPeo/rs:fit/g:sm/q:90/h:199/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/gPzGBMRTqrrYnlCnzAkMeOrSzQv-DATMW6f_pfIYPeo/rs:fit/g:sm/q:90/h:199/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+            "uri150": "https://i.discogs.com/sJj01K6T6-49T4ZbViCRsAbyQ8GOaB2GDNRcShqOXlg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTc4NS5n/aWY.jpeg",
+            "width": 300
+          },
+          {
+            "height": 373,
+            "resource_url": "https://i.discogs.com/kglAtBxaqy2orBoC9KOS1e53ir_UnvsCTqaCseFlKbc/rs:fit/g:sm/q:90/h:373/w:276/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/kglAtBxaqy2orBoC9KOS1e53ir_UnvsCTqaCseFlKbc/rs:fit/g:sm/q:90/h:373/w:276/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/z_dehaTNZitG22kuhICs9kmTey6UuE_t827EabrEjXM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTE2ODg2MTg0Ny5q/cGVn.jpeg",
+            "width": 276
+          },
+          {
+            "height": 402,
+            "resource_url": "https://i.discogs.com/ga-DiZCDerpbLyu2H5H_E9mt-GpqL1S_y2qcQbLwjZQ/rs:fit/g:sm/q:90/h:402/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ga-DiZCDerpbLyu2H5H_E9mt-GpqL1S_y2qcQbLwjZQ/rs:fit/g:sm/q:90/h:402/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/MDNcpNMnCZhJyGymlUhcNQmtsdLgrNkkRKwfJfWKc5g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTI1NjgyODgxMy5q/cGVn.jpeg",
+            "width": 540
+          }
+        ],
+        "name": "Ian Brown",
+        "namevariations": [
+          "Brown",
+          "Errol Brown",
+          "I Brown",
+          "I. Brown",
+          "I.Brown",
+          "Ian",
+          "Ian Brown And The Celestial Militia",
+          "Ian George Brown",
+          "Jan Brown"
+        ],
+        "profile": "Born: February 20, 1963, Warrington, Cheshire, England.\r\n\r\nFor the classical pianist, see [a=Ian Brown (4)].\r\nFor the Australian designer, see [a=Ian Brown (6)]\r\n",
+        "realname": "Ian George Brown",
+        "releases_url": "https://api.discogs.com/artists/9967/releases",
+        "resource_url": "https://api.discogs.com/artists/9967",
+        "uri": "https://www.discogs.com/artist/9967-Ian-Brown",
+        "urls": [
+          "http://www.ianbrown.co.uk/",
+          "http://en.wikipedia.org/wiki/Ian_Brown"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/9967",
+      "thumb": "https://i.discogs.com/ZF22TsvtcW3pFpTlLffZaL-mAnb3nYIEUwoIiCQBtEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5Njct/MTU0MDUwNjU5NC02/ODUzLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/9967-Ian-Brown",
+      "urls": [
+        "http://www.ianbrown.co.uk/",
+        "http://en.wikipedia.org/wiki/Ian_Brown"
+      ]
     },
     "lastfm": {
       "bio_content": "Ian Brown (born February 20th 1963 in Warrington, England) was the lead singer in former British band The Stone Roses and following their split in 1996 has gone on to have a successful solo career releasing a total of six studio albums, with one greatest hits compilation, and remixes disc. He is considered to be an influential artist with followers such as Oasis, The Verve, Blur, Kasabian, Arctic Monkeys and many more. He has had twelve UK top 40 singles and has sold over 9 million albums as a solo artist.\n\nAllegedly nicknamed \"King Monkey\" by Dodgy's drummer Mathew Priest. Brown is well known to standout from the crowd and had his own unique style, whilst in The Roses he used to often wear big baggy flares and his landmark t-shirt with banknotes on. He now has a more casual look: Adidas Jackets, tracksuit bottoms, army trousers and a pair of shades. He is also recognisable for his varying hairstyles including: Blonde mohawk (early Stone Roses days) short (also early Stone roses days) undercut (similar to John Squire's) Big Hair (1989) bob cut (early 90's) Skinhead and his most well known hairdo long and shaggy with a fringe.\n\nHe has had two top 5 singles in the UK, My Star and Dolphins Were Monkeys. In 2005 he collaborated with Noel Gallagher from Oasis for the track Keep What Ya Got.  He has also collaborated with U.N.K.L.E. on two tracks, 1999's Be There and Reign in 2004.\n\nRecently Brown has started playing Stone Roses songs during gigs, fuelling speculation that a reunion may be on the cards.  But In September 2005 Ian appeared to rule out a Stone Roses reunion saying \"there's more chance of me reforming the Happy Mondays than the Roses\". Happy Mondays in fact have reformed, but yet Brown appears pessimistic about a likelihood of any reunion.  A reunion would also hinge on the co-operation of Roses guitarist John Squire who recently stated his desire to turn his back on music and focus on painting.\n\nHis latest album, My Way, was released September 2009. <a href=\"https://www.last.fm/music/Ian+Brown\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -141,10 +332,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 570899,
+      "listeners": 571005,
       "mbid": "182d5d8a-94c7-4ef4-8222-a1838353a37b",
       "name": "Ian Brown",
-      "playcount": 9197807,
+      "playcount": 9199986,
       "similar_artists": [
         {
           "name": "The Charlatans",
@@ -177,7 +368,7 @@
       "url": "https://www.last.fm/music/Ian+Brown"
     },
     "spotify": {
-      "followers": 360162,
+      "followers": 360232,
       "genres": [
         "madchester",
         "britpop"
@@ -212,6 +403,6 @@
   },
   "spotify_id": "3s398TKZNahAURRacx7oIT",
   "spotify_url": "https://open.spotify.com/artist/3s398TKZNahAURRacx7oIT",
-  "updated_at": "2025-07-05T17:27:50.674325",
+  "updated_at": "2025-07-08T10:08:07.850185",
   "wikipedia_url": null
 }

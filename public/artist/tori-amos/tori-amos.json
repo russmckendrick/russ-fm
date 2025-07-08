@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:39:34.152600",
   "discogs_id": "9902",
-  "discogs_url": "https://www.discogs.com/artist/9902",
-  "followers": 847876,
+  "discogs_url": "https://www.discogs.com/artist/9902-Tori-Amos",
+  "followers": 848102,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -17,7 +17,7 @@
     "piano",
     "rock"
   ],
-  "id": null,
+  "id": "tori-amos-1751722774",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/n4CRa2BPxOef9b45-0ed-un1pPxpig-4EOhO0adJK2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "c0b2500e-0cef-4130-869d-732b23ed9df5",
   "lastfm_url": "https://www.last.fm/music/Tori+Amos",
   "local_images": {
-    "hi-res": "public/artist/tori-amos/tori-amos-hi-res.jpg",
-    "medium": "public/artist/tori-amos/tori-amos-medium.jpg",
-    "small": "public/artist/tori-amos/tori-amos-small.jpg"
+    "hi-res": "../public/artist/tori-amos/tori-amos-hi-res.jpg",
+    "medium": "../public/artist/tori-amos/tori-amos-medium.jpg",
+    "small": "../public/artist/tori-amos/tori-amos-small.jpg"
   },
   "name": "Tori Amos",
   "popularity": 56,
@@ -102,9 +114,292 @@
       "url": "https://music.apple.com/gb/artist/tori-amos/163916"
     },
     "discogs": {
-      "id": 9902,
-      "original_name": "Tori Amos",
-      "role": ""
+      "cover_image": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "9902",
+      "images": [
+        {
+          "height": 798,
+          "resource_url": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/n4CRa2BPxOef9b45-0ed-un1pPxpig-4EOhO0adJK2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/1IwTNsC7fT8A8Ru9sIrxOBAPKqoN9TGe_BhcRICvC7s/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1IwTNsC7fT8A8Ru9sIrxOBAPKqoN9TGe_BhcRICvC7s/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/oXRzgbfSNs2IyQEaGF1KRVxh2GYL3gAy4yEqMh6sRY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 696,
+          "resource_url": "https://i.discogs.com/wXhayUIdUvcNUR_rU_Hbc1larxlNs2Q7w5CKUJz51YE/rs:fit/g:sm/q:90/h:696/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wXhayUIdUvcNUR_rU_Hbc1larxlNs2Q7w5CKUJz51YE/rs:fit/g:sm/q:90/h:696/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/e5sQUG9AKD-8tR0q3vp10Q-E-Qrjv6LmAljAdWgcaq0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 837,
+          "resource_url": "https://i.discogs.com/Z0YaMUP1ftNQt0nN3WMov0Fn1L-GvSksP9b3Zvj1tP8/rs:fit/g:sm/q:90/h:837/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Z0YaMUP1ftNQt0nN3WMov0Fn1L-GvSksP9b3Zvj1tP8/rs:fit/g:sm/q:90/h:837/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/fnynjxAXCHHCwco_25mYLXGR4bJEIjVUNR9Z_FXw83I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/yapACtRa8BwpMpHWeDix8n004hcQckDeJt6OMXWR_tI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yapACtRa8BwpMpHWeDix8n004hcQckDeJt6OMXWR_tI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/F9MBeIXqE14MoA42YgV0Z3NoGKQ76MSQAI7E42iNjb0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/3DMBp-fckxigSZ6zmCWIJFWqb5gvZn_UBjNmLO3PeME/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3DMBp-fckxigSZ6zmCWIJFWqb5gvZn_UBjNmLO3PeME/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/6CNGrdcjWzvSz7eUCmhA5uNRqvABILqze7rJvRumvsE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 839,
+          "resource_url": "https://i.discogs.com/uus9gXihZtLvbe2BkpcOr4TX5CtFkpoJe0vXef_Qf3E/rs:fit/g:sm/q:90/h:839/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uus9gXihZtLvbe2BkpcOr4TX5CtFkpoJe0vXef_Qf3E/rs:fit/g:sm/q:90/h:839/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/AOsHTIQwett8TDvd7p3s_SnOffwE7JVOKLXInOwV35w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 1623,
+          "resource_url": "https://i.discogs.com/GEgLNSgadO1bQuTXDQaP6EIliOiIyhIdNxLtyhqHg2w/rs:fit/g:sm/q:90/h:1623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GEgLNSgadO1bQuTXDQaP6EIliOiIyhIdNxLtyhqHg2w/rs:fit/g:sm/q:90/h:1623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/OkUwdElJEKkx2tlOKsL2mAtHzbTpSjk2Ay0BalfGLQc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 655,
+          "resource_url": "https://i.discogs.com/uwhlcuQxoaekt3Sxd7HdEsC-98nGLFsOWXtReMdsRnI/rs:fit/g:sm/q:90/h:655/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uwhlcuQxoaekt3Sxd7HdEsC-98nGLFsOWXtReMdsRnI/rs:fit/g:sm/q:90/h:655/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/uWGyT9QshaeyFr4JfRCwIrtKgz-l9C19vYrNluMzEHs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 837,
+          "resource_url": "https://i.discogs.com/fkD7q8CB-yqEFI1ZKHJAvubxTHFHMhpEWJANFtdae8E/rs:fit/g:sm/q:90/h:837/w:554/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fkD7q8CB-yqEFI1ZKHJAvubxTHFHMhpEWJANFtdae8E/rs:fit/g:sm/q:90/h:837/w:554/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/F9DYGg_6o2fcJVYOqFvoAcYMpr5fvnZwFUocwfwjP5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+          "width": 554
+        }
+      ],
+      "members": [],
+      "name": "Tori Amos",
+      "namevariations": [
+        "Amos",
+        "Amos Tori",
+        "Amos, Tori",
+        "Ellen M. Amos",
+        "T Amos",
+        "T. Amos",
+        "T.Amos",
+        "Tori",
+        "Tori Amos & Band",
+        "Tori Ellen Amos",
+        "Tory Amos",
+        "טורי איימוס",
+        "トーリ・エイモス",
+        "多莉 . 艾莫絲",
+        "多莉・艾莫絲",
+        "多莉艾莫絲",
+        "多莉．艾莫絲",
+        "托里·阿莫斯",
+        "토리 에이모스"
+      ],
+      "profile": "American singer, songwriter and pianist, born August 22, 1963 in Newton, North Carolina.\r\nMarried to engineer [a=Mark Hawley] (since 1998), with whom she has a daughter, [a=Natashya Hawley] (born 2000).",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 75804,
+            "name": "Ari Tomos",
+            "resource_url": "https://api.discogs.com/artists/75804",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 647203,
+            "name": "Ellen Amos",
+            "resource_url": "https://api.discogs.com/artists/647203",
+            "thumbnail_url": "https://i.discogs.com/XAC2cu444Lkc4jlunqDDgvOAc5ENXwNbYBeASQs5mQk/rs:fit/g:sm/q:40/h:297/w:198/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzIw/My0xMTgxMTI4NTM5/LmpwZWc.jpeg"
+          },
+          {
+            "id": 10746790,
+            "name": "Tess Makes Good",
+            "resource_url": "https://api.discogs.com/artists/10746790",
+            "thumbnail_url": ""
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 557792,
+            "name": "Y Kant Tori Read",
+            "resource_url": "https://api.discogs.com/artists/557792",
+            "thumbnail_url": "https://i.discogs.com/p_nP_S2UH9XAVt1y8SaG86tF28Qv1CMNSNfmRvW-TVY/rs:fit/g:sm/q:40/h:490/w:508/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1Nzc5/Mi0xMTU0NTMyOTU0/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 15784026,
+            "name": "1000 UK Artists",
+            "resource_url": "https://api.discogs.com/artists/15784026",
+            "thumbnail_url": "https://i.discogs.com/slubwP-Y8_MxfQWnv9h1__0dkvZ3E79XmXMMCJC53W0/rs:fit/g:sm/q:40/h:441/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1Nzg0/MDI2LTE3NDA1MTQ5/NjktNTcyMS5wbmc.jpeg"
+          }
+        ],
+        "id": 9902,
+        "images": [
+          {
+            "height": 798,
+            "resource_url": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/bEOW-Xn-di2FOnnyBtxmfDyxGfnXoZvpjRvWqOsvRR8/rs:fit/g:sm/q:90/h:798/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/n4CRa2BPxOef9b45-0ed-un1pPxpig-4EOhO0adJK2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/1IwTNsC7fT8A8Ru9sIrxOBAPKqoN9TGe_BhcRICvC7s/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1IwTNsC7fT8A8Ru9sIrxOBAPKqoN9TGe_BhcRICvC7s/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/oXRzgbfSNs2IyQEaGF1KRVxh2GYL3gAy4yEqMh6sRY4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY3NjI1NjkxNy0y/NjM4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 696,
+            "resource_url": "https://i.discogs.com/wXhayUIdUvcNUR_rU_Hbc1larxlNs2Q7w5CKUJz51YE/rs:fit/g:sm/q:90/h:696/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wXhayUIdUvcNUR_rU_Hbc1larxlNs2Q7w5CKUJz51YE/rs:fit/g:sm/q:90/h:696/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/e5sQUG9AKD-8tR0q3vp10Q-E-Qrjv6LmAljAdWgcaq0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDE4Ny03/NzUwLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 837,
+            "resource_url": "https://i.discogs.com/Z0YaMUP1ftNQt0nN3WMov0Fn1L-GvSksP9b3Zvj1tP8/rs:fit/g:sm/q:90/h:837/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Z0YaMUP1ftNQt0nN3WMov0Fn1L-GvSksP9b3Zvj1tP8/rs:fit/g:sm/q:90/h:837/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/fnynjxAXCHHCwco_25mYLXGR4bJEIjVUNR9Z_FXw83I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTY2NzMxNDI4Ni01/MTc5LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/yapACtRa8BwpMpHWeDix8n004hcQckDeJt6OMXWR_tI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yapACtRa8BwpMpHWeDix8n004hcQckDeJt6OMXWR_tI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/F9MBeIXqE14MoA42YgV0Z3NoGKQ76MSQAI7E42iNjb0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzNTIwMDk1Mi0y/MTY1LmpwZWc.jpeg",
+            "width": 300
+          },
+          {
+            "height": 599,
+            "resource_url": "https://i.discogs.com/3DMBp-fckxigSZ6zmCWIJFWqb5gvZn_UBjNmLO3PeME/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3DMBp-fckxigSZ6zmCWIJFWqb5gvZn_UBjNmLO3PeME/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/6CNGrdcjWzvSz7eUCmhA5uNRqvABILqze7rJvRumvsE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDk1MC02/NzE0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 839,
+            "resource_url": "https://i.discogs.com/uus9gXihZtLvbe2BkpcOr4TX5CtFkpoJe0vXef_Qf3E/rs:fit/g:sm/q:90/h:839/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uus9gXihZtLvbe2BkpcOr4TX5CtFkpoJe0vXef_Qf3E/rs:fit/g:sm/q:90/h:839/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/AOsHTIQwett8TDvd7p3s_SnOffwE7JVOKLXInOwV35w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTUzOTIzMDg0MS0z/NDQ0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 1623,
+            "resource_url": "https://i.discogs.com/GEgLNSgadO1bQuTXDQaP6EIliOiIyhIdNxLtyhqHg2w/rs:fit/g:sm/q:90/h:1623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GEgLNSgadO1bQuTXDQaP6EIliOiIyhIdNxLtyhqHg2w/rs:fit/g:sm/q:90/h:1623/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/OkUwdElJEKkx2tlOKsL2mAtHzbTpSjk2Ay0BalfGLQc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjc2My5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 655,
+            "resource_url": "https://i.discogs.com/uwhlcuQxoaekt3Sxd7HdEsC-98nGLFsOWXtReMdsRnI/rs:fit/g:sm/q:90/h:655/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uwhlcuQxoaekt3Sxd7HdEsC-98nGLFsOWXtReMdsRnI/rs:fit/g:sm/q:90/h:655/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/uWGyT9QshaeyFr4JfRCwIrtKgz-l9C19vYrNluMzEHs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYwMS5q/cGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 837,
+            "resource_url": "https://i.discogs.com/fkD7q8CB-yqEFI1ZKHJAvubxTHFHMhpEWJANFtdae8E/rs:fit/g:sm/q:90/h:837/w:554/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/fkD7q8CB-yqEFI1ZKHJAvubxTHFHMhpEWJANFtdae8E/rs:fit/g:sm/q:90/h:837/w:554/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/F9DYGg_6o2fcJVYOqFvoAcYMpr5fvnZwFUocwfwjP5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjYyMi5q/cGVn.jpeg",
+            "width": 554
+          }
+        ],
+        "name": "Tori Amos",
+        "namevariations": [
+          "Amos",
+          "Amos Tori",
+          "Amos, Tori",
+          "Ellen M. Amos",
+          "T Amos",
+          "T. Amos",
+          "T.Amos",
+          "Tori",
+          "Tori Amos & Band",
+          "Tori Ellen Amos",
+          "Tory Amos",
+          "טורי איימוס",
+          "トーリ・エイモス",
+          "多莉 . 艾莫絲",
+          "多莉・艾莫絲",
+          "多莉艾莫絲",
+          "多莉．艾莫絲",
+          "托里·阿莫斯",
+          "토리 에이모스"
+        ],
+        "profile": "American singer, songwriter and pianist, born August 22, 1963 in Newton, North Carolina.\r\nMarried to engineer [a=Mark Hawley] (since 1998), with whom she has a daughter, [a=Natashya Hawley] (born 2000).",
+        "realname": "Myra Ellen Amos",
+        "releases_url": "https://api.discogs.com/artists/9902/releases",
+        "resource_url": "https://api.discogs.com/artists/9902",
+        "uri": "https://www.discogs.com/artist/9902-Tori-Amos",
+        "urls": [
+          "https://toriamos.com/",
+          "https://undented.com/",
+          "https://www.facebook.com/toriamos",
+          "https://www.instagram.com/toriamos/",
+          "https://www.last.fm/fr/music/Tori+Amos",
+          "https://myspace.com/toriamos",
+          "https://toriamos.tumblr.com/",
+          "https://twitter.com/toriamos",
+          "https://en.wikipedia.org/wiki/Tori_Amos",
+          "https://genius.com/artists/Tori-amos"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/9902",
+      "thumb": "https://i.discogs.com/n4CRa2BPxOef9b45-0ed-un1pPxpig-4EOhO0adJK2M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk5MDIt/MTIzMDcyNjcyNC5q/cGVn.jpeg",
+      "url": "https://www.discogs.com/artist/9902-Tori-Amos",
+      "urls": [
+        "https://toriamos.com/",
+        "https://undented.com/",
+        "https://www.facebook.com/toriamos",
+        "https://www.instagram.com/toriamos/",
+        "https://www.last.fm/fr/music/Tori+Amos",
+        "https://myspace.com/toriamos",
+        "https://toriamos.tumblr.com/",
+        "https://twitter.com/toriamos",
+        "https://en.wikipedia.org/wiki/Tori_Amos",
+        "https://genius.com/artists/Tori-amos"
+      ]
     },
     "lastfm": {
       "bio_content": "Tori Amos (born Myra Ellen Amos; August 22, 1963) is an American singer-songwriter and pianist. She is classically trained and has a mezzo-soprano vocal range. Amos began composing instrumental piano pieces at a young age and won a full scholarship to the Peabody Institute at Johns Hopkins University when she was five, becoming the youngest person admitted. She left the institute at eleven after her scholarship was discontinued.\n\nIn the 1980s, Amos was the lead singer of the pop-rock group Y Kant Tori Read before launching her solo career in the early 1990s. Her music addresses a variety of themes, including sexuality, feminism, politics, and religion.\n\nAmos has released several singles that charted, including \"Crucify,\" \"Silent All These Years,\" \"God,\" \"Cornflake Girl,\" \"Caught a Lite Sneeze,\" \"Professional Widow,\" \"Spark,\" \"1000 Oceans,\" \"Flavor,\" and \"A Sorta Fairytale.\" She has received five MTV Video Music Award nominations and eight Grammy Award nominations. Additionally, she won an Echo Klassik award for the album \"Night of Hunters,\" which is a classical crossover project. She was ranked number 71 on VH1's 1999 list of the \"100 Greatest Women of Rock and Roll.\"\n\nFull Wikipedia article: https://en.wikipedia.org/wiki/Tori_Amos\n\nStudio albums\nUnder the Pink (1994)\nBoys for Pele (1996)\nFrom the Choirgirl Hotel (1998)\nTo Venus and Back (1999)\nStrange Little Girls (2001)\nScarlet's Walk (2002)\nThe Beekeeper (2005)\nAmerican Doll Posse (2007)\nAbnormally Attracted to Sin (2009)\nMidwinter Graces (2009)\nNight of Hunters (2011)\nGold Dust (2012)\nUnrepentant Geraldines (2014)\nNative Invader (2017)\nOcean to Ocean (2021)\nThe Music of Tori and the Muses (2025) <a href=\"https://www.last.fm/music/Tori+Amos\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +430,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1573075,
+      "listeners": 1573524,
       "mbid": "c0b2500e-0cef-4130-869d-732b23ed9df5",
       "name": "Tori Amos",
-      "playcount": 72770941,
+      "playcount": 72795805,
       "similar_artists": [
         {
           "name": "PJ Harvey",
@@ -171,7 +466,7 @@
       "url": "https://www.last.fm/music/Tori+Amos"
     },
     "spotify": {
-      "followers": 847876,
+      "followers": 848102,
       "genres": [
         "singer-songwriter",
         "art pop"
@@ -201,6 +496,6 @@
   },
   "spotify_id": "1KsASRNugxU85T0u6zSg32",
   "spotify_url": "https://open.spotify.com/artist/1KsASRNugxU85T0u6zSg32",
-  "updated_at": "2025-07-05T14:39:34.833781",
+  "updated_at": "2025-07-08T09:21:54.503167",
   "wikipedia_url": null
 }

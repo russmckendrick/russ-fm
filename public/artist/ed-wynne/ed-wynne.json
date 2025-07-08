@@ -5,7 +5,7 @@
   "country": null,
   "created_at": "2025-07-05T15:29:40.249738",
   "discogs_id": "159507",
-  "discogs_url": "https://www.discogs.com/artist/159507",
+  "discogs_url": "https://www.discogs.com/artist/159507-Ed-Wynne",
   "followers": 3561,
   "formed_date": null,
   "genres": [
@@ -17,7 +17,7 @@
     "Progressive rock",
     "psychedelic"
   ],
-  "id": null,
+  "id": "ed-wynne-1751725781",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/hOBYLlP9GVChPxt_yH_VLatX8C90OZBkrNe857ULo_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Ed+Wynne",
   "local_images": {
-    "hi-res": "public/artist/ed-wynne/ed-wynne-hi-res.jpg",
-    "medium": "public/artist/ed-wynne/ed-wynne-medium.jpg",
-    "small": "public/artist/ed-wynne/ed-wynne-small.jpg"
+    "hi-res": "../public/artist/ed-wynne/ed-wynne-hi-res.jpg",
+    "medium": "../public/artist/ed-wynne/ed-wynne-medium.jpg",
+    "small": "../public/artist/ed-wynne/ed-wynne-small.jpg"
   },
   "name": "Ed Wynne",
   "popularity": 21,
@@ -102,9 +114,149 @@
       "url": "https://music.apple.com/gb/artist/ed-wynne/272568847"
     },
     "discogs": {
-      "id": 159507,
-      "original_name": "Ed Wynne",
-      "role": ""
+      "cover_image": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "159507",
+      "images": [
+        {
+          "height": 452,
+          "resource_url": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/hOBYLlP9GVChPxt_yH_VLatX8C90OZBkrNe857ULo_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 276,
+          "resource_url": "https://i.discogs.com/aAAnE7LMec-lauBTHtUFfbeox4FKuckpl1j0uZcQwHM/rs:fit/g:sm/q:90/h:276/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aAAnE7LMec-lauBTHtUFfbeox4FKuckpl1j0uZcQwHM/rs:fit/g:sm/q:90/h:276/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/1Tk0t-ffLM4GEHdjh0ilKF9DnSe00oOT0aphE0vTfcE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+          "width": 380
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/9Izt--3C92VhSgqnq70c8-yGK0WdkT2Yhw0hKswQ230/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9Izt--3C92VhSgqnq70c8-yGK0WdkT2Yhw0hKswQ230/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Ipq2498b-gSioD_Z2ur_l-DRQg9dMKzJu-tF2s8aAGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Ed Wynne",
+      "namevariations": [
+        "E. Wynne",
+        "Ed",
+        "Ed Winne",
+        "Ed Wynn",
+        "Ed.",
+        "Ed. Wynne",
+        "Edward Wynne",
+        "Wynne"
+      ],
+      "profile": "Ed Wynne (born June 3, 1961) is a psychedelic rock guitarist, synth player and composer, leader of [A=Ozric Tentacles] and [A=Nodens Ictus], as well as a solo artist from Somerset, UK.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 68763,
+            "name": "Ed Ozric",
+            "resource_url": "https://api.discogs.com/artists/68763",
+            "thumbnail_url": "https://i.discogs.com/L2ogqN6HZWa06D9RBzFZhfmtyHjkQniCtkVJtd0_s8U/rs:fit/g:sm/q:40/h:383/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NzYz/LTE0MjM3NDczNTgt/MTc1Ni5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 6960,
+            "name": "Nodens Ictus",
+            "resource_url": "https://api.discogs.com/artists/6960",
+            "thumbnail_url": "https://i.discogs.com/DZfu3djtZXFqFB8B_O8WP68BJCs-zvKUTMGvnUec9bk/rs:fit/g:sm/q:40/h:470/w:577/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5NjAt/MTUxMjQyODg3OC0x/MTE4LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 17419,
+            "name": "Ozric Tentacles",
+            "resource_url": "https://api.discogs.com/artists/17419",
+            "thumbnail_url": "https://i.discogs.com/-l-VSYxfipn2WCugbydZBrXGT8UFuCB4RMPBG5gU4Ys/rs:fit/g:sm/q:40/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NDE5/LTE2OTYzNTMyNzAt/OTg4OS5wbmc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4039497,
+            "name": "Walrus (13)",
+            "resource_url": "https://api.discogs.com/artists/4039497",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 4564913,
+            "name": "Amon Düül II (2)",
+            "resource_url": "https://api.discogs.com/artists/4564913",
+            "thumbnail_url": "https://i.discogs.com/xf9cWc94UfLVI26BZugZ-ZfdHdl3lIbFzcoXcWRjGdM/rs:fit/g:sm/q:40/h:427/w:478/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1NjQ5/MTMtMTQ0MDA2NTU4/Ni0yMDEyLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 7748551,
+            "name": "Vita Voom",
+            "resource_url": "https://api.discogs.com/artists/7748551",
+            "thumbnail_url": "https://i.discogs.com/5A_OUSJnqA2rsmUmOTTvWsVLJ64Pc3YkxWXjxKyW3Oo/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc3NDg1/NTEtMTU4NTE2NjA3/Mi0zMTk0LmpwZWc.jpeg"
+          }
+        ],
+        "id": 159507,
+        "images": [
+          {
+            "height": 452,
+            "resource_url": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/o2zUz00TU4tyLSLuhFum6dzEBZ_kPUqUBl3PwXVcwJs/rs:fit/g:sm/q:90/h:452/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/hOBYLlP9GVChPxt_yH_VLatX8C90OZBkrNe857ULo_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 276,
+            "resource_url": "https://i.discogs.com/aAAnE7LMec-lauBTHtUFfbeox4FKuckpl1j0uZcQwHM/rs:fit/g:sm/q:90/h:276/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aAAnE7LMec-lauBTHtUFfbeox4FKuckpl1j0uZcQwHM/rs:fit/g:sm/q:90/h:276/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/1Tk0t-ffLM4GEHdjh0ilKF9DnSe00oOT0aphE0vTfcE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xMjYyNzYzNTA0/LmpwZWc.jpeg",
+            "width": 380
+          },
+          {
+            "height": 402,
+            "resource_url": "https://i.discogs.com/9Izt--3C92VhSgqnq70c8-yGK0WdkT2Yhw0hKswQ230/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9Izt--3C92VhSgqnq70c8-yGK0WdkT2Yhw0hKswQ230/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Ipq2498b-gSioD_Z2ur_l-DRQg9dMKzJu-tF2s8aAGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTg0NzUuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Ed Wynne",
+        "namevariations": [
+          "E. Wynne",
+          "Ed",
+          "Ed Winne",
+          "Ed Wynn",
+          "Ed.",
+          "Ed. Wynne",
+          "Edward Wynne",
+          "Wynne"
+        ],
+        "profile": "Ed Wynne (born June 3, 1961) is a psychedelic rock guitarist, synth player and composer, leader of [A=Ozric Tentacles] and [A=Nodens Ictus], as well as a solo artist from Somerset, UK.",
+        "realname": "Edward Wynne",
+        "releases_url": "https://api.discogs.com/artists/159507/releases",
+        "resource_url": "https://api.discogs.com/artists/159507",
+        "uri": "https://www.discogs.com/artist/159507-Ed-Wynne",
+        "urls": [
+          "https://www.facebook.com/EdWynneOzric/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/159507",
+      "thumb": "https://i.discogs.com/hOBYLlP9GVChPxt_yH_VLatX8C90OZBkrNe857ULo_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTUw/Ny0xNDIzNzQ5MDU5/LTU1NDguanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/159507-Ed-Wynne",
+      "urls": [
+        "https://www.facebook.com/EdWynneOzric/"
+      ]
     },
     "lastfm": {
       "bio_content": "Edward Wynne (born 3 June 1961) is an English guitarist and keyboardist best known as a founding member, principal composer and the only constant member of psychedelic rock band Ozric Tentacles.\n\nEd Wynne formed Ozric Tentacles in 1983 along with his brother Roly Wynne and other members at the Stonehenge Free Festival. After several lineup changes, Ozric Tentacles started to be guided more and more by Wynne, who aside from guitar and keyboards was becoming also responsible for beat programming and other studio efforts. He has remained the only original member of the band. The current lineup includes Ed Wynne's wife, Brandi Wynne on bass guitar, and son Silas Wynne on keyboards.\n\nWynne collaborated with Joie Hinton in Nodens Ictus , after they were asked by the promoters of the Crypt club in Deptford, South London, to produce an ambient set for the club's \"chillout\" room. Wynne has also appeared as a guest musician in works by artists such as Jordan Rudess, Dubblehead, Amon Düül UK, and Eat Static, among others.\n\nHe (along with ex-bandmate Merv Pepler) composed and programmed a track named \"Sphere Wave's\" for Cognition Factor soundtrack.\n\nWynne's early music influences include Gong/Steve Hillage, Hawkwind, Kraan, Frank Zappa, Steve Vai, Squarepusher, and Todd Rundgren, among others. Now, he mostly prefers listening to Algerian, Moroccan, and eastern music in general.\n\nHe is the son of English sculptor David Wynne, and the grandson of English author Joan Grant. <a href=\"https://www.last.fm/music/Ed+Wynne\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +287,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1799,
+      "listeners": 1800,
       "mbid": null,
       "name": "Ed Wynne",
-      "playcount": 28949,
+      "playcount": 28956,
       "similar_artists": [
         {
           "name": "Nodens Ictus",
@@ -201,6 +353,6 @@
   },
   "spotify_id": "5kRdNhYFLVTIvtRbfJFOT1",
   "spotify_url": "https://open.spotify.com/artist/5kRdNhYFLVTIvtRbfJFOT1",
-  "updated_at": "2025-07-05T15:29:41.229537",
+  "updated_at": "2025-07-08T09:40:39.277931",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:56:48.435335",
   "discogs_id": "9856",
-  "discogs_url": "https://www.discogs.com/artist/9856",
-  "followers": 214878,
+  "discogs_url": "https://www.discogs.com/artist/9856-Calexico",
+  "followers": 214921,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -18,7 +18,7 @@
     "seen live",
     "folk"
   ],
-  "id": null,
+  "id": "calexico-1751731009",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/iPgKlxa_2mRm7aHSdxeM_dldhrSIHDjXQ6bbgfzc9ZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "5e372a49-5672-4fb8-ba14-18c90780c4f9",
   "lastfm_url": "https://www.last.fm/music/Calexico",
   "local_images": {
-    "hi-res": "public/artist/calexico/calexico-hi-res.jpg",
-    "medium": "public/artist/calexico/calexico-medium.jpg",
-    "small": "public/artist/calexico/calexico-small.jpg"
+    "hi-res": "../public/artist/calexico/calexico-hi-res.jpg",
+    "medium": "../public/artist/calexico/calexico-medium.jpg",
+    "small": "../public/artist/calexico/calexico-small.jpg"
   },
   "name": "Calexico",
   "popularity": 48,
@@ -103,9 +115,396 @@
       "url": "https://music.apple.com/gb/artist/calexico/14351970"
     },
     "discogs": {
-      "id": 9856,
-      "original_name": "Calexico",
-      "role": ""
+      "cover_image": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "9856",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/iPgKlxa_2mRm7aHSdxeM_dldhrSIHDjXQ6bbgfzc9ZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 264,
+          "resource_url": "https://i.discogs.com/AkEhx-1e39cMbW4sBwhMXE0fawuezAeWE1gjvDr1VTI/rs:fit/g:sm/q:90/h:264/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AkEhx-1e39cMbW4sBwhMXE0fawuezAeWE1gjvDr1VTI/rs:fit/g:sm/q:90/h:264/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/nmYLO_1SVj8aW9G0kkh3ZESUVC9SWTkqXLNBAA37le8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 230,
+          "resource_url": "https://i.discogs.com/wXCqIij3DHsiHrCeP2gdiT6osqg9M1HlWbfMoBX4AZc/rs:fit/g:sm/q:90/h:230/w:230/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/wXCqIij3DHsiHrCeP2gdiT6osqg9M1HlWbfMoBX4AZc/rs:fit/g:sm/q:90/h:230/w:230/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+          "uri150": "https://i.discogs.com/O-u8LQp1KLPK0m6tWXv_M3NIBQmexZudkQvIZsDKJvo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+          "width": 230
+        },
+        {
+          "height": 447,
+          "resource_url": "https://i.discogs.com/nwp_Bzo0PmcQ76hJWbhc99JFt8TGVLTpt23kRBAUxHs/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nwp_Bzo0PmcQ76hJWbhc99JFt8TGVLTpt23kRBAUxHs/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/YRUl31RYiUqqCrqem9JdM6CJ3kw17KN7lU_IwNub68s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 235,
+          "resource_url": "https://i.discogs.com/qlVDrp8ExU68n3AKbkQKBGO74TlfX5cs1VATuETG2x4/rs:fit/g:sm/q:90/h:235/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qlVDrp8ExU68n3AKbkQKBGO74TlfX5cs1VATuETG2x4/rs:fit/g:sm/q:90/h:235/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/3B9qJEl3h_xSHDnVe0Bf3tYExTHZYo3SvDtdHk98MVQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+          "width": 350
+        },
+        {
+          "height": 254,
+          "resource_url": "https://i.discogs.com/IzAI6FZqV503Zib23_XQFnHIfIkxAilVqCuz6WDKE5E/rs:fit/g:sm/q:90/h:254/w:269/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IzAI6FZqV503Zib23_XQFnHIfIkxAilVqCuz6WDKE5E/rs:fit/g:sm/q:90/h:254/w:269/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/t0XKHPLvQO63fYf57b0Uo23JjGLFLC7pDor9Qc8cDc4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+          "width": 269
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/iZ-IKxggp1FIZXPOXp34E84nFkRRsW3G0xo7y2b-c6c/rs:fit/g:sm/q:90/h:300/w:525/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iZ-IKxggp1FIZXPOXp34E84nFkRRsW3G0xo7y2b-c6c/rs:fit/g:sm/q:90/h:300/w:525/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/lr5uIS7-FROmz_mNzAdVH3A3lSYJggFHJAQXjVxhbkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+          "width": 525
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/0Ejmu4enByZ0e4qw4VrcvrUyzWVzOEYaNzKKUY07h-w/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0Ejmu4enByZ0e4qw4VrcvrUyzWVzOEYaNzKKUY07h-w/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0g15t9DinHEeOTuUlgfIN_4oCQvtnEie9c7rDjLIM9U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+          "width": 450
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 72106,
+          "name": "Tasha Bundy",
+          "resource_url": "https://api.discogs.com/artists/72106",
+          "thumbnail_url": "https://i.discogs.com/6KrHIjrOXbNZsDgSKlYpNOt1OtvSSMkd5qQStQeEqlg/rs:fit/g:sm/q:40/h:820/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyMTA2/LTE0MTA4NzI3MjEt/MzM5Mi5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 176069,
+          "name": "Volker Zander",
+          "resource_url": "https://api.discogs.com/artists/176069",
+          "thumbnail_url": "https://i.discogs.com/jNOqEDXKyAu3XxylrAxkCYoAhvMitSWnR6QQsgfVJag/rs:fit/g:sm/q:40/h:500/w:375/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NjA2/OS0xMjMxNDQxNjk2/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 272414,
+          "name": "Paul Niehaus",
+          "resource_url": "https://api.discogs.com/artists/272414",
+          "thumbnail_url": "https://i.discogs.com/EScUfimAH5v3gWssyC8XDJwABJP7hZY7qYlJNhROlvo/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MjQx/NC0xNjIyNTc0NzQ5/LTgxMTEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 280112,
+          "name": "Joey Burns",
+          "resource_url": "https://api.discogs.com/artists/280112",
+          "thumbnail_url": "https://i.discogs.com/JLvwwhVZAnOXYx2w_V8vTZuz503kZKluonD_AH8NbD4/rs:fit/g:sm/q:40/h:193/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDEx/Mi0xMTEyNzg2OTcy/LmpwZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 280115,
+          "name": "John Convertino",
+          "resource_url": "https://api.discogs.com/artists/280115",
+          "thumbnail_url": "https://i.discogs.com/WeLEBaCao6NZSbqD2lzigLq-ukVKCxJzFZVJKYNP0F8/rs:fit/g:sm/q:40/h:376/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDEx/NS0xNTQxNTUzMjcz/LTUxOTUuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 364622,
+          "name": "Martin Wenk",
+          "resource_url": "https://api.discogs.com/artists/364622",
+          "thumbnail_url": "https://i.discogs.com/mTBoIpbMoWdwlGa4J7CGp5W4iY7vuVWE1bK5muVFul0/rs:fit/g:sm/q:40/h:384/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDYy/Mi0xNjIyNTczNDY1/LTI0NjEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 364624,
+          "name": "Jacob Valenzuela",
+          "resource_url": "https://api.discogs.com/artists/364624",
+          "thumbnail_url": "https://i.discogs.com/hJS23_OZAE-KdqQST7ruBu9J50WKeTGOz0_nPYKa12w/rs:fit/g:sm/q:40/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDYy/NC0xNDI1MTEwOTc1/LTgyODYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 364670,
+          "name": "Bridget Keating",
+          "resource_url": "https://api.discogs.com/artists/364670",
+          "thumbnail_url": "https://i.discogs.com/L7lkr54T2gemKIorfst5yv_kClwLmSfCbF5e2zAYV-o/rs:fit/g:sm/q:40/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDY3/MC0xNjIyNDg3NDg2/LTYyMzYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 377716,
+          "name": "David Coffman",
+          "resource_url": "https://api.discogs.com/artists/377716",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 1050179,
+          "name": "Jairo Zavala",
+          "resource_url": "https://api.discogs.com/artists/1050179",
+          "thumbnail_url": "https://i.discogs.com/WOdb4RrIe73sw4u4SN7zhOV-JdDGC0xc0F2pXUCaFlk/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTAx/NzktMTYyMjU3MTU4/My03OTg1LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2009588,
+          "name": "Brian Lopez",
+          "resource_url": "https://api.discogs.com/artists/2009588",
+          "thumbnail_url": "https://i.discogs.com/2SInX0fZ4LyUjzd8ZuiegNG8QlIzd1QXlzgdU7vv4Ek/rs:fit/g:sm/q:40/h:401/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwMDk1/ODgtMTM3NTMyOTY4/OS0xMDk5LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 3017408,
+          "name": "Ryan Alfred",
+          "resource_url": "https://api.discogs.com/artists/3017408",
+          "thumbnail_url": "https://i.discogs.com/rBCkPRelUcSWBjvzg_G5ViZhZyL5Rur2_f6tBBKdHOg/rs:fit/g:sm/q:40/h:792/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwMTc0/MDgtMTY4MjY3NDc0/MC03NzAyLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 4723251,
+          "name": "Scott Colberg",
+          "resource_url": "https://api.discogs.com/artists/4723251",
+          "thumbnail_url": "https://i.discogs.com/roNEHNV4x10dyUGSPuScevTrCoQE3gOSCy1IrC0fr9c/rs:fit/g:sm/q:40/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MjMy/NTEtMTYyMjU3ODYz/MS00NDY4LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 5001695,
+          "name": "Sergio Mendoza (4)",
+          "resource_url": "https://api.discogs.com/artists/5001695",
+          "thumbnail_url": "https://i.discogs.com/f_XAFQWm9zQxx6fD-U2N64kK6Dps_bmVh59oJgeWaHs/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMDE2/OTUtMTU0MTc5NjU2/Ny0xNDEwLmpwZWc.jpeg"
+        }
+      ],
+      "name": "Calexico",
+      "namevariations": [
+        "Calexjco",
+        "Caléxico"
+      ],
+      "profile": "American band from Tucson, Arizona that shares a sun-bleached border with many performers and musical styles. Comprised of two core members, [a=Joey Burns] and [a=John Convertino], Calexico became its own entity in 1996 with the release of the [m=111064] LP. Although that record marked the band's first official output, Joey and John had already been playing together as collaborating members of Arizona mainstays [a=Giant Sand]. A wide variety of tours, performances (including the [url=https://www.discogs.com/label/238683-Montreux-Jazz-Festival]Montreux[/url] and [url=https://www.discogs.com/label/347183-North-Sea-Jazz-Festival]North Sea[/url] Jazz Festivals) and recording sessions as Calexico and with other artists ([a=Neko Case], [a=Victoria Williams], [a=Richard Buckner]), as well as their continuing relationship with Giant Sand, allowed the band the opportunity to develop as artists. Over time, Calexico has featured a revolving cast of musicians and instruments, and the bands sonic growth can be traced through its varied releases.\r\nThe band took their name from Calexico, California, a city on the boundary of California and Mexico.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 9856,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/h7ITBPWEl2jLckha-t4TkUnRujjyVvfZ3r-qzaHtPBo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/iPgKlxa_2mRm7aHSdxeM_dldhrSIHDjXQ6bbgfzc9ZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 264,
+            "resource_url": "https://i.discogs.com/AkEhx-1e39cMbW4sBwhMXE0fawuezAeWE1gjvDr1VTI/rs:fit/g:sm/q:90/h:264/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AkEhx-1e39cMbW4sBwhMXE0fawuezAeWE1gjvDr1VTI/rs:fit/g:sm/q:90/h:264/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/nmYLO_1SVj8aW9G0kkh3ZESUVC9SWTkqXLNBAA37le8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTUzNTkyMDM3Mi0y/NDc4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 230,
+            "resource_url": "https://i.discogs.com/wXCqIij3DHsiHrCeP2gdiT6osqg9M1HlWbfMoBX4AZc/rs:fit/g:sm/q:90/h:230/w:230/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/wXCqIij3DHsiHrCeP2gdiT6osqg9M1HlWbfMoBX4AZc/rs:fit/g:sm/q:90/h:230/w:230/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+            "uri150": "https://i.discogs.com/O-u8LQp1KLPK0m6tWXv_M3NIBQmexZudkQvIZsDKJvo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg4MS5n/aWY.jpeg",
+            "width": 230
+          },
+          {
+            "height": 447,
+            "resource_url": "https://i.discogs.com/nwp_Bzo0PmcQ76hJWbhc99JFt8TGVLTpt23kRBAUxHs/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/nwp_Bzo0PmcQ76hJWbhc99JFt8TGVLTpt23kRBAUxHs/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/YRUl31RYiUqqCrqem9JdM6CJ3kw17KN7lU_IwNub68s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi03/ODc3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 235,
+            "resource_url": "https://i.discogs.com/qlVDrp8ExU68n3AKbkQKBGO74TlfX5cs1VATuETG2x4/rs:fit/g:sm/q:90/h:235/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qlVDrp8ExU68n3AKbkQKBGO74TlfX5cs1VATuETG2x4/rs:fit/g:sm/q:90/h:235/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/3B9qJEl3h_xSHDnVe0Bf3tYExTHZYo3SvDtdHk98MVQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5NS5q/cGc.jpeg",
+            "width": 350
+          },
+          {
+            "height": 254,
+            "resource_url": "https://i.discogs.com/IzAI6FZqV503Zib23_XQFnHIfIkxAilVqCuz6WDKE5E/rs:fit/g:sm/q:90/h:254/w:269/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IzAI6FZqV503Zib23_XQFnHIfIkxAilVqCuz6WDKE5E/rs:fit/g:sm/q:90/h:254/w:269/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/t0XKHPLvQO63fYf57b0Uo23JjGLFLC7pDor9Qc8cDc4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTExMjcwMjg5MC5q/cGc.jpeg",
+            "width": 269
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/iZ-IKxggp1FIZXPOXp34E84nFkRRsW3G0xo7y2b-c6c/rs:fit/g:sm/q:90/h:300/w:525/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/iZ-IKxggp1FIZXPOXp34E84nFkRRsW3G0xo7y2b-c6c/rs:fit/g:sm/q:90/h:300/w:525/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/lr5uIS7-FROmz_mNzAdVH3A3lSYJggFHJAQXjVxhbkA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTEwOTE3NTE3My5q/cGc.jpeg",
+            "width": 525
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/0Ejmu4enByZ0e4qw4VrcvrUyzWVzOEYaNzKKUY07h-w/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0Ejmu4enByZ0e4qw4VrcvrUyzWVzOEYaNzKKUY07h-w/rs:fit/g:sm/q:90/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0g15t9DinHEeOTuUlgfIN_4oCQvtnEie9c7rDjLIM9U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTM0OTIzMTcwOC02/MzEzLmpwZWc.jpeg",
+            "width": 450
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 72106,
+            "name": "Tasha Bundy",
+            "resource_url": "https://api.discogs.com/artists/72106",
+            "thumbnail_url": "https://i.discogs.com/6KrHIjrOXbNZsDgSKlYpNOt1OtvSSMkd5qQStQeEqlg/rs:fit/g:sm/q:40/h:820/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyMTA2/LTE0MTA4NzI3MjEt/MzM5Mi5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 176069,
+            "name": "Volker Zander",
+            "resource_url": "https://api.discogs.com/artists/176069",
+            "thumbnail_url": "https://i.discogs.com/jNOqEDXKyAu3XxylrAxkCYoAhvMitSWnR6QQsgfVJag/rs:fit/g:sm/q:40/h:500/w:375/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3NjA2/OS0xMjMxNDQxNjk2/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 272414,
+            "name": "Paul Niehaus",
+            "resource_url": "https://api.discogs.com/artists/272414",
+            "thumbnail_url": "https://i.discogs.com/EScUfimAH5v3gWssyC8XDJwABJP7hZY7qYlJNhROlvo/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MjQx/NC0xNjIyNTc0NzQ5/LTgxMTEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 280112,
+            "name": "Joey Burns",
+            "resource_url": "https://api.discogs.com/artists/280112",
+            "thumbnail_url": "https://i.discogs.com/JLvwwhVZAnOXYx2w_V8vTZuz503kZKluonD_AH8NbD4/rs:fit/g:sm/q:40/h:193/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDEx/Mi0xMTEyNzg2OTcy/LmpwZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 280115,
+            "name": "John Convertino",
+            "resource_url": "https://api.discogs.com/artists/280115",
+            "thumbnail_url": "https://i.discogs.com/WeLEBaCao6NZSbqD2lzigLq-ukVKCxJzFZVJKYNP0F8/rs:fit/g:sm/q:40/h:376/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDEx/NS0xNTQxNTUzMjcz/LTUxOTUuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 364622,
+            "name": "Martin Wenk",
+            "resource_url": "https://api.discogs.com/artists/364622",
+            "thumbnail_url": "https://i.discogs.com/mTBoIpbMoWdwlGa4J7CGp5W4iY7vuVWE1bK5muVFul0/rs:fit/g:sm/q:40/h:384/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDYy/Mi0xNjIyNTczNDY1/LTI0NjEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 364624,
+            "name": "Jacob Valenzuela",
+            "resource_url": "https://api.discogs.com/artists/364624",
+            "thumbnail_url": "https://i.discogs.com/hJS23_OZAE-KdqQST7ruBu9J50WKeTGOz0_nPYKa12w/rs:fit/g:sm/q:40/h:326/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDYy/NC0xNDI1MTEwOTc1/LTgyODYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 364670,
+            "name": "Bridget Keating",
+            "resource_url": "https://api.discogs.com/artists/364670",
+            "thumbnail_url": "https://i.discogs.com/L7lkr54T2gemKIorfst5yv_kClwLmSfCbF5e2zAYV-o/rs:fit/g:sm/q:40/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NDY3/MC0xNjIyNDg3NDg2/LTYyMzYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 377716,
+            "name": "David Coffman",
+            "resource_url": "https://api.discogs.com/artists/377716",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 1050179,
+            "name": "Jairo Zavala",
+            "resource_url": "https://api.discogs.com/artists/1050179",
+            "thumbnail_url": "https://i.discogs.com/WOdb4RrIe73sw4u4SN7zhOV-JdDGC0xc0F2pXUCaFlk/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTAx/NzktMTYyMjU3MTU4/My03OTg1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2009588,
+            "name": "Brian Lopez",
+            "resource_url": "https://api.discogs.com/artists/2009588",
+            "thumbnail_url": "https://i.discogs.com/2SInX0fZ4LyUjzd8ZuiegNG8QlIzd1QXlzgdU7vv4Ek/rs:fit/g:sm/q:40/h:401/w:407/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwMDk1/ODgtMTM3NTMyOTY4/OS0xMDk5LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 3017408,
+            "name": "Ryan Alfred",
+            "resource_url": "https://api.discogs.com/artists/3017408",
+            "thumbnail_url": "https://i.discogs.com/rBCkPRelUcSWBjvzg_G5ViZhZyL5Rur2_f6tBBKdHOg/rs:fit/g:sm/q:40/h:792/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwMTc0/MDgtMTY4MjY3NDc0/MC03NzAyLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4723251,
+            "name": "Scott Colberg",
+            "resource_url": "https://api.discogs.com/artists/4723251",
+            "thumbnail_url": "https://i.discogs.com/roNEHNV4x10dyUGSPuScevTrCoQE3gOSCy1IrC0fr9c/rs:fit/g:sm/q:40/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MjMy/NTEtMTYyMjU3ODYz/MS00NDY4LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5001695,
+            "name": "Sergio Mendoza (4)",
+            "resource_url": "https://api.discogs.com/artists/5001695",
+            "thumbnail_url": "https://i.discogs.com/f_XAFQWm9zQxx6fD-U2N64kK6Dps_bmVh59oJgeWaHs/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMDE2/OTUtMTU0MTc5NjU2/Ny0xNDEwLmpwZWc.jpeg"
+          }
+        ],
+        "name": "Calexico",
+        "namevariations": [
+          "Calexjco",
+          "Caléxico"
+        ],
+        "profile": "American band from Tucson, Arizona that shares a sun-bleached border with many performers and musical styles. Comprised of two core members, [a=Joey Burns] and [a=John Convertino], Calexico became its own entity in 1996 with the release of the [m=111064] LP. Although that record marked the band's first official output, Joey and John had already been playing together as collaborating members of Arizona mainstays [a=Giant Sand]. A wide variety of tours, performances (including the [url=https://www.discogs.com/label/238683-Montreux-Jazz-Festival]Montreux[/url] and [url=https://www.discogs.com/label/347183-North-Sea-Jazz-Festival]North Sea[/url] Jazz Festivals) and recording sessions as Calexico and with other artists ([a=Neko Case], [a=Victoria Williams], [a=Richard Buckner]), as well as their continuing relationship with Giant Sand, allowed the band the opportunity to develop as artists. Over time, Calexico has featured a revolving cast of musicians and instruments, and the bands sonic growth can be traced through its varied releases.\r\nThe band took their name from Calexico, California, a city on the boundary of California and Mexico.",
+        "releases_url": "https://api.discogs.com/artists/9856/releases",
+        "resource_url": "https://api.discogs.com/artists/9856",
+        "uri": "https://www.discogs.com/artist/9856-Calexico",
+        "urls": [
+          "http://www.casadecalexico.com/",
+          "https://casadecalexico.bandcamp.com/",
+          "https://www.facebook.com/calexico",
+          "https://twitter.com/casadecalexico?lang=en",
+          "https://www.instagram.com/casadecalexico/?hl=en",
+          "https://www.youtube.com/channel/UC66HWSL-hGJWfkHjqaUuQyw",
+          "https://soundcloud.com/casadecalexico",
+          "https://open.spotify.com/artist/1OmdWpAh1pucAuZPzJaxIJ",
+          "http://en.wikipedia.org/wiki/Calexico_(band)",
+          "http://billions.com/calexico",
+          "http://www.epitonic.com/artists/calexico",
+          "https://musicianbio.org/calexico/",
+          "http://www.musicianguide.com/biographies/1608002943/Calexico.html",
+          "https://www.imdb.com/name/nm0129879/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/9856",
+      "thumb": "https://i.discogs.com/iPgKlxa_2mRm7aHSdxeM_dldhrSIHDjXQ6bbgfzc9ZA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NTYt/MTYyMjQ4NTAyNi0z/NDgyLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/9856-Calexico",
+      "urls": [
+        "http://www.casadecalexico.com/",
+        "https://casadecalexico.bandcamp.com/",
+        "https://www.facebook.com/calexico",
+        "https://twitter.com/casadecalexico?lang=en",
+        "https://www.instagram.com/casadecalexico/?hl=en",
+        "https://www.youtube.com/channel/UC66HWSL-hGJWfkHjqaUuQyw",
+        "https://soundcloud.com/casadecalexico",
+        "https://open.spotify.com/artist/1OmdWpAh1pucAuZPzJaxIJ",
+        "http://en.wikipedia.org/wiki/Calexico_(band)",
+        "http://billions.com/calexico",
+        "http://www.epitonic.com/artists/calexico",
+        "https://musicianbio.org/calexico/",
+        "http://www.musicianguide.com/biographies/1608002943/Calexico.html",
+        "https://www.imdb.com/name/nm0129879/"
+      ]
     },
     "lastfm": {
       "bio_content": "Calexico are a Tucson, Arizona based, Americana, Tex-Mex, alternative rock, band. The band's two main members, Joey Burns and John Convertino, first played together in Los Angeles as part of the group Giant Sand. They have recorded a number of albums on Quarterstick Records, while their 2005 EP In the Reins recorded with Iron & Wine has reached the Billboard 200 album charts. Their musical style is influenced by traditional Latin sounds of mariachi, conjunto, cumbia, tejano, as well as country, jazz, and post-rock. The band is named for the border town of Calexico, California.\n\nCalexico had its origins in 1990 when Burns, who was studying music at the University of California, Irvine, met up with Convertino, who was playing drums with Howe Gelb in Giant Sand. Burns joined them, after first playing upright bass on a European tour.\n\nGiant Sand moved to Tucson, Arizona in 1994. John and Joey formed the Friends of Dean Martin (later the Friends of Dean Martinez) which scored a record deal with Sub Pop. However, the pair split up with Bill Elm, the co-founder of The Friends of Dean Martinez in 1996. The band subsequently became a kind of indie rhythm section for hire, working with the likes of Victoria Williams, Barbara Manning and Richard Buckner before forming Calexico.\n\nCalexico first recorded Spoke in 1995 for German independent label Hausmusik with a limited edition of 2,000 copies. At that point the band was still called Spoke and the album was technically self-titled. After the band signed with Quarterstick Records (a subsidiary of Touch and Go Records) and changed their name to Calexico, Spoke was reissued by that label in 1997. Burns and Convertino also collaborated with Gelb and Lisa Germano on the album Slush released under the name OP8 that same year.\n\nTheir second album The Black Light was released in 1998. This was a concept album about the desert of Arizona and northern Mexico and received excellent reviews, with the critic from the Wall Street Journal rating it as one of the best records of the year.\n\nThe band built their profile by touring as support acts for bands such as Pavement, the Dirty Three and Lambchop. Calexico has regularly played festivals such as the Bonnaroo Music Festival, the Hurricane Festival and All Tomorrow's Parties. The Road Map album was a limited recording released in 1999 for sale only at Calexico's live shows.\n\nCalexico released its third album Hot Rail in May 2000 featuring the addition of horns and violin to their sound. The duo was busy in 2000 as they also appeared on a Giant Sand record called Chore of Enchantment as well as a tour only record Travelall.\n\nAt the end of 2000, Burns and Convertino joined with two French friends Naïm Amor and Thomas Belhôm to record \"Tête A Tête\" (Wabana Records, 2001) released under moniker ABBC (Amor/Belhom/Burns/Convertino). Calexico released two collections of rarities during 2001. Even My Sure Things Fall Through collected outtakes from previous albums, B-sides, remixes and material previously unreleased in the US. The album also featured Mariachi Luz de Luna who frequently played live with the duo. The Aerocalexico album was sold exclusively at their gigs in 2001.\n\nThe Scraping live album was released in 2002. Their next studio recording Feast of Wire was released in 2003 and made the charts for the first time appearing on Billboard's Heatseekers and Independent album chart. They made their first video for \"Quattro (World Drifts In)\" which was a single from Feast of Wire. They released a live DVD in 2004 called World Drifts In: Live at the Barbican. The song \"Güero Canelo\", from Feast of Wire, was featured in Michael Mann's Film, Collateral, starring Tom Cruise and Jamie Foxx, in which the band appears.\n\nCalexico contributed the song \"Burnin' Down the Spark\" to Nancy Sinatra's self-titled album in late 2004. The album featured artists who cited Sinatra as a musical influence. The song was released in the UK as the second single from the album in early 2005.\n\nIn 2005, Calexico joined up with Miami-based band Iron & Wine. Howard Greynolds of Overcoat Records was responsible for bringing the two bands together having previously been responsible for Tortoise and Will Oldham recording together. The In the Reins EP was released in September 2005 and received a positive reception with an MSNBC review giving it honorable mention. It also made an appearance in the Billboard 200 album charts, becoming their first recording to make the album charts, and No. 12 on the independent charts. In October 2005, they commenced a US tour with Iron & Wine to promote the record.\n\nReleased in 2006, Garden Ruin is Calexico's fifth studio album and was produced by JD Foster. The sound strays slightly from earlier works, focusing less on the horn section, and placing more emphasis on guitar and vocal tracks, giving the whole album a more mainstream sound.\n\nIn 2007, Calexico was invited by Arcade Fire to record a cover of their \"Ocean of Noise.\" This recording was used as the B-side for Arcade Fire's \"Intervention\" single, originally released on vinyl on May 21, 2007. Also in 2007, Calexico recorded a revamped version of the Bob Dylan song \"Goin' to Acapulco\" for the Dylan biopic \"I'm Not There\". The song featured Jim James of My Morning Jacket on vocals and was featured on the soundtrack of the film.\n\nSeveral of Calexico's songs, usually their shorter instrumental pieces, have been used as interstitial and background music on Public Radio International's This American Life. Their songs \"Ballad Of Cable Hogue\" and \"Service And Repair\" were featured in the 2001 German comedy movie Lammbock.\n\nTheir sixth studio LP is called 'Carried to Dust', featuring Sam Beam of Iron & Wine, Douglas McCombs of Tortoise and Pieta Brown. It was released in the USA via Touch & Go Records on September 9, 2008. The album enjoyed solid reviews, with hometown paper the Arizona Daily Star praising the band's \"ability to sweep you into its world, taking listeners to the American Southwest. This is one of the reasons Europeans love Calexico and others in this country are beginning to come around.\"\n\nOn October 16, 2008, a three-song live acoustic video performance premiered on LiveDaily Sessions, featuring Joey Burns performing the songs \"Two Silver Trees,\" \"Writer's Minor Holiday\" and \"Man Made Lake\".\n\nIn 2009, the song Banderilla was featured in an episode of AMC's Breaking Bad.\n\nIn 2010, a new album of Calexico was released: the soundtrack of the documentary \"Circo\". The band also spent part of 2010 touring with Arcade Fire along the west US coast.\n\nIn May 2011, their song \"Slowness\" was dedicated by Gabrielle Giffords to her husband astronaut Mark Kelly as the wake up song aboard the Space Shuttle Endeavour on its final flight.\n\nAlgiers was released 11 September 2012 on ANTI Records and CITY SLANG (Europe).\n\nIn April 2014, the band began referring to a new album on Twitter in posts from Mexico City, Coyoacan, Mexico, and Athens, Greece. Edge of the Sun was announced on 27 January 2015, and released on April 14, 2015. The album features guest appearances by various artists such as Sam Beam (Iron & Wine), Ben Bridwell (Band of Horses), Gaby Moreno, Carla Morrison and members of the Greek instrumental group Takim.\n\nThe current members of Calexico are:\n\nJoey Burns – vocals, guitars, bass, cello, piano, keyboards, accordion, percussion, vibraphone\nJohn Convertino – drums, percussion, piano, keyboards, vibraphone, marimba, accordion\nPaul Niehaus – steel guitar, guitars\nJacob Valenzuela – trumpet, keyboards, vibraphone, vocals\nMartin Wenk – trumpet, guitar, keyboards, accordion, glockenspiel, vibraphone, theremin (occasionally harmonica & French horn)\nVolker Zander – standup bass, electric bass\n\nLive tour 2013:\n\nJoey Burns - vocals, guitars\nJohn Convertino - drums, percussion\nSergio Mendoza - Keyboards\nJairo Zavala - bazouki, baritone guitar, vocals\nJacob Valenzuela – trumpet, keyboards, vibraphone, vocals\nMartin Wenk – trumpet, guitar, keyboards, accordion, glockenspiel, vibraphone (occasionally harmonica & French horn)\nRyan Alfred - bass, vocals <a href=\"https://www.last.fm/music/Calexico\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +535,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 735959,
+      "listeners": 736010,
       "mbid": "5e372a49-5672-4fb8-ba14-18c90780c4f9",
       "name": "Calexico",
-      "playcount": 21812539,
+      "playcount": 21814132,
       "similar_artists": [
         {
           "name": "Iron & Wine and Calexico",
@@ -172,7 +571,7 @@
       "url": "https://www.last.fm/music/Calexico"
     },
     "spotify": {
-      "followers": 214878,
+      "followers": 214921,
       "genres": [
         "alt country",
         "americana",
@@ -203,6 +602,6 @@
   },
   "spotify_id": "1OmdWpAh1pucAuZPzJaxIJ",
   "spotify_url": "https://open.spotify.com/artist/1OmdWpAh1pucAuZPzJaxIJ",
-  "updated_at": "2025-07-05T16:56:49.405383",
+  "updated_at": "2025-07-08T10:04:13.069326",
   "wikipedia_url": null
 }

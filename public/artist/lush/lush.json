@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:53:38.439324",
   "discogs_id": "20696",
-  "discogs_url": "https://www.discogs.com/artist/20696",
-  "followers": 281360,
+  "discogs_url": "https://www.discogs.com/artist/20696-Lush",
+  "followers": 281527,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -17,7 +17,7 @@
     "indie",
     "4ad"
   ],
-  "id": null,
+  "id": "lush-1751723620",
   "images": [
     {
       "height": 2000,
@@ -84,14 +84,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/KQNLGdv9sMPU2iIIOpGjliq6deBn3lDFHq7fPtS5FBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "acc07ffc-ed8b-45a1-a70a-b518618ac649",
   "lastfm_url": "https://www.last.fm/music/Lush",
   "local_images": {
-    "hi-res": "public/artist/lush/lush-hi-res.jpg",
-    "medium": "public/artist/lush/lush-medium.jpg",
-    "small": "public/artist/lush/lush-small.jpg"
+    "hi-res": "../public/artist/lush/lush-hi-res.jpg",
+    "medium": "../public/artist/lush/lush-medium.jpg",
+    "small": "../public/artist/lush/lush-small.jpg"
   },
   "name": "Lush",
   "popularity": 48,
@@ -108,9 +120,344 @@
       "url": "https://music.apple.com/gb/artist/lush/6759530"
     },
     "discogs": {
-      "id": 20696,
-      "original_name": "Lush",
-      "role": ""
+      "cover_image": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "20696",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/KQNLGdv9sMPU2iIIOpGjliq6deBn3lDFHq7fPtS5FBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 383,
+          "resource_url": "https://i.discogs.com/VtqHPXW3ME3KKOMbx5j6KZeahdCpR8mPDkvNnzbparo/rs:fit/g:sm/q:90/h:383/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VtqHPXW3ME3KKOMbx5j6KZeahdCpR8mPDkvNnzbparo/rs:fit/g:sm/q:90/h:383/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/35xIU9mMA88JJNTAePZSfgVXTORKlHa2p8t5dBFOIbY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 512,
+          "resource_url": "https://i.discogs.com/vyeO_mwbp8fFKU8z3Upm4WVMoqyJ0lLMmHFiI0JDrQY/rs:fit/g:sm/q:90/h:512/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vyeO_mwbp8fFKU8z3Upm4WVMoqyJ0lLMmHFiI0JDrQY/rs:fit/g:sm/q:90/h:512/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/GzVCMW3laDBl_lDmHxY26XsU_NwqVO5yMz-XyBZROwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+          "width": 499
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/FoLxv1gDiVW2BxcT08NxsXfR-EnKouGRCa_cODIoWNM/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FoLxv1gDiVW2BxcT08NxsXfR-EnKouGRCa_cODIoWNM/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/REqYLSZPxeQqLGyZQAkF9xKJWgd68KOU6J39oPy5G_c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 462,
+          "resource_url": "https://i.discogs.com/DZiYoS93aAAfkTewZOKkIrl5uB2vNUQGHCt3cfPRdWI/rs:fit/g:sm/q:90/h:462/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DZiYoS93aAAfkTewZOKkIrl5uB2vNUQGHCt3cfPRdWI/rs:fit/g:sm/q:90/h:462/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/Nt_5E_VEpR38NqZ8PtlSDpYaW4aaXLlzDLbKchZlrJE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+          "width": 360
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/mAA0OWH6xgBPren4Mk_iYoIf4MNnXoRaN97SuFkdEXc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mAA0OWH6xgBPren4Mk_iYoIf4MNnXoRaN97SuFkdEXc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tZQ5OlTTG2XWcNFOuCXLR4omfAhuzdmlCxzqdmR6gtA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 702,
+          "resource_url": "https://i.discogs.com/3j2xxs84wPPRMaK0C3PYClf1CkdEIP9R2JNJH1hYV3o/rs:fit/g:sm/q:90/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3j2xxs84wPPRMaK0C3PYClf1CkdEIP9R2JNJH1hYV3o/rs:fit/g:sm/q:90/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/WlWwnw380a6dTSKza2BnkbXgMVHk3OkuYJDVZLrBQ-s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 622,
+          "resource_url": "https://i.discogs.com/20XsiJcKNR1GMUYeIVqBetNoQQzuWagknOV8PRvUuw4/rs:fit/g:sm/q:90/h:622/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/20XsiJcKNR1GMUYeIVqBetNoQQzuWagknOV8PRvUuw4/rs:fit/g:sm/q:90/h:622/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/O1-FsguU3-WI1VhebO5fhTJeK4Y7rDXvD2XvVsZ6pV4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/9GqP1U-hpMedL19b89Mq3KwvwuOQQUi4I26zb8TUut4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9GqP1U-hpMedL19b89Mq3KwvwuOQQUi4I26zb8TUut4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/oQYE1isAVlf7j7NEqjG-s6bA80gvUVd4UqlPunWZHXo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/SB_ucmuZ0b6I-yAP0FF0TO7rNMa-7koJCdoL6cnWd80/rs:fit/g:sm/q:90/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SB_ucmuZ0b6I-yAP0FF0TO7rNMa-7koJCdoL6cnWd80/rs:fit/g:sm/q:90/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kYHH6ByuCoUkEX1so-5iXcDZEJgeUHJ_CJEoq7VkZQI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+          "width": 399
+        },
+        {
+          "height": 206,
+          "resource_url": "https://i.discogs.com/c_PTziBgFk8VK_bpPYlUuvVvLApjQDvMOithkNyH2EQ/rs:fit/g:sm/q:90/h:206/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/c_PTziBgFk8VK_bpPYlUuvVvLApjQDvMOithkNyH2EQ/rs:fit/g:sm/q:90/h:206/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/pJb9InrmTu5N_ENrodw13AeDuYKVVC1SlDR3bOoYtSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/J1L02oRrpEDE560JKfe_IQOyhJfkh2Mk0PJNyxVj748/rs:fit/g:sm/q:90/h:369/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J1L02oRrpEDE560JKfe_IQOyhJfkh2Mk0PJNyxVj748/rs:fit/g:sm/q:90/h:369/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/axEqXsZCoBZHkESU2UOWzZzV3W4Gkp1q5xdBdZXwmFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+          "width": 464
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 259780,
+          "name": "Steve Rippon",
+          "resource_url": "https://api.discogs.com/artists/259780",
+          "thumbnail_url": "https://i.discogs.com/NeKLtHSaZw0NB-KqMh8XFRbcE324uRtNQGCWCB5Vizc/rs:fit/g:sm/q:40/h:519/w:422/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/MC0xNjE1NjU5MTQ3/LTc0OTguanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 259781,
+          "name": "Miki Berenyi",
+          "resource_url": "https://api.discogs.com/artists/259781",
+          "thumbnail_url": "https://i.discogs.com/dZijGL5JNjJJqD749zSve1bhJQatl9ISM9wn0VUlU_o/rs:fit/g:sm/q:40/h:600/w:327/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/MS0xMjE2NTAwNDM0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 259782,
+          "name": "Chris Acland",
+          "resource_url": "https://api.discogs.com/artists/259782",
+          "thumbnail_url": "https://i.discogs.com/wPfWYjuxiYxcHeCK-EJsnJC8Nwuy5ev6U3BF6N-wbYY/rs:fit/g:sm/q:40/h:791/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/Mi0xNDgwNzE2NDU0/LTg1MDUuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 259783,
+          "name": "Emma Anderson",
+          "resource_url": "https://api.discogs.com/artists/259783",
+          "thumbnail_url": "https://i.discogs.com/GJCp8NfYFh20JLYxR0wZ4csjwX7lVHsyMQ_cVRoV3Mc/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/My0xMjQ2NDc1MDQ3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 263391,
+          "name": "Justin Welch",
+          "resource_url": "https://api.discogs.com/artists/263391",
+          "thumbnail_url": "https://i.discogs.com/Apby9FAmz08b5HeAvoPi4xyvyKVY9LuFcHsu7jlrZk0/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzM5/MS0xNTM0MzIyMDkz/LTQ1NjcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 515145,
+          "name": "Meriel Barham",
+          "resource_url": "https://api.discogs.com/artists/515145",
+          "thumbnail_url": "https://i.discogs.com/4VNLoT1BAn7nEky9J_8SNSeTRQZdfD2AzbD7GnbsXc0/rs:fit/g:sm/q:40/h:443/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxNTE0/NS0xNjUzNDc3Mjc4/LTY5MTcucG5n.jpeg"
+        },
+        {
+          "active": false,
+          "id": 571152,
+          "name": "Philip King",
+          "resource_url": "https://api.discogs.com/artists/571152",
+          "thumbnail_url": "https://i.discogs.com/WW4EdEiMcxjTVYMB393HUk1YrVosqEpRGz7CcZIvh7U/rs:fit/g:sm/q:40/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3MTE1/Mi0xMzY5MzA0NjAz/LTc2NDkuanBlZw.jpeg"
+        }
+      ],
+      "name": "Lush",
+      "namevariations": [
+        "ラッシュ",
+        "枝繁叶茂",
+        "醺醉樂團"
+      ],
+      "profile": "Shoegaze band from London, UK. Formed in 1987 and led by guitarists Miki Berenyi and Emma Anderson. Drummer Chris Acland died by suicide in October 1996, bringing the band to an end. Lush reformed in September of 2015, with the addition of [a=Elastica (2)] drummer [a=Justin Welch].",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 20696,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/SOw5pBf_HwLiSyPqA29xWktEQbPJnPt1GUBFagHG5HM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/KQNLGdv9sMPU2iIIOpGjliq6deBn3lDFHq7fPtS5FBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 383,
+            "resource_url": "https://i.discogs.com/VtqHPXW3ME3KKOMbx5j6KZeahdCpR8mPDkvNnzbparo/rs:fit/g:sm/q:90/h:383/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/VtqHPXW3ME3KKOMbx5j6KZeahdCpR8mPDkvNnzbparo/rs:fit/g:sm/q:90/h:383/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/35xIU9mMA88JJNTAePZSfgVXTORKlHa2p8t5dBFOIbY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NzY1NjMzNDYt/MTgxOS5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 512,
+            "resource_url": "https://i.discogs.com/vyeO_mwbp8fFKU8z3Upm4WVMoqyJ0lLMmHFiI0JDrQY/rs:fit/g:sm/q:90/h:512/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vyeO_mwbp8fFKU8z3Upm4WVMoqyJ0lLMmHFiI0JDrQY/rs:fit/g:sm/q:90/h:512/w:499/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/GzVCMW3laDBl_lDmHxY26XsU_NwqVO5yMz-XyBZROwI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE3MzU4MTM1OTQt/MjkwMC5qcGVn.jpeg",
+            "width": 499
+          },
+          {
+            "height": 360,
+            "resource_url": "https://i.discogs.com/FoLxv1gDiVW2BxcT08NxsXfR-EnKouGRCa_cODIoWNM/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FoLxv1gDiVW2BxcT08NxsXfR-EnKouGRCa_cODIoWNM/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/REqYLSZPxeQqLGyZQAkF9xKJWgd68KOU6J39oPy5G_c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NTQ0Nzk1OTMt/MTU3NS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 462,
+            "resource_url": "https://i.discogs.com/DZiYoS93aAAfkTewZOKkIrl5uB2vNUQGHCt3cfPRdWI/rs:fit/g:sm/q:90/h:462/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DZiYoS93aAAfkTewZOKkIrl5uB2vNUQGHCt3cfPRdWI/rs:fit/g:sm/q:90/h:462/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+            "uri150": "https://i.discogs.com/Nt_5E_VEpR38NqZ8PtlSDpYaW4aaXLlzDLbKchZlrJE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0ODAu/Z2lm.jpeg",
+            "width": 360
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/mAA0OWH6xgBPren4Mk_iYoIf4MNnXoRaN97SuFkdEXc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/mAA0OWH6xgBPren4Mk_iYoIf4MNnXoRaN97SuFkdEXc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/tZQ5OlTTG2XWcNFOuCXLR4omfAhuzdmlCxzqdmR6gtA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0NDM0ODQyMjQt/NjAwOC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 702,
+            "resource_url": "https://i.discogs.com/3j2xxs84wPPRMaK0C3PYClf1CkdEIP9R2JNJH1hYV3o/rs:fit/g:sm/q:90/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3j2xxs84wPPRMaK0C3PYClf1CkdEIP9R2JNJH1hYV3o/rs:fit/g:sm/q:90/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/WlWwnw380a6dTSKza2BnkbXgMVHk3OkuYJDVZLrBQ-s/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTc0NjEt/MTU0Ny5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 622,
+            "resource_url": "https://i.discogs.com/20XsiJcKNR1GMUYeIVqBetNoQQzuWagknOV8PRvUuw4/rs:fit/g:sm/q:90/h:622/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/20XsiJcKNR1GMUYeIVqBetNoQQzuWagknOV8PRvUuw4/rs:fit/g:sm/q:90/h:622/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/O1-FsguU3-WI1VhebO5fhTJeK4Y7rDXvD2XvVsZ6pV4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDM0MDA0NDAu/anBn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/9GqP1U-hpMedL19b89Mq3KwvwuOQQUi4I26zb8TUut4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9GqP1U-hpMedL19b89Mq3KwvwuOQQUi4I26zb8TUut4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/oQYE1isAVlf7j7NEqjG-s6bA80gvUVd4UqlPunWZHXo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwNzUu/anBlZw.jpeg",
+            "width": 500
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/SB_ucmuZ0b6I-yAP0FF0TO7rNMa-7koJCdoL6cnWd80/rs:fit/g:sm/q:90/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SB_ucmuZ0b6I-yAP0FF0TO7rNMa-7koJCdoL6cnWd80/rs:fit/g:sm/q:90/h:500/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/kYHH6ByuCoUkEX1so-5iXcDZEJgeUHJ_CJEoq7VkZQI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyMjYyMDQwOTUu/anBlZw.jpeg",
+            "width": 399
+          },
+          {
+            "height": 206,
+            "resource_url": "https://i.discogs.com/c_PTziBgFk8VK_bpPYlUuvVvLApjQDvMOithkNyH2EQ/rs:fit/g:sm/q:90/h:206/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/c_PTziBgFk8VK_bpPYlUuvVvLApjQDvMOithkNyH2EQ/rs:fit/g:sm/q:90/h:206/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/pJb9InrmTu5N_ENrodw13AeDuYKVVC1SlDR3bOoYtSM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTExMDc0NjkyMTgu/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/J1L02oRrpEDE560JKfe_IQOyhJfkh2Mk0PJNyxVj748/rs:fit/g:sm/q:90/h:369/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/J1L02oRrpEDE560JKfe_IQOyhJfkh2Mk0PJNyxVj748/rs:fit/g:sm/q:90/h:369/w:464/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/axEqXsZCoBZHkESU2UOWzZzV3W4Gkp1q5xdBdZXwmFk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTEyODYzMDgzMDku/anBlZw.jpeg",
+            "width": 464
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 259780,
+            "name": "Steve Rippon",
+            "resource_url": "https://api.discogs.com/artists/259780",
+            "thumbnail_url": "https://i.discogs.com/NeKLtHSaZw0NB-KqMh8XFRbcE324uRtNQGCWCB5Vizc/rs:fit/g:sm/q:40/h:519/w:422/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/MC0xNjE1NjU5MTQ3/LTc0OTguanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 259781,
+            "name": "Miki Berenyi",
+            "resource_url": "https://api.discogs.com/artists/259781",
+            "thumbnail_url": "https://i.discogs.com/dZijGL5JNjJJqD749zSve1bhJQatl9ISM9wn0VUlU_o/rs:fit/g:sm/q:40/h:600/w:327/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/MS0xMjE2NTAwNDM0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 259782,
+            "name": "Chris Acland",
+            "resource_url": "https://api.discogs.com/artists/259782",
+            "thumbnail_url": "https://i.discogs.com/wPfWYjuxiYxcHeCK-EJsnJC8Nwuy5ev6U3BF6N-wbYY/rs:fit/g:sm/q:40/h:791/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/Mi0xNDgwNzE2NDU0/LTg1MDUuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 259783,
+            "name": "Emma Anderson",
+            "resource_url": "https://api.discogs.com/artists/259783",
+            "thumbnail_url": "https://i.discogs.com/GJCp8NfYFh20JLYxR0wZ4csjwX7lVHsyMQ_cVRoV3Mc/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1OTc4/My0xMjQ2NDc1MDQ3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 263391,
+            "name": "Justin Welch",
+            "resource_url": "https://api.discogs.com/artists/263391",
+            "thumbnail_url": "https://i.discogs.com/Apby9FAmz08b5HeAvoPi4xyvyKVY9LuFcHsu7jlrZk0/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzM5/MS0xNTM0MzIyMDkz/LTQ1NjcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 515145,
+            "name": "Meriel Barham",
+            "resource_url": "https://api.discogs.com/artists/515145",
+            "thumbnail_url": "https://i.discogs.com/4VNLoT1BAn7nEky9J_8SNSeTRQZdfD2AzbD7GnbsXc0/rs:fit/g:sm/q:40/h:443/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxNTE0/NS0xNjUzNDc3Mjc4/LTY5MTcucG5n.jpeg"
+          },
+          {
+            "active": false,
+            "id": 571152,
+            "name": "Philip King",
+            "resource_url": "https://api.discogs.com/artists/571152",
+            "thumbnail_url": "https://i.discogs.com/WW4EdEiMcxjTVYMB393HUk1YrVosqEpRGz7CcZIvh7U/rs:fit/g:sm/q:40/h:544/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3MTE1/Mi0xMzY5MzA0NjAz/LTc2NDkuanBlZw.jpeg"
+          }
+        ],
+        "name": "Lush",
+        "namevariations": [
+          "ラッシュ",
+          "枝繁叶茂",
+          "醺醉樂團"
+        ],
+        "profile": "Shoegaze band from London, UK. Formed in 1987 and led by guitarists Miki Berenyi and Emma Anderson. Drummer Chris Acland died by suicide in October 1996, bringing the band to an end. Lush reformed in September of 2015, with the addition of [a=Elastica (2)] drummer [a=Justin Welch].",
+        "releases_url": "https://api.discogs.com/artists/20696/releases",
+        "resource_url": "https://api.discogs.com/artists/20696",
+        "uri": "https://www.discogs.com/artist/20696-Lush",
+        "urls": [
+          "https://4ad.com/artists/lush",
+          "https://lushofficial.bandcamp.com/music",
+          "https://en.wikipedia.org/wiki/Lush_(band)",
+          "http://lightfromadeadstar.org/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/20696",
+      "thumb": "https://i.discogs.com/KQNLGdv9sMPU2iIIOpGjliq6deBn3lDFHq7fPtS5FBA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNjk2/LTE0ODA3MTQ4MzYt/Njg3Mi5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/20696-Lush",
+      "urls": [
+        "https://4ad.com/artists/lush",
+        "https://lushofficial.bandcamp.com/music",
+        "https://en.wikipedia.org/wiki/Lush_(band)",
+        "http://lightfromadeadstar.org/"
+      ]
     },
     "lastfm": {
       "bio_content": "Lush were a shoegaze/britpop band, formed in 1987 in London, England. The group consisted of Miki Berenyi and Emma Anderson on guitars and vocals, Philip King on bass, and Chris Acland on drums. Other members were the bassist Steve Rippon (from 1987 to 1992) and the vocalist Meriel Barham (from 1987 to 1988). Lush was one of the first shoegaze bands, later moving toward Britpop.\n\nAnderson and Berenyi had been friends since the early 1980s, and published the Alphabet Soup fanzine together. In 1986 Anderson joined The Rover Girls as bassist and Berenyi joined The Bugs as guitarist but neither band lasted long. \n\nLush formed in 1987, initially named The Baby Machines, with a line-up of Meriel Barham (vocals), Emma Anderson (guitar), Miki Berenyi (guitar), Steve Rippon (bass), and Chris Acland (drums). After Rippon joined, the band members decided on a change of name to Lush, making their live debut at the Camden Falcon on 6 March 1988. Barham was fired, with the rest of the band deciding she lacked commitment (she later joined Pale Saints). Anderson and Berenyi then took on lead vocal duties.\n\nLush gained recognition when Robin Guthrie helped the band sign to 4AD. The band's first release was Scar, an EP, in 1989. Critical praise for Scar and a wildly popular live show established Lush as one of the best-selling alternative bands of the period. That year the EPs Mad Love, produced by Robin Guthrie, and Sweetness and Light, produced by Tim Friese-Greene of Talk Talk fame, followed.\n\nIn 1990 the compilation Gala, which combined the material from the first three EPs, was released by Reprise in the United States, this being the first exposure of Lush in North America. \n\nLush's first full-length album of completely new material was Spooky in 1992. Produced by Robin Guthrie, Spooky featured a sound very similar to Guthrie's band Cocteau Twins, with walls of sound and a great deal of flange. Reviews were mixed and critics of the album hold that Guthrie's production brought the sound away from the band's original creative vision. Bassist Steve Rippon left the band at this stage in order to concentrate on writing, though his book Cold Turkey Sandwich - a fictionalized chronicle of his time in touring - was rejected by publishers. He was replaced by Phil King. Also in 1992, Lush toured America as part of the Lollapalooza festival.\n\nThe band's second studio album Split was released in 1994 and featured a harsher sound alternated with long and softer tracks as \"Desire Lines\" and \"Never-Never\". Despite critical praise, the album sold poorly. \n\nAfter adapting to the newly popular sounds of the Britpop era, Lush's 1996 Lovelife became the biggest seller of their career, including the hit singles \"Ladykillers\", \"500\" and \"Single Girl\", which was released in several different versions with different tracks along with the title track. Also on this album, Jarvis Cocker from Pulp contributed guest vocals to \"Ciao!\" and the record included the now classic/melancholic favorite \"Last Night\".\n\nIn 1996, drummer Chris Acland committed suicide by hanging, at his parents' house, allegedly due to depression. The situation proved too hard for the band, and in 23 February 1998 the three remaining members of Lush decided to disband.\n\nEmma Anderson has since formed a new band, Sing-Sing, who have released two full-length albums to date.\n\nOn September 28th 2015 Lush announced their reunion. The reunited band consists of Anderson, Berenyi & King with the addition of Justin Welch on drums, an old friend of Acland.\n\nLush discography:\nScar EP (1989)\nMad Love  EP (1990)\nSweetness and Light EP (1990)\nGala compliation of the above EPs (1990)\nSpooky (1992)\nSplit (1994)\nLovelife (1996) <a href=\"https://www.last.fm/music/Lush\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -141,10 +488,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 712653,
+      "listeners": 713251,
       "mbid": "acc07ffc-ed8b-45a1-a70a-b518618ac649",
       "name": "Lush",
-      "playcount": 16684276,
+      "playcount": 16703129,
       "similar_artists": [
         {
           "name": "Pale Saints",
@@ -177,7 +524,7 @@
       "url": "https://www.last.fm/music/Lush"
     },
     "spotify": {
-      "followers": 281360,
+      "followers": 281527,
       "genres": [
         "shoegaze",
         "dream pop",
@@ -214,6 +561,6 @@
   },
   "spotify_id": "3ysp8GwsheDcBxP9q65lBg",
   "spotify_url": "https://open.spotify.com/artist/3ysp8GwsheDcBxP9q65lBg",
-  "updated_at": "2025-07-05T14:53:40.820075",
+  "updated_at": "2025-07-08T09:26:11.325003",
   "wikipedia_url": null
 }
