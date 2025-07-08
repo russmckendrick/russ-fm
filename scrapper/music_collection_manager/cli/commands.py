@@ -382,7 +382,7 @@ class TestCommand(BaseCommand):
         
         validation = self.config.validate_config()
         
-        for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm"]:
+        for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]:
             status = "✓ Connected" if results.get(service_name, False) else "✗ Failed"
             status_style = "green" if results.get(service_name, False) else "red"
             
@@ -492,6 +492,23 @@ class TestCommand(BaseCommand):
             results["lastfm"] = False
             self.logger.error(f"lastfm service: FAILED - {str(e)}")
         
+        # Test TheAudioDB
+        try:
+            theaudiodb_config = self.config.get_section("TheAudioDB")
+            if theaudiodb_config.get("api_token"):
+                from ..services.theaudiodb import TheAudioDBService
+                service = TheAudioDBService(self.config.config, logger=self.logger)
+                if service.authenticate():
+                    results["theaudiodb"] = True
+                    self.logger.info("theaudiodb service: OK")
+                else:
+                    results["theaudiodb"] = False
+            else:
+                results["theaudiodb"] = False
+        except Exception as e:
+            results["theaudiodb"] = False
+            self.logger.error(f"theaudiodb service: FAILED - {str(e)}")
+        
         return results
     
     def _test_services_via_orchestrator(self) -> Dict[str, bool]:
@@ -508,7 +525,7 @@ class TestCommand(BaseCommand):
             available_services = orchestrator.get_available_services()
             
             # Test each service by checking if it's available and working
-            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm"]:
+            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]:
                 if service_name in available_services:
                     try:
                         # For Discogs, test by trying to get a release
@@ -532,7 +549,7 @@ class TestCommand(BaseCommand):
         except Exception as e:
             self.logger.error(f"Failed to test services via orchestrator: {str(e)}")
             # Fallback to all False
-            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm"]:
+            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]:
                 results[service_name] = False
         
         return results
