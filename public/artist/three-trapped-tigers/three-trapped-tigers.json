@@ -106,6 +106,120 @@
   },
   "name": "Three Trapped Tigers",
   "popularity": 25,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='295595782', url='https://music.apple.com/gb/artist/three-trapped-tigers/295595782', name='Three Trapped Tigers', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/09/19/b8/0919b897-1d48-2f13-bb58-ad1591a97386/mzl.pghowiwg.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '295595782', 'type': 'artists', 'href': '/v1/catalog/gb/artists/295595782', 'attributes': {'name': 'Three Trapped Tigers', 'genreNames': ['Rock'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/09/19/b8/0919b897-1d48-2f13-bb58-ad1591a97386/mzl.pghowiwg.jpg/{w}x{h}bb.jpg', 'bgColor': '010100', 'textColor1': 'ebf4fd', 'textColor2': 'cfe0f1', 'textColor3': 'bcc3ca', 'textColor4': 'a6b4c1'}, 'url': 'https://music.apple.com/gb/artist/three-trapped-tigers/295595782'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/295595782/albums', 'data': [{'id': '1078005851', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1078005851'}, {'id': '432420343', 'type': 'albums', 'href': '/v1/catalog/gb/albums/432420343'}, {'id': '503510136', 'type': 'albums', 'href': '/v1/catalog/gb/albums/503510136'}, {'id': '1780649264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1780649264'}, {'id': '1778105710', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1778105710'}, {'id': '447385609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/447385609'}, {'id': '471045436', 'type': 'albums', 'href': '/v1/catalog/gb/albums/471045436'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/n5qxKXrSfJygM_LP8gjU3qZU3rdrqNt-BPNXxJ-PWgY/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1438349",
+      "images": [
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/n5qxKXrSfJygM_LP8gjU3qZU3rdrqNt-BPNXxJ-PWgY/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/n5qxKXrSfJygM_LP8gjU3qZU3rdrqNt-BPNXxJ-PWgY/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/CxdqByu-5AEm2Emd6YmaKzITHl6jbhIfxJxRdwDvspg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 686533,
+          "name": "Tom Rogerson",
+          "resource_url": "https://api.discogs.com/artists/686533",
+          "thumbnail_url": "https://i.discogs.com/3cOXSgwkyakHwJy6gtV2ljVvN2ML2plHDWEOVsSglyA/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NjUz/My0xNTA3MDc5NDc0/LTMyODYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 824324,
+          "name": "Adam Betts",
+          "resource_url": "https://api.discogs.com/artists/824324",
+          "thumbnail_url": "https://i.discogs.com/SY88DxDvHmRmES2psJnzqsIZgTnhGBniyw1_bi_b1R8/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyNDMy/NC0xNTAyNjQxOTUy/LTcwMDEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 824326,
+          "name": "Matt Calvert",
+          "resource_url": "https://api.discogs.com/artists/824326",
+          "thumbnail_url": "https://i.discogs.com/S6uVdNzYcmLmgTR2VGOAj1eJnnn6wN3VlhMt3IDdPKs/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyNDMy/Ni0xNTc0MTU2OTY0/LTg1MzMuanBlZw.jpeg"
+        }
+      ],
+      "name": "Three Trapped Tigers",
+      "namevariations": [
+        "TTT"
+      ],
+      "profile": "Three Trapped Tigers is an instrumental noise-rock band from London, UK.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 1438349,
+        "images": [
+          {
+            "height": 398,
+            "resource_url": "https://i.discogs.com/n5qxKXrSfJygM_LP8gjU3qZU3rdrqNt-BPNXxJ-PWgY/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/n5qxKXrSfJygM_LP8gjU3qZU3rdrqNt-BPNXxJ-PWgY/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/CxdqByu-5AEm2Emd6YmaKzITHl6jbhIfxJxRdwDvspg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 686533,
+            "name": "Tom Rogerson",
+            "resource_url": "https://api.discogs.com/artists/686533",
+            "thumbnail_url": "https://i.discogs.com/3cOXSgwkyakHwJy6gtV2ljVvN2ML2plHDWEOVsSglyA/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NjUz/My0xNTA3MDc5NDc0/LTMyODYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 824324,
+            "name": "Adam Betts",
+            "resource_url": "https://api.discogs.com/artists/824324",
+            "thumbnail_url": "https://i.discogs.com/SY88DxDvHmRmES2psJnzqsIZgTnhGBniyw1_bi_b1R8/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyNDMy/NC0xNTAyNjQxOTUy/LTcwMDEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 824326,
+            "name": "Matt Calvert",
+            "resource_url": "https://api.discogs.com/artists/824326",
+            "thumbnail_url": "https://i.discogs.com/S6uVdNzYcmLmgTR2VGOAj1eJnnn6wN3VlhMt3IDdPKs/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgyNDMy/Ni0xNTc0MTU2OTY0/LTg1MzMuanBlZw.jpeg"
+          }
+        ],
+        "name": "Three Trapped Tigers",
+        "namevariations": [
+          "TTT"
+        ],
+        "profile": "Three Trapped Tigers is an instrumental noise-rock band from London, UK.",
+        "releases_url": "https://api.discogs.com/artists/1438349/releases",
+        "resource_url": "https://api.discogs.com/artists/1438349",
+        "uri": "https://www.discogs.com/artist/1438349-Three-Trapped-Tigers",
+        "urls": [
+          "https://www.facebook.com/threetrappedtigers",
+          "https://www.instagram.com/3trappedtigers/",
+          "https://soundcloud.com/threetrappedtigers",
+          "http://www.myspace.com/threetrappedtigers",
+          "https://3trappedtigers.bandcamp.com/",
+          "https://en.wikipedia.org/wiki/Three_Trapped_Tigers"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1438349",
+      "thumb": "https://i.discogs.com/CxdqByu-5AEm2Emd6YmaKzITHl6jbhIfxJxRdwDvspg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0Mzgz/NDktMTI3MzY2MTk0/OC5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/1438349-Three-Trapped-Tigers",
+      "urls": [
+        "https://www.facebook.com/threetrappedtigers",
+        "https://www.instagram.com/3trappedtigers/",
+        "https://soundcloud.com/threetrappedtigers",
+        "http://www.myspace.com/threetrappedtigers",
+        "https://3trappedtigers.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Three_Trapped_Tigers"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Three Trapped Tigers', url='https://www.last.fm/music/Three+Trapped+Tigers', mbid='70212aa5-ade1-40b5-982e-964c79b08feb', listeners=86616, playcount=1246959, bio_summary='Three Trapped Tigers are an instrumental noisenik outfit from London who exhibit the precision of electronica, the raw intensity of rock music and the schizophrenic spontaneity of their electro-improv past. Not easily classifiable, but with influences ranging from Aphex Twin and Squarepusher  to Lightning Bolt and Battles. The music veers wildly from noisy guitars to contemplative synths, frantic beats to ambient noise.\\nTheir first five-track EP was recorded with the now-legendary Gordon Raphael, who produced the first two Strokes albums. <a href=\"https://www.last.fm/music/Three+Trapped+Tigers\">Read more on Last.fm</a>', bio_content='Three Trapped Tigers are an instrumental noisenik outfit from London who exhibit the precision of electronica, the raw intensity of rock music and the schizophrenic spontaneity of their electro-improv past. Not easily classifiable, but with influences ranging from Aphex Twin and Squarepusher  to Lightning Bolt and Battles. The music veers wildly from noisy guitars to contemplative synths, frantic beats to ambient noise.\\nTheir first five-track EP was recorded with the now-legendary Gordon Raphael, who produced the first two Strokes albums. Raphael caught the band playing at a house party and was instantly enamoured. “He offered to record us for free at his place in Berlin,” says Tiger Tom. “So we did, and that\\'s what you hear now.” The band started out as an entirely improvisational duo comprising two of the three members – Tom Rogerson (piano, keyboards, voice) and Matt Calvert (guitar, synths, electronics). When the duo decided they needed more might, it was out with the laptop beats and in with drummer Adam Betts. They named themselves Three Trapped Tigers after the book by Cuban writer Cabrera Infante. It’s not, say the trio, meant to imply that they represent a tiger each. “I liked the book, I liked the name, and it seemed to make sense with the concept of the group – contained rage” says Tom. While they haven’t lost the spontaneity of their improvisational origins, they decided as a three-piece to start composing more formally. Tom meticulously scores parts on manuscript paper, a curious contrast to their electronic hearts. Soon, they’d written and recorded five songs, each named austerely after a number. Things have been moving pretty quickly for Three Trapped Tigers ever since – their third gig was at Reading festival. Their music is an assault on the senses, a tour de force of different moods and styles. It’s a marker of the musical talent in the band, but also composer Tom’s attempts to blend his catholic tastes. “I get inspiration from my iPod when it\\'s on shuffle,” he says. “I love the fact it\\'ll veer from The Locust to a choral piece by Britten  and still manage to make perfect sense.”\\n <a href=\"https://www.last.fm/music/Three+Trapped+Tigers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['math rock', 'seen live', 'experimental', 'electronic', 'post-rock'], similar_artists=[{'name': 'And So I Watch You From Afar', 'url': 'https://www.last.fm/music/And+So+I+Watch+You+From+Afar'}, {'name': 'Alpha Male Tea Party', 'url': 'https://www.last.fm/music/Alpha+Male+Tea+Party'}, {'name': 'Giraffes? Giraffes!', 'url': 'https://www.last.fm/music/Giraffes%3F+Giraffes%21'}, {'name': 'Adebisi Shank', 'url': 'https://www.last.fm/music/Adebisi+Shank'}, {'name': 'The Physics House Band', 'url': 'https://www.last.fm/music/The+Physics+House+Band'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Three Trapped Tigers', 'mbid': '70212aa5-ade1-40b5-982e-964c79b08feb', 'url': 'https://www.last.fm/music/Three+Trapped+Tigers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '86616', 'playcount': '1246959'}, 'similar': {'artist': [{'name': 'And So I Watch You From Afar', 'url': 'https://www.last.fm/music/And+So+I+Watch+You+From+Afar', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Alpha Male Tea Party', 'url': 'https://www.last.fm/music/Alpha+Male+Tea+Party', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Giraffes? Giraffes!', 'url': 'https://www.last.fm/music/Giraffes%3F+Giraffes%21', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Adebisi Shank', 'url': 'https://www.last.fm/music/Adebisi+Shank', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Physics House Band', 'url': 'https://www.last.fm/music/The+Physics+House+Band', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'math rock', 'url': 'https://www.last.fm/tag/math+rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'post-rock', 'url': 'https://www.last.fm/tag/post-rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Three+Trapped+Tigers/+wiki'}}, 'published': '08 Dec 2008, 15:35', 'summary': 'Three Trapped Tigers are an instrumental noisenik outfit from London who exhibit the precision of electronica, the raw intensity of rock music and the schizophrenic spontaneity of their electro-improv past. Not easily classifiable, but with influences ranging from Aphex Twin and Squarepusher  to Lightning Bolt and Battles. The music veers wildly from noisy guitars to contemplative synths, frantic beats to ambient noise.\\nTheir first five-track EP was recorded with the now-legendary Gordon Raphael, who produced the first two Strokes albums. <a href=\"https://www.last.fm/music/Three+Trapped+Tigers\">Read more on Last.fm</a>', 'content': 'Three Trapped Tigers are an instrumental noisenik outfit from London who exhibit the precision of electronica, the raw intensity of rock music and the schizophrenic spontaneity of their electro-improv past. Not easily classifiable, but with influences ranging from Aphex Twin and Squarepusher  to Lightning Bolt and Battles. The music veers wildly from noisy guitars to contemplative synths, frantic beats to ambient noise.\\nTheir first five-track EP was recorded with the now-legendary Gordon Raphael, who produced the first two Strokes albums. Raphael caught the band playing at a house party and was instantly enamoured. “He offered to record us for free at his place in Berlin,” says Tiger Tom. “So we did, and that\\'s what you hear now.” The band started out as an entirely improvisational duo comprising two of the three members – Tom Rogerson (piano, keyboards, voice) and Matt Calvert (guitar, synths, electronics). When the duo decided they needed more might, it was out with the laptop beats and in with drummer Adam Betts. They named themselves Three Trapped Tigers after the book by Cuban writer Cabrera Infante. It’s not, say the trio, meant to imply that they represent a tiger each. “I liked the book, I liked the name, and it seemed to make sense with the concept of the group – contained rage” says Tom. While they haven’t lost the spontaneity of their improvisational origins, they decided as a three-piece to start composing more formally. Tom meticulously scores parts on manuscript paper, a curious contrast to their electronic hearts. Soon, they’d written and recorded five songs, each named austerely after a number. Things have been moving pretty quickly for Three Trapped Tigers ever since – their third gig was at Reading festival. Their music is an assault on the senses, a tour de force of different moods and styles. It’s a marker of the musical talent in the band, but also composer Tom’s attempts to blend his catholic tastes. “I get inspiration from my iPod when it\\'s on shuffle,” he says. “I love the fact it\\'ll veer from The Locust to a choral piece by Britten  and still manage to make perfect sense.”\\n <a href=\"https://www.last.fm/music/Three+Trapped+Tigers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='1FGfJBdp4l7sELXNf92jrT', url='https://open.spotify.com/artist/1FGfJBdp4l7sELXNf92jrT', name='Three Trapped Tigers', popularity=25, followers=27608, genres=['math rock', 'post-rock'], images=[{'url': 'https://i.scdn.co/image/316a7e807d9297a4ef7a5540cf1b6f3379050d85', 'height': 563, 'width': 1000}, {'url': 'https://i.scdn.co/image/95a582256dac082d33f053955b14786266fbda3b', 'height': 360, 'width': 640}, {'url': 'https://i.scdn.co/image/d45a28b2b114d92213851294e4afa52d6cde6e46', 'height': 113, 'width': 200}, {'url': 'https://i.scdn.co/image/7f8809a7f41206b18f1c0f72e5ea2b294088fbaf', 'height': 36, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/1FGfJBdp4l7sELXNf92jrT'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1FGfJBdp4l7sELXNf92jrT'}, 'followers': {'href': None, 'total': 27608}, 'genres': ['math rock', 'post-rock'], 'href': 'https://api.spotify.com/v1/artists/1FGfJBdp4l7sELXNf92jrT', 'id': '1FGfJBdp4l7sELXNf92jrT', 'images': [{'url': 'https://i.scdn.co/image/316a7e807d9297a4ef7a5540cf1b6f3379050d85', 'height': 563, 'width': 1000}, {'url': 'https://i.scdn.co/image/95a582256dac082d33f053955b14786266fbda3b', 'height': 360, 'width': 640}, {'url': 'https://i.scdn.co/image/d45a28b2b114d92213851294e4afa52d6cde6e46', 'height': 113, 'width': 200}, {'url': 'https://i.scdn.co/image/7f8809a7f41206b18f1c0f72e5ea2b294088fbaf', 'height': 36, 'width': 64}], 'name': 'Three Trapped Tigers', 'popularity': 25, 'type': 'artist', 'uri': 'spotify:artist:1FGfJBdp4l7sELXNf92jrT'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/09/19/b8/0919b897-1d48-2f13-bb58-ad1591a97386/mzl.pghowiwg.jpg/2000x2000bb.jpg",
@@ -255,10 +369,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 86608,
+      "listeners": 86616,
       "mbid": "70212aa5-ade1-40b5-982e-964c79b08feb",
       "name": "Three Trapped Tigers",
-      "playcount": 1246860,
+      "playcount": 1246959,
       "similar_artists": [
         {
           "name": "And So I Watch You From Afar",
@@ -322,10 +436,11 @@
       "name": "Three Trapped Tigers",
       "popularity": 25,
       "url": "https://open.spotify.com/artist/1FGfJBdp4l7sELXNf92jrT"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "1FGfJBdp4l7sELXNf92jrT",
   "spotify_url": "https://open.spotify.com/artist/1FGfJBdp4l7sELXNf92jrT",
-  "updated_at": "2025-07-08T10:10:58.290313",
+  "updated_at": "2025-07-08T20:57:57.197425",
   "wikipedia_url": null
 }

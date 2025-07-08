@@ -48,6 +48,30 @@
   },
   "name": "The Maypoles",
   "popularity": 13,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='1063703992', url='https://music.apple.com/gb/artist/the-maypoles/1063703992', name='The Maypoles', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/ea/9d/97/ea9d97ec-ecf7-3fd6-da9b-2381f05dfa46/cover.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1063703992', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1063703992', 'attributes': {'name': 'The Maypoles', 'genreNames': ['Rock'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/ea/9d/97/ea9d97ec-ecf7-3fd6-da9b-2381f05dfa46/cover.jpg/{w}x{h}ac.jpg', 'bgColor': '030608', 'textColor1': 'fcfcfe', 'textColor2': 'e9fbff', 'textColor3': 'cacbcc', 'textColor4': 'bacacd'}, 'url': 'https://music.apple.com/gb/artist/the-maypoles/1063703992'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1063703992/albums', 'data': [{'id': '1152533410', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1152533410'}]}}})",
+    "discogs": {
+      "cover_image": "",
+      "id": "5771593",
+      "images": [],
+      "members": [],
+      "name": "The Maypoles",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "5771593",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/5771593"
+      },
+      "resource_url": "https://api.discogs.com/artists/5771593",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/5771593",
+      "urls": []
+    },
+    "lastfm": {},
+    "spotify": "ArtistSpotifyData(id='5UoOw2UR4xkCj63G7Enswi', url='https://open.spotify.com/artist/5UoOw2UR4xkCj63G7Enswi', name='The Maypoles', popularity=13, followers=755, genres=['acid jazz'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273aa68a51309097176f22a5901', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02aa68a51309097176f22a5901', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851aa68a51309097176f22a5901', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/5UoOw2UR4xkCj63G7Enswi'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5UoOw2UR4xkCj63G7Enswi'}, 'followers': {'href': None, 'total': 755}, 'genres': ['acid jazz'], 'href': 'https://api.spotify.com/v1/artists/5UoOw2UR4xkCj63G7Enswi', 'id': '5UoOw2UR4xkCj63G7Enswi', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273aa68a51309097176f22a5901', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02aa68a51309097176f22a5901', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851aa68a51309097176f22a5901', 'height': 64, 'width': 64}], 'name': 'The Maypoles', 'popularity': 13, 'type': 'artist', 'uri': 'spotify:artist:5UoOw2UR4xkCj63G7Enswi'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/ea/9d/97/ea9d97ec-ecf7-3fd6-da9b-2381f05dfa46/cover.jpg/2000x2000ac.jpg",
@@ -105,10 +129,11 @@
       "name": "The Maypoles",
       "popularity": 13,
       "url": "https://open.spotify.com/artist/5UoOw2UR4xkCj63G7Enswi"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "5UoOw2UR4xkCj63G7Enswi",
   "spotify_url": "https://open.spotify.com/artist/5UoOw2UR4xkCj63G7Enswi",
-  "updated_at": "2025-07-08T10:11:49.621731",
+  "updated_at": "2025-07-08T20:58:26.177725",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Roy_Wood"
 }

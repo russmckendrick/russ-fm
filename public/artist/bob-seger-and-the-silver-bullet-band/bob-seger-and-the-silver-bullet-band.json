@@ -99,6 +99,628 @@
   },
   "name": "Bob Seger And The Silver Bullet Band",
   "popularity": 72,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='26211744', url='https://music.apple.com/gb/artist/bob-seger/26211744', name='Bob Seger', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/5d/f1/70/5df170b1-23c1-276a-fa8e-3b96a1a1df0b/mza_2102620832254887024.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '26211744', 'type': 'artists', 'href': '/v1/catalog/gb/artists/26211744', 'attributes': {'name': 'Bob Seger', 'genreNames': ['Rock'], 'artwork': {'width': 3840, 'height': 3840, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/5d/f1/70/5df170b1-23c1-276a-fa8e-3b96a1a1df0b/mza_2102620832254887024.png/{w}x{h}bb.jpg', 'bgColor': '0a0a0a', 'textColor1': 'f6f6f6', 'textColor2': 'dadada', 'textColor3': 'c6c6c6', 'textColor4': 'b0b0b0'}, 'url': 'https://music.apple.com/gb/artist/bob-seger/26211744'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/26211744/albums', 'data': [{'id': '1440876741', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440876741'}, {'id': '1440825028', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1440825028'}, {'id': '1569093898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1569093898'}, {'id': '1569093898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1569093898'}, {'id': '1552070647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552070647'}, {'id': '1552070647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552070647'}, {'id': '1549746927', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1549746927'}, {'id': '1549746927', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1549746927'}, {'id': '1674678477', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1674678477'}, {'id': '1555169393', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1555169393'}, {'id': '1555169393', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1555169393'}, {'id': '1550212829', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550212829'}, {'id': '1562734798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1562734798'}, {'id': '1562734798', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1562734798'}, {'id': '1550210881', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550210881'}, {'id': '1550210787', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550210787'}, {'id': '1550210882', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550210882'}, {'id': '1550210879', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1550210879'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/wYYcfzfgAcd5RN6Lt09oyNaSfM4x1cVsNJAXRzC1HNs/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "268911",
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/wYYcfzfgAcd5RN6Lt09oyNaSfM4x1cVsNJAXRzC1HNs/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/wYYcfzfgAcd5RN6Lt09oyNaSfM4x1cVsNJAXRzC1HNs/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Q27R3rDb7imjtyvEUWmYT4q7WAWwOhOZ9V-NE5Z9bAA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 445,
+          "resource_url": "https://i.discogs.com/sLbBo9jhweT3K09LxGhHoaNaBbylYw1t-YgzPqdC5VY/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sLbBo9jhweT3K09LxGhHoaNaBbylYw1t-YgzPqdC5VY/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ljpPKmZQVIsHNLqC0rXXbob9nD4GMGxFS7bO8OiIxns/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/DWLprfWe26qWrnHZs5jI48k6EYuliJY5mELT9p6GNWc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DWLprfWe26qWrnHZs5jI48k6EYuliJY5mELT9p6GNWc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/V__wbj2kZQG6HxPcV9N0nkZcnjBiF9I2cK997bURr_Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/OlpftHw9K5o8_m3to6Bil6FEc04uFT_2VEKH5m5Rm3Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OlpftHw9K5o8_m3to6Bil6FEc04uFT_2VEKH5m5Rm3Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0AcER6bN9nxkUOe_oSp3_PtrMsgXwESh6GoTooOPDOg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 750,
+          "resource_url": "https://i.discogs.com/fg-90pZGH709nDbWh9Cc-tXX1joM2sCDtUiTGdY11Rc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fg-90pZGH709nDbWh9Cc-tXX1joM2sCDtUiTGdY11Rc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KuiKsRh2QE59uzgomcp-zcIXwrQ7ArIemBoxIHjctCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 476,
+          "resource_url": "https://i.discogs.com/VvP9v2x6FlcfkRj5XE6jCUFKd3Ueum4aZyOZsmG8Onc/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/VvP9v2x6FlcfkRj5XE6jCUFKd3Ueum4aZyOZsmG8Onc/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/CLTeG1OYKcVeknJGv9crB5pF4IyXlKSEkxn3C0ORiO0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 510,
+          "resource_url": "https://i.discogs.com/n1XYuKgMHoQzb2u0Ng0EZjs6Rv6EgTdMJK_oHy_-qkE/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/n1XYuKgMHoQzb2u0Ng0EZjs6Rv6EgTdMJK_oHy_-qkE/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/G5qbOZmJWloG9WTIaPTBOMvN1HnUpJqe6hvxmYCBQNA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 604,
+          "resource_url": "https://i.discogs.com/SKbSa0OZF-q0_AQvKvVmCMM5e_78nck3st6ff2CQ17c/rs:fit/g:sm/q:90/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SKbSa0OZF-q0_AQvKvVmCMM5e_78nck3st6ff2CQ17c/rs:fit/g:sm/q:90/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/PVf3Ik_D0ssj_Vzdil5Kp1cynJGOi1XCqyGQTtkxxeI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 387,
+          "resource_url": "https://i.discogs.com/h_cCh0KuHVwfbLicdsqlmGjR2XSa1sgNjR5zmpr1UmE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/h_cCh0KuHVwfbLicdsqlmGjR2XSa1sgNjR5zmpr1UmE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/bvJCma3Nn3HaudSpR37dggGcRnllH3rfDW0TbUvLuDo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/eFbDInErXxIofjDiqPOqaosQYUVipLH_kkXv5q8FJ24/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eFbDInErXxIofjDiqPOqaosQYUVipLH_kkXv5q8FJ24/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/MCAiMR5PpV1DX0hxbXJFK4xBSrtYCL-mtCfmaGWUqT4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 445,
+          "resource_url": "https://i.discogs.com/LD8YrBD6Wu4OAyZxSJVQCXNxvnMEAZlYJIO0r_mubS0/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LD8YrBD6Wu4OAyZxSJVQCXNxvnMEAZlYJIO0r_mubS0/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/WuKUegcrWsKQxN9a4X218HavK0ywdK22WGHJZQSQouU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 240,
+          "resource_url": "https://i.discogs.com/Vcla4XoiNoBnq0n11K6MaR5J31lqz4yoz4nEQRfGVvM/rs:fit/g:sm/q:90/h:240/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Vcla4XoiNoBnq0n11K6MaR5J31lqz4yoz4nEQRfGVvM/rs:fit/g:sm/q:90/h:240/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/O6rvcDRoZsyg-v9qlSrM_atqJAJmMh0hIKpE7UghGFQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/eWReTrnLJV9A-yH9uIsYm8AMAUyFCGumfxmc-1iXy7g/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eWReTrnLJV9A-yH9uIsYm8AMAUyFCGumfxmc-1iXy7g/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/uPfn-3TLiYINjqSltNS52AhRiSXfyg5EN7TvEkXbx9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 473,
+          "resource_url": "https://i.discogs.com/IsjI0hBnZ6TpgI_Flj8I7LuMzvs5lVEzhaCs60u0sVE/rs:fit/g:sm/q:90/h:473/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IsjI0hBnZ6TpgI_Flj8I7LuMzvs5lVEzhaCs60u0sVE/rs:fit/g:sm/q:90/h:473/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/4l1OB_f4crx3pTRigcV0VBrTGJOzNaXqd0qnRt3i4rw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 312,
+          "resource_url": "https://i.discogs.com/xvkxKTfUfqEsth9u-SQoRJOOQImyTZahTYpKhxrZvVc/rs:fit/g:sm/q:90/h:312/w:476/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xvkxKTfUfqEsth9u-SQoRJOOQImyTZahTYpKhxrZvVc/rs:fit/g:sm/q:90/h:312/w:476/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/uv01qBrubLSX0JKmsJeWdDwAJIrHd0eyqyzd74Ehkkg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+          "width": 476
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 12043,
+          "name": "Keith Kaminski",
+          "resource_url": "https://api.discogs.com/artists/12043",
+          "thumbnail_url": "https://i.discogs.com/MqJ2ysgjgFrEOvNhz3ELUF6UJh2I9RIMA3ziRfdXpkY/rs:fit/g:sm/q:40/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDQz/LTE1NTQ4Mjg0MDEt/NzQ0OS5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 94620,
+          "name": "Chris Campbell",
+          "resource_url": "https://api.discogs.com/artists/94620",
+          "thumbnail_url": "https://i.discogs.com/4oHVst-SnqaFdsDc9hdE_C9GyH9jnXvjklis27eV4uM/rs:fit/g:sm/q:40/h:600/w:415/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0NjIw/LTExOTE4NzQ1Njcu/anBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 267854,
+          "name": "Bob Seger",
+          "resource_url": "https://api.discogs.com/artists/267854",
+          "thumbnail_url": "https://i.discogs.com/QXU6IRlbse8BYCNtt5v9QxT8uBAdxVqCea5ufFyNY7w/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Nzg1/NC0xNTI4NjU1MjI4/LTQ5NjkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 273554,
+          "name": "Kenny Aronoff",
+          "resource_url": "https://api.discogs.com/artists/273554",
+          "thumbnail_url": "https://i.discogs.com/9pezIQibufWvpVOhJLXNFYWBuB1KKSSlUErVGpb9PHQ/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzU1/NC0xNjE4ODI5Njk2/LTcwNDQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 304095,
+          "name": "Fred Tackett",
+          "resource_url": "https://api.discogs.com/artists/304095",
+          "thumbnail_url": "https://i.discogs.com/1Nt-EYGAX7d2FDDChcmPo43q34JEGT2euDV5zWVeAEI/rs:fit/g:sm/q:40/h:382/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNDA5/NS0xMTczMjE1ODE0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 312312,
+          "name": "Don Brewer",
+          "resource_url": "https://api.discogs.com/artists/312312",
+          "thumbnail_url": "https://i.discogs.com/ge0OjTot2G9cxpXg3Bo25pdMhxe2ocidszISPH-R7F4/rs:fit/g:sm/q:40/h:387/w:339/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMjMx/Mi0xMTQ2NjYzNzky/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 332554,
+          "name": "Laura Creamer",
+          "resource_url": "https://api.discogs.com/artists/332554",
+          "thumbnail_url": "https://i.discogs.com/mD8_jGIRFrm8M3rH7anFa0ql0bX0UHJy-jAjF6AXlh4/rs:fit/g:sm/q:40/h:498/w:403/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjU1/NC0xNTgyOTM3NjE4/LTI2NzgucG5n.jpeg"
+        },
+        {
+          "active": false,
+          "id": 335211,
+          "name": "Tim Mitchell",
+          "resource_url": "https://api.discogs.com/artists/335211",
+          "thumbnail_url": "https://i.discogs.com/vTDFE9j6mDuaHW770hZpnQ2_3yJFvwblTBLSWj7v1Vo/rs:fit/g:sm/q:40/h:248/w:154/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNTIx/MS0xMTU1NTc2MDEw/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 397847,
+          "name": "Rick Vito",
+          "resource_url": "https://api.discogs.com/artists/397847",
+          "thumbnail_url": "https://i.discogs.com/bdaagbGMj3iSQ_6Jf_Eq7uKJpGSfvrZxciSIj8XjSwA/rs:fit/g:sm/q:40/h:357/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5Nzg0/Ny0xMTk1ODMxMDk2/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 452681,
+          "name": "Craig Frost",
+          "resource_url": "https://api.discogs.com/artists/452681",
+          "thumbnail_url": "https://i.discogs.com/HrrWonHUwO0QdEMulFHFYKGjNjAHyasFcjFS8vLneBg/rs:fit/g:sm/q:40/h:390/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MjY4/MS0xNDYzMzMwOTMy/LTkwMzYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 476494,
+          "name": "David Teegarden",
+          "resource_url": "https://api.discogs.com/artists/476494",
+          "thumbnail_url": "https://i.discogs.com/jHwHwEs9ANSMYiJUogNg6D2d2OsOo096Zs0YSmE3lrM/rs:fit/g:sm/q:40/h:331/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NjQ5/NC0xMTkxODYxNjY4/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 488530,
+          "name": "Jim \"Moose\" Brown",
+          "resource_url": "https://api.discogs.com/artists/488530",
+          "thumbnail_url": "https://i.discogs.com/rUns4ySx5vHRY0rK5WQnGMhAt15vfUJyHY6xPpC--aA/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODUz/MC0xMjk4MTk1NzM3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 502296,
+          "name": "Robyn Robins",
+          "resource_url": "https://api.discogs.com/artists/502296",
+          "thumbnail_url": "https://i.discogs.com/X7MVolIQH8nw0ERAOkR_qdJ0QG4SyjBuNqPwK0Gste4/rs:fit/g:sm/q:40/h:543/w:362/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjI5/Ni0xNTc3OTgwMDIw/LTM4NjUuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 581379,
+          "name": "Drew Abbott",
+          "resource_url": "https://api.discogs.com/artists/581379",
+          "thumbnail_url": "https://i.discogs.com/C9LP2mTX3HcnKJyGOruVEDVKAq6DCVchdei0M-cLajs/rs:fit/g:sm/q:40/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MTM3/OS0xNDYzMzU2NjYz/LTc1NzguanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 661403,
+          "name": "Charlie Allen Martin",
+          "resource_url": "https://api.discogs.com/artists/661403",
+          "thumbnail_url": "https://i.discogs.com/unUZTYVy-jC7tMteYjw9pZWKt6IlOtgfzV1XX8WQBto/rs:fit/g:sm/q:40/h:351/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MTQw/My0xMTkxOTMxMDg2/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 661406,
+          "name": "Dawayne Bailey",
+          "resource_url": "https://api.discogs.com/artists/661406",
+          "thumbnail_url": "https://i.discogs.com/EXWGNinKjtQowKHUsml0NkR4bDBKwLIICkGJM2EA3nw/rs:fit/g:sm/q:40/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MTQw/Ni0xNTc4MDA0MjM1/LTI1NzcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 874823,
+          "name": "Colleen Beaton",
+          "resource_url": "https://api.discogs.com/artists/874823",
+          "thumbnail_url": "https://i.discogs.com/QvvBBjoHvq5wCZAUTBHzQ-DepyM144MM11h05VbeQr4/rs:fit/g:sm/q:40/h:219/w:187/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3NDgy/My0xNjYzMTU4OTEy/LTc3OTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 880953,
+          "name": "Rick Manasa",
+          "resource_url": "https://api.discogs.com/artists/880953",
+          "thumbnail_url": "https://i.discogs.com/f6ndMy4UuYQpJGsQ8poSclgTa3aa6afJyRmnQ3tZMLU/rs:fit/g:sm/q:40/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4MDk1/My0xNTczNTczODU2/LTczMzIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 892262,
+          "name": "June Tilton",
+          "resource_url": "https://api.discogs.com/artists/892262",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 892263,
+          "name": "Kathy Lamb",
+          "resource_url": "https://api.discogs.com/artists/892263",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 931454,
+          "name": "Tommy Cartmell",
+          "resource_url": "https://api.discogs.com/artists/931454",
+          "thumbnail_url": "https://i.discogs.com/aaJweKu0Xe_RWB7Uc5dHbYU6XlPAMZrUY7HGqwUuDIo/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkzMTQ1/NC0xNDYzMzMzMjcz/LTYwODMuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 1335127,
+          "name": "Mark Chatfield",
+          "resource_url": "https://api.discogs.com/artists/1335127",
+          "thumbnail_url": "https://i.discogs.com/auuLsiaWMHR6NA_msJ_WtbuYRMaP9eyfm8IdrBLg7MI/rs:fit/g:sm/q:40/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzUx/MjctMTQwMDExNjA2/NC00ODM2LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1509383,
+          "name": "John Rutherford",
+          "resource_url": "https://api.discogs.com/artists/1509383",
+          "thumbnail_url": "https://i.discogs.com/Cx7hzgseqFDhJKxvJIO9X4nEfwyWj15mVhjo7Sz_s5c/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDkz/ODMtMTU3Nzk2OTEz/NC00NjA0LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Bob Seger And The Silver Bullet Band",
+      "namevariations": [
+        "Bob Segar",
+        "Bob Seger",
+        "Bob Seger & Silver Bullet Band",
+        "Bob Seger & The Silver Bullet Band",
+        "Bob Seger &The Silver Bullet Band",
+        "巴布席格與銀色子彈樂團"
+      ],
+      "profile": "",
+      "raw_data": {
+        "data_quality": "Correct",
+        "id": 268911,
+        "images": [
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/wYYcfzfgAcd5RN6Lt09oyNaSfM4x1cVsNJAXRzC1HNs/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/wYYcfzfgAcd5RN6Lt09oyNaSfM4x1cVsNJAXRzC1HNs/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Q27R3rDb7imjtyvEUWmYT4q7WAWwOhOZ9V-NE5Z9bAA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 445,
+            "resource_url": "https://i.discogs.com/sLbBo9jhweT3K09LxGhHoaNaBbylYw1t-YgzPqdC5VY/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sLbBo9jhweT3K09LxGhHoaNaBbylYw1t-YgzPqdC5VY/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ljpPKmZQVIsHNLqC0rXXbob9nD4GMGxFS7bO8OiIxns/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDM3/LTQxMjMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/DWLprfWe26qWrnHZs5jI48k6EYuliJY5mELT9p6GNWc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DWLprfWe26qWrnHZs5jI48k6EYuliJY5mELT9p6GNWc/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/V__wbj2kZQG6HxPcV9N0nkZcnjBiF9I2cK997bURr_Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NzA5/LTIyMDUuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/OlpftHw9K5o8_m3to6Bil6FEc04uFT_2VEKH5m5Rm3Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/OlpftHw9K5o8_m3to6Bil6FEc04uFT_2VEKH5m5Rm3Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0AcER6bN9nxkUOe_oSp3_PtrMsgXwESh6GoTooOPDOg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjQ3/LTc2NTcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 750,
+            "resource_url": "https://i.discogs.com/fg-90pZGH709nDbWh9Cc-tXX1joM2sCDtUiTGdY11Rc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/fg-90pZGH709nDbWh9Cc-tXX1joM2sCDtUiTGdY11Rc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/KuiKsRh2QE59uzgomcp-zcIXwrQ7ArIemBoxIHjctCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUw/LTQxNTguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 476,
+            "resource_url": "https://i.discogs.com/VvP9v2x6FlcfkRj5XE6jCUFKd3Ueum4aZyOZsmG8Onc/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/VvP9v2x6FlcfkRj5XE6jCUFKd3Ueum4aZyOZsmG8Onc/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/CLTeG1OYKcVeknJGv9crB5pF4IyXlKSEkxn3C0ORiO0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjUz/LTc4MDMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 510,
+            "resource_url": "https://i.discogs.com/n1XYuKgMHoQzb2u0Ng0EZjs6Rv6EgTdMJK_oHy_-qkE/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/n1XYuKgMHoQzb2u0Ng0EZjs6Rv6EgTdMJK_oHy_-qkE/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/G5qbOZmJWloG9WTIaPTBOMvN1HnUpJqe6hvxmYCBQNA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjU4/LTYyOTcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 604,
+            "resource_url": "https://i.discogs.com/SKbSa0OZF-q0_AQvKvVmCMM5e_78nck3st6ff2CQ17c/rs:fit/g:sm/q:90/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SKbSa0OZF-q0_AQvKvVmCMM5e_78nck3st6ff2CQ17c/rs:fit/g:sm/q:90/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/PVf3Ik_D0ssj_Vzdil5Kp1cynJGOi1XCqyGQTtkxxeI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MjYx/LTcxNTIuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 387,
+            "resource_url": "https://i.discogs.com/h_cCh0KuHVwfbLicdsqlmGjR2XSa1sgNjR5zmpr1UmE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/h_cCh0KuHVwfbLicdsqlmGjR2XSa1sgNjR5zmpr1UmE/rs:fit/g:sm/q:90/h:387/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/bvJCma3Nn3HaudSpR37dggGcRnllH3rfDW0TbUvLuDo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjcx/LTUxMjguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/eFbDInErXxIofjDiqPOqaosQYUVipLH_kkXv5q8FJ24/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eFbDInErXxIofjDiqPOqaosQYUVipLH_kkXv5q8FJ24/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/MCAiMR5PpV1DX0hxbXJFK4xBSrtYCL-mtCfmaGWUqT4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjc5/LTY2MDcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 445,
+            "resource_url": "https://i.discogs.com/LD8YrBD6Wu4OAyZxSJVQCXNxvnMEAZlYJIO0r_mubS0/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/LD8YrBD6Wu4OAyZxSJVQCXNxvnMEAZlYJIO0r_mubS0/rs:fit/g:sm/q:90/h:445/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/WuKUegcrWsKQxN9a4X218HavK0ywdK22WGHJZQSQouU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjgy/LTE3NjMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 240,
+            "resource_url": "https://i.discogs.com/Vcla4XoiNoBnq0n11K6MaR5J31lqz4yoz4nEQRfGVvM/rs:fit/g:sm/q:90/h:240/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Vcla4XoiNoBnq0n11K6MaR5J31lqz4yoz4nEQRfGVvM/rs:fit/g:sm/q:90/h:240/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/O6rvcDRoZsyg-v9qlSrM_atqJAJmMh0hIKpE7UghGFQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4Mjg1/LTY2NzQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/eWReTrnLJV9A-yH9uIsYm8AMAUyFCGumfxmc-1iXy7g/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eWReTrnLJV9A-yH9uIsYm8AMAUyFCGumfxmc-1iXy7g/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/uPfn-3TLiYINjqSltNS52AhRiSXfyg5EN7TvEkXbx9w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzIx/LTY0MDIuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 473,
+            "resource_url": "https://i.discogs.com/IsjI0hBnZ6TpgI_Flj8I7LuMzvs5lVEzhaCs60u0sVE/rs:fit/g:sm/q:90/h:473/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IsjI0hBnZ6TpgI_Flj8I7LuMzvs5lVEzhaCs60u0sVE/rs:fit/g:sm/q:90/h:473/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/4l1OB_f4crx3pTRigcV0VBrTGJOzNaXqd0qnRt3i4rw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNjYyMTI4MzI2/LTQ2OTEuanBlZw.jpeg",
+            "width": 400
+          },
+          {
+            "height": 312,
+            "resource_url": "https://i.discogs.com/xvkxKTfUfqEsth9u-SQoRJOOQImyTZahTYpKhxrZvVc/rs:fit/g:sm/q:90/h:312/w:476/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xvkxKTfUfqEsth9u-SQoRJOOQImyTZahTYpKhxrZvVc/rs:fit/g:sm/q:90/h:312/w:476/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/uv01qBrubLSX0JKmsJeWdDwAJIrHd0eyqyzd74Ehkkg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xMTI0NzA5MTE1/LmpwZw.jpeg",
+            "width": 476
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 12043,
+            "name": "Keith Kaminski",
+            "resource_url": "https://api.discogs.com/artists/12043",
+            "thumbnail_url": "https://i.discogs.com/MqJ2ysgjgFrEOvNhz3ELUF6UJh2I9RIMA3ziRfdXpkY/rs:fit/g:sm/q:40/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDQz/LTE1NTQ4Mjg0MDEt/NzQ0OS5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 94620,
+            "name": "Chris Campbell",
+            "resource_url": "https://api.discogs.com/artists/94620",
+            "thumbnail_url": "https://i.discogs.com/4oHVst-SnqaFdsDc9hdE_C9GyH9jnXvjklis27eV4uM/rs:fit/g:sm/q:40/h:600/w:415/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk0NjIw/LTExOTE4NzQ1Njcu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 267854,
+            "name": "Bob Seger",
+            "resource_url": "https://api.discogs.com/artists/267854",
+            "thumbnail_url": "https://i.discogs.com/QXU6IRlbse8BYCNtt5v9QxT8uBAdxVqCea5ufFyNY7w/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Nzg1/NC0xNTI4NjU1MjI4/LTQ5NjkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 273554,
+            "name": "Kenny Aronoff",
+            "resource_url": "https://api.discogs.com/artists/273554",
+            "thumbnail_url": "https://i.discogs.com/9pezIQibufWvpVOhJLXNFYWBuB1KKSSlUErVGpb9PHQ/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzU1/NC0xNjE4ODI5Njk2/LTcwNDQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 304095,
+            "name": "Fred Tackett",
+            "resource_url": "https://api.discogs.com/artists/304095",
+            "thumbnail_url": "https://i.discogs.com/1Nt-EYGAX7d2FDDChcmPo43q34JEGT2euDV5zWVeAEI/rs:fit/g:sm/q:40/h:382/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNDA5/NS0xMTczMjE1ODE0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 312312,
+            "name": "Don Brewer",
+            "resource_url": "https://api.discogs.com/artists/312312",
+            "thumbnail_url": "https://i.discogs.com/ge0OjTot2G9cxpXg3Bo25pdMhxe2ocidszISPH-R7F4/rs:fit/g:sm/q:40/h:387/w:339/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMjMx/Mi0xMTQ2NjYzNzky/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 332554,
+            "name": "Laura Creamer",
+            "resource_url": "https://api.discogs.com/artists/332554",
+            "thumbnail_url": "https://i.discogs.com/mD8_jGIRFrm8M3rH7anFa0ql0bX0UHJy-jAjF6AXlh4/rs:fit/g:sm/q:40/h:498/w:403/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzMjU1/NC0xNTgyOTM3NjE4/LTI2NzgucG5n.jpeg"
+          },
+          {
+            "active": false,
+            "id": 335211,
+            "name": "Tim Mitchell",
+            "resource_url": "https://api.discogs.com/artists/335211",
+            "thumbnail_url": "https://i.discogs.com/vTDFE9j6mDuaHW770hZpnQ2_3yJFvwblTBLSWj7v1Vo/rs:fit/g:sm/q:40/h:248/w:154/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNTIx/MS0xMTU1NTc2MDEw/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 397847,
+            "name": "Rick Vito",
+            "resource_url": "https://api.discogs.com/artists/397847",
+            "thumbnail_url": "https://i.discogs.com/bdaagbGMj3iSQ_6Jf_Eq7uKJpGSfvrZxciSIj8XjSwA/rs:fit/g:sm/q:40/h:357/w:449/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5Nzg0/Ny0xMTk1ODMxMDk2/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 452681,
+            "name": "Craig Frost",
+            "resource_url": "https://api.discogs.com/artists/452681",
+            "thumbnail_url": "https://i.discogs.com/HrrWonHUwO0QdEMulFHFYKGjNjAHyasFcjFS8vLneBg/rs:fit/g:sm/q:40/h:390/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MjY4/MS0xNDYzMzMwOTMy/LTkwMzYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 476494,
+            "name": "David Teegarden",
+            "resource_url": "https://api.discogs.com/artists/476494",
+            "thumbnail_url": "https://i.discogs.com/jHwHwEs9ANSMYiJUogNg6D2d2OsOo096Zs0YSmE3lrM/rs:fit/g:sm/q:40/h:331/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NjQ5/NC0xMTkxODYxNjY4/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 488530,
+            "name": "Jim \"Moose\" Brown",
+            "resource_url": "https://api.discogs.com/artists/488530",
+            "thumbnail_url": "https://i.discogs.com/rUns4ySx5vHRY0rK5WQnGMhAt15vfUJyHY6xPpC--aA/rs:fit/g:sm/q:40/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODUz/MC0xMjk4MTk1NzM3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 502296,
+            "name": "Robyn Robins",
+            "resource_url": "https://api.discogs.com/artists/502296",
+            "thumbnail_url": "https://i.discogs.com/X7MVolIQH8nw0ERAOkR_qdJ0QG4SyjBuNqPwK0Gste4/rs:fit/g:sm/q:40/h:543/w:362/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUwMjI5/Ni0xNTc3OTgwMDIw/LTM4NjUuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 581379,
+            "name": "Drew Abbott",
+            "resource_url": "https://api.discogs.com/artists/581379",
+            "thumbnail_url": "https://i.discogs.com/C9LP2mTX3HcnKJyGOruVEDVKAq6DCVchdei0M-cLajs/rs:fit/g:sm/q:40/h:412/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MTM3/OS0xNDYzMzU2NjYz/LTc1NzguanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 661403,
+            "name": "Charlie Allen Martin",
+            "resource_url": "https://api.discogs.com/artists/661403",
+            "thumbnail_url": "https://i.discogs.com/unUZTYVy-jC7tMteYjw9pZWKt6IlOtgfzV1XX8WQBto/rs:fit/g:sm/q:40/h:351/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MTQw/My0xMTkxOTMxMDg2/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 661406,
+            "name": "Dawayne Bailey",
+            "resource_url": "https://api.discogs.com/artists/661406",
+            "thumbnail_url": "https://i.discogs.com/EXWGNinKjtQowKHUsml0NkR4bDBKwLIICkGJM2EA3nw/rs:fit/g:sm/q:40/h:430/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MTQw/Ni0xNTc4MDA0MjM1/LTI1NzcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 874823,
+            "name": "Colleen Beaton",
+            "resource_url": "https://api.discogs.com/artists/874823",
+            "thumbnail_url": "https://i.discogs.com/QvvBBjoHvq5wCZAUTBHzQ-DepyM144MM11h05VbeQr4/rs:fit/g:sm/q:40/h:219/w:187/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg3NDgy/My0xNjYzMTU4OTEy/LTc3OTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 880953,
+            "name": "Rick Manasa",
+            "resource_url": "https://api.discogs.com/artists/880953",
+            "thumbnail_url": "https://i.discogs.com/f6ndMy4UuYQpJGsQ8poSclgTa3aa6afJyRmnQ3tZMLU/rs:fit/g:sm/q:40/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4MDk1/My0xNTczNTczODU2/LTczMzIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 892262,
+            "name": "June Tilton",
+            "resource_url": "https://api.discogs.com/artists/892262",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 892263,
+            "name": "Kathy Lamb",
+            "resource_url": "https://api.discogs.com/artists/892263",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 931454,
+            "name": "Tommy Cartmell",
+            "resource_url": "https://api.discogs.com/artists/931454",
+            "thumbnail_url": "https://i.discogs.com/aaJweKu0Xe_RWB7Uc5dHbYU6XlPAMZrUY7HGqwUuDIo/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkzMTQ1/NC0xNDYzMzMzMjcz/LTYwODMuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1335127,
+            "name": "Mark Chatfield",
+            "resource_url": "https://api.discogs.com/artists/1335127",
+            "thumbnail_url": "https://i.discogs.com/auuLsiaWMHR6NA_msJ_WtbuYRMaP9eyfm8IdrBLg7MI/rs:fit/g:sm/q:40/h:460/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzUx/MjctMTQwMDExNjA2/NC00ODM2LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1509383,
+            "name": "John Rutherford",
+            "resource_url": "https://api.discogs.com/artists/1509383",
+            "thumbnail_url": "https://i.discogs.com/Cx7hzgseqFDhJKxvJIO9X4nEfwyWj15mVhjo7Sz_s5c/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDkz/ODMtMTU3Nzk2OTEz/NC00NjA0LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Bob Seger And The Silver Bullet Band",
+        "namevariations": [
+          "Bob Segar",
+          "Bob Seger",
+          "Bob Seger & Silver Bullet Band",
+          "Bob Seger & The Silver Bullet Band",
+          "Bob Seger &The Silver Bullet Band",
+          "巴布席格與銀色子彈樂團"
+        ],
+        "profile": "",
+        "releases_url": "https://api.discogs.com/artists/268911/releases",
+        "resource_url": "https://api.discogs.com/artists/268911",
+        "uri": "https://www.discogs.com/artist/268911-Bob-Seger-And-The-Silver-Bullet-Band",
+        "urls": [
+          "http://www.bobseger.com/",
+          "https://en.wikipedia.org/wiki/Bob_Seger",
+          "http://segerfile.com/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/268911",
+      "thumb": "https://i.discogs.com/Q27R3rDb7imjtyvEUWmYT4q7WAWwOhOZ9V-NE5Z9bAA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODkx/MS0xNTI4NjU1NDEz/LTk1MzcuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/268911-Bob-Seger-And-The-Silver-Bullet-Band",
+      "urls": [
+        "http://www.bobseger.com/",
+        "https://en.wikipedia.org/wiki/Bob_Seger",
+        "http://segerfile.com/"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Bob Seger and The Silver Bullet Band', url='https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band', mbid=None, listeners=3143, playcount=18897, bio_summary='Robert Clark \"Bob\" Seger (born May 6, 1945) is an American rock musician and singer-songwriter.\\n\\nAfter years of local Detroit-area success, recording and performing in the mid-1960s, Seger achieved superstar status by the mid-1970s and continuing through the 1980s with the Silver Bullet Band. A roots rocker with a classic raspy, shouting voice, Seger was first inspired by James Brown and Elvis Presley.[1] He wrote and recorded songs that dealt with blue-collar themes. <a href=\"https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band\">Read more on Last.fm</a>', bio_content='Robert Clark \"Bob\" Seger (born May 6, 1945) is an American rock musician and singer-songwriter.\\n\\nAfter years of local Detroit-area success, recording and performing in the mid-1960s, Seger achieved superstar status by the mid-1970s and continuing through the 1980s with the Silver Bullet Band. A roots rocker with a classic raspy, shouting voice, Seger was first inspired by James Brown and Elvis Presley.[1] He wrote and recorded songs that dealt with blue-collar themes. Seger has recorded many rock and roll hits, including \"Night Moves\", \"We\\'ve Got Tonight\", \"Like a Rock\" and also co-wrote the Eagles number one hit \"Heartache Tonight.\" His iconic signature song \"Old Time Rock and Roll\" was named one of the Songs of the Century in 2001. With a career spanning five decades, Seger continues to perform and record today.\\n\\nSeger was inducted into the Rock and Roll Hall of Fame in 2004.\\n\\n <a href=\"https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['rock', 'classic rock', 'Awesome', \"70's\"], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Bob Seger and The Silver Bullet Band', 'url': 'https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3143', 'playcount': '18897'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}, {'name': 'classic rock', 'url': 'https://www.last.fm/tag/classic+rock'}, {'name': 'Awesome', 'url': 'https://www.last.fm/tag/Awesome'}, {'name': \"70's\", 'url': 'https://www.last.fm/tag/70%27s'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band/+wiki'}}, 'published': '14 Apr 2009, 09:43', 'summary': 'Robert Clark \"Bob\" Seger (born May 6, 1945) is an American rock musician and singer-songwriter.\\n\\nAfter years of local Detroit-area success, recording and performing in the mid-1960s, Seger achieved superstar status by the mid-1970s and continuing through the 1980s with the Silver Bullet Band. A roots rocker with a classic raspy, shouting voice, Seger was first inspired by James Brown and Elvis Presley.[1] He wrote and recorded songs that dealt with blue-collar themes. <a href=\"https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band\">Read more on Last.fm</a>', 'content': 'Robert Clark \"Bob\" Seger (born May 6, 1945) is an American rock musician and singer-songwriter.\\n\\nAfter years of local Detroit-area success, recording and performing in the mid-1960s, Seger achieved superstar status by the mid-1970s and continuing through the 1980s with the Silver Bullet Band. A roots rocker with a classic raspy, shouting voice, Seger was first inspired by James Brown and Elvis Presley.[1] He wrote and recorded songs that dealt with blue-collar themes. Seger has recorded many rock and roll hits, including \"Night Moves\", \"We\\'ve Got Tonight\", \"Like a Rock\" and also co-wrote the Eagles number one hit \"Heartache Tonight.\" His iconic signature song \"Old Time Rock and Roll\" was named one of the Songs of the Century in 2001. With a career spanning five decades, Seger continues to perform and record today.\\n\\nSeger was inducted into the Rock and Roll Hall of Fame in 2004.\\n\\n <a href=\"https://www.last.fm/music/+noredirect/Bob+Seger+and+The+Silver+Bullet+Band\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='485uL27bPomh29R4JmQehQ', url='https://open.spotify.com/artist/485uL27bPomh29R4JmQehQ', name='Bob Seger', popularity=72, followers=2773248, genres=['classic rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebd98e2abb8fbebc2e2340f178', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d98e2abb8fbebc2e2340f178', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d98e2abb8fbebc2e2340f178', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/485uL27bPomh29R4JmQehQ'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/485uL27bPomh29R4JmQehQ'}, 'followers': {'href': None, 'total': 2773248}, 'genres': ['classic rock'], 'href': 'https://api.spotify.com/v1/artists/485uL27bPomh29R4JmQehQ', 'id': '485uL27bPomh29R4JmQehQ', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebd98e2abb8fbebc2e2340f178', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d98e2abb8fbebc2e2340f178', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d98e2abb8fbebc2e2340f178', 'height': 160, 'width': 160}], 'name': 'Bob Seger', 'popularity': 72, 'type': 'artist', 'uri': 'spotify:artist:485uL27bPomh29R4JmQehQ'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/5d/f1/70/5df170b1-23c1-276a-fa8e-3b96a1a1df0b/mza_2102620832254887024.png/2000x2000bb.jpg",
@@ -759,7 +1381,7 @@
       "listeners": 3143,
       "mbid": null,
       "name": "Bob Seger and The Silver Bullet Band",
-      "playcount": 18891,
+      "playcount": 18897,
       "similar_artists": [],
       "tags": [
         "rock",
@@ -795,10 +1417,11 @@
       "name": "Bob Seger",
       "popularity": 72,
       "url": "https://open.spotify.com/artist/485uL27bPomh29R4JmQehQ"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "485uL27bPomh29R4JmQehQ",
   "spotify_url": "https://open.spotify.com/artist/485uL27bPomh29R4JmQehQ",
-  "updated_at": "2025-07-08T10:11:05.494935",
+  "updated_at": "2025-07-08T20:58:01.181056",
   "wikipedia_url": null
 }
