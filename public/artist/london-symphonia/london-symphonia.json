@@ -44,6 +44,30 @@
   },
   "name": "London Symphonia",
   "popularity": 76,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='411983511', url='https://music.apple.com/gb/artist/london-symphonia/411983511', name='London Symphonia', artwork_url='', genres=['Classical'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '411983511', 'type': 'artists', 'href': '/v1/catalog/gb/artists/411983511', 'attributes': {'name': 'London Symphonia', 'url': 'https://music.apple.com/gb/artist/london-symphonia/411983511', 'genreNames': ['Classical']}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/411983511/albums', 'data': []}}})",
+    "discogs": {
+      "cover_image": "",
+      "id": "9056113",
+      "images": [],
+      "members": [],
+      "name": "London Symphonia",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "9056113",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/9056113"
+      },
+      "resource_url": "https://api.discogs.com/artists/9056113",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/9056113",
+      "urls": []
+    },
+    "lastfm": "ArtistLastFmData(name='London Symphonia', url='https://www.last.fm/music/London+Symphonia', mbid=None, listeners=36, playcount=42, bio_summary='<a href=\"https://www.last.fm/music/London+Symphonia\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'London Symphonia', 'url': 'https://www.last.fm/music/London+Symphonia', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '36', 'playcount': '42'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/London+Symphonia/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/London+Symphonia\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='5yxyJsFanEAuwSM5kOuZKc', url='https://open.spotify.com/artist/5yxyJsFanEAuwSM5kOuZKc', name='London Symphony Orchestra', popularity=76, followers=338783, genres=['classical', 'orchestra', 'opera'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb5a5d168879568c94e86c61aa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051745a5d168879568c94e86c61aa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1785a5d168879568c94e86c61aa', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5yxyJsFanEAuwSM5kOuZKc'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5yxyJsFanEAuwSM5kOuZKc'}, 'followers': {'href': None, 'total': 338783}, 'genres': ['classical', 'orchestra', 'opera'], 'href': 'https://api.spotify.com/v1/artists/5yxyJsFanEAuwSM5kOuZKc', 'id': '5yxyJsFanEAuwSM5kOuZKc', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb5a5d168879568c94e86c61aa', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051745a5d168879568c94e86c61aa', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1785a5d168879568c94e86c61aa', 'height': 160, 'width': 160}], 'name': 'London Symphony Orchestra', 'popularity': 76, 'type': 'artist', 'uri': 'spotify:artist:5yxyJsFanEAuwSM5kOuZKc'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "",
@@ -139,10 +163,11 @@
       "name": "London Symphony Orchestra",
       "popularity": 76,
       "url": "https://open.spotify.com/artist/5yxyJsFanEAuwSM5kOuZKc"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "5yxyJsFanEAuwSM5kOuZKc",
   "spotify_url": "https://open.spotify.com/artist/5yxyJsFanEAuwSM5kOuZKc",
-  "updated_at": "2025-07-08T09:40:58.683377",
+  "updated_at": "2025-07-08T20:41:33.297506",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Orchestra_London_Canada"
 }
