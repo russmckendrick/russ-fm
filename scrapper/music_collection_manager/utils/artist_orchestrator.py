@@ -302,28 +302,39 @@ class ArtistDataOrchestrator:
         if artist.discogs_id and not artist.discogs_url:
             artist.discogs_url = f"https://www.discogs.com/artist/{artist.discogs_id}"
         
-        # If add_services is specified, ONLY add raw data for those services without touching anything else
+        # If add_services is specified, ONLY add raw data for those services without ANY other processing
         if self.add_services is not None:
-            self.logger.info(f"Adding raw data for specified services: {self.add_services}")
+            self.logger.info(f"MINIMAL MODE: Only adding raw data for: {self.add_services}")
             
-            # Only add raw TheAudioDB data - don't touch any existing data
+            # Make a copy of the existing artist to avoid any modifications
+            original_raw_data = artist.raw_data.copy()
+            
+            # Only add raw TheAudioDB data - don't touch ANYTHING else
             if "theaudiodb" in self.add_services and "theaudiodb" in self.services:
-                self.logger.info(f"Adding TheAudioDB raw data to existing artist data for {artist_name}")
+                self.logger.info(f"Fetching TheAudioDB raw data for {artist_name}")
                 theaudiodb_data = self._get_theaudiodb_artist_data(artist_name, artist.lastfm_mbid)
                 if theaudiodb_data:
-                    # ONLY add to raw_data - don't modify any other artist fields
-                    artist.raw_data["theaudiodb"] = theaudiodb_data
-                    self.logger.info(f"✅ Added TheAudioDB raw data for {artist_name}")
+                    # Convert dataclass to dict before storing
+                    from dataclasses import asdict
+                    theaudiodb_dict = asdict(theaudiodb_data)
+                    
+                    # ONLY add to raw_data - preserve everything else exactly as it was
+                    artist.raw_data["theaudiodb"] = theaudiodb_dict
+                    self.logger.info(f"✅ Added ONLY TheAudioDB raw data for {artist_name}")
+                    self.logger.info(f"Raw data keys now: {list(artist.raw_data.keys())}")
                 else:
                     self.logger.info(f"❌ No TheAudioDB data found for {artist_name}")
             
-            # Update timestamp
+            # Update ONLY the timestamp - nothing else
             artist.updated_at = datetime.now()
             
-            # Save JSON data
+            # Save to database and JSON - but don't run any other enrichment
+            if self.db_manager.save_artist(artist):
+                self.logger.info(f"✅ Saved artist {artist_name} to database with TheAudioDB data")
+            
             try:
                 self.image_manager.save_artist_json(artist)
-                self.logger.info(f"✅ Saved updated artist JSON for {artist_name}")
+                self.logger.info(f"✅ Saved artist JSON for {artist_name}")
             except Exception as e:
                 self.logger.warning(f"Failed to save artist JSON: {str(e)}")
             
