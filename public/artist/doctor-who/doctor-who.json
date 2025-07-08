@@ -99,6 +99,299 @@
   },
   "name": "Doctor Who",
   "popularity": 39,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='207238484', url='https://music.apple.com/gb/artist/doctor-who/207238484', name='Doctor Who', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4c/eb/4e/4ceb4e19-6673-44b3-8141-588fa0f4ac59/9781844357109_3000.jpg/2000x2000ac.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '207238484', 'type': 'artists', 'href': '/v1/catalog/gb/artists/207238484', 'attributes': {'name': 'Doctor Who', 'genreNames': ['Soundtrack'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4c/eb/4e/4ceb4e19-6673-44b3-8141-588fa0f4ac59/9781844357109_3000.jpg/{w}x{h}ac.jpg', 'bgColor': '180d13', 'textColor1': 'f2895d', 'textColor2': 'f5754a', 'textColor3': 'c7704e', 'textColor4': 'c9603f'}, 'url': 'https://music.apple.com/gb/artist/doctor-who/207238484'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/207238484/albums', 'next': '/v1/catalog/gb/artists/207238484/albums?offset=25', 'data': [{'id': '1385698541', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385698541'}, {'id': '1124971408', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1124971408'}, {'id': '1385532312', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385532312'}, {'id': '1385724334', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385724334'}, {'id': '1385538773', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385538773'}, {'id': '1385720900', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385720900'}, {'id': '1385703751', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385703751'}, {'id': '1389979703', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389979703'}, {'id': '1385699603', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385699603'}, {'id': '1385529628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385529628'}, {'id': '1385535998', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385535998'}, {'id': '1389920341', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389920341'}, {'id': '1385706165', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385706165'}, {'id': '1389911930', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389911930'}, {'id': '1385531699', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385531699'}, {'id': '1385703733', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385703733'}, {'id': '1385696509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385696509'}, {'id': '1389929645', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389929645'}, {'id': '1373727318', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1373727318'}, {'id': '1389913463', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389913463'}, {'id': '1389912786', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1389912786'}, {'id': '1437649264', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1437649264'}, {'id': '1385708545', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385708545'}, {'id': '1385722032', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385722032'}, {'id': '1385505860', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1385505860'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/EzFyTceoLZLBYDhSnp5T4TK7Uw2kYfYOwuGNp73lYcA/rs:fit/g:sm/q:90/h:492/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "171721",
+      "images": [
+        {
+          "height": 492,
+          "resource_url": "https://i.discogs.com/EzFyTceoLZLBYDhSnp5T4TK7Uw2kYfYOwuGNp73lYcA/rs:fit/g:sm/q:90/h:492/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/EzFyTceoLZLBYDhSnp5T4TK7Uw2kYfYOwuGNp73lYcA/rs:fit/g:sm/q:90/h:492/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_P6foK1e3anOiTO_F1sJJnlbVe7if0WGKd2ENSu0DCY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 159,
+          "resource_url": "https://i.discogs.com/SD4syPvJ3Al33NJF_v9IaWwkrg6DiYXY4bWAnWS0sRY/rs:fit/g:sm/q:90/h:159/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SD4syPvJ3Al33NJF_v9IaWwkrg6DiYXY4bWAnWS0sRY/rs:fit/g:sm/q:90/h:159/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/m3nBX40sUhtc76kkzyp1WrFBv9S_e8OY8ybp-RVtK6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/6I82TGsWfMzLOPci1p0cssDnPeayDzml3aC86W85ms0/rs:fit/g:sm/q:90/h:427/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6I82TGsWfMzLOPci1p0cssDnPeayDzml3aC86W85ms0/rs:fit/g:sm/q:90/h:427/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/GJEybOcnZ9EmW2H5SFxG26xNUe8t-iYfi_EPoSQnGYM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+          "width": 320
+        },
+        {
+          "height": 452,
+          "resource_url": "https://i.discogs.com/UGJtTUrJJTWQa-yFSdn_bZQGGv-MmhGIlT4PqC-XFCA/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UGJtTUrJJTWQa-yFSdn_bZQGGv-MmhGIlT4PqC-XFCA/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_wET5-CvVbxRbvp7hXkf9fFmI1doTA9lwknG5Kg2MI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 363,
+          "resource_url": "https://i.discogs.com/7szACNirLi-A0RKaEY_l8mcGrxOj_LLy5PSBikgeHrI/rs:fit/g:sm/q:90/h:363/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7szACNirLi-A0RKaEY_l8mcGrxOj_LLy5PSBikgeHrI/rs:fit/g:sm/q:90/h:363/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fpnBgISB6xd3Y_exsD6a_ME4LCFyJdA_mc0NOiHrXME/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 700,
+          "resource_url": "https://i.discogs.com/ns7LfMAtdS9xLzPh6-ufKIL9ha_U6d8nQh7Lc-1iWe8/rs:fit/g:sm/q:90/h:700/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ns7LfMAtdS9xLzPh6-ufKIL9ha_U6d8nQh7Lc-1iWe8/rs:fit/g:sm/q:90/h:700/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KJ7sXOEbjCQQoo7LzZ7cL5uRe7STo7UHzM0zp2AtOn0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+          "width": 501
+        },
+        {
+          "height": 456,
+          "resource_url": "https://i.discogs.com/UiyL26ElvAyBlOQJgyjT-8xJUk7ZCzTkJOwtBcUDhHI/rs:fit/g:sm/q:90/h:456/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UiyL26ElvAyBlOQJgyjT-8xJUk7ZCzTkJOwtBcUDhHI/rs:fit/g:sm/q:90/h:456/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-lZC_cETzcTsuJfWX7mnRh3fbUL9UCThUz6yOFP_b5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 501,
+          "resource_url": "https://i.discogs.com/kw7xUzR-654bNZLgWmsVnT_DvlVdgaKIkD8TyI7Effs/rs:fit/g:sm/q:90/h:501/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kw7xUzR-654bNZLgWmsVnT_DvlVdgaKIkD8TyI7Effs/rs:fit/g:sm/q:90/h:501/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lIdgOQlsOSf5NWpIy9E2TD1gr1QDKzvtCICqxRBwo74/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/r8fkZmrNGzQDHgUYBGL1bf4ouHSzqFo-q3VYL81IdO8/rs:fit/g:sm/q:90/h:350/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r8fkZmrNGzQDHgUYBGL1bf4ouHSzqFo-q3VYL81IdO8/rs:fit/g:sm/q:90/h:350/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+          "uri150": "https://i.discogs.com/ddpAI3DxG7MWKOcv6qBLbuB7pXul1l43THUnXvYijC4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+          "width": 300
+        },
+        {
+          "height": 499,
+          "resource_url": "https://i.discogs.com/7F3gbwQ2CHIWTfREDKOoDQRdzRt7r4UTsyJR7mULixk/rs:fit/g:sm/q:90/h:499/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/7F3gbwQ2CHIWTfREDKOoDQRdzRt7r4UTsyJR7mULixk/rs:fit/g:sm/q:90/h:499/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/CDYOzbaxpOf8jndE7nQPt5-KUHOPfhxypVF7VL0toHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+          "width": 325
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/Mvh7GWWCyjG5Y00ormGyGejcBQZJuof6f9kkMx9nPKQ/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Mvh7GWWCyjG5Y00ormGyGejcBQZJuof6f9kkMx9nPKQ/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/aeG4-HKZNUMAaoND2vsA9ewmepN2vST2GHGWiiFX-1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 655,
+          "resource_url": "https://i.discogs.com/IYOQ_pXRQ3bJ1MsiYD2PiaFxaQ6dNSwpyxzzsxAQZZE/rs:fit/g:sm/q:90/h:655/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IYOQ_pXRQ3bJ1MsiYD2PiaFxaQ6dNSwpyxzzsxAQZZE/rs:fit/g:sm/q:90/h:655/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/kdlkRXPz2s0pQHXiY8G1XLPKnsXy-aj5X7K3fD7wMss/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+          "width": 338
+        },
+        {
+          "height": 955,
+          "resource_url": "https://i.discogs.com/cOY1RL1fpdIvlDC7BM-6Wy8lAJPjGTuICVdROsqvgWI/rs:fit/g:sm/q:90/h:955/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cOY1RL1fpdIvlDC7BM-6Wy8lAJPjGTuICVdROsqvgWI/rs:fit/g:sm/q:90/h:955/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KrcUeYjIPMua0j6dsbr7G6qK7xS0ADVbp-LXJ7TbTDk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 568,
+          "resource_url": "https://i.discogs.com/aeJ1h70XYQJ_I4aSiHpEI5R8zGBpvFsieb4FvJ6WVuw/rs:fit/g:sm/q:90/h:568/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aeJ1h70XYQJ_I4aSiHpEI5R8zGBpvFsieb4FvJ6WVuw/rs:fit/g:sm/q:90/h:568/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KAf0U59djn7V9pLvBmmIO3rnoE9sRgJFyen1YZB2OPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/R3vGKV5-RfsXXiTY4GRueqSxL5c6u6wVPCEDRmYbdiQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/R3vGKV5-RfsXXiTY4GRueqSxL5c6u6wVPCEDRmYbdiQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+          "uri150": "https://i.discogs.com/3Z5CilS9Un7JJ4lshxaEsNu22EUn9iUb6KByvzlhGOE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Doctor Who",
+      "namevariations": [
+        "Dr Who"
+      ],
+      "profile": "Doctor Who is a British science fiction television programme produced by the BBC. It originally ran from 1963 to 1989, with a television film in 1996, and was relaunched in 2005. It is still currently airing on BBC One.\r\n",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 171721,
+        "images": [
+          {
+            "height": 492,
+            "resource_url": "https://i.discogs.com/EzFyTceoLZLBYDhSnp5T4TK7Uw2kYfYOwuGNp73lYcA/rs:fit/g:sm/q:90/h:492/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/EzFyTceoLZLBYDhSnp5T4TK7Uw2kYfYOwuGNp73lYcA/rs:fit/g:sm/q:90/h:492/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/_P6foK1e3anOiTO_F1sJJnlbVe7if0WGKd2ENSu0DCY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+            "width": 500
+          },
+          {
+            "height": 159,
+            "resource_url": "https://i.discogs.com/SD4syPvJ3Al33NJF_v9IaWwkrg6DiYXY4bWAnWS0sRY/rs:fit/g:sm/q:90/h:159/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SD4syPvJ3Al33NJF_v9IaWwkrg6DiYXY4bWAnWS0sRY/rs:fit/g:sm/q:90/h:159/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/m3nBX40sUhtc76kkzyp1WrFBv9S_e8OY8ybp-RVtK6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjAwMDQ3/LmpwZWc.jpeg",
+            "width": 500
+          },
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/6I82TGsWfMzLOPci1p0cssDnPeayDzml3aC86W85ms0/rs:fit/g:sm/q:90/h:427/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6I82TGsWfMzLOPci1p0cssDnPeayDzml3aC86W85ms0/rs:fit/g:sm/q:90/h:427/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/GJEybOcnZ9EmW2H5SFxG26xNUe8t-iYfi_EPoSQnGYM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0Nzg3/LTQ3NTEuanBlZw.jpeg",
+            "width": 320
+          },
+          {
+            "height": 452,
+            "resource_url": "https://i.discogs.com/UGJtTUrJJTWQa-yFSdn_bZQGGv-MmhGIlT4PqC-XFCA/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UGJtTUrJJTWQa-yFSdn_bZQGGv-MmhGIlT4PqC-XFCA/rs:fit/g:sm/q:90/h:452/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/_wET5-CvVbxRbvp7hXkf9fFmI1doTA9lwknG5Kg2MI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0ODE3/LTgwNTYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 363,
+            "resource_url": "https://i.discogs.com/7szACNirLi-A0RKaEY_l8mcGrxOj_LLy5PSBikgeHrI/rs:fit/g:sm/q:90/h:363/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/7szACNirLi-A0RKaEY_l8mcGrxOj_LLy5PSBikgeHrI/rs:fit/g:sm/q:90/h:363/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/fpnBgISB6xd3Y_exsD6a_ME4LCFyJdA_mc0NOiHrXME/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTQw/LTMzNzkuanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 700,
+            "resource_url": "https://i.discogs.com/ns7LfMAtdS9xLzPh6-ufKIL9ha_U6d8nQh7Lc-1iWe8/rs:fit/g:sm/q:90/h:700/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ns7LfMAtdS9xLzPh6-ufKIL9ha_U6d8nQh7Lc-1iWe8/rs:fit/g:sm/q:90/h:700/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/KJ7sXOEbjCQQoo7LzZ7cL5uRe7STo7UHzM0zp2AtOn0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY0OTI5/LTExOTcuanBlZw.jpeg",
+            "width": 501
+          },
+          {
+            "height": 456,
+            "resource_url": "https://i.discogs.com/UiyL26ElvAyBlOQJgyjT-8xJUk7ZCzTkJOwtBcUDhHI/rs:fit/g:sm/q:90/h:456/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UiyL26ElvAyBlOQJgyjT-8xJUk7ZCzTkJOwtBcUDhHI/rs:fit/g:sm/q:90/h:456/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/-lZC_cETzcTsuJfWX7mnRh3fbUL9UCThUz6yOFP_b5o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTE1NzAuanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 501,
+            "resource_url": "https://i.discogs.com/kw7xUzR-654bNZLgWmsVnT_DvlVdgaKIkD8TyI7Effs/rs:fit/g:sm/q:90/h:501/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/kw7xUzR-654bNZLgWmsVnT_DvlVdgaKIkD8TyI7Effs/rs:fit/g:sm/q:90/h:501/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/lIdgOQlsOSf5NWpIy9E2TD1gr1QDKzvtCICqxRBwo74/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTIwMTYuanBlZw.jpeg",
+            "width": 500
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/r8fkZmrNGzQDHgUYBGL1bf4ouHSzqFo-q3VYL81IdO8/rs:fit/g:sm/q:90/h:350/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/r8fkZmrNGzQDHgUYBGL1bf4ouHSzqFo-q3VYL81IdO8/rs:fit/g:sm/q:90/h:350/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+            "uri150": "https://i.discogs.com/ddpAI3DxG7MWKOcv6qBLbuB7pXul1l43THUnXvYijC4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTM4OTMucG5n.jpeg",
+            "width": 300
+          },
+          {
+            "height": 499,
+            "resource_url": "https://i.discogs.com/7F3gbwQ2CHIWTfREDKOoDQRdzRt7r4UTsyJR7mULixk/rs:fit/g:sm/q:90/h:499/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/7F3gbwQ2CHIWTfREDKOoDQRdzRt7r4UTsyJR7mULixk/rs:fit/g:sm/q:90/h:499/w:325/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/CDYOzbaxpOf8jndE7nQPt5-KUHOPfhxypVF7VL0toHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTI2NDkuanBlZw.jpeg",
+            "width": 325
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/Mvh7GWWCyjG5Y00ormGyGejcBQZJuof6f9kkMx9nPKQ/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Mvh7GWWCyjG5Y00ormGyGejcBQZJuof6f9kkMx9nPKQ/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/aeG4-HKZNUMAaoND2vsA9ewmepN2vST2GHGWiiFX-1E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM0/LTgzMTYuanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 655,
+            "resource_url": "https://i.discogs.com/IYOQ_pXRQ3bJ1MsiYD2PiaFxaQ6dNSwpyxzzsxAQZZE/rs:fit/g:sm/q:90/h:655/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IYOQ_pXRQ3bJ1MsiYD2PiaFxaQ6dNSwpyxzzsxAQZZE/rs:fit/g:sm/q:90/h:655/w:338/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/kdlkRXPz2s0pQHXiY8G1XLPKnsXy-aj5X7K3fD7wMss/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTYzNTguanBlZw.jpeg",
+            "width": 338
+          },
+          {
+            "height": 955,
+            "resource_url": "https://i.discogs.com/cOY1RL1fpdIvlDC7BM-6Wy8lAJPjGTuICVdROsqvgWI/rs:fit/g:sm/q:90/h:955/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/cOY1RL1fpdIvlDC7BM-6Wy8lAJPjGTuICVdROsqvgWI/rs:fit/g:sm/q:90/h:955/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/KrcUeYjIPMua0j6dsbr7G6qK7xS0ADVbp-LXJ7TbTDk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTkwMTYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 568,
+            "resource_url": "https://i.discogs.com/aeJ1h70XYQJ_I4aSiHpEI5R8zGBpvFsieb4FvJ6WVuw/rs:fit/g:sm/q:90/h:568/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aeJ1h70XYQJ_I4aSiHpEI5R8zGBpvFsieb4FvJ6WVuw/rs:fit/g:sm/q:90/h:568/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/KAf0U59djn7V9pLvBmmIO3rnoE9sRgJFyen1YZB2OPI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNDY3MDY2MjM1/LTcyOTguanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/R3vGKV5-RfsXXiTY4GRueqSxL5c6u6wVPCEDRmYbdiQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/R3vGKV5-RfsXXiTY4GRueqSxL5c6u6wVPCEDRmYbdiQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+            "uri150": "https://i.discogs.com/3Z5CilS9Un7JJ4lshxaEsNu22EUn9iUb6KByvzlhGOE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xNjkxNTE5MDA4/LTgwMDkucG5n.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Doctor Who",
+        "namevariations": [
+          "Dr Who"
+        ],
+        "profile": "Doctor Who is a British science fiction television programme produced by the BBC. It originally ran from 1963 to 1989, with a television film in 1996, and was relaunched in 2005. It is still currently airing on BBC One.\r\n",
+        "releases_url": "https://api.discogs.com/artists/171721/releases",
+        "resource_url": "https://api.discogs.com/artists/171721",
+        "uri": "https://www.discogs.com/artist/171721-Doctor-Who",
+        "urls": [
+          "https://www.doctorwho.tv/",
+          "https://www.bbc.co.uk/programmes/b006q2x0",
+          "https://www.bbc.com/topics/cg2m52x1kj5t",
+          "https://www.imdb.com/title/tt0436992/",
+          "https://www.youtube.com/@DoctorWho",
+          "https://en.wikipedia.org/wiki/Doctor_Who"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/171721",
+      "thumb": "https://i.discogs.com/_P6foK1e3anOiTO_F1sJJnlbVe7if0WGKd2ENSu0DCY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTcy/MS0xMjkyMjI1MTQw/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/171721-Doctor-Who",
+      "urls": [
+        "https://www.doctorwho.tv/",
+        "https://www.bbc.co.uk/programmes/b006q2x0",
+        "https://www.bbc.com/topics/cg2m52x1kj5t",
+        "https://www.imdb.com/title/tt0436992/",
+        "https://www.youtube.com/@DoctorWho",
+        "https://en.wikipedia.org/wiki/Doctor_Who"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Doctor Who', url='https://www.last.fm/music/Doctor+Who', mbid=None, listeners=34467, playcount=920216, bio_summary='Doctor Who is a British science-fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, exploring the universe in a time-travelling space ship called the TARDIS. The TARDIS exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. \\n\\nThere have been many composers throughout the show\\'s run. Notable composers are: Murray Gold (2005-2017) <a href=\"https://www.last.fm/music/Doctor+Who\">Read more on Last.fm</a>', bio_content='Doctor Who is a British science-fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, exploring the universe in a time-travelling space ship called the TARDIS. The TARDIS exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. \\n\\nThere have been many composers throughout the show\\'s run. Notable composers are: Murray Gold (2005-2017), Segun Akinola (2017-2022), Dudley Simpson (various stories from 1964- 1980), and Peter Howell (1980-1985), among others.\\n\\nNOTE: Spotify and other streaming services have \"Doctor Who\" listed as the artist on many of Big Finish Productions\\' Doctor Who audio drama releases. <a href=\"https://www.last.fm/music/Doctor+Who\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['doctor who', 'Soundtrack', 'british', 'Awesome', 'Audiobook'], similar_artists=[{'name': 'Big Finish Productions', 'url': 'https://www.last.fm/music/Big+Finish+Productions'}, {'name': 'Dominic Glynn', 'url': 'https://www.last.fm/music/Dominic+Glynn'}, {'name': 'Big Finish', 'url': 'https://www.last.fm/music/Big+Finish'}, {'name': 'Tristram Cary', 'url': 'https://www.last.fm/music/Tristram+Cary'}, {'name': 'Torchwood', 'url': 'https://www.last.fm/music/Torchwood'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Doctor Who', 'url': 'https://www.last.fm/music/Doctor+Who', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '34467', 'playcount': '920216'}, 'similar': {'artist': [{'name': 'Big Finish Productions', 'url': 'https://www.last.fm/music/Big+Finish+Productions', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dominic Glynn', 'url': 'https://www.last.fm/music/Dominic+Glynn', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Big Finish', 'url': 'https://www.last.fm/music/Big+Finish', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Tristram Cary', 'url': 'https://www.last.fm/music/Tristram+Cary', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Torchwood', 'url': 'https://www.last.fm/music/Torchwood', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'doctor who', 'url': 'https://www.last.fm/tag/doctor+who'}, {'name': 'Soundtrack', 'url': 'https://www.last.fm/tag/Soundtrack'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'Awesome', 'url': 'https://www.last.fm/tag/Awesome'}, {'name': 'Audiobook', 'url': 'https://www.last.fm/tag/Audiobook'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Doctor+Who/+wiki'}}, 'published': '21 Apr 2007, 18:25', 'summary': 'Doctor Who is a British science-fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, exploring the universe in a time-travelling space ship called the TARDIS. The TARDIS exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. \\n\\nThere have been many composers throughout the show\\'s run. Notable composers are: Murray Gold (2005-2017) <a href=\"https://www.last.fm/music/Doctor+Who\">Read more on Last.fm</a>', 'content': 'Doctor Who is a British science-fiction television programme broadcast by the BBC since 1963. The programme depicts the adventures of a Time Lord called the Doctor, exploring the universe in a time-travelling space ship called the TARDIS. The TARDIS exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired. \\n\\nThere have been many composers throughout the show\\'s run. Notable composers are: Murray Gold (2005-2017), Segun Akinola (2017-2022), Dudley Simpson (various stories from 1964- 1980), and Peter Howell (1980-1985), among others.\\n\\nNOTE: Spotify and other streaming services have \"Doctor Who\" listed as the artist on many of Big Finish Productions\\' Doctor Who audio drama releases. <a href=\"https://www.last.fm/music/Doctor+Who\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='2PKm8aJ43kvEqtzTmggKdn', url='https://open.spotify.com/artist/2PKm8aJ43kvEqtzTmggKdn', name='Doctor Who', popularity=39, followers=37961, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb07a462360143e33a23894124', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517407a462360143e33a23894124', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17807a462360143e33a23894124', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2PKm8aJ43kvEqtzTmggKdn'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2PKm8aJ43kvEqtzTmggKdn'}, 'followers': {'href': None, 'total': 37961}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/2PKm8aJ43kvEqtzTmggKdn', 'id': '2PKm8aJ43kvEqtzTmggKdn', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb07a462360143e33a23894124', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517407a462360143e33a23894124', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17807a462360143e33a23894124', 'height': 160, 'width': 160}], 'name': 'Doctor Who', 'popularity': 39, 'type': 'artist', 'uri': 'spotify:artist:2PKm8aJ43kvEqtzTmggKdn'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/4c/eb/4e/4ceb4e19-6673-44b3-8141-588fa0f4ac59/9781844357109_3000.jpg/2000x2000ac.jpg",
@@ -427,10 +720,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 34463,
+      "listeners": 34467,
       "mbid": null,
       "name": "Doctor Who",
-      "playcount": 919900,
+      "playcount": 920216,
       "similar_artists": [
         {
           "name": "Big Finish Productions",
@@ -486,10 +779,11 @@
       "name": "Doctor Who",
       "popularity": 39,
       "url": "https://open.spotify.com/artist/2PKm8aJ43kvEqtzTmggKdn"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "2PKm8aJ43kvEqtzTmggKdn",
   "spotify_url": "https://open.spotify.com/artist/2PKm8aJ43kvEqtzTmggKdn",
-  "updated_at": "2025-07-08T10:07:08.631922",
+  "updated_at": "2025-07-08T20:55:54.923274",
   "wikipedia_url": null
 }
