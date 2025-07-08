@@ -735,12 +735,22 @@ export function AlbumDetailPage() {
                             bio = bio?.substring(0, wikiIndex).trim();
                           }
                           
-                          // Split by double newlines and create paragraphs
-                          return bio?.split(/\n\s*\n/).map((paragraph, index) => (
-                            <p key={index} className="mb-4 last:mb-0">
-                              {paragraph.trim()}
-                            </p>
-                          ));
+                          // Handle different biography formats
+                          if (bio?.includes('\n')) {
+                            // TheAudioDB format: Uses actual \n characters for paragraphs
+                            return bio.split('\n').filter(paragraph => paragraph.trim()).map((paragraph, index) => (
+                              <p key={index} className="mb-4 last:mb-0">
+                                {paragraph.trim()}
+                              </p>
+                            ));
+                          } else {
+                            // Legacy format: Single paragraph, no newlines
+                            return (
+                              <p className="mb-0">
+                                {bio}
+                              </p>
+                            );
+                          }
                         })()}
                       </div>
                       {!biographyExpanded && (

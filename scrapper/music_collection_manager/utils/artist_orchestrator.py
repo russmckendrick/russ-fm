@@ -320,6 +320,13 @@ class ArtistDataOrchestrator:
                     
                     # ONLY add to raw_data - preserve everything else exactly as it was
                     artist.raw_data["theaudiodb"] = theaudiodb_dict
+                    
+                    # Also update biography (ALWAYS prefer TheAudioDB)
+                    theaudiodb_biography = self._get_best_theaudiodb_biography(theaudiodb_data)
+                    if theaudiodb_biography:
+                        artist.biography = theaudiodb_biography
+                        self.logger.info(f"Updated biography from TheAudioDB for {artist_name}")
+                    
                     self.logger.info(f"✅ Added ONLY TheAudioDB raw data for {artist_name}")
                     self.logger.info(f"Raw data keys now: {list(artist.raw_data.keys())}")
                 else:
@@ -440,7 +447,42 @@ class ArtistDataOrchestrator:
                 artist.lastfm_mbid = None
                 artist.lastfm_url = None
         
-        # Enrich with Wikipedia
+        # Enrich with TheAudioDB (highest priority for biography)
+        if "theaudiodb" in self.services:
+            theaudiodb_data = self._get_theaudiodb_artist_data(artist_name, artist.lastfm_mbid)
+            if theaudiodb_data:
+                # Convert dataclass to dict before storing
+                from dataclasses import asdict
+                theaudiodb_dict = asdict(theaudiodb_data)
+                artist.raw_data["theaudiodb"] = theaudiodb_dict
+                
+                # Update artist fields if not already set
+                if theaudiodb_data.formed_year and not hasattr(artist, 'formed_year'):
+                    artist.formed_year = theaudiodb_data.formed_year
+                if theaudiodb_data.genre and theaudiodb_data.genre not in artist.genres:
+                    artist.genres.append(theaudiodb_data.genre)
+                if theaudiodb_data.style and theaudiodb_data.style not in artist.genres:
+                    artist.genres.append(theaudiodb_data.style)
+                if theaudiodb_data.website and not hasattr(artist, 'website'):
+                    artist.website = theaudiodb_data.website
+                if theaudiodb_data.country and not hasattr(artist, 'country'):
+                    artist.country = theaudiodb_data.country
+                
+                # Prefer TheAudioDB biography with fallback through languages (ALWAYS prefer TheAudioDB)
+                theaudiodb_biography = self._get_best_theaudiodb_biography(theaudiodb_data)
+                if theaudiodb_biography:
+                    artist.biography = theaudiodb_biography
+                    self.logger.info(f"Updated biography from TheAudioDB for {artist_name}")
+                
+                # Add TheAudioDB images
+                for img in theaudiodb_data.images:
+                    artist.add_image(img)
+            else:
+                # If service was skipped or returned no data, clear TheAudioDB metadata
+                self.logger.info(f"TheAudioDB data not available, clearing TheAudioDB metadata for {artist_name}")
+                artist.raw_data["theaudiodb"] = {}
+        
+        # Enrich with Wikipedia (fallback for biography)
         if "wikipedia" in self.services and not artist.biography:
             wiki_data = self._get_wikipedia_artist_data(artist_name)
             if wiki_data:
@@ -479,36 +521,6 @@ class ArtistDataOrchestrator:
             else:
                 # If service was skipped, preserve existing Discogs data
                 self.logger.info(f"Discogs data not updated, preserving existing data for {artist_name}")
-        
-        # Enrich with TheAudioDB
-        if "theaudiodb" in self.services:
-            theaudiodb_data = self._get_theaudiodb_artist_data(artist_name, artist.lastfm_mbid)
-            if theaudiodb_data:
-                artist.raw_data["theaudiodb"] = theaudiodb_data
-                
-                # Update artist fields if not already set
-                if theaudiodb_data.formed_year and not hasattr(artist, 'formed_year'):
-                    artist.formed_year = theaudiodb_data.formed_year
-                if theaudiodb_data.genre and theaudiodb_data.genre not in artist.genres:
-                    artist.genres.append(theaudiodb_data.genre)
-                if theaudiodb_data.style and theaudiodb_data.style not in artist.genres:
-                    artist.genres.append(theaudiodb_data.style)
-                if theaudiodb_data.website and not hasattr(artist, 'website'):
-                    artist.website = theaudiodb_data.website
-                if theaudiodb_data.country and not hasattr(artist, 'country'):
-                    artist.country = theaudiodb_data.country
-                
-                # Use English biography if no biography is set
-                if theaudiodb_data.biography_en and not artist.biography:
-                    artist.biography = theaudiodb_data.biography_en
-                
-                # Add TheAudioDB images
-                for img in theaudiodb_data.images:
-                    artist.add_image(img)
-            else:
-                # If service was skipped or returned no data, clear TheAudioDB metadata
-                self.logger.info(f"TheAudioDB data not available, clearing TheAudioDB metadata for {artist_name}")
-                artist.raw_data["theaudiodb"] = {}
         
         # Download artist images with new priority logic
         self._download_artist_images(artist)
@@ -631,11 +643,8 @@ class ArtistDataOrchestrator:
                 self.logger.info(f"🎵 TheAudioDB: Searching by MusicBrainz ID: {musicbrainz_id}")
                 artist_data = service.get_artist_by_musicbrainz_id(musicbrainz_id)
                 if artist_data:
-                    # Get additional data
-                    artist_id = artist_data.get("idArtist")
-                    albums = service.get_artist_albums(artist_id) if artist_id else None
-                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
-                    return service.create_artist_enrichment(artist_data, albums, mvids)
+                    # Only get artist data, no albums or music videos
+                    return service.create_artist_enrichment(artist_data, None, None)
             
             # Fall back to name search
             search_results = service.search_artist(artist_name)
@@ -643,24 +652,44 @@ class ArtistDataOrchestrator:
             if self.interactive_mode:
                 selected_match = self._interactive_select_artist_match("TheAudioDB", search_results, artist_name)
                 if selected_match:
-                    artist_id = selected_match.get("idArtist")
-                    # Get additional data
-                    albums = service.get_artist_albums(artist_id) if artist_id else None
-                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
-                    return service.create_artist_enrichment(selected_match, albums, mvids)
+                    # Only get artist data, no albums or music videos
+                    return service.create_artist_enrichment(selected_match, None, None)
             else:
                 # Use first match
                 if search_results:
                     best_match = search_results[0]
-                    artist_id = best_match.get("idArtist")
-                    # Get additional data
-                    albums = service.get_artist_albums(artist_id) if artist_id else None
-                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
-                    return service.create_artist_enrichment(best_match, albums, mvids)
+                    # Only get artist data, no albums or music videos
+                    return service.create_artist_enrichment(best_match, None, None)
             
         except Exception as e:
             self.logger.warning(f"Failed to get TheAudioDB artist data for {artist_name}: {str(e)}")
         
+        return None
+
+    def _get_best_theaudiodb_biography(self, theaudiodb_data: ArtistTheAudioDBData) -> Optional[str]:
+        """Get the best available biography from TheAudioDB data with language fallback priority."""
+        # Priority order for biography languages
+        language_priority = [
+            'biography_en',      # English (highest priority)
+            'biography_de',      # German
+            'biography_fr',      # French
+            'biography_es',      # Spanish
+            'biography_it',      # Italian
+            'biography_pt',      # Portuguese
+            'biography_nl',      # Dutch
+            'biography_se',      # Swedish
+            'biography_ru',      # Russian
+            'biography_jp'       # Japanese (lowest priority)
+        ]
+        
+        # Try each language in priority order
+        for lang_field in language_priority:
+            biography = getattr(theaudiodb_data, lang_field, None)
+            if biography and biography.strip():
+                self.logger.info(f"Using TheAudioDB biography from {lang_field}")
+                return biography.strip()
+        
+        self.logger.info("No TheAudioDB biography found in any language")
         return None
 
     def _get_discogs_artist_data(self, artist: Artist) -> Optional[Dict[str, Any]]:
