@@ -76,7 +76,7 @@ def cli(ctx, config, log_level, log_file, session_logs):
 @click.option(
     "--services", 
     multiple=True,
-    type=click.Choice(["discogs", "apple_music", "spotify", "wikipedia", "lastfm"]),
+    type=click.Choice(["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]),
     help="Specific services to use (default: all available)"
 )
 @click.option(
@@ -306,11 +306,16 @@ def backup(ctx, backup_path):
 )
 @click.option(
     "--prefer",
-    type=click.Choice(["apple_music", "spotify", "discogs", "v1"]),
-    help="Preferred image source (apple_music, spotify, discogs, v1)"
+    type=click.Choice(["apple_music", "spotify", "theaudiodb", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, theaudiodb, discogs, v1)"
+)
+@click.option(
+    "--theaudiodb",
+    is_flag=True,
+    help="Only fetch TheAudioDB data (skip other services except Discogs)"
 )
 @click.pass_context
-def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1, verify, prefer):
+def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1, verify, prefer, theaudiodb):
     """Get comprehensive artist information."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.serializers import ArtistSerializer
@@ -325,8 +330,14 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
     config = ctx.obj["config"]
     logger = ctx.obj["logger"]
     
-    # Initialize artist orchestrator
-    orchestrator = ArtistDataOrchestrator(config, logger)
+    # Initialize artist orchestrator with add services if --theaudiodb is specified
+    if theaudiodb:
+        # Add TheAudioDB data to existing enrichment data
+        add_services = ["theaudiodb"]
+        orchestrator = ArtistDataOrchestrator(config, logger, add_services=add_services)
+        console.print(f"[yellow]TheAudioDB mode enabled - adding TheAudioDB data to existing artist data[/yellow]")
+    else:
+        orchestrator = ArtistDataOrchestrator(config, logger)
     
     # Enable interactive mode if requested
     if interactive:
@@ -565,11 +576,16 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
 )
 @click.option(
     "--prefer",
-    type=click.Choice(["apple_music", "spotify", "discogs", "v1"]),
-    help="Preferred image source (apple_music, spotify, discogs, v1)"
+    type=click.Choice(["apple_music", "spotify", "theaudiodb", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, theaudiodb, discogs, v1)"
+)
+@click.option(
+    "--theaudiodb",
+    is_flag=True,
+    help="Only fetch TheAudioDB data (skip other services except Discogs)"
 )
 @click.pass_context
-def artist_batch(ctx, start_idx, end_idx, save, verify, interactive, include_various, stats, force_refresh, prefer):
+def artist_batch(ctx, start_idx, end_idx, save, verify, interactive, include_various, stats, force_refresh, prefer, theaudiodb):
     """Process multiple artists from collection in batches with release verification."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.database import DatabaseManager
@@ -747,8 +763,14 @@ def artist_batch(ctx, start_idx, end_idx, save, verify, interactive, include_var
         console.print("[red]No artists found in the specified range.[/red]")
         return
     
-    # Initialize orchestrator
-    orchestrator = ArtistDataOrchestrator(config, logger)
+    # Initialize orchestrator with add services if --theaudiodb is specified
+    if theaudiodb:
+        # Add TheAudioDB data to existing enrichment data
+        add_services = ["theaudiodb"]
+        orchestrator = ArtistDataOrchestrator(config, logger, add_services=add_services)
+        console.print(f"[yellow]TheAudioDB mode enabled - adding TheAudioDB data to existing artist data[/yellow]")
+    else:
+        orchestrator = ArtistDataOrchestrator(config, logger)
     
     # Enable interactive mode if requested
     if interactive:

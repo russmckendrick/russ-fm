@@ -9,12 +9,13 @@ from pathlib import Path
 from dataclasses import dataclass
 
 from ..models import Artist, Image
-from ..models.enrichment import ArtistAppleMusicData, ArtistSpotifyData, ArtistLastFmData
+from ..models.enrichment import ArtistAppleMusicData, ArtistSpotifyData, ArtistLastFmData, ArtistTheAudioDBData
 from ..services.discogs import DiscogsService
 from ..services.apple_music import AppleMusicService
 from ..services.spotify import SpotifyService
 from ..services.lastfm import LastFmService
 from ..services.wikipedia import WikipediaService
+from ..services.theaudiodb import TheAudioDBService
 from .image_manager import ImageManager
 from .database import DatabaseManager
 from .serializers import ArtistSerializer
@@ -141,13 +142,15 @@ class ReleaseVerifier:
 class ArtistDataOrchestrator:
     """Orchestrates artist data collection from multiple music services."""
     
-    def __init__(self, config: Dict[str, Any], logger: Optional[logging.Logger] = None):
+    def __init__(self, config: Dict[str, Any], logger: Optional[logging.Logger] = None, enabled_services: Optional[List[str]] = None, add_services: Optional[List[str]] = None):
         self.config = config
         self.logger = logger or logging.getLogger(__name__)
         self.services = {}
         self.interactive_mode = False
         self.custom_image = None
         self.preferred_image_source = None
+        self.enabled_services = enabled_services  # If None, all services are enabled
+        self.add_services = add_services  # Services to add to existing data
         
         # Initialize image manager for artists with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -170,10 +173,11 @@ class ArtistDataOrchestrator:
             "spotify": self.config.get("spotify", {}),
             "wikipedia": self.config.get("wikipedia", {}),
             "lastfm": self.config.get("lastfm", {}),
+            "theaudiodb": self.config.get("TheAudioDB", {}),
         }
         
         # Initialize Discogs service
-        if service_configs["discogs"].get("access_token"):
+        if self._is_service_enabled("discogs") and service_configs["discogs"].get("access_token"):
             try:
                 self.services["discogs"] = DiscogsService(service_configs["discogs"], logger=self.logger)
                 self.logger.info("Discogs service initialized")
@@ -181,32 +185,56 @@ class ArtistDataOrchestrator:
                 self.logger.warning(f"Failed to initialize Discogs service: {str(e)}")
         
         # Initialize Apple Music service
-        try:
-            self.services["apple_music"] = AppleMusicService(service_configs["apple_music"], logger=self.logger)
-            self.logger.info("Apple Music service initialized")
-        except Exception as e:
-            self.logger.warning(f"Failed to initialize Apple Music service: {str(e)}")
+        if self._is_service_enabled("apple_music"):
+            try:
+                self.services["apple_music"] = AppleMusicService(service_configs["apple_music"], logger=self.logger)
+                self.logger.info("Apple Music service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Apple Music service: {str(e)}")
         
         # Initialize Spotify service
-        try:
-            self.services["spotify"] = SpotifyService(service_configs["spotify"], logger=self.logger)
-            self.logger.info("Spotify service initialized")
-        except Exception as e:
-            self.logger.warning(f"Failed to initialize Spotify service: {str(e)}")
+        if self._is_service_enabled("spotify"):
+            try:
+                self.services["spotify"] = SpotifyService(service_configs["spotify"], logger=self.logger)
+                self.logger.info("Spotify service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Spotify service: {str(e)}")
         
         # Initialize Wikipedia service
-        try:
-            self.services["wikipedia"] = WikipediaService(service_configs["wikipedia"], logger=self.logger)
-            self.logger.info("Wikipedia service initialized")
-        except Exception as e:
-            self.logger.warning(f"Failed to initialize Wikipedia service: {str(e)}")
+        if self._is_service_enabled("wikipedia"):
+            try:
+                self.services["wikipedia"] = WikipediaService(service_configs["wikipedia"], logger=self.logger)
+                self.logger.info("Wikipedia service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Wikipedia service: {str(e)}")
         
         # Initialize Last.fm service
-        try:
-            self.services["lastfm"] = LastFmService(service_configs["lastfm"], logger=self.logger)
-            self.logger.info("Last.fm service initialized")
-        except Exception as e:
-            self.logger.warning(f"Failed to initialize Last.fm service: {str(e)}")
+        if self._is_service_enabled("lastfm"):
+            try:
+                self.services["lastfm"] = LastFmService(service_configs["lastfm"], logger=self.logger)
+                self.logger.info("Last.fm service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Last.fm service: {str(e)}")
+        
+        # Initialize TheAudioDB service
+        if self._is_service_enabled("theaudiodb") and service_configs["theaudiodb"].get("api_token"):
+            try:
+                self.services["theaudiodb"] = TheAudioDBService(self.config, logger=self.logger)
+                self.logger.info("TheAudioDB service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize TheAudioDB service: {str(e)}")
+    
+    def _is_service_enabled(self, service_name: str) -> bool:
+        """Check if a service is enabled based on the enabled_services or add_services list."""
+        if self.enabled_services is not None:
+            # If specific services are enabled, only use those
+            return service_name in self.enabled_services
+        elif self.add_services is not None:
+            # If adding services, enable all services (we'll filter in enrich_artist)
+            return True
+        else:
+            # If no specific services are requested, all are enabled
+            return True
     
     def set_interactive_mode(self, enabled: bool):
         """Enable or disable interactive mode for manual artist match selection."""
@@ -219,7 +247,7 @@ class ArtistDataOrchestrator:
     
     def set_preferred_image_source(self, source: str):
         """Set preferred image source priority."""
-        valid_sources = ['apple_music', 'spotify', 'discogs', 'v1']
+        valid_sources = ['apple_music', 'spotify', 'theaudiodb', 'discogs', 'v1']
         if source.lower() in valid_sources:
             self.preferred_image_source = source.lower()
             self.logger.info(f"Set preferred image source to: {source}")
@@ -234,9 +262,14 @@ class ArtistDataOrchestrator:
         if cached_artist:
             self.logger.info(f"Found cached artist: {cached_artist.name}, discogs_id: {cached_artist.discogs_id}")
             # If not forcing refresh and artist is enriched, return cached data
-            if not force_refresh and self.db_manager.has_enriched_artist(artist_name):
+            # BUT: if selective services are enabled OR add services are specified, always re-enrich
+            if not force_refresh and self.enabled_services is None and self.add_services is None and self.db_manager.has_enriched_artist(artist_name):
                 self.logger.info(f"Using cached data for artist: {artist_name}")
                 return cached_artist
+            elif self.enabled_services is not None:
+                self.logger.info(f"Selective services enabled ({self.enabled_services}), re-enriching artist: {artist_name}")
+            elif self.add_services is not None:
+                self.logger.info(f"Adding services ({self.add_services}) to existing data for artist: {artist_name}")
         else:
             self.logger.info(f"No cached artist found for: {artist_name}")
         
@@ -268,6 +301,33 @@ class ArtistDataOrchestrator:
         # Generate Discogs URL if we have the ID but no URL
         if artist.discogs_id and not artist.discogs_url:
             artist.discogs_url = f"https://www.discogs.com/artist/{artist.discogs_id}"
+        
+        # If add_services is specified, ONLY add raw data for those services without touching anything else
+        if self.add_services is not None:
+            self.logger.info(f"Adding raw data for specified services: {self.add_services}")
+            
+            # Only add raw TheAudioDB data - don't touch any existing data
+            if "theaudiodb" in self.add_services and "theaudiodb" in self.services:
+                self.logger.info(f"Adding TheAudioDB raw data to existing artist data for {artist_name}")
+                theaudiodb_data = self._get_theaudiodb_artist_data(artist_name, artist.lastfm_mbid)
+                if theaudiodb_data:
+                    # ONLY add to raw_data - don't modify any other artist fields
+                    artist.raw_data["theaudiodb"] = theaudiodb_data
+                    self.logger.info(f"✅ Added TheAudioDB raw data for {artist_name}")
+                else:
+                    self.logger.info(f"❌ No TheAudioDB data found for {artist_name}")
+            
+            # Update timestamp
+            artist.updated_at = datetime.now()
+            
+            # Save JSON data
+            try:
+                self.image_manager.save_artist_json(artist)
+                self.logger.info(f"✅ Saved updated artist JSON for {artist_name}")
+            except Exception as e:
+                self.logger.warning(f"Failed to save artist JSON: {str(e)}")
+            
+            return artist
         
         # Enrich with Apple Music (skip image download)
         if "apple_music" in self.services:
@@ -409,6 +469,36 @@ class ArtistDataOrchestrator:
                 # If service was skipped, preserve existing Discogs data
                 self.logger.info(f"Discogs data not updated, preserving existing data for {artist_name}")
         
+        # Enrich with TheAudioDB
+        if "theaudiodb" in self.services:
+            theaudiodb_data = self._get_theaudiodb_artist_data(artist_name, artist.lastfm_mbid)
+            if theaudiodb_data:
+                artist.raw_data["theaudiodb"] = theaudiodb_data
+                
+                # Update artist fields if not already set
+                if theaudiodb_data.formed_year and not hasattr(artist, 'formed_year'):
+                    artist.formed_year = theaudiodb_data.formed_year
+                if theaudiodb_data.genre and theaudiodb_data.genre not in artist.genres:
+                    artist.genres.append(theaudiodb_data.genre)
+                if theaudiodb_data.style and theaudiodb_data.style not in artist.genres:
+                    artist.genres.append(theaudiodb_data.style)
+                if theaudiodb_data.website and not hasattr(artist, 'website'):
+                    artist.website = theaudiodb_data.website
+                if theaudiodb_data.country and not hasattr(artist, 'country'):
+                    artist.country = theaudiodb_data.country
+                
+                # Use English biography if no biography is set
+                if theaudiodb_data.biography_en and not artist.biography:
+                    artist.biography = theaudiodb_data.biography_en
+                
+                # Add TheAudioDB images
+                for img in theaudiodb_data.images:
+                    artist.add_image(img)
+            else:
+                # If service was skipped or returned no data, clear TheAudioDB metadata
+                self.logger.info(f"TheAudioDB data not available, clearing TheAudioDB metadata for {artist_name}")
+                artist.raw_data["theaudiodb"] = {}
+        
         # Download artist images with new priority logic
         self._download_artist_images(artist)
         
@@ -517,6 +607,48 @@ class ArtistDataOrchestrator:
             
         except Exception as e:
             self.logger.warning(f"Failed to get Wikipedia artist data for {artist_name}: {str(e)}")
+        
+        return None
+    
+    def _get_theaudiodb_artist_data(self, artist_name: str, musicbrainz_id: Optional[str] = None) -> Optional[ArtistTheAudioDBData]:
+        """Get TheAudioDB data for an artist."""
+        try:
+            service = self.services["theaudiodb"]
+            
+            # Try MusicBrainz ID first if available
+            if musicbrainz_id:
+                self.logger.info(f"🎵 TheAudioDB: Searching by MusicBrainz ID: {musicbrainz_id}")
+                artist_data = service.get_artist_by_musicbrainz_id(musicbrainz_id)
+                if artist_data:
+                    # Get additional data
+                    artist_id = artist_data.get("idArtist")
+                    albums = service.get_artist_albums(artist_id) if artist_id else None
+                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
+                    return service.create_artist_enrichment(artist_data, albums, mvids)
+            
+            # Fall back to name search
+            search_results = service.search_artist(artist_name)
+            
+            if self.interactive_mode:
+                selected_match = self._interactive_select_artist_match("TheAudioDB", search_results, artist_name)
+                if selected_match:
+                    artist_id = selected_match.get("idArtist")
+                    # Get additional data
+                    albums = service.get_artist_albums(artist_id) if artist_id else None
+                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
+                    return service.create_artist_enrichment(selected_match, albums, mvids)
+            else:
+                # Use first match
+                if search_results:
+                    best_match = search_results[0]
+                    artist_id = best_match.get("idArtist")
+                    # Get additional data
+                    albums = service.get_artist_albums(artist_id) if artist_id else None
+                    mvids = service.get_artist_mvids(artist_id) if artist_id else None
+                    return service.create_artist_enrichment(best_match, albums, mvids)
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to get TheAudioDB artist data for {artist_name}: {str(e)}")
         
         return None
 
@@ -684,15 +816,15 @@ class ArtistDataOrchestrator:
                 sources.append(preferred_source)
             
             # Add fallback sources in default order (excluding the preferred one)
-            default_order = ['apple_music', 'spotify', 'discogs']
+            default_order = ['apple_music', 'spotify', 'theaudiodb', 'discogs']
             for source_type in default_order:
                 if source_type != self.preferred_image_source:
                     fallback_source = self._extract_source_by_type(artist, source_type)
                     if fallback_source:
                         sources.append(fallback_source)
         else:
-            # Default priority order: Apple Music > Spotify > Discogs
-            for source_type in ['apple_music', 'spotify', 'discogs']:
+            # Default priority order: Apple Music > Spotify > TheAudioDB > Discogs
+            for source_type in ['apple_music', 'spotify', 'theaudiodb', 'discogs']:
                 source = self._extract_source_by_type(artist, source_type)
                 if source:
                     sources.append(source)
@@ -711,6 +843,8 @@ class ArtistDataOrchestrator:
             return self._extract_spotify_source(artist)
         elif source_type == 'discogs':
             return self._extract_discogs_source(artist)
+        elif source_type == 'theaudiodb':
+            return self._extract_theaudiodb_source(artist)
         return None
     
     def _extract_v1_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
@@ -853,6 +987,49 @@ class ArtistDataOrchestrator:
                 self.logger.info(f"💿 ❌ Discogs data has no images")
         else:
             self.logger.info(f"💿 ❌ No Discogs data found in raw_data")
+        return None
+    
+    def _extract_theaudiodb_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
+        """Extract TheAudioDB image source."""
+        if "theaudiodb" in artist.raw_data:
+            theaudiodb_data = artist.raw_data["theaudiodb"]
+            self.logger.info(f"🎵 TheAudioDB data found. Type: {type(theaudiodb_data)}")
+            
+            # Handle both object attributes and dictionary keys
+            theaudiodb_images = None
+            if hasattr(theaudiodb_data, "images") and theaudiodb_data.images:
+                theaudiodb_images = theaudiodb_data.images
+                self.logger.info(f"🎵 Found images as object attribute")
+            elif isinstance(theaudiodb_data, dict) and "images" in theaudiodb_data and theaudiodb_data["images"]:
+                theaudiodb_images = theaudiodb_data["images"]
+                self.logger.info(f"🎵 Found images as dictionary key")
+            
+            if theaudiodb_images:
+                # Convert Image objects to dictionaries if needed
+                images_list = []
+                for img in theaudiodb_images:
+                    if hasattr(img, "url"):
+                        # It's an Image object
+                        images_list.append({
+                            "url": img.url,
+                            "type": img.type,
+                            "width": getattr(img, "width", 1000),
+                            "height": getattr(img, "height", 1000)
+                        })
+                    elif isinstance(img, dict):
+                        # It's already a dictionary
+                        images_list.append(img)
+                
+                if images_list:
+                    self.logger.info(f"🎵 ✅ TheAudioDB images found: {len(images_list)} images")
+                    return {
+                        "type": "theaudiodb",
+                        "images": images_list
+                    }
+            else:
+                self.logger.info(f"🎵 ❌ TheAudioDB data has no images")
+        else:
+            self.logger.info(f"🎵 ❌ No TheAudioDB data found in raw_data")
         return None
     
     def _interactive_select_artist_match(self, service_name: str, search_results: Dict[str, Any], target_artist: str) -> Optional[Dict[str, Any]]:

@@ -225,3 +225,59 @@ class ArtistLastFmData:
     
     # Raw data
     raw_data: Dict[str, Any] = field(default_factory=dict)
+
+
+@dataclass
+class ArtistTheAudioDBData:
+    """TheAudioDB artist-specific data."""
+    id: Optional[str] = None
+    name: Optional[str] = None
+    
+    # Basic info
+    alternate_names: Optional[str] = None
+    formed_year: Optional[str] = None
+    born_year: Optional[str] = None
+    died_year: Optional[str] = None
+    disbanded: Optional[bool] = None
+    
+    # Music info
+    style: Optional[str] = None
+    genre: Optional[str] = None
+    mood: Optional[str] = None
+    
+    # Social media
+    website: Optional[str] = None
+    facebook: Optional[str] = None
+    twitter: Optional[str] = None
+    
+    # Biographies in multiple languages
+    biography_en: Optional[str] = None
+    biography_de: Optional[str] = None
+    biography_fr: Optional[str] = None
+    biography_it: Optional[str] = None
+    biography_es: Optional[str] = None
+    biography_pt: Optional[str] = None
+    biography_se: Optional[str] = None
+    biography_nl: Optional[str] = None
+    biography_ru: Optional[str] = None
+    biography_jp: Optional[str] = None
+    
+    # Artist details
+    gender: Optional[str] = None
+    members: Optional[str] = None
+    country: Optional[str] = None
+    country_code: Optional[str] = None
+    
+    # External IDs
+    musicbrainz_id: Optional[str] = None
+    last_fm_chart: Optional[str] = None
+    
+    # Images
+    images: List[Any] = field(default_factory=list)
+    
+    # Related data
+    albums: Optional[List[Dict[str, Any]]] = None
+    music_videos: Optional[List[Dict[str, Any]]] = None
+    
+    # Raw data
+    raw_data: Dict[str, Any] = field(default_factory=dict)

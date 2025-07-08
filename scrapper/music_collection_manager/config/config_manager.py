@@ -203,6 +203,10 @@ class ConfigManager:
         lastfm_config = self.get_section("lastfm")
         validation["lastfm"] = bool(lastfm_config.get("api_key"))
         
+        # Validate TheAudioDB config
+        theaudiodb_config = self.get_section("TheAudioDB")
+        validation["theaudiodb"] = bool(theaudiodb_config.get("api_token"))
+        
         # Wikipedia doesn't require credentials
         validation["wikipedia"] = True
         
