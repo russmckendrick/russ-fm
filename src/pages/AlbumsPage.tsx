@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { Music } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AlbumCard } from '@/components/AlbumCard';
@@ -45,6 +45,7 @@ interface AlbumsPageProps {
 export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   const { page } = useParams<{ page?: string }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   
   // Check if page parameter is a non-numeric string and redirect to album detail
   useEffect(() => {
@@ -57,9 +58,9 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   const [collection, setCollection] = useState<Album[]>([]);
   const [filteredCollection, setFilteredCollection] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedGenre, setSelectedGenre] = useState('all');
-  const [selectedYear, setSelectedYear] = useState('all');
-  const [sortBy, setSortBy] = useState('date_added');
+  const [selectedGenre, setSelectedGenre] = useState(searchParams.get('genre') || 'all');
+  const [selectedYear, setSelectedYear] = useState(searchParams.get('year') || 'all');
+  const [sortBy, setSortBy] = useState(searchParams.get('sort') || 'date_added');
   const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.albums;
@@ -94,6 +95,19 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   useEffect(() => {
     loadCollection();
   }, []);
+
+  // Update URL params when filters change
+  const updateURLParams = (newParams: Record<string, string>) => {
+    const params = new URLSearchParams(searchParams);
+    Object.entries(newParams).forEach(([key, value]) => {
+      if (value === 'all' || value === 'date_added') {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    });
+    setSearchParams(params);
+  };
 
   useEffect(() => {
     filterAndSortCollection();
@@ -248,16 +262,19 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
         sortBy={sortBy}
         setSortBy={(value) => {
           setSortBy(value);
+          updateURLParams({ sort: value });
           if (currentPage !== 1) navigate('/albums/1');
         }}
         selectedGenre={selectedGenre}
         setSelectedGenre={(value) => {
           setSelectedGenre(value);
+          updateURLParams({ genre: value });
           if (currentPage !== 1) navigate('/albums/1');
         }}
         selectedYear={selectedYear}
         setSelectedYear={(value) => {
           setSelectedYear(value);
+          updateURLParams({ year: value });
           if (currentPage !== 1) navigate('/albums/1');
         }}
         genres={getAllGenres()}

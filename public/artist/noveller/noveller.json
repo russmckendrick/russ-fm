@@ -106,6 +106,144 @@
   },
   "name": "Noveller",
   "popularity": 18,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='325642948', url='https://music.apple.com/gb/artist/noveller/325642948', name='Noveller', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/dd/cc/37/ddcc3757-b662-ba80-d890-c7aab6bd5328/mzl.mnznarsp.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '325642948', 'type': 'artists', 'href': '/v1/catalog/gb/artists/325642948', 'attributes': {'name': 'Noveller', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/dd/cc/37/ddcc3757-b662-ba80-d890-c7aab6bd5328/mzl.mnznarsp.png/{w}x{h}bb.jpg', 'bgColor': '25050c', 'textColor1': 'f9e7e3', 'textColor2': 'f1ccb1', 'textColor3': 'cebab8', 'textColor4': 'c8a490'}, 'url': 'https://music.apple.com/gb/artist/noveller/325642948'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/325642948/albums', 'data': [{'id': '1668273418', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668273418'}, {'id': '1502735485', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1502735485'}, {'id': '1667792300', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667792300'}, {'id': '1668272338', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668272338'}, {'id': '1618519217', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1618519217'}, {'id': '1775464457', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775464457'}, {'id': '1668030336', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668030336'}, {'id': '1667459811', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667459811'}, {'id': '325642940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/325642940'}, {'id': '1668093579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668093579'}, {'id': '1668042679', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668042679'}, {'id': '1502293255', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1502293255'}, {'id': '1668464841', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668464841'}, {'id': '1667946846', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667946846'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/uRJkChYeDsqC16FesFd0Tu9Ln26XTDxZOfHwu-7P1hs/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "378552",
+      "images": [
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/uRJkChYeDsqC16FesFd0Tu9Ln26XTDxZOfHwu-7P1hs/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/uRJkChYeDsqC16FesFd0Tu9Ln26XTDxZOfHwu-7P1hs/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6skNiIBoUD9wcoj8TwtCXXiNPn8__3vS-v3pQgH_jVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 384,
+          "resource_url": "https://i.discogs.com/5BbtvazWM1RMKCHUHDPFHxFpy9xHvcgDkyeh-jiBkOw/rs:fit/g:sm/q:90/h:384/w:288/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5BbtvazWM1RMKCHUHDPFHxFpy9xHvcgDkyeh-jiBkOw/rs:fit/g:sm/q:90/h:384/w:288/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Gted7W92TFh_S3deIbD64QiBW9aSGHBpdWJhSeERcF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+          "width": 288
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/9PkkmCQkrTKTk7pn3oKaBVK3mjKKkCRfI9xz_ECWb1U/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9PkkmCQkrTKTk7pn3oKaBVK3mjKKkCRfI9xz_ECWb1U/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GSSCsIYvXQNx-QjnXpfwocidjeATpZH4H4xhpx2Mjaw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/U-Feihc74gnIatq-7zl_iUivukrSv73OSkjHo-q244g/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/U-Feihc74gnIatq-7zl_iUivukrSv73OSkjHo-q244g/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/PZW7l474rjacfJk-utHhZyRqxqUtFa99n-LLXpt84DE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 749,
+          "resource_url": "https://i.discogs.com/xyNYwhX9a2B9KM-6kPD-kIAIaD_zFtzVwulZZeomCLI/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xyNYwhX9a2B9KM-6kPD-kIAIaD_zFtzVwulZZeomCLI/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/OwnhJHwUAo68WS50lAN2gkd1VL1qYly0FyCpg77A_6U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Noveller",
+      "namevariations": [
+        "Noveller(S.Lipstate)"
+      ],
+      "profile": "Noveller is the solo project of Los Angeles-based guitarist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band’s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009. Noveller has toured supporting Xiu Xiu, the Jesus Lizard, Man Forever, and Emeralds. Lipstate is currently working with Carla Bozulich (Evangelista) on an improvised duo release for No Fun Productions.\r\n\r\nIn 2008, Lipstate performed as part of the Underground at the Abrons performance series at the Abrons Arts Center on the Lower East Side of Manhattan. That December, she played at the Un Son Par Là, Music of Today festival in Nîmes, France. In March 2009, she performed in the revival of Rhys Chatham and Karole Armitage’s “Drastic-Classicism” as part of the Think Punk! program at The Kitchen in NYC. Following that performance, she joined Rhys Chatham and his cast of guitar-allstars at the Metropolitan Museum of Art for a performance of his minimalist punk classic “Guitar Trio”. Along with 199 other guitar players, Lipstate performed in Chatham’s “A Crimson Grail” for 200 guitars which debuted at Lincoln Center’s Damrosch Park in August 2009. That October, the Manhattan New Music Project and the X Initiative co-presented a performance on the rooftop of the X Initiative where Lipstate debuted a new hand-painted 16mm film loop during a live set. In November, Lipstate performed with musician/choreographer Nancy Garcia in the premiere of Garcia’s program “Be The Climb” at The Kitchen, and opened several dates for the Jesus Lizard on their European and U.S. reunion tour. Lipstate debuted her improvised guitar duo with Carla Bozulich at NYC’s The Stone in February of this year. In March 2010, Noveller toured the U.S. supporting Xiu Xiu.\r\n\r\nNo Fun Productions released her debut LP Paint on the Shadows in April 2009. Following the release, Lipstate performed at No Fun Fest at the Music Hall of Williamsburg in Brooklyn. The following September, the label released her full-length CD, Red Rainbows, and Lipstate performed at No Fun Fest Sweden in Stockholm. Also in 2009, she released a split LP with Aidan Baker (of Nadja) on the Canadian label Divorce Records.  Her latest release, Desert Fires, is available on CD via Lipstate’s own imprint, Saffron Recordings.\r\n\r\nHer short films screened at the SXSW film festival in both 2006 and 2007, and earned Lipstate the “Diamond in the Rough Cut” award for exceptional emerging filmmaker at Cinematexas 2006. Her short, Memory Scars, screened at the Reel Venus Film Festival at Anthology Film Archives in NYC in October 2008. She debuted a new short film, Interior Variations, at the New Museum in NYC as part of No Fun: Infinite Sound and Image in May.The film also screened at the 12th Kyoto International Student Film & Video Festival in Japan in November. Lipstate’s short film works were showcased in the Women of NY Cinema screening as part of the 2009 NY Eye + Ear Festival at the 92Y Tribeca. Interior Variations was presented as part of the ‘New York Avant Cinema Series’ at the 23rd Singapore International Film Festival in Singapore in April 2010.\r\n\r\nShe has previously performed as a member of Cold Cave, Parts & Labor, One Umbrella and Sands.\r\n\r\nLipstate received a BS in Radio-Television-Film at the University of Texas at Austin in December 2006.\r\n",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 907089,
+            "name": "Sarah Lipstate",
+            "resource_url": "https://api.discogs.com/artists/907089",
+            "thumbnail_url": "https://i.discogs.com/dgB1gIi6KhVGR54P2LBsDWVT0AJ3d1MJYiB_YkQl7xA/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkwNzA4/OS0xNjA4Njc0NTA3/LTg3NzguanBlZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 378552,
+        "images": [
+          {
+            "height": 401,
+            "resource_url": "https://i.discogs.com/uRJkChYeDsqC16FesFd0Tu9Ln26XTDxZOfHwu-7P1hs/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/uRJkChYeDsqC16FesFd0Tu9Ln26XTDxZOfHwu-7P1hs/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/6skNiIBoUD9wcoj8TwtCXXiNPn8__3vS-v3pQgH_jVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 384,
+            "resource_url": "https://i.discogs.com/5BbtvazWM1RMKCHUHDPFHxFpy9xHvcgDkyeh-jiBkOw/rs:fit/g:sm/q:90/h:384/w:288/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5BbtvazWM1RMKCHUHDPFHxFpy9xHvcgDkyeh-jiBkOw/rs:fit/g:sm/q:90/h:384/w:288/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/Gted7W92TFh_S3deIbD64QiBW9aSGHBpdWJhSeERcF8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMjc4Nzg3OTMx/LmpwZWc.jpeg",
+            "width": 288
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/9PkkmCQkrTKTk7pn3oKaBVK3mjKKkCRfI9xz_ECWb1U/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9PkkmCQkrTKTk7pn3oKaBVK3mjKKkCRfI9xz_ECWb1U/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/GSSCsIYvXQNx-QjnXpfwocidjeATpZH4H4xhpx2Mjaw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4NzMx/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/U-Feihc74gnIatq-7zl_iUivukrSv73OSkjHo-q244g/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/U-Feihc74gnIatq-7zl_iUivukrSv73OSkjHo-q244g/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/PZW7l474rjacfJk-utHhZyRqxqUtFa99n-LLXpt84DE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xMTU2NTU4Nzgy/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 749,
+            "resource_url": "https://i.discogs.com/xyNYwhX9a2B9KM-6kPD-kIAIaD_zFtzVwulZZeomCLI/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xyNYwhX9a2B9KM-6kPD-kIAIaD_zFtzVwulZZeomCLI/rs:fit/g:sm/q:90/h:749/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/OwnhJHwUAo68WS50lAN2gkd1VL1qYly0FyCpg77A_6U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjU1MTc3NTY3/LTkyODQuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Noveller",
+        "namevariations": [
+          "Noveller(S.Lipstate)"
+        ],
+        "profile": "Noveller is the solo project of Los Angeles-based guitarist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band’s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009. Noveller has toured supporting Xiu Xiu, the Jesus Lizard, Man Forever, and Emeralds. Lipstate is currently working with Carla Bozulich (Evangelista) on an improvised duo release for No Fun Productions.\r\n\r\nIn 2008, Lipstate performed as part of the Underground at the Abrons performance series at the Abrons Arts Center on the Lower East Side of Manhattan. That December, she played at the Un Son Par Là, Music of Today festival in Nîmes, France. In March 2009, she performed in the revival of Rhys Chatham and Karole Armitage’s “Drastic-Classicism” as part of the Think Punk! program at The Kitchen in NYC. Following that performance, she joined Rhys Chatham and his cast of guitar-allstars at the Metropolitan Museum of Art for a performance of his minimalist punk classic “Guitar Trio”. Along with 199 other guitar players, Lipstate performed in Chatham’s “A Crimson Grail” for 200 guitars which debuted at Lincoln Center’s Damrosch Park in August 2009. That October, the Manhattan New Music Project and the X Initiative co-presented a performance on the rooftop of the X Initiative where Lipstate debuted a new hand-painted 16mm film loop during a live set. In November, Lipstate performed with musician/choreographer Nancy Garcia in the premiere of Garcia’s program “Be The Climb” at The Kitchen, and opened several dates for the Jesus Lizard on their European and U.S. reunion tour. Lipstate debuted her improvised guitar duo with Carla Bozulich at NYC’s The Stone in February of this year. In March 2010, Noveller toured the U.S. supporting Xiu Xiu.\r\n\r\nNo Fun Productions released her debut LP Paint on the Shadows in April 2009. Following the release, Lipstate performed at No Fun Fest at the Music Hall of Williamsburg in Brooklyn. The following September, the label released her full-length CD, Red Rainbows, and Lipstate performed at No Fun Fest Sweden in Stockholm. Also in 2009, she released a split LP with Aidan Baker (of Nadja) on the Canadian label Divorce Records.  Her latest release, Desert Fires, is available on CD via Lipstate’s own imprint, Saffron Recordings.\r\n\r\nHer short films screened at the SXSW film festival in both 2006 and 2007, and earned Lipstate the “Diamond in the Rough Cut” award for exceptional emerging filmmaker at Cinematexas 2006. Her short, Memory Scars, screened at the Reel Venus Film Festival at Anthology Film Archives in NYC in October 2008. She debuted a new short film, Interior Variations, at the New Museum in NYC as part of No Fun: Infinite Sound and Image in May.The film also screened at the 12th Kyoto International Student Film & Video Festival in Japan in November. Lipstate’s short film works were showcased in the Women of NY Cinema screening as part of the 2009 NY Eye + Ear Festival at the 92Y Tribeca. Interior Variations was presented as part of the ‘New York Avant Cinema Series’ at the 23rd Singapore International Film Festival in Singapore in April 2010.\r\n\r\nShe has previously performed as a member of Cold Cave, Parts & Labor, One Umbrella and Sands.\r\n\r\nLipstate received a BS in Radio-Television-Film at the University of Texas at Austin in December 2006.\r\n",
+        "realname": "Sarah Lipstate",
+        "releases_url": "https://api.discogs.com/artists/378552/releases",
+        "resource_url": "https://api.discogs.com/artists/378552",
+        "uri": "https://www.discogs.com/artist/378552-Noveller",
+        "urls": [
+          "http://www.sarahlipstate.com/",
+          "http://www.myspace.com/noveller",
+          "https://noveller.bandcamp.com/",
+          "https://www.facebook.com/novellermusic/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/378552",
+      "thumb": "https://i.discogs.com/6skNiIBoUD9wcoj8TwtCXXiNPn8__3vS-v3pQgH_jVc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODU1/Mi0xNjA2OTM1NDIy/LTg1MTUuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/378552-Noveller",
+      "urls": [
+        "http://www.sarahlipstate.com/",
+        "http://www.myspace.com/noveller",
+        "https://noveller.bandcamp.com/",
+        "https://www.facebook.com/novellermusic/"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Noveller', url='https://www.last.fm/music/Noveller', mbid='7d57e5b3-34a7-4862-973e-7cec0892f576', listeners=52193, playcount=702170, bio_summary='Noveller is the solo project of Brooklyn-based sound artist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band\\'s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009.\\n\\nLast year <a href=\"https://www.last.fm/music/Noveller\">Read more on Last.fm</a>', bio_content='Noveller is the solo project of Brooklyn-based sound artist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band\\'s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009.\\n\\nLast year, Lipstate performed as part of the Underground at the Abrons performance series at the Abrons Arts Center on the Lower East Side of Manhattan. In December, she played at the Un Son Par Là, Music of Today festival in Nîmes, France. She recently performed in the revival of Rhys Chatham and Karole Armitage\\'s \"Drastic-Classicism\" as part of the Think Punk! program at The Kitchen in NYC. Following that performance, she joined Rhys Chatham and his cast of guitar-allstars at the Metropolitan Museum of Art for a performance of his minimalist punk classic \"Guitar Trio\". Along with 199 other guitar players, Lipstate performed in Chatham\\'s \"A Crimson Grail\" for 200 guitars which debuted at Lincoln Center\\'s Damrosch Park in August 2009.\\n\\nIn April, No Fun Productions released her debut LP Paint on the Shadows. Following the release, Lipstate performed at No Fun Fest at the Music Hall of Williamsburg in Brooklyn. In September, the label released her full-length CD follow-up titled Red Rainbows and Lipstate performed at No Fun Fest Sweden in Stockholm.\\n\\nNoveller recently accompanied St. Vincent from 2013-2014 in over two dozen dates of St. Vincent\\'s Digital Witness tour.\\n\\nHer short films screened at the SXSW film festival in both 2006 and 2007, and earned Lipstate the \"Diamond in the Rough Cut\" award for exceptional emerging filmmaker at Cinematexas 2006. Her short, Memory Scars, screened at the Reel Venus Film Festival at Anthology Film Archives in NYC in October 2008. She debuted a new short film, Interior Variations, at the New Museum in NYC as part of No Fun: Infinite Sound and Image in May.\\n\\nShe has previously performed as a member of Cold Cave, Parts & Labor, One Umbrella and Sands.\\n\\nLipstate received a BS in Radio-Television-Film at the University of Texas at Austin in December 2006, and currently resides in the Bushwick neighborhood of Brooklyn, NY, USA. \\n\\nwww.sarahlipstate.com\\nwww.myspace.com/noveller <a href=\"https://www.last.fm/music/Noveller\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['ambient', 'drone', 'experimental', 'noise', 'minimal'], similar_artists=[{'name': 'Emeralds', 'url': 'https://www.last.fm/music/Emeralds'}, {'name': 'Infinite Body', 'url': 'https://www.last.fm/music/Infinite+Body'}, {'name': 'Aidan Baker', 'url': 'https://www.last.fm/music/Aidan+Baker'}, {'name': 'Jefre Cantu-Ledesma', 'url': 'https://www.last.fm/music/Jefre+Cantu-Ledesma'}, {'name': 'Steve Hauschildt', 'url': 'https://www.last.fm/music/Steve+Hauschildt'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Noveller', 'mbid': '7d57e5b3-34a7-4862-973e-7cec0892f576', 'url': 'https://www.last.fm/music/Noveller', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '52193', 'playcount': '702170'}, 'similar': {'artist': [{'name': 'Emeralds', 'url': 'https://www.last.fm/music/Emeralds', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Infinite Body', 'url': 'https://www.last.fm/music/Infinite+Body', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Aidan Baker', 'url': 'https://www.last.fm/music/Aidan+Baker', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jefre Cantu-Ledesma', 'url': 'https://www.last.fm/music/Jefre+Cantu-Ledesma', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Steve Hauschildt', 'url': 'https://www.last.fm/music/Steve+Hauschildt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'drone', 'url': 'https://www.last.fm/tag/drone'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'noise', 'url': 'https://www.last.fm/tag/noise'}, {'name': 'minimal', 'url': 'https://www.last.fm/tag/minimal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Noveller/+wiki'}}, 'published': '20 Aug 2008, 16:38', 'summary': 'Noveller is the solo project of Brooklyn-based sound artist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band\\'s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009.\\n\\nLast year <a href=\"https://www.last.fm/music/Noveller\">Read more on Last.fm</a>', 'content': 'Noveller is the solo project of Brooklyn-based sound artist and filmmaker Sarah Lipstate. She has performed in Rhys Chatham’s Guitar Army, and as a member of Glenn Branca’s 100 guitar ensemble. In March 2008, Lipstate joined Brooklyn art-rock outfit Parts & Labor as their guitarist. She contributed to the band\\'s critically-acclaimed release Receivers and completed several U.S. and European tours before leaving the band in July 2009.\\n\\nLast year, Lipstate performed as part of the Underground at the Abrons performance series at the Abrons Arts Center on the Lower East Side of Manhattan. In December, she played at the Un Son Par Là, Music of Today festival in Nîmes, France. She recently performed in the revival of Rhys Chatham and Karole Armitage\\'s \"Drastic-Classicism\" as part of the Think Punk! program at The Kitchen in NYC. Following that performance, she joined Rhys Chatham and his cast of guitar-allstars at the Metropolitan Museum of Art for a performance of his minimalist punk classic \"Guitar Trio\". Along with 199 other guitar players, Lipstate performed in Chatham\\'s \"A Crimson Grail\" for 200 guitars which debuted at Lincoln Center\\'s Damrosch Park in August 2009.\\n\\nIn April, No Fun Productions released her debut LP Paint on the Shadows. Following the release, Lipstate performed at No Fun Fest at the Music Hall of Williamsburg in Brooklyn. In September, the label released her full-length CD follow-up titled Red Rainbows and Lipstate performed at No Fun Fest Sweden in Stockholm.\\n\\nNoveller recently accompanied St. Vincent from 2013-2014 in over two dozen dates of St. Vincent\\'s Digital Witness tour.\\n\\nHer short films screened at the SXSW film festival in both 2006 and 2007, and earned Lipstate the \"Diamond in the Rough Cut\" award for exceptional emerging filmmaker at Cinematexas 2006. Her short, Memory Scars, screened at the Reel Venus Film Festival at Anthology Film Archives in NYC in October 2008. She debuted a new short film, Interior Variations, at the New Museum in NYC as part of No Fun: Infinite Sound and Image in May.\\n\\nShe has previously performed as a member of Cold Cave, Parts & Labor, One Umbrella and Sands.\\n\\nLipstate received a BS in Radio-Television-Film at the University of Texas at Austin in December 2006, and currently resides in the Bushwick neighborhood of Brooklyn, NY, USA. \\n\\nwww.sarahlipstate.com\\nwww.myspace.com/noveller <a href=\"https://www.last.fm/music/Noveller\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='3MqYHtX48uiYNf0gPaNBW2', url='https://open.spotify.com/artist/3MqYHtX48uiYNf0gPaNBW2', name='Noveller', popularity=18, followers=12964, genres=['drone', 'ambient'], images=[{'url': 'https://i.scdn.co/image/ab6772690000c46ccdd2f74ec48701320f6c40f7', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd22cdd2f74ec48701320f6c40f7', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac3cdd2f74ec48701320f6c40f7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f74cdd2f74ec48701320f6c40f7', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/3MqYHtX48uiYNf0gPaNBW2'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3MqYHtX48uiYNf0gPaNBW2'}, 'followers': {'href': None, 'total': 12964}, 'genres': ['drone', 'ambient'], 'href': 'https://api.spotify.com/v1/artists/3MqYHtX48uiYNf0gPaNBW2', 'id': '3MqYHtX48uiYNf0gPaNBW2', 'images': [{'url': 'https://i.scdn.co/image/ab6772690000c46ccdd2f74ec48701320f6c40f7', 'height': 1000, 'width': 1000}, {'url': 'https://i.scdn.co/image/ab6772690000dd22cdd2f74ec48701320f6c40f7', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6772690000bac3cdd2f74ec48701320f6c40f7', 'height': 200, 'width': 200}, {'url': 'https://i.scdn.co/image/ab67726900008f74cdd2f74ec48701320f6c40f7', 'height': 64, 'width': 64}], 'name': 'Noveller', 'popularity': 18, 'type': 'artist', 'uri': 'spotify:artist:3MqYHtX48uiYNf0gPaNBW2'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features125/v4/dd/cc/37/ddcc3757-b662-ba80-d890-c7aab6bd5328/mzl.mnznarsp.png/2000x2000bb.jpg",
@@ -279,10 +417,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 52190,
+      "listeners": 52193,
       "mbid": "7d57e5b3-34a7-4862-973e-7cec0892f576",
       "name": "Noveller",
-      "playcount": 702062,
+      "playcount": 702170,
       "similar_artists": [
         {
           "name": "Emeralds",
@@ -346,10 +484,11 @@
       "name": "Noveller",
       "popularity": 18,
       "url": "https://open.spotify.com/artist/3MqYHtX48uiYNf0gPaNBW2"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "3MqYHtX48uiYNf0gPaNBW2",
   "spotify_url": "https://open.spotify.com/artist/3MqYHtX48uiYNf0gPaNBW2",
-  "updated_at": "2025-07-08T09:47:11.309444",
+  "updated_at": "2025-07-08T20:45:09.756547",
   "wikipedia_url": null
 }
