@@ -102,6 +102,385 @@
   },
   "name": "The Nightingales",
   "popularity": 17,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='79419157', url='https://music.apple.com/gb/artist/the-nightingales/79419157', name='The Nightingales', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/89/72/d5/8972d58f-2f7d-6cc9-750a-7600ecb657ed/pr_source.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '79419157', 'type': 'artists', 'href': '/v1/catalog/gb/artists/79419157', 'attributes': {'name': 'The Nightingales', 'genreNames': ['Alternative'], 'artwork': {'width': 784, 'height': 784, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/89/72/d5/8972d58f-2f7d-6cc9-750a-7600ecb657ed/pr_source.png/{w}x{h}bb.jpg', 'bgColor': 'f0f0f0', 'textColor1': '1e0204', 'textColor2': '30301d', 'textColor3': '483233', 'textColor4': '565647'}, 'url': 'https://music.apple.com/gb/artist/the-nightingales/79419157'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/79419157/albums', 'next': '/v1/catalog/gb/artists/79419157/albums?offset=25', 'data': [{'id': '997895839', 'type': 'albums', 'href': '/v1/catalog/gb/albums/997895839'}, {'id': '1436179486', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1436179486'}, {'id': '268771095', 'type': 'albums', 'href': '/v1/catalog/gb/albums/268771095'}, {'id': '1648827642', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1648827642'}, {'id': '1667979389', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667979389'}, {'id': '1668149387', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668149387'}, {'id': '1789824259', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1789824259'}, {'id': '1667308626', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667308626'}, {'id': '1667759821', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667759821'}, {'id': '1503048597', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1503048597'}, {'id': '1667376145', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667376145'}, {'id': '1169894252', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169894252'}, {'id': '1667373656', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1667373656'}, {'id': '1285097013', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1285097013'}, {'id': '303498761', 'type': 'albums', 'href': '/v1/catalog/gb/albums/303498761'}, {'id': '1192302021', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1192302021'}, {'id': '1377080208', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1377080208'}, {'id': '997882444', 'type': 'albums', 'href': '/v1/catalog/gb/albums/997882444'}, {'id': '92732377', 'type': 'albums', 'href': '/v1/catalog/gb/albums/92732377'}, {'id': '1668188094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1668188094'}, {'id': '288707813', 'type': 'albums', 'href': '/v1/catalog/gb/albums/288707813'}, {'id': '251430759', 'type': 'albums', 'href': '/v1/catalog/gb/albums/251430759'}, {'id': '277666883', 'type': 'albums', 'href': '/v1/catalog/gb/albums/277666883'}, {'id': '289322082', 'type': 'albums', 'href': '/v1/catalog/gb/albums/289322082'}, {'id': '159022648', 'type': 'albums', 'href': '/v1/catalog/gb/albums/159022648'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/ZnvynMU96Yrt8S_-HCHh6MASQQDh9-jGw00s6D-YjzM/rs:fit/g:sm/q:90/h:262/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "130833",
+      "images": [
+        {
+          "height": 262,
+          "resource_url": "https://i.discogs.com/ZnvynMU96Yrt8S_-HCHh6MASQQDh9-jGw00s6D-YjzM/rs:fit/g:sm/q:90/h:262/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ZnvynMU96Yrt8S_-HCHh6MASQQDh9-jGw00s6D-YjzM/rs:fit/g:sm/q:90/h:262/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fQi1PMZWAdrqOr1ohwFD52jAVJ1ePRSdsNLFFzbgPQo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+          "width": 350
+        },
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/od6Sh4Npol15rXZvLoI0hhOOZAOxYUKI-F0IBp-QRPw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/od6Sh4Npol15rXZvLoI0hhOOZAOxYUKI-F0IBp-QRPw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/zQgp5LxPYmVmesnZ8GzW_Zdy08j1LzUQn50SwttUkTQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/l_dwaM4PSBmhm-4wF--SOpmdur2c-uhvLc4vAiImmN0/rs:fit/g:sm/q:90/h:225/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/l_dwaM4PSBmhm-4wF--SOpmdur2c-uhvLc4vAiImmN0/rs:fit/g:sm/q:90/h:225/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/2g8y_8t-BE28G-qkHIhOkwDGSx880kBcbultsL2FIYA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+          "width": 300
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/cr-LrbSLdOa8MXjiEwvX2G3F9CuLCNQzrStIb5YYx-g/rs:fit/g:sm/q:90/h:369/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/cr-LrbSLdOa8MXjiEwvX2G3F9CuLCNQzrStIb5YYx-g/rs:fit/g:sm/q:90/h:369/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/sMxI2fz0PmXewSG7lJVwBxar9S-F3UBiQXWwXxGkIeo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+          "width": 463
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 292345,
+          "name": "Robert Lloyd",
+          "resource_url": "https://api.discogs.com/artists/292345",
+          "thumbnail_url": "https://i.discogs.com/a7lLkENYZqrunmxZT8jxwJ6ZcVnpMrZFtwi3KfzbdzQ/rs:fit/g:sm/q:40/h:600/w:541/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MjM0/NS0xNDI4NzYwODA2/LTM4OTYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 534898,
+          "name": "Nick Beales",
+          "resource_url": "https://api.discogs.com/artists/534898",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 601946,
+          "name": "Andy Lloyd (2)",
+          "resource_url": "https://api.discogs.com/artists/601946",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 601947,
+          "name": "Paul Apperley",
+          "resource_url": "https://api.discogs.com/artists/601947",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 601954,
+          "name": "John Nester",
+          "resource_url": "https://api.discogs.com/artists/601954",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 687072,
+          "name": "Peter Byrchmore",
+          "resource_url": "https://api.discogs.com/artists/687072",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 722409,
+          "name": "Howard Jenner",
+          "resource_url": "https://api.discogs.com/artists/722409",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 722410,
+          "name": "Maria Smith",
+          "resource_url": "https://api.discogs.com/artists/722410",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 722412,
+          "name": "Ron Collins",
+          "resource_url": "https://api.discogs.com/artists/722412",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 722413,
+          "name": "Eamonn Duffy",
+          "resource_url": "https://api.discogs.com/artists/722413",
+          "thumbnail_url": "https://i.discogs.com/PCi_Cs0h9ib86WyzTty9syIzvJ8IHdXBRLwnRmbmnzI/rs:fit/g:sm/q:40/h:684/w:313/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyMjQx/My0xNTEwOTk3ODkx/LTgwOTAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 759741,
+          "name": "Alan Apperley",
+          "resource_url": "https://api.discogs.com/artists/759741",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 811222,
+          "name": "Andreas Schmid",
+          "resource_url": "https://api.discogs.com/artists/811222",
+          "thumbnail_url": "https://i.discogs.com/WA8iX7qopp3kWofxawiOUqKtuzoxOunomx69hXkzzYU/rs:fit/g:sm/q:40/h:200/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxMTIy/Mi0xNDAwMjQyMzc2/LTc0NTkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 3512794,
+          "name": "John Roberts (12)",
+          "resource_url": "https://api.discogs.com/artists/3512794",
+          "thumbnail_url": "https://i.discogs.com/FTJOns3OFwbNjrTC-OAFgEQz_RQbgit60zyx0NhjXZ8/rs:fit/g:sm/q:40/h:681/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTI3/OTQtMTQyNzIxOTQ5/MC01ODc5LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 3773574,
+          "name": "Nick Blakey",
+          "resource_url": "https://api.discogs.com/artists/3773574",
+          "thumbnail_url": "https://i.discogs.com/SwX5nyxSEAwEmthVAeC9wU3AnpZ3bIpXRAl52o8aZDk/rs:fit/g:sm/q:40/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NzM1/NzQtMTU5ODM4MDI1/NS0xNDY5LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 3797275,
+          "name": "Fliss Kitson",
+          "resource_url": "https://api.discogs.com/artists/3797275",
+          "thumbnail_url": "https://i.discogs.com/A__OGe9wVG_XgnkXZben1gEojdIMqQTz0WUR42szMpU/rs:fit/g:sm/q:40/h:566/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3OTcy/NzUtMTU4NzY1OTA5/My01MjI1LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 4898775,
+          "name": "Steve Hawkins (7)",
+          "resource_url": "https://api.discogs.com/artists/4898775",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5332463,
+          "name": "James Smith (38)",
+          "resource_url": "https://api.discogs.com/artists/5332463",
+          "thumbnail_url": "https://i.discogs.com/NWS_K-I2cVnpRKHx8-b7UYM7hNG-X3p9Jmz-ji8xmmM/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzI0/NjMtMTc1MDM2MDIw/OC0zNzA2LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 12012811,
+          "name": "Steven John Stepien",
+          "resource_url": "https://api.discogs.com/artists/12012811",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "The Nightingales",
+      "namevariations": [
+        "Gales",
+        "Nightingales",
+        "The Gales"
+      ],
+      "profile": "English post-punk band from Birmingham, UK.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 629103,
+            "name": "The Vindaloo Summer Special",
+            "resource_url": "https://api.discogs.com/artists/629103",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 130833,
+        "images": [
+          {
+            "height": 262,
+            "resource_url": "https://i.discogs.com/ZnvynMU96Yrt8S_-HCHh6MASQQDh9-jGw00s6D-YjzM/rs:fit/g:sm/q:90/h:262/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/ZnvynMU96Yrt8S_-HCHh6MASQQDh9-jGw00s6D-YjzM/rs:fit/g:sm/q:90/h:262/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/fQi1PMZWAdrqOr1ohwFD52jAVJ1ePRSdsNLFFzbgPQo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+            "width": 350
+          },
+          {
+            "height": 428,
+            "resource_url": "https://i.discogs.com/od6Sh4Npol15rXZvLoI0hhOOZAOxYUKI-F0IBp-QRPw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/od6Sh4Npol15rXZvLoI0hhOOZAOxYUKI-F0IBp-QRPw/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/zQgp5LxPYmVmesnZ8GzW_Zdy08j1LzUQn50SwttUkTQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDAwMjQyOTc0/LTQyMDYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 225,
+            "resource_url": "https://i.discogs.com/l_dwaM4PSBmhm-4wF--SOpmdur2c-uhvLc4vAiImmN0/rs:fit/g:sm/q:90/h:225/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/l_dwaM4PSBmhm-4wF--SOpmdur2c-uhvLc4vAiImmN0/rs:fit/g:sm/q:90/h:225/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/2g8y_8t-BE28G-qkHIhOkwDGSx880kBcbultsL2FIYA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMTk0OTc0ODY3/LmpwZWc.jpeg",
+            "width": 300
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/cr-LrbSLdOa8MXjiEwvX2G3F9CuLCNQzrStIb5YYx-g/rs:fit/g:sm/q:90/h:369/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/cr-LrbSLdOa8MXjiEwvX2G3F9CuLCNQzrStIb5YYx-g/rs:fit/g:sm/q:90/h:369/w:463/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/sMxI2fz0PmXewSG7lJVwBxar9S-F3UBiQXWwXxGkIeo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xMjg2MzA4NDM5/LmpwZWc.jpeg",
+            "width": 463
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 292345,
+            "name": "Robert Lloyd",
+            "resource_url": "https://api.discogs.com/artists/292345",
+            "thumbnail_url": "https://i.discogs.com/a7lLkENYZqrunmxZT8jxwJ6ZcVnpMrZFtwi3KfzbdzQ/rs:fit/g:sm/q:40/h:600/w:541/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5MjM0/NS0xNDI4NzYwODA2/LTM4OTYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 534898,
+            "name": "Nick Beales",
+            "resource_url": "https://api.discogs.com/artists/534898",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 601946,
+            "name": "Andy Lloyd (2)",
+            "resource_url": "https://api.discogs.com/artists/601946",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 601947,
+            "name": "Paul Apperley",
+            "resource_url": "https://api.discogs.com/artists/601947",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 601954,
+            "name": "John Nester",
+            "resource_url": "https://api.discogs.com/artists/601954",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 687072,
+            "name": "Peter Byrchmore",
+            "resource_url": "https://api.discogs.com/artists/687072",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 722409,
+            "name": "Howard Jenner",
+            "resource_url": "https://api.discogs.com/artists/722409",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 722410,
+            "name": "Maria Smith",
+            "resource_url": "https://api.discogs.com/artists/722410",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 722412,
+            "name": "Ron Collins",
+            "resource_url": "https://api.discogs.com/artists/722412",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 722413,
+            "name": "Eamonn Duffy",
+            "resource_url": "https://api.discogs.com/artists/722413",
+            "thumbnail_url": "https://i.discogs.com/PCi_Cs0h9ib86WyzTty9syIzvJ8IHdXBRLwnRmbmnzI/rs:fit/g:sm/q:40/h:684/w:313/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcyMjQx/My0xNTEwOTk3ODkx/LTgwOTAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 759741,
+            "name": "Alan Apperley",
+            "resource_url": "https://api.discogs.com/artists/759741",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 811222,
+            "name": "Andreas Schmid",
+            "resource_url": "https://api.discogs.com/artists/811222",
+            "thumbnail_url": "https://i.discogs.com/WA8iX7qopp3kWofxawiOUqKtuzoxOunomx69hXkzzYU/rs:fit/g:sm/q:40/h:200/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxMTIy/Mi0xNDAwMjQyMzc2/LTc0NTkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 3512794,
+            "name": "John Roberts (12)",
+            "resource_url": "https://api.discogs.com/artists/3512794",
+            "thumbnail_url": "https://i.discogs.com/FTJOns3OFwbNjrTC-OAFgEQz_RQbgit60zyx0NhjXZ8/rs:fit/g:sm/q:40/h:681/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MTI3/OTQtMTQyNzIxOTQ5/MC01ODc5LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 3773574,
+            "name": "Nick Blakey",
+            "resource_url": "https://api.discogs.com/artists/3773574",
+            "thumbnail_url": "https://i.discogs.com/SwX5nyxSEAwEmthVAeC9wU3AnpZ3bIpXRAl52o8aZDk/rs:fit/g:sm/q:40/h:394/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NzM1/NzQtMTU5ODM4MDI1/NS0xNDY5LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 3797275,
+            "name": "Fliss Kitson",
+            "resource_url": "https://api.discogs.com/artists/3797275",
+            "thumbnail_url": "https://i.discogs.com/A__OGe9wVG_XgnkXZben1gEojdIMqQTz0WUR42szMpU/rs:fit/g:sm/q:40/h:566/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3OTcy/NzUtMTU4NzY1OTA5/My01MjI1LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 4898775,
+            "name": "Steve Hawkins (7)",
+            "resource_url": "https://api.discogs.com/artists/4898775",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5332463,
+            "name": "James Smith (38)",
+            "resource_url": "https://api.discogs.com/artists/5332463",
+            "thumbnail_url": "https://i.discogs.com/NWS_K-I2cVnpRKHx8-b7UYM7hNG-X3p9Jmz-ji8xmmM/rs:fit/g:sm/q:40/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzI0/NjMtMTc1MDM2MDIw/OC0zNzA2LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 12012811,
+            "name": "Steven John Stepien",
+            "resource_url": "https://api.discogs.com/artists/12012811",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "The Nightingales",
+        "namevariations": [
+          "Gales",
+          "Nightingales",
+          "The Gales"
+        ],
+        "profile": "English post-punk band from Birmingham, UK.",
+        "releases_url": "https://api.discogs.com/artists/130833/releases",
+        "resource_url": "https://api.discogs.com/artists/130833",
+        "uri": "https://www.discogs.com/artist/130833-The-Nightingales",
+        "urls": [
+          "http://www.thenightingales.org.uk/",
+          "https://en.wikipedia.org/wiki/The_Nightingales",
+          "https://thenightingalesuk.bandcamp.com/music"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/130833",
+      "thumb": "https://i.discogs.com/fQi1PMZWAdrqOr1ohwFD52jAVJ1ePRSdsNLFFzbgPQo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMDgz/My0xNDg2MTIyODY4/LTg5NjEuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/130833-The-Nightingales",
+      "urls": [
+        "http://www.thenightingales.org.uk/",
+        "https://en.wikipedia.org/wiki/The_Nightingales",
+        "https://thenightingalesuk.bandcamp.com/music"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='The Nightingales', url='https://www.last.fm/music/The+Nightingales', mbid='c668b9a0-7f99-4b14-80b8-45e35a49363d', listeners=21848, playcount=174327, bio_summary='The Nightingales refers to at least three artists:\\n\\n1) A Birmingham, UK post-punk / alternative band (now known as Nightingales), formed in 1979.\\n2) A soul group (aka Ollie & The Nightingales).\\n3) A Finnish band.\\n\\n1) A Birmingham, UK post-punk / alternative band, formed by former members of the city\\'s original punk group The Prefects, in November 1979. With an ever fluctuating line up, based around lyricist/singer Robert Lloyd, the band recorded a bunch of singles <a href=\"https://www.last.fm/music/The+Nightingales\">Read more on Last.fm</a>', bio_content='The Nightingales refers to at least three artists:\\n\\n1) A Birmingham, UK post-punk / alternative band (now known as Nightingales), formed in 1979.\\n2) A soul group (aka Ollie & The Nightingales).\\n3) A Finnish band.\\n\\n1) A Birmingham, UK post-punk / alternative band, formed by former members of the city\\'s original punk group The Prefects, in November 1979. With an ever fluctuating line up, based around lyricist/singer Robert Lloyd, the band recorded a bunch of singles, three albums and many radio sessions for John Peel, before it stopped working in 1987. \\n\\nFollowing occasional reformations, in 2004 Lloyd re-started The Nightingales. Since then they have released five 7\" vinyl singles and three albums (plus two live albums), toured the UK, mainland Europe and USA several times and recorded numerous radio sessions in England and America. \\n\\nIn March 08 the group recorded the album \"Insult To Injury\" with Jochen Irmler and Andreas Schmid at the Faust Studio in Scheer, Germany. This record, considered the \\'Gales best yet, was released in February 2009 on the Klangbad label. \\n\"The Lost Plot\" - the follow up album to \"Insult\" - was again recorded with Irmler in August \\'09 but the group have since been dropped by Klangbad and so this record is currently without a release plan.\\n\\nThe group will probably be touring Germany and England and hopefully returning to the US in 2011. Either way, they will be recording another album - which will actually get released - before too long. \\n\\nAfter several changes since reforming the group\\'s current line up features Lloyd, original Prefects guitarist Alan Apperley, ex Pram drummer Daren \\'The Dazzler\\' Garratt, Andi Schmid on bass and (former teen) guitar sensation Matt Wood plus, whenever possible, gorgeous guitarist Christine Edwards (from Christy & Emily) and, sometimes, some combination of bassoonist Katherine Young, ex Violet Violet drummer Fliss Kitson, Emily Manzo on keyboards and either Sanne Richter or Kate Louise Armitage on vocals. <a href=\"https://www.last.fm/music/The+Nightingales\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-punk', 'seen live', 'punk', 'John Peel', 'alternative'], similar_artists=[{'name': 'Blue Orchids', 'url': 'https://www.last.fm/music/Blue+Orchids'}, {'name': 'The Fall', 'url': 'https://www.last.fm/music/The+Fall'}, {'name': 'Julian Cope', 'url': 'https://www.last.fm/music/Julian+Cope'}, {'name': 'The Mekons', 'url': 'https://www.last.fm/music/The+Mekons'}, {'name': 'Josef K', 'url': 'https://www.last.fm/music/Josef+K'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Nightingales', 'mbid': 'c668b9a0-7f99-4b14-80b8-45e35a49363d', 'url': 'https://www.last.fm/music/The+Nightingales', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '21848', 'playcount': '174327'}, 'similar': {'artist': [{'name': 'Blue Orchids', 'url': 'https://www.last.fm/music/Blue+Orchids', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Fall', 'url': 'https://www.last.fm/music/The+Fall', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Julian Cope', 'url': 'https://www.last.fm/music/Julian+Cope', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Mekons', 'url': 'https://www.last.fm/music/The+Mekons', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Josef K', 'url': 'https://www.last.fm/music/Josef+K', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'punk', 'url': 'https://www.last.fm/tag/punk'}, {'name': 'John Peel', 'url': 'https://www.last.fm/tag/John+Peel'}, {'name': 'alternative', 'url': 'https://www.last.fm/tag/alternative'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Nightingales/+wiki'}}, 'published': '09 Jul 2006, 18:21', 'summary': 'The Nightingales refers to at least three artists:\\n\\n1) A Birmingham, UK post-punk / alternative band (now known as Nightingales), formed in 1979.\\n2) A soul group (aka Ollie & The Nightingales).\\n3) A Finnish band.\\n\\n1) A Birmingham, UK post-punk / alternative band, formed by former members of the city\\'s original punk group The Prefects, in November 1979. With an ever fluctuating line up, based around lyricist/singer Robert Lloyd, the band recorded a bunch of singles <a href=\"https://www.last.fm/music/The+Nightingales\">Read more on Last.fm</a>', 'content': 'The Nightingales refers to at least three artists:\\n\\n1) A Birmingham, UK post-punk / alternative band (now known as Nightingales), formed in 1979.\\n2) A soul group (aka Ollie & The Nightingales).\\n3) A Finnish band.\\n\\n1) A Birmingham, UK post-punk / alternative band, formed by former members of the city\\'s original punk group The Prefects, in November 1979. With an ever fluctuating line up, based around lyricist/singer Robert Lloyd, the band recorded a bunch of singles, three albums and many radio sessions for John Peel, before it stopped working in 1987. \\n\\nFollowing occasional reformations, in 2004 Lloyd re-started The Nightingales. Since then they have released five 7\" vinyl singles and three albums (plus two live albums), toured the UK, mainland Europe and USA several times and recorded numerous radio sessions in England and America. \\n\\nIn March 08 the group recorded the album \"Insult To Injury\" with Jochen Irmler and Andreas Schmid at the Faust Studio in Scheer, Germany. This record, considered the \\'Gales best yet, was released in February 2009 on the Klangbad label. \\n\"The Lost Plot\" - the follow up album to \"Insult\" - was again recorded with Irmler in August \\'09 but the group have since been dropped by Klangbad and so this record is currently without a release plan.\\n\\nThe group will probably be touring Germany and England and hopefully returning to the US in 2011. Either way, they will be recording another album - which will actually get released - before too long. \\n\\nAfter several changes since reforming the group\\'s current line up features Lloyd, original Prefects guitarist Alan Apperley, ex Pram drummer Daren \\'The Dazzler\\' Garratt, Andi Schmid on bass and (former teen) guitar sensation Matt Wood plus, whenever possible, gorgeous guitarist Christine Edwards (from Christy & Emily) and, sometimes, some combination of bassoonist Katherine Young, ex Violet Violet drummer Fliss Kitson, Emily Manzo on keyboards and either Sanne Richter or Kate Louise Armitage on vocals. <a href=\"https://www.last.fm/music/The+Nightingales\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='4LbXEtA2EuqcFdIy6QVAYc', url='https://open.spotify.com/artist/4LbXEtA2EuqcFdIy6QVAYc', name='The Nightingales', popularity=17, followers=6893, genres=['post-punk', 'gothic rock', 'new wave'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebd1f8417a33cdd3f4812c40c4', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d1f8417a33cdd3f4812c40c4', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d1f8417a33cdd3f4812c40c4', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4LbXEtA2EuqcFdIy6QVAYc'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4LbXEtA2EuqcFdIy6QVAYc'}, 'followers': {'href': None, 'total': 6893}, 'genres': ['post-punk', 'gothic rock', 'new wave'], 'href': 'https://api.spotify.com/v1/artists/4LbXEtA2EuqcFdIy6QVAYc', 'id': '4LbXEtA2EuqcFdIy6QVAYc', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebd1f8417a33cdd3f4812c40c4', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174d1f8417a33cdd3f4812c40c4', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178d1f8417a33cdd3f4812c40c4', 'height': 160, 'width': 160}], 'name': 'The Nightingales', 'popularity': 17, 'type': 'artist', 'uri': 'spotify:artist:4LbXEtA2EuqcFdIy6QVAYc'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features124/v4/89/72/d5/8972d58f-2f7d-6cc9-750a-7600ecb657ed/pr_source.png/2000x2000bb.jpg",
@@ -516,10 +895,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 21846,
+      "listeners": 21848,
       "mbid": "c668b9a0-7f99-4b14-80b8-45e35a49363d",
       "name": "The Nightingales",
-      "playcount": 174286,
+      "playcount": 174327,
       "similar_artists": [
         {
           "name": "Blue Orchids",
@@ -579,10 +958,11 @@
       "name": "The Nightingales",
       "popularity": 17,
       "url": "https://open.spotify.com/artist/4LbXEtA2EuqcFdIy6QVAYc"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "4LbXEtA2EuqcFdIy6QVAYc",
   "spotify_url": "https://open.spotify.com/artist/4LbXEtA2EuqcFdIy6QVAYc",
-  "updated_at": "2025-07-08T09:54:19.278362",
+  "updated_at": "2025-07-08T20:49:12.161754",
   "wikipedia_url": null
 }

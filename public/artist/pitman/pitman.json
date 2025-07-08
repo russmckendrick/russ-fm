@@ -100,6 +100,122 @@
   },
   "name": "Pitman",
   "popularity": null,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='102879833', url='https://music.apple.com/gb/artist/pitman/102879833', name='Pitman', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/41/e9/8b/41e98b17-9fc8-3cf6-f04b-73449a70a55e/artwork.jpg/2000x2000ac.jpg', genres=['Hip-Hop/Rap'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '102879833', 'type': 'artists', 'href': '/v1/catalog/gb/artists/102879833', 'attributes': {'name': 'Pitman', 'genreNames': ['Hip-Hop/Rap'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/41/e9/8b/41e98b17-9fc8-3cf6-f04b-73449a70a55e/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': 'e9e9e9', 'textColor1': '0c090b', 'textColor2': '0f0c0e', 'textColor3': '383638', 'textColor4': '3a383a'}, 'url': 'https://music.apple.com/gb/artist/pitman/102879833'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/102879833/albums', 'data': [{'id': '102881480', 'type': 'albums', 'href': '/v1/catalog/gb/albums/102881480'}, {'id': '301335445', 'type': 'albums', 'href': '/v1/catalog/gb/albums/301335445'}, {'id': '102883143', 'type': 'albums', 'href': '/v1/catalog/gb/albums/102883143'}, {'id': '261061788', 'type': 'albums', 'href': '/v1/catalog/gb/albums/261061788'}, {'id': '1614961099', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1614961099'}, {'id': '1706132429', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1706132429'}, {'id': '1597994940', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1597994940'}, {'id': '1507772528', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1507772528'}, {'id': '1701897116', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1701897116'}, {'id': '1599281036', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1599281036'}, {'id': '1681491312', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1681491312'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "98641",
+      "images": [
+        {
+          "height": 169,
+          "resource_url": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+          "width": 172
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YDMKep6558-ZsO8a1XXRAIYIh3_2AaOLLE0qolLc69Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 401,
+          "resource_url": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Cs9U50Q8VI-ZVxmEh6YmdKXEbPXDBUodLQc4mgJWjqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 914,
+          "resource_url": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/3agKeBlWkq0T7lD3e3OczTZucakOT0Xcw5ffLkQNeq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Pitman",
+      "namevariations": [
+        "Mc Pitman"
+      ],
+      "profile": "Comedic alter-ego of Nottingham rapper Styly Cee. Pitman is a rapping miner fresh out of the pits. Many of his tracks are parodies of hip-hop classics such as 'Simon Says', 'It Takes Two' or 'Sucker MC's. He is well-known for his fondness of tea and biscuits.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 39947,
+            "name": "Styly Cee",
+            "resource_url": "https://api.discogs.com/artists/39947",
+            "thumbnail_url": "https://i.discogs.com/9CMBiuEvKNwgvJPvxbc_ltRoS3zkxz_5i8mPGmTfbEU/rs:fit/g:sm/q:40/h:173/w:120/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5OTQ3/LTEwNzg0NDc3NDgu/Z2lm.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 98641,
+        "images": [
+          {
+            "height": 169,
+            "resource_url": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/a0P_Sa-CqCrhM307G0CmgwKYKu5d52E_g-MuxxNg1y4/rs:fit/g:sm/q:90/h:169/w:172/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+            "width": 172
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/LqWwkPE0wBzr6zv19x_C4l6anZ_FZYqtz5xqAiLxeJs/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/YDMKep6558-ZsO8a1XXRAIYIh3_2AaOLLE0qolLc69Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MDQyODkxNTQt/OTc1Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 401,
+            "resource_url": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9QJcwT7H7bkNTdbO2TcyDFaHTbjTkOy18vqTUH0erDg/rs:fit/g:sm/q:90/h:401/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Cs9U50Q8VI-ZVxmEh6YmdKXEbPXDBUodLQc4mgJWjqM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzOTU4NzYwNTct/ODY5My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 914,
+            "resource_url": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/663AQDhnPzBEgExN2kYuqYgBWnJioLw78_YWYFm93l8/rs:fit/g:sm/q:90/h:914/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/3agKeBlWkq0T7lD3e3OczTZucakOT0Xcw5ffLkQNeq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTE3MjczNzkzMzYt/NDMyMy5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Pitman",
+        "namevariations": [
+          "Mc Pitman"
+        ],
+        "profile": "Comedic alter-ego of Nottingham rapper Styly Cee. Pitman is a rapping miner fresh out of the pits. Many of his tracks are parodies of hip-hop classics such as 'Simon Says', 'It Takes Two' or 'Sucker MC's. He is well-known for his fondness of tea and biscuits.",
+        "realname": "Paul Carlisle",
+        "releases_url": "https://api.discogs.com/artists/98641/releases",
+        "resource_url": "https://api.discogs.com/artists/98641",
+        "uri": "https://www.discogs.com/artist/98641-Pitman",
+        "urls": [
+          "https://pitman.bandcamp.com/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/98641",
+      "thumb": "https://i.discogs.com/TSVgYiZ4CJTQgYVOpFHJGRZ0CqN0QgSh_IMAo7f5mcw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4NjQx/LTEzMTQwNTQxMjku/anBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/98641-Pitman",
+      "urls": [
+        "https://pitman.bandcamp.com/"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Pitman', url='https://www.last.fm/music/Pitman', mbid='099b3139-487f-4610-89e7-8ee706b13749', listeners=4934, playcount=61292, bio_summary='MC Pitman is the comic creation of one Styly Cee, a hip hop producer and performer from the city of Nottingham in England\\'s East Midlands.\\n\\nA miner from the town of Coalville in Leicestershire, he raps morosely in a distinct regional accent about many aspects of modern life, from his distaste for celebrity worship and traffic congestion, to his great affection for tea and biscuits. His most extreme polemic however is targeted at Mike Skinner aka The Streets. <a href=\"https://www.last.fm/music/Pitman\">Read more on Last.fm</a>', bio_content='MC Pitman is the comic creation of one Styly Cee, a hip hop producer and performer from the city of Nottingham in England\\'s East Midlands.\\n\\nA miner from the town of Coalville in Leicestershire, he raps morosely in a distinct regional accent about many aspects of modern life, from his distaste for celebrity worship and traffic congestion, to his great affection for tea and biscuits. His most extreme polemic however is targeted at Mike Skinner aka The Streets. Pitman often adapts well known rap hits. Hence \"Witness the Fitness\" by Roots Manuva became \"Witness the Pitness\" (like the original song produced by Lord Gosh), while Run-DMC\\'s \"Sucker MCs\" was recast as \"Sugar On Ya Peas\". His first album It Takes A Nation of Tossers was released in 2003 by Son Records. It also included a cover version of LL Cool J\\'s \"Mama Said Knock You Out\", called \"Mam Sed\". Its follow-up, Pit Closure, appeared in November 2004. <a href=\"https://www.last.fm/music/Pitman\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['hip hop', 'comedy', 'MC Pitman', 'Hip-Hop', 'UK hip hop'], similar_artists=[{'name': 'Chris Morris', 'url': 'https://www.last.fm/music/Chris+Morris'}, {'name': 'Skitz', 'url': 'https://www.last.fm/music/Skitz'}, {'name': 'Braintax', 'url': 'https://www.last.fm/music/Braintax'}, {'name': 'Skinnyman', 'url': 'https://www.last.fm/music/Skinnyman'}, {'name': 'Dubbledge', 'url': 'https://www.last.fm/music/Dubbledge'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Pitman', 'mbid': '099b3139-487f-4610-89e7-8ee706b13749', 'url': 'https://www.last.fm/music/Pitman', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4934', 'playcount': '61292'}, 'similar': {'artist': [{'name': 'Chris Morris', 'url': 'https://www.last.fm/music/Chris+Morris', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Skitz', 'url': 'https://www.last.fm/music/Skitz', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Braintax', 'url': 'https://www.last.fm/music/Braintax', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Skinnyman', 'url': 'https://www.last.fm/music/Skinnyman', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dubbledge', 'url': 'https://www.last.fm/music/Dubbledge', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'hip hop', 'url': 'https://www.last.fm/tag/hip+hop'}, {'name': 'comedy', 'url': 'https://www.last.fm/tag/comedy'}, {'name': 'MC Pitman', 'url': 'https://www.last.fm/tag/MC+Pitman'}, {'name': 'Hip-Hop', 'url': 'https://www.last.fm/tag/Hip-Hop'}, {'name': 'UK hip hop', 'url': 'https://www.last.fm/tag/UK+hip+hop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Pitman/+wiki'}}, 'published': '28 Jan 2007, 19:11', 'summary': 'MC Pitman is the comic creation of one Styly Cee, a hip hop producer and performer from the city of Nottingham in England\\'s East Midlands.\\n\\nA miner from the town of Coalville in Leicestershire, he raps morosely in a distinct regional accent about many aspects of modern life, from his distaste for celebrity worship and traffic congestion, to his great affection for tea and biscuits. His most extreme polemic however is targeted at Mike Skinner aka The Streets. <a href=\"https://www.last.fm/music/Pitman\">Read more on Last.fm</a>', 'content': 'MC Pitman is the comic creation of one Styly Cee, a hip hop producer and performer from the city of Nottingham in England\\'s East Midlands.\\n\\nA miner from the town of Coalville in Leicestershire, he raps morosely in a distinct regional accent about many aspects of modern life, from his distaste for celebrity worship and traffic congestion, to his great affection for tea and biscuits. His most extreme polemic however is targeted at Mike Skinner aka The Streets. Pitman often adapts well known rap hits. Hence \"Witness the Fitness\" by Roots Manuva became \"Witness the Pitness\" (like the original song produced by Lord Gosh), while Run-DMC\\'s \"Sucker MCs\" was recast as \"Sugar On Ya Peas\". His first album It Takes A Nation of Tossers was released in 2003 by Son Records. It also included a cover version of LL Cool J\\'s \"Mama Said Knock You Out\", called \"Mam Sed\". Its follow-up, Pit Closure, appeared in November 2004. <a href=\"https://www.last.fm/music/Pitman\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='4Gr7aEsinqimIJ10I78VQf', url='https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf', name='Pitman', popularity=0, followers=4, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273d0b9975002067e599df14c94', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02d0b9975002067e599df14c94', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851d0b9975002067e599df14c94', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf'}, 'followers': {'href': None, 'total': 4}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/4Gr7aEsinqimIJ10I78VQf', 'id': '4Gr7aEsinqimIJ10I78VQf', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273d0b9975002067e599df14c94', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02d0b9975002067e599df14c94', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851d0b9975002067e599df14c94', 'height': 64, 'width': 64}], 'name': 'Pitman', 'popularity': 0, 'type': 'artist', 'uri': 'spotify:artist:4Gr7aEsinqimIJ10I78VQf'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/41/e9/8b/41e98b17-9fc8-3cf6-f04b-73449a70a55e/artwork.jpg/2000x2000ac.jpg",
@@ -310,10 +426,11 @@
       "name": "Pitman",
       "popularity": 0,
       "url": "https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "4Gr7aEsinqimIJ10I78VQf",
   "spotify_url": "https://open.spotify.com/artist/4Gr7aEsinqimIJ10I78VQf",
-  "updated_at": "2025-07-08T09:51:10.243907",
+  "updated_at": "2025-07-08T20:47:26.743270",
   "wikipedia_url": null
 }

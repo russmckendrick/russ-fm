@@ -6,7 +6,7 @@
   "created_at": "2025-07-05T14:40:28.067430",
   "discogs_id": "594632",
   "discogs_url": "https://www.discogs.com/artist/594632-Kitty-Durham",
-  "followers": null,
+  "followers": 895,
   "formed_date": null,
   "genres": [
     "lullaby",
@@ -14,6 +14,24 @@
   ],
   "id": "kitty-durham-1751722829",
   "images": [
+    {
+      "height": 640,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab67616d0000b2738a185ef27707652dc7de83e5",
+      "width": 640
+    },
+    {
+      "height": 300,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab67616d00001e028a185ef27707652dc7de83e5",
+      "width": 300
+    },
+    {
+      "height": 64,
+      "type": "spotify_artist",
+      "url": "https://i.scdn.co/image/ab67616d000048518a185ef27707652dc7de83e5",
+      "width": 64
+    },
     {
       "height": null,
       "type": "discogs_artist_primary",
@@ -25,23 +43,104 @@
       "type": "discogs_artist_thumb",
       "url": "https://i.discogs.com/1BGgFerDAbJ8OuGyepUZFBy3fz6tO0rC6kXG2H_8yag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
       "width": null
-    },
-    {
-      "height": 2000,
-      "type": "custom_artist_image",
-      "url": "https://www.shazam.com/mkimage/image/thumb/AMCArtistImages116/v4/94/6e/45/946e455f-2410-68ef-4f73-7ee21cc5194d/8b57232b-9292-4755-95df-ed3adc9ed030_ami-identity-46f75fde47cf485a6cfaa5d2288ee3f6-2023-10-27T20-45-56.933Z_cropped.png/1940x1940bb.webp",
-      "width": 2000
     }
   ],
   "lastfm_mbid": null,
-  "lastfm_url": "https://www.last.fm/music/Kitty+Liv+&+Lewis+Durham",
+  "lastfm_url": "https://www.last.fm/music/Kitty+Durham",
   "local_images": {
     "hi-res": "../public/artist/kitty-durham/kitty-durham-hi-res.jpg",
     "medium": "../public/artist/kitty-durham/kitty-durham-medium.jpg",
     "small": "../public/artist/kitty-durham/kitty-durham-small.jpg"
   },
   "name": "Kitty Durham",
-  "popularity": null,
+  "popularity": 58,
+  "raw_data": {
+    "apple_music": {},
+    "discogs": {
+      "cover_image": "https://i.discogs.com/clLdFA6ysAPNxtSWzHO7JCLXFrcjEdC_uLD0cQ8t3XI/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "594632",
+      "images": [
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/clLdFA6ysAPNxtSWzHO7JCLXFrcjEdC_uLD0cQ8t3XI/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/clLdFA6ysAPNxtSWzHO7JCLXFrcjEdC_uLD0cQ8t3XI/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1BGgFerDAbJ8OuGyepUZFBy3fz6tO0rC6kXG2H_8yag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Kitty Durham",
+      "namevariations": [
+        "K Durham",
+        "K. Durham",
+        "K. Liv",
+        "Kitty",
+        "Kitty Liv"
+      ],
+      "profile": "British multi-instrumentalist and vocalist. Sister of [a674800] and [a674799]. Daughter of [a594631] and [a399393].",
+      "raw_data": {
+        "data_quality": "Correct",
+        "groups": [
+          {
+            "active": true,
+            "id": 656787,
+            "name": "Kitty, Daisy & Lewis",
+            "resource_url": "https://api.discogs.com/artists/656787",
+            "thumbnail_url": "https://i.discogs.com/5VRvS5lLEjHwLB14jjTZ-UNBuTPPJuRx-fy9eFSXWNA/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1Njc4/Ny0xNDM4MzY2MjEx/LTcyNjUuanBlZw.jpeg"
+          }
+        ],
+        "id": 594632,
+        "images": [
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/clLdFA6ysAPNxtSWzHO7JCLXFrcjEdC_uLD0cQ8t3XI/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/clLdFA6ysAPNxtSWzHO7JCLXFrcjEdC_uLD0cQ8t3XI/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/1BGgFerDAbJ8OuGyepUZFBy3fz6tO0rC6kXG2H_8yag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Kitty Durham",
+        "namevariations": [
+          "K Durham",
+          "K. Durham",
+          "K. Liv",
+          "Kitty",
+          "Kitty Liv"
+        ],
+        "profile": "British multi-instrumentalist and vocalist. Sister of [a674800] and [a674799]. Daughter of [a594631] and [a399393].",
+        "realname": "Kitty Liv Durham",
+        "releases_url": "https://api.discogs.com/artists/594632/releases",
+        "resource_url": "https://api.discogs.com/artists/594632",
+        "uri": "https://www.discogs.com/artist/594632-Kitty-Durham",
+        "urls": [
+          "https://www.kittyliv.com/",
+          "https://www.facebook.com/kittylivmusic/",
+          "https://www.instagram.com/kittylivmusic/",
+          "https://www.youtube.com/channel/UCfsNODE1-bcI3ktS5i-T9fA",
+          "https://kittyliv.bandcamp.com/album/sweet-dreams-the-sun-and-the-rain",
+          "www.kittydaisyandlewis.com"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/594632",
+      "thumb": "https://i.discogs.com/1BGgFerDAbJ8OuGyepUZFBy3fz6tO0rC6kXG2H_8yag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5NDYz/Mi0xNDYzNTM0NjAz/LTc3MTkuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/594632-Kitty-Durham",
+      "urls": [
+        "https://www.kittyliv.com/",
+        "https://www.facebook.com/kittylivmusic/",
+        "https://www.instagram.com/kittylivmusic/",
+        "https://www.youtube.com/channel/UCfsNODE1-bcI3ktS5i-T9fA",
+        "https://kittyliv.bandcamp.com/album/sweet-dreams-the-sun-and-the-rain",
+        "www.kittydaisyandlewis.com"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Kitty Durham', url='https://www.last.fm/music/Kitty+Durham', mbid=None, listeners=0, playcount=0, bio_summary='<a href=\"https://www.last.fm/music/Kitty+Durham\">Read more on Last.fm</a>', bio_content=None, tags=[], similar_artists=[], images=[{'size': 'small', 'url': ''}, {'size': 'medium', 'url': ''}, {'size': 'large', 'url': ''}, {'size': 'extralarge', 'url': ''}, {'size': 'mega', 'url': ''}, {'size': '', 'url': ''}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Kitty Durham', 'url': 'https://www.last.fm/music/Kitty+Durham', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '0', 'playcount': '0'}, 'similar': {'artist': []}, 'tags': {'tag': []}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Kitty+Durham/+wiki'}}, 'published': '01 Jan 1970, 00:00', 'summary': ' <a href=\"https://www.last.fm/music/Kitty+Durham\">Read more on Last.fm</a>', 'content': ''}}})",
+    "spotify": "ArtistSpotifyData(id='4K4z9PMf7UYeDXRhe4WCOG', url='https://open.spotify.com/artist/4K4z9PMf7UYeDXRhe4WCOG', name='Brian Dunphy', popularity=58, followers=895, genres=[], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b2738a185ef27707652dc7de83e5', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028a185ef27707652dc7de83e5', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048518a185ef27707652dc7de83e5', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/4K4z9PMf7UYeDXRhe4WCOG'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4K4z9PMf7UYeDXRhe4WCOG'}, 'followers': {'href': None, 'total': 895}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/4K4z9PMf7UYeDXRhe4WCOG', 'id': '4K4z9PMf7UYeDXRhe4WCOG', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b2738a185ef27707652dc7de83e5', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e028a185ef27707652dc7de83e5', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d000048518a185ef27707652dc7de83e5', 'height': 64, 'width': 64}], 'name': 'Brian Dunphy', 'popularity': 58, 'type': 'artist', 'uri': 'spotify:artist:4K4z9PMf7UYeDXRhe4WCOG'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {},
     "discogs": {
@@ -127,7 +226,7 @@
     },
     "lastfm": {
       "bio_content": null,
-      "bio_summary": "<a href=\"https://www.last.fm/music/Kitty+Liv+&+Lewis+Durham\">Read more on Last.fm</a>",
+      "bio_summary": "<a href=\"https://www.last.fm/music/Kitty+Durham\">Read more on Last.fm</a>",
       "images": [
         {
           "size": "small",
@@ -154,18 +253,43 @@
           "url": ""
         }
       ],
-      "listeners": 3,
+      "listeners": 0,
       "mbid": null,
-      "name": "Kitty Liv & Lewis Durham",
-      "playcount": 10,
+      "name": "Kitty Durham",
+      "playcount": 0,
       "similar_artists": [],
       "tags": [],
-      "url": "https://www.last.fm/music/Kitty+Liv+&+Lewis+Durham"
+      "url": "https://www.last.fm/music/Kitty+Durham"
     },
-    "spotify": {}
+    "spotify": {
+      "followers": 895,
+      "genres": [],
+      "id": "4K4z9PMf7UYeDXRhe4WCOG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2738a185ef27707652dc7de83e5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e028a185ef27707652dc7de83e5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048518a185ef27707652dc7de83e5",
+          "width": 64
+        }
+      ],
+      "name": "Brian Dunphy",
+      "popularity": 58,
+      "url": "https://open.spotify.com/artist/4K4z9PMf7UYeDXRhe4WCOG"
+    },
+    "theaudiodb": {}
   },
-  "spotify_id": null,
-  "spotify_url": null,
-  "updated_at": "2025-07-08T11:17:39.401164",
+  "spotify_id": "4K4z9PMf7UYeDXRhe4WCOG",
+  "spotify_url": "https://open.spotify.com/artist/4K4z9PMf7UYeDXRhe4WCOG",
+  "updated_at": "2025-07-08T20:45:42.624350",
   "wikipedia_url": "https://en.wikipedia.org/wiki/Heard_Noises"
 }

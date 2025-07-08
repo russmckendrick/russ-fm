@@ -1,7 +1,7 @@
 {
   "apple_music_id": "1553720252",
   "apple_music_url": "https://music.apple.com/gb/artist/sedibus/1553720252",
-  "biography": "Sedibus is a new moniker of electronic musician, DJ and producer Alex Paterson, best known as The Orb. Paterson released his first tracks under the Sedibus moniker in 2021. <a href=\"https://www.last.fm/music/Sedibus\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+  "biography": "Alex Paterson in collaboration with Andy Falconer",
   "country": null,
   "created_at": "2025-07-05T14:46:56.399058",
   "discogs_id": "8944576",
@@ -12,7 +12,8 @@
     "Electronic",
     "ambient",
     "Ambient dub",
-    "United Kingdom"
+    "United Kingdom",
+    "Ambient"
   ],
   "id": "sedibus-1751723217",
   "images": [
@@ -75,6 +76,12 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": 1000,
+      "type": "artist",
+      "url": "https://r2.theaudiodb.com/images/media/artist/thumb/vrypr01637311995.jpg",
+      "width": 1000
     }
   ],
   "lastfm_mbid": null,
@@ -85,7 +92,73 @@
     "small": "../public/artist/sedibus/sedibus-small.jpg"
   },
   "name": "Sedibus",
-  "popularity": 12,
+  "popularity": 13,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='1553720252', url='https://music.apple.com/gb/artist/sedibus/1553720252', name='Sedibus', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ad/db/9f/addb9f4c-718b-d40f-35be-f720ce234e8a/711297390148.jpg/2000x2000ac.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1553720252', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1553720252', 'attributes': {'name': 'Sedibus', 'genreNames': ['Electronic'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ad/db/9f/addb9f4c-718b-d40f-35be-f720ce234e8a/711297390148.jpg/{w}x{h}ac.jpg', 'bgColor': 'cec0b3', 'textColor1': '000000', 'textColor2': '322823', 'textColor3': '292623', 'textColor4': '51473f'}, 'url': 'https://music.apple.com/gb/artist/sedibus/1553720252'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1553720252/albums', 'data': [{'id': '1554163187', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1554163187'}, {'id': '1712341302', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1712341302'}, {'id': '1726962946', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726962946'}]}}})",
+    "discogs": {
+      "cover_image": "",
+      "id": "8944576",
+      "images": [],
+      "members": [],
+      "name": "Sedibus",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "8944576",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/8944576"
+      },
+      "resource_url": "https://api.discogs.com/artists/8944576",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/8944576",
+      "urls": []
+    },
+    "lastfm": "ArtistLastFmData(name='Sedibus', url='https://www.last.fm/music/Sedibus', mbid=None, listeners=7232, playcount=36232, bio_summary='Sedibus is a new moniker of electronic musician, DJ and producer Alex Paterson, best known as The Orb. Paterson released his first tracks under the Sedibus moniker in 2021. <a href=\"https://www.last.fm/music/Sedibus\">Read more on Last.fm</a>', bio_content='Sedibus is a new moniker of electronic musician, DJ and producer Alex Paterson, best known as The Orb. Paterson released his first tracks under the Sedibus moniker in 2021. <a href=\"https://www.last.fm/music/Sedibus\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['ambient', 'Ambient dub', 'United Kingdom'], similar_artists=[{'name': 'Fenella', 'url': 'https://www.last.fm/music/Fenella'}, {'name': 'Glok', 'url': 'https://www.last.fm/music/Glok'}, {'name': 'Dr Alex Paterson', 'url': 'https://www.last.fm/music/Dr+Alex+Paterson'}, {'name': 'InVisible Minds', 'url': 'https://www.last.fm/music/InVisible+Minds'}, {'name': 'OSS', 'url': 'https://www.last.fm/music/OSS'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Sedibus', 'url': 'https://www.last.fm/music/Sedibus', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '7232', 'playcount': '36232'}, 'similar': {'artist': [{'name': 'Fenella', 'url': 'https://www.last.fm/music/Fenella', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Glok', 'url': 'https://www.last.fm/music/Glok', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dr Alex Paterson', 'url': 'https://www.last.fm/music/Dr+Alex+Paterson', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'InVisible Minds', 'url': 'https://www.last.fm/music/InVisible+Minds', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'OSS', 'url': 'https://www.last.fm/music/OSS', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'Ambient dub', 'url': 'https://www.last.fm/tag/Ambient+dub'}, {'name': 'United Kingdom', 'url': 'https://www.last.fm/tag/United+Kingdom'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Sedibus/+wiki'}}, 'published': '09 Jun 2021, 11:57', 'summary': 'Sedibus is a new moniker of electronic musician, DJ and producer Alex Paterson, best known as The Orb. Paterson released his first tracks under the Sedibus moniker in 2021. <a href=\"https://www.last.fm/music/Sedibus\">Read more on Last.fm</a>', 'content': 'Sedibus is a new moniker of electronic musician, DJ and producer Alex Paterson, best known as The Orb. Paterson released his first tracks under the Sedibus moniker in 2021. <a href=\"https://www.last.fm/music/Sedibus\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='1lUshJ8UbLawZ3bH85qgA4', url='https://open.spotify.com/artist/1lUshJ8UbLawZ3bH85qgA4', name='Sedibus', popularity=13, followers=2023, genres=['ambient'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb0cdc2382ccb4ab05ff1e10db', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051740cdc2382ccb4ab05ff1e10db', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1780cdc2382ccb4ab05ff1e10db', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1lUshJ8UbLawZ3bH85qgA4'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1lUshJ8UbLawZ3bH85qgA4'}, 'followers': {'href': None, 'total': 2023}, 'genres': ['ambient'], 'href': 'https://api.spotify.com/v1/artists/1lUshJ8UbLawZ3bH85qgA4', 'id': '1lUshJ8UbLawZ3bH85qgA4', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb0cdc2382ccb4ab05ff1e10db', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051740cdc2382ccb4ab05ff1e10db', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1780cdc2382ccb4ab05ff1e10db', 'height': 160, 'width': 160}], 'name': 'Sedibus', 'popularity': 13, 'type': 'artist', 'uri': 'spotify:artist:1lUshJ8UbLawZ3bH85qgA4'})",
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "",
+      "biography_de": null,
+      "biography_en": "Alex Paterson in collaboration with Andy Falconer",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "2017",
+      "country": "",
+      "country_code": "GB",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": "",
+      "formed_year": "2017",
+      "gender": "Male",
+      "genre": "Ambient",
+      "id": "168659",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/vrypr01637311995.jpg",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": null,
+      "members": "2",
+      "mood": "Dreamy",
+      "music_videos": null,
+      "musicbrainz_id": "2676cd16-b7ca-4d22-b118-ef227424b1d5",
+      "name": "Sedibus",
+      "raw_data": {},
+      "style": "Electronic",
+      "twitter": "1",
+      "website": ""
+    }
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/ad/db/9f/addb9f4c-718b-d40f-35be-f720ce234e8a/711297390148.jpg/2000x2000ac.jpg",
@@ -148,7 +221,7 @@
       "listeners": 7232,
       "mbid": null,
       "name": "Sedibus",
-      "playcount": 36231,
+      "playcount": 36232,
       "similar_artists": [
         {
           "name": "Fenella",
@@ -202,12 +275,55 @@
         }
       ],
       "name": "Sedibus",
-      "popularity": 12,
+      "popularity": 13,
       "url": "https://open.spotify.com/artist/1lUshJ8UbLawZ3bH85qgA4"
+    },
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": "",
+      "biography_de": null,
+      "biography_en": "Alex Paterson in collaboration with Andy Falconer",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": "2017",
+      "country": "",
+      "country_code": "GB",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": "",
+      "formed_year": "2017",
+      "gender": "Male",
+      "genre": "Ambient",
+      "id": "168659",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/vrypr01637311995.jpg",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": null,
+      "members": "2",
+      "mood": "Dreamy",
+      "music_videos": null,
+      "musicbrainz_id": "2676cd16-b7ca-4d22-b118-ef227424b1d5",
+      "name": "Sedibus",
+      "raw_data": {},
+      "style": "Electronic",
+      "twitter": "1",
+      "website": ""
     }
   },
   "spotify_id": "1lUshJ8UbLawZ3bH85qgA4",
   "spotify_url": "https://open.spotify.com/artist/1lUshJ8UbLawZ3bH85qgA4",
-  "updated_at": "2025-07-08T09:50:34.225622",
+  "updated_at": "2025-07-08T20:47:09.933768",
   "wikipedia_url": null
 }

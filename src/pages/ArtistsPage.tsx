@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Users, Music } from 'lucide-react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -59,12 +59,13 @@ interface ArtistsPageProps {
 export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
   const { page } = useParams<{ page?: string }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [collection, setCollection] = useState<Album[]>([]);
   const [artists, setArtists] = useState<Artist[]>([]);
   const [filteredArtists, setFilteredArtists] = useState<Artist[]>([]);
   const [loading, setLoading] = useState(true);
-  const [sortBy, setSortBy] = useState('name');
-  const [selectedLetter, setSelectedLetter] = useState('all');
+  const [sortBy, setSortBy] = useState(searchParams.get('sort') || 'name');
+  const [selectedLetter, setSelectedLetter] = useState(searchParams.get('letter') || 'all');
   const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.artists;
@@ -107,6 +108,19 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       processArtists();
     }
   }, [collection]);
+
+  // Update URL params when filters change
+  const updateURLParams = (newParams: Record<string, string>) => {
+    const params = new URLSearchParams(searchParams);
+    Object.entries(newParams).forEach(([key, value]) => {
+      if (value === 'all' || value === 'name') {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    });
+    setSearchParams(params);
+  };
 
   useEffect(() => {
     filterAndSortArtists();
@@ -330,6 +344,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
           <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
           <Select value={sortBy} onValueChange={(value) => {
             setSortBy(value);
+            updateURLParams({ sort: value });
             if (currentPage !== 1) navigate('/artists/1');
           }}>
             <SelectTrigger className="w-[140px] h-8">
@@ -350,6 +365,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
             <button
               onClick={() => {
                 setSelectedLetter('all');
+                updateURLParams({ letter: 'all' });
                 if (currentPage !== 1) navigate('/artists/1');
               }}
               className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
@@ -370,6 +386,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
                   onClick={() => {
                     if (isAvailable) {
                       setSelectedLetter(letter);
+                      updateURLParams({ letter: letter });
                       if (currentPage !== 1) navigate('/artists/1');
                     }
                   }}

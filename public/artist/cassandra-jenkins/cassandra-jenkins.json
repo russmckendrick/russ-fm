@@ -1,7 +1,7 @@
 {
   "apple_music_id": "628623818",
   "apple_music_url": "https://music.apple.com/gb/artist/cassandra-jenkins/628623818",
-  "biography": "Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. <a href=\"https://www.last.fm/music/Cassandra+Jenkins\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+  "biography": "Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn.",
   "country": null,
   "created_at": "2025-07-05T14:42:58.024333",
   "discogs_id": "3289679",
@@ -79,6 +79,12 @@
       "width": null
     },
     {
+      "height": 1000,
+      "type": "artist",
+      "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rvprpx1525226174.jpg",
+      "width": 1000
+    },
+    {
       "height": null,
       "type": "discogs_artist_primary",
       "url": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
@@ -100,6 +106,144 @@
   },
   "name": "Cassandra Jenkins",
   "popularity": 41,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='628623818', url='https://music.apple.com/gb/artist/cassandra-jenkins/628623818', name='Cassandra Jenkins', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/21/af/7b/21af7b09-b6b8-e882-ffac-4d7750f4e76a/53aed2e2-f823-4121-b8b4-28ef90c9fe1e_ami-identity-a8aaa47d49850da5dc108bfefc831e84-2024-04-16T13-34-50.052Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '628623818', 'type': 'artists', 'href': '/v1/catalog/gb/artists/628623818', 'attributes': {'name': 'Cassandra Jenkins', 'genreNames': ['Alternative'], 'artwork': {'width': 1790, 'height': 1790, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/21/af/7b/21af7b09-b6b8-e882-ffac-4d7750f4e76a/53aed2e2-f823-4121-b8b4-28ef90c9fe1e_ami-identity-a8aaa47d49850da5dc108bfefc831e84-2024-04-16T13-34-50.052Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '160d1d', 'textColor1': 'adcfdf', 'textColor2': '95b7d4', 'textColor3': '8fa9b8', 'textColor4': '7c95af'}, 'url': 'https://music.apple.com/gb/artist/cassandra-jenkins/628623818'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/628623818/albums', 'data': [{'id': '1539001628', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1539001628'}, {'id': '1738308923', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738308923'}, {'id': '1588097591', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1588097591'}, {'id': '1199266483', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1199266483'}, {'id': '1612885222', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1612885222'}, {'id': '1780551400', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1780551400'}, {'id': '1454341065', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1454341065'}, {'id': '1526193303', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1526193303'}, {'id': '897967943', 'type': 'albums', 'href': '/v1/catalog/gb/albums/897967943'}, {'id': '1334333293', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1334333293'}, {'id': '1780678763', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1780678763'}, {'id': '881185646', 'type': 'albums', 'href': '/v1/catalog/gb/albums/881185646'}, {'id': '1196393725', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1196393725'}, {'id': '1525501824', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1525501824'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "3289679",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/uH3JmsHFtAgEAFh2lJvIncYVjDICmzhK4-h6JyGMTP8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/bu_xKUDeUkC8sXwEFFblaeR9zW823g32LfaUEipOj1g/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bu_xKUDeUkC8sXwEFFblaeR9zW823g32LfaUEipOj1g/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/WFpTRrJcwy9Qt0U-w9GV-aRZgqmaV9V0s15njJ_BCVo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+          "width": 598
+        }
+      ],
+      "members": [],
+      "name": "Cassandra Jenkins (2)",
+      "namevariations": [
+        "Cassandra",
+        "Cassandra Jenkins",
+        "Cassandra Lynk Jenkins"
+      ],
+      "profile": "American singer/songwriter.  Sister of [a3575264] and [a5678463].  Daughter of [a5678464] & [a14886832].",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 5800081,
+            "name": "Murmurer",
+            "resource_url": "https://api.discogs.com/artists/5800081",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 3289679,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/0Y6oOJLnC5uqdGsJMgABYtq9IY_8bY1lteEYLh8n054/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/uH3JmsHFtAgEAFh2lJvIncYVjDICmzhK4-h6JyGMTP8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/bu_xKUDeUkC8sXwEFFblaeR9zW823g32LfaUEipOj1g/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bu_xKUDeUkC8sXwEFFblaeR9zW823g32LfaUEipOj1g/rs:fit/g:sm/q:90/h:600/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/WFpTRrJcwy9Qt0U-w9GV-aRZgqmaV9V0s15njJ_BCVo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTM2ODQ4Mjkz/NC01MDcxLmpwZWc.jpeg",
+            "width": 598
+          }
+        ],
+        "name": "Cassandra Jenkins (2)",
+        "namevariations": [
+          "Cassandra",
+          "Cassandra Jenkins",
+          "Cassandra Lynk Jenkins"
+        ],
+        "profile": "American singer/songwriter.  Sister of [a3575264] and [a5678463].  Daughter of [a5678464] & [a14886832].",
+        "releases_url": "https://api.discogs.com/artists/3289679/releases",
+        "resource_url": "https://api.discogs.com/artists/3289679",
+        "uri": "https://www.discogs.com/artist/3289679-Cassandra-Jenkins-2",
+        "urls": [
+          "https://cassandrajenkins.com",
+          "https://www.facebook.com/CassandraJenkinsOfficial",
+          "https://www.instagram.com/cassandrajenkins/",
+          "https://cassandrajenkins.bandcamp.com/",
+          "https://en.wikipedia.org/wiki/Cassandra_Jenkins"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/3289679",
+      "thumb": "https://i.discogs.com/uH3JmsHFtAgEAFh2lJvIncYVjDICmzhK4-h6JyGMTP8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODk2/NzktMTYzNzMzNjE5/OS02MDQxLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/3289679-Cassandra-Jenkins-2",
+      "urls": [
+        "https://cassandrajenkins.com",
+        "https://www.facebook.com/CassandraJenkinsOfficial",
+        "https://www.instagram.com/cassandrajenkins/",
+        "https://cassandrajenkins.bandcamp.com/",
+        "https://en.wikipedia.org/wiki/Cassandra_Jenkins"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Cassandra Jenkins', url='https://www.last.fm/music/Cassandra+Jenkins', mbid=None, listeners=135342, playcount=2624618, bio_summary='Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. <a href=\"https://www.last.fm/music/Cassandra+Jenkins\">Read more on Last.fm</a>', bio_content='Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. <a href=\"https://www.last.fm/music/Cassandra+Jenkins\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['seen live', 'singer-songwriter', 'folk', 'indie', 'Sophisti-Pop'], similar_artists=[{'name': 'Waxahatchee', 'url': 'https://www.last.fm/music/Waxahatchee'}, {'name': 'Jessica Pratt', 'url': 'https://www.last.fm/music/Jessica+Pratt'}, {'name': 'The Weather Station', 'url': 'https://www.last.fm/music/The+Weather+Station'}, {'name': 'Rosali', 'url': 'https://www.last.fm/music/Rosali'}, {'name': 'Hannah Frances', 'url': 'https://www.last.fm/music/Hannah+Frances'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Cassandra Jenkins', 'url': 'https://www.last.fm/music/Cassandra+Jenkins', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '135342', 'playcount': '2624618'}, 'similar': {'artist': [{'name': 'Waxahatchee', 'url': 'https://www.last.fm/music/Waxahatchee', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jessica Pratt', 'url': 'https://www.last.fm/music/Jessica+Pratt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Weather Station', 'url': 'https://www.last.fm/music/The+Weather+Station', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Rosali', 'url': 'https://www.last.fm/music/Rosali', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Hannah Frances', 'url': 'https://www.last.fm/music/Hannah+Frances', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'singer-songwriter', 'url': 'https://www.last.fm/tag/singer-songwriter'}, {'name': 'folk', 'url': 'https://www.last.fm/tag/folk'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'Sophisti-Pop', 'url': 'https://www.last.fm/tag/Sophisti-Pop'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Cassandra+Jenkins/+wiki'}}, 'published': '15 May 2018, 20:10', 'summary': 'Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. <a href=\"https://www.last.fm/music/Cassandra+Jenkins\">Read more on Last.fm</a>', 'content': 'Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. <a href=\"https://www.last.fm/music/Cassandra+Jenkins\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='1WVGbBnzZ5WLZ2PfesIHik', url='https://open.spotify.com/artist/1WVGbBnzZ5WLZ2PfesIHik', name='Cassandra Jenkins', popularity=41, followers=50951, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf5673ec1abdb417279112eec', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f5673ec1abdb417279112eec', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f5673ec1abdb417279112eec', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1WVGbBnzZ5WLZ2PfesIHik'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1WVGbBnzZ5WLZ2PfesIHik'}, 'followers': {'href': None, 'total': 50951}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/1WVGbBnzZ5WLZ2PfesIHik', 'id': '1WVGbBnzZ5WLZ2PfesIHik', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf5673ec1abdb417279112eec', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f5673ec1abdb417279112eec', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f5673ec1abdb417279112eec', 'height': 160, 'width': 160}], 'name': 'Cassandra Jenkins', 'popularity': 41, 'type': 'artist', 'uri': 'spotify:artist:1WVGbBnzZ5WLZ2PfesIHik'})",
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": null,
+      "biography_de": null,
+      "biography_en": "Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. ",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": null,
+      "country": null,
+      "country_code": "",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": null,
+      "formed_year": "0",
+      "gender": null,
+      "genre": "",
+      "id": "150802",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rvprpx1525226174.jpg",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": null,
+      "members": null,
+      "mood": null,
+      "music_videos": null,
+      "musicbrainz_id": "1c5fb201-9555-4e94-94b6-d5ac6fccb64c",
+      "name": "Cassandra Jenkins",
+      "raw_data": {},
+      "style": null,
+      "twitter": null,
+      "website": null
+    }
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/21/af/7b/21af7b09-b6b8-e882-ffac-4d7750f4e76a/53aed2e2-f823-4121-b8b4-28ef90c9fe1e_ami-identity-a8aaa47d49850da5dc108bfefc831e84-2024-04-16T13-34-50.052Z_cropped.png/2000x2000bb.jpg",
@@ -231,10 +375,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 135303,
+      "listeners": 135342,
       "mbid": null,
       "name": "Cassandra Jenkins",
-      "playcount": 2623615,
+      "playcount": 2624618,
       "similar_artists": [
         {
           "name": "Waxahatchee",
@@ -290,10 +434,53 @@
       "name": "Cassandra Jenkins",
       "popularity": 41,
       "url": "https://open.spotify.com/artist/1WVGbBnzZ5WLZ2PfesIHik"
+    },
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": null,
+      "biography_de": null,
+      "biography_en": "Cassandra Jenkins is an American singer-songwriter and visual artist based in Brooklyn. ",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": null,
+      "country": null,
+      "country_code": "",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": null,
+      "formed_year": "0",
+      "gender": null,
+      "genre": "",
+      "id": "150802",
+      "images": [
+        {
+          "height": 1000,
+          "resource_url": null,
+          "type": "artist",
+          "url": "https://r2.theaudiodb.com/images/media/artist/thumb/rvprpx1525226174.jpg",
+          "width": 1000
+        }
+      ],
+      "last_fm_chart": null,
+      "members": null,
+      "mood": null,
+      "music_videos": null,
+      "musicbrainz_id": "1c5fb201-9555-4e94-94b6-d5ac6fccb64c",
+      "name": "Cassandra Jenkins",
+      "raw_data": {},
+      "style": null,
+      "twitter": null,
+      "website": null
     }
   },
   "spotify_id": "1WVGbBnzZ5WLZ2PfesIHik",
   "spotify_url": "https://open.spotify.com/artist/1WVGbBnzZ5WLZ2PfesIHik",
-  "updated_at": "2025-07-08T09:49:50.203946",
+  "updated_at": "2025-07-08T20:46:45.233963",
   "wikipedia_url": null
 }
