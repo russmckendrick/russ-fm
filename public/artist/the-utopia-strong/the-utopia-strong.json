@@ -101,6 +101,116 @@
   },
   "name": "The Utopia Strong",
   "popularity": 6,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='1466901770', url='https://music.apple.com/gb/artist/the-utopia-strong/1466901770', name='The Utopia Strong', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/a5/97/dc/a597dc5f-8ca8-b913-78cf-d4446f097b1e/mzl.uxnszpqg.jpg/2000x2000bb.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1466901770', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1466901770', 'attributes': {'name': 'The Utopia Strong', 'genreNames': ['Electronic'], 'artwork': {'width': 4163, 'height': 4163, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/a5/97/dc/a597dc5f-8ca8-b913-78cf-d4446f097b1e/mzl.uxnszpqg.jpg/{w}x{h}bb.jpg', 'bgColor': 'f8f0ee', 'textColor1': '110c13', 'textColor2': '45292b', 'textColor3': '3f393f', 'textColor4': '695152'}, 'url': 'https://music.apple.com/gb/artist/the-utopia-strong/1466901770'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1466901770/albums', 'data': [{'id': '1466902269', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1466902269'}, {'id': '1614462986', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1614462986'}, {'id': '1726197367', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726197367'}, {'id': '1466902359', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1466902359'}, {'id': '1726197647', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1726197647'}, {'id': '1473943992', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1473943992'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/AfQatdMx9g6m0YWWmCjp4aliMgMS5iGV4msCGo79suM/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "7370639",
+      "images": [
+        {
+          "height": 433,
+          "resource_url": "https://i.discogs.com/AfQatdMx9g6m0YWWmCjp4aliMgMS5iGV4msCGo79suM/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/AfQatdMx9g6m0YWWmCjp4aliMgMS5iGV4msCGo79suM/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/EVykPUG-A0HijbCQ4OSBDSBDBC58XdE4x0WOE1hywSk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 962595,
+          "name": "Kavus Torabi",
+          "resource_url": "https://api.discogs.com/artists/962595",
+          "thumbnail_url": "https://i.discogs.com/pgTBKCJvkHjSq619qgLp_YGN1zKTYZw068dkWpzot2I/rs:fit/g:sm/q:40/h:333/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk2MjU5/NS0xMzEzMjM5MTI1/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 5256294,
+          "name": "Michael J. York",
+          "resource_url": "https://api.discogs.com/artists/5256294",
+          "thumbnail_url": "https://i.discogs.com/pKZ3iG-jXfnHh93wouM7GNlDFUdZ1hx5VTk-qvEJsvU/rs:fit/g:sm/q:40/h:324/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNTYy/OTQtMTcxMTI5MTI1/Ni04MjU1LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 6833947,
+          "name": "Steve Davis (60)",
+          "resource_url": "https://api.discogs.com/artists/6833947",
+          "thumbnail_url": "https://i.discogs.com/9fzOFrF7Wer32p_h17pU9j16w2aZGIWU5EFdQEexokY/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM5/NDctMTYxNTAzMzQz/Ny0yNzMwLmpwZWc.jpeg"
+        }
+      ],
+      "name": "The Utopia Strong",
+      "namevariations": [
+        "Utopia Strong"
+      ],
+      "profile": "British prog-electronica trio.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 7370639,
+        "images": [
+          {
+            "height": 433,
+            "resource_url": "https://i.discogs.com/AfQatdMx9g6m0YWWmCjp4aliMgMS5iGV4msCGo79suM/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/AfQatdMx9g6m0YWWmCjp4aliMgMS5iGV4msCGo79suM/rs:fit/g:sm/q:90/h:433/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/EVykPUG-A0HijbCQ4OSBDSBDBC58XdE4x0WOE1hywSk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 962595,
+            "name": "Kavus Torabi",
+            "resource_url": "https://api.discogs.com/artists/962595",
+            "thumbnail_url": "https://i.discogs.com/pgTBKCJvkHjSq619qgLp_YGN1zKTYZw068dkWpzot2I/rs:fit/g:sm/q:40/h:333/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk2MjU5/NS0xMzEzMjM5MTI1/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5256294,
+            "name": "Michael J. York",
+            "resource_url": "https://api.discogs.com/artists/5256294",
+            "thumbnail_url": "https://i.discogs.com/pKZ3iG-jXfnHh93wouM7GNlDFUdZ1hx5VTk-qvEJsvU/rs:fit/g:sm/q:40/h:324/w:216/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNTYy/OTQtMTcxMTI5MTI1/Ni04MjU1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 6833947,
+            "name": "Steve Davis (60)",
+            "resource_url": "https://api.discogs.com/artists/6833947",
+            "thumbnail_url": "https://i.discogs.com/9fzOFrF7Wer32p_h17pU9j16w2aZGIWU5EFdQEexokY/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM5/NDctMTYxNTAzMzQz/Ny0yNzMwLmpwZWc.jpeg"
+          }
+        ],
+        "name": "The Utopia Strong",
+        "namevariations": [
+          "Utopia Strong"
+        ],
+        "profile": "British prog-electronica trio.",
+        "releases_url": "https://api.discogs.com/artists/7370639/releases",
+        "resource_url": "https://api.discogs.com/artists/7370639",
+        "uri": "https://www.discogs.com/artist/7370639-The-Utopia-Strong",
+        "urls": [
+          "https://www.facebook.com/theutopiastrong/",
+          "https://twitter.com/strongutopia",
+          "https://theutopiastrong.bandcamp.com",
+          "https://soundcloud.com/theutopiastrong"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/7370639",
+      "thumb": "https://i.discogs.com/EVykPUG-A0HijbCQ4OSBDSBDBC58XdE4x0WOE1hywSk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTczNzA2/MzktMTU2ODQxNzE0/MS0yODE4LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/7370639-The-Utopia-Strong",
+      "urls": [
+        "https://www.facebook.com/theutopiastrong/",
+        "https://twitter.com/strongutopia",
+        "https://theutopiastrong.bandcamp.com",
+        "https://soundcloud.com/theutopiastrong"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='The Utopia Strong', url='https://www.last.fm/music/The+Utopia+Strong', mbid=None, listeners=4967, playcount=40941, bio_summary='The Utopia Strong is a neo-kraut trio consisting of Kavus Torabi, Michael J. York and former snooker champion Steve Davis. They released their self-titled album in 2019. <a href=\"https://www.last.fm/music/The+Utopia+Strong\">Read more on Last.fm</a>', bio_content='The Utopia Strong is a neo-kraut trio consisting of Kavus Torabi, Michael J. York and former snooker champion Steve Davis. They released their self-titled album in 2019. <a href=\"https://www.last.fm/music/The+Utopia+Strong\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['electronic', 'krautrock', 'england', 'United Kingdom', 'experimental'], similar_artists=[{'name': 'Fenella', 'url': 'https://www.last.fm/music/Fenella'}, {'name': 'Bonnacons of Doom', 'url': 'https://www.last.fm/music/Bonnacons+of+Doom'}, {'name': 'Och', 'url': 'https://www.last.fm/music/Och'}, {'name': 'Warm Digits', 'url': 'https://www.last.fm/music/Warm+Digits'}, {'name': 'Warrington Runcorn New Town Development Plan', 'url': 'https://www.last.fm/music/Warrington+Runcorn+New+Town+Development+Plan'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'The Utopia Strong', 'url': 'https://www.last.fm/music/The+Utopia+Strong', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4967', 'playcount': '40941'}, 'similar': {'artist': [{'name': 'Fenella', 'url': 'https://www.last.fm/music/Fenella', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Bonnacons of Doom', 'url': 'https://www.last.fm/music/Bonnacons+of+Doom', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Och', 'url': 'https://www.last.fm/music/Och', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Warm Digits', 'url': 'https://www.last.fm/music/Warm+Digits', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Warrington Runcorn New Town Development Plan', 'url': 'https://www.last.fm/music/Warrington+Runcorn+New+Town+Development+Plan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'krautrock', 'url': 'https://www.last.fm/tag/krautrock'}, {'name': 'england', 'url': 'https://www.last.fm/tag/england'}, {'name': 'United Kingdom', 'url': 'https://www.last.fm/tag/United+Kingdom'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/The+Utopia+Strong/+wiki'}}, 'published': '02 Dec 2019, 15:37', 'summary': 'The Utopia Strong is a neo-kraut trio consisting of Kavus Torabi, Michael J. York and former snooker champion Steve Davis. They released their self-titled album in 2019. <a href=\"https://www.last.fm/music/The+Utopia+Strong\">Read more on Last.fm</a>', 'content': 'The Utopia Strong is a neo-kraut trio consisting of Kavus Torabi, Michael J. York and former snooker champion Steve Davis. They released their self-titled album in 2019. <a href=\"https://www.last.fm/music/The+Utopia+Strong\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='5Y2lwqHK1mYYIylNw18D2w', url='https://open.spotify.com/artist/5Y2lwqHK1mYYIylNw18D2w', name='The Utopia Strong', popularity=6, followers=3170, genres=['krautrock', 'space rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb96ba9429e9f570d44c244e96', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517496ba9429e9f570d44c244e96', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17896ba9429e9f570d44c244e96', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5Y2lwqHK1mYYIylNw18D2w'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5Y2lwqHK1mYYIylNw18D2w'}, 'followers': {'href': None, 'total': 3170}, 'genres': ['krautrock', 'space rock'], 'href': 'https://api.spotify.com/v1/artists/5Y2lwqHK1mYYIylNw18D2w', 'id': '5Y2lwqHK1mYYIylNw18D2w', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb96ba9429e9f570d44c244e96', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517496ba9429e9f570d44c244e96', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17896ba9429e9f570d44c244e96', 'height': 160, 'width': 160}], 'name': 'The Utopia Strong', 'popularity': 6, 'type': 'artist', 'uri': 'spotify:artist:5Y2lwqHK1mYYIylNw18D2w'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features123/v4/a5/97/dc/a597dc5f-8ca8-b913-78cf-d4446f097b1e/mzl.uxnszpqg.jpg/2000x2000bb.jpg",
@@ -249,7 +359,7 @@
       "listeners": 4967,
       "mbid": null,
       "name": "The Utopia Strong",
-      "playcount": 40940,
+      "playcount": 40941,
       "similar_artists": [
         {
           "name": "Fenella",
@@ -308,10 +418,11 @@
       "name": "The Utopia Strong",
       "popularity": 6,
       "url": "https://open.spotify.com/artist/5Y2lwqHK1mYYIylNw18D2w"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "5Y2lwqHK1mYYIylNw18D2w",
   "spotify_url": "https://open.spotify.com/artist/5Y2lwqHK1mYYIylNw18D2w",
-  "updated_at": "2025-07-08T09:40:48.993800",
+  "updated_at": "2025-07-08T20:41:27.870394",
   "wikipedia_url": null
 }
