@@ -84,6 +84,27 @@ interface ArtistData {
       id?: string;
       url?: string;
     };
+    theaudiodb?: {
+      id?: string;
+      name?: string;
+      website?: string;
+      facebook?: string;
+      twitter?: string;
+      biography_en?: string;
+      biography_de?: string;
+      biography_fr?: string;
+      biography_es?: string;
+      biography_it?: string;
+      biography_pt?: string;
+      biography_nl?: string;
+      biography_se?: string;
+      biography_ru?: string;
+      biography_jp?: string;
+      genre?: string;
+      style?: string;
+      formed_year?: string;
+      country?: string;
+    };
   };
   local_images: {
     'hi-res': string;
@@ -516,12 +537,22 @@ export function ArtistDetailPage() {
                     bio = bio?.substring(0, wikiIndex).trim();
                   }
                   
-                  // Split by double newlines and create paragraphs
-                  return bio?.split(/\n\s*\n/).map((paragraph, index) => (
-                    <p key={index} className="mb-4 last:mb-0">
-                      {paragraph.trim()}
-                    </p>
-                  ));
+                  // Handle different biography formats
+                  if (bio?.includes('\n')) {
+                    // TheAudioDB format: Uses actual \n characters for paragraphs
+                    return bio.split('\n').filter(paragraph => paragraph.trim()).map((paragraph, index) => (
+                      <p key={index} className="mb-4 last:mb-0">
+                        {paragraph.trim()}
+                      </p>
+                    ));
+                  } else {
+                    // Legacy format: Single paragraph, no newlines
+                    return (
+                      <p className="mb-0">
+                        {bio}
+                      </p>
+                    );
+                  }
                 })()}
               </div>
               {!biographyExpanded && (
