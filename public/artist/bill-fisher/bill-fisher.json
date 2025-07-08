@@ -101,6 +101,129 @@
   },
   "name": "Bill Fisher",
   "popularity": 18,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='1523659764', url='https://music.apple.com/gb/artist/bill-fisher/1523659764', name='Bill Fisher', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d1/6d/c8/d16dc8f0-8d85-6914-fb20-e31f7c09b27e/artwork.jpg/2000x2000ac.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '1523659764', 'type': 'artists', 'href': '/v1/catalog/gb/artists/1523659764', 'attributes': {'name': 'Bill Fisher', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d1/6d/c8/d16dc8f0-8d85-6914-fb20-e31f7c09b27e/artwork.jpg/{w}x{h}ac.jpg', 'bgColor': '4a4657', 'textColor1': 'fae2c0', 'textColor2': 'faca98', 'textColor3': 'd7c3ab', 'textColor4': 'd6b08b'}, 'url': 'https://music.apple.com/gb/artist/bill-fisher/1523659764'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/1523659764/albums', 'data': [{'id': '1523722475', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1523722475'}, {'id': '1741423029', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741423029'}, {'id': '1575676546', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575676546'}, {'id': '1741416926', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741416926'}, {'id': '1741397127', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741397127'}, {'id': '1741416332', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1741416332'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/lyPWgpNZ-daPCAKC1OzyqYaD6BDwP9SG2kBx9AYilqo/rs:fit/g:sm/q:90/h:789/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "456916",
+      "images": [
+        {
+          "height": 789,
+          "resource_url": "https://i.discogs.com/lyPWgpNZ-daPCAKC1OzyqYaD6BDwP9SG2kBx9AYilqo/rs:fit/g:sm/q:90/h:789/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/lyPWgpNZ-daPCAKC1OzyqYaD6BDwP9SG2kBx9AYilqo/rs:fit/g:sm/q:90/h:789/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+          "uri150": "https://i.discogs.com/XA5mEWMuNwhZW8tTOwE66WoEjznEaotvW8Jb3zOsvv8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/bp6IZ23_FyZwroIwk7zHsb20bfICZnjm3udmLOQLevk/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bp6IZ23_FyZwroIwk7zHsb20bfICZnjm3udmLOQLevk/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/NVVwIHG4hELII3P6jXHIsMNrO0y9y5xibdSi42fWKKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/4AouipFrdrSHj99Tk05HRoSs9451iLFB8G4fFh8H2e8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4AouipFrdrSHj99Tk05HRoSs9451iLFB8G4fFh8H2e8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/loua-TB0o7DM99LzO8AOsNnYGyScmuYzcIGfSpzesVY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Bill Fisher",
+      "namevariations": [
+        "Brother Bill",
+        "William M. Fisher"
+      ],
+      "profile": "",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 4783456,
+            "name": "Mammothwing",
+            "resource_url": "https://api.discogs.com/artists/4783456",
+            "thumbnail_url": "https://i.discogs.com/idompHXTGpDnPGD1z6gw5uu6XmrlV4f5J9JBmhJewR8/rs:fit/g:sm/q:40/h:613/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3ODM0/NTYtMTQ5MDY1MTg0/My02NDIyLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5357527,
+            "name": "Church Of The Cosmic Skull",
+            "resource_url": "https://api.discogs.com/artists/5357527",
+            "thumbnail_url": "https://i.discogs.com/GDDRVhyEfX6JLWME-7jEbDtOPKvKSztEzdH60rRY2pw/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNTc1/MjctMTY3ODI2NDkw/My04NjU5LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5816654,
+            "name": "Dystopian Future Movies",
+            "resource_url": "https://api.discogs.com/artists/5816654",
+            "thumbnail_url": "https://i.discogs.com/eJnS9_j-YMaiAudpjGGtHizNEg3K2kS0ixS2yFM5vKA/rs:fit/g:sm/q:40/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MTY2/NTQtMTUwMTM2MDM5/OS0zNzg1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 13684561,
+            "name": "Massive Hassle",
+            "resource_url": "https://api.discogs.com/artists/13684561",
+            "thumbnail_url": "https://i.discogs.com/1SNz-mOam8U75cZ5nGKTbJd--FdjTm02j6LIf3cDSMo/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjg0/NTYxLTE2OTgwNjM4/OTItNjI5OC5qcGVn.jpeg"
+          }
+        ],
+        "id": 456916,
+        "images": [
+          {
+            "height": 789,
+            "resource_url": "https://i.discogs.com/lyPWgpNZ-daPCAKC1OzyqYaD6BDwP9SG2kBx9AYilqo/rs:fit/g:sm/q:90/h:789/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/lyPWgpNZ-daPCAKC1OzyqYaD6BDwP9SG2kBx9AYilqo/rs:fit/g:sm/q:90/h:789/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+            "uri150": "https://i.discogs.com/XA5mEWMuNwhZW8tTOwE66WoEjznEaotvW8Jb3zOsvv8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/bp6IZ23_FyZwroIwk7zHsb20bfICZnjm3udmLOQLevk/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bp6IZ23_FyZwroIwk7zHsb20bfICZnjm3udmLOQLevk/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+            "uri150": "https://i.discogs.com/NVVwIHG4hELII3P6jXHIsMNrO0y9y5xibdSi42fWKKI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzEw/LTc4OTcucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/4AouipFrdrSHj99Tk05HRoSs9451iLFB8G4fFh8H2e8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4AouipFrdrSHj99Tk05HRoSs9451iLFB8G4fFh8H2e8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/loua-TB0o7DM99LzO8AOsNnYGyScmuYzcIGfSpzesVY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNzQz/LTU4OTQuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Bill Fisher",
+        "namevariations": [
+          "Brother Bill",
+          "William M. Fisher"
+        ],
+        "profile": "",
+        "releases_url": "https://api.discogs.com/artists/456916/releases",
+        "resource_url": "https://api.discogs.com/artists/456916",
+        "uri": "https://www.discogs.com/artist/456916-Bill-Fisher",
+        "urls": [
+          "https://billfisher.net"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/456916",
+      "thumb": "https://i.discogs.com/XA5mEWMuNwhZW8tTOwE66WoEjznEaotvW8Jb3zOsvv8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1Njkx/Ni0xNjAxMTEyNjM3/LTQ0NzYucG5n.jpeg",
+      "url": "https://www.discogs.com/artist/456916-Bill-Fisher",
+      "urls": [
+        "https://billfisher.net"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Bill Fisher', url='https://www.last.fm/music/Bill+Fisher', mbid=None, listeners=3289, playcount=43482, bio_summary='As an aside to the musical works realised by Church of the Cosmic Skull, I have decided to release some other material under my own name, via this new website, billfisher.net\\n\\nRest assured that the Church has never been stronger, and will continue to spread the light of the Cosmic Rainbow with full and unstoppable force, with new songs and other tantalisations soon to follow.\\n\\nThe works to be sent forth from this new platform will be myriad and multiform, varied in genre but of high standard and rich with heart. <a href=\"https://www.last.fm/music/Bill+Fisher\">Read more on Last.fm</a>', bio_content='As an aside to the musical works realised by Church of the Cosmic Skull, I have decided to release some other material under my own name, via this new website, billfisher.net\\n\\nRest assured that the Church has never been stronger, and will continue to spread the light of the Cosmic Rainbow with full and unstoppable force, with new songs and other tantalisations soon to follow.\\n\\nThe works to be sent forth from this new platform will be myriad and multiform, varied in genre but of high standard and rich with heart.\\n\\nThe first will take the form of a full studio album, an exploration into heavier realms but still very much melody driven; prog with elements of proto-metal and stoner rock.\\n\\nLook out for further developments soon…\\n\\nYours in peace and harmony, <a href=\"https://www.last.fm/music/Bill+Fisher\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Stoner Rock', 'hard rock', 'doom metal', 'stoner metal'], similar_artists=[{'name': 'MASSIVE HASSLE', 'url': 'https://www.last.fm/music/MASSIVE+HASSLE'}, {'name': 'Sleepwulf', 'url': 'https://www.last.fm/music/Sleepwulf'}, {'name': 'Doom Side of the Moon', 'url': 'https://www.last.fm/music/Doom+Side+of+the+Moon'}, {'name': 'Killer Boogie', 'url': 'https://www.last.fm/music/Killer+Boogie'}, {'name': 'Dunbarrow', 'url': 'https://www.last.fm/music/Dunbarrow'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Bill Fisher', 'url': 'https://www.last.fm/music/Bill+Fisher', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '3289', 'playcount': '43482'}, 'similar': {'artist': [{'name': 'MASSIVE HASSLE', 'url': 'https://www.last.fm/music/MASSIVE+HASSLE', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Sleepwulf', 'url': 'https://www.last.fm/music/Sleepwulf', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Doom Side of the Moon', 'url': 'https://www.last.fm/music/Doom+Side+of+the+Moon', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Killer Boogie', 'url': 'https://www.last.fm/music/Killer+Boogie', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Dunbarrow', 'url': 'https://www.last.fm/music/Dunbarrow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Stoner Rock', 'url': 'https://www.last.fm/tag/Stoner+Rock'}, {'name': 'hard rock', 'url': 'https://www.last.fm/tag/hard+rock'}, {'name': 'doom metal', 'url': 'https://www.last.fm/tag/doom+metal'}, {'name': 'stoner metal', 'url': 'https://www.last.fm/tag/stoner+metal'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Bill+Fisher/+wiki'}}, 'published': '28 Oct 2020, 10:38', 'summary': 'As an aside to the musical works realised by Church of the Cosmic Skull, I have decided to release some other material under my own name, via this new website, billfisher.net\\n\\nRest assured that the Church has never been stronger, and will continue to spread the light of the Cosmic Rainbow with full and unstoppable force, with new songs and other tantalisations soon to follow.\\n\\nThe works to be sent forth from this new platform will be myriad and multiform, varied in genre but of high standard and rich with heart. <a href=\"https://www.last.fm/music/Bill+Fisher\">Read more on Last.fm</a>', 'content': 'As an aside to the musical works realised by Church of the Cosmic Skull, I have decided to release some other material under my own name, via this new website, billfisher.net\\n\\nRest assured that the Church has never been stronger, and will continue to spread the light of the Cosmic Rainbow with full and unstoppable force, with new songs and other tantalisations soon to follow.\\n\\nThe works to be sent forth from this new platform will be myriad and multiform, varied in genre but of high standard and rich with heart.\\n\\nThe first will take the form of a full studio album, an exploration into heavier realms but still very much melody driven; prog with elements of proto-metal and stoner rock.\\n\\nLook out for further developments soon…\\n\\nYours in peace and harmony, <a href=\"https://www.last.fm/music/Bill+Fisher\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='4pnCRQ0euxWLaJ1wBPb2ej', url='https://open.spotify.com/artist/4pnCRQ0euxWLaJ1wBPb2ej', name='Bill Fisher', popularity=18, followers=4636, genres=['stoner metal', 'space rock', 'stoner rock'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb3bb49587632db506782c8d14', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743bb49587632db506782c8d14', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783bb49587632db506782c8d14', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/4pnCRQ0euxWLaJ1wBPb2ej'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/4pnCRQ0euxWLaJ1wBPb2ej'}, 'followers': {'href': None, 'total': 4636}, 'genres': ['stoner metal', 'space rock', 'stoner rock'], 'href': 'https://api.spotify.com/v1/artists/4pnCRQ0euxWLaJ1wBPb2ej', 'id': '4pnCRQ0euxWLaJ1wBPb2ej', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb3bb49587632db506782c8d14', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051743bb49587632db506782c8d14', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1783bb49587632db506782c8d14', 'height': 160, 'width': 160}], 'name': 'Bill Fisher', 'popularity': 18, 'type': 'artist', 'uri': 'spotify:artist:4pnCRQ0euxWLaJ1wBPb2ej'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/d1/6d/c8/d16dc8f0-8d85-6914-fb20-e31f7c09b27e/artwork.jpg/2000x2000ac.jpg",
@@ -259,10 +382,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3286,
+      "listeners": 3289,
       "mbid": null,
       "name": "Bill Fisher",
-      "playcount": 43467,
+      "playcount": 43482,
       "similar_artists": [
         {
           "name": "MASSIVE HASSLE",
@@ -321,10 +444,11 @@
       "name": "Bill Fisher",
       "popularity": 18,
       "url": "https://open.spotify.com/artist/4pnCRQ0euxWLaJ1wBPb2ej"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "4pnCRQ0euxWLaJ1wBPb2ej",
   "spotify_url": "https://open.spotify.com/artist/4pnCRQ0euxWLaJ1wBPb2ej",
-  "updated_at": "2025-07-08T09:41:48.671577",
+  "updated_at": "2025-07-08T20:41:59.832944",
   "wikipedia_url": null
 }
