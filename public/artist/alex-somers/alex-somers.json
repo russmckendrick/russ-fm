@@ -99,7 +99,167 @@
     "small": "../public/artist/alex-somers/alex-somers-small.jpg"
   },
   "name": "Alex Somers",
-  "popularity": 39,
+  "popularity": 38,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='321532069', url='https://music.apple.com/gb/artist/alex-somers/321532069', name='Alex Somers', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/cc/28/a5/cc28a59f-fc99-f0c7-cc94-c2a940893f49/pr_source.png/2000x2000bb.jpg', genres=['Soundtrack'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '321532069', 'type': 'artists', 'href': '/v1/catalog/gb/artists/321532069', 'attributes': {'name': 'Alex Somers', 'genreNames': ['Soundtrack'], 'artwork': {'width': 1272, 'height': 1272, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/cc/28/a5/cc28a59f-fc99-f0c7-cc94-c2a940893f49/pr_source.png/{w}x{h}bb.jpg', 'bgColor': 'adc6d4', 'textColor1': '140706', 'textColor2': '3b2815', 'textColor3': '332d2f', 'textColor4': '52473b'}, 'url': 'https://music.apple.com/gb/artist/alex-somers/321532069'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/321532069/albums', 'data': [{'id': '1466094603', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1466094603'}, {'id': '1481623402', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1481623402'}, {'id': '1327949839', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1327949839'}, {'id': '1116842051', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1116842051'}, {'id': '1486229684', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1486229684'}, {'id': '1447489836', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1447489836'}, {'id': '1627357094', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1627357094'}, {'id': '1551151381', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1551151381'}, {'id': '1552046089', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1552046089'}, {'id': '1654797642', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1654797642'}, {'id': '1505612006', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1505612006'}, {'id': '1650460579', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1650460579'}, {'id': '1656424474', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1656424474'}, {'id': '1587359077', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1587359077'}, {'id': '1658144248', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1658144248'}, {'id': '1779776394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1779776394'}, {'id': '1629768047', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1629768047'}, {'id': '1655249926', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1655249926'}, {'id': '1802984764', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1802984764'}, {'id': '1766498304', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766498304'}, {'id': '1766387839', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766387839'}, {'id': '1766387249', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1766387249'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/DXEhxQxk2Bgw56neWMX5zyDA1TCYoLzIUq1xmZ-2hCQ/rs:fit/g:sm/q:90/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1369297",
+      "images": [
+        {
+          "height": 900,
+          "resource_url": "https://i.discogs.com/DXEhxQxk2Bgw56neWMX5zyDA1TCYoLzIUq1xmZ-2hCQ/rs:fit/g:sm/q:90/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/DXEhxQxk2Bgw56neWMX5zyDA1TCYoLzIUq1xmZ-2hCQ/rs:fit/g:sm/q:90/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Lk2HauqZC_EqLlZKsrfZUCrAQRWJ_UOIOEPQCOr8bc4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/HDtyjLsyxZeGA_8WJ6rFlBSxcpeSv4XWhe7k9zjmK04/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HDtyjLsyxZeGA_8WJ6rFlBSxcpeSv4XWhe7k9zjmK04/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_yCG3b_OstNyCtYMkfQFfZkrcXMPfFVCAuptF3fZdvk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 484,
+          "resource_url": "https://i.discogs.com/drNr-MONrIuWepWDhVyjii9IifeRFougJ__cx7BeWOk/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/drNr-MONrIuWepWDhVyjii9IifeRFougJ__cx7BeWOk/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HPgM2CYpia6X8KG0UIAR50aA9C1kFR71tUP3Q7ycZHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 650,
+          "resource_url": "https://i.discogs.com/XOvaC_WZ9VU0yGikbsk3kjGVh5OZJMfAWr8WdtG8YVA/rs:fit/g:sm/q:90/h:650/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XOvaC_WZ9VU0yGikbsk3kjGVh5OZJMfAWr8WdtG8YVA/rs:fit/g:sm/q:90/h:650/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Bm2LdEptmBvyygU1DBWyavDvj2YNQj5l_x8ej9DFfrc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+          "width": 531
+        },
+        {
+          "height": 331,
+          "resource_url": "https://i.discogs.com/UOA06IMDTm1Z-AVSr4YW2GQdLfCKaOeBiSy_5DTDc6w/rs:fit/g:sm/q:90/h:331/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UOA06IMDTm1Z-AVSr4YW2GQdLfCKaOeBiSy_5DTDc6w/rs:fit/g:sm/q:90/h:331/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/IJ47SMIWfzdlxv3SW8KFCic8Nx-q3ttvDlT-mnxWjT0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [],
+      "name": "Alex Somers",
+      "namevariations": [
+        "Alex",
+        "Alex Kendall Somers",
+        "Somers"
+      ],
+      "profile": "American visual artist and musician, currently residing in Reykjavík, Iceland. \r\nBrother of [a=John Somers]",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 1081730,
+            "name": "Parachutes",
+            "resource_url": "https://api.discogs.com/artists/1081730",
+            "thumbnail_url": "https://i.discogs.com/3fsfoop0IF-bOIHkULMii2vWZow_d7DhJ_IAVcgeRDs/rs:fit/g:sm/q:40/h:822/w:525/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwODE3/MzAtMTI0Njk3OTI1/My5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1369298,
+            "name": "Riceboy Sleeps",
+            "resource_url": "https://api.discogs.com/artists/1369298",
+            "thumbnail_url": "https://i.discogs.com/juo3CkKm24FhNufLYWGe_uMFWrTlr2TT0K0OW5rsRPo/rs:fit/g:sm/q:40/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTgtMTI0NTI3OTAx/Ny5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1503138,
+            "name": "Jónsi & Alex",
+            "resource_url": "https://api.discogs.com/artists/1503138",
+            "thumbnail_url": "https://i.discogs.com/6tjGmgRCJZXkpES9ifL1NTqAmYYEFtgS9MicKrAYNJs/rs:fit/g:sm/q:40/h:305/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MDMx/MzgtMTI0NzMzMzc1/MC5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 6475374,
+            "name": "Liminal (10)",
+            "resource_url": "https://api.discogs.com/artists/6475374",
+            "thumbnail_url": "https://i.discogs.com/eMNFKbMvZ2h6PGO3f6kiRa88zJhEz-DwaToznoi9uOE/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0NzUz/NzQtMTUyNjAzNTU2/My0zMTQ5LmpwZWc.jpeg"
+          }
+        ],
+        "id": 1369297,
+        "images": [
+          {
+            "height": 900,
+            "resource_url": "https://i.discogs.com/DXEhxQxk2Bgw56neWMX5zyDA1TCYoLzIUq1xmZ-2hCQ/rs:fit/g:sm/q:90/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/DXEhxQxk2Bgw56neWMX5zyDA1TCYoLzIUq1xmZ-2hCQ/rs:fit/g:sm/q:90/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/Lk2HauqZC_EqLlZKsrfZUCrAQRWJ_UOIOEPQCOr8bc4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/HDtyjLsyxZeGA_8WJ6rFlBSxcpeSv4XWhe7k9zjmK04/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HDtyjLsyxZeGA_8WJ6rFlBSxcpeSv4XWhe7k9zjmK04/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/_yCG3b_OstNyCtYMkfQFfZkrcXMPfFVCAuptF3fZdvk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzOTI0/OC04MDk1LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 484,
+            "resource_url": "https://i.discogs.com/drNr-MONrIuWepWDhVyjii9IifeRFougJ__cx7BeWOk/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/drNr-MONrIuWepWDhVyjii9IifeRFougJ__cx7BeWOk/rs:fit/g:sm/q:90/h:484/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/HPgM2CYpia6X8KG0UIAR50aA9C1kFR71tUP3Q7ycZHg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYwMjUzODg5/NS0zMjA3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 650,
+            "resource_url": "https://i.discogs.com/XOvaC_WZ9VU0yGikbsk3kjGVh5OZJMfAWr8WdtG8YVA/rs:fit/g:sm/q:90/h:650/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XOvaC_WZ9VU0yGikbsk3kjGVh5OZJMfAWr8WdtG8YVA/rs:fit/g:sm/q:90/h:650/w:531/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/Bm2LdEptmBvyygU1DBWyavDvj2YNQj5l_x8ej9DFfrc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTUzMTIxNjE3/NS0zMTE2LmpwZWc.jpeg",
+            "width": 531
+          },
+          {
+            "height": 331,
+            "resource_url": "https://i.discogs.com/UOA06IMDTm1Z-AVSr4YW2GQdLfCKaOeBiSy_5DTDc6w/rs:fit/g:sm/q:90/h:331/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UOA06IMDTm1Z-AVSr4YW2GQdLfCKaOeBiSy_5DTDc6w/rs:fit/g:sm/q:90/h:331/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/IJ47SMIWfzdlxv3SW8KFCic8Nx-q3ttvDlT-mnxWjT0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTI0Njk3OTI4/MS5qcGVn.jpeg",
+            "width": 500
+          }
+        ],
+        "name": "Alex Somers",
+        "namevariations": [
+          "Alex",
+          "Alex Kendall Somers",
+          "Somers"
+        ],
+        "profile": "American visual artist and musician, currently residing in Reykjavík, Iceland. \r\nBrother of [a=John Somers]",
+        "realname": "Alex Somers",
+        "releases_url": "https://api.discogs.com/artists/1369297/releases",
+        "resource_url": "https://api.discogs.com/artists/1369297",
+        "uri": "https://www.discogs.com/artist/1369297-Alex-Somers",
+        "urls": [
+          "http://en.wikipedia.org/wiki/Alex_Somers",
+          "https://alexsomers.bandcamp.com"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1369297",
+      "thumb": "https://i.discogs.com/Lk2HauqZC_EqLlZKsrfZUCrAQRWJ_UOIOEPQCOr8bc4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzNjky/OTctMTYxMDUzNzg0/Mi0zNDg2LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/1369297-Alex-Somers",
+      "urls": [
+        "http://en.wikipedia.org/wiki/Alex_Somers",
+        "https://alexsomers.bandcamp.com"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Alex Somers', url='https://www.last.fm/music/Alex+Somers', mbid=None, listeners=56707, playcount=695467, bio_summary='Alex Kendall Somers is a Baltimore, Maryland based visual artist and musician who also lived for about 10 years in Reykjavík, Iceland with his longtime partner who is also a vocalist and guitar player for Icelandic post-rock band, Sigur Rós,  Jón \"Jónsi\" Þór Birgisson. Upon their break-up, Somers resides in Los Angeles, California. He continues to release recordings and to work on film soundtracks and scores. Somers is also a raw food vegan and a founding member of Parachutes. <a href=\"https://www.last.fm/music/Alex+Somers\">Read more on Last.fm</a>', bio_content='Alex Kendall Somers is a Baltimore, Maryland based visual artist and musician who also lived for about 10 years in Reykjavík, Iceland with his longtime partner who is also a vocalist and guitar player for Icelandic post-rock band, Sigur Rós,  Jón \"Jónsi\" Þór Birgisson. Upon their break-up, Somers resides in Los Angeles, California. He continues to release recordings and to work on film soundtracks and scores. Somers is also a raw food vegan and a founding member of Parachutes. He collaborated with Jónsi, producing visual art and music called Jónsi & Alex and released Riceboy Sleeps, their first instrumentals album. <a href=\"https://www.last.fm/music/Alex+Somers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['ambient', 'Soundtrack', 'experimental', 'composer', 'electronic'], similar_artists=[{'name': 'Jónsi & Alex Somers', 'url': 'https://www.last.fm/music/J%C3%B3nsi+&+Alex+Somers'}, {'name': 'Ólafur Arnalds & Nils Frahm', 'url': 'https://www.last.fm/music/%C3%93lafur+Arnalds+&+Nils+Frahm'}, {'name': 'Julianna Barwick', 'url': 'https://www.last.fm/music/Julianna+Barwick'}, {'name': 'Frakkur', 'url': 'https://www.last.fm/music/Frakkur'}, {'name': 'Benoît Pioulard', 'url': 'https://www.last.fm/music/Beno%C3%AEt+Pioulard'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Alex Somers', 'url': 'https://www.last.fm/music/Alex+Somers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '56707', 'playcount': '695467'}, 'similar': {'artist': [{'name': 'Jónsi & Alex Somers', 'url': 'https://www.last.fm/music/J%C3%B3nsi+&+Alex+Somers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ólafur Arnalds & Nils Frahm', 'url': 'https://www.last.fm/music/%C3%93lafur+Arnalds+&+Nils+Frahm', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Julianna Barwick', 'url': 'https://www.last.fm/music/Julianna+Barwick', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Frakkur', 'url': 'https://www.last.fm/music/Frakkur', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Benoît Pioulard', 'url': 'https://www.last.fm/music/Beno%C3%AEt+Pioulard', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'ambient', 'url': 'https://www.last.fm/tag/ambient'}, {'name': 'Soundtrack', 'url': 'https://www.last.fm/tag/Soundtrack'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'composer', 'url': 'https://www.last.fm/tag/composer'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Alex+Somers/+wiki'}}, 'published': '25 Mar 2013, 19:52', 'summary': 'Alex Kendall Somers is a Baltimore, Maryland based visual artist and musician who also lived for about 10 years in Reykjavík, Iceland with his longtime partner who is also a vocalist and guitar player for Icelandic post-rock band, Sigur Rós,  Jón \"Jónsi\" Þór Birgisson. Upon their break-up, Somers resides in Los Angeles, California. He continues to release recordings and to work on film soundtracks and scores. Somers is also a raw food vegan and a founding member of Parachutes. <a href=\"https://www.last.fm/music/Alex+Somers\">Read more on Last.fm</a>', 'content': 'Alex Kendall Somers is a Baltimore, Maryland based visual artist and musician who also lived for about 10 years in Reykjavík, Iceland with his longtime partner who is also a vocalist and guitar player for Icelandic post-rock band, Sigur Rós,  Jón \"Jónsi\" Þór Birgisson. Upon their break-up, Somers resides in Los Angeles, California. He continues to release recordings and to work on film soundtracks and scores. Somers is also a raw food vegan and a founding member of Parachutes. He collaborated with Jónsi, producing visual art and music called Jónsi & Alex and released Riceboy Sleeps, their first instrumentals album. <a href=\"https://www.last.fm/music/Alex+Somers\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='51UcKPhDKdKDGIjec0781x', url='https://open.spotify.com/artist/51UcKPhDKdKDGIjec0781x', name='Alex Somers', popularity=38, followers=17858, genres=['post-rock', 'ambient'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb7552f70d9875a66ac13606af', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747552f70d9875a66ac13606af', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787552f70d9875a66ac13606af', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/51UcKPhDKdKDGIjec0781x'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/51UcKPhDKdKDGIjec0781x'}, 'followers': {'href': None, 'total': 17858}, 'genres': ['post-rock', 'ambient'], 'href': 'https://api.spotify.com/v1/artists/51UcKPhDKdKDGIjec0781x', 'id': '51UcKPhDKdKDGIjec0781x', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb7552f70d9875a66ac13606af', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051747552f70d9875a66ac13606af', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1787552f70d9875a66ac13606af', 'height': 160, 'width': 160}], 'name': 'Alex Somers', 'popularity': 38, 'type': 'artist', 'uri': 'spotify:artist:51UcKPhDKdKDGIjec0781x'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/cc/28/a5/cc28a59f-fc99-f0c7-cc94-c2a940893f49/pr_source.png/2000x2000bb.jpg",
@@ -295,10 +455,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 56699,
+      "listeners": 56707,
       "mbid": null,
       "name": "Alex Somers",
-      "playcount": 695297,
+      "playcount": 695467,
       "similar_artists": [
         {
           "name": "Jónsi & Alex Somers",
@@ -355,12 +515,13 @@
         }
       ],
       "name": "Alex Somers",
-      "popularity": 39,
+      "popularity": 38,
       "url": "https://open.spotify.com/artist/51UcKPhDKdKDGIjec0781x"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "51UcKPhDKdKDGIjec0781x",
   "spotify_url": "https://open.spotify.com/artist/51UcKPhDKdKDGIjec0781x",
-  "updated_at": "2025-07-08T10:09:14.384077",
+  "updated_at": "2025-07-08T20:57:03.903624",
   "wikipedia_url": null
 }
