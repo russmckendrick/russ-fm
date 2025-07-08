@@ -103,6 +103,210 @@
   },
   "name": "Frequency Drift",
   "popularity": 4,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='371025721', url='https://music.apple.com/gb/artist/frequency-drift/371025721', name='Frequency Drift', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/5a/71/58/5a7158d7-25f8-6b10-ef98-2fea1fbcf276/mzl.pwwxtinh.jpg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '371025721', 'type': 'artists', 'href': '/v1/catalog/gb/artists/371025721', 'attributes': {'name': 'Frequency Drift', 'genreNames': ['Rock'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/5a/71/58/5a7158d7-25f8-6b10-ef98-2fea1fbcf276/mzl.pwwxtinh.jpg/{w}x{h}bb.jpg', 'bgColor': '090303', 'textColor1': 'efcfc4', 'textColor2': 'ff5f49', 'textColor3': 'c1a69d', 'textColor4': 'cd4c3a'}, 'url': 'https://music.apple.com/gb/artist/frequency-drift/371025721'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/371025721/albums', 'data': [{'id': '1348707186', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348707186'}, {'id': '463761435', 'type': 'albums', 'href': '/v1/catalog/gb/albums/463761435'}, {'id': '1075842724', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1075842724'}, {'id': '948506257', 'type': 'albums', 'href': '/v1/catalog/gb/albums/948506257'}, {'id': '948077346', 'type': 'albums', 'href': '/v1/catalog/gb/albums/948077346'}, {'id': '1348729561', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1348729561'}, {'id': '371025720', 'type': 'albums', 'href': '/v1/catalog/gb/albums/371025720'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/1yP4EJlzTjJroZFlQaiI-8rgNerg0EmxXutjHwQ2EhE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "2538399",
+      "images": [
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/1yP4EJlzTjJroZFlQaiI-8rgNerg0EmxXutjHwQ2EhE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/1yP4EJlzTjJroZFlQaiI-8rgNerg0EmxXutjHwQ2EhE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/SBBEtMPiuFOBldyUy7b7b2J0avZpJ5ArI-zHlDNofFo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 430,
+          "resource_url": "https://i.discogs.com/9IWqf0MW6WKBJxTb6oMwCalh1eKNZmYva51G3kWx0m0/rs:fit/g:sm/q:90/h:430/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9IWqf0MW6WKBJxTb6oMwCalh1eKNZmYva51G3kWx0m0/rs:fit/g:sm/q:90/h:430/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/XSom8XNK_ePjpXkE7VS2lWzgQUftbBuCFkp4lX_xVHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+          "width": 252
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 884296,
+          "name": "Andreas Hack",
+          "resource_url": "https://api.discogs.com/artists/884296",
+          "thumbnail_url": "https://i.discogs.com/d23Rqkx_rrg84aBrXTjMwsgKCal3RQQj-1ryYesDAz8/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4NDI5/Ni0xNjk1NTQxNDU5/LTEyMjcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1563705,
+          "name": "Sebastian Koch (4)",
+          "resource_url": "https://api.discogs.com/artists/1563705",
+          "thumbnail_url": "https://i.discogs.com/Ocx-6nMbAwRMOJK5y9AI0QYNEFP7YY5Z5LSmL8_hjHs/rs:fit/g:sm/q:40/h:675/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1NjM3/MDUtMTY5NDUwMzU1/NS0yOTQ3LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2687227,
+          "name": "Martin Schnella",
+          "resource_url": "https://api.discogs.com/artists/2687227",
+          "thumbnail_url": "https://i.discogs.com/FoB6g3-1Xtlx5LajwgAelMOgnGJta1Gl_h_xg_2_vpw/rs:fit/g:sm/q:40/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODcy/MjctMTY1MDczODAy/NC03NDQwLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 3538675,
+          "name": "Christian Hack",
+          "resource_url": "https://api.discogs.com/artists/3538675",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 3538677,
+          "name": "Antje Auer",
+          "resource_url": "https://api.discogs.com/artists/3538677",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 3538679,
+          "name": "Jürgen Rennecke",
+          "resource_url": "https://api.discogs.com/artists/3538679",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 3538681,
+          "name": "Nerissa Schwarz",
+          "resource_url": "https://api.discogs.com/artists/3538681",
+          "thumbnail_url": "https://i.discogs.com/vmnLrdnTmBi5lOGgk3RNEkGx_GC-W2YSW-4y0ldKbWY/rs:fit/g:sm/q:40/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1Mzg2/ODEtMTU5MDA4MjUx/OC03OTYwLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 4889934,
+          "name": "Melanie Mau",
+          "resource_url": "https://api.discogs.com/artists/4889934",
+          "thumbnail_url": "https://i.discogs.com/Msxem6IhC4D_dJ740XAeX1ZT10RgCqGCmXG-rQWcYAc/rs:fit/g:sm/q:40/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODk5/MzQtMTY1MDczOTA0/OC0yMzQ5LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Frequency Drift",
+      "namevariations": [
+        "Frequency Drift et al."
+      ],
+      "profile": "German progressive rock band from Bayreuth formed in 2006. They feature female lead vocals.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 2538399,
+        "images": [
+          {
+            "height": 397,
+            "resource_url": "https://i.discogs.com/1yP4EJlzTjJroZFlQaiI-8rgNerg0EmxXutjHwQ2EhE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/1yP4EJlzTjJroZFlQaiI-8rgNerg0EmxXutjHwQ2EhE/rs:fit/g:sm/q:90/h:397/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/SBBEtMPiuFOBldyUy7b7b2J0avZpJ5ArI-zHlDNofFo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 430,
+            "resource_url": "https://i.discogs.com/9IWqf0MW6WKBJxTb6oMwCalh1eKNZmYva51G3kWx0m0/rs:fit/g:sm/q:90/h:430/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9IWqf0MW6WKBJxTb6oMwCalh1eKNZmYva51G3kWx0m0/rs:fit/g:sm/q:90/h:430/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/XSom8XNK_ePjpXkE7VS2lWzgQUftbBuCFkp4lX_xVHE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzkxMjQ4/MS0yNjY1LmpwZWc.jpeg",
+            "width": 252
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 884296,
+            "name": "Andreas Hack",
+            "resource_url": "https://api.discogs.com/artists/884296",
+            "thumbnail_url": "https://i.discogs.com/d23Rqkx_rrg84aBrXTjMwsgKCal3RQQj-1ryYesDAz8/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4NDI5/Ni0xNjk1NTQxNDU5/LTEyMjcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1563705,
+            "name": "Sebastian Koch (4)",
+            "resource_url": "https://api.discogs.com/artists/1563705",
+            "thumbnail_url": "https://i.discogs.com/Ocx-6nMbAwRMOJK5y9AI0QYNEFP7YY5Z5LSmL8_hjHs/rs:fit/g:sm/q:40/h:675/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1NjM3/MDUtMTY5NDUwMzU1/NS0yOTQ3LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2687227,
+            "name": "Martin Schnella",
+            "resource_url": "https://api.discogs.com/artists/2687227",
+            "thumbnail_url": "https://i.discogs.com/FoB6g3-1Xtlx5LajwgAelMOgnGJta1Gl_h_xg_2_vpw/rs:fit/g:sm/q:40/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2ODcy/MjctMTY1MDczODAy/NC03NDQwLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 3538675,
+            "name": "Christian Hack",
+            "resource_url": "https://api.discogs.com/artists/3538675",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 3538677,
+            "name": "Antje Auer",
+            "resource_url": "https://api.discogs.com/artists/3538677",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 3538679,
+            "name": "Jürgen Rennecke",
+            "resource_url": "https://api.discogs.com/artists/3538679",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 3538681,
+            "name": "Nerissa Schwarz",
+            "resource_url": "https://api.discogs.com/artists/3538681",
+            "thumbnail_url": "https://i.discogs.com/vmnLrdnTmBi5lOGgk3RNEkGx_GC-W2YSW-4y0ldKbWY/rs:fit/g:sm/q:40/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1Mzg2/ODEtMTU5MDA4MjUx/OC03OTYwLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4889934,
+            "name": "Melanie Mau",
+            "resource_url": "https://api.discogs.com/artists/4889934",
+            "thumbnail_url": "https://i.discogs.com/Msxem6IhC4D_dJ740XAeX1ZT10RgCqGCmXG-rQWcYAc/rs:fit/g:sm/q:40/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4ODk5/MzQtMTY1MDczOTA0/OC0yMzQ5LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Frequency Drift",
+        "namevariations": [
+          "Frequency Drift et al."
+        ],
+        "profile": "German progressive rock band from Bayreuth formed in 2006. They feature female lead vocals.",
+        "releases_url": "https://api.discogs.com/artists/2538399/releases",
+        "resource_url": "https://api.discogs.com/artists/2538399",
+        "uri": "https://www.discogs.com/artist/2538399-Frequency-Drift",
+        "urls": [
+          "http://www.frequencydrift.com/",
+          "https://www.AllMusic.com/artist/frequency-drift-mn0002101283 ",
+          "https://frequencydrift.bandcamp.com/",
+          "https://www.facebook.com/FrequencyDrift/",
+          "http://www.ProgArchives.com/artist.asp?id=3907",
+          "https://open.Spotify.com/artist/0qci4kFRmyKWs94GBMAv99",
+          "https://de.wikipedia.org/wiki/Frequency_Drift ",
+          "https://www.youtube.com/channel/UC__r0jnebmv7FmQglgypl1w"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/2538399",
+      "thumb": "https://i.discogs.com/SBBEtMPiuFOBldyUy7b7b2J0avZpJ5ArI-zHlDNofFo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1Mzgz/OTktMTM4MzczMjUw/Mi0yODAyLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/2538399-Frequency-Drift",
+      "urls": [
+        "http://www.frequencydrift.com/",
+        "https://www.AllMusic.com/artist/frequency-drift-mn0002101283 ",
+        "https://frequencydrift.bandcamp.com/",
+        "https://www.facebook.com/FrequencyDrift/",
+        "http://www.ProgArchives.com/artist.asp?id=3907",
+        "https://open.Spotify.com/artist/0qci4kFRmyKWs94GBMAv99",
+        "https://de.wikipedia.org/wiki/Frequency_Drift ",
+        "https://www.youtube.com/channel/UC__r0jnebmv7FmQglgypl1w"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Frequency Drift', url='https://www.last.fm/music/Frequency+Drift', mbid='2e9e1288-2dc8-453d-bde2-f5169475889f', listeners=4686, playcount=115825, bio_summary='With seven highly acclaimed albums and live shows at renowned international festivals, Frequency Drift built a steadily growing international fan base for themselves. Lead by Andreas Hack and Nerissa Schwarz, the band’s distinctive style blended captivating cinematic music, outside-the-box instrumentation and female vocals.\\n\\nFrequency Drift: 2008 – 2019\\n\\nFormed in Bayreuth, Germany by classically trained keyboard player and multi-instrumentalist Andreas Hack, the band released their debut, Personal Effects Pt. <a href=\"https://www.last.fm/music/Frequency+Drift\">Read more on Last.fm</a>', bio_content='With seven highly acclaimed albums and live shows at renowned international festivals, Frequency Drift built a steadily growing international fan base for themselves. Lead by Andreas Hack and Nerissa Schwarz, the band’s distinctive style blended captivating cinematic music, outside-the-box instrumentation and female vocals.\\n\\nFrequency Drift: 2008 – 2019\\n\\nFormed in Bayreuth, Germany by classically trained keyboard player and multi-instrumentalist Andreas Hack, the band released their debut, Personal Effects Pt. 1, in 2008 via Musea. The conceptual work about the tragic story of two sisters in a futuristic setting was inspired by films like Bladerunner and Ghost in a Shell. The follow-up album, Personal Effects Pt. 2 was released by Cyclops in 2009 and once more showcased Frequency Drift’s talent for powerful, soulful melodies and atmosphere.\\n\\nThe 2011 album Ghosts… saw the first notable appearance of later band member Nerissa Schwarz (electric harp) as guest composer and musician, as well as an evolution towards an enthralling, melancholic mixture of art rock, ambient, folk and metal. …Laid to rest (2012, Gentle Art of Music) continued this path with world music influences and an even more varied instrumentation, featuring gemshorn, flute and clarinet alongside the harp and violin.\\n\\nThe international success of their albums earned Frequency Drift an invitation to play live at the 2012 edition of “Night of the Prog” festival on the famous Loreley open-air stage, a performance called one of the highlights in 9 years of NOTP by the festival’s manager in the German magazine Eclipsed.\\n\\nFrequency Drift’s 5th album Over (2014) established a writing collaboration between Andreas and Nerissa and was marked by further experimentation with electric harp soundscapes and keyboard textures. An ambitious and eclectic work, Over offered a unique mixture of old school progressive rock, postrock, pop, classical and world music. In the same year, Frequency Drift released Summer, a wistful collection of previously unreleased songs, and was joined by drummer Wolfgang Ostermann, who brought fresh rhythmic drive to the music.\\n\\nIn the following years the band performed live at renowned international festivals, including Summer’s End (UK), 2 Days Prog + 1 (Italy) and Progdreams (NL), and as main act at the live club De Pul (NL).\\n\\n2016 saw the release of their 6th album Last. Stranger and darker than its predecessors, yet still highly melodic, with stunning artwork and evocative lyrics, it was Frequency Drift’s most cohesive and cinematic work to date. Despite their obvious love for album titles suggesting death and finality, Frequency Drift stayed alive and kicking through several line-up changes.\\n\\nIn 2018, Frequency Drift released Letters to Maro. Melodic and experimental at the same time, the band’s final album offered a glorious roller-coaster ride of melancholy, lightness and energy, rhythmic sophistication, innovative soundscapes and catchy vocal lines.\\n\\nIn 2019, Frequency Drift were nominated for the prestigious Progressive Music Awards, another highlight in the band’s career. In the same year, Frequency Drift announced that there would not be another album or live performance. The band’s core members continue to work in other projects, both solo and collaborative ones.\\n\\nFrequency Drift’s last line-up was:\\n\\nIrini Alexia: vocals\\nAndreas Hack: keys, synths, guitar, bass, mandolin\\nNerissa Schwarz: electric harp, mellotron, synths\\nWolfgang Ostermann: drums, wavedrum\\nwith:\\nMichael Bauer: additional guitars and live guitars\\nMarco Geipel: live bass <a href=\"https://www.last.fm/music/Frequency+Drift\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['Progressive rock', 'female vocalists', 'german', 'Crossover Prog', 'rock'], similar_artists=[{'name': 'Nine Stones Close', 'url': 'https://www.last.fm/music/Nine+Stones+Close'}, {'name': 'Delusion Squared', 'url': 'https://www.last.fm/music/Delusion+Squared'}, {'name': 'Ioearth', 'url': 'https://www.last.fm/music/Ioearth'}, {'name': 'Corvus Stone', 'url': 'https://www.last.fm/music/Corvus+Stone'}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Frequency Drift', 'mbid': '2e9e1288-2dc8-453d-bde2-f5169475889f', 'url': 'https://www.last.fm/music/Frequency+Drift', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '4686', 'playcount': '115825'}, 'similar': {'artist': [{'name': 'Nine Stones Close', 'url': 'https://www.last.fm/music/Nine+Stones+Close', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Delusion Squared', 'url': 'https://www.last.fm/music/Delusion+Squared', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Ioearth', 'url': 'https://www.last.fm/music/Ioearth', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Corvus Stone', 'url': 'https://www.last.fm/music/Corvus+Stone', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Also Eden', 'url': 'https://www.last.fm/music/Also+Eden', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'Progressive rock', 'url': 'https://www.last.fm/tag/Progressive+rock'}, {'name': 'female vocalists', 'url': 'https://www.last.fm/tag/female+vocalists'}, {'name': 'german', 'url': 'https://www.last.fm/tag/german'}, {'name': 'Crossover Prog', 'url': 'https://www.last.fm/tag/Crossover+Prog'}, {'name': 'rock', 'url': 'https://www.last.fm/tag/rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Frequency+Drift/+wiki'}}, 'published': '29 Jul 2008, 19:01', 'summary': 'With seven highly acclaimed albums and live shows at renowned international festivals, Frequency Drift built a steadily growing international fan base for themselves. Lead by Andreas Hack and Nerissa Schwarz, the band’s distinctive style blended captivating cinematic music, outside-the-box instrumentation and female vocals.\\n\\nFrequency Drift: 2008 – 2019\\n\\nFormed in Bayreuth, Germany by classically trained keyboard player and multi-instrumentalist Andreas Hack, the band released their debut, Personal Effects Pt. <a href=\"https://www.last.fm/music/Frequency+Drift\">Read more on Last.fm</a>', 'content': 'With seven highly acclaimed albums and live shows at renowned international festivals, Frequency Drift built a steadily growing international fan base for themselves. Lead by Andreas Hack and Nerissa Schwarz, the band’s distinctive style blended captivating cinematic music, outside-the-box instrumentation and female vocals.\\n\\nFrequency Drift: 2008 – 2019\\n\\nFormed in Bayreuth, Germany by classically trained keyboard player and multi-instrumentalist Andreas Hack, the band released their debut, Personal Effects Pt. 1, in 2008 via Musea. The conceptual work about the tragic story of two sisters in a futuristic setting was inspired by films like Bladerunner and Ghost in a Shell. The follow-up album, Personal Effects Pt. 2 was released by Cyclops in 2009 and once more showcased Frequency Drift’s talent for powerful, soulful melodies and atmosphere.\\n\\nThe 2011 album Ghosts… saw the first notable appearance of later band member Nerissa Schwarz (electric harp) as guest composer and musician, as well as an evolution towards an enthralling, melancholic mixture of art rock, ambient, folk and metal. …Laid to rest (2012, Gentle Art of Music) continued this path with world music influences and an even more varied instrumentation, featuring gemshorn, flute and clarinet alongside the harp and violin.\\n\\nThe international success of their albums earned Frequency Drift an invitation to play live at the 2012 edition of “Night of the Prog” festival on the famous Loreley open-air stage, a performance called one of the highlights in 9 years of NOTP by the festival’s manager in the German magazine Eclipsed.\\n\\nFrequency Drift’s 5th album Over (2014) established a writing collaboration between Andreas and Nerissa and was marked by further experimentation with electric harp soundscapes and keyboard textures. An ambitious and eclectic work, Over offered a unique mixture of old school progressive rock, postrock, pop, classical and world music. In the same year, Frequency Drift released Summer, a wistful collection of previously unreleased songs, and was joined by drummer Wolfgang Ostermann, who brought fresh rhythmic drive to the music.\\n\\nIn the following years the band performed live at renowned international festivals, including Summer’s End (UK), 2 Days Prog + 1 (Italy) and Progdreams (NL), and as main act at the live club De Pul (NL).\\n\\n2016 saw the release of their 6th album Last. Stranger and darker than its predecessors, yet still highly melodic, with stunning artwork and evocative lyrics, it was Frequency Drift’s most cohesive and cinematic work to date. Despite their obvious love for album titles suggesting death and finality, Frequency Drift stayed alive and kicking through several line-up changes.\\n\\nIn 2018, Frequency Drift released Letters to Maro. Melodic and experimental at the same time, the band’s final album offered a glorious roller-coaster ride of melancholy, lightness and energy, rhythmic sophistication, innovative soundscapes and catchy vocal lines.\\n\\nIn 2019, Frequency Drift were nominated for the prestigious Progressive Music Awards, another highlight in the band’s career. In the same year, Frequency Drift announced that there would not be another album or live performance. The band’s core members continue to work in other projects, both solo and collaborative ones.\\n\\nFrequency Drift’s last line-up was:\\n\\nIrini Alexia: vocals\\nAndreas Hack: keys, synths, guitar, bass, mandolin\\nNerissa Schwarz: electric harp, mellotron, synths\\nWolfgang Ostermann: drums, wavedrum\\nwith:\\nMichael Bauer: additional guitars and live guitars\\nMarco Geipel: live bass <a href=\"https://www.last.fm/music/Frequency+Drift\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='0qci4kFRmyKWs94GBMAv99', url='https://open.spotify.com/artist/0qci4kFRmyKWs94GBMAv99', name='Frequency Drift', popularity=4, followers=3254, genres=['progressive rock', 'art rock', 'progressive metal'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb5691e4bf85ff0cc80851cc24', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051745691e4bf85ff0cc80851cc24', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1785691e4bf85ff0cc80851cc24', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0qci4kFRmyKWs94GBMAv99'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0qci4kFRmyKWs94GBMAv99'}, 'followers': {'href': None, 'total': 3254}, 'genres': ['progressive rock', 'art rock', 'progressive metal'], 'href': 'https://api.spotify.com/v1/artists/0qci4kFRmyKWs94GBMAv99', 'id': '0qci4kFRmyKWs94GBMAv99', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb5691e4bf85ff0cc80851cc24', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051745691e4bf85ff0cc80851cc24', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1785691e4bf85ff0cc80851cc24', 'height': 160, 'width': 160}], 'name': 'Frequency Drift', 'popularity': 4, 'type': 'artist', 'uri': 'spotify:artist:0qci4kFRmyKWs94GBMAv99'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features114/v4/5a/71/58/5a7158d7-25f8-6b10-ef98-2fea1fbcf276/mzl.pwwxtinh.jpg/2000x2000bb.jpg",
@@ -345,7 +549,7 @@
       "listeners": 4686,
       "mbid": "2e9e1288-2dc8-453d-bde2-f5169475889f",
       "name": "Frequency Drift",
-      "playcount": 115823,
+      "playcount": 115825,
       "similar_artists": [
         {
           "name": "Nine Stones Close",
@@ -405,10 +609,11 @@
       "name": "Frequency Drift",
       "popularity": 4,
       "url": "https://open.spotify.com/artist/0qci4kFRmyKWs94GBMAv99"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "0qci4kFRmyKWs94GBMAv99",
   "spotify_url": "https://open.spotify.com/artist/0qci4kFRmyKWs94GBMAv99",
-  "updated_at": "2025-07-08T10:01:30.985396",
+  "updated_at": "2025-07-08T20:53:06.890106",
   "wikipedia_url": null
 }

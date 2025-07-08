@@ -100,6 +100,185 @@
   },
   "name": "Fred Deakin",
   "popularity": 5,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='260789830', url='https://music.apple.com/gb/artist/fred-deakin/260789830', name='Fred Deakin', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e6/18/ce/e618ce5a-f003-afa4-a447-c2c8e349dfe5/192641376993_Cover.jpg/2000x2000ac.jpg', genres=['Downtempo'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '260789830', 'type': 'artists', 'href': '/v1/catalog/gb/artists/260789830', 'attributes': {'name': 'Fred Deakin', 'genreNames': ['Downtempo'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e6/18/ce/e618ce5a-f003-afa4-a447-c2c8e349dfe5/192641376993_Cover.jpg/{w}x{h}ac.jpg', 'bgColor': '020200', 'textColor1': 'b1c1d6', 'textColor2': 'a0b2c9', 'textColor3': '8e9aab', 'textColor4': '808fa1'}, 'url': 'https://music.apple.com/gb/artist/fred-deakin/260789830'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/260789830/albums', 'data': [{'id': '1480648770', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1480648770'}, {'id': '1478352496', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1478352496'}, {'id': '1481421800', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1481421800'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/xyW8SMFUYF52flxKv8D9LrKYB3l5ysxjELdGp6zhjD4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "642451",
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/xyW8SMFUYF52flxKv8D9LrKYB3l5ysxjELdGp6zhjD4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/xyW8SMFUYF52flxKv8D9LrKYB3l5ysxjELdGp6zhjD4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/70dCz5cFZ8QXWNHNu7wZvHOlhi4nEVtop_6r6vdRSGY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/C0fQNd33A4Nr_sQYgNVnK9o1JXbDvTT_vKX_7wULB1U/rs:fit/g:sm/q:90/h:360/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C0fQNd33A4Nr_sQYgNVnK9o1JXbDvTT_vKX_7wULB1U/rs:fit/g:sm/q:90/h:360/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/k92rbuKuG79GzIh6VgHGELDgV0QbTjA_LqOjDN3FY-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+          "width": 580
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/dPaN8HsqLekcLn5hk54mXmsREBn48ONwAdiJwnR6CFI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dPaN8HsqLekcLn5hk54mXmsREBn48ONwAdiJwnR6CFI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/8bXr2_1v9-gYHV1_w1GR941X2d4nY_vWdYsetg128oU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 465,
+          "resource_url": "https://i.discogs.com/3BLs8H5stEAAzPslveXKTfK4tAj27uz_dLyMS-84o_o/rs:fit/g:sm/q:90/h:465/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3BLs8H5stEAAzPslveXKTfK4tAj27uz_dLyMS-84o_o/rs:fit/g:sm/q:90/h:465/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/wOwWmpzoCLGhUxjbUhH0NSDCVHUIVcEvJIMYU2AN3Rg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+          "width": 563
+        },
+        {
+          "height": 443,
+          "resource_url": "https://i.discogs.com/w3oo7-79bHJAbuIzBf5CGfV2blRh1lGDNakqhhNcPzA/rs:fit/g:sm/q:90/h:443/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/w3oo7-79bHJAbuIzBf5CGfV2blRh1lGDNakqhhNcPzA/rs:fit/g:sm/q:90/h:443/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/cQghs6vugXz16sehvaS1LO-5DFVOIuxAViFj0vRfhi8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+          "width": 591
+        }
+      ],
+      "members": [],
+      "name": "Fred Deakin",
+      "namevariations": [
+        "Deagen",
+        "Deakin",
+        "Dreakin",
+        "F Deakin",
+        "F. Deakin",
+        "Fred",
+        "Fred Daekin"
+      ],
+      "profile": "",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 2029251,
+            "name": "Impotent Fury",
+            "resource_url": "https://api.discogs.com/artists/2029251",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 2565646,
+            "name": "Frank Eddie (2)",
+            "resource_url": "https://api.discogs.com/artists/2565646",
+            "thumbnail_url": "https://i.discogs.com/PdJvVKLpECAxijQba-sr6sVxNxwvNC59l5GmVdGRnIo/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NjU2/NDYtMTUwNjcwODIw/Ny00MDA3LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 4819,
+            "name": "Lemon Jelly",
+            "resource_url": "https://api.discogs.com/artists/4819",
+            "thumbnail_url": "https://i.discogs.com/EyUJ2Yxmf-lSkPZjnXKeeUB_YAiivqHFPUv_lMd1AgM/rs:fit/g:sm/q:40/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ4MTkt/MTQ3NzYzNjQxNC0y/NDA2LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 642454,
+            "name": "Cosmic Fury",
+            "resource_url": "https://api.discogs.com/artists/642454",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 2363168,
+            "name": "Flashman (4)",
+            "resource_url": "https://api.discogs.com/artists/2363168",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 642451,
+        "images": [
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/xyW8SMFUYF52flxKv8D9LrKYB3l5ysxjELdGp6zhjD4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/xyW8SMFUYF52flxKv8D9LrKYB3l5ysxjELdGp6zhjD4/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/70dCz5cFZ8QXWNHNu7wZvHOlhi4nEVtop_6r6vdRSGY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 360,
+            "resource_url": "https://i.discogs.com/C0fQNd33A4Nr_sQYgNVnK9o1JXbDvTT_vKX_7wULB1U/rs:fit/g:sm/q:90/h:360/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/C0fQNd33A4Nr_sQYgNVnK9o1JXbDvTT_vKX_7wULB1U/rs:fit/g:sm/q:90/h:360/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/k92rbuKuG79GzIh6VgHGELDgV0QbTjA_LqOjDN3FY-k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzOTE5/LTE4NjEuanBlZw.jpeg",
+            "width": 580
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/dPaN8HsqLekcLn5hk54mXmsREBn48ONwAdiJwnR6CFI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dPaN8HsqLekcLn5hk54mXmsREBn48ONwAdiJwnR6CFI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/8bXr2_1v9-gYHV1_w1GR941X2d4nY_vWdYsetg128oU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDQ4NDc4MTQ3/LTgyMzcuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 465,
+            "resource_url": "https://i.discogs.com/3BLs8H5stEAAzPslveXKTfK4tAj27uz_dLyMS-84o_o/rs:fit/g:sm/q:90/h:465/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3BLs8H5stEAAzPslveXKTfK4tAj27uz_dLyMS-84o_o/rs:fit/g:sm/q:90/h:465/w:563/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/wOwWmpzoCLGhUxjbUhH0NSDCVHUIVcEvJIMYU2AN3Rg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4NzUw/LmpwZWc.jpeg",
+            "width": 563
+          },
+          {
+            "height": 443,
+            "resource_url": "https://i.discogs.com/w3oo7-79bHJAbuIzBf5CGfV2blRh1lGDNakqhhNcPzA/rs:fit/g:sm/q:90/h:443/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/w3oo7-79bHJAbuIzBf5CGfV2blRh1lGDNakqhhNcPzA/rs:fit/g:sm/q:90/h:443/w:591/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/cQghs6vugXz16sehvaS1LO-5DFVOIuxAViFj0vRfhi8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xMjA4NTI4Nzc3/LmpwZWc.jpeg",
+            "width": 591
+          }
+        ],
+        "name": "Fred Deakin",
+        "namevariations": [
+          "Deagen",
+          "Deakin",
+          "Dreakin",
+          "F Deakin",
+          "F. Deakin",
+          "Fred",
+          "Fred Daekin"
+        ],
+        "profile": "",
+        "realname": "Fred Deakin",
+        "releases_url": "https://api.discogs.com/artists/642451/releases",
+        "resource_url": "https://api.discogs.com/artists/642451",
+        "uri": "https://www.discogs.com/artist/642451-Fred-Deakin",
+        "urls": [
+          "http://freddeak.in/",
+          "https://soundcloud.com/freddeakin",
+          "http://vimeo.com/freddeakin",
+          "https://twitter.com/FredDeakin"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/642451",
+      "thumb": "https://i.discogs.com/70dCz5cFZ8QXWNHNu7wZvHOlhi4nEVtop_6r6vdRSGY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY0MjQ1/MS0xNDkyMjAzODU4/LTg1NTYuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/642451-Fred-Deakin",
+      "urls": [
+        "http://freddeak.in/",
+        "https://soundcloud.com/freddeakin",
+        "http://vimeo.com/freddeakin",
+        "https://twitter.com/FredDeakin"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Fred Deakin', url='https://www.last.fm/music/Fred+Deakin', mbid=None, listeners=2871, playcount=22491, bio_summary='Fred Deakin is a DJ and designer whose illustration work has been highlighted in the culture magazine the Face.\\nDeakin forms, with Nick Franglen, the Lemon Jelly duo. <a href=\"https://www.last.fm/music/Fred+Deakin\">Read more on Last.fm</a>', bio_content='Fred Deakin is a DJ and designer whose illustration work has been highlighted in the culture magazine the Face.\\nDeakin forms, with Nick Franglen, the Lemon Jelly duo. <a href=\"https://www.last.fm/music/Fred+Deakin\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['chillout', 'electronica', 'chilled', 'post-punk', 'balearic'], similar_artists=[{'name': 'Frank Eddie', 'url': 'https://www.last.fm/music/Frank+Eddie'}, {'name': 'Beyond The Wizards Sleeve', 'url': 'https://www.last.fm/music/Beyond+The+Wizards+Sleeve'}, {'name': 'Deakin/Lemon Jelly/Simon Franglen', 'url': 'https://www.last.fm/music/Deakin%2FLemon+Jelly%2FSimon+Franglen'}, {'name': 'International Teachers of Pop', 'url': 'https://www.last.fm/music/International+Teachers+of+Pop'}, {'name': 'Man & The Echo', 'url': 'https://www.last.fm/music/Man+&+The+Echo'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Fred Deakin', 'url': 'https://www.last.fm/music/Fred+Deakin', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2871', 'playcount': '22491'}, 'similar': {'artist': [{'name': 'Frank Eddie', 'url': 'https://www.last.fm/music/Frank+Eddie', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Beyond The Wizards Sleeve', 'url': 'https://www.last.fm/music/Beyond+The+Wizards+Sleeve', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Deakin/Lemon Jelly/Simon Franglen', 'url': 'https://www.last.fm/music/Deakin%2FLemon+Jelly%2FSimon+Franglen', 'image': [{'#text': '', 'size': 'small'}, {'#text': '', 'size': 'medium'}, {'#text': '', 'size': 'large'}, {'#text': '', 'size': 'extralarge'}, {'#text': '', 'size': 'mega'}, {'#text': '', 'size': ''}]}, {'name': 'International Teachers of Pop', 'url': 'https://www.last.fm/music/International+Teachers+of+Pop', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Man & The Echo', 'url': 'https://www.last.fm/music/Man+&+The+Echo', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'chillout', 'url': 'https://www.last.fm/tag/chillout'}, {'name': 'electronica', 'url': 'https://www.last.fm/tag/electronica'}, {'name': 'chilled', 'url': 'https://www.last.fm/tag/chilled'}, {'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'balearic', 'url': 'https://www.last.fm/tag/balearic'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Fred+Deakin/+wiki'}}, 'published': '23 Oct 2007, 19:02', 'summary': 'Fred Deakin is a DJ and designer whose illustration work has been highlighted in the culture magazine the Face.\\nDeakin forms, with Nick Franglen, the Lemon Jelly duo. <a href=\"https://www.last.fm/music/Fred+Deakin\">Read more on Last.fm</a>', 'content': 'Fred Deakin is a DJ and designer whose illustration work has been highlighted in the culture magazine the Face.\\nDeakin forms, with Nick Franglen, the Lemon Jelly duo. <a href=\"https://www.last.fm/music/Fred+Deakin\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='5JDV0tbYx7DES9jbD58K6x', url='https://open.spotify.com/artist/5JDV0tbYx7DES9jbD58K6x', name='Fred Deakin', popularity=5, followers=1093, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb637b32d1c5079636bf9d26ce', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174637b32d1c5079636bf9d26ce', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178637b32d1c5079636bf9d26ce', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/5JDV0tbYx7DES9jbD58K6x'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/5JDV0tbYx7DES9jbD58K6x'}, 'followers': {'href': None, 'total': 1093}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/5JDV0tbYx7DES9jbD58K6x', 'id': '5JDV0tbYx7DES9jbD58K6x', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb637b32d1c5079636bf9d26ce', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174637b32d1c5079636bf9d26ce', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178637b32d1c5079636bf9d26ce', 'height': 160, 'width': 160}], 'name': 'Fred Deakin', 'popularity': 5, 'type': 'artist', 'uri': 'spotify:artist:5JDV0tbYx7DES9jbD58K6x'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/e6/18/ce/e618ce5a-f003-afa4-a447-c2c8e349dfe5/192641376993_Cover.jpg/2000x2000ac.jpg",
@@ -314,10 +493,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 2870,
+      "listeners": 2871,
       "mbid": null,
       "name": "Fred Deakin",
-      "playcount": 22480,
+      "playcount": 22491,
       "similar_artists": [
         {
           "name": "Frank Eddie",
@@ -373,10 +552,11 @@
       "name": "Fred Deakin",
       "popularity": 5,
       "url": "https://open.spotify.com/artist/5JDV0tbYx7DES9jbD58K6x"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "5JDV0tbYx7DES9jbD58K6x",
   "spotify_url": "https://open.spotify.com/artist/5JDV0tbYx7DES9jbD58K6x",
-  "updated_at": "2025-07-08T09:59:16.937542",
+  "updated_at": "2025-07-08T20:51:58.337258",
   "wikipedia_url": null
 }
