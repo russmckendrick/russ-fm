@@ -104,6 +104,119 @@
   },
   "name": "Elephant Gym",
   "popularity": 39,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='798537066', url='https://music.apple.com/gb/artist/elephant-gym/798537066', name='Elephant Gym', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/0f/19/a4/0f19a4d0-f5bc-74cc-ddc5-9b46ffd3d042/mzl.gqxmjznt.jpeg/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '798537066', 'type': 'artists', 'href': '/v1/catalog/gb/artists/798537066', 'attributes': {'name': 'Elephant Gym', 'genreNames': ['Rock'], 'artwork': {'width': 3000, 'height': 3000, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/0f/19/a4/0f19a4d0-f5bc-74cc-ddc5-9b46ffd3d042/mzl.gqxmjznt.jpeg/{w}x{h}bb.jpg', 'bgColor': 'afb3bf', 'textColor1': '04090b', 'textColor2': '301605', 'textColor3': '262b2f', 'textColor4': '49352a'}, 'url': 'https://music.apple.com/gb/artist/elephant-gym/798537066'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/798537066/albums', 'data': [{'id': '1613910767', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613910767'}, {'id': '1603607569', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1603607569'}, {'id': '1613473982', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613473982'}, {'id': '1619402325', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1619402325'}, {'id': '1717111585', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1717111585'}, {'id': '1595811407', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1595811407'}, {'id': '1613718805', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613718805'}, {'id': '881888139', 'type': 'albums', 'href': '/v1/catalog/gb/albums/881888139'}, {'id': '1561050459', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1561050459'}, {'id': '1536420405', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536420405'}, {'id': '1714276693', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1714276693'}, {'id': '1619940624', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1619940624'}, {'id': '1613302323', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1613302323'}, {'id': '1711096120', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1711096120'}, {'id': '1710257201', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1710257201'}, {'id': '1816031873', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1816031873'}, {'id': '1814368080', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1814368080'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "4203468",
+      "images": [
+        {
+          "height": 332,
+          "resource_url": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 5764892,
+          "name": "張凱翔",
+          "resource_url": "https://api.discogs.com/artists/5764892",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5764893,
+          "name": "張凱婷",
+          "resource_url": "https://api.discogs.com/artists/5764893",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5807204,
+          "name": "涂嘉欽",
+          "resource_url": "https://api.discogs.com/artists/5807204",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Elephant Gym",
+      "namevariations": [
+        "大象體操"
+      ],
+      "profile": "大象體操 (Elephant Gym) is a math rock band from Kaohsiung, Taiwan. It was formed in February 2012.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 4203468,
+        "images": [
+          {
+            "height": 332,
+            "resource_url": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 5764892,
+            "name": "張凱翔",
+            "resource_url": "https://api.discogs.com/artists/5764892",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5764893,
+            "name": "張凱婷",
+            "resource_url": "https://api.discogs.com/artists/5764893",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5807204,
+            "name": "涂嘉欽",
+            "resource_url": "https://api.discogs.com/artists/5807204",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Elephant Gym",
+        "namevariations": [
+          "大象體操"
+        ],
+        "profile": "大象體操 (Elephant Gym) is a math rock band from Kaohsiung, Taiwan. It was formed in February 2012.",
+        "realname": "大象體操",
+        "releases_url": "https://api.discogs.com/artists/4203468/releases",
+        "resource_url": "https://api.discogs.com/artists/4203468",
+        "uri": "https://www.discogs.com/artist/4203468-Elephant-Gym",
+        "urls": [
+          "https://elephantgym.co/",
+          "https://elephant-gym.bandcamp.com",
+          "https://www.facebook.com/elephantgym",
+          "https://twitter.com/elephant_gym",
+          "https://www.youtube.com/channel/UCyCarLRHBVJYXJ3L2uuEEQg"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/4203468",
+      "thumb": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/4203468-Elephant-Gym",
+      "urls": [
+        "https://elephantgym.co/",
+        "https://elephant-gym.bandcamp.com",
+        "https://www.facebook.com/elephantgym",
+        "https://twitter.com/elephant_gym",
+        "https://www.youtube.com/channel/UCyCarLRHBVJYXJ3L2uuEEQg"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Elephant Gym', url='https://www.last.fm/music/+noredirect/Elephant+Gym', mbid=None, listeners=129745, playcount=1848183, bio_summary='Elephant Gym (大象體操) are a bass-driven math-rock band from Kaohsiung,Taiwan. The band, comprising 張凱婷 (bass), 張凱翔 (guitar) and 涂嘉欽 (drums) formed in early 2012. <a href=\"https://www.last.fm/music/+noredirect/Elephant+Gym\">Read more on Last.fm</a>', bio_content='Elephant Gym (大象體操) are a bass-driven math-rock band from Kaohsiung,Taiwan. The band, comprising 張凱婷 (bass), 張凱翔 (guitar) and 涂嘉欽 (drums) formed in early 2012. <a href=\"https://www.last.fm/music/+noredirect/Elephant+Gym\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['math rock', 'Math-rock', 'indie', 'experimental', 'indie rock'], similar_artists=[], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Elephant Gym', 'url': 'https://www.last.fm/music/+noredirect/Elephant+Gym', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '129745', 'playcount': '1848183'}, 'similar': {'artist': []}, 'tags': {'tag': [{'name': 'math rock', 'url': 'https://www.last.fm/tag/math+rock'}, {'name': 'Math-rock', 'url': 'https://www.last.fm/tag/Math-rock'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'indie rock', 'url': 'https://www.last.fm/tag/indie+rock'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/+noredirect/Elephant+Gym/+wiki'}}, 'published': '14 Sep 2012, 03:15', 'summary': 'Elephant Gym (大象體操) are a bass-driven math-rock band from Kaohsiung,Taiwan. The band, comprising 張凱婷 (bass), 張凱翔 (guitar) and 涂嘉欽 (drums) formed in early 2012. <a href=\"https://www.last.fm/music/+noredirect/Elephant+Gym\">Read more on Last.fm</a>', 'content': 'Elephant Gym (大象體操) are a bass-driven math-rock band from Kaohsiung,Taiwan. The band, comprising 張凱婷 (bass), 張凱翔 (guitar) and 涂嘉欽 (drums) formed in early 2012. <a href=\"https://www.last.fm/music/+noredirect/Elephant+Gym\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='2rqNUPgkBgbhcRabUQ5C9g', url='https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g', name='Elephant Gym', popularity=39, followers=163343, genres=['math rock', 'taiwanese indie', 'chinese indie', 'post-rock', 'midwest emo'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebf56c650fa3699efba92d084e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f56c650fa3699efba92d084e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f56c650fa3699efba92d084e', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g'}, 'followers': {'href': None, 'total': 163343}, 'genres': ['math rock', 'taiwanese indie', 'chinese indie', 'post-rock', 'midwest emo'], 'href': 'https://api.spotify.com/v1/artists/2rqNUPgkBgbhcRabUQ5C9g', 'id': '2rqNUPgkBgbhcRabUQ5C9g', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebf56c650fa3699efba92d084e', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174f56c650fa3699efba92d084e', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178f56c650fa3699efba92d084e', 'height': 160, 'width': 160}], 'name': 'Elephant Gym', 'popularity': 39, 'type': 'artist', 'uri': 'spotify:artist:2rqNUPgkBgbhcRabUQ5C9g'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/0f/19/a4/0f19a4d0-f5bc-74cc-ddc5-9b46ffd3d042/mzl.gqxmjznt.jpeg/2000x2000bb.jpg",
@@ -252,10 +365,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 129714,
+      "listeners": 129745,
       "mbid": null,
       "name": "Elephant Gym",
-      "playcount": 1847613,
+      "playcount": 1848183,
       "similar_artists": [],
       "tags": [
         "math rock",
@@ -296,10 +409,11 @@
       "name": "Elephant Gym",
       "popularity": 39,
       "url": "https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "2rqNUPgkBgbhcRabUQ5C9g",
   "spotify_url": "https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g",
-  "updated_at": "2025-07-08T09:59:28.788152",
+  "updated_at": "2025-07-08T20:52:04.387493",
   "wikipedia_url": null
 }

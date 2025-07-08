@@ -101,6 +101,190 @@
   },
   "name": "Mildlife",
   "popularity": 42,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='495002612', url='https://music.apple.com/gb/artist/mildlife/495002612', name='Mildlife', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/92/b3/27/92b327e6-4329-21ee-90b5-312ed2a0d972/59e6eaec-2fbd-4e95-ba5d-bdde16af62be_ami-identity-cfe1524628731258d3ce8245df871cf4-2024-01-23T07-57-29.373Z_cropped.png/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '495002612', 'type': 'artists', 'href': '/v1/catalog/gb/artists/495002612', 'attributes': {'name': 'Mildlife', 'genreNames': ['Alternative'], 'artwork': {'width': 1799, 'height': 1799, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/92/b3/27/92b327e6-4329-21ee-90b5-312ed2a0d972/59e6eaec-2fbd-4e95-ba5d-bdde16af62be_ami-identity-cfe1524628731258d3ce8245df871cf4-2024-01-23T07-57-29.373Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': 'a9334d', 'textColor1': 'f8fcfd', 'textColor2': 'e6d561', 'textColor3': 'e8d4d9', 'textColor4': 'dab55d'}, 'url': 'https://music.apple.com/gb/artist/mildlife/495002612'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/495002612/albums', 'data': [{'id': '1676185074', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1676185074'}, {'id': '1513399610', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1513399610'}, {'id': '1713532980', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1713532980'}, {'id': '1775198290', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775198290'}, {'id': '1616544565', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1616544565'}, {'id': '1703087973', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1703087973'}, {'id': '1775354045', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1775354045'}, {'id': '1458737507', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1458737507'}, {'id': '1746935786', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1746935786'}, {'id': '1746139718', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1746139718'}, {'id': '1528877957', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1528877957'}, {'id': '1537393705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1537393705'}, {'id': '1519278439', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1519278439'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/hOa_SD6uGDdsn1XieJI2C6lZvYrjzA-UlrYPK78sNMc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "6328344",
+      "images": [
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/hOa_SD6uGDdsn1XieJI2C6lZvYrjzA-UlrYPK78sNMc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/hOa_SD6uGDdsn1XieJI2C6lZvYrjzA-UlrYPK78sNMc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tL_bku1gLzSr1J-c88HanBA5rxkfCEEIZlMkQeVnRGE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/xMmqE_PZKMNibYPLLlo0CCrLZ5tevVL19lKP710amxU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xMmqE_PZKMNibYPLLlo0CCrLZ5tevVL19lKP710amxU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ixMW90aP1D1MzTJKj2Ol_Yt9DTk8dYeOMvEB4YH6CpU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/aKqfxhgch840ca7eiC_86B_oUTs-8H_-lpwlbKDXkBs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aKqfxhgch840ca7eiC_86B_oUTs-8H_-lpwlbKDXkBs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/gLkDWN3I4eeZ44P4MDYJQwx_RE_oIOpDH8XTYSO35bc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/5A3nknWc80l5D8mxobPjJYBdpIUW0jCYOObrCiMElPU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5A3nknWc80l5D8mxobPjJYBdpIUW0jCYOObrCiMElPU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/dfbPTC1-rtxVs3ot3MITPrZPKanF2gULYD5a0837Lzk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 2971119,
+          "name": "Adam Halliwell",
+          "resource_url": "https://api.discogs.com/artists/2971119",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 3024244,
+          "name": "Kevin McDowell (5)",
+          "resource_url": "https://api.discogs.com/artists/3024244",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 4788100,
+          "name": "Jim Rindfleish",
+          "resource_url": "https://api.discogs.com/artists/4788100",
+          "thumbnail_url": "https://i.discogs.com/9hpiFNPlEgpOSbx2qa0lLWsDDKxJT97mXMrgSOVtPvg/rs:fit/g:sm/q:40/h:905/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3ODgx/MDAtMTY3ODMxOTYy/MC0zMzQ1LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 6345643,
+          "name": "Tomas Shanahan",
+          "resource_url": "https://api.discogs.com/artists/6345643",
+          "thumbnail_url": "https://i.discogs.com/79rRUhh8HLR4uthBAk0_gMBb3uR8dzf-vVUGv1MtwMM/rs:fit/g:sm/q:40/h:646/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzNDU2/NDMtMTUyMDI5NjQ3/Mi0xMDM3LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 6345699,
+          "name": "James Donald (4)",
+          "resource_url": "https://api.discogs.com/artists/6345699",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Mildlife",
+      "namevariations": [
+        "Midlife"
+      ],
+      "profile": "Mildlife are a Melbourne based, Australian psychedelic jazz fusion group formed in 2013.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 6328344,
+        "images": [
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/hOa_SD6uGDdsn1XieJI2C6lZvYrjzA-UlrYPK78sNMc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/hOa_SD6uGDdsn1XieJI2C6lZvYrjzA-UlrYPK78sNMc/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/tL_bku1gLzSr1J-c88HanBA5rxkfCEEIZlMkQeVnRGE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/xMmqE_PZKMNibYPLLlo0CCrLZ5tevVL19lKP710amxU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xMmqE_PZKMNibYPLLlo0CCrLZ5tevVL19lKP710amxU/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ixMW90aP1D1MzTJKj2Ol_Yt9DTk8dYeOMvEB4YH6CpU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/NS0yMTgyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/aKqfxhgch840ca7eiC_86B_oUTs-8H_-lpwlbKDXkBs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aKqfxhgch840ca7eiC_86B_oUTs-8H_-lpwlbKDXkBs/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/gLkDWN3I4eeZ44P4MDYJQwx_RE_oIOpDH8XTYSO35bc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUzNzE3MjE0/OC0yODgzLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/5A3nknWc80l5D8mxobPjJYBdpIUW0jCYOObrCiMElPU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5A3nknWc80l5D8mxobPjJYBdpIUW0jCYOObrCiMElPU/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/dfbPTC1-rtxVs3ot3MITPrZPKanF2gULYD5a0837Lzk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTUyNjIxOTcw/Mi0zNzM2LmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 2971119,
+            "name": "Adam Halliwell",
+            "resource_url": "https://api.discogs.com/artists/2971119",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 3024244,
+            "name": "Kevin McDowell (5)",
+            "resource_url": "https://api.discogs.com/artists/3024244",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 4788100,
+            "name": "Jim Rindfleish",
+            "resource_url": "https://api.discogs.com/artists/4788100",
+            "thumbnail_url": "https://i.discogs.com/9hpiFNPlEgpOSbx2qa0lLWsDDKxJT97mXMrgSOVtPvg/rs:fit/g:sm/q:40/h:905/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3ODgx/MDAtMTY3ODMxOTYy/MC0zMzQ1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 6345643,
+            "name": "Tomas Shanahan",
+            "resource_url": "https://api.discogs.com/artists/6345643",
+            "thumbnail_url": "https://i.discogs.com/79rRUhh8HLR4uthBAk0_gMBb3uR8dzf-vVUGv1MtwMM/rs:fit/g:sm/q:40/h:646/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzNDU2/NDMtMTUyMDI5NjQ3/Mi0xMDM3LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 6345699,
+            "name": "James Donald (4)",
+            "resource_url": "https://api.discogs.com/artists/6345699",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Mildlife",
+        "namevariations": [
+          "Midlife"
+        ],
+        "profile": "Mildlife are a Melbourne based, Australian psychedelic jazz fusion group formed in 2013.",
+        "releases_url": "https://api.discogs.com/artists/6328344/releases",
+        "resource_url": "https://api.discogs.com/artists/6328344",
+        "uri": "https://www.discogs.com/artist/6328344-Mildlife",
+        "urls": [
+          "https://mildlife.bandcamp.com/",
+          "https://www.facebook.com/Mildlife/",
+          "https://en.wikipedia.org/wiki/Mildlife"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/6328344",
+      "thumb": "https://i.discogs.com/tL_bku1gLzSr1J-c88HanBA5rxkfCEEIZlMkQeVnRGE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMjgz/NDQtMTY5ODkyNTI4/Mi01OTEzLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/6328344-Mildlife",
+      "urls": [
+        "https://mildlife.bandcamp.com/",
+        "https://www.facebook.com/Mildlife/",
+        "https://en.wikipedia.org/wiki/Mildlife"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Mildlife', url='https://www.last.fm/music/Mildlife', mbid=None, listeners=106271, playcount=1201017, bio_summary='Narrowing down the group\\'s style into a genre is almost impossible, as they bond over the desire to push musical boundaries. No strangers to the Melbourne band scene, the four old friends have been drawing crowds through an epic journey at intimate venues and festivals for the best part of the past 4 years. Developing a tight live show bolstered by wild improvisation, the group have left punters itching for their first full length studio album that mines jazz, psych and disco for its irresistible groove. <a href=\"https://www.last.fm/music/Mildlife\">Read more on Last.fm</a>', bio_content='Narrowing down the group\\'s style into a genre is almost impossible, as they bond over the desire to push musical boundaries. No strangers to the Melbourne band scene, the four old friends have been drawing crowds through an epic journey at intimate venues and festivals for the best part of the past 4 years. Developing a tight live show bolstered by wild improvisation, the group have left punters itching for their first full length studio album that mines jazz, psych and disco for its irresistible groove. <a href=\"https://www.last.fm/music/Mildlife\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['jazz', 'jazz fusion', 'psychedelic', 'Psychedelic Rock', 'seen live'], similar_artists=[{'name': 'Surprise Chef', 'url': 'https://www.last.fm/music/Surprise+Chef'}, {'name': \"L'eclair\", 'url': 'https://www.last.fm/music/L%27eclair'}, {'name': 'Babe Rainbow', 'url': 'https://www.last.fm/music/Babe+Rainbow'}, {'name': 'Glass Beams', 'url': 'https://www.last.fm/music/Glass+Beams'}, {'name': \"l'éclair\", 'url': 'https://www.last.fm/music/l%27%C3%A9clair'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Mildlife', 'url': 'https://www.last.fm/music/Mildlife', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '106271', 'playcount': '1201017'}, 'similar': {'artist': [{'name': 'Surprise Chef', 'url': 'https://www.last.fm/music/Surprise+Chef', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"L'eclair\", 'url': 'https://www.last.fm/music/L%27eclair', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Babe Rainbow', 'url': 'https://www.last.fm/music/Babe+Rainbow', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Glass Beams', 'url': 'https://www.last.fm/music/Glass+Beams', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': \"l'éclair\", 'url': 'https://www.last.fm/music/l%27%C3%A9clair', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'jazz', 'url': 'https://www.last.fm/tag/jazz'}, {'name': 'jazz fusion', 'url': 'https://www.last.fm/tag/jazz+fusion'}, {'name': 'psychedelic', 'url': 'https://www.last.fm/tag/psychedelic'}, {'name': 'Psychedelic Rock', 'url': 'https://www.last.fm/tag/Psychedelic+Rock'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Mildlife/+wiki'}}, 'published': '19 Apr 2011, 13:33', 'summary': 'Narrowing down the group\\'s style into a genre is almost impossible, as they bond over the desire to push musical boundaries. No strangers to the Melbourne band scene, the four old friends have been drawing crowds through an epic journey at intimate venues and festivals for the best part of the past 4 years. Developing a tight live show bolstered by wild improvisation, the group have left punters itching for their first full length studio album that mines jazz, psych and disco for its irresistible groove. <a href=\"https://www.last.fm/music/Mildlife\">Read more on Last.fm</a>', 'content': 'Narrowing down the group\\'s style into a genre is almost impossible, as they bond over the desire to push musical boundaries. No strangers to the Melbourne band scene, the four old friends have been drawing crowds through an epic journey at intimate venues and festivals for the best part of the past 4 years. Developing a tight live show bolstered by wild improvisation, the group have left punters itching for their first full length studio album that mines jazz, psych and disco for its irresistible groove. <a href=\"https://www.last.fm/music/Mildlife\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='1lsJmnN90u3KBvF3tGEWr3', url='https://open.spotify.com/artist/1lsJmnN90u3KBvF3tGEWr3', name='Mildlife', popularity=42, followers=109847, genres=['neo-psychedelic'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb2c507a450197f560596f6191', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051742c507a450197f560596f6191', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1782c507a450197f560596f6191', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/1lsJmnN90u3KBvF3tGEWr3'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/1lsJmnN90u3KBvF3tGEWr3'}, 'followers': {'href': None, 'total': 109847}, 'genres': ['neo-psychedelic'], 'href': 'https://api.spotify.com/v1/artists/1lsJmnN90u3KBvF3tGEWr3', 'id': '1lsJmnN90u3KBvF3tGEWr3', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb2c507a450197f560596f6191', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab676161000051742c507a450197f560596f6191', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f1782c507a450197f560596f6191', 'height': 160, 'width': 160}], 'name': 'Mildlife', 'popularity': 42, 'type': 'artist', 'uri': 'spotify:artist:1lsJmnN90u3KBvF3tGEWr3'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages126/v4/92/b3/27/92b327e6-4329-21ee-90b5-312ed2a0d972/59e6eaec-2fbd-4e95-ba5d-bdde16af62be_ami-identity-cfe1524628731258d3ce8245df871cf4-2024-01-23T07-57-29.373Z_cropped.png/2000x2000bb.jpg",
@@ -320,10 +504,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 106224,
+      "listeners": 106271,
       "mbid": null,
       "name": "Mildlife",
-      "playcount": 1200445,
+      "playcount": 1201017,
       "similar_artists": [
         {
           "name": "Surprise Chef",
@@ -381,10 +565,11 @@
       "name": "Mildlife",
       "popularity": 42,
       "url": "https://open.spotify.com/artist/1lsJmnN90u3KBvF3tGEWr3"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "1lsJmnN90u3KBvF3tGEWr3",
   "spotify_url": "https://open.spotify.com/artist/1lsJmnN90u3KBvF3tGEWr3",
-  "updated_at": "2025-07-08T10:01:08.638587",
+  "updated_at": "2025-07-08T20:52:57.523428",
   "wikipedia_url": null
 }
