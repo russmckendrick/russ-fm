@@ -100,6 +100,86 @@
   },
   "name": "Jim Bob",
   "popularity": 22,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='160104554', url='https://music.apple.com/gb/artist/jim-bob/160104554', name='Jim Bob', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a3/a0/fd/a3a0fd99-ad1f-d3cd-ecf0-d95647d3ca3e/ami-identity-61ab22a616419bdf09561d04317ed945-2025-04-23T08-42-56.989Z_cropped.png/2000x2000bb.jpg', genres=['Rock'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '160104554', 'type': 'artists', 'href': '/v1/catalog/gb/artists/160104554', 'attributes': {'name': 'Jim Bob', 'genreNames': ['Rock'], 'artwork': {'width': 1807, 'height': 1807, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a3/a0/fd/a3a0fd99-ad1f-d3cd-ecf0-d95647d3ca3e/ami-identity-61ab22a616419bdf09561d04317ed945-2025-04-23T08-42-56.989Z_cropped.png/{w}x{h}bb.jpg', 'bgColor': '1f1e1c', 'textColor1': 'e8e9e3', 'textColor2': 'f9c0ab', 'textColor3': 'c0c0bb', 'textColor4': 'cd9f8e'}, 'url': 'https://music.apple.com/gb/artist/jim-bob/160104554'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/160104554/albums', 'next': '/v1/catalog/gb/artists/160104554/albums?offset=25', 'data': [{'id': '1511931898', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1511931898'}, {'id': '1678181317', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1678181317'}, {'id': '1566592596', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1566592596'}, {'id': '1514204941', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514204941'}, {'id': '182311705', 'type': 'albums', 'href': '/v1/catalog/gb/albums/182311705'}, {'id': '1650799394', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1650799394'}, {'id': '268188742', 'type': 'albums', 'href': '/v1/catalog/gb/albums/268188742'}, {'id': '1615635396', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1615635396'}, {'id': '181336657', 'type': 'albums', 'href': '/v1/catalog/gb/albums/181336657'}, {'id': '1676646051', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1676646051'}, {'id': '435982634', 'type': 'albums', 'href': '/v1/catalog/gb/albums/435982634'}, {'id': '1514144008', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514144008'}, {'id': '1807795074', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807795074'}, {'id': '1807337596', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807337596'}, {'id': '1804459691', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1804459691'}, {'id': '160104552', 'type': 'albums', 'href': '/v1/catalog/gb/albums/160104552'}, {'id': '1576746803', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1576746803'}, {'id': '1644664996', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1644664996'}, {'id': '1536764907', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1536764907'}, {'id': '277637449', 'type': 'albums', 'href': '/v1/catalog/gb/albums/277637449'}, {'id': '1807795508', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1807795508'}, {'id': '1514143692', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1514143692'}, {'id': '277556363', 'type': 'albums', 'href': '/v1/catalog/gb/albums/277556363'}, {'id': '181334489', 'type': 'albums', 'href': '/v1/catalog/gb/albums/181334489'}, {'id': '1680227941', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1680227941'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/2f9gvYe_A6tCjy06P5hV5cUC2NbQpp-w4ajsiG0WURM/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "846016",
+      "images": [
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/2f9gvYe_A6tCjy06P5hV5cUC2NbQpp-w4ajsiG0WURM/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2f9gvYe_A6tCjy06P5hV5cUC2NbQpp-w4ajsiG0WURM/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0yVM_mXFMBs6B3IlV2QQcELuHM52XeHIQo4z08eAwG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [],
+      "name": "Jim Bob (2)",
+      "namevariations": [
+        "James Robert",
+        "Jim Bob Quixote",
+        "Jimbob",
+        "Stinking Jim Bob"
+      ],
+      "profile": "",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 121179,
+            "name": "Jim's Super Stereoworld",
+            "resource_url": "https://api.discogs.com/artists/121179",
+            "thumbnail_url": "https://i.discogs.com/Xt9Z0474BDST5wm7fjr-SVXVyeymSW0R6GwHFfJBCa4/rs:fit/g:sm/q:40/h:600/w:398/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMTE3/OS0xMTk5ODk1NDgy/LmpwZWc.jpeg"
+          },
+          {
+            "id": 742184,
+            "name": "James Morrison (4)",
+            "resource_url": "https://api.discogs.com/artists/742184",
+            "thumbnail_url": "https://i.discogs.com/1p9t6u7kOyx9g4oXrY9UXDtt6Nha93jjx00bPgtrjSI/rs:fit/g:sm/q:40/h:384/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0MjE4/NC0xMTcyMTkyNzM3/LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 846016,
+        "images": [
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/2f9gvYe_A6tCjy06P5hV5cUC2NbQpp-w4ajsiG0WURM/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/2f9gvYe_A6tCjy06P5hV5cUC2NbQpp-w4ajsiG0WURM/rs:fit/g:sm/q:90/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0yVM_mXFMBs6B3IlV2QQcELuHM52XeHIQo4z08eAwG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+            "width": 400
+          }
+        ],
+        "name": "Jim Bob (2)",
+        "namevariations": [
+          "James Robert",
+          "Jim Bob Quixote",
+          "Jimbob",
+          "Stinking Jim Bob"
+        ],
+        "profile": "",
+        "realname": "James Neil Morrison",
+        "releases_url": "https://api.discogs.com/artists/846016/releases",
+        "resource_url": "https://api.discogs.com/artists/846016",
+        "uri": "https://www.discogs.com/artist/846016-Jim-Bob-2",
+        "urls": [
+          "http://www.jim-bob.co.uk/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/846016",
+      "thumb": "https://i.discogs.com/0yVM_mXFMBs6B3IlV2QQcELuHM52XeHIQo4z08eAwG8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0NjAx/Ni0xMTk5ODk1NTEz/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/846016-Jim-Bob-2",
+      "urls": [
+        "http://www.jim-bob.co.uk/"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Jim Bob', url='https://www.last.fm/music/Jim+Bob', mbid='62f44ded-6eb7-4a9f-88e6-10e80f537abe', listeners=5390, playcount=155516, bio_summary='Jim Bob was born James Robert Morrison in the city of London, on 22 November 1960. He changed his name because he did not want to be mistaken for, in his own words, \"a fat, dead, crap poet\" - ie the former singer of The Doors.\\n\\nHe played in various bands during the 1980s, one of which was Jamie Wednesday, who were performing between 1985 and 1987. In 1987 Jamie Wednesday split up just before a gig at the Astoria in London. Morrison and Les Carter <a href=\"https://www.last.fm/music/Jim+Bob\">Read more on Last.fm</a>', bio_content='Jim Bob was born James Robert Morrison in the city of London, on 22 November 1960. He changed his name because he did not want to be mistaken for, in his own words, \"a fat, dead, crap poet\" - ie the former singer of The Doors.\\n\\nHe played in various bands during the 1980s, one of which was Jamie Wednesday, who were performing between 1985 and 1987. In 1987 Jamie Wednesday split up just before a gig at the Astoria in London. Morrison and Les Carter aka \\'Fruitbat\\' filled in playing along to a backing tape and thus Carter the Unstoppable Sex Machine was born.\\n\\nIn Carter USM Jim Bob had 14 top 40 singles, one number one album and played over 800 gigs all over the world as lead singer of the band. The band split up in 1997. Since Carter USM, Jim Bob has released two albums and three singles with his disco-pop-punk group Jim\\'s Super Stereoworld, three solo albums as Jim Bob and played various live shows both with his band and solo. In 2001 he joined his old Carter bandmate Fruitbat onstage once again as part of supergroup Who\\'s The Daddy Now?.\\n\\nJim Bob currently tours as a solo artist playing both Carter songs and his solo material. His Goodnight Jim Bob - On The Road With Carter The Unstoppable Sex Machine autobiography was published by Cherry Red Books in May 2004 to critical acclaim.\\nJim Bob is currently writing his second book in between touring commitments. <a href=\"https://www.last.fm/music/Jim+Bob\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['indie', 'seen live', 'Carter USM', 'british', 'liszaj radio'], similar_artists=[{'name': \"Jim's Super Stereoworld\", 'url': 'https://www.last.fm/music/Jim%27s+Super+Stereoworld'}, {'name': 'Jamie Wednesday', 'url': 'https://www.last.fm/music/Jamie+Wednesday'}, {'name': 'Miles Hunt', 'url': 'https://www.last.fm/music/Miles+Hunt'}, {'name': 'The Family Cat', 'url': 'https://www.last.fm/music/The+Family+Cat'}, {'name': 'Thousand Yard Stare', 'url': 'https://www.last.fm/music/Thousand+Yard+Stare'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Jim Bob', 'mbid': '62f44ded-6eb7-4a9f-88e6-10e80f537abe', 'url': 'https://www.last.fm/music/Jim+Bob', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '5390', 'playcount': '155516'}, 'similar': {'artist': [{'name': \"Jim's Super Stereoworld\", 'url': 'https://www.last.fm/music/Jim%27s+Super+Stereoworld', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jamie Wednesday', 'url': 'https://www.last.fm/music/Jamie+Wednesday', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Miles Hunt', 'url': 'https://www.last.fm/music/Miles+Hunt', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Family Cat', 'url': 'https://www.last.fm/music/The+Family+Cat', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Thousand Yard Stare', 'url': 'https://www.last.fm/music/Thousand+Yard+Stare', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'Carter USM', 'url': 'https://www.last.fm/tag/Carter+USM'}, {'name': 'british', 'url': 'https://www.last.fm/tag/british'}, {'name': 'liszaj radio', 'url': 'https://www.last.fm/tag/liszaj+radio'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Jim+Bob/+wiki'}}, 'published': '14 Feb 2006, 16:46', 'summary': 'Jim Bob was born James Robert Morrison in the city of London, on 22 November 1960. He changed his name because he did not want to be mistaken for, in his own words, \"a fat, dead, crap poet\" - ie the former singer of The Doors.\\n\\nHe played in various bands during the 1980s, one of which was Jamie Wednesday, who were performing between 1985 and 1987. In 1987 Jamie Wednesday split up just before a gig at the Astoria in London. Morrison and Les Carter <a href=\"https://www.last.fm/music/Jim+Bob\">Read more on Last.fm</a>', 'content': 'Jim Bob was born James Robert Morrison in the city of London, on 22 November 1960. He changed his name because he did not want to be mistaken for, in his own words, \"a fat, dead, crap poet\" - ie the former singer of The Doors.\\n\\nHe played in various bands during the 1980s, one of which was Jamie Wednesday, who were performing between 1985 and 1987. In 1987 Jamie Wednesday split up just before a gig at the Astoria in London. Morrison and Les Carter aka \\'Fruitbat\\' filled in playing along to a backing tape and thus Carter the Unstoppable Sex Machine was born.\\n\\nIn Carter USM Jim Bob had 14 top 40 singles, one number one album and played over 800 gigs all over the world as lead singer of the band. The band split up in 1997. Since Carter USM, Jim Bob has released two albums and three singles with his disco-pop-punk group Jim\\'s Super Stereoworld, three solo albums as Jim Bob and played various live shows both with his band and solo. In 2001 he joined his old Carter bandmate Fruitbat onstage once again as part of supergroup Who\\'s The Daddy Now?.\\n\\nJim Bob currently tours as a solo artist playing both Carter songs and his solo material. His Goodnight Jim Bob - On The Road With Carter The Unstoppable Sex Machine autobiography was published by Cherry Red Books in May 2004 to critical acclaim.\\nJim Bob is currently writing his second book in between touring commitments. <a href=\"https://www.last.fm/music/Jim+Bob\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='0ey1XoGv9eqeTOrYJ25SJv', url='https://open.spotify.com/artist/0ey1XoGv9eqeTOrYJ25SJv', name='Jim Bob', popularity=22, followers=5142, genres=[], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5eb98aa94fc42dd1427c4ca0e90', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517498aa94fc42dd1427c4ca0e90', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17898aa94fc42dd1427c4ca0e90', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/0ey1XoGv9eqeTOrYJ25SJv'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0ey1XoGv9eqeTOrYJ25SJv'}, 'followers': {'href': None, 'total': 5142}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0ey1XoGv9eqeTOrYJ25SJv', 'id': '0ey1XoGv9eqeTOrYJ25SJv', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5eb98aa94fc42dd1427c4ca0e90', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab6761610000517498aa94fc42dd1427c4ca0e90', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f17898aa94fc42dd1427c4ca0e90', 'height': 160, 'width': 160}], 'name': 'Jim Bob', 'popularity': 22, 'type': 'artist', 'uri': 'spotify:artist:0ey1XoGv9eqeTOrYJ25SJv'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/AMCArtistImages211/v4/a3/a0/fd/a3a0fd99-ad1f-d3cd-ecf0-d95647d3ca3e/ami-identity-61ab22a616419bdf09561d04317ed945-2025-04-23T08-42-56.989Z_cropped.png/2000x2000bb.jpg",
@@ -215,10 +295,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 5388,
+      "listeners": 5390,
       "mbid": "62f44ded-6eb7-4a9f-88e6-10e80f537abe",
       "name": "Jim Bob",
-      "playcount": 155495,
+      "playcount": 155516,
       "similar_artists": [
         {
           "name": "Jim's Super Stereoworld",
@@ -274,10 +354,11 @@
       "name": "Jim Bob",
       "popularity": 22,
       "url": "https://open.spotify.com/artist/0ey1XoGv9eqeTOrYJ25SJv"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "0ey1XoGv9eqeTOrYJ25SJv",
   "spotify_url": "https://open.spotify.com/artist/0ey1XoGv9eqeTOrYJ25SJv",
-  "updated_at": "2025-07-08T09:26:13.349359",
+  "updated_at": "2025-07-08T20:35:23.963131",
   "wikipedia_url": null
 }
