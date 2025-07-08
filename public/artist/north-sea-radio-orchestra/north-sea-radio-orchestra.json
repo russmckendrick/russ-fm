@@ -101,6 +101,272 @@
   },
   "name": "North Sea Radio Orchestra",
   "popularity": 16,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='268550535', url='https://music.apple.com/gb/artist/north-sea-radio-orchestra/268550535', name='North Sea Radio Orchestra', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music/22/b3/e0/mzi.tnkuxymw.jpg/2000x2000ac.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '268550535', 'type': 'artists', 'href': '/v1/catalog/gb/artists/268550535', 'attributes': {'name': 'North Sea Radio Orchestra', 'genreNames': ['Alternative'], 'artwork': {'width': 620, 'height': 620, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music/22/b3/e0/mzi.tnkuxymw.jpg/{w}x{h}ac.jpg', 'bgColor': '040000', 'textColor1': 'ffffef', 'textColor2': 'f2e6c6', 'textColor3': 'cccbbf', 'textColor4': 'c2b89e'}, 'url': 'https://music.apple.com/gb/artist/north-sea-radio-orchestra/268550535'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/268550535/albums', 'data': [{'id': '1135427432', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1135427432'}, {'id': '447843788', 'type': 'albums', 'href': '/v1/catalog/gb/albums/447843788'}, {'id': '458410734', 'type': 'albums', 'href': '/v1/catalog/gb/albums/458410734'}, {'id': '1739395609', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1739395609'}, {'id': '1794551932', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1794551932'}, {'id': '1137608041', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1137608041'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/LZWV9Odz6b0uA5g_esvZJi7VZbcta3LxQDXdqtVGzi0/rs:fit/g:sm/q:90/h:188/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "616338",
+      "images": [
+        {
+          "height": 188,
+          "resource_url": "https://i.discogs.com/LZWV9Odz6b0uA5g_esvZJi7VZbcta3LxQDXdqtVGzi0/rs:fit/g:sm/q:90/h:188/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/LZWV9Odz6b0uA5g_esvZJi7VZbcta3LxQDXdqtVGzi0/rs:fit/g:sm/q:90/h:188/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/_ThGG32wNYIsaYQ13G8mLJEl_nGZ2DbQ3LXKSgLS45Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+          "width": 460
+        },
+        {
+          "height": 86,
+          "resource_url": "https://i.discogs.com/vBcqnYzH8y2YmGzuMoaR-M8vXPEFNjA2JFKwD3Fr_aM/rs:fit/g:sm/q:90/h:86/w:274/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vBcqnYzH8y2YmGzuMoaR-M8vXPEFNjA2JFKwD3Fr_aM/rs:fit/g:sm/q:90/h:86/w:274/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+          "uri150": "https://i.discogs.com/VEmQVsyvrL2svW2KAgpsTpx8-NBlLTYLWIJNCBgd0jg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+          "width": 274
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 61621,
+          "name": "Harry Escott",
+          "resource_url": "https://api.discogs.com/artists/61621",
+          "thumbnail_url": "https://i.discogs.com/a25bN104tLK0H7mNdfLbPr9DeBNrBRArhNEUh5o9w0c/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjIx/LTE0OTAxNzQxMTAt/MzgyNy5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 156648,
+          "name": "Brian Wright",
+          "resource_url": "https://api.discogs.com/artists/156648",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 533089,
+          "name": "William D. Drake",
+          "resource_url": "https://api.discogs.com/artists/533089",
+          "thumbnail_url": "https://i.discogs.com/kXO8xmCUhJn3RAVA8hEpjumw96MYEOHgUe6WlEzITMU/rs:fit/g:sm/q:40/h:533/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzA4/OS0xMjY0MTA2MTI0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 545019,
+          "name": "Melanie Woods",
+          "resource_url": "https://api.discogs.com/artists/545019",
+          "thumbnail_url": "https://i.discogs.com/qXkxUIlcV-huzjw0ar3-2iQ9q5BAAppdkkx91PJ6GXM/rs:fit/g:sm/q:40/h:600/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTAx/OS0xNjg4ODIzMTEy/LTI1MTYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 550386,
+          "name": "Craig Fortnam",
+          "resource_url": "https://api.discogs.com/artists/550386",
+          "thumbnail_url": "https://i.discogs.com/575-C4Gt-V_8b2jILWmIwBXJpN0-m0vmzzS38YnVvVw/rs:fit/g:sm/q:40/h:919/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1MDM4/Ni0xMjY0MTA2MDYy/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 962595,
+          "name": "Kavus Torabi",
+          "resource_url": "https://api.discogs.com/artists/962595",
+          "thumbnail_url": "https://i.discogs.com/pgTBKCJvkHjSq619qgLp_YGN1zKTYZw068dkWpzot2I/rs:fit/g:sm/q:40/h:333/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk2MjU5/NS0xMzEzMjM5MTI1/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1599244,
+          "name": "Suzy Kirby",
+          "resource_url": "https://api.discogs.com/artists/1599244",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 1599246,
+          "name": "Sharron Fortnam",
+          "resource_url": "https://api.discogs.com/artists/1599246",
+          "thumbnail_url": "https://i.discogs.com/z3H50cegex5NaGP5ebwPzzxRMGAEtIpXivy1kKvAdCE/rs:fit/g:sm/q:40/h:919/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTky/NDYtMTI2NDEwNTg0/MS5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2021189,
+          "name": "Laurent Valéro",
+          "resource_url": "https://api.discogs.com/artists/2021189",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 2326258,
+          "name": "Luke Crookes",
+          "resource_url": "https://api.discogs.com/artists/2326258",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 2326259,
+          "name": "Nicola Baigent",
+          "resource_url": "https://api.discogs.com/artists/2326259",
+          "thumbnail_url": "https://i.discogs.com/efsgeDHHtiK4lbw2L-Oo1Q5Od0sIAV_YJ-VXFcPtKiY/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMjYy/NTktMTU0ODU4Nzk4/Ni05ODkyLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 4759127,
+          "name": "Annie Barbazza",
+          "resource_url": "https://api.discogs.com/artists/4759127",
+          "thumbnail_url": "https://i.discogs.com/J_LuybnMwvA8WgXgoCQR9yEhPWpu1QTbxn6LlhYkvIc/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NTkx/MjctMTU4ODgwMjEx/NS05OTc1LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 5269137,
+          "name": "Cheb Nettles",
+          "resource_url": "https://api.discogs.com/artists/5269137",
+          "thumbnail_url": "https://i.discogs.com/fAGXA4SH9ydi7kTdViqJNX89tHbc51iedFTUe1x37s8/rs:fit/g:sm/q:40/h:300/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNjkx/MzctMTQ5MDUxODcz/My01ODE1LmpwZWc.jpeg"
+        }
+      ],
+      "name": "North Sea Radio Orchestra",
+      "namevariations": [
+        "North Sea Radio Orchestra And Chorus"
+      ],
+      "profile": "English contemporary music ensemble and cross-disciplinary chamber orchestra.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 616338,
+        "images": [
+          {
+            "height": 188,
+            "resource_url": "https://i.discogs.com/LZWV9Odz6b0uA5g_esvZJi7VZbcta3LxQDXdqtVGzi0/rs:fit/g:sm/q:90/h:188/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/LZWV9Odz6b0uA5g_esvZJi7VZbcta3LxQDXdqtVGzi0/rs:fit/g:sm/q:90/h:188/w:460/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+            "uri150": "https://i.discogs.com/_ThGG32wNYIsaYQ13G8mLJEl_nGZ2DbQ3LXKSgLS45Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+            "width": 460
+          },
+          {
+            "height": 86,
+            "resource_url": "https://i.discogs.com/vBcqnYzH8y2YmGzuMoaR-M8vXPEFNjA2JFKwD3Fr_aM/rs:fit/g:sm/q:90/h:86/w:274/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vBcqnYzH8y2YmGzuMoaR-M8vXPEFNjA2JFKwD3Fr_aM/rs:fit/g:sm/q:90/h:86/w:274/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+            "uri150": "https://i.discogs.com/VEmQVsyvrL2svW2KAgpsTpx8-NBlLTYLWIJNCBgd0jg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNDYx/LnBuZw.jpeg",
+            "width": 274
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 61621,
+            "name": "Harry Escott",
+            "resource_url": "https://api.discogs.com/artists/61621",
+            "thumbnail_url": "https://i.discogs.com/a25bN104tLK0H7mNdfLbPr9DeBNrBRArhNEUh5o9w0c/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjIx/LTE0OTAxNzQxMTAt/MzgyNy5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 156648,
+            "name": "Brian Wright",
+            "resource_url": "https://api.discogs.com/artists/156648",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 533089,
+            "name": "William D. Drake",
+            "resource_url": "https://api.discogs.com/artists/533089",
+            "thumbnail_url": "https://i.discogs.com/kXO8xmCUhJn3RAVA8hEpjumw96MYEOHgUe6WlEzITMU/rs:fit/g:sm/q:40/h:533/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzMzA4/OS0xMjY0MTA2MTI0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 545019,
+            "name": "Melanie Woods",
+            "resource_url": "https://api.discogs.com/artists/545019",
+            "thumbnail_url": "https://i.discogs.com/qXkxUIlcV-huzjw0ar3-2iQ9q5BAAppdkkx91PJ6GXM/rs:fit/g:sm/q:40/h:600/w:436/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NTAx/OS0xNjg4ODIzMTEy/LTI1MTYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 550386,
+            "name": "Craig Fortnam",
+            "resource_url": "https://api.discogs.com/artists/550386",
+            "thumbnail_url": "https://i.discogs.com/575-C4Gt-V_8b2jILWmIwBXJpN0-m0vmzzS38YnVvVw/rs:fit/g:sm/q:40/h:919/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU1MDM4/Ni0xMjY0MTA2MDYy/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 962595,
+            "name": "Kavus Torabi",
+            "resource_url": "https://api.discogs.com/artists/962595",
+            "thumbnail_url": "https://i.discogs.com/pgTBKCJvkHjSq619qgLp_YGN1zKTYZw068dkWpzot2I/rs:fit/g:sm/q:40/h:333/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk2MjU5/NS0xMzEzMjM5MTI1/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1599244,
+            "name": "Suzy Kirby",
+            "resource_url": "https://api.discogs.com/artists/1599244",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 1599246,
+            "name": "Sharron Fortnam",
+            "resource_url": "https://api.discogs.com/artists/1599246",
+            "thumbnail_url": "https://i.discogs.com/z3H50cegex5NaGP5ebwPzzxRMGAEtIpXivy1kKvAdCE/rs:fit/g:sm/q:40/h:919/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1OTky/NDYtMTI2NDEwNTg0/MS5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2021189,
+            "name": "Laurent Valéro",
+            "resource_url": "https://api.discogs.com/artists/2021189",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 2326258,
+            "name": "Luke Crookes",
+            "resource_url": "https://api.discogs.com/artists/2326258",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 2326259,
+            "name": "Nicola Baigent",
+            "resource_url": "https://api.discogs.com/artists/2326259",
+            "thumbnail_url": "https://i.discogs.com/efsgeDHHtiK4lbw2L-Oo1Q5Od0sIAV_YJ-VXFcPtKiY/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMjYy/NTktMTU0ODU4Nzk4/Ni05ODkyLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 4759127,
+            "name": "Annie Barbazza",
+            "resource_url": "https://api.discogs.com/artists/4759127",
+            "thumbnail_url": "https://i.discogs.com/J_LuybnMwvA8WgXgoCQR9yEhPWpu1QTbxn6LlhYkvIc/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3NTkx/MjctMTU4ODgwMjEx/NS05OTc1LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5269137,
+            "name": "Cheb Nettles",
+            "resource_url": "https://api.discogs.com/artists/5269137",
+            "thumbnail_url": "https://i.discogs.com/fAGXA4SH9ydi7kTdViqJNX89tHbc51iedFTUe1x37s8/rs:fit/g:sm/q:40/h:300/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyNjkx/MzctMTQ5MDUxODcz/My01ODE1LmpwZWc.jpeg"
+          }
+        ],
+        "name": "North Sea Radio Orchestra",
+        "namevariations": [
+          "North Sea Radio Orchestra And Chorus"
+        ],
+        "profile": "English contemporary music ensemble and cross-disciplinary chamber orchestra.",
+        "releases_url": "https://api.discogs.com/artists/616338/releases",
+        "resource_url": "https://api.discogs.com/artists/616338",
+        "uri": "https://www.discogs.com/artist/616338-North-Sea-Radio-Orchestra",
+        "urls": [
+          "http://www.nsro.co.uk/",
+          "https://northsearadioorchestra.bandcamp.com/releases",
+          "https://en.wikipedia.org/wiki/North_Sea_Radio_Orchestra",
+          "http://www.myspace.com/northsearadioorchestra"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/616338",
+      "thumb": "https://i.discogs.com/_ThGG32wNYIsaYQ13G8mLJEl_nGZ2DbQ3LXKSgLS45Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYxNjMz/OC0xMjU1NTQxNTAz/LnBuZw.jpeg",
+      "url": "https://www.discogs.com/artist/616338-North-Sea-Radio-Orchestra",
+      "urls": [
+        "http://www.nsro.co.uk/",
+        "https://northsearadioorchestra.bandcamp.com/releases",
+        "https://en.wikipedia.org/wiki/North_Sea_Radio_Orchestra",
+        "http://www.myspace.com/northsearadioorchestra"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='North Sea Radio Orchestra', url='https://www.last.fm/music/North+Sea+Radio+Orchestra', mbid='3e41211e-dc86-4d38-b3be-c75a0c522ffb', listeners=13172, playcount=165559, bio_summary='North Sea Radio Orchestra (generally abbreviated to NSRO) is a British contemporary music ensemble and cross-disciplinary chamber orchestra (plus chorus). Set up mainly as a vehicle for the compositions of its musical director, Craig Fortnam, it has also performed works by William D. Drake and James Larcombe.\\n\\nThe ensemble is notable for its post-modern fusion of Romantic music and later twentieth century forms, and for its bridging of the worlds of contemporary classical music <a href=\"https://www.last.fm/music/North+Sea+Radio+Orchestra\">Read more on Last.fm</a>', bio_content='North Sea Radio Orchestra (generally abbreviated to NSRO) is a British contemporary music ensemble and cross-disciplinary chamber orchestra (plus chorus). Set up mainly as a vehicle for the compositions of its musical director, Craig Fortnam, it has also performed works by William D. Drake and James Larcombe.\\n\\nThe ensemble is notable for its post-modern fusion of Romantic music and later twentieth century forms, and for its bridging of the worlds of contemporary classical music, British folk music, London art-rock and poetry (setting music to poems by W.B. Yeats, Thomas Hardy, Alfred Lord Tennyson and Daniel Dundas Maitland). <a href=\"https://www.last.fm/music/North+Sea+Radio+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['chamber music', 'acoustic', 'experimental', 'seen live', 'folk'], similar_artists=[{'name': 'Stars in Battledress', 'url': 'https://www.last.fm/music/Stars+in+Battledress'}, {'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake'}, {'name': 'Arch Garrison', 'url': 'https://www.last.fm/music/Arch+Garrison'}, {'name': 'Same Actor', 'url': 'https://www.last.fm/music/Same+Actor'}, {'name': 'Listen With Sarah', 'url': 'https://www.last.fm/music/Listen+With+Sarah'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'North Sea Radio Orchestra', 'mbid': '3e41211e-dc86-4d38-b3be-c75a0c522ffb', 'url': 'https://www.last.fm/music/North+Sea+Radio+Orchestra', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '13172', 'playcount': '165559'}, 'similar': {'artist': [{'name': 'Stars in Battledress', 'url': 'https://www.last.fm/music/Stars+in+Battledress', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'William D. Drake', 'url': 'https://www.last.fm/music/William+D.+Drake', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Arch Garrison', 'url': 'https://www.last.fm/music/Arch+Garrison', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Same Actor', 'url': 'https://www.last.fm/music/Same+Actor', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Listen With Sarah', 'url': 'https://www.last.fm/music/Listen+With+Sarah', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'chamber music', 'url': 'https://www.last.fm/tag/chamber+music'}, {'name': 'acoustic', 'url': 'https://www.last.fm/tag/acoustic'}, {'name': 'experimental', 'url': 'https://www.last.fm/tag/experimental'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'folk', 'url': 'https://www.last.fm/tag/folk'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/North+Sea+Radio+Orchestra/+wiki'}}, 'published': '21 Dec 2009, 20:49', 'summary': 'North Sea Radio Orchestra (generally abbreviated to NSRO) is a British contemporary music ensemble and cross-disciplinary chamber orchestra (plus chorus). Set up mainly as a vehicle for the compositions of its musical director, Craig Fortnam, it has also performed works by William D. Drake and James Larcombe.\\n\\nThe ensemble is notable for its post-modern fusion of Romantic music and later twentieth century forms, and for its bridging of the worlds of contemporary classical music <a href=\"https://www.last.fm/music/North+Sea+Radio+Orchestra\">Read more on Last.fm</a>', 'content': 'North Sea Radio Orchestra (generally abbreviated to NSRO) is a British contemporary music ensemble and cross-disciplinary chamber orchestra (plus chorus). Set up mainly as a vehicle for the compositions of its musical director, Craig Fortnam, it has also performed works by William D. Drake and James Larcombe.\\n\\nThe ensemble is notable for its post-modern fusion of Romantic music and later twentieth century forms, and for its bridging of the worlds of contemporary classical music, British folk music, London art-rock and poetry (setting music to poems by W.B. Yeats, Thomas Hardy, Alfred Lord Tennyson and Daniel Dundas Maitland). <a href=\"https://www.last.fm/music/North+Sea+Radio+Orchestra\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='3eyp3SryLYlr8OqCkpFQHF', url='https://open.spotify.com/artist/3eyp3SryLYlr8OqCkpFQHF', name='North Sea Radio Orchestra', popularity=16, followers=2638, genres=['baroque pop'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b273756bef969e70812418e2dd3d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02756bef969e70812418e2dd3d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851432f3c6f44c62feae84f9c12', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/3eyp3SryLYlr8OqCkpFQHF'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/3eyp3SryLYlr8OqCkpFQHF'}, 'followers': {'href': None, 'total': 2638}, 'genres': ['baroque pop'], 'href': 'https://api.spotify.com/v1/artists/3eyp3SryLYlr8OqCkpFQHF', 'id': '3eyp3SryLYlr8OqCkpFQHF', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b273756bef969e70812418e2dd3d', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e02756bef969e70812418e2dd3d', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d00004851432f3c6f44c62feae84f9c12', 'height': 64, 'width': 64}], 'name': 'North Sea Radio Orchestra', 'popularity': 16, 'type': 'artist', 'uri': 'spotify:artist:3eyp3SryLYlr8OqCkpFQHF'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/22/b3/e0/mzi.tnkuxymw.jpg/2000x2000ac.jpg",
@@ -405,7 +671,7 @@
       "listeners": 13172,
       "mbid": "3e41211e-dc86-4d38-b3be-c75a0c522ffb",
       "name": "North Sea Radio Orchestra",
-      "playcount": 165514,
+      "playcount": 165559,
       "similar_artists": [
         {
           "name": "Stars in Battledress",
@@ -463,10 +729,11 @@
       "name": "North Sea Radio Orchestra",
       "popularity": 16,
       "url": "https://open.spotify.com/artist/3eyp3SryLYlr8OqCkpFQHF"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "3eyp3SryLYlr8OqCkpFQHF",
   "spotify_url": "https://open.spotify.com/artist/3eyp3SryLYlr8OqCkpFQHF",
-  "updated_at": "2025-07-08T10:09:23.035683",
+  "updated_at": "2025-07-08T20:57:07.373436",
   "wikipedia_url": null
 }

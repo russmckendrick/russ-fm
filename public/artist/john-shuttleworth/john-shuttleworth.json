@@ -100,7 +100,115 @@
     "small": "../public/artist/john-shuttleworth/john-shuttleworth-small.jpg"
   },
   "name": "John Shuttleworth",
-  "popularity": 19,
+  "popularity": 20,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='49253680', url='https://music.apple.com/gb/artist/john-shuttleworth/49253680', name='John Shuttleworth', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/13/00/701300a6-8f6e-84d4-a284-57013408612c/mzi.eubmbtfu.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '49253680', 'type': 'artists', 'href': '/v1/catalog/gb/artists/49253680', 'attributes': {'name': 'John Shuttleworth', 'genreNames': ['Pop'], 'artwork': {'width': 600, 'height': 600, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/13/00/701300a6-8f6e-84d4-a284-57013408612c/mzi.eubmbtfu.jpg/{w}x{h}ac.jpg', 'bgColor': '201f1a', 'textColor1': 'cdfa0f', 'textColor2': 'f2dbaf', 'textColor3': 'abce11', 'textColor4': 'c8b591'}, 'url': 'https://music.apple.com/gb/artist/john-shuttleworth/49253680'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/49253680/albums', 'data': [{'id': '1654801902', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1654801902'}, {'id': '166090967', 'type': 'albums', 'href': '/v1/catalog/gb/albums/166090967'}, {'id': '431836468', 'type': 'albums', 'href': '/v1/catalog/gb/albums/431836468'}, {'id': '1791497706', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1791497706'}, {'id': '1793052196', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1793052196'}, {'id': '1792591786', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1792591786'}, {'id': '1793125386', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1793125386'}, {'id': '1784194825', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1784194825'}, {'id': '1793126683', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1793126683'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/Ygdkht-3wrSdqVnEwPvkz1HCfljmpsoX5u_-HqD9nYo/rs:fit/g:sm/q:90/h:721/w:569/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "660879",
+      "images": [
+        {
+          "height": 721,
+          "resource_url": "https://i.discogs.com/Ygdkht-3wrSdqVnEwPvkz1HCfljmpsoX5u_-HqD9nYo/rs:fit/g:sm/q:90/h:721/w:569/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ygdkht-3wrSdqVnEwPvkz1HCfljmpsoX5u_-HqD9nYo/rs:fit/g:sm/q:90/h:721/w:569/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/s48YEp1Cn3igbxwmfDdVoZhAZmt6zqlAt0-LG-4vdrE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+          "width": 569
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/ALtUKgEJEieVsgpKlHCYvHoYAdgZ3Yc7l4ZuGhQ8Bik/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ALtUKgEJEieVsgpKlHCYvHoYAdgZ3Yc7l4ZuGhQ8Bik/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ML9t_6Mw-UtuFhCUZINF3HyHBGNWQWcl7W-0c7feCCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+          "width": 427
+        }
+      ],
+      "members": [],
+      "name": "John Shuttleworth",
+      "namevariations": [
+        "J. Shuttleworth",
+        "J.G. John",
+        "Jonny",
+        "Jonny Shuttleworth"
+      ],
+      "profile": "(For the producer of classical recordings, see [a=John Shuttleworth (2)].)\r\n\r\nThe creation/alter ego of musician/actor Graham Fellows, John Shuttleworth 'is' a middle-aged \"versatile singer-songwriter\" from Sheffield, South Yorkshire.\r\n\r\nAchieving a UK hit single early in his career as [a=Jilted John], Fellows followed the misguided advice of his record label to keep a cult profile and did not see any further hits. In 1985, having signed a songwriting deal with Chappell Music, he was played some of their bad demo tapes and was inspired to create John Shuttleworth, a man with a hum-drum life and little aptitude for pop music who nonetheless writes song after song on his Yamaha keyboard with \"built-in auto-accompaniment\".\r\n\r\nShuttleworth was initially confined to home-produced tapes that were only circulated among Fellows' friends (some of these tracks later compiled on 'Blue John') but he gradually became more mainstream, with appearances on Radio 4 ('The Shuttleworths' series), Radio 1 ('Shuttleworth Showtime') and on Jonathan Ross's 'Saturday Zoo' on Channel 4, eventually progressing to his own TV shows ('500 Bus Stops', 'Europigeon') and films ('It's Nice Up North'). Most incongruously, perhaps, Shuttleworth played to 25,000 bemused [a=Blur] fans when he supported them at London's Mile End Stadium in 1996. Fellows has also written books as John and regularly tours in character.\r\n\r\nThe humour of John Shuttleworth is gentle and observational, bearing comparison to the work of Alan Bennett, being similarly rooted in a Northern English perspective. Although John is clearly never going to be a star, we are not invited to mock him, more to identify with him and his hopes and dreams. His songs, though unlikely to top the charts when covered by Clannad or Paul Young, as John perennially hopes, are nonetheless whimsical and clever beyond his understanding.\n",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 266998,
+            "name": "Jilted John",
+            "resource_url": "https://api.discogs.com/artists/266998",
+            "thumbnail_url": "https://i.discogs.com/33xhZEWpMx2aP0cLGLB-667yRAZ-fg3VEGwA-CnJu_8/rs:fit/g:sm/q:40/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Njk5/OC0xNDI3NjU2MTUz/LTU4MTguanBlZw.jpeg"
+          },
+          {
+            "id": 747244,
+            "name": "Graham Fellows",
+            "resource_url": "https://api.discogs.com/artists/747244",
+            "thumbnail_url": "https://i.discogs.com/jlYLW96ESA_qZtQg8-xRvhOGawdGdOsVfo1J1ZujPug/rs:fit/g:sm/q:40/h:555/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc0NzI0/NC0xNDI3NjU3MDc5/LTUyNDUuanBlZw.jpeg"
+          },
+          {
+            "id": 3047260,
+            "name": "Brian Appleton",
+            "resource_url": "https://api.discogs.com/artists/3047260",
+            "thumbnail_url": "https://i.discogs.com/8WVMg83WZpgr_F0H_VSKHOVmAZAfWnyQNiiglaiIkxo/rs:fit/g:sm/q:40/h:248/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwNDcy/NjAtMTY1MzI1MTUx/OC00NzA5LmpwZWc.jpeg"
+          },
+          {
+            "id": 11263967,
+            "name": "Dave Tordoff",
+            "resource_url": "https://api.discogs.com/artists/11263967",
+            "thumbnail_url": "https://i.discogs.com/yr7kW0CcGO31D2Kg3ctEz2pXJNKxOoUjLze9MxXqO9M/rs:fit/g:sm/q:40/h:225/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjYz/OTY3LTE2NTMyNTE0/NTUtNjg5OC5qcGVn.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 660879,
+        "images": [
+          {
+            "height": 721,
+            "resource_url": "https://i.discogs.com/Ygdkht-3wrSdqVnEwPvkz1HCfljmpsoX5u_-HqD9nYo/rs:fit/g:sm/q:90/h:721/w:569/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ygdkht-3wrSdqVnEwPvkz1HCfljmpsoX5u_-HqD9nYo/rs:fit/g:sm/q:90/h:721/w:569/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/s48YEp1Cn3igbxwmfDdVoZhAZmt6zqlAt0-LG-4vdrE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+            "width": 569
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/ALtUKgEJEieVsgpKlHCYvHoYAdgZ3Yc7l4ZuGhQ8Bik/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ALtUKgEJEieVsgpKlHCYvHoYAdgZ3Yc7l4ZuGhQ8Bik/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ML9t_6Mw-UtuFhCUZINF3HyHBGNWQWcl7W-0c7feCCg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTg5MDI3NDk1/LmpwZWc.jpeg",
+            "width": 427
+          }
+        ],
+        "name": "John Shuttleworth",
+        "namevariations": [
+          "J. Shuttleworth",
+          "J.G. John",
+          "Jonny",
+          "Jonny Shuttleworth"
+        ],
+        "profile": "(For the producer of classical recordings, see [a=John Shuttleworth (2)].)\r\n\r\nThe creation/alter ego of musician/actor Graham Fellows, John Shuttleworth 'is' a middle-aged \"versatile singer-songwriter\" from Sheffield, South Yorkshire.\r\n\r\nAchieving a UK hit single early in his career as [a=Jilted John], Fellows followed the misguided advice of his record label to keep a cult profile and did not see any further hits. In 1985, having signed a songwriting deal with Chappell Music, he was played some of their bad demo tapes and was inspired to create John Shuttleworth, a man with a hum-drum life and little aptitude for pop music who nonetheless writes song after song on his Yamaha keyboard with \"built-in auto-accompaniment\".\r\n\r\nShuttleworth was initially confined to home-produced tapes that were only circulated among Fellows' friends (some of these tracks later compiled on 'Blue John') but he gradually became more mainstream, with appearances on Radio 4 ('The Shuttleworths' series), Radio 1 ('Shuttleworth Showtime') and on Jonathan Ross's 'Saturday Zoo' on Channel 4, eventually progressing to his own TV shows ('500 Bus Stops', 'Europigeon') and films ('It's Nice Up North'). Most incongruously, perhaps, Shuttleworth played to 25,000 bemused [a=Blur] fans when he supported them at London's Mile End Stadium in 1996. Fellows has also written books as John and regularly tours in character.\r\n\r\nThe humour of John Shuttleworth is gentle and observational, bearing comparison to the work of Alan Bennett, being similarly rooted in a Northern English perspective. Although John is clearly never going to be a star, we are not invited to mock him, more to identify with him and his hopes and dreams. His songs, though unlikely to top the charts when covered by Clannad or Paul Young, as John perennially hopes, are nonetheless whimsical and clever beyond his understanding.\n",
+        "realname": "Graham David Fellows",
+        "releases_url": "https://api.discogs.com/artists/660879/releases",
+        "resource_url": "https://api.discogs.com/artists/660879",
+        "uri": "https://www.discogs.com/artist/660879-John-Shuttleworth",
+        "urls": [
+          "http://www.shuttleworths.co.uk/index.html"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/660879",
+      "thumb": "https://i.discogs.com/s48YEp1Cn3igbxwmfDdVoZhAZmt6zqlAt0-LG-4vdrE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MDg3/OS0xMTc0ODM4MTg3/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/660879-John-Shuttleworth",
+      "urls": [
+        "http://www.shuttleworths.co.uk/index.html"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='John Shuttleworth', url='https://www.last.fm/music/John+Shuttleworth', mbid='229bd024-059c-4a50-b12a-ae2db09d798c', listeners=7556, playcount=91679, bio_summary='John Shuttleworth is a comedy character played by actor Graham Fellows. \\n\\nShuttleworth is a retired gentleman, living in Sheffield, South Yorkshire, England. He composes tunes of profound philosophical importance (though he has been known, on occasion, to get \"a little bit blue\"). and performs them at the local sheltered accomodation.\\n\\nShuttleworth has appeared in several radio and television series, as well as regularly performing live.\\n\\nFellows has also performed as Jilted John.\\n <a href=\"https://www.last.fm/music/John+Shuttleworth\">Read more on Last.fm</a>', bio_content='John Shuttleworth is a comedy character played by actor Graham Fellows. \\n\\nShuttleworth is a retired gentleman, living in Sheffield, South Yorkshire, England. He composes tunes of profound philosophical importance (though he has been known, on occasion, to get \"a little bit blue\"). and performs them at the local sheltered accomodation.\\n\\nShuttleworth has appeared in several radio and television series, as well as regularly performing live.\\n\\nFellows has also performed as Jilted John.\\n <a href=\"https://www.last.fm/music/John+Shuttleworth\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['comedy', 'Sheffield', 'humour', 'seen live', 'yamaha'], similar_artists=[{'name': 'Frank Sidebottom', 'url': 'https://www.last.fm/music/Frank+Sidebottom'}, {'name': 'Jake Thackray', 'url': 'https://www.last.fm/music/Jake+Thackray'}, {'name': 'Peter Cook', 'url': 'https://www.last.fm/music/Peter+Cook'}, {'name': 'Spike Milligan', 'url': 'https://www.last.fm/music/Spike+Milligan'}, {'name': 'Peter Sellers', 'url': 'https://www.last.fm/music/Peter+Sellers'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'John Shuttleworth', 'mbid': '229bd024-059c-4a50-b12a-ae2db09d798c', 'url': 'https://www.last.fm/music/John+Shuttleworth', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '7556', 'playcount': '91679'}, 'similar': {'artist': [{'name': 'Frank Sidebottom', 'url': 'https://www.last.fm/music/Frank+Sidebottom', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Jake Thackray', 'url': 'https://www.last.fm/music/Jake+Thackray', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Peter Cook', 'url': 'https://www.last.fm/music/Peter+Cook', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Spike Milligan', 'url': 'https://www.last.fm/music/Spike+Milligan', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Peter Sellers', 'url': 'https://www.last.fm/music/Peter+Sellers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'comedy', 'url': 'https://www.last.fm/tag/comedy'}, {'name': 'Sheffield', 'url': 'https://www.last.fm/tag/Sheffield'}, {'name': 'humour', 'url': 'https://www.last.fm/tag/humour'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'yamaha', 'url': 'https://www.last.fm/tag/yamaha'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/John+Shuttleworth/+wiki'}}, 'published': '25 Oct 2006, 12:57', 'summary': 'John Shuttleworth is a comedy character played by actor Graham Fellows. \\n\\nShuttleworth is a retired gentleman, living in Sheffield, South Yorkshire, England. He composes tunes of profound philosophical importance (though he has been known, on occasion, to get \"a little bit blue\"). and performs them at the local sheltered accomodation.\\n\\nShuttleworth has appeared in several radio and television series, as well as regularly performing live.\\n\\nFellows has also performed as Jilted John.\\n <a href=\"https://www.last.fm/music/John+Shuttleworth\">Read more on Last.fm</a>', 'content': 'John Shuttleworth is a comedy character played by actor Graham Fellows. \\n\\nShuttleworth is a retired gentleman, living in Sheffield, South Yorkshire, England. He composes tunes of profound philosophical importance (though he has been known, on occasion, to get \"a little bit blue\"). and performs them at the local sheltered accomodation.\\n\\nShuttleworth has appeared in several radio and television series, as well as regularly performing live.\\n\\nFellows has also performed as Jilted John.\\n <a href=\"https://www.last.fm/music/John+Shuttleworth\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='2kEM6Ipg4QJuw8rHKB442d', url='https://open.spotify.com/artist/2kEM6Ipg4QJuw8rHKB442d', name='John Shuttleworth', popularity=20, followers=5763, genres=['comedy', 'spoken word'], images=[{'url': 'https://i.scdn.co/image/ab67616d0000b27312086f237a59cab0fc9e0968', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0212086f237a59cab0fc9e0968', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485112086f237a59cab0fc9e0968', 'height': 64, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/2kEM6Ipg4QJuw8rHKB442d'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/2kEM6Ipg4QJuw8rHKB442d'}, 'followers': {'href': None, 'total': 5763}, 'genres': ['comedy', 'spoken word'], 'href': 'https://api.spotify.com/v1/artists/2kEM6Ipg4QJuw8rHKB442d', 'id': '2kEM6Ipg4QJuw8rHKB442d', 'images': [{'url': 'https://i.scdn.co/image/ab67616d0000b27312086f237a59cab0fc9e0968', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616d00001e0212086f237a59cab0fc9e0968', 'height': 300, 'width': 300}, {'url': 'https://i.scdn.co/image/ab67616d0000485112086f237a59cab0fc9e0968', 'height': 64, 'width': 64}], 'name': 'John Shuttleworth', 'popularity': 20, 'type': 'artist', 'uri': 'spotify:artist:2kEM6Ipg4QJuw8rHKB442d'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/70/13/00/701300a6-8f6e-84d4-a284-57013408612c/mzi.eubmbtfu.jpg/2000x2000ac.jpg",
@@ -247,7 +355,7 @@
       "listeners": 7556,
       "mbid": "229bd024-059c-4a50-b12a-ae2db09d798c",
       "name": "John Shuttleworth",
-      "playcount": 91671,
+      "playcount": 91679,
       "similar_artists": [
         {
           "name": "Frank Sidebottom",
@@ -304,12 +412,13 @@
         }
       ],
       "name": "John Shuttleworth",
-      "popularity": 19,
+      "popularity": 20,
       "url": "https://open.spotify.com/artist/2kEM6Ipg4QJuw8rHKB442d"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "2kEM6Ipg4QJuw8rHKB442d",
   "spotify_url": "https://open.spotify.com/artist/2kEM6Ipg4QJuw8rHKB442d",
-  "updated_at": "2025-07-08T10:08:44.758330",
+  "updated_at": "2025-07-08T20:56:44.745032",
   "wikipedia_url": null
 }
