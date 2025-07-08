@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:09:01.863914",
   "discogs_id": "263270",
-  "discogs_url": "https://www.discogs.com/artist/263270",
-  "followers": 435542,
+  "discogs_url": "https://www.discogs.com/artist/263270-downset",
+  "followers": 435847,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -22,7 +22,7 @@
     "USA",
     "California"
   ],
-  "id": null,
+  "id": "downset.-1751731745",
   "images": [
     {
       "height": 2000,
@@ -89,14 +89,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/c6tawONYiGRxc3SH7d8TXf2Sey7AHOEOOI-ZP64XnJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/+noredirect/Downset.",
   "local_images": {
-    "hi-res": "public/artist/downset/downset-hi-res.jpg",
-    "medium": "public/artist/downset/downset-medium.jpg",
-    "small": "public/artist/downset/downset-small.jpg"
+    "hi-res": "../public/artist/downset/downset-hi-res.jpg",
+    "medium": "../public/artist/downset/downset-medium.jpg",
+    "small": "../public/artist/downset/downset-small.jpg"
   },
   "name": "Downset.",
   "popularity": 50,
@@ -113,9 +125,388 @@
       "url": "https://music.apple.com/gb/artist/downset/373967"
     },
     "discogs": {
-      "id": 263270,
-      "original_name": "Downset.",
-      "role": ""
+      "cover_image": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "263270",
+      "images": [
+        {
+          "height": 347,
+          "resource_url": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/c6tawONYiGRxc3SH7d8TXf2Sey7AHOEOOI-ZP64XnJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/uryq78i723_ZYYIxl1ADQ0I9dnaCVehPfekIZD8lHVE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uryq78i723_ZYYIxl1ADQ0I9dnaCVehPfekIZD8lHVE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/dOgZuleako_nuB2xatXFKo-iGXLZUg69rSEHCA7tl9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 489,
+          "resource_url": "https://i.discogs.com/UANJgzP0zhlvpe8APxBxoJCr5IVjG-eNppv_6WBn9wY/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UANJgzP0zhlvpe8APxBxoJCr5IVjG-eNppv_6WBn9wY/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RurRdOFa9oy3YXWvxCSTeQcGXsIv_3DOIIYnSSvPydM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 554,
+          "resource_url": "https://i.discogs.com/CRxusWhOP1TVB2WbBK-JTwxhtJS69kzYG39REzF28XI/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/CRxusWhOP1TVB2WbBK-JTwxhtJS69kzYG39REzF28XI/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/BCHDiVRkARCjwMreFezRvLmn63Dt5M4sg_S18PmAUPA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 303,
+          "resource_url": "https://i.discogs.com/Y9j3l4YDtbfXrNEDLTu8SjQJvG0c0MD2WeaDSw1E64Y/rs:fit/g:sm/q:90/h:303/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Y9j3l4YDtbfXrNEDLTu8SjQJvG0c0MD2WeaDSw1E64Y/rs:fit/g:sm/q:90/h:303/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/w8DSsQeRXlpj8rfUCHPwNcd9kSKMErMV0IO3Zm7axqk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+          "width": 470
+        },
+        {
+          "height": 672,
+          "resource_url": "https://i.discogs.com/S9ZqJbRm6IYckgr8HKW-fbUZ5myOrh5zXFeCe4z7yqo/rs:fit/g:sm/q:90/h:672/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/S9ZqJbRm6IYckgr8HKW-fbUZ5myOrh5zXFeCe4z7yqo/rs:fit/g:sm/q:90/h:672/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9upnuYeDuht-brlaQE9IQPWj8xcUMR7GE-c2io4M9_g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/XruwLq4_3Ev0OPZTOK0Q_Iy0T0lgZVAJ9ZUnSHLRFnk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XruwLq4_3Ev0OPZTOK0Q_Iy0T0lgZVAJ9ZUnSHLRFnk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/6ONW8kYTRUtROoslOnkLf97LjitLpHmwKzOtIt7vJTg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 611,
+          "resource_url": "https://i.discogs.com/musB821r4NQeJUXR9RdzH7xKhvL4E-1CbYOV9ka3kms/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/musB821r4NQeJUXR9RdzH7xKhvL4E-1CbYOV9ka3kms/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/GVE0fFJYMYU5lfaB4UrlqRPVbfNy7-5_6B-xmnY1mo4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 220,
+          "resource_url": "https://i.discogs.com/zertDRqV8669llKQ9B9aWtZqdZSZAtb7Yn_NDcDd0YU/rs:fit/g:sm/q:90/h:220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/zertDRqV8669llKQ9B9aWtZqdZSZAtb7Yn_NDcDd0YU/rs:fit/g:sm/q:90/h:220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+          "uri150": "https://i.discogs.com/bYOil2zHGq8qJ4Xz40YaS4HlaASsenlMmMSeHTHinYE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+          "width": 600
+        },
+        {
+          "height": 748,
+          "resource_url": "https://i.discogs.com/kROHgFHws9fwC8m0amy_CpF27RFZSS5z1X3LsnQ566M/rs:fit/g:sm/q:90/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/kROHgFHws9fwC8m0amy_CpF27RFZSS5z1X3LsnQ566M/rs:fit/g:sm/q:90/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/uWxbRQhZ0eMJ1lYxcvk5CPc6ox4e1beD7_GRuZxvRaE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 363212,
+          "name": "Rogelio Lozano",
+          "resource_url": "https://api.discogs.com/artists/363212",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 547353,
+          "name": "Rey Oropeza",
+          "resource_url": "https://api.discogs.com/artists/547353",
+          "thumbnail_url": "https://i.discogs.com/eF_P0_74oqm_QJUnuCPMxailS0sh1_Q6jWL9wlKUowA/rs:fit/g:sm/q:40/h:262/w:193/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NzM1/My0xNTA3NzU3NzAz/LTI1MzUucG5n.jpeg"
+        },
+        {
+          "active": false,
+          "id": 705020,
+          "name": "James Morris (3)",
+          "resource_url": "https://api.discogs.com/artists/705020",
+          "thumbnail_url": "https://i.discogs.com/SQTMfV2aU1ZNRiClRKXnt39RqNzSstUe9EesNY0Iumg/rs:fit/g:sm/q:40/h:491/w:316/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwNTAy/MC0xNTA3Nzg2Mzg5/LTMyNjAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 705022,
+          "name": "Chris Lee (5)",
+          "resource_url": "https://api.discogs.com/artists/705022",
+          "thumbnail_url": "https://i.discogs.com/rLn12p1Hx22bJUgm3BRsy7Abmq_VE8OGynZJf9EOljs/rs:fit/g:sm/q:40/h:471/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwNTAy/Mi0xNTc1NTczMzE3/LTcyMDAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1166642,
+          "name": "Brian Schwager",
+          "resource_url": "https://api.discogs.com/artists/1166642",
+          "thumbnail_url": "https://i.discogs.com/U-d8A_oFheN7UqxZ3FOCMZ0jqwKX_WsWggn9Xe1d94s/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNjY2/NDItMTUwNzc1ODgx/MS03NzMyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1171030,
+          "name": "Chris Hamilton (3)",
+          "resource_url": "https://api.discogs.com/artists/1171030",
+          "thumbnail_url": "https://i.discogs.com/rA2QzsjUTtCh87bTFU7ZB2vVNTDRt1zON4SU_uWOfb8/rs:fit/g:sm/q:40/h:587/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNzEw/MzAtMTU3NTEyNDM1/Ny0yODAzLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1591112,
+          "name": "Rico Villasenor",
+          "resource_url": "https://api.discogs.com/artists/1591112",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 2735569,
+          "name": "Bobby Blood (2)",
+          "resource_url": "https://api.discogs.com/artists/2735569",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 3662034,
+          "name": "J.D. Manhart",
+          "resource_url": "https://api.discogs.com/artists/3662034",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 3662035,
+          "name": "Neil Roemer",
+          "resource_url": "https://api.discogs.com/artists/3662035",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 7524319,
+          "name": "Betto Cardoso",
+          "resource_url": "https://api.discogs.com/artists/7524319",
+          "thumbnail_url": "https://i.discogs.com/HH-ErpCq5CWHT9bfJ6DsorklVHGy5UyoW3KsUAzlpKM/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc1MjQz/MTktMTcyMDcwMTEx/My0zMzUxLmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 7529806,
+          "name": "Renato Barbosa (2)",
+          "resource_url": "https://api.discogs.com/artists/7529806",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "downset.",
+      "namevariations": [
+        "Down Set",
+        "Downset",
+        "downset",
+        "downset.",
+        "ダウンセット"
+      ],
+      "profile": "Downset (often stylised as downset.) are an American hardcore band from Los Angeles, a fusion of rap and metal with punk hardcore. \r\n\r\nThe group was formed in the early nineties after the demise of the hardcore punk band [a=Social Justice], by vocalist Rey Oropeza, guitarists Brian \"Ares\" Schwager and Rogelio Lozano, bassist James Morris and drummer Chris Lee, they released their self-titled debut album in 1994 via Mercury, with Lozano leaving the group shortly after, their second album \"Do We Speak A Dead Language?\" came in 1996, once again released by Mercury. In the following year the group headlined the second stage of Ozzfest Festival. Rogelio Lozano rejoined the group in the late nineties and the group released their third album \"Check Your People\" (2000) via Epitaph.\r\n\r\nAfter the subsequent tour of their album the group went on turmoil with some of its members leaving and then returning, but in 2003 both Moore and Lozano eventually left the group and Rico Villasenor (from [a=Manhole]/[a=Tura Satana] and also played in the metal band [url=https://www.discogs.com/artist/5818157]Drunk With Power[/url] with Ares) joined them as their new bass player, with this line-up the group recorded their fourth full-length \"Universal\", released in 2004 by the small indie label Hawino Records, in the following year the group went on a touring hiatus that lasted for almost a decade.\r\n\r\nIn 2013 Lozano and Lee revived the Downset name with a different line-up, featuring Neil Roemer on vocals, Lozano on guitars, J.D. Manhart on bass and Chris on drums, the group released the track \"Forgotten\" (feat. [a=Sen Dog] of [a=Cypress Hill]) and did a summer tour, but this formation didn't last long as the original members then reunited, this line-up was then renamed [url=https://www.discogs.com/artist/4574694]Cutthroat[/url].\r\n\r\nThe group three other original members, Rey Oropeza, Ares Schwager and James Moore along with former drummer Chris Hamilton then re-took the name and recorded the group's fifth album \"One Blood\", self-released by the band in 2014, ten years after their previous effort.\r\n\r\nOn February 18th 2022 the band announced their comeback and their signing with Nuclear Blast Records. A re-release of their first two 7'' records and their 6th album will be released via Nuclear Blast Records. The 6th album \"Maintain\" was released on June 10th 2022. Shortly after the release frontman Rey quit the band. No official statement about the departure was released since then. On the following tours 2023/24 (North America/Europe) the band was fronted by fill in vocalist Neil Roemer (of Cutthroat LA) (2023) and Joe Hyde (2024) (of Illmatic).",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 263270,
+        "images": [
+          {
+            "height": 347,
+            "resource_url": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/GTsmRXmZ7v9ZZjeIybyA3OQF6uKxLFoAMcC-pQoJmVU/rs:fit/g:sm/q:90/h:347/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/c6tawONYiGRxc3SH7d8TXf2Sey7AHOEOOI-ZP64XnJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/uryq78i723_ZYYIxl1ADQ0I9dnaCVehPfekIZD8lHVE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uryq78i723_ZYYIxl1ADQ0I9dnaCVehPfekIZD8lHVE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/dOgZuleako_nuB2xatXFKo-iGXLZUg69rSEHCA7tl9k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTIzMzkuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 489,
+            "resource_url": "https://i.discogs.com/UANJgzP0zhlvpe8APxBxoJCr5IVjG-eNppv_6WBn9wY/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UANJgzP0zhlvpe8APxBxoJCr5IVjG-eNppv_6WBn9wY/rs:fit/g:sm/q:90/h:489/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/RurRdOFa9oy3YXWvxCSTeQcGXsIv_3DOIIYnSSvPydM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MTk3/LTg1MDguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 554,
+            "resource_url": "https://i.discogs.com/CRxusWhOP1TVB2WbBK-JTwxhtJS69kzYG39REzF28XI/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/CRxusWhOP1TVB2WbBK-JTwxhtJS69kzYG39REzF28XI/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/BCHDiVRkARCjwMreFezRvLmn63Dt5M4sg_S18PmAUPA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjA3/LTQ5NDEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 303,
+            "resource_url": "https://i.discogs.com/Y9j3l4YDtbfXrNEDLTu8SjQJvG0c0MD2WeaDSw1E64Y/rs:fit/g:sm/q:90/h:303/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Y9j3l4YDtbfXrNEDLTu8SjQJvG0c0MD2WeaDSw1E64Y/rs:fit/g:sm/q:90/h:303/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/w8DSsQeRXlpj8rfUCHPwNcd9kSKMErMV0IO3Zm7axqk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjE1/LTYxMTAuanBlZw.jpeg",
+            "width": 470
+          },
+          {
+            "height": 672,
+            "resource_url": "https://i.discogs.com/S9ZqJbRm6IYckgr8HKW-fbUZ5myOrh5zXFeCe4z7yqo/rs:fit/g:sm/q:90/h:672/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/S9ZqJbRm6IYckgr8HKW-fbUZ5myOrh5zXFeCe4z7yqo/rs:fit/g:sm/q:90/h:672/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/9upnuYeDuht-brlaQE9IQPWj8xcUMR7GE-c2io4M9_g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTc1MTY1MjI3/LTY5MDguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/XruwLq4_3Ev0OPZTOK0Q_Iy0T0lgZVAJ9ZUnSHLRFnk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XruwLq4_3Ev0OPZTOK0Q_Iy0T0lgZVAJ9ZUnSHLRFnk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/6ONW8kYTRUtROoslOnkLf97LjitLpHmwKzOtIt7vJTg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMjg0/LTkyNTEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 611,
+            "resource_url": "https://i.discogs.com/musB821r4NQeJUXR9RdzH7xKhvL4E-1CbYOV9ka3kms/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/musB821r4NQeJUXR9RdzH7xKhvL4E-1CbYOV9ka3kms/rs:fit/g:sm/q:90/h:611/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/GVE0fFJYMYU5lfaB4UrlqRPVbfNy7-5_6B-xmnY1mo4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTYwMTg1/LTY0NDguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 220,
+            "resource_url": "https://i.discogs.com/zertDRqV8669llKQ9B9aWtZqdZSZAtb7Yn_NDcDd0YU/rs:fit/g:sm/q:90/h:220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/zertDRqV8669llKQ9B9aWtZqdZSZAtb7Yn_NDcDd0YU/rs:fit/g:sm/q:90/h:220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+            "uri150": "https://i.discogs.com/bYOil2zHGq8qJ4Xz40YaS4HlaASsenlMmMSeHTHinYE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNjU0OTAwOTc3/LTUwNjcucG5n.jpeg",
+            "width": 600
+          },
+          {
+            "height": 748,
+            "resource_url": "https://i.discogs.com/kROHgFHws9fwC8m0amy_CpF27RFZSS5z1X3LsnQ566M/rs:fit/g:sm/q:90/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/kROHgFHws9fwC8m0amy_CpF27RFZSS5z1X3LsnQ566M/rs:fit/g:sm/q:90/h:748/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/uWxbRQhZ0eMJ1lYxcvk5CPc6ox4e1beD7_GRuZxvRaE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNTU4MTE4MjY1/LTcwOTAuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 363212,
+            "name": "Rogelio Lozano",
+            "resource_url": "https://api.discogs.com/artists/363212",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 547353,
+            "name": "Rey Oropeza",
+            "resource_url": "https://api.discogs.com/artists/547353",
+            "thumbnail_url": "https://i.discogs.com/eF_P0_74oqm_QJUnuCPMxailS0sh1_Q6jWL9wlKUowA/rs:fit/g:sm/q:40/h:262/w:193/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0NzM1/My0xNTA3NzU3NzAz/LTI1MzUucG5n.jpeg"
+          },
+          {
+            "active": false,
+            "id": 705020,
+            "name": "James Morris (3)",
+            "resource_url": "https://api.discogs.com/artists/705020",
+            "thumbnail_url": "https://i.discogs.com/SQTMfV2aU1ZNRiClRKXnt39RqNzSstUe9EesNY0Iumg/rs:fit/g:sm/q:40/h:491/w:316/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwNTAy/MC0xNTA3Nzg2Mzg5/LTMyNjAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 705022,
+            "name": "Chris Lee (5)",
+            "resource_url": "https://api.discogs.com/artists/705022",
+            "thumbnail_url": "https://i.discogs.com/rLn12p1Hx22bJUgm3BRsy7Abmq_VE8OGynZJf9EOljs/rs:fit/g:sm/q:40/h:471/w:596/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwNTAy/Mi0xNTc1NTczMzE3/LTcyMDAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1166642,
+            "name": "Brian Schwager",
+            "resource_url": "https://api.discogs.com/artists/1166642",
+            "thumbnail_url": "https://i.discogs.com/U-d8A_oFheN7UqxZ3FOCMZ0jqwKX_WsWggn9Xe1d94s/rs:fit/g:sm/q:40/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNjY2/NDItMTUwNzc1ODgx/MS03NzMyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1171030,
+            "name": "Chris Hamilton (3)",
+            "resource_url": "https://api.discogs.com/artists/1171030",
+            "thumbnail_url": "https://i.discogs.com/rA2QzsjUTtCh87bTFU7ZB2vVNTDRt1zON4SU_uWOfb8/rs:fit/g:sm/q:40/h:587/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNzEw/MzAtMTU3NTEyNDM1/Ny0yODAzLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1591112,
+            "name": "Rico Villasenor",
+            "resource_url": "https://api.discogs.com/artists/1591112",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 2735569,
+            "name": "Bobby Blood (2)",
+            "resource_url": "https://api.discogs.com/artists/2735569",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 3662034,
+            "name": "J.D. Manhart",
+            "resource_url": "https://api.discogs.com/artists/3662034",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 3662035,
+            "name": "Neil Roemer",
+            "resource_url": "https://api.discogs.com/artists/3662035",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 7524319,
+            "name": "Betto Cardoso",
+            "resource_url": "https://api.discogs.com/artists/7524319",
+            "thumbnail_url": "https://i.discogs.com/HH-ErpCq5CWHT9bfJ6DsorklVHGy5UyoW3KsUAzlpKM/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc1MjQz/MTktMTcyMDcwMTEx/My0zMzUxLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 7529806,
+            "name": "Renato Barbosa (2)",
+            "resource_url": "https://api.discogs.com/artists/7529806",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "downset.",
+        "namevariations": [
+          "Down Set",
+          "Downset",
+          "downset",
+          "downset.",
+          "ダウンセット"
+        ],
+        "profile": "Downset (often stylised as downset.) are an American hardcore band from Los Angeles, a fusion of rap and metal with punk hardcore. \r\n\r\nThe group was formed in the early nineties after the demise of the hardcore punk band [a=Social Justice], by vocalist Rey Oropeza, guitarists Brian \"Ares\" Schwager and Rogelio Lozano, bassist James Morris and drummer Chris Lee, they released their self-titled debut album in 1994 via Mercury, with Lozano leaving the group shortly after, their second album \"Do We Speak A Dead Language?\" came in 1996, once again released by Mercury. In the following year the group headlined the second stage of Ozzfest Festival. Rogelio Lozano rejoined the group in the late nineties and the group released their third album \"Check Your People\" (2000) via Epitaph.\r\n\r\nAfter the subsequent tour of their album the group went on turmoil with some of its members leaving and then returning, but in 2003 both Moore and Lozano eventually left the group and Rico Villasenor (from [a=Manhole]/[a=Tura Satana] and also played in the metal band [url=https://www.discogs.com/artist/5818157]Drunk With Power[/url] with Ares) joined them as their new bass player, with this line-up the group recorded their fourth full-length \"Universal\", released in 2004 by the small indie label Hawino Records, in the following year the group went on a touring hiatus that lasted for almost a decade.\r\n\r\nIn 2013 Lozano and Lee revived the Downset name with a different line-up, featuring Neil Roemer on vocals, Lozano on guitars, J.D. Manhart on bass and Chris on drums, the group released the track \"Forgotten\" (feat. [a=Sen Dog] of [a=Cypress Hill]) and did a summer tour, but this formation didn't last long as the original members then reunited, this line-up was then renamed [url=https://www.discogs.com/artist/4574694]Cutthroat[/url].\r\n\r\nThe group three other original members, Rey Oropeza, Ares Schwager and James Moore along with former drummer Chris Hamilton then re-took the name and recorded the group's fifth album \"One Blood\", self-released by the band in 2014, ten years after their previous effort.\r\n\r\nOn February 18th 2022 the band announced their comeback and their signing with Nuclear Blast Records. A re-release of their first two 7'' records and their 6th album will be released via Nuclear Blast Records. The 6th album \"Maintain\" was released on June 10th 2022. Shortly after the release frontman Rey quit the band. No official statement about the departure was released since then. On the following tours 2023/24 (North America/Europe) the band was fronted by fill in vocalist Neil Roemer (of Cutthroat LA) (2023) and Joe Hyde (2024) (of Illmatic).",
+        "releases_url": "https://api.discogs.com/artists/263270/releases",
+        "resource_url": "https://api.discogs.com/artists/263270",
+        "uri": "https://www.discogs.com/artist/263270-downset",
+        "urls": [
+          "https://www.facebook.com/DownsetLA",
+          "https://twitter.com/downsetla",
+          "http://instagram.com/downsetla/",
+          "http://www.myspace.com/downset",
+          "http://en.wikipedia.org/wiki/Downset."
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/263270",
+      "thumb": "https://i.discogs.com/c6tawONYiGRxc3SH7d8TXf2Sey7AHOEOOI-ZP64XnJg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzI3/MC0xNzE2ODQwNzM3/LTYzMDEuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/263270-downset",
+      "urls": [
+        "https://www.facebook.com/DownsetLA",
+        "https://twitter.com/downsetla",
+        "http://instagram.com/downsetla/",
+        "http://www.myspace.com/downset",
+        "http://en.wikipedia.org/wiki/Downset."
+      ]
     },
     "lastfm": {
       "bio_content": "downset. was a rapcore group hailing from Los Angeles, California who originally went by the name \"Social Justice\". They are also known for being one of the first hardcore bands to incorporate hip hop and funk influences into their music.\n\nIn 1992, Social Justice (1987-92) changed their name to downset., and released their Our Suffocation demo in 1993.\n\ndownset. officially split in May 2009, claiming the band had \"officially run its course\".\n\nThrough there career they released records on Polygram, Epitaph and Hawino.\n\nDownset have said in many interviews that they draw most of their influence from the band KIDS OF CARNAGE and would not have been a band if it wasn't for the first two KOC 7 inches.\n\n_______________________________________\nDiscography\n_______________________________________\nAlbums\n\n    * Downset. (1994)\n    * Do We Speak A Dead Language? (1996)\n    * Check Your People (2000)\n    * Universal (2004)\n___________________________________\n EPs\n\n \"Rarities (2000)\n* Code Blue Coma (2000)\n* Eyes Shut Tight EP' (Live At CBGB's) (1997)\n* No More Freedom In A Cage (1996)\n* Live At Foundation's Forum (1995)\n* Generation Of Hope (With Shootyz Groove) (1995)\n* Downset EP' (1995)\n* Our Suffocation (Demo) (1994)\n_________________________________________\n Singles.\n\n*Split With Mindbug 7 (1999) <a href=\"https://www.last.fm/music/+noredirect/Downset.\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -146,10 +537,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 478,
+      "listeners": 479,
       "mbid": null,
       "name": "Downset.",
-      "playcount": 7877,
+      "playcount": 7895,
       "similar_artists": [],
       "tags": [
         "rapcore",
@@ -161,7 +552,7 @@
       "url": "https://www.last.fm/music/+noredirect/Downset."
     },
     "spotify": {
-      "followers": 435542,
+      "followers": 435847,
       "genres": [
         "sludge metal",
         "stoner metal",
@@ -200,6 +591,6 @@
   },
   "spotify_id": "1m0B9ak05G0jqDY4ACLhQu",
   "spotify_url": "https://open.spotify.com/artist/1m0B9ak05G0jqDY4ACLhQu",
-  "updated_at": "2025-07-05T17:09:05.941418",
+  "updated_at": "2025-07-08T10:05:38.137214",
   "wikipedia_url": null
 }

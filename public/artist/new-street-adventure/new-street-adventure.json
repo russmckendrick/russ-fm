@@ -6,7 +6,7 @@
   "created_at": "2025-07-05T14:36:05.234544",
   "discogs_id": "3269242",
   "discogs_url": "https://www.discogs.com/artist/3269242",
-  "followers": 3539,
+  "followers": 3543,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -19,7 +19,7 @@
     "melodic",
     "organ"
   ],
-  "id": null,
+  "id": "new-street-adventure-1751722567",
   "images": [
     {
       "height": 2000,
@@ -85,9 +85,9 @@
   "lastfm_mbid": "9b13fc38-9f94-4742-aaf9-2edfff029d1e",
   "lastfm_url": "https://www.last.fm/music/New+Street+Adventure",
   "local_images": {
-    "hi-res": "public/artist/new-street-adventure/new-street-adventure-hi-res.jpg",
-    "medium": "public/artist/new-street-adventure/new-street-adventure-medium.jpg",
-    "small": "public/artist/new-street-adventure/new-street-adventure-small.jpg"
+    "hi-res": "../public/artist/new-street-adventure/new-street-adventure-hi-res.jpg",
+    "medium": "../public/artist/new-street-adventure/new-street-adventure-medium.jpg",
+    "small": "../public/artist/new-street-adventure/new-street-adventure-small.jpg"
   },
   "name": "New Street Adventure",
   "popularity": 19,
@@ -104,9 +104,22 @@
       "url": "https://music.apple.com/gb/artist/new-street-adventure/428811329"
     },
     "discogs": {
-      "id": 3269242,
-      "original_name": "New Street Adventure",
-      "role": ""
+      "cover_image": "",
+      "id": "3269242",
+      "images": [],
+      "members": [],
+      "name": "New Street Adventure",
+      "namevariations": [],
+      "profile": "",
+      "raw_data": {
+        "id": "3269242",
+        "note": "Failed to fetch data automatically",
+        "resource_url": "https://api.discogs.com/artists/3269242"
+      },
+      "resource_url": "https://api.discogs.com/artists/3269242",
+      "thumb": "",
+      "url": "https://www.discogs.com/artist/3269242",
+      "urls": []
     },
     "lastfm": {
       "bio_content": "New Street Adventure was an English band led by Nick Corbin.\n\nThe band comprised Nick Corbin (lead vocals and guitar), Billy Farr (lead guitar), Ashley Hayden (bass guitar), Charlie Myers (keys and synth), Ollie Futcher (Drums), Carmy Love and Emma Noble (backing vocals). \n\nThe band released their debut album in 2014.  <a href=\"https://www.last.fm/music/New+Street+Adventure\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -137,11 +150,32 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 3186,
+      "listeners": 3190,
       "mbid": "9b13fc38-9f94-4742-aaf9-2edfff029d1e",
       "name": "New Street Adventure",
-      "playcount": 35087,
-      "similar_artists": [],
+      "playcount": 35111,
+      "similar_artists": [
+        {
+          "name": "Men of North Country",
+          "url": "https://www.last.fm/music/Men+of+North+Country"
+        },
+        {
+          "name": "Stone Foundation",
+          "url": "https://www.last.fm/music/Stone+Foundation"
+        },
+        {
+          "name": "The Broken Vinyl Club",
+          "url": "https://www.last.fm/music/The+Broken+Vinyl+Club"
+        },
+        {
+          "name": "Dc Fontana",
+          "url": "https://www.last.fm/music/Dc+Fontana"
+        },
+        {
+          "name": "The Spitfires",
+          "url": "https://www.last.fm/music/The+Spitfires"
+        }
+      ],
       "tags": [
         "mod",
         "soul",
@@ -152,7 +186,7 @@
       "url": "https://www.last.fm/music/New+Street+Adventure"
     },
     "spotify": {
-      "followers": 3539,
+      "followers": 3543,
       "genres": [
         "acid jazz",
         "northern soul",
@@ -183,6 +217,6 @@
   },
   "spotify_id": "6JEgSTui49GrTS57INox42",
   "spotify_url": "https://open.spotify.com/artist/6JEgSTui49GrTS57INox42",
-  "updated_at": "2025-07-05T14:36:07.149013",
+  "updated_at": "2025-07-08T09:48:44.096990",
   "wikipedia_url": null
 }

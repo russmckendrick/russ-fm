@@ -1,9 +1,12 @@
 """Artist data orchestrator for coordinating API calls."""
 
 import logging
-from typing import Dict, Any, Optional, List
+import re
+import difflib
+from typing import Dict, Any, Optional, List, Tuple
 from datetime import datetime
 from pathlib import Path
+from dataclasses import dataclass
 
 from ..models import Artist, Image
 from ..models.enrichment import ArtistAppleMusicData, ArtistSpotifyData, ArtistLastFmData
@@ -17,6 +20,124 @@ from .database import DatabaseManager
 from .serializers import ArtistSerializer
 
 
+@dataclass
+class ReleaseMatch:
+    """Represents a matched release between services."""
+    discogs_title: str
+    service_title: str
+    match_score: float
+    match_type: str  # 'exact', 'fuzzy', 'partial'
+
+
+class ReleaseVerifier:
+    """Verifies artist matches by comparing releases."""
+    
+    @staticmethod
+    def normalize_title(title: str) -> str:
+        """Normalize album title for comparison."""
+        # Remove common suffixes
+        title = re.sub(r'\s*\([^)]*\)\s*$', '', title)  # Remove (Deluxe Edition), etc.
+        title = re.sub(r'\s*\[[^\]]*\]\s*$', '', title)  # Remove [Remastered], etc.
+        
+        # Remove special characters but keep spaces
+        title = re.sub(r'[^\w\s]', '', title)
+        
+        # Normalize whitespace and case
+        title = ' '.join(title.split()).lower()
+        
+        # Remove common words that cause mismatches
+        skip_words = {'the', 'a', 'an', 'and', '&', 'remastered', 'deluxe', 'edition', 
+                      'expanded', 'anniversary', 'reissue', 'bonus', 'tracks', 'disc'}
+        words = [w for w in title.split() if w not in skip_words]
+        
+        return ' '.join(words)
+    
+    @staticmethod
+    def match_releases(discogs_releases: List[str], service_releases: List[str]) -> List[ReleaseMatch]:
+        """Match releases between Discogs and a service."""
+        matches = []
+        
+        # Normalize all titles
+        normalized_discogs = {ReleaseVerifier.normalize_title(r): r for r in discogs_releases}
+        normalized_service = {ReleaseVerifier.normalize_title(r): r for r in service_releases}
+        
+        # First pass: exact matches
+        for norm_discogs, orig_discogs in normalized_discogs.items():
+            if norm_discogs in normalized_service:
+                matches.append(ReleaseMatch(
+                    discogs_title=orig_discogs,
+                    service_title=normalized_service[norm_discogs],
+                    match_score=1.0,
+                    match_type='exact'
+                ))
+        
+        # Second pass: fuzzy matches for unmatched releases
+        unmatched_discogs = {k: v for k, v in normalized_discogs.items() 
+                           if not any(m.discogs_title == v for m in matches)}
+        unmatched_service = {k: v for k, v in normalized_service.items() 
+                           if not any(m.service_title == v for m in matches)}
+        
+        for norm_discogs, orig_discogs in unmatched_discogs.items():
+            best_match = None
+            best_score = 0.0
+            
+            for norm_service, orig_service in unmatched_service.items():
+                # Calculate similarity
+                score = difflib.SequenceMatcher(None, norm_discogs, norm_service).ratio()
+                
+                # Boost score if key words match
+                discogs_words = set(norm_discogs.split())
+                service_words = set(norm_service.split())
+                if discogs_words and service_words:
+                    word_overlap = len(discogs_words & service_words) / min(len(discogs_words), len(service_words))
+                    score = (score + word_overlap) / 2
+                
+                if score > best_score and score > 0.7:  # 70% threshold
+                    best_score = score
+                    best_match = orig_service
+            
+            if best_match:
+                matches.append(ReleaseMatch(
+                    discogs_title=orig_discogs,
+                    service_title=best_match,
+                    match_score=best_score,
+                    match_type='fuzzy'
+                ))
+        
+        return matches
+    
+    @staticmethod
+    def calculate_confidence(matches: List[ReleaseMatch], total_discogs: int) -> Tuple[float, str]:
+        """Calculate confidence score based on release matches."""
+        if total_discogs == 0:
+            return 0.0, "NO_RELEASES"
+        
+        match_percentage = len(matches) / total_discogs
+        
+        # Calculate weighted score based on match quality
+        if matches:
+            avg_match_score = sum(m.match_score for m in matches) / len(matches)
+            confidence_score = match_percentage * avg_match_score
+        else:
+            confidence_score = 0.0
+        
+        # Determine confidence level
+        if match_percentage >= 0.5 and len(matches) >= 2:
+            confidence = "HIGH"
+        elif match_percentage >= 0.3 or len(matches) >= 1:
+            confidence = "MEDIUM"
+        else:
+            confidence = "LOW"
+        
+        # Special cases
+        if len(matches) >= 5:
+            confidence = "HIGH"  # Many matches = high confidence
+        elif total_discogs == 1 and len(matches) == 1 and matches[0].match_score > 0.9:
+            confidence = "HIGH"  # Single perfect match
+        
+        return confidence_score, confidence
+
+
 class ArtistDataOrchestrator:
     """Orchestrates artist data collection from multiple music services."""
     
@@ -26,6 +147,7 @@ class ArtistDataOrchestrator:
         self.services = {}
         self.interactive_mode = False
         self.custom_image = None
+        self.preferred_image_source = None
         
         # Initialize image manager for artists with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -94,6 +216,16 @@ class ArtistDataOrchestrator:
     def set_custom_image(self, image_url: str):
         """Set a custom image URL to override the default artist image."""
         self.custom_image = image_url
+    
+    def set_preferred_image_source(self, source: str):
+        """Set preferred image source priority."""
+        valid_sources = ['apple_music', 'spotify', 'discogs', 'v1']
+        if source.lower() in valid_sources:
+            self.preferred_image_source = source.lower()
+            self.logger.info(f"Set preferred image source to: {source}")
+        else:
+            self.logger.warning(f"Invalid image source '{source}'. Valid sources: {valid_sources}")
+            self.preferred_image_source = None
     
     def get_artist_by_name(self, artist_name: str, force_refresh: bool = False, existing_artist: Optional[Artist] = None) -> Optional[Artist]:
         """Get comprehensive artist information by name."""
@@ -536,13 +668,88 @@ class ArtistDataOrchestrator:
             self.logger.warning(f"🖼️ ❌ Failed to download artist images for {artist.name}: {str(e)}")
     
     def _extract_artist_image_sources(self, artist: Artist) -> List[Dict[str, Any]]:
-        """Extract artist image sources in priority order: Apple Music (no /Music[digits]/) > Spotify > Discogs."""
+        """Extract artist image sources with configurable priority order."""
         sources = []
         
         self.logger.info(f"🔍 Extracting image sources for artist: {artist.name}")
         self.logger.info(f"📊 Available raw_data keys: {list(artist.raw_data.keys())}")
         
-        # Priority 1: Apple Music (but skip URLs with /Music[digits]/ pattern)
+        # Check for preferred source override
+        if self.preferred_image_source:
+            self.logger.info(f"🎯 Using preferred image source: {self.preferred_image_source}")
+            
+            # Try preferred source first
+            preferred_source = self._extract_source_by_type(artist, self.preferred_image_source)
+            if preferred_source:
+                sources.append(preferred_source)
+            
+            # Add fallback sources in default order (excluding the preferred one)
+            default_order = ['apple_music', 'spotify', 'discogs']
+            for source_type in default_order:
+                if source_type != self.preferred_image_source:
+                    fallback_source = self._extract_source_by_type(artist, source_type)
+                    if fallback_source:
+                        sources.append(fallback_source)
+        else:
+            # Default priority order: Apple Music > Spotify > Discogs
+            for source_type in ['apple_music', 'spotify', 'discogs']:
+                source = self._extract_source_by_type(artist, source_type)
+                if source:
+                    sources.append(source)
+        
+        self.logger.info(f"🏁 Final image sources priority order: {[s['type'] for s in sources]}")
+        return sources
+    
+    def _extract_source_by_type(self, artist: Artist, source_type: str) -> Optional[Dict[str, Any]]:
+        """Extract a specific source type."""
+        if source_type == 'v1':
+            # Handle v1 site images
+            return self._extract_v1_source(artist)
+        elif source_type == 'apple_music':
+            return self._extract_apple_music_source(artist)
+        elif source_type == 'spotify':
+            return self._extract_spotify_source(artist)
+        elif source_type == 'discogs':
+            return self._extract_discogs_source(artist)
+        return None
+    
+    def _extract_v1_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
+        """Extract v1 site image source."""
+        try:
+            from .v1_site_helper import V1SiteHelper
+            
+            self.logger.info(f"🌐 Searching v1.russ.fm for artist images...")
+            artist_images = V1SiteHelper.find_artist_images(artist.name)
+            
+            if artist_images:
+                # Get the first matching artist image
+                artist_key = list(artist_images.keys())[0]
+                v1_image_url = artist_images[artist_key]
+                
+                self.logger.info(f"🌐 ✅ Found artist in v1 index: {artist_key}")
+                self.logger.info(f"🌐 ✅ Using v1.russ.fm image: {v1_image_url}")
+                
+                v1_image = {
+                    "url": v1_image_url,
+                    "width": 2000,  # Assume high quality
+                    "height": 2000,
+                    "type": "v1_artist"
+                }
+                
+                return {
+                    "type": "v1",
+                    "images": [v1_image]
+                }
+            else:
+                self.logger.info(f"🌐 ❌ Artist '{artist.name}' not found in v1.russ.fm index")
+                
+        except Exception as e:
+            self.logger.error(f"🌐 ❌ Error accessing v1.russ.fm data: {str(e)}")
+        
+        return None
+    
+    def _extract_apple_music_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
+        """Extract Apple Music image source (filtering out /Music[digits]/ URLs)."""
         if "apple_music" in artist.raw_data:
             apple_data = artist.raw_data["apple_music"]
             self.logger.info(f"🍎 Apple Music data found. Type: {type(apple_data)}")
@@ -550,45 +757,39 @@ class ArtistDataOrchestrator:
             # Handle both object attributes and dictionary keys
             artwork_url = None
             if hasattr(apple_data, "artwork_url"):
-                # Object with attributes
                 artwork_url = apple_data.artwork_url
-                self.logger.info(f"🍎 Found artwork_url as object attribute")
             elif isinstance(apple_data, dict) and "artwork_url" in apple_data:
-                # Dictionary with keys
                 artwork_url = apple_data["artwork_url"]
-                self.logger.info(f"🍎 Found artwork_url as dictionary key")
             
             self.logger.info(f"🍎 Apple Music artwork_url: {artwork_url}")
             
             if artwork_url:
-                # Filter out images with /Music[digits]/ pattern in the URL
+                # Filter out images with /Music[digits]/ pattern
                 import re
-                
-                # Skip images with /Music[digits]/ pattern (e.g., Music124, Music115)
-                # But keep AMCArtistImages and other patterns
                 if re.search(r'/Music\d+/', artwork_url):
                     self.logger.info(f"🍎 ❌ FILTERED OUT Apple Music URL (contains /Music[digits]/): {artwork_url}")
-                else:
-                    self.logger.info(f"🍎 ✅ KEEPING Apple Music URL: {artwork_url}")
-                    # Convert single artwork_url to images array format for consistency
-                    apple_image = {
-                        "url": artwork_url,
-                        "width": 2000,  # Apple Music artworks are typically 2000x2000
-                        "height": 2000,
-                        "type": "apple_music_artist"
-                    }
-                    
-                    sources.append({
-                        "type": "apple_music",
-                        "images": [apple_image]  # Wrap single image in array
-                    })
-                    self.logger.info(f"🍎 ✅ Added Apple Music source to priority list")
+                    return None
+                
+                self.logger.info(f"🍎 ✅ KEEPING Apple Music URL: {artwork_url}")
+                apple_image = {
+                    "url": artwork_url,
+                    "width": 2000,
+                    "height": 2000,
+                    "type": "apple_music_artist"
+                }
+                
+                return {
+                    "type": "apple_music",
+                    "images": [apple_image]
+                }
             else:
                 self.logger.info(f"🍎 ❌ Apple Music artwork_url is empty or not found")
         else:
             self.logger.info(f"🍎 ❌ No Apple Music data found in raw_data")
-        
-        # Priority 2: Spotify
+        return None
+    
+    def _extract_spotify_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
+        """Extract Spotify image source."""
         if "spotify" in artist.raw_data:
             spotify_data = artist.raw_data["spotify"]
             self.logger.info(f"🎵 Spotify data found. Type: {type(spotify_data)}")
@@ -606,17 +807,18 @@ class ArtistDataOrchestrator:
             
             if spotify_images:
                 self.logger.info(f"🎵 ✅ Spotify images found: {len(spotify_images)} images")
-                sources.append({
+                return {
                     "type": "spotify",
                     "images": spotify_images
-                })
-                self.logger.info(f"🎵 ✅ Added Spotify source to priority list")
+                }
             else:
                 self.logger.info(f"🎵 ❌ Spotify data has no images")
         else:
             self.logger.info(f"🎵 ❌ No Spotify data found in raw_data")
-        
-        # Priority 3: Discogs (fallback - use largest available)
+        return None
+    
+    def _extract_discogs_source(self, artist: Artist) -> Optional[Dict[str, Any]]:
+        """Extract Discogs image source."""
         if "discogs" in artist.raw_data:
             discogs_data = artist.raw_data["discogs"]
             self.logger.info(f"💿 Discogs data found. Type: {type(discogs_data)}")
@@ -624,44 +826,34 @@ class ArtistDataOrchestrator:
             # Handle both object attributes and dictionary keys
             discogs_images = None
             if hasattr(discogs_data, "images") and discogs_data.images:
-                # Object with attributes
                 discogs_images = discogs_data.images
-                self.logger.info(f"💿 Found images as object attribute")
             elif isinstance(discogs_data, dict) and "images" in discogs_data and discogs_data["images"]:
-                # Dictionary with keys
                 discogs_images = discogs_data["images"]
-                self.logger.info(f"💿 Found images as dictionary key")
             
             if discogs_images:
                 self.logger.info(f"💿 ✅ Discogs images found: {len(discogs_images)} images")
                 
                 # Sort Discogs images by size (largest first) if size info is available
                 if discogs_images and isinstance(discogs_images[0], dict):
-                    # Try to sort by width/height if available
                     try:
                         discogs_images = sorted(
-                            discogs_images, 
-                            key=lambda x: (x.get('width', 0) * x.get('height', 0)), 
+                            discogs_images,
+                            key=lambda x: (x.get("width", 0) * x.get("height", 0)),
                             reverse=True
                         )
                         self.logger.info(f"💿 ✅ Sorted Discogs images by size")
-                    except (TypeError, KeyError):
-                        # If sorting fails, just use the images as-is
+                    except (KeyError, TypeError, ValueError):
                         self.logger.info(f"💿 ⚠️ Could not sort Discogs images, using as-is")
-                        pass
                 
-                sources.append({
+                return {
                     "type": "discogs",
                     "images": discogs_images
-                })
-                self.logger.info(f"💿 ✅ Added Discogs source to priority list")
+                }
             else:
                 self.logger.info(f"💿 ❌ Discogs data has no images")
         else:
             self.logger.info(f"💿 ❌ No Discogs data found in raw_data")
-        
-        self.logger.info(f"🏁 Final image sources priority order: {[s['type'] for s in sources]}")
-        return sources
+        return None
     
     def _interactive_select_artist_match(self, service_name: str, search_results: Dict[str, Any], target_artist: str) -> Optional[Dict[str, Any]]:
         """Interactive selection of best artist match from search results."""
@@ -866,6 +1058,124 @@ class ArtistDataOrchestrator:
             except (ValueError, click.Abort):
                 console.print("[red]Invalid input. Please enter a number.[/red]")
                 return None
+    
+    def get_artist_releases_from_db(self, discogs_artist_id: str) -> List[str]:
+        """Get all known releases for an artist from the database."""
+        if not discogs_artist_id:
+            return []
+        
+        try:
+            # Query releases table for this artist
+            query = """
+                SELECT DISTINCT title 
+                FROM releases 
+                WHERE artists LIKE ? 
+                ORDER BY title
+            """
+            
+            cursor = self.db_manager.conn.cursor()
+            cursor.execute(query, [f'%"discogs_id": "{discogs_artist_id}"%'])
+            releases = [row[0] for row in cursor.fetchall()]
+            
+            self.logger.info(f"Found {len(releases)} releases for artist {discogs_artist_id}")
+            return releases
+            
+        except Exception as e:
+            self.logger.error(f"Error getting releases for artist {discogs_artist_id}: {e}")
+            return []
+    
+    def verify_artist_with_releases(self, artist: Artist, service_name: str, service_releases: List[str]) -> Dict[str, Any]:
+        """Verify an artist by comparing their releases with service releases."""
+        if not artist.discogs_id:
+            return {
+                'matches': [],
+                'confidence_score': 0.0,
+                'confidence_level': 'LOW',
+                'error': 'No Discogs ID available'
+            }
+        
+        # Get known releases from database
+        known_releases = self.get_artist_releases_from_db(artist.discogs_id)
+        
+        if not known_releases:
+            return {
+                'matches': [],
+                'confidence_score': 0.0,
+                'confidence_level': 'LOW',
+                'error': 'No releases found in database'
+            }
+        
+        # Match releases
+        matches = ReleaseVerifier.match_releases(known_releases, service_releases)
+        confidence_score, confidence_level = ReleaseVerifier.calculate_confidence(matches, len(known_releases))
+        
+        self.logger.info(f"Release verification for {artist.name} on {service_name}: "
+                        f"{len(matches)}/{len(known_releases)} matches, "
+                        f"confidence: {confidence_level} ({confidence_score:.2f})")
+        
+        return {
+            'matches': matches,
+            'confidence_score': confidence_score,
+            'confidence_level': confidence_level,
+            'total_known_releases': len(known_releases),
+            'total_service_releases': len(service_releases),
+            'match_percentage': len(matches) / len(known_releases) if known_releases else 0
+        }
+    
+    def verify_apple_music_artist_with_releases(self, artist: Artist, apple_music_artist_id: str) -> Dict[str, Any]:
+        """Verify Apple Music artist by comparing releases."""
+        if "apple_music" not in self.services:
+            return {'error': 'Apple Music service not available'}
+        
+        try:
+            # Get Apple Music albums for this artist
+            apple_service = self.services["apple_music"]
+            albums = apple_service.get_artist_albums(apple_music_artist_id, limit=100)
+            
+            if not albums:
+                return {'error': 'No albums found on Apple Music'}
+            
+            # Extract album titles
+            album_titles = []
+            for album in albums:
+                attributes = album.get('attributes', {})
+                title = attributes.get('name', '')
+                if title:
+                    album_titles.append(title)
+            
+            self.logger.info(f"Found {len(album_titles)} albums on Apple Music for artist {apple_music_artist_id}")
+            
+            # Verify using releases
+            return self.verify_artist_with_releases(artist, "Apple Music", album_titles)
+            
+        except Exception as e:
+            self.logger.error(f"Error verifying Apple Music artist {apple_music_artist_id}: {e}")
+            return {'error': f'Apple Music verification failed: {str(e)}'}
+    
+    def verify_spotify_artist_with_releases(self, artist: Artist, spotify_artist_id: str) -> Dict[str, Any]:
+        """Verify Spotify artist by comparing releases."""
+        if "spotify" not in self.services:
+            return {'error': 'Spotify service not available'}
+        
+        try:
+            # Get Spotify albums for this artist
+            spotify_service = self.services["spotify"]
+            albums = spotify_service.get_artist_albums(spotify_artist_id, limit=50, include_groups='album')
+            
+            if not albums:
+                return {'error': 'No albums found on Spotify'}
+            
+            # Extract album titles
+            album_titles = [album.get('name', '') for album in albums if album.get('name')]
+            
+            self.logger.info(f"Found {len(album_titles)} albums on Spotify for artist {spotify_artist_id}")
+            
+            # Verify using releases
+            return self.verify_artist_with_releases(artist, "Spotify", album_titles)
+            
+        except Exception as e:
+            self.logger.error(f"Error verifying Spotify artist {spotify_artist_id}: {e}")
+            return {'error': f'Spotify verification failed: {str(e)}'}
 
 
 class ArtistImageManager(ImageManager):
@@ -972,6 +1282,16 @@ class ArtistImageManager(ImageManager):
                         custom_image = images[0]
                         if isinstance(custom_image, dict) and custom_image.get("url"):
                             sized_url = custom_image.get("url")
+                        else:
+                            continue
+                    else:
+                        continue
+                elif source_type == "v1":
+                    # Handle v1.russ.fm image source
+                    if images and len(images) > 0:
+                        v1_image = images[0]
+                        if isinstance(v1_image, dict) and v1_image.get("url"):
+                            sized_url = v1_image.get("url")
                         else:
                             continue
                     else:

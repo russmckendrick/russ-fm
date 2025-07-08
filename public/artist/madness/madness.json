@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:48:35.546691",
   "discogs_id": "10388",
-  "discogs_url": "https://www.discogs.com/artist/10388",
-  "followers": 838304,
+  "discogs_url": "https://www.discogs.com/artist/10388-Madness",
+  "followers": 838901,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -16,7 +16,7 @@
     "new wave",
     "seen live"
   ],
-  "id": null,
+  "id": "madness-1751723316",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/bTWSh3UmrfZ0_H0VVBfMdevkpENF1ijeNxqCsRK24Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "5f58803e-8c4c-478e-8b51-477f38483ede",
   "lastfm_url": "https://www.last.fm/music/Madness",
   "local_images": {
-    "hi-res": "public/artist/madness/madness-hi-res.jpg",
-    "medium": "public/artist/madness/madness-medium.jpg",
-    "small": "public/artist/madness/madness-small.jpg"
+    "hi-res": "../public/artist/madness/madness-hi-res.jpg",
+    "medium": "../public/artist/madness/madness-medium.jpg",
+    "small": "../public/artist/madness/madness-small.jpg"
   },
   "name": "Madness",
   "popularity": 64,
@@ -101,9 +113,404 @@
       "url": "https://music.apple.com/gb/artist/madness/362303"
     },
     "discogs": {
-      "id": 10388,
-      "original_name": "Madness",
-      "role": ""
+      "cover_image": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "10388",
+      "images": [
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/bTWSh3UmrfZ0_H0VVBfMdevkpENF1ijeNxqCsRK24Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/dpthtEDvpRBKLYSRgH1Z_iP8bi2IXwI5rtOmz_1LBSM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/dpthtEDvpRBKLYSRgH1Z_iP8bi2IXwI5rtOmz_1LBSM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/IDgl1tRffRidASO0AYhuBYePaCqwLm33cadWccRFdow/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 804,
+          "resource_url": "https://i.discogs.com/tVssaLE2s5oDlGR0YZTkWrFC6HzG7iD_PTuhZECyuvo/rs:fit/g:sm/q:90/h:804/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/tVssaLE2s5oDlGR0YZTkWrFC6HzG7iD_PTuhZECyuvo/rs:fit/g:sm/q:90/h:804/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/lSCqLo7buy2PvJSYBbgf8FgRJmnOhxWQEPnu60lMUsA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/vxDky1mWDY8FP_-bt94qPFRjY6IZAQCq_yQ5IVbbNw4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vxDky1mWDY8FP_-bt94qPFRjY6IZAQCq_yQ5IVbbNw4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/O89iij1nFQCcSbL6EoiA9piRbfffwzrnfoyYKFM4G8I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+          "width": 500
+        },
+        {
+          "height": 404,
+          "resource_url": "https://i.discogs.com/OMB_TvMg5drB62gND8swoKprjh4HmY3Nm5-geSt52Og/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OMB_TvMg5drB62gND8swoKprjh4HmY3Nm5-geSt52Og/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/_4A7CeoxnPqvbxq6KxX-sKmO78zray4BmzkdNEsL_dI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 305,
+          "resource_url": "https://i.discogs.com/1xv6Tij0IvTl88BNHsn3Q1IbeJLWjHDg9HXB64aB4mE/rs:fit/g:sm/q:90/h:305/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1xv6Tij0IvTl88BNHsn3Q1IbeJLWjHDg9HXB64aB4mE/rs:fit/g:sm/q:90/h:305/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/0Bwg13JHIG5EHBVOr0V61Deb2IJNKjdr9jCj6Mx6uD0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 461,
+          "resource_url": "https://i.discogs.com/3FG5V0Utz_t_Fxbit8zTBae5lr2kRpOP7qxx3LOg7Oo/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3FG5V0Utz_t_Fxbit8zTBae5lr2kRpOP7qxx3LOg7Oo/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kq2cK478hd7KwYd-klEq4sPuNEe-OQKBawVv5dpInDs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/uvYMrBJBiOeJ9VTk9imZIhilNgcaIzLD1gUpbpZRYdE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uvYMrBJBiOeJ9VTk9imZIhilNgcaIzLD1gUpbpZRYdE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wNY7I_lNBHOtAx1U_AwBgcX63m7cpqMhjqvY3M-RscY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 405,
+          "resource_url": "https://i.discogs.com/lEQOopaUltTnw4bumC7tvI71pBVKC8jeXAFU3zBnYYg/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lEQOopaUltTnw4bumC7tvI71pBVKC8jeXAFU3zBnYYg/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/PwPIG1quSvnOlcMhimxRxD6V4Sur9-7oqrcYABlivBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 474,
+          "resource_url": "https://i.discogs.com/6VwSxLisZ_tS-FqaYMJEAvVyyLM3Wv_LnjQdLqwPO34/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6VwSxLisZ_tS-FqaYMJEAvVyyLM3Wv_LnjQdLqwPO34/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/EO9Y1xNxUwfsPEfjs0-Xg6Fwu1fDIHc37RtBXUNmxsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/jBkxxQiLnHNGqvU_eeHJC25o7xWQubMNfRL_NxsNbK4/rs:fit/g:sm/q:90/h:300/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jBkxxQiLnHNGqvU_eeHJC25o7xWQubMNfRL_NxsNbK4/rs:fit/g:sm/q:90/h:300/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/8dEj_AsCMZA31j8f1v7BekxzpJ3H40f95JDrc8-8ayE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+          "width": 380
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/e7_E7PYsN5AWdB6FjFzpNoySrFK9ZTQODOA2cPa4oXw/rs:fit/g:sm/q:90/h:334/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e7_E7PYsN5AWdB6FjFzpNoySrFK9ZTQODOA2cPa4oXw/rs:fit/g:sm/q:90/h:334/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/0PdFQlLWOEK_9dslHG8KT4hZRTMQ-fu4u-ORZ__dN0Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+          "width": 482
+        },
+        {
+          "height": 235,
+          "resource_url": "https://i.discogs.com/iKHebNCizxHSASDxS29EI1-ZX2Ye_T6RhTJ503DuDJ0/rs:fit/g:sm/q:90/h:235/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/iKHebNCizxHSASDxS29EI1-ZX2Ye_T6RhTJ503DuDJ0/rs:fit/g:sm/q:90/h:235/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Zzv-Ro-tBM1HP2VvwA8BBKptDy0lWU7XfhXEp3tnb2c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+          "width": 358
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 39472,
+          "name": "Graham McPherson",
+          "resource_url": "https://api.discogs.com/artists/39472",
+          "thumbnail_url": "https://i.discogs.com/thF_Jg7oOnNTfKgvCuRXn3ZMcDl0sEnhii4esSgsxBM/rs:fit/g:sm/q:40/h:240/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5NDcy/LTE2NTc4OTI1OTkt/NjczMy5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 325384,
+          "name": "Lee \"Kix\" Thompson",
+          "resource_url": "https://api.discogs.com/artists/325384",
+          "thumbnail_url": "https://i.discogs.com/BVNyNSU3QblbAh8ZGL1P_oBvqhN7KVShWApQxjtsc9g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyNTM4/NC0xNjYzMzU5OTU0/LTgwMDQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 375427,
+          "name": "Mike Barson",
+          "resource_url": "https://api.discogs.com/artists/375427",
+          "thumbnail_url": "https://i.discogs.com/MMv8oS7ABAbcFUdOLfAS2HGgLXHs-I2A6f62FyJvfWY/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NTQy/Ny0xNjYzMzU3NDY5/LTcxMDQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 409296,
+          "name": "Mark Bedford",
+          "resource_url": "https://api.discogs.com/artists/409296",
+          "thumbnail_url": "https://i.discogs.com/THU1LMx47YVayAXssR6ZjNJJh9Lnur_jUAXiC52QtSQ/rs:fit/g:sm/q:40/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwOTI5/Ni0xNTE2OTMyNjkw/LTI5NzQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 411083,
+          "name": "Daniel M. Woodgate",
+          "resource_url": "https://api.discogs.com/artists/411083",
+          "thumbnail_url": "https://i.discogs.com/jWOVRWZJFAegaFT-ItoENZxFrxdSzxECXqH8C1EB3lk/rs:fit/g:sm/q:40/h:354/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/My0xNjYzMzU5MjE4/LTQ2NTEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 411084,
+          "name": "Chris Foreman",
+          "resource_url": "https://api.discogs.com/artists/411084",
+          "thumbnail_url": "https://i.discogs.com/vfMHu86lQ2_Bt2Rg7eaTP5EV1FwRcyzhDlEFQCKmMsc/rs:fit/g:sm/q:40/h:397/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/NC0xNjYzMzU4Nzc3/LTQxOTEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 411085,
+          "name": "Cathal J. Smyth",
+          "resource_url": "https://api.discogs.com/artists/411085",
+          "thumbnail_url": "https://i.discogs.com/5oXMVkqtizmVE5J-3D-M-QMl4tlPnJ1A3maddAdV548/rs:fit/g:sm/q:40/h:878/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/NS0xNjYzMzU4Mjgy/LTYzMTYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 624884,
+          "name": "John Hasler",
+          "resource_url": "https://api.discogs.com/artists/624884",
+          "thumbnail_url": "https://i.discogs.com/buGMbS_pWR_zVpvDSCKziMC5U91BjeCkLNPS1Jz2jyQ/rs:fit/g:sm/q:40/h:244/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNDg4/NC0xNDQwOTIyNDkw/LTUyNTMuanBlZw.jpeg"
+        }
+      ],
+      "name": "Madness",
+      "namevariations": [
+        "Madnes",
+        "Madness!",
+        "Magnnes",
+        "Medness",
+        "Mednis",
+        "マッドネス",
+        "疯狂"
+      ],
+      "profile": "Madness are an English ska, 2 tone & pop band from Camden Town, London, that formed in 1976. They briefly split between 1986 and 1992, during which time 4 members continued as [a294828]. Since the reunion they continue to perform with their most recognised line-up of 7 members. Madness was one of the most prominent bands of the late 1970s and early 1980s 2 Tone ska revival, and they achieved most of their success between 1979 and the mid 1980s. Both Madness and UB40 spent 214 weeks on the UK singles charts over the course of the decade, holding the record for most weeks spent by a group in the 1980s UK singles charts. However, Madness achieved this in a shorter time period (1980–1986).",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 275457,
+            "name": "The Hip Young Producers",
+            "resource_url": "https://api.discogs.com/artists/275457",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 294827,
+            "name": "Secret 7",
+            "resource_url": "https://api.discogs.com/artists/294827",
+            "thumbnail_url": "https://i.discogs.com/naj9GyG4X6aseCK09tUOBnQj22wYnktVMMeO1owfcyw/rs:fit/g:sm/q:40/h:249/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NDgy/Ny0xMTQ5MTg0NTc4/LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 10388,
+        "images": [
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/23Jt3vnrUO879VaIcEZFapNca1KITIOPNw7dWviB8cA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/bTWSh3UmrfZ0_H0VVBfMdevkpENF1ijeNxqCsRK24Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/dpthtEDvpRBKLYSRgH1Z_iP8bi2IXwI5rtOmz_1LBSM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/dpthtEDvpRBKLYSRgH1Z_iP8bi2IXwI5rtOmz_1LBSM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/IDgl1tRffRidASO0AYhuBYePaCqwLm33cadWccRFdow/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyMTUt/MjYzNi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 804,
+            "resource_url": "https://i.discogs.com/tVssaLE2s5oDlGR0YZTkWrFC6HzG7iD_PTuhZECyuvo/rs:fit/g:sm/q:90/h:804/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/tVssaLE2s5oDlGR0YZTkWrFC6HzG7iD_PTuhZECyuvo/rs:fit/g:sm/q:90/h:804/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/lSCqLo7buy2PvJSYBbgf8FgRJmnOhxWQEPnu60lMUsA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEyODE2MzI2ODQu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/vxDky1mWDY8FP_-bt94qPFRjY6IZAQCq_yQ5IVbbNw4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vxDky1mWDY8FP_-bt94qPFRjY6IZAQCq_yQ5IVbbNw4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/O89iij1nFQCcSbL6EoiA9piRbfffwzrnfoyYKFM4G8I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0Mjk3OTI5NjQt/ODUyMy5qcGVn.jpeg",
+            "width": 500
+          },
+          {
+            "height": 404,
+            "resource_url": "https://i.discogs.com/OMB_TvMg5drB62gND8swoKprjh4HmY3Nm5-geSt52Og/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/OMB_TvMg5drB62gND8swoKprjh4HmY3Nm5-geSt52Og/rs:fit/g:sm/q:90/h:404/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/_4A7CeoxnPqvbxq6KxX-sKmO78zray4BmzkdNEsL_dI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExMzAwOTM1ODAu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 305,
+            "resource_url": "https://i.discogs.com/1xv6Tij0IvTl88BNHsn3Q1IbeJLWjHDg9HXB64aB4mE/rs:fit/g:sm/q:90/h:305/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1xv6Tij0IvTl88BNHsn3Q1IbeJLWjHDg9HXB64aB4mE/rs:fit/g:sm/q:90/h:305/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/0Bwg13JHIG5EHBVOr0V61Deb2IJNKjdr9jCj6Mx6uD0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDYxOTg1ODkt/OTYzNC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 461,
+            "resource_url": "https://i.discogs.com/3FG5V0Utz_t_Fxbit8zTBae5lr2kRpOP7qxx3LOg7Oo/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3FG5V0Utz_t_Fxbit8zTBae5lr2kRpOP7qxx3LOg7Oo/rs:fit/g:sm/q:90/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/kq2cK478hd7KwYd-klEq4sPuNEe-OQKBawVv5dpInDs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE0NDAxMDU3NTYt/NjY2OS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/uvYMrBJBiOeJ9VTk9imZIhilNgcaIzLD1gUpbpZRYdE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uvYMrBJBiOeJ9VTk9imZIhilNgcaIzLD1gUpbpZRYdE/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/wNY7I_lNBHOtAx1U_AwBgcX63m7cpqMhjqvY3M-RscY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE1Mzg2NTkyNzEt/Nzk5NC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 405,
+            "resource_url": "https://i.discogs.com/lEQOopaUltTnw4bumC7tvI71pBVKC8jeXAFU3zBnYYg/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/lEQOopaUltTnw4bumC7tvI71pBVKC8jeXAFU3zBnYYg/rs:fit/g:sm/q:90/h:405/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/PwPIG1quSvnOlcMhimxRxD6V4Sur9-7oqrcYABlivBQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTExOTgyOTk4MDku/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 474,
+            "resource_url": "https://i.discogs.com/6VwSxLisZ_tS-FqaYMJEAvVyyLM3Wv_LnjQdLqwPO34/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6VwSxLisZ_tS-FqaYMJEAvVyyLM3Wv_LnjQdLqwPO34/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/EO9Y1xNxUwfsPEfjs0-Xg6Fwu1fDIHc37RtBXUNmxsU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MDg1OTE5NjIt/NTQwMC5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/jBkxxQiLnHNGqvU_eeHJC25o7xWQubMNfRL_NxsNbK4/rs:fit/g:sm/q:90/h:300/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jBkxxQiLnHNGqvU_eeHJC25o7xWQubMNfRL_NxsNbK4/rs:fit/g:sm/q:90/h:300/w:380/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/8dEj_AsCMZA31j8f1v7BekxzpJ3H40f95JDrc8-8ayE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MzYwMS5qcGVn.jpeg",
+            "width": 380
+          },
+          {
+            "height": 334,
+            "resource_url": "https://i.discogs.com/e7_E7PYsN5AWdB6FjFzpNoySrFK9ZTQODOA2cPa4oXw/rs:fit/g:sm/q:90/h:334/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/e7_E7PYsN5AWdB6FjFzpNoySrFK9ZTQODOA2cPa4oXw/rs:fit/g:sm/q:90/h:334/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/0PdFQlLWOEK_9dslHG8KT4hZRTMQ-fu4u-ORZ__dN0Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTEzOTM4NzQ1NTMt/MTg5OC5qcGVn.jpeg",
+            "width": 482
+          },
+          {
+            "height": 235,
+            "resource_url": "https://i.discogs.com/iKHebNCizxHSASDxS29EI1-ZX2Ye_T6RhTJ503DuDJ0/rs:fit/g:sm/q:90/h:235/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/iKHebNCizxHSASDxS29EI1-ZX2Ye_T6RhTJ503DuDJ0/rs:fit/g:sm/q:90/h:235/w:358/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Zzv-Ro-tBM1HP2VvwA8BBKptDy0lWU7XfhXEp3tnb2c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE2MTAxMzc2ODMt/NjcxMC5qcGVn.jpeg",
+            "width": 358
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 39472,
+            "name": "Graham McPherson",
+            "resource_url": "https://api.discogs.com/artists/39472",
+            "thumbnail_url": "https://i.discogs.com/thF_Jg7oOnNTfKgvCuRXn3ZMcDl0sEnhii4esSgsxBM/rs:fit/g:sm/q:40/h:240/w:360/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5NDcy/LTE2NTc4OTI1OTkt/NjczMy5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 325384,
+            "name": "Lee \"Kix\" Thompson",
+            "resource_url": "https://api.discogs.com/artists/325384",
+            "thumbnail_url": "https://i.discogs.com/BVNyNSU3QblbAh8ZGL1P_oBvqhN7KVShWApQxjtsc9g/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyNTM4/NC0xNjYzMzU5OTU0/LTgwMDQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 375427,
+            "name": "Mike Barson",
+            "resource_url": "https://api.discogs.com/artists/375427",
+            "thumbnail_url": "https://i.discogs.com/MMv8oS7ABAbcFUdOLfAS2HGgLXHs-I2A6f62FyJvfWY/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NTQy/Ny0xNjYzMzU3NDY5/LTcxMDQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 409296,
+            "name": "Mark Bedford",
+            "resource_url": "https://api.discogs.com/artists/409296",
+            "thumbnail_url": "https://i.discogs.com/THU1LMx47YVayAXssR6ZjNJJh9Lnur_jUAXiC52QtSQ/rs:fit/g:sm/q:40/h:702/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwOTI5/Ni0xNTE2OTMyNjkw/LTI5NzQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 411083,
+            "name": "Daniel M. Woodgate",
+            "resource_url": "https://api.discogs.com/artists/411083",
+            "thumbnail_url": "https://i.discogs.com/jWOVRWZJFAegaFT-ItoENZxFrxdSzxECXqH8C1EB3lk/rs:fit/g:sm/q:40/h:354/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/My0xNjYzMzU5MjE4/LTQ2NTEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 411084,
+            "name": "Chris Foreman",
+            "resource_url": "https://api.discogs.com/artists/411084",
+            "thumbnail_url": "https://i.discogs.com/vfMHu86lQ2_Bt2Rg7eaTP5EV1FwRcyzhDlEFQCKmMsc/rs:fit/g:sm/q:40/h:397/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/NC0xNjYzMzU4Nzc3/LTQxOTEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 411085,
+            "name": "Cathal J. Smyth",
+            "resource_url": "https://api.discogs.com/artists/411085",
+            "thumbnail_url": "https://i.discogs.com/5oXMVkqtizmVE5J-3D-M-QMl4tlPnJ1A3maddAdV548/rs:fit/g:sm/q:40/h:878/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxMTA4/NS0xNjYzMzU4Mjgy/LTYzMTYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 624884,
+            "name": "John Hasler",
+            "resource_url": "https://api.discogs.com/artists/624884",
+            "thumbnail_url": "https://i.discogs.com/buGMbS_pWR_zVpvDSCKziMC5U91BjeCkLNPS1Jz2jyQ/rs:fit/g:sm/q:40/h:244/w:199/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNDg4/NC0xNDQwOTIyNDkw/LTUyNTMuanBlZw.jpeg"
+          }
+        ],
+        "name": "Madness",
+        "namevariations": [
+          "Madnes",
+          "Madness!",
+          "Magnnes",
+          "Medness",
+          "Mednis",
+          "マッドネス",
+          "疯狂"
+        ],
+        "profile": "Madness are an English ska, 2 tone & pop band from Camden Town, London, that formed in 1976. They briefly split between 1986 and 1992, during which time 4 members continued as [a294828]. Since the reunion they continue to perform with their most recognised line-up of 7 members. Madness was one of the most prominent bands of the late 1970s and early 1980s 2 Tone ska revival, and they achieved most of their success between 1979 and the mid 1980s. Both Madness and UB40 spent 214 weeks on the UK singles charts over the course of the decade, holding the record for most weeks spent by a group in the 1980s UK singles charts. However, Madness achieved this in a shorter time period (1980–1986).",
+        "releases_url": "https://api.discogs.com/artists/10388/releases",
+        "resource_url": "https://api.discogs.com/artists/10388",
+        "uri": "https://www.discogs.com/artist/10388-Madness",
+        "urls": [
+          "https://www.madness.co.uk/",
+          "https://www.facebook.com/madnessofficial",
+          "https://www.imdb.com/name/nm3994606/",
+          "https://instagram.com/madnessband/",
+          "https://myspace.com/madnessofficial",
+          "https://x.com/MadnessNews",
+          "https://en.wikipedia.org/wiki/Madness_(band)",
+          "https://www.youtube.com/user/MadtubeMTV"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/10388",
+      "thumb": "https://i.discogs.com/bTWSh3UmrfZ0_H0VVBfMdevkpENF1ijeNxqCsRK24Kc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzg4/LTE3MDM2ODkyMDgt/MzQ3MC5wbmc.jpeg",
+      "url": "https://www.discogs.com/artist/10388-Madness",
+      "urls": [
+        "https://www.madness.co.uk/",
+        "https://www.facebook.com/madnessofficial",
+        "https://www.imdb.com/name/nm3994606/",
+        "https://instagram.com/madnessband/",
+        "https://myspace.com/madnessofficial",
+        "https://x.com/MadnessNews",
+        "https://en.wikipedia.org/wiki/Madness_(band)",
+        "https://www.youtube.com/user/MadtubeMTV"
+      ]
     },
     "lastfm": {
       "bio_content": "At least four artists exist by this name on last.fm:\n\n1) a British band \n2) an American rapper\n3) a Brazilian death metal group\n4) a Mongolian rock band\n\n1) Madness are a British pop and ska band from Camden Town, London, England that was formed in 1976. As of 2012, the group has continued to perform with their most recognised lineup of seven members, although that has varied slightly over the years. Known for their cheeky humour and musical eclecticism, the band members called a \"dysfunctional family\", the group was one of most prominent artists in the late-70s 2 Tone ska movement. As their career progressed, Madness moved closer toward conventional pop music and has become one of the most successful British bands of all time.\n\nThe guys achieved most of their success in the 80s, often picking up new wave fans who enjoyed the band's eclectic sound. Madness, in fact, spent exactly 214 weeks on the U.K. singles charts from 1980-89, thereby sharing the record for most weeks spent by a group in said charts with UB40. Examples of some of their most popular songs include 1979's \"One Step Beyond\", 1982's \"Our House\", and 1984's \"Keep Moving\".\n\nFormation\nThe core of the band formed as \"The North London Invaders\" in 1976. This outfit included Mike Barson (Monsieur Barso) on keyboards and vocals, Chris Foreman (Chrissy Boy) on guitar and Lee Thompson (Kix) on saxophone and vocals. They later recruited John Hasler on drums and Cathal Smyth (better known as Chas Smash) on bass guitar. Later in the year, they were joined by lead vocalist \"Dikron\". This six-piece lineup lasted until part way through 1977, when Graham McPherson (better known as Suggs) took over the lead vocals after seeing the band perform in a friend's garden. Smyth, who was poor on bass guitar, was replaced by Gavin Rogers, an acquaintance of Barson. McPherson was kicked out of the band for too often choosing to watch football instead of rehearsing. As well, Thompson left the band after Barson criticised his saxophone playing.\n\nBy 1978, the band had allowed McPherson to return, after filling in temporarily for Hasler (who had taken over vocals when McPherson was removed). Thompson returned after patching things up with Barson, and Daniel Woodgate (Woody) and Mark Bedford (Bedders) also joined the band, on drums and bass guitar respectively. After briefly changing their name to Morris and the Minors, the band renamed itself as Madness; paying homage to one of their favourite songs by ska/reggae artist Prince Buster. The band remained a sextet until late 1979, when Chas Smash rejoined and officially became the seventh member of Madness as a backing vocalist and trumpet player.\n\nEarly success\nIn 1979, the band recorded the Lee Thompson composition \"The Prince\". The song, like the band's name, paid homage to their idol, Prince Buster. The song was released through 2 Tone Records, the label of The Specials founder Jerry Dammers. The song was a surprise hit, peaking in the UK music charts at #16. A performance of \"The Prince\" on popular UK music show Top of the Pops helped Madness gain public recognition. Madness then toured with fellow 2 Tone bands The Specials and The Selecter, before recording their debut album, One Step Beyond..., which was released by Stiff Records. The album included a re-recording of \"The Prince\" and the band's second and third singles: \"One Step Beyond\" and \"My Girl\". The title song was a cover of the B-side of the 1960s Prince Buster hit \"Al Capone\". One Step Beyond... stayed in the British charts for over a year, peaking at #2. After the release of \"My Girl\", the band felt that they had exhausted the material from One Step Beyond..., and did not want to release any more singles from the album. However, Dave Robinson, head of Stiff Records, disagreed. Eventually, a compromise was made, and the band decided to release an EP featuring one album track and three new tracks. The result was the Work Rest and Play EP, which was headlined by the song \"Night Boat to Cairo\", from the One Step Beyond album. The EP reached #6 in the UK singles chart.\n\nThe following year, the band's second album, Absolutely reached #2 in the UK album charts. Absolutely spawned some of the band's biggest hits, most notably \"Baggy Trousers\"; which peaked at #3 in the UK singles chart. \"Embarrassment\" reached #4 in the charts, and the instrumental song \"Return of the Los Palmas 7\" climbed to #7.\n\nChange of direction\nIn 1981, the band's third studio album, 7 reached #5 in the UK album charts and contained three hit singles. In an article in 1979, Chris Foreman explained that the band's music would move with the times, and change styles as time goes on. This was shown to be the case, as unlike the two ska-filled, fast-paced albums that preceded it, 7 was somewhat of a change in direction. Suggs' vocal performance changed significantly, and his strong Cockney accent from the previous albums had been watered down. The album strayed from the ska-influenced sound of One Step Beyond... and Absolutely, and moved towards a more conventional and mature pop sound; a trend that continued with subsequent albums. Near the end of 1981, Madness released one of their most recognised songs; a remake of Labi Siffre's 1971 hit \"It Must Be Love\". The song climbed to #4 in the UK and entered the US charts at #33. In 1982, Madness released their only #1 hit to date, \"House of Fun\"; as well as their fourth studio album The Rise & Fall. The album contained their most internationally successful single to date, \"Our House\", which reached #5 in the UK music charts and # 7 in the US charts. In 1983, their single \"Wings of a Dove\" peaked at #2 in the UK charts. Their following album, Keep Moving, peaked at #6 in the UK album charts, and several singles from that album reached the top 20 in the UK music charts.\n\nDecline and breakup\nIn October 1983, the band's founder, keyboardist and prominent songwriter Mike Barson decided to leave the band, partly because he had relocated to Amsterdam, Netherlands. He officially left the band in June 1984, following the release of \"One Better Day\". The six remaining members left Stiff Records and formed their own label, Zarjazz Records, which was sub-label of Virgin Records. In 1985, the label released the band's sixth album, Mad Not Mad. Barson's keyboard parts were filled by synthesisers, and in later years, frontman Suggs described the production as \"polished turd\". The album reached #16 in the UK charts, which was the band's lowest position on the album charts to date. Despite the poor chart showing, the album was listed as #55 in NME's All Time 100 Albums. The singles for the album fared even worse, with \"Yesterday's Men\" peaking at #18 in the UK charts. The subsequent singles, \"Uncle Sam\" and \"Sweetest Girl\", failed to make the top 20, which was a first for Madness singles.\n\nThe band then attempted to record a new album, and 11 demo tracks were recorded. However, musical differences arose between band members, and in September 1986, the band announced that they were to split. Barson rejoined the band for a farewell single, \"(Waiting For) The Ghost Train\", but did not appear in the music video. The band officially split following the release of the single, which reached a high of #18 in the UK. In 1988, four members of the band — Suggs, Chas Smash, Lee Thompson and Chris Foreman — created a new band, using the name The Madness. After one self-titled album and two singles that failed to make the the top 40, the band split.\n\nReunions and The Dangermen\nIn early 1992, \"It Must Be Love\" was re-released and reached #6 in the UK singles chart. Following that, the singles compilation Divine Madness was released and peaked at #1 in the album charts. Madness then announced plans for a reunion concert, Madstock!, which was held at Finsbury Park, London on August 8 and 9 of that year. The original lineup reunited, performing together for the first time since Mike Barson left the band in 1984. Over 75,000 fans attended the weekend festival, and during \"One Step Beyond\", the crowd danced so much they caused an earth tremor which measured over 4 on the richter scale. A subsequent live album was released, and the associated single, \"The Harder They Come\" (a cover of Jimmy Cliff's 1973 song) reached #44 in the UK.\n\nThe band continued to reunite for annual UK Christmas season tours and held three more Madstock! festivals; in 1994, 1996 and 1998. In 1999, Madness released their first studio album since 1986, entitled Wonderful. The album reached #17 in the UK album charts, and the lead single, \"Lovestruck\", gave the band their first new top 10 hit in the UK since 1983. Neither of the two subsequent singles from the album, \"Johnny The Horse\" and \"Drip Fed Fred\", entered the top 40 of the UK charts.\n\nFrom October 28, 2002 to August 16, 2003, a musical based on Madness songs, Our House, ran at the Cambridge Theatre in west London. Madness played a role in the executive production of the show, and Suggs played a role in the production for a period of time, playing the central character's father. It won an Olivier Award for best new musical of 2003, and the performance was released on DVD on November 1, 2004. There was also a previous musical based on Madness songs, One Step Beyond!, written by Alan Gilbey. The musical had a brief run at the Theatre Royal Stratford East in 1993.\n\nIn 2004, the band played a series of low-key concerts as The Dangermen, performing covers of classic reggae and ska songs. A lot of the songs were those played by the band when they were first forming, and the band performed the songs as a celebration of their 25 year anniversary. This led to the release of the album The Dangermen Sessions Vol. 1 in August 2005. However, during the sessions which produced the album, the band's guitarist Chris Foreman announced his departure. Foreman left the band in mid 2005, citing \"the petty, time consuming bollocks that goes on in the band\" in a statement announcing his decision to leave. The band completed the album without him, and on release, it peaked at #11 in the UK album charts, which was the band's highest studio album chart position in 21 years. Although two singles were released, neither was a major success in the UK. The more successful of the two, \"Shame & Scandal\", reached #38. Despite the poor chart showing, the single reached #12 in France.\n\nIn late 2006, this six remaining members of Madness began working on their first original album in seven years. However, for Madness' 2006 Christmas season tour, Foreman rejoined the band. In March 2007, the single \"Sorry\" was released from the band's upcoming album, peaking in the UK charts at #23. The single included a version featuring UK hip hop artists Sway DaSafo and Baby Blue. Both artists were included on the music video which accompanied the hip-hop version of the song, but not on the original music video. Both music videos were also without Chris Foreman, despite the fact that he was a band member at the time of release.\n\nThe new Madness song \"NW5 (I Would Give You Everything)\" and a re-recorded version of \"It Must Be Love\" were featured in the German film Neues vom Wixxer. The two songs were released in Germany as a double A-Side, and both of them were turned into music videos. While promoting \"Sorry\", Sway DaSafo confirmed in an interview with NME that he will perform in the recording of Madness' updated version of their song \"Baggy Trousers\", entitled \"Baggy Jeans\". The updated song will be featured on Madness' upcoming studio album, and also released as a single. DaSafo predicted the song will be a \"huge smash gaurenteed\", although the date of release is not yet known.\n\nLyrical themes\nAlthough Madness were seen by many as somewhat of a humorous band with catchy, bouncy songs, they sometimes tackled, what were at the time, controversial issues in their lyrics. \"Embarrassment\" (from the \"Absolutely\" album) was written by Lee Thompson, and reflected the unfolding turmoil following the news that his teenage sister had become pregnant and was carrying a black man's child. The band discussed animal testing in the song \"Tomorrow's Dream\". The band criticized the National Health Service in \"Mrs. Hutchinson\"; which told the story of a woman who, after several misdiagnoses and mistreatment, became terminally ill. The story was based on the experiences of Mike Barson's mother. Madness' final single prior to disbanding, \"(Waiting For) The Ghost Train\", commented on apartheid in South Africa.\n\nSkinhead controversy\nEarly in their career, Madness were linked to skinheads; members of a British working class subculture that the media often stereotyped as racist (although the clear majority of skinheads were anti-racist). Not only were Madness, along with other 2 Tone bands, popular with skinheads, but it was said that the band members themselves were associated with the subculture. The band's relationship with the skinheads varied at times. Mike Barson was particularly displeased with the band's skinhead following, often finding it disappointing that so many were present at performances. Prior to becoming a full member of the band, Chas Smash had been involved in fights with skinheads at performances. In one particular incident on November 18, 1979, Madness were supported by \"Red Beans and Rice\", who featured a black lead singer, and the band were prevented from completing the performance due to the racist chants from certain members of the skinhead filled audience. Suggs later came on stage to show his displeasure at their behaviour, but this didn't stop much of the audience from Nazi saluting at the end of the show.\n\nIn a 1979 NME interview, Madness member Chas Smash was quoted as saying \"We don't care if people are in the NF as long as they're having a good time.\" This added to speculation that Madness was a racist band supporting the fascist group National Front, although the band members denied those allegations. Numerous fans felt upset that Chas Smash's views were mispresented by the media, with yellow journalists just looking for a story in their eyes. Smash responded to the NME article in the song \"Don't Quote Me On That\". Eventually, band members denied their skinhead roots, which disappointed much of their skinhead fan base. The issue faded as the years went by and the far-right skinhead groups failed completely in winning converts, their particular fringe shrinking massively while in the meantime Madness' international popularity grew.\n\nAwards\nThe band's first notable musical award came in 1983 when they won an \"Ivor Novello Award\" for Best Song for the international hit \"Our House\". They received another \"Ivor Novello Award\" 17 years later for an \"Outstanding Song Collection\". In 2005, they were awarded the Mojo Magazine \"Hall Of Fame\" award, notably for being 'an artist's artist'. As of 2007, a campaign is taking place by fans of Madness for the band to be awarded a Brit award. Many fans and critics feel they have been overlooked over their past 30 years in the music industry.\n\nWebsite\nmadness.co.uk\n\n2) Madness is also the name of a hip-hop artist from Florida in the U.S. He has competed in many Grindtime Rap Battle events, and the rapper's work is featured on the release 'Fresh Coast Perishables Volume One' as well as in his own underground albums.\n\n3)  Madness are a Brazilian death metal band.\n\n4) Madness are a Mongolian  rock band. <a href=\"https://www.last.fm/music/Madness\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +541,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1176668,
+      "listeners": 1177436,
       "mbid": "5f58803e-8c4c-478e-8b51-477f38483ede",
       "name": "Madness",
-      "playcount": 20565612,
+      "playcount": 20584110,
       "similar_artists": [
         {
           "name": "The Specials",
@@ -170,7 +577,7 @@
       "url": "https://www.last.fm/music/Madness"
     },
     "spotify": {
-      "followers": 838304,
+      "followers": 838901,
       "genres": [
         "ska"
       ],
@@ -199,6 +606,6 @@
   },
   "spotify_id": "4AYkFtEBnNnGuoo8HaHErd",
   "spotify_url": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd",
-  "updated_at": "2025-07-05T14:48:36.410429",
+  "updated_at": "2025-07-08T09:24:13.039568",
   "wikipedia_url": null
 }

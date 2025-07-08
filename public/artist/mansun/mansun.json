@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:16:24.714213",
   "discogs_id": "18841",
-  "discogs_url": "https://www.discogs.com/artist/18841",
-  "followers": 73156,
+  "discogs_url": "https://www.discogs.com/artist/18841-Mansun",
+  "followers": 73183,
   "formed_date": null,
   "genres": [
     "Alternative",
@@ -17,7 +17,7 @@
     "rock",
     "british"
   ],
-  "id": null,
+  "id": "mansun-1751724989",
   "images": [
     {
       "height": 2000,
@@ -84,14 +84,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/y8AEfVkNyPhYPcNztG-7mX_Uhh8iCkS9xji0ftzsJLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "a8be3422-d905-42c9-90b6-90ee45e3e938",
   "lastfm_url": "https://www.last.fm/music/Mansun",
   "local_images": {
-    "hi-res": "public/artist/mansun/mansun-hi-res.jpg",
-    "medium": "public/artist/mansun/mansun-medium.jpg",
-    "small": "public/artist/mansun/mansun-small.jpg"
+    "hi-res": "../public/artist/mansun/mansun-hi-res.jpg",
+    "medium": "../public/artist/mansun/mansun-medium.jpg",
+    "small": "../public/artist/mansun/mansun-small.jpg"
   },
   "name": "Mansun",
   "popularity": 37,
@@ -108,9 +120,154 @@
       "url": "https://music.apple.com/gb/artist/mansun/14632478"
     },
     "discogs": {
-      "id": 18841,
-      "original_name": "Mansun",
-      "role": ""
+      "cover_image": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "18841",
+      "images": [
+        {
+          "height": 403,
+          "resource_url": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/y8AEfVkNyPhYPcNztG-7mX_Uhh8iCkS9xji0ftzsJLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+          "width": 580
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 272902,
+          "name": "Paul Draper",
+          "resource_url": "https://api.discogs.com/artists/272902",
+          "thumbnail_url": "https://i.discogs.com/p5DlyA-uqVBMcAKQSB7jF9VIiKgy2th7F0hXfAOFpBE/rs:fit/g:sm/q:40/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 320626,
+          "name": "Dominic Chad",
+          "resource_url": "https://api.discogs.com/artists/320626",
+          "thumbnail_url": "https://i.discogs.com/si4x1YlF0XPTNH_ABDWOmWWJ3MK45kFEJJ2dokiMhJk/rs:fit/g:sm/q:40/h:440/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYy/Ni0xMzgxNTI4NjY3/LTk3NzAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 320628,
+          "name": "Andie Rathbone",
+          "resource_url": "https://api.discogs.com/artists/320628",
+          "thumbnail_url": "https://i.discogs.com/K58sKU3gjwFVw9N26_WDE7FqtIR1io15r3sXfZoso-U/rs:fit/g:sm/q:40/h:438/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYy/OC0xMzgxNTI4NTQ5/LTQzNDUuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 320630,
+          "name": "Stove King",
+          "resource_url": "https://api.discogs.com/artists/320630",
+          "thumbnail_url": "https://i.discogs.com/Z7Hq6k57XsduEoFZHIazl1_ubxSP3ead2Wg3FprtZOQ/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYz/MC0xNTQwNDA1NzYz/LTg4NDMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 700958,
+          "name": "Julian Fenton",
+          "resource_url": "https://api.discogs.com/artists/700958",
+          "thumbnail_url": "https://i.discogs.com/wKSbH93D8i0aUbu64OhIqf6Sx3VWGioyqa-lQw8xO34/rs:fit/g:sm/q:40/h:832/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDk1/OC0xMzU3NjA0NTAw/LTM4MjMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1155556,
+          "name": "Carlton Hibbert",
+          "resource_url": "https://api.discogs.com/artists/1155556",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Mansun",
+      "namevariations": [
+        "Manson",
+        "Mansum",
+        "Mansun.",
+        "マンサン",
+        "曼森"
+      ],
+      "profile": "English indie rock band, formed in Chester in 1995.\r\n\r\nPaul Draper - Vocals, Guitar\r\nDominic Chad - Lead Guitar\r\nStove King - Bass\r\nAndie Rathbone - Drums\r\n\r\nOriginally named Manson after mass murderer Charles Manson.  When they signed to Parlophone, they were asked to change their name due to threatened legal action by the Charles Manson Estate, so they substituted the \"O\" for a \"U\", and one of the stories they put out was that they were named after the Verve song \"A Man Called Sun\".\r\n\r\nThe band was formed in 1995 by Paul Draper, Dominic Chad and Stove King, and (after some initial lineup turbulence) were joined in 1996 by Andie Rathbone. Their debut album '[m=9392]' charted at UK #1 on its week of release; with 1998's follow-up '[m=71885]' charting at #6. The third full-length '[m=213145]' didn't sell as well and the band disappeared into obscurity for a short while. In 2002, the band announced a small tour of the UK to test out new material destined for their fourth studio album. However the fourth album was never released and in May 2003, an announcement was made by Dominic Chad that the band were calling it a day due to \"artistic differences\".\r\n\r\nFans petitioned Parlophone records to release the fourth album and in 2004 Parlophone released '[m=71889]', a 3xCD set of unreleased recordings, home demos and live material. This was later followed up by '[m=323941]' in 2006.\r\n",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 18841,
+        "images": [
+          {
+            "height": 403,
+            "resource_url": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/tMDoXKJZ6aLVKi5pdDTXuqvZOnGStmph8lBveXbDImo/rs:fit/g:sm/q:90/h:403/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/y8AEfVkNyPhYPcNztG-7mX_Uhh8iCkS9xji0ftzsJLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+            "width": 580
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 272902,
+            "name": "Paul Draper",
+            "resource_url": "https://api.discogs.com/artists/272902",
+            "thumbnail_url": "https://i.discogs.com/p5DlyA-uqVBMcAKQSB7jF9VIiKgy2th7F0hXfAOFpBE/rs:fit/g:sm/q:40/h:194/w:259/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3Mjkw/Mi0xNTYzMzY0NjM5/LTIyMDcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 320626,
+            "name": "Dominic Chad",
+            "resource_url": "https://api.discogs.com/artists/320626",
+            "thumbnail_url": "https://i.discogs.com/si4x1YlF0XPTNH_ABDWOmWWJ3MK45kFEJJ2dokiMhJk/rs:fit/g:sm/q:40/h:440/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYy/Ni0xMzgxNTI4NjY3/LTk3NzAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 320628,
+            "name": "Andie Rathbone",
+            "resource_url": "https://api.discogs.com/artists/320628",
+            "thumbnail_url": "https://i.discogs.com/K58sKU3gjwFVw9N26_WDE7FqtIR1io15r3sXfZoso-U/rs:fit/g:sm/q:40/h:438/w:438/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYy/OC0xMzgxNTI4NTQ5/LTQzNDUuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 320630,
+            "name": "Stove King",
+            "resource_url": "https://api.discogs.com/artists/320630",
+            "thumbnail_url": "https://i.discogs.com/Z7Hq6k57XsduEoFZHIazl1_ubxSP3ead2Wg3FprtZOQ/rs:fit/g:sm/q:40/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyMDYz/MC0xNTQwNDA1NzYz/LTg4NDMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 700958,
+            "name": "Julian Fenton",
+            "resource_url": "https://api.discogs.com/artists/700958",
+            "thumbnail_url": "https://i.discogs.com/wKSbH93D8i0aUbu64OhIqf6Sx3VWGioyqa-lQw8xO34/rs:fit/g:sm/q:40/h:832/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcwMDk1/OC0xMzU3NjA0NTAw/LTM4MjMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1155556,
+            "name": "Carlton Hibbert",
+            "resource_url": "https://api.discogs.com/artists/1155556",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Mansun",
+        "namevariations": [
+          "Manson",
+          "Mansum",
+          "Mansun.",
+          "マンサン",
+          "曼森"
+        ],
+        "profile": "English indie rock band, formed in Chester in 1995.\r\n\r\nPaul Draper - Vocals, Guitar\r\nDominic Chad - Lead Guitar\r\nStove King - Bass\r\nAndie Rathbone - Drums\r\n\r\nOriginally named Manson after mass murderer Charles Manson.  When they signed to Parlophone, they were asked to change their name due to threatened legal action by the Charles Manson Estate, so they substituted the \"O\" for a \"U\", and one of the stories they put out was that they were named after the Verve song \"A Man Called Sun\".\r\n\r\nThe band was formed in 1995 by Paul Draper, Dominic Chad and Stove King, and (after some initial lineup turbulence) were joined in 1996 by Andie Rathbone. Their debut album '[m=9392]' charted at UK #1 on its week of release; with 1998's follow-up '[m=71885]' charting at #6. The third full-length '[m=213145]' didn't sell as well and the band disappeared into obscurity for a short while. In 2002, the band announced a small tour of the UK to test out new material destined for their fourth studio album. However the fourth album was never released and in May 2003, an announcement was made by Dominic Chad that the band were calling it a day due to \"artistic differences\".\r\n\r\nFans petitioned Parlophone records to release the fourth album and in 2004 Parlophone released '[m=71889]', a 3xCD set of unreleased recordings, home demos and live material. This was later followed up by '[m=323941]' in 2006.\r\n",
+        "releases_url": "https://api.discogs.com/artists/18841/releases",
+        "resource_url": "https://api.discogs.com/artists/18841",
+        "uri": "https://www.discogs.com/artist/18841-Mansun",
+        "urls": [
+          "http://mansun.co.uk/",
+          "http://en.wikipedia.org/wiki/Mansun"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/18841",
+      "thumb": "https://i.discogs.com/y8AEfVkNyPhYPcNztG-7mX_Uhh8iCkS9xji0ftzsJLk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4ODQx/LTEzMjYyMDYzNDQu/anBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/18841-Mansun",
+      "urls": [
+        "http://mansun.co.uk/",
+        "http://en.wikipedia.org/wiki/Mansun"
+      ]
     },
     "lastfm": {
       "bio_content": "Mansun was formed in Chester in 1995 by vocalist/rhythm guitarist Paul Draper, lead guitarist/ backing vocalist Dominic Chad, bassist Stove King and drummer Andie Rathbone. Arriving on the Britpop-dominated scene as a beat-driven art rock band, Mansun liberally mixed progressive rock, psychedelia, art pop, shoegaze, 80's noir and electronic elements; instead of singles releasing numerous multi-format EPs bookended by concept albums, often changing their style (and peculiar uniforms) each release. Along with this they were a renowned live act who often drastically rearranged their songs on tour: extending some into heavy jams, combining others into epic suites. Non-stop touring and devotion to their fans took them to many distant places bands rarely travelled.\n\nMansun came to prominence in the mid-nineties British indie/ guitar-rock resurgence, despite pursuing their own path away from any of the emerging scenes. Their first album Attack of the Grey Lantern could easily have been lost amidst the wave of new music in the British (Britpop) scene at that time if it had not been for the majestic Wide Open Space. The single charted at number 15 in the UK. The album then went on to reach no. 1 in the UK charts. Many of the tracks from the album and the associated EP's formed part of a grand concept piece. The band created a twisted town inhabited by bizarre characters such as \"Dark Mavis\", \"Stripper Vicar\", \"Flourella\" and \"Egg-Shaped Fred\".\n\nBetween their 1st and 2nd album they released the Closed for Business EP which departed from the themes that had run through all Mansun's previous releases, while musically very similar to the tracks from Attack of the Grey Lantern.\n\nThe band's second album Six was a radical departure from the first album. The tracks segued into each other creating two musical sections which were separated by an \"intermission\". Musically, the songs were far more produced in sound. The album artwork was also very complex containing many references to the cult (and often surreal) 60's TV show \"The Prisoner\". This perfectly suited the music which had the feeling of a nonsensical prog extravaganza. The artwork together with the way that the complex structure of the songs/time signatures blended into each other gave the impression of a very ambitious progressive rock concept album, though lyrically there is little to suggest that there is a central theme to the album.  While generally critically appreciated, Six was not a huge commercial success, though the album did reach no. 6 in the UK album charts.\n\nFor their third album, Little Kix, Mansun again changed direction. This time the songs were slickly produced (over-produced in some senses) with strong pop sensibility. The album was obviously an attempt by the band to produce an album with more maturity, but was perhaps too polished. Little Kix reached no. 12 in the UK charts.\n\nMansun disbanded in May 2003. This was a culmination of band tensions which had seen one of the original members leave (Stove King). Disappointed by the poor reception of their 3rd album, the band folded with little fanfare of their passing.\n\nDue to pressure from their fans, EMI released the posthumous \"4th album\", Kleptomania, which was a three CD set containing rough recordings of tracks slated to be on the unfinished 4th album, b-sides and rarities. <a href=\"https://www.last.fm/music/Mansun\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -141,10 +298,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 291223,
+      "listeners": 291260,
       "mbid": "a8be3422-d905-42c9-90b6-90ee45e3e938",
       "name": "Mansun",
-      "playcount": 4108020,
+      "playcount": 4109110,
       "similar_artists": [
         {
           "name": "Longpigs",
@@ -177,7 +334,7 @@
       "url": "https://www.last.fm/music/Mansun"
     },
     "spotify": {
-      "followers": 73156,
+      "followers": 73183,
       "genres": [
         "britpop",
         "madchester"
@@ -212,6 +369,6 @@
   },
   "spotify_id": "7rqRuB0wgUaStDN73PlV4U",
   "spotify_url": "https://open.spotify.com/artist/7rqRuB0wgUaStDN73PlV4U",
-  "updated_at": "2025-07-05T15:16:29.664306",
+  "updated_at": "2025-07-08T09:21:43.078277",
   "wikipedia_url": null
 }

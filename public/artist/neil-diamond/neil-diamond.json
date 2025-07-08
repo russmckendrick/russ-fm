@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:59:22.155222",
   "discogs_id": "271516",
-  "discogs_url": "https://www.discogs.com/artist/271516",
-  "followers": 3150453,
+  "discogs_url": "https://www.discogs.com/artist/271516-Neil-Diamond",
+  "followers": 3152124,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -16,7 +16,7 @@
     "soft rock",
     "rock"
   ],
-  "id": null,
+  "id": "neil-diamond-1751734771",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/-o5UCFoOBUQR_xvm7M35nFMMDMndgQZIdQ-ANJ6ZRg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "a42d3fd5-55de-4206-86c3-4fbb5404018f",
   "lastfm_url": "https://www.last.fm/music/Neil+Diamond",
   "local_images": {
-    "hi-res": "public/artist/neil-diamond/neil-diamond-hi-res.jpg",
-    "medium": "public/artist/neil-diamond/neil-diamond-medium.jpg",
-    "small": "public/artist/neil-diamond/neil-diamond-small.jpg"
+    "hi-res": "../public/artist/neil-diamond/neil-diamond-hi-res.jpg",
+    "medium": "../public/artist/neil-diamond/neil-diamond-medium.jpg",
+    "small": "../public/artist/neil-diamond/neil-diamond-small.jpg"
   },
   "name": "Neil Diamond",
   "popularity": 70,
@@ -101,9 +113,342 @@
       "url": "https://music.apple.com/gb/artist/neil-diamond/94935"
     },
     "discogs": {
-      "id": 271516,
-      "original_name": "Neil Diamond",
-      "role": ""
+      "cover_image": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "271516",
+      "images": [
+        {
+          "height": 732,
+          "resource_url": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-o5UCFoOBUQR_xvm7M35nFMMDMndgQZIdQ-ANJ6ZRg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 596,
+          "resource_url": "https://i.discogs.com/RoGa7kzz625-wgTWO_tHQ7qYuYTOYJmOa6wIC8qVKo4/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RoGa7kzz625-wgTWO_tHQ7qYuYTOYJmOa6wIC8qVKo4/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/x-AYY0CFcScjJtEM0TxRgB5QdAfLdk4pcGj82mzJ_t8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 636,
+          "resource_url": "https://i.discogs.com/DLADs87832r3AKtMACwZGoOeKpb2_gSzZDIFn6mHPi8/rs:fit/g:sm/q:90/h:636/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DLADs87832r3AKtMACwZGoOeKpb2_gSzZDIFn6mHPi8/rs:fit/g:sm/q:90/h:636/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/RbAKO5rppl3tTpm0HLFaizMyntLLEUnC3REWxgHw4gY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+          "width": 530
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/IinX_BGliyZXgB5Wouz22GofpQ8y-AsmS4IeeTCeKYw/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/IinX_BGliyZXgB5Wouz22GofpQ8y-AsmS4IeeTCeKYw/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/goUPfnO0tOvC0gWK_jDhn6wFax42o7SCZpGrynDxAI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+          "width": 300
+        },
+        {
+          "height": 476,
+          "resource_url": "https://i.discogs.com/N5eNBhR_OnsL8mFZ0BnDhTI7ify8VywfhKW2EJkuScE/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/N5eNBhR_OnsL8mFZ0BnDhTI7ify8VywfhKW2EJkuScE/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/E84YILQV68CfkjL5buEj25FyplcAsxaAkjCifAPkwTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 256,
+          "resource_url": "https://i.discogs.com/jwOygnsVGofkkVqbx02uZXkOdWoSNm0aVIpZhdvTbtQ/rs:fit/g:sm/q:90/h:256/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jwOygnsVGofkkVqbx02uZXkOdWoSNm0aVIpZhdvTbtQ/rs:fit/g:sm/q:90/h:256/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/RwYt5yNw3Dsm_2udpExQd4hv-yEJo5jRIl36SBWBl2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+          "width": 200
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/RKYkVqozpu1KDPEsweUZySn3nAN9oD6NZq3Dddc_bYg/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RKYkVqozpu1KDPEsweUZySn3nAN9oD6NZq3Dddc_bYg/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Ff6OQ4rbO9Z_tj_RNK5icrCPMe_IDoy4fO9ntrFz9T4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/J9Egr5XWBcpNf1YpJ6-dHs_Y-fhkWX2VWrGmrh2Lcwo/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/J9Egr5XWBcpNf1YpJ6-dHs_Y-fhkWX2VWrGmrh2Lcwo/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/32vqyW5fEhCwOcDwy1aVa-5-MTcxv-ISvRgPr46bh-M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+          "width": 427
+        },
+        {
+          "height": 598,
+          "resource_url": "https://i.discogs.com/C4w1McmI5meG70TC8sVhJfM3rf9jnEq5KIk_y2y83GQ/rs:fit/g:sm/q:90/h:598/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C4w1McmI5meG70TC8sVhJfM3rf9jnEq5KIk_y2y83GQ/rs:fit/g:sm/q:90/h:598/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3wsDWDO_d5PRMsN5NCwA3KX1EgHd41HIhrEUU7I3TjU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+          "width": 588
+        },
+        {
+          "height": 409,
+          "resource_url": "https://i.discogs.com/GZjkbzYqIwNdBQI99L3_mCop6T7sEcDoKHrjYP8NWiY/rs:fit/g:sm/q:90/h:409/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GZjkbzYqIwNdBQI99L3_mCop6T7sEcDoKHrjYP8NWiY/rs:fit/g:sm/q:90/h:409/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/N6l6LwxMFOHzjsYgv3ZNTJ4cgovCCtPpLeb20aFUCH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+          "width": 340
+        }
+      ],
+      "members": [],
+      "name": "Neil Diamond",
+      "namevariations": [
+        "D. Diamond",
+        "D. Nail",
+        "DIamond",
+        "Diamond",
+        "Diamond N",
+        "Diamond Neill",
+        "Diamond, Neil",
+        "Diamonds",
+        "Mr. Neil Diamond",
+        "N Diamond",
+        "N,. Diamond",
+        "N,Diamond",
+        "N. Christian",
+        "N. D.",
+        "N. DIamond",
+        "N. Daimond",
+        "N. Diamand",
+        "N. Diamomd",
+        "N. Diamon",
+        "N. Diamond",
+        "N. Diamonds",
+        "N. Diamont",
+        "N. Dimond",
+        "N. Dirmond",
+        "N. Siamond",
+        "N. ダイアモンド",
+        "N.D.",
+        "N.Diamond",
+        "N.L. Diamond",
+        "ND",
+        "ND (aka 'The Basher')",
+        "Neal Diamond",
+        "Nei Diamond",
+        "Neil",
+        "Neil Daimond",
+        "Neil Diamonds",
+        "Neil L. DIamond",
+        "Neil Leslie Diamond",
+        "Neill Diamond",
+        "Nel Diamond",
+        "Nell Diamond",
+        "Nell, Diamond",
+        "Niel Diamond",
+        "Niels Diamond",
+        "Tom Catalano",
+        "Даймонд",
+        "Даймънд",
+        "Диманд",
+        "Н. Даймонд",
+        "Нейл Даймонд",
+        "Нийл Даймънд",
+        "ニール • ダイヤモンド",
+        "ニール・ダイアモンド",
+        "ニール・ダイヤモンド",
+        "尼爾戴蒙",
+        "닐다이아몬드"
+      ],
+      "profile": "American singer-songwriter and occasional actor, born January 24, 1941 in Brooklyn, New York, USA. Father of [a=Jesse Diamond]. Inducted into the Songwriters Hall of Fame in 1984.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 7997147,
+            "name": "Mark Lewis (45)",
+            "resource_url": "https://api.discogs.com/artists/7997147",
+            "thumbnail_url": "https://i.discogs.com/x6epwoRGGtkDsI6yuRAlZbnbq74PizRRltKP5dbdswo/rs:fit/g:sm/q:40/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5OTcx/NDctMTY0ODEyNTUw/Ny05NjQ5LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 4369020,
+            "name": "Neil & Jack",
+            "resource_url": "https://api.discogs.com/artists/4369020",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 4858408,
+            "name": "Ten Broken Hearts",
+            "resource_url": "https://api.discogs.com/artists/4858408",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 271516,
+        "images": [
+          {
+            "height": 732,
+            "resource_url": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/LAmDLoQARckpktfPgrmW_l-ENZsEujpiDiacNhtPjJs/rs:fit/g:sm/q:90/h:732/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/-o5UCFoOBUQR_xvm7M35nFMMDMndgQZIdQ-ANJ6ZRg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 596,
+            "resource_url": "https://i.discogs.com/RoGa7kzz625-wgTWO_tHQ7qYuYTOYJmOa6wIC8qVKo4/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RoGa7kzz625-wgTWO_tHQ7qYuYTOYJmOa6wIC8qVKo4/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/x-AYY0CFcScjJtEM0TxRgB5QdAfLdk4pcGj82mzJ_t8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTMyNDMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 636,
+            "resource_url": "https://i.discogs.com/DLADs87832r3AKtMACwZGoOeKpb2_gSzZDIFn6mHPi8/rs:fit/g:sm/q:90/h:636/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DLADs87832r3AKtMACwZGoOeKpb2_gSzZDIFn6mHPi8/rs:fit/g:sm/q:90/h:636/w:530/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/RbAKO5rppl3tTpm0HLFaizMyntLLEUnC3REWxgHw4gY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4OTAuanBlZw.jpeg",
+            "width": 530
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/IinX_BGliyZXgB5Wouz22GofpQ8y-AsmS4IeeTCeKYw/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/IinX_BGliyZXgB5Wouz22GofpQ8y-AsmS4IeeTCeKYw/rs:fit/g:sm/q:90/h:450/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/goUPfnO0tOvC0gWK_jDhn6wFax42o7SCZpGrynDxAI0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY5/LTI2OTkuanBlZw.jpeg",
+            "width": 300
+          },
+          {
+            "height": 476,
+            "resource_url": "https://i.discogs.com/N5eNBhR_OnsL8mFZ0BnDhTI7ify8VywfhKW2EJkuScE/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/N5eNBhR_OnsL8mFZ0BnDhTI7ify8VywfhKW2EJkuScE/rs:fit/g:sm/q:90/h:476/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/E84YILQV68CfkjL5buEj25FyplcAsxaAkjCifAPkwTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzUxNjE2ODEz/LTY4MDQuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 256,
+            "resource_url": "https://i.discogs.com/jwOygnsVGofkkVqbx02uZXkOdWoSNm0aVIpZhdvTbtQ/rs:fit/g:sm/q:90/h:256/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jwOygnsVGofkkVqbx02uZXkOdWoSNm0aVIpZhdvTbtQ/rs:fit/g:sm/q:90/h:256/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/RwYt5yNw3Dsm_2udpExQd4hv-yEJo5jRIl36SBWBl2w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMTA5MjU3NTAx/LmpwZw.jpeg",
+            "width": 200
+          },
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/RKYkVqozpu1KDPEsweUZySn3nAN9oD6NZq3Dddc_bYg/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RKYkVqozpu1KDPEsweUZySn3nAN9oD6NZq3Dddc_bYg/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Ff6OQ4rbO9Z_tj_RNK5icrCPMe_IDoy4fO9ntrFz9T4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzQ3/LTE0MzAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/J9Egr5XWBcpNf1YpJ6-dHs_Y-fhkWX2VWrGmrh2Lcwo/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/J9Egr5XWBcpNf1YpJ6-dHs_Y-fhkWX2VWrGmrh2Lcwo/rs:fit/g:sm/q:90/h:600/w:427/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/32vqyW5fEhCwOcDwy1aVa-5-MTcxv-ISvRgPr46bh-M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzU4/LTIwMTIuanBlZw.jpeg",
+            "width": 427
+          },
+          {
+            "height": 598,
+            "resource_url": "https://i.discogs.com/C4w1McmI5meG70TC8sVhJfM3rf9jnEq5KIk_y2y83GQ/rs:fit/g:sm/q:90/h:598/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/C4w1McmI5meG70TC8sVhJfM3rf9jnEq5KIk_y2y83GQ/rs:fit/g:sm/q:90/h:598/w:588/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/3wsDWDO_d5PRMsN5NCwA3KX1EgHd41HIhrEUU7I3TjU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzY0/LTE3NjEuanBlZw.jpeg",
+            "width": 588
+          },
+          {
+            "height": 409,
+            "resource_url": "https://i.discogs.com/GZjkbzYqIwNdBQI99L3_mCop6T7sEcDoKHrjYP8NWiY/rs:fit/g:sm/q:90/h:409/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GZjkbzYqIwNdBQI99L3_mCop6T7sEcDoKHrjYP8NWiY/rs:fit/g:sm/q:90/h:409/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/N6l6LwxMFOHzjsYgv3ZNTJ4cgovCCtPpLeb20aFUCH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xMzcyMTAxNzc1/LTgxNjEuanBlZw.jpeg",
+            "width": 340
+          }
+        ],
+        "name": "Neil Diamond",
+        "namevariations": [
+          "D. Diamond",
+          "D. Nail",
+          "DIamond",
+          "Diamond",
+          "Diamond N",
+          "Diamond Neill",
+          "Diamond, Neil",
+          "Diamonds",
+          "Mr. Neil Diamond",
+          "N Diamond",
+          "N,. Diamond",
+          "N,Diamond",
+          "N. Christian",
+          "N. D.",
+          "N. DIamond",
+          "N. Daimond",
+          "N. Diamand",
+          "N. Diamomd",
+          "N. Diamon",
+          "N. Diamond",
+          "N. Diamonds",
+          "N. Diamont",
+          "N. Dimond",
+          "N. Dirmond",
+          "N. Siamond",
+          "N. ダイアモンド",
+          "N.D.",
+          "N.Diamond",
+          "N.L. Diamond",
+          "ND",
+          "ND (aka 'The Basher')",
+          "Neal Diamond",
+          "Nei Diamond",
+          "Neil",
+          "Neil Daimond",
+          "Neil Diamonds",
+          "Neil L. DIamond",
+          "Neil Leslie Diamond",
+          "Neill Diamond",
+          "Nel Diamond",
+          "Nell Diamond",
+          "Nell, Diamond",
+          "Niel Diamond",
+          "Niels Diamond",
+          "Tom Catalano",
+          "Даймонд",
+          "Даймънд",
+          "Диманд",
+          "Н. Даймонд",
+          "Нейл Даймонд",
+          "Нийл Даймънд",
+          "ニール • ダイヤモンド",
+          "ニール・ダイアモンド",
+          "ニール・ダイヤモンド",
+          "尼爾戴蒙",
+          "닐다이아몬드"
+        ],
+        "profile": "American singer-songwriter and occasional actor, born January 24, 1941 in Brooklyn, New York, USA. Father of [a=Jesse Diamond]. Inducted into the Songwriters Hall of Fame in 1984.",
+        "realname": "Neil Leslie Diamond",
+        "releases_url": "https://api.discogs.com/artists/271516/releases",
+        "resource_url": "https://api.discogs.com/artists/271516",
+        "uri": "https://www.discogs.com/artist/271516-Neil-Diamond",
+        "urls": [
+          "https://www.neildiamond.com/",
+          "https://en.wikipedia.org/wiki/Neil_Diamond",
+          "https://www.songhall.org/profile/Neil_Diamond",
+          "https://www.imdb.com/name/nm0004871/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/271516",
+      "thumb": "https://i.discogs.com/-o5UCFoOBUQR_xvm7M35nFMMDMndgQZIdQ-ANJ6ZRg4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTUx/Ni0xNjQyMzA1Mjg5/LTQ4MzEuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/271516-Neil-Diamond",
+      "urls": [
+        "https://www.neildiamond.com/",
+        "https://en.wikipedia.org/wiki/Neil_Diamond",
+        "https://www.songhall.org/profile/Neil_Diamond",
+        "https://www.imdb.com/name/nm0004871/"
+      ]
     },
     "lastfm": {
       "bio_content": "Neil Leslie Diamond (born January 24, 1941) is an American singer and songwriter, born in Brooklyn, NY.\n\nFrom the 1960s to the 1980s, Diamond was one of the more successful pop music performers, scoring a number of hits. As critic William Ruhlmann writes, \"as of 2001, he claimed worldwide record sales of 115 million copies, and as of 2002 he was ranked third, behind only Elton John and Barbra Streisand, on the list of the most successful adult contemporary artists in the history of the Billboard chart.\"[1] As of May 2005 he has sold 120 million records worldwide, including 48 million records in the U.S.[2]\n\nThough his record sales declined somewhat after the 1980s, Diamond continues to tour successfully, and maintains a very loyal following. Diamond's songs have been recorded by a vast array of performers from many different musical genres.\n\nDiamond was inducted into the Songwriters Hall of Fame in 1984, and then in 2000 was given its Sammy Cahn Lifetime Achievement Award. He was inducted into the Rock and Roll Hall of Fame in the early part of 2011.\n \nIn 2008 Neil Diamond scored his first ever Billboard number one album with \"Home Before Dark\", the album also became his first studio album to get to number one in the UK. <a href=\"https://www.last.fm/music/Neil+Diamond\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +479,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1416528,
+      "listeners": 1417949,
       "mbid": "a42d3fd5-55de-4206-86c3-4fbb5404018f",
       "name": "Neil Diamond",
-      "playcount": 16515088,
+      "playcount": 16525551,
       "similar_artists": [
         {
           "name": "Rod Stewart",
@@ -170,7 +515,7 @@
       "url": "https://www.last.fm/music/Neil+Diamond"
     },
     "spotify": {
-      "followers": 3150453,
+      "followers": 3152124,
       "genres": [],
       "id": "7mEIug7XUlQHikrFxjTWes",
       "images": [
@@ -197,6 +542,6 @@
   },
   "spotify_id": "7mEIug7XUlQHikrFxjTWes",
   "spotify_url": "https://open.spotify.com/artist/7mEIug7XUlQHikrFxjTWes",
-  "updated_at": "2025-07-05T17:59:31.959398",
+  "updated_at": "2025-07-08T10:12:29.758318",
   "wikipedia_url": null
 }

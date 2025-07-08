@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:36:32.992063",
   "discogs_id": "169498",
-  "discogs_url": "https://www.discogs.com/artist/169498",
-  "followers": 694450,
+  "discogs_url": "https://www.discogs.com/artist/169498-Steel-Pulse",
+  "followers": 694843,
   "formed_date": null,
   "genres": [
     "Reggae",
@@ -18,7 +18,7 @@
     "roots",
     "british"
   ],
-  "id": null,
+  "id": "steel-pulse-1751733404",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/0JgeC3fJuLBp_jEpo0rQmf3f0Sx4RN9bMdiQM50I0fw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "37367b2f-69e4-4df2-9e64-75ca6204764b",
   "lastfm_url": "https://www.last.fm/music/Steel+Pulse",
   "local_images": {
-    "hi-res": "public/artist/steel-pulse/steel-pulse-hi-res.jpg",
-    "medium": "public/artist/steel-pulse/steel-pulse-medium.jpg",
-    "small": "public/artist/steel-pulse/steel-pulse-small.jpg"
+    "hi-res": "../public/artist/steel-pulse/steel-pulse-hi-res.jpg",
+    "medium": "../public/artist/steel-pulse/steel-pulse-medium.jpg",
+    "small": "../public/artist/steel-pulse/steel-pulse-small.jpg"
   },
   "name": "Steel Pulse",
   "popularity": 61,
@@ -103,9 +115,354 @@
       "url": "https://music.apple.com/gb/artist/steel-pulse/77420"
     },
     "discogs": {
-      "id": 169498,
-      "original_name": "Steel Pulse",
-      "role": ""
+      "cover_image": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "169498",
+      "images": [
+        {
+          "height": 288,
+          "resource_url": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0JgeC3fJuLBp_jEpo0rQmf3f0Sx4RN9bMdiQM50I0fw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+          "width": 440
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/r_HuK5ICsvXiTBJncethOf2q5eQYqfRwpxWcr_tpDls/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/r_HuK5ICsvXiTBJncethOf2q5eQYqfRwpxWcr_tpDls/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0_ZdVKbmfqDB5PEcqgsDlMSqYOIFcjfP4-jGrG2KUbc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 304,
+          "resource_url": "https://i.discogs.com/doVXkoANGRsHb5EDgH6OirtmejhP4MyNSuxT6tadwk4/rs:fit/g:sm/q:90/h:304/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/doVXkoANGRsHb5EDgH6OirtmejhP4MyNSuxT6tadwk4/rs:fit/g:sm/q:90/h:304/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BSd89nVVfHmNu-5hBSWLc9kQnAtZetq2ALP0-DMg5J4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+          "width": 598
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/YqjIK1hZ46lL9YrM1T2NDX4zjezndd8VG-jHT9Ylumw/rs:fit/g:sm/q:90/h:500/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/YqjIK1hZ46lL9YrM1T2NDX4zjezndd8VG-jHT9Ylumw/rs:fit/g:sm/q:90/h:500/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/czbJ0eKec5qRFTyOGBdNNYO5dGAGeu3X5hUhh1PAkkc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+          "width": 413
+        },
+        {
+          "height": 369,
+          "resource_url": "https://i.discogs.com/O5m6QbePrVTlVXBrLr4F_Kw3gOl4M186YEVxAVqaPGM/rs:fit/g:sm/q:90/h:369/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/O5m6QbePrVTlVXBrLr4F_Kw3gOl4M186YEVxAVqaPGM/rs:fit/g:sm/q:90/h:369/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/3Lm2cnqmdjvHImzxue1UTxcSeoUNokBMxFt3eT6Rvac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+          "width": 456
+        },
+        {
+          "height": 474,
+          "resource_url": "https://i.discogs.com/g20FMrOOf4hZhgOrbRVlIKRLp5uA7rvMpfMbOE0AF-k/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/g20FMrOOf4hZhgOrbRVlIKRLp5uA7rvMpfMbOE0AF-k/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/SRPp-sFUiRbN31mac36GWMcPQIUbwQuE1AjDiE37aao/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 374,
+          "resource_url": "https://i.discogs.com/co4ZbAjA5vV23yp8S9xp0VhCSGgKHemJz8WcX724rQk/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/co4ZbAjA5vV23yp8S9xp0VhCSGgKHemJz8WcX724rQk/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/c-mN6_bmh8rsWBujUmF7XWqj9OJ8kvlboj8Wx8ufvbE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 379,
+          "resource_url": "https://i.discogs.com/EWiD1nB4dtI69X1AvAWm_OsWRGsDJhqX0kJBB_LYfXg/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EWiD1nB4dtI69X1AvAWm_OsWRGsDJhqX0kJBB_LYfXg/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/9BIIYNzO3dfhXUGYkMUeyT7G9ni7Jocd_-K7-yZQG6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 47280,
+          "name": "Mykaell Riley",
+          "resource_url": "https://api.discogs.com/artists/47280",
+          "thumbnail_url": "https://i.discogs.com/I3KmtdKXtaneVm-odo7PljPTXpV4XCSxLi2Dfi3vP8o/rs:fit/g:sm/q:40/h:264/w:222/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3Mjgw/LTE0NDQ1MTAzODkt/MTcwMy5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 145004,
+          "name": "Jerry Johnson",
+          "resource_url": "https://api.discogs.com/artists/145004",
+          "thumbnail_url": "https://i.discogs.com/2YNlcoDCukhtBVVevdPvQKt9ob5oDZosoLXdCj8cvag/rs:fit/g:sm/q:40/h:536/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NTAw/NC0xNjg1OTUwNjA2/LTE3NjQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 297928,
+          "name": "David Hinds",
+          "resource_url": "https://api.discogs.com/artists/297928",
+          "thumbnail_url": "https://i.discogs.com/VDF2_dxF_ch4U8WOJwPkcVR89IE0Av_3CK_yNkSK7c8/rs:fit/g:sm/q:40/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5Nzky/OC0xMzk4MjYzMDA3/LTMyNTAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 434444,
+          "name": "Errol Reid (2)",
+          "resource_url": "https://api.discogs.com/artists/434444",
+          "thumbnail_url": "https://i.discogs.com/nQT8wyk9Fpw8_vyYYFLIIIBaw51doLIPQolftrphqck/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQ0/NC0xMzYyOTg5OTUw/LTE0NzcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 449726,
+          "name": "Alphonso Martin",
+          "resource_url": "https://api.discogs.com/artists/449726",
+          "thumbnail_url": "https://i.discogs.com/3_uYG8gtLBNpvDUa1oTpH4CbVLY5ZCScvEHZ_uQXQ-Y/rs:fit/g:sm/q:40/h:210/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcy/Ni0xNDI2NDI5NTEy/LTQwMjUuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 449727,
+          "name": "Selwyn Brown",
+          "resource_url": "https://api.discogs.com/artists/449727",
+          "thumbnail_url": "https://i.discogs.com/ZZcUBoCPd7AiPPelt2AM_1RPGrMSx9M4vr1U2f4bQqw/rs:fit/g:sm/q:40/h:596/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcy/Ny0xNDM3NjU5NTE0/LTM4MzEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 449730,
+          "name": "Carlton Bryan",
+          "resource_url": "https://api.discogs.com/artists/449730",
+          "thumbnail_url": "https://i.discogs.com/x56OIYT44Hlp8w8ZBd7dysIMyCLZbxCT2y39LX0Kpcg/rs:fit/g:sm/q:40/h:467/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcz/MC0xNDY1MDAzODY0/LTIzNDYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 449731,
+          "name": "Alvin Ewen",
+          "resource_url": "https://api.discogs.com/artists/449731",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 460794,
+          "name": "Ronnie McQueen",
+          "resource_url": "https://api.discogs.com/artists/460794",
+          "thumbnail_url": "https://i.discogs.com/bEaYHUagDhfbkKeMYEG_1qwG8goj0YYY7mnj3zbtwyc/rs:fit/g:sm/q:40/h:216/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2MDc5/NC0xNDI2NDI5Mzg0/LTg1MjYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 630085,
+          "name": "Steve Nesbitt",
+          "resource_url": "https://api.discogs.com/artists/630085",
+          "thumbnail_url": "https://i.discogs.com/IiOJNq3mLtYDQi3oM-N59vUOFRi6fEMyu7YNR2sAFag/rs:fit/g:sm/q:40/h:568/w:383/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMDA4/NS0xNDI2NDI5MTE2/LTMzMjcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 926959,
+          "name": "Desdale Wilmot",
+          "resource_url": "https://api.discogs.com/artists/926959",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 2487006,
+          "name": "Basil Gabbidon (2)",
+          "resource_url": "https://api.discogs.com/artists/2487006",
+          "thumbnail_url": "https://i.discogs.com/7Hp7UvXlGxmwM7yKAS_8aewYRfUttuZMCKwv0yRaVrw/rs:fit/g:sm/q:40/h:229/w:212/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODcw/MDYtMTM2Mjc4MzA1/NS04NTk5LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Steel Pulse",
+      "namevariations": [
+        "Steel",
+        "Steel Pulce",
+        "Steele Pulse"
+      ],
+      "profile": "Roots reggae band, formed in 1975 at Handsworth Wood Boys School, in Birmingham, England, by David Hinds (lead vocals, guitar), Basil Gabbidon (lead guitar, vocals), and Ronald McQueen (bass).\r\n\r\nSteve \"Grizzly\" Nisbett. (15 March 1948 – 18 January 2018), was a drummer for the reggae group Steel Pulse from 1977 to 2001 (aged 69)﻿.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 169498,
+        "images": [
+          {
+            "height": 288,
+            "resource_url": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/-KcH59Eq7JPq3QgPQseinDDQGXiTJihCaabMiNyqK6U/rs:fit/g:sm/q:90/h:288/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0JgeC3fJuLBp_jEpo0rQmf3f0Sx4RN9bMdiQM50I0fw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+            "width": 440
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/r_HuK5ICsvXiTBJncethOf2q5eQYqfRwpxWcr_tpDls/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/r_HuK5ICsvXiTBJncethOf2q5eQYqfRwpxWcr_tpDls/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0_ZdVKbmfqDB5PEcqgsDlMSqYOIFcjfP4-jGrG2KUbc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzk4MjYzMDcw/LTE0NzMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 304,
+            "resource_url": "https://i.discogs.com/doVXkoANGRsHb5EDgH6OirtmejhP4MyNSuxT6tadwk4/rs:fit/g:sm/q:90/h:304/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/doVXkoANGRsHb5EDgH6OirtmejhP4MyNSuxT6tadwk4/rs:fit/g:sm/q:90/h:304/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/BSd89nVVfHmNu-5hBSWLc9kQnAtZetq2ALP0-DMg5J4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTQyMDQ1MTI1/LmpwZWc.jpeg",
+            "width": 598
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/YqjIK1hZ46lL9YrM1T2NDX4zjezndd8VG-jHT9Ylumw/rs:fit/g:sm/q:90/h:500/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/YqjIK1hZ46lL9YrM1T2NDX4zjezndd8VG-jHT9Ylumw/rs:fit/g:sm/q:90/h:500/w:413/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/czbJ0eKec5qRFTyOGBdNNYO5dGAGeu3X5hUhh1PAkkc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMzUwODI1MjIx/LTI3OTUuanBlZw.jpeg",
+            "width": 413
+          },
+          {
+            "height": 369,
+            "resource_url": "https://i.discogs.com/O5m6QbePrVTlVXBrLr4F_Kw3gOl4M186YEVxAVqaPGM/rs:fit/g:sm/q:90/h:369/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/O5m6QbePrVTlVXBrLr4F_Kw3gOl4M186YEVxAVqaPGM/rs:fit/g:sm/q:90/h:369/w:456/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/3Lm2cnqmdjvHImzxue1UTxcSeoUNokBMxFt3eT6Rvac/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MDk4/LTc1NTkuanBlZw.jpeg",
+            "width": 456
+          },
+          {
+            "height": 474,
+            "resource_url": "https://i.discogs.com/g20FMrOOf4hZhgOrbRVlIKRLp5uA7rvMpfMbOE0AF-k/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/g20FMrOOf4hZhgOrbRVlIKRLp5uA7rvMpfMbOE0AF-k/rs:fit/g:sm/q:90/h:474/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/SRPp-sFUiRbN31mac36GWMcPQIUbwQuE1AjDiE37aao/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTU5/LTE2NDMuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 374,
+            "resource_url": "https://i.discogs.com/co4ZbAjA5vV23yp8S9xp0VhCSGgKHemJz8WcX724rQk/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/co4ZbAjA5vV23yp8S9xp0VhCSGgKHemJz8WcX724rQk/rs:fit/g:sm/q:90/h:374/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/c-mN6_bmh8rsWBujUmF7XWqj9OJ8kvlboj8Wx8ufvbE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTcx/LTc1NjIuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 379,
+            "resource_url": "https://i.discogs.com/EWiD1nB4dtI69X1AvAWm_OsWRGsDJhqX0kJBB_LYfXg/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/EWiD1nB4dtI69X1AvAWm_OsWRGsDJhqX0kJBB_LYfXg/rs:fit/g:sm/q:90/h:379/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/9BIIYNzO3dfhXUGYkMUeyT7G9ni7Jocd_-K7-yZQG6c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xNDgwNDg4MTgy/LTYyMzQuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 47280,
+            "name": "Mykaell Riley",
+            "resource_url": "https://api.discogs.com/artists/47280",
+            "thumbnail_url": "https://i.discogs.com/I3KmtdKXtaneVm-odo7PljPTXpV4XCSxLi2Dfi3vP8o/rs:fit/g:sm/q:40/h:264/w:222/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3Mjgw/LTE0NDQ1MTAzODkt/MTcwMy5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 145004,
+            "name": "Jerry Johnson",
+            "resource_url": "https://api.discogs.com/artists/145004",
+            "thumbnail_url": "https://i.discogs.com/2YNlcoDCukhtBVVevdPvQKt9ob5oDZosoLXdCj8cvag/rs:fit/g:sm/q:40/h:536/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NTAw/NC0xNjg1OTUwNjA2/LTE3NjQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 297928,
+            "name": "David Hinds",
+            "resource_url": "https://api.discogs.com/artists/297928",
+            "thumbnail_url": "https://i.discogs.com/VDF2_dxF_ch4U8WOJwPkcVR89IE0Av_3CK_yNkSK7c8/rs:fit/g:sm/q:40/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5Nzky/OC0xMzk4MjYzMDA3/LTMyNTAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 434444,
+            "name": "Errol Reid (2)",
+            "resource_url": "https://api.discogs.com/artists/434444",
+            "thumbnail_url": "https://i.discogs.com/nQT8wyk9Fpw8_vyYYFLIIIBaw51doLIPQolftrphqck/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDQ0/NC0xMzYyOTg5OTUw/LTE0NzcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 449726,
+            "name": "Alphonso Martin",
+            "resource_url": "https://api.discogs.com/artists/449726",
+            "thumbnail_url": "https://i.discogs.com/3_uYG8gtLBNpvDUa1oTpH4CbVLY5ZCScvEHZ_uQXQ-Y/rs:fit/g:sm/q:40/h:210/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcy/Ni0xNDI2NDI5NTEy/LTQwMjUuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 449727,
+            "name": "Selwyn Brown",
+            "resource_url": "https://api.discogs.com/artists/449727",
+            "thumbnail_url": "https://i.discogs.com/ZZcUBoCPd7AiPPelt2AM_1RPGrMSx9M4vr1U2f4bQqw/rs:fit/g:sm/q:40/h:596/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcy/Ny0xNDM3NjU5NTE0/LTM4MzEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 449730,
+            "name": "Carlton Bryan",
+            "resource_url": "https://api.discogs.com/artists/449730",
+            "thumbnail_url": "https://i.discogs.com/x56OIYT44Hlp8w8ZBd7dysIMyCLZbxCT2y39LX0Kpcg/rs:fit/g:sm/q:40/h:467/w:311/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ0OTcz/MC0xNDY1MDAzODY0/LTIzNDYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 449731,
+            "name": "Alvin Ewen",
+            "resource_url": "https://api.discogs.com/artists/449731",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 460794,
+            "name": "Ronnie McQueen",
+            "resource_url": "https://api.discogs.com/artists/460794",
+            "thumbnail_url": "https://i.discogs.com/bEaYHUagDhfbkKeMYEG_1qwG8goj0YYY7mnj3zbtwyc/rs:fit/g:sm/q:40/h:216/w:152/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ2MDc5/NC0xNDI2NDI5Mzg0/LTg1MjYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 630085,
+            "name": "Steve Nesbitt",
+            "resource_url": "https://api.discogs.com/artists/630085",
+            "thumbnail_url": "https://i.discogs.com/IiOJNq3mLtYDQi3oM-N59vUOFRi6fEMyu7YNR2sAFag/rs:fit/g:sm/q:40/h:568/w:383/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzMDA4/NS0xNDI2NDI5MTE2/LTMzMjcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 926959,
+            "name": "Desdale Wilmot",
+            "resource_url": "https://api.discogs.com/artists/926959",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 2487006,
+            "name": "Basil Gabbidon (2)",
+            "resource_url": "https://api.discogs.com/artists/2487006",
+            "thumbnail_url": "https://i.discogs.com/7Hp7UvXlGxmwM7yKAS_8aewYRfUttuZMCKwv0yRaVrw/rs:fit/g:sm/q:40/h:229/w:212/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI0ODcw/MDYtMTM2Mjc4MzA1/NS04NTk5LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Steel Pulse",
+        "namevariations": [
+          "Steel",
+          "Steel Pulce",
+          "Steele Pulse"
+        ],
+        "profile": "Roots reggae band, formed in 1975 at Handsworth Wood Boys School, in Birmingham, England, by David Hinds (lead vocals, guitar), Basil Gabbidon (lead guitar, vocals), and Ronald McQueen (bass).\r\n\r\nSteve \"Grizzly\" Nisbett. (15 March 1948 – 18 January 2018), was a drummer for the reggae group Steel Pulse from 1977 to 2001 (aged 69)﻿.",
+        "releases_url": "https://api.discogs.com/artists/169498/releases",
+        "resource_url": "https://api.discogs.com/artists/169498",
+        "uri": "https://www.discogs.com/artist/169498-Steel-Pulse",
+        "urls": [
+          "https://steelpulse.com/",
+          "https://en.wikipedia.org/wiki/Steel_Pulse",
+          "https://www.imdb.com/name/nm3092555/",
+          "https://www.facebook.com/SteelPulse/",
+          "https://x.com/steelpulse",
+          "https://www.instagram.com/steelpulseofficial"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/169498",
+      "thumb": "https://i.discogs.com/0JgeC3fJuLBp_jEpo0rQmf3f0Sx4RN9bMdiQM50I0fw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTQ5/OC0xMTMxMjMyOTQ0/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/169498-Steel-Pulse",
+      "urls": [
+        "https://steelpulse.com/",
+        "https://en.wikipedia.org/wiki/Steel_Pulse",
+        "https://www.imdb.com/name/nm3092555/",
+        "https://www.facebook.com/SteelPulse/",
+        "https://x.com/steelpulse",
+        "https://www.instagram.com/steelpulseofficial"
+      ]
     },
     "lastfm": {
       "bio_content": "Steel Pulse is a British roots reggae band from Birmingham, England. They were the first non-Jamaican act to win the Grammy Award for Best Reggae Album for their 1986 album Babylon The Bandit.\n\nSteel Pulse originally formed at Handsworth Wood Boys School, Birmingham, and comprised David Hinds (lead vocals, guitar), Basil Gabbidon (lead guitar, vocals) and Ronnie McQueen (bass). \n\nHowever, it is Hinds who, as songwriter, has always been the engine behind Steel Pulse, from their early days establishing themselves in the Birmingham club scene onwards. Formed in 1975, their debut release, 'Kibudu, Mansetta And Abuku\" arrived on the small independent label Dip, and linked the plight of urban black youth with the image of a greater African homeland. They followed it with 'Nyah Love' for Anchor. \n\nSurprisingly, they were initially refused live dates in Caribbean venues in the Midlands because of their Rastafarian beliefs. Aligning themselves closely with the Rock Against Racism 1 organisation, they chose to tour instead with sympathetic elements of the punk movement, including the Stranglers, XTC etc.: \"Punks had a way of enjoying themselves - throw hordes at you, beer, spit at you, that kind of thing\". \n\nEventually they found a more natural home in support slots for Burning Spear, which brought them to the attention of Island Records. Their first release for Island was the 'Ku Klux Klan' 45 rpm, a considered tilt at the evils of racism, and one often accompanied by a visual parody of the sect on stage. \n\nBy this time their ranks had swelled to include Selwyn 'Bumbo' Brown (keyboards), Steve 'Grizzly' Nesbitt (drums), Fonso Martin (vocals, percussion) and Michael Riley (vocals). Handsworth Revolution was an accomplished long playing debut and one of the major landmarks in the evolution of British reggae. \n\nHowever, despite critical and moderate commercial success over three albums, the relationship with Island had soured by the advent of Caught You (released in the US as Reggae Fever). They switched to Elektra, and unveiled their most consistent collection of songs since their debut with True Democracy, distinguished by the Garveyeulogising 'Rally Around' cut. \n\nA further definitive set arrived in Earth Crisis. Unfortunately, Elektra chose to take a leaf out of Island's book in trying to coerce Steel Pulse into a more mainstream vein, asking them to emulate the pop-reggae stance of Eddy Grant. Babylon Bandit was consequently weakened, but did contain the anthemic 'Not King james Version', which was a powerful indictment on the omission of black people and history from certain versions of the Bible. \n\nTheir next move was id Hinds of Steel Pulse to MCA for State Of Emergency, which retained some of the synthesized dance elements of its predecessor. Though it was a significantly happier compromise, it still paled before any of their earlier albums. \n\nRastafari Centennial was recorded live at the Elysee Montmarte in Paris, and dedicated to the hundred year anniversary of the birth of Haile Selassie. It was the first recording since the defection of Fonso Martin, leaving the trio of David Hinds, Steve Nisbett and Selwyn Brown. \n\nWhile they still faced inverted snobbery at the hands of British reggae fans, in America their reputation was growing, becoming the first ever reggae band to appear on the Tonight television show. Their profile was raised further when, in 1992, Hinds challenged the New York Taxi and Limousine Commission in the Supreme High Court, asserting that their cab drivers discriminated against black people in general and Rastas in particular. \nDrummer Steve \"Grizzly\" Nisbett (15 March 1948 – 18 January 2018) died in 2018.\nThe band are still recording and touring. <a href=\"https://www.last.fm/music/Steel+Pulse\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +493,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 484117,
+      "listeners": 484975,
       "mbid": "37367b2f-69e4-4df2-9e64-75ca6204764b",
       "name": "Steel Pulse",
-      "playcount": 5182686,
+      "playcount": 5189084,
       "similar_artists": [
         {
           "name": "Black Uhuru",
@@ -172,7 +529,7 @@
       "url": "https://www.last.fm/music/Steel+Pulse"
     },
     "spotify": {
-      "followers": 694450,
+      "followers": 694843,
       "genres": [
         "reggae",
         "roots reggae",
@@ -205,6 +562,6 @@
   },
   "spotify_id": "6UL7BodGc5iVmQGlMwHR0g",
   "spotify_url": "https://open.spotify.com/artist/6UL7BodGc5iVmQGlMwHR0g",
-  "updated_at": "2025-07-05T17:36:44.564804",
+  "updated_at": "2025-07-08T10:09:28.290960",
   "wikipedia_url": null
 }

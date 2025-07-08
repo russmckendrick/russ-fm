@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:42:46.486750",
   "discogs_id": "1990650",
-  "discogs_url": "https://www.discogs.com/artist/1990650",
-  "followers": 2388,
+  "discogs_url": "https://www.discogs.com/artist/1990650-Antoine-Fafard",
+  "followers": 2391,
   "formed_date": null,
   "genres": [
     "Jazz",
@@ -19,7 +19,7 @@
     "instrumental",
     "canada"
   ],
-  "id": null,
+  "id": "antoine-fafard-1751722968",
   "images": [
     {
       "height": 2000,
@@ -80,14 +80,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/ekviVJIIw2IaM95XJywGp1WUTEhD4wgLZroqBmd3yek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "4884d070-a856-42c0-ba6b-ad2ea881cc07",
   "lastfm_url": "https://www.last.fm/music/Antoine+Fafard",
   "local_images": {
-    "hi-res": "public/artist/antoine-fafard/antoine-fafard-hi-res.jpg",
-    "medium": "public/artist/antoine-fafard/antoine-fafard-medium.jpg",
-    "small": "public/artist/antoine-fafard/antoine-fafard-small.jpg"
+    "hi-res": "../public/artist/antoine-fafard/antoine-fafard-hi-res.jpg",
+    "medium": "../public/artist/antoine-fafard/antoine-fafard-medium.jpg",
+    "small": "../public/artist/antoine-fafard/antoine-fafard-small.jpg"
   },
   "name": "Antoine Fafard",
   "popularity": 14,
@@ -104,9 +116,83 @@
       "url": "https://music.apple.com/gb/artist/antoine-fafard/450218310"
     },
     "discogs": {
-      "id": 1990650,
-      "original_name": "Antoine Fafard",
-      "role": ""
+      "cover_image": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1990650",
+      "images": [
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ekviVJIIw2IaM95XJywGp1WUTEhD4wgLZroqBmd3yek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+          "width": 300
+        }
+      ],
+      "members": [],
+      "name": "Antoine Fafard",
+      "namevariations": [
+        "A Fafard",
+        "A, Fafard",
+        "A. Fafard",
+        "Antoine",
+        "Antoine \"Spaced Out\" Fafard",
+        "Fafard"
+      ],
+      "profile": "Bassist born in Montreal, Canada, living in London, UK.\r\nAntoine Fafard is already known in the fusion world for his work as bass player in the Canadian band Spaced Out.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 1435190,
+            "name": "Spaced Out",
+            "resource_url": "https://api.discogs.com/artists/1435190",
+            "thumbnail_url": "https://i.discogs.com/uLDvcnPUwACwaQEB9s_OTutIOcXq79HR4U25kXdgL48/rs:fit/g:sm/q:40/h:375/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0MzUx/OTAtMTM2MzcxOTE4/NC02MTQxLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 11594105,
+            "name": "Alta Forma",
+            "resource_url": "https://api.discogs.com/artists/11594105",
+            "thumbnail_url": "https://i.discogs.com/ePEH-jLHqz64KkSCugwsLGtUAHeMZYCdrVr6L1C7EO4/rs:fit/g:sm/q:40/h:434/w:551/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNTk0/MTA1LTE2OTE1Mzgw/MTEtNDU3My5wbmc.jpeg"
+          }
+        ],
+        "id": 1990650,
+        "images": [
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/JvsOFgflqvHXJWWzjAURj0MhmAKceIErmEvWiSxwpyI/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ekviVJIIw2IaM95XJywGp1WUTEhD4wgLZroqBmd3yek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+            "width": 300
+          }
+        ],
+        "name": "Antoine Fafard",
+        "namevariations": [
+          "A Fafard",
+          "A, Fafard",
+          "A. Fafard",
+          "Antoine",
+          "Antoine \"Spaced Out\" Fafard",
+          "Fafard"
+        ],
+        "profile": "Bassist born in Montreal, Canada, living in London, UK.\r\nAntoine Fafard is already known in the fusion world for his work as bass player in the Canadian band Spaced Out.",
+        "releases_url": "https://api.discogs.com/artists/1990650/releases",
+        "resource_url": "https://api.discogs.com/artists/1990650",
+        "uri": "https://www.discogs.com/artist/1990650-Antoine-Fafard",
+        "urls": [
+          "http://www.antoinefafard.com/index.html"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1990650",
+      "thumb": "https://i.discogs.com/ekviVJIIw2IaM95XJywGp1WUTEhD4wgLZroqBmd3yek/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5OTA2/NTAtMTM1NTAzMjg3/Ny0xMTE3LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/1990650-Antoine-Fafard",
+      "urls": [
+        "http://www.antoinefafard.com/index.html"
+      ]
     },
     "lastfm": {
       "bio_content": "Antoine Fafard’s recording career began in his band Spaced Out. They released their first album in 2000. By 2008 Spaced Out had recorded five studio albums, one live album and two DVDs, and had performed on international stages including Nearfest, USA in 2002 and Crescendo, France in 2006.\n\nIn 2010, Antoine decided to begin recording under his own name, without the limitations of the band format. His first solo album, Solus Operandi, released in August 2011, features more than an hour of original instrumental music by Antoine working with a total of 13 collaborators, including world-class performers such as Dave Weckl, (Chick Corea, Mike Stern), guitarist Jerry De Villiers Jr. and drummer Magella Cormier. Solus Operandi was composed on electric fretless bass and classical guitar, after Antoine reacquainted himself with the guitar following many years focusing on the bass.\n\n2013 sees Antoine present a new solo album, Occultus Tramitis. Occultus Tramitis features a number of legendary musicians, including Terry Bozzio (Jeff Beck, Frank Zappa), Jerry Goodman (Mahavishnu Orchestra), Gavin Harrison (King Crimson, Porcupine Tree), Scott Henderson (Tribal Tech), Simon Phillips (Jeff Beck, Toto), Chad Wackerman (Allan Holdsworth, Frank Zappa) and Dave Weckl (Chick Corea, Mike Stern). The fretless bass and classical guitar were again central elements in Antoine’s composition process.\n <a href=\"https://www.last.fm/music/Antoine+Fafard\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -140,7 +226,7 @@
       "listeners": 1402,
       "mbid": "4884d070-a856-42c0-ba6b-ad2ea881cc07",
       "name": "Antoine Fafard",
-      "playcount": 24344,
+      "playcount": 24347,
       "similar_artists": [
         {
           "name": "MSM Schmidt",
@@ -173,7 +259,7 @@
       "url": "https://www.last.fm/music/Antoine+Fafard"
     },
     "spotify": {
-      "followers": 2388,
+      "followers": 2391,
       "genres": [
         "jazz fusion",
         "progressive rock",
@@ -205,6 +291,6 @@
   },
   "spotify_id": "1YOhfBQ05p8mgILwtvCiu7",
   "spotify_url": "https://open.spotify.com/artist/1YOhfBQ05p8mgILwtvCiu7",
-  "updated_at": "2025-07-05T14:42:48.712881",
+  "updated_at": "2025-07-08T09:49:48.561509",
   "wikipedia_url": null
 }

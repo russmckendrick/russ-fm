@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:45:19.166181",
   "discogs_id": "12094",
-  "discogs_url": "https://www.discogs.com/artist/12094",
-  "followers": 609073,
+  "discogs_url": "https://www.discogs.com/artist/12094-James",
+  "followers": 609537,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -17,7 +17,7 @@
     "seen live",
     "british"
   ],
-  "id": null,
+  "id": "james-1751723120",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/6ELUEWE5izoZnpYtwSBrdh8wVxDa-1c3Tu4koNLywEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "a2accb58-6099-4cb5-a3c8-f6332f364db5",
   "lastfm_url": "https://www.last.fm/music/James",
   "local_images": {
-    "hi-res": "public/artist/james/james-hi-res.jpg",
-    "medium": "public/artist/james/james-medium.jpg",
-    "small": "public/artist/james/james-small.jpg"
+    "hi-res": "../public/artist/james/james-hi-res.jpg",
+    "medium": "../public/artist/james/james-medium.jpg",
+    "small": "../public/artist/james/james-small.jpg"
   },
   "name": "James",
   "popularity": 63,
@@ -102,9 +114,402 @@
       "url": "https://music.apple.com/gb/artist/james/130451"
     },
     "discogs": {
-      "id": 12094,
-      "original_name": "James",
-      "role": ""
+      "cover_image": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "12094",
+      "images": [
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/6ELUEWE5izoZnpYtwSBrdh8wVxDa-1c3Tu4koNLywEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/ldc-wf95jR7dBxZpC8YBXT88RWauoVOYooZmKO-Aqhg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ldc-wf95jR7dBxZpC8YBXT88RWauoVOYooZmKO-Aqhg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9hxJTF-mwwAhuolDt08WrTCyiYhck4_961whMzBRzg0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/lwIVNkrZ6HyJ-O6ln5Z378nuU1aj29xcTQpNFMHn910/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/lwIVNkrZ6HyJ-O6ln5Z378nuU1aj29xcTQpNFMHn910/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+          "uri150": "https://i.discogs.com/md7LmHzYaIXFKJOVgEPDCKxSBOXYjQhchlKumVZpF_I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+          "width": 350
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/-cIjRLnlv_YqfsYiiSJRmJ3LnqepsYdIoVE0M44FuNk/rs:fit/g:sm/q:90/h:350/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-cIjRLnlv_YqfsYiiSJRmJ3LnqepsYdIoVE0M44FuNk/rs:fit/g:sm/q:90/h:350/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/wKKwUWMxu7vb5duFPPEiy4R35wnmbnVvf_IG4Kgl5UY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+          "width": 271
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/SOMvsAgzEytV404H4noxq36aw_4-FzqN1MwWyeUMGlo/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SOMvsAgzEytV404H4noxq36aw_4-FzqN1MwWyeUMGlo/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+          "uri150": "https://i.discogs.com/EXduwwN78QMST6nBGmCAppYetJfBeI3rgvZk_Ew2Ge8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+          "width": 300
+        },
+        {
+          "height": 444,
+          "resource_url": "https://i.discogs.com/K-T-wnX_FhzkR9tCErLxN_Gh8lp267hzAfwKlY4E_qk/rs:fit/g:sm/q:90/h:444/w:521/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/K-T-wnX_FhzkR9tCErLxN_Gh8lp267hzAfwKlY4E_qk/rs:fit/g:sm/q:90/h:444/w:521/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/9yBQnyojHF-xSxBHkBFppOPKqbaDxs0FDsGnyqUYuS8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+          "width": 521
+        },
+        {
+          "height": 440,
+          "resource_url": "https://i.discogs.com/5c3S0wQzJCJy_cgZcIxhHw-VOw7M_8S1-ApBZjC9j1U/rs:fit/g:sm/q:90/h:440/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5c3S0wQzJCJy_cgZcIxhHw-VOw7M_8S1-ApBZjC9j1U/rs:fit/g:sm/q:90/h:440/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ltj7EfiC2EkmYLZk0Kti4JbSvmVDILyc-Z2xvanikHM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+          "width": 550
+        },
+        {
+          "height": 550,
+          "resource_url": "https://i.discogs.com/PVdMT-NbSDbBdYN8hLdlaWa7uPSRta1gsT7Kvz7m5VE/rs:fit/g:sm/q:90/h:550/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/PVdMT-NbSDbBdYN8hLdlaWa7uPSRta1gsT7Kvz7m5VE/rs:fit/g:sm/q:90/h:550/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/pakStFqTrxWXNiGE-OZ1xMOFCEBb6zSD_wWhi_b0kp8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+          "width": 440
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 42283,
+          "name": "Andy Diagram",
+          "resource_url": "https://api.discogs.com/artists/42283",
+          "thumbnail_url": "https://i.discogs.com/yGzuV4Y6RT3xPnYCgaTSbo1aaO1LZgzzG56HKVdRkuw/rs:fit/g:sm/q:40/h:500/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMjgz/LTEzNzI0MDk0MzEt/NDkwNi5qcGVn.jpeg"
+        },
+        {
+          "active": true,
+          "id": 273100,
+          "name": "Saul Davies",
+          "resource_url": "https://api.discogs.com/artists/273100",
+          "thumbnail_url": "https://i.discogs.com/d_XAeSNlX_pZiuIqZzaD-FCrfT7L-KdHSyhxH3InfuU/rs:fit/g:sm/q:40/h:332/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzEw/MC0xMzc0NTM4MjE3/LTIxNTguanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 273102,
+          "name": "Mark Hunter",
+          "resource_url": "https://api.discogs.com/artists/273102",
+          "thumbnail_url": "https://i.discogs.com/uPIuUpstaKFi32bNMyvfzINKDodYkQK0TNMI7weZPr0/rs:fit/g:sm/q:40/h:462/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzEw/Mi0xMzc0NTM4MjY4/LTkxMTAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 274925,
+          "name": "Larry Gott",
+          "resource_url": "https://api.discogs.com/artists/274925",
+          "thumbnail_url": "https://i.discogs.com/azVZe-50SaYTyMNrEKlVdrdFVlbbwOqlMzaJ4ZPhLuo/rs:fit/g:sm/q:40/h:241/w:167/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/NS0xMjQwODAzNzgx/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 274926,
+          "name": "Tim Booth",
+          "resource_url": "https://api.discogs.com/artists/274926",
+          "thumbnail_url": "https://i.discogs.com/5zeS3sTehai1GZfxhDoTCa-VdG8sIDRzJJy1fUaAKas/rs:fit/g:sm/q:40/h:503/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/Ni0xMjkxODQ4OTgz/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 274927,
+          "name": "Jim Glennie",
+          "resource_url": "https://api.discogs.com/artists/274927",
+          "thumbnail_url": "https://i.discogs.com/itn37dO3qbLUO5SiWH6GCxzH96uWvqnUN8M6IQjiR-A/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/Ny0xMzc0NTM4NjE0/LTY3MDMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 276149,
+          "name": "Michael Kulas",
+          "resource_url": "https://api.discogs.com/artists/276149",
+          "thumbnail_url": "https://i.discogs.com/qWGS0ZzoQp-2FrgzEG7zqCibtgDrcQOmcZAsgm0ykKM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NjE0/OS0xNDM5MDI4ODQ0/LTc0MjcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 520717,
+          "name": "David Baynton-Power",
+          "resource_url": "https://api.discogs.com/artists/520717",
+          "thumbnail_url": "https://i.discogs.com/7IfhwFRVmpbmA37jP1CfL0W2IQGlvErpjieSq6sF4d4/rs:fit/g:sm/q:40/h:819/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyMDcx/Ny0xNjA2OTIxOTU1/LTc0OTguanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 662389,
+          "name": "Paul Gilbertson",
+          "resource_url": "https://api.discogs.com/artists/662389",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 662390,
+          "name": "Gavan Whelan",
+          "resource_url": "https://api.discogs.com/artists/662390",
+          "thumbnail_url": "https://i.discogs.com/OV2RniRbHB0CoXes_K5M2JjnPbXf1PEsWd8EO3hoE_4/rs:fit/g:sm/q:40/h:276/w:194/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MjM5/MC0xNDM5MDI4NjQ2/LTUxMTYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 691978,
+          "name": "Adrian Oxaal",
+          "resource_url": "https://api.discogs.com/artists/691978",
+          "thumbnail_url": "https://i.discogs.com/Ay_d0E8dkh0kE60N9KMckM-AGkzvtFN_xqezDM2flSs/rs:fit/g:sm/q:40/h:314/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5MTk3/OC0xNDM5MDI4NTAz/LTM4NDAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 883221,
+          "name": "Chloe Alper",
+          "resource_url": "https://api.discogs.com/artists/883221",
+          "thumbnail_url": "https://i.discogs.com/Zilvxlqi83MZ-QM_3HzYZs63SjbqgPqpHqfWOldd8QE/rs:fit/g:sm/q:40/h:800/w:533/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4MzIy/MS0xMzkwOTg3OTE5/LTY1NTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1840029,
+          "name": "Jenny Belinda Glennie",
+          "resource_url": "https://api.discogs.com/artists/1840029",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 4384731,
+          "name": "Ron Yeadon",
+          "resource_url": "https://api.discogs.com/artists/4384731",
+          "thumbnail_url": "https://i.discogs.com/FJ66Hz2syivZZFMrotPSN_smKGIhgCelq8g86fS75O8/rs:fit/g:sm/q:40/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODQ3/MzEtMTUzNzkxMTA1/Ni0zMTkzLmdpZg.jpeg"
+        },
+        {
+          "active": true,
+          "id": 7163793,
+          "name": "Debbie Knox-Hewson",
+          "resource_url": "https://api.discogs.com/artists/7163793",
+          "thumbnail_url": "https://i.discogs.com/PWj5zncKb4sWcimzI8CiZ3FgOxN-ho-HiCW4df_NlsA/rs:fit/g:sm/q:40/h:663/w:528/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcxNjM3/OTMtMTU2MzYyMTY0/OC0zNzIzLmpwZWc.jpeg"
+        }
+      ],
+      "name": "James",
+      "namevariations": [
+        "James:"
+      ],
+      "profile": "James is an indie / alternative rock group from the UK.\r\n[b]Please do not use this profile for any other artists named James.[/b]\r\n\r\nJames was formed in Manchester in 1982 by founding members [a=Jim Glennie], [a=Tim Booth], [a=Larry Gott], and [a=Gavan Whelan]. The group was signed one year later to [a=Anthony H. Wilson]'s infamous [l=Factory] record label, but only a few years later were snapped up by the major label [l=Sire Records Company]. James' early 1980s folk / indie sound would garner them impressive underground status before they would become big chart toppers from the mid-to-late 1980s. 1989 single [url=https://www.discogs.com/master/710067-James-Sit-Down]\"Sit Down\"[/url], issued by the seminal indie record label [l=Rough Trade], reached #2 in the UK singles charts and, in 1991, was followed by the #2 album [url=https://www.discogs.com/master/3646-James-Seven]\"Seven\"[/url]. The group continued to find success with the 1993 album \"Laid\", its simultaneously-recorded nocturnal sister, 1994's \"Wah Wah\", and 1997's \"Whiplash\" (released in 1997 just after the UK's mid-90s Britpop explosion.) The band released two additional albums before initially splitting up in 2001. James reunited in 2007 and remains active as of 2024.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 12094,
+        "images": [
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/ZlyPkZEDMb366BKRrti86VLK4pLj0ACdFuOMZF0dgAE/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/6ELUEWE5izoZnpYtwSBrdh8wVxDa-1c3Tu4koNLywEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/ldc-wf95jR7dBxZpC8YBXT88RWauoVOYooZmKO-Aqhg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ldc-wf95jR7dBxZpC8YBXT88RWauoVOYooZmKO-Aqhg/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/9hxJTF-mwwAhuolDt08WrTCyiYhck4_961whMzBRzg0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE0MDE2MjgxMzMt/MTU5MC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/lwIVNkrZ6HyJ-O6ln5Z378nuU1aj29xcTQpNFMHn910/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/lwIVNkrZ6HyJ-O6ln5Z378nuU1aj29xcTQpNFMHn910/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+            "uri150": "https://i.discogs.com/md7LmHzYaIXFKJOVgEPDCKxSBOXYjQhchlKumVZpF_I/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYzODgu/cG5n.jpeg",
+            "width": 350
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/-cIjRLnlv_YqfsYiiSJRmJ3LnqepsYdIoVE0M44FuNk/rs:fit/g:sm/q:90/h:350/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-cIjRLnlv_YqfsYiiSJRmJ3LnqepsYdIoVE0M44FuNk/rs:fit/g:sm/q:90/h:350/w:271/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/wKKwUWMxu7vb5duFPPEiy4R35wnmbnVvf_IG4Kgl5UY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTExMTgzMzk2NDYu/anBn.jpeg",
+            "width": 271
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/SOMvsAgzEytV404H4noxq36aw_4-FzqN1MwWyeUMGlo/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SOMvsAgzEytV404H4noxq36aw_4-FzqN1MwWyeUMGlo/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+            "uri150": "https://i.discogs.com/EXduwwN78QMST6nBGmCAppYetJfBeI3rgvZk_Ew2Ge8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyMzA0OTYyMDQu/cG5n.jpeg",
+            "width": 300
+          },
+          {
+            "height": 444,
+            "resource_url": "https://i.discogs.com/K-T-wnX_FhzkR9tCErLxN_Gh8lp267hzAfwKlY4E_qk/rs:fit/g:sm/q:90/h:444/w:521/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/K-T-wnX_FhzkR9tCErLxN_Gh8lp267hzAfwKlY4E_qk/rs:fit/g:sm/q:90/h:444/w:521/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/9yBQnyojHF-xSxBHkBFppOPKqbaDxs0FDsGnyqUYuS8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE1NDkzOTUzODgt/MzY3OS5qcGVn.jpeg",
+            "width": 521
+          },
+          {
+            "height": 440,
+            "resource_url": "https://i.discogs.com/5c3S0wQzJCJy_cgZcIxhHw-VOw7M_8S1-ApBZjC9j1U/rs:fit/g:sm/q:90/h:440/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5c3S0wQzJCJy_cgZcIxhHw-VOw7M_8S1-ApBZjC9j1U/rs:fit/g:sm/q:90/h:440/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ltj7EfiC2EkmYLZk0Kti4JbSvmVDILyc-Z2xvanikHM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjA5MzI4NDAu/anBlZw.jpeg",
+            "width": 550
+          },
+          {
+            "height": 550,
+            "resource_url": "https://i.discogs.com/PVdMT-NbSDbBdYN8hLdlaWa7uPSRta1gsT7Kvz7m5VE/rs:fit/g:sm/q:90/h:550/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/PVdMT-NbSDbBdYN8hLdlaWa7uPSRta1gsT7Kvz7m5VE/rs:fit/g:sm/q:90/h:550/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/pakStFqTrxWXNiGE-OZ1xMOFCEBb6zSD_wWhi_b0kp8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTEyNjgzMTk2OTgu/anBlZw.jpeg",
+            "width": 440
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 42283,
+            "name": "Andy Diagram",
+            "resource_url": "https://api.discogs.com/artists/42283",
+            "thumbnail_url": "https://i.discogs.com/yGzuV4Y6RT3xPnYCgaTSbo1aaO1LZgzzG56HKVdRkuw/rs:fit/g:sm/q:40/h:500/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMjgz/LTEzNzI0MDk0MzEt/NDkwNi5qcGVn.jpeg"
+          },
+          {
+            "active": true,
+            "id": 273100,
+            "name": "Saul Davies",
+            "resource_url": "https://api.discogs.com/artists/273100",
+            "thumbnail_url": "https://i.discogs.com/d_XAeSNlX_pZiuIqZzaD-FCrfT7L-KdHSyhxH3InfuU/rs:fit/g:sm/q:40/h:332/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzEw/MC0xMzc0NTM4MjE3/LTIxNTguanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 273102,
+            "name": "Mark Hunter",
+            "resource_url": "https://api.discogs.com/artists/273102",
+            "thumbnail_url": "https://i.discogs.com/uPIuUpstaKFi32bNMyvfzINKDodYkQK0TNMI7weZPr0/rs:fit/g:sm/q:40/h:462/w:594/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MzEw/Mi0xMzc0NTM4MjY4/LTkxMTAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 274925,
+            "name": "Larry Gott",
+            "resource_url": "https://api.discogs.com/artists/274925",
+            "thumbnail_url": "https://i.discogs.com/azVZe-50SaYTyMNrEKlVdrdFVlbbwOqlMzaJ4ZPhLuo/rs:fit/g:sm/q:40/h:241/w:167/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/NS0xMjQwODAzNzgx/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 274926,
+            "name": "Tim Booth",
+            "resource_url": "https://api.discogs.com/artists/274926",
+            "thumbnail_url": "https://i.discogs.com/5zeS3sTehai1GZfxhDoTCa-VdG8sIDRzJJy1fUaAKas/rs:fit/g:sm/q:40/h:503/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/Ni0xMjkxODQ4OTgz/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 274927,
+            "name": "Jim Glennie",
+            "resource_url": "https://api.discogs.com/artists/274927",
+            "thumbnail_url": "https://i.discogs.com/itn37dO3qbLUO5SiWH6GCxzH96uWvqnUN8M6IQjiR-A/rs:fit/g:sm/q:40/h:640/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NDky/Ny0xMzc0NTM4NjE0/LTY3MDMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 276149,
+            "name": "Michael Kulas",
+            "resource_url": "https://api.discogs.com/artists/276149",
+            "thumbnail_url": "https://i.discogs.com/qWGS0ZzoQp-2FrgzEG7zqCibtgDrcQOmcZAsgm0ykKM/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NjE0/OS0xNDM5MDI4ODQ0/LTc0MjcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 520717,
+            "name": "David Baynton-Power",
+            "resource_url": "https://api.discogs.com/artists/520717",
+            "thumbnail_url": "https://i.discogs.com/7IfhwFRVmpbmA37jP1CfL0W2IQGlvErpjieSq6sF4d4/rs:fit/g:sm/q:40/h:819/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUyMDcx/Ny0xNjA2OTIxOTU1/LTc0OTguanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 662389,
+            "name": "Paul Gilbertson",
+            "resource_url": "https://api.discogs.com/artists/662389",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 662390,
+            "name": "Gavan Whelan",
+            "resource_url": "https://api.discogs.com/artists/662390",
+            "thumbnail_url": "https://i.discogs.com/OV2RniRbHB0CoXes_K5M2JjnPbXf1PEsWd8EO3hoE_4/rs:fit/g:sm/q:40/h:276/w:194/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2MjM5/MC0xNDM5MDI4NjQ2/LTUxMTYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 691978,
+            "name": "Adrian Oxaal",
+            "resource_url": "https://api.discogs.com/artists/691978",
+            "thumbnail_url": "https://i.discogs.com/Ay_d0E8dkh0kE60N9KMckM-AGkzvtFN_xqezDM2flSs/rs:fit/g:sm/q:40/h:314/w:250/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY5MTk3/OC0xNDM5MDI4NTAz/LTM4NDAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 883221,
+            "name": "Chloe Alper",
+            "resource_url": "https://api.discogs.com/artists/883221",
+            "thumbnail_url": "https://i.discogs.com/Zilvxlqi83MZ-QM_3HzYZs63SjbqgPqpHqfWOldd8QE/rs:fit/g:sm/q:40/h:800/w:533/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg4MzIy/MS0xMzkwOTg3OTE5/LTY1NTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1840029,
+            "name": "Jenny Belinda Glennie",
+            "resource_url": "https://api.discogs.com/artists/1840029",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 4384731,
+            "name": "Ron Yeadon",
+            "resource_url": "https://api.discogs.com/artists/4384731",
+            "thumbnail_url": "https://i.discogs.com/FJ66Hz2syivZZFMrotPSN_smKGIhgCelq8g86fS75O8/rs:fit/g:sm/q:40/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzODQ3/MzEtMTUzNzkxMTA1/Ni0zMTkzLmdpZg.jpeg"
+          },
+          {
+            "active": true,
+            "id": 7163793,
+            "name": "Debbie Knox-Hewson",
+            "resource_url": "https://api.discogs.com/artists/7163793",
+            "thumbnail_url": "https://i.discogs.com/PWj5zncKb4sWcimzI8CiZ3FgOxN-ho-HiCW4df_NlsA/rs:fit/g:sm/q:40/h:663/w:528/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTcxNjM3/OTMtMTU2MzYyMTY0/OC0zNzIzLmpwZWc.jpeg"
+          }
+        ],
+        "name": "James",
+        "namevariations": [
+          "James:"
+        ],
+        "profile": "James is an indie / alternative rock group from the UK.\r\n[b]Please do not use this profile for any other artists named James.[/b]\r\n\r\nJames was formed in Manchester in 1982 by founding members [a=Jim Glennie], [a=Tim Booth], [a=Larry Gott], and [a=Gavan Whelan]. The group was signed one year later to [a=Anthony H. Wilson]'s infamous [l=Factory] record label, but only a few years later were snapped up by the major label [l=Sire Records Company]. James' early 1980s folk / indie sound would garner them impressive underground status before they would become big chart toppers from the mid-to-late 1980s. 1989 single [url=https://www.discogs.com/master/710067-James-Sit-Down]\"Sit Down\"[/url], issued by the seminal indie record label [l=Rough Trade], reached #2 in the UK singles charts and, in 1991, was followed by the #2 album [url=https://www.discogs.com/master/3646-James-Seven]\"Seven\"[/url]. The group continued to find success with the 1993 album \"Laid\", its simultaneously-recorded nocturnal sister, 1994's \"Wah Wah\", and 1997's \"Whiplash\" (released in 1997 just after the UK's mid-90s Britpop explosion.) The band released two additional albums before initially splitting up in 2001. James reunited in 2007 and remains active as of 2024.",
+        "releases_url": "https://api.discogs.com/artists/12094/releases",
+        "resource_url": "https://api.discogs.com/artists/12094",
+        "uri": "https://www.discogs.com/artist/12094-James",
+        "urls": [
+          "http://wearejames.com",
+          "http://wearejames.com/forum",
+          "http://www.facebook.com/jamesisnotaperson",
+          "http://flickr.com/groups/james-on-flickr",
+          "http://www.instagram.com/wearejames",
+          "http://myspace.com/jamesisnotaperson",
+          "http://www.oneofthethree.co.uk",
+          "http://soundcloud.com/james-the-band",
+          "http://twitter.com/wearejames",
+          "http://en.wikipedia.org/wiki/James_(band)",
+          "http://youtube.com/user/WeAreJamesTV"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/12094",
+      "thumb": "https://i.discogs.com/6ELUEWE5izoZnpYtwSBrdh8wVxDa-1c3Tu4koNLywEE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDk0/LTE2MjMyMzk5MTUt/Mjk3MC5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/12094-James",
+      "urls": [
+        "http://wearejames.com",
+        "http://wearejames.com/forum",
+        "http://www.facebook.com/jamesisnotaperson",
+        "http://flickr.com/groups/james-on-flickr",
+        "http://www.instagram.com/wearejames",
+        "http://myspace.com/jamesisnotaperson",
+        "http://www.oneofthethree.co.uk",
+        "http://soundcloud.com/james-the-band",
+        "http://twitter.com/wearejames",
+        "http://en.wikipedia.org/wiki/James_(band)",
+        "http://youtube.com/user/WeAreJamesTV"
+      ]
     },
     "lastfm": {
       "bio_content": "There are several artists in this entry:\n\n1) a British alternative rock band formed in 1981 in Manchester\n2) the vocalist of popular Bangladeshi band Nagar Baul\n3) a Dutch rapper connected to the Fakkelteitgroep. \n4) James, South Korean Musician\n\n1) James (formed 1981 in Manchester, England) are a popular band that were at the forefront of the indie rock movement, releasing a string of hit singles and maintaining popularity through the '90s. \n\nThe band's sound is mostly defined by their lead singer Tim Booth's resonating vocals and emotional lyrics, as well as a spirit of experimentation that they held onto throughout their active career. The band's most well-known songs include the hits \"Sit Down\" and \"Laid\", the former marking the band's rise to popularity. \n\nAlthough James predate the 'Madchester scene' of the late 1980s and their sound was never \"baggy\" nevertheless their Mancunian origins and their more commercial releases were appropriated by the scene. For many reasons, including the departure of lead singer Booth, the band's final album became a struggle to record. This departure occurred in 2001 and the band has been inactive since, though they never officially declared a breakup. In 2007, the band was reactivated when Booth returned to the band.\n\n2) James is the vocalist of popular Bangladeshi band Nagar Baul. He was a member of the band Feelings and later formed the band Nagar Baul. James was raised in Chittagong and later moved to Dhaka for his singing career. Stylishly longhaired James--overwhelmingly known as the Nagar Baul (the City Bard), was the pioneer of psychedelic rock in Bangladesh. Originally a lead singer and guitarist, he has always been respected for his solo projects. He became affectionately called Guru by his fans. His tunes were bright and his singing a divergence from the archetypal tunes preferred by the commercial-type directors. His songs expressed love, rage, discontent, frustration, and happiness.\n\n3) A Dutch rapper connected to the Fakkelteitgroep. \n\n4) James Lee - known as James - was a former member of Royal Pirates, a South Korean band. On 2015, he got into an accident that caused him unable to play bass any longer. Hence, he decided to left the band.\n\nJames moved back to Los Angeles and decided to release music written post accident in a project called ’the Light EP’ consisted of 5 tracks. (http://jamesleeofficial.com/) <a href=\"https://www.last.fm/music/James\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +540,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 917390,
+      "listeners": 917954,
       "mbid": "a2accb58-6099-4cb5-a3c8-f6332f364db5",
       "name": "James",
-      "playcount": 16556830,
+      "playcount": 16569888,
       "similar_artists": [
         {
           "name": "Shed Seven",
@@ -171,7 +576,7 @@
       "url": "https://www.last.fm/music/James"
     },
     "spotify": {
-      "followers": 609073,
+      "followers": 609537,
       "genres": [
         "madchester",
         "britpop"
@@ -201,6 +606,6 @@
   },
   "spotify_id": "0qLNsNKm8bQcMoRFkR8Hmh",
   "spotify_url": "https://open.spotify.com/artist/0qLNsNKm8bQcMoRFkR8Hmh",
-  "updated_at": "2025-07-05T14:45:20.013754",
+  "updated_at": "2025-07-08T09:21:03.215957",
   "wikipedia_url": null
 }

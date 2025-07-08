@@ -299,8 +299,18 @@ def backup(ctx, backup_path):
     is_flag=True, 
     help="Fetch artist image from v1.russ.fm site"
 )
+@click.option(
+    "--verify", 
+    is_flag=True, 
+    help="Verify artist matches by comparing releases from Apple Music and Spotify"
+)
+@click.option(
+    "--prefer",
+    type=click.Choice(["apple_music", "spotify", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, discogs, v1)"
+)
 @click.pass_context
-def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1):
+def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1, verify, prefer):
     """Get comprehensive artist information."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.serializers import ArtistSerializer
@@ -348,6 +358,11 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
                 
         except Exception as e:
             console.print(f"[red]Error accessing v1.russ.fm data: {str(e)}[/red]")
+    
+    # Set preferred image source if specified
+    if prefer:
+        orchestrator.set_preferred_image_source(prefer)
+        console.print(f"[blue]Preferred image source set to: {prefer}[/blue]")
     
     with console.status(f"[bold green]Fetching artist data for: {artist_name}"):
         # Get artist data
@@ -417,6 +432,77 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
         if artist_obj.local_images:
             console.print(f"[green]Downloaded images: {', '.join(artist_obj.local_images.keys())}[/green]")
     
+    # Perform release verification if requested
+    if verify:
+        console.print(f"\n[cyan]🎵 Release Verification[/cyan]")
+        
+        # Create verification table
+        verification_table = Table(title="Release Verification Results", box=box.ROUNDED)
+        verification_table.add_column("Service", style="cyan", no_wrap=True)
+        verification_table.add_column("Matches", style="yellow")
+        verification_table.add_column("Confidence", style="green")
+        verification_table.add_column("Match %", style="blue")
+        
+        verification_performed = False
+        
+        # Verify Apple Music if available
+        if artist_obj.apple_music_id:
+            verification_result = orchestrator.verify_apple_music_artist_with_releases(artist_obj, artist_obj.apple_music_id)
+            if 'error' not in verification_result:
+                verification_performed = True
+                matches = len(verification_result.get('matches', []))
+                total = verification_result.get('total_known_releases', 0)
+                confidence = verification_result.get('confidence_level', 'LOW')
+                percentage = verification_result.get('match_percentage', 0) * 100
+                
+                verification_table.add_row(
+                    "Apple Music", 
+                    f"{matches}/{total}",
+                    confidence,
+                    f"{percentage:.0f}%"
+                )
+                
+                # Show sample matches
+                if verification_result.get('matches') and output == "table":
+                    console.print(f"\n[dim]Apple Music matches (showing first 3):[/dim]")
+                    for i, match in enumerate(verification_result['matches'][:3], 1):
+                        match_type_color = "green" if match.match_type == "exact" else "yellow"
+                        console.print(f"  {i}. {match.discogs_title} → {match.service_title} ([{match_type_color}]{match.match_type}[/{match_type_color}])")
+            else:
+                console.print(f"[yellow]Apple Music verification failed: {verification_result['error']}[/yellow]")
+        
+        # Verify Spotify if available
+        if artist_obj.spotify_id:
+            verification_result = orchestrator.verify_spotify_artist_with_releases(artist_obj, artist_obj.spotify_id)
+            if 'error' not in verification_result:
+                verification_performed = True
+                matches = len(verification_result.get('matches', []))
+                total = verification_result.get('total_known_releases', 0)
+                confidence = verification_result.get('confidence_level', 'LOW')
+                percentage = verification_result.get('match_percentage', 0) * 100
+                
+                verification_table.add_row(
+                    "Spotify", 
+                    f"{matches}/{total}",
+                    confidence,
+                    f"{percentage:.0f}%"
+                )
+                
+                # Show sample matches
+                if verification_result.get('matches') and output == "table":
+                    console.print(f"\n[dim]Spotify matches (showing first 3):[/dim]")
+                    for i, match in enumerate(verification_result['matches'][:3], 1):
+                        match_type_color = "green" if match.match_type == "exact" else "yellow"
+                        console.print(f"  {i}. {match.discogs_title} → {match.service_title} ([{match_type_color}]{match.match_type}[/{match_type_color}])")
+            else:
+                console.print(f"[yellow]Spotify verification failed: {verification_result['error']}[/yellow]")
+        
+        # Display verification table if we have results
+        if verification_performed and verification_table.row_count > 0:
+            console.print(verification_table)
+        elif not verification_performed:
+            console.print(f"[yellow]No services available for verification. Artist needs Apple Music or Spotify IDs.[/yellow]")
+    
     # Save to database if requested
     if save:
         from ..utils.database import DatabaseManager
@@ -427,6 +513,358 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
             console.print(f"\n[green]Artist saved to database[/green]")
         else:
             console.print(f"\n[red]Failed to save artist to database[/red]")
+
+
+@cli.command()
+@click.option(
+    "--from", 
+    "start_idx", 
+    type=int, 
+    default=0, 
+    help="Start index for batch processing"
+)
+@click.option(
+    "--to", 
+    "end_idx", 
+    type=int, 
+    default=10, 
+    help="End index for batch processing"
+)
+@click.option(
+    "--save", 
+    "-s", 
+    is_flag=True, 
+    help="Save artists to database"
+)
+@click.option(
+    "--verify", 
+    is_flag=True, 
+    help="Verify artist matches by comparing releases"
+)
+@click.option(
+    "--interactive", 
+    "-i", 
+    is_flag=True, 
+    help="Enable interactive mode for manual artist selection"
+)
+@click.option(
+    "--include-various", 
+    is_flag=True, 
+    help="Include Various Artists in processing"
+)
+@click.option(
+    "--stats", 
+    is_flag=True, 
+    help="Show processing statistics instead of processing artists"
+)
+@click.option(
+    "--force-refresh", 
+    "-f", 
+    is_flag=True, 
+    help="Force refresh artist data from APIs instead of using cache"
+)
+@click.option(
+    "--prefer",
+    type=click.Choice(["apple_music", "spotify", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, discogs, v1)"
+)
+@click.pass_context
+def artist_batch(ctx, start_idx, end_idx, save, verify, interactive, include_various, stats, force_refresh, prefer):
+    """Process multiple artists from collection in batches with release verification."""
+    from ..utils.artist_orchestrator import ArtistDataOrchestrator
+    from ..utils.database import DatabaseManager
+    from rich.console import Console
+    from rich.table import Table
+    from rich.panel import Panel
+    from rich import box
+    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn, TaskProgressColumn
+    from collections import defaultdict
+    import json
+    import sqlite3
+    
+    console = Console()
+    config = ctx.obj["config"]
+    logger = ctx.obj["logger"]
+    
+    # Initialize database
+    db_path = config.get("database", {}).get("path", "collection_cache.db")
+    db_manager = DatabaseManager(db_path, logger)
+    
+    if stats:
+        # Show processing statistics
+        console.print("=" * 80)
+        console.print("[bold cyan]ARTIST BATCH PROCESSING STATISTICS[/bold cyan]")
+        console.print("=" * 80)
+        console.print()
+        
+        # Get artist statistics from database
+        conn = sqlite3.connect(db_path)
+        conn.row_factory = sqlite3.Row
+        cursor = conn.cursor()
+        
+        # Query to get unique artists from releases
+        query = """
+            SELECT artists, title, genres 
+            FROM releases 
+            WHERE artists IS NOT NULL
+        """
+        
+        if not include_various:
+            query += " AND artists NOT LIKE '%Various%'"
+        
+        cursor.execute(query)
+        rows = cursor.fetchall()
+        
+        artists_map = {}
+        confidence_breakdown = defaultdict(int)
+        genres_coverage = defaultdict(int)
+        
+        for row in rows:
+            try:
+                artists = json.loads(row['artists'])
+                genres = json.loads(row['genres']) if row['genres'] else []
+                
+                for artist in artists:
+                    if not include_various and artist['name'] == 'Various Artists':
+                        continue
+                    
+                    discogs_id = artist.get('discogs_id', '')
+                    if discogs_id and discogs_id not in artists_map:
+                        artists_map[discogs_id] = {
+                            'name': artist['name'],
+                            'releases': [row['title']],
+                            'genres': genres[:5]
+                        }
+                        
+                        # Simple confidence calculation based on release context
+                        if artist['name'].lower() in row['title'].lower():
+                            confidence_breakdown['HIGH'] += 1
+                        else:
+                            confidence_breakdown['LOW'] += 1
+                    elif discogs_id in artists_map:
+                        artists_map[discogs_id]['releases'].append(row['title'])
+                        
+                        # Merge genres
+                        for genre in genres:
+                            if genre not in artists_map[discogs_id]['genres']:
+                                artists_map[discogs_id]['genres'].append(genre)
+                
+                # Count genres
+                for genre in genres:
+                    genres_coverage[genre] += 1
+                    
+            except json.JSONDecodeError:
+                continue
+        
+        conn.close()
+        
+        console.print(f"[green]Total Artists to Process: {len(artists_map)}[/green]")
+        console.print()
+        
+        console.print("[yellow]Confidence Breakdown:[/yellow]")
+        for confidence, count in confidence_breakdown.items():
+            console.print(f"  {confidence}: {count} artists")
+        console.print()
+        
+        # Top artists by release count
+        sorted_artists = sorted(artists_map.values(), key=lambda x: len(x['releases']), reverse=True)[:10]
+        console.print("[yellow]Top 10 Artists by Release Count:[/yellow]")
+        for i, artist in enumerate(sorted_artists, 1):
+            console.print(f"  {i}. {artist['name']} - {len(artist['releases'])} releases")
+        console.print()
+        
+        # Top genres
+        sorted_genres = sorted(genres_coverage.items(), key=lambda x: x[1], reverse=True)[:10]
+        console.print("[yellow]Top Genres:[/yellow]")
+        for genre, count in sorted_genres:
+            console.print(f"  {genre}: {count} artists")
+        
+        return
+    
+    # Process batch of artists
+    console.print("=" * 80)
+    console.print(f"[bold cyan]PROCESSING ARTISTS: {start_idx} to {end_idx}[/bold cyan]")
+    console.print("=" * 80)
+    console.print()
+    
+    # Extract artists from releases (same logic as enhanced processor)
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    
+    query = """
+        SELECT artists, title, genres, discogs_id 
+        FROM releases 
+        WHERE artists IS NOT NULL
+    """
+    
+    if not include_various:
+        query += " AND artists NOT LIKE '%Various%'"
+    
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    
+    artists_map = {}
+    
+    for row in rows:
+        try:
+            artists = json.loads(row['artists'])
+            genres = json.loads(row['genres']) if row['genres'] else []
+            
+            for artist in artists:
+                if not include_various and artist['name'] == 'Various Artists':
+                    continue
+                
+                discogs_id = artist.get('discogs_id', '')
+                if not discogs_id:
+                    continue
+                
+                if discogs_id not in artists_map:
+                    artists_map[discogs_id] = {
+                        'name': artist['name'],
+                        'discogs_id': discogs_id,
+                        'release_count': 1,
+                        'sample_releases': [row['title']],
+                        'genres': genres[:5]
+                    }
+                else:
+                    artists_map[discogs_id]['release_count'] += 1
+                    if row['title'] not in artists_map[discogs_id]['sample_releases']:
+                        artists_map[discogs_id]['sample_releases'].append(row['title'])
+        
+        except json.JSONDecodeError:
+            continue
+    
+    conn.close()
+    
+    # Sort by release count
+    sorted_artists = sorted(artists_map.values(), key=lambda x: x['release_count'], reverse=True)
+    
+    # Get the requested batch
+    batch_artists = sorted_artists[start_idx:end_idx]
+    
+    if not batch_artists:
+        console.print("[red]No artists found in the specified range.[/red]")
+        return
+    
+    # Initialize orchestrator
+    orchestrator = ArtistDataOrchestrator(config, logger)
+    
+    # Enable interactive mode if requested
+    if interactive:
+        orchestrator.set_interactive_mode(True)
+        console.print(f"[cyan]Interactive mode enabled - you'll be prompted to select artist matches[/cyan]")
+    
+    # Show force refresh status
+    if force_refresh:
+        console.print(f"[yellow]Force refresh enabled - ignoring cached data and fetching fresh from APIs[/yellow]")
+    
+    # Set preferred image source if specified
+    if prefer:
+        orchestrator.set_preferred_image_source(prefer)
+        console.print(f"[blue]Preferred image source set to: {prefer}[/blue]")
+    
+    # Process each artist
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TaskProgressColumn(),
+        console=console,
+        transient=False,
+    ) as progress:
+        
+        task = progress.add_task("Processing artists...", total=len(batch_artists))
+        
+        for i, artist_data in enumerate(batch_artists):
+            artist_name = artist_data['name']
+            discogs_id = artist_data['discogs_id']
+            
+            progress.update(task, description=f"Processing {artist_name}...")
+            
+            # Get comprehensive artist data
+            artist_obj = orchestrator.get_artist_by_name(artist_name, force_refresh=force_refresh)
+            
+            if not artist_obj:
+                console.print(f"[red]Failed to process artist: {artist_name}[/red]")
+                progress.advance(task)
+                continue
+            
+            # Display artist info
+            console.print(f"\n[bold cyan]{start_idx + i + 1}. {artist_name}[/bold cyan]")
+            console.print(f"   Discogs ID: {discogs_id}")
+            console.print(f"   Discogs URL: https://www.discogs.com/artist/{discogs_id}")
+            console.print(f"   Release Count: {artist_data['release_count']}")
+            
+            if artist_data['genres']:
+                console.print(f"   Genres: {', '.join(artist_data['genres'])}")
+            
+            # Show external services
+            services_found = []
+            if artist_obj.apple_music_id:
+                services_found.append(f"Apple Music: {artist_obj.apple_music_url}")
+            if artist_obj.spotify_id:
+                services_found.append(f"Spotify: {artist_obj.spotify_url}")
+            if artist_obj.lastfm_mbid:
+                services_found.append(f"Last.fm: {artist_obj.lastfm_url}")
+            if artist_obj.wikipedia_url:
+                services_found.append(f"Wikipedia: {artist_obj.wikipedia_url}")
+            
+            if services_found:
+                console.print(f"   External Services:")
+                for service in services_found:
+                    console.print(f"     • {service}")
+            
+            # Perform release verification if requested
+            if verify and (artist_obj.apple_music_id or artist_obj.spotify_id):
+                console.print(f"   [cyan]🎵 Release Verification:[/cyan]")
+                
+                verification_results = []
+                
+                # Verify Apple Music
+                if artist_obj.apple_music_id:
+                    apple_result = orchestrator.verify_apple_music_artist_with_releases(artist_obj, artist_obj.apple_music_id)
+                    if 'error' not in apple_result:
+                        matches = len(apple_result.get('matches', []))
+                        total = apple_result.get('total_known_releases', 0)
+                        percentage = apple_result.get('match_percentage', 0) * 100
+                        confidence = apple_result.get('confidence_level', 'LOW')
+                        
+                        console.print(f"     🍎 Apple Music: {matches}/{total} matched ({percentage:.0f}%) - {confidence}")
+                        verification_results.append(('Apple Music', apple_result))
+                
+                # Verify Spotify
+                if artist_obj.spotify_id:
+                    spotify_result = orchestrator.verify_spotify_artist_with_releases(artist_obj, artist_obj.spotify_id)
+                    if 'error' not in spotify_result:
+                        matches = len(spotify_result.get('matches', []))
+                        total = spotify_result.get('total_known_releases', 0)
+                        percentage = spotify_result.get('match_percentage', 0) * 100
+                        confidence = spotify_result.get('confidence_level', 'LOW')
+                        
+                        console.print(f"     🟢 Spotify: {matches}/{total} matched ({percentage:.0f}%) - {confidence}")
+                        verification_results.append(('Spotify', spotify_result))
+                
+                # Show sample matches
+                for service_name, result in verification_results:
+                    matches = result.get('matches', [])
+                    if matches:
+                        console.print(f"     Sample {service_name} matches:")
+                        for match in matches[:2]:
+                            console.print(f"       • {match.discogs_title} → {match.service_title}")
+            
+            # Save to database if requested
+            if save:
+                if db_manager.save_artist(artist_obj):
+                    console.print(f"   [green]✅ Saved to database[/green]")
+                else:
+                    console.print(f"   [red]❌ Failed to save to database[/red]")
+            
+            console.print("-" * 70)
+            progress.advance(task)
+    
+    console.print(f"\n[bold green]✅ Batch processing complete![/bold green]")
+    console.print(f"Processed {len(batch_artists)} artists from index {start_idx} to {end_idx}")
 
 
 @cli.command()

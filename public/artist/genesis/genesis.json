@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:40:06.091830",
   "discogs_id": "124506",
-  "discogs_url": "https://www.discogs.com/artist/124506",
-  "followers": 3648721,
+  "discogs_url": "https://www.discogs.com/artist/124506-Genesis",
+  "followers": 3650540,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -18,7 +18,7 @@
     "80s",
     "Progressive"
   ],
-  "id": null,
+  "id": "genesis-1751722806",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/7YcjOTOYu4TONQ0A0zb0PlDZE96gdu4BK8NELB2_e68/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "c5725831-2596-48f1-8f1c-ebe237362860",
   "lastfm_url": "https://www.last.fm/music/Genesis",
   "local_images": {
-    "hi-res": "public/artist/genesis/genesis-hi-res.jpg",
-    "medium": "public/artist/genesis/genesis-medium.jpg",
-    "small": "public/artist/genesis/genesis-small.jpg"
+    "hi-res": "../public/artist/genesis/genesis-hi-res.jpg",
+    "medium": "../public/artist/genesis/genesis-medium.jpg",
+    "small": "../public/artist/genesis/genesis-small.jpg"
   },
   "name": "Genesis",
   "popularity": 71,
@@ -103,9 +115,568 @@
       "url": "https://music.apple.com/gb/artist/genesis/95966"
     },
     "discogs": {
-      "id": 124506,
-      "original_name": "Genesis",
-      "role": ""
+      "cover_image": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "124506",
+      "images": [
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/7YcjOTOYu4TONQ0A0zb0PlDZE96gdu4BK8NELB2_e68/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+          "width": 273
+        },
+        {
+          "height": 316,
+          "resource_url": "https://i.discogs.com/D18B1Pbj_SSs7KmuXMSJNpNf45ZhNmFjTtfC5jm91zw/rs:fit/g:sm/q:90/h:316/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/D18B1Pbj_SSs7KmuXMSJNpNf45ZhNmFjTtfC5jm91zw/rs:fit/g:sm/q:90/h:316/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/I0WWDsAozm0_mqQyWLIwtv6PsTEBYDR3_9150KaB2Dg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 475,
+          "resource_url": "https://i.discogs.com/GFHwRKF-QZj6GXouD-mvgwKuqGCU5tF5SD8CKxsV25g/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GFHwRKF-QZj6GXouD-mvgwKuqGCU5tF5SD8CKxsV25g/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/BjpKeiek6Y6PBIYDodcFnceDaURhZONQ8JfG15L83k4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 217,
+          "resource_url": "https://i.discogs.com/UUgVJJ9aHJjPKk2J0hLm8aelB40h_0nV2A2czbWa328/rs:fit/g:sm/q:90/h:217/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UUgVJJ9aHJjPKk2J0hLm8aelB40h_0nV2A2czbWa328/rs:fit/g:sm/q:90/h:217/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Op9AA4y3a-DgYhHm4pKKKhExzwt3TtkODlyJB8u97r8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 429,
+          "resource_url": "https://i.discogs.com/C1dr9bWeQe9UDE6JIbHp4n1K65bmEKT9taP8cGgNetU/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/C1dr9bWeQe9UDE6JIbHp4n1K65bmEKT9taP8cGgNetU/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/01UUG8dMXfxnxBOEAoJFJiuPWOM90SssdT3dzs2lAB4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/GZsmQ7SjBYagS5xbF_RT6c0RXyu9q05TEXjcBpnOa-k/rs:fit/g:sm/q:90/h:500/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/GZsmQ7SjBYagS5xbF_RT6c0RXyu9q05TEXjcBpnOa-k/rs:fit/g:sm/q:90/h:500/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Uf4AXXyhlEhiHsNJRFyx-VhAVajjufzGMUdzsb5Nqn4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+          "width": 400
+        },
+        {
+          "height": 360,
+          "resource_url": "https://i.discogs.com/TAtiWf8mDCQVm8fG5fGqPAhhOPROKhXToylMExxEmjY/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/TAtiWf8mDCQVm8fG5fGqPAhhOPROKhXToylMExxEmjY/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/z4ec3JvVJ2m6OdFlT7xm4r8GXt51yrVJa-Tmg_l-Rfs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 288,
+          "resource_url": "https://i.discogs.com/9cinXcwsmrGoR1jEDhCMq3EUwYbVtAKGVthc5TOMiHQ/rs:fit/g:sm/q:90/h:288/w:512/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9cinXcwsmrGoR1jEDhCMq3EUwYbVtAKGVthc5TOMiHQ/rs:fit/g:sm/q:90/h:288/w:512/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/mk0awhhYytQbNjBZILXIeSZpGbnh8IfZvimNps_ye94/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+          "width": 512
+        },
+        {
+          "height": 265,
+          "resource_url": "https://i.discogs.com/Q6U3AeEyu_5tFuXr5CS5iXW2BFSfmwrAvaJR1FwzPJs/rs:fit/g:sm/q:90/h:265/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Q6U3AeEyu_5tFuXr5CS5iXW2BFSfmwrAvaJR1FwzPJs/rs:fit/g:sm/q:90/h:265/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/TTLELuGPpjRTBbIjjUJeuFORRSHE0ZRz8Fcp4FA5oLQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 551,
+          "resource_url": "https://i.discogs.com/1Pre4Ft6hGZFggCqILmjniTpTbPXcDpkqP_-MBMe2Us/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1Pre4Ft6hGZFggCqILmjniTpTbPXcDpkqP_-MBMe2Us/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/49-s0IhduHuLZPfYFirehyVvO-Ymcwg0nnW1g0zumTU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 332,
+          "resource_url": "https://i.discogs.com/8f87HGDzdCKzDQRnY9J4_LnB6rjPL7onKuQy9DoJGI8/rs:fit/g:sm/q:90/h:332/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/8f87HGDzdCKzDQRnY9J4_LnB6rjPL7onKuQy9DoJGI8/rs:fit/g:sm/q:90/h:332/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/Oo5jCXZOEowZwoxnn-k6HlGWE68xbGhXLPP81SAYmEk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+          "width": 470
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/KpezidyjidgysuvQXKJrPF0yPo0vCJrIEaq1usHUeZY/rs:fit/g:sm/q:90/h:600/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/KpezidyjidgysuvQXKJrPF0yPo0vCJrIEaq1usHUeZY/rs:fit/g:sm/q:90/h:600/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/5IqI5SBnbxbzGNm5GdG846VfVsmvVigg0H54THhvA1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+          "width": 419
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/23eqsG99SIA03OQrFoRRodv4LgNS6kgDYTpmhVYGdOU/rs:fit/g:sm/q:90/h:350/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/23eqsG99SIA03OQrFoRRodv4LgNS6kgDYTpmhVYGdOU/rs:fit/g:sm/q:90/h:350/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/uN2-fV9hvOlnWZg0dcAKJo2Pj3NU3OEvVBEpLBCdM1U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+          "width": 406
+        },
+        {
+          "height": 281,
+          "resource_url": "https://i.discogs.com/pljwd_uOvdXylxODepK8xM8f2lGD3STd7IH2fgmy5C8/rs:fit/g:sm/q:90/h:281/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pljwd_uOvdXylxODepK8xM8f2lGD3STd7IH2fgmy5C8/rs:fit/g:sm/q:90/h:281/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/uOR99FTtOjnrboGX_C7NKlrU7cJtGXgYv_Ov2h9-vTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 200,
+          "resource_url": "https://i.discogs.com/9hZUx65U8QkAPees7fgf9nYIkOjSEuJlAFKiXFD3Ulo/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/9hZUx65U8QkAPees7fgf9nYIkOjSEuJlAFKiXFD3Ulo/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+          "uri150": "https://i.discogs.com/__Tmd996gT-OC_IvfWFutBrjFhLZoEvojINdr_eeI0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+          "width": 200
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/1SHkoH3HlDAYyMM69d1NS7TaI2L4FLR-30be1hp17jQ/rs:fit/g:sm/q:90/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/1SHkoH3HlDAYyMM69d1NS7TaI2L4FLR-30be1hp17jQ/rs:fit/g:sm/q:90/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/_lJlwW_UAvsUqRLCkivDdR6LlXpuVefMODofUO1OK8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 181,
+          "resource_url": "https://i.discogs.com/Y_ZHqpFfKjPN4KjBRLBa_ABPhjNd23w5RCXHF2kCURs/rs:fit/g:sm/q:90/h:181/w:279/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Y_ZHqpFfKjPN4KjBRLBa_ABPhjNd23w5RCXHF2kCURs/rs:fit/g:sm/q:90/h:181/w:279/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/KM2UkgaTo22QRAitvSTAnEPtmA9aUZ2Kxub8FTN0GRA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+          "width": 279
+        },
+        {
+          "height": 234,
+          "resource_url": "https://i.discogs.com/hFKRold-d9MVISPkU_fF3xf721dHUcciTm4N_NH-5bk/rs:fit/g:sm/q:90/h:234/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/hFKRold-d9MVISPkU_fF3xf721dHUcciTm4N_NH-5bk/rs:fit/g:sm/q:90/h:234/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ividxcuz7VyYGme7717vWwZzrgKPJ7PD6vcwQaW0KTY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+          "width": 400
+        },
+        {
+          "height": 427,
+          "resource_url": "https://i.discogs.com/bmpV2AlUVS6R20LginvnYvlXeaoPZZ8goQ9XPFIY7yw/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/bmpV2AlUVS6R20LginvnYvlXeaoPZZ8goQ9XPFIY7yw/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/fglMfjGYoPE301xg5wFNBr71dYQRPnnowM3QFqgYBms/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 421,
+          "resource_url": "https://i.discogs.com/ZvJ6DIiQlZdYOMOR9nSiTzS-IyB_F6kzVB2NXtnGzFU/rs:fit/g:sm/q:90/h:421/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZvJ6DIiQlZdYOMOR9nSiTzS-IyB_F6kzVB2NXtnGzFU/rs:fit/g:sm/q:90/h:421/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/gM0TnyJvFfuRrR2cFkyrWviqZnNCrVHSNxY5-8d7GQ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 757,
+          "resource_url": "https://i.discogs.com/yiXzwWiHiqh2U8cfq81oEGoPEYbG2vZqMqVEofHg7Bw/rs:fit/g:sm/q:90/h:757/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yiXzwWiHiqh2U8cfq81oEGoPEYbG2vZqMqVEofHg7Bw/rs:fit/g:sm/q:90/h:757/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Em9x0WiTEWMGtuOrdVqT1axVRZjScjgoKX09LiOdMfA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 11136,
+          "name": "Peter Gabriel",
+          "resource_url": "https://api.discogs.com/artists/11136",
+          "thumbnail_url": "https://i.discogs.com/zcHJzQscNmO-RyFRHpsVcLdEjwW9fAljYGymPsF-SJI/rs:fit/g:sm/q:40/h:440/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMTM2/LTEzNTAwMjI4NTQt/NDgxNC5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 51840,
+          "name": "Ray Wilson",
+          "resource_url": "https://api.discogs.com/artists/51840",
+          "thumbnail_url": "https://i.discogs.com/VSWfIobug8gBLREbSEv1RLZVQWZc_6bME0h81__RadM/rs:fit/g:sm/q:40/h:816/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxODQw/LTE0NTc5OTM1NjQt/NzEzMi5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 65784,
+          "name": "Anthony Phillips",
+          "resource_url": "https://api.discogs.com/artists/65784",
+          "thumbnail_url": "https://i.discogs.com/frll0xXnBI8-WzUxVJQAIcSczaHZNZWkS9mPinlwsKI/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1Nzg0/LTEyNDc2NTgyMDcu/anBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 101028,
+          "name": "Phil Collins",
+          "resource_url": "https://api.discogs.com/artists/101028",
+          "thumbnail_url": "https://i.discogs.com/C-cZ-NUXk4lOqWi67YSHuQPE1dTv1jm2S-HF_441nic/rs:fit/g:sm/q:40/h:400/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMTAy/OC0xNjIyMzI1NDY1/LTg0MzkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 125989,
+          "name": "Steve Hackett",
+          "resource_url": "https://api.discogs.com/artists/125989",
+          "thumbnail_url": "https://i.discogs.com/PUwF03dVtFBhaaoL2GeiYG8CaF4JpoiG_5TRAZwCmbs/rs:fit/g:sm/q:40/h:600/w:515/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNTk4/OS0xNDM2Mjg0MDA5/LTY5ODcuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 296372,
+          "name": "Mike Rutherford",
+          "resource_url": "https://api.discogs.com/artists/296372",
+          "thumbnail_url": "https://i.discogs.com/QJxlno9v5eBjRZ1wD4O1Mlxo0Mi7A15sQAVI7bTpfuI/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjM3/Mi0xNjQxODQ2Njkx/LTQzNDQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 336885,
+          "name": "Tony Banks",
+          "resource_url": "https://api.discogs.com/artists/336885",
+          "thumbnail_url": "https://i.discogs.com/zXX7roaTeCPZfe8snuuRIhGOTX3OVM82VTXQIbY-iUs/rs:fit/g:sm/q:40/h:434/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNjg4/NS0xMzY3NTI5MzUx/LTM2OTIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 403593,
+          "name": "John Mayhew",
+          "resource_url": "https://api.discogs.com/artists/403593",
+          "thumbnail_url": "https://i.discogs.com/DUT4C3skT_ej3z1vOUOtqcn-APOc3tfbmte3toAxhfU/rs:fit/g:sm/q:40/h:265/w:186/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMzU5/My0xMjQwNzcxMzE2/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 578617,
+          "name": "John Silver (2)",
+          "resource_url": "https://api.discogs.com/artists/578617",
+          "thumbnail_url": "https://i.discogs.com/AxYD8d-zDX6GXTj0Zeh5EJF3kotwO8dxt1tpVm7PVSQ/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3ODYx/Ny0xMjcwMDM5Njcw/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1778268,
+          "name": "Chris Stewart (7)",
+          "resource_url": "https://api.discogs.com/artists/1778268",
+          "thumbnail_url": "https://i.discogs.com/fruvynG6Kdv55EdaH22EIQ6V4LlR6fhsdlwy3smzzaA/rs:fit/g:sm/q:40/h:180/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzgy/NjgtMTI3MjAxMzYy/Ny5qcGVn.jpeg"
+        }
+      ],
+      "name": "Genesis",
+      "namevariations": [
+        "All",
+        "Genefis",
+        "Geneis",
+        "Genesus",
+        "Genisis",
+        "Gensis",
+        "Génesis",
+        "The Genesis",
+        "Дженезис",
+        "ジェネシス",
+        "創世紀合唱團",
+        "제네시스"
+      ],
+      "profile": "Formed at Charterhouse School, Godalming, Surrey, South East England, UK in 1967, Genesis are among the top 30 highest-selling recording artists of all time.\r\n\r\nTheir early work is characterized by complex song structures, elaborate instrumentation and the theatrical antics of founder member and vocalist [a=Peter Gabriel], who left the band August 15, 1975. Unable to find a suitable replacement, it was drummer [a=Phil Collins] who assumed lead vocal duties. This change, as well as the departure of guitarist [a=Steve Hackett], two years later, saw the remaining three members (Phil Collins, keyboardist [a=Tony Banks] and bassist/guitarist [a=Mike Rutherford]) move into more accessible pop-based music. This change in style resulted in a huge growth in Genesis' popularity throughout the 1980s and early 1990s.\r\n\r\nIn 1996 Phil Collins left to concentrate on his solo work and other projects, leaving erstwhile bandmates Mike Rutherford and Tony Banks to forge ahead with new recruit; [a=Stiltskin] vocalist [a=Ray Wilson]. This line-up lasted for one album only (1997's [i]Calling All Stations[/i]) and Genesis soon found itself on hiatus after the poor performance and critical reaction of the new album.\r\n\r\nIn 2006 – after years of speculation – Phil Collins, Tony Banks and Mike Rutherford reformed Genesis for the successful [i]Turn It On Again[/i] tour. A reunion involving ex-members Peter Gabriel and Steve Hackett remains much talked-about and unrealised.\r\n\r\nInducted into the [b]Rock & Roll Hall of Fame[/b] in 2010 (performer).\r\n\r\n[b]Band members:[/b]\r\n● [a=Peter Gabriel] – lead vocals, flute, percussion (1967–1975, 1978, 1982, 1999)\r\n● [a=Tony Banks] – keyboards, backing vocals (1967–1998, 1999, 2000, 2006–2007), 12 string acoustic guitar (1967–1979)\r\n● [a=Anthony Phillips] – guitar, backing vocals (1967–1970)\r\n● Mick Barnard – guitar (1970–1971)\r\n● [a=Steve Hackett] – guitar (1971–1977, 1982, 1999)\r\n● [a=Mike Rutherford] – bass, bass pedals, 6 & 12 string electric guitar, backing vocals (1967–1998, 1999, 2000, 2006–2007)\r\n● [a=Chris Stewart (7)] – drums, percussion (1967–1968)\r\n● [a=John Silver (2)] – drums, percussion (1968–1969)\r\n● [a=John Mayhew] – drums, percussion, backing vocals (1969–1970)\r\n● [a=Phil Collins] – drums, lead & backing vocals (1972–1996, 1999, 2000, 2006–2007)\r\n● [a=Ray Wilson] – lead vocals (1996–1998)\r\n\r\n[b]Touring/session musicians:[/b]\r\n● [a=Bill Bruford] – drums, percussion (1976)\r\n● [a=Chester Thompson] – drums, percussion (1977–1995, 2006–2007)\r\n● [a=Daryl Stuermer] – guitar, bass (1978-1995, 2006-present)\r\n● [a=Nir Zidkyahu] – drums, percussion (1996–1998)\r\n● [a=Nick D'Virgilio] – drums, percussion (on 1997 album [i]Calling All Stations[/i])\r\n● [a=Anthony Drennan] – guitar, bass (1998)\r\n● [a=Nicholas Collins] – drums (2021)",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 124506,
+        "images": [
+          {
+            "height": 200,
+            "resource_url": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/z0zMUi4CK4C8YPEUOKKzzU0pEOcA0zmZ_9ZHQ-p3Vz4/rs:fit/g:sm/q:90/h:200/w:273/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/7YcjOTOYu4TONQ0A0zb0PlDZE96gdu4BK8NELB2_e68/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+            "width": 273
+          },
+          {
+            "height": 316,
+            "resource_url": "https://i.discogs.com/D18B1Pbj_SSs7KmuXMSJNpNf45ZhNmFjTtfC5jm91zw/rs:fit/g:sm/q:90/h:316/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/D18B1Pbj_SSs7KmuXMSJNpNf45ZhNmFjTtfC5jm91zw/rs:fit/g:sm/q:90/h:316/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/I0WWDsAozm0_mqQyWLIwtv6PsTEBYDR3_9150KaB2Dg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNjU4NDE5MzAx/LTUwNTEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 475,
+            "resource_url": "https://i.discogs.com/GFHwRKF-QZj6GXouD-mvgwKuqGCU5tF5SD8CKxsV25g/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GFHwRKF-QZj6GXouD-mvgwKuqGCU5tF5SD8CKxsV25g/rs:fit/g:sm/q:90/h:475/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/BjpKeiek6Y6PBIYDodcFnceDaURhZONQ8JfG15L83k4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NTkw/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 217,
+            "resource_url": "https://i.discogs.com/UUgVJJ9aHJjPKk2J0hLm8aelB40h_0nV2A2czbWa328/rs:fit/g:sm/q:90/h:217/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UUgVJJ9aHJjPKk2J0hLm8aelB40h_0nV2A2czbWa328/rs:fit/g:sm/q:90/h:217/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Op9AA4y3a-DgYhHm4pKKKhExzwt3TtkODlyJB8u97r8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDM4MDI5NjE4/LTkwMjEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 429,
+            "resource_url": "https://i.discogs.com/C1dr9bWeQe9UDE6JIbHp4n1K65bmEKT9taP8cGgNetU/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/C1dr9bWeQe9UDE6JIbHp4n1K65bmEKT9taP8cGgNetU/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/01UUG8dMXfxnxBOEAoJFJiuPWOM90SssdT3dzs2lAB4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDAyOTc5OTUz/LTgxNTAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/GZsmQ7SjBYagS5xbF_RT6c0RXyu9q05TEXjcBpnOa-k/rs:fit/g:sm/q:90/h:500/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/GZsmQ7SjBYagS5xbF_RT6c0RXyu9q05TEXjcBpnOa-k/rs:fit/g:sm/q:90/h:500/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Uf4AXXyhlEhiHsNJRFyx-VhAVajjufzGMUdzsb5Nqn4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk3ODMwNzIx/LTY3MzUuanBlZw.jpeg",
+            "width": 400
+          },
+          {
+            "height": 360,
+            "resource_url": "https://i.discogs.com/TAtiWf8mDCQVm8fG5fGqPAhhOPROKhXToylMExxEmjY/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/TAtiWf8mDCQVm8fG5fGqPAhhOPROKhXToylMExxEmjY/rs:fit/g:sm/q:90/h:360/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/z4ec3JvVJ2m6OdFlT7xm4r8GXt51yrVJa-Tmg_l-Rfs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMTMzNzQwNjIx/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 288,
+            "resource_url": "https://i.discogs.com/9cinXcwsmrGoR1jEDhCMq3EUwYbVtAKGVthc5TOMiHQ/rs:fit/g:sm/q:90/h:288/w:512/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9cinXcwsmrGoR1jEDhCMq3EUwYbVtAKGVthc5TOMiHQ/rs:fit/g:sm/q:90/h:288/w:512/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/mk0awhhYytQbNjBZILXIeSZpGbnh8IfZvimNps_ye94/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0NjAw/LmpwZWc.jpeg",
+            "width": 512
+          },
+          {
+            "height": 265,
+            "resource_url": "https://i.discogs.com/Q6U3AeEyu_5tFuXr5CS5iXW2BFSfmwrAvaJR1FwzPJs/rs:fit/g:sm/q:90/h:265/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Q6U3AeEyu_5tFuXr5CS5iXW2BFSfmwrAvaJR1FwzPJs/rs:fit/g:sm/q:90/h:265/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/TTLELuGPpjRTBbIjjUJeuFORRSHE0ZRz8Fcp4FA5oLQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODgx/LmpwZWc.jpeg",
+            "width": 400
+          },
+          {
+            "height": 551,
+            "resource_url": "https://i.discogs.com/1Pre4Ft6hGZFggCqILmjniTpTbPXcDpkqP_-MBMe2Us/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1Pre4Ft6hGZFggCqILmjniTpTbPXcDpkqP_-MBMe2Us/rs:fit/g:sm/q:90/h:551/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/49-s0IhduHuLZPfYFirehyVvO-Ymcwg0nnW1g0zumTU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjgxOTU1NDg1/LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 332,
+            "resource_url": "https://i.discogs.com/8f87HGDzdCKzDQRnY9J4_LnB6rjPL7onKuQy9DoJGI8/rs:fit/g:sm/q:90/h:332/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/8f87HGDzdCKzDQRnY9J4_LnB6rjPL7onKuQy9DoJGI8/rs:fit/g:sm/q:90/h:332/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/Oo5jCXZOEowZwoxnn-k6HlGWE68xbGhXLPP81SAYmEk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM1OTI1/LmpwZWc.jpeg",
+            "width": 470
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/KpezidyjidgysuvQXKJrPF0yPo0vCJrIEaq1usHUeZY/rs:fit/g:sm/q:90/h:600/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/KpezidyjidgysuvQXKJrPF0yPo0vCJrIEaq1usHUeZY/rs:fit/g:sm/q:90/h:600/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/5IqI5SBnbxbzGNm5GdG846VfVsmvVigg0H54THhvA1M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjc0MzU0Njgy/LmpwZWc.jpeg",
+            "width": 419
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/23eqsG99SIA03OQrFoRRodv4LgNS6kgDYTpmhVYGdOU/rs:fit/g:sm/q:90/h:350/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/23eqsG99SIA03OQrFoRRodv4LgNS6kgDYTpmhVYGdOU/rs:fit/g:sm/q:90/h:350/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/uN2-fV9hvOlnWZg0dcAKJo2Pj3NU3OEvVBEpLBCdM1U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODkw/LmpwZWc.jpeg",
+            "width": 406
+          },
+          {
+            "height": 281,
+            "resource_url": "https://i.discogs.com/pljwd_uOvdXylxODepK8xM8f2lGD3STd7IH2fgmy5C8/rs:fit/g:sm/q:90/h:281/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pljwd_uOvdXylxODepK8xM8f2lGD3STd7IH2fgmy5C8/rs:fit/g:sm/q:90/h:281/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/uOR99FTtOjnrboGX_C7NKlrU7cJtGXgYv_Ov2h9-vTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjg0/LmpwZWc.jpeg",
+            "width": 400
+          },
+          {
+            "height": 200,
+            "resource_url": "https://i.discogs.com/9hZUx65U8QkAPees7fgf9nYIkOjSEuJlAFKiXFD3Ulo/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/9hZUx65U8QkAPees7fgf9nYIkOjSEuJlAFKiXFD3Ulo/rs:fit/g:sm/q:90/h:200/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+            "uri150": "https://i.discogs.com/__Tmd996gT-OC_IvfWFutBrjFhLZoEvojINdr_eeI0M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMDgzOTM4MzIy/LmpwZw.jpeg",
+            "width": 200
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/1SHkoH3HlDAYyMM69d1NS7TaI2L4FLR-30be1hp17jQ/rs:fit/g:sm/q:90/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/1SHkoH3HlDAYyMM69d1NS7TaI2L4FLR-30be1hp17jQ/rs:fit/g:sm/q:90/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/_lJlwW_UAvsUqRLCkivDdR6LlXpuVefMODofUO1OK8Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjI4NzY4ODcy/LmpwZWc.jpeg",
+            "width": 400
+          },
+          {
+            "height": 181,
+            "resource_url": "https://i.discogs.com/Y_ZHqpFfKjPN4KjBRLBa_ABPhjNd23w5RCXHF2kCURs/rs:fit/g:sm/q:90/h:181/w:279/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Y_ZHqpFfKjPN4KjBRLBa_ABPhjNd23w5RCXHF2kCURs/rs:fit/g:sm/q:90/h:181/w:279/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/KM2UkgaTo22QRAitvSTAnEPtmA9aUZ2Kxub8FTN0GRA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMzk0OTAxNzQ4/LTM2MTEuanBlZw.jpeg",
+            "width": 279
+          },
+          {
+            "height": 234,
+            "resource_url": "https://i.discogs.com/hFKRold-d9MVISPkU_fF3xf721dHUcciTm4N_NH-5bk/rs:fit/g:sm/q:90/h:234/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/hFKRold-d9MVISPkU_fF3xf721dHUcciTm4N_NH-5bk/rs:fit/g:sm/q:90/h:234/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ividxcuz7VyYGme7717vWwZzrgKPJ7PD6vcwQaW0KTY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xMjk4MDM2Mjkx/LmpwZWc.jpeg",
+            "width": 400
+          },
+          {
+            "height": 427,
+            "resource_url": "https://i.discogs.com/bmpV2AlUVS6R20LginvnYvlXeaoPZZ8goQ9XPFIY7yw/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/bmpV2AlUVS6R20LginvnYvlXeaoPZZ8goQ9XPFIY7yw/rs:fit/g:sm/q:90/h:427/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/fglMfjGYoPE301xg5wFNBr71dYQRPnnowM3QFqgYBms/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDcyODE4NzQ4/LTcwODAuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 421,
+            "resource_url": "https://i.discogs.com/ZvJ6DIiQlZdYOMOR9nSiTzS-IyB_F6kzVB2NXtnGzFU/rs:fit/g:sm/q:90/h:421/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZvJ6DIiQlZdYOMOR9nSiTzS-IyB_F6kzVB2NXtnGzFU/rs:fit/g:sm/q:90/h:421/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/gM0TnyJvFfuRrR2cFkyrWviqZnNCrVHSNxY5-8d7GQ8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjU2/LTc2ODEuanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 757,
+            "resource_url": "https://i.discogs.com/yiXzwWiHiqh2U8cfq81oEGoPEYbG2vZqMqVEofHg7Bw/rs:fit/g:sm/q:90/h:757/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yiXzwWiHiqh2U8cfq81oEGoPEYbG2vZqMqVEofHg7Bw/rs:fit/g:sm/q:90/h:757/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Em9x0WiTEWMGtuOrdVqT1axVRZjScjgoKX09LiOdMfA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNTE5MTMzOTA0/LTU1MzEuanBlZw.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 11136,
+            "name": "Peter Gabriel",
+            "resource_url": "https://api.discogs.com/artists/11136",
+            "thumbnail_url": "https://i.discogs.com/zcHJzQscNmO-RyFRHpsVcLdEjwW9fAljYGymPsF-SJI/rs:fit/g:sm/q:40/h:440/w:440/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMTM2/LTEzNTAwMjI4NTQt/NDgxNC5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 51840,
+            "name": "Ray Wilson",
+            "resource_url": "https://api.discogs.com/artists/51840",
+            "thumbnail_url": "https://i.discogs.com/VSWfIobug8gBLREbSEv1RLZVQWZc_6bME0h81__RadM/rs:fit/g:sm/q:40/h:816/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxODQw/LTE0NTc5OTM1NjQt/NzEzMi5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 65784,
+            "name": "Anthony Phillips",
+            "resource_url": "https://api.discogs.com/artists/65784",
+            "thumbnail_url": "https://i.discogs.com/frll0xXnBI8-WzUxVJQAIcSczaHZNZWkS9mPinlwsKI/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY1Nzg0/LTEyNDc2NTgyMDcu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 101028,
+            "name": "Phil Collins",
+            "resource_url": "https://api.discogs.com/artists/101028",
+            "thumbnail_url": "https://i.discogs.com/C-cZ-NUXk4lOqWi67YSHuQPE1dTv1jm2S-HF_441nic/rs:fit/g:sm/q:40/h:400/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMTAy/OC0xNjIyMzI1NDY1/LTg0MzkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 125989,
+            "name": "Steve Hackett",
+            "resource_url": "https://api.discogs.com/artists/125989",
+            "thumbnail_url": "https://i.discogs.com/PUwF03dVtFBhaaoL2GeiYG8CaF4JpoiG_5TRAZwCmbs/rs:fit/g:sm/q:40/h:600/w:515/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNTk4/OS0xNDM2Mjg0MDA5/LTY5ODcuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 296372,
+            "name": "Mike Rutherford",
+            "resource_url": "https://api.discogs.com/artists/296372",
+            "thumbnail_url": "https://i.discogs.com/QJxlno9v5eBjRZ1wD4O1Mlxo0Mi7A15sQAVI7bTpfuI/rs:fit/g:sm/q:40/h:800/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjM3/Mi0xNjQxODQ2Njkx/LTQzNDQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 336885,
+            "name": "Tony Banks",
+            "resource_url": "https://api.discogs.com/artists/336885",
+            "thumbnail_url": "https://i.discogs.com/zXX7roaTeCPZfe8snuuRIhGOTX3OVM82VTXQIbY-iUs/rs:fit/g:sm/q:40/h:434/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMzNjg4/NS0xMzY3NTI5MzUx/LTM2OTIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 403593,
+            "name": "John Mayhew",
+            "resource_url": "https://api.discogs.com/artists/403593",
+            "thumbnail_url": "https://i.discogs.com/DUT4C3skT_ej3z1vOUOtqcn-APOc3tfbmte3toAxhfU/rs:fit/g:sm/q:40/h:265/w:186/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQwMzU5/My0xMjQwNzcxMzE2/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 578617,
+            "name": "John Silver (2)",
+            "resource_url": "https://api.discogs.com/artists/578617",
+            "thumbnail_url": "https://i.discogs.com/AxYD8d-zDX6GXTj0Zeh5EJF3kotwO8dxt1tpVm7PVSQ/rs:fit/g:sm/q:40/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3ODYx/Ny0xMjcwMDM5Njcw/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1778268,
+            "name": "Chris Stewart (7)",
+            "resource_url": "https://api.discogs.com/artists/1778268",
+            "thumbnail_url": "https://i.discogs.com/fruvynG6Kdv55EdaH22EIQ6V4LlR6fhsdlwy3smzzaA/rs:fit/g:sm/q:40/h:180/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3Nzgy/NjgtMTI3MjAxMzYy/Ny5qcGVn.jpeg"
+          }
+        ],
+        "name": "Genesis",
+        "namevariations": [
+          "All",
+          "Genefis",
+          "Geneis",
+          "Genesus",
+          "Genisis",
+          "Gensis",
+          "Génesis",
+          "The Genesis",
+          "Дженезис",
+          "ジェネシス",
+          "創世紀合唱團",
+          "제네시스"
+        ],
+        "profile": "Formed at Charterhouse School, Godalming, Surrey, South East England, UK in 1967, Genesis are among the top 30 highest-selling recording artists of all time.\r\n\r\nTheir early work is characterized by complex song structures, elaborate instrumentation and the theatrical antics of founder member and vocalist [a=Peter Gabriel], who left the band August 15, 1975. Unable to find a suitable replacement, it was drummer [a=Phil Collins] who assumed lead vocal duties. This change, as well as the departure of guitarist [a=Steve Hackett], two years later, saw the remaining three members (Phil Collins, keyboardist [a=Tony Banks] and bassist/guitarist [a=Mike Rutherford]) move into more accessible pop-based music. This change in style resulted in a huge growth in Genesis' popularity throughout the 1980s and early 1990s.\r\n\r\nIn 1996 Phil Collins left to concentrate on his solo work and other projects, leaving erstwhile bandmates Mike Rutherford and Tony Banks to forge ahead with new recruit; [a=Stiltskin] vocalist [a=Ray Wilson]. This line-up lasted for one album only (1997's [i]Calling All Stations[/i]) and Genesis soon found itself on hiatus after the poor performance and critical reaction of the new album.\r\n\r\nIn 2006 – after years of speculation – Phil Collins, Tony Banks and Mike Rutherford reformed Genesis for the successful [i]Turn It On Again[/i] tour. A reunion involving ex-members Peter Gabriel and Steve Hackett remains much talked-about and unrealised.\r\n\r\nInducted into the [b]Rock & Roll Hall of Fame[/b] in 2010 (performer).\r\n\r\n[b]Band members:[/b]\r\n● [a=Peter Gabriel] – lead vocals, flute, percussion (1967–1975, 1978, 1982, 1999)\r\n● [a=Tony Banks] – keyboards, backing vocals (1967–1998, 1999, 2000, 2006–2007), 12 string acoustic guitar (1967–1979)\r\n● [a=Anthony Phillips] – guitar, backing vocals (1967–1970)\r\n● Mick Barnard – guitar (1970–1971)\r\n● [a=Steve Hackett] – guitar (1971–1977, 1982, 1999)\r\n● [a=Mike Rutherford] – bass, bass pedals, 6 & 12 string electric guitar, backing vocals (1967–1998, 1999, 2000, 2006–2007)\r\n● [a=Chris Stewart (7)] – drums, percussion (1967–1968)\r\n● [a=John Silver (2)] – drums, percussion (1968–1969)\r\n● [a=John Mayhew] – drums, percussion, backing vocals (1969–1970)\r\n● [a=Phil Collins] – drums, lead & backing vocals (1972–1996, 1999, 2000, 2006–2007)\r\n● [a=Ray Wilson] – lead vocals (1996–1998)\r\n\r\n[b]Touring/session musicians:[/b]\r\n● [a=Bill Bruford] – drums, percussion (1976)\r\n● [a=Chester Thompson] – drums, percussion (1977–1995, 2006–2007)\r\n● [a=Daryl Stuermer] – guitar, bass (1978-1995, 2006-present)\r\n● [a=Nir Zidkyahu] – drums, percussion (1996–1998)\r\n● [a=Nick D'Virgilio] – drums, percussion (on 1997 album [i]Calling All Stations[/i])\r\n● [a=Anthony Drennan] – guitar, bass (1998)\r\n● [a=Nicholas Collins] – drums (2021)",
+        "releases_url": "https://api.discogs.com/artists/124506/releases",
+        "resource_url": "https://api.discogs.com/artists/124506",
+        "uri": "https://www.discogs.com/artist/124506-Genesis",
+        "urls": [
+          "https://www.facebook.com/genesis",
+          "https://www.facebook.com/TheGenesisArchive/",
+          "https://www.genesis-music.com/",
+          "https://www.genesis-movement.org/",
+          "https://www.instagram.com/genesis_band/",
+          "https://www.ProgArchives.com/artist.asp?id=1",
+          "https://TheGenesisArchive.co.uk/",
+          "https://x.com/genesis_band",
+          "https://x.com/genesisarchive",
+          "https://x.com/WorldofGenesis",
+          "https://en.wikipedia.org/wiki/Genesis_(band)",
+          "https://www.imdb.com/name/nm1949500/",
+          "https://www.youtube.com/user/OfficialGenesis",
+          "https://www.youtube.com/thegenesisarchive"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/124506",
+      "thumb": "https://i.discogs.com/7YcjOTOYu4TONQ0A0zb0PlDZE96gdu4BK8NELB2_e68/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDUw/Ni0xNDk4NjYwNjM0/LTg4MzcuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/124506-Genesis",
+      "urls": [
+        "https://www.facebook.com/genesis",
+        "https://www.facebook.com/TheGenesisArchive/",
+        "https://www.genesis-music.com/",
+        "https://www.genesis-movement.org/",
+        "https://www.instagram.com/genesis_band/",
+        "https://www.ProgArchives.com/artist.asp?id=1",
+        "https://TheGenesisArchive.co.uk/",
+        "https://x.com/genesis_band",
+        "https://x.com/genesisarchive",
+        "https://x.com/WorldofGenesis",
+        "https://en.wikipedia.org/wiki/Genesis_(band)",
+        "https://www.imdb.com/name/nm1949500/",
+        "https://www.youtube.com/user/OfficialGenesis",
+        "https://www.youtube.com/thegenesisarchive"
+      ]
     },
     "lastfm": {
       "bio_content": "There are at least three bands using the moniker Genesis;\n\n1) Genesis were an English rock band formed at Charterhouse School, Godalming, Surrey, in 1967. The band's longest-existing and most commercially successful line-up consisted of keyboardist Tony Banks, bassist/guitarist Mike Rutherford and drummer/singer Phil Collins. In the 1970s, during which the band also included singer Peter Gabriel and guitarist Steve Hackett, Genesis were among the pioneers of progressive rock. Banks and Rutherford were the only constant members of the group.\n\nThe group were formed by five Charterhouse pupils, including Banks, Rutherford, Gabriel and guitarist Anthony Phillips, and named by former Charterhouse pupil and pop impresario Jonathan King, who arranged for them to record several singles and their debut album From Genesis to Revelation in 1969. After splitting from King, the band began touring, signed with Charisma Records and became a progressive rock band on Trespass (1970). Phillips departed after the album's recording, with Banks, Rutherford and Gabriel recruiting Collins and Hackett before recording Nursery Cryme (1971). Their live shows began to feature Gabriel's theatrical costumes and performances. Foxtrot (1972) was their first charting album in the UK and Selling England by the Pound (1973) reached number three, featuring their first UK hit \"I Know What I Like (In Your Wardrobe)\". The concept album The Lamb Lies Down on Broadway (1974) was promoted with a transatlantic tour and an elaborate stage show, before Gabriel left the group.\n\nCollins took over as lead singer, and as a four-piece the group released A Trick of the Tail and Wind & Wuthering (both 1976) with continued success. Hackett left Genesis in 1977, reducing the band to a three-piece of Banks, Rutherford and Collins. Their ninth studio album, ...And Then There Were Three... (1978), contained the band's first major hit \"Follow You Follow Me\". Their next five studio albums – Duke (1980), Abacab (1981), Genesis (1983), Invisible Touch (1986) and We Can't Dance (1991) – were also successful. Collins left Genesis in 1996, and Banks and Rutherford replaced him with singer Ray Wilson, who appeared on their final studio album Calling All Stations (1997). The disappointing commercial and critical reaction to the album led the group to disband.  In 2015, Collins announced an end to his retirement and speculated that a reunion with Banks and Rutherford would be possible, a view that Banks endorsed. In 2017, Rutherford said he was also amenable to a reunion tour if Collins was interested. Hackett said he would like a reunion of Genesis's 1971–1975 line-up, but stressed it was very unlikely, adding \"I won't say any more because I don't want to raise expectations.\" Collins published his autobiography in 2016 and stated in the introduction that he retired from Genesis in 2007. Banks, Rutherford and Collins reunited for the Turn It On Again Tour in 2007 and again in 2021 for The Last Domino? Tour.\n\nWith between 100 million and 150 million albums sold worldwide, Genesis are one of the world's best-selling music artists. Their discography includes 15 studio and 6 live albums. They have won numerous awards (including a Grammy Award for Best Concept Music Video with \"Land of Confusion\") and have inspired a number of tribute bands recreating Genesis shows from various stages of the band's career. In 2010, Genesis were inducted into the Rock and Roll Hall of Fame. \n\nGenesis identify first and foremost as songwriters. Though styles changed dramatically over the group's career, they were always built on musical contrasts and the willingness to experiment. Bruce Eder of AllMusic described Genesis' sound as \"ambitious, classical-tinged art rock\"\n\nMembers of the original line-up were exposed to classical and church music as well as rock artists of the 1960s, particularly the Beatles. Gabriel's vocal style was influenced by Otis Redding and other Stax artists. Some of Genesis's music was inspired by blues according to Hackett, who says that the sonic innovation of the electric guitar in the early 1970s came straight from this. In their early years, Genesis' music combined elements of the pop, folk and psychedelic genres. Several songs developed during Phillips' time in the band originated on 12-string guitars, often with unconventional tunings. By the 1970s, the group began to include fantasy and surreal elements in their lyrics, such as \"The Musical Box\". Nursery Cryme marks the first time electric instruments were used more extensively. A Trick of the Tail marked a return to the band's roots with acoustic passages and songs inspired by fantasy.\n\nEarly lyrics drew from psychedelia, fantasy, mythological figures and fairy tale themes. Gabriel emerged as one of the band's main lyricists who often incorporated puns and double entendres in his lines and track titles and addressed various themes including social commentary. Selling England by the Pound contains references to English culture of the time including \"Aisle of Plenty\", where four British supermarket chains are referenced to reflect the album's theme of commercialism. Literary sources are used as inspiration for many Genesis tracks; \"The Cinema Show\" is based on T. S. Eliot's poem The Waste Land, and Arthur C. Clarke's novel Childhood's End inspired the lyrics to \"Watcher of the Skies\".\n\nBy the time the group had slimmed down to the trio of Banks, Rutherford and Collins, they had decided to change lyrical styles, dealing more with everyday matters which connected with female fans. Collins's songs, in particular, were personal in nature. The group still featured humour in songs such as \"Illegal Alien\", and dealt with serious themes such as politics on \"Land of Confusion\" and commercialization on \"I Can't Dance\". Eder observed that by this point in the band's career, \"Collins possessed pop instincts that could thrive on mainstream radio and on the emerging MTV.\"\n\nBanks said that a common way of developing songs throughout the band's career was for Collins to play the rhythm, Rutherford to set up a groove and riffs and for him to add the harmonies and melodies on top. He cited the \"Apocalypse in 9/8\" section of \"Supper's Ready\", \"The Cinema Show\" and \"Domino\" as examples of this and says the restrictions it gave him allowed the group to produce straightforward pop songs such as \"Invisible Touch\" and \"Land of Confusion\" in later years.\n\nBanks has used a number of keyboards during Genesis' career, continually trying out new models, though he has used the piano regularly throughout the group's lifetime. In the 1970s he frequently used the Hammond organ, Hohner Pianet, Mellotron, RMI Electronic Piano and ARP Pro Soloist. In the 1980s, he used the Sequential Circuits Prophet 5 and Prophet 10, the ARP Quadra and various Korg synthesizers. For the Turn It On Again tour in 2007, his main keyboard was a Korg OASYS. As both a guitarist and bassist, Rutherford regularly swapped between the two roles and his trademark instrument with Genesis, particularly throughout the 1970s, was a double-neck guitar. In the 1980s and beyond, he favoured the Eric Clapton Stratocaster.\n\n2) In 1967, an American band was formed, also named Genesis. It was a psychedelic rock group based in Los Angeles which released one album In the Beginning, in 1968. The name conflict was known to the record label of UK Genesis, which is why their debut album From Genesis to Revelation coyly omitted the band's name except in the album title. While both bands suffered poor sales for their debuts, the US band broke up in late 1968 not long after one of their members was drafted into the army.\n\n3) A  Colombian group called Génesis also exists. If you are scrobbling songs by that group and have ended up on this page, please fix your tags to Génesis with the first \"e\" accented. <a href=\"https://www.last.fm/music/Genesis\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +707,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1850090,
+      "listeners": 1851035,
       "mbid": "c5725831-2596-48f1-8f1c-ebe237362860",
       "name": "Genesis",
-      "playcount": 59380562,
+      "playcount": 59418003,
       "similar_artists": [
         {
           "name": "Steve Hackett",
@@ -172,7 +743,7 @@
       "url": "https://www.last.fm/music/Genesis"
     },
     "spotify": {
-      "followers": 3648721,
+      "followers": 3650540,
       "genres": [
         "progressive rock",
         "art rock"
@@ -202,6 +773,6 @@
   },
   "spotify_id": "3CkvROUTQ6nRi9yQOcsB50",
   "spotify_url": "https://open.spotify.com/artist/3CkvROUTQ6nRi9yQOcsB50",
-  "updated_at": "2025-07-05T14:40:06.898878",
+  "updated_at": "2025-07-08T09:19:50.860538",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:43:30.703235",
   "discogs_id": "28085",
-  "discogs_url": "https://www.discogs.com/artist/28085",
-  "followers": 914844,
+  "discogs_url": "https://www.discogs.com/artist/28085-Nick-Drake",
+  "followers": 915323,
   "formed_date": null,
   "genres": [
     "Singer/Songwriter",
@@ -16,7 +16,7 @@
     "indie",
     "Mellow"
   ],
-  "id": null,
+  "id": "nick-drake-1751733813",
   "images": [
     {
       "height": 2000,
@@ -83,14 +83,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/dyoMaHQsj0PNAalYC_kNukV4be-VD03UaLGGOLl-0NU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "99ea432a-e3d8-42cb-9d5e-db316a6a8458",
   "lastfm_url": "https://www.last.fm/music/Nick+Drake",
   "local_images": {
-    "hi-res": "public/artist/nick-drake/nick-drake-hi-res.jpg",
-    "medium": "public/artist/nick-drake/nick-drake-medium.jpg",
-    "small": "public/artist/nick-drake/nick-drake-small.jpg"
+    "hi-res": "../public/artist/nick-drake/nick-drake-hi-res.jpg",
+    "medium": "../public/artist/nick-drake/nick-drake-medium.jpg",
+    "small": "../public/artist/nick-drake/nick-drake-small.jpg"
   },
   "name": "Nick Drake",
   "popularity": 63,
@@ -107,9 +119,353 @@
       "url": "https://music.apple.com/gb/artist/nick-drake/1285818"
     },
     "discogs": {
-      "id": 28085,
-      "original_name": "Nick Drake",
-      "role": ""
+      "cover_image": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "28085",
+      "images": [
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/dyoMaHQsj0PNAalYC_kNukV4be-VD03UaLGGOLl-0NU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+          "width": 585
+        },
+        {
+          "height": 424,
+          "resource_url": "https://i.discogs.com/-LTAKOKdcIH2IGJ9_C9qxelmstORlZSMv6HDBtsJBuY/rs:fit/g:sm/q:90/h:424/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-LTAKOKdcIH2IGJ9_C9qxelmstORlZSMv6HDBtsJBuY/rs:fit/g:sm/q:90/h:424/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/kQFa7vIOvfiRVeKkiYb_WXYScKLivCMbOY66lTJaZMg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+          "width": 404
+        },
+        {
+          "height": 316,
+          "resource_url": "https://i.discogs.com/AzysvP6607JQE3GY1Om3FJrWjvPHMbza5UyQv0-E6Lg/rs:fit/g:sm/q:90/h:316/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/AzysvP6607JQE3GY1Om3FJrWjvPHMbza5UyQv0-E6Lg/rs:fit/g:sm/q:90/h:316/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/bAPsdkRvC6coNdCIGhfVjrVOr9VHlTHbhqTcvZydydc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+          "width": 406
+        },
+        {
+          "height": 578,
+          "resource_url": "https://i.discogs.com/eFysTsEoAvVimxNONz-lmpRITMg7bddey9BVWXjdS5A/rs:fit/g:sm/q:90/h:578/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/eFysTsEoAvVimxNONz-lmpRITMg7bddey9BVWXjdS5A/rs:fit/g:sm/q:90/h:578/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QcaQ__s8BDLpbi4OlFKxt6HueBVX5xR5sTqf0KT3QVQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+          "width": 385
+        },
+        {
+          "height": 1220,
+          "resource_url": "https://i.discogs.com/6RsHpc-1HYHVT_GIyXsw7U37LJ9EDjDIT4FA5myGEG4/rs:fit/g:sm/q:90/h:1220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6RsHpc-1HYHVT_GIyXsw7U37LJ9EDjDIT4FA5myGEG4/rs:fit/g:sm/q:90/h:1220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Em4md3__tEWIH0RpF3H7AmU6jn62OOavTdZiElb2bR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 604,
+          "resource_url": "https://i.discogs.com/Ber-VbyvOPwwaHVq5fKtv28l-uEzrpRBmVWpHB_MICQ/rs:fit/g:sm/q:90/h:604/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Ber-VbyvOPwwaHVq5fKtv28l-uEzrpRBmVWpHB_MICQ/rs:fit/g:sm/q:90/h:604/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/EnMqtaqZ-Ecw8raT50dbw3YC_KhlUc6ksYNAbg2lkUs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+          "width": 500
+        },
+        {
+          "height": 218,
+          "resource_url": "https://i.discogs.com/53VcUTfyB8AyrW6i8A2SVAD-vFlSIJ7ppaMq2wrILmI/rs:fit/g:sm/q:90/h:218/w:291/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/53VcUTfyB8AyrW6i8A2SVAD-vFlSIJ7ppaMq2wrILmI/rs:fit/g:sm/q:90/h:218/w:291/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/oV6dlNrBdu7w2VDkmLXd3_WG8kBH1-cqk7Dg2pWwt-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+          "width": 291
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/0Gx8EvuP_0v0HvmhmTMuoRMa5chsOEGDWVWWl69uWJw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0Gx8EvuP_0v0HvmhmTMuoRMa5chsOEGDWVWWl69uWJw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/12xOGqzGiuNiLCszSLfWX98kgrEtj32LheNPRO2G5mo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 829,
+          "resource_url": "https://i.discogs.com/snZlr_aJXqkBHZEjAD4sUsl7eWWzV_4_XFn_h_y9m6Q/rs:fit/g:sm/q:90/h:829/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/snZlr_aJXqkBHZEjAD4sUsl7eWWzV_4_XFn_h_y9m6Q/rs:fit/g:sm/q:90/h:829/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mah-d7ypOko4QzUAqH-Fxe-gldX5Ul5oKBaWkbeBZUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+          "width": 597
+        },
+        {
+          "height": 560,
+          "resource_url": "https://i.discogs.com/495ZziCP2BucurJK1JXTylhsvQK-VbDMl0Uv7fWwon0/rs:fit/g:sm/q:90/h:560/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/495ZziCP2BucurJK1JXTylhsvQK-VbDMl0Uv7fWwon0/rs:fit/g:sm/q:90/h:560/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/vWf0DCkuUJphmyyJaU_fz1qvd4AryZNwZtfgOlfJqGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+          "width": 536
+        },
+        {
+          "height": 225,
+          "resource_url": "https://i.discogs.com/vlbNMlfxXVilt5XjUz9BdxPDib8tSNHPS4a3c48DD8U/rs:fit/g:sm/q:90/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/vlbNMlfxXVilt5XjUz9BdxPDib8tSNHPS4a3c48DD8U/rs:fit/g:sm/q:90/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/t5EFnooWBBRDhHmPL6nCxIW96DcOuEOIR8Z3_RwWTjk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+          "width": 225
+        },
+        {
+          "height": 326,
+          "resource_url": "https://i.discogs.com/nLB1z9ZI8XZfqU248BreSHoFoOAyWTUXEfLe1ApzSVo/rs:fit/g:sm/q:90/h:326/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nLB1z9ZI8XZfqU248BreSHoFoOAyWTUXEfLe1ApzSVo/rs:fit/g:sm/q:90/h:326/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/IqaXuCM-OwHGgs2fKvEB0w371ZbzPTpd6273EXkFF-o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 750,
+          "resource_url": "https://i.discogs.com/74STOIOyYdUXtyIMTJJMigv7XkIsVE2ghn84jFB5URM/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/74STOIOyYdUXtyIMTJJMigv7XkIsVE2ghn84jFB5URM/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/I-koPBqFKDOYpNR4JnmmfEpixfxoWOzHuAl_IPBW7zc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 418,
+          "resource_url": "https://i.discogs.com/4yCYmFeoZAlsoK5jde6JPNOar12QWeqgM4vpvrn14kE/rs:fit/g:sm/q:90/h:418/w:557/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4yCYmFeoZAlsoK5jde6JPNOar12QWeqgM4vpvrn14kE/rs:fit/g:sm/q:90/h:418/w:557/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/tibSQEscjVu2RqqTcoRLB2-GfcmmlE_ZXt8Uxgqkm3Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+          "width": 557
+        },
+        {
+          "height": 890,
+          "resource_url": "https://i.discogs.com/pvnf0xHmWuoli4GGL-IlbsPBLuthGmi9aIunBFYUSv0/rs:fit/g:sm/q:90/h:890/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pvnf0xHmWuoli4GGL-IlbsPBLuthGmi9aIunBFYUSv0/rs:fit/g:sm/q:90/h:890/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/G2n9wQcVrpMloGc56Fs-Jd-rcin--kB2BSdjcOCaoQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/yPivq_W81FEkse5CsjSGxnUk5_gJ9iWbxgFsYStfHRA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yPivq_W81FEkse5CsjSGxnUk5_gJ9iWbxgFsYStfHRA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/lZh01j74EtY85KHz5JDvmjMcSEvdV6Ysmk76Fhb-9NI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 750,
+          "resource_url": "https://i.discogs.com/fwG3tDjTfkJJoafTYpoQDK_SGs64dPHFHs_uRWj98Wc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/fwG3tDjTfkJJoafTYpoQDK_SGs64dPHFHs_uRWj98Wc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Qe35CENbyHUcagKwUh75ZyJ0iID3YnzDG51SyDJcmxU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "Nick Drake",
+      "namevariations": [
+        "Drake",
+        "Drake Nicholas",
+        "N Drake",
+        "N. Drake",
+        "N.Drake",
+        "Nicholas Alexander Drake",
+        "Nicholas Drake",
+        "Nicholas Rodney Drake",
+        "Nick",
+        "Nickolas Rodney Drake",
+        "ニック・ドレイク"
+      ],
+      "profile": "British folk singer-songwriter and guitarist (19 June 1948, Rangoon, Burma - 25 November 1974, Tanworth-in-Arden, England). He released three albums before his untimely death in 1974.\r\n\r\nFather: [a=Rodney Drake]\r\nMother: [a=Molly Drake]\r\nSister: [a=Gabrielle Drake]\r\nCousin (distant): [a533089]",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 968780,
+            "name": "The Family Trio",
+            "resource_url": "https://api.discogs.com/artists/968780",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 28085,
+        "images": [
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/cJH5t7wJF54eF-spCeMvZc5KaaRnGMJH_uI6AI5VbMM/rs:fit/g:sm/q:90/h:450/w:585/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/dyoMaHQsj0PNAalYC_kNukV4be-VD03UaLGGOLl-0NU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+            "width": 585
+          },
+          {
+            "height": 424,
+            "resource_url": "https://i.discogs.com/-LTAKOKdcIH2IGJ9_C9qxelmstORlZSMv6HDBtsJBuY/rs:fit/g:sm/q:90/h:424/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-LTAKOKdcIH2IGJ9_C9qxelmstORlZSMv6HDBtsJBuY/rs:fit/g:sm/q:90/h:424/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/kQFa7vIOvfiRVeKkiYb_WXYScKLivCMbOY66lTJaZMg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/MTI3MS5qcGVn.jpeg",
+            "width": 404
+          },
+          {
+            "height": 316,
+            "resource_url": "https://i.discogs.com/AzysvP6607JQE3GY1Om3FJrWjvPHMbza5UyQv0-E6Lg/rs:fit/g:sm/q:90/h:316/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/AzysvP6607JQE3GY1Om3FJrWjvPHMbza5UyQv0-E6Lg/rs:fit/g:sm/q:90/h:316/w:406/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/bAPsdkRvC6coNdCIGhfVjrVOr9VHlTHbhqTcvZydydc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzAt/OTQ2NS5qcGVn.jpeg",
+            "width": 406
+          },
+          {
+            "height": 578,
+            "resource_url": "https://i.discogs.com/eFysTsEoAvVimxNONz-lmpRITMg7bddey9BVWXjdS5A/rs:fit/g:sm/q:90/h:578/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/eFysTsEoAvVimxNONz-lmpRITMg7bddey9BVWXjdS5A/rs:fit/g:sm/q:90/h:578/w:385/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/QcaQ__s8BDLpbi4OlFKxt6HueBVX5xR5sTqf0KT3QVQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE2ODcxNjA1MzEt/NzkzNi5qcGVn.jpeg",
+            "width": 385
+          },
+          {
+            "height": 1220,
+            "resource_url": "https://i.discogs.com/6RsHpc-1HYHVT_GIyXsw7U37LJ9EDjDIT4FA5myGEG4/rs:fit/g:sm/q:90/h:1220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6RsHpc-1HYHVT_GIyXsw7U37LJ9EDjDIT4FA5myGEG4/rs:fit/g:sm/q:90/h:1220/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Em4md3__tEWIH0RpF3H7AmU6jn62OOavTdZiElb2bR4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQxNjIu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 604,
+            "resource_url": "https://i.discogs.com/Ber-VbyvOPwwaHVq5fKtv28l-uEzrpRBmVWpHB_MICQ/rs:fit/g:sm/q:90/h:604/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Ber-VbyvOPwwaHVq5fKtv28l-uEzrpRBmVWpHB_MICQ/rs:fit/g:sm/q:90/h:604/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/EnMqtaqZ-Ecw8raT50dbw3YC_KhlUc6ksYNAbg2lkUs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEyMDA5OTQwMjcu/anBlZw.jpeg",
+            "width": 500
+          },
+          {
+            "height": 218,
+            "resource_url": "https://i.discogs.com/53VcUTfyB8AyrW6i8A2SVAD-vFlSIJ7ppaMq2wrILmI/rs:fit/g:sm/q:90/h:218/w:291/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/53VcUTfyB8AyrW6i8A2SVAD-vFlSIJ7ppaMq2wrILmI/rs:fit/g:sm/q:90/h:218/w:291/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/oV6dlNrBdu7w2VDkmLXd3_WG8kBH1-cqk7Dg2pWwt-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEwOTcxNjEwMzIu/anBn.jpeg",
+            "width": 291
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/0Gx8EvuP_0v0HvmhmTMuoRMa5chsOEGDWVWWl69uWJw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0Gx8EvuP_0v0HvmhmTMuoRMa5chsOEGDWVWWl69uWJw/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/12xOGqzGiuNiLCszSLfWX98kgrEtj32LheNPRO2G5mo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1MzI3NjE0NjEt/Njk0MC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 829,
+            "resource_url": "https://i.discogs.com/snZlr_aJXqkBHZEjAD4sUsl7eWWzV_4_XFn_h_y9m6Q/rs:fit/g:sm/q:90/h:829/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/snZlr_aJXqkBHZEjAD4sUsl7eWWzV_4_XFn_h_y9m6Q/rs:fit/g:sm/q:90/h:829/w:597/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/mah-d7ypOko4QzUAqH-Fxe-gldX5Ul5oKBaWkbeBZUM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/ODEwNC5qcGVn.jpeg",
+            "width": 597
+          },
+          {
+            "height": 560,
+            "resource_url": "https://i.discogs.com/495ZziCP2BucurJK1JXTylhsvQK-VbDMl0Uv7fWwon0/rs:fit/g:sm/q:90/h:560/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/495ZziCP2BucurJK1JXTylhsvQK-VbDMl0Uv7fWwon0/rs:fit/g:sm/q:90/h:560/w:536/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/vWf0DCkuUJphmyyJaU_fz1qvd4AryZNwZtfgOlfJqGk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MTY4MC5qcGVn.jpeg",
+            "width": 536
+          },
+          {
+            "height": 225,
+            "resource_url": "https://i.discogs.com/vlbNMlfxXVilt5XjUz9BdxPDib8tSNHPS4a3c48DD8U/rs:fit/g:sm/q:90/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/vlbNMlfxXVilt5XjUz9BdxPDib8tSNHPS4a3c48DD8U/rs:fit/g:sm/q:90/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/t5EFnooWBBRDhHmPL6nCxIW96DcOuEOIR8Z3_RwWTjk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NjMyMi5qcGVn.jpeg",
+            "width": 225
+          },
+          {
+            "height": 326,
+            "resource_url": "https://i.discogs.com/nLB1z9ZI8XZfqU248BreSHoFoOAyWTUXEfLe1ApzSVo/rs:fit/g:sm/q:90/h:326/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/nLB1z9ZI8XZfqU248BreSHoFoOAyWTUXEfLe1ApzSVo/rs:fit/g:sm/q:90/h:326/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/IqaXuCM-OwHGgs2fKvEB0w371ZbzPTpd6273EXkFF-o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NTg3OC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 750,
+            "resource_url": "https://i.discogs.com/74STOIOyYdUXtyIMTJJMigv7XkIsVE2ghn84jFB5URM/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/74STOIOyYdUXtyIMTJJMigv7XkIsVE2ghn84jFB5URM/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/I-koPBqFKDOYpNR4JnmmfEpixfxoWOzHuAl_IPBW7zc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3MzAxNDMzNTct/NTM3OC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 418,
+            "resource_url": "https://i.discogs.com/4yCYmFeoZAlsoK5jde6JPNOar12QWeqgM4vpvrn14kE/rs:fit/g:sm/q:90/h:418/w:557/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4yCYmFeoZAlsoK5jde6JPNOar12QWeqgM4vpvrn14kE/rs:fit/g:sm/q:90/h:418/w:557/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/tibSQEscjVu2RqqTcoRLB2-GfcmmlE_ZXt8Uxgqkm3Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MzY3NC5qcGVn.jpeg",
+            "width": 557
+          },
+          {
+            "height": 890,
+            "resource_url": "https://i.discogs.com/pvnf0xHmWuoli4GGL-IlbsPBLuthGmi9aIunBFYUSv0/rs:fit/g:sm/q:90/h:890/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pvnf0xHmWuoli4GGL-IlbsPBLuthGmi9aIunBFYUSv0/rs:fit/g:sm/q:90/h:890/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/G2n9wQcVrpMloGc56Fs-Jd-rcin--kB2BSdjcOCaoQ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/MjQ2Ny5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/yPivq_W81FEkse5CsjSGxnUk5_gJ9iWbxgFsYStfHRA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yPivq_W81FEkse5CsjSGxnUk5_gJ9iWbxgFsYStfHRA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/lZh01j74EtY85KHz5JDvmjMcSEvdV6Ysmk76Fhb-9NI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE1NzgzNDYzMzYt/NzE1Ny5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 750,
+            "resource_url": "https://i.discogs.com/fwG3tDjTfkJJoafTYpoQDK_SGs64dPHFHs_uRWj98Wc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/fwG3tDjTfkJJoafTYpoQDK_SGs64dPHFHs_uRWj98Wc/rs:fit/g:sm/q:90/h:750/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Qe35CENbyHUcagKwUh75ZyJ0iID3YnzDG51SyDJcmxU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTE3NDE3NjY1Njkt/OTYyNC5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "Nick Drake",
+        "namevariations": [
+          "Drake",
+          "Drake Nicholas",
+          "N Drake",
+          "N. Drake",
+          "N.Drake",
+          "Nicholas Alexander Drake",
+          "Nicholas Drake",
+          "Nicholas Rodney Drake",
+          "Nick",
+          "Nickolas Rodney Drake",
+          "ニック・ドレイク"
+        ],
+        "profile": "British folk singer-songwriter and guitarist (19 June 1948, Rangoon, Burma - 25 November 1974, Tanworth-in-Arden, England). He released three albums before his untimely death in 1974.\r\n\r\nFather: [a=Rodney Drake]\r\nMother: [a=Molly Drake]\r\nSister: [a=Gabrielle Drake]\r\nCousin (distant): [a533089]",
+        "realname": "Nicholas Rodney Drake",
+        "releases_url": "https://api.discogs.com/artists/28085/releases",
+        "resource_url": "https://api.discogs.com/artists/28085",
+        "uri": "https://www.discogs.com/artist/28085-Nick-Drake",
+        "urls": [
+          "https://www.brytermusic.com/",
+          "https://web.archive.org/web/20050207080934/http://www.nickdrake.com/",
+          "https://en.wikipedia.org/wiki/Nick_Drake",
+          "https://www.setlist.fm/setlists/nick-drake-bd6d16e.html",
+          "https://www.rockzirkus.de/blog/2020/07/nick-drake-tragische-rocker-1/",
+          "https://www.music-info-net.com/pro/tragik-rock/2486190_tragik-rock-nicholas-rodney-drake-uk"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/28085",
+      "thumb": "https://i.discogs.com/dyoMaHQsj0PNAalYC_kNukV4be-VD03UaLGGOLl-0NU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MDg1/LTEzNDA4OTE2MzIt/MTU4MC5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/28085-Nick-Drake",
+      "urls": [
+        "https://www.brytermusic.com/",
+        "https://web.archive.org/web/20050207080934/http://www.nickdrake.com/",
+        "https://en.wikipedia.org/wiki/Nick_Drake",
+        "https://www.setlist.fm/setlists/nick-drake-bd6d16e.html",
+        "https://www.rockzirkus.de/blog/2020/07/nick-drake-tragische-rocker-1/",
+        "https://www.music-info-net.com/pro/tragik-rock/2486190_tragik-rock-nicholas-rodney-drake-uk"
+      ]
     },
     "lastfm": {
       "bio_content": "Nick Drake (Nicholas Rodney Drake, Yangon, Myanmar, June 19, 1948 - Tanworth-in-Arden, England, November 25, 1974) was an English folk singer known for his gentle, enigmatic songs and his virtuosic right-hand finger picking technique.\n\nAlthough he recorded only three albums, critics and fellow musicians hold his work in very high esteem. Drake failed to find a wide audience during his lifetime and had a strong aversion to performing. Since his death, however, Drake's music has gained a significant cult following. \n\nDrake's father worked as an engineer. Although he was born in Rangoon, Burma, Nick's family moved back to England soon afterward, and Drake was brought up in Tanworth-in-Arden, a small village in the English county of Warwickshire. He went to public school at Marlborough College, where he learned to play the clarinet and piano. As a young adult, Drake enrolled in Fitzwilliam College, Cambridge, to study English. His older sister, Gabrielle Drake, is an actress.\n\nDrake was a fan of British and the emerging American folk music scene, including artists Bob Dylan and Phil Ochs. While a university student, Drake began performing in local clubs and coffee houses. He was discovered by Ashley Hutchings, the bass player of the folk rock group Fairport Convention. Hutchings introduced Drake to the other members of Fairport Convention, folk singer John Martyn and producer Joe Boyd.\n\nHe delayed attendance to spend six months at the University of Aix-Marseille, France, beginning in February 1967. While in Aix, he began to practice guitar in earnest and to earn money would often busk with friends in the town centre. Drake began to smoke cannabis, and that spring he traveled with friends to Morocco, because, according to traveling companion Richard Charkin, \"that was where you got the best pot\". Drake's associates convinced Island Records to sign the young singer-songwriter to a three-album contract. Drake began recording his debut album Five Leaves Left later in 1968, with Boyd assuming the role of producer. The sessions took place in Sound Techniques studio, London, with Drake skipping lectures to travel by train to the capital. At the age of twenty, he released his first album Five Leaves Left (1969), which featured a chamber music quartet on several songs and had a light, breezy sound. Drake's second album Bryter Layter (1970) introduced a more upbeat, jazzier sound, with keyboards, horns and several brass instruments. Both albums were produced by Boyd and featured several members of Fairport Convention.\n\nMany accounts of Drake focus on his mythology, but a large part of his enduring popularity is due to his meticulous songwriting, prosody, odd guitar tunings and lyricism.\n\nDrake was pathologically shy and resented touring. The few concerts he did play were usually in support of other British folk acts of the time, such as Fairport Convention or John Martyn and were often brief and awkward. Partially because of this, his work received little attention and sold poorly. Whilst in the recording studio, he was so shy that he'd always play into the wall so as to avoid people's gazes.\n\nSeverely depressed and doubting his abilities as a musician, Drake recorded his final album Pink Moon (1972) in two two-hour sessions, both starting at midnight. The songs of Pink Moon were short (the album consists of eleven of them and lasts only 28 minutes) and emotionally bleak.  Drake recorded them unaccompanied, in the presence of only a sound engineer (a piano was later overdubbed on the title track). Naked and sincere, it is widely thought to be his best work. \n\nAt this point, he considered other careers including the army and computer programming, but more suitably as a songwriter for other artists. However, none of Drake's plans materialized. In the next few months, Drake grew severely depressed and maintained relationships only with close friends such as John Martyn, who wrote the title song of his 1973 album Solid Air for and about Drake and with Sophia Ryde. He was hospitalized several times and lived with Hardy for a few months. Friends from that time have described how much his appearance changed: his nails grown, his hair and frame gaunt and thin.\n\nIn 1974, Drake felt well enough to write and record a few new songs. However, on November 25, he died of an overdose of antidepressants. The coroner concluded that the cause of Drake's death was suicide, although this was disputed by friends and relatives. Antidepressants of that time were quite lethal if ingested in any higher dosage than the one prescribed. His mother recounts that he must have had difficulty sleeping and had got up in the night to have a bowl of cornflakes. It's unclear whether he took more pills to help him sleep or to take his own life.\n\nHis simple gravestone in the Tanworth churchyard bears the line \"And now we rise/And we are everywhere\", taken from From the Morning - the last song on the last album Nick lived to complete.\n\nPosthumous popularity\nSince Drake’s death, his music has grown steadily in popularity. Several modern musicians, such as Lucinda Williams, Badly Drawn Boy, Matthew Good, Sebadoh's Lou Barlow, R.E.M. guitarist Peter Buck, Blur’s Graham Coxon, and Belle and Sebastian, consider Drake an important influence. In early 1999, BBC2 aired a 40-minute Nick Drake documentary, \"A Stranger Among Us — In Search of Nick Drake\", as part of its Picture This strand. The following year saw the release of a documentary by Dutch director Jeroen Berkvens, titled A Skin Too Few: The Days of Nick Drake and featuring interviews with Joe Boyd, Gabrielle Drake, audio engineer John Wood, and arranger Robert Kirby. Brad Pitt is a fan of Drake and, in 2004, he narrated a BBC radio documentary about the singer.\n\nIsland has responded to Drake’s popularity with several new releases including Time of No Reply (1986), an album of unreleased material including four new songs recorded in 1974, Way to Blue: An Introduction to Nick Drake (1994), a \"best of\" album, remastered HDCD releases of his three studio albums in 2000, and Made to Love Magic (2004), featuring one new track and some newly recorded orchestration for a previously released track. A replacement for Way to Blue called A Treasury was also released in 2004 on Hybrid-SACD.\n\nIn 2000, Volkswagen licensed the track Pink Moon, the title track from Nick's third release, for a particularly serene car commercial in the US. The advertisement caused a significant bounce in Drake’s popularity, bolstered by uses of Drake's music on a number of film soundtracks, including 1998's Hideous Kinky and Practical Magic (featuring \"Road\" from Pink Moon and \"Black Eyed Dog\" from Time of No Reply, respectively). In 2001, two Bryter Layter tracks appeared in mainstream films: \"Northern Sky\" in Serendipity, and \"Fly\" in The Royal Tenenbaums. In the same year, \"Cello Song\" from Five Leaves Left was featured in Me Without You. In 2004, \"One of These Things First\" appeared in Garden State and \"Northern Sky\" was featured again, this time in Fever Pitch.\n\nDrake's \"River Man\" has become quite popular among Jazz musicians. A piano improvisation based on the melody was released by Brad Mehldau on the album \"Progression: Art Of The Trio, Volume 5\", and a Jazz vocal version by Claire Martin appears on the album Take My Heart.\n\nDrake's posthumous popularity has made many fans consider the lyrics to \"Fruit Tree\" a song from Five Leaves Left prophetic: “Fame is but a fruit tree / So very unsound. / It can never flourish / Till its stock is in the ground. / So men of fame / Can never find a way / Till time has flown / Far from their dying day.” In 2004 two of his singles reached low positions in the UK charts - \"Magic\" and \"River Man\".\n\nMost recently, Nick Drake has emerged as a key influence in the resurgence of 1960's and 1970's folk traditions, apparent in the works of artists including Devendra Banhart, Joanna Newsom, and Six Organs of Admittance.\n\nIn 2005, performer Beck updated his website during Christmas time with covers of three songs from Pink Moon: \"Pink Moon\", \"Which Will\" and \"Parasite.\"\n\nFamily Tree, the next Bryter Music/Island record was released in July 2007. <a href=\"https://www.last.fm/music/Nick+Drake\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -140,10 +496,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 2032879,
+      "listeners": 2033370,
       "mbid": "99ea432a-e3d8-42cb-9d5e-db316a6a8458",
       "name": "Nick Drake",
-      "playcount": 77787541,
+      "playcount": 77829570,
       "similar_artists": [
         {
           "name": "Elliott Smith",
@@ -176,7 +532,7 @@
       "url": "https://www.last.fm/music/Nick+Drake"
     },
     "spotify": {
-      "followers": 914844,
+      "followers": 915323,
       "genres": [
         "folk",
         "singer-songwriter"
@@ -211,6 +567,6 @@
   },
   "spotify_id": "5c3GLXai8YOMid29ZEuR9y",
   "spotify_url": "https://open.spotify.com/artist/5c3GLXai8YOMid29ZEuR9y",
-  "updated_at": "2025-07-05T17:43:33.420959",
+  "updated_at": "2025-07-08T09:32:33.234889",
   "wikipedia_url": null
 }

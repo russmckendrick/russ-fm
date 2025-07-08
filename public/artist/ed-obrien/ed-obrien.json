@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:14:20.859650",
   "discogs_id": "365794",
-  "discogs_url": "https://www.discogs.com/artist/365794",
-  "followers": 4029,
+  "discogs_url": "https://www.discogs.com/artist/365794-Ed-OBrien",
+  "followers": 4034,
   "formed_date": null,
   "genres": [
     "radiohead",
@@ -15,7 +15,7 @@
     "indie",
     "rock"
   ],
-  "id": null,
+  "id": "ed-o'brien-1751728461",
   "images": [
     {
       "height": 1000,
@@ -76,22 +76,233 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/ihDNGuQIuXj2Zag88xJGFqvDHXEzhmzqmb9QYNqz8XE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Ed+O%27Brien",
   "local_images": {
-    "hi-res": "public/artist/ed-obrien/ed-obrien-hi-res.jpg",
-    "medium": "public/artist/ed-obrien/ed-obrien-medium.jpg",
-    "small": "public/artist/ed-obrien/ed-obrien-small.jpg"
+    "hi-res": "../public/artist/ed-obrien/ed-obrien-hi-res.jpg",
+    "medium": "../public/artist/ed-obrien/ed-obrien-medium.jpg",
+    "small": "../public/artist/ed-obrien/ed-obrien-small.jpg"
   },
   "name": "Ed O'Brien",
   "popularity": 36,
   "services": {
+    "apple_music": {},
     "discogs": {
-      "id": 365794,
-      "original_name": "Ed O'Brien",
-      "role": ""
+      "cover_image": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "365794",
+      "images": [
+        {
+          "height": 557,
+          "resource_url": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ihDNGuQIuXj2Zag88xJGFqvDHXEzhmzqmb9QYNqz8XE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+          "width": 409
+        },
+        {
+          "height": 359,
+          "resource_url": "https://i.discogs.com/j_MpZeNipbkzNM0ibKpwSILlTxk2eknSA9Wr8j-FA9o/rs:fit/g:sm/q:90/h:359/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/j_MpZeNipbkzNM0ibKpwSILlTxk2eknSA9Wr8j-FA9o/rs:fit/g:sm/q:90/h:359/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Ye0677BQbthba4gbqMik_VoBBw4jWPwCXCNrg9SXtx8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 469,
+          "resource_url": "https://i.discogs.com/rlus7j9VDf8lEnZjF_ZW6Ju5IE7WS-2zjjIeGDMnXdU/rs:fit/g:sm/q:90/h:469/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rlus7j9VDf8lEnZjF_ZW6Ju5IE7WS-2zjjIeGDMnXdU/rs:fit/g:sm/q:90/h:469/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0gEYu6vtFdldjEHvrhYGkWELvFYA-qsh2UryPoMzdHQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+          "width": 469
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/f39mLr8slHalX10Y2VCSULD3kx-Cu7XCU6FJYBh77qU/rs:fit/g:sm/q:90/h:400/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/f39mLr8slHalX10Y2VCSULD3kx-Cu7XCU6FJYBh77qU/rs:fit/g:sm/q:90/h:400/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/f4iqD0viMPiyZfzG6a5v0s3PmhX78FmoYaKks-iMl6k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+          "width": 280
+        }
+      ],
+      "members": [],
+      "name": "Ed O'Brien",
+      "namevariations": [
+        "Brien",
+        "E O'Brien",
+        "E. J. O'Brien",
+        "E. O'Brian",
+        "E. O'Brien",
+        "E. O'brien",
+        "E. Obrien",
+        "E. O’Brien",
+        "E.J. O'Brien",
+        "E.O'Brien",
+        "EOB",
+        "Ed",
+        "Ed O' Brien",
+        "Ed O'B",
+        "Ed O'Brein",
+        "Ed O'Brian",
+        "Edward A. O'Brien",
+        "Edward J O'Brien",
+        "Edward J. O'Brien",
+        "Edward John O Brien",
+        "Edward John O'Brian",
+        "Edward John O'Brien",
+        "Edward John O'brien",
+        "Edward John O’Brien",
+        "Edward O Brien",
+        "Edward O'Brian",
+        "Edward O'Brie",
+        "Edward O'Brien",
+        "J. O Brien",
+        "John O'Brien",
+        "O Brien",
+        "O' Brian",
+        "O'Brian",
+        "O'Brien",
+        "O'Brien Edward",
+        "O'Brien, Edward John",
+        "O'Brien/Edward John",
+        "O’Brien Edward John"
+      ],
+      "profile": "English musician, songwriter and guitarist, born 15 April 1968 in Oxford, UK.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 3840,
+            "name": "Radiohead",
+            "resource_url": "https://api.discogs.com/artists/3840",
+            "thumbnail_url": "https://i.discogs.com/EeVdLAokr7VwdzJfA61Hm2WXBtCbzDwLNI0sLL7aUuc/rs:fit/g:sm/q:40/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NDAt/MTM4NjM1MjI4NS04/ODIyLmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 840842,
+            "name": "On A Friday",
+            "resource_url": "https://api.discogs.com/artists/840842",
+            "thumbnail_url": "https://i.discogs.com/nv6IMTLHwoEw2Pg9taWI1SoKdkHeLZglErt1auTSAxM/rs:fit/g:sm/q:40/h:468/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg0MDg0/Mi0xNjIyMDI3MjY4/LTk3NzQucG5n.jpeg"
+          },
+          {
+            "active": true,
+            "id": 15784026,
+            "name": "1000 UK Artists",
+            "resource_url": "https://api.discogs.com/artists/15784026",
+            "thumbnail_url": "https://i.discogs.com/slubwP-Y8_MxfQWnv9h1__0dkvZ3E79XmXMMCJC53W0/rs:fit/g:sm/q:40/h:441/w:441/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1Nzg0/MDI2LTE3NDA1MTQ5/NjktNTcyMS5wbmc.jpeg"
+          }
+        ],
+        "id": 365794,
+        "images": [
+          {
+            "height": 557,
+            "resource_url": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/hoCBKrSZUICxePD9JV4ReHLI2Hq1pSOXLaIB3GQbhRo/rs:fit/g:sm/q:90/h:557/w:409/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ihDNGuQIuXj2Zag88xJGFqvDHXEzhmzqmb9QYNqz8XE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+            "width": 409
+          },
+          {
+            "height": 359,
+            "resource_url": "https://i.discogs.com/j_MpZeNipbkzNM0ibKpwSILlTxk2eknSA9Wr8j-FA9o/rs:fit/g:sm/q:90/h:359/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/j_MpZeNipbkzNM0ibKpwSILlTxk2eknSA9Wr8j-FA9o/rs:fit/g:sm/q:90/h:359/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Ye0677BQbthba4gbqMik_VoBBw4jWPwCXCNrg9SXtx8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTg3MTkwOTI5/LTczODguanBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 469,
+            "resource_url": "https://i.discogs.com/rlus7j9VDf8lEnZjF_ZW6Ju5IE7WS-2zjjIeGDMnXdU/rs:fit/g:sm/q:90/h:469/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rlus7j9VDf8lEnZjF_ZW6Ju5IE7WS-2zjjIeGDMnXdU/rs:fit/g:sm/q:90/h:469/w:469/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0gEYu6vtFdldjEHvrhYGkWELvFYA-qsh2UryPoMzdHQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNTM2MTU3ODA1/LTE2NTQuanBlZw.jpeg",
+            "width": 469
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/f39mLr8slHalX10Y2VCSULD3kx-Cu7XCU6FJYBh77qU/rs:fit/g:sm/q:90/h:400/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/f39mLr8slHalX10Y2VCSULD3kx-Cu7XCU6FJYBh77qU/rs:fit/g:sm/q:90/h:400/w:280/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/f4iqD0viMPiyZfzG6a5v0s3PmhX78FmoYaKks-iMl6k/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xMTQyODczMDE4/LmpwZWc.jpeg",
+            "width": 280
+          }
+        ],
+        "name": "Ed O'Brien",
+        "namevariations": [
+          "Brien",
+          "E O'Brien",
+          "E. J. O'Brien",
+          "E. O'Brian",
+          "E. O'Brien",
+          "E. O'brien",
+          "E. Obrien",
+          "E. O’Brien",
+          "E.J. O'Brien",
+          "E.O'Brien",
+          "EOB",
+          "Ed",
+          "Ed O' Brien",
+          "Ed O'B",
+          "Ed O'Brein",
+          "Ed O'Brian",
+          "Edward A. O'Brien",
+          "Edward J O'Brien",
+          "Edward J. O'Brien",
+          "Edward John O Brien",
+          "Edward John O'Brian",
+          "Edward John O'Brien",
+          "Edward John O'brien",
+          "Edward John O’Brien",
+          "Edward O Brien",
+          "Edward O'Brian",
+          "Edward O'Brie",
+          "Edward O'Brien",
+          "J. O Brien",
+          "John O'Brien",
+          "O Brien",
+          "O' Brian",
+          "O'Brian",
+          "O'Brien",
+          "O'Brien Edward",
+          "O'Brien, Edward John",
+          "O'Brien/Edward John",
+          "O’Brien Edward John"
+        ],
+        "profile": "English musician, songwriter and guitarist, born 15 April 1968 in Oxford, UK.",
+        "realname": "Edward John O'Brien",
+        "releases_url": "https://api.discogs.com/artists/365794/releases",
+        "resource_url": "https://api.discogs.com/artists/365794",
+        "uri": "https://www.discogs.com/artist/365794-Ed-OBrien",
+        "urls": [
+          "http://equipboard.com/pros/ed-o-brien",
+          "https://books.discogs.com/credit/186786-ed-obrien",
+          "https://en.wikipedia.org/wiki/Ed_O%27Brien"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/365794",
+      "thumb": "https://i.discogs.com/ihDNGuQIuXj2Zag88xJGFqvDHXEzhmzqmb9QYNqz8XE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2NTc5/NC0xNjQ0MDk0NTYz/LTU5NzYuanBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/365794-Ed-OBrien",
+      "urls": [
+        "http://equipboard.com/pros/ed-o-brien",
+        "https://books.discogs.com/credit/186786-ed-obrien",
+        "https://en.wikipedia.org/wiki/Ed_O%27Brien"
+      ]
     },
     "lastfm": {
       "bio_content": "Edward John O'Brien (born 15 April 1968, in Oxford, England) is songwriter and one of three guitarists for Radiohead. He is also responsible for harmony vocals during live concerts and on many tracks from the band's albums (occasionally with drummer Phil Selway). In addition, he has played guitar and provided backing vocals for the 7 Worlds Collide project.\n\nHe was ranked #60 on Rolling Stone's \"100 Greatest Guitarists of All Time\" list.\n\nWith Radiohead:\nO'Brien is known for his large collection of effects pedals, which are important in creating Radiohead's distinct sound. Even on tracks that do not feature any guitar work, his pedals are put to use for other purposes, such as altering Thom Yorke's vocals (he along with Jonny Greenwood uses the Korg Kaoss Pad). As well as being a self-taught guitarist, he is an accomplished drummer; though his only drum contributions for Radiohead to date have been the auxiliary drums on Hail to the Thief track \"There There\", a task he shared with Jonny Greenwood, and an additional drum piece on the b-side Pearly*.\n\nNotable songwriting contributions to Radiohead include the opening riff on the songs \"Go to Sleep\", and the riff that makes up the closing song on The Bends, \"Street Spirit (Fade Out)\". He has also written the instrumental \"Meeting in the Aisle\", \"Lull\", and the music to \"Big Boots\".[citation needed]\n\nHe mainly helps to expand on the musical framework created by Thom Yorke, and is known for his contributions to \"Karma Police\", (creating the effect that closes the song), \"Lucky\" (he created the effect that opens the song, and his backing vocals during the chorus are an integral part of the track) and \"Treefingers\" (his guitar chords were processed electronically to sound like ambient music).\n\nDuring live shows, he provides backing vocals to many songs including \"Blow Out\", \"The Trickster\", \"Street Spirit (Fade Out)\", \"Black Star\", \"Paranoid Android\", \"No Surprises\", \"Lucky\", \"Electioneering\", \"The Tourist\", \"Karma Police\", \"Idioteque\", \"Morning Bell\", \"You And Whose Army?\", \"Dollars and Cents\", \"2+2=5\", \"Sit Down. Stand Up.\", \"I Will\", \"The Gloaming\", \"There There\", \"Weird Fishes/Arpeggi\", and \"Reckoner\".\n\nWork outside Radiohead:\nO'Brien made contributions to a soundtrack project for the BBC drama series Eureka Street before recording Kid A. During sessions for Kid A and Amnesiac, he kept fans up to date with an open diary posted on the band's website\n \n, providing the most in-depth look at how those experimental albums were recorded. His most recent collaboration outside Radiohead involved guitar work on an Asian Dub Foundation album; he played on \"1000 Mirrors\" (with Sinéad O'Connor), \"Blowback\" and \"Enemy of the Enemy\".\n\nO'Brien has toured and recorded with Neil Finn as part of the 7 Worlds Collide project. He provided guitar and backing vocals on their eponymous 2001 live album, and reprised his role on their 2009 studio album, The Sun Came Out, where he also co-wrote two tracks.\n\nO'Brien and bandmate Phil Selway had programming lessons with producer/engineer Phelan Kane at Tech Music Schools in London in 2001, and the same two band members also joined the 7 Worlds Collide project.\n\nO’Brien is a founding director of the Featured Artists Coalition. <a href=\"https://www.last.fm/music/Ed+O%27Brien\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -125,7 +336,7 @@
       "listeners": 256,
       "mbid": null,
       "name": "Ed O'Brien",
-      "playcount": 1729,
+      "playcount": 1740,
       "similar_artists": [
         {
           "name": "On a Friday",
@@ -158,7 +369,7 @@
       "url": "https://www.last.fm/music/Ed+O%27Brien"
     },
     "spotify": {
-      "followers": 4029,
+      "followers": 4034,
       "genres": [],
       "id": "3E7aH1Yv84NoaP9JWcrMpE",
       "images": [
@@ -190,6 +401,6 @@
   },
   "spotify_id": "3E7aH1Yv84NoaP9JWcrMpE",
   "spotify_url": "https://open.spotify.com/artist/3E7aH1Yv84NoaP9JWcrMpE",
-  "updated_at": "2025-07-05T16:14:21.810860",
+  "updated_at": "2025-07-08T09:58:04.710715",
   "wikipedia_url": null
 }

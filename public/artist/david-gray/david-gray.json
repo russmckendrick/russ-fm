@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:17:08.922885",
   "discogs_id": "63853",
-  "discogs_url": "https://www.discogs.com/artist/63853",
-  "followers": 654938,
+  "discogs_url": "https://www.discogs.com/artist/63853-David-Gray",
+  "followers": 655154,
   "formed_date": null,
   "genres": [
     "Singer/Songwriter",
@@ -16,7 +16,7 @@
     "alternative",
     "rock"
   ],
-  "id": null,
+  "id": "david-gray-1751728631",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/lMDv6mcI8296c7qSBbDK-4g5TMXm9rXG7cCr8i1p1lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "f7ced51c-2105-498b-a399-764ad3941759",
   "lastfm_url": "https://www.last.fm/music/David+Gray",
   "local_images": {
-    "hi-res": "public/artist/david-gray/david-gray-hi-res.jpg",
-    "medium": "public/artist/david-gray/david-gray-medium.jpg",
-    "small": "public/artist/david-gray/david-gray-small.jpg"
+    "hi-res": "../public/artist/david-gray/david-gray-hi-res.jpg",
+    "medium": "../public/artist/david-gray/david-gray-medium.jpg",
+    "small": "../public/artist/david-gray/david-gray-small.jpg"
   },
   "name": "David Gray",
   "popularity": 66,
@@ -101,9 +113,182 @@
       "url": "https://music.apple.com/gb/artist/david-gray/316381"
     },
     "discogs": {
-      "id": 63853,
-      "original_name": "David Gray",
-      "role": ""
+      "cover_image": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "63853",
+      "images": [
+        {
+          "height": 500,
+          "resource_url": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/lMDv6mcI8296c7qSBbDK-4g5TMXm9rXG7cCr8i1p1lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/HpeO_3g7uP28p49k5GdxnICnBHJekr3cGJ1XxmHnBow/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HpeO_3g7uP28p49k5GdxnICnBHJekr3cGJ1XxmHnBow/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/1L2K4vNhu-HNlHWrLTVI4ALW8dCNP-Ju5-TNjuVcbc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 311,
+          "resource_url": "https://i.discogs.com/sa-HkW7-Fblgd2OSrgI-VX3lqEe2CiRxqLOwox_ljDA/rs:fit/g:sm/q:90/h:311/w:308/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sa-HkW7-Fblgd2OSrgI-VX3lqEe2CiRxqLOwox_ljDA/rs:fit/g:sm/q:90/h:311/w:308/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ieJyTTqetR8apfJl-dtZFqFmdd8mSF9tjHGPHLLr2vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+          "width": 308
+        },
+        {
+          "height": 661,
+          "resource_url": "https://i.discogs.com/uzWJx4OcjjE34-cliaKVYx6HZHskIMpRSLQXWK5_Olw/rs:fit/g:sm/q:90/h:661/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/uzWJx4OcjjE34-cliaKVYx6HZHskIMpRSLQXWK5_Olw/rs:fit/g:sm/q:90/h:661/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/wnGlEcI6NGNVbT358Kjolw1loybz_UQx6_Scs9ZNckg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 205,
+          "resource_url": "https://i.discogs.com/FVYAkd-Aogm1R6zgIblq1q0wESdgZpGFNUyLeflwJdo/rs:fit/g:sm/q:90/h:205/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/FVYAkd-Aogm1R6zgIblq1q0wESdgZpGFNUyLeflwJdo/rs:fit/g:sm/q:90/h:205/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+          "uri150": "https://i.discogs.com/AkXzOhuKfrotClgZHCa1NtVZGwmPRZ5Xvkd_2mBnnH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+          "width": 200
+        },
+        {
+          "height": 356,
+          "resource_url": "https://i.discogs.com/yThcGlDa6DFM8u2DvDUSFvbD2e5NHPt0tpAZs0q_1hw/rs:fit/g:sm/q:90/h:356/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yThcGlDa6DFM8u2DvDUSFvbD2e5NHPt0tpAZs0q_1hw/rs:fit/g:sm/q:90/h:356/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/0n16gba5QfZ65r8TmxbNeuOozjtwXov-2rrAvQWqaVw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+          "width": 232
+        },
+        {
+          "height": 270,
+          "resource_url": "https://i.discogs.com/_2LNagqmIa14Sig2Id0QLOt_0L1SVjnmYTQledN2J1A/rs:fit/g:sm/q:90/h:270/w:310/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/_2LNagqmIa14Sig2Id0QLOt_0L1SVjnmYTQledN2J1A/rs:fit/g:sm/q:90/h:270/w:310/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/ICcNXW93PNEjhk6zuYeZSvqEk8v4aYkbG-JVX3vBqag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+          "width": 310
+        }
+      ],
+      "members": [],
+      "name": "David Gray",
+      "namevariations": [
+        "D Gray",
+        "D. Gray",
+        "David Grey",
+        "Gary Gray",
+        "Gray"
+      ],
+      "profile": "English singer-songwriter (born 13 June 1968 in Sale, Greater Manchester).\r\n\r\nFor the classical hornist, please use [a=David Gray (6)].",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 4185708,
+            "name": "The Peace Collective",
+            "resource_url": "https://api.discogs.com/artists/4185708",
+            "thumbnail_url": "https://i.discogs.com/CIOfBVDtKMbK-fpMy-SlPhaseFQXjRNvsBZJ9B0DS-Q/rs:fit/g:sm/q:40/h:260/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxODU3/MDgtMTQ2NDk0ODM0/NS0zNDQ2LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 5438077,
+            "name": "Friends Of Jo Cox",
+            "resource_url": "https://api.discogs.com/artists/5438077",
+            "thumbnail_url": "https://i.discogs.com/5ad4y1mdoLX_PlDg5gGCtwicKtNlEVxDWgZFme_K1lY/rs:fit/g:sm/q:40/h:416/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0Mzgw/NzctMTQ4Mjk1MzM3/Ny01Nzk1LmpwZWc.jpeg"
+          }
+        ],
+        "id": 63853,
+        "images": [
+          {
+            "height": 500,
+            "resource_url": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/dJf3YWojhfC-siT8kPTWVQJaCZ2PPcPClsnDx1nosJ4/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/lMDv6mcI8296c7qSBbDK-4g5TMXm9rXG7cCr8i1p1lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+            "width": 500
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/HpeO_3g7uP28p49k5GdxnICnBHJekr3cGJ1XxmHnBow/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HpeO_3g7uP28p49k5GdxnICnBHJekr3cGJ1XxmHnBow/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/1L2K4vNhu-HNlHWrLTVI4ALW8dCNP-Ju5-TNjuVcbc0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTEyNDI1MTM2Njcu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 311,
+            "resource_url": "https://i.discogs.com/sa-HkW7-Fblgd2OSrgI-VX3lqEe2CiRxqLOwox_ljDA/rs:fit/g:sm/q:90/h:311/w:308/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sa-HkW7-Fblgd2OSrgI-VX3lqEe2CiRxqLOwox_ljDA/rs:fit/g:sm/q:90/h:311/w:308/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ieJyTTqetR8apfJl-dtZFqFmdd8mSF9tjHGPHLLr2vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA2MjQu/anBlZw.jpeg",
+            "width": 308
+          },
+          {
+            "height": 661,
+            "resource_url": "https://i.discogs.com/uzWJx4OcjjE34-cliaKVYx6HZHskIMpRSLQXWK5_Olw/rs:fit/g:sm/q:90/h:661/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/uzWJx4OcjjE34-cliaKVYx6HZHskIMpRSLQXWK5_Olw/rs:fit/g:sm/q:90/h:661/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/wnGlEcI6NGNVbT358Kjolw1loybz_UQx6_Scs9ZNckg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE2NDQ0NDAwMTUt/ODkxMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 205,
+            "resource_url": "https://i.discogs.com/FVYAkd-Aogm1R6zgIblq1q0wESdgZpGFNUyLeflwJdo/rs:fit/g:sm/q:90/h:205/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/FVYAkd-Aogm1R6zgIblq1q0wESdgZpGFNUyLeflwJdo/rs:fit/g:sm/q:90/h:205/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+            "uri150": "https://i.discogs.com/AkXzOhuKfrotClgZHCa1NtVZGwmPRZ5Xvkd_2mBnnH4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExMDcwOTM0OTku/anBn.jpeg",
+            "width": 200
+          },
+          {
+            "height": 356,
+            "resource_url": "https://i.discogs.com/yThcGlDa6DFM8u2DvDUSFvbD2e5NHPt0tpAZs0q_1hw/rs:fit/g:sm/q:90/h:356/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yThcGlDa6DFM8u2DvDUSFvbD2e5NHPt0tpAZs0q_1hw/rs:fit/g:sm/q:90/h:356/w:232/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/0n16gba5QfZ65r8TmxbNeuOozjtwXov-2rrAvQWqaVw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA0ODku/anBlZw.jpeg",
+            "width": 232
+          },
+          {
+            "height": 270,
+            "resource_url": "https://i.discogs.com/_2LNagqmIa14Sig2Id0QLOt_0L1SVjnmYTQledN2J1A/rs:fit/g:sm/q:90/h:270/w:310/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/_2LNagqmIa14Sig2Id0QLOt_0L1SVjnmYTQledN2J1A/rs:fit/g:sm/q:90/h:270/w:310/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/ICcNXW93PNEjhk6zuYeZSvqEk8v4aYkbG-JVX3vBqag/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTExNzAwMTA1MTYu/anBlZw.jpeg",
+            "width": 310
+          }
+        ],
+        "name": "David Gray",
+        "namevariations": [
+          "D Gray",
+          "D. Gray",
+          "David Grey",
+          "Gary Gray",
+          "Gray"
+        ],
+        "profile": "English singer-songwriter (born 13 June 1968 in Sale, Greater Manchester).\r\n\r\nFor the classical hornist, please use [a=David Gray (6)].",
+        "realname": "David Peter Gray",
+        "releases_url": "https://api.discogs.com/artists/63853/releases",
+        "resource_url": "https://api.discogs.com/artists/63853",
+        "uri": "https://www.discogs.com/artist/63853-David-Gray",
+        "urls": [
+          "http://www.DavidGray.com",
+          "http://www.MySpace.com/davidgray",
+          "http://en.wikipedia.org/wiki/David_Gray_(musician)"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/63853",
+      "thumb": "https://i.discogs.com/lMDv6mcI8296c7qSBbDK-4g5TMXm9rXG7cCr8i1p1lc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYzODUz/LTE1NDUzMDEyODkt/ODg1OS5wbmc.jpeg",
+      "url": "https://www.discogs.com/artist/63853-David-Gray",
+      "urls": [
+        "http://www.DavidGray.com",
+        "http://www.MySpace.com/davidgray",
+        "http://en.wikipedia.org/wiki/David_Gray_(musician)"
+      ]
     },
     "lastfm": {
       "bio_content": "There are multiple artists by the name of David Gray, including:\n1) a British singer-songwriter\n2) an Italian disco musician\n3) an American singer-songwriter\n4) drummer for the British blackened death metal band Akercocke\n5) a musician from South Africa\n6) a British classical hornist\n---\n1) David Gray  is a British singer-songwriter born on June 13, 1968 in Sale, Cheshire. He released his first studio album in 1993 and received worldwide attention after the release of White Ladder six years later in 1999.\nGray moved to Wales at age 9 and later returned to the north-west of England to attend the University of Liverpool. His musical career got early support from a dedicated Irish fan base. After a few marginally-successful releases through the 1990s, Gray's breakthrough came with the worldwide release in 1999 of his fourth album, White Ladder; this was a critical and commercial success and included his best-known songs, \"This Years Love\" and \"Babylon\". In the United States, the album received a boost from jam-band leader Dave Matthews, who made it the first release by the record company he co-founded, ATO Records.\nOn August 11, 2001 White Ladder at last reached the top of the UK charts, having been selling steadily since its reissue the previous May, thereby setting a new record for the longest uninterrupted climb to No. 1. The follow-up, A New Day At Midnight, also hit No. 1, and Gray's seventh album, Life in Slow Motion was released on September 12, 2005.\nGray's early music was in a contemporary folk-rock, singer-songwriter mode; his primary instrument was acoustic guitar, with occasional piano. 1996's Sell Sell Sell featured some rock arrangements and electric instrumentation. Starting with the release of White Ladder in 1999, Gray began to make significant use of computer-generated music to accompany his voice and acoustic instrumentation, a technique which differentiates him from many of his peers. Despite the move to more complex music, Gray has used small-scale, often home-based, recording methods and equipment and espoused a \"do it yourself\" approach to music production. However, Life in Slow Motion is a collaboration with noted producer Marius De Vries.\nDavid Gray's brothers-in-law are Paul and Phillip Hartnoll, formerly of the Techno/Rave band Orbital. Because of this relationship, Gray performed guest vocals on the Orbital single Illuminate, while Paul Hartnoll produced a breakbeat remix of Gray's song \"Please Forgive Me\".\nHis successful single \"January Rain\" was included in the original soundtrack of the movie Serendipity, starring John Cusack and Kate Beckinsale.\nPictures and additional information can be found on his website, www.DavidGray.com.\n---\n2) David Gray was an Italian disco musician who had a hit with \"Dead in the Water\"\n---\n3) David Gray is an American singer-songwriter\n---\n4) David Gray is drummer for the British blackened death metal band Akercocke\n---\n5) David Gray is a musician from South Africa\n---\n6) British classical hornist, originally from London, England, UK, residing in Vancouver, British Columbia, Canada.\nStudied at the Curtis Institute Of Music. Former Principal Horn with The London Symphony Orchestra (1964-1972). Member of The Newfoundland Symphony Orchestra. <a href=\"https://www.last.fm/music/David+Gray\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +319,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1348011,
+      "listeners": 1348528,
       "mbid": "f7ced51c-2105-498b-a399-764ad3941759",
       "name": "David Gray",
-      "playcount": 21302694,
+      "playcount": 21310788,
       "similar_artists": [
         {
           "name": "Ray LaMontagne",
@@ -170,7 +355,7 @@
       "url": "https://www.last.fm/music/David+Gray"
     },
     "spotify": {
-      "followers": 654938,
+      "followers": 655154,
       "genres": [],
       "id": "7J2lZBANizgPNfUzux31PV",
       "images": [
@@ -197,6 +382,6 @@
   },
   "spotify_id": "7J2lZBANizgPNfUzux31PV",
   "spotify_url": "https://open.spotify.com/artist/7J2lZBANizgPNfUzux31PV",
-  "updated_at": "2025-07-05T16:17:11.930778",
+  "updated_at": "2025-07-08T09:58:29.920974",
   "wikipedia_url": null
 }

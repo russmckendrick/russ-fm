@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:53:34.282559",
   "discogs_id": "5873",
-  "discogs_url": "https://www.discogs.com/artist/5873",
-  "followers": 211853,
+  "discogs_url": "https://www.discogs.com/artist/5873-Yello",
+  "followers": 211962,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -17,7 +17,7 @@
     "80s",
     "electronica"
   ],
-  "id": null,
+  "id": "yello-1751727217",
   "images": [
     {
       "height": 2000,
@@ -78,14 +78,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/m73X--W0CRIVTXrjtrBcmER2oPUBCZwWVjBhSI63lq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "c616aef1-e21f-46f8-864f-b7bad96f41b2",
   "lastfm_url": "https://www.last.fm/music/Yello",
   "local_images": {
-    "hi-res": "public/artist/yello/yello-hi-res.jpg",
-    "medium": "public/artist/yello/yello-medium.jpg",
-    "small": "public/artist/yello/yello-small.jpg"
+    "hi-res": "../public/artist/yello/yello-hi-res.jpg",
+    "medium": "../public/artist/yello/yello-medium.jpg",
+    "small": "../public/artist/yello/yello-small.jpg"
   },
   "name": "Yello",
   "popularity": 52,
@@ -102,9 +114,269 @@
       "url": "https://music.apple.com/gb/artist/yello/78582"
     },
     "discogs": {
-      "id": 5873,
-      "original_name": "Yello",
-      "role": ""
+      "cover_image": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "5873",
+      "images": [
+        {
+          "height": 579,
+          "resource_url": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/m73X--W0CRIVTXrjtrBcmER2oPUBCZwWVjBhSI63lq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+          "width": 580
+        },
+        {
+          "height": 456,
+          "resource_url": "https://i.discogs.com/shjhfpybNhHH3RGllm38LLhIcYRrWSmTlbFiBhffaqE/rs:fit/g:sm/q:90/h:456/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/shjhfpybNhHH3RGllm38LLhIcYRrWSmTlbFiBhffaqE/rs:fit/g:sm/q:90/h:456/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/kDYmXIeCzVXxTwxDJh3EMP4mTUZ11loyMzy6SIXDxkk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 419,
+          "resource_url": "https://i.discogs.com/E96Bzk-mPrICmhuFnJwoO5Gw69VwEtIDQ3b3KDYQODw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/E96Bzk-mPrICmhuFnJwoO5Gw69VwEtIDQ3b3KDYQODw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/h2iiG3TnDKNk7u7fNg232KwudsV9mjetO6AV8Heagjg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/-B3Pyaoe4M19Ap3MUEL0fcSzEnPg5ejiuLPU65BER64/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-B3Pyaoe4M19Ap3MUEL0fcSzEnPg5ejiuLPU65BER64/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/KJbK8pAxUzDZaTc-neNbqX_cBaf3hbz9CU8gMCyUEPQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Sz_CJ9WO_BTPFor-N9kn26LDBWvHBWmJbto5Wg3k5KA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Sz_CJ9WO_BTPFor-N9kn26LDBWvHBWmJbto5Wg3k5KA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/VUSFtfXCroXBQs23iIJfqdNvlszm6eMiMS3Zqwmx9gc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 288,
+          "resource_url": "https://i.discogs.com/SQ9nZ4-AmRFNsjOCtCRh5nOWmw8oIvfxpoIlKm4gqc0/rs:fit/g:sm/q:90/h:288/w:242/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/SQ9nZ4-AmRFNsjOCtCRh5nOWmw8oIvfxpoIlKm4gqc0/rs:fit/g:sm/q:90/h:288/w:242/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/dum6PnJBxLTJxqEurAk3oQUlOq_OhS8CEVJSbsA6n0U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+          "width": 242
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/e3nGGDA4egOkX-gGOKnhoPlAEAmOZXSEn3CFP13WTZ0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/e3nGGDA4egOkX-gGOKnhoPlAEAmOZXSEn3CFP13WTZ0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/WZC9-OHlilGs5mDuJNuc8ph4gWqhPg9919ggbYL4c_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 531,
+          "resource_url": "https://i.discogs.com/jRzI7DCy_ZLeV_PMsugM3FRb2xdtIEqU6wx9__n-uNY/rs:fit/g:sm/q:90/h:531/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jRzI7DCy_ZLeV_PMsugM3FRb2xdtIEqU6wx9__n-uNY/rs:fit/g:sm/q:90/h:531/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/eh5lYiprFWQ1ijMRu96_P0mBjVu-_9BWjeMHuT_RhtM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+          "width": 527
+        },
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/-DXRegpqKtTZUK5ca5_Nh3AVBDsCBEw_u3HMPT3C7Tk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-DXRegpqKtTZUK5ca5_Nh3AVBDsCBEw_u3HMPT3C7Tk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/VOZtTpDP3PPSvf3Rzyh4XE5Gc6_wdfER_2megGmf3Xw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 380,
+          "resource_url": "https://i.discogs.com/UezN-NFzPQy_AWNURuZ6QGPoyvx6iiva4wx89P0RpDY/rs:fit/g:sm/q:90/h:380/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UezN-NFzPQy_AWNURuZ6QGPoyvx6iiva4wx89P0RpDY/rs:fit/g:sm/q:90/h:380/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+          "uri150": "https://i.discogs.com/hUsri5ugaHCuBXZIuFXh9-5mmFNIoQVv759JzRKMlTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+          "width": 448
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 38503,
+          "name": "Dieter Meier",
+          "resource_url": "https://api.discogs.com/artists/38503",
+          "thumbnail_url": "https://i.discogs.com/edVWNiuiT20-2Kjy4ebZQ4J9r1g_GazfowiTxu9B2Pg/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NTAz/LTE1MTIzMDQ5MzMt/MTAyMy5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 39797,
+          "name": "Carlos Peron",
+          "resource_url": "https://api.discogs.com/artists/39797",
+          "thumbnail_url": "https://i.discogs.com/ypM1eN83owtcfjnGjqPF1gHSuReJDVpPG3zTTRZqZe8/rs:fit/g:sm/q:40/h:250/w:163/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5Nzk3/LTEyNDQ2Njg5MDIu/anBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 171685,
+          "name": "Boris Blank",
+          "resource_url": "https://api.discogs.com/artists/171685",
+          "thumbnail_url": "https://i.discogs.com/c_pAc7bmnvtxsS3gYzLSqaljYVt5otf41hrWzCd84HY/rs:fit/g:sm/q:40/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTY4/NS0xNzQyNjIyNTI4/LTM0NjcuanBlZw.jpeg"
+        }
+      ],
+      "name": "Yello",
+      "namevariations": [
+        "YLO",
+        "Yell0",
+        "Yello The Eye",
+        "Yellow",
+        "Yellow®",
+        "Yello®",
+        "Yenno",
+        "Йелло",
+        "イエロー"
+      ],
+      "profile": "Swiss electronic band formed in 1979 in Zürich, Switzerland. \r\nCarlos Peron left the band in 1983.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 5873,
+        "images": [
+          {
+            "height": 579,
+            "resource_url": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/tAd6Vf3aE2ey-uYs0eEsaPZUel_RZAjoEHOoxxMkYiE/rs:fit/g:sm/q:90/h:579/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/m73X--W0CRIVTXrjtrBcmER2oPUBCZwWVjBhSI63lq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+            "width": 580
+          },
+          {
+            "height": 456,
+            "resource_url": "https://i.discogs.com/shjhfpybNhHH3RGllm38LLhIcYRrWSmTlbFiBhffaqE/rs:fit/g:sm/q:90/h:456/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/shjhfpybNhHH3RGllm38LLhIcYRrWSmTlbFiBhffaqE/rs:fit/g:sm/q:90/h:456/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/kDYmXIeCzVXxTwxDJh3EMP4mTUZ11loyMzy6SIXDxkk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDIwMy02/NjYyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 419,
+            "resource_url": "https://i.discogs.com/E96Bzk-mPrICmhuFnJwoO5Gw69VwEtIDQ3b3KDYQODw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/E96Bzk-mPrICmhuFnJwoO5Gw69VwEtIDQ3b3KDYQODw/rs:fit/g:sm/q:90/h:419/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/h2iiG3TnDKNk7u7fNg232KwudsV9mjetO6AV8Heagjg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTY4NzM1MDM2My00/OTUyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/-B3Pyaoe4M19Ap3MUEL0fcSzEnPg5ejiuLPU65BER64/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-B3Pyaoe4M19Ap3MUEL0fcSzEnPg5ejiuLPU65BER64/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/KJbK8pAxUzDZaTc-neNbqX_cBaf3hbz9CU8gMCyUEPQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYzNi05/MTYyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/Sz_CJ9WO_BTPFor-N9kn26LDBWvHBWmJbto5Wg3k5KA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Sz_CJ9WO_BTPFor-N9kn26LDBWvHBWmJbto5Wg3k5KA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/VUSFtfXCroXBQs23iIJfqdNvlszm6eMiMS3Zqwmx9gc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTU5Njg4MjYyNi01/MTMyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 288,
+            "resource_url": "https://i.discogs.com/SQ9nZ4-AmRFNsjOCtCRh5nOWmw8oIvfxpoIlKm4gqc0/rs:fit/g:sm/q:90/h:288/w:242/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/SQ9nZ4-AmRFNsjOCtCRh5nOWmw8oIvfxpoIlKm4gqc0/rs:fit/g:sm/q:90/h:288/w:242/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/dum6PnJBxLTJxqEurAk3oQUlOq_OhS8CEVJSbsA6n0U/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTEwNzY1ODM4OS5q/cGc.jpeg",
+            "width": 242
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/e3nGGDA4egOkX-gGOKnhoPlAEAmOZXSEn3CFP13WTZ0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/e3nGGDA4egOkX-gGOKnhoPlAEAmOZXSEn3CFP13WTZ0/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/WZC9-OHlilGs5mDuJNuc8ph4gWqhPg9919ggbYL4c_A/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY4OTQyMC0x/NDUwLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 531,
+            "resource_url": "https://i.discogs.com/jRzI7DCy_ZLeV_PMsugM3FRb2xdtIEqU6wx9__n-uNY/rs:fit/g:sm/q:90/h:531/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jRzI7DCy_ZLeV_PMsugM3FRb2xdtIEqU6wx9__n-uNY/rs:fit/g:sm/q:90/h:531/w:527/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/eh5lYiprFWQ1ijMRu96_P0mBjVu-_9BWjeMHuT_RhtM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTQ3OTY5MDEyNy05/NjAwLmpwZWc.jpeg",
+            "width": 527
+          },
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/-DXRegpqKtTZUK5ca5_Nh3AVBDsCBEw_u3HMPT3C7Tk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-DXRegpqKtTZUK5ca5_Nh3AVBDsCBEw_u3HMPT3C7Tk/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/VOZtTpDP3PPSvf3Rzyh4XE5Gc6_wdfER_2megGmf3Xw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTE1MjI0OTcxNy5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 380,
+            "resource_url": "https://i.discogs.com/UezN-NFzPQy_AWNURuZ6QGPoyvx6iiva4wx89P0RpDY/rs:fit/g:sm/q:90/h:380/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UezN-NFzPQy_AWNURuZ6QGPoyvx6iiva4wx89P0RpDY/rs:fit/g:sm/q:90/h:380/w:448/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+            "uri150": "https://i.discogs.com/hUsri5ugaHCuBXZIuFXh9-5mmFNIoQVv759JzRKMlTo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTExOTI5MDIyOS5q/cGc.jpeg",
+            "width": 448
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 38503,
+            "name": "Dieter Meier",
+            "resource_url": "https://api.discogs.com/artists/38503",
+            "thumbnail_url": "https://i.discogs.com/edVWNiuiT20-2Kjy4ebZQ4J9r1g_GazfowiTxu9B2Pg/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NTAz/LTE1MTIzMDQ5MzMt/MTAyMy5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 39797,
+            "name": "Carlos Peron",
+            "resource_url": "https://api.discogs.com/artists/39797",
+            "thumbnail_url": "https://i.discogs.com/ypM1eN83owtcfjnGjqPF1gHSuReJDVpPG3zTTRZqZe8/rs:fit/g:sm/q:40/h:250/w:163/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM5Nzk3/LTEyNDQ2Njg5MDIu/anBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 171685,
+            "name": "Boris Blank",
+            "resource_url": "https://api.discogs.com/artists/171685",
+            "thumbnail_url": "https://i.discogs.com/c_pAc7bmnvtxsS3gYzLSqaljYVt5otf41hrWzCd84HY/rs:fit/g:sm/q:40/h:461/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3MTY4/NS0xNzQyNjIyNTI4/LTM0NjcuanBlZw.jpeg"
+          }
+        ],
+        "name": "Yello",
+        "namevariations": [
+          "YLO",
+          "Yell0",
+          "Yello The Eye",
+          "Yellow",
+          "Yellow®",
+          "Yello®",
+          "Yenno",
+          "Йелло",
+          "イエロー"
+        ],
+        "profile": "Swiss electronic band formed in 1979 in Zürich, Switzerland. \r\nCarlos Peron left the band in 1983.",
+        "realname": "Boris Blank, Dieter Meier, Carlos Peron",
+        "releases_url": "https://api.discogs.com/artists/5873/releases",
+        "resource_url": "https://api.discogs.com/artists/5873",
+        "uri": "https://www.discogs.com/artist/5873-Yello",
+        "urls": [
+          "http://www.yello.com",
+          "http://www.facebook.com/yello.ch",
+          "http://en.wikipedia.org/wiki/Yello",
+          "http://www.youtube.com/channel/UCoz5kCtw1C9gjIOMxSPRODg"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/5873",
+      "thumb": "https://i.discogs.com/m73X--W0CRIVTXrjtrBcmER2oPUBCZwWVjBhSI63lq8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4NzMt/MTcxNTc2MDEzNC04/ODc0LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/5873-Yello",
+      "urls": [
+        "http://www.yello.com",
+        "http://www.facebook.com/yello.ch",
+        "http://en.wikipedia.org/wiki/Yello",
+        "http://www.youtube.com/channel/UCoz5kCtw1C9gjIOMxSPRODg"
+      ]
     },
     "lastfm": {
       "bio_content": "Yello is a popular Swiss electronic band consisting of Dieter Meier and Boris Blank. They are probably best known for their single Oh Yeah, which featured a rich mix of electronic music and manipulated vocals. The song became famous after being featured in the American movies Ferris Bueller's Day Off, The Secret of My Success, and more recently Soul Plane.  The song is the theme for Duffman on The Simpsons. In the UK they are probably best known for the Number 7 hit The race. This song was also from 1988 to 1990 the title track of the german music video TV-show \"Formel Eins\" (=Formula One) and was a Number 4 hit in Germany.\n\nYello was originally formed by Boris Blank and Carlos Perón in the late 1970s. Dieter Meier, a millionaire playboy with a very versatile career, was brought in when the two founders realised that they needed a singer. Meier and Blank joined forces in 1979 to release a single called I.T. Splash. The LP Solid Pleasure, featuring the hit dance single Bostich, was released the following year. It wasn't until 1983 that Yello received substantial media attention, with the release of I Love You and Lost Again. Peron left the band in 1983 to start a solo career.\n\nYello takes great pride in their original sound, which is mainly characterised by weird samples, a heavy reliance on rhythm and Dieter Meier's dark voice. Every track on a Yello album has been created by the band from scratch. \nSounds have been created using synths, samplers and effects by Boris Blank.\n\nYello rarely uses samples from previously released music; nearly every instrument has been sampled and engineered by Boris Blank, who over the years has built up an original sample library of over 100,000 named and categorized sounds.\n\nThe music is composed by Boris Blank, who considers himself a percussionist. When the tracks are mostly finished, Dieter Meier adds the vocal parts when fitting. <a href=\"https://www.last.fm/music/Yello\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -135,10 +407,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 493290,
+      "listeners": 493454,
       "mbid": "c616aef1-e21f-46f8-864f-b7bad96f41b2",
       "name": "Yello",
-      "playcount": 7819346,
+      "playcount": 7823090,
       "similar_artists": [
         {
           "name": "Boris Blank",
@@ -171,7 +443,7 @@
       "url": "https://www.last.fm/music/Yello"
     },
     "spotify": {
-      "followers": 211853,
+      "followers": 211962,
       "genres": [
         "synthpop"
       ],
@@ -200,6 +472,6 @@
   },
   "spotify_id": "3xgj17ZsWxxU86S4qlWvOi",
   "spotify_url": "https://open.spotify.com/artist/3xgj17ZsWxxU86S4qlWvOi",
-  "updated_at": "2025-07-05T15:53:37.335141",
+  "updated_at": "2025-07-08T09:55:43.912743",
   "wikipedia_url": null
 }

@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:48:57.309361",
   "discogs_id": "66999",
-  "discogs_url": "https://www.discogs.com/artist/66999",
-  "followers": 2205,
+  "discogs_url": "https://www.discogs.com/artist/66999-Caravan",
+  "followers": 2204,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -16,7 +16,7 @@
     "rock",
     "Progressive"
   ],
-  "id": null,
+  "id": "caravan-1751723338",
   "images": [
     {
       "height": 2000,
@@ -77,14 +77,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/q8FbI5TgFK6ZEdSsWB8J1eLqoCjBHYw6iYxURMGqw5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "c7b4d848-eeb6-444f-ba14-6173ea2cffa8",
   "lastfm_url": "https://www.last.fm/music/Caravan",
   "local_images": {
-    "hi-res": "public/artist/caravan/caravan-hi-res.jpg",
-    "medium": "public/artist/caravan/caravan-medium.jpg",
-    "small": "public/artist/caravan/caravan-small.jpg"
+    "hi-res": "../public/artist/caravan/caravan-hi-res.jpg",
+    "medium": "../public/artist/caravan/caravan-medium.jpg",
+    "small": "../public/artist/caravan/caravan-small.jpg"
   },
   "name": "Caravan",
   "popularity": 36,
@@ -101,9 +113,490 @@
       "url": "https://music.apple.com/gb/artist/caravan/1141511409"
     },
     "discogs": {
-      "id": 66999,
-      "original_name": "Caravan",
-      "role": ""
+      "cover_image": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "66999",
+      "images": [
+        {
+          "height": 343,
+          "resource_url": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/q8FbI5TgFK6ZEdSsWB8J1eLqoCjBHYw6iYxURMGqw5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+          "width": 450
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/XIYGrAWYX82R86f0fzuLDwKerR-QTvX1tf_s5l0BDrI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/XIYGrAWYX82R86f0fzuLDwKerR-QTvX1tf_s5l0BDrI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/uEqlNj3mYjuEGieTpz3QBmWjhUQMfs0vcwxq1BWpAtU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 554,
+          "resource_url": "https://i.discogs.com/xIORydycMn0xvUrboP5fCh4_rNsPneA_7vhL5HuQkZg/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xIORydycMn0xvUrboP5fCh4_rNsPneA_7vhL5HuQkZg/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Q8hwYdM14EhZ3O4DIUHQENhAdejkGeEKnb0dypMfgvA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 554,
+          "resource_url": "https://i.discogs.com/0ic4jVC94jzzbI7k21D0w8R2bZJ6lSuMdd_zm8LIkcU/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/0ic4jVC94jzzbI7k21D0w8R2bZJ6lSuMdd_zm8LIkcU/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1Yx8FkRXdxqx9YhmRjSeausgqXopd3U2zpJ5gKnPsZw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 388,
+          "resource_url": "https://i.discogs.com/ET6qMVTl1NGpHcxalO7zO0M1T5VkjAZ8YgsOdzzidC4/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ET6qMVTl1NGpHcxalO7zO0M1T5VkjAZ8YgsOdzzidC4/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/YSXRkSM-J-_LG14ogc8PaznPf3GTWMilr25BgPiT9Yg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 350,
+          "resource_url": "https://i.discogs.com/NFRnyHpmZaNsXmAuCv1WZIMW7wPjn4GOq4d-gneB0qE/rs:fit/g:sm/q:90/h:350/w:270/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NFRnyHpmZaNsXmAuCv1WZIMW7wPjn4GOq4d-gneB0qE/rs:fit/g:sm/q:90/h:350/w:270/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/jck11iSFX0xyKj-L-9auHQe0G1HhIWBflq6CNbHHNvk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+          "width": 270
+        },
+        {
+          "height": 505,
+          "resource_url": "https://i.discogs.com/y1zvMtcgMOsF-TqdFtRuk5y5BAXkjZj7Ma4JC-WmFlc/rs:fit/g:sm/q:90/h:505/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/y1zvMtcgMOsF-TqdFtRuk5y5BAXkjZj7Ma4JC-WmFlc/rs:fit/g:sm/q:90/h:505/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/KVZadKnHNDVT6GC-isKx_DyTb_hmSKWwFqAp2jYe6as/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+          "width": 550
+        },
+        {
+          "height": 300,
+          "resource_url": "https://i.discogs.com/METCfpPOLGZ_bciba0C3m7Oiv9zNUfMdyPM0CRrhjwo/rs:fit/g:sm/q:90/h:300/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/METCfpPOLGZ_bciba0C3m7Oiv9zNUfMdyPM0CRrhjwo/rs:fit/g:sm/q:90/h:300/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Sscgm4oeuHqgJEWQCzoggOP3wf1rK3q8Ff_d91jk4ng/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+          "width": 425
+        },
+        {
+          "height": 435,
+          "resource_url": "https://i.discogs.com/rQoGtRZeFXDzYA1js58qiy51SH3I2T22jrp2bvYKeas/rs:fit/g:sm/q:90/h:435/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/rQoGtRZeFXDzYA1js58qiy51SH3I2T22jrp2bvYKeas/rs:fit/g:sm/q:90/h:435/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/63YvciaQLimLc06tx4gvZwhbg0hfxeA0YSPFcltgjrI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+          "width": 580
+        },
+        {
+          "height": 599,
+          "resource_url": "https://i.discogs.com/sYeTbp8Sfn2MlxLn2WWAlCnLELwgaVY4xQqCRKkf2g0/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/sYeTbp8Sfn2MlxLn2WWAlCnLELwgaVY4xQqCRKkf2g0/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/4Y0PY4eLuEZd34fMMyO7opQf1rmvCm1jGGfBXxhjvL8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 458,
+          "resource_url": "https://i.discogs.com/4q8_EvBWrHTCJpj9vGrCAqk9tfRS7BiwgUF-K31imcc/rs:fit/g:sm/q:90/h:458/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4q8_EvBWrHTCJpj9vGrCAqk9tfRS7BiwgUF-K31imcc/rs:fit/g:sm/q:90/h:458/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/izNgTF-NVrCtANagzqqyv0jJvnmHmnjbuWjtzw3xggA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+          "width": 510
+        },
+        {
+          "height": 873,
+          "resource_url": "https://i.discogs.com/HbNLZBXzhrsENI4NNDDYywm-paMDX8_6SPzWg8Y2Yfo/rs:fit/g:sm/q:90/h:873/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HbNLZBXzhrsENI4NNDDYywm-paMDX8_6SPzWg8Y2Yfo/rs:fit/g:sm/q:90/h:873/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+          "uri150": "https://i.discogs.com/NikxPfToTxb_AWdihAGTQubbuB9gd-jh2U-CnWxsYr4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+          "width": 600
+        },
+        {
+          "height": 407,
+          "resource_url": "https://i.discogs.com/qoKnqKi6EIEpJsWzi__yXtdbvjIN3auds5p08MgOc-I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qoKnqKi6EIEpJsWzi__yXtdbvjIN3auds5p08MgOc-I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/1RfMnX_oWu003Lll4tCHV09D4M-lDIRktn6qFB5fARI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 91724,
+          "name": "Lee Pomeroy",
+          "resource_url": "https://api.discogs.com/artists/91724",
+          "thumbnail_url": "https://i.discogs.com/Fxi1mjvoTxg2DNtBgidjrxo3U-VD8_1Tm75JBrr7AFc/rs:fit/g:sm/q:40/h:750/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNzI0/LTE3MTk3NTA2Nzct/NzI3NS5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 239943,
+          "name": "Steve Miller (3)",
+          "resource_url": "https://api.discogs.com/artists/239943",
+          "thumbnail_url": "https://i.discogs.com/KdIosf9FbgZFvfwjf4JxQ5IT9ii1BhQgaxU1oB1B5YA/rs:fit/g:sm/q:40/h:619/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzOTk0/My0xNzA3MDAxNjg0/LTU4NzEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 266835,
+          "name": "Richard Sinclair",
+          "resource_url": "https://api.discogs.com/artists/266835",
+          "thumbnail_url": "https://i.discogs.com/4DXYJ_a3txpb8sjKYY5Lv2_5ogoII08CN8JNUEayqi8/rs:fit/g:sm/q:40/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Njgz/NS0xNjU0NTMwNTI2/LTE4NTQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 271126,
+          "name": "Doug Boyle",
+          "resource_url": "https://api.discogs.com/artists/271126",
+          "thumbnail_url": "https://i.discogs.com/bk_TnnHXYWJjQ3U4yY3rf7IpoDiRBETr_J6B4crhJR8/rs:fit/g:sm/q:40/h:521/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTEy/Ni0xNDE0NTg0MjI2/LTMyMzEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 283046,
+          "name": "Jan Schelhaas",
+          "resource_url": "https://api.discogs.com/artists/283046",
+          "thumbnail_url": "https://i.discogs.com/q_2-8z-r1IpUOQW9YJRoGQSrS6izYuuxAzvDqXyxX8M/rs:fit/g:sm/q:40/h:575/w:577/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzA0/Ni0xNDE0NTg2Njc0/LTcyOTQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 300121,
+          "name": "David Sinclair",
+          "resource_url": "https://api.discogs.com/artists/300121",
+          "thumbnail_url": "https://i.discogs.com/f-r4nxV3nazU83pSrk84P6iNAJ2bORGEcGcGQnJB4oc/rs:fit/g:sm/q:40/h:507/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwMDEy/MS0xNDQwNDU3MTc5/LTM3MDAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 310634,
+          "name": "Pye Hastings",
+          "resource_url": "https://api.discogs.com/artists/310634",
+          "thumbnail_url": "https://i.discogs.com/79Quxca2kjevbz3NiAZZ2xU3Gn8uPeqIq6DAu0erXqM/rs:fit/g:sm/q:40/h:525/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMDYz/NC0xNDE0NTg5MzQw/LTU5OTkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 328758,
+          "name": "John G. Perry",
+          "resource_url": "https://api.discogs.com/artists/328758",
+          "thumbnail_url": "https://i.discogs.com/Lwe9Fa9OhwLS2Lb1I1hdiCSYrFeUK16ldWN81Z-e_QU/rs:fit/g:sm/q:40/h:602/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODc1/OC0xNjE4ODcwMDI1/LTIxOTguanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 328759,
+          "name": "Geoffrey Richardson",
+          "resource_url": "https://api.discogs.com/artists/328759",
+          "thumbnail_url": "https://i.discogs.com/lX1mt_BLyPQabh017R7BwQSc6XulwW8eExZhitZTBpY/rs:fit/g:sm/q:40/h:536/w:539/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODc1/OS0xNjMwODcwOTg5/LTQwMDMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 382721,
+          "name": "Derek Austin",
+          "resource_url": "https://api.discogs.com/artists/382721",
+          "thumbnail_url": "https://i.discogs.com/0IS8U7SuLMkG4vKVlLTkADIz2oP2-12cHcbCwrm9c28/rs:fit/g:sm/q:40/h:133/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4Mjcy/MS0xNTI2NTc4Mjcz/LTc4NzEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 434002,
+          "name": "Jim Leverton",
+          "resource_url": "https://api.discogs.com/artists/434002",
+          "thumbnail_url": "https://i.discogs.com/AO6sL34cBPwqUD7_5hp2tOxsExaBpTdOlAyhxLpZMI8/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDAw/Mi0xNTkwOTMyNjg1/LTU5ODYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 608039,
+          "name": "Richard Coughlan",
+          "resource_url": "https://api.discogs.com/artists/608039",
+          "thumbnail_url": "https://i.discogs.com/5PclM_QoKWPsYetyDc-u6xNbgdo-fU0IOEBSoy398jQ/rs:fit/g:sm/q:40/h:554/w:472/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODAz/OS0xNDE0NTg5NjEz/LTkzOTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 867744,
+          "name": "Simon Bentall",
+          "resource_url": "https://api.discogs.com/artists/867744",
+          "thumbnail_url": "https://i.discogs.com/kgKhT1BtuUxKGbleJI66GD3Hsbz4vSoxhsYCN3qnjZM/rs:fit/g:sm/q:40/h:552/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg2Nzc0/NC0xNTIxMjQ1ODU0/LTc3MjAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1035397,
+          "name": "Mike Wedgwood",
+          "resource_url": "https://api.discogs.com/artists/1035397",
+          "thumbnail_url": "https://i.discogs.com/XUnnz0r3Fblprf6D4kT75kDe2EA633exmLKh2VIcwxc/rs:fit/g:sm/q:40/h:440/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzUz/OTctMTM1MzAwMTg4/MS0yMDkwLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1059139,
+          "name": "Dek Messecar",
+          "resource_url": "https://api.discogs.com/artists/1059139",
+          "thumbnail_url": "https://i.discogs.com/gcFUgt6Dnedo6Ci673esasfiMm5PuBZl5P6eTzhu2jA/rs:fit/g:sm/q:40/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTkx/MzktMTc0MDQwNTEx/OS02NTQ2LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2786851,
+          "name": "Mark Walker (10)",
+          "resource_url": "https://api.discogs.com/artists/2786851",
+          "thumbnail_url": "https://i.discogs.com/pufIYTXPGu8yFHq-GIjeOkcSiRVWDIw6iRO3eNPJCCY/rs:fit/g:sm/q:40/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3ODY4/NTEtMTQxNDU4OTA2/Mi0zOTA1LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Caravan",
+      "namevariations": [
+        "キャラヴァン"
+      ],
+      "profile": "Caravan are an English progressive rock band from the Canterbury area, formed in early 1968 from the ashes of the legendary [a=Wilde Flowers]. All four original members of Caravan (David Sinclair, Richard Sinclair, Pye Hastings, and Richard Coughlan) were, at one time or another, in that band. \"Caravan\" was however a big change in terms of musical direction, blending psychedelic rock, jazz, and classical influences to create a distinctive sound. They are considered a key part of the Canterbury scene of progressive rock acts, although they have never achieved the great commercial success that was widely predicted for them at the beginning of their career.\r\n\r\nThe band were originally based in Whitstable, Kent, near Canterbury, but moved to London when briefly signed to Verve Records. After being dropped by Verve, the band signed to Decca Records, where they released their most critically acclaimed album, \"In the Land of Grey and Pink\", in 1971. Dave Sinclair left after the album's release and was replaced on keyboards, but the group split up the following year. Hastings and Coughlan however, recruited new members, notably viola player Geoffrey Richardson, and continued touring and recording albums regularly despite more line-up changes that even saw original members David Sinclair and Richard Sinclair coming back and leaving again. They split in 1982 after a series of albums in pop vein, which left listeners wondering if this was still the same band who had released the landmark early-1970's albums... \r\n\r\nThe band was inactive for most of the 1980s, apart from three sporadic live appearances in 1983 and 1984. But in 1990 Caravan was asked to play a one-off reunion concert under its original form (plus Jimmy Hastings), for a TV show screened by Central TV (“Bedrock” special). This was the start of the resumed activity of the band, who continued touring and recording in the 1990s, with again, the core trio of Hastings, Coughlan and Richardson, and other more or less regular members. \r\n\r\nThe band stopped and reformed several times in the following decades, and Caravan still remain active as a live band in the 21st century, despite Coughlan's death in December 2013. ",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 66999,
+        "images": [
+          {
+            "height": 343,
+            "resource_url": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/EbXKbj01b68IG1OUWbXRKzvFNYj30MnyMVgUxPSVG04/rs:fit/g:sm/q:90/h:343/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/q8FbI5TgFK6ZEdSsWB8J1eLqoCjBHYw6iYxURMGqw5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+            "width": 450
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/XIYGrAWYX82R86f0fzuLDwKerR-QTvX1tf_s5l0BDrI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/XIYGrAWYX82R86f0fzuLDwKerR-QTvX1tf_s5l0BDrI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/uEqlNj3mYjuEGieTpz3QBmWjhUQMfs0vcwxq1BWpAtU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/ODQ4Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 554,
+            "resource_url": "https://i.discogs.com/xIORydycMn0xvUrboP5fCh4_rNsPneA_7vhL5HuQkZg/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xIORydycMn0xvUrboP5fCh4_rNsPneA_7vhL5HuQkZg/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Q8hwYdM14EhZ3O4DIUHQENhAdejkGeEKnb0dypMfgvA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/OTQzMi5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 554,
+            "resource_url": "https://i.discogs.com/0ic4jVC94jzzbI7k21D0w8R2bZJ6lSuMdd_zm8LIkcU/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/0ic4jVC94jzzbI7k21D0w8R2bZJ6lSuMdd_zm8LIkcU/rs:fit/g:sm/q:90/h:554/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/1Yx8FkRXdxqx9YhmRjSeausgqXopd3U2zpJ5gKnPsZw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NTYt/NDA2NC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 388,
+            "resource_url": "https://i.discogs.com/ET6qMVTl1NGpHcxalO7zO0M1T5VkjAZ8YgsOdzzidC4/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ET6qMVTl1NGpHcxalO7zO0M1T5VkjAZ8YgsOdzzidC4/rs:fit/g:sm/q:90/h:388/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/YSXRkSM-J-_LG14ogc8PaznPf3GTWMilr25BgPiT9Yg/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA1NDYt/MTc2My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 350,
+            "resource_url": "https://i.discogs.com/NFRnyHpmZaNsXmAuCv1WZIMW7wPjn4GOq4d-gneB0qE/rs:fit/g:sm/q:90/h:350/w:270/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/NFRnyHpmZaNsXmAuCv1WZIMW7wPjn4GOq4d-gneB0qE/rs:fit/g:sm/q:90/h:350/w:270/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/jck11iSFX0xyKj-L-9auHQe0G1HhIWBflq6CNbHHNvk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTExNTUyMDQzMzYu/anBlZw.jpeg",
+            "width": 270
+          },
+          {
+            "height": 505,
+            "resource_url": "https://i.discogs.com/y1zvMtcgMOsF-TqdFtRuk5y5BAXkjZj7Ma4JC-WmFlc/rs:fit/g:sm/q:90/h:505/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/y1zvMtcgMOsF-TqdFtRuk5y5BAXkjZj7Ma4JC-WmFlc/rs:fit/g:sm/q:90/h:505/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/KVZadKnHNDVT6GC-isKx_DyTb_hmSKWwFqAp2jYe6as/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0ODU3NDc4NDQt/MzM4MC5qcGVn.jpeg",
+            "width": 550
+          },
+          {
+            "height": 300,
+            "resource_url": "https://i.discogs.com/METCfpPOLGZ_bciba0C3m7Oiv9zNUfMdyPM0CRrhjwo/rs:fit/g:sm/q:90/h:300/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/METCfpPOLGZ_bciba0C3m7Oiv9zNUfMdyPM0CRrhjwo/rs:fit/g:sm/q:90/h:300/w:425/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Sscgm4oeuHqgJEWQCzoggOP3wf1rK3q8Ff_d91jk4ng/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIyNjMu/anBlZw.jpeg",
+            "width": 425
+          },
+          {
+            "height": 435,
+            "resource_url": "https://i.discogs.com/rQoGtRZeFXDzYA1js58qiy51SH3I2T22jrp2bvYKeas/rs:fit/g:sm/q:90/h:435/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/rQoGtRZeFXDzYA1js58qiy51SH3I2T22jrp2bvYKeas/rs:fit/g:sm/q:90/h:435/w:580/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/63YvciaQLimLc06tx4gvZwhbg0hfxeA0YSPFcltgjrI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTEzMDIzNzIzMDAu/anBlZw.jpeg",
+            "width": 580
+          },
+          {
+            "height": 599,
+            "resource_url": "https://i.discogs.com/sYeTbp8Sfn2MlxLn2WWAlCnLELwgaVY4xQqCRKkf2g0/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/sYeTbp8Sfn2MlxLn2WWAlCnLELwgaVY4xQqCRKkf2g0/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/4Y0PY4eLuEZd34fMMyO7opQf1rmvCm1jGGfBXxhjvL8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE0NTQzNDk2Nzct/NTA1MS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 458,
+            "resource_url": "https://i.discogs.com/4q8_EvBWrHTCJpj9vGrCAqk9tfRS7BiwgUF-K31imcc/rs:fit/g:sm/q:90/h:458/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4q8_EvBWrHTCJpj9vGrCAqk9tfRS7BiwgUF-K31imcc/rs:fit/g:sm/q:90/h:458/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/izNgTF-NVrCtANagzqqyv0jJvnmHmnjbuWjtzw3xggA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE2NjEwMzc4NzAt/NTQ3Mi5wbmc.jpeg",
+            "width": 510
+          },
+          {
+            "height": 873,
+            "resource_url": "https://i.discogs.com/HbNLZBXzhrsENI4NNDDYywm-paMDX8_6SPzWg8Y2Yfo/rs:fit/g:sm/q:90/h:873/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HbNLZBXzhrsENI4NNDDYywm-paMDX8_6SPzWg8Y2Yfo/rs:fit/g:sm/q:90/h:873/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+            "uri150": "https://i.discogs.com/NikxPfToTxb_AWdihAGTQubbuB9gd-jh2U-CnWxsYr4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1Mjg0MDA1NTgt/NzQ2NS5naWY.jpeg",
+            "width": 600
+          },
+          {
+            "height": 407,
+            "resource_url": "https://i.discogs.com/qoKnqKi6EIEpJsWzi__yXtdbvjIN3auds5p08MgOc-I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qoKnqKi6EIEpJsWzi__yXtdbvjIN3auds5p08MgOc-I/rs:fit/g:sm/q:90/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/1RfMnX_oWu003Lll4tCHV09D4M-lDIRktn6qFB5fARI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE1NjQyMTU2ODYt/ODE1Ny5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 91724,
+            "name": "Lee Pomeroy",
+            "resource_url": "https://api.discogs.com/artists/91724",
+            "thumbnail_url": "https://i.discogs.com/Fxi1mjvoTxg2DNtBgidjrxo3U-VD8_1Tm75JBrr7AFc/rs:fit/g:sm/q:40/h:750/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkxNzI0/LTE3MTk3NTA2Nzct/NzI3NS5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 239943,
+            "name": "Steve Miller (3)",
+            "resource_url": "https://api.discogs.com/artists/239943",
+            "thumbnail_url": "https://i.discogs.com/KdIosf9FbgZFvfwjf4JxQ5IT9ii1BhQgaxU1oB1B5YA/rs:fit/g:sm/q:40/h:619/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzOTk0/My0xNzA3MDAxNjg0/LTU4NzEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 266835,
+            "name": "Richard Sinclair",
+            "resource_url": "https://api.discogs.com/artists/266835",
+            "thumbnail_url": "https://i.discogs.com/4DXYJ_a3txpb8sjKYY5Lv2_5ogoII08CN8JNUEayqi8/rs:fit/g:sm/q:40/h:407/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2Njgz/NS0xNjU0NTMwNTI2/LTE4NTQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 271126,
+            "name": "Doug Boyle",
+            "resource_url": "https://api.discogs.com/artists/271126",
+            "thumbnail_url": "https://i.discogs.com/bk_TnnHXYWJjQ3U4yY3rf7IpoDiRBETr_J6B4crhJR8/rs:fit/g:sm/q:40/h:521/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MTEy/Ni0xNDE0NTg0MjI2/LTMyMzEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 283046,
+            "name": "Jan Schelhaas",
+            "resource_url": "https://api.discogs.com/artists/283046",
+            "thumbnail_url": "https://i.discogs.com/q_2-8z-r1IpUOQW9YJRoGQSrS6izYuuxAzvDqXyxX8M/rs:fit/g:sm/q:40/h:575/w:577/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MzA0/Ni0xNDE0NTg2Njc0/LTcyOTQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 300121,
+            "name": "David Sinclair",
+            "resource_url": "https://api.discogs.com/artists/300121",
+            "thumbnail_url": "https://i.discogs.com/f-r4nxV3nazU83pSrk84P6iNAJ2bORGEcGcGQnJB4oc/rs:fit/g:sm/q:40/h:507/w:505/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMwMDEy/MS0xNDQwNDU3MTc5/LTM3MDAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 310634,
+            "name": "Pye Hastings",
+            "resource_url": "https://api.discogs.com/artists/310634",
+            "thumbnail_url": "https://i.discogs.com/79Quxca2kjevbz3NiAZZ2xU3Gn8uPeqIq6DAu0erXqM/rs:fit/g:sm/q:40/h:525/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMDYz/NC0xNDE0NTg5MzQw/LTU5OTkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 328758,
+            "name": "John G. Perry",
+            "resource_url": "https://api.discogs.com/artists/328758",
+            "thumbnail_url": "https://i.discogs.com/Lwe9Fa9OhwLS2Lb1I1hdiCSYrFeUK16ldWN81Z-e_QU/rs:fit/g:sm/q:40/h:602/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODc1/OC0xNjE4ODcwMDI1/LTIxOTguanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 328759,
+            "name": "Geoffrey Richardson",
+            "resource_url": "https://api.discogs.com/artists/328759",
+            "thumbnail_url": "https://i.discogs.com/lX1mt_BLyPQabh017R7BwQSc6XulwW8eExZhitZTBpY/rs:fit/g:sm/q:40/h:536/w:539/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyODc1/OS0xNjMwODcwOTg5/LTQwMDMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 382721,
+            "name": "Derek Austin",
+            "resource_url": "https://api.discogs.com/artists/382721",
+            "thumbnail_url": "https://i.discogs.com/0IS8U7SuLMkG4vKVlLTkADIz2oP2-12cHcbCwrm9c28/rs:fit/g:sm/q:40/h:133/w:200/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4Mjcy/MS0xNTI2NTc4Mjcz/LTc4NzEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 434002,
+            "name": "Jim Leverton",
+            "resource_url": "https://api.discogs.com/artists/434002",
+            "thumbnail_url": "https://i.discogs.com/AO6sL34cBPwqUD7_5hp2tOxsExaBpTdOlAyhxLpZMI8/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzNDAw/Mi0xNTkwOTMyNjg1/LTU5ODYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 608039,
+            "name": "Richard Coughlan",
+            "resource_url": "https://api.discogs.com/artists/608039",
+            "thumbnail_url": "https://i.discogs.com/5PclM_QoKWPsYetyDc-u6xNbgdo-fU0IOEBSoy398jQ/rs:fit/g:sm/q:40/h:554/w:472/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYwODAz/OS0xNDE0NTg5NjEz/LTkzOTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 867744,
+            "name": "Simon Bentall",
+            "resource_url": "https://api.discogs.com/artists/867744",
+            "thumbnail_url": "https://i.discogs.com/kgKhT1BtuUxKGbleJI66GD3Hsbz4vSoxhsYCN3qnjZM/rs:fit/g:sm/q:40/h:552/w:560/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTg2Nzc0/NC0xNTIxMjQ1ODU0/LTc3MjAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1035397,
+            "name": "Mike Wedgwood",
+            "resource_url": "https://api.discogs.com/artists/1035397",
+            "thumbnail_url": "https://i.discogs.com/XUnnz0r3Fblprf6D4kT75kDe2EA633exmLKh2VIcwxc/rs:fit/g:sm/q:40/h:440/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzUz/OTctMTM1MzAwMTg4/MS0yMDkwLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1059139,
+            "name": "Dek Messecar",
+            "resource_url": "https://api.discogs.com/artists/1059139",
+            "thumbnail_url": "https://i.discogs.com/gcFUgt6Dnedo6Ci673esasfiMm5PuBZl5P6eTzhu2jA/rs:fit/g:sm/q:40/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNTkx/MzktMTc0MDQwNTEx/OS02NTQ2LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2786851,
+            "name": "Mark Walker (10)",
+            "resource_url": "https://api.discogs.com/artists/2786851",
+            "thumbnail_url": "https://i.discogs.com/pufIYTXPGu8yFHq-GIjeOkcSiRVWDIw6iRO3eNPJCCY/rs:fit/g:sm/q:40/h:583/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3ODY4/NTEtMTQxNDU4OTA2/Mi0zOTA1LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Caravan",
+        "namevariations": [
+          "キャラヴァン"
+        ],
+        "profile": "Caravan are an English progressive rock band from the Canterbury area, formed in early 1968 from the ashes of the legendary [a=Wilde Flowers]. All four original members of Caravan (David Sinclair, Richard Sinclair, Pye Hastings, and Richard Coughlan) were, at one time or another, in that band. \"Caravan\" was however a big change in terms of musical direction, blending psychedelic rock, jazz, and classical influences to create a distinctive sound. They are considered a key part of the Canterbury scene of progressive rock acts, although they have never achieved the great commercial success that was widely predicted for them at the beginning of their career.\r\n\r\nThe band were originally based in Whitstable, Kent, near Canterbury, but moved to London when briefly signed to Verve Records. After being dropped by Verve, the band signed to Decca Records, where they released their most critically acclaimed album, \"In the Land of Grey and Pink\", in 1971. Dave Sinclair left after the album's release and was replaced on keyboards, but the group split up the following year. Hastings and Coughlan however, recruited new members, notably viola player Geoffrey Richardson, and continued touring and recording albums regularly despite more line-up changes that even saw original members David Sinclair and Richard Sinclair coming back and leaving again. They split in 1982 after a series of albums in pop vein, which left listeners wondering if this was still the same band who had released the landmark early-1970's albums... \r\n\r\nThe band was inactive for most of the 1980s, apart from three sporadic live appearances in 1983 and 1984. But in 1990 Caravan was asked to play a one-off reunion concert under its original form (plus Jimmy Hastings), for a TV show screened by Central TV (“Bedrock” special). This was the start of the resumed activity of the band, who continued touring and recording in the 1990s, with again, the core trio of Hastings, Coughlan and Richardson, and other more or less regular members. \r\n\r\nThe band stopped and reformed several times in the following decades, and Caravan still remain active as a live band in the 21st century, despite Coughlan's death in December 2013. ",
+        "releases_url": "https://api.discogs.com/artists/66999/releases",
+        "resource_url": "https://api.discogs.com/artists/66999",
+        "uri": "https://www.discogs.com/artist/66999-Caravan",
+        "urls": [
+          "https://officialcaravan.co.uk/",
+          "https://www.facebook.com/OfficialCaravan",
+          "https://twitter.com/officialcaravan",
+          "https://www.youtube.com/channel/UCqMZ5-eJyASSx43kfoH8G5Q",
+          "http://cocacamp.nl/",
+          "https://en.wikipedia.org/wiki/Caravan_(band)",
+          "http://www.progarchives.com/artist.asp?id=613",
+          "https://www.imdb.com/name/nm2817600/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/66999",
+      "thumb": "https://i.discogs.com/q8FbI5TgFK6ZEdSsWB8J1eLqoCjBHYw6iYxURMGqw5E/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY2OTk5/LTE3MTUyMTA3MzAt/NDY4My5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/66999-Caravan",
+      "urls": [
+        "https://officialcaravan.co.uk/",
+        "https://www.facebook.com/OfficialCaravan",
+        "https://twitter.com/officialcaravan",
+        "https://www.youtube.com/channel/UCqMZ5-eJyASSx43kfoH8G5Q",
+        "http://cocacamp.nl/",
+        "https://en.wikipedia.org/wiki/Caravan_(band)",
+        "http://www.progarchives.com/artist.asp?id=613",
+        "https://www.imdb.com/name/nm2817600/"
+      ]
     },
     "lastfm": {
       "bio_content": "There are numerous artists with this name, including: \n1. British progressive rock band from Canterbury; \n2. Thai folk-rock band, active in the 1970s; \n3. Japanese singer songwriter; \n4. A Belgian hardcore band from Antwerp; \n5. A German folk band from Berlin; \n6. The Australian electronic artist Paul Jextra; \n7.  An  Italian disco band active in the 1980s; \n8. An American rock'n'roll/rockabilly band from Arkansas. \n9.......\nFor more artists with this name, see; \nhttps://musicbrainz.org/search?query=Caravan&type=artist&method=indexed\n\n1. Caravan are a British progressive rock band from Canterbury, United Kingdom, founded by former Wilde Flowers members David Sinclair, Richard Sinclair, Pye Hastings, and Richard Coughlan. Caravan rose to success over a period of several years from 1968 onwards into the 1970s as part of the Canterbury scene which also included Soft Machine. Caravan still continue a part-time gigging existence into the present.\n\nThe band were largely dormant in the 1980s, but a 1990 reunion, planned as a one-off for U.K. television's Bedrock show, restarted their career. Latterly they have also achieved steady sales and a fan following with the support of the more eclectic corners of radio, like BBC Six Music's Freak Zone and the growing re-emergence of progressive rock. \n* Official site\n\n2. Caravan are a Thai \"folk-rock\" band from the 1970s. They are the progenitors of the เพลงเพื่อชีวิต (pleng puea chiwit) or \"songs for life\" genre. Their music is loosely adapted folk-rock rhythms and melodies from American & British protest songs of the time and interlaced them with Thai folk idioms and instrumentation. \n\nThe band was founded in the early 1970s by student protest leaders surachai chanthimathon & wirasak sunthonsi. Their tunes & lyrics were a vital force for bringing the messages of urban student activism out to the provinces. In the wake of the massacre at thammasat university, the band fled Bangkok, some heading into the mountains of the northeast to join the communist insurgency in armed struggle. Needless to say, their music was banned from radioplay for quite a while, broadcast only from pirate stations in the hills. \n\n3. Caravan is a Japanese singer songwriter who started out in a band during his high school days, playing as the guitarist. In 2001, he left the band and decided to go solo. He handed out copies of his independent demo titled \"Homework#1\" during his live shows.\n\nIn 2004, he released his first indie album \"RAW LIFE MUSIC\" from the label AARON FIELDS, he followed this up with releasing another indie album in November titled \"Trip in the music\". \n\nWith the help of his Promotion Video of \"Soul music\" being played frequently on SPACE SHOWER TV, Caravan gained some popularity and in 2005, he was signed with rhythm zone (of avex label) and released his first single \"DAY DREAM\". In 2006, Caravan released his first major album \"WANDER AROUND\" and since then, he has managed to produce a album each year (2007: PANORAMA VISION, 2008: Yellow Morning, 2009: Luck and Pluck) and in 2010, he released two best of albums titled \"The Planet songs: vol1 + 2.\" \n\n4. Caravan are a Belgian chaotic hardcore band from Antwerp. Their debut EP is \"Chaos is Ours\". \n\n5. Caravan are a German folk band from Berlin.  \n\n6. Caravan is the Australian electronic artist Paul Jextra. \n\n7. Caravan were an Italian disco band active in the 1980s. \n\n8. Caravan were an American rock'n'roll/rockabilly band from Arkansas. \n\n9.......\nFor more artists with this name, see; \nhttps://musicbrainz.org/search?query=Caravan&type=artist&method=indexed <a href=\"https://www.last.fm/music/Caravan\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -134,10 +627,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 263945,
+      "listeners": 263994,
       "mbid": "c7b4d848-eeb6-444f-ba14-6173ea2cffa8",
       "name": "Caravan",
-      "playcount": 4099069,
+      "playcount": 4100029,
       "similar_artists": [
         {
           "name": "Hatfield and the North",
@@ -170,7 +663,7 @@
       "url": "https://www.last.fm/music/Caravan"
     },
     "spotify": {
-      "followers": 2205,
+      "followers": 2204,
       "genres": [],
       "id": "7I9GI1IG7pfLC4ENoLVJ5e",
       "images": [
@@ -197,6 +690,6 @@
   },
   "spotify_id": "7I9GI1IG7pfLC4ENoLVJ5e",
   "spotify_url": "https://open.spotify.com/artist/7I9GI1IG7pfLC4ENoLVJ5e",
-  "updated_at": "2025-07-05T14:48:58.167169",
+  "updated_at": "2025-07-08T09:39:10.901143",
   "wikipedia_url": null
 }

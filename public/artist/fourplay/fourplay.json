@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:57:16.343483",
   "discogs_id": "233666",
-  "discogs_url": "https://www.discogs.com/artist/233666",
-  "followers": 195427,
+  "discogs_url": "https://www.discogs.com/artist/233666-Fourplay-2",
+  "followers": 195544,
   "formed_date": null,
   "genres": [
     "Jazz",
@@ -18,7 +18,7 @@
     "Fusion",
     "instrumental"
   ],
-  "id": null,
+  "id": "fourplay-1751723841",
   "images": [
     {
       "height": 2000,
@@ -79,14 +79,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/HYALk1O2xgOu2-cU1TSarhlHy6KBETbfoHJ58wzjq6Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "ab75b65a-0a14-4f41-a9fe-307779556e17",
   "lastfm_url": "https://www.last.fm/music/Fourplay",
   "local_images": {
-    "hi-res": "public/artist/fourplay/fourplay-hi-res.jpg",
-    "medium": "public/artist/fourplay/fourplay-medium.jpg",
-    "small": "public/artist/fourplay/fourplay-small.jpg"
+    "hi-res": "../public/artist/fourplay/fourplay-hi-res.jpg",
+    "medium": "../public/artist/fourplay/fourplay-medium.jpg",
+    "small": "../public/artist/fourplay/fourplay-small.jpg"
   },
   "name": "Fourplay",
   "popularity": 49,
@@ -103,9 +115,152 @@
       "url": "https://music.apple.com/gb/artist/fourplay/155905"
     },
     "discogs": {
-      "id": 233666,
-      "original_name": "Fourplay (2)",
-      "role": ""
+      "cover_image": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "233666",
+      "images": [
+        {
+          "height": 266,
+          "resource_url": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/HYALk1O2xgOu2-cU1TSarhlHy6KBETbfoHJ58wzjq6Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+          "width": 400
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 272605,
+          "name": "Peter Hollo",
+          "resource_url": "https://api.discogs.com/artists/272605",
+          "thumbnail_url": "https://i.discogs.com/zV2SLKfIInbmH2zQVvT4Cx99bF72kdcwK1ZBtq_ThuE/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MjYw/NS0xNjIxNzEwNDkz/LTMxNzcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 272606,
+          "name": "Veren Grigorov",
+          "resource_url": "https://api.discogs.com/artists/272606",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 353779,
+          "name": "Lara Goodridge",
+          "resource_url": "https://api.discogs.com/artists/353779",
+          "thumbnail_url": "https://i.discogs.com/a5nmDCZvSHOC8K7jZlQVZBNH6Dvsdhxiy8T__HWKnng/rs:fit/g:sm/q:40/h:388/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1Mzc3/OS0xNjA5MjAwNTQ3/LTI2MDAuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 545234,
+          "name": "Tim Hollo",
+          "resource_url": "https://api.discogs.com/artists/545234",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 813877,
+          "name": "Chris Emerson",
+          "resource_url": "https://api.discogs.com/artists/813877",
+          "thumbnail_url": "https://i.discogs.com/qXgfs9WlLHLH2k_ursrbl1H3zNkD1S9vMy7mVAa2DWo/rs:fit/g:sm/q:40/h:768/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxMzg3/Ny0xNDE1ODQ1MzEx/LTc1MTMuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 902612,
+          "name": "Shenton Gregory",
+          "resource_url": "https://api.discogs.com/artists/902612",
+          "thumbnail_url": "https://i.discogs.com/SeWXPGamr2tjnX9qD8n1WG8Ct_qg2SXLZCnY8PupcEI/rs:fit/g:sm/q:40/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkwMjYx/Mi0xNDE1ODQ1NjIx/LTc1ODYuanBlZw.jpeg"
+        }
+      ],
+      "name": "Fourplay (2)",
+      "namevariations": [
+        "\"Four Play\"",
+        "Four Play",
+        "FourPlay",
+        "FourPlay String Quartet",
+        "Fourplay String Quartet"
+      ],
+      "profile": "Electric string quartet, based in Sydney, Australia.\r\n\r\n• For the Contemporary Jazz supergroup, please use [b][a282091][/b].",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 233666,
+        "images": [
+          {
+            "height": 266,
+            "resource_url": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/OcXaGUxElqESVvojpo3_E4clMThAw4jmFgg7FhVq0Z4/rs:fit/g:sm/q:90/h:266/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/HYALk1O2xgOu2-cU1TSarhlHy6KBETbfoHJ58wzjq6Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+            "width": 400
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 272605,
+            "name": "Peter Hollo",
+            "resource_url": "https://api.discogs.com/artists/272605",
+            "thumbnail_url": "https://i.discogs.com/zV2SLKfIInbmH2zQVvT4Cx99bF72kdcwK1ZBtq_ThuE/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MjYw/NS0xNjIxNzEwNDkz/LTMxNzcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 272606,
+            "name": "Veren Grigorov",
+            "resource_url": "https://api.discogs.com/artists/272606",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 353779,
+            "name": "Lara Goodridge",
+            "resource_url": "https://api.discogs.com/artists/353779",
+            "thumbnail_url": "https://i.discogs.com/a5nmDCZvSHOC8K7jZlQVZBNH6Dvsdhxiy8T__HWKnng/rs:fit/g:sm/q:40/h:388/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1Mzc3/OS0xNjA5MjAwNTQ3/LTI2MDAuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 545234,
+            "name": "Tim Hollo",
+            "resource_url": "https://api.discogs.com/artists/545234",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 813877,
+            "name": "Chris Emerson",
+            "resource_url": "https://api.discogs.com/artists/813877",
+            "thumbnail_url": "https://i.discogs.com/qXgfs9WlLHLH2k_ursrbl1H3zNkD1S9vMy7mVAa2DWo/rs:fit/g:sm/q:40/h:768/w:511/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgxMzg3/Ny0xNDE1ODQ1MzEx/LTc1MTMuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 902612,
+            "name": "Shenton Gregory",
+            "resource_url": "https://api.discogs.com/artists/902612",
+            "thumbnail_url": "https://i.discogs.com/SeWXPGamr2tjnX9qD8n1WG8Ct_qg2SXLZCnY8PupcEI/rs:fit/g:sm/q:40/h:600/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTkwMjYx/Mi0xNDE1ODQ1NjIx/LTc1ODYuanBlZw.jpeg"
+          }
+        ],
+        "name": "Fourplay (2)",
+        "namevariations": [
+          "\"Four Play\"",
+          "Four Play",
+          "FourPlay",
+          "FourPlay String Quartet",
+          "Fourplay String Quartet"
+        ],
+        "profile": "Electric string quartet, based in Sydney, Australia.\r\n\r\n• For the Contemporary Jazz supergroup, please use [b][a282091][/b].",
+        "releases_url": "https://api.discogs.com/artists/233666/releases",
+        "resource_url": "https://api.discogs.com/artists/233666",
+        "uri": "https://www.discogs.com/artist/233666-Fourplay-2",
+        "urls": [
+          "http://www.fourplay.com.au/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/233666",
+      "thumb": "https://i.discogs.com/HYALk1O2xgOu2-cU1TSarhlHy6KBETbfoHJ58wzjq6Q/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIzMzY2/Ni0xMzEyNjU4NjM4/LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/233666-Fourplay-2",
+      "urls": [
+        "http://www.fourplay.com.au/"
+      ]
     },
     "lastfm": {
       "bio_content": "Fourplay is a renowned contemporary jazz group that has captivated audiences worldwide with their unique fusion of smooth jazz, R&B, pop, and funk. The group was formed in 1990 and consists of four incredibly talented musicians: Bob James (keyboardist), Nathan East (bassist and vocalist), Harvey Mason (drummer), and Chuck Loeb (guitarist). Each member brings their own distinct musical style and expertise to the ensemble, resulting in a cohesive and dynamic sound.\n\nThe origins of Fourplay trace back to a recording session where Bob James and Harvey Mason collaborated on James' album. Impressed by their musical chemistry, they decided to form a band and invited Nathan East to join them. Later, guitarist Lee Ritenour became a founding member, but when he departed in 1998, Chuck Loeb replaced him, solidifying the lineup that has remained to this day.\n\nFourplay released their self-titled debut album in 1991, which quickly gained popularity and achieved both critical acclaim and commercial success. The album showcased their exceptional musicianship and featured smooth jazz hits like \"Max-O-Man\" and \"After the Dance.\" This initial success set the stage for a string of highly successful albums, including \"Between the Sheets,\" \"Elixir,\" and \"Esprit de Four,\" which further solidified their reputation as one of the leading contemporary jazz acts.\n\nOver the years, Fourplay has collaborated with numerous renowned artists, including Chaka Khan, El DeBarge, Anita Baker, and Eric Clapton, among others. Their live performances are known for their captivating energy and virtuosity, captivating audiences with their intricate musical interplay and improvisation.\n\nFourplay's enduring popularity and success in the contemporary jazz genre can be attributed to their ability to evolve while staying true to their musical roots. Their albums often blend various genres, incorporating elements of jazz, R&B, and pop, appealing to a wide range of listeners.\n\nTragically, on July 31, 2017, Chuck Loeb passed away after a battle with cancer, leaving a void in the band. In 2019, guitarist and vocalist Larry Carlton joined Fourplay, bringing his own exceptional talent and adding a new chapter to the group's storied history.\n\nWith their remarkable musicianship, captivating performances, and a discography spanning over three decades, Fourplay continues to be a beloved and influential force in contemporary jazz, enchanting audiences around the world with their smooth, soulful sound. <a href=\"https://www.last.fm/music/Fourplay\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -136,10 +291,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 199037,
+      "listeners": 199080,
       "mbid": "ab75b65a-0a14-4f41-a9fe-307779556e17",
       "name": "Fourplay",
-      "playcount": 3186815,
+      "playcount": 3187501,
       "similar_artists": [
         {
           "name": "Lee Ritenour",
@@ -172,7 +327,7 @@
       "url": "https://www.last.fm/music/Fourplay"
     },
     "spotify": {
-      "followers": 195427,
+      "followers": 195544,
       "genres": [
         "smooth jazz",
         "jazz fusion",
@@ -204,6 +359,6 @@
   },
   "spotify_id": "3PcMolaGsh2nryvBR2sQOS",
   "spotify_url": "https://open.spotify.com/artist/3PcMolaGsh2nryvBR2sQOS",
-  "updated_at": "2025-07-05T14:57:21.582231",
+  "updated_at": "2025-07-08T09:51:39.798490",
   "wikipedia_url": null
 }

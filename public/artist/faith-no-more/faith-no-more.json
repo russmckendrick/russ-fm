@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T15:55:22.730630",
   "discogs_id": "12937",
-  "discogs_url": "https://www.discogs.com/artist/12937",
-  "followers": 1919997,
+  "discogs_url": "https://www.discogs.com/artist/12937-Faith-No-More",
+  "followers": 1920621,
   "formed_date": null,
   "genres": [
     "Hard Rock",
@@ -20,7 +20,7 @@
     "metal",
     "seen live"
   ],
-  "id": null,
+  "id": "faith-no-more-1751727327",
   "images": [
     {
       "height": 2000,
@@ -87,14 +87,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/I2cubiW7STiiRCmf_FrPmgpgqUs8_LzGayEK6egS5T0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "b15ebd71-a252-417d-9e1c-3e6863da68f8",
   "lastfm_url": "https://www.last.fm/music/Faith+No+More",
   "local_images": {
-    "hi-res": "public/artist/faith-no-more/faith-no-more-hi-res.jpg",
-    "medium": "public/artist/faith-no-more/faith-no-more-medium.jpg",
-    "small": "public/artist/faith-no-more/faith-no-more-small.jpg"
+    "hi-res": "../public/artist/faith-no-more/faith-no-more-hi-res.jpg",
+    "medium": "../public/artist/faith-no-more/faith-no-more-medium.jpg",
+    "small": "../public/artist/faith-no-more/faith-no-more-small.jpg"
   },
   "name": "Faith No More",
   "popularity": 64,
@@ -111,9 +123,498 @@
       "url": "https://music.apple.com/gb/artist/faith-no-more/170077"
     },
     "discogs": {
-      "id": 12937,
-      "original_name": "Faith No More",
-      "role": ""
+      "cover_image": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "12937",
+      "images": [
+        {
+          "height": 456,
+          "resource_url": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/I2cubiW7STiiRCmf_FrPmgpgqUs8_LzGayEK6egS5T0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+          "width": 598
+        },
+        {
+          "height": 459,
+          "resource_url": "https://i.discogs.com/K9Qlksei2VzX_-MyeAp__3nC9jXtRWcM87JRt1OH2pU/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/K9Qlksei2VzX_-MyeAp__3nC9jXtRWcM87JRt1OH2pU/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+          "uri150": "https://i.discogs.com/Thgf3sTazOLQ7T4If2c73U3JybdEOgr0C2JqrizAlf0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 515,
+          "resource_url": "https://i.discogs.com/4UHWg3K750WG91-yHfXsxiUmyNfXFTRE8HsCRKlb0Xk/rs:fit/g:sm/q:90/h:515/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4UHWg3K750WG91-yHfXsxiUmyNfXFTRE8HsCRKlb0Xk/rs:fit/g:sm/q:90/h:515/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/mCYb4lsueL893zRIzX2uAytB6VxiPqQVYoTaq73CseY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 302,
+          "resource_url": "https://i.discogs.com/mKXXBrjELavuR5u2lrzLy9XU9Jchd6vIKE7UGGXGkzU/rs:fit/g:sm/q:90/h:302/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/mKXXBrjELavuR5u2lrzLy9XU9Jchd6vIKE7UGGXGkzU/rs:fit/g:sm/q:90/h:302/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/-C7Y_sGtYcjkxJTsbM_9tivgr81ojnIoXcIVuaS4YZ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+          "width": 450
+        },
+        {
+          "height": 352,
+          "resource_url": "https://i.discogs.com/aYkCpz2KOtmHK898dxVHdTEPL7jkUmRo0TL57QtP_3o/rs:fit/g:sm/q:90/h:352/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/aYkCpz2KOtmHK898dxVHdTEPL7jkUmRo0TL57QtP_3o/rs:fit/g:sm/q:90/h:352/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/5DQeksL70ZYoasiD50eS8Tf7z6-6OCBNeEMljZPgBDQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+          "width": 355
+        },
+        {
+          "height": 526,
+          "resource_url": "https://i.discogs.com/qVix-a9bnrlzELkAR3SMMDhLGbPYObJ8HTvX2XxgkK4/rs:fit/g:sm/q:90/h:526/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qVix-a9bnrlzELkAR3SMMDhLGbPYObJ8HTvX2XxgkK4/rs:fit/g:sm/q:90/h:526/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/S6LrCQbJ18m6oxg4U5iBHSlTvG_WH_mE3e2kci-7ypQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 291,
+          "resource_url": "https://i.discogs.com/oIlARn-a24zbFbYwfWmFYQWnC9tgvReOE1WVRcC-Mwo/rs:fit/g:sm/q:90/h:291/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/oIlARn-a24zbFbYwfWmFYQWnC9tgvReOE1WVRcC-Mwo/rs:fit/g:sm/q:90/h:291/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+          "uri150": "https://i.discogs.com/QKgCuzlYnV2QvULE4Z5EELb6gIRsNdt2urNHKaRJKFA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+          "width": 300
+        },
+        {
+          "height": 344,
+          "resource_url": "https://i.discogs.com/NbhoEY3joIm1HA8MB42HaQUwFGhC3wKczjf9k4hhGjc/rs:fit/g:sm/q:90/h:344/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NbhoEY3joIm1HA8MB42HaQUwFGhC3wKczjf9k4hhGjc/rs:fit/g:sm/q:90/h:344/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/dHAPsVBGbhFEobuw9NcwBuCBfy5Fg2Wh3scGacCjgN8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+          "width": 344
+        },
+        {
+          "height": 509,
+          "resource_url": "https://i.discogs.com/OAj5F4bC1bKekWoPBR2W1CIUEJIrMzGd1IGBH5YxhSI/rs:fit/g:sm/q:90/h:509/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/OAj5F4bC1bKekWoPBR2W1CIUEJIrMzGd1IGBH5YxhSI/rs:fit/g:sm/q:90/h:509/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/Er7Ad0G0iP-MWult2VDOrRGLhA6zflYKKR6ZRl3Yq08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+          "width": 487
+        },
+        {
+          "height": 365,
+          "resource_url": "https://i.discogs.com/LMRpje-h2k9nXragX4BhTqrLegvcwEHA5scQQROoqPc/rs:fit/g:sm/q:90/h:365/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/LMRpje-h2k9nXragX4BhTqrLegvcwEHA5scQQROoqPc/rs:fit/g:sm/q:90/h:365/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/GfEKXz5c5hOB_NeeXcC652I5jewLAdOKu8xvJgemhJ0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+          "width": 500
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 31721,
+          "name": "Paula Frazer",
+          "resource_url": "https://api.discogs.com/artists/31721",
+          "thumbnail_url": "https://i.discogs.com/gy2VwYssPekVAlZVD9py5XwqWWjIeyrYAIth5XCAv64/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNzIx/LTExNTEyNjc0NjAu/anBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 103997,
+          "name": "Jim Martin",
+          "resource_url": "https://api.discogs.com/artists/103997",
+          "thumbnail_url": "https://i.discogs.com/u9Fn0RG6-goQP5mODtzZybHbt-T2bKrfAVcOGNd3zPU/rs:fit/g:sm/q:40/h:500/w:339/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzk5/Ny0xNTMyMTU5MjQ4/LTk1OTMuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 108249,
+          "name": "Mike Patton",
+          "resource_url": "https://api.discogs.com/artists/108249",
+          "thumbnail_url": "https://i.discogs.com/3WpZ2CNtDl-6ZFW-G-qWB1hhVYw-Yl52imXtvZPRlTE/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwODI0/OS0xNTI2NDI0MDE0/LTQ2NzQuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 255524,
+          "name": "Billy Gould",
+          "resource_url": "https://api.discogs.com/artists/255524",
+          "thumbnail_url": "https://i.discogs.com/WIm18darpjpOVCRo-r6D9tLChDZcUqIKThh3typGsbI/rs:fit/g:sm/q:40/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NTUy/NC0xNjAxOTczMzEw/LTg5MTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 258985,
+          "name": "Dean Menta",
+          "resource_url": "https://api.discogs.com/artists/258985",
+          "thumbnail_url": "https://i.discogs.com/fPYwaBccDYY-ty_uQEckY6GBR7LeDFtA97cJSKqfmzk/rs:fit/g:sm/q:40/h:276/w:379/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1ODk4/NS0xNTYyNTcyMzc1/LTM4OTMuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 263193,
+          "name": "Mike Bordin",
+          "resource_url": "https://api.discogs.com/artists/263193",
+          "thumbnail_url": "https://i.discogs.com/acmyhA_SS7EmdTHFCaEm19eERLPuvRpSccIVA6Wh3Mg/rs:fit/g:sm/q:40/h:401/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzE5/My0xMzc3MDAzOTgw/LTYxNzAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 264351,
+          "name": "Desmond Shea",
+          "resource_url": "https://api.discogs.com/artists/264351",
+          "thumbnail_url": "https://i.discogs.com/kFhRqszrX8HE6PM3TvnPV7PouXlfJYZi0XvPHjh4jMA/rs:fit/g:sm/q:40/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NDM1/MS0xNzIyNzQ0MTI0/LTIyMTUuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 265224,
+          "name": "Trey Spruance",
+          "resource_url": "https://api.discogs.com/artists/265224",
+          "thumbnail_url": "https://i.discogs.com/buiKDEXK-QAZI1udoK0YY19K-c4D9snzGbS3V8zmgW0/rs:fit/g:sm/q:40/h:476/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NTIy/NC0xMjczNTA0MzE5/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 265699,
+          "name": "Roddy Bottum",
+          "resource_url": "https://api.discogs.com/artists/265699",
+          "thumbnail_url": "https://i.discogs.com/3kPta83lv1c3EUoOTL2WgGPhzvQwEa0aIPYWAwmug9M/rs:fit/g:sm/q:40/h:360/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NTY5/OS0xMjM4MTUwMTc5/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 267484,
+          "name": "Courtney Love",
+          "resource_url": "https://api.discogs.com/artists/267484",
+          "thumbnail_url": "https://i.discogs.com/rECn-VJbpF5SVDdJiocf1vfB1uPfQcd_jULvRWpw2Ag/rs:fit/g:sm/q:40/h:735/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NzQ4/NC0xNjkxNTIxODc1/LTkzNjYuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 453654,
+          "name": "Chuck Mosley",
+          "resource_url": "https://api.discogs.com/artists/453654",
+          "thumbnail_url": "https://i.discogs.com/kL9FZqJ9BOvXz6XPJ_QL84dR-XfIVWFScreFGZteqdw/rs:fit/g:sm/q:40/h:332/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MzY1/NC0xMjYwOTc4NjQ1/LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 512829,
+          "name": "Jon Hudson",
+          "resource_url": "https://api.discogs.com/artists/512829",
+          "thumbnail_url": "https://i.discogs.com/v8S6j-ShOBO5nbOFwgMGCmFmI1xOdcyE3KaGpMwGJ3w/rs:fit/g:sm/q:40/h:400/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxMjgy/OS0xMjY4MTMwNjE0/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1497506,
+          "name": "Mark Bowen",
+          "resource_url": "https://api.discogs.com/artists/1497506",
+          "thumbnail_url": "https://i.discogs.com/lOkWC8N_UYD-w_hJaXBO9HvlbyxnAJ4j3AneoM6232U/rs:fit/g:sm/q:40/h:268/w:253/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTc1/MDYtMTY1NTExNzQy/NC0yNzcyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2264000,
+          "name": "Jake Smith (6)",
+          "resource_url": "https://api.discogs.com/artists/2264000",
+          "thumbnail_url": "https://i.discogs.com/t83_sFyuzSP0-GZLBHZgP_6J4IYbrtyw1xZGYilEfOk/rs:fit/g:sm/q:40/h:348/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyNjQw/MDAtMTU3Njg3NTA2/Ni02NTgyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 4386357,
+          "name": "Craig Shell",
+          "resource_url": "https://api.discogs.com/artists/4386357",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 4997092,
+          "name": "Joe Callahan (3)",
+          "resource_url": "https://api.discogs.com/artists/4997092",
+          "thumbnail_url": "https://i.discogs.com/shDLl4uzEcoev4vSShbd-xC-mDzkeS6Cuqf1CKB3UK0/rs:fit/g:sm/q:40/h:769/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5OTcw/OTItMTQ2MDY4ODgy/OC0zMzAxLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 5344404,
+          "name": "Walter O'Brien (3)",
+          "resource_url": "https://api.discogs.com/artists/5344404",
+          "thumbnail_url": "https://i.discogs.com/w-FU2pZ-BAUa70N-oi0BES8LOEucE3merN4davdTfcI/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDQ0/MDQtMTQ3Nzc2ODk3/MC01ODUyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 8276554,
+          "name": "Mark Stewart (32)",
+          "resource_url": "https://api.discogs.com/artists/8276554",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Faith No More",
+      "namevariations": [
+        "F.N M.",
+        "FNM",
+        "Faith N",
+        "Faith-No-More",
+        "Faith. No More",
+        "Faith. No More.",
+        "フェイス・ノー・モア"
+      ],
+      "profile": "An American rock band from San Francisco, California.\r\n\r\nThe genesis of Faith No More was formed in late 1981 as [a7528232], which then turned into [a4392515] Faith No More was started in September 1983 by Roddy Bottum, Billy Gould and Mike Bordin.\r\n\r\nSince their long-time guitarist Jim Martin left the group in 1993, the band had trouble finding a permanent guitarist. This and band members’ commitments to other musical projects led to to the group disbanding in April 1998.\r\n\r\nIn February 2009 Faith No More announced their reunion as a touring entity. Their 7th album Sol Invictus was released in 2015.\r\n\r\nCurrent line-up:\r\nBilly Gould - Bass (1983–1998, 2009– )\r\nMike Bordin - Drums (1983–1998, 2009– )\r\nRoddy Bottum - Keyboards (1983–1998, 2009– )\r\nMike Patton - Vocals (1988–1998, 2009– )\r\nJon Hudson - Guitar (1996–1998, 2009– )",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 4392515,
+            "name": "Faith. No Man.",
+            "resource_url": "https://api.discogs.com/artists/4392515",
+            "thumbnail_url": "https://i.discogs.com/VEBCnBjWSMmAekyMf8gPhzZnypSoBPWa51AwznAmv4o/rs:fit/g:sm/q:40/h:310/w:482/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQzOTI1/MTUtMTQzMDg2Nzcw/Ni00NzIyLmpwZWc.jpeg"
+          },
+          {
+            "id": 7528232,
+            "name": "Sharp Young Men",
+            "resource_url": "https://api.discogs.com/artists/7528232",
+            "thumbnail_url": ""
+          },
+          {
+            "id": 8105342,
+            "name": "Hairkuts That Kill",
+            "resource_url": "https://api.discogs.com/artists/8105342",
+            "thumbnail_url": ""
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 12937,
+        "images": [
+          {
+            "height": 456,
+            "resource_url": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/Q8eZQjM9PMHyKTfPLWc7qbXkaix1wa2DfqK42FF96Cc/rs:fit/g:sm/q:90/h:456/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/I2cubiW7STiiRCmf_FrPmgpgqUs8_LzGayEK6egS5T0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+            "width": 598
+          },
+          {
+            "height": 459,
+            "resource_url": "https://i.discogs.com/K9Qlksei2VzX_-MyeAp__3nC9jXtRWcM87JRt1OH2pU/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/K9Qlksei2VzX_-MyeAp__3nC9jXtRWcM87JRt1OH2pU/rs:fit/g:sm/q:90/h:459/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+            "uri150": "https://i.discogs.com/Thgf3sTazOLQ7T4If2c73U3JybdEOgr0C2JqrizAlf0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzOTMt/OTMzMy5wbmc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 515,
+            "resource_url": "https://i.discogs.com/4UHWg3K750WG91-yHfXsxiUmyNfXFTRE8HsCRKlb0Xk/rs:fit/g:sm/q:90/h:515/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4UHWg3K750WG91-yHfXsxiUmyNfXFTRE8HsCRKlb0Xk/rs:fit/g:sm/q:90/h:515/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/mCYb4lsueL893zRIzX2uAytB6VxiPqQVYoTaq73CseY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MTY0MzE0Njgt/OTI5My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 302,
+            "resource_url": "https://i.discogs.com/mKXXBrjELavuR5u2lrzLy9XU9Jchd6vIKE7UGGXGkzU/rs:fit/g:sm/q:90/h:302/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/mKXXBrjELavuR5u2lrzLy9XU9Jchd6vIKE7UGGXGkzU/rs:fit/g:sm/q:90/h:302/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/-C7Y_sGtYcjkxJTsbM_9tivgr81ojnIoXcIVuaS4YZ4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDI2ODYxODIu/anBlZw.jpeg",
+            "width": 450
+          },
+          {
+            "height": 352,
+            "resource_url": "https://i.discogs.com/aYkCpz2KOtmHK898dxVHdTEPL7jkUmRo0TL57QtP_3o/rs:fit/g:sm/q:90/h:352/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/aYkCpz2KOtmHK898dxVHdTEPL7jkUmRo0TL57QtP_3o/rs:fit/g:sm/q:90/h:352/w:355/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/5DQeksL70ZYoasiD50eS8Tf7z6-6OCBNeEMljZPgBDQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA3ODQu/anBn.jpeg",
+            "width": 355
+          },
+          {
+            "height": 526,
+            "resource_url": "https://i.discogs.com/qVix-a9bnrlzELkAR3SMMDhLGbPYObJ8HTvX2XxgkK4/rs:fit/g:sm/q:90/h:526/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qVix-a9bnrlzELkAR3SMMDhLGbPYObJ8HTvX2XxgkK4/rs:fit/g:sm/q:90/h:526/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/S6LrCQbJ18m6oxg4U5iBHSlTvG_WH_mE3e2kci-7ypQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTE0MjkzNzQzNTQt/Mjg2Ni5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 291,
+            "resource_url": "https://i.discogs.com/oIlARn-a24zbFbYwfWmFYQWnC9tgvReOE1WVRcC-Mwo/rs:fit/g:sm/q:90/h:291/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/oIlARn-a24zbFbYwfWmFYQWnC9tgvReOE1WVRcC-Mwo/rs:fit/g:sm/q:90/h:291/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+            "uri150": "https://i.discogs.com/QKgCuzlYnV2QvULE4Z5EELb6gIRsNdt2urNHKaRJKFA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExMDk4NjA4NDEu/anBn.jpeg",
+            "width": 300
+          },
+          {
+            "height": 344,
+            "resource_url": "https://i.discogs.com/NbhoEY3joIm1HA8MB42HaQUwFGhC3wKczjf9k4hhGjc/rs:fit/g:sm/q:90/h:344/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/NbhoEY3joIm1HA8MB42HaQUwFGhC3wKczjf9k4hhGjc/rs:fit/g:sm/q:90/h:344/w:344/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/dHAPsVBGbhFEobuw9NcwBuCBfy5Fg2Wh3scGacCjgN8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEyNDg4MDU1NzEu/anBlZw.jpeg",
+            "width": 344
+          },
+          {
+            "height": 509,
+            "resource_url": "https://i.discogs.com/OAj5F4bC1bKekWoPBR2W1CIUEJIrMzGd1IGBH5YxhSI/rs:fit/g:sm/q:90/h:509/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/OAj5F4bC1bKekWoPBR2W1CIUEJIrMzGd1IGBH5YxhSI/rs:fit/g:sm/q:90/h:509/w:487/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/Er7Ad0G0iP-MWult2VDOrRGLhA6zflYKKR6ZRl3Yq08/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTExNDc1MTcxNTQu/anBlZw.jpeg",
+            "width": 487
+          },
+          {
+            "height": 365,
+            "resource_url": "https://i.discogs.com/LMRpje-h2k9nXragX4BhTqrLegvcwEHA5scQQROoqPc/rs:fit/g:sm/q:90/h:365/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/LMRpje-h2k9nXragX4BhTqrLegvcwEHA5scQQROoqPc/rs:fit/g:sm/q:90/h:365/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/GfEKXz5c5hOB_NeeXcC652I5jewLAdOKu8xvJgemhJ0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzNTMxMDAwOTUt/NjY4MS5qcGVn.jpeg",
+            "width": 500
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 31721,
+            "name": "Paula Frazer",
+            "resource_url": "https://api.discogs.com/artists/31721",
+            "thumbnail_url": "https://i.discogs.com/gy2VwYssPekVAlZVD9py5XwqWWjIeyrYAIth5XCAv64/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxNzIx/LTExNTEyNjc0NjAu/anBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 103997,
+            "name": "Jim Martin",
+            "resource_url": "https://api.discogs.com/artists/103997",
+            "thumbnail_url": "https://i.discogs.com/u9Fn0RG6-goQP5mODtzZybHbt-T2bKrfAVcOGNd3zPU/rs:fit/g:sm/q:40/h:500/w:339/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzk5/Ny0xNTMyMTU5MjQ4/LTk1OTMuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 108249,
+            "name": "Mike Patton",
+            "resource_url": "https://api.discogs.com/artists/108249",
+            "thumbnail_url": "https://i.discogs.com/3WpZ2CNtDl-6ZFW-G-qWB1hhVYw-Yl52imXtvZPRlTE/rs:fit/g:sm/q:40/h:900/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwODI0/OS0xNTI2NDI0MDE0/LTQ2NzQuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 255524,
+            "name": "Billy Gould",
+            "resource_url": "https://api.discogs.com/artists/255524",
+            "thumbnail_url": "https://i.discogs.com/WIm18darpjpOVCRo-r6D9tLChDZcUqIKThh3typGsbI/rs:fit/g:sm/q:40/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1NTUy/NC0xNjAxOTczMzEw/LTg5MTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 258985,
+            "name": "Dean Menta",
+            "resource_url": "https://api.discogs.com/artists/258985",
+            "thumbnail_url": "https://i.discogs.com/fPYwaBccDYY-ty_uQEckY6GBR7LeDFtA97cJSKqfmzk/rs:fit/g:sm/q:40/h:276/w:379/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1ODk4/NS0xNTYyNTcyMzc1/LTM4OTMuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 263193,
+            "name": "Mike Bordin",
+            "resource_url": "https://api.discogs.com/artists/263193",
+            "thumbnail_url": "https://i.discogs.com/acmyhA_SS7EmdTHFCaEm19eERLPuvRpSccIVA6Wh3Mg/rs:fit/g:sm/q:40/h:401/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2MzE5/My0xMzc3MDAzOTgw/LTYxNzAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 264351,
+            "name": "Desmond Shea",
+            "resource_url": "https://api.discogs.com/artists/264351",
+            "thumbnail_url": "https://i.discogs.com/kFhRqszrX8HE6PM3TvnPV7PouXlfJYZi0XvPHjh4jMA/rs:fit/g:sm/q:40/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NDM1/MS0xNzIyNzQ0MTI0/LTIyMTUuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 265224,
+            "name": "Trey Spruance",
+            "resource_url": "https://api.discogs.com/artists/265224",
+            "thumbnail_url": "https://i.discogs.com/buiKDEXK-QAZI1udoK0YY19K-c4D9snzGbS3V8zmgW0/rs:fit/g:sm/q:40/h:476/w:434/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NTIy/NC0xMjczNTA0MzE5/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 265699,
+            "name": "Roddy Bottum",
+            "resource_url": "https://api.discogs.com/artists/265699",
+            "thumbnail_url": "https://i.discogs.com/3kPta83lv1c3EUoOTL2WgGPhzvQwEa0aIPYWAwmug9M/rs:fit/g:sm/q:40/h:360/w:240/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NTY5/OS0xMjM4MTUwMTc5/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 267484,
+            "name": "Courtney Love",
+            "resource_url": "https://api.discogs.com/artists/267484",
+            "thumbnail_url": "https://i.discogs.com/rECn-VJbpF5SVDdJiocf1vfB1uPfQcd_jULvRWpw2Ag/rs:fit/g:sm/q:40/h:735/w:564/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NzQ4/NC0xNjkxNTIxODc1/LTkzNjYuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 453654,
+            "name": "Chuck Mosley",
+            "resource_url": "https://api.discogs.com/artists/453654",
+            "thumbnail_url": "https://i.discogs.com/kL9FZqJ9BOvXz6XPJ_QL84dR-XfIVWFScreFGZteqdw/rs:fit/g:sm/q:40/h:332/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ1MzY1/NC0xMjYwOTc4NjQ1/LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 512829,
+            "name": "Jon Hudson",
+            "resource_url": "https://api.discogs.com/artists/512829",
+            "thumbnail_url": "https://i.discogs.com/v8S6j-ShOBO5nbOFwgMGCmFmI1xOdcyE3KaGpMwGJ3w/rs:fit/g:sm/q:40/h:400/w:393/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxMjgy/OS0xMjY4MTMwNjE0/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1497506,
+            "name": "Mark Bowen",
+            "resource_url": "https://api.discogs.com/artists/1497506",
+            "thumbnail_url": "https://i.discogs.com/lOkWC8N_UYD-w_hJaXBO9HvlbyxnAJ4j3AneoM6232U/rs:fit/g:sm/q:40/h:268/w:253/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0OTc1/MDYtMTY1NTExNzQy/NC0yNzcyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2264000,
+            "name": "Jake Smith (6)",
+            "resource_url": "https://api.discogs.com/artists/2264000",
+            "thumbnail_url": "https://i.discogs.com/t83_sFyuzSP0-GZLBHZgP_6J4IYbrtyw1xZGYilEfOk/rs:fit/g:sm/q:40/h:348/w:419/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyNjQw/MDAtMTU3Njg3NTA2/Ni02NTgyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 4386357,
+            "name": "Craig Shell",
+            "resource_url": "https://api.discogs.com/artists/4386357",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 4997092,
+            "name": "Joe Callahan (3)",
+            "resource_url": "https://api.discogs.com/artists/4997092",
+            "thumbnail_url": "https://i.discogs.com/shDLl4uzEcoev4vSShbd-xC-mDzkeS6Cuqf1CKB3UK0/rs:fit/g:sm/q:40/h:769/w:540/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5OTcw/OTItMTQ2MDY4ODgy/OC0zMzAxLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 5344404,
+            "name": "Walter O'Brien (3)",
+            "resource_url": "https://api.discogs.com/artists/5344404",
+            "thumbnail_url": "https://i.discogs.com/w-FU2pZ-BAUa70N-oi0BES8LOEucE3merN4davdTfcI/rs:fit/g:sm/q:40/h:454/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDQ0/MDQtMTQ3Nzc2ODk3/MC01ODUyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 8276554,
+            "name": "Mark Stewart (32)",
+            "resource_url": "https://api.discogs.com/artists/8276554",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Faith No More",
+        "namevariations": [
+          "F.N M.",
+          "FNM",
+          "Faith N",
+          "Faith-No-More",
+          "Faith. No More",
+          "Faith. No More.",
+          "フェイス・ノー・モア"
+        ],
+        "profile": "An American rock band from San Francisco, California.\r\n\r\nThe genesis of Faith No More was formed in late 1981 as [a7528232], which then turned into [a4392515] Faith No More was started in September 1983 by Roddy Bottum, Billy Gould and Mike Bordin.\r\n\r\nSince their long-time guitarist Jim Martin left the group in 1993, the band had trouble finding a permanent guitarist. This and band members’ commitments to other musical projects led to to the group disbanding in April 1998.\r\n\r\nIn February 2009 Faith No More announced their reunion as a touring entity. Their 7th album Sol Invictus was released in 2015.\r\n\r\nCurrent line-up:\r\nBilly Gould - Bass (1983–1998, 2009– )\r\nMike Bordin - Drums (1983–1998, 2009– )\r\nRoddy Bottum - Keyboards (1983–1998, 2009– )\r\nMike Patton - Vocals (1988–1998, 2009– )\r\nJon Hudson - Guitar (1996–1998, 2009– )",
+        "releases_url": "https://api.discogs.com/artists/12937/releases",
+        "resource_url": "https://api.discogs.com/artists/12937",
+        "uri": "https://www.discogs.com/artist/12937-Faith-No-More",
+        "urls": [
+          "https://www.fnm.com/",
+          "https://faithnomore.bandcamp.com/",
+          "https://www.facebook.com/faithnomore",
+          "https://www.instagram.com/faithnomore/",
+          "https://en.wikipedia.org/wiki/Faith_No_More",
+          "https://x.com/FaithNoMore"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/12937",
+      "thumb": "https://i.discogs.com/I2cubiW7STiiRCmf_FrPmgpgqUs8_LzGayEK6egS5T0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyOTM3/LTEzMzE4OTI0MTUu/anBlZw.jpeg",
+      "url": "https://www.discogs.com/artist/12937-Faith-No-More",
+      "urls": [
+        "https://www.fnm.com/",
+        "https://faithnomore.bandcamp.com/",
+        "https://www.facebook.com/faithnomore",
+        "https://www.instagram.com/faithnomore/",
+        "https://en.wikipedia.org/wiki/Faith_No_More",
+        "https://x.com/FaithNoMore"
+      ]
     },
     "lastfm": {
       "bio_content": "Faith No More are an American alternative metal band from San Francisco, California, formed in 1979. Before settling on the current name in July 1983, the band performed under the names Sharp Young Men and later Faith No Man. Bassist Billy Gould, keyboardist/rhythm guitarist Roddy Bottum and drummer Mike Bordin are the longest-remaining members of the band, having been involved since its inception. The band underwent several early lineup changes, and some major changes later. The current lineup of Faith No More consists of Gould, Bordin, Bottum, lead guitarist Jon Hudson, and vocalist/lyricist Mike Patton.\n\nAfter releasing six studio albums, including best-selling records The Real Thing (1989) and Angel Dust (1992), Faith No More officially announced its breakup on April 20, 1998. The band has since reunited, conducting The Second Coming Tour between 2009 and 2010, and releasing its seventh studio album, Sol Invictus, in May 2015. After the touring cycle of Sol Invictus, Faith No More went on hiatus once again. In November 2019, the band announced that it would reunite to embark on a 2020 UK and European tour, but due to the COVID-19 pandemic, this was postponed. Touring was due to recommence with a brief US tour in September 2021, followed by the previously postponed UK and Europe dates in June 2022, but all tour dates were cancelled with Patton citing mental health reasons.\n\nStudio albums\nWe Care a Lot (1985)\nIntroduce Yourself (1987)\nThe Real Thing (1989)\nAngel Dust (1992)\nKing for a Day... Fool for a Lifetime (1995)\nAlbum of the Year (1997)\nSol Invictus (2015) <a href=\"https://www.last.fm/music/Faith+No+More\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -144,10 +645,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 1626589,
+      "listeners": 1627202,
       "mbid": "b15ebd71-a252-417d-9e1c-3e6863da68f8",
       "name": "Faith No More",
-      "playcount": 60029840,
+      "playcount": 60058934,
       "similar_artists": [
         {
           "name": "Mr. Bungle",
@@ -180,7 +681,7 @@
       "url": "https://www.last.fm/music/Faith+No+More"
     },
     "spotify": {
-      "followers": 1919997,
+      "followers": 1920621,
       "genres": [
         "funk rock",
         "alternative metal",
@@ -217,6 +718,6 @@
   },
   "spotify_id": "6GbCJZrI318Ybm8mY36Of5",
   "spotify_url": "https://open.spotify.com/artist/6GbCJZrI318Ybm8mY36Of5",
-  "updated_at": "2025-07-05T15:55:27.062036",
+  "updated_at": "2025-07-08T09:21:46.245164",
   "wikipedia_url": null
 }

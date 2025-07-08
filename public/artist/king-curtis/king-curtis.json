@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T17:53:47.162162",
   "discogs_id": "36862",
-  "discogs_url": "https://www.discogs.com/artist/36862",
-  "followers": 55328,
+  "discogs_url": "https://www.discogs.com/artist/36862-King-Curtis",
+  "followers": 55345,
   "formed_date": null,
   "genres": [
     "Jazz",
@@ -17,7 +17,7 @@
     "saxophone",
     "funk"
   ],
-  "id": null,
+  "id": "king-curtis-1751734430",
   "images": [
     {
       "height": 2000,
@@ -84,14 +84,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/TyrT68zXv60f3hHNCBEeTxOVx-Ar_K1k3BKwZN4wR2o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "151231cb-fca6-42e0-976a-66b07193d657",
   "lastfm_url": "https://www.last.fm/music/King+Curtis",
   "local_images": {
-    "hi-res": "public/artist/king-curtis/king-curtis-hi-res.jpg",
-    "medium": "public/artist/king-curtis/king-curtis-medium.jpg",
-    "small": "public/artist/king-curtis/king-curtis-small.jpg"
+    "hi-res": "../public/artist/king-curtis/king-curtis-hi-res.jpg",
+    "medium": "../public/artist/king-curtis/king-curtis-medium.jpg",
+    "small": "../public/artist/king-curtis/king-curtis-small.jpg"
   },
   "name": "King Curtis",
   "popularity": 41,
@@ -108,9 +120,246 @@
       "url": "https://music.apple.com/gb/artist/king-curtis/823440"
     },
     "discogs": {
-      "id": 36862,
-      "original_name": "King Curtis",
-      "role": ""
+      "cover_image": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "36862",
+      "images": [
+        {
+          "height": 397,
+          "resource_url": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/TyrT68zXv60f3hHNCBEeTxOVx-Ar_K1k3BKwZN4wR2o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+          "width": 421
+        },
+        {
+          "height": 282,
+          "resource_url": "https://i.discogs.com/Y8Fs7VqAdAtAl42bqpIvkrBddWVh0vWLTPiE5JTEF9c/rs:fit/g:sm/q:90/h:282/w:292/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Y8Fs7VqAdAtAl42bqpIvkrBddWVh0vWLTPiE5JTEF9c/rs:fit/g:sm/q:90/h:282/w:292/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/zBGB8951BoThNvpEsQWFzVVR4efGUFmkv8nX7fKM9_w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+          "width": 292
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/5DSgzJRBB_u2TgZ0o3ereYT9J-1ZK4VI5GMaNGhl6DA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/5DSgzJRBB_u2TgZ0o3ereYT9J-1ZK4VI5GMaNGhl6DA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/irxiAUyEWjeabqZycz-hisaEYXGkqeiZMvQWatiEcxc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/swE_B6jgAKmj7bIy7_A4_ihtYaH5LRGnKb3wabksmb4/rs:fit/g:sm/q:90/h:420/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/swE_B6jgAKmj7bIy7_A4_ihtYaH5LRGnKb3wabksmb4/rs:fit/g:sm/q:90/h:420/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/aJZMiUBC5Y9WZrURxr-PGIOT7q7LjO2xhIwEjDM8DcQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+          "width": 420
+        },
+        {
+          "height": 714,
+          "resource_url": "https://i.discogs.com/-pWZHtA6xWmdxa5tnREOif7mazZIfwUQTUT8Q9-iQ7k/rs:fit/g:sm/q:90/h:714/w:496/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-pWZHtA6xWmdxa5tnREOif7mazZIfwUQTUT8Q9-iQ7k/rs:fit/g:sm/q:90/h:714/w:496/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/o_v6o8mC6JZJ2QIZrcvumC9NhRGRt1Cmoj-GisyMotE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+          "width": 496
+        },
+        {
+          "height": 733,
+          "resource_url": "https://i.discogs.com/RkD5yUg0zKDuJbOXwX4Fa7qgv290I-cXcp_lr5nNiNs/rs:fit/g:sm/q:90/h:733/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/RkD5yUg0zKDuJbOXwX4Fa7qgv290I-cXcp_lr5nNiNs/rs:fit/g:sm/q:90/h:733/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/QEvlGjHcprxZp4EUPgShoRBkRD-s6DVuHERZaSGxCLo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 398,
+          "resource_url": "https://i.discogs.com/s9xTDIwXNR-n4A0jbOunelqQ6Uif3agBng5_S-uPzHg/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/s9xTDIwXNR-n4A0jbOunelqQ6Uif3agBng5_S-uPzHg/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/LYw-Rb4U3YisFcA5aDnLVSdE2nkfg8VIjGthi2ih8sU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+          "width": 600
+        },
+        {
+          "height": 238,
+          "resource_url": "https://i.discogs.com/3xUPoM1akX3V0RSleU6zmvc5QKb8bmLSlQYt7CzdH_A/rs:fit/g:sm/q:90/h:238/w:348/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/3xUPoM1akX3V0RSleU6zmvc5QKb8bmLSlQYt7CzdH_A/rs:fit/g:sm/q:90/h:238/w:348/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+          "uri150": "https://i.discogs.com/KnhEvQRPmuKTmWCu_wdl1J8GxGthaKhoWFB7S2zsKzY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+          "width": 348
+        },
+        {
+          "height": 1066,
+          "resource_url": "https://i.discogs.com/ZJtENi0mbFq_e1caoTwFdOSwzhIhtU40Pkr4TzhTlRM/rs:fit/g:sm/q:90/h:1066/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/ZJtENi0mbFq_e1caoTwFdOSwzhIhtU40Pkr4TzhTlRM/rs:fit/g:sm/q:90/h:1066/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/Xg3DCcvEfmH-B8DulcfmSfXcJq8RwUdl9EW43NlwVW8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [],
+      "name": "King Curtis",
+      "namevariations": [
+        "\"King Curtis\" Ousley",
+        "B. Curtis",
+        "C.King",
+        "Curtis",
+        "Curtis Ousley",
+        "K Curtis",
+        "K. Curtis",
+        "K. Cutis",
+        "K. Kērtiss",
+        "K.Curtis",
+        "King",
+        "King  Chrtis",
+        "King Curtis And His Soul Music",
+        "King Curtis And His Tenor Sax",
+        "King Curtis Ousley",
+        "King Curtis The King Of The Twisters",
+        "King Curtiss",
+        "Kurtis",
+        "R. Curtis",
+        "Ring Curtis",
+        "К. Кертис",
+        "キング・カーティス"
+      ],
+      "profile": "[b]NOTE: For the songwriter sometimes credited as Memphis Curtis, see [a692425].[/b]\r\n\r\nAmerican saxophonist who played rhythm and blues, jazz, and rock and roll. A bandleader, band member, and session musician, he was also a musical director and record producer.\r\nBorn: February 7, 1934 in Fort Worth, Texas\r\nDied: August 13, 1971 in New York, New York (Murdered by junkies)\r\n\r\nSuccessful both as a solo artist -best known for his 1967 hit [i]Memphis Soul Stew[/i]- as well as a session musician and producer. Curtis mainly played and composed rhythm and blues or soul but also some Rock and roll and great bop or soul jazz. He was inducted into the Rock & Roll Hall of Fame in 2000.\r\nFrom raresoul.com:\r\n\"More than 2,000 people attended King Curtis’ funeral at St. Peter’s Lutheran Church in Midtown Manhattan.\r\n\r\nA number of important figures attended the services, including [a=Aretha Franklin], her father [a=Reverend C.L. Franklin], [a=Stevie Wonder], [a=Brook Benton], [a=The Isley Brothers] and [a=Rev. Jesse Jackson], who delivered the eulogy.\r\n\r\nKing Curtis is still by far, the most influential saxophone player in the history of R&B and Rock & Roll music.\r\n\r\nKing Curtis played on thousands of records as the most in demand saxophone player, from the early 1950s until his death in August of 1971.\r\n\r\nHe worked with a wide variety of artists ranging from [a=The Coasters] and [a=Buddy Holly], to [a=Jimi Hendrix] and [a=John Lennon].\r\n\r\nKing Curtis began playing the saxophone at a young age in Fort Worth, Texas. He turned down a scholarship to pursue an opportunity as a member of [a=Lionel Hampton]’s touring band.\r\n\r\nIn 1952, King Curtis moved to New York to become one of the most in-demand session players, where his famous style of playing can be heard on classic songs like “Yakety Yak” by [a=The Coasters], “Twistin’ the Night Away” by [a=Sam Cooke], “Tossin’ and Turnin’ By [a=Bobby Lewis] and numerous others.\r\n\r\nIn 1961, King Curtis released his own hit record with [a=King Curtis And The Noble Knights] titled “Soul Twist,” which landed at #1 for two weeks in April of 1962.\r\n\r\nIn 1965, he supported The Beatles at Shea Stadium (including a number backing Brenda Holloway), signed with Atlantic Records’ Atco imprint and in 1967, King Curtis hit big with the singles “Memphis Soul Stew” and “Ode To Billie Joe,” while also leading [a=Aretha Franklin]’s backing band, [a=King Curtis & The Kingpins].\r\n\r\nJust months before King Curtis was stabbed, he was featured as a guest on [a=John Lennon]’s landmark album Imagine.\"\r\n",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 387651,
+            "name": "Curtis Ousley",
+            "resource_url": "https://api.discogs.com/artists/387651",
+            "thumbnail_url": "https://i.discogs.com/NVOwkUGcjkBbSZyYfQSYHlI2VCku-BJMlJO7orx-IIE/rs:fit/g:sm/q:40/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NzY1/MS0xMjA1NDYyNzcy/LmpwZWc.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 36862,
+        "images": [
+          {
+            "height": 397,
+            "resource_url": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/0kO2BDWNsI1XueEgeDfnlgTESg2h2X5fzEEczCrHOJ4/rs:fit/g:sm/q:90/h:397/w:421/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/TyrT68zXv60f3hHNCBEeTxOVx-Ar_K1k3BKwZN4wR2o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+            "width": 421
+          },
+          {
+            "height": 282,
+            "resource_url": "https://i.discogs.com/Y8Fs7VqAdAtAl42bqpIvkrBddWVh0vWLTPiE5JTEF9c/rs:fit/g:sm/q:90/h:282/w:292/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Y8Fs7VqAdAtAl42bqpIvkrBddWVh0vWLTPiE5JTEF9c/rs:fit/g:sm/q:90/h:282/w:292/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/zBGB8951BoThNvpEsQWFzVVR4efGUFmkv8nX7fKM9_w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0MDA3OTEwOTgt/OTM5OS5qcGVn.jpeg",
+            "width": 292
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/5DSgzJRBB_u2TgZ0o3ereYT9J-1ZK4VI5GMaNGhl6DA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/5DSgzJRBB_u2TgZ0o3ereYT9J-1ZK4VI5GMaNGhl6DA/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/irxiAUyEWjeabqZycz-hisaEYXGkqeiZMvQWatiEcxc/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2ODYwNjY3Njkt/OTI1My5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 420,
+            "resource_url": "https://i.discogs.com/swE_B6jgAKmj7bIy7_A4_ihtYaH5LRGnKb3wabksmb4/rs:fit/g:sm/q:90/h:420/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/swE_B6jgAKmj7bIy7_A4_ihtYaH5LRGnKb3wabksmb4/rs:fit/g:sm/q:90/h:420/w:420/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/aJZMiUBC5Y9WZrURxr-PGIOT7q7LjO2xhIwEjDM8DcQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTU4OS5qcGVn.jpeg",
+            "width": 420
+          },
+          {
+            "height": 714,
+            "resource_url": "https://i.discogs.com/-pWZHtA6xWmdxa5tnREOif7mazZIfwUQTUT8Q9-iQ7k/rs:fit/g:sm/q:90/h:714/w:496/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-pWZHtA6xWmdxa5tnREOif7mazZIfwUQTUT8Q9-iQ7k/rs:fit/g:sm/q:90/h:714/w:496/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/o_v6o8mC6JZJ2QIZrcvumC9NhRGRt1Cmoj-GisyMotE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE2NDU0OTk0NzAt/NzUxOS5qcGVn.jpeg",
+            "width": 496
+          },
+          {
+            "height": 733,
+            "resource_url": "https://i.discogs.com/RkD5yUg0zKDuJbOXwX4Fa7qgv290I-cXcp_lr5nNiNs/rs:fit/g:sm/q:90/h:733/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/RkD5yUg0zKDuJbOXwX4Fa7qgv290I-cXcp_lr5nNiNs/rs:fit/g:sm/q:90/h:733/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/QEvlGjHcprxZp4EUPgShoRBkRD-s6DVuHERZaSGxCLo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0ODkwNDk4NjMt/MjM2Ny5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 398,
+            "resource_url": "https://i.discogs.com/s9xTDIwXNR-n4A0jbOunelqQ6Uif3agBng5_S-uPzHg/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/s9xTDIwXNR-n4A0jbOunelqQ6Uif3agBng5_S-uPzHg/rs:fit/g:sm/q:90/h:398/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/LYw-Rb4U3YisFcA5aDnLVSdE2nkfg8VIjGthi2ih8sU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTExNTMyMDk0MzUu/anBlZw.jpeg",
+            "width": 600
+          },
+          {
+            "height": 238,
+            "resource_url": "https://i.discogs.com/3xUPoM1akX3V0RSleU6zmvc5QKb8bmLSlQYt7CzdH_A/rs:fit/g:sm/q:90/h:238/w:348/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/3xUPoM1akX3V0RSleU6zmvc5QKb8bmLSlQYt7CzdH_A/rs:fit/g:sm/q:90/h:238/w:348/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+            "uri150": "https://i.discogs.com/KnhEvQRPmuKTmWCu_wdl1J8GxGthaKhoWFB7S2zsKzY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTAwMS5qcGc.jpeg",
+            "width": 348
+          },
+          {
+            "height": 1066,
+            "resource_url": "https://i.discogs.com/ZJtENi0mbFq_e1caoTwFdOSwzhIhtU40Pkr4TzhTlRM/rs:fit/g:sm/q:90/h:1066/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/ZJtENi0mbFq_e1caoTwFdOSwzhIhtU40Pkr4TzhTlRM/rs:fit/g:sm/q:90/h:1066/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/Xg3DCcvEfmH-B8DulcfmSfXcJq8RwUdl9EW43NlwVW8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE3MTQ2Mzg4MDMt/MjIyOS5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "name": "King Curtis",
+        "namevariations": [
+          "\"King Curtis\" Ousley",
+          "B. Curtis",
+          "C.King",
+          "Curtis",
+          "Curtis Ousley",
+          "K Curtis",
+          "K. Curtis",
+          "K. Cutis",
+          "K. Kērtiss",
+          "K.Curtis",
+          "King",
+          "King  Chrtis",
+          "King Curtis And His Soul Music",
+          "King Curtis And His Tenor Sax",
+          "King Curtis Ousley",
+          "King Curtis The King Of The Twisters",
+          "King Curtiss",
+          "Kurtis",
+          "R. Curtis",
+          "Ring Curtis",
+          "К. Кертис",
+          "キング・カーティス"
+        ],
+        "profile": "[b]NOTE: For the songwriter sometimes credited as Memphis Curtis, see [a692425].[/b]\r\n\r\nAmerican saxophonist who played rhythm and blues, jazz, and rock and roll. A bandleader, band member, and session musician, he was also a musical director and record producer.\r\nBorn: February 7, 1934 in Fort Worth, Texas\r\nDied: August 13, 1971 in New York, New York (Murdered by junkies)\r\n\r\nSuccessful both as a solo artist -best known for his 1967 hit [i]Memphis Soul Stew[/i]- as well as a session musician and producer. Curtis mainly played and composed rhythm and blues or soul but also some Rock and roll and great bop or soul jazz. He was inducted into the Rock & Roll Hall of Fame in 2000.\r\nFrom raresoul.com:\r\n\"More than 2,000 people attended King Curtis’ funeral at St. Peter’s Lutheran Church in Midtown Manhattan.\r\n\r\nA number of important figures attended the services, including [a=Aretha Franklin], her father [a=Reverend C.L. Franklin], [a=Stevie Wonder], [a=Brook Benton], [a=The Isley Brothers] and [a=Rev. Jesse Jackson], who delivered the eulogy.\r\n\r\nKing Curtis is still by far, the most influential saxophone player in the history of R&B and Rock & Roll music.\r\n\r\nKing Curtis played on thousands of records as the most in demand saxophone player, from the early 1950s until his death in August of 1971.\r\n\r\nHe worked with a wide variety of artists ranging from [a=The Coasters] and [a=Buddy Holly], to [a=Jimi Hendrix] and [a=John Lennon].\r\n\r\nKing Curtis began playing the saxophone at a young age in Fort Worth, Texas. He turned down a scholarship to pursue an opportunity as a member of [a=Lionel Hampton]’s touring band.\r\n\r\nIn 1952, King Curtis moved to New York to become one of the most in-demand session players, where his famous style of playing can be heard on classic songs like “Yakety Yak” by [a=The Coasters], “Twistin’ the Night Away” by [a=Sam Cooke], “Tossin’ and Turnin’ By [a=Bobby Lewis] and numerous others.\r\n\r\nIn 1961, King Curtis released his own hit record with [a=King Curtis And The Noble Knights] titled “Soul Twist,” which landed at #1 for two weeks in April of 1962.\r\n\r\nIn 1965, he supported The Beatles at Shea Stadium (including a number backing Brenda Holloway), signed with Atlantic Records’ Atco imprint and in 1967, King Curtis hit big with the singles “Memphis Soul Stew” and “Ode To Billie Joe,” while also leading [a=Aretha Franklin]’s backing band, [a=King Curtis & The Kingpins].\r\n\r\nJust months before King Curtis was stabbed, he was featured as a guest on [a=John Lennon]’s landmark album Imagine.\"\r\n",
+        "realname": "Curtis Ousley",
+        "releases_url": "https://api.discogs.com/artists/36862/releases",
+        "resource_url": "https://api.discogs.com/artists/36862",
+        "uri": "https://www.discogs.com/artist/36862-King-Curtis",
+        "urls": [
+          "https://www.sunsetblvdrecords.com/blog/2020/5/7/king-curtis-the-soul-of-king-curtis",
+          "http://www.rockhall.com/hof/inductee.asp?id=219",
+          "http://en.wikipedia.org/wiki/King_Curtis",
+          "http://raresoul.com/2012/08/13/king-curtis-stabbed-to-death-in-harlem/",
+          "",
+          "https://adp.library.ucsb.edu/names/310546"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/36862",
+      "thumb": "https://i.discogs.com/TyrT68zXv60f3hHNCBEeTxOVx-Ar_K1k3BKwZN4wR2o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM2ODYy/LTE0NjQzNzYzMzYt/MTc4MS5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/36862-King-Curtis",
+      "urls": [
+        "https://www.sunsetblvdrecords.com/blog/2020/5/7/king-curtis-the-soul-of-king-curtis",
+        "http://www.rockhall.com/hof/inductee.asp?id=219",
+        "http://en.wikipedia.org/wiki/King_Curtis",
+        "http://raresoul.com/2012/08/13/king-curtis-stabbed-to-death-in-harlem/",
+        "",
+        "https://adp.library.ucsb.edu/names/310546"
+      ]
     },
     "lastfm": {
       "bio_content": "Curtis Ousley (February 7, 1934 – August 13, 1971), who performed under the stage name King Curtis, was an American saxophone virtuoso known for rhythm and blues, rock and roll, soul, blues, funk and soul jazz. Variously a bandleader, band member, and session musician, he was also a musical director and record producer. Adept at tenor, alto, and soprano saxophone, he was best known for his distinctive riffs and solos such as on The Coasters - Yakety Yak, which later became the inspiration for Boots Randolph's \"Yakety Sax\" and his own \"Memphis Soul Stew\".\n\nCurtis Ousley was adopted, with his sister, Josephine Ousley Allen. They were raised together in Fort Worth, Texas. Ousley attended I.M. Terrell High School, and studied and performed music with schoolmate Ornette Coleman.\n\nOusley started playing saxophone at the age of twelve in the Fort Worth area. He took interest in many musical genres including jazz, rhythm and blues, and popular music. As a student pursuing music, he turned down college scholarships in order to join the Lionel Hampton Band. During his time with Hampton, he was able to write and arrange music and learn guitar. In 1952 Curtis decided to move to New York and became a session musician, recording for such labels as Prestige, Enjoy, Capitol, and Atco. He recorded with Nat Adderley, Wynton Kelly, Buddy Holly, Waylon Jennings and Andy Williams.\n\nStylistically, Curtis took inspiration from saxophonists Lester Young, Louis Jordan, Illinois Jacquet, Earl Bostic, and Gene Ammons. Known for his syncopated and percussive style, he was both versatile and powerful as a musician. He put together a group during his time as a session musician that included Richard Tee, Cornell Dupree, Jerry Jemmott, and Bernard Purdie.\n\nKing Curtis enjoyed playing jazz and rhythm & blues but decided he would make more money as a rhythm & blues musician, stating in a 1971 interview with Charlie Gillet that \"I love the authentic rhythm & blues more than anything, and I also like to live well.\" From the 1950s until the mid-1960s, he worked as a session player, recording under his own name and with others such as The Coasters, with whom he recorded \"Yakety Yak\". Buddy Holly hired him for session work, during which they recorded \"Reminiscing\". Holly wrote this song, but gave Curtis the songwriting credit for flying down to the session. His best-known singles from this period are \"Soul Twist\" and \"Soul Serenade\". He provided backing on a number of songs for LaVern Baker, including her 1958 hit single \"I Cried a Tear\", where his saxophone became \"a second voice\".\n\nIn 1965, he moved to Atlantic Records and recorded his most successful singles, \"Memphis Soul Stew\" and \"Ode to Billie Joe\" (1967). He worked with The Coasters, led Aretha Franklin's backing band The Kingpins. The Kingpins opened for The Beatles during their 1965 performance at Shea Stadium. Curtis produced records, often working with Jerry Wexler and recorded for Groove Records during this period, including the Joe South song \"Games People Play\" with guitarist Duane Allman.\n\nIn March 1971 he appeared with Aretha Franklin and The Kingpins at the Fillmore West, which resulted in two live albums: \"Aretha Live at Fillmore West\", and Curtis' own \"Live at Fillmore West\". In July 1971, Curtis recorded saxophone solos on \"It's So Hard\" and \"I Don't Wanna Be a Soldier\" from John Lennon's Imagine. Along with The Rimshots, he recorded the original theme song for the 1971 hit television show, Soul Train, titled \"Hot Potatoes\".\n\nCurtis was killed on August 13, 1971 when he was stabbed during an argument with a pair of drug dealers he discovered on the steps outside his Manhattan apartment. Curtis was attempting to carry an air conditioner into his apartment when Juan Montanez refused to move from the entrance. A fight ensued and Montanez stabbed Curtis. Curtis later died at Roosevelt Hospital. In March 1972, Montanez was sentenced to seven years for second-degree manslaughter, but was released in late 1977 for good behavior.\n\nOn the day of Curtis' funeral Atlantic Records closed their offices. Jesse Jackson administered the service and as the mourners filed in, Curtis' band 'The Kingpins' played \"Soul Serenade\". Among those attending were Ousley's immediate family, including sister Josephine Ousley Allen, other family members, Aretha Franklin, Cissy Houston, Brook Benton and Duane Allman. Franklin sang the closing spiritual \"Never Grow Old\" and Stevie Wonder performed \"Abraham, Martin and John and now King Curtis\".\n\nCurtis was subsequently buried in a red granite-fronted wall crypt in the 'West Gallery of Forsythia Court' mausoleum at Pinelawn Memorial Park in Farmingdale, New York, the same cemetery that holds jazz greats Count Basie and John Coltrane.\n\nIn 1970, a year before his death, Curtis won the Best R&B Instrumental Performance Grammy for \"Games People Play\".\n\nCurtis was posthumously inducted into the Rock and Roll Hall of Fame on March 6, 2000.\n\n <a href=\"https://www.last.fm/music/King+Curtis\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -141,10 +390,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 195425,
+      "listeners": 195475,
       "mbid": "151231cb-fca6-42e0-976a-66b07193d657",
       "name": "King Curtis",
-      "playcount": 1117831,
+      "playcount": 1118262,
       "similar_artists": [
         {
           "name": "Carla Thomas",
@@ -177,7 +426,7 @@
       "url": "https://www.last.fm/music/King+Curtis"
     },
     "spotify": {
-      "followers": 55328,
+      "followers": 55345,
       "genres": [
         "jazz blues"
       ],
@@ -211,6 +460,6 @@
   },
   "spotify_id": "0WxOgeRxUt0MwPrI7A5atQ",
   "spotify_url": "https://open.spotify.com/artist/0WxOgeRxUt0MwPrI7A5atQ",
-  "updated_at": "2025-07-05T17:53:50.101321",
+  "updated_at": "2025-07-08T10:11:18.714825",
   "wikipedia_url": null
 }

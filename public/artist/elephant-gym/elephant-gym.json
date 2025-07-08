@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T16:26:11.016828",
   "discogs_id": "4203468",
-  "discogs_url": "https://www.discogs.com/artist/4203468",
-  "followers": 163267,
+  "discogs_url": "https://www.discogs.com/artist/4203468-Elephant-Gym",
+  "followers": 163343,
   "formed_date": null,
   "genres": [
     "Rock",
@@ -20,7 +20,7 @@
     "experimental",
     "indie rock"
   ],
-  "id": null,
+  "id": "elephant-gym-1751729175",
   "images": [
     {
       "height": 2000,
@@ -81,14 +81,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/+noredirect/Elephant+Gym",
   "local_images": {
-    "hi-res": "public/artist/elephant-gym/elephant-gym-hi-res.jpg",
-    "medium": "public/artist/elephant-gym/elephant-gym-medium.jpg",
-    "small": "public/artist/elephant-gym/elephant-gym-small.jpg"
+    "hi-res": "../public/artist/elephant-gym/elephant-gym-hi-res.jpg",
+    "medium": "../public/artist/elephant-gym/elephant-gym-medium.jpg",
+    "small": "../public/artist/elephant-gym/elephant-gym-small.jpg"
   },
   "name": "Elephant Gym",
   "popularity": 39,
@@ -105,9 +117,111 @@
       "url": "https://music.apple.com/gb/artist/elephant-gym/798537066"
     },
     "discogs": {
-      "id": 4203468,
-      "original_name": "Elephant Gym",
-      "role": ""
+      "cover_image": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "4203468",
+      "images": [
+        {
+          "height": 332,
+          "resource_url": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": true,
+          "id": 5764892,
+          "name": "張凱翔",
+          "resource_url": "https://api.discogs.com/artists/5764892",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5764893,
+          "name": "張凱婷",
+          "resource_url": "https://api.discogs.com/artists/5764893",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 5807204,
+          "name": "涂嘉欽",
+          "resource_url": "https://api.discogs.com/artists/5807204",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Elephant Gym",
+      "namevariations": [
+        "大象體操"
+      ],
+      "profile": "大象體操 (Elephant Gym) is a math rock band from Kaohsiung, Taiwan. It was formed in February 2012.",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 4203468,
+        "images": [
+          {
+            "height": 332,
+            "resource_url": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/mMTajTV2i-OqVLC-SrWDJ20UucDHYL1TJMjrOKaJV1E/rs:fit/g:sm/q:90/h:332/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": true,
+            "id": 5764892,
+            "name": "張凱翔",
+            "resource_url": "https://api.discogs.com/artists/5764892",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5764893,
+            "name": "張凱婷",
+            "resource_url": "https://api.discogs.com/artists/5764893",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 5807204,
+            "name": "涂嘉欽",
+            "resource_url": "https://api.discogs.com/artists/5807204",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Elephant Gym",
+        "namevariations": [
+          "大象體操"
+        ],
+        "profile": "大象體操 (Elephant Gym) is a math rock band from Kaohsiung, Taiwan. It was formed in February 2012.",
+        "realname": "大象體操",
+        "releases_url": "https://api.discogs.com/artists/4203468/releases",
+        "resource_url": "https://api.discogs.com/artists/4203468",
+        "uri": "https://www.discogs.com/artist/4203468-Elephant-Gym",
+        "urls": [
+          "https://elephantgym.co/",
+          "https://elephant-gym.bandcamp.com",
+          "https://www.facebook.com/elephantgym",
+          "https://twitter.com/elephant_gym",
+          "https://www.youtube.com/channel/UCyCarLRHBVJYXJ3L2uuEEQg"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/4203468",
+      "thumb": "https://i.discogs.com/0nSvDALzZqsR9M-vzAx3ZuWy8KYiraPveY2gaZ65lYw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyMDM0/NjgtMTQzMDY3ODE0/Ni0zNTEzLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/4203468-Elephant-Gym",
+      "urls": [
+        "https://elephantgym.co/",
+        "https://elephant-gym.bandcamp.com",
+        "https://www.facebook.com/elephantgym",
+        "https://twitter.com/elephant_gym",
+        "https://www.youtube.com/channel/UCyCarLRHBVJYXJ3L2uuEEQg"
+      ]
     },
     "lastfm": {
       "bio_content": "Elephant Gym (大象體操) are a bass-driven math-rock band from Kaohsiung,Taiwan. The band, comprising 張凱婷 (bass), 張凱翔 (guitar) and 涂嘉欽 (drums) formed in early 2012. <a href=\"https://www.last.fm/music/+noredirect/Elephant+Gym\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -138,10 +252,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 129631,
+      "listeners": 129714,
       "mbid": null,
       "name": "Elephant Gym",
-      "playcount": 1846211,
+      "playcount": 1847613,
       "similar_artists": [],
       "tags": [
         "math rock",
@@ -153,7 +267,7 @@
       "url": "https://www.last.fm/music/+noredirect/Elephant+Gym"
     },
     "spotify": {
-      "followers": 163267,
+      "followers": 163343,
       "genres": [
         "math rock",
         "taiwanese indie",
@@ -186,6 +300,6 @@
   },
   "spotify_id": "2rqNUPgkBgbhcRabUQ5C9g",
   "spotify_url": "https://open.spotify.com/artist/2rqNUPgkBgbhcRabUQ5C9g",
-  "updated_at": "2025-07-05T16:26:15.226505",
+  "updated_at": "2025-07-08T09:59:28.788152",
   "wikipedia_url": null
 }

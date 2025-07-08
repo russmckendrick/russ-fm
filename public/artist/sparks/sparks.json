@@ -5,8 +5,8 @@
   "country": null,
   "created_at": "2025-07-05T14:34:32.858932",
   "discogs_id": "6271",
-  "discogs_url": "https://www.discogs.com/artist/6271",
-  "followers": 244289,
+  "discogs_url": "https://www.discogs.com/artist/6271-Sparks",
+  "followers": 244482,
   "formed_date": null,
   "genres": [
     "Pop",
@@ -19,7 +19,7 @@
     "pop",
     "synth pop"
   ],
-  "id": null,
+  "id": "sparks-1751722473",
   "images": [
     {
       "height": 2000,
@@ -80,14 +80,26 @@
       "type": "lastfm_artist_",
       "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png",
       "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_primary",
+      "url": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+      "width": null
+    },
+    {
+      "height": null,
+      "type": "discogs_artist_thumb",
+      "url": "https://i.discogs.com/TgZP7UmFJGlNfu8u3Ty7vQKSgKhZIIEjURANFw_HU-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+      "width": null
     }
   ],
   "lastfm_mbid": "f319b57a-a494-40f6-a467-3d196d3484e6",
   "lastfm_url": "https://www.last.fm/music/Sparks",
   "local_images": {
-    "hi-res": "public/artist/sparks/sparks-hi-res.jpg",
-    "medium": "public/artist/sparks/sparks-medium.jpg",
-    "small": "public/artist/sparks/sparks-small.jpg"
+    "hi-res": "../public/artist/sparks/sparks-hi-res.jpg",
+    "medium": "../public/artist/sparks/sparks-medium.jpg",
+    "small": "../public/artist/sparks/sparks-small.jpg"
   },
   "name": "Sparks",
   "popularity": 52,
@@ -104,9 +116,696 @@
       "url": "https://music.apple.com/gb/artist/sparks/218206"
     },
     "discogs": {
-      "id": 6271,
-      "original_name": "Sparks",
-      "role": ""
+      "cover_image": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "6271",
+      "images": [
+        {
+          "height": 591,
+          "resource_url": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/TgZP7UmFJGlNfu8u3Ty7vQKSgKhZIIEjURANFw_HU-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+          "width": 475
+        },
+        {
+          "height": 399,
+          "resource_url": "https://i.discogs.com/pRYwC9vqSd2CNQubXXusQmU_7MJmLAeu_y122LEYwP0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pRYwC9vqSd2CNQubXXusQmU_7MJmLAeu_y122LEYwP0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/C6g7FyfoBVUVX2InK35BanPhIJcl1OUJOXPRY0XjXAE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 437,
+          "resource_url": "https://i.discogs.com/o7yaU-FLkU9hyVfRBjpyj4pIOo8q0KC4X42SIHHiHXY/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/o7yaU-FLkU9hyVfRBjpyj4pIOo8q0KC4X42SIHHiHXY/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/qCUT0MQ8fxBgKLTmJazXeUu5ALw1nynLBtTnTXKVKOY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 844,
+          "resource_url": "https://i.discogs.com/yGHP4iUXckbPndU4T8n7qf_Vfsm6aQCd7HJg4VoWd-k/rs:fit/g:sm/q:90/h:844/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/yGHP4iUXckbPndU4T8n7qf_Vfsm6aQCd7HJg4VoWd-k/rs:fit/g:sm/q:90/h:844/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/pOuKFDNSXqpBBOsyC8dzlyebwDHZFeu9j2kkvDf7Ac0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 694,
+          "resource_url": "https://i.discogs.com/o2qHMrDeSQlcYBsES0j8mQFnZmHA8xmeNhSZ2Ln5cWk/rs:fit/g:sm/q:90/h:694/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/o2qHMrDeSQlcYBsES0j8mQFnZmHA8xmeNhSZ2Ln5cWk/rs:fit/g:sm/q:90/h:694/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/DKYRtg9EnutPCtsG9r-PFUTJbWWYn0kkKLSlR_0c0vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+          "width": 465
+        },
+        {
+          "height": 402,
+          "resource_url": "https://i.discogs.com/UnzqbIDllf7FRg1CWzvIvCs-Ix7sT9UGdXReCeQS6bI/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/UnzqbIDllf7FRg1CWzvIvCs-Ix7sT9UGdXReCeQS6bI/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/n2YxTiKiG7YgzV2qJ2CLBhm8Hi5dQenD-JwYG-se_cI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 495,
+          "resource_url": "https://i.discogs.com/I3LnHN8c9Q5v_KPB1QshRKT84Xhu6-gCdkVZOjhVt0k/rs:fit/g:sm/q:90/h:495/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/I3LnHN8c9Q5v_KPB1QshRKT84Xhu6-gCdkVZOjhVt0k/rs:fit/g:sm/q:90/h:495/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/Rw707Tk7_Wp-dRILXNg26TD--yI4Ugz-qIHloFCiIv4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+          "width": 495
+        },
+        {
+          "height": 822,
+          "resource_url": "https://i.discogs.com/o6tAMiwtZ1PZ62HPwXiaNBWSNAdVAzHbZQM_UB3SllQ/rs:fit/g:sm/q:90/h:822/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/o6tAMiwtZ1PZ62HPwXiaNBWSNAdVAzHbZQM_UB3SllQ/rs:fit/g:sm/q:90/h:822/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/NHjeBTk_fAM1utGcBvkWZWABYhboR4vz-L0msBnHHyQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 691,
+          "resource_url": "https://i.discogs.com/DPD0-lV-YXpZVk6gKuY43IkTObzNPe8dcV_-HlFRT0A/rs:fit/g:sm/q:90/h:691/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/DPD0-lV-YXpZVk6gKuY43IkTObzNPe8dcV_-HlFRT0A/rs:fit/g:sm/q:90/h:691/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/vlENZTTzT5vDGogZUsdEOLfGYbkN5Gs5LeBse_LzPYQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 864,
+          "resource_url": "https://i.discogs.com/jw2qzFYJRpKT_Yx3Ld0KXfIsk0HpUtyNXI85p9MkfTo/rs:fit/g:sm/q:90/h:864/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/jw2qzFYJRpKT_Yx3Ld0KXfIsk0HpUtyNXI85p9MkfTo/rs:fit/g:sm/q:90/h:864/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/pBLYU0mUe69wEAK2PBmzcUpuq1G9s4w56JZteXzlgQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 428,
+          "resource_url": "https://i.discogs.com/P8EmQ8QHpVLld93uOSfGMQzIAAmBzH5X63j4rZz88Mc/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/P8EmQ8QHpVLld93uOSfGMQzIAAmBzH5X63j4rZz88Mc/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/D-RWW1U1NMhngZa63rskf5N2YCX1J95-wtm335A-vAU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 396,
+          "resource_url": "https://i.discogs.com/WgCE1TfQqfY2Fz1-nURjwh9KRzL5PB5cIH0XT1trEyo/rs:fit/g:sm/q:90/h:396/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/WgCE1TfQqfY2Fz1-nURjwh9KRzL5PB5cIH0XT1trEyo/rs:fit/g:sm/q:90/h:396/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/u0rlvNNIh0G5y1i_SihdDCuxycBHtXvJjxsoUsZqYCA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+          "width": 396
+        },
+        {
+          "height": 845,
+          "resource_url": "https://i.discogs.com/Uo0A6A-xG9zxuqVsXmSCDCZWHINbOpVqkgkDBDbmkno/rs:fit/g:sm/q:90/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Uo0A6A-xG9zxuqVsXmSCDCZWHINbOpVqkgkDBDbmkno/rs:fit/g:sm/q:90/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/GNYBN3fnsiqAAG7gEtK4bSWvnZQox3feA1KmyWO_ks0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 507,
+          "resource_url": "https://i.discogs.com/xOLv_2LA0NXVcE6P3j6huxsArzM8Uo7gz-vI99xxLBA/rs:fit/g:sm/q:90/h:507/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/xOLv_2LA0NXVcE6P3j6huxsArzM8Uo7gz-vI99xxLBA/rs:fit/g:sm/q:90/h:507/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/blqq0fu6IwFF3RclPTQwOHj-fd6zL2utT8h7Dy04St8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+          "width": 500
+        },
+        {
+          "height": 450,
+          "resource_url": "https://i.discogs.com/pMdG4WosWiwjMgbMhoJ9458acaaysuUAF1_tMbIWJIM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/pMdG4WosWiwjMgbMhoJ9458acaaysuUAF1_tMbIWJIM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+          "uri150": "https://i.discogs.com/mpRWxMtASylQdWU36kp12uaQckWhJXyRygjRdhbdHHk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 447,
+          "resource_url": "https://i.discogs.com/R21dvYX2-qIuMKfRcYxrNKCGQoFQLgs1fjAQcXkzLQw/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/R21dvYX2-qIuMKfRcYxrNKCGQoFQLgs1fjAQcXkzLQw/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/8Y4K7MX8ZB46pdVJQY6jMgT0SdmS2rAbQL4cNyc5Fr4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 755,
+          "resource_url": "https://i.discogs.com/6PJUHy1REznpqXrfA678CREU0daJdvY0PhTO_r67hRk/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/6PJUHy1REznpqXrfA678CREU0daJdvY0PhTO_r67hRk/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/RnZKHNUOCmDG_E2gasmUWoFXIAF4VWH3ObrqwFhXNX4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 337,
+          "resource_url": "https://i.discogs.com/Q2MiGNVWsLoqwp9j1ZaZu1cz7ob7yuhIzWwMiy5nq2A/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Q2MiGNVWsLoqwp9j1ZaZu1cz7ob7yuhIzWwMiy5nq2A/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/w3HclNuUQoCO8-Bb_9Ny2H_5H9eIjZmDX0s-gcg2jmI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 392,
+          "resource_url": "https://i.discogs.com/f0WUPPjw8yuaj9eKhk9bDGV2WiG-R6nbmskPQxdEW-M/rs:fit/g:sm/q:90/h:392/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/f0WUPPjw8yuaj9eKhk9bDGV2WiG-R6nbmskPQxdEW-M/rs:fit/g:sm/q:90/h:392/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/CrE-iLEVMzv0Mzckxq3XhBP78qcWDj5XIwAlc8ieWeE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+          "width": 550
+        },
+        {
+          "height": 429,
+          "resource_url": "https://i.discogs.com/-bXqIfvchfgM_NhsU98IKtPzj5wtCYGDo-2uxc0mYFI/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/-bXqIfvchfgM_NhsU98IKtPzj5wtCYGDo-2uxc0mYFI/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/tbyYjVnDD67TTVLHRT5e2OzGQin09XUZ1wYOxVpfoMU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 101275,
+          "name": "Tammy Glover",
+          "resource_url": "https://api.discogs.com/artists/101275",
+          "thumbnail_url": "https://i.discogs.com/JODqdGTcyFXTCaZ6nrB9vbiXxcl7qAPLoQLQG3_zxFE/rs:fit/g:sm/q:40/h:316/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMTI3/NS0xNTQxNDkyNzE2/LTE5ODEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 102955,
+          "name": "Martin Gordon",
+          "resource_url": "https://api.discogs.com/artists/102955",
+          "thumbnail_url": "https://i.discogs.com/sHY-zSeissvdzlOXaY6f-cG155uv4il24B4rPWDKpMo/rs:fit/g:sm/q:40/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMjk1/NS0xNjI1ODMwOTc2/LTQ4NTkuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 133319,
+          "name": "Ron Mael",
+          "resource_url": "https://api.discogs.com/artists/133319",
+          "thumbnail_url": "https://i.discogs.com/EiwaUpctmlnOOJa2pD07mLoEEOG6jnQyRYONV7aw9xA/rs:fit/g:sm/q:40/h:751/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzMx/OS0xNjMxODExNTc3/LTUyOTEuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 133320,
+          "name": "Russell Mael",
+          "resource_url": "https://api.discogs.com/artists/133320",
+          "thumbnail_url": "https://i.discogs.com/ynugsjhw1eAGQ5SkuPeH5XNakf6aUCtVcogi_mf8mqQ/rs:fit/g:sm/q:40/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzMy/MC0xNjMxODExNDMw/LTM5MjUuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 258985,
+          "name": "Dean Menta",
+          "resource_url": "https://api.discogs.com/artists/258985",
+          "thumbnail_url": "https://i.discogs.com/fPYwaBccDYY-ty_uQEckY6GBR7LeDFtA97cJSKqfmzk/rs:fit/g:sm/q:40/h:276/w:379/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1ODk4/NS0xNTYyNTcyMzc1/LTM4OTMuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 266053,
+          "name": "Earle Mankey",
+          "resource_url": "https://api.discogs.com/artists/266053",
+          "thumbnail_url": "https://i.discogs.com/43EPVjZjbBbGKqwNEr6iqi0w72J7rN9I0Se6wD8Je_E/rs:fit/g:sm/q:40/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NjA1/My0xMzI5NDQwNjA1/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 278604,
+          "name": "David Kendrick",
+          "resource_url": "https://api.discogs.com/artists/278604",
+          "thumbnail_url": "https://i.discogs.com/0z5IJZMocjEd7GdUXagxt2AP4gqx31CjBFDi-Q-2eyw/rs:fit/g:sm/q:40/h:289/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3ODYw/NC0xNjM1OTUwOTk3/LTE2NDAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 324181,
+          "name": "Jim Mankey",
+          "resource_url": "https://api.discogs.com/artists/324181",
+          "thumbnail_url": "https://i.discogs.com/omLVP_d-lAUhKpKeHxw0MLXVh6nsV1RXEXbcBHIdqv0/rs:fit/g:sm/q:40/h:223/w:249/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyNDE4/MS0xMTkyNzQ1MzU4/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 378727,
+          "name": "Bob Haag",
+          "resource_url": "https://api.discogs.com/artists/378727",
+          "thumbnail_url": "https://i.discogs.com/IVcCVCd5dZM_mM41HqTS8RskJ2JjTeUjfqQN7PgNE78/rs:fit/g:sm/q:40/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODcy/Ny0xNjYzMDEzODIy/LTEwMTkuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 378728,
+          "name": "Leslie Bohem",
+          "resource_url": "https://api.discogs.com/artists/378728",
+          "thumbnail_url": "https://i.discogs.com/8rwMJbXo8t3R8JpHJGUed6M4m5h77NckvQPP_vxDDDQ/rs:fit/g:sm/q:40/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODcy/OC0xNjYzMDE0Mzg2/LTM0MjAuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 492942,
+          "name": "Steven McDonald",
+          "resource_url": "https://api.discogs.com/artists/492942",
+          "thumbnail_url": "https://i.discogs.com/giOtEsBaLBpWuOALMIucANxiiegvZObngwYV2jYWYmQ/rs:fit/g:sm/q:40/h:272/w:255/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Mjk0/Mi0xMzM2NDc4MDIz/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 511094,
+          "name": "Sal Maida",
+          "resource_url": "https://api.discogs.com/artists/511094",
+          "thumbnail_url": "https://i.discogs.com/yPKwLRlCUxzBiP71BDthvoI2EVPxGbMNhPLPzcZdhkQ/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxMTA5/NC0xNzM4Njg2NTE1/LTg0NjQuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 534164,
+          "name": "Adrian Fisher",
+          "resource_url": "https://api.discogs.com/artists/534164",
+          "thumbnail_url": "https://i.discogs.com/qfailn8-9YKQQZU9_VmN5aHmIOc5YLeGfr4PwEwCiHI/rs:fit/g:sm/q:40/h:620/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDE2/NC0xNTE3MjIzMTky/LTIyMDEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 534165,
+          "name": "Dinky Diamond",
+          "resource_url": "https://api.discogs.com/artists/534165",
+          "thumbnail_url": "https://i.discogs.com/rPA2tm4aXOtpe2yKVpuyymh_Sia0sna35dJcOH0rWFQ/rs:fit/g:sm/q:40/h:620/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDE2/NS0xNTE3MjIzMjg0/LTIyMzcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 549576,
+          "name": "Hilly Michaels",
+          "resource_url": "https://api.discogs.com/artists/549576",
+          "thumbnail_url": "https://i.discogs.com/v4fVy-f9I0UCXGos7MBWbvV6xa3R5pFcebEdWwFXHr0/rs:fit/g:sm/q:40/h:297/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0OTU3/Ni0xMzA1NjYzMzQ3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 670615,
+          "name": "Jim Goodwin (2)",
+          "resource_url": "https://api.discogs.com/artists/670615",
+          "thumbnail_url": "https://i.discogs.com/RmUj8I__2B4fq7OIF85tCZuQFjav-Iezid6I-UOxNjg/rs:fit/g:sm/q:40/h:318/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MDYx/NS0xNTYxMjYyNjMx/LTY2MTcuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 683363,
+          "name": "Ian Hampton",
+          "resource_url": "https://api.discogs.com/artists/683363",
+          "thumbnail_url": "https://i.discogs.com/U8yi129TP95cWMfQWn1h0geSl__JTHf97PgUCpjCEP8/rs:fit/g:sm/q:40/h:574/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM2/My0xMjM1NDcwNzkz/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 683364,
+          "name": "Trevor White (2)",
+          "resource_url": "https://api.discogs.com/artists/683364",
+          "thumbnail_url": "https://i.discogs.com/jXe0B2HR93fo0U7f8GFHBotpSqHBqf-k_cjm0fJ4Feo/rs:fit/g:sm/q:40/h:392/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM2/NC0xNTA1Njg2Mjk0/LTM5MzEuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 794079,
+          "name": "Harley Feinstein",
+          "resource_url": "https://api.discogs.com/artists/794079",
+          "thumbnail_url": "https://i.discogs.com/OGgmcP2KCcozUG-QIgoL_02KGJJ1PwWOKtNXYgHP8iA/rs:fit/g:sm/q:40/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDA3/OS0xNzQ0MTQxMTI1/LTk1MDIuanBlZw.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1248965,
+          "name": "Jeff Salen",
+          "resource_url": "https://api.discogs.com/artists/1248965",
+          "thumbnail_url": "https://i.discogs.com/DXDNq0atMb2Of5LbKbOFjX_w7C2IdMidYML34PA-7XE/rs:fit/g:sm/q:40/h:515/w:515/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDg5/NjUtMTY0NzE4MDkw/OS00NTkzLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2966103,
+          "name": "Christi Haydon",
+          "resource_url": "https://api.discogs.com/artists/2966103",
+          "thumbnail_url": "https://i.discogs.com/VcS9laYdaPd5yZw8kvuCsGOwsOMg2DSX-EkXz14bnl8/rs:fit/g:sm/q:40/h:636/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjYx/MDMtMTQ2MTIzNDUw/Ni0yMjA3LmpwZWc.jpeg"
+        }
+      ],
+      "name": "Sparks",
+      "namevariations": [
+        "Les Sparks",
+        "Sparks!",
+        "The Sparks",
+        "Спаркс",
+        "スパークス"
+      ],
+      "profile": "Brothers Ron and Russell Mael from Los Angeles, USA have been making diverse music since 1969 under various incarnations of Sparks. In 1979 they ditched the guitars and keyboards of glam geek rock and started working with Italian producer Giorgio Moroder, beginning a love affair with electronic music.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 1288076,
+            "name": "Halfnelson",
+            "resource_url": "https://api.discogs.com/artists/1288076",
+            "thumbnail_url": "https://i.discogs.com/aV7-qJo_KGiZTKbOCGZA3BXGHAM1lRPTmhLg5sVc_Yc/rs:fit/g:sm/q:40/h:400/w:388/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyODgw/NzYtMTYxNDk0MDA3/Mi01NjE1LmpwZWc.jpeg"
+          },
+          {
+            "id": 7016600,
+            "name": "Lil' Beethoven",
+            "resource_url": "https://api.discogs.com/artists/7016600",
+            "thumbnail_url": ""
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "id": 6271,
+        "images": [
+          {
+            "height": 591,
+            "resource_url": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/cgBk1IeRwIybevVd2oanGDhrEyrwRIqsVCWDLZcr1yk/rs:fit/g:sm/q:90/h:591/w:475/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/TgZP7UmFJGlNfu8u3Ty7vQKSgKhZIIEjURANFw_HU-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+            "width": 475
+          },
+          {
+            "height": 399,
+            "resource_url": "https://i.discogs.com/pRYwC9vqSd2CNQubXXusQmU_7MJmLAeu_y122LEYwP0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pRYwC9vqSd2CNQubXXusQmU_7MJmLAeu_y122LEYwP0/rs:fit/g:sm/q:90/h:399/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/C6g7FyfoBVUVX2InK35BanPhIJcl1OUJOXPRY0XjXAE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyMS0z/NDYxLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 437,
+            "resource_url": "https://i.discogs.com/o7yaU-FLkU9hyVfRBjpyj4pIOo8q0KC4X42SIHHiHXY/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/o7yaU-FLkU9hyVfRBjpyj4pIOo8q0KC4X42SIHHiHXY/rs:fit/g:sm/q:90/h:437/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/qCUT0MQ8fxBgKLTmJazXeUu5ALw1nynLBtTnTXKVKOY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYzMTgxMTY5Ny05/ODY3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 844,
+            "resource_url": "https://i.discogs.com/yGHP4iUXckbPndU4T8n7qf_Vfsm6aQCd7HJg4VoWd-k/rs:fit/g:sm/q:90/h:844/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/yGHP4iUXckbPndU4T8n7qf_Vfsm6aQCd7HJg4VoWd-k/rs:fit/g:sm/q:90/h:844/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/pOuKFDNSXqpBBOsyC8dzlyebwDHZFeu9j2kkvDf7Ac0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTI4NjcxNzMxNS5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 694,
+            "resource_url": "https://i.discogs.com/o2qHMrDeSQlcYBsES0j8mQFnZmHA8xmeNhSZ2Ln5cWk/rs:fit/g:sm/q:90/h:694/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/o2qHMrDeSQlcYBsES0j8mQFnZmHA8xmeNhSZ2Ln5cWk/rs:fit/g:sm/q:90/h:694/w:465/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/DKYRtg9EnutPCtsG9r-PFUTJbWWYn0kkKLSlR_0c0vQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUwNC02/ODQzLmpwZWc.jpeg",
+            "width": 465
+          },
+          {
+            "height": 402,
+            "resource_url": "https://i.discogs.com/UnzqbIDllf7FRg1CWzvIvCs-Ix7sT9UGdXReCeQS6bI/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/UnzqbIDllf7FRg1CWzvIvCs-Ix7sT9UGdXReCeQS6bI/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/n2YxTiKiG7YgzV2qJ2CLBhm8Hi5dQenD-JwYG-se_cI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMzg5NC04/MzY0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 495,
+            "resource_url": "https://i.discogs.com/I3LnHN8c9Q5v_KPB1QshRKT84Xhu6-gCdkVZOjhVt0k/rs:fit/g:sm/q:90/h:495/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/I3LnHN8c9Q5v_KPB1QshRKT84Xhu6-gCdkVZOjhVt0k/rs:fit/g:sm/q:90/h:495/w:495/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/Rw707Tk7_Wp-dRILXNg26TD--yI4Ugz-qIHloFCiIv4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTEyOTA5ODMwOS5q/cGVn.jpeg",
+            "width": 495
+          },
+          {
+            "height": 822,
+            "resource_url": "https://i.discogs.com/o6tAMiwtZ1PZ62HPwXiaNBWSNAdVAzHbZQM_UB3SllQ/rs:fit/g:sm/q:90/h:822/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/o6tAMiwtZ1PZ62HPwXiaNBWSNAdVAzHbZQM_UB3SllQ/rs:fit/g:sm/q:90/h:822/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/NHjeBTk_fAM1utGcBvkWZWABYhboR4vz-L0msBnHHyQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxOS04/MDE3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 691,
+            "resource_url": "https://i.discogs.com/DPD0-lV-YXpZVk6gKuY43IkTObzNPe8dcV_-HlFRT0A/rs:fit/g:sm/q:90/h:691/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/DPD0-lV-YXpZVk6gKuY43IkTObzNPe8dcV_-HlFRT0A/rs:fit/g:sm/q:90/h:691/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/vlENZTTzT5vDGogZUsdEOLfGYbkN5Gs5LeBse_LzPYQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc0OTg5OC03/Nzc0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 864,
+            "resource_url": "https://i.discogs.com/jw2qzFYJRpKT_Yx3Ld0KXfIsk0HpUtyNXI85p9MkfTo/rs:fit/g:sm/q:90/h:864/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/jw2qzFYJRpKT_Yx3Ld0KXfIsk0HpUtyNXI85p9MkfTo/rs:fit/g:sm/q:90/h:864/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/pBLYU0mUe69wEAK2PBmzcUpuq1G9s4w56JZteXzlgQQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUxNi03/OTMyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 428,
+            "resource_url": "https://i.discogs.com/P8EmQ8QHpVLld93uOSfGMQzIAAmBzH5X63j4rZz88Mc/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/P8EmQ8QHpVLld93uOSfGMQzIAAmBzH5X63j4rZz88Mc/rs:fit/g:sm/q:90/h:428/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/D-RWW1U1NMhngZa63rskf5N2YCX1J95-wtm335A-vAU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzQ2Mi03/NzU4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 396,
+            "resource_url": "https://i.discogs.com/WgCE1TfQqfY2Fz1-nURjwh9KRzL5PB5cIH0XT1trEyo/rs:fit/g:sm/q:90/h:396/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/WgCE1TfQqfY2Fz1-nURjwh9KRzL5PB5cIH0XT1trEyo/rs:fit/g:sm/q:90/h:396/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/u0rlvNNIh0G5y1i_SihdDCuxycBHtXvJjxsoUsZqYCA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MDA3NS0x/MzI5LmpwZWc.jpeg",
+            "width": 396
+          },
+          {
+            "height": 845,
+            "resource_url": "https://i.discogs.com/Uo0A6A-xG9zxuqVsXmSCDCZWHINbOpVqkgkDBDbmkno/rs:fit/g:sm/q:90/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Uo0A6A-xG9zxuqVsXmSCDCZWHINbOpVqkgkDBDbmkno/rs:fit/g:sm/q:90/h:845/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/GNYBN3fnsiqAAG7gEtK4bSWvnZQox3feA1KmyWO_ks0/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1MzkxMS04/ODQxLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 507,
+            "resource_url": "https://i.discogs.com/xOLv_2LA0NXVcE6P3j6huxsArzM8Uo7gz-vI99xxLBA/rs:fit/g:sm/q:90/h:507/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/xOLv_2LA0NXVcE6P3j6huxsArzM8Uo7gz-vI99xxLBA/rs:fit/g:sm/q:90/h:507/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/blqq0fu6IwFF3RclPTQwOHj-fd6zL2utT8h7Dy04St8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1Mzk1Ny0z/NzM4LmpwZWc.jpeg",
+            "width": 500
+          },
+          {
+            "height": 450,
+            "resource_url": "https://i.discogs.com/pMdG4WosWiwjMgbMhoJ9458acaaysuUAF1_tMbIWJIM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/pMdG4WosWiwjMgbMhoJ9458acaaysuUAF1_tMbIWJIM/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+            "uri150": "https://i.discogs.com/mpRWxMtASylQdWU36kp12uaQckWhJXyRygjRdhbdHHk/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTE1MjEwMDc5NS5q/cGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 447,
+            "resource_url": "https://i.discogs.com/R21dvYX2-qIuMKfRcYxrNKCGQoFQLgs1fjAQcXkzLQw/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/R21dvYX2-qIuMKfRcYxrNKCGQoFQLgs1fjAQcXkzLQw/rs:fit/g:sm/q:90/h:447/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/8Y4K7MX8ZB46pdVJQY6jMgT0SdmS2rAbQL4cNyc5Fr4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyNjcxMjcyMi00/MjY3LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 755,
+            "resource_url": "https://i.discogs.com/6PJUHy1REznpqXrfA678CREU0daJdvY0PhTO_r67hRk/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/6PJUHy1REznpqXrfA678CREU0daJdvY0PhTO_r67hRk/rs:fit/g:sm/q:90/h:755/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/RnZKHNUOCmDG_E2gasmUWoFXIAF4VWH3ObrqwFhXNX4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUyNi02/NTQwLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 337,
+            "resource_url": "https://i.discogs.com/Q2MiGNVWsLoqwp9j1ZaZu1cz7ob7yuhIzWwMiy5nq2A/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Q2MiGNVWsLoqwp9j1ZaZu1cz7ob7yuhIzWwMiy5nq2A/rs:fit/g:sm/q:90/h:337/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/w3HclNuUQoCO8-Bb_9Ny2H_5H9eIjZmDX0s-gcg2jmI/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjUzMS0z/MTY0LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 392,
+            "resource_url": "https://i.discogs.com/f0WUPPjw8yuaj9eKhk9bDGV2WiG-R6nbmskPQxdEW-M/rs:fit/g:sm/q:90/h:392/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/f0WUPPjw8yuaj9eKhk9bDGV2WiG-R6nbmskPQxdEW-M/rs:fit/g:sm/q:90/h:392/w:550/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/CrE-iLEVMzv0Mzckxq3XhBP78qcWDj5XIwAlc8ieWeE/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjc1Ni00/MzM4LmpwZWc.jpeg",
+            "width": 550
+          },
+          {
+            "height": 429,
+            "resource_url": "https://i.discogs.com/-bXqIfvchfgM_NhsU98IKtPzj5wtCYGDo-2uxc0mYFI/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/-bXqIfvchfgM_NhsU98IKtPzj5wtCYGDo-2uxc0mYFI/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/tbyYjVnDD67TTVLHRT5e2OzGQin09XUZ1wYOxVpfoMU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTYyMjc1NTIyOS0x/MTY3LmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 101275,
+            "name": "Tammy Glover",
+            "resource_url": "https://api.discogs.com/artists/101275",
+            "thumbnail_url": "https://i.discogs.com/JODqdGTcyFXTCaZ6nrB9vbiXxcl7qAPLoQLQG3_zxFE/rs:fit/g:sm/q:40/h:316/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMTI3/NS0xNTQxNDkyNzE2/LTE5ODEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 102955,
+            "name": "Martin Gordon",
+            "resource_url": "https://api.discogs.com/artists/102955",
+            "thumbnail_url": "https://i.discogs.com/sHY-zSeissvdzlOXaY6f-cG155uv4il24B4rPWDKpMo/rs:fit/g:sm/q:40/h:560/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMjk1/NS0xNjI1ODMwOTc2/LTQ4NTkuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 133319,
+            "name": "Ron Mael",
+            "resource_url": "https://api.discogs.com/artists/133319",
+            "thumbnail_url": "https://i.discogs.com/EiwaUpctmlnOOJa2pD07mLoEEOG6jnQyRYONV7aw9xA/rs:fit/g:sm/q:40/h:751/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzMx/OS0xNjMxODExNTc3/LTUyOTEuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 133320,
+            "name": "Russell Mael",
+            "resource_url": "https://api.discogs.com/artists/133320",
+            "thumbnail_url": "https://i.discogs.com/ynugsjhw1eAGQ5SkuPeH5XNakf6aUCtVcogi_mf8mqQ/rs:fit/g:sm/q:40/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEzMzMy/MC0xNjMxODExNDMw/LTM5MjUuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 258985,
+            "name": "Dean Menta",
+            "resource_url": "https://api.discogs.com/artists/258985",
+            "thumbnail_url": "https://i.discogs.com/fPYwaBccDYY-ty_uQEckY6GBR7LeDFtA97cJSKqfmzk/rs:fit/g:sm/q:40/h:276/w:379/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1ODk4/NS0xNTYyNTcyMzc1/LTM4OTMuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 266053,
+            "name": "Earle Mankey",
+            "resource_url": "https://api.discogs.com/artists/266053",
+            "thumbnail_url": "https://i.discogs.com/43EPVjZjbBbGKqwNEr6iqi0w72J7rN9I0Se6wD8Je_E/rs:fit/g:sm/q:40/h:600/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI2NjA1/My0xMzI5NDQwNjA1/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 278604,
+            "name": "David Kendrick",
+            "resource_url": "https://api.discogs.com/artists/278604",
+            "thumbnail_url": "https://i.discogs.com/0z5IJZMocjEd7GdUXagxt2AP4gqx31CjBFDi-Q-2eyw/rs:fit/g:sm/q:40/h:289/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3ODYw/NC0xNjM1OTUwOTk3/LTE2NDAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 324181,
+            "name": "Jim Mankey",
+            "resource_url": "https://api.discogs.com/artists/324181",
+            "thumbnail_url": "https://i.discogs.com/omLVP_d-lAUhKpKeHxw0MLXVh6nsV1RXEXbcBHIdqv0/rs:fit/g:sm/q:40/h:223/w:249/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMyNDE4/MS0xMTkyNzQ1MzU4/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 378727,
+            "name": "Bob Haag",
+            "resource_url": "https://api.discogs.com/artists/378727",
+            "thumbnail_url": "https://i.discogs.com/IVcCVCd5dZM_mM41HqTS8RskJ2JjTeUjfqQN7PgNE78/rs:fit/g:sm/q:40/h:899/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODcy/Ny0xNjYzMDEzODIy/LTEwMTkuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 378728,
+            "name": "Leslie Bohem",
+            "resource_url": "https://api.discogs.com/artists/378728",
+            "thumbnail_url": "https://i.discogs.com/8rwMJbXo8t3R8JpHJGUed6M4m5h77NckvQPP_vxDDDQ/rs:fit/g:sm/q:40/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3ODcy/OC0xNjYzMDE0Mzg2/LTM0MjAuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 492942,
+            "name": "Steven McDonald",
+            "resource_url": "https://api.discogs.com/artists/492942",
+            "thumbnail_url": "https://i.discogs.com/giOtEsBaLBpWuOALMIucANxiiegvZObngwYV2jYWYmQ/rs:fit/g:sm/q:40/h:272/w:255/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ5Mjk0/Mi0xMzM2NDc4MDIz/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 511094,
+            "name": "Sal Maida",
+            "resource_url": "https://api.discogs.com/artists/511094",
+            "thumbnail_url": "https://i.discogs.com/yPKwLRlCUxzBiP71BDthvoI2EVPxGbMNhPLPzcZdhkQ/rs:fit/g:sm/q:40/h:400/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUxMTA5/NC0xNzM4Njg2NTE1/LTg0NjQuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 534164,
+            "name": "Adrian Fisher",
+            "resource_url": "https://api.discogs.com/artists/534164",
+            "thumbnail_url": "https://i.discogs.com/qfailn8-9YKQQZU9_VmN5aHmIOc5YLeGfr4PwEwCiHI/rs:fit/g:sm/q:40/h:620/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDE2/NC0xNTE3MjIzMTky/LTIyMDEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 534165,
+            "name": "Dinky Diamond",
+            "resource_url": "https://api.discogs.com/artists/534165",
+            "thumbnail_url": "https://i.discogs.com/rPA2tm4aXOtpe2yKVpuyymh_Sia0sna35dJcOH0rWFQ/rs:fit/g:sm/q:40/h:620/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTUzNDE2/NS0xNTE3MjIzMjg0/LTIyMzcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 549576,
+            "name": "Hilly Michaels",
+            "resource_url": "https://api.discogs.com/artists/549576",
+            "thumbnail_url": "https://i.discogs.com/v4fVy-f9I0UCXGos7MBWbvV6xa3R5pFcebEdWwFXHr0/rs:fit/g:sm/q:40/h:297/w:252/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU0OTU3/Ni0xMzA1NjYzMzQ3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 670615,
+            "name": "Jim Goodwin (2)",
+            "resource_url": "https://api.discogs.com/artists/670615",
+            "thumbnail_url": "https://i.discogs.com/RmUj8I__2B4fq7OIF85tCZuQFjav-Iezid6I-UOxNjg/rs:fit/g:sm/q:40/h:318/w:326/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MDYx/NS0xNTYxMjYyNjMx/LTY2MTcuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 683363,
+            "name": "Ian Hampton",
+            "resource_url": "https://api.discogs.com/artists/683363",
+            "thumbnail_url": "https://i.discogs.com/U8yi129TP95cWMfQWn1h0geSl__JTHf97PgUCpjCEP8/rs:fit/g:sm/q:40/h:574/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM2/My0xMjM1NDcwNzkz/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 683364,
+            "name": "Trevor White (2)",
+            "resource_url": "https://api.discogs.com/artists/683364",
+            "thumbnail_url": "https://i.discogs.com/jXe0B2HR93fo0U7f8GFHBotpSqHBqf-k_cjm0fJ4Feo/rs:fit/g:sm/q:40/h:392/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4MzM2/NC0xNTA1Njg2Mjk0/LTM5MzEuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 794079,
+            "name": "Harley Feinstein",
+            "resource_url": "https://api.discogs.com/artists/794079",
+            "thumbnail_url": "https://i.discogs.com/OGgmcP2KCcozUG-QIgoL_02KGJJ1PwWOKtNXYgHP8iA/rs:fit/g:sm/q:40/h:565/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc5NDA3/OS0xNzQ0MTQxMTI1/LTk1MDIuanBlZw.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1248965,
+            "name": "Jeff Salen",
+            "resource_url": "https://api.discogs.com/artists/1248965",
+            "thumbnail_url": "https://i.discogs.com/DXDNq0atMb2Of5LbKbOFjX_w7C2IdMidYML34PA-7XE/rs:fit/g:sm/q:40/h:515/w:515/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDg5/NjUtMTY0NzE4MDkw/OS00NTkzLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2966103,
+            "name": "Christi Haydon",
+            "resource_url": "https://api.discogs.com/artists/2966103",
+            "thumbnail_url": "https://i.discogs.com/VcS9laYdaPd5yZw8kvuCsGOwsOMg2DSX-EkXz14bnl8/rs:fit/g:sm/q:40/h:636/w:411/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI5NjYx/MDMtMTQ2MTIzNDUw/Ni0yMjA3LmpwZWc.jpeg"
+          }
+        ],
+        "name": "Sparks",
+        "namevariations": [
+          "Les Sparks",
+          "Sparks!",
+          "The Sparks",
+          "Спаркс",
+          "スパークス"
+        ],
+        "profile": "Brothers Ron and Russell Mael from Los Angeles, USA have been making diverse music since 1969 under various incarnations of Sparks. In 1979 they ditched the guitars and keyboards of glam geek rock and started working with Italian producer Giorgio Moroder, beginning a love affair with electronic music.",
+        "releases_url": "https://api.discogs.com/artists/6271/releases",
+        "resource_url": "https://api.discogs.com/artists/6271",
+        "uri": "https://www.discogs.com/artist/6271-Sparks",
+        "urls": [
+          "http://allsparks.com",
+          "http://www.facebook.com/sparksofficial",
+          "http://twitter.com/sparksofficial",
+          "http://www.instagram.com/sparks_official",
+          "http://graphikdesigns.free.fr/halfnelson.html",
+          "https://www.fanmael.nl/",
+          "http://www.sparkives.com",
+          "http://en.wikipedia.org/wiki/Sparks_%28band%29",
+          "https://www.youtube.com/@SparksOfficialVideo"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/6271",
+      "thumb": "https://i.discogs.com/TgZP7UmFJGlNfu8u3Ty7vQKSgKhZIIEjURANFw_HU-g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTYyNzEt/MTY2MzAxMjYzNy03/NDg5LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/6271-Sparks",
+      "urls": [
+        "http://allsparks.com",
+        "http://www.facebook.com/sparksofficial",
+        "http://twitter.com/sparksofficial",
+        "http://www.instagram.com/sparks_official",
+        "http://graphikdesigns.free.fr/halfnelson.html",
+        "https://www.fanmael.nl/",
+        "http://www.sparkives.com",
+        "http://en.wikipedia.org/wiki/Sparks_%28band%29",
+        "https://www.youtube.com/@SparksOfficialVideo"
+      ]
     },
     "lastfm": {
       "bio_content": "Sparks is an American rock and pop music band formed in Los Angeles in 1970 by brothers Ron Mael (keyboards) and Russell Mael (vocals), initially under the name Halfnelson. Best known for their quirky approach to song writing, Sparks' music is often accompanied by cutting and acerbic lyrics, and an idiosyncratic stage presence, typified in the contrast between Russell's wide-eyed hyperactive frontman antics and Ron's sedentary scowling.\n\nThe band's long career has seen them successfully adopt many different musical genres; including glam pop, power pop, electronic dance music and mainstream pop. Despite these many styles, a recognizable \"Sparks sound\" remains throughout, and they have enjoyed a large cult following since their first releases. Sparks have been highly influential on the development of popular music, in particular on the late 1970s scene, when in collaboration with Giorgio Moroder (and Telex subsequently), they reinvented themselves as an electronic pop duo, and abandoned the traditional rock band line up. In contrast to the esteem in which they are held by such peers as Depeche Mode, New Order, Morrissey and They Might Be Giants, who all cite Sparks as a major influence, their almost constantly changing styles and unique visual presentations have sometimes seen them dismissed as a novelty act.\n\nThe 2002 release of Lil' Beethoven, their self-described \"genre-defining opus\", and 2006's Hello Young Lovers (their 20th studio album) have brought Sparks renewed critical and commercial success, and seen them continue to \"steer clear of pop conventions.\"\n\nThe 2021 documentary film 'The Sparks Brothers', directed by Edgar Wright, has renewed interest in the band for a new audience. <a href=\"https://www.last.fm/music/Sparks\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
@@ -137,10 +836,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 559347,
+      "listeners": 559711,
       "mbid": "f319b57a-a494-40f6-a467-3d196d3484e6",
       "name": "Sparks",
-      "playcount": 14926944,
+      "playcount": 14942040,
       "similar_artists": [
         {
           "name": "Devo",
@@ -173,12 +872,12 @@
       "url": "https://www.last.fm/music/Sparks"
     },
     "spotify": {
-      "followers": 244289,
+      "followers": 244482,
       "genres": [
         "glam rock",
         "synthpop",
-        "art pop",
         "art rock",
+        "art pop",
         "new wave"
       ],
       "id": "7pwjGKaqnfkvS7eQbHaqyH",
@@ -206,6 +905,6 @@
   },
   "spotify_id": "7pwjGKaqnfkvS7eQbHaqyH",
   "spotify_url": "https://open.spotify.com/artist/7pwjGKaqnfkvS7eQbHaqyH",
-  "updated_at": "2025-07-05T14:34:33.599467",
+  "updated_at": "2025-07-08T09:21:51.096639",
   "wikipedia_url": null
 }
