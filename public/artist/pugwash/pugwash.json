@@ -102,6 +102,178 @@
   },
   "name": "Pugwash",
   "popularity": 13,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='208495684', url='https://music.apple.com/gb/artist/pugwash/208495684', name='Pugwash', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/5e/41/7b/5e417b18-1a80-a2b4-4a1e-0d7a760d3fa6/816651016464.jpg/2000x2000ac.jpg', genres=['Pop'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '208495684', 'type': 'artists', 'href': '/v1/catalog/gb/artists/208495684', 'attributes': {'name': 'Pugwash', 'genreNames': ['Pop'], 'artwork': {'width': 1500, 'height': 1500, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/5e/41/7b/5e417b18-1a80-a2b4-4a1e-0d7a760d3fa6/816651016464.jpg/{w}x{h}ac.jpg', 'bgColor': 'ece1cb', 'textColor1': '000000', 'textColor2': '231f17', 'textColor3': '2f2d28', 'textColor4': '4b463b'}, 'url': 'https://music.apple.com/gb/artist/pugwash/208495684'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/208495684/albums', 'data': [{'id': '1282544689', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1282544689'}, {'id': '1169307977', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1169307977'}, {'id': '916973429', 'type': 'albums', 'href': '/v1/catalog/gb/albums/916973429'}, {'id': '1581487023', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1581487023'}, {'id': '1583273101', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1583273101'}, {'id': '1596665952', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1596665952'}, {'id': '1642745761', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1642745761'}, {'id': '1584971787', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584971787'}, {'id': '1584299013', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584299013'}, {'id': '1584023055', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584023055'}, {'id': '1584016011', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584016011'}, {'id': '1584023066', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1584023066'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/dzwVkJ7Pw3QNcZbToFYLtTh3eSWjP4OMbEWYTmRfoWU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "1842939",
+      "images": [
+        {
+          "height": 400,
+          "resource_url": "https://i.discogs.com/dzwVkJ7Pw3QNcZbToFYLtTh3eSWjP4OMbEWYTmRfoWU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/dzwVkJ7Pw3QNcZbToFYLtTh3eSWjP4OMbEWYTmRfoWU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/gCEjfVGeAPTLux_7Utu2qPsbFh3wWMN68qsp0oTSmmw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 441,
+          "resource_url": "https://i.discogs.com/EgdPWJ15OfrT1dDuCC5xcI1hJtnh8zsibZddAxsXBuY/rs:fit/g:sm/q:90/h:441/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/EgdPWJ15OfrT1dDuCC5xcI1hJtnh8zsibZddAxsXBuY/rs:fit/g:sm/q:90/h:441/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/PeDaIRvBShcO3OfP8xYtIE04DtQxNit_9T1bMaFWwIA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 420,
+          "resource_url": "https://i.discogs.com/4uiqK-1bVyqeLLHddkcCXsfoB-bPRXBlhYlP54ZGtc4/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/4uiqK-1bVyqeLLHddkcCXsfoB-bPRXBlhYlP54ZGtc4/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/bDOOMoaq1LEEgQQFL18LFuwBdD1HLgroxKjWGnwx8h8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 275989,
+          "name": "Keith Farrell",
+          "resource_url": "https://api.discogs.com/artists/275989",
+          "thumbnail_url": "https://i.discogs.com/mYiqy4Q7LOkc3R7ECZgkNcDBUA076VaAWJ2eV8EwVOQ/rs:fit/g:sm/q:40/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTk4/OS0xNzA1NDEwMDM4/LTM3NjYuanBlZw.jpeg"
+        },
+        {
+          "active": true,
+          "id": 1091978,
+          "name": "Thomas Walsh",
+          "resource_url": "https://api.discogs.com/artists/1091978",
+          "thumbnail_url": "https://i.discogs.com/nGLfScdP-w_-TxCTWlGmMOs1-8-ABcjFnzm7xtOvol0/rs:fit/g:sm/q:40/h:305/w:315/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwOTE5/NzgtMTI2ODkxNTc5/OS5qcGVn.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1186937,
+          "name": "Duncan Maitland",
+          "resource_url": "https://api.discogs.com/artists/1186937",
+          "thumbnail_url": "https://i.discogs.com/OnSDRZGX2AS0pWeiaxwiTFRWQjJ5bUtYE6x4pENX5lA/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExODY5/MzctMTU3MjAwOTA4/Ny04MDIwLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 1846683,
+          "name": "Tosh Flood",
+          "resource_url": "https://api.discogs.com/artists/1846683",
+          "thumbnail_url": "https://i.discogs.com/6CRGu8cc2LeOPaDXJYMu3hTOYAUbi7mroFTloi6jwGU/rs:fit/g:sm/q:40/h:605/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDY2/ODMtMTQyODg4NzY1/MS0zMzQzLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 7733387,
+          "name": "Joe Fitzgerald (3)",
+          "resource_url": "https://api.discogs.com/artists/7733387",
+          "thumbnail_url": ""
+        }
+      ],
+      "name": "Pugwash (2)",
+      "namevariations": [
+        "Plugwash",
+        "Pugwash & Friends"
+      ],
+      "profile": "Irish pop band fronted by musician Thomas Walsh. ",
+      "raw_data": {
+        "data_quality": "Needs Vote",
+        "id": 1842939,
+        "images": [
+          {
+            "height": 400,
+            "resource_url": "https://i.discogs.com/dzwVkJ7Pw3QNcZbToFYLtTh3eSWjP4OMbEWYTmRfoWU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/dzwVkJ7Pw3QNcZbToFYLtTh3eSWjP4OMbEWYTmRfoWU/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/gCEjfVGeAPTLux_7Utu2qPsbFh3wWMN68qsp0oTSmmw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 441,
+            "resource_url": "https://i.discogs.com/EgdPWJ15OfrT1dDuCC5xcI1hJtnh8zsibZddAxsXBuY/rs:fit/g:sm/q:90/h:441/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/EgdPWJ15OfrT1dDuCC5xcI1hJtnh8zsibZddAxsXBuY/rs:fit/g:sm/q:90/h:441/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/PeDaIRvBShcO3OfP8xYtIE04DtQxNit_9T1bMaFWwIA/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/OC5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 420,
+            "resource_url": "https://i.discogs.com/4uiqK-1bVyqeLLHddkcCXsfoB-bPRXBlhYlP54ZGtc4/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/4uiqK-1bVyqeLLHddkcCXsfoB-bPRXBlhYlP54ZGtc4/rs:fit/g:sm/q:90/h:420/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/bDOOMoaq1LEEgQQFL18LFuwBdD1HLgroxKjWGnwx8h8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTI3NzcyMDQ5/Mi5qcGVn.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 275989,
+            "name": "Keith Farrell",
+            "resource_url": "https://api.discogs.com/artists/275989",
+            "thumbnail_url": "https://i.discogs.com/mYiqy4Q7LOkc3R7ECZgkNcDBUA076VaAWJ2eV8EwVOQ/rs:fit/g:sm/q:40/h:250/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3NTk4/OS0xNzA1NDEwMDM4/LTM3NjYuanBlZw.jpeg"
+          },
+          {
+            "active": true,
+            "id": 1091978,
+            "name": "Thomas Walsh",
+            "resource_url": "https://api.discogs.com/artists/1091978",
+            "thumbnail_url": "https://i.discogs.com/nGLfScdP-w_-TxCTWlGmMOs1-8-ABcjFnzm7xtOvol0/rs:fit/g:sm/q:40/h:305/w:315/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwOTE5/NzgtMTI2ODkxNTc5/OS5qcGVn.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1186937,
+            "name": "Duncan Maitland",
+            "resource_url": "https://api.discogs.com/artists/1186937",
+            "thumbnail_url": "https://i.discogs.com/OnSDRZGX2AS0pWeiaxwiTFRWQjJ5bUtYE6x4pENX5lA/rs:fit/g:sm/q:40/h:509/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExODY5/MzctMTU3MjAwOTA4/Ny04MDIwLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 1846683,
+            "name": "Tosh Flood",
+            "resource_url": "https://api.discogs.com/artists/1846683",
+            "thumbnail_url": "https://i.discogs.com/6CRGu8cc2LeOPaDXJYMu3hTOYAUbi7mroFTloi6jwGU/rs:fit/g:sm/q:40/h:605/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDY2/ODMtMTQyODg4NzY1/MS0zMzQzLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 7733387,
+            "name": "Joe Fitzgerald (3)",
+            "resource_url": "https://api.discogs.com/artists/7733387",
+            "thumbnail_url": ""
+          }
+        ],
+        "name": "Pugwash (2)",
+        "namevariations": [
+          "Plugwash",
+          "Pugwash & Friends"
+        ],
+        "profile": "Irish pop band fronted by musician Thomas Walsh. ",
+        "releases_url": "https://api.discogs.com/artists/1842939/releases",
+        "resource_url": "https://api.discogs.com/artists/1842939",
+        "uri": "https://www.discogs.com/artist/1842939-Pugwash-2",
+        "urls": [
+          "https://www.pugwashofficial.com/",
+          "https://www.facebook.com/groups/pugwashofficial/",
+          "https://pugwashtheband.bandcamp.com/",
+          "https://twitter.com/pugwashofficial"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/1842939",
+      "thumb": "https://i.discogs.com/gCEjfVGeAPTLux_7Utu2qPsbFh3wWMN68qsp0oTSmmw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE4NDI5/MzktMTM1Nzk1OTk4/OC03ODY1LmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/1842939-Pugwash-2",
+      "urls": [
+        "https://www.pugwashofficial.com/",
+        "https://www.facebook.com/groups/pugwashofficial/",
+        "https://pugwashtheband.bandcamp.com/",
+        "https://twitter.com/pugwashofficial"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Pugwash', url='https://www.last.fm/music/Pugwash', mbid='77754012-77a7-4821-812f-7cfc0bf52ec2', listeners=10458, playcount=192168, bio_summary='Pugwash are a band lead by singer, guitarist and songwriter Thomas Walsh, formed in Dublin, Ireland. They are influenced by the sounds of The Beatles, ELO, The Beach Boys and XTC.\\n\\nThey perform pop/rock songs with emphasis on melody, harmony and musicianship - often featuring highly inventive string and orchestral arrangements.\\n\\nPugwash\\'s two most recent releases - Jollity (2005) and 11 Modern Antiquities (2008) received rave reviews in the Irish music press and on the web. They released their debut album Almond Tea in 1999. <a href=\"https://www.last.fm/music/Pugwash\">Read more on Last.fm</a>', bio_content='Pugwash are a band lead by singer, guitarist and songwriter Thomas Walsh, formed in Dublin, Ireland. They are influenced by the sounds of The Beatles, ELO, The Beach Boys and XTC.\\n\\nThey perform pop/rock songs with emphasis on melody, harmony and musicianship - often featuring highly inventive string and orchestral arrangements.\\n\\nPugwash\\'s two most recent releases - Jollity (2005) and 11 Modern Antiquities (2008) received rave reviews in the Irish music press and on the web. They released their debut album Almond Tea in 1999.\\n\\nThe single Nice To Be Nice received impressive airplay on Irish radio and Tinsel & Marzipan became the bands first top 30 hit at Christmas 2006. All proceeds of this single were donated to the Irish Epilepsy Association.\\n\\nA fluid line up has included contributions from Dave Gregory (XTC), Neil Hannon (The Divine Comedy), Jason Falkner (Jellyfish).\\n\\nThe band signed to Andy Partridge\\'s (XTC) record label APE and a Pugwash \\'Best Of\\' titled Giddy was their first release. This saw the bands music released for the first time in the UK and America.\\n\\nThomas Walsh has also collaborated on an album with Neil Hannon from The Divine Comedy entitled The Duckworth Lewis Method - a concept record about cricket to tie in with the Ashes 09.\\n\\nIn 2011 Pugwash released their 5th album proper, The Olympus Sound, on EMI in Ireland. It was subsequently released on CD & LP in early 2012 on Lojinx, in the UK and continental Europe, where it peaked in the UK vinyl album chart at number 14.\\n\\nwww.pugwashtheband.com\\n <a href=\"https://www.last.fm/music/Pugwash\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['power pop', 'pop', 'irish', 'seen live', 'indie'], similar_artists=[{'name': 'The Nines', 'url': 'https://www.last.fm/music/The+Nines'}, {'name': 'L.E.O.', 'url': 'https://www.last.fm/music/L.E.O.'}, {'name': 'The Red Button', 'url': 'https://www.last.fm/music/The+Red+Button'}, {'name': 'Linus of Hollywood', 'url': 'https://www.last.fm/music/Linus+of+Hollywood'}, {'name': 'Wondermints', 'url': 'https://www.last.fm/music/Wondermints'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Pugwash', 'mbid': '77754012-77a7-4821-812f-7cfc0bf52ec2', 'url': 'https://www.last.fm/music/Pugwash', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '10458', 'playcount': '192168'}, 'similar': {'artist': [{'name': 'The Nines', 'url': 'https://www.last.fm/music/The+Nines', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'L.E.O.', 'url': 'https://www.last.fm/music/L.E.O.', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Red Button', 'url': 'https://www.last.fm/music/The+Red+Button', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Linus of Hollywood', 'url': 'https://www.last.fm/music/Linus+of+Hollywood', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Wondermints', 'url': 'https://www.last.fm/music/Wondermints', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'power pop', 'url': 'https://www.last.fm/tag/power+pop'}, {'name': 'pop', 'url': 'https://www.last.fm/tag/pop'}, {'name': 'irish', 'url': 'https://www.last.fm/tag/irish'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'indie', 'url': 'https://www.last.fm/tag/indie'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Pugwash/+wiki'}}, 'published': '04 Jul 2008, 11:28', 'summary': 'Pugwash are a band lead by singer, guitarist and songwriter Thomas Walsh, formed in Dublin, Ireland. They are influenced by the sounds of The Beatles, ELO, The Beach Boys and XTC.\\n\\nThey perform pop/rock songs with emphasis on melody, harmony and musicianship - often featuring highly inventive string and orchestral arrangements.\\n\\nPugwash\\'s two most recent releases - Jollity (2005) and 11 Modern Antiquities (2008) received rave reviews in the Irish music press and on the web. They released their debut album Almond Tea in 1999. <a href=\"https://www.last.fm/music/Pugwash\">Read more on Last.fm</a>', 'content': 'Pugwash are a band lead by singer, guitarist and songwriter Thomas Walsh, formed in Dublin, Ireland. They are influenced by the sounds of The Beatles, ELO, The Beach Boys and XTC.\\n\\nThey perform pop/rock songs with emphasis on melody, harmony and musicianship - often featuring highly inventive string and orchestral arrangements.\\n\\nPugwash\\'s two most recent releases - Jollity (2005) and 11 Modern Antiquities (2008) received rave reviews in the Irish music press and on the web. They released their debut album Almond Tea in 1999.\\n\\nThe single Nice To Be Nice received impressive airplay on Irish radio and Tinsel & Marzipan became the bands first top 30 hit at Christmas 2006. All proceeds of this single were donated to the Irish Epilepsy Association.\\n\\nA fluid line up has included contributions from Dave Gregory (XTC), Neil Hannon (The Divine Comedy), Jason Falkner (Jellyfish).\\n\\nThe band signed to Andy Partridge\\'s (XTC) record label APE and a Pugwash \\'Best Of\\' titled Giddy was their first release. This saw the bands music released for the first time in the UK and America.\\n\\nThomas Walsh has also collaborated on an album with Neil Hannon from The Divine Comedy entitled The Duckworth Lewis Method - a concept record about cricket to tie in with the Ashes 09.\\n\\nIn 2011 Pugwash released their 5th album proper, The Olympus Sound, on EMI in Ireland. It was subsequently released on CD & LP in early 2012 on Lojinx, in the UK and continental Europe, where it peaked in the UK vinyl album chart at number 14.\\n\\nwww.pugwashtheband.com\\n <a href=\"https://www.last.fm/music/Pugwash\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='26XPBqoN0vqh3T2V0MTJEF', url='https://open.spotify.com/artist/26XPBqoN0vqh3T2V0MTJEF', name='Pugwash', popularity=13, followers=5227, genres=['power pop', 'baroque pop', 'jangle pop'], images=[{'url': 'https://i.scdn.co/image/d781a86028e45e2439d87b1069ca785de51056d7', 'height': 928, 'width': 600}, {'url': 'https://i.scdn.co/image/4a64f6c3785c3369b7803ee99f0f79d328c6da8b', 'height': 309, 'width': 200}, {'url': 'https://i.scdn.co/image/1518e6dc2f22f7911fb95a50e6fb009794f658a7', 'height': 99, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/26XPBqoN0vqh3T2V0MTJEF'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/26XPBqoN0vqh3T2V0MTJEF'}, 'followers': {'href': None, 'total': 5227}, 'genres': ['power pop', 'baroque pop', 'jangle pop'], 'href': 'https://api.spotify.com/v1/artists/26XPBqoN0vqh3T2V0MTJEF', 'id': '26XPBqoN0vqh3T2V0MTJEF', 'images': [{'url': 'https://i.scdn.co/image/d781a86028e45e2439d87b1069ca785de51056d7', 'height': 928, 'width': 600}, {'url': 'https://i.scdn.co/image/4a64f6c3785c3369b7803ee99f0f79d328c6da8b', 'height': 309, 'width': 200}, {'url': 'https://i.scdn.co/image/1518e6dc2f22f7911fb95a50e6fb009794f658a7', 'height': 99, 'width': 64}], 'name': 'Pugwash', 'popularity': 13, 'type': 'artist', 'uri': 'spotify:artist:26XPBqoN0vqh3T2V0MTJEF'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/5e/41/7b/5e417b18-1a80-a2b4-4a1e-0d7a760d3fa6/816651016464.jpg/2000x2000ac.jpg",
@@ -312,7 +484,7 @@
       "listeners": 10458,
       "mbid": "77754012-77a7-4821-812f-7cfc0bf52ec2",
       "name": "Pugwash",
-      "playcount": 192163,
+      "playcount": 192168,
       "similar_artists": [
         {
           "name": "The Nines",
@@ -372,10 +544,11 @@
       "name": "Pugwash",
       "popularity": 13,
       "url": "https://open.spotify.com/artist/26XPBqoN0vqh3T2V0MTJEF"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "26XPBqoN0vqh3T2V0MTJEF",
   "spotify_url": "https://open.spotify.com/artist/26XPBqoN0vqh3T2V0MTJEF",
-  "updated_at": "2025-07-08T10:04:34.940211",
+  "updated_at": "2025-07-08T20:54:40.662362",
   "wikipedia_url": null
 }

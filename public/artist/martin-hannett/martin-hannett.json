@@ -100,6 +100,170 @@
   },
   "name": "Martin Hannett",
   "popularity": 5,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='29524937', url='https://music.apple.com/gb/artist/martin-hannett/29524937', name='Martin Hannett', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/7a/5a/6f/7a5a6f96-6c96-ebe8-1c85-ea2a1169ac26/5056321604767.png/2000x2000ac.jpg', genres=['Electronic'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '29524937', 'type': 'artists', 'href': '/v1/catalog/gb/artists/29524937', 'attributes': {'name': 'Martin Hannett', 'genreNames': ['Electronic'], 'artwork': {'width': 1400, 'height': 1400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/7a/5a/6f/7a5a6f96-6c96-ebe8-1c85-ea2a1169ac26/5056321604767.png/{w}x{h}ac.jpg', 'bgColor': '120f0a', 'textColor1': 'f0f0f0', 'textColor2': 'dad5d3', 'textColor3': 'c4c3c2', 'textColor4': 'b2adab'}, 'url': 'https://music.apple.com/gb/artist/martin-hannett/29524937'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/29524937/albums', 'data': [{'id': '960877252', 'type': 'albums', 'href': '/v1/catalog/gb/albums/960877252'}, {'id': '1483758820', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1483758820'}, {'id': '1286330954', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1286330954'}, {'id': '1057790359', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1057790359'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/Up0hELVp5B8_EX-siJ13P7WCxH13cQIC1bVwpqLOYNg/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "80561",
+      "images": [
+        {
+          "height": 429,
+          "resource_url": "https://i.discogs.com/Up0hELVp5B8_EX-siJ13P7WCxH13cQIC1bVwpqLOYNg/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/Up0hELVp5B8_EX-siJ13P7WCxH13cQIC1bVwpqLOYNg/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+          "uri150": "https://i.discogs.com/B2gGRGVMsaO0opuqHONJITY99QEv4tNr9l8MaiK7ieU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+          "width": 600
+        },
+        {
+          "height": 305,
+          "resource_url": "https://i.discogs.com/NdxGxRfrw7GDUbVYuoEgF8XoSwPcBYJ8EKmIBupgt-M/rs:fit/g:sm/q:90/h:305/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/NdxGxRfrw7GDUbVYuoEgF8XoSwPcBYJ8EKmIBupgt-M/rs:fit/g:sm/q:90/h:305/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/nDFq4LPCv9EFyaBrm4QHBIBO_9ASNt-VeaWlvKR4Ls4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+          "width": 248
+        },
+        {
+          "height": 258,
+          "resource_url": "https://i.discogs.com/HV6cSitZc5I3TlZvOa6d08kZZuhJK5eNeMCNJjLakng/rs:fit/g:sm/q:90/h:258/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/HV6cSitZc5I3TlZvOa6d08kZZuhJK5eNeMCNJjLakng/rs:fit/g:sm/q:90/h:258/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+          "uri150": "https://i.discogs.com/MUBUN2jsQSmBPQYnoSiLYEIGojjnNd97DlacSw04u6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+          "width": 399
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/nWeTHeF0k7KDVRGnivTQB2v4G77IgIddMZlI9vFtODU/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/nWeTHeF0k7KDVRGnivTQB2v4G77IgIddMZlI9vFtODU/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+          "uri150": "https://i.discogs.com/siicRhF69fD3zyC8hBNXYxDSGR_9GkYlv-abPa6VksM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+          "width": 404
+        }
+      ],
+      "members": [],
+      "name": "Martin Hannett",
+      "namevariations": [
+        "Hannett",
+        "James Hannett",
+        "M. Hannet",
+        "M. Hannett",
+        "Martin",
+        "Martin \"Zero\" Hannet",
+        "Martin \"Zero\" Hannett",
+        "Martin 'Zero' Hannett",
+        "Martin Hamnett",
+        "Martin Hannet",
+        "Martin Zero",
+        "Martin(O)Hannet",
+        "Steve Hannett"
+      ],
+      "profile": "English record producer (born 31 May 1948 – died 18 April 1991).\r\nBest known as the innovative in-house producer at Factory Records between 1978 and 1981, Martin Hannett was personally responsible for the 'Factory sound' of that era. Hannett produced nearly every band on the roster at the time: Joy Division, New Order, A Certain Ratio, Section 25, Durutti Column and OMD. Following internal financial conflicts Hannett left Factory in 1982, but would later return to produce Happy Mondays. Aside from Factory artists Hannett produced many other bands, including Buzzcocks, Magazine, U2 and John Cooper Clarke. After years of drug related problems, Hannett died in 1991 of heart failure. That same year Factory issued a compilation of Hannett's finest production moments, since then there have been two further Hannett compilations.",
+      "raw_data": {
+        "aliases": [
+          {
+            "id": 227772,
+            "name": "Martin Zero",
+            "resource_url": "https://api.discogs.com/artists/227772",
+            "thumbnail_url": "https://i.discogs.com/zqBDx25RbIpSjRz9xlQY1ukF92D3oni-Qh1X-P6hnlA/rs:fit/g:sm/q:40/h:277/w:341/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIyNzc3/Mi0xNjkxNTMxMzU1/LTE0NTEuanBlZw.jpeg"
+          }
+        ],
+        "data_quality": "Needs Vote",
+        "groups": [
+          {
+            "active": true,
+            "id": 277394,
+            "name": "The Invisible Girls",
+            "resource_url": "https://api.discogs.com/artists/277394",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 3392156,
+            "name": "The Curious Yellows",
+            "resource_url": "https://api.discogs.com/artists/3392156",
+            "thumbnail_url": ""
+          }
+        ],
+        "id": 80561,
+        "images": [
+          {
+            "height": 429,
+            "resource_url": "https://i.discogs.com/Up0hELVp5B8_EX-siJ13P7WCxH13cQIC1bVwpqLOYNg/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/Up0hELVp5B8_EX-siJ13P7WCxH13cQIC1bVwpqLOYNg/rs:fit/g:sm/q:90/h:429/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+            "uri150": "https://i.discogs.com/B2gGRGVMsaO0opuqHONJITY99QEv4tNr9l8MaiK7ieU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+            "width": 600
+          },
+          {
+            "height": 305,
+            "resource_url": "https://i.discogs.com/NdxGxRfrw7GDUbVYuoEgF8XoSwPcBYJ8EKmIBupgt-M/rs:fit/g:sm/q:90/h:305/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/NdxGxRfrw7GDUbVYuoEgF8XoSwPcBYJ8EKmIBupgt-M/rs:fit/g:sm/q:90/h:305/w:248/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/nDFq4LPCv9EFyaBrm4QHBIBO_9ASNt-VeaWlvKR4Ls4/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExNTk3MDUwNzEu/anBlZw.jpeg",
+            "width": 248
+          },
+          {
+            "height": 258,
+            "resource_url": "https://i.discogs.com/HV6cSitZc5I3TlZvOa6d08kZZuhJK5eNeMCNJjLakng/rs:fit/g:sm/q:90/h:258/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/HV6cSitZc5I3TlZvOa6d08kZZuhJK5eNeMCNJjLakng/rs:fit/g:sm/q:90/h:258/w:399/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+            "uri150": "https://i.discogs.com/MUBUN2jsQSmBPQYnoSiLYEIGojjnNd97DlacSw04u6o/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTEwOTkwNzA1NzYu/Z2lm.jpeg",
+            "width": 399
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/nWeTHeF0k7KDVRGnivTQB2v4G77IgIddMZlI9vFtODU/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/nWeTHeF0k7KDVRGnivTQB2v4G77IgIddMZlI9vFtODU/rs:fit/g:sm/q:90/h:600/w:404/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+            "uri150": "https://i.discogs.com/siicRhF69fD3zyC8hBNXYxDSGR_9GkYlv-abPa6VksM/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTExOTUxNjU4MTQu/anBlZw.jpeg",
+            "width": 404
+          }
+        ],
+        "name": "Martin Hannett",
+        "namevariations": [
+          "Hannett",
+          "James Hannett",
+          "M. Hannet",
+          "M. Hannett",
+          "Martin",
+          "Martin \"Zero\" Hannet",
+          "Martin \"Zero\" Hannett",
+          "Martin 'Zero' Hannett",
+          "Martin Hamnett",
+          "Martin Hannet",
+          "Martin Zero",
+          "Martin(O)Hannet",
+          "Steve Hannett"
+        ],
+        "profile": "English record producer (born 31 May 1948 – died 18 April 1991).\r\nBest known as the innovative in-house producer at Factory Records between 1978 and 1981, Martin Hannett was personally responsible for the 'Factory sound' of that era. Hannett produced nearly every band on the roster at the time: Joy Division, New Order, A Certain Ratio, Section 25, Durutti Column and OMD. Following internal financial conflicts Hannett left Factory in 1982, but would later return to produce Happy Mondays. Aside from Factory artists Hannett produced many other bands, including Buzzcocks, Magazine, U2 and John Cooper Clarke. After years of drug related problems, Hannett died in 1991 of heart failure. That same year Factory issued a compilation of Hannett's finest production moments, since then there have been two further Hannett compilations.",
+        "realname": "James Martin Hannett",
+        "releases_url": "https://api.discogs.com/artists/80561/releases",
+        "resource_url": "https://api.discogs.com/artists/80561",
+        "uri": "https://www.discogs.com/artist/80561-Martin-Hannett",
+        "urls": [
+          "http://www.ltmrecordings.com/martinhannettbio.html",
+          "http://www.horae.dti.ne.jp/~ouchman/Martin.html",
+          "https://en.wikipedia.org/wiki/Martin_Hannett",
+          "https://factoryrecords.org/martin-hannett.php",
+          "http://tapeop.com/interviews/103/martin-hannett/"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/80561",
+      "thumb": "https://i.discogs.com/B2gGRGVMsaO0opuqHONJITY99QEv4tNr9l8MaiK7ieU/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgwNTYx/LTE1MTUzNTAzODEt/ODg3NS5qcGVn.jpeg",
+      "url": "https://www.discogs.com/artist/80561-Martin-Hannett",
+      "urls": [
+        "http://www.ltmrecordings.com/martinhannettbio.html",
+        "http://www.horae.dti.ne.jp/~ouchman/Martin.html",
+        "https://en.wikipedia.org/wiki/Martin_Hannett",
+        "https://factoryrecords.org/martin-hannett.php",
+        "http://tapeop.com/interviews/103/martin-hannett/"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Martin Hannett', url='https://www.last.fm/music/Martin+Hannett', mbid='2e5ac008-f48e-4ae6-b516-d2722923b046', listeners=2670, playcount=11786, bio_summary='Martin Hannett (former North Manchester, Lancashire, England (31 May 1948 – 18 April 1991), sometimes credited as Martin Zero, was a record producer who helped develop Joy Division and was an original partner in Factory Records with Tony Wilson. Hannett\\'s trademark sound, most apparent on Joy Division\\'s debut album Unknown Pleasures and its follow-up, Closer, is sparse and eerie, complementing frontman Ian Curtis\\' baritone vocals.\\n\\nFor complete Wiki, go here:   http://en.wikipedia.org/wiki/Martin_Hannett <a href=\"https://www.last.fm/music/Martin+Hannett\">Read more on Last.fm</a>', bio_content='Martin Hannett (former North Manchester, Lancashire, England (31 May 1948 – 18 April 1991), sometimes credited as Martin Zero, was a record producer who helped develop Joy Division and was an original partner in Factory Records with Tony Wilson. Hannett\\'s trademark sound, most apparent on Joy Division\\'s debut album Unknown Pleasures and its follow-up, Closer, is sparse and eerie, complementing frontman Ian Curtis\\' baritone vocals.\\n\\nFor complete Wiki, go here:   http://en.wikipedia.org/wiki/Martin_Hannett <a href=\"https://www.last.fm/music/Martin+Hannett\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['post-punk', 'Manchester', 'Gone but not Forgotten', 'electronic', 'instrumental'], similar_artists=[{'name': 'Stockholm Monsters', 'url': 'https://www.last.fm/music/Stockholm+Monsters'}, {'name': 'Marcel King', 'url': 'https://www.last.fm/music/Marcel+King'}, {'name': 'The Distractions', 'url': 'https://www.last.fm/music/The+Distractions'}, {'name': 'Martin Hannett, Steve Hopkins', 'url': 'https://www.last.fm/music/Martin+Hannett,+Steve+Hopkins'}, {'name': 'Diagram Brothers', 'url': 'https://www.last.fm/music/Diagram+Brothers'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Martin Hannett', 'mbid': '2e5ac008-f48e-4ae6-b516-d2722923b046', 'url': 'https://www.last.fm/music/Martin+Hannett', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '0', 'stats': {'listeners': '2670', 'playcount': '11786'}, 'similar': {'artist': [{'name': 'Stockholm Monsters', 'url': 'https://www.last.fm/music/Stockholm+Monsters', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Marcel King', 'url': 'https://www.last.fm/music/Marcel+King', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'The Distractions', 'url': 'https://www.last.fm/music/The+Distractions', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Martin Hannett, Steve Hopkins', 'url': 'https://www.last.fm/music/Martin+Hannett,+Steve+Hopkins', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Diagram Brothers', 'url': 'https://www.last.fm/music/Diagram+Brothers', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'post-punk', 'url': 'https://www.last.fm/tag/post-punk'}, {'name': 'Manchester', 'url': 'https://www.last.fm/tag/Manchester'}, {'name': 'Gone but not Forgotten', 'url': 'https://www.last.fm/tag/Gone+but+not+Forgotten'}, {'name': 'electronic', 'url': 'https://www.last.fm/tag/electronic'}, {'name': 'instrumental', 'url': 'https://www.last.fm/tag/instrumental'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Martin+Hannett/+wiki'}}, 'published': '11 Jan 2008, 22:13', 'summary': 'Martin Hannett (former North Manchester, Lancashire, England (31 May 1948 – 18 April 1991), sometimes credited as Martin Zero, was a record producer who helped develop Joy Division and was an original partner in Factory Records with Tony Wilson. Hannett\\'s trademark sound, most apparent on Joy Division\\'s debut album Unknown Pleasures and its follow-up, Closer, is sparse and eerie, complementing frontman Ian Curtis\\' baritone vocals.\\n\\nFor complete Wiki, go here:   http://en.wikipedia.org/wiki/Martin_Hannett <a href=\"https://www.last.fm/music/Martin+Hannett\">Read more on Last.fm</a>', 'content': 'Martin Hannett (former North Manchester, Lancashire, England (31 May 1948 – 18 April 1991), sometimes credited as Martin Zero, was a record producer who helped develop Joy Division and was an original partner in Factory Records with Tony Wilson. Hannett\\'s trademark sound, most apparent on Joy Division\\'s debut album Unknown Pleasures and its follow-up, Closer, is sparse and eerie, complementing frontman Ian Curtis\\' baritone vocals.\\n\\nFor complete Wiki, go here:   http://en.wikipedia.org/wiki/Martin_Hannett <a href=\"https://www.last.fm/music/Martin+Hannett\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='0K0Cb0h8kpL0AsoxRGTcNb', url='https://open.spotify.com/artist/0K0Cb0h8kpL0AsoxRGTcNb', name='Martin Hannett', popularity=5, followers=1552, genres=[], images=[{'url': 'https://i.scdn.co/image/6b2bfda5d826228f523278019267eda8fc7d40b4', 'height': 370, 'width': 250}, {'url': 'https://i.scdn.co/image/1bf9329f6ccbf1951ab64d567de0fe43950c5b4b', 'height': 296, 'width': 200}, {'url': 'https://i.scdn.co/image/112e1d604229ac004ca8c6023367fde57c101eee', 'height': 95, 'width': 64}], external_urls={'spotify': 'https://open.spotify.com/artist/0K0Cb0h8kpL0AsoxRGTcNb'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/0K0Cb0h8kpL0AsoxRGTcNb'}, 'followers': {'href': None, 'total': 1552}, 'genres': [], 'href': 'https://api.spotify.com/v1/artists/0K0Cb0h8kpL0AsoxRGTcNb', 'id': '0K0Cb0h8kpL0AsoxRGTcNb', 'images': [{'url': 'https://i.scdn.co/image/6b2bfda5d826228f523278019267eda8fc7d40b4', 'height': 370, 'width': 250}, {'url': 'https://i.scdn.co/image/1bf9329f6ccbf1951ab64d567de0fe43950c5b4b', 'height': 296, 'width': 200}, {'url': 'https://i.scdn.co/image/112e1d604229ac004ca8c6023367fde57c101eee', 'height': 95, 'width': 64}], 'name': 'Martin Hannett', 'popularity': 5, 'type': 'artist', 'uri': 'spotify:artist:0K0Cb0h8kpL0AsoxRGTcNb'})",
+    "theaudiodb": {}
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/7a/5a/6f/7a5a6f96-6c96-ebe8-1c85-ea2a1169ac26/5056321604767.png/2000x2000ac.jpg",
@@ -358,10 +522,11 @@
       "name": "Martin Hannett",
       "popularity": 5,
       "url": "https://open.spotify.com/artist/0K0Cb0h8kpL0AsoxRGTcNb"
-    }
+    },
+    "theaudiodb": {}
   },
   "spotify_id": "0K0Cb0h8kpL0AsoxRGTcNb",
   "spotify_url": "https://open.spotify.com/artist/0K0Cb0h8kpL0AsoxRGTcNb",
-  "updated_at": "2025-07-08T10:05:34.955797",
+  "updated_at": "2025-07-08T20:55:10.522495",
   "wikipedia_url": null
 }

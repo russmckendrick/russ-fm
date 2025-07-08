@@ -101,6 +101,330 @@
   },
   "name": "Nothing",
   "popularity": 46,
+  "raw_data": {
+    "apple_music": "ArtistAppleMusicData(id='593213453', url='https://music.apple.com/gb/artist/nothing/593213453', name='Nothing', artwork_url='https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/fb/ab/40/fbab4046-7aa9-8879-99c6-b78c826f1c61/mzl.cqvsmvce.jpg/2000x2000bb.jpg', genres=['Alternative'], origin='', born_or_formed=None, editorial_video_url=None, editorial_notes=None, raw_data={'id': '593213453', 'type': 'artists', 'href': '/v1/catalog/gb/artists/593213453', 'attributes': {'name': 'Nothing', 'genreNames': ['Alternative'], 'artwork': {'width': 2400, 'height': 2400, 'url': 'https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/fb/ab/40/fbab4046-7aa9-8879-99c6-b78c826f1c61/mzl.cqvsmvce.jpg/{w}x{h}bb.jpg', 'bgColor': '000000', 'textColor1': 'f5f5f5', 'textColor2': 'dbdbdb', 'textColor3': 'c4c4c4', 'textColor4': 'afafaf'}, 'url': 'https://music.apple.com/gb/artist/nothing/593213453'}, 'relationships': {'albums': {'href': '/v1/catalog/gb/artists/593213453/albums', 'data': [{'id': '1080004700', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1080004700'}, {'id': '1525617658', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1525617658'}, {'id': '794866934', 'type': 'albums', 'href': '/v1/catalog/gb/albums/794866934'}, {'id': '1375809650', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1375809650'}, {'id': '1738925349', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1738925349'}, {'id': '1707933788', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1707933788'}, {'id': '1239627859', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1239627859'}, {'id': '1079632544', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1079632544'}, {'id': '1454106850', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1454106850'}, {'id': '1596386664', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1596386664'}, {'id': '1575790661', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575790661'}, {'id': '1740393712', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1740393712'}, {'id': '1127547312', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1127547312'}, {'id': '1715509509', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1715509509'}, {'id': '1575828181', 'type': 'albums', 'href': '/v1/catalog/gb/albums/1575828181'}]}}})",
+    "discogs": {
+      "cover_image": "https://i.discogs.com/e2YXZkUmYJrJryLOYfOndCsqtcPl55vfZRgbx6ZcXW8/rs:fit/g:sm/q:90/h:659/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+      "fetch_timestamp": "2025-07-06T13:50:00Z",
+      "fetched_externally": true,
+      "id": "2512314",
+      "images": [
+        {
+          "height": 659,
+          "resource_url": "https://i.discogs.com/e2YXZkUmYJrJryLOYfOndCsqtcPl55vfZRgbx6ZcXW8/rs:fit/g:sm/q:90/h:659/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+          "type": "primary",
+          "uri": "https://i.discogs.com/e2YXZkUmYJrJryLOYfOndCsqtcPl55vfZRgbx6ZcXW8/rs:fit/g:sm/q:90/h:659/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/q3pTl4ab-XFKVSEkgcNyJhyhDdIQOu7BZwdMfk5K5_c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 334,
+          "resource_url": "https://i.discogs.com/Mfk8t3v0sH8GXxhdqFSHW-VX0ejQ1MFJJuO9qVk9uzA/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/Mfk8t3v0sH8GXxhdqFSHW-VX0ejQ1MFJJuO9qVk9uzA/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/hgcbUs-F9YINtk9leolhpGjCyD_kEuDrt_75m6yV_6g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 336,
+          "resource_url": "https://i.discogs.com/H2VcR6nPvPo5Y8qdGy7gmx6joBeRMmE6o5r4hiQ83lY/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/H2VcR6nPvPo5Y8qdGy7gmx6joBeRMmE6o5r4hiQ83lY/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/hVCDUD7yw4JbH4xJzm9x23JW_1WNbpDEB9GiRBV0DPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 600,
+          "resource_url": "https://i.discogs.com/qn47sDqSgx5CgHOjnxY9saCHamqz94C4G9kb0WJft3k/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/qn47sDqSgx5CgHOjnxY9saCHamqz94C4G9kb0WJft3k/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/ZH7I4fsBBkSSRhPvHvPBxeGsGGFgSjTweq52B2kbQEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 256,
+          "resource_url": "https://i.discogs.com/2t7XeGJwODI5f7AUPBNShJh4vJXjkQrm3SMH0sTq10I/rs:fit/g:sm/q:90/h:256/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/2t7XeGJwODI5f7AUPBNShJh4vJXjkQrm3SMH0sTq10I/rs:fit/g:sm/q:90/h:256/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/jtu6IVfq2o5DXHHpi46yii6ly7Nuvl-9Ie_qscXQN_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+          "width": 600
+        },
+        {
+          "height": 336,
+          "resource_url": "https://i.discogs.com/B0fwMubWCChfpAdl-zzlFhlwi_OZkqcaTd9awdHEYKA/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+          "type": "secondary",
+          "uri": "https://i.discogs.com/B0fwMubWCChfpAdl-zzlFhlwi_OZkqcaTd9awdHEYKA/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+          "uri150": "https://i.discogs.com/3syxNACnzc4Y1Nax2_-MoNmVo9pSUUj4oFLw0lGl58w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+          "width": 600
+        }
+      ],
+      "members": [
+        {
+          "active": false,
+          "id": 417360,
+          "name": "Chris Betts",
+          "resource_url": "https://api.discogs.com/artists/417360",
+          "thumbnail_url": ""
+        },
+        {
+          "active": false,
+          "id": 417363,
+          "name": "Kyle Kimball",
+          "resource_url": "https://api.discogs.com/artists/417363",
+          "thumbnail_url": "https://i.discogs.com/9xWmHBPsR4QlQI05udKmi6KC3gcBVFB56utJE-z3ZgY/rs:fit/g:sm/q:40/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNzM2/My0xNjc2Mjg5MzIx/LTI4MzYucG5n.jpeg"
+        },
+        {
+          "active": true,
+          "id": 583617,
+          "name": "Bobb Bruno",
+          "resource_url": "https://api.discogs.com/artists/583617",
+          "thumbnail_url": "https://i.discogs.com/T8Jktce4wys7Kz-vlAn9WpDP2o4sGx91IPjuTxCMG14/rs:fit/g:sm/q:40/h:302/w:245/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzYx/Ny0xMjgxMTE2NDY3/LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2512333,
+          "name": "Michael Bachich",
+          "resource_url": "https://api.discogs.com/artists/2512333",
+          "thumbnail_url": ""
+        },
+        {
+          "active": true,
+          "id": 2512334,
+          "name": "Domenic Palermo",
+          "resource_url": "https://api.discogs.com/artists/2512334",
+          "thumbnail_url": "https://i.discogs.com/M4BBHlgPWOhqtltqUNU2ZHwCyR7lAEOfM-IV5G5dHJ0/rs:fit/g:sm/q:40/h:905/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MzQtMTQxMzE4ODc0/OC0yMTIyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2512335,
+          "name": "Brandon Setta",
+          "resource_url": "https://api.discogs.com/artists/2512335",
+          "thumbnail_url": "https://i.discogs.com/JrVUZkMV7LbVnFgR_b5GEjeOA9ywJ6OJowBabyPOeVM/rs:fit/g:sm/q:40/h:750/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MzUtMTU4NTEyMzg3/MC0zNjQ5LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 2703814,
+          "name": "Nick Bassett (2)",
+          "resource_url": "https://api.discogs.com/artists/2703814",
+          "thumbnail_url": "https://i.discogs.com/ikSLHKAGKUrLBbFxsA7HQr_pAlK5GSM5Kjwz7bXF4AQ/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MDM4/MTQtMTQxMzE4ODQ4/NC02NzA4LmpwZWc.jpeg"
+        },
+        {
+          "active": true,
+          "id": 2866492,
+          "name": "Doyle Martin",
+          "resource_url": "https://api.discogs.com/artists/2866492",
+          "thumbnail_url": "https://i.discogs.com/5DFY-_TM0InMgF7MO87RJKjyrW2MI6rVsSxKIKu6kao/rs:fit/g:sm/q:40/h:488/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4NjY0/OTItMTYwMzgyMTUx/NC01NzI0LmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 5762936,
+          "name": "Aaron Heard",
+          "resource_url": "https://api.discogs.com/artists/5762936",
+          "thumbnail_url": "https://i.discogs.com/uOAou-C2435Z0zVw9URRBPrB5xaTTDqFT5844BFcAjI/rs:fit/g:sm/q:40/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3NjI5/MzYtMTU5ODQ5ODg1/Mi02MTcyLmpwZWc.jpeg"
+        },
+        {
+          "active": false,
+          "id": 6702288,
+          "name": "Christina Michelle",
+          "resource_url": "https://api.discogs.com/artists/6702288",
+          "thumbnail_url": "https://i.discogs.com/8Glt-ZExcDReMQAI8Zz9nGgDuI2RMmQTOUQpqIaPuVk/rs:fit/g:sm/q:40/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MDIy/ODgtMTY1NDczMTU5/OC03MzUyLnBuZw.jpeg"
+        }
+      ],
+      "name": "Nothing (12)",
+      "namevariations": [
+        "The Nothing"
+      ],
+      "profile": "Shoegaze / alternative rock band from Philadelphia, Pennsylvania formed in 2010.",
+      "raw_data": {
+        "data_quality": "Correct",
+        "id": 2512314,
+        "images": [
+          {
+            "height": 659,
+            "resource_url": "https://i.discogs.com/e2YXZkUmYJrJryLOYfOndCsqtcPl55vfZRgbx6ZcXW8/rs:fit/g:sm/q:90/h:659/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+            "type": "primary",
+            "uri": "https://i.discogs.com/e2YXZkUmYJrJryLOYfOndCsqtcPl55vfZRgbx6ZcXW8/rs:fit/g:sm/q:90/h:659/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/q3pTl4ab-XFKVSEkgcNyJhyhDdIQOu7BZwdMfk5K5_c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 334,
+            "resource_url": "https://i.discogs.com/Mfk8t3v0sH8GXxhdqFSHW-VX0ejQ1MFJJuO9qVk9uzA/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/Mfk8t3v0sH8GXxhdqFSHW-VX0ejQ1MFJJuO9qVk9uzA/rs:fit/g:sm/q:90/h:334/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/hgcbUs-F9YINtk9leolhpGjCyD_kEuDrt_75m6yV_6g/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTY3NjI4OTc5/My0xNTgyLmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 336,
+            "resource_url": "https://i.discogs.com/H2VcR6nPvPo5Y8qdGy7gmx6joBeRMmE6o5r4hiQ83lY/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/H2VcR6nPvPo5Y8qdGy7gmx6joBeRMmE6o5r4hiQ83lY/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/hVCDUD7yw4JbH4xJzm9x23JW_1WNbpDEB9GiRBV0DPs/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTYwMzgwNjgw/Ni00MjY2LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 600,
+            "resource_url": "https://i.discogs.com/qn47sDqSgx5CgHOjnxY9saCHamqz94C4G9kb0WJft3k/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/qn47sDqSgx5CgHOjnxY9saCHamqz94C4G9kb0WJft3k/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/ZH7I4fsBBkSSRhPvHvPBxeGsGGFgSjTweq52B2kbQEo/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTU0OTM5MTAy/NS00NjQ4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 256,
+            "resource_url": "https://i.discogs.com/2t7XeGJwODI5f7AUPBNShJh4vJXjkQrm3SMH0sTq10I/rs:fit/g:sm/q:90/h:256/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/2t7XeGJwODI5f7AUPBNShJh4vJXjkQrm3SMH0sTq10I/rs:fit/g:sm/q:90/h:256/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/jtu6IVfq2o5DXHHpi46yii6ly7Nuvl-9Ie_qscXQN_Y/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzEz/MC02Mjk4LmpwZWc.jpeg",
+            "width": 600
+          },
+          {
+            "height": 336,
+            "resource_url": "https://i.discogs.com/B0fwMubWCChfpAdl-zzlFhlwi_OZkqcaTd9awdHEYKA/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+            "type": "secondary",
+            "uri": "https://i.discogs.com/B0fwMubWCChfpAdl-zzlFhlwi_OZkqcaTd9awdHEYKA/rs:fit/g:sm/q:90/h:336/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+            "uri150": "https://i.discogs.com/3syxNACnzc4Y1Nax2_-MoNmVo9pSUUj4oFLw0lGl58w/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTQwMjYzMzA5/MS0zODE0LmpwZWc.jpeg",
+            "width": 600
+          }
+        ],
+        "members": [
+          {
+            "active": false,
+            "id": 417360,
+            "name": "Chris Betts",
+            "resource_url": "https://api.discogs.com/artists/417360",
+            "thumbnail_url": ""
+          },
+          {
+            "active": false,
+            "id": 417363,
+            "name": "Kyle Kimball",
+            "resource_url": "https://api.discogs.com/artists/417363",
+            "thumbnail_url": "https://i.discogs.com/9xWmHBPsR4QlQI05udKmi6KC3gcBVFB56utJE-z3ZgY/rs:fit/g:sm/q:40/h:415/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNzM2/My0xNjc2Mjg5MzIx/LTI4MzYucG5n.jpeg"
+          },
+          {
+            "active": true,
+            "id": 583617,
+            "name": "Bobb Bruno",
+            "resource_url": "https://api.discogs.com/artists/583617",
+            "thumbnail_url": "https://i.discogs.com/T8Jktce4wys7Kz-vlAn9WpDP2o4sGx91IPjuTxCMG14/rs:fit/g:sm/q:40/h:302/w:245/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU4MzYx/Ny0xMjgxMTE2NDY3/LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2512333,
+            "name": "Michael Bachich",
+            "resource_url": "https://api.discogs.com/artists/2512333",
+            "thumbnail_url": ""
+          },
+          {
+            "active": true,
+            "id": 2512334,
+            "name": "Domenic Palermo",
+            "resource_url": "https://api.discogs.com/artists/2512334",
+            "thumbnail_url": "https://i.discogs.com/M4BBHlgPWOhqtltqUNU2ZHwCyR7lAEOfM-IV5G5dHJ0/rs:fit/g:sm/q:40/h:905/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MzQtMTQxMzE4ODc0/OC0yMTIyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2512335,
+            "name": "Brandon Setta",
+            "resource_url": "https://api.discogs.com/artists/2512335",
+            "thumbnail_url": "https://i.discogs.com/JrVUZkMV7LbVnFgR_b5GEjeOA9ywJ6OJowBabyPOeVM/rs:fit/g:sm/q:40/h:750/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MzUtMTU4NTEyMzg3/MC0zNjQ5LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 2703814,
+            "name": "Nick Bassett (2)",
+            "resource_url": "https://api.discogs.com/artists/2703814",
+            "thumbnail_url": "https://i.discogs.com/ikSLHKAGKUrLBbFxsA7HQr_pAlK5GSM5Kjwz7bXF4AQ/rs:fit/g:sm/q:40/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI3MDM4/MTQtMTQxMzE4ODQ4/NC02NzA4LmpwZWc.jpeg"
+          },
+          {
+            "active": true,
+            "id": 2866492,
+            "name": "Doyle Martin",
+            "resource_url": "https://api.discogs.com/artists/2866492",
+            "thumbnail_url": "https://i.discogs.com/5DFY-_TM0InMgF7MO87RJKjyrW2MI6rVsSxKIKu6kao/rs:fit/g:sm/q:40/h:488/w:488/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4NjY0/OTItMTYwMzgyMTUx/NC01NzI0LmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 5762936,
+            "name": "Aaron Heard",
+            "resource_url": "https://api.discogs.com/artists/5762936",
+            "thumbnail_url": "https://i.discogs.com/uOAou-C2435Z0zVw9URRBPrB5xaTTDqFT5844BFcAjI/rs:fit/g:sm/q:40/h:225/w:225/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU3NjI5/MzYtMTU5ODQ5ODg1/Mi02MTcyLmpwZWc.jpeg"
+          },
+          {
+            "active": false,
+            "id": 6702288,
+            "name": "Christina Michelle",
+            "resource_url": "https://api.discogs.com/artists/6702288",
+            "thumbnail_url": "https://i.discogs.com/8Glt-ZExcDReMQAI8Zz9nGgDuI2RMmQTOUQpqIaPuVk/rs:fit/g:sm/q:40/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3MDIy/ODgtMTY1NDczMTU5/OC03MzUyLnBuZw.jpeg"
+          }
+        ],
+        "name": "Nothing (12)",
+        "namevariations": [
+          "The Nothing"
+        ],
+        "profile": "Shoegaze / alternative rock band from Philadelphia, Pennsylvania formed in 2010.",
+        "releases_url": "https://api.discogs.com/artists/2512314/releases",
+        "resource_url": "https://api.discogs.com/artists/2512314",
+        "uri": "https://www.discogs.com/artist/2512314-Nothing-12",
+        "urls": [
+          "http://www.bandofnothing.com/",
+          "https://nothing.bandcamp.com/",
+          "https://www.facebook.com/BANDOFNOTHING",
+          "http://www.twitter.com/bandofnothing",
+          "http://www.instagram.com/bandofnothing"
+        ]
+      },
+      "resource_url": "https://api.discogs.com/artists/2512314",
+      "thumb": "https://i.discogs.com/q3pTl4ab-XFKVSEkgcNyJhyhDdIQOu7BZwdMfk5K5_c/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI1MTIz/MTQtMTcxNjI0NzU5/MC0yNDAzLmpwZWc.jpeg",
+      "url": "https://www.discogs.com/artist/2512314-Nothing-12",
+      "urls": [
+        "http://www.bandofnothing.com/",
+        "https://nothing.bandcamp.com/",
+        "https://www.facebook.com/BANDOFNOTHING",
+        "http://www.twitter.com/bandofnothing",
+        "http://www.instagram.com/bandofnothing"
+      ]
+    },
+    "lastfm": "ArtistLastFmData(name='Nothing', url='https://www.last.fm/music/Nothing', mbid='f4cd6526-6c4b-495e-92e2-747200eae056', listeners=359298, playcount=10922898, bio_summary='1) Nothing is an American shoegaze band from Philadelphia, Pennsylvania, United States formed in 2011 by Domenic Palermo. Previously, Palermo was the brains behind the early 2000\\'s hardcore punk act Horror Show, which was put on hold in 2002 after Palermo was incarcerated for a stabbing that eventually led to a 2 year prison sentence. Upon his return, Palermo would take a lengthy hiatus from music. In 2011, Palermo released a demo tape entitled Poshlost / пошлость under the moniker Nothing. <a href=\"https://www.last.fm/music/Nothing\">Read more on Last.fm</a>', bio_content='1) Nothing is an American shoegaze band from Philadelphia, Pennsylvania, United States formed in 2011 by Domenic Palermo. Previously, Palermo was the brains behind the early 2000\\'s hardcore punk act Horror Show, which was put on hold in 2002 after Palermo was incarcerated for a stabbing that eventually led to a 2 year prison sentence. Upon his return, Palermo would take a lengthy hiatus from music. In 2011, Palermo released a demo tape entitled Poshlost / пошлость under the moniker Nothing. After several attempts at constructing a solid lineup for the band, Palermo met Brandon Setta. Setta would bring a lush, rich soundscape and a fresh approach to Palermo\\'s vision for the band. \\n\\nSetta and Palermo would handle the writing for the next release, a very rare 12\" EP that was released on Japanese boutique label Big Love Records called Suns and Lovers. It was limited to 300 copies and the band\\'s share was donated back to the label for a Tsunami Relief Charity.\\n\\nThe next release was the Downward Years to Come EP, which was recorded at the Rubber Tracks Studio in Brooklyn with Kyle \"Slick\" Johnson. The record was released by Baltimore Label A389 Records in November 2012. The record was written by Palermo and Setta. The concept behind Downward Years to Come was a dedication to several different poets who had taken their own lives.\\n\\nSetta and Palermo would again head into the studio in 2013, this time with Jeff Zeigler at Uniform Recordings to write their first album and sign with Relapse Records. The debut album Guilty of Everything was released on March 4, 2014.\\n\\nAs a result of touring together, members of Nothing and the shoegaze band Whirr formed a gothic rock / post-punk side project called Death of Lovers. Nick Bassett, lead guitarist and songwriter of Whirr, joined Nothing as the bassist from 2014-2017. Aaron Heard is the current bassist for Nothing, joining the band in 2017.\\n\\nNothing released a Whirr / Nothing split November 17th, 2014 on Run for Cover Records. The second LP entitled Tired of Tomorrow was released May 13, 2016 on Relapse Records. The third LP Dance on the Blacktop was released August 24, 2018 on Relapse Records.\\n\\nIn early 2019, founding member Brandon Setta departed the group due to personal issues and was replaced by Cloakroom guitarist and vocalist, Doyle Martin. Nothing released their fourth album  The Great Dismal via Relapse Records on October 30, 2020; the first to feature Doyle Martin as well as bassist Aaron Heard.\\n\\nNOTHING - Bandcamp\\nNOTHING - Facebook\\nNOTHING - Instagram\\nNOTHING - Tumblr\\nNOTHING - Twitter\\nNOTHING - Relapse\\n\\nCurrent Members:\\nDomenic Palermo (ex-Horror Show, ex-XO Skeletons) - vocals, guitar\\nDoyle Martin (Cloakroom) - vocals, guitar\\nKyle Kimball (Night Sins, Salvation, Mother of Mercy) - drums              \\nChristina Michelle (Gouge Away[ /artist]) - bass, backing vocals\\n\\nPrevious Members:\\nChris Betts (Night Sins)\\nMichael Bachich (ex-Night Sins)\\nRichie Roxas (Pet Milk)\\nAnthony Rossi (Pet Milk)\\nJoshua Jancewicz\\nRyan Grotz\\nNick Bassett (Whirr, Camera Shy, ex-Deafheaven) \\nBrandon Setta             \\nAaron Heard (Jesus Piece, Hell To Pay)         \\n                         \\nDiscography:\\n2011 Poshlost / пошлость (demo)\\n2012 Suns and Lovers (EP)\\n2012 Downward Years to Come (EP)\\n2013 Dig (single)\\n2014 Guilty of Everything (LP)\\n2014 In Metal (Low cover)\\n2014 Whirr / Nothing (split with Whirr)\\n2015 Whatever Nevermind (Something in the Way cover)\\n2016 Tired of Tomorrow (LP)\\n2018 Dance on the Blacktop (LP)\\n2020 The Great Dismal (LP)\\n__________________________________________________________________________________________________________________\\n\\n2) Nothing is a dark ambient / noise / experimental side-project of Jason William Walton (Agalloch, Especially Likely Sloth) with guest appearances from a few others on each new release.\\n\\nSince the mid \\'90s they have released four albums, various compilation appearances and a few limited releases as well as a handful of live performances . Each release exploring a different theme, a different style and a different approach, and never being content with what they have achieved.\\n\\nBecoming increasingly disillusioned with the experimental, noise and power electronics scene that Nothing found itself in, and after the Cobra-live-performance fiasco, Walton gave up on Nothing. In 2008 Walton said \"2008 presents me with a new situation, and leaves me inspired. I am reinventing Nothing once again..\"\\n__________________________________________________________________________________________________________________\\n\\n3)  Hungarian hardcore punk band. They are young persons but enthusiastic and have an 1 demo and an EP. In the steps of bands like Descendents, Dead Kennedys and some Bold. Sometimes you can discover thrash metal elements in the guitar sound.\\n\\nYou can download their new EP from here:\\nhttp://www.nothing.on.hu\\n__________________________________________________________________________________________________________________\\n\\n4) Nothing is a thrash metal band from Melbourne, Australia.\\n__________________________________________________________________________________________________________________\\n\\n5) Nothing is the name of a Russian drum and bass producer, with releases on Kinematic, Step 2 Zero and TAM.\\n__________________________________________________________________________________________________________________\\n\\n6) Nothing is a Swedish grunge band.\\n__________________________________________________________________________________________________________________\\n\\n7) Polish crossover thrash band from Kraków.\\n__________________________________________________________________________________________________________________\\n\\n8) Nothing was a nu metal band from Houston, Texas.\\n__________________________________________________________________________________________________________________\\n\\n9) Nothing is a heavy metal band from Richmond, Virginia. Their debut album \\'Beneath The Skin\\' was released locally in 1999, with many subsequent tracks posted online.\\n__________________________________________________________________________________________________________________\\n\\n10) Nothing is a 90\\'s indie rock Spanish band from Zaragoza.\\n__________________________________________________________________________________________________________________\\n\\n11) Nothing are a cheesy punk rock band from Hertford.\\n\\nWhy we exist... there is hope out there. We\\'re stuck in a Social Psycle world of orange dumb arse teenage girls that drink stupid amounts, puke it all over the streets then f**kin\\' Facebook it. We\\'re lost in a Social Psycle world where a musician is now defined as a dude who smacks some keys on his £1000 Apple Mac. \\n\\nInfluences: Alkaline Trio, Zebrahead, NOFX, The Offspring, Brand New, Sugarcult, The Ataris Less Than Jake, Yellowcard, Sprung Monkey.\\n\\nCheck out their music at: www.nothingband.co.uk / www.youtube.com/nothingbandtv\\n\\n\\'Killer!\\' <a href=\"https://www.last.fm/music/Nothing\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.', tags=['shoegaze', 'dark ambient', 'seen live', 'dream pop', 'noise'], similar_artists=[{'name': 'Cloakroom', 'url': 'https://www.last.fm/music/Cloakroom'}, {'name': 'Whirr', 'url': 'https://www.last.fm/music/Whirr'}, {'name': 'Slow Crush', 'url': 'https://www.last.fm/music/Slow+Crush'}, {'name': 'Trauma Ray', 'url': 'https://www.last.fm/music/Trauma+Ray'}, {'name': 'Narrow Head', 'url': 'https://www.last.fm/music/Narrow+Head'}], images=[{'size': 'small', 'url': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'medium', 'url': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'large', 'url': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'extralarge', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': 'mega', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}, {'size': '', 'url': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'}], top_albums=[], top_tracks=[], raw_data={'artist': {'name': 'Nothing', 'mbid': 'f4cd6526-6c4b-495e-92e2-747200eae056', 'url': 'https://www.last.fm/music/Nothing', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}], 'streamable': '0', 'ontour': '1', 'stats': {'listeners': '359298', 'playcount': '10922898'}, 'similar': {'artist': [{'name': 'Cloakroom', 'url': 'https://www.last.fm/music/Cloakroom', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Whirr', 'url': 'https://www.last.fm/music/Whirr', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Slow Crush', 'url': 'https://www.last.fm/music/Slow+Crush', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Trauma Ray', 'url': 'https://www.last.fm/music/Trauma+Ray', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}, {'name': 'Narrow Head', 'url': 'https://www.last.fm/music/Narrow+Head', 'image': [{'#text': 'https://lastfm.freetls.fastly.net/i/u/34s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'small'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'medium'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'large'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'extralarge'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': 'mega'}, {'#text': 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png', 'size': ''}]}]}, 'tags': {'tag': [{'name': 'shoegaze', 'url': 'https://www.last.fm/tag/shoegaze'}, {'name': 'dark ambient', 'url': 'https://www.last.fm/tag/dark+ambient'}, {'name': 'seen live', 'url': 'https://www.last.fm/tag/seen+live'}, {'name': 'dream pop', 'url': 'https://www.last.fm/tag/dream+pop'}, {'name': 'noise', 'url': 'https://www.last.fm/tag/noise'}]}, 'bio': {'links': {'link': {'#text': '', 'rel': 'original', 'href': 'https://last.fm/music/Nothing/+wiki'}}, 'published': '18 Dec 2006, 23:38', 'summary': '1) Nothing is an American shoegaze band from Philadelphia, Pennsylvania, United States formed in 2011 by Domenic Palermo. Previously, Palermo was the brains behind the early 2000\\'s hardcore punk act Horror Show, which was put on hold in 2002 after Palermo was incarcerated for a stabbing that eventually led to a 2 year prison sentence. Upon his return, Palermo would take a lengthy hiatus from music. In 2011, Palermo released a demo tape entitled Poshlost / пошлость under the moniker Nothing. <a href=\"https://www.last.fm/music/Nothing\">Read more on Last.fm</a>', 'content': '1) Nothing is an American shoegaze band from Philadelphia, Pennsylvania, United States formed in 2011 by Domenic Palermo. Previously, Palermo was the brains behind the early 2000\\'s hardcore punk act Horror Show, which was put on hold in 2002 after Palermo was incarcerated for a stabbing that eventually led to a 2 year prison sentence. Upon his return, Palermo would take a lengthy hiatus from music. In 2011, Palermo released a demo tape entitled Poshlost / пошлость under the moniker Nothing. After several attempts at constructing a solid lineup for the band, Palermo met Brandon Setta. Setta would bring a lush, rich soundscape and a fresh approach to Palermo\\'s vision for the band. \\n\\nSetta and Palermo would handle the writing for the next release, a very rare 12\" EP that was released on Japanese boutique label Big Love Records called Suns and Lovers. It was limited to 300 copies and the band\\'s share was donated back to the label for a Tsunami Relief Charity.\\n\\nThe next release was the Downward Years to Come EP, which was recorded at the Rubber Tracks Studio in Brooklyn with Kyle \"Slick\" Johnson. The record was released by Baltimore Label A389 Records in November 2012. The record was written by Palermo and Setta. The concept behind Downward Years to Come was a dedication to several different poets who had taken their own lives.\\n\\nSetta and Palermo would again head into the studio in 2013, this time with Jeff Zeigler at Uniform Recordings to write their first album and sign with Relapse Records. The debut album Guilty of Everything was released on March 4, 2014.\\n\\nAs a result of touring together, members of Nothing and the shoegaze band Whirr formed a gothic rock / post-punk side project called Death of Lovers. Nick Bassett, lead guitarist and songwriter of Whirr, joined Nothing as the bassist from 2014-2017. Aaron Heard is the current bassist for Nothing, joining the band in 2017.\\n\\nNothing released a Whirr / Nothing split November 17th, 2014 on Run for Cover Records. The second LP entitled Tired of Tomorrow was released May 13, 2016 on Relapse Records. The third LP Dance on the Blacktop was released August 24, 2018 on Relapse Records.\\n\\nIn early 2019, founding member Brandon Setta departed the group due to personal issues and was replaced by Cloakroom guitarist and vocalist, Doyle Martin. Nothing released their fourth album  The Great Dismal via Relapse Records on October 30, 2020; the first to feature Doyle Martin as well as bassist Aaron Heard.\\n\\nNOTHING - Bandcamp\\nNOTHING - Facebook\\nNOTHING - Instagram\\nNOTHING - Tumblr\\nNOTHING - Twitter\\nNOTHING - Relapse\\n\\nCurrent Members:\\nDomenic Palermo (ex-Horror Show, ex-XO Skeletons) - vocals, guitar\\nDoyle Martin (Cloakroom) - vocals, guitar\\nKyle Kimball (Night Sins, Salvation, Mother of Mercy) - drums              \\nChristina Michelle (Gouge Away[ /artist]) - bass, backing vocals\\n\\nPrevious Members:\\nChris Betts (Night Sins)\\nMichael Bachich (ex-Night Sins)\\nRichie Roxas (Pet Milk)\\nAnthony Rossi (Pet Milk)\\nJoshua Jancewicz\\nRyan Grotz\\nNick Bassett (Whirr, Camera Shy, ex-Deafheaven) \\nBrandon Setta             \\nAaron Heard (Jesus Piece, Hell To Pay)         \\n                         \\nDiscography:\\n2011 Poshlost / пошлость (demo)\\n2012 Suns and Lovers (EP)\\n2012 Downward Years to Come (EP)\\n2013 Dig (single)\\n2014 Guilty of Everything (LP)\\n2014 In Metal (Low cover)\\n2014 Whirr / Nothing (split with Whirr)\\n2015 Whatever Nevermind (Something in the Way cover)\\n2016 Tired of Tomorrow (LP)\\n2018 Dance on the Blacktop (LP)\\n2020 The Great Dismal (LP)\\n__________________________________________________________________________________________________________________\\n\\n2) Nothing is a dark ambient / noise / experimental side-project of Jason William Walton (Agalloch, Especially Likely Sloth) with guest appearances from a few others on each new release.\\n\\nSince the mid \\'90s they have released four albums, various compilation appearances and a few limited releases as well as a handful of live performances . Each release exploring a different theme, a different style and a different approach, and never being content with what they have achieved.\\n\\nBecoming increasingly disillusioned with the experimental, noise and power electronics scene that Nothing found itself in, and after the Cobra-live-performance fiasco, Walton gave up on Nothing. In 2008 Walton said \"2008 presents me with a new situation, and leaves me inspired. I am reinventing Nothing once again..\"\\n__________________________________________________________________________________________________________________\\n\\n3)  Hungarian hardcore punk band. They are young persons but enthusiastic and have an 1 demo and an EP. In the steps of bands like Descendents, Dead Kennedys and some Bold. Sometimes you can discover thrash metal elements in the guitar sound.\\n\\nYou can download their new EP from here:\\nhttp://www.nothing.on.hu\\n__________________________________________________________________________________________________________________\\n\\n4) Nothing is a thrash metal band from Melbourne, Australia.\\n__________________________________________________________________________________________________________________\\n\\n5) Nothing is the name of a Russian drum and bass producer, with releases on Kinematic, Step 2 Zero and TAM.\\n__________________________________________________________________________________________________________________\\n\\n6) Nothing is a Swedish grunge band.\\n__________________________________________________________________________________________________________________\\n\\n7) Polish crossover thrash band from Kraków.\\n__________________________________________________________________________________________________________________\\n\\n8) Nothing was a nu metal band from Houston, Texas.\\n__________________________________________________________________________________________________________________\\n\\n9) Nothing is a heavy metal band from Richmond, Virginia. Their debut album \\'Beneath The Skin\\' was released locally in 1999, with many subsequent tracks posted online.\\n__________________________________________________________________________________________________________________\\n\\n10) Nothing is a 90\\'s indie rock Spanish band from Zaragoza.\\n__________________________________________________________________________________________________________________\\n\\n11) Nothing are a cheesy punk rock band from Hertford.\\n\\nWhy we exist... there is hope out there. We\\'re stuck in a Social Psycle world of orange dumb arse teenage girls that drink stupid amounts, puke it all over the streets then f**kin\\' Facebook it. We\\'re lost in a Social Psycle world where a musician is now defined as a dude who smacks some keys on his £1000 Apple Mac. \\n\\nInfluences: Alkaline Trio, Zebrahead, NOFX, The Offspring, Brand New, Sugarcult, The Ataris Less Than Jake, Yellowcard, Sprung Monkey.\\n\\nCheck out their music at: www.nothingband.co.uk / www.youtube.com/nothingbandtv\\n\\n\\'Killer!\\' <a href=\"https://www.last.fm/music/Nothing\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.'}}})",
+    "spotify": "ArtistSpotifyData(id='60mqEPQp1eNjuwt1Z4yL4J', url='https://open.spotify.com/artist/60mqEPQp1eNjuwt1Z4yL4J', name='Nothing', popularity=46, followers=154687, genres=['shoegaze', 'dream pop', 'slowcore'], images=[{'url': 'https://i.scdn.co/image/ab6761610000e5ebb1ed28adeb68a3728041f338', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b1ed28adeb68a3728041f338', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b1ed28adeb68a3728041f338', 'height': 160, 'width': 160}], external_urls={'spotify': 'https://open.spotify.com/artist/60mqEPQp1eNjuwt1Z4yL4J'}, raw_data={'external_urls': {'spotify': 'https://open.spotify.com/artist/60mqEPQp1eNjuwt1Z4yL4J'}, 'followers': {'href': None, 'total': 154687}, 'genres': ['shoegaze', 'dream pop', 'slowcore'], 'href': 'https://api.spotify.com/v1/artists/60mqEPQp1eNjuwt1Z4yL4J', 'id': '60mqEPQp1eNjuwt1Z4yL4J', 'images': [{'url': 'https://i.scdn.co/image/ab6761610000e5ebb1ed28adeb68a3728041f338', 'height': 640, 'width': 640}, {'url': 'https://i.scdn.co/image/ab67616100005174b1ed28adeb68a3728041f338', 'height': 320, 'width': 320}, {'url': 'https://i.scdn.co/image/ab6761610000f178b1ed28adeb68a3728041f338', 'height': 160, 'width': 160}], 'name': 'Nothing', 'popularity': 46, 'type': 'artist', 'uri': 'spotify:artist:60mqEPQp1eNjuwt1Z4yL4J'})",
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": null,
+      "biography_de": null,
+      "biography_en": "",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": null,
+      "country": null,
+      "country_code": "",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": null,
+      "formed_year": "0",
+      "gender": null,
+      "genre": "",
+      "id": "176769",
+      "images": [],
+      "last_fm_chart": null,
+      "members": null,
+      "mood": null,
+      "music_videos": null,
+      "musicbrainz_id": "f4cd6526-6c4b-495e-92e2-747200eae056",
+      "name": "Nothing",
+      "raw_data": {},
+      "style": null,
+      "twitter": null,
+      "website": null
+    }
+  },
   "services": {
     "apple_music": {
       "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features126/v4/fb/ab/40/fbab4046-7aa9-8879-99c6-b78c826f1c61/mzl.cqvsmvce.jpg/2000x2000bb.jpg",
@@ -426,10 +750,10 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png"
         }
       ],
-      "listeners": 359207,
+      "listeners": 359298,
       "mbid": "f4cd6526-6c4b-495e-92e2-747200eae056",
       "name": "Nothing",
-      "playcount": 10919149,
+      "playcount": 10922898,
       "similar_artists": [
         {
           "name": "Cloakroom",
@@ -489,10 +813,45 @@
       "name": "Nothing",
       "popularity": 46,
       "url": "https://open.spotify.com/artist/60mqEPQp1eNjuwt1Z4yL4J"
+    },
+    "theaudiodb": {
+      "albums": null,
+      "alternate_names": null,
+      "biography_de": null,
+      "biography_en": "",
+      "biography_es": null,
+      "biography_fr": null,
+      "biography_it": null,
+      "biography_jp": null,
+      "biography_nl": null,
+      "biography_pt": null,
+      "biography_ru": null,
+      "biography_se": null,
+      "born_year": null,
+      "country": null,
+      "country_code": "",
+      "died_year": null,
+      "disbanded": false,
+      "facebook": null,
+      "formed_year": "0",
+      "gender": null,
+      "genre": "",
+      "id": "176769",
+      "images": [],
+      "last_fm_chart": null,
+      "members": null,
+      "mood": null,
+      "music_videos": null,
+      "musicbrainz_id": "f4cd6526-6c4b-495e-92e2-747200eae056",
+      "name": "Nothing",
+      "raw_data": {},
+      "style": null,
+      "twitter": null,
+      "website": null
     }
   },
   "spotify_id": "60mqEPQp1eNjuwt1Z4yL4J",
   "spotify_url": "https://open.spotify.com/artist/60mqEPQp1eNjuwt1Z4yL4J",
-  "updated_at": "2025-07-08T10:02:28.648102",
+  "updated_at": "2025-07-08T20:53:37.121222",
   "wikipedia_url": null
 }
