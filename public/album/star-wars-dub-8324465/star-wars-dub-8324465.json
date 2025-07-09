@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1357796473",
+  "apple_music_url": "https://music.apple.com/gb/album/the-war-is-on-dub-style/1357796473",
   "artists": [
     {
       "apple_music_id": "130441723",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T19:16:31.954834",
+  "created_at": "2025-07-09T09:55:26.413017",
   "date_added": "2017-01-03T18:49:11-08:00",
   "discogs_id": "8324465",
   "discogs_url": "https://www.discogs.com/release/8324465-Phill-Pratt-Star-Wars-Dub",
@@ -84,8 +84,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/star-wars-dub-8324465/star-wars-dub-8324465.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/53/14/b8/5314b891-f4c3-85ba-b985-54d3cfa39de8/0735850134826_cover.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -102,18 +102,61 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T19:16:44.213914",
+    "processed_at": "2025-07-09T09:55:27.812820",
     "services_used": [
       "discogs",
+      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "The War is On Dub Style",
   "release_name_discogs": "Star Wars Dub",
   "release_name_spotify": "Star Wars Dub",
   "released": "2016",
   "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/53/14/b8/5314b891-f4c3-85ba-b985-54d3cfa39de8/0735850134826_cover.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2018 Pressure Sounds",
+      "editorial_notes": null,
+      "id": "1357796473",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Phil Pratt",
+        "artwork": {
+          "bgColor": "007d44",
+          "height": 3745,
+          "textColor1": "f2f8f5",
+          "textColor2": "e5f2ec",
+          "textColor3": "c1dfd2",
+          "textColor4": "b7daca",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/53/14/b8/5314b891-f4c3-85ba-b985-54d3cfa39de8/0735850134826_cover.jpg/{w}x{h}bb.jpg",
+          "width": 3745
+        },
+        "copyright": "℗ 2018 Pressure Sounds",
+        "genreNames": [
+          "Reggae",
+          "Music"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "The War is On Dub Style",
+        "playParams": {
+          "id": "1357796473",
+          "kind": "album"
+        },
+        "recordLabel": "Pressure Sounds",
+        "releaseDate": "2018-04-06",
+        "trackCount": 12,
+        "upc": "0735850134826",
+        "url": "https://music.apple.com/gb/album/the-war-is-on-dub-style/1357796473"
+      },
+      "url": "https://music.apple.com/gb/album/the-war-is-on-dub-style/1357796473"
+    },
     "lastfm": {
       "images": [
         {
@@ -940,6 +983,6 @@
       "title": "Roffa Yet"
     }
   ],
-  "updated_at": "2025-07-07T19:16:43.645725",
+  "updated_at": "2025-07-09T09:55:27.499126",
   "year": 2016
 }

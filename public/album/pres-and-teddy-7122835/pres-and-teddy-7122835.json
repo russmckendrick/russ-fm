@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "Lester Willis Young, nicknamed \"Pres\" or \"Prez\", was an American jazz tenor saxophonist and occasional clarinetist.",
       "discogs_id": "2047849",
       "discogs_original_name": "The Lester Young-Teddy Wilson Quartet",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "The Lester Young-Teddy Wilson Quartet",
       "role": "",
       "spotify_id": "2G2FDVECJ8Vlw6LUvaKe43",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lester_Young"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "The Lester Young-Teddy Wilson Quartet": {
+      "biography": "Lester Willis Young, nicknamed \"Pres\" or \"Prez\", was an American jazz tenor saxophonist and occasional clarinetist.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Lester_Young"
+    }
+  },
   "country": "Europe",
-  "created_at": "2025-07-05T17:26:00.685159",
+  "created_at": "2025-07-09T09:52:31.334036",
   "date_added": "2017-02-19T10:40:58-08:00",
   "discogs_id": "7122835",
   "discogs_url": "https://www.discogs.com/release/7122835-The-Lester-Young-Teddy-Wilson-Quartet-Pres-And-Teddy",
@@ -65,17 +70,18 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-hi-res.jpg",
-    "medium": "public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-medium.jpg",
-    "small": "public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-small.jpg"
+    "hi-res": "../public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-hi-res.jpg",
+    "medium": "../public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-medium.jpg",
+    "small": "../public/album/pres-and-teddy-7122835/pres-and-teddy-7122835-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:26:04.695839",
+    "processed_at": "2025-07-09T09:52:33.857400",
     "services_used": [
       "discogs",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -650,6 +656,6 @@
       "title": "Our Love Is Here To Stay"
     }
   ],
-  "updated_at": "2025-07-05T17:26:04.537171",
+  "updated_at": "2025-07-09T09:52:32.710759",
   "year": 2014
 }
