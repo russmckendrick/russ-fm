@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./theme-toggle";
 import { SearchOverlay } from "./SearchOverlay";
-import { Search, Menu, X, TrendingUp } from "lucide-react";
+import { Search, Menu, X, TrendingUp, Shuffle } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 
 interface NavigationProps {
@@ -83,6 +83,17 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     }`}
                   >
                     Stats
+                  </Link>
+                  <Link 
+                    to="/random" 
+                    className={`text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 ${
+                      location.pathname === '/random' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    <Shuffle className="h-4 w-4" />
+                    Random
                   </Link>
                 </div>
               </div>
@@ -168,6 +179,18 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     }`}
                   >
                     Stats
+                  </Link>
+                  <Link
+                    to="/random"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                      location.pathname === '/random'
+                        ? 'text-foreground bg-muted'
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    <Shuffle className="h-4 w-4" />
+                    Random
                   </Link>
                 </div>
 
