@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "714765153",
-  "apple_music_url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "1515240368",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-07T19:10:53.682031",
+  "created_at": "2025-07-09T10:15:30.695609",
   "date_added": "2016-04-25T21:06:35-07:00",
   "discogs_id": "5905459",
   "discogs_url": "https://www.discogs.com/release/5905459-Public-Image-Ltd-The-Greatest-Hits-So-Far",
@@ -41,20 +41,6 @@
       "type": "primary",
       "url": "https://i.discogs.com/PuPYVwBeiGmVmDQPFQ7zLpu-pD7tzAyGJhOpmODQHU0/rs:fit/g:sm/q:90/h:574/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU5MDU0/NTktMTQwNTk1MjI0/OC03MTU3LmpwZWc.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/2000x2000bb.jpg",
-      "width": 2000
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/the-greatest-hits-so-far-5905459/the-greatest-hits-so-far-5905459.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -70,68 +56,394 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T19:11:03.503279",
+    "processed_at": "2025-07-09T10:15:32.174396",
     "services_used": [
       "discogs",
-      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "The Greatest Hits, So Far (Remastered)",
+  "release_name_apple_music": null,
   "release_name_discogs": "The Greatest Hits, So Far",
-  "release_name_spotify": null,
+  "release_name_spotify": "Let's Remake It",
   "released": "2014",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "This Compilation ℗ 2011 Virgin Records Limited",
-      "editorial_notes": null,
-      "id": "714765153",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Public Image Ltd.",
-        "artwork": {
-          "bgColor": "fbc024",
-          "height": 1429,
-          "textColor1": "0d0a0e",
-          "textColor2": "2e2a1d",
-          "textColor3": "3c2e13",
-          "textColor4": "57481e",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/d7/91/10/d7911055-4fb3-4ede-1cf0-c5a430114dd9/05099908801654.jpg/{w}x{h}bb.jpg",
-          "width": 1429
+    "spotify": {
+      "album_type": "single",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2015 PUBLIC",
+          "type": "C"
         },
-        "copyright": "This Compilation ℗ 2011 Virgin Records Limited",
-        "genreNames": [
-          "Adult Alternative",
-          "Music",
-          "Rock",
-          "Alternative",
-          "College Rock",
-          "Electronic",
-          "Prog-Rock/Art Rock"
-        ],
-        "isCompilation": true,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "The Greatest Hits, So Far (Remastered)",
-        "playParams": {
-          "id": "714765153",
-          "kind": "album"
-        },
-        "recordLabel": "Virgin Catalogue",
-        "releaseDate": "2011-01-01",
-        "trackCount": 14,
-        "upc": "05099908801654",
-        "url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153"
+        {
+          "text": "2015 PUBLIC",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "859733893959"
       },
-      "url": "https://music.apple.com/gb/album/the-greatest-hits-so-far-remastered/714765153"
+      "id": "79lXiYt8Hgd1eHr8sQcCsi",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27321fcfbfcf463d12732d06b5f",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0221fcfbfcf463d12732d06b5f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485121fcfbfcf463d12732d06b5f",
+          "width": 64
+        }
+      ],
+      "label": "PUBLIC",
+      "popularity": 44,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+            },
+            "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+            "id": "4vxaQs6vK54nK89J1VtLex",
+            "name": "PUBLIC",
+            "type": "artist",
+            "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2015 PUBLIC",
+            "type": "C"
+          },
+          {
+            "text": "2015 PUBLIC",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "859733893959"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/79lXiYt8Hgd1eHr8sQcCsi"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/79lXiYt8Hgd1eHr8sQcCsi?market=US",
+        "id": "79lXiYt8Hgd1eHr8sQcCsi",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27321fcfbfcf463d12732d06b5f",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0221fcfbfcf463d12732d06b5f",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485121fcfbfcf463d12732d06b5f",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "PUBLIC",
+        "name": "Let's Remake It",
+        "popularity": 44,
+        "release_date": "2015-03-24",
+        "release_date_precision": "day",
+        "total_tracks": 6,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/79lXiYt8Hgd1eHr8sQcCsi/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 230786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/07tbYac108weqzeP7Bhwon"
+              },
+              "href": "https://api.spotify.com/v1/tracks/07tbYac108weqzeP7Bhwon",
+              "id": "07tbYac108weqzeP7Bhwon",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pretty Face",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:07tbYac108weqzeP7Bhwon"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0Juprpy7EBFttmYGVrPzGq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0Juprpy7EBFttmYGVrPzGq",
+              "id": "0Juprpy7EBFttmYGVrPzGq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Love",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0Juprpy7EBFttmYGVrPzGq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 172893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/51A7rw4o4IzszLdljlQDYC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/51A7rw4o4IzszLdljlQDYC",
+              "id": "51A7rw4o4IzszLdljlQDYC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Little Raindrops",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:51A7rw4o4IzszLdljlQDYC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 162293,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Firr7P29DXAKVvgBq9nzW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Firr7P29DXAKVvgBq9nzW",
+              "id": "1Firr7P29DXAKVvgBq9nzW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Alonely",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1Firr7P29DXAKVvgBq9nzW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 225173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2jRCSeGqoza7NXUjTZ55mw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2jRCSeGqoza7NXUjTZ55mw",
+              "id": "2jRCSeGqoza7NXUjTZ55mw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Honeybee",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:2jRCSeGqoza7NXUjTZ55mw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4vxaQs6vK54nK89J1VtLex"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4vxaQs6vK54nK89J1VtLex",
+                  "id": "4vxaQs6vK54nK89J1VtLex",
+                  "name": "PUBLIC",
+                  "type": "artist",
+                  "uri": "spotify:artist:4vxaQs6vK54nK89J1VtLex"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 171040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7vuCixkvt382wzD04SGtJW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7vuCixkvt382wzD04SGtJW",
+              "id": "7vuCixkvt382wzD04SGtJW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Listen!",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7vuCixkvt382wzD04SGtJW"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 6
+        },
+        "type": "album",
+        "uri": "spotify:album:79lXiYt8Hgd1eHr8sQcCsi"
+      },
+      "release_date": "2015-03-24",
+      "release_date_precision": "day",
+      "total_tracks": 6,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 230786,
+          "explicit": false,
+          "id": "07tbYac108weqzeP7Bhwon",
+          "name": "Pretty Face",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 219266,
+          "explicit": false,
+          "id": "0Juprpy7EBFttmYGVrPzGq",
+          "name": "My Love",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 172893,
+          "explicit": false,
+          "id": "51A7rw4o4IzszLdljlQDYC",
+          "name": "Little Raindrops",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 162293,
+          "explicit": false,
+          "id": "1Firr7P29DXAKVvgBq9nzW",
+          "name": "Alonely",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 225173,
+          "explicit": false,
+          "id": "2jRCSeGqoza7NXUjTZ55mw",
+          "name": "Honeybee",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4vxaQs6vK54nK89J1VtLex",
+              "name": "PUBLIC"
+            }
+          ],
+          "duration_ms": 171040,
+          "explicit": false,
+          "id": "7vuCixkvt382wzD04SGtJW",
+          "name": "Listen!",
+          "preview_url": null,
+          "track_number": 6
+        }
+      ],
+      "url": "https://open.spotify.com/album/79lXiYt8Hgd1eHr8sQcCsi"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "79lXiYt8Hgd1eHr8sQcCsi",
+  "spotify_url": "https://open.spotify.com/album/79lXiYt8Hgd1eHr8sQcCsi",
   "styles": [
     "New Wave",
     "Synth-pop"
@@ -223,6 +535,6 @@
       "title": "Don't Ask Me"
     }
   ],
-  "updated_at": "2025-07-07T19:11:03.195448",
+  "updated_at": "2025-07-09T10:15:31.771560",
   "year": 2014
 }

@@ -38,7 +38,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T18:20:15.874962",
+  "created_at": "2025-07-09T10:22:23.980568",
   "date_added": "2015-12-30T09:11:50-08:00",
   "discogs_id": "561172",
   "discogs_url": "https://www.discogs.com/release/561172-Peter-Cook-Dudley-Moore-Present-Derek-And-Clive-Live",
@@ -92,23 +92,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/live-561172/live-561172-hi-res.jpg",
-    "medium": "public/album/live-561172/live-561172-medium.jpg",
-    "small": "public/album/live-561172/live-561172-small.jpg"
+    "hi-res": "../public/album/live-561172/live-561172-hi-res.jpg",
+    "medium": "../public/album/live-561172/live-561172-medium.jpg",
+    "small": "../public/album/live-561172/live-561172-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T18:20:37.229085",
+    "processed_at": "2025-07-09T10:22:25.956952",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": "Derek and Clive (Live)",
   "release_name_discogs": "(Live)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Behind the Fridge",
   "released": "1976",
   "services": {
     "apple_music": {
@@ -159,10 +160,420 @@
         "url": "https://music.apple.com/gb/album/derek-and-clive-live/1443141039"
       },
       "url": "https://music.apple.com/gb/album/derek-and-clive-live/1443141039"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2022 Tin Toy",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2022 Tin Toy",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "197187922918"
+      },
+      "id": "0RP8Dc14ZhpD1YcMEgffvf",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27307dac6f7ef00c4391117c853",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0207dac6f7ef00c4391117c853",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485107dac6f7ef00c4391117c853",
+          "width": 64
+        }
+      ],
+      "label": "Tin Toy",
+      "popularity": 2,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+            },
+            "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+            "id": "4xAyTdm1z4GyDO6jl0AtFx",
+            "name": "Peter Cook",
+            "type": "artist",
+            "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+            },
+            "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+            "id": "55ObxLQmVSdpbcL4cMpSMy",
+            "name": "Dudley Moore",
+            "type": "artist",
+            "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2022 Tin Toy",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2022 Tin Toy",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "197187922918"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0RP8Dc14ZhpD1YcMEgffvf"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/0RP8Dc14ZhpD1YcMEgffvf?market=US",
+        "id": "0RP8Dc14ZhpD1YcMEgffvf",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27307dac6f7ef00c4391117c853",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0207dac6f7ef00c4391117c853",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485107dac6f7ef00c4391117c853",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Tin Toy",
+        "name": "Behind the Fridge",
+        "popularity": 2,
+        "release_date": "1973-08-08",
+        "release_date_precision": "day",
+        "total_tracks": 5,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/0RP8Dc14ZhpD1YcMEgffvf/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+                  "id": "4xAyTdm1z4GyDO6jl0AtFx",
+                  "name": "Peter Cook",
+                  "type": "artist",
+                  "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+                  "id": "55ObxLQmVSdpbcL4cMpSMy",
+                  "name": "Dudley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 257868,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0w5gmwqLeFMlIrt6e5xh5A"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0w5gmwqLeFMlIrt6e5xh5A",
+              "id": "0w5gmwqLeFMlIrt6e5xh5A",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hello",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:0w5gmwqLeFMlIrt6e5xh5A"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+                  "id": "4xAyTdm1z4GyDO6jl0AtFx",
+                  "name": "Peter Cook",
+                  "type": "artist",
+                  "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+                  "id": "55ObxLQmVSdpbcL4cMpSMy",
+                  "name": "Dudley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 971796,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4wVxaOs2W05sZxarYovyQK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4wVxaOs2W05sZxarYovyQK",
+              "id": "4wVxaOs2W05sZxarYovyQK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "On Location",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4wVxaOs2W05sZxarYovyQK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+                  "id": "4xAyTdm1z4GyDO6jl0AtFx",
+                  "name": "Peter Cook",
+                  "type": "artist",
+                  "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+                  "id": "55ObxLQmVSdpbcL4cMpSMy",
+                  "name": "Dudley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 614977,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1LC185JzxWxnCi8JATGiZw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1LC185JzxWxnCi8JATGiZw",
+              "id": "1LC185JzxWxnCi8JATGiZw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mini Drama",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:1LC185JzxWxnCi8JATGiZw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+                  "id": "4xAyTdm1z4GyDO6jl0AtFx",
+                  "name": "Peter Cook",
+                  "type": "artist",
+                  "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+                  "id": "55ObxLQmVSdpbcL4cMpSMy",
+                  "name": "Dudley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 1091008,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1987z4zfLPB3YhKF0up6iz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1987z4zfLPB3YhKF0up6iz",
+              "id": "1987z4zfLPB3YhKF0up6iz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Gospel Truth",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1987z4zfLPB3YhKF0up6iz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4xAyTdm1z4GyDO6jl0AtFx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4xAyTdm1z4GyDO6jl0AtFx",
+                  "id": "4xAyTdm1z4GyDO6jl0AtFx",
+                  "name": "Peter Cook",
+                  "type": "artist",
+                  "uri": "spotify:artist:4xAyTdm1z4GyDO6jl0AtFx"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55ObxLQmVSdpbcL4cMpSMy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55ObxLQmVSdpbcL4cMpSMy",
+                  "id": "55ObxLQmVSdpbcL4cMpSMy",
+                  "name": "Dudley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:55ObxLQmVSdpbcL4cMpSMy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 792260,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4QhTwxyNUIRUclOyHNKEAd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4QhTwxyNUIRUclOyHNKEAd",
+              "id": "4QhTwxyNUIRUclOyHNKEAd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tea for Two",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4QhTwxyNUIRUclOyHNKEAd"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 5
+        },
+        "type": "album",
+        "uri": "spotify:album:0RP8Dc14ZhpD1YcMEgffvf"
+      },
+      "release_date": "1973-08-08",
+      "release_date_precision": "day",
+      "total_tracks": 5,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4xAyTdm1z4GyDO6jl0AtFx",
+              "name": "Peter Cook"
+            },
+            {
+              "id": "55ObxLQmVSdpbcL4cMpSMy",
+              "name": "Dudley Moore"
+            }
+          ],
+          "duration_ms": 257868,
+          "explicit": false,
+          "id": "0w5gmwqLeFMlIrt6e5xh5A",
+          "name": "Hello",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4xAyTdm1z4GyDO6jl0AtFx",
+              "name": "Peter Cook"
+            },
+            {
+              "id": "55ObxLQmVSdpbcL4cMpSMy",
+              "name": "Dudley Moore"
+            }
+          ],
+          "duration_ms": 971796,
+          "explicit": false,
+          "id": "4wVxaOs2W05sZxarYovyQK",
+          "name": "On Location",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4xAyTdm1z4GyDO6jl0AtFx",
+              "name": "Peter Cook"
+            },
+            {
+              "id": "55ObxLQmVSdpbcL4cMpSMy",
+              "name": "Dudley Moore"
+            }
+          ],
+          "duration_ms": 614977,
+          "explicit": false,
+          "id": "1LC185JzxWxnCi8JATGiZw",
+          "name": "Mini Drama",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4xAyTdm1z4GyDO6jl0AtFx",
+              "name": "Peter Cook"
+            },
+            {
+              "id": "55ObxLQmVSdpbcL4cMpSMy",
+              "name": "Dudley Moore"
+            }
+          ],
+          "duration_ms": 1091008,
+          "explicit": false,
+          "id": "1987z4zfLPB3YhKF0up6iz",
+          "name": "Gospel Truth",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4xAyTdm1z4GyDO6jl0AtFx",
+              "name": "Peter Cook"
+            },
+            {
+              "id": "55ObxLQmVSdpbcL4cMpSMy",
+              "name": "Dudley Moore"
+            }
+          ],
+          "duration_ms": 792260,
+          "explicit": false,
+          "id": "4QhTwxyNUIRUclOyHNKEAd",
+          "name": "Tea for Two",
+          "preview_url": null,
+          "track_number": 5
+        }
+      ],
+      "url": "https://open.spotify.com/album/0RP8Dc14ZhpD1YcMEgffvf"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "0RP8Dc14ZhpD1YcMEgffvf",
+  "spotify_url": "https://open.spotify.com/album/0RP8Dc14ZhpD1YcMEgffvf",
   "styles": [
     "Comedy",
     "Spoken Word"
@@ -248,6 +659,6 @@
       "title": "Jump"
     }
   ],
-  "updated_at": "2025-07-05T18:20:36.810712",
+  "updated_at": "2025-07-09T10:22:25.028508",
   "year": 1976
 }

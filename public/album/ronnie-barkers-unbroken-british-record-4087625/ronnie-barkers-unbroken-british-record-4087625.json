@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "Ronald Frederick Lane was an English musician and songwriter who was the bassist and co-founder of the rock bands Small Faces (1965–69) and Faces (1969–73).",
       "discogs_id": "528772",
       "discogs_original_name": "Ronnie Barker",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Ronnie Barker",
       "role": "",
       "spotify_id": "0GxqlIHJfrRv00irZ8kP5n",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ronnie_Lane"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Ronnie Barker": {
+      "biography": "Ronald Frederick Lane was an English musician and songwriter who was the bassist and co-founder of the rock bands Small Faces (1965–69) and Faces (1969–73).",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ronnie_Lane"
+    }
+  },
   "country": "UK & Ireland",
-  "created_at": "2025-07-07T18:58:35.163511",
+  "created_at": "2025-07-09T10:23:23.317727",
   "date_added": "2015-12-09T10:18:46-08:00",
   "discogs_id": "4087625",
   "discogs_url": "https://www.discogs.com/release/4087625-Ronnie-Barker-Ronnie-Barkers-Unbroken-British-Record",
@@ -59,13 +64,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/CTgHb8cc-AQbjc9U3rMa-jPlMgt3PhAlYxo1ilsBZ8s/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwODc2/MjUtMTUwOTExMjE1/Ni05NTQ4LmpwZWc.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/ronnie-barker-s-unbroken-british-record-4087625/ronnie-barker-s-unbroken-british-record-4087625.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -81,9 +79,10 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T18:58:42.642700",
+    "processed_at": "2025-07-09T10:23:24.330091",
     "services_used": [
-      "discogs"
+      "discogs",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -351,6 +350,6 @@
       "title": "The Welsh Medley:"
     }
   ],
-  "updated_at": "2025-07-07T18:58:41.748760",
+  "updated_at": "2025-07-09T10:23:23.955372",
   "year": 1978
 }

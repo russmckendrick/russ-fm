@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "Ian Robins Dury was an English singer, songwriter and actor who rose to fame in the late 1970s, during the punk and new wave era of rock music. He was the lead singer and lyricist of Kilburn and the High Roads, the Kilburns, Ian Dury and the Blockheads and Ian Dury and the Music Students.",
       "discogs_id": "263016",
       "discogs_original_name": "Ian Dury And The Music Students",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Ian Dury And The Music Students",
       "role": "",
       "spotify_id": "5PFSmueeFLrjYXqn3agenn",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ian_Dury"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Ian Dury And The Music Students": {
+      "biography": "Ian Robins Dury was an English singer, songwriter and actor who rose to fame in the late 1970s, during the punk and new wave era of rock music. He was the lead singer and lyricist of Kilburn and the High Roads, the Kilburns, Ian Dury and the Blockheads and Ian Dury and the Music Students.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ian_Dury"
+    }
+  },
   "country": "Europe",
-  "created_at": "2025-07-07T19:03:04.774576",
+  "created_at": "2025-07-09T10:08:59.109801",
   "date_added": "2016-09-21T18:13:35-07:00",
   "discogs_id": "8396748",
   "discogs_url": "https://www.discogs.com/release/8396748-Ian-Dury-And-The-Music-Students-4000-Weeks-Holiday",
@@ -29,15 +34,7 @@
     "Rock"
   ],
   "id": "8396748",
-  "images": [
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/4-000-weeks-holiday-8396748",
-      "width": 2000
-    }
-  ],
+  "images": [],
   "labels": [
     "Demon Records"
   ],
@@ -51,18 +48,609 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T19:03:13.322676",
+    "processed_at": "2025-07-09T10:09:01.206338",
     "services_used": [
-      "discogs"
+      "discogs",
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "4.000 Weeks' Holiday",
-  "release_name_spotify": null,
+  "release_name_spotify": "New Boots and Panties!!",
   "released": "2014",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2025 Demon Music Group Ltd.",
+          "type": "C"
+        },
+        {
+          "text": "(P) 1977 Demon Music Group Ltd.",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "5032698648771"
+      },
+      "id": "0yLDsFkaUbkT2EZFL13HTi",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d218eb44788fd37688e25b1a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d218eb44788fd37688e25b1a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d218eb44788fd37688e25b1a",
+          "width": 64
+        }
+      ],
+      "label": "Edsel",
+      "popularity": 47,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+            },
+            "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+            "id": "5PFSmueeFLrjYXqn3agenn",
+            "name": "Ian Dury",
+            "type": "artist",
+            "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2025 Demon Music Group Ltd.",
+            "type": "C"
+          },
+          {
+            "text": "(P) 1977 Demon Music Group Ltd.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "5032698648771"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0yLDsFkaUbkT2EZFL13HTi"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/0yLDsFkaUbkT2EZFL13HTi?market=US",
+        "id": "0yLDsFkaUbkT2EZFL13HTi",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d218eb44788fd37688e25b1a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d218eb44788fd37688e25b1a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d218eb44788fd37688e25b1a",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Edsel",
+        "name": "New Boots and Panties!!",
+        "popularity": 47,
+        "release_date": "1977-09-30",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/0yLDsFkaUbkT2EZFL13HTi/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 264693,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2E6l9eLcQpTW7wf8KaQEQW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2E6l9eLcQpTW7wf8KaQEQW",
+              "id": "2E6l9eLcQpTW7wf8KaQEQW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Wake up and Make Love with Me",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2E6l9eLcQpTW7wf8KaQEQW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 215480,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5yc5WU2tKErPmew4mCzJDJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5yc5WU2tKErPmew4mCzJDJ",
+              "id": "5yc5WU2tKErPmew4mCzJDJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sweet Gene Vincent",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5yc5WU2tKErPmew4mCzJDJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 193266,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3XXx1Jp09uXndhnnSHLgGM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3XXx1Jp09uXndhnnSHLgGM",
+              "id": "3XXx1Jp09uXndhnnSHLgGM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Partial to Your Abracadabra",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:3XXx1Jp09uXndhnnSHLgGM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 220253,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6yVH5GrZ9aJnGvB1U6We15"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6yVH5GrZ9aJnGvB1U6We15",
+              "id": "6yVH5GrZ9aJnGvB1U6We15",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Old Man",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:6yVH5GrZ9aJnGvB1U6We15"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 256986,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5HDKNHhkxRTcn0G7VozSL9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5HDKNHhkxRTcn0G7VozSL9",
+              "id": "5HDKNHhkxRTcn0G7VozSL9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Billericay Dickie",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:5HDKNHhkxRTcn0G7VozSL9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 295480,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2YjIU5GfqHce2seCIJJGQp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2YjIU5GfqHce2seCIJJGQp",
+              "id": "2YjIU5GfqHce2seCIJJGQp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Clevor Trever",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2YjIU5GfqHce2seCIJJGQp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 205226,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Xpm1YOOH3CXBjR4Uzagdg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Xpm1YOOH3CXBjR4Uzagdg",
+              "id": "6Xpm1YOOH3CXBjR4Uzagdg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "If I Was with a Woman",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:6Xpm1YOOH3CXBjR4Uzagdg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 211200,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6fsdun1kUtHxhXZKguTKtf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6fsdun1kUtHxhXZKguTKtf",
+              "id": "6fsdun1kUtHxhXZKguTKtf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blockheads",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6fsdun1kUtHxhXZKguTKtf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 254386,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3YcoqaTYc3Glegq40LmYy9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3YcoqaTYc3Glegq40LmYy9",
+              "id": "3YcoqaTYc3Glegq40LmYy9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Plaistow Patricia",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:3YcoqaTYc3Glegq40LmYy9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 135373,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4t6RNzYJ7dhj2TznTqslsw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4t6RNzYJ7dhj2TznTqslsw",
+              "id": "4t6RNzYJ7dhj2TznTqslsw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blackmail Man",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4t6RNzYJ7dhj2TznTqslsw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PFSmueeFLrjYXqn3agenn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PFSmueeFLrjYXqn3agenn",
+                  "id": "5PFSmueeFLrjYXqn3agenn",
+                  "name": "Ian Dury",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PFSmueeFLrjYXqn3agenn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 186626,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0IUGheFVUEZqjrkT5e4w3R"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0IUGheFVUEZqjrkT5e4w3R",
+              "id": "0IUGheFVUEZqjrkT5e4w3R",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sex & Drugs & Rock & Roll",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:0IUGheFVUEZqjrkT5e4w3R"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 11
+        },
+        "type": "album",
+        "uri": "spotify:album:0yLDsFkaUbkT2EZFL13HTi"
+      },
+      "release_date": "1977-09-30",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 264693,
+          "explicit": true,
+          "id": "2E6l9eLcQpTW7wf8KaQEQW",
+          "name": "Wake up and Make Love with Me",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 215480,
+          "explicit": true,
+          "id": "5yc5WU2tKErPmew4mCzJDJ",
+          "name": "Sweet Gene Vincent",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 193266,
+          "explicit": true,
+          "id": "3XXx1Jp09uXndhnnSHLgGM",
+          "name": "I'm Partial to Your Abracadabra",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 220253,
+          "explicit": true,
+          "id": "6yVH5GrZ9aJnGvB1U6We15",
+          "name": "My Old Man",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 256986,
+          "explicit": true,
+          "id": "5HDKNHhkxRTcn0G7VozSL9",
+          "name": "Billericay Dickie",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 295480,
+          "explicit": true,
+          "id": "2YjIU5GfqHce2seCIJJGQp",
+          "name": "Clevor Trever",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 205226,
+          "explicit": true,
+          "id": "6Xpm1YOOH3CXBjR4Uzagdg",
+          "name": "If I Was with a Woman",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 211200,
+          "explicit": true,
+          "id": "6fsdun1kUtHxhXZKguTKtf",
+          "name": "Blockheads",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 254386,
+          "explicit": true,
+          "id": "3YcoqaTYc3Glegq40LmYy9",
+          "name": "Plaistow Patricia",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 135373,
+          "explicit": true,
+          "id": "4t6RNzYJ7dhj2TznTqslsw",
+          "name": "Blackmail Man",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5PFSmueeFLrjYXqn3agenn",
+              "name": "Ian Dury"
+            }
+          ],
+          "duration_ms": 186626,
+          "explicit": true,
+          "id": "0IUGheFVUEZqjrkT5e4w3R",
+          "name": "Sex & Drugs & Rock & Roll",
+          "preview_url": null,
+          "track_number": 11
+        }
+      ],
+      "url": "https://open.spotify.com/album/0yLDsFkaUbkT2EZFL13HTi"
+    }
+  },
+  "spotify_id": "0yLDsFkaUbkT2EZFL13HTi",
+  "spotify_url": "https://open.spotify.com/album/0yLDsFkaUbkT2EZFL13HTi",
   "styles": [
     "Leftfield",
     "Disco"
@@ -130,6 +718,6 @@
       "title": "Really Glad You Came"
     }
   ],
-  "updated_at": "2025-07-07T19:03:12.630318",
+  "updated_at": "2025-07-09T10:09:00.673177",
   "year": 2014
 }
