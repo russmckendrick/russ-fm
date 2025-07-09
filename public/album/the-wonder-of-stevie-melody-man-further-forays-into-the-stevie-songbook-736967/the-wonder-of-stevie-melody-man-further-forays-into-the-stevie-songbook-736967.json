@@ -38,7 +38,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T19:05:39.772015",
+  "created_at": "2025-07-09T10:10:52.985931",
   "date_added": "2016-08-09T05:32:12-07:00",
   "discogs_id": "736967",
   "discogs_url": "https://www.discogs.com/release/736967-DJ-Spinna-Bobbito-The-Wonder-Of-Stevie-Melody-Man-Further-Forays-Into-The-Stevie-Songbook",
@@ -56,13 +56,6 @@
       "type": "primary",
       "url": "https://i.discogs.com/KtjVsH_ARafQ_BAaZGouf3D8ulGjLVPfmtoNou5C7Qw/rs:fit/g:sm/q:90/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTczNjk2/Ny0xMjc5NDgzNTI3/LmpwZWc.jpeg",
       "width": 300
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/the-wonder-of-stevie-melody-man-further-forays-into-the-stevie-songbook-736967/the-wonder-of-stevie-melody-man-further-forays-into-the-stevie-songbook-736967.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -78,19 +71,910 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T19:05:43.736946",
+    "processed_at": "2025-07-09T10:10:54.508785",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "The Wonder Of Stevie (Melody Man: Further Forays Into The Stevie Songbook)",
-  "release_name_spotify": null,
+  "release_name_spotify": "1996 Beat Tape, Vol 1",
   "released": "2004",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2018 Redefinition Records",
+          "type": "C"
+        },
+        {
+          "text": "2018 Redefinition Records",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "115591171784"
+      },
+      "id": "3aox8zNEJht01ZeRBV94Pe",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273552eb4cf7b2b69dadf9bc681",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02552eb4cf7b2b69dadf9bc681",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851552eb4cf7b2b69dadf9bc681",
+          "width": 64
+        }
+      ],
+      "label": "Redefinition Records",
+      "popularity": 35,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+            },
+            "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+            "id": "44E0JWHttieVoD6vUHWoa2",
+            "name": "Dj Spinna",
+            "type": "artist",
+            "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2018 Redefinition Records",
+            "type": "C"
+          },
+          {
+            "text": "2018 Redefinition Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "115591171784"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3aox8zNEJht01ZeRBV94Pe"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3aox8zNEJht01ZeRBV94Pe?market=US",
+        "id": "3aox8zNEJht01ZeRBV94Pe",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273552eb4cf7b2b69dadf9bc681",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02552eb4cf7b2b69dadf9bc681",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851552eb4cf7b2b69dadf9bc681",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Redefinition Records",
+        "name": "1996 Beat Tape, Vol 1",
+        "popularity": 35,
+        "release_date": "2018-06-15",
+        "release_date_precision": "day",
+        "total_tracks": 18,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3aox8zNEJht01ZeRBV94Pe/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 132178,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4x0PSmIKrYJ3MDXD8tvGET"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4x0PSmIKrYJ3MDXD8tvGET",
+              "id": "4x0PSmIKrYJ3MDXD8tvGET",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bleepers",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:4x0PSmIKrYJ3MDXD8tvGET"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 106899,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7Ctuv67sCfFt6ihyYq7IEu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7Ctuv67sCfFt6ihyYq7IEu",
+              "id": "7Ctuv67sCfFt6ihyYq7IEu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Gruzzy",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7Ctuv67sCfFt6ihyYq7IEu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 119558,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Hh74g8qc7pgw5y5aMaOsf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Hh74g8qc7pgw5y5aMaOsf",
+              "id": "6Hh74g8qc7pgw5y5aMaOsf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lace",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6Hh74g8qc7pgw5y5aMaOsf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 124608,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2hdI8g0mTsqfXSxKKatvaW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2hdI8g0mTsqfXSxKKatvaW",
+              "id": "2hdI8g0mTsqfXSxKKatvaW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ahh",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2hdI8g0mTsqfXSxKKatvaW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 123244,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0A05aPkEpQC7wL64LZ6C7x"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0A05aPkEpQC7wL64LZ6C7x",
+              "id": "0A05aPkEpQC7wL64LZ6C7x",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Zylowah",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0A05aPkEpQC7wL64LZ6C7x"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 130197,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5rkg2gKZdgOYHn7T8MmDxT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5rkg2gKZdgOYHn7T8MmDxT",
+              "id": "5rkg2gKZdgOYHn7T8MmDxT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Red",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5rkg2gKZdgOYHn7T8MmDxT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153441,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1YyCU8dSANaQuVEYPn9OhO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1YyCU8dSANaQuVEYPn9OhO",
+              "id": "1YyCU8dSANaQuVEYPn9OhO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "JL",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:1YyCU8dSANaQuVEYPn9OhO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153741,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6BmjcK8HYrn08L2fsQG0GL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6BmjcK8HYrn08L2fsQG0GL",
+              "id": "6BmjcK8HYrn08L2fsQG0GL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dasfunkay",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6BmjcK8HYrn08L2fsQG0GL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 80321,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/66bZt4QV9wMrTVUzSdnDno"
+              },
+              "href": "https://api.spotify.com/v1/tracks/66bZt4QV9wMrTVUzSdnDno",
+              "id": "66bZt4QV9wMrTVUzSdnDno",
+              "is_local": false,
+              "is_playable": true,
+              "name": "BT",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:66bZt4QV9wMrTVUzSdnDno"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 120868,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0qwT4wJ6YyJ3TonzqrXrXZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0qwT4wJ6YyJ3TonzqrXrXZ",
+              "id": "0qwT4wJ6YyJ3TonzqrXrXZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Murky",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:0qwT4wJ6YyJ3TonzqrXrXZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187311,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/01M0WlpJMTFsetPgjCN8yP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/01M0WlpJMTFsetPgjCN8yP",
+              "id": "01M0WlpJMTFsetPgjCN8yP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Uuugghh",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:01M0WlpJMTFsetPgjCN8yP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 139548,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0dOJ9LvbeDuIjrCnednJAE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0dOJ9LvbeDuIjrCnednJAE",
+              "id": "0dOJ9LvbeDuIjrCnednJAE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Notty",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:0dOJ9LvbeDuIjrCnednJAE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 125254,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0ZbYWQG4azDzlmozDO43Ov"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0ZbYWQG4azDzlmozDO43Ov",
+              "id": "0ZbYWQG4azDzlmozDO43Ov",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fazer",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0ZbYWQG4azDzlmozDO43Ov"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 141545,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1ywbZ7FfMe6C4vmm7eMId7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1ywbZ7FfMe6C4vmm7eMId7",
+              "id": "1ywbZ7FfMe6C4vmm7eMId7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Building Bloxx",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:1ywbZ7FfMe6C4vmm7eMId7"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 155664,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5jviIt2bNIvUExlEhGA2M4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5jviIt2bNIvUExlEhGA2M4",
+              "id": "5jviIt2bNIvUExlEhGA2M4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Webby",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:5jviIt2bNIvUExlEhGA2M4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 94909,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7yMdYHREOJrK6HBmZdLIXT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7yMdYHREOJrK6HBmZdLIXT",
+              "id": "7yMdYHREOJrK6HBmZdLIXT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hopscotch",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:7yMdYHREOJrK6HBmZdLIXT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 115979,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7eFdOO1370CeozloqFgLBJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7eFdOO1370CeozloqFgLBJ",
+              "id": "7eFdOO1370CeozloqFgLBJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thatone 2",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:7eFdOO1370CeozloqFgLBJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/44E0JWHttieVoD6vUHWoa2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/44E0JWHttieVoD6vUHWoa2",
+                  "id": "44E0JWHttieVoD6vUHWoa2",
+                  "name": "Dj Spinna",
+                  "type": "artist",
+                  "uri": "spotify:artist:44E0JWHttieVoD6vUHWoa2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 110261,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Evho04eKYnu4nicOwQdu1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Evho04eKYnu4nicOwQdu1",
+              "id": "6Evho04eKYnu4nicOwQdu1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blue",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:6Evho04eKYnu4nicOwQdu1"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 18
+        },
+        "type": "album",
+        "uri": "spotify:album:3aox8zNEJht01ZeRBV94Pe"
+      },
+      "release_date": "2018-06-15",
+      "release_date_precision": "day",
+      "total_tracks": 18,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 132178,
+          "explicit": false,
+          "id": "4x0PSmIKrYJ3MDXD8tvGET",
+          "name": "Bleepers",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 106899,
+          "explicit": false,
+          "id": "7Ctuv67sCfFt6ihyYq7IEu",
+          "name": "Gruzzy",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 119558,
+          "explicit": false,
+          "id": "6Hh74g8qc7pgw5y5aMaOsf",
+          "name": "Lace",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 124608,
+          "explicit": false,
+          "id": "2hdI8g0mTsqfXSxKKatvaW",
+          "name": "Ahh",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 123244,
+          "explicit": false,
+          "id": "0A05aPkEpQC7wL64LZ6C7x",
+          "name": "Zylowah",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 130197,
+          "explicit": false,
+          "id": "5rkg2gKZdgOYHn7T8MmDxT",
+          "name": "Red",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 153441,
+          "explicit": false,
+          "id": "1YyCU8dSANaQuVEYPn9OhO",
+          "name": "JL",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 153741,
+          "explicit": false,
+          "id": "6BmjcK8HYrn08L2fsQG0GL",
+          "name": "Dasfunkay",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 80321,
+          "explicit": false,
+          "id": "66bZt4QV9wMrTVUzSdnDno",
+          "name": "BT",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 120868,
+          "explicit": false,
+          "id": "0qwT4wJ6YyJ3TonzqrXrXZ",
+          "name": "Murky",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 187311,
+          "explicit": false,
+          "id": "01M0WlpJMTFsetPgjCN8yP",
+          "name": "Uuugghh",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 139548,
+          "explicit": false,
+          "id": "0dOJ9LvbeDuIjrCnednJAE",
+          "name": "Notty",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 125254,
+          "explicit": false,
+          "id": "0ZbYWQG4azDzlmozDO43Ov",
+          "name": "Fazer",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 141545,
+          "explicit": false,
+          "id": "1ywbZ7FfMe6C4vmm7eMId7",
+          "name": "Building Bloxx",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 155664,
+          "explicit": false,
+          "id": "5jviIt2bNIvUExlEhGA2M4",
+          "name": "Webby",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 94909,
+          "explicit": false,
+          "id": "7yMdYHREOJrK6HBmZdLIXT",
+          "name": "Hopscotch",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 115979,
+          "explicit": false,
+          "id": "7eFdOO1370CeozloqFgLBJ",
+          "name": "Thatone 2",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "44E0JWHttieVoD6vUHWoa2",
+              "name": "Dj Spinna"
+            }
+          ],
+          "duration_ms": 110261,
+          "explicit": false,
+          "id": "6Evho04eKYnu4nicOwQdu1",
+          "name": "Blue",
+          "preview_url": null,
+          "track_number": 18
+        }
+      ],
+      "url": "https://open.spotify.com/album/3aox8zNEJht01ZeRBV94Pe"
+    }
+  },
+  "spotify_id": "3aox8zNEJht01ZeRBV94Pe",
+  "spotify_url": "https://open.spotify.com/album/3aox8zNEJht01ZeRBV94Pe",
   "styles": [
     "Soul",
     "Funk",
@@ -289,6 +1173,6 @@
       "title": "Too High"
     }
   ],
-  "updated_at": "2025-07-07T19:05:43.124119",
+  "updated_at": "2025-07-09T10:10:54.071836",
   "year": 2004
 }
