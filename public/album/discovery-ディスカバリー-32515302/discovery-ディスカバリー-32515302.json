@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1440617977",
-  "apple_music_url": "https://music.apple.com/gb/album/tron-legacy-reconfigured/1440617977",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "5468295",
@@ -34,7 +34,7 @@
     }
   },
   "country": "Worldwide",
-  "created_at": "2025-07-09T07:53:52.615923",
+  "created_at": "2025-07-09T20:57:25.163506",
   "date_added": "2024-12-17T10:26:02-08:00",
   "discogs_id": "32515302",
   "discogs_url": "https://www.discogs.com/release/32515302-Daft-Punk-ダフトパンク-Discovery-ディスカバリー",
@@ -150,13 +150,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/H-zgPQB6yTOe1iTfPYsAO-Szc0AObaCGgsIAXVRlbVM/rs:fit/g:sm/q:90/h:600/w:595/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMyNTE1/MzAyLTE3MzQ2Mzgz/MjQtMTE5OC5qcGVn.jpeg",
       "width": 595
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/06/b9/f1/06b9f1b8-a14c-c9eb-a81a-f12c3d6a18af/00050087239633.rgb.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -173,68 +166,18 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T07:53:54.685587",
+    "processed_at": "2025-07-09T20:57:26.554632",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "TRON: Legacy Reconfigured",
+  "release_name_apple_music": null,
   "release_name_discogs": "Discovery = ディスカバリー",
   "release_name_spotify": "Discovery",
   "released": "2024-12-13",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/06/b9/f1/06b9f1b8-a14c-c9eb-a81a-f12c3d6a18af/00050087239633.rgb.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2011 Walt Disney Records",
-      "editorial_notes": null,
-      "id": "1440617977",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Daft Punk",
-        "artwork": {
-          "bgColor": "0a1010",
-          "height": 1500,
-          "textColor1": "7edd58",
-          "textColor2": "25d762",
-          "textColor3": "66b449",
-          "textColor4": "1faf52",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/06/b9/f1/06b9f1b8-a14c-c9eb-a81a-f12c3d6a18af/00050087239633.rgb.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "copyright": "℗ 2011 Walt Disney Records",
-        "genreNames": [
-          "Soundtrack",
-          "Music",
-          "Electronic",
-          "Rock",
-          "Electronica",
-          "Dance",
-          "House",
-          "Soundtrack",
-          "Children's Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "TRON: Legacy Reconfigured",
-        "playParams": {
-          "id": "1440617977",
-          "kind": "album"
-        },
-        "recordLabel": "Walt Disney Records",
-        "releaseDate": "2011-01-01",
-        "trackCount": 15,
-        "upc": "00050087239633",
-        "url": "https://music.apple.com/gb/album/tron-legacy-reconfigured/1440617977"
-      },
-      "url": "https://music.apple.com/gb/album/tron-legacy-reconfigured/1440617977"
-    },
     "spotify": {
       "album_type": "album",
       "available_markets": [],
@@ -1045,6 +988,6 @@
       "title": "Too Long = 自由をこの手に"
     }
   ],
-  "updated_at": "2025-07-09T07:53:53.792394",
+  "updated_at": "2025-07-09T20:57:26.294577",
   "year": 2024
 }
