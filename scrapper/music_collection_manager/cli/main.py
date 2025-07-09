@@ -102,11 +102,16 @@ def cli(ctx, config, log_level, log_file, session_logs):
     is_flag=True, 
     help="Fetch album artwork from v1.russ.fm site"
 )
+@click.option(
+    "--prefer",
+    type=click.Choice(["apple_music", "spotify", "theaudiodb", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, theaudiodb, discogs, v1)"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1, prefer):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1, prefer)
 
 
 @cli.command()
@@ -162,11 +167,16 @@ def release(ctx, discogs_id, output, save, services, force_refresh, interactive,
     is_flag=True, 
     help="Show search results and let user select correct matches (use with --force-refresh)"
 )
+@click.option(
+    "--prefer",
+    type=click.Choice(["apple_music", "spotify", "theaudiodb", "discogs", "v1"]),
+    help="Preferred image source (apple_music, spotify, theaudiodb, discogs, v1)"
+)
 @click.pass_context
-def collection(ctx, username, limit, from_index, to_index, batch_size, resume, dry_run, force_refresh, interactive):
+def collection(ctx, username, limit, from_index, to_index, batch_size, resume, dry_run, force_refresh, interactive, prefer):
     """Process entire Discogs collection."""
     command = CollectionCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(username, limit, from_index, to_index, batch_size, resume, dry_run, force_refresh, interactive)
+    command.execute(username, limit, from_index, to_index, batch_size, resume, dry_run, force_refresh, interactive, prefer)
 
 
 @cli.command()

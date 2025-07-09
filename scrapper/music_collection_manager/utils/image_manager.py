@@ -211,37 +211,33 @@ class ImageManager:
 
         return downloaded_images
 
-    def extract_image_sources(self, release) -> List[Dict[str, Any]]:
+    def extract_image_sources(self, release, preferred_source: Optional[str] = None) -> List[Dict[str, Any]]:
         """Extract image sources from release enrichment data in priority order."""
-        sources = []
+        all_sources = {}
 
-        # Priority 1: Apple Music (best quality, dynamic sizing)
+        # Collect all available sources
+        # Apple Music
         if hasattr(release, "raw_data") and "apple_music" in release.raw_data:
             apple_data = release.raw_data["apple_music"]
             if hasattr(apple_data, "artwork_url") and apple_data.artwork_url:
-                sources.append(
-                    {
-                        "url": apple_data.artwork_url,
-                        "type": "apple_music",
-                        "user_agent": None,
-                    }
-                )
+                all_sources["apple_music"] = {
+                    "url": apple_data.artwork_url,
+                    "type": "apple_music",
+                    "user_agent": None,
+                }
 
-        # Priority 2: Spotify (good quality, fixed sizes)
+        # Spotify
         if hasattr(release, "raw_data") and "spotify" in release.raw_data:
             spotify_data = release.raw_data["spotify"]
             if hasattr(spotify_data, "images") and spotify_data.images:
-                # Store all Spotify images for size selection during download
-                sources.append(
-                    {
-                        "url": None,  # Will be selected based on target size
-                        "type": "spotify",
-                        "user_agent": None,
-                        "spotify_images": spotify_data.images,
-                    }
-                )
+                all_sources["spotify"] = {
+                    "url": None,  # Will be selected based on target size
+                    "type": "spotify",
+                    "user_agent": None,
+                    "spotify_images": spotify_data.images,
+                }
 
-        # Priority 3: Last.fm (may need User-Agent)
+        # Last.fm (Note: theaudiodb is not used for album artwork)
         if hasattr(release, "raw_data") and "lastfm" in release.raw_data:
             lastfm_data = release.raw_data["lastfm"]
             if hasattr(lastfm_data, "images") and lastfm_data.images:
@@ -258,15 +254,13 @@ class ImageManager:
                         break
 
                 if largest_image:
-                    sources.append(
-                        {
-                            "url": largest_image.url,
-                            "type": "lastfm",
-                            "user_agent": "Mozilla/5.0 (compatible; MusicCollectionManager/1.0)",
-                        }
-                    )
+                    all_sources["lastfm"] = {
+                        "url": largest_image.url,
+                        "type": "lastfm",
+                        "user_agent": "Mozilla/5.0 (compatible; MusicCollectionManager/1.0)",
+                    }
 
-        # Priority 4: Discogs (basic quality)
+        # Discogs
         if hasattr(release, "raw_data") and "discogs" in release.raw_data:
             discogs_data = release.raw_data["discogs"]
             if hasattr(discogs_data, "images") and discogs_data.images:
@@ -283,13 +277,26 @@ class ImageManager:
                         break
 
                 if primary_image:
-                    sources.append(
-                        {
-                            "url": primary_image.uri,
-                            "type": "discogs",
-                            "user_agent": None,
-                        }
-                    )
+                    all_sources["discogs"] = {
+                        "url": primary_image.uri,
+                        "type": "discogs",
+                        "user_agent": None,
+                    }
+
+        # Build the sources list based on preference
+        sources = []
+        
+        # If a preferred source is specified and available, put it first
+        if preferred_source and preferred_source in all_sources:
+            sources.append(all_sources[preferred_source])
+            logger.info(f"Using preferred image source: {preferred_source}")
+        
+        # Then add remaining sources in default priority order
+        default_priority = ["apple_music", "spotify", "lastfm", "discogs"]
+        
+        for source_type in default_priority:
+            if source_type in all_sources and (not preferred_source or source_type != preferred_source):
+                sources.append(all_sources[source_type])
 
         return sources
 
