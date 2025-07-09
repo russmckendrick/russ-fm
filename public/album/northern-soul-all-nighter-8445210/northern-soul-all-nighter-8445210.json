@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1490313673",
+  "apple_music_url": "https://music.apple.com/gb/album/northern-soul-all-nighter/1490313673",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T15:47:29.615272",
+  "created_at": "2025-07-09T09:51:01.344441",
   "date_added": "2017-03-02T17:33:01-08:00",
   "discogs_id": "8445210",
   "discogs_url": "https://www.discogs.com/release/8445210-Various-Northern-Soul-All-Nighter",
@@ -95,8 +95,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/northern-soul-all-nighter-8445210/northern-soul-all-nighter-8445210.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/03/e5/b4/03e5b42f-e018-ddfe-44e9-e635b1263018/LM00220487.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -113,19 +113,867 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T15:47:35.733266",
+    "processed_at": "2025-07-09T09:51:02.868445",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Northern Soul (All-Nighter)",
   "release_name_discogs": "Northern Soul All Nighter",
-  "release_name_spotify": null,
+  "release_name_spotify": "Northern Soul All Nighter",
   "released": "2016-02-15",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/03/e5/b4/03e5b42f-e018-ddfe-44e9-e635b1263018/LM00220487.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2019 Charly Acquisitions Ltd.",
+      "editorial_notes": null,
+      "id": "1490313673",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "010102",
+          "height": 3000,
+          "textColor1": "ffffff",
+          "textColor2": "ff730c",
+          "textColor3": "cccccc",
+          "textColor4": "cc5c09",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music113/v4/03/e5/b4/03e5b42f-e018-ddfe-44e9-e635b1263018/LM00220487.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "copyright": "℗ 2019 Charly Acquisitions Ltd.",
+        "genreNames": [
+          "R&B/Soul",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Northern Soul (All-Nighter)",
+        "playParams": {
+          "id": "1490313673",
+          "kind": "album"
+        },
+        "recordLabel": "Charly  Club Soul",
+        "releaseDate": "2019-09-27",
+        "trackCount": 16,
+        "upc": "8718011597625",
+        "url": "https://music.apple.com/gb/album/northern-soul-all-nighter/1490313673"
+      },
+      "url": "https://music.apple.com/gb/album/northern-soul-all-nighter/1490313673"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2018 Sunset Blvd.",
+          "type": "C"
+        },
+        {
+          "text": "2018 Sunset Blvd.",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "634457957275"
+      },
+      "id": "6tT9kikyZYdYwfV08PhLVE",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732a00b17e82c6bbde19eb4342",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022a00b17e82c6bbde19eb4342",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512a00b17e82c6bbde19eb4342",
+          "width": 64
+        }
+      ],
+      "label": "Hit Town",
+      "popularity": 1,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2018 Sunset Blvd.",
+            "type": "C"
+          },
+          {
+            "text": "2018 Sunset Blvd.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "634457957275"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6tT9kikyZYdYwfV08PhLVE"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/6tT9kikyZYdYwfV08PhLVE?market=US",
+        "id": "6tT9kikyZYdYwfV08PhLVE",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732a00b17e82c6bbde19eb4342",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022a00b17e82c6bbde19eb4342",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512a00b17e82c6bbde19eb4342",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Hit Town",
+        "name": "Northern Soul All Nighter",
+        "popularity": 1,
+        "release_date": "2018-08-24",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/6tT9kikyZYdYwfV08PhLVE/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0LeecN3yVUDsHFFzrTLp5v"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0LeecN3yVUDsHFFzrTLp5v",
+                  "id": "0LeecN3yVUDsHFFzrTLp5v",
+                  "name": "Jessie Hill",
+                  "type": "artist",
+                  "uri": "spotify:artist:0LeecN3yVUDsHFFzrTLp5v"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 139666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0CRRpydNAInbEDG2TON6mt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0CRRpydNAInbEDG2TON6mt",
+              "id": "0CRRpydNAInbEDG2TON6mt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Whip It on Me",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:0CRRpydNAInbEDG2TON6mt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5Wd1WYd0swDNZbTkwBMEic"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5Wd1WYd0swDNZbTkwBMEic",
+                  "id": "5Wd1WYd0swDNZbTkwBMEic",
+                  "name": "Moody Scott",
+                  "type": "artist",
+                  "uri": "spotify:artist:5Wd1WYd0swDNZbTkwBMEic"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 375080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5MDW02bEkT4t1KI9jApg4G"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5MDW02bEkT4t1KI9jApg4G",
+              "id": "5MDW02bEkT4t1KI9jApg4G",
+              "is_local": false,
+              "is_playable": true,
+              "name": "(We Gotta) Bust Out of the Ghetto, Pts, 1 & 2",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5MDW02bEkT4t1KI9jApg4G"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3PFM1gdPmvVsk76cf6gSGe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3PFM1gdPmvVsk76cf6gSGe",
+                  "id": "3PFM1gdPmvVsk76cf6gSGe",
+                  "name": "Curley Moore",
+                  "type": "artist",
+                  "uri": "spotify:artist:3PFM1gdPmvVsk76cf6gSGe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153880,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0TTkJJNQyBWwtFvhk5HYtn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0TTkJJNQyBWwtFvhk5HYtn",
+              "id": "0TTkJJNQyBWwtFvhk5HYtn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get Low Down, Pt.2",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0TTkJJNQyBWwtFvhk5HYtn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5FUunXPAfJjJGVYgzPgsSy"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5FUunXPAfJjJGVYgzPgsSy",
+                  "id": "5FUunXPAfJjJGVYgzPgsSy",
+                  "name": "Kendricks & Ruffin",
+                  "type": "artist",
+                  "uri": "spotify:artist:5FUunXPAfJjJGVYgzPgsSy"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 228000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7idLTGqQyXJiSrWYE8IjSA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7idLTGqQyXJiSrWYE8IjSA",
+              "id": "7idLTGqQyXJiSrWYE8IjSA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cloud Nine",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7idLTGqQyXJiSrWYE8IjSA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0R2rWL9oevZ7TzuJU9KYeY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0R2rWL9oevZ7TzuJU9KYeY",
+                  "id": "0R2rWL9oevZ7TzuJU9KYeY",
+                  "name": "Ike & Tina",
+                  "type": "artist",
+                  "uri": "spotify:artist:0R2rWL9oevZ7TzuJU9KYeY"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 210840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/67hDEc3P6pDbXE9G8N0tx2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/67hDEc3P6pDbXE9G8N0tx2",
+              "id": "67hDEc3P6pDbXE9G8N0tx2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Living for the City",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:67hDEc3P6pDbXE9G8N0tx2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/242XMa66gp6wyvP0psuNxM"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/242XMa66gp6wyvP0psuNxM",
+                  "id": "242XMa66gp6wyvP0psuNxM",
+                  "name": "Memphis Funk All-Star Reunion",
+                  "type": "artist",
+                  "uri": "spotify:artist:242XMa66gp6wyvP0psuNxM"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 359800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/75Ih4m19oLCi3EIWJq6vEd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/75Ih4m19oLCi3EIWJq6vEd",
+              "id": "75Ih4m19oLCi3EIWJq6vEd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'll Take You There",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:75Ih4m19oLCi3EIWJq6vEd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0En4EEcDMJ5kaUCf1aZ9js"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0En4EEcDMJ5kaUCf1aZ9js",
+                  "id": "0En4EEcDMJ5kaUCf1aZ9js",
+                  "name": "Lee Dorsey",
+                  "type": "artist",
+                  "uri": "spotify:artist:0En4EEcDMJ5kaUCf1aZ9js"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 261480,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5a5LPwF4A2HYrJ78YgNpWf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5a5LPwF4A2HYrJ78YgNpWf",
+              "id": "5a5LPwF4A2HYrJ78YgNpWf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Night People",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:5a5LPwF4A2HYrJ78YgNpWf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3lgdjPuk3enlxQpIyZk2Ef"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3lgdjPuk3enlxQpIyZk2Ef",
+                  "id": "3lgdjPuk3enlxQpIyZk2Ef",
+                  "name": "Expressions",
+                  "type": "artist",
+                  "uri": "spotify:artist:3lgdjPuk3enlxQpIyZk2Ef"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 412173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4oNAPvShNJdVc3fHulyj8M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4oNAPvShNJdVc3fHulyj8M",
+              "id": "4oNAPvShNJdVc3fHulyj8M",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The World Is a Ghetto",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:4oNAPvShNJdVc3fHulyj8M"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4dNs4gsyisVixgpkjyvD8D"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4dNs4gsyisVixgpkjyvD8D",
+                  "id": "4dNs4gsyisVixgpkjyvD8D",
+                  "name": "The Esquires",
+                  "type": "artist",
+                  "uri": "spotify:artist:4dNs4gsyisVixgpkjyvD8D"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 146026,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/08XuGrLhOuD29MrpnRuH87"
+              },
+              "href": "https://api.spotify.com/v1/tracks/08XuGrLhOuD29MrpnRuH87",
+              "id": "08XuGrLhOuD29MrpnRuH87",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get on Up (Original Stereo Single Version)",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:08XuGrLhOuD29MrpnRuH87"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4OGuNAnRFWZOgOA2d51taz"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4OGuNAnRFWZOgOA2d51taz",
+                  "id": "4OGuNAnRFWZOgOA2d51taz",
+                  "name": "Johnnie Taylor",
+                  "type": "artist",
+                  "uri": "spotify:artist:4OGuNAnRFWZOgOA2d51taz"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 300866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4412bMPepqNiy3eeq7Ape8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4412bMPepqNiy3eeq7Ape8",
+              "id": "4412bMPepqNiy3eeq7Ape8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Want to Get Into You",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4412bMPepqNiy3eeq7Ape8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5H06kS5AQ6DmrCMLjA3JGe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5H06kS5AQ6DmrCMLjA3JGe",
+                  "id": "5H06kS5AQ6DmrCMLjA3JGe",
+                  "name": "The Dontells",
+                  "type": "artist",
+                  "uri": "spotify:artist:5H06kS5AQ6DmrCMLjA3JGe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 124480,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4woFpEktr7Z8ayxrX5dFLN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4woFpEktr7Z8ayxrX5dFLN",
+              "id": "4woFpEktr7Z8ayxrX5dFLN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In Your Heart (You Know I'm Right)",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4woFpEktr7Z8ayxrX5dFLN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5PHQJHRhBfg7fJhzv2de7r"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5PHQJHRhBfg7fJhzv2de7r",
+                  "id": "5PHQJHRhBfg7fJhzv2de7r",
+                  "name": "The Delacardos",
+                  "type": "artist",
+                  "uri": "spotify:artist:5PHQJHRhBfg7fJhzv2de7r"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 123026,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4fNonozKuWC4pHCYDAOt9r"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4fNonozKuWC4pHCYDAOt9r",
+              "id": "4fNonozKuWC4pHCYDAOt9r",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hold Back the Tears",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:4fNonozKuWC4pHCYDAOt9r"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0VVk6TbPp9ytSAr2ugFykU"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0VVk6TbPp9ytSAr2ugFykU",
+                  "id": "0VVk6TbPp9ytSAr2ugFykU",
+                  "name": "Bobby Mitchell",
+                  "type": "artist",
+                  "uri": "spotify:artist:0VVk6TbPp9ytSAr2ugFykU"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 146240,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6taopjp0lZkoyLCXy80CPk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6taopjp0lZkoyLCXy80CPk",
+              "id": "6taopjp0lZkoyLCXy80CPk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Gonna Be a Wheel Someday",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:6taopjp0lZkoyLCXy80CPk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1CgE69lpZKGAcA5kIIK82D"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1CgE69lpZKGAcA5kIIK82D",
+                  "id": "1CgE69lpZKGAcA5kIIK82D",
+                  "name": "Maurice Williams",
+                  "type": "artist",
+                  "uri": "spotify:artist:1CgE69lpZKGAcA5kIIK82D"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 144573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3yWgeJTfqtGK29I6QuPJHz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3yWgeJTfqtGK29I6QuPJHz",
+              "id": "3yWgeJTfqtGK29I6QuPJHz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Being Without You",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:3yWgeJTfqtGK29I6QuPJHz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/13zjeK2f645L3oIfBJVkzl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/13zjeK2f645L3oIfBJVkzl",
+                  "id": "13zjeK2f645L3oIfBJVkzl",
+                  "name": "Memphis Underground",
+                  "type": "artist",
+                  "uri": "spotify:artist:13zjeK2f645L3oIfBJVkzl"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 270160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4huQwvlGvYErk2MqZe2yym"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4huQwvlGvYErk2MqZe2yym",
+              "id": "4huQwvlGvYErk2MqZe2yym",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Theme From Shaft (Instrumental Version)",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:4huQwvlGvYErk2MqZe2yym"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0En4EEcDMJ5kaUCf1aZ9js"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0En4EEcDMJ5kaUCf1aZ9js",
+                  "id": "0En4EEcDMJ5kaUCf1aZ9js",
+                  "name": "Lee Dorsey",
+                  "type": "artist",
+                  "uri": "spotify:artist:0En4EEcDMJ5kaUCf1aZ9js"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6aavZNfZdcd8V9kOi8hLyw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6aavZNfZdcd8V9kOi8hLyw",
+              "id": "6aavZNfZdcd8V9kOi8hLyw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Soul Mine",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:6aavZNfZdcd8V9kOi8hLyw"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 16
+        },
+        "type": "album",
+        "uri": "spotify:album:6tT9kikyZYdYwfV08PhLVE"
+      },
+      "release_date": "2018-08-24",
+      "release_date_precision": "day",
+      "total_tracks": 16,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0LeecN3yVUDsHFFzrTLp5v",
+              "name": "Jessie Hill"
+            }
+          ],
+          "duration_ms": 139666,
+          "explicit": false,
+          "id": "0CRRpydNAInbEDG2TON6mt",
+          "name": "Whip It on Me",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5Wd1WYd0swDNZbTkwBMEic",
+              "name": "Moody Scott"
+            }
+          ],
+          "duration_ms": 375080,
+          "explicit": false,
+          "id": "5MDW02bEkT4t1KI9jApg4G",
+          "name": "(We Gotta) Bust Out of the Ghetto, Pts, 1 & 2",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "3PFM1gdPmvVsk76cf6gSGe",
+              "name": "Curley Moore"
+            }
+          ],
+          "duration_ms": 153880,
+          "explicit": false,
+          "id": "0TTkJJNQyBWwtFvhk5HYtn",
+          "name": "Get Low Down, Pt.2",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5FUunXPAfJjJGVYgzPgsSy",
+              "name": "Kendricks & Ruffin"
+            }
+          ],
+          "duration_ms": 228000,
+          "explicit": false,
+          "id": "7idLTGqQyXJiSrWYE8IjSA",
+          "name": "Cloud Nine",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0R2rWL9oevZ7TzuJU9KYeY",
+              "name": "Ike & Tina"
+            }
+          ],
+          "duration_ms": 210840,
+          "explicit": false,
+          "id": "67hDEc3P6pDbXE9G8N0tx2",
+          "name": "Living for the City",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "242XMa66gp6wyvP0psuNxM",
+              "name": "Memphis Funk All-Star Reunion"
+            }
+          ],
+          "duration_ms": 359800,
+          "explicit": false,
+          "id": "75Ih4m19oLCi3EIWJq6vEd",
+          "name": "I'll Take You There",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0En4EEcDMJ5kaUCf1aZ9js",
+              "name": "Lee Dorsey"
+            }
+          ],
+          "duration_ms": 261480,
+          "explicit": false,
+          "id": "5a5LPwF4A2HYrJ78YgNpWf",
+          "name": "Night People",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "3lgdjPuk3enlxQpIyZk2Ef",
+              "name": "Expressions"
+            }
+          ],
+          "duration_ms": 412173,
+          "explicit": false,
+          "id": "4oNAPvShNJdVc3fHulyj8M",
+          "name": "The World Is a Ghetto",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4dNs4gsyisVixgpkjyvD8D",
+              "name": "The Esquires"
+            }
+          ],
+          "duration_ms": 146026,
+          "explicit": false,
+          "id": "08XuGrLhOuD29MrpnRuH87",
+          "name": "Get on Up (Original Stereo Single Version)",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4OGuNAnRFWZOgOA2d51taz",
+              "name": "Johnnie Taylor"
+            }
+          ],
+          "duration_ms": 300866,
+          "explicit": false,
+          "id": "4412bMPepqNiy3eeq7Ape8",
+          "name": "I Want to Get Into You",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5H06kS5AQ6DmrCMLjA3JGe",
+              "name": "The Dontells"
+            }
+          ],
+          "duration_ms": 124480,
+          "explicit": false,
+          "id": "4woFpEktr7Z8ayxrX5dFLN",
+          "name": "In Your Heart (You Know I'm Right)",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "5PHQJHRhBfg7fJhzv2de7r",
+              "name": "The Delacardos"
+            }
+          ],
+          "duration_ms": 123026,
+          "explicit": false,
+          "id": "4fNonozKuWC4pHCYDAOt9r",
+          "name": "Hold Back the Tears",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "0VVk6TbPp9ytSAr2ugFykU",
+              "name": "Bobby Mitchell"
+            }
+          ],
+          "duration_ms": 146240,
+          "explicit": false,
+          "id": "6taopjp0lZkoyLCXy80CPk",
+          "name": "I'm Gonna Be a Wheel Someday",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "1CgE69lpZKGAcA5kIIK82D",
+              "name": "Maurice Williams"
+            }
+          ],
+          "duration_ms": 144573,
+          "explicit": false,
+          "id": "3yWgeJTfqtGK29I6QuPJHz",
+          "name": "Being Without You",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "13zjeK2f645L3oIfBJVkzl",
+              "name": "Memphis Underground"
+            }
+          ],
+          "duration_ms": 270160,
+          "explicit": false,
+          "id": "4huQwvlGvYErk2MqZe2yym",
+          "name": "Theme From Shaft (Instrumental Version)",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "0En4EEcDMJ5kaUCf1aZ9js",
+              "name": "Lee Dorsey"
+            }
+          ],
+          "duration_ms": 240973,
+          "explicit": false,
+          "id": "6aavZNfZdcd8V9kOi8hLyw",
+          "name": "Soul Mine",
+          "preview_url": null,
+          "track_number": 16
+        }
+      ],
+      "url": "https://open.spotify.com/album/6tT9kikyZYdYwfV08PhLVE"
+    }
+  },
+  "spotify_id": "6tT9kikyZYdYwfV08PhLVE",
+  "spotify_url": "https://open.spotify.com/album/6tT9kikyZYdYwfV08PhLVE",
   "styles": [
     "Soul",
     "Rhythm & Blues"
@@ -829,6 +1677,6 @@
       "title": "Show And Tell"
     }
   ],
-  "updated_at": "2025-07-07T15:47:35.030784",
+  "updated_at": "2025-07-09T09:51:02.533151",
   "year": 2016
 }
