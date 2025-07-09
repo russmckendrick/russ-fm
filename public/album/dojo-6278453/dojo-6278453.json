@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "320815609",
-      "biography": null,
+      "biography": "Isfahan or Esfahan is a city in the Central District of Isfahan County, Isfahan province, Iran. It is the capital of the province, the county, and the district. It is located 440 kilometres south of Tehran. The city has a population of approximately 2,220,000, making it the third-most populous city in Iran, after Tehran and Mashhad, and the second-largest metropolitan area.",
       "discogs_id": "4088630",
       "discogs_original_name": "Jouis",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Jouis",
       "role": "",
       "spotify_id": "2KKAKZaSLAypdM6MAplfm5",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Isfahan"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Jouis": {
+      "biography": "Isfahan or Esfahan is a city in the Central District of Isfahan County, Isfahan province, Iran. It is the capital of the province, the county, and the district. It is located 440 kilometres south of Tehran. The city has a population of approximately 2,220,000, making it the third-most populous city in Iran, after Tehran and Mashhad, and the second-largest metropolitan area.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Isfahan"
+    }
+  },
   "country": "UK",
-  "created_at": "2025-07-05T17:02:36.549598",
+  "created_at": "2025-07-09T09:38:13.401782",
   "date_added": "2017-11-20T14:15:28-08:00",
   "discogs_id": "6278453",
   "discogs_url": "https://www.discogs.com/release/6278453-Jouis-Dojo",
@@ -56,18 +61,19 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Jouis/Dojo",
   "local_images": {
-    "hi-res": "public/album/dojo-6278453/dojo-6278453-hi-res.jpg",
-    "medium": "public/album/dojo-6278453/dojo-6278453-medium.jpg",
-    "small": "public/album/dojo-6278453/dojo-6278453-small.jpg"
+    "hi-res": "../public/album/dojo-6278453/dojo-6278453-hi-res.jpg",
+    "medium": "../public/album/dojo-6278453/dojo-6278453-medium.jpg",
+    "small": "../public/album/dojo-6278453/dojo-6278453-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:02:41.968350",
+    "processed_at": "2025-07-09T09:38:16.050004",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Dojo",
@@ -145,9 +151,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/f2e71519ad78be148ab91887f28edd9e.jpg"
         }
       ],
-      "listeners": 780,
+      "listeners": 782,
       "mbid": "d9d3cb20-c3b1-4a88-ade5-a8f412eabb31",
-      "playcount": 12218,
+      "playcount": 12233,
       "raw_data": {
         "album": {
           "artist": "Jouis",
@@ -177,10 +183,10 @@
               "size": ""
             }
           ],
-          "listeners": "780",
+          "listeners": "782",
           "mbid": "d9d3cb20-c3b1-4a88-ade5-a8f412eabb31",
           "name": "Dojo",
-          "playcount": "12218",
+          "playcount": "12233",
           "tags": {
             "tag": [
               {
@@ -946,6 +952,6 @@
       "title": "Universe Goggles"
     }
   ],
-  "updated_at": "2025-07-05T17:02:39.570955",
+  "updated_at": "2025-07-09T09:38:15.058237",
   "year": 2014
 }
