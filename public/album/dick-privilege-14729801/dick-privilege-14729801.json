@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T20:32:29.181777",
+  "created_at": "2025-07-09T08:58:56.367431",
   "date_added": "2020-04-24T09:04:58-07:00",
   "discogs_id": "14729801",
   "discogs_url": "https://www.discogs.com/release/14729801-Vennart-Dick-Privilege",
@@ -61,13 +61,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/V2ofF5XG5HHB70ABp8hF_vedYosvtAYe1WaJ_FcjR_4/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NzI5/ODAxLTE1ODk1Mzc2/NjktMTExOS5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/dick-privilege-14729801/dick-privilege-14729801.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -83,19 +76,480 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T20:32:34.698705",
+    "processed_at": "2025-07-09T08:58:58.014899",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Dick Privilege",
-  "release_name_spotify": null,
+  "release_name_spotify": "In The Dead, Dead Wood",
   "released": "2020-03-00",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2020 Mike Vennart",
+          "type": "C"
+        },
+        {
+          "text": "2020 Mike Vennart",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "5059806474145"
+      },
+      "id": "5MFrAY9PzpcfO9sdEzv0t7",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27332fe29d8a26ad40e747c5f5d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0232fe29d8a26ad40e747c5f5d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485132fe29d8a26ad40e747c5f5d",
+          "width": 64
+        }
+      ],
+      "label": "VENNART",
+      "popularity": 10,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+            },
+            "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+            "id": "4snFq5Edr0NPE10gbj46cK",
+            "name": "Vennart",
+            "type": "artist",
+            "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2020 Mike Vennart",
+            "type": "C"
+          },
+          {
+            "text": "2020 Mike Vennart",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "5059806474145"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5MFrAY9PzpcfO9sdEzv0t7"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/5MFrAY9PzpcfO9sdEzv0t7?market=US",
+        "id": "5MFrAY9PzpcfO9sdEzv0t7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27332fe29d8a26ad40e747c5f5d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0232fe29d8a26ad40e747c5f5d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485132fe29d8a26ad40e747c5f5d",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "VENNART",
+        "name": "In The Dead, Dead Wood",
+        "popularity": 10,
+        "release_date": "2020-11-06",
+        "release_date_precision": "day",
+        "total_tracks": 8,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/5MFrAY9PzpcfO9sdEzv0t7/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 269662,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1mNWtgnqPLroG97zLKR0Or"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1mNWtgnqPLroG97zLKR0Or",
+              "id": "1mNWtgnqPLroG97zLKR0Or",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Silhouette",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1mNWtgnqPLroG97zLKR0Or"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 284682,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4iR5znnBGwFkLRK1KW0Frm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4iR5znnBGwFkLRK1KW0Frm",
+              "id": "4iR5znnBGwFkLRK1KW0Frm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Super Sleuth",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4iR5znnBGwFkLRK1KW0Frm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 246204,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5wgCZyu1SBP2dB4vNIHl2R"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5wgCZyu1SBP2dB4vNIHl2R",
+              "id": "5wgCZyu1SBP2dB4vNIHl2R",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Elemental",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5wgCZyu1SBP2dB4vNIHl2R"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 277185,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3tjEygVfhf5u1TD6wlKq6m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3tjEygVfhf5u1TD6wlKq6m",
+              "id": "3tjEygVfhf5u1TD6wlKq6m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lancalot",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3tjEygVfhf5u1TD6wlKq6m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187036,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3oW2O0VIAeifWq5ZTwUK2Z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3oW2O0VIAeifWq5ZTwUK2Z",
+              "id": "3oW2O0VIAeifWq5ZTwUK2Z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In The Dead Dead Wood",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:3oW2O0VIAeifWq5ZTwUK2Z"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 310413,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/29bjKTU0JIXuhXSDhPIBWs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/29bjKTU0JIXuhXSDhPIBWs",
+              "id": "29bjKTU0JIXuhXSDhPIBWs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Weight In Gold",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:29bjKTU0JIXuhXSDhPIBWs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 408241,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/75Jpf5WCWQFCnnVC8PSWoX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/75Jpf5WCWQFCnnVC8PSWoX",
+              "id": "75Jpf5WCWQFCnnVC8PSWoX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mourning On The Range",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:75Jpf5WCWQFCnnVC8PSWoX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4snFq5Edr0NPE10gbj46cK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4snFq5Edr0NPE10gbj46cK",
+                  "id": "4snFq5Edr0NPE10gbj46cK",
+                  "name": "Vennart",
+                  "type": "artist",
+                  "uri": "spotify:artist:4snFq5Edr0NPE10gbj46cK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 757133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6n0WapibnzBIaMWJ2tdEvu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6n0WapibnzBIaMWJ2tdEvu",
+              "id": "6n0WapibnzBIaMWJ2tdEvu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Forc In The Road",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6n0WapibnzBIaMWJ2tdEvu"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 8
+        },
+        "type": "album",
+        "uri": "spotify:album:5MFrAY9PzpcfO9sdEzv0t7"
+      },
+      "release_date": "2020-11-06",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 269662,
+          "explicit": false,
+          "id": "1mNWtgnqPLroG97zLKR0Or",
+          "name": "Silhouette",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 284682,
+          "explicit": true,
+          "id": "4iR5znnBGwFkLRK1KW0Frm",
+          "name": "Super Sleuth",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 246204,
+          "explicit": false,
+          "id": "5wgCZyu1SBP2dB4vNIHl2R",
+          "name": "Elemental",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 277185,
+          "explicit": false,
+          "id": "3tjEygVfhf5u1TD6wlKq6m",
+          "name": "Lancalot",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 187036,
+          "explicit": false,
+          "id": "3oW2O0VIAeifWq5ZTwUK2Z",
+          "name": "In The Dead Dead Wood",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 310413,
+          "explicit": false,
+          "id": "29bjKTU0JIXuhXSDhPIBWs",
+          "name": "Weight In Gold",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 408241,
+          "explicit": false,
+          "id": "75Jpf5WCWQFCnnVC8PSWoX",
+          "name": "Mourning On The Range",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4snFq5Edr0NPE10gbj46cK",
+              "name": "Vennart"
+            }
+          ],
+          "duration_ms": 757133,
+          "explicit": false,
+          "id": "6n0WapibnzBIaMWJ2tdEvu",
+          "name": "Forc In The Road",
+          "preview_url": null,
+          "track_number": 8
+        }
+      ],
+      "url": "https://open.spotify.com/album/5MFrAY9PzpcfO9sdEzv0t7"
+    }
+  },
+  "spotify_id": "5MFrAY9PzpcfO9sdEzv0t7",
+  "spotify_url": "https://open.spotify.com/album/5MFrAY9PzpcfO9sdEzv0t7",
   "styles": [],
   "title": "Dick Privilege",
   "tracklist": [
@@ -112,6 +566,6 @@
       "title": "Rat Catch"
     }
   ],
-  "updated_at": "2025-07-07T20:32:33.992050",
+  "updated_at": "2025-07-09T08:58:57.584672",
   "year": 2020
 }

@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1461539963",
+  "apple_music_url": "https://music.apple.com/gb/album/100-clubland-classix/1461539963",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-07T14:53:52.994685",
+  "created_at": "2025-07-09T09:04:35.338330",
   "date_added": "2019-08-31T10:21:15-07:00",
   "discogs_id": "14048921",
   "discogs_url": "https://www.discogs.com/release/14048921-Various-Electronic",
@@ -56,8 +56,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/electronic-14048921/electronic-14048921.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e5/ef/83/e5ef8323-1790-e17c-dda4-786672693c24/19UMGIM17198.rgb.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -77,19 +77,1212 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T14:55:47.020503",
+    "processed_at": "2025-07-09T09:04:37.024329",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "100% Clubland Classix",
   "release_name_discogs": "Electronic",
-  "release_name_spotify": null,
+  "release_name_spotify": "Electronic Pop Takeover",
   "released": "2019-08-23",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e5/ef/83/e5ef8323-1790-e17c-dda4-786672693c24/19UMGIM17198.rgb.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "A Universal Music On Demand release; This Compilation ℗ 2019 Universal Music Operations Limited",
+      "editorial_notes": null,
+      "id": "1461539963",
+      "is_complete": false,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "c02a0b",
+          "height": 3000,
+          "textColor1": "ffffff",
+          "textColor2": "abdbfa",
+          "textColor3": "f2d4ce",
+          "textColor4": "afb8ca",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/e5/ef/83/e5ef8323-1790-e17c-dda4-786672693c24/19UMGIM17198.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 3000
+        },
+        "contentRating": "explicit",
+        "copyright": "A Universal Music On Demand release; This Compilation ℗ 2019 Universal Music Operations Limited",
+        "genreNames": [
+          "Dance",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": false,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "100% Clubland Classix",
+        "playParams": {
+          "id": "1461539963",
+          "kind": "album"
+        },
+        "recordLabel": "UMOD (Universal Music On Demand)",
+        "releaseDate": "2019-05-10",
+        "trackCount": 80,
+        "upc": "00600753871560",
+        "url": "https://music.apple.com/gb/album/100-clubland-classix/1461539963"
+      },
+      "url": "https://music.apple.com/gb/album/100-clubland-classix/1461539963"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2019 Warner Music Group - X5 Music Group",
+          "type": "C"
+        },
+        {
+          "text": "2019 Warner Music Group - X5 Music Group",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "842474120965"
+      },
+      "id": "2FjrFfiQrPfATw27EjSPk4",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d1a73f69d4138301cf32c948",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d1a73f69d4138301cf32c948",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d1a73f69d4138301cf32c948",
+          "width": 64
+        }
+      ],
+      "label": "Warner Music Group - X5 Music Group",
+      "popularity": 18,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2019 Warner Music Group - X5 Music Group",
+            "type": "C"
+          },
+          {
+            "text": "2019 Warner Music Group - X5 Music Group",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "842474120965"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2FjrFfiQrPfATw27EjSPk4"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2FjrFfiQrPfATw27EjSPk4?market=US",
+        "id": "2FjrFfiQrPfATw27EjSPk4",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d1a73f69d4138301cf32c948",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d1a73f69d4138301cf32c948",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d1a73f69d4138301cf32c948",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Warner Music Group - X5 Music Group",
+        "name": "Electronic Pop Takeover",
+        "popularity": 18,
+        "release_date": "2019-04-26",
+        "release_date_precision": "day",
+        "total_tracks": 24,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2FjrFfiQrPfATw27EjSPk4/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0lZoBs4Pzo7R89JM9lxwoT"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0lZoBs4Pzo7R89JM9lxwoT",
+                  "id": "0lZoBs4Pzo7R89JM9lxwoT",
+                  "name": "Duran Duran",
+                  "type": "artist",
+                  "uri": "spotify:artist:0lZoBs4Pzo7R89JM9lxwoT"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 243266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5cXMUGAMZSigxhTpPQHB0S"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5cXMUGAMZSigxhTpPQHB0S",
+              "id": "5cXMUGAMZSigxhTpPQHB0S",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Planet Earth",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:5cXMUGAMZSigxhTpPQHB0S"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/27ul3mOdPyXZEtI17EjCWa"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/27ul3mOdPyXZEtI17EjCWa",
+                  "id": "27ul3mOdPyXZEtI17EjCWa",
+                  "name": "Louise",
+                  "type": "artist",
+                  "uri": "spotify:artist:27ul3mOdPyXZEtI17EjCWa"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 195866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3UWjVoSSXL4HOAIv3d3SUB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3UWjVoSSXL4HOAIv3d3SUB",
+              "id": "3UWjVoSSXL4HOAIv3d3SUB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Beautiful Inside - Radio Edit",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3UWjVoSSXL4HOAIv3d3SUB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0z5DFXmhT4ZNzWElsM7V89"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0z5DFXmhT4ZNzWElsM7V89",
+                  "id": "0z5DFXmhT4ZNzWElsM7V89",
+                  "name": "Erasure",
+                  "type": "artist",
+                  "uri": "spotify:artist:0z5DFXmhT4ZNzWElsM7V89"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 175200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/27VMOgH7RB6ugujwd2AZIC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/27VMOgH7RB6ugujwd2AZIC",
+              "id": "27VMOgH7RB6ugujwd2AZIC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stop!",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:27VMOgH7RB6ugujwd2AZIC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5zaXYwewAXedKNCff45U5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5zaXYwewAXedKNCff45U5l",
+                  "id": "5zaXYwewAXedKNCff45U5l",
+                  "name": "Dusty Springfield",
+                  "type": "artist",
+                  "uri": "spotify:artist:5zaXYwewAXedKNCff45U5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 282560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7JmKXBsPgd8O2ySCuAXIoX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7JmKXBsPgd8O2ySCuAXIoX",
+              "id": "7JmKXBsPgd8O2ySCuAXIoX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nothing Has Been Proved",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7JmKXBsPgd8O2ySCuAXIoX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6J1pbNXDK0BTTMCvaO5xPv"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6J1pbNXDK0BTTMCvaO5xPv",
+                  "id": "6J1pbNXDK0BTTMCvaO5xPv",
+                  "name": "Delilah",
+                  "type": "artist",
+                  "uri": "spotify:artist:6J1pbNXDK0BTTMCvaO5xPv"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213104,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0KUX7EoOBIMwVAQWUpeAw2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0KUX7EoOBIMwVAQWUpeAw2",
+              "id": "0KUX7EoOBIMwVAQWUpeAw2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Go",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0KUX7EoOBIMwVAQWUpeAw2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2jzc5TC5TVFLXQlBNiIUzE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2jzc5TC5TVFLXQlBNiIUzE",
+                  "id": "2jzc5TC5TVFLXQlBNiIUzE",
+                  "name": "a-ha",
+                  "type": "artist",
+                  "uri": "spotify:artist:2jzc5TC5TVFLXQlBNiIUzE"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 248200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7t3l0kU4OTZH4hfdVmBk4N"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7t3l0kU4OTZH4hfdVmBk4N",
+              "id": "7t3l0kU4OTZH4hfdVmBk4N",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cry Wolf",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7t3l0kU4OTZH4hfdVmBk4N"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5GGArKyB5Mg7kTFZYJ2P5n"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5GGArKyB5Mg7kTFZYJ2P5n",
+                  "id": "5GGArKyB5Mg7kTFZYJ2P5n",
+                  "name": "Kim Appleby",
+                  "type": "artist",
+                  "uri": "spotify:artist:5GGArKyB5Mg7kTFZYJ2P5n"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 204266,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/789AZvHFWbjFnHBqCc3fk2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/789AZvHFWbjFnHBqCc3fk2",
+              "id": "789AZvHFWbjFnHBqCc3fk2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "G.L.A.D.",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:789AZvHFWbjFnHBqCc3fk2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1G1mX30GpUJqOr1QU2eBSs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1G1mX30GpUJqOr1QU2eBSs",
+                  "id": "1G1mX30GpUJqOr1QU2eBSs",
+                  "name": "Yazoo",
+                  "type": "artist",
+                  "uri": "spotify:artist:1G1mX30GpUJqOr1QU2eBSs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3AjRw2oqXDszYCtXOQYnfj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3AjRw2oqXDszYCtXOQYnfj",
+              "id": "3AjRw2oqXDszYCtXOQYnfj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Goodbye Seventies",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3AjRw2oqXDszYCtXOQYnfj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zYGAXxAaq15C9eM29M8Fj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zYGAXxAaq15C9eM29M8Fj",
+                  "id": "7zYGAXxAaq15C9eM29M8Fj",
+                  "name": "Eternal",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zYGAXxAaq15C9eM29M8Fj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1SZPnD3BVHxWvMS9nvTBqE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1SZPnD3BVHxWvMS9nvTBqE",
+              "id": "1SZPnD3BVHxWvMS9nvTBqE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stay - 7'' Mix",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:1SZPnD3BVHxWvMS9nvTBqE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7AvR99Z6y7N5BWF7VdY3bo"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7AvR99Z6y7N5BWF7VdY3bo",
+                  "id": "7AvR99Z6y7N5BWF7VdY3bo",
+                  "name": "Dollar",
+                  "type": "artist",
+                  "uri": "spotify:artist:7AvR99Z6y7N5BWF7VdY3bo"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 201959,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1EItwJ6sUnprYAjAv5saNF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1EItwJ6sUnprYAjAv5saNF",
+              "id": "1EItwJ6sUnprYAjAv5saNF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hand Held In Black and White",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1EItwJ6sUnprYAjAv5saNF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1KsASRNugxU85T0u6zSg32"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1KsASRNugxU85T0u6zSg32",
+                  "id": "1KsASRNugxU85T0u6zSg32",
+                  "name": "Tori Amos",
+                  "type": "artist",
+                  "uri": "spotify:artist:1KsASRNugxU85T0u6zSg32"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2tVy3hFjlqfPa5P815fFY3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2tVy3hFjlqfPa5P815fFY3",
+              "id": "2tVy3hFjlqfPa5P815fFY3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Riot Proof",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2tVy3hFjlqfPa5P815fFY3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/066X20Nz7iquqkkCW6Jxy6"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/066X20Nz7iquqkkCW6Jxy6",
+                  "id": "066X20Nz7iquqkkCW6Jxy6",
+                  "name": "LCD Soundsystem",
+                  "type": "artist",
+                  "uri": "spotify:artist:066X20Nz7iquqkkCW6Jxy6"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 411084,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2xyx0kcrClWyHEWOwbUmtj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2xyx0kcrClWyHEWOwbUmtj",
+              "id": "2xyx0kcrClWyHEWOwbUmtj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Daft Punk Is Playing at My House - Soulwax Shibuya Mix",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:2xyx0kcrClWyHEWOwbUmtj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3qwabfaWewpfli7hMNM3O8"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3qwabfaWewpfli7hMNM3O8",
+                  "id": "3qwabfaWewpfli7hMNM3O8",
+                  "name": "Róisín Murphy",
+                  "type": "artist",
+                  "uri": "spotify:artist:3qwabfaWewpfli7hMNM3O8"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 308106,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0v5qDEk2zM5qBwTEtyYy9M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0v5qDEk2zM5qBwTEtyYy9M",
+              "id": "0v5qDEk2zM5qBwTEtyYy9M",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Overpowered",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0v5qDEk2zM5qBwTEtyYy9M"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1PXHzxRDiLnjqNrRn2Xbsa"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1PXHzxRDiLnjqNrRn2Xbsa",
+                  "id": "1PXHzxRDiLnjqNrRn2Xbsa",
+                  "name": "Underworld",
+                  "type": "artist",
+                  "uri": "spotify:artist:1PXHzxRDiLnjqNrRn2Xbsa"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 209537,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5ZhRhOlCTU1Nwzlrgkoyuc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5ZhRhOlCTU1Nwzlrgkoyuc",
+              "id": "5ZhRhOlCTU1Nwzlrgkoyuc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Change the Weather",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:5ZhRhOlCTU1Nwzlrgkoyuc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6bWxFw65IEJzBYjx3SxUXd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6bWxFw65IEJzBYjx3SxUXd",
+                  "id": "6bWxFw65IEJzBYjx3SxUXd",
+                  "name": "Morcheeba",
+                  "type": "artist",
+                  "uri": "spotify:artist:6bWxFw65IEJzBYjx3SxUXd"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 331626,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/51ysC8X9C9mZEWYhwgeAIy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/51ysC8X9C9mZEWYhwgeAIy",
+              "id": "51ysC8X9C9mZEWYhwgeAIy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Trigger Hippie",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:51ysC8X9C9mZEWYhwgeAIy"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2HMuzFmTtwL4ur1zJNCU7f"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2HMuzFmTtwL4ur1zJNCU7f",
+                  "id": "2HMuzFmTtwL4ur1zJNCU7f",
+                  "name": "Arcadia",
+                  "type": "artist",
+                  "uri": "spotify:artist:2HMuzFmTtwL4ur1zJNCU7f"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 263373,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Zw0aiWYcNkU3UBfCTTKaL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Zw0aiWYcNkU3UBfCTTKaL",
+              "id": "2Zw0aiWYcNkU3UBfCTTKaL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Flame",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:2Zw0aiWYcNkU3UBfCTTKaL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HP4SpcujgIKC6tHBwfy42"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HP4SpcujgIKC6tHBwfy42",
+                  "id": "5HP4SpcujgIKC6tHBwfy42",
+                  "name": "Hazell Dean",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HP4SpcujgIKC6tHBwfy42"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 257733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5vLx5HVkksvJQCWY9Mq2BA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5vLx5HVkksvJQCWY9Mq2BA",
+              "id": "5vLx5HVkksvJQCWY9Mq2BA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Walk In My Shoes",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:5vLx5HVkksvJQCWY9Mq2BA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5ZBQea34QfBgEDkcGEKK2b"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5ZBQea34QfBgEDkcGEKK2b",
+                  "id": "5ZBQea34QfBgEDkcGEKK2b",
+                  "name": "Late of the Pier",
+                  "type": "artist",
+                  "uri": "spotify:artist:5ZBQea34QfBgEDkcGEKK2b"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 195706,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2HFog6sDIEBOCXYHlrXMB0"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2HFog6sDIEBOCXYHlrXMB0",
+              "id": "2HFog6sDIEBOCXYHlrXMB0",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Focker",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:2HFog6sDIEBOCXYHlrXMB0"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/73nwTQUc9kA9vqGzGPsMkA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/73nwTQUc9kA9vqGzGPsMkA",
+                  "id": "73nwTQUc9kA9vqGzGPsMkA",
+                  "name": "The Egg",
+                  "type": "artist",
+                  "uri": "spotify:artist:73nwTQUc9kA9vqGzGPsMkA"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 359133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1C4bccAErGhNyds1uhxCtB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1C4bccAErGhNyds1uhxCtB",
+              "id": "1C4bccAErGhNyds1uhxCtB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Get Some Money to Get Her",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:1C4bccAErGhNyds1uhxCtB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3JXnjuv4hBqQKOVzJg74Lt"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3JXnjuv4hBqQKOVzJg74Lt",
+                  "id": "3JXnjuv4hBqQKOVzJg74Lt",
+                  "name": "Army Of Lovers",
+                  "type": "artist",
+                  "uri": "spotify:artist:3JXnjuv4hBqQKOVzJg74Lt"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 207200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1gxm9YNwduVPSZ5yxxWTYZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1gxm9YNwduVPSZ5yxxWTYZ",
+              "id": "1gxm9YNwduVPSZ5yxxWTYZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "My Army of Lovers",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:1gxm9YNwduVPSZ5yxxWTYZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zUgfhtNGSNLMl2ydFse4S"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zUgfhtNGSNLMl2ydFse4S",
+                  "id": "7zUgfhtNGSNLMl2ydFse4S",
+                  "name": "B-Movie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zUgfhtNGSNLMl2ydFse4S"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 245413,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/20U3YxaKyr2OvZDPqDyLRw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/20U3YxaKyr2OvZDPqDyLRw",
+              "id": "20U3YxaKyr2OvZDPqDyLRw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Remembrance Day",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:20U3YxaKyr2OvZDPqDyLRw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0ow8F3xGkmZWVulTtaiFQo"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0ow8F3xGkmZWVulTtaiFQo",
+                  "id": "0ow8F3xGkmZWVulTtaiFQo",
+                  "name": "Book Of Love",
+                  "type": "artist",
+                  "uri": "spotify:artist:0ow8F3xGkmZWVulTtaiFQo"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 222266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2c4pgIs2rUtBbnktq5i2UV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2c4pgIs2rUtBbnktq5i2UV",
+              "id": "2c4pgIs2rUtBbnktq5i2UV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Alice Everyday",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:2c4pgIs2rUtBbnktq5i2UV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3b9QzhoFXqivyGnDndJFIl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3b9QzhoFXqivyGnDndJFIl",
+                  "id": "3b9QzhoFXqivyGnDndJFIl",
+                  "name": "Babble",
+                  "type": "artist",
+                  "uri": "spotify:artist:3b9QzhoFXqivyGnDndJFIl"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 382440,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7KwSZH7VhgdpDZRbimO1BU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7KwSZH7VhgdpDZRbimO1BU",
+              "id": "7KwSZH7VhgdpDZRbimO1BU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Beautiful",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:7KwSZH7VhgdpDZRbimO1BU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5B9MfAU2KZlyvsofev6XXR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5B9MfAU2KZlyvsofev6XXR",
+                  "id": "5B9MfAU2KZlyvsofev6XXR",
+                  "name": "Kissing The Pink",
+                  "type": "artist",
+                  "uri": "spotify:artist:5B9MfAU2KZlyvsofev6XXR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 206000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Jp8BlRFaCtZJd9pXJ1DYB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Jp8BlRFaCtZJd9pXJ1DYB",
+              "id": "2Jp8BlRFaCtZJd9pXJ1DYB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Last Film",
+              "preview_url": null,
+              "track_number": 24,
+              "type": "track",
+              "uri": "spotify:track:2Jp8BlRFaCtZJd9pXJ1DYB"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 24
+        },
+        "type": "album",
+        "uri": "spotify:album:2FjrFfiQrPfATw27EjSPk4"
+      },
+      "release_date": "2019-04-26",
+      "release_date_precision": "day",
+      "total_tracks": 24,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0lZoBs4Pzo7R89JM9lxwoT",
+              "name": "Duran Duran"
+            }
+          ],
+          "duration_ms": 243266,
+          "explicit": false,
+          "id": "5cXMUGAMZSigxhTpPQHB0S",
+          "name": "Planet Earth",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "27ul3mOdPyXZEtI17EjCWa",
+              "name": "Louise"
+            }
+          ],
+          "duration_ms": 195866,
+          "explicit": false,
+          "id": "3UWjVoSSXL4HOAIv3d3SUB",
+          "name": "Beautiful Inside - Radio Edit",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0z5DFXmhT4ZNzWElsM7V89",
+              "name": "Erasure"
+            }
+          ],
+          "duration_ms": 175200,
+          "explicit": false,
+          "id": "27VMOgH7RB6ugujwd2AZIC",
+          "name": "Stop!",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5zaXYwewAXedKNCff45U5l",
+              "name": "Dusty Springfield"
+            }
+          ],
+          "duration_ms": 282560,
+          "explicit": false,
+          "id": "7JmKXBsPgd8O2ySCuAXIoX",
+          "name": "Nothing Has Been Proved",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "6J1pbNXDK0BTTMCvaO5xPv",
+              "name": "Delilah"
+            }
+          ],
+          "duration_ms": 213104,
+          "explicit": false,
+          "id": "0KUX7EoOBIMwVAQWUpeAw2",
+          "name": "Go",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2jzc5TC5TVFLXQlBNiIUzE",
+              "name": "a-ha"
+            }
+          ],
+          "duration_ms": 248200,
+          "explicit": false,
+          "id": "7t3l0kU4OTZH4hfdVmBk4N",
+          "name": "Cry Wolf",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5GGArKyB5Mg7kTFZYJ2P5n",
+              "name": "Kim Appleby"
+            }
+          ],
+          "duration_ms": 204266,
+          "explicit": true,
+          "id": "789AZvHFWbjFnHBqCc3fk2",
+          "name": "G.L.A.D.",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "1G1mX30GpUJqOr1QU2eBSs",
+              "name": "Yazoo"
+            }
+          ],
+          "duration_ms": 153333,
+          "explicit": false,
+          "id": "3AjRw2oqXDszYCtXOQYnfj",
+          "name": "Goodbye Seventies",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "7zYGAXxAaq15C9eM29M8Fj",
+              "name": "Eternal"
+            }
+          ],
+          "duration_ms": 240973,
+          "explicit": false,
+          "id": "1SZPnD3BVHxWvMS9nvTBqE",
+          "name": "Stay - 7'' Mix",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "7AvR99Z6y7N5BWF7VdY3bo",
+              "name": "Dollar"
+            }
+          ],
+          "duration_ms": 201959,
+          "explicit": false,
+          "id": "1EItwJ6sUnprYAjAv5saNF",
+          "name": "Hand Held In Black and White",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "1KsASRNugxU85T0u6zSg32",
+              "name": "Tori Amos"
+            }
+          ],
+          "duration_ms": 208426,
+          "explicit": false,
+          "id": "2tVy3hFjlqfPa5P815fFY3",
+          "name": "Riot Proof",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "066X20Nz7iquqkkCW6Jxy6",
+              "name": "LCD Soundsystem"
+            }
+          ],
+          "duration_ms": 411084,
+          "explicit": false,
+          "id": "2xyx0kcrClWyHEWOwbUmtj",
+          "name": "Daft Punk Is Playing at My House - Soulwax Shibuya Mix",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "3qwabfaWewpfli7hMNM3O8",
+              "name": "Róisín Murphy"
+            }
+          ],
+          "duration_ms": 308106,
+          "explicit": false,
+          "id": "0v5qDEk2zM5qBwTEtyYy9M",
+          "name": "Overpowered",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "1PXHzxRDiLnjqNrRn2Xbsa",
+              "name": "Underworld"
+            }
+          ],
+          "duration_ms": 209537,
+          "explicit": false,
+          "id": "5ZhRhOlCTU1Nwzlrgkoyuc",
+          "name": "Change the Weather",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "6bWxFw65IEJzBYjx3SxUXd",
+              "name": "Morcheeba"
+            }
+          ],
+          "duration_ms": 331626,
+          "explicit": false,
+          "id": "51ysC8X9C9mZEWYhwgeAIy",
+          "name": "Trigger Hippie",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "2HMuzFmTtwL4ur1zJNCU7f",
+              "name": "Arcadia"
+            }
+          ],
+          "duration_ms": 263373,
+          "explicit": false,
+          "id": "2Zw0aiWYcNkU3UBfCTTKaL",
+          "name": "The Flame",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "5HP4SpcujgIKC6tHBwfy42",
+              "name": "Hazell Dean"
+            }
+          ],
+          "duration_ms": 257733,
+          "explicit": false,
+          "id": "5vLx5HVkksvJQCWY9Mq2BA",
+          "name": "Walk In My Shoes",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "5ZBQea34QfBgEDkcGEKK2b",
+              "name": "Late of the Pier"
+            }
+          ],
+          "duration_ms": 195706,
+          "explicit": false,
+          "id": "2HFog6sDIEBOCXYHlrXMB0",
+          "name": "Focker",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "73nwTQUc9kA9vqGzGPsMkA",
+              "name": "The Egg"
+            }
+          ],
+          "duration_ms": 359133,
+          "explicit": false,
+          "id": "1C4bccAErGhNyds1uhxCtB",
+          "name": "Get Some Money to Get Her",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "3JXnjuv4hBqQKOVzJg74Lt",
+              "name": "Army Of Lovers"
+            }
+          ],
+          "duration_ms": 207200,
+          "explicit": false,
+          "id": "1gxm9YNwduVPSZ5yxxWTYZ",
+          "name": "My Army of Lovers",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "7zUgfhtNGSNLMl2ydFse4S",
+              "name": "B-Movie"
+            }
+          ],
+          "duration_ms": 245413,
+          "explicit": false,
+          "id": "20U3YxaKyr2OvZDPqDyLRw",
+          "name": "Remembrance Day",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "0ow8F3xGkmZWVulTtaiFQo",
+              "name": "Book Of Love"
+            }
+          ],
+          "duration_ms": 222266,
+          "explicit": false,
+          "id": "2c4pgIs2rUtBbnktq5i2UV",
+          "name": "Alice Everyday",
+          "preview_url": null,
+          "track_number": 22
+        },
+        {
+          "artists": [
+            {
+              "id": "3b9QzhoFXqivyGnDndJFIl",
+              "name": "Babble"
+            }
+          ],
+          "duration_ms": 382440,
+          "explicit": false,
+          "id": "7KwSZH7VhgdpDZRbimO1BU",
+          "name": "Beautiful",
+          "preview_url": null,
+          "track_number": 23
+        },
+        {
+          "artists": [
+            {
+              "id": "5B9MfAU2KZlyvsofev6XXR",
+              "name": "Kissing The Pink"
+            }
+          ],
+          "duration_ms": 206000,
+          "explicit": false,
+          "id": "2Jp8BlRFaCtZJd9pXJ1DYB",
+          "name": "The Last Film",
+          "preview_url": null,
+          "track_number": 24
+        }
+      ],
+      "url": "https://open.spotify.com/album/2FjrFfiQrPfATw27EjSPk4"
+    }
+  },
+  "spotify_id": "2FjrFfiQrPfATw27EjSPk4",
+  "spotify_url": "https://open.spotify.com/album/2FjrFfiQrPfATw27EjSPk4",
   "styles": [
     "Synth-pop",
     "New Wave",
@@ -686,6 +1879,6 @@
       "title": "I'm In Love With A German Film Star"
     }
   ],
-  "updated_at": "2025-07-07T14:55:46.018839",
+  "updated_at": "2025-07-09T09:04:36.735646",
   "year": 2019
 }

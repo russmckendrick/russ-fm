@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "907948682",
+  "apple_music_url": "https://music.apple.com/gb/album/daisy/907948682",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T15:30:02.662438",
+  "created_at": "2025-07-09T09:04:33.909152",
   "date_added": "2019-08-31T19:56:00-07:00",
   "discogs_id": "14069939",
   "discogs_url": "https://www.discogs.com/release/14069939-Various-The-Daisy-Age",
@@ -79,8 +79,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/the-daisy-age-14069939/the-daisy-age-14069939.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/02/bb/d4/02bbd4b4-72ad-2f7a-0b02-2c77911bec48/888174968834.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -97,17 +97,62 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T15:30:12.804935",
+    "processed_at": "2025-07-09T09:04:35.028063",
     "services_used": [
       "discogs",
+      "apple_music",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Daisy",
   "release_name_discogs": "The Daisy Age",
   "release_name_spotify": null,
   "released": "2019-08-30",
-  "services": {},
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/02/bb/d4/02bbd4b4-72ad-2f7a-0b02-2c77911bec48/888174968834.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2014 Lackpro",
+      "editorial_notes": null,
+      "id": "907948682",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "0a0d11",
+          "height": 1400,
+          "textColor1": "f6f5e2",
+          "textColor2": "f8eecc",
+          "textColor3": "c7c7b8",
+          "textColor4": "c8c1a7",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/02/bb/d4/02bbd4b4-72ad-2f7a-0b02-2c77911bec48/888174968834.jpg/{w}x{h}bb.jpg",
+          "width": 1400
+        },
+        "copyright": "℗ 2014 Lackpro",
+        "genreNames": [
+          "New Age",
+          "Music",
+          "Rock"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Daisy",
+        "playParams": {
+          "id": "907948682",
+          "kind": "album"
+        },
+        "recordLabel": "Lackpro Records",
+        "releaseDate": "2014-10-31",
+        "trackCount": 13,
+        "upc": "888174968834",
+        "url": "https://music.apple.com/gb/album/daisy/907948682"
+      },
+      "url": "https://music.apple.com/gb/album/daisy/907948682"
+    }
+  },
   "spotify_id": null,
   "spotify_url": null,
   "styles": [
@@ -545,6 +590,6 @@
       "title": "You're Not Coming Home (Mase's Funkay Recall Mix)"
     }
   ],
-  "updated_at": "2025-07-07T15:30:11.884351",
+  "updated_at": "2025-07-09T09:04:34.632785",
   "year": 2019
 }

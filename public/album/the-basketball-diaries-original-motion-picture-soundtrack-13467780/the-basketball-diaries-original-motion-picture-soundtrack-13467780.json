@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1454449430",
+  "apple_music_url": "https://music.apple.com/gb/album/the-wizard-of-oz-original-motion-picture-soundtrack/1454449430",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-05T20:37:53.060643",
+  "created_at": "2025-07-09T09:08:26.918858",
   "date_added": "2019-04-24T16:42:59-07:00",
   "discogs_id": "13467780",
   "discogs_url": "https://www.discogs.com/release/13467780-Various-The-Basketball-Diaries-Original-Motion-Picture-Soundtrack",
@@ -101,8 +101,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://m.media-amazon.com/images/I/51IyRAnEEZL._UF1000,1000_QL80_.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/71/aa/d9/71aad9a3-1b8f-1347-0d88-f2e170b46332/794043158827.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -120,19 +120,393 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T20:37:57.637860",
+    "processed_at": "2025-07-09T09:08:28.829680",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "The Wizard of Oz (Original Motion Picture Soundtrack)",
   "release_name_discogs": "The Basketball Diaries (Original Motion Picture Soundtrack)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Battle of the Bands (From \"Amphibia\")",
   "released": "2019-04-13",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/71/aa/d9/71aad9a3-1b8f-1347-0d88-f2e170b46332/794043158827.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 1995 This compilation WaterTower Music as licensee for Turner Entertainment Co.",
+      "editorial_notes": null,
+      "id": "1454449430",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "480101",
+          "height": 1425,
+          "textColor1": "fce57c",
+          "textColor2": "f18b51",
+          "textColor3": "d8b763",
+          "textColor4": "cf7041",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/71/aa/d9/71aad9a3-1b8f-1347-0d88-f2e170b46332/794043158827.jpg/{w}x{h}bb.jpg",
+          "width": 1425
+        },
+        "copyright": "℗ 1995 This compilation WaterTower Music as licensee for Turner Entertainment Co.",
+        "genreNames": [
+          "Soundtrack",
+          "Music"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "The Wizard of Oz (Original Motion Picture Soundtrack)",
+        "playParams": {
+          "id": "1454449430",
+          "kind": "album"
+        },
+        "recordLabel": "WaterTower Music",
+        "releaseDate": "1939-08-25",
+        "trackCount": 26,
+        "upc": "794043158827",
+        "url": "https://music.apple.com/gb/album/the-wizard-of-oz-original-motion-picture-soundtrack/1454449430"
+      },
+      "url": "https://music.apple.com/gb/album/the-wizard-of-oz-original-motion-picture-soundtrack/1454449430"
+    },
+    "spotify": {
+      "album_type": "single",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2021 Disney",
+          "type": "C"
+        },
+        {
+          "text": "℗ 2021 Walt Disney Records",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "00050087480790"
+      },
+      "id": "4Yf1dpX0HRQHj98XWKZz2i",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273c3f9d030cfd5b4e5b7bcbf9d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02c3f9d030cfd5b4e5b7bcbf9d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851c3f9d030cfd5b4e5b7bcbf9d",
+          "width": 64
+        }
+      ],
+      "label": "Walt Disney Records",
+      "popularity": 33,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2021 Disney",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2021 Walt Disney Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "00050087480790"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4Yf1dpX0HRQHj98XWKZz2i"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4Yf1dpX0HRQHj98XWKZz2i?market=US",
+        "id": "4Yf1dpX0HRQHj98XWKZz2i",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c3f9d030cfd5b4e5b7bcbf9d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c3f9d030cfd5b4e5b7bcbf9d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c3f9d030cfd5b4e5b7bcbf9d",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Walt Disney Records",
+        "name": "Battle of the Bands (From \"Amphibia\")",
+        "popularity": 33,
+        "release_date": "2021-04-23",
+        "release_date_precision": "day",
+        "total_tracks": 4,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4Yf1dpX0HRQHj98XWKZz2i/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0YSxCnmIwDDphTykhROUWe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0YSxCnmIwDDphTykhROUWe",
+                  "id": "0YSxCnmIwDDphTykhROUWe",
+                  "name": "Anna Akana",
+                  "type": "artist",
+                  "uri": "spotify:artist:0YSxCnmIwDDphTykhROUWe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 98899,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2jjNCDLZoljRG90Rel7J73"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2jjNCDLZoljRG90Rel7J73",
+              "id": "2jjNCDLZoljRG90Rel7J73",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Heartstomper",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2jjNCDLZoljRG90Rel7J73"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6RgqX09WBDoNbLMJesEn4J"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6RgqX09WBDoNbLMJesEn4J",
+                  "id": "6RgqX09WBDoNbLMJesEn4J",
+                  "name": "Brenda Song",
+                  "type": "artist",
+                  "uri": "spotify:artist:6RgqX09WBDoNbLMJesEn4J"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gARPJrcFdfGVsk9StXNUA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gARPJrcFdfGVsk9StXNUA",
+                  "id": "5gARPJrcFdfGVsk9StXNUA",
+                  "name": "Haley Tju",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gARPJrcFdfGVsk9StXNUA"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0YSxCnmIwDDphTykhROUWe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0YSxCnmIwDDphTykhROUWe",
+                  "id": "0YSxCnmIwDDphTykhROUWe",
+                  "name": "Anna Akana",
+                  "type": "artist",
+                  "uri": "spotify:artist:0YSxCnmIwDDphTykhROUWe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 86066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2f0pumAUWjG9ZT40OSsHc7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2f0pumAUWjG9ZT40OSsHc7",
+              "id": "2f0pumAUWjG9ZT40OSsHc7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "No Big Deal",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2f0pumAUWjG9ZT40OSsHc7"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5bLTnNI4spbwjoqlWxGVkd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5bLTnNI4spbwjoqlWxGVkd",
+                  "id": "5bLTnNI4spbwjoqlWxGVkd",
+                  "name": "TJ Hill",
+                  "type": "artist",
+                  "uri": "spotify:artist:5bLTnNI4spbwjoqlWxGVkd"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5wiXRfAZsEGavmOOYY3k5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5wiXRfAZsEGavmOOYY3k5l",
+                  "id": "5wiXRfAZsEGavmOOYY3k5l",
+                  "name": "Todd McClintock",
+                  "type": "artist",
+                  "uri": "spotify:artist:5wiXRfAZsEGavmOOYY3k5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 98899,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Uznjf9jjFXngElrCCLbR3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Uznjf9jjFXngElrCCLbR3",
+              "id": "3Uznjf9jjFXngElrCCLbR3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Heartstomper - Instrumental",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:3Uznjf9jjFXngElrCCLbR3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Bnr1jTJsvgnudk2OkD6di"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Bnr1jTJsvgnudk2OkD6di",
+                  "id": "2Bnr1jTJsvgnudk2OkD6di",
+                  "name": "Adam Gubman",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Bnr1jTJsvgnudk2OkD6di"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 86066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3RqV7xdhV3mIBdxi0G3emy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3RqV7xdhV3mIBdxi0G3emy",
+              "id": "3RqV7xdhV3mIBdxi0G3emy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "No Big Deal - Instrumental",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3RqV7xdhV3mIBdxi0G3emy"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 4
+        },
+        "type": "album",
+        "uri": "spotify:album:4Yf1dpX0HRQHj98XWKZz2i"
+      },
+      "release_date": "2021-04-23",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0YSxCnmIwDDphTykhROUWe",
+              "name": "Anna Akana"
+            }
+          ],
+          "duration_ms": 98899,
+          "explicit": false,
+          "id": "2jjNCDLZoljRG90Rel7J73",
+          "name": "Heartstomper",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "6RgqX09WBDoNbLMJesEn4J",
+              "name": "Brenda Song"
+            },
+            {
+              "id": "5gARPJrcFdfGVsk9StXNUA",
+              "name": "Haley Tju"
+            },
+            {
+              "id": "0YSxCnmIwDDphTykhROUWe",
+              "name": "Anna Akana"
+            }
+          ],
+          "duration_ms": 86066,
+          "explicit": false,
+          "id": "2f0pumAUWjG9ZT40OSsHc7",
+          "name": "No Big Deal",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5bLTnNI4spbwjoqlWxGVkd",
+              "name": "TJ Hill"
+            },
+            {
+              "id": "5wiXRfAZsEGavmOOYY3k5l",
+              "name": "Todd McClintock"
+            }
+          ],
+          "duration_ms": 98899,
+          "explicit": false,
+          "id": "3Uznjf9jjFXngElrCCLbR3",
+          "name": "Heartstomper - Instrumental",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "2Bnr1jTJsvgnudk2OkD6di",
+              "name": "Adam Gubman"
+            }
+          ],
+          "duration_ms": 86066,
+          "explicit": false,
+          "id": "3RqV7xdhV3mIBdxi0G3emy",
+          "name": "No Big Deal - Instrumental",
+          "preview_url": null,
+          "track_number": 4
+        }
+      ],
+      "url": "https://open.spotify.com/album/4Yf1dpX0HRQHj98XWKZz2i"
+    }
+  },
+  "spotify_id": "4Yf1dpX0HRQHj98XWKZz2i",
+  "spotify_url": "https://open.spotify.com/album/4Yf1dpX0HRQHj98XWKZz2i",
   "styles": [
     "Soundtrack",
     "Alternative Rock"
@@ -473,6 +847,6 @@
       "title": "Blind Dogs"
     }
   ],
-  "updated_at": "2025-07-05T20:37:57.512529",
+  "updated_at": "2025-07-09T09:08:28.071712",
   "year": 2019
 }
