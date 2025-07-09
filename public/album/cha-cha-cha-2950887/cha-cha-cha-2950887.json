@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "Fernando del Valle is an American operatic tenor. He is the son of Edward King Skinner II, a Korean War veteran and Concha Marina Meléndez del Valle the cousin of George Melendez Wright. He is the grandson of Aranka Bischitz great-great-granddaughter of Baroness Johanna Bischitz von Heves and niece of Hungarian radiochemist and Nobel Prize in Chemistry laureate George de Hevesy. He is the nephew of the Architect Manuel Roberto Meléndez Bischitz.",
       "discogs_id": "5248526",
       "discogs_original_name": "Carmen & Fernando Del Valle & Their Orchestra",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Carmen & Fernando Del Valle & Their Orchestra",
       "role": "",
       "spotify_id": "3599skkAcvsaVqrb7RzBa2",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Fernando_del_Valle"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Carmen & Fernando Del Valle & Their Orchestra": {
+      "biography": "Fernando del Valle is an American operatic tenor. He is the son of Edward King Skinner II, a Korean War veteran and Concha Marina Meléndez del Valle the cousin of George Melendez Wright. He is the grandson of Aranka Bischitz great-great-granddaughter of Baroness Johanna Bischitz von Heves and niece of Hungarian radiochemist and Nobel Prize in Chemistry laureate George de Hevesy. He is the nephew of the Architect Manuel Roberto Meléndez Bischitz.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Fernando_del_Valle"
+    }
+  },
   "country": "UK",
-  "created_at": "2025-07-05T16:06:15.723867",
+  "created_at": "2025-07-09T08:54:21.685695",
   "date_added": "2020-08-02T13:44:22-07:00",
   "discogs_id": "2950887",
   "discogs_url": "https://www.discogs.com/release/2950887-Carmen-Fernando-Del-Valle-and-their-Orchestra-Cha-Cha-Cha",
@@ -65,17 +70,18 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-hi-res.jpg",
-    "medium": "public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-medium.jpg",
-    "small": "public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-small.jpg"
+    "hi-res": "../public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-hi-res.jpg",
+    "medium": "../public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-medium.jpg",
+    "small": "../public/album/cha-cha-cha-2950887/cha-cha-cha-2950887-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:06:19.659925",
+    "processed_at": "2025-07-09T08:54:23.846958",
     "services_used": [
       "discogs",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -697,6 +703,6 @@
       "title": "Piccadilly Cha Cha"
     }
   ],
-  "updated_at": "2025-07-05T16:06:19.525146",
+  "updated_at": "2025-07-09T08:54:22.928318",
   "year": 1964
 }
