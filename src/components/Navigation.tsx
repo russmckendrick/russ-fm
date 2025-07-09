@@ -86,13 +86,12 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   </Link>
                   <Link 
                     to="/random" 
-                    className={`text-sm font-medium transition-colors hover:text-primary flex items-center gap-1 ${
+                    className={`text-sm font-medium transition-colors hover:text-primary ${
                       location.pathname === '/random' 
                         ? 'text-foreground' 
                         : 'text-muted-foreground'
                     }`}
                   >
-                    <Shuffle className="h-4 w-4" />
                     Random
                   </Link>
                 </div>
@@ -183,13 +182,12 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   <Link
                     to="/random"
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
                       location.pathname === '/random'
                         ? 'text-foreground bg-muted'
                         : 'text-muted-foreground'
                     }`}
                   >
-                    <Shuffle className="h-4 w-4" />
                     Random
                   </Link>
                 </div>

@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Cherry } from 'lucide-react';
-import './RandomPage.css';
+import { Shuffle, RefreshCw } from 'lucide-react';
 
 interface Album {
   release_name: string;
@@ -27,56 +26,75 @@ interface Album {
 }
 
 export function RandomPage() {
-  const [currentAlbums, setCurrentAlbums] = useState<Album[]>([]);
+  const [randomAlbums, setRandomAlbums] = useState<Album[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isSpinning, setIsSpinning] = useState(false);
+  const [isShuffling, setIsShuffling] = useState(false);
   const [allAlbums, setAllAlbums] = useState<Album[]>([]);
-  const [reelPositions, setReelPositions] = useState([0, 0, 0]);
+  const [albumVisibility, setAlbumVisibility] = useState([true, true, true]);
 
   const loadCollection = async () => {
     try {
       const response = await fetch('/collection.json');
       const albums: Album[] = await response.json();
       setAllAlbums(albums);
-      // Get initial random albums
-      const initial = getRandomSelection(albums, 3);
-      setCurrentAlbums(initial);
-      setIsLoading(false);
+      loadInitialAlbums(albums);
     } catch (error) {
       console.error('Error loading collection:', error);
       setIsLoading(false);
     }
   };
 
-  const getRandomSelection = (albums: Album[], count: number): Album[] => {
+  const getRandomAlbums = (albums: Album[]): Album[] => {
     const shuffled = [...albums].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, count);
+    return shuffled.slice(0, 3);
+  };
+
+  const loadInitialAlbums = (albums: Album[]) => {
+    const selected = getRandomAlbums(albums);
+    setRandomAlbums(selected);
+    setIsLoading(false);
   };
 
   useEffect(() => {
     loadCollection();
   }, []);
 
-  const handleSpin = () => {
-    if (allAlbums.length > 0 && !isSpinning) {
-      setIsSpinning(true);
+  const handleShuffle = () => {
+    if (allAlbums.length > 0) {
+      setIsShuffling(true);
       
-      // Calculate random spins for each reel
-      const spins = [
-        Math.floor(Math.random() * 5) + 10, // 10-14 rotations
-        Math.floor(Math.random() * 5) + 12, // 12-16 rotations
-        Math.floor(Math.random() * 5) + 14, // 14-18 rotations
-      ];
+      // Create random order for albums to change
+      const randomOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
       
-      setReelPositions(spins);
+      // Fade out albums in random order
+      randomOrder.forEach((index, orderIndex) => {
+        setTimeout(() => {
+          setAlbumVisibility(prev => {
+            const newVisibility = [...prev];
+            newVisibility[index] = false;
+            return newVisibility;
+          });
+        }, orderIndex * 150); // 150ms delay between each album
+      });
       
-      // After animation completes, update albums
+      // After all albums fade out, get new albums
       setTimeout(() => {
-        const newAlbums = getRandomSelection(allAlbums, 3);
-        setCurrentAlbums(newAlbums);
-        setReelPositions([0, 0, 0]);
-        setIsSpinning(false);
-      }, 3000);
+        const newAlbums = getRandomAlbums(allAlbums);
+        setRandomAlbums(newAlbums);
+        
+        // Fade in new albums in the same random order
+        randomOrder.forEach((index, orderIndex) => {
+          setTimeout(() => {
+            setAlbumVisibility(prev => {
+              const newVisibility = [...prev];
+              newVisibility[index] = true;
+              return newVisibility;
+            });
+          }, orderIndex * 150);
+        });
+        
+        setIsShuffling(false);
+      }, randomOrder.length * 150 + 100); // Wait for all to fade out plus a small buffer
     }
   };
 
@@ -84,121 +102,77 @@ export function RandomPage() {
     return album.uri_release.replace('/album/', '').replace('/', '');
   };
 
-  // Generate multiple album copies for smooth spinning
-  const getReelAlbums = (index: number) => {
-    if (!currentAlbums[index]) return [];
-    
-    // Create array with multiple copies for seamless spinning
-    const album = currentAlbums[index];
-    return Array(20).fill(album);
-  };
-
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Slot Machine Header */}
+      {/* Header */}
       <div className="text-center mb-12">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <Cherry className="h-8 w-8 text-primary" />
-          <h1 className="text-4xl font-bold">Album Slot Machine</h1>
-          <Cherry className="h-8 w-8 text-primary" />
-        </div>
-        <p className="text-xl text-muted-foreground mb-8">
-          Pull the lever and let fate choose your next listen!
-        </p>
+        <h1 className="text-4xl font-bold mb-8">Random Albums</h1>
+        
+        <Button 
+          onClick={handleShuffle}
+          size="lg"
+          className="gap-2"
+          disabled={isShuffling || isLoading}
+        >
+          {isShuffling ? (
+            <>
+              <RefreshCw className="h-5 w-5 animate-spin" />
+              Shuffling...
+            </>
+          ) : (
+            <>
+              <Shuffle className="h-5 w-5" />
+              Shuffle
+            </>
+          )}
+        </Button>
       </div>
 
-      {/* Slot Machine Container */}
-      <div className="max-w-6xl mx-auto">
-        <div className="slot-machine-frame">
-          {/* Top decoration */}
-          <div className="slot-machine-top">
-            <div className="marquee-lights"></div>
-          </div>
-          
-          {/* Slot Windows */}
-          <div className="slot-machine-body">
-            <div className="slot-windows">
-              {isLoading ? (
-                <div className="loading-slots">
-                  {[...Array(3)].map((_, i) => (
-                    <div key={i} className="slot-column">
-                      <div className="slot-window">
-                        <div className="animate-pulse">
-                          <div className="aspect-square bg-muted rounded-lg" />
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                <>
-                  {currentAlbums.map((album, index) => (
-                    <div key={`slot-${index}`} className="slot-column">
-                      <div className="slot-window">
-                        <div className="slot-mask">
-                          <div 
-                            className={`reel ${isSpinning ? 'spinning' : ''}`}
-                            style={{
-                              transform: `translateY(${isSpinning ? -reelPositions[index] * 100 : 0}%)`,
-                              transition: isSpinning 
-                                ? `transform ${2.5 + index * 0.3}s cubic-bezier(0.17, 0.67, 0.12, 0.99)`
-                                : 'none'
-                            }}
-                          >
-                            {/* Multiple copies for seamless spinning */}
-                            {getReelAlbums(index).map((reelAlbum, copyIndex) => (
-                              <div key={`${index}-${copyIndex}`} className="reel-item">
-                                <Link 
-                                  to={`/album/${getAlbumPath(album)}`}
-                                  className="album-link"
-                                  onClick={(e) => isSpinning && e.preventDefault()}
-                                >
-                                  <img
-                                    src={album.images_uri_release.medium}
-                                    alt={album.release_name}
-                                    className="album-cover"
-                                    draggable={false}
-                                  />
-                                  <div className="album-overlay">
-                                    <h3>{album.release_name}</h3>
-                                    <p>{album.release_artist}</p>
-                                  </div>
-                                </Link>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      {/* Reel separator */}
-                      {index < 2 && <div className="reel-separator"></div>}
-                    </div>
-                  ))}
-                </>
-              )}
+      {/* Albums */}
+      {isLoading ? (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="animate-pulse">
+              <div className="aspect-square bg-muted rounded-lg mb-4" />
+              <div className="h-4 bg-muted rounded w-3/4 mx-auto mb-2" />
+              <div className="h-4 bg-muted rounded w-1/2 mx-auto" />
             </div>
-          </div>
-
-          {/* Spin Button */}
-          <div className="slot-machine-controls">
-            <Button 
-              onClick={handleSpin}
-              size="lg"
-              className="spin-button"
-              disabled={isSpinning || isLoading}
+          ))}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {randomAlbums.map((album, index) => (
+            <div
+              key={album.uri_release}
+              className={`text-center transition-all duration-300 ${
+                albumVisibility[index] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+              }`}
             >
-              <Cherry className="h-6 w-6" />
-              <span>{isSpinning ? 'SPINNING...' : 'PULL THE LEVER!'}</span>
-            </Button>
-          </div>
+              <Link 
+                to={`/album/${getAlbumPath(album)}`}
+                className="block group"
+              >
+                <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                  <img
+                    src={album.images_uri_release.medium}
+                    alt={album.release_name}
+                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                </div>
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
+                    {album.release_name}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {album.release_artist}
+                  </p>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
-
-        {/* Bottom text */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            🎰 Your lucky albums today • Each spin reveals 3 new picks from your collection 🎰
-          </p>
-        </div>
-      </div>
+      )}
     </div>
   );
 }
