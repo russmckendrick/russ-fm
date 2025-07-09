@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T17:31:32.419857",
+  "created_at": "2025-07-09T09:56:13.073514",
   "date_added": "2016-12-19T17:45:05-08:00",
   "discogs_id": "7453474",
   "discogs_url": "https://www.discogs.com/release/7453474-John-Shuttleworth-The-Yamaha-Years",
@@ -31,11 +31,11 @@
   ],
   "genres": [
     "Electronic",
-    "noplay",
     "oddities of sound",
+    "noplay",
     "teh funnay",
-    "comedyspunk",
-    "noplays"
+    "noplays",
+    "comedyspunk"
   ],
   "id": "7453474",
   "images": [
@@ -67,14 +67,14 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/John+Shuttleworth/The+Yamaha+Years",
   "local_images": {
-    "hi-res": "public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-hi-res.jpg",
-    "medium": "public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-medium.jpg",
-    "small": "public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-small.jpg"
+    "hi-res": "../public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-hi-res.jpg",
+    "medium": "../public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-medium.jpg",
+    "small": "../public/album/the-yamaha-years-7453474/the-yamaha-years-7453474-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:31:34.998218",
+    "processed_at": "2025-07-09T09:56:15.077373",
     "services_used": [
       "discogs",
       "apple_music",
@@ -160,7 +160,7 @@
       ],
       "listeners": 1786,
       "mbid": "064a5ca5-cd32-4eb3-a029-21deaa51d7d2",
-      "playcount": 29041,
+      "playcount": 29052,
       "raw_data": {
         "album": {
           "artist": "John Shuttleworth",
@@ -193,28 +193,28 @@
           "listeners": "1786",
           "mbid": "064a5ca5-cd32-4eb3-a029-21deaa51d7d2",
           "name": "The Yamaha Years",
-          "playcount": "29041",
+          "playcount": "29052",
           "tags": {
             "tag": [
               {
-                "name": "noplay",
-                "url": "https://www.last.fm/tag/noplay"
-              },
-              {
                 "name": "oddities of sound",
                 "url": "https://www.last.fm/tag/oddities+of+sound"
+              },
+              {
+                "name": "noplay",
+                "url": "https://www.last.fm/tag/noplay"
               },
               {
                 "name": "teh funnay",
                 "url": "https://www.last.fm/tag/teh+funnay"
               },
               {
-                "name": "comedyspunk",
-                "url": "https://www.last.fm/tag/comedyspunk"
-              },
-              {
                 "name": "noplays",
                 "url": "https://www.last.fm/tag/noplays"
+              },
+              {
+                "name": "comedyspunk",
+                "url": "https://www.last.fm/tag/comedyspunk"
               }
             ]
           },
@@ -567,11 +567,11 @@
       },
       "similar_artists": [],
       "tags": [
-        "noplay",
         "oddities of sound",
+        "noplay",
         "teh funnay",
-        "comedyspunk",
-        "noplays"
+        "noplays",
+        "comedyspunk"
       ],
       "top_albums": [],
       "top_tracks": [],
@@ -1726,6 +1726,6 @@
       "title": "John Goes To London"
     }
   ],
-  "updated_at": "2025-07-05T17:31:34.288321",
+  "updated_at": "2025-07-09T09:56:14.335169",
   "year": 2015
 }
