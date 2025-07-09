@@ -22,7 +22,7 @@
     }
   },
   "country": "USA, Canada & UK",
-  "created_at": "2025-07-09T08:27:20.841371",
+  "created_at": "2025-07-09T21:23:35.560054",
   "date_added": "2022-05-08T06:21:58-07:00",
   "discogs_id": "23097233",
   "discogs_url": "https://www.discogs.com/release/23097233-Belle-And-Sebastian-A-Bit-Of-Previous",
@@ -148,19 +148,179 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T08:27:22.822136",
+    "processed_at": "2025-07-09T21:23:37.084534",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "A Bit Of Previous",
-  "release_name_spotify": null,
+  "release_name_spotify": "Are You Okay?",
   "released": "2022-05-06",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "single",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2023 BEL under exclusive license to Nettwerk Music Group Inc.",
+          "type": "C"
+        },
+        {
+          "text": "2023 BEL under exclusive license to Nettwerk Music Group Inc.",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "713312573901"
+      },
+      "id": "2QNg0uI6EdPDFHqx9EyZhT",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27328d5ae9e1f8d1cf559d1c1f7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0228d5ae9e1f8d1cf559d1c1f7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485128d5ae9e1f8d1cf559d1c1f7",
+          "width": 64
+        }
+      ],
+      "label": "Nettwerk Music Group",
+      "popularity": 40,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2ts6M8dSQ1GYdVF2ZeCyy6"
+            },
+            "href": "https://api.spotify.com/v1/artists/2ts6M8dSQ1GYdVF2ZeCyy6",
+            "id": "2ts6M8dSQ1GYdVF2ZeCyy6",
+            "name": "BEL",
+            "type": "artist",
+            "uri": "spotify:artist:2ts6M8dSQ1GYdVF2ZeCyy6"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2023 BEL under exclusive license to Nettwerk Music Group Inc.",
+            "type": "C"
+          },
+          {
+            "text": "2023 BEL under exclusive license to Nettwerk Music Group Inc.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "713312573901"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2QNg0uI6EdPDFHqx9EyZhT"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2QNg0uI6EdPDFHqx9EyZhT?market=US",
+        "id": "2QNg0uI6EdPDFHqx9EyZhT",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27328d5ae9e1f8d1cf559d1c1f7",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0228d5ae9e1f8d1cf559d1c1f7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485128d5ae9e1f8d1cf559d1c1f7",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Nettwerk Music Group",
+        "name": "Are You Okay?",
+        "popularity": 40,
+        "release_date": "2023-02-24",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2QNg0uI6EdPDFHqx9EyZhT/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2ts6M8dSQ1GYdVF2ZeCyy6"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2ts6M8dSQ1GYdVF2ZeCyy6",
+                  "id": "2ts6M8dSQ1GYdVF2ZeCyy6",
+                  "name": "BEL",
+                  "type": "artist",
+                  "uri": "spotify:artist:2ts6M8dSQ1GYdVF2ZeCyy6"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 164120,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3uD8cMha32veHaNM2jAeQB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3uD8cMha32veHaNM2jAeQB",
+              "id": "3uD8cMha32veHaNM2jAeQB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Are You Okay?",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3uD8cMha32veHaNM2jAeQB"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 1
+        },
+        "type": "album",
+        "uri": "spotify:album:2QNg0uI6EdPDFHqx9EyZhT"
+      },
+      "release_date": "2023-02-24",
+      "release_date_precision": "day",
+      "total_tracks": 1,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "2ts6M8dSQ1GYdVF2ZeCyy6",
+              "name": "BEL"
+            }
+          ],
+          "duration_ms": 164120,
+          "explicit": false,
+          "id": "3uD8cMha32veHaNM2jAeQB",
+          "name": "Are You Okay?",
+          "preview_url": null,
+          "track_number": 1
+        }
+      ],
+      "url": "https://open.spotify.com/album/2QNg0uI6EdPDFHqx9EyZhT"
+    }
+  },
+  "spotify_id": "2QNg0uI6EdPDFHqx9EyZhT",
+  "spotify_url": "https://open.spotify.com/album/2QNg0uI6EdPDFHqx9EyZhT",
   "styles": [
     "Indie Pop"
   ],
@@ -263,6 +423,6 @@
       "title": "Sometimes"
     }
   ],
-  "updated_at": "2025-07-09T08:27:21.690560",
+  "updated_at": "2025-07-09T21:23:36.806651",
   "year": 2022
 }

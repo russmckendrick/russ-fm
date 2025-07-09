@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T08:18:55.727341",
+  "created_at": "2025-07-09T21:16:53.987954",
   "date_added": "2023-04-03T04:26:22-07:00",
   "discogs_id": "26536709",
   "discogs_url": "https://www.discogs.com/release/26536709-Various-Dance-Craze-The-Best-of-British-SkaLIVE",
@@ -160,19 +160,1942 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T08:18:57.695442",
+    "processed_at": "2025-07-09T21:16:55.380749",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Dance Craze - The Best of British Ska...LIVE!",
-  "release_name_spotify": null,
+  "release_name_spotify": "Dance Craze (Deluxe Edition)",
   "released": "2023-03-24",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+          "type": "C"
+        },
+        {
+          "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "0810098503211"
+      },
+      "id": "02UJWM64KCm80NZmexOCJg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273cf1df11fc868d8f8223616b9",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02cf1df11fc868d8f8223616b9",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851cf1df11fc868d8f8223616b9",
+          "width": 64
+        }
+      ],
+      "label": "Chrysalis Records",
+      "popularity": 33,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+            "type": "C"
+          },
+          {
+            "text": "2023 The copyright in this compilation is owned by Chrysalis Records Limited",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "0810098503211"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/02UJWM64KCm80NZmexOCJg"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/02UJWM64KCm80NZmexOCJg?market=US",
+        "id": "02UJWM64KCm80NZmexOCJg",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273cf1df11fc868d8f8223616b9",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02cf1df11fc868d8f8223616b9",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851cf1df11fc868d8f8223616b9",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Chrysalis Records",
+        "name": "Dance Craze (Deluxe Edition)",
+        "popularity": 33,
+        "release_date": "2023-03-24",
+        "release_date_precision": "day",
+        "total_tracks": 42,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/02UJWM64KCm80NZmexOCJg/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 199985,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4UsrxEeahAa5muaxR1unM3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4UsrxEeahAa5muaxR1unM3",
+              "id": "4UsrxEeahAa5muaxR1unM3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nite Klub - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:4UsrxEeahAa5muaxR1unM3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 185290,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/61jlzerbZPNR2oF1RGJokv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/61jlzerbZPNR2oF1RGJokv",
+              "id": "61jlzerbZPNR2oF1RGJokv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Prince - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:61jlzerbZPNR2oF1RGJokv"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 155114,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1pCGJyzrUTR20834BSyt8K"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1pCGJyzrUTR20834BSyt8K",
+              "id": "1pCGJyzrUTR20834BSyt8K",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ne-Ne-Na-Na-Na-Na-Nu-Nu - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:1pCGJyzrUTR20834BSyt8K"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4A8i0BB8EcWKijB9T54QRV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4A8i0BB8EcWKijB9T54QRV",
+                  "id": "4A8i0BB8EcWKijB9T54QRV",
+                  "name": "The Bodysnatchers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4A8i0BB8EcWKijB9T54QRV"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 191990,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3KStBJ4iSg4ixfEg7anaVP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3KStBJ4iSg4ixfEg7anaVP",
+              "id": "3KStBJ4iSg4ixfEg7anaVP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "007 (Shanty Town) - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3KStBJ4iSg4ixfEg7anaVP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 176737,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/66U853zko3qDr4c3VY03nI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/66U853zko3qDr4c3VY03nI",
+              "id": "66U853zko3qDr4c3VY03nI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Three Minute Hero - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:66U853zko3qDr4c3VY03nI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 170994,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3N8G817ad8w11gD6PIXuT6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3N8G817ad8w11gD6PIXuT6",
+              "id": "3N8G817ad8w11gD6PIXuT6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ranking Full Stop - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:3N8G817ad8w11gD6PIXuT6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 165397,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3yCpdzMvvSe1bdXB4Fe2qT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3yCpdzMvvSe1bdXB4Fe2qT",
+              "id": "3yCpdzMvvSe1bdXB4Fe2qT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Big Shot - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3yCpdzMvvSe1bdXB4Fe2qT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 175147,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4OIOj98t2OcpGm4k8kCEmM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4OIOj98t2OcpGm4k8kCEmM",
+              "id": "4OIOj98t2OcpGm4k8kCEmM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Concrete Jungle - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:4OIOj98t2OcpGm4k8kCEmM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 150403,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1UM27sLAbWTjHm2LgkQNBK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1UM27sLAbWTjHm2LgkQNBK",
+              "id": "1UM27sLAbWTjHm2LgkQNBK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Swan Lake - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:1UM27sLAbWTjHm2LgkQNBK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156709,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1SRlTk9W56LXevDgLIDi0p"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1SRlTk9W56LXevDgLIDi0p",
+              "id": "1SRlTk9W56LXevDgLIDi0p",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Razor Blade Alley - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1SRlTk9W56LXevDgLIDi0p"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 206842,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6yX503AoeEgdcLuctU4c0W"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6yX503AoeEgdcLuctU4c0W",
+              "id": "6yX503AoeEgdcLuctU4c0W",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Missing Words - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:6yX503AoeEgdcLuctU4c0W"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4A8i0BB8EcWKijB9T54QRV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4A8i0BB8EcWKijB9T54QRV",
+                  "id": "4A8i0BB8EcWKijB9T54QRV",
+                  "name": "The Bodysnatchers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4A8i0BB8EcWKijB9T54QRV"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 181551,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1VOiCyAVT5hFHHmbfXyUYD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1VOiCyAVT5hFHHmbfXyUYD",
+              "id": "1VOiCyAVT5hFHHmbfXyUYD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Let's Do Rock Steady - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:1VOiCyAVT5hFHHmbfXyUYD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 158627,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0cQFS5tU8RO5SrVyHUOgUx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0cQFS5tU8RO5SrVyHUOgUx",
+              "id": "0cQFS5tU8RO5SrVyHUOgUx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lip Up Fatty - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:0cQFS5tU8RO5SrVyHUOgUx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 155225,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/74lkpyeZwaIeVtFZwTI43d"
+              },
+              "href": "https://api.spotify.com/v1/tracks/74lkpyeZwaIeVtFZwTI43d",
+              "id": "74lkpyeZwaIeVtFZwTI43d",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Madness - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:74lkpyeZwaIeVtFZwTI43d"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 110949,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/560ovw1fvQJ0DLcy2W38nn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/560ovw1fvQJ0DLcy2W38nn",
+              "id": "560ovw1fvQJ0DLcy2W38nn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Too Much Too Young - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:560ovw1fvQJ0DLcy2W38nn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 175003,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3GvcW0l3VxmHPMYrtI6dp3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3GvcW0l3VxmHPMYrtI6dp3",
+              "id": "3GvcW0l3VxmHPMYrtI6dp3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "On My Radio - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:3GvcW0l3VxmHPMYrtI6dp3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4A8i0BB8EcWKijB9T54QRV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4A8i0BB8EcWKijB9T54QRV",
+                  "id": "4A8i0BB8EcWKijB9T54QRV",
+                  "name": "The Bodysnatchers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4A8i0BB8EcWKijB9T54QRV"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 174523,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5t0wV2i6vHuuhTyNXc7Jjg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5t0wV2i6vHuuhTyNXc7Jjg",
+              "id": "5t0wV2i6vHuuhTyNXc7Jjg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Easy Life - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:5t0wV2i6vHuuhTyNXc7Jjg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 260229,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4jnpJ4YOJHNQun62XTrJ1d"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4jnpJ4YOJHNQun62XTrJ1d",
+              "id": "4jnpJ4YOJHNQun62XTrJ1d",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rough Rider - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4jnpJ4YOJHNQun62XTrJ1d"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 175322,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4zrq9IdeDsZUdPNSoVVLVZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4zrq9IdeDsZUdPNSoVVLVZ",
+              "id": "4zrq9IdeDsZUdPNSoVVLVZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Man at C&A - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4zrq9IdeDsZUdPNSoVVLVZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 222448,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0b9mSn1yE06n2ZmDlq2IZU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0b9mSn1yE06n2ZmDlq2IZU",
+              "id": "0b9mSn1yE06n2ZmDlq2IZU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Inner London Violence - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:0b9mSn1yE06n2ZmDlq2IZU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 191685,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3078fLIkLaq7bf3wv0zZm8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3078fLIkLaq7bf3wv0zZm8",
+              "id": "3078fLIkLaq7bf3wv0zZm8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Night Boat to Cairo - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3078fLIkLaq7bf3wv0zZm8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 156677,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5a1l2u75VqTThuLp9dBzx6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5a1l2u75VqTThuLp9dBzx6",
+              "id": "5a1l2u75VqTThuLp9dBzx6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Twist and Crawl - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:5a1l2u75VqTThuLp9dBzx6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 134376,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Nj4EwCSrs1345BGBVO3o4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Nj4EwCSrs1345BGBVO3o4",
+              "id": "1Nj4EwCSrs1345BGBVO3o4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Wooly Bully - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1Nj4EwCSrs1345BGBVO3o4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 145770,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5f41c8pKF342ghy4chA8W9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5f41c8pKF342ghy4chA8W9",
+              "id": "5f41c8pKF342ghy4chA8W9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Too Much Pressure - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:5f41c8pKF342ghy4chA8W9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 198775,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7vU2otFmS4KlJjTg5JgcOe"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7vU2otFmS4KlJjTg5JgcOe",
+              "id": "7vU2otFmS4KlJjTg5JgcOe",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mirror in the Bathroom - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:7vU2otFmS4KlJjTg5JgcOe"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 174641,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3oz8tgx14LtJDGyz59q15u"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3oz8tgx14LtJDGyz59q15u",
+              "id": "3oz8tgx14LtJDGyz59q15u",
+              "is_local": false,
+              "is_playable": true,
+              "name": "One Step Beyond - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:3oz8tgx14LtJDGyz59q15u"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 272217,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Ft0JH4lOA1V4jVArHT5YK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Ft0JH4lOA1V4jVArHT5YK",
+              "id": "1Ft0JH4lOA1V4jVArHT5YK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nite Klub (Reprise) - Film Soundtrack Version",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:1Ft0JH4lOA1V4jVArHT5YK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 188349,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1jciGAwA8v9TTbU2sIam6M"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1jciGAwA8v9TTbU2sIam6M",
+              "id": "1jciGAwA8v9TTbU2sIam6M",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Concrete Jungle",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1jciGAwA8v9TTbU2sIam6M"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 197376,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0oWCauIA22zrpjHWhi4VjN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0oWCauIA22zrpjHWhi4VjN",
+              "id": "0oWCauIA22zrpjHWhi4VjN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mirror in the Bathroom",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:0oWCauIA22zrpjHWhi4VjN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 177658,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2TGHQG9oCH8nBJ85kZOTA9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2TGHQG9oCH8nBJ85kZOTA9",
+              "id": "2TGHQG9oCH8nBJ85kZOTA9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lip Up Fatty",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2TGHQG9oCH8nBJ85kZOTA9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 155381,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/51j1rXUVJf2wOmNOddYuxo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/51j1rXUVJf2wOmNOddYuxo",
+              "id": "51j1rXUVJf2wOmNOddYuxo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Razor Blade Alley",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:51j1rXUVJf2wOmNOddYuxo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 171032,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2oy1WRZONSJKWdDnwY2ZDk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2oy1WRZONSJKWdDnwY2ZDk",
+              "id": "2oy1WRZONSJKWdDnwY2ZDk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Three Minute Hero",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:2oy1WRZONSJKWdDnwY2ZDk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4A8i0BB8EcWKijB9T54QRV"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4A8i0BB8EcWKijB9T54QRV",
+                  "id": "4A8i0BB8EcWKijB9T54QRV",
+                  "name": "The Bodysnatchers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4A8i0BB8EcWKijB9T54QRV"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 177949,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1rhFcKIofsn2B7Ql5heQuy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1rhFcKIofsn2B7Ql5heQuy",
+              "id": "1rhFcKIofsn2B7Ql5heQuy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Easy Life",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1rhFcKIofsn2B7Ql5heQuy"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 162245,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6zgdLxmxVBFn7uHtA8WhD6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6zgdLxmxVBFn7uHtA8WhD6",
+              "id": "6zgdLxmxVBFn7uHtA8WhD6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Big Shot",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:6zgdLxmxVBFn7uHtA8WhD6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 201040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/419ccNdKRyG84J3aEWiME6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/419ccNdKRyG84J3aEWiME6",
+              "id": "419ccNdKRyG84J3aEWiME6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "One Step Beyond",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:419ccNdKRyG84J3aEWiME6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4R90PNicCsCsEoRm8XwiMS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4R90PNicCsCsEoRm8XwiMS",
+                  "id": "4R90PNicCsCsEoRm8XwiMS",
+                  "name": "The Beat",
+                  "type": "artist",
+                  "uri": "spotify:artist:4R90PNicCsCsEoRm8XwiMS"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 168600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2YJAwSEe5zuQkftznMtKYk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2YJAwSEe5zuQkftznMtKYk",
+              "id": "2YJAwSEe5zuQkftznMtKYk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ranking Full Stop",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2YJAwSEe5zuQkftznMtKYk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 182590,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2nvxHLlvLqK6jeCFQgpI5J"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2nvxHLlvLqK6jeCFQgpI5J",
+              "id": "2nvxHLlvLqK6jeCFQgpI5J",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Man at C&A",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2nvxHLlvLqK6jeCFQgpI5J"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 204226,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2o4TeFmEvE3RUcpxujkWJT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2o4TeFmEvE3RUcpxujkWJT",
+              "id": "2o4TeFmEvE3RUcpxujkWJT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Missing Words",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2o4TeFmEvE3RUcpxujkWJT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0GShYlUdyLahdsvgKdselx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0GShYlUdyLahdsvgKdselx",
+                  "id": "0GShYlUdyLahdsvgKdselx",
+                  "name": "Bad Manners",
+                  "type": "artist",
+                  "uri": "spotify:artist:0GShYlUdyLahdsvgKdselx"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 206099,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6X8xJAhC24FgtkaTyxd6Fq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6X8xJAhC24FgtkaTyxd6Fq",
+              "id": "6X8xJAhC24FgtkaTyxd6Fq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Inner London Violence",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:6X8xJAhC24FgtkaTyxd6Fq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4AYkFtEBnNnGuoo8HaHErd"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4AYkFtEBnNnGuoo8HaHErd",
+                  "id": "4AYkFtEBnNnGuoo8HaHErd",
+                  "name": "Madness",
+                  "type": "artist",
+                  "uri": "spotify:artist:4AYkFtEBnNnGuoo8HaHErd"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 192381,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5fr7dSC9jxiFeYwkoeDRzZ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5fr7dSC9jxiFeYwkoeDRzZ",
+              "id": "5fr7dSC9jxiFeYwkoeDRzZ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Night Boat to Cairo",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:5fr7dSC9jxiFeYwkoeDRzZ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3wRksusBxJ6npu0PryYheF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3wRksusBxJ6npu0PryYheF",
+                  "id": "3wRksusBxJ6npu0PryYheF",
+                  "name": "The Selecter",
+                  "type": "artist",
+                  "uri": "spotify:artist:3wRksusBxJ6npu0PryYheF"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 170220,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/17JuQ9e5EwpuuSQJXCkx3a"
+              },
+              "href": "https://api.spotify.com/v1/tracks/17JuQ9e5EwpuuSQJXCkx3a",
+              "id": "17JuQ9e5EwpuuSQJXCkx3a",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Too Much Pressure",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:17JuQ9e5EwpuuSQJXCkx3a"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6xnvNmSzmeOE1bLKnYXKW3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6xnvNmSzmeOE1bLKnYXKW3",
+                  "id": "6xnvNmSzmeOE1bLKnYXKW3",
+                  "name": "The Specials",
+                  "type": "artist",
+                  "uri": "spotify:artist:6xnvNmSzmeOE1bLKnYXKW3"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 351540,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2tGKm7tOZPlOwUDLkEJhAV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2tGKm7tOZPlOwUDLkEJhAV",
+              "id": "2tGKm7tOZPlOwUDLkEJhAV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Nite Klub",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:2tGKm7tOZPlOwUDLkEJhAV"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 42
+        },
+        "type": "album",
+        "uri": "spotify:album:02UJWM64KCm80NZmexOCJg"
+      },
+      "release_date": "2023-03-24",
+      "release_date_precision": "day",
+      "total_tracks": 42,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 199985,
+          "explicit": false,
+          "id": "4UsrxEeahAa5muaxR1unM3",
+          "name": "Nite Klub - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 185290,
+          "explicit": false,
+          "id": "61jlzerbZPNR2oF1RGJokv",
+          "name": "The Prince - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 155114,
+          "explicit": false,
+          "id": "1pCGJyzrUTR20834BSyt8K",
+          "name": "Ne-Ne-Na-Na-Na-Na-Nu-Nu - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4A8i0BB8EcWKijB9T54QRV",
+              "name": "The Bodysnatchers"
+            }
+          ],
+          "duration_ms": 191990,
+          "explicit": false,
+          "id": "3KStBJ4iSg4ixfEg7anaVP",
+          "name": "007 (Shanty Town) - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 176737,
+          "explicit": false,
+          "id": "66U853zko3qDr4c3VY03nI",
+          "name": "Three Minute Hero - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 170994,
+          "explicit": false,
+          "id": "3N8G817ad8w11gD6PIXuT6",
+          "name": "Ranking Full Stop - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 165397,
+          "explicit": false,
+          "id": "3yCpdzMvvSe1bdXB4Fe2qT",
+          "name": "Big Shot - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 175147,
+          "explicit": false,
+          "id": "4OIOj98t2OcpGm4k8kCEmM",
+          "name": "Concrete Jungle - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 150403,
+          "explicit": false,
+          "id": "1UM27sLAbWTjHm2LgkQNBK",
+          "name": "Swan Lake - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 156709,
+          "explicit": false,
+          "id": "1SRlTk9W56LXevDgLIDi0p",
+          "name": "Razor Blade Alley - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 206842,
+          "explicit": false,
+          "id": "6yX503AoeEgdcLuctU4c0W",
+          "name": "Missing Words - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "4A8i0BB8EcWKijB9T54QRV",
+              "name": "The Bodysnatchers"
+            }
+          ],
+          "duration_ms": 181551,
+          "explicit": false,
+          "id": "1VOiCyAVT5hFHHmbfXyUYD",
+          "name": "Let's Do Rock Steady - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 158627,
+          "explicit": false,
+          "id": "0cQFS5tU8RO5SrVyHUOgUx",
+          "name": "Lip Up Fatty - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 155225,
+          "explicit": false,
+          "id": "74lkpyeZwaIeVtFZwTI43d",
+          "name": "Madness - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 110949,
+          "explicit": false,
+          "id": "560ovw1fvQJ0DLcy2W38nn",
+          "name": "Too Much Too Young - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 175003,
+          "explicit": false,
+          "id": "3GvcW0l3VxmHPMYrtI6dp3",
+          "name": "On My Radio - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4A8i0BB8EcWKijB9T54QRV",
+              "name": "The Bodysnatchers"
+            }
+          ],
+          "duration_ms": 174523,
+          "explicit": false,
+          "id": "5t0wV2i6vHuuhTyNXc7Jjg",
+          "name": "Easy Life - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 260229,
+          "explicit": false,
+          "id": "4jnpJ4YOJHNQun62XTrJ1d",
+          "name": "Rough Rider - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 175322,
+          "explicit": false,
+          "id": "4zrq9IdeDsZUdPNSoVVLVZ",
+          "name": "Man at C&A - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 222448,
+          "explicit": false,
+          "id": "0b9mSn1yE06n2ZmDlq2IZU",
+          "name": "Inner London Violence - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 191685,
+          "explicit": false,
+          "id": "3078fLIkLaq7bf3wv0zZm8",
+          "name": "Night Boat to Cairo - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 156677,
+          "explicit": false,
+          "id": "5a1l2u75VqTThuLp9dBzx6",
+          "name": "Twist and Crawl - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 134376,
+          "explicit": false,
+          "id": "1Nj4EwCSrs1345BGBVO3o4",
+          "name": "Wooly Bully - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 145770,
+          "explicit": false,
+          "id": "5f41c8pKF342ghy4chA8W9",
+          "name": "Too Much Pressure - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 198775,
+          "explicit": false,
+          "id": "7vU2otFmS4KlJjTg5JgcOe",
+          "name": "Mirror in the Bathroom - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 174641,
+          "explicit": false,
+          "id": "3oz8tgx14LtJDGyz59q15u",
+          "name": "One Step Beyond - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 272217,
+          "explicit": false,
+          "id": "1Ft0JH4lOA1V4jVArHT5YK",
+          "name": "Nite Klub (Reprise) - Film Soundtrack Version",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 188349,
+          "explicit": false,
+          "id": "1jciGAwA8v9TTbU2sIam6M",
+          "name": "Concrete Jungle",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 197376,
+          "explicit": false,
+          "id": "0oWCauIA22zrpjHWhi4VjN",
+          "name": "Mirror in the Bathroom",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 177658,
+          "explicit": false,
+          "id": "2TGHQG9oCH8nBJ85kZOTA9",
+          "name": "Lip Up Fatty",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 155381,
+          "explicit": false,
+          "id": "51j1rXUVJf2wOmNOddYuxo",
+          "name": "Razor Blade Alley",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 171032,
+          "explicit": false,
+          "id": "2oy1WRZONSJKWdDnwY2ZDk",
+          "name": "Three Minute Hero",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4A8i0BB8EcWKijB9T54QRV",
+              "name": "The Bodysnatchers"
+            }
+          ],
+          "duration_ms": 177949,
+          "explicit": false,
+          "id": "1rhFcKIofsn2B7Ql5heQuy",
+          "name": "Easy Life",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 162245,
+          "explicit": false,
+          "id": "6zgdLxmxVBFn7uHtA8WhD6",
+          "name": "Big Shot",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 201040,
+          "explicit": false,
+          "id": "419ccNdKRyG84J3aEWiME6",
+          "name": "One Step Beyond",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4R90PNicCsCsEoRm8XwiMS",
+              "name": "The Beat"
+            }
+          ],
+          "duration_ms": 168600,
+          "explicit": false,
+          "id": "2YJAwSEe5zuQkftznMtKYk",
+          "name": "Ranking Full Stop",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 182590,
+          "explicit": false,
+          "id": "2nvxHLlvLqK6jeCFQgpI5J",
+          "name": "Man at C&A",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 204226,
+          "explicit": false,
+          "id": "2o4TeFmEvE3RUcpxujkWJT",
+          "name": "Missing Words",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "0GShYlUdyLahdsvgKdselx",
+              "name": "Bad Manners"
+            }
+          ],
+          "duration_ms": 206099,
+          "explicit": false,
+          "id": "6X8xJAhC24FgtkaTyxd6Fq",
+          "name": "Inner London Violence",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "4AYkFtEBnNnGuoo8HaHErd",
+              "name": "Madness"
+            }
+          ],
+          "duration_ms": 192381,
+          "explicit": false,
+          "id": "5fr7dSC9jxiFeYwkoeDRzZ",
+          "name": "Night Boat to Cairo",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "3wRksusBxJ6npu0PryYheF",
+              "name": "The Selecter"
+            }
+          ],
+          "duration_ms": 170220,
+          "explicit": false,
+          "id": "17JuQ9e5EwpuuSQJXCkx3a",
+          "name": "Too Much Pressure",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "6xnvNmSzmeOE1bLKnYXKW3",
+              "name": "The Specials"
+            }
+          ],
+          "duration_ms": 351540,
+          "explicit": false,
+          "id": "2tGKm7tOZPlOwUDLkEJhAV",
+          "name": "Nite Klub",
+          "preview_url": null,
+          "track_number": 15
+        }
+      ],
+      "url": "https://open.spotify.com/album/02UJWM64KCm80NZmexOCJg"
+    }
+  },
+  "spotify_id": "02UJWM64KCm80NZmexOCJg",
+  "spotify_url": "https://open.spotify.com/album/02UJWM64KCm80NZmexOCJg",
   "styles": [
     "Ska",
     "Soundtrack"
@@ -990,6 +2913,6 @@
       "title": "Nite Klub"
     }
   ],
-  "updated_at": "2025-07-09T08:18:56.505184",
+  "updated_at": "2025-07-09T21:16:55.144875",
   "year": 2023
 }
