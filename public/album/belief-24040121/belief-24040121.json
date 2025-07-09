@@ -4,20 +4,25 @@
   "artists": [
     {
       "apple_music_id": "1610805945",
-      "biography": null,
+      "biography": "Prince Rogers Nelson was an American singer, songwriter, musician, and actor. Regarded as one of the most influential musicians of his generation, Prince was known for his flamboyant, androgynous persona, wide vocal range, which included a far-reaching falsetto and high-pitched screams, as well as his skill as a multi-instrumentalist, often preferring to play all or most of the instruments on his recordings. His music incorporated a wide variety of styles, including funk, disco, R&B, rock, new wave, soul, synth-pop, pop, jazz, blues, and hip hop. Prince produced his albums himself, pioneering the Minneapolis sound.",
       "discogs_id": "11581838",
-      "discogs_original_name": "Belief (9)",
+      "discogs_original_name": "Belief",
       "id": null,
       "lastfm_mbid": "de34c1d9-8763-4c4d-b50c-a12d16d90cc7",
       "name": "Belief",
       "role": "",
       "spotify_id": "2jylVs4eHBl0js5mOleBsY",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Prince_(musician)"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Belief": {
+      "biography": "Prince Rogers Nelson was an American singer, songwriter, musician, and actor. Regarded as one of the most influential musicians of his generation, Prince was known for his flamboyant, androgynous persona, wide vocal range, which included a far-reaching falsetto and high-pitched screams, as well as his skill as a multi-instrumentalist, often preferring to play all or most of the instruments on his recordings. His music incorporated a wide variety of styles, including funk, disco, R&B, rock, new wave, soul, synth-pop, pop, jazz, blues, and hip hop. Prince produced his albums himself, pioneering the Minneapolis sound.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Prince_(musician)"
+    }
+  },
   "country": "US",
-  "created_at": "2025-07-05T15:30:10.751115",
+  "created_at": "2025-07-09T08:25:15.500867",
   "date_added": "2022-08-04T08:28:18-07:00",
   "discogs_id": "24040121",
   "discogs_url": "https://www.discogs.com/release/24040121-Belief-9-Belief",
@@ -44,17 +49,18 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Belief/Belief",
   "local_images": {
-    "hi-res": "public/album/belief-24040121/belief-24040121-hi-res.jpg",
-    "medium": "public/album/belief-24040121/belief-24040121-medium.jpg",
-    "small": "public/album/belief-24040121/belief-24040121-small.jpg"
+    "hi-res": "../public/album/belief-24040121/belief-24040121-hi-res.jpg",
+    "medium": "../public/album/belief-24040121/belief-24040121-medium.jpg",
+    "small": "../public/album/belief-24040121/belief-24040121-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:30:14.226250",
+    "processed_at": "2025-07-09T08:25:17.483869",
     "services_used": [
       "discogs",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -89,9 +95,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/d1413e983155de0a6a56bf9bea3ee931.jpg"
         }
       ],
-      "listeners": 12161,
+      "listeners": 12164,
       "mbid": "",
-      "playcount": 57801,
+      "playcount": 57836,
       "raw_data": {
         "album": {
           "artist": "Belief",
@@ -121,10 +127,10 @@
               "size": ""
             }
           ],
-          "listeners": "12161",
+          "listeners": "12164",
           "mbid": "",
           "name": "Belief",
-          "playcount": "57801",
+          "playcount": "57836",
           "tags": {
             "tag": {
               "name": "3-5",
@@ -1258,6 +1264,6 @@
       "title": "Charch"
     }
   ],
-  "updated_at": "2025-07-05T15:30:14.110714",
+  "updated_at": "2025-07-09T08:25:16.594090",
   "year": 2022
 }
