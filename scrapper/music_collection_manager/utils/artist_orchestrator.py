@@ -427,10 +427,8 @@ class ArtistDataOrchestrator:
                 if lastfm_data.url:
                     artist.lastfm_url = lastfm_data.url
                 # Note: Don't set biography from Last.fm here - we'll prioritize Discogs profile later
-                if lastfm_data.tags:
-                    for tag in lastfm_data.tags[:5]:  # Limit to top 5 tags
-                        if tag not in artist.genres:
-                            artist.genres.append(tag)
+                # NOTE: Last.fm tags are intentionally NOT added to genres
+                # to maintain higher quality genre data from other sources
                 
                 # Add Last.fm images
                 for img_data in lastfm_data.images:

@@ -304,11 +304,8 @@ class MusicDataOrchestrator:
                 
                 if lastfm_data.url:
                     release.lastfm_url = lastfm_data.url
-                if lastfm_data.tags:
-                    # Add tags as genres if not already present
-                    for tag in lastfm_data.tags[:5]:  # Limit to top 5 tags
-                        if tag not in release.genres:
-                            release.genres.append(tag)
+                # NOTE: Last.fm tags are intentionally NOT added to genres
+                # to maintain higher quality genre data from other sources
         
         # Note: Artist enrichment with Wikipedia is now handled in the artist enrichment block above
         

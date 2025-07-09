@@ -8,7 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
-import { filterGenres } from '@/lib/filterGenres';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
@@ -394,10 +394,10 @@ export function ArtistDetailPage() {
               <div className="flex flex-wrap gap-2">
                 {(() => {
                   // Filter and deduplicate genres using the utility
-                  const filteredGenres = filterGenres(allGenres, artistName);
+                  const filteredGenres = getCleanGenresFromArray(allGenres, artistName);
                   
                   return filteredGenres.map((genre, index) => (
-                    <Badge key={index} variant="default" className="capitalize">
+                    <Badge key={index} variant="default">
                       <Music className="h-3 w-3 mr-1" />
                       {genre}
                     </Badge>

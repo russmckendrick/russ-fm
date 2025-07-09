@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { filterGenres } from '@/lib/filterGenres';
+import { getCleanGenres } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
@@ -480,16 +481,14 @@ export function AlbumDetailPage() {
             <div className="space-y-3">
               <div className="flex flex-wrap gap-2">
                 {(() => {
-                  // Combine and filter all genres and styles
-                  const allTags = [
-                    ...album.genre_names,
-                    ...(detailedAlbum?.styles || [])
-                  ];
+                  // Use clean genres from services or fallback to filtered genres
+                  const cleanGenres = detailedAlbum ? getCleanGenres({
+                    genres: [...album.genre_names, ...(detailedAlbum.styles || [])],
+                    services: detailedAlbum.services
+                  }) : filterGenres(album.genre_names, album.release_artist);
                   
-                  const filteredTags = filterGenres(allTags, album.release_artist);
-                  
-                  return filteredTags.map((tag, index) => (
-                    <Badge key={index} variant="default" className="capitalize">
+                  return cleanGenres.map((tag, index) => (
+                    <Badge key={index} variant="default">
                       <Music className="h-3 w-3 mr-1" />
                       {tag}
                     </Badge>
