@@ -7,6 +7,7 @@ import { ArtistDetailPage } from '@/pages/ArtistDetailPage';
 import { AlbumDetailPage } from '@/pages/AlbumDetailPage';
 import { StatsPage } from '@/pages/StatsPage';
 import { SearchResultsPage } from '@/pages/SearchResultsPage';
+import { RandomPage } from '@/pages/RandomPage';
 
 // Component to handle "Various" artist route interception
 function ArtistRouteHandler() {
@@ -40,6 +41,7 @@ function App() {
           <Route path="/artist/:artistPath" element={<ArtistRouteHandler />} />
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
           <Route path="/stats" element={<StatsPage />} />
+          <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage searchTerm={searchTerm} setSearchTerm={searchTerm} />} />
         </Routes>
       </main>
