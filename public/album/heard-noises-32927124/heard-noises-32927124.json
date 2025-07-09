@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T07:53:11.929829",
+  "created_at": "2025-07-09T20:56:58.038004",
   "date_added": "2025-01-23T11:09:50-08:00",
   "discogs_id": "32927124",
   "discogs_url": "https://www.discogs.com/release/32927124-Matt-Berry-3-Heard-Noises",
@@ -30,8 +30,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Rock",
-    "2025"
+    "Rock"
   ],
   "id": "32927124",
   "images": [
@@ -112,7 +111,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T07:53:14.722324",
+    "processed_at": "2025-07-09T20:56:59.627441",
     "services_used": [
       "discogs",
       "apple_music",
@@ -198,9 +197,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/e6d11d00f1352c63206b6423b13fd180.jpg"
         }
       ],
-      "listeners": 10009,
+      "listeners": 10020,
       "mbid": "03069c6a-7f3b-4f5a-8a24-030175abc375",
-      "playcount": 96003,
+      "playcount": 96137,
       "raw_data": {
         "album": {
           "artist": "Matt Berry",
@@ -230,22 +229,29 @@
               "size": ""
             }
           ],
-          "listeners": "10009",
+          "listeners": "10020",
           "mbid": "03069c6a-7f3b-4f5a-8a24-030175abc375",
           "name": "Heard Noises",
-          "playcount": "96003",
+          "playcount": "96137",
           "tags": {
-            "tag": {
-              "name": "2025",
-              "url": "https://www.last.fm/tag/2025"
-            }
+            "tag": [
+              {
+                "name": "2025",
+                "url": "https://www.last.fm/tag/2025"
+              },
+              {
+                "name": "psychedelic pop",
+                "url": "https://www.last.fm/tag/psychedelic+pop"
+              }
+            ]
           },
           "url": "https://www.last.fm/music/Matt+Berry/Heard+Noises"
         }
       },
       "similar_artists": [],
       "tags": [
-        "2025"
+        "2025",
+        "psychedelic pop"
       ],
       "top_albums": [],
       "top_tracks": [],
@@ -1175,6 +1181,6 @@
       "title": "Sky High"
     }
   ],
-  "updated_at": "2025-07-09T07:53:13.135641",
+  "updated_at": "2025-07-09T20:56:59.305033",
   "year": 2025
 }
