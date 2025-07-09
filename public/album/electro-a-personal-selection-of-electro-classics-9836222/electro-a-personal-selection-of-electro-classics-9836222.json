@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "959973250",
+  "apple_music_url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T15:46:47.218903",
+  "created_at": "2025-07-09T09:52:23.620642",
   "date_added": "2017-02-22T18:01:26-08:00",
   "discogs_id": "9836222",
   "discogs_url": "https://www.discogs.com/release/9836222-Various-Electro-A-Personal-Selection-Of-Electro-Classics",
@@ -94,8 +94,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/electro-a-personal-selection-of-electro-classics-9836222/electro-a-personal-selection-of-electro-classics-9836222.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -112,19 +112,1168 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T15:46:54.688635",
+    "processed_at": "2025-07-09T09:52:25.203731",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Electro Classics (House, Deep-House, Techno, Minimal, Electro, French Touch and Many More...)",
   "release_name_discogs": "Electro (A Personal Selection Of Electro Classics)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Alt-tronica",
   "released": "2017-02-17",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/2000x2000bb.jpg",
+      "content_rating": "explicit",
+      "copyright": "℗ 2015 My Classics",
+      "editorial_notes": null,
+      "id": "959973250",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "000000",
+          "height": 1440,
+          "textColor1": "ffffff",
+          "textColor2": "11d0fa",
+          "textColor3": "cbcbcb",
+          "textColor4": "0da6c8",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/ec/c3/8c/ecc38c3d-eded-1129-0263-70c78199d2ff/cover.jpg/{w}x{h}bb.jpg",
+          "width": 1440
+        },
+        "contentRating": "explicit",
+        "copyright": "℗ 2015 My Classics",
+        "genreNames": [
+          "Electronic",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Electro Classics (House, Deep-House, Techno, Minimal, Electro, French Touch and Many More...)",
+        "playParams": {
+          "id": "959973250",
+          "kind": "album"
+        },
+        "recordLabel": "Believe digital",
+        "releaseDate": "2015-02-02",
+        "trackCount": 26,
+        "upc": "3614590842369",
+        "url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250"
+      },
+      "url": "https://music.apple.com/gb/album/electro-classics-house-deep-house-techno-minimal-electro/959973250"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2017 UMG Recordings, Inc.",
+          "type": "C"
+        },
+        {
+          "text": "This Compilation ℗ 2017 UMG Recordings, Inc.",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "00602567228646"
+      },
+      "id": "7tlX83L40u6wl2HWCn3JAY",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27332c2c34ac61f673a0e7202a2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0232c2c34ac61f673a0e7202a2",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485132c2c34ac61f673a0e7202a2",
+          "width": 64
+        }
+      ],
+      "label": "UMG Recordings, Inc.",
+      "popularity": 20,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2017 UMG Recordings, Inc.",
+            "type": "C"
+          },
+          {
+            "text": "This Compilation ℗ 2017 UMG Recordings, Inc.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "00602567228646"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7tlX83L40u6wl2HWCn3JAY"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/7tlX83L40u6wl2HWCn3JAY?market=US",
+        "id": "7tlX83L40u6wl2HWCn3JAY",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27332c2c34ac61f673a0e7202a2",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0232c2c34ac61f673a0e7202a2",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485132c2c34ac61f673a0e7202a2",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "UMG Recordings, Inc.",
+        "name": "Alt-tronica",
+        "popularity": 20,
+        "release_date": "2017-11-10",
+        "release_date_precision": "day",
+        "total_tracks": 22,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/7tlX83L40u6wl2HWCn3JAY/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/49tQo2QULno7gxHutgccqF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/49tQo2QULno7gxHutgccqF",
+                  "id": "49tQo2QULno7gxHutgccqF",
+                  "name": "LANY",
+                  "type": "artist",
+                  "uri": "spotify:artist:49tQo2QULno7gxHutgccqF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 202093,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6cbjNuXHZHGY7lYBG982X8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6cbjNuXHZHGY7lYBG982X8",
+              "id": "6cbjNuXHZHGY7lYBG982X8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Super Far",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:6cbjNuXHZHGY7lYBG982X8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6nS5roXSAGhTGr34W6n7Et"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6nS5roXSAGhTGr34W6n7Et",
+                  "id": "6nS5roXSAGhTGr34W6n7Et",
+                  "name": "Disclosure",
+                  "type": "artist",
+                  "uri": "spotify:artist:6nS5roXSAGhTGr34W6n7Et"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wY79sveU1sp5g7SokKOiI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wY79sveU1sp5g7SokKOiI",
+                  "id": "2wY79sveU1sp5g7SokKOiI",
+                  "name": "Sam Smith",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wY79sveU1sp5g7SokKOiI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 255813,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4rsJgXyzBkDqMOm1GwedmB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4rsJgXyzBkDqMOm1GwedmB",
+              "id": "4rsJgXyzBkDqMOm1GwedmB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Latch",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4rsJgXyzBkDqMOm1GwedmB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1xHQO9GJIW9OXHxGBISYc5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1xHQO9GJIW9OXHxGBISYc5",
+                  "id": "1xHQO9GJIW9OXHxGBISYc5",
+                  "name": "Marian Hill",
+                  "type": "artist",
+                  "uri": "spotify:artist:1xHQO9GJIW9OXHxGBISYc5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 197786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4mAkGkhhUQLmOV9Cuy0xpT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4mAkGkhhUQLmOV9Cuy0xpT",
+              "id": "4mAkGkhhUQLmOV9Cuy0xpT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Down",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:4mAkGkhhUQLmOV9Cuy0xpT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/39vA9YljbnOApXKniLWBZv"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/39vA9YljbnOApXKniLWBZv",
+                  "id": "39vA9YljbnOApXKniLWBZv",
+                  "name": "Sylvan Esso",
+                  "type": "artist",
+                  "uri": "spotify:artist:39vA9YljbnOApXKniLWBZv"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 212013,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5L8MO5oVg0CORndxFFPK3Z"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5L8MO5oVg0CORndxFFPK3Z",
+              "id": "5L8MO5oVg0CORndxFFPK3Z",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Radio",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:5L8MO5oVg0CORndxFFPK3Z"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4yvcSjfu4PC0CYQyLy4wSq"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4yvcSjfu4PC0CYQyLy4wSq",
+                  "id": "4yvcSjfu4PC0CYQyLy4wSq",
+                  "name": "Glass Animals",
+                  "type": "artist",
+                  "uri": "spotify:artist:4yvcSjfu4PC0CYQyLy4wSq"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 231680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/27iej5wrhhPehw1KtPWm0E"
+              },
+              "href": "https://api.spotify.com/v1/tracks/27iej5wrhhPehw1KtPWm0E",
+              "id": "27iej5wrhhPehw1KtPWm0E",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Youth",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:27iej5wrhhPehw1KtPWm0E"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/245PKF3hKjtxJKIG153kF0"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/245PKF3hKjtxJKIG153kF0",
+                  "id": "245PKF3hKjtxJKIG153kF0",
+                  "name": "Kailee Morgue",
+                  "type": "artist",
+                  "uri": "spotify:artist:245PKF3hKjtxJKIG153kF0"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 202213,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7f6U7jMj4B0EStgVlD5IvU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7f6U7jMj4B0EStgVlD5IvU",
+              "id": "7f6U7jMj4B0EStgVlD5IvU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Medusa",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7f6U7jMj4B0EStgVlD5IvU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4NZvixzsSefsNiIqXn0NDe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4NZvixzsSefsNiIqXn0NDe",
+                  "id": "4NZvixzsSefsNiIqXn0NDe",
+                  "name": "Maggie Rogers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4NZvixzsSefsNiIqXn0NDe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 231120,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1l9jTjhafB02KgPVRxh6Pe"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1l9jTjhafB02KgPVRxh6Pe",
+              "id": "1l9jTjhafB02KgPVRxh6Pe",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Split Stones",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:1l9jTjhafB02KgPVRxh6Pe"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67hb7towEyKvt5Z8Bx306c"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67hb7towEyKvt5Z8Bx306c",
+                  "id": "67hb7towEyKvt5Z8Bx306c",
+                  "name": "Empire Of The Sun",
+                  "type": "artist",
+                  "uri": "spotify:artist:67hb7towEyKvt5Z8Bx306c"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 223733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2bRvBdcRpVTNpVTcseZfSv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2bRvBdcRpVTNpVTcseZfSv",
+              "id": "2bRvBdcRpVTNpVTcseZfSv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "High And Low",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2bRvBdcRpVTNpVTcseZfSv"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4EENT7N7rCBwrddM3s0vFS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4EENT7N7rCBwrddM3s0vFS",
+                  "id": "4EENT7N7rCBwrddM3s0vFS",
+                  "name": "Cut Copy",
+                  "type": "artist",
+                  "uri": "spotify:artist:4EENT7N7rCBwrddM3s0vFS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 226173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6KcuKRNTQcPjNdnpB6OpbI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6KcuKRNTQcPjNdnpB6OpbI",
+              "id": "6KcuKRNTQcPjNdnpB6OpbI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stars Last Me A Lifetime",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:6KcuKRNTQcPjNdnpB6OpbI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2xe8IXgCTpwHE3eA9hTs4n"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2xe8IXgCTpwHE3eA9hTs4n",
+                  "id": "2xe8IXgCTpwHE3eA9hTs4n",
+                  "name": "BANKS",
+                  "type": "artist",
+                  "uri": "spotify:artist:2xe8IXgCTpwHE3eA9hTs4n"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/363nui2gA4uTgJQhhDeJUb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/363nui2gA4uTgJQhhDeJUb",
+              "id": "363nui2gA4uTgJQhhDeJUb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Gemini Feed",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:363nui2gA4uTgJQhhDeJUb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4dYQmk5ma04mZ1KJ9KkAQK"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4dYQmk5ma04mZ1KJ9KkAQK",
+                  "id": "4dYQmk5ma04mZ1KJ9KkAQK",
+                  "name": "Kacy Hill",
+                  "type": "artist",
+                  "uri": "spotify:artist:4dYQmk5ma04mZ1KJ9KkAQK"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 229120,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/21E4yuAjuw4HmRXJotgMEM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/21E4yuAjuw4HmRXJotgMEM",
+              "id": "21E4yuAjuw4HmRXJotgMEM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Keep Me Sane",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:21E4yuAjuw4HmRXJotgMEM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1l9d7B8W0IHy3LqWsxP2SH"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1l9d7B8W0IHy3LqWsxP2SH",
+                  "id": "1l9d7B8W0IHy3LqWsxP2SH",
+                  "name": "Phantogram",
+                  "type": "artist",
+                  "uri": "spotify:artist:1l9d7B8W0IHy3LqWsxP2SH"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219746,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/50FJV3U4K9reve96pN45cq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/50FJV3U4K9reve96pN45cq",
+              "id": "50FJV3U4K9reve96pN45cq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You Don’t Get Me High Anymore",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:50FJV3U4K9reve96pN45cq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1xHQO9GJIW9OXHxGBISYc5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1xHQO9GJIW9OXHxGBISYc5",
+                  "id": "1xHQO9GJIW9OXHxGBISYc5",
+                  "name": "Marian Hill",
+                  "type": "artist",
+                  "uri": "spotify:artist:1xHQO9GJIW9OXHxGBISYc5"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3J0BpFVUc9LeOIVeN5uNhU"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3J0BpFVUc9LeOIVeN5uNhU",
+                  "id": "3J0BpFVUc9LeOIVeN5uNhU",
+                  "name": "Lauren Jauregui",
+                  "type": "artist",
+                  "uri": "spotify:artist:3J0BpFVUc9LeOIVeN5uNhU"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 172506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4glIzOuPet8ZfWN78mt62O"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4glIzOuPet8ZfWN78mt62O",
+              "id": "4glIzOuPet8ZfWN78mt62O",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Back To Me",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:4glIzOuPet8ZfWN78mt62O"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1Zp054Jc86WVKCxKEqZGOA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1Zp054Jc86WVKCxKEqZGOA",
+                  "id": "1Zp054Jc86WVKCxKEqZGOA",
+                  "name": "Jack Garratt",
+                  "type": "artist",
+                  "uri": "spotify:artist:1Zp054Jc86WVKCxKEqZGOA"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 241320,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5WD8S5FPQIFDcz1rfgle9t"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5WD8S5FPQIFDcz1rfgle9t",
+              "id": "5WD8S5FPQIFDcz1rfgle9t",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Worry",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:5WD8S5FPQIFDcz1rfgle9t"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6nS5roXSAGhTGr34W6n7Et"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6nS5roXSAGhTGr34W6n7Et",
+                  "id": "6nS5roXSAGhTGr34W6n7Et",
+                  "name": "Disclosure",
+                  "type": "artist",
+                  "uri": "spotify:artist:6nS5roXSAGhTGr34W6n7Et"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/163tK9Wjr9P9DmM0AVK7lm"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/163tK9Wjr9P9DmM0AVK7lm",
+                  "id": "163tK9Wjr9P9DmM0AVK7lm",
+                  "name": "Lorde",
+                  "type": "artist",
+                  "uri": "spotify:artist:163tK9Wjr9P9DmM0AVK7lm"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 199240,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4XWk2X9ZtHPSzZ0BFjPDPO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4XWk2X9ZtHPSzZ0BFjPDPO",
+              "id": "4XWk2X9ZtHPSzZ0BFjPDPO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Magnets",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:4XWk2X9ZtHPSzZ0BFjPDPO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/49tQo2QULno7gxHutgccqF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/49tQo2QULno7gxHutgccqF",
+                  "id": "49tQo2QULno7gxHutgccqF",
+                  "name": "LANY",
+                  "type": "artist",
+                  "uri": "spotify:artist:49tQo2QULno7gxHutgccqF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 211346,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1aRUEv3VTdHoXn5ibSHmH2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1aRUEv3VTdHoXn5ibSHmH2",
+              "id": "1aRUEv3VTdHoXn5ibSHmH2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "ILYSB",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:1aRUEv3VTdHoXn5ibSHmH2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4yvcSjfu4PC0CYQyLy4wSq"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4yvcSjfu4PC0CYQyLy4wSq",
+                  "id": "4yvcSjfu4PC0CYQyLy4wSq",
+                  "name": "Glass Animals",
+                  "type": "artist",
+                  "uri": "spotify:artist:4yvcSjfu4PC0CYQyLy4wSq"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 253826,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3HJ9QyqPGRTJETTc2Bfu2J"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3HJ9QyqPGRTJETTc2Bfu2J",
+              "id": "3HJ9QyqPGRTJETTc2Bfu2J",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pork Soda",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:3HJ9QyqPGRTJETTc2Bfu2J"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4NZvixzsSefsNiIqXn0NDe"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4NZvixzsSefsNiIqXn0NDe",
+                  "id": "4NZvixzsSefsNiIqXn0NDe",
+                  "name": "Maggie Rogers",
+                  "type": "artist",
+                  "uri": "spotify:artist:4NZvixzsSefsNiIqXn0NDe"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 188266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/21rb85IxMTOGqVZecDNOMz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/21rb85IxMTOGqVZecDNOMz",
+              "id": "21rb85IxMTOGqVZecDNOMz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Alaska",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:21rb85IxMTOGqVZecDNOMz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4eZebkMFU3xelF8mbZYXyl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4eZebkMFU3xelF8mbZYXyl",
+                  "id": "4eZebkMFU3xelF8mbZYXyl",
+                  "name": "Goldroom",
+                  "type": "artist",
+                  "uri": "spotify:artist:4eZebkMFU3xelF8mbZYXyl"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/14Gf2a104M5RyrqE5HjhUp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/14Gf2a104M5RyrqE5HjhUp",
+              "id": "14Gf2a104M5RyrqE5HjhUp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lying To You",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:14Gf2a104M5RyrqE5HjhUp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0e2fMEJlAuBo3iYh118cKI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0e2fMEJlAuBo3iYh118cKI",
+                  "id": "0e2fMEJlAuBo3iYh118cKI",
+                  "name": "Saint Mesa",
+                  "type": "artist",
+                  "uri": "spotify:artist:0e2fMEJlAuBo3iYh118cKI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 188693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/74Hd26Zp0OzeTkpeesq4U2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/74Hd26Zp0OzeTkpeesq4U2",
+              "id": "74Hd26Zp0OzeTkpeesq4U2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Beads",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:74Hd26Zp0OzeTkpeesq4U2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5acfZKELBZRBvyhrC0kzG1"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5acfZKELBZRBvyhrC0kzG1",
+                  "id": "5acfZKELBZRBvyhrC0kzG1",
+                  "name": "Parade of Lights",
+                  "type": "artist",
+                  "uri": "spotify:artist:5acfZKELBZRBvyhrC0kzG1"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 225613,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5Rh4wnAxyWV1xi3zOZGil4"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5Rh4wnAxyWV1xi3zOZGil4",
+              "id": "5Rh4wnAxyWV1xi3zOZGil4",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Memory",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:5Rh4wnAxyWV1xi3zOZGil4"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/39vA9YljbnOApXKniLWBZv"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/39vA9YljbnOApXKniLWBZv",
+                  "id": "39vA9YljbnOApXKniLWBZv",
+                  "name": "Sylvan Esso",
+                  "type": "artist",
+                  "uri": "spotify:artist:39vA9YljbnOApXKniLWBZv"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 210613,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/63Cgu8NUJFvzHgt4CSs1hv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/63Cgu8NUJFvzHgt4CSs1hv",
+              "id": "63Cgu8NUJFvzHgt4CSs1hv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Die Young",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:63Cgu8NUJFvzHgt4CSs1hv"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 22
+        },
+        "type": "album",
+        "uri": "spotify:album:7tlX83L40u6wl2HWCn3JAY"
+      },
+      "release_date": "2017-11-10",
+      "release_date_precision": "day",
+      "total_tracks": 22,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "49tQo2QULno7gxHutgccqF",
+              "name": "LANY"
+            }
+          ],
+          "duration_ms": 202093,
+          "explicit": false,
+          "id": "6cbjNuXHZHGY7lYBG982X8",
+          "name": "Super Far",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "6nS5roXSAGhTGr34W6n7Et",
+              "name": "Disclosure"
+            },
+            {
+              "id": "2wY79sveU1sp5g7SokKOiI",
+              "name": "Sam Smith"
+            }
+          ],
+          "duration_ms": 255813,
+          "explicit": false,
+          "id": "4rsJgXyzBkDqMOm1GwedmB",
+          "name": "Latch",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1xHQO9GJIW9OXHxGBISYc5",
+              "name": "Marian Hill"
+            }
+          ],
+          "duration_ms": 197786,
+          "explicit": false,
+          "id": "4mAkGkhhUQLmOV9Cuy0xpT",
+          "name": "Down",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "39vA9YljbnOApXKniLWBZv",
+              "name": "Sylvan Esso"
+            }
+          ],
+          "duration_ms": 212013,
+          "explicit": true,
+          "id": "5L8MO5oVg0CORndxFFPK3Z",
+          "name": "Radio",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4yvcSjfu4PC0CYQyLy4wSq",
+              "name": "Glass Animals"
+            }
+          ],
+          "duration_ms": 231680,
+          "explicit": false,
+          "id": "27iej5wrhhPehw1KtPWm0E",
+          "name": "Youth",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "245PKF3hKjtxJKIG153kF0",
+              "name": "Kailee Morgue"
+            }
+          ],
+          "duration_ms": 202213,
+          "explicit": false,
+          "id": "7f6U7jMj4B0EStgVlD5IvU",
+          "name": "Medusa",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4NZvixzsSefsNiIqXn0NDe",
+              "name": "Maggie Rogers"
+            }
+          ],
+          "duration_ms": 231120,
+          "explicit": false,
+          "id": "1l9jTjhafB02KgPVRxh6Pe",
+          "name": "Split Stones",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "67hb7towEyKvt5Z8Bx306c",
+              "name": "Empire Of The Sun"
+            }
+          ],
+          "duration_ms": 223733,
+          "explicit": false,
+          "id": "2bRvBdcRpVTNpVTcseZfSv",
+          "name": "High And Low",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "4EENT7N7rCBwrddM3s0vFS",
+              "name": "Cut Copy"
+            }
+          ],
+          "duration_ms": 226173,
+          "explicit": false,
+          "id": "6KcuKRNTQcPjNdnpB6OpbI",
+          "name": "Stars Last Me A Lifetime",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "2xe8IXgCTpwHE3eA9hTs4n",
+              "name": "BANKS"
+            }
+          ],
+          "duration_ms": 187306,
+          "explicit": false,
+          "id": "363nui2gA4uTgJQhhDeJUb",
+          "name": "Gemini Feed",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "4dYQmk5ma04mZ1KJ9KkAQK",
+              "name": "Kacy Hill"
+            }
+          ],
+          "duration_ms": 229120,
+          "explicit": false,
+          "id": "21E4yuAjuw4HmRXJotgMEM",
+          "name": "Keep Me Sane",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "1l9d7B8W0IHy3LqWsxP2SH",
+              "name": "Phantogram"
+            }
+          ],
+          "duration_ms": 219746,
+          "explicit": false,
+          "id": "50FJV3U4K9reve96pN45cq",
+          "name": "You Don’t Get Me High Anymore",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "1xHQO9GJIW9OXHxGBISYc5",
+              "name": "Marian Hill"
+            },
+            {
+              "id": "3J0BpFVUc9LeOIVeN5uNhU",
+              "name": "Lauren Jauregui"
+            }
+          ],
+          "duration_ms": 172506,
+          "explicit": false,
+          "id": "4glIzOuPet8ZfWN78mt62O",
+          "name": "Back To Me",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "1Zp054Jc86WVKCxKEqZGOA",
+              "name": "Jack Garratt"
+            }
+          ],
+          "duration_ms": 241320,
+          "explicit": false,
+          "id": "5WD8S5FPQIFDcz1rfgle9t",
+          "name": "Worry",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "6nS5roXSAGhTGr34W6n7Et",
+              "name": "Disclosure"
+            },
+            {
+              "id": "163tK9Wjr9P9DmM0AVK7lm",
+              "name": "Lorde"
+            }
+          ],
+          "duration_ms": 199240,
+          "explicit": false,
+          "id": "4XWk2X9ZtHPSzZ0BFjPDPO",
+          "name": "Magnets",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "49tQo2QULno7gxHutgccqF",
+              "name": "LANY"
+            }
+          ],
+          "duration_ms": 211346,
+          "explicit": false,
+          "id": "1aRUEv3VTdHoXn5ibSHmH2",
+          "name": "ILYSB",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "4yvcSjfu4PC0CYQyLy4wSq",
+              "name": "Glass Animals"
+            }
+          ],
+          "duration_ms": 253826,
+          "explicit": true,
+          "id": "3HJ9QyqPGRTJETTc2Bfu2J",
+          "name": "Pork Soda",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "4NZvixzsSefsNiIqXn0NDe",
+              "name": "Maggie Rogers"
+            }
+          ],
+          "duration_ms": 188266,
+          "explicit": false,
+          "id": "21rb85IxMTOGqVZecDNOMz",
+          "name": "Alaska",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "4eZebkMFU3xelF8mbZYXyl",
+              "name": "Goldroom"
+            }
+          ],
+          "duration_ms": 208600,
+          "explicit": false,
+          "id": "14Gf2a104M5RyrqE5HjhUp",
+          "name": "Lying To You",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "0e2fMEJlAuBo3iYh118cKI",
+              "name": "Saint Mesa"
+            }
+          ],
+          "duration_ms": 188693,
+          "explicit": false,
+          "id": "74Hd26Zp0OzeTkpeesq4U2",
+          "name": "Beads",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "5acfZKELBZRBvyhrC0kzG1",
+              "name": "Parade of Lights"
+            }
+          ],
+          "duration_ms": 225613,
+          "explicit": false,
+          "id": "5Rh4wnAxyWV1xi3zOZGil4",
+          "name": "Memory",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "39vA9YljbnOApXKniLWBZv",
+              "name": "Sylvan Esso"
+            }
+          ],
+          "duration_ms": 210613,
+          "explicit": false,
+          "id": "63Cgu8NUJFvzHgt4CSs1hv",
+          "name": "Die Young",
+          "preview_url": null,
+          "track_number": 22
+        }
+      ],
+      "url": "https://open.spotify.com/album/7tlX83L40u6wl2HWCn3JAY"
+    }
+  },
+  "spotify_id": "7tlX83L40u6wl2HWCn3JAY",
+  "spotify_url": "https://open.spotify.com/album/7tlX83L40u6wl2HWCn3JAY",
   "styles": [
     "Electro"
   ],
@@ -307,6 +1456,6 @@
       "title": "The Smurf"
     }
   ],
-  "updated_at": "2025-07-07T15:46:53.583926",
+  "updated_at": "2025-07-09T09:52:24.754935",
   "year": 2017
 }
