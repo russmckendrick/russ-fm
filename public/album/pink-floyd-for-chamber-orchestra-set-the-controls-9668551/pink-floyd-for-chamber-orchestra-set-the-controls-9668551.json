@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "Henry Dreyfuss Brant was a Canadian-born American composer. An expert orchestrator with a flair for experimentation, many of Brant's works featured spatialization techniques.",
       "discogs_id": "5502391",
       "discogs_original_name": "The Coda Chamber Ensemble",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "The Coda Chamber Ensemble",
       "role": "",
       "spotify_id": "2DO4p3CPDnInsJfg0jFfaF",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Henry_Brant"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "The Coda Chamber Ensemble": {
+      "biography": "Henry Dreyfuss Brant was a Canadian-born American composer. An expert orchestrator with a flair for experimentation, many of Brant's works featured spatialization techniques.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Henry_Brant"
+    }
+  },
   "country": "Czech Republic",
-  "created_at": "2025-07-07T19:34:48.015276",
+  "created_at": "2025-07-09T09:54:01.487791",
   "date_added": "2017-01-27T19:39:03-08:00",
   "discogs_id": "9668551",
   "discogs_url": "https://www.discogs.com/release/9668551-The-Coda-Chamber-Ensemble-Pink-Floyd-For-Chamber-Orchestra-Set-The-Controls",
@@ -35,13 +40,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/z1iUOODnAzfVmHl6UwGEU9NZLNouCaq9hFQChmyQGXw/rs:fit/g:sm/q:90/h:600/w:578/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk2Njg1/NTEtMTQ4NDQ4MzIw/Ni01NDkxLmpwZWc.jpeg",
       "width": 578
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/pink-floyd-for-chamber-orchestra-set-the-controls-9668551/pink-floyd-for-chamber-orchestra-set-the-controls-9668551.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -57,9 +55,10 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T19:34:53.766263",
+    "processed_at": "2025-07-09T09:54:02.705281",
     "services_used": [
-      "discogs"
+      "discogs",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -97,6 +96,6 @@
       "title": "4th Movement - Reconstruction"
     }
   ],
-  "updated_at": "2025-07-07T19:34:52.902176",
+  "updated_at": "2025-07-09T09:54:02.337977",
   "year": 2016
 }
