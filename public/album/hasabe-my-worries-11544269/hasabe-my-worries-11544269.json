@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "79358941",
-      "biography": null,
+      "biography": "Ayalew Mesfin Chufa is an Ethiopian musician. He is one of the most important figures of Ethio-Groove.",
       "discogs_id": "1973611",
       "discogs_original_name": "Ayalew Mesfin",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Ayalew Mesfin",
       "role": "",
       "spotify_id": "66DQqgrnN1Tfr3e8ChRCw3",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ayalew_Mesfin"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Ayalew Mesfin": {
+      "biography": "Ayalew Mesfin Chufa is an Ethiopian musician. He is one of the most important figures of Ethio-Groove.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ayalew_Mesfin"
+    }
+  },
   "country": "US",
-  "created_at": "2025-07-05T16:55:33.468248",
+  "created_at": "2025-07-09T09:34:16.091784",
   "date_added": "2018-02-13T07:13:33-08:00",
   "discogs_id": "11544269",
   "discogs_url": "https://www.discogs.com/release/11544269-Ayalew-Mesfin-Hasabe-My-Worries",
@@ -226,18 +231,19 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-hi-res.jpg",
-    "medium": "public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-medium.jpg",
-    "small": "public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-small.jpg"
+    "hi-res": "../public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-hi-res.jpg",
+    "medium": "../public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-medium.jpg",
+    "small": "../public/album/hasabe-my-worries-11544269/hasabe-my-worries-11544269-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T16:55:37.363596",
+    "processed_at": "2025-07-09T09:34:18.344716",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Hasabe (My Worries)",
@@ -950,6 +956,6 @@
       "title": "Gud Aderegechign (Blindsided By Love)"
     }
   ],
-  "updated_at": "2025-07-05T16:55:35.655193",
+  "updated_at": "2025-07-09T09:34:17.141085",
   "year": 2018
 }
