@@ -29,7 +29,7 @@ class BaseCommand:
 class ReleaseCommand(BaseCommand):
     """Command for handling single release operations."""
     
-    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False):
+    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False, prefer: Optional[str] = None):
         """Execute the release command."""
         try:
             # Initialize orchestrator
@@ -81,6 +81,11 @@ class ReleaseCommand(BaseCommand):
                         
                 except Exception as e:
                     self.console.print(f"[red]Error accessing v1.russ.fm data: {str(e)}[/red]")
+            
+            # Set preferred image source if specified
+            if prefer:
+                orchestrator.set_preferred_image_source(prefer)
+                self.console.print(f"[blue]Preferred image source set to: {prefer}[/blue]")
             
             self.console.print(f"[blue]Fetching release data for Discogs ID: {discogs_id}[/blue]")
             
@@ -177,7 +182,7 @@ class ReleaseCommand(BaseCommand):
 class CollectionCommand(BaseCommand):
     """Command for handling collection operations."""
     
-    def execute(self, username: Optional[str], limit: Optional[int], from_index: Optional[int], to_index: Optional[int], batch_size: int, resume: bool, dry_run: bool, force_refresh: bool = False, interactive: bool = False):
+    def execute(self, username: Optional[str], limit: Optional[int], from_index: Optional[int], to_index: Optional[int], batch_size: int, resume: bool, dry_run: bool, force_refresh: bool = False, interactive: bool = False, prefer: Optional[str] = None):
         """Execute the collection command."""
         try:
             # Initialize orchestrator and database
@@ -188,6 +193,11 @@ class CollectionCommand(BaseCommand):
             # Set interactive mode if requested
             if interactive:
                 orchestrator.set_interactive_mode(True)
+            
+            # Set preferred image source if specified
+            if prefer:
+                orchestrator.set_preferred_image_source(prefer)
+                self.console.print(f"[blue]Preferred image source set to: {prefer}[/blue]")
             
             if resume:
                 # Get unprocessed items

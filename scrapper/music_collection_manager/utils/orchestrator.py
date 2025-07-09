@@ -27,6 +27,7 @@ class MusicDataOrchestrator:
         self.interactive_mode = False
         self.search_override = None
         self.custom_cover = None
+        self.preferred_image_source = None
         
         # Initialize image manager with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -55,6 +56,10 @@ class MusicDataOrchestrator:
     def set_custom_cover(self, cover_url: str):
         """Set a custom cover URL to override the default album artwork."""
         self.custom_cover = cover_url
+    
+    def set_preferred_image_source(self, source: str):
+        """Set a preferred image source for album artwork."""
+        self.preferred_image_source = source
     
     def _initialize_services(self):
         """Initialize all available services."""
@@ -338,24 +343,75 @@ class MusicDataOrchestrator:
                 else:
                     self.logger.warning(f"Failed to download custom cover from {self.custom_cover}")
             else:
-                # Use normal artwork extraction and download
-                image_sources = self.image_manager.extract_image_sources(release)
-                if image_sources:
-                    downloaded_images = self.image_manager.download_album_artwork_with_fallback(
-                        release.title, 
-                        discogs_id, 
-                        image_sources
-                    )
+                # Handle v1 flag if preferred
+                if self.preferred_image_source == "v1":
+                    from ..utils.v1_site_helper import V1SiteHelper
                     
-                    # Log successful downloads
-                    successful_downloads = [size for size, path in downloaded_images.items() if path]
-                    if successful_downloads:
-                        self.logger.info(f"Downloaded artwork for {release.title}: {', '.join(successful_downloads)}")
-                    
-                    # Store local image paths in release
-                    release.local_images = downloaded_images
+                    self.logger.info(f"Using v1.russ.fm for album artwork...")
+                    try:
+                        release_found = V1SiteHelper.find_release_by_discogs_id(str(release.discogs_id))
+                        
+                        if release_found and release_found.get("coverImage"):
+                            v1_image_url = release_found["coverImage"]
+                            self.logger.info(f"Found release in v1 index with image: {v1_image_url}")
+                            
+                            # Download the v1 image
+                            downloaded_images = self.image_manager.download_album_artwork_with_fallback(
+                                release.title, 
+                                discogs_id, 
+                                [{"url": v1_image_url, "type": "v1"}]
+                            )
+                            
+                            if downloaded_images:
+                                self.logger.info(f"Downloaded v1 artwork for {release.title}")
+                                release.local_images = downloaded_images
+                            else:
+                                self.logger.warning(f"Failed to download v1 artwork from {v1_image_url}")
+                        else:
+                            self.logger.info(f"Release {release.discogs_id} not found in v1.russ.fm, falling back to other sources")
+                            # Fall back to normal extraction
+                            image_sources = self.image_manager.extract_image_sources(release, preferred_source=self.preferred_image_source)
+                            if image_sources:
+                                downloaded_images = self.image_manager.download_album_artwork_with_fallback(
+                                    release.title, 
+                                    discogs_id, 
+                                    image_sources
+                                )
+                                
+                                if downloaded_images:
+                                    release.local_images = downloaded_images
+                    except Exception as e:
+                        self.logger.warning(f"Error accessing v1.russ.fm data: {str(e)}")
+                        # Fall back to normal extraction
+                        image_sources = self.image_manager.extract_image_sources(release, preferred_source=self.preferred_image_source)
+                        if image_sources:
+                            downloaded_images = self.image_manager.download_album_artwork_with_fallback(
+                                release.title, 
+                                discogs_id, 
+                                image_sources
+                            )
+                            
+                            if downloaded_images:
+                                release.local_images = downloaded_images
                 else:
-                    self.logger.warning(f"No image sources found for {release.title}")
+                    # Use normal artwork extraction and download
+                    image_sources = self.image_manager.extract_image_sources(release, preferred_source=self.preferred_image_source)
+                    if image_sources:
+                        downloaded_images = self.image_manager.download_album_artwork_with_fallback(
+                            release.title, 
+                            discogs_id, 
+                            image_sources
+                        )
+                        
+                        # Log successful downloads
+                        successful_downloads = [size for size, path in downloaded_images.items() if path]
+                        if successful_downloads:
+                            self.logger.info(f"Downloaded artwork for {release.title}: {', '.join(successful_downloads)}")
+                        
+                        # Store local image paths in release
+                        release.local_images = downloaded_images
+                    else:
+                        self.logger.warning(f"No image sources found for {release.title}")
                 
         except Exception as e:
             self.logger.warning(f"Failed to download artwork for {release.title}: {str(e)}")
