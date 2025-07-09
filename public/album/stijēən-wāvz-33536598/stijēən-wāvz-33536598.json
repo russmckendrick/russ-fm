@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T07:48:27.521547",
+  "created_at": "2025-07-09T20:55:18.623332",
   "date_added": "2025-03-28T04:00:37-07:00",
   "discogs_id": "33536598",
   "discogs_url": "https://www.discogs.com/release/33536598-Envy-Of-None-Stijēən-Wāvz",
@@ -132,19 +132,609 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T07:48:29.105960",
+    "processed_at": "2025-07-09T20:55:20.066142",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Stij(ē)ən Wāvz",
-  "release_name_spotify": null,
+  "release_name_spotify": "Stygian Wavz",
   "released": "2025-03-28",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2024 Kscope a division of Snapper Music Ltd",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2024 Kscope a division of Snapper Music",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "802644447469"
+      },
+      "id": "2pDPxXBsQRdybyxxSp4HbH",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2733f1c84f9587ab1d691645b91",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e023f1c84f9587ab1d691645b91",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048513f1c84f9587ab1d691645b91",
+          "width": 64
+        }
+      ],
+      "label": "Kscope Music",
+      "popularity": 33,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+            },
+            "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+            "id": "2wwArB2zsZyIIThkewLBaZ",
+            "name": "Envy Of None",
+            "type": "artist",
+            "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2024 Kscope a division of Snapper Music Ltd",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2024 Kscope a division of Snapper Music",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "802644447469"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2pDPxXBsQRdybyxxSp4HbH"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2pDPxXBsQRdybyxxSp4HbH?market=US",
+        "id": "2pDPxXBsQRdybyxxSp4HbH",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2733f1c84f9587ab1d691645b91",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e023f1c84f9587ab1d691645b91",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048513f1c84f9587ab1d691645b91",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Kscope Music",
+        "name": "Stygian Wavz",
+        "popularity": 33,
+        "release_date": "2025-03-28",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2pDPxXBsQRdybyxxSp4HbH/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 209427,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3cJFygbfVWoGMy5aCzhgOI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3cJFygbfVWoGMy5aCzhgOI",
+              "id": "3cJFygbfVWoGMy5aCzhgOI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Not Dead Yet",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3cJFygbfVWoGMy5aCzhgOI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 281335,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6KU13HLNGm0jBk07QzvD32"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6KU13HLNGm0jBk07QzvD32",
+              "id": "6KU13HLNGm0jBk07QzvD32",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Story",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:6KU13HLNGm0jBk07QzvD32"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 272113,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1U221R6SleTqufNKfKpnia"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1U221R6SleTqufNKfKpnia",
+              "id": "1U221R6SleTqufNKfKpnia",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Under The Stars",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:1U221R6SleTqufNKfKpnia"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 220456,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5jenvVwu6pMsfGm3JmjsA3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5jenvVwu6pMsfGm3JmjsA3",
+              "id": "5jenvVwu6pMsfGm3JmjsA3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thrill Of The Chase",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:5jenvVwu6pMsfGm3JmjsA3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 254247,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7AIAsO8jWDKU6jyc4bBxPe"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7AIAsO8jWDKU6jyc4bBxPe",
+              "id": "7AIAsO8jWDKU6jyc4bBxPe",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Handle With Care",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:7AIAsO8jWDKU6jyc4bBxPe"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 226747,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4EB4gMFYh7DMkcRulHfcuP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4EB4gMFYh7DMkcRulHfcuP",
+              "id": "4EB4gMFYh7DMkcRulHfcuP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "That Was Then",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4EB4gMFYh7DMkcRulHfcuP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 213274,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3dUP9nYszAceUMfjPvSDcP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3dUP9nYszAceUMfjPvSDcP",
+              "id": "3dUP9nYszAceUMfjPvSDcP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Raindrops",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3dUP9nYszAceUMfjPvSDcP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 235184,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6ftE1ggydU1wwjwZIDw1EI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6ftE1ggydU1wwjwZIDw1EI",
+              "id": "6ftE1ggydU1wwjwZIDw1EI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "New Trip",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6ftE1ggydU1wwjwZIDw1EI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 241537,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4QcgfMA2GOk2PocUq7lzuW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4QcgfMA2GOk2PocUq7lzuW",
+              "id": "4QcgfMA2GOk2PocUq7lzuW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Clouds",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4QcgfMA2GOk2PocUq7lzuW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 238435,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5WkXL0qTwEc3ur8gl0rD8o"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5WkXL0qTwEc3ur8gl0rD8o",
+              "id": "5WkXL0qTwEc3ur8gl0rD8o",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The End",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:5WkXL0qTwEc3ur8gl0rD8o"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2wwArB2zsZyIIThkewLBaZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2wwArB2zsZyIIThkewLBaZ",
+                  "id": "2wwArB2zsZyIIThkewLBaZ",
+                  "name": "Envy Of None",
+                  "type": "artist",
+                  "uri": "spotify:artist:2wwArB2zsZyIIThkewLBaZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 216834,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5fg3cbyMmqQXgWsFKb4wDH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5fg3cbyMmqQXgWsFKb4wDH",
+              "id": "5fg3cbyMmqQXgWsFKb4wDH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stygian Waves",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:5fg3cbyMmqQXgWsFKb4wDH"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 11
+        },
+        "type": "album",
+        "uri": "spotify:album:2pDPxXBsQRdybyxxSp4HbH"
+      },
+      "release_date": "2025-03-28",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 209427,
+          "explicit": false,
+          "id": "3cJFygbfVWoGMy5aCzhgOI",
+          "name": "Not Dead Yet",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 281335,
+          "explicit": false,
+          "id": "6KU13HLNGm0jBk07QzvD32",
+          "name": "The Story",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 272113,
+          "explicit": false,
+          "id": "1U221R6SleTqufNKfKpnia",
+          "name": "Under The Stars",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 220456,
+          "explicit": false,
+          "id": "5jenvVwu6pMsfGm3JmjsA3",
+          "name": "Thrill Of The Chase",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 254247,
+          "explicit": false,
+          "id": "7AIAsO8jWDKU6jyc4bBxPe",
+          "name": "Handle With Care",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 226747,
+          "explicit": false,
+          "id": "4EB4gMFYh7DMkcRulHfcuP",
+          "name": "That Was Then",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 213274,
+          "explicit": false,
+          "id": "3dUP9nYszAceUMfjPvSDcP",
+          "name": "Raindrops",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 235184,
+          "explicit": false,
+          "id": "6ftE1ggydU1wwjwZIDw1EI",
+          "name": "New Trip",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 241537,
+          "explicit": false,
+          "id": "4QcgfMA2GOk2PocUq7lzuW",
+          "name": "Clouds",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 238435,
+          "explicit": false,
+          "id": "5WkXL0qTwEc3ur8gl0rD8o",
+          "name": "The End",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "2wwArB2zsZyIIThkewLBaZ",
+              "name": "Envy Of None"
+            }
+          ],
+          "duration_ms": 216834,
+          "explicit": false,
+          "id": "5fg3cbyMmqQXgWsFKb4wDH",
+          "name": "Stygian Waves",
+          "preview_url": null,
+          "track_number": 11
+        }
+      ],
+      "url": "https://open.spotify.com/album/2pDPxXBsQRdybyxxSp4HbH"
+    }
+  },
+  "spotify_id": "2pDPxXBsQRdybyxxSp4HbH",
+  "spotify_url": "https://open.spotify.com/album/2pDPxXBsQRdybyxxSp4HbH",
   "styles": [
     "Prog Rock"
   ],
@@ -217,6 +807,6 @@
       "title": "Stij(ē)ən Wāvz"
     }
   ],
-  "updated_at": "2025-07-09T07:48:28.260003",
+  "updated_at": "2025-07-09T20:55:19.825805",
   "year": 2025
 }
