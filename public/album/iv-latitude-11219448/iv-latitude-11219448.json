@@ -22,7 +22,7 @@
     }
   },
   "country": "Germany",
-  "created_at": "2025-07-07T20:27:41.722668",
+  "created_at": "2025-07-09T09:19:40.867255",
   "date_added": "2019-03-27T19:31:25-07:00",
   "discogs_id": "11219448",
   "discogs_url": "https://www.discogs.com/release/11219448-Lesoir-IV-Latitude",
@@ -129,13 +129,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/y0bVLUl23vW8nvB6NUa9V32KdXgnTj0SPOL8j-iI2Gc/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMjE5/NDQ4LTE1MTIxMjY2/NDUtMTM5Ny5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/iv-latitude-11219448/iv-latitude-11219448.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -151,15 +144,16 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T20:27:49.466324",
+    "processed_at": "2025-07-09T09:19:42.284053",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "IV Latitude",
-  "release_name_spotify": null,
+  "release_name_spotify": "Latitude",
   "released": "2017",
   "services": {
     "lastfm": {
@@ -490,10 +484,684 @@
       "url": "https://www.last.fm/music/Lesoir/IV+Latitude",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "Gentle Art Of Music",
+          "type": "C"
+        },
+        {
+          "text": "Gentle Art Of Music",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "4046661533521"
+      },
+      "id": "4LmuxLmPQ1tyTD1s7hyvoM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27357f59ba476a0e0ef4082d5ec",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0257f59ba476a0e0ef4082d5ec",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485157f59ba476a0e0ef4082d5ec",
+          "width": 64
+        }
+      ],
+      "label": "Gentle Art Of Music",
+      "popularity": 3,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+            },
+            "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+            "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+            "name": "Lesoir",
+            "type": "artist",
+            "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "Gentle Art Of Music",
+            "type": "C"
+          },
+          {
+            "text": "Gentle Art Of Music",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "4046661533521"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4LmuxLmPQ1tyTD1s7hyvoM"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4LmuxLmPQ1tyTD1s7hyvoM?market=US",
+        "id": "4LmuxLmPQ1tyTD1s7hyvoM",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27357f59ba476a0e0ef4082d5ec",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0257f59ba476a0e0ef4082d5ec",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485157f59ba476a0e0ef4082d5ec",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Gentle Art Of Music",
+        "name": "Latitude",
+        "popularity": 3,
+        "release_date": "2017-11-17",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4LmuxLmPQ1tyTD1s7hyvoM/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 271604,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3IEWxvGmd0fw23QE42IWDR"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3IEWxvGmd0fw23QE42IWDR",
+              "id": "3IEWxvGmd0fw23QE42IWDR",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Modern Goddess",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3IEWxvGmd0fw23QE42IWDR"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 327770,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2oeo6cmgin6mWy5TAPkp1j"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2oeo6cmgin6mWy5TAPkp1j",
+              "id": "2oeo6cmgin6mWy5TAPkp1j",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In the Game",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2oeo6cmgin6mWy5TAPkp1j"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 242433,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Kr4qQ2WzcIiM6DU8IqRjv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Kr4qQ2WzcIiM6DU8IqRjv",
+              "id": "3Kr4qQ2WzcIiM6DU8IqRjv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Icon",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:3Kr4qQ2WzcIiM6DU8IqRjv"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 444950,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1H8kGs3QAycoOGopmKJCJq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1H8kGs3QAycoOGopmKJCJq",
+              "id": "1H8kGs3QAycoOGopmKJCJq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In Their Eyes",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1H8kGs3QAycoOGopmKJCJq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 331131,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0Cab3SU4fvR4DUVBpfpT8W"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0Cab3SU4fvR4DUVBpfpT8W",
+              "id": "0Cab3SU4fvR4DUVBpfpT8W",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Gone and Forgotten",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0Cab3SU4fvR4DUVBpfpT8W"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 405671,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/52TBZFly2uCA288FieGk7m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/52TBZFly2uCA288FieGk7m",
+              "id": "52TBZFly2uCA288FieGk7m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Eden's Garden",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:52TBZFly2uCA288FieGk7m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 250802,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/47LM9Wqrh6RxujLHAlwtME"
+              },
+              "href": "https://api.spotify.com/v1/tracks/47LM9Wqrh6RxujLHAlwtME",
+              "id": "47LM9Wqrh6RxujLHAlwtME",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Zeroes and Ones",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:47LM9Wqrh6RxujLHAlwtME"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 298147,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3kXsV6UbRk72BqfJm6ql0V"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3kXsV6UbRk72BqfJm6ql0V",
+              "id": "3kXsV6UbRk72BqfJm6ql0V",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Kissed by Sunlight",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3kXsV6UbRk72BqfJm6ql0V"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 190753,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6K7km6VbydIXC2icF1Zk0j"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6K7km6VbydIXC2icF1Zk0j",
+              "id": "6K7km6VbydIXC2icF1Zk0j",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cheap Trade",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:6K7km6VbydIXC2icF1Zk0j"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 256673,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3MEfAWqT0W2mXHWoLMMAko"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3MEfAWqT0W2mXHWoLMMAko",
+              "id": "3MEfAWqT0W2mXHWoLMMAko",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Comforting Rain",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:3MEfAWqT0W2mXHWoLMMAko"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219751,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4SAFW6xTEKLkkhY4idKIgJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4SAFW6xTEKLkkhY4idKIgJ",
+              "id": "4SAFW6xTEKLkkhY4idKIgJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Latitude",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4SAFW6xTEKLkkhY4idKIgJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 381280,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1XSiPZeuxUcubh5QOrGoc8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1XSiPZeuxUcubh5QOrGoc8",
+              "id": "1XSiPZeuxUcubh5QOrGoc8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Faith Is",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:1XSiPZeuxUcubh5QOrGoc8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5SUyYu1BJ7TGGjWUtKbqKx"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5SUyYu1BJ7TGGjWUtKbqKx",
+                  "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+                  "name": "Lesoir",
+                  "type": "artist",
+                  "uri": "spotify:artist:5SUyYu1BJ7TGGjWUtKbqKx"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 115225,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6toosRo5SMYTmxVIzBZ4jP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6toosRo5SMYTmxVIzBZ4jP",
+              "id": "6toosRo5SMYTmxVIzBZ4jP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cradle Song",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:6toosRo5SMYTmxVIzBZ4jP"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 13
+        },
+        "type": "album",
+        "uri": "spotify:album:4LmuxLmPQ1tyTD1s7hyvoM"
+      },
+      "release_date": "2017-11-17",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 271604,
+          "explicit": false,
+          "id": "3IEWxvGmd0fw23QE42IWDR",
+          "name": "Modern Goddess",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 327770,
+          "explicit": false,
+          "id": "2oeo6cmgin6mWy5TAPkp1j",
+          "name": "In the Game",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 242433,
+          "explicit": false,
+          "id": "3Kr4qQ2WzcIiM6DU8IqRjv",
+          "name": "Icon",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 444950,
+          "explicit": false,
+          "id": "1H8kGs3QAycoOGopmKJCJq",
+          "name": "In Their Eyes",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 331131,
+          "explicit": false,
+          "id": "0Cab3SU4fvR4DUVBpfpT8W",
+          "name": "Gone and Forgotten",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 405671,
+          "explicit": false,
+          "id": "52TBZFly2uCA288FieGk7m",
+          "name": "Eden's Garden",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 250802,
+          "explicit": false,
+          "id": "47LM9Wqrh6RxujLHAlwtME",
+          "name": "Zeroes and Ones",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 298147,
+          "explicit": false,
+          "id": "3kXsV6UbRk72BqfJm6ql0V",
+          "name": "Kissed by Sunlight",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 190753,
+          "explicit": false,
+          "id": "6K7km6VbydIXC2icF1Zk0j",
+          "name": "Cheap Trade",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 256673,
+          "explicit": false,
+          "id": "3MEfAWqT0W2mXHWoLMMAko",
+          "name": "Comforting Rain",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 219751,
+          "explicit": false,
+          "id": "4SAFW6xTEKLkkhY4idKIgJ",
+          "name": "Latitude",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 381280,
+          "explicit": false,
+          "id": "1XSiPZeuxUcubh5QOrGoc8",
+          "name": "Faith Is",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "5SUyYu1BJ7TGGjWUtKbqKx",
+              "name": "Lesoir"
+            }
+          ],
+          "duration_ms": 115225,
+          "explicit": false,
+          "id": "6toosRo5SMYTmxVIzBZ4jP",
+          "name": "Cradle Song",
+          "preview_url": null,
+          "track_number": 13
+        }
+      ],
+      "url": "https://open.spotify.com/album/4LmuxLmPQ1tyTD1s7hyvoM"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "4LmuxLmPQ1tyTD1s7hyvoM",
+  "spotify_url": "https://open.spotify.com/album/4LmuxLmPQ1tyTD1s7hyvoM",
   "styles": [
     "Prog Rock"
   ],
@@ -578,6 +1246,6 @@
       "title": "Cradle Song"
     }
   ],
-  "updated_at": "2025-07-07T20:27:48.831425",
+  "updated_at": "2025-07-09T09:19:41.954980",
   "year": 2017
 }

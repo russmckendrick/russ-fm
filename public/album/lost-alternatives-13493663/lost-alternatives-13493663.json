@@ -4,20 +4,25 @@
   "artists": [
     {
       "apple_music_id": null,
-      "biography": null,
+      "biography": "The Maccabees are an English indie rock band, formed in 2004 in London. They released four albums: Colour It In in 2007, followed by Wall of Arms in 2009, Given to the Wild which was released on 9 January 2012 and their last album Marks to Prove It released on 31 July 2015. The band announced that they decided to disband in August 2016, with farewell gigs in 2017.",
       "discogs_id": "205700",
       "discogs_original_name": "Steve Lamacq",
       "id": null,
       "lastfm_mbid": null,
       "name": "Steve Lamacq",
       "role": "",
-      "spotify_id": "2SwhNukah1MYpLR594PnuC",
-      "wikipedia_url": null
+      "spotify_id": "57vWImR43h4CaDao012Ofp",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Maccabees_(band)"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Steve Lamacq": {
+      "biography": "The Maccabees are an English indie rock band, formed in 2004 in London. They released four albums: Colour It In in 2007, followed by Wall of Arms in 2009, Given to the Wild which was released on 9 January 2012 and their last album Marks to Prove It released on 31 July 2015. The band announced that they decided to disband in August 2016, with farewell gigs in 2017.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Maccabees_(band)"
+    }
+  },
   "country": "UK & Europe",
-  "created_at": "2025-07-07T20:27:55.164976",
+  "created_at": "2025-07-09T09:19:02.811675",
   "date_added": "2019-04-15T11:47:49-07:00",
   "discogs_id": "13493663",
   "discogs_url": "https://www.discogs.com/release/13493663-Steve-Lamacq-Lost-Alternatives",
@@ -47,13 +52,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/CKXkRQ2AUisBMcpZ06QKaTfjozQEXEE5GYrYvwTM8oQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDkz/NjYzLTE1NzExNTYw/OTAtNTcyOC5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/lost-alternatives-13493663/lost-alternatives-13493663.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -69,9 +67,10 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T20:27:57.091133",
+    "processed_at": "2025-07-09T09:19:03.879798",
     "services_used": [
-      "discogs"
+      "discogs",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": null,
@@ -1100,6 +1099,6 @@
       "title": "Strachan"
     }
   ],
-  "updated_at": "2025-07-07T20:27:56.447196",
+  "updated_at": "2025-07-09T09:19:03.450371",
   "year": 2019
 }
