@@ -205,6 +205,10 @@ export function RandomPage() {
     return album.uri_release.replace('/album/', '').replace('/', '');
   };
 
+  const getArtistPath = (artist: Artist) => {
+    return artist.uri.replace('/artist/', '').replace('/', '');
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
@@ -243,34 +247,58 @@ export function RandomPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {randomAlbums.map((album, index) => (
+          {randomItems.map((item, index) => (
             <div
-              key={album.uri_release}
+              key={item.type === 'album' ? (item.data as Album).uri_release : (item.data as Artist).uri}
               className={`text-center transition-all duration-300 ${
-                albumVisibility[index] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+                itemVisibility[index] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
             >
-              <Link 
-                to={`/album/${getAlbumPath(album)}`}
-                className="block group"
-              >
-                <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                  <img
-                    src={album.images_uri_release.medium}
-                    alt={album.release_name}
-                    className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
-                    {album.release_name}
-                  </h3>
-                  <p className="text-muted-foreground">
-                    {album.release_artist}
-                  </p>
-                </div>
-              </Link>
+              {item.type === 'album' ? (
+                <Link 
+                  to={`/album/${getAlbumPath(item.data as Album)}`}
+                  className="block group"
+                >
+                  <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={(item.data as Album).images_uri_release.medium}
+                      alt={(item.data as Album).release_name}
+                      className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
+                      {(item.data as Album).release_name}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {(item.data as Album).release_artist}
+                    </p>
+                  </div>
+                </Link>
+              ) : (
+                <Link 
+                  to={`/artist/${getArtistPath(item.data as Artist)}`}
+                  className="block group"
+                >
+                  <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
+                    <img
+                      src={(item.data as Artist).images_uri_artist.medium}
+                      alt={(item.data as Artist).name}
+                      className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                  </div>
+                  <div className="mt-4">
+                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
+                      {(item.data as Artist).name}
+                    </h3>
+                    <p className="text-muted-foreground">
+                      {(item.data as Artist).albumCount} album{(item.data as Artist).albumCount !== 1 ? 's' : ''}
+                    </p>
+                  </div>
+                </Link>
+              )}
             </div>
           ))}
         </div>

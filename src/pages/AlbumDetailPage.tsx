@@ -153,6 +153,8 @@ export function AlbumDetailPage() {
   const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
   const [loading, setLoading] = useState(true);
   const [biographyExpanded, setBiographyExpanded] = useState(false);
+  const [descriptionExpanded, setDescriptionExpanded] = useState(false);
+  const [showDescriptionButton, setShowDescriptionButton] = useState(false);
 
   // Set page title based on album data
   const pageTitle = detailedAlbum 
@@ -613,14 +615,65 @@ export function AlbumDetailPage() {
 
       {/* Description */}
       {getAlbumDescription() && (
-        <Card className="mb-8">
+        <Card className="overflow-hidden mb-8">
           <CardHeader>
             <CardTitle className="text-lg">About This Album</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground leading-relaxed">
-              {getAlbumDescription()}
-            </p>
+            <div className={`relative ${!descriptionExpanded ? 'max-h-48 overflow-hidden' : ''}`}>
+              <div 
+                className="text-muted-foreground leading-relaxed"
+                ref={(el) => {
+                  if (el) {
+                    // Check if content overflows the container
+                    const hasOverflow = el.scrollHeight > 192; // 192px = max-h-48
+                    setShowDescriptionButton(hasOverflow);
+                  }
+                }}
+              >
+                {(() => {
+                  let description = getAlbumDescription();
+                  
+                  // Remove everything from "Read more on Last.fm" onwards
+                  const readMoreIndex = description?.indexOf('Read more on Last.fm');
+                  if (readMoreIndex !== -1) {
+                    description = description?.substring(0, readMoreIndex).trim();
+                  }
+                  
+                  // Handle different description formats
+                  if (description?.includes('\n')) {
+                    // Multi-paragraph format: Uses actual \n characters for paragraphs
+                    return description.split('\n').filter(paragraph => paragraph.trim()).map((paragraph, index) => (
+                      <p key={index} className="mb-4 last:mb-0">
+                        {paragraph.trim()}
+                      </p>
+                    ));
+                  } else {
+                    // Single paragraph format
+                    return (
+                      <p className="mb-0">
+                        {description}
+                      </p>
+                    );
+                  }
+                })()}
+              </div>
+              {!descriptionExpanded && showDescriptionButton && (
+                <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent dark:from-gray-950 pointer-events-none"></div>
+              )}
+            </div>
+            {showDescriptionButton && (
+              <div className="mt-4 text-center">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => setDescriptionExpanded(!descriptionExpanded)}
+                  className="text-primary hover:text-primary-dark"
+                >
+                  {descriptionExpanded ? 'Show Less' : 'Read More'}
+                </Button>
+              </div>
+            )}
           </CardContent>
         </Card>
       )}
