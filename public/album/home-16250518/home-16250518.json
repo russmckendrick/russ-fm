@@ -4,20 +4,25 @@
   "artists": [
     {
       "apple_music_id": "1462962852",
-      "biography": null,
+      "biography": "Kiowa or Cáuigú people are a Native American tribe and an Indigenous people of the Great Plains of the United States. They migrated southward from western Montana into the Rocky Mountains in Colorado in the 17th and 18th centuries and eventually into the Southern Plains by the early 19th century. In 1867, the Kiowa were moved to a reservation in Southwestern Oklahoma.",
       "discogs_id": "5163439",
-      "discogs_original_name": "Koj (3)",
+      "discogs_original_name": "Koj",
       "id": null,
       "lastfm_mbid": "f902e053-bca4-472c-a1f9-fa64dbd10ade",
       "name": "Koj",
       "role": "",
       "spotify_id": "3Ntj9xjU3aBDQzOKYtAMJa",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kiowa"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Koj": {
+      "biography": "Kiowa or Cáuigú people are a Native American tribe and an Indigenous people of the Great Plains of the United States. They migrated southward from western Montana into the Rocky Mountains in Colorado in the 17th and 18th centuries and eventually into the Southern Plains by the early 19th century. In 1867, the Kiowa were moved to a reservation in Southwestern Oklahoma.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kiowa"
+    }
+  },
   "country": "Germany",
-  "created_at": "2025-07-05T15:59:19.828792",
+  "created_at": "2025-07-09T08:45:53.296867",
   "date_added": "2020-11-21T19:08:40-08:00",
   "discogs_id": "16250518",
   "discogs_url": "https://www.discogs.com/release/16250518-Koj-3-Home",
@@ -55,18 +60,19 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Koj/Home",
   "local_images": {
-    "hi-res": "public/album/home-16250518/home-16250518-hi-res.jpg",
-    "medium": "public/album/home-16250518/home-16250518-medium.jpg",
-    "small": "public/album/home-16250518/home-16250518-small.jpg"
+    "hi-res": "../public/album/home-16250518/home-16250518-hi-res.jpg",
+    "medium": "../public/album/home-16250518/home-16250518-medium.jpg",
+    "small": "../public/album/home-16250518/home-16250518-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:59:39.235831",
+    "processed_at": "2025-07-09T08:45:55.322024",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Home",
@@ -944,6 +950,6 @@
       "title": "Outro"
     }
   ],
-  "updated_at": "2025-07-05T15:59:34.172393",
+  "updated_at": "2025-07-09T08:45:54.883603",
   "year": 2020
 }
