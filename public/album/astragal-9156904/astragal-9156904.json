@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "1171757262",
-      "biography": null,
+      "biography": "Along with the titular character and his siblings, The Sandman includes a large array of characters: inhabitants of the Dreaming, various deities, angels and demons, faeries, immortals and witches. Some characters appear in The Sandman (1989–1994), some in spinoffs like The Dreaming (1996–2001) and Lucifer (1999–2007), and others in earlier stories that The Sandman was based on. Their stories occur in the DC Universe, generally tangentially to the mainstream DC stories.",
       "discogs_id": "4008478",
       "discogs_original_name": "Broken DC",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Broken DC",
       "role": "",
       "spotify_id": "6nhbYvnZfjS4KpuO0ZoZYD",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/List_of_The_Sandman_characters"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Broken DC": {
+      "biography": "Along with the titular character and his siblings, The Sandman includes a large array of characters: inhabitants of the Dreaming, various deities, angels and demons, faeries, immortals and witches. Some characters appear in The Sandman (1989–1994), some in spinoffs like The Dreaming (1996–2001) and Lucifer (1999–2007), and others in earlier stories that The Sandman was based on. Their stories occur in the DC Universe, generally tangentially to the mainstream DC stories.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/List_of_The_Sandman_characters"
+    }
+  },
   "country": "UK",
-  "created_at": "2025-07-05T17:34:56.905743",
+  "created_at": "2025-07-09T09:59:08.008102",
   "date_added": "2016-11-17T19:53:32-08:00",
   "discogs_id": "9156904",
   "discogs_url": "https://www.discogs.com/release/9156904-Broken-DC-Astragal",
@@ -52,18 +57,19 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Broken+DC/Astragal",
   "local_images": {
-    "hi-res": "public/album/astragal-9156904/astragal-9156904-hi-res.jpg",
-    "medium": "public/album/astragal-9156904/astragal-9156904-medium.jpg",
-    "small": "public/album/astragal-9156904/astragal-9156904-small.jpg"
+    "hi-res": "../public/album/astragal-9156904/astragal-9156904-hi-res.jpg",
+    "medium": "../public/album/astragal-9156904/astragal-9156904-medium.jpg",
+    "small": "../public/album/astragal-9156904/astragal-9156904-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:35:00.787127",
+    "processed_at": "2025-07-09T09:59:09.945849",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Astragal",
@@ -971,6 +977,6 @@
       "title": "Always Is Now"
     }
   ],
-  "updated_at": "2025-07-05T17:34:59.183955",
+  "updated_at": "2025-07-09T09:59:09.232606",
   "year": 2016
 }
