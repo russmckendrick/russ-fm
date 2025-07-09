@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "673035609",
-      "biography": null,
+      "biography": "Let It Flow is a solo album by rock musician Elvin Bishop. His fourth studio album, it was released in 1974. The album was recorded at Capricorn Studios in Macon, Georgia, several years after he left The Butterfield Blues Band. Guest musicians include Charlie Daniels, Dickey Betts, Toy Caldwell, Vassar Clements, and Sly Stone.",
       "discogs_id": "15917661",
       "discogs_original_name": "Annie & The Caldwells",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Annie & The Caldwells",
       "role": "",
       "spotify_id": "7zt6Af78CalxaPDqORfw8L",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Let_It_Flow_(Elvin_Bishop_album)"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Annie & The Caldwells": {
+      "biography": "Let It Flow is a solo album by rock musician Elvin Bishop. His fourth studio album, it was released in 1974. The album was recorded at Capricorn Studios in Macon, Georgia, several years after he left The Butterfield Blues Band. Guest musicians include Charlie Daniels, Dickey Betts, Toy Caldwell, Vassar Clements, and Sly Stone.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Let_It_Flow_(Elvin_Bishop_album)"
+    }
+  },
   "country": "USA & Canada",
-  "created_at": "2025-07-05T14:36:34.631605",
+  "created_at": "2025-07-09T07:48:29.442319",
   "date_added": "2025-03-28T04:00:09-07:00",
   "discogs_id": "33529182",
   "discogs_url": "https://www.discogs.com/release/33529182-Annie-The-Caldwells-Cant-Lose-My-Soul",
@@ -57,22 +62,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-hi-res.jpg",
-    "medium": "public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-medium.jpg",
-    "small": "public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-small.jpg"
+    "hi-res": "../public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-hi-res.jpg",
+    "medium": "../public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-medium.jpg",
+    "small": "../public/album/cant-lose-my-soul-33529182/cant-lose-my-soul-33529182-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T14:36:37.102346",
+    "processed_at": "2025-07-09T07:48:31.206767",
     "services_used": [
       "discogs",
-      "apple_music"
+      "apple_music",
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Can't Lose My (Soul)",
   "release_name_discogs": "Can't Lose My (Soul)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Dark Hearts",
   "released": "2025-03-20",
   "services": {
     "apple_music": {
@@ -117,10 +124,684 @@
         "url": "https://music.apple.com/gb/album/cant-lose-my-soul/1773427071"
       },
       "url": "https://music.apple.com/gb/album/cant-lose-my-soul/1773427071"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2020 Annie Melody",
+          "type": "C"
+        },
+        {
+          "text": "2020 Annie Melody",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "656605363776"
+      },
+      "id": "1dMkUqXlm5b3JxSzBmVIX5",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730570e34fef3c011c35486001",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020570e34fef3c011c35486001",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510570e34fef3c011c35486001",
+          "width": 64
+        }
+      ],
+      "label": "Annie Melody",
+      "popularity": 42,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+            },
+            "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+            "id": "7zt6Af78CalxaPDqORfw8L",
+            "name": "Annie",
+            "type": "artist",
+            "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2020 Annie Melody",
+            "type": "C"
+          },
+          {
+            "text": "2020 Annie Melody",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "656605363776"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1dMkUqXlm5b3JxSzBmVIX5"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/1dMkUqXlm5b3JxSzBmVIX5?market=US",
+        "id": "1dMkUqXlm5b3JxSzBmVIX5",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730570e34fef3c011c35486001",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020570e34fef3c011c35486001",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510570e34fef3c011c35486001",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Annie Melody",
+        "name": "Dark Hearts",
+        "popularity": 42,
+        "release_date": "2020-10-16",
+        "release_date_precision": "day",
+        "total_tracks": 13,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/1dMkUqXlm5b3JxSzBmVIX5/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 221647,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6bW4xPbH6DPCP0dXVHRMaO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6bW4xPbH6DPCP0dXVHRMaO",
+              "id": "6bW4xPbH6DPCP0dXVHRMaO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "In Heaven",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:6bW4xPbH6DPCP0dXVHRMaO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 250666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5oCBnYVIwXXn8X7hqLBHyg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5oCBnYVIwXXn8X7hqLBHyg",
+              "id": "5oCBnYVIwXXn8X7hqLBHyg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Streets Where I Belong",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5oCBnYVIwXXn8X7hqLBHyg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 238235,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Zk6sSDPNjcSMxsWjVJcDP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Zk6sSDPNjcSMxsWjVJcDP",
+              "id": "6Zk6sSDPNjcSMxsWjVJcDP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dark Hearts",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6Zk6sSDPNjcSMxsWjVJcDP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 307394,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1D01xuEGoUM0wqkQm8I5cl"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1D01xuEGoUM0wqkQm8I5cl",
+              "id": "1D01xuEGoUM0wqkQm8I5cl",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Miracle Mile",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1D01xuEGoUM0wqkQm8I5cl"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 272206,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/15KOL8lPpC4z5PcMgMXtDW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/15KOL8lPpC4z5PcMgMXtDW",
+              "id": "15KOL8lPpC4z5PcMgMXtDW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Corridors of Time",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:15KOL8lPpC4z5PcMgMXtDW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 246110,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7AxxBUFZr9UVeRpVsJHPu2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7AxxBUFZr9UVeRpVsJHPu2",
+              "id": "7AxxBUFZr9UVeRpVsJHPu2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Forever ‘92",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7AxxBUFZr9UVeRpVsJHPu2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 226869,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7t1C2Z5kYtmhZGMs5mIFz2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7t1C2Z5kYtmhZGMs5mIFz2",
+              "id": "7t1C2Z5kYtmhZGMs5mIFz2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "American Cars",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:7t1C2Z5kYtmhZGMs5mIFz2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 297284,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2s6aYUuNtfeWgENR8anxpA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2s6aYUuNtfeWgENR8anxpA",
+              "id": "2s6aYUuNtfeWgENR8anxpA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mermaid Dreams",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2s6aYUuNtfeWgENR8anxpA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 245255,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/52mA2j4qfApTX47fBAqpMn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/52mA2j4qfApTX47fBAqpMn",
+              "id": "52mA2j4qfApTX47fBAqpMn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stay Tomorrow",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:52mA2j4qfApTX47fBAqpMn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 188325,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1ZmalBevIBAn6tG8fdJwWL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1ZmalBevIBAn6tG8fdJwWL",
+              "id": "1ZmalBevIBAn6tG8fdJwWL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Countdown to the End of the World",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:1ZmalBevIBAn6tG8fdJwWL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 241485,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7LPcjRavw5L4s1vbZU3kb9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7LPcjRavw5L4s1vbZU3kb9",
+              "id": "7LPcjRavw5L4s1vbZU3kb9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Bomb",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:7LPcjRavw5L4s1vbZU3kb9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 317411,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3ayzUJBKzahJnubmXXVNf9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3ayzUJBKzahJnubmXXVNf9",
+              "id": "3ayzUJBKzahJnubmXXVNf9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Untold Story",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:3ayzUJBKzahJnubmXXVNf9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7zt6Af78CalxaPDqORfw8L"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7zt6Af78CalxaPDqORfw8L",
+                  "id": "7zt6Af78CalxaPDqORfw8L",
+                  "name": "Annie",
+                  "type": "artist",
+                  "uri": "spotify:artist:7zt6Af78CalxaPDqORfw8L"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 193647,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Ex59lmGLEzIel1BPwS0J0"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Ex59lmGLEzIel1BPwS0J0",
+              "id": "6Ex59lmGLEzIel1BPwS0J0",
+              "is_local": false,
+              "is_playable": true,
+              "name": "It’s Finally Over",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:6Ex59lmGLEzIel1BPwS0J0"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 13
+        },
+        "type": "album",
+        "uri": "spotify:album:1dMkUqXlm5b3JxSzBmVIX5"
+      },
+      "release_date": "2020-10-16",
+      "release_date_precision": "day",
+      "total_tracks": 13,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 221647,
+          "explicit": false,
+          "id": "6bW4xPbH6DPCP0dXVHRMaO",
+          "name": "In Heaven",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 250666,
+          "explicit": false,
+          "id": "5oCBnYVIwXXn8X7hqLBHyg",
+          "name": "The Streets Where I Belong",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 238235,
+          "explicit": false,
+          "id": "6Zk6sSDPNjcSMxsWjVJcDP",
+          "name": "Dark Hearts",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 307394,
+          "explicit": false,
+          "id": "1D01xuEGoUM0wqkQm8I5cl",
+          "name": "Miracle Mile",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 272206,
+          "explicit": false,
+          "id": "15KOL8lPpC4z5PcMgMXtDW",
+          "name": "Corridors of Time",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 246110,
+          "explicit": false,
+          "id": "7AxxBUFZr9UVeRpVsJHPu2",
+          "name": "Forever ‘92",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 226869,
+          "explicit": false,
+          "id": "7t1C2Z5kYtmhZGMs5mIFz2",
+          "name": "American Cars",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 297284,
+          "explicit": false,
+          "id": "2s6aYUuNtfeWgENR8anxpA",
+          "name": "Mermaid Dreams",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 245255,
+          "explicit": false,
+          "id": "52mA2j4qfApTX47fBAqpMn",
+          "name": "Stay Tomorrow",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 188325,
+          "explicit": false,
+          "id": "1ZmalBevIBAn6tG8fdJwWL",
+          "name": "The Countdown to the End of the World",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 241485,
+          "explicit": false,
+          "id": "7LPcjRavw5L4s1vbZU3kb9",
+          "name": "The Bomb",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 317411,
+          "explicit": false,
+          "id": "3ayzUJBKzahJnubmXXVNf9",
+          "name": "The Untold Story",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "7zt6Af78CalxaPDqORfw8L",
+              "name": "Annie"
+            }
+          ],
+          "duration_ms": 193647,
+          "explicit": false,
+          "id": "6Ex59lmGLEzIel1BPwS0J0",
+          "name": "It’s Finally Over",
+          "preview_url": null,
+          "track_number": 13
+        }
+      ],
+      "url": "https://open.spotify.com/album/1dMkUqXlm5b3JxSzBmVIX5"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "1dMkUqXlm5b3JxSzBmVIX5",
+  "spotify_url": "https://open.spotify.com/album/1dMkUqXlm5b3JxSzBmVIX5",
   "styles": [
     "Gospel"
   ],
@@ -163,6 +844,6 @@
       "title": "Dear Lord"
     }
   ],
-  "updated_at": "2025-07-05T14:36:36.946598",
+  "updated_at": "2025-07-09T07:48:30.615389",
   "year": 2025
 }
