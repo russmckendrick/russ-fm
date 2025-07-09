@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-09T07:45:47.130339",
+  "created_at": "2025-07-09T20:53:16.644409",
   "date_added": "2025-06-13T05:10:42-07:00",
   "discogs_id": "23599586",
   "discogs_url": "https://www.discogs.com/release/23599586-Metallica-Load",
@@ -30,12 +30,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Rock",
-    "heavy metal",
-    "metal",
-    "hard rock",
-    "thrash metal",
-    "rock"
+    "Rock"
   ],
   "id": "23599586",
   "images": [
@@ -179,7 +174,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T07:45:48.761361",
+    "processed_at": "2025-07-09T20:53:17.962141",
     "services_used": [
       "discogs",
       "apple_music",
@@ -267,9 +262,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/c32d240ba59d4491ba5ce25939cba1ab.png"
         }
       ],
-      "listeners": 780914,
+      "listeners": 781023,
       "mbid": "08b278ec-b23e-46d5-9d75-37992e841ef6",
-      "playcount": 19972622,
+      "playcount": 19976457,
       "raw_data": {
         "album": {
           "artist": "Metallica",
@@ -299,12 +294,16 @@
               "size": ""
             }
           ],
-          "listeners": "780914",
+          "listeners": "781023",
           "mbid": "08b278ec-b23e-46d5-9d75-37992e841ef6",
           "name": "Load",
-          "playcount": "19972622",
+          "playcount": "19976457",
           "tags": {
             "tag": [
+              {
+                "name": "hard rock",
+                "url": "https://www.last.fm/tag/hard+rock"
+              },
               {
                 "name": "heavy metal",
                 "url": "https://www.last.fm/tag/heavy+metal"
@@ -314,16 +313,12 @@
                 "url": "https://www.last.fm/tag/metal"
               },
               {
-                "name": "hard rock",
-                "url": "https://www.last.fm/tag/hard+rock"
-              },
-              {
-                "name": "thrash metal",
-                "url": "https://www.last.fm/tag/thrash+metal"
-              },
-              {
                 "name": "rock",
                 "url": "https://www.last.fm/tag/rock"
+              },
+              {
+                "name": "metallica",
+                "url": "https://www.last.fm/tag/metallica"
               }
             ]
           },
@@ -579,11 +574,11 @@
       },
       "similar_artists": [],
       "tags": [
+        "hard rock",
         "heavy metal",
         "metal",
-        "hard rock",
-        "thrash metal",
-        "rock"
+        "rock",
+        "metallica"
       ],
       "top_albums": [],
       "top_tracks": [],
@@ -1402,6 +1397,6 @@
       "title": "The Outlaw Torn"
     }
   ],
-  "updated_at": "2025-07-09T07:45:48.221873",
+  "updated_at": "2025-07-09T20:53:17.638861",
   "year": 2022
 }
