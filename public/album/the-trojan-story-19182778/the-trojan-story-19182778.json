@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1608196456",
+  "apple_music_url": "https://music.apple.com/gb/album/classical-soundscapes/1608196456",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T14:41:29.308052",
+  "created_at": "2025-07-09T08:38:29.994312",
   "date_added": "2021-07-28T05:28:08-07:00",
   "discogs_id": "19182778",
   "discogs_url": "https://www.discogs.com/release/19182778-Various-The-Trojan-Story",
@@ -51,8 +51,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/the-trojan-story-19182778/the-trojan-story-19182778.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d9/cf/af/d9cfaf27-8779-4f74-9a8c-d6e80ec846eb/5059460119383.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -69,19 +69,351 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T14:41:36.481119",
+    "processed_at": "2025-07-09T08:38:31.569516",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Classical Soundscapes",
   "release_name_discogs": "The Trojan Story",
-  "release_name_spotify": null,
+  "release_name_spotify": "Various Artists 2 - EP 4",
   "released": "2021-06-18",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d9/cf/af/d9cfaf27-8779-4f74-9a8c-d6e80ec846eb/5059460119383.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2022 Warner Music Group - X5 Music Group",
+      "editorial_notes": null,
+      "id": "1608196456",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "18121e",
+          "height": 1400,
+          "textColor1": "fffeff",
+          "textColor2": "c9aaa3",
+          "textColor3": "d0ced1",
+          "textColor4": "a68c88",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/d9/cf/af/d9cfaf27-8779-4f74-9a8c-d6e80ec846eb/5059460119383.jpg/{w}x{h}bb.jpg",
+          "width": 1400
+        },
+        "copyright": "℗ 2022 Warner Music Group - X5 Music Group",
+        "genreNames": [
+          "Classical",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Classical Soundscapes",
+        "playParams": {
+          "id": "1608196456",
+          "kind": "album"
+        },
+        "recordLabel": "Warner Music Group - X5 Music Group",
+        "releaseDate": "2022-02-26",
+        "trackCount": 19,
+        "upc": "5059460119383",
+        "url": "https://music.apple.com/gb/album/classical-soundscapes/1608196456"
+      },
+      "url": "https://music.apple.com/gb/album/classical-soundscapes/1608196456"
+    },
+    "spotify": {
+      "album_type": "single",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2022 Possession",
+          "type": "C"
+        },
+        {
+          "text": "2022 Possession",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "8790001348011"
+      },
+      "id": "0aKVXnhrmjagIkWvaTGqka",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27374b6fa961007977ccee37ff0",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0274b6fa961007977ccee37ff0",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485174b6fa961007977ccee37ff0",
+          "width": 64
+        }
+      ],
+      "label": "Possession",
+      "popularity": 26,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2022 Possession",
+            "type": "C"
+          },
+          {
+            "text": "2022 Possession",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "8790001348011"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0aKVXnhrmjagIkWvaTGqka"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/0aKVXnhrmjagIkWvaTGqka?market=US",
+        "id": "0aKVXnhrmjagIkWvaTGqka",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27374b6fa961007977ccee37ff0",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0274b6fa961007977ccee37ff0",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485174b6fa961007977ccee37ff0",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Possession",
+        "name": "Various Artists 2 - EP 4",
+        "popularity": 26,
+        "release_date": "2022-01-21",
+        "release_date_precision": "day",
+        "total_tracks": 4,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/0aKVXnhrmjagIkWvaTGqka/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7K0WJzyqUNRhraNcsvJp1h"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7K0WJzyqUNRhraNcsvJp1h",
+                  "id": "7K0WJzyqUNRhraNcsvJp1h",
+                  "name": "Randomer",
+                  "type": "artist",
+                  "uri": "spotify:artist:7K0WJzyqUNRhraNcsvJp1h"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 326401,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/54ndJWXvJ0Se2VC9aRQmLB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/54ndJWXvJ0Se2VC9aRQmLB",
+              "id": "54ndJWXvJ0Se2VC9aRQmLB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Shiver",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:54ndJWXvJ0Se2VC9aRQmLB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0Ce5O5jeVEDh22XjA7vaRA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0Ce5O5jeVEDh22XjA7vaRA",
+                  "id": "0Ce5O5jeVEDh22XjA7vaRA",
+                  "name": "Somniac One",
+                  "type": "artist",
+                  "uri": "spotify:artist:0Ce5O5jeVEDh22XjA7vaRA"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 434961,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3laxA8p7f3SWZDlhOCifbX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3laxA8p7f3SWZDlhOCifbX",
+              "id": "3laxA8p7f3SWZDlhOCifbX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Midnight Intruder",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3laxA8p7f3SWZDlhOCifbX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1lsjQdGrRe2D1nmvCVB7JZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1lsjQdGrRe2D1nmvCVB7JZ",
+                  "id": "1lsjQdGrRe2D1nmvCVB7JZ",
+                  "name": "Charlie Sparks (UK)",
+                  "type": "artist",
+                  "uri": "spotify:artist:1lsjQdGrRe2D1nmvCVB7JZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 395068,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2BHpvEmQOaBC8pEEHkm9j5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2BHpvEmQOaBC8pEEHkm9j5",
+              "id": "2BHpvEmQOaBC8pEEHkm9j5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Exploited",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2BHpvEmQOaBC8pEEHkm9j5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/58CoYe1IrKXe3FW3icZ2nU"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/58CoYe1IrKXe3FW3icZ2nU",
+                  "id": "58CoYe1IrKXe3FW3icZ2nU",
+                  "name": "Vizionn",
+                  "type": "artist",
+                  "uri": "spotify:artist:58CoYe1IrKXe3FW3icZ2nU"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 404731,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3nGAcnmR5hkRv0qZZrvC49"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3nGAcnmR5hkRv0qZZrvC49",
+              "id": "3nGAcnmR5hkRv0qZZrvC49",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dream",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3nGAcnmR5hkRv0qZZrvC49"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 4
+        },
+        "type": "album",
+        "uri": "spotify:album:0aKVXnhrmjagIkWvaTGqka"
+      },
+      "release_date": "2022-01-21",
+      "release_date_precision": "day",
+      "total_tracks": 4,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "7K0WJzyqUNRhraNcsvJp1h",
+              "name": "Randomer"
+            }
+          ],
+          "duration_ms": 326401,
+          "explicit": false,
+          "id": "54ndJWXvJ0Se2VC9aRQmLB",
+          "name": "Shiver",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0Ce5O5jeVEDh22XjA7vaRA",
+              "name": "Somniac One"
+            }
+          ],
+          "duration_ms": 434961,
+          "explicit": false,
+          "id": "3laxA8p7f3SWZDlhOCifbX",
+          "name": "Midnight Intruder",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1lsjQdGrRe2D1nmvCVB7JZ",
+              "name": "Charlie Sparks (UK)"
+            }
+          ],
+          "duration_ms": 395068,
+          "explicit": false,
+          "id": "2BHpvEmQOaBC8pEEHkm9j5",
+          "name": "Exploited",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "58CoYe1IrKXe3FW3icZ2nU",
+              "name": "Vizionn"
+            }
+          ],
+          "duration_ms": 404731,
+          "explicit": false,
+          "id": "3nGAcnmR5hkRv0qZZrvC49",
+          "name": "Dream",
+          "preview_url": null,
+          "track_number": 4
+        }
+      ],
+      "url": "https://open.spotify.com/album/0aKVXnhrmjagIkWvaTGqka"
+    }
+  },
+  "spotify_id": "0aKVXnhrmjagIkWvaTGqka",
+  "spotify_url": "https://open.spotify.com/album/0aKVXnhrmjagIkWvaTGqka",
   "styles": [
     "Ska",
     "Rocksteady",
@@ -1052,6 +1384,6 @@
       "title": "Rasta Never Fails"
     }
   ],
-  "updated_at": "2025-07-07T14:41:35.709212",
+  "updated_at": "2025-07-09T08:38:31.177610",
   "year": 2021
 }

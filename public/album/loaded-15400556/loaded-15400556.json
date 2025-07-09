@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1811232914",
+  "apple_music_url": "https://music.apple.com/gb/album/loaded/1811232914",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T14:41:59.425523",
+  "created_at": "2025-07-09T08:40:49.070652",
   "date_added": "2021-06-07T10:53:49-07:00",
   "discogs_id": "15400556",
   "discogs_url": "https://www.discogs.com/release/15400556-Various-Loaded",
@@ -44,8 +44,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/loaded-15400556/loaded-15400556.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -62,19 +62,524 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T14:42:16.717228",
+    "processed_at": "2025-07-09T08:40:51.159732",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Loaded",
   "release_name_discogs": "Loaded",
-  "release_name_spotify": null,
+  "release_name_spotify": "Loaded",
   "released": "2020",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "℗ 2025 AUDIOSPARX",
+      "editorial_notes": null,
+      "id": "1811232914",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "341a08",
+          "height": 1440,
+          "textColor1": "f6dcbd",
+          "textColor2": "fbc89c",
+          "textColor3": "cfb599",
+          "textColor4": "d3a57e",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/c0/e1/1a/c0e11a65-ad34-0e8e-fe6a-e04fde9b74f7/cover.jpg/{w}x{h}bb.jpg",
+          "width": 1440
+        },
+        "copyright": "℗ 2025 AUDIOSPARX",
+        "genreNames": [
+          "House",
+          "Music",
+          "Dance"
+        ],
+        "isCompilation": false,
+        "isComplete": true,
+        "isMasteredForItunes": false,
+        "isSingle": false,
+        "name": "Loaded",
+        "playParams": {
+          "id": "1811232914",
+          "kind": "album"
+        },
+        "recordLabel": "Audiosparx",
+        "releaseDate": "2025-05-09",
+        "trackCount": 9,
+        "upc": "0751993269072",
+        "url": "https://music.apple.com/gb/album/loaded/1811232914"
+      },
+      "url": "https://music.apple.com/gb/album/loaded/1811232914"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2020 Supreme Music",
+          "type": "C"
+        },
+        {
+          "text": "2020 Supreme Music",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "195039875368"
+      },
+      "id": "1OuLa1ePWXcizfjFNCT9ci",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737aa88ce3c8ffef20922e3351",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027aa88ce3c8ffef20922e3351",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517aa88ce3c8ffef20922e3351",
+          "width": 64
+        }
+      ],
+      "label": "Supreme Music",
+      "popularity": 0,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2020 Supreme Music",
+            "type": "C"
+          },
+          {
+            "text": "2020 Supreme Music",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "195039875368"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1OuLa1ePWXcizfjFNCT9ci"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/1OuLa1ePWXcizfjFNCT9ci?market=US",
+        "id": "1OuLa1ePWXcizfjFNCT9ci",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2737aa88ce3c8ffef20922e3351",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e027aa88ce3c8ffef20922e3351",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048517aa88ce3c8ffef20922e3351",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Supreme Music",
+        "name": "Loaded",
+        "popularity": 0,
+        "release_date": "2020-10-24",
+        "release_date_precision": "day",
+        "total_tracks": 8,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/1OuLa1ePWXcizfjFNCT9ci/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6j0qdyu6uaCxON7EeJKs6J"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6j0qdyu6uaCxON7EeJKs6J",
+                  "id": "6j0qdyu6uaCxON7EeJKs6J",
+                  "name": "Paul Lossa",
+                  "type": "artist",
+                  "uri": "spotify:artist:6j0qdyu6uaCxON7EeJKs6J"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 350040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3IxayxNwK4M0kkXkedObwR"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3IxayxNwK4M0kkXkedObwR",
+              "id": "3IxayxNwK4M0kkXkedObwR",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You Can Fly",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3IxayxNwK4M0kkXkedObwR"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3DyY1QPl6bs1ycKQ3MxUoi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3DyY1QPl6bs1ycKQ3MxUoi",
+                  "id": "3DyY1QPl6bs1ycKQ3MxUoi",
+                  "name": "Jerry Full",
+                  "type": "artist",
+                  "uri": "spotify:artist:3DyY1QPl6bs1ycKQ3MxUoi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 314946,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4mltORI9bjqTmWoqEBup36"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4mltORI9bjqTmWoqEBup36",
+              "id": "4mltORI9bjqTmWoqEBup36",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Summer Is In The Details",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4mltORI9bjqTmWoqEBup36"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7njZjivmeSPTnKioNN4CaB"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7njZjivmeSPTnKioNN4CaB",
+                  "id": "7njZjivmeSPTnKioNN4CaB",
+                  "name": "Supervisor",
+                  "type": "artist",
+                  "uri": "spotify:artist:7njZjivmeSPTnKioNN4CaB"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 317466,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4scxlEkfqVN0eefzsTqpdu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4scxlEkfqVN0eefzsTqpdu",
+              "id": "4scxlEkfqVN0eefzsTqpdu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fantasy",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:4scxlEkfqVN0eefzsTqpdu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6ssUgSh5saX31AivVjtQOi"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6ssUgSh5saX31AivVjtQOi",
+                  "id": "6ssUgSh5saX31AivVjtQOi",
+                  "name": "Derick Fals",
+                  "type": "artist",
+                  "uri": "spotify:artist:6ssUgSh5saX31AivVjtQOi"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 264672,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4RMUDEEH28NpokxP13WiCq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4RMUDEEH28NpokxP13WiCq",
+              "id": "4RMUDEEH28NpokxP13WiCq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Autumn",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:4RMUDEEH28NpokxP13WiCq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2gCPiENcBTS2wzVu0VCWsS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2gCPiENcBTS2wzVu0VCWsS",
+                  "id": "2gCPiENcBTS2wzVu0VCWsS",
+                  "name": "Stegin",
+                  "type": "artist",
+                  "uri": "spotify:artist:2gCPiENcBTS2wzVu0VCWsS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240065,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/75mppGPxWDU4sAHYzN1Dtw"
+              },
+              "href": "https://api.spotify.com/v1/tracks/75mppGPxWDU4sAHYzN1Dtw",
+              "id": "75mppGPxWDU4sAHYzN1Dtw",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Deep Live",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:75mppGPxWDU4sAHYzN1Dtw"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2YQ6vqf9nX9oDTYHEVSPY9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2YQ6vqf9nX9oDTYHEVSPY9",
+                  "id": "2YQ6vqf9nX9oDTYHEVSPY9",
+                  "name": "Bem Horo",
+                  "type": "artist",
+                  "uri": "spotify:artist:2YQ6vqf9nX9oDTYHEVSPY9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 471457,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3iFnZ72JK7lYZS87pdl2Hc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3iFnZ72JK7lYZS87pdl2Hc",
+              "id": "3iFnZ72JK7lYZS87pdl2Hc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Free",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:3iFnZ72JK7lYZS87pdl2Hc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5O1tuiLrSj2ANlQpRpp8fb"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5O1tuiLrSj2ANlQpRpp8fb",
+                  "id": "5O1tuiLrSj2ANlQpRpp8fb",
+                  "name": "Malmor",
+                  "type": "artist",
+                  "uri": "spotify:artist:5O1tuiLrSj2ANlQpRpp8fb"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 410906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4lt9DCmgLeTRzJ8ADEGcBk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4lt9DCmgLeTRzJ8ADEGcBk",
+              "id": "4lt9DCmgLeTRzJ8ADEGcBk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Generation",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4lt9DCmgLeTRzJ8ADEGcBk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/27BpnP4fmrs7n1ciKHZeQP"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/27BpnP4fmrs7n1ciKHZeQP",
+                  "id": "27BpnP4fmrs7n1ciKHZeQP",
+                  "name": "Gary Lake",
+                  "type": "artist",
+                  "uri": "spotify:artist:27BpnP4fmrs7n1ciKHZeQP"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 393640,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ecFjsKSm0ctfXtuCcmsIR"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ecFjsKSm0ctfXtuCcmsIR",
+              "id": "2ecFjsKSm0ctfXtuCcmsIR",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Time Taken",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2ecFjsKSm0ctfXtuCcmsIR"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 8
+        },
+        "type": "album",
+        "uri": "spotify:album:1OuLa1ePWXcizfjFNCT9ci"
+      },
+      "release_date": "2020-10-24",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "6j0qdyu6uaCxON7EeJKs6J",
+              "name": "Paul Lossa"
+            }
+          ],
+          "duration_ms": 350040,
+          "explicit": false,
+          "id": "3IxayxNwK4M0kkXkedObwR",
+          "name": "You Can Fly",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "3DyY1QPl6bs1ycKQ3MxUoi",
+              "name": "Jerry Full"
+            }
+          ],
+          "duration_ms": 314946,
+          "explicit": false,
+          "id": "4mltORI9bjqTmWoqEBup36",
+          "name": "Summer Is In The Details",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "7njZjivmeSPTnKioNN4CaB",
+              "name": "Supervisor"
+            }
+          ],
+          "duration_ms": 317466,
+          "explicit": false,
+          "id": "4scxlEkfqVN0eefzsTqpdu",
+          "name": "Fantasy",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "6ssUgSh5saX31AivVjtQOi",
+              "name": "Derick Fals"
+            }
+          ],
+          "duration_ms": 264672,
+          "explicit": false,
+          "id": "4RMUDEEH28NpokxP13WiCq",
+          "name": "Autumn",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "2gCPiENcBTS2wzVu0VCWsS",
+              "name": "Stegin"
+            }
+          ],
+          "duration_ms": 240065,
+          "explicit": false,
+          "id": "75mppGPxWDU4sAHYzN1Dtw",
+          "name": "Deep Live",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "2YQ6vqf9nX9oDTYHEVSPY9",
+              "name": "Bem Horo"
+            }
+          ],
+          "duration_ms": 471457,
+          "explicit": false,
+          "id": "3iFnZ72JK7lYZS87pdl2Hc",
+          "name": "Free",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5O1tuiLrSj2ANlQpRpp8fb",
+              "name": "Malmor"
+            }
+          ],
+          "duration_ms": 410906,
+          "explicit": false,
+          "id": "4lt9DCmgLeTRzJ8ADEGcBk",
+          "name": "Generation",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "27BpnP4fmrs7n1ciKHZeQP",
+              "name": "Gary Lake"
+            }
+          ],
+          "duration_ms": 393640,
+          "explicit": false,
+          "id": "2ecFjsKSm0ctfXtuCcmsIR",
+          "name": "The Time Taken",
+          "preview_url": null,
+          "track_number": 8
+        }
+      ],
+      "url": "https://open.spotify.com/album/1OuLa1ePWXcizfjFNCT9ci"
+    }
+  },
+  "spotify_id": "1OuLa1ePWXcizfjFNCT9ci",
+  "spotify_url": "https://open.spotify.com/album/1OuLa1ePWXcizfjFNCT9ci",
   "styles": [
     "Indie Rock"
   ],
@@ -651,6 +1156,6 @@
       "title": "Why Does It Always Rain On Me?"
     }
   ],
-  "updated_at": "2025-07-07T14:42:15.916223",
+  "updated_at": "2025-07-09T08:40:50.747492",
   "year": 2020
 }

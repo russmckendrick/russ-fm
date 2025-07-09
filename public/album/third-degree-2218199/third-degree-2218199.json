@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-05T15:44:53.515301",
+  "created_at": "2025-07-09T08:37:46.199903",
   "date_added": "2021-09-03T04:32:37-07:00",
   "discogs_id": "2218199",
   "discogs_url": "https://www.discogs.com/release/2218199-Nine-Below-Zero-Third-Degree",
@@ -81,23 +81,24 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Nine+Below+Zero/Third+Degree",
   "local_images": {
-    "hi-res": "public/album/third-degree-2218199/third-degree-2218199-hi-res.jpg",
-    "medium": "public/album/third-degree-2218199/third-degree-2218199-medium.jpg",
-    "small": "public/album/third-degree-2218199/third-degree-2218199-small.jpg"
+    "hi-res": "../public/album/third-degree-2218199/third-degree-2218199-hi-res.jpg",
+    "medium": "../public/album/third-degree-2218199/third-degree-2218199-medium.jpg",
+    "small": "../public/album/third-degree-2218199/third-degree-2218199-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:44:56.563109",
+    "processed_at": "2025-07-09T08:37:47.628222",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": "Third Degree",
   "release_name_discogs": "Third Degree",
-  "release_name_spotify": null,
+  "release_name_spotify": "Nine Livez",
   "released": "1982-03-00",
   "services": {
     "apple_music": {
@@ -174,9 +175,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/0f6c471e7c315694da41196035a883f5.jpg"
         }
       ],
-      "listeners": 4512,
+      "listeners": 4515,
       "mbid": "5ff99420-b7c9-4604-8d8f-68ce1bf12c85",
-      "playcount": 25977,
+      "playcount": 25994,
       "raw_data": {
         "album": {
           "artist": "Nine Below Zero",
@@ -206,10 +207,10 @@
               "size": ""
             }
           ],
-          "listeners": "4512",
+          "listeners": "4515",
           "mbid": "5ff99420-b7c9-4604-8d8f-68ce1bf12c85",
           "name": "Third Degree",
-          "playcount": "25977",
+          "playcount": "25994",
           "tags": {
             "tag": [
               {
@@ -441,10 +442,747 @@
       "url": "https://www.last.fm/music/Nine+Below+Zero/Third+Degree",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(P) 1995 RCA Records, a division of Sony Music Entertainment",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "886448469384"
+      },
+      "id": "4KRslWiy03MSl4Ez22YlVb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732217b909046ca34f49860ae6",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022217b909046ca34f49860ae6",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512217b909046ca34f49860ae6",
+          "width": 64
+        }
+      ],
+      "label": "RCA/Legacy",
+      "popularity": 36,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+            },
+            "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+            "id": "0cnbaGjcH77bWAV1MgVSJh",
+            "name": "Nine",
+            "type": "artist",
+            "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 1995 RCA Records, a division of Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "886448469384"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4KRslWiy03MSl4Ez22YlVb"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4KRslWiy03MSl4Ez22YlVb?market=US",
+        "id": "4KRslWiy03MSl4Ez22YlVb",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732217b909046ca34f49860ae6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022217b909046ca34f49860ae6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512217b909046ca34f49860ae6",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "RCA/Legacy",
+        "name": "Nine Livez",
+        "popularity": 36,
+        "release_date": "1995-03-07",
+        "release_date_precision": "day",
+        "total_tracks": 14,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4KRslWiy03MSl4Ez22YlVb/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 312506,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0xrrlj1ZILDEARSD63J4j3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0xrrlj1ZILDEARSD63J4j3",
+              "id": "0xrrlj1ZILDEARSD63J4j3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Intro (Death of a Demo) / Ova Confident",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:0xrrlj1ZILDEARSD63J4j3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 282026,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3clQgrc8bFvH4KTOLe1dLK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3clQgrc8bFvH4KTOLe1dLK",
+              "id": "3clQgrc8bFvH4KTOLe1dLK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Redrum",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:3clQgrc8bFvH4KTOLe1dLK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 247906,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/34XX19s8gqNdWxT8S9FOQr"
+              },
+              "href": "https://api.spotify.com/v1/tracks/34XX19s8gqNdWxT8S9FOQr",
+              "id": "34XX19s8gqNdWxT8S9FOQr",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Da Fundamentalz",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:34XX19s8gqNdWxT8S9FOQr"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6k4JC21V4hqHFiMft4bGIA"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6k4JC21V4hqHFiMft4bGIA",
+                  "id": "6k4JC21V4hqHFiMft4bGIA",
+                  "name": "Froggy Frog",
+                  "type": "artist",
+                  "uri": "spotify:artist:6k4JC21V4hqHFiMft4bGIA"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 287306,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/54ityJ2stAjJVllHfpeYcg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/54ityJ2stAjJVllHfpeYcg",
+              "id": "54ityJ2stAjJVllHfpeYcg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hit Em Like Dis (feat. Froggy Frog)",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:54ityJ2stAjJVllHfpeYcg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 211973,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0UmWZ6ThGJVLYbbCLMxq74"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0UmWZ6ThGJVLYbbCLMxq74",
+              "id": "0UmWZ6ThGJVLYbbCLMxq74",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Who U Won Test",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0UmWZ6ThGJVLYbbCLMxq74"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 274933,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Gr0pZcdhwKQCdOd7SMfK6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Gr0pZcdhwKQCdOd7SMfK6",
+              "id": "1Gr0pZcdhwKQCdOd7SMfK6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Whutcha Want?",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1Gr0pZcdhwKQCdOd7SMfK6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 223946,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2oF4QgpbCgUlqYo0Pp9mvp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2oF4QgpbCgUlqYo0Pp9mvp",
+              "id": "2oF4QgpbCgUlqYo0Pp9mvp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fo'eva Blunted",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:2oF4QgpbCgUlqYo0Pp9mvp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 217400,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0UEh32nvLy3guVX4zr1jns"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0UEh32nvLy3guVX4zr1jns",
+              "id": "0UEh32nvLy3guVX4zr1jns",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Peel",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:0UEh32nvLy3guVX4zr1jns"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/54HGsI0Bg0O1r71KLkjJml"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/54HGsI0Bg0O1r71KLkjJml",
+                  "id": "54HGsI0Bg0O1r71KLkjJml",
+                  "name": "A.R.L. Da X'rsis",
+                  "type": "artist",
+                  "uri": "spotify:artist:54HGsI0Bg0O1r71KLkjJml"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 255240,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5dGTabid7pJrvbAJoLprEn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5dGTabid7pJrvbAJoLprEn",
+              "id": "5dGTabid7pJrvbAJoLprEn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Retaliate (feat. A.R.L. Da X'rsis)",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:5dGTabid7pJrvbAJoLprEn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 226240,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6srZjI53J5SBkSOneRHqOp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6srZjI53J5SBkSOneRHqOp",
+              "id": "6srZjI53J5SBkSOneRHqOp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tha Cypha",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:6srZjI53J5SBkSOneRHqOp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 233146,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5UtPUNge2cUCHwSPzFmeyI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5UtPUNge2cUCHwSPzFmeyI",
+              "id": "5UtPUNge2cUCHwSPzFmeyI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ahh Shit",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:5UtPUNge2cUCHwSPzFmeyI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 303213,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/37hdmSjKeWPqrEtPiT6nJX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/37hdmSjKeWPqrEtPiT6nJX",
+              "id": "37hdmSjKeWPqrEtPiT6nJX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Everybody Won Heaven (Redrum the Remix)",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:37hdmSjKeWPqrEtPiT6nJX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 242186,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/59YYVugyJdcUxKAViB8ryg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/59YYVugyJdcUxKAViB8ryg",
+              "id": "59YYVugyJdcUxKAViB8ryg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Any Emcee",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:59YYVugyJdcUxKAViB8ryg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0cnbaGjcH77bWAV1MgVSJh"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0cnbaGjcH77bWAV1MgVSJh",
+                  "id": "0cnbaGjcH77bWAV1MgVSJh",
+                  "name": "Nine",
+                  "type": "artist",
+                  "uri": "spotify:artist:0cnbaGjcH77bWAV1MgVSJh"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 290973,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5UUZNgWRwsMDqfo9lr29eX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5UUZNgWRwsMDqfo9lr29eX",
+              "id": "5UUZNgWRwsMDqfo9lr29eX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ta Rasss",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:5UUZNgWRwsMDqfo9lr29eX"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 14
+        },
+        "type": "album",
+        "uri": "spotify:album:4KRslWiy03MSl4Ez22YlVb"
+      },
+      "release_date": "1995-03-07",
+      "release_date_precision": "day",
+      "total_tracks": 14,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 312506,
+          "explicit": true,
+          "id": "0xrrlj1ZILDEARSD63J4j3",
+          "name": "Intro (Death of a Demo) / Ova Confident",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 282026,
+          "explicit": true,
+          "id": "3clQgrc8bFvH4KTOLe1dLK",
+          "name": "Redrum",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 247906,
+          "explicit": true,
+          "id": "34XX19s8gqNdWxT8S9FOQr",
+          "name": "Da Fundamentalz",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            },
+            {
+              "id": "6k4JC21V4hqHFiMft4bGIA",
+              "name": "Froggy Frog"
+            }
+          ],
+          "duration_ms": 287306,
+          "explicit": true,
+          "id": "54ityJ2stAjJVllHfpeYcg",
+          "name": "Hit Em Like Dis (feat. Froggy Frog)",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 211973,
+          "explicit": true,
+          "id": "0UmWZ6ThGJVLYbbCLMxq74",
+          "name": "Who U Won Test",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 274933,
+          "explicit": true,
+          "id": "1Gr0pZcdhwKQCdOd7SMfK6",
+          "name": "Whutcha Want?",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 223946,
+          "explicit": true,
+          "id": "2oF4QgpbCgUlqYo0Pp9mvp",
+          "name": "Fo'eva Blunted",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 217400,
+          "explicit": true,
+          "id": "0UEh32nvLy3guVX4zr1jns",
+          "name": "Peel",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            },
+            {
+              "id": "54HGsI0Bg0O1r71KLkjJml",
+              "name": "A.R.L. Da X'rsis"
+            }
+          ],
+          "duration_ms": 255240,
+          "explicit": true,
+          "id": "5dGTabid7pJrvbAJoLprEn",
+          "name": "Retaliate (feat. A.R.L. Da X'rsis)",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 226240,
+          "explicit": true,
+          "id": "6srZjI53J5SBkSOneRHqOp",
+          "name": "Tha Cypha",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 233146,
+          "explicit": true,
+          "id": "5UtPUNge2cUCHwSPzFmeyI",
+          "name": "Ahh Shit",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 303213,
+          "explicit": true,
+          "id": "37hdmSjKeWPqrEtPiT6nJX",
+          "name": "Everybody Won Heaven (Redrum the Remix)",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 242186,
+          "explicit": true,
+          "id": "59YYVugyJdcUxKAViB8ryg",
+          "name": "Any Emcee",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "0cnbaGjcH77bWAV1MgVSJh",
+              "name": "Nine"
+            }
+          ],
+          "duration_ms": 290973,
+          "explicit": true,
+          "id": "5UUZNgWRwsMDqfo9lr29eX",
+          "name": "Ta Rasss",
+          "preview_url": null,
+          "track_number": 14
+        }
+      ],
+      "url": "https://open.spotify.com/album/4KRslWiy03MSl4Ez22YlVb"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "4KRslWiy03MSl4Ez22YlVb",
+  "spotify_url": "https://open.spotify.com/album/4KRslWiy03MSl4Ez22YlVb",
   "styles": [
     "Rhythm & Blues",
     "Pub Rock"
@@ -518,6 +1256,6 @@
       "title": "You Can't Say Yes And You Can't Say No"
     }
   ],
-  "updated_at": "2025-07-05T15:44:54.889056",
+  "updated_at": "2025-07-09T08:37:47.259259",
   "year": 1982
 }

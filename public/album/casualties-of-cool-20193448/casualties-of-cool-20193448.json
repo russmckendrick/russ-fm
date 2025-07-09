@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "865501059",
-  "apple_music_url": "https://music.apple.com/gb/album/casualties-of-cool-deluxe-version/865501059",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": null,
@@ -11,7 +11,7 @@
       "lastfm_mbid": "b2bd4745-74e6-46e9-92fd-b3e4714e310a",
       "name": "Casualties Of Cool",
       "role": "",
-      "spotify_id": "1YrGu3E2y8jG5JJFlDEWFE",
+      "spotify_id": null,
       "wikipedia_url": null
     }
   ],
@@ -22,7 +22,7 @@
     }
   },
   "country": "Germany",
-  "created_at": "2025-07-07T20:43:41.588644",
+  "created_at": "2025-07-09T08:37:27.277321",
   "date_added": "2021-09-12T03:53:23-07:00",
   "discogs_id": "20193448",
   "discogs_url": "https://www.discogs.com/release/20193448-Casualties-Of-Cool-Casualties-Of-Cool",
@@ -160,20 +160,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/2ciGeycTs0HYzeEF1l8AW1IdKzrRZCagX3wAdXno1f0/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMTkz/NDQ4LTE2OTc4NDIw/NTItODQ2NC5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/75/ae/5c/75ae5c37-062a-eef6-57b3-a63af4d8662d/0625712571725.jpg/2000x2000bb.jpg",
-      "width": 2000
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/casualties-of-cool-20193448/casualties-of-cool-20193448.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -190,62 +176,18 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T20:43:49.182042",
+    "processed_at": "2025-07-09T08:37:28.915583",
     "services_used": [
       "discogs",
-      "apple_music",
       "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": "Casualties of Cool (Deluxe Version)",
+  "release_name_apple_music": null,
   "release_name_discogs": "Casualties Of Cool",
-  "release_name_spotify": "Casualties of Cool",
+  "release_name_spotify": "Fear Itself",
   "released": "2021",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/75/ae/5c/75ae5c37-062a-eef6-57b3-a63af4d8662d/0625712571725.jpg/2000x2000bb.jpg",
-      "content_rating": null,
-      "copyright": "℗ 2014 HevyDevy Records",
-      "editorial_notes": null,
-      "id": "865501059",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Devin Townsend & Ché Aimee Dorval",
-        "artwork": {
-          "bgColor": "000000",
-          "height": 2400,
-          "textColor1": "dad9d3",
-          "textColor2": "c4bab2",
-          "textColor3": "aeada8",
-          "textColor4": "9d948e",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/75/ae/5c/75ae5c37-062a-eef6-57b3-a63af4d8662d/0625712571725.jpg/{w}x{h}bb.jpg",
-          "width": 2400
-        },
-        "copyright": "℗ 2014 HevyDevy Records",
-        "genreNames": [
-          "Rock",
-          "Music",
-          "Blues"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": false,
-        "name": "Casualties of Cool (Deluxe Version)",
-        "playParams": {
-          "id": "865501059",
-          "kind": "album"
-        },
-        "recordLabel": "HevyDevy Records",
-        "releaseDate": "2014-05-16",
-        "trackCount": 28,
-        "upc": "0625712571725",
-        "url": "https://music.apple.com/gb/album/casualties-of-cool-deluxe-version/865501059"
-      },
-      "url": "https://music.apple.com/gb/album/casualties-of-cool-deluxe-version/865501059"
-    },
     "lastfm": {
       "images": [
         {
@@ -275,7 +217,7 @@
       ],
       "listeners": 6944,
       "mbid": "21be894c-f4c7-4341-a0cd-dde452932d9d",
-      "playcount": 488514,
+      "playcount": 488517,
       "raw_data": {
         "album": {
           "artist": "Casualties of Cool",
@@ -308,7 +250,7 @@
           "listeners": "6944",
           "mbid": "21be894c-f4c7-4341-a0cd-dde452932d9d",
           "name": "Casualties of Cool",
-          "playcount": "488514",
+          "playcount": "488517",
           "tags": {
             "tag": [
               {
@@ -619,984 +561,855 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "2014 HevyDevy Records",
-          "type": "C"
-        },
-        {
-          "text": "2014 HevyDevy Records",
+          "text": "(P) 1994 Zomba Recording LLC",
           "type": "P"
         }
       ],
-      "explicit": false,
+      "explicit": true,
       "external_ids": {
-        "upc": "0625712571626"
+        "upc": "888880637581"
       },
-      "id": "7pJluMb96vJRrrOJHF4THD",
+      "id": "08h9ZxS1TeDpGk6Zbg2m0l",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2735277911463ad3c9c1d995d70",
+          "url": "https://i.scdn.co/image/ab67616d0000b273e7679b4cf78e01642bd08758",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e025277911463ad3c9c1d995d70",
+          "url": "https://i.scdn.co/image/ab67616d00001e02e7679b4cf78e01642bd08758",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048515277911463ad3c9c1d995d70",
+          "url": "https://i.scdn.co/image/ab67616d00004851e7679b4cf78e01642bd08758",
           "width": 64
         }
       ],
-      "label": "HevyDevy Records",
-      "popularity": 37,
+      "label": "Jive",
+      "popularity": 25,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
         "artists": [
           {
             "external_urls": {
-              "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+              "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
             },
-            "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-            "id": "6uejjWIOshliv2Ho0OJAQN",
-            "name": "Devin Townsend",
+            "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+            "id": "4OpQJMrOpOEYgYoU0Ihku3",
+            "name": "Casual",
             "type": "artist",
-            "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-          },
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-            },
-            "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-            "id": "0tmHRvtQDDUUdbNN1KcRYS",
-            "name": "Ché Aimee Dorval",
-            "type": "artist",
-            "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+            "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
           }
         ],
         "copyrights": [
           {
-            "text": "2014 HevyDevy Records",
-            "type": "C"
-          },
-          {
-            "text": "2014 HevyDevy Records",
+            "text": "(P) 1994 Zomba Recording LLC",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "0625712571626"
+          "upc": "888880637581"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/7pJluMb96vJRrrOJHF4THD"
+          "spotify": "https://open.spotify.com/album/08h9ZxS1TeDpGk6Zbg2m0l"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/7pJluMb96vJRrrOJHF4THD?market=US",
-        "id": "7pJluMb96vJRrrOJHF4THD",
+        "href": "https://api.spotify.com/v1/albums/08h9ZxS1TeDpGk6Zbg2m0l?market=US",
+        "id": "08h9ZxS1TeDpGk6Zbg2m0l",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2735277911463ad3c9c1d995d70",
+            "url": "https://i.scdn.co/image/ab67616d0000b273e7679b4cf78e01642bd08758",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e025277911463ad3c9c1d995d70",
+            "url": "https://i.scdn.co/image/ab67616d00001e02e7679b4cf78e01642bd08758",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048515277911463ad3c9c1d995d70",
+            "url": "https://i.scdn.co/image/ab67616d00004851e7679b4cf78e01642bd08758",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "HevyDevy Records",
-        "name": "Casualties of Cool",
-        "popularity": 37,
-        "release_date": "2014-05-16",
+        "label": "Jive",
+        "name": "Fear Itself",
+        "popularity": 25,
+        "release_date": "1994-07-08",
         "release_date_precision": "day",
-        "total_tracks": 15,
+        "total_tracks": 16,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/7pJluMb96vJRrrOJHF4THD/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/08h9ZxS1TeDpGk6Zbg2m0l/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 311186,
-              "explicit": false,
+              "duration_ms": 101960,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/75tD795Qq85wOqwBvob2Jv"
+                "spotify": "https://open.spotify.com/track/29zvM4ww4HAvsctA39QtKH"
               },
-              "href": "https://api.spotify.com/v1/tracks/75tD795Qq85wOqwBvob2Jv",
-              "id": "75tD795Qq85wOqwBvob2Jv",
+              "href": "https://api.spotify.com/v1/tracks/29zvM4ww4HAvsctA39QtKH",
+              "id": "29zvM4ww4HAvsctA39QtKH",
               "is_local": false,
               "is_playable": true,
-              "name": "Daddy",
+              "name": "Intro",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:75tD795Qq85wOqwBvob2Jv"
+              "uri": "spotify:track:29zvM4ww4HAvsctA39QtKH"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 333466,
+              "duration_ms": 194240,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0VQYTBxyBnha8QIng8ckQD"
+                "spotify": "https://open.spotify.com/track/7IvTgPUFdwSRiUpHHTCk90"
               },
-              "href": "https://api.spotify.com/v1/tracks/0VQYTBxyBnha8QIng8ckQD",
-              "id": "0VQYTBxyBnha8QIng8ckQD",
+              "href": "https://api.spotify.com/v1/tracks/7IvTgPUFdwSRiUpHHTCk90",
+              "id": "7IvTgPUFdwSRiUpHHTCk90",
               "is_local": false,
               "is_playable": true,
-              "name": "Mountaintop",
+              "name": "You Flunked",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:0VQYTBxyBnha8QIng8ckQD"
+              "uri": "spotify:track:7IvTgPUFdwSRiUpHHTCk90"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 332466,
-              "explicit": false,
+              "duration_ms": 245600,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/73qdi1UuN5aHXwG2trXim4"
+                "spotify": "https://open.spotify.com/track/4sugPgAtKhLfmIryISQUcf"
               },
-              "href": "https://api.spotify.com/v1/tracks/73qdi1UuN5aHXwG2trXim4",
-              "id": "73qdi1UuN5aHXwG2trXim4",
+              "href": "https://api.spotify.com/v1/tracks/4sugPgAtKhLfmIryISQUcf",
+              "id": "4sugPgAtKhLfmIryISQUcf",
               "is_local": false,
               "is_playable": true,
-              "name": "Flight",
+              "name": "Me-O-Mi-O",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:73qdi1UuN5aHXwG2trXim4"
+              "uri": "spotify:track:4sugPgAtKhLfmIryISQUcf"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 281106,
+              "duration_ms": 194093,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0UxfBdwhEqOVSwr7krLQWb"
+                "spotify": "https://open.spotify.com/track/5TE69Mq71XiccT7bvavS74"
               },
-              "href": "https://api.spotify.com/v1/tracks/0UxfBdwhEqOVSwr7krLQWb",
-              "id": "0UxfBdwhEqOVSwr7krLQWb",
+              "href": "https://api.spotify.com/v1/tracks/5TE69Mq71XiccT7bvavS74",
+              "id": "5TE69Mq71XiccT7bvavS74",
               "is_local": false,
               "is_playable": true,
-              "name": "The Code",
+              "name": "Get Off It",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:0UxfBdwhEqOVSwr7krLQWb"
+              "uri": "spotify:track:5TE69Mq71XiccT7bvavS74"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 388306,
-              "explicit": false,
+              "duration_ms": 177040,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3yrWHRIIl3bTr97ohwM0zP"
+                "spotify": "https://open.spotify.com/track/69Uya6V1e06nxIMfd7Bygm"
               },
-              "href": "https://api.spotify.com/v1/tracks/3yrWHRIIl3bTr97ohwM0zP",
-              "id": "3yrWHRIIl3bTr97ohwM0zP",
+              "href": "https://api.spotify.com/v1/tracks/69Uya6V1e06nxIMfd7Bygm",
+              "id": "69Uya6V1e06nxIMfd7Bygm",
               "is_local": false,
               "is_playable": true,
-              "name": "Moon",
+              "name": "That's How It Is",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:3yrWHRIIl3bTr97ohwM0zP"
+              "uri": "spotify:track:69Uya6V1e06nxIMfd7Bygm"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
+                    "spotify": "https://open.spotify.com/artist/4KM0S1Bt0R8Le283T205pe"
                   },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
+                  "href": "https://api.spotify.com/v1/artists/4KM0S1Bt0R8Le283T205pe",
+                  "id": "4KM0S1Bt0R8Le283T205pe",
+                  "name": "Saafir",
                   "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4KM0S1Bt0R8Le283T205pe"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 219026,
-              "explicit": false,
+              "duration_ms": 106626,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6AsRaa2Y0X6y0pigaUChBk"
+                "spotify": "https://open.spotify.com/track/7xT5CyvrIUAzoV8ETIHgRC"
               },
-              "href": "https://api.spotify.com/v1/tracks/6AsRaa2Y0X6y0pigaUChBk",
-              "id": "6AsRaa2Y0X6y0pigaUChBk",
+              "href": "https://api.spotify.com/v1/tracks/7xT5CyvrIUAzoV8ETIHgRC",
+              "id": "7xT5CyvrIUAzoV8ETIHgRC",
               "is_local": false,
               "is_playable": true,
-              "name": "Pier",
+              "name": "That Bullshit (feat. Saafir)",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:6AsRaa2Y0X6y0pigaUChBk"
+              "uri": "spotify:track:7xT5CyvrIUAzoV8ETIHgRC"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 290333,
-              "explicit": false,
+              "duration_ms": 236066,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5iDodG89Q0qvosxEnKwAax"
+                "spotify": "https://open.spotify.com/track/7uzusx6QpwCIXoy5TFp6rL"
               },
-              "href": "https://api.spotify.com/v1/tracks/5iDodG89Q0qvosxEnKwAax",
-              "id": "5iDodG89Q0qvosxEnKwAax",
+              "href": "https://api.spotify.com/v1/tracks/7uzusx6QpwCIXoy5TFp6rL",
+              "id": "7uzusx6QpwCIXoy5TFp6rL",
               "is_local": false,
               "is_playable": true,
-              "name": "Ether",
+              "name": "Follow the Funk",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:5iDodG89Q0qvosxEnKwAax"
+              "uri": "spotify:track:7uzusx6QpwCIXoy5TFp6rL"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
+                    "spotify": "https://open.spotify.com/artist/4onNLSRXS0x0dZaisdMo4E"
                   },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
+                  "href": "https://api.spotify.com/v1/artists/4onNLSRXS0x0dZaisdMo4E",
+                  "id": "4onNLSRXS0x0dZaisdMo4E",
+                  "name": "Pep Love",
                   "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4onNLSRXS0x0dZaisdMo4E"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0YsLR3SQd5QTXAhGIGX7cl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0YsLR3SQd5QTXAhGIGX7cl",
+                  "id": "0YsLR3SQd5QTXAhGIGX7cl",
+                  "name": "Del The Funky Homosapien",
+                  "type": "artist",
+                  "uri": "spotify:artist:0YsLR3SQd5QTXAhGIGX7cl"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 220813,
+              "duration_ms": 235800,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4nkf9oHlbWipFokUaiPBey"
+                "spotify": "https://open.spotify.com/track/6i5IrJNAId1ztv5q8Gcxha"
               },
-              "href": "https://api.spotify.com/v1/tracks/4nkf9oHlbWipFokUaiPBey",
-              "id": "4nkf9oHlbWipFokUaiPBey",
+              "href": "https://api.spotify.com/v1/tracks/6i5IrJNAId1ztv5q8Gcxha",
+              "id": "6i5IrJNAId1ztv5q8Gcxha",
               "is_local": false,
               "is_playable": true,
-              "name": "Hejda",
+              "name": "Who's On It (feat. Pep Love & Del Tha Funky Homosapien)",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:4nkf9oHlbWipFokUaiPBey"
+              "uri": "spotify:track:6i5IrJNAId1ztv5q8Gcxha"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 360440,
-              "explicit": false,
+              "duration_ms": 218933,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0nYH4WZs4Rr3mVptqq9OC6"
+                "spotify": "https://open.spotify.com/track/01TR6aAKrA2cI3Z0gnCOsu"
               },
-              "href": "https://api.spotify.com/v1/tracks/0nYH4WZs4Rr3mVptqq9OC6",
-              "id": "0nYH4WZs4Rr3mVptqq9OC6",
+              "href": "https://api.spotify.com/v1/tracks/01TR6aAKrA2cI3Z0gnCOsu",
+              "id": "01TR6aAKrA2cI3Z0gnCOsu",
               "is_local": false,
               "is_playable": true,
-              "name": "Forgive Me",
+              "name": "I Didn't Mean To",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:0nYH4WZs4Rr3mVptqq9OC6"
+              "uri": "spotify:track:01TR6aAKrA2cI3Z0gnCOsu"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 119333,
+              "duration_ms": 191360,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4cwQz68BpPI5H1CXKIMghW"
+                "spotify": "https://open.spotify.com/track/1YiSlOAo3EBXAWzYsyDJFM"
               },
-              "href": "https://api.spotify.com/v1/tracks/4cwQz68BpPI5H1CXKIMghW",
-              "id": "4cwQz68BpPI5H1CXKIMghW",
+              "href": "https://api.spotify.com/v1/tracks/1YiSlOAo3EBXAWzYsyDJFM",
+              "id": "1YiSlOAo3EBXAWzYsyDJFM",
               "is_local": false,
               "is_playable": true,
-              "name": "Broken",
+              "name": "We Got It Like That",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:4cwQz68BpPI5H1CXKIMghW"
+              "uri": "spotify:track:1YiSlOAo3EBXAWzYsyDJFM"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 },
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
+                    "spotify": "https://open.spotify.com/artist/0YsLR3SQd5QTXAhGIGX7cl"
                   },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
+                  "href": "https://api.spotify.com/v1/artists/0YsLR3SQd5QTXAhGIGX7cl",
+                  "id": "0YsLR3SQd5QTXAhGIGX7cl",
+                  "name": "Del The Funky Homosapien",
                   "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:0YsLR3SQd5QTXAhGIGX7cl"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 219280,
-              "explicit": false,
+              "duration_ms": 81133,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5EpzBOBnZGBD0r0a55NzDj"
+                "spotify": "https://open.spotify.com/track/1174RdFawTMDloyjImazex"
               },
-              "href": "https://api.spotify.com/v1/tracks/5EpzBOBnZGBD0r0a55NzDj",
-              "id": "5EpzBOBnZGBD0r0a55NzDj",
+              "href": "https://api.spotify.com/v1/tracks/1174RdFawTMDloyjImazex",
+              "id": "1174RdFawTMDloyjImazex",
               "is_local": false,
               "is_playable": true,
-              "name": "Bones",
+              "name": "A Little Something (feat. Del Tha Funky Homosapien)",
               "preview_url": null,
               "track_number": 11,
               "type": "track",
-              "uri": "spotify:track:5EpzBOBnZGBD0r0a55NzDj"
+              "uri": "spotify:track:1174RdFawTMDloyjImazex"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 373706,
-              "explicit": false,
+              "duration_ms": 216306,
+              "explicit": true,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6kmqlWXHRkKJYxMP3DZkfd"
+                "spotify": "https://open.spotify.com/track/7oKCRObdCgK5Bb8MxwbjXl"
               },
-              "href": "https://api.spotify.com/v1/tracks/6kmqlWXHRkKJYxMP3DZkfd",
-              "id": "6kmqlWXHRkKJYxMP3DZkfd",
+              "href": "https://api.spotify.com/v1/tracks/7oKCRObdCgK5Bb8MxwbjXl",
+              "id": "7oKCRObdCgK5Bb8MxwbjXl",
               "is_local": false,
               "is_playable": true,
-              "name": "Deathscope",
+              "name": "This Is How We Rip Shit",
               "preview_url": null,
               "track_number": 12,
               "type": "track",
-              "uri": "spotify:track:6kmqlWXHRkKJYxMP3DZkfd"
+              "uri": "spotify:track:7oKCRObdCgK5Bb8MxwbjXl"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 241186,
+              "duration_ms": 225600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Zk5a05hS5mtQlFwivi2xj"
+                "spotify": "https://open.spotify.com/track/1vyJn7qQhrGIdjpHXUAuAD"
               },
-              "href": "https://api.spotify.com/v1/tracks/3Zk5a05hS5mtQlFwivi2xj",
-              "id": "3Zk5a05hS5mtQlFwivi2xj",
+              "href": "https://api.spotify.com/v1/tracks/1vyJn7qQhrGIdjpHXUAuAD",
+              "id": "1vyJn7qQhrGIdjpHXUAuAD",
               "is_local": false,
               "is_playable": true,
-              "name": "The Field",
+              "name": "Lose In the End",
               "preview_url": null,
               "track_number": 13,
               "type": "track",
-              "uri": "spotify:track:3Zk5a05hS5mtQlFwivi2xj"
+              "uri": "spotify:track:1vyJn7qQhrGIdjpHXUAuAD"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 493706,
+              "duration_ms": 175933,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/323KA8oxiHelKfwlobqc2N"
+                "spotify": "https://open.spotify.com/track/5fy85q8YBFByYRWWrKRxBJ"
               },
-              "href": "https://api.spotify.com/v1/tracks/323KA8oxiHelKfwlobqc2N",
-              "id": "323KA8oxiHelKfwlobqc2N",
+              "href": "https://api.spotify.com/v1/tracks/5fy85q8YBFByYRWWrKRxBJ",
+              "id": "5fy85q8YBFByYRWWrKRxBJ",
               "is_local": false,
               "is_playable": true,
-              "name": "The Bridge",
+              "name": "Thoughts of the Thoughtful",
               "preview_url": null,
               "track_number": 14,
               "type": "track",
-              "uri": "spotify:track:323KA8oxiHelKfwlobqc2N"
+              "uri": "spotify:track:5fy85q8YBFByYRWWrKRxBJ"
             },
             {
               "artists": [
                 {
                   "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/6uejjWIOshliv2Ho0OJAQN"
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
                   },
-                  "href": "https://api.spotify.com/v1/artists/6uejjWIOshliv2Ho0OJAQN",
-                  "id": "6uejjWIOshliv2Ho0OJAQN",
-                  "name": "Devin Townsend",
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
                   "type": "artist",
-                  "uri": "spotify:artist:6uejjWIOshliv2Ho0OJAQN"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0tmHRvtQDDUUdbNN1KcRYS"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0tmHRvtQDDUUdbNN1KcRYS",
-                  "id": "0tmHRvtQDDUUdbNN1KcRYS",
-                  "name": "Ché Aimee Dorval",
-                  "type": "artist",
-                  "uri": "spotify:artist:0tmHRvtQDDUUdbNN1KcRYS"
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 248400,
+              "duration_ms": 185600,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6oGJOpxpS4F8oz9oqhBKH9"
+                "spotify": "https://open.spotify.com/track/0FDkSvxFEPX3lFXJTRSFnr"
               },
-              "href": "https://api.spotify.com/v1/tracks/6oGJOpxpS4F8oz9oqhBKH9",
-              "id": "6oGJOpxpS4F8oz9oqhBKH9",
+              "href": "https://api.spotify.com/v1/tracks/0FDkSvxFEPX3lFXJTRSFnr",
+              "id": "0FDkSvxFEPX3lFXJTRSFnr",
               "is_local": false,
               "is_playable": true,
-              "name": "Pure",
+              "name": "Chained Minds",
               "preview_url": null,
               "track_number": 15,
               "type": "track",
-              "uri": "spotify:track:6oGJOpxpS4F8oz9oqhBKH9"
+              "uri": "spotify:track:0FDkSvxFEPX3lFXJTRSFnr"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4OpQJMrOpOEYgYoU0Ihku3"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4OpQJMrOpOEYgYoU0Ihku3",
+                  "id": "4OpQJMrOpOEYgYoU0Ihku3",
+                  "name": "Casual",
+                  "type": "artist",
+                  "uri": "spotify:artist:4OpQJMrOpOEYgYoU0Ihku3"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 177160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/31wPZiNHjZDIaXq6G9epXL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/31wPZiNHjZDIaXq6G9epXL",
+              "id": "31wPZiNHjZDIaXq6G9epXL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Be Thousand",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:31wPZiNHjZDIaXq6G9epXL"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 15
+          "total": 16
         },
         "type": "album",
-        "uri": "spotify:album:7pJluMb96vJRrrOJHF4THD"
+        "uri": "spotify:album:08h9ZxS1TeDpGk6Zbg2m0l"
       },
-      "release_date": "2014-05-16",
+      "release_date": "1994-07-08",
       "release_date_precision": "day",
-      "total_tracks": 15,
+      "total_tracks": 16,
       "tracks": [
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 311186,
-          "explicit": false,
-          "id": "75tD795Qq85wOqwBvob2Jv",
-          "name": "Daddy",
+          "duration_ms": 101960,
+          "explicit": true,
+          "id": "29zvM4ww4HAvsctA39QtKH",
+          "name": "Intro",
           "preview_url": null,
           "track_number": 1
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 333466,
+          "duration_ms": 194240,
           "explicit": false,
-          "id": "0VQYTBxyBnha8QIng8ckQD",
-          "name": "Mountaintop",
+          "id": "7IvTgPUFdwSRiUpHHTCk90",
+          "name": "You Flunked",
           "preview_url": null,
           "track_number": 2
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 332466,
-          "explicit": false,
-          "id": "73qdi1UuN5aHXwG2trXim4",
-          "name": "Flight",
+          "duration_ms": 245600,
+          "explicit": true,
+          "id": "4sugPgAtKhLfmIryISQUcf",
+          "name": "Me-O-Mi-O",
           "preview_url": null,
           "track_number": 3
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 281106,
+          "duration_ms": 194093,
           "explicit": false,
-          "id": "0UxfBdwhEqOVSwr7krLQWb",
-          "name": "The Code",
+          "id": "5TE69Mq71XiccT7bvavS74",
+          "name": "Get Off It",
           "preview_url": null,
           "track_number": 4
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 388306,
-          "explicit": false,
-          "id": "3yrWHRIIl3bTr97ohwM0zP",
-          "name": "Moon",
+          "duration_ms": 177040,
+          "explicit": true,
+          "id": "69Uya6V1e06nxIMfd7Bygm",
+          "name": "That's How It Is",
           "preview_url": null,
           "track_number": 5
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             },
             {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4KM0S1Bt0R8Le283T205pe",
+              "name": "Saafir"
             }
           ],
-          "duration_ms": 219026,
-          "explicit": false,
-          "id": "6AsRaa2Y0X6y0pigaUChBk",
-          "name": "Pier",
+          "duration_ms": 106626,
+          "explicit": true,
+          "id": "7xT5CyvrIUAzoV8ETIHgRC",
+          "name": "That Bullshit (feat. Saafir)",
           "preview_url": null,
           "track_number": 6
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 290333,
-          "explicit": false,
-          "id": "5iDodG89Q0qvosxEnKwAax",
-          "name": "Ether",
+          "duration_ms": 236066,
+          "explicit": true,
+          "id": "7uzusx6QpwCIXoy5TFp6rL",
+          "name": "Follow the Funk",
           "preview_url": null,
           "track_number": 7
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             },
             {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4onNLSRXS0x0dZaisdMo4E",
+              "name": "Pep Love"
+            },
+            {
+              "id": "0YsLR3SQd5QTXAhGIGX7cl",
+              "name": "Del The Funky Homosapien"
             }
           ],
-          "duration_ms": 220813,
+          "duration_ms": 235800,
           "explicit": false,
-          "id": "4nkf9oHlbWipFokUaiPBey",
-          "name": "Hejda",
+          "id": "6i5IrJNAId1ztv5q8Gcxha",
+          "name": "Who's On It (feat. Pep Love & Del Tha Funky Homosapien)",
           "preview_url": null,
           "track_number": 8
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 360440,
-          "explicit": false,
-          "id": "0nYH4WZs4Rr3mVptqq9OC6",
-          "name": "Forgive Me",
+          "duration_ms": 218933,
+          "explicit": true,
+          "id": "01TR6aAKrA2cI3Z0gnCOsu",
+          "name": "I Didn't Mean To",
           "preview_url": null,
           "track_number": 9
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 119333,
+          "duration_ms": 191360,
           "explicit": false,
-          "id": "4cwQz68BpPI5H1CXKIMghW",
-          "name": "Broken",
+          "id": "1YiSlOAo3EBXAWzYsyDJFM",
+          "name": "We Got It Like That",
           "preview_url": null,
           "track_number": 10
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             },
             {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "0YsLR3SQd5QTXAhGIGX7cl",
+              "name": "Del The Funky Homosapien"
             }
           ],
-          "duration_ms": 219280,
-          "explicit": false,
-          "id": "5EpzBOBnZGBD0r0a55NzDj",
-          "name": "Bones",
+          "duration_ms": 81133,
+          "explicit": true,
+          "id": "1174RdFawTMDloyjImazex",
+          "name": "A Little Something (feat. Del Tha Funky Homosapien)",
           "preview_url": null,
           "track_number": 11
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 373706,
-          "explicit": false,
-          "id": "6kmqlWXHRkKJYxMP3DZkfd",
-          "name": "Deathscope",
+          "duration_ms": 216306,
+          "explicit": true,
+          "id": "7oKCRObdCgK5Bb8MxwbjXl",
+          "name": "This Is How We Rip Shit",
           "preview_url": null,
           "track_number": 12
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 241186,
+          "duration_ms": 225600,
           "explicit": false,
-          "id": "3Zk5a05hS5mtQlFwivi2xj",
-          "name": "The Field",
+          "id": "1vyJn7qQhrGIdjpHXUAuAD",
+          "name": "Lose In the End",
           "preview_url": null,
           "track_number": 13
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 493706,
+          "duration_ms": 175933,
           "explicit": false,
-          "id": "323KA8oxiHelKfwlobqc2N",
-          "name": "The Bridge",
+          "id": "5fy85q8YBFByYRWWrKRxBJ",
+          "name": "Thoughts of the Thoughtful",
           "preview_url": null,
           "track_number": 14
         },
         {
           "artists": [
             {
-              "id": "6uejjWIOshliv2Ho0OJAQN",
-              "name": "Devin Townsend"
-            },
-            {
-              "id": "0tmHRvtQDDUUdbNN1KcRYS",
-              "name": "Ché Aimee Dorval"
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
             }
           ],
-          "duration_ms": 248400,
+          "duration_ms": 185600,
           "explicit": false,
-          "id": "6oGJOpxpS4F8oz9oqhBKH9",
-          "name": "Pure",
+          "id": "0FDkSvxFEPX3lFXJTRSFnr",
+          "name": "Chained Minds",
           "preview_url": null,
           "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "4OpQJMrOpOEYgYoU0Ihku3",
+              "name": "Casual"
+            }
+          ],
+          "duration_ms": 177160,
+          "explicit": false,
+          "id": "31wPZiNHjZDIaXq6G9epXL",
+          "name": "Be Thousand",
+          "preview_url": null,
+          "track_number": 16
         }
       ],
-      "url": "https://open.spotify.com/album/7pJluMb96vJRrrOJHF4THD"
+      "url": "https://open.spotify.com/album/08h9ZxS1TeDpGk6Zbg2m0l"
     }
   },
-  "spotify_id": "7pJluMb96vJRrrOJHF4THD",
-  "spotify_url": "https://open.spotify.com/album/7pJluMb96vJRrrOJHF4THD",
+  "spotify_id": "08h9ZxS1TeDpGk6Zbg2m0l",
+  "spotify_url": "https://open.spotify.com/album/08h9ZxS1TeDpGk6Zbg2m0l",
   "styles": [
     "Ambient",
     "Country",
@@ -1786,6 +1599,6 @@
       "title": "Pure"
     }
   ],
-  "updated_at": "2025-07-07T20:43:48.136457",
+  "updated_at": "2025-07-09T08:37:28.580972",
   "year": 2021
 }
