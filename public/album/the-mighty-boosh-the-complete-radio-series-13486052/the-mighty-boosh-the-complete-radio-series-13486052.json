@@ -22,7 +22,7 @@
     }
   },
   "country": "UK & Europe",
-  "created_at": "2025-07-07T20:28:01.812570",
+  "created_at": "2025-07-09T09:08:25.089800",
   "date_added": "2019-04-25T19:02:49-07:00",
   "discogs_id": "13486052",
   "discogs_url": "https://www.discogs.com/release/13486052-The-Mighty-Boosh-The-Mighty-Boosh-The-Complete-Radio-Series",
@@ -54,13 +54,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/JMxpTQod1wySsUtNM4d-zaVngdXGdblQdkX7njjKsV8/rs:fit/g:sm/q:90/h:348/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEzNDg2/MDUyLTE1NTUxMTg3/ODItODU5OS5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/the-mighty-boosh-the-complete-radio-series-13486052/the-mighty-boosh-the-complete-radio-series-13486052.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -76,15 +69,16 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T20:28:20.111114",
+    "processed_at": "2025-07-09T09:08:26.562341",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "The Mighty Boosh - The Complete Radio Series",
-  "release_name_spotify": null,
+  "release_name_spotify": "The Mighty Boosh Live",
   "released": "2019-04-13",
   "services": {
     "lastfm": {
@@ -1248,10 +1242,813 @@
       "url": "https://www.last.fm/music/The+Mighty+Boosh/The+Mighty+Boosh+-+The+Complete+Radio+Series",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2006 Universal Pictures UK",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2022 Universal Pictures UK",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "5037300005881"
+      },
+      "id": "5HzKRf5Di0zYZmmNLaGDiV",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27391d7616466ac325bb959232b",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0291d7616466ac325bb959232b",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485191d7616466ac325bb959232b",
+          "width": 64
+        }
+      ],
+      "label": "Redbush Entertainment Ltd",
+      "popularity": 19,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+            },
+            "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+            "id": "71FW1Ip6WcUry2rnZ0YObg",
+            "name": "The Mighty Boosh",
+            "type": "artist",
+            "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2006 Universal Pictures UK",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2022 Universal Pictures UK",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "5037300005881"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5HzKRf5Di0zYZmmNLaGDiV"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/5HzKRf5Di0zYZmmNLaGDiV?market=US",
+        "id": "5HzKRf5Di0zYZmmNLaGDiV",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27391d7616466ac325bb959232b",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0291d7616466ac325bb959232b",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485191d7616466ac325bb959232b",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Redbush Entertainment Ltd",
+        "name": "The Mighty Boosh Live",
+        "popularity": 19,
+        "release_date": "2006",
+        "release_date_precision": "year",
+        "total_tracks": 16,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/5HzKRf5Di0zYZmmNLaGDiV/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 598000,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3SiIbnEzSekRKHHbJwiyZQ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3SiIbnEzSekRKHHbJwiyZQ",
+              "id": "3SiIbnEzSekRKHHbJwiyZQ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Here Come The Boosh",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3SiIbnEzSekRKHHbJwiyZQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 580708,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4CANF1uvZ9JVYR5FP0foTt"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4CANF1uvZ9JVYR5FP0foTt",
+              "id": "4CANF1uvZ9JVYR5FP0foTt",
+              "is_local": false,
+              "is_playable": true,
+              "name": "What You Been Up To?",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4CANF1uvZ9JVYR5FP0foTt"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 515375,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6zFHXCC1wvhASE8xLKmpiM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6zFHXCC1wvhASE8xLKmpiM",
+              "id": "6zFHXCC1wvhASE8xLKmpiM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Introducing the Cast",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6zFHXCC1wvhASE8xLKmpiM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 546666,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4BFfklNvtfOh0Cz13pwOhx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4BFfklNvtfOh0Cz13pwOhx",
+              "id": "4BFfklNvtfOh0Cz13pwOhx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bob Fossil",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:4BFfklNvtfOh0Cz13pwOhx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 380979,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1EkaYN2R2XbxpMQSBVMvZR"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1EkaYN2R2XbxpMQSBVMvZR",
+              "id": "1EkaYN2R2XbxpMQSBVMvZR",
+              "is_local": false,
+              "is_playable": true,
+              "name": "10,000 Years Later",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:1EkaYN2R2XbxpMQSBVMvZR"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 432770,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6hwMNUO01iUadUp3mfPaDP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6hwMNUO01iUadUp3mfPaDP",
+              "id": "6hwMNUO01iUadUp3mfPaDP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Jean Claude Jaquettie",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:6hwMNUO01iUadUp3mfPaDP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 534250,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2A8UD3RbOkdsKNMq7nT7rH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2A8UD3RbOkdsKNMq7nT7rH",
+              "id": "2A8UD3RbOkdsKNMq7nT7rH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Never Open the Box",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:2A8UD3RbOkdsKNMq7nT7rH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 531250,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7qFXJgLc3WHH7YhX1iGsyk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7qFXJgLc3WHH7YhX1iGsyk",
+              "id": "7qFXJgLc3WHH7YhX1iGsyk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Naboo that's who",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:7qFXJgLc3WHH7YhX1iGsyk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 237874,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0MT6D3yw5KEVOlmqan4dRs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0MT6D3yw5KEVOlmqan4dRs",
+              "id": "0MT6D3yw5KEVOlmqan4dRs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Arctic Or Spain",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:0MT6D3yw5KEVOlmqan4dRs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 499625,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6bn7yS75loYUh9cVmMYEkJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6bn7yS75loYUh9cVmMYEkJ",
+              "id": "6bn7yS75loYUh9cVmMYEkJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Howard Moon's Journal",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:6bn7yS75loYUh9cVmMYEkJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 385297,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3HxdOETS9xXkuMqhGAq2h6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3HxdOETS9xXkuMqhGAq2h6",
+              "id": "3HxdOETS9xXkuMqhGAq2h6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Meanwhile In Spain",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:3HxdOETS9xXkuMqhGAq2h6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 520702,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/51cWAPOIkuUuhJ4bKMk4by"
+              },
+              "href": "https://api.spotify.com/v1/tracks/51cWAPOIkuUuhJ4bKMk4by",
+              "id": "51cWAPOIkuUuhJ4bKMk4by",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Go By Many Names",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:51cWAPOIkuUuhJ4bKMk4by"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 425165,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4Z3qZsZvMDo4wuRPM7vqlh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4Z3qZsZvMDo4wuRPM7vqlh",
+              "id": "4Z3qZsZvMDo4wuRPM7vqlh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You Have Passed The Test",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:4Z3qZsZvMDo4wuRPM7vqlh"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 368875,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3mf5UfKYzQLRg1V1GH1tEa"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3mf5UfKYzQLRg1V1GH1tEa",
+              "id": "3mf5UfKYzQLRg1V1GH1tEa",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bollo's Audition For Peter",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:3mf5UfKYzQLRg1V1GH1tEa"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 572500,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7wcudO74CSF2eo9gjpNqwA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7wcudO74CSF2eo9gjpNqwA",
+              "id": "7wcudO74CSF2eo9gjpNqwA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rudi Saves the Day",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:7wcudO74CSF2eo9gjpNqwA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/71FW1Ip6WcUry2rnZ0YObg"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/71FW1Ip6WcUry2rnZ0YObg",
+                  "id": "71FW1Ip6WcUry2rnZ0YObg",
+                  "name": "The Mighty Boosh",
+                  "type": "artist",
+                  "uri": "spotify:artist:71FW1Ip6WcUry2rnZ0YObg"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 567999,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6MzNVHynAdK8TfArMmt4My"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6MzNVHynAdK8TfArMmt4My",
+              "id": "6MzNVHynAdK8TfArMmt4My",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Howard and Old Moon",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:6MzNVHynAdK8TfArMmt4My"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 16
+        },
+        "type": "album",
+        "uri": "spotify:album:5HzKRf5Di0zYZmmNLaGDiV"
+      },
+      "release_date": "2006",
+      "release_date_precision": "year",
+      "total_tracks": 16,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 598000,
+          "explicit": true,
+          "id": "3SiIbnEzSekRKHHbJwiyZQ",
+          "name": "Here Come The Boosh",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 580708,
+          "explicit": true,
+          "id": "4CANF1uvZ9JVYR5FP0foTt",
+          "name": "What You Been Up To?",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 515375,
+          "explicit": false,
+          "id": "6zFHXCC1wvhASE8xLKmpiM",
+          "name": "Introducing the Cast",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 546666,
+          "explicit": true,
+          "id": "4BFfklNvtfOh0Cz13pwOhx",
+          "name": "Bob Fossil",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 380979,
+          "explicit": true,
+          "id": "1EkaYN2R2XbxpMQSBVMvZR",
+          "name": "10,000 Years Later",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 432770,
+          "explicit": true,
+          "id": "6hwMNUO01iUadUp3mfPaDP",
+          "name": "Jean Claude Jaquettie",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 534250,
+          "explicit": true,
+          "id": "2A8UD3RbOkdsKNMq7nT7rH",
+          "name": "Never Open the Box",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 531250,
+          "explicit": true,
+          "id": "7qFXJgLc3WHH7YhX1iGsyk",
+          "name": "I'm Naboo that's who",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 237874,
+          "explicit": true,
+          "id": "0MT6D3yw5KEVOlmqan4dRs",
+          "name": "Arctic Or Spain",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 499625,
+          "explicit": true,
+          "id": "6bn7yS75loYUh9cVmMYEkJ",
+          "name": "Howard Moon's Journal",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 385297,
+          "explicit": true,
+          "id": "3HxdOETS9xXkuMqhGAq2h6",
+          "name": "Meanwhile In Spain",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 520702,
+          "explicit": true,
+          "id": "51cWAPOIkuUuhJ4bKMk4by",
+          "name": "I Go By Many Names",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 425165,
+          "explicit": false,
+          "id": "4Z3qZsZvMDo4wuRPM7vqlh",
+          "name": "You Have Passed The Test",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 368875,
+          "explicit": true,
+          "id": "3mf5UfKYzQLRg1V1GH1tEa",
+          "name": "Bollo's Audition For Peter",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 572500,
+          "explicit": true,
+          "id": "7wcudO74CSF2eo9gjpNqwA",
+          "name": "Rudi Saves the Day",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "71FW1Ip6WcUry2rnZ0YObg",
+              "name": "The Mighty Boosh"
+            }
+          ],
+          "duration_ms": 567999,
+          "explicit": false,
+          "id": "6MzNVHynAdK8TfArMmt4My",
+          "name": "Howard and Old Moon",
+          "preview_url": null,
+          "track_number": 16
+        }
+      ],
+      "url": "https://open.spotify.com/album/5HzKRf5Di0zYZmmNLaGDiV"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "5HzKRf5Di0zYZmmNLaGDiV",
+  "spotify_url": "https://open.spotify.com/album/5HzKRf5Di0zYZmmNLaGDiV",
   "styles": [
     "Comedy",
     "Radioplay"
@@ -1295,6 +2092,6 @@
       "title": "Hitcher"
     }
   ],
-  "updated_at": "2025-07-07T20:28:19.296995",
+  "updated_at": "2025-07-09T09:08:26.300102",
   "year": 2019
 }
