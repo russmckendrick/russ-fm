@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "1702394943",
-      "biography": null,
+      "biography": "The Musician Killer is a 1976 French drama film directed by Benoît Jacquot and starring Anna Karina.",
       "discogs_id": "14298832",
       "discogs_original_name": "KillerStar",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "KillerStar",
       "role": "",
       "spotify_id": "3wXUr5lLeyyLt3JXC5G6qb",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Musician_Killer"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "KillerStar": {
+      "biography": "The Musician Killer is a 1976 French drama film directed by Benoît Jacquot and starring Anna Karina.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/The_Musician_Killer"
+    }
+  },
   "country": "UK",
-  "created_at": "2025-07-05T14:38:46.857405",
+  "created_at": "2025-07-09T07:53:21.867527",
   "date_added": "2025-01-20T01:01:37-08:00",
   "discogs_id": "30077947",
   "discogs_url": "https://www.discogs.com/release/30077947-KillerStar-KillerStar",
@@ -79,18 +84,19 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/killerstar-30077947/killerstar-30077947-hi-res.jpg",
-    "medium": "public/album/killerstar-30077947/killerstar-30077947-medium.jpg",
-    "small": "public/album/killerstar-30077947/killerstar-30077947-small.jpg"
+    "hi-res": "../public/album/killerstar-30077947/killerstar-30077947-hi-res.jpg",
+    "medium": "../public/album/killerstar-30077947/killerstar-30077947-medium.jpg",
+    "small": "../public/album/killerstar-30077947/killerstar-30077947-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T14:38:49.262361",
+    "processed_at": "2025-07-09T07:53:23.637033",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "KillerStar (feat. Emm Gryner)",
@@ -1088,6 +1094,6 @@
       "title": "Falling Through"
     }
   ],
-  "updated_at": "2025-07-05T14:38:49.092462",
+  "updated_at": "2025-07-09T07:53:23.048827",
   "year": 2024
 }

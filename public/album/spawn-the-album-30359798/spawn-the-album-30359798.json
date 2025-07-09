@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-05T14:39:49.790974",
+  "created_at": "2025-07-09T07:54:32.932932",
   "date_added": "2024-11-30T06:51:42-08:00",
   "discogs_id": "30359798",
   "discogs_url": "https://www.discogs.com/release/30359798-Various-Spawn-The-Album",
@@ -151,23 +151,24 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/spawn-the-album-30359798/spawn-the-album-30359798-hi-res.jpg",
-    "medium": "public/album/spawn-the-album-30359798/spawn-the-album-30359798-medium.jpg",
-    "small": "public/album/spawn-the-album-30359798/spawn-the-album-30359798-small.jpg"
+    "hi-res": "../public/album/spawn-the-album-30359798/spawn-the-album-30359798-hi-res.jpg",
+    "medium": "../public/album/spawn-the-album-30359798/spawn-the-album-30359798-medium.jpg",
+    "small": "../public/album/spawn-the-album-30359798/spawn-the-album-30359798-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T14:39:50.500567",
+    "processed_at": "2025-07-09T07:54:34.486034",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": "SPAWN THE ALBUM (Soundtrack)",
   "release_name_discogs": "Spawn (The Album)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Various Cruelties",
   "released": "2024-04-20",
   "services": {
     "apple_music": {
@@ -212,10 +213,598 @@
         "url": "https://music.apple.com/gb/album/spawn-the-album-soundtrack/471125412"
       },
       "url": "https://music.apple.com/gb/album/spawn-the-album-soundtrack/471125412"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 2012 Almanac Recordings (Licensed from Mercury Records, a division of Universal Music Operations Ltd)",
+          "type": "C"
+        },
+        {
+          "text": "(P) 2012 Almanac Recordings (Licensed from Mercury Records, a division of Universal Music Operations Ltd)",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "5055489245966"
+      },
+      "id": "4kFmGE8Br2s2ThIspRXt67",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ebc93b56b06958e1967b202a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ebc93b56b06958e1967b202a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ebc93b56b06958e1967b202a",
+          "width": 64
+        }
+      ],
+      "label": "Almanac Recordings",
+      "popularity": 20,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+            },
+            "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+            "id": "55GxwgjpoIuWz7TCMD5Xns",
+            "name": "Various Cruelties",
+            "type": "artist",
+            "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 2012 Almanac Recordings (Licensed from Mercury Records, a division of Universal Music Operations Ltd)",
+            "type": "C"
+          },
+          {
+            "text": "(P) 2012 Almanac Recordings (Licensed from Mercury Records, a division of Universal Music Operations Ltd)",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "5055489245966"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4kFmGE8Br2s2ThIspRXt67"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/4kFmGE8Br2s2ThIspRXt67?market=US",
+        "id": "4kFmGE8Br2s2ThIspRXt67",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ebc93b56b06958e1967b202a",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ebc93b56b06958e1967b202a",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ebc93b56b06958e1967b202a",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Almanac Recordings",
+        "name": "Various Cruelties",
+        "popularity": 20,
+        "release_date": "2012-10-15",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/4kFmGE8Br2s2ThIspRXt67/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 171013,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Ffe8qHkmbXNyqF4HTYYcz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Ffe8qHkmbXNyqF4HTYYcz",
+              "id": "3Ffe8qHkmbXNyqF4HTYYcz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Chemicals",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:3Ffe8qHkmbXNyqF4HTYYcz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2izKFN9qf8SKtNGVqp3D8e"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2izKFN9qf8SKtNGVqp3D8e",
+              "id": "2izKFN9qf8SKtNGVqp3D8e",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Great Unknown",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2izKFN9qf8SKtNGVqp3D8e"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 174893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0LBH9T4MtdRzeX0s2EIGJA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0LBH9T4MtdRzeX0s2EIGJA",
+              "id": "0LBH9T4MtdRzeX0s2EIGJA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "If It Wasn't for You",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0LBH9T4MtdRzeX0s2EIGJA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219120,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Fy8V842wQ1qn68DyRdDeu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Fy8V842wQ1qn68DyRdDeu",
+              "id": "2Fy8V842wQ1qn68DyRdDeu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Magnetic Field",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2Fy8V842wQ1qn68DyRdDeu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 133080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/09EJJZdw4Cid5X7YvQJ6Ct"
+              },
+              "href": "https://api.spotify.com/v1/tracks/09EJJZdw4Cid5X7YvQJ6Ct",
+              "id": "09EJJZdw4Cid5X7YvQJ6Ct",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cold As You",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:09EJJZdw4Cid5X7YvQJ6Ct"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 171560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5SWbjTNLnpIjFOdZYphwmk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5SWbjTNLnpIjFOdZYphwmk",
+              "id": "5SWbjTNLnpIjFOdZYphwmk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dry Your Tears",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5SWbjTNLnpIjFOdZYphwmk"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 246920,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4Kg3yEoADLcyE6wrVlHbxg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4Kg3yEoADLcyE6wrVlHbxg",
+              "id": "4Kg3yEoADLcyE6wrVlHbxg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Beautiful Delirium",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4Kg3yEoADLcyE6wrVlHbxg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 261426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3CYg7s4bHR1uvnqitKQDrz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3CYg7s4bHR1uvnqitKQDrz",
+              "id": "3CYg7s4bHR1uvnqitKQDrz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "She Is the One",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3CYg7s4bHR1uvnqitKQDrz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 183786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2iLJUy6C7wgt7h6um60Ik8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2iLJUy6C7wgt7h6um60Ik8",
+              "id": "2iLJUy6C7wgt7h6um60Ik8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Capsize",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2iLJUy6C7wgt7h6um60Ik8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 226266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/07W77rSXt69Ce81KPt3Nhm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/07W77rSXt69Ce81KPt3Nhm",
+              "id": "07W77rSXt69Ce81KPt3Nhm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thrill Is Gone",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:07W77rSXt69Ce81KPt3Nhm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/55GxwgjpoIuWz7TCMD5Xns"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/55GxwgjpoIuWz7TCMD5Xns",
+                  "id": "55GxwgjpoIuWz7TCMD5Xns",
+                  "name": "Various Cruelties",
+                  "type": "artist",
+                  "uri": "spotify:artist:55GxwgjpoIuWz7TCMD5Xns"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 160413,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/03vQEp8oKH5PD064mmSC5t"
+              },
+              "href": "https://api.spotify.com/v1/tracks/03vQEp8oKH5PD064mmSC5t",
+              "id": "03vQEp8oKH5PD064mmSC5t",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Neon Truth",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:03vQEp8oKH5PD064mmSC5t"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 11
+        },
+        "type": "album",
+        "uri": "spotify:album:4kFmGE8Br2s2ThIspRXt67"
+      },
+      "release_date": "2012-10-15",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 171013,
+          "explicit": false,
+          "id": "3Ffe8qHkmbXNyqF4HTYYcz",
+          "name": "Chemicals",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 187533,
+          "explicit": false,
+          "id": "2izKFN9qf8SKtNGVqp3D8e",
+          "name": "Great Unknown",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 174893,
+          "explicit": false,
+          "id": "0LBH9T4MtdRzeX0s2EIGJA",
+          "name": "If It Wasn't for You",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 219120,
+          "explicit": false,
+          "id": "2Fy8V842wQ1qn68DyRdDeu",
+          "name": "Magnetic Field",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 133080,
+          "explicit": false,
+          "id": "09EJJZdw4Cid5X7YvQJ6Ct",
+          "name": "Cold As You",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 171560,
+          "explicit": false,
+          "id": "5SWbjTNLnpIjFOdZYphwmk",
+          "name": "Dry Your Tears",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 246920,
+          "explicit": false,
+          "id": "4Kg3yEoADLcyE6wrVlHbxg",
+          "name": "Beautiful Delirium",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 261426,
+          "explicit": false,
+          "id": "3CYg7s4bHR1uvnqitKQDrz",
+          "name": "She Is the One",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 183786,
+          "explicit": false,
+          "id": "2iLJUy6C7wgt7h6um60Ik8",
+          "name": "Capsize",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 226266,
+          "explicit": false,
+          "id": "07W77rSXt69Ce81KPt3Nhm",
+          "name": "Thrill Is Gone",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "55GxwgjpoIuWz7TCMD5Xns",
+              "name": "Various Cruelties"
+            }
+          ],
+          "duration_ms": 160413,
+          "explicit": false,
+          "id": "03vQEp8oKH5PD064mmSC5t",
+          "name": "Neon Truth",
+          "preview_url": null,
+          "track_number": 11
+        }
+      ],
+      "url": "https://open.spotify.com/album/4kFmGE8Br2s2ThIspRXt67"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "4kFmGE8Br2s2ThIspRXt67",
+  "spotify_url": "https://open.spotify.com/album/4kFmGE8Br2s2ThIspRXt67",
   "styles": [
     "Breakbeat",
     "Soundtrack",
@@ -660,6 +1249,6 @@
       "title": "A Plane Scraped Its Belly On A Sooty Yellow Moon"
     }
   ],
-  "updated_at": "2025-07-05T14:39:50.406395",
+  "updated_at": "2025-07-09T07:54:34.046168",
   "year": 2024
 }
