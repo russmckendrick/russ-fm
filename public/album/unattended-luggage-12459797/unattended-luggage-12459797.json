@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-09T08:37:09.916069",
+  "created_at": "2025-07-09T21:27:41.764917",
   "date_added": "2021-09-25T15:07:23-07:00",
   "discogs_id": "12459797",
   "discogs_url": "https://www.discogs.com/release/12459797-Nick-Mason-Unattended-Luggage",
@@ -33,12 +33,7 @@
     "Box Set"
   ],
   "genres": [
-    "Rock",
-    "jazz-rock",
-    "psychedelic",
-    "singer-songwriter",
-    "introspective",
-    "songs about rivers"
+    "Rock"
   ],
   "id": "12459797",
   "images": [
@@ -211,15 +206,16 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T08:37:10.926951",
+    "processed_at": "2025-07-09T21:27:43.056453",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Unattended Luggage",
-  "release_name_spotify": null,
+  "release_name_spotify": "Nick Mason's Fictitious Sports",
   "released": "2018-08-31",
   "services": {
     "lastfm": {
@@ -304,8 +300,8 @@
                 "url": "https://www.last.fm/tag/introspective"
               },
               {
-                "name": "songs about rivers",
-                "url": "https://www.last.fm/tag/songs+about+rivers"
+                "name": "experimental",
+                "url": "https://www.last.fm/tag/experimental"
               }
             ]
           },
@@ -883,17 +879,476 @@
         "psychedelic",
         "singer-songwriter",
         "introspective",
-        "songs about rivers"
+        "experimental"
       ],
       "top_albums": [],
       "top_tracks": [],
       "url": "https://www.last.fm/music/Nick+Mason/Unattended+Luggage",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2018 Nick Mason Music Limited",
+          "type": "C"
+        },
+        {
+          "text": "℗ 1981 Nick Mason Music Limited under exclusive licence to Parlophone Records Limited, a Warner Music Company",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "190295660130"
+      },
+      "id": "186h8hclIvxHoMR8q1x8Qq",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732bd26d826be188dc611feb3e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022bd26d826be188dc611feb3e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512bd26d826be188dc611feb3e",
+          "width": 64
+        }
+      ],
+      "label": "Parlophone UK",
+      "popularity": 19,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+            },
+            "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+            "id": "4XARewdsOxt5tw3uROBGHj",
+            "name": "Nick Mason",
+            "type": "artist",
+            "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2018 Nick Mason Music Limited",
+            "type": "C"
+          },
+          {
+            "text": "℗ 1981 Nick Mason Music Limited under exclusive licence to Parlophone Records Limited, a Warner Music Company",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "190295660130"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/186h8hclIvxHoMR8q1x8Qq"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/186h8hclIvxHoMR8q1x8Qq?market=US",
+        "id": "186h8hclIvxHoMR8q1x8Qq",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732bd26d826be188dc611feb3e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022bd26d826be188dc611feb3e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512bd26d826be188dc611feb3e",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Parlophone UK",
+        "name": "Nick Mason's Fictitious Sports",
+        "popularity": 19,
+        "release_date": "1981-05-03",
+        "release_date_precision": "day",
+        "total_tracks": 8,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/186h8hclIvxHoMR8q1x8Qq/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 219973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/74Ebax2re1xcqeswvlUBLi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/74Ebax2re1xcqeswvlUBLi",
+              "id": "74Ebax2re1xcqeswvlUBLi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Can't Get My Motor to Start",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:74Ebax2re1xcqeswvlUBLi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 253253,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4hJfAWSdINOSDcIsgWlRzf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4hJfAWSdINOSDcIsgWlRzf",
+              "id": "4hJfAWSdINOSDcIsgWlRzf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Was Wrong",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4hJfAWSdINOSDcIsgWlRzf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 288933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6arUMVm29OURQ209m9Rk1W"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6arUMVm29OURQ209m9Rk1W",
+              "id": "6arUMVm29OURQ209m9Rk1W",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Siam",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6arUMVm29OURQ209m9Rk1W"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 316786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7ly2mCxlduo7j88s230wFi"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7ly2mCxlduo7j88s230wFi",
+              "id": "7ly2mCxlduo7j88s230wFi",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hot River",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7ly2mCxlduo7j88s230wFi"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 206680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4D9zEvf5KwygNhFfrJEBrd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4D9zEvf5KwygNhFfrJEBrd",
+              "id": "4D9zEvf5KwygNhFfrJEBrd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Boo to You Too",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4D9zEvf5KwygNhFfrJEBrd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 277093,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1rUebGN6zPABOo8XGzDEUv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1rUebGN6zPABOo8XGzDEUv",
+              "id": "1rUebGN6zPABOo8XGzDEUv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Do Ya?",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1rUebGN6zPABOo8XGzDEUv"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 239386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7f9babPLXPMp0jy7yh3UvE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7f9babPLXPMp0jy7yh3UvE",
+              "id": "7f9babPLXPMp0jy7yh3UvE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Wervin'",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:7f9babPLXPMp0jy7yh3UvE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4XARewdsOxt5tw3uROBGHj"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4XARewdsOxt5tw3uROBGHj",
+                  "id": "4XARewdsOxt5tw3uROBGHj",
+                  "name": "Nick Mason",
+                  "type": "artist",
+                  "uri": "spotify:artist:4XARewdsOxt5tw3uROBGHj"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 378586,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6jVXARrdXz1yQCXA51SRPk"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6jVXARrdXz1yQCXA51SRPk",
+              "id": "6jVXARrdXz1yQCXA51SRPk",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm a Mineralist",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:6jVXARrdXz1yQCXA51SRPk"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 8
+        },
+        "type": "album",
+        "uri": "spotify:album:186h8hclIvxHoMR8q1x8Qq"
+      },
+      "release_date": "1981-05-03",
+      "release_date_precision": "day",
+      "total_tracks": 8,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 219973,
+          "explicit": false,
+          "id": "74Ebax2re1xcqeswvlUBLi",
+          "name": "Can't Get My Motor to Start",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 253253,
+          "explicit": false,
+          "id": "4hJfAWSdINOSDcIsgWlRzf",
+          "name": "I Was Wrong",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 288933,
+          "explicit": false,
+          "id": "6arUMVm29OURQ209m9Rk1W",
+          "name": "Siam",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 316786,
+          "explicit": false,
+          "id": "7ly2mCxlduo7j88s230wFi",
+          "name": "Hot River",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 206680,
+          "explicit": false,
+          "id": "4D9zEvf5KwygNhFfrJEBrd",
+          "name": "Boo to You Too",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 277093,
+          "explicit": false,
+          "id": "1rUebGN6zPABOo8XGzDEUv",
+          "name": "Do Ya?",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 239386,
+          "explicit": false,
+          "id": "7f9babPLXPMp0jy7yh3UvE",
+          "name": "Wervin'",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "4XARewdsOxt5tw3uROBGHj",
+              "name": "Nick Mason"
+            }
+          ],
+          "duration_ms": 378586,
+          "explicit": false,
+          "id": "6jVXARrdXz1yQCXA51SRPk",
+          "name": "I'm a Mineralist",
+          "preview_url": null,
+          "track_number": 8
+        }
+      ],
+      "url": "https://open.spotify.com/album/186h8hclIvxHoMR8q1x8Qq"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "186h8hclIvxHoMR8q1x8Qq",
+  "spotify_url": "https://open.spotify.com/album/186h8hclIvxHoMR8q1x8Qq",
   "styles": [],
   "title": "Unattended Luggage",
   "tracklist": [
@@ -1843,6 +2298,6 @@
       "title": "White Of The Eye"
     }
   ],
-  "updated_at": "2025-07-09T08:37:10.549286",
+  "updated_at": "2025-07-09T21:27:42.803219",
   "year": 2018
 }

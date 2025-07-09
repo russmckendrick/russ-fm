@@ -6,6 +6,16 @@ import { Shuffle, RefreshCw } from 'lucide-react';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    json_detailed_artist: string;
+    images_uri_artist: {
+      'hi-res': string;
+      medium: string;
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -25,33 +35,124 @@ interface Album {
   };
 }
 
+interface Artist {
+  name: string;
+  uri: string;
+  albums: Album[];
+  albumCount: number;
+  genres: string[];
+  images_uri_artist: {
+    'hi-res': string;
+    medium: string;
+    small: string;
+  };
+}
+
+interface RandomItem {
+  type: 'album' | 'artist';
+  data: Album | Artist;
+}
+
 export function RandomPage() {
-  const [randomAlbums, setRandomAlbums] = useState<Album[]>([]);
+  const [randomItems, setRandomItems] = useState<RandomItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
   const [allAlbums, setAllAlbums] = useState<Album[]>([]);
-  const [albumVisibility, setAlbumVisibility] = useState([true, true, true]);
+  const [allArtists, setAllArtists] = useState<Artist[]>([]);
+  const [shuffleCount, setShuffleCount] = useState(0);
+  const [itemVisibility, setItemVisibility] = useState([true, true, true]);
 
   const loadCollection = async () => {
     try {
       const response = await fetch('/collection.json');
       const albums: Album[] = await response.json();
       setAllAlbums(albums);
-      loadInitialAlbums(albums);
+      
+      // Process artists from albums
+      const artists = processArtists(albums);
+      setAllArtists(artists);
+      
+      loadInitialItems(albums, artists);
     } catch (error) {
       console.error('Error loading collection:', error);
       setIsLoading(false);
     }
   };
 
-  const getRandomAlbums = (albums: Album[]): Album[] => {
-    const shuffled = [...albums].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 3);
+  const processArtists = (albums: Album[]): Artist[] => {
+    const artistMap = new Map<string, Artist>();
+
+    albums.forEach(album => {
+      // Handle albums with multiple artists
+      if (album.artists && album.artists.length > 0) {
+        // Process each individual artist
+        album.artists.forEach(artistInfo => {
+          const artistName = artistInfo.name;
+          
+          // Skip "Various" artists
+          if (artistName.toLowerCase() === 'various') {
+            return;
+          }
+          
+          if (!artistMap.has(artistName)) {
+            artistMap.set(artistName, {
+              name: artistName,
+              uri: artistInfo.uri_artist,
+              albums: [],
+              albumCount: 0,
+              genres: [],
+              images_uri_artist: artistInfo.images_uri_artist,
+            });
+          }
+          
+          const artist = artistMap.get(artistName)!;
+          artist.albums.push(album);
+          artist.albumCount++;
+          
+          // Add genres
+          album.genre_names.forEach(genre => {
+            if (!artist.genres.includes(genre)) {
+              artist.genres.push(genre);
+            }
+          });
+        });
+      }
+    });
+
+    return Array.from(artistMap.values()).filter(artist => artist.albumCount > 0);
   };
 
-  const loadInitialAlbums = (albums: Album[]) => {
-    const selected = getRandomAlbums(albums);
-    setRandomAlbums(selected);
+  const getRandomItems = (albums: Album[], artists: Artist[], currentShuffleCount: number): RandomItem[] => {
+    const items: RandomItem[] = [];
+    
+    // Determine if we should include an artist (every 3-4 shuffles)
+    const shouldIncludeArtist = currentShuffleCount > 0 && currentShuffleCount % 3 === 0 && artists.length > 0;
+    
+    if (shouldIncludeArtist) {
+      // Add one random artist
+      const randomArtist = artists[Math.floor(Math.random() * artists.length)];
+      items.push({ type: 'artist', data: randomArtist });
+      
+      // Fill remaining slots with albums
+      const randomAlbums = [...albums].sort(() => Math.random() - 0.5).slice(0, 2);
+      randomAlbums.forEach(album => {
+        items.push({ type: 'album', data: album });
+      });
+    } else {
+      // All albums
+      const randomAlbums = [...albums].sort(() => Math.random() - 0.5).slice(0, 3);
+      randomAlbums.forEach(album => {
+        items.push({ type: 'album', data: album });
+      });
+    }
+    
+    // Shuffle the final items array
+    return items.sort(() => Math.random() - 0.5);
+  };
+
+  const loadInitialItems = (albums: Album[], artists: Artist[]) => {
+    const selected = getRandomItems(albums, artists, 0);
+    setRandomItems(selected);
     setIsLoading(false);
   };
 
@@ -62,30 +163,32 @@ export function RandomPage() {
   const handleShuffle = () => {
     if (allAlbums.length > 0) {
       setIsShuffling(true);
+      const newShuffleCount = shuffleCount + 1;
       
-      // Create random order for albums to change
+      // Create random order for items to change
       const randomOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
       
-      // Fade out albums in random order
+      // Fade out items in random order
       randomOrder.forEach((index, orderIndex) => {
         setTimeout(() => {
-          setAlbumVisibility(prev => {
+          setItemVisibility(prev => {
             const newVisibility = [...prev];
             newVisibility[index] = false;
             return newVisibility;
           });
-        }, orderIndex * 150); // 150ms delay between each album
+        }, orderIndex * 150); // 150ms delay between each item
       });
       
-      // After all albums fade out, get new albums
+      // After all items fade out, get new items
       setTimeout(() => {
-        const newAlbums = getRandomAlbums(allAlbums);
-        setRandomAlbums(newAlbums);
+        const newItems = getRandomItems(allAlbums, allArtists, newShuffleCount);
+        setRandomItems(newItems);
+        setShuffleCount(newShuffleCount);
         
-        // Fade in new albums in the same random order
+        // Fade in new items in the same random order
         randomOrder.forEach((index, orderIndex) => {
           setTimeout(() => {
-            setAlbumVisibility(prev => {
+            setItemVisibility(prev => {
               const newVisibility = [...prev];
               newVisibility[index] = true;
               return newVisibility;
@@ -106,12 +209,11 @@ export function RandomPage() {
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-8">Random Albums</h1>
         
         <Button 
           onClick={handleShuffle}
           size="lg"
-          className="gap-2"
+          className="gap-3 px-8 py-4 text-lg bg-gray-700 hover:bg-gray-600 text-white border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
           disabled={isShuffling || isLoading}
         >
           {isShuffling ? (
