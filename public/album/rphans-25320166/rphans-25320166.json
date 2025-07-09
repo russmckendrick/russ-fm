@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "35316471",
-      "biography": null,
+      "biography": "Amplifier are an English rock band originating from Manchester. The band has released eight studio albums and eight EPs since its inception in 1999. Their music has been described as \"Soundgarden, Tool, Black Sabbath, Oceansize and Pink Floyd taking copious amounts of mind-altering substances and venturing on a trip through time and space, and back again.\" Their music is characterised by guitarist Sel Balamir's effect pedals, Matt Brobin's complex drumming, extended heavy sections, atmospheric compositions and philosophical lyrics.",
       "discogs_id": "369288",
       "discogs_original_name": "Sel Balamir",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Sel Balamir",
       "role": "",
       "spotify_id": "6oyRmgivGgT9jz6CKAxc9D",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Amplifier_(band)"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Sel Balamir": {
+      "biography": "Amplifier are an English rock band originating from Manchester. The band has released eight studio albums and eight EPs since its inception in 1999. Their music has been described as \"Soundgarden, Tool, Black Sabbath, Oceansize and Pink Floyd taking copious amounts of mind-altering substances and venturing on a trip through time and space, and back again.\" Their music is characterised by guitarist Sel Balamir's effect pedals, Matt Brobin's complex drumming, extended heavy sections, atmospheric compositions and philosophical lyrics.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Amplifier_(band)"
+    }
+  },
   "country": "UK",
-  "created_at": "2025-07-05T15:23:29.891767",
+  "created_at": "2025-07-09T08:21:43.382200",
   "date_added": "2022-11-29T13:20:00-08:00",
   "discogs_id": "25320166",
   "discogs_url": "https://www.discogs.com/release/25320166-Sel-Balamir--rphans",
@@ -92,18 +97,19 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/rphans-25320166/rphans-25320166-hi-res.jpg",
-    "medium": "public/album/rphans-25320166/rphans-25320166-medium.jpg",
-    "small": "public/album/rphans-25320166/rphans-25320166-small.jpg"
+    "hi-res": "../public/album/rphans-25320166/rphans-25320166-hi-res.jpg",
+    "medium": "../public/album/rphans-25320166/rphans-25320166-medium.jpg",
+    "small": "../public/album/rphans-25320166/rphans-25320166-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T15:23:37.275865",
+    "processed_at": "2025-07-09T08:21:45.691100",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "( )rphans [Digital]",
@@ -569,6 +575,6 @@
       "title": "Orphans"
     }
   ],
-  "updated_at": "2025-07-05T15:23:32.700483",
+  "updated_at": "2025-07-09T08:21:44.430789",
   "year": 2022
 }
