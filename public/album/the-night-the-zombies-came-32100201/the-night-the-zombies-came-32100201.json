@@ -22,7 +22,7 @@
     }
   },
   "country": "Worldwide",
-  "created_at": "2025-07-09T07:55:34.989111",
+  "created_at": "2025-07-09T20:58:52.151301",
   "date_added": "2024-10-29T05:02:11-07:00",
   "discogs_id": "32100201",
   "discogs_url": "https://www.discogs.com/release/32100201-Pixies-The-Night-The-Zombies-Came",
@@ -30,10 +30,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Rock",
-    "2024",
-    "rock",
-    "alternative rock"
+    "Rock"
   ],
   "id": "32100201",
   "images": [
@@ -136,7 +133,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T07:55:37.358478",
+    "processed_at": "2025-07-09T20:58:53.508720",
     "services_used": [
       "discogs",
       "apple_music",
@@ -223,9 +220,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/b173b0d5080ece393b0742d9669c1e49.jpg"
         }
       ],
-      "listeners": 42418,
+      "listeners": 42461,
       "mbid": "ef2e9e0d-23c0-43d0-a457-701339a3415a",
-      "playcount": 361550,
+      "playcount": 361978,
       "raw_data": {
         "album": {
           "artist": "Pixies",
@@ -255,10 +252,10 @@
               "size": ""
             }
           ],
-          "listeners": "42418",
+          "listeners": "42461",
           "mbid": "ef2e9e0d-23c0-43d0-a457-701339a3415a",
           "name": "The Night the Zombies Came",
-          "playcount": "361550",
+          "playcount": "361978",
           "tags": {
             "tag": [
               {
@@ -270,8 +267,16 @@
                 "url": "https://www.last.fm/tag/rock"
               },
               {
+                "name": "indie",
+                "url": "https://www.last.fm/tag/indie"
+              },
+              {
                 "name": "alternative rock",
                 "url": "https://www.last.fm/tag/alternative+rock"
+              },
+              {
+                "name": "all",
+                "url": "https://www.last.fm/tag/all"
               }
             ]
           },
@@ -512,7 +517,9 @@
       "tags": [
         "2024",
         "rock",
-        "alternative rock"
+        "indie",
+        "alternative rock",
+        "all"
       ],
       "top_albums": [],
       "top_tracks": [],
@@ -1282,6 +1289,6 @@
       "title": "The Vegas Suite"
     }
   ],
-  "updated_at": "2025-07-09T07:55:36.073965",
+  "updated_at": "2025-07-09T20:58:53.210455",
   "year": 2024
 }
