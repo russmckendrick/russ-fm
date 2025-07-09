@@ -4,7 +4,7 @@
   "artists": [
     {
       "apple_music_id": "178834",
-      "biography": null,
+      "biography": "Bruce Frederick Joseph Springsteen is an American rock singer, songwriter, and guitarist. Nicknamed \"the Boss\", Springsteen has released 21 studio albums spanning six decades; most of his albums feature the E Street Band, his backing band since 1972. Springsteen is a pioneer of heartland rock, combining commercially successful rock with poetic, socially conscious lyrics that reflect working class American life. He is known for his energetic concerts, some of which last more than four hours.",
       "discogs_id": "760706",
       "discogs_original_name": "Bruce Springsteen & The E-Street Band",
       "id": null,
@@ -12,12 +12,17 @@
       "name": "Bruce Springsteen & The E-Street Band",
       "role": "",
       "spotify_id": "3eqjTLE0HfPfh78zjh6TqT",
-      "wikipedia_url": null
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bruce_Springsteen"
     }
   ],
-  "artists_wikipedia": {},
+  "artists_wikipedia": {
+    "Bruce Springsteen & The E-Street Band": {
+      "biography": "Bruce Frederick Joseph Springsteen is an American rock singer, songwriter, and guitarist. Nicknamed \"the Boss\", Springsteen has released 21 studio albums spanning six decades; most of his albums feature the E Street Band, his backing band since 1972. Springsteen is a pioneer of heartland rock, combining commercially successful rock with poetic, socially conscious lyrics that reflect working class American life. He is known for his energetic concerts, some of which last more than four hours.",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bruce_Springsteen"
+    }
+  },
   "country": "US",
-  "created_at": "2025-07-05T17:12:22.227054",
+  "created_at": "2025-07-09T09:43:14.648822",
   "date_added": "2017-06-30T17:50:31-07:00",
   "discogs_id": "10498779",
   "discogs_url": "https://www.discogs.com/release/10498779-Bruce-Springsteen-The-E-Street-Band-Hammersmith-Odeon-London-75",
@@ -197,18 +202,19 @@
   "lastfm_mbid": null,
   "lastfm_url": null,
   "local_images": {
-    "hi-res": "public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-hi-res.jpg",
-    "medium": "public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-medium.jpg",
-    "small": "public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-small.jpg"
+    "hi-res": "../public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-hi-res.jpg",
+    "medium": "../public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-medium.jpg",
+    "small": "../public/album/hammersmith-odeon-london-75-10498779/hammersmith-odeon-london-75-10498779-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-05T17:12:27.372223",
+    "processed_at": "2025-07-09T09:43:16.689334",
     "services_used": [
       "discogs",
       "apple_music",
-      "spotify"
+      "spotify",
+      "wikipedia"
     ]
   },
   "release_name_apple_music": "Hammersmith Odeon, London '75",
@@ -1164,6 +1170,6 @@
       "title": "Quarter To Three"
     }
   ],
-  "updated_at": "2025-07-05T17:12:24.647650",
+  "updated_at": "2025-07-09T09:43:15.915433",
   "year": 2017
 }

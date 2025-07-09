@@ -1,6 +1,6 @@
 {
-  "apple_music_id": null,
-  "apple_music_url": null,
+  "apple_music_id": "1440845197",
+  "apple_music_url": "https://music.apple.com/gb/album/fifty-shades-of-grey-original-motion-picture-soundtrack/1440845197",
   "artists": [
     {
       "apple_music_id": "59442734",
@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-07T15:42:36.061251",
+  "created_at": "2025-07-09T09:45:39.305124",
   "date_added": "2017-05-27T15:28:51-07:00",
   "discogs_id": "10350346",
   "discogs_url": "https://www.discogs.com/release/10350346-Various-Mod-Anthems-Original-Northern-Soul-RNB-Classics",
@@ -95,8 +95,8 @@
     {
       "height": 2000,
       "resource_url": null,
-      "type": "custom_cover",
-      "url": "https://v1.russ.fm/albums/mod-anthems-original-northern-soul-r-n-b-classics-10350346/mod-anthems-original-northern-soul-r-n-b-classics-10350346.jpg",
+      "type": "apple_music_artwork",
+      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/fd/7a/13/fd7a1394-5ce1-6da6-93ad-977533762a1f/15UMGIM00463.rgb.jpg/2000x2000bb.jpg",
       "width": 2000
     }
   ],
@@ -114,19 +114,1483 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-07T15:42:41.800719",
+    "processed_at": "2025-07-09T09:45:41.486154",
     "services_used": [
       "discogs",
+      "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
-  "release_name_apple_music": null,
+  "release_name_apple_music": "Fifty Shades of Grey (Original Motion Picture Soundtrack)",
   "release_name_discogs": "Mod Anthems: Original Northern Soul & R'N'B Classics",
-  "release_name_spotify": null,
+  "release_name_spotify": "Northern Soul",
   "released": "2017-05-26",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "apple_music": {
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/fd/7a/13/fd7a1394-5ce1-6da6-93ad-977533762a1f/15UMGIM00463.rgb.jpg/2000x2000bb.jpg",
+      "content_rating": null,
+      "copyright": "This Compilation ℗ 2015 Universal Studios and Republic Records, a division of UMG Recordings, Inc.",
+      "editorial_notes": null,
+      "id": "1440845197",
+      "is_complete": true,
+      "preview_url": null,
+      "raw_attributes": {
+        "artistName": "Various Artists",
+        "artwork": {
+          "bgColor": "010104",
+          "height": 1500,
+          "textColor1": "d9d9d9",
+          "textColor2": "c3c3c6",
+          "textColor3": "aeaeae",
+          "textColor4": "9c9c9f",
+          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/fd/7a/13/fd7a1394-5ce1-6da6-93ad-977533762a1f/15UMGIM00463.rgb.jpg/{w}x{h}bb.jpg",
+          "width": 1500
+        },
+        "copyright": "This Compilation ℗ 2015 Universal Studios and Republic Records, a division of UMG Recordings, Inc.",
+        "genreNames": [
+          "Soundtrack",
+          "Music"
+        ],
+        "isCompilation": true,
+        "isComplete": true,
+        "isMasteredForItunes": true,
+        "isSingle": false,
+        "name": "Fifty Shades of Grey (Original Motion Picture Soundtrack)",
+        "playParams": {
+          "id": "1440845197",
+          "kind": "album"
+        },
+        "recordLabel": "Fifty Shades of Grey",
+        "releaseDate": "2015-02-06",
+        "trackCount": 16,
+        "upc": "00602547206688",
+        "url": "https://music.apple.com/gb/album/fifty-shades-of-grey-original-motion-picture-soundtrack/1440845197"
+      },
+      "url": "https://music.apple.com/gb/album/fifty-shades-of-grey-original-motion-picture-soundtrack/1440845197"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2017 Warner Music Group - X5 Music Group",
+          "type": "C"
+        },
+        {
+          "text": "2017 Warner Music Group - X5 Music Group",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "084247964042"
+      },
+      "id": "3WmBECpmxbsthtnwQCWTrR",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273506d84b24b585b6d92c86837",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02506d84b24b585b6d92c86837",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851506d84b24b585b6d92c86837",
+          "width": 64
+        }
+      ],
+      "label": "Warner Music Group - X5 Music Group",
+      "popularity": 6,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2017 Warner Music Group - X5 Music Group",
+            "type": "C"
+          },
+          {
+            "text": "2017 Warner Music Group - X5 Music Group",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "084247964042"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3WmBECpmxbsthtnwQCWTrR"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3WmBECpmxbsthtnwQCWTrR?market=US",
+        "id": "3WmBECpmxbsthtnwQCWTrR",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273506d84b24b585b6d92c86837",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02506d84b24b585b6d92c86837",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851506d84b24b585b6d92c86837",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Warner Music Group - X5 Music Group",
+        "name": "Northern Soul",
+        "popularity": 6,
+        "release_date": "2017-03-25",
+        "release_date_precision": "day",
+        "total_tracks": 30,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3WmBECpmxbsthtnwQCWTrR/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4sJVr8p9zLy5M1v2KqNHwp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4sJVr8p9zLy5M1v2KqNHwp",
+                  "id": "4sJVr8p9zLy5M1v2KqNHwp",
+                  "name": "Ben Aiken",
+                  "type": "artist",
+                  "uri": "spotify:artist:4sJVr8p9zLy5M1v2KqNHwp"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/24wI1N9bTQmYBNLaxiSR7U"
+              },
+              "href": "https://api.spotify.com/v1/tracks/24wI1N9bTQmYBNLaxiSR7U",
+              "id": "24wI1N9bTQmYBNLaxiSR7U",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Satisfied",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:24wI1N9bTQmYBNLaxiSR7U"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2AYmrUFn1ATSfFSx3B4tvb"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2AYmrUFn1ATSfFSx3B4tvb",
+                  "id": "2AYmrUFn1ATSfFSx3B4tvb",
+                  "name": "The Capitols",
+                  "type": "artist",
+                  "uri": "spotify:artist:2AYmrUFn1ATSfFSx3B4tvb"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166746,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/67UpYDpQoi9B6gDuxkMWVS"
+              },
+              "href": "https://api.spotify.com/v1/tracks/67UpYDpQoi9B6gDuxkMWVS",
+              "id": "67UpYDpQoi9B6gDuxkMWVS",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cool Jerk",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:67UpYDpQoi9B6gDuxkMWVS"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6Bfy6QzadCXS92y0T8dDZF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6Bfy6QzadCXS92y0T8dDZF",
+                  "id": "6Bfy6QzadCXS92y0T8dDZF",
+                  "name": "Eddie Floyd",
+                  "type": "artist",
+                  "uri": "spotify:artist:6Bfy6QzadCXS92y0T8dDZF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 180013,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6nt2ec9l2FGI2usnW2bBMK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6nt2ec9l2FGI2usnW2bBMK",
+              "id": "6nt2ec9l2FGI2usnW2bBMK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Big Bird",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6nt2ec9l2FGI2usnW2bBMK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0N5PyKJzS3M1XNlaCL7bbE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0N5PyKJzS3M1XNlaCL7bbE",
+                  "id": "0N5PyKJzS3M1XNlaCL7bbE",
+                  "name": "Wilson Pickett",
+                  "type": "artist",
+                  "uri": "spotify:artist:0N5PyKJzS3M1XNlaCL7bbE"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 139133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/02mcBXB1ttQ7Kc0ClduM8A"
+              },
+              "href": "https://api.spotify.com/v1/tracks/02mcBXB1ttQ7Kc0ClduM8A",
+              "id": "02mcBXB1ttQ7Kc0ClduM8A",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Don't Cry No More",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:02mcBXB1ttQ7Kc0ClduM8A"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5hJuErnQUiPRIpBnkkvjbp"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5hJuErnQUiPRIpBnkkvjbp",
+                  "id": "5hJuErnQUiPRIpBnkkvjbp",
+                  "name": "Bobby Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5hJuErnQUiPRIpBnkkvjbp"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 121400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5uroD0FXFpgouBiTL3KXBp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5uroD0FXFpgouBiTL3KXBp",
+              "id": "5uroD0FXFpgouBiTL3KXBp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Feels Good - Single Version",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:5uroD0FXFpgouBiTL3KXBp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1ZikppG9dPedbIgMfnfx8k"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1ZikppG9dPedbIgMfnfx8k",
+                  "id": "1ZikppG9dPedbIgMfnfx8k",
+                  "name": "Ike & Tina Turner",
+                  "type": "artist",
+                  "uri": "spotify:artist:1ZikppG9dPedbIgMfnfx8k"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7iV8jb0nNrMo6S28rjf720"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7iV8jb0nNrMo6S28rjf720",
+              "id": "7iV8jb0nNrMo6S28rjf720",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Somebody (Somewhere) Needs Me",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:7iV8jb0nNrMo6S28rjf720"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3rRmDmzPcAFwcUDvG5gBqO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3rRmDmzPcAFwcUDvG5gBqO",
+                  "id": "3rRmDmzPcAFwcUDvG5gBqO",
+                  "name": "Percy Sledge",
+                  "type": "artist",
+                  "uri": "spotify:artist:3rRmDmzPcAFwcUDvG5gBqO"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7AdcDA9En1gobcyHUfiPS6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7AdcDA9En1gobcyHUfiPS6",
+              "id": "7AdcDA9En1gobcyHUfiPS6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Baby Help Me",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:7AdcDA9En1gobcyHUfiPS6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FqqOl9itIUpXr4jZPIVoT"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FqqOl9itIUpXr4jZPIVoT",
+                  "id": "1FqqOl9itIUpXr4jZPIVoT",
+                  "name": "The Drifters",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FqqOl9itIUpXr4jZPIVoT"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 154533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2gwBGJpsYQYUZ6MPgOP1Ap"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2gwBGJpsYQYUZ6MPgOP1Ap",
+              "id": "2gwBGJpsYQYUZ6MPgOP1Ap",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You Got to Pay Your Dues",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2gwBGJpsYQYUZ6MPgOP1Ap"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2t0kaaDtGZtmpczIAMaVTQ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2t0kaaDtGZtmpczIAMaVTQ",
+                  "id": "2t0kaaDtGZtmpczIAMaVTQ",
+                  "name": "Charles Wright & The Watts 103rd Street Rhythm Band",
+                  "type": "artist",
+                  "uri": "spotify:artist:2t0kaaDtGZtmpczIAMaVTQ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 190533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/794RLdst61A0CC9nVP0Gqf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/794RLdst61A0CC9nVP0Gqf",
+              "id": "794RLdst61A0CC9nVP0Gqf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "(I Can't Get No) Satisfaction (Mono) - Remastered",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:794RLdst61A0CC9nVP0Gqf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/08BQmH2M3Ew9XjMHaHsl1l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/08BQmH2M3Ew9XjMHaHsl1l",
+                  "id": "08BQmH2M3Ew9XjMHaHsl1l",
+                  "name": "Gloria Jones",
+                  "type": "artist",
+                  "uri": "spotify:artist:08BQmH2M3Ew9XjMHaHsl1l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 162946,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/78rnqCDLX1BG2m8BY1uWhz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/78rnqCDLX1BG2m8BY1uWhz",
+              "id": "78rnqCDLX1BG2m8BY1uWhz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tainted Love",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:78rnqCDLX1BG2m8BY1uWhz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3QZKZBEmr54lAVI5XvmjnM"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3QZKZBEmr54lAVI5XvmjnM",
+                  "id": "3QZKZBEmr54lAVI5XvmjnM",
+                  "name": "The Coasters",
+                  "type": "artist",
+                  "uri": "spotify:artist:3QZKZBEmr54lAVI5XvmjnM"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 121440,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5ietgKkv9HEmpiMbITxUja"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5ietgKkv9HEmpiMbITxUja",
+              "id": "5ietgKkv9HEmpiMbITxUja",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Crazy Baby",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:5ietgKkv9HEmpiMbITxUja"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1kupwLFpHALpmhp5qol8xH"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1kupwLFpHALpmhp5qol8xH",
+                  "id": "1kupwLFpHALpmhp5qol8xH",
+                  "name": "Archie Bell & The Drells",
+                  "type": "artist",
+                  "uri": "spotify:artist:1kupwLFpHALpmhp5qol8xH"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 125693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7xyeX8rtmYeVEYDNOQY9pP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7xyeX8rtmYeVEYDNOQY9pP",
+              "id": "7xyeX8rtmYeVEYDNOQY9pP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Here I Go Again",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:7xyeX8rtmYeVEYDNOQY9pP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2v7rLEypSYsiHryqAdfVc9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2v7rLEypSYsiHryqAdfVc9",
+                  "id": "2v7rLEypSYsiHryqAdfVc9",
+                  "name": "Larry Laster",
+                  "type": "artist",
+                  "uri": "spotify:artist:2v7rLEypSYsiHryqAdfVc9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 154800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3KvPKP3p6F5wC5ygygm52N"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3KvPKP3p6F5wC5ygygm52N",
+              "id": "3KvPKP3p6F5wC5ygygm52N",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Go For Yourself",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:3KvPKP3p6F5wC5ygygm52N"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/75ThFMsAjEsE9S6u8AgUDS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/75ThFMsAjEsE9S6u8AgUDS",
+                  "id": "75ThFMsAjEsE9S6u8AgUDS",
+                  "name": "The Apollas",
+                  "type": "artist",
+                  "uri": "spotify:artist:75ThFMsAjEsE9S6u8AgUDS"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 158933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2uRs52ycdcEDol8UoTnfuE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2uRs52ycdcEDol8UoTnfuE",
+              "id": "2uRs52ycdcEDol8UoTnfuE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mr. Creator",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:2uRs52ycdcEDol8UoTnfuE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/75nH9SHblpaAtYck60wjIY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/75nH9SHblpaAtYck60wjIY",
+                  "id": "75nH9SHblpaAtYck60wjIY",
+                  "name": "Roy Redmond",
+                  "type": "artist",
+                  "uri": "spotify:artist:75nH9SHblpaAtYck60wjIY"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 152400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7rtSdJYTLjQbOXj0rTClFJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7rtSdJYTLjQbOXj0rTClFJ",
+              "id": "7rtSdJYTLjQbOXj0rTClFJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ain't That Terrible",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:7rtSdJYTLjQbOXj0rTClFJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7erYZsfekXYGWvup1bnkUZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7erYZsfekXYGWvup1bnkUZ",
+                  "id": "7erYZsfekXYGWvup1bnkUZ",
+                  "name": "Linda Jones",
+                  "type": "artist",
+                  "uri": "spotify:artist:7erYZsfekXYGWvup1bnkUZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 139426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3JnzlXhrqQ94Afr30P6IRP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3JnzlXhrqQ94Afr30P6IRP",
+              "id": "3JnzlXhrqQ94Afr30P6IRP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You Can't Take It",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:3JnzlXhrqQ94Afr30P6IRP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7tdO7d7r0vhwov7RIZWH6V"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7tdO7d7r0vhwov7RIZWH6V",
+                  "id": "7tdO7d7r0vhwov7RIZWH6V",
+                  "name": "Mitch Ryder",
+                  "type": "artist",
+                  "uri": "spotify:artist:7tdO7d7r0vhwov7RIZWH6V"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4TfPUy66UCwsqJo9ezSRYs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4TfPUy66UCwsqJo9ezSRYs",
+                  "id": "4TfPUy66UCwsqJo9ezSRYs",
+                  "name": "The Detroit Wheels",
+                  "type": "artist",
+                  "uri": "spotify:artist:4TfPUy66UCwsqJo9ezSRYs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 198733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/22Tn7dPYq2vC3o7rloc5rX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/22Tn7dPYq2vC3o7rloc5rX",
+              "id": "22Tn7dPYq2vC3o7rloc5rX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Breakout",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:22Tn7dPYq2vC3o7rloc5rX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/11c6d21TC7e9MENwkEGykn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/11c6d21TC7e9MENwkEGykn",
+                  "id": "11c6d21TC7e9MENwkEGykn",
+                  "name": "The Astors",
+                  "type": "artist",
+                  "uri": "spotify:artist:11c6d21TC7e9MENwkEGykn"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/61jcVunFDBA27XGuGEoqgO"
+              },
+              "href": "https://api.spotify.com/v1/tracks/61jcVunFDBA27XGuGEoqgO",
+              "id": "61jcVunFDBA27XGuGEoqgO",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Daddy Didn't Tell Me",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:61jcVunFDBA27XGuGEoqgO"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/58xHKimPTOhZ8MKWaeDaeR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/58xHKimPTOhZ8MKWaeDaeR",
+                  "id": "58xHKimPTOhZ8MKWaeDaeR",
+                  "name": "Carl Hall",
+                  "type": "artist",
+                  "uri": "spotify:artist:58xHKimPTOhZ8MKWaeDaeR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 155960,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/235uHtJmVoGDkUBTqiJZGB"
+              },
+              "href": "https://api.spotify.com/v1/tracks/235uHtJmVoGDkUBTqiJZGB",
+              "id": "235uHtJmVoGDkUBTqiJZGB",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mean It Baby",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:235uHtJmVoGDkUBTqiJZGB"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7erYZsfekXYGWvup1bnkUZ"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7erYZsfekXYGWvup1bnkUZ",
+                  "id": "7erYZsfekXYGWvup1bnkUZ",
+                  "name": "Linda Jones",
+                  "type": "artist",
+                  "uri": "spotify:artist:7erYZsfekXYGWvup1bnkUZ"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 156826,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Z9ggpltBL6wSPgUMS3W2T"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Z9ggpltBL6wSPgUMS3W2T",
+              "id": "2Z9ggpltBL6wSPgUMS3W2T",
+              "is_local": false,
+              "is_playable": true,
+              "name": "A Last Minute Miracle",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:2Z9ggpltBL6wSPgUMS3W2T"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4EYRKWX3RvHihDHDr8TocR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4EYRKWX3RvHihDHDr8TocR",
+                  "id": "4EYRKWX3RvHihDHDr8TocR",
+                  "name": "The Mar-Keys",
+                  "type": "artist",
+                  "uri": "spotify:artist:4EYRKWX3RvHihDHDr8TocR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 159173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5wZrnX7SctWacNpRalkwCP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5wZrnX7SctWacNpRalkwCP",
+              "id": "5wZrnX7SctWacNpRalkwCP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Last Night",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:5wZrnX7SctWacNpRalkwCP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3CDKmzJu6uwEGnPLLZffpD"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3CDKmzJu6uwEGnPLLZffpD",
+                  "id": "3CDKmzJu6uwEGnPLLZffpD",
+                  "name": "Frankie Valli",
+                  "type": "artist",
+                  "uri": "spotify:artist:3CDKmzJu6uwEGnPLLZffpD"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 138906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/00Y5XvFbUkqzBugz7LfBcK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/00Y5XvFbUkqzBugz7LfBcK",
+              "id": "00Y5XvFbUkqzBugz7LfBcK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You're Ready Now",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:00Y5XvFbUkqzBugz7LfBcK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4ba7uNtpOq0us2C5Nx19zN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4ba7uNtpOq0us2C5Nx19zN",
+                  "id": "4ba7uNtpOq0us2C5Nx19zN",
+                  "name": "Wendy Rene",
+                  "type": "artist",
+                  "uri": "spotify:artist:4ba7uNtpOq0us2C5Nx19zN"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 149786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2MlT6TdOa6JV9eO8umt0mV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2MlT6TdOa6JV9eO8umt0mV",
+              "id": "2MlT6TdOa6JV9eO8umt0mV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bar-B-Q",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:2MlT6TdOa6JV9eO8umt0mV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4TgZ9nk2sln25tTzN4UAM2"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4TgZ9nk2sln25tTzN4UAM2",
+                  "id": "4TgZ9nk2sln25tTzN4UAM2",
+                  "name": "The Marvellos",
+                  "type": "artist",
+                  "uri": "spotify:artist:4TgZ9nk2sln25tTzN4UAM2"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 154866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7bijQR4fGTuXaB3KjtO4u9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7bijQR4fGTuXaB3KjtO4u9",
+              "id": "7bijQR4fGTuXaB3KjtO4u9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Why Do You Want to Hurt the One That Loves You",
+              "preview_url": null,
+              "track_number": 24,
+              "type": "track",
+              "uri": "spotify:track:7bijQR4fGTuXaB3KjtO4u9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7nwUJBm0HE4ZxD3f5cy5ok"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7nwUJBm0HE4ZxD3f5cy5ok",
+                  "id": "7nwUJBm0HE4ZxD3f5cy5ok",
+                  "name": "Aretha Franklin",
+                  "type": "artist",
+                  "uri": "spotify:artist:7nwUJBm0HE4ZxD3f5cy5ok"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 144533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/18xF2O1jgH7IWBq5mOXPJs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/18xF2O1jgH7IWBq5mOXPJs",
+              "id": "18xF2O1jgH7IWBq5mOXPJs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "A Change",
+              "preview_url": null,
+              "track_number": 25,
+              "type": "track",
+              "uri": "spotify:track:18xF2O1jgH7IWBq5mOXPJs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1VPlW2qDDesSK0ZE0u7JXk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1VPlW2qDDesSK0ZE0u7JXk",
+                  "id": "1VPlW2qDDesSK0ZE0u7JXk",
+                  "name": "The Soul Brothers Six",
+                  "type": "artist",
+                  "uri": "spotify:artist:1VPlW2qDDesSK0ZE0u7JXk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 157666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2KVJYSOJ1t0CCs6Olq8p6x"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2KVJYSOJ1t0CCs6Olq8p6x",
+              "id": "2KVJYSOJ1t0CCs6Olq8p6x",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Some Kind of Wonderful",
+              "preview_url": null,
+              "track_number": 26,
+              "type": "track",
+              "uri": "spotify:track:2KVJYSOJ1t0CCs6Olq8p6x"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2W9dD4SfW7p19JtzRgWGjz"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2W9dD4SfW7p19JtzRgWGjz",
+                  "id": "2W9dD4SfW7p19JtzRgWGjz",
+                  "name": "The Marketts",
+                  "type": "artist",
+                  "uri": "spotify:artist:2W9dD4SfW7p19JtzRgWGjz"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 143400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2xIILjVaFhmfCAVUSwWCkn"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2xIILjVaFhmfCAVUSwWCkn",
+              "id": "2xIILjVaFhmfCAVUSwWCkn",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stirrin' Up some Soul",
+              "preview_url": null,
+              "track_number": 27,
+              "type": "track",
+              "uri": "spotify:track:2xIILjVaFhmfCAVUSwWCkn"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1cjZk1xXn3YCToNg3uJpA7"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1cjZk1xXn3YCToNg3uJpA7",
+                  "id": "1cjZk1xXn3YCToNg3uJpA7",
+                  "name": "Mary Wells",
+                  "type": "artist",
+                  "uri": "spotify:artist:1cjZk1xXn3YCToNg3uJpA7"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 166400,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/79xnalMjkg7by0mLpANfRs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/79xnalMjkg7by0mLpANfRs",
+              "id": "79xnalMjkg7by0mLpANfRs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Can't You See (You're Losing Me)",
+              "preview_url": null,
+              "track_number": 28,
+              "type": "track",
+              "uri": "spotify:track:79xnalMjkg7by0mLpANfRs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2zpFG5cvw00QmrYTUsjApa"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2zpFG5cvw00QmrYTUsjApa",
+                  "id": "2zpFG5cvw00QmrYTUsjApa",
+                  "name": "The Three Degrees",
+                  "type": "artist",
+                  "uri": "spotify:artist:2zpFG5cvw00QmrYTUsjApa"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 153560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6o0ZP1Wb3svuglN0jQ1Cml"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6o0ZP1Wb3svuglN0jQ1Cml",
+              "id": "6o0ZP1Wb3svuglN0jQ1Cml",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Contact",
+              "preview_url": null,
+              "track_number": 29,
+              "type": "track",
+              "uri": "spotify:track:6o0ZP1Wb3svuglN0jQ1Cml"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2AYmrUFn1ATSfFSx3B4tvb"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2AYmrUFn1ATSfFSx3B4tvb",
+                  "id": "2AYmrUFn1ATSfFSx3B4tvb",
+                  "name": "The Capitols",
+                  "type": "artist",
+                  "uri": "spotify:artist:2AYmrUFn1ATSfFSx3B4tvb"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 141506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3WdnKHYHBm8x9DEntZQVRC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3WdnKHYHBm8x9DEntZQVRC",
+              "id": "3WdnKHYHBm8x9DEntZQVRC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hold on ! I'm Comin'",
+              "preview_url": null,
+              "track_number": 30,
+              "type": "track",
+              "uri": "spotify:track:3WdnKHYHBm8x9DEntZQVRC"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 30
+        },
+        "type": "album",
+        "uri": "spotify:album:3WmBECpmxbsthtnwQCWTrR"
+      },
+      "release_date": "2017-03-25",
+      "release_date_precision": "day",
+      "total_tracks": 30,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "4sJVr8p9zLy5M1v2KqNHwp",
+              "name": "Ben Aiken"
+            }
+          ],
+          "duration_ms": 156773,
+          "explicit": false,
+          "id": "24wI1N9bTQmYBNLaxiSR7U",
+          "name": "Satisfied",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "2AYmrUFn1ATSfFSx3B4tvb",
+              "name": "The Capitols"
+            }
+          ],
+          "duration_ms": 166746,
+          "explicit": false,
+          "id": "67UpYDpQoi9B6gDuxkMWVS",
+          "name": "Cool Jerk",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "6Bfy6QzadCXS92y0T8dDZF",
+              "name": "Eddie Floyd"
+            }
+          ],
+          "duration_ms": 180013,
+          "explicit": false,
+          "id": "6nt2ec9l2FGI2usnW2bBMK",
+          "name": "Big Bird",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "0N5PyKJzS3M1XNlaCL7bbE",
+              "name": "Wilson Pickett"
+            }
+          ],
+          "duration_ms": 139133,
+          "explicit": false,
+          "id": "02mcBXB1ttQ7Kc0ClduM8A",
+          "name": "Don't Cry No More",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5hJuErnQUiPRIpBnkkvjbp",
+              "name": "Bobby Wilson"
+            }
+          ],
+          "duration_ms": 121400,
+          "explicit": false,
+          "id": "5uroD0FXFpgouBiTL3KXBp",
+          "name": "Feels Good - Single Version",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "1ZikppG9dPedbIgMfnfx8k",
+              "name": "Ike & Tina Turner"
+            }
+          ],
+          "duration_ms": 156133,
+          "explicit": false,
+          "id": "7iV8jb0nNrMo6S28rjf720",
+          "name": "Somebody (Somewhere) Needs Me",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "3rRmDmzPcAFwcUDvG5gBqO",
+              "name": "Percy Sledge"
+            }
+          ],
+          "duration_ms": 153000,
+          "explicit": false,
+          "id": "7AdcDA9En1gobcyHUfiPS6",
+          "name": "Baby Help Me",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "1FqqOl9itIUpXr4jZPIVoT",
+              "name": "The Drifters"
+            }
+          ],
+          "duration_ms": 154533,
+          "explicit": false,
+          "id": "2gwBGJpsYQYUZ6MPgOP1Ap",
+          "name": "You Got to Pay Your Dues",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "2t0kaaDtGZtmpczIAMaVTQ",
+              "name": "Charles Wright & The Watts 103rd Street Rhythm Band"
+            }
+          ],
+          "duration_ms": 190533,
+          "explicit": false,
+          "id": "794RLdst61A0CC9nVP0Gqf",
+          "name": "(I Can't Get No) Satisfaction (Mono) - Remastered",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "08BQmH2M3Ew9XjMHaHsl1l",
+              "name": "Gloria Jones"
+            }
+          ],
+          "duration_ms": 162946,
+          "explicit": false,
+          "id": "78rnqCDLX1BG2m8BY1uWhz",
+          "name": "Tainted Love",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "3QZKZBEmr54lAVI5XvmjnM",
+              "name": "The Coasters"
+            }
+          ],
+          "duration_ms": 121440,
+          "explicit": false,
+          "id": "5ietgKkv9HEmpiMbITxUja",
+          "name": "Crazy Baby",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "1kupwLFpHALpmhp5qol8xH",
+              "name": "Archie Bell & The Drells"
+            }
+          ],
+          "duration_ms": 125693,
+          "explicit": false,
+          "id": "7xyeX8rtmYeVEYDNOQY9pP",
+          "name": "Here I Go Again",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "2v7rLEypSYsiHryqAdfVc9",
+              "name": "Larry Laster"
+            }
+          ],
+          "duration_ms": 154800,
+          "explicit": false,
+          "id": "3KvPKP3p6F5wC5ygygm52N",
+          "name": "Go For Yourself",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "75ThFMsAjEsE9S6u8AgUDS",
+              "name": "The Apollas"
+            }
+          ],
+          "duration_ms": 158933,
+          "explicit": false,
+          "id": "2uRs52ycdcEDol8UoTnfuE",
+          "name": "Mr. Creator",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "75nH9SHblpaAtYck60wjIY",
+              "name": "Roy Redmond"
+            }
+          ],
+          "duration_ms": 152400,
+          "explicit": false,
+          "id": "7rtSdJYTLjQbOXj0rTClFJ",
+          "name": "Ain't That Terrible",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "7erYZsfekXYGWvup1bnkUZ",
+              "name": "Linda Jones"
+            }
+          ],
+          "duration_ms": 139426,
+          "explicit": false,
+          "id": "3JnzlXhrqQ94Afr30P6IRP",
+          "name": "You Can't Take It",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "7tdO7d7r0vhwov7RIZWH6V",
+              "name": "Mitch Ryder"
+            },
+            {
+              "id": "4TfPUy66UCwsqJo9ezSRYs",
+              "name": "The Detroit Wheels"
+            }
+          ],
+          "duration_ms": 198733,
+          "explicit": false,
+          "id": "22Tn7dPYq2vC3o7rloc5rX",
+          "name": "Breakout",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "11c6d21TC7e9MENwkEGykn",
+              "name": "The Astors"
+            }
+          ],
+          "duration_ms": 156400,
+          "explicit": false,
+          "id": "61jcVunFDBA27XGuGEoqgO",
+          "name": "Daddy Didn't Tell Me",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "58xHKimPTOhZ8MKWaeDaeR",
+              "name": "Carl Hall"
+            }
+          ],
+          "duration_ms": 155960,
+          "explicit": false,
+          "id": "235uHtJmVoGDkUBTqiJZGB",
+          "name": "Mean It Baby",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "7erYZsfekXYGWvup1bnkUZ",
+              "name": "Linda Jones"
+            }
+          ],
+          "duration_ms": 156826,
+          "explicit": false,
+          "id": "2Z9ggpltBL6wSPgUMS3W2T",
+          "name": "A Last Minute Miracle",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "4EYRKWX3RvHihDHDr8TocR",
+              "name": "The Mar-Keys"
+            }
+          ],
+          "duration_ms": 159173,
+          "explicit": false,
+          "id": "5wZrnX7SctWacNpRalkwCP",
+          "name": "Last Night",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "3CDKmzJu6uwEGnPLLZffpD",
+              "name": "Frankie Valli"
+            }
+          ],
+          "duration_ms": 138906,
+          "explicit": false,
+          "id": "00Y5XvFbUkqzBugz7LfBcK",
+          "name": "You're Ready Now",
+          "preview_url": null,
+          "track_number": 22
+        },
+        {
+          "artists": [
+            {
+              "id": "4ba7uNtpOq0us2C5Nx19zN",
+              "name": "Wendy Rene"
+            }
+          ],
+          "duration_ms": 149786,
+          "explicit": false,
+          "id": "2MlT6TdOa6JV9eO8umt0mV",
+          "name": "Bar-B-Q",
+          "preview_url": null,
+          "track_number": 23
+        },
+        {
+          "artists": [
+            {
+              "id": "4TgZ9nk2sln25tTzN4UAM2",
+              "name": "The Marvellos"
+            }
+          ],
+          "duration_ms": 154866,
+          "explicit": false,
+          "id": "7bijQR4fGTuXaB3KjtO4u9",
+          "name": "Why Do You Want to Hurt the One That Loves You",
+          "preview_url": null,
+          "track_number": 24
+        },
+        {
+          "artists": [
+            {
+              "id": "7nwUJBm0HE4ZxD3f5cy5ok",
+              "name": "Aretha Franklin"
+            }
+          ],
+          "duration_ms": 144533,
+          "explicit": false,
+          "id": "18xF2O1jgH7IWBq5mOXPJs",
+          "name": "A Change",
+          "preview_url": null,
+          "track_number": 25
+        },
+        {
+          "artists": [
+            {
+              "id": "1VPlW2qDDesSK0ZE0u7JXk",
+              "name": "The Soul Brothers Six"
+            }
+          ],
+          "duration_ms": 157666,
+          "explicit": false,
+          "id": "2KVJYSOJ1t0CCs6Olq8p6x",
+          "name": "Some Kind of Wonderful",
+          "preview_url": null,
+          "track_number": 26
+        },
+        {
+          "artists": [
+            {
+              "id": "2W9dD4SfW7p19JtzRgWGjz",
+              "name": "The Marketts"
+            }
+          ],
+          "duration_ms": 143400,
+          "explicit": false,
+          "id": "2xIILjVaFhmfCAVUSwWCkn",
+          "name": "Stirrin' Up some Soul",
+          "preview_url": null,
+          "track_number": 27
+        },
+        {
+          "artists": [
+            {
+              "id": "1cjZk1xXn3YCToNg3uJpA7",
+              "name": "Mary Wells"
+            }
+          ],
+          "duration_ms": 166400,
+          "explicit": false,
+          "id": "79xnalMjkg7by0mLpANfRs",
+          "name": "Can't You See (You're Losing Me)",
+          "preview_url": null,
+          "track_number": 28
+        },
+        {
+          "artists": [
+            {
+              "id": "2zpFG5cvw00QmrYTUsjApa",
+              "name": "The Three Degrees"
+            }
+          ],
+          "duration_ms": 153560,
+          "explicit": false,
+          "id": "6o0ZP1Wb3svuglN0jQ1Cml",
+          "name": "Contact",
+          "preview_url": null,
+          "track_number": 29
+        },
+        {
+          "artists": [
+            {
+              "id": "2AYmrUFn1ATSfFSx3B4tvb",
+              "name": "The Capitols"
+            }
+          ],
+          "duration_ms": 141506,
+          "explicit": false,
+          "id": "3WdnKHYHBm8x9DEntZQVRC",
+          "name": "Hold on ! I'm Comin'",
+          "preview_url": null,
+          "track_number": 30
+        }
+      ],
+      "url": "https://open.spotify.com/album/3WmBECpmxbsthtnwQCWTrR"
+    }
+  },
+  "spotify_id": "3WmBECpmxbsthtnwQCWTrR",
+  "spotify_url": "https://open.spotify.com/album/3WmBECpmxbsthtnwQCWTrR",
   "styles": [
     "Mod",
     "Soul",
@@ -648,6 +2112,6 @@
       "title": "Kiss My Love Goodbye"
     }
   ],
-  "updated_at": "2025-07-07T15:42:41.018373",
+  "updated_at": "2025-07-09T09:45:41.046256",
   "year": 2017
 }
