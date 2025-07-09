@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
@@ -20,7 +21,8 @@ interface AlbumCardProps {
 
 export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const year = new Date(album.date_release_year).getFullYear();
-  const displayGenres = album.genre_names.slice(0, 3);
+  const cleanGenres = getCleanGenresFromArray(album.genre_names, album.release_artist);
+  const displayGenres = cleanGenres.slice(0, 3);
 
   const albumPath = album.uri_release.replace('/album/', '').replace('/', '');
 
@@ -55,12 +57,12 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
               variant="secondary" 
               className="text-xs capitalize"
             >
-              {genre.toLowerCase()}
+              {genre}
             </Badge>
           ))}
-          {album.genre_names.length > 3 && (
+          {cleanGenres.length > 3 && (
             <Badge variant="outline" className="text-xs">
-              +{album.genre_names.length - 3}
+              +{cleanGenres.length - 3}
             </Badge>
           )}
         </div>
