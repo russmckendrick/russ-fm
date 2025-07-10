@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2025-07-09T09:52:52.470658",
+  "created_at": "2025-07-10T08:38:41.029428",
   "date_added": "2017-02-15T18:30:30-08:00",
   "discogs_id": "9816263",
   "discogs_url": "https://www.discogs.com/release/9816263-Main-Source-Breaking-Atoms",
@@ -31,12 +31,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Hip Hop",
-    "hip hop",
-    "hip-hop",
-    "1991",
-    "rap",
-    "classic hip-hop"
+    "Hip Hop"
   ],
   "id": "9816263",
   "images": [
@@ -222,15 +217,16 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T09:52:53.556037",
+    "processed_at": "2025-07-10T08:38:42.697586",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Breaking Atoms",
-  "release_name_spotify": null,
+  "release_name_spotify": "The Science",
   "released": "2017",
   "services": {
     "lastfm": {
@@ -262,7 +258,7 @@
       ],
       "listeners": 103336,
       "mbid": "186f55bf-73c2-4d6d-acc9-c8986685dc7e",
-      "playcount": 734533,
+      "playcount": 734549,
       "raw_data": {
         "album": {
           "artist": "Main Source",
@@ -295,7 +291,7 @@
           "listeners": "103336",
           "mbid": "186f55bf-73c2-4d6d-acc9-c8986685dc7e",
           "name": "Breaking Atoms",
-          "playcount": "734533",
+          "playcount": "734549",
           "tags": {
             "tag": [
               {
@@ -544,10 +540,813 @@
       "url": "https://www.last.fm/music/Main+Source/Breaking+Atoms",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2023 P-VINE, Inc.Under Licensed by 242 MUSIC, Inc.",
+          "type": "C"
+        },
+        {
+          "text": "2023 P-VINE, Inc.Under Licensed by 242 MUSIC, Inc.",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "4995879941447"
+      },
+      "id": "2ghPaVly0Hh1w1bEjH0IXF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731fc189d08c312b889c67ca3e",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021fc189d08c312b889c67ca3e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511fc189d08c312b889c67ca3e",
+          "width": 64
+        }
+      ],
+      "label": "P-VINE RECORDS",
+      "popularity": 30,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+            },
+            "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+            "id": "0zi2OowIfzNqUQiuUVyGLs",
+            "name": "Main Source",
+            "type": "artist",
+            "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2023 P-VINE, Inc.Under Licensed by 242 MUSIC, Inc.",
+            "type": "C"
+          },
+          {
+            "text": "2023 P-VINE, Inc.Under Licensed by 242 MUSIC, Inc.",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "4995879941447"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2ghPaVly0Hh1w1bEjH0IXF"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/2ghPaVly0Hh1w1bEjH0IXF?market=US",
+        "id": "2ghPaVly0Hh1w1bEjH0IXF",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2731fc189d08c312b889c67ca3e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e021fc189d08c312b889c67ca3e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048511fc189d08c312b889c67ca3e",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "P-VINE RECORDS",
+        "name": "The Science",
+        "popularity": 30,
+        "release_date": "2023-07-26",
+        "release_date_precision": "day",
+        "total_tracks": 16,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/2ghPaVly0Hh1w1bEjH0IXF/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 232835,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/45iYp3h3hBfCFiRXB74erc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/45iYp3h3hBfCFiRXB74erc",
+              "id": "45iYp3h3hBfCFiRXB74erc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time Pt. 2",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:45iYp3h3hBfCFiRXB74erc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 14149,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2rSICn1zbeSBwLblZxGyBz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2rSICn1zbeSBwLblZxGyBz",
+              "id": "2rSICn1zbeSBwLblZxGyBz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude one",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2rSICn1zbeSBwLblZxGyBz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 218788,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1VYhRvVlhfvWMYYtRaXmU1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1VYhRvVlhfvWMYYtRaXmU1",
+              "id": "1VYhRvVlhfvWMYYtRaXmU1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "How My Man Went Down In The Game",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:1VYhRvVlhfvWMYYtRaXmU1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 14690,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3qtKGSHd42msTc9sRMuNnH"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3qtKGSHd42msTc9sRMuNnH",
+              "id": "3qtKGSHd42msTc9sRMuNnH",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude two",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3qtKGSHd42msTc9sRMuNnH"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 217577,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7yLxfU6JA1ipOtLuTSczXx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7yLxfU6JA1ipOtLuTSczXx",
+              "id": "7yLxfU6JA1ipOtLuTSczXx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hellavision",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:7yLxfU6JA1ipOtLuTSczXx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 23118,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0ZhTTpMUeyxLcCATvyeD29"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0ZhTTpMUeyxLcCATvyeD29",
+              "id": "0ZhTTpMUeyxLcCATvyeD29",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude three",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:0ZhTTpMUeyxLcCATvyeD29"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 85747,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/56VHPhwkVzQQzSgYA6I0Ui"
+              },
+              "href": "https://api.spotify.com/v1/tracks/56VHPhwkVzQQzSgYA6I0Ui",
+              "id": "56VHPhwkVzQQzSgYA6I0Ui",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Raise Up",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:56VHPhwkVzQQzSgYA6I0Ui"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 10025,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/04vdRpy1vh6jlbjOUD1jGV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/04vdRpy1vh6jlbjOUD1jGV",
+              "id": "04vdRpy1vh6jlbjOUD1jGV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude four",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:04vdRpy1vh6jlbjOUD1jGV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 204768,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7LB9o4OKDstrCAwJBrjp5D"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7LB9o4OKDstrCAwJBrjp5D",
+              "id": "7LB9o4OKDstrCAwJBrjp5D",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Looking At The Front Door - Uncut",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:7LB9o4OKDstrCAwJBrjp5D"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 45097,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2OtwR8iAhCK4BCqbBkoCFK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2OtwR8iAhCK4BCqbBkoCFK",
+              "id": "2OtwR8iAhCK4BCqbBkoCFK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude five",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2OtwR8iAhCK4BCqbBkoCFK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 152451,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7jAgVI06IDHD1zO1zsignC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7jAgVI06IDHD1zO1zsignC",
+              "id": "7jAgVI06IDHD1zO1zsignC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fakin' The Funk - Unreleased",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:7jAgVI06IDHD1zO1zsignC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 13685,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6RfXZOBVfblzb0bOnuGU3E"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6RfXZOBVfblzb0bOnuGU3E",
+              "id": "6RfXZOBVfblzb0bOnuGU3E",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Interlude six",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:6RfXZOBVfblzb0bOnuGU3E"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 136443,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5rMtQhEPfumotGh7PpBQPE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5rMtQhEPfumotGh7PpBQPE",
+              "id": "5rMtQhEPfumotGh7PpBQPE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bootlegging",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:5rMtQhEPfumotGh7PpBQPE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 123574,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0szZdEOryxZMEzojxuVw28"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0szZdEOryxZMEzojxuVw28",
+              "id": "0szZdEOryxZMEzojxuVw28",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:0szZdEOryxZMEzojxuVw28"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 21715,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2oMnfcpzyf7r6I0FvQn8ay"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2oMnfcpzyf7r6I0FvQn8ay",
+              "id": "2oMnfcpzyf7r6I0FvQn8ay",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Outro Interlude",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:2oMnfcpzyf7r6I0FvQn8ay"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0zi2OowIfzNqUQiuUVyGLs"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0zi2OowIfzNqUQiuUVyGLs",
+                  "id": "0zi2OowIfzNqUQiuUVyGLs",
+                  "name": "Main Source",
+                  "type": "artist",
+                  "uri": "spotify:artist:0zi2OowIfzNqUQiuUVyGLs"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 220206,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3Z3H0nC21PLinRbUbJlMGN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3Z3H0nC21PLinRbUbJlMGN",
+              "id": "3Z3H0nC21PLinRbUbJlMGN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Fakin' The Funk - Sound Track Version",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:3Z3H0nC21PLinRbUbJlMGN"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 16
+        },
+        "type": "album",
+        "uri": "spotify:album:2ghPaVly0Hh1w1bEjH0IXF"
+      },
+      "release_date": "2023-07-26",
+      "release_date_precision": "day",
+      "total_tracks": 16,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 232835,
+          "explicit": false,
+          "id": "45iYp3h3hBfCFiRXB74erc",
+          "name": "Time Pt. 2",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 14149,
+          "explicit": false,
+          "id": "2rSICn1zbeSBwLblZxGyBz",
+          "name": "Interlude one",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 218788,
+          "explicit": false,
+          "id": "1VYhRvVlhfvWMYYtRaXmU1",
+          "name": "How My Man Went Down In The Game",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 14690,
+          "explicit": false,
+          "id": "3qtKGSHd42msTc9sRMuNnH",
+          "name": "Interlude two",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 217577,
+          "explicit": false,
+          "id": "7yLxfU6JA1ipOtLuTSczXx",
+          "name": "Hellavision",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 23118,
+          "explicit": false,
+          "id": "0ZhTTpMUeyxLcCATvyeD29",
+          "name": "Interlude three",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 85747,
+          "explicit": false,
+          "id": "56VHPhwkVzQQzSgYA6I0Ui",
+          "name": "Raise Up",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 10025,
+          "explicit": false,
+          "id": "04vdRpy1vh6jlbjOUD1jGV",
+          "name": "Interlude four",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 204768,
+          "explicit": false,
+          "id": "7LB9o4OKDstrCAwJBrjp5D",
+          "name": "Looking At The Front Door - Uncut",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 45097,
+          "explicit": false,
+          "id": "2OtwR8iAhCK4BCqbBkoCFK",
+          "name": "Interlude five",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 152451,
+          "explicit": false,
+          "id": "7jAgVI06IDHD1zO1zsignC",
+          "name": "Fakin' The Funk - Unreleased",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 13685,
+          "explicit": false,
+          "id": "6RfXZOBVfblzb0bOnuGU3E",
+          "name": "Interlude six",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 136443,
+          "explicit": false,
+          "id": "5rMtQhEPfumotGh7PpBQPE",
+          "name": "Bootlegging",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 123574,
+          "explicit": false,
+          "id": "0szZdEOryxZMEzojxuVw28",
+          "name": "Time",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 21715,
+          "explicit": false,
+          "id": "2oMnfcpzyf7r6I0FvQn8ay",
+          "name": "Outro Interlude",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "0zi2OowIfzNqUQiuUVyGLs",
+              "name": "Main Source"
+            }
+          ],
+          "duration_ms": 220206,
+          "explicit": false,
+          "id": "3Z3H0nC21PLinRbUbJlMGN",
+          "name": "Fakin' The Funk - Sound Track Version",
+          "preview_url": null,
+          "track_number": 16
+        }
+      ],
+      "url": "https://open.spotify.com/album/2ghPaVly0Hh1w1bEjH0IXF"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "2ghPaVly0Hh1w1bEjH0IXF",
+  "spotify_url": "https://open.spotify.com/album/2ghPaVly0Hh1w1bEjH0IXF",
   "styles": [
     "Conscious"
   ],
@@ -632,6 +1431,6 @@
       "title": "How My Man Went Down In The Game"
     }
   ],
-  "updated_at": "2025-07-09T09:52:53.156416",
+  "updated_at": "2025-07-10T08:38:42.183127",
   "year": 2017
 }

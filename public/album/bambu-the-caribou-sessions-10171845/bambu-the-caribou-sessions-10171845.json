@@ -22,7 +22,7 @@
     }
   },
   "country": "USA, Canada & Europe",
-  "created_at": "2025-07-09T09:48:04.825868",
+  "created_at": "2025-07-10T08:34:58.278495",
   "date_added": "2017-04-23T12:07:10-07:00",
   "discogs_id": "10171845",
   "discogs_url": "https://www.discogs.com/release/10171845-Dennis-Wilson-2-Bambu-The-Caribou-Sessions",
@@ -30,12 +30,7 @@
     "Vinyl"
   ],
   "genres": [
-    "Rock",
-    "ballad",
-    "70s",
-    "soft rock",
-    "rock",
-    "dennis wilson"
+    "Rock"
   ],
   "id": "10171845",
   "images": [
@@ -145,15 +140,16 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T09:48:06.480194",
+    "processed_at": "2025-07-10T08:34:59.713512",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Bambu (The Caribou Sessions)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Pacific Ocean Blue & Bambu - 2 CD Deluxe Legacy Edition",
   "released": "2017-04-22",
   "services": {
     "lastfm": {
@@ -183,9 +179,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/81573b65ca50f311b2c4c25edf98dbdc.jpg"
         }
       ],
-      "listeners": 921,
+      "listeners": 922,
       "mbid": "78bb7cf9-5f21-4c9e-8f59-0ae74318800f",
-      "playcount": 23461,
+      "playcount": 23472,
       "raw_data": {
         "album": {
           "artist": "Dennis Wilson",
@@ -215,10 +211,10 @@
               "size": ""
             }
           ],
-          "listeners": "921",
+          "listeners": "922",
           "mbid": "78bb7cf9-5f21-4c9e-8f59-0ae74318800f",
           "name": "Bambu (The Caribou Sessions)",
-          "playcount": "23461",
+          "playcount": "23472",
           "tags": {
             "tag": [
               {
@@ -535,10 +531,1550 @@
       "url": "https://www.last.fm/music/Dennis+Wilson/Bambu+(The+Caribou+Sessions)",
       "wiki_content": "",
       "wiki_summary": ""
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(P) 2008 Caribou Records, 1977, 2008 Sony Music Entertainment",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "884977871876"
+      },
+      "id": "08CyNpU6VJMtGmR7DYjNmQ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732a0fb4b4d90f411f9b04a996",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022a0fb4b4d90f411f9b04a996",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512a0fb4b4d90f411f9b04a996",
+          "width": 64
+        }
+      ],
+      "label": "Epic",
+      "popularity": 42,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+            },
+            "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+            "id": "5gl6pfPwJ1coivVUMZPiS9",
+            "name": "Dennis Wilson",
+            "type": "artist",
+            "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(P) 2008 Caribou Records, 1977, 2008 Sony Music Entertainment",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "884977871876"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/08CyNpU6VJMtGmR7DYjNmQ"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/08CyNpU6VJMtGmR7DYjNmQ?market=US",
+        "id": "08CyNpU6VJMtGmR7DYjNmQ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2732a0fb4b4d90f411f9b04a996",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e022a0fb4b4d90f411f9b04a996",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048512a0fb4b4d90f411f9b04a996",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Epic",
+        "name": "Pacific Ocean Blue & Bambu - 2 CD Deluxe Legacy Edition",
+        "popularity": 42,
+        "release_date": "1977",
+        "release_date_precision": "year",
+        "total_tracks": 33,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/08CyNpU6VJMtGmR7DYjNmQ/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 224306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/70Ao5L10SKV701DcOH68Jo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/70Ao5L10SKV701DcOH68Jo",
+              "id": "70Ao5L10SKV701DcOH68Jo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "River Song",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:70Ao5L10SKV701DcOH68Jo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 143266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2xUoBAtrZWue2QjJWshJWX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2xUoBAtrZWue2QjJWshJWX",
+              "id": "2xUoBAtrZWue2QjJWshJWX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "What's Wrong",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2xUoBAtrZWue2QjJWshJWX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 147533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/22TjZJgw0EfN5nuj3ryZi9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/22TjZJgw0EfN5nuj3ryZi9",
+              "id": "22TjZJgw0EfN5nuj3ryZi9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Moonshine",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:22TjZJgw0EfN5nuj3ryZi9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 190386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1kd6npJu7EOLZhfN5EyHKA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1kd6npJu7EOLZhfN5EyHKA",
+              "id": "1kd6npJu7EOLZhfN5EyHKA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Friday Night",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1kd6npJu7EOLZhfN5EyHKA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 262906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/54WlKznadriUurqSZOoDZ2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/54WlKznadriUurqSZOoDZ2",
+              "id": "54WlKznadriUurqSZOoDZ2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dreamer",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:54WlKznadriUurqSZOoDZ2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 184280,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/39R9m0z9rTvKvHmBeqEwg9"
+              },
+              "href": "https://api.spotify.com/v1/tracks/39R9m0z9rTvKvHmBeqEwg9",
+              "id": "39R9m0z9rTvKvHmBeqEwg9",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Thoughts of You",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:39R9m0z9rTvKvHmBeqEwg9"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 212440,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4HXJQwFzUnUaSWJsbiBH8G"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4HXJQwFzUnUaSWJsbiBH8G",
+              "id": "4HXJQwFzUnUaSWJsbiBH8G",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4HXJQwFzUnUaSWJsbiBH8G"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 205266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2cK8gp8vydgWEGTEZ5aLBd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2cK8gp8vydgWEGTEZ5aLBd",
+              "id": "2cK8gp8vydgWEGTEZ5aLBd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You and I",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2cK8gp8vydgWEGTEZ5aLBd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 157386,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4h0LDG7Ji9G2dxG1hb6JoL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4h0LDG7Ji9G2dxG1hb6JoL",
+              "id": "4h0LDG7Ji9G2dxG1hb6JoL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Pacific Ocean Blues",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4h0LDG7Ji9G2dxG1hb6JoL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 145760,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3ZUErEnDhrOGzHoW78eXSs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3ZUErEnDhrOGzHoW78eXSs",
+              "id": "3ZUErEnDhrOGzHoW78eXSs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Farewell My Friend",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:3ZUErEnDhrOGzHoW78eXSs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 167853,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0mONC9WyQSPG869cO2zfIL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0mONC9WyQSPG869cO2zfIL",
+              "id": "0mONC9WyQSPG869cO2zfIL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rainbows",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:0mONC9WyQSPG869cO2zfIL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 177573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/41eNJixbjuJn5pb6j3uFJM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/41eNJixbjuJn5pb6j3uFJM",
+              "id": "41eNJixbjuJn5pb6j3uFJM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "End of the Show",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:41eNJixbjuJn5pb6j3uFJM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 224266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/67rcD3LxmsctGzEzXhW642"
+              },
+              "href": "https://api.spotify.com/v1/tracks/67rcD3LxmsctGzEzXhW642",
+              "id": "67rcD3LxmsctGzEzXhW642",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tug of Love",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:67rcD3LxmsctGzEzXhW642"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 237560,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/40KRugJa7oMQgAnx7qPP6m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/40KRugJa7oMQgAnx7qPP6m",
+              "id": "40KRugJa7oMQgAnx7qPP6m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Only with You",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:40KRugJa7oMQgAnx7qPP6m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 264800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3j2xmfz5AtIWPt5kyIH0Gp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3j2xmfz5AtIWPt5kyIH0Gp",
+              "id": "3j2xmfz5AtIWPt5kyIH0Gp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Holy Man - Instrumental",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:3j2xmfz5AtIWPt5kyIH0Gp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 332160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1XhcTvadILQKF8JdjMbzgQ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1XhcTvadILQKF8JdjMbzgQ",
+              "id": "1XhcTvadILQKF8JdjMbzgQ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mexico",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:1XhcTvadILQKF8JdjMbzgQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 235933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1czk7AUBXZ1mPpQ7soCNIx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1czk7AUBXZ1mPpQ7soCNIx",
+              "id": "1czk7AUBXZ1mPpQ7soCNIx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Under the Moonlight",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1czk7AUBXZ1mPpQ7soCNIx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 272760,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6k8bzp4kXsV5Tx8VYUstbd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6k8bzp4kXsV5Tx8VYUstbd",
+              "id": "6k8bzp4kXsV5Tx8VYUstbd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "It's Not Too Late",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:6k8bzp4kXsV5Tx8VYUstbd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 150933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2U9HAPkY4gAaIn5d8ovNEj"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2U9HAPkY4gAaIn5d8ovNEj",
+              "id": "2U9HAPkY4gAaIn5d8ovNEj",
+              "is_local": false,
+              "is_playable": true,
+              "name": "School Girl",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:2U9HAPkY4gAaIn5d8ovNEj"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 244186,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1u5sTc40ibqY6Rsn8xenJb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1u5sTc40ibqY6Rsn8xenJb",
+              "id": "1u5sTc40ibqY6Rsn8xenJb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Remember Me",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1u5sTc40ibqY6Rsn8xenJb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 219840,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6H75yGjz3nAJJuPuAAJvin"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6H75yGjz3nAJJuPuAAJvin",
+              "id": "6H75yGjz3nAJJuPuAAJvin",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Surrounds Me",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:6H75yGjz3nAJJuPuAAJvin"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 161693,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5FtwYHF1vm9f9dDri1BW9m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5FtwYHF1vm9f9dDri1BW9m",
+              "id": "5FtwYHF1vm9f9dDri1BW9m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Wild Situation",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5FtwYHF1vm9f9dDri1BW9m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 214306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/72NuRjGNYIOj09yW1ZK9O6"
+              },
+              "href": "https://api.spotify.com/v1/tracks/72NuRjGNYIOj09yW1ZK9O6",
+              "id": "72NuRjGNYIOj09yW1ZK9O6",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Common",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:72NuRjGNYIOj09yW1ZK9O6"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 218133,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5AuDsVzlEpkdylUEowB6iQ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5AuDsVzlEpkdylUEowB6iQ",
+              "id": "5AuDsVzlEpkdylUEowB6iQ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Are You Real",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5AuDsVzlEpkdylUEowB6iQ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 169906,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2uM7QSdMdM9OULyo0hH6BI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2uM7QSdMdM9OULyo0hH6BI",
+              "id": "2uM7QSdMdM9OULyo0hH6BI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "He's a Bum",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:2uM7QSdMdM9OULyo0hH6BI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 180373,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4eDDCaGnWlxPx786jwKmRz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4eDDCaGnWlxPx786jwKmRz",
+              "id": "4eDDCaGnWlxPx786jwKmRz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cocktails",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4eDDCaGnWlxPx786jwKmRz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 122320,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6q3yK1h9Rik42223m9ar44"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6q3yK1h9Rik42223m9ar44",
+              "id": "6q3yK1h9Rik42223m9ar44",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Love You",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:6q3yK1h9Rik42223m9ar44"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 202213,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7ijDkZYHhe5zw0UHaneknC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7ijDkZYHhe5zw0UHaneknC",
+              "id": "7ijDkZYHhe5zw0UHaneknC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Constant Companion",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:7ijDkZYHhe5zw0UHaneknC"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 187773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4kKMfcVw2RbdjTipT3Sbsp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4kKMfcVw2RbdjTipT3Sbsp",
+              "id": "4kKMfcVw2RbdjTipT3Sbsp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Time for Bed",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:4kKMfcVw2RbdjTipT3Sbsp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 225106,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5agWRvl5xeNUgJLiCE5L8u"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5agWRvl5xeNUgJLiCE5L8u",
+              "id": "5agWRvl5xeNUgJLiCE5L8u",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Album Tag Song",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:5agWRvl5xeNUgJLiCE5L8u"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 224053,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6aVZTHvZZyiLA7QOrbfsiL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6aVZTHvZZyiLA7QOrbfsiL",
+              "id": "6aVZTHvZZyiLA7QOrbfsiL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "All Alone",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:6aVZTHvZZyiLA7QOrbfsiL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 183120,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6s7WhOaTa8VBr5uSIgoFlM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6s7WhOaTa8VBr5uSIgoFlM",
+              "id": "6s7WhOaTa8VBr5uSIgoFlM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Piano Variations On Thoughts of You",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:6s7WhOaTa8VBr5uSIgoFlM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5gl6pfPwJ1coivVUMZPiS9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5gl6pfPwJ1coivVUMZPiS9",
+                  "id": "5gl6pfPwJ1coivVUMZPiS9",
+                  "name": "Dennis Wilson",
+                  "type": "artist",
+                  "uri": "spotify:artist:5gl6pfPwJ1coivVUMZPiS9"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6bI8H2TnlKYGJSo52wcTP4"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6bI8H2TnlKYGJSo52wcTP4",
+                  "id": "6bI8H2TnlKYGJSo52wcTP4",
+                  "name": "Taylor Hawkins",
+                  "type": "artist",
+                  "uri": "spotify:artist:6bI8H2TnlKYGJSo52wcTP4"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 265506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3lkQ3VopiHm3WCXpkPuUQW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3lkQ3VopiHm3WCXpkPuUQW",
+              "id": "3lkQ3VopiHm3WCXpkPuUQW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Holy Man - Taylor Hawkins Version",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:3lkQ3VopiHm3WCXpkPuUQW"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 33
+        },
+        "type": "album",
+        "uri": "spotify:album:08CyNpU6VJMtGmR7DYjNmQ"
+      },
+      "release_date": "1977",
+      "release_date_precision": "year",
+      "total_tracks": 33,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 224306,
+          "explicit": false,
+          "id": "70Ao5L10SKV701DcOH68Jo",
+          "name": "River Song",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 143266,
+          "explicit": false,
+          "id": "2xUoBAtrZWue2QjJWshJWX",
+          "name": "What's Wrong",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 147533,
+          "explicit": false,
+          "id": "22TjZJgw0EfN5nuj3ryZi9",
+          "name": "Moonshine",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 190386,
+          "explicit": false,
+          "id": "1kd6npJu7EOLZhfN5EyHKA",
+          "name": "Friday Night",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 262906,
+          "explicit": false,
+          "id": "54WlKznadriUurqSZOoDZ2",
+          "name": "Dreamer",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 184280,
+          "explicit": false,
+          "id": "39R9m0z9rTvKvHmBeqEwg9",
+          "name": "Thoughts of You",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 212440,
+          "explicit": false,
+          "id": "4HXJQwFzUnUaSWJsbiBH8G",
+          "name": "Time",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 205266,
+          "explicit": false,
+          "id": "2cK8gp8vydgWEGTEZ5aLBd",
+          "name": "You and I",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 157386,
+          "explicit": false,
+          "id": "4h0LDG7Ji9G2dxG1hb6JoL",
+          "name": "Pacific Ocean Blues",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 145760,
+          "explicit": false,
+          "id": "3ZUErEnDhrOGzHoW78eXSs",
+          "name": "Farewell My Friend",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 167853,
+          "explicit": false,
+          "id": "0mONC9WyQSPG869cO2zfIL",
+          "name": "Rainbows",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 177573,
+          "explicit": false,
+          "id": "41eNJixbjuJn5pb6j3uFJM",
+          "name": "End of the Show",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 224266,
+          "explicit": false,
+          "id": "67rcD3LxmsctGzEzXhW642",
+          "name": "Tug of Love",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 237560,
+          "explicit": false,
+          "id": "40KRugJa7oMQgAnx7qPP6m",
+          "name": "Only with You",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 264800,
+          "explicit": false,
+          "id": "3j2xmfz5AtIWPt5kyIH0Gp",
+          "name": "Holy Man - Instrumental",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 332160,
+          "explicit": false,
+          "id": "1XhcTvadILQKF8JdjMbzgQ",
+          "name": "Mexico",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 235933,
+          "explicit": false,
+          "id": "1czk7AUBXZ1mPpQ7soCNIx",
+          "name": "Under the Moonlight",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 272760,
+          "explicit": false,
+          "id": "6k8bzp4kXsV5Tx8VYUstbd",
+          "name": "It's Not Too Late",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 150933,
+          "explicit": false,
+          "id": "2U9HAPkY4gAaIn5d8ovNEj",
+          "name": "School Girl",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 244186,
+          "explicit": false,
+          "id": "1u5sTc40ibqY6Rsn8xenJb",
+          "name": "Love Remember Me",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 219840,
+          "explicit": false,
+          "id": "6H75yGjz3nAJJuPuAAJvin",
+          "name": "Love Surrounds Me",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 161693,
+          "explicit": false,
+          "id": "5FtwYHF1vm9f9dDri1BW9m",
+          "name": "Wild Situation",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 214306,
+          "explicit": false,
+          "id": "72NuRjGNYIOj09yW1ZK9O6",
+          "name": "Common",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 218133,
+          "explicit": false,
+          "id": "5AuDsVzlEpkdylUEowB6iQ",
+          "name": "Are You Real",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 169906,
+          "explicit": false,
+          "id": "2uM7QSdMdM9OULyo0hH6BI",
+          "name": "He's a Bum",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 180373,
+          "explicit": false,
+          "id": "4eDDCaGnWlxPx786jwKmRz",
+          "name": "Cocktails",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 122320,
+          "explicit": false,
+          "id": "6q3yK1h9Rik42223m9ar44",
+          "name": "I Love You",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 202213,
+          "explicit": false,
+          "id": "7ijDkZYHhe5zw0UHaneknC",
+          "name": "Constant Companion",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 187773,
+          "explicit": false,
+          "id": "4kKMfcVw2RbdjTipT3Sbsp",
+          "name": "Time for Bed",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 225106,
+          "explicit": false,
+          "id": "5agWRvl5xeNUgJLiCE5L8u",
+          "name": "Album Tag Song",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 224053,
+          "explicit": false,
+          "id": "6aVZTHvZZyiLA7QOrbfsiL",
+          "name": "All Alone",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            }
+          ],
+          "duration_ms": 183120,
+          "explicit": false,
+          "id": "6s7WhOaTa8VBr5uSIgoFlM",
+          "name": "Piano Variations On Thoughts of You",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "5gl6pfPwJ1coivVUMZPiS9",
+              "name": "Dennis Wilson"
+            },
+            {
+              "id": "6bI8H2TnlKYGJSo52wcTP4",
+              "name": "Taylor Hawkins"
+            }
+          ],
+          "duration_ms": 265506,
+          "explicit": false,
+          "id": "3lkQ3VopiHm3WCXpkPuUQW",
+          "name": "Holy Man - Taylor Hawkins Version",
+          "preview_url": null,
+          "track_number": 17
+        }
+      ],
+      "url": "https://open.spotify.com/album/08CyNpU6VJMtGmR7DYjNmQ"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "08CyNpU6VJMtGmR7DYjNmQ",
+  "spotify_url": "https://open.spotify.com/album/08CyNpU6VJMtGmR7DYjNmQ",
   "styles": [
     "Pop Rock",
     "Soft Rock"
@@ -642,6 +2178,6 @@
       "title": "Piano Variations On Thoughts Of You"
     }
   ],
-  "updated_at": "2025-07-09T09:48:05.601750",
+  "updated_at": "2025-07-10T08:34:59.350925",
   "year": 2017
 }
