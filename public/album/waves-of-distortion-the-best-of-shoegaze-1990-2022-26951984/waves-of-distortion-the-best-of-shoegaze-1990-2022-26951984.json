@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T21:15:58.127269",
+  "created_at": "2025-07-10T07:33:56.408751",
   "date_added": "2023-05-05T04:25:05-07:00",
   "discogs_id": "26951984",
   "discogs_url": "https://www.discogs.com/release/26951984-Various-Waves-Of-Distortion-The-Best-Of-Shoegaze-1990-2022",
@@ -85,19 +85,1039 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T21:15:58.978835",
+    "processed_at": "2025-07-10T07:33:57.925753",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Waves Of Distortion (The Best Of Shoegaze 1990​-​2022)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Cherry Stars Collide: Dream Pop, Shoegaze and Ethereal Rock 1986-1995",
   "released": "2023-05-05",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "compilation",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "© 2023 Cherry Red Records Ltd",
+          "type": "C"
+        },
+        {
+          "text": "℗ 2023 Various Parties",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "5054197567032"
+      },
+      "id": "3MFsMOGhABJMO6DIuoyLUF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ebe5d66d7a115e892b857639",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ebe5d66d7a115e892b857639",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ebe5d66d7a115e892b857639",
+          "width": 64
+        }
+      ],
+      "label": "Cherry Red Records",
+      "popularity": 18,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "compilation",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+            },
+            "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+            "id": "0LyfQWJT6nXafLPZqxe9Of",
+            "name": "Various Artists",
+            "type": "artist",
+            "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "© 2023 Cherry Red Records Ltd",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2023 Various Parties",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "5054197567032"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3MFsMOGhABJMO6DIuoyLUF"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/3MFsMOGhABJMO6DIuoyLUF?market=US",
+        "id": "3MFsMOGhABJMO6DIuoyLUF",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273ebe5d66d7a115e892b857639",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02ebe5d66d7a115e892b857639",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851ebe5d66d7a115e892b857639",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Cherry Red Records",
+        "name": "Cherry Stars Collide: Dream Pop, Shoegaze and Ethereal Rock 1986-1995",
+        "popularity": 18,
+        "release_date": "2023-03-31",
+        "release_date_precision": "day",
+        "total_tracks": 21,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/3MFsMOGhABJMO6DIuoyLUF/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6o2PxnpsrQ352kwYlEwjvR"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6o2PxnpsrQ352kwYlEwjvR",
+                  "id": "6o2PxnpsrQ352kwYlEwjvR",
+                  "name": "Area",
+                  "type": "artist",
+                  "uri": "spotify:artist:6o2PxnpsrQ352kwYlEwjvR"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 240026,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2RSA78vPyynOLrCmn5HWMY"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2RSA78vPyynOLrCmn5HWMY",
+              "id": "2RSA78vPyynOLrCmn5HWMY",
+              "is_local": false,
+              "is_playable": true,
+              "name": "With Louise",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2RSA78vPyynOLrCmn5HWMY"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/46LmDfSgIWeh975lhmu9cU"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/46LmDfSgIWeh975lhmu9cU",
+                  "id": "46LmDfSgIWeh975lhmu9cU",
+                  "name": "Louis Philippe",
+                  "type": "artist",
+                  "uri": "spotify:artist:46LmDfSgIWeh975lhmu9cU"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 150866,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4GdprB3POkOaEoOo0D6svo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4GdprB3POkOaEoOo0D6svo",
+              "id": "4GdprB3POkOaEoOo0D6svo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "When I'm An Astronaut",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:4GdprB3POkOaEoOo0D6svo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6dprTRdShPpMsyFQrgktQ1"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6dprTRdShPpMsyFQrgktQ1",
+                  "id": "6dprTRdShPpMsyFQrgktQ1",
+                  "name": "14 Iced Bears",
+                  "type": "artist",
+                  "uri": "spotify:artist:6dprTRdShPpMsyFQrgktQ1"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 189480,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5yPM9mPysgivrIhQTkD8TW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5yPM9mPysgivrIhQTkD8TW",
+              "id": "5yPM9mPysgivrIhQTkD8TW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hay Fever",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:5yPM9mPysgivrIhQTkD8TW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5N486b3HhnLdEOk3ObXZOz"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5N486b3HhnLdEOk3ObXZOz",
+                  "id": "5N486b3HhnLdEOk3ObXZOz",
+                  "name": "Blow-Up",
+                  "type": "artist",
+                  "uri": "spotify:artist:5N486b3HhnLdEOk3ObXZOz"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 290040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0hVwMJaFxpxc21LxnphwDU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0hVwMJaFxpxc21LxnphwDU",
+              "id": "0hVwMJaFxpxc21LxnphwDU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Heaven Tonight",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:0hVwMJaFxpxc21LxnphwDU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/46aUgmmNblW3wlB490iUPF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/46aUgmmNblW3wlB490iUPF",
+                  "id": "46aUgmmNblW3wlB490iUPF",
+                  "name": "Penelope's Web",
+                  "type": "artist",
+                  "uri": "spotify:artist:46aUgmmNblW3wlB490iUPF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 297573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6nFcttCjdTgjWSLU4U2eEa"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6nFcttCjdTgjWSLU4U2eEa",
+              "id": "6nFcttCjdTgjWSLU4U2eEa",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lowsun",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:6nFcttCjdTgjWSLU4U2eEa"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5T43FQtWuhk4AHSeKxbR2E"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5T43FQtWuhk4AHSeKxbR2E",
+                  "id": "5T43FQtWuhk4AHSeKxbR2E",
+                  "name": "Breathless",
+                  "type": "artist",
+                  "uri": "spotify:artist:5T43FQtWuhk4AHSeKxbR2E"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 254040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3oxXqzPlEr93tMmMYZRST7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3oxXqzPlEr93tMmMYZRST7",
+              "id": "3oxXqzPlEr93tMmMYZRST7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Over and Over",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:3oxXqzPlEr93tMmMYZRST7"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4kgTkv0kJu4b2psOX7yJNL"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4kgTkv0kJu4b2psOX7yJNL",
+                  "id": "4kgTkv0kJu4b2psOX7yJNL",
+                  "name": "The Charlottes",
+                  "type": "artist",
+                  "uri": "spotify:artist:4kgTkv0kJu4b2psOX7yJNL"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 267666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3CIkfgQ4r6MPCDmWOl2AEo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3CIkfgQ4r6MPCDmWOl2AEo",
+              "id": "3CIkfgQ4r6MPCDmWOl2AEo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Prayer Song",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:3CIkfgQ4r6MPCDmWOl2AEo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1xARs9iG7527KpXFVeVzXk"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1xARs9iG7527KpXFVeVzXk",
+                  "id": "1xARs9iG7527KpXFVeVzXk",
+                  "name": "DROP",
+                  "type": "artist",
+                  "uri": "spotify:artist:1xARs9iG7527KpXFVeVzXk"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 364800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2CuuB9Bkiaz1r3nHSVc0mI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2CuuB9Bkiaz1r3nHSVc0mI",
+              "id": "2CuuB9Bkiaz1r3nHSVc0mI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Within and Beyond",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2CuuB9Bkiaz1r3nHSVc0mI"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6D2FZCqwDafnI49jrFYROE"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6D2FZCqwDafnI49jrFYROE",
+                  "id": "6D2FZCqwDafnI49jrFYROE",
+                  "name": "Lycia",
+                  "type": "artist",
+                  "uri": "spotify:artist:6D2FZCqwDafnI49jrFYROE"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 310986,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2eJdnWNEGCb3dZPJsibKoM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2eJdnWNEGCb3dZPJsibKoM",
+              "id": "2eJdnWNEGCb3dZPJsibKoM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Ionia",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:2eJdnWNEGCb3dZPJsibKoM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/68rY3hv3jWwRSKECoKFsYn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/68rY3hv3jWwRSKECoKFsYn",
+                  "id": "68rY3hv3jWwRSKECoKFsYn",
+                  "name": "Levitation",
+                  "type": "artist",
+                  "uri": "spotify:artist:68rY3hv3jWwRSKECoKFsYn"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 308533,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5rvfUR1vm26js1JufL8fSX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5rvfUR1vm26js1JufL8fSX",
+              "id": "5rvfUR1vm26js1JufL8fSX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Rosemary Jones - Coppelia Version",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5rvfUR1vm26js1JufL8fSX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7ygZJqTyGv18fJT33CnLrO"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7ygZJqTyGv18fJT33CnLrO",
+                  "id": "7ygZJqTyGv18fJT33CnLrO",
+                  "name": "For Against",
+                  "type": "artist",
+                  "uri": "spotify:artist:7ygZJqTyGv18fJT33CnLrO"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 319426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0BPtfZuRD85gJftTmfq7Qm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0BPtfZuRD85gJftTmfq7Qm",
+              "id": "0BPtfZuRD85gJftTmfq7Qm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Today Today",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0BPtfZuRD85gJftTmfq7Qm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7f9Z8eJPjqnr4GHuWpz5Ms"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7f9Z8eJPjqnr4GHuWpz5Ms",
+                  "id": "7f9Z8eJPjqnr4GHuWpz5Ms",
+                  "name": "Smashing Orange",
+                  "type": "artist",
+                  "uri": "spotify:artist:7f9Z8eJPjqnr4GHuWpz5Ms"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 211040,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/22oHtu3zxrpRh8JTTJH3Wu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/22oHtu3zxrpRh8JTTJH3Wu",
+              "id": "22oHtu3zxrpRh8JTTJH3Wu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Strange Young Girls",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:22oHtu3zxrpRh8JTTJH3Wu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0J2rcceZXi2cuvykoj865X"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0J2rcceZXi2cuvykoj865X",
+                  "id": "0J2rcceZXi2cuvykoj865X",
+                  "name": "Sweet Jesus",
+                  "type": "artist",
+                  "uri": "spotify:artist:0J2rcceZXi2cuvykoj865X"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 245000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7hz3OSPzNFJm4SZjvOCQy1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7hz3OSPzNFJm4SZjvOCQy1",
+              "id": "7hz3OSPzNFJm4SZjvOCQy1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Your Baby Loves Me - Early Version",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:7hz3OSPzNFJm4SZjvOCQy1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0QqpFsm55FdqfpCEIiHUgS"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0QqpFsm55FdqfpCEIiHUgS",
+                  "id": "0QqpFsm55FdqfpCEIiHUgS",
+                  "name": "Alison's Halo",
+                  "type": "artist",
+                  "uri": "spotify:artist:0QqpFsm55FdqfpCEIiHUgS"
+                }
+              ],
+              "disc_number": 2,
+              "duration_ms": 353173,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5BiVdcPY0rIgP8kEWSwN7J"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5BiVdcPY0rIgP8kEWSwN7J",
+              "id": "5BiVdcPY0rIgP8kEWSwN7J",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sunshy",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5BiVdcPY0rIgP8kEWSwN7J"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/4NbXgsVateteD9AoPrOj85"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/4NbXgsVateteD9AoPrOj85",
+                  "id": "4NbXgsVateteD9AoPrOj85",
+                  "name": "An April March",
+                  "type": "artist",
+                  "uri": "spotify:artist:4NbXgsVateteD9AoPrOj85"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 328680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Jo3vcmYU1f5fujTZVVxT3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Jo3vcmYU1f5fujTZVVxT3",
+              "id": "6Jo3vcmYU1f5fujTZVVxT3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "All The Flowery",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:6Jo3vcmYU1f5fujTZVVxT3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1HYMJDEmsA59cSCaHh42Hn"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1HYMJDEmsA59cSCaHh42Hn",
+                  "id": "1HYMJDEmsA59cSCaHh42Hn",
+                  "name": "Half String",
+                  "type": "artist",
+                  "uri": "spotify:artist:1HYMJDEmsA59cSCaHh42Hn"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 350013,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1Ai8kTS1C6w7cXRxVmvpHS"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1Ai8kTS1C6w7cXRxVmvpHS",
+              "id": "1Ai8kTS1C6w7cXRxVmvpHS",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sun Less Sea",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:1Ai8kTS1C6w7cXRxVmvpHS"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7prdVvaFjm6kuLNJolEQ5t"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7prdVvaFjm6kuLNJolEQ5t",
+                  "id": "7prdVvaFjm6kuLNJolEQ5t",
+                  "name": "Tse Tse Fly",
+                  "type": "artist",
+                  "uri": "spotify:artist:7prdVvaFjm6kuLNJolEQ5t"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 118466,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4pIku5FvvJmFCvsEkvGMEq"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4pIku5FvvJmFCvsEkvGMEq",
+              "id": "4pIku5FvvJmFCvsEkvGMEq",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dog-Eared",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:4pIku5FvvJmFCvsEkvGMEq"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1rlDsPo1oKph7bAtq4Pxr9"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1rlDsPo1oKph7bAtq4Pxr9",
+                  "id": "1rlDsPo1oKph7bAtq4Pxr9",
+                  "name": "Blind Mr. Jones",
+                  "type": "artist",
+                  "uri": "spotify:artist:1rlDsPo1oKph7bAtq4Pxr9"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 235800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3yXWtQxyk09eQtP1M5QIsE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3yXWtQxyk09eQtP1M5QIsE",
+              "id": "3yXWtQxyk09eQtP1M5QIsE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hey",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:3yXWtQxyk09eQtP1M5QIsE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/7CKG3Kl5ssnyXkHzTHudKN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/7CKG3Kl5ssnyXkHzTHudKN",
+                  "id": "7CKG3Kl5ssnyXkHzTHudKN",
+                  "name": "Drugstore",
+                  "type": "artist",
+                  "uri": "spotify:artist:7CKG3Kl5ssnyXkHzTHudKN"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 165253,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6Gz4Bqh3bBoQSJrEaBhBT0"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6Gz4Bqh3bBoQSJrEaBhBT0",
+              "id": "6Gz4Bqh3bBoQSJrEaBhBT0",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Superglider",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:6Gz4Bqh3bBoQSJrEaBhBT0"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0wR3DML4NEsbwLEMQD9JbY"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0wR3DML4NEsbwLEMQD9JbY",
+                  "id": "0wR3DML4NEsbwLEMQD9JbY",
+                  "name": "This Ascension",
+                  "type": "artist",
+                  "uri": "spotify:artist:0wR3DML4NEsbwLEMQD9JbY"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 260213,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2VYXnvGeoZuZev9MaL1Ync"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2VYXnvGeoZuZev9MaL1Ync",
+              "id": "2VYXnvGeoZuZev9MaL1Ync",
+              "is_local": false,
+              "is_playable": true,
+              "name": "August Rain",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2VYXnvGeoZuZev9MaL1Ync"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/5HqDA1RfukJ1gMtibcKuXG"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/5HqDA1RfukJ1gMtibcKuXG",
+                  "id": "5HqDA1RfukJ1gMtibcKuXG",
+                  "name": "The Autumns",
+                  "type": "artist",
+                  "uri": "spotify:artist:5HqDA1RfukJ1gMtibcKuXG"
+                }
+              ],
+              "disc_number": 3,
+              "duration_ms": 164480,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5tjTc5p0d2BQfLRUI0zxfK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5tjTc5p0d2BQfLRUI0zxfK",
+              "id": "5tjTc5p0d2BQfLRUI0zxfK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Abbey In An Oak Tree",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:5tjTc5p0d2BQfLRUI0zxfK"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 21
+        },
+        "type": "album",
+        "uri": "spotify:album:3MFsMOGhABJMO6DIuoyLUF"
+      },
+      "release_date": "2023-03-31",
+      "release_date_precision": "day",
+      "total_tracks": 21,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "6o2PxnpsrQ352kwYlEwjvR",
+              "name": "Area"
+            }
+          ],
+          "duration_ms": 240026,
+          "explicit": false,
+          "id": "2RSA78vPyynOLrCmn5HWMY",
+          "name": "With Louise",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "46LmDfSgIWeh975lhmu9cU",
+              "name": "Louis Philippe"
+            }
+          ],
+          "duration_ms": 150866,
+          "explicit": false,
+          "id": "4GdprB3POkOaEoOo0D6svo",
+          "name": "When I'm An Astronaut",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "6dprTRdShPpMsyFQrgktQ1",
+              "name": "14 Iced Bears"
+            }
+          ],
+          "duration_ms": 189480,
+          "explicit": false,
+          "id": "5yPM9mPysgivrIhQTkD8TW",
+          "name": "Hay Fever",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "5N486b3HhnLdEOk3ObXZOz",
+              "name": "Blow-Up"
+            }
+          ],
+          "duration_ms": 290040,
+          "explicit": false,
+          "id": "0hVwMJaFxpxc21LxnphwDU",
+          "name": "Heaven Tonight",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "46aUgmmNblW3wlB490iUPF",
+              "name": "Penelope's Web"
+            }
+          ],
+          "duration_ms": 297573,
+          "explicit": false,
+          "id": "6nFcttCjdTgjWSLU4U2eEa",
+          "name": "Lowsun",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "5T43FQtWuhk4AHSeKxbR2E",
+              "name": "Breathless"
+            }
+          ],
+          "duration_ms": 254040,
+          "explicit": false,
+          "id": "3oxXqzPlEr93tMmMYZRST7",
+          "name": "Over and Over",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4kgTkv0kJu4b2psOX7yJNL",
+              "name": "The Charlottes"
+            }
+          ],
+          "duration_ms": 267666,
+          "explicit": false,
+          "id": "3CIkfgQ4r6MPCDmWOl2AEo",
+          "name": "Prayer Song",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "1xARs9iG7527KpXFVeVzXk",
+              "name": "DROP"
+            }
+          ],
+          "duration_ms": 364800,
+          "explicit": false,
+          "id": "2CuuB9Bkiaz1r3nHSVc0mI",
+          "name": "Within and Beyond",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "6D2FZCqwDafnI49jrFYROE",
+              "name": "Lycia"
+            }
+          ],
+          "duration_ms": 310986,
+          "explicit": false,
+          "id": "2eJdnWNEGCb3dZPJsibKoM",
+          "name": "Ionia",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "68rY3hv3jWwRSKECoKFsYn",
+              "name": "Levitation"
+            }
+          ],
+          "duration_ms": 308533,
+          "explicit": false,
+          "id": "5rvfUR1vm26js1JufL8fSX",
+          "name": "Rosemary Jones - Coppelia Version",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "7ygZJqTyGv18fJT33CnLrO",
+              "name": "For Against"
+            }
+          ],
+          "duration_ms": 319426,
+          "explicit": false,
+          "id": "0BPtfZuRD85gJftTmfq7Qm",
+          "name": "Today Today",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "7f9Z8eJPjqnr4GHuWpz5Ms",
+              "name": "Smashing Orange"
+            }
+          ],
+          "duration_ms": 211040,
+          "explicit": false,
+          "id": "22oHtu3zxrpRh8JTTJH3Wu",
+          "name": "Strange Young Girls",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0J2rcceZXi2cuvykoj865X",
+              "name": "Sweet Jesus"
+            }
+          ],
+          "duration_ms": 245000,
+          "explicit": false,
+          "id": "7hz3OSPzNFJm4SZjvOCQy1",
+          "name": "Your Baby Loves Me - Early Version",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0QqpFsm55FdqfpCEIiHUgS",
+              "name": "Alison's Halo"
+            }
+          ],
+          "duration_ms": 353173,
+          "explicit": false,
+          "id": "5BiVdcPY0rIgP8kEWSwN7J",
+          "name": "Sunshy",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "4NbXgsVateteD9AoPrOj85",
+              "name": "An April March"
+            }
+          ],
+          "duration_ms": 328680,
+          "explicit": false,
+          "id": "6Jo3vcmYU1f5fujTZVVxT3",
+          "name": "All The Flowery",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "1HYMJDEmsA59cSCaHh42Hn",
+              "name": "Half String"
+            }
+          ],
+          "duration_ms": 350013,
+          "explicit": false,
+          "id": "1Ai8kTS1C6w7cXRxVmvpHS",
+          "name": "Sun Less Sea",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "7prdVvaFjm6kuLNJolEQ5t",
+              "name": "Tse Tse Fly"
+            }
+          ],
+          "duration_ms": 118466,
+          "explicit": false,
+          "id": "4pIku5FvvJmFCvsEkvGMEq",
+          "name": "Dog-Eared",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "1rlDsPo1oKph7bAtq4Pxr9",
+              "name": "Blind Mr. Jones"
+            }
+          ],
+          "duration_ms": 235800,
+          "explicit": false,
+          "id": "3yXWtQxyk09eQtP1M5QIsE",
+          "name": "Hey",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "7CKG3Kl5ssnyXkHzTHudKN",
+              "name": "Drugstore"
+            }
+          ],
+          "duration_ms": 165253,
+          "explicit": false,
+          "id": "6Gz4Bqh3bBoQSJrEaBhBT0",
+          "name": "Superglider",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0wR3DML4NEsbwLEMQD9JbY",
+              "name": "This Ascension"
+            }
+          ],
+          "duration_ms": 260213,
+          "explicit": false,
+          "id": "2VYXnvGeoZuZev9MaL1Ync",
+          "name": "August Rain",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "5HqDA1RfukJ1gMtibcKuXG",
+              "name": "The Autumns"
+            }
+          ],
+          "duration_ms": 164480,
+          "explicit": false,
+          "id": "5tjTc5p0d2BQfLRUI0zxfK",
+          "name": "Abbey In An Oak Tree",
+          "preview_url": null,
+          "track_number": 7
+        }
+      ],
+      "url": "https://open.spotify.com/album/3MFsMOGhABJMO6DIuoyLUF"
+    }
+  },
+  "spotify_id": "3MFsMOGhABJMO6DIuoyLUF",
+  "spotify_url": "https://open.spotify.com/album/3MFsMOGhABJMO6DIuoyLUF",
   "styles": [
     "Shoegaze",
     "Dream Pop",
@@ -525,6 +1545,6 @@
       "title": "Ceremony"
     }
   ],
-  "updated_at": "2025-07-09T21:15:58.796138",
+  "updated_at": "2025-07-10T07:33:57.677562",
   "year": 2023
 }

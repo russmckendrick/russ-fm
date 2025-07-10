@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T08:54:17.113509",
+  "created_at": "2025-07-10T07:55:55.257777",
   "date_added": "2020-08-02T13:44:57-07:00",
   "discogs_id": "404853",
   "discogs_url": "https://www.discogs.com/release/404853-Siouxsie-And-The-Banshees-The-Scream",
@@ -98,16 +98,17 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T08:54:19.257868",
+    "processed_at": "2025-07-10T07:55:56.797951",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": "The Scream",
   "release_name_discogs": "The Scream",
-  "release_name_spotify": null,
+  "release_name_spotify": "FABLES",
   "released": "1978-11-13",
   "services": {
     "apple_music": {
@@ -155,10 +156,641 @@
         "url": "https://music.apple.com/gb/album/the-scream/1412054157"
       },
       "url": "https://music.apple.com/gb/album/the-scream/1412054157"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2024 Banshee, in partnership with VERSION III",
+          "type": "C"
+        },
+        {
+          "text": "2024 Banshee, in partnership with VERSION III",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "199098952503"
+      },
+      "id": "6oHz1CC0PuNSGgRzAOZowX",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d0c6b6824e028288d2f094f8",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d0c6b6824e028288d2f094f8",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d0c6b6824e028288d2f094f8",
+          "width": 64
+        }
+      ],
+      "label": "Banshee, in partnership with VERSION III",
+      "popularity": 47,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+            },
+            "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+            "id": "0DG7J8Q9Alnt65HJv6owzf",
+            "name": "Banshee",
+            "type": "artist",
+            "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2024 Banshee, in partnership with VERSION III",
+            "type": "C"
+          },
+          {
+            "text": "2024 Banshee, in partnership with VERSION III",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "199098952503"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6oHz1CC0PuNSGgRzAOZowX"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/6oHz1CC0PuNSGgRzAOZowX?market=US",
+        "id": "6oHz1CC0PuNSGgRzAOZowX",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d0c6b6824e028288d2f094f8",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d0c6b6824e028288d2f094f8",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d0c6b6824e028288d2f094f8",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Banshee, in partnership with VERSION III",
+        "name": "FABLES",
+        "popularity": 47,
+        "release_date": "2025-01-10",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/6oHz1CC0PuNSGgRzAOZowX/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 200366,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1cFrFcQ7Y5DjI0HITTdHda"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1cFrFcQ7Y5DjI0HITTdHda",
+              "id": "1cFrFcQ7Y5DjI0HITTdHda",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cry me a river.",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1cFrFcQ7Y5DjI0HITTdHda"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 187200,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5r46nhrH48EjJ6SCCbHtJb"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5r46nhrH48EjJ6SCCbHtJb",
+              "id": "5r46nhrH48EjJ6SCCbHtJb",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I may be a doe...",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5r46nhrH48EjJ6SCCbHtJb"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 144374,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7p280nMdHCsX57MWm7NjNo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7p280nMdHCsX57MWm7NjNo",
+              "id": "7p280nMdHCsX57MWm7NjNo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "You are what you fear in me.",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:7p280nMdHCsX57MWm7NjNo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 125000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ukT0tGixZxC0rYwsG9b3J"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ukT0tGixZxC0rYwsG9b3J",
+              "id": "2ukT0tGixZxC0rYwsG9b3J",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm a never forgive kinda girl",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2ukT0tGixZxC0rYwsG9b3J"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 192096,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4iloXFMen3u2yj7lAEbc3V"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4iloXFMen3u2yj7lAEbc3V",
+              "id": "4iloXFMen3u2yj7lAEbc3V",
+              "is_local": false,
+              "is_playable": true,
+              "name": "BACKSTABBER",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4iloXFMen3u2yj7lAEbc3V"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 208571,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5UAtENIlP3h3yUa7vEvn8L"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5UAtENIlP3h3yUa7vEvn8L",
+              "id": "5UAtENIlP3h3yUa7vEvn8L",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Obsessed",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5UAtENIlP3h3yUa7vEvn8L"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 114000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7olNmzb5UrSgWODmObLLux"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7olNmzb5UrSgWODmObLLux",
+              "id": "7olNmzb5UrSgWODmObLLux",
+              "is_local": false,
+              "is_playable": true,
+              "name": "80 miles out and 6 feet deep",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:7olNmzb5UrSgWODmObLLux"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 181071,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2ihKsyJBrj2ahpqPxWpqcf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2ihKsyJBrj2ahpqPxWpqcf",
+              "id": "2ihKsyJBrj2ahpqPxWpqcf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "PERFECT ANGEL",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:2ihKsyJBrj2ahpqPxWpqcf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 195590,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4bdskuiJ4TaTdWkngIiEGc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4bdskuiJ4TaTdWkngIiEGc",
+              "id": "4bdskuiJ4TaTdWkngIiEGc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I trusted you.",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:4bdskuiJ4TaTdWkngIiEGc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 203007,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4xqaAaLSjt6fz3NfzPvi8E"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4xqaAaLSjt6fz3NfzPvi8E",
+              "id": "4xqaAaLSjt6fz3NfzPvi8E",
+              "is_local": false,
+              "is_playable": true,
+              "name": "VULTURES",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4xqaAaLSjt6fz3NfzPvi8E"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 164666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4xSb12Idm6CPqa7d9nZvRm"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4xSb12Idm6CPqa7d9nZvRm",
+              "id": "4xSb12Idm6CPqa7d9nZvRm",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Paradise",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4xSb12Idm6CPqa7d9nZvRm"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0DG7J8Q9Alnt65HJv6owzf"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0DG7J8Q9Alnt65HJv6owzf",
+                  "id": "0DG7J8Q9Alnt65HJv6owzf",
+                  "name": "Banshee",
+                  "type": "artist",
+                  "uri": "spotify:artist:0DG7J8Q9Alnt65HJv6owzf"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 192096,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2qVvbJSRX27COjmnKYO4vL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2qVvbJSRX27COjmnKYO4vL",
+              "id": "2qVvbJSRX27COjmnKYO4vL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "BACKSTABBER - cursed version",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:2qVvbJSRX27COjmnKYO4vL"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 12
+        },
+        "type": "album",
+        "uri": "spotify:album:6oHz1CC0PuNSGgRzAOZowX"
+      },
+      "release_date": "2025-01-10",
+      "release_date_precision": "day",
+      "total_tracks": 12,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 200366,
+          "explicit": true,
+          "id": "1cFrFcQ7Y5DjI0HITTdHda",
+          "name": "Cry me a river.",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 187200,
+          "explicit": false,
+          "id": "5r46nhrH48EjJ6SCCbHtJb",
+          "name": "I may be a doe...",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 144374,
+          "explicit": false,
+          "id": "7p280nMdHCsX57MWm7NjNo",
+          "name": "You are what you fear in me.",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 125000,
+          "explicit": false,
+          "id": "2ukT0tGixZxC0rYwsG9b3J",
+          "name": "I'm a never forgive kinda girl",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 192096,
+          "explicit": false,
+          "id": "4iloXFMen3u2yj7lAEbc3V",
+          "name": "BACKSTABBER",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 208571,
+          "explicit": false,
+          "id": "5UAtENIlP3h3yUa7vEvn8L",
+          "name": "Obsessed",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 114000,
+          "explicit": false,
+          "id": "7olNmzb5UrSgWODmObLLux",
+          "name": "80 miles out and 6 feet deep",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 181071,
+          "explicit": false,
+          "id": "2ihKsyJBrj2ahpqPxWpqcf",
+          "name": "PERFECT ANGEL",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 195590,
+          "explicit": false,
+          "id": "4bdskuiJ4TaTdWkngIiEGc",
+          "name": "I trusted you.",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 203007,
+          "explicit": false,
+          "id": "4xqaAaLSjt6fz3NfzPvi8E",
+          "name": "VULTURES",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 164666,
+          "explicit": false,
+          "id": "4xSb12Idm6CPqa7d9nZvRm",
+          "name": "Paradise",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "0DG7J8Q9Alnt65HJv6owzf",
+              "name": "Banshee"
+            }
+          ],
+          "duration_ms": 192096,
+          "explicit": false,
+          "id": "2qVvbJSRX27COjmnKYO4vL",
+          "name": "BACKSTABBER - cursed version",
+          "preview_url": null,
+          "track_number": 12
+        }
+      ],
+      "url": "https://open.spotify.com/album/6oHz1CC0PuNSGgRzAOZowX"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "6oHz1CC0PuNSGgRzAOZowX",
+  "spotify_url": "https://open.spotify.com/album/6oHz1CC0PuNSGgRzAOZowX",
   "styles": [
     "Post-Punk"
   ],
@@ -225,6 +857,6 @@
       "title": "Switch"
     }
   ],
-  "updated_at": "2025-07-09T08:54:18.249844",
+  "updated_at": "2025-07-10T07:55:56.451321",
   "year": 1978
 }

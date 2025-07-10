@@ -38,7 +38,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-09T08:55:28.237159",
+  "created_at": "2025-07-10T07:56:51.324392",
   "date_added": "2020-08-02T13:29:10-07:00",
   "discogs_id": "466221",
   "discogs_url": "https://www.discogs.com/release/466221-Abigail-Mead-And-Nigel-Goulding-Full-Metal-Jacket-I-Wanna-Be-Your-Drill-Instructor",
@@ -108,19 +108,523 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T08:55:29.681296",
+    "processed_at": "2025-07-10T07:56:52.954135",
     "services_used": [
       "discogs",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": null,
   "release_name_discogs": "Full Metal Jacket (I Wanna Be Your Drill Instructor)",
-  "release_name_spotify": null,
+  "release_name_spotify": "Intercourse & Lust",
   "released": "1987",
-  "services": {},
-  "spotify_id": null,
-  "spotify_url": null,
+  "services": {
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "(C) 1996 Modern Invasion Music",
+          "type": "C"
+        },
+        {
+          "text": "(P) 1996 Modern Invasion Music",
+          "type": "P"
+        }
+      ],
+      "explicit": false,
+      "external_ids": {
+        "upc": "198588929650"
+      },
+      "id": "68CW6RjEqYo95BgcQsdTTG",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737e5f9cac4e34598df15ba51d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027e5f9cac4e34598df15ba51d",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517e5f9cac4e34598df15ba51d",
+          "width": 64
+        }
+      ],
+      "label": "Modern Invasion Music",
+      "popularity": 13,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+            },
+            "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+            "id": "3yPsvqp2Clt7MpdcZznGEF",
+            "name": "Abigail",
+            "type": "artist",
+            "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "(C) 1996 Modern Invasion Music",
+            "type": "C"
+          },
+          {
+            "text": "(P) 1996 Modern Invasion Music",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "198588929650"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/68CW6RjEqYo95BgcQsdTTG"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/68CW6RjEqYo95BgcQsdTTG?market=US",
+        "id": "68CW6RjEqYo95BgcQsdTTG",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2737e5f9cac4e34598df15ba51d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e027e5f9cac4e34598df15ba51d",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048517e5f9cac4e34598df15ba51d",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Modern Invasion Music",
+        "name": "Intercourse & Lust",
+        "popularity": 13,
+        "release_date": "1996-09-13",
+        "release_date_precision": "day",
+        "total_tracks": 9,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/68CW6RjEqYo95BgcQsdTTG/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 272666,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/432jFeIWHd2lvBAbKaGehS"
+              },
+              "href": "https://api.spotify.com/v1/tracks/432jFeIWHd2lvBAbKaGehS",
+              "id": "432jFeIWHd2lvBAbKaGehS",
+              "is_local": false,
+              "is_playable": true,
+              "name": "A Witch Named Aspilcnetta",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:432jFeIWHd2lvBAbKaGehS"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 250960,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5rcxzFhrBftExsNH5PZcwM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5rcxzFhrBftExsNH5PZcwM",
+              "id": "5rcxzFhrBftExsNH5PZcwM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Confound Eternal",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:5rcxzFhrBftExsNH5PZcwM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 169813,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6co90lVaO6dRDRMYYzUsxE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6co90lVaO6dRDRMYYzUsxE",
+              "id": "6co90lVaO6dRDRMYYzUsxE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Crown Bearer",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:6co90lVaO6dRDRMYYzUsxE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 249826,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0PTHch1t1Tv32iHxKN8nUV"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0PTHch1t1Tv32iHxKN8nUV",
+              "id": "0PTHch1t1Tv32iHxKN8nUV",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Attack With Spell",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:0PTHch1t1Tv32iHxKN8nUV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 422973,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4n2KuHIP0a2fwX9x2rbStN"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4n2KuHIP0a2fwX9x2rbStN",
+              "id": "4n2KuHIP0a2fwX9x2rbStN",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Strength Of Other World",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:4n2KuHIP0a2fwX9x2rbStN"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 149880,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4khI05gybt3cZlwYhQDgUD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4khI05gybt3cZlwYhQDgUD",
+              "id": "4khI05gybt3cZlwYhQDgUD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Bonehunter",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:4khI05gybt3cZlwYhQDgUD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 313053,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/23SFXhkQ2nRb0qd7bTf44A"
+              },
+              "href": "https://api.spotify.com/v1/tracks/23SFXhkQ2nRb0qd7bTf44A",
+              "id": "23SFXhkQ2nRb0qd7bTf44A",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mephistopheles",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:23SFXhkQ2nRb0qd7bTf44A"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 86880,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3zBVdENFx9tYGPBe7GBsbc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3zBVdENFx9tYGPBe7GBsbc",
+              "id": "3zBVdENFx9tYGPBe7GBsbc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Intercourse & Lust",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:3zBVdENFx9tYGPBe7GBsbc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3yPsvqp2Clt7MpdcZznGEF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3yPsvqp2Clt7MpdcZznGEF",
+                  "id": "3yPsvqp2Clt7MpdcZznGEF",
+                  "name": "Abigail",
+                  "type": "artist",
+                  "uri": "spotify:artist:3yPsvqp2Clt7MpdcZznGEF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 458986,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0PwP2stRjBC9z9I3GQ2fey"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0PwP2stRjBC9z9I3GQ2fey",
+              "id": "0PwP2stRjBC9z9I3GQ2fey",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hail Yakuza",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:0PwP2stRjBC9z9I3GQ2fey"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 9
+        },
+        "type": "album",
+        "uri": "spotify:album:68CW6RjEqYo95BgcQsdTTG"
+      },
+      "release_date": "1996-09-13",
+      "release_date_precision": "day",
+      "total_tracks": 9,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 272666,
+          "explicit": false,
+          "id": "432jFeIWHd2lvBAbKaGehS",
+          "name": "A Witch Named Aspilcnetta",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 250960,
+          "explicit": false,
+          "id": "5rcxzFhrBftExsNH5PZcwM",
+          "name": "Confound Eternal",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 169813,
+          "explicit": false,
+          "id": "6co90lVaO6dRDRMYYzUsxE",
+          "name": "The Crown Bearer",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 249826,
+          "explicit": false,
+          "id": "0PTHch1t1Tv32iHxKN8nUV",
+          "name": "Attack With Spell",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 422973,
+          "explicit": false,
+          "id": "4n2KuHIP0a2fwX9x2rbStN",
+          "name": "Strength Of Other World",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 149880,
+          "explicit": false,
+          "id": "4khI05gybt3cZlwYhQDgUD",
+          "name": "The Bonehunter",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 313053,
+          "explicit": false,
+          "id": "23SFXhkQ2nRb0qd7bTf44A",
+          "name": "Mephistopheles",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 86880,
+          "explicit": false,
+          "id": "3zBVdENFx9tYGPBe7GBsbc",
+          "name": "Intercourse & Lust",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "3yPsvqp2Clt7MpdcZznGEF",
+              "name": "Abigail"
+            }
+          ],
+          "duration_ms": 458986,
+          "explicit": false,
+          "id": "0PwP2stRjBC9z9I3GQ2fey",
+          "name": "Hail Yakuza",
+          "preview_url": null,
+          "track_number": 9
+        }
+      ],
+      "url": "https://open.spotify.com/album/68CW6RjEqYo95BgcQsdTTG"
+    }
+  },
+  "spotify_id": "68CW6RjEqYo95BgcQsdTTG",
+  "spotify_url": "https://open.spotify.com/album/68CW6RjEqYo95BgcQsdTTG",
   "styles": [
     "Soundtrack",
     "Soft Rock",
@@ -211,6 +715,6 @@
       "title": "Sniper (Fade)"
     }
   ],
-  "updated_at": "2025-07-09T08:55:28.878803",
+  "updated_at": "2025-07-10T07:56:52.602541",
   "year": 1987
 }
