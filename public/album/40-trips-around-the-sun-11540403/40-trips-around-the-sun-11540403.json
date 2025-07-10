@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-09T09:33:22.418327",
+  "created_at": "2025-07-10T08:21:03.437184",
   "date_added": "2018-03-01T19:54:53-08:00",
   "discogs_id": "11540403",
   "discogs_url": "https://www.discogs.com/release/11540403-Toto-40-Trips-Around-The-Sun",
@@ -31,12 +31,7 @@
   ],
   "genres": [
     "Rock",
-    "Pop",
-    "80s",
-    "classic rock",
-    "rock",
-    "soft rock",
-    "pop"
+    "Pop"
   ],
   "id": "11540403",
   "images": [
@@ -146,7 +141,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T09:33:24.713261",
+    "processed_at": "2025-07-10T08:21:05.103614",
     "services_used": [
       "discogs",
       "apple_music",
@@ -156,7 +151,7 @@
   },
   "release_name_apple_music": "40 Tours Around the Sun (Live)",
   "release_name_discogs": "40 Trips Around The Sun",
-  "release_name_spotify": "Old Is New",
+  "release_name_spotify": "40 Tours Around The Sun (Live)",
   "released": "2018",
   "services": {
     "apple_music": {
@@ -604,34 +599,38 @@
       "available_markets": [],
       "copyrights": [
         {
-          "text": "(P) 2018 Sony Music Entertainment",
+          "text": "© 2018 Toto Live, Inc., exclusively licensed to Eagle Rock Entertainment Ltd.",
+          "type": "C"
+        },
+        {
+          "text": "℗ 2018 Toto Live, Inc., exclusively licensed to Eagle Rock Entertainment Ltd.",
           "type": "P"
         }
       ],
-      "explicit": false,
+      "explicit": true,
       "external_ids": {
-        "upc": "886447545904"
+        "upc": "00670211041408"
       },
-      "id": "6mdf5V1SydnLqGTaZTrjLw",
+      "id": "5jeDH42MWUx4gksmbgYu8a",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2737d8f3506359962a104a06750",
+          "url": "https://i.scdn.co/image/ab67616d0000b273b8f7246d2d039c6a16af6587",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e027d8f3506359962a104a06750",
+          "url": "https://i.scdn.co/image/ab67616d00001e02b8f7246d2d039c6a16af6587",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048517d8f3506359962a104a06750",
+          "url": "https://i.scdn.co/image/ab67616d00004851b8f7246d2d039c6a16af6587",
           "width": 64
         }
       ],
-      "label": "Legacy Recordings",
-      "popularity": 34,
+      "label": "Mercury Studios",
+      "popularity": 40,
       "preview_url": null,
       "raw_data": {
         "album_type": "album",
@@ -649,45 +648,49 @@
         ],
         "copyrights": [
           {
-            "text": "(P) 2018 Sony Music Entertainment",
+            "text": "© 2018 Toto Live, Inc., exclusively licensed to Eagle Rock Entertainment Ltd.",
+            "type": "C"
+          },
+          {
+            "text": "℗ 2018 Toto Live, Inc., exclusively licensed to Eagle Rock Entertainment Ltd.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "886447545904"
+          "upc": "00670211041408"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/6mdf5V1SydnLqGTaZTrjLw"
+          "spotify": "https://open.spotify.com/album/5jeDH42MWUx4gksmbgYu8a"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/6mdf5V1SydnLqGTaZTrjLw?market=US",
-        "id": "6mdf5V1SydnLqGTaZTrjLw",
+        "href": "https://api.spotify.com/v1/albums/5jeDH42MWUx4gksmbgYu8a?market=US",
+        "id": "5jeDH42MWUx4gksmbgYu8a",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2737d8f3506359962a104a06750",
+            "url": "https://i.scdn.co/image/ab67616d0000b273b8f7246d2d039c6a16af6587",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e027d8f3506359962a104a06750",
+            "url": "https://i.scdn.co/image/ab67616d00001e02b8f7246d2d039c6a16af6587",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048517d8f3506359962a104a06750",
+            "url": "https://i.scdn.co/image/ab67616d00004851b8f7246d2d039c6a16af6587",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "Legacy Recordings",
-        "name": "Old Is New",
-        "popularity": 34,
-        "release_date": "2018-11-06",
+        "label": "Mercury Studios",
+        "name": "40 Tours Around The Sun (Live)",
+        "popularity": 40,
+        "release_date": "2018-10-12",
         "release_date_precision": "day",
-        "total_tracks": 10,
+        "total_tracks": 26,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/6mdf5V1SydnLqGTaZTrjLw/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/5jeDH42MWUx4gksmbgYu8a/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -703,20 +706,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 272120,
+              "duration_ms": 37413,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/38mv7C9KEBcIenltH9hWJK"
+                "spotify": "https://open.spotify.com/track/3XI3Ry50udbWeJ3doDLtI6"
               },
-              "href": "https://api.spotify.com/v1/tracks/38mv7C9KEBcIenltH9hWJK",
-              "id": "38mv7C9KEBcIenltH9hWJK",
+              "href": "https://api.spotify.com/v1/tracks/3XI3Ry50udbWeJ3doDLtI6",
+              "id": "3XI3Ry50udbWeJ3doDLtI6",
               "is_local": false,
               "is_playable": true,
-              "name": "Alone",
+              "name": "Intro Tape - Live",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:38mv7C9KEBcIenltH9hWJK"
+              "uri": "spotify:track:3XI3Ry50udbWeJ3doDLtI6"
             },
             {
               "artists": [
@@ -732,20 +735,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 223613,
+              "duration_ms": 273786,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/6jCjBUc0wCYzogWyTtvzjg"
+                "spotify": "https://open.spotify.com/track/2aqw7jLgYfGLqJCzLd2O4y"
               },
-              "href": "https://api.spotify.com/v1/tracks/6jCjBUc0wCYzogWyTtvzjg",
-              "id": "6jCjBUc0wCYzogWyTtvzjg",
+              "href": "https://api.spotify.com/v1/tracks/2aqw7jLgYfGLqJCzLd2O4y",
+              "id": "2aqw7jLgYfGLqJCzLd2O4y",
               "is_local": false,
               "is_playable": true,
-              "name": "Devil's Tower",
+              "name": "Alone - Live",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:6jCjBUc0wCYzogWyTtvzjg"
+              "uri": "spotify:track:2aqw7jLgYfGLqJCzLd2O4y"
             },
             {
               "artists": [
@@ -761,20 +764,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 231600,
+              "duration_ms": 240066,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1zBrRzYr9FE7qlaPs6ddwJ"
+                "spotify": "https://open.spotify.com/track/7s7T5cc9AoW4jKfiAzSfpt"
               },
-              "href": "https://api.spotify.com/v1/tracks/1zBrRzYr9FE7qlaPs6ddwJ",
-              "id": "1zBrRzYr9FE7qlaPs6ddwJ",
+              "href": "https://api.spotify.com/v1/tracks/7s7T5cc9AoW4jKfiAzSfpt",
+              "id": "7s7T5cc9AoW4jKfiAzSfpt",
               "is_local": false,
               "is_playable": true,
-              "name": "Fearful Heart",
+              "name": "Hold The Line - Live",
               "preview_url": null,
               "track_number": 3,
               "type": "track",
-              "uri": "spotify:track:1zBrRzYr9FE7qlaPs6ddwJ"
+              "uri": "spotify:track:7s7T5cc9AoW4jKfiAzSfpt"
             },
             {
               "artists": [
@@ -790,20 +793,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 260320,
+              "duration_ms": 316746,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/4UXsUM8V91yb77YH1wcle1"
+                "spotify": "https://open.spotify.com/track/4DFf22LiYpuc7UqFfDIgnB"
               },
-              "href": "https://api.spotify.com/v1/tracks/4UXsUM8V91yb77YH1wcle1",
-              "id": "4UXsUM8V91yb77YH1wcle1",
+              "href": "https://api.spotify.com/v1/tracks/4DFf22LiYpuc7UqFfDIgnB",
+              "id": "4DFf22LiYpuc7UqFfDIgnB",
               "is_local": false,
               "is_playable": true,
-              "name": "Spanish Sea",
+              "name": "Lovers In The Night - Live",
               "preview_url": null,
               "track_number": 4,
               "type": "track",
-              "uri": "spotify:track:4UXsUM8V91yb77YH1wcle1"
+              "uri": "spotify:track:4DFf22LiYpuc7UqFfDIgnB"
             },
             {
               "artists": [
@@ -819,20 +822,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 288053,
+              "duration_ms": 285760,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/31YZ2darkrbYAr8ip0Bgo7"
+                "spotify": "https://open.spotify.com/track/5KTgYDJUHUtXEiGQApw5PH"
               },
-              "href": "https://api.spotify.com/v1/tracks/31YZ2darkrbYAr8ip0Bgo7",
-              "id": "31YZ2darkrbYAr8ip0Bgo7",
+              "href": "https://api.spotify.com/v1/tracks/5KTgYDJUHUtXEiGQApw5PH",
+              "id": "5KTgYDJUHUtXEiGQApw5PH",
               "is_local": false,
               "is_playable": true,
-              "name": "In a Little While",
+              "name": "Spanish Sea - Live",
               "preview_url": null,
               "track_number": 5,
               "type": "track",
-              "uri": "spotify:track:31YZ2darkrbYAr8ip0Bgo7"
+              "uri": "spotify:track:5KTgYDJUHUtXEiGQApw5PH"
             },
             {
               "artists": [
@@ -848,20 +851,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 289693,
+              "duration_ms": 420920,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2ZgP5akUag1n4nfVUyQAXj"
+                "spotify": "https://open.spotify.com/track/2W1YN2xiI1upoq6ZaBJjy9"
               },
-              "href": "https://api.spotify.com/v1/tracks/2ZgP5akUag1n4nfVUyQAXj",
-              "id": "2ZgP5akUag1n4nfVUyQAXj",
+              "href": "https://api.spotify.com/v1/tracks/2W1YN2xiI1upoq6ZaBJjy9",
+              "id": "2W1YN2xiI1upoq6ZaBJjy9",
               "is_local": false,
               "is_playable": true,
-              "name": "Chelsea",
+              "name": "I Will Remember - Live",
               "preview_url": null,
               "track_number": 6,
               "type": "track",
-              "uri": "spotify:track:2ZgP5akUag1n4nfVUyQAXj"
+              "uri": "spotify:track:2W1YN2xiI1upoq6ZaBJjy9"
             },
             {
               "artists": [
@@ -877,20 +880,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 195173,
+              "duration_ms": 439120,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1MzGtdRGEU59g7dhDFiFnC"
+                "spotify": "https://open.spotify.com/track/0YIl5nDZsMew4mQCbXpRpo"
               },
-              "href": "https://api.spotify.com/v1/tracks/1MzGtdRGEU59g7dhDFiFnC",
-              "id": "1MzGtdRGEU59g7dhDFiFnC",
+              "href": "https://api.spotify.com/v1/tracks/0YIl5nDZsMew4mQCbXpRpo",
+              "id": "0YIl5nDZsMew4mQCbXpRpo",
               "is_local": false,
               "is_playable": true,
-              "name": "Chase the Rain",
+              "name": "English Eyes - Live",
               "preview_url": null,
               "track_number": 7,
               "type": "track",
-              "uri": "spotify:track:1MzGtdRGEU59g7dhDFiFnC"
+              "uri": "spotify:track:0YIl5nDZsMew4mQCbXpRpo"
             },
             {
               "artists": [
@@ -906,20 +909,20 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 234173,
+              "duration_ms": 485973,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/5dpAu6i8cyJYHag1OnRsIb"
+                "spotify": "https://open.spotify.com/track/38pGHDGJLHHIJdImcQEiuY"
               },
-              "href": "https://api.spotify.com/v1/tracks/5dpAu6i8cyJYHag1OnRsIb",
-              "id": "5dpAu6i8cyJYHag1OnRsIb",
+              "href": "https://api.spotify.com/v1/tracks/38pGHDGJLHHIJdImcQEiuY",
+              "id": "38pGHDGJLHHIJdImcQEiuY",
               "is_local": false,
               "is_playable": true,
-              "name": "Oh Why",
+              "name": "Jake To The Bone - Live",
               "preview_url": null,
               "track_number": 8,
               "type": "track",
-              "uri": "spotify:track:5dpAu6i8cyJYHag1OnRsIb"
+              "uri": "spotify:track:38pGHDGJLHHIJdImcQEiuY"
             },
             {
               "artists": [
@@ -935,33 +938,23 @@
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 255586,
+              "duration_ms": 278120,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/78TMAwVUV9w9wjijoTd2S0"
+                "spotify": "https://open.spotify.com/track/2lVqv8ZEM3w52oLbhyo0sP"
               },
-              "href": "https://api.spotify.com/v1/tracks/78TMAwVUV9w9wjijoTd2S0",
-              "id": "78TMAwVUV9w9wjijoTd2S0",
+              "href": "https://api.spotify.com/v1/tracks/2lVqv8ZEM3w52oLbhyo0sP",
+              "id": "2lVqv8ZEM3w52oLbhyo0sP",
               "is_local": false,
               "is_playable": true,
-              "name": "Struck By Lightning",
+              "name": "Lea - Live",
               "preview_url": null,
               "track_number": 9,
               "type": "track",
-              "uri": "spotify:track:78TMAwVUV9w9wjijoTd2S0"
+              "uri": "spotify:track:2lVqv8ZEM3w52oLbhyo0sP"
             },
             {
               "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/4AA8eXtzqh5ykxtafLaPOi"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/4AA8eXtzqh5ykxtafLaPOi",
-                  "id": "4AA8eXtzqh5ykxtafLaPOi",
-                  "name": "What So Not",
-                  "type": "artist",
-                  "uri": "spotify:artist:4AA8eXtzqh5ykxtafLaPOi"
-                },
                 {
                   "external_urls": {
                     "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
@@ -971,47 +964,501 @@
                   "name": "TOTO",
                   "type": "artist",
                   "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
-                },
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/5he5w2lnU9x7JFhnwcekXX"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/5he5w2lnU9x7JFhnwcekXX",
-                  "id": "5he5w2lnU9x7JFhnwcekXX",
-                  "name": "Skrillex",
-                  "type": "artist",
-                  "uri": "spotify:artist:5he5w2lnU9x7JFhnwcekXX"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 280066,
+              "duration_ms": 497973,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/1mzY8nqZjWEyP6mrkVz1WA"
+                "spotify": "https://open.spotify.com/track/5VBZieCpKkwgHPTUHXmqnx"
               },
-              "href": "https://api.spotify.com/v1/tracks/1mzY8nqZjWEyP6mrkVz1WA",
-              "id": "1mzY8nqZjWEyP6mrkVz1WA",
+              "href": "https://api.spotify.com/v1/tracks/5VBZieCpKkwgHPTUHXmqnx",
+              "id": "5VBZieCpKkwgHPTUHXmqnx",
               "is_local": false,
               "is_playable": true,
-              "name": "We'll Keep On Running (feat. Skrillex)",
+              "name": "Rosanna - Live",
               "preview_url": null,
               "track_number": 10,
               "type": "track",
-              "uri": "spotify:track:1mzY8nqZjWEyP6mrkVz1WA"
+              "uri": "spotify:track:5VBZieCpKkwgHPTUHXmqnx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 225306,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3CjzlTeKYe4X6FCPy7B4Qz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3CjzlTeKYe4X6FCPy7B4Qz",
+              "id": "3CjzlTeKYe4X6FCPy7B4Qz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Miss Sun - Live",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:3CjzlTeKYe4X6FCPy7B4Qz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 125586,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/124giNvtwyLiqL360qJcVA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/124giNvtwyLiqL360qJcVA",
+              "id": "124giNvtwyLiqL360qJcVA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Georgy Porgy - Live",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:124giNvtwyLiqL360qJcVA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 133066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5iYVpvZRfWZ5VrDEWCiN9f"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5iYVpvZRfWZ5VrDEWCiN9f",
+              "id": "5iYVpvZRfWZ5VrDEWCiN9f",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Human Nature - Live",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:5iYVpvZRfWZ5VrDEWCiN9f"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 109080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0f903xGHDIbdQjWfJzxvi1"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0f903xGHDIbdQjWfJzxvi1",
+              "id": "0f903xGHDIbdQjWfJzxvi1",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Holyanna - Live",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:0f903xGHDIbdQjWfJzxvi1"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 131506,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1x9nKxLUVmLiKKogc5yDvd"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1x9nKxLUVmLiKKogc5yDvd",
+              "id": "1x9nKxLUVmLiKKogc5yDvd",
+              "is_local": false,
+              "is_playable": true,
+              "name": "No Love - Live",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:1x9nKxLUVmLiKKogc5yDvd"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 204733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4bv2OHvnNZ3nJVwc5tDq7j"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4bv2OHvnNZ3nJVwc5tDq7j",
+              "id": "4bv2OHvnNZ3nJVwc5tDq7j",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Mushanga - Live",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:4bv2OHvnNZ3nJVwc5tDq7j"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 168586,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0uBUKo4xDK78ykRHBRDsRc"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0uBUKo4xDK78ykRHBRDsRc",
+              "id": "0uBUKo4xDK78ykRHBRDsRc",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stop Loving You - Live",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:0uBUKo4xDK78ykRHBRDsRc"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 399626,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5DGUQuZCSmFg49RD5i2n3N"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5DGUQuZCSmFg49RD5i2n3N",
+              "id": "5DGUQuZCSmFg49RD5i2n3N",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Girl Goodbye - Live",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:5DGUQuZCSmFg49RD5i2n3N"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 323426,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2D21EwNW3fpHa3jLVFompp"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2D21EwNW3fpHa3jLVFompp",
+              "id": "2D21EwNW3fpHa3jLVFompp",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Angela - Live",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:2D21EwNW3fpHa3jLVFompp"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 404613,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2NVrFVJ7pXGn4lZjwKhrXG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2NVrFVJ7pXGn4lZjwKhrXG",
+              "id": "2NVrFVJ7pXGn4lZjwKhrXG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Lion - Live",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:2NVrFVJ7pXGn4lZjwKhrXG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 362800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2OMOlcohFjhYu1V8d4mFGr"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2OMOlcohFjhYu1V8d4mFGr",
+              "id": "2OMOlcohFjhYu1V8d4mFGr",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dune (Desert Theme) - Live",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:2OMOlcohFjhYu1V8d4mFGr"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 381813,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6F8k7ywMMHcFy0pWyliv3T"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6F8k7ywMMHcFy0pWyliv3T",
+              "id": "6F8k7ywMMHcFy0pWyliv3T",
+              "is_local": false,
+              "is_playable": true,
+              "name": "While My Guitar Gently Weeps - Live",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:6F8k7ywMMHcFy0pWyliv3T"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 275280,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3V85NEQ01Zu2LAxY91VFN8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3V85NEQ01Zu2LAxY91VFN8",
+              "id": "3V85NEQ01Zu2LAxY91VFN8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stranger In Town - Live",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:3V85NEQ01Zu2LAxY91VFN8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 269800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6daA3rXejxkbiFtE8dnj3A"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6daA3rXejxkbiFtE8dnj3A",
+              "id": "6daA3rXejxkbiFtE8dnj3A",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Make Believe - Live",
+              "preview_url": null,
+              "track_number": 24,
+              "type": "track",
+              "uri": "spotify:track:6daA3rXejxkbiFtE8dnj3A"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 755800,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2F7lRVg7ywSOuNgwafNNAE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2F7lRVg7ywSOuNgwafNNAE",
+              "id": "2F7lRVg7ywSOuNgwafNNAE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Africa - Live",
+              "preview_url": null,
+              "track_number": 25,
+              "type": "track",
+              "uri": "spotify:track:2F7lRVg7ywSOuNgwafNNAE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/0PFtn5NtBbbUNbU9EAmIWF"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/0PFtn5NtBbbUNbU9EAmIWF",
+                  "id": "0PFtn5NtBbbUNbU9EAmIWF",
+                  "name": "TOTO",
+                  "type": "artist",
+                  "uri": "spotify:artist:0PFtn5NtBbbUNbU9EAmIWF"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 247786,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/19Z6YNyi8Mi779DTAt5wGC"
+              },
+              "href": "https://api.spotify.com/v1/tracks/19Z6YNyi8Mi779DTAt5wGC",
+              "id": "19Z6YNyi8Mi779DTAt5wGC",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Road Goes On - Live",
+              "preview_url": null,
+              "track_number": 26,
+              "type": "track",
+              "uri": "spotify:track:19Z6YNyi8Mi779DTAt5wGC"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 10
+          "total": 26
         },
         "type": "album",
-        "uri": "spotify:album:6mdf5V1SydnLqGTaZTrjLw"
+        "uri": "spotify:album:5jeDH42MWUx4gksmbgYu8a"
       },
-      "release_date": "2018-11-06",
+      "release_date": "2018-10-12",
       "release_date_precision": "day",
-      "total_tracks": 10,
+      "total_tracks": 26,
       "tracks": [
         {
           "artists": [
@@ -1020,10 +1467,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 272120,
+          "duration_ms": 37413,
           "explicit": false,
-          "id": "38mv7C9KEBcIenltH9hWJK",
-          "name": "Alone",
+          "id": "3XI3Ry50udbWeJ3doDLtI6",
+          "name": "Intro Tape - Live",
           "preview_url": null,
           "track_number": 1
         },
@@ -1034,10 +1481,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 223613,
+          "duration_ms": 273786,
           "explicit": false,
-          "id": "6jCjBUc0wCYzogWyTtvzjg",
-          "name": "Devil's Tower",
+          "id": "2aqw7jLgYfGLqJCzLd2O4y",
+          "name": "Alone - Live",
           "preview_url": null,
           "track_number": 2
         },
@@ -1048,10 +1495,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 231600,
+          "duration_ms": 240066,
           "explicit": false,
-          "id": "1zBrRzYr9FE7qlaPs6ddwJ",
-          "name": "Fearful Heart",
+          "id": "7s7T5cc9AoW4jKfiAzSfpt",
+          "name": "Hold The Line - Live",
           "preview_url": null,
           "track_number": 3
         },
@@ -1062,10 +1509,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 260320,
+          "duration_ms": 316746,
           "explicit": false,
-          "id": "4UXsUM8V91yb77YH1wcle1",
-          "name": "Spanish Sea",
+          "id": "4DFf22LiYpuc7UqFfDIgnB",
+          "name": "Lovers In The Night - Live",
           "preview_url": null,
           "track_number": 4
         },
@@ -1076,10 +1523,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 288053,
+          "duration_ms": 285760,
           "explicit": false,
-          "id": "31YZ2darkrbYAr8ip0Bgo7",
-          "name": "In a Little While",
+          "id": "5KTgYDJUHUtXEiGQApw5PH",
+          "name": "Spanish Sea - Live",
           "preview_url": null,
           "track_number": 5
         },
@@ -1090,10 +1537,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 289693,
+          "duration_ms": 420920,
           "explicit": false,
-          "id": "2ZgP5akUag1n4nfVUyQAXj",
-          "name": "Chelsea",
+          "id": "2W1YN2xiI1upoq6ZaBJjy9",
+          "name": "I Will Remember - Live",
           "preview_url": null,
           "track_number": 6
         },
@@ -1104,10 +1551,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 195173,
+          "duration_ms": 439120,
           "explicit": false,
-          "id": "1MzGtdRGEU59g7dhDFiFnC",
-          "name": "Chase the Rain",
+          "id": "0YIl5nDZsMew4mQCbXpRpo",
+          "name": "English Eyes - Live",
           "preview_url": null,
           "track_number": 7
         },
@@ -1118,10 +1565,10 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 234173,
+          "duration_ms": 485973,
           "explicit": false,
-          "id": "5dpAu6i8cyJYHag1OnRsIb",
-          "name": "Oh Why",
+          "id": "38pGHDGJLHHIJdImcQEiuY",
+          "name": "Jake To The Bone - Live",
           "preview_url": null,
           "track_number": 8
         },
@@ -1132,41 +1579,257 @@
               "name": "TOTO"
             }
           ],
-          "duration_ms": 255586,
+          "duration_ms": 278120,
           "explicit": false,
-          "id": "78TMAwVUV9w9wjijoTd2S0",
-          "name": "Struck By Lightning",
+          "id": "2lVqv8ZEM3w52oLbhyo0sP",
+          "name": "Lea - Live",
           "preview_url": null,
           "track_number": 9
         },
         {
           "artists": [
             {
-              "id": "4AA8eXtzqh5ykxtafLaPOi",
-              "name": "What So Not"
-            },
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 497973,
+          "explicit": false,
+          "id": "5VBZieCpKkwgHPTUHXmqnx",
+          "name": "Rosanna - Live",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
             {
               "id": "0PFtn5NtBbbUNbU9EAmIWF",
               "name": "TOTO"
-            },
-            {
-              "id": "5he5w2lnU9x7JFhnwcekXX",
-              "name": "Skrillex"
             }
           ],
-          "duration_ms": 280066,
+          "duration_ms": 225306,
           "explicit": false,
-          "id": "1mzY8nqZjWEyP6mrkVz1WA",
-          "name": "We'll Keep On Running (feat. Skrillex)",
+          "id": "3CjzlTeKYe4X6FCPy7B4Qz",
+          "name": "Miss Sun - Live",
           "preview_url": null,
-          "track_number": 10
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 125586,
+          "explicit": false,
+          "id": "124giNvtwyLiqL360qJcVA",
+          "name": "Georgy Porgy - Live",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 133066,
+          "explicit": false,
+          "id": "5iYVpvZRfWZ5VrDEWCiN9f",
+          "name": "Human Nature - Live",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 109080,
+          "explicit": false,
+          "id": "0f903xGHDIbdQjWfJzxvi1",
+          "name": "Holyanna - Live",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 131506,
+          "explicit": false,
+          "id": "1x9nKxLUVmLiKKogc5yDvd",
+          "name": "No Love - Live",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 204733,
+          "explicit": false,
+          "id": "4bv2OHvnNZ3nJVwc5tDq7j",
+          "name": "Mushanga - Live",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 168586,
+          "explicit": false,
+          "id": "0uBUKo4xDK78ykRHBRDsRc",
+          "name": "Stop Loving You - Live",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 399626,
+          "explicit": false,
+          "id": "5DGUQuZCSmFg49RD5i2n3N",
+          "name": "Girl Goodbye - Live",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 323426,
+          "explicit": false,
+          "id": "2D21EwNW3fpHa3jLVFompp",
+          "name": "Angela - Live",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 404613,
+          "explicit": false,
+          "id": "2NVrFVJ7pXGn4lZjwKhrXG",
+          "name": "Lion - Live",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 362800,
+          "explicit": false,
+          "id": "2OMOlcohFjhYu1V8d4mFGr",
+          "name": "Dune (Desert Theme) - Live",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 381813,
+          "explicit": false,
+          "id": "6F8k7ywMMHcFy0pWyliv3T",
+          "name": "While My Guitar Gently Weeps - Live",
+          "preview_url": null,
+          "track_number": 22
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 275280,
+          "explicit": true,
+          "id": "3V85NEQ01Zu2LAxY91VFN8",
+          "name": "Stranger In Town - Live",
+          "preview_url": null,
+          "track_number": 23
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 269800,
+          "explicit": false,
+          "id": "6daA3rXejxkbiFtE8dnj3A",
+          "name": "Make Believe - Live",
+          "preview_url": null,
+          "track_number": 24
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 755800,
+          "explicit": false,
+          "id": "2F7lRVg7ywSOuNgwafNNAE",
+          "name": "Africa - Live",
+          "preview_url": null,
+          "track_number": 25
+        },
+        {
+          "artists": [
+            {
+              "id": "0PFtn5NtBbbUNbU9EAmIWF",
+              "name": "TOTO"
+            }
+          ],
+          "duration_ms": 247786,
+          "explicit": false,
+          "id": "19Z6YNyi8Mi779DTAt5wGC",
+          "name": "The Road Goes On - Live",
+          "preview_url": null,
+          "track_number": 26
         }
       ],
-      "url": "https://open.spotify.com/album/6mdf5V1SydnLqGTaZTrjLw"
+      "url": "https://open.spotify.com/album/5jeDH42MWUx4gksmbgYu8a"
     }
   },
-  "spotify_id": "6mdf5V1SydnLqGTaZTrjLw",
-  "spotify_url": "https://open.spotify.com/album/6mdf5V1SydnLqGTaZTrjLw",
+  "spotify_id": "5jeDH42MWUx4gksmbgYu8a",
+  "spotify_url": "https://open.spotify.com/album/5jeDH42MWUx4gksmbgYu8a",
   "styles": [
     "Arena Rock",
     "Classic Rock",
@@ -1277,6 +1940,6 @@
       "title": "Africa"
     }
   ],
-  "updated_at": "2025-07-09T09:33:23.662959",
+  "updated_at": "2025-07-10T08:21:04.668688",
   "year": 2018
 }

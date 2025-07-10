@@ -22,7 +22,7 @@
     }
   },
   "country": "UK",
-  "created_at": "2025-07-09T09:37:23.077091",
+  "created_at": "2025-07-10T08:24:27.598647",
   "date_added": "2017-12-11T19:45:45-08:00",
   "discogs_id": "11045283",
   "discogs_url": "https://www.discogs.com/release/11045283-Jane-Weaver-The-Architect",
@@ -32,12 +32,7 @@
   "genres": [
     "Electronic",
     "Rock",
-    "Pop",
-    "bagel",
-    "krautrock-influenced",
-    "neo-psychedelia",
-    "experimental",
-    "constructive pop"
+    "Pop"
   ],
   "id": "11045283",
   "images": [
@@ -76,7 +71,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T09:37:25.011232",
+    "processed_at": "2025-07-10T08:24:29.160485",
     "services_used": [
       "discogs",
       "apple_music",
@@ -159,9 +154,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/ec0839204728ddf734a3923a856808c1.png"
         }
       ],
-      "listeners": 2019,
+      "listeners": 2020,
       "mbid": "",
-      "playcount": 5994,
+      "playcount": 5995,
       "raw_data": {
         "album": {
           "artist": "Jane Weaver",
@@ -191,10 +186,10 @@
               "size": ""
             }
           ],
-          "listeners": "2019",
+          "listeners": "2020",
           "mbid": "",
           "name": "The Architect",
-          "playcount": "5994",
+          "playcount": "5995",
           "tags": {
             "tag": [
               {
@@ -206,16 +201,16 @@
                 "url": "https://www.last.fm/tag/krautrock-influenced"
               },
               {
+                "name": "constructive pop",
+                "url": "https://www.last.fm/tag/constructive+pop"
+              },
+              {
                 "name": "neo-psychedelia",
                 "url": "https://www.last.fm/tag/neo-psychedelia"
               },
               {
-                "name": "experimental",
-                "url": "https://www.last.fm/tag/experimental"
-              },
-              {
-                "name": "constructive pop",
-                "url": "https://www.last.fm/tag/constructive+pop"
+                "name": "eclectonia",
+                "url": "https://www.last.fm/tag/eclectonia"
               }
             ]
           },
@@ -298,9 +293,9 @@
       "tags": [
         "bagel",
         "krautrock-influenced",
+        "constructive pop",
         "neo-psychedelia",
-        "experimental",
-        "constructive pop"
+        "eclectonia"
       ],
       "top_albums": [],
       "top_tracks": [],
@@ -323,28 +318,28 @@
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "809236148544"
+        "upc": "809236148513"
       },
-      "id": "1oOPqaf12kaZNO228JG57y",
+      "id": "4D4SMnloftnMAod4TuIXvz",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273a580e31e42753b77dc014a55",
+          "url": "https://i.scdn.co/image/ab67616d0000b27323aae34fecc04469c36d284e",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02a580e31e42753b77dc014a55",
+          "url": "https://i.scdn.co/image/ab67616d00001e0223aae34fecc04469c36d284e",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851a580e31e42753b77dc014a55",
+          "url": "https://i.scdn.co/image/ab67616d0000485123aae34fecc04469c36d284e",
           "width": 64
         }
       ],
       "label": "Fire Records",
-      "popularity": 0,
+      "popularity": 1,
       "preview_url": null,
       "raw_data": {
         "album_type": "single",
@@ -371,40 +366,40 @@
           }
         ],
         "external_ids": {
-          "upc": "809236148544"
+          "upc": "809236148513"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/1oOPqaf12kaZNO228JG57y"
+          "spotify": "https://open.spotify.com/album/4D4SMnloftnMAod4TuIXvz"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/1oOPqaf12kaZNO228JG57y?market=US",
-        "id": "1oOPqaf12kaZNO228JG57y",
+        "href": "https://api.spotify.com/v1/albums/4D4SMnloftnMAod4TuIXvz?market=US",
+        "id": "4D4SMnloftnMAod4TuIXvz",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a580e31e42753b77dc014a55",
+            "url": "https://i.scdn.co/image/ab67616d0000b27323aae34fecc04469c36d284e",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a580e31e42753b77dc014a55",
+            "url": "https://i.scdn.co/image/ab67616d00001e0223aae34fecc04469c36d284e",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a580e31e42753b77dc014a55",
+            "url": "https://i.scdn.co/image/ab67616d0000485123aae34fecc04469c36d284e",
             "width": 64
           }
         ],
         "is_playable": true,
         "label": "Fire Records",
         "name": "The Architect",
-        "popularity": 0,
-        "release_date": "2017-10-20",
+        "popularity": 1,
+        "release_date": "2017-10-27",
         "release_date_precision": "day",
-        "total_tracks": 1,
+        "total_tracks": 4,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/1oOPqaf12kaZNO228JG57y/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/4D4SMnloftnMAod4TuIXvz/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -423,31 +418,128 @@
               "duration_ms": 242906,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/0BeRvZDt3b9MHOAtNEEX2u"
+                "spotify": "https://open.spotify.com/track/7w5KbXLnLEqCFabi5uJz4d"
               },
-              "href": "https://api.spotify.com/v1/tracks/0BeRvZDt3b9MHOAtNEEX2u",
-              "id": "0BeRvZDt3b9MHOAtNEEX2u",
+              "href": "https://api.spotify.com/v1/tracks/7w5KbXLnLEqCFabi5uJz4d",
+              "id": "7w5KbXLnLEqCFabi5uJz4d",
               "is_local": false,
               "is_playable": true,
               "name": "The Architect",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:0BeRvZDt3b9MHOAtNEEX2u"
+              "uri": "spotify:track:7w5KbXLnLEqCFabi5uJz4d"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1UrfmsMDKHSYXj7SaPjyWL"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1UrfmsMDKHSYXj7SaPjyWL",
+                  "id": "1UrfmsMDKHSYXj7SaPjyWL",
+                  "name": "Jane Weaver",
+                  "type": "artist",
+                  "uri": "spotify:artist:1UrfmsMDKHSYXj7SaPjyWL"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/67wOTDjbsUMW6tQgR54yLN"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/67wOTDjbsUMW6tQgR54yLN",
+                  "id": "67wOTDjbsUMW6tQgR54yLN",
+                  "name": "Andy Votel",
+                  "type": "artist",
+                  "uri": "spotify:artist:67wOTDjbsUMW6tQgR54yLN"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 495549,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/53VON1UkGEwAskx3Bnv8w8"
+              },
+              "href": "https://api.spotify.com/v1/tracks/53VON1UkGEwAskx3Bnv8w8",
+              "id": "53VON1UkGEwAskx3Bnv8w8",
+              "is_local": false,
+              "is_playable": true,
+              "name": "The Architect - Andy Votel's Brutaliszt 250KG Readymix",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:53VON1UkGEwAskx3Bnv8w8"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1UrfmsMDKHSYXj7SaPjyWL"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1UrfmsMDKHSYXj7SaPjyWL",
+                  "id": "1UrfmsMDKHSYXj7SaPjyWL",
+                  "name": "Jane Weaver",
+                  "type": "artist",
+                  "uri": "spotify:artist:1UrfmsMDKHSYXj7SaPjyWL"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 162101,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/04I8RJRqnqQudu9LC82dmG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/04I8RJRqnqQudu9LC82dmG",
+              "id": "04I8RJRqnqQudu9LC82dmG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Code",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:04I8RJRqnqQudu9LC82dmG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1UrfmsMDKHSYXj7SaPjyWL"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1UrfmsMDKHSYXj7SaPjyWL",
+                  "id": "1UrfmsMDKHSYXj7SaPjyWL",
+                  "name": "Jane Weaver",
+                  "type": "artist",
+                  "uri": "spotify:artist:1UrfmsMDKHSYXj7SaPjyWL"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 467597,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0xclH1FB8666cvbZN0sLnA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0xclH1FB8666cvbZN0sLnA",
+              "id": "0xclH1FB8666cvbZN0sLnA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Element",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:0xclH1FB8666cvbZN0sLnA"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 1
+          "total": 4
         },
         "type": "album",
-        "uri": "spotify:album:1oOPqaf12kaZNO228JG57y"
+        "uri": "spotify:album:4D4SMnloftnMAod4TuIXvz"
       },
-      "release_date": "2017-10-20",
+      "release_date": "2017-10-27",
       "release_date_precision": "day",
-      "total_tracks": 1,
+      "total_tracks": 4,
       "tracks": [
         {
           "artists": [
@@ -458,17 +550,63 @@
           ],
           "duration_ms": 242906,
           "explicit": false,
-          "id": "0BeRvZDt3b9MHOAtNEEX2u",
+          "id": "7w5KbXLnLEqCFabi5uJz4d",
           "name": "The Architect",
           "preview_url": null,
           "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "1UrfmsMDKHSYXj7SaPjyWL",
+              "name": "Jane Weaver"
+            },
+            {
+              "id": "67wOTDjbsUMW6tQgR54yLN",
+              "name": "Andy Votel"
+            }
+          ],
+          "duration_ms": 495549,
+          "explicit": false,
+          "id": "53VON1UkGEwAskx3Bnv8w8",
+          "name": "The Architect - Andy Votel's Brutaliszt 250KG Readymix",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1UrfmsMDKHSYXj7SaPjyWL",
+              "name": "Jane Weaver"
+            }
+          ],
+          "duration_ms": 162101,
+          "explicit": false,
+          "id": "04I8RJRqnqQudu9LC82dmG",
+          "name": "Code",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "1UrfmsMDKHSYXj7SaPjyWL",
+              "name": "Jane Weaver"
+            }
+          ],
+          "duration_ms": 467597,
+          "explicit": false,
+          "id": "0xclH1FB8666cvbZN0sLnA",
+          "name": "Element",
+          "preview_url": null,
+          "track_number": 4
         }
       ],
-      "url": "https://open.spotify.com/album/1oOPqaf12kaZNO228JG57y"
+      "url": "https://open.spotify.com/album/4D4SMnloftnMAod4TuIXvz"
     }
   },
-  "spotify_id": "1oOPqaf12kaZNO228JG57y",
-  "spotify_url": "https://open.spotify.com/album/1oOPqaf12kaZNO228JG57y",
+  "spotify_id": "4D4SMnloftnMAod4TuIXvz",
+  "spotify_url": "https://open.spotify.com/album/4D4SMnloftnMAod4TuIXvz",
   "styles": [
     "Electro",
     "Indie Pop",
@@ -501,6 +639,6 @@
       "title": "Element"
     }
   ],
-  "updated_at": "2025-07-09T09:37:24.115242",
+  "updated_at": "2025-07-10T08:24:28.800182",
   "year": 2017
 }
