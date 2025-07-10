@@ -22,7 +22,7 @@
     }
   },
   "country": "USA & Canada",
-  "created_at": "2025-07-09T10:10:22.806838",
+  "created_at": "2025-07-10T08:48:13.826339",
   "date_added": "2016-08-26T16:30:13-07:00",
   "discogs_id": "8888892",
   "discogs_url": "https://www.discogs.com/release/8888892-Angelo-Badalamenti-Twin-Peaks",
@@ -32,12 +32,7 @@
   "genres": [
     "Electronic",
     "Jazz",
-    "Stage & Screen",
-    "soundtrack",
-    "instrumental",
-    "ambient",
-    "twin peaks",
-    "jazz"
+    "Stage & Screen"
   ],
   "id": "8888892",
   "images": [
@@ -118,7 +113,7 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-09T10:10:24.407168",
+    "processed_at": "2025-07-10T08:48:15.555633",
     "services_used": [
       "discogs",
       "apple_music",
@@ -128,7 +123,7 @@
   },
   "release_name_apple_music": "Twin Peaks - Single",
   "release_name_discogs": "Twin Peaks",
-  "release_name_spotify": "Twin Peaks",
+  "release_name_spotify": "Twin Peaks: Season Two Music And More",
   "released": "2016-08-10",
   "services": {
     "apple_music": {
@@ -208,9 +203,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/82bce3f815de0896df4234dd4bf039ef.jpg"
         }
       ],
-      "listeners": 107631,
+      "listeners": 107634,
       "mbid": "13aa3fd5-7d49-3621-a21b-e73bcddf17b1",
-      "playcount": 1348060,
+      "playcount": 1348100,
       "raw_data": {
         "album": {
           "artist": "Angelo Badalamenti",
@@ -240,10 +235,10 @@
               "size": ""
             }
           ],
-          "listeners": "107631",
+          "listeners": "107634",
           "mbid": "13aa3fd5-7d49-3621-a21b-e73bcddf17b1",
           "name": "Twin Peaks",
-          "playcount": "1348060",
+          "playcount": "1348100",
           "tags": {
             "tag": [
               {
@@ -255,12 +250,12 @@
                 "url": "https://www.last.fm/tag/instrumental"
               },
               {
-                "name": "ambient",
-                "url": "https://www.last.fm/tag/ambient"
-              },
-              {
                 "name": "twin peaks",
                 "url": "https://www.last.fm/tag/twin+peaks"
+              },
+              {
+                "name": "ambient",
+                "url": "https://www.last.fm/tag/ambient"
               },
               {
                 "name": "jazz",
@@ -471,8 +466,8 @@
       "tags": [
         "soundtrack",
         "instrumental",
-        "ambient",
         "twin peaks",
+        "ambient",
         "jazz"
       ],
       "top_albums": [],
@@ -482,45 +477,45 @@
       "wiki_summary": "Soundtrack from David Lynch's seminal TV series Twin Peaks. The American TV series Twin Peaks spawned three soundtrack albums: one inspired by the series, one for the prequel film Twin Peaks: Fire Walk with Me and one focusing on music from Season Two but also including tracks used in the pilot, Season One, and the prequel film. All the songs from the album were written by Angelo Badalamenti, which received the 1990 Grammy Award for Best Pop Instrumental Performance for \"Twin Peaks Theme\". Most of the songs are instrumental pieces, but the three songs that contain lyrics were written by <a href=\"https://www.last.fm/music/Angelo+Badalamenti/Twin+Peaks\">Read more on Last.fm</a>."
     },
     "spotify": {
-      "album_type": "single",
+      "album_type": "album",
       "available_markets": [],
       "copyrights": [
         {
-          "text": "2008 ZYX Music",
+          "text": "© 2019, 2007 Twin Peaks Productions, Inc./Bobkind, Inc. under exclusive license to Rhino Entertainment Company, a Warner Music Group Company.",
           "type": "C"
         },
         {
-          "text": "2008 ZYX Music",
+          "text": "℗ 2007 Twin Peaks Productions, Inc./Bobkind, Inc. under exclusive license to Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved.",
           "type": "P"
         }
       ],
       "explicit": false,
       "external_ids": {
-        "upc": "090204770748"
+        "upc": "603497854929"
       },
-      "id": "0AmYn0tQMGTdoHBIsPCNYF",
+      "id": "0TDR91zfgRBdMV6iX1whhj",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b2731c5d89ec631407288d7531f9",
+          "url": "https://i.scdn.co/image/ab67616d0000b2730673313372db1d10232f5bbb",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e021c5d89ec631407288d7531f9",
+          "url": "https://i.scdn.co/image/ab67616d00001e020673313372db1d10232f5bbb",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d000048511c5d89ec631407288d7531f9",
+          "url": "https://i.scdn.co/image/ab67616d000048510673313372db1d10232f5bbb",
           "width": 64
         }
       ],
-      "label": "ZYX Music",
-      "popularity": 5,
+      "label": "Rhino",
+      "popularity": 41,
       "preview_url": null,
       "raw_data": {
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           {
             "external_urls": {
@@ -531,53 +526,63 @@
             "name": "Angelo Badalamenti",
             "type": "artist",
             "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+          },
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+            },
+            "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+            "id": "2Gu6Q05ExIGwHTF43kqLBI",
+            "name": "David Lynch",
+            "type": "artist",
+            "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
           }
         ],
         "copyrights": [
           {
-            "text": "2008 ZYX Music",
+            "text": "© 2019, 2007 Twin Peaks Productions, Inc./Bobkind, Inc. under exclusive license to Rhino Entertainment Company, a Warner Music Group Company.",
             "type": "C"
           },
           {
-            "text": "2008 ZYX Music",
+            "text": "℗ 2007 Twin Peaks Productions, Inc./Bobkind, Inc. under exclusive license to Rhino Entertainment Company, a Warner Music Group Company. All Rights Reserved.",
             "type": "P"
           }
         ],
         "external_ids": {
-          "upc": "090204770748"
+          "upc": "603497854929"
         },
         "external_urls": {
-          "spotify": "https://open.spotify.com/album/0AmYn0tQMGTdoHBIsPCNYF"
+          "spotify": "https://open.spotify.com/album/0TDR91zfgRBdMV6iX1whhj"
         },
         "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0AmYn0tQMGTdoHBIsPCNYF?market=US",
-        "id": "0AmYn0tQMGTdoHBIsPCNYF",
+        "href": "https://api.spotify.com/v1/albums/0TDR91zfgRBdMV6iX1whhj?market=US",
+        "id": "0TDR91zfgRBdMV6iX1whhj",
         "images": [
           {
             "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b2731c5d89ec631407288d7531f9",
+            "url": "https://i.scdn.co/image/ab67616d0000b2730673313372db1d10232f5bbb",
             "width": 640
           },
           {
             "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e021c5d89ec631407288d7531f9",
+            "url": "https://i.scdn.co/image/ab67616d00001e020673313372db1d10232f5bbb",
             "width": 300
           },
           {
             "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d000048511c5d89ec631407288d7531f9",
+            "url": "https://i.scdn.co/image/ab67616d000048510673313372db1d10232f5bbb",
             "width": 64
           }
         ],
         "is_playable": true,
-        "label": "ZYX Music",
-        "name": "Twin Peaks",
-        "popularity": 5,
-        "release_date": "2008-12-12",
+        "label": "Rhino",
+        "name": "Twin Peaks: Season Two Music And More",
+        "popularity": 41,
+        "release_date": "2007-10-30",
         "release_date_precision": "day",
-        "total_tracks": 2,
+        "total_tracks": 24,
         "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0AmYn0tQMGTdoHBIsPCNYF/tracks?offset=0&limit=50&market=US",
+          "href": "https://api.spotify.com/v1/albums/0TDR91zfgRBdMV6iX1whhj/tracks?offset=0&limit=50&market=US",
           "items": [
             {
               "artists": [
@@ -590,23 +595,33 @@
                   "name": "Angelo Badalamenti",
                   "type": "artist",
                   "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 174120,
+              "duration_ms": 141880,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/7D0TlgNUqZ7hJBaL5tbGB6"
+                "spotify": "https://open.spotify.com/track/3EouoQhWN8vLsC9qCFAOKH"
               },
-              "href": "https://api.spotify.com/v1/tracks/7D0TlgNUqZ7hJBaL5tbGB6",
-              "id": "7D0TlgNUqZ7hJBaL5tbGB6",
+              "href": "https://api.spotify.com/v1/tracks/3EouoQhWN8vLsC9qCFAOKH",
+              "id": "3EouoQhWN8vLsC9qCFAOKH",
               "is_local": false,
               "is_playable": true,
-              "name": "Twin Peaks (A-Version)",
+              "name": "Love Theme Intro",
               "preview_url": null,
               "track_number": 1,
               "type": "track",
-              "uri": "spotify:track:7D0TlgNUqZ7hJBaL5tbGB6"
+              "uri": "spotify:track:3EouoQhWN8vLsC9qCFAOKH"
             },
             {
               "artists": [
@@ -619,49 +634,921 @@
                   "name": "Angelo Badalamenti",
                   "type": "artist",
                   "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
                 }
               ],
               "disc_number": 1,
-              "duration_ms": 417266,
+              "duration_ms": 137586,
               "explicit": false,
               "external_urls": {
-                "spotify": "https://open.spotify.com/track/2sECoLJBCdweRvXpxXCHs1"
+                "spotify": "https://open.spotify.com/track/7gJ7oth90qqTUENs8LVXwV"
               },
-              "href": "https://api.spotify.com/v1/tracks/2sECoLJBCdweRvXpxXCHs1",
-              "id": "2sECoLJBCdweRvXpxXCHs1",
+              "href": "https://api.spotify.com/v1/tracks/7gJ7oth90qqTUENs8LVXwV",
+              "id": "7gJ7oth90qqTUENs8LVXwV",
               "is_local": false,
               "is_playable": true,
-              "name": "Twin Peaks (B-Version)",
+              "name": "Shelly",
               "preview_url": null,
               "track_number": 2,
               "type": "track",
-              "uri": "spotify:track:2sECoLJBCdweRvXpxXCHs1"
+              "uri": "spotify:track:7gJ7oth90qqTUENs8LVXwV"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 227920,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7gR66moiZK9yoKL4EfiC5K"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7gR66moiZK9yoKL4EfiC5K",
+              "id": "7gR66moiZK9yoKL4EfiC5K",
+              "is_local": false,
+              "is_playable": true,
+              "name": "New Shoes",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:7gR66moiZK9yoKL4EfiC5K"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 111600,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7GQ73HCbAKpGn1MG5pzLNG"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7GQ73HCbAKpGn1MG5pzLNG",
+              "id": "7GQ73HCbAKpGn1MG5pzLNG",
+              "is_local": false,
+              "is_playable": true,
+              "name": "High School Swing",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:7GQ73HCbAKpGn1MG5pzLNG"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 136360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0cA3Mx7WhPlcsRp2ci2ZQf"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0cA3Mx7WhPlcsRp2ci2ZQf",
+              "id": "0cA3Mx7WhPlcsRp2ci2ZQf",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hayward Boogie",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0cA3Mx7WhPlcsRp2ci2ZQf"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 312093,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2cqRMfCvT9WIdUiaIVB6EJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2cqRMfCvT9WIdUiaIVB6EJ",
+              "id": "2cqRMfCvT9WIdUiaIVB6EJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blue Frank",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:2cqRMfCvT9WIdUiaIVB6EJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 130573,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4oJ1XR0cX43qMWLMu9C8lL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4oJ1XR0cX43qMWLMu9C8lL",
+              "id": "4oJ1XR0cX43qMWLMu9C8lL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Audrey's Prayer",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:4oJ1XR0cX43qMWLMu9C8lL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 151080,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/67261nieAoEqgMhlZPRHgy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/67261nieAoEqgMhlZPRHgy",
+              "id": "67261nieAoEqgMhlZPRHgy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Hurt Bad",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:67261nieAoEqgMhlZPRHgy"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 116013,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/28lhH1ZIVsjZHJz3R7QCAJ"
+              },
+              "href": "https://api.spotify.com/v1/tracks/28lhH1ZIVsjZHJz3R7QCAJ",
+              "id": "28lhH1ZIVsjZHJz3R7QCAJ",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Cop Beat",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:28lhH1ZIVsjZHJz3R7QCAJ"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 102933,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2hOS0AppKToqR7KiUhCpOW"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2hOS0AppKToqR7KiUhCpOW",
+              "id": "2hOS0AppKToqR7KiUhCpOW",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Harold's Theme",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:2hOS0AppKToqR7KiUhCpOW"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 85893,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2J0IGeQKpUOLgRL4M4eKcu"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2J0IGeQKpUOLgRL4M4eKcu",
+              "id": "2J0IGeQKpUOLgRL4M4eKcu",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Barbershop",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:2J0IGeQKpUOLgRL4M4eKcu"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 167186,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4Us54l1dMZBRpIhP9OlP7h"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4Us54l1dMZBRpIhP9OlP7h",
+              "id": "4Us54l1dMZBRpIhP9OlP7h",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Night Bells",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:4Us54l1dMZBRpIhP9OlP7h"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 216000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/68fLJDPMqy7xVBPZW08xAS"
+              },
+              "href": "https://api.spotify.com/v1/tracks/68fLJDPMqy7xVBPZW08xAS",
+              "id": "68fLJDPMqy7xVBPZW08xAS",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Just You",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:68fLJDPMqy7xVBPZW08xAS"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 188106,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4BbzZlbdmzlm330xhSaVTD"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4BbzZlbdmzlm330xhSaVTD",
+              "id": "4BbzZlbdmzlm330xhSaVTD",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Drug Deal Blues",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:4BbzZlbdmzlm330xhSaVTD"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 147066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4usq89Jj0csfgauZwxZ3R3"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4usq89Jj0csfgauZwxZ3R3",
+              "id": "4usq89Jj0csfgauZwxZ3R3",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Audrey",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:4usq89Jj0csfgauZwxZ3R3"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 271920,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6hFe74UHQGgk7prCu3Nzks"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6hFe74UHQGgk7prCu3Nzks",
+              "id": "6hFe74UHQGgk7prCu3Nzks",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Josie And Truman",
+              "preview_url": null,
+              "track_number": 16,
+              "type": "track",
+              "uri": "spotify:track:6hFe74UHQGgk7prCu3Nzks"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 144733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5tP5ZPFiOImX30FgS2vAKg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5tP5ZPFiOImX30FgS2vAKg",
+              "id": "5tP5ZPFiOImX30FgS2vAKg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hook Rug Dance",
+              "preview_url": null,
+              "track_number": 17,
+              "type": "track",
+              "uri": "spotify:track:5tP5ZPFiOImX30FgS2vAKg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 159226,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4KnuLsMRujAZM1gDMJJ80O"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4KnuLsMRujAZM1gDMJJ80O",
+              "id": "4KnuLsMRujAZM1gDMJJ80O",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Packards' Vibration",
+              "preview_url": null,
+              "track_number": 18,
+              "type": "track",
+              "uri": "spotify:track:4KnuLsMRujAZM1gDMJJ80O"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 331240,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6TJqm5JsASKBORmCxyt4AA"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6TJqm5JsASKBORmCxyt4AA",
+              "id": "6TJqm5JsASKBORmCxyt4AA",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Half Heart",
+              "preview_url": null,
+              "track_number": 19,
+              "type": "track",
+              "uri": "spotify:track:6TJqm5JsASKBORmCxyt4AA"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 301746,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5Fxq5leKUSHyPM8Vbt9JrL"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5Fxq5leKUSHyPM8Vbt9JrL",
+              "id": "5Fxq5leKUSHyPM8Vbt9JrL",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Laura's Dark Boogie",
+              "preview_url": null,
+              "track_number": 20,
+              "type": "track",
+              "uri": "spotify:track:5Fxq5leKUSHyPM8Vbt9JrL"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 541026,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/10p8PfVwQM6GHHMCKimrvF"
+              },
+              "href": "https://api.spotify.com/v1/tracks/10p8PfVwQM6GHHMCKimrvF",
+              "id": "10p8PfVwQM6GHHMCKimrvF",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dark Mood Woods / The Red Room",
+              "preview_url": null,
+              "track_number": 21,
+              "type": "track",
+              "uri": "spotify:track:10p8PfVwQM6GHHMCKimrvF"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 154680,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5uhdq4SxF2LHuEWJ7qWBWK"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5uhdq4SxF2LHuEWJ7qWBWK",
+              "id": "5uhdq4SxF2LHuEWJ7qWBWK",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love Theme Farewell",
+              "preview_url": null,
+              "track_number": 22,
+              "type": "track",
+              "uri": "spotify:track:5uhdq4SxF2LHuEWJ7qWBWK"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 160458,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1oIbKBLWq6nw2kPcbHEMu7"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1oIbKBLWq6nw2kPcbHEMu7",
+              "id": "1oIbKBLWq6nw2kPcbHEMu7",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Untitled Track #1",
+              "preview_url": null,
+              "track_number": 23,
+              "type": "track",
+              "uri": "spotify:track:1oIbKBLWq6nw2kPcbHEMu7"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/3Eeb1U0VJTDaFpBHV4DmHl"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/3Eeb1U0VJTDaFpBHV4DmHl",
+                  "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+                  "name": "Angelo Badalamenti",
+                  "type": "artist",
+                  "uri": "spotify:artist:3Eeb1U0VJTDaFpBHV4DmHl"
+                },
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2Gu6Q05ExIGwHTF43kqLBI"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/2Gu6Q05ExIGwHTF43kqLBI",
+                  "id": "2Gu6Q05ExIGwHTF43kqLBI",
+                  "name": "David Lynch",
+                  "type": "artist",
+                  "uri": "spotify:artist:2Gu6Q05ExIGwHTF43kqLBI"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 76101,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6zp7jmqfqkXWB5aci0LPPs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6zp7jmqfqkXWB5aci0LPPs",
+              "id": "6zp7jmqfqkXWB5aci0LPPs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Untitled Track #2",
+              "preview_url": null,
+              "track_number": 24,
+              "type": "track",
+              "uri": "spotify:track:6zp7jmqfqkXWB5aci0LPPs"
             }
           ],
           "limit": 50,
           "next": null,
           "offset": 0,
           "previous": null,
-          "total": 2
+          "total": 24
         },
         "type": "album",
-        "uri": "spotify:album:0AmYn0tQMGTdoHBIsPCNYF"
+        "uri": "spotify:album:0TDR91zfgRBdMV6iX1whhj"
       },
-      "release_date": "2008-12-12",
+      "release_date": "2007-10-30",
       "release_date_precision": "day",
-      "total_tracks": 2,
+      "total_tracks": 24,
       "tracks": [
         {
           "artists": [
             {
               "id": "3Eeb1U0VJTDaFpBHV4DmHl",
               "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
             }
           ],
-          "duration_ms": 174120,
+          "duration_ms": 141880,
           "explicit": false,
-          "id": "7D0TlgNUqZ7hJBaL5tbGB6",
-          "name": "Twin Peaks (A-Version)",
+          "id": "3EouoQhWN8vLsC9qCFAOKH",
+          "name": "Love Theme Intro",
           "preview_url": null,
           "track_number": 1
         },
@@ -670,21 +1557,421 @@
             {
               "id": "3Eeb1U0VJTDaFpBHV4DmHl",
               "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
             }
           ],
-          "duration_ms": 417266,
+          "duration_ms": 137586,
           "explicit": false,
-          "id": "2sECoLJBCdweRvXpxXCHs1",
-          "name": "Twin Peaks (B-Version)",
+          "id": "7gJ7oth90qqTUENs8LVXwV",
+          "name": "Shelly",
           "preview_url": null,
           "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 227920,
+          "explicit": false,
+          "id": "7gR66moiZK9yoKL4EfiC5K",
+          "name": "New Shoes",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 111600,
+          "explicit": false,
+          "id": "7GQ73HCbAKpGn1MG5pzLNG",
+          "name": "High School Swing",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 136360,
+          "explicit": false,
+          "id": "0cA3Mx7WhPlcsRp2ci2ZQf",
+          "name": "Hayward Boogie",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 312093,
+          "explicit": false,
+          "id": "2cqRMfCvT9WIdUiaIVB6EJ",
+          "name": "Blue Frank",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 130573,
+          "explicit": false,
+          "id": "4oJ1XR0cX43qMWLMu9C8lL",
+          "name": "Audrey's Prayer",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 151080,
+          "explicit": false,
+          "id": "67261nieAoEqgMhlZPRHgy",
+          "name": "I'm Hurt Bad",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 116013,
+          "explicit": false,
+          "id": "28lhH1ZIVsjZHJz3R7QCAJ",
+          "name": "Cop Beat",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 102933,
+          "explicit": false,
+          "id": "2hOS0AppKToqR7KiUhCpOW",
+          "name": "Harold's Theme",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 85893,
+          "explicit": false,
+          "id": "2J0IGeQKpUOLgRL4M4eKcu",
+          "name": "Barbershop",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 167186,
+          "explicit": false,
+          "id": "4Us54l1dMZBRpIhP9OlP7h",
+          "name": "Night Bells",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 216000,
+          "explicit": false,
+          "id": "68fLJDPMqy7xVBPZW08xAS",
+          "name": "Just You",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 188106,
+          "explicit": false,
+          "id": "4BbzZlbdmzlm330xhSaVTD",
+          "name": "Drug Deal Blues",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 147066,
+          "explicit": false,
+          "id": "4usq89Jj0csfgauZwxZ3R3",
+          "name": "Audrey",
+          "preview_url": null,
+          "track_number": 15
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 271920,
+          "explicit": false,
+          "id": "6hFe74UHQGgk7prCu3Nzks",
+          "name": "Josie And Truman",
+          "preview_url": null,
+          "track_number": 16
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 144733,
+          "explicit": false,
+          "id": "5tP5ZPFiOImX30FgS2vAKg",
+          "name": "Hook Rug Dance",
+          "preview_url": null,
+          "track_number": 17
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 159226,
+          "explicit": false,
+          "id": "4KnuLsMRujAZM1gDMJJ80O",
+          "name": "Packards' Vibration",
+          "preview_url": null,
+          "track_number": 18
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 331240,
+          "explicit": false,
+          "id": "6TJqm5JsASKBORmCxyt4AA",
+          "name": "Half Heart",
+          "preview_url": null,
+          "track_number": 19
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 301746,
+          "explicit": false,
+          "id": "5Fxq5leKUSHyPM8Vbt9JrL",
+          "name": "Laura's Dark Boogie",
+          "preview_url": null,
+          "track_number": 20
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 541026,
+          "explicit": false,
+          "id": "10p8PfVwQM6GHHMCKimrvF",
+          "name": "Dark Mood Woods / The Red Room",
+          "preview_url": null,
+          "track_number": 21
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 154680,
+          "explicit": false,
+          "id": "5uhdq4SxF2LHuEWJ7qWBWK",
+          "name": "Love Theme Farewell",
+          "preview_url": null,
+          "track_number": 22
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 160458,
+          "explicit": false,
+          "id": "1oIbKBLWq6nw2kPcbHEMu7",
+          "name": "Untitled Track #1",
+          "preview_url": null,
+          "track_number": 23
+        },
+        {
+          "artists": [
+            {
+              "id": "3Eeb1U0VJTDaFpBHV4DmHl",
+              "name": "Angelo Badalamenti"
+            },
+            {
+              "id": "2Gu6Q05ExIGwHTF43kqLBI",
+              "name": "David Lynch"
+            }
+          ],
+          "duration_ms": 76101,
+          "explicit": false,
+          "id": "6zp7jmqfqkXWB5aci0LPPs",
+          "name": "Untitled Track #2",
+          "preview_url": null,
+          "track_number": 24
         }
       ],
-      "url": "https://open.spotify.com/album/0AmYn0tQMGTdoHBIsPCNYF"
+      "url": "https://open.spotify.com/album/0TDR91zfgRBdMV6iX1whhj"
     }
   },
-  "spotify_id": "0AmYn0tQMGTdoHBIsPCNYF",
-  "spotify_url": "https://open.spotify.com/album/0AmYn0tQMGTdoHBIsPCNYF",
+  "spotify_id": "0TDR91zfgRBdMV6iX1whhj",
+  "spotify_url": "https://open.spotify.com/album/0TDR91zfgRBdMV6iX1whhj",
   "styles": [
     "Soundtrack",
     "Score",
@@ -759,6 +2046,6 @@
       "title": "Falling"
     }
   ],
-  "updated_at": "2025-07-09T10:10:23.989869",
+  "updated_at": "2025-07-10T08:48:15.129983",
   "year": 2016
 }
