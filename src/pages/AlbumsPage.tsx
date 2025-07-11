@@ -19,6 +19,13 @@ import { appConfig } from '@/config/app.config';
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    images_uri_artist: {
+      small: string;
+    };
+  }>;
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -292,7 +299,7 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {paginatedCollection.map((album) => (
             <AlbumCard
               key={album.uri_release}
