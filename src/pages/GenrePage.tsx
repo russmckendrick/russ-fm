@@ -48,6 +48,7 @@ export function GenrePage() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [focusedGenre, setFocusedGenre] = useState<string | null>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const navigate = useNavigate();
 
@@ -113,16 +114,19 @@ export function GenrePage() {
       .slice(0, 8);
     
     return sortedGenres.map((genreData, index) => {
-      // More popular genres get more artists (6-12 artists based on rank)
-      const maxArtists = index === 0 ? 12 : index < 3 ? 8 : 6;
+      // If this genre is focused, show MANY more artists, otherwise normal amounts
+      const isFocused = focusedGenre === genreData.genre;
+      const maxArtists = isFocused ? 50 : (index === 0 ? 12 : index < 3 ? 8 : 6);
       
       const sortedArtists = Array.from(genreData.artistMap.entries())
         .sort((a, b) => b[1].count - a[1].count)
-        .filter(([name]) => !usedArtists.has(name)) // Only include artists not already used
+        .filter(([name]) => !usedArtists.has(name) || isFocused) // Allow reuse for focused genre
         .slice(0, maxArtists);
 
-      // Mark these artists as used
-      sortedArtists.forEach(([name]) => usedArtists.add(name));
+      // Mark these artists as used (except for focused genre to allow more artists)
+      if (!isFocused) {
+        sortedArtists.forEach(([name]) => usedArtists.add(name));
+      }
 
       const topArtists = sortedArtists.map(([name, data]) => ({
         name,
@@ -137,7 +141,7 @@ export function GenrePage() {
         topArtists
       };
     });
-  }, [albums]);
+  }, [albums, focusedGenre]);
 
   // Create D3 visualization
   useEffect(() => {
@@ -155,7 +159,13 @@ export function GenrePage() {
 
     svg.attr('viewBox', `0 0 ${width} ${height}`)
        .attr('width', '100%')
-       .attr('height', '100%');
+       .attr('height', '100%')
+       .on('click', () => {
+         // Click on background to unfocus
+         if (focusedGenre) {
+           setFocusedGenre(null);
+         }
+       });
 
     // Create nodes and links
     const nodes: MindMapNode[] = [];
@@ -177,26 +187,53 @@ export function GenrePage() {
     ];
     
     genreArtistData.forEach((genreData, i) => {
+      const isFocused = focusedGenre === genreData.genre;
       const pos = genrePositions[i] || { x: 0, y: 0 };
+      
+      // If something is focused and this isn't it, skip this genre entirely
+      if (focusedGenre && !isFocused) {
+        return;
+      }
+      
+      // Position logic
+      let genreX, genreY;
+      if (isFocused || focusedGenre === genreData.genre) {
+        genreX = centerX;
+        genreY = centerY;
+      } else {
+        // Normal positioning
+        genreX = centerX + pos.x * Math.min(width, height) * 0.3;
+        genreY = centerY + pos.y * Math.min(width, height) * 0.3;
+      }
       
       const genreNode: MindMapNode = {
         id: `genre-${genreData.genre}`,
         type: 'genre',
         name: genreData.genre,
         albumCount: genreData.albumCount,
-        x: centerX + pos.x * Math.min(width, height) * 0.3, // Use more space
-        y: centerY + pos.y * Math.min(width, height) * 0.3,
+        x: genreX,
+        y: genreY,
       };
       nodes.push(genreNode);
 
-      // Well-spaced cluster of artists around each genre
+      // Adjust cluster based on focus state
       const artistCount = genreData.topArtists.length;
-      const clusterRadius = 120; // Larger radius to prevent overlap
+      const clusterRadius = isFocused ? 200 : 120;
       
       genreData.topArtists.forEach((artist, j) => {
-        // Arrange artists in a tight circle around the genre
-        const angle = (j / artistCount) * 2 * Math.PI;
-        const radius = clusterRadius + (Math.random() - 0.5) * 20; // Small variation
+        let angle, radius;
+        
+        if (isFocused) {
+          // Spread artists in multiple rings for focused genre
+          const ring = Math.floor(j / 8); // 8 artists per ring
+          const angleInRing = (j % 8) / 8 * 2 * Math.PI;
+          angle = angleInRing;
+          radius = clusterRadius + (ring * 80) + (Math.random() - 0.5) * 30;
+        } else {
+          // Normal circular arrangement
+          angle = (j / artistCount) * 2 * Math.PI;
+          radius = clusterRadius + (Math.random() - 0.5) * 20;
+        }
         
         const artistNode: MindMapNode = {
           id: `artist-${artist.slug}`,
@@ -242,7 +279,11 @@ export function GenrePage() {
       .enter().append('line')
       .attr('stroke', '#64748b')
       .attr('stroke-width', 1.5)
-      .attr('stroke-opacity', 0.3);
+      .attr('stroke-opacity', (d: any) => {
+        if (!focusedGenre) return 0.3;
+        const sourceNode = nodes.find(n => n.id === d.source);
+        return sourceNode?.genre === focusedGenre ? 0.6 : 0.1;
+      });
 
     // Create genre nodes
     const genreGroup = svg.append('g').attr('class', 'genres');
@@ -250,6 +291,16 @@ export function GenrePage() {
       .data(nodes.filter(n => n.type === 'genre'))
       .enter().append('g')
       .style('cursor', 'pointer')
+      .on('click', (event, d: any) => {
+        event.stopPropagation();
+        if (focusedGenre === d.name) {
+          // If already focused, unfocus
+          setFocusedGenre(null);
+        } else {
+          // Focus this genre
+          setFocusedGenre(d.name);
+        }
+      })
       .call(d3.drag<any, any>()
         .on('start', (event, d: any) => {
           if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -271,7 +322,11 @@ export function GenrePage() {
       .attr('fill', (d, i) => d3.schemeSet3[i % d3.schemeSet3.length])
       .attr('stroke', '#fff')
       .attr('stroke-width', 3)
-      .style('filter', 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))');
+      .style('filter', 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))')
+      .style('opacity', (d: any) => {
+        if (!focusedGenre) return 1;
+        return focusedGenre === d.name ? 1 : 0.3;
+      });
 
     // Add wrapped text for genre names
     genreNodes.each(function(d: any) {
@@ -371,7 +426,11 @@ export function GenrePage() {
       .attr('fill', 'none')
       .attr('stroke', '#64748b')
       .attr('stroke-width', 2)
-      .style('filter', 'drop-shadow(1px 1px 3px rgba(0,0,0,0.3))');
+      .style('filter', 'drop-shadow(1px 1px 3px rgba(0,0,0,0.3))')
+      .style('opacity', (d: any) => {
+        if (!focusedGenre) return 1;
+        return d.genre === focusedGenre ? 1 : 0.2;
+      });
 
     // Artist avatar images - create circular clipping mask
     artistNodes.append('defs').append('clipPath')
@@ -389,6 +448,10 @@ export function GenrePage() {
       .attr('height', 70)
       .attr('clip-path', (d, i) => `url(#clip-${d.slug})`)
       .attr('preserveAspectRatio', 'xMidYMid slice')
+      .style('opacity', (d: any) => {
+        if (!focusedGenre) return 1;
+        return d.genre === focusedGenre ? 1 : 0.2;
+      })
       .on('error', function() {
         // For failed images, add a gray background circle
         d3.select(this.parentNode)
@@ -460,7 +523,7 @@ export function GenrePage() {
       });
     });
 
-  }, [genreArtistData, navigate]);
+  }, [genreArtistData, navigate, focusedGenre]);
 
   if (loading) {
     return (
