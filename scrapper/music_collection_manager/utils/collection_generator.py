@@ -148,11 +148,86 @@ class CollectionGenerator:
                         "name": artist.name,
                         "uri_artist": f"/{self.artists_path}/{artist_folder}/",
                         "json_detailed_artist": f"/{self.artists_path}/{artist_folder}/{artist_folder}.json",
-                        "images_uri_artist": self._get_artist_image_uris_from_object(artist.name, artist_folder)
+                        "images_uri_artist": self._get_artist_image_uris_from_object(artist.name, artist_folder),
+                        "biography": self._get_artist_biography_from_object(artist)
                     }
                     artists_array.append(artist_entry)
         
         return artists_array
+    
+    def _get_artist_biography_from_object(self, artist) -> Optional[str]:
+        """Extract artist biography from Artist object or database lookup."""
+        # Try to get biography from the artist object directly
+        if hasattr(artist, 'biography') and artist.biography:
+            return self._truncate_biography(artist.biography)
+            
+        # Try enrichment data sources
+        if hasattr(artist, 'enrichment_data'):
+            enrichment = artist.enrichment_data
+            
+            # Try Last.fm bio
+            if hasattr(enrichment, 'lastfm') and enrichment.lastfm:
+                if hasattr(enrichment.lastfm, 'bio') and enrichment.lastfm.bio:
+                    if hasattr(enrichment.lastfm.bio, 'summary') and enrichment.lastfm.bio.summary:
+                        return self._truncate_biography(enrichment.lastfm.bio.summary)
+                        
+            # Try TheAudioDB bio
+            if hasattr(enrichment, 'theaudiodb') and enrichment.theaudiodb:
+                if hasattr(enrichment.theaudiodb, 'biography_en') and enrichment.theaudiodb.biography_en:
+                    return self._truncate_biography(enrichment.theaudiodb.biography_en)
+        
+        # If we have an artist name, try to look up full artist data from database
+        if hasattr(artist, 'name') and artist.name:
+            try:
+                full_artist = self.db_manager.get_artist_by_name(artist.name)
+                if full_artist and hasattr(full_artist, 'biography') and full_artist.biography:
+                    return self._truncate_biography(full_artist.biography)
+                    
+                # Also check enrichment data from database artist
+                if full_artist and hasattr(full_artist, 'enrichment_data') and full_artist.enrichment_data:
+                    enrichment = full_artist.enrichment_data
+                    
+                    # Try Last.fm bio from database
+                    if hasattr(enrichment, 'lastfm') and enrichment.lastfm:
+                        if hasattr(enrichment.lastfm, 'bio') and enrichment.lastfm.bio:
+                            if hasattr(enrichment.lastfm.bio, 'summary') and enrichment.lastfm.bio.summary:
+                                return self._truncate_biography(enrichment.lastfm.bio.summary)
+                                
+                    # Try TheAudioDB bio from database
+                    if hasattr(enrichment, 'theaudiodb') and enrichment.theaudiodb:
+                        if hasattr(enrichment.theaudiodb, 'biography_en') and enrichment.theaudiodb.biography_en:
+                            return self._truncate_biography(enrichment.theaudiodb.biography_en)
+                            
+            except Exception as e:
+                # Silently fail if artist lookup fails
+                self.logger.debug(f"Failed to lookup artist biography for {artist.name}: {str(e)}")
+                pass
+        
+        return None
+    
+    def _truncate_biography(self, biography: str) -> str:
+        """Truncate biography to ~200 characters at sentence boundaries."""
+        if not biography:
+            return None
+            
+        biography = biography.strip()
+        if len(biography) <= 200:
+            return biography
+            
+        # Find last sentence that fits within 200 chars
+        sentences = biography.split('. ')
+        result = ""
+        for sentence in sentences:
+            if len(result + sentence + '. ') <= 200:
+                result += sentence + '. '
+            else:
+                break
+        
+        if result:
+            return result.strip()
+        else:
+            # If no complete sentence fits, truncate and add ellipsis
+            return biography[:197] + '...'
     
     def _get_genre_names_from_object(self, release) -> List[str]:
         """Extract genre names from Release object."""

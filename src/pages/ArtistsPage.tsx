@@ -23,6 +23,7 @@ interface Album {
     name: string;
     uri_artist: string;
     json_detailed_artist: string;
+    biography?: string;
     images_uri_artist: {
       'hi-res': string;
       medium: string;
@@ -166,7 +167,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       ;
   };
 
-  const processArtists = async () => {
+  const processArtists = () => {
     const artistMap = new Map<string, Artist>();
     const normalizedToOriginal = new Map<string, string>(); // Track normalized -> original name mapping
 
@@ -193,7 +194,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               genres: [],
               image: artistInfo.images_uri_artist.medium,
               latestAlbum: album.date_added,
-              biography: undefined
+              biography: artistInfo.biography || undefined
             });
             normalizedToOriginal.set(normalizedName, artistName);
           } else {
@@ -206,6 +207,11 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               const artist = artistMap.get(normalizedName)!;
               artist.name = artistName; // Update to more canonical name
               normalizedToOriginal.set(normalizedName, artistName);
+            }
+            // Use biography if we don't have one yet
+            const artist = artistMap.get(normalizedName)!;
+            if (!artist.biography && artistInfo.biography) {
+              artist.biography = artistInfo.biography;
             }
           }
 
@@ -281,38 +287,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       }
     });
 
-    // Load biographies for artists
-    const artistArray = Array.from(artistMap.values());
-    
-    // Load biographies in parallel for better performance
-    await Promise.allSettled(
-      artistArray.map(async (artist) => {
-        try {
-          // Find an album from this artist that has json_detailed_artist
-          const albumWithArtistData = artist.albums.find(album => 
-            album.artists?.find(a => a.name === artist.name)?.json_detailed_artist
-          );
-          
-          if (albumWithArtistData) {
-            const artistInfo = albumWithArtistData.artists?.find(a => a.name === artist.name);
-            if (artistInfo?.json_detailed_artist) {
-              const response = await fetch(artistInfo.json_detailed_artist);
-              if (response.ok) {
-                const artistData = await response.json();
-                if (artistData.biography) {
-                  artist.biography = artistData.biography.substring(0, 200) + '...';
-                }
-              }
-            }
-          }
-        } catch (error) {
-          // Silently fail - biography is optional
-          console.warn(`Failed to load biography for ${artist.name}:`, error);
-        }
-      })
-    );
-
-    setArtists(artistArray);
+    setArtists(Array.from(artistMap.values()));
   };
 
   const filterAndSortArtists = () => {
