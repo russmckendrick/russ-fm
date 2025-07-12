@@ -56,6 +56,19 @@ export function StatsPage() {
     }
   };
 
+  // Generate avatar URL from existing artist images
+  const getAvatarUrl = (images_uri_artist: any) => {
+    if (images_uri_artist?.avatar) {
+      return images_uri_artist.avatar;
+    }
+    // Derive avatar URL from hi-res or medium image
+    const baseImage = images_uri_artist?.['hi-res'] || images_uri_artist?.medium;
+    if (baseImage) {
+      return baseImage.replace(/-hi-res\.jpg$/, '-avatar.jpg').replace(/-medium\.jpg$/, '-avatar.jpg');
+    }
+    return '';
+  };
+
   const calculateStats = (data: Album[]) => {
     // Basic counts
     const totalAlbums = data.length;
@@ -81,7 +94,7 @@ export function StatsPage() {
         return { 
           name, 
           count, 
-          image: artistAlbum?.images_uri_artist?.medium || '',
+          image: getAvatarUrl(artistAlbum?.images_uri_artist),
           uri: artistAlbum?.uri_artist || ''
         };
       });
@@ -271,7 +284,7 @@ export function StatsPage() {
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
                       <img
-                        src={album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        src={album.images_uri_release?.avatar || album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
                         alt={album.release_name}
                         className="w-full h-full object-cover"
                         onError={(e) => {
@@ -413,7 +426,7 @@ export function StatsPage() {
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
                       <img
-                        src={album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        src={album.images_uri_release?.avatar || album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
                         alt={album.release_name}
                         className="w-full h-full object-cover"
                         onError={(e) => {

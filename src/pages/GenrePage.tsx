@@ -10,7 +10,7 @@ interface Album {
     name: string;
     uri_artist: string;
     images_uri_artist?: {
-      small?: string;
+      avatar?: string;
     };
   }[];
   genre_names: string[];
@@ -134,7 +134,7 @@ export function GenrePage() {
         name,
         slug: data.artist.uri_artist.replace('/artist/', '').replace('/', ''),
         albumCount: data.count,
-        avatar: data.artist.images_uri_artist?.small || `/artist/${data.artist.uri_artist.replace('/artist/', '').replace('/', '')}/${data.artist.uri_artist.replace('/artist/', '').replace('/', '')}-small.jpg`
+        avatar: data.artist.images_uri_artist?.avatar || `/artist/${data.artist.uri_artist.replace('/artist/', '').replace('/', '')}/${data.artist.uri_artist.replace('/artist/', '').replace('/', '')}-avatar.jpg`
       }));
 
       return {

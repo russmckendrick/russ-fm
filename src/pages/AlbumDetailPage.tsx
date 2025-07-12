@@ -368,7 +368,7 @@ export function AlbumDetailPage() {
                 {album.artists.map((artist, index) => (
                   <Avatar key={index} className="h-20 w-20">
                     <AvatarImage 
-                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['hi-res']} 
+                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['small']} 
                       alt={artist.name} 
                     />
                     <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
@@ -378,7 +378,7 @@ export function AlbumDetailPage() {
             ) : (
               <Avatar className="h-20 w-20 mt-1">
                 <AvatarImage 
-                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['hi-res']} 
+                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['small']} 
                   alt={album.release_artist} 
                 />
                 <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
@@ -746,11 +746,11 @@ export function AlbumDetailPage() {
                       if (album.artists) {
                         const foundArtist = album.artists.find(a => a.name === artist.name);
                         if (foundArtist) {
-                          return foundArtist.images_uri_artist['hi-res'];
+                          return foundArtist.images_uri_artist['medium'];
                         }
                       }
                       // Fallback to combined artist image
-                      return album.images_uri_artist['hi-res'];
+                      return album.images_uri_artist['medium'];
                     })()}
                     alt={artist.name}
                     className="w-[300px] h-auto object-cover flex-shrink-0"

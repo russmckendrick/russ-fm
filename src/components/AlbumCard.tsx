@@ -16,7 +16,7 @@ interface Album {
     name: string;
     uri_artist: string;
     images_uri_artist: {
-      small: string;
+      avatar: string;
     };
   }>;
   genre_names: string[];
@@ -43,7 +43,20 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const firstArtist = album.artists?.[0] || {
     name: album.release_artist,
     uri_artist: '',
-    images_uri_artist: { small: '' }
+    images_uri_artist: { avatar: '' }
+  };
+  
+  // Generate avatar URL from existing artist images
+  const getAvatarUrl = (artist: typeof firstArtist) => {
+    if (artist.images_uri_artist.avatar) {
+      return artist.images_uri_artist.avatar;
+    }
+    // Derive avatar URL from hi-res or medium image
+    const baseImage = (artist.images_uri_artist as any)['hi-res'] || artist.images_uri_artist.medium;
+    if (baseImage) {
+      return baseImage.replace(/-hi-res\.jpg$/, '-avatar.jpg').replace(/-medium\.jpg$/, '-avatar.jpg');
+    }
+    return '';
   };
   
   const getArtistInitials = (name: string) => {
@@ -81,7 +94,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10">
             <AvatarImage 
-              src={firstArtist.images_uri_artist.small} 
+              src={getAvatarUrl(firstArtist)} 
               alt={firstArtist.name}
               className="object-cover"
             />

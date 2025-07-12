@@ -148,3 +148,12 @@ package-lock.json
 dist/
 
 .claude/
+
+# Generated image sizes (only keep hi-res originals)
+public/album/**/*-medium.jpg
+public/album/**/*-small.jpg
+public/album/**/*-avatar.jpg
+public/artist/**/*-medium.jpg
+public/artist/**/*-small.jpg
+public/artist/**/*-avatar.jpg
+

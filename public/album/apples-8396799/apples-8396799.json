@@ -22,7 +22,7 @@
     }
   },
   "country": "Europe",
-  "created_at": "2025-07-10T08:47:05.401131",
+  "created_at": "2025-07-12T10:27:13.795848",
   "date_added": "2016-09-21T18:13:16-07:00",
   "discogs_id": "8396799",
   "discogs_url": "https://www.discogs.com/release/8396799-Ian-Dury-Apples",
@@ -40,6 +40,13 @@
       "type": "apple_music_artwork",
       "url": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/5e/af/5b/5eaf5b14-a799-e86c-70ec-5f34aeaf9607/190295719937.jpg/2000x2000bb.jpg",
       "width": 2000
+    },
+    {
+      "height": 2000,
+      "resource_url": null,
+      "type": "custom_cover",
+      "url": "https://is3-ssl.mzstatic.com/image/thumb/Music128/v4/5e/af/5b/5eaf5b14-a799-e86c-70ec-5f34aeaf9607/190295719937.jpg/1200x1200bf-60.jpg",
+      "width": 2000
     }
   ],
   "labels": [
@@ -48,14 +55,12 @@
   "lastfm_mbid": null,
   "lastfm_url": "https://www.last.fm/music/Ian+Dury/Apples",
   "local_images": {
-    "hi-res": "../public/album/apples-8396799/apples-8396799-hi-res.jpg",
-    "medium": "../public/album/apples-8396799/apples-8396799-medium.jpg",
-    "small": "../public/album/apples-8396799/apples-8396799-small.jpg"
+    "hi-res": "../public/album/apples-8396799/apples-8396799-hi-res.jpg"
   },
   "processing_info": {
     "has_local_images": true,
-    "local_images_count": 3,
-    "processed_at": "2025-07-10T08:47:07.210613",
+    "local_images_count": 1,
+    "processed_at": "2025-07-12T10:27:18.830390",
     "services_used": [
       "discogs",
       "apple_music",
@@ -143,7 +148,7 @@
       ],
       "listeners": 1716,
       "mbid": "138d0f0d-2258-4c14-8cec-04cbb8d5e6a7",
-      "playcount": 17572,
+      "playcount": 17580,
       "raw_data": {
         "album": {
           "artist": "Ian Dury",
@@ -176,7 +181,7 @@
           "listeners": "1716",
           "mbid": "138d0f0d-2258-4c14-8cec-04cbb8d5e6a7",
           "name": "Apples",
-          "playcount": "17572",
+          "playcount": "17580",
           "tags": {
             "tag": [
               {
@@ -1138,6 +1143,6 @@
       "title": "Riding The Outskirts Of Fantasy"
     }
   ],
-  "updated_at": "2025-07-10T08:47:06.644849",
+  "updated_at": "2025-07-12T10:27:18.782831",
   "year": 2014
 }
