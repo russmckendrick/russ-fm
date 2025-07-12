@@ -72,7 +72,8 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
     if (onClick) {
       return (
         <Card 
-          className="w-full h-full shadow-none hover:shadow-md transition-shadow cursor-pointer flex flex-col"
+          variant="interactive"
+          className="w-full h-full flex flex-col group"
           onClick={onClick}
         >
           {children}
@@ -81,7 +82,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
     }
     return (
       <Link to={`/album/${albumPath}`} className="h-full">
-        <Card className="w-full h-full shadow-none hover:shadow-md transition-shadow flex flex-col">
+        <Card variant="interactive" className="w-full h-full flex flex-col group">
           {children}
         </Card>
       </Link>
@@ -155,7 +156,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
         </DropdownMenu>
       </CardHeader>
       <CardContent className="p-0 flex-1 flex flex-col">
-        <div className="relative aspect-square bg-muted border-y">
+        <div className="relative aspect-square bg-muted overflow-hidden">
           <img
             src={album.images_uri_release.medium}
             alt={album.release_name}
@@ -164,20 +165,21 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           />
         </div>
         <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
-          <h2 className="font-semibold line-clamp-1">{album.release_name}</h2>
+          <h2 className="text-base font-semibold line-clamp-1">{album.release_name}</h2>
           <div className="mt-2 flex flex-wrap gap-1">
             {displayGenres.map((genre, index) => (
-              <span 
+              <Badge 
                 key={index}
-                className="text-sm text-blue-500"
+                variant="secondary"
+                className="text-xs px-2 py-1 bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
               >
-                #{genre.toLowerCase().replace(/[\s,&]+/g, '')}
-              </span>
+                {genre}
+              </Badge>
             ))}
             {cleanGenres.length > 2 && (
-              <span className="text-sm text-muted-foreground">
-                +{cleanGenres.length - 2} more
-              </span>
+              <Badge variant="outline" className="text-xs px-2 py-1">
+                +{cleanGenres.length - 2}
+              </Badge>
             )}
           </div>
         </div>

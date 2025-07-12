@@ -115,6 +115,60 @@
   }
 }
 
+@layer components {
+  /* Editorial Modern Component Styling */
+  .card-modern {
+    @apply rounded-xl border bg-card text-card-foreground shadow-sm;
+    @apply transition-all duration-200 ease-in-out;
+    @apply hover:scale-[1.02] hover:border-primary hover:shadow-lg;
+  }
+  
+  .card-grid {
+    @apply p-4 transition-all duration-200;
+  }
+  
+  .card-detail {
+    @apply p-8 transition-all duration-200;
+  }
+  
+  /* Bento Grid System */
+  .bento-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .bento-item-wide {
+    grid-column: span 2;
+  }
+  
+  .bento-item-tall {
+    grid-row: span 2;
+  }
+  
+  .bento-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .bento-item-hero {
+    grid-column: 1 / -1;
+  }
+  
+  /* Responsive Bento Grid */
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

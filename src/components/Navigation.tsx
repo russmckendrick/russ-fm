@@ -56,53 +56,68 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="hidden md:flex items-center gap-6">
                   <Link 
                     to="/albums/1" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/' || location.pathname.startsWith('/albums') 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Albums
+                    {(location.pathname === '/' || location.pathname.startsWith('/albums')) && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/artists/1" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname.startsWith('/artists') 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Artists
+                    {location.pathname.startsWith('/artists') && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/stats" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/stats' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Stats
+                    {location.pathname === '/stats' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/genres" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/genres' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Genres
+                    {location.pathname === '/genres' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/random" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/random' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Random
+                    {location.pathname === '/random' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                 </div>
               </div>

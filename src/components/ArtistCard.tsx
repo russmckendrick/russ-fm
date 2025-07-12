@@ -42,7 +42,8 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
     if (onClick) {
       return (
         <Card 
-          className="w-full h-full shadow-none hover:shadow-md transition-shadow cursor-pointer flex flex-col"
+          variant="interactive"
+          className="w-full h-full flex flex-col group"
           onClick={onClick}
         >
           {children}
@@ -51,7 +52,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
     }
     return (
       <Link to={artist.uri} className="h-full">
-        <Card className="w-full h-full shadow-none hover:shadow-md transition-shadow flex flex-col">
+        <Card variant="interactive" className="w-full h-full flex flex-col group">
           {children}
         </Card>
       </Link>
@@ -92,7 +93,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
         </div>
       </CardHeader>
       <CardContent className="p-0 flex-1 flex flex-col">
-        <div className="relative aspect-square bg-muted border-y">
+        <div className="relative aspect-square bg-muted overflow-hidden">
           <img
             src={artist.image}
             alt={artist.name}
@@ -101,7 +102,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
           />
         </div>
         <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
-          <h2 className="font-semibold line-clamp-1">{artist.name}</h2>
+          <h2 className="text-base font-semibold line-clamp-1">{artist.name}</h2>
         </div>
       </CardContent>
       <Separator className="mt-auto" />
@@ -110,7 +111,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
           <p className="text-xs text-muted-foreground line-clamp-3">
             {artist.biography || `${artist.name} has ${artist.albumCount} album${artist.albumCount !== 1 ? 's' : ''} in the collection.`}
           </p>
-          <div className="absolute bottom-0 right-0 w-16 h-4 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
+          <div className="absolute bottom-0 right-0 w-16 h-4 bg-gradient-to-l from-card to-transparent pointer-events-none"></div>
         </div>
       </CardFooter>
     </CardWrapper>
