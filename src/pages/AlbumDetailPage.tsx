@@ -362,23 +362,47 @@ export function AlbumDetailPage() {
             {album.artists && album.artists.length > 1 ? (
               <div className="flex gap-2 mt-1">
                 {album.artists.map((artist, index) => (
-                  <Avatar key={index} className="h-20 w-20">
-                    <AvatarImage 
-                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['medium']} 
-                      alt={artist.name} 
-                    />
-                    <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
-                  </Avatar>
+                  artist.name.toLowerCase() === 'various' ? (
+                    <Avatar key={index} className="h-20 w-20">
+                      <AvatarImage 
+                        src="/images/various.png" 
+                        alt={artist.name} 
+                      />
+                      <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <Link key={index} to={artist.uri_artist} className="hover:scale-105 transition-transform">
+                      <Avatar className="h-20 w-20 cursor-pointer">
+                        <AvatarImage 
+                          src={artist.images_uri_artist['medium']} 
+                          alt={artist.name} 
+                        />
+                        <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
+                      </Avatar>
+                    </Link>
+                  )
                 ))}
               </div>
             ) : (
-              <Avatar className="h-20 w-20 mt-1">
-                <AvatarImage 
-                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['medium']} 
-                  alt={album.release_artist} 
-                />
-                <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
-              </Avatar>
+              album.release_artist.toLowerCase() === 'various' ? (
+                <Avatar className="h-20 w-20 mt-1">
+                  <AvatarImage 
+                    src="/images/various.png" 
+                    alt={album.release_artist} 
+                  />
+                  <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
+                </Avatar>
+              ) : (
+                <Link to={album.uri_artist} className="hover:scale-105 transition-transform mt-1 block">
+                  <Avatar className="h-20 w-20 cursor-pointer">
+                    <AvatarImage 
+                      src={album.images_uri_artist['medium']} 
+                      alt={album.release_artist} 
+                    />
+                    <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                </Link>
+              )
             )}
             <div className="flex-1 min-w-0">
               <h1 className="text-4xl font-bold mb-2">{album.release_name}</h1>

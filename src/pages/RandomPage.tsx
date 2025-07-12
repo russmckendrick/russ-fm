@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Shuffle, RefreshCw } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Shuffle, RefreshCw, Music, User } from 'lucide-react';
+import { usePageTitle } from '@/hooks/usePageTitle';
 
 interface Album {
   release_name: string;
@@ -57,6 +60,8 @@ export function RandomPage() {
   const [allArtists, setAllArtists] = useState<Artist[]>([]);
   const [shuffleCount, setShuffleCount] = useState(0);
   const [itemVisibility, setItemVisibility] = useState([true, true, true]);
+
+  usePageTitle('Random Discovery | RussFM');
 
   const loadCollection = async () => {
     try {
@@ -209,11 +214,12 @@ export function RandomPage() {
     <div className="container mx-auto px-4 py-8">
       {/* Header */}
       <div className="text-center mb-12">
+        <h1 className="text-h1 mb-8">Random Discovery</h1>
         
         <Button 
           onClick={handleShuffle}
           size="lg"
-          className="gap-3 px-8 py-4 text-lg bg-gray-700 hover:bg-gray-600 text-white border-none shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+          className="gap-3 px-8 py-4 text-lg"
           disabled={isShuffling || isLoading}
         >
           {isShuffling ? (
@@ -230,69 +236,85 @@ export function RandomPage() {
         </Button>
       </div>
 
-      {/* Albums */}
+      {/* Random Items */}
       {isLoading ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[...Array(3)].map((_, i) => (
-            <div key={i} className="animate-pulse">
-              <div className="aspect-square bg-muted rounded-lg mb-4" />
-              <div className="h-4 bg-muted rounded w-3/4 mx-auto mb-2" />
-              <div className="h-4 bg-muted rounded w-1/2 mx-auto" />
-            </div>
+            <Card key={i} className="animate-pulse">
+              <CardContent className="p-0">
+                <div className="aspect-square bg-muted rounded-t-xl mb-4" />
+                <div className="p-4">
+                  <div className="h-4 bg-muted rounded w-3/4 mb-2" />
+                  <div className="h-3 bg-muted rounded w-1/2" />
+                </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {randomItems.map((item, index) => (
             <div
               key={item.type === 'album' ? (item.data as Album).uri_release : (item.data as Artist).uri}
-              className={`text-center transition-all duration-300 ${
+              className={`transition-all duration-300 ${
                 itemVisibility[index] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
               }`}
             >
               {item.type === 'album' ? (
-                <Link 
-                  to={`/album/${getAlbumPath(item.data as Album)}`}
-                  className="block group"
-                >
-                  <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <img
-                      src={(item.data as Album).images_uri_release.medium}
-                      alt={(item.data as Album).release_name}
-                      className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
-                      {(item.data as Album).release_name}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {(item.data as Album).release_artist}
-                    </p>
-                  </div>
+                <Link to={`/album/${getAlbumPath(item.data as Album)}`}>
+                  <Card variant="interactive" className="overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-square overflow-hidden">
+                        <img
+                          src={(item.data as Album).images_uri_release.medium}
+                          alt={(item.data as Album).release_name}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-3 right-3">
+                          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                            <Music className="h-3 w-3 mr-1" />
+                            Album
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-semibold mb-1 line-clamp-1">
+                          {(item.data as Album).release_name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {(item.data as Album).release_artist}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </Link>
               ) : (
-                <Link 
-                  to={`/artist/${getArtistPath(item.data as Artist)}`}
-                  className="block group"
-                >
-                  <div className="relative overflow-hidden rounded-lg shadow-lg group-hover:shadow-xl transition-all duration-300">
-                    <img
-                      src={(item.data as Artist).images_uri_artist.medium}
-                      alt={(item.data as Artist).name}
-                      className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-lg font-semibold mb-1 group-hover:text-primary transition-colors">
-                      {(item.data as Artist).name}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {(item.data as Artist).albumCount} album{(item.data as Artist).albumCount !== 1 ? 's' : ''}
-                    </p>
-                  </div>
+                <Link to={`/artist/${getArtistPath(item.data as Artist)}`}>
+                  <Card variant="interactive" className="overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="relative aspect-square overflow-hidden">
+                        <img
+                          src={(item.data as Artist).images_uri_artist.medium}
+                          alt={(item.data as Artist).name}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute bottom-3 right-3">
+                          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                            <User className="h-3 w-3 mr-1" />
+                            Artist
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <h3 className="font-semibold mb-1 line-clamp-1">
+                          {(item.data as Artist).name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          {(item.data as Artist).albumCount} album{(item.data as Artist).albumCount !== 1 ? 's' : ''}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </Link>
               )}
             </div>

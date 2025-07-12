@@ -2,67 +2,79 @@
 
 /* Discogs Brand Colors */
 .btn-discogs {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  color: white !important;
+}
+
+.btn-discogs:hover {
+  background-color: transparent !important;
   border-color: #333333 !important;
   color: #333333 !important;
 }
 
-.btn-discogs:hover {
-  background-color: #333333 !important;
+.dark .btn-discogs {
+  background-color: #666666 !important;
+  border-color: #666666 !important;
   color: white !important;
 }
 
-.dark .btn-discogs {
+.dark .btn-discogs:hover {
+  background-color: transparent !important;
   border-color: #666666 !important;
   color: #cccccc !important;
 }
 
-.dark .btn-discogs:hover {
-  background-color: #666666 !important;
+/* Last.fm Brand Colors */
+.btn-lastfm {
+  background-color: #d51007 !important;
+  border-color: #d51007 !important;
   color: white !important;
 }
 
-/* Last.fm Brand Colors */
-.btn-lastfm {
+.btn-lastfm:hover {
+  background-color: transparent !important;
   border-color: #d51007 !important;
   color: #d51007 !important;
 }
 
-.btn-lastfm:hover {
-  background-color: #d51007 !important;
+/* Spotify Brand Colors */
+.btn-spotify {
+  background-color: #1db954 !important;
+  border-color: #1db954 !important;
   color: white !important;
 }
 
-/* Spotify Brand Colors */
-.btn-spotify {
+.btn-spotify:hover {
+  background-color: transparent !important;
   border-color: #1db954 !important;
   color: #1db954 !important;
 }
 
-.btn-spotify:hover {
-  background-color: #1db954 !important;
+/* Apple Music Brand Colors */
+.btn-apple-music {
+  background-color: #FF4E6B !important;
+  border-color: #FF4E6B !important;
   color: white !important;
 }
 
-/* Apple Music Brand Colors */
-.btn-apple-music {
+.btn-apple-music:hover {
+  background-color: transparent !important;
   border-color: #FF4E6B !important;
   color: #FF4E6B !important;
 }
 
-.btn-apple-music:hover {
-  background-color: #FF4E6B !important;
-  color: white !important;
-}
-
 /* Wikipedia Brand Colors */
 .btn-wikipedia {
+  background-color: #636466 !important;
   border-color: #636466 !important;
-  color: #636466 !important;
+  color: white !important;
 }
 
 .btn-wikipedia:hover {
-  background-color: #636466 !important;
-  color: white !important;
+  background-color: transparent !important;
+  border-color: #636466 !important;
+  color: #636466 !important;
 }
 
 /* Common button styling for service buttons */
