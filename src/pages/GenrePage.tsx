@@ -343,6 +343,7 @@ export function GenrePage() {
       .data(nodes.filter(n => n.type === 'artist'))
       .enter().append('g')
       .style('cursor', 'pointer')
+      .attr('data-hovered', 'false')
       .call(d3.drag<any, any>()
         .on('start', (event, d: any) => {
           if (!event.active) simulation.alphaTarget(0.3).restart();
@@ -364,63 +365,69 @@ export function GenrePage() {
         }
       });
 
-    // Artist avatar circles with glow effect
+    // Artist avatar border (no fill, just stroke for definition)
     artistNodes.append('circle')
       .attr('r', 28)
-      .attr('fill', '#ffffff')
+      .attr('fill', 'none')
       .attr('stroke', '#64748b')
       .attr('stroke-width', 2)
       .style('filter', 'drop-shadow(1px 1px 3px rgba(0,0,0,0.3))');
 
-    // Artist avatar images
+    // Artist avatar images - create circular clipping mask
+    artistNodes.append('defs').append('clipPath')
+      .attr('id', (d, i) => `clip-${d.slug}`)
+      .append('circle')
+      .attr('cx', 0)
+      .attr('cy', 0)
+      .attr('r', 28);
+
     artistNodes.append('image')
       .attr('href', d => d.avatar || '')
-      .attr('x', -22)
-      .attr('y', -22)
-      .attr('width', 44)
-      .attr('height', 44)
-      .attr('clip-path', 'circle(22px)')
+      .attr('x', -28)
+      .attr('y', -28)
+      .attr('width', 56)
+      .attr('height', 56)
+      .attr('clip-path', (d, i) => `url(#clip-${d.slug})`)
+      .style('object-fit', 'cover')
       .on('error', function() {
+        // For failed images, add a gray background circle
         d3.select(this.parentNode)
-          .select('circle')
-          .attr('fill', '#e2e8f0');
+          .append('circle')
+          .attr('r', 28)
+          .attr('fill', '#e2e8f0')
+          .attr('stroke', '#64748b')
+          .attr('stroke-width', 2);
       });
 
     // No artist labels - cleaner look
 
-    // Enhanced hover effects
+    // Simple hover effects - just scale the entire node
     artistNodes
       .on('mouseenter', function(event, d) {
+        d3.select(this).attr('data-hovered', 'true');
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .attr('transform', `translate(${d.x},${d.y}) scale(1.15)`);
+        
         d3.select(this).select('circle')
           .transition()
           .duration(200)
-          .attr('r', 32)
-          .attr('stroke-width', 3)
-          .attr('stroke', '#3b82f6');
-        
-        d3.select(this).select('image')
-          .transition()
-          .duration(200)
-          .attr('width', 48)
-          .attr('height', 48)
-          .attr('x', -24)
-          .attr('y', -24);
+          .attr('stroke', '#3b82f6')
+          .attr('stroke-width', 3);
       })
-      .on('mouseleave', function() {
+      .on('mouseleave', function(event, d) {
+        d3.select(this).attr('data-hovered', 'false');
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .attr('transform', `translate(${d.x},${d.y}) scale(1)`);
+        
         d3.select(this).select('circle')
           .transition()
           .duration(200)
-          .attr('r', 28)
-          .attr('stroke-width', 2)
-          .attr('stroke', '#64748b');
-        
-        d3.select(this).select('image')
-          .transition()
-          .duration(200)
-          .attr('width', 44)
-          .attr('height', 44)
-          .attr('x', -22)
-          .attr('y', -22);
+          .attr('stroke', '#64748b')
+          .attr('stroke-width', 2);
       });
 
     // Update positions on simulation tick
@@ -446,7 +453,11 @@ export function GenrePage() {
 
       // Update node positions
       genreNodes.attr('transform', d => `translate(${d.x},${d.y})`);
-      artistNodes.attr('transform', d => `translate(${d.x},${d.y})`);
+      artistNodes.attr('transform', function(d: any) {
+        const isHovered = d3.select(this).attr('data-hovered') === 'true';
+        const scale = isHovered ? 'scale(1.15)' : 'scale(1)';
+        return `translate(${d.x},${d.y}) ${scale}`;
+      });
     });
 
   }, [genreArtistData, navigate]);
