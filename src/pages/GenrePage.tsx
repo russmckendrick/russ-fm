@@ -218,17 +218,21 @@ export function GenrePage() {
 
       // Adjust cluster based on focus state
       const artistCount = genreData.topArtists.length;
-      const clusterRadius = isFocused ? 200 : 120;
+      const clusterRadius = isFocused ? 100 : 120; // Start closer to center for focused view
       
       genreData.topArtists.forEach((artist, j) => {
         let angle, radius;
         
         if (isFocused) {
-          // Spread artists in multiple rings for focused genre
-          const ring = Math.floor(j / 8); // 8 artists per ring
-          const angleInRing = (j % 8) / 8 * 2 * Math.PI;
+          // Use entire viewport for focused genre - spread across multiple rings
+          const ring = Math.floor(j / 12); // 12 artists per ring for better distribution
+          const angleInRing = (j % 12) / 12 * 2 * Math.PI;
           angle = angleInRing;
-          radius = clusterRadius + (ring * 80) + (Math.random() - 0.5) * 30;
+          
+          // Scale radius based on viewport size to use full space
+          const maxRadius = Math.min(width, height) * 0.4; // Use 40% of viewport
+          const ringSpacing = maxRadius / Math.ceil(artistCount / 12); // Dynamic ring spacing
+          radius = clusterRadius + (ring * ringSpacing) + (Math.random() - 0.5) * 30;
         } else {
           // Normal circular arrangement
           angle = (j / artistCount) * 2 * Math.PI;
@@ -260,7 +264,14 @@ export function GenrePage() {
     const simulation = d3.forceSimulation(nodes as any)
       .force('link', d3.forceLink(links).id((d: any) => d.id).distance(120).strength(0.7))
       .force('charge', d3.forceManyBody().strength(-80)) // Gentle repulsion
-      .force('collision', d3.forceCollide().radius(40)) // Larger collision radius
+      .force('collision', d3.forceCollide().radius((d: any) => {
+        // Dynamic collision radius based on artist size
+        if (d.type === 'artist') {
+          const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+          return size + 10; // Add padding around each artist
+        }
+        return 60; // Genre nodes
+      })) // Dynamic collision radius
       .force('boundary', () => {
         // Keep nodes within viewport bounds
         const margin = 100;
@@ -420,9 +431,13 @@ export function GenrePage() {
         }
       });
 
-    // Artist avatar border (no fill, just stroke for definition)
+    // Artist avatar border (no fill, just stroke for definition) - size based on album count
     artistNodes.append('circle')
-      .attr('r', 28)
+      .attr('r', (d: any) => {
+        // Size based on album count: min 20, max 40
+        const baseSize = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        return baseSize;
+      })
       .attr('fill', 'none')
       .attr('stroke', '#64748b')
       .attr('stroke-width', 2)
@@ -432,20 +447,32 @@ export function GenrePage() {
         return d.genre === focusedGenre ? 1 : 0.2;
       });
 
-    // Artist avatar images - create circular clipping mask
+    // Artist avatar images - create circular clipping mask with dynamic size
     artistNodes.append('defs').append('clipPath')
       .attr('id', (d, i) => `clip-${d.slug}`)
       .append('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', 28);
+      .attr('r', (d: any) => Math.max(20, Math.min(40, 18 + (d.albumCount * 3))));
 
     artistNodes.append('image')
       .attr('href', d => d.avatar || '')
-      .attr('x', -35)
-      .attr('y', -35)
-      .attr('width', 70)
-      .attr('height', 70)
+      .attr('x', (d: any) => {
+        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        return -(size + 10); // Image slightly larger than circle
+      })
+      .attr('y', (d: any) => {
+        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        return -(size + 10);
+      })
+      .attr('width', (d: any) => {
+        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        return (size + 10) * 2;
+      })
+      .attr('height', (d: any) => {
+        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        return (size + 10) * 2;
+      })
       .attr('clip-path', (d, i) => `url(#clip-${d.slug})`)
       .attr('preserveAspectRatio', 'xMidYMid slice')
       .style('opacity', (d: any) => {
