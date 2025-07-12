@@ -187,7 +187,11 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   const getAllGenres = () => {
     const genres = new Set<string>();
     collection.forEach(album => {
-      album.genre_names.forEach(genre => genres.add(genre));
+      album.genre_names.forEach(genre => {
+        if (genre.toLowerCase() !== 'music') { // Filter out "Music"
+          genres.add(genre);
+        }
+      });
     });
     return Array.from(genres).sort();
   };

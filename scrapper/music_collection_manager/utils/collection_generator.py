@@ -230,11 +230,48 @@ class CollectionGenerator:
             return biography[:197] + '...'
     
     def _get_genre_names_from_object(self, release) -> List[str]:
-        """Extract genre names from Release object."""
+        """Extract genre names from Release object and enriched data sources."""
+        genre_names = set()
+        
+        # Start with Discogs genres (filter out generic "Music")
         if hasattr(release, 'genres') and release.genres:
-            return release.genres
-            
-        return []
+            filtered_discogs_genres = [g for g in release.genres if g != "Music"]
+            genre_names.update(filtered_discogs_genres)
+        
+        # Try to load additional genres from the detailed JSON file
+        try:
+            if hasattr(release, 'discogs_id') and release.discogs_id:
+                release_folder = self._sanitize_filename(f"{self._get_release_name_from_object(release)}-{release.discogs_id}")
+                json_path = self.data_path / self.releases_path / release_folder / f"{release_folder}.json"
+                
+                if json_path.exists():
+                    import json
+                    with open(json_path, 'r', encoding='utf-8') as f:
+                        release_data = json.load(f)
+                    
+                    # Add Apple Music genres
+                    services = release_data.get('services', {})
+                    apple_music = services.get('apple_music', {})
+                    raw_attributes = apple_music.get('raw_attributes', {})
+                    apple_genres = raw_attributes.get('genreNames', [])
+                    if apple_genres:
+                        # Filter out generic "Music" genre and clean up genres
+                        filtered_genres = [g for g in apple_genres if g != "Music"]
+                        genre_names.update(filtered_genres)
+                    
+                    # Skip Last.fm tags - too much junk data
+                    
+                    # Add styles from Discogs (more specific sub-genres, filter out generic "Music")
+                    styles = release_data.get('styles', [])
+                    if styles:
+                        filtered_styles = [s for s in styles if s != "Music"]
+                        genre_names.update(filtered_styles)
+        except Exception as e:
+            # If JSON loading fails, just use the basic genres
+            self.logger.debug(f"Failed to load additional genres from JSON for {release.discogs_id}: {str(e)}")
+        
+        # Convert to sorted list for consistency
+        return sorted(list(genre_names))
     
     def _get_date_added_from_object(self, release) -> Optional[str]:
         """Extract date added from Release object."""
