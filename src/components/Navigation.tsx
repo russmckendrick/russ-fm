@@ -128,7 +128,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
                     className="pl-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
-                    placeholder="Search albums, artists, or genres..."
+                    placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
@@ -162,7 +162,7 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
                     className="pl-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
-                    placeholder="Search albums, artists, or genres..."
+                    placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
