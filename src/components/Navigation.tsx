@@ -41,6 +41,11 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
     setSearchOverlayOpen(false);
   };
 
+  const clearSearch = () => {
+    setSearchTerm('');
+    setSearchOverlayOpen(false);
+  };
+
   return (
     <div className="min-h-0">
       <div className="fixed top-6 inset-x-0 z-50">
@@ -127,12 +132,22 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="relative hidden md:block">
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
-                    className="pl-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
+                    className="pl-10 pr-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
                     placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
                   />
+                  {searchTerm && (
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="h-5 w-5 absolute inset-y-0 my-auto right-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"
+                      onClick={clearSearch}
+                    >
+                      <X className="h-3 w-3" />
+                    </Button>
+                  )}
                 </div>
 
                 {/* Desktop Theme Toggle */}
@@ -161,12 +176,22 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="relative">
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
-                    className="pl-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
+                    className="pl-10 pr-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
                     placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
                   />
+                  {searchTerm && (
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="h-5 w-5 absolute inset-y-0 my-auto right-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"
+                      onClick={clearSearch}
+                    >
+                      <X className="h-3 w-3" />
+                    </Button>
+                  )}
                 </div>
 
                 {/* Mobile Navigation Links */}
