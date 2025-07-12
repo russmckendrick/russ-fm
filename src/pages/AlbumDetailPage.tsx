@@ -21,7 +21,6 @@ interface Album {
     images_uri_artist: {
       'hi-res': string;
       medium: string;
-      small: string;
     };
   }>;
   genre_names: string[];
@@ -34,12 +33,10 @@ interface Album {
   images_uri_release: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
   images_uri_artist: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
 }
 
@@ -143,7 +140,6 @@ interface DetailedAlbum {
   local_images: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
 }
 
@@ -368,7 +364,7 @@ export function AlbumDetailPage() {
                 {album.artists.map((artist, index) => (
                   <Avatar key={index} className="h-20 w-20">
                     <AvatarImage 
-                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['small']} 
+                      src={artist.name.toLowerCase() === 'various' ? '/images/various.png' : artist.images_uri_artist['medium']} 
                       alt={artist.name} 
                     />
                     <AvatarFallback className="text-xl">{artist.name.charAt(0)}</AvatarFallback>
@@ -378,7 +374,7 @@ export function AlbumDetailPage() {
             ) : (
               <Avatar className="h-20 w-20 mt-1">
                 <AvatarImage 
-                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['small']} 
+                  src={album.release_artist.toLowerCase() === 'various' ? '/images/various.png' : album.images_uri_artist['medium']} 
                   alt={album.release_artist} 
                 />
                 <AvatarFallback className="text-xl">{album.release_artist.charAt(0)}</AvatarFallback>
@@ -739,7 +735,7 @@ export function AlbumDetailPage() {
           {detailedAlbum.artists.map((artist, index) => 
             artist.biography && artist.name.toLowerCase() !== 'various' && (
               <Card key={index} className="overflow-hidden">
-                <div className="flex">
+                <div className="flex flex-col md:flex-row">
                   <img
                     src={(() => {
                       // Find the matching artist image from the artists array
@@ -753,22 +749,22 @@ export function AlbumDetailPage() {
                       return album.images_uri_artist['medium'];
                     })()}
                     alt={artist.name}
-                    className="w-[300px] h-auto object-cover flex-shrink-0"
+                    className="w-full md:w-[300px] h-auto object-cover flex-shrink-0"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       // Use individual artist medium/small images if available
                       if (album.artists) {
                         const foundArtist = album.artists.find(a => a.name === artist.name);
                         if (foundArtist) {
-                          target.src = foundArtist.images_uri_artist['medium'] || foundArtist.images_uri_artist['small'] || '';
+                          target.src = foundArtist.images_uri_artist['medium'] || '';
                           return;
                         }
                       }
                       // Fallback to combined artist images
-                      target.src = album.images_uri_artist['medium'] || album.images_uri_artist['small'] || '';
+                      target.src = album.images_uri_artist['medium'] || '';
                     }}
                   />
-                  <div className="flex-1 p-6">
+                  <div className="flex-1 p-4 md:p-6">
                     <h3 className="text-2xl font-bold mb-3">{artist.name} Biography</h3>
                     <div className={`relative ${!biographyExpanded ? 'max-h-48 overflow-hidden' : ''}`}>
                       <div className="text-muted-foreground leading-relaxed">

@@ -8,20 +8,17 @@ import path from 'path';
 
 export interface ImageSizes {
   medium: number;
-  small: number;
   avatar: number;
 }
 
 export const IMAGE_SIZES: ImageSizes = {
   medium: 800,  // For album covers
-  small: 400,   // For small album displays
   avatar: 128,  // For artist avatars
 };
 
 export interface ProcessedImagePaths {
   'hi-res': string;
   medium: string;
-  small: string;
   avatar: string;
 }
 
@@ -97,7 +94,6 @@ export function getProcessedImagePaths(sourceImagePath: string): ProcessedImageP
   return {
     'hi-res': sourceImagePath,
     medium: path.join(baseDir, `${baseName}-medium.jpg`),
-    small: path.join(baseDir, `${baseName}-small.jpg`),
     avatar: path.join(baseDir, `${baseName}-avatar.jpg`),
   };
 }
@@ -117,7 +113,6 @@ export function getProcessedImagePathsForOutput(
   return {
     'hi-res': sourceImagePath,
     medium: path.join(outputDir, `${baseName}-medium.jpg`),
-    small: path.join(outputDir, `${baseName}-small.jpg`),
     avatar: path.join(outputDir, `${baseName}-avatar.jpg`),
   };
 }
@@ -187,7 +182,7 @@ async function processImagesInDirectory(sourceDirectory: string, outputDirectory
 export function getImagePath(basePath: string, size: keyof ProcessedImagePaths): string {
   const parsedPath = path.parse(basePath);
   const baseDir = parsedPath.dir;
-  const baseName = parsedPath.name.replace(/-(?:hi-res|medium|small|avatar)$/, '');
+  const baseName = parsedPath.name.replace(/-(?:hi-res|medium|avatar)$/, '');
   
   if (size === 'hi-res') {
     return path.join(baseDir, `${baseName}-hi-res.jpg`);

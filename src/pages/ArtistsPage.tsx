@@ -26,7 +26,6 @@ interface Album {
     images_uri_artist: {
       'hi-res': string;
       medium: string;
-      small: string;
     };
   }>;
   genre_names: string[];

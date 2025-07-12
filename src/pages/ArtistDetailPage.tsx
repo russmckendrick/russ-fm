@@ -20,7 +20,6 @@ interface Album {
     images_uri_artist: {
       'hi-res': string;
       medium: string;
-      small: string;
     };
   }>;
   genre_names: string[];
@@ -33,12 +32,10 @@ interface Album {
   images_uri_release: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
   images_uri_artist: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
 }
 
@@ -109,7 +106,6 @@ interface ArtistData {
   local_images: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
   images?: Array<{
     type: string;
@@ -288,8 +284,7 @@ export function ArtistDetailPage() {
     // Final fallback
     return {
       'hi-res': '',
-      'medium': '',
-      'small': ''
+      'medium': ''
     };
   };
   
@@ -319,7 +314,7 @@ export function ArtistDetailPage() {
             className="w-full rounded-lg shadow-lg"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              const fallbackSrc = artistImages['medium'] || artistImages['small'] || '';
+              const fallbackSrc = artistImages['medium'] || '';
               target.src = fallbackSrc;
             }}
           />

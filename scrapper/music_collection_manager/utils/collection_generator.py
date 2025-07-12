@@ -225,7 +225,7 @@ class CollectionGenerator:
         # Check if we have local images
         if hasattr(release, 'local_images') and release.local_images:
             image_uris = {}
-            for size in ["hi-res", "medium", "small"]:
+            for size in ["hi-res", "medium"]:
                 if size in release.local_images and release.local_images[size]:
                     # Convert absolute path to relative URI
                     image_path = Path(release.local_images[size])
@@ -247,7 +247,7 @@ class CollectionGenerator:
         else:
             # Use default path structure
             image_uris = {}
-            for size in ["hi-res", "medium", "small"]:
+            for size in ["hi-res", "medium"]:
                 image_uris[size] = f"/{self.releases_path}/{release_folder}/{release_folder}-{size}.jpg"
             return image_uris
     

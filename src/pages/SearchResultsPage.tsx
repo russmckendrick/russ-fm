@@ -18,12 +18,10 @@ interface Album {
   images_uri_release: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
   images_uri_artist: {
     'hi-res': string;
     medium: string;
-    small: string;
   };
 }
 

@@ -284,7 +284,7 @@ export function StatsPage() {
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
                       <img
-                        src={album.images_uri_release?.avatar || album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        src={album.images_uri_release?.avatar || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
                         alt={album.release_name}
                         className="w-full h-full object-cover"
                         onError={(e) => {
@@ -426,7 +426,7 @@ export function StatsPage() {
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
                       <img
-                        src={album.images_uri_release?.avatar || album.images_uri_release?.small || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        src={album.images_uri_release?.avatar || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
                         alt={album.release_name}
                         className="w-full h-full object-cover"
                         onError={(e) => {

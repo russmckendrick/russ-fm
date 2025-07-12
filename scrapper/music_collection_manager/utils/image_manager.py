@@ -356,14 +356,14 @@ class ImageManager:
             
             # Also check for generated sizes (medium, small, avatar) if they exist
             # These would be generated at build time by the frontend
-            for generated_size in ["medium", "small", "avatar"]:
+            for generated_size in ["medium", "avatar"]:
                 filename = f"{sanitized_title}-{discogs_id}-{generated_size}.jpg"
                 file_path = release_folder / filename
                 images[generated_size] = file_path if file_path.exists() else None
         else:
             images = {size_name: None for size_name in self.image_sizes.keys()}
             # Also initialize generated sizes
-            for generated_size in ["medium", "small", "avatar"]:
+            for generated_size in ["medium", "avatar"]:
                 images[generated_size] = None
 
         return images
