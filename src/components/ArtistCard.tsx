@@ -105,10 +105,11 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
       </CardContent>
       <Separator className="mt-auto" />
       <CardFooter className="flex py-2 px-2">
-        <div className="w-full">
+        <div className="w-full relative">
           <p className="text-xs text-muted-foreground line-clamp-3">
             {artist.biography || `${artist.name} has ${artist.albumCount} album${artist.albumCount !== 1 ? 's' : ''} in the collection.`}
           </p>
+          <div className="absolute bottom-0 right-0 w-16 h-4 bg-gradient-to-l from-white to-transparent pointer-events-none"></div>
         </div>
       </CardFooter>
     </CardWrapper>

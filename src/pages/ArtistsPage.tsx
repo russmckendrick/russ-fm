@@ -147,8 +147,28 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
     }
   };
 
+  const normalizeArtistName = (name: string): string => {
+    // Normalize artist names for deduplication
+    return name
+      .toLowerCase()
+      .trim()
+      // Normalize common variations
+      .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+      .replace(/\bvan\b/g, 'van') // Normalize "Van" to "van"
+      .replace(/\bde\b/g, 'de') // Normalize "De" to "de"
+      .replace(/\bdel\b/g, 'del') // Normalize "Del" to "del"
+      .replace(/\bla\b/g, 'la') // Normalize "La" to "la"
+      .replace(/\ble\b/g, 'le') // Normalize "Le" to "le"
+      .replace(/\bmac\b/g, 'mac') // Normalize "Mac" to "mac"
+      .replace(/\bmc\b/g, 'mc') // Normalize "Mc" to "mc"
+      .replace(/['']/g, "'") // Normalize different apostrophe types
+      .replace(/[""]/g, '"') // Normalize different quote types
+      ;
+  };
+
   const processArtists = async () => {
     const artistMap = new Map<string, Artist>();
+    const normalizedToOriginal = new Map<string, string>(); // Track normalized -> original name mapping
 
     collection.forEach(album => {
       // Handle albums with multiple artists
@@ -156,15 +176,17 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
         // Process each individual artist
         album.artists.forEach(artistInfo => {
           const artistName = artistInfo.name;
+          const normalizedName = normalizeArtistName(artistName);
           
           // Skip "Various" artists
-          if (artistName.toLowerCase() === 'various') {
+          if (normalizedName === 'various') {
             return;
           }
           
-          if (!artistMap.has(artistName)) {
-            artistMap.set(artistName, {
-              name: artistName,
+          // Use normalized name as key but preserve original name for display
+          if (!artistMap.has(normalizedName)) {
+            artistMap.set(normalizedName, {
+              name: artistName, // Use original name for display
               uri: artistInfo.uri_artist,
               albums: [],
               albumCount: 0,
@@ -173,9 +195,21 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               latestAlbum: album.date_added,
               biography: undefined
             });
+            normalizedToOriginal.set(normalizedName, artistName);
+          } else {
+            // If we already have this normalized artist, prefer the most "canonical" name
+            const existingOriginal = normalizedToOriginal.get(normalizedName)!;
+            // Prefer names with proper capitalization (more uppercase letters usually means more canonical)
+            const currentScore = (artistName.match(/[A-Z]/g) || []).length;
+            const existingScore = (existingOriginal.match(/[A-Z]/g) || []).length;
+            if (currentScore > existingScore) {
+              const artist = artistMap.get(normalizedName)!;
+              artist.name = artistName; // Update to more canonical name
+              normalizedToOriginal.set(normalizedName, artistName);
+            }
           }
 
-          const artist = artistMap.get(artistName)!;
+          const artist = artistMap.get(normalizedName)!
           artist.albums.push(album);
           artist.albumCount++;
           
@@ -195,15 +229,17 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       } else {
         // Fallback to original artist field for backward compatibility
         const artistName = album.release_artist;
+        const normalizedName = normalizeArtistName(artistName);
         
         // Skip "Various" artists
-        if (artistName.toLowerCase() === 'various') {
+        if (normalizedName === 'various') {
           return;
         }
         
-        if (!artistMap.has(artistName)) {
-          artistMap.set(artistName, {
-            name: artistName,
+        // Use normalized name as key but preserve original name for display
+        if (!artistMap.has(normalizedName)) {
+          artistMap.set(normalizedName, {
+            name: artistName, // Use original name for display
             uri: album.uri_artist,
             albums: [],
             albumCount: 0,
@@ -212,9 +248,21 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
             latestAlbum: album.date_added,
             biography: undefined
           });
+          normalizedToOriginal.set(normalizedName, artistName);
+        } else {
+          // If we already have this normalized artist, prefer the most "canonical" name
+          const existingOriginal = normalizedToOriginal.get(normalizedName)!;
+          // Prefer names with proper capitalization (more uppercase letters usually means more canonical)
+          const currentScore = (artistName.match(/[A-Z]/g) || []).length;
+          const existingScore = (existingOriginal.match(/[A-Z]/g) || []).length;
+          if (currentScore > existingScore) {
+            const artist = artistMap.get(normalizedName)!;
+            artist.name = artistName; // Update to more canonical name
+            normalizedToOriginal.set(normalizedName, artistName);
+          }
         }
 
-        const artist = artistMap.get(artistName)!;
+        const artist = artistMap.get(normalizedName)!;
         artist.albums.push(album);
         artist.albumCount++;
         
