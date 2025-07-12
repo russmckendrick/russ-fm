@@ -149,6 +149,22 @@ export function GenrePage() {
   useEffect(() => {
     if (!genreArtistData.length || !svgRef.current) return;
 
+    // Handle window resize
+    const handleResize = () => {
+      // Force re-render by clearing and re-running effect
+      if (svgRef.current) {
+        const svg = d3.select(svgRef.current);
+        svg.selectAll('*').remove();
+      }
+      // Small delay to ensure container has updated dimensions
+      setTimeout(() => {
+        if (svgRef.current) {
+          renderVisualization();
+        }
+      }, 100);
+    };
+
+    const renderVisualization = () => {
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove(); // Clear previous render
 
@@ -587,6 +603,18 @@ export function GenrePage() {
         return `translate(${d.x},${d.y}) ${scale}`;
       });
     });
+    };
+
+    // Initial render
+    renderVisualization();
+
+    // Add resize listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
 
   }, [genreArtistData, navigate, focusedGenre]);
 
