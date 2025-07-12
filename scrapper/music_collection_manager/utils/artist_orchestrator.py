@@ -1401,17 +1401,20 @@ class ArtistImageManager(ImageManager):
         super().__init__(base_path)
         self.config = config or {}
         
-        # Override image sizes with config if available
-        if config and hasattr(config, 'get') and config.get("image_sizes"):
-            # Convert string format "2000x2000" to int for pixel values
-            image_sizes = {}
-            for size_name, size_str in config.get("image_sizes", {}).items():
-                if "x" in size_str:
-                    width_str = size_str.split("x")[0]
-                    image_sizes[size_name] = int(width_str)
-                else:
-                    image_sizes[size_name] = int(size_str)
-            self.image_sizes = image_sizes
+        # Only download hi-res images (other sizes generated at build time)
+        # Override image sizes to only use hi-res regardless of config
+        if config and hasattr(config, 'get') and config.get("image_sizes") and "hi-res" in config.get("image_sizes", {}):
+            # Only use hi-res from config
+            hi_res_str = config.get("image_sizes", {}).get("hi-res", "2000x2000")
+            if "x" in hi_res_str:
+                width_str = hi_res_str.split("x")[0]
+                hi_res_size = int(width_str)
+            else:
+                hi_res_size = int(hi_res_str)
+            self.image_sizes = {"hi-res": hi_res_size}
+        else:
+            # Default to hi-res only
+            self.image_sizes = {"hi-res": 2000}
     
     def create_artist_folder(self, artist_name: str) -> Path:
         """Create folder for artist with URL-safe name."""
@@ -1421,7 +1424,7 @@ class ArtistImageManager(ImageManager):
         return folder_path
     
     def download_artist_images(self, artist_name: str, artwork_url: str) -> Dict[str, Optional[Path]]:
-        """Download artist images in multiple sizes."""
+        """Download artist images (only hi-res, other sizes generated at build time)."""
         if not artwork_url:
             logger.warning("No artwork URL provided for artist")
             return {}
@@ -1429,7 +1432,7 @@ class ArtistImageManager(ImageManager):
         # Create artist folder
         artist_folder = self.create_artist_folder(artist_name)
         
-        # Download images in different sizes
+        # Download only hi-res image (other sizes generated at build time)
         downloaded_images = {}
         
         for size_name, size_pixels in self.image_sizes.items():
@@ -1444,7 +1447,7 @@ class ArtistImageManager(ImageManager):
             # Download image
             if self.download_image(sized_url, file_path):
                 downloaded_images[size_name] = file_path
-                logger.info(f"Downloaded {size_name} artist image for {artist_name}")
+                logger.info(f"Downloaded {size_name} artist image for {artist_name} (other sizes will be generated at build time)")
             else:
                 downloaded_images[size_name] = None
                 logger.warning(f"Failed to download {size_name} artist image for {artist_name}")
@@ -1452,7 +1455,7 @@ class ArtistImageManager(ImageManager):
         return downloaded_images
     
     def download_artist_images_with_fallback(self, artist_name: str, image_sources: List[Dict[str, Any]]) -> Dict[str, Optional[Path]]:
-        """Download artist images with fallback sources, prioritizing Apple Music (no /Music[digits]/) > Spotify > Discogs."""
+        """Download artist images with fallback sources (only hi-res, other sizes generated at build time)."""
         if not image_sources:
             logger.warning("No image sources provided for artist")
             return {}
@@ -1460,7 +1463,7 @@ class ArtistImageManager(ImageManager):
         # Create artist folder
         artist_folder = self.create_artist_folder(artist_name)
         
-        # Download images in different sizes
+        # Download only hi-res images (other sizes generated at build time)
         downloaded_images = {}
         
         for size_name, size_pixels in self.image_sizes.items():
@@ -1522,7 +1525,7 @@ class ArtistImageManager(ImageManager):
                 # Download image
                 if self.download_image(sized_url, file_path):
                     downloaded_images[size_name] = file_path
-                    logger.info(f"Downloaded {size_name} artist image for {artist_name} from {source_type}")
+                    logger.info(f"Downloaded {size_name} artist image for {artist_name} from {source_type} (other sizes will be generated at build time)")
                     break  # Success, move to next size
                 else:
                     logger.warning(f"Failed to download {size_name} artist image from {source_type}")

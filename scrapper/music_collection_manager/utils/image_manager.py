@@ -354,7 +354,7 @@ class ImageManager:
                 file_path = release_folder / filename
                 images[size_name] = file_path if file_path.exists() else None
             
-            # Also check for generated sizes (medium, small, avatar) if they exist
+            # Also check for generated sizes (medium, avatar) if they exist
             # These would be generated at build time by the frontend
             for generated_size in ["medium", "avatar"]:
                 filename = f"{sanitized_title}-{discogs_id}-{generated_size}.jpg"
@@ -392,7 +392,7 @@ class ImageManager:
                     logger.error(f"Error cleaning up image file {file_path}: {str(e)}")
         
         # Also check generated sizes
-        for generated_size in ["medium", "small", "avatar"]:
+        for generated_size in ["medium", "avatar"]:
             filename = f"{sanitized_title}-{discogs_id}-{generated_size}.jpg"
             file_path = release_folder / filename
 

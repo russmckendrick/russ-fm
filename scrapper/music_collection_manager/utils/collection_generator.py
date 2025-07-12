@@ -225,9 +225,10 @@ class CollectionGenerator:
         # Check if we have local images
         if hasattr(release, 'local_images') and release.local_images:
             image_uris = {}
+            # Only generate hi-res and medium URIs (medium will be generated at build time)
             for size in ["hi-res", "medium"]:
-                if size in release.local_images and release.local_images[size]:
-                    # Convert absolute path to relative URI
+                if size == "hi-res" and size in release.local_images and release.local_images[size]:
+                    # Convert absolute path to relative URI for hi-res
                     image_path = Path(release.local_images[size])
                     if image_path.exists():
                         # Extract relative path from data_path
@@ -241,12 +242,13 @@ class CollectionGenerator:
                         # Use default path structure
                         image_uris[size] = f"/{self.releases_path}/{release_folder}/{release_folder}-{size}.jpg"
                 else:
-                    # Use default path structure
+                    # Use default path structure (medium will be generated from hi-res)
                     image_uris[size] = f"/{self.releases_path}/{release_folder}/{release_folder}-{size}.jpg"
             return image_uris
         else:
             # Use default path structure
             image_uris = {}
+            # Only reference hi-res and medium (medium generated at build time)
             for size in ["hi-res", "medium"]:
                 image_uris[size] = f"/{self.releases_path}/{release_folder}/{release_folder}-{size}.jpg"
             return image_uris
@@ -257,7 +259,8 @@ class CollectionGenerator:
         artist_path = self.data_path / self.artists_path / artist_folder
         
         image_uris = {}
-        for size in ["hi-res", "medium", "small"]:
+        # Only reference hi-res, medium, and avatar (generated sizes at build time)
+        for size in ["hi-res", "medium", "avatar"]:
             image_uris[size] = f"/{self.artists_path}/{artist_folder}/{artist_folder}-{size}.jpg"
             
         return image_uris
