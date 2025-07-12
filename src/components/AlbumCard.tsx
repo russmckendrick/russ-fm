@@ -168,13 +168,18 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           <h2 className="text-base font-semibold line-clamp-1">{album.release_name}</h2>
           <div className="mt-2 flex flex-wrap gap-1">
             {displayGenres.map((genre, index) => (
-              <Badge 
+              <Link 
                 key={index}
-                variant="secondary"
-                className="text-xs px-2 py-1 bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                to={`/albums/1?genre=${encodeURIComponent(genre)}`}
+                onClick={(e) => e.stopPropagation()}
               >
-                {genre}
-              </Badge>
+                <Badge 
+                  variant="secondary"
+                  className="text-xs px-2 py-1 bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer"
+                >
+                  {genre}
+                </Badge>
+              </Link>
             ))}
             {cleanGenres.length > 2 && (
               <Badge variant="outline" className="text-xs px-2 py-1">

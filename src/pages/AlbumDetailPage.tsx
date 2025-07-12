@@ -510,10 +510,12 @@ export function AlbumDetailPage() {
                   }) : filterGenres(album.genre_names, album.release_artist);
                   
                   return cleanGenres.map((tag, index) => (
-                    <Badge key={index} variant="default">
-                      <Music className="h-3 w-3 mr-1" />
-                      {tag}
-                    </Badge>
+                    <Link key={index} to={`/albums/1?genre=${encodeURIComponent(tag)}`}>
+                      <Badge variant="default" className="cursor-pointer">
+                        <Music className="h-3 w-3 mr-1" />
+                        {tag}
+                      </Badge>
+                    </Link>
                   ));
                 })()}
               </div>
