@@ -1,13 +1,27 @@
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Calendar, MoreHorizontal, Music } from 'lucide-react';
+import { SiLastdotfm } from 'react-icons/si';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
   release_artist: string;
+  artists?: Array<{
+    name: string;
+    uri_artist: string;
+    images_uri_artist: {
+      small: string;
+    };
+  }>;
   genre_names: string[];
   date_release_year: string;
+  date_added: string;
   uri_release: string;
   images_uri_release: {
     medium: string;
@@ -22,96 +36,154 @@ interface AlbumCardProps {
 export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const year = new Date(album.date_release_year).getFullYear();
   const cleanGenres = getCleanGenresFromArray(album.genre_names, album.release_artist);
-  const displayGenres = cleanGenres.slice(0, 3);
+  const displayGenres = cleanGenres.slice(0, 2);
 
   const albumPath = album.uri_release.replace('/album/', '').replace('/', '');
+  
+  const firstArtist = album.artists?.[0] || {
+    name: album.release_artist,
+    uri_artist: '',
+    images_uri_artist: { small: '' }
+  };
+  
+  const getArtistInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(word => word[0])
+      .join('')
+      .toUpperCase()
+      .slice(0, 2);
+  };
 
-  if (onClick) {
+  const CardWrapper = ({ children }: { children: React.ReactNode }) => {
+    if (onClick) {
+      return (
+        <Card 
+          className="w-full shadow-none hover:shadow-md transition-shadow cursor-pointer"
+          onClick={onClick}
+        >
+          {children}
+        </Card>
+      );
+    }
     return (
-      <Card 
-        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden h-full flex flex-col"
-        onClick={onClick}
-      >
-      <div className="aspect-square relative overflow-hidden">
-        <img
-          src={album.images_uri_release.medium}
-          alt={album.release_name}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          loading="lazy"
-        />
-      </div>
-      <CardContent className="p-4 flex-1 flex flex-col">
-        <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
-          {album.release_name}
-        </h3>
-        <p className="text-muted-foreground mb-2 line-clamp-1">
-          {album.release_artist}
-        </p>
-        <p className="text-sm text-muted-foreground mb-3">
-          {year}
-        </p>
-        <div className="flex flex-wrap gap-1 mt-auto">
-          {displayGenres.map((genre, index) => (
-            <Badge 
-              key={index} 
-              variant="secondary" 
-              className="text-xs capitalize"
-            >
-              {genre}
-            </Badge>
-          ))}
-          {cleanGenres.length > 3 && (
-            <Badge variant="outline" className="text-xs">
-              +{cleanGenres.length - 3}
-            </Badge>
-          )}
-        </div>
-      </CardContent>
-    </Card>
+      <Link to={`/album/${albumPath}`}>
+        <Card className="w-full shadow-none hover:shadow-md transition-shadow">
+          {children}
+        </Card>
+      </Link>
     );
-  }
+  };
 
   return (
-    <Link to={`/album/${albumPath}`}>
-      <Card 
-        className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden h-full flex flex-col"
-      >
-        <div className="aspect-square relative overflow-hidden">
+    <CardWrapper>
+      <CardHeader className="flex flex-row items-center justify-between py-3 px-4">
+        <div className="flex items-center gap-3">
+          <Avatar className="h-10 w-10">
+            <AvatarImage 
+              src={firstArtist.images_uri_artist.small} 
+              alt={firstArtist.name}
+              className="object-cover"
+            />
+            <AvatarFallback className="text-xs">
+              {getArtistInitials(firstArtist.name)}
+            </AvatarFallback>
+          </Avatar>
+          <div className="flex flex-col gap-0.5">
+            <h6 className="text-sm leading-none font-medium">{album.release_artist}</h6>
+            <span className="text-xs text-muted-foreground">Released: {year}</span>
+          </div>
+        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="h-8 w-8"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const discogsId = album.uri_release.match(/\/(\d+)\//)?.[1];
+                if (discogsId) {
+                  window.open(
+                    `https://scrobbler.russ.fm/embed/${discogsId}/`,
+                    'lastfm-scrobbler',
+                    'width=400,height=600,scrollbars=no,resizable=no'
+                  );
+                }
+              }}
+            >
+              <SiLastdotfm className="mr-2 h-4 w-4" />
+              Scrobble to Last.fm
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (!onClick) {
+                  window.location.href = `/album/${albumPath}`;
+                }
+              }}
+            >
+              <Music className="mr-2 h-4 w-4" />
+              View Album Details
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </CardHeader>
+      <CardContent className="p-0">
+        <div className="relative aspect-square bg-muted border-y">
           <img
             src={album.images_uri_release.medium}
             alt={album.release_name}
-            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+            className="w-full h-full object-cover"
             loading="lazy"
           />
         </div>
-        <CardContent className="p-4 flex-1 flex flex-col">
-          <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
-            {album.release_name}
-          </h3>
-          <p className="text-muted-foreground mb-2 line-clamp-1">
-            {album.release_artist}
-          </p>
-          <p className="text-sm text-muted-foreground mb-3">
-            {year}
-          </p>
-          <div className="flex flex-wrap gap-1 mt-auto">
+        <div className="pt-3 pb-4 px-4">
+          <h2 className="font-semibold line-clamp-1">{album.release_name}</h2>
+          <div className="mt-2 flex flex-wrap gap-1">
             {displayGenres.map((genre, index) => (
-              <Badge 
-                key={index} 
-                variant="secondary" 
-                className="text-xs capitalize"
+              <span 
+                key={index}
+                className="text-sm text-blue-500"
               >
-                {genre.toLowerCase()}
-              </Badge>
+                #{genre.toLowerCase().replace(/[\s,&]+/g, '')}
+              </span>
             ))}
-            {album.genre_names.length > 3 && (
-              <Badge variant="outline" className="text-xs">
-                +{album.genre_names.length - 3}
-              </Badge>
+            {cleanGenres.length > 2 && (
+              <span className="text-sm text-muted-foreground">
+                +{cleanGenres.length - 2} more
+              </span>
             )}
           </div>
-        </CardContent>
-      </Card>
-    </Link>
+        </div>
+      </CardContent>
+      <Separator />
+      <CardFooter className="flex py-2 px-2">
+        <Button 
+          variant="ghost" 
+          className="w-full text-muted-foreground h-9 justify-start"
+          onClick={(e) => {
+            if (!onClick) {
+              e.stopPropagation();
+            }
+          }}
+        >
+          <Calendar className="h-4 w-4 mr-2" />
+          <span className="text-sm">Added {new Date(album.date_added).toLocaleDateString()}</span>
+        </Button>
+      </CardFooter>
+    </CardWrapper>
   );
 }

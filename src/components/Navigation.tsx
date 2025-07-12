@@ -85,6 +85,16 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     Stats
                   </Link>
                   <Link 
+                    to="/genres" 
+                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                      location.pathname === '/genres' 
+                        ? 'text-foreground' 
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    Genres
+                  </Link>
+                  <Link 
                     to="/random" 
                     className={`text-sm font-medium transition-colors hover:text-primary ${
                       location.pathname === '/random' 
@@ -178,6 +188,17 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                     }`}
                   >
                     Stats
+                  </Link>
+                  <Link
+                    to="/genres"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
+                      location.pathname === '/genres'
+                        ? 'text-foreground bg-muted'
+                        : 'text-muted-foreground'
+                    }`}
+                  >
+                    Genres
                   </Link>
                   <Link
                     to="/random"
