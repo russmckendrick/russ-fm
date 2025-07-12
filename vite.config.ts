@@ -53,7 +53,9 @@ function imageProcessingPlugin(): Plugin {
               // Serve the processed image directly from memory
               res.setHeader('Content-Type', 'image/jpeg')
               res.setHeader('Content-Length', processedBuffer.length.toString())
-              res.setHeader('Cache-Control', 'public, max-age=31536000') // Cache for 1 year
+              // In development, use shorter cache or no-cache for easier testing
+              const isDev = process.env.NODE_ENV === 'development'
+              res.setHeader('Cache-Control', isDev ? 'no-cache, no-store, must-revalidate' : 'public, max-age=31536000')
               res.statusCode = 200
               res.end(processedBuffer)
               return

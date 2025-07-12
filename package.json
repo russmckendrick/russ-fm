@@ -10,6 +10,7 @@
     "process-images": "tsx scripts/process-images.js",
     "cleanup-images": "tsx scripts/cleanup-old-images.js",
     "check-corrupted-images": "tsx scripts/check-corrupted-images.js",
+    "clear-cache": "./clear-cache.sh",
     "lint": "eslint .",
     "preview": "vite preview"
   },
