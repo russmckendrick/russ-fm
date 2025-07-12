@@ -392,10 +392,12 @@ export function ArtistDetailPage() {
                   const filteredGenres = getCleanGenresFromArray(allGenres, artistName);
                   
                   return filteredGenres.map((genre, index) => (
-                    <Badge key={index} variant="default">
-                      <Music className="h-3 w-3 mr-1" />
-                      {genre}
-                    </Badge>
+                    <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
+                      <Badge variant="default" className="cursor-pointer">
+                        <Music className="h-3 w-3 mr-1" />
+                        {genre}
+                      </Badge>
+                    </Link>
                   ));
                 })()}
               </div>
