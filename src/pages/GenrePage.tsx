@@ -116,7 +116,9 @@ export function GenrePage() {
     return sortedGenres.map((genreData, index) => {
       // If this genre is focused, show MANY more artists, otherwise normal amounts
       const isFocused = focusedGenre === genreData.genre;
-      const maxArtists = isFocused ? 50 : (index === 0 ? 12 : index < 3 ? 8 : 6);
+      const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+      const focusedCount = isMobile ? 25 : 50; // Half as many on mobile
+      const maxArtists = isFocused ? focusedCount : (index === 0 ? 12 : index < 3 ? 8 : 6);
       
       const sortedArtists = Array.from(genreData.artistMap.entries())
         .sort((a, b) => b[1].count - a[1].count)
@@ -224,15 +226,21 @@ export function GenrePage() {
         let angle, radius;
         
         if (isFocused) {
-          // Use entire viewport for focused genre - spread across multiple rings
-          const ring = Math.floor(j / 12); // 12 artists per ring for better distribution
-          const angleInRing = (j % 12) / 12 * 2 * Math.PI;
+          // Mobile-responsive focused view
+          const isMobile = width < 768;
+          const artistsPerRing = isMobile ? 8 : 12; // Fewer per ring on mobile
+          const ring = Math.floor(j / artistsPerRing);
+          const angleInRing = (j % artistsPerRing) / artistsPerRing * 2 * Math.PI;
           angle = angleInRing;
           
-          // Scale radius based on viewport size to use full space
-          const maxRadius = Math.min(width, height) * 0.4; // Use 40% of viewport
-          const ringSpacing = maxRadius / Math.ceil(artistCount / 12); // Dynamic ring spacing
-          radius = clusterRadius + (ring * ringSpacing) + (Math.random() - 0.5) * 30;
+          // Mobile gets smaller radius and tighter spacing
+          const maxRadius = isMobile ? 
+            Math.min(width, height) * 0.25 : // 25% on mobile for more zoom
+            Math.min(width, height) * 0.4;   // 40% on desktop
+          
+          const ringSpacing = maxRadius / Math.ceil(artistCount / artistsPerRing);
+          const randomOffset = isMobile ? 20 : 30; // Less randomness on mobile
+          radius = clusterRadius + (ring * ringSpacing) + (Math.random() - 0.5) * randomOffset;
         } else {
           // Normal circular arrangement
           angle = (j / artistCount) * 2 * Math.PI;
@@ -265,10 +273,14 @@ export function GenrePage() {
       .force('link', d3.forceLink(links).id((d: any) => d.id).distance(120).strength(0.7))
       .force('charge', d3.forceManyBody().strength(-80)) // Gentle repulsion
       .force('collision', d3.forceCollide().radius((d: any) => {
-        // Dynamic collision radius based on artist size
+        // Dynamic collision radius based on artist size and mobile
         if (d.type === 'artist') {
-          const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
-          return size + 10; // Add padding around each artist
+          const isMobile = width < 768;
+          const minSize = isMobile ? 16 : 20;
+          const maxSize = isMobile ? 32 : 40;
+          const multiplier = isMobile ? 2 : 3;
+          const size = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
+          return size + (isMobile ? 8 : 10); // Tighter padding on mobile
         }
         return 60; // Genre nodes
       })) // Dynamic collision radius
@@ -434,8 +446,12 @@ export function GenrePage() {
     // Artist avatar border (no fill, just stroke for definition) - size based on album count
     artistNodes.append('circle')
       .attr('r', (d: any) => {
-        // Size based on album count: min 20, max 40
-        const baseSize = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        // Mobile-responsive sizing
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        const baseSize = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
         return baseSize;
       })
       .attr('fill', 'none')
@@ -453,24 +469,46 @@ export function GenrePage() {
       .append('circle')
       .attr('cx', 0)
       .attr('cy', 0)
-      .attr('r', (d: any) => Math.max(20, Math.min(40, 18 + (d.albumCount * 3))));
+      .attr('r', (d: any) => {
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        return Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
+      });
 
     artistNodes.append('image')
       .attr('href', d => d.avatar || '')
       .attr('x', (d: any) => {
-        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
-        return -(size + 10); // Image slightly larger than circle
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        const size = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
+        return -(size + 10);
       })
       .attr('y', (d: any) => {
-        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        const size = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
         return -(size + 10);
       })
       .attr('width', (d: any) => {
-        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        const size = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
         return (size + 10) * 2;
       })
       .attr('height', (d: any) => {
-        const size = Math.max(20, Math.min(40, 18 + (d.albumCount * 3)));
+        const isMobile = width < 768;
+        const minSize = isMobile ? 16 : 20;
+        const maxSize = isMobile ? 32 : 40;
+        const multiplier = isMobile ? 2 : 3;
+        const size = Math.max(minSize, Math.min(maxSize, (isMobile ? 14 : 18) + (d.albumCount * multiplier)));
         return (size + 10) * 2;
       })
       .attr('clip-path', (d, i) => `url(#clip-${d.slug})`)
