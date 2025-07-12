@@ -72,7 +72,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
     if (onClick) {
       return (
         <Card 
-          className="w-full shadow-none hover:shadow-md transition-shadow cursor-pointer"
+          className="w-full h-full shadow-none hover:shadow-md transition-shadow cursor-pointer flex flex-col"
           onClick={onClick}
         >
           {children}
@@ -80,8 +80,8 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
       );
     }
     return (
-      <Link to={`/album/${albumPath}`}>
-        <Card className="w-full shadow-none hover:shadow-md transition-shadow">
+      <Link to={`/album/${albumPath}`} className="h-full">
+        <Card className="w-full h-full shadow-none hover:shadow-md transition-shadow flex flex-col">
           {children}
         </Card>
       </Link>
@@ -154,7 +154,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           </DropdownMenuContent>
         </DropdownMenu>
       </CardHeader>
-      <CardContent className="p-0">
+      <CardContent className="p-0 flex-1 flex flex-col">
         <div className="relative aspect-square bg-muted border-y">
           <img
             src={album.images_uri_release.medium}
@@ -163,7 +163,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             loading="lazy"
           />
         </div>
-        <div className="pt-3 pb-4 px-4">
+        <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
           <h2 className="font-semibold line-clamp-1">{album.release_name}</h2>
           <div className="mt-2 flex flex-wrap gap-1">
             {displayGenres.map((genre, index) => (
@@ -182,7 +182,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           </div>
         </div>
       </CardContent>
-      <Separator />
+      <Separator className="mt-auto" />
       <CardFooter className="flex py-2 px-2">
         <Button 
           variant="ghost" 

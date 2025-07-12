@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Users, Music } from 'lucide-react';
-import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { Users } from 'lucide-react';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ArtistCard } from '@/components/ArtistCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -49,6 +49,7 @@ interface Artist {
   genres: string[];
   image: string;
   latestAlbum: string;
+  biography?: string;
 }
 
 interface ArtistsPageProps {
@@ -146,7 +147,7 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
     }
   };
 
-  const processArtists = () => {
+  const processArtists = async () => {
     const artistMap = new Map<string, Artist>();
 
     collection.forEach(album => {
@@ -169,7 +170,8 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
               albumCount: 0,
               genres: [],
               image: artistInfo.images_uri_artist.medium,
-              latestAlbum: album.date_added
+              latestAlbum: album.date_added,
+              biography: undefined
             });
           }
 
@@ -207,7 +209,8 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
             albumCount: 0,
             genres: [],
             image: album.images_uri_artist.medium,
-            latestAlbum: album.date_added
+            latestAlbum: album.date_added,
+            biography: undefined
           });
         }
 
@@ -230,7 +233,38 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
       }
     });
 
-    setArtists(Array.from(artistMap.values()));
+    // Load biographies for artists
+    const artistArray = Array.from(artistMap.values());
+    
+    // Load biographies in parallel for better performance
+    await Promise.allSettled(
+      artistArray.map(async (artist) => {
+        try {
+          // Find an album from this artist that has json_detailed_artist
+          const albumWithArtistData = artist.albums.find(album => 
+            album.artists?.find(a => a.name === artist.name)?.json_detailed_artist
+          );
+          
+          if (albumWithArtistData) {
+            const artistInfo = albumWithArtistData.artists?.find(a => a.name === artist.name);
+            if (artistInfo?.json_detailed_artist) {
+              const response = await fetch(artistInfo.json_detailed_artist);
+              if (response.ok) {
+                const artistData = await response.json();
+                if (artistData.biography) {
+                  artist.biography = artistData.biography.substring(0, 200) + '...';
+                }
+              }
+            }
+          }
+        } catch (error) {
+          // Silently fail - biography is optional
+          console.warn(`Failed to load biography for ${artist.name}:`, error);
+        }
+      })
+    );
+
+    setArtists(artistArray);
   };
 
   const filterAndSortArtists = () => {
@@ -416,47 +450,12 @@ export function ArtistsPage({ searchTerm }: ArtistsPageProps) {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {paginatedArtists.map((artist) => (
-            <Link key={artist.uri} to={artist.uri} className="h-full">
-              <Card className="cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden group h-full flex flex-col">
-                <div className="aspect-square relative overflow-hidden">
-                  <img
-                    src={artist.image}
-                    alt={artist.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                </div>
-                <CardContent className="p-4 flex-1 flex flex-col">
-                  <h3 className="font-semibold text-lg leading-tight mb-2 line-clamp-2">
-                    {artist.name}
-                  </h3>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-3">
-                    <Music className="h-4 w-4" />
-                    <span className="text-sm">
-                      {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
-                    </span>
-                  </div>
-                  <div className="flex flex-wrap gap-1 mt-auto">
-                    {artist.genres.slice(0, 3).map((genre, index) => (
-                      <Badge 
-                        key={index} 
-                        variant="secondary" 
-                        className="text-xs capitalize"
-                      >
-                        {genre.toLowerCase()}
-                      </Badge>
-                    ))}
-                    {artist.genres.length > 3 && (
-                      <Badge variant="outline" className="text-xs">
-                        +{artist.genres.length - 3}
-                      </Badge>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
+            <ArtistCard
+              key={artist.uri}
+              artist={artist}
+            />
           ))}
         </div>
       )}
