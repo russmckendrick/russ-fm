@@ -19,14 +19,18 @@ interface Album {
  * Filters out low-quality genres (all lowercase, starting with numbers)
  */
 export function getCleanGenres(album: Album): string[] {
-  // First priority: Apple Music genreNames
+  // First priority: Apple Music genreNames (filtered)
   if (album.services?.apple_music?.raw_attributes?.genreNames?.length) {
-    return album.services.apple_music.raw_attributes.genreNames;
+    return album.services.apple_music.raw_attributes.genreNames.filter(genre => 
+      genre.toLowerCase() !== 'music'
+    );
   }
   
-  // Second priority: Spotify genres (if they add it in the future)
+  // Second priority: Spotify genres (if they add it in the future, filtered)
   if (album.services?.spotify?.genres?.length) {
-    return album.services.spotify.genres;
+    return album.services.spotify.genres.filter(genre => 
+      genre.toLowerCase() !== 'music'
+    );
   }
   
   // Fallback: filtered genres from main genres array
@@ -48,6 +52,9 @@ export function filterLowQualityGenres(genres: string[], artistName?: string): s
       
       // Skip empty
       if (!trimmed) return false;
+      
+      // Skip generic "Music" genre
+      if (trimmed.toLowerCase() === 'music') return false;
       
       // Skip if all lowercase (indicates low-quality tag)
       if (trimmed === trimmed.toLowerCase()) return false;

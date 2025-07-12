@@ -194,7 +194,7 @@ export function StatsPage() {
       </h1>
 
       {/* Overview Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Albums</CardTitle>
@@ -236,84 +236,8 @@ export function StatsPage() {
         </Card>
       </div>
 
-      {/* Top Artists */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-4">Artists with Most Albums</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.topArtists?.slice(0, 9).map((artist: any, index: number) => (
-            <Link
-              key={index}
-              to={artist.uri}
-              className="block"
-            >
-              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={artist.image} alt={artist.name} />
-                      <AvatarFallback className="text-sm">
-                        {artist.name.charAt(0)}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{artist.name}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Badge variant="secondary">{artist.count} albums</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
-
-      {/* Recent Additions */}
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold mb-4">Recent Additions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.recentAdditions?.map((album: Album, index: number) => (
-            <Link
-              key={index}
-              to={album.uri_release}
-              className="block"
-            >
-              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
-                        src={album.images_uri_release?.avatar || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
-                        alt={album.release_name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = album.images_uri_release?.medium || album.images_uri_release?.['hi-res'] || '';
-                        }}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{album.release_name}</p>
-                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                      <p className="text-xs text-muted-foreground">
-                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
-                          day: '2-digit', 
-                          month: '2-digit', 
-                          year: 'numeric' 
-                        })}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
-
       {/* Charts Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Albums by Decade */}
         <Card>
           <CardHeader>
@@ -326,7 +250,7 @@ export function StatsPage() {
                 <XAxis dataKey="decade" />
                 <YAxis />
                 <Tooltip />
-                <Bar dataKey="count" fill="#8884d8" />
+                <Bar dataKey="count" fill="hsl(var(--primary))" />
               </BarChart>
             </ResponsiveContainer>
           </CardContent>
@@ -390,8 +314,84 @@ export function StatsPage() {
         </Card>
       </div>
 
+      {/* Top Artists */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Artists with Most Albums</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stats.topArtists?.slice(0, 9).map((artist: any, index: number) => (
+            <Link
+              key={index}
+              to={artist.uri}
+              className="block"
+            >
+              <Card variant="interactive">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3">
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={artist.image} alt={artist.name} />
+                      <AvatarFallback className="text-sm">
+                        {artist.name.charAt(0)}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium truncate">{artist.name}</p>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Badge variant="secondary">{artist.count} albums</Badge>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Recent Additions */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Recent Additions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stats.recentAdditions?.map((album: Album, index: number) => (
+            <Link
+              key={index}
+              to={album.uri_release}
+              className="block"
+            >
+              <Card variant="interactive">
+                <CardContent className="p-4">
+                  <div className="flex items-center gap-3">
+                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
+                      <img
+                        src={album.images_uri_release?.avatar || album.images_uri_release?.medium || album.images_uri_release?.['hi-res']}
+                        alt={album.release_name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.src = album.images_uri_release?.medium || album.images_uri_release?.['hi-res'] || '';
+                        }}
+                      />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium truncate">{album.release_name}</p>
+                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
+                      <p className="text-xs text-muted-foreground">
+                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
+                          day: '2-digit', 
+                          month: '2-digit', 
+                          year: 'numeric' 
+                        })}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       {/* Collection Growth */}
-      <Card className="mb-6">
+      <Card className="mb-8">
         <CardHeader>
           <CardTitle>Additions Over Time</CardTitle>
         </CardHeader>
@@ -402,7 +402,7 @@ export function StatsPage() {
               <XAxis dataKey="month" />
               <YAxis />
               <Tooltip />
-              <Bar dataKey="count" fill="#8884d8" />
+              <Bar dataKey="count" fill="hsl(var(--primary))" />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -421,7 +421,7 @@ export function StatsPage() {
               to={album.uri_release}
               className="block"
             >
-              <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card variant="interactive">
                 <CardContent className="p-4">
                   <div className="flex items-center gap-3">
                     <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">

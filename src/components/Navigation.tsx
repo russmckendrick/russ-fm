@@ -41,6 +41,11 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
     setSearchOverlayOpen(false);
   };
 
+  const clearSearch = () => {
+    setSearchTerm('');
+    setSearchOverlayOpen(false);
+  };
+
   return (
     <div className="min-h-0">
       <div className="fixed top-6 inset-x-0 z-50">
@@ -56,53 +61,68 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="hidden md:flex items-center gap-6">
                   <Link 
                     to="/albums/1" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/' || location.pathname.startsWith('/albums') 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Albums
+                    {(location.pathname === '/' || location.pathname.startsWith('/albums')) && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/artists/1" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname.startsWith('/artists') 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Artists
+                    {location.pathname.startsWith('/artists') && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/stats" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/stats' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Stats
+                    {location.pathname === '/stats' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/genres" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/genres' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Genres
+                    {location.pathname === '/genres' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                   <Link 
                     to="/random" 
-                    className={`text-sm font-medium transition-colors hover:text-primary ${
+                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
                       location.pathname === '/random' 
-                        ? 'text-foreground' 
+                        ? 'text-primary font-semibold' 
                         : 'text-muted-foreground'
                     }`}
                   >
                     Random
+                    {location.pathname === '/random' && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
+                    )}
                   </Link>
                 </div>
               </div>
@@ -112,12 +132,22 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="relative hidden md:block">
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
-                    className="pl-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
-                    placeholder="Search albums, artists, or genres..."
+                    className="pl-10 pr-10 flex-1 bg-slate-100/70 dark:bg-slate-800 border-none shadow-none w-[280px] rounded-full"
+                    placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
                   />
+                  {searchTerm && (
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="h-5 w-5 absolute inset-y-0 my-auto right-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"
+                      onClick={clearSearch}
+                    >
+                      <X className="h-3 w-3" />
+                    </Button>
+                  )}
                 </div>
 
                 {/* Desktop Theme Toggle */}
@@ -146,12 +176,22 @@ export function Navigation({ searchTerm, setSearchTerm }: NavigationProps) {
                 <div className="relative">
                   <Search className="h-5 w-5 absolute inset-y-0 my-auto left-2.5" />
                   <Input
-                    className="pl-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
-                    placeholder="Search albums, artists, or genres..."
+                    className="pl-10 pr-10 w-full bg-slate-100/70 dark:bg-slate-800 border-none shadow-none rounded-full"
+                    placeholder="Search albums or artists..."
                     value={searchTerm}
                     onChange={handleSearchChange}
                     onFocus={handleSearchFocus}
                   />
+                  {searchTerm && (
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      className="h-5 w-5 absolute inset-y-0 my-auto right-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"
+                      onClick={clearSearch}
+                    >
+                      <X className="h-3 w-3" />
+                    </Button>
+                  )}
                 </div>
 
                 {/* Mobile Navigation Links */}

@@ -1,4 +1,6 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
+import { X } from 'lucide-react';
 
 interface FilterBarProps {
   sortBy: string;
@@ -21,6 +23,15 @@ export function FilterBar({
   genres,
   years
 }: FilterBarProps) {
+  // Check if any filters are active (not at their default values)
+  const hasActiveFilters = sortBy !== 'date_added' || selectedGenre !== 'all' || selectedYear !== 'all';
+  
+  const clearFilters = () => {
+    setSortBy('date_added');
+    setSelectedGenre('all');
+    setSelectedYear('all');
+  };
+
   return (
     <div className="flex flex-wrap gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
       <div className="flex items-center gap-2">
@@ -71,6 +82,21 @@ export function FilterBar({
           </SelectContent>
         </Select>
       </div>
+
+      {/* Clear Filters Button - only show when filters are active */}
+      {hasActiveFilters && (
+        <div className="flex items-center">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={clearFilters}
+            className="h-8 px-3 text-sm"
+          >
+            <X className="h-3 w-3 mr-1" />
+            Clear Filters
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

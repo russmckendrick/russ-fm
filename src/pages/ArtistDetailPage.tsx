@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
+import { normalizeSigurRosArtistName } from '@/lib/sigurRosNormalizer';
 
 interface Album {
   release_name: string;
@@ -254,7 +256,8 @@ export function ArtistDetailPage() {
     return artist.release_artist;
   };
   
-  const artistName = getArtistName();
+  const rawArtistName = getArtistName();
+  const artistName = normalizeSigurRosArtistName(rawArtistName); // Display name only
   
   // Get the correct artist images for individual artists
   const getArtistImages = () => {
@@ -392,10 +395,17 @@ export function ArtistDetailPage() {
                   const filteredGenres = getCleanGenresFromArray(allGenres, artistName);
                   
                   return filteredGenres.map((genre, index) => (
-                    <Badge key={index} variant="default">
-                      <Music className="h-3 w-3 mr-1" />
-                      {genre}
-                    </Badge>
+                    <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
+                      <Badge 
+                        className="cursor-pointer transition-opacity hover:opacity-80"
+                        style={{
+                          backgroundColor: getGenreColor(genre),
+                          color: getGenreTextColor(getGenreColor(genre))
+                        }}
+                      >
+                        {genre}
+                      </Badge>
+                    </Link>
                   ));
                 })()}
               </div>

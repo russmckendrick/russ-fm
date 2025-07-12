@@ -8,6 +8,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Calendar, MoreHorizontal, Music } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
+import { normalizeSigurRosTitle, normalizeSigurRosArtistName } from '@/lib/sigurRosNormalizer';
 
 interface Album {
   release_name: string;
@@ -36,12 +38,16 @@ interface AlbumCardProps {
 export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const year = new Date(album.date_release_year).getFullYear();
   const cleanGenres = getCleanGenresFromArray(album.genre_names, album.release_artist);
-  const displayGenres = cleanGenres.slice(0, 2);
+  const displayGenres = cleanGenres.slice(0, 4);
+  
+  // Normalize Sigur Rós names for display ONLY (not for paths/URLs)
+  const displayArtistName = normalizeSigurRosArtistName(album.release_artist);
+  const displayAlbumName = normalizeSigurRosTitle(album.release_name, album.release_artist);
 
   const albumPath = album.uri_release.replace('/album/', '').replace('/', '');
   
   const firstArtist = album.artists?.[0] || {
-    name: album.release_artist,
+    name: album.release_artist, // Keep original name for data operations
     uri_artist: '',
     images_uri_artist: { avatar: '' }
   };
@@ -72,7 +78,8 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
     if (onClick) {
       return (
         <Card 
-          className="w-full h-full shadow-none hover:shadow-md transition-shadow cursor-pointer flex flex-col"
+          variant="interactive"
+          className="w-full h-full flex flex-col group"
           onClick={onClick}
         >
           {children}
@@ -81,7 +88,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
     }
     return (
       <Link to={`/album/${albumPath}`} className="h-full">
-        <Card className="w-full h-full shadow-none hover:shadow-md transition-shadow flex flex-col">
+        <Card variant="interactive" className="w-full h-full flex flex-col group">
           {children}
         </Card>
       </Link>
@@ -103,8 +110,11 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-0.5">
-            <h6 className="text-sm leading-none font-medium">{album.release_artist}</h6>
-            <span className="text-xs text-muted-foreground">Released: {year}</span>
+            <h6 className="text-sm leading-none font-medium">{displayArtistName}</h6>
+            <span className="text-xs text-muted-foreground">
+              <Calendar className="h-3 w-3 inline mr-1" />
+              Added: {new Date(album.date_added).toLocaleDateString()}
+            </span>
           </div>
         </div>
         <DropdownMenu>
@@ -155,7 +165,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
         </DropdownMenu>
       </CardHeader>
       <CardContent className="p-0 flex-1 flex flex-col">
-        <div className="relative aspect-square bg-muted border-y">
+        <div className="relative aspect-square bg-muted overflow-hidden">
           <img
             src={album.images_uri_release.medium}
             alt={album.release_name}
@@ -164,39 +174,49 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
           />
         </div>
         <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
-          <h2 className="font-semibold line-clamp-1">{album.release_name}</h2>
-          <div className="mt-2 flex flex-wrap gap-1">
-            {displayGenres.map((genre, index) => (
-              <span 
-                key={index}
-                className="text-sm text-blue-500"
+          <div className="h-12 flex items-start">
+            <h2 className="text-base font-semibold line-clamp-2 leading-tight">{displayAlbumName}</h2>
+          </div>
+          <Separator className="mt-2 mb-2" />
+          <div className="flex flex-wrap gap-1">
+            <Link 
+              to={`/albums/1?year=${year}`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Badge 
+                variant="secondary"
+                size="xs"
+                className="text-xs px-1.5 py-0.5 transition-opacity hover:opacity-80 cursor-pointer"
               >
-                #{genre.toLowerCase().replace(/[\s,&]+/g, '')}
-              </span>
+                {year}
+              </Badge>
+            </Link>
+            {displayGenres.map((genre, index) => (
+              <Link 
+                key={index}
+                to={`/albums/1?genre=${encodeURIComponent(genre)}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Badge 
+                  size="xs"
+                  className="text-xs px-1.5 py-0.5 transition-opacity hover:opacity-80 cursor-pointer"
+                  style={{
+                    backgroundColor: getGenreColor(genre),
+                    color: getGenreTextColor(getGenreColor(genre))
+                  }}
+                >
+                  {genre}
+                </Badge>
+              </Link>
             ))}
-            {cleanGenres.length > 2 && (
-              <span className="text-sm text-muted-foreground">
-                +{cleanGenres.length - 2} more
-              </span>
+            {cleanGenres.length > 4 && (
+              <Badge variant="outline" size="xs" className="text-xs px-1.5 py-0.5">
+                +{cleanGenres.length - 4}
+              </Badge>
             )}
           </div>
         </div>
       </CardContent>
-      <Separator className="mt-auto" />
-      <CardFooter className="flex py-2 px-2">
-        <Button 
-          variant="ghost" 
-          className="w-full text-muted-foreground h-9 justify-start"
-          onClick={(e) => {
-            if (!onClick) {
-              e.stopPropagation();
-            }
-          }}
-        >
-          <Calendar className="h-4 w-4 mr-2" />
-          <span className="text-sm">Added {new Date(album.date_added).toLocaleDateString()}</span>
-        </Button>
-      </CardFooter>
     </CardWrapper>
   );
 }

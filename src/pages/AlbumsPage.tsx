@@ -100,6 +100,17 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
     loadCollection();
   }, []);
 
+  // Listen for URL parameter changes
+  useEffect(() => {
+    const genre = searchParams.get('genre') || 'all';
+    const year = searchParams.get('year') || 'all';
+    const sort = searchParams.get('sort') || 'date_added';
+    
+    setSelectedGenre(genre);
+    setSelectedYear(year);
+    setSortBy(sort);
+  }, [searchParams]);
+
   // Update URL params when filters change
   const updateURLParams = (newParams: Record<string, string>) => {
     const params = new URLSearchParams(searchParams);
@@ -187,7 +198,11 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
   const getAllGenres = () => {
     const genres = new Set<string>();
     collection.forEach(album => {
-      album.genre_names.forEach(genre => genres.add(genre));
+      album.genre_names.forEach(genre => {
+        if (genre.toLowerCase() !== 'music') { // Filter out "Music"
+          genres.add(genre);
+        }
+      });
     });
     return Array.from(genres).sort();
   };

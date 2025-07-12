@@ -15,6 +15,7 @@ export function filterGenres(tags: string[], artistName?: string): string[] {
       return !hasArtistName &&
              !/^\d+s$/.test(lowerTag) && // Decades like 90s, 80s, 70s
              !/^(19|20)\d{2}$/.test(lowerTag) && // Full years like 1985, 2023
+             lowerTag !== 'music' && // Filter out generic "Music" genre
              lowerTag.length > 0; // Remove empty tags
     })
     .map(tag => tag.toLowerCase().trim());

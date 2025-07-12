@@ -1,51 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222.2 84% 4.9%;
-    --muted: 210 40% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
-    --radius: 0.5rem;
+    /* Editorial Modern - Gallery White Theme */
+    --background: 0 0% 97.6%;          /* #F9F9F9 */
+    --foreground: 0 0% 10.2%;          /* #1A1A1A */
+    --card: 0 0% 100%;                 /* #FFFFFF */
+    --card-foreground: 0 0% 10.2%;     /* #1A1A1A */
+    --popover: 0 0% 100%;              /* #FFFFFF */
+    --popover-foreground: 0 0% 10.2%;  /* #1A1A1A */
+    --primary: 211 100% 50%;           /* #007AFF */
+    --primary-foreground: 0 0% 100%;   /* #FFFFFF */
+    --secondary: 0 0% 94.5%;           /* #F1F1F1 */
+    --secondary-foreground: 0 0% 20%;  /* #333333 */
+    --muted: 0 0% 94.5%;               /* #F1F1F1 */
+    --muted-foreground: 0 0% 40%;      /* #666666 */
+    --accent: 0 0% 94.5%;              /* #F1F1F1 */
+    --accent-foreground: 0 0% 10.2%;   /* #1A1A1A */
+    --destructive: 0 84.2% 60.2%;      /* #EF4444 */
+    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+    --border: 0 0% 91.8%;              /* #EAEAEA */
+    --input: 0 0% 91.8%;               /* #EAEAEA */
+    --ring: 211 100% 50%;              /* #007AFF */
+    --radius: 0.75rem;                 /* 12px for more modern look */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 94.1%;
+    /* Editorial Modern - Studio Black Theme */
+    --background: 0 0% 7.1%;           /* #121212 */
+    --foreground: 0 0% 94.5%;          /* #F1F1F1 */
+    --card: 0 0% 11.8%;                /* #1E1E1E */
+    --card-foreground: 0 0% 94.5%;     /* #F1F1F1 */
+    --popover: 0 0% 11.8%;             /* #1E1E1E */
+    --popover-foreground: 0 0% 94.5%;  /* #F1F1F1 */
+    --primary: 211 100% 52.2%;         /* #0A84FF */
+    --primary-foreground: 0 0% 100%;   /* #FFFFFF */
+    --secondary: 0 0% 16.5%;           /* #2A2A2A */
+    --secondary-foreground: 0 0% 88.2%; /* #E1E1E1 */
+    --muted: 0 0% 16.5%;               /* #2A2A2A */
+    --muted-foreground: 0 0% 63.1%;    /* #A1A1A1 */
+    --accent: 0 0% 16.5%;              /* #2A2A2A */
+    --accent-foreground: 0 0% 94.5%;   /* #F1F1F1 */
+    --destructive: 0 83.8% 71.8%;      /* #F87171 */
+    --destructive-foreground: 0 0% 7.1%; /* #121212 */
+    --border: 0 0% 17.6%;              /* #2D2D2D */
+    --input: 0 0% 17.6%;               /* #2D2D2D */
+    --ring: 211 100% 52.2%;            /* #0A84FF */
   }
 }
 
@@ -55,12 +59,113 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Editorial Modern Typography System */
+  h1, .text-h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+  
+  h2, .text-h2 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  
+  h3, .text-h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  h4, .text-h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  
+  .text-body {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .text-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+    line-height: 1.4;
   }
 }
 
 @layer utilities {
   .animate-spin-slow {
     animation: spin 8s linear infinite;
+  }
+}
+
+@layer components {
+  /* Editorial Modern Component Styling */
+  .card-modern {
+    @apply rounded-xl border bg-card text-card-foreground shadow-sm;
+    @apply transition-all duration-200 ease-in-out;
+    @apply hover:scale-[1.02] hover:border-primary hover:shadow-lg;
+  }
+  
+  .card-grid {
+    @apply p-4 transition-all duration-200;
+  }
+  
+  .card-detail {
+    @apply p-8 transition-all duration-200;
+  }
+  
+  /* Bento Grid System */
+  .bento-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  
+  .bento-item-wide {
+    grid-column: span 2;
+  }
+  
+  .bento-item-tall {
+    grid-row: span 2;
+  }
+  
+  .bento-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .bento-item-hero {
+    grid-column: 1 / -1;
+  }
+  
+  /* Responsive Bento Grid */
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
