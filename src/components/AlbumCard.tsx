@@ -4,7 +4,9 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Calendar, MoreHorizontal } from 'lucide-react';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Calendar, MoreHorizontal, Music } from 'lucide-react';
+import { SiLastdotfm } from 'react-icons/si';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
@@ -92,17 +94,52 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             <span className="text-xs text-muted-foreground">Released: {year}</span>
           </div>
         </div>
-        <Button 
-          variant="ghost" 
-          size="icon"
-          className="h-8 w-8"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          }}
-        >
-          <MoreHorizontal className="h-4 w-4" />
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              className="h-8 w-8"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const discogsId = album.uri_release.match(/\/(\d+)\//)?.[1];
+                if (discogsId) {
+                  window.open(
+                    `https://scrobbler.russ.fm/embed/${discogsId}/`,
+                    'lastfm-scrobbler',
+                    'width=400,height=600,scrollbars=no,resizable=no'
+                  );
+                }
+              }}
+            >
+              <SiLastdotfm className="mr-2 h-4 w-4" />
+              Scrobble to Last.fm
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                if (!onClick) {
+                  window.location.href = `/album/${albumPath}`;
+                }
+              }}
+            >
+              <Music className="mr-2 h-4 w-4" />
+              View Album Details
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </CardHeader>
       <CardContent className="p-0">
         <div className="relative aspect-square bg-muted border-y">
