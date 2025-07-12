@@ -113,8 +113,8 @@ export function GenrePage() {
       .slice(0, 8);
     
     return sortedGenres.map((genreData, index) => {
-      // More popular genres get more artists (4-8 artists based on rank)
-      const maxArtists = index === 0 ? 8 : index < 3 ? 6 : 4;
+      // More popular genres get more artists (6-12 artists based on rank)
+      const maxArtists = index === 0 ? 12 : index < 3 ? 8 : 6;
       
       const sortedArtists = Array.from(genreData.artistMap.entries())
         .sort((a, b) => b[1].count - a[1].count)
@@ -383,12 +383,12 @@ export function GenrePage() {
 
     artistNodes.append('image')
       .attr('href', d => d.avatar || '')
-      .attr('x', -28)
-      .attr('y', -28)
-      .attr('width', 56)
-      .attr('height', 56)
+      .attr('x', -35)
+      .attr('y', -35)
+      .attr('width', 70)
+      .attr('height', 70)
       .attr('clip-path', (d, i) => `url(#clip-${d.slug})`)
-      .style('object-fit', 'cover')
+      .attr('preserveAspectRatio', 'xMidYMid slice')
       .on('error', function() {
         // For failed images, add a gray background circle
         d3.select(this.parentNode)
