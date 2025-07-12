@@ -10,6 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { filterGenres } from '@/lib/filterGenres';
 import { getCleanGenres } from '@/lib/genreUtils';
+import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
 
 interface Album {
   release_name: string;
@@ -511,8 +512,13 @@ export function AlbumDetailPage() {
                   
                   return cleanGenres.map((tag, index) => (
                     <Link key={index} to={`/albums/1?genre=${encodeURIComponent(tag)}`}>
-                      <Badge variant="default" className="cursor-pointer">
-                        <Music className="h-3 w-3 mr-1" />
+                      <Badge 
+                        className="cursor-pointer transition-opacity hover:opacity-80"
+                        style={{
+                          backgroundColor: getGenreColor(tag),
+                          color: getGenreTextColor(getGenreColor(tag))
+                        }}
+                      >
                         {tag}
                       </Badge>
                     </Link>

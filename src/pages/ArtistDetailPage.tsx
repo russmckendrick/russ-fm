@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
 
 interface Album {
   release_name: string;
@@ -393,8 +394,13 @@ export function ArtistDetailPage() {
                   
                   return filteredGenres.map((genre, index) => (
                     <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                      <Badge variant="default" className="cursor-pointer">
-                        <Music className="h-3 w-3 mr-1" />
+                      <Badge 
+                        className="cursor-pointer transition-opacity hover:opacity-80"
+                        style={{
+                          backgroundColor: getGenreColor(genre),
+                          color: getGenreTextColor(getGenreColor(genre))
+                        }}
+                      >
                         {genre}
                       </Badge>
                     </Link>
