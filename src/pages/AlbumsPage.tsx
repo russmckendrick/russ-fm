@@ -100,6 +100,17 @@ export function AlbumsPage({ searchTerm }: AlbumsPageProps) {
     loadCollection();
   }, []);
 
+  // Listen for URL parameter changes
+  useEffect(() => {
+    const genre = searchParams.get('genre') || 'all';
+    const year = searchParams.get('year') || 'all';
+    const sort = searchParams.get('sort') || 'date_added';
+    
+    setSelectedGenre(genre);
+    setSelectedYear(year);
+    setSortBy(sort);
+  }, [searchParams]);
+
   // Update URL params when filters change
   const updateURLParams = (newParams: Record<string, string>) => {
     const params = new URLSearchParams(searchParams);
