@@ -15,6 +15,7 @@ interface Album {
   uri_release: string;
   images_uri_release: {
     medium: string;
+    avatar?: string;
   };
 }
 
@@ -74,7 +75,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
                 >
                   <Avatar className="h-8 w-8 cursor-pointer">
                     <AvatarImage 
-                      src={album.images_uri_release.medium} 
+                      src={album.images_uri_release.avatar || album.images_uri_release.medium.replace('-medium.jpg', '-avatar.jpg')} 
                       alt={album.release_name}
                       className="object-cover"
                     />
