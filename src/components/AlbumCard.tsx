@@ -9,6 +9,7 @@ import { Calendar, MoreHorizontal, Music } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
+import { normalizeSigurRosTitle, normalizeSigurRosArtistName } from '@/lib/sigurRosNormalizer';
 
 interface Album {
   release_name: string;
@@ -38,11 +39,15 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const year = new Date(album.date_release_year).getFullYear();
   const cleanGenres = getCleanGenresFromArray(album.genre_names, album.release_artist);
   const displayGenres = cleanGenres.slice(0, 4);
+  
+  // Normalize Sigur Rós names for display ONLY (not for paths/URLs)
+  const displayArtistName = normalizeSigurRosArtistName(album.release_artist);
+  const displayAlbumName = normalizeSigurRosTitle(album.release_name, album.release_artist);
 
   const albumPath = album.uri_release.replace('/album/', '').replace('/', '');
   
   const firstArtist = album.artists?.[0] || {
-    name: album.release_artist,
+    name: album.release_artist, // Keep original name for data operations
     uri_artist: '',
     images_uri_artist: { avatar: '' }
   };
@@ -105,7 +110,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             </AvatarFallback>
           </Avatar>
           <div className="flex flex-col gap-0.5">
-            <h6 className="text-sm leading-none font-medium">{album.release_artist}</h6>
+            <h6 className="text-sm leading-none font-medium">{displayArtistName}</h6>
             <span className="text-xs text-muted-foreground">
               <Calendar className="h-3 w-3 inline mr-1" />
               Added: {new Date(album.date_added).toLocaleDateString()}
@@ -170,7 +175,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
         </div>
         <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
           <div className="h-12 flex items-start">
-            <h2 className="text-base font-semibold line-clamp-2 leading-tight">{album.release_name}</h2>
+            <h2 className="text-base font-semibold line-clamp-2 leading-tight">{displayAlbumName}</h2>
           </div>
           <Separator className="mt-2 mb-2" />
           <div className="flex flex-wrap gap-1">

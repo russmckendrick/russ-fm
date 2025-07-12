@@ -10,6 +10,7 @@ import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
+import { normalizeSigurRosArtistName } from '@/lib/sigurRosNormalizer';
 
 interface Album {
   release_name: string;
@@ -255,7 +256,8 @@ export function ArtistDetailPage() {
     return artist.release_artist;
   };
   
-  const artistName = getArtistName();
+  const rawArtistName = getArtistName();
+  const artistName = normalizeSigurRosArtistName(rawArtistName); // Display name only
   
   // Get the correct artist images for individual artists
   const getArtistImages = () => {
