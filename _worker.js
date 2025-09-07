@@ -23,7 +23,18 @@ export default {
 
     // Handle preflight requests
     if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: responseCorsHeaders });
+      // For API endpoints, use restricted CORS
+      if (path.startsWith('/api/')) {
+        return new Response(null, { headers: responseCorsHeaders });
+      }
+      
+      // For static assets, use permissive CORS
+      const staticCorsHeaders = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      };
+      return new Response(null, { headers: staticCorsHeaders });
     }
 
     // Route scrobbling API requests (proven pattern)
