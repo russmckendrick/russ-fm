@@ -34,4 +34,4 @@ vars = { ENVIRONMENT = "preview", ALLOWED_ORIGINS_STRING = "http://localhost:517
 
 # Production environment configuration  
 [env.production]
-vars = { ENVIRONMENT = "production", ALLOWED_ORIGINS_STRING = https://russ.fm,https://preview.russ.fm,http://localhost:5173,http://localhost:5174,https://russ.social,https://www.russ.social }
+vars = { ENVIRONMENT = "production", ALLOWED_ORIGINS_STRING = "https://russ.fm,https://preview.russ.fm,http://localhost:5173,http://localhost:5174,https://russ.social,https://www.russ.social" }
