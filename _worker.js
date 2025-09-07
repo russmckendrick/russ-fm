@@ -45,8 +45,10 @@ export default {
       return response;
     }
 
-    // Existing static asset serving (unchanged)
-    return handleStaticAssets(request, env);
+    // Static asset serving with CORS headers
+    const response = await handleStaticAssets(request, env);
+    applyCorsHeaders(response, responseCorsHeaders);
+    return response;
   }
 };
 
