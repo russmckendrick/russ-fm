@@ -47,7 +47,15 @@ export default {
 
     // Static asset serving with CORS headers
     const response = await handleStaticAssets(request, env);
-    applyCorsHeaders(response, responseCorsHeaders);
+    
+    // For static assets, use permissive CORS to allow any origin
+    const staticCorsHeaders = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    };
+    
+    applyCorsHeaders(response, staticCorsHeaders);
     return response;
   }
 };
