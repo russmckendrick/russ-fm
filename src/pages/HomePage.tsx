@@ -17,7 +17,8 @@ export function HomePage() {
   const [recentAlbums, setRecentAlbums] = useState<Album[]>([]);
   const [recentArtists, setRecentArtists] = useState<Artist[]>([]);
   const [featuredIndex, setFeaturedIndex] = useState(0);
-  const [randomizedGenreAlbums, setRandomizedGenreAlbums] = useState<Record<string, Album>>({});
+  const [randomizedGenreAlbums, setRandomizedGenreAlbums] = useState<Record<string, Album[]>>({});
+  const [randomizedGenres, setRandomizedGenres] = useState<[string, number][]>([]);
   const [randomCollectionItems, setRandomCollectionItems] = useState<Album[]>([]);
   const [randomArtists, setRandomArtists] = useState<Artist[]>([]);
   const [colorPalettes, setColorPalettes] = useState<Record<string, ColorPalette>>({});
@@ -132,14 +133,27 @@ export function HomePage() {
           configDisplayCount: appConfig.homepage.randomArtists.displayCount
         });
 
-        // Pre-randomize genre representative albums (only once on load)
-        const genreAlbumMap: Record<string, Album> = {};
+        // Randomize genre selection and albums
+        const allGenres = Object.entries(genreCounts)
+          .filter(([, count]) => count >= 4) // Only include genres with 4+ albums
+          .sort(([,a], [,b]) => b - a); // Sort by count first
 
-        // Randomize genre albums
-        Object.entries(genreCounts).forEach(([genre]) => {
+        // Take a random selection of 6 genres from genres with 4+ albums
+        const shuffledGenres = [...allGenres].sort(() => Math.random() - 0.5);
+        const selectedGenres = shuffledGenres.slice(0, 6);
+
+        setRandomizedGenres(selectedGenres);
+
+        // Pre-randomize genre representative albums for selected genres
+        const genreAlbumMap: Record<string, Album[]> = {};
+
+        // Randomize genre albums - provide multiple albums per genre for 2x2 grid
+        selectedGenres.forEach(([genre]) => {
           const genreAlbums = data.filter(album => album.genre_names.includes(genre));
           if (genreAlbums.length > 0) {
-            genreAlbumMap[genre] = genreAlbums[Math.floor(Math.random() * genreAlbums.length)];
+            // Shuffle and take up to 4 albums for the 2x2 grid
+            const shuffledGenreAlbums = [...genreAlbums].sort(() => Math.random() - 0.5);
+            genreAlbumMap[genre] = shuffledGenreAlbums.slice(0, 4);
           }
         });
 
@@ -230,6 +244,49 @@ export function HomePage() {
     }
   };
 
+  // Function to refresh genre albums and selection
+  const refreshGenreAlbums = () => {
+    if (albums.length > 0) {
+      // Calculate genre counts
+      const genreCounts = albums.reduce((acc, album) => {
+        album.genre_names.forEach(genre => {
+          acc[genre] = (acc[genre] || 0) + 1;
+        });
+        return acc;
+      }, {} as Record<string, number>);
+
+      // Randomize genre selection
+      const allGenres = Object.entries(genreCounts)
+        .filter(([, count]) => count >= 4) // Only include genres with 4+ albums
+        .sort(([,a], [,b]) => b - a); // Sort by count first
+
+      // Take a random selection of 6 genres from genres with 4+ albums
+      const shuffledGenres = [...allGenres].sort(() => Math.random() - 0.5);
+      const selectedGenres = shuffledGenres.slice(0, 6);
+
+      setRandomizedGenres(selectedGenres);
+
+      // Generate new randomized genre albums for selected genres
+      const genreAlbumMap: Record<string, Album[]> = {};
+      selectedGenres.forEach(([genre]) => {
+        const genreAlbums = albums.filter(album => album.genre_names.includes(genre));
+        if (genreAlbums.length > 0) {
+          // Shuffle and take up to 4 albums for the 2x2 grid
+          const shuffledGenreAlbums = [...genreAlbums].sort(() => Math.random() - 0.5);
+          genreAlbumMap[genre] = shuffledGenreAlbums.slice(0, 4);
+        }
+      });
+
+      setRandomizedGenreAlbums(genreAlbumMap);
+      console.log('HomePage: Refreshed genres and albums:', {
+        selectedGenres: selectedGenres.map(([genre]) => genre),
+        genreCount: Object.keys(genreAlbumMap).length,
+        firstGenre: Object.keys(genreAlbumMap)[0],
+        firstGenreAlbums: Object.values(genreAlbumMap)[0]
+      });
+    }
+  };
+
   const featuredAlbums = recentAlbums.slice(0, appConfig.homepage.hero.numberOfFeaturedAlbums);
   const currentFeatured = featuredAlbums[featuredIndex];
   const currentPalette = currentFeatured ? colorPalettes[currentFeatured.uri_release] : null;
@@ -261,8 +318,9 @@ export function HomePage() {
     recentArtists: () => <RecentArtistsSection recentArtists={recentArtists} />,
     genres: () => (
       <GenresSection
-        topGenres={topGenres}
+        topGenres={randomizedGenres}
         randomizedGenreAlbums={randomizedGenreAlbums}
+        onRefresh={refreshGenreAlbums}
       />
     ),
     randomCollection: () => (
