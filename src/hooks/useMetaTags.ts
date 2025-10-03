@@ -112,6 +112,16 @@ export function useMetaTags(tags: MetaTags) {
         metaElements.push(ogUrl);
       }
       ogUrl.setAttribute('content', tags.url);
+
+      // Twitter URL
+      let twitterUrl = document.querySelector('meta[name="twitter:url"]') as HTMLMetaElement;
+      if (!twitterUrl) {
+        twitterUrl = document.createElement('meta');
+        twitterUrl.setAttribute('name', 'twitter:url');
+        document.head.appendChild(twitterUrl);
+        metaElements.push(twitterUrl);
+      }
+      twitterUrl.setAttribute('content', tags.url);
     }
 
     // Set type
