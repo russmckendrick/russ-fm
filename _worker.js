@@ -101,7 +101,7 @@ async function handleStaticAssets(request, env) {
 
       // If it's a scraper and an album/artist page, inject meta tags
       if (isScraper && (pathname.startsWith('/album/') || pathname.startsWith('/artist/'))) {
-        const htmlWithMeta = await injectMetaTags(pathname, indexResponse, env, url);
+        const htmlWithMeta = await injectMetaTags(pathname, indexResponse, env, url, request);
         if (htmlWithMeta) {
           return new Response(htmlWithMeta, {
             status: 200,
@@ -130,7 +130,7 @@ async function handleStaticAssets(request, env) {
   return response;
 }
 
-async function injectMetaTags(pathname, indexResponse, env, url) {
+async function injectMetaTags(pathname, indexResponse, env, url, request) {
   try {
     const html = await indexResponse.text();
     const isAlbum = pathname.startsWith('/album/');
