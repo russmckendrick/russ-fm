@@ -41,6 +41,30 @@ export function getArtistAvatarUrl(artistSlug: string): string {
 }
 
 /**
+ * Get album OG image URL (for social media sharing)
+ * Always returns absolute URL for OG/Twitter meta tags
+ */
+export function getAlbumOGImageUrl(albumSlug: string): string {
+  const imagePath = `album/${albumSlug}/og-image.png`;
+  // For OG tags, always use absolute URL
+  // In production, use CDN; in dev, use production CDN (social crawlers can't access localhost)
+  const baseUrl = appConfig.assets.baseUrl || 'https://assets.russ.fm';
+  return `${baseUrl}/${imagePath}`;
+}
+
+/**
+ * Get artist OG image URL (for social media sharing)
+ * Always returns absolute URL for OG/Twitter meta tags
+ */
+export function getArtistOGImageUrl(artistSlug: string): string {
+  const imagePath = `artist/${artistSlug}/og-image.png`;
+  // For OG tags, always use absolute URL
+  // In production, use CDN; in dev, use production CDN (social crawlers can't access localhost)
+  const baseUrl = appConfig.assets.baseUrl || 'https://assets.russ.fm';
+  return `${baseUrl}/${imagePath}`;
+}
+
+/**
  * Generate responsive srcSet for album images
  */
 export function getAlbumImageSrcSet(albumSlug: string): string {

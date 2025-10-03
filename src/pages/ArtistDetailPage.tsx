@@ -8,10 +8,12 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
-import { getArtistImageFromData, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
+import { getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
+import { appConfig } from '@/config/app.config';
 
 interface Album {
   release_name: string;
@@ -142,11 +144,22 @@ export function ArtistDetailPage() {
   }, [artistPath, navigate]);
 
   // Set page title based on artist data
-  const pageTitle = artistData 
+  const pageTitle = artistData
     ? `${artistData.name} - ${albums.length} Album${albums.length !== 1 ? 's' : ''} | Russ.fm`
     : 'Loading Artist... | Russ.fm';
-  
+
   usePageTitle(pageTitle);
+
+  // Set meta tags for social media sharing
+  useMetaTags({
+    title: pageTitle,
+    description: artistData
+      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}... ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
+      : 'View artist details on Russ.fm',
+    image: artistPath ? getArtistOGImageUrl(artistPath) : undefined,
+    url: `${appConfig.siteUrl}/artist/${artistPath}`,
+    type: 'music.musician'
+  });
 
   const loadArtistData = useCallback(async () => {
     try {

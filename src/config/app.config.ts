@@ -45,6 +45,9 @@ export const appConfig = {
     ],
   },
   
+  // Site URL
+  siteUrl: 'https://russ.fm',
+
   // Asset configuration for images
   assets: {
     baseUrl: import.meta.env.PROD ? 'https://assets.russ.fm' : '',

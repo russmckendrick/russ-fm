@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useMetaTags } from '@/hooks/useMetaTags';
 import { 
   BarChart, 
   Bar, 
@@ -19,6 +20,7 @@ import {
 import { Disc, Music, TrendingUp, Users, Clock } from 'lucide-react';
 import { filterGenres } from '@/lib/filterGenres';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
+import { appConfig } from '@/config/app.config';
 
 interface Album {
   release_name: string;
@@ -83,6 +85,17 @@ export function StatsPage() {
   const [stats, setStats] = useState<CollectionStats>({} as CollectionStats);
 
   usePageTitle('Collection Statistics | Russ.fm');
+
+  // Set meta tags for social media sharing
+  useMetaTags({
+    title: 'Collection Statistics | Russ.fm',
+    description: stats.totalAlbums
+      ? `${stats.totalAlbums} albums across ${stats.totalGenres} genres by ${stats.totalArtists} artists. Explore my music collection statistics.`
+      : 'Explore comprehensive statistics about my vinyl and music collection on Russ.fm',
+    image: `${appConfig.siteUrl}/og-image.png`,
+    url: `${appConfig.siteUrl}/stats`,
+    type: 'website'
+  });
 
 
   const calculateStats = useCallback((data: Album[]) => {

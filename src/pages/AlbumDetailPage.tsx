@@ -8,15 +8,17 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useMetaTags } from '@/hooks/useMetaTags';
 import { filterGenres } from '@/lib/filterGenres';
 import { getCleanGenres } from '@/lib/genreUtils';
 import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
-import { getAlbumImageFromData, getArtistImageFromData, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistImageFromData, getAlbumOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
 import { sanitizeFolderName, normalizeSigurRosTitle } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { createAlbumGradient, createAlbumShadow, createGlowGradient, createColorBleeding, getReadableTextColor, getEnhancedTextColor, generateColorProperties, createHeroBackground } from '@/lib/color-utils';
+import { appConfig } from '@/config/app.config';
 
 interface Album {
   release_name: string;
@@ -226,15 +228,26 @@ export function AlbumDetailPage() {
   }, [albumPath, navigate]);
 
   // Set page title based on album data
-  const pageTitle = detailedAlbum 
+  const pageTitle = detailedAlbum
     ? `${detailedAlbum.title} by ${
-        album?.artists && album.artists.length > 1 
+        album?.artists && album.artists.length > 1
           ? album.artists.map(artist => artist.name).join(' & ')
           : album?.release_artist || 'Unknown Artist'
       } | Russ.fm`
     : 'Loading Album... | Russ.fm';
-  
+
   usePageTitle(pageTitle);
+
+  // Set meta tags for social media sharing
+  useMetaTags({
+    title: pageTitle,
+    description: detailedAlbum
+      ? `${detailedAlbum.title} by ${album?.release_artist || 'Unknown Artist'} (${detailedAlbum.year}). ${detailedAlbum.genres?.slice(0, 3).join(', ')}.`
+      : 'View album details on Russ.fm',
+    image: albumPath ? getAlbumOGImageUrl(albumPath) : undefined,
+    url: `${appConfig.siteUrl}/album/${albumPath}`,
+    type: 'music.album'
+  });
 
   const loadAlbumData = useCallback(async () => {
     try {
