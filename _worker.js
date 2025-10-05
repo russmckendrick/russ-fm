@@ -95,12 +95,8 @@ async function handleStaticAssets(request, env) {
     const indexResponse = await env.ASSETS.fetch(indexRequest);
 
     if (indexResponse.ok) {
-      // Check if this is a social media scraper
-      const userAgent = request.headers.get('user-agent') || '';
-      const isScraper = /facebookexternalhit|twitterbot|linkedinbot|slackbot|whatsapp|telegrambot|discordbot/i.test(userAgent);
-
-      // If it's a scraper and an album/artist page, inject meta tags
-      if (isScraper && (pathname.startsWith('/album/') || pathname.startsWith('/artist/'))) {
+      // Inject meta tags for all album/artist pages
+      if (pathname.startsWith('/album/') || pathname.startsWith('/artist/')) {
         const htmlWithMeta = await injectMetaTags(pathname, indexResponse, env, url, request);
         if (htmlWithMeta) {
           return new Response(htmlWithMeta, {
@@ -150,8 +146,9 @@ async function injectMetaTags(pathname, indexResponse, env, url, request) {
       if (!jsonResponse.ok) return null;
 
       data = await jsonResponse.json();
-      title = `${data.title} by ${data.artist} | Russ.fm`;
-      description = `${data.title} by ${data.artist} (${data.year}). ${data.genres?.slice(0, 3).join(', ') || ''}.`;
+      const artistName = data.artists?.[0]?.name || 'Unknown Artist';
+      title = `${data.title} by ${artistName} | Russ.fm`;
+      description = `${data.title} by ${artistName} (${data.year}). ${data.genres?.slice(0, 3).join(', ') || ''}.`;
       imageUrl = `https://assets.russ.fm/album/${slug}/og-image.png`;
       ogType = 'music.album';
     } else {
