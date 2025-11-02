@@ -87,7 +87,7 @@ async function handleAlbumScrobble(request, env) {
       if (!track.title) continue;
       
       const scrobbleResult = await scrobbleTrack({
-        artist,
+        artist: track.artist || artist, // Use track artist for compilations, fallback to album artist
         track: track.title,
         album,
         timestamp: currentTimestamp

@@ -20,7 +20,7 @@ export interface ScrobbleRequest {
 export interface AlbumScrobbleRequest {
   artist: string;
   album: string;
-  tracks: { title: string }[];
+  tracks: { title: string; artist?: string }[];
 }
 
 export interface ScrobbleResult {

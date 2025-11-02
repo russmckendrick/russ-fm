@@ -806,7 +806,10 @@ export function AlbumDetailPage() {
                 album={{
                   artist: album.release_artist,
                   album: album.release_name,
-                  tracks: tracks.map(track => ({ title: track.name }))
+                  tracks: tracks.map(track => ({
+                    title: track.name,
+                    artist: track.artists?.[0]?.name // Use track's artist for compilations
+                  }))
                 }}
                 fullWidth={true}
                 size="lg"
