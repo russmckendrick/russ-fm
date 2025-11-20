@@ -42,6 +42,36 @@ python main.py backup                 # Backup SQLite database
 python main.py status                 # Check processing status
 ```
 
+### Asset Deployment to R2
+```bash
+# Quick sync commands
+npm run build:sync              # Sync all images to Cloudflare R2
+npm run build:sync:dry          # Preview what would be synced (dry run)
+npm run build:generate-sync     # Build project and sync in one command
+
+# Targeted sync options
+node scripts/sync-to-r2.js --type album                    # Sync only album images
+node scripts/sync-to-r2.js --type artist                   # Sync only artist images
+node scripts/sync-to-r2.js --size hi-res                   # Sync only hi-res images
+node scripts/sync-to-r2.js --size medium                   # Sync only medium images
+node scripts/sync-to-r2.js --filter "album-slug-pattern"   # Sync specific album/artist
+node scripts/sync-to-r2.js --force                         # Overwrite existing files
+
+# R2 utilities
+npm run r2:list                # List all files in R2 bucket
+npm run r2:clean --confirm     # Clean up orphaned files in R2
+```
+
+**Environment Setup for R2:**
+Ensure `.env` file contains:
+```bash
+R2_ACCOUNT_ID=your-account-id
+R2_ACCESS_KEY_ID=your-access-key
+R2_SECRET_ACCESS_KEY=your-secret-key
+R2_BUCKET_NAME=russ-fm-assets
+R2_PUBLIC_DOMAIN=https://assets.russ.fm
+```
+
 ## High-Level Architecture
 
 ### Data Flow Architecture
