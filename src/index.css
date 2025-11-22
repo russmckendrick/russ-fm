@@ -159,6 +159,12 @@
   p {
     @apply leading-relaxed;
   }
+
+  /* Remove focus outlines that appear as borders on hover */
+  a:focus,
+  a:focus-visible {
+    outline: none;
+  }
 }
 
 @layer utilities {

@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -78,110 +77,108 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
       <Link
         to={`/album/${albumPath}`}
         onClick={handleCardClick}
-        className="block h-full relative z-10 focus:outline-none focus-visible:outline-none"
+        className="block h-full relative z-10 focus:outline-none focus-visible:outline-none outline-none"
       >
-        <Card className="h-full !border-0 bg-transparent shadow-none overflow-visible">
-          <CardContent className="p-0 h-full flex flex-col gap-4">
-            {/* Album Cover Container */}
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
-              <img
-                src={getAlbumImageFromData(`/album/${albumPath}/`, 'medium')}
-                alt={album.release_name}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
-                onError={handleImageError}
-              />
+        <div className="h-full flex flex-col gap-4">
+          {/* Album Cover Container */}
+          <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md transition-all duration-500">
+            <img
+              src={getAlbumImageFromData(`/album/${albumPath}/`, 'medium')}
+              alt={album.release_name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+              onError={handleImageError}
+            />
 
-              {/* Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
 
-              {/* Top Right Actions */}
-              <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <DropdownMenu>
-                  <DropdownMenuTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-8 w-8 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md border border-white/10"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                      }}
-                    >
-                      <MoreHorizontal className="h-4 w-4" />
-                    </Button>
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end" className="glass-panel">
-                    <DropdownMenuItem
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        navigate(`/album/${albumPath}`);
-                      }}
-                    >
-                      <SiLastdotfm className="mr-2 h-4 w-4" />
-                      Scrobble to Last.fm
-                    </DropdownMenuItem>
-                    <DropdownMenuItem
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        if (!onClick) {
-                          window.location.href = `/album/${albumPath}`;
-                        }
-                      }}
-                    >
-                      <Music className="mr-2 h-4 w-4" />
-                      View Album Details
-                    </DropdownMenuItem>
-                  </DropdownMenuContent>
-                </DropdownMenu>
-              </div>
-            </div>
 
-            {/* Content Info */}
-            <div className="flex flex-col gap-1 px-1">
-              <h3 className="font-semibold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
-                {displayAlbumName}
-              </h3>
-
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Avatar className="h-5 w-5 border border-border">
-                  <AvatarImage
-                    src={getAvatarUrl(firstArtist)}
-                    alt={firstArtist.name}
-                    className="object-cover"
-                    onError={handleImageError}
-                  />
-                  <AvatarFallback className="text-[10px]">
-                    {getArtistInitials(firstArtist.name)}
-                  </AvatarFallback>
-                </Avatar>
-                <span className="text-sm font-medium line-clamp-1 hover:underline">
-                  {displayArtistName}
-                </span>
-              </div>
-
-              <div className="flex flex-wrap gap-1.5 mt-1">
-                <Badge variant="secondary" className="text-[10px] px-1.5 h-5 bg-secondary/50 backdrop-blur-sm">
-                  {year}
-                </Badge>
-                {displayGenres.map((genre, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="text-[10px] px-1.5 h-5 border-white/10 bg-white/5"
+            {/* Top Right Actions */}
+            <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-8 w-8 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md border border-white/10"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
                   >
-                    {genre}
-                  </Badge>
-                ))}
-              </div>
+                    <MoreHorizontal className="h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="glass-panel">
+                  <DropdownMenuItem
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      navigate(`/album/${albumPath}`);
+                    }}
+                  >
+                    <SiLastdotfm className="mr-2 h-4 w-4" />
+                    Scrobble to Last.fm
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      if (!onClick) {
+                        window.location.href = `/album/${albumPath}`;
+                      }
+                    }}
+                  >
+                    <Music className="mr-2 h-4 w-4" />
+                    View Album Details
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
-          </CardContent>
-        </Card>
-      </Link>
-    </div>
+          </div>
+
+          {/* Content Info */}
+          <div className="flex flex-col gap-1 px-1">
+            <h3 className="font-semibold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
+              {displayAlbumName}
+            </h3>
+
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <Avatar className="h-5 w-5 border border-border">
+                <AvatarImage
+                  src={getAvatarUrl(firstArtist)}
+                  alt={firstArtist.name}
+                  className="object-cover"
+                  onError={handleImageError}
+                />
+                <AvatarFallback className="text-[10px]">
+                  {getArtistInitials(firstArtist.name)}
+                </AvatarFallback>
+              </Avatar>
+              <span className="text-sm font-medium line-clamp-1 hover:underline">
+                {displayArtistName}
+              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              <Badge variant="secondary" className="text-[10px] px-1.5 h-5 bg-secondary/50 backdrop-blur-sm">
+                {year}
+              </Badge>
+              {displayGenres.map((genre, index) => (
+                <Badge
+                  key={index}
+                  variant="outline"
+                  className="text-[10px] px-1.5 h-5 border-white/10 bg-white/5"
+                >
+                  {genre}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Link >
+    </div >
   );
 }
