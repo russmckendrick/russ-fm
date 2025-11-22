@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ListMusic } from 'lucide-react';
-import Barcode from 'react-barcode';
 import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -703,7 +702,8 @@ export function AlbumDetailPage() {
 
         {/* Music Player */}
         {detailedAlbum && (
-          <section className="py-8 border-y border-border/50">
+          <section className="py-12">
+            <h3 className="text-2xl font-bold mb-8">Listen to {detailedAlbum.title}</h3>
             <MusicPlayerSection album={detailedAlbum} />
           </section>
         )}
@@ -801,23 +801,9 @@ export function AlbumDetailPage() {
               <h4 className="font-semibold text-foreground">Identifiers</h4>
               <dl className="space-y-3">
                 {detailedAlbum?.services?.spotify?.external_ids?.upc && (
-                  <div className="space-y-2">
-                    <div className="flex gap-2">
-                      <dt className="w-24 shrink-0 opacity-60">UPC</dt>
-                      <dd className="font-mono text-xs">{detailedAlbum.services.spotify.external_ids.upc}</dd>
-                    </div>
-                    {/* Scannable barcode using react-barcode */}
-                    <div className="ml-24 bg-white p-2 rounded border border-border/20 w-fit">
-                      <Barcode
-                        value={detailedAlbum.services.spotify.external_ids.upc}
-                        format="EAN13"
-                        width={1.5}
-                        height={50}
-                        displayValue={false}
-                        background="#ffffff"
-                        lineColor="#000000"
-                      />
-                    </div>
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">UPC</dt>
+                    <dd className="font-mono text-xs">{detailedAlbum.services.spotify.external_ids.upc}</dd>
                   </div>
                 )}
                 {detailedAlbum?.discogs_id && (

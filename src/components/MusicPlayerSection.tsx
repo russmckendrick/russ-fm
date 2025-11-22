@@ -1,7 +1,6 @@
 import { memo, useMemo, useState, useCallback } from 'react';
-import { Music, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
 import { SiSpotify, SiApplemusic } from 'react-icons/si';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlayerToggle } from './PlayerToggle';
@@ -9,7 +8,20 @@ import { SpotifyEmbed } from './SpotifyEmbed';
 import { AppleMusicEmbed } from './AppleMusicEmbed';
 import { useMusicPlayerPreferences } from '@/hooks/useMusicPlayerPreferences';
 import { cn } from '@/lib/utils';
-import type { DetailedAlbum } from '@/types/album';
+
+interface DetailedAlbum {
+  title: string;
+  artist: string;
+  services?: {
+    spotify?: {
+      id?: string;
+      url?: string;
+    };
+    apple_music?: {
+      url?: string;
+    };
+  };
+}
 
 export interface MusicPlayerSectionProps {
   album: DetailedAlbum;
@@ -39,7 +51,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
   const spotifyData = useMemo(() => {
     const spotify = album.services?.spotify;
     if (!spotify) return null;
-    
+
     return {
       id: spotify.id,
       url: spotify.url,
@@ -50,7 +62,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
   const appleMusicData = useMemo(() => {
     const appleMusic = album.services?.apple_music;
     if (!appleMusic?.url) return null;
-    
+
     return {
       url: appleMusic.url,
       available: true
@@ -68,7 +80,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
   // Set initial active tab based on preferences or availability
   useMemo(() => {
     if (availableServices.length === 0) return;
-    
+
     const preferred = preferences.preferredService;
     if (preferred && availableServices.includes(preferred)) {
       setActiveTab(preferred);
@@ -126,37 +138,22 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
   const hasMultipleServices = availableServices.length > 1;
 
   return (
-    <Card className={className}>
-      <CardHeader>
-        <div className="flex items-center justify-between">
-          <div>
-            <CardTitle className="text-lg flex items-center gap-2">
-              <Music className="h-5 w-5" />
-              Listen to {album.title}
-            </CardTitle>
-            {hasMultipleServices && (
-              <CardDescription>
-                Available on {availableServices.map(s => 
-                  s === 'spotify' ? 'Spotify' : 'Apple Music'
-                ).join(' and ')}
-              </CardDescription>
-            )}
-          </div>
-          {showToggle && (
-            <PlayerToggle
-              isVisible={isVisible}
-              onToggle={togglePlayers}
-              availableServices={availableServices}
-              compact
-            />
-          )}
-        </div>
-      </CardHeader>
-      
-      <CardContent className="space-y-4">
+    <div className={className}>
+      <div className="flex items-center justify-between mb-6">
+        {showToggle && (
+          <PlayerToggle
+            isVisible={isVisible}
+            onToggle={togglePlayers}
+            availableServices={availableServices}
+            compact
+          />
+        )}
+      </div>
+
+      <div className="space-y-4">
         {!isVisible ? null : hasMultipleServices ? (
           <Tabs value={activeTab} onValueChange={handleTabChange}>
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-2 mb-6">
               {availableServices.includes('apple_music') && (
                 <TabsTrigger value="apple_music" className="gap-2">
                   <SiApplemusic className="h-4 w-4 text-red-500" />
@@ -170,9 +167,9 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
                 </TabsTrigger>
               )}
             </TabsList>
-            
+
             {availableServices.includes('apple_music') && appleMusicData && (
-              <TabsContent value="apple_music" className="mt-4">
+              <TabsContent value="apple_music" className="mt-0">
                 <AppleMusicEmbed
                   albumUrl={appleMusicData.url}
                   albumTitle={album.title}
@@ -184,7 +181,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
             )}
 
             {availableServices.includes('spotify') && spotifyData && (
-              <TabsContent value="spotify" className="mt-4">
+              <TabsContent value="spotify" className="mt-0">
                 <SpotifyEmbed
                   albumId={spotifyData.id}
                   albumUrl={spotifyData.url}
@@ -231,8 +228,8 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
             </AlertDescription>
           </Alert>
         )}
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 });
 
@@ -245,22 +242,22 @@ export const MusicPlayerSectionMinimal = memo(function MusicPlayerSectionMinimal
   className
 }: Omit<MusicPlayerSectionProps, 'showToggle' | 'defaultVisible'>) {
   const { preferences } = useMusicPlayerPreferences();
-  
+
   // Extract service data
   const spotifyData = album.services?.spotify;
   const appleMusicData = album.services?.apple_music;
-  
+
   const hasSpotify = !!(spotifyData?.id || spotifyData?.url);
   const hasAppleMusic = !!appleMusicData?.url;
-  
+
   if (!hasSpotify && !hasAppleMusic) {
     return null;
   }
-  
+
   if (!preferences.showPlayers) {
     return null;
   }
-  
+
   return (
     <div className={cn('space-y-4', className)}>
       {hasAppleMusic && appleMusicData && (
