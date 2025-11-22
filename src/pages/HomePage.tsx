@@ -30,7 +30,7 @@ export function HomePage() {
       .then(res => res.json())
       .then((data: Album[]) => {
         setAlbums(data);
-        
+
         // Get recent additions (configurable count + extra for hero rotation)
         const recentCount = Math.max(
           appConfig.homepage.recentlyAdded.displayCount,
@@ -53,7 +53,7 @@ export function HomePage() {
         const recentAlbumIds = new Set(recent.map(album => album.uri_release));
         const nonRecentAlbumsData = data.filter(album => !recentAlbumIds.has(album.uri_release));
         setNonRecentAlbums(nonRecentAlbumsData);
-        
+
         const shuffledAlbums = [...nonRecentAlbumsData].sort(() => Math.random() - 0.5);
         const randomItems = shuffledAlbums.slice(0, appConfig.homepage.randomCollection.displayCount);
         console.log('HomePage: Setting randomCollectionItems:', {
@@ -69,7 +69,7 @@ export function HomePage() {
 
         // Get recently added artists (unique by artist name, sorted by most recent album)
         const artistMap = new Map<string, { album: Album; artist: any }>();
-        
+
         // Sort all albums by date_added (most recent first) and build artist map
         [...data]
           .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
@@ -95,7 +95,7 @@ export function HomePage() {
 
         // Generate random artists excluding recent ones
         const recentArtistNames = new Set(recentArtistsList.map(artist => artist.name));
-        
+
         // Get all unique artists from the collection
         const allArtistsMap = new Map<string, { album: Album; artist: any }>();
         data.forEach(album => {
@@ -136,7 +136,7 @@ export function HomePage() {
         // Randomize genre selection and albums
         const allGenres = Object.entries(genreCounts)
           .filter(([, count]) => count >= 4) // Only include genres with 4+ albums
-          .sort(([,a], [,b]) => b - a); // Sort by count first
+          .sort(([, a], [, b]) => b - a); // Sort by count first
 
         // Take a random selection of 6 genres from genres with 4+ albums
         const shuffledGenres = [...allGenres].sort(() => Math.random() - 0.5);
@@ -159,13 +159,13 @@ export function HomePage() {
 
         setRandomizedGenreAlbums(genreAlbumMap);
         setRandomCollectionItems(randomItems);
-        
+
         // Load pre-generated colors for featured albums (lazy loaded)
         const loadColors = async () => {
           // Set default palettes first for immediate render
           const palettes: Record<string, ColorPalette> = {};
           const featuredAlbums = recent.slice(0, appConfig.homepage.hero.numberOfFeaturedAlbums);
-          
+
           for (const album of featuredAlbums) {
             palettes[album.uri_release] = {
               background: '#1a1a2e',
@@ -174,14 +174,14 @@ export function HomePage() {
               muted: '#666666',
             };
           }
-          
+
           setColorPalettes(palettes);
-          
+
           // Load actual colors in the background
           try {
             const response = await fetch('/album-colors.json');
             const allColors = await response.json();
-            
+
             // Update with actual colors
             const updatedPalettes: Record<string, ColorPalette> = {};
             for (const album of featuredAlbums) {
@@ -191,14 +191,14 @@ export function HomePage() {
                 updatedPalettes[album.uri_release] = palettes[album.uri_release];
               }
             }
-            
+
             setColorPalettes(updatedPalettes);
           } catch (error) {
             console.warn('Failed to load pre-generated colors, using defaults:', error);
             // Keep default palettes already set
           }
         };
-        
+
         loadColors();
       })
       .catch(error => console.error('Error loading collection:', error));
@@ -258,7 +258,7 @@ export function HomePage() {
       // Randomize genre selection
       const allGenres = Object.entries(genreCounts)
         .filter(([, count]) => count >= 4) // Only include genres with 4+ albums
-        .sort(([,a], [,b]) => b - a); // Sort by count first
+        .sort(([, a], [, b]) => b - a); // Sort by count first
 
       // Take a random selection of 6 genres from genres with 4+ albums
       const shuffledGenres = [...allGenres].sort(() => Math.random() - 0.5);
@@ -292,14 +292,14 @@ export function HomePage() {
   const currentPalette = currentFeatured ? colorPalettes[currentFeatured.uri_release] : null;
 
   // Get top genres (calculated from state if albums are loaded)
-  const topGenres = albums.length > 0 
+  const topGenres = albums.length > 0
     ? Object.entries(albums.reduce((acc, album) => {
-        album.genre_names.forEach(genre => {
-          acc[genre] = (acc[genre] || 0) + 1;
-        });
-        return acc;
-      }, {} as Record<string, number>))
-      .sort(([,a], [,b]) => b - a)
+      album.genre_names.forEach(genre => {
+        acc[genre] = (acc[genre] || 0) + 1;
+      });
+      return acc;
+    }, {} as Record<string, number>))
+      .sort(([, a], [, b]) => b - a)
       .slice(0, 6)
     : [];
 
@@ -338,10 +338,18 @@ export function HomePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 space-y-16">
+    <div className="space-y-16">
       {appConfig.homepage.sectionOrder.map((sectionKey, index) => {
         const SectionComponent = sectionComponents[sectionKey as keyof typeof sectionComponents];
-        return SectionComponent ? <div key={sectionKey}>{SectionComponent()}</div> : null;
+        // Hero gets full width, other sections get container
+        if (sectionKey === 'hero') {
+          return SectionComponent ? <div key={sectionKey}>{SectionComponent()}</div> : null;
+        }
+        return SectionComponent ? (
+          <div key={sectionKey} className="container mx-auto px-4">
+            {SectionComponent()}
+          </div>
+        ) : null;
       })}
     </div>
   );

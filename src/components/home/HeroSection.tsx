@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { appConfig } from '@/config/app.config';
 import type { ColorPalette } from '@/lib/colorExtractor';
-import { getReadableTextColor } from '@/lib/color-utils';
+import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
 import type { Album } from '@/types/album';
 
@@ -25,208 +25,187 @@ export function HeroSection({
 }: HeroSectionProps) {
   if (!currentFeatured) return null;
 
+  const createHeroBackground = (palette: ColorPalette | null) => {
+    if (!palette) return 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)';
+    return `linear-gradient(135deg, ${palette.background} 0%, ${palette.muted} 50%, ${palette.background} 100%)`;
+  };
+
+  const titleTextStyle = {
+    color: currentPalette ? getReadableTextColor(currentPalette.background, currentPalette.foreground, currentPalette.accent) : '#ffffff'
+  };
+
+  const colorProperties = currentPalette ? {
+    '--dynamic-accent': currentPalette.accent,
+    '--dynamic-foreground': currentPalette.foreground,
+    '--dynamic-background': currentPalette.background,
+  } as React.CSSProperties : {};
+
   return (
     <motion.section
-      className="relative rounded-[2rem] overflow-hidden shadow-2xl"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      className="relative w-full h-[55vh] flex items-center justify-center pb-12 pt-20 px-4 overflow-hidden -mt-32"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Full background album artwork with blur */}
-      <AnimatePresence mode="wait">
+      {/* Animated Background Effects */}
+      <AnimatePresence mode="sync">
         <motion.div
           key={`bg-${featuredIndex}`}
-          className="absolute inset-0 w-full h-full"
-          initial={{ opacity: 0, scale: 1.05 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.05 }}
-          transition={{ duration: 1.8, ease: "easeInOut" }}
+          className="absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          style={{
+            background: createHeroBackground(currentPalette),
+            ...colorProperties
+          }}
         >
-          <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat filter blur-3xl opacity-60"
-            style={{
-              backgroundImage: `url(${getAlbumImageFromData(currentFeatured.uri_release, 'medium')})`,
-              transform: 'scale(1.2)'
-            }}
-          />
-
-          {/* Dynamic gradient overlay */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: currentPalette
-                ? `linear-gradient(135deg, 
-                    ${currentPalette.background}F2 0%, 
-                    ${currentPalette.background}CC 30%,
-                    ${currentPalette.muted}99 60%,
-                    ${currentPalette.accent}40 100%)`
-                : 'linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.4) 100%)'
-            }}
-          />
-
-          {/* Mesh Gradient Effect */}
-          {currentPalette && (
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div
-              className="absolute inset-0 opacity-40 mix-blend-overlay"
+              className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
               style={{
-                backgroundImage: `
-                  radial-gradient(at 0% 0%, ${currentPalette.accent} 0px, transparent 50%),
-                  radial-gradient(at 100% 0%, ${currentPalette.muted} 0px, transparent 50%),
-                  radial-gradient(at 100% 100%, ${currentPalette.background} 0px, transparent 50%),
-                  radial-gradient(at 0% 100%, ${currentPalette.accent} 0px, transparent 50%)
-                `
+                background: currentPalette ? `radial-gradient(circle at 20% 30%, ${currentPalette.accent} 0%, transparent 50%)` : 'none'
               }}
             />
-          )}
+            <div
+              className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
+              style={{
+                background: currentPalette ? `radial-gradient(circle at 80% 80%, ${currentPalette.accent} 0%, transparent 50%)` : 'none'
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          </div>
         </motion.div>
       </AnimatePresence>
 
-      <div className="relative grid lg:grid-cols-2 gap-8 lg:gap-16 p-8 lg:p-16 min-h-[500px] items-center">
-        {/* Floating Album Artwork */}
-        <div className="relative group flex items-center justify-center lg:justify-start perspective-1000">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={featuredIndex}
-              className="relative w-72 h-72 lg:w-[450px] lg:h-[450px]"
-              initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
-              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
-              exit={{ opacity: 0, scale: 0.9, rotateY: 15 }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ scale: 1.02, rotateY: 5 }}
-              style={{ transformStyle: 'preserve-3d' }}
-            >
-              {/* Glow effect */}
-              <div
-                className="absolute -inset-10 rounded-full opacity-50 blur-3xl transition-opacity duration-500"
-                style={{
-                  background: currentPalette
-                    ? `radial-gradient(circle at center, ${currentPalette.accent}, transparent 70%)`
-                    : 'radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%)'
-                }}
-              />
-
-              {/* Main album cover */}
-              <div
-                className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10"
-                style={{
-                  boxShadow: currentPalette
-                    ? `0 25px 50px -12px ${currentPalette.background}66, 0 0 0 1px ${currentPalette.accent}33`
-                    : '0 25px 50px -12px rgba(0,0,0,0.5)'
-                }}
+      <div className="container mx-auto relative z-10 max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Album Art - Floating */}
+          <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0">
+            <AnimatePresence mode="sync">
+              <motion.div
+                key={featuredIndex}
+                className="relative"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 1.0, ease: "easeInOut" }}
+                whileHover={{ scale: 1.02 }}
+                style={{ transformStyle: 'preserve-3d' }}
               >
+                <div
+                  className="absolute -inset-4 rounded-2xl opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
+                  style={{ background: currentPalette ? createGlowGradient(currentPalette, 'bold') : 'none' }}
+                />
                 <img
-                  src={getAlbumImageFromData(currentFeatured.uri_release, 'medium')}
-                  srcSet={`
-                    ${getAlbumImageFromData(currentFeatured.uri_release, 'small')} 400w,
-                    ${getAlbumImageFromData(currentFeatured.uri_release, 'medium')} 800w,
-                    ${getAlbumImageFromData(currentFeatured.uri_release, 'hi-res')} 1400w
-                  `}
-                  sizes="(max-width: 768px) 300px, 500px"
-                  alt={`${currentFeatured.release_name} by ${currentFeatured.release_artist}`}
-                  className="w-full h-full object-cover"
+                  src={getAlbumImageFromData(currentFeatured.uri_release, 'hi-res')}
+                  alt={currentFeatured.release_name}
+                  className="relative w-full rounded-xl shadow-2xl transition-transform duration-500"
+                  style={{
+                    boxShadow: currentPalette ? `0 20px 40px -10px ${currentPalette.accent}60` : undefined
+                  }}
                   onError={handleImageError}
                   loading="eager"
                 />
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-                {/* Glassy sheen */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent pointer-events-none" />
+          {/* Header Info */}
+          <AnimatePresence mode="sync">
+            <motion.div
+              key={featuredIndex}
+              className="flex-1 text-center md:text-left space-y-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.0, ease: "easeInOut" }}
+            >
+              <div className="space-y-2">
+                <motion.h1
+                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance"
+                  style={{ color: titleTextStyle.color }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.6 }}
+                >
+                  {currentFeatured.release_name}
+                </motion.h1>
+                <motion.p
+                  className="text-xl md:text-2xl font-medium opacity-90"
+                  style={{ color: titleTextStyle.color }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.6 }}
+                >
+                  {currentFeatured.release_artist}
+                </motion.p>
               </div>
+
+              {/* Quick Stats Row */}
+              <motion.div
+                className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                  {new Date(currentFeatured.date_release_year).getFullYear()}
+                </span>
+                {currentFeatured.genre_names.slice(0, 3).map((genre) => (
+                  <Link key={genre} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
+                    <Badge
+                      className="px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
+                      style={{ color: titleTextStyle.color }}
+                    >
+                      {genre}
+                    </Badge>
+                  </Link>
+                ))}
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                className="flex flex-col items-center md:items-start gap-6 pt-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+              >
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  style={{
+                    backgroundColor: currentPalette?.accent || 'white',
+                    color: currentPalette?.accent
+                      ? getReadableTextColor(currentPalette.accent)
+                      : 'black'
+                  }}
+                >
+                  <Link to={currentFeatured.uri_release}>
+                    {appConfig.homepage.hero.exploreButtonText}
+                  </Link>
+                </Button>
+
+                {/* Navigation dots */}
+                {featuredAlbums.length > 1 && (
+                  <div className="flex items-center gap-3 p-2 rounded-full bg-black/20 backdrop-blur-md">
+                    {featuredAlbums.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setFeaturedIndex(index)}
+                        className={`relative h-2.5 rounded-full transition-all duration-300 ${index === featuredIndex ? 'w-8 bg-white' : 'w-2.5 bg-white/40 hover:bg-white/60'
+                          }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>
-
-        {/* Album Info */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={featuredIndex}
-            className="flex flex-col justify-center text-center lg:text-right space-y-8"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            <div className="space-y-4">
-              <motion.h1
-                className="text-4xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-balance leading-[1.1]"
-                style={{
-                  color: '#ffffff',
-                  textShadow: '0 2px 10px rgba(0,0,0,0.3)'
-                }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.6 }}
-              >
-                {currentFeatured.release_name}
-              </motion.h1>
-              <motion.p
-                className="text-xl lg:text-3xl font-medium opacity-90"
-                style={{
-                  color: '#ffffff',
-                  textShadow: '0 2px 4px rgba(0,0,0,0.3)'
-                }}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-              >
-                {currentFeatured.release_artist}
-              </motion.p>
-            </div>
-
-            <motion.div
-              className="flex flex-wrap gap-2 justify-center lg:justify-end"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-            >
-              {currentFeatured.genre_names.slice(0, 3).map((genre) => (
-                <Link key={genre} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                  <Badge
-                    variant="secondary"
-                    className="px-4 py-1.5 text-sm backdrop-blur-md bg-white/10 hover:bg-white/20 border-white/10 text-white transition-all"
-                  >
-                    {genre}
-                  </Badge>
-                </Link>
-              ))}
-            </motion.div>
-
-            <motion.div
-              className="flex flex-col items-center lg:items-end gap-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <Button
-                asChild
-                size="lg"
-                className="rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                style={{
-                  backgroundColor: currentPalette?.accent || 'white',
-                  color: currentPalette?.accent
-                    ? getReadableTextColor(currentPalette.accent)
-                    : 'black'
-                }}
-              >
-                <Link to={currentFeatured.uri_release}>
-                  {appConfig.homepage.hero.exploreButtonText}
-                </Link>
-              </Button>
-
-              {/* Navigation dots */}
-              <div className="flex items-center gap-3 p-2 rounded-full bg-black/20 backdrop-blur-md">
-                {featuredAlbums.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setFeaturedIndex(index)}
-                    className={`relative w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === featuredIndex ? 'w-8 bg-white' : 'bg-white/40 hover:bg-white/60'
-                      }`}
-                    aria-label={`Go to slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
       </div>
     </motion.section>
   );
