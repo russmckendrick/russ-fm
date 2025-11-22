@@ -12,7 +12,7 @@ interface Release {
 
 interface IndividualReleaseCardProps {
   release: Release;
-  size: 'small' | 'medium' | 'large' | 'wide';
+  size: 'small' | 'medium' | 'large' | 'wide' | 'extra-wide';
   imageSize?: ImageSize;
 }
 
@@ -42,7 +42,7 @@ export function IndividualReleaseCard({ release, size, imageSize = 'hi-res' }: I
       <img
         src={imageUrl}
         alt={`${release.title} by ${release.artist_name}`}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full !object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />
 

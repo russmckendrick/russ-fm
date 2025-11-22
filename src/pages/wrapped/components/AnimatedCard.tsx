@@ -9,9 +9,9 @@ interface AnimatedCardProps {
   animation?: 'slideUp' | 'slideLeft' | 'slideRight' | 'fadeIn' | 'scaleUp';
 }
 
-export function AnimatedCard({ 
-  children, 
-  className, 
+export function AnimatedCard({
+  children,
+  className,
   delay = 0,
   animation = 'slideUp'
 }: AnimatedCardProps) {
@@ -46,7 +46,7 @@ export function AnimatedCard({
     <div
       ref={elementRef}
       className={cn(
-        'transform transition-all duration-500 ease-out overflow-visible',
+        'transform transition-all duration-500 ease-out overflow-visible h-full w-full',
         isVisible ? animate : initial,
         className
       )}

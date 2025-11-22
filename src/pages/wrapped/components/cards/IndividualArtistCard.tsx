@@ -56,7 +56,7 @@ export function IndividualArtistCard({ artist, size, imageSize = 'hi-res' }: Ind
         <img
           src={artistImage}
           alt={artist.name}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full !object-cover"
           loading="lazy"
         />
       ) : (
