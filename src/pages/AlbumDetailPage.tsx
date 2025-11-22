@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, Disc } from 'lucide-react';
+import { ArrowLeft, ListMusic } from 'lucide-react';
+import Barcode from 'react-barcode';
 import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -366,7 +367,7 @@ export function AlbumDetailPage() {
         </Link>
         <Card className="p-8 text-center">
           <CardContent>
-            <Disc className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+            <ListMusic className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
             <h3 className="text-lg font-semibold mb-2">Album not found</h3>
             <p className="text-muted-foreground">The requested album could not be found</p>
           </CardContent>
@@ -658,7 +659,7 @@ export function AlbumDetailPage() {
         {tracks.length > 0 && (
           <section>
             <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-              <Disc className="h-6 w-6 opacity-50" />
+              <ListMusic className="h-6 w-6 opacity-50" />
               Tracklist
             </h3>
             <div className="space-y-1">
@@ -758,24 +759,99 @@ export function AlbumDetailPage() {
             <div className="space-y-4">
               <h4 className="font-semibold text-foreground">Release Details</h4>
               <dl className="space-y-2">
+                {detailedAlbum?.year && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Year</dt>
+                    <dd>{detailedAlbum.year}</dd>
+                  </div>
+                )}
+                {detailedAlbum?.country && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Country</dt>
+                    <dd>{detailedAlbum.country}</dd>
+                  </div>
+                )}
                 {detailedAlbum?.labels && detailedAlbum.labels.length > 0 && (
                   <div className="flex gap-2">
-                    <dt className="w-20 shrink-0 opacity-60">Label</dt>
+                    <dt className="w-24 shrink-0 opacity-60">Label</dt>
                     <dd>{detailedAlbum.labels.join(', ')}</dd>
                   </div>
                 )}
                 {detailedAlbum?.formats && detailedAlbum.formats.length > 0 && (
                   <div className="flex gap-2">
-                    <dt className="w-20 shrink-0 opacity-60">Format</dt>
+                    <dt className="w-24 shrink-0 opacity-60">Format</dt>
                     <dd>{detailedAlbum.formats.join(', ')}</dd>
                   </div>
                 )}
+                {detailedAlbum?.styles && detailedAlbum.styles.length > 0 && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Style</dt>
+                    <dd>{detailedAlbum.styles.join(', ')}</dd>
+                  </div>
+                )}
                 <div className="flex gap-2">
-                  <dt className="w-20 shrink-0 opacity-60">Added</dt>
+                  <dt className="w-24 shrink-0 opacity-60">Added</dt>
                   <dd>{new Date(album.date_added).toLocaleDateString()}</dd>
                 </div>
               </dl>
             </div>
+
+            {/* Identifiers Section */}
+            <div className="space-y-4">
+              <h4 className="font-semibold text-foreground">Identifiers</h4>
+              <dl className="space-y-3">
+                {detailedAlbum?.services?.spotify?.external_ids?.upc && (
+                  <div className="space-y-2">
+                    <div className="flex gap-2">
+                      <dt className="w-24 shrink-0 opacity-60">UPC</dt>
+                      <dd className="font-mono text-xs">{detailedAlbum.services.spotify.external_ids.upc}</dd>
+                    </div>
+                    {/* Scannable barcode using react-barcode */}
+                    <div className="ml-24 bg-white p-2 rounded border border-border/20 w-fit">
+                      <Barcode
+                        value={detailedAlbum.services.spotify.external_ids.upc}
+                        format="EAN13"
+                        width={1.5}
+                        height={50}
+                        displayValue={false}
+                        background="#ffffff"
+                        lineColor="#000000"
+                      />
+                    </div>
+                  </div>
+                )}
+                {detailedAlbum?.discogs_id && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Discogs ID</dt>
+                    <dd className="font-mono text-xs">{detailedAlbum.discogs_id}</dd>
+                  </div>
+                )}
+                {detailedAlbum?.spotify_id && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Spotify ID</dt>
+                    <dd className="font-mono text-xs">{detailedAlbum.spotify_id}</dd>
+                  </div>
+                )}
+                {detailedAlbum?.services?.apple_music?.url && (
+                  <div className="flex gap-2">
+                    <dt className="w-24 shrink-0 opacity-60">Apple Music</dt>
+                    <dd className="font-mono text-xs truncate">{detailedAlbum.services.apple_music.url.split('/').pop()}</dd>
+                  </div>
+                )}
+              </dl>
+            </div>
+
+            {/* Copyright Section */}
+            {detailedAlbum?.services?.spotify?.copyrights && detailedAlbum.services.spotify.copyrights.length > 0 && (
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground">Copyright</h4>
+                <div className="text-xs opacity-70 space-y-1">
+                  {detailedAlbum.services.spotify.copyrights.map((c, i) => (
+                    <div key={i}>{c.text}</div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </footer>
       </div>

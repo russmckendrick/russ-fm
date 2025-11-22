@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { appConfig } from '@/config/app.config';
 import type { ColorPalette } from '@/lib/colorExtractor';
 import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
@@ -82,11 +80,11 @@ export function HeroSection({
       <div className="container mx-auto relative z-10 max-w-6xl">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Album Art - Floating */}
-          <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0">
+          <Link to={currentFeatured.uri_release} className="relative w-64 md:w-96 lg:w-[450px] h-64 md:h-96 lg:h-[450px] flex-shrink-0 mx-auto md:mx-0 block">
             <AnimatePresence mode="sync">
               <motion.div
                 key={featuredIndex}
-                className="relative"
+                className="absolute inset-0 group"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -101,7 +99,7 @@ export function HeroSection({
                 <img
                   src={getAlbumImageFromData(currentFeatured.uri_release, 'hi-res')}
                   alt={currentFeatured.release_name}
-                  className="relative w-full rounded-xl shadow-2xl transition-transform duration-500"
+                  className="relative w-full h-full rounded-xl shadow-2xl transition-transform duration-500 object-cover"
                   style={{
                     boxShadow: currentPalette ? `0 20px 40px -10px ${currentPalette.accent}60` : undefined
                   }}
@@ -110,101 +108,88 @@ export function HeroSection({
                 />
               </motion.div>
             </AnimatePresence>
-          </div>
+          </Link>
 
           {/* Header Info */}
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={featuredIndex}
-              className="flex-1 text-center md:text-left space-y-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.0, ease: "easeInOut" }}
-            >
-              <div className="space-y-2">
-                <motion.h1
-                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance"
-                  style={{ color: titleTextStyle.color }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                >
-                  {currentFeatured.release_name}
-                </motion.h1>
-                <motion.p
-                  className="text-xl md:text-2xl font-medium opacity-90"
-                  style={{ color: titleTextStyle.color }}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                >
-                  {currentFeatured.release_artist}
-                </motion.p>
-              </div>
-
-              {/* Quick Stats Row */}
+          <div className="flex-1 relative min-h-[400px] flex items-center">
+            <AnimatePresence mode="sync">
               <motion.div
-                className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80"
+                key={featuredIndex}
+                className="absolute inset-0 flex flex-col justify-center text-center md:text-left space-y-4"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 1.0, ease: "easeInOut" }}
               >
-                <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                  {new Date(currentFeatured.date_release_year).getFullYear()}
-                </span>
-                {currentFeatured.genre_names.slice(0, 3).map((genre) => (
-                  <Link key={genre} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                    <Badge
-                      className="px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
-                      style={{ color: titleTextStyle.color }}
-                    >
-                      {genre}
-                    </Badge>
-                  </Link>
-                ))}
-              </motion.div>
-
-              {/* Action Buttons */}
-              <motion.div
-                className="flex flex-col items-center md:items-start gap-6 pt-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-              >
-                <Button
-                  asChild
-                  size="lg"
-                  className="rounded-full px-8 py-6 text-lg font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                  style={{
-                    backgroundColor: currentPalette?.accent || 'white',
-                    color: currentPalette?.accent
-                      ? getReadableTextColor(currentPalette.accent)
-                      : 'black'
-                  }}
-                >
+                <div className="space-y-2">
                   <Link to={currentFeatured.uri_release}>
-                    {appConfig.homepage.hero.exploreButtonText}
+                    <motion.h1
+                      className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance hover:opacity-80 transition-opacity cursor-pointer"
+                      style={{ color: titleTextStyle.color }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.3, duration: 0.6 }}
+                    >
+                      {currentFeatured.release_name}
+                    </motion.h1>
                   </Link>
-                </Button>
+                  <motion.p
+                    className="text-xl md:text-2xl font-medium opacity-90"
+                    style={{ color: titleTextStyle.color }}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                  >
+                    {currentFeatured.release_artist}
+                  </motion.p>
+                </div>
 
-                {/* Navigation dots */}
+                {/* Quick Stats Row */}
+                <motion.div
+                  className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                >
+                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                    {new Date(currentFeatured.date_release_year).getFullYear()}
+                  </span>
+                  {currentFeatured.genre_names.slice(0, 3).map((genre) => (
+                    <Link key={genre} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
+                      <Badge
+                        className="px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
+                        style={{ color: titleTextStyle.color }}
+                      >
+                        {genre}
+                      </Badge>
+                    </Link>
+                  ))}
+                </motion.div>
+
+                {/* Navigation dots - sleeker design */}
                 {featuredAlbums.length > 1 && (
-                  <div className="flex items-center gap-3 p-2 rounded-full bg-black/20 backdrop-blur-md">
+                  <motion.div
+                    className="flex items-center justify-center md:justify-start gap-2 pt-4"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.6 }}
+                  >
                     {featuredAlbums.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setFeaturedIndex(index)}
-                        className={`relative h-2.5 rounded-full transition-all duration-300 ${index === featuredIndex ? 'w-8 bg-white' : 'w-2.5 bg-white/40 hover:bg-white/60'
+                        className={`h-1.5 rounded-full transition-all duration-500 ${index === featuredIndex
+                          ? 'w-12 bg-white/90'
+                          : 'w-1.5 bg-white/30 hover:bg-white/50'
                           }`}
-                        aria-label={`Go to slide ${index + 1}`}
+                        aria-label={`Go to album ${index + 1}`}
                       />
                     ))}
-                  </div>
+                  </motion.div>
                 )}
               </motion.div>
-            </motion.div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </motion.section>
