@@ -1,11 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Shuffle, RefreshCw, Music, User } from 'lucide-react';
+import { Shuffle, RefreshCw, ArrowRight } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
-import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
+import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
+import { generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
+import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
+import { filterGenres } from '@/lib/filterGenres';
 
 interface Album {
   release_name: string;
@@ -36,65 +38,26 @@ interface Album {
   };
 }
 
-interface Artist {
-  name: string;
-  uri: string;
-  albums: Album[];
-  albumCount: number;
-  genres: string[];
-  images_uri_artist: {
-    'hi-res': string;
-    medium: string;
-  };
-}
-
-interface RandomItem {
-  type: 'album' | 'artist';
-  data: Album | Artist;
-}
-
 export function RandomPage() {
-  const [randomItems, setRandomItems] = useState<RandomItem[]>([]);
+  const [randomAlbum, setRandomAlbum] = useState<Album | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
   const [allAlbums, setAllAlbums] = useState<Album[]>([]);
-  const [allArtists, setAllArtists] = useState<Artist[]>([]);
-  const [shuffleCount, setShuffleCount] = useState(0);
-  const [itemVisibility, setItemVisibility] = useState([true, true, true]);
+  const [isVisible, setIsVisible] = useState(true);
 
-  usePageTitle('Random Discovery | RussFM');
+  // Get album path for color extraction
+  const albumPath = randomAlbum?.uri_release.replace('/album/', '').replace('/', '') || '';
+  const albumColors = useAlbumColorsWithFallback(albumPath);
 
-  const getRandomItems = (albums: Album[], artists: Artist[], currentShuffleCount: number): RandomItem[] => {
-    const items: RandomItem[] = [];
-    
-    // Determine if we should include an artist (every 3-4 shuffles)
-    const shouldIncludeArtist = currentShuffleCount > 0 && currentShuffleCount % 3 === 0 && artists.length > 0;
-    
-    if (shouldIncludeArtist) {
-      // Add one random artist
-      const randomArtist = artists[Math.floor(Math.random() * artists.length)];
-      items.push({ type: 'artist', data: randomArtist });
-      
-      // Fill remaining slots with albums
-      const randomAlbums = [...albums].sort(() => Math.random() - 0.5).slice(0, 2);
-      randomAlbums.forEach(album => {
-        items.push({ type: 'album', data: album });
-      });
-    } else {
-      // All albums
-      const randomAlbums = [...albums].sort(() => Math.random() - 0.5).slice(0, 3);
-      randomAlbums.forEach(album => {
-        items.push({ type: 'album', data: album });
-      });
-    }
-    
-    // Shuffle the final items array
-    return items.sort(() => Math.random() - 0.5);
+  usePageTitle('Random Discovery | Russ.fm');
+
+  const getRandomAlbum = (albums: Album[]): Album => {
+    return albums[Math.floor(Math.random() * albums.length)];
   };
 
-  const loadInitialItems = useCallback((albums: Album[], artists: Artist[]) => {
-    const selected = getRandomItems(albums, artists, 0);
-    setRandomItems(selected);
+  const loadInitialAlbum = useCallback((albums: Album[]) => {
+    const selected = getRandomAlbum(albums);
+    setRandomAlbum(selected);
     setIsLoading(false);
   }, []);
 
@@ -103,62 +66,12 @@ export function RandomPage() {
       const response = await fetch('/collection.json');
       const albums: Album[] = await response.json();
       setAllAlbums(albums);
-      
-      // Process artists from albums
-      const artists = processArtists(albums);
-      setAllArtists(artists);
-      
-      loadInitialItems(albums, artists);
+      loadInitialAlbum(albums);
     } catch (error) {
       console.error('Error loading collection:', error);
       setIsLoading(false);
     }
-  }, [loadInitialItems]);
-
-  const processArtists = (albums: Album[]): Artist[] => {
-    const artistMap = new Map<string, Artist>();
-
-    albums.forEach(album => {
-      // Handle albums with multiple artists
-      if (album.artists && album.artists.length > 0) {
-        // Process each individual artist
-        album.artists.forEach(artistInfo => {
-          const artistName = artistInfo.name;
-          
-          // Skip "Various" artists
-          if (artistName.toLowerCase() === 'various') {
-            return;
-          }
-          
-          if (!artistMap.has(artistName)) {
-            artistMap.set(artistName, {
-              name: artistName,
-              uri: artistInfo.uri_artist,
-              albums: [],
-              albumCount: 0,
-              genres: [],
-              images_uri_artist: artistInfo.images_uri_artist,
-            });
-          }
-          
-          const artist = artistMap.get(artistName)!;
-          artist.albums.push(album);
-          artist.albumCount++;
-          
-          // Add genres
-          album.genre_names.forEach(genre => {
-            if (!artist.genres.includes(genre)) {
-              artist.genres.push(genre);
-            }
-          });
-        });
-      }
-    });
-
-    return Array.from(artistMap.values()).filter(artist => artist.albumCount > 0);
-  };
-
-
+  }, [loadInitialAlbum]);
 
   useEffect(() => {
     loadCollection();
@@ -167,41 +80,21 @@ export function RandomPage() {
   const handleShuffle = () => {
     if (allAlbums.length > 0) {
       setIsShuffling(true);
-      const newShuffleCount = shuffleCount + 1;
-      
-      // Create random order for items to change
-      const randomOrder = [0, 1, 2].sort(() => Math.random() - 0.5);
-      
-      // Fade out items in random order
-      randomOrder.forEach((index, orderIndex) => {
-        setTimeout(() => {
-          setItemVisibility(prev => {
-            const newVisibility = [...prev];
-            newVisibility[index] = false;
-            return newVisibility;
-          });
-        }, orderIndex * 150); // 150ms delay between each item
-      });
-      
-      // After all items fade out, get new items
+
+      // Fade out current album
+      setIsVisible(false);
+
+      // After fade out, get new album
       setTimeout(() => {
-        const newItems = getRandomItems(allAlbums, allArtists, newShuffleCount);
-        setRandomItems(newItems);
-        setShuffleCount(newShuffleCount);
-        
-        // Fade in new items in the same random order
-        randomOrder.forEach((index, orderIndex) => {
-          setTimeout(() => {
-            setItemVisibility(prev => {
-              const newVisibility = [...prev];
-              newVisibility[index] = true;
-              return newVisibility;
-            });
-          }, orderIndex * 150);
-        });
-        
-        setIsShuffling(false);
-      }, randomOrder.length * 150 + 100); // Wait for all to fade out plus a small buffer
+        const newAlbum = getRandomAlbum(allAlbums);
+        setRandomAlbum(newAlbum);
+
+        // Fade in new album
+        setTimeout(() => {
+          setIsVisible(true);
+          setIsShuffling(false);
+        }, 100);
+      }, 400);
     }
   };
 
@@ -209,121 +102,222 @@ export function RandomPage() {
     return album.uri_release.replace('/album/', '').replace('/', '');
   };
 
-  const getArtistPath = (artist: Artist) => {
-    return artist.uri.replace('/artist/', '').replace('/', '');
+  // Get year from album
+  const getYear = () => {
+    if (!randomAlbum) return '';
+    return new Date(randomAlbum.date_release_year).getFullYear();
   };
 
-  return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="text-center mb-12">
-        <h1 className="text-h1 mb-8">Random Discovery</h1>
-        
-        <Button 
-          onClick={handleShuffle}
-          size="lg"
-          className="gap-3 px-8 py-4 text-lg"
-          disabled={isShuffling || isLoading}
-        >
-          {isShuffling ? (
-            <>
-              <RefreshCw className="h-5 w-5 animate-spin" />
-              Shuffling...
-            </>
-          ) : (
-            <>
-              <Shuffle className="h-5 w-5" />
-              Shuffle
-            </>
-          )}
-        </Button>
-      </div>
+  // Get clean genres
+  const getGenres = () => {
+    if (!randomAlbum) return [];
+    return filterGenres(randomAlbum.genre_names, randomAlbum.release_artist).slice(0, 4);
+  };
 
-      {/* Random Items */}
-      {isLoading ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {[...Array(3)].map((_, i) => (
-            <Card key={i} className="animate-pulse">
-              <CardContent className="p-0">
-                <div className="aspect-square bg-muted rounded-t-xl mb-4" />
-                <div className="p-4">
-                  <div className="h-4 bg-muted rounded w-3/4 mb-2" />
-                  <div className="h-3 bg-muted rounded w-1/2" />
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+  // Generate CSS custom properties for album colors
+  const colorProperties = generateColorProperties(albumColors);
+
+  if (isLoading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading your collection...</p>
         </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {randomItems.map((item, index) => (
-            <div
-              key={item.type === 'album' ? (item.data as Album).uri_release : (item.data as Artist).uri}
-              className={`transition-all duration-300 ${
-                itemVisibility[index] ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-              }`}
+      </div>
+    );
+  }
+
+  if (!randomAlbum) {
+    return null;
+  }
+
+  return (
+    <div className="min-h-screen pb-20 -mt-32">
+      {/* Hero Section - Album Spotlight */}
+      <div
+        className="relative w-full min-h-[80vh] flex items-center justify-center pb-12 pt-32 px-4 overflow-hidden transition-colors duration-800"
+        style={{
+          background: createHeroBackground(albumColors),
+          ...colorProperties
+        }}
+      >
+        {/* Animated Background Effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
+            style={{
+              background: `radial-gradient(circle at 20% 30%, ${albumColors.accent} 0%, transparent 50%)`
+            }}
+          />
+          <div
+            className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
+            style={{
+              background: `radial-gradient(circle at 80% 80%, ${albumColors.accent} 0%, transparent 50%)`
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        </div>
+
+        {/* Main Content */}
+        <div className="container mx-auto relative z-10 max-w-5xl">
+          <motion.div
+            key={randomAlbum.uri_release}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            className="text-center space-y-8"
+          >
+            {/* Album Title */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="mb-8"
             >
-              {item.type === 'album' ? (
-                <Link to={`/album/${getAlbumPath(item.data as Album)}`}>
-                  <Card variant="interactive" className="overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-square overflow-hidden">
-                        <img
-                          src={getAlbumImageFromData((item.data as Album).uri_release, 'medium')}
-                          alt={(item.data as Album).release_name}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-3 right-3">
-                          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
-                            <Music className="h-3 w-3 mr-1" />
-                            Album
-                          </Badge>
-                        </div>
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-semibold mb-1 line-clamp-1">
-                          {(item.data as Album).release_name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {(item.data as Album).release_artist}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-foreground dark:text-white">
+                {randomAlbum.release_name}
+              </h1>
+            </motion.div>
+
+            {/* Album Artwork - The Hero */}
+            <Link to={`/album/${getAlbumPath(randomAlbum)}`} className="block">
+              <motion.div
+                className="relative group mx-auto w-full max-w-xl cursor-pointer"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                {/* Glow Effect */}
+                <div
+                  className="absolute -inset-8 rounded-2xl opacity-60 blur-3xl transition-all duration-700 group-hover:opacity-80"
+                  style={{ background: createGlowGradient(albumColors, 'bold') }}
+                />
+
+                {/* Vinyl Record Peeking Out */}
+                <div
+                  className="absolute -right-4 top-1/2 -translate-y-1/2 w-[70%] h-[70%] rounded-full opacity-40 transition-all duration-500 group-hover:-right-6"
+                  style={{
+                    background: `radial-gradient(circle, ${albumColors.muted} 20%, ${albumColors.background} 40%, transparent 60%)`,
+                    boxShadow: `inset 0 0 50px ${albumColors.background}`,
+                    transform: 'rotate(-3deg) translateY(-50%)'
+                  }}
+                />
+
+                {/* Album Artwork */}
+                <motion.img
+                  src={getAlbumImageFromData(randomAlbum.uri_release, 'hi-res')}
+                  alt={randomAlbum.release_name}
+                  onError={handleImageError}
+                  className="relative w-full aspect-square rounded-xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  style={{
+                    boxShadow: `0 25px 50px -12px ${albumColors.accent}80`,
+                    transform: 'rotate(-1deg)'
+                  }}
+                  whileHover={{ rotate: 0 }}
+                />
+
+                {/* Reflection */}
+                <div
+                  className="absolute -bottom-4 left-0 right-0 h-24 opacity-20 blur-xl"
+                  style={{
+                    background: `linear-gradient(to bottom, ${albumColors.accent}, transparent)`
+                  }}
+                />
+              </motion.div>
+            </Link>
+
+            {/* Artist & Metadata */}
+            <motion.div
+              className="space-y-4 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              <div className="flex items-center justify-center gap-2 text-xl md:text-2xl font-medium">
+                <span className="text-foreground/80 dark:text-white/80">by</span>
+                <Link
+                  to={randomAlbum.uri_artist}
+                  className="hover:underline decoration-2 underline-offset-4 transition-colors text-foreground dark:text-white"
+                >
+                  {randomAlbum.release_artist}
                 </Link>
-              ) : (
-                <Link to={`/artist/${getArtistPath(item.data as Artist)}`}>
-                  <Card variant="interactive" className="overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-square overflow-hidden">
-                        <img
-                          src={getArtistImageFromData((item.data as Artist).uri, 'medium')}
-                          alt={(item.data as Artist).name}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute bottom-3 right-3">
-                          <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
-                            <User className="h-3 w-3 mr-1" />
-                            Artist
-                          </Badge>
-                        </div>
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-semibold mb-1 line-clamp-1">
-                          {(item.data as Artist).name}
-                        </h3>
-                        <p className="text-sm text-muted-foreground">
-                          {(item.data as Artist).albumCount} album{(item.data as Artist).albumCount !== 1 ? 's' : ''}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              )}
-            </div>
-          ))}
+              </div>
+
+              {/* Quick Stats */}
+              <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                <span
+                  className="px-3 py-1 rounded-full backdrop-blur-md border text-sm font-medium text-foreground dark:text-white"
+                  style={{
+                    backgroundColor: `${albumColors.accent}20`,
+                    borderColor: `${albumColors.accent}40`
+                  }}
+                >
+                  {getYear()}
+                </span>
+                {getGenres().map((genre, index) => (
+                  <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
+                    <span
+                      className="px-3 py-1 rounded-full backdrop-blur-md border text-sm font-medium hover:scale-105 transition-transform cursor-pointer text-foreground dark:text-white"
+                      style={{
+                        backgroundColor: `${albumColors.accent}20`,
+                        borderColor: `${albumColors.accent}40`
+                      }}
+                    >
+                      {genre}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Action Buttons */}
+            <motion.div
+              className="flex flex-wrap items-center justify-center gap-4 pt-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+            >
+              <Button
+                onClick={handleShuffle}
+                size="lg"
+                className="gap-3 px-10 py-6 text-lg shadow-lg hover:scale-105 transition-transform border-0 text-white font-medium"
+                disabled={isShuffling}
+                style={{
+                  backgroundColor: albumColors.accent,
+                }}
+              >
+                {isShuffling ? (
+                  <>
+                    <RefreshCw className="h-5 w-5 animate-spin" />
+                    Finding Next Album...
+                  </>
+                ) : (
+                  <>
+                    <Shuffle className="h-5 w-5" />
+                    Shuffle Discovery
+                  </>
+                )}
+              </Button>
+
+              <Link to={`/album/${getAlbumPath(randomAlbum)}`}>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="gap-2 px-10 py-6 text-lg shadow-lg hover:scale-105 transition-all font-medium text-foreground dark:text-white backdrop-blur-md"
+                  style={{
+                    borderColor: albumColors.accent,
+                    backgroundColor: `${albumColors.background}40`
+                  }}
+                >
+                  Explore This Album
+                  <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+            </motion.div>
+          </motion.div>
         </div>
-      )}
+      </div>
     </div>
   );
 }

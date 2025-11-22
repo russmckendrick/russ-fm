@@ -1,18 +1,20 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useInView } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { 
-  BarChart, 
-  Bar, 
-  PieChart, 
+import { useCountAnimation } from '@/hooks/useCountAnimation';
+import {
+  BarChart,
+  Bar,
+  PieChart,
   Pie,
-  XAxis, 
-  YAxis, 
-  CartesianGrid, 
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
   ResponsiveContainer,
   Cell
@@ -21,6 +23,14 @@ import { Disc, Music, TrendingUp, Users, Clock } from 'lucide-react';
 import { filterGenres } from '@/lib/filterGenres';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
+import { generateColorProperties, createHeroBackground } from '@/lib/color-utils';
+
+interface ColorPalette {
+  background: string;
+  foreground: string;
+  accent: string;
+  muted: string;
+}
 
 interface Album {
   release_name: string;
@@ -79,10 +89,423 @@ interface CollectionStats {
   oldestAdditions: Album[];
 }
 
+// Overview Cards Component with animations
+function OverviewCards({ stats, loading }: { stats: CollectionStats; loading: boolean }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+
+  const animatedTotalAlbums = useCountAnimation(stats.totalAlbums || 0, 2000, !loading && inView);
+  const animatedUniqueArtists = useCountAnimation(stats.uniqueArtists || 0, 2000, !loading && inView);
+  const animatedUniqueGenres = useCountAnimation(stats.uniqueGenres || 0, 2000, !loading && inView);
+
+  const overviewCards = [
+    {
+      title: 'Total Albums',
+      value: animatedTotalAlbums,
+      icon: Disc,
+      color: 'text-blue-500',
+    },
+    {
+      title: 'Unique Artists',
+      value: animatedUniqueArtists,
+      icon: Users,
+      color: 'text-green-500',
+    },
+    {
+      title: 'Unique Genres',
+      value: animatedUniqueGenres,
+      icon: Music,
+      color: 'text-amber-500',
+    },
+    {
+      title: 'Avg Albums/Artist',
+      value: stats.avgAlbumsPerArtist,
+      icon: TrendingUp,
+      color: 'text-purple-500',
+    },
+  ];
+
+  return (
+    <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {overviewCards.map((card, index) => (
+        <motion.div
+          key={card.title}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: index * 0.1, duration: 0.5 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05, y: -5 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+          >
+            <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                <CardTitle className="text-sm font-medium text-muted-foreground">
+                  {card.title}
+                </CardTitle>
+                <card.icon className={`h-5 w-5 ${card.color}`} />
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold">
+                  {typeof card.value === 'number' ? card.value.toLocaleString() : card.value}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
+// Charts Section Component with animations
+function ChartsSection({ stats, COLORS }: { stats: CollectionStats; COLORS: string[] }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <div ref={ref} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Albums by Decade */}
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg h-full">
+          <CardHeader>
+            <CardTitle className="text-xl font-light">Albums by Decade</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart data={stats.decadeData}>
+                <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+                <XAxis dataKey="decade" />
+                <YAxis />
+                <Tooltip
+                  contentStyle={{
+                    backgroundColor: 'hsl(var(--card))',
+                    border: '1px solid hsl(var(--border))',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                  }}
+                />
+                <Bar dataKey="count" fill="hsl(var(--primary))" radius={[8, 8, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </CardContent>
+        </Card>
+      </motion.div>
+
+      {/* Top Genres */}
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
+        transition={{ duration: 0.6 }}
+      >
+        <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg h-full">
+          <CardHeader>
+            <CardTitle className="text-xl font-light">Top Genres</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex items-center gap-6">
+              <div className="flex-1">
+                <ResponsiveContainer width="100%" height={300}>
+                  <PieChart>
+                    <Pie
+                      data={stats.topGenres}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      outerRadius={90}
+                      innerRadius={45}
+                      fill="#8884d8"
+                      dataKey="value"
+                      stroke="hsl(var(--background))"
+                      strokeWidth={2}
+                    >
+                      {stats.topGenres?.map((entry: GenreStat, index: number) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      formatter={(value, name) => [`${value} albums`, name]}
+                      contentStyle={{
+                        backgroundColor: 'hsl(var(--card))',
+                        border: '1px solid hsl(var(--border))',
+                        borderRadius: '8px',
+                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                      }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+
+              {/* Compact Legend */}
+              <div className="w-48 space-y-2 text-sm">
+                {stats.topGenres?.slice(0, 8).map((entry: GenreStat, index: number) => (
+                  <div key={index} className="flex items-center gap-2">
+                    <div
+                      className="w-3 h-3 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: COLORS[index % COLORS.length] }}
+                    />
+                    <span className="truncate font-medium capitalize">
+                      {entry.name} ({((entry.value / stats.totalAlbums) * 100).toFixed(0)}%)
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
+    </div>
+  );
+}
+
+// Top Artists Section Component with stagger animations
+function TopArtistsSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+        className="text-3xl font-light mb-6"
+        initial={{ opacity: 0, x: -20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+        transition={{ delay: 0.2 }}
+      >
+        Artists with Most Albums
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {stats.topArtists?.slice(0, 9).map((artist: ArtistStat, index: number) => (
+          <motion.div
+            key={artist.uri}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+          >
+            <Link to={artist.uri} className="block">
+              <motion.div
+                whileHover={{ scale: 1.02, y: -3 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              >
+                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-14 w-14 ring-2 ring-primary/10">
+                        <AvatarImage src={artist.image} alt={artist.name} />
+                        <AvatarFallback className="text-lg font-semibold">
+                          {artist.name.charAt(0)}
+                        </AvatarFallback>
+                      </Avatar>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium truncate text-lg">{artist.name}</p>
+                        <div className="flex items-center gap-2 mt-1">
+                          <Badge variant="secondary" className="font-normal">
+                            {artist.count} {artist.count === 1 ? 'album' : 'albums'}
+                          </Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
+  );
+}
+
+// Recent Additions Section Component
+function RecentAdditionsSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+        className="text-3xl font-light mb-6"
+        initial={{ opacity: 0, x: -20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+        transition={{ delay: 0.2 }}
+      >
+        Recent Additions
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {stats.recentAdditions?.map((album: Album, index: number) => (
+          <motion.div
+            key={album.uri_release}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+          >
+            <Link to={album.uri_release} className="block">
+              <motion.div
+                whileHover={{ scale: 1.02, y: -3 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              >
+                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
+                        <img
+                          src={getAlbumImageFromData(album.uri_release, 'medium')}
+                          alt={album.release_name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium truncate">{album.release_name}</p>
+                        <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Added: {new Date(album.date_added).toLocaleDateString('en-GB', {
+                            day: '2-digit',
+                            month: 'short',
+                            year: 'numeric'
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
+  );
+}
+
+// Collection Growth Section Component
+function CollectionGrowthSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg">
+        <CardHeader>
+          <CardTitle className="text-2xl font-light">Additions Over Time</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={stats.additionsData}>
+              <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
+              <XAxis dataKey="month" />
+              <YAxis />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: 'hsl(var(--card))',
+                  border: '1px solid hsl(var(--border))',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+                }}
+              />
+              <Bar dataKey="count" fill="hsl(var(--primary))" radius={[8, 8, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
+
+// Oldest Additions Section Component
+function OldestAdditionsSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+        className="text-3xl font-light mb-6 flex items-center gap-2"
+        initial={{ opacity: 0, x: -20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Clock className="h-8 w-8" />
+        Oldest Additions
+      </motion.h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {stats.oldestAdditions?.map((album: Album, index: number) => (
+          <motion.div
+            key={album.uri_release}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+          >
+            <Link to={album.uri_release} className="block">
+              <motion.div
+                whileHover={{ scale: 1.02, y: -3 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              >
+                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
+                  <CardContent className="p-4">
+                    <div className="flex items-center gap-3">
+                      <div className="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
+                        <img
+                          src={getAlbumImageFromData(album.uri_release, 'medium')}
+                          alt={album.release_name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium truncate">{album.release_name}</p>
+                        <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
+                        <p className="text-xs text-muted-foreground mt-1">
+                          Added: {new Date(album.date_added).toLocaleDateString('en-GB', {
+                            day: '2-digit',
+                            month: 'short',
+                            year: 'numeric'
+                          })}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
+  );
+}
+
 export function StatsPage() {
   const [, setCollection] = useState<Album[]>([]);
   const [loading, setLoading] = useState(true);
   const [stats, setStats] = useState<CollectionStats>({} as CollectionStats);
+  const [headerColors, setHeaderColors] = useState<ColorPalette>({
+    background: '#1a1816',
+    foreground: '#ffffff',
+    accent: '#82a5cc',
+    muted: '#6a81a1'
+  });
 
   usePageTitle('Collection Statistics | Russ.fm');
 
@@ -208,6 +631,21 @@ export function StatsPage() {
       const data = await response.json();
       setCollection(data);
       calculateStats(data);
+
+      // Load album colors and pick a random one for the header
+      try {
+        const colorsResponse = await fetch('/album-colors.json');
+        const colorsData = await colorsResponse.json();
+        const colorKeys = Object.keys(colorsData);
+        if (colorKeys.length > 0) {
+          const randomKey = colorKeys[Math.floor(Math.random() * colorKeys.length)];
+          setHeaderColors(colorsData[randomKey]);
+        }
+      } catch (error) {
+        console.error('Error loading album colors:', error);
+        // Keep default colors
+      }
+
       setLoading(false);
     } catch (error) {
       console.error('Error loading collection:', error);
@@ -224,274 +662,85 @@ export function StatsPage() {
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading statistics...</p>
-        </div>
+        </motion.div>
       </div>
     );
   }
 
+  // Generate CSS custom properties for header colors
+  const colorProperties = generateColorProperties(headerColors);
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 flex items-center gap-3">
-        <TrendingUp className="h-8 w-8" />
-        Collection Statistics
-      </h1>
+    <div className="min-h-screen pb-20 -mt-32">
+      {/* Hero Header Section - Full Width & Colorful */}
+      <div
+        className="relative w-full min-h-[35vh] flex items-end justify-center pb-12 pt-32 px-4 overflow-hidden"
+        style={{
+          background: createHeroBackground(headerColors),
+          ...colorProperties
+        }}
+      >
+        {/* Animated Background Effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
+            style={{
+              background: `radial-gradient(circle at 20% 30%, ${headerColors.accent} 0%, transparent 50%)`
+            }}
+          />
+          <div
+            className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
+            style={{
+              background: `radial-gradient(circle at 80% 80%, ${headerColors.accent} 0%, transparent 50%)`
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+        </div>
+
+        <div className="container mx-auto relative z-10 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-light tracking-tight leading-tight text-foreground dark:text-white">
+              <TrendingUp className="inline-block h-12 w-12 md:h-16 md:w-16 mr-4 mb-2" />
+              Collection Statistics
+            </h1>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-12 space-y-12">
 
       {/* Overview Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Albums</CardTitle>
-            <Disc className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.totalAlbums}</div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Unique Artists</CardTitle>
-            <Users className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.uniqueArtists}</div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Unique Genres</CardTitle>
-            <Music className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.uniqueGenres}</div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Avg Albums/Artist</CardTitle>
-            <TrendingUp className="h-4 w-4 text-muted-foreground" />
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{stats.avgAlbumsPerArtist}</div>
-          </CardContent>
-        </Card>
-      </div>
+      <OverviewCards stats={stats} loading={loading} />
 
       {/* Charts Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* Albums by Decade */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Albums by Decade</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ResponsiveContainer width="100%" height={300}>
-              <BarChart data={stats.decadeData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="decade" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="count" fill="hsl(var(--primary))" />
-              </BarChart>
-            </ResponsiveContainer>
-          </CardContent>
-        </Card>
-
-        {/* Top Genres */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Genres</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-6">
-              <div className="flex-1">
-                <ResponsiveContainer width="100%" height={300}>
-                  <PieChart>
-                    <Pie
-                      data={stats.topGenres}
-                      cx="50%"
-                      cy="50%"
-                      labelLine={false}
-                      outerRadius={90}
-                      innerRadius={45}
-                      fill="#8884d8"
-                      dataKey="value"
-                      stroke="white"
-                      strokeWidth={2}
-                    >
-                      {stats.topGenres?.map((entry: GenreStat, index: number) => (
-                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                      ))}
-                    </Pie>
-                    <Tooltip 
-                      formatter={(value, name) => [`${value} albums`, name]}
-                      contentStyle={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                        border: 'none',
-                        borderRadius: '8px',
-                        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                      }}
-                    />
-                  </PieChart>
-                </ResponsiveContainer>
-              </div>
-              
-              {/* Compact Legend */}
-              <div className="w-48 space-y-2 text-sm">
-                {stats.topGenres?.slice(0, 8).map((entry: GenreStat, index: number) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <div 
-                      className="w-3 h-3 rounded-full flex-shrink-0"
-                      style={{ backgroundColor: COLORS[index % COLORS.length] }}
-                    />
-                    <span className="truncate font-medium capitalize">
-                      {entry.name} ({((entry.value / stats.totalAlbums) * 100).toFixed(0)}%)
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      <ChartsSection stats={stats} COLORS={COLORS} />
 
       {/* Top Artists */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Artists with Most Albums</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.topArtists?.slice(0, 9).map((artist: ArtistStat, index: number) => (
-            <Link
-              key={index}
-              to={artist.uri}
-              className="block"
-            >
-              <Card variant="interactive">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={artist.image} alt={artist.name} />
-                      <AvatarFallback className="text-sm">
-                        {artist.name.charAt(0)}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{artist.name}</p>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Badge variant="secondary">{artist.count} albums</Badge>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <TopArtistsSection stats={stats} />
 
       {/* Recent Additions */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-bold mb-4">Recent Additions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.recentAdditions?.map((album: Album, index: number) => (
-            <Link
-              key={index}
-              to={album.uri_release}
-              className="block"
-            >
-              <Card variant="interactive">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
-                        src={getAlbumImageFromData(album.uri_release, 'avatar')}
-                        alt={album.release_name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{album.release_name}</p>
-                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                      <p className="text-xs text-muted-foreground">
-                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
-                          day: '2-digit', 
-                          month: '2-digit', 
-                          year: 'numeric' 
-                        })}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <RecentAdditionsSection stats={stats} />
 
       {/* Collection Growth */}
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle>Additions Over Time</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={stats.additionsData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="count" fill="hsl(var(--primary))" />
-            </BarChart>
-          </ResponsiveContainer>
-        </CardContent>
-      </Card>
+      <CollectionGrowthSection stats={stats} />
 
       {/* Oldest Additions */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Clock className="h-6 w-6" />
-          Oldest Additions
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {stats.oldestAdditions?.map((album: Album, index: number) => (
-            <Link
-              key={index}
-              to={album.uri_release}
-              className="block"
-            >
-              <Card variant="interactive">
-                <CardContent className="p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="h-12 w-12 rounded-lg overflow-hidden flex-shrink-0">
-                      <img
-                        src={getAlbumImageFromData(album.uri_release, 'avatar')}
-                        alt={album.release_name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{album.release_name}</p>
-                      <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                      <p className="text-xs text-muted-foreground">
-                        Added: {new Date(album.date_added).toLocaleDateString('en-GB', { 
-                          day: '2-digit', 
-                          month: '2-digit', 
-                          year: 'numeric' 
-                        })}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
-        </div>
-      </div>
+      <OldestAdditionsSection stats={stats} />
 
+      </div>
     </div>
   );
 }
