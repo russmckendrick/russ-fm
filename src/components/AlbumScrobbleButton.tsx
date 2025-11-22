@@ -14,14 +14,16 @@ interface AlbumScrobbleButtonProps {
   size?: 'sm' | 'default' | 'lg';
   className?: string;
   fullWidth?: boolean;
+  style?: React.CSSProperties;
 }
 
-export function AlbumScrobbleButton({ 
-  album, 
-  variant = 'outline', 
-  size = 'default', 
+export function AlbumScrobbleButton({
+  album,
+  variant = 'outline',
+  size = 'default',
   className = '',
-  fullWidth = false 
+  fullWidth = false,
+  style
 }: AlbumScrobbleButtonProps) {
   const { isAuthenticated } = useLastFmAuth();
   const { scrobbleAlbum, isScrobbling, error } = useScrobble();
@@ -33,7 +35,7 @@ export function AlbumScrobbleButton({
 
     try {
       setProgress({ current: 0, total: album.tracks.length });
-      
+
       // Simulate progress updates during scrobbling
       const progressInterval = setInterval(() => {
         setProgress(prev => {
@@ -42,18 +44,18 @@ export function AlbumScrobbleButton({
           return { current: newCurrent, total: prev.total };
         });
       }, 3000); // Update every 3 seconds (Last.fm scrobbling interval)
-      
+
       const response = await scrobbleAlbum(album);
-      
+
       clearInterval(progressInterval);
-      
+
       if (response.success) {
         setProgress({ current: album.tracks.length, total: album.tracks.length });
         setTimeout(() => {
           setScrobbled(true);
           setProgress(null);
         }, 500);
-        
+
         // Reset scrobbled state after 5 seconds
         setTimeout(() => setScrobbled(false), 5000);
       }
@@ -111,20 +113,21 @@ export function AlbumScrobbleButton({
         onClick={handleScrobble}
         disabled={isScrobbling || scrobbled || !!progress}
         className={buttonClassName}
+        style={style}
       >
         {getIcon()}
         <span className="service-text">
           {getButtonText()}
         </span>
       </Button>
-      
+
       {/* Progress bar */}
       {progress && (
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div 
+          <div
             className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
-            style={{ 
-              width: `${(progress.current / progress.total) * 100}%` 
+            style={{
+              width: `${(progress.current / progress.total) * 100}%`
             }}
           ></div>
         </div>

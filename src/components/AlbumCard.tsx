@@ -8,7 +8,7 @@ import { MoreHorizontal, Music } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getAlbumImageFromData, getArtistAvatarFromData, handleImageError } from '@/lib/image-utils';
-import { useAlbumColors } from '@/hooks/useAlbumColors';
+
 
 interface Album {
   release_name: string;
@@ -38,7 +38,7 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
   const navigate = useNavigate();
 
   const albumPath = album.uri_release.replace('/album/', '').replace('/', '');
-  const colors = useAlbumColors(albumPath);
+
 
   const year = new Date(album.date_release_year).getFullYear();
   const cleanGenres = getCleanGenresFromArray(album.genre_names, album.release_artist);
@@ -73,19 +73,14 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
       className="group relative h-full"
     >
       {/* Dynamic Glow Effect */}
-      <div
-        className="absolute -inset-0.5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"
-        style={{
-          background: colors ? `radial-gradient(circle at center, ${colors.accent}40, transparent 70%)` : 'transparent'
-        }}
-      />
+
 
       <Link
         to={`/album/${albumPath}`}
         onClick={handleCardClick}
-        className="block h-full relative z-10"
+        className="block h-full relative z-10 focus:outline-none focus-visible:outline-none"
       >
-        <Card className="h-full border-0 bg-transparent shadow-none overflow-visible">
+        <Card className="h-full !border-0 bg-transparent shadow-none overflow-visible">
           <CardContent className="p-0 h-full flex flex-col gap-4">
             {/* Album Cover Container */}
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-md transition-all duration-500 group-hover:shadow-xl group-hover:scale-[1.02]">
