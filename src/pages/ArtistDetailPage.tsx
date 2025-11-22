@@ -350,21 +350,35 @@ export function ArtistDetailPage() {
 
         <div className="container mx-auto relative z-10 max-w-6xl">
           <div className="flex flex-col md:flex-row items-end gap-8 md:gap-12">
-            {/* Artist Image - Floating & Circular */}
-            <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0">
+            {/* Artist Image - Polaroid Frame */}
+            <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0" style={{ transform: 'rotate(-2deg)' }}>
               <div
-                className="absolute -inset-4 rounded-full opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
+                className="absolute -inset-4 rounded-2xl opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
                 style={{ background: albumColors ? createGlowGradient(albumColors, 'bold') : 'none' }}
               />
-              <img
-                src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
-                alt={artistName}
-                className="relative w-full aspect-square rounded-full shadow-2xl transition-transform duration-500 group-hover:scale-[1.02] object-cover"
-                style={{
-                  boxShadow: albumColors ? `0 20px 40px -10px ${albumColors.accent}60` : undefined
-                }}
-                onError={handleImageError}
-              />
+              {/* Polaroid Frame */}
+              <div className="relative bg-white p-4 pb-12 shadow-2xl rounded-lg transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-0">
+                {/* Photo */}
+                <div className="aspect-square overflow-hidden rounded-sm">
+                  <img
+                    src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
+                    alt={artistName}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onError={handleImageError}
+                  />
+                </div>
+
+                {/* Artist Name (handwritten style on polaroid) */}
+                <div className="absolute bottom-4 left-0 right-0 px-4">
+                  <p className="text-center text-slate-700 font-medium text-lg tracking-wide line-clamp-2"
+                    style={{ fontFamily: '"Kalam", "Comic Sans MS", cursive' }}>
+                    {artistName}
+                  </p>
+                </div>
+              </div>
+
+              {/* Subtle tape effect */}
+              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-yellow-100/80 rounded-sm shadow-sm border border-yellow-200/50 -rotate-3" />
             </div>
 
             {/* Header Info */}
