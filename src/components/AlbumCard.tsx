@@ -9,24 +9,7 @@ import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getAlbumImageFromData, getArtistAvatarFromData, handleImageError } from '@/lib/image-utils';
 
 
-interface Album {
-  release_name: string;
-  release_artist: string;
-  artists?: Array<{
-    name: string;
-    uri_artist: string;
-    images_uri_artist: {
-      avatar: string;
-    };
-  }>;
-  genre_names: string[];
-  date_release_year: string;
-  date_added: string;
-  uri_release: string;
-  images_uri_release: {
-    medium: string;
-  };
-}
+import { Album } from '@/types/album';
 
 interface AlbumCardProps {
   album: Album;

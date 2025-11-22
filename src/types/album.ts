@@ -4,14 +4,29 @@ export interface Album {
   artists: Array<{
     name: string;
     uri_artist: string;
+    json_detailed_artist?: string;
+    images_uri_artist?: {
+      'hi-res': string;
+      medium: string;
+      avatar: string;
+    };
+    biography?: string;
   }>;
   genre_names: string[];
   uri_release: string;
+  uri_artist: string;
   date_added: string;
   date_release_year: string;
+  json_detailed_release?: string;
+  json_detailed_artist?: string;
   images_uri_release: {
     'hi-res': string;
     medium: string;
+  };
+  images_uri_artist?: {
+    'hi-res': string;
+    medium: string;
+    avatar: string;
   };
 }
 

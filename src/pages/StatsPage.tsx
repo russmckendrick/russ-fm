@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { AlbumCard } from '@/components/AlbumCard';
+import { ArtistCard } from '@/components/ArtistCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useCountAnimation } from '@/hooks/useCountAnimation';
@@ -21,9 +21,10 @@ import {
 } from 'recharts';
 import { Disc, Music, TrendingUp, Users, Clock } from 'lucide-react';
 import { filterGenres } from '@/lib/filterGenres';
-import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
+import { getArtistImageFromData } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import { generateColorProperties, createHeroBackground } from '@/lib/color-utils';
+import { Album } from '@/types/album';
 
 interface ColorPalette {
   background: string;
@@ -32,31 +33,15 @@ interface ColorPalette {
   muted: string;
 }
 
-interface Album {
-  release_name: string;
-  release_artist: string;
-  genre_names: string[];
-  uri_release: string;
-  uri_artist: string;
-  date_added: string;
-  date_release_year: string;
-  images_uri_release?: {
-    'hi-res'?: string;
-    medium?: string;
-    avatar?: string;
-  };
-  images_uri_artist?: {
-    'hi-res'?: string;
-    medium?: string;
-    avatar?: string;
-  };
-}
-
 interface ArtistStat {
   name: string;
-  count: number;
-  image: string;
   uri: string;
+  albums: Album[];
+  albumCount: number;
+  genres: string[];
+  image: string;
+  latestAlbum: string;
+  biography?: string;
 }
 
 interface GenreStat {
@@ -74,6 +59,11 @@ interface AdditionStat {
   count: number;
 }
 
+interface YearStat {
+  year: string;
+  count: number;
+}
+
 interface CollectionStats {
   totalAlbums: number;
   uniqueArtists: number;
@@ -86,7 +76,13 @@ interface CollectionStats {
   oldestAlbum: Album | null;
   newestAlbum: Album | null;
   recentAdditions: Album[];
-  oldestAdditions: Album[];
+  randomAlbums: Album[];
+  // New Stats
+  goldenYear: { year: string; count: number } | null;
+  topYears: YearStat[];
+  oneHitWonders: number;
+  catalogArtists: number;
+  mostActiveMonth: { month: string; count: number } | null;
 }
 
 // Overview Cards Component with animations
@@ -188,8 +184,13 @@ function ChartsSection({ stats, COLORS }: { stats: CollectionStats; COLORS: stri
                     borderRadius: '8px',
                     boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                   }}
+                  cursor={{ fill: 'hsl(var(--muted)/0.2)' }}
                 />
-                <Bar dataKey="count" fill="hsl(var(--primary))" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="count" radius={[8, 8, 0, 0]}>
+                  {stats.decadeData?.map((_, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                  ))}
+                </Bar>
               </BarChart>
             </ResponsiveContainer>
           </CardContent>
@@ -216,14 +217,13 @@ function ChartsSection({ stats, COLORS }: { stats: CollectionStats; COLORS: stri
                       cx="50%"
                       cy="50%"
                       labelLine={false}
-                      outerRadius={90}
-                      innerRadius={45}
-                      fill="#8884d8"
+                      outerRadius={100}
+                      innerRadius={50}
                       dataKey="value"
                       stroke="hsl(var(--background))"
                       strokeWidth={2}
                     >
-                      {stats.topGenres?.map((entry: GenreStat, index: number) => (
+                      {stats.topGenres?.map((_, index: number) => (
                         <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                       ))}
                     </Pie>
@@ -282,41 +282,16 @@ function TopArtistsSection({ stats }: { stats: CollectionStats }) {
       >
         Artists with Most Albums
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {stats.topArtists?.slice(0, 9).map((artist: ArtistStat, index: number) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {stats.topArtists?.slice(0, 8).map((artist: ArtistStat, index: number) => (
           <motion.div
             key={artist.uri}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+            className="h-full"
           >
-            <Link to={artist.uri} className="block">
-              <motion.div
-                whileHover={{ scale: 1.02, y: -3 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              >
-                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3">
-                      <Avatar className="h-14 w-14 ring-2 ring-primary/10">
-                        <AvatarImage src={artist.image} alt={artist.name} />
-                        <AvatarFallback className="text-lg font-semibold">
-                          {artist.name.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium truncate text-lg">{artist.name}</p>
-                        <div className="flex items-center gap-2 mt-1">
-                          <Badge variant="secondary" className="font-normal">
-                            {artist.count} {artist.count === 1 ? 'album' : 'albums'}
-                          </Badge>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Link>
+            <ArtistCard artist={artist} />
           </motion.div>
         ))}
       </div>
@@ -344,45 +319,16 @@ function RecentAdditionsSection({ stats }: { stats: CollectionStats }) {
       >
         Recent Additions
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {stats.recentAdditions?.map((album: Album, index: number) => (
           <motion.div
             key={album.uri_release}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+            className="h-full"
           >
-            <Link to={album.uri_release} className="block">
-              <motion.div
-                whileHover={{ scale: 1.02, y: -3 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              >
-                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
-                        <img
-                          src={getAlbumImageFromData(album.uri_release, 'medium')}
-                          alt={album.release_name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium truncate">{album.release_name}</p>
-                        <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Added: {new Date(album.date_added).toLocaleDateString('en-GB', {
-                            day: '2-digit',
-                            month: 'short',
-                            year: 'numeric'
-                          })}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Link>
+            <AlbumCard album={album} />
           </motion.div>
         ))}
       </div>
@@ -394,6 +340,7 @@ function RecentAdditionsSection({ stats }: { stats: CollectionStats }) {
 function CollectionGrowthSection({ stats }: { stats: CollectionStats }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
+  const COLORS = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899', '#84CC16', '#6366F1'];
 
   return (
     <motion.div
@@ -419,8 +366,13 @@ function CollectionGrowthSection({ stats }: { stats: CollectionStats }) {
                   borderRadius: '8px',
                   boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
                 }}
+                cursor={{ fill: 'hsl(var(--muted)/0.2)' }}
               />
-              <Bar dataKey="count" fill="hsl(var(--primary))" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="count" radius={[8, 8, 0, 0]}>
+                {stats.additionsData?.map((_, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -429,8 +381,72 @@ function CollectionGrowthSection({ stats }: { stats: CollectionStats }) {
   );
 }
 
-// Oldest Additions Section Component
-function OldestAdditionsSection({ stats }: { stats: CollectionStats }) {
+// Golden Year Section
+function GoldenYearSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  if (!stats.goldenYear) return null;
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card className="backdrop-blur-md bg-gradient-to-br from-amber-500/10 to-orange-500/10 border-amber-500/20 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-xl font-light flex items-center gap-2">
+              <TrendingUp className="h-5 w-5 text-amber-500" />
+              Golden Year
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="flex flex-col items-center justify-center py-6 text-center">
+              <span className="text-8xl font-bold text-foreground/90 tracking-tighter">
+                {stats.goldenYear.year}
+              </span>
+              <p className="text-muted-foreground mt-2">
+                Most prolific year with <span className="font-semibold text-foreground">{stats.goldenYear.count}</span> albums released
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-xl font-light">Top 5 Release Years</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              {stats.topYears?.map((item, index) => (
+                <div key={item.year} className="space-y-1">
+                  <div className="flex justify-between text-sm">
+                    <span className="font-medium">{item.year}</span>
+                    <span className="text-muted-foreground">{item.count} albums</span>
+                  </div>
+                  <div className="h-2 bg-secondary/30 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-primary/80"
+                      initial={{ width: 0 }}
+                      animate={inView ? { width: `${(item.count / (stats.goldenYear?.count || 1)) * 100}%` } : { width: 0 }}
+                      transition={{ duration: 1, delay: 0.5 + (index * 0.1) }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </motion.section>
+  );
+}
+
+// Artist Depth Section
+function ArtistDepthSection({ stats }: { stats: CollectionStats }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -441,60 +457,60 @@ function OldestAdditionsSection({ stats }: { stats: CollectionStats }) {
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h2
-        className="text-3xl font-light mb-6 flex items-center gap-2"
-        initial={{ opacity: 0, x: -20 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-        transition={{ delay: 0.2 }}
-      >
-        <Clock className="h-8 w-8" />
-        Oldest Additions
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {stats.oldestAdditions?.map((album: Album, index: number) => (
-          <motion.div
-            key={album.uri_release}
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
-          >
-            <Link to={album.uri_release} className="block">
-              <motion.div
-                whileHover={{ scale: 1.02, y: -3 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              >
-                <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-md hover:shadow-xl transition-shadow">
-                  <CardContent className="p-4">
-                    <div className="flex items-center gap-3">
-                      <div className="h-16 w-16 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
-                        <img
-                          src={getAlbumImageFromData(album.uri_release, 'medium')}
-                          alt={album.release_name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium truncate">{album.release_name}</p>
-                        <p className="text-sm text-muted-foreground truncate">{album.release_artist}</p>
-                        <p className="text-xs text-muted-foreground mt-1">
-                          Added: {new Date(album.date_added).toLocaleDateString('en-GB', {
-                            day: '2-digit',
-                            month: 'short',
-                            year: 'numeric'
-                          })}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </Link>
-          </motion.div>
-        ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg">
+          <CardHeader>
+            <CardTitle className="text-lg font-light flex items-center gap-2">
+              <Users className="h-5 w-5 text-blue-500" />
+              Artist Depth
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">One Hit Wonders</span>
+                <Badge variant="secondary">{stats.oneHitWonders}</Badge>
+              </div>
+              <p className="text-xs text-muted-foreground">Artists with only 1 album in collection</p>
+            </div>
+            <div className="space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">Catalog Artists</span>
+                <Badge variant="outline" className="border-primary/50">{stats.catalogArtists}</Badge>
+              </div>
+              <p className="text-xs text-muted-foreground">Artists with 5+ albums in collection</p>
+            </div>
+          </CardContent>
+        </Card>
+
+        {stats.mostActiveMonth && (
+          <Card className="backdrop-blur-md bg-card/50 border-border/50 shadow-lg md:col-span-2">
+            <CardHeader>
+              <CardTitle className="text-lg font-light flex items-center gap-2">
+                <Clock className="h-5 w-5 text-purple-500" />
+                Most Active Month
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex items-center justify-between">
+              <div className="space-y-1">
+                <p className="text-4xl font-bold">{stats.mostActiveMonth.month}</p>
+                <p className="text-muted-foreground">
+                  You typically add the most music in {stats.mostActiveMonth.month}
+                </p>
+              </div>
+              <div className="text-right">
+                <span className="text-3xl font-bold text-primary">{stats.mostActiveMonth.count}</span>
+                <p className="text-sm text-muted-foreground">Total Additions</p>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </motion.section>
   );
 }
+
+
 
 export function StatsPage() {
   const [, setCollection] = useState<Album[]>([]);
@@ -513,7 +529,7 @@ export function StatsPage() {
   useMetaTags({
     title: 'Collection Statistics | Russ.fm',
     description: stats.totalAlbums
-      ? `${stats.totalAlbums} albums across ${stats.totalGenres} genres by ${stats.totalArtists} artists. Explore my music collection statistics.`
+      ? `${stats.totalAlbums} albums across ${stats.uniqueGenres} genres by ${stats.uniqueArtists} artists. Explore my music collection statistics.`
       : 'Explore comprehensive statistics about my vinyl and music collection on Russ.fm',
     image: `${appConfig.siteUrl}/og-image.png`,
     url: `${appConfig.siteUrl}/stats`,
@@ -525,7 +541,7 @@ export function StatsPage() {
     // Basic counts
     const totalAlbums = data.length;
     const uniqueArtists = new Set(data.map(album => album.release_artist)).size;
-    const allFilteredGenres = data.flatMap(album => 
+    const allFilteredGenres = data.flatMap(album =>
       filterGenres(album.genre_names, album.release_artist)
     );
     const uniqueGenres = new Set(allFilteredGenres).size;
@@ -538,16 +554,21 @@ export function StatsPage() {
       return acc;
     }, {});
     const topArtists = Object.entries(artistCounts)
-      .sort(([,a], [,b]) => (b as number) - (a as number))
+      .sort(([, a], [, b]) => (b as number) - (a as number))
       .slice(0, 9)
       .map(([name, count]) => {
         // Get artist image and URI from the first album by this artist
-        const artistAlbum = data.find(album => album.release_artist === name);
-        return { 
-          name, 
-          count, 
-          image: getArtistImageFromData(artistAlbum?.uri_artist || '', 'avatar'),
-          uri: artistAlbum?.uri_artist || ''
+        const artistAlbums = data.filter(album => album.release_artist === name);
+        const artistAlbum = artistAlbums[0];
+        return {
+          name,
+          uri: artistAlbum?.uri_artist || '',
+          albums: artistAlbums,
+          albumCount: count,
+          genres: artistAlbum?.genre_names || [],
+          image: getArtistImageFromData(artistAlbum?.uri_artist || '', 'medium'),
+          latestAlbum: artistAlbums[0]?.release_name || '',
+          biography: ''
         };
       });
 
@@ -557,7 +578,7 @@ export function StatsPage() {
       return acc;
     }, {});
     const topGenres = Object.entries(genreCounts)
-      .sort(([,a], [,b]) => (b as number) - (a as number))
+      .sort(([, a], [, b]) => (b as number) - (a as number))
       .slice(0, 10)
       .map(([name, count]) => ({ name, value: count }));
 
@@ -583,7 +604,7 @@ export function StatsPage() {
       acc[monthYear] = (acc[monthYear] || 0) + 1;
       return acc;
     }, {});
-    
+
     const additionsData = Object.entries(additionsPerMonth)
       .map(([month, count]) => ({ month, count }))
       .sort((a, b) => {
@@ -593,7 +614,7 @@ export function StatsPage() {
       });
 
     // Find oldest and newest albums
-    const sortedByYear = [...data].sort((a, b) => 
+    const sortedByYear = [...data].sort((a, b) =>
       new Date(a.date_release_year).getTime() - new Date(b.date_release_year).getTime()
     );
     const oldestAlbum = sortedByYear[0];
@@ -602,12 +623,57 @@ export function StatsPage() {
     // Recent additions
     const recentAdditions = [...data]
       .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
+      .slice(0, 10);
+
+    // Random Albums (9 items)
+    const randomAlbums = [...data]
+      .sort(() => 0.5 - Math.random())
       .slice(0, 9);
 
-    // Oldest additions
-    const oldestAdditions = [...data]
-      .sort((a, b) => new Date(a.date_added).getTime() - new Date(b.date_added).getTime())
-      .slice(0, 9);
+    // --- NEW STATS CALCULATIONS ---
+
+    // 1. Golden Year (Year with most releases)
+    const yearCounts = data.reduce((acc: Record<string, number>, album) => {
+      const year = new Date(album.date_release_year).getFullYear().toString();
+      if (year && year !== 'NaN') {
+        acc[year] = (acc[year] || 0) + 1;
+      }
+      return acc;
+    }, {});
+
+    const sortedYears = Object.entries(yearCounts)
+      .sort(([, a], [, b]) => (b as number) - (a as number));
+
+    const goldenYear = sortedYears.length > 0
+      ? { year: sortedYears[0][0], count: sortedYears[0][1] }
+      : null;
+
+    // 2. Top 5 Years
+    const topYears = sortedYears.slice(0, 5).map(([year, count]) => ({ year, count }));
+
+    // 3. One Hit Wonders vs Catalog Artists
+    let oneHitWonders = 0;
+    let catalogArtists = 0;
+
+    Object.values(artistCounts).forEach(count => {
+      if (count === 1) oneHitWonders++;
+      if (count >= 5) catalogArtists++;
+    });
+
+    // 4. Most Active Month (for adding music)
+    const monthCounts = data.reduce((acc: Record<string, number>, album) => {
+      const date = new Date(album.date_added);
+      const month = date.toLocaleString('default', { month: 'long' });
+      acc[month] = (acc[month] || 0) + 1;
+      return acc;
+    }, {});
+
+    const sortedMonths = Object.entries(monthCounts)
+      .sort(([, a], [, b]) => (b as number) - (a as number));
+
+    const mostActiveMonth = sortedMonths.length > 0
+      ? { month: sortedMonths[0][0], count: sortedMonths[0][1] }
+      : null;
 
     setStats({
       totalAlbums,
@@ -621,7 +687,12 @@ export function StatsPage() {
       oldestAlbum,
       newestAlbum,
       recentAdditions,
-      oldestAdditions
+      randomAlbums,
+      goldenYear,
+      topYears,
+      oneHitWonders,
+      catalogArtists,
+      mostActiveMonth
     });
   }, []);
 
@@ -721,26 +792,53 @@ export function StatsPage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 space-y-12">
-
-      {/* Overview Cards */}
-      <OverviewCards stats={stats} loading={loading} />
-
-      {/* Charts Row */}
-      <ChartsSection stats={stats} COLORS={COLORS} />
-
-      {/* Top Artists */}
-      <TopArtistsSection stats={stats} />
-
-      {/* Recent Additions */}
-      <RecentAdditionsSection stats={stats} />
-
-      {/* Collection Growth */}
-      <CollectionGrowthSection stats={stats} />
-
-      {/* Oldest Additions */}
-      <OldestAdditionsSection stats={stats} />
-
+        <OverviewCards stats={stats} loading={loading} />
+        <ChartsSection stats={stats} COLORS={COLORS} />
+        <GoldenYearSection stats={stats} />
+        <TopArtistsSection stats={stats} />
+        <ArtistDepthSection stats={stats} />
+        <RecentAdditionsSection stats={stats} />
+        <CollectionGrowthSection stats={stats} />
+        <RandomAlbumsSection stats={stats} />
       </div>
     </div>
+  );
+}
+
+// Random Albums Section Component
+function RandomAlbumsSection({ stats }: { stats: CollectionStats }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+        className="text-3xl font-light mb-6 flex items-center gap-2"
+        initial={{ opacity: 0, x: -20 }}
+        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Disc className="h-8 w-8" />
+        From the Crates
+      </motion.h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {stats.randomAlbums?.map((album: Album, index: number) => (
+          <motion.div
+            key={album.uri_release}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: 0.3 + index * 0.08, duration: 0.5 }}
+            className="h-full"
+          >
+            <AlbumCard album={album} />
+          </motion.div>
+        ))}
+      </div>
+    </motion.section>
   );
 }
