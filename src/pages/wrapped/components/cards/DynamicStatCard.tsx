@@ -13,7 +13,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
   const getIcon = () => {
     const iconSize = size === 'extra-wide' ? 'w-6 h-6' : size === 'large' ? 'w-8 h-8' : size === 'medium' ? 'w-6 h-6' : 'w-5 h-5';
     const iconClass = `${iconSize} text-white/70`;
-    
+
     switch (stat.type) {
       case 'total':
         return <Hash className={iconClass} />;
@@ -84,7 +84,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
     if (typeof stat.value === 'number') {
       return stat.value.toLocaleString();
     }
-    
+
     // Check if it's a date format (YYYY-MM-DD)
     if (typeof stat.value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(stat.value)) {
       // Split into separate lines for better fit
@@ -96,7 +96,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
         </div>
       );
     }
-    
+
     return stat.value;
   };
 
@@ -144,7 +144,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
       relative w-full rounded-lg overflow-hidden 
       ${getBackgroundGradient()}
       transition-all duration-300 hover:shadow-xl hover:scale-105
-      aspect-square group cursor-pointer
+      h-full group cursor-pointer
     `}
       style={{ transform: 'translateZ(0)' }}
     >
@@ -172,32 +172,32 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
       <div className="relative h-full p-3">
         {/* Standard square layout for all cards (timeline now handled separately) */}
         <div className="h-full flex flex-col justify-between">
-            {/* Header with icon */}
-            <div className="flex items-start justify-between">
-              <div className={`font-semibold text-white/90 ${textSizes.title} leading-tight transition-all duration-300 group-hover:text-white`}>
-                {stat.title}
-              </div>
-              <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
-                {getIcon()}
-              </div>
+          {/* Header with icon */}
+          <div className="flex items-start justify-between">
+            <div className={`font-semibold text-white/90 ${textSizes.title} leading-tight transition-all duration-300 group-hover:text-white`}>
+              {stat.title}
             </div>
+            <div className="transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
+              {getIcon()}
+            </div>
+          </div>
 
-            {/* Main value with animation */}
-            <div className="flex-1 flex items-center justify-center">
-              {typeof formatValue() === 'string' ? (
-                <div className={`
+          {/* Main value with animation */}
+          <div className="flex-1 flex items-center justify-center">
+            {typeof formatValue() === 'string' ? (
+              <div className={`
                   font-bold text-white ${textSizes.value} text-center leading-none
                   transition-all duration-300 group-hover:scale-110
                   ${size === 'small' ? 'group-hover:animate-bounce-subtle' : ''}
                 `}>
-                  {formatValue()}
-                </div>
-              ) : (
-                <div className="transition-all duration-300 group-hover:scale-110">
-                  {formatValue()}
-                </div>
-              )}
-            </div>
+                {formatValue()}
+              </div>
+            ) : (
+              <div className="transition-all duration-300 group-hover:scale-110">
+                {formatValue()}
+              </div>
+            )}
+          </div>
 
           {/* Subtitle if available */}
           {stat.subtitle && (
@@ -210,7 +210,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
 
       {/* Shimmer effect on hover */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-      
+
       {/* Hover effect overlay */}
       <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </div>

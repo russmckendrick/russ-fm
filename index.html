@@ -42,6 +42,22 @@
     <meta name="twitter:image" content="https://russ.fm/og-image.png" />
 
     <title>Russ.fm - Personal Record Collection</title>
+    <script>
+      (function() {
+        const storageKey = "vite-ui-theme";
+        const defaultTheme = "system";
+        let theme = localStorage.getItem(storageKey) || defaultTheme;
+
+        if (theme === "system") {
+          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+          document.documentElement.classList.add(systemTheme);
+        } else {
+          document.documentElement.classList.add(theme);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

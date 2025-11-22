@@ -6,9 +6,9 @@ export function Logo({ className = "" }: LogoProps) {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <div className="h-8 w-8 animate-spin-slow">
-        <svg 
-          viewBox="0 0 512 512" 
-          className="h-full w-full fill-black dark:fill-white"
+        <svg
+          viewBox="0 0 512 512"
+          className="h-full w-full fill-current"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g>
@@ -32,7 +32,7 @@ export function Logo({ className = "" }: LogoProps) {
                   z"/>
                 <path d="M320,256c0-35.285-28.715-64-64-64s-64,28.715-64,64s28.715,64,64,64S320,291.285,320,256z M213.333,256
                   c0-23.531,19.136-42.667,42.667-42.667s42.667,19.136,42.667,42.667S279.531,298.667,256,298.667S213.333,279.531,213.333,256z"
-                  />
+                />
                 <path d="M277.333,256c0-11.776-9.557-21.333-21.333-21.333s-21.333,9.557-21.333,21.333s9.557,21.333,21.333,21.333
                   S277.333,267.776,277.333,256z"/>
                 <path d="M266.667,138.667c0-5.888-4.779-10.667-10.667-10.667c-70.592,0-128,57.408-128,128c0,5.888,4.779,10.667,10.667,10.667
@@ -42,7 +42,6 @@ export function Logo({ className = "" }: LogoProps) {
           </g>
         </svg>
       </div>
-      <span className="text-xl font-bold">RussFM</span>
     </div>
   );
 }

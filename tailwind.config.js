@@ -89,6 +89,7 @@ export default {
         "float": "float 3s ease-in-out infinite",
         "float-delayed": "float-delayed 3s ease-in-out infinite 0.5s",
         "bounce-subtle": "bounce-subtle 0.8s ease-in-out infinite",
+        "spin-slow": "spin 3s linear infinite",
       },
     },
   },

@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Logo } from "./Logo";
 import { ThemeToggle } from "./theme-toggle";
 import { SearchOverlay } from "./SearchOverlay";
-import { SearchFAB } from "./SearchFAB";
 import { MobileSearchModal } from "./MobileSearchModal";
 import { UserProfileMenu } from "./UserProfileMenu";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, Home, Disc, Mic2, BarChart2, Shuffle, Gift } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
+import { cn } from "@/lib/utils";
 
 export function Navigation() {
   const location = useLocation();
@@ -16,23 +15,22 @@ export function Navigation() {
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Mobile detection
+  // Mobile detection & Scroll handler
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    window.addEventListener('scroll', handleScroll);
 
-  // Check if we're on a page where search overlay should be disabled
-  const isSearchOverlayDisabled = () => {
-    // Only disable on the exact home page, allow search everywhere else
-    return location.pathname === '/';
-  };
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleSearchFocus = () => {
     if (isMobile) {
@@ -42,273 +40,137 @@ export function Navigation() {
     }
   };
 
-  const closeSearchOverlay = () => {
-    setSearchOverlayOpen(false);
-  };
+  const navItems = [
+    { path: '/', label: 'Home', icon: Home },
+    { path: '/albums/1', label: 'Albums', icon: Disc, activePrefix: '/albums' },
+    { path: '/artists/1', label: 'Artists', icon: Mic2, activePrefix: '/artists' },
+    { path: '/stats', label: 'Stats', icon: BarChart2 },
+    { path: '/random', label: 'Random', icon: Shuffle },
+    { path: '/wrapped', label: 'Wrapped', icon: Gift, activePrefix: '/wrapped' },
+  ];
 
-  const closeMobileSearch = () => {
-    setMobileSearchOpen(false);
-    setMobileMenuOpen(false); // Also close mobile menu if open
+  const isActive = (path: string, prefix?: string) => {
+    if (prefix) return location.pathname.startsWith(prefix);
+    return location.pathname === path || (path === '/' && location.pathname === '/home');
   };
 
   return (
-    <div className="min-h-0">
-      <div className="fixed top-6 inset-x-0 z-50">
-        <div className="container mx-auto px-4">
-          <nav className="h-16 bg-background border dark:border-slate-700/70 rounded-full">
-            <div className="h-full flex items-center justify-between px-6">
-              <div className="flex items-center gap-8">
-                <Link to="/">
-                  <Logo className="shrink-0" />
-                </Link>
+    <>
+      {/* Desktop Navigation - Floating Island */}
+      <div className={cn(
+        "fixed top-0 inset-x-0 z-50 flex justify-center transition-all duration-300 pointer-events-none",
+        scrolled ? "pt-4" : "pt-6"
+      )}>
+        <nav className={cn(
+          "pointer-events-auto flex items-center justify-between px-2 py-2 rounded-full border transition-all duration-300 mx-4",
+          "bg-background/70 backdrop-blur-xl border-white/10 shadow-lg",
+          scrolled ? "w-auto px-6 h-14" : "w-full max-w-5xl h-16 px-6"
+        )}>
+          {/* Logo Section */}
+          <Link to="/" className="flex items-center gap-2 mr-8">
+            <Logo className="h-8 w-8" />
+            <span className={cn(
+              "font-bold text-lg tracking-tight transition-all duration-300",
+              scrolled ? "hidden lg:block" : "block"
+            )}>
+              Russ.fm
+            </span>
+          </Link>
 
-                {/* Center navigation links */}
-                <div className="hidden md:flex items-center gap-6">
-                  <Link 
-                    to="/" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname === '/' || location.pathname === '/home'
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Home
-                    {(location.pathname === '/' || location.pathname === '/home') && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/albums/1" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname.startsWith('/albums') 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Albums
-                    {location.pathname.startsWith('/albums') && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/artists/1" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname.startsWith('/artists') 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Artists
-                    {location.pathname.startsWith('/artists') && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/stats" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname === '/stats' 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Stats
-                    {location.pathname === '/stats' && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/genres" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname === '/genres' 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Genres
-                    {location.pathname === '/genres' && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/random" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname === '/random' 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Random
-                    {location.pathname === '/random' && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                  <Link 
-                    to="/wrapped" 
-                    className={`text-sm font-medium transition-all duration-200 hover:text-foreground relative py-2 ${
-                      location.pathname.startsWith('/wrapped') 
-                        ? 'text-primary font-semibold' 
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Wrapped
-                    {location.pathname.startsWith('/wrapped') && (
-                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full" />
-                    )}
-                  </Link>
-                </div>
-              </div>
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={cn(
+                  "relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200",
+                  "hover:bg-secondary/80 hover:text-foreground",
+                  isActive(item.path, item.activePrefix)
+                    ? "text-foreground bg-secondary"
+                    : "text-muted-foreground"
+                )}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
 
-              <div className="flex items-center gap-4">
-                {/* Desktop Search Button */}
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hidden md:flex rounded-full"
-                  onClick={handleSearchFocus}
-                >
-                  <Search className="h-5 w-5" />
-                </Button>
+          {/* Right Actions */}
+          <div className="flex items-center gap-2 ml-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="rounded-full hover:bg-secondary/80"
+              onClick={handleSearchFocus}
+            >
+              <Search className="h-4 w-4" />
+            </Button>
 
-                {/* Desktop Last.fm Profile */}
-                <div className="hidden md:block">
-                  <UserProfileMenu />
-                </div>
+            <div className="hidden md:block w-px h-6 bg-border mx-1" />
 
-                {/* Desktop Theme Toggle */}
-                <div className="hidden md:block">
-                  <ThemeToggle />
-                </div>
-
-                {/* Mobile Burger Menu Button */}
-                <Button
-                  size="icon"
-                  variant="ghost"
-                  className="md:hidden rounded-full"
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                  {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-                </Button>
-              </div>
+            <div className="hidden md:flex items-center gap-2">
+              <UserProfileMenu />
+              <ThemeToggle />
             </div>
-          </nav>
 
-          {/* Mobile Menu Dropdown */}
-          {mobileMenuOpen && (
-            <div className="md:hidden mt-2 bg-background border dark:border-slate-700/70 rounded-lg shadow-lg">
-              <div className="p-4 space-y-4">
-                {/* Mobile Navigation Links */}
-                <div className="space-y-2">
-                  <Link
-                    to="/"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname === '/' || location.pathname === '/home'
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="/albums/1"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname.startsWith('/albums')
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Albums
-                  </Link>
-                  <Link
-                    to="/artists/1"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname.startsWith('/artists')
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Artists
-                  </Link>
-                  <Link
-                    to="/stats"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname === '/stats'
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Stats
-                  </Link>
-                  <Link
-                    to="/genres"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname === '/genres'
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Genres
-                  </Link>
-                  <Link
-                    to="/random"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname === '/random'
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Random
-                  </Link>
-                  <Link
-                    to="/wrapped"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-muted ${
-                      location.pathname.startsWith('/wrapped')
-                        ? 'text-foreground bg-muted'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    Wrapped
-                  </Link>
-                </div>
-
-                {/* Mobile Last.fm Profile */}
-                <div className="px-4 py-2">
-                  <UserProfileMenu />
-                </div>
-
-                {/* Mobile Theme Toggle */}
-                <div className="flex items-center justify-between px-4 py-2">
-                  <span className="text-sm font-medium">Theme</span>
-                  <ThemeToggle />
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+            {/* Mobile Menu Toggle */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden rounded-full"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </Button>
+          </div>
+        </nav>
       </div>
 
-      {/* Search Overlay for Desktop */}
-      <SearchOverlay 
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl pt-24 px-6 md:hidden animate-in fade-in slide-in-from-top-10 duration-200">
+          <div className="flex flex-col gap-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "flex items-center gap-4 p-4 rounded-2xl text-lg font-medium transition-colors",
+                  isActive(item.path, item.activePrefix)
+                    ? "bg-secondary text-foreground"
+                    : "hover:bg-secondary/50 text-muted-foreground"
+                )}
+              >
+                <item.icon className="h-5 w-5" />
+                {item.label}
+              </Link>
+            ))}
+
+            <div className="h-px bg-border my-4" />
+
+            <div className="flex items-center justify-between p-4 rounded-2xl bg-secondary/30">
+              <span className="font-medium">Theme</span>
+              <ThemeToggle />
+            </div>
+
+            <div className="p-4">
+              <UserProfileMenu />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Search Components */}
+      <SearchOverlay
         isVisible={searchOverlayOpen}
-        onClose={closeSearchOverlay}
+        onClose={() => setSearchOverlayOpen(false)}
       />
-      
-
-      {/* Mobile Search FAB */}
-      <SearchFAB onClick={() => setMobileSearchOpen(true)} />
-
-      {/* Mobile Search Modal */}
       <MobileSearchModal
-        key="mobile-search-modal"
         isOpen={mobileSearchOpen}
-        onClose={closeMobileSearch}
+        onClose={() => setMobileSearchOpen(false)}
       />
-    </div>
+    </>
   );
 }

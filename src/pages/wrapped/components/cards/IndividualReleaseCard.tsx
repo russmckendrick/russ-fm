@@ -20,7 +20,7 @@ export function IndividualReleaseCard({ release, size, imageSize = 'hi-res' }: I
   // Select appropriate image size based on card size
   const getImageUrlForRelease = () => {
     const albumSlug = release.slug;
-    
+
     switch (imageSize) {
       case 'avatar':
         return getAlbumImageUrl(albumSlug, 'small');
@@ -31,35 +31,33 @@ export function IndividualReleaseCard({ release, size, imageSize = 'hi-res' }: I
         return getAlbumImageUrl(albumSlug, 'hi-res');
     }
   };
-  
+
   const imageUrl = getImageUrlForRelease();
-  
+
   return (
-    <div className="relative aspect-square w-full group overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:shadow-lg"
-         style={{ transform: 'translateZ(0)' }} // Force hardware acceleration and prevent overflow
+    <div className="relative h-full w-full group overflow-hidden rounded-lg bg-gray-900 transition-all duration-300 hover:shadow-lg"
+      style={{ transform: 'translateZ(0)' }} // Force hardware acceleration and prevent overflow
     >
       {/* Full background image */}
-      <img 
+      <img
         src={imageUrl}
         alt={`${release.title} by ${release.artist_name}`}
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"
       />
-      
+
       {/* Dark gradient overlay for text readability - only on hover */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      
+
       {/* Content overlay - only visible on hover */}
       <div className="absolute inset-0 p-3 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="text-white">
-          <h3 className={`font-bold leading-tight line-clamp-2 drop-shadow-lg ${
-            size === 'large' ? 'text-lg' : size === 'medium' ? 'text-base' : 'text-sm'
-          }`}>
+          <h3 className={`font-bold leading-tight line-clamp-2 drop-shadow-lg ${size === 'large' ? 'text-lg' : size === 'medium' ? 'text-base' : 'text-sm'
+            }`}>
             {release.title}
           </h3>
-          <p className={`text-white/90 font-medium line-clamp-1 mt-1 drop-shadow-lg ${
-            size === 'large' ? 'text-base' : 'text-sm'
-          }`}>
+          <p className={`text-white/90 font-medium line-clamp-1 mt-1 drop-shadow-lg ${size === 'large' ? 'text-base' : 'text-sm'
+            }`}>
             {release.artist_name}
           </p>
         </div>

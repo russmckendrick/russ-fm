@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,50 +6,112 @@
 
 @layer base {
   :root {
-    /* Editorial Modern - Gallery White Theme */
-    --background: 0 0% 97.6%;          /* #F9F9F9 */
-    --foreground: 0 0% 10.2%;          /* #1A1A1A */
-    --card: 0 0% 100%;                 /* #FFFFFF */
-    --card-foreground: 0 0% 10.2%;     /* #1A1A1A */
-    --popover: 0 0% 100%;              /* #FFFFFF */
-    --popover-foreground: 0 0% 10.2%;  /* #1A1A1A */
-    --primary: 211 100% 50%;           /* #007AFF */
-    --primary-foreground: 0 0% 100%;   /* #FFFFFF */
-    --secondary: 0 0% 94.5%;           /* #F1F1F1 */
-    --secondary-foreground: 0 0% 20%;  /* #333333 */
-    --muted: 0 0% 94.5%;               /* #F1F1F1 */
-    --muted-foreground: 0 0% 40%;      /* #666666 */
-    --accent: 0 0% 94.5%;              /* #F1F1F1 */
-    --accent-foreground: 0 0% 10.2%;   /* #1A1A1A */
-    --destructive: 0 84.2% 60.2%;      /* #EF4444 */
-    --destructive-foreground: 0 0% 100%; /* #FFFFFF */
-    --border: 0 0% 91.8%;              /* #EAEAEA */
-    --input: 0 0% 91.8%;               /* #EAEAEA */
-    --ring: 211 100% 50%;              /* #007AFF */
-    --radius: 0.75rem;                 /* 12px for more modern look */
+    /* Modern 2025 - Neo-Glass Theme */
+    --background: 0 0% 98%;
+    /* #FAFAFA */
+    --foreground: 240 10% 3.9%;
+    /* #09090B */
+
+    --card: 0 0% 100%;
+    /* #FFFFFF */
+    --card-foreground: 240 10% 3.9%;
+    /* #09090B */
+
+    --popover: 0 0% 100%;
+    /* #FFFFFF */
+    --popover-foreground: 240 10% 3.9%;
+    /* #09090B */
+
+    --primary: 240 5.9% 10%;
+    /* #18181B */
+    --primary-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --secondary: 240 4.8% 95.9%;
+    /* #F4F4F5 */
+    --secondary-foreground: 240 5.9% 10%;
+    /* #18181B */
+
+    --muted: 240 4.8% 95.9%;
+    /* #F4F4F5 */
+    --muted-foreground: 240 3.8% 46.1%;
+    /* #71717A */
+
+    --accent: 240 4.8% 95.9%;
+    /* #F4F4F5 */
+    --accent-foreground: 240 5.9% 10%;
+    /* #18181B */
+
+    --destructive: 0 84.2% 60.2%;
+    /* #EF4444 */
+    --destructive-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --border: 240 5.9% 90%;
+    /* #E4E4E7 */
+    --input: 240 5.9% 90%;
+    /* #E4E4E7 */
+    --ring: 240 5.9% 10%;
+    /* #18181B */
+
+    --radius: 1rem;
+    /* 16px */
+
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-bg: 0 0% 100% / 0.7;
   }
 
   .dark {
-    /* Editorial Modern - Studio Black Theme */
-    --background: 0 0% 7.1%;           /* #121212 */
-    --foreground: 0 0% 94.5%;          /* #F1F1F1 */
-    --card: 0 0% 11.8%;                /* #1E1E1E */
-    --card-foreground: 0 0% 94.5%;     /* #F1F1F1 */
-    --popover: 0 0% 11.8%;             /* #1E1E1E */
-    --popover-foreground: 0 0% 94.5%;  /* #F1F1F1 */
-    --primary: 211 100% 52.2%;         /* #0A84FF */
-    --primary-foreground: 0 0% 100%;   /* #FFFFFF */
-    --secondary: 0 0% 16.5%;           /* #2A2A2A */
-    --secondary-foreground: 0 0% 88.2%; /* #E1E1E1 */
-    --muted: 0 0% 16.5%;               /* #2A2A2A */
-    --muted-foreground: 0 0% 63.1%;    /* #A1A1A1 */
-    --accent: 0 0% 16.5%;              /* #2A2A2A */
-    --accent-foreground: 0 0% 94.5%;   /* #F1F1F1 */
-    --destructive: 0 83.8% 71.8%;      /* #F87171 */
-    --destructive-foreground: 0 0% 7.1%; /* #121212 */
-    --border: 0 0% 17.6%;              /* #2D2D2D */
-    --input: 0 0% 17.6%;               /* #2D2D2D */
-    --ring: 211 100% 52.2%;            /* #0A84FF */
+    /* Modern 2025 - Deep Space Glass Theme */
+    --background: 240 10% 6%;
+    /* #0E0E11 - Slightly lighter than #09090B */
+    --foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --card: 240 10% 3.9%;
+    /* #09090B */
+    --card-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --popover: 240 10% 3.9%;
+    /* #09090B */
+    --popover-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --primary: 0 0% 98%;
+    /* #FAFAFA */
+    --primary-foreground: 240 5.9% 10%;
+    /* #18181B */
+
+    --secondary: 240 3.7% 15.9%;
+    /* #27272A */
+    --secondary-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --muted: 240 3.7% 15.9%;
+    /* #27272A */
+    --muted-foreground: 240 5% 64.9%;
+    /* #A1A1AA */
+
+    --accent: 240 3.7% 15.9%;
+    /* #27272A */
+    --accent-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --destructive: 0 62.8% 30.6%;
+    /* #7F1D1D */
+    --destructive-foreground: 0 0% 98%;
+    /* #FAFAFA */
+
+    --border: 240 3.7% 15.9%;
+    /* #27272A */
+    --input: 240 3.7% 15.9%;
+    /* #27272A */
+    --ring: 240 4.9% 83.9%;
+    /* #D4D4D8 */
+
+    --glass-border: 0 0% 100% / 0.08;
+    --glass-bg: 0 0% 0% / 0.6;
   }
 }
 
@@ -57,193 +119,172 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  
-  /* Editorial Modern Typography System */
-  h1, .text-h1 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 3rem;
-    font-weight: 500;
+
+  /* Modern Typography System */
+  h1,
+  .text-h1 {
+    @apply font-bold tracking-tight;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+  }
+
+  h2,
+  .text-h2 {
+    @apply font-semibold tracking-tight;
+    font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.2;
-    letter-spacing: -0.02em;
   }
-  
-  h2, .text-h2 {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 2.25rem;
-    font-weight: 500;
+
+  h3,
+  .text-h3 {
+    @apply font-semibold tracking-tight;
+    font-size: 1.75rem;
     line-height: 1.3;
-    letter-spacing: -0.01em;
   }
-  
-  h3, .text-h3 {
-    font-family: 'Inter', sans-serif;
+
+  h4,
+  .text-h4 {
+    @apply font-medium tracking-tight;
     font-size: 1.5rem;
-    font-weight: 600;
     line-height: 1.4;
   }
-  
-  h4, .text-h4 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 1.4;
-  }
-  
-  .text-body {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .text-small {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-  
-  .text-xs {
-    font-size: 0.75rem;
-    line-height: 1.4;
+
+  p {
+    @apply leading-relaxed;
   }
 }
 
 @layer utilities {
-  .animate-spin-slow {
-    animation: spin 8s linear infinite;
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-xl border border-white/10 shadow-xl;
+    background: hsl(var(--glass-bg));
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md border border-white/5 transition-all duration-300;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  }
+
+  .dark .glass-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%);
+  }
+
+  .animate-enter {
+    animation: enter 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .animate-enter-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .animate-enter-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .animate-enter-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .mask-gradient-b {
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  }
+}
+
+@keyframes enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @layer components {
-  /* Editorial Modern Component Styling */
-  .card-modern {
-    @apply rounded-xl border bg-card text-card-foreground shadow-sm;
-    @apply transition-all duration-200 ease-in-out;
-    @apply hover:scale-[1.02] hover:border-primary hover:shadow-lg;
-  }
-  
-  .card-grid {
-    @apply p-4 transition-all duration-200;
-  }
-  
-  .card-detail {
-    @apply p-8 transition-all duration-200;
-  }
-  
-  /* Bento Grid System */
-  .bento-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  }
-  
-  .bento-item-wide {
-    grid-column: span 2;
-  }
-  
-  .bento-item-tall {
-    grid-row: span 2;
-  }
-  
-  .bento-item-large {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-  
-  .bento-item-hero {
-    grid-column: 1 / -1;
-  }
-  
-  /* Dynamic Bento Grid System - Square Cards Only */
+
+  /* Dynamic Bento Grid System */
   .dynamic-bento-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 120px;
-    gap: 8px;
-    grid-auto-flow: dense; /* Key: fills gaps automatically */
-    overflow: hidden; /* Prevent animation overflow */
+    gap: 1rem;
+    grid-auto-flow: dense;
   }
 
   /* Size classes for dynamic grid */
-  .col-span-1 { grid-column: span 1; }
-  .col-span-2 { grid-column: span 2; }
-  .col-span-3 { grid-column: span 3; }
-  .col-span-4 { grid-column: span 4; }
-  .col-span-6 { grid-column: span 6; }
-  .row-span-1 { grid-row: span 1; }
-  .row-span-2 { 
+  .col-span-1 {
+    grid-column: span 1;
+  }
+
+  .col-span-2 {
+    grid-column: span 2;
+  }
+
+  .col-span-3 {
+    grid-column: span 3;
+  }
+
+  .col-span-4 {
+    grid-column: span 4;
+  }
+
+  .col-span-6 {
+    grid-column: span 6;
+  }
+
+  .row-span-1 {
+    grid-row: span 1;
+  }
+
+  .row-span-2 {
     grid-row: span 2 !important;
   }
-  .row-span-3 { grid-row: span 3; }
 
-  /* Grid item containers - prevent overflow */
-  .dynamic-bento-grid > * {
-    overflow: hidden;
+  .row-span-3 {
+    grid-row: span 3;
+  }
+
+  /* Grid item containers */
+  .dynamic-bento-grid>* {
     min-height: 0;
     min-width: 0;
   }
 
-  /* Responsive breakpoints for dynamic grid */
+  /* Responsive breakpoints */
   @media (max-width: 640px) {
     .dynamic-bento-grid {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: minmax(80px, auto);
-      gap: 6px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(160px, auto);
+      gap: 0.75rem;
+    }
+
+    .col-span-1,
+    .col-span-2,
+    .col-span-3,
+    .col-span-4,
+    .col-span-6 {
+      grid-column: span 2;
+    }
+
+    .col-span-half-mobile {
+      grid-column: span 1;
     }
   }
 
-  @media (min-width: 641px) and (max-width: 768px) {
+  @media (min-width: 641px) and (max-width: 1024px) {
     .dynamic-bento-grid {
       grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: minmax(90px, auto);
-      gap: 6px;
+      grid-auto-rows: minmax(140px, auto);
     }
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .dynamic-bento-grid {
-      grid-template-columns: repeat(5, 1fr);
-      grid-auto-rows: minmax(100px, auto);
-      gap: 8px;
-    }
-  }
-
-  @media (min-width: 1025px) {
-    .dynamic-bento-grid {
-      grid-template-columns: repeat(6, 1fr);
-      grid-auto-rows: minmax(110px, auto);
-      gap: 8px;
-    }
-  }
-
-  @media (min-width: 1400px) {
-    .dynamic-bento-grid {
-      grid-template-columns: repeat(8, 1fr);
-      grid-auto-rows: minmax(120px, auto);
-      gap: 10px;
-    }
-  }
-
-  /* Responsive Bento Grid */
-  @media (min-width: 768px) {
-    .bento-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .bento-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

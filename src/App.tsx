@@ -16,13 +16,13 @@ import { WrappedYTD } from './pages/wrapped/WrappedYTD';
 // Component to handle "Various" artist route interception
 function ArtistRouteHandler() {
   const { artistPath } = useParams<{ artistPath: string }>();
-  
+
   // Check if this is a "Various" artist route
   if (artistPath && decodeURIComponent(artistPath).toLowerCase() === 'various') {
     // Redirect to artists page instead of showing Various artist page
     return <Navigate to="/artists" replace />;
   }
-  
+
   // For all other artists, show the normal artist detail page
   return <ArtistDetailPage />;
 }
@@ -32,8 +32,8 @@ function App() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <main className="pt-28">
+
+      <main className="pt-32 pb-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
