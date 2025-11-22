@@ -1,6 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { AvatarGroup } from '@/components/ui/avatar-group';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
@@ -37,85 +35,96 @@ interface ArtistCardProps {
 export function ArtistCard({ artist, onClick }: ArtistCardProps) {
   const navigate = useNavigate();
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+    }
+  };
+
   const CardWrapper = ({ children }: { children: React.ReactNode }) => {
     if (onClick) {
       return (
-        <Card 
-          variant="interactive"
-          className="w-full h-full flex flex-col group"
-          onClick={onClick}
+        <div
+          className="w-full h-full cursor-pointer focus:outline-none outline-none"
+          onClick={handleCardClick}
         >
           {children}
-        </Card>
+        </div>
       );
     }
     return (
-      <Link to={artist.uri} className="h-full">
-        <Card variant="interactive" className="w-full h-full flex flex-col group">
-          {children}
-        </Card>
+      <Link to={artist.uri} className="block h-full focus:outline-none focus-visible:outline-none outline-none">
+        {children}
       </Link>
     );
   };
 
   return (
-    <CardWrapper>
-      <CardHeader className="flex flex-row items-center justify-between py-3 px-4">
-        <AvatarGroup max={5}>
-          {artist.albums
-            .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
-            .map((album, index) => {
-              const albumPath = album.uri_release?.replace('/album/', '').replace('/', '') || '';
-              return (
-                <div 
-                  key={index} 
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(`/album/${albumPath}`);
-                  }}
-                  className="inline-block"
-                >
-                  <Avatar className="h-8 w-8 cursor-pointer">
-                    <AvatarImage 
-                      src={getAlbumImageFromData(album.uri_release, 'avatar')}
-                      onError={handleImageError} 
-                      alt={album.release_name}
-                      className="object-cover"
-                    />
-                    <AvatarFallback className="text-[10px]">
-                      {album.release_name.substring(0, 2).toUpperCase()}
-                    </AvatarFallback>
-                  </Avatar>
-                </div>
-              );
-            })}
-        </AvatarGroup>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-muted-foreground">{artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}</span>
+    <div className="group relative h-full">
+      <CardWrapper>
+        <div className="h-full flex flex-col gap-4">
+          {/* Artist Image Container */}
+          <div className="relative aspect-square rounded-full overflow-hidden shadow-md transition-all duration-500">
+            <img
+              src={artist.image}
+              alt={artist.name}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              loading="lazy"
+            />
+
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+
+          {/* Content Info */}
+          <div className="flex flex-col items-center text-center gap-1 px-1">
+            <h3 className="font-semibold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
+              {artist.name}
+            </h3>
+
+            <span className="text-sm text-muted-foreground font-medium">
+              {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
+            </span>
+
+            {/* Recent Albums Avatars */}
+            <div className="mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
+              <AvatarGroup max={4}>
+                {artist.albums
+                  .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
+                  .slice(0, 4)
+                  .map((album, index) => {
+                    const albumPath = album.uri_release?.replace('/album/', '').replace('/', '') || '';
+                    return (
+                      <div
+                        key={index}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          navigate(`/album/${albumPath}`);
+                        }}
+                        className="cursor-pointer hover:scale-110 transition-transform z-10"
+                        title={album.release_name}
+                      >
+                        <Avatar className="h-6 w-6 border-2 border-background">
+                          <AvatarImage
+                            src={getAlbumImageFromData(album.uri_release, 'small')}
+                            onError={handleImageError}
+                            alt={album.release_name}
+                            className="object-cover"
+                          />
+                          <AvatarFallback className="text-[8px]">
+                            {album.release_name.substring(0, 2).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                      </div>
+                    );
+                  })}
+              </AvatarGroup>
+            </div>
+          </div>
         </div>
-      </CardHeader>
-      <CardContent className="p-0 flex-1 flex flex-col">
-        <div className="relative aspect-square bg-muted overflow-hidden">
-          <img
-            src={artist.image}
-            alt={artist.name}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="pt-3 pb-4 px-4 flex-1 flex flex-col">
-          <h2 className="text-base font-semibold line-clamp-1">{artist.name}</h2>
-        </div>
-      </CardContent>
-      <Separator className="mt-auto" />
-      <CardFooter className="flex py-2 px-2">
-        <div className="w-full relative">
-          <p className="text-xs text-muted-foreground line-clamp-3">
-            {artist.biography || `${artist.name} has ${artist.albumCount} album${artist.albumCount !== 1 ? 's' : ''} in the collection.`}
-          </p>
-          <div className="absolute bottom-0 right-0 w-16 h-4 bg-gradient-to-l from-card to-transparent pointer-events-none"></div>
-        </div>
-      </CardFooter>
-    </CardWrapper>
+      </CardWrapper>
+    </div>
   );
 }
