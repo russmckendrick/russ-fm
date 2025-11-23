@@ -33,7 +33,7 @@ function App() {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <main className="pt-32 pb-16">
+      <main className="pt-0 md:pt-32 pb-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />

@@ -65,7 +65,7 @@ function ServiceButton({
       onMouseEnter={(e) => {
         // Check if dark mode is active
         const isDark = document.documentElement.classList.contains('dark')
-        const hoverBg = isDark ? 'hsl(var(--background))' : 'white'
+        const hoverBg = isDark ? '#6b7280' : 'white' // mid-grey in dark mode, white in light mode
 
         e.currentTarget.style.backgroundColor = hoverBg
         e.currentTarget.style.color = color || ''

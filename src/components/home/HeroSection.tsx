@@ -41,7 +41,7 @@ export function HeroSection({
 
   return (
     <motion.section
-      className="relative w-full h-[55vh] flex items-center justify-center pb-12 pt-20 px-4 overflow-hidden -mt-32"
+      className="relative w-full min-h-[60vh] md:min-h-[500px] flex items-center justify-center pb-8 pt-24 md:pt-32 px-4 overflow-hidden md:-mt-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -112,20 +112,20 @@ export function HeroSection({
           </Link>
 
           {/* Header Info */}
-          <div className="flex-1 relative min-h-[400px] flex items-center">
-            <AnimatePresence mode="sync">
+          <div className="flex-1 relative flex items-center justify-center md:justify-start w-full">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={featuredIndex}
-                className="absolute inset-0 flex flex-col justify-center text-center md:text-left space-y-4"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.0, ease: "easeInOut" }}
+                className="w-full flex flex-col justify-center text-center md:text-left space-y-4"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.5 }}
               >
                 <div className="space-y-2">
                   <Link to={currentFeatured.uri_release}>
                     <motion.h1
-                      className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance hover:opacity-80 transition-opacity cursor-pointer text-foreground"
+                      className="text-2xl md:text-6xl font-bold tracking-tight leading-tight text-balance hover:opacity-80 transition-opacity cursor-pointer text-foreground"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.6 }}
