@@ -782,7 +782,7 @@ export function StatsPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-7xl font-light tracking-tight leading-tight text-foreground dark:text-white">
+            <h1 className="text-5xl md:text-7xl font-light tracking-tight leading-tight text-foreground">
               <TrendingUp className="inline-block h-12 w-12 md:h-16 md:w-16 mr-4 mb-2" />
               Collection Statistics
             </h1>

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Badge } from '@/components/ui/badge';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { MetadataBadge } from '@/components/ui/metadata-badge';
 import type { ColorPalette } from '@/lib/colorExtractor';
 import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
@@ -124,8 +125,7 @@ export function HeroSection({
                 <div className="space-y-2">
                   <Link to={currentFeatured.uri_release}>
                     <motion.h1
-                      className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance hover:opacity-80 transition-opacity cursor-pointer"
-                      style={{ color: titleTextStyle.color }}
+                      className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance hover:opacity-80 transition-opacity cursor-pointer text-foreground"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.6 }}
@@ -134,8 +134,7 @@ export function HeroSection({
                     </motion.h1>
                   </Link>
                   <motion.p
-                    className="text-xl md:text-2xl font-medium opacity-90"
-                    style={{ color: titleTextStyle.color }}
+                    className="text-xl md:text-2xl font-medium opacity-90 text-foreground"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
@@ -146,23 +145,16 @@ export function HeroSection({
 
                 {/* Quick Stats Row */}
                 <motion.div
-                  className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80"
+                  className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-sm font-medium"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.5 }}
                 >
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+                  <MetadataBadge>
                     {new Date(currentFeatured.date_release_year).getFullYear()}
-                  </span>
+                  </MetadataBadge>
                   {currentFeatured.genre_names.slice(0, 3).map((genre) => (
-                    <Link key={genre} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                      <Badge
-                        className="px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
-                        style={{ color: titleTextStyle.color }}
-                      >
-                        {genre}
-                      </Badge>
-                    </Link>
+                    <GenreTag key={genre} genre={genre} size="md" linkable={true} />
                   ))}
                 </motion.div>
 

@@ -63,18 +63,18 @@
 
   .dark {
     /* Modern 2025 - Deep Space Glass Theme */
-    --background: 240 10% 6%;
-    /* #0E0E11 - Slightly lighter than #09090B */
+    --background: 0 0% 10%;
+    /* #1A1A1A - Medium dark grey */
     --foreground: 0 0% 98%;
     /* #FAFAFA */
 
-    --card: 240 10% 3.9%;
-    /* #09090B */
+    --card: 0 0% 8%;
+    /* #141414 - Slightly darker than background */
     --card-foreground: 0 0% 98%;
     /* #FAFAFA */
 
-    --popover: 240 10% 3.9%;
-    /* #09090B */
+    --popover: 0 0% 8%;
+    /* #141414 */
     --popover-foreground: 0 0% 98%;
     /* #FAFAFA */
 
@@ -83,18 +83,18 @@
     --primary-foreground: 240 5.9% 10%;
     /* #18181B */
 
-    --secondary: 240 3.7% 15.9%;
-    /* #27272A */
+    --secondary: 0 0% 15%;
+    /* #262626 */
     --secondary-foreground: 0 0% 98%;
     /* #FAFAFA */
 
-    --muted: 240 3.7% 15.9%;
-    /* #27272A */
-    --muted-foreground: 240 5% 64.9%;
-    /* #A1A1AA */
+    --muted: 0 0% 15%;
+    /* #262626 */
+    --muted-foreground: 0 0% 65%;
+    /* #A6A6A6 */
 
-    --accent: 240 3.7% 15.9%;
-    /* #27272A */
+    --accent: 0 0% 15%;
+    /* #262626 */
     --accent-foreground: 0 0% 98%;
     /* #FAFAFA */
 
@@ -103,15 +103,15 @@
     --destructive-foreground: 0 0% 98%;
     /* #FAFAFA */
 
-    --border: 240 3.7% 15.9%;
-    /* #27272A */
-    --input: 240 3.7% 15.9%;
-    /* #27272A */
-    --ring: 240 4.9% 83.9%;
-    /* #D4D4D8 */
+    --border: 0 0% 20%;
+    /* #333333 */
+    --input: 0 0% 15%;
+    /* #262626 */
+    --ring: 0 0% 84%;
+    /* #D6D6D6 */
 
-    --glass-border: 0 0% 100% / 0.08;
-    --glass-bg: 0 0% 0% / 0.6;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-bg: 0 0% 8% / 0.7;
   }
 }
 
@@ -173,17 +173,20 @@
   }
 
   .glass-panel {
-    @apply backdrop-blur-xl border border-white/10 shadow-xl;
+    @apply backdrop-blur-xl shadow-xl;
     background: hsl(var(--glass-bg));
+    border: 1px solid hsl(var(--glass-border));
   }
 
   .glass-card {
-    @apply backdrop-blur-md border border-white/5 transition-all duration-300;
+    @apply backdrop-blur-md transition-all duration-300;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .dark .glass-card {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.005) 100%);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .animate-enter {

@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { GenreTag } from '@/components/ui/genre-tag';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { Search, Disc, User, Music, AlertCircle } from 'lucide-react';
 import { useManualSearch } from '@/hooks/useSearch';
@@ -58,7 +58,7 @@ export function SearchResultsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-4 flex items-center gap-3">
+        <h1 className="text-3xl font-bold mb-4 flex items-center gap-3 text-foreground">
           <Search className="h-8 w-8" />
           Search Results
         </h1>
@@ -177,10 +177,7 @@ export function SearchResultsPage() {
                       {result.genres && result.genres.length > 0 && (
                         <div className="flex flex-wrap gap-2">
                           {result.genres.map((genre, genreIndex) => (
-                            <Badge key={genreIndex} variant="secondary" className="text-xs capitalize">
-                              <Music className="h-3 w-3 mr-1" />
-                              {genre}
-                            </Badge>
+                            <GenreTag key={genreIndex} genre={genre} size="sm" linkable={true} />
                           ))}
                         </div>
                       )}

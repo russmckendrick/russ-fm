@@ -311,7 +311,7 @@ export function AlbumsPage() {
         <Card className="p-8 text-center">
           <CardContent>
             <Music className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">No albums found</h3>
+            <h3 className="text-lg font-semibold mb-2 text-foreground">No albums found</h3>
             <p className="text-muted-foreground">Try adjusting your search or filters</p>
           </CardContent>
         </Card>

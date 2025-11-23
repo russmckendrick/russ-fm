@@ -3,13 +3,15 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ListMusic } from 'lucide-react';
 import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
 import { Button } from '@/components/ui/button';
+import { ServiceButton } from '@/components/ui/service-button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { filterGenres } from '@/lib/filterGenres';
 import { getCleanGenres } from '@/lib/genreUtils';
-import { getGenreColor, getGenreTextColor } from '@/lib/genreColors';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
@@ -500,20 +502,18 @@ export function AlbumDetailPage() {
                   Back to Collection
                 </Link>
                 <h1
-                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance"
-                  style={{ color: titleTextStyle.color }}
+                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance text-foreground"
                 >
                   {album.release_name}
                 </h1>
-                <div className="text-xl md:text-2xl font-medium opacity-90 flex flex-wrap items-center justify-center md:justify-start gap-2">
+                <div className="text-xl md:text-2xl font-medium opacity-90 flex flex-wrap items-center justify-center md:justify-start gap-2 text-foreground">
                   <span>by</span>
                   {album.artists && album.artists.length > 1 ? (
                     album.artists.map((artist, index) => (
                       <React.Fragment key={index}>
                         <Link
                           to={artist.uri_artist}
-                          className="hover:underline decoration-2 underline-offset-4"
-                          style={{ color: albumColors.accent }}
+                          className="hover:underline decoration-2 underline-offset-4 text-foreground"
                         >
                           {artist.name}
                         </Link>
@@ -523,8 +523,7 @@ export function AlbumDetailPage() {
                   ) : (
                     <Link
                       to={album.uri_artist}
-                      className="hover:underline decoration-2 underline-offset-4"
-                      style={{ color: albumColors.accent }}
+                      className="hover:underline decoration-2 underline-offset-4 text-foreground"
                     >
                       {album.release_artist}
                     </Link>
@@ -533,17 +532,11 @@ export function AlbumDetailPage() {
               </div>
 
               {/* Quick Stats Row */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80">
-                <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                  {year}
-                </span>
-                <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                  {tracks.length} Tracks
-                </span>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-sm font-medium">
+                <MetadataBadge>{year}</MetadataBadge>
+                <MetadataBadge>{tracks.length} Tracks</MetadataBadge>
                 {detailedAlbum?.country && (
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                    {detailedAlbum.country}
-                  </span>
+                  <MetadataBadge>{detailedAlbum.country}</MetadataBadge>
                 )}
               </div>
 
@@ -556,18 +549,7 @@ export function AlbumDetailPage() {
                   }) : filterGenres(album.genre_names, album.release_artist);
 
                   return cleanGenres.slice(0, 5).map((tag, index) => (
-                    <Link key={index} to={`/albums/1?genre=${encodeURIComponent(tag)}`}>
-                      <span
-                        className="px-2.5 py-0.5 rounded-full text-xs font-medium transition-colors border"
-                        style={{
-                          backgroundColor: `${albumColors.accent}20`,
-                          borderColor: `${albumColors.accent}40`,
-                          color: titleTextStyle.color
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    </Link>
+                    <GenreTag key={index} genre={tag} size="md" linkable={true} />
                   ));
                 })()}
               </div>
@@ -580,46 +562,36 @@ export function AlbumDetailPage() {
                     album: album.release_name,
                     tracks: tracks.map(t => ({ title: t.name || 'Unknown Track', artist: t.artists?.[0]?.name }))
                   }}
-                  className="h-9 px-4 shadow-lg hover:scale-105 transition-transform border-0 text-white"
-                  style={{
-                    backgroundColor: '#D51007', // Last.fm Brand Color
-                  }}
                 />
 
                 {detailedAlbum?.services?.apple_music?.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(detailedAlbum.services?.apple_music?.url, '_blank')}
-                    style={{ backgroundColor: '#FA243C' }} // Apple Music Brand Color
+                  <ServiceButton
+                    service="apple-music"
+                    url={detailedAlbum.services?.apple_music?.url}
+                    icon={<SiApplemusic className="h-4 w-4" />}
                   >
-                    <SiApplemusic className="mr-2 h-4 w-4" /> Apple Music
-                  </Button>
+                    Apple Music
+                  </ServiceButton>
                 )}
 
                 {detailedAlbum?.services?.spotify?.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(detailedAlbum.services?.spotify?.url, '_blank')}
-                    style={{ backgroundColor: '#1DB954' }} // Spotify Brand Color
+                  <ServiceButton
+                    service="spotify"
+                    url={detailedAlbum.services?.spotify?.url}
+                    icon={<SiSpotify className="h-4 w-4" />}
                   >
-                    <SiSpotify className="mr-2 h-4 w-4" /> Spotify
-                  </Button>
+                    Spotify
+                  </ServiceButton>
                 )}
 
                 {detailedAlbum?.discogs_url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(detailedAlbum.discogs_url, '_blank')}
-                    style={{ backgroundColor: '#333333' }} // Discogs Brand Color
+                  <ServiceButton
+                    service="discogs"
+                    url={detailedAlbum.discogs_url}
+                    icon={<SiDiscogs className="h-4 w-4" />}
                   >
-                    <SiDiscogs className="mr-2 h-4 w-4" /> Discogs
-                  </Button>
+                    Discogs
+                  </ServiceButton>
                 )}
               </div>
             </div>
@@ -657,7 +629,7 @@ export function AlbumDetailPage() {
         {/* Tracklist - Clean & Minimal */}
         {tracks.length > 0 && (
           <section>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
+            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-foreground">
               <ListMusic className="h-6 w-6 opacity-50" />
               Tracklist
             </h3>
@@ -703,7 +675,7 @@ export function AlbumDetailPage() {
         {/* Music Player */}
         {detailedAlbum && (
           <section className="py-12">
-            <h3 className="text-2xl font-bold mb-8">Listen to {detailedAlbum.title}</h3>
+            <h3 className="text-2xl font-bold mb-8 text-foreground">Listen to {detailedAlbum.title}</h3>
             <MusicPlayerSection album={detailedAlbum} />
           </section>
         )}
@@ -732,7 +704,7 @@ export function AlbumDetailPage() {
                     </Link>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4">About {artist.name}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-foreground">About {artist.name}</h3>
                     <div className="prose dark:prose-invert text-muted-foreground leading-relaxed">
                       {(() => {
                         let bio = artist.biography?.replace(/<[^>]*>/g, '').trim();

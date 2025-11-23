@@ -4,6 +4,9 @@ import { ArrowLeft, Disc } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 'react-icons/si';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ServiceButton } from '@/components/ui/service-button';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { AlbumCard } from '@/components/AlbumCard';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
@@ -286,7 +289,7 @@ export function ArtistDetailPage() {
         </Link>
         <div className="p-8 text-center glass-card rounded-2xl">
           <Disc className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-          <h3 className="text-lg font-semibold mb-2">Artist not found</h3>
+          <h3 className="text-lg font-semibold mb-2 text-foreground">Artist not found</h3>
           <p className="text-muted-foreground">The requested artist could not be found</p>
         </div>
       </div>
@@ -370,7 +373,7 @@ export function ArtistDetailPage() {
 
                 {/* Artist Name (handwritten style on polaroid) */}
                 <div className="absolute bottom-4 left-0 right-0 px-4">
-                  <p className="text-center text-slate-700 font-medium text-lg tracking-wide line-clamp-2"
+                  <p className="text-center text-slate-700 dark:text-slate-300 font-medium text-lg tracking-wide line-clamp-2"
                     style={{ fontFamily: '"Kalam", "Comic Sans MS", cursive' }}>
                     {artistName}
                   </p>
@@ -389,27 +392,22 @@ export function ArtistDetailPage() {
                   Back to Artists
                 </Link>
                 <h1
-                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance"
-                  style={{ color: titleTextStyle.color }}
+                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance text-foreground"
                 >
                   {artistName}
                 </h1>
               </div>
 
               {/* Quick Stats Row */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm font-medium opacity-80">
-                <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-sm font-medium">
+                <MetadataBadge>
                   {albums.length} Album{albums.length !== 1 ? 's' : ''}
-                </span>
+                </MetadataBadge>
                 {artistData?.country && (
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                    {artistData.country}
-                  </span>
+                  <MetadataBadge>{artistData.country}</MetadataBadge>
                 )}
                 {artistData?.formed_date && (
-                  <span className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-                    Formed {artistData.formed_date}
-                  </span>
+                  <MetadataBadge>Formed {artistData.formed_date}</MetadataBadge>
                 )}
               </div>
 
@@ -417,14 +415,7 @@ export function ArtistDetailPage() {
               {cleanGenres.length > 0 && (
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
                   {cleanGenres.slice(0, 5).map((genre, index) => (
-                    <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                      <Badge
-                        className="px-3 py-1 text-xs font-medium bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 transition-all cursor-pointer"
-                        style={{ color: titleTextStyle.color }}
-                      >
-                        {genre}
-                      </Badge>
-                    </Link>
+                    <GenreTag key={index} genre={genre} size="md" linkable={true} />
                   ))}
                 </div>
               )}
@@ -432,62 +423,52 @@ export function ArtistDetailPage() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-4">
                 {artistData?.services?.spotify?.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(artistData.services?.spotify?.url, '_blank')}
-                    style={{ backgroundColor: '#1DB954' }}
+                  <ServiceButton
+                    service="spotify"
+                    url={artistData.services?.spotify?.url}
+                    icon={<SiSpotify className="h-4 w-4" />}
                   >
-                    <SiSpotify className="mr-2 h-4 w-4" /> Spotify
-                  </Button>
+                    Spotify
+                  </ServiceButton>
                 )}
 
                 {artistData?.services?.apple_music?.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(artistData.services?.apple_music?.url, '_blank')}
-                    style={{ backgroundColor: '#FA243C' }}
+                  <ServiceButton
+                    service="apple-music"
+                    url={artistData.services?.apple_music?.url}
+                    icon={<SiApplemusic className="h-4 w-4" />}
                   >
-                    <SiApplemusic className="mr-2 h-4 w-4" /> Apple Music
-                  </Button>
+                    Apple Music
+                  </ServiceButton>
                 )}
 
                 {artistData?.services?.lastfm?.url && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(artistData.services?.lastfm?.url, '_blank')}
-                    style={{ backgroundColor: '#D51007' }}
+                  <ServiceButton
+                    service="lastfm"
+                    url={artistData.services?.lastfm?.url}
+                    icon={<SiLastdotfm className="h-4 w-4" />}
                   >
-                    <SiLastdotfm className="mr-2 h-4 w-4" /> Last.fm
-                  </Button>
+                    Last.fm
+                  </ServiceButton>
                 )}
 
                 {(artistData?.discogs_url || artistData?.services?.discogs?.url) && (
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                    onClick={() => window.open(artistData?.discogs_url || artistData?.services?.discogs?.url, '_blank')}
-                    style={{ backgroundColor: '#333333' }}
+                  <ServiceButton
+                    service="discogs"
+                    url={artistData?.discogs_url || artistData?.services?.discogs?.url}
+                    icon={<SiDiscogs className="h-4 w-4" />}
                   >
-                    <SiDiscogs className="mr-2 h-4 w-4" /> Discogs
-                  </Button>
+                    Discogs
+                  </ServiceButton>
                 )}
 
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="h-9 px-4 border-0 hover:scale-105 transition-all text-white"
-                  onClick={() => window.open(`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`, '_blank')}
-                  style={{ backgroundColor: '#000000' }}
+                <ServiceButton
+                  service="wikipedia"
+                  url={`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`}
+                  icon={<SiWikipedia className="h-4 w-4" />}
                 >
-                  <SiWikipedia className="mr-2 h-4 w-4" /> Wikipedia
-                </Button>
+                  Wikipedia
+                </ServiceButton>
               </div>
             </div>
           </div>
@@ -499,7 +480,7 @@ export function ArtistDetailPage() {
         {/* Artist Biography */}
         {artistData?.biography && (
           <section className="py-12">
-            <h2 className="text-3xl font-bold mb-6">Biography</h2>
+            <h2 className="text-3xl font-bold mb-6 text-foreground">Biography</h2>
             <div className="relative">
               <div className="text-lg md:text-xl leading-relaxed text-muted-foreground font-serif">
                 {(() => {
@@ -542,7 +523,7 @@ export function ArtistDetailPage() {
         {/* Albums Grid */}
         <section className="py-12">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold flex items-center gap-2">
+            <h2 className="text-3xl font-bold flex items-center gap-2 text-foreground">
               <Disc className="h-8 w-8" />
               Albums in Collection
             </h2>

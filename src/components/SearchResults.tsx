@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { GenreTag } from '@/components/ui/genre-tag';
 import { Search, Disc, User, AlertCircle } from 'lucide-react';
 import { handleImageError } from '@/lib/image-utils';
 import { SearchResult } from '@/services/searchService';
@@ -151,15 +151,8 @@ export function SearchResults({
                     {result.genres && result.genres.length > 0 && (
                       <div className="flex flex-wrap gap-1">
                         {result.genres.slice(0, 2).map((genre, genreIndex) => (
-                          <Badge key={genreIndex} variant="secondary" className="text-xs capitalize px-1 py-0">
-                            {genre}
-                          </Badge>
+                          <GenreTag key={genreIndex} genre={genre} size="sm" linkable={true} />
                         ))}
-                        {result.genres.length > 2 && (
-                          <Badge variant="outline" className="text-xs px-1 py-0">
-                            +{result.genres.length - 2}
-                          </Badge>
-                        )}
                       </div>
                     )}
                   </div>
@@ -265,15 +258,8 @@ export function SearchResults({
                     {result.genres && result.genres.length > 0 && (
                       <div className="flex flex-wrap gap-1">
                         {result.genres.slice(0, 2).map((genre, genreIndex) => (
-                          <Badge key={genreIndex} variant="secondary" className="text-xs capitalize px-1 py-0">
-                            {genre}
-                          </Badge>
+                          <GenreTag key={genreIndex} genre={genre} size="sm" linkable={true} />
                         ))}
-                        {result.genres.length > 2 && (
-                          <Badge variant="outline" className="text-xs px-1 py-0">
-                            +{result.genres.length - 2}
-                          </Badge>
-                        )}
                       </div>
                     )}
                   </div>

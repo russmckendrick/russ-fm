@@ -498,7 +498,7 @@ export function ArtistsPage() {
         <Card className="p-8 text-center">
           <CardContent>
             <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">No artists found</h3>
+            <h3 className="text-lg font-semibold mb-2 text-foreground">No artists found</h3>
             <p className="text-muted-foreground">Try adjusting your search</p>
           </CardContent>
         </Card>

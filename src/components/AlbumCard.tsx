@@ -1,6 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
 import { MoreHorizontal, Music } from 'lucide-react';
@@ -146,17 +148,14 @@ export function AlbumCard({ album, onClick }: AlbumCardProps) {
             </div>
 
             <div className="flex flex-wrap gap-1.5 mt-1">
-              <Badge variant="secondary" className="text-[10px] px-1.5 h-5 bg-secondary/50 backdrop-blur-sm">
-                {year}
-              </Badge>
+              <MetadataBadge size="sm">{year}</MetadataBadge>
               {displayGenres.map((genre, index) => (
-                <Badge
+                <GenreTag
                   key={index}
-                  variant="outline"
-                  className="text-[10px] px-1.5 h-5 border-white/10 bg-white/5"
-                >
-                  {genre}
-                </Badge>
+                  genre={genre}
+                  size="sm"
+                  linkable={true}
+                />
               ))}
             </div>
           </div>

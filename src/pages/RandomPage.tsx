@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { Shuffle, RefreshCw, ArrowRight } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
@@ -175,7 +177,7 @@ export function RandomPage() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="mb-8"
             >
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-foreground dark:text-white">
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-foreground">
                 {randomAlbum.release_name}
               </h1>
             </motion.div>
@@ -245,28 +247,10 @@ export function RandomPage() {
               </div>
 
               {/* Quick Stats */}
-              <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-                <span
-                  className="px-3 py-1 rounded-full backdrop-blur-md border text-sm font-medium text-foreground dark:text-white"
-                  style={{
-                    backgroundColor: `${albumColors.accent}20`,
-                    borderColor: `${albumColors.accent}40`
-                  }}
-                >
-                  {getYear()}
-                </span>
+              <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+                <MetadataBadge>{getYear()}</MetadataBadge>
                 {getGenres().map((genre, index) => (
-                  <Link key={index} to={`/albums/1?genre=${encodeURIComponent(genre)}`}>
-                    <span
-                      className="px-3 py-1 rounded-full backdrop-blur-md border text-sm font-medium hover:scale-105 transition-transform cursor-pointer text-foreground dark:text-white"
-                      style={{
-                        backgroundColor: `${albumColors.accent}20`,
-                        borderColor: `${albumColors.accent}40`
-                      }}
-                    >
-                      {genre}
-                    </span>
-                  </Link>
+                  <GenreTag key={index} genre={genre} size="md" linkable={true} />
                 ))}
               </div>
             </motion.div>

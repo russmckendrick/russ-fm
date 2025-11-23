@@ -283,22 +283,69 @@ export function getReadableTextColor(backgroundColor: string, lightColor: string
 }
 
 /**
+ * Check if user has dark mode enabled
+ */
+export function isDarkMode(): boolean {
+  if (typeof window === 'undefined') return false;
+
+  // Check for explicit dark class on html element
+  if (document.documentElement.classList.contains('dark')) {
+    return true;
+  }
+
+  // Check system preference
+  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
+/**
  * Get enhanced text color with shadow for maximum readability
+ * Now considers user's dark mode preference
  */
 export function getEnhancedTextColor(backgroundColor: string, albumColors: AlbumColorPalette): { color: string; textShadow: string } {
-  const textColor = getReadableTextColor(backgroundColor);
-  const luminance = getLuminance(backgroundColor);
-  
-  // Choose shadow color based on text color and background
+  const darkMode = isDarkMode();
+  const bgLuminance = getLuminance(backgroundColor);
+
+  // In dark mode, prefer lighter text colors even on medium backgrounds
+  // In light mode, prefer darker text colors even on medium backgrounds
+  let textColor: string;
+
+  if (darkMode) {
+    // Dark mode: Be more aggressive with light text
+    if (bgLuminance > 0.4) {
+      // Bright background - use dark text
+      textColor = getReadableTextColor(backgroundColor, '#ffffff', '#1a1a1a');
+    } else {
+      // Dark or medium background - use light text
+      textColor = '#f5f5f5';
+    }
+  } else {
+    // Light mode: Be more aggressive with dark text
+    if (bgLuminance < 0.3) {
+      // Very dark background - use light text
+      textColor = getReadableTextColor(backgroundColor, '#ffffff', '#1a1a1a');
+    } else {
+      // Light or medium background - use dark text
+      textColor = '#1a1a1a';
+    }
+  }
+
+  // Verify contrast is still good
+  const contrast = getContrastRatio(textColor, backgroundColor);
+  if (contrast < 4.5) {
+    // Fallback to standard algorithm if our preference doesn't work
+    textColor = getReadableTextColor(backgroundColor);
+  }
+
+  // Choose shadow color based on current theme mode
   let shadowColor: string;
-  if (textColor === '#ffffff' || textColor === '#f5f5f5') {
-    // Light text - use dark shadow with album accent
+  if (darkMode) {
+    // Dark mode - use dark shadow for depth
     shadowColor = `0 2px 4px rgba(0,0,0,0.8), 0 1px 2px ${albumColors.background}80, 0 0 20px ${albumColors.background}60`;
   } else {
-    // Dark text - use light shadow with album accent
-    shadowColor = `0 2px 4px rgba(255,255,255,0.8), 0 1px 2px ${albumColors.accent}20, 0 0 20px ${albumColors.accent}10`;
+    // Light mode - use light/subtle shadow
+    shadowColor = `0 2px 4px rgba(255,255,255,0.9), 0 1px 2px rgba(255,255,255,0.7), 0 0 30px rgba(255,255,255,0.5)`;
   }
-  
+
   return {
     color: textColor,
     textShadow: shadowColor

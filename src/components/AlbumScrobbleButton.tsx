@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from './ui/button';
+import { ServiceButton } from './ui/service-button';
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from './ui/tooltip';
 import { useLastFmAuth } from '../hooks/useLastFmAuth';
 import { useScrobble } from '../hooks/useScrobble';
@@ -81,14 +81,14 @@ export function AlbumScrobbleButton({
     return 'Scrobble to Last.fm';
   };
 
-  const getButtonStyle = () => {
+  const getBrandColor = () => {
     if (scrobbled) {
-      return 'bg-green-600 hover:bg-green-700 border-green-600 text-white';
+      return '#22c55e'; // green-600
     }
     if (progress || isScrobbling) {
-      return 'bg-blue-600 hover:bg-blue-700 border-blue-600 text-white';
+      return '#2563eb'; // blue-600
     }
-    return !isAuthenticated || error ? '' : 'btn-lastfm';
+    return '#D51007'; // Last.fm red
   };
 
   const getTooltipContent = () => {
@@ -99,27 +99,18 @@ export function AlbumScrobbleButton({
     return `Scrobble "${album.album}" by ${album.artist} (${album.tracks.length} tracks)`;
   };
 
-  const buttonClassName = `
-    ${fullWidth ? 'w-full' : ''} 
-    ${className}
-    ${getButtonStyle()}
-  `.trim();
-
   const button = (
     <div className="space-y-2">
-      <Button
-        variant={variant}
-        size={size}
+      <ServiceButton
+        service="custom"
+        brandColor={getBrandColor()}
         onClick={handleScrobble}
         disabled={isScrobbling || scrobbled || !!progress}
-        className={buttonClassName}
-        style={style}
+        className={`${fullWidth ? 'w-full' : ''} ${className}`}
+        icon={getIcon()}
       >
-        {getIcon()}
-        <span className="service-text">
-          {getButtonText()}
-        </span>
-      </Button>
+        {getButtonText()}
+      </ServiceButton>
 
       {/* Progress bar */}
       {progress && (
