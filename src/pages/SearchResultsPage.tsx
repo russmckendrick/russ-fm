@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { Search, Disc, User, Music, AlertCircle } from 'lucide-react';
