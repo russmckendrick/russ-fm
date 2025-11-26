@@ -334,16 +334,28 @@ export function AlbumDetailPage() {
   };
 
   const getAlbumDescription = () => {
-    if (detailedAlbum?.services?.apple_music?.raw_attributes?.editorialNotes?.short) {
-      return cleanDescription(detailedAlbum.services.apple_music.raw_attributes.editorialNotes.short);
+    const candidates: (string | undefined | null)[] = [
+      detailedAlbum?.services?.apple_music?.raw_attributes?.editorialNotes?.short,
+      detailedAlbum?.services?.apple_music?.raw_attributes?.editorialNotes?.standard,
+      detailedAlbum?.services?.apple_music?.editorial_notes,
+      detailedAlbum?.services?.lastfm?.wiki_summary,
+      detailedAlbum?.services?.lastfm?.wiki_content,
+    ];
+
+    let longest: string | null = null;
+    let maxLength = 0;
+
+    for (const candidate of candidates) {
+      if (candidate) {
+        const cleaned = cleanDescription(candidate);
+        if (cleaned && cleaned.length > maxLength) {
+          maxLength = cleaned.length;
+          longest = cleaned;
+        }
+      }
     }
-    if (detailedAlbum?.services?.apple_music?.editorial_notes) {
-      return cleanDescription(detailedAlbum.services.apple_music.editorial_notes);
-    }
-    if (detailedAlbum?.services?.lastfm?.wiki_summary) {
-      return cleanDescription(detailedAlbum.services.lastfm.wiki_summary);
-    }
-    return null;
+
+    return longest;
   };
 
   if (loading) {
