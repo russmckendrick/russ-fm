@@ -1,7 +1,8 @@
 import { memo, useMemo, useState, useCallback } from 'react';
-import { AlertCircle } from 'lucide-react';
+import { AlertCircle, Music } from 'lucide-react';
 import { SiSpotify, SiApplemusic } from 'react-icons/si';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlayerToggle } from './PlayerToggle';
 import { SpotifyEmbed } from './SpotifyEmbed';
@@ -135,38 +136,35 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
     );
   }
 
-  const hasMultipleServices = availableServices.length > 1;
-
   return (
     <div className={className}>
-      <div className="flex items-center justify-between mb-6">
-        {showToggle && (
-          <PlayerToggle
-            isVisible={isVisible}
-            onToggle={togglePlayers}
-            availableServices={availableServices}
-            compact
-          />
-        )}
-      </div>
-
       <div className="space-y-4">
-        {!isVisible ? null : hasMultipleServices ? (
+        {isVisible && (
           <Tabs value={activeTab} onValueChange={handleTabChange}>
-            <TabsList className="grid w-full grid-cols-2 mb-6">
-              {availableServices.includes('apple_music') && (
-                <TabsTrigger value="apple_music" className="gap-2">
-                  <SiApplemusic className="h-4 w-4 text-red-500" />
-                  Apple Music
-                </TabsTrigger>
+            <div className="flex items-center gap-3 mb-4">
+              <TabsList className="flex-1">
+                {availableServices.includes('apple_music') && (
+                  <TabsTrigger value="apple_music" className="flex-1 gap-2">
+                    <SiApplemusic className="h-4 w-4 text-red-500" />
+                    Apple Music
+                  </TabsTrigger>
+                )}
+                {availableServices.includes('spotify') && (
+                  <TabsTrigger value="spotify" className="flex-1 gap-2">
+                    <SiSpotify className="h-4 w-4 text-green-500" />
+                    Spotify
+                  </TabsTrigger>
+                )}
+              </TabsList>
+              {showToggle && (
+                <PlayerToggle
+                  isVisible={isVisible}
+                  onToggle={togglePlayers}
+                  availableServices={availableServices}
+                  compact
+                />
               )}
-              {availableServices.includes('spotify') && (
-                <TabsTrigger value="spotify" className="gap-2">
-                  <SiSpotify className="h-4 w-4 text-green-500" />
-                  Spotify
-                </TabsTrigger>
-              )}
-            </TabsList>
+            </div>
 
             {availableServices.includes('apple_music') && appleMusicData && (
               <TabsContent value="apple_music" className="mt-0">
@@ -194,30 +192,6 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
               </TabsContent>
             )}
           </Tabs>
-        ) : (
-          <>
-            {availableServices.includes('apple_music') && appleMusicData && (
-              <AppleMusicEmbed
-                albumUrl={appleMusicData.url}
-                albumTitle={album.title}
-                artistName={album.artist}
-                onError={(error) => handlePlayerError('apple_music', error)}
-                onLoad={() => handlePlayerLoad('apple_music')}
-              />
-            )}
-
-            {availableServices.includes('spotify') && spotifyData && (
-              <SpotifyEmbed
-                albumId={spotifyData.id}
-                albumUrl={spotifyData.url}
-                albumTitle={album.title}
-                artistName={album.artist}
-                autoplay={preferences.autoplay}
-                onError={(error) => handlePlayerError('spotify', error)}
-                onLoad={() => handlePlayerLoad('spotify')}
-              />
-            )}
-          </>
         )}
 
         {Object.keys(playerErrors).length === availableServices.length && (

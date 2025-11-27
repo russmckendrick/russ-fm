@@ -52,7 +52,7 @@ export const PlayerToggle = memo(function PlayerToggle({
               variant="ghost"
               size="icon"
               onClick={() => onToggle(!isVisible)}
-              className={cn('relative', className)}
+              className={className}
               aria-label={ariaLabel}
               aria-pressed={isVisible}
             >
@@ -60,12 +60,6 @@ export const PlayerToggle = memo(function PlayerToggle({
                 <X className="h-4 w-4" aria-hidden="true" />
               ) : (
                 <Music className="h-4 w-4" aria-hidden="true" />
-              )}
-              {availableServices.length > 1 && (
-                <span 
-                  className="absolute -top-1 -right-1 h-2 w-2 rounded-full bg-primary"
-                  aria-hidden="true"
-                />
               )}
             </Button>
           </TooltipTrigger>
