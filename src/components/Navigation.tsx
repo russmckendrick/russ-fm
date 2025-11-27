@@ -63,8 +63,10 @@ export function Navigation() {
       )}>
         <nav className={cn(
           "pointer-events-auto flex items-center justify-between px-2 py-2 rounded-full border transition-all duration-300 mx-4",
-          "bg-background/70 backdrop-blur-xl border-white/10 shadow-lg",
-          scrolled ? "w-auto px-6 h-14" : "w-full max-w-5xl h-16 px-6"
+          "backdrop-blur-xl shadow-lg",
+          scrolled
+            ? "w-auto px-6 h-14 bg-background/80 border-border/50"
+            : "w-full max-w-5xl h-16 px-6 bg-background/40 border-white/10"
         )}>
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 mr-8">

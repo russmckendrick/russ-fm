@@ -652,10 +652,10 @@ export function AlbumDetailPage() {
   const titleTextStyle = getEnhancedTextColor(albumColors.background, albumColors);
 
   return (
-    <div className="min-h-screen pb-20 -mt-32">
+    <div className="min-h-screen pb-20 -mt-0 md:-mt-32">
       {/* Hero Section - Full Width & Immersive */}
       <div
-        className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-32 px-4 overflow-hidden"
+        className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-28 px-4 overflow-hidden"
         style={{
           background: createHeroBackground(albumColors),
           ...colorProperties
