@@ -143,10 +143,8 @@ class PerplexityService(BaseService):
             f'Write a 2-3 paragraph description of the album "{album}" by {artist}.'
         ]
 
-        # Add context if available
+        # Add context if available (year may be reissue date, so phrase carefully)
         context_parts = []
-        if year:
-            context_parts.append(f"released in {year}")
         if genres and len(genres) > 0:
             genre_str = ", ".join(genres[:3])  # Limit to first 3 genres
             context_parts.append(f"genres: {genre_str}")
@@ -157,10 +155,11 @@ class PerplexityService(BaseService):
         if context_parts:
             prompt_parts.append(f"Context: {'; '.join(context_parts)}.")
 
-        # Add guidance
+        # Add guidance - note: don't rely on year as it may be a reissue date
         prompt_parts.append(
             "Focus on the album's musical style, its place in the artist's discography, "
-            "and its critical or commercial reception. Be factual and concise."
+            "and its critical or commercial reception. Use the album's ORIGINAL release year, "
+            "not any reissue or remaster date. Be factual and concise."
         )
 
         return " ".join(prompt_parts)

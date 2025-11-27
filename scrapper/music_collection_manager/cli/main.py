@@ -999,6 +999,144 @@ def generate_collection(ctx, output, data_path):
             logger.error(f"Collection generation failed: {str(e)}")
 
 
+def _process_single_release(
+    discogs_id: str,
+    db_path: str,
+    perplexity_service,
+    logger,
+    force: bool,
+    dry_run: bool,
+    console,
+    box
+) -> bool:
+    """
+    Process a single release for description enrichment.
+
+    Returns True if successful, False otherwise.
+    """
+    import sqlite3
+    import json as json_module
+    from ..utils.database import DatabaseManager
+    from ..utils.json_updater import JsonUpdater
+    from rich.panel import Panel
+
+    db_manager = DatabaseManager(db_path, logger)
+    release_info = None
+
+    # Look up by Discogs ID
+    try:
+        with sqlite3.connect(db_path) as conn:
+            conn.row_factory = sqlite3.Row
+            cursor = conn.cursor()
+            cursor.execute(
+                """
+                SELECT discogs_id, title, artists, year, genres, labels, raw_data
+                FROM releases WHERE discogs_id = ?
+                """,
+                (discogs_id,)
+            )
+            row = cursor.fetchone()
+            if row:
+                artists_data = json_module.loads(row["artists"] or "[]")
+                artist_names = [a.get("name", "") for a in artists_data]
+                release_info = {
+                    "discogs_id": row["discogs_id"],
+                    "title": row["title"],
+                    "artists": artist_names,
+                    "year": row["year"],
+                    "genres": json_module.loads(row["genres"] or "[]"),
+                    "labels": json_module.loads(row["labels"] or "[]"),
+                    "raw_data": json_module.loads(row["raw_data"] or "{}")
+                }
+    except Exception as e:
+        console.print(f"[red]Database error for {discogs_id}: {str(e)}[/red]")
+        return False
+
+    if not release_info:
+        console.print(f"[red]Release not found: {discogs_id}[/red]")
+        return False
+
+    # Display release info
+    artist_str = ", ".join(release_info["artists"][:3])
+    console.print(Panel(
+        f"[bold]{release_info['title']}[/bold]\n"
+        f"[green]Artist:[/green] {artist_str}\n"
+        f"[blue]Discogs ID:[/blue] {release_info['discogs_id']}",
+        title="Processing Release",
+        box=box.ROUNDED
+    ))
+
+    # Check existing descriptions
+    services = release_info.get("raw_data", {}).get("services", {})
+    has_apple = bool(
+        services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
+        or services.get("apple_music", {}).get("editorial_notes")
+    )
+    has_lastfm = bool(
+        services.get("lastfm", {}).get("wiki_summary")
+        or services.get("lastfm", {}).get("wiki_content")
+    )
+    has_perplexity = bool(services.get("perplexity", {}).get("description"))
+
+    if (has_apple or has_lastfm or has_perplexity) and not force:
+        console.print("[yellow]⏭ Skipping - description already exists (use --force to regenerate)[/yellow]\n")
+        return True  # Not a failure, just skipped
+
+    # Generate description
+    console.print("[cyan]Generating description with Perplexity AI...[/cyan]")
+
+    primary_artist = release_info["artists"][0] if release_info["artists"] else ""
+    description_data = perplexity_service.generate_album_description(
+        artist=primary_artist,
+        album=release_info["title"],
+        year=release_info["year"],
+        genres=release_info["genres"],
+        labels=release_info["labels"]
+    )
+
+    if not description_data:
+        console.print("[red]Failed to generate description[/red]\n")
+        return False
+
+    # Display the generated description
+    console.print(Panel(
+        description_data["description"],
+        title="Generated Description",
+        box=box.ROUNDED
+    ))
+
+    if dry_run:
+        console.print("[yellow]Dry run - no changes saved[/yellow]\n")
+        return True
+
+    # Save to database
+    db_success = db_manager.update_release_perplexity_description(
+        release_info["discogs_id"],
+        description_data
+    )
+
+    if db_success:
+        console.print("[green]✓ Database updated[/green]")
+    else:
+        console.print("[red]✗ Failed to update database[/red]")
+
+    # Save to JSON file
+    json_updater = JsonUpdater(logger=logger)
+    json_success = json_updater.update_album_perplexity_description(
+        release_info["discogs_id"],
+        release_info["title"],
+        release_info["artists"],
+        description_data
+    )
+
+    if json_success:
+        console.print("[green]✓ JSON file updated[/green]\n")
+    else:
+        console.print("[yellow]⚠ JSON file not found or update failed[/yellow]\n")
+
+    return db_success
+
+
 @cli.command("enrich-description")
 @click.argument("identifier", required=False)
 @click.option(
@@ -1034,11 +1172,13 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
     """
     Generate album description using Perplexity AI.
 
-    IDENTIFIER can be a Discogs ID (numeric) or album title (string).
+    IDENTIFIER can be a Discogs ID, comma-separated list of IDs, or album title.
 
     Examples:
 
         python main.py enrich-description 12345678
+
+        python main.py enrich-description 12345678,23456789,34567890
 
         python main.py enrich-description "Album Title" --artist "Artist Name"
 
@@ -1046,7 +1186,6 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
     """
     from ..services.perplexity import PerplexityService
     from ..utils.database import DatabaseManager
-    from ..utils.json_updater import JsonUpdater
     from rich.console import Console
     from rich.table import Table
     from rich.panel import Panel
@@ -1088,6 +1227,7 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
 
         console.print(table)
         console.print(f"\n[dim]Use 'python main.py enrich-description <discogs_id>' to generate a description[/dim]")
+        console.print(f"[dim]You can also pass comma-separated IDs: 'python main.py enrich-description id1,id2,id3'[/dim]")
         return
 
     # Check identifier is provided when not listing missing
@@ -1109,144 +1249,78 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
         console.print(f"[red]Failed to initialize Perplexity service: {str(e)}[/red]")
         return
 
-    # Find the release
-    release_info = None
+    # Check if this is a comma-separated list of Discogs IDs
+    if "," in identifier:
+        ids = [id.strip() for id in identifier.split(",") if id.strip()]
 
-    # Check if identifier is a Discogs ID (numeric) or album title
-    if identifier.isdigit():
-        # Search by Discogs ID
-        console.print(f"[cyan]Looking up Discogs ID: {identifier}...[/cyan]")
-        release_info = db_manager.search_release_by_title("", artist)  # Get by ID
-        # Actually need to query by discogs_id directly
-        import sqlite3
-        import json as json_module
-        try:
-            with sqlite3.connect(db_path) as conn:
-                conn.row_factory = sqlite3.Row
-                cursor = conn.cursor()
-                cursor.execute(
-                    """
-                    SELECT discogs_id, title, artists, year, genres, labels, raw_data
-                    FROM releases WHERE discogs_id = ?
-                    """,
-                    (identifier,)
-                )
-                row = cursor.fetchone()
-                if row:
-                    artists_data = json_module.loads(row["artists"] or "[]")
-                    artist_names = [a.get("name", "") for a in artists_data]
-                    release_info = {
-                        "discogs_id": row["discogs_id"],
-                        "title": row["title"],
-                        "artists": artist_names,
-                        "year": row["year"],
-                        "genres": json_module.loads(row["genres"] or "[]"),
-                        "labels": json_module.loads(row["labels"] or "[]"),
-                        "raw_data": json_module.loads(row["raw_data"] or "{}")
-                    }
-        except Exception as e:
-            console.print(f"[red]Database error: {str(e)}[/red]")
+        # Validate all are numeric
+        if not all(id.isdigit() for id in ids):
+            console.print("[red]Error: When using comma-separated values, all must be numeric Discogs IDs[/red]")
             return
+
+        console.print(f"[cyan]Processing {len(ids)} releases...[/cyan]\n")
+
+        success_count = 0
+        fail_count = 0
+
+        for i, discogs_id in enumerate(ids, 1):
+            console.print(f"[bold]═══ Release {i}/{len(ids)} ═══[/bold]")
+
+            if _process_single_release(
+                discogs_id=discogs_id,
+                db_path=db_path,
+                perplexity_service=perplexity_service,
+                logger=logger,
+                force=force,
+                dry_run=dry_run,
+                console=console,
+                box=box
+            ):
+                success_count += 1
+            else:
+                fail_count += 1
+
+        # Summary
+        console.print(f"[bold]═══ Summary ═══[/bold]")
+        console.print(f"[green]✓ Successful: {success_count}[/green]")
+        if fail_count > 0:
+            console.print(f"[red]✗ Failed: {fail_count}[/red]")
+        return
+
+    # Single identifier - check if it's a Discogs ID or album title
+    if identifier.isdigit():
+        # Single Discogs ID
+        _process_single_release(
+            discogs_id=identifier,
+            db_path=db_path,
+            perplexity_service=perplexity_service,
+            logger=logger,
+            force=force,
+            dry_run=dry_run,
+            console=console,
+            box=box
+        )
     else:
         # Search by title (and optionally artist)
         console.print(f"[cyan]Searching for: {identifier}...[/cyan]")
         release_info = db_manager.search_release_by_title(identifier, artist)
 
-    if not release_info:
-        console.print(f"[red]Release not found: {identifier}[/red]")
-        if not identifier.isdigit():
+        if not release_info:
+            console.print(f"[red]Release not found: {identifier}[/red]")
             console.print("[dim]Try using the Discogs ID instead, or use --artist to narrow the search[/dim]")
-        return
+            return
 
-    # Display release info
-    artist_str = ", ".join(release_info["artists"][:3])
-    console.print(Panel(
-        f"[bold]{release_info['title']}[/bold]\n"
-        f"[green]Artist:[/green] {artist_str}\n"
-        f"[yellow]Year:[/yellow] {release_info['year'] or 'N/A'}\n"
-        f"[blue]Discogs ID:[/blue] {release_info['discogs_id']}",
-        title="Found Release",
-        box=box.ROUNDED
-    ))
-
-    # Check existing descriptions
-    services = release_info.get("raw_data", {}).get("services", {})
-    has_apple = bool(
-        services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
-        or services.get("apple_music", {}).get("editorial_notes")
-    )
-    has_lastfm = bool(
-        services.get("lastfm", {}).get("wiki_summary")
-        or services.get("lastfm", {}).get("wiki_content")
-    )
-    has_perplexity = bool(services.get("perplexity", {}).get("description"))
-
-    console.print("\n[bold]Existing descriptions:[/bold]")
-    console.print(f"  Apple Music: {'[green]Yes[/green]' if has_apple else '[red]No[/red]'}")
-    console.print(f"  Last.fm: {'[green]Yes[/green]' if has_lastfm else '[red]No[/red]'}")
-    console.print(f"  Perplexity: {'[green]Yes[/green]' if has_perplexity else '[red]No[/red]'}")
-
-    if (has_apple or has_lastfm or has_perplexity) and not force:
-        console.print("\n[yellow]Description already exists. Use --force to regenerate.[/yellow]")
-        return
-
-    # Generate description
-    console.print("\n[cyan]Generating description with Perplexity AI...[/cyan]")
-
-    primary_artist = release_info["artists"][0] if release_info["artists"] else ""
-    description_data = perplexity_service.generate_album_description(
-        artist=primary_artist,
-        album=release_info["title"],
-        year=release_info["year"],
-        genres=release_info["genres"],
-        labels=release_info["labels"]
-    )
-
-    if not description_data:
-        console.print("[red]Failed to generate description[/red]")
-        return
-
-    # Display the generated description
-    console.print(Panel(
-        description_data["description"],
-        title="Generated Description",
-        box=box.ROUNDED
-    ))
-
-    if dry_run:
-        console.print("\n[yellow]Dry run - no changes saved[/yellow]")
-        return
-
-    # Save to database
-    console.print("\n[cyan]Saving to database...[/cyan]")
-    db_success = db_manager.update_release_perplexity_description(
-        release_info["discogs_id"],
-        description_data
-    )
-
-    if db_success:
-        console.print("[green]✓ Database updated[/green]")
-    else:
-        console.print("[red]✗ Failed to update database[/red]")
-
-    # Save to JSON file
-    console.print("[cyan]Updating JSON file...[/cyan]")
-    json_updater = JsonUpdater(logger=logger)
-    json_success = json_updater.update_album_perplexity_description(
-        release_info["discogs_id"],
-        release_info["title"],
-        release_info["artists"],
-        description_data
-    )
-
-    if json_success:
-        console.print("[green]✓ JSON file updated[/green]")
-    else:
-        console.print("[yellow]⚠ JSON file not found or update failed[/yellow]")
-        console.print("[dim]You may need to regenerate the collection to update the JSON[/dim]")
-
-    if db_success:
-        console.print("\n[green]✓ Description enrichment complete![/green]")
+        # Process by the found Discogs ID
+        _process_single_release(
+            discogs_id=release_info["discogs_id"],
+            db_path=db_path,
+            perplexity_service=perplexity_service,
+            logger=logger,
+            force=force,
+            dry_run=dry_run,
+            console=console,
+            box=box
+        )
 
 
 def main():
