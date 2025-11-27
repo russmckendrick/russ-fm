@@ -1032,3 +1032,70 @@ class DatabaseManager:
         except Exception as e:
             self.logger.error(f"Failed to search release by title: {str(e)}")
             return None
+
+    def get_releases_from_id_backwards(
+        self, from_discogs_id: str, limit: Optional[int] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Get releases starting from a Discogs ID and going backwards by date_added.
+
+        Args:
+            from_discogs_id: The Discogs ID to start from
+            limit: Maximum number of releases to return
+
+        Returns:
+            List of release dictionaries ordered by date_added descending
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+
+                # First, get the date_added for the starting release
+                cursor.execute(
+                    "SELECT date_added FROM releases WHERE discogs_id = ?",
+                    (from_discogs_id,)
+                )
+                start_row = cursor.fetchone()
+
+                if not start_row:
+                    self.logger.warning(f"Starting release not found: {from_discogs_id}")
+                    return []
+
+                start_date = start_row["date_added"]
+
+                # Get releases with date_added <= start_date, ordered by date_added DESC
+                query = """
+                    SELECT discogs_id, title, artists, year, genres, labels, raw_data, date_added
+                    FROM releases
+                    WHERE date_added <= ?
+                    ORDER BY date_added DESC
+                """
+
+                if limit:
+                    query += f" LIMIT {limit}"
+
+                cursor.execute(query, (start_date,))
+                rows = cursor.fetchall()
+
+                releases = []
+                for row in rows:
+                    artists_data = json.loads(row["artists"] or "[]")
+                    artist_names = [a.get("name", "") for a in artists_data]
+
+                    releases.append({
+                        "discogs_id": row["discogs_id"],
+                        "title": row["title"],
+                        "artists": artist_names,
+                        "year": row["year"],
+                        "genres": json.loads(row["genres"] or "[]"),
+                        "labels": json.loads(row["labels"] or "[]"),
+                        "raw_data": json.loads(row["raw_data"] or "{}"),
+                        "date_added": row["date_added"]
+                    })
+
+                return releases
+
+        except Exception as e:
+            self.logger.error(f"Failed to get releases from ID backwards: {str(e)}")
+            return []

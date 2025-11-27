@@ -44,6 +44,8 @@ python main.py enrich-description 123,456,789             # Process multiple IDs
 python main.py enrich-description "Album" --artist "Artist"  # Generate by title/artist
 python main.py enrich-description 12345678 --dry-run      # Preview without saving
 python main.py enrich-description 12345678 --force        # Regenerate existing description
+python main.py enrich-description --from 33817755         # Process backwards from ID (pauses every 50)
+python main.py enrich-description --from 33817755 --batch-size 25  # Custom batch size
 
 # Maintenance
 python main.py backup                 # Backup SQLite database

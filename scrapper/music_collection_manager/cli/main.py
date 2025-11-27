@@ -1167,8 +1167,19 @@ def _process_single_release(
     default=10,
     help="Limit number of releases shown with --list-missing"
 )
+@click.option(
+    "--from",
+    "from_id",
+    help="Start from this Discogs ID and work backwards through collection"
+)
+@click.option(
+    "--batch-size",
+    type=int,
+    default=50,
+    help="Number of releases to process before prompting to continue (default: 50)"
+)
 @click.pass_context
-def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, limit):
+def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, limit, from_id, batch_size):
     """
     Generate album description using Perplexity AI.
 
@@ -1183,6 +1194,10 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
         python main.py enrich-description "Album Title" --artist "Artist Name"
 
         python main.py enrich-description --list-missing --limit 20
+
+        python main.py enrich-description --from 33817755
+
+        python main.py enrich-description --from 33817755 --batch-size 25
     """
     from ..services.perplexity import PerplexityService
     from ..utils.database import DatabaseManager
@@ -1228,11 +1243,111 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
         console.print(table)
         console.print(f"\n[dim]Use 'python main.py enrich-description <discogs_id>' to generate a description[/dim]")
         console.print(f"[dim]You can also pass comma-separated IDs: 'python main.py enrich-description id1,id2,id3'[/dim]")
+        console.print(f"[dim]Or use --from <id> to process backwards from a specific release[/dim]")
         return
 
-    # Check identifier is provided when not listing missing
+    # Handle --from option (batch process backwards from a starting ID)
+    if from_id:
+        if not from_id.isdigit():
+            console.print("[red]Error: --from value must be a numeric Discogs ID[/red]")
+            return
+
+        # Check Perplexity configuration
+        perplexity_config = config.get("perplexity", {})
+        if not perplexity_config.get("api_key"):
+            console.print("[red]Error: Perplexity API key not configured in config.json[/red]")
+            console.print("[dim]Add 'perplexity.api_key' to your config.json file[/dim]")
+            return
+
+        # Initialize Perplexity service
+        try:
+            perplexity_service = PerplexityService(perplexity_config, logger)
+        except Exception as e:
+            console.print(f"[red]Failed to initialize Perplexity service: {str(e)}[/red]")
+            return
+
+        # Get all releases from the starting ID backwards
+        console.print(f"[cyan]Fetching releases from {from_id} backwards...[/cyan]")
+        all_releases = db_manager.get_releases_from_id_backwards(from_id)
+
+        if not all_releases:
+            console.print(f"[red]No releases found starting from {from_id}[/red]")
+            return
+
+        console.print(f"[green]Found {len(all_releases)} releases to process[/green]\n")
+
+        success_count = 0
+        fail_count = 0
+        skipped_count = 0
+        processed_in_batch = 0
+
+        for i, release in enumerate(all_releases, 1):
+            console.print(f"[bold]═══ Release {i}/{len(all_releases)} ═══[/bold]")
+
+            # Check if this release already has a description (unless force)
+            services = release.get("raw_data", {}).get("services", {})
+            has_apple = bool(
+                services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
+                or services.get("apple_music", {}).get("editorial_notes")
+            )
+            has_lastfm = bool(
+                services.get("lastfm", {}).get("wiki_summary")
+                or services.get("lastfm", {}).get("wiki_content")
+            )
+            has_perplexity = bool(services.get("perplexity", {}).get("description"))
+
+            if (has_apple or has_lastfm or has_perplexity) and not force:
+                artist_str = ", ".join(release["artists"][:2])
+                console.print(f"[yellow]⏭ Skipping {release['title']} by {artist_str} - description exists[/yellow]\n")
+                skipped_count += 1
+                continue
+
+            # Process this release
+            result = _process_single_release(
+                discogs_id=release["discogs_id"],
+                db_path=db_path,
+                perplexity_service=perplexity_service,
+                logger=logger,
+                force=force,
+                dry_run=dry_run,
+                console=console,
+                box=box
+            )
+
+            if result:
+                success_count += 1
+            else:
+                fail_count += 1
+
+            processed_in_batch += 1
+
+            # Check if we've hit the batch size limit
+            if processed_in_batch >= batch_size and i < len(all_releases):
+                console.print(f"\n[bold yellow]═══ Batch Complete ═══[/bold yellow]")
+                console.print(f"Processed {processed_in_batch} releases in this batch")
+                console.print(f"Total progress: {i}/{len(all_releases)} releases")
+                console.print(f"[green]✓ Successful: {success_count}[/green] | [yellow]⏭ Skipped: {skipped_count}[/yellow] | [red]✗ Failed: {fail_count}[/red]")
+
+                if not dry_run:
+                    if not click.confirm("\nContinue with next batch?", default=True):
+                        console.print("[yellow]Stopping at user request[/yellow]")
+                        break
+
+                processed_in_batch = 0
+                console.print()
+
+        # Final summary
+        console.print(f"\n[bold]═══ Final Summary ═══[/bold]")
+        console.print(f"[green]✓ Successful: {success_count}[/green]")
+        console.print(f"[yellow]⏭ Skipped (already had description): {skipped_count}[/yellow]")
+        if fail_count > 0:
+            console.print(f"[red]✗ Failed: {fail_count}[/red]")
+        console.print(f"[cyan]Total processed: {success_count + fail_count + skipped_count}/{len(all_releases)}[/cyan]")
+        return
+
+    # Check identifier is provided when not using --from or --list-missing
     if not identifier:
-        console.print("[red]Error: IDENTIFIER is required (use --list-missing to see releases without descriptions)[/red]")
+        console.print("[red]Error: IDENTIFIER is required (use --list-missing to see releases without descriptions, or --from to batch process)[/red]")
         return
 
     # Check Perplexity configuration
