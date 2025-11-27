@@ -159,8 +159,9 @@ class JsonUpdater:
         self,
         discogs_id: str,
         title: str,
-        artists: list
-    ) -> Dict[str, bool]:
+        artists: list,
+        min_apple_music_length: int = 200
+    ) -> Dict[str, Any]:
         """
         Check if an album has descriptions from various sources.
 
@@ -168,14 +169,17 @@ class JsonUpdater:
             discogs_id: Discogs release ID
             title: Album title
             artists: List of artist names
+            min_apple_music_length: Minimum character length for Apple Music description
+                                    to be considered "good enough" (default: 200)
 
         Returns:
-            Dictionary with source names as keys and boolean values
+            Dictionary with source names as keys and boolean/length values
         """
         json_path = self.find_album_json(discogs_id, title, artists)
 
         result = {
             "apple_music": False,
+            "apple_music_length": 0,
             "lastfm": False,
             "perplexity": False,
             "file_found": False
@@ -192,12 +196,25 @@ class JsonUpdater:
 
             services = album_data.get("services", {})
 
-            # Check Apple Music
+            # Check Apple Music - get the longest description available
             apple_music = services.get("apple_music", {})
-            result["apple_music"] = bool(
-                apple_music.get("raw_attributes", {}).get("editorialNotes")
-                or apple_music.get("editorial_notes")
-            )
+            apple_desc = None
+
+            # Check editorialNotes (can have 'short' and 'standard')
+            editorial_notes = apple_music.get("raw_attributes", {}).get("editorialNotes", {})
+            if editorial_notes:
+                # Get the longer of short/standard
+                short = editorial_notes.get("short", "") or ""
+                standard = editorial_notes.get("standard", "") or ""
+                apple_desc = standard if len(standard) >= len(short) else short
+
+            # Also check editorial_notes field directly
+            if not apple_desc:
+                apple_desc = apple_music.get("editorial_notes", "") or ""
+
+            result["apple_music_length"] = len(apple_desc)
+            # Only consider it "has" Apple Music if it meets minimum length
+            result["apple_music"] = len(apple_desc) >= min_apple_music_length
 
             # Check Last.fm
             lastfm = services.get("lastfm", {})

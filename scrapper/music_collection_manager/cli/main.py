@@ -1074,17 +1074,22 @@ def _process_single_release(
         release_info["artists"]
     )
 
-    # Only skip if Apple Music or Perplexity exists (Last.fm descriptions are lower quality)
+    # Only skip if Apple Music (with sufficient length) or Perplexity exists
+    # Last.fm descriptions are lower quality, and short Apple Music descriptions need enhancement
     has_good_description = desc_status["apple_music"] or desc_status["perplexity"]
 
     if has_good_description and not force:
         sources = []
         if desc_status["apple_music"]:
-            sources.append("Apple Music")
+            sources.append(f"Apple Music ({desc_status['apple_music_length']} chars)")
         if desc_status["perplexity"]:
             sources.append("Perplexity")
         console.print(f"[yellow]⏭ Skipping - has {', '.join(sources)} (use --force to regenerate)[/yellow]\n")
         return True  # Not a failure, just skipped
+
+    # Log if we're replacing a short Apple Music description
+    if desc_status["apple_music_length"] > 0 and desc_status["apple_music_length"] < 200:
+        console.print(f"[dim]Apple Music description too short ({desc_status['apple_music_length']} chars), generating better one...[/dim]")
 
     # Generate description
     console.print("[cyan]Generating description with Perplexity AI...[/cyan]")
@@ -1299,14 +1304,15 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
                 release["artists"]
             )
 
-            # Only skip if Apple Music or Perplexity exists (Last.fm descriptions are lower quality)
+            # Only skip if Apple Music (with sufficient length) or Perplexity exists
+            # Last.fm descriptions are lower quality, and short Apple Music descriptions need enhancement
             has_good_description = desc_status["apple_music"] or desc_status["perplexity"]
 
             if has_good_description and not force:
                 artist_str = ", ".join(release["artists"][:2])
                 sources = []
                 if desc_status["apple_music"]:
-                    sources.append("Apple Music")
+                    sources.append(f"Apple Music ({desc_status['apple_music_length']} chars)")
                 if desc_status["perplexity"]:
                     sources.append("Perplexity")
                 console.print(f"[yellow]⏭ Skipping {release['title']} by {artist_str} - has {', '.join(sources)}[/yellow]\n")
