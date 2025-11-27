@@ -848,3 +848,187 @@ class DatabaseManager:
         except Exception as e:
             self.logger.error(f"Failed to check if release exists: {str(e)}")
             return False
+
+    def update_release_perplexity_description(
+        self, discogs_id: str, description_data: Dict[str, Any]
+    ) -> bool:
+        """
+        Update the Perplexity description in a release's raw_data.
+
+        Args:
+            discogs_id: The Discogs ID of the release
+            description_data: Dictionary containing description and metadata
+
+        Returns:
+            True if update was successful, False otherwise
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                # First, get the existing raw_data
+                cursor = conn.cursor()
+                cursor.execute(
+                    "SELECT raw_data FROM releases WHERE discogs_id = ?",
+                    (discogs_id,)
+                )
+                result = cursor.fetchone()
+
+                if not result:
+                    self.logger.warning(f"Release not found for Discogs ID: {discogs_id}")
+                    return False
+
+                # Parse existing raw_data
+                raw_data = json.loads(result[0] or "{}")
+
+                # Ensure services structure exists
+                if "services" not in raw_data:
+                    raw_data["services"] = {}
+
+                # Update perplexity data
+                raw_data["services"]["perplexity"] = description_data
+
+                # Update the database
+                cursor.execute(
+                    """
+                    UPDATE releases
+                    SET raw_data = ?, updated_at = ?
+                    WHERE discogs_id = ?
+                    """,
+                    (json.dumps(raw_data), datetime.now().isoformat(), discogs_id)
+                )
+                conn.commit()
+
+                self.logger.info(f"Updated Perplexity description for release {discogs_id}")
+                return True
+
+        except Exception as e:
+            self.logger.error(f"Failed to update Perplexity description for {discogs_id}: {str(e)}")
+            return False
+
+    def get_releases_without_description(self, limit: Optional[int] = None) -> List[Dict[str, Any]]:
+        """
+        Get releases that don't have any album description.
+
+        Returns releases missing Apple Music editorial notes, Last.fm wiki, AND Perplexity description.
+
+        Args:
+            limit: Maximum number of releases to return
+
+        Returns:
+            List of release dictionaries with basic info
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+
+                query = """
+                    SELECT discogs_id, title, artists, year, genres, labels, raw_data
+                    FROM releases
+                    WHERE discogs_id IS NOT NULL
+                """
+
+                cursor.execute(query)
+                rows = cursor.fetchall()
+
+                releases_without_desc = []
+
+                for row in rows:
+                    raw_data = json.loads(row["raw_data"] or "{}")
+                    services = raw_data.get("services", {})
+
+                    # Check for existing descriptions
+                    has_apple_music_desc = bool(
+                        services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
+                        or services.get("apple_music", {}).get("editorial_notes")
+                    )
+                    has_lastfm_desc = bool(
+                        services.get("lastfm", {}).get("wiki_summary")
+                        or services.get("lastfm", {}).get("wiki_content")
+                    )
+                    has_perplexity_desc = bool(
+                        services.get("perplexity", {}).get("description")
+                    )
+
+                    # Only include if no description from any source
+                    if not has_apple_music_desc and not has_lastfm_desc and not has_perplexity_desc:
+                        artists_data = json.loads(row["artists"] or "[]")
+                        artist_names = [a.get("name", "") for a in artists_data]
+
+                        releases_without_desc.append({
+                            "discogs_id": row["discogs_id"],
+                            "title": row["title"],
+                            "artists": artist_names,
+                            "year": row["year"],
+                            "genres": json.loads(row["genres"] or "[]"),
+                            "labels": json.loads(row["labels"] or "[]")
+                        })
+
+                        if limit and len(releases_without_desc) >= limit:
+                            break
+
+                return releases_without_desc
+
+        except Exception as e:
+            self.logger.error(f"Failed to get releases without description: {str(e)}")
+            return []
+
+    def search_release_by_title(self, title: str, artist: Optional[str] = None) -> Optional[Dict[str, Any]]:
+        """
+        Search for a release by title (and optionally artist).
+
+        Args:
+            title: Album title to search for
+            artist: Artist name to narrow search (optional)
+
+        Returns:
+            Release dictionary if found, None otherwise
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+
+                if artist:
+                    # Search with artist filter
+                    cursor.execute(
+                        """
+                        SELECT discogs_id, title, artists, year, genres, labels, raw_data
+                        FROM releases
+                        WHERE LOWER(title) LIKE LOWER(?)
+                        AND LOWER(artists) LIKE LOWER(?)
+                        LIMIT 1
+                        """,
+                        (f"%{title}%", f"%{artist}%")
+                    )
+                else:
+                    cursor.execute(
+                        """
+                        SELECT discogs_id, title, artists, year, genres, labels, raw_data
+                        FROM releases
+                        WHERE LOWER(title) LIKE LOWER(?)
+                        LIMIT 1
+                        """,
+                        (f"%{title}%",)
+                    )
+
+                row = cursor.fetchone()
+
+                if row:
+                    artists_data = json.loads(row["artists"] or "[]")
+                    artist_names = [a.get("name", "") for a in artists_data]
+
+                    return {
+                        "discogs_id": row["discogs_id"],
+                        "title": row["title"],
+                        "artists": artist_names,
+                        "year": row["year"],
+                        "genres": json.loads(row["genres"] or "[]"),
+                        "labels": json.loads(row["labels"] or "[]"),
+                        "raw_data": json.loads(row["raw_data"] or "{}")
+                    }
+
+                return None
+
+        except Exception as e:
+            self.logger.error(f"Failed to search release by title: {str(e)}")
+            return None

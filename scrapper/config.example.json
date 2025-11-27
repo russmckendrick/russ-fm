@@ -26,6 +26,11 @@
     "api_token": "YOUR_AUDIO_DB_API_TOKEN",
     "base_url": "https://theaudiodb.com/api/v1/json/"
   },
+  "perplexity": {
+    "api_key": "YOUR_PERPLEXITY_API_KEY",
+    "model": "sonar",
+    "rate_limit": 20
+  },
   "database": {
     "path": "collection_cache.db"
   },

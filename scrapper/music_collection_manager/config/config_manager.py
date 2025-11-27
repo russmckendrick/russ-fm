@@ -206,10 +206,14 @@ class ConfigManager:
         # Validate TheAudioDB config
         theaudiodb_config = self.get_section("TheAudioDB")
         validation["theaudiodb"] = bool(theaudiodb_config.get("api_token"))
-        
+
+        # Validate Perplexity config
+        perplexity_config = self.get_section("perplexity")
+        validation["perplexity"] = bool(perplexity_config.get("api_key"))
+
         # Wikipedia doesn't require credentials
         validation["wikipedia"] = True
-        
+
         return validation
     
     def save_config(self, output_file: str, format: str = "json"):

@@ -37,6 +37,13 @@ python main.py collection --resume   # Resume processing with existing cache
 python main.py release 123456 --save # Process specific Discogs release
 python main.py artist "Artist Name" --save  # Get artist information
 
+# Album description enrichment (Perplexity AI)
+python main.py enrich-description --list-missing          # List albums without descriptions
+python main.py enrich-description 12345678                # Generate description by Discogs ID
+python main.py enrich-description "Album" --artist "Artist"  # Generate by title/artist
+python main.py enrich-description 12345678 --dry-run      # Preview without saving
+python main.py enrich-description 12345678 --force        # Regenerate existing description
+
 # Maintenance
 python main.py backup                 # Backup SQLite database
 python main.py status                 # Check processing status
@@ -83,7 +90,7 @@ R2_PUBLIC_DOMAIN=https://assets.russ.fm
 
 **Backend Data Pipeline:**
 - **Orchestrator Pattern**: `utils/orchestrator.py` coordinates multi-service data enrichment
-- **Service Layer**: Standardized API clients for Discogs, Apple Music, Spotify, Wikipedia, Last.fm
+- **Service Layer**: Standardized API clients for Discogs, Apple Music, Spotify, Wikipedia, Last.fm, Perplexity AI
 - **Database Layer**: SQLite with models for caching and resume capability
 - **Configuration Management**: Centralized config with API credentials and processing options
 
@@ -147,9 +154,10 @@ R2_PUBLIC_DOMAIN=https://assets.russ.fm
 
 ### Data Processing Workflow
 - **Resume Capability**: SQLite database tracks processing state for large collections
-- **Multi-Service Enrichment**: Combines data from 5+ music APIs with intelligent matching
+- **Multi-Service Enrichment**: Combines data from 6+ music APIs with intelligent matching
 - **Image Management**: Downloads and resizes images to 3 different resolutions
 - **Artist Orchestration**: Complex logic for handling multi-artist albums and collaborations
+- **AI Description Fallback**: Perplexity AI generates album descriptions when Apple Music/Last.fm descriptions are unavailable
 
 ### Frontend Routing and Data Patterns
 - **Static Data Loading**: All API calls use `fetch()` to load JSON from `/public/`
@@ -223,6 +231,42 @@ srcSet={`${getAlbumImageFromData(album.uri_release, 'small')} 400w`} // 'small' 
 ```
 
 **WHY:** These functions handle environment differences (dev vs prod), R2 CDN routing, fallbacks, and ensure images work correctly in production deployments.
+
+### Album Description Enrichment (Perplexity AI)
+
+The system uses Perplexity AI as a fallback to generate album descriptions when Apple Music editorial notes and Last.fm wiki content are unavailable.
+
+**How it works:**
+1. During normal collection processing, after fetching Apple Music and Last.fm data
+2. If no description is found from either source, Perplexity AI is called
+3. Perplexity generates a 2-3 paragraph description using rich context (artist, album, year, genres, labels)
+4. The description is stored in `raw_data.services.perplexity.description`
+
+**Frontend fallback chain** (`src/pages/AlbumDetailPage.tsx`):
+```typescript
+// Description sources checked in order (longest wins):
+1. Apple Music editorial notes (short)
+2. Apple Music editorial notes (standard)
+3. Apple Music editorial_notes field
+4. Last.fm wiki_summary
+5. Last.fm wiki_content
+6. Perplexity AI description  // Fallback
+```
+
+**Configuration** (`scrapper/config.json`):
+```json
+"perplexity": {
+  "api_key": "YOUR_PERPLEXITY_API_KEY",
+  "model": "sonar",
+  "rate_limit": 20
+}
+```
+
+**Retroactive enrichment:**
+Use `enrich-description` command to add descriptions to existing releases:
+- Updates both SQLite database AND JSON files in `/public/album/{slug}/`
+- Use `--list-missing` to find releases without descriptions
+- Use `--dry-run` to preview without saving
 
 ### Error Handling and Fallbacks
 - Comprehensive fallback systems for missing data, images, and service failures

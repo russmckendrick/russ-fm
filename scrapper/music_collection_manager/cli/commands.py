@@ -391,20 +391,20 @@ class TestCommand(BaseCommand):
         table.add_column("Configuration", style="yellow")
         
         validation = self.config.validate_config()
-        
-        for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]:
+
+        for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb", "perplexity"]:
             status = "✓ Connected" if results.get(service_name, False) else "✗ Failed"
             status_style = "green" if results.get(service_name, False) else "red"
-            
+
             config_status = "✓ Valid" if validation.get(service_name, False) else "✗ Missing"
             config_style = "green" if validation.get(service_name, False) else "red"
-            
+
             table.add_row(
                 service_name.title(),
                 f"[{status_style}]{status}[/{status_style}]",
                 f"[{config_style}]{config_status}[/{config_style}]"
             )
-        
+
         self.console.print(table)
         
         # Show available services
@@ -535,7 +535,7 @@ class TestCommand(BaseCommand):
             available_services = orchestrator.get_available_services()
             
             # Test each service by checking if it's available and working
-            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb"]:
+            for service_name in ["discogs", "apple_music", "spotify", "wikipedia", "lastfm", "theaudiodb", "perplexity"]:
                 if service_name in available_services:
                     try:
                         # For Discogs, test by trying to get a release

@@ -340,6 +340,7 @@ export function AlbumDetailPage() {
       detailedAlbum?.services?.apple_music?.editorial_notes,
       detailedAlbum?.services?.lastfm?.wiki_summary,
       detailedAlbum?.services?.lastfm?.wiki_content,
+      detailedAlbum?.services?.perplexity?.description,  // Perplexity AI fallback
     ];
 
     let longest: string | null = null;

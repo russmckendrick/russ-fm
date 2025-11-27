@@ -11,6 +11,7 @@ from ..services.apple_music import AppleMusicService
 from ..services.spotify import SpotifyService
 from ..services.wikipedia import WikipediaService
 from ..services.lastfm import LastFmService
+from ..services.perplexity import PerplexityService
 from ..services.base import ServiceError
 from .image_manager import ImageManager
 from .database import DatabaseManager
@@ -109,6 +110,15 @@ class MusicDataOrchestrator:
                 self.logger.info("Last.fm service initialized")
             except Exception as e:
                 self.logger.warning(f"Failed to initialize Last.fm service: {str(e)}")
+
+        # Initialize Perplexity service (for fallback album descriptions)
+        perplexity_config = self.config.get("perplexity", {})
+        if perplexity_config.get("api_key"):
+            try:
+                self.services["perplexity"] = PerplexityService(perplexity_config, logger=self.logger)
+                self.logger.info("Perplexity service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Perplexity service: {str(e)}")
     
     def get_release_by_discogs_id(self, discogs_id: str, force_refresh: bool = False) -> Optional[Release]:
         """Get a release by Discogs ID, using database cache if available."""
@@ -308,7 +318,29 @@ class MusicDataOrchestrator:
                 # to maintain higher quality genre data from other sources
         
         # Note: Artist enrichment with Wikipedia is now handled in the artist enrichment block above
-        
+
+        # Enrich with Perplexity AI (fallback for missing descriptions)
+        if "perplexity" in self.services:
+            # Check if we already have a description from Apple Music or Last.fm
+            has_apple_desc = self._check_apple_music_description(release)
+            has_lastfm_desc = self._check_lastfm_description(release)
+
+            if not has_apple_desc and not has_lastfm_desc:
+                self.logger.info(f"No description found from Apple Music or Last.fm, trying Perplexity...")
+                perplexity_data = self._get_perplexity_description(
+                    primary_artist,
+                    release.title,
+                    release.year,
+                    release.genres,
+                    release.labels
+                )
+
+                if perplexity_data:
+                    release.raw_data["perplexity"] = perplexity_data
+                    self.logger.info(f"Generated Perplexity description for {release.title}")
+            else:
+                self.logger.debug(f"Skipping Perplexity - description already exists for {release.title}")
+
         release.updated_at = datetime.now()
         
         # Download artwork with fallback sources
@@ -548,12 +580,82 @@ class MusicDataOrchestrator:
         try:
             service = self.services["wikipedia"]
             return service.find_best_artist_match(artist)
-            
+
         except Exception as e:
             self.logger.warning(f"Failed to get Wikipedia data for {artist}: {str(e)}")
-        
+
         return None
-    
+
+    def _check_apple_music_description(self, release: Release) -> bool:
+        """Check if release has an Apple Music description."""
+        apple_data = release.raw_data.get("apple_music")
+        if not apple_data:
+            return False
+
+        # Check various possible locations for editorial notes
+        if hasattr(apple_data, "raw_data") and apple_data.raw_data:
+            attrs = apple_data.raw_data.get("attributes", {})
+            editorial_notes = attrs.get("editorialNotes", {})
+            if editorial_notes.get("short") or editorial_notes.get("standard"):
+                return True
+
+        if hasattr(apple_data, "editorial_notes") and apple_data.editorial_notes:
+            return True
+
+        # Check if stored as dict (from database)
+        if isinstance(apple_data, dict):
+            attrs = apple_data.get("raw_attributes", {})
+            editorial_notes = attrs.get("editorialNotes", {})
+            if editorial_notes.get("short") or editorial_notes.get("standard"):
+                return True
+            if apple_data.get("editorial_notes"):
+                return True
+
+        return False
+
+    def _check_lastfm_description(self, release: Release) -> bool:
+        """Check if release has a Last.fm description."""
+        lastfm_data = release.raw_data.get("lastfm")
+        if not lastfm_data:
+            return False
+
+        # Check various possible locations for wiki content
+        if hasattr(lastfm_data, "wiki_summary") and lastfm_data.wiki_summary:
+            return True
+        if hasattr(lastfm_data, "wiki_content") and lastfm_data.wiki_content:
+            return True
+
+        # Check if stored as dict (from database)
+        if isinstance(lastfm_data, dict):
+            if lastfm_data.get("wiki_summary") or lastfm_data.get("wiki_content"):
+                return True
+
+        return False
+
+    def _get_perplexity_description(
+        self,
+        artist: str,
+        album: str,
+        year: Optional[int] = None,
+        genres: Optional[List[str]] = None,
+        labels: Optional[List[str]] = None
+    ) -> Optional[Dict[str, Any]]:
+        """Get album description from Perplexity AI."""
+        try:
+            service = self.services["perplexity"]
+            return service.generate_album_description(
+                artist=artist,
+                album=album,
+                year=year,
+                genres=genres,
+                labels=labels
+            )
+
+        except Exception as e:
+            self.logger.warning(f"Failed to get Perplexity description for {artist} - {album}: {str(e)}")
+
+        return None
+
     def get_collection_items(self, username: Optional[str] = None) -> List[Dict[str, Any]]:
         """Get collection items from Discogs."""
         if "discogs" not in self.services:
