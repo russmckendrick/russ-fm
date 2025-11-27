@@ -1066,20 +1066,24 @@ def _process_single_release(
         box=box.ROUNDED
     ))
 
-    # Check existing descriptions
-    services = release_info.get("raw_data", {}).get("services", {})
-    has_apple = bool(
-        services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
-        or services.get("apple_music", {}).get("editorial_notes")
+    # Check existing descriptions from JSON file (not database, as database format differs)
+    json_updater = JsonUpdater(logger=logger)
+    desc_status = json_updater.check_album_has_description(
+        release_info["discogs_id"],
+        release_info["title"],
+        release_info["artists"]
     )
-    has_lastfm = bool(
-        services.get("lastfm", {}).get("wiki_summary")
-        or services.get("lastfm", {}).get("wiki_content")
-    )
-    has_perplexity = bool(services.get("perplexity", {}).get("description"))
 
-    if (has_apple or has_lastfm or has_perplexity) and not force:
-        console.print("[yellow]⏭ Skipping - description already exists (use --force to regenerate)[/yellow]\n")
+    # Only skip if Apple Music or Perplexity exists (Last.fm descriptions are lower quality)
+    has_good_description = desc_status["apple_music"] or desc_status["perplexity"]
+
+    if has_good_description and not force:
+        sources = []
+        if desc_status["apple_music"]:
+            sources.append("Apple Music")
+        if desc_status["perplexity"]:
+            sources.append("Perplexity")
+        console.print(f"[yellow]⏭ Skipping - has {', '.join(sources)} (use --force to regenerate)[/yellow]\n")
         return True  # Not a failure, just skipped
 
     # Generate description
@@ -1281,24 +1285,31 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
         skipped_count = 0
         processed_in_batch = 0
 
+        # Initialize JSON updater for checking existing descriptions
+        from ..utils.json_updater import JsonUpdater
+        json_updater = JsonUpdater(logger=logger)
+
         for i, release in enumerate(all_releases, 1):
             console.print(f"[bold]═══ Release {i}/{len(all_releases)} ═══[/bold]")
 
-            # Check if this release already has a description (unless force)
-            services = release.get("raw_data", {}).get("services", {})
-            has_apple = bool(
-                services.get("apple_music", {}).get("raw_attributes", {}).get("editorialNotes")
-                or services.get("apple_music", {}).get("editorial_notes")
+            # Check if this release already has a description (from JSON file, not database)
+            desc_status = json_updater.check_album_has_description(
+                release["discogs_id"],
+                release["title"],
+                release["artists"]
             )
-            has_lastfm = bool(
-                services.get("lastfm", {}).get("wiki_summary")
-                or services.get("lastfm", {}).get("wiki_content")
-            )
-            has_perplexity = bool(services.get("perplexity", {}).get("description"))
 
-            if (has_apple or has_lastfm or has_perplexity) and not force:
+            # Only skip if Apple Music or Perplexity exists (Last.fm descriptions are lower quality)
+            has_good_description = desc_status["apple_music"] or desc_status["perplexity"]
+
+            if has_good_description and not force:
                 artist_str = ", ".join(release["artists"][:2])
-                console.print(f"[yellow]⏭ Skipping {release['title']} by {artist_str} - description exists[/yellow]\n")
+                sources = []
+                if desc_status["apple_music"]:
+                    sources.append("Apple Music")
+                if desc_status["perplexity"]:
+                    sources.append("Perplexity")
+                console.print(f"[yellow]⏭ Skipping {release['title']} by {artist_str} - has {', '.join(sources)}[/yellow]\n")
                 skipped_count += 1
                 continue
 
