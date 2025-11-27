@@ -40,6 +40,7 @@ python main.py artist "Artist Name" --save  # Get artist information
 # Album description enrichment (Perplexity AI)
 python main.py enrich-description --list-missing          # List albums without descriptions
 python main.py enrich-description 12345678                # Generate description by Discogs ID
+python main.py enrich-description 123,456,789             # Process multiple IDs (comma-separated)
 python main.py enrich-description "Album" --artist "Artist"  # Generate by title/artist
 python main.py enrich-description 12345678 --dry-run      # Preview without saving
 python main.py enrich-description 12345678 --force        # Regenerate existing description

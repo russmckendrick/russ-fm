@@ -359,6 +359,196 @@ export function AlbumDetailPage() {
     return longest;
   };
 
+  // Group tracks by vinyl side or disc number, with LP grouping for multi-disc vinyl
+  const groupTracksBySide = (trackList: Track[]) => {
+    type SideGroup = { label: string; tracks: Track[] };
+    type LPGroup = { lpLabel: string; sides: SideGroup[] };
+
+    // Check if this is a box set with section headers (tracks with no position acting as headers)
+    const hasSectionHeaders = trackList.some((track, index) => {
+      const isHeader = !track.position && !track.duration_ms && track.name;
+      const nextTrack = trackList[index + 1];
+      const nextHasPosition = nextTrack && (nextTrack.position || nextTrack.duration_ms);
+      return isHeader && nextHasPosition;
+    });
+
+    // Check if tracks have vinyl-style positions (A1, B1, etc.)
+    const hasVinylPositions = trackList.some(track => /^[A-Z]\d/.test(track.position || ''));
+
+    if (hasSectionHeaders) {
+      // Box set format: use section headers as group labels
+      const lpGroups: LPGroup[] = [];
+      let currentLp: LPGroup | null = null;
+      let currentSide: SideGroup | null = null;
+      let currentSideKey = '';
+
+      trackList.forEach((track) => {
+        const isHeader = !track.position && !track.duration_ms && track.name;
+
+        if (isHeader) {
+          // Parse header like "Mental Notes (2025 Remaster) - Side 1"
+          const headerMatch = track.name.match(/^(.+?)\s*-\s*Side\s*(\d+|[AB])$/i);
+
+          if (headerMatch) {
+            const [, albumName, sideNum] = headerMatch;
+            const normalizedSide = sideNum === '1' || sideNum.toUpperCase() === 'A' ? 'A' : 'B';
+
+            // Check if this is a new LP/album or same LP different side
+            if (!currentLp || currentLp.lpLabel !== albumName.trim()) {
+              currentLp = { lpLabel: albumName.trim(), sides: [] };
+              lpGroups.push(currentLp);
+            }
+
+            currentSide = { label: `Side ${normalizedSide}`, tracks: [] };
+            currentLp.sides.push(currentSide);
+            currentSideKey = '';
+          } else {
+            // Header without "Side X" - treat as standalone disc/album section
+            currentLp = { lpLabel: track.name, sides: [] };
+            lpGroups.push(currentLp);
+            currentSide = null;
+            currentSideKey = '';
+          }
+        } else {
+          // Check if track has vinyl position (A1, B2, etc.)
+          const position = track.position || '';
+          const vinylMatch = position.match(/^([A-Z])\d/);
+
+          if (hasVinylPositions && vinylMatch) {
+            const sideKey = vinylMatch[1];
+
+            // If side changed within current LP section, create new side group
+            if (sideKey !== currentSideKey) {
+              currentSideKey = sideKey;
+              currentSide = { label: `Side ${sideKey}`, tracks: [] };
+              if (currentLp) {
+                currentLp.sides.push(currentSide);
+              } else {
+                // No LP header yet, create default
+                currentLp = { lpLabel: '', sides: [currentSide] };
+                lpGroups.push(currentLp);
+              }
+            }
+          }
+
+          if (currentSide) {
+            currentSide.tracks.push(track);
+          } else if (currentLp) {
+            // Track in LP section but no side yet
+            currentSide = { label: '', tracks: [track] };
+            currentLp.sides.push(currentSide);
+          } else {
+            // Track before any header - create default group
+            currentLp = { lpLabel: '', sides: [] };
+            lpGroups.push(currentLp);
+            currentSide = { label: '', tracks: [track] };
+            currentLp.sides.push(currentSide);
+          }
+        }
+      });
+
+      // Filter out empty groups
+      const filteredGroups = lpGroups.filter(lp => lp.sides.some(s => s.tracks.length > 0));
+
+      if (filteredGroups.length > 0) {
+        return { type: 'lp' as const, groups: filteredGroups };
+      }
+    }
+
+    // Standard vinyl/disc format detection
+    const sides: { sideKey: string; tracks: Track[] }[] = [];
+    let currentSide: { sideKey: string; tracks: Track[] } | null = null;
+
+    trackList.forEach((track) => {
+      const position = track.position || '';
+      let sideKey = '';
+
+      if (/^[A-Z]\d/.test(position)) {
+        // Vinyl format: A1, B2, etc.
+        sideKey = position[0];
+      } else if (/^\d+-\d+/.test(position)) {
+        // Multi-disc format: 1-5, 2-3, etc.
+        sideKey = `disc-${position.split('-')[0]}`;
+      }
+
+      if (sideKey && (!currentSide || currentSide.sideKey !== sideKey)) {
+        currentSide = { sideKey, tracks: [] };
+        sides.push(currentSide);
+      }
+
+      if (currentSide) {
+        currentSide.tracks.push(track);
+      } else {
+        if (sides.length === 0) {
+          sides.push({ sideKey: '', tracks: [] });
+        }
+        sides[0].tracks.push(track);
+      }
+    });
+
+    // Check if we need LP grouping (more than 2 vinyl sides)
+    const vinylSides = sides.filter(s => s.sideKey && !s.sideKey.startsWith('disc-'));
+    const needsLPGrouping = vinylSides.length > 2;
+
+    if (needsLPGrouping) {
+      // Group into LPs (A,B = LP1, C,D = LP2, etc.)
+      const lpGroups: LPGroup[] = [];
+
+      sides.forEach(side => {
+        if (side.sideKey && !side.sideKey.startsWith('disc-')) {
+          const sideCode = side.sideKey.charCodeAt(0) - 65; // A=0, B=1, C=2, etc.
+          const lpNumber = Math.floor(sideCode / 2) + 1;
+          const sideLetter = sideCode % 2 === 0 ? 'A' : 'B';
+
+          let lpGroup = lpGroups.find(lp => lp.lpLabel === `LP${lpNumber}`);
+          if (!lpGroup) {
+            lpGroup = { lpLabel: `LP${lpNumber}`, sides: [] };
+            lpGroups.push(lpGroup);
+          }
+          lpGroup.sides.push({ label: `Side ${sideLetter}`, tracks: side.tracks });
+        } else if (side.sideKey.startsWith('disc-')) {
+          // Treat disc format as its own LP
+          const discNum = side.sideKey.split('-')[1];
+          lpGroups.push({ lpLabel: `Disc ${discNum}`, sides: [{ label: '', tracks: side.tracks }] });
+        }
+      });
+
+      return { type: 'lp' as const, groups: lpGroups };
+    } else {
+      // Simple flat structure
+      const flatGroups: SideGroup[] = sides.map(side => {
+        let label = '';
+        if (side.sideKey && !side.sideKey.startsWith('disc-')) {
+          label = `Side ${side.sideKey}`;
+        } else if (side.sideKey.startsWith('disc-')) {
+          label = `Disc ${side.sideKey.split('-')[1]}`;
+        }
+        return { label, tracks: side.tracks };
+      });
+
+      return { type: 'flat' as const, groups: flatGroups };
+    }
+  };
+
+  // Calculate total album duration
+  const calculateTotalDuration = (trackList: Track[]) => {
+    const totalMs = trackList.reduce((sum, track) => {
+      if (track.duration_ms) return sum + track.duration_ms;
+      return sum;
+    }, 0);
+
+    if (totalMs === 0) return null;
+
+    const hours = Math.floor(totalMs / 3600000);
+    const minutes = Math.floor((totalMs % 3600000) / 60000);
+    const seconds = Math.floor((totalMs % 60000) / 1000);
+
+    if (hours > 0) {
+      return `${hours}h ${minutes}m`;
+    }
+    return `${minutes}m ${seconds}s`;
+  };
+
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -639,51 +829,123 @@ export function AlbumDetailPage() {
           </section>
         )}
 
-        {/* Tracklist - Clean & Minimal */}
-        {tracks.length > 0 && (
-          <section>
-            <h3 className="text-2xl font-bold mb-8 flex items-center gap-3 text-foreground">
-              <ListMusic className="h-6 w-6 opacity-50" />
-              Tracklist
-            </h3>
-            <div className="space-y-1">
-              {tracks.map((track, index) => {
-                const isSectionTitle = !track.position && !getTrackDuration(track);
-                if (isSectionTitle) {
-                  return (
-                    <div key={index} className="pt-6 pb-2">
-                      <h4 className="text-lg font-semibold text-primary">{track.name}</h4>
-                    </div>
-                  );
-                }
-                return (
-                  <div key={index} className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-lg hover:bg-secondary/30 transition-colors">
-                    <div className="flex items-center gap-6 flex-1 min-w-0">
-                      <span className="text-muted-foreground/50 font-mono text-sm w-8 text-right">
-                        {track.position || track.track_number || index + 1}
-                      </span>
-                      <div className="min-w-0">
-                        <span className="font-medium text-lg block truncate group-hover:text-primary transition-colors">
-                          {track.name}
-                        </span>
-                        {track.artists && track.artists.length > 0 && (
-                          <span className="text-sm text-muted-foreground block truncate">
-                            {track.artists.map(a => a.name).join(', ')}
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                    {getTrackDuration(track) && (
-                      <span className="text-muted-foreground/50 font-mono text-sm ml-4">
-                        {getTrackDuration(track)}
+        {/* Tracklist - Clean & Minimal with Side Grouping */}
+        {tracks.length > 0 && (() => {
+          const trackGrouping = groupTracksBySide(tracks);
+          const totalDuration = calculateTotalDuration(tracks);
+
+          // Helper to render a track row
+          const renderTrack = (track: Track, index: number, showSimpleNumbers: boolean) => {
+            const isSectionTitle = !track.position && !getTrackDuration(track) && !track.duration_ms;
+
+            if (isSectionTitle) {
+              return (
+                <div key={index} className="pt-6 pb-2">
+                  <h4 className="text-lg font-semibold text-primary">{track.name}</h4>
+                </div>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-lg transition-colors hover:bg-secondary/30"
+              >
+                <div className="flex items-center gap-4 flex-1 min-w-0">
+                  <span className="text-muted-foreground/40 font-mono text-sm w-8 text-right tabular-nums">
+                    {showSimpleNumbers
+                      ? (track.position?.replace(/^[A-Z]/, '') || track.track_number || index + 1)
+                      : (track.position || track.track_number || index + 1)
+                    }
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <span className="font-medium block truncate transition-colors group-hover:text-primary">
+                      {track.name}
+                    </span>
+                    {track.artists && track.artists.length > 0 && (
+                      <span className="text-sm text-muted-foreground/70 block truncate">
+                        {track.artists.map(a => a.name).join(', ')}
                       </span>
                     )}
                   </div>
-                );
-              })}
+                </div>
+                {getTrackDuration(track) && (
+                  <span className="text-muted-foreground/40 font-mono text-sm ml-4 tabular-nums">
+                    {getTrackDuration(track)}
+                  </span>
+                )}
+              </div>
+            );
+          };
+
+          // Helper to render a side section
+          const renderSide = (label: string, tracks: Track[], index: number) => (
+            <div key={index}>
+              {label && (
+                <div className="flex items-center gap-3 mb-4">
+                  <span
+                    className="text-sm font-semibold uppercase tracking-wider"
+                    style={{ color: albumColors.accent }}
+                  >
+                    {label}
+                  </span>
+                  <div className="flex-1 h-px bg-border/50" />
+                </div>
+              )}
+              <div className="space-y-0.5">
+                {tracks.map((track, trackIndex) => renderTrack(track, trackIndex, !!label))}
+              </div>
             </div>
-          </section>
-        )}
+          );
+
+          return (
+            <section>
+              <h3 className="text-2xl font-bold mb-8 text-foreground">
+                Tracklist
+              </h3>
+
+              {trackGrouping.type === 'lp' ? (
+                // LP-grouped layout with bordered containers
+                <div className="space-y-8">
+                  {trackGrouping.groups.map((lpGroup, lpIndex) => (
+                    <div
+                      key={lpIndex}
+                      className="border border-border/50 rounded-xl p-6"
+                    >
+                      {/* LP Header */}
+                      <div className="mb-6">
+                        <span
+                          className="text-lg font-bold"
+                          style={{ color: albumColors.accent }}
+                        >
+                          {lpGroup.lpLabel}
+                        </span>
+                      </div>
+                      {/* Sides within LP */}
+                      <div className="space-y-6">
+                        {lpGroup.sides.map((side, sideIndex) => renderSide(side.label, side.tracks, sideIndex))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                // Flat layout for single LP or simple albums
+                <div className="space-y-8">
+                  {trackGrouping.groups.map((group, groupIndex) => renderSide(group.label, group.tracks, groupIndex))}
+                </div>
+              )}
+
+              {/* Total Duration Footer */}
+              {totalDuration && (
+                <div className="mt-6 pt-4 border-t border-border/30 flex justify-end">
+                  <span className="text-sm text-muted-foreground/60">
+                    Total runtime: <span className="font-medium text-muted-foreground">{totalDuration}</span>
+                  </span>
+                </div>
+              )}
+            </section>
+          );
+        })()}
 
         {/* Music Player */}
         {detailedAlbum && (
