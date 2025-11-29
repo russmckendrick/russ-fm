@@ -156,10 +156,10 @@ python main.py collection --limit 10
 cd ..
 
 # Install frontend dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm run dev
 ```
 
 Visit `http://localhost:5173` to see your collection!
@@ -208,10 +208,10 @@ python main.py artist "Artist Name" --custom-image "https://example.com/photo.jp
 
 #### Available Scripts
 ```bash
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run lint       # Run ESLint
-npm run preview    # Preview production build
+pnpm run dev        # Start development server
+pnpm run build      # Build for production
+pnpm run lint       # Run ESLint
+pnpm run preview    # Preview production build
 ```
 
 #### Configuration
@@ -273,7 +273,8 @@ The system intelligently handles albums with multiple artists:
 ### Building for Production
 ```bash
 # Build the React application
-npm run build
+# Build the React application
+pnpm run build
 
 # The built files will be in the /dist directory
 ```
@@ -331,7 +332,7 @@ python main.py test
 - **Images not loading**: Check that static file serving is configured correctly
 - **Search not working**: Verify `/collection.json` is accessible
 - **API errors**: Run `python main.py test` to check credentials
-- **Build errors**: Ensure all dependencies are installed with `npm install`
+- **Build errors**: Ensure all dependencies are installed with `pnpm install`
 
 ### Debug Mode
 ```bash
