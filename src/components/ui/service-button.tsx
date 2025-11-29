@@ -15,6 +15,8 @@ export interface ServiceButtonProps extends React.ButtonHTMLAttributes<HTMLButto
   children: React.ReactNode
   /** Custom className */
   className?: string
+  /** Progress state for showing internal progress bar */
+  progress?: { current: number; total: number } | null
 }
 
 // Brand colors for common services
@@ -26,6 +28,14 @@ const BRAND_COLORS = {
   wikipedia: '#000000',
 } as const
 
+// Helper to convert hex to rgba
+function hexToRgba(hex: string, alpha: number): string {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 function ServiceButton({
   service = 'custom',
   brandColor,
@@ -34,6 +44,7 @@ function ServiceButton({
   children,
   className,
   onClick,
+  progress,
   ...props
 }: ServiceButtonProps) {
   const color = brandColor || (service !== 'custom' ? BRAND_COLORS[service] : undefined)
@@ -45,12 +56,17 @@ function ServiceButton({
     onClick?.(e)
   }
 
+  // Calculate progress percentage
+  const progressPercent = progress ? (progress.current / progress.total) * 100 : 0;
+  // Use a white overlay for clear visibility on any brand color
+  const progressFillColor = 'rgba(255, 255, 255, 0.35)';
+
   return (
     <Button
       variant="outline"
       size="sm"
       className={cn(
-        "h-9 px-4 border-2 text-white shadow-lg",
+        "relative overflow-hidden h-9 px-4 border-2 text-white shadow-lg",
         "transition-all duration-200 ease-in-out",
         "hover:scale-105 hover:shadow-xl hover:bg-white",
         "active:scale-95",
@@ -87,8 +103,22 @@ function ServiceButton({
       onClick={handleClick}
       {...props}
     >
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
+      {/* Progress fill overlay */}
+      {progress && (
+        <div
+          className="absolute inset-y-0 left-0 transition-all duration-500 ease-out"
+          style={{
+            width: `${progressPercent}%`,
+            background: `linear-gradient(90deg, ${progressFillColor} 0%, rgba(255, 255, 255, 0.5) 100%)`,
+          }}
+        />
+      )}
+
+      {/* Button content - above the progress fill */}
+      <span className="relative z-10 flex items-center">
+        {icon && <span className="mr-2">{icon}</span>}
+        {children}
+      </span>
     </Button>
   )
 }

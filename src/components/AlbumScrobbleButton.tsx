@@ -34,30 +34,37 @@ export function AlbumScrobbleButton({
     if (!isAuthenticated) return;
 
     try {
-      setProgress({ current: 0, total: album.tracks.length });
+      // Start with progress at 0
+      setProgress({ current: 0, total: 100 });
 
-      // Simulate progress updates during scrobbling
+      // Animate progress smoothly while the API call is in flight
+      // Use smaller increments for smooth visual animation
       const progressInterval = setInterval(() => {
         setProgress(prev => {
           if (!prev) return null;
-          const newCurrent = Math.min(prev.current + 1, prev.total);
-          return { current: newCurrent, total: prev.total };
+          // Slow down as we approach 90% to wait for the API
+          const increment = prev.current < 60 ? 8 : prev.current < 80 ? 4 : 1;
+          const newCurrent = Math.min(prev.current + increment, 90);
+          return { current: newCurrent, total: 100 };
         });
-      }, 3000); // Update every 3 seconds (Last.fm scrobbling interval)
+      }, 100);
 
       const response = await scrobbleAlbum(album);
 
       clearInterval(progressInterval);
 
       if (response.success) {
-        setProgress({ current: album.tracks.length, total: album.tracks.length });
+        // Complete the progress animation
+        setProgress({ current: 100, total: 100 });
         setTimeout(() => {
           setScrobbled(true);
           setProgress(null);
-        }, 500);
+        }, 400);
 
         // Reset scrobbled state after 5 seconds
         setTimeout(() => setScrobbled(false), 5000);
+      } else {
+        setProgress(null);
       }
     } catch (err) {
       console.error('Album scrobble failed:', err);
@@ -74,7 +81,7 @@ export function AlbumScrobbleButton({
 
   const getButtonText = () => {
     if (progress) {
-      return `Scrobbling ${progress.current}/${progress.total}...`;
+      return `Scrobbling...`;
     }
     if (isScrobbling) return 'Scrobbling...';
     if (scrobbled) return 'Album Scrobbled!';
@@ -100,30 +107,17 @@ export function AlbumScrobbleButton({
   };
 
   const button = (
-    <div className="space-y-2">
-      <ServiceButton
-        service="custom"
-        brandColor={getBrandColor()}
-        onClick={handleScrobble}
-        disabled={isScrobbling || scrobbled || !!progress}
-        className={`${fullWidth ? 'w-full' : ''} ${className}`}
-        icon={getIcon()}
-      >
-        {getButtonText()}
-      </ServiceButton>
-
-      {/* Progress bar */}
-      {progress && (
-        <div className="w-full bg-gray-200 rounded-full h-2">
-          <div
-            className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"
-            style={{
-              width: `${(progress.current / progress.total) * 100}%`
-            }}
-          ></div>
-        </div>
-      )}
-    </div>
+    <ServiceButton
+      service="custom"
+      brandColor={getBrandColor()}
+      onClick={handleScrobble}
+      disabled={isScrobbling || scrobbled || !!progress}
+      className={`${fullWidth ? 'w-full' : ''} ${className}`}
+      icon={getIcon()}
+      progress={progress}
+    >
+      {getButtonText()}
+    </ServiceButton>
   );
 
   if (!isAuthenticated) {

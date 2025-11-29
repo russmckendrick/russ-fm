@@ -18,10 +18,10 @@ A modern, full-stack music collection management and showcase system with a Reac
 
 ### Frontend Development
 ```bash
-npm run dev             # Start development server (http://localhost:5173)
-npm run build           # TypeScript compilation + Vite build (outputs to dist/)
-npm run lint            # Run ESLint
-npm run preview         # Preview production build locally
+pnpm run dev             # Start development server (http://localhost:5173)
+pnpm run build           # TypeScript compilation + Vite build (outputs to dist/)
+pnpm run lint            # Run ESLint
+pnpm run preview         # Preview production build locally
 ```
 
 ### Backend Data Collection
@@ -55,9 +55,9 @@ python main.py status                 # Check processing status
 ### Asset Deployment to R2
 ```bash
 # Quick sync commands
-npm run build:sync              # Sync all images to Cloudflare R2
-npm run build:sync:dry          # Preview what would be synced (dry run)
-npm run build:generate-sync     # Build project and sync in one command
+pnpm run build:sync              # Sync all images to Cloudflare R2
+pnpm run build:sync:dry          # Preview what would be synced (dry run)
+pnpm run build:generate-sync     # Build project and sync in one command
 
 # Targeted sync options
 node scripts/sync-to-r2.js --type album                    # Sync only album images
@@ -68,8 +68,8 @@ node scripts/sync-to-r2.js --filter "album-slug-pattern"   # Sync specific album
 node scripts/sync-to-r2.js --force                         # Overwrite existing files
 
 # R2 utilities
-npm run r2:list                # List all files in R2 bucket
-npm run r2:clean --confirm     # Clean up orphaned files in R2
+pnpm run r2:list                # List all files in R2 bucket
+pnpm run r2:clean --confirm     # Clean up orphaned files in R2
 ```
 
 **Environment Setup for R2:**
@@ -150,7 +150,7 @@ R2_PUBLIC_DOMAIN=https://assets.russ.fm
 ## Important Implementation Details
 
 ### Build and Development Workflow
-- **Frontend-only changes**: Use `npm run dev` for hot reload development
+- **Frontend-only changes**: Use `pnpm run dev` for hot reload development
 - **Data changes**: Run backend processing, then refresh frontend to see updates
 - **TypeScript**: Strict mode enabled with path aliases (`@` → `./src`)
 - **Linting**: ESLint configured for React 19 + TypeScript with modern rules
@@ -283,7 +283,7 @@ Use `enrich-description` command to add descriptions to existing releases:
 - Configurable pagination to manage large dataset rendering
 
 **Build-time Color Extraction:**
-- `npm run generate-colors` - Extracts dominant colors from album covers during build
+- `pnpm run generate-colors` - Extracts dominant colors from album covers during build
 - Generates `/public/album-colors.css` (CSS custom properties) and `/public/album-colors.json` (JS data)
 - Eliminates runtime image processing and CORS issues
 - Colors used in HomePage hero section for dynamic theming
