@@ -143,7 +143,11 @@ class ReleaseSerializer:
             if 'lastfm' in release.raw_data:
                 lastfm_data = release.raw_data['lastfm']
                 services['lastfm'] = ReleaseSerializer._serialize_lastfm_data(lastfm_data)
-        
+
+            # Perplexity data (fallback album descriptions)
+            if 'perplexity' in release.raw_data:
+                services['perplexity'] = release.raw_data['perplexity']
+
         return services
     
     @staticmethod
@@ -235,7 +239,10 @@ class ReleaseSerializer:
         # Check for Wikipedia data in artists
         if any(artist.wikipedia_url or artist.biography for artist in release.artists):
             services_used.append('wikipedia')
-            
+        # Check for Perplexity data
+        if hasattr(release, 'raw_data') and release.raw_data and 'perplexity' in release.raw_data:
+            services_used.append('perplexity')
+
         return {
             'processed_at': datetime.now().isoformat(),
             'services_used': services_used,

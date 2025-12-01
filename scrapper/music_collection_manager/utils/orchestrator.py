@@ -4,6 +4,8 @@ import logging
 from typing import Dict, Any, Optional, List
 from datetime import datetime
 
+from rich.console import Console
+
 from ..models import Release, Artist
 from ..models.enrichment import DiscogsData, AppleMusicData, SpotifyData, WikipediaData, LastFmData
 from ..services.discogs import DiscogsService
@@ -20,10 +22,11 @@ from .artist_orchestrator import ArtistDataOrchestrator
 
 class MusicDataOrchestrator:
     """Orchestrates data collection from multiple music services."""
-    
+
     def __init__(self, config: Dict[str, Any], logger: Optional[logging.Logger] = None):
         self.config = config
         self.logger = logger or logging.getLogger(__name__)
+        self.console = Console()
         self.services = {}
         self.interactive_mode = False
         self.search_override = None
@@ -327,6 +330,7 @@ class MusicDataOrchestrator:
 
             if not has_apple_desc and not has_lastfm_desc:
                 self.logger.info(f"No description found from Apple Music or Last.fm, trying Perplexity...")
+                self.console.print(f"[cyan]  → Generating description with Perplexity AI...[/cyan]")
                 perplexity_data = self._get_perplexity_description(
                     primary_artist,
                     release.title,
@@ -338,6 +342,14 @@ class MusicDataOrchestrator:
                 if perplexity_data:
                     release.raw_data["perplexity"] = perplexity_data
                     self.logger.info(f"Generated Perplexity description for {release.title}")
+                    # Show a preview of the description
+                    desc_preview = perplexity_data.get("description", "")[:150]
+                    if len(perplexity_data.get("description", "")) > 150:
+                        desc_preview += "..."
+                    self.console.print(f"[green]  ✓ Perplexity description generated[/green]")
+                    self.console.print(f"[dim]    {desc_preview}[/dim]")
+                else:
+                    self.console.print(f"[yellow]  ⚠ Failed to generate Perplexity description[/yellow]")
             else:
                 self.logger.debug(f"Skipping Perplexity - description already exists for {release.title}")
 
