@@ -6,9 +6,10 @@ on:
       - main
 
 jobs:
-  deploy:
+jobs:
+  assets:
     runs-on: ubuntu-latest
-    name: Build & Deploy
+    name: Generate Assets 🖼️
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -42,23 +43,17 @@ jobs:
       - name: Install dependencies 🔧
         run: pnpm install
 
-      - name: Build and Generate Assets 🏗️
+      - name: Generate Assets 🏗️
         run: |
-          echo "🚀 Starting build process..."
+          echo "🚀 Starting asset generation..."
           
           # Create cache dirs
           echo "📂 Ensuring cache directories exist..."
           mkdir -p node_modules/.cache/assets/images
           mkdir -p node_modules/.cache/assets/og
           
-          # Run build with caching enabled
-          echo "🔨 Compiling application..."
-          rm -rf dist
-          pnpm tsc --noEmit
-          pnpm vite build
-          
           # Process images with cache
-          echo "🖼️  Processing images (with cache)..."
+          echo "🖼️  Processing images (filling cache)..."
           pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
           
           # Generate colors (automatically treats public/album-colors.json as cache)
@@ -66,14 +61,76 @@ jobs:
           pnpm run generate-colors
           
           # Generate OG images with cache
-          echo "📸 Generating OG images (with cache)..."
+          echo "📸 Generating OG images (filling cache)..."
+          pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
+
+  deploy:
+    needs: assets
+    runs-on: ubuntu-latest
+    name: Build & Deploy 🚀
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js 📦
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pnpm 🧊
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory 📂
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache 💾
+        uses: actions/cache@v4
+        with:
+          path: |
+            ${{ env.STORE_PATH }}
+            node_modules/.cache/assets
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('scripts/**') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies 🔧
+        run: pnpm install
+
+      - name: Build and Prepare 🏗️
+        run: |
+          echo "🚀 Starting build process..."
+          
+          # Build application (JS/TS)
+          echo "🔨 Compiling application..."
+          rm -rf dist
+          pnpm tsc --noEmit
+          pnpm vite build
+          
+          # Re-run generation steps to populate dist from cache
+          echo "📦 Populating dist from cache..."
+          pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
+          pnpm run generate-colors
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
           VITE_SCROBBLING_ENABLED: ${{ secrets.VITE_SCROBBLING_ENABLED }}
 
+      - name: Detect Changed Files 🕵️‍♂️
+        id: changed-files
+        run: |
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          echo "Changed files:"
+          cat changed_files.txt
+
       - name: Sync to R2 ☁️
-        run: node scripts/sync-to-r2.js --force
+        run: node scripts/sync-to-r2.js --force --changed-files changed_files.txt
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -95,8 +152,9 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Status | Step |" >> $GITHUB_STEP_SUMMARY
           echo "| :---: | --- |" >> $GITHUB_STEP_SUMMARY
-          echo "| ✅ | **Build & Assets** |" >> $GITHUB_STEP_SUMMARY
-          echo "| 💾 | **Cache Enabled** |" >> $GITHUB_STEP_SUMMARY
+          echo "| ✅ | **Asset Generation** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 💾 | **Cache Saved** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🏗️ | **Build & Populate** |" >> $GITHUB_STEP_SUMMARY
           echo "| ☁️ | **R2 Sync** |" >> $GITHUB_STEP_SUMMARY
           echo "| ⚡ | **Cloudflare Workers** |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
