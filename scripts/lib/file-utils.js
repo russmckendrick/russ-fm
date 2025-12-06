@@ -22,7 +22,7 @@ class FileUtils {
       return [];
     }
 
-    const pattern = recursive 
+    const pattern = recursive
       ? `${directory}/**/*.{${extensions.join(',')}}`
       : `${directory}/*.{${extensions.join(',')}}`;
 
@@ -47,7 +47,7 @@ class FileUtils {
    */
   static buildUploadList(distPath) {
     const uploadList = [];
-    
+
     // Find album images
     const albumPath = path.join(distPath, 'album');
     if (fs.existsSync(albumPath)) {
@@ -77,6 +77,40 @@ class FileUtils {
         });
       });
     }
+
+    return uploadList;
+  }
+
+  /**
+   * Build upload list from specific targets (changed folders)
+   * @param {string} distPath - Path to dist directory
+   * @param {Set<string>} targets - Set of relative paths to target (e.g. 'album/slug')
+   * @returns {Array} Array of {localPath, key} objects
+   */
+  static buildUploadListFromTargets(distPath, targets) {
+    const uploadList = [];
+
+    targets.forEach(target => {
+      const targetPath = path.join(distPath, target);
+      if (fs.existsSync(targetPath)) {
+        // Determine type from target string (starts with album/ or artist/)
+        const type = target.startsWith('album/') ? 'album' :
+          target.startsWith('artist/') ? 'artist' : 'other';
+
+        const files = this.findImageFiles(targetPath);
+        files.forEach(filePath => {
+          const relativePath = path.relative(distPath, filePath);
+          const key = relativePath.replace(/\\/g, '/'); // Normalize path separators
+          uploadList.push({
+            localPath: filePath,
+            key: key,
+            type: type
+          });
+        });
+      } else {
+        console.log(chalk.yellow(`⚠️  Target directory not found in dist: ${target}`));
+      }
+    });
 
     return uploadList;
   }
