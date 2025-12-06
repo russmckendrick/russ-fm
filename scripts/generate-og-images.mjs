@@ -406,6 +406,24 @@ async function imageToBase64(imagePath) {
   return buffer.toString('base64');
 }
 
+// Helper to get hi-res image path
+function getHiResImagePath(obj, type) {
+  let relativePath;
+  if (type === 'album' && obj.images_uri_release?.['hi-res']) {
+    relativePath = obj.images_uri_release['hi-res'];
+  } else if (type === 'artist' && obj.images_uri_artist?.['hi-res']) {
+    relativePath = obj.images_uri_artist['hi-res'];
+  }
+
+  if (relativePath) {
+    return relativePath.startsWith('/') ? relativePath.substring(1) : relativePath;
+  }
+
+  // Fallback
+  const slug = (type === 'album' ? obj.uri_release : obj.uri_artist).split('/')[2];
+  return `${type}/${slug}/${slug}-hi-res.jpg`;
+}
+
 // Generate OG image for a single album
 async function generateAlbumOGImage(album, colors, baseDir) {
   const albumSlug = album.uri_release.split('/')[2];
@@ -423,7 +441,8 @@ async function generateAlbumOGImage(album, colors, baseDir) {
   }
 
   // Read hi-res image from public dir (only hi-res is stored in repo)
-  const hiResPath = path.join(publicDir, 'album', albumSlug, `${albumSlug}-hi-res.jpg`);
+  const relativeHiResPath = getHiResImagePath(album, 'album');
+  const hiResPath = path.join(publicDir, relativeHiResPath);
 
   console.log(`Generating OG image for: ${album.release_name}`);
 
@@ -461,7 +480,7 @@ async function generateAlbumOGImage(album, colors, baseDir) {
     console.log(`✓ Generated: ${outputPath}`);
     return true;
   } catch (error) {
-    console.error(`✗ Failed to generate OG image for ${album.release_name}:`, error.message);
+    console.error(`✗ Failed to generate OG image for ${album.release_name} (${hiResPath}):`, error.message);
     return false;
   }
 }
@@ -487,8 +506,8 @@ async function generateGenericOGImage(collection, baseDir) {
     // Load album images
     const albumImages = [];
     for (const album of recentAlbums) {
-      const albumSlug = album.uri_release.split('/')[2];
-      const hiResPath = path.join(publicDir, 'album', albumSlug, `${albumSlug}-hi-res.jpg`);
+      const relativeHiResPath = getHiResImagePath(album, 'album');
+      const hiResPath = path.join(publicDir, relativeHiResPath);
       try {
         const imageBase64 = await imageToBase64(hiResPath);
         albumImages.push(imageBase64);
@@ -564,7 +583,8 @@ async function generateArtistOGImage(artist, baseDir) {
   }
 
   // Read hi-res image from public dir
-  const hiResPath = path.join(publicDir, 'artist', artistSlug, `${artistSlug}-hi-res.jpg`);
+  const relativeHiResPath = getHiResImagePath(artist, 'artist');
+  const hiResPath = path.join(publicDir, relativeHiResPath);
 
   console.log(`Generating OG image for: ${artist.name}`);
 
