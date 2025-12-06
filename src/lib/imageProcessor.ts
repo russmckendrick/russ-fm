@@ -5,6 +5,7 @@
 import sharp from 'sharp';
 import { promises as fs } from 'fs';
 import path from 'path';
+import chalk from 'chalk';
 
 export interface ImageSizes {
   medium: number;
@@ -31,11 +32,11 @@ export async function areProcessedImagesUpToDate(
 ): Promise<boolean> {
   try {
     const sourceStats = await fs.stat(sourceImagePath);
-    
+
     // Check if all output files exist and are newer than source
     for (const [size, outputPath] of Object.entries(outputPaths)) {
       if (size === 'hi-res') continue; // Skip hi-res as it's the source
-      
+
       try {
         const outputStats = await fs.stat(outputPath);
         if (outputStats.mtime < sourceStats.mtime) {
@@ -45,7 +46,7 @@ export async function areProcessedImagesUpToDate(
         return false; // File doesn't exist
       }
     }
-    
+
     return true;
   } catch {
     return false; // Source file doesn't exist
@@ -62,7 +63,7 @@ export async function processImage(
   // Ensure output directories exist
   for (const [size, outputPath] of Object.entries(outputPaths)) {
     if (size === 'hi-res') continue; // Skip hi-res as it's the source
-    
+
     const outputDir = path.dirname(outputPath);
     await fs.mkdir(outputDir, { recursive: true });
   }
@@ -70,7 +71,7 @@ export async function processImage(
   // Process each size
   const tasks = Object.entries(IMAGE_SIZES).map(async ([sizeName, pixels]) => {
     const outputPath = outputPaths[sizeName as keyof ImageSizes];
-    
+
     await sharp(sourceImagePath)
       .resize(pixels, pixels, {
         fit: 'cover',
@@ -90,7 +91,7 @@ export function getProcessedImagePaths(sourceImagePath: string): ProcessedImageP
   const parsedPath = path.parse(sourceImagePath);
   const baseDir = parsedPath.dir;
   const baseName = parsedPath.name.replace('-hi-res', '');
-  
+
   return {
     'hi-res': sourceImagePath,
     medium: path.join(baseDir, `${baseName}-medium.jpg`),
@@ -102,14 +103,14 @@ export function getProcessedImagePaths(sourceImagePath: string): ProcessedImageP
  * Get expected output paths for processed images with custom output directory
  */
 export function getProcessedImagePathsForOutput(
-  sourceImagePath: string, 
-  outputBaseDir: string, 
+  sourceImagePath: string,
+  outputBaseDir: string,
   folderName: string
 ): ProcessedImagePaths {
   const parsedPath = path.parse(sourceImagePath);
   const baseName = parsedPath.name.replace('-hi-res', '');
   const outputDir = path.join(outputBaseDir, folderName);
-  
+
   return {
     'hi-res': sourceImagePath,
     medium: path.join(outputDir, `${baseName}-medium.jpg`),
@@ -123,13 +124,13 @@ export function getProcessedImagePathsForOutput(
 export async function processAllImages(publicDir: string, outputDir?: string): Promise<void> {
   const sourceAlbumDir = path.join(publicDir, 'album');
   const sourceArtistDir = path.join(publicDir, 'artist');
-  
+
   console.log('🖼️  Processing album images...');
   await processImagesInDirectory(sourceAlbumDir, outputDir ? path.join(outputDir, 'album') : undefined);
-  
+
   console.log('🎨 Processing artist images...');
   await processImagesInDirectory(sourceArtistDir, outputDir ? path.join(outputDir, 'artist') : undefined);
-  
+
   console.log('✅ Image processing complete!');
 }
 
@@ -139,29 +140,30 @@ export async function processAllImages(publicDir: string, outputDir?: string): P
 async function processImagesInDirectory(sourceDirectory: string, outputDirectory?: string): Promise<void> {
   try {
     const entries = await fs.readdir(sourceDirectory, { withFileTypes: true });
-    
+
     for (const entry of entries) {
       if (entry.isDirectory()) {
         const sourceSubDir = path.join(sourceDirectory, entry.name);
         const files = await fs.readdir(sourceSubDir);
-        
+
         // Find hi-res image
         const hiResFile = files.find(file => file.endsWith('-hi-res.jpg'));
         if (!hiResFile) continue;
-        
+
         const sourceImagePath = path.join(sourceSubDir, hiResFile);
-        
+
         // Determine output paths - use custom output directory if provided
-        const outputPaths = outputDirectory 
+        const outputPaths = outputDirectory
           ? getProcessedImagePathsForOutput(sourceImagePath, outputDirectory, entry.name)
           : getProcessedImagePaths(sourceImagePath);
-        
-        // For build mode (when outputDirectory is provided), always process
-        // For dev mode, check if processing is needed
-        if (!outputDirectory && await areProcessedImagesUpToDate(sourceImagePath, outputPaths)) {
+
+        // Check if processing is needed
+        if (await areProcessedImagesUpToDate(sourceImagePath, outputPaths)) {
+          console.log(chalk.gray(`  Skipping (cached): ${entry.name}/${hiResFile}`));
           continue; // Skip if up to date
         }
-        
+
+
         console.log(`  Processing: ${entry.name}/${hiResFile}`);
         try {
           await processImage(sourceImagePath, outputPaths);
@@ -183,10 +185,10 @@ export function getImagePath(basePath: string, size: keyof ProcessedImagePaths):
   const parsedPath = path.parse(basePath);
   const baseDir = parsedPath.dir;
   const baseName = parsedPath.name.replace(/-(?:hi-res|medium|avatar)$/, '');
-  
+
   if (size === 'hi-res') {
     return path.join(baseDir, `${baseName}-hi-res.jpg`);
   }
-  
+
   return path.join(baseDir, `${baseName}-${size}.jpg`);
 }

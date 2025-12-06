@@ -8,7 +8,6 @@ import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dirname, '../public');
-const outputDir = process.argv[2] || path.join(__dirname, '../dist');
 
 // Load fonts
 const fontRegular = await fs.readFile(path.join(__dirname, '../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff'));
@@ -408,9 +407,20 @@ async function imageToBase64(imagePath) {
 }
 
 // Generate OG image for a single album
-async function generateAlbumOGImage(album, colors) {
+async function generateAlbumOGImage(album, colors, baseDir) {
   const albumSlug = album.uri_release.split('/')[2];
-  const outputPath = path.join(outputDir, 'album', albumSlug, 'og-image.png');
+  const outputPath = path.join(baseDir, 'album', albumSlug, 'og-image.png');
+
+  // Check if exists
+  try {
+    await fs.access(outputPath);
+    // If we're here, it exists. We can skip generation? 
+    // Yes, assuming cache is trusted.
+    // console.log(`  Skipping (cached): ${album.release_name}`);
+    return true;
+  } catch (e) {
+    // Proceed to generate
+  }
 
   // Read hi-res image from public dir (only hi-res is stored in repo)
   const hiResPath = path.join(publicDir, 'album', albumSlug, `${albumSlug}-hi-res.jpg`);
@@ -457,8 +467,13 @@ async function generateAlbumOGImage(album, colors) {
 }
 
 // Generate generic site OG image
-async function generateGenericOGImage(collection) {
-  const outputPath = path.join(publicDir, 'og-image.png');
+async function generateGenericOGImage(collection, baseDir) {
+  const outputPath = path.join(baseDir, 'og-image.png');
+
+  try {
+    await fs.access(outputPath);
+    return true;
+  } catch (e) { }
 
   console.log('Generating generic site OG image...');
 
@@ -536,9 +551,17 @@ async function generateGenericOGImage(collection) {
 }
 
 // Generate OG image for a single artist
-async function generateArtistOGImage(artist) {
+async function generateArtistOGImage(artist, baseDir) {
   const artistSlug = artist.uri_artist.split('/')[2];
-  const outputPath = path.join(outputDir, 'artist', artistSlug, 'og-image.png');
+  const outputPath = path.join(baseDir, 'artist', artistSlug, 'og-image.png');
+
+  // Check if exists
+  try {
+    await fs.access(outputPath);
+    return true;
+  } catch (e) {
+    // Proceed
+  }
 
   // Read hi-res image from public dir
   const hiResPath = path.join(publicDir, 'artist', artistSlug, `${artistSlug}-hi-res.jpg`);
@@ -597,7 +620,19 @@ async function generateArtistOGImage(artist) {
 
 // Main execution
 async function main() {
-  console.log(`🎨 Starting OG image generation... (output: ${outputDir})\n`);
+  const args = process.argv.slice(2);
+  const userOutputDir = args[0] && !args[0].startsWith('--') ? args[0] : path.join(__dirname, '../dist');
+
+  // Parse flags
+  const cacheDirIndex = args.indexOf('--cache-dir');
+  const cacheDir = cacheDirIndex !== -1 && cacheDirIndex + 1 < args.length ? args[cacheDirIndex + 1] : null;
+
+  // Determine where we are generating images to initially
+  const targetDir = cacheDir ? (path.isAbsolute(cacheDir) ? cacheDir : path.join(process.cwd(), cacheDir)) : userOutputDir;
+
+  console.log(`🎨 Starting OG image generation...`);
+  console.log(`   Target: ${targetDir}`);
+  if (cacheDir) console.log(`   Final Output: ${userOutputDir}`);
 
   // Load data
   const collection = JSON.parse(await fs.readFile(path.join(publicDir, 'collection.json'), 'utf-8'));
@@ -617,7 +652,7 @@ async function main() {
       continue;
     }
 
-    const success = await generateAlbumOGImage(album, colors);
+    const success = await generateAlbumOGImage(album, colors, targetDir);
     if (success) {
       albumSuccessCount++;
     } else {
@@ -648,7 +683,7 @@ async function main() {
   console.log(`Found ${uniqueArtists.length} unique artists\n`);
 
   for (const artist of uniqueArtists) {
-    const success = await generateArtistOGImage(artist);
+    const success = await generateArtistOGImage(artist, targetDir);
     if (success) {
       artistSuccessCount++;
     } else {
@@ -660,10 +695,36 @@ async function main() {
 
   // === GENERIC SITE OG IMAGE ===
   console.log('🌐 Generating generic site OG image...\n');
-  const genericSuccess = await generateGenericOGImage(collection);
+  const genericSuccess = await generateGenericOGImage(collection, targetDir);
   console.log(genericSuccess ? '\n✓ Generic OG image generated\n' : '\n✗ Failed to generate generic OG image\n');
 
   console.log(`\n✨ Complete! Total: ${albumSuccessCount + artistSuccessCount + (genericSuccess ? 1 : 0)} images generated, ${albumFailCount + artistFailCount + (genericSuccess ? 0 : 1)} failed`);
+
+  // Copy if using cache
+  if (cacheDir) {
+    console.log(`\n📂 Copying from cache to output: ${userOutputDir}`);
+    await copyDirRecursive(targetDir, userOutputDir);
+  }
+}
+
+async function copyDirRecursive(src, dest) {
+  try {
+    await fs.mkdir(dest, { recursive: true });
+    const entries = await fs.readdir(src, { withFileTypes: true });
+
+    for (const entry of entries) {
+      const srcPath = path.join(src, entry.name);
+      const destPath = path.join(dest, entry.name);
+
+      if (entry.isDirectory()) {
+        await copyDirRecursive(srcPath, destPath);
+      } else {
+        await fs.copyFile(srcPath, destPath);
+      }
+    }
+  } catch (err) {
+    console.error(`Error copying ${src} to ${dest}:`, err);
+  }
 }
 
 main().catch(console.error);
