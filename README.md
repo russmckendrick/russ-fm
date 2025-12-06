@@ -288,6 +288,17 @@ Ensure your web server can serve:
 - Album data and images from `/public/album/` and `/public/artist/`
 - The main collection data from `/public/collection.json`
 
+### CI/CD Pipeline
+
+The project uses GitHub Actions for automated deployment. The workflow (`.github/workflows/deploy.yml`):
+
+1.  **Generates Assets**: Processes images, generates album colors, and creates Open Graph images with caching.
+2.  **Builds Application**: Compiles TypeScript and builds the Vite application.
+3.  **Syncs to R2**: Smartly syncs changed assets to Cloudflare R2 storage.
+4.  **Deploys Worker**: Deploys the application to Cloudflare Workers.
+
+Pushing to the `main` branch automatically triggers this workflow.
+
 ## 🤝 Contributing
 
 1. Fork the repository

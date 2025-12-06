@@ -82,6 +82,21 @@ R2_BUCKET_NAME=russ-fm-assets
 R2_PUBLIC_DOMAIN=https://assets.russ.fm
 ```
 
+### Deployment Pipeline
+The project is deployed via GitHub Actions (`.github/workflows/deploy.yml`) on pushes to `main`:
+
+1.  **Assets Job**:
+    - Optimizes images (`pnpm run process-images`)
+    - Generates album colors (`pnpm run generate-colors`)
+    - Creates OG images (`pnpm run generate-og`)
+    - Caches results in `node_modules/.cache/assets` for performance
+
+2.  **Deploy Job**:
+    - Builds the Vite application
+    - Detects changed files using `git diff`
+    - Syncs only changed assets to Cloudflare R2 (`scripts/sync-to-r2.js`)
+    - Deploys to Cloudflare Workers via Wrangler
+
 ## High-Level Architecture
 
 ### Data Flow Architecture
