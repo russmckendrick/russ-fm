@@ -78,6 +78,16 @@ class FileUtils {
       });
     }
 
+    // Check for generic og-image.png in root
+    const rootOgImage = path.join(distPath, 'og-image.png');
+    if (fs.existsSync(rootOgImage)) {
+      uploadList.push({
+        localPath: rootOgImage,
+        key: 'og-image.png',
+        type: 'other' // or 'site'
+      });
+    }
+
     return uploadList;
   }
 

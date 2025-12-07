@@ -35,7 +35,7 @@ function getDirectorySize(dirPath) {
 
   function calculateSize(currentPath) {
     const stats = fs.statSync(currentPath);
-    
+
     if (stats.isDirectory()) {
       const files = fs.readdirSync(currentPath);
       files.forEach(file => {
@@ -73,7 +73,7 @@ function copyJsonFiles(srcDir, destDir, type) {
   subdirs.forEach(subdir => {
     const srcSubdir = path.join(srcDir, subdir);
     const destSubdir = path.join(destDir, subdir);
-    
+
     if (fs.statSync(srcSubdir).isDirectory()) {
       // Create destination subdirectory
       if (!fs.existsSync(destSubdir)) {
@@ -107,7 +107,7 @@ async function main() {
   try {
     // Step 1: Temporarily move image directories out of public/
     console.log(chalk.blue('📦 Step 1: Temporarily moving images out of public/...'));
-    
+
     const albumPath = path.join(publicPath, 'album');
     const artistPath = path.join(publicPath, 'artist');
     const tempAlbumPath = path.join(tempImagePath, 'album');
@@ -134,7 +134,7 @@ async function main() {
 
     // Step 2: Run Vite build without images
     console.log(chalk.blue('\n🔨 Step 2: Running Vite build (without images)...'));
-    execSync('vite build --outDir dist-worker', { 
+    execSync('vite build --outDir dist-worker', {
       stdio: 'inherit',
       cwd: process.cwd()
     });
@@ -157,13 +157,13 @@ async function main() {
 
     // Step 4: Copy JSON files to dist-worker
     console.log(chalk.blue('\n📄 Step 4: Copying JSON files to dist-worker...'));
-    
+
     const albumJsonCount = copyJsonFiles(
       path.join(publicPath, 'album'),
       path.join(distWorkerPath, 'album'),
       'album'
     );
-    
+
     const artistJsonCount = copyJsonFiles(
       path.join(publicPath, 'artist'),
       path.join(distWorkerPath, 'artist'),
@@ -173,9 +173,21 @@ async function main() {
     console.log(chalk.green(`  ✅ Copied ${albumJsonCount} album JSON files`));
     console.log(chalk.green(`  ✅ Copied ${artistJsonCount} artist JSON files`));
 
+    // Step 5: Copy OG image from cache if available
+    console.log(chalk.blue('\n📸 Step 5: Copying og-image.png...'));
+    const ogImageCachePath = path.join(process.cwd(), 'node_modules/.cache/assets/og/og-image.png');
+    const ogImageDestPath = path.join(distWorkerPath, 'og-image.png');
+
+    if (fs.existsSync(ogImageCachePath)) {
+      fs.copyFileSync(ogImageCachePath, ogImageDestPath);
+      console.log(chalk.green('  ✅ Copied og-image.png from cache'));
+    } else {
+      console.log(chalk.yellow('  ⚠️  og-image.png not found in cache'));
+    }
+
     // Final size calculation
     const finalSize = getDirectorySize(distWorkerPath);
-    
+
     console.log(chalk.blue('\n📊 Worker Build Summary:'));
     console.log(chalk.white(`   Total JSON files: ${albumJsonCount + artistJsonCount}`));
     console.log(chalk.white(`   Final size: ${formatBytes(finalSize.size)} (${finalSize.fileCount} files)`));
@@ -184,7 +196,7 @@ async function main() {
 
   } catch (error) {
     console.error(chalk.red('\n❌ Worker build failed:'), error.message);
-    
+
     // Emergency cleanup - restore images if they're still in temp
     try {
       const tempAlbumPath = path.join(tempImagePath, 'album');
@@ -200,14 +212,14 @@ async function main() {
         fs.renameSync(tempArtistPath, artistPath);
         console.log(chalk.yellow('🔄 Emergency: Restored artist images'));
       }
-      
+
       if (fs.existsSync(tempImagePath)) {
         fs.rmSync(tempImagePath, { recursive: true, force: true });
       }
     } catch (cleanupError) {
       console.error(chalk.red('❌ Emergency cleanup failed:'), cleanupError.message);
     }
-    
+
     process.exit(1);
   }
 }
