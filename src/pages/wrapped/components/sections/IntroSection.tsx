@@ -10,6 +10,7 @@ interface IntroSectionProps {
   isYearToDate: boolean;
   colors: AlbumColorPalette | null;
   totalReleases: number;
+  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep';
 }
 
 export function IntroSection({
@@ -17,13 +18,14 @@ export function IntroSection({
   isYearToDate,
   colors,
   totalReleases,
+  backgroundVariant = 'default',
 }: IntroSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
 
   return (
     <div ref={ref} className="relative h-full w-full flex items-center justify-center">
-      <FullBleedBackground colors={colors} overlay="gradient" />
+      <FullBleedBackground colors={colors} overlay="gradient" variant={backgroundVariant} />
 
       <div className="relative z-10 text-center px-4">
         {/* Pre-title */}

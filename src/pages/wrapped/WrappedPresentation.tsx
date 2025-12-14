@@ -108,6 +108,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
             isYearToDate={data.isYearToDate}
             colors={firstAlbumColors}
             totalReleases={data.summary.totalReleases}
+            backgroundVariant="deep"
           />
         </PresentationSection>
 
@@ -128,6 +129,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               colors={firstAlbumColors}
               headline="My Year Started With"
               subheadline="The first album I added to my collection"
+              backgroundVariant="deep"
             />
           </PresentationSection>
         )}
@@ -173,6 +175,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               colors={lastAlbumColors}
               headline="My Year Ended With"
               subheadline="The last album I added to my collection"
+              backgroundVariant="deep"
             />
           </PresentationSection>
         )}

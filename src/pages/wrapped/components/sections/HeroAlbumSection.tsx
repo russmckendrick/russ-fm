@@ -14,6 +14,7 @@ interface HeroAlbumSectionProps {
   headline: string;
   subheadline?: string;
   showDate?: boolean;
+  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep';
 }
 
 export function HeroAlbumSection({
@@ -22,6 +23,7 @@ export function HeroAlbumSection({
   headline,
   subheadline,
   showDate = true,
+  backgroundVariant = 'default',
 }: HeroAlbumSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -46,7 +48,7 @@ export function HeroAlbumSection({
         />
       </div>
 
-      <FullBleedBackground colors={colors} overlay="gradient" />
+      <FullBleedBackground colors={colors} overlay="gradient" variant={backgroundVariant} />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
