@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'docs/**'
+      - 'project/**'
+      - 'README.md'
+      - 'scrapper/README.md'
 
 jobs:
   assets:

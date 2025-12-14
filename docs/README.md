@@ -19,6 +19,7 @@ Russ.fm combines a powerful Python-based data enrichment engine with a beautiful
 -   **[Getting Started](./getting-started.md)**: Prerequisites, installation, and quick start guide.
 -   **[Data Collection](./data-collection.md)**: Detailed guide to the Python backend scrapper/manager.
 -   **[Frontend Development](./frontend.md)**: Architecture, components, and working with the React application.
+-   **[Brand & Style Guide](./brand-guide.md)**: Typography, color palette, and Neo-Glass design system tokens.
 -   **[System Architecture](./architecture.md)**: High-level design, relationships, and data flow diagrams.
 -   **[Deployment](./deployment.md)**: CI/CD workflows, Cloudflare R2 sync, and production setup.
 -   **[Tools & Utilities](./tools.md)**: Database management, maintenance scripts, and troubleshooting.
