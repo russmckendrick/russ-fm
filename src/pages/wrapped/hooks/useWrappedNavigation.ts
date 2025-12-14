@@ -30,9 +30,10 @@ export function useWrappedNavigation({
   const progressIntervalRef = useRef<number | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // Use refs to avoid stale closures in timers
+  // Use refs to avoid stale closures in timers and prevent infinite loops
   const currentSectionRef = useRef(currentSection);
   const totalSectionsRef = useRef(totalSections);
+  const onSectionChangeRef = useRef(onSectionChange);
 
   // Keep refs in sync
   useEffect(() => {
@@ -42,6 +43,10 @@ export function useWrappedNavigation({
   useEffect(() => {
     totalSectionsRef.current = totalSections;
   }, [totalSections]);
+
+  useEffect(() => {
+    onSectionChangeRef.current = onSectionChange;
+  }, [onSectionChange]);
 
   const clearTimers = useCallback(() => {
     if (timerRef.current) {
@@ -59,7 +64,7 @@ export function useWrappedNavigation({
 
     setCurrentSection(index);
     setProgress(0);
-    onSectionChange?.(index);
+    onSectionChangeRef.current?.(index);
 
     // Scroll to section
     if (containerRef.current) {
@@ -69,7 +74,7 @@ export function useWrappedNavigation({
         behavior: smooth ? 'smooth' : 'auto',
       });
     }
-  }, [onSectionChange]);
+  }, []);
 
   const nextSection = useCallback(() => {
     const current = currentSectionRef.current;
@@ -150,9 +155,9 @@ export function useWrappedNavigation({
     if (newSection !== currentSectionRef.current && newSection >= 0 && newSection < totalSectionsRef.current) {
       setCurrentSection(newSection);
       setProgress(0);
-      onSectionChange?.(newSection);
+      onSectionChangeRef.current?.(newSection);
     }
-  }, [onSectionChange]);
+  }, []);
 
   // Keyboard navigation - only up/down for section navigation
   // Left/right is reserved for in-section pagination (e.g., album pages)

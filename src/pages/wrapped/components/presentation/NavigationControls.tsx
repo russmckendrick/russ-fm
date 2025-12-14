@@ -55,12 +55,13 @@ export function NavigationControls({
 
       {/* Auto-advance toggle with progress ring */}
       <div className="relative">
-        {/* Progress ring */}
-        {isAutoAdvancing && progress > 0 && (
+        {/* Progress ring - always show background when auto-advancing */}
+        {isAutoAdvancing && (
           <svg
-            className="absolute -inset-1 w-12 h-12 -rotate-90"
+            className="absolute -inset-1 w-12 h-12 -rotate-90 pointer-events-none"
             viewBox="0 0 48 48"
           >
+            {/* Background circle */}
             <circle
               cx="24"
               cy="24"
@@ -69,7 +70,8 @@ export function NavigationControls({
               stroke="rgba(255,255,255,0.2)"
               strokeWidth="3"
             />
-            <motion.circle
+            {/* Progress circle */}
+            <circle
               cx="24"
               cy="24"
               r="20"
@@ -77,11 +79,10 @@ export function NavigationControls({
               stroke="white"
               strokeWidth="3"
               strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: progress }}
-              transition={{ duration: 0.05 }}
+              strokeDasharray={2 * Math.PI * 20}
+              strokeDashoffset={2 * Math.PI * 20 * (1 - progress)}
               style={{
-                strokeDasharray: '1 1',
+                transition: 'stroke-dashoffset 0.1s linear',
               }}
             />
           </svg>
