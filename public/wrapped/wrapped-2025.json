@@ -1,16 +1,16 @@
 {
   "year": 2025,
   "isYearToDate": false,
-  "lastUpdated": "2025-12-14T11:59:24.334Z",
+  "lastUpdated": "2025-12-14T13:50:27.717Z",
   "summary": {
-    "totalReleases": 229,
+    "totalReleases": 231,
     "uniqueArtists": 178,
     "topGenre": "Rock",
     "topStyle": "Alternative Rock",
-    "avgPerMonth": 19.1,
+    "avgPerMonth": 19.3,
     "peakMonth": "May",
     "firstAddition": "2025-01-10",
-    "lastAddition": "2025-12-12"
+    "lastAddition": "2025-12-14"
   },
   "releases": [
     {
@@ -9607,28 +9607,107 @@
           "Vinyl"
         ]
       }
+    },
+    {
+      "release": {
+        "release_name": "Telekon",
+        "release_artist": "Gary Numan",
+        "date_added": "2025-12-14",
+        "date_release_year": "1980-09-05",
+        "genre_names": [
+          "Alternative",
+          "Electronic",
+          "Pop",
+          "Synth-pop"
+        ],
+        "slug": "telekon-35915002",
+        "images": {
+          "hi-res": "/album/telekon-35915002/telekon-35915002-hi-res.jpg",
+          "medium": "/album/telekon-35915002/telekon-35915002-medium.jpg",
+          "avatar": "/album/telekon-35915002/telekon-35915002-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Gary Numan",
+            "slug": "gary-numan",
+            "images": {
+              "hi-res": "/artist/gary-numan/gary-numan-hi-res.jpg",
+              "medium": "/artist/gary-numan/gary-numan-medium.jpg",
+              "avatar": "/artist/gary-numan/gary-numan-avatar.jpg"
+            }
+          }
+        ]
+      },
+      "albumDetail": {
+        "styles": [
+          "Synth-pop"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "Wish You Were Here ",
+        "release_artist": "Pink Floyd",
+        "date_added": "2025-12-14",
+        "date_release_year": "2025-12-12",
+        "genre_names": [
+          "Arena Rock",
+          "Art Rock",
+          "Prog Rock",
+          "Rock"
+        ],
+        "slug": "wish-you-were-here-35906401",
+        "images": {
+          "hi-res": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-hi-res.jpg",
+          "medium": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-medium.jpg",
+          "avatar": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Pink Floyd",
+            "slug": "pink-floyd",
+            "images": {
+              "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
+              "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
+              "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
+            }
+          }
+        ]
+      },
+      "albumDetail": {
+        "styles": [
+          "Art Rock",
+          "Prog Rock"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
     }
   ],
   "insights": {
     "genres": [
       {
         "name": "Rock",
-        "count": 186,
+        "count": 187,
         "percentage": 81
       },
       {
         "name": "Alternative",
-        "count": 99,
+        "count": 100,
         "percentage": 43
       },
       {
         "name": "Pop",
-        "count": 87,
+        "count": 88,
         "percentage": 38
       },
       {
         "name": "Electronic",
-        "count": 66,
+        "count": 67,
         "percentage": 29
       },
       {
@@ -9652,12 +9731,12 @@
         "percentage": 13
       },
       {
-        "name": "Pop/Rock",
-        "count": 29,
+        "name": "Synth-pop",
+        "count": 30,
         "percentage": 13
       },
       {
-        "name": "Synth-pop",
+        "name": "Pop/Rock",
         "count": 29,
         "percentage": 13
       }
@@ -9711,6 +9790,26 @@
           "hi-res": "/artist/the-smashing-pumpkins/the-smashing-pumpkins-hi-res.jpg",
           "medium": "/artist/the-smashing-pumpkins/the-smashing-pumpkins-medium.jpg",
           "avatar": "/artist/the-smashing-pumpkins/the-smashing-pumpkins-avatar.jpg"
+        }
+      },
+      {
+        "name": "Gary Numan",
+        "slug": "gary-numan",
+        "count": 3,
+        "images": {
+          "hi-res": "/artist/gary-numan/gary-numan-hi-res.jpg",
+          "medium": "/artist/gary-numan/gary-numan-medium.jpg",
+          "avatar": "/artist/gary-numan/gary-numan-avatar.jpg"
+        }
+      },
+      {
+        "name": "Pink Floyd",
+        "slug": "pink-floyd",
+        "count": 3,
+        "images": {
+          "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
+          "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
+          "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
         }
       },
       {
@@ -9842,32 +9941,12 @@
           "medium": "/artist/depeche-mode/depeche-mode-medium.jpg",
           "avatar": "/artist/depeche-mode/depeche-mode-avatar.jpg"
         }
-      },
-      {
-        "name": "Doves",
-        "slug": "doves",
-        "count": 2,
-        "images": {
-          "hi-res": "/artist/doves/doves-hi-res.jpg",
-          "medium": "/artist/doves/doves-medium.jpg",
-          "avatar": "/artist/doves/doves-avatar.jpg"
-        }
-      },
-      {
-        "name": "Steely Dan",
-        "slug": "steely-dan",
-        "count": 2,
-        "images": {
-          "hi-res": "/artist/steely-dan/steely-dan-hi-res.jpg",
-          "medium": "/artist/steely-dan/steely-dan-medium.jpg",
-          "avatar": "/artist/steely-dan/steely-dan-avatar.jpg"
-        }
       }
     ],
     "decades": [
       {
         "name": "2020s",
-        "count": 104
+        "count": 105
       },
       {
         "name": "2010s",
@@ -9883,7 +9962,7 @@
       },
       {
         "name": "1980s",
-        "count": 36
+        "count": 37
       },
       {
         "name": "1970s",
@@ -16717,7 +16796,7 @@
       },
       {
         "month": "December",
-        "count": 9,
+        "count": 11,
         "releases": [
           {
             "release_name": "Let Your Dim Light Shine",
@@ -16977,6 +17056,64 @@
               "hi-res": "/album/wish-you-were-here-35907772/wish-you-were-here-35907772-hi-res.jpg",
               "medium": "/album/wish-you-were-here-35907772/wish-you-were-here-35907772-medium.jpg",
               "avatar": "/album/wish-you-were-here-35907772/wish-you-were-here-35907772-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Pink Floyd",
+                "slug": "pink-floyd",
+                "images": {
+                  "hi-res": "/artist/pink-floyd/pink-floyd-hi-res.jpg",
+                  "medium": "/artist/pink-floyd/pink-floyd-medium.jpg",
+                  "avatar": "/artist/pink-floyd/pink-floyd-avatar.jpg"
+                }
+              }
+            ]
+          },
+          {
+            "release_name": "Telekon",
+            "release_artist": "Gary Numan",
+            "date_added": "2025-12-14",
+            "date_release_year": "1980-09-05",
+            "genre_names": [
+              "Alternative",
+              "Electronic",
+              "Pop",
+              "Synth-pop"
+            ],
+            "slug": "telekon-35915002",
+            "images": {
+              "hi-res": "/album/telekon-35915002/telekon-35915002-hi-res.jpg",
+              "medium": "/album/telekon-35915002/telekon-35915002-medium.jpg",
+              "avatar": "/album/telekon-35915002/telekon-35915002-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Gary Numan",
+                "slug": "gary-numan",
+                "images": {
+                  "hi-res": "/artist/gary-numan/gary-numan-hi-res.jpg",
+                  "medium": "/artist/gary-numan/gary-numan-medium.jpg",
+                  "avatar": "/artist/gary-numan/gary-numan-avatar.jpg"
+                }
+              }
+            ]
+          },
+          {
+            "release_name": "Wish You Were Here ",
+            "release_artist": "Pink Floyd",
+            "date_added": "2025-12-14",
+            "date_release_year": "2025-12-12",
+            "genre_names": [
+              "Arena Rock",
+              "Art Rock",
+              "Prog Rock",
+              "Rock"
+            ],
+            "slug": "wish-you-were-here-35906401",
+            "images": {
+              "hi-res": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-hi-res.jpg",
+              "medium": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-medium.jpg",
+              "avatar": "/album/wish-you-were-here-35906401/wish-you-were-here-35906401-avatar.jpg"
             },
             "artists": [
               {
