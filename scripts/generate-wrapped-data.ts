@@ -9,8 +9,8 @@ const __dirname = path.dirname(__filename);
 interface OriginalRelease {
   release_name: string;
   release_artist: string;
-  artists: Array<{ 
-    name: string; 
+  artists: Array<{
+    name: string;
     uri_artist: string;
     json_detailed_artist: string;
     images_uri_artist: {
@@ -52,8 +52,8 @@ interface Release {
     medium: string;
     avatar?: string;
   };
-  artists: Array<{ 
-    name: string; 
+  artists: Array<{
+    name: string;
     slug: string;
     images: {
       'hi-res'?: string;
@@ -73,7 +73,6 @@ interface AlbumDetail {
 interface WrappedData {
   year: number;
   isYearToDate: boolean;
-  lastUpdated: string;
   summary: {
     totalReleases: number;
     uniqueArtists: number;
@@ -174,7 +173,7 @@ function calculateStats(releases: OriginalRelease[]): WrappedData['summary'] {
   });
 
   // Sort releases by date
-  const sortedReleases = [...releases].sort((a, b) => 
+  const sortedReleases = [...releases].sort((a, b) =>
     new Date(a.date_added).getTime() - new Date(b.date_added).getTime()
   );
 
@@ -240,7 +239,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
   });
 
   // Sort releases by date added
-  yearReleases.sort((a, b) => 
+  yearReleases.sort((a, b) =>
     new Date(a.date_added).getTime() - new Date(b.date_added).getTime()
   );
 
@@ -249,7 +248,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     yearReleases.map(async (release) => {
       const albumSlug = getSlugFromUri(release.uri_release);
       const albumDetail = await loadAlbumDetail(albumSlug);
-      
+
       // Create a lightweight release object with ALL image sizes
       const lightRelease = {
         release_name: release.release_name,
@@ -274,7 +273,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
           }
         }))
       };
-      
+
       return {
         release: lightRelease,
         albumDetail,
@@ -308,8 +307,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
       for (const artist of release.artists) {
         if (artist.name !== 'Various' && artist.name !== 'Various Artists') {
           const current = artistCounts.get(artist.name) || { count: 0, slug: artist.slug };
-          artistCounts.set(artist.name, { 
-            count: current.count + 1, 
+          artistCounts.set(artist.name, {
+            count: current.count + 1,
             slug: artist.slug,
             images: {
               'hi-res': artist.images['hi-res'],
@@ -391,7 +390,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
   // Get top artists with their top albums (4 for the 2x2 grid)
   const topArtists = artists.slice(0, 4).map((artist) => {
     // Find the artist's most recent album from this year
-    const artistAlbum = enrichedReleases.find(({ release }) => 
+    const artistAlbum = enrichedReleases.find(({ release }) =>
       release.artists?.some(a => a.slug === artist.slug)
     );
 
@@ -435,7 +434,6 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
   return {
     year,
     isYearToDate,
-    lastUpdated: new Date().toISOString(),
     summary,
     releases: enrichedReleases,
     insights: {
@@ -474,10 +472,10 @@ async function main() {
     for (const year of Array.from(years).sort()) {
       console.log(`Generating wrapped data for ${year}...`);
       const wrappedData = await generateWrappedData(year, year === currentYear);
-      
+
       const fileName = year === currentYear ? 'wrapped-ytd.json' : `wrapped-${year}.json`;
       const filePath = path.join(wrappedDir, fileName);
-      
+
       fs.writeFileSync(filePath, JSON.stringify(wrappedData, null, 2));
       console.log(`✓ Generated ${fileName}`);
     }

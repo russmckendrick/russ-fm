@@ -10,7 +10,7 @@ interface IntroSectionProps {
   isYearToDate: boolean;
   colors: AlbumColorPalette | null;
   totalReleases: number;
-  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep';
+  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep' | 'cosmic';
 }
 
 export function IntroSection({

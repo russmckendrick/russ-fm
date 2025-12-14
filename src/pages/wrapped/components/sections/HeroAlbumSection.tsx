@@ -14,7 +14,7 @@ interface HeroAlbumSectionProps {
   headline: string;
   subheadline?: string;
   showDate?: boolean;
-  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep';
+  backgroundVariant?: 'default' | 'vibrant' | 'subtle' | 'deep' | 'cosmic';
 }
 
 export function HeroAlbumSection({

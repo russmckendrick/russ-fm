@@ -10,8 +10,8 @@ export interface WrappedRelease {
     medium: string;
     small?: string;
   };
-  artists: Array<{ 
-    name: string; 
+  artists: Array<{
+    name: string;
     slug: string;
     images: {
       'hi-res'?: string;
@@ -70,7 +70,6 @@ export interface StatCardData {
 export interface WrappedData {
   year: number;
   isYearToDate: boolean;
-  lastUpdated: string;
   summary: {
     totalReleases: number;
     uniqueArtists: number;

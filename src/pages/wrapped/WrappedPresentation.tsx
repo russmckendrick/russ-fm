@@ -19,7 +19,7 @@ import { DecadesSection } from './components/sections/DecadesSection';
 import { ExploreSection } from './components/sections/ExploreSection';
 import { YearNavigationSection } from './components/sections/YearNavigationSection';
 
-import type { WrappedData, WrappedRelease } from '@/types/wrapped';
+import type { WrappedData } from '@/types/wrapped';
 
 interface WrappedPresentationProps {
   data: WrappedData;
@@ -43,9 +43,6 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
   // Get colors for key albums
   const firstAlbumColors = useAlbumColorsWithFallback(firstRelease?.slug);
   const lastAlbumColors = useAlbumColorsWithFallback(lastRelease?.slug);
-
-  // Get accent color from top genre or first album
-  const accentColor = firstAlbumColors?.accent || '#3b82f6';
 
   // Get months with releases for individual sections
   const monthsWithReleases = useMemo(() =>
@@ -108,7 +105,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
             isYearToDate={data.isYearToDate}
             colors={firstAlbumColors}
             totalReleases={data.summary.totalReleases}
-            backgroundVariant="deep"
+            backgroundVariant="cosmic"
           />
         </PresentationSection>
 
@@ -117,7 +114,6 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
           <YearSummarySection
             summary={data.summary}
             year={data.year}
-            accentColor={accentColor}
           />
         </PresentationSection>
 
@@ -129,7 +125,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               colors={firstAlbumColors}
               headline="My Year Started With"
               subheadline="The first album I added to my collection"
-              backgroundVariant="deep"
+              backgroundVariant="cosmic"
             />
           </PresentationSection>
         )}
@@ -138,7 +134,6 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
         <PresentationSection id="top-artists">
           <TopArtistsSection
             artists={data.insights.artists}
-            accentColor={accentColor}
           />
         </PresentationSection>
 
@@ -155,7 +150,6 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
           <MonthlyJourneySection
             timeline={data.insights.timeline}
             peakMonth={data.summary.peakMonth}
-            accentColor={accentColor}
           />
         </PresentationSection>
 
@@ -175,7 +169,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               colors={lastAlbumColors}
               headline="My Year Ended With"
               subheadline="The last album I added to my collection"
-              backgroundVariant="deep"
+              backgroundVariant="cosmic"
             />
           </PresentationSection>
         )}
@@ -191,7 +185,6 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               releases={monthData.releases}
               monthNumber={idx + 1}
               totalMonths={monthsWithReleases.length}
-              accentColor={accentColor}
             />
           </PresentationSection>
         ))}

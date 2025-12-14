@@ -13,7 +13,7 @@ export interface FullBleedBackgroundProps {
   animate?: boolean;
   className?: string;
   children?: React.ReactNode;
-  variant?: 'default' | 'vibrant' | 'subtle' | 'deep';
+  variant?: 'default' | 'vibrant' | 'subtle' | 'deep' | 'cosmic';
 }
 
 export function FullBleedBackground({
@@ -29,29 +29,36 @@ export function FullBleedBackground({
 }: FullBleedBackgroundProps) {
   const defaultBackground = 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)';
 
-  const createHeroGradient = (palette: AlbumColorPalette) => {
+  const createHeroGradient = (palette: AlbumColorPalette | null) => {
     switch (variant) {
-      case 'vibrant':
+      case 'cosmic':
+        // Modern, premium dark theme: Deep Zinc -> Black -> Deep Blue/Zinc
         return `linear-gradient(135deg, 
+          #18181b 0%, 
+          #09090b 40%, 
+          #000000 75%, 
+          #18181b 100%)`;
+      case 'vibrant':
+        return palette ? `linear-gradient(135deg, 
           ${palette.accent} 0%, 
           ${palette.background} 40%, 
           ${palette.accent} 80%, 
-          ${palette.background} 100%)`;
+          ${palette.background} 100%)` : defaultBackground;
       case 'subtle':
-        return `linear-gradient(135deg, 
+        return palette ? `linear-gradient(135deg, 
           ${palette.background} 0%, 
           ${palette.muted} 50%, 
-          ${palette.background} 100%)`;
+          ${palette.background} 100%)` : defaultBackground;
       case 'deep':
         // A darker, richer mix that avoids muddy middle-tones
-        return `linear-gradient(135deg, 
+        return palette ? `linear-gradient(135deg, 
           ${palette.background} 0%, 
           #000000 40%, 
           ${palette.muted} 80%, 
-          ${palette.background} 100%)`;
+          ${palette.background} 100%)` : defaultBackground;
       case 'default':
       default:
-        return `linear-gradient(135deg, ${palette.background} 0%, ${palette.muted} 50%, ${palette.background} 100%)`;
+        return palette ? `linear-gradient(135deg, ${palette.background} 0%, ${palette.muted} 50%, ${palette.background} 100%)` : defaultBackground;
     }
   };
 
@@ -74,7 +81,7 @@ export function FullBleedBackground({
         <div
           className="absolute inset-0"
           style={{
-            background: colors ? createHeroGradient(colors) : defaultBackground,
+            background: createHeroGradient(colors),
           }}
         />
 
@@ -93,8 +100,26 @@ export function FullBleedBackground({
           </div>
         )}
 
-        {/* Accent color overlays - Adjusted by variant */}
-        {colors && (
+        {/* Cosmic Static Accents */}
+        {variant === 'cosmic' && (
+          <>
+            <div
+              className="absolute top-0 left-0 w-full h-full mix-blend-screen opacity-10"
+              style={{
+                background: `radial-gradient(circle at 10% 20%, #3b82f6 0%, transparent 40%)`,
+              }}
+            />
+            <div
+              className="absolute bottom-0 right-0 w-full h-full mix-blend-screen opacity-10"
+              style={{
+                background: `radial-gradient(circle at 90% 80%, #8b5cf6 0%, transparent 40%)`,
+              }}
+            />
+          </>
+        )}
+
+        {/* Album Derived Accents (Non-Cosmic or as extra depth if desired, but user said scrap it) */}
+        {colors && variant !== 'cosmic' && (
           <>
             <div
               className={`absolute top-0 left-0 w-full h-full mix-blend-overlay ${variant === 'subtle' ? 'opacity-20' :
@@ -135,7 +160,7 @@ export function FullBleedBackground({
           <div className="absolute inset-0 bg-white/20" />
         )}
         {overlay === 'gradient' && (
-          <div className={`absolute inset-0 bg-gradient-to-t from-background ${variant === 'deep' ? 'via-black/60' : 'via-background/50'
+          <div className={`absolute inset-0 bg-gradient-to-t from-background ${variant === 'deep' || variant === 'cosmic' ? 'via-black/60' : 'via-background/50'
             } to-transparent`} />
         )}
       </MotionWrapper>

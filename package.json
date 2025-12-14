@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler dev",
-    "build": "rm -rf dist && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run generate-og",
+    "build": "rm -rf dist && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-og",
     "generate-colors": "node scripts/generate-album-colors.js",
     "generate-og": "node scripts/generate-og-images.mjs",
     "build:fast": "rm -rf dist && tsc --noEmit && vite build",
