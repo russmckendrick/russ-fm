@@ -304,7 +304,7 @@ Pushing to the `main` branch automatically triggers this workflow.
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature-name`
 3. Make your changes
-4. Run tests and linting: `npm run lint`
+4. Run tests and linting: `pnpm run lint`
 5. Commit your changes: `git commit -m 'Add feature'`
 6. Push to the branch: `git push origin feature-name`
 7. Submit a pull request
