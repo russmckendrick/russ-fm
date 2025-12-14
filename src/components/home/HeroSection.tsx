@@ -1,10 +1,12 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import type { ColorPalette } from '@/lib/colorExtractor';
 import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
-import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistAvatarFromData, handleImageError } from '@/lib/image-utils';
 import type { Album } from '@/types/album';
 
 interface HeroSectionProps {
@@ -133,14 +135,65 @@ export function HeroSection({
                       {currentFeatured.release_name}
                     </motion.h1>
                   </Link>
-                  <motion.p
-                    className="text-xl md:text-2xl font-medium opacity-90 text-foreground"
+                  <motion.div
+                    className="text-xl md:text-2xl font-medium opacity-90 text-foreground flex flex-wrap items-center justify-center md:justify-start gap-3"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                   >
-                    {currentFeatured.release_artist}
-                  </motion.p>
+                    {/* Artist Avatar(s) */}
+                    {currentFeatured.artists && currentFeatured.artists.length > 1 ? (
+                      <div className="flex -space-x-2">
+                        {currentFeatured.artists.map((artist, index) => (
+                          <Link key={index} to={artist.uri_artist} className="group/avatar">
+                            <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110 group-hover/avatar:z-10 relative">
+                              <AvatarImage
+                                src={getArtistAvatarFromData(artist.uri_artist)}
+                                alt={artist.name}
+                                onError={handleImageError}
+                              />
+                              <AvatarFallback className="text-xs bg-muted">
+                                {artist.name.slice(0, 2).toUpperCase()}
+                              </AvatarFallback>
+                            </Avatar>
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <Link to={currentFeatured.uri_artist} className="group/avatar">
+                        <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110">
+                          <AvatarImage
+                            src={getArtistAvatarFromData(currentFeatured.uri_artist)}
+                            alt={currentFeatured.release_artist}
+                            onError={handleImageError}
+                          />
+                          <AvatarFallback className="text-xs bg-muted">
+                            {currentFeatured.release_artist.slice(0, 2).toUpperCase()}
+                          </AvatarFallback>
+                        </Avatar>
+                      </Link>
+                    )}
+                    {currentFeatured.artists && currentFeatured.artists.length > 1 ? (
+                      currentFeatured.artists.map((artist, index) => (
+                        <React.Fragment key={index}>
+                          <Link
+                            to={artist.uri_artist}
+                            className="hover:underline decoration-2 underline-offset-4"
+                          >
+                            {artist.name}
+                          </Link>
+                          {index < currentFeatured.artists.length - 1 && <span>&</span>}
+                        </React.Fragment>
+                      ))
+                    ) : (
+                      <Link
+                        to={currentFeatured.uri_artist}
+                        className="hover:underline decoration-2 underline-offset-4"
+                      >
+                        {currentFeatured.release_artist}
+                      </Link>
+                    )}
+                  </motion.div>
                 </div>
 
                 {/* Quick Stats Row */}

@@ -14,7 +14,7 @@ import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
-import { getAlbumImageFromData, getArtistImageFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { getEnhancedTextColor, generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
@@ -709,8 +709,39 @@ export function AlbumDetailPage() {
                 >
                   {album.release_name}
                 </h1>
-                <div className="text-xl md:text-2xl font-medium opacity-90 flex flex-wrap items-center justify-center md:justify-start gap-2 text-foreground">
-                  <span>by</span>
+                <div className="text-xl md:text-2xl font-medium opacity-90 flex flex-wrap items-center justify-center md:justify-start gap-3 text-foreground">
+                  {/* Artist Avatar(s) */}
+                  {album.artists && album.artists.length > 1 ? (
+                    <div className="flex -space-x-2">
+                      {album.artists.map((artist, index) => (
+                        <Link key={index} to={artist.uri_artist} className="group/avatar">
+                          <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110 group-hover/avatar:z-10 relative">
+                            <AvatarImage
+                              src={getArtistAvatarFromData(artist.uri_artist)}
+                              alt={artist.name}
+                              onError={handleImageError}
+                            />
+                            <AvatarFallback className="text-xs bg-muted">
+                              {artist.name.slice(0, 2).toUpperCase()}
+                            </AvatarFallback>
+                          </Avatar>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link to={album.uri_artist} className="group/avatar">
+                      <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110">
+                        <AvatarImage
+                          src={getArtistAvatarFromData(album.uri_artist)}
+                          alt={album.release_artist}
+                          onError={handleImageError}
+                        />
+                        <AvatarFallback className="text-xs bg-muted">
+                          {album.release_artist.slice(0, 2).toUpperCase()}
+                        </AvatarFallback>
+                      </Avatar>
+                    </Link>
+                  )}
                   {album.artists && album.artists.length > 1 ? (
                     album.artists.map((artist, index) => (
                       <React.Fragment key={index}>

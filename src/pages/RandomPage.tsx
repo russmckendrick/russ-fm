@@ -9,7 +9,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
 import { generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
-import { filterGenres } from '@/lib/filterGenres';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
@@ -79,7 +79,7 @@ export function RandomPage() {
     loadCollection();
   }, [loadCollection]);
 
-  const handleShuffle = () => {
+  const handleShuffle = useCallback(() => {
     if (allAlbums.length > 0) {
       setIsShuffling(true);
 
@@ -98,7 +98,24 @@ export function RandomPage() {
         }, 100);
       }, 400);
     }
-  };
+  }, [allAlbums]);
+
+  // Keyboard controls - space bar to shuffle
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Only trigger if space bar and not in an input/textarea
+      if (event.code === 'Space' &&
+          !['INPUT', 'TEXTAREA'].includes((event.target as HTMLElement).tagName)) {
+        event.preventDefault();
+        if (!isShuffling && allAlbums.length > 0) {
+          handleShuffle();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isShuffling, allAlbums, handleShuffle]);
 
   const getAlbumPath = (album: Album) => {
     return album.uri_release.replace('/album/', '').replace('/', '');
@@ -113,7 +130,7 @@ export function RandomPage() {
   // Get clean genres
   const getGenres = () => {
     if (!randomAlbum) return [];
-    return filterGenres(randomAlbum.genre_names, randomAlbum.release_artist).slice(0, 4);
+    return getCleanGenresFromArray(randomAlbum.genre_names, randomAlbum.release_artist).slice(0, 4);
   };
 
   // Generate CSS custom properties for album colors
@@ -170,22 +187,10 @@ export function RandomPage() {
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
             className="text-center space-y-8"
           >
-            {/* Album Title */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="mb-8"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-foreground">
-                {randomAlbum.release_name}
-              </h1>
-            </motion.div>
-
             {/* Album Artwork - The Hero */}
             <Link to={`/album/${getAlbumPath(randomAlbum)}`} className="block">
               <motion.div
-                className="relative group mx-auto w-full max-w-xl cursor-pointer"
+                className="relative group mx-auto w-full max-w-3xl cursor-pointer"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
@@ -229,25 +234,37 @@ export function RandomPage() {
               </motion.div>
             </Link>
 
-            {/* Artist & Metadata */}
+            {/* Album Title & Artist */}
             <motion.div
-              className="space-y-4 max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <h1 className="text-3xl md:text-5xl font-bold tracking-tight leading-tight text-foreground">
+                <Link
+                  to={`/album/${getAlbumPath(randomAlbum)}`}
+                  className="hover:underline decoration-2 underline-offset-4 transition-colors"
+                >
+                  {randomAlbum.release_name}
+                </Link>
+                <span className="text-foreground/60 font-medium"> by </span>
+                <Link
+                  to={randomAlbum.uri_artist}
+                  className="hover:underline decoration-2 underline-offset-4 transition-colors"
+                >
+                  {randomAlbum.release_artist}
+                </Link>
+              </h1>
+            </motion.div>
+
+            {/* Metadata */}
+            <motion.div
+              className="max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <div className="flex items-center justify-center gap-2 text-xl md:text-2xl font-medium">
-                <span className="text-foreground/80 dark:text-white/80">by</span>
-                <Link
-                  to={randomAlbum.uri_artist}
-                  className="hover:underline decoration-2 underline-offset-4 transition-colors text-foreground dark:text-white"
-                >
-                  {randomAlbum.release_artist}
-                </Link>
-              </div>
-
-              {/* Quick Stats */}
-              <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+              <div className="flex flex-wrap items-center justify-center gap-2">
                 <MetadataBadge>{getYear()}</MetadataBadge>
                 {getGenres().map((genre, index) => (
                   <GenreTag key={index} genre={genre} size="md" linkable={true} />
@@ -294,7 +311,7 @@ export function RandomPage() {
                     backgroundColor: `${albumColors.background}40`
                   }}
                 >
-                  Explore This Album
+                  View Album
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>

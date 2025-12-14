@@ -2,15 +2,15 @@
   "year": 2025,
   "isYearToDate": true,
   "summary": {
-    "totalReleases": 231,
+    "totalReleases": 233,
     "uniqueArtists": 178,
     "topGenre": "Rock",
     "topStyle": "Alternative Rock",
-    "avgPerMonth": 19.3,
+    "avgPerMonth": 19.4,
     "peakMonth": "May",
     "firstAddition": "2025-01-10",
     "lastAddition": "2025-12-14",
-    "projectedTotal": 243
+    "projectedTotal": 245
   },
   "releases": [
     {
@@ -9610,6 +9610,45 @@
     },
     {
       "release": {
+        "release_name": "Amorica",
+        "release_artist": "The Black Crowes",
+        "date_added": "2025-12-14",
+        "date_release_year": "2025-11-14",
+        "genre_names": [
+          "Rock",
+          "Rock & Roll",
+          "Southern Rock"
+        ],
+        "slug": "amorica-35920510",
+        "images": {
+          "hi-res": "/album/amorica-35920510/amorica-35920510-hi-res.jpg",
+          "medium": "/album/amorica-35920510/amorica-35920510-medium.jpg",
+          "avatar": "/album/amorica-35920510/amorica-35920510-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "The Black Crowes",
+            "slug": "the-black-crowes",
+            "images": {
+              "hi-res": "/artist/the-black-crowes/the-black-crowes-hi-res.jpg",
+              "medium": "/artist/the-black-crowes/the-black-crowes-medium.jpg",
+              "avatar": "/artist/the-black-crowes/the-black-crowes-avatar.jpg"
+            }
+          }
+        ]
+      },
+      "albumDetail": {
+        "styles": [
+          "Southern Rock",
+          "Rock & Roll"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "Telekon",
         "release_artist": "Gary Numan",
         "date_added": "2025-12-14",
@@ -9641,6 +9680,47 @@
       "albumDetail": {
         "styles": [
           "Synth-pop"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
+        "release_name": "They Might Be Giants",
+        "release_artist": "They Might Be Giants",
+        "date_added": "2025-12-14",
+        "date_release_year": "1986-11-04",
+        "genre_names": [
+          "Adult Alternative",
+          "Alternative",
+          "Alternative Rock",
+          "College Rock",
+          "Indie Rock",
+          "Rock"
+        ],
+        "slug": "they-might-be-giants-35920528",
+        "images": {
+          "hi-res": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-hi-res.jpg",
+          "medium": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-medium.jpg",
+          "avatar": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "They Might Be Giants",
+            "slug": "they-might-be-giants",
+            "images": {
+              "hi-res": "/artist/they-might-be-giants/they-might-be-giants-hi-res.jpg",
+              "medium": "/artist/they-might-be-giants/they-might-be-giants-medium.jpg",
+              "avatar": "/artist/they-might-be-giants/they-might-be-giants-avatar.jpg"
+            }
+          }
+        ]
+      },
+      "albumDetail": {
+        "styles": [
+          "Alternative Rock"
         ],
         "formats": [
           "Vinyl"
@@ -9692,12 +9772,12 @@
     "genres": [
       {
         "name": "Rock",
-        "count": 187,
+        "count": 189,
         "percentage": 81
       },
       {
         "name": "Alternative",
-        "count": 100,
+        "count": 101,
         "percentage": 43
       },
       {
@@ -9712,17 +9792,17 @@
       },
       {
         "name": "Alternative Rock",
-        "count": 53,
+        "count": 54,
         "percentage": 23
       },
       {
         "name": "Adult Alternative",
-        "count": 50,
+        "count": 51,
         "percentage": 22
       },
       {
         "name": "Indie Rock",
-        "count": 43,
+        "count": 44,
         "percentage": 19
       },
       {
@@ -9738,7 +9818,7 @@
       {
         "name": "Pop/Rock",
         "count": 29,
-        "percentage": 13
+        "percentage": 12
       }
     ],
     "artists": [
@@ -9760,6 +9840,16 @@
           "hi-res": "/artist/regina-spektor/regina-spektor-hi-res.jpg",
           "medium": "/artist/regina-spektor/regina-spektor-medium.jpg",
           "avatar": "/artist/regina-spektor/regina-spektor-avatar.jpg"
+        }
+      },
+      {
+        "name": "They Might Be Giants",
+        "slug": "they-might-be-giants",
+        "count": 4,
+        "images": {
+          "hi-res": "/artist/they-might-be-giants/they-might-be-giants-hi-res.jpg",
+          "medium": "/artist/they-might-be-giants/they-might-be-giants-medium.jpg",
+          "avatar": "/artist/they-might-be-giants/they-might-be-giants-avatar.jpg"
         }
       },
       {
@@ -9820,16 +9910,6 @@
           "hi-res": "/artist/pop-will-eat-itself/pop-will-eat-itself-hi-res.jpg",
           "medium": "/artist/pop-will-eat-itself/pop-will-eat-itself-medium.jpg",
           "avatar": "/artist/pop-will-eat-itself/pop-will-eat-itself-avatar.jpg"
-        }
-      },
-      {
-        "name": "They Might Be Giants",
-        "slug": "they-might-be-giants",
-        "count": 3,
-        "images": {
-          "hi-res": "/artist/they-might-be-giants/they-might-be-giants-hi-res.jpg",
-          "medium": "/artist/they-might-be-giants/they-might-be-giants-medium.jpg",
-          "avatar": "/artist/they-might-be-giants/they-might-be-giants-avatar.jpg"
         }
       },
       {
@@ -9946,7 +10026,7 @@
     "decades": [
       {
         "name": "2020s",
-        "count": 105
+        "count": 106
       },
       {
         "name": "2010s",
@@ -9962,7 +10042,7 @@
       },
       {
         "name": "1980s",
-        "count": 37
+        "count": 38
       },
       {
         "name": "1970s",
@@ -16796,7 +16876,7 @@
       },
       {
         "month": "December",
-        "count": 11,
+        "count": 13,
         "releases": [
           {
             "release_name": "Let Your Dim Light Shine",
@@ -17070,6 +17150,34 @@
             ]
           },
           {
+            "release_name": "Amorica",
+            "release_artist": "The Black Crowes",
+            "date_added": "2025-12-14",
+            "date_release_year": "2025-11-14",
+            "genre_names": [
+              "Rock",
+              "Rock & Roll",
+              "Southern Rock"
+            ],
+            "slug": "amorica-35920510",
+            "images": {
+              "hi-res": "/album/amorica-35920510/amorica-35920510-hi-res.jpg",
+              "medium": "/album/amorica-35920510/amorica-35920510-medium.jpg",
+              "avatar": "/album/amorica-35920510/amorica-35920510-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "The Black Crowes",
+                "slug": "the-black-crowes",
+                "images": {
+                  "hi-res": "/artist/the-black-crowes/the-black-crowes-hi-res.jpg",
+                  "medium": "/artist/the-black-crowes/the-black-crowes-medium.jpg",
+                  "avatar": "/artist/the-black-crowes/the-black-crowes-avatar.jpg"
+                }
+              }
+            ]
+          },
+          {
             "release_name": "Telekon",
             "release_artist": "Gary Numan",
             "date_added": "2025-12-14",
@@ -17094,6 +17202,37 @@
                   "hi-res": "/artist/gary-numan/gary-numan-hi-res.jpg",
                   "medium": "/artist/gary-numan/gary-numan-medium.jpg",
                   "avatar": "/artist/gary-numan/gary-numan-avatar.jpg"
+                }
+              }
+            ]
+          },
+          {
+            "release_name": "They Might Be Giants",
+            "release_artist": "They Might Be Giants",
+            "date_added": "2025-12-14",
+            "date_release_year": "1986-11-04",
+            "genre_names": [
+              "Adult Alternative",
+              "Alternative",
+              "Alternative Rock",
+              "College Rock",
+              "Indie Rock",
+              "Rock"
+            ],
+            "slug": "they-might-be-giants-35920528",
+            "images": {
+              "hi-res": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-hi-res.jpg",
+              "medium": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-medium.jpg",
+              "avatar": "/album/they-might-be-giants-35920528/they-might-be-giants-35920528-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "They Might Be Giants",
+                "slug": "they-might-be-giants",
+                "images": {
+                  "hi-res": "/artist/they-might-be-giants/they-might-be-giants-hi-res.jpg",
+                  "medium": "/artist/they-might-be-giants/they-might-be-giants-medium.jpg",
+                  "avatar": "/artist/they-might-be-giants/they-might-be-giants-avatar.jpg"
                 }
               }
             ]
@@ -17238,6 +17377,25 @@
         }
       },
       {
+        "name": "They Might Be Giants",
+        "slug": "they-might-be-giants",
+        "count": 4,
+        "images": {
+          "hi-res": "/artist/they-might-be-giants/they-might-be-giants-hi-res.jpg",
+          "medium": "/artist/they-might-be-giants/they-might-be-giants-medium.jpg",
+          "avatar": "/artist/they-might-be-giants/they-might-be-giants-avatar.jpg"
+        },
+        "topAlbum": {
+          "slug": "glean-25147129",
+          "title": "Glean",
+          "images": {
+            "hi-res": "/album/glean-25147129/glean-25147129-hi-res.jpg",
+            "medium": "/album/glean-25147129/glean-25147129-medium.jpg",
+            "avatar": "/album/glean-25147129/glean-25147129-avatar.jpg"
+          }
+        }
+      },
+      {
         "name": "Rilo Kiley",
         "slug": "rilo-kiley",
         "count": 3,
@@ -17253,25 +17411,6 @@
             "hi-res": "/album/rilo-kiley-16106497/rilo-kiley-16106497-hi-res.jpg",
             "medium": "/album/rilo-kiley-16106497/rilo-kiley-16106497-medium.jpg",
             "avatar": "/album/rilo-kiley-16106497/rilo-kiley-16106497-avatar.jpg"
-          }
-        }
-      },
-      {
-        "name": "Steven Wilson",
-        "slug": "steven-wilson",
-        "count": 3,
-        "images": {
-          "hi-res": "/artist/steven-wilson/steven-wilson-hi-res.jpg",
-          "medium": "/artist/steven-wilson/steven-wilson-medium.jpg",
-          "avatar": "/artist/steven-wilson/steven-wilson-avatar.jpg"
-        },
-        "topAlbum": {
-          "slug": "the-overview-33402437",
-          "title": "The Overview",
-          "images": {
-            "hi-res": "/album/the-overview-33402437/the-overview-33402437-hi-res.jpg",
-            "medium": "/album/the-overview-33402437/the-overview-33402437-medium.jpg",
-            "avatar": "/album/the-overview-33402437/the-overview-33402437-avatar.jpg"
           }
         }
       }
