@@ -8,11 +8,11 @@ The system follows a **Static Data, Dynamic UI** pattern. The backend runs offli
 
 ```mermaid
 graph TD
-    User[User] -->|Visits| Web[Web App (Cloudflare Workers)]
-    Web -->|Fetches Data| R2[Cloudflare R2 Storage]
+    User[User] -->|Visits| Web["Web App (Cloudflare Workers)"]
+    Web -->|Fetches Data| R2["Cloudflare R2 Storage"]
     
     subgraph "Offline Data Processing"
-        Scrapper[Python Scrapper] -->|Writes| LocalDB[(SQLite Cache)]
+        Scrapper[Python Scrapper] -->|Writes| LocalDB[("SQLite Cache")]
         Scrapper -->|Generates| JSON[Static JSON Files]
         Scrapper -->|Downloads| Images[Image Assets]
     end
@@ -83,7 +83,7 @@ flowchart LR
         Job1 -->|Generate| OG[OG Images]
         Job1 --> Job2
         Job2 --> Job3
-        Job3 -->|Rclone/Upload| R2[(Cloudflare R2)]
+        Job3 -->|Rclone/Upload| R2[("Cloudflare R2")]
         Job3 --> Job4
     end
     
