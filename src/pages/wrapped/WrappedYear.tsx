@@ -7,6 +7,10 @@ import { SkeletonBentoGrid } from './components/SkeletonBentoGrid';
 import { YearSelector } from './components/YearSelector';
 import { YearPagination } from './components/YearPagination';
 import { PageTransition } from './components/PageTransition';
+import { WrappedPresentation } from './WrappedPresentation';
+import { Grid3X3, Presentation } from 'lucide-react';
+
+type ViewMode = 'presentation' | 'grid';
 
 export function WrappedYear() {
   const { year } = useParams<{ year: string }>();
@@ -15,6 +19,7 @@ export function WrappedYear() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [availableYears, setAvailableYears] = useState<number[]>([]);
+  const [viewMode, setViewMode] = useState<ViewMode>('presentation');
 
   const yearNum = year ? parseInt(year, 10) : null;
   const currentYear = new Date().getFullYear();
@@ -124,6 +129,38 @@ export function WrappedYear() {
   const previousYear = availableYears.filter(y => y < yearNum).sort((a, b) => b - a)[0];
   const nextYear = availableYears.filter(y => y > yearNum).sort((a, b) => a - b)[0];
 
+  // Presentation view - full-screen immersive experience
+  if (viewMode === 'presentation') {
+    return (
+      <div key={yearNum} className="relative">
+        {/* View mode toggle - floating button */}
+        <div className="fixed top-4 right-4 z-[60] flex items-center gap-2">
+          <YearSelector
+            currentYear={yearNum}
+            availableYears={availableYears}
+            onYearChange={(year) => navigate(`/wrapped/${year}`)}
+          />
+          <button
+            onClick={() => setViewMode('grid')}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white text-sm transition-all"
+            aria-label="Switch to grid view"
+          >
+            <Grid3X3 className="w-4 h-4" />
+            <span className="hidden sm:inline">Grid View</span>
+          </button>
+        </div>
+
+        <WrappedPresentation
+          data={data}
+          availableYears={availableYears}
+          previousYear={previousYear}
+          nextYear={nextYear}
+        />
+      </div>
+    );
+  }
+
+  // Grid view - original bento grid layout
   return (
     <PageTransition key={yearNum}>
       <div className="min-h-screen">
@@ -135,13 +172,23 @@ export function WrappedYear() {
                 {yearNum} Wrapped
                 {data.isYearToDate && <span className="text-sm font-normal text-muted-foreground ml-2">(Year to Date)</span>}
               </h1>
-              <YearSelector
-                currentYear={yearNum}
-                availableYears={availableYears}
-                onYearChange={(year) => navigate(`/wrapped/${year}`)}
-              />
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setViewMode('presentation')}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary text-sm transition-all"
+                  aria-label="Switch to presentation view"
+                >
+                  <Presentation className="w-4 h-4" />
+                  <span className="hidden sm:inline">Presentation</span>
+                </button>
+                <YearSelector
+                  currentYear={yearNum}
+                  availableYears={availableYears}
+                  onYearChange={(year) => navigate(`/wrapped/${year}`)}
+                />
+              </div>
             </div>
-            
+
             {data.isYearToDate && data.summary.projectedTotal && (
               <p className="text-muted-foreground">
                 On track for {data.summary.projectedTotal} releases by year end

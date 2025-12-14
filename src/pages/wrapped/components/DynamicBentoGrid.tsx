@@ -58,7 +58,7 @@ export function DynamicBentoGrid({ data }: DynamicBentoGridProps) {
     >
       {gridItems.map((item, index) => (
         <AnimatedCard
-          key={item.id}
+          key={`bento-grid-${index}`}
           delay={item.animationDelay}
           animation={getAnimationType(index) as 'scaleUp' | 'slideUp' | 'slideLeft' | 'slideRight' | 'fadeIn'}
           className={getGridClasses(item)}
