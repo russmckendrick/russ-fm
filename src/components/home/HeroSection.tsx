@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import type { ColorPalette } from '@/lib/colorExtractor';
 import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
 import { getAlbumImageFromData, getArtistAvatarFromData, handleImageError } from '@/lib/image-utils';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import type { Album } from '@/types/album';
 
 interface HeroSectionProps {
@@ -206,7 +207,7 @@ export function HeroSection({
                   <MetadataBadge>
                     {new Date(currentFeatured.date_release_year).getFullYear()}
                   </MetadataBadge>
-                  {currentFeatured.genre_names.slice(0, 3).map((genre) => (
+                  {getCleanGenresFromArray(currentFeatured.genre_names, currentFeatured.release_artist).slice(0, 3).map((genre) => (
                     <GenreTag key={genre} genre={genre} size="md" linkable={true} />
                   ))}
                 </motion.div>

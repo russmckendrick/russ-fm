@@ -20,7 +20,7 @@ import {
   Cell
 } from 'recharts';
 import { Disc, Music, TrendingUp, Users, Clock } from 'lucide-react';
-import { filterGenres } from '@/lib/filterGenres';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getArtistImageFromData } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import { generateColorProperties, createHeroBackground } from '@/lib/color-utils';
@@ -542,7 +542,7 @@ export function StatsPage() {
     const totalAlbums = data.length;
     const uniqueArtists = new Set(data.map(album => album.release_artist)).size;
     const allFilteredGenres = data.flatMap(album =>
-      filterGenres(album.genre_names, album.release_artist)
+      getCleanGenresFromArray(album.genre_names, album.release_artist)
     );
     const uniqueGenres = new Set(allFilteredGenres).size;
 

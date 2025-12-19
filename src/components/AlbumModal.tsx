@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Clock, Disc } from 'lucide-react';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
+import { getCleanGenresFromArray } from '@/lib/genreUtils';
 
 interface Album {
   release_name: string;
@@ -101,7 +102,7 @@ export function AlbumModal({ album, isOpen, onClose }: AlbumModalProps) {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {album.genre_names.map((genre, index) => (
+                {getCleanGenresFromArray(album.genre_names, album.release_artist).map((genre, index) => (
                   <Badge key={index} variant="secondary" className="capitalize">
                     {genre.toLowerCase()}
                   </Badge>

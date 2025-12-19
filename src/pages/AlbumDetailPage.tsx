@@ -8,8 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { filterGenres } from '@/lib/filterGenres';
-import { getCleanGenres } from '@/lib/genreUtils';
+import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
@@ -780,7 +779,7 @@ export function AlbumDetailPage() {
                   const cleanGenres = detailedAlbum ? getCleanGenres({
                     genres: [...album.genre_names, ...(detailedAlbum.styles || [])],
                     services: detailedAlbum.services
-                  }) : filterGenres(album.genre_names, album.release_artist);
+                  }) : getCleanGenresFromArray(album.genre_names, album.release_artist);
 
                   return cleanGenres.slice(0, 5).map((tag, index) => (
                     <GenreTag key={index} genre={tag} size="md" linkable={true} />
