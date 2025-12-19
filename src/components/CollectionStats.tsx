@@ -1,52 +1,97 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Music, Users, Tag } from 'lucide-react';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Disc, Users, Music, TrendingUp } from 'lucide-react';
+import { useCountAnimation } from '@/hooks/useCountAnimation';
+import { CollectionStats as CollectionStatsType } from '@/pages/StatsPage'; // We will export this type from StatsPage
 
 interface CollectionStatsProps {
-  totalAlbums: number;
-  totalArtists: number;
-  totalGenres: number;
+  stats: CollectionStatsType;
+  loading: boolean;
 }
 
-export function CollectionStats({ totalAlbums, totalArtists, totalGenres }: CollectionStatsProps) {
-  const stats = [
+export function CollectionStats({ stats, loading }: CollectionStatsProps) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
+
+  const animatedTotalAlbums = useCountAnimation(stats.totalAlbums || 0, 2000, !loading && inView);
+  const animatedUniqueArtists = useCountAnimation(stats.uniqueArtists || 0, 2000, !loading && inView);
+  const animatedUniqueGenres = useCountAnimation(stats.uniqueGenres || 0, 2000, !loading && inView);
+
+  const overviewCards = [
     {
-      icon: Music,
-      label: 'Albums',
-      value: totalAlbums,
-      color: 'text-blue-600'
+      title: 'Total Albums',
+      value: animatedTotalAlbums,
+      icon: Disc,
+      color: 'text-blue-500',
+      gradient: 'from-blue-500/10 to-blue-500/5',
+      border: 'border-blue-500/20',
+      delay: 0
     },
     {
+      title: 'Unique Artists',
+      value: animatedUniqueArtists,
       icon: Users,
-      label: 'Artists',
-      value: totalArtists,
-      color: 'text-green-600'
+      color: 'text-green-500',
+      gradient: 'from-green-500/10 to-green-500/5',
+      border: 'border-green-500/20',
+      delay: 0.1
     },
     {
-      icon: Tag,
-      label: 'Genres',
-      value: totalGenres,
-      color: 'text-purple-600'
-    }
+      title: 'Unique Genres',
+      value: animatedUniqueGenres,
+      icon: Music,
+      color: 'text-amber-500',
+      gradient: 'from-amber-500/10 to-amber-500/5',
+      border: 'border-amber-500/20',
+      delay: 0.2
+    },
+    {
+      title: 'Avg Albums/Artist',
+      value: stats.avgAlbumsPerArtist,
+      icon: TrendingUp,
+      color: 'text-purple-500',
+      gradient: 'from-purple-500/10 to-purple-500/5',
+      border: 'border-purple-500/20',
+      delay: 0.3
+    },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      {stats.map((stat) => {
-        const IconComponent = stat.icon;
-        return (
-          <Card key={stat.label} className="transition-all duration-300 hover:scale-105">
-            <CardContent className="p-6 text-center">
-              <IconComponent className={`h-8 w-8 mx-auto mb-2 ${stat.color}`} />
-              <div className={`text-3xl font-bold mb-1 ${stat.color}`}>
-                {stat.value.toLocaleString()}
-              </div>
-              <div className="text-sm text-muted-foreground uppercase tracking-wide">
-                {stat.label}
-              </div>
-            </CardContent>
-          </Card>
-        );
-      })}
+    <div ref={ref} className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {overviewCards.map((card) => (
+        <motion.div
+          key={card.title}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ delay: card.delay, duration: 0.5 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.02, y: -5 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            className="h-full"
+          >
+            <Card className={`h-full backdrop-blur-md bg-card/40 hover:bg-card/60 border-white/10 shadow-lg hover:shadow-xl transition-all overflow-hidden relative group`}>
+              {/* Subtle Gradient Background */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${card.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+
+              <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2 relative z-10">
+                <CardTitle className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                  {card.title}
+                </CardTitle>
+                <div className={`p-2 rounded-full bg-background/50 ${card.color} ring-1 ring-white/10`}>
+                  <card.icon className="h-4 w-4" />
+                </div>
+              </CardHeader>
+              <CardContent className="relative z-10">
+                <div className="text-3xl font-bold tracking-tight">
+                  {typeof card.value === 'number' ? card.value.toLocaleString() : card.value}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </motion.div>
+      ))}
     </div>
   );
 }
