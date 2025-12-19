@@ -56,7 +56,7 @@ export function GenreBreakdownSection({
             Genre Breakdown
           </h2>
           <p className="text-white text-2xl md:text-3xl font-semibold">
-            What You Collected
+            What I Collected
           </p>
         </RevealText>
 
