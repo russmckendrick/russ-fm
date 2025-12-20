@@ -407,7 +407,7 @@ export function ArtistsPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 pt-24 pb-8">
       {/* Filter Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
         {/* Search Input */}
