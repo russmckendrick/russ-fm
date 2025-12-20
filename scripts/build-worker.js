@@ -173,16 +173,20 @@ async function main() {
     console.log(chalk.green(`  ✅ Copied ${albumJsonCount} album JSON files`));
     console.log(chalk.green(`  ✅ Copied ${artistJsonCount} artist JSON files`));
 
-    // Step 5: Copy OG image from cache if available
+    // Step 5: Copy OG image from cache or public/
     console.log(chalk.blue('\n📸 Step 5: Copying og-image.png...'));
     const ogImageCachePath = path.join(process.cwd(), 'node_modules/.cache/assets/og/og-image.png');
+    const ogImagePublicPath = path.join(publicPath, 'og-image.png');
     const ogImageDestPath = path.join(distWorkerPath, 'og-image.png');
 
     if (fs.existsSync(ogImageCachePath)) {
       fs.copyFileSync(ogImageCachePath, ogImageDestPath);
       console.log(chalk.green('  ✅ Copied og-image.png from cache'));
+    } else if (fs.existsSync(ogImagePublicPath)) {
+      fs.copyFileSync(ogImagePublicPath, ogImageDestPath);
+      console.log(chalk.green('  ✅ Copied og-image.png from public/'));
     } else {
-      console.log(chalk.yellow('  ⚠️  og-image.png not found in cache'));
+      console.log(chalk.yellow('  ⚠️  og-image.png not found in cache or public/'));
     }
 
     // Final size calculation
