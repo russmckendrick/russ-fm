@@ -68,6 +68,12 @@ export function AlbumsPage() {
   const itemsPerPage = appConfig.pagination.itemsPerPage.albums;
   const currentPage = page ? parseInt(page, 10) : 1;
 
+  // Build navigation URL with current query params
+  const buildPageUrl = (pageNum: number) => {
+    const queryString = searchParams.toString();
+    return queryString ? `/albums/${pageNum}?${queryString}` : `/albums/${pageNum}`;
+  };
+
   // Generate dynamic page title
   const getPageTitle = () => {
     const parts = ['Record Collection'];
@@ -124,7 +130,7 @@ export function AlbumsPage() {
   }, [searchParams]);
 
   // Update URL params when filters change
-  const updateURLParams = (newParams: Record<string, string>) => {
+  const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
     const params = new URLSearchParams(searchParams);
     Object.entries(newParams).forEach(([key, value]) => {
       if ((key === 'genre' || key === 'year') && value === 'all') {
@@ -138,6 +144,12 @@ export function AlbumsPage() {
       }
     });
     setSearchParams(params);
+
+    // Navigate to page 1 with preserved query params when filter changes
+    if (resetToPage1 && currentPage !== 1) {
+      const queryString = params.toString();
+      navigate(queryString ? `/albums/1?${queryString}` : '/albums/1');
+    }
   };
 
   const filterAndSortCollection = useCallback(() => {
@@ -279,28 +291,24 @@ export function AlbumsPage() {
         sortBy={sortBy}
         setSortBy={(value) => {
           setSortBy(value);
-          updateURLParams({ sort: value });
-          if (currentPage !== 1) navigate('/albums/1');
+          updateURLParams({ sort: value }, true);
         }}
         selectedGenre={selectedGenre}
         setSelectedGenre={(value) => {
           setSelectedGenre(value);
-          updateURLParams({ genre: value });
-          if (currentPage !== 1) navigate('/albums/1');
+          updateURLParams({ genre: value }, true);
         }}
         selectedYear={selectedYear}
         setSelectedYear={(value) => {
           setSelectedYear(value);
-          updateURLParams({ year: value });
-          if (currentPage !== 1) navigate('/albums/1');
+          updateURLParams({ year: value }, true);
         }}
         genres={getAllGenres()}
         years={getAllYears()}
         searchValue={searchTerm}
         onSearchChange={(value) => {
           setSearchTerm(value);
-          updateURLParams({ search: value });
-          if (currentPage !== 1) navigate('/albums/1');
+          updateURLParams({ search: value }, true);
         }}
         searchPlaceholder="Search albums..."
       />
@@ -332,31 +340,31 @@ export function AlbumsPage() {
           <Pagination>
             <PaginationContent>
               <PaginationItem>
-                <PaginationPrevious 
-                  onClick={() => navigate(`/albums/${Math.max(1, currentPage - 1)}`)}
+                <PaginationPrevious
+                  onClick={() => navigate(buildPageUrl(Math.max(1, currentPage - 1)))}
                   className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
-              
-              {getPageNumbers().map((page, index) => (
+
+              {getPageNumbers().map((pageNum, index) => (
                 <PaginationItem key={index}>
-                  {page === '...' ? (
+                  {pageNum === '...' ? (
                     <PaginationEllipsis />
                   ) : (
                     <PaginationLink
-                      onClick={() => navigate(`/albums/${page}`)}
-                      isActive={currentPage === page}
+                      onClick={() => navigate(buildPageUrl(pageNum as number))}
+                      isActive={currentPage === pageNum}
                       className="cursor-pointer"
                     >
-                      {page}
+                      {pageNum}
                     </PaginationLink>
                   )}
                 </PaginationItem>
               ))}
-              
+
               <PaginationItem>
-                <PaginationNext 
-                  onClick={() => navigate(`/albums/${Math.min(totalPages, currentPage + 1)}`)}
+                <PaginationNext
+                  onClick={() => navigate(buildPageUrl(Math.min(totalPages, currentPage + 1)))}
                   className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>

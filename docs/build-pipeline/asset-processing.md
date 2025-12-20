@@ -230,6 +230,16 @@ pnpm run generate-og
 pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 ```
 
+### Image Types
+
+| Type | Caching | Notes |
+|------|---------|-------|
+| Album OG | Cached | Only regenerates if missing from cache |
+| Artist OG | Cached | Only regenerates if missing from cache |
+| Generic Site OG | **Always regenerated** | Shows "last 4 albums added", must stay current |
+
+The generic `og-image.png` is always regenerated on each build because it displays the most recently added albums, which changes whenever new albums are added to the collection.
+
 ### Image Specifications
 
 - **Dimensions:** 1200x630px (standard OG size)

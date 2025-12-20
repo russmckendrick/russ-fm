@@ -72,6 +72,7 @@ pnpm run build
 # 5. generate-colors (extract palettes)
 # 6. build:wrapped (year data)
 # 7. generate-og (social images)
+# 8. cp dist/og-image.png public/og-image.png (for worker build)
 ```
 
 ### Fast Build (Skip Assets)
@@ -86,9 +87,10 @@ pnpm run build:fast
 ```bash
 # Optimized build for Cloudflare Workers
 pnpm run build:worker
-# - Excludes images from bundle
-# - Copies JSON files
-# - Smaller deployment size
+# - Excludes album/artist images from bundle (served from R2)
+# - Copies JSON files to dist-worker
+# - Includes og-image.png (from cache or public/)
+# - Smaller deployment size (~300MB vs ~2GB)
 ```
 
 ## Build Scripts

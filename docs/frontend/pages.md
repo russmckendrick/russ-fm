@@ -99,52 +99,66 @@ Paginated album collection browser with filtering and sorting.
 **URL Parameters:**
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
-| page | `number` | 1 | Current page |
-| sort | `string` | `date_added` | Sort field |
-| genre | `string` | - | Genre filter |
-| year | `string` | - | Year filter |
-| q | `string` | - | Search query |
+| `:page` | `number` (path) | 1 | Current page number |
+| `sort` | `string` | `date_added` | Sort field |
+| `genre` | `string` | - | Genre filter |
+| `year` | `string` | - | Year filter |
+| `search` | `string` | - | Search query |
 
 **Sort Options:**
 - `date_added` - Most recently added first
-- `date_added_asc` - Oldest additions first
 - `release_name` - Album name A-Z
-- `release_name_desc` - Album name Z-A
-- `artist` - Artist name A-Z
-- `year` - Newest releases first
-- `year_asc` - Oldest releases first
+- `release_artist` - Artist name A-Z
+- `date_release_year` - Newest releases first
 
-**Example:**
+**URL Structure:**
+Page number is in the path, filters are in query string. Query parameters are preserved during pagination navigation.
+
+**Examples:**
 ```
-/albums?sort=year&genre=Electronic&page=2
+/albums/1?genre=Electronic           # Page 1, Electronic genre
+/albums/2?genre=Electronic           # Page 2, genre preserved
+/albums/1?genre=Rock&sort=release_name&year=1990
 ```
 
-**Implementation:**
+**Key Implementation Details:**
+
 ```tsx
 function AlbumsPage() {
+  const { page } = useParams<{ page?: string }>();
   const [searchParams, setSearchParams] = useSearchParams();
-  const page = parseInt(searchParams.get('page') || '1');
-  const sort = searchParams.get('sort') || 'date_added';
-  const genre = searchParams.get('genre') || '';
+  const currentPage = page ? parseInt(page, 10) : 1;
 
-  // Filter and sort albums
-  const filtered = useMemo(() => {
-    return albums
-      .filter(a => !genre || a.genre_names.includes(genre))
-      .sort((a, b) => sortFn(a, b, sort));
-  }, [albums, genre, sort]);
+  // Build navigation URL with preserved query params
+  const buildPageUrl = (pageNum: number) => {
+    const queryString = searchParams.toString();
+    return queryString ? `/albums/${pageNum}?${queryString}` : `/albums/${pageNum}`;
+  };
 
-  // Paginate
-  const paginated = filtered.slice(
-    (page - 1) * itemsPerPage,
-    page * itemsPerPage
-  );
+  // Update URL params with optional page reset
+  const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
+    const params = new URLSearchParams(searchParams);
+    // ... update params ...
+    setSearchParams(params);
+
+    // Navigate to page 1 with preserved query params when filter changes
+    if (resetToPage1 && currentPage !== 1) {
+      const queryString = params.toString();
+      navigate(queryString ? `/albums/1?${queryString}` : '/albums/1');
+    }
+  };
 
   return (
     <>
-      <FilterBar ... />
-      <AlbumGrid albums={paginated} />
-      <Pagination ... />
+      <FilterBar
+        setSortBy={(value) => updateURLParams({ sort: value }, true)}
+        setSelectedGenre={(value) => updateURLParams({ genre: value }, true)}
+        // ... other filters ...
+      />
+      <AlbumGrid albums={paginatedCollection} />
+      <Pagination
+        onPageClick={(page) => navigate(buildPageUrl(page))}
+      />
     </>
   );
 }
@@ -211,35 +225,78 @@ useMetaTags({
 
 ### ArtistsPage (`src/pages/ArtistsPage.tsx`)
 
-Paginated artist browser.
+Paginated artist browser with filtering and sorting.
 
 **Route:** `/artists`, `/artists/:page`
 
 **Features:**
 - Paginated artist grid
-- Alphabetical sorting
+- Search within artists
+- Alphabetical letter filtering (A-Z)
+- Multiple sort options
 - Album count display
 - "Various Artists" excluded by default
+- URL-based state (shareable filters)
 
-**Example:**
+**URL Parameters:**
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `:page` | `number` (path) | 1 | Current page number |
+| `sort` | `string` | `name` | Sort field |
+| `letter` | `string` | - | Filter by first letter (A-Z) |
+| `search` | `string` | - | Search query |
+
+**Sort Options:**
+- `name` - Artist name A-Z
+- `albums` - Most albums first
+- `latest` - Most recently added first
+
+**URL Structure:**
+Page number is in the path, filters are in query string. Query parameters are preserved during pagination navigation.
+
+**Examples:**
+```
+/artists/1?letter=A                  # Page 1, artists starting with A
+/artists/2?letter=A                  # Page 2, letter filter preserved
+/artists/1?sort=albums&letter=M
+```
+
+**Key Implementation Details:**
+
 ```tsx
 function ArtistsPage() {
-  const [artists, setArtists] = useState([]);
+  const { page } = useParams<{ page?: string }>();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const currentPage = page ? parseInt(page, 10) : 1;
 
-  useEffect(() => {
-    // Derive artists from collection
-    const artistMap = new Map();
-    albums.forEach(album => {
-      album.artists.forEach(artist => {
-        if (artist.name !== 'Various Artists') {
-          artistMap.set(artist.slug, artist);
-        }
-      });
-    });
-    setArtists([...artistMap.values()]);
-  }, [albums]);
+  // Build navigation URL with preserved query params
+  const buildPageUrl = (pageNum: number) => {
+    const queryString = searchParams.toString();
+    return queryString ? `/artists/${pageNum}?${queryString}` : `/artists/${pageNum}`;
+  };
 
-  return <ArtistGrid artists={artists} />;
+  // Update URL params with optional page reset
+  const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
+    const params = new URLSearchParams(searchParams);
+    // ... update params ...
+    setSearchParams(params);
+
+    // Navigate to page 1 with preserved query params when filter changes
+    if (resetToPage1 && currentPage !== 1) {
+      const queryString = params.toString();
+      navigate(queryString ? `/artists/1?${queryString}` : '/artists/1');
+    }
+  };
+
+  return (
+    <>
+      <FilterBar ... />
+      <ArtistGrid artists={paginatedArtists} />
+      <Pagination
+        onPageClick={(page) => navigate(buildPageUrl(page))}
+      />
+    </>
+  );
 }
 ```
 

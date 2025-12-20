@@ -70,6 +70,12 @@ export function ArtistsPage() {
   const itemsPerPage = appConfig.pagination.itemsPerPage.artists;
   const currentPage = page ? parseInt(page, 10) : 1;
 
+  // Build navigation URL with current query params
+  const buildPageUrl = (pageNum: number) => {
+    const queryString = searchParams.toString();
+    return queryString ? `/artists/${pageNum}?${queryString}` : `/artists/${pageNum}`;
+  };
+
   // Generate dynamic page title
   const getPageTitle = () => {
     const parts = ['Artists'];
@@ -298,7 +304,7 @@ export function ArtistsPage() {
   }, [collection, processArtists]);
 
   // Update URL params when filters change
-  const updateURLParams = (newParams: Record<string, string>) => {
+  const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
     const params = new URLSearchParams(searchParams);
     Object.entries(newParams).forEach(([key, value]) => {
       if ((key === 'letter' && value === 'all') || (key === 'sort' && value === 'name')) {
@@ -310,6 +316,12 @@ export function ArtistsPage() {
       }
     });
     setSearchParams(params);
+
+    // Navigate to page 1 with preserved query params when filter changes
+    if (resetToPage1 && currentPage !== 1) {
+      const queryString = params.toString();
+      navigate(queryString ? `/artists/1?${queryString}` : '/artists/1');
+    }
   };
 
   useEffect(() => {
@@ -407,8 +419,7 @@ export function ArtistsPage() {
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
-              updateURLParams({ search: e.target.value });
-              if (currentPage !== 1) navigate('/artists/1');
+              updateURLParams({ search: e.target.value }, true);
             }}
             className="pl-9 pr-9 h-8"
           />
@@ -416,8 +427,7 @@ export function ArtistsPage() {
             <button
               onClick={() => {
                 setSearchTerm('');
-                updateURLParams({ search: '' });
-                if (currentPage !== 1) navigate('/artists/1');
+                updateURLParams({ search: '' }, true);
               }}
               className="absolute right-2 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
             >
@@ -430,8 +440,7 @@ export function ArtistsPage() {
           <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
           <Select value={sortBy} onValueChange={(value) => {
             setSortBy(value);
-            updateURLParams({ sort: value });
-            if (currentPage !== 1) navigate('/artists/1');
+            updateURLParams({ sort: value }, true);
           }}>
             <SelectTrigger className="w-[140px] h-8">
               <SelectValue />
@@ -451,8 +460,7 @@ export function ArtistsPage() {
             <button
               onClick={() => {
                 setSelectedLetter('all');
-                updateURLParams({ letter: 'all' });
-                if (currentPage !== 1) navigate('/artists/1');
+                updateURLParams({ letter: 'all' }, true);
               }}
               className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
                 selectedLetter === 'all'
@@ -472,8 +480,7 @@ export function ArtistsPage() {
                   onClick={() => {
                     if (isAvailable) {
                       setSelectedLetter(letter);
-                      updateURLParams({ letter: letter });
-                      if (currentPage !== 1) navigate('/artists/1');
+                      updateURLParams({ letter: letter }, true);
                     }
                   }}
                   disabled={!isAvailable}
@@ -519,31 +526,31 @@ export function ArtistsPage() {
           <Pagination>
             <PaginationContent>
               <PaginationItem>
-                <PaginationPrevious 
-                  onClick={() => navigate(`/artists/${Math.max(1, currentPage - 1)}`)}
+                <PaginationPrevious
+                  onClick={() => navigate(buildPageUrl(Math.max(1, currentPage - 1)))}
                   className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>
-              
-              {getPageNumbers().map((page, index) => (
+
+              {getPageNumbers().map((pageNum, index) => (
                 <PaginationItem key={index}>
-                  {page === '...' ? (
+                  {pageNum === '...' ? (
                     <PaginationEllipsis />
                   ) : (
                     <PaginationLink
-                      onClick={() => navigate(`/artists/${page}`)}
-                      isActive={currentPage === page}
+                      onClick={() => navigate(buildPageUrl(pageNum as number))}
+                      isActive={currentPage === pageNum}
                       className="cursor-pointer"
                     >
-                      {page}
+                      {pageNum}
                     </PaginationLink>
                   )}
                 </PaginationItem>
               ))}
-              
+
               <PaginationItem>
-                <PaginationNext 
-                  onClick={() => navigate(`/artists/${Math.min(totalPages, currentPage + 1)}`)}
+                <PaginationNext
+                  onClick={() => navigate(buildPageUrl(Math.min(totalPages, currentPage + 1)))}
                   className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
                 />
               </PaginationItem>

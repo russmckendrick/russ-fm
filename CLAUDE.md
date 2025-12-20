@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Important: Documentation Maintenance
+
+**ALWAYS update documentation when making changes to the codebase:**
+- After modifying build scripts, update [`docs/build-pipeline/`](./docs/build-pipeline/)
+- After changing deployment workflows, update [`docs/build-pipeline/deployment.md`](./docs/build-pipeline/deployment.md)
+- After modifying frontend components, update [`docs/frontend/`](./docs/frontend/)
+- After changing backend services, update [`docs/backend/`](./docs/backend/)
+- After modifying API integrations, update [`docs/api-integrations/`](./docs/api-integrations/)
+
+Documentation should stay in sync with code changes to ensure future sessions have accurate context.
+
 ## Project Overview
 
 A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a sophisticated Python backend.

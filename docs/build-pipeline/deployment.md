@@ -19,6 +19,7 @@ flowchart TB
     subgraph Processing["Asset Processing"]
         Images[Process Images]
         Colors[Generate Colors]
+        Wrapped[Build Wrapped]
         OG[Generate OG]
     end
 
@@ -34,7 +35,8 @@ flowchart TB
 
     Assets --> Images
     Images --> Colors
-    Colors --> OG
+    Colors --> Wrapped
+    Wrapped --> OG
 
     OG --> Deploy
     Deploy --> R2
@@ -128,7 +130,11 @@ deploy:
       run: |
         pnpm run process-images
         pnpm run generate-colors
+        pnpm run build:wrapped
         pnpm run generate-og
+
+        # Copy generic og-image.png to public/ for worker build
+        cp dist/og-image.png public/og-image.png
 
     - name: Detect changed files
       run: |
@@ -304,7 +310,7 @@ Optimizes build for Workers:
 moveImages('public/album', '.temp-images/album');
 moveImages('public/artist', '.temp-images/artist');
 
-// 2. Build without images
+// 2. Build without images (Vite copies public/og-image.png automatically)
 execSync('pnpm vite build --outDir dist-worker');
 
 // 3. Restore images
@@ -315,10 +321,16 @@ moveImages('.temp-images/artist', 'public/artist');
 copyJsonFiles('public/album', 'dist-worker/album');
 copyJsonFiles('public/artist', 'dist-worker/artist');
 
-// 5. Copy collection.json and colors
-copyFile('public/collection.json', 'dist-worker/collection.json');
-copyFile('public/album-colors.json', 'dist-worker/album-colors.json');
+// 5. Copy og-image.png (with fallback)
+// First tries cache, then falls back to public/
+if (existsSync('node_modules/.cache/assets/og/og-image.png')) {
+  copyFile('...cache.../og-image.png', 'dist-worker/og-image.png');
+} else if (existsSync('public/og-image.png')) {
+  copyFile('public/og-image.png', 'dist-worker/og-image.png');
+}
 ```
+
+**Note:** The workflow copies `dist/og-image.png` to `public/og-image.png` before the worker build runs, ensuring the freshly generated OG image is included in the Vite build automatically.
 
 ### Worker Handler
 
