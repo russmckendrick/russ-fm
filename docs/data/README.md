@@ -28,7 +28,7 @@ flowchart TB
     end
 
     subgraph Frontend["Frontend Consumption"]
-        Fetch[fetch()]
+        Fetch["fetch()"]
         State[React State]
         UI[UI Components]
     end
