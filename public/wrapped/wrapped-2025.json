@@ -2,14 +2,14 @@
   "year": 2025,
   "isYearToDate": false,
   "summary": {
-    "totalReleases": 234,
-    "uniqueArtists": 179,
+    "totalReleases": 235,
+    "uniqueArtists": 180,
     "topGenre": "Rock",
     "topStyle": "Alternative Rock",
-    "avgPerMonth": 19.5,
+    "avgPerMonth": 19.6,
     "peakMonth": "May",
     "firstAddition": "2025-01-10",
-    "lastAddition": "2025-12-17"
+    "lastAddition": "2025-12-20"
   },
   "releases": [
     {
@@ -11210,6 +11210,59 @@
           "Vinyl"
         ]
       }
+    },
+    {
+      "release": {
+        "release_name": "The Very Best Of Deee-Lite",
+        "release_artist": "Deee-Lite",
+        "date_added": "2025-12-20",
+        "date_release_year": "2001-11-06",
+        "genre_names": [
+          "Acid Jazz",
+          "Dance",
+          "Disco",
+          "Downtempo",
+          "Electronic",
+          "Funk",
+          "Funk / Soul",
+          "Hip Hop",
+          "House",
+          "Jazzy Hip-Hop",
+          "Pop"
+        ],
+        "slug": "the-very-best-of-deee-lite-35784769",
+        "images": {
+          "hi-res": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-hi-res.jpg",
+          "medium": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-medium.jpg",
+          "avatar": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Deee-Lite",
+            "slug": "deee-lite",
+            "images": {
+              "hi-res": "/artist/deee-lite/deee-lite-hi-res.jpg",
+              "medium": "/artist/deee-lite/deee-lite-medium.jpg",
+              "avatar": "/artist/deee-lite/deee-lite-avatar.jpg"
+            }
+          }
+        ]
+      },
+      "albumDetail": {
+        "styles": [
+          "House",
+          "Disco",
+          "Acid Jazz",
+          "Jazzy Hip-Hop",
+          "Downtempo",
+          "Funk"
+        ],
+        "formats": [
+          "Vinyl",
+          "Vinyl",
+          "All Media"
+        ]
+      }
     }
   ],
   "insights": {
@@ -11222,16 +11275,16 @@
       {
         "name": "Alternative",
         "count": 102,
-        "percentage": 44
+        "percentage": 43
       },
       {
         "name": "Pop",
-        "count": 88,
+        "count": 89,
         "percentage": 38
       },
       {
         "name": "Electronic",
-        "count": 67,
+        "count": 68,
         "percentage": 29
       },
       {
@@ -11478,7 +11531,7 @@
       },
       {
         "name": "2000s",
-        "count": 26
+        "count": 27
       },
       {
         "name": "1990s",
@@ -19706,7 +19759,7 @@
       },
       {
         "month": "December",
-        "count": 14,
+        "count": 15,
         "releases": [
           {
             "release_name": "Let Your Dim Light Shine",
@@ -20209,6 +20262,42 @@
               "accent": "#851a21",
               "muted": "#aa4d45"
             }
+          },
+          {
+            "release_name": "The Very Best Of Deee-Lite",
+            "release_artist": "Deee-Lite",
+            "date_added": "2025-12-20",
+            "date_release_year": "2001-11-06",
+            "genre_names": [
+              "Acid Jazz",
+              "Dance",
+              "Disco",
+              "Downtempo",
+              "Electronic",
+              "Funk",
+              "Funk / Soul",
+              "Hip Hop",
+              "House",
+              "Jazzy Hip-Hop",
+              "Pop"
+            ],
+            "slug": "the-very-best-of-deee-lite-35784769",
+            "images": {
+              "hi-res": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-hi-res.jpg",
+              "medium": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-medium.jpg",
+              "avatar": "/album/the-very-best-of-deee-lite-35784769/the-very-best-of-deee-lite-35784769-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Deee-Lite",
+                "slug": "deee-lite",
+                "images": {
+                  "hi-res": "/artist/deee-lite/deee-lite-hi-res.jpg",
+                  "medium": "/artist/deee-lite/deee-lite-medium.jpg",
+                  "avatar": "/artist/deee-lite/deee-lite-avatar.jpg"
+                }
+              }
+            ]
           }
         ],
         "dominantColor": {
@@ -20374,10 +20463,10 @@
       "muted": "#944823"
     },
     "secondary": {
-      "background": "#600d18",
+      "background": "#1a1a1a",
       "foreground": "#ffffff",
-      "accent": "#851a21",
-      "muted": "#aa4d45"
+      "accent": "#666666",
+      "muted": "#404040"
     },
     "monthlyPalettes": [
       {

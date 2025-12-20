@@ -650,22 +650,36 @@ export function StatsPage() {
             .sort(() => 0.5 - Math.random())
             .slice(0, 10);
 
-        // Random Artists (8 items) - shuffle all artists and pick 8
-        const allArtistsList = Object.entries(artistCounts)
-            .map(([name, count]) => {
-                const artistAlbums = data.filter(album => album.release_artist === name);
-                const artistAlbum = artistAlbums[0];
-                return {
-                    name,
-                    uri: artistAlbum?.uri_artist || '',
-                    albums: artistAlbums,
-                    albumCount: count,
-                    genres: artistAlbum?.genre_names || [],
-                    image: getArtistImageFromData(artistAlbum?.uri_artist || '', 'medium'),
-                    latestAlbum: artistAlbums[0]?.release_name || '',
-                    biography: ''
-                };
+        // Random Artists (8 items) - iterate through individual artists from albums
+        // Build a map of all unique artists from the artists array (not release_artist string)
+        const allArtistsMap = new Map<string, { albums: Album[]; artist: any }>();
+        data.forEach(album => {
+            album.artists.forEach(artist => {
+                // Skip "Various" artists
+                if (artist.name.toLowerCase() === 'various') return;
+
+                if (!allArtistsMap.has(artist.name)) {
+                    allArtistsMap.set(artist.name, { albums: [album], artist });
+                } else {
+                    allArtistsMap.get(artist.name)!.albums.push(album);
+                }
             });
+        });
+
+        const allArtistsList = Array.from(allArtistsMap.entries())
+            .map(([name, { albums: artistAlbums, artist }]) => ({
+                name,
+                uri: artist.uri_artist || '',
+                albums: artistAlbums,
+                albumCount: artistAlbums.length,
+                genres: artistAlbums[0]?.genre_names || [],
+                image: artist.uri_artist
+                    ? getArtistImageFromData(artist.uri_artist, 'medium')
+                    : getAlbumImageFromData(artistAlbums[0]?.uri_release || '', 'medium'),
+                latestAlbum: artistAlbums[0]?.release_name || '',
+                biography: ''
+            }));
+
         const randomArtists = [...allArtistsList]
             .sort(() => 0.5 - Math.random())
             .slice(0, 8);
