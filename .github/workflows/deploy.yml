@@ -121,6 +121,11 @@ jobs:
           echo "📦 Populating dist from cache..."
           pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
           pnpm run generate-colors
+
+          # Generate wrapped data
+          echo "📊 Generating wrapped data..."
+          pnpm run build:wrapped
+
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
