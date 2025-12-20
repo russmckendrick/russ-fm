@@ -5,6 +5,42 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Color palette interface (matches src/types/wrapped.ts)
+interface ColorPalette {
+  background: string;
+  foreground: string;
+  accent: string;
+  muted: string;
+}
+
+// Default fallback palette
+const defaultPalette: ColorPalette = {
+  background: '#1a1a1a',
+  foreground: '#ffffff',
+  accent: '#666666',
+  muted: '#404040'
+};
+
+// Load album colors once at startup
+let albumColors: Record<string, ColorPalette> = {};
+try {
+  const albumColorsPath = path.join(__dirname, '..', 'public', 'album-colors.json');
+  if (fs.existsSync(albumColorsPath)) {
+    albumColors = JSON.parse(fs.readFileSync(albumColorsPath, 'utf-8'));
+    console.log(`✓ Loaded ${Object.keys(albumColors).length} album color palettes`);
+  } else {
+    console.warn('⚠ album-colors.json not found, using default colors');
+  }
+} catch (error) {
+  console.error('Error loading album colors:', error);
+}
+
+// Helper to get colors for an album slug
+function getAlbumColors(slug: string): ColorPalette | undefined {
+  const uri = `/album/${slug}/`;
+  return albumColors[uri];
+}
+
 // Original collection data structure
 interface OriginalRelease {
   release_name: string;
@@ -61,6 +97,7 @@ interface Release {
       avatar?: string;
     };
   }>;
+  colors?: ColorPalette;
 }
 
 interface AlbumDetail {
@@ -92,7 +129,7 @@ interface WrappedData {
     genres: Array<{ name: string; count: number; percentage: number }>;
     artists: Array<{ name: string; slug: string; count: number; images?: { 'hi-res'?: string; medium?: string; avatar?: string } }>;
     decades: Array<{ name: string; count: number }>;
-    timeline: Array<{ month: string; count: number; releases: Release[] }>;
+    timeline: Array<{ month: string; count: number; releases: Release[]; dominantColor?: ColorPalette }>;
     topAlbums: Array<{
       slug: string;
       title: string;
@@ -111,6 +148,11 @@ interface WrappedData {
         images: { 'hi-res': string; medium: string; avatar?: string };
       };
     }>;
+  };
+  theme?: {
+    primary: ColorPalette;
+    secondary: ColorPalette;
+    monthlyPalettes: ColorPalette[];
   };
 }
 
@@ -250,7 +292,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
       const albumDetail = await loadAlbumDetail(albumSlug);
 
       // Create a lightweight release object with ALL image sizes
-      const lightRelease = {
+      const releaseColors = getAlbumColors(albumSlug);
+      const lightRelease: Release = {
         release_name: release.release_name,
         release_artist: release.release_artist,
         date_added: release.date_added,
@@ -271,7 +314,9 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
             medium: artist.images_uri_artist?.medium,
             avatar: artist.images_uri_artist?.avatar
           }
-        }))
+        })),
+        // Add pre-computed colors from album-colors.json
+        colors: releaseColors
       };
 
       return {
@@ -369,10 +414,15 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
   const timeline = Array.from({ length: 12 }, (_, i) => {
     const monthName = getMonthName(i);
     const releases = monthlyData.get(monthName) || [];
+    // Get dominant color from first release of the month (if any have colors)
+    const dominantColor = releases.length > 0
+      ? (releases.find(r => r.colors)?.colors || undefined)
+      : undefined;
     return {
       month: monthName,
       count: releases.length,
-      releases
+      releases,
+      dominantColor
     };
   });
 
@@ -431,6 +481,16 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     summary.projectedTotal = Math.round(yearReleases.length * projectionRate);
   }
 
+  // Build theme object with colors from key albums
+  const firstRelease = enrichedReleases[0]?.release;
+  const lastRelease = enrichedReleases[enrichedReleases.length - 1]?.release;
+
+  const theme = {
+    primary: firstRelease?.colors || defaultPalette,
+    secondary: lastRelease?.colors || defaultPalette,
+    monthlyPalettes: timeline.map(month => month.dominantColor || defaultPalette)
+  };
+
   return {
     year,
     isYearToDate,
@@ -443,7 +503,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
       timeline,
       topAlbums,
       topArtists
-    }
+    },
+    theme
   };
 }
 

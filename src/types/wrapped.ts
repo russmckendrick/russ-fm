@@ -1,3 +1,11 @@
+// Color palette for dynamic theming
+export interface ColorPalette {
+  background: string;
+  foreground: string;
+  accent: string;
+  muted: string;
+}
+
 export interface WrappedRelease {
   release_name: string;
   release_artist: string;
@@ -19,6 +27,7 @@ export interface WrappedRelease {
       avatar?: string;
     };
   }>;
+  colors?: ColorPalette;
 }
 
 export interface WrappedAlbumDetail {
@@ -67,6 +76,13 @@ export interface StatCardData {
   data?: WrappedRelease | WrappedRelease[] | { name: string; count: number }[] | { month: string; count: number; releases: WrappedRelease[] }[];
 }
 
+// Theme object for page-level color theming
+export interface WrappedTheme {
+  primary: ColorPalette;           // From first album of the year
+  secondary: ColorPalette;         // From last album of the year
+  monthlyPalettes: ColorPalette[]; // 12 entries, one per month
+}
+
 export interface WrappedData {
   year: number;
   isYearToDate: boolean;
@@ -89,7 +105,7 @@ export interface WrappedData {
     genres: Array<{ name: string; count: number; percentage: number }>;
     artists: Array<{ name: string; slug: string; count: number; images?: { 'hi-res'?: string; medium?: string; avatar?: string } }>;
     decades: Array<{ name: string; count: number }>;
-    timeline: Array<{ month: string; count: number; releases: WrappedRelease[] }>;
+    timeline: Array<{ month: string; count: number; releases: WrappedRelease[]; dominantColor?: ColorPalette }>;
     topAlbums: Array<{
       slug: string;
       title: string;
@@ -109,4 +125,5 @@ export interface WrappedData {
       };
     }>;
   };
+  theme?: WrappedTheme;
 }

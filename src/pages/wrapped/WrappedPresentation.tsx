@@ -4,8 +4,8 @@ import { PresentationContainer, PresentationSection } from './components/present
 import { SectionIndicator } from './components/presentation/SectionIndicator';
 import { NavigationControls } from './components/presentation/NavigationControls';
 import { useWrappedNavigation } from './hooks/useWrappedNavigation';
-import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { Logo } from '@/components/Logo';
+import type { ColorPalette } from '@/types/wrapped';
 
 // Section components
 import { IntroSection } from './components/sections/IntroSection';
@@ -28,6 +28,14 @@ interface WrappedPresentationProps {
   nextYear?: number;
 }
 
+// Default fallback palette (matches generate-wrapped-data.ts)
+const defaultPalette: ColorPalette = {
+  background: '#1a1a1a',
+  foreground: '#ffffff',
+  accent: '#666666',
+  muted: '#404040'
+};
+
 export function WrappedPresentation({ data, availableYears, previousYear, nextYear }: WrappedPresentationProps) {
   // Find first and last releases
   const sortedReleases = useMemo(() => {
@@ -40,9 +48,9 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
   const firstRelease = sortedReleases[0];
   const lastRelease = sortedReleases[sortedReleases.length - 1];
 
-  // Get colors for key albums
-  const firstAlbumColors = useAlbumColorsWithFallback(firstRelease?.slug);
-  const lastAlbumColors = useAlbumColorsWithFallback(lastRelease?.slug);
+  // Use pre-computed colors from theme (with fallback for older data without theme)
+  const firstAlbumColors = data.theme?.primary || firstRelease?.colors || defaultPalette;
+  const lastAlbumColors = data.theme?.secondary || lastRelease?.colors || defaultPalette;
 
   // Get months with releases for individual sections
   const monthsWithReleases = useMemo(() =>
@@ -185,6 +193,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
               releases={monthData.releases}
               monthNumber={idx + 1}
               totalMonths={monthsWithReleases.length}
+              accentColor={monthData.dominantColor?.accent}
             />
           </PresentationSection>
         ))}

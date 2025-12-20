@@ -32,11 +32,16 @@ export function FullBleedBackground({
   const createHeroGradient = (palette: AlbumColorPalette | null) => {
     switch (variant) {
       case 'cosmic':
-        // Modern, premium dark theme: Deep Zinc -> Black -> Deep Blue/Zinc
-        return `linear-gradient(135deg, 
-          #18181b 0%, 
-          #09090b 40%, 
-          #000000 75%, 
+        // Modern, premium dark theme using album colors
+        // Blend album background with deep blacks for a rich, dynamic look
+        return palette ? `linear-gradient(135deg,
+          ${palette.background} 0%,
+          #09090b 40%,
+          #000000 75%,
+          ${palette.muted} 100%)` : `linear-gradient(135deg,
+          #18181b 0%,
+          #09090b 40%,
+          #000000 75%,
           #18181b 100%)`;
       case 'vibrant':
         return palette ? `linear-gradient(135deg, 
@@ -100,8 +105,25 @@ export function FullBleedBackground({
           </div>
         )}
 
-        {/* Cosmic Static Accents */}
-        {variant === 'cosmic' && (
+        {/* Cosmic Accents - now using album colors */}
+        {variant === 'cosmic' && colors && (
+          <>
+            <div
+              className="absolute top-0 left-0 w-full h-full mix-blend-screen opacity-20"
+              style={{
+                background: `radial-gradient(circle at 10% 20%, ${colors.accent} 0%, transparent 40%)`,
+              }}
+            />
+            <div
+              className="absolute bottom-0 right-0 w-full h-full mix-blend-screen opacity-15"
+              style={{
+                background: `radial-gradient(circle at 90% 80%, ${colors.muted} 0%, transparent 40%)`,
+              }}
+            />
+          </>
+        )}
+        {/* Fallback cosmic accents when no colors */}
+        {variant === 'cosmic' && !colors && (
           <>
             <div
               className="absolute top-0 left-0 w-full h-full mix-blend-screen opacity-10"
