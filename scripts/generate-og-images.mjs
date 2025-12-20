@@ -486,13 +486,9 @@ async function generateAlbumOGImage(album, colors, baseDir) {
 }
 
 // Generate generic site OG image
+// Note: Always regenerate this since it shows "last 4 albums" which changes
 async function generateGenericOGImage(collection, baseDir) {
   const outputPath = path.join(baseDir, 'og-image.png');
-
-  try {
-    await fs.access(outputPath);
-    return true;
-  } catch (e) { }
 
   console.log('Generating generic site OG image...');
 

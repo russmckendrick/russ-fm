@@ -127,6 +127,10 @@ jobs:
           pnpm run build:wrapped
 
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
+
+          # Copy generic og-image.png to public/ so it's included in worker build
+          echo "📸 Copying og-image.png to public/..."
+          cp dist/og-image.png public/og-image.png
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
           VITE_SCROBBLING_ENABLED: ${{ secrets.VITE_SCROBBLING_ENABLED }}
