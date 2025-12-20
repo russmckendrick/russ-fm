@@ -1,31 +1,188 @@
-# Russ.fm Documentation
+# russ.fm Documentation
 
-Welcome to the documentation for **Russ.fm**, a modern, full-stack music collection management and showcase system.
+A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a sophisticated Python backend.
 
-## 🎵 Project Overview
+## Quick Links
 
-Russ.fm combines a powerful Python-based data enrichment engine with a beautiful React frontend to manage and display your Discogs record collection. It goes beyond simple cataloging by enriching your data with editorial content, high-quality artwork, and streaming links from multiple services.
+| Section | Description |
+|---------|-------------|
+| [Getting Started](./getting-started/) | Prerequisites, setup, and first run |
+| [Architecture](./architecture/) | System design and component interaction |
+| [Frontend](./frontend/) | React app, components, hooks, and utilities |
+| [Backend](./backend/) | Python CLI, services, and data processing |
+| [Data](./data/) | Schemas, models, and database structure |
+| [Build Pipeline](./build-pipeline/) | Asset processing and deployment |
+| [API Integrations](./api-integrations/) | Service-by-service documentation |
+| [Development](./development/) | Workflows, configuration, and troubleshooting |
 
-### Key Features
+## System Architecture Overview
 
--   **Multi-Service Integration**: Enriches data from Discogs, Apple Music, Spotify, Wikipedia, and Last.fm.
--   **Modern React UI**: A responsive, beautiful interface built with React 19, TypeScript, and shadcn/ui.
--   **Smart Enrichment**: Handles multi-artist albums, finding high-res artwork, and generating descriptions via Perplexity AI.
--   **Robust Backend**: Python-based engine with SQLite caching, resume capability, and comprehensive CLI.
--   **Production Ready**: Automated CI/CD pipeline with Cloudflare R2 storage and Workers deployment.
+```mermaid
+flowchart TB
+    subgraph Frontend["React Frontend (russ.fm)"]
+        Pages[Pages]
+        Components[Components]
+        Hooks[Hooks]
+        Utils[Utilities]
+    end
 
-## 📚 Documentation Contents
+    subgraph Backend["Python Backend (scrapper/)"]
+        CLI[CLI Commands]
+        Orchestrator[Orchestrator]
+        Services[API Services]
+        DB[(SQLite Cache)]
+    end
 
--   **[Getting Started](./getting-started.md)**: Prerequisites, installation, and quick start guide.
--   **[Data Collection](./data-collection.md)**: Detailed guide to the Python backend scrapper/manager.
--   **[Frontend Development](./frontend.md)**: Architecture, components, and working with the React application.
--   **[Brand & Style Guide](./brand-guide.md)**: Typography, color palette, and Neo-Glass design system tokens.
--   **[System Architecture](./architecture.md)**: High-level design, relationships, and data flow diagrams.
--   **[Deployment](./deployment.md)**: CI/CD workflows, Cloudflare R2 sync, and production setup.
--   **[Tools & Utilities](./tools.md)**: Database management, maintenance scripts, and troubleshooting.
--   **[Available Commands](./commands.md)**: Reference for all `package.json` scripts.
+    subgraph Storage["Data Storage"]
+        JSON[Static JSON<br>/public/]
+        R2[Cloudflare R2<br>assets.russ.fm]
+    end
 
-## 🔗 Quick Links
+    subgraph APIs["External APIs"]
+        Discogs
+        AppleMusic[Apple Music]
+        Spotify
+        LastFM[Last.fm]
+        Wikipedia
+        TheAudioDB
+        Perplexity[Perplexity AI]
+    end
 
--   [Live Site](https://www.russ.fm)
--   [GitHub Repository](https://github.com/russmckendrick/russ-fm)
+    CLI --> Orchestrator
+    Orchestrator --> Services
+    Services --> APIs
+    Orchestrator --> DB
+    Orchestrator --> JSON
+    Frontend --> JSON
+    Frontend --> R2
+```
+
+## Technology Stack
+
+### Frontend
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite 7.0.0
+- **Routing**: React Router DOM 7.6.3
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Search**: Fuse.js
+
+### Backend
+- **Language**: Python 3.8+
+- **CLI Framework**: Click
+- **Database**: SQLite
+- **HTTP Client**: Requests
+- **Image Processing**: Pillow
+
+### Infrastructure
+- **Hosting**: Cloudflare Workers
+- **Assets CDN**: Cloudflare R2
+- **CI/CD**: GitHub Actions
+- **Domain**: russ.fm / assets.russ.fm
+
+## Key Features
+
+### Collection Management
+- Process and enrich Discogs vinyl collection data
+- Multi-service data aggregation (Apple Music, Spotify, Last.fm, Wikipedia)
+- AI-powered album descriptions via Perplexity
+- Resume-capable batch processing
+
+### Frontend Experience
+- Responsive album and artist browsing
+- Full-text search with fuzzy matching
+- Genre filtering and sorting
+- Album detail pages with rich metadata
+- Music service embeds (Spotify, Apple Music)
+- Last.fm scrobbling integration
+- Year-in-review "Wrapped" feature
+- Dynamic theming from album artwork
+
+### Asset Pipeline
+- Automated image processing and resizing
+- Color palette extraction from album covers
+- Open Graph image generation
+- Incremental R2 sync with change detection
+
+## Data Flow
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant CLI as Python CLI
+    participant Discogs
+    participant Services as Enrichment Services
+    participant DB as SQLite Cache
+    participant JSON as Static JSON
+    participant Frontend as React App
+    participant R2 as Cloudflare R2
+
+    User->>CLI: python main.py collection
+    CLI->>Discogs: Fetch collection
+    Discogs-->>CLI: Collection items
+
+    loop For each album
+        CLI->>DB: Check cache
+        alt Cache miss
+            CLI->>Discogs: Get release details
+            CLI->>Services: Enrich data
+            Services-->>CLI: Apple Music, Spotify, Last.fm data
+            CLI->>DB: Store enriched data
+            CLI->>JSON: Write album JSON
+        end
+    end
+
+    Note over JSON,R2: Build Pipeline
+    JSON->>R2: Sync images
+    JSON->>Frontend: Serve static JSON
+    R2->>Frontend: Serve images
+    Frontend->>User: Display collection
+```
+
+## Project Structure
+
+```
+russ-fm/
+├── src/                          # React frontend
+│   ├── components/               # UI components
+│   │   ├── ui/                   # shadcn/ui base components
+│   │   └── home/                 # Home page sections
+│   ├── pages/                    # Route-level components
+│   │   └── wrapped/              # Year-in-review feature
+│   ├── hooks/                    # Custom React hooks
+│   ├── lib/                      # Utility functions
+│   ├── services/                 # API services
+│   ├── types/                    # TypeScript definitions
+│   └── config/                   # App configuration
+├── scrapper/                     # Python data collection
+│   ├── music_collection_manager/ # Core package
+│   │   ├── services/             # API clients
+│   │   ├── utils/                # Orchestration & utilities
+│   │   ├── models/               # Data models
+│   │   ├── cli/                  # CLI commands
+│   │   └── config/               # Configuration
+│   └── main.py                   # CLI entry point
+├── public/                       # Static data
+│   ├── collection.json           # Album index
+│   ├── album/{slug}/             # Album data & images
+│   ├── artist/{slug}/            # Artist data & images
+│   ├── album-colors.json         # Color palettes
+│   └── album-colors.css          # CSS custom properties
+├── scripts/                      # Build & deploy scripts
+├── docs/                         # This documentation
+└── .github/workflows/            # CI/CD pipelines
+```
+
+## Getting Help
+
+- [Getting Started Guide](./getting-started/) - First-time setup
+- [Troubleshooting](./development/troubleshooting.md) - Common issues
+- [Configuration Reference](./development/configuration.md) - All options
+- [CLI Commands](./backend/cli-commands.md) - Backend operations
+
+## External Links
+
+- [Live Site](https://russ.fm)
+- [GitHub Repository](https://github.com/russmckendrick/russ-fm)

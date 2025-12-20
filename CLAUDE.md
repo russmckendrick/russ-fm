@@ -6,6 +6,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a sophisticated Python backend.
 
+**Full Documentation**: See [`docs/`](./docs/) for comprehensive documentation including:
+- [Architecture](./docs/architecture/) - System diagrams and patterns
+- [Frontend](./docs/frontend/) - Components, hooks, utilities
+- [Backend](./docs/backend/) - CLI commands, services, orchestration
+- [API Integrations](./docs/api-integrations/) - All 7 service integrations
+- [Development](./docs/development/) - Configuration and troubleshooting
+
 ## Technology Stack
 
 - **Frontend**: React 19 + TypeScript + Vite + shadcn/ui + Tailwind CSS
