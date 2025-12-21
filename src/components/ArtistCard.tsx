@@ -108,7 +108,7 @@ export function ArtistCard({ artist, onClick }: ArtistCardProps) {
                       >
                         <Avatar className="h-6 w-6 border-2 border-background">
                           <AvatarImage
-                            src={getAlbumImageFromData(album.uri_release, 'small')}
+                            src={getAlbumImageFromData(album.uri_release, 'medium')}
                             onError={handleImageError}
                             alt={album.release_name}
                             className="object-cover"

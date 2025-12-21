@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ServiceButton } from '@/components/ui/service-button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
@@ -651,7 +652,7 @@ export function AlbumDetailPage() {
   const titleTextStyle = getEnhancedTextColor(albumColors.background, albumColors);
 
   return (
-    <div className="min-h-screen pb-20 -mt-0 md:-mt-32">
+    <PageContainer variant="hero">
       {/* Hero Section - Full Width & Immersive */}
       <div
         className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-28 px-4 overflow-hidden"
@@ -1118,6 +1119,6 @@ export function AlbumDetailPage() {
           </div>
         </footer>
       </div>
-    </div >
+    </PageContainer>
   );
 }

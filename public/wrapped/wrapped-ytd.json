@@ -2,11 +2,11 @@
   "year": 2025,
   "isYearToDate": true,
   "summary": {
-    "totalReleases": 235,
-    "uniqueArtists": 180,
+    "totalReleases": 236,
+    "uniqueArtists": 181,
     "topGenre": "Rock",
     "topStyle": "Alternative Rock",
-    "avgPerMonth": 19.6,
+    "avgPerMonth": 19.7,
     "peakMonth": "May",
     "firstAddition": "2025-01-10",
     "lastAddition": "2025-12-20",
@@ -11214,6 +11214,61 @@
     },
     {
       "release": {
+        "release_name": "Menace To Sobriety",
+        "release_artist": "Ugly Kid Joe",
+        "date_added": "2025-12-20",
+        "date_release_year": "1995-01-01",
+        "genre_names": [
+          "Funk Metal",
+          "Garage Rock",
+          "Hair Metal",
+          "Hard Rock",
+          "Heavy Metal",
+          "Metal",
+          "Rock",
+          "Rock & Roll",
+          "Sludge Metal"
+        ],
+        "slug": "menace-to-sobriety-35777722",
+        "images": {
+          "hi-res": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-hi-res.jpg",
+          "medium": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-medium.jpg",
+          "avatar": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Ugly Kid Joe",
+            "slug": "ugly-kid-joe",
+            "images": {
+              "hi-res": "/artist/ugly-kid-joe/ugly-kid-joe-hi-res.jpg",
+              "medium": "/artist/ugly-kid-joe/ugly-kid-joe-medium.jpg",
+              "avatar": "/artist/ugly-kid-joe/ugly-kid-joe-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "background": "#071d16",
+          "foreground": "#ffffff",
+          "accent": "#f2cd12",
+          "muted": "#497d3e"
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Funk Metal",
+          "Garage Rock",
+          "Hard Rock",
+          "Heavy Metal",
+          "Rock & Roll",
+          "Sludge Metal"
+        ],
+        "formats": [
+          "Vinyl"
+        ]
+      }
+    },
+    {
+      "release": {
         "release_name": "The Very Best Of Deee-Lite",
         "release_artist": "Deee-Lite",
         "date_added": "2025-12-20",
@@ -11247,7 +11302,13 @@
               "avatar": "/artist/deee-lite/deee-lite-avatar.jpg"
             }
           }
-        ]
+        ],
+        "colors": {
+          "background": "#141015",
+          "foreground": "#ffffff",
+          "accent": "#efaf4c",
+          "muted": "#7c4235"
+        }
       },
       "albumDetail": {
         "styles": [
@@ -11270,7 +11331,7 @@
     "genres": [
       {
         "name": "Rock",
-        "count": 190,
+        "count": 191,
         "percentage": 81
       },
       {
@@ -11536,7 +11597,7 @@
       },
       {
         "name": "1990s",
-        "count": 42
+        "count": 43
       },
       {
         "name": "1980s",
@@ -19760,7 +19821,7 @@
       },
       {
         "month": "December",
-        "count": 15,
+        "count": 16,
         "releases": [
           {
             "release_name": "Let Your Dim Light Shine",
@@ -20265,6 +20326,46 @@
             }
           },
           {
+            "release_name": "Menace To Sobriety",
+            "release_artist": "Ugly Kid Joe",
+            "date_added": "2025-12-20",
+            "date_release_year": "1995-01-01",
+            "genre_names": [
+              "Funk Metal",
+              "Garage Rock",
+              "Hair Metal",
+              "Hard Rock",
+              "Heavy Metal",
+              "Metal",
+              "Rock",
+              "Rock & Roll",
+              "Sludge Metal"
+            ],
+            "slug": "menace-to-sobriety-35777722",
+            "images": {
+              "hi-res": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-hi-res.jpg",
+              "medium": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-medium.jpg",
+              "avatar": "/album/menace-to-sobriety-35777722/menace-to-sobriety-35777722-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Ugly Kid Joe",
+                "slug": "ugly-kid-joe",
+                "images": {
+                  "hi-res": "/artist/ugly-kid-joe/ugly-kid-joe-hi-res.jpg",
+                  "medium": "/artist/ugly-kid-joe/ugly-kid-joe-medium.jpg",
+                  "avatar": "/artist/ugly-kid-joe/ugly-kid-joe-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "background": "#071d16",
+              "foreground": "#ffffff",
+              "accent": "#f2cd12",
+              "muted": "#497d3e"
+            }
+          },
+          {
             "release_name": "The Very Best Of Deee-Lite",
             "release_artist": "Deee-Lite",
             "date_added": "2025-12-20",
@@ -20298,7 +20399,13 @@
                   "avatar": "/artist/deee-lite/deee-lite-avatar.jpg"
                 }
               }
-            ]
+            ],
+            "colors": {
+              "background": "#141015",
+              "foreground": "#ffffff",
+              "accent": "#efaf4c",
+              "muted": "#7c4235"
+            }
           }
         ],
         "dominantColor": {
@@ -20464,10 +20571,10 @@
       "muted": "#944823"
     },
     "secondary": {
-      "background": "#1a1a1a",
+      "background": "#141015",
       "foreground": "#ffffff",
-      "accent": "#666666",
-      "muted": "#404040"
+      "accent": "#efaf4c",
+      "muted": "#7c4235"
     },
     "monthlyPalettes": [
       {

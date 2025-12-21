@@ -5,6 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { ArtistCard } from '@/components/ArtistCard';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -407,7 +408,7 @@ export function ArtistsPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
+    <PageContainer>
       {/* Filter Bar */}
       <div className="flex flex-wrap items-center justify-between gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
         {/* Search Input */}
@@ -558,6 +559,6 @@ export function ArtistsPage() {
           </Pagination>
         </div>
       )}
-    </div>
+    </PageContainer>
   );
 }

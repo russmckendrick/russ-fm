@@ -1,6 +1,7 @@
 // Asset and image-related types
 
-export type ImageSize = 'hi-res' | 'medium' | 'small';
+// Note: Only 'hi-res' (1400px) and 'medium' (800px) sizes exist - 'small' does NOT exist
+export type ImageSize = 'hi-res' | 'medium';
 
 export interface AssetConfig {
   baseUrl: string;
@@ -11,7 +12,6 @@ export interface AssetConfig {
 export interface ImageUrls {
   'hi-res': string;
   medium: string;
-  small: string;
 }
 
 // For responsive images

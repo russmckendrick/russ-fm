@@ -66,10 +66,10 @@ export function getArtistOGImageUrl(artistSlug: string): string {
 
 /**
  * Generate responsive srcSet for album images
+ * Note: Only 'medium' (800px) and 'hi-res' (1400px) sizes exist
  */
 export function getAlbumImageSrcSet(albumSlug: string): string {
   return [
-    `${getAlbumImageUrl(albumSlug, 'small')} 400w`,
     `${getAlbumImageUrl(albumSlug, 'medium')} 800w`,
     `${getAlbumImageUrl(albumSlug, 'hi-res')} 1400w`
   ].join(', ');
@@ -77,10 +77,10 @@ export function getAlbumImageSrcSet(albumSlug: string): string {
 
 /**
  * Generate responsive srcSet for artist images
+ * Note: Only 'medium' (800px) and 'hi-res' (1400px) sizes exist
  */
 export function getArtistImageSrcSet(artistSlug: string): string {
   return [
-    `${getArtistImageUrl(artistSlug, 'small')} 400w`,
     `${getArtistImageUrl(artistSlug, 'medium')} 800w`,
     `${getArtistImageUrl(artistSlug, 'hi-res')} 1400w`
   ].join(', ');

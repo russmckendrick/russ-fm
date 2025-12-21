@@ -8,6 +8,7 @@ import { ServiceButton } from '@/components/ui/service-button';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { AlbumCard } from '@/components/AlbumCard';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColors } from '@/hooks/useAlbumColors';
@@ -325,7 +326,7 @@ export function ArtistDetailPage() {
   const cleanGenres = getCleanGenresFromArray(allGenres, artistName);
 
   return (
-    <div className="min-h-screen pb-20 -mt-0 md:-mt-32">
+    <PageContainer variant="hero">
       {/* Hero Section - Full Width & Immersive */}
       <div
         className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-32 px-4 overflow-hidden"
@@ -543,6 +544,6 @@ export function ArtistDetailPage() {
           </div>
         </section>
       </div>
-    </div>
+    </PageContainer>
   );
 }

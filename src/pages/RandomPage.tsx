@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { Shuffle, RefreshCw, ArrowRight } from 'lucide-react';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
 import { generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
@@ -152,7 +153,7 @@ export function RandomPage() {
   }
 
   return (
-    <div className="min-h-screen pb-20 -mt-32">
+    <PageContainer variant="hero">
       {/* Hero Section - Album Spotlight */}
       <div
         className="relative w-full min-h-[80vh] flex items-center justify-center pb-12 pt-32 px-4 overflow-hidden transition-colors duration-800"
@@ -319,6 +320,6 @@ export function RandomPage() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 }

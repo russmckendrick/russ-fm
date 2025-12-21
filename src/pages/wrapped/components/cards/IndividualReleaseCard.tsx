@@ -23,7 +23,7 @@ export function IndividualReleaseCard({ release, size, imageSize = 'hi-res' }: I
 
     switch (imageSize) {
       case 'avatar':
-        return getAlbumImageUrl(albumSlug, 'small');
+        return getAlbumImageUrl(albumSlug, 'medium');
       case 'medium':
         return getAlbumImageUrl(albumSlug, 'medium');
       case 'hi-res':

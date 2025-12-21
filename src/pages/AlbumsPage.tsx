@@ -4,6 +4,7 @@ import { Music } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { AlbumCard } from '@/components/AlbumCard';
 import { FilterBar } from '@/components/FilterBar';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -285,7 +286,7 @@ export function AlbumsPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 pt-24 pb-8">
+    <PageContainer>
       {/* Filters */}
       <FilterBar
         sortBy={sortBy}
@@ -372,6 +373,6 @@ export function AlbumsPage() {
           </Pagination>
         </div>
       )}
-    </div>
+    </PageContainer>
   );
 }

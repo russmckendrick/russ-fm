@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { AlbumCard } from '@/components/AlbumCard';
 import { ArtistCard } from '@/components/ArtistCard';
 import { CollectionStats as CollectionStatsOverview } from '@/components/CollectionStats';
+import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
@@ -811,10 +812,10 @@ export function StatsPage() {
 
 
     return (
-        <div className="min-h-screen pb-20 -mt-32">
+        <PageContainer variant="hero">
             {/* Hero Header Section - Neo-Glass Redesign (Artist/Album Page Style) */}
             <div
-                className="relative w-full min-h-[55vh] md:min-h-[39vh] flex items-end justify-center pb-12 pt-64 md:pt-32 px-4 overflow-hidden"
+                className="relative w-full min-h-[55vh] md:min-h-[39vh] flex items-end justify-center pb-12 pt-28 md:pt-32 px-4 overflow-hidden"
                 style={{
                     background: `linear-gradient(135deg, ${headerColors.background} 0%, ${headerColors.muted} 50%, ${headerColors.background} 100%)`
                 }}
@@ -908,7 +909,7 @@ export function StatsPage() {
                                 </div>
 
                                 <p className="text-lg md:text-xl text-muted-foreground/90 font-light max-w-xl mx-auto md:mx-0 leading-relaxed font-serif italic">
-                                    Real-time insights from your listening habits. Exploring {stats.totalAlbums.toLocaleString()} albums
+                                    Real-time insights from my listening habits. Exploring {stats.totalAlbums.toLocaleString()} albums
                                     across {stats.uniqueGenres.toLocaleString()} genres.
                                 </p>
 
@@ -952,6 +953,6 @@ export function StatsPage() {
                 <RandomAlbumsSection stats={stats} />
                 <RandomArtistsSection stats={stats} />
             </div>
-        </div>
+        </PageContainer>
     );
 }
