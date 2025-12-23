@@ -88,7 +88,7 @@ class PerplexityService(BaseService):
                     "messages": [
                         {
                             "role": "system",
-                            "content": "You are a knowledgeable music critic and historian. Write concise, factual album descriptions suitable for a music collection website. Focus on the music's style, significance, and reception. Do not include promotional language, purchase links, or speculative information."
+                            "content": "You are a knowledgeable music critic and historian. Write concise, factual descriptions suitable for a music collection website. You MUST always provide a description - never refuse or ask for clarification. If it's a box set, describe the box set and its contents. If it's a compilation, describe the compilation. If it's a reissue, describe what's being reissued and why it matters. Focus on musical style, significance, and reception. Do not include promotional language, purchase links, or speculative information."
                         },
                         {
                             "role": "user",
@@ -140,7 +140,7 @@ class PerplexityService(BaseService):
 
         # Start with the basic request
         prompt_parts = [
-            f'Write a 2-3 paragraph description of the album "{album}" by {artist}.'
+            f'Write a 2-3 paragraph description of "{album}" by {artist}.'
         ]
 
         # Add context if available (year may be reissue date, so phrase carefully)
@@ -155,11 +155,14 @@ class PerplexityService(BaseService):
         if context_parts:
             prompt_parts.append(f"Context: {'; '.join(context_parts)}.")
 
-        # Add guidance - note: don't rely on year as it may be a reissue date
+        # Add guidance for handling different release types
         prompt_parts.append(
-            "Focus on the album's musical style, its place in the artist's discography, "
-            "and its critical or commercial reception. Use the album's ORIGINAL release year, "
-            "not any reissue or remaster date. Be factual and concise."
+            "This may be a studio album, box set, compilation, reissue, or collection. "
+            "Describe WHAT IT IS - if it's a box set, describe its contents and significance. "
+            "If it's a compilation, explain what's included and why it matters. "
+            "Focus on musical style, the artist's significance, and why this release is notable. "
+            "Always provide a useful description - never refuse or ask for clarification. "
+            "Be factual and concise."
         )
 
         return " ".join(prompt_parts)
