@@ -5,7 +5,7 @@ import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import type { ColorPalette } from '@/lib/colorExtractor';
-import { getReadableTextColor, createGlowGradient } from '@/lib/color-utils';
+import { getReadableTextColor, createGlowGradient, lightenColor } from '@/lib/color-utils';
 import { getAlbumImageFromData, getArtistAvatarFromData, handleImageError } from '@/lib/image-utils';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import type { Album } from '@/types/album';
@@ -29,7 +29,10 @@ export function HeroSection({
 
   const createHeroBackground = (palette: ColorPalette | null) => {
     if (!palette) return 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)';
-    return `linear-gradient(135deg, ${palette.background} 0%, ${palette.muted} 50%, ${palette.background} 100%)`;
+    // Lighten colors by 50% to make the hero more subtle
+    const lightBg = lightenColor(palette.background, 50);
+    const lightMuted = lightenColor(palette.muted, 50);
+    return `linear-gradient(135deg, ${lightBg} 0%, ${lightMuted} 50%, ${lightBg} 100%)`;
   };
 
   const titleTextStyle = {
@@ -44,7 +47,7 @@ export function HeroSection({
 
   return (
     <motion.section
-      className="relative w-full min-h-[60vh] md:min-h-[500px] flex items-center justify-center pb-8 pt-24 md:pt-32 px-4 overflow-hidden md:-mt-32"
+      className="relative w-full min-h-[60vh] md:min-h-[500px] flex items-center justify-center pb-8 pt-24 md:pt-32 px-4 md:-mt-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
@@ -63,20 +66,21 @@ export function HeroSection({
             ...colorProperties
           }}
         >
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute inset-0 pointer-events-none">
             <div
               className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
               style={{
-                background: currentPalette ? `radial-gradient(circle at 20% 30%, ${currentPalette.accent} 0%, transparent 50%)` : 'none'
+                background: currentPalette ? `radial-gradient(circle at 20% 30%, ${lightenColor(currentPalette.accent, 40)} 0%, transparent 50%)` : 'none'
               }}
             />
             <div
               className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
               style={{
-                background: currentPalette ? `radial-gradient(circle at 80% 80%, ${currentPalette.accent} 0%, transparent 50%)` : 'none'
+                background: currentPalette ? `radial-gradient(circle at 80% 80%, ${lightenColor(currentPalette.accent, 40)} 0%, transparent 50%)` : 'none'
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            {/* Bottom fade to background */}
+            <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-background via-background/60 to-transparent" />
           </div>
         </motion.div>
       </AnimatePresence>
@@ -96,17 +100,10 @@ export function HeroSection({
                 whileHover={{ scale: 1.02 }}
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                <div
-                  className="absolute -inset-4 rounded-2xl opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
-                  style={{ background: currentPalette ? createGlowGradient(currentPalette, 'bold') : 'none' }}
-                />
                 <img
                   src={getAlbumImageFromData(currentFeatured.uri_release, 'hi-res')}
                   alt={currentFeatured.release_name}
                   className="relative w-full h-full rounded-xl shadow-2xl transition-transform duration-500 object-cover"
-                  style={{
-                    boxShadow: currentPalette ? `0 20px 40px -10px ${currentPalette.accent}60` : undefined
-                  }}
                   onError={handleImageError}
                   loading="eager"
                 />

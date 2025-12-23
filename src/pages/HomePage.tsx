@@ -339,17 +339,17 @@ export function HomePage() {
 
   return (
     <div className="space-y-16">
-      {appConfig.homepage.sectionOrder.map((sectionKey, index) => {
-        const SectionComponent = sectionComponents[sectionKey as keyof typeof sectionComponents];
-        // Hero gets full width, other sections get container
-        if (sectionKey === 'hero') {
-          return SectionComponent ? <div key={sectionKey}>{SectionComponent()}</div> : null;
-        }
-        return SectionComponent ? (
-          <div key={sectionKey} className="container mx-auto px-4">
-            {SectionComponent()}
-          </div>
-        ) : null;
+        {appConfig.homepage.sectionOrder.map((sectionKey) => {
+          const SectionComponent = sectionComponents[sectionKey as keyof typeof sectionComponents];
+          // Hero gets full width, other sections get container
+          if (sectionKey === 'hero') {
+            return SectionComponent ? <div key={sectionKey}>{SectionComponent()}</div> : null;
+          }
+          return SectionComponent ? (
+            <div key={sectionKey} className="container mx-auto px-4">
+              {SectionComponent()}
+            </div>
+          ) : null;
       })}
     </div>
   );
