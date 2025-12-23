@@ -17,6 +17,7 @@ import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
+import { useTheme } from '@/hooks/useTheme';
 import { getEnhancedTextColor, generateColorProperties, createHeroBackground, createGlowGradient, getAccessibleAccentColor } from '@/lib/color-utils';
 import { appConfig } from '@/config/app.config';
 
@@ -164,6 +165,9 @@ export function AlbumDetailPage() {
 
   // Load album colors using the album path
   const albumColors = useAlbumColorsWithFallback(albumPath);
+
+  // Get current theme for reactive color calculations
+  const theme = useTheme();
 
   // Check if URL needs sanitization and redirect if necessary
   useEffect(() => {
@@ -909,8 +913,8 @@ export function AlbumDetailPage() {
             );
           };
 
-          // Get accessible accent color for tracklist headers (needs good contrast on white)
-          const accessibleAccent = getAccessibleAccentColor(albumColors.accent);
+          // Get accessible accent color for tracklist headers (reactive to theme changes)
+          const accessibleAccent = getAccessibleAccentColor(albumColors.accent, 4.5, theme === 'dark');
 
           // Helper to render a side section
           const renderSide = (label: string, tracks: Track[], index: number) => (

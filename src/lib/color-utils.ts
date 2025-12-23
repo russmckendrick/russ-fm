@@ -353,40 +353,48 @@ export function getEnhancedTextColor(backgroundColor: string, albumColors: Album
 }
 
 /**
- * Get an accent color that has sufficient contrast against white/light backgrounds.
- * If the original accent has poor contrast, it will be progressively darkened.
+ * Get an accent color that has sufficient contrast against the current theme's background.
+ * - In light mode: darkens light colors for contrast against white
+ * - In dark mode: lightens dark colors for contrast against dark backgrounds
  * Useful for text elements displayed on the main content area (not the hero).
+ *
+ * @param accentColor - The original accent color
+ * @param minContrastRatio - Minimum contrast ratio required (default: 4.5 for WCAG AA)
+ * @param forDarkMode - Optional: explicitly set dark mode state (for reactive components)
  */
-export function getAccessibleAccentColor(accentColor: string, minContrastRatio: number = 4.5): string {
-  const whiteBackground = '#ffffff';
+export function getAccessibleAccentColor(accentColor: string, minContrastRatio: number = 4.5, forDarkMode?: boolean): string {
+  const darkMode = forDarkMode !== undefined ? forDarkMode : isDarkMode();
+  const background = darkMode ? '#0a0a0a' : '#ffffff';
   let currentColor = accentColor;
-  let currentContrast = getContrastRatio(currentColor, whiteBackground);
+  let currentContrast = getContrastRatio(currentColor, background);
 
   // If already has good contrast, return as-is
   if (currentContrast >= minContrastRatio) {
     return currentColor;
   }
 
-  // Progressively darken until we achieve the required contrast
-  // Start with small increments for subtle adjustment
-  let darkenAmount = 5;
+  // Adjust color based on theme
+  let adjustAmount = 5;
   let iterations = 0;
   const maxIterations = 20; // Prevent infinite loop
 
   while (currentContrast < minContrastRatio && iterations < maxIterations) {
-    currentColor = darkenColor(currentColor, darkenAmount);
-    currentContrast = getContrastRatio(currentColor, whiteBackground);
+    // In dark mode, lighten the color; in light mode, darken it
+    currentColor = darkMode
+      ? lightenColor(currentColor, adjustAmount)
+      : darkenColor(currentColor, adjustAmount);
+    currentContrast = getContrastRatio(currentColor, background);
     iterations++;
 
-    // If we're making slow progress, increase the darken amount
+    // If we're making slow progress, increase the adjustment amount
     if (iterations > 10 && currentContrast < minContrastRatio) {
-      darkenAmount = 10;
+      adjustAmount = 10;
     }
   }
 
-  // If we still don't have good contrast (very rare), fall back to a safe dark color
+  // If we still don't have good contrast, fall back to a safe color
   if (currentContrast < minContrastRatio) {
-    return '#555555';
+    return darkMode ? '#aaaaaa' : '#555555';
   }
 
   return currentColor;
