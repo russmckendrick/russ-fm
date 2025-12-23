@@ -19,15 +19,38 @@ class ConfigManager:
         """Load configuration from file and environment variables."""
         # Start with default configuration
         self.config = self._get_default_config()
-        
-        # Load from file if provided
-        if self.config_file:
-            file_config = self._load_from_file(self.config_file)
+
+        # Determine which config file to use
+        config_file_to_load = self.config_file
+
+        # Auto-detect config file if not explicitly provided
+        if not config_file_to_load:
+            config_file_to_load = self._find_config_file()
+
+        # Load from file if available
+        if config_file_to_load:
+            file_config = self._load_from_file(config_file_to_load)
             self._merge_config(self.config, file_config)
-        
+
         # Override with environment variables
         env_config = self._load_from_env()
         self._merge_config(self.config, env_config)
+
+    def _find_config_file(self) -> Optional[str]:
+        """Find a config file in standard locations."""
+        # Check common config file names in current directory
+        config_names = [
+            "config.json",
+            "config.yaml",
+            "config.yml",
+        ]
+
+        for name in config_names:
+            config_path = Path(name)
+            if config_path.exists():
+                return str(config_path)
+
+        return None
     
     def _get_default_config(self) -> Dict[str, Any]:
         """Get default configuration."""
