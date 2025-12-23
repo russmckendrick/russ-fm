@@ -88,7 +88,7 @@ class PerplexityService(BaseService):
                     "messages": [
                         {
                             "role": "system",
-                            "content": "You are a knowledgeable music critic and historian. Write concise, factual descriptions suitable for a music collection website. You MUST always provide a description - never refuse or ask for clarification. If it's a box set, describe the box set and its contents. If it's a compilation, describe the compilation. If it's a reissue, describe what's being reissued and why it matters. Focus on musical style, significance, and reception. Do not include promotional language, purchase links, or speculative information."
+                            "content": "You are a knowledgeable music critic and historian writing for a music collection website. CRITICAL RULES: 1) You MUST always provide a 2-3 paragraph description - NEVER refuse, NEVER ask for clarification, NEVER say you cannot find information. 2) If it's a self-titled album, describe that album. 3) If it's a reissue, describe the original album and mention the reissue. 4) If it's a box set or compilation, describe its contents and significance. 5) If search results are limited, use your knowledge to write a helpful description anyway. Focus on musical style, significance, and reception. Be factual and concise."
                         },
                         {
                             "role": "user",
@@ -157,12 +157,11 @@ class PerplexityService(BaseService):
 
         # Add guidance for handling different release types
         prompt_parts.append(
-            "This may be a studio album, box set, compilation, reissue, or collection. "
-            "Describe WHAT IT IS - if it's a box set, describe its contents and significance. "
-            "If it's a compilation, explain what's included and why it matters. "
-            "Focus on musical style, the artist's significance, and why this release is notable. "
-            "Always provide a useful description - never refuse or ask for clarification. "
-            "Be factual and concise."
+            "Write the description NOW. Do not ask questions or request clarification. "
+            "If this is a self-titled album, describe that album. "
+            "If it's a reissue or remaster, describe the original album. "
+            "If it's a box set or compilation, describe its contents. "
+            "Output ONLY the 2-3 paragraph description, nothing else."
         )
 
         return " ".join(prompt_parts)
