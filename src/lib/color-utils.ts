@@ -353,6 +353,46 @@ export function getEnhancedTextColor(backgroundColor: string, albumColors: Album
 }
 
 /**
+ * Get an accent color that has sufficient contrast against white/light backgrounds.
+ * If the original accent has poor contrast, it will be progressively darkened.
+ * Useful for text elements displayed on the main content area (not the hero).
+ */
+export function getAccessibleAccentColor(accentColor: string, minContrastRatio: number = 4.5): string {
+  const whiteBackground = '#ffffff';
+  let currentColor = accentColor;
+  let currentContrast = getContrastRatio(currentColor, whiteBackground);
+
+  // If already has good contrast, return as-is
+  if (currentContrast >= minContrastRatio) {
+    return currentColor;
+  }
+
+  // Progressively darken until we achieve the required contrast
+  // Start with small increments for subtle adjustment
+  let darkenAmount = 5;
+  let iterations = 0;
+  const maxIterations = 20; // Prevent infinite loop
+
+  while (currentContrast < minContrastRatio && iterations < maxIterations) {
+    currentColor = darkenColor(currentColor, darkenAmount);
+    currentContrast = getContrastRatio(currentColor, whiteBackground);
+    iterations++;
+
+    // If we're making slow progress, increase the darken amount
+    if (iterations > 10 && currentContrast < minContrastRatio) {
+      darkenAmount = 10;
+    }
+  }
+
+  // If we still don't have good contrast (very rare), fall back to a safe dark color
+  if (currentContrast < minContrastRatio) {
+    return '#555555';
+  }
+
+  return currentColor;
+}
+
+/**
  * Generate complementary colors from album palette
  */
 export function getComplementaryColors(colors: AlbumColorPalette) {

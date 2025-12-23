@@ -2,14 +2,14 @@
   "year": 2025,
   "isYearToDate": true,
   "summary": {
-    "totalReleases": 236,
-    "uniqueArtists": 181,
+    "totalReleases": 237,
+    "uniqueArtists": 182,
     "topGenre": "Rock",
     "topStyle": "Alternative Rock",
-    "avgPerMonth": 19.7,
+    "avgPerMonth": 19.8,
     "peakMonth": "May",
     "firstAddition": "2025-01-10",
-    "lastAddition": "2025-12-20",
+    "lastAddition": "2025-12-23",
     "projectedTotal": 243
   },
   "releases": [
@@ -11325,13 +11325,66 @@
           "All Media"
         ]
       }
+    },
+    {
+      "release": {
+        "release_name": "1993-2000",
+        "release_artist": "Monster Magnet",
+        "date_added": "2025-12-23",
+        "date_release_year": "2025-01-01",
+        "genre_names": [
+          "Hard Rock",
+          "Psychedelic Rock",
+          "Rock",
+          "Space Rock",
+          "Stoner Rock"
+        ],
+        "slug": "1993-2000-35970739",
+        "images": {
+          "hi-res": "/album/1993-2000-35970739/1993-2000-35970739-hi-res.jpg",
+          "medium": "/album/1993-2000-35970739/1993-2000-35970739-medium.jpg",
+          "avatar": "/album/1993-2000-35970739/1993-2000-35970739-avatar.jpg"
+        },
+        "artists": [
+          {
+            "name": "Monster Magnet",
+            "slug": "monster-magnet",
+            "images": {
+              "hi-res": "/artist/monster-magnet/monster-magnet-hi-res.jpg",
+              "medium": "/artist/monster-magnet/monster-magnet-medium.jpg",
+              "avatar": "/artist/monster-magnet/monster-magnet-avatar.jpg"
+            }
+          }
+        ],
+        "colors": {
+          "background": "#110d0a",
+          "foreground": "#ffffff",
+          "accent": "#f2ed01",
+          "muted": "#110d0a"
+        }
+      },
+      "albumDetail": {
+        "styles": [
+          "Stoner Rock",
+          "Psychedelic Rock",
+          "Hard Rock",
+          "Space Rock"
+        ],
+        "formats": [
+          "Box Set",
+          "Vinyl",
+          "Vinyl",
+          "Vinyl",
+          "Vinyl"
+        ]
+      }
     }
   ],
   "insights": {
     "genres": [
       {
         "name": "Rock",
-        "count": 191,
+        "count": 192,
         "percentage": 81
       },
       {
@@ -11585,7 +11638,7 @@
     "decades": [
       {
         "name": "2020s",
-        "count": 106
+        "count": 107
       },
       {
         "name": "2010s",
@@ -19821,7 +19874,7 @@
       },
       {
         "month": "December",
-        "count": 16,
+        "count": 17,
         "releases": [
           {
             "release_name": "Let Your Dim Light Shine",
@@ -20406,6 +20459,42 @@
               "accent": "#efaf4c",
               "muted": "#7c4235"
             }
+          },
+          {
+            "release_name": "1993-2000",
+            "release_artist": "Monster Magnet",
+            "date_added": "2025-12-23",
+            "date_release_year": "2025-01-01",
+            "genre_names": [
+              "Hard Rock",
+              "Psychedelic Rock",
+              "Rock",
+              "Space Rock",
+              "Stoner Rock"
+            ],
+            "slug": "1993-2000-35970739",
+            "images": {
+              "hi-res": "/album/1993-2000-35970739/1993-2000-35970739-hi-res.jpg",
+              "medium": "/album/1993-2000-35970739/1993-2000-35970739-medium.jpg",
+              "avatar": "/album/1993-2000-35970739/1993-2000-35970739-avatar.jpg"
+            },
+            "artists": [
+              {
+                "name": "Monster Magnet",
+                "slug": "monster-magnet",
+                "images": {
+                  "hi-res": "/artist/monster-magnet/monster-magnet-hi-res.jpg",
+                  "medium": "/artist/monster-magnet/monster-magnet-medium.jpg",
+                  "avatar": "/artist/monster-magnet/monster-magnet-avatar.jpg"
+                }
+              }
+            ],
+            "colors": {
+              "background": "#110d0a",
+              "foreground": "#ffffff",
+              "accent": "#f2ed01",
+              "muted": "#110d0a"
+            }
           }
         ],
         "dominantColor": {
@@ -20571,10 +20660,10 @@
       "muted": "#944823"
     },
     "secondary": {
-      "background": "#141015",
+      "background": "#110d0a",
       "foreground": "#ffffff",
-      "accent": "#efaf4c",
-      "muted": "#7c4235"
+      "accent": "#f2ed01",
+      "muted": "#110d0a"
     },
     "monthlyPalettes": [
       {

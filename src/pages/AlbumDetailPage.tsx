@@ -17,7 +17,7 @@ import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
-import { getEnhancedTextColor, generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
+import { getEnhancedTextColor, generateColorProperties, createHeroBackground, createGlowGradient, getAccessibleAccentColor } from '@/lib/color-utils';
 import { appConfig } from '@/config/app.config';
 
 interface Album {
@@ -909,6 +909,9 @@ export function AlbumDetailPage() {
             );
           };
 
+          // Get accessible accent color for tracklist headers (needs good contrast on white)
+          const accessibleAccent = getAccessibleAccentColor(albumColors.accent);
+
           // Helper to render a side section
           const renderSide = (label: string, tracks: Track[], index: number) => (
             <div key={index}>
@@ -916,7 +919,7 @@ export function AlbumDetailPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <span
                     className="text-sm font-semibold uppercase tracking-wider"
-                    style={{ color: albumColors.accent }}
+                    style={{ color: accessibleAccent }}
                   >
                     {label}
                   </span>
@@ -947,7 +950,7 @@ export function AlbumDetailPage() {
                       <div className="mb-6">
                         <span
                           className="text-lg font-bold"
-                          style={{ color: albumColors.accent }}
+                          style={{ color: accessibleAccent }}
                         >
                           {lpGroup.lpLabel}
                         </span>
