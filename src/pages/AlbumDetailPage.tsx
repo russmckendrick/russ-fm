@@ -1018,19 +1018,48 @@ export function AlbumDetailPage() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold mb-4 text-foreground">About {artist.name}</h3>
-                    <div className="prose dark:prose-invert text-muted-foreground leading-relaxed">
-                      {(() => {
-                        let bio = artist.biography?.replace(/<[^>]*>/g, '').trim();
-                        const readMoreIndex = bio?.indexOf('Read more on Last.fm');
-                        if (readMoreIndex !== -1) bio = bio?.substring(0, readMoreIndex).trim();
-                        const wikiIndex = bio?.indexOf('Full Wikipedia article:');
-                        if (wikiIndex !== -1) bio = bio?.substring(0, wikiIndex).trim();
+                    {(() => {
+                      let bio = artist.biography?.replace(/<[^>]*>/g, '').trim();
+                      const readMoreIndex = bio?.indexOf('Read more on Last.fm');
+                      if (readMoreIndex !== -1) bio = bio?.substring(0, readMoreIndex).trim();
+                      const wikiIndex = bio?.indexOf('Full Wikipedia article:');
+                      if (wikiIndex !== -1) bio = bio?.substring(0, wikiIndex).trim();
 
-                        return bio?.split('\n').filter(p => p.trim()).slice(0, 3).map((p, i) => (
-                          <p key={i} className="mb-4">{p.trim()}</p>
-                        ));
-                      })()}
-                    </div>
+                      const fullText = bio || '';
+                      const isLong = fullText.length > 500;
+                      const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
+
+                      // For long bios, truncate at word boundary near 500 chars
+                      let displayText = fullText;
+                      if (isLong) {
+                        const truncated = fullText.substring(0, 500);
+                        const lastSpace = truncated.lastIndexOf(' ');
+                        displayText = lastSpace > 400 ? truncated.substring(0, lastSpace) : truncated;
+                      }
+
+                      const paragraphs = displayText.split('\n').filter(p => p.trim());
+
+                      return (
+                        <div className="relative">
+                          <div className={`prose dark:prose-invert text-muted-foreground leading-relaxed ${isLong ? 'max-h-44 overflow-hidden' : ''}`}>
+                            {paragraphs.map((p, i) => (
+                              <p key={i} className="mb-4">{p.trim()}</p>
+                            ))}
+                          </div>
+                          {isLong && (
+                            <>
+                              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent pointer-events-none" />
+                              <Link
+                                to={artistUri}
+                                className="relative block mt-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                              >
+                                Read more about {artist.name} →
+                              </Link>
+                            </>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </div>
                 </div>
               )
