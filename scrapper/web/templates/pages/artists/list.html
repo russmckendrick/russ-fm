@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div x-data="{
+    artists: [],
+    total: 0,
+    page: 1,
+    perPage: 20,
+    totalPages: 1,
+    search: '',
+    loading: true,
+
+    async fetchArtists() {
+        this.loading = true;
+        const params = new URLSearchParams({
+            page: this.page,
+            per_page: this.perPage,
+            ...(this.search && { search: this.search })
+        });
+        const response = await fetch('/api/v1/artists?' + params);
+        const data = await response.json();
+        this.artists = data.items;
+        this.total = data.total;
+        this.totalPages = data.total_pages;
+        this.loading = false;
+    }
+}" x-init="fetchArtists()">
+
+    <!-- Header -->
+    <div class="mb-8">
+        <h1 class="text-2xl font-bold text-gray-900">Artists</h1>
+        <p class="mt-1 text-gray-500">
+            <span x-text="total"></span> artists in database
+        </p>
+    </div>
+
+    <!-- Search -->
+    <div class="mb-6">
+        <div class="relative max-w-md">
+            <input type="text"
+                   x-model="search"
+                   @input.debounce.300ms="page = 1; fetchArtists()"
+                   placeholder="Search artists..."
+                   class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <i data-lucide="search" class="absolute left-3 top-2.5 w-5 h-5 text-gray-400"></i>
+        </div>
+    </div>
+
+    <!-- Loading state -->
+    <div x-show="loading" class="text-center py-12">
+        <i data-lucide="loader-2" class="w-8 h-8 mx-auto text-blue-500 animate-spin"></i>
+        <p class="mt-2 text-gray-500">Loading artists...</p>
+    </div>
+
+    <!-- Artists grid -->
+    <div x-show="!loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <template x-for="artist in artists" :key="artist.id">
+            <a :href="'/admin/artists/' + encodeURIComponent(artist.name)"
+               class="bg-white rounded-lg shadow overflow-hidden card-hover">
+                <div class="aspect-square bg-gray-200 relative">
+                    <img x-show="artist.avatar_url"
+                         :src="artist.avatar_url"
+                         :alt="artist.name"
+                         class="w-full h-full object-cover">
+                    <div x-show="!artist.avatar_url"
+                         class="absolute inset-0 flex items-center justify-center text-gray-400">
+                        <i data-lucide="user" class="w-16 h-16"></i>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 truncate" x-text="artist.name"></h3>
+                    <p class="text-sm text-gray-500 mt-1">
+                        <span x-text="artist.release_count"></span> releases
+                    </p>
+                    <div class="mt-3 flex items-center gap-2">
+                        <span x-show="artist.has_apple_music" class="w-5 h-5 text-pink-500" title="Apple Music">
+                            <i data-lucide="apple" class="w-4 h-4"></i>
+                        </span>
+                        <span x-show="artist.has_spotify" class="w-5 h-5 text-green-500" title="Spotify">
+                            <i data-lucide="music" class="w-4 h-4"></i>
+                        </span>
+                        <span x-show="artist.has_biography" class="w-5 h-5 text-blue-500" title="Has biography">
+                            <i data-lucide="file-text" class="w-4 h-4"></i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </template>
+    </div>
+
+    <!-- Empty state -->
+    <div x-show="!loading && artists.length === 0" class="text-center py-12">
+        <i data-lucide="users" class="w-12 h-12 mx-auto text-gray-300"></i>
+        <p class="mt-2 text-gray-500">No artists found</p>
+    </div>
+
+    <!-- Pagination -->
+    <div x-show="!loading && totalPages > 1" class="mt-8 flex items-center justify-between">
+        <p class="text-sm text-gray-500">
+            Showing <span x-text="(page - 1) * perPage + 1"></span> to <span x-text="Math.min(page * perPage, total)"></span> of <span x-text="total"></span>
+        </p>
+        <div class="flex items-center gap-2">
+            <button @click="page = Math.max(1, page - 1); fetchArtists()"
+                    :disabled="page === 1"
+                    class="px-3 py-2 border rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <span class="px-3 py-2 text-sm">
+                Page <span x-text="page"></span> of <span x-text="totalPages"></span>
+            </span>
+            <button @click="page = Math.min(totalPages, page + 1); fetchArtists()"
+                    :disabled="page === totalPages"
+                    class="px-3 py-2 border rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+<!-- Mobile menu button -->
+<div class="lg:hidden fixed top-0 left-0 right-0 z-40 bg-white border-b px-4 py-3 flex items-center justify-between">
+    <span class="text-lg font-semibold text-gray-900">Music Collection Manager</span>
+    <button @click="sidebarOpen = !sidebarOpen" class="p-2 rounded-md text-gray-600 hover:bg-gray-100">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+</div>
+
+<!-- Sidebar backdrop (mobile) -->
+<div x-show="sidebarOpen" @click="sidebarOpen = false"
+     class="fixed inset-0 bg-gray-600 bg-opacity-75 z-40 lg:hidden"
+     x-transition:enter="transition-opacity ease-linear duration-300"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition-opacity ease-linear duration-300"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0">
+</div>
+
+<!-- Sidebar -->
+<aside :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
+       class="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
+    <div class="flex flex-col h-full">
+        <!-- Logo -->
+        <div class="flex items-center gap-3 h-16 px-6 border-b border-gray-800">
+            <i data-lucide="disc-3" class="w-8 h-8 text-blue-400"></i>
+            <span class="text-lg font-semibold text-white">MCM Admin</span>
+        </div>
+
+        <!-- Navigation links -->
+        <nav class="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
+            <a href="/admin" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Dashboard' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="/admin/releases" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Releases' or page_title == 'Release Details' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="disc" class="w-5 h-5"></i>
+                <span>Releases</span>
+            </a>
+
+            <a href="/admin/collection" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Collection' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="library" class="w-5 h-5"></i>
+                <span>Collection</span>
+            </a>
+
+            <a href="/admin/artists" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Artists' or page_title == 'Artist Details' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="users" class="w-5 h-5"></i>
+                <span>Artists</span>
+            </a>
+
+            <a href="/admin/descriptions" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Descriptions' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="file-text" class="w-5 h-5"></i>
+                <span>Descriptions</span>
+            </a>
+
+            <a href="/admin/tasks" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Tasks' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="list-todo" class="w-5 h-5"></i>
+                <span>Tasks</span>
+            </a>
+
+            <div class="border-t border-gray-800 my-4"></div>
+
+            <a href="/admin/settings" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-300 hover:bg-gray-800 hover:text-white
+                {% if page_title == 'Settings' %}bg-gray-800 text-white{% endif %}">
+                <i data-lucide="settings" class="w-5 h-5"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <!-- User info -->
+        <div class="p-4 border-t border-gray-800">
+            <div class="flex items-center gap-3 text-gray-400">
+                <i data-lucide="user" class="w-5 h-5"></i>
+                <span class="text-sm">{{ user }}</span>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<!-- Spacer for mobile header -->
+<div class="h-14 lg:hidden"></div>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ page_title }} - Music Collection Manager{% endblock %}</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- htmx -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.13.3/dist/cdn.min.js"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen" x-data="{ sidebarOpen: false }">
+    <!-- Navigation -->
+    {% include 'partials/_navigation.html' %}
+
+    <!-- Main content -->
+    <div class="lg:pl-64">
+        <main class="py-6 px-4 sm:px-6 lg:px-8">
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <!-- Interactive Modal -->
+    <div id="interactive-modal" class="modal-overlay hidden" x-cloak>
+        <div class="modal-content">
+            <h3 class="text-lg font-semibold mb-4" id="modal-prompt"></h3>
+            <div id="modal-options"></div>
+            <button onclick="hideInteractiveModal()" class="mt-4 text-sm text-gray-500 hover:text-gray-700">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toast-container" class="fixed bottom-4 right-4 z-50"></div>
+
+    <!-- Custom scripts -->
+    <script src="/static/js/app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Initialize icons after htmx swaps
+        document.body.addEventListener('htmx:afterSwap', function() {
+            lucide.createIcons();
+        });
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

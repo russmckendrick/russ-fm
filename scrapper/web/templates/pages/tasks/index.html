@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div x-data="{
+    tasks: [],
+    loading: true,
+    selectedTask: null,
+    logs: [],
+
+    async fetchTasks() {
+        this.loading = true;
+        const response = await fetch('/api/v1/tasks?limit=50');
+        const data = await response.json();
+        this.tasks = data.tasks;
+        this.loading = false;
+    },
+
+    async fetchLogs(taskId) {
+        const response = await fetch('/api/v1/tasks/' + taskId + '/logs?limit=100');
+        const data = await response.json();
+        this.logs = data.logs.reverse();
+    },
+
+    async cancelTask(taskId) {
+        if (!confirm('Are you sure you want to cancel this task?')) return;
+        try {
+            const response = await fetch('/api/v1/tasks/' + taskId, { method: 'DELETE' });
+            if (response.ok) {
+                showToast('Task cancelled', 'success');
+                this.fetchTasks();
+            }
+        } catch (e) {
+            showToast('Failed to cancel task', 'error');
+        }
+    },
+
+    getStatusClass(status) {
+        const classes = {
+            'pending': 'bg-yellow-100 text-yellow-800',
+            'running': 'bg-blue-100 text-blue-800',
+            'awaiting_input': 'bg-purple-100 text-purple-800',
+            'completed': 'bg-green-100 text-green-800',
+            'failed': 'bg-red-100 text-red-800',
+            'cancelled': 'bg-gray-100 text-gray-800'
+        };
+        return classes[status] || 'bg-gray-100 text-gray-800';
+    },
+
+    formatDate(dateString) {
+        if (!dateString) return 'N/A';
+        return new Date(dateString).toLocaleString();
+    },
+
+    isActive(status) {
+        return ['pending', 'running', 'awaiting_input'].includes(status);
+    }
+}" x-init="fetchTasks(); setInterval(() => fetchTasks(), 5000)">
+
+    <!-- Header -->
+    <div class="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-900">Tasks</h1>
+            <p class="mt-1 text-gray-500">Monitor and manage background tasks</p>
+        </div>
+        <button @click="fetchTasks()" class="px-4 py-2 border rounded-lg hover:bg-gray-50">
+            <i data-lucide="refresh-cw" class="w-4 h-4 inline mr-2"></i>
+            Refresh
+        </button>
+    </div>
+
+    <!-- Loading state -->
+    <div x-show="loading" class="text-center py-12">
+        <i data-lucide="loader-2" class="w-8 h-8 mx-auto text-blue-500 animate-spin"></i>
+        <p class="mt-2 text-gray-500">Loading tasks...</p>
+    </div>
+
+    <!-- Tasks list -->
+    <div x-show="!loading" class="space-y-4">
+        <!-- Active tasks -->
+        <div x-show="tasks.filter(t => isActive(t.status)).length > 0" class="bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b">
+                <h2 class="text-lg font-semibold text-gray-900">Active Tasks</h2>
+            </div>
+            <div class="divide-y">
+                <template x-for="task in tasks.filter(t => isActive(t.status))" :key="task.task_id">
+                    <div class="p-6">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-3">
+                                    <span class="font-medium text-gray-900" x-text="task.task_type.replace(/_/g, ' ')"></span>
+                                    <span :class="getStatusClass(task.status)" class="px-2 py-1 text-xs rounded-full" x-text="task.status"></span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1" x-text="task.message || 'Waiting...'"></p>
+                                <p class="text-xs text-gray-400 mt-1">Started: <span x-text="formatDate(task.started_at)"></span></p>
+                            </div>
+                            <button @click="cancelTask(task.task_id)"
+                                    class="px-3 py-1.5 text-sm text-red-600 hover:bg-red-50 rounded">
+                                Cancel
+                            </button>
+                        </div>
+
+                        <div x-show="task.status === 'running'" class="mt-4">
+                            <div class="flex justify-between text-sm text-gray-600 mb-1">
+                                <span>Progress</span>
+                                <span x-text="Math.round(task.progress) + '%'"></span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-500 h-2.5 rounded-full transition-all duration-300"
+                                     :style="'width: ' + task.progress + '%'"></div>
+                            </div>
+                        </div>
+
+                        <div x-show="task.awaiting_input" class="mt-4 p-4 bg-purple-50 rounded-lg">
+                            <p class="text-sm text-purple-700 font-medium">
+                                <i data-lucide="alert-circle" class="w-4 h-4 inline mr-1"></i>
+                                This task requires user input
+                            </p>
+                            <p class="text-sm text-purple-600 mt-1" x-text="task.input_prompt"></p>
+                        </div>
+
+                        <!-- Logs toggle -->
+                        <div class="mt-4">
+                            <button @click="selectedTask = selectedTask === task.task_id ? null : task.task_id; if(selectedTask) fetchLogs(task.task_id)"
+                                    class="text-sm text-blue-600 hover:text-blue-800">
+                                <span x-text="selectedTask === task.task_id ? 'Hide logs' : 'Show logs'"></span>
+                            </button>
+                            <div x-show="selectedTask === task.task_id" class="mt-3 p-3 bg-gray-900 rounded text-xs text-gray-300 log-container">
+                                <template x-for="log in logs" :key="log.timestamp">
+                                    <div class="py-1">
+                                        <span class="text-gray-500" x-text="new Date(log.timestamp).toLocaleTimeString()"></span>
+                                        <span :class="'log-' + log.level" x-text="'[' + log.level.toUpperCase() + ']'"></span>
+                                        <span x-text="log.message"></span>
+                                    </div>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+        <!-- Completed tasks -->
+        <div class="bg-white rounded-lg shadow">
+            <div class="px-6 py-4 border-b">
+                <h2 class="text-lg font-semibold text-gray-900">Recent Tasks</h2>
+            </div>
+
+            <div x-show="tasks.filter(t => !isActive(t.status)).length === 0" class="p-12 text-center text-gray-500">
+                No completed tasks
+            </div>
+
+            <div class="divide-y">
+                <template x-for="task in tasks.filter(t => !isActive(t.status))" :key="task.task_id">
+                    <div class="px-6 py-4 hover:bg-gray-50">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <div class="flex items-center gap-3">
+                                    <span class="font-medium text-gray-900" x-text="task.task_type.replace(/_/g, ' ')"></span>
+                                    <span :class="getStatusClass(task.status)" class="px-2 py-1 text-xs rounded-full" x-text="task.status"></span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1" x-text="task.message || task.error || ''"></p>
+                                <p class="text-xs text-gray-400 mt-1">
+                                    Completed: <span x-text="formatDate(task.completed_at)"></span>
+                                </p>
+                            </div>
+                            <button @click="selectedTask = selectedTask === task.task_id ? null : task.task_id; if(selectedTask) fetchLogs(task.task_id)"
+                                    class="text-sm text-gray-500 hover:text-gray-700">
+                                Logs
+                            </button>
+                        </div>
+
+                        <div x-show="task.error" class="mt-3 p-3 bg-red-50 rounded text-sm text-red-700">
+                            <span x-text="task.error"></span>
+                        </div>
+
+                        <div x-show="selectedTask === task.task_id" class="mt-3 p-3 bg-gray-900 rounded text-xs text-gray-300 log-container">
+                            <template x-for="log in logs" :key="log.timestamp">
+                                <div class="py-1">
+                                    <span class="text-gray-500" x-text="new Date(log.timestamp).toLocaleTimeString()"></span>
+                                    <span :class="'log-' + log.level" x-text="'[' + log.level.toUpperCase() + ']'"></span>
+                                    <span x-text="log.message"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

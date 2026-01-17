@@ -1,0 +1,12 @@
+<!-- Progress Bar Partial -->
+<div class="w-full">
+    <div class="flex justify-between text-sm text-gray-600 mb-1">
+        <span>{{ label | default('Progress') }}</span>
+        <span>{{ progress | default(0) | round }}%</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5">
+        <div class="bg-{{ color | default('blue') }}-500 h-2.5 rounded-full progress-bar transition-all duration-300"
+             style="width: {{ progress | default(0) }}%">
+        </div>
+    </div>
+</div>
