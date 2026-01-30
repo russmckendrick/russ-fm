@@ -269,10 +269,14 @@ export function AlbumDetailPage() {
         const pathMatch = albumPath?.match(/^(.+)-(\d+)$/);
         if (pathMatch) {
           const [, , discogsId] = pathMatch;
-          const sanitizedAlbumName = sanitizeFolderName(item.release_name);
-          const expectedPath = `${sanitizedAlbumName}-${discogsId}`;
-          if (albumPath === expectedPath) {
-            return true;
+          // Verify the item's Discogs ID matches the one from the URL
+          const itemDiscogsId = item.uri_release.match(/(\d+)/)?.[1];
+          if (itemDiscogsId === discogsId) {
+            const sanitizedAlbumName = sanitizeFolderName(item.release_name);
+            const expectedPath = `${sanitizedAlbumName}-${discogsId}`;
+            if (albumPath === expectedPath) {
+              return true;
+            }
           }
         }
 
