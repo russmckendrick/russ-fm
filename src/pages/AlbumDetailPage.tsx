@@ -990,7 +990,7 @@ export function AlbumDetailPage() {
         })()}
 
         {/* Music Player */}
-        {detailedAlbum && (
+        {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
           <section className="py-12">
             <h3 className="text-2xl font-bold mb-8 text-foreground">Listen to {detailedAlbum.title}</h3>
             <MusicPlayerSection album={detailedAlbum} />
