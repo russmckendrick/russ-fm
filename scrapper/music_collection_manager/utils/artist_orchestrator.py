@@ -480,19 +480,26 @@ class ArtistDataOrchestrator:
                 # If service was skipped or returned no data, clear TheAudioDB metadata
                 self.logger.info(f"TheAudioDB data not available, clearing TheAudioDB metadata for {artist_name}")
                 artist.raw_data["theaudiodb"] = {}
+                if self.interactive_mode:
+                    # Clear cached biography when user skips TheAudioDB in interactive mode
+                    artist.biography = None
         
-        # Enrich with Wikipedia (fallback for biography)
-        if "wikipedia" in self.services and not artist.biography:
+        # Enrich with Wikipedia (fallback for biography, always run in interactive mode for URL selection)
+        if "wikipedia" in self.services and (not artist.biography or self.interactive_mode):
             wiki_data = self._get_wikipedia_artist_data(artist_name)
             if wiki_data:
                 if isinstance(wiki_data, dict):
-                    if wiki_data.get("extract"):
+                    if wiki_data.get("extract") and not artist.biography:
                         artist.biography = wiki_data["extract"]
                     if wiki_data.get("url"):
                         artist.wikipedia_url = wiki_data["url"]
                 elif hasattr(wiki_data, "extract"):
-                    artist.biography = wiki_data.extract
+                    if not artist.biography:
+                        artist.biography = wiki_data.extract
                     artist.wikipedia_url = wiki_data.url
+            elif self.interactive_mode:
+                # User explicitly skipped Wikipedia, clear any cached URL
+                artist.wikipedia_url = None
 
         # Enrich with Discogs
         if "discogs" in self.services:
@@ -637,17 +644,17 @@ class ArtistDataOrchestrator:
         try:
             service = self.services["theaudiodb"]
             
-            # Try MusicBrainz ID first if available
-            if musicbrainz_id:
+            # Try MusicBrainz ID first if available (skip in interactive mode to allow user selection)
+            if musicbrainz_id and not self.interactive_mode:
                 self.logger.info(f"🎵 TheAudioDB: Searching by MusicBrainz ID: {musicbrainz_id}")
                 artist_data = service.get_artist_by_musicbrainz_id(musicbrainz_id)
                 if artist_data:
                     # Only get artist data, no albums or music videos
                     return service.create_artist_enrichment(artist_data, None, None)
-            
-            # Fall back to name search
+
+            # Fall back to name search (or primary search in interactive mode)
             search_results = service.search_artist(artist_name)
-            
+
             if self.interactive_mode:
                 selected_match = self._interactive_select_artist_match("TheAudioDB", search_results, artist_name)
                 if selected_match:
