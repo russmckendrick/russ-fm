@@ -32,6 +32,7 @@ class MusicDataOrchestrator:
         self.search_override = None
         self.custom_cover = None
         self.preferred_image_source = None
+        self.perplexity_context = None  # Optional free-text hint for Perplexity album description
         
         # Initialize image manager with configurable path
         data_path = config.get("data", {}).get("path", "data")
@@ -64,6 +65,11 @@ class MusicDataOrchestrator:
     def set_preferred_image_source(self, source: str):
         """Set a preferred image source for album artwork."""
         self.preferred_image_source = source
+
+    def set_perplexity_context(self, context: str):
+        """Set free-text context hint to guide Perplexity album description generation."""
+        self.perplexity_context = context
+        self.logger.info(f"Perplexity context set: {context}")
     
     def _initialize_services(self):
         """Initialize all available services."""
@@ -336,7 +342,8 @@ class MusicDataOrchestrator:
                     release.title,
                     release.year,
                     release.genres,
-                    release.labels
+                    release.labels,
+                    context=self.perplexity_context
                 )
 
                 if perplexity_data:
@@ -650,7 +657,8 @@ class MusicDataOrchestrator:
         album: str,
         year: Optional[int] = None,
         genres: Optional[List[str]] = None,
-        labels: Optional[List[str]] = None
+        labels: Optional[List[str]] = None,
+        context: Optional[str] = None
     ) -> Optional[Dict[str, Any]]:
         """Get album description from Perplexity AI."""
         try:
@@ -660,7 +668,8 @@ class MusicDataOrchestrator:
                 album=album,
                 year=year,
                 genres=genres,
-                labels=labels
+                labels=labels,
+                context=context
             )
 
         except Exception as e:

@@ -16,6 +16,7 @@ from ..services.spotify import SpotifyService
 from ..services.lastfm import LastFmService
 from ..services.wikipedia import WikipediaService
 from ..services.theaudiodb import TheAudioDBService
+from ..services.perplexity import PerplexityService
 from .image_manager import ImageManager
 from .database import DatabaseManager
 from .serializers import ArtistSerializer
@@ -150,6 +151,7 @@ class ArtistDataOrchestrator:
         self.interactive_mode = False
         self.custom_image = None
         self.preferred_image_source = None
+        self.perplexity_context = None  # Optional free-text hint for Perplexity biography generation
         self.enabled_services = enabled_services  # If None, all services are enabled
         self.add_services = add_services  # Services to add to existing data
         
@@ -224,6 +226,14 @@ class ArtistDataOrchestrator:
                 self.logger.info("TheAudioDB service initialized")
             except Exception as e:
                 self.logger.warning(f"Failed to initialize TheAudioDB service: {str(e)}")
+
+        # Initialize Perplexity service
+        if self._is_service_enabled("perplexity") and self.config.get("perplexity", {}).get("api_key"):
+            try:
+                self.services["perplexity"] = PerplexityService(self.config.get("perplexity", {}), logger=self.logger)
+                self.logger.info("Perplexity service initialized")
+            except Exception as e:
+                self.logger.warning(f"Failed to initialize Perplexity service: {str(e)}")
     
     def _is_service_enabled(self, service_name: str) -> bool:
         """Check if a service is enabled based on the enabled_services or add_services list."""
@@ -246,6 +256,11 @@ class ArtistDataOrchestrator:
         """Set a custom image URL to override the default artist image."""
         self.custom_image = image_url
     
+    def set_perplexity_context(self, context: str):
+        """Set free-text context hint to guide Perplexity biography generation."""
+        self.perplexity_context = context
+        self.logger.info(f"Perplexity context set: {context}")
+
     def set_preferred_image_source(self, source: str):
         """Set preferred image source priority."""
         valid_sources = ['apple_music', 'spotify', 'theaudiodb', 'discogs', 'v1']
@@ -285,7 +300,23 @@ class ArtistDataOrchestrator:
         else:
             artist = Artist(name=artist_name)
             self.logger.info(f"Created new artist: {artist.name}, discogs_id: {artist.discogs_id}")
-        
+
+        # If Perplexity is the only add_service and the artist is brand new (no cached data),
+        # run full enrichment first so Perplexity has genre/service context to work with.
+        if (
+            self.add_services is not None
+            and "perplexity" in self.add_services
+            and not cached_artist
+            and not existing_artist
+        ):
+            self.logger.info(
+                f"New artist with --perplexity: running full enrichment first to gather context"
+            )
+            saved_add_services = self.add_services
+            self.add_services = None  # Temporarily disable minimal mode
+            artist = self.enrich_artist(artist)
+            self.add_services = saved_add_services  # Restore so Perplexity block runs next
+
         # Enrich with data from all services
         artist = self.enrich_artist(artist)
         
@@ -310,6 +341,19 @@ class ArtistDataOrchestrator:
             # Make a copy of the existing artist to avoid any modifications
             original_raw_data = artist.raw_data.copy()
             
+            # Add Perplexity biography if requested
+            if "perplexity" in self.add_services and "perplexity" in self.services:
+                self.logger.info(f"Fetching Perplexity biography for {artist_name}")
+                perplexity_data = self._get_perplexity_artist_biography(
+                    artist_name, artist.genres, context=self.perplexity_context
+                )
+                if perplexity_data:
+                    artist.raw_data["perplexity"] = perplexity_data
+                    artist.biography = perplexity_data["biography"]
+                    self.logger.info(f"✅ Added Perplexity biography for {artist_name}")
+                else:
+                    self.logger.info(f"❌ No Perplexity biography generated for {artist_name}")
+
             # Only add raw TheAudioDB data - don't touch ANYTHING else
             if "theaudiodb" in self.add_services and "theaudiodb" in self.services:
                 self.logger.info(f"Fetching TheAudioDB raw data for {artist_name}")
@@ -501,6 +545,16 @@ class ArtistDataOrchestrator:
                 # User explicitly skipped Wikipedia, clear any cached URL
                 artist.wikipedia_url = None
 
+        # Enrich with Perplexity (last-resort biography fallback when no other source found)
+        if "perplexity" in self.services and not artist.biography:
+            perplexity_data = self._get_perplexity_artist_biography(
+                artist_name, artist.genres, context=self.perplexity_context
+            )
+            if perplexity_data:
+                artist.raw_data["perplexity"] = perplexity_data
+                artist.biography = perplexity_data["biography"]
+                self.logger.info(f"Set biography from Perplexity for {artist_name}")
+
         # Enrich with Discogs
         if "discogs" in self.services:
             discogs_data = self._get_discogs_artist_data(artist)
@@ -639,6 +693,15 @@ class ArtistDataOrchestrator:
         
         return None
     
+    def _get_perplexity_artist_biography(self, artist_name: str, genres: Optional[List[str]] = None, context: Optional[str] = None) -> Optional[Dict[str, Any]]:
+        """Generate an artist biography using Perplexity AI."""
+        try:
+            service = self.services["perplexity"]
+            return service.generate_artist_biography(artist_name, genres=genres, context=context)
+        except Exception as e:
+            self.logger.warning(f"Failed to get Perplexity biography for {artist_name}: {str(e)}")
+        return None
+
     def _get_theaudiodb_artist_data(self, artist_name: str, musicbrainz_id: Optional[str] = None) -> Optional[ArtistTheAudioDBData]:
         """Get TheAudioDB data for an artist."""
         try:

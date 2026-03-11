@@ -29,7 +29,7 @@ class BaseCommand:
 class ReleaseCommand(BaseCommand):
     """Command for handling single release operations."""
     
-    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False, prefer: Optional[str] = None):
+    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False, prefer: Optional[str] = None, perplexity_context: Optional[str] = None):
         """Execute the release command."""
         try:
             # Initialize orchestrator
@@ -86,7 +86,12 @@ class ReleaseCommand(BaseCommand):
             if prefer:
                 orchestrator.set_preferred_image_source(prefer)
                 self.console.print(f"[blue]Preferred image source set to: {prefer}[/blue]")
-            
+
+            # Set Perplexity context if provided
+            if perplexity_context:
+                orchestrator.set_perplexity_context(perplexity_context)
+                self.console.print(f"[blue]Perplexity context: {perplexity_context}[/blue]")
+
             self.console.print(f"[blue]Fetching release data for Discogs ID: {discogs_id}[/blue]")
             
             # Get release data

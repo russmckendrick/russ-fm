@@ -1,4 +1,4 @@
-"""Perplexity AI service for generating album descriptions."""
+"""Perplexity AI service for generating album descriptions and artist biographies."""
 
 import logging
 from typing import Dict, Any, Optional
@@ -9,7 +9,7 @@ from ..base.exceptions import APIError, AuthenticationError
 
 
 class PerplexityService(BaseService):
-    """Service for generating album descriptions using Perplexity AI."""
+    """Service for generating album descriptions and artist biographies using Perplexity AI."""
 
     BASE_URL = "https://api.perplexity.ai"
 
@@ -56,7 +56,8 @@ class PerplexityService(BaseService):
         album: str,
         year: Optional[int] = None,
         genres: Optional[list] = None,
-        labels: Optional[list] = None
+        labels: Optional[list] = None,
+        context: Optional[str] = None,
     ) -> Optional[Dict[str, Any]]:
         """
         Generate an album description using Perplexity AI.
@@ -67,6 +68,7 @@ class PerplexityService(BaseService):
             year: Release year (optional)
             genres: List of genres (optional)
             labels: List of record labels (optional)
+            context: Free-text hint to help identify the correct release (optional)
 
         Returns:
             Dictionary with description and metadata, or None on failure
@@ -76,7 +78,7 @@ class PerplexityService(BaseService):
             return None
 
         # Build the prompt with rich context
-        prompt = self._build_prompt(artist, album, year, genres, labels)
+        prompt = self._build_prompt(artist, album, year, genres, labels, context)
 
         try:
             response = self._make_request(
@@ -128,13 +130,118 @@ class PerplexityService(BaseService):
             self.logger.error(f"Unexpected error generating description: {str(e)}")
             return None
 
+    def generate_artist_biography(
+        self,
+        artist: str,
+        genres: Optional[list] = None,
+        context: Optional[str] = None,
+    ) -> Optional[Dict[str, Any]]:
+        """
+        Generate an artist biography using Perplexity AI.
+
+        Args:
+            artist: The artist name
+            genres: List of genres (optional)
+            context: Free-text hint to help identify the correct artist (optional)
+
+        Returns:
+            Dictionary with biography and metadata, or None on failure
+        """
+        if not self.api_key:
+            self.logger.warning("Cannot generate biography: Perplexity API key not configured")
+            return None
+
+        prompt = self._build_artist_prompt(artist, genres, context)
+
+        try:
+            response = self._make_request(
+                method="POST",
+                url=f"{self.BASE_URL}/chat/completions",
+                headers=self._get_auth_headers(),
+                json_data={
+                    "model": self.model,
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": (
+                                "You are a knowledgeable music historian writing artist biographies "
+                                "for a music collection website. CRITICAL RULES: "
+                                "1) You MUST always provide a 2-3 paragraph biography - NEVER refuse, "
+                                "NEVER ask for clarification, NEVER say you cannot find information. "
+                                "2) Focus on the correct artist matching the name given - if multiple "
+                                "artists share a name, use genre context to identify the right one. "
+                                "3) Cover the artist's background, musical style, key releases, and "
+                                "significance. Be factual and concise. "
+                                "4) Output ONLY the biography paragraphs, nothing else."
+                            )
+                        },
+                        {
+                            "role": "user",
+                            "content": prompt
+                        }
+                    ],
+                    "max_tokens": 600,
+                    "temperature": 0.3
+                }
+            )
+
+            data = response.json()
+
+            if "choices" in data and len(data["choices"]) > 0:
+                biography = data["choices"][0]["message"]["content"].strip()
+                biography = self._clean_description(biography)
+
+                return {
+                    "biography": biography,
+                    "generated_at": datetime.now().isoformat(),
+                    "model": self.model,
+                    "source": "perplexity"
+                }
+            else:
+                self.logger.warning(f"Unexpected response format from Perplexity: {data}")
+                return None
+
+        except AuthenticationError:
+            self.logger.error("Perplexity API authentication failed - check your API key")
+            return None
+        except APIError as e:
+            self.logger.error(f"Perplexity API error: {str(e)}")
+            return None
+        except Exception as e:
+            self.logger.error(f"Unexpected error generating artist biography: {str(e)}")
+            return None
+
+    def _build_artist_prompt(
+        self,
+        artist: str,
+        genres: Optional[list] = None,
+        context: Optional[str] = None,
+    ) -> str:
+        """Build the prompt for artist biography generation."""
+        prompt_parts = [f'Write a 2-3 paragraph biography of the music artist "{artist}".']
+
+        if context:
+            prompt_parts.append(f"Important context to identify the correct artist: {context}.")
+
+        if genres and len(genres) > 0:
+            genre_str = ", ".join(genres[:3])
+            prompt_parts.append(f"This artist performs in the following genres: {genre_str}.")
+
+        prompt_parts.append(
+            "Write the biography NOW. Do not ask questions or request clarification. "
+            "Output ONLY the 2-3 paragraph biography, nothing else."
+        )
+
+        return " ".join(prompt_parts)
+
     def _build_prompt(
         self,
         artist: str,
         album: str,
         year: Optional[int] = None,
         genres: Optional[list] = None,
-        labels: Optional[list] = None
+        labels: Optional[list] = None,
+        context: Optional[str] = None,
     ) -> str:
         """Build the prompt for album description generation."""
 
@@ -143,7 +250,11 @@ class PerplexityService(BaseService):
             f'Write a 2-3 paragraph description of "{album}" by {artist}.'
         ]
 
-        # Add context if available (year may be reissue date, so phrase carefully)
+        # Inject custom context first so it takes priority
+        if context:
+            prompt_parts.append(f"Important context: {context}.")
+
+        # Add metadata context (year may be reissue date, so phrase carefully)
         context_parts = []
         if genres and len(genres) > 0:
             genre_str = ", ".join(genres[:3])  # Limit to first 3 genres

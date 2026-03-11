@@ -107,11 +107,16 @@ def cli(ctx, config, log_level, log_file, session_logs):
     type=click.Choice(["apple_music", "spotify", "theaudiodb", "discogs", "v1"]),
     help="Preferred image source (apple_music, spotify, theaudiodb, discogs, v1)"
 )
+@click.option(
+    "--perplexity-context",
+    default=None,
+    help="Free-text hint to guide Perplexity when generating the album description (e.g. 'Dutch gospel/soul duo on Record Kicks')"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1, prefer):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1, prefer)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context)
 
 
 @cli.command()
@@ -324,8 +329,18 @@ def backup(ctx, backup_path):
     is_flag=True,
     help="Only fetch TheAudioDB data (skip other services except Discogs)"
 )
+@click.option(
+    "--perplexity",
+    is_flag=True,
+    help="Generate artist biography using Perplexity AI (adds to existing data)"
+)
+@click.option(
+    "--perplexity-context",
+    default=None,
+    help="Free-text hint to help Perplexity identify the correct artist (e.g. 'Dutch gospel duo active since 2010')"
+)
 @click.pass_context
-def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1, verify, prefer, theaudiodb):
+def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_image, v1, verify, prefer, theaudiodb, perplexity, perplexity_context):
     """Get comprehensive artist information."""
     from ..utils.artist_orchestrator import ArtistDataOrchestrator
     from ..utils.serializers import ArtistSerializer
@@ -340,14 +355,22 @@ def artist(ctx, artist_name, save, output, force_refresh, interactive, custom_im
     config = ctx.obj["config"]
     logger = ctx.obj["logger"]
     
-    # Initialize artist orchestrator with add services if --theaudiodb is specified
-    if theaudiodb:
-        # Add TheAudioDB data to existing enrichment data
-        add_services = ["theaudiodb"]
+    # Initialize artist orchestrator with add services if --theaudiodb or --perplexity is specified
+    if theaudiodb or perplexity:
+        add_services = []
+        if theaudiodb:
+            add_services.append("theaudiodb")
+            console.print(f"[yellow]TheAudioDB mode enabled - adding TheAudioDB data to existing artist data[/yellow]")
+        if perplexity:
+            add_services.append("perplexity")
+            console.print(f"[yellow]Perplexity mode enabled - generating artist biography with Perplexity AI[/yellow]")
         orchestrator = ArtistDataOrchestrator(config, logger, add_services=add_services)
-        console.print(f"[yellow]TheAudioDB mode enabled - adding TheAudioDB data to existing artist data[/yellow]")
     else:
         orchestrator = ArtistDataOrchestrator(config, logger)
+
+    if perplexity_context:
+        orchestrator.set_perplexity_context(perplexity_context)
+        console.print(f"[blue]Perplexity context: {perplexity_context}[/blue]")
     
     # Enable interactive mode if requested
     if interactive:
@@ -1007,7 +1030,8 @@ def _process_single_release(
     force: bool,
     dry_run: bool,
     console,
-    box
+    box,
+    perplexity_context: str = None
 ) -> bool:
     """
     Process a single release for description enrichment.
@@ -1100,7 +1124,8 @@ def _process_single_release(
         album=release_info["title"],
         year=release_info["year"],
         genres=release_info["genres"],
-        labels=release_info["labels"]
+        labels=release_info["labels"],
+        context=perplexity_context
     )
 
     if not description_data:
@@ -1187,8 +1212,13 @@ def _process_single_release(
     default=50,
     help="Number of releases to process before prompting to continue (default: 50)"
 )
+@click.option(
+    "--perplexity-context",
+    default=None,
+    help="Free-text hint to guide Perplexity when generating the description (e.g. 'Dutch gospel/soul duo on Record Kicks')"
+)
 @click.pass_context
-def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, limit, from_id, batch_size):
+def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, limit, from_id, batch_size, perplexity_context):
     """
     Generate album description using Perplexity AI.
 
@@ -1328,7 +1358,8 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
                 force=force,
                 dry_run=dry_run,
                 console=console,
-                box=box
+                box=box,
+                perplexity_context=perplexity_context
             )
 
             if result:
@@ -1406,7 +1437,8 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
                 force=force,
                 dry_run=dry_run,
                 console=console,
-                box=box
+                box=box,
+                perplexity_context=perplexity_context
             ):
                 success_count += 1
             else:
@@ -1430,7 +1462,8 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
             force=force,
             dry_run=dry_run,
             console=console,
-            box=box
+            box=box,
+            perplexity_context=perplexity_context
         )
     else:
         # Search by title (and optionally artist)
@@ -1451,7 +1484,8 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
             force=force,
             dry_run=dry_run,
             console=console,
-            box=box
+            box=box,
+            perplexity_context=perplexity_context
         )
 
 

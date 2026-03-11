@@ -154,6 +154,15 @@ python main.py artist "The Beatles" --force-refresh
 
 # Fetch artist image from v1.russ.fm site
 python main.py artist "The Beatles" --v1
+
+# Generate artist biography using Perplexity AI (adds to existing data)
+python main.py artist "Michelle David" --perplexity
+
+# Provide context to help Perplexity identify the correct artist
+python main.py artist "The True Tones" --perplexity --perplexity-context "Dutch gospel/soul duo formed by Michelle David and Elianne Anemaat"
+
+# Combine Perplexity biography with force refresh
+python main.py artist "Michelle David" --force-refresh --perplexity
 ```
 
 #### Collection Processing

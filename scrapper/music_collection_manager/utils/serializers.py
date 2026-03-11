@@ -467,7 +467,11 @@ class ArtistSerializer:
             # TheAudioDB data
             if 'theaudiodb' in artist.raw_data:
                 services['theaudiodb'] = artist.raw_data['theaudiodb']
-        
+
+            # Perplexity biography
+            if 'perplexity' in artist.raw_data:
+                services['perplexity'] = artist.raw_data['perplexity']
+
         return services
     
     @staticmethod
