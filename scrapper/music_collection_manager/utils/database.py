@@ -45,7 +45,8 @@ class DatabaseManager:
                     styles TEXT,   -- JSON array
                     images TEXT,   -- JSON array
                     tracklist TEXT,  -- JSON array
-                    
+                    videos TEXT,     -- JSON array of video URLs
+
                     -- External IDs
                     apple_music_id TEXT,
                     spotify_id TEXT,
@@ -188,7 +189,13 @@ class DatabaseManager:
                 self.logger.info("Adding local_images column for local image paths")
                 conn.execute("ALTER TABLE releases ADD COLUMN local_images TEXT")  # JSON object
                 conn.commit()
-                
+
+            # Add videos column for video URLs
+            if 'videos' not in columns:
+                self.logger.info("Adding videos column to releases table")
+                conn.execute("ALTER TABLE releases ADD COLUMN videos TEXT")  # JSON array
+                conn.commit()
+
         except Exception as e:
             self.logger.warning(f"Migration error (non-critical): {str(e)}")
     
@@ -202,12 +209,12 @@ class DatabaseManager:
                 conn.execute("""
                     INSERT OR REPLACE INTO releases (
                         id, discogs_id, title, artists, year, released, country,
-                        formats, labels, genres, styles, images, tracklist,
+                        formats, labels, genres, styles, images, tracklist, videos,
                         release_name_discogs, release_name_apple_music, release_name_spotify,
                         apple_music_id, spotify_id, lastfm_mbid,
                         discogs_url, apple_music_url, spotify_url, lastfm_url,
                         enrichment_data, created_at, updated_at, date_added, local_images, raw_data
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (
                     row_data['id'],
                     row_data['discogs_id'],
@@ -222,6 +229,7 @@ class DatabaseManager:
                     row_data['styles'],
                     row_data['images'],
                     row_data['tracklist'],
+                    row_data['videos'],
                     row_data['release_name_discogs'],
                     row_data['release_name_apple_music'],
                     row_data['release_name_spotify'],
@@ -347,6 +355,13 @@ class DatabaseManager:
             except ValueError:
                 pass
         
+        # Parse videos
+        videos = []
+        try:
+            videos = json.loads(row["videos"] or "[]")
+        except (KeyError, json.JSONDecodeError):
+            pass
+
         release = Release(
             id=row["id"],
             title=row["title"],
@@ -359,6 +374,7 @@ class DatabaseManager:
             genres=json.loads(row["genres"] or "[]"),
             styles=json.loads(row["styles"] or "[]"),
             images=images,
+            videos=videos,
             tracklist=tracklist,
             discogs_id=row["discogs_id"],
             apple_music_id=row["apple_music_id"],
@@ -1099,3 +1115,91 @@ class DatabaseManager:
         except Exception as e:
             self.logger.error(f"Failed to get releases from ID backwards: {str(e)}")
             return []
+
+    def get_releases_without_videos(
+        self, limit: Optional[int] = None, from_id: Optional[str] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Get releases that don't have video URLs populated.
+
+        Args:
+            limit: Maximum number of releases to return
+            from_id: Start from this Discogs ID (by date_added ordering)
+
+        Returns:
+            List of release dictionaries with basic info
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+
+                params = []
+                query = """
+                    SELECT discogs_id, title, artists, year, genres, videos, date_added
+                    FROM releases
+                    WHERE discogs_id IS NOT NULL
+                    AND (videos IS NULL OR videos = '[]')
+                """
+
+                if from_id:
+                    # Get the date_added for the starting release
+                    cursor.execute(
+                        "SELECT date_added FROM releases WHERE discogs_id = ?",
+                        (from_id,)
+                    )
+                    start_row = cursor.fetchone()
+                    if start_row and start_row["date_added"]:
+                        query += " AND date_added <= ?"
+                        params.append(start_row["date_added"])
+
+                query += " ORDER BY date_added DESC"
+
+                if limit:
+                    query += f" LIMIT {limit}"
+
+                cursor.execute(query, params)
+                rows = cursor.fetchall()
+
+                releases = []
+                for row in rows:
+                    artists_data = json.loads(row["artists"] or "[]")
+                    artist_names = [a.get("name", "") for a in artists_data]
+
+                    releases.append({
+                        "discogs_id": row["discogs_id"],
+                        "title": row["title"],
+                        "artists": artist_names,
+                        "year": row["year"],
+                        "genres": json.loads(row["genres"] or "[]"),
+                        "date_added": row["date_added"]
+                    })
+
+                return releases
+
+        except Exception as e:
+            self.logger.error(f"Failed to get releases without videos: {str(e)}")
+            return []
+
+    def update_release_videos(self, discogs_id: str, videos_json: str) -> bool:
+        """
+        Update the videos column for a specific release.
+
+        Args:
+            discogs_id: The Discogs release ID
+            videos_json: JSON string of video URLs array
+
+        Returns:
+            True if update was successful
+        """
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                conn.execute(
+                    "UPDATE releases SET videos = ?, updated_at = ? WHERE discogs_id = ?",
+                    (videos_json, datetime.now().isoformat(), discogs_id)
+                )
+                conn.commit()
+                return True
+        except Exception as e:
+            self.logger.error(f"Failed to update videos for release {discogs_id}: {str(e)}")
+            return False

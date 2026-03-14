@@ -206,6 +206,46 @@ python main.py collection --dry-run
 
 ---
 
+## Backfill Videos
+
+### Preview which releases need videos
+
+```bash
+python main.py backfill-videos --dry-run --limit 5
+```
+
+### Process a small batch
+
+```bash
+python main.py backfill-videos --batch-size 10 --limit 10
+```
+
+### Start from a specific release
+
+```bash
+python main.py backfill-videos --from 33817755
+```
+
+### Re-fetch videos for all releases
+
+```bash
+python main.py backfill-videos --force --limit 5
+```
+
+### Run unattended with a pause between batches
+
+```bash
+python main.py backfill-videos --pause 30
+```
+
+### Larger batches with a longer pause
+
+```bash
+python main.py backfill-videos --batch-size 50 --pause 60
+```
+
+---
+
 ## Utilities
 
 ### Test all configured API services

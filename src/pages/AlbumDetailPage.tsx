@@ -13,6 +13,7 @@ import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
+import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
@@ -150,6 +151,7 @@ interface DetailedAlbum {
       url?: string;
     };
   };
+  videos?: string[];
   local_images: {
     'hi-res': string;
     medium: string;
@@ -994,6 +996,14 @@ export function AlbumDetailPage() {
           <section className="py-12">
             <h3 className="text-2xl font-bold mb-8 text-foreground">Listen to {detailedAlbum.title}</h3>
             <MusicPlayerSection album={detailedAlbum} />
+          </section>
+        )}
+
+        {/* Videos */}
+        {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
+          <section className="py-12">
+            <h3 className="text-2xl font-bold mb-8 text-foreground">Videos</h3>
+            <VideoSection videos={detailedAlbum.videos} />
           </section>
         )}
 

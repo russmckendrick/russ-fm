@@ -155,6 +155,56 @@ class JsonUpdater:
             self.logger.error(f"Unexpected error updating JSON file: {str(e)}")
             return False
 
+    def update_album_videos(
+        self,
+        discogs_id: str,
+        title: str,
+        artists: list,
+        videos: list
+    ) -> bool:
+        """
+        Update the videos array in an album's JSON file.
+
+        Args:
+            discogs_id: Discogs release ID
+            title: Album title
+            artists: List of artist names
+            videos: List of video URLs
+
+        Returns:
+            True if update was successful, False otherwise
+        """
+        json_path = self.find_album_json(discogs_id, title, artists)
+
+        if not json_path:
+            self.logger.warning(f"Cannot update JSON: file not found for {title}")
+            return False
+
+        try:
+            # Read existing data
+            with open(json_path, 'r', encoding='utf-8') as f:
+                album_data = json.load(f)
+
+            # Update videos
+            album_data["videos"] = videos
+
+            # Write back to file
+            with open(json_path, 'w', encoding='utf-8') as f:
+                json.dump(album_data, f, indent=2, ensure_ascii=False)
+
+            self.logger.info(f"Updated videos in: {json_path}")
+            return True
+
+        except json.JSONDecodeError as e:
+            self.logger.error(f"Failed to parse JSON file {json_path}: {str(e)}")
+            return False
+        except IOError as e:
+            self.logger.error(f"Failed to read/write JSON file {json_path}: {str(e)}")
+            return False
+        except Exception as e:
+            self.logger.error(f"Unexpected error updating JSON file: {str(e)}")
+            return False
+
     def check_album_has_description(
         self,
         discogs_id: str,

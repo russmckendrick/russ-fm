@@ -211,6 +211,7 @@ class Release:
                 }
                 for track in self.tracklist
             ],
+            'videos': self.videos,
             'discogs_id': self.discogs_id,
             'apple_music_id': self.apple_music_id,
             'spotify_id': self.spotify_id,

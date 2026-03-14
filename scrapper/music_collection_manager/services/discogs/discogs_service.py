@@ -387,7 +387,13 @@ class DiscogsService(BaseService):
                 track.artists.append(artist)
             
             release.tracklist.append(track)
-        
+
+        # Parse videos (YouTube URLs)
+        for video_data in discogs_data.get("videos", []):
+            uri = video_data.get("uri", "")
+            if uri:
+                release.videos.append(uri)
+
         return release
     
     def parse_collection_item(self, item_data: Dict[str, Any]) -> CollectionItem:

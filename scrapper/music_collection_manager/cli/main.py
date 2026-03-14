@@ -1489,6 +1489,253 @@ def enrich_description(ctx, identifier, artist, force, dry_run, list_missing, li
         )
 
 
+@cli.command("backfill-videos")
+@click.option(
+    "--batch-size",
+    "-b",
+    type=int,
+    default=25,
+    help="Number of releases to process before prompting to continue (default: 25)"
+)
+@click.option(
+    "--limit",
+    "-l",
+    type=int,
+    default=None,
+    help="Maximum total releases to process"
+)
+@click.option(
+    "--dry-run",
+    is_flag=True,
+    help="Show what would be fetched without making changes"
+)
+@click.option(
+    "--from",
+    "from_id",
+    help="Start from this Discogs ID"
+)
+@click.option(
+    "--force",
+    "-f",
+    is_flag=True,
+    help="Re-fetch even if videos already exist"
+)
+@click.option(
+    "--pause",
+    "-p",
+    type=int,
+    default=None,
+    help="Pause for this many seconds between batches instead of prompting to continue"
+)
+@click.pass_context
+def backfill_videos(ctx, batch_size, limit, dry_run, from_id, force, pause):
+    """
+    Backfill video URLs from Discogs for existing releases.
+
+    Fetches YouTube video URLs from the Discogs API for releases that
+    don't have videos populated yet, and updates both the database
+    and the album JSON files.
+
+    Examples:
+
+        python main.py backfill-videos --dry-run --limit 5
+
+        python main.py backfill-videos --batch-size 10 --limit 10
+
+        python main.py backfill-videos --from 33817755
+
+        python main.py backfill-videos --force --limit 5
+
+        python main.py backfill-videos --pause 30
+
+        python main.py backfill-videos --batch-size 50 --pause 60
+    """
+    import time
+    from ..utils.database import DatabaseManager
+    from ..utils.json_updater import JsonUpdater
+    from ..services.discogs import DiscogsService
+    from rich.console import Console
+    from rich.table import Table
+    from rich import box
+
+    console = Console()
+    config = ctx.obj["config"]
+    logger = ctx.obj["logger"]
+
+    # Initialize database manager
+    db_path = config.get("database", {}).get("path", "collection_cache.db")
+    db_manager = DatabaseManager(db_path, logger)
+
+    # Initialize Discogs service
+    discogs_config = config.get("discogs", {})
+    if not discogs_config.get("access_token"):
+        console.print("[red]Error: Discogs access token not configured in config.json[/red]")
+        return
+
+    try:
+        discogs_service = DiscogsService(discogs_config, logger=logger)
+    except Exception as e:
+        console.print(f"[red]Failed to initialize Discogs service: {str(e)}[/red]")
+        return
+
+    # Initialize JSON updater
+    json_updater = JsonUpdater(logger=logger)
+
+    # Get releases to process
+    if force:
+        # When force is set, get all releases (not just those without videos)
+        import sqlite3
+        import json as json_mod
+        try:
+            with sqlite3.connect(db_path) as conn:
+                conn.row_factory = sqlite3.Row
+                cursor = conn.cursor()
+                params = []
+                query = """
+                    SELECT discogs_id, title, artists, year, genres, videos, date_added
+                    FROM releases
+                    WHERE discogs_id IS NOT NULL
+                """
+                if from_id:
+                    cursor.execute(
+                        "SELECT date_added FROM releases WHERE discogs_id = ?",
+                        (from_id,)
+                    )
+                    start_row = cursor.fetchone()
+                    if start_row and start_row["date_added"]:
+                        query += " AND date_added <= ?"
+                        params.append(start_row["date_added"])
+                query += " ORDER BY date_added DESC"
+                if limit:
+                    query += f" LIMIT {limit}"
+                cursor.execute(query, params)
+                rows = cursor.fetchall()
+                releases = []
+                for row in rows:
+                    artists_data = json_mod.loads(row["artists"] or "[]")
+                    artist_names = [a.get("name", "") for a in artists_data]
+                    releases.append({
+                        "discogs_id": row["discogs_id"],
+                        "title": row["title"],
+                        "artists": artist_names,
+                        "year": row["year"],
+                        "genres": json_mod.loads(row["genres"] or "[]"),
+                        "date_added": row["date_added"]
+                    })
+        except Exception as e:
+            console.print(f"[red]Failed to query releases: {str(e)}[/red]")
+            return
+    else:
+        releases = db_manager.get_releases_without_videos(limit=limit, from_id=from_id)
+
+    if not releases:
+        console.print("[green]No releases need video backfilling![/green]")
+        return
+
+    console.print(f"[cyan]Found {len(releases)} releases to process[/cyan]")
+
+    if dry_run:
+        table = Table(title=f"Releases to Backfill Videos ({len(releases)} found)", box=box.ROUNDED)
+        table.add_column("Discogs ID", style="cyan")
+        table.add_column("Title", style="white")
+        table.add_column("Artist", style="green")
+        table.add_column("Year", style="yellow")
+
+        for release in releases:
+            artists = ", ".join(release["artists"][:2])
+            if len(release["artists"]) > 2:
+                artists += "..."
+            table.add_row(
+                release["discogs_id"],
+                release["title"],
+                artists,
+                str(release["year"]) if release["year"] else "N/A"
+            )
+
+        console.print(table)
+        console.print(f"\n[dim]Run without --dry-run to fetch and save video URLs[/dim]")
+        return
+
+    success_count = 0
+    fail_count = 0
+    skipped_count = 0
+    processed_in_batch = 0
+
+    for i, release in enumerate(releases, 1):
+        artist_str = ", ".join(release["artists"][:2])
+        console.print(f"[bold]═══ Release {i}/{len(releases)} ═══[/bold]")
+        console.print(f"  {release['title']} by {artist_str} (Discogs: {release['discogs_id']})")
+
+        try:
+            # Fetch release details from Discogs
+            time.sleep(1)  # Respect Discogs rate limit (60 req/min)
+            release_data = discogs_service.get_release_details(release["discogs_id"])
+
+            # Extract video URLs
+            videos = []
+            for video_data in release_data.get("videos", []):
+                uri = video_data.get("uri", "")
+                if uri:
+                    videos.append(uri)
+
+            if not videos:
+                console.print(f"  [yellow]No videos found on Discogs[/yellow]\n")
+                skipped_count += 1
+                processed_in_batch += 1
+            else:
+                console.print(f"  [green]Found {len(videos)} video(s)[/green]")
+
+                # Update database
+                import json as json_mod
+                db_manager.update_release_videos(
+                    release["discogs_id"],
+                    json_mod.dumps(videos)
+                )
+
+                # Update album JSON file
+                json_updater.update_album_videos(
+                    release["discogs_id"],
+                    release["title"],
+                    release["artists"],
+                    videos
+                )
+
+                console.print(f"  [green]Updated DB and JSON[/green]\n")
+                success_count += 1
+                processed_in_batch += 1
+
+        except Exception as e:
+            console.print(f"  [red]Error: {str(e)}[/red]\n")
+            fail_count += 1
+            processed_in_batch += 1
+
+        # Check if we've hit the batch size limit
+        if processed_in_batch >= batch_size and i < len(releases):
+            console.print(f"\n[bold yellow]═══ Batch Complete ═══[/bold yellow]")
+            console.print(f"Processed {processed_in_batch} releases in this batch")
+            console.print(f"Total progress: {i}/{len(releases)} releases")
+            console.print(f"[green]✓ With videos: {success_count}[/green] | [yellow]⏭ No videos: {skipped_count}[/yellow] | [red]✗ Failed: {fail_count}[/red]")
+
+            if pause is not None:
+                console.print(f"\n[dim]Pausing for {pause} seconds before next batch...[/dim]")
+                time.sleep(pause)
+            else:
+                if not click.confirm("\nContinue with next batch?", default=True):
+                    console.print("[yellow]Stopping at user request[/yellow]")
+                    break
+
+            processed_in_batch = 0
+            console.print()
+
+    # Final summary
+    console.print(f"\n[bold]═══ Final Summary ═══[/bold]")
+    console.print(f"[green]✓ With videos: {success_count}[/green]")
+    console.print(f"[yellow]⏭ No videos on Discogs: {skipped_count}[/yellow]")
+    if fail_count > 0:
+        console.print(f"[red]✗ Failed: {fail_count}[/red]")
+    console.print(f"[cyan]Total processed: {success_count + fail_count + skipped_count}/{len(releases)}[/cyan]")
+
+
 def main():
     """Main entry point."""
     cli()

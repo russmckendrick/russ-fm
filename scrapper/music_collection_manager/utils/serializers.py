@@ -61,7 +61,8 @@ class ReleaseSerializer:
             'artists': [ReleaseSerializer._serialize_artist(artist) for artist in release.artists],
             'images': [ReleaseSerializer._serialize_image(image) for image in release.images],
             'tracklist': [ReleaseSerializer._serialize_track(track) for track in release.tracklist],
-            
+            'videos': release.videos,
+
             # Local images if available
             'local_images': {}
         }
@@ -315,6 +316,7 @@ class DatabaseSerializer:
             'styles': json.dumps(release.styles, default=ReleaseSerializer._json_serializer),
             'images': json.dumps([DatabaseSerializer._db_serialize_image(img) for img in release.images], default=ReleaseSerializer._json_serializer),
             'tracklist': json.dumps([DatabaseSerializer._db_serialize_track(t) for t in release.tracklist], default=ReleaseSerializer._json_serializer),
+            'videos': json.dumps(release.videos, default=ReleaseSerializer._json_serializer),
             'release_name_discogs': release.release_name_discogs,
             'release_name_apple_music': release.release_name_apple_music,
             'release_name_spotify': release.release_name_spotify,

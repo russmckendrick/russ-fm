@@ -284,6 +284,58 @@ The system checks multiple sources before generating:
 
 ---
 
+## backfill-videos
+
+Backfill YouTube video URLs from Discogs for existing releases.
+
+```bash
+python main.py backfill-videos [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--batch-size` | `-b` | INT | `25` | Releases per batch before prompting |
+| `--limit` | `-l` | INT | all | Maximum total releases to process |
+| `--dry-run` | | FLAG | `false` | Show what would be fetched |
+| `--from` | | STRING | - | Start from this Discogs ID |
+| `--force` | `-f` | FLAG | `false` | Re-fetch even if videos exist |
+| `--pause` | `-p` | INT | - | Pause for N seconds between batches instead of prompting |
+
+### Examples
+
+```bash
+# Preview which releases need videos
+python main.py backfill-videos --dry-run --limit 5
+
+# Process a small batch
+python main.py backfill-videos --batch-size 10 --limit 10
+
+# Start from a specific release
+python main.py backfill-videos --from 33817755
+
+# Re-fetch videos for all releases
+python main.py backfill-videos --force --limit 5
+
+# Run unattended with a 30-second pause between batches
+python main.py backfill-videos --pause 30
+
+# Larger batches with a longer pause
+python main.py backfill-videos --batch-size 50 --pause 60
+```
+
+### Behavior
+
+- Fetches full release details from Discogs API and extracts video URLs
+- Updates both the SQLite database and album JSON files in `public/album/`
+- Respects Discogs rate limits with a 1-second delay between requests
+- Prompts to continue after each batch by default
+- Use `--pause` to run unattended with an automatic delay between batches
+- Skips releases that already have videos (unless `--force`)
+
+---
+
 ## generate-collection
 
 Generate collection.json for React frontend.
