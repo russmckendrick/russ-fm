@@ -5,7 +5,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { SearchOverlay } from "./SearchOverlay";
 import { MobileSearchModal } from "./MobileSearchModal";
 import { UserProfileMenu } from "./UserProfileMenu";
-import { Search, Menu, X, Home, Disc, Mic2, BarChart2, Shuffle, Gift } from "lucide-react";
+import { Search, Menu, X, Home, Disc, Mic2, BarChart2, Shuffle, Gift, Tv } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 
@@ -96,6 +96,14 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href="https://fuzzbox.tv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 hover:bg-secondary/80 hover:text-foreground text-muted-foreground"
+            >
+              Fuzzbox
+            </a>
           </div>
 
           {/* Right Actions */}
@@ -149,6 +157,16 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <a
+              href="https://fuzzbox.tv/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-4 p-4 rounded-2xl text-lg font-medium transition-colors hover:bg-secondary/50 text-muted-foreground"
+            >
+              <Tv className="h-5 w-5" />
+              Fuzzbox
+            </a>
 
             <div className="h-px bg-border my-4" />
 
