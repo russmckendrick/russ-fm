@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2026-04-04T15:53:36.912594",
+  "created_at": "2026-04-06T15:49:23.714168",
   "date_added": "2026-04-04T07:36:02-07:00",
   "discogs_id": "35102897",
   "discogs_url": "https://www.discogs.com/release/35102897-Descendents-Milo-Goes-To-College",
@@ -95,16 +95,17 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 1,
-    "processed_at": "2026-04-04T15:53:50.765008",
+    "processed_at": "2026-04-06T15:49:36.929271",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia"
     ]
   },
   "release_name_apple_music": "Milo Goes to College",
   "release_name_discogs": "Milo Goes To College",
-  "release_name_spotify": null,
+  "release_name_spotify": "Milo Goes to College",
   "released": "2025-09-19",
   "services": {
     "apple_music": {
@@ -185,9 +186,9 @@
           "url": "https://lastfm.freetls.fastly.net/i/u/300x300/c9cc92b0e8c6458bc5b4c9a5f351b14f.jpg"
         }
       ],
-      "listeners": 632392,
+      "listeners": 632620,
       "mbid": "38532491-fd72-4331-81ff-873b089d6e75",
-      "playcount": 16125159,
+      "playcount": 16135143,
       "raw_data": {
         "album": {
           "artist": "Descendents",
@@ -217,10 +218,10 @@
               "size": ""
             }
           ],
-          "listeners": "632392",
+          "listeners": "632620",
           "mbid": "38532491-fd72-4331-81ff-873b089d6e75",
           "name": "Milo Goes to College",
-          "playcount": "16125159",
+          "playcount": "16135143",
           "tags": {
             "tag": [
               {
@@ -525,10 +526,770 @@
       "url": "https://www.last.fm/music/Descendents/Milo+Goes+to+College",
       "wiki_content": "Milo Goes to College is the 1982 debut full-length release by American punk band Descendents. It was released on New Alliance Records (and reissued by SST Records in 1987). SPIN Magazine rated the album one of the top all time hardcore albums. Sputnikmusic also ranked this album 1st among highest rated punk albums of 1982. Its title referred to singer Milo Aukerman's decision to leave the band to attend college, and its cover illustration introduced a caricature of him that would go on to become the band's mascot. It was the Descendents' last record with founding guitarist Frank Navetta, who quit the band during the hiatus that followed its release.\n\nThe album's mix of fast and aggressive hardcore punk with melody and cheeky love songs led to it being considered one of the most significant albums of the early 1980s Southern California hardcore movement. In the decades since its release, it has received positive reviews and been counted among the most noteworthy punk albums by several publications. Milo Goes to College has been cited as influential and a favorite by several notable artists and musicians.\n\n\"Suburban Home\" and \"Myage\" became locally popular (as well as being college hits), while many other songs from the album became fan favorites. Taking Back Sunday covered \"Suburban Home\" as a medley with a song on the Fat EP called \"I Like Food\" for the game Tony Hawk's American Wasteland. Moreover, Sublime covered the song \"Hope\" on their 1992 album 40 Oz. to Freedom.\n\nThe band enjoyed putting the suffix \"-age\" at the end of things, as seen on the tracks \"Myage\", \"Tonyage\" and \"Bikeage\" (as well as, coincidentally, \"Marriage\"). This is also proven by the title of their live album Liveage. This, as well as the band's affiliation and appeal with and to nerdage, have linked Descendents to the common addition of the suffix \"-age\" in Leet text. <a href=\"https://www.last.fm/music/Descendents/Milo+Goes+to+College\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
       "wiki_summary": "Milo Goes to College is the 1982 debut full-length release by American punk band Descendents. It was released on New Alliance Records (and reissued by SST Records in 1987). SPIN Magazine rated the album one of the top all time hardcore albums. Sputnikmusic also ranked this album 1st among highest rated punk albums of 1982. Its title referred to singer Milo Aukerman's decision to leave the band to attend college, and its cover illustration introduced a caricature of him that would go on to become the band's mascot. It was the Descendents' last record with founding guitarist Frank Navetta, who <a href=\"https://www.last.fm/music/Descendents/Milo+Goes+to+College\">Read more on Last.fm</a>."
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2022 Descendents",
+          "type": "C"
+        },
+        {
+          "text": "2022 Descendents",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "859760808940"
+      },
+      "id": "7ap2sARnQnkhfbUxYIEcu8",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d1b93c670335d398c6ef1d12",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d1b93c670335d398c6ef1d12",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d1b93c670335d398c6ef1d12",
+          "width": 64
+        }
+      ],
+      "label": "Descendents",
+      "popularity": 53,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+            },
+            "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+            "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+            "name": "Descendents",
+            "type": "artist",
+            "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2022 Descendents",
+            "type": "C"
+          },
+          {
+            "text": "2022 Descendents",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "859760808940"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7ap2sARnQnkhfbUxYIEcu8"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/7ap2sARnQnkhfbUxYIEcu8?market=US",
+        "id": "7ap2sARnQnkhfbUxYIEcu8",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273d1b93c670335d398c6ef1d12",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02d1b93c670335d398c6ef1d12",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851d1b93c670335d398c6ef1d12",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "Descendents",
+        "name": "Milo Goes to College",
+        "popularity": 53,
+        "release_date": "2022-03-28",
+        "release_date_precision": "day",
+        "total_tracks": 15,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/7ap2sARnQnkhfbUxYIEcu8/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 120800,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1PcPuR2vNpqNr88Cc2Lw8m"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1PcPuR2vNpqNr88Cc2Lw8m",
+              "id": "1PcPuR2vNpqNr88Cc2Lw8m",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Myage",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:1PcPuR2vNpqNr88Cc2Lw8m"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 42626,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2VSiXZhIe5sikKG233RQZE"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2VSiXZhIe5sikKG233RQZE",
+              "id": "2VSiXZhIe5sikKG233RQZE",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Wanna Be a Bear",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:2VSiXZhIe5sikKG233RQZE"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 88773,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1XFG00rEeHaDIPOQv9LTYs"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1XFG00rEeHaDIPOQv9LTYs",
+              "id": "1XFG00rEeHaDIPOQv9LTYs",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Not a Loser",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:1XFG00rEeHaDIPOQv9LTYs"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 98360,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2Wq43Z5SuZsXAqCwmKsRhe"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2Wq43Z5SuZsXAqCwmKsRhe",
+              "id": "2Wq43Z5SuZsXAqCwmKsRhe",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Parents",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:2Wq43Z5SuZsXAqCwmKsRhe"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 56373,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3IZahAVG3UxqDPXpDoLRyT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3IZahAVG3UxqDPXpDoLRyT",
+              "id": "3IZahAVG3UxqDPXpDoLRyT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Tonyage",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:3IZahAVG3UxqDPXpDoLRyT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 43266,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1el8ukF1AJkDu7yoC5v7iT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1el8ukF1AJkDu7yoC5v7iT",
+              "id": "1el8ukF1AJkDu7yoC5v7iT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "M-16",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:1el8ukF1AJkDu7yoC5v7iT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 64160,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1VMnHHIyXnIWbkhhMoI9kM"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1VMnHHIyXnIWbkhhMoI9kM",
+              "id": "1VMnHHIyXnIWbkhhMoI9kM",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I'm Not a Punk",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:1VMnHHIyXnIWbkhhMoI9kM"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 107906,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7fvcx0cXsc7FZhViJAtRxg"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7fvcx0cXsc7FZhViJAtRxg",
+              "id": "7fvcx0cXsc7FZhViJAtRxg",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Catalina",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:7fvcx0cXsc7FZhViJAtRxg"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 100333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7Meu81YN9Ols2nQdbkKbbh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7Meu81YN9Ols2nQdbkKbbh",
+              "id": "7Meu81YN9Ols2nQdbkKbbh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Suburban Home",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:7Meu81YN9Ols2nQdbkKbbh"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 119360,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4mEUjln7tQjPqjhHwMiMOh"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4mEUjln7tQjPqjhHwMiMOh",
+              "id": "4mEUjln7tQjPqjhHwMiMOh",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Statue of Liberty",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4mEUjln7tQjPqjhHwMiMOh"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 70733,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1frcPtdD79xCXbRecT49Ev"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1frcPtdD79xCXbRecT49Ev",
+              "id": "1frcPtdD79xCXbRecT49Ev",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Kabuki Girl",
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:1frcPtdD79xCXbRecT49Ev"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 99773,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/2cdRxzcgeZLv3KpVf0cfjo"
+              },
+              "href": "https://api.spotify.com/v1/tracks/2cdRxzcgeZLv3KpVf0cfjo",
+              "id": "2cdRxzcgeZLv3KpVf0cfjo",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Marriage",
+              "preview_url": null,
+              "track_number": 12,
+              "type": "track",
+              "uri": "spotify:track:2cdRxzcgeZLv3KpVf0cfjo"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 120333,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5Jd6yfhjjmDxODdvYTjscz"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5Jd6yfhjjmDxODdvYTjscz",
+              "id": "5Jd6yfhjjmDxODdvYTjscz",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Hope",
+              "preview_url": null,
+              "track_number": 13,
+              "type": "track",
+              "uri": "spotify:track:5Jd6yfhjjmDxODdvYTjscz"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 134066,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/3H7lUDRaFAXi5hcEzd2GsU"
+              },
+              "href": "https://api.spotify.com/v1/tracks/3H7lUDRaFAXi5hcEzd2GsU",
+              "id": "3H7lUDRaFAXi5hcEzd2GsU",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bikeage",
+              "preview_url": null,
+              "track_number": 14,
+              "type": "track",
+              "uri": "spotify:track:3H7lUDRaFAXi5hcEzd2GsU"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1FGH4Bh7g9W6V4fUcKZWp5"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1FGH4Bh7g9W6V4fUcKZWp5",
+                  "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+                  "name": "Descendents",
+                  "type": "artist",
+                  "uri": "spotify:artist:1FGH4Bh7g9W6V4fUcKZWp5"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 92626,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6czrzWq8rsw7zexyS9s4tI"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6czrzWq8rsw7zexyS9s4tI",
+              "id": "6czrzWq8rsw7zexyS9s4tI",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Jean Is Dead",
+              "preview_url": null,
+              "track_number": 15,
+              "type": "track",
+              "uri": "spotify:track:6czrzWq8rsw7zexyS9s4tI"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 15
+        },
+        "type": "album",
+        "uri": "spotify:album:7ap2sARnQnkhfbUxYIEcu8"
+      },
+      "release_date": "2022-03-28",
+      "release_date_precision": "day",
+      "total_tracks": 15,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 120800,
+          "explicit": true,
+          "id": "1PcPuR2vNpqNr88Cc2Lw8m",
+          "name": "Myage",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 42626,
+          "explicit": true,
+          "id": "2VSiXZhIe5sikKG233RQZE",
+          "name": "I Wanna Be a Bear",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 88773,
+          "explicit": true,
+          "id": "1XFG00rEeHaDIPOQv9LTYs",
+          "name": "I'm Not a Loser",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 98360,
+          "explicit": true,
+          "id": "2Wq43Z5SuZsXAqCwmKsRhe",
+          "name": "Parents",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 56373,
+          "explicit": true,
+          "id": "3IZahAVG3UxqDPXpDoLRyT",
+          "name": "Tonyage",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 43266,
+          "explicit": false,
+          "id": "1el8ukF1AJkDu7yoC5v7iT",
+          "name": "M-16",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 64160,
+          "explicit": false,
+          "id": "1VMnHHIyXnIWbkhhMoI9kM",
+          "name": "I'm Not a Punk",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 107906,
+          "explicit": true,
+          "id": "7fvcx0cXsc7FZhViJAtRxg",
+          "name": "Catalina",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 100333,
+          "explicit": false,
+          "id": "7Meu81YN9Ols2nQdbkKbbh",
+          "name": "Suburban Home",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 119360,
+          "explicit": false,
+          "id": "4mEUjln7tQjPqjhHwMiMOh",
+          "name": "Statue of Liberty",
+          "preview_url": null,
+          "track_number": 10
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 70733,
+          "explicit": false,
+          "id": "1frcPtdD79xCXbRecT49Ev",
+          "name": "Kabuki Girl",
+          "preview_url": null,
+          "track_number": 11
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 99773,
+          "explicit": false,
+          "id": "2cdRxzcgeZLv3KpVf0cfjo",
+          "name": "Marriage",
+          "preview_url": null,
+          "track_number": 12
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 120333,
+          "explicit": false,
+          "id": "5Jd6yfhjjmDxODdvYTjscz",
+          "name": "Hope",
+          "preview_url": null,
+          "track_number": 13
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 134066,
+          "explicit": false,
+          "id": "3H7lUDRaFAXi5hcEzd2GsU",
+          "name": "Bikeage",
+          "preview_url": null,
+          "track_number": 14
+        },
+        {
+          "artists": [
+            {
+              "id": "1FGH4Bh7g9W6V4fUcKZWp5",
+              "name": "Descendents"
+            }
+          ],
+          "duration_ms": 92626,
+          "explicit": false,
+          "id": "6czrzWq8rsw7zexyS9s4tI",
+          "name": "Jean Is Dead",
+          "preview_url": null,
+          "track_number": 15
+        }
+      ],
+      "url": "https://open.spotify.com/album/7ap2sARnQnkhfbUxYIEcu8"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "7ap2sARnQnkhfbUxYIEcu8",
+  "spotify_url": "https://open.spotify.com/album/7ap2sARnQnkhfbUxYIEcu8",
   "styles": [
     "Punk",
     "Hardcore",
@@ -627,7 +1388,7 @@
       "title": "Jean Is Dead"
     }
   ],
-  "updated_at": "2026-04-04T15:53:49.782609",
+  "updated_at": "2026-04-06T15:49:36.842530",
   "videos": [
     "https://www.youtube.com/watch?v=N-8oujFcuQ0"
   ],

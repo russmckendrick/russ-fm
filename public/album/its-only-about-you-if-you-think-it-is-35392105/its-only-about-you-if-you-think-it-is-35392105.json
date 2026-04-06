@@ -22,7 +22,7 @@
     }
   },
   "country": "US",
-  "created_at": "2026-03-25T12:34:06.409632",
+  "created_at": "2026-04-06T15:49:43.972710",
   "date_added": "2026-03-25T05:31:54-07:00",
   "discogs_id": "35392105",
   "discogs_url": "https://www.discogs.com/release/35392105-JMSN-Its-Only-About-You-If-You-Think-It-Is",
@@ -81,17 +81,18 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 1,
-    "processed_at": "2026-03-25T12:34:25.005758",
+    "processed_at": "2026-04-06T15:50:01.549849",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "wikipedia",
       "perplexity"
     ]
   },
   "release_name_apple_music": "...it's only about u if you think it is.",
   "release_name_discogs": "It's Only About You If You Think It Is",
-  "release_name_spotify": null,
+  "release_name_spotify": "...it's only about u if you think it is.",
   "released": "2025-10-15",
   "services": {
     "apple_music": {
@@ -138,14 +139,559 @@
       "url": "https://music.apple.com/gb/album/its-only-about-u-if-you-think-it-is/1839114058"
     },
     "perplexity": {
-      "description": "It's Only About You If You Think It Is\" is JMSN's 2025 album that showcases the Detroit artist's mastery of funk and soul production. Released in October 2025, the 10-track project spans 42 minutes and was entirely written, produced, mixed, and arranged by JMSN at White Room Studios in Los Angeles, with mastering by Randy Merrill at Sterling Sound. The album features JMSN's signature blend of groovy instrumentation and introspective lyricism, with opening track \"Blow The Spot Up\" immediately establishing the project's raw energy through aggressive vocals, guitar work, and percussion that set a confrontational tone.\n\nThe album explores themes of emotional detachment, frustration, and interpersonal conflict with unflinching honesty. Tracks like \"I Don't Even Think About U\" and \"Dirty Dog\" showcase JMSN's ability to layer provocative lyrics over hypnotic funk grooves, creating a sonic landscape that balances musicality with emotional intensity. The project demonstrates JMSN's evolution as both a musician and lyricist, moving beyond the intimate production style he's known for to embrace a more assertive, funk-driven aesthetic while maintaining the meticulous craftsmanship that defines his work.",
-      "generated_at": "2026-03-25T12:34:24.332214",
+      "description": "…it's only about u if you think it is. is JMSN's ninth studio album, released in October 2025 on his independent White Room Records label. The project emerged from the unexpected viral success of the single \"Soft Spot,\" which catalyzed a creative reassessment for the Detroit-based artist. Comprising ten tracks written primarily around the time of that breakthrough moment but recorded and mixed over two years, the album represents a deliberate shift toward rawer, heavier, and slower sonic territory. JMSN challenged himself to build arrangements around bass lines and use fewer instrumental tracks, creating more breathing room and emotional space than his previous work.\n\nThe album showcases JMSN's refined mastery of blending throwback R&B with modern electronic textures, exploring themes of heartbreak, obsession, and vulnerability with surgical precision. Standout tracks like \"I Don't Even Think About U\" exemplify this approach—slow-burning and soulful, the song rides warm basslines and subtle guitar while lyrically dramatizing denial through domestic imagery (burnt toast, week-old roses, glimpses of a familiar car). The production incorporates flanged guitars and faint background vocals that swirl like intrusive thoughts, capturing regret without melodrama. Across its 42-minute runtime, …it's only about u if you think it is. balances the album's funk and soul foundation with introspective, emotionally complex songwriting that deepens JMSN's reputation as a craftsman of contemporary R&B.",
+      "generated_at": "2026-04-06T15:50:00.949403",
       "model": "sonar",
       "source": "perplexity"
+    },
+    "spotify": {
+      "album_type": "album",
+      "available_markets": [],
+      "copyrights": [
+        {
+          "text": "2025 White Room Records",
+          "type": "C"
+        },
+        {
+          "text": "2025 White Room Records",
+          "type": "P"
+        }
+      ],
+      "explicit": true,
+      "external_ids": {
+        "upc": "859717092248"
+      },
+      "id": "5rWMWpCQnCMsOdhBF0KGkj",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273b877372446c2c00d616d6158",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02b877372446c2c00d616d6158",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851b877372446c2c00d616d6158",
+          "width": 64
+        }
+      ],
+      "label": "White Room Records",
+      "popularity": 34,
+      "preview_url": null,
+      "raw_data": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+            },
+            "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+            "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+            "name": "JMSN",
+            "type": "artist",
+            "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+          }
+        ],
+        "copyrights": [
+          {
+            "text": "2025 White Room Records",
+            "type": "C"
+          },
+          {
+            "text": "2025 White Room Records",
+            "type": "P"
+          }
+        ],
+        "external_ids": {
+          "upc": "859717092248"
+        },
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5rWMWpCQnCMsOdhBF0KGkj"
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/albums/5rWMWpCQnCMsOdhBF0KGkj?market=US",
+        "id": "5rWMWpCQnCMsOdhBF0KGkj",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273b877372446c2c00d616d6158",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02b877372446c2c00d616d6158",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851b877372446c2c00d616d6158",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "label": "White Room Records",
+        "name": "...it's only about u if you think it is.",
+        "popularity": 34,
+        "release_date": "2025-10-15",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "tracks": {
+          "href": "https://api.spotify.com/v1/albums/5rWMWpCQnCMsOdhBF0KGkj/tracks?offset=0&limit=50&market=US",
+          "items": [
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 273000,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/22cRErFGV4KOxhbkDKrYU5"
+              },
+              "href": "https://api.spotify.com/v1/tracks/22cRErFGV4KOxhbkDKrYU5",
+              "id": "22cRErFGV4KOxhbkDKrYU5",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Blow The Spot Up",
+              "preview_url": null,
+              "track_number": 1,
+              "type": "track",
+              "uri": "spotify:track:22cRErFGV4KOxhbkDKrYU5"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 251001,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/7FcRQa0mlFQsHZLSlD0385"
+              },
+              "href": "https://api.spotify.com/v1/tracks/7FcRQa0mlFQsHZLSlD0385",
+              "id": "7FcRQa0mlFQsHZLSlD0385",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Click Bait",
+              "preview_url": null,
+              "track_number": 2,
+              "type": "track",
+              "uri": "spotify:track:7FcRQa0mlFQsHZLSlD0385"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 262002,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0kJWvZ2Dl3AJ0sMZ6G0i24"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0kJWvZ2Dl3AJ0sMZ6G0i24",
+              "id": "0kJWvZ2Dl3AJ0sMZ6G0i24",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Dirty Dog",
+              "preview_url": null,
+              "track_number": 3,
+              "type": "track",
+              "uri": "spotify:track:0kJWvZ2Dl3AJ0sMZ6G0i24"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 295002,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/1C1vRN0aarEPkGE1tMFZxP"
+              },
+              "href": "https://api.spotify.com/v1/tracks/1C1vRN0aarEPkGE1tMFZxP",
+              "id": "1C1vRN0aarEPkGE1tMFZxP",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Love The Things U Hate",
+              "preview_url": null,
+              "track_number": 4,
+              "type": "track",
+              "uri": "spotify:track:1C1vRN0aarEPkGE1tMFZxP"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 191004,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0CMy1C5IKhjbOp1II7ReRx"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0CMy1C5IKhjbOp1II7ReRx",
+              "id": "0CMy1C5IKhjbOp1II7ReRx",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Not Good Enough",
+              "preview_url": null,
+              "track_number": 5,
+              "type": "track",
+              "uri": "spotify:track:0CMy1C5IKhjbOp1II7ReRx"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 300001,
+              "explicit": true,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5EDCKI8Bos757QTt78V9SX"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5EDCKI8Bos757QTt78V9SX",
+              "id": "5EDCKI8Bos757QTt78V9SX",
+              "is_local": false,
+              "is_playable": true,
+              "name": "I Don't Even Think About U",
+              "preview_url": null,
+              "track_number": 6,
+              "type": "track",
+              "uri": "spotify:track:5EDCKI8Bos757QTt78V9SX"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 235001,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/0qnNVr1uoL2TeWm5kOkPN2"
+              },
+              "href": "https://api.spotify.com/v1/tracks/0qnNVr1uoL2TeWm5kOkPN2",
+              "id": "0qnNVr1uoL2TeWm5kOkPN2",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Stirrin' Up",
+              "preview_url": null,
+              "track_number": 7,
+              "type": "track",
+              "uri": "spotify:track:0qnNVr1uoL2TeWm5kOkPN2"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 273001,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/5ud8JXuFqMaSX2MCk2SbGT"
+              },
+              "href": "https://api.spotify.com/v1/tracks/5ud8JXuFqMaSX2MCk2SbGT",
+              "id": "5ud8JXuFqMaSX2MCk2SbGT",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Everyone",
+              "preview_url": null,
+              "track_number": 8,
+              "type": "track",
+              "uri": "spotify:track:5ud8JXuFqMaSX2MCk2SbGT"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 180001,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/6e2ciZLdSE2KlgLqYWwrxy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/6e2ciZLdSE2KlgLqYWwrxy",
+              "id": "6e2ciZLdSE2KlgLqYWwrxy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Goodbye",
+              "preview_url": null,
+              "track_number": 9,
+              "type": "track",
+              "uri": "spotify:track:6e2ciZLdSE2KlgLqYWwrxy"
+            },
+            {
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/6HCkJzbswOIc7Qc5TJ1n5l"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/6HCkJzbswOIc7Qc5TJ1n5l",
+                  "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+                  "name": "JMSN",
+                  "type": "artist",
+                  "uri": "spotify:artist:6HCkJzbswOIc7Qc5TJ1n5l"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 284001,
+              "explicit": false,
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4k7kGkhqBW3sNpdev2IJHy"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4k7kGkhqBW3sNpdev2IJHy",
+              "id": "4k7kGkhqBW3sNpdev2IJHy",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Sad Sack",
+              "preview_url": null,
+              "track_number": 10,
+              "type": "track",
+              "uri": "spotify:track:4k7kGkhqBW3sNpdev2IJHy"
+            }
+          ],
+          "limit": 50,
+          "next": null,
+          "offset": 0,
+          "previous": null,
+          "total": 10
+        },
+        "type": "album",
+        "uri": "spotify:album:5rWMWpCQnCMsOdhBF0KGkj"
+      },
+      "release_date": "2025-10-15",
+      "release_date_precision": "day",
+      "total_tracks": 10,
+      "tracks": [
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 273000,
+          "explicit": false,
+          "id": "22cRErFGV4KOxhbkDKrYU5",
+          "name": "Blow The Spot Up",
+          "preview_url": null,
+          "track_number": 1
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 251001,
+          "explicit": false,
+          "id": "7FcRQa0mlFQsHZLSlD0385",
+          "name": "Click Bait",
+          "preview_url": null,
+          "track_number": 2
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 262002,
+          "explicit": false,
+          "id": "0kJWvZ2Dl3AJ0sMZ6G0i24",
+          "name": "Dirty Dog",
+          "preview_url": null,
+          "track_number": 3
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 295002,
+          "explicit": false,
+          "id": "1C1vRN0aarEPkGE1tMFZxP",
+          "name": "Love The Things U Hate",
+          "preview_url": null,
+          "track_number": 4
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 191004,
+          "explicit": true,
+          "id": "0CMy1C5IKhjbOp1II7ReRx",
+          "name": "Not Good Enough",
+          "preview_url": null,
+          "track_number": 5
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 300001,
+          "explicit": true,
+          "id": "5EDCKI8Bos757QTt78V9SX",
+          "name": "I Don't Even Think About U",
+          "preview_url": null,
+          "track_number": 6
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 235001,
+          "explicit": false,
+          "id": "0qnNVr1uoL2TeWm5kOkPN2",
+          "name": "Stirrin' Up",
+          "preview_url": null,
+          "track_number": 7
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 273001,
+          "explicit": false,
+          "id": "5ud8JXuFqMaSX2MCk2SbGT",
+          "name": "Everyone",
+          "preview_url": null,
+          "track_number": 8
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 180001,
+          "explicit": false,
+          "id": "6e2ciZLdSE2KlgLqYWwrxy",
+          "name": "Goodbye",
+          "preview_url": null,
+          "track_number": 9
+        },
+        {
+          "artists": [
+            {
+              "id": "6HCkJzbswOIc7Qc5TJ1n5l",
+              "name": "JMSN"
+            }
+          ],
+          "duration_ms": 284001,
+          "explicit": false,
+          "id": "4k7kGkhqBW3sNpdev2IJHy",
+          "name": "Sad Sack",
+          "preview_url": null,
+          "track_number": 10
+        }
+      ],
+      "url": "https://open.spotify.com/album/5rWMWpCQnCMsOdhBF0KGkj"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "5rWMWpCQnCMsOdhBF0KGkj",
+  "spotify_url": "https://open.spotify.com/album/5rWMWpCQnCMsOdhBF0KGkj",
   "styles": [],
   "title": "It's Only About You If You Think It Is",
   "tracklist": [
@@ -210,7 +756,7 @@
       "title": "Sad Sack"
     }
   ],
-  "updated_at": "2026-03-25T12:34:24.333540",
+  "updated_at": "2026-04-06T15:50:00.950853",
   "videos": [],
   "year": 2025
 }
