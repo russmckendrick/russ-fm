@@ -44,7 +44,7 @@ export function HeroChainTimeline({
       role="tablist"
       aria-label="Featured album timeline"
       onKeyDown={handleKey}
-      className="relative flex w-full border-t border-rule bg-[color-mix(in_oklab,var(--paper)_88%,var(--album-bg,var(--album-bg-fallback))_12%)]"
+      className="relative flex w-full border-t-2 border-[color:color-mix(in_oklab,var(--album-fg,var(--album-fg-fallback))_28%,transparent)] bg-[color-mix(in_oklab,var(--album-bg,var(--album-bg-fallback))_60%,black_22%)] py-[5px]"
     >
       {Array.from({ length: total }).map((_, i) => {
         const state: "completed" | "active" | "upcoming" =
@@ -65,7 +65,8 @@ export function HeroChainTimeline({
             className={cn(
               "group relative flex-1 cursor-pointer bg-transparent p-0",
               "focus-visible:outline-none",
-              i > 0 && "border-l border-rule",
+              i > 0 &&
+                "border-l border-[color:color-mix(in_oklab,var(--album-fg,var(--album-fg-fallback))_14%,transparent)]",
             )}
           >
             <span className="sr-only">
@@ -75,18 +76,18 @@ export function HeroChainTimeline({
             <span
               aria-hidden
               className={cn(
-                "block h-[2px] w-full transition-[height,background-color] duration-200",
-                "group-hover:h-[3px]",
-                "group-focus-visible:h-[3px]",
-                state === "active" && "h-[3px]",
+                "block h-[6px] w-full transition-[height,background-color] duration-200",
+                "group-hover:h-[8px]",
+                "group-focus-visible:h-[8px]",
+                state === "active" && "h-[8px]",
               )}
               style={{
                 backgroundColor:
                   state === "completed"
-                    ? "color-mix(in oklab, var(--album-accent, var(--album-accent-fallback)) 62%, var(--album-muted, var(--album-muted-fallback)) 38%)"
+                    ? "var(--album-accent, var(--album-accent-fallback))"
                     : state === "active"
-                      ? "color-mix(in oklab, var(--album-muted, var(--album-muted-fallback)) 28%, transparent)"
-                      : "color-mix(in oklab, var(--rule-strong) 70%, transparent)",
+                      ? "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 30%, transparent)"
+                      : "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 22%, transparent)",
               }}
             />
 
@@ -94,7 +95,7 @@ export function HeroChainTimeline({
               <span
                 key={activeIndex}
                 aria-hidden
-                className="hero-chain-fill absolute left-0 top-0 block h-[3px]"
+                className="hero-chain-fill absolute left-0 top-0 block h-[8px]"
                 style={{
                   backgroundColor:
                     "var(--album-accent, var(--album-accent-fallback))",
@@ -112,7 +113,10 @@ export function HeroChainTimeline({
                 "group-hover:opacity-70 group-focus-visible:opacity-70",
                 state === "active" && "opacity-60",
               )}
-              style={{ color: "var(--ink-3)" }}
+              style={{
+                color:
+                  "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 65%, transparent)",
+              }}
             >
               {numeric}
             </span>

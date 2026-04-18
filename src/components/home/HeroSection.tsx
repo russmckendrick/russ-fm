@@ -6,6 +6,7 @@ import { getCleanGenresFromArray } from "@/lib/genreUtils";
 import {
   getAlbumImageFromData,
   getAlbumSlug,
+  getArtistAvatarFromData,
   handleImageError,
 } from "@/lib/image-utils";
 import type { Album } from "@/types/album";
@@ -84,11 +85,15 @@ export function HeroSection({
         } as React.CSSProperties
       }
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 overflow-hidden"
+        style={{ backgroundColor: albumBg }}
+      >
         <img
           src={heroImage}
           alt=""
-          className="h-full w-full scale-[1.18] object-cover opacity-55 blur-2xl saturate-[1.15] md:blur-[68px]"
+          className="h-full w-full scale-[1.18] object-cover opacity-40 blur-2xl saturate-[1.2] md:blur-[72px]"
         />
         <div
           className="absolute inset-0"
@@ -96,12 +101,12 @@ export function HeroSection({
             background: `
               linear-gradient(
                 110deg,
-                color-mix(in oklab, ${albumBg} 74%, var(--paper) 26%) 0%,
-                color-mix(in oklab, var(--paper) 88%, transparent) 42%,
-                color-mix(in oklab, var(--paper) 62%, transparent) 70%,
-                color-mix(in oklab, var(--paper) 78%, ${albumMuted} 22%) 100%
+                color-mix(in oklab, ${albumBg} 92%, black 8%) 0%,
+                color-mix(in oklab, ${albumBg} 80%, ${albumMuted} 20%) 50%,
+                color-mix(in oklab, ${albumBg} 72%, ${albumAccent} 10%) 100%
               )
             `,
+            mixBlendMode: "multiply",
           }}
         />
         <div
@@ -110,23 +115,18 @@ export function HeroSection({
             background: `
               radial-gradient(
                 circle at 78% 34%,
-                color-mix(in oklab, ${albumAccent} 48%, transparent) 0%,
-                transparent 38%
+                color-mix(in oklab, ${albumAccent} 40%, transparent) 0%,
+                transparent 42%
               ),
               radial-gradient(
                 circle at 18% 86%,
-                color-mix(in oklab, ${albumMuted} 42%, transparent) 0%,
-                transparent 46%
+                color-mix(in oklab, ${albumMuted} 48%, transparent) 0%,
+                transparent 50%
               )
             `,
           }}
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(244,241,234,0.14)_0%,rgba(244,241,234,0.04)_18%,rgba(244,241,234,0)_100%)] dark:bg-[linear-gradient(180deg,rgba(13,12,10,0.18)_0%,rgba(13,12,10,0.06)_18%,rgba(13,12,10,0)_100%)]" />
       </div>
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-paper to-transparent"
-      />
 
       {/* Desktop cover — bleeds to the section's right edge, outside the
           padded content container so it anchors to the viewport. */}
@@ -157,10 +157,10 @@ export function HeroSection({
           />
           <div className="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10" />
           <span
-            className="absolute left-0 top-0 px-3 py-2 font-mono text-[10px] tracking-[0.08em]"
+            className="absolute left-0 top-0 px-3 py-2 font-mono text-[10px] tracking-[0.08em] backdrop-blur-sm"
             style={{
-              backgroundColor: `color-mix(in oklab, var(--paper) 64%, ${albumBg} 36%)`,
-              color: "var(--ink)",
+              backgroundColor: `color-mix(in oklab, ${albumBg} 72%, transparent)`,
+              color: albumFg,
             }}
           >
             CAT. {shortSlug(currentFeatured.uri_release)}
@@ -199,11 +199,14 @@ export function HeroSection({
               to={currentFeatured.uri_release}
               titleSizeClass={titleSizeClass}
               title={currentFeatured.release_name}
+              fg={albumFg}
+              bg={albumBg}
             />
             <HeroArtistLine
               to={firstArtist}
               artist={currentFeatured.release_artist}
               accentColor={albumAccent}
+              fg={albumFg}
             />
             <HeroMeta
               year={year ? String(year) : "—"}
@@ -214,8 +217,6 @@ export function HeroSection({
               albumHref={currentFeatured.uri_release}
               accent={albumAccent}
               accentFg={albumFg}
-              bg={albumBg}
-              muted={albumMuted}
             />
           </div>
         </div>
@@ -238,12 +239,15 @@ export function HeroSection({
                 to={currentFeatured.uri_release}
                 titleSizeClass={titleSizeClass}
                 title={currentFeatured.release_name}
+                fg={albumFg}
+                bg={albumBg}
                 overlap
               />
               <HeroArtistLine
                 to={firstArtist}
                 artist={currentFeatured.release_artist}
                 accentColor={albumAccent}
+                fg={albumFg}
               />
               <HeroMeta
                 year={year ? String(year) : "—"}
@@ -254,8 +258,6 @@ export function HeroSection({
                 albumHref={currentFeatured.uri_release}
                 accent={albumAccent}
                 accentFg={albumFg}
-                bg={albumBg}
-                muted={albumMuted}
               />
             </div>
           </div>
@@ -279,17 +281,22 @@ function HeroHeading({
   to,
   titleSizeClass,
   title,
+  fg,
+  bg,
   overlap = false,
 }: {
   to: string;
   titleSizeClass: string;
   title: string;
+  fg: string;
+  bg: string;
   overlap?: boolean;
 }) {
   return (
     <Link
       to={to}
-      className="block font-bold leading-[0.9] tracking-[-0.045em] text-ink transition-colors hover:text-hl"
+      className="block font-bold leading-[0.9] tracking-[-0.045em] transition-opacity hover:opacity-85"
+      style={{ color: fg }}
     >
       <h1
         className={cn("text-balance", titleSizeClass)}
@@ -297,8 +304,7 @@ function HeroHeading({
           maxWidth: "min(100%, 18ch)",
           ...(overlap
             ? {
-                textShadow:
-                  "0 1px 0 color-mix(in oklab, var(--paper) 85%, transparent), 0 0 18px color-mix(in oklab, var(--paper) 45%, transparent)",
+                textShadow: `0 1px 0 color-mix(in oklab, ${bg} 70%, transparent), 0 0 22px color-mix(in oklab, ${bg} 55%, transparent)`,
               }
             : {}),
         }}
@@ -313,21 +319,37 @@ function HeroArtistLine({
   to,
   artist,
   accentColor,
+  fg,
 }: {
   to: string;
   artist: string;
   accentColor: string;
+  fg: string;
 }) {
+  const avatar = getArtistAvatarFromData(to);
   return (
     <Link
       to={to}
-      className="mt-4 inline-flex w-fit items-center gap-3 text-ink-2 transition-colors hover:text-hl"
+      className="mt-4 inline-flex w-fit items-center gap-3 transition-opacity hover:opacity-85"
+      style={{ color: `color-mix(in oklab, ${fg} 82%, transparent)` }}
     >
       <span
-        className="h-px w-12"
-        style={{ backgroundColor: accentColor }}
+        className="relative block h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2"
+        style={{
+          // Ring uses the accent so the avatar echoes the palette bar it replaces.
+          boxShadow: `0 0 0 2px ${accentColor}`,
+          backgroundColor: `color-mix(in oklab, ${fg} 10%, transparent)`,
+        }}
         aria-hidden
-      />
+      >
+        <img
+          src={avatar}
+          alt=""
+          onError={handleImageError}
+          loading="eager"
+          className="h-full w-full object-cover"
+        />
+      </span>
       <span className="text-[clamp(18px,2vw,24px)] font-semibold tracking-[-0.015em]">
         {artist}
       </span>
@@ -357,20 +379,16 @@ function HeroButtons({
   albumHref,
   accent,
   accentFg,
-  bg,
-  muted,
 }: {
   albumHref: string;
   accent: string;
   accentFg: string;
-  bg: string;
-  muted: string;
 }) {
   return (
     <div className="mt-8 flex flex-wrap gap-2">
       <Link
         to={albumHref}
-        className="inline-flex h-10 items-center gap-2 border px-4 text-[12.5px] font-medium tracking-[-0.005em] transition-all hover:-translate-y-px hover:brightness-105"
+        className="inline-flex h-10 items-center gap-2 border px-4 text-[12.5px] font-medium tracking-[-0.005em] transition-all hover:-translate-y-px hover:brightness-110"
         style={{
           backgroundColor: accent,
           borderColor: accent,
@@ -379,16 +397,6 @@ function HeroButtons({
         }}
       >
         Open record <span aria-hidden>→</span>
-      </Link>
-      <Link
-        to="/random"
-        className="inline-flex h-10 items-center gap-2 border px-4 text-[12.5px] font-medium tracking-[-0.005em] text-ink backdrop-blur-sm transition-all hover:-translate-y-px hover:brightness-105"
-        style={{
-          backgroundColor: `color-mix(in oklab, var(--paper) 72%, ${bg} 28%)`,
-          borderColor: `color-mix(in oklab, ${muted} 18%, var(--rule-strong))`,
-        }}
-      >
-        Crate dig
       </Link>
     </div>
   );
@@ -408,26 +416,40 @@ function KV({
   return (
     <div
       className={cn(
-        "border px-3 py-3 backdrop-blur-md md:px-4",
+        "relative border-y border-l px-3 py-3 pl-4 backdrop-blur-[2px] md:px-4 md:pl-5",
         className,
       )}
       style={{
         backgroundColor:
-          "color-mix(in oklab, var(--paper) 74%, var(--album-bg, var(--album-bg-fallback)) 26%)",
+          "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 6%, transparent)",
         borderColor:
-          "color-mix(in oklab, var(--album-muted, var(--album-muted-fallback)) 18%, var(--rule-strong))",
-        boxShadow:
-          "0 18px 36px -30px color-mix(in oklab, var(--album-bg, var(--album-bg-fallback)) 60%, transparent)",
+          "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 22%, transparent)",
+        color: "var(--album-fg, var(--album-fg-fallback))",
       }}
     >
-      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+      {/* Accent rail on the left edge — catalogue-card marker */}
+      <span
+        aria-hidden
+        className="absolute inset-y-0 left-0 w-[3px]"
+        style={{
+          backgroundColor:
+            "var(--album-accent, var(--album-accent-fallback))",
+        }}
+      />
+      <dt
+        className="font-mono text-[10px] uppercase tracking-[0.14em]"
+        style={{
+          color:
+            "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 62%, transparent)",
+        }}
+      >
         {label}
       </dt>
       <dd
         className={cn(
-          "mt-1 truncate text-[14px] font-semibold leading-tight text-ink md:text-[15px]",
+          "mt-1.5 truncate text-[15px] font-semibold leading-tight md:text-[16px]",
           mono &&
-            "font-mono text-[12px] uppercase tracking-[0.02em] md:text-[13px]",
+            "font-mono text-[13px] uppercase tracking-[0.02em] md:text-[14px]",
         )}
       >
         {value}
