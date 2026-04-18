@@ -36,12 +36,13 @@ export const appConfig = {
     // Define the order and visibility of homepage sections
     // Comment out sections to hide them, reorder array to change sequence
     sectionOrder: [
-      'hero',           // Hero section with featured albums
-      'recentAlbums',   // Recently added albums carousel
-      'recentArtists',  // Recently added artists carousel
-      'genres',         // Popular genres grid (polaroid style)
-      'randomCollection', // Random collection grid
-      'randomArtists',  // Random artists with polaroid style
+      'hero',             // Editorial split hero
+      'recentAlbums',     // Recently added albums drag-scroll wall
+      'recentArtists',    // Recently added artists drag-scroll wall
+      'genres',           // Top-genre mosaic cards
+      'randomCollection', // From-the-crates grid with shuffle
+      'randomArtists',    // Random-roster grid with shuffle
+      'catalogueStrip',   // 7-column catalogue row (bin-divider style)
     ],
   },
   

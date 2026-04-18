@@ -2,6 +2,19 @@
 
 The russ.fm frontend is a React 19 single-page application built with TypeScript, Vite, and Tailwind CSS.
 
+**Visual system.** In April 2026 the UI was reskinned as an editorial
+vinyl-catalogue site (see `docs/project/Redesign/CHANGELOG.md` for the
+per-phase log). The shell runs on a warm paper/ink palette with
+sharp corners, hairline rules, Inter Tight + JetBrains Mono, and
+mono metadata labels. Cover-colour shadows and hero washes come
+from pre-extracted album palettes exposed both as
+`/public/album-colors.json` for hooks and `/public/album-colors.css`
+for class-driven full-bleed treatments like the home hero. A dev-only
+`TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) lets the author tune
+density / mono visibility / cover-colour / tint intensity in place
+without shipping knobs to public visitors — defaults live in
+`src/config/redesign.config.ts`.
+
 ## Quick Links
 
 | Document | Description |
@@ -21,9 +34,11 @@ The russ.fm frontend is a React 19 single-page application built with TypeScript
 | React Router DOM | 7.6.3 | Client-side routing |
 | Tailwind CSS | 3.x | Utility-first styling |
 | shadcn/ui | Latest | Component library (Radix UI) |
-| Framer Motion | Latest | Animations |
+| Framer Motion | Latest | Animations (Wrapped presentation mode only) |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
+| @fontsource-variable/inter-tight | Latest | Editorial grot typeface |
+| @fontsource-variable/jetbrains-mono | Latest | Editorial mono typeface |
 
 ## Project Structure
 
@@ -31,7 +46,9 @@ The russ.fm frontend is a React 19 single-page application built with TypeScript
 src/
 ├── components/           # Reusable UI components
 │   ├── ui/              # shadcn/ui base components
-│   ├── home/            # Home page sections
+│   ├── home/            # Home page sections (hero, walls, stats aside…)
+│   ├── browse/          # Shared browse primitives (BrowseHeader)
+│   ├── layout/          # PageContainer, SectionHeader, DragWall
 │   └── *.tsx            # Feature components
 ├── pages/               # Route-level components
 │   └── wrapped/         # Year-in-review feature
@@ -40,7 +57,11 @@ src/
 ├── services/            # API/data services
 ├── types/               # TypeScript definitions
 ├── config/              # Application configuration
-└── styles/              # CSS files
+│   ├── app.config.ts        # Original tunables (pagination, homepage)
+│   └── redesign.config.ts   # Editorial redesign knobs (walls, stats, random, tint)
+└── styles/
+    ├── design-tokens.css    # Paper/ink palette + density/mono/tint classes
+    └── index.css            # shadcn HSL mapping + base typography
 ```
 
 ## Component Architecture

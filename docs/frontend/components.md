@@ -2,6 +2,28 @@
 
 This document covers all React components in the russ.fm frontend.
 
+> **Editorial redesign (April 2026).** The shell now runs on a warm
+> paper/ink palette with sharp corners, hairline rules, and Inter
+> Tight + JetBrains Mono. The section below lists the redesign's
+> new shared primitives before moving into the legacy reference.
+
+## Editorial primitives
+
+| Component | Path | Role |
+|-----------|------|------|
+| `PageContainer` | `components/layout/PageContainer.tsx` | Page shell. `standard` gives the `max-w-[1640px]` gutter; `hero` goes edge-to-edge for full-bleed detail pages. |
+| `SectionHeader` | `components/layout/SectionHeader.tsx` | `num · label · count · action` editorial heading with a hairline rule. Used at the top of every home / browse / stats / wrapped block. |
+| `DragWall` | `components/layout/DragWall.tsx` | Horizontal drag-scroll strip with wheel-translation, overflow-aware chevrons, and no `setPointerCapture` (so child links still navigate). |
+| `BrowseHeader` | `components/browse/BrowseHeader.tsx` | `num · kicker · display title · subtitle · counts` header for `/albums`, `/artists`, `/search`. |
+| `AlbumCard` | `components/AlbumCard.tsx` | Editorial tile: square cover, cover-colour drop-shadow, optional `CAT. NNN` index badge, hover-reveal meta strip painted with the album's pre-computed `{background, foreground}` pair. |
+| `ArtistCard` | `components/ArtistCard.tsx` | Circular portrait + mono rank + grot name + release count. Tinted shadow when a latest album is available. |
+| `TweaksPanel` | `components/TweaksPanel.tsx` | **Dev-only.** `Cmd/Ctrl+Shift+D` opens a 320px bottom-right panel with density / mono / cover-colour / tint knobs. Persists to `localStorage['russfm.tweaks']`. Hidden from the public nav.  |
+| `SearchOverlay` | `components/SearchOverlay.tsx` | Compact right-anchored dropdown under the nav search input. Shares its continuous outline with the input while open. Segregates results into `Albums` / `Artists` groups. |
+
+All of these are Tailwind-driven; the tokens they reference live
+in `src/styles/design-tokens.css` and map through `tailwind.config.js`
+(`paper`, `ink`, `rule`, `hl`, `tint`, `font-grot`, `font-mono`).
+
 ## Component Hierarchy
 
 ```mermaid
@@ -496,20 +518,65 @@ interface StatsData {
 
 ### HeroSection (`src/components/home/HeroSection.tsx`)
 
-Featured album carousel with dynamic theming.
+Asymmetric editorial hero: the cover is the dominant element, anchored
+to the viewport's right edge (outside the padded `max-w-[1640px]`
+container) so it bleeds beyond the page gutters. The display title sits
+on the left and overlaps the cover's left edge via a text-shadow halo.
+Font-size scales across four character-count tiers to prevent long names
+from cramping.
 
 ```tsx
 import { HeroSection } from '@/components/home/HeroSection';
 
-<HeroSection albums={featuredAlbums} />
+<HeroSection
+  currentFeatured={currentFeatured}
+  featuredAlbums={featuredAlbums}
+  featuredIndex={featuredIndex}
+  currentPalette={currentPalette}
+  autoRotateMs={autoRotateMs}
+  onSelectIndex={handleSelectFeaturedIndex}
+/>
 ```
 
 **Features:**
-- Auto-rotating carousel
-- Dynamic background colors from album artwork
-- Gradient overlays
-- Service links
-- Responsive layout
+- Cover bleeds to the viewport's right edge, sized `clamp(460px, 58vw, 720px)` square
+- Title overlaps the cover's left edge by ~8vw on `md+`; stacked cover-over-text on mobile
+- Four-tier title sizing based on character count (≤10 / ≤18 / ≤28 / ≥29)
+- Blurred full-bleed backdrop cloned from the active sleeve art
+- Palette-driven overlays and accents via `/public/album-colors.css`
+- Catalogue-style `CAT. NNNN` label on the sleeve's top-left
+- Renders `<HeroChainTimeline>` flush at the bottom as both progress
+  indicator and divider to the content below
+- Reduced spec cards (`KV`) so metadata supports the sleeve rather than dominating
+
+---
+
+### HeroChainTimeline (`src/components/home/HeroChainTimeline.tsx`)
+
+Full-width timer line split into N equal segments, rendered flush at the
+bottom of `<HeroSection>` — it doubles as the divider between the hero
+and the page body. The active segment sweeps 0 → 100% over
+`autoRotateMs`; completed segments stay filled, upcoming ones are
+hairlines. Segments are clickable to jump the hero.
+
+```tsx
+import { HeroChainTimeline } from '@/components/home/HeroChainTimeline';
+
+<HeroChainTimeline
+  total={6}
+  activeIndex={featuredIndex}
+  autoRotateMs={12000}
+  onSelect={handleSelectFeaturedIndex}
+  labels={featuredAlbums.map(a => a.release_name)}
+/>
+```
+
+**Features:**
+- CSS-only sweep animation (`@keyframes hero-chain-fill` in `design-tokens.css`)
+- Re-keyed via `key={activeIndex}` so each index change restarts the sweep
+- Respects `prefers-reduced-motion` — sweep frozen at 100%, instant colour swap
+- `role="tablist"` + `aria-current="step"` on the active segment
+- Keyboard: Left/Right cycles, Enter/Space selects
 
 ---
 

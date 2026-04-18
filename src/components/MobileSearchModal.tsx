@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { X, Search, ArrowLeft } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { useMobileSearch } from '@/hooks/useSearch';
 import { SearchResults } from './SearchResults';
@@ -135,8 +133,7 @@ export function MobileSearchModal({
       <div
         ref={modalRef}
         className={cn(
-          "absolute inset-x-0 bottom-0 top-0",
-          "bg-background",
+          "absolute inset-x-0 bottom-0 top-0 flex flex-col bg-paper",
           "transform transition-transform duration-200 ease-out",
           isOpen ? "translate-y-0" : "translate-y-full"
         )}
@@ -144,44 +141,36 @@ export function MobileSearchModal({
         onTouchEnd={handleTouchEnd}
       >
         {/* Swipe indicator */}
-        <div className="flex justify-center pt-2 pb-1">
-          <div className="w-12 h-1 bg-muted-foreground/30 rounded-full" />
+        <div className="flex justify-center pb-1 pt-2">
+          <div className="h-1 w-12 bg-ink-dim/30" />
         </div>
 
         {/* Header */}
-        <div className="px-4 pb-3">
+        <div className="border-b border-rule-strong px-4 pb-3">
           <div className="flex items-center gap-3">
-            <Button
-              size="icon"
-              variant="ghost"
+            <button
+              type="button"
               onClick={onClose}
-              className="h-11 w-11 rounded-full shrink-0"
               aria-label="Close search"
+              className="flex h-10 w-10 shrink-0 items-center justify-center border border-rule-strong bg-paper text-ink transition-colors hover:bg-paper-2"
             >
-              <ArrowLeft className="h-6 w-6" />
-            </Button>
+              <ArrowLeft className="h-5 w-5" />
+            </button>
 
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              <Input
+            <label className="relative flex flex-1 items-center gap-2 border border-rule-strong bg-paper px-3 focus-within:border-ink">
+              <Search className="h-4 w-4 shrink-0 text-ink-dim" aria-hidden />
+              <input
                 ref={inputRef}
                 type="search"
                 inputMode="search"
-                placeholder="Search albums or artists..."
+                placeholder="Search albums or artists…"
                 value={localSearchTerm}
                 onChange={(e) => {
-                  const newValue = e.target.value;
-                  setLocalSearchTerm(newValue); // Update local state only
-                  setQuery(newValue); // Update search query for results
+                  const v = e.target.value;
+                  setLocalSearchTerm(v);
+                  setQuery(v);
                 }}
-                className={cn(
-                  "h-11 pl-10 pr-11",
-                  "text-base", // Larger text for mobile to prevent zoom
-                  "bg-muted/50",
-                  "border-none",
-                  "rounded-full",
-                  "focus-visible:ring-2 focus-visible:ring-primary"
-                )}
+                className="h-10 w-full min-w-0 bg-transparent font-grot text-[16px] text-ink placeholder:text-ink-dim focus:outline-none"
                 autoComplete="off"
                 autoCorrect="off"
                 autoCapitalize="off"
@@ -189,22 +178,21 @@ export function MobileSearchModal({
                 enterKeyHint="search"
               />
               {localSearchTerm && (
-                <Button
-                  size="icon"
-                  variant="ghost"
+                <button
+                  type="button"
                   onClick={handleClear}
-                  className="absolute right-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full"
                   aria-label="Clear search"
+                  className="shrink-0 text-ink-dim transition-colors hover:text-ink"
                 >
-                  <X className="h-5 w-5" />
-                </Button>
+                  <X className="h-4 w-4" />
+                </button>
               )}
-            </div>
+            </label>
           </div>
         </div>
 
         {/* Search results */}
-        <div className="flex-1 overflow-y-auto overscroll-contain px-4 pb-safe">
+        <div className="pb-safe flex-1 overflow-y-auto overscroll-contain px-4 pt-3">
           <SearchResults
             results={results}
             isLoading={isLoading}
@@ -216,10 +204,9 @@ export function MobileSearchModal({
               setLocalSearchTerm('');
               setQuery('');
             }}
-            layout="list" // Use list layout for mobile
-            showLimitMessage={true}
-            showViewAllLink={true}
-            className="py-4"
+            layout="list"
+            showLimitMessage
+            showViewAllLink
           />
         </div>
       </div>

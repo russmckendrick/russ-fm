@@ -1,0 +1,114 @@
+/* =========================================================================
+   russ.fm — editorial redesign tokens
+   -------------------------------------------------------------------------
+   These tokens feed the new "paper / ink" aesthetic. They live alongside
+   the shadcn HSL variables in index.css; shadcn utilities keep working as
+   before, and new editorial components reference these tokens directly
+   (e.g. `bg-paper`, `text-ink-3`, `border-rule`).
+
+   Paper palette (default) is warm off-white; Ink palette (dark mode) is
+   warm near-black. Neither is pure grey.
+   ========================================================================= */
+
+:root {
+  /* --- Surfaces -------------------------------------------------------- */
+  --paper:    #f4f1ea;   /* body background */
+  --paper-2:  #ebe6db;   /* sunken surface (kv-grid backgrounds) */
+  --paper-3:  #e0d9c8;   /* recessed accent (hover on tiles) */
+
+  /* --- Ink (text) ------------------------------------------------------ */
+  --ink:      #0e0d0b;   /* primary text */
+  --ink-2:    #2a2724;   /* body copy */
+  --ink-3:    #5a534a;   /* secondary text */
+  --ink-dim:  #8a8377;   /* tertiary / mono labels (decorative only) */
+
+  /* --- Rules (borders) ------------------------------------------------- */
+  --rule:         rgba(14, 13, 11, 0.16); /* hairline dividers */
+  --rule-strong:  rgba(14, 13, 11, 0.50); /* interactive / header underlines */
+
+  /* --- Highlight & dynamic tint --------------------------------------- */
+  --hl:       #e23b1e;   /* single accent, active states only */
+  --tint:     #8a8a3d;   /* dynamic; overridden per-record at runtime */
+  --tint-strength: 0.85;
+
+  /* --- Typography ------------------------------------------------------ */
+  --font-grot: 'Inter Tight Variable', 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+}
+
+/* Shadcn's dark-mode selector is `.dark` on <html>; we piggyback so all
+   new tokens swap at the same time the shadcn HSL set does. */
+.dark {
+  --paper:    #0d0c0a;
+  --paper-2:  #15130f;
+  --paper-3:  #1d1b16;
+
+  --ink:      #f4f1ea;
+  --ink-2:    #d8d3c6;
+  --ink-3:    #9a9285;
+  --ink-dim:  #6a6358;
+
+  --rule:         rgba(244, 241, 234, 0.14);
+  --rule-strong:  rgba(244, 241, 234, 0.40);
+}
+
+/* =========================================================================
+   Dev-only tweaks panel (Phase 11). Applied via classes on <html> and
+   persisted to localStorage['russfm.tweaks']. Public site ships with the
+   defaults below.
+   ========================================================================= */
+
+/* Density -------------------------------------------------------------- */
+html.density-sparse  { --tweak-density-scale: 1.25; }
+html.density-medium  { --tweak-density-scale: 1;    }
+html.density-dense   { --tweak-density-scale: 0.85; }
+html:not([class*="density-"]) { --tweak-density-scale: 1; }
+
+/* Mono-label visibility. The decorative mono kickers / counters are
+   wrapped in `.font-mono` + `uppercase` + `tracking-[0.08em]` or similar.
+   When mono labels are turned off, fade them hard so the eye falls on
+   the grot copy only. Keep interactive mono text (kbd, code) at full
+   opacity by scoping to elements that also carry `uppercase tracking-`. */
+html.mono-off [class*="uppercase"][class*="tracking-"] {
+  opacity: 0.35;
+}
+
+/* Cover-colour toggle. When off, AlbumCard / ArtistCard tinted shadows
+   become a single neutral drop-shadow so the grid reads purely as
+   paper-and-ink. AlbumCard wires its shadow inline; we can't neutralise
+   that from CSS without `!important`, so we restrict the shadow radius
+   instead — keeps the card shape, drops the colour. */
+html.tint-off [style*="0 22px 44px"],
+html.tint-off [style*="0 40px 80px"] {
+  box-shadow: 0 8px 24px -8px rgba(14, 13, 11, 0.18), 0 2px 6px -2px rgba(14, 13, 11, 0.08) !important;
+}
+
+/* Tint intensity overrides --tint-strength on <html>; components that
+   build a gradient wash already reference it. */
+
+/* =========================================================================
+   Hero chain timeline — sweep animation for the active segment's fill.
+   Duration is set inline per instance via `animation-duration`, matching
+   appConfig.homepage.hero.autoRotateInterval. Re-keyed on index change so
+   each auto-rotate tick restarts from 0%.
+   ========================================================================= */
+
+@keyframes hero-chain-fill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+.hero-chain-fill {
+  width: 0%;
+  animation-name: hero-chain-fill;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-chain-fill {
+    animation: none;
+    width: 100%;
+  }
+}

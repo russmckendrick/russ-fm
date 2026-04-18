@@ -1,7 +1,11 @@
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { X, Search } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Search, X } from "lucide-react";
 
 interface FilterBarProps {
   sortBy: string;
@@ -17,6 +21,11 @@ interface FilterBarProps {
   searchPlaceholder?: string;
 }
 
+/**
+ * Editorial filter row for browse pages. Wide search field on the left,
+ * three compact `LABEL · control` cells on the right joined by hairline
+ * rules. Inline `Clear` only appears once something is actually filtered.
+ */
 export function FilterBar({
   sortBy,
   setSortBy,
@@ -26,112 +35,145 @@ export function FilterBar({
   setSelectedYear,
   genres,
   years,
-  searchValue = '',
+  searchValue = "",
   onSearchChange,
-  searchPlaceholder = 'Search albums...'
+  searchPlaceholder = "Search albums...",
 }: FilterBarProps) {
-  // Check if any filters are active (not at their default values)
-  const hasActiveFilters = sortBy !== 'date_added' || selectedGenre !== 'all' || selectedYear !== 'all' || searchValue !== '';
-  
+  const hasActiveFilters =
+    sortBy !== "date_added" ||
+    selectedGenre !== "all" ||
+    selectedYear !== "all" ||
+    searchValue !== "";
+
   const clearFilters = () => {
-    setSortBy('date_added');
-    setSelectedGenre('all');
-    setSelectedYear('all');
-    if (onSearchChange) {
-      onSearchChange('');
-    }
+    setSortBy("date_added");
+    setSelectedGenre("all");
+    setSelectedYear("all");
+    onSearchChange?.("");
   };
 
-  const filterBarClassName = "flex flex-wrap gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg transition-all duration-300" +
-    (hasActiveFilters ? " border-primary/20 bg-primary/5" : "");
-
   return (
-    <div className={filterBarClassName}>
-      {/* Search Input */}
+    <div className="mb-8 flex flex-col gap-3 border-y border-rule-strong bg-paper-2/40 px-4 py-3 md:flex-row md:items-stretch md:gap-0 md:divide-x md:divide-rule-strong md:px-0">
       {onSearchChange && (
-        <div className="relative flex-1 min-w-[200px] max-w-sm">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-          <Input
-            type="text"
-            placeholder={searchPlaceholder}
+        <label className="relative flex min-w-0 items-center gap-2 px-0 focus-within:text-ink md:flex-1 md:px-4">
+          <Search className="h-4 w-4 shrink-0 text-ink-dim" aria-hidden />
+          <input
+            type="search"
             value={searchValue}
             onChange={(e) => onSearchChange(e.target.value)}
-            className={`pl-9 pr-9 h-8 transition-colors ${searchValue ? 'border-primary/30 bg-primary/5' : ''}`}
+            placeholder={searchPlaceholder}
+            className="h-9 w-full min-w-0 bg-transparent font-grot text-[14px] text-ink placeholder:text-ink-dim focus:outline-none"
           />
           {searchValue && (
             <button
-              onClick={() => onSearchChange('')}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              type="button"
+              onClick={() => onSearchChange("")}
+              aria-label="Clear search"
+              className="shrink-0 text-ink-dim transition-colors hover:text-ink"
             >
               <X className="h-4 w-4" />
             </button>
           )}
-        </div>
+        </label>
       )}
 
-      <div className="flex items-center gap-2">
-        <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
-        <Select value={sortBy} onValueChange={setSortBy}>
-          <SelectTrigger className={`w-[140px] h-8 transition-colors ${sortBy !== 'date_added' ? 'border-primary/30 bg-primary/5' : ''}`}>
-            <SelectValue />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="date_added">Recently Added</SelectItem>
-            <SelectItem value="release_name">Album Name</SelectItem>
-            <SelectItem value="release_artist">Artist Name</SelectItem>
-            <SelectItem value="date_release_year">Release Year</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
+      <FilterCell label="Sort">
+        <EditorialSelect
+          value={sortBy}
+          onValueChange={setSortBy}
+          items={[
+            { value: "date_added", label: "Recently Added" },
+            { value: "release_name", label: "Album Name" },
+            { value: "release_artist", label: "Artist Name" },
+            { value: "date_release_year", label: "Release Year" },
+          ]}
+        />
+      </FilterCell>
 
-      <div className="flex items-center gap-2">
-        <span className="text-sm text-muted-foreground whitespace-nowrap">Genre:</span>
-        <Select value={selectedGenre} onValueChange={setSelectedGenre}>
-          <SelectTrigger className={`w-[120px] h-8 transition-colors ${selectedGenre !== 'all' ? 'border-primary/30 bg-primary/5' : ''}`}>
-            <SelectValue placeholder="All" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All</SelectItem>
-            {genres.map((genre) => (
-              <SelectItem key={genre} value={genre} className="capitalize">
-                {genre.toLowerCase()}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <FilterCell label="Genre">
+        <EditorialSelect
+          value={selectedGenre}
+          onValueChange={setSelectedGenre}
+          items={[
+            { value: "all", label: "All" },
+            ...genres.map((g) => ({ value: g, label: g })),
+          ]}
+          triggerClass="min-w-[140px]"
+        />
+      </FilterCell>
 
-      <div className="flex items-center gap-2">
-        <span className="text-sm text-muted-foreground whitespace-nowrap">Year:</span>
-        <Select value={selectedYear} onValueChange={setSelectedYear}>
-          <SelectTrigger className={`w-[80px] h-8 transition-colors ${selectedYear !== 'all' ? 'border-primary/30 bg-primary/5' : ''}`}>
-            <SelectValue placeholder="All" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All</SelectItem>
-            {years.map((year) => (
-              <SelectItem key={year} value={year}>
-                {year}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
+      <FilterCell label="Year">
+        <EditorialSelect
+          value={selectedYear}
+          onValueChange={setSelectedYear}
+          items={[
+            { value: "all", label: "All" },
+            ...years.map((y) => ({ value: y, label: y })),
+          ]}
+          triggerClass="min-w-[96px]"
+        />
+      </FilterCell>
 
-      {/* Clear Filters Button - only show when filters are active */}
       {hasActiveFilters && (
-        <div className="flex items-center">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={clearFilters}
-            className="h-8 px-3 text-sm"
-          >
-            <X className="h-3 w-3 mr-1" />
-            Clear Filters
-          </Button>
-        </div>
+        <button
+          type="button"
+          onClick={clearFilters}
+          className="group flex items-center gap-2 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim transition-colors hover:text-hl"
+        >
+          <X className="h-3 w-3" />
+          Clear
+        </button>
       )}
     </div>
+  );
+}
+
+function FilterCell({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex items-center gap-3 px-0 py-1.5 md:px-4 md:py-2">
+      <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
+        {label}
+      </span>
+      {children}
+    </div>
+  );
+}
+
+function EditorialSelect({
+  value,
+  onValueChange,
+  items,
+  triggerClass,
+}: {
+  value: string;
+  onValueChange: (v: string) => void;
+  items: Array<{ value: string; label: string }>;
+  triggerClass?: string;
+}) {
+  return (
+    <Select value={value} onValueChange={onValueChange}>
+      <SelectTrigger
+        className={`h-8 gap-2 border-0 bg-transparent px-0 font-grot text-[13px] font-medium tracking-[-0.005em] text-ink shadow-none focus:ring-0 focus:ring-offset-0 ${triggerClass ?? ""}`}
+      >
+        <SelectValue />
+      </SelectTrigger>
+      <SelectContent className="rounded-none border border-rule-strong font-grot">
+        {items.map((it) => (
+          <SelectItem
+            key={it.value}
+            value={it.value}
+            className="rounded-none font-grot text-[13px]"
+          >
+            {it.label}
+          </SelectItem>
+        ))}
+      </SelectContent>
+    </Select>
   );
 }

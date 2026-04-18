@@ -1,10 +1,8 @@
 import { Link } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { GenreTag } from '@/components/ui/genre-tag';
 import { Search, Disc, User, AlertCircle } from 'lucide-react';
+import { GenreTag } from '@/components/ui/genre-tag';
 import { handleImageError } from '@/lib/image-utils';
+import { cn } from '@/lib/utils';
 import { SearchResult } from '@/services/searchService';
 
 interface SearchResultsProps {
@@ -14,12 +12,22 @@ interface SearchResultsProps {
   error: string | null;
   searchTerm: string;
   onResultClick?: () => void;
-  layout?: 'grid' | 'list';
+  /** Kept for backwards-compat with overlay/modal callers. Editorial
+   *  style is uniform now, but `compact` reduces the row padding and
+   *  image size for overlay contexts. */
+  layout?: 'grid' | 'list' | 'compact';
   showLimitMessage?: boolean;
   showViewAllLink?: boolean;
   className?: string;
 }
 
+/**
+ * Editorial search result list. Results are segregated into album and
+ * artist groups with mono kicker headers; each row is a hairline-
+ * separated strip of `THUMB · TITLE · SUBTITLE · META`. Uniform style
+ * across overlay, mobile modal, and results page — callers can opt
+ * into `compact` sizing for the overlay drop-down.
+ */
 export function SearchResults({
   results,
   isLoading,
@@ -30,267 +38,204 @@ export function SearchResults({
   layout = 'grid',
   showLimitMessage = true,
   showViewAllLink = false,
-  className = ''
+  className = '',
 }: SearchResultsProps) {
-  // Loading state
+  const compact = layout === 'compact';
+
   if (isLoading || isIndexing) {
     return (
-      <div className={`p-8 text-center ${className}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-        <p className="text-muted-foreground">
-          {isIndexing ? 'Indexing collection...' : 'Searching...'}
-        </p>
+      <div className={cn("py-12 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim", className)}>
+        {isIndexing ? 'Indexing collection…' : 'Searching…'}
       </div>
     );
   }
 
-  // Error state
   if (error) {
     return (
-      <div className={`p-8 text-center ${className}`}>
-        <AlertCircle className="h-8 w-8 text-red-500 mx-auto mb-2" />
-        <p className="text-red-500 font-medium">Search Error</p>
-        <p className="text-sm text-muted-foreground mt-1">{error}</p>
+      <div className={cn("flex flex-col items-center gap-2 py-12 text-center", className)}>
+        <AlertCircle className="h-6 w-6 text-hl" />
+        <p className="font-grot text-[14px] font-semibold text-ink">Search error</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">{error}</p>
       </div>
     );
   }
 
-  // Empty state
   if (searchTerm.trim() && results.length === 0) {
     return (
-      <div className={`p-8 text-center ${className}`}>
-        <Search className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-        <p className="text-muted-foreground">No results found</p>
-        <p className="text-xs text-muted-foreground/70 mt-1">Try a different search term</p>
+      <div className={cn("flex flex-col items-center gap-2 py-12 text-center", className)}>
+        <Search className="h-6 w-6 text-ink-dim" />
+        <p className="font-grot text-[14px] font-semibold text-ink">No results</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+          Try a different search term
+        </p>
       </div>
     );
   }
 
-  // No search term
   if (!searchTerm.trim()) {
     return (
-      <div className={`p-8 text-center ${className}`}>
-        <Search className="h-12 w-12 text-muted-foreground/30 mb-4" />
-        <p className="text-lg font-medium text-muted-foreground">
-          Start typing to search
-        </p>
-        <p className="text-sm text-muted-foreground/70 mt-1">
+      <div className={cn("flex flex-col items-center gap-3 py-12 text-center", className)}>
+        <Search className="h-8 w-8 text-ink-dim" aria-hidden />
+        <p className="font-grot text-[17px] font-semibold text-ink">Start typing to search</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
           Find albums, artists, and genres
         </p>
       </div>
     );
   }
 
-  // Results
-  if (layout === 'list') {
-    return (
-      <div className={`space-y-3 ${className}`}>
-        {results.map((result, index) => (
-          <Link
-            key={`${result.type}-${result.id}-${index}`}
-            to={result.url}
-            onClick={onResultClick}
-            className="block min-h-[44px]"
-          >
-            <Card className="hover:shadow-md hover:scale-[1.01] transition-all duration-200">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-4">
-                  <div className="relative flex-shrink-0">
-                    {result.type === 'artist' ? (
-                      <Avatar className="h-12 w-12">
-                        <AvatarImage
-                          src={result.title.toLowerCase() === 'various' ? '/images/various.png' : result.image}
-                          onError={handleImageError}
-                          alt={result.title}
-                        />
-                        <AvatarFallback className="text-sm">
-                          {result.title.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                    ) : (
-                      <div className="h-12 w-12 rounded-md overflow-hidden">
-                        <img
-                          src={result.image}
-                          onError={handleImageError}
-                          alt={result.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
+  // Segregate into albums + artists
+  const albums = results.filter(r => r.type === 'album');
+  const artists = results.filter(r => r.type === 'artist');
 
-                    {/* Type indicator */}
-                    <div className="absolute -top-1 -right-1 bg-primary text-primary-foreground rounded-full p-0.5">
-                      {result.type === 'artist' ? (
-                        <User className="h-2 w-2" />
-                      ) : (
-                        <Disc className="h-2 w-2" />
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-medium text-sm truncate flex-1">
-                        {result.title}
-                      </h3>
-                      {result.year && (
-                        <Badge variant="outline" className="text-xs px-1 py-0">
-                          {result.year}
-                        </Badge>
-                      )}
-                      {result.albumCount && (
-                        <Badge variant="secondary" className="text-xs">
-                          {result.albumCount} album{result.albumCount !== 1 ? 's' : ''}
-                        </Badge>
-                      )}
-                    </div>
-
-                    <p className="text-xs text-muted-foreground mb-2 truncate">
-                      {result.subtitle}
-                    </p>
-
-                    {result.genres && result.genres.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {result.genres.slice(0, 2).map((genre, genreIndex) => (
-                          <GenreTag key={genreIndex} genre={genre} size="sm" linkable={true} />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-
-        {/* Limit message and view all link */}
-        {showLimitMessage && results.length >= 10 && (
-          <div className="mt-4 pt-3 border-t text-center">
-            <p className="text-xs text-muted-foreground">
-              Showing first 10 results. Try a more specific search term for better results.
-            </p>
-          </div>
-        )}
-
-        {showViewAllLink && searchTerm.trim() && results.length > 0 && (
-          <div className="mt-4 pt-3 border-t text-center">
-            <Link
-              to={`/search?q=${encodeURIComponent(searchTerm)}`}
-              onClick={onResultClick}
-              className="text-xs text-primary hover:underline"
-            >
-              View all results for "{searchTerm}"
-            </Link>
-          </div>
-        )}
-      </div>
-    );
-  }
-
-  // Grid layout (default)
   return (
-    <div className={className}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {results.map((result, index) => (
-          <Link
-            key={`${result.type}-${result.id}-${index}`}
-            to={result.url}
-            onClick={onResultClick}
-            className="block min-h-[44px]"
-          >
-            <Card className="hover:shadow-md hover:scale-[1.02] transition-all duration-200 h-full">
-              <CardContent className="p-4">
-                <div className="flex items-start gap-4">
-                  <div className="relative flex-shrink-0">
-                    {result.type === 'artist' ? (
-                      <Avatar className="h-20 w-20">
-                        <AvatarImage
-                          src={result.title.toLowerCase() === 'various' ? '/images/various.png' : result.image}
-                          onError={handleImageError}
-                          alt={result.title}
-                        />
-                        <AvatarFallback className="text-lg">
-                          {result.title.charAt(0)}
-                        </AvatarFallback>
-                      </Avatar>
-                    ) : (
-                      <div className="h-20 w-20 rounded-md overflow-hidden">
-                        <img
-                          src={result.image}
-                          onError={handleImageError}
-                          alt={result.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    )}
+    <div className={cn("flex flex-col gap-8", className)}>
+      {albums.length > 0 && (
+        <ResultGroup
+          kicker="Albums"
+          count={albums.length}
+          items={albums}
+          compact={compact}
+          onResultClick={onResultClick}
+        />
+      )}
+      {artists.length > 0 && (
+        <ResultGroup
+          kicker="Artists"
+          count={artists.length}
+          items={artists}
+          compact={compact}
+          onResultClick={onResultClick}
+        />
+      )}
 
-                    {/* Type indicator */}
-                    <div className="absolute -top-1 -right-1 bg-primary text-primary-foreground rounded-full p-0.5">
-                      {result.type === 'artist' ? (
-                        <User className="h-2 w-2" />
-                      ) : (
-                        <Disc className="h-2 w-2" />
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-1 mb-1">
-                      <h3 className="font-medium text-sm truncate flex-1">
-                        {result.title}
-                      </h3>
-                      {result.year && (
-                        <Badge variant="outline" className="text-xs px-1 py-0">
-                          {result.year}
-                        </Badge>
-                      )}
-                    </div>
-
-                    <p className="text-xs text-muted-foreground mb-2 truncate">
-                      {result.subtitle}
-                    </p>
-
-                    {result.albumCount && (
-                      <Badge variant="secondary" className="text-xs mb-2">
-                        {result.albumCount} album{result.albumCount !== 1 ? 's' : ''}
-                      </Badge>
-                    )}
-
-                    {result.genres && result.genres.length > 0 && (
-                      <div className="flex flex-wrap gap-1">
-                        {result.genres.slice(0, 2).map((genre, genreIndex) => (
-                          <GenreTag key={genreIndex} genre={genre} size="sm" linkable={true} />
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
-        ))}
-      </div>
-
-      {/* Limit message and view all link */}
       {showLimitMessage && results.length >= 10 && (
-        <div className="mt-4 pt-3 border-t text-center">
-          <p className="text-xs text-muted-foreground">
-            Showing first 10 results. Try a more specific search term for better results.
-          </p>
-        </div>
+        <p className="border-t border-rule pt-4 text-center font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim">
+          Showing first 10 · narrow the search for tighter matches
+        </p>
       )}
 
       {showViewAllLink && searchTerm.trim() && results.length > 0 && (
-        <div className="mt-4 pt-3 border-t text-center">
+        <div className="border-t border-rule pt-4 text-center">
           <Link
             to={`/search?q=${encodeURIComponent(searchTerm)}`}
             onClick={onResultClick}
-            className="text-xs text-primary hover:underline"
+            className="inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-hl transition-colors hover:underline"
           >
-            View all results for "{searchTerm}"
+            View all results for "{searchTerm}" →
           </Link>
         </div>
       )}
     </div>
+  );
+}
+
+function ResultGroup({
+  kicker,
+  count,
+  items,
+  compact,
+  onResultClick,
+}: {
+  kicker: string;
+  count: number;
+  items: SearchResult[];
+  compact: boolean;
+  onResultClick?: () => void;
+}) {
+  return (
+    <section>
+      <h3 className="mb-1 flex items-baseline justify-between border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
+        <span>{kicker}</span>
+        <span>{String(count).padStart(3, '0')}</span>
+      </h3>
+      <ul>
+        {items.map((result, index) => (
+          <li key={`${result.type}-${result.id}-${index}`} className="border-b border-rule last:border-b-0">
+            <Row result={result} compact={compact} onResultClick={onResultClick} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function Row({
+  result,
+  compact,
+  onResultClick,
+}: {
+  result: SearchResult;
+  compact: boolean;
+  onResultClick?: () => void;
+}) {
+  const isArtist = result.type === 'artist';
+  const size = compact ? 'h-10 w-10' : 'h-14 w-14';
+  const fallbackSrc =
+    isArtist && result.title.toLowerCase() === 'various' ? '/images/various.png' : result.image;
+
+  return (
+    <Link
+      to={result.url}
+      onClick={onResultClick}
+      className={cn(
+        "grid items-center gap-4 px-0 transition-colors hover:bg-paper-2",
+        compact ? "grid-cols-[40px_minmax(0,1fr)_auto] py-2" : "grid-cols-[56px_minmax(0,1fr)_auto] py-3",
+      )}
+    >
+      <div
+        className={cn(
+          "relative flex shrink-0 items-center justify-center overflow-hidden border border-rule-strong bg-paper-2 font-mono text-[11px] uppercase text-ink-dim",
+          size,
+          isArtist ? "rounded-full" : "rounded-none",
+        )}
+      >
+        <img
+          src={fallbackSrc}
+          onError={handleImageError}
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <span
+          className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full border border-paper bg-ink text-paper"
+          aria-hidden
+        >
+          {isArtist ? <User className="h-2.5 w-2.5" /> : <Disc className="h-2.5 w-2.5" />}
+        </span>
+      </div>
+
+      <div className="min-w-0">
+        <div className="flex min-w-0 items-baseline gap-2">
+          <span className={cn("truncate font-grot font-semibold text-ink", compact ? "text-[13px]" : "text-[15px]")}>
+            {result.title}
+          </span>
+          {result.year && (
+            <span className="shrink-0 font-mono text-[10.5px] uppercase tracking-[0.04em] text-ink-dim">
+              {result.year}
+            </span>
+          )}
+        </div>
+        <div className={cn("truncate font-mono uppercase tracking-[0.04em] text-ink-dim", compact ? "text-[10px]" : "text-[10.5px]")}>
+          {result.subtitle}
+          {result.albumCount ? (
+            <>
+              <span className="mx-1.5">·</span>
+              {result.albumCount} REL
+            </>
+          ) : null}
+        </div>
+        {!compact && result.genres && result.genres.length > 0 && (
+          <div className="mt-1.5 flex flex-wrap gap-1">
+            {result.genres.slice(0, 2).map((genre) => (
+              <GenreTag key={genre} genre={genre} size="sm" linkable />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <span className="shrink-0 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim opacity-0 transition-opacity group-hover:opacity-100" aria-hidden>
+        →
+      </span>
+    </Link>
   );
 }

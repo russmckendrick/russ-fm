@@ -1,7 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { AvatarGroup } from '@/components/ui/avatar-group';
-import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
+import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
+import { handleImageError } from "@/lib/image-utils";
 
 interface Album {
   release_name: string;
@@ -10,10 +9,7 @@ interface Album {
   date_added: string;
   date_release_year: string;
   uri_release: string;
-  images_uri_release: {
-    medium: string;
-    avatar?: string;
-  };
+  images_uri_release: { medium: string; avatar?: string };
 }
 
 interface Artist {
@@ -29,102 +25,81 @@ interface Artist {
 
 interface ArtistCardProps {
   artist: Artist;
+  /** 1-based index; renders as a mono rank label beside the name. */
+  index?: number;
   onClick?: () => void;
+  className?: string;
 }
 
-export function ArtistCard({ artist, onClick }: ArtistCardProps) {
-  const navigate = useNavigate();
-
-  const handleCardClick = (e: React.MouseEvent) => {
+/**
+ * Editorial artist tile: circular photo (the one deliberate round exception),
+ * ranked mono number, name, release count. Kept deliberately quiet so the
+ * photo does the talking.
+ */
+export function ArtistCard({
+  artist,
+  index,
+  onClick,
+  className,
+}: ArtistCardProps) {
+  const handleClick = (e: React.MouseEvent) => {
     if (onClick) {
       e.preventDefault();
       onClick();
     }
   };
 
-  const CardWrapper = ({ children }: { children: React.ReactNode }) => {
-    if (onClick) {
-      return (
-        <div
-          className="w-full h-full cursor-pointer focus:outline-none outline-none"
-          onClick={handleCardClick}
-        >
-          {children}
-        </div>
-      );
-    }
+  const content = (
+    <div className="group flex flex-col items-center text-center font-grot">
+      <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2">
+        <img
+          src={artist.image}
+          alt={artist.name}
+          loading="lazy"
+          draggable={false}
+          onError={handleImageError}
+          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+        />
+      </div>
+
+      <div className="mt-3 flex items-baseline gap-2">
+        {index != null && (
+          <span className="font-mono text-[11px] tracking-[0.04em] text-ink-dim">
+            {String(index).padStart(2, "0")}
+          </span>
+        )}
+        <h3 className="line-clamp-1 text-[15px] font-semibold leading-tight tracking-[-0.005em] text-ink transition-colors group-hover:text-hl">
+          {artist.name}
+        </h3>
+      </div>
+      <div className="mt-1 font-mono text-[10.5px] uppercase tracking-[0.06em] text-ink-3">
+        {artist.albumCount} {artist.albumCount === 1 ? "release" : "releases"}
+      </div>
+    </div>
+  );
+
+  if (onClick) {
     return (
-      <Link to={artist.uri} className="block h-full focus:outline-none focus-visible:outline-none outline-none">
-        {children}
-      </Link>
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={handleClick}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onClick();
+          }
+        }}
+        className={cn("cursor-pointer", className)}
+      >
+        {content}
+      </div>
     );
-  };
+  }
 
   return (
-    <div className="group relative h-full">
-      <CardWrapper>
-        <div className="h-full flex flex-col gap-4">
-          {/* Artist Image Container */}
-          <div className="relative aspect-square rounded-full overflow-hidden shadow-md transition-all duration-500">
-            <img
-              src={artist.image}
-              alt={artist.name}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="lazy"
-            />
-
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
-
-          {/* Content Info */}
-          <div className="flex flex-col items-center text-center gap-1 px-1">
-            <h3 className="font-semibold text-base leading-tight line-clamp-1 group-hover:text-primary transition-colors">
-              {artist.name}
-            </h3>
-
-            <span className="text-sm text-muted-foreground font-medium">
-              {artist.albumCount} album{artist.albumCount !== 1 ? 's' : ''}
-            </span>
-
-            {/* Recent Albums Avatars */}
-            <div className="mt-2 opacity-80 group-hover:opacity-100 transition-opacity">
-              <AvatarGroup max={4}>
-                {artist.albums
-                  .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
-                  .slice(0, 4)
-                  .map((album, index) => {
-                    const albumPath = album.uri_release?.replace('/album/', '').replace('/', '') || '';
-                    return (
-                      <div
-                        key={index}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          navigate(`/album/${albumPath}`);
-                        }}
-                        className="cursor-pointer hover:scale-110 transition-transform z-10"
-                        title={album.release_name}
-                      >
-                        <Avatar className="h-6 w-6 border-2 border-background">
-                          <AvatarImage
-                            src={getAlbumImageFromData(album.uri_release, 'medium')}
-                            onError={handleImageError}
-                            alt={album.release_name}
-                            className="object-cover"
-                          />
-                          <AvatarFallback className="text-[8px]">
-                            {album.release_name.substring(0, 2).toUpperCase()}
-                          </AvatarFallback>
-                        </Avatar>
-                      </div>
-                    );
-                  })}
-              </AvatarGroup>
-            </div>
-          </div>
-        </div>
-      </CardWrapper>
-    </div>
+    <Link to={artist.uri} className={cn("block", className)}>
+      {content}
+    </Link>
   );
 }

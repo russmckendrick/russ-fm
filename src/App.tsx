@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
+import { TweaksPanel } from './components/TweaksPanel';
 import { HomePage } from './pages/HomePage';
 import { AlbumsPage } from './pages/AlbumsPage';
 import { ArtistsPage } from './pages/ArtistsPage';
@@ -30,10 +31,10 @@ function ArtistRouteHandler() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-grot">
       <Navigation />
 
-      <main className="pt-0 md:pt-32 pb-16">
+      <main className="pb-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
@@ -54,6 +55,9 @@ function App() {
       </main>
 
       <Footer />
+
+      {/* Dev-only: Cmd/Ctrl+Shift+D to open */}
+      <TweaksPanel />
     </div>
   );
 }

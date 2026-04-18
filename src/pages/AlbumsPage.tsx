@@ -1,10 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { Music } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import { AlbumCard } from '@/components/AlbumCard';
 import { FilterBar } from '@/components/FilterBar';
 import { PageContainer } from '@/components/layout';
+import { BrowseHeader } from '@/components/browse/BrowseHeader';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -276,18 +275,31 @@ export function AlbumsPage() {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading your collection...</p>
+      <PageContainer>
+        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+          Loading catalogue…
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
+  const headerCounts = [
+    { label: "Records", value: filteredCollection.length.toLocaleString() },
+    { label: "Page", value: `${currentPage} / ${Math.max(1, totalPages)}` },
+  ];
+  if (selectedGenre !== "all") headerCounts.push({ label: "Genre", value: selectedGenre });
+  if (selectedYear !== "all") headerCounts.push({ label: "Year", value: selectedYear });
+
   return (
     <PageContainer>
-      {/* Filters */}
+      <BrowseHeader
+        num="01"
+        kicker="Catalogue · Albums"
+        title="Every record in the crate"
+        subtitle="Every release in the collection, filterable by genre, year, and title. Sort by when it landed, by sleeve, or by artist."
+        counts={headerCounts}
+      />
+
       <FilterBar
         sortBy={sortBy}
         setSortBy={(value) => {
@@ -315,29 +327,27 @@ export function AlbumsPage() {
       />
 
 
-      {/* Collection Grid */}
       {filteredCollection.length === 0 ? (
-        <Card className="p-8 text-center">
-          <CardContent>
-            <Music className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2 text-foreground">No albums found</h3>
-            <p className="text-muted-foreground">Try adjusting your search or filters</p>
-          </CardContent>
-        </Card>
+        <div className="border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
+          <p className="text-[17px] font-semibold text-ink">No albums found</p>
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+            Try adjusting your search or filters
+          </p>
+        </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
-          {paginatedCollection.map((album) => (
+        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {paginatedCollection.map((album, i) => (
             <AlbumCard
               key={album.uri_release}
               album={album}
+              index={startIndex + i + 1}
             />
           ))}
         </div>
       )}
 
-      {/* Pagination */}
       {totalPages > 1 && (
-        <div className="mt-8">
+        <div className="mt-12 border-t border-rule pt-6">
           <Pagination>
             <PaginationContent>
               <PaginationItem>

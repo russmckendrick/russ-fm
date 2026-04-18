@@ -1,14 +1,10 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Disc } from 'lucide-react';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 'react-icons/si';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { ServiceButton } from '@/components/ui/service-button';
 import { GenreTag } from '@/components/ui/genre-tag';
-import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { AlbumCard } from '@/components/AlbumCard';
-import { PageContainer } from '@/components/layout';
+import { PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColors } from '@/hooks/useAlbumColors';
@@ -16,7 +12,6 @@ import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
-import { createGlowGradient, getReadableTextColor } from '@/lib/color-utils';
 
 interface Album {
   release_name: string;
@@ -25,10 +20,7 @@ interface Album {
     name: string;
     uri_artist: string;
     json_detailed_artist: string;
-    images_uri_artist: {
-      'hi-res': string;
-      medium: string;
-    };
+    images_uri_artist: { 'hi-res': string; medium: string };
   }>;
   genre_names: string[];
   uri_release: string;
@@ -37,14 +29,8 @@ interface Album {
   date_release_year: string;
   json_detailed_release: string;
   json_detailed_artist: string;
-  images_uri_release: {
-    'hi-res': string;
-    medium: string;
-  };
-  images_uri_artist: {
-    'hi-res': string;
-    medium: string;
-  };
+  images_uri_release: { 'hi-res': string; medium: string };
+  images_uri_artist: { 'hi-res': string; medium: string };
 }
 
 interface ArtistData {
@@ -61,39 +47,12 @@ interface ArtistData {
   discogs_id?: string;
   discogs_url?: string;
   services?: {
-    spotify?: {
-      id?: string;
-      url?: string;
-      popularity?: number;
-      followers?: {
-        total?: number;
-      };
-      external_urls?: {
-        spotify?: string;
-      };
-    };
-    apple_music?: {
-      url?: string;
-      id?: string;
-    };
-    lastfm?: {
-      url?: string;
-      listeners?: number;
-      playcount?: number;
-      bio?: {
-        content?: string;
-        summary?: string;
-      };
-    };
-    discogs?: {
-      id?: string;
-      url?: string;
-    };
+    spotify?: { id?: string; url?: string; popularity?: number; followers?: { total?: number }; external_urls?: { spotify?: string } };
+    apple_music?: { url?: string; id?: string };
+    lastfm?: { url?: string; listeners?: number; playcount?: number; bio?: { content?: string; summary?: string } };
+    discogs?: { id?: string; url?: string };
   };
-  local_images: {
-    'hi-res': string;
-    medium: string;
-  };
+  local_images: { 'hi-res': string; medium: string };
 }
 
 export function ArtistDetailPage() {
@@ -102,154 +61,59 @@ export function ArtistDetailPage() {
   const [artistData, setArtistData] = useState<ArtistData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Select a random album for color extraction
+  // Palette sourced from a random album so the hero gets a per-artist tint
   const randomAlbum = useMemo(() => {
     if (albums.length === 0) return null;
     return albums[Math.floor(Math.random() * albums.length)];
   }, [albums]);
-
-  // Get album path for color extraction
   const randomAlbumPath = randomAlbum?.uri_release.replace('/album/', '').replace('/', '') || '';
   const albumColors = useAlbumColors(randomAlbumPath);
 
-  // Create dynamic styles based on album colors
-  const titleTextStyle = useMemo(() => {
-    if (!albumColors) return { color: 'inherit' };
-    return { color: getReadableTextColor(albumColors.background, albumColors.foreground, albumColors.accent) };
-  }, [albumColors]);
-
-  const createHeroBackground = (colors: typeof albumColors) => {
-    if (!colors) return 'linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%)';
-    return `linear-gradient(135deg, ${colors.background} 0%, ${colors.muted} 50%, ${colors.background} 100%)`;
-  };
-
-  const colorProperties = useMemo(() => {
-    if (!albumColors) return {};
-    return {
-      '--dynamic-accent': albumColors.accent,
-      '--dynamic-foreground': albumColors.foreground,
-      '--dynamic-background': albumColors.background,
-    } as React.CSSProperties;
-  }, [albumColors]);
-
-  // Set page title based on artist data
-  const pageTitle = artistData
-    ? `${artistData.name} - ${albums.length} Album${albums.length !== 1 ? 's' : ''} | Russ.fm`
-    : 'Loading Artist... | Russ.fm';
-
-  usePageTitle(pageTitle);
-
-  // Set meta tags for social media sharing
-  useMetaTags({
-    title: pageTitle,
-    description: artistData
-      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}... ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
-      : 'View artist details on Russ.fm',
-    image: artistPath ? getArtistOGImageUrl(artistPath) : undefined,
-    url: `${appConfig.siteUrl}/artist/${artistPath}`,
-    type: 'music.musician'
-  });
-
   const loadArtistData = useCallback(async () => {
     try {
-      // Load collection to find albums by this artist
       const collectionResponse = await fetch('/collection.json');
       const collection = await collectionResponse.json();
 
-      // Filter albums by this artist (decode the artistPath)
       const decodedArtistPath = decodeURIComponent(artistPath || '');
       const targetUri = `/artist/${decodedArtistPath}/`;
 
       const artistAlbums = collection.filter((album: Album) => {
-        // Check direct URI match first
-        if (album.uri_artist === targetUri) {
-          return true;
-        }
-
-        // Check if the sanitized version of the album's artist URI matches
+        if (album.uri_artist === targetUri) return true;
         const albumArtistPath = album.uri_artist.replace('/artist/', '').replace('/', '');
-        const sanitizedAlbumArtistPath = sanitizeFolderName(albumArtistPath);
-        if (decodedArtistPath === sanitizedAlbumArtistPath) {
-          return true;
-        }
-
-        // Check if this album has the artist in the artists array
-        if (album.artists) {
-          const foundInArtists = album.artists.some(artist => {
-            // Direct URI match
-            if (artist.uri_artist === targetUri) {
-              return true;
-            }
-
-            // Sanitized URI match
-            const individualArtistPath = artist.uri_artist.replace('/artist/', '').replace('/', '');
-            const sanitizedIndividualPath = sanitizeFolderName(individualArtistPath);
-            return decodedArtistPath === sanitizedIndividualPath;
-          });
-
-          if (foundInArtists) {
-            return true;
-          }
-        }
-
-        // Fallback: try sanitized name matching for URL consistency
-        const sanitizedArtistName = sanitizeFolderName(album.release_artist);
-        if (decodedArtistPath === sanitizedArtistName) {
-          return true;
-        }
-
+        if (decodedArtistPath === sanitizeFolderName(albumArtistPath)) return true;
+        if (album.artists?.some(a => {
+          if (a.uri_artist === targetUri) return true;
+          const p = a.uri_artist.replace('/artist/', '').replace('/', '');
+          return decodedArtistPath === sanitizeFolderName(p);
+        })) return true;
+        if (decodedArtistPath === sanitizeFolderName(album.release_artist)) return true;
         return false;
       });
 
       setAlbums(artistAlbums);
 
-      // Load detailed artist information if available
       if (artistAlbums.length > 0) {
         try {
-          // Try to get the specific artist's JSON file from the artists array
-          let artistJsonUrl = null;
-
-          // Look for this specific artist in the artists array of any album
+          let artistJsonUrl: string | null = null;
           for (const album of artistAlbums) {
             if (album.artists) {
-              const foundArtist = album.artists.find(artist => {
-                // Direct URI match
-                if (artist.uri_artist === targetUri) {
-                  return true;
-                }
-
-                // Sanitized URI match
-                const individualArtistPath = artist.uri_artist.replace('/artist/', '').replace('/', '');
-                const sanitizedIndividualPath = sanitizeFolderName(individualArtistPath);
-                return decodedArtistPath === sanitizedIndividualPath;
+              const found = album.artists.find(a => {
+                if (a.uri_artist === targetUri) return true;
+                const p = a.uri_artist.replace('/artist/', '').replace('/', '');
+                return decodedArtistPath === sanitizeFolderName(p);
               });
-
-              if (foundArtist) {
-                artistJsonUrl = foundArtist.json_detailed_artist;
-                break;
-              }
+              if (found) { artistJsonUrl = found.json_detailed_artist; break; }
             }
           }
-
-          // Also check the main artist URI with sanitization fallback
           if (!artistJsonUrl) {
             for (const album of artistAlbums) {
-              const albumArtistPath = album.uri_artist.replace('/artist/', '').replace('/', '');
-              const sanitizedAlbumArtistPath = sanitizeFolderName(albumArtistPath);
-              if (decodedArtistPath === sanitizedAlbumArtistPath) {
-                artistJsonUrl = album.json_detailed_artist;
-                break;
-              }
+              const p = album.uri_artist.replace('/artist/', '').replace('/', '');
+              if (decodedArtistPath === sanitizeFolderName(p)) { artistJsonUrl = album.json_detailed_artist; break; }
             }
           }
+          if (!artistJsonUrl) artistJsonUrl = artistAlbums[0].json_detailed_artist;
 
-          // Fallback to the first album's artist JSON if not found in artists array
-          if (!artistJsonUrl) {
-            artistJsonUrl = artistAlbums[0].json_detailed_artist;
-          }
-
-          const sanitizedJsonPath = sanitizeJsonPath(artistJsonUrl);
-          const artistDetailResponse = await fetch(sanitizedJsonPath);
+          const artistDetailResponse = await fetch(sanitizeJsonPath(artistJsonUrl));
           const artistDetail = await artistDetailResponse.json();
           setArtistData(artistDetail);
         } catch (error) {
@@ -264,195 +128,185 @@ export function ArtistDetailPage() {
     }
   }, [artistPath]);
 
-  useEffect(() => {
-    loadArtistData();
-  }, [artistPath, loadArtistData]);
+  useEffect(() => { loadArtistData(); }, [artistPath, loadArtistData]);
+
+  const pageTitle = artistData
+    ? `${artistData.name} - ${albums.length} Album${albums.length !== 1 ? 's' : ''} | Russ.fm`
+    : 'Loading Artist... | Russ.fm';
+  usePageTitle(pageTitle);
+  useMetaTags({
+    title: pageTitle,
+    description: artistData
+      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}... ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
+      : 'View artist details on Russ.fm',
+    image: artistPath ? getArtistOGImageUrl(artistPath) : undefined,
+    url: `${appConfig.siteUrl}/artist/${artistPath}`,
+    type: 'music.musician'
+  });
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading artist...</p>
+      <PageContainer>
+        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+          Loading artist…
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
   if (albums.length === 0) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <Link to="/artists">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Artists
-          </Button>
-        </Link>
-        <div className="p-8 text-center glass-card rounded-2xl">
-          <Disc className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-          <h3 className="text-lg font-semibold mb-2 text-foreground">Artist not found</h3>
-          <p className="text-muted-foreground">The requested artist could not be found</p>
+      <PageContainer>
+        <div className="py-16">
+          <Link to="/artists/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
+            ← Artists
+          </Link>
+          <div className="mt-8 border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
+            <p className="text-[17px] font-semibold text-ink">Artist not found</p>
+            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+              The requested artist could not be found
+            </p>
+          </div>
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
   const artist = albums[0];
-
-  // Get the correct artist name for individual artists
-  const getArtistName = () => {
-    if (artistData?.name) {
-      return artistData.name;
-    }
-
-    // Extract artist name from path if available in artists array
-    const decodedArtistPath = decodeURIComponent(artistPath || '');
-    const targetUri = `/artist/${decodedArtistPath}/`;
-
+  const artistName = (() => {
+    if (artistData?.name) return artistData.name;
+    const decoded = decodeURIComponent(artistPath || '');
+    const targetUri = `/artist/${decoded}/`;
     for (const album of albums) {
       if (album.artists) {
-        const foundArtist = album.artists.find(artist => artist.uri_artist === targetUri);
-        if (foundArtist) {
-          return foundArtist.name;
-        }
+        const found = album.artists.find(a => a.uri_artist === targetUri);
+        if (found) return found.name;
       }
     }
-
     return artist.release_artist;
-  };
+  })();
 
-  const artistName = getArtistName();
-  const allGenres = [...new Set(albums.flatMap(album => album.genre_names))];
+  const allGenres = [...new Set(albums.flatMap(a => a.genre_names))];
   const cleanGenres = getCleanGenresFromArray(allGenres, artistName);
+  const sortedAlbums = [...albums].sort(
+    (a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime()
+  );
+  const years = sortedAlbums
+    .map(a => new Date(a.date_release_year).getFullYear())
+    .filter(y => Number.isFinite(y));
+  const firstYear = years.length ? Math.min(...years) : null;
+  const latestYear = years.length ? Math.max(...years) : null;
+  const bio = cleanBiography(artistData?.biography);
+
+  const heroTint = albumColors?.background ?? 'var(--paper-2)';
 
   return (
     <PageContainer variant="hero">
-      {/* Hero Section - Full Width & Immersive */}
-      <div
-        className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-32 px-4 overflow-hidden"
+      {/* Hero --------------------------------------------------------- */}
+      <section
+        className="relative isolate overflow-hidden"
         style={{
-          background: createHeroBackground(albumColors),
-          ...colorProperties
+          backgroundColor: 'var(--paper)',
         }}
       >
-        {/* Animated Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
-            style={{
-              background: albumColors ? `radial-gradient(circle at 20% 30%, ${albumColors.accent} 0%, transparent 50%)` : 'none'
-            }}
-          />
-          <div
-            className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
-            style={{
-              background: albumColors ? `radial-gradient(circle at 80% 80%, ${albumColors.accent} 0%, transparent 50%)` : 'none'
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        </div>
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'multiply',
+            opacity: 0.85,
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0 hidden dark:block"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'screen',
+            opacity: 0.7,
+          }}
+        />
 
-        <div className="container mx-auto relative z-10 max-w-6xl">
-          <div className="flex flex-col md:flex-row items-end gap-8 md:gap-12">
-            {/* Artist Image - Polaroid Frame */}
-            <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0" style={{ transform: 'rotate(-2deg)' }}>
+        <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
+          <nav className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+            <Link to="/artists/1" className="transition-colors hover:text-ink">Artists</Link>
+            <span>/</span>
+            <span className="text-ink">{artistName}</span>
+          </nav>
+
+          <div className="grid gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:items-end md:gap-14">
+            {/* Circular portrait */}
+            <div className="mx-auto w-52 shrink-0 md:mx-0 md:w-72">
               <div
-                className="absolute -inset-4 rounded-2xl opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
-                style={{ background: albumColors ? createGlowGradient(albumColors, 'bold') : 'none' }}
-              />
-              {/* Polaroid Frame */}
-              <div className="relative bg-white p-4 pb-12 shadow-2xl rounded-lg transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-0">
-                {/* Photo */}
-                <div className="aspect-square overflow-hidden rounded-sm">
-                  <img
-                    src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
-                    alt={artistName}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onError={handleImageError}
-                  />
-                </div>
-
-                {/* Artist Name (handwritten style on polaroid) */}
-                <div className="absolute bottom-4 left-0 right-0 px-4">
-                  <p className="text-center text-slate-700 dark:text-slate-300 font-medium text-lg tracking-wide line-clamp-2"
-                    style={{ fontFamily: '"Kalam", "Comic Sans MS", cursive' }}>
-                    {artistName}
-                  </p>
-                </div>
+                className="relative aspect-square w-full overflow-hidden rounded-full border border-rule-strong bg-paper-2"
+                style={
+                  albumColors
+                    ? { boxShadow: `0 40px 80px -30px ${albumColors.background}, 0 8px 20px -6px rgba(14,13,11,0.12)` }
+                    : undefined
+                }
+              >
+                <img
+                  src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
+                  alt={artistName}
+                  onError={handleImageError}
+                  className="h-full w-full object-cover"
+                />
               </div>
-
-              {/* Subtle tape effect */}
-              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-yellow-100/80 rounded-sm shadow-sm border border-yellow-200/50 -rotate-3" />
             </div>
 
-            {/* Header Info */}
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <div className="space-y-2">
-                <Link to="/artists" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-2">
-                  <ArrowLeft className="h-4 w-4 mr-1" />
-                  Back to Artists
-                </Link>
-                <h1
-                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance text-foreground"
-                >
+            {/* Header text */}
+            <div className="flex min-w-0 flex-col gap-6">
+              <div>
+                <div className="mb-4 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+                  <span className="text-hl">ARTIST</span>
+                  <span>·</span>
+                  <span>{albums.length} RELEASE{albums.length === 1 ? '' : 'S'}</span>
+                  {firstYear && latestYear && (
+                    <>
+                      <span>·</span>
+                      <span>
+                        {firstYear === latestYear ? firstYear : `${firstYear}–${latestYear}`}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <h1 className="text-[clamp(40px,7vw,88px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
                   {artistName}
                 </h1>
               </div>
 
-              {/* Quick Stats Row */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-sm font-medium">
-                <MetadataBadge>
-                  {albums.length} Album{albums.length !== 1 ? 's' : ''}
-                </MetadataBadge>
-                {artistData?.country && (
-                  <MetadataBadge>{artistData.country}</MetadataBadge>
-                )}
-                {artistData?.formed_date && (
-                  <MetadataBadge>Formed {artistData.formed_date}</MetadataBadge>
-                )}
-              </div>
+              {/* KV strip */}
+              <dl className="grid max-w-xl grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong font-grot">
+                <KV label="Releases" value={String(albums.length)} />
+                {firstYear && <KV label="First" value={String(firstYear)} />}
+                {artistData?.country && <KV label="Country" value={artistData.country} />}
+                {artistData?.formed_date && <KV label="Formed" value={artistData.formed_date} />}
+              </dl>
 
-              {/* Tags */}
               {cleanGenres.length > 0 && (
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
-                  {cleanGenres.slice(0, 5).map((genre, index) => (
-                    <GenreTag key={index} genre={genre} size="md" linkable={true} />
+                <div className="flex flex-wrap gap-1.5">
+                  {cleanGenres.slice(0, 6).map((g) => (
+                    <GenreTag key={g} genre={g} size="md" linkable />
                   ))}
                 </div>
               )}
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-4">
+              {/* External service buttons */}
+              <div className="flex flex-wrap gap-2">
                 {artistData?.services?.spotify?.url && (
-                  <ServiceButton
-                    service="spotify"
-                    url={artistData.services?.spotify?.url}
-                    icon={<SiSpotify className="h-4 w-4" />}
-                  >
+                  <ServiceButton service="spotify" url={artistData.services.spotify.url} icon={<SiSpotify className="h-4 w-4" />}>
                     Spotify
                   </ServiceButton>
                 )}
-
                 {artistData?.services?.apple_music?.url && (
-                  <ServiceButton
-                    service="apple-music"
-                    url={artistData.services?.apple_music?.url}
-                    icon={<SiApplemusic className="h-4 w-4" />}
-                  >
+                  <ServiceButton service="apple-music" url={artistData.services.apple_music.url} icon={<SiApplemusic className="h-4 w-4" />}>
                     Apple Music
                   </ServiceButton>
                 )}
-
                 {artistData?.services?.lastfm?.url && (
-                  <ServiceButton
-                    service="lastfm"
-                    url={artistData.services?.lastfm?.url}
-                    icon={<SiLastdotfm className="h-4 w-4" />}
-                  >
+                  <ServiceButton service="lastfm" url={artistData.services.lastfm.url} icon={<SiLastdotfm className="h-4 w-4" />}>
                     Last.fm
                   </ServiceButton>
                 )}
-
                 {(artistData?.discogs_url || artistData?.services?.discogs?.url) && (
                   <ServiceButton
                     service="discogs"
@@ -462,7 +316,6 @@ export function ArtistDetailPage() {
                     Discogs
                   </ServiceButton>
                 )}
-
                 <ServiceButton
                   service="wikipedia"
                   url={`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`}
@@ -474,76 +327,102 @@ export function ArtistDetailPage() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 max-w-4xl">
-        {/* Artist Biography */}
-        {artistData?.biography && (
-          <section className="py-12">
-            <h2 className="text-3xl font-bold mb-6 text-foreground">Biography</h2>
-            <div className="relative">
-              <div className="text-lg md:text-xl leading-relaxed text-muted-foreground font-serif">
-                {(() => {
-                  let bio = artistData.biography?.replace(/<[^>]*>/g, '').trim();
+      {/* Main content ------------------------------------------------- */}
+      <div className="mx-auto w-full max-w-[1640px] px-5 py-14 md:px-8 md:py-20">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-20">
+          <div className="flex flex-col gap-16">
+            {bio && (
+              <section>
+                <SectionHeader num="01" label="Biography" />
+                <div className="mt-6 font-grot text-[16px] leading-[1.7] text-ink-2">
+                  {bio.split('\n').filter(p => p.trim()).map((p, i) => (
+                    <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
+                  ))}
+                </div>
+              </section>
+            )}
 
-                  // Remove everything from "Read more on Last.fm" onwards
-                  const readMoreIndex = bio?.indexOf('Read more on Last.fm');
-                  if (readMoreIndex !== -1) {
-                    bio = bio?.substring(0, readMoreIndex).trim();
-                  }
-
-                  // Remove everything from "Full Wikipedia article:" onwards
-                  const wikiIndex = bio?.indexOf('Full Wikipedia article:');
-                  if (wikiIndex !== -1) {
-                    bio = bio?.substring(0, wikiIndex).trim();
-                  }
-
-                  // Handle different biography formats
-                  if (bio?.includes('\n')) {
-                    // TheAudioDB format: Uses actual \n characters for paragraphs
-                    return bio.split('\n').filter(paragraph => paragraph.trim()).map((paragraph, index) => (
-                      <p key={index} className="mb-4 last:mb-0">
-                        {paragraph.trim()}
-                      </p>
-                    ));
-                  } else {
-                    // Legacy format: Single paragraph, no newlines
-                    return (
-                      <p className="mb-0">
-                        {bio}
-                      </p>
-                    );
-                  }
-                })()}
+            <section>
+              <SectionHeader
+                num={bio ? '02' : '01'}
+                label="Releases in collection"
+                count={albums.length}
+              />
+              <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                {sortedAlbums.map((album, i) => (
+                  <AlbumCard key={album.uri_release} album={album} index={i + 1} />
+                ))}
               </div>
-            </div>
-          </section>
-        )}
+            </section>
+          </div>
 
-        {/* Albums Grid */}
-        <section className="py-12">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-3xl font-bold flex items-center gap-2 text-foreground">
-              <Disc className="h-8 w-8" />
-              Albums in Collection
-            </h2>
-            <Badge variant="outline" className="text-base px-3 py-1">
-              {albums.length}
-            </Badge>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {albums
-              .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime())
-              .map((album) => (
-                <AlbumCard
-                  key={album.uri_release}
-                  album={album}
-                />
-              ))}
-          </div>
-        </section>
+          {/* Sidebar */}
+          <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
+            <div>
+              <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                Quick facts
+              </h3>
+              <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+                <KV label="Releases" value={String(albums.length)} />
+                {firstYear && <KV label="First" value={String(firstYear)} />}
+                {latestYear && <KV label="Latest" value={String(latestYear)} />}
+                {artistData?.country && <KV label="Country" value={artistData.country} />}
+                {artistData?.formed_date && <KV label="Formed" value={artistData.formed_date} />}
+                {artistData?.services?.spotify?.followers?.total != null && (
+                  <KV label="Followers" value={numberShort(artistData.services.spotify.followers.total)} />
+                )}
+                {artistData?.services?.lastfm?.listeners != null && (
+                  <KV label="Listeners" value={numberShort(Number(artistData.services.lastfm.listeners))} />
+                )}
+              </dl>
+            </div>
+
+            {cleanGenres.length > 0 && (
+              <div>
+                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                  Genres
+                </h3>
+                <div className="flex flex-wrap gap-1.5">
+                  {cleanGenres.map((g) => (
+                    <GenreTag key={g} genre={g} size="sm" linkable />
+                  ))}
+                </div>
+              </div>
+            )}
+          </aside>
+        </div>
       </div>
     </PageContainer>
   );
+}
+
+function KV({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-paper px-3 py-2.5">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+        {label}
+      </dt>
+      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+        {value}
+      </dd>
+    </div>
+  );
+}
+
+function cleanBiography(raw?: string): string | null {
+  if (!raw) return null;
+  let bio = raw.replace(/<[^>]*>/g, '').trim();
+  const readMore = bio.indexOf('Read more on Last.fm');
+  if (readMore !== -1) bio = bio.substring(0, readMore).trim();
+  const wiki = bio.indexOf('Full Wikipedia article:');
+  if (wiki !== -1) bio = bio.substring(0, wiki).trim();
+  return bio || null;
+}
+
+function numberShort(n: number): string {
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+  return n.toLocaleString();
 }

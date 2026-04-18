@@ -1,38 +1,34 @@
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 interface PageContainerProps {
   children: React.ReactNode;
   /**
    * Container variant:
-   * - 'standard': For listing pages (Albums, Artists, Search) - provides header offset
-   * - 'hero': For full-bleed hero pages - negates main padding so hero can extend edge-to-edge
+   * - 'standard': padded container for list/detail pages (albums, artists,
+   *   search). Respects the editorial page gutters and max-width.
+   * - 'hero': full-bleed wrapper for pages whose top section paints to the
+   *   viewport edges (album/artist detail, random, stats hero). No
+   *   horizontal padding — the page's hero is expected to manage its own.
    */
-  variant?: 'standard' | 'hero';
+  variant?: "standard" | "hero";
   className?: string;
 }
 
 /**
- * PageContainer - Standardized layout container for consistent header spacing
- *
- * Spacing logic:
- * - App.tsx main has `pt-0 md:pt-32` (0 mobile, 128px desktop)
- * - 'standard' variant: Adds mobile padding only (desktop uses main's padding)
- * - 'hero' variant: Negates main padding so hero sections can go full-bleed
+ * Editorial page shell. Navigation is sticky (not fixed) and lives in the
+ * document flow, so pages no longer need to reserve header-height top
+ * padding. Standard pages get the max-1640 gutter; hero pages go edge-to-
+ * edge.
  */
 export function PageContainer({
   children,
-  variant = 'standard',
-  className
+  variant = "standard",
+  className,
 }: PageContainerProps) {
-  const baseClasses = variant === 'standard'
-    // Standard: container with mobile padding only (desktop uses main's md:pt-32)
-    ? 'container mx-auto px-4 pt-24 md:pt-0 pb-8'
-    // Hero: negate main's padding for full-bleed heroes (they handle their own top padding)
-    : 'min-h-screen pb-20 -mt-0 md:-mt-32';
+  const base =
+    variant === "standard"
+      ? "mx-auto w-full max-w-[1640px] px-5 py-8 md:px-8 md:py-10"
+      : "min-h-screen";
 
-  return (
-    <div className={cn(baseClasses, className)}>
-      {children}
-    </div>
-  );
+  return <div className={cn(base, className)}>{children}</div>;
 }

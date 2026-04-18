@@ -1,342 +1,306 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { GenreTag } from '@/components/ui/genre-tag';
-import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { Shuffle, RefreshCw, ArrowRight } from 'lucide-react';
-import { PageContainer } from '@/components/layout';
+import { GenreTag } from '@/components/ui/genre-tag';
+import { PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
-import { generateColorProperties, createHeroBackground, createGlowGradient } from '@/lib/color-utils';
-import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
+import { useAlbumColors } from '@/hooks/useAlbumColors';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { redesignConfig } from '@/config/redesign.config';
+import { cn } from '@/lib/utils';
+import type { Album } from '@/types/album';
 
-interface Album {
-  release_name: string;
-  release_artist: string;
-  artists?: Array<{
-    name: string;
-    uri_artist: string;
-    json_detailed_artist: string;
-    images_uri_artist: {
-      'hi-res': string;
-      medium: string;
-    };
-  }>;
-  genre_names: string[];
-  uri_release: string;
-  uri_artist: string;
-  date_added: string;
-  date_release_year: string;
-  json_detailed_release: string;
-  json_detailed_artist: string;
-  images_uri_release: {
-    'hi-res': string;
-    medium: string;
-  };
-  images_uri_artist: {
-    'hi-res': string;
-    medium: string;
-  };
-}
-
+/**
+ * Editorial random-record surface. A tinted wash picks up the cover's
+ * dominant colour; the sleeve sits left, a KV strip + chip row + action
+ * row sit right. A peek strip of upcoming possibilities lives below,
+ * each one clickable to jump straight to that record. Space bar on
+ * desktop re-shuffles; the tint crossfades with the sleeve.
+ */
 export function RandomPage() {
-  const [randomAlbum, setRandomAlbum] = useState<Album | null>(null);
+  const [allAlbums, setAllAlbums] = useState<Album[]>([]);
+  const [queue, setQueue] = useState<Album[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isShuffling, setIsShuffling] = useState(false);
-  const [allAlbums, setAllAlbums] = useState<Album[]>([]);
   const [isVisible, setIsVisible] = useState(true);
 
-  // Get album path for color extraction
-  const albumPath = randomAlbum?.uri_release.replace('/album/', '').replace('/', '') || '';
-  const albumColors = useAlbumColorsWithFallback(albumPath);
+  const peekCount = redesignConfig.random.peekCount;
+  const currentAlbum = queue[0] ?? null;
+  const peekAlbums = queue.slice(1, 1 + peekCount);
+
+  const albumPath = currentAlbum?.uri_release.replace('/album/', '').replace('/', '') || '';
+  const colors = useAlbumColors(albumPath);
 
   usePageTitle('Random Discovery | Russ.fm');
 
-  const getRandomAlbum = (albums: Album[]): Album => {
-    return albums[Math.floor(Math.random() * albums.length)];
-  };
-
-  const loadInitialAlbum = useCallback((albums: Album[]) => {
-    const selected = getRandomAlbum(albums);
-    setRandomAlbum(selected);
-    setIsLoading(false);
+  // Build a fresh shuffled deck
+  const shuffleDeck = useCallback((pool: Album[], keep?: Album) => {
+    const deck = [...pool].sort(() => Math.random() - 0.5);
+    // Ensure the currently-shown record doesn't get re-picked as the next one
+    if (keep && deck[0]?.uri_release === keep.uri_release && deck.length > 1) {
+      [deck[0], deck[1]] = [deck[1], deck[0]];
+    }
+    return deck;
   }, []);
 
-  const loadCollection = useCallback(async () => {
-    try {
-      const response = await fetch('/collection.json');
-      const albums: Album[] = await response.json();
-      setAllAlbums(albums);
-      loadInitialAlbum(albums);
-    } catch (error) {
-      console.error('Error loading collection:', error);
-      setIsLoading(false);
-    }
-  }, [loadInitialAlbum]);
-
   useEffect(() => {
-    loadCollection();
-  }, [loadCollection]);
+    let cancelled = false;
+    (async () => {
+      try {
+        const response = await fetch('/collection.json');
+        const albums: Album[] = await response.json();
+        if (cancelled) return;
+        setAllAlbums(albums);
+        setQueue([...albums].sort(() => Math.random() - 0.5));
+      } catch (error) {
+        console.error('Error loading collection:', error);
+      } finally {
+        if (!cancelled) setIsLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, []);
 
-  const handleShuffle = useCallback(() => {
-    if (allAlbums.length > 0) {
-      setIsShuffling(true);
+  const advanceTo = useCallback((next: Album) => {
+    setQueue((prev) => {
+      const rest = prev.filter(a => a.uri_release !== next.uri_release);
+      // Keep a fresh deck behind `next` so the peek strip stays populated.
+      const tail = rest.length > peekCount
+        ? rest
+        : shuffleDeck(allAlbums, next);
+      return [next, ...tail.filter(a => a.uri_release !== next.uri_release)];
+    });
+  }, [allAlbums, peekCount, shuffleDeck]);
 
-      // Fade out current album
-      setIsVisible(false);
+  const handleShuffle = useCallback((targetOverride?: Album) => {
+    if (!queue.length) return;
+    setIsShuffling(true);
+    setIsVisible(false);
+    const target = targetOverride ?? queue[1] ?? queue[0];
+    window.setTimeout(() => {
+      advanceTo(target);
+      // Re-fade in
+      window.setTimeout(() => {
+        setIsVisible(true);
+        setIsShuffling(false);
+      }, 80);
+    }, 280);
+  }, [queue, advanceTo]);
 
-      // After fade out, get new album
-      setTimeout(() => {
-        const newAlbum = getRandomAlbum(allAlbums);
-        setRandomAlbum(newAlbum);
-
-        // Fade in new album
-        setTimeout(() => {
-          setIsVisible(true);
-          setIsShuffling(false);
-        }, 100);
-      }, 400);
-    }
-  }, [allAlbums]);
-
-  // Keyboard controls - space bar to shuffle
+  // Space-bar shuffle (desktop)
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Only trigger if space bar and not in an input/textarea
-      if (event.code === 'Space' &&
-          !['INPUT', 'TEXTAREA'].includes((event.target as HTMLElement).tagName)) {
-        event.preventDefault();
-        if (!isShuffling && allAlbums.length > 0) {
-          handleShuffle();
-        }
-      }
+      const target = event.target as HTMLElement;
+      if (event.code !== 'Space') return;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(target.tagName)) return;
+      if (target.isContentEditable) return;
+      event.preventDefault();
+      if (!isShuffling) handleShuffle();
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isShuffling, allAlbums, handleShuffle]);
+  }, [isShuffling, handleShuffle]);
 
-  const getAlbumPath = (album: Album) => {
-    return album.uri_release.replace('/album/', '').replace('/', '');
-  };
+  const year = useMemo(() => {
+    if (!currentAlbum) return '';
+    const y = new Date(currentAlbum.date_release_year).getFullYear();
+    return Number.isFinite(y) ? String(y) : '';
+  }, [currentAlbum]);
 
-  // Get year from album
-  const getYear = () => {
-    if (!randomAlbum) return '';
-    return new Date(randomAlbum.date_release_year).getFullYear();
-  };
-
-  // Get clean genres
-  const getGenres = () => {
-    if (!randomAlbum) return [];
-    return getCleanGenresFromArray(randomAlbum.genre_names, randomAlbum.release_artist).slice(0, 4);
-  };
-
-  // Generate CSS custom properties for album colors
-  const colorProperties = generateColorProperties(albumColors);
+  const genres = useMemo(() => {
+    if (!currentAlbum) return [] as string[];
+    return getCleanGenresFromArray(
+      currentAlbum.genre_names,
+      currentAlbum.release_artist,
+    ).slice(0, 4);
+  }, [currentAlbum]);
 
   if (isLoading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading your collection...</p>
+      <PageContainer>
+        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+          Flipping the crate…
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
-  if (!randomAlbum) {
-    return null;
-  }
+  if (!currentAlbum) return null;
+
+  const albumHref = `/album/${albumPath}`;
+  const heroTint = colors?.background ?? 'var(--paper-2)';
 
   return (
     <PageContainer variant="hero">
-      {/* Hero Section - Album Spotlight */}
-      <div
-        className="relative w-full min-h-screen flex items-center justify-center py-4 sm:py-6 md:py-12 px-4 sm:px-6 overflow-hidden transition-colors duration-800"
-        style={{
-          background: createHeroBackground(albumColors),
-          ...colorProperties
-        }}
-      >
-        {/* Animated Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
-            style={{
-              background: `radial-gradient(circle at 20% 30%, ${albumColors.accent} 0%, transparent 50%)`
-            }}
-          />
-          <div
-            className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
-            style={{
-              background: `radial-gradient(circle at 80% 80%, ${albumColors.accent} 0%, transparent 50%)`
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        </div>
+      {/* Hero ------------------------------------------------------- */}
+      <section className="relative isolate overflow-hidden bg-paper">
+        <div
+          className="pointer-events-none absolute inset-0 transition-[background] duration-700 ease-out motion-reduce:transition-none"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'multiply',
+            opacity: 0.85,
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0 hidden transition-[background] duration-700 ease-out motion-reduce:transition-none dark:block"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'screen',
+            opacity: 0.7,
+          }}
+        />
 
-        {/* Main Content - Two Column Layout */}
-        <div className="container mx-auto relative z-10 max-w-6xl px-4 sm:px-6">
-          <motion.div
-            key={randomAlbum.uri_release}
-            initial={{ opacity: 0 }}
-            animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-            className="flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-16"
+        <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
+          <div className="mb-8 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+            <span className="text-hl">RANDOM</span>
+            <span>·</span>
+            <span>SHUFFLE THE CRATE</span>
+            <span className="ml-auto hidden md:inline">
+              Press <kbd className="border border-rule-strong bg-paper px-1.5 py-0.5 text-ink">Space</kbd> to shuffle
+            </span>
+          </div>
+
+          <div
+            className={cn(
+              "grid gap-10 transition-opacity duration-300 ease-out md:grid-cols-[auto_minmax(0,1fr)] md:items-center md:gap-14 motion-reduce:transition-none",
+              isVisible ? "opacity-100" : "opacity-0",
+            )}
           >
-            {/* Left Column - Album Artwork */}
-            <div className="flex-shrink-0 w-full md:w-auto">
-              <Link to={`/album/${getAlbumPath(randomAlbum)}`} className="block">
-                <motion.div
-                  className="relative group mx-auto w-[60vw] sm:w-[55vw] md:w-[42vw] lg:w-[36vw] max-w-sm sm:max-w-md md:max-w-lg cursor-pointer"
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
-                  transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-                >
-                  {/* Glow Effect */}
-                  <div
-                    className="absolute -inset-4 sm:-inset-6 md:-inset-8 rounded-2xl opacity-60 blur-2xl sm:blur-3xl transition-all duration-700 group-hover:opacity-80"
-                    style={{ background: createGlowGradient(albumColors, 'bold') }}
-                  />
-
-                  {/* Vinyl Record Peeking Out */}
-                  <div
-                    className="absolute -right-1 sm:-right-2 md:-right-4 top-1/2 -translate-y-1/2 w-[50%] h-[50%] sm:w-[60%] sm:h-[60%] md:w-[70%] md:h-[70%] rounded-full opacity-40 transition-all duration-500 group-hover:-right-2 sm:group-hover:-right-4 md:group-hover:-right-6"
-                    style={{
-                      background: `radial-gradient(circle, ${albumColors.muted} 20%, ${albumColors.background} 40%, transparent 60%)`,
-                      boxShadow: `inset 0 0 50px ${albumColors.background}`,
-                      transform: 'rotate(-3deg) translateY(-50%)'
-                    }}
-                  />
-
-                  {/* Album Artwork */}
-                  <motion.img
-                    src={getAlbumImageFromData(randomAlbum.uri_release, 'hi-res')}
-                    alt={randomAlbum.release_name}
-                    onError={handleImageError}
-                    className="relative w-full aspect-square rounded-xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                    style={{
-                      boxShadow: `0 25px 50px -12px ${albumColors.accent}80`,
-                      transform: 'rotate(-1deg)'
-                    }}
-                    whileHover={{ rotate: 0 }}
-                  />
-
-                  {/* Reflection */}
-                  <div
-                    className="absolute -bottom-4 left-0 right-0 h-24 opacity-20 blur-xl"
-                    style={{
-                      background: `linear-gradient(to bottom, ${albumColors.accent}, transparent)`
-                    }}
-                  />
-                </motion.div>
-              </Link>
-            </div>
-
-            {/* Right Column - Text and Buttons */}
-            <div className="flex-1 text-center md:text-left space-y-4 md:space-y-6">
-              {/* Album Title & Artist */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                className="space-y-1 sm:space-y-2"
+            {/* Sleeve */}
+            <Link
+              to={albumHref}
+              className="mx-auto block w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]"
+            >
+              <div
+                className="aspect-square w-full overflow-hidden bg-paper-2"
+                style={{
+                  boxShadow: `0 40px 80px -20px ${heroTint}, 0 6px 20px -6px rgba(14,13,11,0.15)`,
+                }}
               >
-                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tight leading-tight text-foreground">
-                  <Link
-                    to={`/album/${getAlbumPath(randomAlbum)}`}
-                    className="hover:underline decoration-2 underline-offset-4 transition-colors"
-                  >
-                    {randomAlbum.release_name}
+                <img
+                  src={getAlbumImageFromData(currentAlbum.uri_release, 'hi-res')}
+                  alt={currentAlbum.release_name}
+                  onError={handleImageError}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </Link>
+
+            {/* Text column */}
+            <div className="flex min-w-0 flex-col gap-6">
+              <div>
+                <h1 className="font-grot text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
+                  <Link to={albumHref} className="transition-colors hover:text-hl">
+                    {currentAlbum.release_name}
                   </Link>
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-medium">
-                  by{' '}
-                  <Link
-                    to={randomAlbum.uri_artist}
-                    className="text-foreground hover:underline decoration-2 underline-offset-4 transition-colors"
-                  >
-                    {randomAlbum.release_artist}
+                <div className="mt-3 font-grot text-[20px] font-medium text-ink-2 md:text-[24px]">
+                  <Link to={currentAlbum.uri_artist} className="transition-colors hover:text-hl">
+                    {currentAlbum.release_artist}
                   </Link>
-                </p>
-              </motion.div>
+                </div>
+              </div>
 
-              {/* Metadata */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">
-                  <MetadataBadge>{getYear()}</MetadataBadge>
-                  {getGenres().map((genre, index) => (
-                    <GenreTag key={index} genre={genre} size="md" linkable={true} />
+              {/* KV strip */}
+              <dl className="grid max-w-lg grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+                <KV label="Year" value={year || '—'} />
+                <KV
+                  label="Added"
+                  value={currentAlbum.date_added
+                    ? new Date(currentAlbum.date_added).toLocaleString('en-GB', {
+                        day: '2-digit', month: 'short', year: '2-digit',
+                      }).toUpperCase()
+                    : '—'}
+                />
+              </dl>
+
+              {genres.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {genres.map((g) => (
+                    <GenreTag key={g} genre={g} size="md" linkable />
                   ))}
                 </div>
-              </motion.div>
+              )}
 
-              {/* Action Buttons */}
-              <motion.div
-                className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-              >
-                <Button
-                  onClick={handleShuffle}
-                  size="lg"
-                  className="gap-2 px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 text-sm sm:text-base md:text-lg shadow-lg hover:scale-105 transition-transform border-0 text-white font-medium"
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => handleShuffle()}
                   disabled={isShuffling}
-                  style={{
-                    backgroundColor: albumColors.accent,
-                  }}
+                  className={cn(
+                    "inline-flex items-center gap-2 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-colors hover:bg-hl hover:border-hl",
+                    isShuffling && "opacity-70",
+                  )}
                 >
                   {isShuffling ? (
-                    <>
-                      <RefreshCw className="h-5 w-5 animate-spin" />
-                      Finding...
-                    </>
+                    <RefreshCw className="h-4 w-4 animate-spin" />
                   ) : (
-                    <>
-                      <Shuffle className="h-5 w-5" />
-                      Shuffle
-                    </>
+                    <Shuffle className="h-4 w-4" />
                   )}
-                </Button>
+                  {isShuffling ? 'Flipping…' : 'Shuffle'}
+                </button>
 
-                <Link to={`/album/${getAlbumPath(randomAlbum)}`}>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="gap-2 px-4 py-3 sm:px-6 sm:py-4 md:px-8 md:py-5 text-sm sm:text-base md:text-lg shadow-lg hover:scale-105 transition-all font-medium text-foreground dark:text-white backdrop-blur-md"
-                    style={{
-                      borderColor: albumColors.accent,
-                      backgroundColor: `${albumColors.background}40`
-                    }}
-                  >
-                    View Album
-                    <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
-                  </Button>
+                <Link
+                  to={albumHref}
+                  className="inline-flex items-center gap-2 border border-rule-strong bg-paper px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
+                >
+                  Open record
+                  <ArrowRight className="h-4 w-4" />
                 </Link>
-              </motion.div>
-
-              {/* Keyboard Hint - Desktop Only */}
-              <motion.p
-                className="hidden md:block text-sm text-muted-foreground/60"
-                initial={{ opacity: 0 }}
-                animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                Press <kbd className="px-2 py-1 bg-muted/50 rounded text-xs font-mono">Space</kbd> to shuffle
-              </motion.p>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Peek strip ------------------------------------------------- */}
+      {peekAlbums.length > 0 && (
+        <div className="mx-auto w-full max-w-[1640px] px-5 py-12 md:px-8 md:py-16">
+          <SectionHeader num="01" label="Coming up in the crate" count={peekAlbums.length} />
+          <ul className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
+            {peekAlbums.map((album) => (
+              <li key={album.uri_release}>
+                <button
+                  type="button"
+                  onClick={() => handleShuffle(album)}
+                  className="group flex w-full flex-col gap-2 text-left"
+                >
+                  <div className="aspect-square w-full overflow-hidden border border-rule-strong bg-paper-2">
+                    <img
+                      src={getAlbumImageFromData(album.uri_release, 'medium')}
+                      alt=""
+                      loading="lazy"
+                      onError={handleImageError}
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                  <div className="min-w-0 font-grot text-[13px] font-semibold leading-tight text-ink transition-colors group-hover:text-hl">
+                    <span className="block truncate">{album.release_name}</span>
+                    <span className="block truncate font-mono text-[10.5px] font-normal uppercase tracking-[0.04em] text-ink-dim">
+                      {album.release_artist}
+                    </span>
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </PageContainer>
+  );
+}
+
+function KV({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-paper px-3 py-2.5">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+        {label}
+      </dt>
+      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+        {value}
+      </dd>
+    </div>
   );
 }

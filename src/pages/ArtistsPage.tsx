@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
-import { Users, Search, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Input } from '@/components/ui/input';
 import { ArtistCard } from '@/components/ArtistCard';
 import { PageContainer } from '@/components/layout';
+import { BrowseHeader } from '@/components/browse/BrowseHeader';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { cn } from '@/lib/utils';
 import {
   Pagination,
   PaginationContent,
@@ -398,132 +398,135 @@ export function ArtistsPage() {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading artists...</p>
+      <PageContainer>
+        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+          Loading roster…
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
+  const availableLetters = getAvailableLetters();
+  const headerCounts = [
+    { label: "Artists", value: filteredArtists.length.toLocaleString() },
+    { label: "Page", value: `${currentPage} / ${Math.max(1, totalPages)}` },
+  ];
+  if (selectedLetter !== "all") headerCounts.push({ label: "Letter", value: selectedLetter });
+
   return (
     <PageContainer>
-      {/* Filter Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 p-4 bg-background/50 backdrop-blur-sm border rounded-lg">
-        {/* Search Input */}
-        <div className="relative flex-1 min-w-[200px] max-w-sm">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-          <Input
-            type="text"
-            placeholder="Search artists..."
+      <BrowseHeader
+        num="02"
+        kicker="Catalogue · Artists"
+        title="Every act on the shelf"
+        subtitle="Everyone represented in the collection. Sort alphabetically, by depth, or by who arrived most recently."
+        counts={headerCounts}
+      />
+
+      {/* Filter row ------------------------------------------------------ */}
+      <div className="mb-6 flex flex-col gap-3 border-y border-rule-strong bg-paper-2/40 md:flex-row md:items-stretch md:gap-0 md:divide-x md:divide-rule-strong">
+        <label className="relative flex min-w-0 items-center gap-2 px-4 focus-within:text-ink md:flex-1">
+          <Search className="h-4 w-4 shrink-0 text-ink-dim" aria-hidden />
+          <input
+            type="search"
+            placeholder="Search artists…"
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
               updateURLParams({ search: e.target.value }, true);
             }}
-            className="pl-9 pr-9 h-8"
+            className="h-10 w-full min-w-0 bg-transparent font-grot text-[14px] text-ink placeholder:text-ink-dim focus:outline-none"
           />
           {searchTerm && (
             <button
+              type="button"
               onClick={() => {
                 setSearchTerm('');
                 updateURLParams({ search: '' }, true);
               }}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground"
+              aria-label="Clear search"
+              className="shrink-0 text-ink-dim transition-colors hover:text-ink"
             >
               <X className="h-4 w-4" />
             </button>
           )}
-        </div>
+        </label>
 
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground whitespace-nowrap">Sort:</span>
-          <Select value={sortBy} onValueChange={(value) => {
-            setSortBy(value);
-            updateURLParams({ sort: value }, true);
-          }}>
-            <SelectTrigger className="w-[140px] h-8">
+        <div className="flex items-center gap-3 px-4 py-2">
+          <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
+            Sort
+          </span>
+          <Select
+            value={sortBy}
+            onValueChange={(value) => {
+              setSortBy(value);
+              updateURLParams({ sort: value }, true);
+            }}
+          >
+            <SelectTrigger className="h-8 min-w-[140px] gap-2 border-0 bg-transparent px-0 font-grot text-[13px] font-medium tracking-[-0.005em] text-ink shadow-none focus:ring-0 focus:ring-offset-0">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="name">Artist Name</SelectItem>
-              <SelectItem value="albums">Album Count</SelectItem>
-              <SelectItem value="latest">Latest Addition</SelectItem>
+            <SelectContent className="rounded-none border border-rule-strong font-grot">
+              <SelectItem value="name" className="rounded-none font-grot text-[13px]">Artist Name</SelectItem>
+              <SelectItem value="albums" className="rounded-none font-grot text-[13px]">Album Count</SelectItem>
+              <SelectItem value="latest" className="rounded-none font-grot text-[13px]">Latest Addition</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        
-        {/* Letter Filter */}
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground whitespace-nowrap">Filter:</span>
-          <div className="flex flex-wrap gap-1">
-            <button
-              onClick={() => {
-                setSelectedLetter('all');
-                updateURLParams({ letter: 'all' }, true);
-              }}
-              className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                selectedLetter === 'all'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground'
-              }`}
-            >
-              All
-            </button>
-            {getAllLetters().map((letter) => {
-              const isAvailable = getAvailableLetters().includes(letter);
-              const isSelected = selectedLetter === letter;
-              
-              return (
-                <button
-                  key={letter}
-                  onClick={() => {
-                    if (isAvailable) {
-                      setSelectedLetter(letter);
-                      updateURLParams({ letter: letter }, true);
-                    }
-                  }}
-                  disabled={!isAvailable}
-                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                    isSelected
-                      ? 'bg-primary text-primary-foreground'
-                      : isAvailable
-                      ? 'bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground cursor-pointer'
-                      : 'bg-muted/50 text-muted-foreground/50 cursor-not-allowed'
-                  }`}
-                >
-                  {letter}
-                </button>
-              );
-            })}
-          </div>
-        </div>
       </div>
 
-      {/* Artists Grid */}
+      {/* A-Z alphabet strip --------------------------------------------- */}
+      <div className="mb-8 flex flex-wrap gap-0 border border-rule-strong bg-paper font-mono text-[11px] tracking-[0.04em]">
+        <LetterCell
+          active={selectedLetter === 'all'}
+          available
+          onClick={() => {
+            setSelectedLetter('all');
+            updateURLParams({ letter: 'all' }, true);
+          }}
+        >
+          All
+        </LetterCell>
+        {getAllLetters().map((letter) => {
+          const available = availableLetters.includes(letter);
+          return (
+            <LetterCell
+              key={letter}
+              active={selectedLetter === letter}
+              available={available}
+              onClick={() => {
+                if (!available) return;
+                setSelectedLetter(letter);
+                updateURLParams({ letter }, true);
+              }}
+            >
+              {letter}
+            </LetterCell>
+          );
+        })}
+      </div>
+
       {filteredArtists.length === 0 ? (
-        <Card className="p-8 text-center">
-          <CardContent>
-            <Users className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2 text-foreground">No artists found</h3>
-            <p className="text-muted-foreground">Try adjusting your search</p>
-          </CardContent>
-        </Card>
+        <div className="border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
+          <p className="text-[17px] font-semibold text-ink">No artists found</p>
+          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+            Try adjusting your search
+          </p>
+        </div>
       ) : (
-        <div className="grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-3 sm:gap-4 max-w-7xl mx-auto">
-          {paginatedArtists.map((artist) => (
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {paginatedArtists.map((artist, i) => (
             <ArtistCard
               key={artist.uri}
               artist={artist}
+              index={startIndex + i + 1}
             />
           ))}
         </div>
       )}
 
-      {/* Pagination */}
       {totalPages > 1 && (
-        <div className="mt-8">
+        <div className="mt-12 border-t border-rule pt-6">
           <Pagination>
             <PaginationContent>
               <PaginationItem>
@@ -560,5 +563,33 @@ export function ArtistsPage() {
         </div>
       )}
     </PageContainer>
+  );
+}
+
+function LetterCell({
+  active,
+  available,
+  onClick,
+  children,
+}: {
+  active: boolean;
+  available: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={!available}
+      className={cn(
+        "flex h-9 w-9 items-center justify-center border-r border-rule transition-colors last:border-r-0",
+        active && "bg-ink text-paper",
+        !active && available && "text-ink hover:bg-paper-2",
+        !available && "text-ink-dim/40",
+      )}
+    >
+      {children}
+    </button>
   );
 }

@@ -2,6 +2,30 @@
 
 This document covers all route-level page components in russ.fm.
 
+> **Editorial redesign (April 2026).** Every page listed here was
+> rebuilt around paper/ink tokens, `SectionHeader`, and editorial
+> tiles (`AlbumCard`, `ArtistCard`). Data-fetching contracts,
+> query-string deep links, and feature surface (scrobble, embeds,
+> wrapped presentation, search) are preserved — only the visual
+> rhythm changed. See `docs/project/Redesign/CHANGELOG.md` for
+> per-page before/after notes.
+
+## Editorial structure by page
+
+| Route | Structure |
+|-------|-----------|
+| `/` | Hero carousel → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster → Catalogue strip. Main column + sticky `StatsAside` on desktop. |
+| `/albums/:page` | `BrowseHeader` → hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
+| `/artists/:page` | `BrowseHeader` → search+sort row → full-width A–Z strip → 6-col circular-portrait grid → mono pager. |
+| `/album/:slug` | Tinted wash hero (sleeve right, title+artist+KV+chips+actions left) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
+| `/artist/:slug` | Tinted wash hero (circular portrait + KV + chips + service buttons) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. |
+| `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
+| `/random` | Tinted wash hero with cross-fade on shuffle, sleeve + KV + chips + actions; peek strip of 8 upcoming records below. `Space` shuffles. |
+| `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
+| `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. `Presentation` toggle returns the full-screen snap-scroll experience. |
+| `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle. |
+| `/genres` | **Not touched.** D3 force-simulation mindmap preserved as-is per the author's request. |
+
 ## Route Map
 
 ```mermaid
@@ -48,7 +72,7 @@ Landing page with featured content and collection highlights.
 **Route:** `/`, `/home`
 
 **Features:**
-- Featured album hero carousel
+- Featured album hero with a blurred sleeve backdrop and palette-driven accents
 - Recently added albums section
 - Recently added artists section
 - Random collection samples
@@ -57,6 +81,7 @@ Landing page with featured content and collection highlights.
 **Data Sources:**
 - `/collection.json` - Album data
 - `/album-colors.json` - Color palettes
+- `/album-colors.css` - Album palette classes for the hero treatment
 
 **Configuration:**
 ```typescript

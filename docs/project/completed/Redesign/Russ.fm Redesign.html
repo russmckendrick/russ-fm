@@ -1,0 +1,3034 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>russ.fm — redesign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   russ.fm redesign — vinyl-shop / archive aesthetic
+   ========================================================= */
+
+:root {
+  --paper: #f4f1ea;
+  --paper-2: #ebe6db;
+  --paper-3: #e0d9c8;
+  --ink: #0e0d0b;
+  --ink-2: #2a2724;
+  --ink-3: #5a534a;
+  --ink-dim: #8a8377;
+  --rule: rgba(14, 13, 11, 0.16);
+  --rule-strong: rgba(14, 13, 11, 0.5);
+  --hl: #e23b1e;
+  --tint: #8a8a3d;
+  --tint-strength: 0.85;
+
+  --grot: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.theme--dark {
+  --paper: #0d0c0a;
+  --paper-2: #15130f;
+  --paper-3: #1d1b16;
+  --ink: #f4f1ea;
+  --ink-2: #d8d3c6;
+  --ink-3: #9a9285;
+  --ink-dim: #6a6358;
+  --rule: rgba(244, 241, 234, 0.14);
+  --rule-strong: rgba(244, 241, 234, 0.4);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--grot);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+.app { min-height: 100vh; padding-bottom: 80px; }
+
+/* =========================================================
+   Top bar
+   ========================================================= */
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 32px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(120%);
+}
+.top__brand {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+}
+.top__mark { font-size: 16px; color: var(--hl); }
+.top__name { font-family: var(--grot); font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+.top__tag { color: var(--ink-dim); text-transform: uppercase; font-size: 10.5px; }
+
+.top__nav {
+  display: flex; gap: 2px; justify-self: center;
+  border: 1px solid var(--rule); padding: 3px;
+}
+.top__nav a {
+  padding: 8px 14px;
+  font-size: 12.5px; font-weight: 500; letter-spacing: -0.005em;
+  color: var(--ink-3);
+}
+.top__nav a:hover { color: var(--ink); background: var(--paper-2); }
+.top__nav a.is-on { background: var(--ink); color: var(--paper); }
+
+.top__r { display: flex; align-items: center; gap: 10px; justify-self: end; }
+.top__search {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--rule);
+  padding: 8px 12px;
+  width: 320px;
+  font-size: 12.5px;
+}
+.top__search span { color: var(--ink-dim); }
+.top__search input {
+  flex: 1; border: 0; background: transparent; color: inherit; outline: none; font: inherit;
+}
+.top__search kbd {
+  font-family: var(--mono); font-size: 10px; padding: 2px 6px;
+  border: 1px solid var(--rule); color: var(--ink-dim);
+}
+.top__theme {
+  width: 36px; height: 36px;
+  border: 1px solid var(--rule);
+  font-size: 14px;
+}
+.top__theme:hover { background: var(--paper-2); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero__wash {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 100% at 70% 30%, var(--tint) 0%, transparent 60%),
+    linear-gradient(180deg, var(--tint) 0%, transparent 70%);
+  opacity: var(--tint-strength);
+  mix-blend-mode: multiply;
+  z-index: -1;
+  transition: background 700ms ease, opacity 400ms ease;
+}
+.theme--dark .hero__wash {
+  mix-blend-mode: screen;
+  opacity: calc(var(--tint-strength) * 0.55);
+}
+.hero__noise {
+  position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 56px 64px 48px;
+  max-width: 1640px; margin: 0 auto;
+}
+
+.hero__crumbs {
+  display: flex; gap: 10px; align-items: center;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  color: var(--ink-2);
+  margin-bottom: 28px;
+}
+
+.hero__title {
+  font-size: clamp(56px, 7vw, 116px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: balance;
+}
+.hero__artist {
+  display: flex; align-items: center; gap: 16px;
+  margin: 24px 0 36px;
+  font-size: 20px; font-weight: 500;
+}
+.hero__artist-rule {
+  height: 1px; width: 48px; background: var(--ink-2);
+}
+
+.hero__specs {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; padding: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 0 0 32px 0;
+  max-width: 640px;
+}
+.hero__specs > div {
+  background: var(--paper);
+  padding: 14px 16px;
+}
+.hero__specs dt {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-dim); margin: 0 0 4px;
+}
+.hero__specs dd {
+  font-size: 16px; font-weight: 600; margin: 0; letter-spacing: -0.01em;
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.btn {
+  font-size: 12.5px; font-weight: 600;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  letter-spacing: -0.005em;
+  transition: transform 120ms ease, background 200ms;
+}
+.btn--solid { background: var(--ink); color: var(--paper); }
+.btn--solid:hover { background: var(--hl); border-color: var(--hl); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
+
+.hero__art {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 24px;
+  position: relative;
+}
+.hero__sleeve {
+  position: relative;
+  width: min(520px, 90%);
+  aspect-ratio: 1/1;
+  background: var(--paper-2);
+  box-shadow:
+    0 1px 0 var(--rule),
+    0 30px 60px -20px rgba(0, 0, 0, 0.35),
+    0 60px 100px -40px rgba(0, 0, 0, 0.25);
+}
+.hero__sleeve img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero__catnum {
+  position: absolute; left: 0; bottom: -22px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+
+.hero__dots { display: flex; gap: 4px; align-self: center; margin-top: 16px; }
+.hero__dot {
+  width: 36px; height: 28px;
+  border: 1px solid var(--rule-strong);
+  font-family: var(--mono); font-size: 10px; color: var(--ink-3);
+  transition: all 150ms;
+}
+.hero__dot.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.hero__dot:hover { color: var(--ink); }
+
+.hero__ticker {
+  border-top: 1px solid var(--rule);
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+}
+.hero__ticker-inner {
+  display: inline-flex; gap: 32px; white-space: nowrap;
+  padding: 10px 0;
+  animation: tick 38s linear infinite;
+}
+.hero__ticker-inner em { color: var(--hl); font-style: normal; margin-right: 6px; }
+.hero__ticker-inner i { margin: 0 18px; opacity: 0.4; font-style: normal; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* =========================================================
+   Layout
+   ========================================================= */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 48px;
+  padding: 56px 64px 80px;
+  max-width: 1640px; margin: 0 auto;
+}
+.layout__main { display: flex; flex-direction: column; gap: 64px; min-width: 0; }
+
+/* =========================================================
+   Section header
+   ========================================================= */
+.sec-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 24px;
+}
+.sec-head__l { display: flex; align-items: baseline; gap: 16px; }
+.sec-head__num {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+.sec-head__label {
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 0;
+}
+.sec-head__count {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+  padding-left: 16px; margin-left: 8px;
+  border-left: 1px solid var(--rule);
+}
+.sec-head__a {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--ink-2);
+}
+.sec-head__a:hover { color: var(--hl); }
+
+/* =========================================================
+   Drag wall
+   ========================================================= */
+.wall-wrap { position: relative; }
+.wall {
+  display: flex; gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  cursor: grab;
+  user-select: none;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+.wall.grabbing { cursor: grabbing; }
+.wall::-webkit-scrollbar { height: 6px; }
+.wall::-webkit-scrollbar-track { background: var(--rule); }
+.wall::-webkit-scrollbar-thumb { background: var(--ink-3); }
+
+.wall-btn {
+  position: absolute; top: 80px;
+  width: 36px; height: 36px;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  font-size: 18px; line-height: 1;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.wall-wrap:hover .wall-btn { opacity: 1; }
+.wall-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.wall-btn--prev { left: -8px; }
+.wall-btn--next { right: -8px; }
+
+/* =========================================================
+   Album tile
+   ========================================================= */
+.tile {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.dens--sparse .tile { width: 240px; }
+.dens--dense .tile { width: 156px; }
+
+.tile__cover {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: var(--paper-2);
+  overflow: hidden;
+  --shadow: rgba(0, 0, 0, 0.4);
+  transition: transform 220ms ease, box-shadow 280ms ease;
+}
+.tile:hover .tile__cover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px -12px color-mix(in oklab, var(--shadow) 60%, transparent);
+}
+.tile__cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  pointer-events: none;
+}
+.tile__cat {
+  position: absolute; top: 8px; left: 8px;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em;
+  background: var(--paper); color: var(--ink); padding: 3px 6px;
+}
+.tile__hover {
+  position: absolute; inset: auto 0 0 0;
+  background: var(--ink); color: var(--paper);
+  padding: 8px 10px;
+  display: flex; flex-direction: column; gap: 2px;
+  transform: translateY(101%);
+  transition: transform 220ms ease;
+}
+.tile:hover .tile__hover { transform: translateY(0); }
+.tile__hover-row {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+}
+.tile__hover-row em { color: var(--ink-dim); font-style: normal; }
+.tile__hover-row b { color: var(--paper); font-weight: 600; }
+
+.tile__meta { display: flex; flex-direction: column; gap: 2px; }
+.tile__title {
+  font-size: 14px; font-weight: 600; margin: 0;
+  letter-spacing: -0.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tile__sub {
+  display: flex; justify-content: space-between; gap: 8px;
+  font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+.mono-off .tile__sub { font-family: var(--grot); letter-spacing: 0; }
+.tile__year { color: var(--ink-dim); }
+
+/* =========================================================
+   Artist tile
+   ========================================================= */
+.atile {
+  flex: 0 0 auto;
+  width: 240px;
+  display: flex; flex-direction: column; gap: 12px;
+  scroll-snap-align: start;
+}
+.atile__photo {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--paper-2);
+  --shadow: rgba(0,0,0,0.4);
+  transition: transform 220ms ease, box-shadow 280ms ease;
+}
+.atile:hover .atile__photo {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -12px color-mix(in oklab, var(--shadow) 55%, transparent);
+}
+.atile__photo img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.atile__meta { display: flex; align-items: baseline; gap: 12px; }
+.atile__num {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+.atile__name {
+  margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+}
+.atile__sub {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+  letter-spacing: 0.04em; margin-top: 2px;
+}
+
+/* =========================================================
+   Catalog table
+   ========================================================= */
+.catalog {
+  border: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 12px;
+}
+.catalog__head, .catalog__row {
+  display: grid;
+  grid-template-columns: 56px 2.4fr 1.4fr 80px 80px 1fr 100px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.catalog__head {
+  background: var(--paper-2);
+  color: var(--ink-dim);
+  font-size: 10.5px; letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--rule);
+}
+.catalog__row {
+  border-bottom: 1px solid var(--rule);
+  transition: background 150ms;
+}
+.catalog__row:last-child { border-bottom: 0; }
+.catalog__row:hover { background: var(--paper-2); }
+.catalog__row:hover .catalog__t { color: var(--hl); }
+.catalog__n { color: var(--ink-dim); }
+.catalog__t {
+  font-family: var(--grot); font-size: 14px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+  display: flex; align-items: center; gap: 10px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.catalog__sw {
+  width: 14px; height: 14px; flex-shrink: 0;
+  border: 1px solid var(--rule);
+}
+.catalog__a { color: var(--ink-2); font-family: var(--grot); font-size: 13px; }
+.catalog__r { text-align: right; }
+.catalog__d { color: var(--ink-dim); }
+
+/* =========================================================
+   Random spin cards
+   ========================================================= */
+.random {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.random__card {
+  position: relative;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--rule);
+  padding: 16px;
+  background: var(--paper);
+  transition: background 200ms;
+  --c: #888;
+}
+.random__card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px; background: var(--c);
+}
+.random__card:hover {
+  background: color-mix(in oklab, var(--c) 12%, var(--paper));
+}
+.random__n {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin-bottom: 12px;
+}
+.random__card img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+  margin-bottom: 12px;
+}
+.random__meta h4 {
+  margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -0.01em;
+}
+.random__meta p {
+  margin: 4px 0 0; font-family: var(--mono); font-size: 11px;
+  color: var(--ink-3); letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   Sidebar
+   ========================================================= */
+.aside {
+  display: flex; flex-direction: column; gap: 32px;
+  position: sticky; top: 80px; align-self: start;
+  max-height: calc(100vh - 100px); overflow-y: auto;
+  padding-right: 4px;
+}
+.aside::-webkit-scrollbar { width: 4px; }
+.aside::-webkit-scrollbar-thumb { background: var(--ink-dim); }
+
+.aside__head {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim);
+  padding-bottom: 8px; margin-bottom: 12px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.aside__nums {
+  margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule);
+}
+.aside__nums > div { background: var(--paper); padding: 12px 14px; }
+.aside__nums dt {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin: 0;
+}
+.aside__nums dd {
+  margin: 4px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em;
+}
+
+/* Hist */
+.hist { display: flex; flex-direction: column; gap: 6px; }
+.hist__row {
+  display: grid; grid-template-columns: 28px 1fr 36px;
+  align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px;
+}
+.hist__d { color: var(--ink-dim); }
+.hist__bar {
+  height: 10px; background: var(--paper-2);
+  border: 1px solid var(--rule); display: block; position: relative;
+}
+.hist__bar span {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--ink-2) 100%);
+}
+.hist__n { color: var(--ink-2); text-align: right; }
+
+/* Scrobbles */
+.scrob { list-style: none; padding: 0; margin: 0; }
+.scrob__row {
+  display: grid; grid-template-columns: 36px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.scrob__row:last-child { border-bottom: 0; }
+.scrob__when {
+  grid-row: 1 / span 2;
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-dim);
+  align-self: center;
+}
+.scrob__t {
+  font-size: 13px; font-weight: 600; letter-spacing: -0.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.scrob__a {
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+/* Genres */
+.genres { display: flex; flex-wrap: wrap; gap: 4px; }
+.genre {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--rule);
+  font-size: 12px; font-weight: 500;
+  transition: all 150ms;
+}
+.genre b {
+  font-family: var(--mono); font-size: 10px; color: var(--ink-dim); font-weight: 500;
+}
+.genre:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.genre:hover b { color: var(--paper); opacity: 0.7; }
+
+/* =========================================================
+   Status bar
+   ========================================================= */
+.status {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 32px;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+  z-index: 40;
+  border-top: 1px solid var(--rule-strong);
+}
+.status__dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--hl);
+  box-shadow: 0 0 12px var(--hl);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.status__t { color: var(--paper); font-family: var(--grot); font-size: 13px; font-weight: 500; letter-spacing: -0.005em; }
+.status__r { margin-left: auto; color: rgba(244, 241, 234, 0.6); }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.foot {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 32px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+.foot__l { display: flex; gap: 10px; }
+.foot__r { display: flex; gap: 18px; }
+.foot__r a:hover { color: var(--ink); }
+
+/* =========================================================
+   Tweaks panel
+   ========================================================= */
+.tweaks {
+  position: fixed; bottom: 60px; right: 24px;
+  width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 16px;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.4);
+  z-index: 60;
+  font-size: 12px;
+}
+.tweaks__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.tweaks__head b { font-size: 14px; letter-spacing: -0.01em; }
+.tweaks__head span { font-family: var(--mono); font-size: 10px; color: var(--ink-dim); }
+.tweaks__row { margin-bottom: 12px; }
+.tweaks__row label {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-dim); margin-bottom: 6px;
+}
+.tweaks__row label i { font-style: normal; color: var(--ink); }
+.tweaks__row input[type="range"] { width: 100%; accent-color: var(--ink); }
+.seg {
+  display: flex; gap: 0; border: 1px solid var(--rule);
+}
+.seg button {
+  flex: 1; padding: 6px 8px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-3);
+  border-right: 1px solid var(--rule);
+}
+.seg button:last-child { border-right: 0; }
+.seg button.is-on { background: var(--ink); color: var(--paper); }
+
+/* =========================================================
+   Page wrappers
+   ========================================================= */
+.page { min-height: 60vh; }
+
+/* Crumbs */
+.crumbs {
+  display: flex; gap: 8px; align-items: center;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  color: var(--ink-3); margin-bottom: 24px;
+}
+.crumbs a:hover { color: var(--hl); }
+.crumbs--light { color: var(--ink-2); }
+
+/* Mini section header */
+.sec-mini {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim);
+  padding-bottom: 10px; margin-bottom: 18px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+/* Chips */
+.chip-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 24px 0; }
+.chip-row--scroll { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; margin: 0; }
+.chip-row--scroll::-webkit-scrollbar { height: 4px; }
+.chip-row--scroll::-webkit-scrollbar-thumb { background: var(--ink-dim); }
+
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--rule-strong);
+  font-size: 12px; font-weight: 500;
+  white-space: nowrap;
+}
+.chip--mono { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; }
+.chip--btn { cursor: pointer; transition: all 150ms; }
+.chip--btn:hover { background: var(--paper-2); }
+.chip--btn.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* Prose */
+.prose {
+  max-width: 64ch;
+  font-size: 15.5px; line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0 0 16px;
+  text-wrap: pretty;
+}
+
+.empty {
+  border: 1px dashed var(--rule-strong);
+  padding: 32px;
+  text-align: center;
+  color: var(--ink-dim);
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   Album detail
+   ========================================================= */
+.adet { position: relative; isolation: isolate; border-bottom: 1px solid var(--rule); overflow: hidden; }
+.adet__wash {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(80% 90% at 30% 30%, var(--tint) 0%, transparent 60%),
+    linear-gradient(180deg, var(--tint) 0%, transparent 60%);
+  opacity: var(--tint-strength);
+  mix-blend-mode: multiply;
+}
+.theme--dark .adet__wash { mix-blend-mode: screen; opacity: calc(var(--tint-strength) * 0.55); }
+
+.adet__inner {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 56px;
+  padding: 48px 64px 56px;
+  max-width: 1640px; margin: 0 auto;
+  align-items: end;
+}
+.adet__sleeve {
+  position: relative;
+  width: 100%; max-width: 480px;
+  aspect-ratio: 1/1;
+  background: var(--paper-2);
+  box-shadow:
+    0 1px 0 var(--rule),
+    0 30px 60px -20px rgba(0, 0, 0, 0.35),
+    0 60px 100px -40px rgba(0, 0, 0, 0.25);
+}
+.adet__sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.adet__catnum {
+  position: absolute; left: 0; bottom: -22px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+.adet__title {
+  font-size: clamp(48px, 5.5vw, 84px);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+.adet__artist {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 18px; font-weight: 500;
+  margin-bottom: 4px;
+}
+.adet__artist:hover { color: var(--hl); }
+.adet__rule { height: 1px; width: 36px; background: var(--ink-2); }
+.adet__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+.adet__body { padding: 56px 64px 80px; max-width: 1640px; margin: 0 auto; }
+.adet__cols {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 56px;
+}
+.adet__main { display: flex; flex-direction: column; gap: 56px; min-width: 0; }
+.adet__side { display: flex; flex-direction: column; gap: 32px; }
+
+/* Tracklist */
+.tracklist {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+.tracklist__head {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: var(--hl);
+  padding-bottom: 8px; margin-bottom: 6px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.tracklist__list { list-style: none; padding: 0; margin: 0; }
+.tracklist__row {
+  display: grid;
+  grid-template-columns: 36px 1fr auto 28px;
+  align-items: center; gap: 12px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--rule);
+  transition: background 120ms;
+}
+.tracklist__row:hover { background: var(--paper-2); }
+.tracklist__n { font-family: var(--mono); font-size: 11px; color: var(--ink-dim); }
+.tracklist__t { font-size: 14px; font-weight: 500; letter-spacing: -0.005em; }
+.tracklist__d { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.tracklist__play {
+  width: 24px; height: 24px;
+  border: 1px solid var(--rule-strong);
+  font-size: 9px; line-height: 1; color: var(--ink-3);
+  transition: all 150ms;
+}
+.tracklist__row:hover .tracklist__play { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* mini-row reuses tile styles, just fixed grid */
+.mini-row {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px;
+}
+
+/* Key-value */
+.kv {
+  margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr; gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule);
+}
+.kv > div {
+  background: var(--paper);
+  padding: 10px 14px;
+  display: grid; grid-template-columns: 90px 1fr; gap: 12px; align-items: baseline;
+}
+.kv dt {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-dim); margin: 0;
+}
+.kv dd { margin: 0; font-size: 14px; font-weight: 500; letter-spacing: -0.005em; }
+.kv--mono dd { font-family: var(--mono); font-size: 11.5px; font-weight: 500; }
+.kv__trunc { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+
+.copy {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.04em;
+  color: var(--ink-3); margin: 0 0 4px;
+}
+
+.ext { list-style: none; padding: 0; margin: 0; }
+.ext li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px; font-weight: 500;
+}
+.ext li:last-child { border-bottom: 0; }
+.ext a:hover { color: var(--hl); }
+
+/* =========================================================
+   Artist detail
+   ========================================================= */
+.ardet { position: relative; isolation: isolate; border-bottom: 1px solid var(--rule); overflow: hidden; }
+.ardet__wash {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(60% 100% at 20% 50%, var(--tint) 0%, transparent 60%),
+    linear-gradient(180deg, var(--tint) 0%, transparent 60%);
+  opacity: var(--tint-strength);
+  mix-blend-mode: multiply;
+}
+.theme--dark .ardet__wash { mix-blend-mode: screen; opacity: calc(var(--tint-strength) * 0.55); }
+
+.ardet__inner {
+  padding: 32px 64px 56px;
+  max-width: 1640px; margin: 0 auto;
+}
+.ardet__row {
+  display: grid; grid-template-columns: 360px 1fr;
+  gap: 48px; align-items: end;
+}
+.ardet__photo {
+  width: 100%; aspect-ratio: 1/1;
+  background: var(--paper-2);
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.35);
+}
+.ardet__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ardet__kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: var(--ink-2); margin-bottom: 16px;
+}
+.ardet__name {
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  margin: 0 0 28px;
+  text-wrap: balance;
+}
+.ardet__nums {
+  margin: 0 0 24px; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--rule); border: 1px solid var(--rule);
+  max-width: 640px;
+}
+.ardet__nums > div { background: var(--paper); padding: 12px 14px; }
+.ardet__nums dt {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin: 0;
+}
+.ardet__nums dd {
+  margin: 4px 0 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em;
+}
+.ardet__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* artist-row in catalog: hide ARTIST col */
+.catalog__row--artist {
+  grid-template-columns: 56px 2.4fr 80px 80px 1fr 100px;
+}
+.page--artist .catalog__head {
+  grid-template-columns: 56px 2.4fr 80px 80px 1fr 100px;
+}
+
+/* =========================================================
+   Browse pages
+   ========================================================= */
+.page--browse {
+  padding: 56px 64px 80px;
+  max-width: 1640px; margin: 0 auto;
+}
+.browse__head {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 32px;
+  padding-bottom: 24px; margin-bottom: 32px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.browse__kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin-bottom: 8px;
+}
+.browse__title {
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+.browse__sub {
+  font-family: var(--mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.04em;
+}
+.browse__counts {
+  display: flex; gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule);
+}
+.browse__counts > div {
+  background: var(--paper);
+  padding: 12px 18px;
+  display: flex; flex-direction: column; gap: 2px;
+  text-align: right;
+  min-width: 96px;
+}
+.browse__counts b { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+.browse__counts span { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; color: var(--ink-dim); }
+
+.filters {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 32px;
+}
+.filters__group {
+  display: flex; align-items: center; gap: 10px;
+  min-width: 0;
+}
+.filters__group--scroll { flex: 1; min-width: 280px; }
+.filters__label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em;
+  color: var(--ink-dim);
+}
+.seg--inline { border: 1px solid var(--rule-strong); }
+.seg--inline button {
+  padding: 6px 12px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-3);
+  border-right: 1px solid var(--rule);
+}
+.seg--inline button:last-child { border-right: 0; }
+.seg--inline button.is-on { background: var(--ink); color: var(--paper); }
+
+.browse__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 28px 20px;
+}
+.dens--sparse .browse__grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.dens--dense  .browse__grid { grid-template-columns: repeat(auto-fill, minmax(156px, 1fr)); }
+.browse__grid .tile { width: 100%; }
+
+.catalog--full .catalog__row,
+.catalog--full .catalog__head {
+  grid-template-columns: 56px 2.4fr 1.4fr 80px 80px 1fr 100px;
+}
+
+.browse__agrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 36px 24px;
+}
+.atile--lg { width: 100%; }
+
+.page--stub { padding: 80px 64px; max-width: 900px; margin: 0 auto; }
+
+/* =========================================================
+   Stats / Random / Wrapped
+   ========================================================= */
+.stats-hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--rule); }
+.stats-hero__wash {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(70% 100% at 50% 30%, var(--tint) 0%, transparent 60%),
+    linear-gradient(180deg, var(--tint) 0%, transparent 70%);
+  opacity: var(--tint-strength); mix-blend-mode: multiply;
+}
+.theme--dark .stats-hero__wash { mix-blend-mode: screen; opacity: calc(var(--tint-strength) * 0.55); }
+.stats-hero__inner {
+  display: grid; grid-template-columns: auto 1fr; gap: 56px;
+  padding: 56px 64px; max-width: 1640px; margin: 0 auto; align-items: center;
+}
+.stats-hero__stack { position: relative; width: 280px; height: 280px; }
+.stats-hero__sleeve {
+  position: absolute; inset: 0; width: 240px; height: 240px;
+  background: var(--paper-2);
+  box-shadow: 0 24px 50px -20px rgba(0,0,0,0.45);
+  transform: translate(calc(var(--i) * 18px), calc(var(--i) * 18px)) rotate(calc(var(--i) * -3deg));
+}
+.stats-hero__sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.stats-hero__kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); margin-bottom: 12px; }
+.stats-hero__title { font-size: clamp(56px, 6vw, 96px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 700; margin: 0 0 16px; }
+.stats-hero__title em { font-style: italic; font-weight: 700; color: var(--ink-3); }
+.stats-hero__sub { font-size: 16px; color: var(--ink-3); max-width: 56ch; margin: 0 0 18px; }
+.stats-hero__pills { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.stats-body { padding: 56px 64px 80px; max-width: 1640px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+
+.stat-grid { display: grid; gap: 20px; }
+.stat-grid--totals { grid-template-columns: repeat(4, 1fr); }
+.stat-grid--two { grid-template-columns: 1fr 1fr; }
+
+.card { border: 1px solid var(--rule-strong); padding: 20px 22px; background: var(--paper); }
+.card__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em; color: var(--ink-dim);
+  padding-bottom: 12px; border-bottom: 1px solid var(--rule); margin-bottom: 18px;
+}
+.card__head i { font-style: normal; color: var(--ink-3); }
+.card__big { font-size: 44px; font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
+
+/* bars */
+.bars { display: flex; align-items: flex-end; gap: 18px; height: 220px; padding-top: 16px; }
+.bars__col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: flex-end; }
+.bars__bar { width: 100%; position: relative; min-height: 6px; }
+.bars__n { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: var(--mono); font-size: 10px; color: var(--ink-3); }
+.bars__d { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--ink-3); }
+
+/* donut */
+.donut-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: center; }
+.donut { width: 200px; height: 200px; }
+.donut__legend { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.donut__legend li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: center; font-size: 12.5px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.donut__name { color: var(--ink-2); }
+.donut__pct { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+
+/* golden + topyrs */
+.golden { padding: 14px 4px; }
+.golden__y { font-size: 96px; font-weight: 800; letter-spacing: -0.05em; line-height: 0.9; }
+.golden__sub { color: var(--ink-3); font-size: 14px; margin-top: 8px; }
+
+.topyrs { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.topyrs__row { display: grid; grid-template-columns: 60px 1fr 100px; align-items: center; gap: 14px; font-family: var(--mono); font-size: 12px; }
+.topyrs__y { color: var(--ink); font-weight: 600; }
+.topyrs__bar { height: 4px; background: var(--paper-2); border: 1px solid var(--rule); display: block; }
+.topyrs__bar span { display: block; height: 100%; background: var(--ink); }
+.topyrs__n { text-align: right; color: var(--ink-3); }
+
+/* top artists */
+.topartists { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 24px; }
+.topartist { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+.topartist__rank { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--ink-dim); }
+.topartist__photo { width: 100%; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; --shadow: rgba(0,0,0,0.4); transition: transform 220ms; box-shadow: 0 14px 30px -12px var(--shadow); }
+.topartist:hover .topartist__photo { transform: translateY(-4px); }
+.topartist__photo img { width: 100%; height: 100%; object-fit: cover; }
+.topartist__name { font-size: 15px; margin: 6px 0 0; font-weight: 600; }
+.topartist__sub { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.topartist__sw { display: flex; gap: 2px; margin-top: 4px; }
+.topartist__sw span { width: 18px; height: 8px; }
+
+/* depth + active */
+.depth { list-style: none; margin: 0; padding: 0; }
+.depth li { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--rule); gap: 24px; }
+.depth li:last-child { border-bottom: 0; }
+.depth h4 { margin: 0 0 4px; font-size: 14px; font-weight: 600; }
+.depth p { margin: 0; font-size: 12px; color: var(--ink-3); font-family: var(--mono); }
+.depth b { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+
+.active { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center; }
+.active__name { font-size: 56px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; margin-bottom: 8px; }
+.active p { color: var(--ink-3); font-size: 13px; margin: 0; }
+.active__n { text-align: right; }
+.active__n b { display: block; font-size: 36px; font-weight: 700; letter-spacing: -0.02em; }
+.active__n span { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; color: var(--ink-dim); }
+
+/* recents */
+.recents { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px 18px; }
+.recents .tile { width: 100%; }
+
+/* time hist */
+.timehist { display: flex; align-items: flex-end; gap: 2px; height: 140px; padding-bottom: 24px; position: relative; overflow-x: auto; }
+.timehist__col { flex: 0 0 auto; width: 7px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; }
+.timehist__bar { width: 100%; min-height: 2px; }
+.timehist__y { position: absolute; bottom: -20px; font-family: var(--mono); font-size: 9.5px; color: var(--ink-3); white-space: nowrap; }
+
+/* =========================================================
+   Random page
+   ========================================================= */
+.page--random { position: relative; min-height: calc(100vh - 200px); overflow: hidden; }
+.random-page__wash {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 80% at 30% 30%, var(--tint) 0%, transparent 70%),
+    radial-gradient(50% 60% at 70% 70%, var(--tint) 0%, transparent 70%);
+  opacity: calc(var(--tint-strength) * 0.85);
+  mix-blend-mode: multiply;
+  transition: background 600ms;
+}
+.theme--dark .random-page__wash { mix-blend-mode: screen; opacity: calc(var(--tint-strength) * 0.5); }
+.random-page__inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 64px 64px 96px; }
+.random-page__kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-2); margin-bottom: 32px; }
+.random-page__row { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.random-page__sleeve {
+  position: relative; aspect-ratio: 1/1; max-width: 420px;
+  background: var(--paper-2);
+  box-shadow: 0 30px 60px -20px rgba(0,0,0,0.4);
+  transition: transform 70ms;
+}
+.random-page__sleeve.is-rolling { animation: rollWobble 70ms infinite alternate; }
+@keyframes rollWobble { from { transform: rotate(-2deg) scale(0.98); } to { transform: rotate(2deg) scale(1.02); } }
+.random-page__sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.random-page__catnum { position: absolute; left: 0; bottom: -22px; font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em; color: var(--ink-2); }
+.random-page__title { font-size: clamp(40px, 5vw, 72px); line-height: 0.95; letter-spacing: -0.04em; font-weight: 700; margin: 0 0 12px; }
+.random-page__artist { font-size: 18px; color: var(--ink-2); }
+.random-page__artist b { font-weight: 600; color: var(--ink); }
+.random-page__actions { display: flex; gap: 8px; margin-top: 16px; }
+.random-page__hint { margin-top: 16px; font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.random-page__hint kbd { padding: 2px 8px; border: 1px solid var(--rule-strong); margin-right: 4px; }
+.random-page__strip { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.random-page__peek { display: grid; grid-template-columns: repeat(8, 1fr); gap: 6px; margin-top: 16px; }
+.random-page__peek-tile { aspect-ratio: 1/1; opacity: 0.55; transition: opacity 200ms; }
+.random-page__peek-tile:hover { opacity: 1; }
+.random-page__peek-tile img { width: 100%; height: 100%; object-fit: cover; mix-blend-mode: luminosity; }
+
+/* =========================================================
+   Wrapped
+   ========================================================= */
+.wrapped-hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--rule); }
+.wrapped-hero__wash {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, var(--tint) 0%, transparent 70%);
+  opacity: var(--tint-strength); mix-blend-mode: multiply;
+}
+.theme--dark .wrapped-hero__wash { mix-blend-mode: screen; opacity: calc(var(--tint-strength) * 0.55); }
+.wrapped-hero__inner { padding: 80px 64px 64px; max-width: 1640px; margin: 0 auto; }
+.wrapped-hero__kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-2); margin-bottom: 16px; }
+.wrapped-hero__title { display: flex; align-items: baseline; gap: 24px; margin: 0; line-height: 0.9; letter-spacing: -0.045em; font-weight: 700; }
+.wrapped-hero__yr { font-size: clamp(120px, 14vw, 220px); }
+.wrapped-hero__word { font-size: clamp(56px, 8vw, 120px); color: var(--ink-3); }
+.wrapped-hero__sub { font-size: 17px; color: var(--ink-2); max-width: 60ch; margin: 16px 0 0; }
+
+.wrapped-body { padding: 56px 64px 80px; max-width: 1640px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+
+.aoty { display: grid; grid-template-columns: 360px 1fr; gap: 40px; align-items: start; padding: 24px 0; }
+.aoty__sleeve {
+  aspect-ratio: 1/1; background: var(--paper-2);
+  box-shadow: 0 30px 60px -20px color-mix(in oklab, var(--c) 60%, transparent);
+  position: relative;
+}
+.aoty__sleeve img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.aoty__rank { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--hl); margin-bottom: 12px; }
+.aoty__title { font-size: clamp(40px, 4.5vw, 64px); line-height: 0.95; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 8px; }
+.aoty__artist { font-family: var(--mono); font-size: 13px; color: var(--ink-3); margin: 0 0 20px; }
+
+.topten { list-style: none; margin: 0; padding: 0; }
+.topten__row {
+  display: grid; grid-template-columns: 48px 64px 1fr 200px 90px;
+  align-items: center; gap: 18px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--rule);
+  transition: background 120ms;
+}
+.topten__row:hover { background: var(--paper-2); }
+.topten__n { font-family: var(--mono); font-size: 14px; color: var(--ink-dim); font-weight: 600; }
+.topten__cover { width: 64px; height: 64px; }
+.topten__cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.topten__t { font-size: 16px; font-weight: 600; letter-spacing: -0.01em; display: block; }
+.topten__t:hover { color: var(--hl); }
+.topten__a { font-family: var(--mono); font-size: 11px; color: var(--ink-3); margin-top: 2px; }
+.topten__bar { height: 6px; background: var(--paper-2); border: 1px solid var(--rule); }
+.topten__bar span { display: block; height: 100%; }
+.topten__plays { font-family: var(--mono); font-size: 11px; color: var(--ink-3); text-align: right; }
+
+@media (max-width: 1100px) {
+  .stat-grid--totals { grid-template-columns: repeat(2, 1fr); }
+  .stat-grid--two { grid-template-columns: 1fr; }
+  .topartists { grid-template-columns: repeat(2, 1fr); }
+  .recents { grid-template-columns: repeat(3, 1fr); }
+  .stats-hero__inner { grid-template-columns: 1fr; padding: 32px; gap: 32px; }
+  .donut-row { grid-template-columns: 1fr; }
+  .random-page__inner { padding: 32px; }
+  .random-page__row { grid-template-columns: 1fr; gap: 32px; }
+  .aoty { grid-template-columns: 1fr; }
+  .topten__row { grid-template-columns: 36px 48px 1fr 90px; gap: 12px; }
+  .topten__bar { display: none; }
+  .wrapped-hero__inner { padding: 48px 32px; }
+  .wrapped-body { padding: 32px; }
+}
+
+/* =========================================================
+   Pager
+   ========================================================= */
+.pager {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  padding: 24px 0 4px;
+  margin-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.pager__summary {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--ink-dim);
+}
+.pager__nav { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.pager__btn, .pager__n {
+  padding: 8px 12px;
+  border: 1px solid var(--rule-strong);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+  color: var(--ink-2);
+  transition: all 150ms;
+  min-width: 36px;
+}
+.pager__btn:hover:not(:disabled), .pager__n:hover { background: var(--paper-2); color: var(--ink); }
+.pager__btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.pager__n.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pager__ell { padding: 0 6px; font-family: var(--mono); color: var(--ink-dim); }
+
+/* =========================================================
+   Responsive cleanup
+   ========================================================= */
+@media (max-width: 1200px) {
+  .layout { grid-template-columns: 1fr; }
+  .aside { position: static; max-height: none; flex-direction: column; }
+  .hero__inner { grid-template-columns: 1fr; gap: 32px; padding: 40px 32px; }
+  .top__search { width: 200px; }
+  .random { grid-template-columns: repeat(2, 1fr); }
+  .adet__inner { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
+  .adet__cols { grid-template-columns: 1fr; gap: 32px; }
+  .adet__body { padding: 40px 32px 80px; }
+  .ardet__inner { padding: 24px 32px 40px; }
+  .ardet__row { grid-template-columns: 1fr; gap: 24px; }
+  .ardet__photo { max-width: 280px; }
+  .page--browse { padding: 40px 32px 80px; }
+  .browse__head { flex-direction: column; align-items: flex-start; }
+  .tracklist { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>
+// All sample data for the redesign. Cover SVGs are placeholder gradients
+// derived from the dominant color so we can demo the cover-color tinting
+// without external image assets.
+
+window.RUSS_DATA = (() => {
+  const sleeve = (id, c1, c2, c3, label, sub, motif = 'wave') => {
+    // Build an SVG sleeve placeholder with a couple of motifs so the wall
+    // doesn't feel like 30 identical tiles.
+    const motifs = {
+      wave: `<path d='M0 320 Q150 240 300 320 T600 320 V600 H0 Z' fill='${c3}' opacity='0.55'/>
+             <path d='M0 380 Q150 300 300 380 T600 380 V600 H0 Z' fill='${c2}' opacity='0.7'/>`,
+      grid: `<g stroke='${c3}' stroke-width='1' opacity='0.35'>
+             ${Array.from({length: 12}, (_, i) => `<line x1='${i*50}' y1='0' x2='${i*50}' y2='600'/>`).join('')}
+             ${Array.from({length: 12}, (_, i) => `<line x1='0' y1='${i*50}' x2='600' y2='${i*50}'/>`).join('')}
+             </g>`,
+      sun:  `<circle cx='300' cy='320' r='140' fill='${c3}' opacity='0.85'/>
+             <circle cx='300' cy='320' r='90'  fill='${c2}' opacity='0.9'/>`,
+      bars: `${Array.from({length: 7}, (_, i) => `<rect x='${30+i*80}' y='${120+i*20}' width='40' height='${360-i*30}' fill='${i%2?c2:c3}' opacity='0.8'/>`).join('')}`,
+      circle: `<circle cx='300' cy='300' r='240' fill='none' stroke='${c3}' stroke-width='40' opacity='0.7'/>
+               <circle cx='300' cy='300' r='160' fill='none' stroke='${c2}' stroke-width='24' opacity='0.85'/>
+               <circle cx='300' cy='300' r='30' fill='${c3}'/>`,
+      slab: `<rect x='60' y='80' width='480' height='280' fill='${c3}' opacity='0.85'/>
+             <rect x='60' y='380' width='200' height='40' fill='${c2}'/>`,
+      diag: `<g fill='${c3}' opacity='0.7'>
+             ${Array.from({length: 8}, (_, i) => `<polygon points='${i*100},0 ${i*100+60},0 ${i*100-200},600 ${i*100-260},600'/>`).join('')}
+             </g>`,
+    };
+    const m = motifs[motif] || motifs.wave;
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'>
+      <rect width='600' height='600' fill='${c1}'/>
+      ${m}
+      <text x='40' y='80' fill='${c3}' font-family='Inter Tight, system-ui' font-size='28' font-weight='800' letter-spacing='-0.02em'>${label}</text>
+      <text x='40' y='560' fill='${c3}' font-family='JetBrains Mono, monospace' font-size='14' opacity='0.85'>${sub}</text>
+    </svg>`;
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg.replace(/\s+/g, ' ').replace(/&(?!amp;|lt;|gt;|quot;|apos;|#)/g, '&amp;'));
+  };
+
+  const albums = [
+    { id: 'a01', title: '20 Jazz Funk Greats', artist: 'Throbbing Gristle', year: 1979, country: 'UK',
+      genres: ['Industrial','Electronic','Avant'], tracks: 11, format: 'LP',
+      added: '12 APR 26', label: 'Industrial Records', dom: '#8a8a3d', accent: '#c8c459',
+      cover: sleeve('a01', '#8a8a3d', '#c8c459', '#1a1a06', 'TG / 1979', 'INDUSTRIAL RECORDS · IR0008', 'sun') },
+    { id: 'a02', title: 'Spiderland', artist: 'Slint', year: 1991, country: 'US',
+      genres: ['Post-Rock','Math Rock'], tracks: 6, format: 'LP',
+      added: '11 APR 26', label: 'Touch and Go', dom: '#1a1a1a', accent: '#9aa6b2',
+      cover: sleeve('a02', '#1a1a1a', '#33373a', '#cfd6dd', 'SLINT', 'TOUCH AND GO · TG64', 'wave') },
+    { id: 'a03', title: 'Doolittle', artist: 'Pixies', year: 1989, country: 'US',
+      genres: ['Alternative','Indie Rock'], tracks: 15, format: 'LP',
+      added: '10 APR 26', label: '4AD', dom: '#d6c89a', accent: '#7a4b2a',
+      cover: sleeve('a03', '#d6c89a', '#a87a4f', '#3a1f0f', 'DOOLITTLE', '4AD · CAD905', 'circle') },
+    { id: 'a04', title: 'Hauntings', artist: 'Richard Davidson', year: 2024, country: 'UK',
+      genres: ['Ambient','Modern Classical'], tracks: 9, format: 'LP',
+      added: '09 APR 26', label: 'Erased Tapes', dom: '#1f1f24', accent: '#d23b2d',
+      cover: sleeve('a04', '#1f1f24', '#2c2c34', '#d23b2d', 'HAUNTINGS', 'ERASED TAPES · ERATP142', 'slab') },
+    { id: 'a05', title: 'Slanted and Enchanted', artist: 'Pavement', year: 1992, country: 'US',
+      genres: ['Indie','Lo-fi'], tracks: 14, format: 'LP',
+      added: '08 APR 26', label: 'Matador', dom: '#c93a2b', accent: '#f5c344',
+      cover: sleeve('a05', '#c93a2b', '#f5c344', '#1a0a08', 'PAVEMENT', 'MATADOR · OLE 038', 'diag') },
+    { id: 'a06', title: 'In a Bar, Under the Sea', artist: 'dEUS', year: 1996, country: 'BE',
+      genres: ['Alternative','Art Rock'], tracks: 16, format: '2LP',
+      added: '07 APR 26', label: 'Island', dom: '#e9e3d8', accent: '#d23b2d',
+      cover: sleeve('a06', '#e9e3d8', '#d23b2d', '#1a1a1a', 'dEUS', 'ISLAND · 524 297', 'bars') },
+    { id: 'a07', title: 'Worst Case Scenario', artist: 'dEUS', year: 1994, country: 'BE',
+      genres: ['Alternative','Post-Punk'], tracks: 13, format: 'LP',
+      added: '06 APR 26', label: 'Island', dom: '#7a3a1f', accent: '#e9b04f',
+      cover: sleeve('a07', '#7a3a1f', '#a8612a', '#f5e0b0', 'WORST CASE', 'ISLAND · 518 478', 'wave') },
+    { id: 'a08', title: 'The Afterglow', artist: 'KillerStar', year: 2023, country: 'UK',
+      genres: ['Indie','Pop'], tracks: 10, format: 'LP',
+      added: '05 APR 26', label: 'Cooking Vinyl', dom: '#3a3a3a', accent: '#e3d6b8',
+      cover: sleeve('a08', '#3a3a3a', '#5a5a5a', '#e3d6b8', 'KILLERSTAR', 'COOKING VINYL · 814', 'slab') },
+    { id: 'a09', title: 'Distracted', artist: 'Thundercat', year: 2025, country: 'US',
+      genres: ['Funk','Jazz Fusion'], tracks: 11, format: 'LP',
+      added: '04 APR 26', label: 'Brainfeeder', dom: '#191919', accent: '#a78bff',
+      cover: sleeve('a09', '#191919', '#2a2a32', '#a78bff', 'THUNDERCAT', 'BRAINFEEDER · BF111', 'circle') },
+    { id: 'a10', title: 'Milo Goes to College', artist: 'Descendents', year: 1982, country: 'US',
+      genres: ['Punk','Hardcore'], tracks: 15, format: 'LP',
+      added: '03 APR 26', label: 'New Alliance', dom: '#f0ead8', accent: '#1a1a1a',
+      cover: sleeve('a10', '#f0ead8', '#cfc8b3', '#1a1a1a', 'MILO', 'NEW ALLIANCE · NAR012', 'grid') },
+    { id: 'a11', title: "It's Only About You If You Think It Is", artist: 'IAMX', year: 2022, country: 'DE',
+      genres: ['Electronic','Dark Wave'], tracks: 12, format: 'LP',
+      added: '02 APR 26', label: 'Caroline', dom: '#0a0a0a', accent: '#e7e7e7',
+      cover: sleeve('a11', '#0a0a0a', '#1f1f1f', '#e7e7e7', 'IAMX', 'CAROLINE · CAR2299', 'sun') },
+    { id: 'a12', title: '…Famous Last Words…', artist: 'Supertramp', year: 1982, country: 'UK',
+      genres: ['Rock','Pop Rock'], tracks: 10, format: 'LP',
+      added: '01 APR 26', label: 'A&M', dom: '#3a1f1a', accent: '#f0a04a',
+      cover: sleeve('a12', '#3a1f1a', '#a05a30', '#f5d6a0', 'SUPERTRAMP', 'A&M · SP-3732', 'wave') },
+    { id: 'a13', title: 'Kid A', artist: 'Radiohead', year: 2000, country: 'UK',
+      genres: ['Electronic','Art Rock'], tracks: 11, format: '2LP',
+      added: '30 MAR 26', label: 'Parlophone', dom: '#b03028', accent: '#f5e8c8',
+      cover: sleeve('a13', '#b03028', '#7a1a14', '#f5e8c8', 'KID A', 'PARLOPHONE · 7243', 'diag') },
+    { id: 'a14', title: 'Loveless', artist: 'My Bloody Valentine', year: 1991, country: 'IE',
+      genres: ['Shoegaze','Dream Pop'], tracks: 11, format: 'LP',
+      added: '29 MAR 26', label: 'Creation', dom: '#d63a7a', accent: '#f5b3d0',
+      cover: sleeve('a14', '#d63a7a', '#f5b3d0', '#3a0820', 'LOVELESS', 'CREATION · CRELP060', 'wave') },
+    { id: 'a15', title: 'Selected Ambient Works 85-92', artist: 'Aphex Twin', year: 1992, country: 'UK',
+      genres: ['Ambient','IDM'], tracks: 13, format: '2LP',
+      added: '28 MAR 26', label: 'R&S', dom: '#1a3a4a', accent: '#5cc9d6',
+      cover: sleeve('a15', '#1a3a4a', '#2a5a6a', '#5cc9d6', 'AFX', 'R&S · AMB3922', 'circle') },
+    { id: 'a16', title: 'In the Aeroplane Over the Sea', artist: 'Neutral Milk Hotel', year: 1998, country: 'US',
+      genres: ['Indie Folk','Lo-fi'], tracks: 11, format: 'LP',
+      added: '27 MAR 26', label: 'Merge', dom: '#7a5a3a', accent: '#e3c89a',
+      cover: sleeve('a16', '#7a5a3a', '#a87a4f', '#e3c89a', 'NMH', 'MERGE · MRG136', 'slab') },
+    { id: 'a17', title: 'OK Computer', artist: 'Radiohead', year: 1997, country: 'UK',
+      genres: ['Alternative','Art Rock'], tracks: 12, format: '2LP',
+      added: '26 MAR 26', label: 'Parlophone', dom: '#9a9a9a', accent: '#1a1a1a',
+      cover: sleeve('a17', '#9a9a9a', '#cfcfcf', '#1a1a1a', 'OK COMPUTER', 'PARLOPHONE · 7243', 'grid') },
+    { id: 'a18', title: 'Discovery', artist: 'Daft Punk', year: 2001, country: 'FR',
+      genres: ['Electronic','House'], tracks: 14, format: '2LP',
+      added: '25 MAR 26', label: 'Virgin', dom: '#d6a428', accent: '#3a1a0a',
+      cover: sleeve('a18', '#d6a428', '#f5c344', '#3a1a0a', 'DISCOVERY', 'VIRGIN · 8123622', 'sun') },
+  ];
+
+  const artists = [
+    { id: 'ar01', name: 'Throbbing Gristle', albums: 4, country: 'UK', dom: '#8a8a3d',
+      photo: sleeve('ar01', '#8a8a3d', '#c8c459', '#1a1a06', 'TG', 'INDUSTRIAL', 'sun') },
+    { id: 'ar02', name: 'Slint', albums: 2, country: 'US', dom: '#1a1a1a',
+      photo: sleeve('ar02', '#1a1a1a', '#33373a', '#cfd6dd', 'SLINT', 'POST-ROCK', 'wave') },
+    { id: 'ar03', name: 'Pixies', albums: 5, country: 'US', dom: '#d6c89a',
+      photo: sleeve('ar03', '#d6c89a', '#a87a4f', '#3a1f0f', 'PIXIES', 'ALT-ROCK', 'circle') },
+    { id: 'ar04', name: 'Richard Davidson', albums: 1, country: 'UK', dom: '#1f1f24',
+      photo: sleeve('ar04', '#1f1f24', '#2c2c34', '#d23b2d', 'R.D.', 'AMBIENT', 'slab') },
+    { id: 'ar05', name: 'Pavement', albums: 3, country: 'US', dom: '#c93a2b',
+      photo: sleeve('ar05', '#c93a2b', '#f5c344', '#1a0a08', 'PAVEMENT', 'INDIE', 'diag') },
+    { id: 'ar06', name: 'dEUS', albums: 6, country: 'BE', dom: '#7a3a1f',
+      photo: sleeve('ar06', '#7a3a1f', '#a8612a', '#f5e0b0', 'dEUS', 'ART ROCK', 'wave') },
+    { id: 'ar07', name: 'Thundercat', albums: 2, country: 'US', dom: '#191919',
+      photo: sleeve('ar07', '#191919', '#2a2a32', '#a78bff', 'TC', 'JAZZ FUSION', 'circle') },
+    { id: 'ar08', name: 'Aphex Twin', albums: 4, country: 'UK', dom: '#1a3a4a',
+      photo: sleeve('ar08', '#1a3a4a', '#2a5a6a', '#5cc9d6', 'AFX', 'IDM', 'circle') },
+    { id: 'ar09', name: 'Radiohead', albums: 7, country: 'UK', dom: '#b03028',
+      photo: sleeve('ar09', '#b03028', '#7a1a14', '#f5e8c8', 'RH', 'ART ROCK', 'diag') },
+    { id: 'ar10', name: 'My Bloody Valentine', albums: 2, country: 'IE', dom: '#d63a7a',
+      photo: sleeve('ar10', '#d63a7a', '#f5b3d0', '#3a0820', 'MBV', 'SHOEGAZE', 'wave') },
+    { id: 'ar11', name: 'Daft Punk', albums: 3, country: 'FR', dom: '#d6a428',
+      photo: sleeve('ar11', '#d6a428', '#f5c344', '#3a1a0a', 'DP', 'ELECTRONIC', 'sun') },
+    { id: 'ar12', name: 'Neutral Milk Hotel', albums: 2, country: 'US', dom: '#7a5a3a',
+      photo: sleeve('ar12', '#7a5a3a', '#a87a4f', '#e3c89a', 'NMH', 'INDIE FOLK', 'slab') },
+  ];
+
+  // Last scrobbles (fake, for the sidebar feed)
+  const scrobbles = [
+    { track: 'Hot On The Heels Of Love', artist: 'Throbbing Gristle', when: '2m' },
+    { track: 'Beachy Head', artist: 'Throbbing Gristle', when: '7m' },
+    { track: 'Good Morning, Captain', artist: 'Slint', when: '14m' },
+    { track: 'Washer', artist: 'Slint', when: '22m' },
+    { track: 'Debaser', artist: 'Pixies', when: '29m' },
+    { track: 'Idioteque', artist: 'Radiohead', when: '38m' },
+    { track: 'Xtal', artist: 'Aphex Twin', when: '46m' },
+    { track: 'One More Time', artist: 'Daft Punk', when: '54m' },
+  ];
+
+  const stats = {
+    albums: 847, artists: 312, tracks: 9_421, hours: 612,
+    topGenres: [
+      { name: 'Alternative', count: 142 },
+      { name: 'Electronic', count: 118 },
+      { name: 'Indie Rock', count: 96 },
+      { name: 'Ambient', count: 71 },
+      { name: 'Post-Rock', count: 54 },
+      { name: 'Jazz', count: 48 },
+      { name: 'Punk', count: 39 },
+      { name: 'Folk', count: 32 },
+    ],
+    yearsHist: [
+      { d: '60s', n: 18 }, { d: '70s', n: 64 }, { d: '80s', n: 121 },
+      { d: '90s', n: 198 }, { d: '00s', n: 154 }, { d: '10s', n: 176 }, { d: '20s', n: 116 },
+    ],
+  };
+
+  // Per-album extras (tracklist, blurb, identifiers)
+  const tracksFor = (a) => {
+    const seedNames = {
+      a01: ['20 Jazz Funk Greats','Beachy Head','Still Walking','Tanith','Convincing People','Exotica','Hot On The Heels Of Love','Persuasion','Walkabout','What A Day','Six Six Sixties'],
+      a02: ['Breadcrumb Trail','Nosferatu Man','Don, Aman','Washer','For Dinner…','Good Morning, Captain'],
+      a03: ['Debaser','Tame','Wave Of Mutilation','I Bleed','Here Comes Your Man','Dead','Monkey Gone To Heaven','Mr. Grieves','Crackity Jones','La La Love You','No. 13 Baby','There Goes My Gun','Hey','Silver','Gouge Away'],
+    };
+    const names = seedNames[a.id] || Array.from({ length: a.tracks }, (_, i) => `Untitled ${String.fromCharCode(65 + i)}`);
+    const half = Math.ceil(names.length / 2);
+    const dur = (i) => `${2 + (i * 7) % 4}:${String((i * 23) % 60).padStart(2,'0')}`;
+    return [
+      { side: 'A', items: names.slice(0, half).map((n, i) => ({ n: i + 1, name: n, time: dur(i) })) },
+      { side: 'B', items: names.slice(half).map((n, i) => ({ n: i + 1, name: n, time: dur(i + half) })) },
+    ];
+  };
+
+  const blurbFor = (a) =>
+    `${a.title} is a ${a.year} ${a.genres[0].toLowerCase()} record by ${a.artist}, released on ${a.label} and pressed in ${a.country}. A staple of the collection, it sits within a broader thread of ${a.genres.join(', ').toLowerCase()} releases catalogued here.`;
+
+  const idents = (a) => ({
+    upc: '7' + (a.id.charCodeAt(1) * 9876543).toString().padStart(11, '0').slice(0, 11),
+    discogs: 'D' + (parseInt(a.id.slice(1), 10) * 487 + 100000),
+    spotify: a.id.toUpperCase() + 'X' + 'KZ8aBcD9eF0gHiJ',
+    apple:   '11' + (parseInt(a.id.slice(1), 10) * 837 + 1000000),
+  });
+
+  // Per-artist bios + linked album refs
+  const artistBio = (ar) =>
+    `${ar.name} is a ${ar.country === 'UK' ? 'British' : ar.country === 'US' ? 'American' : ar.country === 'BE' ? 'Belgian' : ar.country === 'IE' ? 'Irish' : ar.country === 'FR' ? 'French' : 'German'} act with ${ar.albums} releases catalogued here. Their work threads through the collection's ${(albums.find(al => al.artist === ar.name)?.genres[0] || 'core').toLowerCase()} canon.`;
+
+  const albumsByArtist = (name) => albums.filter(al => al.artist === name);
+
+  // ----- Extended stats for the /stats page -----
+  const decadeBars = [
+    { d: '1960s', n: 18, c: '#5cc9d6' },
+    { d: '1970s', n: 64, c: '#f5a23a' },
+    { d: '1980s', n: 121, c: '#e3c84a' },
+    { d: '1990s', n: 198, c: '#d23b2d' },
+    { d: '2000s', n: 154, c: '#a78bff' },
+    { d: '2010s', n: 176, c: '#3aa3e3' },
+    { d: '2020s', n: 116, c: '#e36b3a' },
+  ];
+  const topArtistsBig = [
+    { name: 'Pink Floyd',     n: 41, dom: '#7a8a9a' },
+    { name: 'Rush',           n: 30, dom: '#3a3530' },
+    { name: 'David Bowie',    n: 24, dom: '#9a9a9a' },
+    { name: 'Steven Wilson',  n: 24, dom: '#7a8794' },
+    { name: 'Genesis',        n: 22, dom: '#3a3a3a' },
+    { name: 'Matt Berry',     n: 20, dom: '#1a6a3a' },
+    { name: 'Split Enz',      n: 19, dom: '#d6c64a' },
+    { name: 'Marillion',      n: 19, dom: '#5a3a2a' },
+    { name: 'The Cure',       n: 18, dom: '#1a1a1a' },
+    { name: 'Throbbing Gristle', n: 14, dom: '#8a8a3d' },
+  ];
+  const topGenresBig = [
+    { name: 'Rock',              pct: 86, c: '#3a8ad6' },
+    { name: 'Alternative',       pct: 35, c: '#2aa863' },
+    { name: 'Pop',               pct: 34, c: '#e3a83a' },
+    { name: 'Electronic',        pct: 24, c: '#d23b2d' },
+    { name: 'Adult Alternative', pct: 23, c: '#a78bff' },
+    { name: 'Indie Rock',        pct: 20, c: '#3aa3e3' },
+    { name: 'Alternative Rock',  pct: 20, c: '#e36b3a' },
+    { name: 'Pop/Rock',          pct: 13, c: '#e36ba0' },
+  ];
+  const topYears = [
+    { y: 2017, n: 137 }, { y: 2019, n: 134 }, { y: 2016, n: 131 },
+    { y: 2023, n: 122 }, { y: 2025, n: 112 },
+  ];
+  // synthetic monthly additions (Jan 2016 -> Apr 2026)
+  const additionsOverTime = (() => {
+    const out = [];
+    let y = 2016, m = 1;
+    while (!(y === 2026 && m > 4)) {
+      // pseudo-random but stable
+      const seed = (y * 13 + m * 7) % 97;
+      out.push({ y, m, n: 8 + (seed % 35) + (m === 8 ? 30 : 0) + (y === 2017 && m === 1 ? 30 : 0) });
+      m++;
+      if (m > 12) { m = 1; y++; }
+    }
+    return out;
+  })();
+  const monthName = (m) => ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][m - 1];
+  const stats2 = {
+    totals: { albums: 3218, artists: 1201, genres: 351, perArtist: 2.7 },
+    decadeBars, topArtistsBig, topGenresBig, topYears, additionsOverTime,
+    goldenYear: { y: 2017, n: 137 },
+    activeMonth: { name: 'AUGUST', n: 319 },
+    artistDepth: { oneHit: 685, catalog: 156 },
+    monthName,
+  };
+
+  return {
+    albums, artists, scrobbles, stats, stats2,
+    tracksFor, blurbFor, idents, artistBio, albumsByArtist,
+  };
+})();
+
+</script>
+<script type="text/babel">
+/* global React */
+const { useState, useEffect, useRef } = React;
+
+// ===========================================================
+// Shared bits used across pages
+// ===========================================================
+
+window.useHashRoute = function useHashRoute() {
+  const [route, setRoute] = useState(() => window.location.hash.slice(1) || '/');
+  useEffect(() => {
+    const onHash = () => {
+      setRoute(window.location.hash.slice(1) || '/');
+      window.scrollTo({ top: 0 });
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  return route;
+};
+
+window.Link = function Link({ to, children, className, style, onClick }) {
+  return (
+    <a href={`#${to}`} className={className} style={style} onClick={onClick}>
+      {children}
+    </a>
+  );
+};
+
+// ===========================================================
+// Album detail
+// ===========================================================
+window.AlbumDetail = function AlbumDetail({ id, tweaks }) {
+  const { albums, tracksFor, blurbFor, idents, albumsByArtist } = window.RUSS_DATA;
+  const a = albums.find(x => x.id === id) || albums[0];
+  const tracks = tracksFor(a);
+  const ident = idents(a);
+  const more = albumsByArtist(a.artist).filter(x => x.id !== a.id);
+  const tint = tweaks.showCoverColor ? a.dom : 'var(--ink-dim)';
+
+  return (
+    <div className="page page--album" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}>
+      <div className="adet">
+        <div className="adet__wash" />
+        <div className="adet__inner">
+          <div className="adet__sleeve">
+            <img src={a.cover} alt="" draggable="false" />
+            <span className="adet__catnum">CAT. {a.id.toUpperCase()} · {a.format}</span>
+          </div>
+          <div className="adet__meta">
+            <div className="crumbs">
+              <Link to="/">Home</Link>
+              <span>/</span>
+              <Link to="/albums">Albums</Link>
+              <span>/</span>
+              <span>{a.title}</span>
+            </div>
+            <h1 className="adet__title">{a.title}</h1>
+            <Link to={`/artist/${a.artist.replace(/\s+/g,'-').toLowerCase()}`} className="adet__artist">
+              <span className="adet__rule" />{a.artist}
+            </Link>
+
+            <div className="chip-row">
+              {a.genres.map(g => <span key={g} className="chip">{g}</span>)}
+              <span className="chip chip--mono">{a.year}</span>
+              <span className="chip chip--mono">{a.country}</span>
+              <span className="chip chip--mono">{a.tracks} TRACKS</span>
+            </div>
+
+            <div className="adet__actions">
+              <button className="btn btn--solid">Play on Spotify</button>
+              <button className="btn btn--ghost">Apple Music</button>
+              <button className="btn btn--ghost">Last.fm Scrobble</button>
+              <button className="btn btn--ghost">Discogs</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="adet__body">
+        <div className="adet__cols">
+          <div className="adet__main">
+            <section className="block">
+              <div className="sec-mini">ABOUT</div>
+              <p className="prose">{blurbFor(a)}</p>
+              <p className="prose">
+                Catalogued under {a.label}, this pressing was added to the collection on {a.added}.
+                Adjacent in the archive: {more.length ? more.map(m => m.title).join(', ') : 'no other releases by this artist yet.'}
+              </p>
+            </section>
+
+            <section className="block">
+              <div className="sec-mini">TRACKLIST</div>
+              <div className="tracklist">
+                {tracks.map(side => (
+                  <div key={side.side} className="tracklist__side">
+                    <div className="tracklist__head">SIDE {side.side}</div>
+                    <ol className="tracklist__list">
+                      {side.items.map(t => (
+                        <li key={t.n} className="tracklist__row">
+                          <span className="tracklist__n">{String(t.n).padStart(2,'0')}</span>
+                          <span className="tracklist__t">{t.name}</span>
+                          <span className="tracklist__d">{t.time}</span>
+                          <button className="tracklist__play" aria-label="Preview">▶</button>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            {more.length > 0 && (
+              <section className="block">
+                <div className="sec-mini">MORE FROM {a.artist.toUpperCase()}</div>
+                <div className="mini-row">
+                  {more.map((m, i) => (
+                    <Link key={m.id} to={`/album/${m.id}`} className="tile">
+                      <div className="tile__cover" style={tweaks.showCoverColor ? { '--shadow': m.dom } : undefined}>
+                        <img src={m.cover} alt="" draggable="false" />
+                        <span className="tile__cat">{String(i + 1).padStart(3,'0')}</span>
+                      </div>
+                      <div className="tile__meta">
+                        <h3 className="tile__title">{m.title}</h3>
+                        <div className="tile__sub"><span>{m.artist}</span><span className="tile__year">{m.year}</span></div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+
+          <aside className="adet__side">
+            <div className="aside__block">
+              <div className="aside__head">RELEASE DETAILS</div>
+              <dl className="kv">
+                <div><dt>YEAR</dt><dd>{a.year}</dd></div>
+                <div><dt>COUNTRY</dt><dd>{a.country}</dd></div>
+                <div><dt>FORMAT</dt><dd>{a.format}</dd></div>
+                <div><dt>LABEL</dt><dd>{a.label}</dd></div>
+                <div><dt>STYLE</dt><dd>{a.genres[0]}</dd></div>
+                <div><dt>ADDED</dt><dd>{a.added}</dd></div>
+              </dl>
+            </div>
+
+            <div className="aside__block">
+              <div className="aside__head">IDENTIFIERS</div>
+              <dl className="kv kv--mono">
+                <div><dt>UPC</dt><dd>{ident.upc}</dd></div>
+                <div><dt>DISCOGS</dt><dd>{ident.discogs}</dd></div>
+                <div><dt>SPOTIFY</dt><dd className="kv__trunc">{ident.spotify}</dd></div>
+                <div><dt>APPLE</dt><dd>{ident.apple}</dd></div>
+              </dl>
+            </div>
+
+            <div className="aside__block">
+              <div className="aside__head">COPYRIGHT</div>
+              <p className="copy">© {a.year} under exclusive license to {a.label}, {a.artist} Ltd.</p>
+              <p className="copy">℗ {a.year} under exclusive license to {a.label}, {a.artist} Ltd.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Artist detail
+// ===========================================================
+window.ArtistDetail = function ArtistDetail({ slug, tweaks }) {
+  const { artists, albumsByArtist, artistBio } = window.RUSS_DATA;
+  const ar = artists.find(x => x.name.replace(/\s+/g,'-').toLowerCase() === slug) || artists[0];
+  const records = albumsByArtist(ar.name);
+  const tint = tweaks.showCoverColor ? ar.dom : 'var(--ink-dim)';
+
+  return (
+    <div className="page page--artist" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}>
+      <div className="ardet">
+        <div className="ardet__wash" />
+        <div className="ardet__inner">
+          <div className="crumbs crumbs--light">
+            <Link to="/">Home</Link>
+            <span>/</span>
+            <Link to="/artists">Artists</Link>
+            <span>/</span>
+            <span>{ar.name}</span>
+          </div>
+          <div className="ardet__row">
+            <div className="ardet__photo">
+              <img src={ar.photo} alt="" draggable="false" />
+            </div>
+            <div className="ardet__meta">
+              <div className="ardet__kicker">ARTIST · NO. {ar.id.toUpperCase()}</div>
+              <h1 className="ardet__name">{ar.name}</h1>
+              <dl className="ardet__nums">
+                <div><dt>RELEASES</dt><dd>{records.length || ar.albums}</dd></div>
+                <div><dt>COUNTRY</dt><dd>{ar.country}</dd></div>
+                <div><dt>FIRST ADDED</dt><dd>{(records[records.length - 1] || { added: '—' }).added}</dd></div>
+                <div><dt>LATEST</dt><dd>{(records[0] || { added: '—' }).added}</dd></div>
+              </dl>
+              <div className="ardet__actions">
+                <button className="btn btn--solid">Open on Last.fm</button>
+                <button className="btn btn--ghost">Spotify Artist</button>
+                <button className="btn btn--ghost">Discogs Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="adet__body">
+        <div className="adet__cols">
+          <div className="adet__main">
+            <section className="block">
+              <div className="sec-mini">BIOGRAPHY</div>
+              <p className="prose">{artistBio(ar)}</p>
+            </section>
+
+            <section className="block">
+              <div className="sec-mini">RELEASES IN COLLECTION · {String(records.length).padStart(2,'0')}</div>
+              {records.length === 0 ? (
+                <div className="empty">No catalogued releases. Check back after the next crate dig.</div>
+              ) : (
+                <div className="catalog">
+                  <div className="catalog__head">
+                    <span>#</span><span>TITLE</span><span>YEAR</span><span>FORMAT</span><span>GENRE</span><span className="catalog__r">ADDED</span>
+                  </div>
+                  {records.map((m, i) => (
+                    <Link key={m.id} to={`/album/${m.id}`} className="catalog__row catalog__row--artist">
+                      <span className="catalog__n">{String(i + 1).padStart(3, '0')}</span>
+                      <span className="catalog__t">
+                        <span className="catalog__sw" style={{ background: m.dom }} />
+                        {m.title}
+                      </span>
+                      <span>{m.year}</span>
+                      <span>{m.format}</span>
+                      <span>{m.genres[0]}</span>
+                      <span className="catalog__r catalog__d">{m.added}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </section>
+
+            <section className="block">
+              <div className="sec-mini">RELATED ARTISTS</div>
+              <div className="mini-row">
+                {artists.filter(x => x.id !== ar.id).slice(0, 6).map((x, i) => (
+                  <Link key={x.id} to={`/artist/${x.name.replace(/\s+/g,'-').toLowerCase()}`} className="atile">
+                    <div className="atile__photo" style={tweaks.showCoverColor ? { '--shadow': x.dom } : undefined}>
+                      <img src={x.photo} alt="" />
+                    </div>
+                    <div className="atile__meta">
+                      <span className="atile__num">{String(i + 1).padStart(2,'0')}</span>
+                      <div>
+                        <h3 className="atile__name">{x.name}</h3>
+                        <div className="atile__sub">{x.albums} releases · {x.country}</div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          </div>
+
+          <aside className="adet__side">
+            <div className="aside__block">
+              <div className="aside__head">QUICK FACTS</div>
+              <dl className="kv">
+                <div><dt>FORMED</dt><dd>{1965 + (ar.id.charCodeAt(2) % 50)}</dd></div>
+                <div><dt>ORIGIN</dt><dd>{ar.country}</dd></div>
+                <div><dt>RELEASES</dt><dd>{records.length || ar.albums}</dd></div>
+                <div><dt>STATUS</dt><dd>Active</dd></div>
+              </dl>
+            </div>
+            <div className="aside__block">
+              <div className="aside__head">EXTERNAL</div>
+              <ul className="ext">
+                <li><a href="#">Last.fm Profile →</a></li>
+                <li><a href="#">Discogs →</a></li>
+                <li><a href="#">Spotify →</a></li>
+                <li><a href="#">MusicBrainz →</a></li>
+                <li><a href="#">Wikipedia →</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Stats page
+// ===========================================================
+window.StatsPage = function StatsPage({ tweaks }) {
+  const { albums, artists, stats2 } = window.RUSS_DATA;
+  const featured = albums[0]; // for hero tint + sleeve stack
+  const tint = tweaks.showCoverColor ? featured.dom : 'var(--ink-dim)';
+  const maxBar = Math.max(...stats2.decadeBars.map(d => d.n));
+  const maxAdd = Math.max(...stats2.additionsOverTime.map(a => a.n));
+
+  // Donut math
+  const total = stats2.topGenresBig.reduce((s, g) => s + g.pct, 0);
+  let acc = 0;
+  const donut = stats2.topGenresBig.map(g => {
+    const start = (acc / total) * 100;
+    acc += g.pct;
+    const end = (acc / total) * 100;
+    return { ...g, start, end };
+  });
+
+  return (
+    <div className="page page--stats" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}>
+      {/* hero */}
+      <header className="stats-hero">
+        <div className="stats-hero__wash" />
+        <div className="stats-hero__inner">
+          <div className="stats-hero__stack">
+            {[2,1,0].map(i => (
+              <div key={i} className="stats-hero__sleeve" style={{ '--i': i }}>
+                <img src={albums[i + 6].cover} alt="" />
+              </div>
+            ))}
+          </div>
+          <div className="stats-hero__meta">
+            <div className="stats-hero__kicker">SECTION 04 · INDEX</div>
+            <h1 className="stats-hero__title">
+              Collection <em>Statistics</em>
+            </h1>
+            <p className="stats-hero__sub">
+              Real-time insights from my listening habits. {stats2.totals.albums.toLocaleString()} albums across {stats2.totals.genres} genres, last updated 12 APR 26.
+            </p>
+            <div className="stats-hero__pills">
+              <span className="chip chip--mono">◉ {stats2.totals.albums.toLocaleString()} ALBUMS</span>
+              <span className="chip chip--mono">◐ {stats2.totals.artists.toLocaleString()} ARTISTS</span>
+              <span className="chip chip--mono">♪ {stats2.totals.genres} GENRES</span>
+            </div>
+            <div className="chip-row" style={{ marginTop: 8 }}>
+              {stats2.topGenresBig.slice(0, 4).map(g => (
+                <span key={g.name} className="chip" style={{ borderColor: g.c, color: g.c }}>{g.name}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div className="stats-body">
+        {/* big totals */}
+        <section className="stat-grid stat-grid--totals">
+          {[
+            { l: 'TOTAL ALBUMS', n: stats2.totals.albums.toLocaleString(), s: '◉' },
+            { l: 'UNIQUE ARTISTS', n: stats2.totals.artists.toLocaleString(), s: '◐' },
+            { l: 'UNIQUE GENRES', n: stats2.totals.genres.toLocaleString(), s: '♪' },
+            { l: 'AVG ALBUMS / ARTIST', n: stats2.totals.perArtist, s: '↗' },
+          ].map(c => (
+            <div key={c.l} className="card card--total">
+              <div className="card__head"><span>{c.l}</span><i>{c.s}</i></div>
+              <div className="card__big">{c.n}</div>
+            </div>
+          ))}
+        </section>
+
+        {/* charts row */}
+        <section className="stat-grid stat-grid--two">
+          <div className="card">
+            <div className="card__head"><span>ALBUMS BY DECADE</span><i>↻</i></div>
+            <div className="bars">
+              {stats2.decadeBars.map(d => (
+                <div key={d.d} className="bars__col">
+                  <div className="bars__bar" style={{ height: `${(d.n / maxBar) * 100}%`, background: d.c }}>
+                    <span className="bars__n">{d.n}</span>
+                  </div>
+                  <div className="bars__d">{d.d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card__head"><span>TOP GENRES</span><i>%</i></div>
+            <div className="donut-row">
+              <svg viewBox="-120 -120 240 240" className="donut" aria-hidden>
+                {donut.map((g, i) => {
+                  const r = 90, ir = 60;
+                  const a1 = (g.start / 100) * Math.PI * 2 - Math.PI / 2;
+                  const a2 = (g.end / 100) * Math.PI * 2 - Math.PI / 2;
+                  const large = (g.end - g.start) > 50 ? 1 : 0;
+                  const x1 = Math.cos(a1) * r, y1 = Math.sin(a1) * r;
+                  const x2 = Math.cos(a2) * r, y2 = Math.sin(a2) * r;
+                  const x3 = Math.cos(a2) * ir, y3 = Math.sin(a2) * ir;
+                  const x4 = Math.cos(a1) * ir, y4 = Math.sin(a1) * ir;
+                  return (
+                    <path key={i} d={`M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} L ${x3} ${y3} A ${ir} ${ir} 0 ${large} 0 ${x4} ${y4} Z`}
+                      fill={g.c} stroke="var(--paper)" strokeWidth="2"/>
+                  );
+                })}
+              </svg>
+              <ul className="donut__legend">
+                {stats2.topGenresBig.map(g => (
+                  <li key={g.name}>
+                    <span className="dot" style={{ background: g.c }} />
+                    <span className="donut__name">{g.name}</span>
+                    <span className="donut__pct">{g.pct}%</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* golden year + top years */}
+        <section className="stat-grid stat-grid--two">
+          <div className="card card--golden">
+            <div className="card__head"><span>GOLDEN YEAR</span><i>↗</i></div>
+            <div className="golden">
+              <div className="golden__y">{stats2.goldenYear.y}</div>
+              <div className="golden__sub">Most prolific year with <b>{stats2.goldenYear.n}</b> albums released</div>
+            </div>
+          </div>
+
+          <div className="card">
+            <div className="card__head"><span>TOP 5 RELEASE YEARS</span><i>★</i></div>
+            <ul className="topyrs">
+              {stats2.topYears.map((y) => {
+                const pct = (y.n / stats2.topYears[0].n) * 100;
+                return (
+                  <li key={y.y} className="topyrs__row">
+                    <span className="topyrs__y">{y.y}</span>
+                    <span className="topyrs__bar"><span style={{ width: `${pct}%` }} /></span>
+                    <span className="topyrs__n">{y.n} albums</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </section>
+
+        {/* artists with most albums */}
+        <section className="block">
+          <div className="sec-mini">ARTISTS WITH MOST ALBUMS</div>
+          <div className="topartists">
+            {stats2.topArtistsBig.slice(0, 8).map((a, i) => {
+              const photo = artists.find(x => x.name === a.name)?.photo
+                || artists[i % artists.length].photo;
+              return (
+                <Link key={a.name} to={`/artist/${a.name.replace(/\s+/g,'-').toLowerCase()}`} className="topartist">
+                  <div className="topartist__rank">#{String(i + 1).padStart(2,'0')}</div>
+                  <div className="topartist__photo" style={{ '--shadow': a.dom }}>
+                    <img src={photo} alt="" />
+                  </div>
+                  <h3 className="topartist__name">{a.name}</h3>
+                  <div className="topartist__sub">{a.n} albums</div>
+                  <div className="topartist__sw">
+                    {[0,1,2,3].map(k => (
+                      <span key={k} style={{ background: albums[(i*3 + k) % albums.length].dom }} />
+                    ))}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* artist depth + most active month */}
+        <section className="stat-grid stat-grid--two">
+          <div className="card">
+            <div className="card__head"><span>ARTIST DEPTH</span><i>⬢</i></div>
+            <ul className="depth">
+              <li>
+                <div>
+                  <h4>One Hit Wonders</h4>
+                  <p>Artists with 1 album in collection</p>
+                </div>
+                <b>{stats2.artistDepth.oneHit}</b>
+              </li>
+              <li>
+                <div>
+                  <h4>Catalog Artists</h4>
+                  <p>Artists with 5+ albums in collection</p>
+                </div>
+                <b>{stats2.artistDepth.catalog}</b>
+              </li>
+            </ul>
+          </div>
+
+          <div className="card card--active">
+            <div className="card__head"><span>MOST ACTIVE MONTH</span><i>⬡</i></div>
+            <div className="active">
+              <div>
+                <div className="active__name">{stats2.activeMonth.name}</div>
+                <p>You typically add the most music in {stats2.activeMonth.name.toLowerCase()}.</p>
+              </div>
+              <div className="active__n">
+                <b>{stats2.activeMonth.n}</b>
+                <span>TOTAL ADDITIONS</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* recent additions */}
+        <section className="block">
+          <div className="sec-mini">RECENT ADDITIONS</div>
+          <div className="recents">
+            {albums.slice(0, 10).map((a, i) => (
+              <Link key={a.id} to={`/album/${a.id}`} className="tile">
+                <div className="tile__cover" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+                  <img src={a.cover} alt="" draggable="false" />
+                  <span className="tile__cat">{String(i + 1).padStart(3,'0')}</span>
+                </div>
+                <div className="tile__meta">
+                  <h3 className="tile__title">{a.title}</h3>
+                  <div className="tile__sub"><span>{a.artist}</span><span className="tile__year">{a.year}</span></div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* additions over time */}
+        <section className="block">
+          <div className="card">
+            <div className="card__head"><span>ADDITIONS OVER TIME</span><i>2016 → 2026</i></div>
+            <div className="timehist">
+              {stats2.additionsOverTime.map((p, i) => {
+                const c = stats2.decadeBars[Math.min(6, Math.floor((p.y - 2010) / 1.5) % 7)].c;
+                return (
+                  <div key={i} className="timehist__col" title={`${stats2.monthName(p.m)} ${p.y} · ${p.n}`}>
+                    <span className="timehist__bar" style={{ height: `${(p.n / maxAdd) * 100}%`, background: c }} />
+                    {p.m === 1 && <span className="timehist__y">{p.y}</span>}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* From the crates */}
+        <section className="block">
+          <div className="sec-mini">FROM THE CRATES · RANDOM PICKS</div>
+          <div className="recents">
+            {albums.slice(8, 18).map((a, i) => (
+              <Link key={a.id} to={`/album/${a.id}`} className="tile">
+                <div className="tile__cover" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+                  <img src={a.cover} alt="" draggable="false" />
+                </div>
+                <div className="tile__meta">
+                  <h3 className="tile__title">{a.title}</h3>
+                  <div className="tile__sub"><span>{a.artist}</span><span className="tile__year">{a.year}</span></div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* random artists */}
+        <section className="block">
+          <div className="sec-mini">RANDOM ARTISTS</div>
+          <div className="browse__agrid">
+            {artists.slice(0, 8).map((a, i) => (
+              <Link key={a.id} to={`/artist/${a.name.replace(/\s+/g,'-').toLowerCase()}`} className="atile atile--lg">
+                <div className="atile__photo" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+                  <img src={a.photo} alt="" />
+                </div>
+                <div className="atile__meta">
+                  <span className="atile__num">{String(i + 1).padStart(2,'0')}</span>
+                  <div>
+                    <h3 className="atile__name">{a.name}</h3>
+                    <div className="atile__sub">{a.albums} releases · {a.country}</div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Random page
+// ===========================================================
+window.RandomPage = function RandomPage({ tweaks }) {
+  const { albums } = window.RUSS_DATA;
+  const [pick, setPick] = useState(() => albums[Math.floor(Math.random() * albums.length)]);
+  const [rolling, setRolling] = useState(false);
+
+  const spin = () => {
+    setRolling(true);
+    let n = 0;
+    const id = setInterval(() => {
+      setPick(albums[Math.floor(Math.random() * albums.length)]);
+      n++;
+      if (n > 14) {
+        clearInterval(id);
+        setRolling(false);
+      }
+    }, 70);
+  };
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.code === 'Space') { e.preventDefault(); spin(); } };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
+  const tint = tweaks.showCoverColor ? pick.dom : 'var(--ink-dim)';
+
+  return (
+    <div className="page page--random" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}>
+      <div className="random-page__wash" />
+      <div className="random-page__inner">
+        <div className="random-page__kicker">RANDOM DISCOVERY · CRATE DIG</div>
+
+        <div className="random-page__row">
+          <div className={`random-page__sleeve ${rolling ? 'is-rolling' : ''}`}>
+            <img src={pick.cover} alt="" />
+            <span className="random-page__catnum">CAT. {pick.id.toUpperCase()} · {pick.format}</span>
+          </div>
+
+          <div className="random-page__meta">
+            <h1 className="random-page__title">{pick.title}</h1>
+            <Link to={`/artist/${pick.artist.replace(/\s+/g,'-').toLowerCase()}`} className="random-page__artist">
+              by <b>{pick.artist}</b>
+            </Link>
+
+            <div className="chip-row">
+              <span className="chip chip--mono">{pick.year}</span>
+              {pick.genres.map(g => <span key={g} className="chip">{g}</span>)}
+              <span className="chip chip--mono">{pick.country}</span>
+              <span className="chip chip--mono">{pick.format}</span>
+            </div>
+
+            <div className="random-page__actions">
+              <button className="btn btn--solid" onClick={spin} disabled={rolling}>
+                ⤬ {rolling ? 'Spinning…' : 'Shuffle'}
+              </button>
+              <Link to={`/album/${pick.id}`} className="btn btn--ghost">View album →</Link>
+            </div>
+
+            <div className="random-page__hint">
+              <kbd>Space</kbd> to shuffle · {albums.length} possibilities
+            </div>
+          </div>
+        </div>
+
+        <div className="random-page__strip">
+          <span className="sec-mini" style={{ borderBottom: 0, marginBottom: 0 }}>NEXT UP IF YOU SHUFFLE</span>
+          <div className="random-page__peek">
+            {albums.slice(4, 12).map(a => (
+              <div key={a.id} className="random-page__peek-tile" style={{ background: a.dom }}>
+                <img src={a.cover} alt="" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Wrapped page (year-in-review)
+// ===========================================================
+window.WrappedPage = function WrappedPage({ tweaks }) {
+  const { albums, artists } = window.RUSS_DATA;
+  const yr = 2025;
+  const tint = tweaks.showCoverColor ? '#d23b2d' : 'var(--ink-dim)';
+
+  return (
+    <div className="page page--wrapped" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}>
+      <header className="wrapped-hero">
+        <div className="wrapped-hero__wash" />
+        <div className="wrapped-hero__inner">
+          <div className="wrapped-hero__kicker">YEAR IN REVIEW</div>
+          <h1 className="wrapped-hero__title">
+            <span className="wrapped-hero__yr">{yr}</span>
+            <span className="wrapped-hero__word">Wrapped</span>
+          </h1>
+          <p className="wrapped-hero__sub">
+            A look back at the records that defined the year in the russ.fm collection.
+          </p>
+        </div>
+      </header>
+
+      <div className="wrapped-body">
+        <section className="stat-grid stat-grid--totals">
+          {[
+            { l: 'NEW ADDITIONS',   n: '184', s: '+' },
+            { l: 'PEAK MONTH',      n: 'AUG', s: '↗' },
+            { l: 'TOP GENRE',       n: 'Indie', s: '♪' },
+            { l: 'NEW ARTISTS',     n: '47',  s: '✦' },
+          ].map(c => (
+            <div key={c.l} className="card card--total">
+              <div className="card__head"><span>{c.l}</span><i>{c.s}</i></div>
+              <div className="card__big">{c.n}</div>
+            </div>
+          ))}
+        </section>
+
+        <section className="block">
+          <div className="sec-mini">ALBUM OF THE YEAR</div>
+          <Link to={`/album/${albums[3].id}`} className="aoty">
+            <div className="aoty__sleeve" style={{ '--c': albums[3].dom }}>
+              <img src={albums[3].cover} alt="" />
+            </div>
+            <div className="aoty__meta">
+              <div className="aoty__rank">#01</div>
+              <h2 className="aoty__title">{albums[3].title}</h2>
+              <p className="aoty__artist">{albums[3].artist} · {albums[3].year}</p>
+              <p className="prose">
+                The standout pressing of {yr}. Catalogued under {albums[3].label}, it became
+                the most-returned-to record across the year — both for late-night listens and
+                for sharing with friends.
+              </p>
+              <div className="chip-row">
+                {albums[3].genres.map(g => <span key={g} className="chip">{g}</span>)}
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        <section className="block">
+          <div className="sec-mini">TOP TEN OF {yr}</div>
+          <ol className="topten">
+            {albums.slice(0, 10).map((a, i) => (
+              <li key={a.id} className="topten__row">
+                <span className="topten__n">{String(i + 1).padStart(2,'0')}</span>
+                <div className="topten__cover" style={{ background: a.dom }}>
+                  <img src={a.cover} alt="" />
+                </div>
+                <div className="topten__meta">
+                  <Link to={`/album/${a.id}`} className="topten__t">{a.title}</Link>
+                  <div className="topten__a">{a.artist} · {a.year}</div>
+                </div>
+                <div className="topten__bar"><span style={{ width: `${100 - i * 7}%`, background: a.dom }} /></div>
+                <div className="topten__plays">{420 - i * 28} plays</div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="block">
+          <div className="sec-mini">NEW DISCOVERIES · ARTISTS HEARD FOR THE FIRST TIME</div>
+          <div className="browse__agrid">
+            {artists.slice(0, 4).map((a, i) => (
+              <Link key={a.id} to={`/artist/${a.name.replace(/\s+/g,'-').toLowerCase()}`} className="atile atile--lg">
+                <div className="atile__photo" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+                  <img src={a.photo} alt="" />
+                </div>
+                <div className="atile__meta">
+                  <span className="atile__num">{String(i + 1).padStart(2,'0')}</span>
+                  <div>
+                    <h3 className="atile__name">{a.name}</h3>
+                    <div className="atile__sub">First heard · {a.country}</div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Pager
+// ===========================================================
+window.usePager = function usePager(totalLen, perPage, deps = []) {
+  const [page, setPage] = useState(1);
+  useEffect(() => { setPage(1); }, deps);
+  const pages = Math.max(1, Math.ceil(totalLen / perPage));
+  const cur = Math.min(page, pages);
+  const start = (cur - 1) * perPage;
+  const slice = (arr) => arr.slice(start, start + perPage);
+  return { page: cur, pages, setPage, start, slice, from: totalLen === 0 ? 0 : start + 1, to: Math.min(totalLen, start + perPage) };
+};
+
+window.Pager = function Pager({ page, pages, setPage, total, from, to, label = 'items' }) {
+  if (pages <= 1) return (
+    <div className="pager">
+      <span className="pager__summary">{total} {label}</span>
+    </div>
+  );
+  // Compact page list with ellipsis
+  const nums = [];
+  const add = (n) => { if (nums[nums.length - 1] !== n) nums.push(n); };
+  add(1);
+  for (let i = Math.max(2, page - 1); i <= Math.min(pages - 1, page + 1); i++) add(i);
+  add(pages);
+  const out = [];
+  let prev = 0;
+  for (const n of nums) {
+    if (n - prev > 1) out.push('…');
+    out.push(n);
+    prev = n;
+  }
+  return (
+    <div className="pager">
+      <span className="pager__summary">{from}–{to} of {total} {label}</span>
+      <div className="pager__nav">
+        <button className="pager__btn" onClick={() => setPage(Math.max(1, page - 1))} disabled={page === 1}>← Prev</button>
+        {out.map((n, i) => n === '…'
+          ? <span key={`e${i}`} className="pager__ell">…</span>
+          : <button key={n} className={`pager__n ${n === page ? 'is-on' : ''}`} onClick={() => { setPage(n); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>{String(n).padStart(2,'0')}</button>
+        )}
+        <button className="pager__btn" onClick={() => setPage(Math.min(pages, page + 1))} disabled={page === pages}>Next →</button>
+      </div>
+    </div>
+  );
+};
+
+// ===========================================================
+// Albums browse
+// ===========================================================
+window.AlbumsBrowse = function AlbumsBrowse({ tweaks }) {
+  const { albums } = window.RUSS_DATA;
+  const [view, setView] = useState('grid');
+  const [sort, setSort] = useState('added');
+  const [genre, setGenre] = useState('All');
+
+  const allGenres = ['All', ...Array.from(new Set(albums.flatMap(a => a.genres)))];
+  let list = [...albums];
+  if (genre !== 'All') list = list.filter(a => a.genres.includes(genre));
+  if (sort === 'year') list.sort((a, b) => b.year - a.year);
+  if (sort === 'artist') list.sort((a, b) => a.artist.localeCompare(b.artist));
+  if (sort === 'title') list.sort((a, b) => a.title.localeCompare(b.title));
+
+  const perPage = view === 'grid' ? 8 : 10;
+  const pager = window.usePager(list.length, perPage, [sort, genre, view]);
+  const paged = pager.slice(list);
+
+  return (
+    <div className="page page--browse">
+      <header className="browse__head">
+        <div>
+          <div className="browse__kicker">SECTION 02 · CATALOGUE</div>
+          <h1 className="browse__title">Albums</h1>
+          <div className="browse__sub">{list.length} of {albums.length} records · vinyl-led personal archive</div>
+        </div>
+        <div className="browse__counts">
+          <div><b>{albums.length}</b><span>RECORDS</span></div>
+          <div><b>{new Set(albums.map(a => a.artist)).size}</b><span>ARTISTS</span></div>
+          <div><b>{new Set(albums.flatMap(a => a.genres)).size}</b><span>GENRES</span></div>
+        </div>
+      </header>
+
+      <div className="filters">
+        <div className="filters__group">
+          <span className="filters__label">SORT</span>
+          <div className="seg seg--inline">
+            {['added','year','artist','title'].map(v => (
+              <button key={v} className={sort === v ? 'is-on' : ''} onClick={() => setSort(v)}>{v}</button>
+            ))}
+          </div>
+        </div>
+        <div className="filters__group">
+          <span className="filters__label">VIEW</span>
+          <div className="seg seg--inline">
+            {['grid','list'].map(v => (
+              <button key={v} className={view === v ? 'is-on' : ''} onClick={() => setView(v)}>{v}</button>
+            ))}
+          </div>
+        </div>
+        <div className="filters__group filters__group--scroll">
+          <span className="filters__label">GENRE</span>
+          <div className="chip-row chip-row--scroll">
+            {allGenres.map(g => (
+              <button key={g} className={`chip chip--btn ${g === genre ? 'is-on' : ''}`} onClick={() => setGenre(g)}>{g}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {view === 'grid' ? (
+        <div className="browse__grid">
+          {paged.map((a, i) => (
+            <Link key={a.id} to={`/album/${a.id}`} className="tile">
+              <div className="tile__cover" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+                <img src={a.cover} alt="" draggable="false" />
+                <div className="tile__hover">
+                  <span className="tile__hover-row"><em>FORMAT</em><b>{a.format}</b></span>
+                  <span className="tile__hover-row"><em>TRACKS</em><b>{String(a.tracks).padStart(2,'0')}</b></span>
+                  <span className="tile__hover-row"><em>YEAR</em><b>{a.year}</b></span>
+                </div>
+                <span className="tile__cat">{String(pager.start + i + 1).padStart(3,'0')}</span>
+              </div>
+              <div className="tile__meta">
+                <h3 className="tile__title">{a.title}</h3>
+                <div className="tile__sub"><span>{a.artist}</span><span className="tile__year">{a.year}</span></div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      ) : (
+        <div className="catalog catalog--full">
+          <div className="catalog__head">
+            <span>#</span><span>TITLE</span><span>ARTIST</span><span>YEAR</span><span>FORMAT</span><span>GENRE</span><span className="catalog__r">ADDED</span>
+          </div>
+          {paged.map((a, i) => (
+            <Link key={a.id} to={`/album/${a.id}`} className="catalog__row">
+              <span className="catalog__n">{String(pager.start + i + 1).padStart(3,'0')}</span>
+              <span className="catalog__t"><span className="catalog__sw" style={{ background: a.dom }} />{a.title}</span>
+              <span className="catalog__a">{a.artist}</span>
+              <span>{a.year}</span>
+              <span>{a.format}</span>
+              <span>{a.genres[0]}</span>
+              <span className="catalog__r catalog__d">{a.added}</span>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      <window.Pager page={pager.page} pages={pager.pages} setPage={pager.setPage} total={list.length} from={pager.from} to={pager.to} label="albums" />
+    </div>
+  );
+};
+
+// ===========================================================
+// Artists browse
+// ===========================================================
+window.ArtistsBrowse = function ArtistsBrowse({ tweaks }) {
+  const { artists } = window.RUSS_DATA;
+  const [letter, setLetter] = useState('All');
+  const letters = ['All', ...Array.from(new Set(artists.map(a => a.name[0].toUpperCase()))).sort()];
+  const list = letter === 'All' ? artists : artists.filter(a => a.name[0].toUpperCase() === letter);
+
+  const pager = window.usePager(list.length, 6, [letter]);
+  const paged = pager.slice(list);
+
+  return (
+    <div className="page page--browse">
+      <header className="browse__head">
+        <div>
+          <div className="browse__kicker">SECTION 03 · ROSTER</div>
+          <h1 className="browse__title">Artists</h1>
+          <div className="browse__sub">{list.length} of {artists.length} acts in the collection</div>
+        </div>
+        <div className="browse__counts">
+          <div><b>{artists.length}</b><span>ARTISTS</span></div>
+          <div><b>{new Set(artists.map(a => a.country)).size}</b><span>COUNTRIES</span></div>
+          <div><b>{artists.reduce((s, a) => s + a.albums, 0)}</b><span>RELEASES</span></div>
+        </div>
+      </header>
+
+      <div className="filters">
+        <div className="filters__group filters__group--scroll">
+          <span className="filters__label">A–Z</span>
+          <div className="chip-row chip-row--scroll">
+            {letters.map(l => (
+              <button key={l} className={`chip chip--btn chip--mono ${l === letter ? 'is-on' : ''}`} onClick={() => setLetter(l)}>{l}</button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="browse__agrid">
+        {paged.map((a, i) => (
+          <Link key={a.id} to={`/artist/${a.name.replace(/\s+/g,'-').toLowerCase()}`} className="atile atile--lg">
+            <div className="atile__photo" style={tweaks.showCoverColor ? { '--shadow': a.dom } : undefined}>
+              <img src={a.photo} alt="" draggable="false" />
+            </div>
+            <div className="atile__meta">
+              <span className="atile__num">{String(pager.start + i + 1).padStart(2,'0')}</span>
+              <div>
+                <h3 className="atile__name">{a.name}</h3>
+                <div className="atile__sub">{a.albums} releases · {a.country}</div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <window.Pager page={pager.page} pages={pager.pages} setPage={pager.setPage} total={list.length} from={pager.from} to={pager.to} label="artists" />
+    </div>
+  );
+};
+
+</script>
+<script type="text/babel">
+/* global React, ReactDOM */
+const { useState, useEffect, useRef } = React;
+const { albums, artists, scrobbles, stats } = window.RUSS_DATA;
+// Bring globals from pages.jsx
+const { Link, useHashRoute, AlbumDetail, ArtistDetail, AlbumsBrowse, ArtistsBrowse, StatsPage, RandomPage, WrappedPage } = window;
+
+// ---------- Tweak persistence ----------
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "tintIntensity": 0.85,
+  "showCoverColor": true,
+  "density": "sparse",
+  "heroVariant": "split",
+  "monoLabels": true
+}/*EDITMODE-END*/;
+
+const useTweaks = () => {
+  const [t, setT] = useState(() => {
+    try { return { ...TWEAK_DEFAULTS, ...JSON.parse(localStorage.getItem('russfm.tweaks') || '{}') }; }
+    catch { return TWEAK_DEFAULTS; }
+  });
+  const set = (k, v) => {
+    const next = { ...t, [k]: v };
+    setT(next);
+    localStorage.setItem('russfm.tweaks', JSON.stringify(next));
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+  return [t, set];
+};
+
+// ---------- Drag-scroll wall ----------
+const DragWall = ({ children, className = '' }) => {
+  const ref = useRef(null);
+  const drag = useRef({ down: false, x: 0, sl: 0, moved: 0 });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        el.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
+  const onDown = (e) => {
+    drag.current = { down: true, x: e.clientX, sl: ref.current.scrollLeft, moved: 0 };
+    ref.current.classList.add('grabbing');
+  };
+  const onMove = (e) => {
+    if (!drag.current.down) return;
+    const dx = e.clientX - drag.current.x;
+    drag.current.moved = Math.abs(dx);
+    ref.current.scrollLeft = drag.current.sl - dx;
+  };
+  const onUp = () => {
+    drag.current.down = false;
+    ref.current.classList.remove('grabbing');
+    if (drag.current.moved > 6) {
+      const stop = (ev) => { ev.stopPropagation(); ev.preventDefault(); window.removeEventListener('click', stop, true); };
+      window.addEventListener('click', stop, true);
+    }
+  };
+
+  const scrollBy = (dir) => {
+    ref.current.scrollBy({ left: dir * ref.current.clientWidth * 0.85, behavior: 'smooth' });
+  };
+
+  return (
+    <div className={`wall-wrap ${className}`}>
+      <div ref={ref} className="wall"
+        onMouseDown={onDown} onMouseMove={onMove} onMouseUp={onUp} onMouseLeave={onUp}>
+        {children}
+      </div>
+      <button className="wall-btn wall-btn--prev" onClick={() => scrollBy(-1)} aria-label="Scroll left">‹</button>
+      <button className="wall-btn wall-btn--next" onClick={() => scrollBy(1)} aria-label="Scroll right">›</button>
+    </div>
+  );
+};
+
+const SectionHeader = ({ num, label, count, action, to }) => (
+  <header className="sec-head">
+    <div className="sec-head__l">
+      <span className="sec-head__num">{num}</span>
+      <h2 className="sec-head__label">{label}</h2>
+      {count != null && <span className="sec-head__count">{String(count).padStart(3, '0')} ITEMS</span>}
+    </div>
+    {action && <Link to={to || '#'} className="sec-head__a">{action} <span aria-hidden>→</span></Link>}
+  </header>
+);
+
+// ---------- Hero ----------
+const Hero = ({ tweaks }) => {
+  const featured = albums.slice(0, 5);
+  const [i, setI] = useState(0);
+  const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    if (hover) return;
+    const t = setInterval(() => setI((x) => (x + 1) % featured.length), 7000);
+    return () => clearInterval(t);
+  }, [hover, featured.length]);
+
+  const a = featured[i];
+  const tint = tweaks.showCoverColor ? a.dom : 'var(--ink-dim)';
+
+  return (
+    <section className="hero" style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}
+      onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div className="hero__wash" />
+      <div className="hero__noise" />
+
+      <div className="hero__inner">
+        <div className="hero__meta">
+          <div className="hero__crumbs">
+            <span>FEATURED</span><span>·</span>
+            <span>NO. {String(i + 1).padStart(2,'0')} / {String(featured.length).padStart(2,'0')}</span>
+            <span>·</span><span>UPDATED {a.added}</span>
+          </div>
+          <h1 className="hero__title">{a.title}</h1>
+          <Link to={`/artist/${a.artist.replace(/\s+/g,'-').toLowerCase()}`} className="hero__artist">
+            <span className="hero__artist-rule" /><span>{a.artist}</span>
+          </Link>
+          <dl className="hero__specs">
+            <div><dt>YEAR</dt><dd>{a.year}</dd></div>
+            <div><dt>COUNTRY</dt><dd>{a.country}</dd></div>
+            <div><dt>FORMAT</dt><dd>{a.format}</dd></div>
+            <div><dt>TRACKS</dt><dd>{String(a.tracks).padStart(2,'0')}</dd></div>
+            <div><dt>LABEL</dt><dd>{a.label}</dd></div>
+            <div><dt>GENRE</dt><dd>{a.genres[0].toUpperCase()}</dd></div>
+          </dl>
+          <div className="hero__actions">
+            <Link to={`/album/${a.id}`} className="btn btn--solid">Open record →</Link>
+            <button className="btn btn--ghost">Scrobble</button>
+            <button className="btn btn--ghost">Spotify</button>
+            <button className="btn btn--ghost">Apple Music</button>
+            <button className="btn btn--ghost">Discogs</button>
+          </div>
+        </div>
+
+        <div className="hero__art">
+          <Link to={`/album/${a.id}`} className="hero__sleeve">
+            <img src={a.cover} alt="" draggable="false" />
+            <span className="hero__catnum">CAT. {a.id.toUpperCase()} · SIDE A/B</span>
+          </Link>
+          <div className="hero__dots">
+            {featured.map((_, n) => (
+              <button key={n} className={`hero__dot ${n === i ? 'is-on' : ''}`}
+                onClick={() => setI(n)} aria-label={`Featured ${n + 1}`}>
+                <span>{String(n + 1).padStart(2, '0')}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="hero__ticker" aria-hidden>
+        <div className="hero__ticker-inner">
+          {[...Array(2)].flatMap((_, k) =>
+            featured.map((f, idx) => (
+              <span key={`${k}-${idx}`}>
+                <em>{String(idx + 1).padStart(2,'0')}</em> {f.artist} — {f.title} <i>·</i>
+              </span>
+            ))
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const AlbumTile = ({ a, idx, tinted }) => (
+  <Link className="tile" to={`/album/${a.id}`}>
+    <div className="tile__cover" style={tinted ? { '--shadow': a.dom } : undefined}>
+      <img src={a.cover} alt="" draggable="false" />
+      <div className="tile__hover">
+        <span className="tile__hover-row"><em>FORMAT</em><b>{a.format}</b></span>
+        <span className="tile__hover-row"><em>TRACKS</em><b>{String(a.tracks).padStart(2,'0')}</b></span>
+        <span className="tile__hover-row"><em>YEAR</em><b>{a.year}</b></span>
+      </div>
+      <span className="tile__cat">{String(idx + 1).padStart(3, '0')}</span>
+    </div>
+    <div className="tile__meta">
+      <h3 className="tile__title">{a.title}</h3>
+      <div className="tile__sub"><span>{a.artist}</span><span className="tile__year">{a.year}</span></div>
+    </div>
+  </Link>
+);
+
+const ArtistTile = ({ a, idx, tinted }) => (
+  <Link className="atile" to={`/artist/${a.name.replace(/\s+/g,'-').toLowerCase()}`}>
+    <div className="atile__photo" style={tinted ? { '--shadow': a.dom } : undefined}>
+      <img src={a.photo} alt="" draggable="false" />
+    </div>
+    <div className="atile__meta">
+      <span className="atile__num">{String(idx + 1).padStart(2,'0')}</span>
+      <div>
+        <h3 className="atile__name">{a.name}</h3>
+        <div className="atile__sub">{a.albums} releases · {a.country}</div>
+      </div>
+    </div>
+  </Link>
+);
+
+const CatalogStrip = () => (
+  <div className="catalog">
+    <div className="catalog__head">
+      <span>#</span><span>TITLE</span><span>ARTIST</span><span>YEAR</span>
+      <span>FORMAT</span><span>GENRE</span><span className="catalog__r">ADDED</span>
+    </div>
+    {albums.slice(0, 8).map((a, i) => (
+      <Link key={a.id} to={`/album/${a.id}`} className="catalog__row">
+        <span className="catalog__n">{String(i + 1).padStart(3, '0')}</span>
+        <span className="catalog__t">
+          <span className="catalog__sw" style={{ background: a.dom }} />{a.title}
+        </span>
+        <span className="catalog__a">{a.artist}</span>
+        <span>{a.year}</span><span>{a.format}</span><span>{a.genres[0]}</span>
+        <span className="catalog__r catalog__d">{a.added}</span>
+      </Link>
+    ))}
+  </div>
+);
+
+const StatsAside = () => {
+  const max = Math.max(...stats.yearsHist.map((y) => y.n));
+  return (
+    <aside className="aside">
+      <div className="aside__block">
+        <div className="aside__head">RUSS.FM / INDEX</div>
+        <dl className="aside__nums">
+          <div><dt>RECORDS</dt><dd>{stats.albums.toLocaleString()}</dd></div>
+          <div><dt>ARTISTS</dt><dd>{stats.artists}</dd></div>
+          <div><dt>TRACKS</dt><dd>{stats.tracks.toLocaleString()}</dd></div>
+          <div><dt>HOURS</dt><dd>{stats.hours}</dd></div>
+        </dl>
+      </div>
+      <div className="aside__block">
+        <div className="aside__head">DECADES</div>
+        <div className="hist">
+          {stats.yearsHist.map((y) => (
+            <div key={y.d} className="hist__row">
+              <span className="hist__d">{y.d}</span>
+              <span className="hist__bar"><span style={{ width: `${(y.n / max) * 100}%` }} /></span>
+              <span className="hist__n">{String(y.n).padStart(3,'0')}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="aside__block">
+        <div className="aside__head">RECENTLY SCROBBLED · LAST.FM</div>
+        <ol className="scrob">
+          {scrobbles.map((s, i) => (
+            <li key={i} className="scrob__row">
+              <span className="scrob__when">{s.when}</span>
+              <span className="scrob__t">{s.track}</span>
+              <span className="scrob__a">{s.artist}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div className="aside__block">
+        <div className="aside__head">TOP GENRES</div>
+        <div className="genres">
+          {stats.topGenres.map((g) => (
+            <a key={g.name} href="#" className="genre"><span>{g.name}</span><b>{g.count}</b></a>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+};
+
+// ---------- Top bar / footer ----------
+const NAV = [
+  { to: '/', label: 'Home' },
+  { to: '/albums', label: 'Albums' },
+  { to: '/artists', label: 'Artists' },
+  { to: '/stats', label: 'Stats' },
+  { to: '/random', label: 'Random' },
+  { to: '/wrapped', label: 'Wrapped' },
+  { to: '/fuzzbox', label: 'Fuzzbox' },
+];
+
+const TopBar = ({ theme, onTheme, route }) => {
+  const isActive = (to) => {
+    if (to === '/') return route === '/' || route === '';
+    return route.startsWith(to);
+  };
+  return (
+    <header className="top">
+      <Link to="/" className="top__brand">
+        <span className="top__mark">◉</span>
+        <span className="top__name">russ.fm</span>
+        <span className="top__tag">/ PERSONAL RECORD COLLECTION</span>
+      </Link>
+      <nav className="top__nav">
+        {NAV.map(n => (
+          <Link key={n.to} to={n.to} className={isActive(n.to) ? 'is-on' : ''}>{n.label}</Link>
+        ))}
+      </nav>
+      <div className="top__r">
+        <label className="top__search">
+          <span>⌕</span>
+          <input placeholder="Search records, artists, tracks…" />
+          <kbd>/</kbd>
+        </label>
+        <button className="top__theme" onClick={() => onTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Toggle theme">
+          {theme === 'dark' ? '☀' : '☾'}
+        </button>
+      </div>
+    </header>
+  );
+};
+
+const Footer = () => (
+  <footer className="foot">
+    <div className="foot__l">
+      <span>© 2026 RUSS.FM</span><span>·</span>
+      <span>A PERSONAL RECORD COLLECTION SHOWCASE</span>
+    </div>
+    <div className="foot__r">
+      <Link to="/stats">Collection Stats</Link>
+      <Link to="/random">Random Discovery</Link>
+      <Link to="/albums">Albums</Link>
+      <Link to="/artists">Artists</Link>
+      <a href="#">RSS</a><a href="#">JSON</a>
+    </div>
+  </footer>
+);
+
+// ---------- Tweaks panel ----------
+const Tweaks = ({ tweaks, set, visible }) => {
+  if (!visible) return null;
+  return (
+    <div className="tweaks">
+      <div className="tweaks__head"><b>Tweaks</b><span>russ.fm redesign</span></div>
+      <div className="tweaks__row">
+        <label>Theme</label>
+        <div className="seg">
+          {['light','dark'].map(v => (
+            <button key={v} className={tweaks.theme === v ? 'is-on' : ''} onClick={() => set('theme', v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Cover-color tinting</label>
+        <div className="seg">
+          <button className={tweaks.showCoverColor ? 'is-on' : ''} onClick={() => set('showCoverColor', true)}>on</button>
+          <button className={!tweaks.showCoverColor ? 'is-on' : ''} onClick={() => set('showCoverColor', false)}>off</button>
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Tint intensity <i>{Math.round(tweaks.tintIntensity * 100)}%</i></label>
+        <input type="range" min="0" max="1" step="0.05" value={tweaks.tintIntensity}
+          onChange={(e) => set('tintIntensity', parseFloat(e.target.value))} />
+      </div>
+      <div className="tweaks__row">
+        <label>Density</label>
+        <div className="seg">
+          {['sparse','medium','dense'].map(v => (
+            <button key={v} className={tweaks.density === v ? 'is-on' : ''} onClick={() => set('density', v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Mono labels</label>
+        <div className="seg">
+          <button className={tweaks.monoLabels ? 'is-on' : ''} onClick={() => set('monoLabels', true)}>on</button>
+          <button className={!tweaks.monoLabels ? 'is-on' : ''} onClick={() => set('monoLabels', false)}>off</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ---------- Home ----------
+const Home = ({ tweaks }) => (
+  <>
+    <Hero tweaks={tweaks} />
+    <main className="layout">
+      <div className="layout__main">
+        <section className="block" data-screen-label="Recently Added Albums">
+          <SectionHeader num="01" label="Recently Added · Albums" count={albums.length} action="View all" to="/albums" />
+          <DragWall>
+            {albums.map((a, i) => (
+              <AlbumTile key={a.id} a={a} idx={i} tinted={tweaks.showCoverColor} />
+            ))}
+          </DragWall>
+        </section>
+
+        <section className="block" data-screen-label="Recently Added Artists">
+          <SectionHeader num="02" label="Recently Added · Artists" count={artists.length} action="View all" to="/artists" />
+          <DragWall className="wall--artist">
+            {artists.map((a, i) => (
+              <ArtistTile key={a.id} a={a} idx={i} tinted={tweaks.showCoverColor} />
+            ))}
+          </DragWall>
+        </section>
+
+        <section className="block" data-screen-label="Catalog">
+          <SectionHeader num="03" label="Catalog · Latest Acquisitions" action="Browse full catalog" to="/albums" />
+          <CatalogStrip />
+        </section>
+
+        <section className="block" data-screen-label="Random Spin">
+          <SectionHeader num="04" label="Random Spin · This Week" />
+          <div className="random">
+            {albums.slice(2, 6).map((a, i) => (
+              <Link key={a.id} to={`/album/${a.id}`} className="random__card" style={{ '--c': a.dom }}>
+                <div className="random__n">SPIN.{String(i + 1).padStart(2,'0')}</div>
+                <img src={a.cover} alt="" />
+                <div className="random__meta">
+                  <h4>{a.title}</h4>
+                  <p>{a.artist} · {a.year}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      <StatsAside />
+    </main>
+  </>
+);
+
+// ---------- Router ----------
+const Stub = ({ title }) => (
+  <div className="page page--stub">
+    <h1 className="browse__title">{title}</h1>
+    <p className="prose">This section is coming next. Pop back to <Link to="/">Home</Link>, <Link to="/albums">Albums</Link>, or <Link to="/artists">Artists</Link>.</p>
+  </div>
+);
+
+// ---------- App ----------
+const App = () => {
+  const [tweaks, set] = useTweaks();
+  const [tweaksVisible, setTweaksVisible] = useState(false);
+  const route = useHashRoute();
+
+  useEffect(() => {
+    const onMsg = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setTweaksVisible(true);
+      if (e.data?.type === '__deactivate_edit_mode') setTweaksVisible(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  let view;
+  if (route === '/' || route === '') view = <Home tweaks={tweaks} />;
+  else if (route === '/albums') view = <AlbumsBrowse tweaks={tweaks} />;
+  else if (route === '/artists') view = <ArtistsBrowse tweaks={tweaks} />;
+  else if (route.startsWith('/album/')) view = <AlbumDetail id={route.split('/')[2]} tweaks={tweaks} />;
+  else if (route.startsWith('/artist/')) view = <ArtistDetail slug={route.split('/')[2]} tweaks={tweaks} />;
+  else if (route === '/stats') view = <StatsPage tweaks={tweaks} />;
+  else if (route === '/random') view = <RandomPage tweaks={tweaks} />;
+  else if (route === '/wrapped') view = <WrappedPage tweaks={tweaks} />;
+  else if (route === '/fuzzbox') view = <Stub title="Fuzzbox" />;
+  else view = <Stub title="Not found" />;
+
+  useEffect(() => {
+    const r = document.documentElement;
+    r.classList.toggle('theme--dark', tweaks.theme === 'dark');
+    r.classList.toggle('theme--light', tweaks.theme !== 'dark');
+  }, [tweaks.theme]);
+
+  return (
+    <div className={`app theme--${tweaks.theme} dens--${tweaks.density} ${tweaks.monoLabels ? 'mono-on' : 'mono-off'}`}>
+      <TopBar theme={tweaks.theme} onTheme={(v) => set('theme', v)} route={route} />
+      {view}
+      <Footer />
+      <Tweaks tweaks={tweaks} set={set} visible={tweaksVisible} />
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+</script>
+</body>
+</html>

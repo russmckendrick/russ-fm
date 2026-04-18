@@ -55,6 +55,33 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
+        /* --- Editorial redesign tokens -----------------------------------
+           These reference the plain CSS variables in design-tokens.css so
+           utility classes (`bg-paper`, `text-ink-3`, `border-rule`) map
+           directly onto the palette. */
+        paper: {
+          DEFAULT: "var(--paper)",
+          2: "var(--paper-2)",
+          3: "var(--paper-3)",
+        },
+        ink: {
+          DEFAULT: "var(--ink)",
+          2: "var(--ink-2)",
+          3: "var(--ink-3)",
+          dim: "var(--ink-dim)",
+        },
+        rule: {
+          DEFAULT: "var(--rule)",
+          strong: "var(--rule-strong)",
+        },
+        hl: "var(--hl)",
+        tint: "var(--tint)",
+      },
+      fontFamily: {
+        grot: "var(--font-grot)",
+        mono: "var(--font-mono)",
+        sans: "var(--font-grot)",
       },
       borderRadius: {
         lg: "var(--radius)",

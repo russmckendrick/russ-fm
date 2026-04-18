@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import '@fontsource-variable/inter-tight/index.css';
+@import '@fontsource-variable/jetbrains-mono/index.css';
+@import './styles/design-tokens.css';
+@import url('/album-colors.css');
 
 @tailwind base;
 @tailwind components;
@@ -6,112 +9,78 @@
 
 @layer base {
   :root {
-    /* Modern 2025 - Neo-Glass Theme */
-    --background: 0 0% 98%;
-    /* #FAFAFA */
-    --foreground: 240 10% 3.9%;
-    /* #09090B */
+    /* Paper palette mapped to shadcn HSL slots. HSL values correspond to
+       the hex tokens in design-tokens.css; shadcn components keep using
+       `hsl(var(--background))` etc. unchanged. */
 
-    --card: 0 0% 100%;
-    /* #FFFFFF */
-    --card-foreground: 240 10% 3.9%;
-    /* #09090B */
+    --background: 42 31% 94%;       /* paper   #f4f1ea */
+    --foreground: 40 12% 5%;        /* ink     #0e0d0b */
 
-    --popover: 0 0% 100%;
-    /* #FFFFFF */
-    --popover-foreground: 240 10% 3.9%;
-    /* #09090B */
+    --card: 41 29% 89%;             /* paper-2 #ebe6db */
+    --card-foreground: 40 12% 5%;   /* ink     */
 
-    --primary: 240 5.9% 10%;
-    /* #18181B */
-    --primary-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --popover: 42 31% 94%;          /* paper   */
+    --popover-foreground: 40 12% 5%;/* ink     */
 
-    --secondary: 240 4.8% 95.9%;
-    /* #F4F4F5 */
-    --secondary-foreground: 240 5.9% 10%;
-    /* #18181B */
+    --primary: 40 12% 5%;           /* ink      */
+    --primary-foreground: 42 31% 94%;/* paper  */
 
-    --muted: 240 4.8% 95.9%;
-    /* #F4F4F5 */
-    --muted-foreground: 240 3.8% 46.1%;
-    /* #71717A */
+    --secondary: 41 29% 89%;        /* paper-2 */
+    --secondary-foreground: 40 12% 5%;/* ink   */
 
-    --accent: 240 4.8% 95.9%;
-    /* #F4F4F5 */
-    --accent-foreground: 240 5.9% 10%;
-    /* #18181B */
+    --muted: 41 29% 89%;            /* paper-2 */
+    --muted-foreground: 34 10% 32%; /* ink-3   */
 
-    --destructive: 0 84.2% 60.2%;
-    /* #EF4444 */
-    --destructive-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --accent: 43 28% 83%;           /* paper-3 */
+    --accent-foreground: 40 12% 5%; /* ink     */
 
-    --border: 240 5.9% 90%;
-    /* #E4E4E7 */
-    --input: 240 5.9% 90%;
-    /* #E4E4E7 */
-    --ring: 240 5.9% 10%;
-    /* #18181B */
+    --destructive: 9 77% 50%;       /* hl      #e23b1e */
+    --destructive-foreground: 42 31% 94%;/* paper */
 
-    --radius: 1rem;
-    /* 16px */
+    --border: 34 10% 32%;           /* ink-3 — hairline rules read clearly
+                                       on paper without being visually noisy */
+    --input: 34 10% 32%;            /* ink-3  */
+    --ring: 40 12% 5%;              /* ink    */
 
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-bg: 0 0% 100% / 0.7;
+    --radius: 0;                    /* sharp corners; artist photos use
+                                       explicit `rounded-full` override */
+
+    --glass-border: 42 31% 94% / 0.2;
+    --glass-bg:     42 31% 94% / 0.7;
   }
 
   .dark {
-    /* Modern 2025 - Deep Space Glass Theme */
-    --background: 0 0% 10%;
-    /* #1A1A1A - Medium dark grey */
-    --foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --background: 40 13% 4%;        /* paper (dark)   #0d0c0a */
+    --foreground: 42 31% 94%;       /* ink (dark)     #f4f1ea */
 
-    --card: 0 0% 8%;
-    /* #141414 - Slightly darker than background */
-    --card-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --card: 40 17% 7%;              /* paper-2 dark   #15130f */
+    --card-foreground: 42 31% 94%;  /* ink (dark)     */
 
-    --popover: 0 0% 8%;
-    /* #141414 */
-    --popover-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --popover: 40 17% 7%;           /* paper-2 dark   */
+    --popover-foreground: 42 31% 94%;/* ink (dark)    */
 
-    --primary: 0 0% 98%;
-    /* #FAFAFA */
-    --primary-foreground: 240 5.9% 10%;
-    /* #18181B */
+    --primary: 42 31% 94%;          /* ink (dark)     */
+    --primary-foreground: 40 13% 4%;/* paper (dark)   */
 
-    --secondary: 0 0% 15%;
-    /* #262626 */
-    --secondary-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --secondary: 40 17% 7%;         /* paper-2 dark   */
+    --secondary-foreground: 42 31% 94%;/* ink (dark)  */
 
-    --muted: 0 0% 15%;
-    /* #262626 */
-    --muted-foreground: 0 0% 65%;
-    /* #A6A6A6 */
+    --muted: 40 17% 7%;             /* paper-2 dark   */
+    --muted-foreground: 37 9% 56%;  /* ink-3 (dark)   #9a9285 */
 
-    --accent: 0 0% 15%;
-    /* #262626 */
-    --accent-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --accent: 43 14% 10%;           /* paper-3 dark   #1d1b16 */
+    --accent-foreground: 42 31% 94%;/* ink (dark)     */
 
-    --destructive: 0 62.8% 30.6%;
-    /* #7F1D1D */
-    --destructive-foreground: 0 0% 98%;
-    /* #FAFAFA */
+    --destructive: 9 77% 55%;       /* hl             */
+    --destructive-foreground: 40 13% 4%;/* paper dark */
 
-    --border: 0 0% 20%;
-    /* #333333 */
-    --input: 0 0% 15%;
-    /* #262626 */
-    --ring: 0 0% 84%;
-    /* #D6D6D6 */
+    --border: 37 9% 56%;            /* ink-3 dark — same visual role,
+                                       visible against paper dark */
+    --input: 37 9% 56%;             /* ink-3 dark     */
+    --ring: 42 31% 94%;             /* ink (dark)     */
 
-    --glass-border: 0 0% 100% / 0.1;
-    --glass-bg: 0 0% 8% / 0.7;
+    --glass-border: 42 31% 94% / 0.1;
+    --glass-bg:     40 17% 7% / 0.7;
   }
 }
 
@@ -122,47 +91,54 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: var(--font-grot);
+    font-feature-settings: 'ss01', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Modern Typography System */
+  /* Editorial type scale. Headings lean tight and display-weight; body
+     caps at ~68ch for readability (applied per-component where needed). */
   h1,
   .text-h1 {
-    @apply font-bold tracking-tight;
+    @apply font-bold;
     font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.1;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
   }
 
   h2,
   .text-h2 {
-    @apply font-semibold tracking-tight;
-    font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.2;
+    @apply font-bold;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
   }
 
   h3,
   .text-h3 {
-    @apply font-semibold tracking-tight;
-    font-size: 1.75rem;
-    line-height: 1.3;
+    @apply font-semibold;
+    font-size: 1.375rem;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
   }
 
   h4,
   .text-h4 {
-    @apply font-medium tracking-tight;
-    font-size: 1.5rem;
-    line-height: 1.4;
+    @apply font-semibold;
+    font-size: 1rem;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
   }
 
   p {
-    @apply leading-relaxed;
+    line-height: 1.55;
   }
 
-  /* Remove focus outlines that appear as borders on hover */
-  a:focus,
-  a:focus-visible {
+  /* Keep keyboard focus rings visible; only suppress the hover-on-link
+     outline that was being misread as a border. */
+  a:focus:not(:focus-visible) {
     outline: none;
   }
 }

@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>russ.fm — redesign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   russ.fm redesign — vinyl-shop / archive aesthetic
+   ========================================================= */
+
+:root {
+  --paper: #f4f1ea;
+  --paper-2: #ebe6db;
+  --paper-3: #e0d9c8;
+  --ink: #0e0d0b;
+  --ink-2: #2a2724;
+  --ink-3: #5a534a;
+  --ink-dim: #8a8377;
+  --rule: rgba(14, 13, 11, 0.16);
+  --rule-strong: rgba(14, 13, 11, 0.5);
+  --hl: #e23b1e;
+  --tint: #8a8a3d;
+  --tint-strength: 0.85;
+
+  --grot: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+.theme--dark {
+  --paper: #0d0c0a;
+  --paper-2: #15130f;
+  --paper-3: #1d1b16;
+  --ink: #f4f1ea;
+  --ink-2: #d8d3c6;
+  --ink-3: #9a9285;
+  --ink-dim: #6a6358;
+  --rule: rgba(244, 241, 234, 0.14);
+  --rule-strong: rgba(244, 241, 234, 0.4);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--grot);
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+
+.app { min-height: 100vh; padding-bottom: 80px; }
+
+/* =========================================================
+   Top bar
+   ========================================================= */
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 32px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(120%);
+}
+.top__brand {
+  display: flex; align-items: baseline; gap: 10px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em;
+}
+.top__mark { font-size: 16px; color: var(--hl); }
+.top__name { font-family: var(--grot); font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+.top__tag { color: var(--ink-dim); text-transform: uppercase; font-size: 10.5px; }
+
+.top__nav {
+  display: flex; gap: 2px; justify-self: center;
+  border: 1px solid var(--rule); padding: 3px;
+}
+.top__nav a {
+  padding: 8px 14px;
+  font-size: 12.5px; font-weight: 500; letter-spacing: -0.005em;
+  color: var(--ink-3);
+}
+.top__nav a:hover { color: var(--ink); background: var(--paper-2); }
+.top__nav a.is-on { background: var(--ink); color: var(--paper); }
+
+.top__r { display: flex; align-items: center; gap: 10px; justify-self: end; }
+.top__search {
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--rule);
+  padding: 8px 12px;
+  width: 320px;
+  font-size: 12.5px;
+}
+.top__search span { color: var(--ink-dim); }
+.top__search input {
+  flex: 1; border: 0; background: transparent; color: inherit; outline: none; font: inherit;
+}
+.top__search kbd {
+  font-family: var(--mono); font-size: 10px; padding: 2px 6px;
+  border: 1px solid var(--rule); color: var(--ink-dim);
+}
+.top__theme {
+  width: 36px; height: 36px;
+  border: 1px solid var(--rule);
+  font-size: 14px;
+}
+.top__theme:hover { background: var(--paper-2); }
+
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+  overflow: hidden;
+  isolation: isolate;
+}
+.hero__wash {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(120% 100% at 70% 30%, var(--tint) 0%, transparent 60%),
+    linear-gradient(180deg, var(--tint) 0%, transparent 70%);
+  opacity: var(--tint-strength);
+  mix-blend-mode: multiply;
+  z-index: -1;
+  transition: background 700ms ease, opacity 400ms ease;
+}
+.theme--dark .hero__wash {
+  mix-blend-mode: screen;
+  opacity: calc(var(--tint-strength) * 0.55);
+}
+.hero__noise {
+  position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  padding: 56px 64px 48px;
+  max-width: 1640px; margin: 0 auto;
+}
+
+.hero__crumbs {
+  display: flex; gap: 10px; align-items: center;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em;
+  color: var(--ink-2);
+  margin-bottom: 28px;
+}
+
+.hero__title {
+  font-size: clamp(56px, 7vw, 116px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: balance;
+}
+.hero__artist {
+  display: flex; align-items: center; gap: 16px;
+  margin: 24px 0 36px;
+  font-size: 20px; font-weight: 500;
+}
+.hero__artist-rule {
+  height: 1px; width: 48px; background: var(--ink-2);
+}
+
+.hero__specs {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1px; padding: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+  margin: 0 0 32px 0;
+  max-width: 640px;
+}
+.hero__specs > div {
+  background: var(--paper);
+  padding: 14px 16px;
+}
+.hero__specs dt {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-dim); margin: 0 0 4px;
+}
+.hero__specs dd {
+  font-size: 16px; font-weight: 600; margin: 0; letter-spacing: -0.01em;
+}
+
+.hero__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.btn {
+  font-size: 12.5px; font-weight: 600;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  letter-spacing: -0.005em;
+  transition: transform 120ms ease, background 200ms;
+}
+.btn--solid { background: var(--ink); color: var(--paper); }
+.btn--solid:hover { background: var(--hl); border-color: var(--hl); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+.btn:active { transform: translateY(1px); }
+
+.hero__art {
+  display: flex; flex-direction: column; align-items: flex-end; gap: 24px;
+  position: relative;
+}
+.hero__sleeve {
+  position: relative;
+  width: min(520px, 90%);
+  aspect-ratio: 1/1;
+  background: var(--paper-2);
+  box-shadow:
+    0 1px 0 var(--rule),
+    0 30px 60px -20px rgba(0, 0, 0, 0.35),
+    0 60px 100px -40px rgba(0, 0, 0, 0.25);
+}
+.hero__sleeve img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.hero__catnum {
+  position: absolute; left: 0; bottom: -22px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+
+.hero__dots { display: flex; gap: 4px; align-self: center; margin-top: 16px; }
+.hero__dot {
+  width: 36px; height: 28px;
+  border: 1px solid var(--rule-strong);
+  font-family: var(--mono); font-size: 10px; color: var(--ink-3);
+  transition: all 150ms;
+}
+.hero__dot.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.hero__dot:hover { color: var(--ink); }
+
+.hero__ticker {
+  border-top: 1px solid var(--rule);
+  background: var(--ink);
+  color: var(--paper);
+  overflow: hidden;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+}
+.hero__ticker-inner {
+  display: inline-flex; gap: 32px; white-space: nowrap;
+  padding: 10px 0;
+  animation: tick 38s linear infinite;
+}
+.hero__ticker-inner em { color: var(--hl); font-style: normal; margin-right: 6px; }
+.hero__ticker-inner i { margin: 0 18px; opacity: 0.4; font-style: normal; }
+@keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* =========================================================
+   Layout
+   ========================================================= */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 48px;
+  padding: 56px 64px 80px;
+  max-width: 1640px; margin: 0 auto;
+}
+.layout__main { display: flex; flex-direction: column; gap: 64px; min-width: 0; }
+
+/* =========================================================
+   Section header
+   ========================================================= */
+.sec-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 24px;
+}
+.sec-head__l { display: flex; align-items: baseline; gap: 16px; }
+.sec-head__num {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+.sec-head__label {
+  font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin: 0;
+}
+.sec-head__count {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+  padding-left: 16px; margin-left: 8px;
+  border-left: 1px solid var(--rule);
+}
+.sec-head__a {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em;
+  color: var(--ink-2);
+}
+.sec-head__a:hover { color: var(--hl); }
+
+/* =========================================================
+   Drag wall
+   ========================================================= */
+.wall-wrap { position: relative; }
+.wall {
+  display: flex; gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  cursor: grab;
+  user-select: none;
+  padding-bottom: 12px;
+  scrollbar-width: thin;
+}
+.wall.grabbing { cursor: grabbing; }
+.wall::-webkit-scrollbar { height: 6px; }
+.wall::-webkit-scrollbar-track { background: var(--rule); }
+.wall::-webkit-scrollbar-thumb { background: var(--ink-3); }
+
+.wall-btn {
+  position: absolute; top: 80px;
+  width: 36px; height: 36px;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  font-size: 18px; line-height: 1;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+.wall-wrap:hover .wall-btn { opacity: 1; }
+.wall-btn:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.wall-btn--prev { left: -8px; }
+.wall-btn--next { right: -8px; }
+
+/* =========================================================
+   Album tile
+   ========================================================= */
+.tile {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.dens--sparse .tile { width: 240px; }
+.dens--dense .tile { width: 156px; }
+
+.tile__cover {
+  position: relative;
+  aspect-ratio: 1/1;
+  background: var(--paper-2);
+  overflow: hidden;
+  --shadow: rgba(0, 0, 0, 0.4);
+  transition: transform 220ms ease, box-shadow 280ms ease;
+}
+.tile:hover .tile__cover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px -12px color-mix(in oklab, var(--shadow) 60%, transparent);
+}
+.tile__cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  pointer-events: none;
+}
+.tile__cat {
+  position: absolute; top: 8px; left: 8px;
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em;
+  background: var(--paper); color: var(--ink); padding: 3px 6px;
+}
+.tile__hover {
+  position: absolute; inset: auto 0 0 0;
+  background: var(--ink); color: var(--paper);
+  padding: 8px 10px;
+  display: flex; flex-direction: column; gap: 2px;
+  transform: translateY(101%);
+  transition: transform 220ms ease;
+}
+.tile:hover .tile__hover { transform: translateY(0); }
+.tile__hover-row {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em;
+}
+.tile__hover-row em { color: var(--ink-dim); font-style: normal; }
+.tile__hover-row b { color: var(--paper); font-weight: 600; }
+
+.tile__meta { display: flex; flex-direction: column; gap: 2px; }
+.tile__title {
+  font-size: 14px; font-weight: 600; margin: 0;
+  letter-spacing: -0.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.tile__sub {
+  display: flex; justify-content: space-between; gap: 8px;
+  font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+.mono-off .tile__sub { font-family: var(--grot); letter-spacing: 0; }
+.tile__year { color: var(--ink-dim); }
+
+/* =========================================================
+   Artist tile
+   ========================================================= */
+.atile {
+  flex: 0 0 auto;
+  width: 240px;
+  display: flex; flex-direction: column; gap: 12px;
+  scroll-snap-align: start;
+}
+.atile__photo {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--paper-2);
+  --shadow: rgba(0,0,0,0.4);
+  transition: transform 220ms ease, box-shadow 280ms ease;
+}
+.atile:hover .atile__photo {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -12px color-mix(in oklab, var(--shadow) 55%, transparent);
+}
+.atile__photo img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.atile__meta { display: flex; align-items: baseline; gap: 12px; }
+.atile__num {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-dim);
+  letter-spacing: 0.08em;
+}
+.atile__name {
+  margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em;
+}
+.atile__sub {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-3);
+  letter-spacing: 0.04em; margin-top: 2px;
+}
+
+/* =========================================================
+   Catalog table
+   ========================================================= */
+.catalog {
+  border: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 12px;
+}
+.catalog__head, .catalog__row {
+  display: grid;
+  grid-template-columns: 56px 2.4fr 1.4fr 80px 80px 1fr 100px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.catalog__head {
+  background: var(--paper-2);
+  color: var(--ink-dim);
+  font-size: 10.5px; letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--rule);
+}
+.catalog__row {
+  border-bottom: 1px solid var(--rule);
+  transition: background 150ms;
+}
+.catalog__row:last-child { border-bottom: 0; }
+.catalog__row:hover { background: var(--paper-2); }
+.catalog__row:hover .catalog__t { color: var(--hl); }
+.catalog__n { color: var(--ink-dim); }
+.catalog__t {
+  font-family: var(--grot); font-size: 14px; font-weight: 600;
+  letter-spacing: -0.01em; color: var(--ink);
+  display: flex; align-items: center; gap: 10px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.catalog__sw {
+  width: 14px; height: 14px; flex-shrink: 0;
+  border: 1px solid var(--rule);
+}
+.catalog__a { color: var(--ink-2); font-family: var(--grot); font-size: 13px; }
+.catalog__r { text-align: right; }
+.catalog__d { color: var(--ink-dim); }
+
+/* =========================================================
+   Random spin cards
+   ========================================================= */
+.random {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.random__card {
+  position: relative;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--rule);
+  padding: 16px;
+  background: var(--paper);
+  transition: background 200ms;
+  --c: #888;
+}
+.random__card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+  width: 4px; background: var(--c);
+}
+.random__card:hover {
+  background: color-mix(in oklab, var(--c) 12%, var(--paper));
+}
+.random__n {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin-bottom: 12px;
+}
+.random__card img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;
+  margin-bottom: 12px;
+}
+.random__meta h4 {
+  margin: 0; font-size: 15px; font-weight: 600; letter-spacing: -0.01em;
+}
+.random__meta p {
+  margin: 4px 0 0; font-family: var(--mono); font-size: 11px;
+  color: var(--ink-3); letter-spacing: 0.02em;
+}
+
+/* =========================================================
+   Sidebar
+   ========================================================= */
+.aside {
+  display: flex; flex-direction: column; gap: 32px;
+  position: sticky; top: 80px; align-self: start;
+  max-height: calc(100vh - 100px); overflow-y: auto;
+  padding-right: 4px;
+}
+.aside::-webkit-scrollbar { width: 4px; }
+.aside::-webkit-scrollbar-thumb { background: var(--ink-dim); }
+
+.aside__head {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim);
+  padding-bottom: 8px; margin-bottom: 12px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.aside__nums {
+  margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--rule); border: 1px solid var(--rule);
+}
+.aside__nums > div { background: var(--paper); padding: 12px 14px; }
+.aside__nums dt {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em;
+  color: var(--ink-dim); margin: 0;
+}
+.aside__nums dd {
+  margin: 4px 0 0; font-size: 26px; font-weight: 700; letter-spacing: -0.03em;
+}
+
+/* Hist */
+.hist { display: flex; flex-direction: column; gap: 6px; }
+.hist__row {
+  display: grid; grid-template-columns: 28px 1fr 36px;
+  align-items: center; gap: 10px;
+  font-family: var(--mono); font-size: 11px;
+}
+.hist__d { color: var(--ink-dim); }
+.hist__bar {
+  height: 10px; background: var(--paper-2);
+  border: 1px solid var(--rule); display: block; position: relative;
+}
+.hist__bar span {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--ink) 0%, var(--ink-2) 100%);
+}
+.hist__n { color: var(--ink-2); text-align: right; }
+
+/* Scrobbles */
+.scrob { list-style: none; padding: 0; margin: 0; }
+.scrob__row {
+  display: grid; grid-template-columns: 36px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule);
+}
+.scrob__row:last-child { border-bottom: 0; }
+.scrob__when {
+  grid-row: 1 / span 2;
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-dim);
+  align-self: center;
+}
+.scrob__t {
+  font-size: 13px; font-weight: 600; letter-spacing: -0.01em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.scrob__a {
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+/* Genres */
+.genres { display: flex; flex-wrap: wrap; gap: 4px; }
+.genre {
+  display: flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--rule);
+  font-size: 12px; font-weight: 500;
+  transition: all 150ms;
+}
+.genre b {
+  font-family: var(--mono); font-size: 10px; color: var(--ink-dim); font-weight: 500;
+}
+.genre:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.genre:hover b { color: var(--paper); opacity: 0.7; }
+
+/* =========================================================
+   Status bar
+   ========================================================= */
+.status {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px 32px;
+  background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em;
+  z-index: 40;
+  border-top: 1px solid var(--rule-strong);
+}
+.status__dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--hl);
+  box-shadow: 0 0 12px var(--hl);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+.status__t { color: var(--paper); font-family: var(--grot); font-size: 13px; font-weight: 500; letter-spacing: -0.005em; }
+.status__r { margin-left: auto; color: rgba(244, 241, 234, 0.6); }
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.foot {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px 32px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-dim);
+}
+.foot__l { display: flex; gap: 10px; }
+.foot__r { display: flex; gap: 18px; }
+.foot__r a:hover { color: var(--ink); }
+
+/* =========================================================
+   Tweaks panel
+   ========================================================= */
+.tweaks {
+  position: fixed; bottom: 60px; right: 24px;
+  width: 280px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  padding: 16px;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.4);
+  z-index: 60;
+  font-size: 12px;
+}
+.tweaks__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 10px; margin-bottom: 14px;
+  border-bottom: 1px solid var(--rule-strong);
+}
+.tweaks__head b { font-size: 14px; letter-spacing: -0.01em; }
+.tweaks__head span { font-family: var(--mono); font-size: 10px; color: var(--ink-dim); }
+.tweaks__row { margin-bottom: 12px; }
+.tweaks__row label {
+  display: flex; justify-content: space-between;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--ink-dim); margin-bottom: 6px;
+}
+.tweaks__row label i { font-style: normal; color: var(--ink); }
+.tweaks__row input[type="range"] { width: 100%; accent-color: var(--ink); }
+.seg {
+  display: flex; gap: 0; border: 1px solid var(--rule);
+}
+.seg button {
+  flex: 1; padding: 6px 8px;
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-3);
+  border-right: 1px solid var(--rule);
+}
+.seg button:last-child { border-right: 0; }
+.seg button.is-on { background: var(--ink); color: var(--paper); }
+
+/* =========================================================
+   Responsive cleanup
+   ========================================================= */
+@media (max-width: 1200px) {
+  .layout { grid-template-columns: 1fr; }
+  .aside { position: static; max-height: none; flex-direction: column; }
+  .hero__inner { grid-template-columns: 1fr; gap: 32px; padding: 40px 32px; }
+  .top__search { width: 200px; }
+  .random { grid-template-columns: repeat(2, 1fr); }
+}
+
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>
+// All sample data for the redesign. Cover SVGs are placeholder gradients
+// derived from the dominant color so we can demo the cover-color tinting
+// without external image assets.
+
+window.RUSS_DATA = (() => {
+  const sleeve = (id, c1, c2, c3, label, sub, motif = 'wave') => {
+    // Build an SVG sleeve placeholder with a couple of motifs so the wall
+    // doesn't feel like 30 identical tiles.
+    const motifs = {
+      wave: `<path d='M0 320 Q150 240 300 320 T600 320 V600 H0 Z' fill='${c3}' opacity='0.55'/>
+             <path d='M0 380 Q150 300 300 380 T600 380 V600 H0 Z' fill='${c2}' opacity='0.7'/>`,
+      grid: `<g stroke='${c3}' stroke-width='1' opacity='0.35'>
+             ${Array.from({length: 12}, (_, i) => `<line x1='${i*50}' y1='0' x2='${i*50}' y2='600'/>`).join('')}
+             ${Array.from({length: 12}, (_, i) => `<line x1='0' y1='${i*50}' x2='600' y2='${i*50}'/>`).join('')}
+             </g>`,
+      sun:  `<circle cx='300' cy='320' r='140' fill='${c3}' opacity='0.85'/>
+             <circle cx='300' cy='320' r='90'  fill='${c2}' opacity='0.9'/>`,
+      bars: `${Array.from({length: 7}, (_, i) => `<rect x='${30+i*80}' y='${120+i*20}' width='40' height='${360-i*30}' fill='${i%2?c2:c3}' opacity='0.8'/>`).join('')}`,
+      circle: `<circle cx='300' cy='300' r='240' fill='none' stroke='${c3}' stroke-width='40' opacity='0.7'/>
+               <circle cx='300' cy='300' r='160' fill='none' stroke='${c2}' stroke-width='24' opacity='0.85'/>
+               <circle cx='300' cy='300' r='30' fill='${c3}'/>`,
+      slab: `<rect x='60' y='80' width='480' height='280' fill='${c3}' opacity='0.85'/>
+             <rect x='60' y='380' width='200' height='40' fill='${c2}'/>`,
+      diag: `<g fill='${c3}' opacity='0.7'>
+             ${Array.from({length: 8}, (_, i) => `<polygon points='${i*100},0 ${i*100+60},0 ${i*100-200},600 ${i*100-260},600'/>`).join('')}
+             </g>`,
+    };
+    const m = motifs[motif] || motifs.wave;
+    const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600'>
+      <rect width='600' height='600' fill='${c1}'/>
+      ${m}
+      <text x='40' y='80' fill='${c3}' font-family='Inter Tight, system-ui' font-size='28' font-weight='800' letter-spacing='-0.02em'>${label}</text>
+      <text x='40' y='560' fill='${c3}' font-family='JetBrains Mono, monospace' font-size='14' opacity='0.85'>${sub}</text>
+    </svg>`;
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+  };
+
+  const albums = [
+    { id: 'a01', title: '20 Jazz Funk Greats', artist: 'Throbbing Gristle', year: 1979, country: 'UK',
+      genres: ['Industrial','Electronic','Avant'], tracks: 11, format: 'LP',
+      added: '12 APR 26', label: 'Industrial Records', dom: '#8a8a3d', accent: '#c8c459',
+      cover: sleeve('a01', '#8a8a3d', '#c8c459', '#1a1a06', 'TG / 1979', 'INDUSTRIAL RECORDS · IR0008', 'sun') },
+    { id: 'a02', title: 'Spiderland', artist: 'Slint', year: 1991, country: 'US',
+      genres: ['Post-Rock','Math Rock'], tracks: 6, format: 'LP',
+      added: '11 APR 26', label: 'Touch and Go', dom: '#1a1a1a', accent: '#9aa6b2',
+      cover: sleeve('a02', '#1a1a1a', '#33373a', '#cfd6dd', 'SLINT', 'TOUCH AND GO · TG64', 'wave') },
+    { id: 'a03', title: 'Doolittle', artist: 'Pixies', year: 1989, country: 'US',
+      genres: ['Alternative','Indie Rock'], tracks: 15, format: 'LP',
+      added: '10 APR 26', label: '4AD', dom: '#d6c89a', accent: '#7a4b2a',
+      cover: sleeve('a03', '#d6c89a', '#a87a4f', '#3a1f0f', 'DOOLITTLE', '4AD · CAD905', 'circle') },
+    { id: 'a04', title: 'Hauntings', artist: 'Richard Davidson', year: 2024, country: 'UK',
+      genres: ['Ambient','Modern Classical'], tracks: 9, format: 'LP',
+      added: '09 APR 26', label: 'Erased Tapes', dom: '#1f1f24', accent: '#d23b2d',
+      cover: sleeve('a04', '#1f1f24', '#2c2c34', '#d23b2d', 'HAUNTINGS', 'ERASED TAPES · ERATP142', 'slab') },
+    { id: 'a05', title: 'Slanted and Enchanted', artist: 'Pavement', year: 1992, country: 'US',
+      genres: ['Indie','Lo-fi'], tracks: 14, format: 'LP',
+      added: '08 APR 26', label: 'Matador', dom: '#c93a2b', accent: '#f5c344',
+      cover: sleeve('a05', '#c93a2b', '#f5c344', '#1a0a08', 'PAVEMENT', 'MATADOR · OLE 038', 'diag') },
+    { id: 'a06', title: 'In a Bar, Under the Sea', artist: 'dEUS', year: 1996, country: 'BE',
+      genres: ['Alternative','Art Rock'], tracks: 16, format: '2LP',
+      added: '07 APR 26', label: 'Island', dom: '#e9e3d8', accent: '#d23b2d',
+      cover: sleeve('a06', '#e9e3d8', '#d23b2d', '#1a1a1a', 'dEUS', 'ISLAND · 524 297', 'bars') },
+    { id: 'a07', title: 'Worst Case Scenario', artist: 'dEUS', year: 1994, country: 'BE',
+      genres: ['Alternative','Post-Punk'], tracks: 13, format: 'LP',
+      added: '06 APR 26', label: 'Island', dom: '#7a3a1f', accent: '#e9b04f',
+      cover: sleeve('a07', '#7a3a1f', '#a8612a', '#f5e0b0', 'WORST CASE', 'ISLAND · 518 478', 'wave') },
+    { id: 'a08', title: 'The Afterglow', artist: 'KillerStar', year: 2023, country: 'UK',
+      genres: ['Indie','Pop'], tracks: 10, format: 'LP',
+      added: '05 APR 26', label: 'Cooking Vinyl', dom: '#3a3a3a', accent: '#e3d6b8',
+      cover: sleeve('a08', '#3a3a3a', '#5a5a5a', '#e3d6b8', 'KILLERSTAR', 'COOKING VINYL · 814', 'slab') },
+    { id: 'a09', title: 'Distracted', artist: 'Thundercat', year: 2025, country: 'US',
+      genres: ['Funk','Jazz Fusion'], tracks: 11, format: 'LP',
+      added: '04 APR 26', label: 'Brainfeeder', dom: '#191919', accent: '#a78bff',
+      cover: sleeve('a09', '#191919', '#2a2a32', '#a78bff', 'THUNDERCAT', 'BRAINFEEDER · BF111', 'circle') },
+    { id: 'a10', title: 'Milo Goes to College', artist: 'Descendents', year: 1982, country: 'US',
+      genres: ['Punk','Hardcore'], tracks: 15, format: 'LP',
+      added: '03 APR 26', label: 'New Alliance', dom: '#f0ead8', accent: '#1a1a1a',
+      cover: sleeve('a10', '#f0ead8', '#cfc8b3', '#1a1a1a', 'MILO', 'NEW ALLIANCE · NAR012', 'grid') },
+    { id: 'a11', title: "It's Only About You If You Think It Is", artist: 'IAMX', year: 2022, country: 'DE',
+      genres: ['Electronic','Dark Wave'], tracks: 12, format: 'LP',
+      added: '02 APR 26', label: 'Caroline', dom: '#0a0a0a', accent: '#e7e7e7',
+      cover: sleeve('a11', '#0a0a0a', '#1f1f1f', '#e7e7e7', 'IAMX', 'CAROLINE · CAR2299', 'sun') },
+    { id: 'a12', title: '…Famous Last Words…', artist: 'Supertramp', year: 1982, country: 'UK',
+      genres: ['Rock','Pop Rock'], tracks: 10, format: 'LP',
+      added: '01 APR 26', label: 'A&M', dom: '#3a1f1a', accent: '#f0a04a',
+      cover: sleeve('a12', '#3a1f1a', '#a05a30', '#f5d6a0', 'SUPERTRAMP', 'A&M · SP-3732', 'wave') },
+    { id: 'a13', title: 'Kid A', artist: 'Radiohead', year: 2000, country: 'UK',
+      genres: ['Electronic','Art Rock'], tracks: 11, format: '2LP',
+      added: '30 MAR 26', label: 'Parlophone', dom: '#b03028', accent: '#f5e8c8',
+      cover: sleeve('a13', '#b03028', '#7a1a14', '#f5e8c8', 'KID A', 'PARLOPHONE · 7243', 'diag') },
+    { id: 'a14', title: 'Loveless', artist: 'My Bloody Valentine', year: 1991, country: 'IE',
+      genres: ['Shoegaze','Dream Pop'], tracks: 11, format: 'LP',
+      added: '29 MAR 26', label: 'Creation', dom: '#d63a7a', accent: '#f5b3d0',
+      cover: sleeve('a14', '#d63a7a', '#f5b3d0', '#3a0820', 'LOVELESS', 'CREATION · CRELP060', 'wave') },
+    { id: 'a15', title: 'Selected Ambient Works 85-92', artist: 'Aphex Twin', year: 1992, country: 'UK',
+      genres: ['Ambient','IDM'], tracks: 13, format: '2LP',
+      added: '28 MAR 26', label: 'R&S', dom: '#1a3a4a', accent: '#5cc9d6',
+      cover: sleeve('a15', '#1a3a4a', '#2a5a6a', '#5cc9d6', 'AFX', 'R&S · AMB3922', 'circle') },
+    { id: 'a16', title: 'In the Aeroplane Over the Sea', artist: 'Neutral Milk Hotel', year: 1998, country: 'US',
+      genres: ['Indie Folk','Lo-fi'], tracks: 11, format: 'LP',
+      added: '27 MAR 26', label: 'Merge', dom: '#7a5a3a', accent: '#e3c89a',
+      cover: sleeve('a16', '#7a5a3a', '#a87a4f', '#e3c89a', 'NMH', 'MERGE · MRG136', 'slab') },
+    { id: 'a17', title: 'OK Computer', artist: 'Radiohead', year: 1997, country: 'UK',
+      genres: ['Alternative','Art Rock'], tracks: 12, format: '2LP',
+      added: '26 MAR 26', label: 'Parlophone', dom: '#9a9a9a', accent: '#1a1a1a',
+      cover: sleeve('a17', '#9a9a9a', '#cfcfcf', '#1a1a1a', 'OK COMPUTER', 'PARLOPHONE · 7243', 'grid') },
+    { id: 'a18', title: 'Discovery', artist: 'Daft Punk', year: 2001, country: 'FR',
+      genres: ['Electronic','House'], tracks: 14, format: '2LP',
+      added: '25 MAR 26', label: 'Virgin', dom: '#d6a428', accent: '#3a1a0a',
+      cover: sleeve('a18', '#d6a428', '#f5c344', '#3a1a0a', 'DISCOVERY', 'VIRGIN · 8123622', 'sun') },
+  ];
+
+  const artists = [
+    { id: 'ar01', name: 'Throbbing Gristle', albums: 4, country: 'UK', dom: '#8a8a3d',
+      photo: sleeve('ar01', '#8a8a3d', '#c8c459', '#1a1a06', 'TG', 'INDUSTRIAL', 'sun') },
+    { id: 'ar02', name: 'Slint', albums: 2, country: 'US', dom: '#1a1a1a',
+      photo: sleeve('ar02', '#1a1a1a', '#33373a', '#cfd6dd', 'SLINT', 'POST-ROCK', 'wave') },
+    { id: 'ar03', name: 'Pixies', albums: 5, country: 'US', dom: '#d6c89a',
+      photo: sleeve('ar03', '#d6c89a', '#a87a4f', '#3a1f0f', 'PIXIES', 'ALT-ROCK', 'circle') },
+    { id: 'ar04', name: 'Richard Davidson', albums: 1, country: 'UK', dom: '#1f1f24',
+      photo: sleeve('ar04', '#1f1f24', '#2c2c34', '#d23b2d', 'R.D.', 'AMBIENT', 'slab') },
+    { id: 'ar05', name: 'Pavement', albums: 3, country: 'US', dom: '#c93a2b',
+      photo: sleeve('ar05', '#c93a2b', '#f5c344', '#1a0a08', 'PAVEMENT', 'INDIE', 'diag') },
+    { id: 'ar06', name: 'dEUS', albums: 6, country: 'BE', dom: '#7a3a1f',
+      photo: sleeve('ar06', '#7a3a1f', '#a8612a', '#f5e0b0', 'dEUS', 'ART ROCK', 'wave') },
+    { id: 'ar07', name: 'Thundercat', albums: 2, country: 'US', dom: '#191919',
+      photo: sleeve('ar07', '#191919', '#2a2a32', '#a78bff', 'TC', 'JAZZ FUSION', 'circle') },
+    { id: 'ar08', name: 'Aphex Twin', albums: 4, country: 'UK', dom: '#1a3a4a',
+      photo: sleeve('ar08', '#1a3a4a', '#2a5a6a', '#5cc9d6', 'AFX', 'IDM', 'circle') },
+    { id: 'ar09', name: 'Radiohead', albums: 7, country: 'UK', dom: '#b03028',
+      photo: sleeve('ar09', '#b03028', '#7a1a14', '#f5e8c8', 'RH', 'ART ROCK', 'diag') },
+    { id: 'ar10', name: 'My Bloody Valentine', albums: 2, country: 'IE', dom: '#d63a7a',
+      photo: sleeve('ar10', '#d63a7a', '#f5b3d0', '#3a0820', 'MBV', 'SHOEGAZE', 'wave') },
+    { id: 'ar11', name: 'Daft Punk', albums: 3, country: 'FR', dom: '#d6a428',
+      photo: sleeve('ar11', '#d6a428', '#f5c344', '#3a1a0a', 'DP', 'ELECTRONIC', 'sun') },
+    { id: 'ar12', name: 'Neutral Milk Hotel', albums: 2, country: 'US', dom: '#7a5a3a',
+      photo: sleeve('ar12', '#7a5a3a', '#a87a4f', '#e3c89a', 'NMH', 'INDIE FOLK', 'slab') },
+  ];
+
+  // Last scrobbles (fake, for the sidebar feed)
+  const scrobbles = [
+    { track: 'Hot On The Heels Of Love', artist: 'Throbbing Gristle', when: '2m' },
+    { track: 'Beachy Head', artist: 'Throbbing Gristle', when: '7m' },
+    { track: 'Good Morning, Captain', artist: 'Slint', when: '14m' },
+    { track: 'Washer', artist: 'Slint', when: '22m' },
+    { track: 'Debaser', artist: 'Pixies', when: '29m' },
+    { track: 'Idioteque', artist: 'Radiohead', when: '38m' },
+    { track: 'Xtal', artist: 'Aphex Twin', when: '46m' },
+    { track: 'One More Time', artist: 'Daft Punk', when: '54m' },
+  ];
+
+  const stats = {
+    albums: 847, artists: 312, tracks: 9_421, hours: 612,
+    topGenres: [
+      { name: 'Alternative', count: 142 },
+      { name: 'Electronic', count: 118 },
+      { name: 'Indie Rock', count: 96 },
+      { name: 'Ambient', count: 71 },
+      { name: 'Post-Rock', count: 54 },
+      { name: 'Jazz', count: 48 },
+      { name: 'Punk', count: 39 },
+      { name: 'Folk', count: 32 },
+    ],
+    yearsHist: [
+      { d: '60s', n: 18 }, { d: '70s', n: 64 }, { d: '80s', n: 121 },
+      { d: '90s', n: 198 }, { d: '00s', n: 154 }, { d: '10s', n: 176 }, { d: '20s', n: 116 },
+    ],
+  };
+
+  return { albums, artists, scrobbles, stats };
+})();
+
+</script>
+<script type="text/babel">
+/* global React, ReactDOM */
+const { useState, useEffect, useRef, useCallback, useMemo } = React;
+const { albums, artists, scrobbles, stats } = window.RUSS_DATA;
+
+// ---------- Tweak persistence ----------
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "tintIntensity": 0.85,
+  "showCoverColor": true,
+  "density": "medium",
+  "heroVariant": "split",
+  "monoLabels": true
+}/*EDITMODE-END*/;
+
+const useTweaks = () => {
+  const [t, setT] = useState(() => {
+    try { return { ...TWEAK_DEFAULTS, ...JSON.parse(localStorage.getItem('russfm.tweaks') || '{}') }; }
+    catch { return TWEAK_DEFAULTS; }
+  });
+  const set = (k, v) => {
+    const next = { ...t, [k]: v };
+    setT(next);
+    localStorage.setItem('russfm.tweaks', JSON.stringify(next));
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [k]: v } }, '*');
+  };
+  return [t, set];
+};
+
+// ---------- Drag-scroll wall ----------
+const DragWall = ({ children, className = '' }) => {
+  const ref = useRef(null);
+  const drag = useRef({ down: false, x: 0, sl: 0, moved: 0 });
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    // Map vertical wheel to horizontal so trackpad/scroll still moves the wall.
+    const onWheel = (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        el.scrollLeft += e.deltaY;
+        e.preventDefault();
+      }
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    return () => el.removeEventListener('wheel', onWheel);
+  }, []);
+
+  const onDown = (e) => {
+    drag.current = { down: true, x: e.clientX, sl: ref.current.scrollLeft, moved: 0 };
+    ref.current.classList.add('grabbing');
+  };
+  const onMove = (e) => {
+    if (!drag.current.down) return;
+    const dx = e.clientX - drag.current.x;
+    drag.current.moved = Math.abs(dx);
+    ref.current.scrollLeft = drag.current.sl - dx;
+  };
+  const onUp = (e) => {
+    drag.current.down = false;
+    ref.current.classList.remove('grabbing');
+    // Cancel a click if we actually dragged
+    if (drag.current.moved > 6) {
+      const stop = (ev) => { ev.stopPropagation(); ev.preventDefault(); window.removeEventListener('click', stop, true); };
+      window.addEventListener('click', stop, true);
+    }
+  };
+
+  const scrollBy = (dir) => {
+    ref.current.scrollBy({ left: dir * ref.current.clientWidth * 0.85, behavior: 'smooth' });
+  };
+
+  return (
+    <div className={`wall-wrap ${className}`}>
+      <div
+        ref={ref}
+        className="wall"
+        onMouseDown={onDown}
+        onMouseMove={onMove}
+        onMouseUp={onUp}
+        onMouseLeave={onUp}
+      >
+        {children}
+      </div>
+      <button className="wall-btn wall-btn--prev" onClick={() => scrollBy(-1)} aria-label="Scroll left">‹</button>
+      <button className="wall-btn wall-btn--next" onClick={() => scrollBy(1)} aria-label="Scroll right">›</button>
+    </div>
+  );
+};
+
+// ---------- Catalog header rule ----------
+const SectionHeader = ({ num, label, count, action }) => (
+  <header className="sec-head">
+    <div className="sec-head__l">
+      <span className="sec-head__num">{num}</span>
+      <h2 className="sec-head__label">{label}</h2>
+      {count != null && <span className="sec-head__count">{String(count).padStart(3, '0')} ITEMS</span>}
+    </div>
+    {action && <a className="sec-head__a" href="#">{action} <span aria-hidden>→</span></a>}
+  </header>
+);
+
+// ---------- Hero ----------
+const Hero = ({ tweaks }) => {
+  const featured = albums.slice(0, 5);
+  const [i, setI] = useState(0);
+  const [hover, setHover] = useState(false);
+
+  useEffect(() => {
+    if (hover) return;
+    const t = setInterval(() => setI((x) => (x + 1) % featured.length), 7000);
+    return () => clearInterval(t);
+  }, [hover, featured.length]);
+
+  const a = featured[i];
+  const tint = tweaks.showCoverColor ? a.dom : 'var(--ink-dim)';
+
+  return (
+    <section
+      className="hero"
+      style={{ '--tint': tint, '--tint-strength': tweaks.tintIntensity }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <div className="hero__wash" />
+      <div className="hero__noise" />
+
+      <div className="hero__inner">
+        <div className="hero__meta">
+          <div className="hero__crumbs">
+            <span>FEATURED</span>
+            <span>·</span>
+            <span>NO. {String(i + 1).padStart(2,'0')} / {String(featured.length).padStart(2,'0')}</span>
+            <span>·</span>
+            <span>UPDATED {a.added}</span>
+          </div>
+
+          <h1 className="hero__title">{a.title}</h1>
+
+          <div className="hero__artist">
+            <span className="hero__artist-rule" />
+            <span>{a.artist}</span>
+          </div>
+
+          <dl className="hero__specs">
+            <div><dt>YEAR</dt><dd>{a.year}</dd></div>
+            <div><dt>COUNTRY</dt><dd>{a.country}</dd></div>
+            <div><dt>FORMAT</dt><dd>{a.format}</dd></div>
+            <div><dt>TRACKS</dt><dd>{String(a.tracks).padStart(2,'0')}</dd></div>
+            <div><dt>LABEL</dt><dd>{a.label}</dd></div>
+            <div><dt>GENRE</dt><dd>{a.genres[0].toUpperCase()}</dd></div>
+          </dl>
+
+          <div className="hero__actions">
+            <button className="btn btn--solid">Open record →</button>
+            <button className="btn btn--ghost">Scrobble</button>
+            <button className="btn btn--ghost">Spotify</button>
+            <button className="btn btn--ghost">Apple Music</button>
+            <button className="btn btn--ghost">Discogs</button>
+          </div>
+        </div>
+
+        <div className="hero__art">
+          <div className="hero__sleeve">
+            <img src={a.cover} alt="" draggable="false" />
+            <span className="hero__catnum">CAT. {a.id.toUpperCase()} · SIDE A/B</span>
+          </div>
+          <div className="hero__dots">
+            {featured.map((_, n) => (
+              <button
+                key={n}
+                className={`hero__dot ${n === i ? 'is-on' : ''}`}
+                onClick={() => setI(n)}
+                aria-label={`Featured ${n + 1}`}
+              >
+                <span>{String(n + 1).padStart(2, '0')}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="hero__ticker" aria-hidden>
+        <div className="hero__ticker-inner">
+          {[...Array(2)].flatMap((_, k) =>
+            featured.map((f, idx) => (
+              <span key={`${k}-${idx}`}>
+                <em>{String(idx + 1).padStart(2,'0')}</em> {f.artist} — {f.title} <i>·</i>
+              </span>
+            ))
+          )}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ---------- Album tile ----------
+const AlbumTile = ({ a, idx, tinted }) => (
+  <a className="tile" href="#" data-screen-label={`Album ${a.id}`}>
+    <div
+      className="tile__cover"
+      style={tinted ? { '--shadow': a.dom } : undefined}
+    >
+      <img src={a.cover} alt="" draggable="false" />
+      <div className="tile__hover">
+        <span className="tile__hover-row"><em>FORMAT</em><b>{a.format}</b></span>
+        <span className="tile__hover-row"><em>TRACKS</em><b>{String(a.tracks).padStart(2,'0')}</b></span>
+        <span className="tile__hover-row"><em>YEAR</em><b>{a.year}</b></span>
+      </div>
+      <span className="tile__cat">{String(idx + 1).padStart(3, '0')}</span>
+    </div>
+    <div className="tile__meta">
+      <h3 className="tile__title">{a.title}</h3>
+      <div className="tile__sub">
+        <span>{a.artist}</span>
+        <span className="tile__year">{a.year}</span>
+      </div>
+    </div>
+  </a>
+);
+
+// ---------- Artist tile ----------
+const ArtistTile = ({ a, idx, tinted }) => (
+  <a className="atile" href="#">
+    <div className="atile__photo" style={tinted ? { '--shadow': a.dom } : undefined}>
+      <img src={a.photo} alt="" draggable="false" />
+    </div>
+    <div className="atile__meta">
+      <span className="atile__num">{String(idx + 1).padStart(2,'0')}</span>
+      <div>
+        <h3 className="atile__name">{a.name}</h3>
+        <div className="atile__sub">{a.albums} releases · {a.country}</div>
+      </div>
+    </div>
+  </a>
+);
+
+// ---------- Catalog (listing) preview ----------
+const CatalogStrip = () => (
+  <div className="catalog">
+    <div className="catalog__head">
+      <span>#</span>
+      <span>TITLE</span>
+      <span>ARTIST</span>
+      <span>YEAR</span>
+      <span>FORMAT</span>
+      <span>GENRE</span>
+      <span className="catalog__r">ADDED</span>
+    </div>
+    {albums.slice(0, 8).map((a, i) => (
+      <a key={a.id} href="#" className="catalog__row">
+        <span className="catalog__n">{String(i + 1).padStart(3, '0')}</span>
+        <span className="catalog__t">
+          <span className="catalog__sw" style={{ background: a.dom }} />
+          {a.title}
+        </span>
+        <span className="catalog__a">{a.artist}</span>
+        <span>{a.year}</span>
+        <span>{a.format}</span>
+        <span>{a.genres[0]}</span>
+        <span className="catalog__r catalog__d">{a.added}</span>
+      </a>
+    ))}
+  </div>
+);
+
+// ---------- Stats sidebar ----------
+const StatsAside = () => {
+  const max = Math.max(...stats.yearsHist.map((y) => y.n));
+  return (
+    <aside className="aside">
+      <div className="aside__block">
+        <div className="aside__head">RUSS.FM / INDEX</div>
+        <dl className="aside__nums">
+          <div><dt>RECORDS</dt><dd>{stats.albums.toLocaleString()}</dd></div>
+          <div><dt>ARTISTS</dt><dd>{stats.artists}</dd></div>
+          <div><dt>TRACKS</dt><dd>{stats.tracks.toLocaleString()}</dd></div>
+          <div><dt>HOURS</dt><dd>{stats.hours}</dd></div>
+        </dl>
+      </div>
+
+      <div className="aside__block">
+        <div className="aside__head">DECADES</div>
+        <div className="hist">
+          {stats.yearsHist.map((y) => (
+            <div key={y.d} className="hist__row">
+              <span className="hist__d">{y.d}</span>
+              <span className="hist__bar"><span style={{ width: `${(y.n / max) * 100}%` }} /></span>
+              <span className="hist__n">{String(y.n).padStart(3,'0')}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="aside__block">
+        <div className="aside__head">RECENTLY SCROBBLED · LAST.FM</div>
+        <ol className="scrob">
+          {scrobbles.map((s, i) => (
+            <li key={i} className="scrob__row">
+              <span className="scrob__when">{s.when}</span>
+              <span className="scrob__t">{s.track}</span>
+              <span className="scrob__a">{s.artist}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div className="aside__block">
+        <div className="aside__head">TOP GENRES</div>
+        <div className="genres">
+          {stats.topGenres.map((g) => (
+            <a key={g.name} href="#" className="genre">
+              <span>{g.name}</span><b>{g.count}</b>
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+};
+
+// ---------- Top bar / footer ----------
+const TopBar = ({ theme, onTheme }) => (
+  <header className="top">
+    <a className="top__brand" href="#">
+      <span className="top__mark">◉</span>
+      <span className="top__name">russ.fm</span>
+      <span className="top__tag">/ PERSONAL RECORD COLLECTION</span>
+    </a>
+    <nav className="top__nav">
+      <a href="#" className="is-on">Home</a>
+      <a href="#">Albums</a>
+      <a href="#">Artists</a>
+      <a href="#">Stats</a>
+      <a href="#">Random</a>
+      <a href="#">Wrapped</a>
+      <a href="#">Fuzzbox</a>
+    </nav>
+    <div className="top__r">
+      <label className="top__search">
+        <span>⌕</span>
+        <input placeholder="Search records, artists, tracks…" />
+        <kbd>/</kbd>
+      </label>
+      <button className="top__theme" onClick={() => onTheme(theme === 'dark' ? 'light' : 'dark')} aria-label="Toggle theme">
+        {theme === 'dark' ? '☀' : '☾'}
+      </button>
+    </div>
+  </header>
+);
+
+const Footer = () => (
+  <footer className="foot">
+    <div className="foot__l">
+      <span>© 2026 RUSS.FM</span>
+      <span>·</span>
+      <span>A PERSONAL RECORD COLLECTION SHOWCASE</span>
+    </div>
+    <div className="foot__r">
+      <a href="#">Collection Stats</a>
+      <a href="#">Random Discovery</a>
+      <a href="#">Albums</a>
+      <a href="#">Artists</a>
+      <a href="#">RSS</a>
+      <a href="#">JSON</a>
+    </div>
+  </footer>
+);
+
+// ---------- Tweaks panel ----------
+const Tweaks = ({ tweaks, set, visible }) => {
+  if (!visible) return null;
+  return (
+    <div className="tweaks">
+      <div className="tweaks__head">
+        <b>Tweaks</b>
+        <span>russ.fm redesign</span>
+      </div>
+      <div className="tweaks__row">
+        <label>Theme</label>
+        <div className="seg">
+          {['light','dark'].map(v => (
+            <button key={v} className={tweaks.theme === v ? 'is-on' : ''} onClick={() => set('theme', v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Cover-color tinting</label>
+        <div className="seg">
+          <button className={tweaks.showCoverColor ? 'is-on' : ''} onClick={() => set('showCoverColor', true)}>on</button>
+          <button className={!tweaks.showCoverColor ? 'is-on' : ''} onClick={() => set('showCoverColor', false)}>off</button>
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Tint intensity <i>{Math.round(tweaks.tintIntensity * 100)}%</i></label>
+        <input type="range" min="0" max="1" step="0.05" value={tweaks.tintIntensity}
+          onChange={(e) => set('tintIntensity', parseFloat(e.target.value))} />
+      </div>
+      <div className="tweaks__row">
+        <label>Density</label>
+        <div className="seg">
+          {['sparse','medium','dense'].map(v => (
+            <button key={v} className={tweaks.density === v ? 'is-on' : ''} onClick={() => set('density', v)}>{v}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tweaks__row">
+        <label>Mono labels</label>
+        <div className="seg">
+          <button className={tweaks.monoLabels ? 'is-on' : ''} onClick={() => set('monoLabels', true)}>on</button>
+          <button className={!tweaks.monoLabels ? 'is-on' : ''} onClick={() => set('monoLabels', false)}>off</button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ---------- App ----------
+const App = () => {
+  const [tweaks, set] = useTweaks();
+  const [tweaksVisible, setTweaksVisible] = useState(false);
+
+  useEffect(() => {
+    // Edit mode protocol
+    const onMsg = (e) => {
+      if (e.data?.type === '__activate_edit_mode') setTweaksVisible(true);
+      if (e.data?.type === '__deactivate_edit_mode') setTweaksVisible(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  return (
+    <div
+      className={`app theme--${tweaks.theme} dens--${tweaks.density} ${tweaks.monoLabels ? 'mono-on' : 'mono-off'}`}
+    >
+      <TopBar theme={tweaks.theme} onTheme={(v) => set('theme', v)} />
+
+      <Hero tweaks={tweaks} />
+
+      <main className="layout">
+        <div className="layout__main">
+          <section className="block" data-screen-label="Recently Added Albums">
+            <SectionHeader num="01" label="Recently Added · Albums" count={albums.length} action="View all" />
+            <DragWall>
+              {albums.map((a, i) => (
+                <AlbumTile key={a.id} a={a} idx={i} tinted={tweaks.showCoverColor} />
+              ))}
+            </DragWall>
+          </section>
+
+          <section className="block" data-screen-label="Recently Added Artists">
+            <SectionHeader num="02" label="Recently Added · Artists" count={artists.length} action="View all" />
+            <DragWall className="wall--artist">
+              {artists.map((a, i) => (
+                <ArtistTile key={a.id} a={a} idx={i} tinted={tweaks.showCoverColor} />
+              ))}
+            </DragWall>
+          </section>
+
+          <section className="block" data-screen-label="Catalog">
+            <SectionHeader num="03" label="Catalog · Latest Acquisitions" action="Browse full catalog" />
+            <CatalogStrip />
+          </section>
+
+          <section className="block" data-screen-label="Random Spin">
+            <SectionHeader num="04" label="Random Spin · This Week" />
+            <div className="random">
+              {albums.slice(2, 6).map((a, i) => (
+                <a key={a.id} href="#" className="random__card" style={{ '--c': a.dom }}>
+                  <div className="random__n">SPIN.{String(i + 1).padStart(2,'0')}</div>
+                  <img src={a.cover} alt="" />
+                  <div className="random__meta">
+                    <h4>{a.title}</h4>
+                    <p>{a.artist} · {a.year}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+
+        <StatsAside />
+      </main>
+
+      <Footer />
+
+      {/* Bottom status bar — replaces the floating pill nav with something that matches the catalog feel */}
+      <div className="status">
+        <span className="status__dot" />
+        <span>NOW SPINNING</span>
+        <span className="status__t">Hot On The Heels Of Love · Throbbing Gristle</span>
+        <span className="status__r">02:47 / 04:21</span>
+      </div>
+
+      <Tweaks tweaks={tweaks} set={set} visible={tweaksVisible} />
+    </div>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+</script>
+</body>
+</html>

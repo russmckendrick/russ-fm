@@ -1,70 +1,64 @@
-import { useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, useInView } from 'framer-motion';
-import { handleImageError } from '@/lib/image-utils';
-import type { Artist } from '@/types/album';
+import { Link } from "react-router-dom";
+import { DragWall, SectionHeader } from "@/components/layout";
+import { redesignConfig } from "@/config/redesign.config";
+import { handleImageError } from "@/lib/image-utils";
+import type { Artist } from "@/types/album";
 
 interface RecentArtistsSectionProps {
   recentArtists: Artist[];
 }
 
-export function RecentArtistsSection({ recentArtists }: RecentArtistsSectionProps) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+/**
+ * Editorial "recently added · artists" drag-scroll wall. Round photos,
+ * mono rank, grot name, mono subline ("Latest: …").
+ */
+export function RecentArtistsSection({
+  recentArtists,
+}: RecentArtistsSectionProps) {
+  if (!recentArtists.length) return null;
+  const count = redesignConfig.walls.recentArtistsCount;
+  const list = recentArtists.slice(0, count);
 
   return (
-    <motion.section
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6 }}
-    >
-      <motion.div 
-        className="flex items-center justify-between mb-8"
-        initial={{ opacity: 0, x: -20 }}
-        animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-        transition={{ delay: 0.2 }}
-      >
-        <h2 className="text-2xl lg:text-3xl font-light text-foreground">Recently Added Artists</h2>
-        <Link to="/artists" className="text-primary hover:text-primary/80 transition-colors">
-          View all artists →
-        </Link>
-      </motion.div>
-      
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {recentArtists.map((artist, index) => (
-          <motion.div
+    <section className="space-y-5">
+      <SectionHeader
+        num="02"
+        label="Recently Added · Artists"
+        count={list.length}
+        action="View all"
+        actionTo="/artists/1"
+      />
+      <DragWall ariaLabel="Recently added artists" itemBasis="min(42vw, 220px)">
+        {list.map((artist, i) => (
+          <Link
             key={artist.name}
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.3 + index * 0.1 }}
-            whileHover={{ y: -5 }}
+            to={artist.uri}
+            className="group block text-center font-grot"
           >
-            <Link to={artist.uri} className="group space-y-3 block">
-              <motion.div 
-                className="aspect-square rounded-xl overflow-hidden shadow-lg"
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <img
-                  src={artist.avatar}
-                  alt={artist.name}
-                  className="w-full h-full object-cover"
-                  onError={handleImageError}
-                />
-              </motion.div>
-              <div className="space-y-1 text-center">
-                <h3 className="font-medium text-sm line-clamp-2 group-hover:text-primary transition-colors">
-                  {artist.name}
-                </h3>
-                <p className="text-muted-foreground text-xs">
-                  Latest: {artist.latestAlbum.release_name}
-                </p>
-              </div>
-            </Link>
-          </motion.div>
+            <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2">
+              <img
+                src={artist.avatar}
+                alt={artist.name}
+                loading="lazy"
+                draggable={false}
+                onError={handleImageError}
+                className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+              />
+            </div>
+            <div className="mt-3 flex items-baseline justify-center gap-2">
+              <span className="font-mono text-[11px] tracking-[0.04em] text-ink-dim">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <h3 className="line-clamp-1 text-[15px] font-semibold leading-tight tracking-[-0.005em] text-ink transition-colors group-hover:text-hl">
+                {artist.name}
+              </h3>
+            </div>
+            <div className="mt-1 line-clamp-1 font-mono text-[10.5px] uppercase tracking-[0.06em] text-ink-3">
+              Latest · {artist.latestAlbum.release_name}
+            </div>
+          </Link>
         ))}
-      </div>
-    </motion.section>
+      </DragWall>
+    </section>
   );
 }

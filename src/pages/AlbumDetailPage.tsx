@@ -1,25 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ArrowLeft, ListMusic } from 'lucide-react';
 import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
-import { Button } from '@/components/ui/button';
 import { ServiceButton } from '@/components/ui/service-button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { PageContainer } from '@/components/layout';
+import { PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { GenreTag } from '@/components/ui/genre-tag';
-import { MetadataBadge } from '@/components/ui/metadata-badge';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
-import { useTheme } from '@/hooks/useTheme';
-import { getEnhancedTextColor, generateColorProperties, createHeroBackground, createGlowGradient, getAccessibleAccentColor } from '@/lib/color-utils';
 import { appConfig } from '@/config/app.config';
 
 interface Album {
@@ -167,9 +160,6 @@ export function AlbumDetailPage() {
 
   // Load album colors using the album path
   const albumColors = useAlbumColorsWithFallback(albumPath);
-
-  // Get current theme for reactive color calculations
-  const theme = useTheme();
 
   // Check if URL needs sanitization and redirect if necessary
   useEffect(() => {
@@ -561,32 +551,29 @@ export function AlbumDetailPage() {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-muted-foreground">Loading album...</p>
+      <PageContainer>
+        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+          Loading album…
         </div>
-      </div>
+      </PageContainer>
     );
   }
 
   if (!album) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <Link to="/">
-          <Button variant="ghost" className="mb-6">
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Albums
-          </Button>
-        </Link>
-        <Card className="p-8 text-center">
-          <CardContent>
-            <ListMusic className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Album not found</h3>
-            <p className="text-muted-foreground">The requested album could not be found</p>
-          </CardContent>
-        </Card>
-      </div>
+      <PageContainer>
+        <div className="py-16">
+          <Link to="/albums/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
+            ← Albums
+          </Link>
+          <div className="mt-8 border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
+            <p className="text-[17px] font-semibold text-ink">Album not found</p>
+            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+              The requested album could not be found
+            </p>
+          </div>
+        </div>
+      </PageContainer>
     );
   }
 
@@ -654,180 +641,172 @@ export function AlbumDetailPage() {
   };
 
   const tracks = getTracks();
+  const description = (() => {
+    let d = getAlbumDescription() || '';
+    const i = d.indexOf('Read more on Last.fm');
+    if (i !== -1) d = d.substring(0, i).trim();
+    return d;
+  })();
+  const heroTint = albumColors.background;
+  const cleanGenresList = detailedAlbum
+    ? getCleanGenres({
+        genres: [...album.genre_names, ...(detailedAlbum.styles || [])],
+        services: detailedAlbum.services,
+      })
+    : getCleanGenresFromArray(album.genre_names, album.release_artist);
 
-  // Generate CSS custom properties for album colors
-  const colorProperties = generateColorProperties(albumColors);
-
-  // Get enhanced text styling for better contrast
-  const titleTextStyle = getEnhancedTextColor(albumColors.background, albumColors);
+  // Faux catalogue number from Discogs ID (e.g. 37044327 → CAT. 327)
+  const catNo = (() => {
+    const m = album.uri_release.match(/-(\d+)\/?$/);
+    return m ? `CAT. ${m[1].slice(-3)}` : 'CAT.';
+  })();
 
   return (
     <PageContainer variant="hero">
-      {/* Hero Section - Full Width & Immersive */}
-      <div
-        className="relative w-full min-h-[60vh] flex items-end justify-center pb-12 pt-28 px-4 overflow-hidden"
-        style={{
-          background: createHeroBackground(albumColors),
-          ...colorProperties
-        }}
-      >
-        {/* Animated Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute top-0 left-0 w-full h-full opacity-40 mix-blend-overlay"
-            style={{
-              background: `radial-gradient(circle at 20% 30%, ${albumColors.accent} 0%, transparent 50%)`
-            }}
-          />
-          <div
-            className="absolute bottom-0 right-0 w-full h-full opacity-30 mix-blend-overlay"
-            style={{
-              background: `radial-gradient(circle at 80% 80%, ${albumColors.accent} 0%, transparent 50%)`
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-        </div>
+      {/* Hero ----------------------------------------------------------- */}
+      <section className="relative isolate overflow-hidden bg-paper">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'multiply',
+            opacity: 0.85,
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0 hidden dark:block"
+          style={{
+            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
+            mixBlendMode: 'screen',
+            opacity: 0.7,
+          }}
+        />
 
-        <div className="container mx-auto relative z-10 max-w-6xl">
-          <div className="flex flex-col md:flex-row items-end gap-8 md:gap-12">
-            {/* Album Art - Floating & Shadowed */}
-            <div className="relative group w-64 md:w-96 lg:w-[450px] flex-shrink-0 mx-auto md:mx-0">
-              <div
-                className="absolute -inset-4 rounded-2xl opacity-40 blur-2xl transition-all duration-700 group-hover:opacity-60"
-                style={{ background: createGlowGradient(albumColors, 'bold') }}
-              />
-              <img
-                src={getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res')}
-                onError={handleImageError}
-                alt={album.release_name}
-                className="relative w-full rounded-xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-                style={{
-                  boxShadow: `0 20px 40px -10px ${albumColors.accent}60`
-                }}
-              />
-            </div>
+        <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
+          <nav className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+            <Link to="/albums/1" className="transition-colors hover:text-ink">Albums</Link>
+            <span>/</span>
+            <span className="text-ink">{album.release_name}</span>
+          </nav>
 
-            {/* Header Info */}
-            <div className="flex-1 text-center md:text-left space-y-4">
-              <div className="space-y-2">
-                <Link to="/" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-2">
-                  <ArrowLeft className="h-4 w-4 mr-1" />
-                  Back to Collection
-                </Link>
-                <h1
-                  className="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-balance text-foreground"
-                >
+          <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-14">
+            {/* Header text */}
+            <div className="flex min-w-0 flex-col gap-6">
+              <div>
+                <div className="mb-4 flex flex-wrap items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+                  <span className="text-hl">{catNo}</span>
+                  {detailedAlbum?.labels?.[0] && (
+                    <>
+                      <span>·</span>
+                      <span>{detailedAlbum.labels[0]}</span>
+                    </>
+                  )}
+                  {detailedAlbum?.formats?.[0] && (
+                    <>
+                      <span>·</span>
+                      <span>{detailedAlbum.formats[0]}</span>
+                    </>
+                  )}
+                </div>
+                <h1 className="text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
                   {album.release_name}
                 </h1>
-                <div className="text-xl md:text-2xl font-medium opacity-90 flex flex-wrap items-center justify-center md:justify-start gap-3 text-foreground">
-                  {/* Artist Avatar(s) */}
+
+                {/* Artist row with avatars */}
+                <div className="mt-4 flex flex-wrap items-center gap-3 font-grot text-[20px] font-semibold text-ink md:text-[24px]">
                   {album.artists && album.artists.length > 1 ? (
                     <div className="flex -space-x-2">
-                      {album.artists.map((artist, index) => (
-                        <Link key={index} to={artist.uri_artist} className="group/avatar">
-                          <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110 group-hover/avatar:z-10 relative">
-                            <AvatarImage
-                              src={getArtistAvatarFromData(artist.uri_artist)}
-                              alt={artist.name}
-                              onError={handleImageError}
-                            />
-                            <AvatarFallback className="text-xs bg-muted">
-                              {artist.name.slice(0, 2).toUpperCase()}
-                            </AvatarFallback>
-                          </Avatar>
+                      {album.artists.map((artist, i) => (
+                        <Link key={i} to={artist.uri_artist} className="shrink-0">
+                          <img
+                            src={getArtistAvatarFromData(artist.uri_artist)}
+                            alt={artist.name}
+                            onError={handleImageError}
+                            className="h-10 w-10 rounded-full border-2 border-paper object-cover"
+                          />
                         </Link>
                       ))}
                     </div>
                   ) : (
-                    <Link to={album.uri_artist} className="group/avatar">
-                      <Avatar className="h-10 w-10 ring-2 ring-background shadow-md transition-transform group-hover/avatar:scale-110">
-                        <AvatarImage
-                          src={getArtistAvatarFromData(album.uri_artist)}
-                          alt={album.release_artist}
-                          onError={handleImageError}
-                        />
-                        <AvatarFallback className="text-xs bg-muted">
-                          {album.release_artist.slice(0, 2).toUpperCase()}
-                        </AvatarFallback>
-                      </Avatar>
+                    <Link to={album.uri_artist} className="shrink-0">
+                      <img
+                        src={getArtistAvatarFromData(album.uri_artist)}
+                        alt={album.release_artist}
+                        onError={handleImageError}
+                        className="h-10 w-10 rounded-full border-2 border-paper object-cover"
+                      />
                     </Link>
                   )}
                   {album.artists && album.artists.length > 1 ? (
-                    album.artists.map((artist, index) => (
-                      <React.Fragment key={index}>
-                        <Link
-                          to={artist.uri_artist}
-                          className="hover:underline decoration-2 underline-offset-4 text-foreground"
-                        >
+                    album.artists.map((artist, i) => (
+                      <React.Fragment key={i}>
+                        <Link to={artist.uri_artist} className="transition-colors hover:text-hl">
                           {artist.name}
                         </Link>
-                        {index < album.artists.length - 1 && <span>&</span>}
+                        {i < album.artists.length - 1 && (
+                          <span className="text-ink-dim">&</span>
+                        )}
                       </React.Fragment>
                     ))
                   ) : (
-                    <Link
-                      to={album.uri_artist}
-                      className="hover:underline decoration-2 underline-offset-4 text-foreground"
-                    >
+                    <Link to={album.uri_artist} className="transition-colors hover:text-hl">
                       {album.release_artist}
                     </Link>
                   )}
                 </div>
               </div>
 
-              {/* Quick Stats Row */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-sm font-medium">
-                <MetadataBadge>{year}</MetadataBadge>
-                <MetadataBadge>{tracks.length} Tracks</MetadataBadge>
-                {detailedAlbum?.country && (
-                  <MetadataBadge>{detailedAlbum.country}</MetadataBadge>
-                )}
-              </div>
+              {/* KV strip */}
+              <dl className="grid max-w-2xl grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-4">
+                <KV label="Year" value={String(year || '—')} />
+                <KV label="Tracks" value={String(tracks.length)} />
+                <KV
+                  label="Added"
+                  value={album.date_added
+                    ? new Date(album.date_added).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' }).toUpperCase()
+                    : '—'}
+                />
+                {detailedAlbum?.country && <KV label="Country" value={detailedAlbum.country} />}
+              </dl>
 
-              {/* Tags */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 pt-2">
-                {(() => {
-                  const cleanGenres = detailedAlbum ? getCleanGenres({
-                    genres: [...album.genre_names, ...(detailedAlbum.styles || [])],
-                    services: detailedAlbum.services
-                  }) : getCleanGenresFromArray(album.genre_names, album.release_artist);
+              {cleanGenresList.length > 0 && (
+                <div className="flex flex-wrap gap-1.5">
+                  {cleanGenresList.slice(0, 6).map((g) => (
+                    <GenreTag key={g} genre={g} size="md" linkable />
+                  ))}
+                </div>
+              )}
 
-                  return cleanGenres.slice(0, 5).map((tag, index) => (
-                    <GenreTag key={index} genre={tag} size="md" linkable={true} />
-                  ));
-                })()}
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-4">
+              {/* Action buttons */}
+              <div className="flex flex-wrap gap-2">
                 <AlbumScrobbleButton
                   album={{
                     artist: album.release_artist,
                     album: album.release_name,
-                    tracks: tracks.map(t => ({ title: t.name || 'Unknown Track', artist: t.artists?.[0]?.name }))
+                    tracks: tracks.map(t => ({
+                      title: t.name || 'Unknown Track',
+                      artist: t.artists?.[0]?.name,
+                    })),
                   }}
                 />
-
                 {detailedAlbum?.services?.apple_music?.url && (
                   <ServiceButton
                     service="apple-music"
-                    url={detailedAlbum.services?.apple_music?.url}
+                    url={detailedAlbum.services.apple_music.url}
                     icon={<SiApplemusic className="h-4 w-4" />}
                   >
                     Apple Music
                   </ServiceButton>
                 )}
-
                 {detailedAlbum?.services?.spotify?.url && (
                   <ServiceButton
                     service="spotify"
-                    url={detailedAlbum.services?.spotify?.url}
+                    url={detailedAlbum.services.spotify.url}
                     icon={<SiSpotify className="h-4 w-4" />}
                   >
                     Spotify
                   </ServiceButton>
                 )}
-
                 {detailedAlbum?.discogs_url && (
                   <ServiceButton
                     service="discogs"
@@ -839,336 +818,293 @@ export function AlbumDetailPage() {
                 )}
               </div>
             </div>
+
+            {/* Sleeve */}
+            <div className="mx-auto w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]">
+              <div
+                className="aspect-square w-full overflow-hidden bg-paper-2"
+                style={{
+                  boxShadow: `0 40px 80px -20px ${albumColors.background}, 0 6px 20px -6px rgba(14,13,11,0.15)`,
+                }}
+              >
+                <img
+                  src={getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res')}
+                  onError={handleImageError}
+                  alt={album.release_name}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content - Blog Style Layout */}
-      <div className="container mx-auto px-4 max-w-3xl mt-12 space-y-16">
-
-        {/* Editorial Description */}
-        {getAlbumDescription() && (
-          <section className="prose prose-lg dark:prose-invert max-w-none">
-            <div className="relative">
-              <div className="text-lg md:text-xl leading-relaxed text-muted-foreground font-serif">
-                {(() => {
-                  let description = getAlbumDescription() || '';
-                  const readMoreIndex = description.indexOf('Read more on Last.fm');
-                  if (readMoreIndex !== -1) description = description.substring(0, readMoreIndex).trim();
-
-                  if (description?.includes('\n')) {
-                    return description.split('\n').filter(p => p.trim()).map((p, i) => (
-                      <p key={i} className="mb-6">
-                        {p.trim()}
-                      </p>
-                    ));
-                  }
-                  return <p>{description}</p>;
-                })()}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* Tracklist - Clean & Minimal with Side Grouping */}
-        {tracks.length > 0 && (() => {
-          const trackGrouping = groupTracksBySide(tracks);
-          const totalDuration = calculateTotalDuration(tracks);
-
-          // Helper to render a track row
-          const renderTrack = (track: Track, index: number, showSimpleNumbers: boolean) => {
-            const isSectionTitle = !track.position && !getTrackDuration(track) && !track.duration_ms;
-
-            if (isSectionTitle) {
-              return (
-                <div key={index} className="pt-6 pb-2">
-                  <h4 className="text-lg font-semibold text-primary">{track.name}</h4>
+      {/* Main content --------------------------------------------------- */}
+      <div className="mx-auto w-full max-w-[1640px] px-5 py-14 md:px-8 md:py-20">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-20">
+          <div className="flex flex-col gap-16">
+            {description && (
+              <section>
+                <SectionHeader num="01" label="About this record" />
+                <div className="mt-6 font-grot text-[17px] leading-[1.7] text-ink-2">
+                  {description.includes('\n') ? (
+                    description.split('\n').filter(p => p.trim()).map((p, i) => (
+                      <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
+                    ))
+                  ) : (
+                    <p>{description}</p>
+                  )}
                 </div>
-              );
-            }
+              </section>
+            )}
 
-            return (
-              <div
-                key={index}
-                className="group flex items-center justify-between py-3 px-4 -mx-4 rounded-lg transition-colors hover:bg-secondary/30"
-              >
-                <div className="flex items-center gap-4 flex-1 min-w-0">
-                  <span className="text-muted-foreground/40 font-mono text-sm w-8 text-right tabular-nums">
-                    {showSimpleNumbers
-                      ? (track.position?.replace(/^[A-Z]/, '') || track.track_number || index + 1)
-                      : (track.position || track.track_number || index + 1)
-                    }
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <span className="font-medium block truncate transition-colors group-hover:text-primary">
+            {tracks.length > 0 && (() => {
+              const trackGrouping = groupTracksBySide(tracks);
+              const totalDuration = calculateTotalDuration(tracks);
+
+              const renderTrack = (track: Track, index: number, showSimpleNumbers: boolean) => {
+                const isSectionTitle = !track.position && !getTrackDuration(track) && !track.duration_ms;
+                if (isSectionTitle) {
+                  return (
+                    <li key={index} className="px-0 pb-2 pt-5 font-mono text-[11px] uppercase tracking-[0.12em] text-hl">
                       {track.name}
+                    </li>
+                  );
+                }
+                return (
+                  <li
+                    key={index}
+                    className="grid grid-cols-[48px_minmax(0,1fr)_auto] items-baseline gap-3 border-b border-rule py-2.5 font-grot last:border-b-0"
+                  >
+                    <span className="font-mono text-[11px] tracking-[0.04em] text-ink-dim tabular-nums">
+                      {showSimpleNumbers
+                        ? (track.position?.replace(/^[A-Z]/, '') || track.track_number || index + 1)
+                        : (track.position || track.track_number || index + 1)}
                     </span>
-                    {track.artists && track.artists.length > 0 && (
-                      <span className="text-sm text-muted-foreground/70 block truncate">
-                        {track.artists.map(a => a.name).join(', ')}
+                    <span className="min-w-0 truncate text-[15px] text-ink">
+                      {track.name}
+                      {track.artists && track.artists.length > 0 && (
+                        <span className="ml-2 font-mono text-[10.5px] uppercase tracking-[0.06em] text-ink-dim">
+                          {track.artists.map(a => a.name).join(', ')}
+                        </span>
+                      )}
+                    </span>
+                    {getTrackDuration(track) && (
+                      <span className="font-mono text-[11px] tabular-nums text-ink-dim">
+                        {getTrackDuration(track)}
                       </span>
                     )}
-                  </div>
-                </div>
-                {getTrackDuration(track) && (
-                  <span className="text-muted-foreground/40 font-mono text-sm ml-4 tabular-nums">
-                    {getTrackDuration(track)}
-                  </span>
-                )}
-              </div>
-            );
-          };
+                  </li>
+                );
+              };
 
-          // Get accessible accent color for tracklist headers (reactive to theme changes)
-          const accessibleAccent = getAccessibleAccentColor(albumColors.accent, 4.5, theme === 'dark');
-
-          // Helper to render a side section
-          const renderSide = (label: string, tracks: Track[], index: number) => (
-            <div key={index}>
-              {label && (
-                <div className="flex items-center gap-3 mb-4">
-                  <span
-                    className="text-sm font-semibold uppercase tracking-wider"
-                    style={{ color: accessibleAccent }}
-                  >
-                    {label}
-                  </span>
-                  <div className="flex-1 h-px bg-border/50" />
-                </div>
-              )}
-              <div className="space-y-0.5">
-                {tracks.map((track, trackIndex) => renderTrack(track, trackIndex, !!label))}
-              </div>
-            </div>
-          );
-
-          return (
-            <section>
-              <h3 className="text-2xl font-bold mb-8 text-foreground">
-                Tracklist
-              </h3>
-
-              {trackGrouping.type === 'lp' ? (
-                // LP-grouped layout with bordered containers
-                <div className="space-y-8">
-                  {trackGrouping.groups.map((lpGroup, lpIndex) => (
-                    <div
-                      key={lpIndex}
-                      className="border border-border/50 rounded-xl p-6"
-                    >
-                      {/* LP Header */}
-                      <div className="mb-6">
-                        <span
-                          className="text-lg font-bold"
-                          style={{ color: accessibleAccent }}
-                        >
-                          {lpGroup.lpLabel}
-                        </span>
-                      </div>
-                      {/* Sides within LP */}
-                      <div className="space-y-6">
-                        {lpGroup.sides.map((side, sideIndex) => renderSide(side.label, side.tracks, sideIndex))}
-                      </div>
+              const renderSide = (label: string, tracks: Track[], index: number) => (
+                <div key={index}>
+                  {label && (
+                    <div className="mb-2 flex items-baseline gap-3 font-mono text-[10.5px] uppercase tracking-[0.12em] text-hl">
+                      <span>{label}</span>
+                      <span className="h-px flex-1 bg-rule" />
                     </div>
-                  ))}
+                  )}
+                  <ul>
+                    {tracks.map((t, i) => renderTrack(t, i, !!label))}
+                  </ul>
                 </div>
-              ) : (
-                // Flat layout for single LP or simple albums
-                <div className="space-y-8">
-                  {trackGrouping.groups.map((group, groupIndex) => renderSide(group.label, group.tracks, groupIndex))}
-                </div>
-              )}
+              );
 
-              {/* Total Duration Footer */}
-              {totalDuration && (
-                <div className="mt-6 pt-4 border-t border-border/30 flex justify-end">
-                  <span className="text-sm text-muted-foreground/60">
-                    Total runtime: <span className="font-medium text-muted-foreground">{totalDuration}</span>
-                  </span>
-                </div>
-              )}
-            </section>
-          );
-        })()}
-
-        {/* Music Player */}
-        {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
-          <section className="py-12">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">Listen to {detailedAlbum.title}</h3>
-            <MusicPlayerSection album={detailedAlbum} />
-          </section>
-        )}
-
-        {/* Videos */}
-        {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
-          <section className="py-12">
-            <h3 className="text-2xl font-bold mb-8 text-foreground">Videos</h3>
-            <VideoSection videos={detailedAlbum.videos} />
-          </section>
-        )}
-
-        {/* Artist Bios - Editorial Style */}
-        {detailedAlbum?.artists && detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various') && (
-          <section className="space-y-12">
-            {detailedAlbum.artists.map((artist, index) =>
-              artist.biography && artist.name.toLowerCase() !== 'various' && (
-                <div key={index} className="flex flex-col md:flex-row gap-8 items-start">
-                  <div className="w-full md:w-1/3 sticky top-24">
-                    <img
-                      src={getArtistImageFromData(
-                        album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist,
-                        'medium'
-                      )}
-                      alt={artist.name}
-                      className="w-full aspect-square object-cover rounded-2xl shadow-lg"
-                      onError={handleImageError}
-                    />
-                    <Link
-                      to={album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist}
-                      className="block mt-4 text-center"
-                    >
-                      <Button variant="outline" className="w-full">View Artist Profile</Button>
-                    </Link>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-4 text-foreground">About {artist.name}</h3>
-                    {(() => {
-                      let bio = artist.biography?.replace(/<[^>]*>/g, '').trim();
-                      const readMoreIndex = bio?.indexOf('Read more on Last.fm');
-                      if (readMoreIndex !== -1) bio = bio?.substring(0, readMoreIndex).trim();
-                      const wikiIndex = bio?.indexOf('Full Wikipedia article:');
-                      if (wikiIndex !== -1) bio = bio?.substring(0, wikiIndex).trim();
-
-                      const fullText = bio || '';
-                      const isLong = fullText.length > 500;
-                      const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
-
-                      // For long bios, truncate at word boundary near 500 chars
-                      let displayText = fullText;
-                      if (isLong) {
-                        const truncated = fullText.substring(0, 500);
-                        const lastSpace = truncated.lastIndexOf(' ');
-                        displayText = lastSpace > 400 ? truncated.substring(0, lastSpace) : truncated;
-                      }
-
-                      const paragraphs = displayText.split('\n').filter(p => p.trim());
-
-                      return (
-                        <div className="relative">
-                          <div className={`prose dark:prose-invert text-muted-foreground leading-relaxed ${isLong ? 'max-h-44 overflow-hidden' : ''}`}>
-                            {paragraphs.map((p, i) => (
-                              <p key={i} className="mb-4">{p.trim()}</p>
-                            ))}
+              return (
+                <section>
+                  <SectionHeader num={description ? '02' : '01'} label="Tracklist" count={tracks.length} />
+                  <div className="mt-6">
+                    {trackGrouping.type === 'lp' ? (
+                      <div className="flex flex-col gap-10">
+                        {trackGrouping.groups.map((lpGroup, lpIndex) => (
+                          <div key={lpIndex} className="border border-rule-strong bg-paper p-5 md:p-6">
+                            <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-hl">
+                              {lpGroup.lpLabel}
+                            </div>
+                            <div className="flex flex-col gap-6">
+                              {lpGroup.sides.map((side, sideIndex) => renderSide(side.label, side.tracks, sideIndex))}
+                            </div>
                           </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-8">
+                        {trackGrouping.groups.map((group, groupIndex) => renderSide(group.label, group.tracks, groupIndex))}
+                      </div>
+                    )}
+
+                    {totalDuration && (
+                      <div className="mt-6 flex justify-end border-t border-rule pt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+                        Total runtime · <span className="ml-2 text-ink">{totalDuration}</span>
+                      </div>
+                    )}
+                  </div>
+                </section>
+              );
+            })()}
+
+            {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
+              <section>
+                <SectionHeader
+                  num={description && tracks.length ? '03' : (description || tracks.length ? '02' : '01')}
+                  label={`Listen to ${detailedAlbum.title}`}
+                />
+                <div className="mt-6 border border-rule-strong bg-paper p-5 md:p-6">
+                  <MusicPlayerSection album={detailedAlbum} />
+                </div>
+              </section>
+            )}
+
+            {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
+              <section>
+                <SectionHeader label="Videos" count={detailedAlbum.videos.length} />
+                <div className="mt-6">
+                  <VideoSection videos={detailedAlbum.videos} />
+                </div>
+              </section>
+            )}
+
+            {detailedAlbum?.artists && detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various') && (
+              <section>
+                <SectionHeader label="About the artist" />
+                <div className="mt-6 flex flex-col gap-12">
+                  {detailedAlbum.artists.map((artist, index) => {
+                    if (!artist.biography || artist.name.toLowerCase() === 'various') return null;
+                    const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
+                    let bio = artist.biography.replace(/<[^>]*>/g, '').trim();
+                    const readMore = bio.indexOf('Read more on Last.fm');
+                    if (readMore !== -1) bio = bio.substring(0, readMore).trim();
+                    const wiki = bio.indexOf('Full Wikipedia article:');
+                    if (wiki !== -1) bio = bio.substring(0, wiki).trim();
+
+                    const isLong = bio.length > 500;
+                    let display = bio;
+                    if (isLong) {
+                      const truncated = bio.substring(0, 500);
+                      const lastSpace = truncated.lastIndexOf(' ');
+                      display = lastSpace > 400 ? truncated.substring(0, lastSpace) : truncated;
+                    }
+                    const paragraphs = display.split('\n').filter(p => p.trim());
+
+                    return (
+                      <div key={index} className="grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10">
+                        <div>
+                          <img
+                            src={getArtistImageFromData(artistUri, 'medium')}
+                            alt={artist.name}
+                            onError={handleImageError}
+                            className="aspect-square w-full rounded-full border border-rule-strong object-cover"
+                          />
+                          <h4 className="mt-4 font-grot text-[18px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+                            {artist.name}
+                          </h4>
+                          <Link
+                            to={artistUri}
+                            className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim transition-colors hover:text-hl"
+                          >
+                            View profile →
+                          </Link>
+                        </div>
+                        <div className="font-grot text-[16px] leading-[1.7] text-ink-2">
+                          {paragraphs.map((p, i) => (
+                            <p key={i} className="mb-4 last:mb-0">{p.trim()}</p>
+                          ))}
                           {isLong && (
-                            <>
-                              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent pointer-events-none" />
-                              <Link
-                                to={artistUri}
-                                className="relative block mt-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                              >
-                                Read more about {artist.name} →
-                              </Link>
-                            </>
+                            <Link
+                              to={artistUri}
+                              className="mt-4 inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-hl"
+                            >
+                              Read more about {artist.name} →
+                            </Link>
                           )}
                         </div>
-                      );
-                    })()}
-                  </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              )
+              </section>
             )}
-          </section>
-        )}
+          </div>
 
-        {/* Footer Metadata - Subtle & Clean */}
-        <footer className="pt-12 mt-12 border-t border-border/50 text-sm text-muted-foreground">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h4 className="font-semibold text-foreground">Release Details</h4>
-              <dl className="space-y-2">
-                {detailedAlbum?.year && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Year</dt>
-                    <dd>{detailedAlbum.year}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.country && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Country</dt>
-                    <dd>{detailedAlbum.country}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.labels && detailedAlbum.labels.length > 0 && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Label</dt>
-                    <dd>{detailedAlbum.labels.join(', ')}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.formats && detailedAlbum.formats.length > 0 && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Format</dt>
-                    <dd>{detailedAlbum.formats.join(', ')}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.styles && detailedAlbum.styles.length > 0 && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Style</dt>
-                    <dd>{detailedAlbum.styles.join(', ')}</dd>
-                  </div>
-                )}
-                <div className="flex gap-2">
-                  <dt className="w-24 shrink-0 opacity-60">Added</dt>
-                  <dd>{new Date(album.date_added).toLocaleDateString()}</dd>
-                </div>
+          {/* Sidebar ------------------------------------------------------ */}
+          <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
+            <div>
+              <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                Release details
+              </h3>
+              <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+                {detailedAlbum?.year && <KV label="Year" value={String(detailedAlbum.year)} />}
+                {detailedAlbum?.country && <KV label="Country" value={detailedAlbum.country} />}
+                {detailedAlbum?.labels?.[0] && <KV label="Label" value={detailedAlbum.labels.join(', ')} />}
+                {detailedAlbum?.formats?.[0] && <KV label="Format" value={detailedAlbum.formats.join(', ')} />}
+                {detailedAlbum?.styles?.[0] && <KV label="Style" value={detailedAlbum.styles.slice(0, 3).join(', ')} />}
+                <KV
+                  label="Added"
+                  value={new Date(album.date_added).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' })}
+                />
               </dl>
             </div>
 
-            {/* Identifiers Section */}
-            <div className="space-y-4">
-              <h4 className="font-semibold text-foreground">Identifiers</h4>
-              <dl className="space-y-3">
-                {detailedAlbum?.services?.spotify?.external_ids?.upc && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">UPC</dt>
-                    <dd className="font-mono text-xs">{detailedAlbum.services.spotify.external_ids.upc}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.discogs_id && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Discogs ID</dt>
-                    <dd className="font-mono text-xs">{detailedAlbum.discogs_id}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.spotify_id && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Spotify ID</dt>
-                    <dd className="font-mono text-xs">{detailedAlbum.spotify_id}</dd>
-                  </div>
-                )}
-                {detailedAlbum?.services?.apple_music?.url && (
-                  <div className="flex gap-2">
-                    <dt className="w-24 shrink-0 opacity-60">Apple Music</dt>
-                    <dd className="font-mono text-xs truncate">{detailedAlbum.services.apple_music.url.split('/').pop()}</dd>
-                  </div>
-                )}
-              </dl>
-            </div>
+            {(detailedAlbum?.services?.spotify?.external_ids?.upc ||
+              detailedAlbum?.discogs_id ||
+              detailedAlbum?.spotify_id) && (
+              <div>
+                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                  Identifiers
+                </h3>
+                <dl className="flex flex-col gap-1.5 font-mono text-[11px] text-ink-2">
+                  {detailedAlbum?.services?.spotify?.external_ids?.upc && (
+                    <IdRow label="UPC" value={detailedAlbum.services.spotify.external_ids.upc} />
+                  )}
+                  {detailedAlbum?.discogs_id && (
+                    <IdRow label="Discogs" value={String(detailedAlbum.discogs_id)} />
+                  )}
+                  {detailedAlbum?.spotify_id && (
+                    <IdRow label="Spotify" value={detailedAlbum.spotify_id} />
+                  )}
+                </dl>
+              </div>
+            )}
 
-            {/* Copyright Section */}
             {detailedAlbum?.services?.spotify?.copyrights && detailedAlbum.services.spotify.copyrights.length > 0 && (
-              <div className="space-y-4">
-                <h4 className="font-semibold text-foreground">Copyright</h4>
-                <div className="text-xs opacity-70 space-y-1">
+              <div>
+                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                  Copyright
+                </h3>
+                <div className="flex flex-col gap-1 font-mono text-[10.5px] leading-relaxed text-ink-dim">
                   {detailedAlbum.services.spotify.copyrights.map((c, i) => (
                     <div key={i}>{c.text}</div>
                   ))}
                 </div>
               </div>
             )}
-          </div>
-        </footer>
+          </aside>
+        </div>
       </div>
     </PageContainer>
+  );
+}
+
+function KV({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="bg-paper px-3 py-2.5">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+        {label}
+      </dt>
+      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+        {value}
+      </dd>
+    </div>
+  );
+}
+
+function IdRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-baseline gap-3">
+      <dt className="w-16 shrink-0 uppercase tracking-[0.08em] text-ink-dim">{label}</dt>
+      <dd className="truncate">{value}</dd>
+    </div>
   );
 }
