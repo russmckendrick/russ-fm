@@ -647,7 +647,6 @@ export function AlbumDetailPage() {
     if (i !== -1) d = d.substring(0, i).trim();
     return d;
   })();
-  const heroTint = albumColors.background;
   const cleanGenresList = detailedAlbum
     ? getCleanGenres({
         genres: [...album.genre_names, ...(detailedAlbum.styles || [])],
@@ -661,40 +660,164 @@ export function AlbumDetailPage() {
     return m ? `CAT. ${m[1].slice(-3)}` : 'CAT.';
   })();
 
+  const heroImage = getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res');
+  const albumBg = 'var(--album-bg, var(--album-bg-fallback))';
+  const albumFg = 'var(--album-fg, var(--album-fg-fallback))';
+  const albumAccent = 'var(--album-accent, var(--album-accent-fallback))';
+  const albumMuted = 'var(--album-muted, var(--album-muted-fallback))';
+
+  // Section numbering — each section that renders gets the next sequential
+  // "01", "02"… so toggled sections stay correctly numbered after the
+  // Videos / Artist order swap. Must track the current order: About,
+  // Tracklist, Listen, About the artist, Videos.
+  const hasListen = !!(
+    detailedAlbum &&
+    (detailedAlbum.services?.spotify?.id ||
+      detailedAlbum.services?.spotify?.url ||
+      detailedAlbum.services?.apple_music?.url)
+  );
+  const hasArtistBio = !!(
+    detailedAlbum?.artists &&
+    detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various')
+  );
+  const hasVideos = !!(detailedAlbum?.videos && detailedAlbum.videos.length > 0);
+  const sectionNums = (() => {
+    let n = 0;
+    const pad = () => String(++n).padStart(2, '0');
+    return {
+      about: description ? pad() : '01',
+      tracklist: tracks.length > 0 ? pad() : '01',
+      listen: hasListen ? pad() : '01',
+      artist: hasArtistBio ? pad() : '01',
+      videos: hasVideos ? pad() : '01',
+    };
+  })();
+
+  // Shared action buttons — rendered in the hero on mobile/tablet and in
+  // the sidebar above "Release details" on lg+.
+  const actionButtons = (
+    <>
+      <AlbumScrobbleButton
+        album={{
+          artist: album.release_artist,
+          album: album.release_name,
+          tracks: tracks.map(t => ({
+            title: t.name || 'Unknown Track',
+            artist: t.artists?.[0]?.name,
+          })),
+        }}
+      />
+      {detailedAlbum?.services?.apple_music?.url && (
+        <ServiceButton
+          service="apple-music"
+          url={detailedAlbum.services.apple_music.url}
+          icon={<SiApplemusic className="h-4 w-4" />}
+        >
+          Apple Music
+        </ServiceButton>
+      )}
+      {detailedAlbum?.services?.spotify?.url && (
+        <ServiceButton
+          service="spotify"
+          url={detailedAlbum.services.spotify.url}
+          icon={<SiSpotify className="h-4 w-4" />}
+        >
+          Spotify
+        </ServiceButton>
+      )}
+      {detailedAlbum?.discogs_url && (
+        <ServiceButton
+          service="discogs"
+          url={detailedAlbum.discogs_url}
+          icon={<SiDiscogs className="h-4 w-4" />}
+        >
+          Discogs
+        </ServiceButton>
+      )}
+    </>
+  );
+
   return (
     <PageContainer variant="hero">
       {/* Hero ----------------------------------------------------------- */}
-      <section className="relative isolate overflow-hidden bg-paper">
+      <section
+        className="relative isolate overflow-hidden font-grot"
+        style={{
+          '--album-bg-fallback': albumColors.background,
+          '--album-fg-fallback': albumColors.foreground,
+          '--album-accent-fallback': albumColors.accent,
+          '--album-muted-fallback': albumColors.muted,
+        } as React.CSSProperties}
+      >
+        {/* Palette wash — blurred sleeve + tinted gradient + radial accents */}
         <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
-            mixBlendMode: 'multiply',
-            opacity: 0.85,
-          }}
-        />
-        <div
-          className="pointer-events-none absolute inset-0 hidden dark:block"
-          style={{
-            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
-            mixBlendMode: 'screen',
-            opacity: 0.7,
-          }}
-        />
+          aria-hidden
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+          style={{ backgroundColor: albumBg }}
+        >
+          <img
+            src={heroImage}
+            alt=""
+            className="h-full w-full scale-[1.18] object-cover opacity-40 blur-2xl saturate-[1.2] md:blur-[72px]"
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `
+                linear-gradient(
+                  110deg,
+                  color-mix(in oklab, ${albumBg} 92%, black 8%) 0%,
+                  color-mix(in oklab, ${albumBg} 80%, ${albumMuted} 20%) 50%,
+                  color-mix(in oklab, ${albumBg} 72%, ${albumAccent} 10%) 100%
+                )
+              `,
+              mixBlendMode: 'multiply',
+            }}
+          />
+          <div
+            className="absolute inset-0 opacity-90"
+            style={{
+              background: `
+                radial-gradient(
+                  circle at 78% 34%,
+                  color-mix(in oklab, ${albumAccent} 40%, transparent) 0%,
+                  transparent 42%
+                ),
+                radial-gradient(
+                  circle at 18% 86%,
+                  color-mix(in oklab, ${albumMuted} 48%, transparent) 0%,
+                  transparent 50%
+                )
+              `,
+            }}
+          />
+        </div>
 
         <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
-          <nav className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-            <Link to="/albums/1" className="transition-colors hover:text-ink">Albums</Link>
+          <nav
+            className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em]"
+            style={{ color: `color-mix(in oklab, ${albumFg} 55%, transparent)` }}
+          >
+            <Link
+              to="/albums/1"
+              className="transition-opacity hover:opacity-85"
+              style={{ color: `color-mix(in oklab, ${albumFg} 55%, transparent)` }}
+            >
+              Albums
+            </Link>
             <span>/</span>
-            <span className="text-ink">{album.release_name}</span>
+            <span style={{ color: albumFg }}>{album.release_name}</span>
           </nav>
 
           <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-14">
             {/* Header text */}
             <div className="flex min-w-0 flex-col gap-6">
               <div>
-                <div className="mb-4 flex flex-wrap items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-                  <span className="text-hl">{catNo}</span>
+                <div
+                  className="mb-4 flex flex-wrap items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em]"
+                  style={{ color: `color-mix(in oklab, ${albumFg} 60%, transparent)` }}
+                >
+                  <span style={{ color: albumAccent }}>{catNo}</span>
                   {detailedAlbum?.labels?.[0] && (
                     <>
                       <span>·</span>
@@ -708,12 +831,18 @@ export function AlbumDetailPage() {
                     </>
                   )}
                 </div>
-                <h1 className="text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
+                <h1
+                  className="text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em]"
+                  style={{ color: albumFg }}
+                >
                   {album.release_name}
                 </h1>
 
                 {/* Artist row with avatars */}
-                <div className="mt-4 flex flex-wrap items-center gap-3 font-grot text-[20px] font-semibold text-ink md:text-[24px]">
+                <div
+                  className="mt-4 flex flex-wrap items-center gap-3 font-grot text-[20px] font-semibold md:text-[24px]"
+                  style={{ color: albumFg }}
+                >
                   {album.artists && album.artists.length > 1 ? (
                     <div className="flex -space-x-2">
                       {album.artists.map((artist, i) => (
@@ -722,7 +851,8 @@ export function AlbumDetailPage() {
                             src={getArtistAvatarFromData(artist.uri_artist)}
                             alt={artist.name}
                             onError={handleImageError}
-                            className="h-10 w-10 rounded-full border-2 border-paper object-cover"
+                            className="h-10 w-10 rounded-full object-cover"
+                            style={{ boxShadow: `0 0 0 2px ${albumAccent}` }}
                           />
                         </Link>
                       ))}
@@ -733,102 +863,75 @@ export function AlbumDetailPage() {
                         src={getArtistAvatarFromData(album.uri_artist)}
                         alt={album.release_artist}
                         onError={handleImageError}
-                        className="h-10 w-10 rounded-full border-2 border-paper object-cover"
+                        className="h-10 w-10 rounded-full object-cover"
+                        style={{ boxShadow: `0 0 0 2px ${albumAccent}` }}
                       />
                     </Link>
                   )}
                   {album.artists && album.artists.length > 1 ? (
                     album.artists.map((artist, i) => (
                       <React.Fragment key={i}>
-                        <Link to={artist.uri_artist} className="transition-colors hover:text-hl">
+                        <Link
+                          to={artist.uri_artist}
+                          className="transition-opacity hover:opacity-85"
+                          style={{ color: `color-mix(in oklab, ${albumFg} 88%, transparent)` }}
+                        >
                           {artist.name}
                         </Link>
                         {i < album.artists.length - 1 && (
-                          <span className="text-ink-dim">&</span>
+                          <span style={{ color: `color-mix(in oklab, ${albumFg} 50%, transparent)` }}>&</span>
                         )}
                       </React.Fragment>
                     ))
                   ) : (
-                    <Link to={album.uri_artist} className="transition-colors hover:text-hl">
+                    <Link
+                      to={album.uri_artist}
+                      className="transition-opacity hover:opacity-85"
+                      style={{ color: `color-mix(in oklab, ${albumFg} 88%, transparent)` }}
+                    >
                       {album.release_artist}
                     </Link>
                   )}
                 </div>
               </div>
 
-              {/* KV strip */}
-              <dl className="grid max-w-2xl grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-4">
-                <KV label="Year" value={String(year || '—')} />
-                <KV label="Tracks" value={String(tracks.length)} />
-                <KV
+              {/* KV strip — palette-tinted catalogue tiles */}
+              <dl className="grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
+                <HeroKV label="Year" value={String(year || '—')} />
+                <HeroKV label="Tracks" value={String(tracks.length)} />
+                <HeroKV
                   label="Added"
                   value={album.date_added
                     ? new Date(album.date_added).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' }).toUpperCase()
                     : '—'}
                 />
-                {detailedAlbum?.country && <KV label="Country" value={detailedAlbum.country} />}
+                {detailedAlbum?.country && <HeroKV label="Country" value={detailedAlbum.country} />}
               </dl>
 
               {cleanGenresList.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
                   {cleanGenresList.slice(0, 6).map((g) => (
-                    <GenreTag key={g} genre={g} size="md" linkable />
+                    <GenreTag key={g} genre={g} size="md" tone="tinted" linkable />
                   ))}
                 </div>
               )}
 
-              {/* Action buttons */}
-              <div className="flex flex-wrap gap-2">
-                <AlbumScrobbleButton
-                  album={{
-                    artist: album.release_artist,
-                    album: album.release_name,
-                    tracks: tracks.map(t => ({
-                      title: t.name || 'Unknown Track',
-                      artist: t.artists?.[0]?.name,
-                    })),
-                  }}
-                />
-                {detailedAlbum?.services?.apple_music?.url && (
-                  <ServiceButton
-                    service="apple-music"
-                    url={detailedAlbum.services.apple_music.url}
-                    icon={<SiApplemusic className="h-4 w-4" />}
-                  >
-                    Apple Music
-                  </ServiceButton>
-                )}
-                {detailedAlbum?.services?.spotify?.url && (
-                  <ServiceButton
-                    service="spotify"
-                    url={detailedAlbum.services.spotify.url}
-                    icon={<SiSpotify className="h-4 w-4" />}
-                  >
-                    Spotify
-                  </ServiceButton>
-                )}
-                {detailedAlbum?.discogs_url && (
-                  <ServiceButton
-                    service="discogs"
-                    url={detailedAlbum.discogs_url}
-                    icon={<SiDiscogs className="h-4 w-4" />}
-                  >
-                    Discogs
-                  </ServiceButton>
-                )}
+              {/* Action buttons — mobile/tablet only; desktop sits in sidebar */}
+              <div className="flex flex-wrap gap-2 lg:hidden">
+                {actionButtons}
               </div>
             </div>
 
             {/* Sleeve */}
             <div className="mx-auto w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]">
               <div
-                className="aspect-square w-full overflow-hidden bg-paper-2"
+                className="aspect-square w-full overflow-hidden border border-white/15 bg-paper-2"
                 style={{
-                  boxShadow: `0 40px 80px -20px ${albumColors.background}, 0 6px 20px -6px rgba(14,13,11,0.15)`,
+                  boxShadow: `0 40px 80px -20px color-mix(in oklab, ${albumBg} 80%, black 20%), 0 6px 20px -6px rgba(0,0,0,0.35)`,
                 }}
               >
                 <img
-                  src={getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res')}
+                  src={heroImage}
                   onError={handleImageError}
                   alt={album.release_name}
                   className="h-full w-full object-cover"
@@ -845,15 +948,19 @@ export function AlbumDetailPage() {
           <div className="flex flex-col gap-16">
             {description && (
               <section>
-                <SectionHeader num="01" label="About this record" />
-                <div className="mt-6 font-grot text-[17px] leading-[1.7] text-ink-2">
-                  {description.includes('\n') ? (
-                    description.split('\n').filter(p => p.trim()).map((p, i) => (
-                      <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
-                    ))
-                  ) : (
-                    <p>{description}</p>
-                  )}
+                <SectionHeader num={sectionNums.about} label="About this record" />
+                <div className="mt-6">
+                  <ExpandableBody shouldCollapse={description.length > 600}>
+                    <div className="font-grot text-[17px] leading-[1.7] text-ink-2">
+                      {description.includes('\n') ? (
+                        description.split('\n').filter(p => p.trim()).map((p, i) => (
+                          <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
+                        ))
+                      ) : (
+                        <p>{description}</p>
+                      )}
+                    </div>
+                  </ExpandableBody>
                 </div>
               </section>
             )}
@@ -914,7 +1021,7 @@ export function AlbumDetailPage() {
 
               return (
                 <section>
-                  <SectionHeader num={description ? '02' : '01'} label="Tracklist" count={tracks.length} />
+                  <SectionHeader num={sectionNums.tracklist} label="Tracklist" count={tracks.length} />
                   <div className="mt-6">
                     {trackGrouping.type === 'lp' ? (
                       <div className="flex flex-col gap-10">
@@ -948,7 +1055,7 @@ export function AlbumDetailPage() {
             {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
               <section>
                 <SectionHeader
-                  num={description && tracks.length ? '03' : (description || tracks.length ? '02' : '01')}
+                  num={sectionNums.listen}
                   label={`Listen to ${detailedAlbum.title}`}
                 />
                 <div className="mt-6 border border-rule-strong bg-paper p-5 md:p-6">
@@ -957,72 +1064,68 @@ export function AlbumDetailPage() {
               </section>
             )}
 
-            {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
-              <section>
-                <SectionHeader label="Videos" count={detailedAlbum.videos.length} />
-                <div className="mt-6">
-                  <VideoSection videos={detailedAlbum.videos} />
-                </div>
-              </section>
-            )}
+            {detailedAlbum?.artists && detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various') && (() => {
+              const artistsWithBio = detailedAlbum.artists.filter(
+                a => a.biography && a.name.toLowerCase() !== 'various',
+              );
+              const sectionLabel =
+                artistsWithBio.length === 1
+                  ? `About ${artistsWithBio[0].name}`
+                  : 'About the artists';
 
-            {detailedAlbum?.artists && detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various') && (
-              <section>
-                <SectionHeader label="About the artist" />
-                <div className="mt-6 flex flex-col gap-12">
-                  {detailedAlbum.artists.map((artist, index) => {
-                    if (!artist.biography || artist.name.toLowerCase() === 'various') return null;
-                    const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
-                    let bio = artist.biography.replace(/<[^>]*>/g, '').trim();
-                    const readMore = bio.indexOf('Read more on Last.fm');
-                    if (readMore !== -1) bio = bio.substring(0, readMore).trim();
-                    const wiki = bio.indexOf('Full Wikipedia article:');
-                    if (wiki !== -1) bio = bio.substring(0, wiki).trim();
+              return (
+                <section>
+                  <SectionHeader num={sectionNums.artist} label={sectionLabel} />
+                  <div className="mt-6 flex flex-col gap-12">
+                    {detailedAlbum.artists.map((artist, index) => {
+                      if (!artist.biography || artist.name.toLowerCase() === 'various') return null;
+                      const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
+                      let bio = artist.biography.replace(/<[^>]*>/g, '').trim();
+                      const readMore = bio.indexOf('Read more on Last.fm');
+                      if (readMore !== -1) bio = bio.substring(0, readMore).trim();
+                      const wiki = bio.indexOf('Full Wikipedia article:');
+                      if (wiki !== -1) bio = bio.substring(0, wiki).trim();
 
-                    const isLong = bio.length > 500;
-                    let display = bio;
-                    if (isLong) {
-                      const truncated = bio.substring(0, 500);
-                      const lastSpace = truncated.lastIndexOf(' ');
-                      display = lastSpace > 400 ? truncated.substring(0, lastSpace) : truncated;
-                    }
-                    const paragraphs = display.split('\n').filter(p => p.trim());
+                      const paragraphs = bio.split('\n').filter(p => p.trim());
 
-                    return (
-                      <div key={index} className="grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10">
-                        <div>
-                          <img
-                            src={getArtistImageFromData(artistUri, 'medium')}
-                            alt={artist.name}
-                            onError={handleImageError}
-                            className="aspect-square w-full rounded-full border border-rule-strong object-cover"
-                          />
-                          <h4 className="mt-4 font-grot text-[18px] font-semibold leading-tight tracking-[-0.01em] text-ink">
-                            {artist.name}
-                          </h4>
-                          <Link
-                            to={artistUri}
-                            className="mt-1 inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim transition-colors hover:text-hl"
-                          >
-                            View profile →
-                          </Link>
-                        </div>
-                        <div className="font-grot text-[16px] leading-[1.7] text-ink-2">
-                          {paragraphs.map((p, i) => (
-                            <p key={i} className="mb-4 last:mb-0">{p.trim()}</p>
-                          ))}
-                          {isLong && (
+                      return (
+                        <div key={index} className="grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10">
+                          <div>
+                            <img
+                              src={getArtistImageFromData(artistUri, 'medium')}
+                              alt={artist.name}
+                              onError={handleImageError}
+                              className="aspect-square w-full rounded-full border border-rule-strong object-cover"
+                            />
+                          </div>
+                          <div>
                             <Link
                               to={artistUri}
-                              className="mt-4 inline-block font-mono text-[11px] uppercase tracking-[0.08em] text-hl"
+                              className="mb-5 inline-flex items-center gap-2 border border-rule-strong bg-paper px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
                             >
-                              Read more about {artist.name} →
+                              View profile <span aria-hidden>→</span>
                             </Link>
-                          )}
+                            <ExpandableBody shouldCollapse={bio.length > 500}>
+                              <div className="font-grot text-[16px] leading-[1.7] text-ink-2">
+                                {paragraphs.map((p, i) => (
+                                  <p key={i} className="mb-4 last:mb-0">{p.trim()}</p>
+                                ))}
+                              </div>
+                            </ExpandableBody>
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                </section>
+              );
+            })()}
+
+            {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
+              <section>
+                <SectionHeader num={sectionNums.videos} label="Videos" count={detailedAlbum.videos.length} />
+                <div className="mt-6">
+                  <VideoSection videos={detailedAlbum.videos} />
                 </div>
               </section>
             )}
@@ -1030,6 +1133,11 @@ export function AlbumDetailPage() {
 
           {/* Sidebar ------------------------------------------------------ */}
           <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
+            {/* Action buttons — desktop only; mobile has them in the hero. */}
+            <div className="hidden flex-col gap-2 lg:flex">
+              {actionButtons}
+            </div>
+
             <div>
               <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
                 Release details
@@ -1094,6 +1202,107 @@ function KV({ label, value }: { label: string; value: string }) {
         {label}
       </dt>
       <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+        {value}
+      </dd>
+    </div>
+  );
+}
+
+/**
+ * Collapsible body copy. When the natural content height exceeds
+ * `collapsedMaxHeight`, the body clips with a paper-gradient fade and
+ * shows a "Read more" toggle beneath. Expanded state reveals the full
+ * text with a "Show less" affordance. Used for the About and Artist
+ * bio sections — replaces the previous hard-truncate + jump-to-artist
+ * pattern.
+ */
+function ExpandableBody({
+  children,
+  collapsedMaxHeight = 260,
+  shouldCollapse,
+  expandLabel = 'Read more',
+  collapseLabel = 'Show less',
+}: {
+  children: React.ReactNode;
+  collapsedMaxHeight?: number;
+  shouldCollapse: boolean;
+  expandLabel?: string;
+  collapseLabel?: string;
+}) {
+  const [expanded, setExpanded] = useState(false);
+
+  if (!shouldCollapse) {
+    return <>{children}</>;
+  }
+
+  return (
+    <div>
+      <div
+        className="relative overflow-hidden transition-[max-height] duration-500 ease-out"
+        style={{ maxHeight: expanded ? '4000px' : `${collapsedMaxHeight}px` }}
+      >
+        {children}
+        {!expanded && (
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper/85 to-transparent"
+          />
+        )}
+      </div>
+      <button
+        type="button"
+        onClick={() => setExpanded(v => !v)}
+        aria-expanded={expanded}
+        className="mt-4 inline-flex items-center gap-2 border border-rule-strong bg-paper px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
+      >
+        {expanded ? collapseLabel : expandLabel}
+        <span
+          aria-hidden
+          className="inline-block transition-transform duration-300"
+          style={{ transform: expanded ? 'rotate(180deg)' : 'none' }}
+        >
+          ↓
+        </span>
+      </button>
+    </div>
+  );
+}
+
+/**
+ * Hero-local KV tile — palette-tinted, accent rail on the left edge,
+ * transparent fill, open on the right (catalogue-row feel). Mirrors the
+ * home hero's KV treatment so both heroes share the same visual
+ * language.
+ */
+function HeroKV({ label, value }: { label: string; value: string }) {
+  return (
+    <div
+      className="relative border-y border-l px-3 py-3 pl-4 backdrop-blur-[2px] md:px-4 md:pl-5"
+      style={{
+        backgroundColor:
+          'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 6%, transparent)',
+        borderColor:
+          'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 22%, transparent)',
+        color: 'var(--album-fg, var(--album-fg-fallback))',
+      }}
+    >
+      <span
+        aria-hidden
+        className="absolute inset-y-0 left-0 w-[3px]"
+        style={{
+          backgroundColor: 'var(--album-accent, var(--album-accent-fallback))',
+        }}
+      />
+      <dt
+        className="font-mono text-[10px] uppercase tracking-[0.14em]"
+        style={{
+          color:
+            'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 62%, transparent)',
+        }}
+      >
+        {label}
+      </dt>
+      <dd className="mt-1.5 truncate font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] md:text-[16px]">
         {value}
       </dd>
     </div>
