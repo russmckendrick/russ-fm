@@ -1,45 +1,40 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Search, Menu, X } from "lucide-react";
+import {
+  Search,
+  Menu,
+  X,
+  type LucideIcon,
+  House,
+  Disc3,
+  Users2,
+  Tags,
+  BarChart3,
+  Shuffle,
+  Sparkles,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BrandMark } from "./BrandMark";
 import { ThemeToggle } from "./theme-toggle";
 import { SearchOverlay } from "./SearchOverlay";
 import { MobileSearchModal } from "./MobileSearchModal";
 import { UserProfileMenu } from "./UserProfileMenu";
 
-type NavItem = { path: string; label: string; activePrefix?: string };
-
-/** Spinning-record brand glyph. Crimson to keep the accent role the old
- *  `◉` used to play; honours `prefers-reduced-motion` by pausing. */
-function BrandMark() {
-  return (
-    <span
-      aria-hidden
-      className="grid h-[22px] w-[22px] shrink-0 place-items-center text-hl motion-safe:animate-spin-slow"
-    >
-      <svg viewBox="0 0 512 512" className="h-full w-full fill-current">
-        <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M256,490.667c-129.387,0-234.667-105.28-234.667-234.667S126.613,21.333,256,21.333S490.667,126.613,490.667,256S385.387,490.667,256,490.667z" />
-        <path d="M458.667,245.333c-5.888,0-10.667,4.779-10.667,10.667c0,105.856-86.144,192-192,192c-5.888,0-10.667,4.779-10.667,10.667s4.779,10.667,10.667,10.667c117.632,0,213.333-95.701,213.333-213.333C469.333,250.112,464.555,245.333,458.667,245.333z" />
-        <path d="M256,64c5.888,0,10.667-4.779,10.667-10.667S261.888,42.667,256,42.667C138.368,42.667,42.667,138.368,42.667,256c0,5.888,4.779,10.667,10.667,10.667S64,261.888,64,256C64,150.144,150.144,64,256,64z" />
-        <path d="M245.333,373.333c0,5.888,4.779,10.667,10.667,10.667c70.592,0,128-57.408,128-128c0-5.888-4.779-10.667-10.667-10.667c-5.888,0-10.667,4.779-10.667,10.667c0,58.816-47.851,106.667-106.667,106.667C250.112,362.667,245.333,367.445,245.333,373.333z" />
-        <path d="M256,405.333c-5.888,0-10.667,4.779-10.667,10.667c0,5.888,4.779,10.667,10.667,10.667c94.101,0,170.667-76.565,170.667-170.667c0-5.888-4.779-10.667-10.667-10.667c-5.888,0-10.667,4.779-10.667,10.667C405.333,338.347,338.347,405.333,256,405.333z" />
-        <path d="M256,106.667c5.888,0,10.667-4.779,10.667-10.667S261.888,85.333,256,85.333c-94.101,0-170.667,76.565-170.667,170.667c0,5.888,4.779,10.667,10.667,10.667s10.667-4.779,10.667-10.667C106.667,173.653,173.653,106.667,256,106.667z" />
-        <path d="M320,256c0-35.285-28.715-64-64-64s-64,28.715-64,64s28.715,64,64,64S320,291.285,320,256z M213.333,256c0-23.531,19.136-42.667,42.667-42.667s42.667,19.136,42.667,42.667S279.531,298.667,256,298.667S213.333,279.531,213.333,256z" />
-        <path d="M277.333,256c0-11.776-9.557-21.333-21.333-21.333s-21.333,9.557-21.333,21.333s9.557,21.333,21.333,21.333S277.333,267.776,277.333,256z" />
-        <path d="M266.667,138.667c0-5.888-4.779-10.667-10.667-10.667c-70.592,0-128,57.408-128,128c0,5.888,4.779,10.667,10.667,10.667s10.667-4.779,10.667-10.667c0-58.816,47.851-106.667,106.667-106.667C261.888,149.333,266.667,144.555,266.667,138.667z" />
-      </svg>
-    </span>
-  );
-}
+type NavItem = {
+  path: string;
+  label: string;
+  activePrefix?: string;
+  icon: LucideIcon;
+};
 
 const NAV_ITEMS: NavItem[] = [
-  { path: "/", label: "Home" },
-  { path: "/albums/1", label: "Albums", activePrefix: "/albums" },
-  { path: "/artists/1", label: "Artists", activePrefix: "/artists" },
-  { path: "/genres", label: "Genres", activePrefix: "/genres" },
-  { path: "/stats", label: "Stats" },
-  { path: "/random", label: "Random" },
-  { path: "/wrapped", label: "Wrapped", activePrefix: "/wrapped" },
+  { path: "/", label: "Home", icon: House },
+  { path: "/albums/1", label: "Albums", activePrefix: "/albums", icon: Disc3 },
+  { path: "/artists/1", label: "Artists", activePrefix: "/artists", icon: Users2 },
+  { path: "/genres", label: "Genres", activePrefix: "/genres", icon: Tags },
+  { path: "/stats", label: "Stats", icon: BarChart3 },
+  { path: "/random", label: "Random", icon: Shuffle },
+  { path: "/wrapped", label: "Wrapped", activePrefix: "/wrapped", icon: Sparkles },
 ];
 
 export function Navigation() {
@@ -100,40 +95,57 @@ export function Navigation() {
           {/* --- Brand ------------------------------------------------ */}
           <Link
             to="/"
-            className="flex shrink-0 items-center gap-2.5 text-ink hover:text-ink"
+            className="flex shrink-0 items-center gap-3 text-ink hover:text-ink md:gap-3.5"
             aria-label="russ.fm — home"
           >
             <BrandMark />
             <span className="text-[18px] font-bold leading-none tracking-[-0.02em]">
               russ.fm
             </span>
-            <span className="hidden font-mono text-[10px] uppercase leading-[1.1] tracking-[0.08em] text-ink-dim lg:block">
-              / personal record
-              <br />
-              collection
+            <span className="hidden items-center gap-3 lg:flex">
+              <span
+                aria-hidden
+                className="font-grot text-[22px] font-light leading-none text-ink-dim"
+              >
+                /
+              </span>
+              <span className="flex flex-col justify-center font-mono text-[10px] uppercase leading-[1.08] tracking-[0.14em] text-ink-dim">
+                <span>personal record</span>
+                <span>collection</span>
+              </span>
             </span>
           </Link>
 
-          {/* --- Nav pill --------------------------------------------- */}
+          {/* --- Nav rail --------------------------------------------- */}
           <nav
             aria-label="Primary"
             className="hidden flex-1 justify-center md:flex"
           >
-            <ul className="flex items-center gap-0.5 border border-rule p-[3px]">
+            <ul className="flex items-center gap-4 xl:gap-5">
               {NAV_ITEMS.map((item) => {
                 const on = isActive(item);
+                const Icon = item.icon;
                 return (
                   <li key={item.path}>
                     <Link
                       to={item.path}
                       aria-current={on ? "page" : undefined}
                       className={cn(
-                        "block px-3.5 py-2 text-[12.5px] font-medium leading-none tracking-[-0.005em] transition-colors",
+                        "group inline-flex items-center gap-2 border-b px-1 py-2.5 text-[12.5px] font-medium leading-none tracking-[-0.005em] transition-all",
                         on
-                          ? "bg-ink text-paper"
-                          : "text-ink-3 hover:bg-paper-2 hover:text-ink"
+                          ? "border-ink text-ink"
+                          : "border-transparent text-ink-3 hover:border-rule-strong hover:text-ink"
                       )}
                     >
+                      <Icon
+                        className={cn(
+                          "h-3.5 w-3.5 transition-colors",
+                          on
+                            ? "text-ink"
+                            : "text-ink-dim group-hover:text-ink-2",
+                        )}
+                        aria-hidden
+                      />
                       {item.label}
                     </Link>
                   </li>
@@ -238,6 +250,7 @@ export function Navigation() {
             <ul className="flex flex-col">
               {NAV_ITEMS.map((item) => {
                 const on = isActive(item);
+                const Icon = item.icon;
                 return (
                   <li key={item.path}>
                     <Link
@@ -249,7 +262,16 @@ export function Navigation() {
                         on ? "text-ink" : "text-ink-3"
                       )}
                     >
-                      <span>{item.label}</span>
+                      <span className="flex items-center gap-3">
+                        <Icon
+                          className={cn(
+                            "h-[18px] w-[18px]",
+                            on ? "text-ink" : "text-ink-dim",
+                          )}
+                          aria-hidden
+                        />
+                        <span>{item.label}</span>
+                      </span>
                       <span
                         className="font-mono text-[10px] tracking-[0.08em] text-ink-dim"
                         aria-hidden

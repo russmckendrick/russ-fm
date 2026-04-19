@@ -14,7 +14,7 @@ This document covers all route-level page components in russ.fm.
 
 | Route | Structure |
 |-------|-----------|
-| `/` | Hero carousel → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster → Catalogue strip. Main column + sticky `StatsAside` on desktop. |
+| `/` | Coverflow hero → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster → Catalogue strip. Main column + sticky `StatsAside` on desktop. |
 | `/albums/:page` | `BrowseHeader` → hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
 | `/artists/:page` | `BrowseHeader` → search+sort row → full-width A–Z strip → 6-col circular-portrait grid → mono pager. |
 | `/album/:slug` | Tinted wash hero (sleeve right, title+artist+KV+chips+actions left) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
@@ -72,7 +72,7 @@ Landing page with featured content and collection highlights.
 **Route:** `/`, `/home`
 
 **Features:**
-- Featured album hero with a blurred sleeve backdrop and palette-driven accents
+- Featured coverflow hero built from the 10 latest releases, with a blurred active-sleeve backdrop
 - Recently added albums section
 - Recently added artists section
 - Random collection samples
@@ -88,7 +88,7 @@ Landing page with featured content and collection highlights.
 // src/config/app.config.ts
 homepage: {
   hero: {
-    numberOfFeaturedAlbums: 6,
+    numberOfFeaturedAlbums: 10,
     autoRotateInterval: 12000 // 12 seconds
   },
   recentlyAdded: { displayCount: 12 },

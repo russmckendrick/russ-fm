@@ -17,7 +17,7 @@ export const appConfig = {
   // Home page configuration
   homepage: {
     hero: {
-      numberOfFeaturedAlbums: 6, // Number of albums in the hero rotation
+      numberOfFeaturedAlbums: 10, // Number of albums in the hero rotation
       autoRotateInterval: 12000, // Auto-rotation interval in milliseconds
       exploreButtonText: 'Vew album', // Text for the main CTA button
     },
@@ -92,7 +92,6 @@ export const appConfig = {
       },
     },
     copyright: {
-      year: 2025,
       text: 'Russ.fm. A personal record collection showcase.',
     },
   },

@@ -61,6 +61,8 @@ Floating island navigation bar with search integration.
 - Scroll-aware behavior
 - Theme toggle integration
 - Search button trigger
+- Ink-colour spinning record mark and aligned `russ.fm / Personal Record Collection` brand lockup
+- Icon-led primary nav with hairline active state instead of boxed tabs
 
 ```tsx
 import { Navigation } from '@/components/Navigation';
@@ -76,6 +78,11 @@ import { Navigation } from '@/components/Navigation';
 ### Footer (`src/components/Footer.tsx`)
 
 Site footer with links and copyright.
+
+**Features:**
+- Shared spinning record mark and matching `russ.fm / Personal Record Collection` footer lockup
+- Copyright year is derived at render time rather than hard-coded
+- Icon-led internal link cluster plus external service icons
 
 ```tsx
 import { Footer } from '@/components/Footer';
@@ -518,12 +525,10 @@ interface StatsData {
 
 ### HeroSection (`src/components/home/HeroSection.tsx`)
 
-Asymmetric editorial hero: the cover is the dominant element, anchored
-to the viewport's right edge (outside the padded `max-w-[1640px]`
-container) so it bleeds beyond the page gutters. The display title sits
-on the left and overlaps the cover's left edge via a text-shadow halo.
-Font-size scales across four character-count tiers to prevent long names
-from cramping.
+Poster-led featured hero: the latest ten releases form a horizontally
+scrollable coverflow where the active sleeve sits center-stage, nearby
+records recede with transforms, and the supporting copy collapses into
+an image-tied caption + slim action row.
 
 ```tsx
 import { HeroSection } from '@/components/home/HeroSection';
@@ -539,44 +544,11 @@ import { HeroSection } from '@/components/home/HeroSection';
 ```
 
 **Features:**
-- Cover bleeds to the viewport's right edge, sized `clamp(460px, 58vw, 720px)` square
-- Title overlaps the cover's left edge by ~8vw on `md+`; stacked cover-over-text on mobile
-- Four-tier title sizing based on character count (≤10 / ≤18 / ≤28 / ≥29)
-- Blurred full-bleed backdrop cloned from the active sleeve art
-- Palette-driven overlays and accents via `/public/album-colors.css`
-- Catalogue-style `CAT. NNNN` label on the sleeve's top-left
-- Renders `<HeroChainTimeline>` flush at the bottom as both progress
-  indicator and divider to the content below
-- Reduced spec cards (`KV`) so metadata supports the sleeve rather than dominating
-
----
-
-### HeroChainTimeline (`src/components/home/HeroChainTimeline.tsx`)
-
-Full-width timer line split into N equal segments, rendered flush at the
-bottom of `<HeroSection>` — it doubles as the divider between the hero
-and the page body. The active segment sweeps 0 → 100% over
-`autoRotateMs`; completed segments stay filled, upcoming ones are
-hairlines. Segments are clickable to jump the hero.
-
-```tsx
-import { HeroChainTimeline } from '@/components/home/HeroChainTimeline';
-
-<HeroChainTimeline
-  total={6}
-  activeIndex={featuredIndex}
-  autoRotateMs={12000}
-  onSelect={handleSelectFeaturedIndex}
-  labels={featuredAlbums.map(a => a.release_name)}
-/>
-```
-
-**Features:**
-- CSS-only sweep animation (`@keyframes hero-chain-fill` in `design-tokens.css`)
-- Re-keyed via `key={activeIndex}` so each index change restarts the sweep
-- Respects `prefers-reduced-motion` — sweep frozen at 100%, instant colour swap
-- `role="tablist"` + `aria-current="step"` on the active segment
-- Keyboard: Left/Right cycles, Enter/Space selects
+- Ten featured sleeves rendered as a draggable/scrollable coverflow
+- Repeated loop track keeps the active poster visually centered through wraparound
+- Balanced linked album + artist caption and slim action row replace boxed hero metadata
+- Blurred active-sleeve backdrop crossfades between palettes for smoother transitions
+- Mobile/tablet keeps the same 10 releases in a simpler snap-strip treatment
 
 ---
 
