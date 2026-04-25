@@ -114,6 +114,7 @@ describe("genreExplorer", () => {
       "Paper Fort",
     ]);
     expect(data.allGenre.relatedGenres.map((genre) => genre.name)).toContain("Electronic");
+    expect(data.allGenre.relatedGenres).toHaveLength(data.genres.length);
     expect(filterArtists(data.allGenre.artists, "paper")[0]?.name).toBe("Paper Fort");
     expect(filterAlbums(data.allGenre.albums, "quiet")[0]?.title).toBe("Quiet Weather");
     expect(resolveArtist(data.allGenre, "north-sea-relay")?.albumCount).toBe(2);

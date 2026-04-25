@@ -216,7 +216,7 @@ const rock = explorer.genres.find((genre) => genre.name === 'Rock');
 
 **Provides:**
 - A global `All genres` summary for collection-wide graph/search mode
-- Genre summaries with album counts, artist counts, year spans, related genres, and cover samples
+- Genre summaries with album counts, artist counts, year spans, full related-genre lists, and cover samples
 - Artist summaries with genre-specific albums plus total collection counts
 - Album summaries with slug, cover URL, artist, year, and connected genres
 - Helpers for URL state resolution, filtering, and sorting

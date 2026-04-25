@@ -392,18 +392,19 @@ Single-page D3 genre explorer built from static `/collection.json`.
 |-----------|------|---------|-------------|
 | `genre` | `all \| string` | `all` | Active scope, e.g. `/genres?genre=all` or `/genres?genre=Rock` |
 | `artist` | `string` | - | Active artist slug within the selected genre |
-| `album` | `string` | - | Active record slug, used to highlight the record node and expose its detail-page link |
+| `album` | `string` | - | Legacy/shared-link record slug used to highlight a record node |
 | `sort` | `dominance \| recent \| name \| year` | `dominance` | Artist/album ordering |
 | `q` | `string` | - | Search across genres, artists, and albums |
-| `nodes` | `standard \| more \| max` | `standard` | Graph density control for showing more related genres, artists, and records |
+| `nodes` | `number` or legacy `standard \| more \| max` | responsive | Graph node budget. Defaults to standard on mobile, more on tablet, and maximum on desktop |
 
 **Features:**
 - One primary D3 force graph showing either the global collection or a selected genre, related genres, artists, and artist records
 - The selected genre control is a styled Radix popup populated from computed genre summaries, with `All genres` first
 - Click related genre nodes to redraw around that genre
 - Click artist nodes to reveal that artist's connected records in the same graph
-- Click record nodes to select them; canonical artist/record pages are exposed as compact links
-- Search, sort, and node-density controls keep state in the URL
+- Click record nodes to open their canonical album detail pages
+- Search, sort, and numeric node-budget slider controls keep state in the URL
+- The central genre hub uses the same paper/ink record-label treatment as the surrounding app, not a filled dark graph node
 - Loading, empty, and error states using editorial primitives
 
 ---

@@ -179,8 +179,7 @@ export function buildGenreExplorer(collection: Album[]): GenreExplorerData {
       const albums = sortAlbums(Array.from(genre.albums.values()), "recent");
       const relatedGenres = Array.from(genre.relatedGenres.entries())
         .map(([name, albumCount]) => ({ name, albumCount }))
-        .sort((a, b) => b.albumCount - a.albumCount || a.name.localeCompare(b.name))
-        .slice(0, 8);
+        .sort((a, b) => b.albumCount - a.albumCount || a.name.localeCompare(b.name));
 
       return {
         name: genre.name,
@@ -228,9 +227,10 @@ export function buildGenreExplorer(collection: Album[]): GenreExplorerData {
     yearEnd: maxYear(globalYears),
     latestAdded: allAlbums[0]?.dateAdded || "",
     coverSamples: allAlbums.slice(0, 8),
-    relatedGenres: genreSummaries
-      .slice(0, 16)
-      .map((genre) => ({ name: genre.name, albumCount: genre.albumCount })),
+    relatedGenres: genreSummaries.map((genre) => ({
+      name: genre.name,
+      albumCount: genre.albumCount,
+    })),
     artists: allArtists,
     topArtists: allArtists.slice(0, 18),
     albums: allAlbums,
