@@ -130,7 +130,7 @@ export function StatsPage() {
         <div>
           <SectionHeader num="02" label="Top genres" count={stats.topGenres.length} />
           <div className="mt-6">
-            <GenreDonut data={stats.topGenres.slice(0, 8)} />
+            <GenreDonut data={stats.topGenres} />
           </div>
         </div>
       </section>
@@ -153,7 +153,7 @@ export function StatsPage() {
           <div>
             <SectionHeader num="04" label={`Top ${redesignConfig.stats.topYearsCount} years`} />
             <div className="mt-6">
-              <TopYearsBars data={stats.topYears.slice(0, redesignConfig.stats.topYearsCount)} />
+              <TopYearsBars data={stats.topYears} />
             </div>
           </div>
         </section>
@@ -170,7 +170,7 @@ export function StatsPage() {
             actionTo="/artists/1"
           />
           <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-            {stats.topArtists.slice(0, redesignConfig.stats.topArtistsCount).map((a, i) => (
+            {stats.topArtists.map((a, i) => (
               <ArtistCard key={a.name} artist={a} index={i + 1} />
             ))}
           </div>
@@ -196,7 +196,7 @@ export function StatsPage() {
           actionTo="/albums/1"
         />
         <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {stats.recentAdditions.slice(0, redesignConfig.stats.recentAdditionsCount).map((a, i) => (
+          {stats.recentAdditions.map((a, i) => (
             <AlbumCard key={a.uri_release} album={a} index={i + 1} />
           ))}
         </div>
@@ -214,7 +214,7 @@ export function StatsPage() {
       <section className="mb-16">
         <SectionHeader num="11" label="From the crates · random picks" count={stats.randomAlbums.length} />
         <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {stats.randomAlbums.slice(0, redesignConfig.stats.fromTheCratesCount).map((a, i) => (
+          {stats.randomAlbums.map((a, i) => (
             <AlbumCard key={a.uri_release} album={a} index={i + 1} />
           ))}
         </div>
@@ -224,7 +224,7 @@ export function StatsPage() {
       <section>
         <SectionHeader num="12" label="Artists you might have forgotten" count={stats.randomArtists.length} />
         <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {stats.randomArtists.slice(0, redesignConfig.stats.randomArtistsCount).map((a, i) => (
+          {stats.randomArtists.map((a, i) => (
             <ArtistCard key={a.name} artist={a} index={i + 1} />
           ))}
         </div>
@@ -453,7 +453,7 @@ function calculateStats(data: Album[]): CollectionStats {
 
   const topArtists: ArtistStat[] = Object.entries(artistCounts)
     .sort(([, a], [, b]) => b - a)
-    .slice(0, 9)
+    .slice(0, redesignConfig.stats.topArtistsCount)
     .map(([name, count]) => {
       const artistAlbums = data.filter(al => al.release_artist === name);
       const first = artistAlbums[0];
@@ -475,7 +475,7 @@ function calculateStats(data: Album[]): CollectionStats {
   }, {});
   const topGenres = Object.entries(genreCounts)
     .sort(([, a], [, b]) => b - a)
-    .slice(0, 10)
+    .slice(0, redesignConfig.stats.topGenresCount)
     .map(([name, value]) => ({ name, value }));
 
   const decadeCounts = data.reduce<Record<string, number>>((acc, album) => {

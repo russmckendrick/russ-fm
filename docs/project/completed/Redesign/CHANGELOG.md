@@ -368,8 +368,8 @@ respects the paper/ink palette and sharp corners.
 
 **Counts wired to `redesignConfig.stats.*`.** The page no longer
 hard-codes `.slice(0, 8)` / `.slice(0, 10)` for the grids —
-`topArtistsCount`, `topYearsCount`, `recentAdditionsCount`,
-`fromTheCratesCount`, `randomArtistsCount`, and
+`topArtistsCount`, `topGenresCount`, `topYearsCount`,
+`recentAdditionsCount`, `fromTheCratesCount`, `randomArtistsCount`, and
 `decadeBarsMaxDecades` all drive the numbers.
 
 **Changed files**

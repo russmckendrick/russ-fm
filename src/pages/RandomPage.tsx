@@ -202,18 +202,18 @@ export function RandomPage() {
         <div className="relative mx-auto grid min-h-[calc(100dvh-5rem)] w-full max-w-[1640px] gap-10 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(340px,0.82fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(440px,0.86fr)_250px]">
           <div
             className={cn(
-              'min-w-0 transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none',
+              'order-2 min-w-0 transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none lg:order-none',
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0',
             )}
           >
-            <header className="max-w-[760px]">
+            <header className="max-w-full lg:max-w-[760px]">
               <div className="mb-5 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
                 <span className="text-hl">Random</span>
                 <span aria-hidden>·</span>
                 <span>Single Record Spin</span>
               </div>
 
-              <h1 className="text-display break-words uppercase text-ink" style={titleStyle}>
+              <h1 className="text-display max-w-full break-words uppercase text-ink lg:max-w-[var(--hero-title-max-width)]" style={titleStyle}>
                 <Link
                   to={albumHref}
                   className="transition-colors duration-200 hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
@@ -248,14 +248,14 @@ export function RandomPage() {
               </div>
             )}
 
-            <div className="mt-8 flex flex-wrap items-center gap-2">
+            <div className="mt-8 flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
               <button
                 type="button"
                 onClick={handleShuffle}
                 disabled={isShuffling}
                 aria-keyshortcuts="Space"
                 className={cn(
-                  'inline-flex items-center gap-2 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[background-color,border-color,color,opacity,transform] duration-200 hover:border-hl hover:bg-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px disabled:pointer-events-none disabled:opacity-65',
+                  'inline-flex w-full items-center justify-center gap-2 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[background-color,border-color,color,opacity,transform] duration-200 hover:border-hl hover:bg-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px disabled:pointer-events-none disabled:opacity-65 sm:w-auto',
                 )}
               >
                 {isShuffling ? (
@@ -268,7 +268,7 @@ export function RandomPage() {
 
               <Link
                 to={albumHref}
-                className="inline-flex items-center gap-2 border border-rule-strong bg-paper px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-[background-color,border-color,color,transform] duration-200 hover:border-hl hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px"
+                className="inline-flex w-full items-center justify-center gap-2 border border-rule-strong bg-paper px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-[background-color,border-color,color,transform] duration-200 hover:border-hl hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px sm:w-auto"
               >
                 Open Record
                 <ArrowRight className="h-4 w-4" aria-hidden />
@@ -279,7 +279,7 @@ export function RandomPage() {
           <Link
             to={albumHref}
             className={cn(
-              'group relative mx-auto block w-full max-w-[560px] transition-[opacity,transform] duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink motion-reduce:transition-none lg:mx-0',
+              'group order-1 relative mx-auto block w-full max-w-[560px] transition-[opacity,transform] duration-300 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink motion-reduce:transition-none lg:order-none lg:mx-0',
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0',
             )}
           >
@@ -305,12 +305,12 @@ export function RandomPage() {
 
           <aside
             className={cn(
-              'min-w-0 border-y border-rule-strong transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none lg:border-y-0',
+              'order-3 min-w-0 transition-[opacity,transform] duration-300 ease-out motion-reduce:transition-none lg:order-none',
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-2 opacity-0',
             )}
             aria-label="Selected record metadata"
           >
-            <dl>
+            <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-3 lg:grid-cols-1 lg:gap-0 lg:border-0 lg:bg-transparent">
               <MetaRail label="Released" value={year || '—'} />
               <MetaRail label="Added" value={addedDate} />
               <MetaRail label="Genres" value={genreSummary} />
@@ -332,7 +332,7 @@ function RandomPageSkeleton() {
         aria-busy="true"
       >
         <div className="mx-auto grid min-h-[calc(100dvh-5rem)] w-full max-w-[1640px] gap-10 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(340px,0.82fr)_220px] lg:items-center lg:gap-12">
-          <div className="min-w-0">
+          <div className="order-2 min-w-0 lg:order-none">
             <div className="mb-5 h-3 w-48 animate-pulse bg-rule" />
             <div className="h-16 w-full max-w-[520px] animate-pulse bg-rule md:h-24" />
             <div className="mt-3 h-10 w-72 max-w-full animate-pulse bg-rule" />
@@ -347,11 +347,11 @@ function RandomPageSkeleton() {
             </p>
           </div>
 
-          <div className="mx-auto aspect-square w-full max-w-[560px] animate-pulse bg-rule lg:mx-0" />
+          <div className="order-1 mx-auto aspect-square w-full max-w-[560px] animate-pulse bg-rule lg:order-none lg:mx-0" />
 
-          <div className="border-y border-rule-strong lg:border-y-0">
+          <div className="order-3 grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-3 lg:order-none lg:grid-cols-1 lg:gap-0 lg:border-0 lg:bg-transparent">
             {['Released', 'Added', 'Genres', 'Mode'].map((label) => (
-              <div key={label} className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+              <div key={label} className="bg-paper p-4 lg:border-b lg:border-rule lg:bg-transparent lg:px-0 lg:py-5 lg:last:border-b-0">
                 <div className="h-3 w-20 animate-pulse bg-rule" />
                 <div className="mt-3 h-6 w-32 animate-pulse bg-rule" />
               </div>
@@ -398,7 +398,7 @@ function RandomPageMessage({
 
 function MetaRail({ label, value }: { label: string; value: string }) {
   return (
-    <div className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+    <div className="bg-paper p-4 lg:border-b lg:border-rule lg:bg-transparent lg:px-0 lg:py-5 lg:last:border-b-0">
       <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
         {label}
       </dt>
@@ -459,7 +459,7 @@ function getTitleStyle(title: string): CSSProperties {
 
   return {
     fontSize: `clamp(46px, ${preferredVw}vw, ${maxPx}px)`,
-    maxWidth,
+    '--hero-title-max-width': maxWidth,
     lineHeight: 0.9,
-  };
+  } as CSSProperties;
 }

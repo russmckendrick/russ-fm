@@ -5,7 +5,7 @@ import { AlbumCard } from '@/components/AlbumCard';
 import { DossierHero, EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader, DragWall } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { GenreTag } from '@/components/ui/genre-tag';
-import { handleImageError } from '@/lib/image-utils';
+import { handleImageError, migrateImageUri } from '@/lib/image-utils';
 import { WrappedData, WrappedRelease } from '@/types/wrapped';
 import type { Album } from '@/types/album';
 import { YearSelector } from './components/YearSelector';
@@ -200,7 +200,7 @@ export function WrappedYear() {
             >
               <div className="aspect-square w-full overflow-hidden border border-rule-strong bg-paper-2 shadow-[0_30px_60px_-20px_rgba(14,13,11,0.25)]">
                 <img
-                  src={albumOfYear.images['hi-res'] || albumOfYear.images.medium}
+                  src={getWrappedImageUrl(albumOfYear.images['hi-res'] || albumOfYear.images.medium)}
                   alt={albumOfYear.title}
                   onError={handleImageError}
                   className="h-full w-full object-cover"
@@ -242,7 +242,7 @@ export function WrappedYear() {
                 </span>
                 <Link to={`/album/${album.slug}`} className="block">
                   <img
-                    src={album.images.medium}
+                    src={getWrappedImageUrl(album.images.medium || album.images['hi-res'])}
                     alt=""
                     loading="lazy"
                     onError={handleImageError}
@@ -283,7 +283,7 @@ export function WrappedYear() {
                     <div className="relative aspect-square w-full overflow-hidden rounded-[6px] border border-rule-strong bg-paper-2">
                       {img ? (
                         <img
-                          src={img}
+                          src={getWrappedImageUrl(img)}
                           alt={artist.name}
                           loading="lazy"
                           onError={handleImageError}
@@ -512,17 +512,21 @@ function wrappedReleaseToAlbum(r: WrappedRelease): Album {
     uri_release: uriRelease,
     uri_artist: uriArtist,
     images_uri_release: {
-      'hi-res': r.images['hi-res'] || r.images.medium,
-      medium: r.images.medium,
+      'hi-res': getWrappedImageUrl(r.images['hi-res'] || r.images.medium),
+      medium: getWrappedImageUrl(r.images.medium),
     },
     artists: r.artists.map((a) => ({
       name: a.name,
       uri_artist: `/artist/${a.slug}/`,
       images_uri_artist: {
-        'hi-res': a.images?.['hi-res'] || a.images?.medium || '',
-        medium: a.images?.medium || '',
-        avatar: a.images?.avatar || '',
+        'hi-res': getWrappedImageUrl(a.images?.['hi-res'] || a.images?.medium),
+        medium: getWrappedImageUrl(a.images?.medium),
+        avatar: getWrappedImageUrl(a.images?.avatar),
       },
     })),
   };
+}
+
+function getWrappedImageUrl(src?: string): string {
+  return src ? migrateImageUri(src) : '';
 }

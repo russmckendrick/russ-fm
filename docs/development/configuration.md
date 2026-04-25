@@ -92,6 +92,11 @@ export function getConfig<K extends keyof typeof appConfig>(
 }
 ```
 
+`homepage.eras.excludedDecades` is applied by the home `StatsAside`
+overview when calculating its record total, decade bars, genre bars, and
+yearly additions timeline. The displayed decade span still reflects the
+full collection.
+
 ### Usage
 
 ```typescript

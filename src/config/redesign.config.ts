@@ -56,7 +56,7 @@ export const redesignConfig = {
     stats: {
       num: '00',
       kicker: 'Stats · russ.fm / collection dossier',
-      title: 'The shelf by the numbers',
+      title: 'The shelves by numbers',
     },
     genres: {
       num: '03',
@@ -88,12 +88,13 @@ export const redesignConfig = {
 
   /** Section sizing on the Stats page. */
   stats: {
-    topArtistsCount: 8,
+    topArtistsCount: 12,
+    topGenresCount: 8,
     topYearsCount: 5,
-    recentAdditionsCount: 10,
-    fromTheCratesCount: 10,
-    randomArtistsCount: 8,
-    decadeBarsMaxDecades: 8,
+    recentAdditionsCount: 12,
+    fromTheCratesCount: 6,
+    randomArtistsCount: 6,
+    decadeBarsMaxDecades: 10,
   },
 
   /** Random page "next up if you shuffle" peek strip. */

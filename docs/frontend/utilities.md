@@ -20,6 +20,22 @@ const url = getImageUrl('/album/radiohead-ok-computer/radiohead-ok-computer-medi
 
 ---
 
+### migrateImageUri
+
+Normalize image paths that arrive from generated JSON. Use this when a
+data file already contains `/album/...jpg` or `/artist/...jpg` rather than
+a slug. Existing absolute URLs are returned unchanged.
+
+```typescript
+import { migrateImageUri } from '@/lib/image-utils';
+
+const url = migrateImageUri(release.images.medium);
+// Development: /album/example/example-medium.jpg
+// Production: https://assets.russ.fm/album/example/example-medium.jpg
+```
+
+---
+
 ### getAlbumImageUrl
 
 Generate album image URL with proper sizing.

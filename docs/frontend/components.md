@@ -21,6 +21,7 @@ This document covers all React components in the russ.fm frontend.
 | `SectionHeader` | `components/layout/SectionHeader.tsx` | `num · label · count · action` editorial heading with a hairline rule. Used at the top of every home / browse / stats / wrapped block. |
 | `DragWall` | `components/layout/DragWall.tsx` | Horizontal drag-scroll strip with wheel-translation, overflow-aware chevrons, and no `setPointerCapture` (so child links still navigate). |
 | `BrowseHeader` | `components/browse/BrowseHeader.tsx` | `num · kicker · display title · subtitle · counts` header for `/albums`, `/artists`, `/search`. |
+| `StatsAside` | `components/home/StatsAside.tsx` | Compact dark home-page collection overview with configured era exclusions, top-decade percentages, curated genre bars, and yearly additions timeline. |
 | `AlbumCard` | `components/AlbumCard.tsx` | Editorial tile: square cover, cover-colour drop-shadow, optional `CAT. NNN` index badge, hover-reveal meta strip painted with the album's pre-computed `{background, foreground}` pair. |
 | `ArtistCard` | `components/ArtistCard.tsx` | Square rounded portrait + mono rank + grot name + release count. Tinted shadow when a latest album is available. |
 | `TweaksPanel` | `components/TweaksPanel.tsx` | **Dev-only.** `Cmd/Ctrl+Shift+D` opens a 320px bottom-right panel with density / mono / cover-colour / tint knobs. Persists to `localStorage['russfm.tweaks']`. Hidden from the public nav.  |
@@ -88,7 +89,8 @@ Site footer with links and copyright.
 **Features:**
 - Shared spinning record mark and matching `russ.fm / Personal Record Collection` footer lockup
 - Copyright year is derived at render time rather than hard-coded
-- Icon-led internal link cluster plus external service icons
+- Icon-only internal and external links in one compact row, with accessible labels retained for screen readers
+- Mobile footer order is icons first, then the logo/site colophon line
 
 ```tsx
 import { Footer } from '@/components/Footer';
@@ -604,6 +606,20 @@ Genre grid display.
 
 ```tsx
 <GenresSection genres={topGenres} />
+```
+
+---
+
+### StatsAside (`src/components/home/StatsAside.tsx`)
+
+Sticky home-page collection overview. It computes totals from the loaded
+`collection.json`, applies `appConfig.homepage.eras.excludedDecades` to the
+record count and chart inputs, keeps the full collection span for the
+decade total, and renders top-decade percentages, a curated eight-genre
+bar list, and a yearly additions timeline.
+
+```tsx
+<StatsAside albums={albums} />
 ```
 
 ---

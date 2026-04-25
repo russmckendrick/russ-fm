@@ -14,16 +14,16 @@ This document covers all route-level page components in russ.fm.
 
 | Route | Structure |
 |-------|-----------|
-| `/` | Fixed-height paper split hero with configured record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky `StatsAside` on desktop. |
+| `/` | Fixed-height paper split hero with configured record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky dark `StatsAside` overview on desktop. Mobile stacks the sleeve before the full-width title and full-row CTA, with hero stats in a 2/3-column grid. |
 | `/albums/:page` | Hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
 | `/artists/:page` | Search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
-| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
-| `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. |
+| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
+| `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. Mobile shows the portrait first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
-| `/random` | Single-record random spin with paper hero, large sleeve treatment, metadata rail, genre links, and shuffle/open actions. `Space` shuffles when focus is outside interactive controls. |
+| `/random` | Single-record random spin with paper hero, large sleeve treatment, metadata rail, genre links, and shuffle/open actions. Mobile shows the sleeve before the title, uses full-row actions, and lays hero stats out in a 2/3-column grid. `Space` shuffles when focus is outside interactive controls. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
-| `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. `Presentation` toggle returns the full-screen snap-scroll experience. |
-| `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle. |
+| `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. Wrapped JSON image paths are normalized through `image-utils` for R2 assets in production. `Presentation` toggle returns the full-screen snap-scroll experience. |
+| `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle, inheriting the `/wrapped/:year` asset URL handling. |
 | `/genres` | Paper/ink D3 genre explorer: one graph surface linking all genres or a selected genre to related genres, artists, and artist records with compact popup controls. |
 
 ## Route Map
@@ -73,10 +73,12 @@ Landing page with featured content and collection highlights.
 
 **Features:**
 - Fixed-height editorial hero built from the configured latest releases, with fitted display title, central sleeve, metadata rail, countdown waveform, and album-accent selector states
+- Mobile hero order is artwork first, then a full-width title, full-row actions, and compact 2/3-column stats
 - Recently added albums section
 - Recently added artists section
 - Random collection samples
 - Genre highlights
+- Compact sticky `StatsAside` overview with configured era exclusions, top-decade percentages, curated genre bars, and yearly additions timeline
 
 **Data Sources:**
 - `/collection.json` - Album data
@@ -364,18 +366,19 @@ Collection statistics and insights.
 - Decade distribution
 - Year-over-year additions
 - Random highlights
+- Section display counts are driven by `redesignConfig.stats`, including top artists, top genres, top years, recent additions, random picks, random artists, and visible decade bars
 
 **Statistics Calculated:**
 ```typescript
 interface CollectionStats {
   totalAlbums: number;
-  totalArtists: number;
+  uniqueArtists: number;
   uniqueGenres: number;
-  totalTracks: number;
-  decadeBreakdown: Record<string, number>;
-  genreBreakdown: Record<string, number>;
-  yearlyAdditions: Record<string, number>;
-  topLabels: { name: string; count: number }[];
+  topArtists: ArtistStat[];
+  topGenres: { name: string; value: number }[];
+  decadeData: { decade: string; count: number }[];
+  additionsData: { month: string; count: number }[];
+  topYears: { year: string; count: number }[];
 }
 ```
 

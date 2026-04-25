@@ -69,9 +69,9 @@ export function HeroSection({
       />
 
       <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
-        <div className="flex min-w-0 flex-col items-start">
+        <div className="order-2 flex min-w-0 flex-col items-start lg:order-none">
           <h1
-            className="text-display uppercase text-ink"
+            className="text-display max-w-full uppercase text-ink lg:max-w-[var(--hero-title-max-width)]"
             style={titleStyle}
           >
             {currentFeatured.release_name}
@@ -90,10 +90,10 @@ export function HeroSection({
             </p>
           )}
 
-          <div className="mt-7 flex flex-wrap items-center gap-3">
+          <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               to={albumHref}
-              className="inline-flex items-center gap-3 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[color,background-color,border-color,transform] duration-200 hover:border-hl hover:bg-hl active:translate-y-px"
+              className="inline-flex w-full items-center justify-center gap-3 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[color,background-color,border-color,transform] duration-200 hover:border-hl hover:bg-hl active:translate-y-px sm:w-auto"
             >
               View Record
               <ArrowRight className="h-4 w-4" aria-hidden />
@@ -101,7 +101,7 @@ export function HeroSection({
           </div>
         </div>
 
-        <div className="min-w-0">
+        <div className="order-1 min-w-0 lg:order-none">
           <Link
             to={albumHref}
             className="group mx-auto block w-full max-w-[580px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
@@ -162,7 +162,7 @@ export function HeroSection({
           </div>
         </div>
 
-        <aside className="grid gap-0 border-y border-rule-strong lg:border-y-0">
+        <aside className="order-3 grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-3 lg:order-none lg:grid-cols-1 lg:gap-0 lg:border-0 lg:bg-transparent">
           <MetaRail label="Released" value={year || "—"} />
           <MetaRail
             label="Format"
@@ -242,7 +242,7 @@ function HeroCountdownWaveform({
 
 function MetaRail({ label, value }: { label: string; value: string }) {
   return (
-    <div className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+    <div className="bg-paper p-4 lg:border-b lg:border-rule lg:bg-transparent lg:px-0 lg:py-5 lg:last:border-b-0">
       <div className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
         {label}
       </div>
@@ -305,7 +305,7 @@ function getTitleStyle(title: string): CSSProperties {
 
   return {
     fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
-    maxWidth,
+    "--hero-title-max-width": maxWidth,
     lineHeight: 0.9,
-  };
+  } as CSSProperties;
 }
