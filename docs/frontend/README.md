@@ -10,9 +10,9 @@ mono metadata labels. Cover-colour shadows and hero washes come
 from pre-extracted album palettes exposed both as
 `/public/album-colors.json` for hooks and `/public/album-colors.css`
 for class-driven treatments like the home and album-detail heroes.
-The Home hero uses a fixed desktop height, seven visible record selectors,
-album-accent active states, and a reduced-motion-safe animated waveform
-in the metadata rail. Album detail now mirrors that Home hero grammar
+The Home hero uses a fixed desktop height, the configured featured-release
+count, album-accent active states, and a reduced-motion-safe countdown
+waveform in the metadata rail. Album detail now mirrors that Home hero grammar
 with a single-record paper split header, tags, actions, and metadata rail.
 Feature-page headers read their visible copy from
 `redesignConfig.pageHeaders` so the Albums, Artists, Search, Stats,

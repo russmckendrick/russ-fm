@@ -14,17 +14,17 @@ This document covers all route-level page components in russ.fm.
 
 | Route | Structure |
 |-------|-----------|
-| `/` | Fixed-height paper split hero with seven visible record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky `StatsAside` on desktop. |
+| `/` | Fixed-height paper split hero with configured record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky `StatsAside` on desktop. |
 | `/albums/:page` | Hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
-| `/artists/:page` | `BrowseHeader` → search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
+| `/artists/:page` | Search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
 | `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
 | `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
-| `/random` | Tinted wash hero with cross-fade on shuffle, sleeve + KV + chips + actions; peek strip of 8 upcoming records below. `Space` shuffles. |
+| `/random` | Single-record random spin with paper hero, large sleeve treatment, metadata rail, genre links, and shuffle/open actions. `Space` shuffles when focus is outside interactive controls. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
 | `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. `Presentation` toggle returns the full-screen snap-scroll experience. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle. |
-| `/genres` | Editorial paper header + off-black visual stage around the preserved D3 force-simulation mindmap. |
+| `/genres` | Off-black visual stage around the preserved D3 force-simulation mindmap. |
 
 ## Route Map
 
@@ -72,7 +72,7 @@ Landing page with featured content and collection highlights.
 **Route:** `/`, `/home`
 
 **Features:**
-- Fixed-height editorial hero built from the 7 latest releases, with fitted display title, central sleeve, metadata rail, animated waveform, and album-accent selector states
+- Fixed-height editorial hero built from the configured latest releases, with fitted display title, central sleeve, metadata rail, countdown waveform, and album-accent selector states
 - Recently added albums section
 - Recently added artists section
 - Random collection samples
@@ -88,7 +88,7 @@ Landing page with featured content and collection highlights.
 // src/config/app.config.ts
 homepage: {
   hero: {
-    numberOfFeaturedAlbums: 7,
+    numberOfFeaturedAlbums: 10,
     autoRotateInterval: 12000 // 12 seconds
   },
   recentlyAdded: { displayCount: 12 },
@@ -402,9 +402,11 @@ Random album discovery.
 **Route:** `/random`
 
 **Features:**
-- Random album selection
-- "Spin again" button
-- Full album preview
+- Single random album selection from `/collection.json`
+- "Spin Again" button that excludes the currently shown album when possible
+- Spacebar shuffle support when focus is outside interactive controls
+- Full album preview with artwork, artist link, genre links, and metadata rail
+- Loading skeleton, retryable error state, and empty collection state
 
 ---
 

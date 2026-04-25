@@ -107,10 +107,10 @@ html.tint-off [style*="0 40px 80px"] {
    build a gradient wash already reference it. */
 
 /* =========================================================================
-   Hero chain timeline — sweep animation for the active segment's fill.
-   Duration is set inline per instance via `animation-duration`, matching
-   appConfig.homepage.hero.autoRotateInterval. Re-keyed on index change so
-   each auto-rotate tick restarts from 0%.
+   Hero timeline sweeps. Durations are set inline per instance via
+   `animation-duration`, matching appConfig.homepage.hero.autoRotateInterval.
+   The home metadata waveform is re-keyed whenever the active record timer
+   restarts.
    ========================================================================= */
 
 @keyframes hero-chain-fill {
@@ -126,10 +126,30 @@ html.tint-off [style*="0 40px 80px"] {
   animation-iteration-count: 1;
 }
 
+@keyframes hero-countdown-window {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.hero-countdown-window {
+  transform: scaleX(0);
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation-name: hero-countdown-window;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-chain-fill {
     animation: none;
     width: 100%;
+  }
+
+  .hero-countdown-window {
+    animation: none;
+    transform: scaleX(1);
   }
 }
 

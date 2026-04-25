@@ -17,6 +17,7 @@ This document covers all React components in the russ.fm frontend.
 | `RailSection` | `components/layout/EditorialPrimitives.tsx` | Sidebar/rail section heading and body wrapper. |
 | `CatalogueList` | `components/layout/EditorialPrimitives.tsx` | Divide-y catalogue list wrapper for dense result rows. |
 | `EditorialEmpty` / `EditorialSkeleton` | `components/layout/EditorialPrimitives.tsx` | Paper/ink empty and loading states. |
+| `StageVinyl` | `components/layout/EditorialPrimitives.tsx` | Blueprint-style outline record used behind feature sleeves without adding a heavy filled disc. |
 | `SectionHeader` | `components/layout/SectionHeader.tsx` | `num · label · count · action` editorial heading with a hairline rule. Used at the top of every home / browse / stats / wrapped block. |
 | `DragWall` | `components/layout/DragWall.tsx` | Horizontal drag-scroll strip with wheel-translation, overflow-aware chevrons, and no `setPointerCapture` (so child links still navigate). |
 | `BrowseHeader` | `components/browse/BrowseHeader.tsx` | `num · kicker · display title · subtitle · counts` header for `/albums`, `/artists`, `/search`. |
@@ -530,10 +531,9 @@ interface StatsData {
 
 ### HeroSection (`src/components/home/HeroSection.tsx`)
 
-Poster-led featured hero: the latest ten releases form a horizontally
-scrollable coverflow where the active sleeve sits center-stage, nearby
-records recede with transforms, and the supporting copy collapses into
-an image-tied caption + slim action row.
+Poster-led featured hero: the configured latest releases form a numbered
+selector row under the active sleeve, while the right metadata rail carries
+a full-width countdown waveform for the next record.
 
 ```tsx
 import { HeroSection } from '@/components/home/HeroSection';
@@ -544,16 +544,17 @@ import { HeroSection } from '@/components/home/HeroSection';
   featuredIndex={featuredIndex}
   currentPalette={currentPalette}
   autoRotateMs={autoRotateMs}
+  timelineKey={heroTimelineKey}
   onSelectIndex={handleSelectFeaturedIndex}
 />
 ```
 
 **Features:**
-- Ten featured sleeves rendered as a draggable/scrollable coverflow
-- Repeated loop track keeps the active poster visually centered through wraparound
-- Balanced linked album + artist caption and slim action row replace boxed hero metadata
-- Blurred active-sleeve backdrop crossfades between palettes for smoother transitions
-- Mobile/tablet keeps the same 10 releases in a simpler snap-strip treatment
+- Featured record count follows `appConfig.homepage.hero.numberOfFeaturedAlbums`
+- Numbered selector row changes the active sleeve and restarts the countdown
+- Metadata rail includes a full-width waveform that fills over `autoRotateInterval`
+- Hero copy is limited to concrete genre/year metadata
+- Mobile/tablet keep the same releases with safe horizontal selector overflow
 
 ---
 

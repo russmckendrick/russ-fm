@@ -23,6 +23,7 @@ export function HomePage() {
   const [recentAlbums, setRecentAlbums] = useState<Album[]>([]);
   const [recentArtists, setRecentArtists] = useState<Artist[]>([]);
   const [featuredIndex, setFeaturedIndex] = useState(0);
+  const [heroTimelineKey, setHeroTimelineKey] = useState(0);
   const [randomizedGenreAlbums, setRandomizedGenreAlbums] = useState<Record<string, Album[]>>({});
   const [randomizedGenres, setRandomizedGenres] = useState<[string, number][]>([]);
   const [randomCollectionItems, setRandomCollectionItems] = useState<Album[]>([]);
@@ -160,6 +161,7 @@ export function HomePage() {
     if (featuredCount === 0) return;
     rotateIntervalRef.current = setInterval(() => {
       setFeaturedIndex(prev => (prev + 1) % featuredCount);
+      setHeroTimelineKey(prev => prev + 1);
     }, autoRotateMs);
   }, [featuredCount, autoRotateMs]);
 
@@ -173,6 +175,7 @@ export function HomePage() {
   const handleSelectFeaturedIndex = useCallback(
     (index: number) => {
       setFeaturedIndex(index);
+      setHeroTimelineKey(prev => prev + 1);
       startRotateInterval();
     },
     [startRotateInterval],
@@ -214,7 +217,8 @@ export function HomePage() {
   };
 
   const featuredAlbums = recentAlbums.slice(0, appConfig.homepage.hero.numberOfFeaturedAlbums);
-  const currentFeatured = featuredAlbums[featuredIndex];
+  const safeFeaturedIndex = featuredAlbums.length ? featuredIndex % featuredAlbums.length : 0;
+  const currentFeatured = featuredAlbums[safeFeaturedIndex];
   const currentPalette = currentFeatured ? colorPalettes[currentFeatured.uri_release] : null;
 
   // Map section keys → component render functions
@@ -223,9 +227,10 @@ export function HomePage() {
       <HeroSection
         currentFeatured={currentFeatured}
         featuredAlbums={featuredAlbums}
-        featuredIndex={featuredIndex}
+        featuredIndex={safeFeaturedIndex}
         currentPalette={currentPalette}
         autoRotateMs={autoRotateMs}
+        timelineKey={heroTimelineKey}
         onSelectIndex={handleSelectFeaturedIndex}
       />
     ),

@@ -225,13 +225,15 @@ export function StageVinyl({
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none absolute aspect-square rounded-full border border-stage-rule opacity-80",
-        "bg-[radial-gradient(circle_at_50%_50%,rgba(247,242,232,0.34)_0_2%,rgba(8,8,7,0.9)_3%_14%,rgba(247,242,232,0.1)_15%,rgba(8,8,7,0.98)_18%,rgba(8,8,7,0.96)_100%)]",
-        "shadow-[inset_0_0_0_1px_rgba(247,242,232,0.06),inset_0_0_40px_rgba(247,242,232,0.08)]",
-        "before:absolute before:inset-[8%] before:rounded-full before:border before:border-stage-rule",
-        "after:absolute after:inset-[18%] after:rounded-full after:border after:border-stage-rule",
+        "pointer-events-none absolute aspect-square rounded-full border border-current bg-transparent text-ink-dim opacity-[0.42] dark:text-stage-dim dark:opacity-[0.28]",
+        "before:absolute before:inset-[7%] before:rounded-full before:border before:border-current",
+        "after:absolute after:inset-[18%] after:rounded-full after:border after:border-current",
         className,
       )}
-    />
+    >
+      <span className="absolute inset-[29%] rounded-full border border-current" />
+      <span className="absolute inset-[41%] rounded-full border border-current" />
+      <span className="absolute left-1/2 top-1/2 h-[9%] w-[9%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-current" />
+    </div>
   );
 }

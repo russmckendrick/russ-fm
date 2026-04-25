@@ -17,6 +17,7 @@ interface HeroSectionProps {
   featuredIndex: number;
   currentPalette: ColorPalette | null;
   autoRotateMs: number;
+  timelineKey: number;
   onSelectIndex: (index: number) => void;
 }
 
@@ -31,6 +32,7 @@ export function HeroSection({
   featuredIndex,
   currentPalette,
   autoRotateMs,
+  timelineKey,
   onSelectIndex,
 }: HeroSectionProps) {
   if (!currentFeatured) return null;
@@ -49,6 +51,7 @@ export function HeroSection({
   const accent = currentPalette?.accent ?? "var(--hl)";
   const paletteClassName = `album-${getAlbumSlug(currentFeatured.uri_release)}`;
   const titleStyle = getTitleStyle(currentFeatured.release_name);
+  const heroDescription = getHeroDescription(genres, year);
 
   return (
     <section
@@ -81,11 +84,11 @@ export function HeroSection({
             {currentFeatured.release_artist}
           </Link>
 
-          <p className="mt-4 max-w-[43ch] font-mono text-[13px] leading-[1.55] text-ink-2">
-            {genres.length
-              ? `${genres.join(" / ")} from ${year || "the archive"}. A current shelf marker from the personal record collection.`
-              : "A current shelf marker from the personal record collection."}
-          </p>
+          {heroDescription && (
+            <p className="mt-4 max-w-[43ch] font-mono text-[13px] leading-[1.55] text-ink-2">
+              {heroDescription}
+            </p>
+          )}
 
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <Link
@@ -121,36 +124,41 @@ export function HeroSection({
             </div>
           </Link>
 
-          <div className="mt-5 flex justify-center gap-8 font-mono text-[13px] tracking-[0.08em] text-ink-dim">
-            {featuredAlbums.slice(0, 7).map((album, index) => {
-              const active = index === featuredIndex;
-              return (
-                <button
-                  key={album.uri_release}
-                  type="button"
-                  aria-label={`Show featured record ${index + 1}: ${album.release_name}`}
-                  aria-pressed={active}
-                  onClick={() => onSelectIndex(index)}
-                  className={cn(
-                    "border-b py-1 transition-[color,border-color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink",
-                    active
-                      ? "border-ink text-ink"
-                      : "border-transparent hover:border-rule-strong hover:text-ink",
-                  )}
-                  style={
-                    active
-                      ? {
-                          animationDuration: `${autoRotateMs}ms`,
-                          borderColor: accent,
-                          color: accent,
-                        }
-                      : undefined
-                  }
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </button>
-              );
-            })}
+          <div
+            className="mt-5 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="Featured records"
+          >
+            <div className="mx-auto flex w-max min-w-full justify-center gap-5 font-mono text-[13px] tracking-[0.08em] text-ink-dim sm:gap-7">
+              {featuredAlbums.map((album, index) => {
+                const active = index === featuredIndex;
+                return (
+                  <button
+                    key={album.uri_release}
+                    type="button"
+                    aria-label={`Show featured record ${index + 1}: ${album.release_name}`}
+                    aria-pressed={active}
+                    onClick={() => onSelectIndex(index)}
+                    className={cn(
+                      "shrink-0 border-b py-1 transition-[color,border-color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink",
+                      active
+                        ? "border-ink text-ink"
+                        : "border-transparent hover:border-rule-strong hover:text-ink",
+                    )}
+                    style={
+                      active
+                        ? {
+                            animationDuration: `${autoRotateMs}ms`,
+                            borderColor: accent,
+                            color: accent,
+                          }
+                        : undefined
+                    }
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
 
@@ -165,33 +173,70 @@ export function HeroSection({
             label="Genres"
             value={genres.length ? genres.join(", ") : "Collection"}
           />
-          <div className="hidden border-b border-rule py-8 lg:block">
-            <span className="block h-10 w-20 text-ink" aria-hidden>
-              <svg viewBox="0 0 96 48" fill="none">
-                <path
-                  d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  opacity="0.32"
-                />
-                <path
-                  className="waveform-trace"
-                  d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-                  stroke={accent}
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  pathLength="1"
-                  strokeDasharray="0.34 1"
-                />
-              </svg>
-            </span>
-          </div>
+          <HeroCountdownWaveform
+            accent={accent}
+            autoRotateMs={autoRotateMs}
+            timelineKey={timelineKey}
+          />
         </aside>
       </div>
     </section>
+  );
+}
+
+function HeroCountdownWaveform({
+  accent,
+  autoRotateMs,
+  timelineKey,
+}: {
+  accent: string;
+  autoRotateMs: number;
+  timelineKey: number;
+}) {
+  const duration = `${Math.max(autoRotateMs, 1)}ms`;
+  const path = "M4 24h30l9-18 16 36 13-27 13 17 13-10 16 18 15-29 14 21 14-8h79";
+  const clipId = `hero-countdown-${timelineKey}`;
+
+  return (
+    <div className="hidden border-b border-rule py-8 lg:block">
+      <svg
+        viewBox="0 0 240 48"
+        fill="none"
+        className="block h-12 w-full text-ink"
+        aria-hidden
+      >
+        <path
+          d={path}
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.24"
+        />
+        <defs>
+          <clipPath id={clipId} clipPathUnits="userSpaceOnUse">
+            <rect
+              key={timelineKey}
+              className="hero-countdown-window"
+              x="0"
+              y="0"
+              width="240"
+              height="48"
+              style={{ animationDuration: duration }}
+            />
+          </clipPath>
+        </defs>
+        <g clipPath={`url(#${clipId})`}>
+          <path
+            d={path}
+            stroke={accent}
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </g>
+      </svg>
+    </div>
   );
 }
 
@@ -226,6 +271,13 @@ function formatAdded(iso: string | undefined): string {
       timeZone: "UTC",
     })
     .toUpperCase();
+}
+
+function getHeroDescription(genres: string[], year: string): string {
+  if (genres.length && year) return `${genres.join(" / ")} from ${year}.`;
+  if (genres.length) return `${genres.join(" / ")}.`;
+  if (year) return `Released ${year}.`;
+  return "";
 }
 
 function getTitleStyle(title: string): CSSProperties {
