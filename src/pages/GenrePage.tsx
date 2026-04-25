@@ -3,8 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getArtistImageFromData } from '@/lib/image-utils';
-import { DossierHero, EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
-import { redesignConfig } from '@/config/redesign.config';
+import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 
 interface Album {
   release_name: string;
@@ -786,21 +785,9 @@ export function GenrePage() {
       </PageContainer>
     );
   }
-  const header = redesignConfig.pageHeaders.genres;
 
   return (
     <PageContainer>
-      <DossierHero
-        num={header.num}
-        kicker={header.kicker}
-        title={header.title}
-        subtitle={header.subtitle}
-        counts={[
-          { label: 'Genres', value: genreArtistData.length },
-          { label: 'Records', value: albums.length.toLocaleString() },
-          { label: 'Focus', value: focusedGenre || 'All' },
-        ]}
-      />
       <div className="border border-stage-rule bg-stage p-3 text-stage-ink md:p-5">
         {genreArtistData.length > 0 ? (
           <div className="flex h-[76dvh] min-h-[560px] w-full justify-center">
