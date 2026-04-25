@@ -203,6 +203,30 @@ This is the **recommended function** for genre filtering.
 
 ---
 
+## Genre Explorer (`src/lib/genreExplorer.ts`)
+
+Builds the `/genres` relationship model from static collection data.
+
+```typescript
+import { buildGenreExplorer } from '@/lib/genreExplorer';
+
+const explorer = buildGenreExplorer(collection);
+const rock = explorer.genres.find((genre) => genre.name === 'Rock');
+```
+
+**Provides:**
+- A global `All genres` summary for collection-wide graph/search mode
+- Genre summaries with album counts, artist counts, year spans, related genres, and cover samples
+- Artist summaries with genre-specific albums plus total collection counts
+- Album summaries with slug, cover URL, artist, year, and connected genres
+- Helpers for URL state resolution, filtering, and sorting
+
+The explorer uses `getCleanGenresFromArray` and image helpers from
+`image-utils`; keep those helpers in place so `/genres`, `/albums`, and
+detail pages share the same data contract.
+
+---
+
 ## Color Utilities (`src/lib/color-utils.ts`)
 
 ### Color Conversion

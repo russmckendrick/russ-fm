@@ -24,7 +24,7 @@ This document covers all route-level page components in russ.fm.
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
 | `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. `Presentation` toggle returns the full-screen snap-scroll experience. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle. |
-| `/genres` | Off-black visual stage around the preserved D3 force-simulation mindmap. |
+| `/genres` | Paper/ink D3 genre explorer: one graph surface linking all genres or a selected genre to related genres, artists, and artist records with compact popup controls. |
 
 ## Route Map
 
@@ -383,15 +383,28 @@ interface CollectionStats {
 
 ### GenrePage (`src/pages/GenrePage.tsx`)
 
-Genre browser and filter.
+Single-page D3 genre explorer built from static `/collection.json`.
 
 **Route:** `/genres`
 
+**URL Parameters:**
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `genre` | `all \| string` | `all` | Active scope, e.g. `/genres?genre=all` or `/genres?genre=Rock` |
+| `artist` | `string` | - | Active artist slug within the selected genre |
+| `album` | `string` | - | Active record slug, used to highlight the record node and expose its detail-page link |
+| `sort` | `dominance \| recent \| name \| year` | `dominance` | Artist/album ordering |
+| `q` | `string` | - | Search across genres, artists, and albums |
+| `nodes` | `standard \| more \| max` | `standard` | Graph density control for showing more related genres, artists, and records |
+
 **Features:**
-- Genre cloud/grid display
-- Click to filter albums by genre
-- Album count per genre
-- Color-coded tags
+- One primary D3 force graph showing either the global collection or a selected genre, related genres, artists, and artist records
+- The selected genre control is a styled Radix popup populated from computed genre summaries, with `All genres` first
+- Click related genre nodes to redraw around that genre
+- Click artist nodes to reveal that artist's connected records in the same graph
+- Click record nodes to select them; canonical artist/record pages are exposed as compact links
+- Search, sort, and node-density controls keep state in the URL
+- Loading, empty, and error states using editorial primitives
 
 ---
 
