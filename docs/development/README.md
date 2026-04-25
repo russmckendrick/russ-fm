@@ -15,8 +15,8 @@ This guide covers local development workflows, testing, and best practices.
 
 | Software | Version | Purpose |
 |----------|---------|---------|
-| Node.js | 20.x+ | Frontend development |
-| pnpm | 8.x+ | Package manager |
+| Node.js | 22.19.0+ | Frontend development and Workers deployment tooling |
+| pnpm | 10.x+ | Package manager |
 | Python | 3.8+ | Backend data processing |
 | Git | Latest | Version control |
 

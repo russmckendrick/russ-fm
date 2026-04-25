@@ -72,10 +72,10 @@ assets:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '20'
+        node-version: '22.19.0'
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v3
       with:
         version: 10
 
@@ -263,6 +263,11 @@ pnpm run r2:clean --confirm
 ---
 
 ## Cloudflare Workers
+
+### Runtime Requirements
+
+- Node.js 22.19.0 or newer is required for the Workers deployment tooling.
+- Wrangler 3.114.17 resolves Miniflare with Undici 8, which requires Node 22.19.0+.
 
 ### Wrangler Configuration
 
@@ -502,6 +507,14 @@ node scripts/sync-to-r2.js --type album --size medium --dry-run
 ```
 
 ### Worker Deployment Issues
+
+If deployment fails while loading Wrangler/Miniflare with:
+
+```text
+TypeError: webidl.util.markAsUncloneable is not a function
+```
+
+Check the Node version used by the runner. This happens when Undici 8 is loaded under Node 20; GitHub Actions should use Node.js 22.19.0 or newer.
 
 ```bash
 # Check wrangler auth

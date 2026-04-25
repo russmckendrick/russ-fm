@@ -48,6 +48,8 @@ flowchart LR
 
 ## Build Commands
 
+Runtime requirement: Node.js 22.19.0 or newer with pnpm 10.
+
 ### Development
 
 ```bash
