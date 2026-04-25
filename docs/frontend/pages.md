@@ -7,24 +7,24 @@ This document covers all route-level page components in russ.fm.
 > tiles (`AlbumCard`, `ArtistCard`). Data-fetching contracts,
 > query-string deep links, and feature surface (scrobble, embeds,
 > wrapped presentation, search) are preserved — only the visual
-> rhythm changed. See `docs/project/Redesign/CHANGELOG.md` for
+> rhythm changed. See `docs/project/completed/Redesign/CHANGELOG.md` for
 > per-page before/after notes.
 
 ## Editorial structure by page
 
 | Route | Structure |
 |-------|-----------|
-| `/` | Coverflow hero → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster → Catalogue strip. Main column + sticky `StatsAside` on desktop. |
-| `/albums/:page` | `BrowseHeader` → hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
-| `/artists/:page` | `BrowseHeader` → search+sort row → full-width A–Z strip → 6-col circular-portrait grid → mono pager. |
-| `/album/:slug` | Tinted wash hero (sleeve right, title+artist+KV+chips+actions left) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
-| `/artist/:slug` | Tinted wash hero (circular portrait + KV + chips + service buttons) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. |
+| `/` | Fixed-height paper split hero with seven visible record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky `StatsAside` on desktop. |
+| `/albums/:page` | Hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
+| `/artists/:page` | `BrowseHeader` → search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
+| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. |
+| `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
 | `/random` | Tinted wash hero with cross-fade on shuffle, sleeve + KV + chips + actions; peek strip of 8 upcoming records below. `Space` shuffles. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
 | `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. `Presentation` toggle returns the full-screen snap-scroll experience. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle. |
-| `/genres` | **Not touched.** D3 force-simulation mindmap preserved as-is per the author's request. |
+| `/genres` | Editorial paper header + off-black visual stage around the preserved D3 force-simulation mindmap. |
 
 ## Route Map
 
@@ -72,7 +72,7 @@ Landing page with featured content and collection highlights.
 **Route:** `/`, `/home`
 
 **Features:**
-- Featured coverflow hero built from the 10 latest releases, with a blurred active-sleeve backdrop
+- Fixed-height editorial hero built from the 7 latest releases, with fitted display title, central sleeve, metadata rail, animated waveform, and album-accent selector states
 - Recently added albums section
 - Recently added artists section
 - Random collection samples
@@ -88,7 +88,7 @@ Landing page with featured content and collection highlights.
 // src/config/app.config.ts
 homepage: {
   hero: {
-    numberOfFeaturedAlbums: 10,
+    numberOfFeaturedAlbums: 7,
     autoRotateInterval: 12000 // 12 seconds
   },
   recentlyAdded: { displayCount: 12 },
@@ -334,8 +334,8 @@ Individual artist detail with discography.
 **Route:** `/artist/:slug`
 
 **Features:**
+- Album detail-style paper split hero with fitted display name, central portrait, service actions, and metadata rail
 - Artist biography
-- Profile image
 - External links
 - Discography grid
 - Genre associations

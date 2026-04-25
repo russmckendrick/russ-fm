@@ -3,8 +3,7 @@ import { Search, X } from 'lucide-react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { ArtistCard } from '@/components/ArtistCard';
-import { PageContainer } from '@/components/layout';
-import { BrowseHeader } from '@/components/browse/BrowseHeader';
+import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/utils';
 import {
@@ -399,30 +398,15 @@ export function ArtistsPage() {
   if (loading) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Loading roster…
-        </div>
+        <EditorialSkeleton label="Loading roster…" />
       </PageContainer>
     );
   }
 
   const availableLetters = getAvailableLetters();
-  const headerCounts = [
-    { label: "Artists", value: filteredArtists.length.toLocaleString() },
-    { label: "Page", value: `${currentPage} / ${Math.max(1, totalPages)}` },
-  ];
-  if (selectedLetter !== "all") headerCounts.push({ label: "Letter", value: selectedLetter });
 
   return (
     <PageContainer>
-      <BrowseHeader
-        num="02"
-        kicker="Catalogue · Artists"
-        title="Every act on the shelf"
-        subtitle="Everyone represented in the collection. Sort alphabetically, by depth, or by who arrived most recently."
-        counts={headerCounts}
-      />
-
       {/* Filter row ------------------------------------------------------ */}
       <div className="mb-6 flex flex-col gap-3 border-y border-rule-strong bg-paper-2/40 md:flex-row md:items-stretch md:gap-0 md:divide-x md:divide-rule-strong">
         <label className="relative flex min-w-0 items-center gap-2 px-4 focus-within:text-ink md:flex-1">
@@ -507,12 +491,10 @@ export function ArtistsPage() {
       </div>
 
       {filteredArtists.length === 0 ? (
-        <div className="border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
-          <p className="text-[17px] font-semibold text-ink">No artists found</p>
-          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-            Try adjusting your search
-          </p>
-        </div>
+        <EditorialEmpty
+          title="No artists found"
+          detail="Try adjusting your search"
+        />
       ) : (
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {paginatedArtists.map((artist, i) => (
@@ -586,7 +568,7 @@ function LetterCell({
         "flex h-9 w-9 items-center justify-center border-r border-rule transition-colors last:border-r-0",
         active && "bg-ink text-paper",
         !active && available && "text-ink hover:bg-paper-2",
-        !available && "text-ink-dim/40",
+        !available && "text-ink-dim opacity-40",
       )}
     >
       {children}

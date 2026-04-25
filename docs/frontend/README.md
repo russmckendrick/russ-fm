@@ -3,13 +3,21 @@
 The russ.fm frontend is a React 19 single-page application built with TypeScript, Vite, and Tailwind CSS.
 
 **Visual system.** In April 2026 the UI was reskinned as an editorial
-vinyl-catalogue site (see `docs/project/Redesign/CHANGELOG.md` for the
-per-phase log). The shell runs on a warm paper/ink palette with
-sharp corners, hairline rules, Inter Tight + JetBrains Mono, and
+vinyl-catalogue site (see `docs/project/completed/Redesign/CHANGELOG.md`
+for the per-phase log). The shell runs on a warm paper/ink palette with
+sharp corners, hairline rules, Archivo Variable + JetBrains Mono, and
 mono metadata labels. Cover-colour shadows and hero washes come
 from pre-extracted album palettes exposed both as
 `/public/album-colors.json` for hooks and `/public/album-colors.css`
-for class-driven full-bleed treatments like the home hero. A dev-only
+for class-driven treatments like the home and album-detail heroes.
+The Home hero uses a fixed desktop height, seven visible record selectors,
+album-accent active states, and a reduced-motion-safe animated waveform
+in the metadata rail. Album detail now mirrors that Home hero grammar
+with a single-record paper split header, tags, actions, and metadata rail.
+Feature-page headers read their visible copy from
+`redesignConfig.pageHeaders` so the Albums, Artists, Search, Stats,
+Genres, and Wrapped intro wording can be edited from one file.
+A dev-only
 `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) lets the author tune
 density / mono visibility / cover-colour / tint intensity in place
 without shipping knobs to public visitors — defaults live in
@@ -37,7 +45,7 @@ without shipping knobs to public visitors — defaults live in
 | Framer Motion | Latest | Animations (Wrapped presentation mode only) |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
-| @fontsource-variable/inter-tight | Latest | Editorial grot typeface |
+| @fontsource-variable/archivo | Latest | Editorial variable typeface |
 | @fontsource-variable/jetbrains-mono | Latest | Editorial mono typeface |
 
 ## Project Structure

@@ -38,7 +38,7 @@ export function sanitizeFolderName(name: string): string {
   sanitized = sanitized.replace(/_/g, '-');
   
   // 5. Handle brackets - remove them but preserve content
-  sanitized = sanitized.replace(/[\[\]{}]/g, '');
+  sanitized = sanitized.replace(/[[\]{}]/g, '');
   
   // 6. Remove common characters that should just be deleted
   sanitized = sanitized.replace(/[&'".!?;:]/g, '');

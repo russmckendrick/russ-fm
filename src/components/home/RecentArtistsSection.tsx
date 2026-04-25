@@ -9,7 +9,7 @@ interface RecentArtistsSectionProps {
 }
 
 /**
- * Editorial "recently added · artists" drag-scroll wall. Round photos,
+ * Editorial "recently added · artists" drag-scroll wall. Square photos,
  * mono rank, grot name, mono subline ("Latest: …").
  */
 export function RecentArtistsSection({
@@ -35,10 +35,12 @@ export function RecentArtistsSection({
             to={artist.uri}
             className="group block text-center font-grot"
           >
-            <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[6px] bg-paper-2">
               <img
                 src={artist.avatar}
                 alt={artist.name}
+                width={360}
+                height={360}
                 loading="lazy"
                 draggable={false}
                 onError={handleImageError}

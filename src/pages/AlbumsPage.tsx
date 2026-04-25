@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { AlbumCard } from '@/components/AlbumCard';
 import { FilterBar } from '@/components/FilterBar';
-import { PageContainer } from '@/components/layout';
-import { BrowseHeader } from '@/components/browse/BrowseHeader';
+import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import {
   Pagination,
@@ -276,30 +275,13 @@ export function AlbumsPage() {
   if (loading) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Loading catalogue…
-        </div>
+        <EditorialSkeleton label="Loading catalogue…" />
       </PageContainer>
     );
   }
 
-  const headerCounts = [
-    { label: "Records", value: filteredCollection.length.toLocaleString() },
-    { label: "Page", value: `${currentPage} / ${Math.max(1, totalPages)}` },
-  ];
-  if (selectedGenre !== "all") headerCounts.push({ label: "Genre", value: selectedGenre });
-  if (selectedYear !== "all") headerCounts.push({ label: "Year", value: selectedYear });
-
   return (
     <PageContainer>
-      <BrowseHeader
-        num="01"
-        kicker="Catalogue · Albums"
-        title="Every record in the crate"
-        subtitle="Every release in the collection, filterable by genre, year, and title. Sort by when it landed, by sleeve, or by artist."
-        counts={headerCounts}
-      />
-
       <FilterBar
         sortBy={sortBy}
         setSortBy={(value) => {
@@ -328,12 +310,10 @@ export function AlbumsPage() {
 
 
       {filteredCollection.length === 0 ? (
-        <div className="border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
-          <p className="text-[17px] font-semibold text-ink">No albums found</p>
-          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-            Try adjusting your search or filters
-          </p>
-        </div>
+        <EditorialEmpty
+          title="No albums found"
+          detail="Try adjusting your search or filters"
+        />
       ) : (
         <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {paginatedCollection.map((album, i) => (

@@ -17,7 +17,7 @@ export function RecentAlbumsSection({ recentAlbums }: RecentAlbumsSectionProps) 
     <section className="space-y-5">
       <SectionHeader
         num="01"
-        label="Recently Added · Albums"
+        label="Recently Added"
         count={list.length}
         action="View all"
         actionTo="/albums/1"

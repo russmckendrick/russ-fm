@@ -5,6 +5,7 @@ import { PageContainer } from '@/components/layout';
 import { BrowseHeader } from '@/components/browse/BrowseHeader';
 import { SearchResults } from '@/components/SearchResults';
 import { useManualSearch } from '@/hooks/useSearch';
+import { redesignConfig } from '@/config/redesign.config';
 
 /**
  * Full search results page, deep-linked by `/search?q=...`. Renders the
@@ -53,17 +54,18 @@ export function SearchResultsPage() {
     }
     return counts;
   })();
+  const header = redesignConfig.pageHeaders.search;
 
   return (
     <PageContainer>
       <BrowseHeader
-        num="00"
-        kicker="Catalogue · Search"
-        title={query ? `Results for "${query}"` : 'Search the catalogue'}
+        num={header.num}
+        kicker={header.kicker}
+        title={query ? `${header.resultsTitlePrefix} "${query}"` : header.title}
         subtitle={
           query
-            ? 'Full matches across the collection. Tap a row to open the record or artist.'
-            : 'Use the nav search bar (or press / from any page) to find albums, artists, and genres across the collection.'
+            ? header.resultsSubtitle
+            : header.emptySubtitle
         }
         counts={headerCounts.length ? headerCounts : undefined}
       />

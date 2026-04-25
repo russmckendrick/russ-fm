@@ -17,10 +17,10 @@ export function StatsAside({ albums }: StatsAsideProps) {
   const decadeMax = Math.max(1, ...stats.decades.map((d) => d.n));
 
   return (
-    <aside className="flex flex-col gap-8 font-grot">
+    <aside className="flex flex-col gap-8 bg-stage px-5 py-6 font-grot text-stage-ink md:px-6 md:py-8">
       {/* Index block */}
       <Block head="russ.fm / Index">
-        <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+        <dl className="grid grid-cols-2 gap-[1px] border border-stage-rule bg-stage-rule">
           <KV label="Records" value={stats.totals.albums.toLocaleString()} />
           <KV label="Artists" value={stats.totals.artists.toLocaleString()} />
           <KV label="Genres" value={String(stats.totals.genres)} />
@@ -36,14 +36,14 @@ export function StatsAside({ albums }: StatsAsideProps) {
               key={d.d}
               className="grid grid-cols-[64px_minmax(0,1fr)_48px] items-center gap-3 font-mono text-[11px] tracking-[0.04em]"
             >
-              <span className="text-ink-3">{d.d}s</span>
-              <span className="h-2.5 bg-paper-2">
+              <span className="text-stage-dim">{d.d}s</span>
+              <span className="h-2.5 bg-stage-3">
                 <span
-                  className="block h-full bg-ink"
+                  className="block h-full bg-stage-ink"
                   style={{ width: `${(d.n / decadeMax) * 100}%` }}
                 />
               </span>
-              <span className="text-right text-ink-dim">
+              <span className="text-right text-stage-dim">
                 {String(d.n).padStart(3, "0")}
               </span>
             </li>
@@ -58,10 +58,10 @@ export function StatsAside({ albums }: StatsAsideProps) {
             <Link
               key={name}
               to={`/albums/1?genre=${encodeURIComponent(name)}`}
-              className="inline-flex items-baseline gap-1.5 border border-rule-strong bg-paper px-2 py-[3px] text-[11px] text-ink transition-colors hover:bg-paper-2"
+              className="inline-flex items-baseline gap-1.5 border border-stage-rule bg-stage-2 px-2 py-[3px] text-[11px] text-stage-ink transition-[color,background-color,border-color] duration-200 hover:border-hl hover:text-hl"
             >
               <span className="font-grot tracking-[-0.005em]">{name}</span>
-              <span className="font-mono text-[10px] text-ink-dim">
+              <span className="font-mono text-[10px] text-stage-dim">
                 {count}
               </span>
             </Link>
@@ -83,7 +83,7 @@ function Block({
 }) {
   return (
     <section>
-      <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+      <h3 className="mb-3 border-b border-stage-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-stage-dim">
         {head}
       </h3>
       {children}
@@ -93,11 +93,11 @@ function Block({
 
 function KV({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-paper px-3 py-2.5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+    <div className="bg-stage-2 px-3 py-2.5">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-stage-dim">
         {label}
       </dt>
-      <dd className="mt-1 font-grot text-[17px] font-bold leading-tight tracking-[-0.015em] text-ink">
+      <dd className="mt-1 font-grot text-[24px] font-bold leading-tight text-stage-ink">
         {value}
       </dd>
     </div>
@@ -126,6 +126,7 @@ function buildStats(albums: Album[]) {
   }
 
   const decades = Array.from(decadeCounts.entries())
+    .filter(([d]) => d >= 1960)
     .sort(([a], [b]) => a - b)
     .map(([d, n]) => ({ d, n }));
 

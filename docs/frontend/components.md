@@ -3,8 +3,8 @@
 This document covers all React components in the russ.fm frontend.
 
 > **Editorial redesign (April 2026).** The shell now runs on a warm
-> paper/ink palette with sharp corners, hairline rules, and Inter
-> Tight + JetBrains Mono. The section below lists the redesign's
+> paper/ink palette with sharp corners, hairline rules, Archivo Variable,
+> and JetBrains Mono. The section below lists the redesign's
 > new shared primitives before moving into the legacy reference.
 
 ## Editorial primitives
@@ -12,11 +12,16 @@ This document covers all React components in the russ.fm frontend.
 | Component | Path | Role |
 |-----------|------|------|
 | `PageContainer` | `components/layout/PageContainer.tsx` | Page shell. `standard` gives the `max-w-[1640px]` gutter; `hero` goes edge-to-edge for full-bleed detail pages. |
+| `DossierHero` | `components/layout/EditorialPrimitives.tsx` | Large editorial page intro with mono kicker, display title, subtitle, action slot, and optional fact strip. |
+| `FactGrid` | `components/layout/EditorialPrimitives.tsx` | Hairline metadata grid for KPI and quick-fact blocks. |
+| `RailSection` | `components/layout/EditorialPrimitives.tsx` | Sidebar/rail section heading and body wrapper. |
+| `CatalogueList` | `components/layout/EditorialPrimitives.tsx` | Divide-y catalogue list wrapper for dense result rows. |
+| `EditorialEmpty` / `EditorialSkeleton` | `components/layout/EditorialPrimitives.tsx` | Paper/ink empty and loading states. |
 | `SectionHeader` | `components/layout/SectionHeader.tsx` | `num · label · count · action` editorial heading with a hairline rule. Used at the top of every home / browse / stats / wrapped block. |
 | `DragWall` | `components/layout/DragWall.tsx` | Horizontal drag-scroll strip with wheel-translation, overflow-aware chevrons, and no `setPointerCapture` (so child links still navigate). |
 | `BrowseHeader` | `components/browse/BrowseHeader.tsx` | `num · kicker · display title · subtitle · counts` header for `/albums`, `/artists`, `/search`. |
 | `AlbumCard` | `components/AlbumCard.tsx` | Editorial tile: square cover, cover-colour drop-shadow, optional `CAT. NNN` index badge, hover-reveal meta strip painted with the album's pre-computed `{background, foreground}` pair. |
-| `ArtistCard` | `components/ArtistCard.tsx` | Circular portrait + mono rank + grot name + release count. Tinted shadow when a latest album is available. |
+| `ArtistCard` | `components/ArtistCard.tsx` | Square rounded portrait + mono rank + grot name + release count. Tinted shadow when a latest album is available. |
 | `TweaksPanel` | `components/TweaksPanel.tsx` | **Dev-only.** `Cmd/Ctrl+Shift+D` opens a 320px bottom-right panel with density / mono / cover-colour / tint knobs. Persists to `localStorage['russfm.tweaks']`. Hidden from the public nav.  |
 | `SearchOverlay` | `components/SearchOverlay.tsx` | Compact right-anchored dropdown under the nav search input. Shares its continuous outline with the input while open. Segregates results into `Albums` / `Artists` groups. |
 

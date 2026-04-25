@@ -19,11 +19,8 @@ interface AlbumScrobbleButtonProps {
 
 export function AlbumScrobbleButton({
   album,
-  variant = 'outline',
-  size = 'default',
   className = '',
   fullWidth = false,
-  style
 }: AlbumScrobbleButtonProps) {
   const { isAuthenticated } = useLastFmAuth();
   const { scrobbleAlbum, isScrobbling, error } = useScrobble();
@@ -81,9 +78,9 @@ export function AlbumScrobbleButton({
 
   const getButtonText = () => {
     if (progress) {
-      return `Scrobbling...`;
+      return `Scrobbling…`;
     }
-    if (isScrobbling) return 'Scrobbling...';
+    if (isScrobbling) return 'Scrobbling…';
     if (scrobbled) return 'Album Scrobbled!';
     return 'Scrobble to Last.fm';
   };
@@ -100,7 +97,7 @@ export function AlbumScrobbleButton({
 
   const getTooltipContent = () => {
     if (!isAuthenticated) return 'Connect to Last.fm to scrobble';
-    if (isScrobbling) return `Scrobbling "${album.album}" by ${album.artist}...`;
+    if (isScrobbling) return `Scrobbling "${album.album}" by ${album.artist}…`;
     if (scrobbled) return 'Album scrobbled successfully!';
     if (error) return `Failed to scrobble: ${error}`;
     return `Scrobble "${album.album}" by ${album.artist} (${album.tracks.length} tracks)`;

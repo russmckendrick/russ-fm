@@ -10,7 +10,7 @@ import type { Album } from "@/types/album";
 
 interface AlbumCardProps {
   album: Album;
-  /** 1-based index; renders a mono `CAT.` badge on the cover if provided. */
+  /** 1-based index retained for callers that still pass catalogue order. */
   index?: number;
   /**
    * Override navigation behaviour. When supplied, the card calls this
@@ -26,13 +26,12 @@ interface AlbumCardProps {
 }
 
 /**
- * Editorial album tile: square cover with tinted float, mono `CAT.` badge,
- * hover reveal of genre/year/added, grot title + mono subline below.
+ * Editorial album tile: square cover with tinted float, hover reveal of
+ * genre/year/added, grot title + mono subline below.
  * Square corners everywhere; photos are the only "object" on the page.
  */
 export function AlbumCard({
   album,
-  index,
   onClick,
   tinted = true,
   className,
@@ -76,6 +75,8 @@ export function AlbumCard({
         <img
           src={getAlbumImageFromData(`/album/${albumPath}/`, "medium")}
           alt={album.release_name}
+          width={360}
+          height={360}
           loading="lazy"
           draggable={false}
           onError={handleImageError}
@@ -112,18 +113,11 @@ export function AlbumCard({
             <span className="font-medium">{addedDate}</span>
           </div>
         </div>
-
-        {/* CAT. badge — only when an index is supplied by the caller */}
-        {index != null && (
-          <span className="absolute left-0 top-0 bg-paper/90 px-2 py-1 font-mono text-[10px] tracking-[0.08em] text-ink">
-            {String(index).padStart(3, "0")}
-          </span>
-        )}
       </div>
 
       {/* --- Meta ----------------------------------------------------- */}
       <div className="mt-3 flex flex-col gap-1">
-        <h3 className="line-clamp-2 text-[15px] font-semibold leading-tight tracking-[-0.005em] text-ink transition-colors group-hover:text-hl">
+        <h3 className="line-clamp-2 font-display text-[17px] uppercase leading-[0.98] text-ink transition-colors group-hover:text-hl">
           {album.release_name}
         </h3>
         <div className="flex items-baseline justify-between gap-2 font-mono text-[11px] tracking-[0.02em] text-ink-3">

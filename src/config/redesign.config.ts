@@ -10,17 +10,72 @@
 export type Density = 'sparse' | 'medium' | 'dense';
 export type ThemeDefault = 'light' | 'dark' | 'system';
 export type HeroVariant = 'split' | 'stacked';
+export type ThemeMode = 'paper' | 'stage' | 'mixed';
+export type MotionLevel = 'reduced' | 'measured' | 'expressive';
 
 export const redesignConfig = {
+  visual: {
+    themeMode: 'mixed' as ThemeMode,
+    stageHero: true,
+    showVinylDisc: true,
+    motion: 'measured' as MotionLevel,
+  },
+
   hero: {
     variant: 'split' as HeroVariant,
+  },
+
+  /** Feature-page hero copy. Counts and query-specific fragments stay local
+   * to each page, but the displayed editorial wording lives here so it can
+   * be changed without hunting through route components. */
+  pageHeaders: {
+    albums: {
+      num: '01',
+      kicker: 'Catalogue · Albums',
+      title: 'Every record in the crate',
+      subtitle:
+        'Every release in the collection, filterable by genre, year, and title. Sort by when it landed, by sleeve, or by artist.',
+    },
+    artists: {
+      num: '02',
+      kicker: 'Catalogue · Artists',
+      title: 'Every act on the shelf',
+      subtitle:
+        'Everyone represented in the collection. Sort alphabetically, by depth, or by who arrived most recently.',
+    },
+    search: {
+      num: '00',
+      kicker: 'Catalogue · Search',
+      title: 'Search the catalogue',
+      resultsTitlePrefix: 'Results for',
+      emptySubtitle:
+        'Use the nav search bar (or press / from any page) to find albums, artists, and genres across the collection.',
+      resultsSubtitle:
+        'Full matches across the collection. Tap a row to open the record or artist.',
+    },
+    stats: {
+      num: '00',
+      kicker: 'Stats · russ.fm / collection dossier',
+      title: 'The shelf by the numbers',
+    },
+    genres: {
+      num: '03',
+      kicker: 'Catalogue · Genres',
+      title: 'Genre constellations',
+      subtitle:
+        'A living map of the collection: genres anchor the field, artists orbit by how often they appear on the shelf.',
+    },
+    wrapped: {
+      num: '07',
+      kicker: 'Wrapped · russ.fm / year dossier',
+      yearToDateSuffix: ' · year to date',
+    },
   },
 
   /** Horizontal drag-scroll walls and catalogue strips on the home page. */
   walls: {
     recentAlbumsCount: 24,
     recentArtistsCount: 18,
-    catalogueStripCount: 8,
     randomPicksCount: 4,
   },
 

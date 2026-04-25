@@ -28,7 +28,7 @@ export function PageContainer({
   const base =
     variant === "standard"
       ? "mx-auto w-full max-w-[1640px] px-5 py-8 md:px-8 md:py-10"
-      : "min-h-screen";
+      : "min-h-[100dvh]";
 
   return <div className={cn(base, className)}>{children}</div>;
 }

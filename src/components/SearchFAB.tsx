@@ -49,7 +49,7 @@ export function SearchFAB({ onClick, className }: SearchFABProps) {
       className={cn(
         "fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg",
         "bg-primary hover:bg-primary/90 text-primary-foreground",
-        "transition-all duration-300 ease-in-out",
+        "transition-[opacity,transform,background-color] duration-300 ease-in-out",
         "md:hidden", // Only show on mobile
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0 pointer-events-none",
         className

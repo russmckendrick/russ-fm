@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
+import type { CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 'react-icons/si';
 import { ServiceButton } from '@/components/ui/service-button';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { AlbumCard } from '@/components/AlbumCard';
-import { PageContainer, SectionHeader } from '@/components/layout';
+import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColors } from '@/hooks/useAlbumColors';
@@ -132,12 +133,12 @@ export function ArtistDetailPage() {
 
   const pageTitle = artistData
     ? `${artistData.name} - ${albums.length} Album${albums.length !== 1 ? 's' : ''} | Russ.fm`
-    : 'Loading Artist... | Russ.fm';
+    : 'Loading Artist… | Russ.fm';
   usePageTitle(pageTitle);
   useMetaTags({
     title: pageTitle,
     description: artistData
-      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}... ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
+      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}… ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
       : 'View artist details on Russ.fm',
     image: artistPath ? getArtistOGImageUrl(artistPath) : undefined,
     url: `${appConfig.siteUrl}/artist/${artistPath}`,
@@ -147,9 +148,7 @@ export function ArtistDetailPage() {
   if (loading) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Loading artist…
-        </div>
+        <EditorialSkeleton label="Loading artist…" />
       </PageContainer>
     );
   }
@@ -161,12 +160,10 @@ export function ArtistDetailPage() {
           <Link to="/artists/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
             ← Artists
           </Link>
-          <div className="mt-8 border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
-            <p className="text-[17px] font-semibold text-ink">Artist not found</p>
-            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-              The requested artist could not be found
-            </p>
-          </div>
+          <EditorialEmpty
+            title="Artist not found"
+            detail="The requested artist could not be found"
+          />
         </div>
       </PageContainer>
     );
@@ -199,134 +196,115 @@ export function ArtistDetailPage() {
   const bio = cleanBiography(artistData?.biography);
 
   const heroTint = albumColors?.background ?? 'var(--paper-2)';
+  const heroAccent = albumColors?.accent ?? 'var(--hl)';
+  const titleStyle = getArtistHeroTitleStyle(artistName);
 
   return (
     <PageContainer variant="hero">
       {/* Hero --------------------------------------------------------- */}
       <section
-        className="relative isolate overflow-hidden"
-        style={{
-          backgroundColor: 'var(--paper)',
-        }}
+        className="relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]"
       >
         <div
-          className="pointer-events-none absolute inset-0"
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-[0.18]"
           style={{
-            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
-            mixBlendMode: 'multiply',
-            opacity: 0.85,
-          }}
-        />
-        <div
-          className="pointer-events-none absolute inset-0 hidden dark:block"
-          style={{
-            background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
-            mixBlendMode: 'screen',
-            opacity: 0.7,
+            background: `radial-gradient(circle at 62% 22%, ${heroTint} 0%, transparent 34%)`,
           }}
         />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
-          <nav className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-            <Link to="/artists/1" className="transition-colors hover:text-ink">Artists</Link>
-            <span>/</span>
-            <span className="text-ink">{artistName}</span>
-          </nav>
-
-          <div className="grid gap-10 md:grid-cols-[auto_minmax(0,1fr)] md:items-end md:gap-14">
-            {/* Circular portrait */}
-            <div className="mx-auto w-52 shrink-0 md:mx-0 md:w-72">
-              <div
-                className="relative aspect-square w-full overflow-hidden rounded-full border border-rule-strong bg-paper-2"
-                style={
-                  albumColors
-                    ? { boxShadow: `0 40px 80px -30px ${albumColors.background}, 0 8px 20px -6px rgba(14,13,11,0.12)` }
-                    : undefined
-                }
+        <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
+          <div className="flex min-w-0 flex-col items-start">
+            <nav className="mb-5 flex max-w-full items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+              <Link
+                to="/artists/1"
+                className="shrink-0 transition-colors hover:text-ink"
               >
-                <img
-                  src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
-                  alt={artistName}
-                  onError={handleImageError}
-                  className="h-full w-full object-cover"
-                />
+                Artists
+              </Link>
+              <span aria-hidden>/</span>
+              <span className="min-w-0 truncate">{artistName}</span>
+            </nav>
+
+            <h1
+              className="text-display uppercase text-ink"
+              style={titleStyle}
+            >
+              {artistName}
+            </h1>
+
+            {cleanGenres.length > 0 && (
+              <div className="mt-5 flex flex-wrap gap-1.5">
+                {cleanGenres.slice(0, 6).map((g) => (
+                  <GenreTag key={g} genre={g} size="md" linkable />
+                ))}
               </div>
-            </div>
+            )}
 
-            {/* Header text */}
-            <div className="flex min-w-0 flex-col gap-6">
-              <div>
-                <div className="mb-4 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-                  <span className="text-hl">ARTIST</span>
-                  <span>·</span>
-                  <span>{albums.length} RELEASE{albums.length === 1 ? '' : 'S'}</span>
-                  {firstYear && latestYear && (
-                    <>
-                      <span>·</span>
-                      <span>
-                        {firstYear === latestYear ? firstYear : `${firstYear}–${latestYear}`}
-                      </span>
-                    </>
-                  )}
-                </div>
-                <h1 className="text-[clamp(40px,7vw,88px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
-                  {artistName}
-                </h1>
-              </div>
-
-              {/* KV strip */}
-              <dl className="grid max-w-xl grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong font-grot">
-                <KV label="Releases" value={String(albums.length)} />
-                {firstYear && <KV label="First" value={String(firstYear)} />}
-                {artistData?.country && <KV label="Country" value={artistData.country} />}
-                {artistData?.formed_date && <KV label="Formed" value={artistData.formed_date} />}
-              </dl>
-
-              {cleanGenres.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {cleanGenres.slice(0, 6).map((g) => (
-                    <GenreTag key={g} genre={g} size="md" linkable />
-                  ))}
-                </div>
-              )}
-
-              {/* External service buttons */}
-              <div className="flex flex-wrap gap-2">
-                {artistData?.services?.spotify?.url && (
-                  <ServiceButton service="spotify" url={artistData.services.spotify.url} icon={<SiSpotify className="h-4 w-4" />}>
-                    Spotify
-                  </ServiceButton>
-                )}
-                {artistData?.services?.apple_music?.url && (
-                  <ServiceButton service="apple-music" url={artistData.services.apple_music.url} icon={<SiApplemusic className="h-4 w-4" />}>
-                    Apple Music
-                  </ServiceButton>
-                )}
-                {artistData?.services?.lastfm?.url && (
-                  <ServiceButton service="lastfm" url={artistData.services.lastfm.url} icon={<SiLastdotfm className="h-4 w-4" />}>
-                    Last.fm
-                  </ServiceButton>
-                )}
-                {(artistData?.discogs_url || artistData?.services?.discogs?.url) && (
-                  <ServiceButton
-                    service="discogs"
-                    url={artistData?.discogs_url || artistData?.services?.discogs?.url}
-                    icon={<SiDiscogs className="h-4 w-4" />}
-                  >
-                    Discogs
-                  </ServiceButton>
-                )}
-                <ServiceButton
-                  service="wikipedia"
-                  url={`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`}
-                  icon={<SiWikipedia className="h-4 w-4" />}
-                >
-                  Wikipedia
+            <div className="mt-7 flex flex-wrap items-center gap-2">
+              {artistData?.services?.spotify?.url && (
+                <ServiceButton service="spotify" url={artistData.services.spotify.url} icon={<SiSpotify className="h-4 w-4" />}>
+                  Spotify
                 </ServiceButton>
-              </div>
+              )}
+              {artistData?.services?.apple_music?.url && (
+                <ServiceButton service="apple-music" url={artistData.services.apple_music.url} icon={<SiApplemusic className="h-4 w-4" />}>
+                  Apple Music
+                </ServiceButton>
+              )}
+              {artistData?.services?.lastfm?.url && (
+                <ServiceButton service="lastfm" url={artistData.services.lastfm.url} icon={<SiLastdotfm className="h-4 w-4" />}>
+                  Last.fm
+                </ServiceButton>
+              )}
+              {(artistData?.discogs_url || artistData?.services?.discogs?.url) && (
+                <ServiceButton
+                  service="discogs"
+                  url={artistData?.discogs_url || artistData?.services?.discogs?.url}
+                  icon={<SiDiscogs className="h-4 w-4" />}
+                >
+                  Discogs
+                </ServiceButton>
+              )}
+              <ServiceButton
+                service="wikipedia"
+                url={`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`}
+                icon={<SiWikipedia className="h-4 w-4" />}
+              >
+                Wikipedia
+              </ServiceButton>
             </div>
           </div>
-        </div>
+
+          <div className="min-w-0">
+            <div
+              className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden bg-paper-2 shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
+              style={{
+                boxShadow: `0 38px 90px -48px ${heroAccent}, 0 18px 48px -34px rgba(14,13,11,0.42)`,
+              }}
+            >
+              <img
+                src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
+                alt={artistName}
+                width={720}
+                height={720}
+                fetchPriority="high"
+                onError={handleImageError}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <aside className="grid gap-0 border-y border-rule-strong lg:border-y-0">
+            <ArtistMetaRail label="Releases" value={String(albums.length)} />
+            <ArtistMetaRail label="First" value={firstYear ? String(firstYear) : '—'} />
+            <ArtistMetaRail label="Latest" value={latestYear ? String(latestYear) : '—'} />
+            <ArtistMetaRail label="Styles" value={cleanGenres.length ? cleanGenres.slice(0, 2).join(', ') : 'Collection'} />
+            <div className="hidden border-b border-rule py-8 lg:block">
+              <HeroPulseLine accent={heroAccent} />
+            </div>
+          </aside>
+          </div>
       </section>
 
       {/* Main content ------------------------------------------------- */}
@@ -409,6 +387,76 @@ function KV({ label, value }: { label: string; value: string }) {
       </dd>
     </div>
   );
+}
+
+function ArtistMetaRail({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+      <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
+        {label}
+      </dt>
+      <dd className="mt-2 break-words font-display text-[19px] uppercase leading-tight text-ink">
+        {value}
+      </dd>
+    </div>
+  );
+}
+
+function HeroPulseLine({ accent }: { accent: string }) {
+  return (
+    <span className="relative block h-10 w-20 overflow-hidden text-ink" aria-hidden>
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 96 48" fill="none">
+        <path
+          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.32"
+        />
+        <path
+          className="waveform-trace"
+          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+          stroke={accent}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          pathLength="1"
+          strokeDasharray="0.34 1"
+        />
+      </svg>
+    </span>
+  );
+}
+
+function getArtistHeroTitleStyle(name: string): CSSProperties {
+  const words = name.split(/\s+/).filter(Boolean);
+  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
+  const charCount = name.length;
+
+  let maxPx = 128;
+  let preferredVw = 9.2;
+  let maxWidth = 'min(100%, 9.6ch)';
+
+  if (longestWord >= 18 || charCount >= 46) {
+    maxPx = 72;
+    preferredVw = 4.9;
+    maxWidth = 'min(100%, 13.8ch)';
+  } else if (longestWord >= 13 || charCount >= 34) {
+    maxPx = 88;
+    preferredVw = 5.8;
+    maxWidth = 'min(100%, 12.4ch)';
+  } else if (longestWord >= 11 || charCount >= 24) {
+    maxPx = 104;
+    preferredVw = 7.1;
+    maxWidth = 'min(100%, 11.2ch)';
+  }
+
+  return {
+    fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
+    maxWidth,
+    lineHeight: 0.9,
+  };
 }
 
 function cleanBiography(raw?: string): string | null {

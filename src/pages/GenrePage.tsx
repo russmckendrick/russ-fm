@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getArtistImageFromData } from '@/lib/image-utils';
+import { DossierHero, EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
+import { redesignConfig } from '@/config/redesign.config';
 
 interface Album {
   release_name: string;
@@ -333,7 +335,7 @@ export function GenrePage() {
       const linkElements = linkGroup.selectAll('line')
         .data(links)
         .enter().append('line')
-        .attr('stroke', '#64748b')
+        .attr('stroke', 'var(--stage-rule)')
         .attr('stroke-width', 1.5)
         .attr('stroke-opacity', (d: MindMapLink) => {
           if (!focusedGenre) return 0.3;
@@ -375,8 +377,8 @@ export function GenrePage() {
 
       genreNodes.append('circle')
         .attr('r', d => Math.max(35, Math.min(55, d.albumCount * 1.5)))
-        .attr('fill', (d, i) => d3.schemeSet3[i % d3.schemeSet3.length])
-        .attr('stroke', '#fff')
+        .attr('fill', (_d, i) => (i === 0 ? 'var(--hl)' : 'var(--stage-2)'))
+        .attr('stroke', 'var(--stage-rule)')
         .attr('stroke-width', 3)
         .style('filter', 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))')
         .style('opacity', (d: MindMapNode) => {
@@ -397,7 +399,7 @@ export function GenrePage() {
             node.append('text')
               .attr('text-anchor', 'middle')
               .attr('dy', 4)
-              .style('fill', '#1f2937')
+              .style('fill', 'var(--stage-ink)')
               .style('font-weight', 'bold')
               .style('font-size', '11px')
               .text(d.name);
@@ -406,7 +408,7 @@ export function GenrePage() {
             node.append('text')
               .attr('text-anchor', 'middle')
               .attr('dy', -2)
-              .style('fill', '#1f2937')
+              .style('fill', 'var(--stage-ink)')
               .style('font-weight', 'bold')
               .style('font-size', '11px')
               .text(words[0]);
@@ -414,7 +416,7 @@ export function GenrePage() {
             node.append('text')
               .attr('text-anchor', 'middle')
               .attr('dy', 10)
-              .style('fill', '#1f2937')
+              .style('fill', 'var(--stage-ink)')
               .style('font-weight', 'bold')
               .style('font-size', '11px')
               .text(words.slice(1).join(' '));
@@ -440,7 +442,7 @@ export function GenrePage() {
             node.append('text')
               .attr('text-anchor', 'middle')
               .attr('dy', (i - (lines.length - 1) / 2) * lineHeight + 4)
-              .style('fill', '#1f2937')
+              .style('fill', 'var(--stage-ink)')
               .style('font-weight', 'bold')
               .style('font-size', '10px')
               .text(line);
@@ -494,7 +496,7 @@ export function GenrePage() {
           }
         })
         .attr('fill', 'none')
-        .attr('stroke', '#64748b')
+        .attr('stroke', 'var(--stage-rule)')
         .attr('stroke-width', 2)
         .style('filter', 'drop-shadow(1px 1px 3px rgba(0,0,0,0.3))')
         .style('opacity', (d: MindMapNode) => {
@@ -598,8 +600,8 @@ export function GenrePage() {
             d3.select(this.parentNode as Element)
               .append('circle')
               .attr('r', 28)
-              .attr('fill', '#e2e8f0')
-              .attr('stroke', '#64748b')
+              .attr('fill', 'var(--stage-3)')
+              .attr('stroke', 'var(--stage-rule)')
               .attr('stroke-width', 2);
           }
         });
@@ -644,7 +646,7 @@ export function GenrePage() {
             .attr('class', 'pulse-border')
             .transition()
             .duration(200)
-            .attr('stroke', '#3b82f6')
+            .attr('stroke', 'var(--hl)')
             .attr('stroke-width', 4);
           // Tooltip: show and animate
           tooltipGroup.selectAll('*').remove();
@@ -670,8 +672,8 @@ export function GenrePage() {
             .attr('ry', 8)
             .attr('width', boxWidth)
             .attr('height', boxHeight)
-            .attr('fill', '#f8fafc')
-            .attr('stroke', '#60a5fa')
+            .attr('fill', 'var(--stage-ink)')
+            .attr('stroke', 'var(--hl)')
             .attr('stroke-width', 1.5)
             .attr('filter', 'drop-shadow(0px 2px 6px rgba(0,0,0,0.10))');
           // Tooltip text
@@ -681,7 +683,7 @@ export function GenrePage() {
             .attr('text-anchor', 'middle')
             .attr('font-size', 15)
             .attr('font-weight', 'bold')
-            .attr('fill', '#334155')
+            .attr('fill', 'var(--stage)')
             .text(d.name);
           // Animate tooltip pop
           tooltip.transition()
@@ -699,7 +701,7 @@ export function GenrePage() {
             .attr('class', null)
             .transition()
             .duration(200)
-            .attr('stroke', '#64748b')
+            .attr('stroke', 'var(--stage-rule)')
             .attr('stroke-width', 2);
           // Animate tooltip out
           tooltipGroup.selectAll('g').transition()
@@ -755,8 +757,8 @@ export function GenrePage() {
           animation: pulse 0.7s infinite alternate;
         }
         @keyframes pulse {
-          0% { stroke-width: 4; stroke: #3b82f6; }
-          100% { stroke-width: 14; stroke: #60a5fa; }
+          0% { stroke-width: 4; stroke: var(--hl); }
+          100% { stroke-width: 14; stroke: color-mix(in oklab, var(--hl) 70%, var(--stage-ink)); }
         }
       `;
       document.head.appendChild(style);
@@ -771,37 +773,43 @@ export function GenrePage() {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center min-h-[400px]">
-          <div className="text-lg">Loading genre mind map...</div>
-        </div>
-      </div>
+      <PageContainer>
+        <EditorialSkeleton label="Loading genre mind map…" />
+      </PageContainer>
     );
   }
 
   if (error) {
     return (
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-center min-h-[400px]">
-          <div className="text-lg text-destructive">Error: {error}</div>
-        </div>
-      </div>
+      <PageContainer>
+        <EditorialEmpty title="Genre map failed" detail={error} />
+      </PageContainer>
     );
   }
+  const header = redesignConfig.pageHeaders.genres;
 
   return (
-    <div className="w-full px-4 py-4">
-      <div className="bg-card rounded-lg border p-4">
+    <PageContainer>
+      <DossierHero
+        num={header.num}
+        kicker={header.kicker}
+        title={header.title}
+        subtitle={header.subtitle}
+        counts={[
+          { label: 'Genres', value: genreArtistData.length },
+          { label: 'Records', value: albums.length.toLocaleString() },
+          { label: 'Focus', value: focusedGenre || 'All' },
+        ]}
+      />
+      <div className="border border-stage-rule bg-stage p-3 text-stage-ink md:p-5">
         {genreArtistData.length > 0 ? (
-          <div className="w-full h-[85vh] flex justify-center">
-            <svg ref={svgRef} className="w-full h-full" />
+          <div className="flex h-[76dvh] min-h-[560px] w-full justify-center">
+            <svg ref={svgRef} className="h-full w-full" aria-label="Genre mind map" role="img" />
           </div>
         ) : (
-          <div className="text-center py-16">
-            <p className="text-muted-foreground">No genre data available</p>
-          </div>
+          <EditorialEmpty title="No genre data available" className="border-stage-rule bg-stage-2" />
         )}
       </div>
-    </div>
+    </PageContainer>
   );
 }

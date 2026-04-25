@@ -1,7 +1,6 @@
 import { StatCardData, GridSize } from '@/types/wrapped';
 import { Calendar } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import { useState } from 'react';
 
 interface MonthlyHeatGridProps {
   stat: StatCardData;

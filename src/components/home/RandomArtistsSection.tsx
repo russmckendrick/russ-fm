@@ -12,7 +12,7 @@ interface RandomArtistsSectionProps {
 }
 
 /**
- * Editorial random-artist grid. Round photos, mono rank, grot name.
+ * Editorial random-artist grid. Square photos, mono rank, grot name.
  */
 export function RandomArtistsSection({
   randomArtists,
@@ -56,10 +56,12 @@ export function RandomArtistsSection({
               i >= 4 && "hidden sm:block",
             )}
           >
-            <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[6px] bg-paper-2">
               <img
                 src={artist.avatar}
                 alt={artist.name}
+                width={360}
+                height={360}
                 loading="lazy"
                 draggable={false}
                 onError={handleImageError}

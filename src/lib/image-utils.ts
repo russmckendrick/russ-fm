@@ -190,7 +190,7 @@ export function sanitizeJsonPath(jsonPath: string): string {
   if (jsonPath.includes('/album/')) {
     const match = jsonPath.match(/\/album\/(.+?)\/(.+?)\.json$/);
     if (match) {
-      const [, folderName, fileName] = match;
+      const [, folderName] = match;
       
       // Extract album name and discogs ID from folder/file name
       const pathMatch = folderName.match(/^(.+)-(\d+)$/);

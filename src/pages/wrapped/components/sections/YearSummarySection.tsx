@@ -13,7 +13,6 @@ interface YearSummarySectionProps {
 
 export function YearSummarySection({
   summary,
-  year,
   accentColor,
 }: YearSummarySectionProps) {
   const ref = useRef<HTMLDivElement>(null);

@@ -91,16 +91,19 @@ export function Navigation() {
           "font-grot"
         )}
       >
-        <div className="mx-auto flex w-full max-w-[1640px] items-center gap-6 px-5 py-3 md:gap-8 md:px-8 md:py-3.5">
+        <div className="mx-auto grid w-full max-w-[1640px] grid-cols-[auto_auto] items-center gap-6 px-5 py-4 md:gap-8 md:px-8 md:py-5 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
           {/* --- Brand ------------------------------------------------ */}
           <Link
             to="/"
-            className="flex shrink-0 items-center gap-3 text-ink hover:text-ink md:gap-3.5"
+            className="flex shrink-0 items-center gap-3 text-ink transition-opacity hover:opacity-80 md:gap-3.5"
             aria-label="russ.fm — home"
           >
             <BrandMark />
-            <span className="text-[18px] font-bold leading-none tracking-[-0.02em]">
-              russ.fm
+            <span
+              className="font-grot text-[27px] font-black uppercase leading-none tracking-[0] md:text-[31px]"
+              style={{ fontVariationSettings: '"wdth" 62, "wght" 900' }}
+            >
+              RUSS.FM
             </span>
             <span className="hidden items-center gap-3 lg:flex">
               <span
@@ -119,9 +122,9 @@ export function Navigation() {
           {/* --- Nav rail --------------------------------------------- */}
           <nav
             aria-label="Primary"
-            className="hidden flex-1 justify-center md:flex"
+            className="hidden min-w-0 justify-center lg:flex"
           >
-            <ul className="flex items-center gap-4 xl:gap-5">
+            <ul className="flex min-w-0 items-center justify-center gap-3 xl:gap-5">
               {NAV_ITEMS.map((item) => {
                 const on = isActive(item);
                 const Icon = item.icon;
@@ -130,8 +133,8 @@ export function Navigation() {
                     <Link
                       to={item.path}
                       aria-current={on ? "page" : undefined}
-                      className={cn(
-                        "group inline-flex items-center gap-2 border-b px-1 py-2.5 text-[12.5px] font-medium leading-none tracking-[-0.005em] transition-all",
+                    className={cn(
+                        "group inline-flex items-center gap-1.5 border-b px-1 py-2.5 font-display text-[13px] uppercase leading-none transition-[color,border-color,opacity] duration-200",
                         on
                           ? "border-ink text-ink"
                           : "border-transparent text-ink-3 hover:border-rule-strong hover:text-ink"
@@ -139,7 +142,7 @@ export function Navigation() {
                     >
                       <Icon
                         className={cn(
-                          "h-3.5 w-3.5 transition-colors",
+                          "hidden h-3.5 w-3.5 transition-colors xl:block",
                           on
                             ? "text-ink"
                             : "text-ink-dim group-hover:text-ink-2",
@@ -155,13 +158,13 @@ export function Navigation() {
           </nav>
 
           {/* --- Right actions ---------------------------------------- */}
-          <div className="ml-auto flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 items-center justify-end gap-2">
             {/* Desktop search input */}
             <div className="relative hidden md:block">
               <label
                 className={cn(
-                  "flex items-center gap-2 px-3 py-2 text-[12.5px]",
-                  "w-[260px] xl:w-[320px]",
+                  "flex items-center gap-2 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em]",
+                  "w-[220px] xl:w-[260px]",
                   searchOverlayOpen
                     ? "border-x border-t border-rule-strong bg-paper"
                     : "border border-rule focus-within:border-rule-strong",
@@ -218,7 +221,7 @@ export function Navigation() {
               type="button"
               aria-label="Search"
               onClick={openSearch}
-              className="flex h-9 w-9 items-center justify-center border border-rule text-ink hover:bg-paper-2 md:hidden"
+              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink md:hidden"
             >
               <Search className="h-4 w-4" />
             </button>
@@ -234,7 +237,7 @@ export function Navigation() {
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((v) => !v)}
-              className="flex h-9 w-9 items-center justify-center border border-rule text-ink hover:bg-paper-2 md:hidden"
+              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink md:hidden"
             >
               {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>

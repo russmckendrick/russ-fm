@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils.ts"
 
 const cardVariants = cva(
-  "rounded-xl border bg-card text-card-foreground shadow-sm",
+  "border border-rule bg-paper text-ink",
   {
     variants: {
       variant: {
-        default: "transition-all duration-200 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-lg",
-        interactive: "transition-all duration-200 ease-in-out hover:scale-[1.02] hover:border-primary hover:shadow-lg cursor-pointer",
-        static: "transition-shadow duration-200 ease-in-out hover:shadow-md",
+        default: "transition-[border-color,background-color,transform] duration-200 ease-out hover:-translate-y-px hover:border-rule-strong",
+        interactive: "cursor-pointer transition-[border-color,background-color,transform] duration-200 ease-out hover:-translate-y-px hover:border-rule-strong",
+        static: "transition-[border-color,background-color] duration-200 ease-out",
       },
     },
     defaultVariants: {

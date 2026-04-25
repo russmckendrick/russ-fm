@@ -72,7 +72,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
   });
 
   return (
-    <div className="fixed inset-0 z-50 bg-black overflow-hidden">
+    <div className="fixed inset-0 z-50 overflow-hidden bg-stage">
       {/* Home logo */}
       <Link
         to="/"

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Shuffle, RefreshCw, ArrowRight } from 'lucide-react';
 import { GenreTag } from '@/components/ui/genre-tag';
-import { PageContainer, SectionHeader } from '@/components/layout';
+import { PageContainer, SectionHeader, StageVinyl } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
 import { useAlbumColors } from '@/hooks/useAlbumColors';
@@ -134,13 +134,13 @@ export function RandomPage() {
   return (
     <PageContainer variant="hero">
       {/* Hero ------------------------------------------------------- */}
-      <section className="relative isolate overflow-hidden bg-paper">
+      <section className="relative isolate overflow-hidden bg-stage text-stage-ink">
         <div
           className="pointer-events-none absolute inset-0 transition-[background] duration-700 ease-out motion-reduce:transition-none"
           style={{
             background: `linear-gradient(135deg, ${heroTint} 0%, transparent 65%)`,
-            mixBlendMode: 'multiply',
-            opacity: 0.85,
+            mixBlendMode: 'screen',
+            opacity: 0.28,
           }}
         />
         <div
@@ -156,9 +156,9 @@ export function RandomPage() {
           <div className="mb-8 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
             <span className="text-hl">RANDOM</span>
             <span>·</span>
-            <span>SHUFFLE THE CRATE</span>
+            <span className="text-stage-dim">SHUFFLE THE CRATE</span>
             <span className="ml-auto hidden md:inline">
-              Press <kbd className="border border-rule-strong bg-paper px-1.5 py-0.5 text-ink">Space</kbd> to shuffle
+              Press <kbd className="border border-stage-rule bg-stage-2 px-1.5 py-0.5 text-stage-ink">Space</kbd> to shuffle
             </span>
           </div>
 
@@ -171,12 +171,13 @@ export function RandomPage() {
             {/* Sleeve */}
             <Link
               to={albumHref}
-              className="mx-auto block w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]"
+              className="relative mx-auto block w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]"
             >
+              <StageVinyl className="right-[-26%] top-[8%] hidden w-[86%] lg:block" />
               <div
-                className="aspect-square w-full overflow-hidden bg-paper-2"
+                className="relative z-10 aspect-square w-full overflow-hidden bg-paper-2"
                 style={{
-                  boxShadow: `0 40px 80px -20px ${heroTint}, 0 6px 20px -6px rgba(14,13,11,0.15)`,
+                  boxShadow: `0 40px 80px -28px ${heroTint}, 0 6px 20px -6px rgba(8,8,7,0.62)`,
                 }}
               >
                 <img
@@ -191,12 +192,12 @@ export function RandomPage() {
             {/* Text column */}
             <div className="flex min-w-0 flex-col gap-6">
               <div>
-                <h1 className="font-grot text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
+                <h1 className="text-display max-w-[11ch] text-[clamp(58px,9.5vw,132px)] uppercase text-stage-ink">
                   <Link to={albumHref} className="transition-colors hover:text-hl">
                     {currentAlbum.release_name}
                   </Link>
                 </h1>
-                <div className="mt-3 font-grot text-[20px] font-medium text-ink-2 md:text-[24px]">
+                <div className="mt-3 font-display text-[24px] uppercase text-stage-dim md:text-[30px]">
                   <Link to={currentAlbum.uri_artist} className="transition-colors hover:text-hl">
                     {currentAlbum.release_artist}
                   </Link>
@@ -204,7 +205,7 @@ export function RandomPage() {
               </div>
 
               {/* KV strip */}
-              <dl className="grid max-w-lg grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+              <dl className="grid max-w-lg grid-cols-2 gap-[1px] border border-stage-rule bg-stage-rule">
                 <KV label="Year" value={year || '—'} />
                 <KV
                   label="Added"
@@ -230,7 +231,7 @@ export function RandomPage() {
                   onClick={() => handleShuffle()}
                   disabled={isShuffling}
                   className={cn(
-                    "inline-flex items-center gap-2 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-colors hover:bg-hl hover:border-hl",
+                    "inline-flex items-center gap-2 border border-stage-ink bg-stage-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-stage transition-[color,background-color,border-color,transform,opacity] duration-200 hover:border-hl hover:bg-hl hover:text-paper active:translate-y-px",
                     isShuffling && "opacity-70",
                   )}
                 >
@@ -244,7 +245,7 @@ export function RandomPage() {
 
                 <Link
                   to={albumHref}
-                  className="inline-flex items-center gap-2 border border-rule-strong bg-paper px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
+                  className="inline-flex items-center gap-2 border border-stage-rule bg-stage-2 px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-stage-ink transition-[color,background-color,border-color,transform] duration-200 hover:border-hl hover:text-hl active:translate-y-px"
                 >
                   Open record
                   <ArrowRight className="h-4 w-4" />
@@ -294,11 +295,11 @@ export function RandomPage() {
 
 function KV({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-paper px-3 py-2.5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
+    <div className="bg-stage-2 px-3 py-2.5">
+      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-stage-dim">
         {label}
       </dt>
-      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
+      <dd className="mt-1 font-display text-[20px] uppercase leading-tight text-stage-ink">
         {value}
       </dd>
     </div>

@@ -30,7 +30,7 @@ export function RandomCollectionSection({
     <section className="space-y-5">
       <SectionHeader
         num="04"
-        label="From the Crates"
+        label="Deep Cuts"
         count={list.length}
         action="Discover more"
         actionTo="/albums/1"

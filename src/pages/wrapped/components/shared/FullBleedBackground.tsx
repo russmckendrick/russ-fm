@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import type { ComponentProps, ElementType, ReactNode } from 'react';
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { createGlowGradient } from '@/lib/color-utils';
 
@@ -12,7 +13,7 @@ export interface FullBleedBackgroundProps {
   blur?: boolean;
   animate?: boolean;
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
   variant?: 'default' | 'vibrant' | 'subtle' | 'deep' | 'cosmic';
 }
 
@@ -32,16 +33,16 @@ export function FullBleedBackground({
   const createHeroGradient = (palette: AlbumColorPalette | null) => {
     switch (variant) {
       case 'cosmic':
-        // Modern, premium dark theme using album colors
-        // Blend album background with deep blacks for a rich, dynamic look
+        // Modern, premium dark theme using album colors.
+        // Blend album background with the editorial stage tone.
         return palette ? `linear-gradient(135deg,
           ${palette.background} 0%,
           #09090b 40%,
-          #000000 75%,
+          #080807 75%,
           ${palette.muted} 100%)` : `linear-gradient(135deg,
           #18181b 0%,
           #09090b 40%,
-          #000000 75%,
+          #080807 75%,
           #18181b 100%)`;
       case 'vibrant':
         return palette ? `linear-gradient(135deg, 
@@ -58,7 +59,7 @@ export function FullBleedBackground({
         // A darker, richer mix that avoids muddy middle-tones
         return palette ? `linear-gradient(135deg, 
           ${palette.background} 0%, 
-          #000000 40%, 
+          #080807 40%, 
           ${palette.muted} 80%, 
           ${palette.background} 100%)` : defaultBackground;
       case 'default':
@@ -67,8 +68,8 @@ export function FullBleedBackground({
     }
   };
 
-  const MotionWrapper = animate ? motion.div : 'div';
-  const motionProps = animate
+  const MotionWrapper: ElementType = animate ? motion.div : 'div';
+  const motionProps: ComponentProps<typeof motion.div> | Record<string, never> = animate
     ? {
       initial: { opacity: 0 },
       animate: { opacity: 1 },
@@ -80,7 +81,7 @@ export function FullBleedBackground({
     <div className={`absolute inset-0 overflow-hidden ${className}`}>
       <MotionWrapper
         className="absolute inset-0"
-        {...motionProps as any}
+        {...motionProps}
       >
         {/* Base gradient background */}
         <div
@@ -176,13 +177,13 @@ export function FullBleedBackground({
 
         {/* Overlay options */}
         {overlay === 'dark' && (
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-[rgba(8,8,7,0.5)]" />
         )}
         {overlay === 'light' && (
           <div className="absolute inset-0 bg-white/20" />
         )}
         {overlay === 'gradient' && (
-          <div className={`absolute inset-0 bg-gradient-to-t from-background ${variant === 'deep' || variant === 'cosmic' ? 'via-black/60' : 'via-background/50'
+          <div className={`absolute inset-0 bg-gradient-to-t from-background ${variant === 'deep' || variant === 'cosmic' ? 'via-[rgba(8,8,7,0.6)]' : 'via-background/50'
             } to-transparent`} />
         )}
       </MotionWrapper>
@@ -200,7 +201,7 @@ interface NeutralBackgroundProps {
   variant?: 'dark' | 'darker' | 'accent';
   accentColor?: string;
   className?: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
 export function NeutralBackground({
@@ -210,8 +211,8 @@ export function NeutralBackground({
   children,
 }: NeutralBackgroundProps) {
   const backgrounds = {
-    dark: 'bg-gradient-to-br from-zinc-900 via-zinc-950 to-black',
-    darker: 'bg-black',
+    dark: 'bg-gradient-to-br from-zinc-900 via-zinc-950 to-stage',
+    darker: 'bg-stage',
     accent: accentColor
       ? `bg-gradient-to-br from-zinc-900 to-zinc-950`
       : 'bg-gradient-to-br from-zinc-900 to-zinc-950',

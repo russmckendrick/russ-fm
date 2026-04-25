@@ -52,4 +52,4 @@ function MetadataBadge({
   );
 }
 
-export { MetadataBadge, metadataBadgeVariants };
+export { MetadataBadge };

@@ -64,12 +64,21 @@ export default {
           DEFAULT: "var(--paper)",
           2: "var(--paper-2)",
           3: "var(--paper-3)",
+          warm: "var(--paper-warm)",
         },
         ink: {
           DEFAULT: "var(--ink)",
           2: "var(--ink-2)",
           3: "var(--ink-3)",
           dim: "var(--ink-dim)",
+        },
+        stage: {
+          DEFAULT: "var(--stage)",
+          2: "var(--stage-2)",
+          3: "var(--stage-3)",
+          ink: "var(--stage-ink)",
+          dim: "var(--stage-dim)",
+          rule: "var(--stage-rule)",
         },
         rule: {
           DEFAULT: "var(--rule)",
@@ -80,6 +89,7 @@ export default {
       },
       fontFamily: {
         grot: "var(--font-grot)",
+        display: "var(--font-display)",
         mono: "var(--font-mono)",
         sans: "var(--font-grot)",
       },

@@ -2,15 +2,15 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
 import { ServiceButton } from '@/components/ui/service-button';
-import { PageContainer, SectionHeader } from '@/components/layout';
+import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
-import { GenreTag } from '@/components/ui/genre-tag';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
@@ -170,11 +170,11 @@ export function AlbumDetailPage() {
           try {
             // Load collection to find the album with this Discogs ID
             const collectionResponse = await fetch('/collection.json');
-            const collection = await collectionResponse.json();
+            const collection = await collectionResponse.json() as Album[];
 
             // Find album by Discogs ID
-            const foundAlbum = collection.find((album: any) => {
-              const albumDiscogsId = album.uri_release.match(/\/(\d+)\//)?.[1];
+            const foundAlbum = collection.find((candidate) => {
+              const albumDiscogsId = candidate.uri_release.match(/\/(\d+)\//)?.[1];
               return albumDiscogsId === albumPath;
             });
 
@@ -184,7 +184,7 @@ export function AlbumDetailPage() {
               const hiResPath = foundAlbum.images_uri_release['hi-res'];
               if (hiResPath) {
                 // Extract album path from: "/album/unknown-25472284/unknown-25472284-hi-res.jpg"
-                const albumPathMatch = hiResPath.match(/\/album\/([^\/]+)\//);
+                const albumPathMatch = hiResPath.match(/\/album\/([^/]+)\//);
                 if (albumPathMatch) {
                   const correctPath = albumPathMatch[1];
                   navigate(`/album/${correctPath}`, { replace: true });
@@ -228,7 +228,7 @@ export function AlbumDetailPage() {
       ? album.artists.map(artist => artist.name).join(' & ')
       : album?.release_artist || 'Unknown Artist'
     } | Russ.fm`
-    : 'Loading Album... | Russ.fm';
+    : 'Loading Album… | Russ.fm';
 
   usePageTitle(pageTitle);
 
@@ -552,9 +552,7 @@ export function AlbumDetailPage() {
   if (loading) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Loading album…
-        </div>
+        <EditorialSkeleton label="Loading album…" />
       </PageContainer>
     );
   }
@@ -566,12 +564,10 @@ export function AlbumDetailPage() {
           <Link to="/albums/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
             ← Albums
           </Link>
-          <div className="mt-8 border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
-            <p className="text-[17px] font-semibold text-ink">Album not found</p>
-            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-              The requested album could not be found
-            </p>
-          </div>
+          <EditorialEmpty
+            title="Album not found"
+            detail="The requested album could not be found"
+          />
         </div>
       </PageContainer>
     );
@@ -654,17 +650,19 @@ export function AlbumDetailPage() {
       })
     : getCleanGenresFromArray(album.genre_names, album.release_artist);
 
-  // Faux catalogue number from Discogs ID (e.g. 37044327 → CAT. 327)
-  const catNo = (() => {
-    const m = album.uri_release.match(/-(\d+)\/?$/);
-    return m ? `CAT. ${m[1].slice(-3)}` : 'CAT.';
-  })();
-
   const heroImage = getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res');
-  const albumBg = 'var(--album-bg, var(--album-bg-fallback))';
-  const albumFg = 'var(--album-fg, var(--album-fg-fallback))';
-  const albumAccent = 'var(--album-accent, var(--album-accent-fallback))';
-  const albumMuted = 'var(--album-muted, var(--album-muted-fallback))';
+  const albumTint = albumColors.background || 'var(--paper-2)';
+  const albumAccent = albumColors.accent || 'var(--hl)';
+  const titleStyle = getAlbumHeroTitleStyle(album.release_name);
+  const formattedAdded = album.date_added
+    ? new Date(album.date_added).toLocaleString('en-GB', {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+        timeZone: 'UTC',
+      }).toUpperCase()
+    : '—';
+  const primaryFormat = detailedAlbum?.formats?.[0] || 'Record';
 
   // Section numbering — each section that renders gets the next sequential
   // "01", "02"… so toggled sections stay correctly numbered after the
@@ -741,7 +739,10 @@ export function AlbumDetailPage() {
     <PageContainer variant="hero">
       {/* Hero ----------------------------------------------------------- */}
       <section
-        className="relative isolate overflow-hidden font-grot"
+        className={cn(
+          'relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]',
+          albumPath ? `album-${albumPath}` : undefined,
+        )}
         style={{
           '--album-bg-fallback': albumColors.background,
           '--album-fg-fallback': albumColors.foreground,
@@ -749,196 +750,149 @@ export function AlbumDetailPage() {
           '--album-muted-fallback': albumColors.muted,
         } as React.CSSProperties}
       >
-        {/* Palette wash — blurred sleeve + tinted gradient + radial accents */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 overflow-hidden"
-          style={{ backgroundColor: albumBg }}
-        >
-          <img
-            src={heroImage}
-            alt=""
-            className="h-full w-full scale-[1.18] object-cover opacity-40 blur-2xl saturate-[1.2] md:blur-[72px]"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `
-                linear-gradient(
-                  110deg,
-                  color-mix(in oklab, ${albumBg} 92%, black 8%) 0%,
-                  color-mix(in oklab, ${albumBg} 80%, ${albumMuted} 20%) 50%,
-                  color-mix(in oklab, ${albumBg} 72%, ${albumAccent} 10%) 100%
-                )
-              `,
-              mixBlendMode: 'multiply',
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-90"
-            style={{
-              background: `
-                radial-gradient(
-                  circle at 78% 34%,
-                  color-mix(in oklab, ${albumAccent} 40%, transparent) 0%,
-                  transparent 42%
-                ),
-                radial-gradient(
-                  circle at 18% 86%,
-                  color-mix(in oklab, ${albumMuted} 48%, transparent) 0%,
-                  transparent 50%
-                )
-              `,
-            }}
-          />
-        </div>
+          className="pointer-events-none absolute inset-0 opacity-[0.18]"
+          style={{
+            background: `radial-gradient(circle at 62% 22%, ${albumTint} 0%, transparent 34%)`,
+          }}
+        />
 
-        <div className="relative z-10 mx-auto w-full max-w-[1640px] px-5 pb-14 pt-10 md:px-8 md:pb-20 md:pt-14">
-          <nav
-            className="mb-8 flex items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em]"
-            style={{ color: `color-mix(in oklab, ${albumFg} 55%, transparent)` }}
-          >
-            <Link
-              to="/albums/1"
-              className="transition-opacity hover:opacity-85"
-              style={{ color: `color-mix(in oklab, ${albumFg} 55%, transparent)` }}
+        <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
+          <div className="flex min-w-0 flex-col items-start">
+            <nav className="mb-5 flex max-w-full items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+              <Link
+                to="/albums/1"
+                className="shrink-0 transition-colors hover:text-ink"
+              >
+                Albums
+              </Link>
+              <span aria-hidden>/</span>
+              <span className="min-w-0 truncate">{album.release_name}</span>
+            </nav>
+
+            <h1
+              className="text-display uppercase text-ink"
+              style={titleStyle}
             >
-              Albums
-            </Link>
-            <span>/</span>
-            <span style={{ color: albumFg }}>{album.release_name}</span>
-          </nav>
+              {album.release_name}
+            </h1>
 
-          <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-end md:gap-14">
-            {/* Header text */}
-            <div className="flex min-w-0 flex-col gap-6">
-              <div>
-                <div
-                  className="mb-4 flex flex-wrap items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em]"
-                  style={{ color: `color-mix(in oklab, ${albumFg} 60%, transparent)` }}
-                >
-                  <span style={{ color: albumAccent }}>{catNo}</span>
-                  {detailedAlbum?.labels?.[0] && (
-                    <>
-                      <span>·</span>
-                      <span>{detailedAlbum.labels[0]}</span>
-                    </>
-                  )}
-                  {detailedAlbum?.formats?.[0] && (
-                    <>
-                      <span>·</span>
-                      <span>{detailedAlbum.formats[0]}</span>
-                    </>
-                  )}
-                </div>
-                <h1
-                  className="text-[clamp(40px,7vw,92px)] font-semibold leading-[0.98] tracking-[-0.025em]"
-                  style={{ color: albumFg }}
-                >
-                  {album.release_name}
-                </h1>
-
-                {/* Artist row with avatars */}
-                <div
-                  className="mt-4 flex flex-wrap items-center gap-3 font-grot text-[20px] font-semibold md:text-[24px]"
-                  style={{ color: albumFg }}
-                >
-                  {album.artists && album.artists.length > 1 ? (
-                    <div className="flex -space-x-2">
-                      {album.artists.map((artist, i) => (
-                        <Link key={i} to={artist.uri_artist} className="shrink-0">
-                          <img
-                            src={getArtistAvatarFromData(artist.uri_artist)}
-                            alt={artist.name}
-                            onError={handleImageError}
-                            className="h-10 w-10 rounded-full object-cover"
-                            style={{ boxShadow: `0 0 0 2px ${albumAccent}` }}
-                          />
-                        </Link>
-                      ))}
-                    </div>
-                  ) : (
-                    <Link to={album.uri_artist} className="shrink-0">
+            <div className="mt-5 flex flex-wrap items-center gap-3">
+              {album.artists && album.artists.length > 1 ? (
+                <div className="flex -space-x-2">
+                  {album.artists.map((artist) => (
+                    <Link
+                      key={artist.uri_artist}
+                      to={artist.uri_artist}
+                      className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+                    >
                       <img
-                        src={getArtistAvatarFromData(album.uri_artist)}
-                        alt={album.release_artist}
+                        src={getArtistAvatarFromData(artist.uri_artist)}
+                        alt={artist.name}
+                        width={40}
+                        height={40}
                         onError={handleImageError}
-                        className="h-10 w-10 rounded-full object-cover"
-                        style={{ boxShadow: `0 0 0 2px ${albumAccent}` }}
+                        className="h-10 w-10 rounded-[6px] border border-rule-strong object-cover"
                       />
                     </Link>
-                  )}
-                  {album.artists && album.artists.length > 1 ? (
-                    album.artists.map((artist, i) => (
-                      <React.Fragment key={i}>
-                        <Link
-                          to={artist.uri_artist}
-                          className="transition-opacity hover:opacity-85"
-                          style={{ color: `color-mix(in oklab, ${albumFg} 88%, transparent)` }}
-                        >
-                          {artist.name}
-                        </Link>
-                        {i < album.artists.length - 1 && (
-                          <span style={{ color: `color-mix(in oklab, ${albumFg} 50%, transparent)` }}>&</span>
-                        )}
-                      </React.Fragment>
-                    ))
-                  ) : (
-                    <Link
-                      to={album.uri_artist}
-                      className="transition-opacity hover:opacity-85"
-                      style={{ color: `color-mix(in oklab, ${albumFg} 88%, transparent)` }}
-                    >
-                      {album.release_artist}
-                    </Link>
-                  )}
-                </div>
-              </div>
-
-              {/* KV strip — palette-tinted catalogue tiles */}
-              <dl className="grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
-                <HeroKV label="Year" value={String(year || '—')} />
-                <HeroKV label="Tracks" value={String(tracks.length)} />
-                <HeroKV
-                  label="Added"
-                  value={album.date_added
-                    ? new Date(album.date_added).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' }).toUpperCase()
-                    : '—'}
-                />
-                {detailedAlbum?.country && <HeroKV label="Country" value={detailedAlbum.country} />}
-              </dl>
-
-              {cleanGenresList.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {cleanGenresList.slice(0, 6).map((g) => (
-                    <GenreTag key={g} genre={g} size="md" tone="tinted" linkable />
                   ))}
                 </div>
+              ) : (
+                <Link
+                  to={album.uri_artist}
+                  className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+                >
+                  <img
+                    src={getArtistAvatarFromData(album.uri_artist)}
+                    alt={album.release_artist}
+                    width={40}
+                    height={40}
+                    onError={handleImageError}
+                    className="h-10 w-10 rounded-[6px] border border-rule-strong object-cover"
+                  />
+                </Link>
               )}
 
-              {/* Action buttons — mobile/tablet only; desktop sits in sidebar */}
-              <div className="flex flex-wrap gap-2 lg:hidden">
-                {actionButtons}
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-display text-[22px] uppercase leading-none text-ink">
+                {album.artists && album.artists.length > 1 ? (
+                  album.artists.map((artist, index) => (
+                    <React.Fragment key={artist.uri_artist}>
+                      <Link
+                        to={artist.uri_artist}
+                        className="transition-colors hover:text-hl"
+                      >
+                        {artist.name}
+                      </Link>
+                      {index < album.artists!.length - 1 && (
+                        <span className="font-mono text-[13px] text-ink-dim" aria-hidden>
+                          /
+                        </span>
+                      )}
+                    </React.Fragment>
+                  ))
+                ) : (
+                  <Link
+                    to={album.uri_artist}
+                    className="transition-colors hover:text-hl"
+                  >
+                    {album.release_artist}
+                  </Link>
+                )}
               </div>
             </div>
 
-            {/* Sleeve */}
-            <div className="mx-auto w-full max-w-[420px] shrink-0 md:mx-0 md:w-[380px] lg:w-[440px]">
-              <div
-                className="aspect-square w-full overflow-hidden border border-white/15 bg-paper-2"
-                style={{
-                  boxShadow: `0 40px 80px -20px color-mix(in oklab, ${albumBg} 80%, black 20%), 0 6px 20px -6px rgba(0,0,0,0.35)`,
-                }}
-              >
-                <img
-                  src={heroImage}
-                  onError={handleImageError}
-                  alt={album.release_name}
-                  className="h-full w-full object-cover"
-                />
+            {cleanGenresList.length > 0 && (
+              <div className="mt-5 flex flex-wrap gap-1.5">
+                {cleanGenresList.slice(0, 6).map((genre) => (
+                  <Link
+                    key={genre}
+                    to={`/albums/1?genre=${encodeURIComponent(genre)}`}
+                    className="border border-rule-strong bg-paper px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink transition-[color,background-color,border-color] duration-200 hover:border-hl hover:bg-hl hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                  >
+                    {genre}
+                  </Link>
+                ))}
               </div>
+            )}
+
+            <div className="mt-7 flex flex-wrap items-center gap-2">
+              {actionButtons}
             </div>
           </div>
+
+          <div className="min-w-0">
+            <div
+              className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden bg-paper-2 shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
+              style={{
+                boxShadow: `0 38px 90px -48px ${albumAccent}, 0 18px 48px -34px rgba(14,13,11,0.42)`,
+              }}
+            >
+              <img
+                src={heroImage}
+                onError={handleImageError}
+                alt={album.release_name}
+                width={720}
+                height={720}
+                fetchPriority="high"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <aside className="grid gap-0 border-y border-rule-strong lg:border-y-0">
+            <AlbumMetaRail label="Released" value={Number.isFinite(year) ? String(year) : '—'} />
+            <AlbumMetaRail label="Format" value={primaryFormat} />
+            <AlbumMetaRail label="Added" value={formattedAdded} />
+            <AlbumMetaRail
+              label="Genres"
+              value={cleanGenresList.length ? cleanGenresList.slice(0, 2).join(', ') : 'Collection'}
+            />
+            <AlbumMetaRail label="Tracks" value={tracks.length ? String(tracks.length) : '—'} />
+            <div className="hidden border-b border-rule py-8 lg:block">
+              <HeroPulseLine accent={albumAccent} />
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -1095,7 +1049,7 @@ export function AlbumDetailPage() {
                               src={getArtistImageFromData(artistUri, 'medium')}
                               alt={artist.name}
                               onError={handleImageError}
-                              className="aspect-square w-full rounded-full border border-rule-strong object-cover"
+                              className="aspect-square w-full rounded-[6px] border border-rule-strong object-cover"
                             />
                           </div>
                           <div>
@@ -1133,11 +1087,6 @@ export function AlbumDetailPage() {
 
           {/* Sidebar ------------------------------------------------------ */}
           <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
-            {/* Action buttons — desktop only; mobile has them in the hero. */}
-            <div className="hidden flex-col gap-2 lg:flex">
-              {actionButtons}
-            </div>
-
             <div>
               <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
                 Release details
@@ -1245,7 +1194,7 @@ function ExpandableBody({
         {!expanded && (
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper/85 to-transparent"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper to-transparent"
           />
         )}
       </div>
@@ -1268,45 +1217,74 @@ function ExpandableBody({
   );
 }
 
-/**
- * Hero-local KV tile — palette-tinted, accent rail on the left edge,
- * transparent fill, open on the right (catalogue-row feel). Mirrors the
- * home hero's KV treatment so both heroes share the same visual
- * language.
- */
-function HeroKV({ label, value }: { label: string; value: string }) {
+function AlbumMetaRail({ label, value }: { label: string; value: string }) {
   return (
-    <div
-      className="relative border-y border-l px-3 py-3 pl-4 backdrop-blur-[2px] md:px-4 md:pl-5"
-      style={{
-        backgroundColor:
-          'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 6%, transparent)',
-        borderColor:
-          'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 22%, transparent)',
-        color: 'var(--album-fg, var(--album-fg-fallback))',
-      }}
-    >
-      <span
-        aria-hidden
-        className="absolute inset-y-0 left-0 w-[3px]"
-        style={{
-          backgroundColor: 'var(--album-accent, var(--album-accent-fallback))',
-        }}
-      />
-      <dt
-        className="font-mono text-[10px] uppercase tracking-[0.14em]"
-        style={{
-          color:
-            'color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 62%, transparent)',
-        }}
-      >
+    <div className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+      <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
         {label}
       </dt>
-      <dd className="mt-1.5 truncate font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] md:text-[16px]">
+      <dd className="mt-2 break-words font-display text-[19px] uppercase leading-tight text-ink">
         {value}
       </dd>
     </div>
   );
+}
+
+function HeroPulseLine({ accent }: { accent: string }) {
+  return (
+    <span className="relative block h-10 w-20 overflow-hidden text-ink" aria-hidden>
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 96 48" fill="none">
+        <path
+          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          opacity="0.32"
+        />
+        <path
+          className="waveform-trace"
+          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+          stroke={accent}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          pathLength="1"
+          strokeDasharray="0.34 1"
+        />
+      </svg>
+    </span>
+  );
+}
+
+function getAlbumHeroTitleStyle(title: string): React.CSSProperties {
+  const words = title.split(/\s+/).filter(Boolean);
+  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
+  const charCount = title.length;
+
+  let maxPx = 128;
+  let preferredVw = 9.2;
+  let maxWidth = 'min(100%, 9.6ch)';
+
+  if (longestWord >= 18 || charCount >= 46) {
+    maxPx = 72;
+    preferredVw = 4.9;
+    maxWidth = 'min(100%, 13.8ch)';
+  } else if (longestWord >= 13 || charCount >= 34) {
+    maxPx = 88;
+    preferredVw = 5.8;
+    maxWidth = 'min(100%, 12.4ch)';
+  } else if (longestWord >= 11 || charCount >= 24) {
+    maxPx = 104;
+    preferredVw = 7.1;
+    maxWidth = 'min(100%, 11.2ch)';
+  }
+
+  return {
+    fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
+    maxWidth,
+    lineHeight: 0.9,
+  };
 }
 
 function IdRow({ label, value }: { label: string; value: string }) {

@@ -46,7 +46,7 @@ export function AnimatedCard({
     <div
       ref={elementRef}
       className={cn(
-        'transform transition-all duration-500 ease-out overflow-visible h-full w-full',
+        'transform transition-[opacity,transform] duration-500 ease-out overflow-visible h-full w-full',
         isVisible ? animate : initial,
         className
       )}

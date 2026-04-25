@@ -1,4 +1,5 @@
 import { ReactNode, forwardRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface PresentationContainerProps {
   children: ReactNode;
@@ -13,7 +14,7 @@ export const PresentationContainer = forwardRef<HTMLDivElement, PresentationCont
         ref={ref}
         onScroll={onScroll}
         className={`
-          h-screen w-full overflow-y-auto overflow-x-hidden
+          min-h-[100dvh] w-full overflow-y-auto overflow-x-hidden
           snap-y snap-mandatory
           scroll-smooth
           ${className}
@@ -42,7 +43,7 @@ export function PresentationSection({ children, className = '', id }: Presentati
     <section
       id={id}
       className={`
-        h-screen w-full
+        min-h-[100dvh] w-full
         snap-start snap-always
         relative overflow-hidden
         flex items-center justify-center

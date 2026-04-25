@@ -42,7 +42,6 @@ export const appConfig = {
       'genres',           // Top-genre mosaic cards
       'randomCollection', // From-the-crates grid with shuffle
       'randomArtists',    // Random-roster grid with shuffle
-      'catalogueStrip',   // 7-column catalogue row (bin-divider style)
     ],
   },
   

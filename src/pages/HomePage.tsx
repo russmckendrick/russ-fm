@@ -11,12 +11,11 @@ import { RecentArtistsSection } from '@/components/home/RecentArtistsSection';
 import { GenresSection } from '@/components/home/GenresSection';
 import { RandomCollectionSection } from '@/components/home/RandomCollectionSection';
 import { RandomArtistsSection } from '@/components/home/RandomArtistsSection';
-import { CatalogueStrip } from '@/components/home/CatalogueStrip';
 import { StatsAside } from '@/components/home/StatsAside';
 
 /**
  * Editorial home page. The hero is full-bleed; everything below splits
- * into a main column (walls, catalogue, genres, random grids) and a
+ * into a main column (walls, genres, random grids) and a
  * sticky stats aside on wide viewports.
  */
 export function HomePage() {
@@ -251,7 +250,6 @@ export function HomePage() {
         onRefresh={refreshRandomArtists}
       />
     ),
-    catalogueStrip: () => <CatalogueStrip recentAlbums={recentAlbums} />,
   };
 
   const mainSections = appConfig.homepage.sectionOrder.filter(k => k !== 'hero');

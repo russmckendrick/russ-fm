@@ -79,7 +79,7 @@ export const VideoSection = memo(function VideoSection({ videos, className }: Vi
     <div className={className ?? ''}>
       {/* Featured hero video */}
       <div>
-        <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
+        <div className="relative aspect-video overflow-hidden border border-rule-strong bg-stage">
           {playing ? (
             <iframe
               ref={iframeRef}
@@ -98,11 +98,11 @@ export const VideoSection = memo(function VideoSection({ videos, className }: Vi
               <img
                 src={`https://img.youtube.com/vi/${featured.id}/maxresdefault.jpg`}
                 alt={titles[featured.id] || 'Video thumbnail'}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover:bg-black/40">
-                <div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-                  <Play className="w-10 h-10 text-white fill-white ml-0.5" />
+              <div className="absolute inset-0 flex items-center justify-center bg-[rgba(8,8,7,0.35)] transition-colors group-hover:bg-[rgba(8,8,7,0.48)]">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-hl shadow-lg transition-transform group-hover:scale-110">
+                  <Play className="ml-0.5 h-10 w-10 fill-paper text-paper" />
                 </div>
               </div>
             </button>
@@ -120,7 +120,7 @@ export const VideoSection = memo(function VideoSection({ videos, className }: Vi
             const originalIndex = validVideos.findIndex((v) => v.id === id);
             return (
               <div key={id} className="group">
-                <div className="relative aspect-video rounded-xl overflow-hidden bg-muted">
+                <div className="relative aspect-video overflow-hidden border border-rule-strong bg-stage">
                   <button
                     type="button"
                     onClick={() => handleGridClick(originalIndex)}
@@ -129,11 +129,11 @@ export const VideoSection = memo(function VideoSection({ videos, className }: Vi
                     <img
                       src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
                       alt={titles[id] || 'Video thumbnail'}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover/btn:scale-105"
+                      className="h-full w-full object-cover transition-transform duration-300 group-hover/btn:scale-105"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-colors group-hover/btn:bg-black/40">
-                      <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center shadow-lg transition-transform group-hover/btn:scale-110">
-                        <Play className="w-8 h-8 text-white fill-white ml-0.5" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-[rgba(8,8,7,0.35)] transition-colors group-hover/btn:bg-[rgba(8,8,7,0.48)]">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-hl shadow-lg transition-transform group-hover/btn:scale-110">
+                        <Play className="ml-0.5 h-8 w-8 fill-paper text-paper" />
                       </div>
                     </div>
                   </button>

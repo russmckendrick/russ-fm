@@ -29,7 +29,7 @@ export function GenresSection({
     <section className="space-y-5">
       <SectionHeader
         num="03"
-        label="Genres"
+        label="Browse by Genre"
         count={topGenres.length}
         action="Explore all"
         actionTo="/genres"

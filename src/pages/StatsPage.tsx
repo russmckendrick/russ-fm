@@ -1,11 +1,9 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect, useCallback } from 'react';
 import { AlbumCard } from '@/components/AlbumCard';
 import { ArtistCard } from '@/components/ArtistCard';
-import { PageContainer, SectionHeader } from '@/components/layout';
+import { DossierHero, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { GenreTag } from '@/components/ui/genre-tag';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getArtistImageFromData, getAlbumImageFromData } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
@@ -89,31 +87,27 @@ export function StatsPage() {
   if (loading || !stats) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Tallying the collection…
-        </div>
+        <EditorialSkeleton label="Tallying the collection…" />
       </PageContainer>
     );
   }
+  const header = redesignConfig.pageHeaders.stats;
 
   return (
     <PageContainer>
       {/* Hero -------------------------------------------------------- */}
-      <header className="mb-14 border-b border-rule pb-10">
-        <div className="mb-4 flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          <span className="text-hl">STATS</span>
-          <span>·</span>
-          <span>RUSS.FM / COLLECTION DOSSIER</span>
-        </div>
-        <h1 className="text-[clamp(44px,7vw,96px)] font-semibold leading-[0.98] tracking-[-0.025em] text-ink">
-          The shelf, <br className="hidden md:block" />by the numbers.
-        </h1>
-        <p className="mt-5 max-w-[60ch] font-grot text-[16px] leading-[1.7] text-ink-2">
+      <DossierHero
+        num={header.num}
+        kicker={header.kicker}
+        title={header.title}
+        subtitle={
+          <>
           Everything here derives from <code className="font-mono text-[13px] text-ink">collection.json</code> —
           {` `}{stats.totalAlbums.toLocaleString()} records added over
           {` `}{monthsSince(stats.oldestAlbum?.date_added)} months.
-        </p>
-      </header>
+          </>
+        }
+      />
 
       {/* KPI strip --------------------------------------------------- */}
       <section className="mb-16">
@@ -249,7 +243,7 @@ function KpiTile({ label, value, sub }: { label: string; value: string; sub?: st
       <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
         {label}
       </dt>
-      <dd className="mt-2 font-grot text-[clamp(28px,3.5vw,42px)] font-semibold leading-none tracking-[-0.02em] text-ink">
+      <dd className="mt-2 font-display text-[clamp(34px,4vw,56px)] uppercase leading-none text-ink">
         {value}
       </dd>
       {sub && (

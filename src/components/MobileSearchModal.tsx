@@ -19,9 +19,8 @@ export function MobileSearchModal({
   const [localSearchTerm, setLocalSearchTerm] = useState('');
 
   // Use search hook for Fuse.js powered search
-  const { 
-    query, 
-    setQuery, 
+  const {
+    setQuery,
     results, 
     isLoading, 
     isIndexing, 
@@ -115,14 +114,14 @@ export function MobileSearchModal({
     <div
       className={cn(
         "fixed inset-0 z-50 md:hidden",
-        "transition-all duration-200 ease-out",
+        "transition-[opacity,visibility] duration-200 ease-out",
         isOpen ? "visible" : "invisible"
       )}
     >
       {/* Backdrop */}
       <div
         className={cn(
-          "absolute inset-0 bg-black/20",
+          "absolute inset-0 bg-[rgba(8,8,7,0.35)]",
           "transition-opacity duration-200",
           isOpen ? "opacity-100" : "opacity-0"
         )}
@@ -142,7 +141,7 @@ export function MobileSearchModal({
       >
         {/* Swipe indicator */}
         <div className="flex justify-center pb-1 pt-2">
-          <div className="h-1 w-12 bg-ink-dim/30" />
+          <div className="h-1 w-12 bg-rule-strong" />
         </div>
 
         {/* Header */}

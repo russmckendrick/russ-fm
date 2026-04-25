@@ -1,4 +1,4 @@
-@import '@fontsource-variable/inter-tight/index.css';
+@import '@fontsource-variable/archivo/standard.css';
 @import '@fontsource-variable/jetbrains-mono/index.css';
 @import './styles/design-tokens.css';
 @import url('/album-colors.css');
@@ -92,9 +92,13 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-grot);
+    min-width: 320px;
+    overflow-x: hidden;
     font-feature-settings: 'ss01', 'cv11';
+    font-variation-settings: 'wdth' 95, 'wght' 480;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: color-mix(in oklab, var(--hl) 18%, transparent);
   }
 
   /* Editorial type scale. Headings lean tight and display-weight; body
@@ -146,6 +150,28 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+    font-variation-settings: var(--font-display-settings);
+    letter-spacing: var(--font-display-tracking);
+  }
+
+  .text-display {
+    font-family: var(--font-display);
+    font-variation-settings: var(--font-display-settings);
+    letter-spacing: var(--font-display-tracking);
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+
+  .hairline-y {
+    @apply border-y border-rule;
+  }
+
+  .hairline-b {
+    @apply border-b border-rule;
   }
 
   .glass-panel {

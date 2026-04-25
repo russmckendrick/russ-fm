@@ -8,6 +8,54 @@ Ordered newest first.
 
 ---
 
+## Phase 13 — Browser-comment polish and shared hero alignment
+
+**Date:** 2026-04-25
+**User-visible change:** the Home and Album Detail headers now share the
+same paper split grammar. The nav brand is bolder and uppercase, hero
+selectors expose seven records, artist portraits are rounded-square, and
+the Home stats sidebar hides pre-1960 decade rows.
+
+**Changed files**
+- `src/components/Navigation.tsx`
+  - Uppercase `RUSS.FM` wordmark.
+  - Added spacing between primary nav icons and labels.
+  - Corrected the header grid to `brand / flexible nav / actions` so the
+    brand lockup no longer reserves hero-column whitespace or pushes the
+    middle nav into search.
+- `src/components/home/HeroSection.tsx`
+  - Removed the `NOW SPINNING` kicker and `PLAY NOW` action.
+  - Kept a fixed desktop hero height and dynamic title sizing so long
+    album names shrink before they collide with the sleeve.
+  - Shows seven selectors, with the active selector using the album accent
+    from `/album-colors.json` / `/album-colors.css`.
+  - Animated the metadata waveform with a reduced-motion fallback.
+- `src/pages/AlbumDetailPage.tsx`
+  - Replaced the dark stage header with the same paper split layout as the
+    Home hero: breadcrumb, catalogue line, fitted display title,
+    rounded-square artist avatars, genre tags, actions, sleeve, `01`
+    marker, and right metadata rail.
+  - Kept album palette tinting for the background wash and sleeve shadow.
+- `src/components/home/StatsAside.tsx`
+  - Decade histogram filters out everything before the 1960s.
+- `src/components/home/RecentArtistsSection.tsx`,
+  `src/components/home/RandomArtistsSection.tsx`, `src/components/ArtistCard.tsx`
+  - Artist avatars render as square images with small rounded corners.
+- `src/pages/HomePage.tsx`, `src/config/app.config.ts`,
+  `src/config/redesign.config.ts`
+  - Removed the Home catalogue/latest acquisitions strip and set the Home
+    hero rotation to seven records.
+- `src/styles/design-tokens.css`
+  - Added the shared waveform trace keyframes.
+
+**Verification**
+- `pnpm exec tsc --noEmit` clean.
+- `pnpm run lint` clean with one pre-existing warning in
+  `src/hooks/useSearch.ts` (`react-hooks/exhaustive-deps`).
+- `pnpm run build:fast` green.
+
+---
+
 ## Phase 12 — Accessibility, responsive polish, docs
 
 **Date:** 2026-04-18

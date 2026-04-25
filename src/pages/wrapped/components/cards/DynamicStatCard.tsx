@@ -5,10 +5,9 @@ import { MonthlyHeatGrid } from './MonthlyHeatGrid';
 interface DynamicStatCardProps {
   stat: StatCardData;
   size: GridSize;
-  index?: number;
 }
 
-export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps) {
+export function DynamicStatCard({ stat, size }: DynamicStatCardProps) {
   // Get appropriate icon based on stat type
   const getIcon = () => {
     const iconSize = size === 'extra-wide' ? 'w-6 h-6' : size === 'large' ? 'w-8 h-8' : size === 'medium' ? 'w-6 h-6' : 'w-5 h-5';
@@ -54,7 +53,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
         return 'bg-gradient-to-br from-cyan-600 to-teal-700';
       case 'timeline':
         return 'bg-gradient-to-br from-red-600 to-orange-700';
-      case 'genre':
+      case 'genre': {
         // Dynamic colors for genre cards based on count with better distribution
         const count = typeof stat.value === 'number' ? stat.value : 0;
         if (count >= 150) {
@@ -74,6 +73,7 @@ export function DynamicStatCard({ stat, size, index = 0 }: DynamicStatCardProps)
         } else {
           return 'bg-gradient-to-br from-indigo-600 to-purple-700'; // Indigo-purple for low
         }
+      }
       default:
         return 'bg-gradient-to-br from-gray-600 to-gray-800';
     }

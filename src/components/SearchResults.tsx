@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Search, Disc, User, AlertCircle } from 'lucide-react';
+import { Disc, User } from 'lucide-react';
 import { GenreTag } from '@/components/ui/genre-tag';
+import { EditorialEmpty, EditorialSkeleton } from '@/components/layout';
 import { handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { SearchResult } from '@/services/searchService';
@@ -44,43 +45,36 @@ export function SearchResults({
 
   if (isLoading || isIndexing) {
     return (
-      <div className={cn("py-12 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim", className)}>
-        {isIndexing ? 'Indexing collection…' : 'Searching…'}
-      </div>
+      <EditorialSkeleton
+        label={isIndexing ? 'Indexing collection…' : 'Searching…'}
+        className={className}
+      />
     );
   }
 
   if (error) {
     return (
-      <div className={cn("flex flex-col items-center gap-2 py-12 text-center", className)}>
-        <AlertCircle className="h-6 w-6 text-hl" />
-        <p className="font-grot text-[14px] font-semibold text-ink">Search error</p>
-        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">{error}</p>
-      </div>
+      <EditorialEmpty title="Search error" detail={error} className={className} />
     );
   }
 
   if (searchTerm.trim() && results.length === 0) {
     return (
-      <div className={cn("flex flex-col items-center gap-2 py-12 text-center", className)}>
-        <Search className="h-6 w-6 text-ink-dim" />
-        <p className="font-grot text-[14px] font-semibold text-ink">No results</p>
-        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-          Try a different search term
-        </p>
-      </div>
+      <EditorialEmpty
+        title="No results"
+        detail="Try a different search term"
+        className={className}
+      />
     );
   }
 
   if (!searchTerm.trim()) {
     return (
-      <div className={cn("flex flex-col items-center gap-3 py-12 text-center", className)}>
-        <Search className="h-8 w-8 text-ink-dim" aria-hidden />
-        <p className="font-grot text-[17px] font-semibold text-ink">Start typing to search</p>
-        <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-          Find albums, artists, and genres
-        </p>
-      </div>
+      <EditorialEmpty
+        title="Start typing to search"
+        detail="Find albums, artists, and genres"
+        className={className}
+      />
     );
   }
 
@@ -187,7 +181,7 @@ function Row({
         className={cn(
           "relative flex shrink-0 items-center justify-center overflow-hidden border border-rule-strong bg-paper-2 font-mono text-[11px] uppercase text-ink-dim",
           size,
-          isArtist ? "rounded-full" : "rounded-none",
+          isArtist ? "rounded-[5px]" : "rounded-none",
         )}
       >
         <img

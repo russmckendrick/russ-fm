@@ -55,7 +55,7 @@ export function TweaksPanel() {
             aria-label="Reset"
             className={cn(
               "flex h-7 w-7 items-center justify-center border border-rule transition-colors",
-              isDirty ? "text-ink hover:bg-paper-2" : "text-ink-dim/40"
+              isDirty ? "text-ink hover:bg-paper-2" : "text-ink-dim opacity-40"
             )}
           >
             <RotateCcw className="h-3.5 w-3.5" />

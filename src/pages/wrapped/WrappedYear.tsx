@@ -2,7 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, Navigate, Link } from 'react-router-dom';
 import { Presentation, Grid3X3 } from 'lucide-react';
 import { AlbumCard } from '@/components/AlbumCard';
-import { PageContainer, SectionHeader, DragWall } from '@/components/layout';
+import { DossierHero, EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader, DragWall } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { handleImageError } from '@/lib/image-utils';
@@ -10,6 +10,7 @@ import { WrappedData, WrappedRelease } from '@/types/wrapped';
 import type { Album } from '@/types/album';
 import { YearSelector } from './components/YearSelector';
 import { WrappedPresentation } from './WrappedPresentation';
+import { redesignConfig } from '@/config/redesign.config';
 
 type ViewMode = 'grid' | 'presentation';
 
@@ -88,9 +89,7 @@ export function WrappedYear() {
   if (loading) {
     return (
       <PageContainer>
-        <div className="py-16 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          Loading {yearNum} Wrapped…
-        </div>
+        <EditorialSkeleton label={`Loading ${yearNum} Wrapped…`} />
       </PageContainer>
     );
   }
@@ -102,12 +101,10 @@ export function WrappedYear() {
           <Link to="/" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
             ← Home
           </Link>
-          <div className="mt-8 border border-rule-strong bg-paper-2/40 px-6 py-16 text-center font-grot">
-            <p className="text-[17px] font-semibold text-ink">Couldn't load Wrapped</p>
-            <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-              {error || 'Failed to load wrapped data'}
-            </p>
-          </div>
+          <EditorialEmpty
+            title="Couldn’t load Wrapped"
+            detail={error || 'Failed to load wrapped data'}
+          />
         </div>
       </PageContainer>
     );
@@ -148,22 +145,20 @@ export function WrappedYear() {
   const topArtists = insights.topArtists.slice(0, 8);
   const topAlbumsList = insights.topAlbums.slice(0, 10);
   const maxTopAlbumCount = Math.max(1, ...insights.topArtists.map(a => a.count));
+  const header = redesignConfig.pageHeaders.wrapped;
 
   return (
     <PageContainer>
-      <header className="mb-14 border-b border-rule pb-10">
-        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-4">
-          <div className="flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-            <span className="text-hl">WRAPPED</span>
-            <span>·</span>
-            <span>RUSS.FM / YEAR DOSSIER</span>
-            {data.isYearToDate && (
-              <>
-                <span>·</span>
-                <span className="text-hl">YEAR TO DATE</span>
-              </>
-            )}
-          </div>
+      <DossierHero
+        num={header.num}
+        kicker={`${header.kicker}${data.isYearToDate ? header.yearToDateSuffix : ''}`}
+        title={String(yearNum)}
+        subtitle={
+          data.isYearToDate
+            ? `So far this year — ${summary.totalReleases.toLocaleString()} records added, averaging ${summary.avgPerMonth.toFixed(1)} a month. On pace for ${summary.projectedTotal ?? '—'} by year end.`
+            : `${summary.totalReleases.toLocaleString()} records added during ${yearNum}, averaging ${summary.avgPerMonth.toFixed(1)} a month. ${summary.peakMonth} was the loudest month.`
+        }
+        actions={
           <div className="flex items-center gap-2">
             <button
               type="button"
@@ -180,17 +175,9 @@ export function WrappedYear() {
               onYearChange={(y) => navigate(`/wrapped/${y}`)}
             />
           </div>
-        </div>
-
-        <h1 className="font-grot text-[clamp(72px,16vw,220px)] font-semibold leading-[0.88] tracking-[-0.04em] text-ink">
-          {yearNum}
-        </h1>
-        <p className="mt-5 max-w-[60ch] font-grot text-[17px] leading-[1.7] text-ink-2">
-          {data.isYearToDate
-            ? `So far this year — ${summary.totalReleases.toLocaleString()} records added, averaging ${summary.avgPerMonth.toFixed(1)} a month. On pace for ${summary.projectedTotal ?? '—'} by year end.`
-            : `${summary.totalReleases.toLocaleString()} records added during ${yearNum}, averaging ${summary.avgPerMonth.toFixed(1)} a month. ${summary.peakMonth} was the loudest month.`}
-        </p>
-      </header>
+        }
+        className="[&_h1]:max-w-none [&_h1]:text-[clamp(88px,18vw,240px)]"
+      />
 
       {/* KPI strip -------------------------------------------------- */}
       <section className="mb-16">
@@ -293,7 +280,7 @@ export function WrappedYear() {
               return (
                 <li key={artist.slug}>
                   <Link to={`/artist/${artist.slug}`} className="group block">
-                    <div className="relative aspect-square w-full overflow-hidden rounded-full border border-rule-strong bg-paper-2">
+                    <div className="relative aspect-square w-full overflow-hidden rounded-[6px] border border-rule-strong bg-paper-2">
                       {img ? (
                         <img
                           src={img}
@@ -400,7 +387,7 @@ export function WrappedYear() {
               ← {previousYear}
             </Link>
           ) : (
-            <span className="text-ink-dim/40">— —</span>
+            <span className="opacity-40">— —</span>
           )}
         </div>
         <Link to="/" className="text-ink-dim transition-colors hover:text-ink">
@@ -415,7 +402,7 @@ export function WrappedYear() {
               {nextYear} →
             </Link>
           ) : (
-            <span className="text-ink-dim/40">— —</span>
+            <span className="opacity-40">— —</span>
           )}
         </div>
       </nav>
@@ -431,7 +418,7 @@ function KpiTile({ label, value, sub }: { label: string; value: string; sub?: st
       <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
         {label}
       </dt>
-      <dd className="mt-2 font-grot text-[clamp(22px,3vw,32px)] font-semibold leading-tight tracking-[-0.02em] text-ink">
+      <dd className="mt-2 font-display text-[clamp(28px,3.2vw,42px)] uppercase leading-tight text-ink">
         {value}
       </dd>
       {sub && (

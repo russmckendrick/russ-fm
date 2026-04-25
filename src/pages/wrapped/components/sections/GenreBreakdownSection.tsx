@@ -36,7 +36,6 @@ const getGenreColor = (genre: string): string => {
 
 export function GenreBreakdownSection({
   genres,
-  totalReleases,
 }: GenreBreakdownSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });

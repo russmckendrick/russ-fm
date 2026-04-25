@@ -91,4 +91,4 @@ function GenreTag({
   );
 }
 
-export { GenreTag, genreTagVariants };
+export { GenreTag };

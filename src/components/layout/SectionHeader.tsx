@@ -40,7 +40,7 @@ export function SectionHeader({
             {num}
           </span>
         )}
-        <h2 className="font-grot text-[clamp(20px,2.2vw,26px)] font-semibold leading-tight tracking-[-0.02em] text-ink">
+        <h2 className="font-display text-[clamp(22px,2.4vw,32px)] uppercase leading-none text-ink">
           {label}
         </h2>
         {count != null && (

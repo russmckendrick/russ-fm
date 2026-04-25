@@ -1,126 +1,93 @@
-import * as React from "react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
-export interface ServiceButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Service name (e.g., 'spotify', 'apple-music', 'discogs', 'lastfm', 'wikipedia') */
-  service?: 'spotify' | 'apple-music' | 'discogs' | 'lastfm' | 'wikipedia' | 'custom'
-  /** Brand color for the button */
-  brandColor?: string
-  /** URL to open when clicked */
-  url?: string
-  /** Icon component */
-  icon?: React.ReactNode
-  /** Button text */
-  children: React.ReactNode
-  /** Custom className */
-  className?: string
-  /** Progress state for showing internal progress bar */
-  progress?: { current: number; total: number } | null
+export interface ServiceButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  service?: "spotify" | "apple-music" | "discogs" | "lastfm" | "wikipedia" | "custom";
+  brandColor?: string;
+  url?: string;
+  icon?: React.ReactNode;
+  children: React.ReactNode;
+  className?: string;
+  progress?: { current: number; total: number } | null;
 }
 
-// Brand colors for common services
 const BRAND_COLORS = {
-  spotify: '#1DB954',
-  'apple-music': '#FA243C',
-  lastfm: '#D51007',
-  discogs: '#333333',
-  wikipedia: '#000000',
-} as const
+  spotify: "#1DB954",
+  "apple-music": "#d8273f",
+  lastfm: "#D51007",
+  discogs: "#2a2724",
+  wikipedia: "#2a2724",
+} as const;
 
-// Helper to convert hex to rgba
-function hexToRgba(hex: string, alpha: number): string {
-  const r = parseInt(hex.slice(1, 3), 16);
-  const g = parseInt(hex.slice(3, 5), 16);
-  const b = parseInt(hex.slice(5, 7), 16);
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-}
+const ServiceButton = React.forwardRef<HTMLButtonElement, ServiceButtonProps>(
+  (
+    {
+      service = "custom",
+      brandColor,
+      url,
+      icon,
+      children,
+      className,
+      onClick,
+      progress,
+      style,
+      type = "button",
+      ...props
+    },
+    ref,
+  ) => {
+    const color =
+      brandColor || (service !== "custom" ? BRAND_COLORS[service] : undefined);
+    const progressPercent = progress
+      ? Math.max(0, Math.min(100, (progress.current / progress.total) * 100))
+      : 0;
 
-function ServiceButton({
-  service = 'custom',
-  brandColor,
-  url,
-  icon,
-  children,
-  className,
-  onClick,
-  progress,
-  ...props
-}: ServiceButtonProps) {
-  const color = brandColor || (service !== 'custom' ? BRAND_COLORS[service] : undefined)
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+      if (url) window.open(url, "_blank", "noopener,noreferrer");
+      onClick?.(event);
+    };
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (url) {
-      window.open(url, '_blank')
-    }
-    onClick?.(e)
-  }
-
-  // Calculate progress percentage
-  const progressPercent = progress ? (progress.current / progress.total) * 100 : 0;
-  // Use a white overlay for clear visibility on any brand color
-  const progressFillColor = 'rgba(255, 255, 255, 0.35)';
-
-  return (
-    <Button
-      variant="outline"
-      size="sm"
-      className={cn(
-        "relative overflow-hidden h-9 px-4 border-2 text-white shadow-lg",
-        "transition-all duration-200 ease-in-out",
-        "hover:scale-105 hover:shadow-xl hover:bg-white",
-        "active:scale-95",
-        "[&_svg]:transition-colors [&_svg]:duration-200",
-        className
-      )}
-      style={{
-        backgroundColor: color,
-        borderColor: color,
-        '--hover-color': color,
-      } as React.CSSProperties}
-      onMouseEnter={(e) => {
-        // Check if dark mode is active
-        const isDark = document.documentElement.classList.contains('dark')
-        const hoverBg = isDark ? '#6b7280' : 'white' // mid-grey in dark mode, white in light mode
-
-        e.currentTarget.style.backgroundColor = hoverBg
-        e.currentTarget.style.color = color || ''
-        // Update SVG icon color
-        const svg = e.currentTarget.querySelector('svg')
-        if (svg && color) {
-          svg.style.color = color
+    return (
+      <button
+        ref={ref}
+        type={type}
+        className={cn(
+          "relative inline-flex h-10 items-center justify-center overflow-hidden border px-4",
+          "font-mono text-[11px] uppercase tracking-[0.08em]",
+          "transition-[color,background-color,border-color,transform,opacity] duration-200",
+          "hover:-translate-y-px active:translate-y-px",
+          "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink",
+          "disabled:pointer-events-none disabled:opacity-55",
+          className,
+        )}
+        style={
+          {
+            borderColor: color ?? "var(--rule-strong)",
+            backgroundColor: color ?? "var(--ink)",
+            color: "var(--paper)",
+            ...style,
+          } as React.CSSProperties
         }
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.backgroundColor = color || ''
-        e.currentTarget.style.color = 'white'
-        // Reset SVG icon color
-        const svg = e.currentTarget.querySelector('svg')
-        if (svg) {
-          svg.style.color = 'white'
-        }
-      }}
-      onClick={handleClick}
-      {...props}
-    >
-      {/* Progress fill overlay */}
-      {progress && (
-        <div
-          className="absolute inset-y-0 left-0 transition-all duration-500 ease-out"
-          style={{
-            width: `${progressPercent}%`,
-            background: `linear-gradient(90deg, ${progressFillColor} 0%, rgba(255, 255, 255, 0.5) 100%)`,
-          }}
-        />
-      )}
+        onClick={handleClick}
+        {...props}
+      >
+        {progress && (
+          <span
+            aria-hidden
+            className="absolute inset-y-0 left-0 bg-white/25 transition-[width] duration-500 ease-out"
+            style={{ width: `${progressPercent}%` }}
+          />
+        )}
+        <span className="relative flex items-center gap-2">
+          {icon && <span aria-hidden>{icon}</span>}
+          {children}
+        </span>
+      </button>
+    );
+  },
+);
 
-      {/* Button content - above the progress fill */}
-      <span className="relative z-10 flex items-center">
-        {icon && <span className="mr-2">{icon}</span>}
-        {children}
-      </span>
-    </Button>
-  )
-}
+ServiceButton.displayName = "ServiceButton";
 
-export { ServiceButton }
+export { ServiceButton };

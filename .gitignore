@@ -154,6 +154,11 @@ dist-worker/
 
 # Claude
 .claude/
+CLAUDE.md
+**/CLAUDE.md
+
+# Codex
+.codex/
 
 # Generated image sizes (only keep hi-res originals)
 public/album/**/*-medium.jpg
@@ -162,5 +167,5 @@ public/album/**/*-avatar.jpg
 public/artist/**/*-medium.jpg
 public/artist/**/*-small.jpg
 public/artist/**/*-avatar.jpg
-CLAUDE.md
-**/CLAUDE.md
+
+

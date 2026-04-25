@@ -32,9 +32,15 @@ function ArtistRouteHandler() {
 function App() {
   return (
     <div className="min-h-screen bg-background font-grot">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:font-mono focus:text-[11px] focus:uppercase focus:tracking-[0.08em] focus:text-ink"
+      >
+        Skip to main content
+      </a>
       <Navigation />
 
-      <main className="pb-16">
+      <main id="main-content" className="pb-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />

@@ -108,7 +108,6 @@ export function addAlpha(hex: string, alpha: number): string {
  */
 export function createAlbumGradient(colors: AlbumColorPalette, style: 'hero' | 'card' | 'accent' = 'hero'): string {
   const backgroundLuminance = getLuminance(colors.background);
-  const accentLuminance = getLuminance(colors.accent);
   
   switch (style) {
     case 'hero':
@@ -151,7 +150,6 @@ export function createAlbumGradient(colors: AlbumColorPalette, style: 'hero' | '
  */
 export function createGlowGradient(colors: AlbumColorPalette, intensity: 'subtle' | 'medium' | 'bold' = 'medium'): string {
   const backgroundLuminance = getLuminance(colors.background);
-  const accentLuminance = getLuminance(colors.accent);
   
   let alpha: number;
   let spread: number;
@@ -427,7 +425,6 @@ export function getComplementaryColors(colors: AlbumColorPalette) {
  */
 export function createHeroBackground(colors: AlbumColorPalette): string {
   const backgroundLuminance = getLuminance(colors.background);
-  const accentLuminance = getLuminance(colors.accent);
   
   if (backgroundLuminance > 0.5) {
     // Light backgrounds - still need to be bold and vibrant

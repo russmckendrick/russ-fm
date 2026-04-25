@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from './ui/dialog';
 import { Progress } from './ui/progress';
 import { useLastFmAuth } from '../hooks/useLastFmAuth';
 import { useScrobble } from '../hooks/useScrobble';
 import { LastFmAuthDialog } from './LastFmAuthDialog';
 import { Music, Check, X, AlertCircle, Loader2 } from 'lucide-react';
-import { AlbumScrobbleRequest } from '../types/scrobble';
+import { AlbumScrobbleRequest, ScrobbleResult } from '../types/scrobble';
 
 interface ScrobbleProgressProps {
   album: AlbumScrobbleRequest;
@@ -17,11 +17,11 @@ export function ScrobbleProgress({ album, children }: ScrobbleProgressProps) {
   const [open, setOpen] = useState(false);
   const [progress, setProgress] = useState(0);
   const [currentTrack, setCurrentTrack] = useState<string>('');
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<ScrobbleResult[]>([]);
   const [isComplete, setIsComplete] = useState(false);
   
   const { isAuthenticated } = useLastFmAuth();
-  const { scrobbleAlbum, isScrobbling } = useScrobble();
+  const { scrobbleAlbum } = useScrobble();
 
   const handleScrobbleAlbum = async () => {
     if (!isAuthenticated) return;
@@ -30,7 +30,7 @@ export function ScrobbleProgress({ album, children }: ScrobbleProgressProps) {
     setProgress(0);
     setResults([]);
     setIsComplete(false);
-    setCurrentTrack('Starting...');
+    setCurrentTrack('Starting…');
 
     try {
       // Since our API handles the full album scrobbling with delays,
@@ -56,7 +56,7 @@ export function ScrobbleProgress({ album, children }: ScrobbleProgressProps) {
         setProgress(100);
       }, totalTracks * 200);
 
-    } catch (err) {
+    } catch {
       setCurrentTrack('Failed');
       setIsComplete(true);
     }

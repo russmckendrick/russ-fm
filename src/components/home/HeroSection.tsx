@@ -1,12 +1,6 @@
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import type { ColorPalette } from "@/lib/colorExtractor";
 import {
@@ -14,6 +8,7 @@ import {
   getAlbumSlug,
   handleImageError,
 } from "@/lib/image-utils";
+import { getCleanGenresFromArray } from "@/lib/genreUtils";
 import type { Album } from "@/types/album";
 
 interface HeroSectionProps {
@@ -25,19 +20,10 @@ interface HeroSectionProps {
   onSelectIndex: (index: number) => void;
 }
 
-interface HeroBackdrop {
-  image: string;
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
-}
-
 /**
- * Poster-led home hero. The latest ten featured records become a
- * horizontally scrollable coverflow: the active sleeve anchors the
- * composition, neighboring sleeves recede, and the supporting copy is
- * reduced to a slim caption + action row.
+ * Screenshot-led home hero: paper surface, giant condensed title, central
+ * sleeve, right-side metadata rail, and a small numbered selector. State is
+ * still managed by HomePage so auto-rotation remains unchanged.
  */
 export function HeroSection({
   currentFeatured,
@@ -47,601 +33,227 @@ export function HeroSection({
   autoRotateMs,
   onSelectIndex,
 }: HeroSectionProps) {
-  const [isDesktopCoverflow, setIsDesktopCoverflow] = useState(false);
-  const [previousBackdrop, setPreviousBackdrop] = useState<HeroBackdrop | null>(null);
-  const [isBackdropCrossfading, setIsBackdropCrossfading] = useState(false);
-  const lastBackdropRef = useRef<HeroBackdrop | null>(null);
+  if (!currentFeatured) return null;
 
-  useEffect(() => {
-    const media = window.matchMedia("(min-width: 1024px)");
-    const update = () => setIsDesktopCoverflow(media.matches);
-    update();
-    media.addEventListener("change", update);
-    return () => media.removeEventListener("change", update);
-  }, []);
-
-  const heroBackdrop = useMemo<HeroBackdrop | null>(() => {
-    if (!currentFeatured) return null;
-    return {
-      image: getAlbumImageFromData(currentFeatured.uri_release, "hi-res"),
-      background: currentPalette?.background ?? "#8a8377",
-      foreground: currentPalette?.foreground ?? "#ffffff",
-      accent: currentPalette?.accent ?? "#c03a2b",
-      muted: currentPalette?.muted ?? "#5a534a",
-    };
-  }, [
-    currentFeatured?.uri_release,
-    currentPalette?.accent,
-    currentPalette?.background,
-    currentPalette?.foreground,
-    currentPalette?.muted,
-  ]);
-
-  useEffect(() => {
-    if (!heroBackdrop) return undefined;
-
-    const previous = lastBackdropRef.current;
-    const changed =
-      previous &&
-      (previous.image !== heroBackdrop.image ||
-        previous.background !== heroBackdrop.background ||
-        previous.foreground !== heroBackdrop.foreground ||
-        previous.accent !== heroBackdrop.accent ||
-        previous.muted !== heroBackdrop.muted);
-
-    if (changed) {
-      setPreviousBackdrop(previous);
-      setIsBackdropCrossfading(true);
-      const fadeFrame = window.requestAnimationFrame(() => {
-        setIsBackdropCrossfading(false);
-      });
-      const timer = window.setTimeout(() => {
-        setPreviousBackdrop(null);
-      }, 720);
-      lastBackdropRef.current = heroBackdrop;
-      return () => {
-        window.cancelAnimationFrame(fadeFrame);
-        window.clearTimeout(timer);
-      };
-    }
-
-    lastBackdropRef.current = heroBackdrop;
-    return undefined;
-  }, [heroBackdrop]);
-
-  if (!currentFeatured || !heroBackdrop) return null;
-
-  const paletteClassName = `album-${getAlbumSlug(currentFeatured.uri_release)}`;
+  const albumHref = currentFeatured.uri_release;
   const firstArtist =
     currentFeatured.artists?.[0]?.uri_artist ?? currentFeatured.uri_artist;
-  const albumFg = "var(--album-fg, var(--album-fg-fallback))";
+  const cover = getAlbumImageFromData(currentFeatured.uri_release, "hi-res");
+  const year = getYear(currentFeatured.date_release_year);
+  const added = formatAdded(currentFeatured.date_added);
+  const genres = getCleanGenresFromArray(
+    currentFeatured.genre_names,
+    currentFeatured.release_artist,
+  ).slice(0, 2);
+  const tint = currentPalette?.background ?? "var(--paper-2)";
+  const accent = currentPalette?.accent ?? "var(--hl)";
+  const paletteClassName = `album-${getAlbumSlug(currentFeatured.uri_release)}`;
+  const titleStyle = getTitleStyle(currentFeatured.release_name);
 
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden border-b border-rule font-grot",
+        "relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]",
         paletteClassName,
       )}
-      style={
-        {
-          "--album-bg-fallback": heroBackdrop.background,
-          "--album-fg-fallback": heroBackdrop.foreground,
-          "--album-accent-fallback": heroBackdrop.accent,
-          "--album-muted-fallback": heroBackdrop.muted,
-        } as React.CSSProperties
-      }
     >
-      <HeroBackdropLayer backdrop={heroBackdrop} opacityClassName="opacity-100" />
-      {previousBackdrop ? (
-        <HeroBackdropLayer
-          backdrop={previousBackdrop}
-          opacityClassName={
-            isBackdropCrossfading
-              ? "opacity-100 transition-opacity duration-700 ease-out"
-              : "opacity-0 transition-opacity duration-700 ease-out"
-          }
-        />
-      ) : null}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.18]"
+        style={{
+          background: `radial-gradient(circle at 62% 22%, ${tint} 0%, transparent 34%)`,
+        }}
+      />
 
-      <div className="relative mx-auto w-full max-w-[1640px] px-5 pb-8 pt-8 md:px-8 md:pb-10 md:pt-10">
-        <HeroCoverflow
-          featuredAlbums={featuredAlbums}
-          activeIndex={featuredIndex}
-          onSelect={onSelectIndex}
-          isDesktopCoverflow={isDesktopCoverflow}
-          autoRotateMs={autoRotateMs}
-        />
+      <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
+        <div className="flex min-w-0 flex-col items-start">
+          <h1
+            className="text-display uppercase text-ink"
+            style={titleStyle}
+          >
+            {currentFeatured.release_name}
+          </h1>
 
-        <div className="mt-4 flex flex-col items-center gap-2.5 text-center md:mt-6">
-          <div className="flex flex-wrap items-baseline justify-center gap-x-3 gap-y-1">
-            <Link
-              to={currentFeatured.uri_release}
-              className="text-[14px] font-semibold tracking-[0.01em] transition-opacity hover:opacity-75 md:text-[16px]"
-              style={{ color: albumFg }}
-            >
-              {currentFeatured.release_name}
-            </Link>
-            <span
-              aria-hidden
-              className="font-mono text-[10px] uppercase tracking-[0.14em]"
-              style={{ color: `color-mix(in oklab, ${albumFg} 48%, transparent)` }}
-            >
-              /
-            </span>
-            <Link
-              to={firstArtist}
-              className="text-[14px] font-medium tracking-[0.01em] transition-opacity hover:opacity-75 md:text-[16px]"
-              style={{
-                color: `color-mix(in oklab, ${albumFg} 82%, transparent)`,
-              }}
-            >
-              {currentFeatured.release_artist}
-            </Link>
-          </div>
+          <Link
+            to={firstArtist}
+            className="mt-5 font-display text-[22px] uppercase leading-none text-ink transition-colors hover:text-hl"
+          >
+            {currentFeatured.release_artist}
+          </Link>
 
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+          <p className="mt-4 max-w-[43ch] font-mono text-[13px] leading-[1.55] text-ink-2">
+            {genres.length
+              ? `${genres.join(" / ")} from ${year || "the archive"}. A current shelf marker from the personal record collection.`
+              : "A current shelf marker from the personal record collection."}
+          </p>
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
             <Link
-              to={currentFeatured.uri_release}
-              className="inline-flex items-center gap-2 text-[13px] font-medium tracking-[0.01em] transition-opacity hover:opacity-75"
-              style={{ color: albumFg }}
+              to={albumHref}
+              className="inline-flex items-center gap-3 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[color,background-color,border-color,transform] duration-200 hover:border-hl hover:bg-hl active:translate-y-px"
             >
-              Open record <span aria-hidden>→</span>
-            </Link>
-            <Link
-              to={firstArtist}
-              className="inline-flex items-center gap-2 text-[13px] font-medium tracking-[0.01em] transition-opacity hover:opacity-75"
-              style={{
-                color: `color-mix(in oklab, ${albumFg} 86%, transparent)`,
-              }}
-            >
-              View artist <span aria-hidden>→</span>
+              View Record
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           </div>
         </div>
+
+        <div className="min-w-0">
+          <Link
+            to={albumHref}
+            className="group mx-auto block w-full max-w-[580px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
+          >
+            <div
+              className="aspect-square overflow-hidden bg-paper-2 shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
+              style={{
+                boxShadow: `0 38px 90px -48px ${accent}, 0 18px 48px -34px rgba(14,13,11,0.42)`,
+              }}
+            >
+              <img
+                src={cover}
+                alt={currentFeatured.release_name}
+                width={720}
+                height={720}
+                fetchPriority="high"
+                onError={handleImageError}
+                className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025] motion-reduce:transition-none"
+              />
+            </div>
+          </Link>
+
+          <div className="mt-5 flex justify-center gap-8 font-mono text-[13px] tracking-[0.08em] text-ink-dim">
+            {featuredAlbums.slice(0, 7).map((album, index) => {
+              const active = index === featuredIndex;
+              return (
+                <button
+                  key={album.uri_release}
+                  type="button"
+                  aria-label={`Show featured record ${index + 1}: ${album.release_name}`}
+                  aria-pressed={active}
+                  onClick={() => onSelectIndex(index)}
+                  className={cn(
+                    "border-b py-1 transition-[color,border-color] duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink",
+                    active
+                      ? "border-ink text-ink"
+                      : "border-transparent hover:border-rule-strong hover:text-ink",
+                  )}
+                  style={
+                    active
+                      ? {
+                          animationDuration: `${autoRotateMs}ms`,
+                          borderColor: accent,
+                          color: accent,
+                        }
+                      : undefined
+                  }
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <aside className="grid gap-0 border-y border-rule-strong lg:border-y-0">
+          <MetaRail label="Released" value={year || "—"} />
+          <MetaRail
+            label="Format"
+            value="Record"
+          />
+          <MetaRail label="Added" value={added} />
+          <MetaRail
+            label="Genres"
+            value={genres.length ? genres.join(", ") : "Collection"}
+          />
+          <div className="hidden border-b border-rule py-8 lg:block">
+            <span className="block h-10 w-20 text-ink" aria-hidden>
+              <svg viewBox="0 0 96 48" fill="none">
+                <path
+                  d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  opacity="0.32"
+                />
+                <path
+                  className="waveform-trace"
+                  d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
+                  stroke={accent}
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  pathLength="1"
+                  strokeDasharray="0.34 1"
+                />
+              </svg>
+            </span>
+          </div>
+        </aside>
       </div>
     </section>
   );
 }
 
-// ---------------------------------------------------------------------------
-
-function HeroBackdropLayer({
-  backdrop,
-  opacityClassName,
-}: {
-  backdrop: HeroBackdrop;
-  opacityClassName: string;
-}) {
+function MetaRail({ label, value }: { label: string; value: string }) {
   return (
-    <div
-      aria-hidden
-      className={cn(
-        "pointer-events-none absolute inset-0 overflow-hidden will-change-[opacity]",
-        opacityClassName,
-      )}
-      style={{ backgroundColor: backdrop.background }}
-    >
-      <img
-        src={backdrop.image}
-        alt=""
-        className="absolute inset-0 h-full w-full scale-[1.12] object-cover object-center opacity-[0.46] blur-[54px] saturate-[1.04] md:scale-[1.28] md:opacity-[0.56] md:blur-[108px]"
-      />
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(
-              circle at 50% 42%,
-              color-mix(in oklab, ${backdrop.accent} 16%, transparent) 0%,
-              transparent 42%
-            ),
-            radial-gradient(
-              circle at 50% 70%,
-              color-mix(in oklab, ${backdrop.muted} 26%, transparent) 0%,
-              transparent 56%
-            ),
-            linear-gradient(
-              180deg,
-              color-mix(in oklab, ${backdrop.background} 58%, black 18%) 0%,
-              color-mix(in oklab, ${backdrop.background} 16%, transparent) 24%,
-              color-mix(in oklab, ${backdrop.background} 12%, transparent) 76%,
-              color-mix(in oklab, ${backdrop.background} 62%, black 22%) 100%
-            )
-          `,
-        }}
-      />
-      <div
-        className="absolute inset-0 opacity-60"
-        style={{
-          background: `
-            linear-gradient(
-              90deg,
-              color-mix(in oklab, ${backdrop.background} 24%, transparent) 0%,
-              transparent 22%,
-              transparent 78%,
-              color-mix(in oklab, ${backdrop.background} 24%, transparent) 100%
-            )
-          `,
-        }}
-      />
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
-
-interface HeroCoverflowProps {
-  featuredAlbums: Album[];
-  activeIndex: number;
-  onSelect: (index: number) => void;
-  isDesktopCoverflow: boolean;
-  autoRotateMs: number;
-}
-
-function HeroCoverflow({
-  featuredAlbums,
-  activeIndex,
-  onSelect,
-  isDesktopCoverflow,
-  autoRotateMs,
-}: HeroCoverflowProps) {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const drag = useRef({ down: false, x: 0, sl: 0, moved: 0 });
-  const didInitialCenter = useRef(false);
-  const syncingRef = useRef(false);
-  const syncTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const scrollTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const loopCopies = 5;
-
-  const loopedAlbums = useMemo(
-    () =>
-      Array.from({ length: loopCopies }, (_, copyIndex) =>
-        featuredAlbums.map((album, realIndex) => ({
-          album,
-          realIndex,
-          loopIndex: copyIndex * featuredAlbums.length + realIndex,
-        })),
-      ).flat(),
-    [featuredAlbums],
-  );
-
-  const getCenteredLoopIndex = useCallback(
-    (realIndex: number) =>
-      Math.floor(loopCopies / 2) * featuredAlbums.length + realIndex,
-    [featuredAlbums.length],
-  );
-
-  const nearestLoopIndex = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return activeIndex;
-
-    const center = track.scrollLeft + track.clientWidth / 2;
-    let nearest = getCenteredLoopIndex(activeIndex);
-    let nearestDistance = Number.POSITIVE_INFINITY;
-
-    cardRefs.current.forEach((card, index) => {
-      if (!card) return;
-      const cardCenter = card.offsetLeft + card.offsetWidth / 2;
-      const distance = Math.abs(cardCenter - center);
-      if (distance < nearestDistance) {
-        nearestDistance = distance;
-        nearest = index;
-      }
-    });
-
-    return nearest;
-  }, [activeIndex, getCenteredLoopIndex]);
-
-  const centerLoopIndex = useCallback(
-    (loopIndex: number, behavior: ScrollBehavior) => {
-      const track = trackRef.current;
-      const card = cardRefs.current[loopIndex];
-      if (!track || !card) return;
-
-      const target =
-        card.offsetLeft + card.offsetWidth / 2 - track.clientWidth / 2;
-      const left = Math.max(0, Math.min(target, track.scrollWidth - track.clientWidth));
-
-      if (syncTimerRef.current) clearTimeout(syncTimerRef.current);
-      syncingRef.current = behavior === "smooth";
-      track.scrollTo({ left, behavior });
-
-      if (behavior === "smooth") {
-        syncTimerRef.current = setTimeout(() => {
-          syncingRef.current = false;
-        }, Math.min(autoRotateMs / 3, 520));
-      } else {
-        syncingRef.current = false;
-      }
-    },
-    [autoRotateMs],
-  );
-
-  const centerActive = useCallback(
-    (realIndex: number, behavior: ScrollBehavior) => {
-      centerLoopIndex(getCenteredLoopIndex(realIndex), behavior);
-    },
-    [centerLoopIndex, getCenteredLoopIndex],
-  );
-
-  useLayoutEffect(() => {
-    const behavior: ScrollBehavior = didInitialCenter.current ? "smooth" : "auto";
-    didInitialCenter.current = true;
-    centerActive(activeIndex, behavior);
-  }, [activeIndex, centerActive]);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const onWheel = (event: WheelEvent) => {
-      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
-      track.scrollLeft += event.deltaY;
-      event.preventDefault();
-    };
-
-    track.addEventListener("wheel", onWheel, { passive: false });
-    return () => track.removeEventListener("wheel", onWheel);
-  }, []);
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const onScroll = () => {
-      if (syncingRef.current) return;
-      if (scrollTimerRef.current) clearTimeout(scrollTimerRef.current);
-      scrollTimerRef.current = setTimeout(() => {
-        const nextLoopIndex = nearestLoopIndex();
-        const next = loopedAlbums[nextLoopIndex];
-        if (!next) return;
-
-        if (next.realIndex !== activeIndex) onSelect(next.realIndex);
-        else centerLoopIndex(getCenteredLoopIndex(next.realIndex), "smooth");
-      }, 110);
-    };
-
-    track.addEventListener("scroll", onScroll, { passive: true });
-    return () => {
-      track.removeEventListener("scroll", onScroll);
-      if (scrollTimerRef.current) clearTimeout(scrollTimerRef.current);
-    };
-  }, [
-    activeIndex,
-    centerLoopIndex,
-    getCenteredLoopIndex,
-    loopedAlbums,
-    nearestLoopIndex,
-    onSelect,
-  ]);
-
-  useEffect(() => {
-    return () => {
-      if (syncTimerRef.current) clearTimeout(syncTimerRef.current);
-      if (scrollTimerRef.current) clearTimeout(scrollTimerRef.current);
-    };
-  }, []);
-
-  const onPointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
-    if (event.pointerType === "mouse" && event.button !== 0) return;
-    const track = trackRef.current;
-    if (!track) return;
-
-    drag.current = {
-      down: true,
-      x: event.clientX,
-      sl: track.scrollLeft,
-      moved: 0,
-    };
-
-    const onMove = (moveEvent: PointerEvent) => {
-      if (!drag.current.down || !trackRef.current) return;
-      const dx = moveEvent.clientX - drag.current.x;
-      drag.current.moved = Math.abs(dx);
-      if (drag.current.moved > 3) {
-        trackRef.current.classList.add("cursor-grabbing");
-        moveEvent.preventDefault();
-      }
-      trackRef.current.scrollLeft = drag.current.sl - dx;
-    };
-
-    const onUp = () => {
-      drag.current.down = false;
-      if (trackRef.current) trackRef.current.classList.remove("cursor-grabbing");
-      window.removeEventListener("pointermove", onMove);
-      window.removeEventListener("pointerup", onUp);
-      window.removeEventListener("pointercancel", onUp);
-
-      if (drag.current.moved > 6) {
-        const stopClick = (clickEvent: Event) => {
-          clickEvent.stopPropagation();
-          clickEvent.preventDefault();
-          window.removeEventListener("click", stopClick, true);
-        };
-        window.addEventListener("click", stopClick, true);
-      }
-    };
-
-    window.addEventListener("pointermove", onMove);
-    window.addEventListener("pointerup", onUp);
-    window.addEventListener("pointercancel", onUp);
-  };
-
-  const trackStyle: React.CSSProperties = {
-    paddingLeft: isDesktopCoverflow ? "max(16vw, 4rem)" : "1.25rem",
-    paddingRight: isDesktopCoverflow ? "max(16vw, 4rem)" : "1.25rem",
-    perspective: isDesktopCoverflow ? "2200px" : undefined,
-  };
-
-  return (
-    <div className="relative">
-      <div
-        ref={trackRef}
-        role="region"
-        aria-label="Featured releases coverflow"
-        className={cn(
-          "flex items-end gap-3 overflow-x-auto overflow-y-visible px-5 py-4",
-          "cursor-grab select-none scroll-smooth",
-          "snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
-          "md:gap-4 md:py-8 lg:py-12",
-        )}
-        style={trackStyle}
-        onPointerDown={onPointerDown}
-      >
-        {loopedAlbums.map(({ album, realIndex, loopIndex }) => {
-          const image = getAlbumImageFromData(album.uri_release, "hi-res");
-          const isActive = loopIndex === getCenteredLoopIndex(activeIndex);
-          const position = String(realIndex + 1).padStart(2, "0");
-          const coverflowOffset = loopIndex - getCenteredLoopIndex(activeIndex);
-
-          return (
-            <button
-              key={`${album.uri_release}-${loopIndex}`}
-              ref={node => {
-                cardRefs.current[loopIndex] = node;
-              }}
-              type="button"
-              aria-label={`Show featured release ${realIndex + 1} of ${featuredAlbums.length}: ${album.release_name} by ${album.release_artist}`}
-              aria-pressed={isActive}
-              title={`${position} · ${album.release_name}`}
-              onClick={() => onSelect(realIndex)}
-              onKeyDown={event => {
-                if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-                event.preventDefault();
-                const delta = event.key === "ArrowLeft" ? -1 : 1;
-                const next = (realIndex + delta + featuredAlbums.length) % featuredAlbums.length;
-                onSelect(next);
-                requestAnimationFrame(() => {
-                  cardRefs.current[getCenteredLoopIndex(next)]?.focus();
-                });
-              }}
-              className="group relative shrink-0 snap-center bg-transparent p-0 text-left focus-visible:outline-none"
-              style={{
-                width: isDesktopCoverflow ? "clamp(220px, 20vw, 320px)" : "min(70vw, 390px)",
-                ...getCoverflowCardStyle(coverflowOffset, isDesktopCoverflow),
-              }}
-            >
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-x-[12%] bottom-[-2%] top-[76%] rounded-full blur-2xl"
-                style={{
-                  backgroundColor: isActive
-                    ? "color-mix(in oklab, var(--album-accent, var(--album-accent-fallback)) 46%, transparent)"
-                    : "color-mix(in oklab, var(--album-bg, var(--album-bg-fallback)) 28%, transparent)",
-                  opacity: isActive ? 0.72 : 0.2,
-                }}
-              />
-
-              <div
-                className={cn(
-                  "relative aspect-square overflow-hidden border transition-[border-color,box-shadow] duration-500",
-                  isActive
-                    ? "shadow-[0_42px_90px_-36px_rgba(14,13,11,0.72)]"
-                    : "shadow-[0_20px_50px_-34px_rgba(14,13,11,0.56)]",
-                )}
-                style={{
-                  borderColor: isActive
-                    ? "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 34%, transparent)"
-                    : "color-mix(in oklab, var(--album-fg, var(--album-fg-fallback)) 18%, transparent)",
-                  backgroundColor:
-                    "color-mix(in oklab, var(--album-bg, var(--album-bg-fallback)) 18%, transparent)",
-                }}
-              >
-                <img
-                  src={image}
-                  alt={album.release_name}
-                  onError={handleImageError}
-                  loading={isActive ? "eager" : "lazy"}
-                  className={cn(
-                    "h-full w-full object-cover transition-transform duration-700 ease-out",
-                    isActive ? "scale-[1.01] group-hover:scale-[1.03]" : "group-hover:scale-[1.02]",
-                  )}
-                />
-
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: isActive
-                      ? "linear-gradient(180deg, rgba(9,8,7,0.04) 0%, rgba(9,8,7,0.08) 42%, rgba(9,8,7,0.26) 100%)"
-                      : "linear-gradient(180deg, transparent 52%, rgba(9,8,7,0.28) 100%)",
-                  }}
-                />
-
-                {isActive ? null : (
-                  <span className="absolute inset-x-3 bottom-3 font-mono text-[9px] uppercase tracking-[0.14em] text-[rgba(246,242,233,0.76)]">
-                    {position}
-                  </span>
-                )}
-              </div>
-            </button>
-          );
-        })}
+    <div className="border-b border-rule py-4 last:border-b-0 lg:py-5">
+      <div className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
+        {label}
+      </div>
+      <div className="mt-2 break-words font-display text-[19px] uppercase leading-tight text-ink">
+        {value}
       </div>
     </div>
   );
 }
 
-function getCoverflowCardStyle(
-  offset: number,
-  isDesktopCoverflow: boolean,
-): React.CSSProperties {
-  const abs = Math.abs(offset);
+function getYear(date: string | undefined): string {
+  if (!date) return "";
+  const year = new Date(date).getFullYear();
+  return Number.isFinite(year) ? String(year) : "";
+}
 
-  if (!isDesktopCoverflow) {
-    return {
-      transform:
-        abs === 0
-          ? "translate3d(0, 0, 0) scale(1)"
-          : "translate3d(0, 16px, 0) scale(0.92)",
-      opacity: abs === 0 ? 1 : 0.72,
-      zIndex: 40 - abs,
-    };
+function formatAdded(iso: string | undefined): string {
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "—";
+  return d
+    .toLocaleString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      timeZone: "UTC",
+    })
+    .toUpperCase();
+}
+
+function getTitleStyle(title: string): CSSProperties {
+  const words = title.split(/\s+/).filter(Boolean);
+  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
+  const charCount = title.length;
+
+  let maxPx = 128;
+  let preferredVw = 9.2;
+  let maxWidth = "min(100%, 9.6ch)";
+
+  if (longestWord >= 18 || charCount >= 46) {
+    maxPx = 72;
+    preferredVw = 4.9;
+    maxWidth = "min(100%, 13.8ch)";
+  } else if (longestWord >= 13 || charCount >= 34) {
+    maxPx = 88;
+    preferredVw = 5.8;
+    maxWidth = "min(100%, 12.4ch)";
+  } else if (longestWord >= 11 || charCount >= 24) {
+    maxPx = 104;
+    preferredVw = 7.1;
+    maxWidth = "min(100%, 11.2ch)";
   }
 
-  if (abs === 0) {
-    return {
-      transform: "translate3d(0, 0, 0) scale(1.08)",
-      opacity: 1,
-      zIndex: 100,
-    };
-  }
-
-  if (abs === 1) {
-    const direction = offset < 0 ? 1 : -1;
-    return {
-      transform: `translate3d(${direction * 28}px, 44px, 0) scale(0.82) rotateY(${direction * 22}deg)`,
-      opacity: 0.76,
-      zIndex: 80,
-      filter: "saturate(0.86)",
-    };
-  }
-
-  if (abs === 2) {
-    const direction = offset < 0 ? 1 : -1;
-    return {
-      transform: `translate3d(${direction * 76}px, 88px, 0) scale(0.66) rotateY(${direction * 30}deg)`,
-      opacity: 0.46,
-      zIndex: 60,
-      filter: "saturate(0.72)",
-    };
-  }
-
-  if (abs === 3) {
-    const direction = offset < 0 ? 1 : -1;
-    return {
-      transform: `translate3d(${direction * 122}px, 114px, 0) scale(0.56) rotateY(${direction * 34}deg)`,
-      opacity: 0.28,
-      zIndex: 48,
-      filter: "saturate(0.6)",
-    };
-  }
-
-  const direction = offset < 0 ? 1 : -1;
   return {
-    transform: `translate3d(${direction * 156}px, 136px, 0) scale(0.46) rotateY(${direction * 38}deg)`,
-    opacity: abs > 4 ? 0.08 : 0.16,
-    zIndex: 32,
-    filter: "saturate(0.54)",
+    fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
+    maxWidth,
+    lineHeight: 0.9,
   };
 }

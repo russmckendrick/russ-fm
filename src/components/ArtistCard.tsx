@@ -32,7 +32,7 @@ interface ArtistCardProps {
 }
 
 /**
- * Editorial artist tile: circular photo (the one deliberate round exception),
+ * Editorial artist tile: square rounded photo,
  * ranked mono number, name, release count. Kept deliberately quiet so the
  * photo does the talking.
  */
@@ -51,10 +51,12 @@ export function ArtistCard({
 
   const content = (
     <div className="group flex flex-col items-center text-center font-grot">
-      <div className="relative aspect-square w-full overflow-hidden rounded-full bg-paper-2">
+      <div className="relative aspect-square w-full overflow-hidden rounded-[6px] bg-paper-2">
         <img
           src={artist.image}
           alt={artist.name}
+          width={360}
+          height={360}
           loading="lazy"
           draggable={false}
           onError={handleImageError}
@@ -68,7 +70,7 @@ export function ArtistCard({
             {String(index).padStart(2, "0")}
           </span>
         )}
-        <h3 className="line-clamp-1 text-[15px] font-semibold leading-tight tracking-[-0.005em] text-ink transition-colors group-hover:text-hl">
+        <h3 className="line-clamp-1 font-display text-[18px] uppercase leading-none text-ink transition-colors group-hover:text-hl">
           {artist.name}
         </h3>
       </div>

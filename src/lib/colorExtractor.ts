@@ -22,7 +22,9 @@ function rgbToHsl(r: number, g: number, b: number): [number, number, number] {
 
   const max = Math.max(r, g, b);
   const min = Math.min(r, g, b);
-  let h, s, l = (max + min) / 2;
+  let h: number;
+  let s: number;
+  const l = (max + min) / 2;
 
   if (max === min) {
     h = s = 0;
@@ -39,11 +41,6 @@ function rgbToHsl(r: number, g: number, b: number): [number, number, number] {
   }
 
   return [h * 360, s * 100, l * 100];
-}
-
-function getColorLuminance(r: number, g: number, b: number): number {
-  const [, , l] = rgbToHsl(r, g, b);
-  return l;
 }
 
 function adjustColorLightness(hex: string, amount: number): string {

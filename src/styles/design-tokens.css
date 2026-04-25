@@ -15,6 +15,7 @@
   --paper:    #f4f1ea;   /* body background */
   --paper-2:  #ebe6db;   /* sunken surface (kv-grid backgrounds) */
   --paper-3:  #e0d9c8;   /* recessed accent (hover on tiles) */
+  --paper-warm: #faf7ef; /* lifted editorial panels */
 
   /* --- Ink (text) ------------------------------------------------------ */
   --ink:      #0e0d0b;   /* primary text */
@@ -22,9 +23,17 @@
   --ink-3:    #5a534a;   /* secondary text */
   --ink-dim:  #8a8377;   /* tertiary / mono labels (decorative only) */
 
+  /* --- Stage (dark editorial surfaces) -------------------------------- */
+  --stage:      #080807;  /* off-black, never pure #000 */
+  --stage-2:    #11100d;
+  --stage-3:    #1a1713;
+  --stage-ink:  #f7f2e8;
+  --stage-dim:  #a9a197;
+
   /* --- Rules (borders) ------------------------------------------------- */
   --rule:         rgba(14, 13, 11, 0.16); /* hairline dividers */
   --rule-strong:  rgba(14, 13, 11, 0.50); /* interactive / header underlines */
+  --stage-rule:   rgba(247, 242, 232, 0.16);
 
   /* --- Highlight & dynamic tint --------------------------------------- */
   --hl:       #e23b1e;   /* single accent, active states only */
@@ -32,8 +41,11 @@
   --tint-strength: 0.85;
 
   /* --- Typography ------------------------------------------------------ */
-  --font-grot: 'Inter Tight Variable', 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --font-grot: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+  --font-display-settings: 'wdth' 62, 'wght' 760;
+  --font-display-tracking: 0;
 }
 
 /* Shadcn's dark-mode selector is `.dark` on <html>; we piggyback so all
@@ -42,14 +54,22 @@
   --paper:    #0d0c0a;
   --paper-2:  #15130f;
   --paper-3:  #1d1b16;
+  --paper-warm: #171410;
 
   --ink:      #f4f1ea;
   --ink-2:    #d8d3c6;
   --ink-3:    #9a9285;
   --ink-dim:  #6a6358;
 
+  --stage:      #080807;
+  --stage-2:    #11100d;
+  --stage-3:    #1a1713;
+  --stage-ink:  #f7f2e8;
+  --stage-dim:  #a9a197;
+
   --rule:         rgba(244, 241, 234, 0.14);
   --rule-strong:  rgba(244, 241, 234, 0.40);
+  --stage-rule:   rgba(247, 242, 232, 0.14);
 }
 
 /* =========================================================================
@@ -110,5 +130,35 @@ html.tint-off [style*="0 40px 80px"] {
   .hero-chain-fill {
     animation: none;
     width: 100%;
+  }
+}
+
+/* =========================================================================
+   Editorial waveform trace — used in hero metadata rails.
+   ========================================================================= */
+
+@keyframes waveform-trace {
+  0% {
+    opacity: 0.22;
+    stroke-dashoffset: 1;
+  }
+  42% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.28;
+    stroke-dashoffset: 0;
+  }
+}
+
+.waveform-trace {
+  animation: waveform-trace 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waveform-trace {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
