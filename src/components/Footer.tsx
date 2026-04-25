@@ -34,8 +34,8 @@ export function Footer() {
 
   return (
     <footer className="mt-24 border-t border-rule-strong bg-paper font-grot">
-      <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:px-8">
-        <nav aria-label="Footer" className="flex flex-wrap items-center gap-1.5">
+      <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-4 px-5 py-5 md:flex-row md:items-center md:justify-between md:gap-6 md:px-8">
+        <nav aria-label="Footer" className="order-1 grid w-full grid-cols-8 items-center justify-items-center gap-1.5 md:order-2 md:flex md:w-auto md:flex-wrap md:justify-end">
           {internalLinks.map((item, i) => (
             <Link
               key={`internal-${i}`}
@@ -69,12 +69,12 @@ export function Footer() {
           })}
         </nav>
 
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-ink">
-          <BrandMark className="h-[24px] w-[24px] md:h-[28px] md:w-[28px]" />
+        <div className="order-2 flex w-full items-center justify-between gap-3 text-ink md:order-1 md:w-auto md:justify-start">
           <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
             © {currentYear}
           </span>
-          <div className="flex items-center gap-2.5">
+          <div className="flex min-w-0 items-center gap-2.5">
+            <BrandMark className="h-[24px] w-[24px] shrink-0 md:h-[28px] md:w-[28px]" />
             <span className="text-[16px] font-bold leading-none tracking-[-0.02em] md:text-[17px]">
               russ.fm
             </span>

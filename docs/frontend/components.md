@@ -90,7 +90,7 @@ Site footer with links and copyright.
 - Shared spinning record mark and matching `russ.fm / Personal Record Collection` footer lockup
 - Copyright year is derived at render time rather than hard-coded
 - Icon-only internal and external links in one compact row, with accessible labels retained for screen readers
-- Mobile footer order is icons first, then the logo/site colophon line
+- Mobile footer order is icons first, then the logo/site colophon line; both mobile rows stretch across the viewport. Desktop returns to a single row with the colophon left and icons right
 
 ```tsx
 import { Footer } from '@/components/Footer';
