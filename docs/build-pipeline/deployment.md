@@ -67,20 +67,20 @@ on:
 assets:
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: '22.19.0'
 
     - name: Install pnpm
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v6
       with:
         version: 10
 
     - name: Cache assets
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: |
           node_modules/.cache/assets
@@ -106,7 +106,7 @@ deploy:
   needs: assets
   runs-on: ubuntu-latest
   steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
       with:
         fetch-depth: 0  # Full history for git diff
 
@@ -114,7 +114,7 @@ deploy:
       # ... same as assets job
 
     - name: Restore assets cache
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       # ... same cache config
 
     - name: Install dependencies
