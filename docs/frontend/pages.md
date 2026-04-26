@@ -386,7 +386,7 @@ interface CollectionStats {
 
 ### GenrePage (`src/pages/GenrePage.tsx`)
 
-Single-page D3 genre explorer built from static `/collection.json`.
+Single-page hybrid D3/React/Motion genre explorer built from static `/collection.json`.
 
 **Route:** `/genres`
 
@@ -398,16 +398,18 @@ Single-page D3 genre explorer built from static `/collection.json`.
 | `album` | `string` | - | Legacy/shared-link record slug used to highlight a record node |
 | `sort` | `dominance \| recent \| name \| year` | `dominance` | Artist/album ordering |
 | `q` | `string` | - | Search across genres, artists, and albums |
-| `nodes` | `number` or legacy `standard \| more \| max` | responsive | Graph node budget. Defaults to standard on mobile, more on tablet, and maximum on desktop |
+| `nodes` | `number` or legacy `standard \| more \| max` | responsive | Graph node budget. Defaults are intentionally conservative on mobile, tablet, and desktop; the slider can reveal more |
 
 **Features:**
-- One primary D3 force graph showing either the global collection or a selected genre, related genres, artists, and artist records
+- One primary hybrid genre graph showing either the global collection or a selected genre, related genres, artists, and artist records
+- D3 is used for off-DOM force layout and zoom/pan behavior; React renders stable keyed SVG nodes and Framer Motion animates node/link transitions
+- The graph uses a center-out hierarchy: selected genre hub, middle artist field, and related genre pills around the perimeter
 - The selected genre control is a styled Radix popup populated from computed genre summaries, with `All genres` first
-- Click related genre nodes to redraw around that genre
+- Click related genre nodes to smoothly re-center the graph around that genre
 - Click artist nodes to reveal that artist's connected records in the same graph
 - Click record nodes to open their canonical album detail pages
 - Search, sort, and numeric node-budget slider controls keep state in the URL
-- The central genre hub uses the same paper/ink record-label treatment as the surrounding app, not a filled dark graph node
+- The central genre hub uses the Russ.fm record glyph in the same paper/ink treatment as the surrounding app
 - Loading, empty, and error states using editorial primitives
 
 ---
