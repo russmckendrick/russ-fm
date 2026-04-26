@@ -236,6 +236,9 @@ const rock = explorer.genres.find((genre) => genre.name === 'Rock');
 - Artist summaries with genre-specific albums plus total collection counts
 - Album summaries with slug, cover URL, artist, year, and connected genres
 - Helpers for URL state resolution, filtering, and sorting
+- Relationship helpers for detail-page recommendations:
+  `getRelatedArtistsForArtist`, `getArtistGenreSummaries`, and
+  `getRelatedAlbumsForAlbum`
 
 The explorer uses `getCleanGenresFromArray` and image helpers from
 `image-utils`; keep those helpers in place so `/genres`, `/albums`, and

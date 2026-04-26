@@ -5,14 +5,17 @@ import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 're
 import { ServiceButton } from '@/components/ui/service-button';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { AlbumCard } from '@/components/AlbumCard';
+import { ArtistCard } from '@/components/ArtistCard';
 import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColors } from '@/hooks/useAlbumColors';
+import { buildGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
+import type { Album as CollectionAlbum } from '@/types/album';
 
 interface Album {
   release_name: string;
@@ -58,6 +61,7 @@ interface ArtistData {
 
 export function ArtistDetailPage() {
   const { artistPath } = useParams<{ artistPath: string }>();
+  const [collection, setCollection] = useState<Album[]>([]);
   const [albums, setAlbums] = useState<Album[]>([]);
   const [artistData, setArtistData] = useState<ArtistData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -73,7 +77,8 @@ export function ArtistDetailPage() {
   const loadArtistData = useCallback(async () => {
     try {
       const collectionResponse = await fetch('/collection.json');
-      const collection = await collectionResponse.json();
+      const collection = await collectionResponse.json() as Album[];
+      setCollection(collection);
 
       const decodedArtistPath = decodeURIComponent(artistPath || '');
       const targetUri = `/artist/${decodedArtistPath}/`;
@@ -198,6 +203,25 @@ export function ArtistDetailPage() {
   const heroTint = albumColors?.background ?? 'var(--paper-2)';
   const heroAccent = albumColors?.accent ?? 'var(--hl)';
   const titleStyle = getArtistHeroTitleStyle(artistName);
+  const similarArtists = (() => {
+    if (!collection.length) return [];
+
+    const explorer = buildGenreExplorer(collection as CollectionAlbum[]);
+    const selectedArtist =
+      resolveArtist(explorer.allGenre, artistPath) ||
+      explorer.allGenre.artists.find((candidate) => candidate.name.toLowerCase() === artistName.toLowerCase());
+
+    if (!selectedArtist) return [];
+
+    return getRelatedArtistsForArtist(selectedArtist, explorer.genres)
+      .slice(0, 6)
+      .map(({ artist }) => ({
+        name: artist.name,
+        uri: artist.uri,
+        image: artist.avatar,
+        albumCount: artist.totalAlbumCount || artist.albumCount,
+      }));
+  })();
 
   return (
     <PageContainer variant="hero">
@@ -336,6 +360,21 @@ export function ArtistDetailPage() {
                 ))}
               </div>
             </section>
+
+            {similarArtists.length > 0 && (
+              <section>
+                <SectionHeader
+                  num={bio ? '03' : '02'}
+                  label="Similar artists"
+                  count={similarArtists.length}
+                />
+                <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
+                  {similarArtists.map((artist, i) => (
+                    <ArtistCard key={artist.uri} artist={artist} index={i + 1} />
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Sidebar */}

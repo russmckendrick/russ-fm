@@ -6,6 +6,9 @@ import {
   filterAlbums,
   filterArtists,
   filterGenres,
+  getArtistGenreSummaries,
+  getRelatedAlbumsForAlbum,
+  getRelatedArtistsForArtist,
   normalizeSort,
   resolveArtist,
   resolveGenre,
@@ -129,6 +132,33 @@ describe("genreExplorer", () => {
     expect(filterAlbums(electronic?.albums || [], "cathedral")[0]?.title).toBe("Low Frequency Cathedral");
     expect(sortArtists(electronic?.artists || [], "name")[0]?.name).toBe("North Sea Relay");
     expect(sortAlbums(electronic?.albums || [], "year")[0]?.title).toBe("Harbour Static");
+  });
+
+  it("ranks related artists by shared genre strength", () => {
+    const data = buildGenreExplorer(collection);
+    const artist = resolveArtist(data.allGenre, "north-sea-relay");
+
+    expect(artist).not.toBeNull();
+    expect(getArtistGenreSummaries(artist!, data.genres)[0]?.name).toBe("Electronic");
+
+    const relatedArtists = getRelatedArtistsForArtist(artist!, data.genres);
+
+    expect(relatedArtists[0]?.artist.name).toBe("Paper Fort");
+    expect(relatedArtists[0]?.sharedGenres).toEqual(["Rock"]);
+  });
+
+  it("ranks related albums by shared genres, same artist, and recent additions", () => {
+    const data = buildGenreExplorer(collection);
+    const album = data.allGenre.albums.find((candidate) => candidate.title === "Low Frequency Cathedral");
+
+    expect(album).toBeDefined();
+
+    const relatedAlbums = getRelatedAlbumsForAlbum(album!, data.allGenre.albums);
+
+    expect(relatedAlbums.map((connection) => connection.album.title)).not.toContain("Low Frequency Cathedral");
+    expect(relatedAlbums[0]?.album.title).toBe("Harbour Static");
+    expect(relatedAlbums[0]?.sameArtist).toBe(true);
+    expect(relatedAlbums[0]?.sharedGenres).toEqual(["Electronic"]);
   });
 });
 

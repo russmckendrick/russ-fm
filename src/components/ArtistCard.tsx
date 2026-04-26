@@ -2,25 +2,11 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { handleImageError } from "@/lib/image-utils";
 
-interface Album {
-  release_name: string;
-  release_artist: string;
-  genre_names: string[];
-  date_added: string;
-  date_release_year: string;
-  uri_release: string;
-  images_uri_release: { medium: string; avatar?: string };
-}
-
 interface Artist {
   name: string;
   uri: string;
-  albums: Album[];
   albumCount: number;
-  genres: string[];
   image: string;
-  latestAlbum: string;
-  biography?: string;
 }
 
 interface ArtistCardProps {

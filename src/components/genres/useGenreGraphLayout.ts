@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
-import type {
+import {
+  getArtistGenreSummaries,
+  getRelatedArtistsForArtist,
+  type ArtistConnection,
   GenreExplorerAlbum,
   GenreExplorerArtist,
   GenreSummary,
@@ -58,13 +61,6 @@ interface GraphBuildResult {
   centerNodeId: string;
   nodes: GenreGraphNode[];
   links: GenreGraphLink[];
-}
-
-interface ArtistConnection {
-  artist: GenreExplorerArtist;
-  sharedGenres: string[];
-  genreScores: Map<string, number>;
-  score: number;
 }
 
 interface UseGenreGraphLayoutArgs {
@@ -732,75 +728,6 @@ function getRelatedGenreSummaries(
   return genre.relatedGenres
     .map((related) => allGenres.find((candidate) => candidate.name === related.name))
     .filter((candidate): candidate is GenreSummary => Boolean(candidate));
-}
-
-function getArtistGenreSummaries(
-  artist: GenreExplorerArtist,
-  allGenres: GenreSummary[],
-): GenreSummary[] {
-  const albumCounts = new Map<string, number>();
-  artist.albums.forEach((album) => {
-    album.genres.forEach((genreName) => {
-      albumCounts.set(genreName, (albumCounts.get(genreName) || 0) + 1);
-    });
-  });
-
-  return artist.genres
-    .map((genreName) => allGenres.find((candidate) => candidate.name === genreName))
-    .filter((candidate): candidate is GenreSummary => Boolean(candidate))
-    .sort((a, b) => {
-      return (
-        (albumCounts.get(b.name) || 0) - (albumCounts.get(a.name) || 0) ||
-        b.albumCount - a.albumCount ||
-        a.name.localeCompare(b.name)
-      );
-    });
-}
-
-function getRelatedArtistsForArtist(
-  artist: GenreExplorerArtist,
-  allGenres: GenreSummary[],
-): ArtistConnection[] {
-  const artistGenreNames = new Set(artist.genres);
-  const connections = new Map<string, ArtistConnection>();
-
-  allGenres.forEach((genre) => {
-    if (!artistGenreNames.has(genre.name)) return;
-
-    genre.artists.forEach((candidate) => {
-      if (candidate.slug === artist.slug) return;
-
-      const existing = connections.get(candidate.slug) || {
-        artist: candidate,
-        sharedGenres: [],
-        genreScores: new Map<string, number>(),
-        score: 0,
-      };
-      existing.sharedGenres.push(genre.name);
-      existing.genreScores.set(genre.name, candidate.albumCount);
-      existing.score += candidate.albumCount;
-      connections.set(candidate.slug, existing);
-    });
-  });
-
-  return Array.from(connections.values())
-    .map((connection) => ({
-      ...connection,
-      sharedGenres: connection.sharedGenres.sort((a, b) => {
-        return (
-          (connection.genreScores.get(b) || 0) - (connection.genreScores.get(a) || 0) ||
-          a.localeCompare(b)
-        );
-      }),
-    }))
-    .sort((a, b) => {
-      return (
-        b.sharedGenres.length - a.sharedGenres.length ||
-        b.score - a.score ||
-        (b.artist.totalAlbumCount || b.artist.albumCount) - (a.artist.totalAlbumCount || a.artist.albumCount) ||
-        a.artist.name.localeCompare(b.artist.name)
-      );
-    });
 }
 
 function distributeGenreNodeBudget(

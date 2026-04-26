@@ -6,14 +6,17 @@ import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from 
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
+import { AlbumCard } from '@/components/AlbumCard';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
-import { getAlbumImageFromData, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { buildGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
+import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
+import type { Album as CollectionAlbum } from '@/types/album';
 
 interface Album {
   release_name: string;
@@ -154,6 +157,7 @@ interface DetailedAlbum {
 export function AlbumDetailPage() {
   const { albumPath } = useParams<{ albumPath: string }>();
   const navigate = useNavigate();
+  const [collection, setCollection] = useState<Album[]>([]);
   const [album, setAlbum] = useState<Album | null>(null);
   const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
   const [loading, setLoading] = useState(true);
@@ -247,7 +251,8 @@ export function AlbumDetailPage() {
     try {
       // Load collection to find this specific album
       const collectionResponse = await fetch('/collection.json');
-      const collection = await collectionResponse.json();
+      const collection = await collectionResponse.json() as Album[];
+      setCollection(collection);
 
       // Find the album by its URI
       const foundAlbum = collection.find((item: Album) => {
@@ -663,11 +668,25 @@ export function AlbumDetailPage() {
       }).toUpperCase()
     : '—';
   const primaryFormat = detailedAlbum?.formats?.[0] || 'Record';
+  const similarAlbums = (() => {
+    if (!collection.length) return [];
+
+    const explorer = buildGenreExplorer(collection as CollectionAlbum[]);
+    const albumBySlug = new Map(collection.map((item) => [getAlbumSlug(item.uri_release), item]));
+    const explorerAlbum = explorer.allGenre.albums.find((candidate) => candidate.slug === getAlbumSlug(album.uri_release));
+
+    if (!explorerAlbum) return [];
+
+    return getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)
+      .slice(0, 10)
+      .map(({ album: relatedAlbum }) => albumBySlug.get(relatedAlbum.slug))
+      .filter((item): item is Album => Boolean(item));
+  })();
 
   // Section numbering — each section that renders gets the next sequential
   // "01", "02"… so toggled sections stay correctly numbered after the
   // Videos / Artist order swap. Must track the current order: About,
-  // Tracklist, Listen, About the artist, Videos.
+  // Tracklist, Listen, About the artist, Videos, Similar albums.
   const hasListen = !!(
     detailedAlbum &&
     (detailedAlbum.services?.spotify?.id ||
@@ -688,6 +707,7 @@ export function AlbumDetailPage() {
       listen: hasListen ? pad() : '01',
       artist: hasArtistBio ? pad() : '01',
       videos: hasVideos ? pad() : '01',
+      similar: similarAlbums.length > 0 ? pad() : '01',
     };
   })();
 
@@ -1084,6 +1104,17 @@ export function AlbumDetailPage() {
                 <SectionHeader num={sectionNums.videos} label="Videos" count={detailedAlbum.videos.length} />
                 <div className="mt-6">
                   <VideoSection videos={detailedAlbum.videos} />
+                </div>
+              </section>
+            )}
+
+            {similarAlbums.length > 0 && (
+              <section>
+                <SectionHeader num={sectionNums.similar} label="Similar albums" count={similarAlbums.length} />
+                <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                  {similarAlbums.map((album, i) => (
+                    <AlbumCard key={album.uri_release} album={album} index={i + 1} />
+                  ))}
                 </div>
               </section>
             )}

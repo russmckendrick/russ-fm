@@ -17,8 +17,8 @@ This document covers all route-level page components in russ.fm.
 | `/` | Fixed-height paper split hero with configured record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky dark `StatsAside` overview on desktop. Mobile stacks the sleeve before the full-width title and full-row CTA, with hero stats in a 2/3-column grid. |
 | `/albums/:page` | Hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
 | `/artists/:page` | Search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
-| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
-| `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → sticky sidebar with quick facts + genre chips. Mobile shows the portrait first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
+| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → `Similar albums` grid → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
+| `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → `Similar artists` grid → sticky sidebar with quick facts + genre chips. Mobile shows the portrait first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
 | `/random` | Single-record random spin with paper hero, large sleeve treatment, metadata rail, genre links, and shuffle/open actions. Mobile shows the sleeve before the title, uses full-row actions, and lays hero stats out in a 2/3-column grid. `Space` shuffles when focus is outside interactive controls. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
@@ -206,6 +206,7 @@ Individual album detail view with rich metadata.
 - Artist links (multi-artist support)
 - Service embeds (Spotify, Apple Music)
 - Last.fm scrobbling
+- Similar albums grid ranked from the collection's shared clean genres
 - OG meta tags for sharing
 
 **Data Source:** `/album/{slug}/index.json`
@@ -341,6 +342,7 @@ Individual artist detail with discography.
 - External links
 - Discography grid
 - Genre associations
+- Similar artists grid ranked from the collection's shared clean genres
 
 **Data Source:** `/artist/{slug}/index.json`
 
