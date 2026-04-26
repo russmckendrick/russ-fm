@@ -76,8 +76,7 @@ assets:
 
     - name: Install pnpm
       uses: pnpm/action-setup@v6
-      with:
-        version: 10
+      # version comes from package.json "packageManager"
 
     - name: Cache assets
       uses: actions/cache@v5
