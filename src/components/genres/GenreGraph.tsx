@@ -1,4 +1,5 @@
 import {
+  useCallback,
   useEffect,
   useId,
   useMemo,
@@ -7,9 +8,11 @@ import {
   type KeyboardEvent,
   type MouseEvent,
   type PointerEvent,
+  type ReactNode,
   type RefObject,
 } from "react";
 import * as d3 from "d3";
+import { ArrowLeft, ArrowRight, MagnifyingGlassMinus, MagnifyingGlassPlus, Target } from "@phosphor-icons/react";
 import { AnimatePresence, motion, useReducedMotion, type Transition } from "framer-motion";
 import type {
   GenreExplorerAlbum,
@@ -37,6 +40,9 @@ interface GenreGraphProps {
   onSelectGenre: (genre: GenreSummary) => void;
   onSelectArtist: (artist: GenreExplorerArtist) => void;
   onOpenAlbum: (album: GenreExplorerAlbum) => void;
+  onBack: () => void;
+  onForward: () => void;
+  onClearArtistFocus: () => void;
 }
 
 interface SurfaceSize {
@@ -55,6 +61,8 @@ const MIN_WIDTH = 760;
 const MIN_HEIGHT = 620;
 const FALLBACK_WIDTH = 1180;
 const FALLBACK_HEIGHT = 700;
+const ZOOM_MIN = 0.76;
+const ZOOM_MAX = 2.2;
 const MOTION_SPRING: Transition = { type: "spring", stiffness: 150, damping: 24, mass: 0.82 };
 const LINE_SPRING: Transition = { type: "spring", stiffness: 170, damping: 28, mass: 0.78 };
 
@@ -69,11 +77,15 @@ export function GenreGraph({
   onSelectGenre,
   onSelectArtist,
   onOpenAlbum,
+  onBack,
+  onForward,
+  onClearArtistFocus,
 }: GenreGraphProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const graphRef = useRef<SVGGElement>(null);
   const surfaceRef = useRef<HTMLDivElement>(null);
   const zoomTransformRef = useRef<d3.ZoomTransform>(d3.zoomIdentity);
+  const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const draggedNodeRef = useRef<string | null>(null);
   const clipPrefix = safeId(useId());
   const surfaceSize = useSurfaceSize(surfaceRef);
@@ -107,7 +119,7 @@ export function GenreGraph({
     const svg = d3.select<SVGSVGElement, unknown>(svgNode);
     const zoom = d3
       .zoom<SVGSVGElement, unknown>()
-      .scaleExtent([0.76, 2.2])
+      .scaleExtent([ZOOM_MIN, ZOOM_MAX])
       .translateExtent([
         [-layout.width * 0.2, -layout.height * 0.2],
         [layout.width * 1.2, layout.height * 1.2],
@@ -117,12 +129,14 @@ export function GenreGraph({
         graphNode.setAttribute("transform", event.transform.toString());
       });
 
+    zoomBehaviorRef.current = zoom;
     graphNode.setAttribute("transform", zoomTransformRef.current.toString());
     svg.call(zoom);
     svg.on("dblclick.zoom", null);
 
     return () => {
       svg.on(".zoom", null);
+      zoomBehaviorRef.current = null;
     };
   }, [layout.height, layout.width]);
 
@@ -147,9 +161,66 @@ export function GenreGraph({
       onOpenAlbum(node.album);
       return;
     }
-    if (node.type === "related" && node.genre) onSelectGenre(node.genre);
-    if (node.artist) onSelectArtist(node.artist);
+    if (node.genre && node.role !== "center") onSelectGenre(node.genre);
+    if (node.artist && node.role !== "center") onSelectArtist(node.artist);
   };
+
+  const recenterGraph = useCallback(() => {
+    const svgNode = svgRef.current;
+    const zoom = zoomBehaviorRef.current;
+    if (!svgNode || !zoom) return;
+    d3.select<SVGSVGElement, unknown>(svgNode).call(zoom.transform, d3.zoomIdentity);
+  }, []);
+
+  const zoomGraph = useCallback((factor: number) => {
+    const svgNode = svgRef.current;
+    const zoom = zoomBehaviorRef.current;
+    if (!svgNode || !zoom) return;
+    const nextScale = zoomTransformRef.current.k * factor;
+    if (nextScale < ZOOM_MIN && factor < 1) return;
+    if (nextScale > ZOOM_MAX && factor > 1) return;
+    d3.select<SVGSVGElement, unknown>(svgNode).call(zoom.scaleBy, factor);
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.defaultPrevented || isEditableTarget(event.target)) return;
+
+      if (event.key === "[") {
+        event.preventDefault();
+        onBack();
+        return;
+      }
+      if (event.key === "]") {
+        event.preventDefault();
+        onForward();
+        return;
+      }
+      if (event.key === "0") {
+        event.preventDefault();
+        recenterGraph();
+        return;
+      }
+      if (event.key === "+" || event.key === "=") {
+        event.preventDefault();
+        zoomGraph(1.18);
+        return;
+      }
+      if (event.key === "-") {
+        event.preventDefault();
+        zoomGraph(0.84);
+        return;
+      }
+      if (event.key === "Escape" && selectedArtist) {
+        event.preventDefault();
+        onClearArtistFocus();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onBack, onClearArtistFocus, onForward, recenterGraph, selectedArtist, zoomGraph]);
 
   const updateTooltip = (event: MouseEvent<SVGGElement>, node: GenreGraphNode) => {
     const bounds = surfaceRef.current?.getBoundingClientRect();
@@ -163,7 +234,7 @@ export function GenreGraph({
   };
 
   const handlePointerDown = (event: PointerEvent<SVGGElement>, node: GenreGraphNode) => {
-    if (node.type === "genre") return;
+    if (node.role === "center") return;
     const point = graphPoint(event);
     if (!point) return;
     event.preventDefault();
@@ -199,6 +270,13 @@ export function GenreGraph({
 
   return (
     <div ref={surfaceRef} className="relative">
+      <GraphToolbar
+        onBack={onBack}
+        onForward={onForward}
+        onRecenter={recenterGraph}
+        onZoomIn={() => zoomGraph(1.18)}
+        onZoomOut={() => zoomGraph(0.84)}
+      />
       <svg
         ref={svgRef}
         className="h-[72dvh] min-h-[680px] w-full touch-none bg-paper-2"
@@ -296,6 +374,65 @@ export function GenreGraph({
   );
 }
 
+function GraphToolbar({
+  onBack,
+  onForward,
+  onRecenter,
+  onZoomIn,
+  onZoomOut,
+}: {
+  onBack: () => void;
+  onForward: () => void;
+  onRecenter: () => void;
+  onZoomIn: () => void;
+  onZoomOut: () => void;
+}) {
+  return (
+    <div className="absolute right-3 top-3 z-10 flex border border-rule-strong bg-paper/95 shadow-[0_14px_34px_-24px_rgba(14,13,11,0.45)]">
+      <GraphToolButton label="Back" shortcut="[" onClick={onBack}>
+        <ArrowLeft className="h-4 w-4" weight="bold" />
+      </GraphToolButton>
+      <GraphToolButton label="Forward" shortcut="]" onClick={onForward}>
+        <ArrowRight className="h-4 w-4" weight="bold" />
+      </GraphToolButton>
+      <GraphToolButton label="Recentre graph" shortcut="0" onClick={onRecenter}>
+        <Target className="h-4 w-4" weight="bold" />
+      </GraphToolButton>
+      <GraphToolButton label="Zoom out" shortcut="-" onClick={onZoomOut}>
+        <MagnifyingGlassMinus className="h-4 w-4" weight="bold" />
+      </GraphToolButton>
+      <GraphToolButton label="Zoom in" shortcut="+" onClick={onZoomIn}>
+        <MagnifyingGlassPlus className="h-4 w-4" weight="bold" />
+      </GraphToolButton>
+    </div>
+  );
+}
+
+function GraphToolButton({
+  label,
+  shortcut,
+  onClick,
+  children,
+}: {
+  label: string;
+  shortcut: string;
+  onClick: () => void;
+  children: ReactNode;
+}) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      aria-keyshortcuts={shortcut}
+      title={`${label} (${shortcut})`}
+      onClick={onClick}
+      className="flex h-8 w-8 items-center justify-center border-r border-rule text-ink-dim transition-colors last:border-r-0 hover:bg-paper-2 hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ink"
+    >
+      {children}
+    </button>
+  );
+}
+
 function GraphLinkLine({
   link,
   source,
@@ -318,7 +455,7 @@ function GraphLinkLine({
       x2={target.x}
       y2={target.y}
       strokeWidth={link.kind === "album" ? 0.9 : link.kind === "artist" ? 1.2 : 0.8}
-      strokeDasharray={link.kind === "related" ? "3 7" : undefined}
+      strokeDasharray={link.kind === "genre" ? "3 7" : undefined}
       initial={reducedMotion ? false : {
         x1: source.x,
         y1: source.y,
@@ -372,11 +509,11 @@ function GraphNodeGroup({
   onPointerMove: (event: PointerEvent<SVGGElement>, node: GenreGraphNode) => void;
   onPointerUp: (event: PointerEvent<SVGGElement>, node: GenreGraphNode) => void;
 }) {
-  const isInteractive = node.type !== "genre";
+  const isInteractive = node.role !== "center";
   const isSelectedArtist = selectedArtist?.slug === node.slug;
   const isSelectedAlbum = selectedAlbum?.slug === node.slug;
   const isActive = isSelectedArtist || isSelectedAlbum;
-  const scale = isDragged ? 1.04 : isHovered || isActive ? 1.035 : 1;
+  const scale = node.role === "center" ? 1 : isDragged ? 1.04 : isHovered || isActive ? 1.035 : 1;
 
   return (
     <motion.g
@@ -408,7 +545,11 @@ function GraphNodeGroup({
       onPointerCancel={(event) => onPointerUp(event, node)}
     >
       <title>{node.name}</title>
-      {node.type === "album" ? (
+      {node.role === "center" && node.type === "genre" ? (
+        <CenterGenreNode node={node} />
+      ) : node.role === "center" && node.type === "artist" ? (
+        <CenterArtistNode node={node} clipPrefix={clipPrefix} />
+      ) : node.type === "album" ? (
         <AlbumNode
           node={node}
           isSelected={isSelectedAlbum}
@@ -416,7 +557,7 @@ function GraphNodeGroup({
           clipPrefix={clipPrefix}
         />
       ) : node.type === "genre" ? (
-        <CenterGenreNode node={node} />
+        <RelatedGenreChip node={node} />
       ) : (
         <OrbitNode
           node={node}
@@ -470,6 +611,78 @@ function CenterGenreNode({ node }: { node: GenreGraphNode }) {
   );
 }
 
+function CenterArtistNode({
+  node,
+  clipPrefix,
+}: {
+  node: GenreGraphNode;
+  clipPrefix: string;
+}) {
+  const titleLines = splitGraphLabel(node.name, 17, 2);
+
+  return (
+    <>
+      <circle r={48} fill="var(--paper)" stroke="var(--rule-strong)" strokeWidth={1.1} />
+      <circle r={39} fill="var(--paper-2)" stroke="var(--rule)" strokeWidth={0.8} />
+      {node.image ? (
+        <image
+          href={node.image}
+          x={-39}
+          y={-39}
+          width={78}
+          height={78}
+          clipPath={`url(#${clipPathId(clipPrefix, node)})`}
+          preserveAspectRatio="xMidYMid slice"
+          opacity={0.95}
+        />
+      ) : (
+        <text
+          textAnchor="middle"
+          dy={6}
+          fill="var(--ink)"
+          fontFamily="var(--font-display)"
+          fontSize={18}
+          fontWeight={780}
+          letterSpacing={0}
+        >
+          {artistInitials(node.name)}
+        </text>
+      )}
+      <circle r={48} fill="none" stroke="var(--hl)" strokeWidth={1.4} strokeDasharray="3 6" />
+      <text
+        textAnchor="middle"
+        y={67}
+        fill="var(--ink)"
+        fontFamily="var(--font-display)"
+        fontSize={15.5}
+        fontWeight={760}
+        letterSpacing={0}
+        paintOrder="stroke"
+        stroke="var(--paper-2)"
+        strokeWidth={6}
+        strokeLinejoin="round"
+      >
+        {titleLines.map((line, index) => (
+          <tspan key={`${node.id}-line-${index}`} x={0} dy={index === 0 ? 0 : 14}>
+            {line}
+          </tspan>
+        ))}
+      </text>
+      <text
+        textAnchor="middle"
+        y={titleLines.length > 1 ? 95 : 82}
+        fill="var(--ink-dim)"
+        fontFamily="var(--font-mono)"
+        fontSize={8.5}
+        fontWeight={700}
+        letterSpacing={0}
+      >
+        {formatNumber(node.count)} RECORDS
+      </text>
+    </>
+  );
+}
+
 function BrandRecordGlyph({ size }: { size: number }) {
   const scale = size / 512;
 
@@ -497,16 +710,12 @@ function OrbitNode({
   isSelected: boolean;
   clipPrefix: string;
 }) {
-  if (node.type === "related") {
-    return <RelatedGenreChip node={node} />;
-  }
-
   return (
     <>
       <motion.circle
         r={node.radius}
-        fill={node.type === "related" ? "var(--paper)" : isSelected ? "var(--hl)" : "var(--paper)"}
-        stroke={isSelected ? "var(--hl)" : node.type === "related" ? "var(--ink-dim)" : "var(--rule-strong)"}
+        fill={isSelected ? "var(--hl)" : "var(--paper)"}
+        stroke={isSelected ? "var(--hl)" : "var(--rule-strong)"}
         strokeWidth={1}
         animate={{
           filter: isSelected ? "drop-shadow(0 8px 18px rgba(182, 69, 38, 0.22))" : "drop-shadow(0 0 0 rgba(0, 0, 0, 0))",
@@ -550,17 +759,17 @@ function OrbitNode({
       <text
         textAnchor="middle"
         dy={node.radius + 15}
-        fill={node.type === "related" ? "var(--ink-3)" : "var(--ink)"}
+        fill="var(--ink)"
         fontFamily="var(--font-grot)"
-        fontSize={node.type === "related" ? 9.5 : 11}
-        fontWeight={node.type === "related" ? 600 : 700}
+        fontSize={11}
+        fontWeight={700}
         letterSpacing={0}
         paintOrder="stroke"
         stroke="var(--paper-2)"
         strokeWidth={5}
         strokeLinejoin="round"
       >
-        {formatGraphLabel(node.name, node.type === "artist" ? 18 : 12)}
+        {formatGraphLabel(node.name, node.role === "related-artist" ? 16 : 18)}
       </text>
     </>
   );
@@ -700,6 +909,19 @@ function tooltipLabel(node: GenreGraphNode): string {
     return `${node.name} / ${node.album?.artist || "Unknown"}`;
   }
   return `${node.name}${node.count ? ` / ${formatNumber(node.count)}` : ""}`;
+}
+
+function isEditableTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof Element)) return false;
+  const tagName = target.tagName.toLowerCase();
+
+  return (
+    (target instanceof HTMLElement && target.isContentEditable) ||
+    tagName === "input" ||
+    tagName === "textarea" ||
+    tagName === "select" ||
+    target.getAttribute("role") === "combobox"
+  );
 }
 
 function formatNumber(value: number): string {

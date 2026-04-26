@@ -394,21 +394,24 @@ Single-page hybrid D3/React/Motion genre explorer built from static `/collection
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `genre` | `all \| string` | `all` | Active scope, e.g. `/genres?genre=all` or `/genres?genre=Rock` |
-| `artist` | `string` | - | Active artist slug within the selected genre |
+| `artist` | `string` | - | Active artist slug. When present, the graph uses whole-collection artist focus |
 | `album` | `string` | - | Legacy/shared-link record slug used to highlight a record node |
 | `sort` | `dominance \| recent \| name \| year` | `dominance` | Artist/album ordering |
 | `q` | `string` | - | Search across genres, artists, and albums |
 | `nodes` | `number` or legacy `standard \| more \| max` | responsive | Graph node budget. Defaults are intentionally conservative on mobile, tablet, and desktop; the slider can reveal more |
 
 **Features:**
-- One primary hybrid genre graph showing either the global collection or a selected genre, related genres, artists, and artist records
+- One primary hybrid graph with two focus modes: selected genre focus, or selected artist focus
 - D3 is used for off-DOM force layout and zoom/pan behavior; React renders stable keyed SVG nodes and Framer Motion animates node/link transitions
-- The graph uses a center-out hierarchy: selected genre hub, middle artist field, and related genre pills around the perimeter
+- Genre focus uses a center-out hierarchy: selected genre hub, middle artist field, and related genre pills around the perimeter
+- Artist focus moves the artist to the center, then radiates out to collected records, artist genres, and other artists reached through those genres
 - The selected genre control is a styled Radix popup populated from computed genre summaries, with `All genres` first
 - Click related genre nodes to smoothly re-center the graph around that genre
-- Click artist nodes to reveal that artist's connected records in the same graph
+- Click artist nodes to center that artist using their whole collected discography
 - Click record nodes to open their canonical album detail pages
 - Search, sort, and numeric node-budget slider controls keep state in the URL
+- In-graph controls provide URL-backed Back/Forward plus zoom in, zoom out, and recenter actions
+- Keyboard shortcuts: `[` Back, `]` Forward, `0` recenter, `+` or `=` zoom in, `-` zoom out, and `Esc` clears artist focus
 - The central genre hub uses the Russ.fm record glyph in the same paper/ink treatment as the surrounding app
 - Loading, empty, and error states using editorial primitives
 

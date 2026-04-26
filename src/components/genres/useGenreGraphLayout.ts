@@ -6,12 +6,15 @@ import type {
   GenreSummary,
 } from "@/lib/genreExplorer";
 
-export type GenreGraphNodeType = "genre" | "related" | "artist" | "album";
-export type GenreGraphLinkKind = "related" | "artist" | "album";
+export type GenreGraphMode = "genre" | "artist";
+export type GenreGraphNodeType = "genre" | "artist" | "album";
+export type GenreGraphNodeRole = "center" | "genre" | "artist" | "related-artist" | "album";
+export type GenreGraphLinkKind = "genre" | "artist" | "album";
 
 export interface GenreGraphNode extends d3.SimulationNodeDatum {
   id: string;
   type: GenreGraphNodeType;
+  role: GenreGraphNodeRole;
   name: string;
   count: number;
   radius: number;
@@ -34,10 +37,12 @@ export interface GenreGraphLink {
 }
 
 export interface GenreGraphLayout {
+  mode: GenreGraphMode;
   width: number;
   height: number;
   centerX: number;
   centerY: number;
+  centerNodeId: string | null;
   nodes: GenreGraphNode[];
   links: GenreGraphLink[];
 }
@@ -46,6 +51,20 @@ interface SimulationLink extends d3.SimulationLinkDatum<GenreGraphNode> {
   source: string | GenreGraphNode;
   target: string | GenreGraphNode;
   kind: GenreGraphLinkKind;
+}
+
+interface GraphBuildResult {
+  mode: GenreGraphMode;
+  centerNodeId: string;
+  nodes: GenreGraphNode[];
+  links: GenreGraphLink[];
+}
+
+interface ArtistConnection {
+  artist: GenreExplorerArtist;
+  sharedGenres: string[];
+  genreScores: Map<string, number>;
+  score: number;
 }
 
 interface UseGenreGraphLayoutArgs {
@@ -127,13 +146,15 @@ export function getGraphNodeCapacity(
 ): number {
   if (!genre) return NODE_BUDGET_MIN;
 
-  const relatedCount = getRelatedGenreSummaries(genre, allGenres).length;
-  const artistCount = selectedArtist
-    ? 1 + artists.filter((artist) => artist.slug !== selectedArtist.slug).length
-    : artists.length;
-  const albumCount = selectedArtist ? albums.length : 0;
+  if (selectedArtist) {
+    const artistGenres = getArtistGenreSummaries(selectedArtist, allGenres).length;
+    const relatedArtists = getRelatedArtistsForArtist(selectedArtist, allGenres).length;
+    return Math.max(NODE_BUDGET_MIN, artistGenres + albums.length + relatedArtists);
+  }
 
-  return Math.max(NODE_BUDGET_MIN, relatedCount + artistCount + albumCount);
+  const relatedCount = getRelatedGenreSummaries(genre, allGenres).length;
+
+  return Math.max(NODE_BUDGET_MIN, relatedCount + artists.length);
 }
 
 export function formatGraphLabel(value: string, maxLength: number): string {
@@ -191,121 +212,34 @@ function buildSettledLayout({
 }): GenreGraphLayout {
   const centerX = width * 0.48;
   const centerY = height * 0.5;
-  const relatedCandidates = getRelatedGenreSummaries(genre, allGenres);
-  const artistCandidates = selectedArtist
-    ? [selectedArtist, ...artists.filter((artist) => artist.slug !== selectedArtist.slug)]
-    : artists;
-  const albumCandidates = selectedArtist ? albums : [];
-  const sliceCounts = distributeNodeBudget(
-    nodeBudget,
-    {
-      related: relatedCandidates.length,
-      artists: artistCandidates.length,
-      albums: albumCandidates.length,
-    },
-    Boolean(selectedArtist),
-  );
-  const shownRelated = relatedCandidates.slice(0, sliceCounts.related);
-  const shownArtists = artistCandidates.slice(0, sliceCounts.artists);
-  const shownAlbums = albumCandidates.slice(0, sliceCounts.albums);
-
-  const nodes: GenreGraphNode[] = [
-    {
-      id: `genre-${genre.name}`,
-      type: "genre",
-      name: genre.name,
-      count: genre.albumCount,
-      radius: graphNodeRadius("genre", genre.albumCount, genre.name),
-      genre,
-      x: centerX,
-      y: centerY,
-      fx: centerX,
-      fy: centerY,
-    },
-    ...shownRelated.map((related) => createNode({
-      id: `related-${related.name}`,
-      type: "related",
-      name: related.name,
-      count: related.albumCount,
-      genre: related,
-    })),
-    ...shownArtists.map((artist) => createNode({
-      id: `artist-${artist.slug}`,
-      type: "artist",
-      name: artist.name,
-      count: artist.albumCount,
-      slug: artist.slug,
-      image: artist.avatar,
-      artist,
-    })),
-    ...shownAlbums.map((album) => createNode({
-      id: `album-${album.slug}`,
-      type: "album",
-      name: album.title,
-      count: 1,
-      slug: album.slug,
-      image: album.cover,
-      album,
-    })),
-  ];
-
-  const typeTotals = {
-    related: shownRelated.length,
-    artist: shownArtists.length,
-    album: shownAlbums.length,
-  };
-  const typeIndexes = {
-    related: 0,
-    artist: 0,
-    album: 0,
-  };
-
-  nodes.forEach((node) => {
-    if (node.type === "genre") return;
-
-    const seed = seedPosition({
-      node,
-      width,
-      height,
+  const graph = selectedArtist
+    ? buildArtistFocusGraph({
       selectedArtist,
-      typeIndex: typeIndexes[node.type],
-      typeCount: typeTotals[node.type],
+      albums,
+      nodeBudget,
+      allGenres,
+      centerX,
+      centerY,
+    })
+    : buildGenreFocusGraph({
+      genre,
+      artists,
+      nodeBudget,
+      allGenres,
+      centerX,
+      centerY,
     });
-    node.layoutIndex = typeIndexes[node.type];
-    node.layoutCount = typeTotals[node.type];
-    typeIndexes[node.type] += 1;
+  const { mode, centerNodeId, nodes, links } = graph;
 
-    const previous = previousPositions.get(node.id);
-    node.x = previous ? clamp(previous.x, 96, width - 96) : seed.x;
-    node.y = previous ? clamp(previous.y, 68, height - 76) : seed.y;
+  seedGraphNodes({
+    nodes,
+    mode,
+    width,
+    height,
+    centerX,
+    centerY,
+    previousPositions,
   });
-
-  const links: GenreGraphLink[] = [
-    ...shownRelated.map((related) => ({
-      id: `related:${genre.name}:${related.name}`,
-      sourceId: `genre-${genre.name}`,
-      targetId: `related-${related.name}`,
-      kind: "related" as const,
-    })),
-    ...shownArtists.map((artist) => ({
-      id: `artist:${genre.name}:${artist.slug}`,
-      sourceId: `genre-${genre.name}`,
-      targetId: `artist-${artist.slug}`,
-      kind: "artist" as const,
-    })),
-    ...shownAlbums.map((album) => {
-      const owner =
-        selectedArtist ||
-        shownArtists.find((artist) => artist.name.toLowerCase() === album.artist.toLowerCase()) ||
-        shownArtists[0];
-      return {
-        id: `album:${owner?.slug || genre.name}:${album.slug}`,
-        sourceId: owner ? `artist-${owner.slug}` : `genre-${genre.name}`,
-        targetId: `album-${album.slug}`,
-        kind: "album" as const,
-      };
-    }),
-  ];
 
   const simulationLinks: SimulationLink[] = links.map((link) => ({
     source: link.sourceId,
@@ -315,54 +249,21 @@ function buildSettledLayout({
 
   d3
     .forceSimulation(nodes)
-    .force("link", d3.forceLink<GenreGraphNode, SimulationLink>(simulationLinks).id((item) => item.id).distance((item) => {
-      if (item.kind === "album") return selectedArtist ? 116 : 132;
-      if (item.kind === "related") return 360;
-      return 176;
-    }).strength((item) => (item.kind === "related" ? 0.045 : 0.44)))
-    .force("charge", d3.forceManyBody<GenreGraphNode>().strength((item) => {
-      if (item.type === "related") return -260;
-      if (item.type === "album") return -240;
-      if (item.type === "artist") return -420;
-      return -520;
-    }))
+    .force("link", d3.forceLink<GenreGraphNode, SimulationLink>(simulationLinks).id((item) => item.id).distance((item) => linkDistance(item.kind, mode)).strength((item) => linkStrength(item.kind, mode)))
+    .force("charge", d3.forceManyBody<GenreGraphNode>().strength((item) => nodeCharge(item)))
     .force("collision", d3.forceCollide<GenreGraphNode>().radius((item) => item.radius + collisionPadding(item)).strength(0.98))
-    .force("x", d3.forceX<GenreGraphNode>((item) => {
-      if (item.type === "related") {
-        return relatedPerimeterPoint(item.layoutIndex ?? 0, item.layoutCount ?? 1, width, height).x;
-      }
-      if (item.type === "artist") {
-        return artistFieldPoint(item.layoutIndex ?? 0, item.layoutCount ?? 1, width, height).x;
-      }
-      if (item.type === "album") return width * 0.78;
-      return centerX;
-    }).strength((item) => {
-      if (item.type === "related") return 0.42;
-      if (item.type === "artist") return 0.18;
-      return 0.12;
-    }))
-    .force("y", d3.forceY<GenreGraphNode>((item) => {
-      if (item.type === "album") return height * 0.55;
-      if (item.type === "related") {
-        return relatedPerimeterPoint(item.layoutIndex ?? 0, item.layoutCount ?? 1, width, height).y;
-      }
-      if (item.type === "artist") {
-        return artistFieldPoint(item.layoutIndex ?? 0, item.layoutCount ?? 1, width, height).y;
-      }
-      return centerY;
-    }).strength((item) => {
-      if (item.type === "related") return 0.36;
-      if (item.type === "artist") return 0.16;
-      return 0.08;
-    }))
+    .force("x", d3.forceX<GenreGraphNode>((item) => targetPoint(item, mode, width, height, centerX, centerY).x).strength((item) => targetStrength(item, mode).x))
+    .force("y", d3.forceY<GenreGraphNode>((item) => targetPoint(item, mode, width, height, centerX, centerY).y).strength((item) => targetStrength(item, mode).y))
     .stop()
-    .tick(240);
+    .tick(mode === "artist" ? 280 : 240);
 
   return {
+    mode,
     width,
     height,
     centerX,
     centerY,
+    centerNodeId,
     nodes: nodes.map((node) => ({
       ...node,
       x: clamp(node.x || centerX, 96, width - 96),
@@ -376,10 +277,248 @@ function buildSettledLayout({
   };
 }
 
+function buildGenreFocusGraph({
+  genre,
+  artists,
+  nodeBudget,
+  allGenres,
+  centerX,
+  centerY,
+}: {
+  genre: GenreSummary;
+  artists: GenreExplorerArtist[];
+  nodeBudget: number;
+  allGenres: GenreSummary[];
+  centerX: number;
+  centerY: number;
+}): GraphBuildResult {
+  const relatedCandidates = getRelatedGenreSummaries(genre, allGenres);
+  const sliceCounts = distributeGenreNodeBudget(
+    nodeBudget,
+    {
+      related: relatedCandidates.length,
+      artists: artists.length,
+    },
+  );
+  const shownRelated = relatedCandidates.slice(0, sliceCounts.related);
+  const shownArtists = artists.slice(0, sliceCounts.artists);
+
+  const nodes: GenreGraphNode[] = [
+    {
+      id: `genre-${genre.name}`,
+      type: "genre",
+      role: "center",
+      name: genre.name,
+      count: genre.albumCount,
+      radius: graphNodeRadius("genre", genre.albumCount, genre.name, "center"),
+      genre,
+      x: centerX,
+      y: centerY,
+      fx: centerX,
+      fy: centerY,
+    },
+    ...shownRelated.map((related) => createNode({
+      id: `genre-${related.name}`,
+      type: "genre",
+      role: "genre",
+      name: related.name,
+      count: related.albumCount,
+      genre: related,
+    })),
+    ...shownArtists.map((artist) => createNode({
+      id: `artist-${artist.slug}`,
+      type: "artist",
+      role: "artist",
+      name: artist.name,
+      count: artist.albumCount,
+      slug: artist.slug,
+      image: artist.avatar,
+      artist,
+    })),
+  ];
+
+  const links: GenreGraphLink[] = [
+    ...shownRelated.map((related) => ({
+      id: `genre:${genre.name}:${related.name}`,
+      sourceId: `genre-${genre.name}`,
+      targetId: `genre-${related.name}`,
+      kind: "genre" as const,
+    })),
+    ...shownArtists.map((artist) => ({
+      id: `artist:${genre.name}:${artist.slug}`,
+      sourceId: `genre-${genre.name}`,
+      targetId: `artist-${artist.slug}`,
+      kind: "artist" as const,
+    })),
+  ];
+
+  return {
+    mode: "genre",
+    centerNodeId: `genre-${genre.name}`,
+    nodes,
+    links,
+  };
+}
+
+function buildArtistFocusGraph({
+  selectedArtist,
+  albums,
+  nodeBudget,
+  allGenres,
+  centerX,
+  centerY,
+}: {
+  selectedArtist: GenreExplorerArtist;
+  albums: GenreExplorerAlbum[];
+  nodeBudget: number;
+  allGenres: GenreSummary[];
+  centerX: number;
+  centerY: number;
+}): GraphBuildResult {
+  const genreCandidates = getArtistGenreSummaries(selectedArtist, allGenres);
+  const relatedArtistCandidates = getRelatedArtistsForArtist(selectedArtist, allGenres);
+  const sliceCounts = distributeArtistNodeBudget(nodeBudget, {
+    genres: genreCandidates.length,
+    albums: albums.length,
+    relatedArtists: relatedArtistCandidates.length,
+  });
+  const shownGenres = genreCandidates.slice(0, sliceCounts.genres);
+  const shownAlbums = albums.slice(0, sliceCounts.albums);
+  const shownGenreNames = new Set(shownGenres.map((item) => item.name));
+  const shownRelatedArtists = relatedArtistCandidates
+    .map((connection) => ({
+      ...connection,
+      visibleGenreName: connection.sharedGenres.find((name) => shownGenreNames.has(name)) || null,
+    }))
+    .filter((connection): connection is ArtistConnection & { visibleGenreName: string } => Boolean(connection.visibleGenreName))
+    .slice(0, sliceCounts.relatedArtists);
+
+  const nodes: GenreGraphNode[] = [
+    {
+      id: `artist-${selectedArtist.slug}`,
+      type: "artist",
+      role: "center",
+      name: selectedArtist.name,
+      count: selectedArtist.totalAlbumCount || selectedArtist.albumCount,
+      radius: graphNodeRadius("artist", selectedArtist.totalAlbumCount || selectedArtist.albumCount, selectedArtist.name, "center"),
+      slug: selectedArtist.slug,
+      image: selectedArtist.avatar,
+      artist: selectedArtist,
+      x: centerX,
+      y: centerY,
+      fx: centerX,
+      fy: centerY,
+    },
+    ...shownGenres.map((artistGenre) => createNode({
+      id: `genre-${artistGenre.name}`,
+      type: "genre",
+      role: "genre",
+      name: artistGenre.name,
+      count: artistGenre.albumCount,
+      genre: artistGenre,
+    })),
+    ...shownAlbums.map((album) => createNode({
+      id: `album-${album.slug}`,
+      type: "album",
+      role: "album",
+      name: album.title,
+      count: 1,
+      slug: album.slug,
+      image: album.cover,
+      album,
+    })),
+    ...shownRelatedArtists.map((connection) => createNode({
+      id: `artist-${connection.artist.slug}`,
+      type: "artist",
+      role: "related-artist",
+      name: connection.artist.name,
+      count: connection.artist.totalAlbumCount || connection.artist.albumCount,
+      slug: connection.artist.slug,
+      image: connection.artist.avatar,
+      artist: connection.artist,
+    })),
+  ];
+
+  const links: GenreGraphLink[] = [
+    ...shownGenres.map((artistGenre) => ({
+      id: `artist-genre:${selectedArtist.slug}:${artistGenre.name}`,
+      sourceId: `artist-${selectedArtist.slug}`,
+      targetId: `genre-${artistGenre.name}`,
+      kind: "genre" as const,
+    })),
+    ...shownAlbums.map((album) => ({
+      id: `artist-album:${selectedArtist.slug}:${album.slug}`,
+      sourceId: `artist-${selectedArtist.slug}`,
+      targetId: `album-${album.slug}`,
+      kind: "album" as const,
+    })),
+    ...shownRelatedArtists.map((connection) => ({
+      id: `genre-artist:${connection.visibleGenreName}:${connection.artist.slug}`,
+      sourceId: `genre-${connection.visibleGenreName}`,
+      targetId: `artist-${connection.artist.slug}`,
+      kind: "artist" as const,
+    })),
+  ];
+
+  return {
+    mode: "artist",
+    centerNodeId: `artist-${selectedArtist.slug}`,
+    nodes,
+    links,
+  };
+}
+
+function seedGraphNodes({
+  nodes,
+  mode,
+  width,
+  height,
+  centerX,
+  centerY,
+  previousPositions,
+}: {
+  nodes: GenreGraphNode[];
+  mode: GenreGraphMode;
+  width: number;
+  height: number;
+  centerX: number;
+  centerY: number;
+  previousPositions: Map<string, { x: number; y: number }>;
+}) {
+  const roleTotals = new Map<GenreGraphNodeRole, number>();
+  const roleIndexes = new Map<GenreGraphNodeRole, number>();
+
+  nodes.forEach((node) => {
+    if (node.role === "center") return;
+    roleTotals.set(node.role, (roleTotals.get(node.role) || 0) + 1);
+  });
+
+  nodes.forEach((node) => {
+    if (node.role === "center") {
+      node.x = centerX;
+      node.y = centerY;
+      node.fx = centerX;
+      node.fy = centerY;
+      return;
+    }
+
+    const roleIndex = roleIndexes.get(node.role) || 0;
+    const roleCount = roleTotals.get(node.role) || 1;
+    node.layoutIndex = roleIndex;
+    node.layoutCount = roleCount;
+    roleIndexes.set(node.role, roleIndex + 1);
+
+    const seed = seedPosition({ node, mode, width, height, centerX, centerY });
+    const previous = previousPositions.get(node.id);
+    node.x = previous ? clamp(previous.x, 96, width - 96) : seed.x;
+    node.y = previous ? clamp(previous.y, 68, height - 76) : seed.y;
+  });
+}
+
 function createNode(
   node: Omit<GenreGraphNode, "radius" | "x" | "y">,
 ): GenreGraphNode {
-  const radius = graphNodeRadius(node.type, node.count, node.name);
+  const radius = graphNodeRadius(node.type, node.count, node.name, node.role);
   return {
     ...node,
     radius,
@@ -390,51 +529,101 @@ function createNode(
 
 function seedPosition({
   node,
+  mode,
   width,
   height,
-  selectedArtist,
-  typeIndex,
-  typeCount,
+  centerX,
+  centerY,
 }: {
   node: GenreGraphNode;
+  mode: GenreGraphMode;
   width: number;
   height: number;
-  selectedArtist: GenreExplorerArtist | null;
-  typeIndex: number;
-  typeCount: number;
+  centerX: number;
+  centerY: number;
 }): { x: number; y: number } {
-  if (node.type === "related") {
-    return relatedPerimeterPoint(typeIndex, typeCount, width, height);
+  const index = node.layoutIndex ?? 0;
+  const count = node.layoutCount ?? 1;
+
+  if (node.role === "center") {
+    return { x: centerX, y: centerY };
   }
 
-  if (node.type === "artist") {
-    const selectedNudge = selectedArtist?.slug === node.slug ? { x: -34, y: 0 } : { x: 0, y: 0 };
-    const point = artistFieldPoint(typeIndex, typeCount, width, height);
-    return { x: point.x + selectedNudge.x, y: point.y + selectedNudge.y };
+  if (node.role === "genre") {
+    return mode === "artist"
+      ? artistGenrePoint(index, count, width, height)
+      : relatedPerimeterPoint(index, count, width, height);
   }
 
-  const columns = selectedArtist ? 3 : 2;
-  const col = typeIndex % columns;
-  const row = Math.floor(typeIndex / columns);
-  const rows = Math.ceil(typeCount / columns);
+  if (node.role === "artist") {
+    return artistFieldPoint(index, count, width, height);
+  }
 
-  return {
-    x: width * (selectedArtist ? 0.68 : 0.72) + col * Math.min(104, width * 0.075),
-    y: distributeY(row, rows, height, 96),
-  };
+  if (node.role === "related-artist") {
+    return relatedArtistPoint(index, count, width, height);
+  }
+
+  return albumOrbitPoint(index, count, width, height);
 }
 
-function graphNodeRadius(type: GenreGraphNodeType, count: number, name = ""): number {
-  if (type === "genre") return 52;
-  if (type === "related") return Math.max(38, Math.min(74, name.length * 3.4 + 24));
+function targetPoint(
+  node: GenreGraphNode,
+  mode: GenreGraphMode,
+  width: number,
+  height: number,
+  centerX: number,
+  centerY: number,
+): { x: number; y: number } {
+  return seedPosition({ node, mode, width, height, centerX, centerY });
+}
+
+function targetStrength(node: GenreGraphNode, mode: GenreGraphMode): { x: number; y: number } {
+  if (node.role === "center") return { x: 1, y: 1 };
+  if (node.role === "genre") {
+    return mode === "artist" ? { x: 0.26, y: 0.24 } : { x: 0.42, y: 0.36 };
+  }
+  if (node.role === "artist") return { x: 0.18, y: 0.16 };
+  if (node.role === "related-artist") return { x: 0.24, y: 0.22 };
+  return { x: 0.2, y: 0.18 };
+}
+
+function linkDistance(kind: GenreGraphLinkKind, mode: GenreGraphMode): number {
+  if (kind === "album") return 132;
+  if (kind === "genre") return mode === "artist" ? 214 : 360;
+  return mode === "artist" ? 166 : 176;
+}
+
+function linkStrength(kind: GenreGraphLinkKind, mode: GenreGraphMode): number {
+  if (kind === "album") return 0.48;
+  if (kind === "genre") return mode === "artist" ? 0.32 : 0.045;
+  return mode === "artist" ? 0.36 : 0.44;
+}
+
+function nodeCharge(node: GenreGraphNode): number {
+  if (node.role === "center") return -620;
+  if (node.role === "genre") return -260;
+  if (node.role === "album") return -240;
+  if (node.role === "related-artist") return -340;
+  return -420;
+}
+
+function graphNodeRadius(
+  type: GenreGraphNodeType,
+  count: number,
+  name = "",
+  role: GenreGraphNodeRole = "artist",
+): number {
+  if (role === "center") return type === "artist" ? 52 : 52;
+  if (type === "genre") return Math.max(38, Math.min(74, name.length * 3.4 + 24));
   if (type === "artist") return Math.max(26, Math.min(42, 22 + Math.sqrt(count) * 4.4));
   return 24;
 }
 
 function collisionPadding(node: GenreGraphNode): number {
-  if (node.type === "genre") return 52;
+  if (node.role === "center") return 54;
   if (node.type === "album") return 34;
-  if (node.type === "related") return 20;
+  if (node.type === "genre") return 20;
+  if (node.role === "related-artist") return 36;
   return 42;
 }
 
@@ -455,6 +644,65 @@ function artistFieldPoint(
   return {
     x: clamp(centerX + Math.cos(angle) * radiusX, 142, width - 142),
     y: clamp(centerY + Math.sin(angle) * radiusY, 122, height - 148),
+  };
+}
+
+function artistGenrePoint(
+  index: number,
+  count: number,
+  width: number,
+  height: number,
+): { x: number; y: number } {
+  const total = Math.max(1, count);
+  const angle = ((index + 0.5) / total) * Math.PI * 2 - Math.PI / 2;
+  const centerX = width * 0.48;
+  const centerY = height * 0.5;
+  const radiusX = width * 0.3;
+  const radiusY = height * 0.29;
+
+  return {
+    x: clamp(centerX + Math.cos(angle) * radiusX, 128, width - 128),
+    y: clamp(centerY + Math.sin(angle) * radiusY, 92, height - 102),
+  };
+}
+
+function relatedArtistPoint(
+  index: number,
+  count: number,
+  width: number,
+  height: number,
+): { x: number; y: number } {
+  const total = Math.max(1, count);
+  const angle = index * GOLDEN_ANGLE - Math.PI / 2;
+  const progress = Math.sqrt((index + 0.5) / total);
+  const centerX = width * 0.48;
+  const centerY = height * 0.5;
+  const radiusX = width * (0.24 + 0.16 * progress);
+  const radiusY = height * (0.22 + 0.17 * progress);
+
+  return {
+    x: clamp(centerX + Math.cos(angle) * radiusX, 132, width - 132),
+    y: clamp(centerY + Math.sin(angle) * radiusY, 106, height - 122),
+  };
+}
+
+function albumOrbitPoint(
+  index: number,
+  count: number,
+  width: number,
+  height: number,
+): { x: number; y: number } {
+  const total = Math.max(1, count);
+  const angle = index * GOLDEN_ANGLE - Math.PI / 2;
+  const progress = Math.sqrt((index + 0.5) / total);
+  const centerX = width * 0.48;
+  const centerY = height * 0.5;
+  const radiusX = width * (0.11 + 0.13 * progress);
+  const radiusY = height * (0.1 + 0.14 * progress);
+
+  return {
+    x: clamp(centerX + Math.cos(angle) * radiusX, 116, width - 116),
+    y: clamp(centerY + Math.sin(angle) * radiusY, 100, height - 116),
   };
 }
 
@@ -486,33 +734,120 @@ function getRelatedGenreSummaries(
     .filter((candidate): candidate is GenreSummary => Boolean(candidate));
 }
 
-function distributeNodeBudget(
+function getArtistGenreSummaries(
+  artist: GenreExplorerArtist,
+  allGenres: GenreSummary[],
+): GenreSummary[] {
+  const albumCounts = new Map<string, number>();
+  artist.albums.forEach((album) => {
+    album.genres.forEach((genreName) => {
+      albumCounts.set(genreName, (albumCounts.get(genreName) || 0) + 1);
+    });
+  });
+
+  return artist.genres
+    .map((genreName) => allGenres.find((candidate) => candidate.name === genreName))
+    .filter((candidate): candidate is GenreSummary => Boolean(candidate))
+    .sort((a, b) => {
+      return (
+        (albumCounts.get(b.name) || 0) - (albumCounts.get(a.name) || 0) ||
+        b.albumCount - a.albumCount ||
+        a.name.localeCompare(b.name)
+      );
+    });
+}
+
+function getRelatedArtistsForArtist(
+  artist: GenreExplorerArtist,
+  allGenres: GenreSummary[],
+): ArtistConnection[] {
+  const artistGenreNames = new Set(artist.genres);
+  const connections = new Map<string, ArtistConnection>();
+
+  allGenres.forEach((genre) => {
+    if (!artistGenreNames.has(genre.name)) return;
+
+    genre.artists.forEach((candidate) => {
+      if (candidate.slug === artist.slug) return;
+
+      const existing = connections.get(candidate.slug) || {
+        artist: candidate,
+        sharedGenres: [],
+        genreScores: new Map<string, number>(),
+        score: 0,
+      };
+      existing.sharedGenres.push(genre.name);
+      existing.genreScores.set(genre.name, candidate.albumCount);
+      existing.score += candidate.albumCount;
+      connections.set(candidate.slug, existing);
+    });
+  });
+
+  return Array.from(connections.values())
+    .map((connection) => ({
+      ...connection,
+      sharedGenres: connection.sharedGenres.sort((a, b) => {
+        return (
+          (connection.genreScores.get(b) || 0) - (connection.genreScores.get(a) || 0) ||
+          a.localeCompare(b)
+        );
+      }),
+    }))
+    .sort((a, b) => {
+      return (
+        b.sharedGenres.length - a.sharedGenres.length ||
+        b.score - a.score ||
+        (b.artist.totalAlbumCount || b.artist.albumCount) - (a.artist.totalAlbumCount || a.artist.albumCount) ||
+        a.artist.name.localeCompare(b.artist.name)
+      );
+    });
+}
+
+function distributeGenreNodeBudget(
   budget: number,
-  totals: { related: number; artists: number; albums: number },
-  hasSelectedArtist: boolean,
-): { related: number; artists: number; albums: number } {
+  totals: { related: number; artists: number },
+): { related: number; artists: number } {
   const cappedBudget = Math.min(
     Math.max(NODE_BUDGET_MIN, Math.round(budget)),
-    Math.max(NODE_BUDGET_MIN, totals.related + totals.artists + totals.albums),
+    Math.max(NODE_BUDGET_MIN, totals.related + totals.artists),
   );
-  const weights = hasSelectedArtist
-    ? { related: 0.16, artists: 0.22, albums: 0.62 }
-    : { related: 0.28, artists: 0.72, albums: 0 };
   const counts = {
-    related: Math.min(totals.related, Math.floor(cappedBudget * weights.related)),
-    artists: Math.min(totals.artists, Math.floor(cappedBudget * weights.artists)),
-    albums: Math.min(totals.albums, Math.floor(cappedBudget * weights.albums)),
+    related: Math.min(totals.related, Math.floor(cappedBudget * 0.28)),
+    artists: Math.min(totals.artists, Math.floor(cappedBudget * 0.72)),
   };
 
-  if (hasSelectedArtist && totals.artists > 0 && cappedBudget > 0) {
-    counts.artists = Math.max(1, counts.artists);
+  let used = counts.related + counts.artists;
+  const priority: Array<keyof typeof counts> = ["artists", "related"];
+  while (used < cappedBudget && priority.some((key) => counts[key] < totals[key])) {
+    priority.forEach((key) => {
+      if (used >= cappedBudget || counts[key] >= totals[key]) return;
+      counts[key] += 1;
+      used += 1;
+    });
   }
 
-  const priority: Array<keyof typeof counts> = hasSelectedArtist
-    ? ["albums", "artists", "related"]
-    : ["artists", "related"];
+  return counts;
+}
 
-  let used = counts.related + counts.artists + counts.albums;
+function distributeArtistNodeBudget(
+  budget: number,
+  totals: { genres: number; albums: number; relatedArtists: number },
+): { genres: number; albums: number; relatedArtists: number } {
+  const cappedBudget = Math.min(
+    Math.max(NODE_BUDGET_MIN, Math.round(budget)),
+    Math.max(NODE_BUDGET_MIN, totals.genres + totals.albums + totals.relatedArtists),
+  );
+  const counts = {
+    genres: Math.min(totals.genres, Math.min(10, Math.ceil(cappedBudget * 0.3))),
+    albums: Math.min(totals.albums, Math.ceil(cappedBudget * 0.45)),
+    relatedArtists: 0,
+  };
+
+  let used = counts.genres + counts.albums;
+  counts.relatedArtists = Math.min(totals.relatedArtists, Math.max(0, cappedBudget - used));
+  used += counts.relatedArtists;
+
+  const priority: Array<keyof typeof counts> = ["albums", "genres", "relatedArtists"];
   while (used < cappedBudget && priority.some((key) => counts[key] < totals[key])) {
     priority.forEach((key) => {
       if (used >= cappedBudget || counts[key] >= totals[key]) return;
@@ -526,20 +861,15 @@ function distributeNodeBudget(
 
 function createEmptyLayout(width: number, height: number): GenreGraphLayout {
   return {
+    mode: "genre",
     width,
     height,
     centerX: width * 0.48,
     centerY: height * 0.5,
+    centerNodeId: null,
     nodes: [],
     links: [],
   };
-}
-
-function distributeY(index: number, count: number, height: number, padding: number): number {
-  if (count <= 1) return height / 2;
-  const top = padding;
-  const bottom = height - padding;
-  return top + ((bottom - top) * index) / Math.max(1, count - 1);
 }
 
 function clamp(value: number, min: number, max: number): number {

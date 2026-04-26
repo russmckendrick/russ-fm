@@ -92,8 +92,11 @@ export function GenrePage() {
     [explorer.allGenre, explorer.genres, genreParam],
   );
   const selectedArtist = useMemo(
-    () => resolveArtist(selectedGenre, artistParam),
-    [artistParam, selectedGenre],
+    () => {
+      if (!artistParam) return null;
+      return resolveArtist(explorer.allGenre, artistParam) || resolveArtist(selectedGenre, artistParam);
+    },
+    [artistParam, explorer.allGenre, selectedGenre],
   );
   const artists = useMemo(() => {
     if (!selectedGenre) return [];
@@ -171,6 +174,12 @@ export function GenrePage() {
     },
     [navigate],
   );
+  const clearArtistFocus = useCallback(
+    () => updateParams({ artist: null, album: null }),
+    [updateParams],
+  );
+  const goBack = useCallback(() => navigate(-1), [navigate]);
+  const goForward = useCallback(() => navigate(1), [navigate]);
 
   if (loading) {
     return (
@@ -199,7 +208,7 @@ export function GenrePage() {
   return (
     <PageContainer className="pb-10">
       <section className="overflow-hidden border border-rule-strong bg-paper">
-        <div className="grid gap-3 border-b border-rule-strong bg-paper px-4 py-3 lg:grid-cols-[minmax(180px,0.72fr)_minmax(250px,1fr)_190px_250px_auto] lg:items-center lg:divide-x lg:divide-rule-strong lg:px-0">
+        <div className="grid gap-3 border-b border-rule-strong bg-paper px-4 py-3 lg:grid-cols-[minmax(280px,0.9fr)_minmax(190px,1fr)_145px_250px_auto] lg:items-center lg:divide-x lg:divide-rule-strong lg:px-0">
           <div className="min-w-0 lg:px-4">
             <GenreSelect
               allGenre={explorer.allGenre}
@@ -236,6 +245,9 @@ export function GenrePage() {
           onSelectGenre={selectGenre}
           onSelectArtist={selectArtist}
           onOpenAlbum={openAlbum}
+          onBack={goBack}
+          onForward={goForward}
+          onClearArtistFocus={clearArtistFocus}
         />
       </section>
     </PageContainer>
@@ -259,7 +271,7 @@ function GenreSelect({
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger
           aria-label="Choose genre"
-          className="h-14 gap-3 rounded-none border-0 bg-transparent px-0 py-1 font-display text-[28px] uppercase leading-none text-ink shadow-none ring-offset-0 transition-colors hover:text-hl focus:ring-0 focus:ring-offset-0 data-[state=open]:text-hl md:text-[34px] [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0 [&>svg]:opacity-100"
+          className="h-14 gap-3 rounded-none border-0 bg-transparent px-0 py-1 font-display text-[28px] uppercase leading-none text-ink shadow-none ring-offset-0 transition-colors hover:text-hl focus:ring-0 focus:ring-offset-0 data-[state=open]:text-hl md:text-[32px] [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0 [&>svg]:opacity-100"
         >
           <SelectValue />
         </SelectTrigger>
@@ -397,7 +409,7 @@ function NodeBudgetControl({
           <SlidersHorizontal className="h-4 w-4" weight="bold" />
           Nodes
         </span>
-        <span className="tabular-nums text-ink-3">
+        <span className="whitespace-nowrap tabular-nums text-ink-3">
           {isAuto ? `Auto ${formatNumber(sliderValue)}` : formatNumber(sliderValue)} / {formatNumber(max)}
         </span>
       </div>
