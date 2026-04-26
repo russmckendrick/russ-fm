@@ -405,6 +405,7 @@ Single-page hybrid D3/React/Motion genre explorer built from static `/collection
 - D3 is used for off-DOM force layout and zoom/pan behavior; React renders stable keyed SVG nodes and Framer Motion animates node/link transitions
 - Genre focus uses a center-out hierarchy: selected genre hub, middle artist field, and related genre pills around the perimeter
 - Artist focus moves the artist to the center, then radiates out to collected records, artist genres, and other artists reached through those genres
+- Artist focus renders the selected artist as a full circular portrait hub, with larger square album-cover nodes so records remain readable inside the graph
 - The selected genre control is a styled Radix popup populated from computed genre summaries, with `All genres` first
 - Click related genre nodes to smoothly re-center the graph around that genre
 - Click artist nodes to center that artist using their whole collected discography

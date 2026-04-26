@@ -588,7 +588,7 @@ function targetStrength(node: GenreGraphNode, mode: GenreGraphMode): { x: number
 }
 
 function linkDistance(kind: GenreGraphLinkKind, mode: GenreGraphMode): number {
-  if (kind === "album") return 132;
+  if (kind === "album") return 148;
   if (kind === "genre") return mode === "artist" ? 214 : 360;
   return mode === "artist" ? 166 : 176;
 }
@@ -602,7 +602,7 @@ function linkStrength(kind: GenreGraphLinkKind, mode: GenreGraphMode): number {
 function nodeCharge(node: GenreGraphNode): number {
   if (node.role === "center") return -620;
   if (node.role === "genre") return -260;
-  if (node.role === "album") return -240;
+  if (node.role === "album") return -300;
   if (node.role === "related-artist") return -340;
   return -420;
 }
@@ -616,12 +616,12 @@ function graphNodeRadius(
   if (role === "center") return type === "artist" ? 52 : 52;
   if (type === "genre") return Math.max(38, Math.min(74, name.length * 3.4 + 24));
   if (type === "artist") return Math.max(26, Math.min(42, 22 + Math.sqrt(count) * 4.4));
-  return 24;
+  return 31;
 }
 
 function collisionPadding(node: GenreGraphNode): number {
   if (node.role === "center") return 54;
-  if (node.type === "album") return 34;
+  if (node.type === "album") return 32;
   if (node.type === "genre") return 20;
   if (node.role === "related-artist") return 36;
   return 42;
@@ -697,8 +697,8 @@ function albumOrbitPoint(
   const progress = Math.sqrt((index + 0.5) / total);
   const centerX = width * 0.48;
   const centerY = height * 0.5;
-  const radiusX = width * (0.11 + 0.13 * progress);
-  const radiusY = height * (0.1 + 0.14 * progress);
+  const radiusX = width * (0.13 + 0.15 * progress);
+  const radiusY = height * (0.12 + 0.15 * progress);
 
   return {
     x: clamp(centerX + Math.cos(angle) * radiusX, 116, width - 116),

@@ -63,6 +63,7 @@ const FALLBACK_WIDTH = 1180;
 const FALLBACK_HEIGHT = 700;
 const ZOOM_MIN = 0.76;
 const ZOOM_MAX = 2.2;
+const CENTER_ARTIST_PORTRAIT_RADIUS = 48;
 const MOTION_SPRING: Transition = { type: "spring", stiffness: 150, damping: 24, mass: 0.82 };
 const LINE_SPRING: Transition = { type: "spring", stiffness: 170, damping: 28, mass: 0.78 };
 
@@ -288,12 +289,15 @@ export function GenreGraph({
         <defs>
           {layout.nodes.filter((node) => node.image).map((node) => {
             const clipId = clipPathId(clipPrefix, node);
+            const clipRadius = node.role === "center" && node.type === "artist"
+              ? CENTER_ARTIST_PORTRAIT_RADIUS
+              : node.radius;
             return (
               <clipPath key={clipId} id={clipId}>
                 {node.type === "album" ? (
-                  <rect x={-26} y={-26} width={52} height={52} />
+                  <rect x={-node.radius} y={-node.radius} width={node.radius * 2} height={node.radius * 2} />
                 ) : (
-                  <circle cx={0} cy={0} r={node.radius} />
+                  <circle cx={0} cy={0} r={clipRadius} />
                 )}
               </clipPath>
             );
@@ -619,21 +623,22 @@ function CenterArtistNode({
   clipPrefix: string;
 }) {
   const titleLines = splitGraphLabel(node.name, 17, 2);
+  const portraitSize = CENTER_ARTIST_PORTRAIT_RADIUS * 2;
 
   return (
     <>
-      <circle r={48} fill="var(--paper)" stroke="var(--rule-strong)" strokeWidth={1.1} />
-      <circle r={39} fill="var(--paper-2)" stroke="var(--rule)" strokeWidth={0.8} />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 1} fill="var(--paper)" stroke="var(--rule-strong)" strokeWidth={1.1} />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS} fill="var(--paper-2)" stroke="var(--rule)" strokeWidth={0.8} />
       {node.image ? (
         <image
           href={node.image}
-          x={-39}
-          y={-39}
-          width={78}
-          height={78}
+          x={-CENTER_ARTIST_PORTRAIT_RADIUS}
+          y={-CENTER_ARTIST_PORTRAIT_RADIUS}
+          width={portraitSize}
+          height={portraitSize}
           clipPath={`url(#${clipPathId(clipPrefix, node)})`}
           preserveAspectRatio="xMidYMid slice"
-          opacity={0.95}
+          opacity={0.97}
         />
       ) : (
         <text
@@ -648,7 +653,8 @@ function CenterArtistNode({
           {artistInitials(node.name)}
         </text>
       )}
-      <circle r={48} fill="none" stroke="var(--hl)" strokeWidth={1.4} strokeDasharray="3 6" />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS} fill="none" stroke="var(--rule-strong)" strokeWidth={1} />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 4} fill="none" stroke="var(--hl)" strokeWidth={1.4} strokeDasharray="3 6" />
       <text
         textAnchor="middle"
         y={67}
@@ -830,13 +836,15 @@ function AlbumNode({
   isLabelVisible: boolean;
   clipPrefix: string;
 }) {
+  const halfSize = node.radius;
+
   return (
     <>
       <rect
-        x={-26}
-        y={-26}
-        width={52}
-        height={52}
+        x={-halfSize}
+        y={-halfSize}
+        width={halfSize * 2}
+        height={halfSize * 2}
         fill="var(--paper-2)"
         stroke={isSelected ? "var(--hl)" : "var(--rule-strong)"}
         strokeWidth={isSelected ? 2 : 1}
@@ -844,18 +852,18 @@ function AlbumNode({
       {node.image && (
         <image
           href={node.image}
-          x={-26}
-          y={-26}
-          width={52}
-          height={52}
+          x={-halfSize}
+          y={-halfSize}
+          width={halfSize * 2}
+          height={halfSize * 2}
           clipPath={`url(#${clipPathId(clipPrefix, node)})`}
           preserveAspectRatio="xMidYMid slice"
-          opacity={0.92}
+          opacity={0.94}
         />
       )}
       <motion.text
         textAnchor="middle"
-        dy={41}
+        dy={halfSize + 16}
         fill={isSelected ? "var(--ink)" : "var(--ink-3)"}
         fontFamily="var(--font-grot)"
         fontSize={10}
