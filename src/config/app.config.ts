@@ -1,7 +1,7 @@
 export const appConfig = {
   pagination: {
     itemsPerPage: {
-      albums: 20,
+      albums: 24,
       artists: 24,
     },
     showPageNumbers: 5, // Number of page numbers to show before ellipsis
