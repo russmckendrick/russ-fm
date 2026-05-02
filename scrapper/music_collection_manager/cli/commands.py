@@ -29,7 +29,7 @@ class BaseCommand:
 class ReleaseCommand(BaseCommand):
     """Command for handling single release operations."""
     
-    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False, prefer: Optional[str] = None, perplexity_context: Optional[str] = None):
+    def execute(self, discogs_id: str, output_format: str, save: bool, services: List[str], force_refresh: bool = False, interactive: bool = False, search_override: Optional[str] = None, custom_cover: Optional[str] = None, v1: bool = False, prefer: Optional[str] = None, perplexity_context: Optional[str] = None, perplexity: bool = False):
         """Execute the release command."""
         try:
             # Initialize orchestrator
@@ -100,7 +100,59 @@ class ReleaseCommand(BaseCommand):
             if not release:
                 click.echo(f"Release not found for Discogs ID: {discogs_id}")
                 return
-            
+
+            # Add Perplexity description if --perplexity flag is set (always generates/overwrites)
+            if perplexity:
+                from ..services.perplexity import PerplexityService
+                from ..utils.json_updater import JsonUpdater
+
+                perplexity_config = self.config.get("perplexity", {})
+                if not perplexity_config.get("api_key"):
+                    self.console.print("[red]Error: Perplexity API key not configured in config.json[/red]")
+                else:
+                    self.console.print("[yellow]Perplexity mode enabled - generating album description with Perplexity AI[/yellow]")
+                    try:
+                        perplexity_service = PerplexityService(perplexity_config, self.logger)
+                        primary_artist = release.get_artist_names()[0] if release.get_artist_names() else ""
+
+                        self.console.print("[cyan]Generating description with Perplexity AI...[/cyan]")
+                        description_data = perplexity_service.generate_album_description(
+                            artist=primary_artist,
+                            album=release.title,
+                            year=release.year,
+                            genres=release.genres,
+                            labels=release.labels,
+                            context=perplexity_context
+                        )
+
+                        if description_data:
+                            desc_preview = description_data["description"][:150]
+                            if len(description_data["description"]) > 150:
+                                desc_preview += "..."
+                            self.console.print(f"[green]  ✓ Perplexity description generated[/green]")
+                            self.console.print(f"[dim]    {desc_preview}[/dim]")
+
+                            release.raw_data["perplexity"] = description_data
+
+                            db_path = self.config.get("database.path", "collection_cache.db")
+                            db = DatabaseManager(db_path, self.logger)
+                            if db.update_release_perplexity_description(str(release.discogs_id), description_data):
+                                self.console.print("[green]✓ Database updated[/green]")
+                            else:
+                                self.console.print("[red]✗ Failed to update database[/red]")
+
+                            json_updater = JsonUpdater(logger=self.logger)
+                            if json_updater.update_album_perplexity_description(
+                                str(release.discogs_id), release.title, release.get_artist_names(), description_data
+                            ):
+                                self.console.print("[green]✓ JSON file updated[/green]")
+                            else:
+                                self.console.print("[yellow]⚠ JSON file not found or update failed[/yellow]")
+                        else:
+                            self.console.print("[red]  ✗ Failed to generate Perplexity description[/red]")
+                    except Exception as e:
+                        self.console.print(f"[red]Error generating Perplexity description: {str(e)}[/red]")
+
             # Save to database if requested
             if save:
                 db_path = self.config.get("database.path", "collection_cache.db")

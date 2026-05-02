@@ -112,11 +112,16 @@ def cli(ctx, config, log_level, log_file, session_logs):
     default=None,
     help="Free-text hint to guide Perplexity when generating the album description (e.g. 'Dutch gospel/soul duo on Record Kicks')"
 )
+@click.option(
+    "--perplexity",
+    is_flag=True,
+    help="Generate album description using Perplexity AI (adds to existing data)"
+)
 @click.pass_context
-def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context):
+def release(ctx, discogs_id, output, save, services, force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context, perplexity):
     """Get and enrich data for a single release by Discogs ID."""
     command = ReleaseCommand(ctx.obj["config"], ctx.obj["logger"])
-    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context)
+    command.execute(discogs_id, output, save, list(services), force_refresh, interactive, search, custom_cover, v1, prefer, perplexity_context, perplexity)
 
 
 @cli.command()

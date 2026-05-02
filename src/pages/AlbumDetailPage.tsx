@@ -677,10 +677,15 @@ export function AlbumDetailPage() {
 
     if (!explorerAlbum) return [];
 
+    const artistUris = new Set([
+      album.uri_artist,
+      ...(album.artists?.map(a => a.uri_artist) ?? []),
+    ]);
+
     return getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)
-      .slice(0, 10)
       .map(({ album: relatedAlbum }) => albumBySlug.get(relatedAlbum.slug))
-      .filter((item): item is Album => Boolean(item));
+      .filter((item): item is Album => Boolean(item) && !artistUris.has(item.uri_artist))
+      .slice(0, 10);
   })();
 
   // Section numbering — each section that renders gets the next sequential
