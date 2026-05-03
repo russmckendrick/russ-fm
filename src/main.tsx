@@ -5,6 +5,9 @@ import './index.css'
 import './styles/brand-colors.css'
 import App from './App.tsx'
 import { ThemeProvider } from './components/theme-provider'
+import { initAnalytics } from './lib/analytics'
+
+initAnalytics()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

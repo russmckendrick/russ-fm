@@ -47,7 +47,7 @@ flowchart TB
 | [Spotify](./spotify.md) | Enrichment | Streaming links, popularity |
 | [Last.fm](./lastfm.md) | Enrichment | Wiki content, scrobbling |
 | [Perplexity](./perplexity.md) | AI generation | Album descriptions |
-| [Others](./others.md) | Metadata | Wikipedia, TheAudioDB |
+| [Others](./others.md) | Metadata and frontend integrations | Wikipedia, TheAudioDB, Plausible analytics |
 
 ## Rate Limits
 

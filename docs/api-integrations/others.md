@@ -1,6 +1,6 @@
 # Other API Integrations
 
-This document covers Wikipedia and TheAudioDB integrations.
+This document covers Wikipedia, TheAudioDB, and lightweight frontend analytics integrations.
 
 ## Wikipedia
 
@@ -388,6 +388,43 @@ python main.py artist-batch --theaudiodb --save
 | strCountry | country |
 | intFormedYear | formed_date |
 | strMusicBrainzID | lastfm_mbid |
+
+---
+
+## Plausible Analytics
+
+### Overview
+
+- **Package**: `@plausible-analytics/tracker`
+- **Endpoint**: `https://plausible.io/api/event`
+- **Domain**: `russ.fm`
+- **Auth**: None in the frontend
+- **Runtime**: Production browser builds only
+
+### Frontend Initialization
+
+Plausible is initialized once from `src/lib/analytics.ts` and imported by
+`src/main.tsx` before the React app renders. The NPM tracker is bundled with
+the Vite application instead of loading Plausible's remote script tag in
+`index.html`.
+
+```typescript
+init({
+  domain: 'russ.fm',
+  autoCapturePageviews: true,
+  outboundLinks: true,
+  fileDownloads: true,
+  formSubmissions: true,
+  bindToWindow: true,
+  logging: false,
+})
+```
+
+`autoCapturePageviews` tracks SPA navigation through `BrowserRouter`.
+Outbound links, file downloads, and form submissions are enabled to match the
+site-specific Plausible script settings.
+`bindToWindow` keeps `window.plausible` available for Plausible's installation
+verification tool and future custom event calls.
 
 ---
 

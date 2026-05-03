@@ -139,6 +139,15 @@ flowchart LR
     Hooks --> Components
 ```
 
+## Analytics
+
+Production builds initialize Plausible Analytics from
+`src/lib/analytics.ts` using the bundled
+`@plausible-analytics/tracker` package. The tracker is configured for
+`russ.fm`, automatically records browser-router pageviews, and keeps
+`window.plausible` available for Plausible installation verification.
+Local development builds do not initialize analytics.
+
 ### Data Loading Pattern
 
 ```typescript

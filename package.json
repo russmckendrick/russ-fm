@@ -37,6 +37,7 @@
     "@fontsource-variable/inter-tight": "^5.2.7",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@phosphor-icons/react": "^2.1.10",
+    "@plausible-analytics/tracker": "^0.4.4",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "@radix-ui/react-progress": "^1.1.8",
@@ -64,8 +65,8 @@
     "use-debounce": "^10.1.1"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.1037.0",
-    "@aws-sdk/lib-storage": "^3.1037.0",
+    "@aws-sdk/client-s3": "^3.1041.0",
+    "@aws-sdk/lib-storage": "^3.1041.0",
     "@eslint/js": "^9.39.4",
     "@fontsource/inter": "^5.2.8",
     "@types/node": "^24.12.2",
@@ -81,7 +82,7 @@
     "glob": "^11.1.0",
     "globals": "^16.5.0",
     "ora": "^8.2.0",
-    "postcss": "^8.5.10",
+    "postcss": "^8.5.13",
     "satori": "^0.18.4",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.19",
@@ -89,7 +90,7 @@
     "terser": "^5.46.2",
     "tsx": "^4.21.0",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.59.0",
+    "typescript-eslint": "^8.59.1",
     "vite": "^7.3.2",
     "wrangler": "^3.114.17"
   }
