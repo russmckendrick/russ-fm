@@ -112,6 +112,7 @@ jobs:
           # Build application (JS/TS)
           echo "🔨 Compiling application..."
           rm -rf dist
+          pnpm run generate-sitemap
           pnpm tsc --noEmit
           pnpm vite build
           
@@ -123,6 +124,7 @@ jobs:
           # Generate wrapped data
           echo "📊 Generating wrapped data..."
           pnpm run build:wrapped
+          pnpm run generate-sitemap
 
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 

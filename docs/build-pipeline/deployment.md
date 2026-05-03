@@ -123,13 +123,16 @@ deploy:
       run: pnpm run tsc --noEmit
 
     - name: Build
-      run: pnpm run vite build
+      run: |
+        pnpm run generate-sitemap
+        pnpm run vite build
 
     - name: Populate dist from cache
       run: |
         pnpm run process-images
         pnpm run generate-colors
         pnpm run build:wrapped
+        pnpm run generate-sitemap
         pnpm run generate-og
 
         # Copy generic og-image.png to public/ for worker build

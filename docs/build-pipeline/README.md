@@ -20,6 +20,7 @@ flowchart LR
     end
 
     subgraph Build["Build Process"]
+        Sitemap[Generate Sitemap]
         TSC[TypeScript Check]
         Vite[Vite Build]
         Process[Process Images]
@@ -33,6 +34,8 @@ flowchart LR
         Workers[CF Workers]
     end
 
+    JSON --> Sitemap
+    Sitemap --> Vite
     TS --> TSC
     TSC --> Vite
     Vite --> Dist
@@ -68,13 +71,15 @@ pnpm run build
 
 # Build steps:
 # 1. rm -rf dist
-# 2. tsc --noEmit (type check)
-# 3. vite build (bundle)
-# 4. process-images (resize)
-# 5. generate-colors (extract palettes)
-# 6. build:wrapped (year data)
-# 7. generate-og (social images)
-# 8. cp dist/og-image.png public/og-image.png (for worker build)
+# 2. generate-sitemap (write public/sitemap.xml from collection data)
+# 3. tsc --noEmit (type check)
+# 4. vite build (bundle)
+# 5. process-images (resize)
+# 6. generate-colors (extract palettes)
+# 7. build:wrapped (year data)
+# 8. generate-sitemap (refresh sitemap.xml in public/ and dist/)
+# 9. generate-og (social images)
+# 10. cp dist/og-image.png public/og-image.png (for worker build)
 ```
 
 ### Fast Build (Skip Assets)
@@ -105,6 +110,7 @@ pnpm run build:worker
 | `build:worker` | Worker-optimized build |
 | `build:sync` | Build + sync to R2 |
 | `build:sync:dry` | Preview R2 sync |
+| `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists |
 | `process-images` | Resize images |
 | `generate-colors` | Extract color palettes |
 | `generate-og` | Create OG images |
@@ -239,6 +245,7 @@ dist/
 │   ├── index-[hash].css
 │   └── vendor-[hash].js
 ├── collection.json
+├── sitemap.xml
 ├── album-colors.json
 ├── album-colors.css
 ├── wrapped.json
@@ -279,6 +286,9 @@ R2_PUBLIC_DOMAIN=https://assets.russ.fm
 ```bash
 # Feature flags
 VITE_SCROBBLING_ENABLED=true
+
+# Optional sitemap base URL override
+SITEMAP_BASE_URL=https://russ.fm
 ```
 
 ## Performance Optimizations

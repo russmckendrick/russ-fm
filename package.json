@@ -10,10 +10,11 @@
   "scripts": {
     "dev": "vite",
     "dev:worker": "wrangler dev",
-    "build": "rm -rf dist && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-og",
+    "build": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-sitemap && pnpm run generate-og",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-colors": "node scripts/generate-album-colors.js",
     "generate-og": "node scripts/generate-og-images.mjs",
-    "build:fast": "rm -rf dist && tsc --noEmit && vite build",
+    "build:fast": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build",
     "build:generate-sync": "pnpm run build && pnpm run build:sync",
     "build:sync": "node scripts/sync-to-r2.js",
     "build:sync:dry": "node scripts/sync-to-r2.js --dry-run",
