@@ -13,6 +13,9 @@ import { RandomPage } from './pages/RandomPage';
 import { GenrePage } from './pages/GenrePage';
 import { WrappedYear } from './pages/wrapped/WrappedYear';
 import { WrappedYTD } from './pages/wrapped/WrappedYTD';
+import { BrowseIndexPage } from './pages/browse/BrowseIndexPage';
+import { FacetListPage } from './pages/browse/FacetListPage';
+import { FacetDetailPage } from './pages/browse/FacetDetailPage';
 
 // Component to handle "Various" artist route interception
 function ArtistRouteHandler() {
@@ -52,6 +55,13 @@ function App() {
           <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="/genres" element={<GenrePage />} />
+          <Route path="/browse" element={<BrowseIndexPage />} />
+          <Route path="/labels" element={<FacetListPage facetKey="label" />} />
+          <Route path="/label/:slug" element={<FacetDetailPage facetKey="label" />} />
+          <Route path="/decades" element={<FacetListPage facetKey="decade" />} />
+          <Route path="/decade/:slug" element={<FacetDetailPage facetKey="decade" />} />
+          <Route path="/countries" element={<FacetListPage facetKey="country" />} />
+          <Route path="/country/:slug" element={<FacetDetailPage facetKey="country" />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />

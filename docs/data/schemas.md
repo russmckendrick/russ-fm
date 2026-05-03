@@ -60,12 +60,20 @@ Main collection index used for album listings.
 | albums[].date_release_year | number | Release year |
 | albums[].discogs_id | string | Discogs release ID |
 | albums[].genre_names | string[] | Genre list |
+| albums[].styles | string[] | Discogs styles (excluding generic "Music"); used by detail page + browse |
+| albums[].formats | string[] | All Discogs format descriptors (Vinyl, LP, Album, Compilation, Box Set, …) |
+| albums[].format_primary | string \| null | Single canonical format bucket: Vinyl / CD / Cassette / Box Set / Digital. Powers the `/albums?format=…` filter and the Stats page format donut. |
+| albums[].labels | string[] | Record label names; powers `/labels` and `/label/:slug` |
+| albums[].country | string \| null | Discogs release country; powers `/countries` and `/country/:slug` |
+| albums[].lastfm_listeners | number \| null | Last.fm `album.getInfo` listener count; powers the Stats "Hidden gems" section |
 | albums[].artists | object[] | Artist objects |
 | albums[].images_uri_release | object | Album image paths |
 | albums[].images_uri_artist | object | Artist image paths |
 | albums[].spotify_url | string? | Spotify album URL |
 | albums[].apple_music_url | string? | Apple Music URL |
 | albums[].discogs_url | string | Discogs release URL |
+
+> **Phase 1 data-leverage update (May 2026):** the five fields `styles`, `formats`, `format_primary`, `labels`, `country`, `lastfm_listeners` were added to the collection.json index so faceted browse pages and Stats v2 don't need to lazy-load every per-album JSON. They are denormalised at index time by [`scrapper/music_collection_manager/utils/collection_generator.py`](../../scrapper/music_collection_manager/utils/collection_generator.py).
 
 ---
 

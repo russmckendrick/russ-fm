@@ -13,6 +13,12 @@ export interface Album {
     biography?: string;
   }>;
   genre_names: string[];
+  styles?: string[];
+  formats?: string[];
+  format_primary?: string | null;
+  labels?: string[];
+  country?: string | null;
+  lastfm_listeners?: number | null;
   uri_release: string;
   uri_artist: string;
   date_added: string;

@@ -67,31 +67,48 @@ class CollectionGenerator:
         # Extract basic info
         release_name = self._get_release_name_from_object(release)
         release_artist = self._get_release_artist_from_object(release)
-        
+
         if not release_name or not release_artist:
             self.logger.warning(f"Missing release name or artist for {release.discogs_id}")
             return None
-            
+
         # Create URIs
         release_folder = self._sanitize_filename(f"{release_name}-{release.discogs_id}")
         artist_folder = self._sanitize_filename(release_artist)
-        
+
+        # Load detailed JSON once for fields that need it (formats, labels, country, styles, lastfm_listeners)
+        release_data = self._load_release_json(release_name, release)
+
         # Get genre names
         genre_names = self._get_genre_names_from_object(release)
-        
+
         # Get dates
         date_added = self._get_date_added_from_object(release)
         date_release_year = self._get_release_year_from_object(release)
-        
+
         # Get individual artists array
         artists_array = self._get_artists_array_from_object(release)
-        
+
+        # Faceted browse / stats fields
+        formats = self._get_formats_from_data(release, release_data)
+        format_primary = self._classify_primary_format(formats)
+        labels = self._get_labels_from_data(release, release_data)
+        country = self._get_country_from_data(release, release_data)
+        styles = self._get_styles_from_data(release, release_data)
+        lastfm_listeners = self._get_lastfm_listeners_from_data(release_data)
+
         # Create entry
         entry = {
             "release_name": release_name,
             "release_artist": release_artist,  # Keep for backward compatibility
             "artists": artists_array,  # New array of individual artists
             "genre_names": genre_names,
+            "styles": styles,
+            "formats": formats,
+            "format_primary": format_primary,
+            "labels": labels,
+            "country": country,
+            "lastfm_listeners": lastfm_listeners,
             "uri_release": f"/{self.releases_path}/{release_folder}/",
             "uri_artist": f"/{self.artists_path}/{artist_folder}/",  # Keep primary artist for backward compatibility
             "date_added": date_added or "1900-01-01",
@@ -101,8 +118,123 @@ class CollectionGenerator:
             "images_uri_release": self._get_release_image_uris_from_object(release, release_folder),
             "images_uri_artist": self._get_artist_image_uris_from_object(release_artist, artist_folder)
         }
-        
+
         return entry
+
+    def _load_release_json(self, release_name: str, release) -> Optional[Dict[str, Any]]:
+        """Load the detailed per-album JSON, if it exists."""
+        try:
+            if not getattr(release, 'discogs_id', None):
+                return None
+            release_folder = self._sanitize_filename(f"{release_name}-{release.discogs_id}")
+            json_path = self.data_path / self.releases_path / release_folder / f"{release_folder}.json"
+            if json_path.exists():
+                with open(json_path, 'r', encoding='utf-8') as f:
+                    return json.load(f)
+        except Exception as e:
+            self.logger.debug(f"Failed to load release JSON for {getattr(release, 'discogs_id', '?')}: {e}")
+        return None
+
+    def _get_formats_from_data(self, release, release_data) -> List[str]:
+        """Extract Discogs format descriptors (e.g. Vinyl, LP, Album, Compilation)."""
+        formats: List[str] = []
+        if hasattr(release, 'formats') and release.formats:
+            for f in release.formats:
+                name = getattr(f, 'name', None) if not isinstance(f, dict) else f.get('name')
+                if name:
+                    formats.append(name)
+                descriptions = getattr(f, 'descriptions', None) if not isinstance(f, dict) else f.get('descriptions')
+                if descriptions:
+                    formats.extend(descriptions)
+        if not formats and release_data:
+            for f in release_data.get('formats', []) or []:
+                if isinstance(f, dict):
+                    if f.get('name'):
+                        formats.append(f['name'])
+                    for d in f.get('descriptions', []) or []:
+                        formats.append(d)
+                elif isinstance(f, str):
+                    formats.append(f)
+        seen = set()
+        out: List[str] = []
+        for f in formats:
+            if f and f not in seen:
+                seen.add(f)
+                out.append(f)
+        return out
+
+    def _classify_primary_format(self, formats: List[str]) -> Optional[str]:
+        """Reduce a Discogs format list to a single canonical bucket for filtering."""
+        if not formats:
+            return None
+        lowered = [f.lower() for f in formats]
+        if any('box' in f for f in lowered):
+            return "Box Set"
+        if any('vinyl' in f or f in ('lp', '7"', '10"', '12"') for f in lowered):
+            return "Vinyl"
+        if any('cd' in f for f in lowered):
+            return "CD"
+        if any('cassette' in f for f in lowered):
+            return "Cassette"
+        if any('digital' in f or 'file' in f for f in lowered):
+            return "Digital"
+        return formats[0]
+
+    def _get_labels_from_data(self, release, release_data) -> List[str]:
+        """Extract record label names."""
+        labels: List[str] = []
+        if hasattr(release, 'labels') and release.labels:
+            for l in release.labels:
+                name = getattr(l, 'name', None) if not isinstance(l, dict) else l.get('name')
+                if name:
+                    labels.append(name)
+        if not labels and release_data:
+            for l in release_data.get('labels', []) or []:
+                if isinstance(l, dict) and l.get('name'):
+                    labels.append(l['name'])
+                elif isinstance(l, str):
+                    labels.append(l)
+        seen = set()
+        out: List[str] = []
+        for l in labels:
+            if l and l not in seen:
+                seen.add(l)
+                out.append(l)
+        return out
+
+    def _get_country_from_data(self, release, release_data) -> Optional[str]:
+        country = getattr(release, 'country', None)
+        if country:
+            return country
+        if release_data and release_data.get('country'):
+            return release_data['country']
+        return None
+
+    def _get_styles_from_data(self, release, release_data) -> List[str]:
+        styles: List[str] = []
+        if hasattr(release, 'styles') and release.styles:
+            styles.extend(release.styles)
+        elif release_data:
+            styles.extend(release_data.get('styles', []) or [])
+        # Drop generic "Music" tag and dedupe preserving order.
+        seen = set()
+        out: List[str] = []
+        for s in styles:
+            if s and s != "Music" and s not in seen:
+                seen.add(s)
+                out.append(s)
+        return out
+
+    def _get_lastfm_listeners_from_data(self, release_data) -> Optional[int]:
+        if not release_data:
+            return None
+        listeners = (release_data.get('services', {}) or {}).get('lastfm', {}).get('listeners')
+        if listeners is None:
+            return None
+        try:
+            return int(listeners)
+        except (TypeError, ValueError):
+            return None
     
     def _get_release_name_from_object(self, release) -> Optional[str]:
         """Extract release name from Release object - using ONLY Discogs release name."""

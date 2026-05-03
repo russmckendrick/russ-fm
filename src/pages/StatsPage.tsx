@@ -25,6 +25,8 @@ interface GenreStat { name: string; value: number }
 interface DecadeStat { decade: string; count: number }
 interface AdditionStat { month: string; count: number }
 interface YearStat { year: string; count: number }
+interface RankedStat { name: string; count: number }
+interface GrowthPoint { month: string; cumulative: number }
 
 interface CollectionStats {
   totalAlbums: number;
@@ -45,6 +47,11 @@ interface CollectionStats {
   oneHitWonders: number;
   catalogArtists: number;
   mostActiveMonth: { month: string; count: number } | null;
+  formatData: GenreStat[];
+  topLabels: RankedStat[];
+  topCountries: RankedStat[];
+  growthData: GrowthPoint[];
+  hiddenGems: Album[];
 }
 
 /**
@@ -202,7 +209,7 @@ export function StatsPage() {
         </div>
       </section>
 
-      {/* Collection growth ----------------------------------------- */}
+      {/* Additions histogram --------------------------------------- */}
       <section className="mb-16">
         <SectionHeader num="10" label="Additions over time" />
         <div className="mt-6">
@@ -210,9 +217,64 @@ export function StatsPage() {
         </div>
       </section>
 
+      {/* Format breakdown + Country -------------------------------- */}
+      <section className="mb-16 grid gap-10 lg:grid-cols-2 lg:gap-14">
+        <div>
+          <SectionHeader num="11" label="Formats" count={stats.formatData.length} />
+          <div className="mt-6">
+            <GenreDonut data={stats.formatData} />
+          </div>
+        </div>
+        <div>
+          <SectionHeader num="12" label="Countries of origin" count={stats.topCountries.length} />
+          <div className="mt-6">
+            <RankedBars data={stats.topCountries} accent="ink" />
+          </div>
+        </div>
+      </section>
+
+      {/* Most-collected labels ------------------------------------- */}
+      {stats.topLabels.length > 0 && (
+        <section className="mb-16">
+          <SectionHeader num="13" label="Most-collected labels" count={stats.topLabels.length} />
+          <div className="mt-6">
+            <RankedBars data={stats.topLabels} accent="hl" />
+          </div>
+        </section>
+      )}
+
+      {/* Cumulative growth ----------------------------------------- */}
+      {stats.growthData.length > 1 && (
+        <section className="mb-16">
+          <SectionHeader num="14" label="Collection growth · cumulative" />
+          <div className="mt-6">
+            <GrowthLine data={stats.growthData} />
+          </div>
+        </section>
+      )}
+
+      {/* Hidden gems ----------------------------------------------- */}
+      {stats.hiddenGems.length > 0 && (
+        <section className="mb-16">
+          <SectionHeader
+            num="15"
+            label="Hidden gems · low Last.fm reach"
+            count={stats.hiddenGems.length}
+          />
+          <p className="mt-3 max-w-prose font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+            Albums in the collection with fewer than {redesignConfig.stats.hiddenGemsListenersThreshold} Last.fm listeners — under-appreciated picks worth a fresh spin.
+          </p>
+          <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+            {stats.hiddenGems.map((a, i) => (
+              <AlbumCard key={a.uri_release} album={a} index={i + 1} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* From the crates ------------------------------------------- */}
       <section className="mb-16">
-        <SectionHeader num="11" label="From the crates · random picks" count={stats.randomAlbums.length} />
+        <SectionHeader num="16" label="From the crates · random picks" count={stats.randomAlbums.length} />
         <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {stats.randomAlbums.map((a, i) => (
             <AlbumCard key={a.uri_release} album={a} index={i + 1} />
@@ -222,7 +284,7 @@ export function StatsPage() {
 
       {/* Random roster --------------------------------------------- */}
       <section>
-        <SectionHeader num="12" label="Artists you might have forgotten" count={stats.randomArtists.length} />
+        <SectionHeader num="17" label="Artists you might have forgotten" count={stats.randomArtists.length} />
         <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {stats.randomArtists.map((a, i) => (
             <ArtistCard key={a.name} artist={a} index={i + 1} />
@@ -357,6 +419,120 @@ function GenreDonut({ data }: { data: GenreStat[] }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+
+function RankedBars({ data, accent = 'ink' }: { data: RankedStat[]; accent?: 'ink' | 'hl' }) {
+  if (!data.length) return null;
+  const max = Math.max(1, ...data.map((d) => d.count));
+  const barColor = accent === 'hl' ? 'bg-hl' : 'bg-ink';
+  return (
+    <ul className="flex flex-col gap-2 font-mono">
+      {data.map((d) => (
+        <li
+          key={d.name}
+          className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,2fr)_48px] items-center gap-4 text-[11px] tracking-[0.04em]"
+        >
+          <span className="truncate font-grot text-[13px] tracking-[-0.005em] text-ink">{d.name}</span>
+          <span className="h-3 bg-paper-2">
+            <span className={`block h-full ${barColor}`} style={{ width: `${(d.count / max) * 100}%` }} />
+          </span>
+          <span className="text-right tabular-nums text-ink-dim">{d.count}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function GrowthLine({ data }: { data: GrowthPoint[] }) {
+  if (data.length < 2) return null;
+  const max = Math.max(1, ...data.map((d) => d.cumulative));
+  const width = 960;
+  const height = 200;
+  const paddingLeft = 40;
+  const paddingBottom = 28;
+  const plotW = width - paddingLeft - 8;
+  const plotH = height - paddingBottom - 8;
+
+  const points = data.map((d, i) => {
+    const x = paddingLeft + (i / (data.length - 1)) * plotW;
+    const y = plotH - (d.cumulative / max) * plotH + 4;
+    return { x, y, ...d };
+  });
+  const linePath = points.map((p, i) => (i === 0 ? `M ${p.x} ${p.y}` : `L ${p.x} ${p.y}`)).join(' ');
+  const areaPath = `${linePath} L ${points[points.length - 1].x} ${plotH + 4} L ${points[0].x} ${plotH + 4} Z`;
+
+  // Year-boundary ticks: first month of each year gets a label.
+  const ticks: { x: number; label: string }[] = [];
+  let seenYear = '';
+  data.forEach((d, i) => {
+    const [, y] = d.month.split('/');
+    if (y !== seenYear) {
+      seenYear = y;
+      ticks.push({ x: paddingLeft + (i / (data.length - 1)) * plotW, label: y });
+    }
+  });
+
+  // Y-axis grid: 4 evenly-spaced rules.
+  const yTicks = [0, 0.25, 0.5, 0.75, 1].map((t) => ({
+    y: plotH - t * plotH + 4,
+    label: Math.round(max * t).toLocaleString(),
+  }));
+
+  return (
+    <div className="overflow-x-auto border border-rule-strong bg-paper px-4 py-5">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="h-52 w-full min-w-[640px]"
+        preserveAspectRatio="none"
+        aria-hidden
+      >
+        {yTicks.map((t) => (
+          <line
+            key={t.label}
+            x1={paddingLeft}
+            y1={t.y}
+            x2={width - 8}
+            y2={t.y}
+            stroke="var(--rule)"
+            strokeWidth={0.5}
+          />
+        ))}
+        <path d={areaPath} fill="var(--rule)" opacity={0.35} />
+        <path d={linePath} fill="none" stroke="var(--ink)" strokeWidth={1.5} />
+        {ticks.map((t) => (
+          <text
+            key={t.label}
+            x={t.x}
+            y={height - 8}
+            fontSize="10"
+            fontFamily="var(--font-mono)"
+            fill="var(--ink-dim)"
+            letterSpacing="1.2"
+          >
+            {t.label}
+          </text>
+        ))}
+        {yTicks.map((t) => (
+          <text
+            key={`y-${t.label}`}
+            x={4}
+            y={t.y + 3}
+            fontSize="10"
+            fontFamily="var(--font-mono)"
+            fill="var(--ink-dim)"
+            letterSpacing="1"
+          >
+            {t.label}
+          </text>
+        ))}
+      </svg>
+      <div className="mt-3 flex items-baseline justify-between font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim">
+        <span>{data[0].month}</span>
+        <span>Total: {data[data.length - 1].cumulative.toLocaleString()}</span>
+        <span>{data[data.length - 1].month}</span>
+      </div>
     </div>
   );
 }
@@ -579,6 +755,55 @@ function calculateStats(data: Album[]): CollectionStats {
     ? { month: sortedMonths[0][0], count: sortedMonths[0][1] }
     : null;
 
+  // Format breakdown — use the canonical bucket from collection.json.
+  const formatCounts = data.reduce<Record<string, number>>((acc, album) => {
+    const f = album.format_primary || 'Unknown';
+    acc[f] = (acc[f] || 0) + 1;
+    return acc;
+  }, {});
+  const formatData: GenreStat[] = Object.entries(formatCounts)
+    .sort(([, a], [, b]) => b - a)
+    .map(([name, value]) => ({ name, value }));
+
+  // Top labels — count each label across all albums; multi-label releases credit each.
+  const labelCounts = data.reduce<Record<string, number>>((acc, album) => {
+    (album.labels || []).forEach((l) => {
+      if (l) acc[l] = (acc[l] || 0) + 1;
+    });
+    return acc;
+  }, {});
+  const topLabels: RankedStat[] = Object.entries(labelCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, redesignConfig.stats.topLabelsCount)
+    .map(([name, count]) => ({ name, count }));
+
+  // Top countries — sorted by album count, capped at config.
+  const countryCounts = data.reduce<Record<string, number>>((acc, album) => {
+    if (album.country) acc[album.country] = (acc[album.country] || 0) + 1;
+    return acc;
+  }, {});
+  const topCountries: RankedStat[] = Object.entries(countryCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, redesignConfig.stats.topCountriesCount)
+    .map(([name, count]) => ({ name, count }));
+
+  // Cumulative growth — running sum over the already-ordered additionsData.
+  let running = 0;
+  const growthData: GrowthPoint[] = additionsData.map((d) => {
+    running += d.count;
+    return { month: d.month, cumulative: running };
+  });
+
+  // Hidden gems — albums with low or missing Last.fm listener counts.
+  const threshold = redesignConfig.stats.hiddenGemsListenersThreshold;
+  const hiddenCandidates = data.filter((album) => {
+    const l = album.lastfm_listeners;
+    return l !== null && l !== undefined && l < threshold;
+  });
+  const hiddenGems = [...hiddenCandidates]
+    .sort(() => 0.5 - Math.random())
+    .slice(0, redesignConfig.stats.hiddenGemsCount);
+
   return {
     totalAlbums,
     uniqueArtists,
@@ -598,6 +823,11 @@ function calculateStats(data: Album[]): CollectionStats {
     oneHitWonders,
     catalogArtists,
     mostActiveMonth,
+    formatData,
+    topLabels,
+    topCountries,
+    growthData,
+    hiddenGems,
   };
 }
 

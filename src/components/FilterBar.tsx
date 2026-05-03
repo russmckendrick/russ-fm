@@ -14,8 +14,11 @@ interface FilterBarProps {
   setSelectedGenre: (value: string) => void;
   selectedYear: string;
   setSelectedYear: (value: string) => void;
+  selectedFormat?: string;
+  setSelectedFormat?: (value: string) => void;
   genres: string[];
   years: string[];
+  formats?: string[];
   searchValue?: string;
   onSearchChange?: (value: string) => void;
   searchPlaceholder?: string;
@@ -33,8 +36,11 @@ export function FilterBar({
   setSelectedGenre,
   selectedYear,
   setSelectedYear,
+  selectedFormat = "all",
+  setSelectedFormat,
   genres,
   years,
+  formats = [],
   searchValue = "",
   onSearchChange,
   searchPlaceholder = "Search albums...",
@@ -43,12 +49,14 @@ export function FilterBar({
     sortBy !== "date_added" ||
     selectedGenre !== "all" ||
     selectedYear !== "all" ||
+    selectedFormat !== "all" ||
     searchValue !== "";
 
   const clearFilters = () => {
     setSortBy("date_added");
     setSelectedGenre("all");
     setSelectedYear("all");
+    setSelectedFormat?.("all");
     onSearchChange?.("");
   };
 
@@ -113,6 +121,20 @@ export function FilterBar({
           triggerClass="min-w-[96px]"
         />
       </FilterCell>
+
+      {setSelectedFormat && formats.length > 0 && (
+        <FilterCell label="Format">
+          <EditorialSelect
+            value={selectedFormat}
+            onValueChange={setSelectedFormat}
+            items={[
+              { value: "all", label: "All" },
+              ...formats.map((f) => ({ value: f, label: f })),
+            ]}
+            triggerClass="min-w-[112px]"
+          />
+        </FilterCell>
+      )}
 
       {hasActiveFilters && (
         <button
