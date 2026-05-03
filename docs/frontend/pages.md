@@ -40,6 +40,13 @@ flowchart TB
         ArtistDetail["/artist/:slug"]
         Stats["/stats"]
         Genres["/genres"]
+        Browse["/browse"]
+        Labels["/labels"]
+        LabelDetail["/label/:slug"]
+        Decades["/decades"]
+        DecadeDetail["/decade/:slug"]
+        Countries["/countries"]
+        CountryDetail["/country/:slug"]
         Random["/random"]
         Search["/search"]
         Wrapped["/wrapped"]
@@ -56,6 +63,13 @@ flowchart TB
     ArtistDetail --> ArtistDetailPage
     Stats --> StatsPage
     Genres --> GenrePage
+    Browse --> BrowseIndexPage
+    Labels --> FacetListPage
+    LabelDetail --> FacetDetailPage
+    Decades --> FacetListPage
+    DecadeDetail --> FacetDetailPage
+    Countries --> FacetListPage
+    CountryDetail --> FacetDetailPage
     Random --> RandomPage
     Search --> SearchResultsPage
     Wrapped --> WrappedYear
@@ -203,9 +217,11 @@ Individual album detail view with rich metadata.
 - Full album artwork with dynamic theming
 - Complete metadata display
 - Tracklist with durations
+- **Per-track Spotify links** — each track row deep-links to `open.spotify.com/track/<id>` when a Spotify match exists. Matching is by normalised title via [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts); rows without a match render as plain text.
 - Artist links (multi-artist support)
 - Service embeds (Spotify, Apple Music)
 - Last.fm scrobbling
+- **Last.fm reach** sidebar card — listeners + scrobbles, when `services.lastfm.listeners` / `playcount` are present
 - Similar albums grid ranked from the collection's shared clean genres
 - OG meta tags for sharing
 
@@ -338,11 +354,13 @@ Individual artist detail with discography.
 
 **Features:**
 - Album detail-style paper split hero with fitted display name, central portrait, service actions, and metadata rail
+- **TheAudioDB fanart** rendered as a low-opacity background behind the hero when available (picked from the `images[]` entry with `type: "fanart"`); silently absent for sparse artists
 - Artist biography
-- External links
+- External links — Wikipedia uses the artist's stored `wikipedia_url` when available, only constructing a search URL as a last resort
 - Discography grid
 - Genre associations
-- Similar artists grid ranked from the collection's shared clean genres
+- **Similar artists** — when `services.lastfm.similar_artists[]` is populated, in-collection artists from that list are surfaced first, with the existing genre-overlap candidates filling out the grid
+- Last.fm **listeners + scrobbles** in the sidebar quick-facts panel
 
 **Data Source:** `/artist/{slug}/index.json`
 
@@ -366,9 +384,14 @@ Collection statistics and insights.
 - Total album/artist counts
 - Genre breakdown
 - Decade distribution
-- Year-over-year additions
+- Year-over-year additions (monthly histogram)
+- **Format breakdown** (donut over `format_primary`)
+- **Most-collected labels** (ranked bars)
+- **Countries of origin** (ranked bars)
+- **Collection growth — cumulative** (line chart over time)
+- **Hidden gems** — albums with `lastfm_listeners` below `redesignConfig.stats.hiddenGemsListenersThreshold`, surfaced as a small wall
 - Random highlights
-- Section display counts are driven by `redesignConfig.stats`, including top artists, top genres, top years, recent additions, random picks, random artists, and visible decade bars
+- Section display counts are driven by `redesignConfig.stats`, including top artists, top genres, top years, recent additions, random picks, random artists, visible decade bars, top labels (`topLabelsCount`), top countries (`topCountriesCount`), hidden gems (`hiddenGemsCount`)
 
 **Statistics Calculated:**
 ```typescript
@@ -381,8 +404,35 @@ interface CollectionStats {
   decadeData: { decade: string; count: number }[];
   additionsData: { month: string; count: number }[];
   topYears: { year: string; count: number }[];
+  formatData: { name: string; value: number }[];
+  topLabels: { name: string; count: number }[];
+  topCountries: { name: string; count: number }[];
+  growthData: { month: string; cumulative: number }[];
+  hiddenGems: Album[];
 }
 ```
+
+The five Stats v2 aggregations all read from fields denormalised into `collection.json` (`format_primary`, `labels`, `country`, `lastfm_listeners`) — no per-album JSON fetches.
+
+---
+
+### Browse facets (`src/pages/browse/`)
+
+Faceted catalogue browse: a single index plus three label/decade/country axes that share generic list and detail components.
+
+**Routes:**
+
+| Route | Component | Purpose |
+|-------|-----------|---------|
+| `/browse` | `BrowseIndexPage` | Editorial tile grid linking to all four browse axes (genres, labels, decades, countries) |
+| `/labels` | `FacetListPage facetKey="label"` | Every label with album count, sorted desc |
+| `/label/:slug` | `FacetDetailPage facetKey="label"` | Albums on one label (paginated grid) |
+| `/decades` | `FacetListPage facetKey="decade"` | Every decade with album count |
+| `/decade/:slug` | `FacetDetailPage facetKey="decade"` | Albums in one decade (e.g. `/decade/1980s`) |
+| `/countries` | `FacetListPage facetKey="country"` | Every Discogs country with album count |
+| `/country/:slug` | `FacetDetailPage facetKey="country"` | Albums for one country |
+
+**Implementation:** Both list and detail components are generic over a `FacetKey` and read facet definitions from [`src/lib/browseFacets.ts`](../../src/lib/browseFacets.ts), which knows how to extract values for each facet from a collection album and slugify them. Adding a new browse axis is one entry in `FACETS` plus two routes. The format filter on `/albums?format=…` is implemented inline in `AlbumsPage` rather than as its own browse axis — formats are mutually exclusive per album so a list page would just be a redundant view of the Stats donut.
 
 ---
 

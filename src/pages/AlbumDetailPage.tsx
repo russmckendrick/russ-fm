@@ -17,6 +17,7 @@ import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum } from '@/types/album';
+import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 
 interface Album {
   release_name: string;
@@ -642,6 +643,12 @@ export function AlbumDetailPage() {
   };
 
   const tracks = getTracks();
+
+  // Index Spotify tracks by normalised title so we can deep-link each row to
+  // open.spotify.com/track/<id>. Falls back gracefully when Spotify wasn't
+  // matched for the release.
+  const spotifyTrackIndex = buildSpotifyTrackIndex(detailedAlbum?.services?.spotify?.tracks);
+
   const description = (() => {
     let d = getAlbumDescription() || '';
     const i = d.indexOf('Read more on Last.fm');
@@ -961,6 +968,20 @@ export function AlbumDetailPage() {
                     </li>
                   );
                 }
+                const spotifyId = spotifyTrackIndex.get(normaliseTrackTitle(track.name));
+                const trackName = spotifyId ? (
+                  <a
+                    href={`https://open.spotify.com/track/${spotifyId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-ink underline-offset-4 transition-colors hover:text-hl hover:underline"
+                    title="Open on Spotify"
+                  >
+                    {track.name}
+                  </a>
+                ) : (
+                  track.name
+                );
                 return (
                   <li
                     key={index}
@@ -972,7 +993,7 @@ export function AlbumDetailPage() {
                         : (track.position || track.track_number || index + 1)}
                     </span>
                     <span className="min-w-0 truncate text-[15px] text-ink">
-                      {track.name}
+                      {trackName}
                       {track.artists && track.artists.length > 0 && (
                         <span className="ml-2 font-mono text-[10.5px] uppercase tracking-[0.06em] text-ink-dim">
                           {track.artists.map(a => a.name).join(', ')}
@@ -1162,6 +1183,32 @@ export function AlbumDetailPage() {
                     <IdRow label="Spotify" value={detailedAlbum.spotify_id} />
                   )}
                 </dl>
+              </div>
+            )}
+
+            {(detailedAlbum?.services?.lastfm?.listeners || detailedAlbum?.services?.lastfm?.playcount) && (
+              <div>
+                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
+                  Last.fm reach
+                </h3>
+                <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
+                  {detailedAlbum.services.lastfm.listeners !== undefined && (
+                    <KV label="Listeners" value={detailedAlbum.services.lastfm.listeners.toLocaleString()} />
+                  )}
+                  {detailedAlbum.services.lastfm.playcount !== undefined && (
+                    <KV label="Scrobbles" value={detailedAlbum.services.lastfm.playcount.toLocaleString()} />
+                  )}
+                </dl>
+                {detailedAlbum.services.lastfm.url && (
+                  <a
+                    href={detailedAlbum.services.lastfm.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim transition-colors hover:text-hl"
+                  >
+                    View on Last.fm →
+                  </a>
+                )}
               </div>
             )}
 

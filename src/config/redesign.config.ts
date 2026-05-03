@@ -95,6 +95,10 @@ export const redesignConfig = {
     fromTheCratesCount: 6,
     randomArtistsCount: 6,
     decadeBarsMaxDecades: 10,
+    topLabelsCount: 15,
+    topCountriesCount: 10,
+    hiddenGemsCount: 12,
+    hiddenGemsListenersThreshold: 500,
   },
 
   /** Random page "next up if you shuffle" peek strip. */

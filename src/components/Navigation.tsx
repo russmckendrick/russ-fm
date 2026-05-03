@@ -12,6 +12,7 @@ import {
   BarChart3,
   Shuffle,
   Sparkles,
+  LibraryBig,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
@@ -23,7 +24,7 @@ import { UserProfileMenu } from "./UserProfileMenu";
 type NavItem = {
   path: string;
   label: string;
-  activePrefix?: string;
+  activePrefix?: string | string[];
   icon: LucideIcon;
 };
 
@@ -32,6 +33,12 @@ const NAV_ITEMS: NavItem[] = [
   { path: "/albums/1", label: "Albums", activePrefix: "/albums", icon: Disc3 },
   { path: "/artists/1", label: "Artists", activePrefix: "/artists", icon: Users2 },
   { path: "/genres", label: "Genres", activePrefix: "/genres", icon: Tags },
+  {
+    path: "/browse",
+    label: "Browse",
+    activePrefix: ["/browse", "/labels", "/label/", "/decades", "/decade/", "/countries", "/country/"],
+    icon: LibraryBig,
+  },
   { path: "/stats", label: "Stats", icon: BarChart3 },
   { path: "/random", label: "Random", icon: Shuffle },
   { path: "/wrapped", label: "Wrapped", activePrefix: "/wrapped", icon: Sparkles },
@@ -70,7 +77,10 @@ export function Navigation() {
   }, [isMobile]);
 
   const isActive = (item: NavItem) => {
-    if (item.activePrefix) return location.pathname.startsWith(item.activePrefix);
+    if (item.activePrefix) {
+      const prefixes = Array.isArray(item.activePrefix) ? item.activePrefix : [item.activePrefix];
+      return prefixes.some((p) => location.pathname.startsWith(p));
+    }
     return (
       location.pathname === item.path ||
       (item.path === "/" && location.pathname === "/home")

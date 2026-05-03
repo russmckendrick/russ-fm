@@ -662,6 +662,12 @@ generator.generate_collection_json(output_path="public/collection.json")
       "date_added": "2024-01-10T15:00:00Z",
       "date_release_year": 1997,
       "genre_names": ["Alternative Rock", "Art Rock"],
+      "styles": ["Art Rock", "Indie Rock"],
+      "formats": ["Vinyl", "LP", "Album", "Reissue"],
+      "format_primary": "Vinyl",
+      "labels": ["XL Recordings"],
+      "country": "UK",
+      "lastfm_listeners": 1842310,
       "images_uri_release": {
         "hi-res": "/album/radiohead-ok-computer/radiohead-ok-computer-hi-res.jpg",
         "medium": "/album/radiohead-ok-computer/radiohead-ok-computer-medium.jpg"
@@ -670,6 +676,8 @@ generator.generate_collection_json(output_path="public/collection.json")
   ]
 }
 ```
+
+The `styles`, `formats`, `format_primary`, `labels`, `country`, and `lastfm_listeners` fields were added in May 2026 so that the `/labels`, `/decade/:slug`, `/country/:slug` browse pages, the `/albums?format=…` filter, and the Stats v2 sections (format donut, label/country bars, hidden-gems wall) can read directly from `collection.json` without lazy-loading per-album JSONs. The denormalisation reads the same DB-backed `Release` objects already loaded for genres and falls back to the per-album JSON only when the object's attribute is missing.
 
 ---
 

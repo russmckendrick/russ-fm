@@ -61,6 +61,7 @@ export function AlbumsPage() {
   const [loading, setLoading] = useState(true);
   const [selectedGenre, setSelectedGenre] = useState(searchParams.get('genre') || 'all');
   const [selectedYear, setSelectedYear] = useState(searchParams.get('year') || 'all');
+  const [selectedFormat, setSelectedFormat] = useState(searchParams.get('format') || 'all');
   const [sortBy, setSortBy] = useState(searchParams.get('sort') || 'date_added');
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
   
@@ -119,11 +120,13 @@ export function AlbumsPage() {
   useEffect(() => {
     const genre = searchParams.get('genre') || 'all';
     const year = searchParams.get('year') || 'all';
+    const format = searchParams.get('format') || 'all';
     const sort = searchParams.get('sort') || 'date_added';
     const search = searchParams.get('search') || '';
-    
+
     setSelectedGenre(genre);
     setSelectedYear(year);
+    setSelectedFormat(format);
     setSortBy(sort);
     setSearchTerm(search);
   }, [searchParams]);
@@ -132,7 +135,7 @@ export function AlbumsPage() {
   const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
     const params = new URLSearchParams(searchParams);
     Object.entries(newParams).forEach(([key, value]) => {
-      if ((key === 'genre' || key === 'year') && value === 'all') {
+      if ((key === 'genre' || key === 'year' || key === 'format') && value === 'all') {
         params.delete(key);
       } else if (key === 'sort' && value === 'date_added') {
         params.delete(key);
@@ -181,6 +184,11 @@ export function AlbumsPage() {
       });
     }
 
+    // Apply format filter
+    if (selectedFormat !== 'all') {
+      filtered = filtered.filter(album => (album as Album & { format_primary?: string }).format_primary === selectedFormat);
+    }
+
     // Apply sorting
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -196,11 +204,11 @@ export function AlbumsPage() {
     });
 
     setFilteredCollection(filtered);
-  }, [collection, searchTerm, selectedGenre, selectedYear, sortBy]);
+  }, [collection, searchTerm, selectedGenre, selectedYear, selectedFormat, sortBy]);
 
   useEffect(() => {
     filterAndSortCollection();
-  }, [collection, searchTerm, selectedGenre, selectedYear, sortBy, filterAndSortCollection]);
+  }, [collection, searchTerm, selectedGenre, selectedYear, selectedFormat, sortBy, filterAndSortCollection]);
 
 
 
@@ -223,6 +231,15 @@ export function AlbumsPage() {
       years.add(year);
     });
     return Array.from(years).sort((a, b) => parseInt(b) - parseInt(a));
+  };
+
+  const getAllFormats = () => {
+    const formats = new Set<string>();
+    collection.forEach(album => {
+      const f = (album as Album & { format_primary?: string }).format_primary;
+      if (f) formats.add(f);
+    });
+    return Array.from(formats).sort();
   };
 
   // Pagination calculations
@@ -298,8 +315,14 @@ export function AlbumsPage() {
           setSelectedYear(value);
           updateURLParams({ year: value }, true);
         }}
+        selectedFormat={selectedFormat}
+        setSelectedFormat={(value) => {
+          setSelectedFormat(value);
+          updateURLParams({ format: value }, true);
+        }}
         genres={getAllGenres()}
         years={getAllYears()}
+        formats={getAllFormats()}
         searchValue={searchTerm}
         onSearchChange={(value) => {
           setSearchTerm(value);

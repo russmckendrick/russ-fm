@@ -37,6 +37,13 @@ interface Album {
   images_uri_artist: { 'hi-res': string; medium: string };
 }
 
+interface ArtistImageEntry {
+  type?: string;
+  url?: string;
+  width?: number;
+  height?: number;
+}
+
 interface ArtistData {
   id?: string;
   name: string;
@@ -50,10 +57,18 @@ interface ArtistData {
   spotify_url?: string;
   discogs_id?: string;
   discogs_url?: string;
+  wikipedia_url?: string | null;
+  images?: ArtistImageEntry[];
   services?: {
     spotify?: { id?: string; url?: string; popularity?: number; followers?: { total?: number }; external_urls?: { spotify?: string } };
     apple_music?: { url?: string; id?: string };
-    lastfm?: { url?: string; listeners?: number; playcount?: number; bio?: { content?: string; summary?: string } };
+    lastfm?: {
+      url?: string;
+      listeners?: number;
+      playcount?: number;
+      bio?: { content?: string; summary?: string };
+      similar_artists?: Array<{ name: string; url?: string }>;
+    };
     discogs?: { id?: string; url?: string };
   };
   local_images: { 'hi-res': string; medium: string };
@@ -203,6 +218,12 @@ export function ArtistDetailPage() {
   const heroTint = albumColors?.background ?? 'var(--paper-2)';
   const heroAccent = albumColors?.accent ?? 'var(--hl)';
   const titleStyle = getArtistHeroTitleStyle(artistName);
+  const fanartUrl = pickFanart(artistData?.images);
+  const wikipediaUrl =
+    artistData?.wikipedia_url ||
+    `https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`;
+  const lastfmSimilarNames = (artistData?.services?.lastfm?.similar_artists || []).map((s) => s.name.toLowerCase());
+
   const similarArtists = (() => {
     if (!collection.length) return [];
 
@@ -213,14 +234,26 @@ export function ArtistDetailPage() {
 
     if (!selectedArtist) return [];
 
-    return getRelatedArtistsForArtist(selectedArtist, explorer.genres)
-      .slice(0, 6)
-      .map(({ artist }) => ({
-        name: artist.name,
-        uri: artist.uri,
-        image: artist.avatar,
-        albumCount: artist.totalAlbumCount || artist.albumCount,
-      }));
+    // The genreExplorer caches `artist.avatar` (the smallest variant), but
+    // ArtistCard renders at 360×360 so we look the medium variant up at the
+    // call site rather than mutating the explorer for every other consumer.
+    const candidates = getRelatedArtistsForArtist(selectedArtist, explorer.genres).map(({ artist }) => ({
+      name: artist.name,
+      uri: artist.uri,
+      image: getArtistImageFromData(artist.uri, 'medium'),
+      albumCount: artist.totalAlbumCount || artist.albumCount,
+    }));
+
+    // If Last.fm gave us a similar list, prefer artists in the collection that
+    // appear there. Anything Last.fm names we don't own falls through to the
+    // genre-overlap candidates below it.
+    if (lastfmSimilarNames.length > 0) {
+      const lastfmRanked = candidates.filter((c) => lastfmSimilarNames.includes(c.name.toLowerCase()));
+      const remaining = candidates.filter((c) => !lastfmSimilarNames.includes(c.name.toLowerCase()));
+      return [...lastfmRanked, ...remaining].slice(0, 6);
+    }
+
+    return candidates.slice(0, 6);
   })();
 
   return (
@@ -229,6 +262,27 @@ export function ArtistDetailPage() {
       <section
         className="relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]"
       >
+        {fanartUrl && (
+          <div aria-hidden className="pointer-events-none absolute inset-0">
+            {/* Multiply darkens the cream paper in light mode so the fanart
+                reads like a tinted backdrop. In dark mode multiply against
+                near-black would crush the image to nothing, so swap to
+                screen which lifts the colours instead. */}
+            <img
+              src={fanartUrl}
+              alt=""
+              className="h-full w-full object-cover opacity-30 mix-blend-multiply dark:opacity-40 dark:mix-blend-screen"
+              loading="lazy"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  'linear-gradient(180deg, color-mix(in srgb, var(--paper) 45%, transparent) 0%, color-mix(in srgb, var(--paper) 92%, transparent) 80%)',
+              }}
+            />
+          </div>
+        )}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-[0.18]"
@@ -293,7 +347,7 @@ export function ArtistDetailPage() {
               )}
               <ServiceButton
                 service="wikipedia"
-                url={`https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`}
+                url={wikipediaUrl}
                 icon={<SiWikipedia className="h-4 w-4" />}
                 className="w-full sm:w-auto"
               >
@@ -394,6 +448,9 @@ export function ArtistDetailPage() {
                 )}
                 {artistData?.services?.lastfm?.listeners != null && (
                   <KV label="Listeners" value={numberShort(Number(artistData.services.lastfm.listeners))} />
+                )}
+                {artistData?.services?.lastfm?.playcount != null && (
+                  <KV label="Scrobbles" value={numberShort(Number(artistData.services.lastfm.playcount))} />
                 )}
               </dl>
             </div>
@@ -514,4 +571,15 @@ function numberShort(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
   if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
   return n.toLocaleString();
+}
+
+// Pick the widest TheAudioDB fanart image from the artist's images list. Returns
+// undefined when no fanart was matched (sparse artists fall back to the regular
+// portrait-only hero treatment).
+function pickFanart(images: ArtistImageEntry[] | undefined): string | undefined {
+  if (!images?.length) return undefined;
+  const fanart = images
+    .filter((img) => img?.url && img.type?.toLowerCase() === 'fanart')
+    .sort((a, b) => (b.width ?? 0) - (a.width ?? 0));
+  return fanart[0]?.url;
 }
