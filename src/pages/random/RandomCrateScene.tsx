@@ -381,19 +381,34 @@ export default function RandomCrateScene({
         ry: sleeve.jitter.ry,
         rz: sleeve.jitter.rz,
         scale: 1,
+        quaternion: null as THREE.Quaternion | null,
       };
 
       if (rank === 0) {
         const liftProgress = THREE.MathUtils.smoothstep(inspectProgress, 0, 0.44);
         const pullProgress = THREE.MathUtils.smoothstep(inspectProgress, 0.38, 1);
+        const cameraTarget = getCameraInspectTarget();
+        const liftedTarget = new THREE.Vector3(
+          0,
+          THREE.MathUtils.lerp(0.28, 0.8, liftProgress),
+          0.88 + sleeveSlide,
+        );
+        const baseQuaternion = new THREE.Quaternion().setFromEuler(
+          new THREE.Euler(0.18 + sleevePull, 0, 0),
+        );
 
         target.x = 0;
-        target.y = THREE.MathUtils.lerp(0.28, 0.8, liftProgress);
-        target.z = THREE.MathUtils.lerp(0.88, 1.72, pullProgress) + sleeveSlide;
-        target.rx = THREE.MathUtils.lerp(0.18, -0.08, pullProgress) + sleevePull;
-        target.ry = THREE.MathUtils.lerp(0, -0.012, pullProgress);
+        target.x = THREE.MathUtils.lerp(liftedTarget.x, cameraTarget.position.x, pullProgress);
+        target.y = THREE.MathUtils.lerp(liftedTarget.y, cameraTarget.position.y, pullProgress);
+        target.z = THREE.MathUtils.lerp(liftedTarget.z, cameraTarget.position.z, pullProgress);
+        target.rx = 0.18 + sleevePull;
+        target.ry = 0;
         target.rz = 0;
-        target.scale = THREE.MathUtils.lerp(1.01, 1.12, pullProgress);
+        target.scale = THREE.MathUtils.lerp(1.01, cameraTarget.scale, pullProgress);
+        target.quaternion =
+          pullProgress > 0.001
+            ? baseQuaternion.slerp(cameraTarget.quaternion, pullProgress)
+            : null;
       } else if (rank === 1) {
         target.z = 0.52;
         target.rx = 0.04;
@@ -409,6 +424,40 @@ export default function RandomCrateScene({
       }
 
       return target;
+    }
+
+    function getCameraInspectTarget() {
+      const stageRect = stage.getBoundingClientRect();
+      const isMobile = stageRect.width < 720;
+      const stageAspect = Math.max(0.1, stageRect.width / Math.max(stageRect.height, 1));
+      const scale = isMobile ? 1 : 1.12;
+      const fovRadians = THREE.MathUtils.degToRad(camera.fov);
+      const viewDistance = isMobile
+        ? (SLEEVE_SIZE * scale) / (2 * Math.tan(fovRadians / 2) * stageAspect * 0.99)
+        : (SLEEVE_SIZE * scale) / (2 * Math.tan(fovRadians / 2) * 0.78);
+      const distance = THREE.MathUtils.clamp(
+        viewDistance,
+        isMobile ? 3.8 : 2.85,
+        isMobile ? 5.35 : 3.55,
+      );
+      const position = new THREE.Vector3();
+      const direction = new THREE.Vector3();
+      const cameraUp = new THREE.Vector3();
+      const parentQuaternion = new THREE.Quaternion();
+      const quaternion = new THREE.Quaternion();
+      const coverCenterOffset = new THREE.Vector3(0, (SLEEVE_SIZE / 2) * scale, 0);
+
+      camera.getWorldDirection(direction);
+      cameraUp.set(0, 1, 0).applyQuaternion(camera.quaternion);
+      position.copy(camera.position).addScaledVector(direction, distance);
+      position.addScaledVector(cameraUp, isMobile ? 0.42 : 0.16);
+      recordLayer.worldToLocal(position);
+
+      recordLayer.getWorldQuaternion(parentQuaternion);
+      quaternion.copy(parentQuaternion).invert().multiply(camera.quaternion);
+      position.sub(coverCenterOffset.applyQuaternion(quaternion));
+
+      return { position, quaternion, scale };
     }
 
     function updateOverlay() {
@@ -578,13 +627,20 @@ export default function RandomCrateScene({
         const target = getTarget(sleeve, index);
         const rank = rankFor(index);
         const lambda = rank === 0 || rank === 1 ? activeSpring : spring;
+        const isHeldInForeground = rank === 0 && inspectProgress > 0.55;
+
+        setSleeveForeground(sleeve, isHeldInForeground);
 
         sleeve.group.position.x = THREE.MathUtils.damp(sleeve.group.position.x, target.x, lambda, dt);
         sleeve.group.position.y = THREE.MathUtils.damp(sleeve.group.position.y, target.y, lambda, dt);
         sleeve.group.position.z = THREE.MathUtils.damp(sleeve.group.position.z, target.z, lambda, dt);
-        sleeve.group.rotation.x = THREE.MathUtils.damp(sleeve.group.rotation.x, target.rx, lambda, dt);
-        sleeve.group.rotation.y = THREE.MathUtils.damp(sleeve.group.rotation.y, target.ry, lambda, dt);
-        sleeve.group.rotation.z = THREE.MathUtils.damp(sleeve.group.rotation.z, target.rz, lambda, dt);
+        if (target.quaternion) {
+          sleeve.group.quaternion.slerp(target.quaternion, 1 - Math.exp(-lambda * dt));
+        } else {
+          sleeve.group.rotation.x = THREE.MathUtils.damp(sleeve.group.rotation.x, target.rx, lambda, dt);
+          sleeve.group.rotation.y = THREE.MathUtils.damp(sleeve.group.rotation.y, target.ry, lambda, dt);
+          sleeve.group.rotation.z = THREE.MathUtils.damp(sleeve.group.rotation.z, target.rz, lambda, dt);
+        }
 
         const scale = THREE.MathUtils.damp(sleeve.group.scale.x, target.scale, lambda, dt);
         sleeve.group.scale.setScalar(scale);
@@ -594,21 +650,63 @@ export default function RandomCrateScene({
       renderer.render(scene, camera);
     }
 
+    function setSleeveForeground(sleeve: Sleeve, foreground: boolean) {
+      sleeve.mesh.renderOrder = foreground ? 20 : 0;
+      sleeve.mesh.castShadow = !foreground;
+      sleeve.mesh.receiveShadow = !foreground;
+
+      Object.values(sleeve.materials).forEach((material) => {
+        material.depthTest = true;
+        material.depthWrite = true;
+        material.needsUpdate = true;
+      });
+    }
+
     function resize() {
       if (disposed) return;
       const rect = stage.getBoundingClientRect();
       const width = Math.max(1, Math.floor(rect.width));
       const height = Math.max(1, Math.floor(rect.height));
       const isMobile = width < 720;
+      const isTallMobile = isMobile && height / width > 1.45;
+      const frame = isTallMobile
+        ? {
+            fov: 39,
+            cameraY: 2.35,
+            cameraZ: 7.25,
+            minDistance: 6.45,
+            maxDistance: 8.25,
+            targetY: 0.48,
+            targetZ: -0.08,
+          }
+        : isMobile
+          ? {
+              fov: 41,
+              cameraY: 2.55,
+              cameraZ: 6.75,
+              minDistance: 5.65,
+              maxDistance: 7.65,
+              targetY: 0.58,
+              targetZ: -0.12,
+            }
+          : {
+              fov: 39,
+              cameraY: 2.75,
+              cameraZ: 5.9,
+              minDistance: 4.85,
+              maxDistance: 7.05,
+              targetY: 0.7,
+              targetZ: -0.12,
+            };
 
-      camera.fov = isMobile ? 43 : 38;
-      camera.position.set(0, isMobile ? 3.05 : 2.95, isMobile ? 6.05 : 5.35);
+      camera.fov = frame.fov;
+      camera.position.set(0, frame.cameraY, frame.cameraZ);
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
 
-      controls.minDistance = isMobile ? 5.05 : 4.55;
-      controls.maxDistance = isMobile ? 7.25 : 6.8;
-      controls.target.set(0, isMobile ? 0.86 : 0.94, -0.18);
+      controls.minDistance = frame.minDistance;
+      controls.maxDistance = frame.maxDistance;
+      controls.target.set(0, frame.targetY, frame.targetZ);
 
       renderer.setSize(width, height, false);
     }
