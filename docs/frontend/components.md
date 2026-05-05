@@ -61,15 +61,17 @@ graph TD
 
 ### Navigation (`src/components/Navigation.tsx`)
 
-Floating island navigation bar with search integration.
+Sticky editorial navigation bar with grouped browse/explore menus and search integration.
 
 **Features:**
-- Responsive desktop/mobile layouts
+- `xl+` desktop rail with `Home`, `Albums`, `Artists`, plus `Browse` and `Explore` dropdown groups
+- Compact `< xl` header with logo, search icon, menu trigger, and `md+` account/theme actions
+- Full search input on wide desktop only; compact widths open the full-viewport search sheet
 - Scroll-aware behavior
 - Theme toggle integration
 - Search button trigger
-- Ink-colour spinning record mark and aligned `russ.fm / Personal Record Collection` brand lockup
-- Icon-led primary nav with hairline active state instead of boxed tabs
+- Ink-colour spinning record mark and aligned `russ.fm / Personal Record Collection` brand lockup, with the tagline reserved for `2xl+`
+- Icon-led primary nav and grouped menu items with hairline active states instead of boxed tabs
 
 ```tsx
 import { Navigation } from '@/components/Navigation';

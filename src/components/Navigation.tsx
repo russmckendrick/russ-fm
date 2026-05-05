@@ -4,6 +4,7 @@ import {
   Search,
   Menu,
   X,
+  ChevronDown,
   type LucideIcon,
   House,
   Disc3,
@@ -13,6 +14,9 @@ import {
   Shuffle,
   Sparkles,
   LibraryBig,
+  CalendarDays,
+  Globe2,
+  Tag,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BrandMark } from "./BrandMark";
@@ -20,6 +24,14 @@ import { ThemeToggle } from "./theme-toggle";
 import { SearchOverlay } from "./SearchOverlay";
 import { MobileSearchModal } from "./MobileSearchModal";
 import { UserProfileMenu } from "./UserProfileMenu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 type NavItem = {
   path: string;
@@ -28,37 +40,262 @@ type NavItem = {
   icon: LucideIcon;
 };
 
-const NAV_ITEMS: NavItem[] = [
+type NavSection = {
+  label: string;
+  icon: LucideIcon;
+  items: NavItem[];
+};
+
+const PRIMARY_NAV_ITEMS: NavItem[] = [
   { path: "/", label: "Home", icon: House },
   { path: "/albums/1", label: "Albums", activePrefix: "/albums", icon: Disc3 },
   { path: "/artists/1", label: "Artists", activePrefix: "/artists", icon: Users2 },
+];
+
+const BROWSE_NAV_ITEMS: NavItem[] = [
+  { path: "/browse", label: "Browse overview", activePrefix: "/browse", icon: LibraryBig },
   { path: "/genres", label: "Genres", activePrefix: "/genres", icon: Tags },
-  {
-    path: "/browse",
-    label: "Browse",
-    activePrefix: ["/browse", "/labels", "/label/", "/decades", "/decade/", "/countries", "/country/"],
-    icon: LibraryBig,
-  },
+  { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"], icon: Tag },
+  { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"], icon: CalendarDays },
+  { path: "/countries", label: "Countries", activePrefix: ["/countries", "/country/"], icon: Globe2 },
+];
+
+const EXPLORE_NAV_ITEMS: NavItem[] = [
   { path: "/stats", label: "Stats", icon: BarChart3 },
   { path: "/random", label: "Random", icon: Shuffle },
   { path: "/wrapped", label: "Wrapped", activePrefix: "/wrapped", icon: Sparkles },
 ];
+
+const NAV_SECTIONS: NavSection[] = [
+  {
+    label: "Browse",
+    icon: LibraryBig,
+    items: BROWSE_NAV_ITEMS,
+  },
+  {
+    label: "Explore",
+    icon: Sparkles,
+    items: EXPLORE_NAV_ITEMS,
+  },
+];
+
+const COMPACT_NAV_SECTIONS: Array<{ label: string; items: NavItem[] }> = [
+  { label: "Main", items: PRIMARY_NAV_ITEMS },
+  { label: "Browse", items: BROWSE_NAV_ITEMS },
+  { label: "Explore", items: EXPLORE_NAV_ITEMS },
+];
+
+const COMPACT_NAV_ITEMS = COMPACT_NAV_SECTIONS.flatMap((section) => section.items);
+
+const DESKTOP_NAV_LINK_CLASS =
+  "group inline-flex h-10 items-center gap-1.5 border-b px-1 py-2.5 font-display text-[13px] uppercase leading-none transition-[color,border-color,opacity] duration-200";
+
+const DESKTOP_NAV_INACTIVE_CLASS =
+  "border-transparent text-ink-3 hover:border-rule-strong hover:text-ink data-[state=open]:border-rule-strong data-[state=open]:text-ink";
+
+const DESKTOP_NAV_ACTIVE_CLASS = "border-ink text-ink";
+
+function navItemIndex(item: NavItem) {
+  return String(COMPACT_NAV_ITEMS.findIndex((candidate) => candidate.path === item.path) + 1).padStart(2, "0");
+}
+
+function NavIcon({ icon: Icon, active }: { icon: LucideIcon; active: boolean }) {
+  return (
+    <Icon
+      className={cn(
+        "h-3.5 w-3.5 transition-colors",
+        active ? "text-ink" : "text-ink-dim group-hover:text-ink-2",
+      )}
+      aria-hidden
+    />
+  );
+}
+
+function DesktopNavLink({
+  item,
+  active,
+}: {
+  item: NavItem;
+  active: boolean;
+}) {
+  return (
+    <Link
+      to={item.path}
+      aria-current={active ? "page" : undefined}
+      className={cn(
+        DESKTOP_NAV_LINK_CLASS,
+        active ? DESKTOP_NAV_ACTIVE_CLASS : DESKTOP_NAV_INACTIVE_CLASS,
+      )}
+    >
+      <NavIcon icon={item.icon} active={active} />
+      {item.label}
+    </Link>
+  );
+}
+
+function DesktopNavDropdown({
+  section,
+  active,
+  isActive,
+}: {
+  section: NavSection;
+  active: boolean;
+  isActive: (item: NavItem) => boolean;
+}) {
+  const SectionIcon = section.icon;
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          type="button"
+          className={cn(
+            DESKTOP_NAV_LINK_CLASS,
+            active ? DESKTOP_NAV_ACTIVE_CLASS : DESKTOP_NAV_INACTIVE_CLASS,
+          )}
+        >
+          <NavIcon icon={SectionIcon} active={active} />
+          {section.label}
+          <ChevronDown
+            className="h-3.5 w-3.5 text-ink-dim transition-transform duration-200 group-data-[state=open]:rotate-180 group-hover:text-ink-2"
+            aria-hidden
+          />
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="center"
+        sideOffset={8}
+        className="min-w-[248px] rounded-none border-rule-strong bg-paper p-0 text-ink shadow-[0_28px_56px_-26px_rgba(14,13,11,0.45)]"
+      >
+        <DropdownMenuLabel className="px-3 py-2 font-mono text-[10px] font-normal uppercase tracking-[0.12em] text-ink-dim">
+          {section.label}
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator className="m-0 bg-rule" />
+        {section.items.map((item) => {
+          const itemActive = isActive(item);
+          const Icon = item.icon;
+          return (
+            <DropdownMenuItem
+              key={item.path}
+              asChild
+              className="cursor-pointer rounded-none p-0 focus:bg-paper-2 focus:text-ink"
+            >
+              <Link
+                to={item.path}
+                aria-current={itemActive ? "page" : undefined}
+                className={cn(
+                  "group flex w-full items-center justify-between gap-5 border-b border-rule px-3 py-3 font-display text-[13px] uppercase leading-none last:border-b-0",
+                  itemActive ? "text-ink" : "text-ink-3",
+                )}
+              >
+                <span className="flex min-w-0 items-center gap-3">
+                  <Icon
+                    className={cn(
+                      "h-3.5 w-3.5 shrink-0 transition-colors",
+                      itemActive ? "text-ink" : "text-ink-dim group-hover:text-ink-2",
+                    )}
+                    aria-hidden
+                  />
+                  <span className="truncate">{item.label}</span>
+                </span>
+                <span className="font-mono text-[10px] font-normal tracking-[0.08em] text-ink-dim" aria-hidden>
+                  {navItemIndex(item)}
+                </span>
+              </Link>
+            </DropdownMenuItem>
+          );
+        })}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+function CompactMenuSection({
+  label,
+  items,
+  isActive,
+  onNavigate,
+}: {
+  label: string;
+  items: NavItem[];
+  isActive: (item: NavItem) => boolean;
+  onNavigate: () => void;
+}) {
+  return (
+    <section>
+      <h2 className="border-b border-rule pb-2 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-dim">
+        {label}
+      </h2>
+      <ul className="flex flex-col">
+        {items.map((item) => {
+          const on = isActive(item);
+          const Icon = item.icon;
+          return (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                onClick={onNavigate}
+                aria-current={on ? "page" : undefined}
+                className={cn(
+                  "flex items-center justify-between border-b border-rule py-4 font-grot text-[20px] font-semibold tracking-[-0.015em] md:text-[22px]",
+                  on ? "text-ink" : "text-ink-3",
+                )}
+              >
+                <span className="flex min-w-0 items-center gap-3">
+                  <Icon
+                    className={cn(
+                      "h-[18px] w-[18px] shrink-0",
+                      on ? "text-ink" : "text-ink-dim",
+                    )}
+                    aria-hidden
+                  />
+                  <span className="truncate">{item.label}</span>
+                </span>
+                <span
+                  className="shrink-0 font-mono text-[10px] tracking-[0.08em] text-ink-dim"
+                  aria-hidden
+                >
+                  {navItemIndex(item)}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
 
 export function Navigation() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isCompactHeader, setIsCompactHeader] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const checkCompactHeader = () => {
+      const compact = window.innerWidth < 1280;
+      setIsCompactHeader(compact);
+
+      if (compact) {
+        setSearchOverlayOpen(false);
+      } else {
+        setMobileMenuOpen(false);
+        setMobileSearchOpen(false);
+      }
+    };
+
+    checkCompactHeader();
+    window.addEventListener("resize", checkCompactHeader);
+    return () => window.removeEventListener("resize", checkCompactHeader);
   }, []);
+
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   // `/` focuses the desktop search input (editorial convention). Ignored
   // while typing in an input, or when a modifier is held.
@@ -69,12 +306,12 @@ export function Navigation() {
       if (target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
       if (target?.isContentEditable) return;
       e.preventDefault();
-      if (isMobile) setMobileSearchOpen(true);
+      if (isCompactHeader) setMobileSearchOpen(true);
       else searchInputRef.current?.focus();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [isMobile]);
+  }, [isCompactHeader]);
 
   const isActive = (item: NavItem) => {
     if (item.activePrefix) {
@@ -88,8 +325,12 @@ export function Navigation() {
   };
 
   const openSearch = () => {
-    if (isMobile) setMobileSearchOpen(true);
-    else setSearchOverlayOpen(true);
+    if (isCompactHeader) {
+      setSearchOverlayOpen(false);
+      setMobileSearchOpen(true);
+    } else {
+      setSearchOverlayOpen(true);
+    }
   };
 
   return (
@@ -101,7 +342,7 @@ export function Navigation() {
           "font-grot"
         )}
       >
-        <div className="mx-auto grid w-full max-w-[1640px] grid-cols-[auto_auto] items-center gap-6 px-5 py-4 md:gap-8 md:px-8 md:py-5 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
+        <div className="mx-auto grid w-full max-w-[1640px] grid-cols-[auto_minmax(0,1fr)] items-center gap-4 px-5 py-4 md:gap-6 md:px-8 md:py-5 xl:grid-cols-[auto_minmax(0,1fr)_auto] xl:gap-8">
           {/* --- Brand ------------------------------------------------ */}
           <Link
             to="/"
@@ -115,7 +356,7 @@ export function Navigation() {
             >
               RUSS.FM
             </span>
-            <span className="hidden items-center gap-3 lg:flex">
+            <span className="hidden items-center gap-3 2xl:flex">
               <span
                 aria-hidden
                 className="font-grot text-[22px] font-light leading-none text-ink-dim"
@@ -132,49 +373,34 @@ export function Navigation() {
           {/* --- Nav rail --------------------------------------------- */}
           <nav
             aria-label="Primary"
-            className="hidden min-w-0 justify-center lg:flex"
+            className="hidden min-w-0 justify-center xl:flex"
           >
-            <ul className="flex min-w-0 items-center justify-center gap-3 xl:gap-5">
-              {NAV_ITEMS.map((item) => {
-                const on = isActive(item);
-                const Icon = item.icon;
-                return (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      aria-current={on ? "page" : undefined}
-                    className={cn(
-                        "group inline-flex items-center gap-1.5 border-b px-1 py-2.5 font-display text-[13px] uppercase leading-none transition-[color,border-color,opacity] duration-200",
-                        on
-                          ? "border-ink text-ink"
-                          : "border-transparent text-ink-3 hover:border-rule-strong hover:text-ink"
-                      )}
-                    >
-                      <Icon
-                        className={cn(
-                          "hidden h-3.5 w-3.5 transition-colors xl:block",
-                          on
-                            ? "text-ink"
-                            : "text-ink-dim group-hover:text-ink-2",
-                        )}
-                        aria-hidden
-                      />
-                      {item.label}
-                    </Link>
-                  </li>
-                );
-              })}
+            <ul className="flex min-w-0 items-center justify-center gap-5">
+              {PRIMARY_NAV_ITEMS.map((item) => (
+                <li key={item.path}>
+                  <DesktopNavLink item={item} active={isActive(item)} />
+                </li>
+              ))}
+              {NAV_SECTIONS.map((section) => (
+                <li key={section.label}>
+                  <DesktopNavDropdown
+                    section={section}
+                    active={section.items.some(isActive)}
+                    isActive={isActive}
+                  />
+                </li>
+              ))}
             </ul>
           </nav>
 
           {/* --- Right actions ---------------------------------------- */}
-          <div className="flex shrink-0 items-center justify-end gap-2">
+          <div className="flex shrink-0 items-center justify-end gap-2 justify-self-end">
             {/* Desktop search input */}
-            <div className="relative hidden md:block">
+            <div className="relative hidden xl:block">
               <label
                 className={cn(
                   "flex items-center gap-2 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.12em]",
-                  "w-[220px] xl:w-[260px]",
+                  "w-[220px] 2xl:w-[300px]",
                   searchOverlayOpen
                     ? "border-x border-t border-rule-strong bg-paper"
                     : "border border-rule focus-within:border-rule-strong",
@@ -226,12 +452,12 @@ export function Navigation() {
               />
             </div>
 
-            {/* Mobile search button */}
+            {/* Compact search button */}
             <button
               type="button"
               aria-label="Search"
               onClick={openSearch}
-              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink md:hidden"
+              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink xl:hidden"
             >
               <Search className="h-4 w-4" />
             </button>
@@ -241,13 +467,13 @@ export function Navigation() {
               <ThemeToggle />
             </div>
 
-            {/* Mobile menu toggle */}
+            {/* Compact menu toggle */}
             <button
               type="button"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
               onClick={() => setMobileMenuOpen((v) => !v)}
-              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink md:hidden"
+              className="flex h-9 w-9 items-center justify-center border border-rule text-ink transition-[color,background-color,border-color] duration-200 hover:bg-paper-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink xl:hidden"
             >
               {mobileMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </button>
@@ -255,48 +481,24 @@ export function Navigation() {
         </div>
       </header>
 
-      {/* --- Mobile menu overlay --------------------------------------- */}
+      {/* --- Compact menu overlay ------------------------------------- */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col bg-paper pt-16 md:hidden">
+        <div className="fixed inset-0 z-40 flex flex-col bg-paper pt-[72px] md:pt-[82px] xl:hidden">
           <div className="border-b border-rule" />
-          <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-5 py-6">
-            <ul className="flex flex-col">
-              {NAV_ITEMS.map((item) => {
-                const on = isActive(item);
-                const Icon = item.icon;
-                return (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      onClick={() => setMobileMenuOpen(false)}
-                      aria-current={on ? "page" : undefined}
-                      className={cn(
-                        "flex items-center justify-between border-b border-rule py-4 font-grot text-[20px] font-semibold tracking-[-0.015em]",
-                        on ? "text-ink" : "text-ink-3"
-                      )}
-                    >
-                      <span className="flex items-center gap-3">
-                        <Icon
-                          className={cn(
-                            "h-[18px] w-[18px]",
-                            on ? "text-ink" : "text-ink-dim",
-                          )}
-                          aria-hidden
-                        />
-                        <span>{item.label}</span>
-                      </span>
-                      <span
-                        className="font-mono text-[10px] tracking-[0.08em] text-ink-dim"
-                        aria-hidden
-                      >
-                        {String(NAV_ITEMS.indexOf(item) + 1).padStart(2, "0")}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="mt-8 flex items-center justify-between gap-3">
+          <nav
+            aria-label="Compact"
+            className="mx-auto flex w-full max-w-[720px] flex-1 flex-col gap-7 overflow-y-auto px-5 py-6 md:px-8"
+          >
+            {COMPACT_NAV_SECTIONS.map((section) => (
+              <CompactMenuSection
+                key={section.label}
+                label={section.label}
+                items={section.items}
+                isActive={isActive}
+                onNavigate={() => setMobileMenuOpen(false)}
+              />
+            ))}
+            <div className="mt-1 flex items-center justify-between gap-3 md:hidden">
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
                 Session
               </span>
@@ -309,7 +511,7 @@ export function Navigation() {
         </div>
       )}
 
-      {/* Mobile search modal is a full-viewport sheet */}
+      {/* Compact search modal is a full-viewport sheet below xl. */}
       <MobileSearchModal
         isOpen={mobileSearchOpen}
         onClose={() => setMobileSearchOpen(false)}
