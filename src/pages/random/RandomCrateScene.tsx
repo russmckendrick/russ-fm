@@ -77,7 +77,7 @@ interface SceneTheme {
 const DEFAULT_TARGET_COUNT = 25;
 const SLEEVE_SIZE = 1.54;
 const controlClassName =
-  'grid h-11 min-w-0 place-items-center border border-rule bg-paper text-ink shadow-[0_14px_30px_-20px_rgba(14,13,11,0.55)] transition-[background-color,border-color,color,opacity,transform] duration-150 hover:border-hl hover:bg-hl hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px disabled:pointer-events-none disabled:opacity-45 rounded-[8px]';
+  'relative grid h-12 min-w-0 place-items-center bg-paper/0 text-ink transition-[background-color,color,opacity,transform] duration-150 hover:bg-ink hover:text-paper focus-visible:z-[1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px disabled:pointer-events-none disabled:opacity-35 sm:h-11 sm:w-11';
 
 export default function RandomCrateScene({
   albums,
@@ -879,7 +879,7 @@ export default function RandomCrateScene({
       </section>
 
       <nav
-        className="absolute bottom-4 left-4 right-4 z-20 grid grid-cols-5 gap-2 sm:bottom-8 sm:left-auto sm:right-8 sm:w-[268px]"
+        className="absolute bottom-4 left-5 right-5 z-20 mx-auto grid max-w-[380px] grid-cols-5 divide-x divide-rule overflow-hidden border border-rule bg-paper/95 shadow-[0_18px_38px_-32px_rgba(14,13,11,0.55)] backdrop-blur-xl sm:bottom-8 sm:left-auto sm:right-8 sm:mx-0 sm:max-w-none"
         aria-label="Record crate controls"
       >
         <ControlButton label="Previous record" onClick={() => apiRef.current?.flip(-1)} disabled={!activeView}>
@@ -910,7 +910,7 @@ export default function RandomCrateScene({
             <ExternalLink className="h-5 w-5" aria-hidden />
           </Link>
         ) : (
-          <span className={cn(controlClassName, 'pointer-events-none opacity-45')} aria-hidden>
+          <span className={cn(controlClassName, 'pointer-events-none opacity-35')} aria-hidden>
             <ExternalLink className="h-5 w-5" />
           </span>
         )}
@@ -938,8 +938,13 @@ function ControlButton({
       aria-label={label}
       title={label}
       disabled={disabled}
+      aria-pressed={active || undefined}
       onClick={onClick}
-      className={cn(controlClassName, active && 'border-hl bg-hl text-paper')}
+      className={cn(
+        controlClassName,
+        active &&
+          'bg-ink text-paper after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:bg-hl hover:bg-hl hover:text-paper',
+      )}
     >
       <span className="sr-only">{label}</span>
       {children}
