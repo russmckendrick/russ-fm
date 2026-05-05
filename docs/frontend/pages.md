@@ -20,7 +20,7 @@ This document covers all route-level page components in russ.fm.
 | `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → `Similar albums` grid → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → `Similar artists` grid → sticky sidebar with quick facts + genre chips. Mobile shows the portrait first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
-| `/random` | Single-record random spin with paper hero, large sleeve treatment, metadata rail, genre links, and shuffle/open actions. Mobile shows the sleeve before the title, uses full-row actions, and lays hero stats out in a 2/3-column grid. `Space` shuffles when focus is outside interactive controls. |
+| `/random` | Full-screen Three.js vinyl crate with a 25-record shuffled pull from `collection.json`, light/dark paper-ink theming, pointer drag/tap inspect, wheel and arrow-key flipping, and silent React overlay controls for previous, inspect, next, shuffle, and open record. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
 | `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. Wrapped JSON image paths are normalized through `image-utils` for R2 assets in production. `Presentation` toggle returns the full-screen snap-scroll experience. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle, inheriting the `/wrapped/:year` asset URL handling. |
@@ -477,10 +477,12 @@ Random album discovery.
 **Route:** `/random`
 
 **Features:**
-- Single random album selection from `/collection.json`
-- "Spin Again" button that excludes the currently shown album when possible
-- Spacebar shuffle support when focus is outside interactive controls
-- Full album preview with artwork, artist link, genre links, and metadata rail
+- Full-screen Three.js vinyl crate populated from `/collection.json`
+- Shuffles up to 25 valid albums into interactive sleeve meshes
+- React overlay links preserve canonical album and artist navigation
+- Pointer tap/drag inspects the active sleeve, wheel and arrow keys flip records, and Escape exits inspect mode
+- Silent UI: no generated audio or autoplaying sound
+- Three.js background, fog, floor shadow, and lighting read the app's paper/ink CSS tokens and update with light/dark mode
 - Loading skeleton, retryable error state, and empty collection state
 
 ---
