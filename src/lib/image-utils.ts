@@ -2,6 +2,9 @@ import { appConfig } from '@/config/app.config';
 import type { ImageSize } from '@/types/assets';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 
+const WEBGL_TEXTURE_CACHE_PARAM = 'cors';
+const WEBGL_TEXTURE_CACHE_VALUE = 'webgl';
+
 /**
  * Get the appropriate image URL based on environment
  * - Development: serves from local /public/ directory
@@ -180,6 +183,24 @@ export function migrateImageUri(currentUri: string): string {
   
   // Convert local path to use our new utility
   return getImageUrl(currentUri.startsWith('/') ? currentUri.slice(1) : currentUri);
+}
+
+/**
+ * Isolate R2 image cache entries used by WebGL/canvas texture loaders.
+ */
+export function getWebGLTextureImageUrl(imageUrl: string): string {
+  if (!appConfig.assets.useR2 || !appConfig.assets.baseUrl || !imageUrl.startsWith(appConfig.assets.baseUrl)) {
+    return imageUrl;
+  }
+
+  try {
+    const url = new URL(imageUrl);
+    url.searchParams.set(WEBGL_TEXTURE_CACHE_PARAM, WEBGL_TEXTURE_CACHE_VALUE);
+    return url.toString();
+  } catch {
+    const separator = imageUrl.includes('?') ? '&' : '?';
+    return `${imageUrl}${separator}${WEBGL_TEXTURE_CACHE_PARAM}=${WEBGL_TEXTURE_CACHE_VALUE}`;
+  }
 }
 
 /**

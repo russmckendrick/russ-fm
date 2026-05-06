@@ -36,6 +36,23 @@ const url = migrateImageUri(release.images.medium);
 
 ---
 
+### getWebGLTextureImageUrl
+
+Create a texture-loader-safe image URL for WebGL/canvas use.
+
+```typescript
+import { getWebGLTextureImageUrl } from '@/lib/image-utils';
+
+const textureUrl = getWebGLTextureImageUrl(albumCoverUrl);
+```
+
+Production R2 images get a stable `?cors=webgl` cache key so browsers do not
+reuse a previous non-CORS `<img>` response when Three.js loads the same asset
+with `crossOrigin="anonymous"`. Development and non-R2 URLs are returned
+unchanged.
+
+---
+
 ### getAlbumImageUrl
 
 Generate album image URL with proper sizing.

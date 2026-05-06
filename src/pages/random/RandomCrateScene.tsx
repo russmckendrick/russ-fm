@@ -5,7 +5,7 @@ import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
-import { getAlbumImageFromData } from '@/lib/image-utils';
+import { getAlbumImageFromData, getWebGLTextureImageUrl } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
 
@@ -302,8 +302,10 @@ export default function RandomCrateScene({
         return;
       }
 
+      const textureUrl = getWebGLTextureImageUrl(sleeve.record.imageUrl);
+
       textureLoader.load(
-        sleeve.record.imageUrl,
+        textureUrl,
         (texture) => {
           if (generation !== loadGeneration || disposed) {
             texture.dispose();
