@@ -62,6 +62,7 @@ function App() {
           <Route path="/decade/:slug" element={<FacetDetailPage facetKey="decade" />} />
           <Route path="/countries" element={<FacetListPage facetKey="country" />} />
           <Route path="/country/:slug" element={<FacetDetailPage facetKey="country" />} />
+          <Route path="/genre/:slug" element={<FacetDetailPage facetKey="genre" />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />

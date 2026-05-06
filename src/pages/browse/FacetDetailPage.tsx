@@ -21,10 +21,109 @@ interface FacetDetailPageProps {
   facetKey: FacetKey;
 }
 
-/**
- * Albums filtered to a single facet value (one label, decade, or country).
- * Sort order is most-recently-added first; pagination mirrors AlbumsPage.
- */
+interface FacetStats {
+  albumCount: number;
+  artistCount: number;
+  decadeRange: { first: number; last: number } | null;
+  topArtists: Array<{ name: string; uri: string; count: number }>;
+}
+
+function buildFacetStats(albums: Album[]): FacetStats {
+  const artists = new Map<string, { name: string; uri: string; count: number }>();
+  let firstYear = Number.POSITIVE_INFINITY;
+  let lastYear = 0;
+
+  for (const album of albums) {
+    const albumArtists = album.artists?.length ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }];
+    for (const artist of albumArtists) {
+      const name = artist.name;
+      if (!name || name.toLowerCase() === 'various') continue;
+      const uri = artist.uri_artist || `/artist/${name.toLowerCase().replace(/\s+/g, '-')}/`;
+      const current = artists.get(uri);
+      if (current) {
+        current.count++;
+      } else {
+        artists.set(uri, { name, uri, count: 1 });
+      }
+    }
+    const y = new Date(album.date_release_year).getFullYear();
+    if (Number.isFinite(y) && y >= 1900) {
+      if (y < firstYear) firstYear = y;
+      if (y > lastYear) lastYear = y;
+    }
+  }
+
+  const topArtists = Array.from(artists.values())
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+    .slice(0, 8);
+
+  return {
+    albumCount: albums.length,
+    artistCount: artists.size,
+    decadeRange: lastYear > 0 ? { first: firstYear, last: lastYear } : null,
+    topArtists,
+  };
+}
+
+function buildFacetIntro(facetKey: FacetKey, displayName: string, stats: FacetStats): string {
+  const { albumCount, artistCount, decadeRange } = stats;
+  const albumWord = albumCount === 1 ? 'album' : 'albums';
+  const artistWord = artistCount === 1 ? 'artist' : 'artists';
+  const range = decadeRange
+    ? decadeRange.first === decadeRange.last
+      ? `from ${decadeRange.first}`
+      : `spanning ${decadeRange.first}–${decadeRange.last}`
+    : '';
+  switch (facetKey) {
+    case 'genre':
+      return `${albumCount} ${displayName} ${albumWord} from ${artistCount} ${artistWord} in the russ.fm collection${range ? `, ${range}` : ''}.`;
+    case 'label':
+      return `${albumCount} ${albumWord} from ${displayName} in the collection, by ${artistCount} different ${artistWord}${range ? ` ${range}` : ''}.`;
+    case 'decade':
+      return `${albumCount} ${albumWord} released in ${displayName}, by ${artistCount} ${artistWord} in the russ.fm collection.`;
+    case 'country':
+      return `${albumCount} ${albumWord} pressed in ${displayName}, by ${artistCount} ${artistWord} in the collection${range ? `, ${range}` : ''}.`;
+  }
+}
+
+function buildFacetMeta(
+  facetKey: FacetKey,
+  facetSingular: string,
+  displayName: string,
+  slug: string,
+  intro: string,
+) {
+  const canonical = `${appConfig.siteUrl}/${facetSingular}/${slug}`;
+  const titleByFacet: Record<FacetKey, string> = {
+    genre: `${displayName} albums in the collection | Russ.fm`,
+    label: `${displayName} releases | Russ.fm`,
+    decade: `${displayName} albums | Russ.fm`,
+    country: `Albums from ${displayName} | Russ.fm`,
+  };
+  const title = titleByFacet[facetKey];
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${appConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Browse', item: `${appConfig.siteUrl}/browse` },
+      { '@type': 'ListItem', position: 3, name: displayName },
+    ],
+  };
+
+  const collectionPage: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': canonical,
+    url: canonical,
+    name: title,
+    description: intro,
+  };
+
+  return { title, canonical, intro, jsonLd: [collectionPage, breadcrumb] };
+}
+
 export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
   const facet = FACETS[facetKey];
   const { slug } = useParams<{ slug: string }>();
@@ -54,13 +153,21 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
       : match.name
     : slug ?? '';
 
-  usePageTitle(`${displayName} · ${facet.singular} | Russ.fm`);
+  const stats = useMemo(() => buildFacetStats(albums), [albums]);
+  const intro = match ? buildFacetIntro(facetKey, displayName, stats) : '';
+  const meta = match && slug
+    ? buildFacetMeta(facetKey, facet.singular, displayName, slug, intro)
+    : null;
+
+  usePageTitle(meta ? meta.title : `${facet.listTitle} | Russ.fm`);
   useMetaTags({
-    title: `${displayName} · ${facet.singular} | Russ.fm`,
-    description: `Albums in the collection from ${displayName} (${albums.length} releases).`,
+    title: meta ? meta.title : `${facet.listTitle} | Russ.fm`,
+    description: meta ? meta.intro : `Browse ${facet.plural} in the russ.fm collection.`,
     image: `${appConfig.siteUrl}/og-image.png`,
-    url: `${appConfig.siteUrl}/${facet.singular}/${slug}`,
+    url: meta ? meta.canonical : `${appConfig.siteUrl}/${facet.singular}/${slug ?? ''}`,
     type: 'website',
+    canonical: meta ? meta.canonical : undefined,
+    jsonLd: meta ? meta.jsonLd : undefined,
   });
 
   const totalPages = Math.max(1, Math.ceil(albums.length / itemsPerPage));
@@ -96,9 +203,29 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
         title={displayName}
         counts={[
           { label: 'Albums', value: albums.length.toLocaleString() },
+          { label: 'Artists', value: stats.artistCount.toLocaleString() },
           { label: 'Page', value: `${page}/${totalPages}` },
         ]}
       />
+
+      <p className="mb-6 max-w-3xl font-grot text-[15px] leading-[1.6] text-ink-2">
+        {intro}
+      </p>
+
+      {stats.topArtists.length > 1 && (
+        <p className="mb-8 max-w-3xl font-mono text-[12px] uppercase tracking-[0.08em] text-ink-dim">
+          Most collected:{' '}
+          {stats.topArtists.slice(0, 5).map((a, i) => (
+            <span key={a.uri}>
+              {i > 0 ? ' · ' : ''}
+              <Link to={a.uri} className="text-ink hover:text-hl">
+                {a.name}
+              </Link>
+              <span className="text-ink-dim"> ({a.count})</span>
+            </span>
+          ))}
+        </p>
+      )}
 
       <div className="mb-6 flex items-baseline justify-between">
         <Link

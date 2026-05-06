@@ -74,6 +74,72 @@ interface ArtistData {
   local_images: { 'hi-res': string; medium: string };
 }
 
+function clipText(text: string | undefined | null, max: number): string {
+  if (!text) return '';
+  const flat = String(text).replace(/\s+/g, ' ').trim();
+  return flat.length <= max ? flat : flat.slice(0, max - 1).trimEnd() + '…';
+}
+
+function buildArtistMetaDescription(artistData: ArtistData, albumCount: number): string {
+  const albumLine = `${albumCount} album${albumCount === 1 ? '' : 's'} in collection.`;
+  const bio = artistData.biography;
+  if (bio) {
+    return clipText(`${artistData.name}. ${bio} ${albumLine}`, 300);
+  }
+  const genres = (artistData.genres || []).slice(0, 3).filter(Boolean).join(', ');
+  const parts = [artistData.name];
+  if (genres) parts.push(genres);
+  parts.push(albumLine);
+  return clipText(parts.join(' · '), 300);
+}
+
+function buildArtistJsonLd({
+  artistData,
+  canonicalUrl,
+  ogImage,
+  description,
+}: {
+  artistData: ArtistData;
+  canonicalUrl: string;
+  ogImage: string;
+  description: string;
+}): object[] {
+  const sameAs = Array.from(new Set([
+    artistData.wikipedia_url,
+    artistData.spotify_url || artistData.services?.spotify?.external_urls?.spotify,
+    artistData.discogs_url,
+    artistData.services?.lastfm?.url,
+    artistData.services?.apple_music?.url,
+  ].filter(Boolean) as string[]));
+
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'MusicGroup',
+    '@id': canonicalUrl,
+    url: canonicalUrl,
+    name: artistData.name,
+    description,
+    image: ogImage,
+  };
+  const genres = (artistData.genres || []).filter(Boolean);
+  if (genres.length) data.genre = Array.from(new Set(genres));
+  if (sameAs.length) data.sameAs = sameAs;
+  if (artistData.country) data.foundingLocation = artistData.country;
+  if (artistData.formed_date) data.foundingDate = artistData.formed_date;
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${appConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Artists', item: `${appConfig.siteUrl}/artists` },
+      { '@type': 'ListItem', position: 3, name: artistData.name },
+    ],
+  };
+
+  return [data, breadcrumb];
+}
+
 export function ArtistDetailPage() {
   const { artistPath } = useParams<{ artistPath: string }>();
   const [collection, setCollection] = useState<Album[]>([]);
@@ -152,17 +218,29 @@ export function ArtistDetailPage() {
   useEffect(() => { loadArtistData(); }, [artistPath, loadArtistData]);
 
   const pageTitle = artistData
-    ? `${artistData.name} - ${albums.length} Album${albums.length !== 1 ? 's' : ''} | Russ.fm`
+    ? `${artistData.name} discography — ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection | Russ.fm`
     : 'Loading Artist… | Russ.fm';
   usePageTitle(pageTitle);
+  const artistCanonical = `${appConfig.siteUrl}/artist/${artistPath}`;
+  const artistMetaDescription = artistData
+    ? buildArtistMetaDescription(artistData, albums.length)
+    : 'View artist details on Russ.fm';
+  const artistJsonLd = artistData && artistPath
+    ? buildArtistJsonLd({
+        artistData,
+        canonicalUrl: artistCanonical,
+        ogImage: getArtistOGImageUrl(artistPath),
+        description: artistMetaDescription,
+      })
+    : undefined;
   useMetaTags({
     title: pageTitle,
-    description: artistData
-      ? `${artistData.name}. ${artistData.biography?.substring(0, 200) || 'Explore this artist\'s music collection'}… ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection.`
-      : 'View artist details on Russ.fm',
+    description: artistMetaDescription,
     image: artistPath ? getArtistOGImageUrl(artistPath) : undefined,
-    url: `${appConfig.siteUrl}/artist/${artistPath}`,
-    type: 'music.musician'
+    url: artistCanonical,
+    type: 'music.musician',
+    canonical: artistCanonical,
+    jsonLd: artistJsonLd,
   });
 
   if (loading) {
@@ -365,7 +443,7 @@ export function ArtistDetailPage() {
             >
               <img
                 src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
-                alt={artistName}
+                alt={`${artistName} portrait`}
                 width={720}
                 height={720}
                 fetchPriority="high"

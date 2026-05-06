@@ -155,6 +155,114 @@ interface DetailedAlbum {
   };
 }
 
+function clipText(text: string | undefined | null, max: number): string {
+  if (!text) return '';
+  const flat = String(text).replace(/\s+/g, ' ').trim();
+  return flat.length <= max ? flat : flat.slice(0, max - 1).trimEnd() + '…';
+}
+
+function buildAlbumDescription(detailedAlbum: DetailedAlbum, album: Album | null): string {
+  const title = detailedAlbum.title;
+  const artist = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
+  const year = detailedAlbum.year;
+  const perplexity = detailedAlbum.services?.perplexity?.description;
+  if (perplexity) {
+    return clipText(`${title} by ${artist} (${year}). ${perplexity}`, 300);
+  }
+  const genres = (detailedAlbum.genres || []).slice(0, 3).filter(Boolean).join(', ');
+  const labels = (detailedAlbum.labels || []).slice(0, 2).filter(Boolean).join(', ');
+  const parts = [`${title} by ${artist}`];
+  if (year) parts.push(`released ${year}`);
+  if (genres) parts.push(genres);
+  if (labels) parts.push(`on ${labels}`);
+  return clipText(parts.join(' · ') + '.', 300);
+}
+
+function isoDuration(ms: number | undefined): string | null {
+  if (!Number.isFinite(ms) || !ms || ms <= 0) return null;
+  const totalSeconds = Math.round(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `PT${minutes}M${seconds}S`;
+}
+
+function buildAlbumJsonLd({
+  detailedAlbum,
+  album,
+  albumPath,
+  canonicalUrl,
+  ogImage,
+  description,
+}: {
+  detailedAlbum: DetailedAlbum;
+  album: Album | null;
+  albumPath: string;
+  canonicalUrl: string;
+  ogImage: string;
+  description: string;
+}): object[] {
+  const title = detailedAlbum.title;
+  const artistName = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
+  const artistUri = album?.uri_artist || album?.artists?.[0]?.uri_artist || '';
+  const artistSlug = artistUri.replace(/^\/artist\//, '').replace(/\/$/, '');
+  const released = detailedAlbum.released || (detailedAlbum.year ? String(detailedAlbum.year) : undefined);
+  const genres = Array.from(new Set([
+    ...(album?.genre_names || []),
+    ...(detailedAlbum.genres || []),
+    ...(detailedAlbum.styles || []),
+  ])).filter(Boolean);
+  const labels = (detailedAlbum.labels || []).filter(Boolean);
+  const tracks = Array.isArray(detailedAlbum.tracklist) ? detailedAlbum.tracklist : [];
+
+  const data: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'MusicAlbum',
+    '@id': canonicalUrl,
+    url: canonicalUrl,
+    name: title,
+    description,
+    image: ogImage,
+    byArtist: artistSlug
+      ? { '@type': 'MusicGroup', name: artistName, url: `${appConfig.siteUrl}/artist/${artistSlug}` }
+      : { '@type': 'MusicGroup', name: artistName },
+  };
+  if (released) data.datePublished = released;
+  if (genres.length) data.genre = genres;
+  if (labels.length) data.recordLabel = labels.map((name) => ({ '@type': 'Organization', name }));
+  if (tracks.length) {
+    data.numTracks = tracks.length;
+    data.track = tracks.slice(0, 50).map((track: Record<string, unknown>, idx) => {
+      const node: Record<string, unknown> = {
+        '@type': 'MusicRecording',
+        name: (track.title as string) || (track.name as string) || `Track ${idx + 1}`,
+        position: (track.position as string) || (track.track_number as number) || idx + 1,
+        byArtist: { '@type': 'MusicGroup', name: artistName },
+      };
+      const duration = isoDuration(track.duration_ms as number | undefined);
+      if (duration) node.duration = duration;
+      return node;
+    });
+  }
+  const sameAs = Array.from(new Set([
+    detailedAlbum.discogs_url,
+    detailedAlbum.spotify_url,
+  ].filter(Boolean) as string[]));
+  if (sameAs.length) data.sameAs = sameAs;
+
+  const breadcrumb = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${appConfig.siteUrl}/` },
+      { '@type': 'ListItem', position: 2, name: 'Albums', item: `${appConfig.siteUrl}/albums` },
+      { '@type': 'ListItem', position: 3, name: title },
+    ],
+  };
+
+  void albumPath; // canonicalUrl already encodes it
+  return [data, breadcrumb];
+}
+
 export function AlbumDetailPage() {
   const { albumPath } = useParams<{ albumPath: string }>();
   const navigate = useNavigate();
@@ -237,15 +345,29 @@ export function AlbumDetailPage() {
 
   usePageTitle(pageTitle);
 
-  // Set meta tags for social media sharing
+  const canonicalUrl = `${appConfig.siteUrl}/album/${albumPath}`;
+  const metaDescription = detailedAlbum
+    ? buildAlbumDescription(detailedAlbum, album)
+    : 'View album details on Russ.fm';
+  const albumJsonLd = detailedAlbum && albumPath
+    ? buildAlbumJsonLd({
+        detailedAlbum,
+        album,
+        albumPath,
+        canonicalUrl,
+        ogImage: getAlbumOGImageUrl(albumPath),
+        description: metaDescription,
+      })
+    : undefined;
+
   useMetaTags({
     title: pageTitle,
-    description: detailedAlbum
-      ? `${detailedAlbum.title} by ${album?.release_artist || 'Unknown Artist'} (${detailedAlbum.year}). ${detailedAlbum.genres?.slice(0, 3).join(', ')}.`
-      : 'View album details on Russ.fm',
+    description: metaDescription,
     image: albumPath ? getAlbumOGImageUrl(albumPath) : undefined,
-    url: `${appConfig.siteUrl}/album/${albumPath}`,
-    type: 'music.album'
+    url: canonicalUrl,
+    type: 'music.album',
+    canonical: canonicalUrl,
+    jsonLd: albumJsonLd,
   });
 
   const loadAlbumData = useCallback(async () => {
@@ -907,7 +1029,7 @@ export function AlbumDetailPage() {
               <img
                 src={heroImage}
                 onError={handleImageError}
-                alt={album.release_name}
+                alt={`${album.release_name} by ${album.release_artist} album cover`}
                 width={720}
                 height={720}
                 fetchPriority="high"

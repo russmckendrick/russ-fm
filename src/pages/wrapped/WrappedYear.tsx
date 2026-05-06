@@ -4,6 +4,8 @@ import { Presentation, Grid3X3 } from 'lucide-react';
 import { AlbumCard } from '@/components/AlbumCard';
 import { DossierHero, EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader, DragWall } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useMetaTags } from '@/hooks/useMetaTags';
+import { appConfig } from '@/config/app.config';
 import { GenreTag } from '@/components/ui/genre-tag';
 import { handleImageError, migrateImageUri } from '@/lib/image-utils';
 import { WrappedData, WrappedRelease } from '@/types/wrapped';
@@ -34,7 +36,32 @@ export function WrappedYear() {
   const yearNum = year ? parseInt(year, 10) : null;
   const currentYear = new Date().getFullYear();
 
-  usePageTitle(data ? `${yearNum} Wrapped` : 'Wrapped');
+  const wrappedTitle = yearNum ? `${yearNum} Wrapped — a year in records | Russ.fm` : 'Wrapped | Russ.fm';
+  const wrappedDescription = yearNum
+    ? `${yearNum} in the russ.fm collection: top albums, top artists, and listening highlights from the year.`
+    : 'A year in records on russ.fm.';
+  const wrappedCanonical = yearNum ? `${appConfig.siteUrl}/wrapped/${yearNum}` : `${appConfig.siteUrl}/wrapped`;
+
+  usePageTitle(wrappedTitle);
+  useMetaTags({
+    title: wrappedTitle,
+    description: wrappedDescription,
+    image: `${appConfig.siteUrl}/og-image.png`,
+    url: wrappedCanonical,
+    type: 'website',
+    canonical: wrappedCanonical,
+    jsonLd: yearNum
+      ? [{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${appConfig.siteUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Wrapped', item: `${appConfig.siteUrl}/wrapped` },
+            { '@type': 'ListItem', position: 3, name: String(yearNum) },
+          ],
+        }]
+      : undefined,
+  });
 
   // Discover which years have at least one release (used by the selector
   // and prev/next pager).

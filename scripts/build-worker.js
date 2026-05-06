@@ -173,6 +173,13 @@ async function main() {
     console.log(chalk.green(`  ✅ Copied ${albumJsonCount} album JSON files`));
     console.log(chalk.green(`  ✅ Copied ${artistJsonCount} artist JSON files`));
 
+    // Step 4b: Generate per-route HTML with SEO meta + JSON-LD
+    console.log(chalk.blue('\n🔎 Step 4b: Generating per-route HTML for SEO...'));
+    execSync('node scripts/generate-static-meta.mjs dist-worker', {
+      stdio: 'inherit',
+      cwd: process.cwd()
+    });
+
     // Step 5: Copy OG image from cache or public/
     console.log(chalk.blue('\n📸 Step 5: Copying og-image.png...'));
     const ogImageCachePath = path.join(process.cwd(), 'node_modules/.cache/assets/og/og-image.png');

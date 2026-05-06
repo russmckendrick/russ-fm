@@ -1,6 +1,6 @@
 import type { Album } from '@/types/album';
 
-export type FacetKey = 'label' | 'decade' | 'country';
+export type FacetKey = 'label' | 'decade' | 'country' | 'genre';
 
 export interface FacetValue {
   slug: string;
@@ -80,6 +80,19 @@ export const FACETS: Record<FacetKey, FacetConfig> = {
     detailKicker: 'Country dossier',
     extract: (album) => (album.country ? [album.country] : []),
     listSubtitle: 'Where each pressing came from, by Discogs release country.',
+  },
+  genre: {
+    key: 'genre',
+    plural: 'genres',
+    singular: 'genre',
+    listTitle: 'Browse by genre',
+    listKicker: 'Browse · russ.fm / genres',
+    detailKicker: 'Genre dossier',
+    extract: (album) => Array.from(new Set([
+      ...(album.genre_names ?? []),
+      ...(album.styles ?? []),
+    ])).filter(Boolean),
+    listSubtitle: 'Albums grouped by genre and style across the collection.',
   },
 };
 

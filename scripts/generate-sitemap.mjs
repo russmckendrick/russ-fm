@@ -115,6 +115,7 @@ function addFacetRoutes(collection, fallbackLastmod) {
     label: new Map(),
     decade: new Map(),
     country: new Map(),
+    genre: new Map(),
   };
 
   for (const album of collection) {
@@ -130,6 +131,14 @@ function addFacetRoutes(collection, fallbackLastmod) {
     if (decade) {
       addFacetValue(facetLastmods.decade, decade, album.date_added);
     }
+
+    const genres = new Set([
+      ...(album.genre_names || []),
+      ...(album.styles || []),
+    ]);
+    for (const genre of genres) {
+      addFacetValue(facetLastmods.genre, genre, album.date_added);
+    }
   }
 
   for (const [slug, { lastmod }] of facetLastmods.label) {
@@ -142,6 +151,10 @@ function addFacetRoutes(collection, fallbackLastmod) {
 
   for (const [slug, { lastmod }] of facetLastmods.country) {
     addRoute(`/country/${slug}`, { lastmod: lastmod || fallbackLastmod, changefreq: 'weekly', priority: '0.6' });
+  }
+
+  for (const [slug, { lastmod }] of facetLastmods.genre) {
+    addRoute(`/genre/${slug}`, { lastmod: lastmod || fallbackLastmod, changefreq: 'weekly', priority: '0.7' });
   }
 }
 
