@@ -8,10 +8,67 @@ import { handleScrobble } from './src/worker/handlers/scrobble.js';
 import { handleSearch } from './src/worker/handlers/search.js';
 import { buildCorsHeaders, applyCorsHeaders } from './src/worker/utils/cors.js';
 
+const HUGO_GONE_PATHS = /^(\/index\.(xml|json)|\/(artist|artists|genres?|styles)\/[^/]+\/index\.(xml|json))$/;
+
+const SLUG_REDIRECTS = {
+  '/albums/kill-the-wolf-27314406': '/album/kill-the-wolf-10th-anniversary-edition-27314406',
+  '/albums/susannah-s-still-alive-1605967': '/album/susannahs-still-alive-1605967',
+  '/albums/it-s-my-life-151789': '/album/its-my-life-151789',
+};
+
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+function seoRedirect(url) {
+  if (url.hostname === 'www.russ.fm') {
+    return Response.redirect(`https://russ.fm${url.pathname}${url.search}`, 301);
+  }
+
+  if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
+    const trimmed = url.pathname.replace(/\/+$/, '');
+    return Response.redirect(`https://russ.fm${trimmed}${url.search}`, 301);
+  }
+
+  if (HUGO_GONE_PATHS.test(url.pathname)) {
+    return new Response('Gone', {
+      status: 410,
+      headers: { 'Content-Type': 'text/plain' },
+    });
+  }
+
+  const slugTarget = SLUG_REDIRECTS[url.pathname];
+  if (slugTarget) {
+    return Response.redirect(`https://russ.fm${slugTarget}`, 301);
+  }
+
+  if (/^\/albums(\/\d+)?$/.test(url.pathname) && url.searchParams.has('genre')) {
+    const slug = slugify(url.searchParams.get('genre'));
+    if (slug) {
+      return Response.redirect(`https://russ.fm/genre/${slug}`, 301);
+    }
+  }
+
+  return null;
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const path = url.pathname;
+
+    if (request.method === 'GET' || request.method === 'HEAD') {
+      const redirect = seoRedirect(url);
+      if (redirect) return redirect;
+    }
 
     // Parse CORS origins (from working code)
     const allowedOriginsString = env.ALLOWED_ORIGINS_STRING || '';

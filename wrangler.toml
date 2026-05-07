@@ -28,6 +28,10 @@ ALLOWED_ORIGINS_STRING = "https://russ.fm,https://preview.russ.fm,http://localho
 pattern = "russ.fm/*"
 zone_name = "russ.fm"
 
+[[routes]]
+pattern = "www.russ.fm/*"
+zone_name = "russ.fm"
+
 # Preview environment configuration
 [env.preview]
 vars = { ENVIRONMENT = "preview", ALLOWED_ORIGINS_STRING = "http://localhost:5173,https://preview.russ.fm" }

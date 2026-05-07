@@ -297,6 +297,10 @@ ALLOWED_ORIGINS_STRING = "https://russ.fm,https://preview.russ.fm"
 pattern = "russ.fm/*"
 zone_name = "russ.fm"
 
+[[routes]]
+pattern = "www.russ.fm/*"
+zone_name = "russ.fm"
+
 [env.preview]
 name = "russ-fm-preview"
 route = "preview.russ.fm/*"
@@ -378,6 +382,22 @@ async function handleAPI(request, env) {
   return new Response('Not Found', { status: 404 });
 }
 ```
+
+### SEO Redirect Rules
+
+`_worker.js` enforces canonical URL form before any asset fetch. Order matters; the first match wins.
+
+| Rule | Trigger | Result |
+|------|---------|--------|
+| `www` → apex | `hostname === 'www.russ.fm'` | 301 to `https://russ.fm` + same path/query |
+| Trailing slash strip | `pathname.length > 1 && pathname.endsWith('/')` | 301 to slash-trimmed URL |
+| Hugo-era 410 | `/index.{xml,json}` and `/(artist\|artists\|genres?\|styles)/<slug>/index.{xml,json}` | 410 Gone |
+| Slug rename map | `SLUG_REDIRECTS` lookup table | 301 to current slug |
+| Genre query-string | `/albums(/<n>)?` with `?genre=<value>` | 301 to `/genre/<slugified>` |
+
+The canonical form (matching `<link rel="canonical">` and the sitemap) is **non-www, no trailing slash, lowercase**. Any new redirect rules should be added to `seoRedirect()` in [_worker.js](../../_worker.js); add the matching unit-test case if you extend the table.
+
+The `/albums/<slug>/` → `/album/<slug>` family of redirects (157 URLs in GSC) is handled by a Cloudflare zone-level rule outside this repo. If that rule is ever removed, port it to `seoRedirect()`.
 
 ---
 
