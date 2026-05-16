@@ -61,10 +61,10 @@ graph TD
 
 ### Navigation (`src/components/Navigation.tsx`)
 
-Sticky editorial navigation bar with grouped browse/explore menus and search integration.
+Sticky editorial navigation bar with grouped catalogue/insights menus and search integration.
 
 **Features:**
-- `xl+` desktop rail with `Home`, `Albums`, `Artists`, plus `Browse` and `Explore` dropdown groups
+- `xl+` desktop rail with `Home`, `Albums`, `Artists`, plus `Catalogue` and `Insights` dropdown groups
 - Compact `< xl` header with logo, search icon, menu trigger, and `md+` account/theme actions
 - Full search input on wide desktop only; compact widths open the full-viewport search sheet
 - Scroll-aware behavior

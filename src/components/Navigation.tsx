@@ -12,6 +12,7 @@ import {
   Tags,
   BarChart3,
   Shuffle,
+  Radar,
   Sparkles,
   LibraryBig,
   CalendarDays,
@@ -53,7 +54,7 @@ const PRIMARY_NAV_ITEMS: NavItem[] = [
 ];
 
 const BROWSE_NAV_ITEMS: NavItem[] = [
-  { path: "/browse", label: "Browse overview", activePrefix: "/browse", icon: LibraryBig },
+  { path: "/browse", label: "Catalogue overview", activePrefix: "/browse", icon: LibraryBig },
   { path: "/genres", label: "Genres", activePrefix: "/genres", icon: Tags },
   { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"], icon: Tag },
   { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"], icon: CalendarDays },
@@ -68,21 +69,21 @@ const EXPLORE_NAV_ITEMS: NavItem[] = [
 
 const NAV_SECTIONS: NavSection[] = [
   {
-    label: "Browse",
+    label: "Catalogue",
     icon: LibraryBig,
     items: BROWSE_NAV_ITEMS,
   },
   {
-    label: "Explore",
-    icon: Sparkles,
+    label: "Insights",
+    icon: Radar,
     items: EXPLORE_NAV_ITEMS,
   },
 ];
 
 const COMPACT_NAV_SECTIONS: Array<{ label: string; items: NavItem[] }> = [
   { label: "Main", items: PRIMARY_NAV_ITEMS },
-  { label: "Browse", items: BROWSE_NAV_ITEMS },
-  { label: "Explore", items: EXPLORE_NAV_ITEMS },
+  { label: "Catalogue", items: BROWSE_NAV_ITEMS },
+  { label: "Insights", items: EXPLORE_NAV_ITEMS },
 ];
 
 const COMPACT_NAV_ITEMS = COMPACT_NAV_SECTIONS.flatMap((section) => section.items);
