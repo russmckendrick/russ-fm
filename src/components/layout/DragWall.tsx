@@ -22,6 +22,7 @@ interface DragWallProps {
   gapClass?: string;
   ariaLabel?: string;
   className?: string;
+  showScrollbar?: boolean;
 }
 
 /**
@@ -36,6 +37,7 @@ export function DragWall({
   gapClass = "gap-4",
   ariaLabel = "Scroll wall",
   className,
+  showScrollbar = false,
 }: DragWallProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ down: false, x: 0, sl: 0, moved: 0 });
@@ -48,6 +50,7 @@ export function DragWall({
     const onWheel = (e: WheelEvent) => {
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         el.scrollLeft += e.deltaY;
+        e.stopPropagation();
         e.preventDefault();
       }
     };
@@ -135,8 +138,10 @@ export function DragWall({
         aria-label={ariaLabel}
         className={cn(
           "flex w-full select-none overflow-x-auto overflow-y-hidden",
-          "cursor-grab scroll-smooth",
-          "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
+          "cursor-grab overscroll-x-contain scroll-smooth",
+          showScrollbar
+            ? "pb-3 [scrollbar-color:var(--ink)_var(--paper-2)] [scrollbar-width:thin]"
+            : "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
           gapClass
         )}
         onPointerDown={onDown}

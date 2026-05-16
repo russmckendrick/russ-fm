@@ -17,6 +17,9 @@ with a single-record paper split header, tags, actions, and metadata rail.
 Feature-page headers read their visible copy from
 `redesignConfig.pageHeaders` so the Albums, Artists, Search, Stats,
 Genres, and Wrapped intro wording can be edited from one file.
+Wrapped keeps the dossier page as the default view; its optional
+presentation mode is a paper/ink Crate Journey with snap chapters,
+cover-led bookends, monthly tempo controls, and draggable record shelves.
 A dev-only
 `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) lets the author tune
 density / mono visibility / cover-colour / tint intensity in place
@@ -42,7 +45,7 @@ without shipping knobs to public visitors — defaults live in
 | React Router DOM | 7.6.3 | Client-side routing |
 | Tailwind CSS | 3.x | Utility-first styling |
 | shadcn/ui | Latest | Component library (Radix UI) |
-| Framer Motion | Latest | Animations (Wrapped presentation mode only) |
+| Framer Motion | Latest | Legacy wrapped animation helpers and graph transitions |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
 | @fontsource-variable/archivo | Latest | Editorial variable typeface |

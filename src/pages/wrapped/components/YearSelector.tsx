@@ -10,15 +10,23 @@ interface YearSelectorProps {
   currentYear: number;
   availableYears: number[];
   onYearChange: (year: number) => void;
+  triggerClassName?: string;
+  contentClassName?: string;
 }
 
-export function YearSelector({ currentYear, availableYears, onYearChange }: YearSelectorProps) {
+export function YearSelector({
+  currentYear,
+  availableYears,
+  onYearChange,
+  triggerClassName = '',
+  contentClassName = '',
+}: YearSelectorProps) {
   return (
     <Select value={currentYear.toString()} onValueChange={(value) => onYearChange(parseInt(value, 10))}>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className={`w-[180px] ${triggerClassName}`}>
         <SelectValue placeholder="Select year" />
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className={contentClassName}>
         {availableYears.map((year) => (
           <SelectItem key={year} value={year.toString()}>
             {year}

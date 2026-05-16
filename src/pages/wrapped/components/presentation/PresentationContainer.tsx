@@ -45,7 +45,7 @@ export function PresentationSection({ children, className = '', id }: Presentati
       className={`
         min-h-[100dvh] w-full
         snap-start snap-always
-        relative overflow-hidden
+        relative overflow-x-hidden overflow-y-auto
         flex items-center justify-center
         ${className}
       `}

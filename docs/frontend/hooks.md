@@ -515,31 +515,26 @@ Navigation state for wrapped presentation mode.
 import { useWrappedNavigation } from './hooks/useWrappedNavigation';
 
 function WrappedPresentation() {
-  const {
-    currentSection,
-    totalSections,
-    next,
-    previous,
-    goToSection,
-    isAutoPlaying,
-    toggleAutoPlay
-  } = useWrappedNavigation();
+  const navigation = useWrappedNavigation({
+    totalSections: 6,
+  });
 
   return (
     <div>
-      <Section index={currentSection} />
+      <Section index={navigation.currentSection} />
       <nav>
-        <button onClick={previous}>Previous</button>
-        <span>{currentSection + 1} / {totalSections}</span>
-        <button onClick={next}>Next</button>
-        <button onClick={toggleAutoPlay}>
-          {isAutoPlaying ? 'Pause' : 'Auto-play'}
-        </button>
+        <button onClick={navigation.prevSection}>Previous</button>
+        <span>{navigation.currentSection + 1} / {navigation.totalSections}</span>
+        <button onClick={navigation.nextSection}>Next</button>
       </nav>
     </div>
   );
 }
 ```
+
+`WrappedPresentation` currently uses the hook for scroll-snap section state, chapter jumps,
+and keyboard previous/next navigation. The hook still supports auto-advance, but the Crate
+Journey presentation does not expose timed playback by default.
 
 ---
 

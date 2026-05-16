@@ -181,4 +181,19 @@ html.tint-off [style*="0 40px 80px"] {
     opacity: 1;
     stroke-dashoffset: 0;
   }
+
+  #wrapped-crate-journey,
+  #wrapped-crate-journey *,
+  #wrapped-crate-journey *::before,
+  #wrapped-crate-journey *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  #wrapped-crate-journey .group:hover img,
+  #wrapped-crate-journey .group:hover [class*="scale-"] {
+    transform: none !important;
+  }
 }

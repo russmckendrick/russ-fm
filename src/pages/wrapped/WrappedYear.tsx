@@ -21,8 +21,8 @@ type ViewMode = 'grid' | 'presentation';
  * default — kicker + giant `YYYY` word treatment, KPI strip, album-of-
  * the-year, top-10 list with count-weighted bars, top artists grid,
  * genres + decades breakdowns, monthly histogram, and year pagination.
- * The full-screen `WrappedPresentation` flow still lives one button-
- * click away and is unchanged by this redesign.
+ * The full-screen `WrappedPresentation` flow lives one button-click
+ * away as a tactile crate journey using the same paper/ink grammar.
  */
 export function WrappedYear() {
   const { year } = useParams<{ year: string }>();
@@ -140,15 +140,17 @@ export function WrappedYear() {
   if (viewMode === 'presentation') {
     return (
       <div key={yearNum} className="relative">
-        <div className="fixed right-4 top-4 z-[60] flex items-center gap-2">
+        <div className="fixed right-4 top-5 z-[80] flex items-center gap-5 bg-paper/80 font-mono text-[11px] uppercase tracking-[0.08em] text-ink backdrop-blur-sm">
           <YearSelector
             currentYear={yearNum}
             availableYears={availableYears}
             onYearChange={(y) => navigate(`/wrapped/${y}`)}
+            triggerClassName="h-auto w-[190px] rounded-none border-0 border-b border-rule-strong bg-transparent px-0 py-1.5 font-mono text-[11px] uppercase tracking-[0.08em] text-ink shadow-none ring-offset-transparent transition-colors hover:border-hl focus:ring-0 focus:ring-offset-0"
+            contentClassName="rounded-none border-rule-strong bg-paper font-mono text-[11px] uppercase tracking-[0.06em] text-ink"
           />
           <button
             onClick={() => setViewMode('grid')}
-            className="flex items-center gap-2 border border-white/20 bg-white/10 px-3 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-white backdrop-blur-md transition-colors hover:bg-white/20"
+            className="flex items-center gap-2 border-b border-rule-strong bg-transparent py-1.5 text-ink transition-colors hover:border-hl hover:text-hl"
             aria-label="Switch to grid view"
           >
             <Grid3X3 className="h-4 w-4" />

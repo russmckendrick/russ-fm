@@ -22,7 +22,7 @@ This document covers all route-level page components in russ.fm.
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
 | `/random` | Full-screen Three.js vinyl crate with a 25-record shuffled pull from `collection.json`, light/dark paper-ink theming, pointer drag/tap inspect, wheel and arrow-key flipping, and silent React overlay controls for previous, inspect, next, shuffle, and open record. |
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
-| `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. Wrapped JSON image paths are normalized through `image-utils` for R2 assets in production. `Presentation` toggle returns the full-screen snap-scroll experience. |
+| `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. Wrapped JSON image paths are normalized through `image-utils` for R2 assets in production. `Presentation` opens the full-screen Crate Journey, a paper/ink snap-scroll mode with chapter navigation, album-cover bookends, monthly tempo, artist/genre cards, and a draggable month shelf. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle, inheriting the `/wrapped/:year` asset URL handling. |
 | `/genres` | Dossier-style genre overview: `BrowseHeader` count strip → ranked genre atlas with cover samples and tabbed A-Z index → embedded paper/ink D3 map linking all genres or a selected genre to related genres, artists, and records. |
 
@@ -514,26 +514,22 @@ Main wrapped page for a specific year.
 **Route:** `/wrapped/:year`
 
 **Features:**
-- Year summary statistics
-- Top albums of the year
-- Monthly breakdown
-- Genre insights
-- Decade analysis
-- Presentation mode toggle
+- Editorial dossier view by default
+- Year summary statistics and KPI strip
+- Top albums, top artists, genre insights, and decade analysis
+- Monthly breakdown with draggable record walls
+- Presentation mode toggle into the Crate Journey
 
-**Data Source:** `/wrapped.json`
+**Data Source:** `/wrapped/wrapped-{year}.json` or `/wrapped/wrapped-ytd.json` for the current year.
 
 **Components Used:**
 ```
 WrappedYear
 ├── YearSelector
-├── DynamicBentoGrid
-│   ├── AnimatedCard
-│   └── AnimatedCounter
-├── TopArtistsSection
-├── TopAlbumsPerMonthSection
-├── GenreBreakdownSection
-└── DecadesSection
+├── DossierHero
+├── SectionHeader
+├── DragWall
+└── WrappedPresentation
 ```
 
 ---
@@ -553,36 +549,35 @@ Year-to-date wrapped statistics.
 
 ### WrappedPresentation (`src/pages/wrapped/WrappedPresentation.tsx`)
 
-Full-screen presentation mode.
+Full-screen Crate Journey mode. This is the optional presentation view, not the default dossier.
 
 **Features:**
-- Section-by-section reveal
-- Keyboard navigation
-- Auto-advance option
-- Animation effects
+- Six snap-scroll chapters: sleeve intro, bookends, monthly tempo, artist/genre signals, draggable shelves, and year navigation
+- Paper/ink editorial styling with sharp rules, mono labels, and album-cover accents
+- Album and artist links remain live inside the presentation
+- Month shelves use the shared `DragWall` interaction
+- Keyboard navigation between chapters
 
 **Navigation Controls:**
-- Arrow keys: Next/Previous section
-- Space: Auto-advance toggle
-- Escape: Exit presentation
+- Arrow Down or Space: Next chapter
+- Arrow Up: Previous chapter
+- Chapter rail or mobile dots: Jump to a chapter
+- Dossier button: Return to the default wrapped dossier
 
 ---
 
-## Wrapped Sections
+## Wrapped Presentation Chapters
 
-Located in `src/pages/wrapped/sections/`:
+The Crate Journey is implemented in `src/pages/wrapped/WrappedPresentation.tsx` and derives all view models from the existing wrapped JSON contract.
 
-| Section | Description |
+| Chapter | Description |
 |---------|-------------|
-| IntroSection | Welcome and year overview |
-| YearSummarySection | Key statistics |
-| HeroAlbumSection | Featured album of the year |
-| TopArtistsSection | Most collected artists |
-| TopAlbumsPerMonthSection | Monthly highlights |
-| MonthlyJourneySection | Timeline visualization |
-| GenreBreakdownSection | Genre distribution |
-| DecadesSection | Release decade analysis |
-| ExploreSection | Links to browse collection |
+| Sleeve | Year intro, KPIs, and a cover-collage crate face |
+| Bookends | Interactive first/last release flip with album-cover color accents |
+| Tempo | Monthly activity spine with zero-count YTD months handled as quiet months |
+| Signals | Compact artist and genre catalogue cards |
+| Shelves | Month selector plus a draggable `DragWall` shelf of releases |
+| Years | Previous/next/all-years navigation back through wrapped archives |
 
 ---
 
