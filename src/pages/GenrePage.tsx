@@ -1,11 +1,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { ArrowSquareOut, MagnifyingGlass, SlidersHorizontal, SortAscending, X } from "@phosphor-icons/react";
-import { GenreGraph } from "@/components/genres/GenreGraph";
+import { ArrowSquareOut } from "@phosphor-icons/react";
+import { BrowseHeader } from "@/components/browse/BrowseHeader";
+import { GenreExplorerPanel } from "@/components/genres/GenreExplorerPanel";
 import { getGraphNodeCapacity } from "@/components/genres/useGenreGraphLayout";
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from "@/components/layout";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { appConfig } from "@/config/app.config";
+import { useMetaTags } from "@/hooks/useMetaTags";
 import { usePageTitle } from "@/hooks/usePageTitle";
+import { slugify } from "@/lib/browseFacets";
 import {
   ALL_GENRES_VALUE,
   buildGenreExplorer,
@@ -21,17 +24,9 @@ import {
 import type {
   GenreExplorerAlbum,
   GenreExplorerArtist,
-  GenreExplorerSort,
   GenreSummary,
 } from "@/lib/genreExplorer";
 import type { Album } from "@/types/album";
-
-const SORT_OPTIONS: Array<{ value: GenreExplorerSort; label: string }> = [
-  { value: "dominance", label: "Most collected" },
-  { value: "recent", label: "Recently added" },
-  { value: "name", label: "Name" },
-  { value: "year", label: "Release year" },
-];
 
 const NODE_PRESETS = {
   standard: 14,
@@ -40,6 +35,11 @@ const NODE_PRESETS = {
 } as const;
 
 const NODE_BUDGET_MIN = 1;
+
+interface GenreIndexGroup {
+  initial: string;
+  genres: GenreSummary[];
+}
 
 export function GenrePage() {
   const [collection, setCollection] = useState<Album[]>([]);
@@ -129,10 +129,26 @@ export function GenrePage() {
   );
 
   usePageTitle(
-    selectedGenre
-      ? `${selectedGenre.name}${selectedArtist ? ` / ${selectedArtist.name}` : ""} | Genres | Russ.fm`
+    selectedGenre && !selectedGenre.isAll
+      ? `${selectedGenre.name} genre map | Genres | Russ.fm`
       : "Genres | Russ.fm",
   );
+  useMetaTags({
+    title: "Genres | Russ.fm",
+    description: "Browse the russ.fm collection by genre and style, with ranked counts, genre dossiers, and an interactive map.",
+    image: `${appConfig.siteUrl}/og-image.png`,
+    url: `${appConfig.siteUrl}/genres`,
+    type: "website",
+    canonical: `${appConfig.siteUrl}/genres`,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${appConfig.siteUrl}/genres`,
+      url: `${appConfig.siteUrl}/genres`,
+      name: "Genres | Russ.fm",
+      description: "Browse the russ.fm collection by genre and style.",
+    },
+  });
 
   const updateParams = useCallback(
     (updates: Record<string, string | null>) => {
@@ -155,6 +171,31 @@ export function GenrePage() {
       });
     },
     [updateParams],
+  );
+
+  const focusGenreFromAtlas = useCallback(
+    (genre: GenreSummary) => {
+      const params = new URLSearchParams(searchParams);
+      params.set("genre", genre.name);
+      params.delete("artist");
+      params.delete("album");
+
+      navigate({
+        pathname: "/genres",
+        search: `?${params.toString()}`,
+        hash: "#genre-map",
+      });
+
+      if (typeof window !== "undefined") {
+        window.setTimeout(() => {
+          document.getElementById("genre-map")?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }, 0);
+      }
+    },
+    [navigate, searchParams],
   );
 
   const selectArtist = useCallback(
@@ -184,7 +225,7 @@ export function GenrePage() {
   if (loading) {
     return (
       <PageContainer>
-        <EditorialSkeleton label="Loading genre map..." />
+        <EditorialSkeleton label="Loading genre atlas..." />
       </PageContainer>
     );
   }
@@ -205,280 +246,333 @@ export function GenrePage() {
     );
   }
 
-  return (
-    <PageContainer className="pb-10">
-      <section className="overflow-hidden border border-rule-strong bg-paper">
-        <div className="grid gap-3 border-b border-rule-strong bg-paper px-4 py-3 lg:grid-cols-[minmax(280px,0.9fr)_minmax(190px,1fr)_145px_250px_auto] lg:items-center lg:divide-x lg:divide-rule-strong lg:px-0">
-          <div className="min-w-0 lg:px-4">
-            <GenreSelect
-              allGenre={explorer.allGenre}
-              genres={explorer.genres}
-              value={selectedGenre.isAll ? ALL_GENRES_VALUE : selectedGenre.name}
-              onChange={(value) => {
-                const nextGenre =
-                  value === ALL_GENRES_VALUE
-                    ? explorer.allGenre
-                    : explorer.genres.find((candidate) => candidate.name === value);
-                if (nextGenre) selectGenre(nextGenre);
-              }}
-            />
-          </div>
-          <SearchControl value={query} onChange={(value) => updateParams({ q: value || null })} />
-          <SortControl value={sort} onChange={(value) => updateParams({ sort: value })} />
-          <NodeBudgetControl
-            value={nodeBudget}
-            max={nodeCapacity}
-            isAuto={!nodesParam}
-            onChange={(value) => updateParams({ nodes: value == null ? null : String(value) })}
-          />
-          <SelectionActions artist={selectedArtist} album={selectedAlbum} onClear={(key) => updateParams({ [key]: null })} />
-        </div>
+  const focusedDossierPath = selectedGenre.isAll ? null : `/genre/${slugify(selectedGenre.name)}`;
 
-        <GenreGraph
-          genre={graphGenre}
-          artists={artists}
-          albums={albums}
-          selectedArtist={selectedArtist}
-          selectedAlbum={selectedAlbum}
-          nodeBudget={nodeBudget}
-          allGenres={explorer.genres}
-          onSelectGenre={selectGenre}
-          onSelectArtist={selectArtist}
-          onOpenAlbum={openAlbum}
-          onBack={goBack}
-          onForward={goForward}
-          onClearArtistFocus={clearArtistFocus}
-        />
-      </section>
+  return (
+    <PageContainer className="pb-12">
+      <BrowseHeader
+        num="00"
+        kicker="Browse · russ.fm / genres"
+        title="Browse by genre"
+        subtitle="A ranked atlas of every genre and style in the collection, paired with the interactive map for following how records, artists, and scenes connect."
+        counts={[
+          { label: "Albums", value: formatNumber(explorer.totalAlbums) },
+          { label: "Artists", value: formatNumber(explorer.totalArtists) },
+          { label: "Terms", value: formatNumber(explorer.genres.length) },
+          { label: "Years", value: formatYearSpan(explorer.yearStart, explorer.yearEnd) },
+        ]}
+      />
+
+      {focusedDossierPath && (
+        <div className="mb-8 flex flex-col gap-3 border-y border-rule bg-paper px-4 py-3 md:flex-row md:items-center md:justify-between">
+          <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-dim">
+            Map focus: <span className="text-ink">{selectedGenre.name}</span>
+          </p>
+          <Link
+            to={focusedDossierPath}
+            className="inline-flex w-fit items-center gap-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:text-hl"
+          >
+            View genre dossier
+            <ArrowSquareOut className="h-3.5 w-3.5" weight="bold" />
+          </Link>
+        </div>
+      )}
+
+      <GenreAtlas
+        genres={explorer.genres}
+        selectedGenre={selectedGenre}
+        totalAlbums={explorer.totalAlbums}
+        onFocusGenre={focusGenreFromAtlas}
+      />
+
+      <GenreExplorerPanel
+        explorer={explorer}
+        selectedGenre={selectedGenre}
+        graphGenre={graphGenre}
+        artists={artists}
+        albums={albums}
+        selectedArtist={selectedArtist}
+        selectedAlbum={selectedAlbum}
+        query={query}
+        sort={sort}
+        nodeBudget={nodeBudget}
+        nodeCapacity={nodeCapacity}
+        isAutoNodeBudget={!nodesParam}
+        onQueryChange={(value) => updateParams({ q: value || null })}
+        onSortChange={(value) => updateParams({ sort: value })}
+        onNodeBudgetChange={(value) => updateParams({ nodes: value == null ? null : String(value) })}
+        onGenreChange={selectGenre}
+        onSelectArtist={selectArtist}
+        onOpenAlbum={openAlbum}
+        onBack={goBack}
+        onForward={goForward}
+        onClearArtistFocus={clearArtistFocus}
+      />
     </PageContainer>
   );
 }
 
-function GenreSelect({
-  allGenre,
+function GenreAtlas({
   genres,
-  value,
-  onChange,
+  selectedGenre,
+  totalAlbums,
+  onFocusGenre,
 }: {
-  allGenre: GenreSummary;
   genres: GenreSummary[];
-  value: string;
-  onChange: (value: string) => void;
+  selectedGenre: GenreSummary;
+  totalAlbums: number;
+  onFocusGenre: (genre: GenreSummary) => void;
 }) {
-  return (
-    <div className="relative block">
-      <span className="sr-only">Choose genre</span>
-      <Select value={value} onValueChange={onChange}>
-        <SelectTrigger
-          aria-label="Choose genre"
-          className="h-14 gap-3 rounded-none border-0 bg-transparent px-0 py-1 font-display text-[28px] uppercase leading-none text-ink shadow-none ring-offset-0 transition-colors hover:text-hl focus:ring-0 focus:ring-offset-0 data-[state=open]:text-hl md:text-[32px] [&>svg]:h-5 [&>svg]:w-5 [&>svg]:shrink-0 [&>svg]:opacity-100"
-        >
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent
-          position="popper"
-          sideOffset={8}
-          className="max-h-[min(72vh,560px)] min-w-[min(560px,calc(100vw-40px))] rounded-none border border-rule-strong bg-paper p-0 font-grot text-ink shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
-        >
-          <SelectItem
-            value={ALL_GENRES_VALUE}
-            className="rounded-none border-b border-rule bg-paper py-3 pl-9 pr-4 font-display text-[21px] uppercase leading-none text-ink data-[state=checked]:text-hl focus:bg-paper-2 focus:text-hl"
-          >
-            <span className="flex w-full items-center justify-between gap-6">
-              <span>All genres</span>
-              <span className="font-mono text-[10px] tracking-[0.08em] text-ink-dim">
-                {formatNumber(allGenre.albumCount)}
-              </span>
-            </span>
-          </SelectItem>
-          {genres.map((genre) => (
-            <SelectItem
-              key={genre.name}
-              value={genre.name}
-              className="rounded-none py-2.5 pl-9 pr-4 font-grot text-[14px] font-semibold text-ink data-[state=checked]:text-hl focus:bg-paper-2 focus:text-hl"
-            >
-              <span className="flex w-full items-center justify-between gap-6">
-                <span className="truncate">{genre.name}</span>
-                <span className="font-mono text-[10px] tracking-[0.08em] text-ink-dim">
-                  {formatNumber(genre.albumCount)}
-                </span>
-              </span>
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </div>
-  );
-}
+  const topGenres = genres.slice(0, 12);
+  const maxAlbums = topGenres[0]?.albumCount || 1;
+  const indexGroups = useMemo(() => groupGenreIndex(genres), [genres]);
+  const selectedInitial = selectedGenre.isAll ? indexGroups[0]?.initial : getGenreInitial(selectedGenre.name);
+  const [activeInitial, setActiveInitial] = useState(() => {
+    return indexGroups.some((group) => group.initial === selectedInitial)
+      ? selectedInitial
+      : indexGroups[0]?.initial || "A";
+  });
+  const activeGroup = indexGroups.find((group) => group.initial === activeInitial) || indexGroups[0];
 
-function SearchControl({
-  value,
-  onChange,
-}: {
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  return (
-    <label className="flex min-w-0 flex-col gap-2 lg:px-4">
-      <span className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        <MagnifyingGlass className="h-4 w-4" weight="bold" />
-        Search
-      </span>
-      <span className="flex h-9 items-center gap-2">
-        <input
-          type="search"
-          value={value}
-          onChange={(event) => onChange(event.target.value)}
-          placeholder="Genre, artist, record"
-          className="h-full min-w-0 flex-1 bg-transparent font-grot text-[14px] text-ink outline-none placeholder:text-ink-dim"
-        />
-        {value && (
-          <button
-            type="button"
-            onClick={() => onChange("")}
-            aria-label="Clear search"
-            className="text-ink-dim transition-colors hover:text-hl"
-          >
-            <X className="h-4 w-4" weight="bold" />
-          </button>
-        )}
-      </span>
-    </label>
-  );
-}
+  useEffect(() => {
+    if (selectedGenre.isAll) return;
+    const nextInitial = getGenreInitial(selectedGenre.name);
+    if (indexGroups.some((group) => group.initial === nextInitial)) {
+      setActiveInitial(nextInitial);
+    }
+  }, [indexGroups, selectedGenre.isAll, selectedGenre.name]);
 
-function SortControl({
-  value,
-  onChange,
-}: {
-  value: GenreExplorerSort;
-  onChange: (value: GenreExplorerSort) => void;
-}) {
-  return (
-    <label className="flex flex-col gap-2 lg:px-4">
-      <span className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        <SortAscending className="h-4 w-4" weight="bold" />
-        Sort
-      </span>
-      <Select
-        value={value}
-        onValueChange={(nextValue) => onChange(normalizeSort(nextValue))}
-      >
-        <SelectTrigger className="h-8 gap-2 rounded-none border-0 bg-transparent px-0 py-0 font-grot text-[13px] font-medium text-ink shadow-none ring-offset-0 focus:ring-0 focus:ring-offset-0 [&>svg]:h-4 [&>svg]:w-4 [&>svg]:opacity-100">
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent
-          position="popper"
-          sideOffset={8}
-          className="max-h-[320px] rounded-none border border-rule-strong bg-paper font-grot text-ink"
-        >
-          {SORT_OPTIONS.map((option) => (
-            <SelectItem
-              key={option.value}
-              value={option.value}
-              className="rounded-none py-2 pl-8 pr-3 text-[13px] data-[state=checked]:text-hl focus:bg-paper-2 focus:text-hl"
-            >
-              {option.label}
-            </SelectItem>
-          ))}
-        </SelectContent>
-      </Select>
-    </label>
-  );
-}
-
-function NodeBudgetControl({
-  value,
-  max,
-  isAuto,
-  onChange,
-}: {
-  value: number;
-  max: number;
-  isAuto: boolean;
-  onChange: (value: number | null) => void;
-}) {
-  const sliderMax = Math.max(NODE_BUDGET_MIN, max);
-  const sliderValue = Math.min(value, sliderMax);
-  const disabled = sliderMax <= NODE_BUDGET_MIN;
-
-  return (
-    <div className="flex flex-col gap-2 lg:px-4">
-      <div className="flex items-center justify-between gap-3 font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        <span className="flex items-center gap-2">
-          <SlidersHorizontal className="h-4 w-4" weight="bold" />
-          Nodes
-        </span>
-        <span className="whitespace-nowrap tabular-nums text-ink-3">
-          {isAuto ? `Auto ${formatNumber(sliderValue)}` : formatNumber(sliderValue)} / {formatNumber(max)}
-        </span>
+  if (!genres.length) {
+    return (
+      <div className="mb-12">
+        <EditorialEmpty title="No genres" detail="No genre or style terms were found in the collection." />
       </div>
-      <div className="flex h-8 items-center gap-3">
-        <input
-          type="range"
-          min={NODE_BUDGET_MIN}
-          max={sliderMax}
-          step={1}
-          value={sliderValue}
-          disabled={disabled}
-          aria-label="Visible graph node count"
-          onInput={(event) => onChange(Number(event.currentTarget.value))}
-          className="h-1.5 min-w-0 flex-1 cursor-pointer appearance-none bg-rule accent-ink disabled:cursor-default disabled:opacity-40"
-        />
+    );
+  }
+
+  return (
+    <section className="mb-12" data-genre-atlas>
+      <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+            01 · Genre atlas
+          </p>
+          <h2 className="font-display text-[clamp(34px,5vw,64px)] uppercase leading-none text-ink">
+            Ranked overview
+          </h2>
+        </div>
+        <p className="max-w-xl font-grot text-[14px] leading-[1.6] text-ink-2 md:text-right">
+          {formatNumber(genres.length)} genre and style terms across {formatNumber(totalAlbums)} records, ranked by shelf weight.
+        </p>
+      </div>
+
+      <div className="grid items-stretch gap-8 xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,0.9fr)]">
+        <ol className="divide-y divide-rule border-y border-rule" data-ranked-overview>
+          {topGenres.map((genre, index) => (
+            <li
+              key={genre.name}
+              className={selectedGenre.name === genre.name ? "bg-paper-2" : undefined}
+            >
+              <GenreRankRow
+                genre={genre}
+                index={index}
+                maxAlbums={maxAlbums}
+                isSelected={selectedGenre.name === genre.name}
+                onFocusGenre={onFocusGenre}
+              />
+            </li>
+          ))}
+        </ol>
+
+        <div className="flex min-h-[420px] flex-col border-y border-rule xl:h-full" data-genre-index-panel>
+          <div className="flex items-baseline justify-between gap-3 border-b border-rule py-3">
+            <h3 className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+              A-Z index
+            </h3>
+            <span className="font-mono text-[11px] tabular-nums text-ink-dim">
+              {formatNumber(genres.length)}
+            </span>
+          </div>
+
+          <div className="flex flex-wrap gap-1 border-b border-rule py-3" data-genre-index-tabs>
+            {indexGroups.map((group) => {
+              const isActive = group.initial === activeGroup?.initial;
+              return (
+                <button
+                  key={group.initial}
+                  type="button"
+                  onClick={() => setActiveInitial(group.initial)}
+                  aria-pressed={isActive}
+                  className={`min-w-8 border px-2 py-1 font-mono text-[10.5px] uppercase tracking-[0.08em] transition-colors active:translate-y-px ${
+                    isActive
+                      ? "border-ink bg-ink text-paper"
+                      : "border-rule text-ink-3 hover:border-hl hover:text-hl"
+                  }`}
+                >
+                  {group.initial}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="min-h-0 flex-1 overflow-y-auto pr-1" data-genre-index-scroll>
+            {activeGroup && (
+              <div className="grid grid-cols-[42px_minmax(0,1fr)] gap-4 py-4">
+                <div>
+                  <h4 className="font-display text-[36px] uppercase leading-none text-ink">{activeGroup.initial}</h4>
+                  <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-dim">
+                    {formatNumber(activeGroup.genres.length)}
+                  </p>
+                </div>
+                <ol className="space-y-1">
+                  {activeGroup.genres.map((genre) => (
+                    <li
+                      key={genre.name}
+                      className={selectedGenre.name === genre.name ? "bg-paper-2" : undefined}
+                    >
+                      <div className="grid grid-cols-[minmax(0,1fr)_52px_44px] items-center gap-2 py-1">
+                        <Link
+                          to={`/genre/${slugify(genre.name)}`}
+                          className="truncate font-grot text-[13px] text-ink transition-colors hover:text-hl"
+                        >
+                          {genre.name}
+                        </Link>
+                        <span className="text-right font-mono text-[10.5px] tabular-nums text-ink-dim">
+                          {formatNumber(genre.albumCount)}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => onFocusGenre(genre)}
+                          className="justify-self-end border border-rule px-2 py-1 font-mono text-[9.5px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl active:translate-y-px"
+                        >
+                          Map
+                        </button>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function GenreRankRow({
+  genre,
+  index,
+  maxAlbums,
+  isSelected,
+  onFocusGenre,
+}: {
+  genre: GenreSummary;
+  index: number;
+  maxAlbums: number;
+  isSelected: boolean;
+  onFocusGenre: (genre: GenreSummary) => void;
+}) {
+  const dossierPath = `/genre/${slugify(genre.name)}`;
+  const barWidth = `${Math.max(6, Math.round((genre.albumCount / maxAlbums) * 100))}%`;
+
+  return (
+    <div className="grid gap-4 py-4 md:grid-cols-[36px_minmax(0,1fr)_168px_auto] md:items-center">
+      <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <Link
+            to={dossierPath}
+            className="font-display text-[clamp(24px,3vw,36px)] uppercase leading-none text-ink transition-colors hover:text-hl"
+          >
+            {genre.name}
+          </Link>
+          {isSelected && (
+            <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-hl">
+              Map focus
+            </span>
+          )}
+        </div>
+        <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+          {formatNumber(genre.albumCount)} albums · {formatNumber(genre.artistCount)} artists · {formatYearSpan(genre.yearStart, genre.yearEnd)}
+        </p>
+        <div className="mt-3 h-1.5 bg-rule">
+          <div className="h-full bg-ink" style={{ width: barWidth }} />
+        </div>
+      </div>
+
+      <CoverStrip genre={genre} />
+
+      <div className="flex flex-wrap gap-2 md:justify-end">
+        <Link
+          to={dossierPath}
+          className="inline-flex items-center gap-2 border border-rule px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl active:translate-y-px"
+        >
+          Dossier
+          <ArrowSquareOut className="h-3.5 w-3.5" weight="bold" />
+        </Link>
         <button
           type="button"
-          onClick={() => onChange(null)}
-          disabled={isAuto}
-          className="border border-rule px-2 py-1 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl disabled:pointer-events-none disabled:opacity-35"
+          onClick={() => onFocusGenre(genre)}
+          className="border border-rule px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl active:translate-y-px"
         >
-          Auto
+          Map
         </button>
       </div>
     </div>
   );
 }
 
-function SelectionActions({
-  artist,
-  album,
-  onClear,
-}: {
-  artist: GenreExplorerArtist | null;
-  album: GenreExplorerAlbum | null;
-  onClear: (key: "artist" | "album") => void;
-}) {
+function CoverStrip({ genre }: { genre: GenreSummary }) {
+  const covers = genre.coverSamples.slice(0, 4);
+
+  if (!covers.length) {
+    return <div className="hidden h-12 bg-rule md:block" />;
+  }
+
   return (
-    <div className="flex flex-wrap items-center gap-2 lg:px-4">
-      {artist && (
-        <>
-          <button
-            type="button"
-            onClick={() => onClear("artist")}
-            className="inline-flex items-center gap-2 border border-rule px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl"
-          >
-            <X className="h-3.5 w-3.5" weight="bold" />
-            {artist.name}
-          </button>
-          <Link
-            to={`/artist/${artist.slug}`}
-            className="inline-flex items-center gap-2 border border-rule px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl"
-          >
-            Artist page
-            <ArrowSquareOut className="h-3.5 w-3.5" weight="bold" />
-          </Link>
-        </>
-      )}
-      {album && (
-        <Link
-          to={album.uri}
-          className="inline-flex items-center gap-2 border border-rule px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink-3 transition-colors hover:border-hl hover:text-hl"
-        >
-          Record page
-          <ArrowSquareOut className="h-3.5 w-3.5" weight="bold" />
-        </Link>
-      )}
+    <div className="flex -space-x-3 overflow-hidden md:justify-end">
+      {covers.map((album) => (
+        <img
+          key={album.slug}
+          src={album.cover}
+          alt={`${album.title} cover`}
+          loading="lazy"
+          className="h-12 w-12 border border-paper bg-paper object-cover shadow-[0_10px_20px_-14px_rgba(14,13,11,0.5)]"
+        />
+      ))}
     </div>
   );
+}
+
+function groupGenreIndex(genres: GenreSummary[]): GenreIndexGroup[] {
+  const groups = new Map<string, GenreSummary[]>();
+
+  genres.forEach((genre) => {
+    const initial = getGenreInitial(genre.name);
+    const values = groups.get(initial) || [];
+    values.push(genre);
+    groups.set(initial, values);
+  });
+
+  return Array.from(groups.entries())
+    .map(([initial, values]) => ({
+      initial,
+      genres: values.sort((a, b) => a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => {
+      if (a.initial === "0-9") return 1;
+      if (b.initial === "0-9") return -1;
+      return a.initial.localeCompare(b.initial);
+    });
+}
+
+function getGenreInitial(name: string): string {
+  const first = name.trim().charAt(0).toUpperCase();
+  return /^[0-9]$/.test(first) ? "0-9" : first || "#";
 }
 
 function getResponsiveNodeDefault(width: number): number {
@@ -506,6 +600,13 @@ function normalizeNodeBudget(value: string | null, viewportDefault: number): num
 function clampNodeBudget(value: number, max: number): number {
   const upper = Math.max(NODE_BUDGET_MIN, max);
   return Math.min(Math.max(NODE_BUDGET_MIN, Math.round(value)), upper);
+}
+
+function formatYearSpan(start: number | null, end: number | null): string {
+  if (start && end) return start === end ? String(start) : `${start}-${end}`;
+  if (start) return `Since ${start}`;
+  if (end) return `To ${end}`;
+  return "Unknown";
 }
 
 function formatNumber(value: number): string {

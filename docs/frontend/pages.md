@@ -24,7 +24,7 @@ This document covers all route-level page components in russ.fm.
 | `/search?q=…` | `BrowseHeader` with `Query / Results / Albums / Artists` count strip → segregated result list. |
 | `/wrapped/:year` | Editorial dossier by default — giant `YYYY` word treatment, KPI strip, Album of the year, Top 10 list, Top artists grid, Genres + Decades breakdowns, 12-bar monthly summary + one `DragWall` per month, year pager. Wrapped JSON image paths are normalized through `image-utils` for R2 assets in production. `Presentation` toggle returns the full-screen snap-scroll experience. |
 | `/wrapped/ytd` | Redirects to current year; same dossier shape with a `YEAR TO DATE` kicker and projected-total subtitle, inheriting the `/wrapped/:year` asset URL handling. |
-| `/genres` | Paper/ink D3 genre explorer: one graph surface linking all genres or a selected genre to related genres, artists, and artist records with compact popup controls. |
+| `/genres` | Dossier-style genre overview: `BrowseHeader` count strip → ranked genre atlas with cover samples and tabbed A-Z index → embedded paper/ink D3 map linking all genres or a selected genre to related genres, artists, and records. |
 
 ## Route Map
 

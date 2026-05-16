@@ -1,3 +1,5 @@
+import type { Album as CollectionAlbum } from "@/types/album";
+
 interface AlbumServices {
   apple_music?: {
     raw_attributes?: {
@@ -9,7 +11,7 @@ interface AlbumServices {
   };
 }
 
-interface Album {
+interface ServiceGenreAlbum {
   genres?: string[];
   services?: AlbumServices;
 }
@@ -18,7 +20,7 @@ interface Album {
  * Gets clean genres for an album, prioritizing Apple Music and Spotify data
  * Filters out low-quality genres (all lowercase, starting with numbers)
  */
-export function getCleanGenres(album: Album): string[] {
+export function getCleanGenres(album: ServiceGenreAlbum): string[] {
   // First priority: Apple Music genreNames (filtered)
   if (album.services?.apple_music?.raw_attributes?.genreNames?.length) {
     return album.services.apple_music.raw_attributes.genreNames.filter(genre => 
@@ -80,4 +82,19 @@ export function filterLowQualityGenres(genres: string[], artistName?: string): s
  */
 export function getCleanGenresFromArray(genres: string[], artistName?: string): string[] {
   return filterLowQualityGenres(genres, artistName);
+}
+
+/**
+ * Shared collection genre extractor.
+ * Uses both primary genres and styles, then applies the same cleanup and
+ * per-album de-duplication everywhere genre counts are shown.
+ */
+export function getCleanGenreTermsFromAlbum(album: CollectionAlbum): string[] {
+  return getCleanGenresFromArray(
+    [
+      ...(album.genre_names ?? []),
+      ...(album.styles ?? []),
+    ],
+    album.release_artist,
+  );
 }

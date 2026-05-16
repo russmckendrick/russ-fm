@@ -1,4 +1,5 @@
 import type { Album } from '@/types/album';
+import { getCleanGenreTermsFromAlbum } from '@/lib/genreUtils';
 
 export type FacetKey = 'label' | 'decade' | 'country' | 'genre';
 
@@ -88,10 +89,7 @@ export const FACETS: Record<FacetKey, FacetConfig> = {
     listTitle: 'Browse by genre',
     listKicker: 'Browse · russ.fm / genres',
     detailKicker: 'Genre dossier',
-    extract: (album) => Array.from(new Set([
-      ...(album.genre_names ?? []),
-      ...(album.styles ?? []),
-    ])).filter(Boolean),
+    extract: getCleanGenreTermsFromAlbum,
     listSubtitle: 'Albums grouped by genre and style across the collection.',
   },
 };

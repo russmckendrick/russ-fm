@@ -23,6 +23,7 @@ const collection = [
     artist: "North Sea Relay",
     artistSlug: "north-sea-relay",
     genres: ["Electronic", "Ambient", "music", "lowercase", "3-Step"],
+    styles: ["IDM", "Electronic"],
     releaseSlug: "low-frequency-cathedral-100",
     year: "2001-01-01",
     added: "2026-01-12",
@@ -69,10 +70,12 @@ describe("genreExplorer", () => {
   it("builds genre, artist, related genre, and album summaries from collection data", () => {
     const data = buildGenreExplorer(collection);
     const electronic = resolveGenre(data.genres, "Electronic");
+    const idm = resolveGenre(data.genres, "IDM");
 
     expect(data.totalAlbums).toBe(5);
     expect(data.totalArtists).toBe(2);
     expect(electronic?.albumCount).toBe(3);
+    expect(idm?.albumCount).toBe(1);
     expect(electronic?.artistCount).toBe(1);
     expect(electronic?.yearStart).toBe(1999);
     expect(electronic?.yearEnd).toBe(2014);
@@ -167,6 +170,7 @@ function album({
   artist,
   artistSlug,
   genres,
+  styles,
   releaseSlug,
   year,
   added,
@@ -175,6 +179,7 @@ function album({
   artist: string;
   artistSlug: string;
   genres: string[];
+  styles?: string[];
   releaseSlug: string;
   year: string;
   added: string;
@@ -195,6 +200,7 @@ function album({
       },
     ],
     genre_names: genres,
+    styles,
     uri_release: `/album/${releaseSlug}/`,
     uri_artist: `/artist/${artistSlug}/`,
     date_added: added,

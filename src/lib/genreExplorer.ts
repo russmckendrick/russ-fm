@@ -1,5 +1,5 @@
 import type { Album } from "@/types/album";
-import { getCleanGenresFromArray } from "@/lib/genreUtils";
+import { getCleanGenreTermsFromAlbum } from "@/lib/genreUtils";
 import {
   getAlbumImageFromData,
   getAlbumSlug,
@@ -103,10 +103,7 @@ export function buildGenreExplorer(collection: Album[]): GenreExplorerData {
   const globalYears: number[] = [];
 
   collection.forEach((album) => {
-    const cleanGenres = getCleanGenresFromArray(
-      album.genre_names || [],
-      album.release_artist,
-    );
+    const cleanGenres = getCleanGenreTermsFromAlbum(album);
 
     if (!cleanGenres.length) return;
 

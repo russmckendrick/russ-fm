@@ -17,7 +17,7 @@ const TILES: BrowseTile[] = [
     to: '/genres',
     num: '01',
     label: 'Genres',
-    blurb: 'A living network — drag, drill, and follow how genres connect through the artists you collect.',
+    blurb: 'A ranked atlas of every genre and style, with dossiers and a living network map.',
   },
   {
     to: '/labels',
@@ -55,7 +55,7 @@ export function BrowseIndexPage() {
         num="00"
         kicker="Browse · russ.fm / catalogue"
         title="Slice the catalogue"
-        subtitle="Pick the dimension that matters today — labels for the wax-nerd view, decades for the time-capsule view, countries for the geography of pressings."
+        subtitle="Pick the dimension that matters today — genres for the atlas and network view, labels for the wax-nerd view, decades for the time-capsule view, countries for the geography of pressings."
       />
 
       <ul className="grid gap-[1px] border border-rule-strong bg-rule-strong md:grid-cols-2">
