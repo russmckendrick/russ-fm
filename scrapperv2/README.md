@@ -132,9 +132,9 @@ All commands and the interactive TUI are implemented.
 
 Running `scrapper` with no arguments launches the interactive TUI: a home menu into a
 **Dashboard** (DB stats), searchable **Releases** and **Artists** browsers, live **service
-probes**, and a **Collection** runner that processes the unprocessed resume queue in the
-background with a progress gauge and streaming log. Keys: `↑/↓` select, `Enter` open/refresh,
-type to search, `r` run/re-probe, `Esc` back, `q` quit.
+probes**, and a **Collection** runner that processes a configurable number of unprocessed releases (default 1,
+editable with digits or `↑/↓`) in the background with a progress gauge and streaming log. Keys:
+`↑/↓` select, `Enter` open/refresh, type to search, `r` run/re-probe, `Esc` back, `q` quit.
 
 Network commands are wired and dispatch today; their live bodies report "not yet ported" until
 the orchestration layer lands.

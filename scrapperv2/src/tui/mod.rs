@@ -68,6 +68,7 @@ struct App {
     log: Vec<String>,
     progress: Option<(usize, usize)>,
     running: bool,
+    collection_limit: String,
 
     tx: UnboundedSender<Msg>,
     rx: UnboundedReceiver<Msg>,
@@ -94,6 +95,7 @@ impl App {
             log: Vec::new(),
             progress: None,
             running: false,
+            collection_limit: "1".into(),
             tx,
             rx,
             status: "↑/↓ select · Enter open · q quit".into(),
@@ -155,6 +157,17 @@ impl App {
         });
     }
 
+    /// The parsed run count (defaults to 1, minimum 1).
+    fn collection_count(&self) -> usize {
+        self.collection_limit.parse::<usize>().unwrap_or(0).max(1)
+    }
+
+    /// Step the collection count up or down (keeps the displayed string in sync).
+    fn step_collection_limit(&mut self, delta: isize) {
+        let next = (self.collection_count() as isize + delta).max(1) as usize;
+        self.collection_limit = next.to_string();
+    }
+
     fn start_collection(&mut self) {
         if self.running {
             return;
@@ -165,8 +178,9 @@ impl App {
         let cfg = self.cfg.clone();
         let db = self.db.clone();
         let tx = self.tx.clone();
+        let limit = self.collection_count();
         tokio::spawn(async move {
-            run_collection_task(cfg, db, tx).await;
+            run_collection_task(cfg, db, tx, limit).await;
         });
     }
 
@@ -218,7 +232,7 @@ impl App {
 }
 
 /// Background collection pass: process the unprocessed resume queue, streaming progress.
-async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>) {
+async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, limit: usize) {
     let services = Services::new(&cfg);
     if !services.discogs.is_configured() {
         let _ = tx.send(Msg::Log("Discogs not configured".into()));
@@ -234,8 +248,8 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>) {
             return;
         }
     };
-    // Only the unprocessed (not-yet-enriched) releases.
-    let ids: Vec<String> = entries
+    // Only the unprocessed (not-yet-enriched) releases, capped at the requested count.
+    let mut ids: Vec<String> = entries
         .iter()
         .filter_map(|v| v.get("id").map(|i| match i {
             serde_json::Value::Number(n) => n.to_string(),
@@ -244,9 +258,11 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>) {
         }))
         .filter(|id| !db.has_enriched_release(id).unwrap_or(false))
         .collect();
+    let available = ids.len();
+    ids.truncate(limit);
 
     let total = ids.len();
-    let _ = tx.send(Msg::Log(format!("{total} unprocessed release(s)")));
+    let _ = tx.send(Msg::Log(format!("processing {total} of {available} unprocessed release(s)")));
     let client = crate::ops::release::image_client();
 
     for (i, id) in ids.iter().enumerate() {
@@ -350,11 +366,19 @@ fn handle_key(app: &mut App, code: KeyCode) {
                 app.start_probes();
             }
         }
-        Screen::Collection => {
-            if code == KeyCode::Char('r') {
-                app.start_collection();
+        Screen::Collection => match code {
+            KeyCode::Char('r') => app.start_collection(),
+            _ if app.running => {}
+            KeyCode::Up | KeyCode::Char('+') | KeyCode::Char('=') => app.step_collection_limit(1),
+            KeyCode::Down | KeyCode::Char('-') => app.step_collection_limit(-1),
+            KeyCode::Char(c) if c.is_ascii_digit() && app.collection_limit.len() < 5 => {
+                app.collection_limit.push(c);
             }
-        }
+            KeyCode::Backspace => {
+                app.collection_limit.pop();
+            }
+            _ => {}
+        },
         Screen::Dashboard => {}
     }
 }
@@ -374,7 +398,7 @@ fn draw(f: &mut Frame, app: &mut App) {
         Screen::Home => "↑/↓ select · Enter open · q quit",
         Screen::Releases | Screen::Artists => "type to search · Enter refresh · ↑/↓ scroll · Esc back",
         Screen::Services => "r re-probe · Esc back",
-        Screen::Collection => "r run · Esc back",
+        Screen::Collection => "type/↑/↓ set count · r run · Esc back",
         Screen::Dashboard => "Esc back",
     };
     f.render_widget(Paragraph::new(hint).style(Style::default().fg(theme::DIM)), chunks[2]);
@@ -480,7 +504,21 @@ fn draw_services(f: &mut Frame, area: Rect, app: &App) {
 }
 
 fn draw_collection(f: &mut Frame, area: Rect, app: &App) {
-    let rows = Layout::vertical([Constraint::Length(3), Constraint::Min(0)]).split(area);
+    let rows = Layout::vertical([Constraint::Length(3), Constraint::Length(3), Constraint::Min(0)]).split(area);
+
+    // Editable run count.
+    let count_style = if app.running { Style::default().fg(theme::DIM) } else { Style::default().fg(theme::ACCENT) };
+    let count = Paragraph::new(Line::from(vec![
+        Span::raw(" Process "),
+        Span::styled(
+            if app.collection_limit.is_empty() { "1".to_string() } else { app.collection_limit.clone() },
+            count_style.add_modifier(Modifier::BOLD),
+        ),
+        Span::raw(" release(s) per run"),
+    ]))
+    .block(Block::default().borders(Borders::ALL).title(" Count ").border_style(count_style));
+    f.render_widget(count, rows[0]);
+
     let (done, total) = app.progress.unwrap_or((0, 0));
     let ratio = if total > 0 { done as f64 / total as f64 } else { 0.0 };
     let label = if app.running { format!("{done}/{total}") } else if total > 0 { format!("done {done}/{total}") } else { "press r to run".into() };
@@ -489,13 +527,13 @@ fn draw_collection(f: &mut Frame, area: Rect, app: &App) {
         .gauge_style(Style::default().fg(theme::ACCENT))
         .ratio(ratio.clamp(0.0, 1.0))
         .label(label);
-    f.render_widget(gauge, rows[0]);
+    f.render_widget(gauge, rows[1]);
 
-    let visible = rows[1].height.saturating_sub(2) as usize;
+    let visible = rows[2].height.saturating_sub(2) as usize;
     let start = app.log.len().saturating_sub(visible);
     let text: Vec<Line> = app.log[start..].iter().map(|l| Line::from(l.clone())).collect();
     f.render_widget(
         Paragraph::new(text).wrap(Wrap { trim: true }).block(Block::default().borders(Borders::ALL).title(" Log ")),
-        rows[1],
+        rows[2],
     );
 }
