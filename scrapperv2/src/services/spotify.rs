@@ -23,6 +23,7 @@ pub struct SpotifyService {
     client_id: String,
     client_secret: String,
     market: String,
+    search_limit: u32,
     token: Arc<Mutex<Option<Token>>>,
     limiter: Limiter,
     retries: u32,
@@ -36,6 +37,7 @@ impl SpotifyService {
             client_id: cfg.spotify.client_id.clone(),
             client_secret: cfg.spotify.client_secret.clone(),
             market: cfg.spotify.market.clone(),
+            search_limit: cfg.processing.search_limit,
             token: Arc::new(Mutex::new(None)),
             limiter: Limiter::per_minute(100),
             retries: cfg.processing.retry_attempts,
@@ -108,7 +110,7 @@ impl SpotifyService {
                 ("q", format!("{artist} {album}")),
                 ("type", "album".into()),
                 ("market", self.market.clone()),
-                ("limit", "50".into()),
+                ("limit", self.search_limit.clamp(1, 50).to_string()),
             ],
         )
         .await

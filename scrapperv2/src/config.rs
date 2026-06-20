@@ -254,6 +254,9 @@ pub struct ProcessingConfig {
     pub retry_delay: u64,
     #[serde(default = "default_concurrent")]
     pub concurrent_requests: u32,
+    /// How many candidate matches to fetch per service when searching (Apple/Spotify).
+    #[serde(default = "default_search_limit")]
+    pub search_limit: u32,
 }
 
 impl Default for ProcessingConfig {
@@ -263,8 +266,13 @@ impl Default for ProcessingConfig {
             retry_attempts: default_retry_attempts(),
             retry_delay: default_retry_delay(),
             concurrent_requests: default_concurrent(),
+            search_limit: default_search_limit(),
         }
     }
+}
+
+fn default_search_limit() -> u32 {
+    50
 }
 
 fn default_batch_size() -> u32 {

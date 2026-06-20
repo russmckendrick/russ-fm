@@ -27,6 +27,7 @@ pub struct AppleMusicService {
     team_id: String,
     private_key_pem: Option<Vec<u8>>,
     storefront: String,
+    search_limit: u32,
     token: Arc<Mutex<Option<String>>>,
     limiter: Limiter,
     retries: u32,
@@ -42,6 +43,7 @@ impl AppleMusicService {
             team_id: cfg.apple_music.team_id.clone(),
             private_key_pem,
             storefront: cfg.apple_music.storefront.clone(),
+            search_limit: cfg.processing.search_limit,
             token: Arc::new(Mutex::new(None)),
             limiter: Limiter::per_minute(60),
             retries: cfg.processing.retry_attempts,
@@ -116,13 +118,36 @@ impl AppleMusicService {
         }
     }
 
+    /// Search albums. Apple caps `limit` at 25 per request, so we paginate with `offset` to
+    /// gather up to `search_limit` candidates, returning the usual `results.albums.data` shape.
     pub async fn search_release(&self, artist: &str, album: &str) -> ServiceResult<Value> {
         let path = format!("/catalog/{}/search", self.storefront);
-        self.get(
-            &path,
-            &[("term", format!("{artist} {album}")), ("types", "albums".into()), ("limit", "25".into())],
-        )
-        .await
+        let term = format!("{artist} {album}");
+        let want = self.search_limit.max(1);
+        let mut all: Vec<Value> = Vec::new();
+        let mut offset = 0u32;
+        while (all.len() as u32) < want {
+            let page = self
+                .get(
+                    &path,
+                    &[
+                        ("term", term.clone()),
+                        ("types", "albums".into()),
+                        ("limit", "25".into()),
+                        ("offset", offset.to_string()),
+                    ],
+                )
+                .await?;
+            let data = page.get("results").and_then(|r| r.get("albums")).and_then(|a| a.get("data")).and_then(|d| d.as_array()).cloned().unwrap_or_default();
+            let n = data.len();
+            all.extend(data);
+            if n < 25 {
+                break; // last page
+            }
+            offset += 25;
+        }
+        all.truncate(want as usize);
+        Ok(serde_json::json!({ "results": { "albums": { "data": all } } }))
     }
 
     pub async fn get_album(&self, album_id: &str) -> ServiceResult<Value> {
