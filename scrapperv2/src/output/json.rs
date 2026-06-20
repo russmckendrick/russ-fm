@@ -101,6 +101,9 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
     let name = entry.get("name").and_then(|n| n.as_str()).unwrap_or("").to_string();
     let role = entry.get("role").cloned().unwrap_or_else(|| json!(""));
     let entry_discogs = entry.get("discogs_id").and_then(|d| d.as_str()).map(String::from);
+    // Biography/Wikipedia URL may be embedded on the entry (fresh Wikipedia lookup); prefer those.
+    let embedded_bio = entry.get("biography").and_then(|b| b.as_str()).filter(|s| !s.is_empty()).map(String::from);
+    let embedded_wiki = entry.get("wikipedia_url").and_then(|w| w.as_str()).filter(|s| !s.is_empty()).map(String::from);
 
     // Look up the rich artist record by discogs_id, falling back to name.
     let rec = entry_discogs
@@ -114,7 +117,8 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
     obj.insert("name".into(), json!(name));
     obj.insert("role".into(), role);
     if let Some(r) = &rec {
-        obj.insert("biography".into(), r.biography.clone().map(Value::from).unwrap_or(Value::Null));
+        let bio = embedded_bio.clone().or_else(|| r.biography.clone());
+        obj.insert("biography".into(), bio.map(Value::from).unwrap_or(Value::Null));
         obj.insert(
             "discogs_id".into(),
             entry_discogs.clone().map(Value::from).or_else(|| r.discogs_id.clone().map(Value::from)).unwrap_or(Value::Null),
@@ -122,7 +126,8 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
         obj.insert("apple_music_id".into(), r.apple_music_id.clone().map(Value::from).unwrap_or(Value::Null));
         obj.insert("spotify_id".into(), r.spotify_id.clone().map(Value::from).unwrap_or(Value::Null));
         obj.insert("lastfm_mbid".into(), r.lastfm_mbid.clone().map(Value::from).unwrap_or(Value::Null));
-        obj.insert("wikipedia_url".into(), r.wikipedia_url.clone().map(Value::from).unwrap_or(Value::Null));
+        let wiki = embedded_wiki.clone().or_else(|| r.wikipedia_url.clone());
+        obj.insert("wikipedia_url".into(), wiki.map(Value::from).unwrap_or(Value::Null));
         // discogs_original_name is only present when the artist's raw_data has a discogs section.
         if let Some(discogs) = r.raw_data.get("discogs") {
             let original = discogs
@@ -133,12 +138,12 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
             obj.insert("discogs_original_name".into(), json!(original));
         }
     } else {
-        obj.insert("biography".into(), Value::Null);
+        obj.insert("biography".into(), embedded_bio.map(Value::from).unwrap_or(Value::Null));
         obj.insert("discogs_id".into(), entry_discogs.map(Value::from).unwrap_or(Value::Null));
         obj.insert("apple_music_id".into(), Value::Null);
         obj.insert("spotify_id".into(), Value::Null);
         obj.insert("lastfm_mbid".into(), Value::Null);
-        obj.insert("wikipedia_url".into(), Value::Null);
+        obj.insert("wikipedia_url".into(), embedded_wiki.map(Value::from).unwrap_or(Value::Null));
     }
     Value::Object(obj)
 }

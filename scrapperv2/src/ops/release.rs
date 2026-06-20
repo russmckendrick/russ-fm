@@ -17,6 +17,32 @@ use crate::util::now_iso;
 use crate::Config;
 use tokio::sync::{mpsc::UnboundedSender, oneshot};
 
+/// Requests sent from the enrichment pipeline to an interactive UI (the TUI).
+pub enum UiRequest {
+    Pick(PickRequest),
+    Describe(DescribeRequest),
+}
+
+/// An interactive Perplexity description round: show the current preview and collect the next
+/// action (regenerate with edited context, accept, or skip).
+pub struct DescribeRequest {
+    pub artist: String,
+    pub album: String,
+    pub preview: String,
+    pub context: String,
+    pub reply: oneshot::Sender<DescribeAction>,
+}
+
+/// What the user chose in a [`DescribeRequest`].
+pub enum DescribeAction {
+    /// (Re)generate the description using this context.
+    Generate(String),
+    /// Keep the current description.
+    Accept,
+    /// Don't add a description.
+    Skip,
+}
+
 /// A request for the user to choose among candidate matches (used by the TUI modal picker).
 pub struct PickRequest {
     /// What is being matched, e.g. "Spotify · BASIC — BASIC".
@@ -35,7 +61,7 @@ pub enum MatchPicker {
     /// Prompt on the terminal via dialoguer (CLI `--interactive`).
     Cli,
     /// Ask the TUI to show a modal picker and await the reply.
-    Tui(UnboundedSender<PickRequest>),
+    Tui(UnboundedSender<UiRequest>),
 }
 
 impl MatchPicker {
@@ -52,13 +78,124 @@ impl MatchPicker {
             MatchPicker::Tui(tx) => {
                 let (reply, rx) = oneshot::channel();
                 let req = PickRequest { prompt: prompt.into(), header: header.to_vec(), rows: rows.to_vec(), reply };
-                if tx.send(req).is_err() {
+                if tx.send(UiRequest::Pick(req)).is_err() {
                     return None;
                 }
                 rx.await.ok().flatten()
             }
         }
     }
+
+    /// One round of interactive description: show `preview`/`context`, return the user's action.
+    async fn describe(&self, artist: &str, album: &str, preview: &str, context: &str) -> DescribeAction {
+        match self {
+            MatchPicker::First => DescribeAction::Skip,
+            MatchPicker::Cli => cli_describe(artist, album, preview, context),
+            MatchPicker::Tui(tx) => {
+                let (reply, rx) = oneshot::channel();
+                let req = DescribeRequest {
+                    artist: artist.into(),
+                    album: album.into(),
+                    preview: preview.into(),
+                    context: context.into(),
+                    reply,
+                };
+                if tx.send(UiRequest::Describe(req)).is_err() {
+                    return DescribeAction::Skip;
+                }
+                rx.await.unwrap_or(DescribeAction::Skip)
+            }
+        }
+    }
+}
+
+/// CLI description loop step via dialoguer.
+fn cli_describe(artist: &str, album: &str, preview: &str, context: &str) -> DescribeAction {
+    use dialoguer::{theme::ColorfulTheme, Input, Select};
+    tokio::task::block_in_place(|| {
+        if preview.is_empty() {
+            let ctx: String = Input::with_theme(&ColorfulTheme::default())
+                .with_prompt(format!("Perplexity context for {artist} — {album} (blank for none)"))
+                .allow_empty(true)
+                .with_initial_text(context)
+                .interact_text()
+                .unwrap_or_default();
+            DescribeAction::Generate(ctx)
+        } else {
+            println!("\n{preview}\n");
+            let choice = Select::with_theme(&ColorfulTheme::default())
+                .with_prompt("Description")
+                .items(&["Accept", "Regenerate (new context)", "Skip"])
+                .default(0)
+                .interact_opt()
+                .ok()
+                .flatten();
+            match choice {
+                Some(0) => DescribeAction::Accept,
+                Some(1) => {
+                    let ctx: String = Input::with_theme(&ColorfulTheme::default())
+                        .with_prompt("New context (blank for none)")
+                        .allow_empty(true)
+                        .interact_text()
+                        .unwrap_or_default();
+                    DescribeAction::Generate(ctx)
+                }
+                _ => DescribeAction::Skip,
+            }
+        }
+    })
+}
+
+/// Interactive Perplexity description. Headless (`First`) skips; otherwise loops
+/// generate → preview → accept/regenerate/skip. Returns the stored description object.
+async fn enrich_perplexity(
+    services: &Services,
+    picker: &MatchPicker,
+    artist: &str,
+    album: &str,
+    genres: &[String],
+    labels: &[String],
+    initial_context: Option<&str>,
+) -> Option<Value> {
+    if !services.perplexity.is_configured() || matches!(picker, MatchPicker::First) {
+        return None;
+    }
+    let mut context = initial_context.unwrap_or("").to_string();
+    let mut preview = String::new();
+    let mut data: Option<Value> = None;
+    loop {
+        match picker.describe(artist, album, &preview, &context).await {
+            DescribeAction::Generate(ctx) => {
+                context = ctx;
+                let ctx_opt = (!context.trim().is_empty()).then_some(context.as_str());
+                match services.perplexity.generate_album_description(artist, album, genres, labels, ctx_opt).await {
+                    Ok(v) => {
+                        preview = v.get("description").and_then(|d| d.as_str()).unwrap_or("").to_string();
+                        data = Some(v);
+                    }
+                    Err(e) => {
+                        preview = format!("(generation failed: {e})");
+                        data = None;
+                    }
+                }
+            }
+            DescribeAction::Accept => return data,
+            DescribeAction::Skip => return None,
+        }
+    }
+}
+
+/// Look up the primary artist's Wikipedia summary; returns (url, biography).
+async fn enrich_wikipedia(services: &Services, artist: &str) -> Option<(Option<String>, String)> {
+    let summary = services.wikipedia.get_page_summary(artist).await.ok()?;
+    let extract = summary.get("extract").and_then(|e| e.as_str()).filter(|s| s.len() > 50)?;
+    let url = summary
+        .get("content_urls")
+        .and_then(|c| c.get("desktop"))
+        .and_then(|d| d.get("page"))
+        .and_then(|p| p.as_str())
+        .map(String::from);
+    Some((url, extract.to_string()))
 }
 
 /// Which services contributed enrichment for a release, and whether artwork was saved.
@@ -67,6 +204,8 @@ pub struct EnrichFlags {
     pub apple: bool,
     pub spotify: bool,
     pub lastfm: bool,
+    pub wikipedia: bool,
+    pub perplexity: bool,
     pub image: bool,
 }
 
@@ -133,7 +272,7 @@ pub async fn process_release(
         .map(clean_artist_name)
         .unwrap_or_default();
 
-    let artists_json: Vec<Value> = discogs
+    let mut artists_json: Vec<Value> = discogs
         .get("artists")
         .and_then(|a| a.as_array())
         .map(|arr| {
@@ -207,7 +346,21 @@ pub async fn process_release(
             enrich_lastfm(services, &primary_artist, &title),
         )
     };
-    let mut flags = EnrichFlags { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), image: false };
+    let mut flags = EnrichFlags {
+        apple: apple.is_some(),
+        spotify: spotify.is_some(),
+        lastfm: lastfm.is_some(),
+        ..Default::default()
+    };
+
+    // Wikipedia bio for the primary artist (embedded into the first artist entry).
+    if let Some((url, bio)) = enrich_wikipedia(services, &primary_artist).await {
+        flags.wikipedia = true;
+        if let Some(first) = artists_json.first_mut().and_then(|a| a.as_object_mut()) {
+            first.insert("biography".into(), json!(bio));
+            first.insert("wikipedia_url".into(), url.map(Value::from).unwrap_or(Value::Null));
+        }
+    }
 
     // Assemble raw_data + external IDs.
     let mut raw = Map::new();
@@ -221,6 +374,19 @@ pub async fn process_release(
     if let Some(l) = &lastfm {
         raw.insert("lastfm".into(), l.clone());
     }
+
+    // Perplexity album description (interactive; headless skips).
+    let genre_strs: Vec<String> = discogs
+        .get("genres")
+        .and_then(|g| g.as_array())
+        .map(|a| a.iter().filter_map(|s| s.as_str().map(String::from)).collect())
+        .unwrap_or_default();
+    let label_strs: Vec<String> = name_list("labels").iter().filter_map(|v| v.as_str().map(String::from)).collect();
+    if let Some(desc) = enrich_perplexity(services, picker, &primary_artist, &title, &genre_strs, &label_strs, None).await {
+        raw.insert("perplexity".into(), desc);
+        flags.perplexity = true;
+    }
+
     let raw_data = Value::Object(raw);
 
     let existing = db.get_release_by_discogs_id(discogs_id)?;
@@ -318,7 +484,10 @@ fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
     println!("\n  {}  ({})", rec.title, rec.year.unwrap_or(0));
     println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
     println!("  tracks: {}", rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0));
-    println!("  enrichment: apple {} | spotify {} | lastfm {}", mark(flags.apple), mark(flags.spotify), mark(flags.lastfm));
+    println!(
+        "  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}",
+        mark(flags.apple), mark(flags.spotify), mark(flags.lastfm), mark(flags.wikipedia), mark(flags.perplexity)
+    );
 }
 
 /// CLI fallback picker: render a simple table and read a choice (Esc / blank skips).

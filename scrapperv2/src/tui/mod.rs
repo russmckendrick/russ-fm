@@ -10,7 +10,7 @@ use ratatui::widgets::{Block, Borders, Cell, Gauge, List, ListItem, ListState, P
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 
 use crate::db::{ArtistSummary, ReleaseSummary};
-use crate::ops::release::{MatchPicker, PickRequest};
+use crate::ops::release::{DescribeAction, MatchPicker, UiRequest};
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -36,6 +36,16 @@ impl PendingPick {
     fn len(&self) -> usize {
         self.rows.len() + 1
     }
+}
+
+/// An interactive Perplexity description prompt: edit context, (re)generate, accept or skip.
+struct PendingDescribe {
+    artist: String,
+    album: String,
+    preview: String,
+    context: String,
+    reply: Option<tokio::sync::oneshot::Sender<DescribeAction>>,
+    generating: bool,
 }
 
 mod theme {
@@ -95,12 +105,13 @@ struct App {
     running: bool,
     collection_limit: String,
     pending: Option<PendingPick>,
+    describe: Option<PendingDescribe>,
     autostart: bool,
 
     tx: UnboundedSender<Msg>,
     rx: UnboundedReceiver<Msg>,
-    pick_tx: UnboundedSender<PickRequest>,
-    pick_rx: UnboundedReceiver<PickRequest>,
+    pick_tx: UnboundedSender<UiRequest>,
+    pick_rx: UnboundedReceiver<UiRequest>,
     status: String,
 }
 
@@ -127,6 +138,7 @@ impl App {
             running: false,
             collection_limit: "1".into(),
             pending: None,
+            describe: None,
             autostart: false,
             tx,
             rx,
@@ -243,12 +255,24 @@ impl App {
     }
 
     fn drain_messages(&mut self) {
-        // Surface a pending match-picker request (one at a time; the task blocks until answered).
-        if self.pending.is_none() {
-            if let Ok(req) = self.pick_rx.try_recv() {
-                let mut state = TableState::default();
-                state.select(Some(0));
-                self.pending = Some(PendingPick { prompt: req.prompt, header: req.header, rows: req.rows, reply: Some(req.reply), state });
+        // Surface interactive requests (one active at a time; the task blocks until answered).
+        while let Ok(req) = self.pick_rx.try_recv() {
+            match req {
+                UiRequest::Pick(p) => {
+                    let mut state = TableState::default();
+                    state.select(Some(0));
+                    self.pending = Some(PendingPick { prompt: p.prompt, header: p.header, rows: p.rows, reply: Some(p.reply), state });
+                }
+                UiRequest::Describe(d) => {
+                    self.describe = Some(PendingDescribe {
+                        artist: d.artist,
+                        album: d.album,
+                        preview: d.preview,
+                        context: d.context,
+                        reply: Some(d.reply),
+                        generating: false,
+                    });
+                }
             }
         }
         while let Ok(msg) = self.rx.try_recv() {
@@ -276,7 +300,7 @@ impl App {
 
 /// Background collection pass: process the first N of the collection (newest first), force-
 /// refreshed, with interactive match-picking via the TUI modal and step-by-step feedback.
-async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick_tx: UnboundedSender<PickRequest>, limit: usize) {
+async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick_tx: UnboundedSender<UiRequest>, limit: usize) {
     let log = |s: String| { let _ = tx.send(Msg::Log(s)); };
     let services = Services::new(&cfg);
     if !services.discogs.is_configured() {
@@ -317,7 +341,10 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick
                 let _ = db.record_processed(&rec.id, id, None, None);
                 let m = |b: bool| if b { "✓" } else { "–" };
                 log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
-                log(format!("    apple {} · spotify {} · lastfm {} · artwork {} · saved ✓", m(f.apple), m(f.spotify), m(f.lastfm), m(f.image)));
+                log(format!(
+                    "    apple {} · spotify {} · lastfm {} · wiki {} · perplexity {} · artwork {} · saved ✓",
+                    m(f.apple), m(f.spotify), m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
+                ));
             }
             Err(e) => log(format!("  ✗ {id} — {e}")),
         }
@@ -380,6 +407,41 @@ async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Res
 }
 
 fn handle_key(app: &mut App, code: KeyCode) {
+    // Interactive Perplexity description captures input while open.
+    if let Some(d) = app.describe.as_mut() {
+        if d.generating {
+            return; // wait for generation to finish
+        }
+        match code {
+            KeyCode::Enter => {
+                let ctx = d.context.clone();
+                if let Some(reply) = d.reply.take() {
+                    let _ = reply.send(DescribeAction::Generate(ctx));
+                    d.generating = true;
+                    d.preview = "generating…".into();
+                }
+            }
+            KeyCode::Tab if !d.preview.is_empty() => {
+                if let Some(reply) = d.reply.take() {
+                    let _ = reply.send(DescribeAction::Accept);
+                }
+                app.describe = None;
+            }
+            KeyCode::Esc => {
+                if let Some(reply) = d.reply.take() {
+                    let _ = reply.send(DescribeAction::Skip);
+                }
+                app.describe = None;
+            }
+            KeyCode::Backspace => {
+                d.context.pop();
+            }
+            KeyCode::Char(c) => d.context.push(c),
+            _ => {}
+        }
+        return;
+    }
+
     // Match-picker captures all input while open.
     if let Some(pick) = app.pending.as_mut() {
         let len = pick.len();
@@ -482,7 +544,15 @@ fn draw(f: &mut Frame, app: &mut App) {
     let chunks = Layout::vertical([Constraint::Length(3), Constraint::Min(0), Constraint::Length(1)]).split(f.area());
     draw_header(f, chunks[0], app);
 
-    // When a match-picker is open it owns the whole content area.
+    // Interactive overlays own the whole content area.
+    if app.describe.is_some() {
+        draw_describe(f, chunks[1], app);
+        f.render_widget(
+            Paragraph::new("type context · Enter (re)generate · Tab accept · Esc skip").style(Style::default().fg(theme::DIM)),
+            chunks[2],
+        );
+        return;
+    }
     if app.pending.is_some() {
         draw_picker(f, chunks[1], app);
         f.render_widget(
@@ -509,6 +579,34 @@ fn draw(f: &mut Frame, app: &mut App) {
     };
     f.render_widget(Paragraph::new(hint).style(Style::default().fg(theme::DIM)), chunks[2]);
     let _ = &app.status;
+}
+
+fn draw_describe(f: &mut Frame, area: Rect, app: &App) {
+    let d = app.describe.as_ref().expect("describe active");
+    let rows = Layout::vertical([Constraint::Length(3), Constraint::Min(0)]).split(area);
+
+    // Context input.
+    let ctx = Paragraph::new(format!(" {}", d.context)).block(
+        Block::default()
+            .borders(Borders::ALL)
+            .title(" Additional context (optional) ")
+            .border_style(Style::default().fg(theme::ACCENT)),
+    );
+    f.render_widget(ctx, rows[0]);
+
+    // Preview.
+    let body = if d.preview.is_empty() {
+        "Press Enter to generate a description.".to_string()
+    } else {
+        d.preview.clone()
+    };
+    let preview = Paragraph::new(body).wrap(Wrap { trim: true }).block(
+        Block::default()
+            .borders(Borders::ALL)
+            .title(format!(" Perplexity description — {} — {} ", d.artist, d.album))
+            .border_style(Style::default().fg(theme::ACCENT)),
+    );
+    f.render_widget(preview, rows[1]);
 }
 
 fn draw_picker(f: &mut Frame, area: Rect, app: &mut App) {

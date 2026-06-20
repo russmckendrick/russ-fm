@@ -143,6 +143,11 @@ first N releases (from `--to`/`--limit`) — interactive enrichment *is* the TUI
 modal match-pickers and live feedback. Non-interactive `collection` stays headless; CLI
 `release --interactive` prompts inline on the terminal.
 
+Each release is enriched across Discogs, Apple Music, Spotify, Last.fm and **Wikipedia** (artist
+bio), and — interactively — **Perplexity**: the description modal shows what's being described,
+lets you add free-text context, and (re)generate before accepting. (TheAudioDB is artist-only;
+it's used by the `artist` command.) The feedback line reports each service's result.
+
 ### Services
 
 `scrapper test` probes all seven concurrently with the real credentials:
