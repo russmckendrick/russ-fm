@@ -1,0 +1,132 @@
+# scrapperv2
+
+A cohesive Rust rewrite of the Python `scrapper/` — music-collection enrichment that runs as
+an interactive **TUI** by default and a **headless CLI** for automation. It reuses the existing
+data assets verbatim and preserves the static data contract the React frontend in `public/`
+depends on.
+
+## Why
+
+The original Python tool grew over years into multiple entry points (`main.py`, `run_web.py`,
+a pile of `tools/*` scripts) and a parallel FastAPI web admin. `scrapperv2` consolidates all of
+that into one binary with a single, consistent interface.
+
+## Design
+
+- **One binary, two faces.** No arguments → launches the TUI. A subcommand → runs that command
+  headlessly (`scrapper collection --resume`) for cron/CI.
+- **Reuse, don't re-fetch.** The 358MB `collection_cache.db`, `discogs_cache/`, `config.json`,
+  `album_matching_filters.json`, and `secrets/` are copied in as-is. The SQLite schema is
+  unchanged from the Python tool.
+- **Preserve the data contract.** Folder slugs and the album/artist JSON shapes written into
+  `../public` must match what already exists. The folder sanitizer is a verified byte-for-byte
+  port of the Python one (see Testing).
+- **Concurrent, rate-limited.** Service fetches use `tokio` with per-service rate limiters
+  (`governor`) instead of the old sequential model.
+
+## Location & paths
+
+`scrapperv2/` sits at the repo root beside `scrapper/`, so the config's `data.path = "../public"`
+resolves to `<repo>/public` exactly as before. Output goes to `../public/album/<slug>/` and
+`../public/artist/<slug>/`.
+
+## Layout
+
+```
+src/
+  main.rs        Entry point: TUI when bare, CLI dispatch otherwise
+  config.rs      config.json + env-var overrides + secrets resolution
+  db.rs          rusqlite/r2d2 layer over collection_cache.db (schema unchanged)
+  sanitize.rs    Folder-name sanitizer (verified port) + filename helpers
+  logging.rs     tracing setup
+  util.rs        Timestamps and small helpers
+  cli/           clap command surface (all commands + flags)
+  ops/           Command implementations shared by CLI and TUI
+  services/      API clients (Discogs, Apple Music, Spotify, Last.fm, Wikipedia,
+                 TheAudioDB, Perplexity) with rate limiting   [in progress]
+  orchestrator/  Release + artist enrichment orchestration       [planned]
+  output/        JSON writer, image manager, collection generator [planned]
+  tui/           ratatui app and screens                          [planned]
+tests/
+  sanitizer_corpus.rs   Gate: every existing public/ folder must be reproducible
+```
+
+## Commands
+
+The compiled binary is named `scrapper` (the crate/folder is `scrapperv2`).
+
+```
+scrapper                       # launch the TUI (planned)
+scrapper status                # database + processing status
+scrapper db search <release|artist> <query>
+scrapper db list <releases|artists> [--limit N] [--sort date_added|title|year|name]
+scrapper db delete <release|artist> <id> --force   # auto-backs up first
+scrapper db stats | backup [--name F]
+scrapper backup [--backup-path P]
+scrapper init [--output P]
+scrapper test                  # service credential / connectivity check
+scrapper collection [--resume] [--from N --to N] [--limit N] [--dry-run] ...
+scrapper release <discogs_id> [--save] [--prefer …] [--perplexity] ...
+scrapper artist <name> [--save] [--verify] [--theaudiodb] [--perplexity] ...
+scrapper artist-batch --from N --to N [--save] [--stats] ...
+scrapper enrich-description [<id>] [--list-missing] [--force] [--from <id>] ...
+scrapper backfill-videos [--dry-run] [--from <id>] [--limit N] ...
+scrapper report | generate-collection
+scrapper maintenance find-missing [--show-orphaned] | reconcile [--threshold F]
+```
+
+Run `scrapper --help` or `scrapper <command> --help` for the full flag set.
+
+## Build & run
+
+```
+cargo build --release
+./target/release/scrapper status
+```
+
+Requires `config.json` (copy `config.example.json`) and the data assets in the working
+directory. All assets, secrets, and build artifacts are git-ignored.
+
+## Testing
+
+```
+cargo test            # unit tests + sanitizer corpus gate
+cargo clippy --all-targets
+```
+
+The **sanitizer corpus gate** (`tests/sanitizer_corpus.rs`) enumerates every folder under
+`public/album` and `public/artist` and asserts each is reproducible from its JSON via the Rust
+sanitizer. A short, documented allowlist covers legacy folders that predate certain sanitizer
+rules (the current Python sanitizer doesn't reproduce them either) plus one macOS NFC/NFD
+filesystem artifact; both sides are NFC-normalized before comparison.
+
+## Status
+
+| Area | State |
+|---|---|
+| Scaffold, config, logging, assets | ✅ done |
+| Folder sanitizer + corpus gate | ✅ verified against 4,509 folders |
+| Database read layer + resume + maintenance | ✅ done |
+| CLI surface (all commands/flags) | ✅ done |
+| Local commands (status, db, backup, init, dry-runs, list-missing, maintenance) | ✅ working |
+| API services (7) | ✅ done — `test` probes all 7 concurrently |
+| Orchestration + output pipeline | 🚧 in progress |
+| Live enrichment / report / generate-collection | ⬜ planned |
+| ratatui TUI | ⬜ planned |
+
+Network commands are wired and dispatch today; their live bodies report "not yet ported" until
+the orchestration layer lands.
+
+### Services
+
+`scrapper test` probes all seven concurrently with the real credentials:
+
+| Service | Auth | Rate limit |
+|---|---|---|
+| Discogs | `Authorization: Discogs token=…` | 60/min |
+| Apple Music | ES256 JWT (from the `.p8`), 12h expiry | 60/min |
+| Spotify | client-credentials OAuth, cached token | 100/min |
+| Last.fm | `api_key` param (+ MD5 signing available) | 60/min |
+| Wikipedia | none (User-Agent only) | 120/min |
+| TheAudioDB | token in URL path | 30/min |
+| Perplexity | Bearer key; `sonar` model | from config (20/min) |

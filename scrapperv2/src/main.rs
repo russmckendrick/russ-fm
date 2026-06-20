@@ -13,8 +13,8 @@ async fn main() -> anyhow::Result<()> {
         // Bare invocation: launch the TUI (pending — task 7).
         let cfg = cli.load_config()?;
         eprintln!(
-            "scrapperv2 TUI is not yet wired up. For now, use a subcommand — try:\n  \
-             scrapperv2 status\n  scrapperv2 db list releases --limit 10\n  scrapperv2 --help\n\n\
+            "scrapper TUI is not yet wired up. For now, use a subcommand — try:\n  \
+             scrapper status\n  scrapper db list releases --limit 10\n  scrapper --help\n\n\
              (config loaded from {})",
             cfg.base_dir.display()
         );

@@ -1,44 +1,33 @@
-//! `test` command. Currently validates that credentials are present/parseable for each service
-//! (config-presence checks, no network). Live connectivity probes land with the services layer.
+//! `test` command — live connectivity/auth probes for every configured service, run concurrently.
 
 use anyhow::Result;
 
+use crate::services::{Probe, Services};
 use crate::Config;
 
-fn status(present: bool) -> &'static str {
-    if present {
-        "✓ configured"
-    } else {
-        "✗ missing credentials"
-    }
-}
-
 pub async fn test_all(cfg: &Config) -> Result<()> {
-    println!("Service configuration check:\n");
+    println!("Probing services...\n");
+    let services = Services::new(cfg);
+    let results = services.test_all().await;
 
-    let discogs = !cfg.discogs.access_token.is_empty();
-    println!("  discogs      {}", status(discogs));
-
-    let apple = !cfg.apple_music.key_id.is_empty()
-        && !cfg.apple_music.team_id.is_empty()
-        && cfg.apple_private_key_path().exists();
-    println!("  apple_music  {}", status(apple));
-    if !cfg.apple_music.key_id.is_empty() && !cfg.apple_private_key_path().exists() {
-        println!("               (private key not found at {})", cfg.apple_private_key_path().display());
+    let mut healthy = 0;
+    let mut configured = 0;
+    for (name, probe) in &results {
+        match probe {
+            Probe::Ok(detail) => {
+                healthy += 1;
+                configured += 1;
+                println!("  ✓ {name:<12} {detail}");
+            }
+            Probe::Failed(err) => {
+                configured += 1;
+                println!("  ✗ {name:<12} {err}");
+            }
+            Probe::Skipped(reason) => {
+                println!("  – {name:<12} {reason}");
+            }
+        }
     }
-
-    let spotify = !cfg.spotify.client_id.is_empty() && !cfg.spotify.client_secret.is_empty();
-    println!("  spotify      {}", status(spotify));
-
-    let lastfm = !cfg.lastfm.api_key.is_empty();
-    println!("  lastfm       {}", status(lastfm));
-
-    println!("  wikipedia    ✓ no credentials required");
-    println!("  theaudiodb   {}", status(!cfg.theaudiodb.api_token.is_empty()));
-
-    let perplexity = !cfg.perplexity.api_key.is_empty();
-    println!("  perplexity   {}", status(perplexity));
-
-    println!("\nNote: live connectivity probes arrive with the services layer.");
+    println!("\n{healthy}/{configured} configured services healthy");
     Ok(())
 }

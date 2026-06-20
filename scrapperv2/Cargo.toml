@@ -3,10 +3,10 @@ name = "scrapperv2"
 version = "0.1.0"
 edition = "2021"
 description = "Music collection enrichment — a cohesive Rust TUI/CLI (rewrite of the Python scrapper)"
-default-run = "scrapperv2"
+default-run = "scrapper"
 
 [[bin]]
-name = "scrapperv2"
+name = "scrapper"
 path = "src/main.rs"
 
 [lib]

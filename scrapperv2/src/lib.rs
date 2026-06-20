@@ -9,6 +9,7 @@ pub mod db;
 pub mod logging;
 pub mod ops;
 pub mod sanitize;
+pub mod services;
 pub mod util;
 
 pub use config::Config;

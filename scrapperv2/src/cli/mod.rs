@@ -30,7 +30,7 @@ pub enum OutputFormat {
 
 #[derive(Debug, Parser)]
 #[command(
-    name = "scrapperv2",
+    name = "scrapper",
     about = "Music collection enrichment — TUI by default, CLI subcommands for automation",
     version
 )]
