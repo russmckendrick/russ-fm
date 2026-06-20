@@ -122,6 +122,13 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
     }
 
     println!("\nDone: {ok} processed, {failed} failed, of {total}.");
+
+    // Refresh the frontend index.
+    let out = cfg.data_dir().join("collection.json");
+    match crate::output::collection::generate(cfg, &db, &out) {
+        Ok(n) => println!("Updated {} ({n} entries).", out.display()),
+        Err(e) => println!("Warning: collection.json update failed: {e}"),
+    }
     Ok(())
 }
 

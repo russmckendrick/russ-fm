@@ -323,6 +323,14 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick
         }
         let _ = tx.send(Msg::Progress(i + 1, total));
     }
+
+    // Refresh the frontend index so the new releases show up.
+    let out = cfg.data_dir().join("collection.json");
+    log(format!("Updating {}…", out.display()));
+    match crate::output::collection::generate(&cfg, &db, &out) {
+        Ok(n) => log(format!("✓ wrote {n} entries to collection.json")),
+        Err(e) => log(format!("✗ collection.json update failed: {e}")),
+    }
     let _ = tx.send(Msg::Done("collection".into()));
 }
 
