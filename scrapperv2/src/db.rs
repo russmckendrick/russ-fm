@@ -508,6 +508,49 @@ impl Db {
         Ok(rows)
     }
 
+    /// Release briefs for the video backfill. When `force`, includes releases that already have
+    /// videos; otherwise only those missing them.
+    pub fn releases_for_backfill(&self, force: bool, limit: Option<u32>, from_id: Option<&str>) -> Result<Vec<ReleaseBrief>> {
+        if !force {
+            return self.get_releases_without_videos(limit, from_id);
+        }
+        let conn = self.conn()?;
+        let mut sql = String::from(
+            "SELECT discogs_id, title, artists, year, genres, date_added FROM releases WHERE discogs_id IS NOT NULL",
+        );
+        let mut start_date: Option<String> = None;
+        if let Some(fid) = from_id {
+            start_date = conn
+                .query_row("SELECT date_added FROM releases WHERE discogs_id = ?", [fid], |r| r.get(0))
+                .optional()?
+                .flatten();
+            if start_date.is_some() {
+                sql.push_str(" AND date_added <= ?1");
+            }
+        }
+        sql.push_str(" ORDER BY date_added DESC");
+        if let Some(l) = limit {
+            sql.push_str(&format!(" LIMIT {l}"));
+        }
+        let mut stmt = conn.prepare(&sql)?;
+        let map = |row: &rusqlite::Row| -> rusqlite::Result<ReleaseBrief> {
+            Ok(ReleaseBrief {
+                discogs_id: row.get(0)?,
+                title: row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                artists: artist_names(&parse_json(row.get(2)?, "[]")),
+                year: row.get(3)?,
+                genres: string_list(&parse_json(row.get(4)?, "[]")),
+                labels: Vec::new(),
+                date_added: row.get(5)?,
+            })
+        };
+        let rows: Vec<ReleaseBrief> = match start_date {
+            Some(d) => stmt.query_map([d], map)?.collect::<rusqlite::Result<_>>()?,
+            None => stmt.query_map([], map)?.collect::<rusqlite::Result<_>>()?,
+        };
+        Ok(rows)
+    }
+
     pub fn update_release_videos(&self, discogs_id: &str, videos_json: &str) -> Result<bool> {
         let conn = self.conn()?;
         let n = conn.execute(

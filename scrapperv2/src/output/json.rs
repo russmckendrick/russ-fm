@@ -33,6 +33,34 @@ pub fn to_pretty_sorted(v: &Value) -> String {
     serde_json::to_string_pretty(&sort_value(v)).unwrap_or_default()
 }
 
+/// Patch a top-level field of an existing public album JSON file in place (no full regenerate),
+/// matching the Python `json_updater` behaviour. Returns true if the file existed and was written.
+pub fn patch_album_field(album_dir: &std::path::Path, folder: &str, key: &str, value: Value) -> std::io::Result<bool> {
+    let path = album_dir.join(folder).join(format!("{folder}.json"));
+    let Ok(text) = std::fs::read_to_string(&path) else { return Ok(false) };
+    let mut doc: Value = serde_json::from_str(&text).map_err(std::io::Error::other)?;
+    if let Some(obj) = doc.as_object_mut() {
+        obj.insert(key.to_string(), value);
+    }
+    std::fs::write(&path, to_pretty_sorted(&doc))?;
+    Ok(true)
+}
+
+/// Patch `services.perplexity` inside an existing public album JSON file in place.
+pub fn patch_album_service(album_dir: &std::path::Path, folder: &str, service: &str, value: Value) -> std::io::Result<bool> {
+    let path = album_dir.join(folder).join(format!("{folder}.json"));
+    let Ok(text) = std::fs::read_to_string(&path) else { return Ok(false) };
+    let mut doc: Value = serde_json::from_str(&text).map_err(std::io::Error::other)?;
+    if let Some(obj) = doc.as_object_mut() {
+        let services = obj.entry("services").or_insert_with(|| serde_json::json!({}));
+        if let Some(s) = services.as_object_mut() {
+            s.insert(service.to_string(), value);
+        }
+    }
+    std::fs::write(&path, to_pretty_sorted(&doc))?;
+    Ok(true)
+}
+
 fn as_array(v: &Value) -> Vec<Value> {
     v.as_array().cloned().unwrap_or_default()
 }

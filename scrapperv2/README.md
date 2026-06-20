@@ -123,8 +123,10 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | Live `collection` (resume-aware, reuses the release pipeline) | ✅ done |
 | Live `artist` (Discogs + Apple/Spotify/Last.fm/Wikipedia/TheAudioDB) | ✅ done |
 | `generate-collection` (collection.json index) | ✅ done — 99.8% match vs existing |
-| `artist-batch` / Perplexity descriptions / `report` | 🚧 in progress |
+| `artist-batch`, `enrich-description` (Perplexity), `backfill-videos`, `report` | ✅ done |
 | ratatui TUI | ⬜ planned |
+
+All CLI commands are implemented. The remaining work is the ratatui TUI shell.
 
 Network commands are wired and dispatch today; their live bodies report "not yet ported" until
 the orchestration layer lands.

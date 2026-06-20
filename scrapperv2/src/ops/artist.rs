@@ -45,8 +45,48 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     Ok(())
 }
 
-pub async fn run_batch(_cfg: &Config, _args: ArtistBatchArgs) -> Result<()> {
-    bail!("`artist-batch` is not yet ported — use `artist <name> --save` per artist for now.");
+pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
+    let db = Db::open(cfg.db_path())?;
+    let mut artists = db.list_artists(u32::MAX, "name")?;
+    if !args.include_various {
+        artists.retain(|a| !a.name.eq_ignore_ascii_case("various") && !a.name.eq_ignore_ascii_case("various artists"));
+    }
+
+    if args.stats {
+        println!("{} artists in the database{}.", artists.len(), if args.include_various { "" } else { " (excluding Various Artists)" });
+        return Ok(());
+    }
+
+    let from = (args.from as usize).min(artists.len());
+    let to = (args.to as usize).min(artists.len());
+    let slice = &artists[from..to.max(from)];
+    if slice.is_empty() {
+        println!("No artists in range [{from}, {to}).");
+        return Ok(());
+    }
+
+    let services = Services::new(cfg);
+    if !services.discogs.is_configured() {
+        bail!("Discogs is not configured — set discogs.access_token in config.json");
+    }
+    let client = image_client();
+    let prefer = prefer_key(args.prefer);
+    let total = slice.len();
+    let mut ok = 0usize;
+
+    for (i, a) in slice.iter().enumerate() {
+        match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, prefer).await {
+            Ok((_, found)) => {
+                ok += 1;
+                let m = |b: bool| if b { "✓" } else { "–" };
+                println!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia));
+            }
+            Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
+        }
+    }
+
+    println!("\nDone: {ok}/{total} artists processed.");
+    Ok(())
 }
 
 struct Found {

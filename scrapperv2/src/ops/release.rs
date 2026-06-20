@@ -8,7 +8,7 @@ use once_cell::sync::Lazy;
 use regex::Regex;
 use serde_json::{json, Map, Value};
 
-use crate::cli::{EnrichDescriptionArgs, ImageSource, OutputFormat, ReleaseArgs};
+use crate::cli::{ImageSource, OutputFormat, ReleaseArgs};
 use crate::db::{Db, ReleaseRecord};
 use crate::output::{images, release_to_value, to_pretty_sorted};
 use crate::sanitize::release_folder_name;
@@ -342,8 +342,4 @@ async fn enrich_lastfm(services: &Services, artist: &str, album: &str) -> Option
         "wiki_content": a.get("wiki").and_then(|w| w.get("content")).cloned().unwrap_or(Value::Null),
         "images": images,
     }))
-}
-
-pub async fn enrich_descriptions(_cfg: &Config, _args: &EnrichDescriptionArgs) -> Result<()> {
-    bail!("Perplexity description generation is wired through the services layer but the enrich-description batch flow is not yet ported. Use `enrich-description --list-missing` to inspect candidates.");
 }
