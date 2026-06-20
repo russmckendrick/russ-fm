@@ -121,7 +121,8 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | Image manager (hi-res download + source fallback) | ✅ done |
 | Live `release <id>` (fetch → enrich → save → JSON + artwork) | ✅ done |
 | Live `collection` (resume-aware, reuses the release pipeline) | ✅ done |
-| Live `artist` / `generate-collection` | 🚧 in progress |
+| Live `artist` (Discogs + Apple/Spotify/Last.fm/Wikipedia/TheAudioDB) | ✅ done |
+| `artist-batch` / `generate-collection` / Perplexity descriptions | 🚧 in progress |
 | ratatui TUI | ⬜ planned |
 
 Network commands are wired and dispatch today; their live bodies report "not yet ported" until

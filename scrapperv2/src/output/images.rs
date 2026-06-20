@@ -110,6 +110,59 @@ fn collect_sources(raw: &Value, target: u32, preferred: Option<&str>) -> Vec<Sou
     ordered
 }
 
+/// Build ordered artwork sources for an artist from assembled `raw_data`.
+fn collect_artist_sources(raw: &Value, target: u32, preferred: Option<&str>) -> Vec<Source> {
+    let mut found: Vec<(&'static str, Source)> = Vec::new();
+    if let Some(url) = raw.get("apple_music").and_then(|a| a.get("artwork_url")).and_then(|u| u.as_str()) {
+        if !url.is_empty() {
+            found.push(("apple_music", Source { kind: "apple_music", url: artwork_url_with_size(url, target), user_agent: None }));
+        }
+    }
+    if let Some(imgs) = raw.get("spotify").and_then(|s| s.get("images")).and_then(|i| i.as_array()) {
+        if let Some(url) = select_spotify_image(imgs, target) {
+            found.push(("spotify", Source { kind: "spotify", url, user_agent: None }));
+        }
+    }
+    if let Some(url) = raw.get("theaudiodb").and_then(|t| t.get("strArtistThumb")).and_then(|u| u.as_str()) {
+        if !url.is_empty() {
+            found.push(("theaudiodb", Source { kind: "theaudiodb", url: url.to_string(), user_agent: None }));
+        }
+    }
+    let mut ordered = Vec::new();
+    if let Some(pref) = preferred {
+        if let Some(pos) = found.iter().position(|(k, _)| *k == pref) {
+            ordered.push(found.remove(pos).1);
+        }
+    }
+    for key in ["apple_music", "spotify", "theaudiodb"] {
+        if let Some(pos) = found.iter().position(|(k, _)| *k == key) {
+            ordered.push(found.remove(pos).1);
+        }
+    }
+    ordered
+}
+
+/// Download the hi-res artist image into `{artist_dir}/{folder}/{folder}-hi-res.jpg`.
+pub async fn download_artist_hires(
+    client: &reqwest::Client,
+    artist_dir: &Path,
+    folder: &str,
+    raw_data: &Value,
+    target: u32,
+    preferred: Option<&str>,
+) -> Option<PathBuf> {
+    let dir = artist_dir.join(folder);
+    std::fs::create_dir_all(&dir).ok()?;
+    let dest = dir.join(format!("{folder}-hi-res.jpg"));
+    for source in collect_artist_sources(raw_data, target, preferred) {
+        if download(client, &source.url, source.user_agent, &dest).await {
+            tracing::info!("downloaded artist image from {}", source.kind);
+            return Some(dest);
+        }
+    }
+    None
+}
+
 async fn download(client: &reqwest::Client, url: &str, user_agent: Option<&str>, dest: &Path) -> bool {
     let mut req = client.get(url);
     if let Some(ua) = user_agent {

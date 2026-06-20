@@ -585,6 +585,46 @@ impl Db {
         Ok(n > 0)
     }
 
+    /// Insert or replace a full artist row.
+    pub fn save_artist(&self, rec: &ArtistRecord) -> Result<()> {
+        let conn = self.conn()?;
+        let j = |v: &Value| v.to_string();
+        conn.execute(
+            "INSERT OR REPLACE INTO artists (\
+                id, name, biography, discogs_id, apple_music_id, spotify_id, lastfm_mbid, \
+                discogs_url, apple_music_url, spotify_url, lastfm_url, wikipedia_url, genres, \
+                popularity, followers, country, formed_date, images, local_images, \
+                enrichment_data, created_at, updated_at, raw_data\
+             ) VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,?18,?19,?20,?21,?22,?23)",
+            rusqlite::params![
+                rec.id,
+                rec.name,
+                rec.biography,
+                rec.discogs_id,
+                rec.apple_music_id,
+                rec.spotify_id,
+                rec.lastfm_mbid,
+                rec.discogs_url,
+                rec.apple_music_url,
+                rec.spotify_url,
+                rec.lastfm_url,
+                rec.wikipedia_url,
+                j(&rec.genres),
+                rec.popularity,
+                rec.followers,
+                rec.country,
+                rec.formed_date,
+                j(&rec.images),
+                j(&rec.local_images),
+                j(&rec.enrichment_data),
+                rec.created_at,
+                rec.updated_at,
+                j(&rec.raw_data),
+            ],
+        )?;
+        Ok(())
+    }
+
     /// Delete an artist row by id or name (db-manager). Caller backs up first.
     pub fn delete_artist(&self, identifier: &str) -> Result<bool> {
         let conn = self.conn()?;
