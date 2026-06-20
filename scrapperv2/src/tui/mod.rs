@@ -10,8 +10,25 @@ use ratatui::widgets::{Block, Borders, Gauge, List, ListItem, ListState, Paragra
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 
 use crate::db::{ArtistSummary, ReleaseSummary};
+use crate::ops::release::{MatchPicker, PickRequest};
 use crate::services::Services;
 use crate::{Config, Db};
+
+/// How the TUI starts.
+pub enum Launch {
+    /// Normal: the home menu.
+    Home,
+    /// Jump straight to the Collection screen and process `count` releases.
+    Collection { count: usize },
+}
+
+/// A match-picker modal awaiting the user's choice.
+struct PendingPick {
+    prompt: String,
+    labels: Vec<String>,
+    reply: Option<tokio::sync::oneshot::Sender<Option<usize>>>,
+    state: ListState,
+}
 
 mod theme {
     use ratatui::style::Color;
@@ -69,15 +86,20 @@ struct App {
     progress: Option<(usize, usize)>,
     running: bool,
     collection_limit: String,
+    pending: Option<PendingPick>,
+    autostart: bool,
 
     tx: UnboundedSender<Msg>,
     rx: UnboundedReceiver<Msg>,
+    pick_tx: UnboundedSender<PickRequest>,
+    pick_rx: UnboundedReceiver<PickRequest>,
     status: String,
 }
 
 impl App {
     fn new(cfg: Config, db: Db) -> Self {
         let (tx, rx) = unbounded_channel();
+        let (pick_tx, pick_rx) = unbounded_channel();
         let mut menu = ListState::default();
         menu.select(Some(0));
         Self {
@@ -96,8 +118,12 @@ impl App {
             progress: None,
             running: false,
             collection_limit: "1".into(),
+            pending: None,
+            autostart: false,
             tx,
             rx,
+            pick_tx,
+            pick_rx,
             status: "↑/↓ select · Enter open · q quit".into(),
         }
     }
@@ -178,9 +204,10 @@ impl App {
         let cfg = self.cfg.clone();
         let db = self.db.clone();
         let tx = self.tx.clone();
+        let pick_tx = self.pick_tx.clone();
         let limit = self.collection_count();
         tokio::spawn(async move {
-            run_collection_task(cfg, db, tx, limit).await;
+            run_collection_task(cfg, db, tx, pick_tx, limit).await;
         });
     }
 
@@ -208,6 +235,14 @@ impl App {
     }
 
     fn drain_messages(&mut self) {
+        // Surface a pending match-picker request (one at a time; the task blocks until answered).
+        if self.pending.is_none() {
+            if let Ok(req) = self.pick_rx.try_recv() {
+                let mut state = ListState::default();
+                state.select(Some(0));
+                self.pending = Some(PendingPick { prompt: req.prompt, labels: req.labels, reply: Some(req.reply), state });
+            }
+        }
         while let Ok(msg) = self.rx.try_recv() {
             match msg {
                 Msg::Probe(name, ok, detail) => self.probes.push((name, ok, detail)),
@@ -231,24 +266,27 @@ impl App {
     }
 }
 
-/// Background collection pass: process the unprocessed resume queue, streaming progress.
-async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, limit: usize) {
+/// Background collection pass: process the first N of the collection (newest first), force-
+/// refreshed, with interactive match-picking via the TUI modal and step-by-step feedback.
+async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick_tx: UnboundedSender<PickRequest>, limit: usize) {
+    let log = |s: String| { let _ = tx.send(Msg::Log(s)); };
     let services = Services::new(&cfg);
     if !services.discogs.is_configured() {
-        let _ = tx.send(Msg::Log("Discogs not configured".into()));
+        log("Discogs not configured".into());
         let _ = tx.send(Msg::Done("collection".into()));
         return;
     }
+
     let username = cfg.discogs.username.clone();
+    log(format!("Fetching collection for {username}…"));
     let entries = match services.discogs.get_user_collection(&username).await {
         Ok(e) => e,
         Err(e) => {
-            let _ = tx.send(Msg::Log(format!("collection fetch failed: {e}")));
+            log(format!("collection fetch failed: {e}"));
             let _ = tx.send(Msg::Done("collection".into()));
             return;
         }
     };
-    // Only the unprocessed (not-yet-enriched) releases, capped at the requested count.
     let mut ids: Vec<String> = entries
         .iter()
         .filter_map(|v| v.get("id").map(|i| match i {
@@ -256,27 +294,28 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, limi
             serde_json::Value::String(s) => s.clone(),
             other => other.to_string(),
         }))
-        .filter(|id| !db.has_enriched_release(id).unwrap_or(false))
         .collect();
-    let available = ids.len();
     ids.truncate(limit);
-
     let total = ids.len();
-    let _ = tx.send(Msg::Log(format!("processing {total} of {available} unprocessed release(s)")));
+    log(format!("Processing {total} release(s) (newest first, interactive)"));
+
     let client = crate::ops::release::image_client();
+    let picker = MatchPicker::Tui(pick_tx);
 
     for (i, id) in ids.iter().enumerate() {
-        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None).await {
-            Ok((rec, _)) => {
+        log(format!("▶ [{}/{total}] release {id} — fetching from Discogs…", i + 1));
+        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None, &picker).await {
+            Ok((rec, f)) => {
                 let _ = db.record_processed(&rec.id, id, None, None);
-                let _ = tx.send(Msg::Log(format!("✓ {} — {}", first_artist(&rec.artists), rec.title)));
+                let m = |b: bool| if b { "✓" } else { "–" };
+                log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
+                log(format!("    apple {} · spotify {} · lastfm {} · artwork {} · saved ✓", m(f.apple), m(f.spotify), m(f.lastfm), m(f.image)));
             }
-            Err(e) => {
-                let _ = tx.send(Msg::Log(format!("✗ {id} — {e}")));
-            }
+            Err(e) => log(format!("  ✗ {id} — {e}")),
         }
         let _ = tx.send(Msg::Progress(i + 1, total));
     }
+    log("— run complete —".into());
     let _ = tx.send(Msg::Done("collection".into()));
 }
 
@@ -285,7 +324,7 @@ fn first_artist(artists: &serde_json::Value) -> String {
 }
 
 /// Launch the TUI.
-pub async fn run(cfg: Config) -> Result<()> {
+pub async fn run(cfg: Config, launch: Launch) -> Result<()> {
     use std::io::IsTerminal;
     if !std::io::stdout().is_terminal() {
         anyhow::bail!(
@@ -294,8 +333,13 @@ pub async fn run(cfg: Config) -> Result<()> {
         );
     }
     let db = Db::open(cfg.db_path())?;
-    let mut terminal = ratatui::init();
     let mut app = App::new(cfg, db);
+    if let Launch::Collection { count } = launch {
+        app.screen = Screen::Collection;
+        app.collection_limit = count.max(1).to_string();
+        app.autostart = true;
+    }
+    let mut terminal = ratatui::init();
     let result = run_loop(&mut terminal, &mut app).await;
     ratatui::restore();
     result
@@ -303,6 +347,10 @@ pub async fn run(cfg: Config) -> Result<()> {
 
 async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Result<()> {
     while !app.should_quit {
+        if app.autostart {
+            app.autostart = false;
+            app.start_collection();
+        }
         app.drain_messages();
         terminal.draw(|f| draw(f, app))?;
         if event::poll(Duration::from_millis(80))? {
@@ -317,6 +365,36 @@ async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Res
 }
 
 fn handle_key(app: &mut App, code: KeyCode) {
+    // Modal match-picker captures all input while open.
+    if let Some(pick) = app.pending.as_mut() {
+        let len = pick.labels.len();
+        match code {
+            KeyCode::Up => {
+                let cur = pick.state.selected().unwrap_or(0) as isize;
+                pick.state.select(Some(((cur - 1).rem_euclid(len.max(1) as isize)) as usize));
+            }
+            KeyCode::Down => {
+                let cur = pick.state.selected().unwrap_or(0) as isize;
+                pick.state.select(Some(((cur + 1).rem_euclid(len.max(1) as isize)) as usize));
+            }
+            KeyCode::Enter => {
+                let idx = pick.state.selected();
+                if let Some(reply) = pick.reply.take() {
+                    let _ = reply.send(idx);
+                }
+                app.pending = None;
+            }
+            KeyCode::Esc => {
+                if let Some(reply) = pick.reply.take() {
+                    let _ = reply.send(None);
+                }
+                app.pending = None;
+            }
+            _ => {}
+        }
+        return;
+    }
+
     // Global.
     match code {
         KeyCode::Char('q') if app.screen == Screen::Home => {
@@ -403,6 +481,37 @@ fn draw(f: &mut Frame, app: &mut App) {
     };
     f.render_widget(Paragraph::new(hint).style(Style::default().fg(theme::DIM)), chunks[2]);
     let _ = &app.status;
+
+    if let Some(pick) = app.pending.as_mut() {
+        let area = centered_rect(70, 60, f.area());
+        f.render_widget(ratatui::widgets::Clear, area);
+        let items: Vec<ListItem> = pick.labels.iter().map(|l| ListItem::new(format!("  {l}"))).collect();
+        let list = List::new(items)
+            .block(
+                Block::default()
+                    .borders(Borders::ALL)
+                    .title(format!(" {} · ↑/↓ Enter select · Esc skip ", pick.prompt))
+                    .border_style(Style::default().fg(theme::ACCENT)),
+            )
+            .highlight_style(Style::default().fg(theme::ACCENT).add_modifier(Modifier::BOLD))
+            .highlight_symbol("▶ ");
+        f.render_stateful_widget(list, area, &mut pick.state);
+    }
+}
+
+fn centered_rect(percent_x: u16, percent_y: u16, area: Rect) -> Rect {
+    let vert = Layout::vertical([
+        Constraint::Percentage((100 - percent_y) / 2),
+        Constraint::Percentage(percent_y),
+        Constraint::Percentage((100 - percent_y) / 2),
+    ])
+    .split(area);
+    Layout::horizontal([
+        Constraint::Percentage((100 - percent_x) / 2),
+        Constraint::Percentage(percent_x),
+        Constraint::Percentage((100 - percent_x) / 2),
+    ])
+    .split(vert[1])[1]
 }
 
 fn draw_header(f: &mut Frame, area: Rect, app: &App) {

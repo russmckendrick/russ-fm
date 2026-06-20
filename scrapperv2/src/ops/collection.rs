@@ -5,7 +5,7 @@ use anyhow::{bail, Result};
 use serde_json::Value;
 
 use crate::cli::CollectionArgs;
-use crate::ops::release::{image_client, prefer_key, process_release};
+use crate::ops::release::{image_client, prefer_key, process_release, MatchPicker};
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -94,12 +94,13 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
 
     let client = image_client();
     let prefer = prefer_key(args.prefer);
+    let picker = MatchPicker::First; // interactive runs route to the TUI
     let total = entries.len();
     let mut ok = 0usize;
     let mut failed = 0usize;
 
     for (i, e) in entries.iter().enumerate() {
-        match process_release(cfg, &services, &db, &client, &e.release_id, true, prefer).await {
+        match process_release(cfg, &services, &db, &client, &e.release_id, true, prefer, &picker).await {
             Ok((rec, flags)) => {
                 db.record_processed(&rec.id, &e.release_id, e.instance_id.as_deref(), e.date_added.as_deref())?;
                 ok += 1;

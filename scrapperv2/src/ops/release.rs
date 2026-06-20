@@ -15,13 +15,54 @@ use crate::sanitize::release_folder_name;
 use crate::services::Services;
 use crate::util::now_iso;
 use crate::Config;
+use tokio::sync::{mpsc::UnboundedSender, oneshot};
 
-/// Which services contributed enrichment for a release.
-#[derive(Clone, Copy)]
+/// A request for the user to choose among candidate matches (used by the TUI modal picker).
+pub struct PickRequest {
+    pub prompt: String,
+    pub labels: Vec<String>,
+    pub reply: oneshot::Sender<Option<usize>>,
+}
+
+/// How a release's service matches are chosen.
+pub enum MatchPicker {
+    /// Always take the first (best) result — non-interactive.
+    First,
+    /// Prompt on the terminal via dialoguer (CLI `--interactive`).
+    Cli,
+    /// Ask the TUI to show a modal picker and await the reply.
+    Tui(UnboundedSender<PickRequest>),
+}
+
+impl MatchPicker {
+    /// True when matches are chosen interactively (so enrichment must run sequentially).
+    pub fn is_interactive(&self) -> bool {
+        !matches!(self, MatchPicker::First)
+    }
+
+    /// Choose an index from `labels`, or `None` to skip the match.
+    pub async fn pick(&self, prompt: &str, labels: &[String]) -> Option<usize> {
+        match self {
+            MatchPicker::First => Some(0),
+            MatchPicker::Cli => interactive_pick(prompt, labels),
+            MatchPicker::Tui(tx) => {
+                let (reply, rx) = oneshot::channel();
+                if tx.send(PickRequest { prompt: prompt.into(), labels: labels.to_vec(), reply }).is_err() {
+                    return Some(0);
+                }
+                rx.await.unwrap_or(Some(0))
+            }
+        }
+    }
+}
+
+/// Which services contributed enrichment for a release, and whether artwork was saved.
+#[derive(Clone, Copy, Default)]
 pub struct EnrichFlags {
     pub apple: bool,
     pub spotify: bool,
     pub lastfm: bool,
+    pub image: bool,
 }
 
 /// Strip a Discogs disambiguation suffix like " (2)" from an artist name.
@@ -60,6 +101,7 @@ fn str_field(v: &Value, path: &[&str]) -> Option<String> {
 /// Fetch, enrich and assemble a release. When `write_files` is set, also download the hi-res
 /// artwork, persist to the DB and write the public JSON. Returns the (possibly DB-reloaded)
 /// record and the enrichment flags.
+#[allow(clippy::too_many_arguments)]
 pub async fn process_release(
     cfg: &Config,
     services: &Services,
@@ -68,6 +110,7 @@ pub async fn process_release(
     discogs_id: &str,
     write_files: bool,
     prefer: Option<&str>,
+    picker: &MatchPicker,
 ) -> Result<(ReleaseRecord, EnrichFlags)> {
     let discogs = services
         .discogs
@@ -146,13 +189,20 @@ pub async fn process_release(
     let videos = crate::services::discogs::DiscogsService::extract_video_uris(&discogs);
     let discogs_url = str_field(&discogs, &["uri"]);
 
-    // Enrich concurrently.
-    let (apple, spotify, lastfm) = tokio::join!(
-        enrich_apple(services, &primary_artist, &title),
-        enrich_spotify(services, &primary_artist, &title),
-        enrich_lastfm(services, &primary_artist, &title),
-    );
-    let flags = EnrichFlags { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some() };
+    // Enrich. Interactive runs sequentially (it prompts); otherwise concurrently.
+    let (apple, spotify, lastfm) = if picker.is_interactive() {
+        let lastfm = enrich_lastfm(services, &primary_artist, &title).await;
+        let apple = enrich_apple(services, &primary_artist, &title, picker).await;
+        let spotify = enrich_spotify(services, &primary_artist, &title, picker).await;
+        (apple, spotify, lastfm)
+    } else {
+        tokio::join!(
+            enrich_apple(services, &primary_artist, &title, picker),
+            enrich_spotify(services, &primary_artist, &title, picker),
+            enrich_lastfm(services, &primary_artist, &title),
+        )
+    };
+    let mut flags = EnrichFlags { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), image: false };
 
     // Assemble raw_data + external IDs.
     let mut raw = Map::new();
@@ -217,7 +267,7 @@ pub async fn process_release(
     if write_files {
         let album_dir = cfg.releases_dir();
         let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
-        let _ = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await;
+        flags.image = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await.is_some();
 
         db.save_release(&rec).context("saving release to database")?;
         if let Some(saved) = db.get_release_by_discogs_id(discogs_id)? {
@@ -240,9 +290,10 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     }
     let client = image_client();
 
+    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
     println!("Fetching & enriching Discogs release {}...", args.discogs_id);
     let (rec, flags) =
-        process_release(cfg, &services, &db, &client, &args.discogs_id, args.save, prefer_key(args.prefer)).await?;
+        process_release(cfg, &services, &db, &client, &args.discogs_id, args.save, prefer_key(args.prefer), &picker).await?;
 
     print_summary(&rec, flags);
     if matches!(args.output, OutputFormat::Json) {
@@ -265,13 +316,48 @@ fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
     println!("  enrichment: apple {} | spotify {} | lastfm {}", mark(flags.apple), mark(flags.spotify), mark(flags.lastfm));
 }
 
-/// Apple Music: search by artist+album, take the first album, build the public service dict.
-async fn enrich_apple(services: &Services, artist: &str, album: &str) -> Option<Value> {
+/// Present candidate matches and return the chosen index, or None to skip. Esc/q skips.
+fn interactive_pick(prompt: &str, labels: &[String]) -> Option<usize> {
+    use dialoguer::{theme::ColorfulTheme, Select};
+    tokio::task::block_in_place(|| {
+        Select::with_theme(&ColorfulTheme::default())
+            .with_prompt(format!("{prompt} (Esc to skip)"))
+            .items(labels)
+            .default(0)
+            .interact_opt()
+            .ok()
+            .flatten()
+    })
+}
+
+/// Apple Music: search by artist+album; pick the match (interactive) or take the first.
+async fn enrich_apple(services: &Services, artist: &str, album: &str, picker: &MatchPicker) -> Option<Value> {
     if !services.apple_music.is_configured() {
         return None;
     }
     let resp = services.apple_music.search_release(artist, album).await.ok()?;
-    let item = resp.get("results")?.get("albums")?.get("data")?.as_array()?.first()?;
+    let data = resp.get("results")?.get("albums")?.get("data")?.as_array()?;
+    if data.is_empty() {
+        return None;
+    }
+    let idx = if picker.is_interactive() && data.len() > 1 {
+        let labels: Vec<String> = data
+            .iter()
+            .map(|i| {
+                let a = i.get("attributes");
+                format!(
+                    "{} — {} ({})",
+                    a.and_then(|a| a.get("artistName")).and_then(|v| v.as_str()).unwrap_or("?"),
+                    a.and_then(|a| a.get("name")).and_then(|v| v.as_str()).unwrap_or("?"),
+                    a.and_then(|a| a.get("releaseDate")).and_then(|v| v.as_str()).unwrap_or("—"),
+                )
+            })
+            .collect();
+        picker.pick("Apple Music match", &labels).await?
+    } else {
+        0
+    };
+    let item = data.get(idx)?;
     let attrs = item.get("attributes").cloned().unwrap_or(json!({}));
     Some(json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
@@ -287,13 +373,38 @@ async fn enrich_apple(services: &Services, artist: &str, album: &str) -> Option<
     }))
 }
 
-/// Spotify: search by artist+album, take the first album.
-async fn enrich_spotify(services: &Services, artist: &str, album: &str) -> Option<Value> {
+/// Spotify: search by artist+album; pick the match (interactive) or take the first.
+async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: &MatchPicker) -> Option<Value> {
     if !services.spotify.is_configured() {
         return None;
     }
     let resp = services.spotify.search_release(artist, album).await.ok()?;
-    let item = resp.get("albums")?.get("items")?.as_array()?.first()?;
+    let items = resp.get("albums")?.get("items")?.as_array()?;
+    if items.is_empty() {
+        return None;
+    }
+    let idx = if picker.is_interactive() && items.len() > 1 {
+        let labels: Vec<String> = items
+            .iter()
+            .map(|i| {
+                let artists = i
+                    .get("artists")
+                    .and_then(|a| a.as_array())
+                    .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
+                    .unwrap_or_default();
+                format!(
+                    "{} — {} ({})",
+                    artists,
+                    i.get("name").and_then(|v| v.as_str()).unwrap_or("?"),
+                    i.get("release_date").and_then(|v| v.as_str()).unwrap_or("—"),
+                )
+            })
+            .collect();
+        picker.pick("Spotify match", &labels).await?
+    } else {
+        0
+    };
+    let item = items.get(idx)?;
     Some(json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": item.get("name").cloned().unwrap_or(Value::Null),

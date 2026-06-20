@@ -132,12 +132,16 @@ All commands and the interactive TUI are implemented.
 
 Running `scrapper` with no arguments launches the interactive TUI: a home menu into a
 **Dashboard** (DB stats), searchable **Releases** and **Artists** browsers, live **service
-probes**, and a **Collection** runner that processes a configurable number of unprocessed releases (default 1,
-editable with digits or `↑/↓`) in the background with a progress gauge and streaming log. Keys:
-`↑/↓` select, `Enter` open/refresh, type to search, `r` run/re-probe, `Esc` back, `q` quit.
+probes**, and a **Collection** runner that processes a configurable number of releases (newest
+first; default 1, editable with digits or `↑/↓`) in the background with a progress gauge and a
+step-by-step log. When a release has more than one Apple Music or Spotify candidate, a **modal
+match-picker** pauses the run so you can choose (`↑/↓` select, `Enter` confirm, `Esc` skip).
+Keys: `↑/↓` select, `Enter` open/refresh, type to search, `r` run/re-probe, `Esc` back, `q` quit.
 
-Network commands are wired and dispatch today; their live bodies report "not yet ported" until
-the orchestration layer lands.
+**`scrapper collection --interactive` drops straight into this TUI**, pre-set to process the
+first N releases (from `--to`/`--limit`) — interactive enrichment *is* the TUI experience, with
+modal match-pickers and live feedback. Non-interactive `collection` stays headless; CLI
+`release --interactive` prompts inline on the terminal.
 
 ### Services
 

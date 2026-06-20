@@ -12,7 +12,7 @@ async fn main() -> anyhow::Result<()> {
     if cli.command.is_none() {
         // Bare invocation: launch the interactive TUI.
         let cfg = cli.load_config()?;
-        return scrapperv2::tui::run(cfg).await;
+        return scrapperv2::tui::run(cfg, scrapperv2::tui::Launch::Home).await;
     }
 
     logging::init_cli(&cli.log_level);

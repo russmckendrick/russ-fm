@@ -324,7 +324,19 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::Maintenance(c) => ops::maintenance::run(&cfg, c),
         Command::Test => ops::services::test_all(&cfg).await,
         Command::Release(a) => ops::release::run(&cfg, a).await,
-        Command::Collection(a) => ops::collection::run(&cfg, a).await,
+        Command::Collection(a) => {
+            // `--interactive` drops into the TUI (modal match-pickers + live feedback),
+            // processing the first N of the collection (newest first).
+            if a.interactive {
+                let count = a
+                    .limit
+                    .or_else(|| a.to.map(|t| t.saturating_sub(a.from.unwrap_or(0))))
+                    .unwrap_or(1) as usize;
+                crate::tui::run(cfg, crate::tui::Launch::Collection { count }).await
+            } else {
+                ops::collection::run(&cfg, a).await
+            }
+        }
         Command::Artist(a) => ops::artist::run(&cfg, a).await,
         Command::ArtistBatch(a) => ops::artist::run_batch(&cfg, a).await,
         Command::Report(a) => ops::report::run(&cfg, a).await,
