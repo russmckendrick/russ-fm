@@ -1,0 +1,12 @@
+/target
+# Data assets reused as-is — never commit
+/collection_cache.db
+/collection_cache.db-wal
+/collection_cache.db-shm
+/discogs_cache/
+/config.json
+/secrets/
+/logs/
+/backups/
+*.db-journal
+backup_*.db
