@@ -1,5 +1,7 @@
-//! `release` command — fetch a release from Discogs, enrich it across services, and (with
-//! `--save`) persist to the DB and write the public JSON + hi-res artwork.
+//! `release` command and the reusable single-release processing pipeline used by `collection`.
+//!
+//! `process_release` fetches a release from Discogs, enriches it across services, and (when
+//! asked) persists to the DB and writes the public JSON + hi-res artwork.
 
 use anyhow::{bail, Context, Result};
 use once_cell::sync::Lazy;
@@ -14,13 +16,21 @@ use crate::services::Services;
 use crate::util::now_iso;
 use crate::Config;
 
+/// Which services contributed enrichment for a release.
+#[derive(Clone, Copy)]
+pub struct EnrichFlags {
+    pub apple: bool,
+    pub spotify: bool,
+    pub lastfm: bool,
+}
+
 /// Strip a Discogs disambiguation suffix like " (2)" from an artist name.
 fn clean_artist_name(name: &str) -> String {
     static SUFFIX: Lazy<Regex> = Lazy::new(|| Regex::new(r"\s*\(\d+\)$").unwrap());
     SUFFIX.replace(name.trim(), "").to_string()
 }
 
-fn prefer_key(p: Option<ImageSource>) -> Option<&'static str> {
+pub fn prefer_key(p: Option<ImageSource>) -> Option<&'static str> {
     p.map(|s| match s {
         ImageSource::AppleMusic => "apple_music",
         ImageSource::Spotify => "spotify",
@@ -28,6 +38,15 @@ fn prefer_key(p: Option<ImageSource>) -> Option<&'static str> {
         ImageSource::Discogs => "discogs",
         ImageSource::V1 => "v1",
     })
+}
+
+/// Shared HTTP client for artwork downloads.
+pub fn image_client() -> reqwest::Client {
+    reqwest::Client::builder()
+        .user_agent("MusicCollectionManager/1.0")
+        .timeout(std::time::Duration::from_secs(60))
+        .build()
+        .expect("building image client")
 }
 
 fn str_field(v: &Value, path: &[&str]) -> Option<String> {
@@ -38,22 +57,24 @@ fn str_field(v: &Value, path: &[&str]) -> Option<String> {
     cur.as_str().map(String::from)
 }
 
-pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
-    let services = Services::new(cfg);
-    let db = Db::open(cfg.db_path())?;
-
-    if !services.discogs.is_configured() {
-        bail!("Discogs is not configured — set discogs.access_token in config.json");
-    }
-
-    println!("Fetching Discogs release {}...", args.discogs_id);
+/// Fetch, enrich and assemble a release. When `write_files` is set, also download the hi-res
+/// artwork, persist to the DB and write the public JSON. Returns the (possibly DB-reloaded)
+/// record and the enrichment flags.
+pub async fn process_release(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    discogs_id: &str,
+    write_files: bool,
+    prefer: Option<&str>,
+) -> Result<(ReleaseRecord, EnrichFlags)> {
     let discogs = services
         .discogs
-        .get_release(&args.discogs_id)
+        .get_release(discogs_id)
         .await
-        .with_context(|| format!("fetching Discogs release {}", args.discogs_id))?;
+        .with_context(|| format!("fetching Discogs release {discogs_id}"))?;
 
-    // --- Parse the Discogs release ---
     let title = str_field(&discogs, &["title"]).unwrap_or_default();
     let primary_artist = discogs
         .get("artists")
@@ -87,10 +108,6 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
             .map(|arr| arr.iter().filter_map(|x| x.get("name").cloned()).collect())
             .unwrap_or_default()
     };
-    let formats = name_list("formats");
-    let labels = name_list("labels");
-    let genres = discogs.get("genres").cloned().unwrap_or_else(|| json!([]));
-    let styles = discogs.get("styles").cloned().unwrap_or_else(|| json!([]));
 
     let images_json: Vec<Value> = discogs
         .get("images")
@@ -129,48 +146,35 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     let videos = crate::services::discogs::DiscogsService::extract_video_uris(&discogs);
     let discogs_url = str_field(&discogs, &["uri"]);
 
-    // --- Enrich concurrently ---
-    println!("Enriching: {} — {}", primary_artist, title);
+    // Enrich concurrently.
     let (apple, spotify, lastfm) = tokio::join!(
-        enrich_apple(&services, &primary_artist, &title),
-        enrich_spotify(&services, &primary_artist, &title),
-        enrich_lastfm(&services, &primary_artist, &title),
+        enrich_apple(services, &primary_artist, &title),
+        enrich_spotify(services, &primary_artist, &title),
+        enrich_lastfm(services, &primary_artist, &title),
     );
+    let flags = EnrichFlags { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some() };
 
-    // --- Assemble raw_data + external IDs ---
+    // Assemble raw_data + external IDs.
     let mut raw = Map::new();
     raw.insert("discogs".into(), json!({ "images": discogs.get("images").cloned().unwrap_or(json!([])) }));
-
-    let (mut apple_id, mut apple_url, mut apple_name) = (None, None, None);
     if let Some(a) = &apple {
-        apple_id = a.get("id").and_then(|v| v.as_str()).map(String::from);
-        apple_url = a.get("url").and_then(|v| v.as_str()).map(String::from);
-        apple_name = a.get("name").and_then(|v| v.as_str()).map(String::from);
         raw.insert("apple_music".into(), a.clone());
     }
-    let (mut spotify_id, mut spotify_url, mut spotify_name) = (None, None, None);
     if let Some(s) = &spotify {
-        spotify_id = s.get("id").and_then(|v| v.as_str()).map(String::from);
-        spotify_url = s.get("url").and_then(|v| v.as_str()).map(String::from);
-        spotify_name = s.get("name").and_then(|v| v.as_str()).map(String::from);
         raw.insert("spotify".into(), s.clone());
     }
-    let (mut lastfm_mbid, mut lastfm_url) = (None, None);
     if let Some(l) = &lastfm {
-        lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
-        lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
         raw.insert("lastfm".into(), l.clone());
     }
     let raw_data = Value::Object(raw);
 
-    // Preserve created_at/date_added if the release already exists.
-    let existing = db.get_release_by_discogs_id(&args.discogs_id)?;
+    let existing = db.get_release_by_discogs_id(discogs_id)?;
     let now = now_iso();
     let created_at = existing.as_ref().and_then(|r| r.created_at.clone()).unwrap_or_else(|| now.clone());
     let date_added = existing.as_ref().and_then(|r| r.date_added.clone());
 
-    let folder = release_folder_name(&title, &args.discogs_id);
-    let data_rel = format!("{}/{}", cfg.data.path, cfg.releases.path); // e.g. ../public/album
+    let folder = release_folder_name(&title, discogs_id);
+    let data_rel = format!("{}/{}", cfg.data.path, cfg.releases.path);
     let local_images = json!({
         "hi-res": format!("{data_rel}/{folder}/{folder}-hi-res.jpg"),
         "medium": format!("{data_rel}/{folder}/{folder}-medium.jpg"),
@@ -178,92 +182,87 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     });
 
     let mut rec = ReleaseRecord {
-        id: args.discogs_id.clone(),
-        discogs_id: Some(args.discogs_id.clone()),
+        id: discogs_id.to_string(),
+        discogs_id: Some(discogs_id.to_string()),
         title: title.clone(),
         artists: Value::Array(artists_json),
         year: discogs.get("year").and_then(|y| y.as_i64()),
         released: str_field(&discogs, &["released"]),
         country: str_field(&discogs, &["country"]),
-        formats: Value::Array(formats),
-        labels: Value::Array(labels),
-        genres,
-        styles,
+        formats: Value::Array(name_list("formats")),
+        labels: Value::Array(name_list("labels")),
+        genres: discogs.get("genres").cloned().unwrap_or_else(|| json!([])),
+        styles: discogs.get("styles").cloned().unwrap_or_else(|| json!([])),
         images: Value::Array(images_json),
         tracklist: Value::Array(tracklist_json),
         videos: json!(videos),
-        apple_music_id: apple_id.take(),
-        spotify_id: spotify_id.take(),
-        lastfm_mbid: lastfm_mbid.take(),
+        apple_music_id: apple.as_ref().and_then(|a| a.get("id")).and_then(|v| v.as_str()).map(String::from),
+        spotify_id: spotify.as_ref().and_then(|s| s.get("id")).and_then(|v| v.as_str()).map(String::from),
+        lastfm_mbid: lastfm.as_ref().and_then(|l| l.get("mbid")).and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from),
         discogs_url,
-        apple_music_url: apple_url.take(),
-        spotify_url: spotify_url.take(),
-        lastfm_url: lastfm_url.take(),
+        apple_music_url: apple.as_ref().and_then(|a| a.get("url")).and_then(|v| v.as_str()).map(String::from),
+        spotify_url: spotify.as_ref().and_then(|s| s.get("url")).and_then(|v| v.as_str()).map(String::from),
+        lastfm_url: lastfm.as_ref().and_then(|l| l.get("url")).and_then(|v| v.as_str()).map(String::from),
         release_name_discogs: Some(title.clone()),
-        release_name_apple_music: apple_name.take(),
-        release_name_spotify: spotify_name.take(),
+        release_name_apple_music: apple.as_ref().and_then(|a| a.get("name")).and_then(|v| v.as_str()).map(String::from),
+        release_name_spotify: spotify.as_ref().and_then(|s| s.get("name")).and_then(|v| v.as_str()).map(String::from),
         enrichment_data: json!({}),
-        local_images: local_images.clone(),
+        local_images,
         raw_data,
         created_at: Some(created_at),
         updated_at: Some(now),
         date_added,
     };
 
-    // --- Display ---
-    print_summary(&rec, apple.is_some(), spotify.is_some(), lastfm.is_some());
+    if write_files {
+        let album_dir = cfg.releases_dir();
+        let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
+        let _ = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await;
+
+        db.save_release(&rec).context("saving release to database")?;
+        if let Some(saved) = db.get_release_by_discogs_id(discogs_id)? {
+            rec = saved;
+        }
+        let value = release_to_value(&rec, db);
+        let release_folder = album_dir.join(&folder);
+        std::fs::create_dir_all(&release_folder)?;
+        std::fs::write(release_folder.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
+    }
+
+    Ok((rec, flags))
+}
+
+pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
+    let services = Services::new(cfg);
+    let db = Db::open(cfg.db_path())?;
+    if !services.discogs.is_configured() {
+        bail!("Discogs is not configured — set discogs.access_token in config.json");
+    }
+    let client = image_client();
+
+    println!("Fetching & enriching Discogs release {}...", args.discogs_id);
+    let (rec, flags) =
+        process_release(cfg, &services, &db, &client, &args.discogs_id, args.save, prefer_key(args.prefer)).await?;
+
+    print_summary(&rec, flags);
     if matches!(args.output, OutputFormat::Json) {
-        let value = release_to_value(&rec, &db);
-        println!("{}", to_pretty_sorted(&value));
+        println!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
     }
-
-    if !args.save {
+    if args.save {
+        let folder = release_folder_name(&rec.title, &args.discogs_id);
+        println!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
+    } else {
         println!("\n(dry view — pass --save to write to the database, JSON and artwork)");
-        return Ok(());
     }
-
-    // --- Persist: image, DB, JSON ---
-    let album_dir = cfg.releases_dir();
-    let target = cfg
-        .image_sizes
-        .hi_res
-        .split('x')
-        .next()
-        .and_then(|s| s.parse::<u32>().ok())
-        .unwrap_or(2000);
-    let client = reqwest::Client::builder()
-        .user_agent("MusicCollectionManager/1.0")
-        .timeout(std::time::Duration::from_secs(60))
-        .build()?;
-    match images::download_release_hires(&client, &album_dir, &folder, &rec.raw_data, target, prefer_key(args.prefer)).await {
-        Some(p) => println!("Saved artwork: {}", p.display()),
-        None => println!("Warning: could not download artwork from any source"),
-    }
-
-    db.save_release(&rec).context("saving release to database")?;
-    println!("Saved release to database.");
-
-    // Re-fetch from DB so the written JSON reflects persisted state.
-    if let Some(saved) = db.get_release_by_discogs_id(&args.discogs_id)? {
-        rec = saved;
-    }
-    let value = release_to_value(&rec, &db);
-    let release_folder = album_dir.join(&folder);
-    std::fs::create_dir_all(&release_folder)?;
-    let json_path = release_folder.join(format!("{folder}.json"));
-    std::fs::write(&json_path, to_pretty_sorted(&value))?;
-    println!("Wrote {}", json_path.display());
-
     Ok(())
 }
 
-fn print_summary(rec: &ReleaseRecord, apple: bool, spotify: bool, lastfm: bool) {
+fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
     let mark = |b: bool| if b { "✓" } else { "–" };
     println!("\n  {}  ({})", rec.title, rec.year.unwrap_or(0));
     println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
-    let tracks = rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0);
-    println!("  tracks: {tracks}");
-    println!("  enrichment: apple {} | spotify {} | lastfm {}", mark(apple), mark(spotify), mark(lastfm));
+    println!("  tracks: {}", rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0));
+    println!("  enrichment: apple {} | spotify {} | lastfm {}", mark(flags.apple), mark(flags.spotify), mark(flags.lastfm));
 }
 
 /// Apple Music: search by artist+album, take the first album, build the public service dict.

@@ -112,6 +112,40 @@ impl DiscogsService {
         .await
     }
 
+    /// Fetch the user's full collection (folder 0), paginated, newest first. Returns the raw
+    /// release entries (each has top-level `id` = release id, `instance_id`, `date_added`, etc.).
+    pub async fn get_user_collection(&self, username: &str) -> ServiceResult<Vec<Value>> {
+        let mut out = Vec::new();
+        let mut page = 1u32;
+        loop {
+            let path = format!("/users/{username}/collection/folders/0/releases");
+            let v = self
+                .get(
+                    &path,
+                    &[
+                        ("page", page.to_string()),
+                        ("per_page", "100".into()),
+                        ("sort", "added".into()),
+                        ("sort_order", "desc".into()),
+                    ],
+                )
+                .await?;
+            if let Some(arr) = v.get("releases").and_then(|r| r.as_array()) {
+                out.extend(arr.iter().cloned());
+            }
+            let pages = v
+                .get("pagination")
+                .and_then(|p| p.get("pages"))
+                .and_then(|p| p.as_u64())
+                .unwrap_or(1) as u32;
+            if page >= pages {
+                break;
+            }
+            page += 1;
+        }
+        Ok(out)
+    }
+
     /// Extract YouTube/video URIs from a release payload (`videos[].uri`).
     pub fn extract_video_uris(release: &Value) -> Vec<String> {
         release

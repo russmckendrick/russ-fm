@@ -230,6 +230,33 @@ impl Db {
         Ok(())
     }
 
+    /// Mark a release's collection item processed/enriched, inserting one if none exists.
+    pub fn record_processed(
+        &self,
+        release_db_id: &str,
+        discogs_id: &str,
+        instance_id: Option<&str>,
+        date_added: Option<&str>,
+    ) -> Result<()> {
+        let conn = self.conn()?;
+        let now = Utc::now().to_rfc3339();
+        let n = conn.execute(
+            "UPDATE collection_items SET processed = 1, enriched = 1, updated_at = ?1 \
+             WHERE release_id IN (SELECT id FROM releases WHERE discogs_id = ?2)",
+            rusqlite::params![now, discogs_id],
+        )?;
+        if n == 0 {
+            let id = instance_id.map(str::to_string).unwrap_or_else(|| release_db_id.to_string());
+            conn.execute(
+                "INSERT OR REPLACE INTO collection_items \
+                 (id, release_id, instance_id, date_added, processed, enriched, created_at, updated_at) \
+                 VALUES (?1, ?2, ?3, ?4, 1, 1, ?5, ?5)",
+                rusqlite::params![id, release_db_id, instance_id, date_added, now],
+            )?;
+        }
+        Ok(())
+    }
+
     /// Copy the database file to `dest` (mirrors `backup_database`).
     pub fn backup_database(&self, dest: impl AsRef<Path>) -> Result<()> {
         // Ensure WAL contents are flushed into the main file before copying.
