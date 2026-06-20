@@ -503,6 +503,54 @@ impl Db {
         Ok(true)
     }
 
+    /// Insert or replace a full release row.
+    pub fn save_release(&self, rec: &ReleaseRecord) -> Result<()> {
+        let conn = self.conn()?;
+        let j = |v: &Value| v.to_string();
+        conn.execute(
+            "INSERT OR REPLACE INTO releases (\
+                id, discogs_id, title, artists, year, released, country, formats, labels, genres, \
+                styles, images, tracklist, videos, release_name_discogs, release_name_apple_music, \
+                release_name_spotify, apple_music_id, spotify_id, lastfm_mbid, discogs_url, \
+                apple_music_url, spotify_url, lastfm_url, enrichment_data, created_at, updated_at, \
+                date_added, local_images, raw_data\
+             ) VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,?18,?19,?20,?21,?22,?23,?24,?25,?26,?27,?28,?29,?30)",
+            rusqlite::params![
+                rec.id,
+                rec.discogs_id,
+                rec.title,
+                j(&rec.artists),
+                rec.year,
+                rec.released,
+                rec.country,
+                j(&rec.formats),
+                j(&rec.labels),
+                j(&rec.genres),
+                j(&rec.styles),
+                j(&rec.images),
+                j(&rec.tracklist),
+                j(&rec.videos),
+                rec.release_name_discogs,
+                rec.release_name_apple_music,
+                rec.release_name_spotify,
+                rec.apple_music_id,
+                rec.spotify_id,
+                rec.lastfm_mbid,
+                rec.discogs_url,
+                rec.apple_music_url,
+                rec.spotify_url,
+                rec.lastfm_url,
+                j(&rec.enrichment_data),
+                rec.created_at,
+                rec.updated_at,
+                rec.date_added,
+                j(&rec.local_images),
+                j(&rec.raw_data),
+            ],
+        )?;
+        Ok(())
+    }
+
     /// Delete a release row (db-manager). Caller is responsible for backing up first.
     pub fn delete_release(&self, discogs_id: &str) -> Result<bool> {
         let conn = self.conn()?;

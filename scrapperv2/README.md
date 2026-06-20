@@ -66,7 +66,7 @@ scrapper backup [--backup-path P]
 scrapper init [--output P]
 scrapper test                  # service credential / connectivity check
 scrapper collection [--resume] [--from N --to N] [--limit N] [--dry-run] ...
-scrapper release <discogs_id> [--save] [--prefer …] [--perplexity] ...
+scrapper release <discogs_id> [--save] [--prefer …] [--output json]   # live: fetch+enrich
 scrapper artist <name> [--save] [--verify] [--theaudiodb] [--perplexity] ...
 scrapper artist-batch --from N --to N [--save] [--stats] ...
 scrapper enrich-description [<id>] [--list-missing] [--force] [--from <id>] ...
@@ -118,8 +118,9 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | Local commands (status, db, backup, init, dry-runs, list-missing, maintenance) | ✅ working |
 | API services (7) | ✅ done — `test` probes all 7 concurrently |
 | Public JSON serializer (album + artist) | ✅ done — fidelity-tested vs `public/` |
-| Orchestration / image manager / collection generator | 🚧 in progress |
-| Live enrichment / report / generate-collection | ⬜ planned |
+| Image manager (hi-res download + source fallback) | ✅ done |
+| Live `release <id>` (fetch → enrich → save → JSON + artwork) | ✅ done |
+| Live `artist` / `collection` / `generate-collection` | 🚧 in progress |
 | ratatui TUI | ⬜ planned |
 
 Network commands are wired and dispatch today; their live bodies report "not yet ported" until
