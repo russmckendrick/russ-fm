@@ -10,15 +10,9 @@ async fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
 
     if cli.command.is_none() {
-        // Bare invocation: launch the TUI (pending — task 7).
+        // Bare invocation: launch the interactive TUI.
         let cfg = cli.load_config()?;
-        eprintln!(
-            "scrapper TUI is not yet wired up. For now, use a subcommand — try:\n  \
-             scrapper status\n  scrapper db list releases --limit 10\n  scrapper --help\n\n\
-             (config loaded from {})",
-            cfg.base_dir.display()
-        );
-        return Ok(());
+        return scrapperv2::tui::run(cfg).await;
     }
 
     logging::init_cli(&cli.log_level);

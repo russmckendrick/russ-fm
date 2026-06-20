@@ -11,6 +11,7 @@ pub mod ops;
 pub mod output;
 pub mod sanitize;
 pub mod services;
+pub mod tui;
 pub mod util;
 
 pub use config::Config;
