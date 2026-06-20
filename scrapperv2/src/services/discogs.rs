@@ -146,6 +146,18 @@ impl DiscogsService {
         Ok(out)
     }
 
+    /// Look up when a release was added to the user's collection (`date_added`), if present.
+    pub async fn collection_date_added(&self, username: &str, release_id: &str) -> Option<String> {
+        let path = format!("/users/{username}/collection/releases/{release_id}");
+        let v = self.get(&path, &[]).await.ok()?;
+        v.get("releases")
+            .and_then(|r| r.as_array())
+            .and_then(|a| a.first())
+            .and_then(|r| r.get("date_added"))
+            .and_then(|d| d.as_str())
+            .map(String::from)
+    }
+
     /// Extract YouTube/video URIs from a release payload (`videos[].uri`).
     pub fn extract_video_uris(release: &Value) -> Vec<String> {
         release

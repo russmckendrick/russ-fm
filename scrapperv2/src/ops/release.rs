@@ -255,6 +255,7 @@ pub async fn process_release(
     write_files: bool,
     prefer: Option<&str>,
     picker: &MatchPicker,
+    collection_date_added: Option<&str>,
 ) -> Result<(ReleaseRecord, EnrichFlags)> {
     let discogs = services
         .discogs
@@ -392,7 +393,10 @@ pub async fn process_release(
     let existing = db.get_release_by_discogs_id(discogs_id)?;
     let now = now_iso();
     let created_at = existing.as_ref().and_then(|r| r.created_at.clone()).unwrap_or_else(|| now.clone());
-    let date_added = existing.as_ref().and_then(|r| r.date_added.clone());
+    // Prefer the authoritative Discogs collection date; fall back to any existing DB value.
+    let date_added = collection_date_added
+        .map(String::from)
+        .or_else(|| existing.as_ref().and_then(|r| r.date_added.clone()));
 
     let folder = release_folder_name(&title, discogs_id);
     let data_rel = format!("{}/{}", cfg.data.path, cfg.releases.path);
@@ -463,8 +467,16 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
 
     let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
     println!("Fetching & enriching Discogs release {}...", args.discogs_id);
-    let (rec, flags) =
-        process_release(cfg, &services, &db, &client, &args.discogs_id, args.save, prefer_key(args.prefer), &picker).await?;
+    // Look up the collection date so a freshly-added release sorts correctly.
+    let date_added = if cfg.discogs.username.is_empty() {
+        None
+    } else {
+        services.discogs.collection_date_added(&cfg.discogs.username, &args.discogs_id).await
+    };
+    let (rec, flags) = process_release(
+        cfg, &services, &db, &client, &args.discogs_id, args.save, prefer_key(args.prefer), &picker, date_added.as_deref(),
+    )
+    .await?;
 
     print_summary(&rec, flags);
     if matches!(args.output, OutputFormat::Json) {

@@ -100,7 +100,7 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
     let mut failed = 0usize;
 
     for (i, e) in entries.iter().enumerate() {
-        match process_release(cfg, &services, &db, &client, &e.release_id, true, prefer, &picker).await {
+        match process_release(cfg, &services, &db, &client, &e.release_id, true, prefer, &picker, e.date_added.as_deref()).await {
             Ok((rec, flags)) => {
                 db.record_processed(&rec.id, &e.release_id, e.instance_id.as_deref(), e.date_added.as_deref())?;
                 ok += 1;

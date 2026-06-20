@@ -319,26 +319,32 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick
             return;
         }
     };
-    let mut ids: Vec<String> = entries
+    // Keep each release's collection date_added and instance so newly-added releases sort right.
+    let mut items: Vec<(String, Option<String>, Option<String>)> = entries
         .iter()
-        .filter_map(|v| v.get("id").map(|i| match i {
-            serde_json::Value::Number(n) => n.to_string(),
-            serde_json::Value::String(s) => s.clone(),
-            other => other.to_string(),
-        }))
+        .filter_map(|v| {
+            let id = v.get("id").map(|i| match i {
+                serde_json::Value::Number(n) => n.to_string(),
+                serde_json::Value::String(s) => s.clone(),
+                other => other.to_string(),
+            })?;
+            let date_added = v.get("date_added").and_then(|d| d.as_str()).map(String::from);
+            let instance = v.get("instance_id").map(|i| i.to_string());
+            Some((id, date_added, instance))
+        })
         .collect();
-    ids.truncate(limit);
-    let total = ids.len();
+    items.truncate(limit);
+    let total = items.len();
     log(format!("Processing {total} release(s) (newest first, interactive)"));
 
     let client = crate::ops::release::image_client();
     let picker = MatchPicker::Tui(pick_tx);
 
-    for (i, id) in ids.iter().enumerate() {
+    for (i, (id, date_added, instance)) in items.iter().enumerate() {
         log(format!("▶ [{}/{total}] release {id} — fetching from Discogs…", i + 1));
-        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None, &picker).await {
+        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None, &picker, date_added.as_deref()).await {
             Ok((rec, f)) => {
-                let _ = db.record_processed(&rec.id, id, None, None);
+                let _ = db.record_processed(&rec.id, id, instance.as_deref(), date_added.as_deref());
                 let m = |b: bool| if b { "✓" } else { "–" };
                 log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
                 log(format!(
