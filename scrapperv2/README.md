@@ -122,7 +122,8 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | Live `release <id>` (fetch → enrich → save → JSON + artwork) | ✅ done |
 | Live `collection` (resume-aware, reuses the release pipeline) | ✅ done |
 | Live `artist` (Discogs + Apple/Spotify/Last.fm/Wikipedia/TheAudioDB) | ✅ done |
-| `artist-batch` / `generate-collection` / Perplexity descriptions | 🚧 in progress |
+| `generate-collection` (collection.json index) | ✅ done — 99.8% match vs existing |
+| `artist-batch` / Perplexity descriptions / `report` | 🚧 in progress |
 | ratatui TUI | ⬜ planned |
 
 Network commands are wired and dispatch today; their live bodies report "not yet ported" until

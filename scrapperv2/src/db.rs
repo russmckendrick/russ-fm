@@ -394,6 +394,16 @@ impl Db {
         Ok(rec)
     }
 
+    /// All releases as full records (for collection.json generation).
+    pub fn get_all_releases(&self) -> Result<Vec<ReleaseRecord>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare("SELECT * FROM releases")?;
+        let rows = stmt
+            .query_map([], row_to_release)?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(rows)
+    }
+
     /// All release discogs_ids (for batch regeneration/verification).
     pub fn all_release_discogs_ids(&self) -> Result<Vec<String>> {
         let conn = self.conn()?;
