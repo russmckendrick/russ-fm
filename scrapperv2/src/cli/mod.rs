@@ -311,6 +311,16 @@ impl Cli {
     pub fn load_config(&self) -> anyhow::Result<Config> {
         Config::load(self.config.as_deref())
     }
+
+    /// True when this invocation launches the interactive TUI (so stderr logging must be
+    /// suppressed to avoid corrupting the alternate screen).
+    pub fn launches_tui(&self) -> bool {
+        match &self.command {
+            None => true,
+            Some(Command::Collection(a)) => a.interactive,
+            _ => false,
+        }
+    }
 }
 
 /// Execute a CLI command. Returns once complete.

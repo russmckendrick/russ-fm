@@ -19,8 +19,12 @@ use tokio::sync::{mpsc::UnboundedSender, oneshot};
 
 /// A request for the user to choose among candidate matches (used by the TUI modal picker).
 pub struct PickRequest {
+    /// What is being matched, e.g. "Spotify · BASIC — BASIC".
     pub prompt: String,
-    pub labels: Vec<String>,
+    /// Column headers, e.g. ["Title", "Artist", "Year", "Type"].
+    pub header: Vec<&'static str>,
+    /// One row of cells per candidate.
+    pub rows: Vec<Vec<String>>,
     pub reply: oneshot::Sender<Option<usize>>,
 }
 
@@ -40,17 +44,18 @@ impl MatchPicker {
         !matches!(self, MatchPicker::First)
     }
 
-    /// Choose an index from `labels`, or `None` to skip the match.
-    pub async fn pick(&self, prompt: &str, labels: &[String]) -> Option<usize> {
+    /// Choose a row index, or `None` to skip the match.
+    pub async fn pick(&self, prompt: &str, header: &[&'static str], rows: &[Vec<String>]) -> Option<usize> {
         match self {
             MatchPicker::First => Some(0),
-            MatchPicker::Cli => interactive_pick(prompt, labels),
+            MatchPicker::Cli => cli_pick(prompt, header, rows),
             MatchPicker::Tui(tx) => {
                 let (reply, rx) = oneshot::channel();
-                if tx.send(PickRequest { prompt: prompt.into(), labels: labels.to_vec(), reply }).is_err() {
-                    return Some(0);
+                let req = PickRequest { prompt: prompt.into(), header: header.to_vec(), rows: rows.to_vec(), reply };
+                if tx.send(req).is_err() {
+                    return None;
                 }
-                rx.await.unwrap_or(Some(0))
+                rx.await.ok().flatten()
             }
         }
     }
@@ -316,18 +321,49 @@ fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
     println!("  enrichment: apple {} | spotify {} | lastfm {}", mark(flags.apple), mark(flags.spotify), mark(flags.lastfm));
 }
 
-/// Present candidate matches and return the chosen index, or None to skip. Esc/q skips.
-fn interactive_pick(prompt: &str, labels: &[String]) -> Option<usize> {
+/// CLI fallback picker: render a simple table and read a choice (Esc / blank skips).
+fn cli_pick(prompt: &str, header: &[&str], rows: &[Vec<String>]) -> Option<usize> {
     use dialoguer::{theme::ColorfulTheme, Select};
+    let widths: Vec<usize> = (0..header.len())
+        .map(|c| rows.iter().map(|r| r.get(c).map(|s| s.chars().count()).unwrap_or(0)).chain(std::iter::once(header[c].len())).max().unwrap_or(0).min(40))
+        .collect();
+    let fmt = |cells: &[String]| -> String {
+        cells.iter().enumerate().map(|(c, s)| {
+            let s: String = s.chars().take(40).collect();
+            format!("{:<width$}", s, width = widths.get(c).copied().unwrap_or(0))
+        }).collect::<Vec<_>>().join("  ")
+    };
+    let mut items: Vec<String> = rows.iter().map(|r| fmt(r)).collect();
+    items.push("Skip this service".into());
     tokio::task::block_in_place(|| {
-        Select::with_theme(&ColorfulTheme::default())
-            .with_prompt(format!("{prompt} (Esc to skip)"))
-            .items(labels)
+        let choice = Select::with_theme(&ColorfulTheme::default())
+            .with_prompt(prompt)
+            .items(&items)
             .default(0)
             .interact_opt()
             .ok()
-            .flatten()
+            .flatten();
+        match choice {
+            Some(i) if i < rows.len() => Some(i),
+            _ => None,
+        }
     })
+}
+
+/// Derive an Apple "type" from a title suffix (Apple appends " - Single" / " - EP").
+fn apple_type(title: &str) -> &'static str {
+    let t = title.to_lowercase();
+    if t.ends_with("- single") {
+        "single"
+    } else if t.ends_with("- ep") {
+        "ep"
+    } else {
+        "album"
+    }
+}
+
+fn year_of(date: &str) -> String {
+    date.chars().take(4).collect()
 }
 
 /// Apple Music: search by artist+album; pick the match (interactive) or take the first.
@@ -341,19 +377,20 @@ async fn enrich_apple(services: &Services, artist: &str, album: &str, picker: &M
         return None;
     }
     let idx = if picker.is_interactive() && data.len() > 1 {
-        let labels: Vec<String> = data
+        let rows: Vec<Vec<String>> = data
             .iter()
             .map(|i| {
                 let a = i.get("attributes");
-                format!(
-                    "{} — {} ({})",
-                    a.and_then(|a| a.get("artistName")).and_then(|v| v.as_str()).unwrap_or("?"),
-                    a.and_then(|a| a.get("name")).and_then(|v| v.as_str()).unwrap_or("?"),
-                    a.and_then(|a| a.get("releaseDate")).and_then(|v| v.as_str()).unwrap_or("—"),
-                )
+                let name = a.and_then(|a| a.get("name")).and_then(|v| v.as_str()).unwrap_or("?");
+                vec![
+                    name.to_string(),
+                    a.and_then(|a| a.get("artistName")).and_then(|v| v.as_str()).unwrap_or("?").to_string(),
+                    year_of(a.and_then(|a| a.get("releaseDate")).and_then(|v| v.as_str()).unwrap_or("")),
+                    apple_type(name).to_string(),
+                ]
             })
             .collect();
-        picker.pick("Apple Music match", &labels).await?
+        picker.pick(&format!("Apple Music · {artist} — {album}"), &["Title", "Artist", "Year", "Type"], &rows).await?
     } else {
         0
     };
@@ -384,7 +421,7 @@ async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: 
         return None;
     }
     let idx = if picker.is_interactive() && items.len() > 1 {
-        let labels: Vec<String> = items
+        let rows: Vec<Vec<String>> = items
             .iter()
             .map(|i| {
                 let artists = i
@@ -392,15 +429,15 @@ async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: 
                     .and_then(|a| a.as_array())
                     .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
                     .unwrap_or_default();
-                format!(
-                    "{} — {} ({})",
+                vec![
+                    i.get("name").and_then(|v| v.as_str()).unwrap_or("?").to_string(),
                     artists,
-                    i.get("name").and_then(|v| v.as_str()).unwrap_or("?"),
-                    i.get("release_date").and_then(|v| v.as_str()).unwrap_or("—"),
-                )
+                    year_of(i.get("release_date").and_then(|v| v.as_str()).unwrap_or("")),
+                    i.get("album_type").and_then(|v| v.as_str()).unwrap_or("—").to_string(),
+                ]
             })
             .collect();
-        picker.pick("Spotify match", &labels).await?
+        picker.pick(&format!("Spotify · {artist} — {album}"), &["Title", "Artist", "Year", "Type"], &rows).await?
     } else {
         0
     };

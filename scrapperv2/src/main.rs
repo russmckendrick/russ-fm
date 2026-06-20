@@ -9,13 +9,17 @@ use scrapperv2::logging;
 async fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
 
+    // Suppress stderr logging on TUI paths (it would corrupt the alternate screen).
+    if !cli.launches_tui() {
+        logging::init_cli(&cli.log_level);
+    }
+
     if cli.command.is_none() {
         // Bare invocation: launch the interactive TUI.
         let cfg = cli.load_config()?;
         return scrapperv2::tui::run(cfg, scrapperv2::tui::Launch::Home).await;
     }
 
-    logging::init_cli(&cli.log_level);
     let cfg = cli.load_config()?;
     cli::run(cli, cfg).await
 }

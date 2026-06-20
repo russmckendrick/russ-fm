@@ -6,7 +6,7 @@ use std::time::Duration;
 use anyhow::Result;
 use crossterm::event::{self, Event, KeyCode, KeyEventKind};
 use ratatui::prelude::*;
-use ratatui::widgets::{Block, Borders, Gauge, List, ListItem, ListState, Paragraph, Wrap};
+use ratatui::widgets::{Block, Borders, Cell, Gauge, List, ListItem, ListState, Paragraph, Row, Table, TableState, Wrap};
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 
 use crate::db::{ArtistSummary, ReleaseSummary};
@@ -22,12 +22,20 @@ pub enum Launch {
     Collection { count: usize },
 }
 
-/// A match-picker modal awaiting the user's choice.
+/// A match-picker awaiting the user's choice.
 struct PendingPick {
     prompt: String,
-    labels: Vec<String>,
+    header: Vec<&'static str>,
+    rows: Vec<Vec<String>>,
     reply: Option<tokio::sync::oneshot::Sender<Option<usize>>>,
-    state: ListState,
+    state: TableState,
+}
+
+impl PendingPick {
+    /// Number of selectable entries (candidates + the trailing "skip" row).
+    fn len(&self) -> usize {
+        self.rows.len() + 1
+    }
 }
 
 mod theme {
@@ -238,9 +246,9 @@ impl App {
         // Surface a pending match-picker request (one at a time; the task blocks until answered).
         if self.pending.is_none() {
             if let Ok(req) = self.pick_rx.try_recv() {
-                let mut state = ListState::default();
+                let mut state = TableState::default();
                 state.select(Some(0));
-                self.pending = Some(PendingPick { prompt: req.prompt, labels: req.labels, reply: Some(req.reply), state });
+                self.pending = Some(PendingPick { prompt: req.prompt, header: req.header, rows: req.rows, reply: Some(req.reply), state });
             }
         }
         while let Ok(msg) = self.rx.try_recv() {
@@ -315,7 +323,6 @@ async fn run_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>, pick
         }
         let _ = tx.send(Msg::Progress(i + 1, total));
     }
-    log("— run complete —".into());
     let _ = tx.send(Msg::Done("collection".into()));
 }
 
@@ -365,22 +372,24 @@ async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Res
 }
 
 fn handle_key(app: &mut App, code: KeyCode) {
-    // Modal match-picker captures all input while open.
+    // Match-picker captures all input while open.
     if let Some(pick) = app.pending.as_mut() {
-        let len = pick.labels.len();
+        let len = pick.len();
+        let n_rows = pick.rows.len();
         match code {
             KeyCode::Up => {
                 let cur = pick.state.selected().unwrap_or(0) as isize;
-                pick.state.select(Some(((cur - 1).rem_euclid(len.max(1) as isize)) as usize));
+                pick.state.select(Some(((cur - 1).rem_euclid(len as isize)) as usize));
             }
             KeyCode::Down => {
                 let cur = pick.state.selected().unwrap_or(0) as isize;
-                pick.state.select(Some(((cur + 1).rem_euclid(len.max(1) as isize)) as usize));
+                pick.state.select(Some(((cur + 1).rem_euclid(len as isize)) as usize));
             }
             KeyCode::Enter => {
-                let idx = pick.state.selected();
+                let sel = pick.state.selected().unwrap_or(0);
+                let choice = if sel < n_rows { Some(sel) } else { None }; // last row = skip
                 if let Some(reply) = pick.reply.take() {
-                    let _ = reply.send(idx);
+                    let _ = reply.send(choice);
                 }
                 app.pending = None;
             }
@@ -464,6 +473,17 @@ fn handle_key(app: &mut App, code: KeyCode) {
 fn draw(f: &mut Frame, app: &mut App) {
     let chunks = Layout::vertical([Constraint::Length(3), Constraint::Min(0), Constraint::Length(1)]).split(f.area());
     draw_header(f, chunks[0], app);
+
+    // When a match-picker is open it owns the whole content area.
+    if app.pending.is_some() {
+        draw_picker(f, chunks[1], app);
+        f.render_widget(
+            Paragraph::new("↑/↓ select · Enter choose · Esc skip this service").style(Style::default().fg(theme::DIM)),
+            chunks[2],
+        );
+        return;
+    }
+
     match app.screen {
         Screen::Home => draw_home(f, chunks[1], app),
         Screen::Dashboard => draw_dashboard(f, chunks[1], app),
@@ -481,37 +501,35 @@ fn draw(f: &mut Frame, app: &mut App) {
     };
     f.render_widget(Paragraph::new(hint).style(Style::default().fg(theme::DIM)), chunks[2]);
     let _ = &app.status;
-
-    if let Some(pick) = app.pending.as_mut() {
-        let area = centered_rect(70, 60, f.area());
-        f.render_widget(ratatui::widgets::Clear, area);
-        let items: Vec<ListItem> = pick.labels.iter().map(|l| ListItem::new(format!("  {l}"))).collect();
-        let list = List::new(items)
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .title(format!(" {} · ↑/↓ Enter select · Esc skip ", pick.prompt))
-                    .border_style(Style::default().fg(theme::ACCENT)),
-            )
-            .highlight_style(Style::default().fg(theme::ACCENT).add_modifier(Modifier::BOLD))
-            .highlight_symbol("▶ ");
-        f.render_stateful_widget(list, area, &mut pick.state);
-    }
 }
 
-fn centered_rect(percent_x: u16, percent_y: u16, area: Rect) -> Rect {
-    let vert = Layout::vertical([
-        Constraint::Percentage((100 - percent_y) / 2),
-        Constraint::Percentage(percent_y),
-        Constraint::Percentage((100 - percent_y) / 2),
-    ])
-    .split(area);
-    Layout::horizontal([
-        Constraint::Percentage((100 - percent_x) / 2),
-        Constraint::Percentage(percent_x),
-        Constraint::Percentage((100 - percent_x) / 2),
-    ])
-    .split(vert[1])[1]
+fn draw_picker(f: &mut Frame, area: Rect, app: &mut App) {
+    let pick = app.pending.as_mut().expect("picker active");
+
+    let header = Row::new(pick.header.iter().map(|h| Cell::from(*h)))
+        .style(Style::default().fg(theme::ACCENT).add_modifier(Modifier::BOLD));
+
+    let mut rows: Vec<Row> = pick
+        .rows
+        .iter()
+        .map(|r| Row::new(r.iter().map(|c| Cell::from(c.clone())).collect::<Vec<_>>()))
+        .collect();
+    // Trailing "skip" entry.
+    rows.push(Row::new(vec![Cell::from("✗ Skip this service")]).style(Style::default().fg(theme::DIM)));
+
+    let widths = [Constraint::Percentage(46), Constraint::Percentage(34), Constraint::Length(6), Constraint::Length(10)];
+    let table = Table::new(rows, widths)
+        .header(header)
+        .column_spacing(2)
+        .block(
+            Block::default()
+                .borders(Borders::ALL)
+                .title(format!(" Choose match — {} ", pick.prompt))
+                .border_style(Style::default().fg(theme::ACCENT)),
+        )
+        .row_highlight_style(Style::default().fg(Color::Black).bg(theme::ACCENT).add_modifier(Modifier::BOLD))
+        .highlight_symbol("▶ ");
+    f.render_stateful_widget(table, area, &mut pick.state);
 }
 
 fn draw_header(f: &mut Frame, area: Rect, app: &App) {

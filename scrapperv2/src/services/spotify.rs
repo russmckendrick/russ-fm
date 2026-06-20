@@ -108,7 +108,7 @@ impl SpotifyService {
                 ("q", format!("{artist} {album}")),
                 ("type", "album".into()),
                 ("market", self.market.clone()),
-                ("limit", "10".into()),
+                ("limit", "50".into()),
             ],
         )
         .await

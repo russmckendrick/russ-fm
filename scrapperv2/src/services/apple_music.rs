@@ -120,7 +120,7 @@ impl AppleMusicService {
         let path = format!("/catalog/{}/search", self.storefront);
         self.get(
             &path,
-            &[("term", format!("{artist} {album}")), ("types", "albums".into()), ("limit", "10".into())],
+            &[("term", format!("{artist} {album}")), ("types", "albums".into()), ("limit", "25".into())],
         )
         .await
     }
