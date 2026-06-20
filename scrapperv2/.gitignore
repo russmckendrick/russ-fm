@@ -1,4 +1,8 @@
 /target
+# The repo-root .gitignore has a blanket `output/` rule (for generated content); re-include
+# our Rust `src/output/` source module so it is tracked.
+!src/output/
+!src/output/**
 # Data assets reused as-is — never commit
 /collection_cache.db
 /collection_cache.db-wal

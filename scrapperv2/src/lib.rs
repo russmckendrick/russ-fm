@@ -8,6 +8,7 @@ pub mod config;
 pub mod db;
 pub mod logging;
 pub mod ops;
+pub mod output;
 pub mod sanitize;
 pub mod services;
 pub mod util;

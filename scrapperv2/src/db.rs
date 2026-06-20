@@ -359,6 +359,24 @@ impl Db {
         Ok(rec)
     }
 
+    pub fn get_artist_by_discogs_id(&self, discogs_id: &str) -> Result<Option<ArtistRecord>> {
+        let conn = self.conn()?;
+        let rec = conn
+            .query_row("SELECT * FROM artists WHERE discogs_id = ?", [discogs_id], row_to_artist)
+            .optional()?;
+        Ok(rec)
+    }
+
+    /// All release discogs_ids (for batch regeneration/verification).
+    pub fn all_release_discogs_ids(&self) -> Result<Vec<String>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare("SELECT discogs_id FROM releases WHERE discogs_id IS NOT NULL")?;
+        let ids = stmt
+            .query_map([], |r| r.get::<_, String>(0))?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(ids)
+    }
+
     // ---- Maintenance / enrichment helpers ----
 
     /// Releases lacking any description (Apple editorial, Last.fm wiki, or Perplexity).

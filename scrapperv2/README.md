@@ -100,6 +100,13 @@ sanitizer. A short, documented allowlist covers legacy folders that predate cert
 rules (the current Python sanitizer doesn't reproduce them either) plus one macOS NFC/NFD
 filesystem artifact; both sides are NFC-normalized before comparison.
 
+The **JSON fidelity gate** (`tests/json_fidelity.rs`) regenerates album/artist JSON from the DB
+and compares it *semantically* against the on-disk `public/` files (album ~98%, artist ~95%).
+Excluded from the comparison are fields a DB-only regenerate cannot reproduce (`resource_url`,
+per-track `artists`, the `services`/`raw_data` blobs — which in the old files are Python
+dataclass-repr strings) and volatile timestamps. The residual misses are stale snapshots where
+the DB has moved on (ids assigned, albums re-matched, videos backfilled), not serializer errors.
+
 ## Status
 
 | Area | State |
@@ -110,7 +117,8 @@ filesystem artifact; both sides are NFC-normalized before comparison.
 | CLI surface (all commands/flags) | ✅ done |
 | Local commands (status, db, backup, init, dry-runs, list-missing, maintenance) | ✅ working |
 | API services (7) | ✅ done — `test` probes all 7 concurrently |
-| Orchestration + output pipeline | 🚧 in progress |
+| Public JSON serializer (album + artist) | ✅ done — fidelity-tested vs `public/` |
+| Orchestration / image manager / collection generator | 🚧 in progress |
 | Live enrichment / report / generate-collection | ⬜ planned |
 | ratatui TUI | ⬜ planned |
 
