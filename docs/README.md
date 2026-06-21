@@ -1,6 +1,6 @@
 # russ.fm Documentation
 
-A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a sophisticated Python backend.
+A modern, full-stack music collection management and showcase system with a React frontend displaying enriched Discogs collection data processed by a Rust backend.
 
 ## Quick Links
 
@@ -9,7 +9,7 @@ A modern, full-stack music collection management and showcase system with a Reac
 | [Getting Started](./getting-started/) | Prerequisites, setup, and first run |
 | [Architecture](./architecture/) | System design and component interaction |
 | [Frontend](./frontend/) | React app, components, hooks, and utilities |
-| [Backend](./backend/) | Python CLI, services, and data processing |
+| [Backend](./backend/) | Rust CLI, services, and data processing |
 | [Data](./data/) | Schemas, models, and database structure |
 | [Build Pipeline](./build-pipeline/) | Asset processing and deployment |
 | [API Integrations](./api-integrations/) | Service-by-service documentation |
@@ -26,7 +26,7 @@ flowchart TB
         Utils[Utilities]
     end
 
-    subgraph Backend["Python Backend (scrapper/)"]
+    subgraph Backend["Rust Backend (scrapper/)"]
         CLI[CLI Commands]
         Orchestrator[Orchestrator]
         Services[API Services]
@@ -70,11 +70,10 @@ flowchart TB
 - **Search**: Fuse.js
 
 ### Backend
-- **Language**: Python 3.8+
-- **CLI Framework**: Click
+- **Language**: Rust
+- **Interface**: TUI/CLI binary (`scrapper`)
 - **Database**: SQLite
-- **HTTP Client**: Requests
-- **Image Processing**: Pillow
+- **Install**: `cd scrapper && ./install.sh` (installs to `~/.cargo/bin`, runs from any directory)
 
 ### Infrastructure
 - **Hosting**: Cloudflare Workers
@@ -111,7 +110,7 @@ flowchart TB
 ```mermaid
 sequenceDiagram
     participant User
-    participant CLI as Python CLI
+    participant CLI as Rust CLI
     participant Discogs
     participant Services as Enrichment Services
     participant DB as SQLite Cache
@@ -119,7 +118,7 @@ sequenceDiagram
     participant Frontend as React App
     participant R2 as Cloudflare R2
 
-    User->>CLI: python main.py collection
+    User->>CLI: scrapper collection
     CLI->>Discogs: Fetch collection
     Discogs-->>CLI: Collection items
 
@@ -156,14 +155,10 @@ russ-fm/
 │   ├── services/                 # API services
 │   ├── types/                    # TypeScript definitions
 │   └── config/                   # App configuration
-├── scrapper/                     # Python data collection
-│   ├── music_collection_manager/ # Core package
-│   │   ├── services/             # API clients
-│   │   ├── utils/                # Orchestration & utilities
-│   │   ├── models/               # Data models
-│   │   ├── cli/                  # CLI commands
-│   │   └── config/               # Configuration
-│   └── main.py                   # CLI entry point
+├── scrapper/                     # Rust data collection (TUI/CLI binary)
+│   ├── src/                      # Rust source
+│   ├── install.sh                # Build & install to ~/.cargo/bin
+│   └── Cargo.toml                # Crate manifest
 ├── public/                       # Static data
 │   ├── collection.json           # Album index
 │   ├── album/{slug}/             # Album data & images

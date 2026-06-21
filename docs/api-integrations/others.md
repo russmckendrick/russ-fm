@@ -24,13 +24,10 @@ This document covers Wikipedia, TheAudioDB, and lightweight frontend analytics i
 
 ### Service Class
 
-**File**: `scrapper/music_collection_manager/services/wikipedia/wikipedia_service.py`
+**Source**: `scrapper/src/services/wikipedia` (Rust)
 
-```python
-from music_collection_manager.services.wikipedia import WikipediaService
-
-service = WikipediaService(config)
-```
+The Wikipedia service exposes the methods below. The response shapes documented here
+describe the data each call returns.
 
 ### Methods
 
@@ -121,22 +118,11 @@ results = service.search_release("Radiohead", "OK Computer")
 
 ---
 
-### Usage Example
+### Usage
 
-```python
-from music_collection_manager.services.wikipedia import WikipediaService
-
-service = WikipediaService(config)
-
-# Get artist bio
-summary = service.get_artist_summary("Radiohead")
-
-if summary:
-    print(f"Bio: {summary['extract'][:200]}...")
-    print(f"Image: {summary.get('image', 'N/A')}")
-else:
-    print("Artist not found on Wikipedia")
-```
+During artist processing the orchestrator calls `get_artist_summary(artist_name)` to
+fetch a biography and image. If no page is found, the artist is enriched from the other
+sources instead (see Data Priority in the [API Integrations overview](./README.md)).
 
 ### Data Mapping
 
@@ -173,13 +159,10 @@ else:
 
 ### Service Class
 
-**File**: `scrapper/music_collection_manager/services/theaudiodb/theaudiodb_service.py`
+**Source**: `scrapper/src/services/theaudiodb` (Rust)
 
-```python
-from music_collection_manager.services.theaudiodb import TheAudioDBService
-
-service = TheAudioDBService(config)
-```
+The TheAudioDB service exposes the methods below. The response shapes documented here
+describe the data each call returns.
 
 ### Methods
 
@@ -344,38 +327,20 @@ TheAudioDB provides multiple image types:
 
 ---
 
-### Usage Example
+### Usage
 
-```python
-from music_collection_manager.services.theaudiodb import TheAudioDBService
-
-service = TheAudioDBService(config)
-
-# Search artist
-results = service.search_artist("Radiohead")
-
-if results:
-    artist = results[0]
-
-    print(f"Name: {artist['strArtist']}")
-    print(f"Country: {artist['strCountry']}")
-    print(f"Genre: {artist['strGenre']}")
-    print(f"Bio: {artist.get('strBiographyEN', 'N/A')[:200]}...")
-
-    # Get high-quality images
-    thumb = artist.get("strArtistThumb")
-    if thumb:
-        print(f"Image: {thumb}")
-```
+When `--theaudiodb` is enabled, artist processing searches TheAudioDB by name (or
+MusicBrainz ID) and uses the first match for biography (`strBiographyEN`), country,
+genre, and high-quality artwork (`strArtistThumb` and the fan-art fields above).
 
 ### CLI Integration
 
 ```bash
 # Enable TheAudioDB in artist processing
-python main.py artist "Radiohead" --theaudiodb --save
+scrapper artist "Radiohead" --theaudiodb --save
 
 # Batch processing with TheAudioDB
-python main.py artist-batch --theaudiodb --save
+scrapper artist-batch --theaudiodb --save
 ```
 
 ### Data Mapping
@@ -430,27 +395,10 @@ verification tool and future custom event calls.
 
 ## Error Handling
 
-Both services use graceful degradation:
-
-```python
-try:
-    # Wikipedia
-    bio = wikipedia.get_artist_summary(artist_name)
-except ServiceError:
-    bio = None
-
-try:
-    # TheAudioDB
-    data = theaudiodb.search_artist(artist_name)
-except ServiceError:
-    data = None
-
-# Continue with available data
-if bio:
-    artist.biography = bio["extract"]
-elif data and data[0].get("strBiographyEN"):
-    artist.biography = data[0]["strBiographyEN"]
-```
+Both services use graceful degradation. Wikipedia is tried first for an artist
+biography; if it fails or returns nothing, TheAudioDB's `strBiographyEN` is used as a
+fallback. A failure in either service is logged and processing continues with whatever
+data is available.
 
 ---
 

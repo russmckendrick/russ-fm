@@ -8,7 +8,8 @@ on:
       - 'docs/**'
       - 'project/**'
       - 'README.md'
-      - 'scrapper/README.md'
+      # Rust backend (scrapper/) is not part of the static-site build — it only writes public/.
+      - 'scrapper/**'
 
 jobs:
   assets:

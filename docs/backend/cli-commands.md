@@ -2,22 +2,32 @@
 
 Complete reference for all backend CLI commands.
 
+The backend is the `scrapper` Rust binary. Once installed via `cd scrapper && ./install.sh`
+it runs from any directory (it registers `~/.config/scrapper/config.json` pointing at the
+scrapper folder). To run against source without installing, substitute `cargo run -- <cmd>`
+(from inside `scrapper/`) for `scrapper <cmd>` below. Run `scrapper <cmd> --help` for the
+authoritative flag list of any subcommand.
+
+## Subcommands
+
+`status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
+`artist-batch`, `report`, `generate-collection`, `enrich-description`,
+`backfill-videos`, `maintenance`.
+
 ## Global Options
 
 Options available for all commands:
 
-| Option | Short | Type | Default | Description |
-|--------|-------|------|---------|-------------|
-| `--config` | `-c` | PATH | `config.json` | Configuration file path |
-| `--log-level` | | CHOICE | `INFO` | Logging level |
-| `--log-file` | | PATH | Auto | Custom log file path |
-| `--session-logs` | | FLAG | `true` | Create per-session log files |
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `--config` | PATH | central config | Configuration file path |
+| `--log-level` | CHOICE | `INFO` | Logging level |
 
 **Log Levels:** `DEBUG`, `INFO`, `WARNING`, `ERROR`
 
 **Example:**
 ```bash
-python main.py --log-level DEBUG --config /path/to/config.json collection
+scrapper --log-level DEBUG --config /path/to/config.json collection
 ```
 
 ---
@@ -27,7 +37,7 @@ python main.py --log-level DEBUG --config /path/to/config.json collection
 Process and enrich a single Discogs release.
 
 ```bash
-python main.py release <DISCOGS_ID> [OPTIONS]
+scrapper release <DISCOGS_ID> [OPTIONS]
 ```
 
 ### Arguments
@@ -40,42 +50,30 @@ python main.py release <DISCOGS_ID> [OPTIONS]
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `--output` | PATH | - | Output directory |
 | `--save` | FLAG | `false` | Save to public directory |
-| `--services` | STRING | all | Comma-separated service list |
 | `--force-refresh` | FLAG | `false` | Ignore cache |
 | `--interactive` | FLAG | `false` | Manual match selection |
-| `--search` | STRING | - | Override search query |
-| `--custom-cover` | URL | - | Use custom artwork URL |
-| `--prefer` | CHOICE | - | Preferred image source |
-| `--v1` | FLAG | `false` | Use v1 output format |
+| `--prefer` | CHOICE | - | Preferred data/image source: `apple-music`, `spotify`, `theaudiodb`, `discogs`, `v1` |
+
+> Run `scrapper release --help` for the full, authoritative flag list.
 
 ### Examples
 
 ```bash
 # Basic processing
-python main.py release 123456
+scrapper release 123456
 
 # Save to public directory
-python main.py release 123456 --save
+scrapper release 123456 --save
 
 # Force refresh cached data
-python main.py release 123456 --force-refresh --save
+scrapper release 123456 --force-refresh --save
 
 # Interactive mode for manual matching
-python main.py release 123456 --interactive --save
+scrapper release 123456 --interactive --save
 
-# Use custom search query
-python main.py release 123456 --search "Artist - Album" --save
-
-# Use custom artwork
-python main.py release 123456 --custom-cover "https://example.com/cover.jpg" --save
-
-# Only use specific services
-python main.py release 123456 --services "discogs,spotify" --save
-
-# Prefer Apple Music images
-python main.py release 123456 --prefer apple_music --save
+# Prefer Apple Music as the source
+scrapper release 123456 --prefer apple-music --save
 ```
 
 ---
@@ -85,44 +83,48 @@ python main.py release 123456 --prefer apple_music --save
 Process entire Discogs collection.
 
 ```bash
-python main.py collection [OPTIONS]
+scrapper collection [OPTIONS]
 ```
 
 ### Options
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
-| `--username` | STRING | config | Discogs username |
 | `--limit` | INT | - | Maximum items to process |
 | `--from` | INT | 0 | Start index |
 | `--to` | INT | - | End index |
-| `--batch-size` | INT | 10 | Items per batch |
 | `--resume` | FLAG | `false` | Resume previous run |
 | `--dry-run` | FLAG | `false` | Preview without saving |
 | `--force-refresh` | FLAG | `false` | Ignore cache |
-| `--interactive` | FLAG | `false` | Manual match selection |
-| `--prefer` | CHOICE | - | Preferred image source |
+| `--interactive` | FLAG | `false` | Drop into the interactive TUI |
+| `--save` | FLAG | `false` | Save to public directory |
+| `--prefer` | CHOICE | - | Preferred data/image source |
+
+Plain `collection` runs headless; `collection --interactive` opens the TUI.
 
 ### Examples
 
 ```bash
-# Process entire collection
-python main.py collection
+# Process entire collection (headless)
+scrapper collection
+
+# Interactive TUI
+scrapper collection --interactive
 
 # Resume interrupted processing
-python main.py collection --resume
+scrapper collection --resume
 
 # Process specific range
-python main.py collection --from 100 --to 200
+scrapper collection --from 100 --to 200
+
+# Limit the number of items
+scrapper collection --limit 5
 
 # Dry run (preview)
-python main.py collection --dry-run
-
-# Smaller batches for stability
-python main.py collection --batch-size 5
+scrapper collection --dry-run
 
 # Force re-process everything
-python main.py collection --force-refresh
+scrapper collection --force-refresh
 ```
 
 ### Resume Behavior
@@ -140,7 +142,7 @@ The `--resume` flag:
 Get comprehensive artist information.
 
 ```bash
-python main.py artist <ARTIST_NAME> [OPTIONS]
+scrapper artist <ARTIST_NAME> [OPTIONS]
 ```
 
 ### Arguments
@@ -154,42 +156,39 @@ python main.py artist <ARTIST_NAME> [OPTIONS]
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `--save` | FLAG | `false` | Save to public directory |
-| `--output` | PATH | - | Output directory |
 | `--force-refresh` | FLAG | `false` | Ignore cache |
 | `--interactive` | FLAG | `false` | Manual selection |
-| `--custom-image` | URL | - | Custom artist image |
-| `--verify` | FLAG | `false` | Verify with releases |
-| `--prefer` | CHOICE | - | Preferred image source |
+| `--prefer` | CHOICE | - | Preferred data/image source |
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
-| `--v1` | FLAG | `false` | Use v1 output format |
+| `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
 
 ### Examples
 
 ```bash
 # Basic artist lookup
-python main.py artist "Radiohead"
+scrapper artist "Radiohead"
 
 # Save artist data
-python main.py artist "Radiohead" --save
+scrapper artist "Radiohead" --save
 
 # Interactive selection
-python main.py artist "The Beatles" --interactive --save
+scrapper artist "The Beatles" --interactive --save
 
 # Include TheAudioDB data
-python main.py artist "Daft Punk" --theaudiodb --save
+scrapper artist "Daft Punk" --theaudiodb --save
 
-# Verify with release matching
-python main.py artist "Björk" --verify --save
+# Generate a Perplexity description
+scrapper artist "Björk" --perplexity --save
 ```
 
 ---
 
 ## artist-batch
 
-Process multiple artists with verification.
+Process multiple artists in a batch.
 
 ```bash
-python main.py artist-batch [OPTIONS]
+scrapper artist-batch [OPTIONS]
 ```
 
 ### Options
@@ -199,25 +198,25 @@ python main.py artist-batch [OPTIONS]
 | `--from` | INT | 0 | Start index |
 | `--to` | INT | - | End index |
 | `--save` | FLAG | `false` | Save to public directory |
-| `--verify` | FLAG | `false` | Verify with releases |
 | `--interactive` | FLAG | `false` | Manual selection |
 | `--include-various` | FLAG | `false` | Include "Various Artists" |
 | `--stats` | FLAG | `false` | Show statistics |
 | `--force-refresh` | FLAG | `false` | Ignore cache |
-| `--prefer` | CHOICE | - | Preferred image source |
+| `--prefer` | CHOICE | - | Preferred data/image source |
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
+| `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
 
 ### Examples
 
 ```bash
 # Process all artists
-python main.py artist-batch --save
+scrapper artist-batch --save
 
-# Process range with verification
-python main.py artist-batch --from 0 --to 50 --verify --save
+# Process a range
+scrapper artist-batch --from 0 --to 50 --save
 
 # Show processing statistics
-python main.py artist-batch --stats
+scrapper artist-batch --stats
 ```
 
 ---
@@ -227,7 +226,7 @@ python main.py artist-batch --stats
 Generate album descriptions using Perplexity AI.
 
 ```bash
-python main.py enrich-description [TARGET] [OPTIONS]
+scrapper enrich-description [TARGET] [OPTIONS]
 ```
 
 ### Arguments
@@ -251,28 +250,28 @@ python main.py enrich-description [TARGET] [OPTIONS]
 
 ```bash
 # List albums missing descriptions
-python main.py enrich-description --list-missing
+scrapper enrich-description --list-missing
 
 # Generate for single album by ID
-python main.py enrich-description 12345678
+scrapper enrich-description 12345678
 
 # Generate for multiple IDs
-python main.py enrich-description 123,456,789
+scrapper enrich-description 123,456,789
 
 # Generate by title and artist
-python main.py enrich-description "OK Computer" --artist "Radiohead"
+scrapper enrich-description "OK Computer" --artist "Radiohead"
 
 # Dry run (preview)
-python main.py enrich-description 12345678 --dry-run
+scrapper enrich-description 12345678 --dry-run
 
 # Force regenerate existing
-python main.py enrich-description 12345678 --force
+scrapper enrich-description 12345678 --force
 
 # Batch process backwards from ID
-python main.py enrich-description --from 33817755
+scrapper enrich-description --from 33817755
 
 # Custom batch size
-python main.py enrich-description --from 33817755 --batch-size 25
+scrapper enrich-description --from 33817755 --batch-size 25
 ```
 
 ### Description Priority
@@ -289,7 +288,7 @@ The system checks multiple sources before generating:
 Backfill YouTube video URLs from Discogs for existing releases.
 
 ```bash
-python main.py backfill-videos [OPTIONS]
+scrapper backfill-videos [OPTIONS]
 ```
 
 ### Options
@@ -307,22 +306,22 @@ python main.py backfill-videos [OPTIONS]
 
 ```bash
 # Preview which releases need videos
-python main.py backfill-videos --dry-run --limit 5
+scrapper backfill-videos --dry-run --limit 5
 
 # Process a small batch
-python main.py backfill-videos --batch-size 10 --limit 10
+scrapper backfill-videos --batch-size 10 --limit 10
 
 # Start from a specific release
-python main.py backfill-videos --from 33817755
+scrapper backfill-videos --from 33817755
 
 # Re-fetch videos for all releases
-python main.py backfill-videos --force --limit 5
+scrapper backfill-videos --force --limit 5
 
 # Run unattended with a 30-second pause between batches
-python main.py backfill-videos --pause 30
+scrapper backfill-videos --pause 30
 
 # Larger batches with a longer pause
-python main.py backfill-videos --batch-size 50 --pause 60
+scrapper backfill-videos --batch-size 50 --pause 60
 ```
 
 ### Behavior
@@ -341,7 +340,7 @@ python main.py backfill-videos --batch-size 50 --pause 60
 Generate collection.json for React frontend.
 
 ```bash
-python main.py generate-collection [OPTIONS]
+scrapper generate-collection [OPTIONS]
 ```
 
 ### Options
@@ -355,10 +354,10 @@ python main.py generate-collection [OPTIONS]
 
 ```bash
 # Generate with defaults
-python main.py generate-collection
+scrapper generate-collection
 
 # Custom output location
-python main.py generate-collection --output /path/to/collection.json
+scrapper generate-collection --output /path/to/collection.json
 ```
 
 ### Output Format
@@ -391,7 +390,7 @@ python main.py generate-collection --output /path/to/collection.json
 Generate album matching report.
 
 ```bash
-python main.py report [OPTIONS]
+scrapper report [OPTIONS]
 ```
 
 ### Options
@@ -408,13 +407,13 @@ python main.py report [OPTIONS]
 
 ```bash
 # Basic report
-python main.py report
+scrapper report
 
 # JSON format
-python main.py report --format json --output-file report.json
+scrapper report --format json --output-file report.json
 
 # Limited report
-python main.py report --limit 100
+scrapper report --limit 100
 ```
 
 ---
@@ -424,7 +423,7 @@ python main.py report --limit 100
 Test API service connections.
 
 ```bash
-python main.py test
+scrapper test
 ```
 
 ### Output
@@ -448,7 +447,7 @@ All required services are working.
 Show database and processing status.
 
 ```bash
-python main.py status
+scrapper status
 ```
 
 ### Output
@@ -482,7 +481,7 @@ Last processed: 2024-01-15 10:30:00
 Backup SQLite database.
 
 ```bash
-python main.py backup
+scrapper backup
 ```
 
 ### Output
@@ -500,7 +499,7 @@ Backup size: 45.2 MB
 Create example configuration file.
 
 ```bash
-python main.py init [OPTIONS]
+scrapper init [OPTIONS]
 ```
 
 ### Options
@@ -512,9 +511,50 @@ python main.py init [OPTIONS]
 ### Example
 
 ```bash
-python main.py init
+scrapper init
 # Creates config.json with template values
 ```
+
+---
+
+## db
+
+Inspect and manage the SQLite database.
+
+```bash
+scrapper db <SUBCOMMAND>
+```
+
+### Subcommands
+
+| Subcommand | Description |
+|------------|-------------|
+| `search` | Search stored releases/artists |
+| `list` | List database entries |
+| `delete` | Delete entries |
+| `stats` | Show database statistics |
+| `backup` | Back up the database |
+
+Run `scrapper db --help` (or `scrapper db <sub> --help`) for flags.
+
+---
+
+## maintenance
+
+Data maintenance utilities.
+
+```bash
+scrapper maintenance <SUBCOMMAND>
+```
+
+### Subcommands
+
+| Subcommand | Description |
+|------------|-------------|
+| `find-missing` | Find releases/artists with missing data |
+| `reconcile` | Reconcile the database against the static JSON output |
+
+Run `scrapper maintenance --help` for flags.
 
 ---
 
@@ -524,56 +564,56 @@ python main.py init
 
 ```bash
 # 1. Create config
-python main.py init
+scrapper init
 # Edit config.json with your credentials
 
 # 2. Test services
-python main.py test
+scrapper test
 
 # 3. Process collection
-python main.py collection
+scrapper collection
 ```
 
 ### Resume After Interruption
 
 ```bash
 # Check status
-python main.py status
+scrapper status
 
 # Resume processing
-python main.py collection --resume
+scrapper collection --resume
 ```
 
 ### Re-process Specific Album
 
 ```bash
 # Force refresh and save
-python main.py release 123456 --force-refresh --save
+scrapper release 123456 --force-refresh --save
 ```
 
 ### Add Missing Descriptions
 
 ```bash
 # List albums needing descriptions
-python main.py enrich-description --list-missing
+scrapper enrich-description --list-missing
 
 # Generate descriptions
-python main.py enrich-description --from 33817755
+scrapper enrich-description --from 33817755
 ```
 
 ### Regenerate Frontend Data
 
 ```bash
 # Regenerate collection index
-python main.py generate-collection
+scrapper generate-collection
 ```
 
 ### Troubleshooting
 
 ```bash
 # Debug mode
-python main.py --log-level DEBUG release 123456
+scrapper --log-level DEBUG release 123456
 
-# Check specific service
-python main.py release 123456 --services "discogs,apple_music" --save
+# Prefer a specific source when matching
+scrapper release 123456 --prefer apple-music --save
 ```

@@ -31,7 +31,7 @@ Common issues and solutions for russ.fm development and deployment.
 
 3. **Hi-res source missing**
    - Check that `/public/album/{slug}/{slug}-hi-res.jpg` exists
-   - Run `python main.py release {id} --save` to regenerate
+   - Run `scrapper release {id} --save` to regenerate
 
 4. **R2 sync issues (production)**
    ```bash
@@ -54,15 +54,14 @@ Common issues and solutions for russ.fm development and deployment.
 
 2. **Regenerate search index**
    ```bash
-   cd scrapper
-   python main.py generate-collection
+   scrapper generate-collection
    ```
 
 3. **Check browser console for Fuse.js errors**
 
 4. **Verify JSON is valid**
    ```bash
-   python -m json.tool public/collection.json > /dev/null
+   node -e "JSON.parse(require('fs').readFileSync('public/collection.json'))"
    ```
 
 ---
@@ -123,15 +122,16 @@ Common issues and solutions for russ.fm development and deployment.
 
 ## Backend Issues
 
-### "No module named 'music_collection_manager'"
+### `scrapper: command not found`
 
-**Symptom:** Import error when running CLI.
+**Symptom:** The CLI isn't on your `PATH`.
 
 **Solution:**
 ```bash
 cd scrapper
-pip install -e .
+./install.sh   # installs `scrapper` to ~/.cargo/bin
 ```
+Ensure `~/.cargo/bin` is on your `PATH`. To run without installing, use `cargo run -- <cmd>` from inside `scrapper/`.
 
 ---
 
@@ -143,7 +143,7 @@ pip install -e .
 
 1. **Test individual services**
    ```bash
-   python main.py test
+   scrapper test
    ```
 
 2. **Verify config.json credentials**
@@ -167,12 +167,12 @@ pip install -e .
 1. **Wait and retry**
    ```bash
    # Use --resume to continue
-   python main.py collection --resume
+   scrapper collection --resume
    ```
 
-2. **Reduce batch size**
+2. **Process a smaller range**
    ```bash
-   python main.py collection --batch-size 5
+   scrapper collection --limit 5
    ```
 
 3. **Check rate limit configuration**
@@ -193,15 +193,15 @@ pip install -e .
 
 1. **Stop other processes using the database**
    ```bash
-   # Check for running Python processes
-   ps aux | grep python
+   # Check for running scrapper processes
+   ps aux | grep scrapper
    ```
 
 2. **Backup and recreate**
    ```bash
-   python main.py backup
+   scrapper backup
    rm collection_cache.db
-   python main.py collection
+   scrapper collection
    ```
 
 ---
@@ -216,7 +216,7 @@ pip install -e .
 
 2. **Verify image URLs in API responses**
    ```bash
-   python main.py --log-level DEBUG release 123456
+   scrapper --log-level DEBUG release 123456
    ```
 
 3. **Check disk space**
@@ -233,7 +233,7 @@ pip install -e .
 
 1. **Use `--resume` flag**
    ```bash
-   python main.py collection --resume
+   scrapper collection --resume
    ```
 
 2. **Check database exists**
@@ -243,7 +243,7 @@ pip install -e .
 
 3. **Verify items are marked as processed**
    ```bash
-   python main.py status
+   scrapper status
    ```
 
 ---
@@ -369,14 +369,14 @@ import { filterGenres } from '@/lib/genreUtils';
 
 Don't expect full data in collection.json.
 
-### Virtual Environment
+### Running the Backend
 
-Always activate before running backend:
+The `scrapper` binary runs from any directory once installed via `./install.sh`
+(it registers `~/.config/scrapper/config.json` pointing at the scrapper folder):
 ```bash
-cd scrapper
-source venv/bin/activate
-python main.py ...
+scrapper <command>
 ```
+For source dev without installing, use `cargo run -- <command>` from inside `scrapper/`.
 
 ### Config File Security
 
@@ -392,20 +392,20 @@ cat .gitignore | grep config.json
 
 1. **Check logs**
    ```bash
-   # Backend
-   tail -f scrapper/logs/music_collection_manager.log
+   # Backend logs to stderr — run with --log-level DEBUG (optionally redirect)
+   scrapper --log-level DEBUG status 2> run.log
 
    # Browser console for frontend
    ```
 
 2. **Enable debug mode**
    ```bash
-   python main.py --log-level DEBUG <command>
+   scrapper --log-level DEBUG <command>
    ```
 
 3. **Check status**
    ```bash
-   python main.py status
+   scrapper status
    ```
 
 4. **Review documentation**

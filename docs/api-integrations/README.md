@@ -105,21 +105,9 @@ When multiple services provide the same data, priority order:
 
 All services use standardized error handling:
 
-```python
-try:
-    result = service.search_release(artist, album)
-except RateLimitError as e:
-    # Wait and retry
-    time.sleep(e.retry_after or 60)
-    result = service.search_release(artist, album)
-except AuthenticationError:
-    # Re-authenticate
-    service.authenticate()
-    result = service.search_release(artist, album)
-except ServiceError:
-    # Service unavailable, continue without
-    result = None
-```
+- **Rate limited (429):** wait for the retry-after window, then retry.
+- **Auth error (401/403):** re-authenticate and retry.
+- **Other service error:** log and continue without that service's data.
 
 ## Fallback Chain
 
@@ -191,7 +179,7 @@ flowchart TD
 
 ```bash
 # Test all configured services
-python main.py test
+scrapper test
 
 # Expected output:
 # Testing Discogs... OK

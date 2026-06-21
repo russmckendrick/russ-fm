@@ -1,6 +1,6 @@
 # Russ.fm - Discogs Collection Showcase
 
-A modern, full-stack music collection management and showcase system that combines a powerful Python-based data enrichment engine with a beautiful React frontend to display your Discogs record collection.
+A modern, full-stack music collection management and showcase system that combines a powerful Rust-based data enrichment engine with a beautiful React frontend to display your Discogs record collection.
 
 See it in action at [Russ.fm](https://www.russ.fm).
 

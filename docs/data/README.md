@@ -7,7 +7,7 @@ This section covers the data architecture, JSON schemas, and data models used in
 | Document | Description |
 |----------|-------------|
 | [Schemas](./schemas.md) | JSON file structures and database schema |
-| [Models](./models.md) | Python data models and TypeScript interfaces |
+| [Models](./models.md) | Rust data models and TypeScript interfaces |
 
 ## Data Architecture
 
@@ -129,22 +129,14 @@ const colors = await fetch('/album-colors.json').then(r => r.json());
 
 ### Slug Generation
 
-Album and artist slugs are generated consistently:
+Album and artist slugs are generated consistently by the backend. The rules:
 
-```python
-def sanitize_folder_name(name: str) -> str:
-    """Convert name to URL-safe slug."""
-    name = name.lower()
-    # Replace spaces with dashes
-    name = re.sub(r'\s+', '-', name)
-    # Remove special characters
-    name = re.sub(r'[^\w\-]', '', name)
-    # Remove multiple dashes
-    name = re.sub(r'-+', '-', name)
-    # Remove leading/trailing dashes
-    name = name.strip('-')
-    return name or 'unknown'
-```
+1. Lowercase the name
+2. Replace whitespace with dashes
+3. Strip characters that aren't word characters or dashes
+4. Collapse repeated dashes into one
+5. Trim leading/trailing dashes
+6. Fall back to `unknown` if nothing remains
 
 Examples:
 - "OK Computer" → "ok-computer"
@@ -175,14 +167,14 @@ Examples:
 ## Data Update Workflow
 
 1. Add albums to Discogs collection
-2. Run `python main.py collection --resume`
-3. Run `python main.py generate-collection`
+2. Run `scrapper collection --resume`
+3. Run `scrapper generate-collection`
 4. Run `pnpm run build`
 5. Deploy (GitHub Actions handles sync)
 
 ## Related Documentation
 
 - [Schemas Reference](./schemas.md) - Detailed JSON structures
-- [Models Reference](./models.md) - Python/TypeScript types
+- [Models Reference](./models.md) - Rust/TypeScript types
 - [Backend Overview](../backend/) - Data processing
 - [Build Pipeline](../build-pipeline/) - Asset generation

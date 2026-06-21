@@ -10,7 +10,7 @@ This guide will help you set up russ.fm for local development and data processin
 |----------|---------|---------|
 | Node.js | 20.x or later | Frontend development and build tools |
 | pnpm | 8.x or later | Package manager |
-| Python | 3.8 or later | Backend data collection |
+| Rust | Latest stable (via rustup) | Backend data collection |
 | Git | Latest | Version control |
 
 ### API Credentials
@@ -51,21 +51,22 @@ The frontend will be available at `http://localhost:5173`.
 
 ### 3. Backend Setup
 
+The backend is a Rust TUI/CLI binary. Install it once and it runs from any directory.
+
 ```bash
 # Navigate to the scrapper directory
 cd scrapper
 
-# Create and activate virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-pip install -e .
+# Build and install the `scrapper` binary to ~/.cargo/bin
+# This also writes ~/.config/scrapper/config.json pointing at this folder,
+# so the `scrapper` command works from anywhere.
+./install.sh
 
 # Create configuration file
 cp config.example.json config.json
 ```
+
+To run against the source without installing, use `cargo run -- <cmd>` from inside `scrapper/` instead of the installed `scrapper` command.
 
 ### 4. Configure API Credentials
 
@@ -100,9 +101,7 @@ Edit `scrapper/config.json` with your API credentials:
 ### Test API Connections
 
 ```bash
-cd scrapper
-source venv/bin/activate
-python main.py test
+scrapper test
 ```
 
 Expected output:
@@ -118,7 +117,7 @@ Testing Perplexity... OK
 
 ```bash
 # Replace 123456 with a valid Discogs release ID
-python main.py release 123456 --save
+scrapper release 123456 --save
 ```
 
 This will:
@@ -130,11 +129,14 @@ This will:
 ### Process Your Collection
 
 ```bash
-# Process all albums in your Discogs collection
-python main.py collection
+# Process all albums in your Discogs collection (headless)
+scrapper collection
 
 # Resume a previous run (uses cached data)
-python main.py collection --resume
+scrapper collection --resume
+
+# Drop into the interactive TUI instead of running headless
+scrapper collection --interactive
 ```
 
 ### View in Frontend
@@ -167,17 +169,14 @@ pnpm run build
 ### Backend Development
 
 ```bash
-cd scrapper
-source venv/bin/activate
-
 # Process single release with verbose output
-python main.py --log-level DEBUG release 123456
+scrapper --log-level DEBUG release 123456
 
 # Check processing status
-python main.py status
+scrapper status
 
 # Backup database before major changes
-python main.py backup
+scrapper backup
 ```
 
 ## Directory Structure After Setup
@@ -197,7 +196,6 @@ russ-fm/
 │           ├── index.json
 │           └── {artist-slug}-*.jpg
 ├── scrapper/
-│   ├── venv/               # Python virtual environment
 │   ├── config.json         # API credentials (not in git)
 │   ├── collection_cache.db # SQLite database
 │   └── logs/               # Processing logs
@@ -206,13 +204,14 @@ russ-fm/
 
 ## Common Issues
 
-### "No module named 'music_collection_manager'"
+### `scrapper: command not found`
 
-Make sure you installed the package in editable mode:
+Make sure the binary was installed and `~/.cargo/bin` is on your `PATH`:
 ```bash
 cd scrapper
-pip install -e .
+./install.sh
 ```
+Until installed, you can run the backend from source with `cargo run -- <cmd>` inside `scrapper/`.
 
 ### Frontend shows no albums
 
@@ -220,8 +219,7 @@ pip install -e .
 2. Ensure album JSON files exist in `public/album/*/`
 3. Regenerate the collection index:
    ```bash
-   cd scrapper
-   python main.py generate-collection
+   scrapper generate-collection
    ```
 
 ### API authentication errors
@@ -229,7 +227,7 @@ pip install -e .
 1. Verify credentials in `config.json`
 2. Test individual services:
    ```bash
-   python main.py test
+   scrapper test
    ```
 3. Check logs in `scrapper/logs/`
 

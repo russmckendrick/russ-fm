@@ -5,14 +5,14 @@ This document describes the high-level architecture of russ.fm, including system
 ## System Overview
 
 russ.fm follows a **static site generation** pattern where:
-1. A Python backend collects and enriches data from multiple APIs
+1. A Rust backend collects and enriches data from multiple APIs
 2. Data is stored as static JSON files
 3. A React frontend consumes the static data
 4. Images are served from Cloudflare R2 CDN
 
 ```mermaid
 flowchart TB
-    subgraph Collection["Data Collection (Python)"]
+    subgraph Collection["Data Collection (Rust)"]
         CLI[CLI Interface]
         Orchestrator[Music Data Orchestrator]
 
@@ -65,13 +65,13 @@ flowchart TB
 
 ### Backend Components
 
-#### CLI Layer (`scrapper/music_collection_manager/cli/`)
+#### CLI Layer (`scrapper/src/`)
 
-The CLI provides the user interface for all data collection operations.
+The Rust binary provides the user interface for all data collection operations. The installed `scrapper` command runs from any directory (see [Getting Started](../getting-started/)).
 
 ```mermaid
 flowchart LR
-    main.py --> Commands
+    scrapper --> Commands
 
     subgraph Commands
         release[release]
@@ -87,13 +87,9 @@ flowchart LR
     Commands --> Orchestrators
 ```
 
-| Component | File | Purpose |
-|-----------|------|---------|
-| CLI Entry | `main.py` | Click command group and global options |
-| Commands | `commands.py` | Individual command implementations |
-| Base Command | `base.py` | Shared command functionality |
+The CLI exposes a global command group with shared options (`--config`, `--log-level`) and a subcommand per operation. `collection --interactive` drops into the TUI; plain `collection` runs headless.
 
-#### Orchestrator Layer (`scrapper/music_collection_manager/utils/`)
+#### Orchestrator Layer
 
 Orchestrators coordinate data collection from multiple services.
 
@@ -129,9 +125,9 @@ flowchart TB
 | Database Manager | `database.py` | SQLite caching layer |
 | Image Manager | `image_manager.py` | Artwork download and storage |
 
-#### Service Layer (`scrapper/music_collection_manager/services/`)
+#### Service Layer
 
-Each external API has a dedicated service class inheriting from `BaseService`.
+Each external API has a dedicated service module. They share a common request/auth interface (rate limiting, retries, error handling).
 
 ```mermaid
 classDiagram
@@ -289,7 +285,7 @@ sequenceDiagram
     participant R2
 
     Note over CLI,Discogs: Data Collection Phase
-    User->>CLI: python main.py collection
+    User->>CLI: scrapper collection
     CLI->>Discogs: Fetch collection items
 
     loop For each album
@@ -320,27 +316,12 @@ sequenceDiagram
 
 ### 1. Orchestrator Pattern
 
-The orchestrator coordinates multiple services without tight coupling.
+The orchestrator coordinates multiple services without tight coupling. For a given
+Discogs release it:
 
-```python
-# Simplified example
-class MusicDataOrchestrator:
-    def __init__(self, config):
-        self.discogs = DiscogsService(config)
-        self.apple_music = AppleMusicService(config)
-        self.spotify = SpotifyService(config)
-
-    def get_release(self, discogs_id):
-        # Primary data from Discogs
-        release = self.discogs.get_release(discogs_id)
-
-        # Parallel enrichment
-        apple_data = self.apple_music.search_release(release.artist, release.title)
-        spotify_data = self.spotify.search_release(release.artist, release.title)
-
-        # Consolidate and return
-        return self.consolidate(release, apple_data, spotify_data)
-```
+1. Fetches the primary release record from Discogs
+2. Enriches it in parallel from Apple Music, Spotify, and Last.fm
+3. Consolidates the results into a single release record
 
 ### 2. Static Site Generation
 
@@ -359,19 +340,9 @@ Benefits:
 
 ### 3. Service Abstraction
 
-All API services share a common interface:
-
-```python
-class BaseService(ABC):
-    @abstractmethod
-    def authenticate(self) -> bool:
-        pass
-
-    def _make_request(self, url, **kwargs):
-        self.rate_limiter.wait()
-        response = self.session.get(url, **kwargs)
-        return self._handle_response(response)
-```
+All API services share a common interface: each authenticates, then issues requests
+through a shared path that applies rate limiting, retries, and standardized response
+handling before returning parsed data.
 
 ### 4. Image Pipeline
 

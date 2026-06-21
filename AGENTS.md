@@ -4,7 +4,7 @@ Agent guidance for `/Users/russ.mckendrick/Code/russ-fm`.
 
 ## Project Snapshot
 
-- Full-stack music collection site: React 19 + TypeScript + Vite frontend, Python backend in `scrapper/`, static JSON output in `public/`.
+- Full-stack music collection site: React 19 + TypeScript + Vite frontend, Rust backend in `scrapper/` (a TUI/CLI binary), static JSON output in `public/`.
 - Package manager: `pnpm`
 - Frontend data source: static files generated into `public/`; do not assume a live runtime API.
 
@@ -14,8 +14,9 @@ Agent guidance for `/Users/russ.mckendrick/Code/russ-fm`.
 - Frontend build: `pnpm run build`
 - Fast build: `pnpm run build:fast`
 - Lint: `pnpm run lint`
-- Backend setup: `cd scrapper && python -m venv venv && source venv/bin/activate && pip install -r requirements.txt && pip install -e .`
-- Backend collection run: `cd scrapper && python main.py collection --resume`
+- Backend build + install (`scrapper` → `~/.cargo/bin`, registers `~/.config/scrapper/config.json` data root): `cd scrapper && ./install.sh`
+- Backend dev build / lint: `cd scrapper && cargo build && cargo clippy`
+- Backend collection run (from anywhere once installed): `scrapper collection --resume` (or `cd scrapper && cargo run -- collection --resume`)
 
 ## Universal Rules
 

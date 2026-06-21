@@ -17,7 +17,7 @@ This guide covers local development workflows, testing, and best practices.
 |----------|---------|---------|
 | Node.js | 22.19.0+ | Frontend development and Workers deployment tooling |
 | pnpm | 10.x+ | Package manager |
-| Python | 3.8+ | Backend data processing |
+| Rust | Latest stable (via rustup) | Backend data processing |
 | Git | Latest | Version control |
 
 ### Initial Setup
@@ -30,15 +30,16 @@ cd russ-fm
 # Frontend setup
 pnpm install
 
-# Backend setup
+# Backend setup (Rust TUI/CLI binary)
 cd scrapper
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-pip install -e .
+./install.sh           # builds and installs `scrapper` to ~/.cargo/bin,
+                       # and registers ~/.config/scrapper/config.json so the
+                       # command works from any directory
 cp config.example.json config.json
 # Edit config.json with your API credentials
 ```
+
+> To run against source without installing, use `cargo run -- <cmd>` from inside `scrapper/`.
 
 ## Frontend Development
 
@@ -84,40 +85,34 @@ No need to run `process-images` during development.
 
 ## Backend Development
 
-### Virtual Environment
-
-```bash
-cd scrapper
-source venv/bin/activate  # Always activate first
-
-# Deactivate when done
-deactivate
-```
+The backend is the `scrapper` Rust binary. Once installed via `./install.sh` it runs
+from any directory. For source dev without installing, substitute `cargo run -- <cmd>`
+(run from inside `scrapper/`) for `scrapper <cmd>` below.
 
 ### Common Operations
 
 ```bash
 # Test API connections
-python main.py test
+scrapper test
 
 # Process single album
-python main.py release 123456 --save
+scrapper release 123456 --save
 
 # Resume collection processing
-python main.py collection --resume
+scrapper collection --resume
 
 # Check status
-python main.py status
+scrapper status
 ```
 
 ### Debug Mode
 
 ```bash
-# Verbose logging
-python main.py --log-level DEBUG release 123456
+# Verbose logging (logs go to stderr)
+scrapper --log-level DEBUG release 123456
 
-# Check logs
-tail -f logs/music_collection_manager.log
+# Capture logs to a file by redirecting stderr
+scrapper --log-level DEBUG release 123456 2> run.log
 ```
 
 ## Project Structure
@@ -132,13 +127,10 @@ russ-fm/
 │   ├── services/          # API services
 │   ├── types/             # TypeScript types
 │   └── config/            # Configuration
-├── scrapper/              # Python backend
-│   ├── music_collection_manager/
-│   │   ├── services/      # API clients
-│   │   ├── utils/         # Orchestration
-│   │   ├── models/        # Data models
-│   │   └── cli/           # CLI commands
-│   └── main.py            # Entry point
+├── scrapper/              # Rust backend (TUI/CLI binary)
+│   ├── src/               # Rust source
+│   ├── install.sh         # Build & install to ~/.cargo/bin
+│   └── Cargo.toml         # Crate manifest
 ├── public/                # Static data
 │   ├── collection.json    # Album index
 │   ├── album/             # Album data
@@ -154,13 +146,11 @@ russ-fm/
 1. Find Discogs release ID
 2. Process with backend:
    ```bash
-   cd scrapper
-   source venv/bin/activate
-   python main.py release 123456 --save
+   scrapper release 123456 --save
    ```
 3. Regenerate collection index:
    ```bash
-   python main.py generate-collection
+   scrapper generate-collection
    ```
 4. Refresh frontend (dev server picks up changes)
 
@@ -174,9 +164,9 @@ russ-fm/
 
 ### Adding Backend Features
 
-1. Activate venv
-2. Edit files in `scrapper/music_collection_manager/`
-3. Test with: `python main.py <command>`
+1. Edit files in `scrapper/src/`
+2. Test with: `cargo run -- <command>` (from inside `scrapper/`)
+3. Build and reinstall with `./install.sh` when ready
 4. Check logs for errors
 
 ## Code Style
@@ -203,26 +193,12 @@ export function MyComponent({ className }: { className?: string }) {
 }
 ```
 
-### Backend (Python)
+### Backend (Rust)
 
-- Use type hints
-- Use dataclasses for models
-- Follow PEP 8
-- Use logging, not print
-
-```python
-from dataclasses import dataclass
-from typing import Optional
-
-@dataclass
-class MyModel:
-    name: str
-    value: Optional[int] = None
-
-    def process(self) -> str:
-        self.logger.info(f"Processing {self.name}")
-        return self.name.upper()
-```
+- Run `cargo fmt` and `cargo clippy` before committing
+- Use structs/enums for models and `Result` for error handling
+- Use the logging facade, not `println!`, for diagnostics
+- Keep the static data contract intact (slugs, JSON shapes, image sizes)
 
 ## Testing
 
@@ -243,13 +219,13 @@ pnpm run build
 
 ```bash
 # Test API connections
-python main.py test
+scrapper test
 
 # Dry run collection
-python main.py collection --dry-run --limit 5
+scrapper collection --dry-run --limit 5
 
 # Check specific release
-python main.py release 123456
+scrapper release 123456
 ```
 
 ## Environment Variables
@@ -342,13 +318,13 @@ console.log('Debug:', { album, colors });
 
 ```bash
 # Enable debug logging
-python main.py --log-level DEBUG release 123456
+scrapper --log-level DEBUG release 123456
 
-# Check specific service
-python main.py release 123456 --services "discogs,apple_music"
+# Prefer a specific image/data source
+scrapper release 123456 --prefer apple-music
 
 # Interactive mode
-python main.py release 123456 --interactive
+scrapper release 123456 --interactive
 ```
 
 ## Related Documentation

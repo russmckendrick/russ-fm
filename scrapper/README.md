@@ -1,669 +1,181 @@
-# Music Collection Manager v2
+# scrapper
 
-A modern, well-structured Python tool for managing music collections with data enrichment from multiple sources. This is a complete rewrite of the original Discogs collection management system, following Python best practices and modern architecture patterns.
+A cohesive Rust music-collection enrichment tool that runs as an interactive **TUI** by default
+and a **headless CLI** for automation. It replaced the original Python implementation, reuses the
+same data assets verbatim, and preserves the static data contract the React frontend in `public/`
+depends on.
 
-## Features
+## Why
 
-- **Multi-Service Integration**: Fetch and enrich data from:
-  - **Discogs**: Primary collection source and metadata
-  - **Apple Music**: High-resolution artwork and editorial content
-  - **Spotify**: Streaming links and popularity data
-  - **Wikipedia**: Artist biographies and background information
-  - **Last.fm**: Tags, play counts, and social data
+The original Python tool grew over years into multiple entry points (`main.py`, `run_web.py`,
+a pile of `tools/*` scripts) and a parallel FastAPI web admin. This Rust binary consolidates all
+of that into one executable with a single, consistent interface.
 
-- **Single Release Lookup**: Get enriched data for any Discogs release ID
-- **Artist Information**: Comprehensive artist data with biographies and external service links
-- **Full Collection Processing**: Process your entire Discogs collection with resume capability
-- **Robust Error Handling**: Graceful degradation when services are unavailable
-- **Rich CLI Interface**: Beautiful command-line interface with progress bars
-- **Flexible Configuration**: JSON/YAML config files and environment variables
-- **SQLite Database**: Local caching and progress tracking
+## Design
 
-## Installation
+- **One binary, two faces.** No arguments → launches the TUI. A subcommand → runs that command
+  headlessly (`scrapper collection --resume`) for cron/CI.
+- **Reuse, don't re-fetch.** The 358MB `collection_cache.db`, `discogs_cache/`, `config.json`,
+  `album_matching_filters.json`, and `secrets/` are copied in as-is. The SQLite schema is
+  unchanged from the Python tool.
+- **Preserve the data contract.** Folder slugs and the album/artist JSON shapes written into
+  `../public` must match what already exists. The folder sanitizer is a verified byte-for-byte
+  port of the Python one (see Testing).
+- **Concurrent, rate-limited.** Service fetches use `tokio` with per-service rate limiters
+  (`governor`) instead of the old sequential model.
 
-### Prerequisites
+## Location & paths
 
-- Python 3.8 or higher
-- API credentials for the services you want to use
+`scrapper/` sits at the repo root, so the config's `data.path = "../public"` resolves to
+`<repo>/public`. Output goes to `../public/album/<slug>/` and `../public/artist/<slug>/`.
 
-### Install from Source
+## Layout
 
-```bash
-git clone <repository-url>
-cd discogs-v2
-python -m venv venv
-source venv/bin/activate  # Unix/macOS
-# or: venv\Scripts\activate  # Windows
-
-pip install -r requirements.txt
-pip install -e .
 ```
-
-## Quick Start
-
-### 1. Create Configuration
-
-```bash
-# Create example configuration file
-python main.py init
-# This creates config.example.json
-
-# Copy and edit with your API credentials
-cp config.example.json config.json
-```
-
-### 2. Configure API Credentials
-
-Edit `config.json` with your API credentials:
-
-#### Discogs (Required)
-1. Go to [Discogs Developer Settings](https://www.discogs.com/settings/developers)
-2. Generate a Personal Access Token
-3. Add to config: `"access_token": "your_token_here"`
-
-#### Apple Music (Optional)
-1. Join the [Apple Developer Program](https://developer.apple.com/programs/) ($99/year)
-2. Create a MusicKit identifier
-3. Download the private key (.p8 file)
-4. Add to config:
-   ```json
-   "apple_music": {
-     "key_id": "your_key_id",
-     "team_id": "your_team_id", 
-     "private_key_path": "path/to/your_key.p8"
-   }
-   ```
-
-#### Spotify (Optional)
-1. Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
-2. Create an app and get Client ID and Secret
-3. Add to config:
-   ```json
-   "spotify": {
-     "client_id": "your_client_id",
-     "client_secret": "your_client_secret"
-   }
-   ```
-
-#### Last.fm (Optional)
-1. Get API key from [Last.fm API](https://www.last.fm/api/account/create)
-2. Add to config:
-   ```json
-   "lastfm": {
-     "api_key": "your_api_key"
-   }
-   ```
-
-### 3. Test Your Configuration
-
-```bash
-python main.py test
+src/
+  main.rs        Entry point: TUI when bare, CLI dispatch otherwise
+  config.rs      config.json + env-var overrides + secrets resolution
+  db.rs          rusqlite/r2d2 layer over collection_cache.db (schema unchanged)
+  sanitize.rs    Folder-name sanitizer (verified port) + filename helpers
+  logging.rs     tracing setup
+  util.rs        Timestamps and small helpers
+  cli/           clap command surface (all commands + flags)
+  ops/           Command implementations shared by CLI and TUI
+  services/      API clients (Discogs, Apple Music, Spotify, Last.fm, Wikipedia,
+                 TheAudioDB, Perplexity) with rate limiting
+  output/        JSON writer, image manager, collection generator
+  tui/           ratatui app, screens, detail views, modals, runners
+tests/
+  sanitizer_corpus.rs   Gate: every existing public/ folder must be reproducible
+  json_fidelity.rs      Gate: regenerated JSON matches public/ semantically
 ```
 
 ## Commands
 
-### Core Commands
-
-#### Single Release Lookup
-```bash
-# Get data for a specific Discogs release ID
-python main.py release 123456
-
-# Save to database
-python main.py release 123456 --save
-
-# Output as JSON
-python main.py release 123456 --output json
-
-# Use specific services only
-python main.py release 123456 --services discogs spotify
-
-# Force refresh (bypass cache)
-python main.py release 123456 --force-refresh
-
-# Interactive mode - manually select matches from search results
-python main.py release 123456 --force-refresh --interactive
-
-# Override search query for enrichment services
-python main.py release 123456 --search "Custom Album Title"
-
-# Override album artwork with custom image URL
-python main.py release 123456 --custom-cover "https://example.com/custom-cover.jpg"
-
-# Fetch album artwork from v1.russ.fm site
-python main.py release 123456 --v1
-
-# Combine custom search and cover
-python main.py release 123456 --force-refresh --interactive --search "Tim's Listening Party Part Two" --custom-cover "https://spindizzyrecords.com/cdn/shop/files/custom-cover.jpg"
+```
+scrapper                       # launch the TUI
+scrapper status                # database + processing status
+scrapper db search <release|artist> <query>
+scrapper db list <releases|artists> [--limit N] [--sort date_added|title|year|name]
+scrapper db delete <release|artist> <id> --force   # auto-backs up first
+scrapper db stats | backup [--name F]
+scrapper backup [--backup-path P]
+scrapper init [--output P]
+scrapper test                  # service credential / connectivity check
+scrapper collection [--resume] [--from N --to N] [--limit N] [--dry-run] ...
+scrapper release <discogs_id> [--save] [--prefer …] [--output json]   # live: fetch+enrich
+scrapper artist <name> [--save] [--interactive] [--theaudiodb] [--perplexity] ...
+scrapper artist-batch --from N --to N [--save] [--interactive] [--stats] ...
+scrapper enrich-description [<id>] [--list-missing] [--force] [--from <id>] ...
+scrapper backfill-videos [--dry-run] [--from <id>] [--limit N] ...
+scrapper report | generate-collection
+scrapper maintenance find-missing [--show-orphaned] | reconcile [--threshold F]
 ```
 
-#### Artist Information
-```bash
-# Get comprehensive artist data
-python main.py artist "The Beatles"
+Run `scrapper --help` or `scrapper <command> --help` for the full flag set.
 
-# Save to database
-python main.py artist "The Beatles" --save
+## Build, install & run
 
-# Output formats
-python main.py artist "The Beatles" --output json
-python main.py artist "The Beatles" --output yaml
-
-# Force refresh from APIs
-python main.py artist "The Beatles" --force-refresh
-
-# Fetch artist image from v1.russ.fm site
-python main.py artist "The Beatles" --v1
-
-# Generate artist biography using Perplexity AI (adds to existing data)
-python main.py artist "Michelle David" --perplexity
-
-# Provide context to help Perplexity identify the correct artist
-python main.py artist "The True Tones" --perplexity --perplexity-context "Dutch gospel/soul duo formed by Michelle David and Elianne Anemaat"
-
-# Combine Perplexity biography with force refresh
-python main.py artist "Michelle David" --force-refresh --perplexity
-```
-
-#### Collection Processing
-```bash
-# Process entire collection
-python main.py collection
-
-# Process with username (if different from config)
-python main.py collection --username myuser
-
-# Process with limits
-python main.py collection --limit 10
-
-# Process specific range (0-based indexing)
-python main.py collection --from 20 --to 40
-
-# Custom batch size
-python main.py collection --batch-size 5
-
-# Resume interrupted processing
-python main.py collection --resume
-
-# Dry run (show what would be processed)
-python main.py collection --dry-run
-```
-
-### Utility Commands
-
-#### Test Services
-```bash
-# Test all configured services
-python main.py test
-```
-
-#### Database Management
-```bash
-# Show database status and progress
-python main.py status
-
-# Backup database (creates timestamped backup)
-python main.py backup
-
-# Backup to specific file
-python main.py backup --backup-path my_backup.db
-```
-
-#### Configuration
-```bash
-# Create example configuration
-python main.py init
-
-# Create config with custom filename
-python main.py init --output my_config.json
-```
-
-### Interactive Mode
-
-When automatic matching fails (like "Load" vs "Reload"), use interactive mode:
-
-```bash
-# Show search results and manually select correct matches
-python main.py release 23599586 --force-refresh --interactive
-```
-
-This will display search results from each service in a table format, allowing you to:
-- See all available matches with artist, title, year, and type
-- Select the correct match by number
-- Skip services that don't have the right match
-- Ensure accurate data enrichment for tricky cases
-
-Interactive mode is especially useful for:
-- Albums with similar names (Load vs Reload, Volume 1 vs Volume 2)
-- Remasters vs original releases
-- Different regional releases
-- Compilation albums vs studio albums
-
-### Advanced Options
-
-#### Custom Search Override
-
-Use `--search` to override the default artist + album search query for enrichment services:
-
-```bash
-# When the album title doesn't match what's in streaming services
-python main.py release 123456 --search "Tim's Listening Party Part Two"
-
-# For compilations or special releases
-python main.py release 123456 --search "Now That's What I Call Music 80s"
-```
-
-This is particularly useful for:
-- Compilation albums with different titles across services
-- Special editions or reissues
-- Albums where the Discogs title doesn't match streaming service titles
-- Various artist compilations
-
-#### Custom Cover Artwork
-
-Use `--custom-cover` to override album artwork with a custom image URL:
-
-```bash
-# Use higher quality artwork from a record store
-python main.py release 123456 --custom-cover "https://spindizzyrecords.com/cdn/shop/files/custom-cover.jpg"
-
-# Use signed or special edition artwork
-python main.py release 123456 --custom-cover "https://example.com/signed-edition-cover.jpg"
-```
-
-This is perfect for:
-- Higher quality artwork than available on streaming services
-- Special edition covers (signed prints, colored vinyl variants)
-- Record store exclusive artwork
-- Custom or fan-made artwork
-- Correcting incorrect artwork matches
-
-#### V1 Site Integration
-
-Use `--v1` to fetch images from your v1.russ.fm site collection:
-
-```bash
-# Fetch release artwork from v1 site
-python main.py release 21874351 --v1
-
-# Fetch artist image from v1 site  
-python main.py artist "Motörhead" --v1
-```
-
-The system automatically:
-- Downloads and caches the v1 site index (3,076+ entries)
-- Searches by exact Discogs release ID for albums
-- Searches by artist name (case-insensitive) for artists
-- Handles special characters and URL formatting automatically
-- Uses exact image URLs from the v1 site index
-- Caches the index for 24 hours to avoid repeated downloads
-
-This is perfect for:
-- Using your existing high-quality v1 site images
-- Maintaining consistency with your previous collection
-- Getting exact matches without URL guessing
-- Handling special characters (Motörhead, etc.) correctly
-
-#### Custom Artist Images
-
-Use `--custom-image` to override artist images with a custom image URL:
-
-```bash
-# Use higher quality artist photo from a record store
-python main.py artist "Claudia Brücken" --custom-image "https://www.russ.fm/artists/claudia-brucken/claudia-brucken.jpg"
-
-# Use official artist photo from band website
-python main.py artist "Pink Floyd" --custom-image "https://example.com/official-band-photo.jpg"
-```
-
-This is perfect for:
-- Higher quality artist photos than available on streaming services
-- Official artist photos from band websites
-- Professional press photos
-- Custom or fan-made artwork
-- Correcting incorrect artist image matches
-
-#### Combining Advanced Options
-
-```bash
-# Use both custom search and custom cover for maximum control
-python main.py release 123456 --force-refresh --interactive \
-  --search "Custom Search Term" \
-  --custom-cover "https://example.com/custom-cover.jpg"
-
-# Use custom image with artist enrichment
-python main.py artist "Claudia Brücken" --force-refresh --interactive \
-  --custom-image "https://www.russ.fm/artists/claudia-brucken/claudia-brucken.jpg"
-
-# Use v1 site image for existing collection consistency
-python main.py artist "Motörhead" --v1
-
-# Combine v1 with custom options for releases
-python main.py release 21874351 --v1 --force-refresh --interactive
-```
-
-### Global Options
-
-All commands support these global options:
-
-```bash
-# Custom configuration file
-python main.py --config my_config.json <command>
-
-# Set logging level
-python main.py --log-level DEBUG <command>
-
-# Custom log file
-python main.py --log-file logs/debug.log <command>
-```
-
-## Configuration
-
-### JSON Configuration Example
-```json
-{
-  "discogs": {
-    "access_token": "your_discogs_token",
-    "username": "your_username"
-  },
-  "apple_music": {
-    "key_id": "ABC123DEF4",
-    "team_id": "DEF456GHI7", 
-    "private_key_path": "apple_private_key.p8"
-  },
-  "spotify": {
-    "client_id": "your_spotify_client_id",
-    "client_secret": "your_spotify_client_secret"
-  },
-  "lastfm": {
-    "api_key": "your_lastfm_api_key"
-  },
-  "database": {
-    "path": "collection_cache.db"
-  },
-  "logging": {
-    "level": "INFO",
-    "file": "logs/music_collection_manager.log"
-  }
-}
-```
-
-### Environment Variables
-```bash
-export DISCOGS_ACCESS_TOKEN="your_token"
-export DISCOGS_USERNAME="your_username"
-export APPLE_MUSIC_KEY_ID="your_key_id"
-export APPLE_MUSIC_TEAM_ID="your_team_id"
-export APPLE_MUSIC_PRIVATE_KEY_PATH="path/to/key.p8"
-export SPOTIFY_CLIENT_ID="your_client_id"
-export SPOTIFY_CLIENT_SECRET="your_client_secret"
-export LASTFM_API_KEY="your_api_key"
-```
-
-## Architecture
-
-The system follows modern Python best practices:
+Install once so `scrapper` is on your `PATH` and works from any directory:
 
 ```
-music_collection_manager/
-├── cli/                    # Command-line interface
-├── config/                 # Configuration management
-├── models/                 # Data models
-├── services/               # API service implementations
-│   ├── base/              # Base classes and interfaces
-│   ├── discogs/           # Discogs API client
-│   ├── apple_music/       # Apple Music API client
-│   ├── spotify/           # Spotify API client
-│   ├── wikipedia/         # Wikipedia API client
-│   └── lastfm/            # Last.fm API client
-└── utils/                 # Database and orchestration
+./install.sh
 ```
 
-### Key Features
+This runs `cargo install --path . --force` (binary → `~/.cargo/bin/scrapper`) and writes a
+central pointer at `~/.config/scrapper/config.json` (`{ "root": "<this folder>" }`). The binary
+discovers its real `config.json` + database + secrets via that pointer, so `scrapper status`
+works from anywhere. Re-run `./install.sh` after pulling changes to rebuild.
 
-- **Service-Oriented Architecture**: Each API has its own service class
-- **Rate Limiting**: Built-in rate limiting for all services
-- **Error Handling**: Graceful degradation and retry logic
-- **Data Models**: Proper data classes for type safety
-- **Database Caching**: SQLite for local storage and resume capability
-- **Logging**: Comprehensive logging with configurable levels
-- **Testing**: Built-in service testing and validation
+Config discovery order: `--config <path>` → `./config.json` (in-folder dev) → the central
+`~/.config/scrapper/config.json` pointer.
 
-## Database Management Tools
+For local development without installing:
 
-The `tools/` directory contains utilities for managing and analyzing your music collection database:
-
-### Database Manager (`tools/db_manager.py`)
-
-A comprehensive tool for searching, listing, and managing database content:
-
-```bash
-# Search for releases or artists
-python -m tools.db_manager search release "Pink Floyd"
-python -m tools.db_manager search artist "Beatles"
-
-# List recent releases or artists
-python -m tools.db_manager list releases --limit 20
-python -m tools.db_manager list artists --sort name
-
-# Show database statistics
-python -m tools.db_manager stats
-
-# Create database backup
-python -m tools.db_manager backup
-
-# Delete releases or artists (with automatic backup)
-python -m tools.db_manager delete release 123456
-python -m tools.db_manager delete artist "artist-id" --force
+```
+cargo build
+cargo run -- status          # uses ./config.json from this folder
+cargo test && cargo clippy
 ```
 
-### Artist Folder Analysis Tools
+Requires `config.json` (copy `config.example.json`) plus the data assets (`collection_cache.db`,
+`secrets/`, `discogs_cache/`) in this folder. All assets, secrets, and build artifacts are
+git-ignored.
 
-Two specialized tools for analyzing and managing artist folders in your website's `public/artist` directory:
+## Testing
 
-#### Find Missing Artists (`tools/find_missing_artists.py`)
-
-Identifies artists in your database that don't have corresponding folders in `public/artist`:
-
-```bash
-# Show summary and missing artists
-python -m tools.find_missing_artists
-
-# Show only first 10 missing artists
-python -m tools.find_missing_artists --limit 10
-
-# Show artists that have folders
-python -m tools.find_missing_artists --show-present
-
-# Find orphaned folders (exist but no matching database artist)
-python -m tools.find_missing_artists --show-orphaned
-
-# Export missing artists to JSON
-python -m tools.find_missing_artists --export missing_artists.json
-
-# Use custom paths
-python -m tools.find_missing_artists --db-path custom.db --public-path /path/to/public/artist
+```
+cargo test            # unit tests + sanitizer corpus gate
+cargo clippy --all-targets
 ```
 
-#### Artist Folder Reconciler (`tools/artist_folder_reconciler.py`)
+The **sanitizer corpus gate** (`tests/sanitizer_corpus.rs`) enumerates every folder under
+`public/album` and `public/artist` and asserts each is reproducible from its JSON via the Rust
+sanitizer. A short, documented allowlist covers legacy folders that predate certain sanitizer
+rules (the current Python sanitizer doesn't reproduce them either) plus one macOS NFC/NFD
+filesystem artifact; both sides are NFC-normalized before comparison.
 
-Advanced tool that provides intelligent matching between database artists and existing folders:
+The **JSON fidelity gate** (`tests/json_fidelity.rs`) regenerates album/artist JSON from the DB
+and compares it *semantically* against the on-disk `public/` files (album ~98%, artist ~95%).
+Excluded from the comparison are fields a DB-only regenerate cannot reproduce (`resource_url`,
+per-track `artists`, the `services`/`raw_data` blobs — which in the old files are Python
+dataclass-repr strings) and volatile timestamps. The residual misses are stale snapshots where
+the DB has moved on (ids assigned, albums re-matched, videos backfilled), not serializer errors.
 
-```bash
-# Enhanced analysis with alternative slug matching
-python -m tools.artist_folder_reconciler --detailed-analysis
+## Status
 
-# Find potential matches between orphaned folders and missing artists
-python -m tools.artist_folder_reconciler --find-matches --threshold 0.8
+| Area | State |
+|---|---|
+| Scaffold, config, logging, assets | ✅ done |
+| Folder sanitizer + corpus gate | ✅ verified against 4,509 folders |
+| Database read layer + resume + maintenance | ✅ done |
+| CLI surface (all commands/flags) | ✅ done |
+| Local commands (status, db, backup, init, dry-runs, list-missing, maintenance) | ✅ working |
+| API services (7) | ✅ done — `test` probes all 7 concurrently |
+| Public JSON serializer (album + artist) | ✅ done — fidelity-tested vs `public/` |
+| Image manager (hi-res download + source fallback) | ✅ done |
+| Live `release <id>` (fetch → enrich → save → JSON + artwork) | ✅ done |
+| Live `collection` (resume-aware, reuses the release pipeline) | ✅ done |
+| Live `artist` (Discogs + Apple/Spotify/Last.fm/Wikipedia/TheAudioDB) | ✅ done |
+| `generate-collection` (collection.json index) | ✅ done — 99.8% match vs existing |
+| `artist-batch`, `enrich-description` (Perplexity), `backfill-videos`, `report` | ✅ done |
+| ratatui TUI (dashboard, browsers, live probes, live collection) | ✅ done |
 
-# Generate shell script to create missing folders
-python -m tools.artist_folder_reconciler --generate-script create_missing_folders.sh
+All commands and the interactive TUI are implemented.
 
-# Lower similarity threshold for more potential matches
-python -m tools.artist_folder_reconciler --find-matches --threshold 0.7
-```
+### TUI
 
-**Key Features:**
-- **Smart Slugification**: Handles special characters, ampersands, and accented letters
-- **Alternative Matching**: Tries multiple slug formats (e.g., "&" vs "and", with/without "the")
-- **Similarity Scoring**: Finds potential matches between orphaned folders and missing artists
-- **Coverage Analysis**: Shows exact vs alternative matches for better insights
-- **Script Generation**: Creates executable shell scripts to create missing folders
+Running `scrapper` with no arguments launches the interactive TUI: a home menu into a
+**Dashboard** (DB + artist-enrichment stats with gauges), searchable **Releases** and **Artists**
+browsers (with `✓`/`·` enrichment badges and Enter-to-open **detail** drill-downs), live **service
+probes**, a **Collection** runner, and an **Enrich artists** runner. Both runners process a
+configurable number of items (editable with digits or `↑/↓`) in the background with a progress
+gauge and a step-by-step log. When a release *or artist* has more than one Apple Music / Spotify /
+Discogs candidate, a **modal match-picker** pauses the run so you can choose (`↑/↓` select, `Enter`
+confirm, `Esc` skip). From an artist's detail view, press `e` to enrich just that one artist.
+Keys: type to search, `↑/↓` move, `Enter` open detail, `r` run/re-probe, `e` enrich (artist
+detail), `Esc` back, `q` quit.
 
-**Example Output:**
-```
-============================================================
-ENHANCED ARTIST FOLDER ANALYSIS
-============================================================
-Total artists in database: 1240
-Total folders in public/artist: 1181
-Exact slug matches: 1185
-Alternative slug matches: 29
-Total matched artists: 1214
-Missing artists: 26
-Orphaned folders: 16
-Coverage: 97.9%
-```
+**`scrapper collection --interactive` drops straight into this TUI**, pre-set to process the
+first N releases (from `--to`/`--limit`) — interactive enrichment *is* the TUI experience, with
+modal match-pickers and live feedback. Non-interactive `collection` stays headless; CLI
+`release --interactive` prompts inline on the terminal.
 
-### Tool Usage Tips
+Each release is enriched across Discogs, Apple Music, Spotify, Last.fm and **Wikipedia** (artist
+bio), and — interactively — **Perplexity**: the description modal shows what's being described,
+lets you add free-text context, and (re)generate before accepting. (TheAudioDB is artist-only;
+it's used by the `artist` command.) The feedback line reports each service's result.
 
-1. **Start with the reconciler** for the most accurate analysis:
-   ```bash
-   python -m tools.artist_folder_reconciler --detailed-analysis
-   ```
+### Services
 
-2. **Generate missing folders** in bulk:
-   ```bash
-   python -m tools.artist_folder_reconciler --generate-script create_folders.sh
-   chmod +x create_folders.sh
-   ./create_folders.sh
-   ```
+`scrapper test` probes all seven concurrently with the real credentials:
 
-3. **Find naming inconsistencies**:
-   ```bash
-   python -m tools.artist_folder_reconciler --find-matches --threshold 0.7
-   ```
-
-4. **Export data for external processing**:
-   ```bash
-   python -m tools.find_missing_artists --export analysis.json
-   ```
-
-## Database Schema
-
-The SQLite database includes tables for:
-- `releases`: Complete release metadata including:
-  - Basic info (title, year, country, formats, labels)
-  - External service IDs and URLs
-  - Enrichment data from all services
-  - Date added to collection (from Discogs)
-- `artists`: Artist information and biographies  
-- `collection_items`: User collection items
-- `processing_log`: Processing history and errors
-
-## Development
-
-### Running Tests
-```bash
-pytest tests/
-```
-
-### Code Formatting
-```bash
-black music_collection_manager/
-flake8 music_collection_manager/
-```
-
-### Type Checking
-```bash
-mypy music_collection_manager/
-```
-
-## Common Workflows
-
-### Process Your Collection
-```bash
-# 1. Test your setup
-python main.py test
-
-# 2. Start processing with limits
-python main.py collection --limit 10
-
-# 3. Resume if interrupted
-python main.py collection --resume
-
-# 4. Check progress
-python main.py status
-```
-
-### Look Up Specific Items
-```bash
-# Get release data
-python main.py release 123456 --save
-
-# Get artist info
-python main.py artist "Pink Floyd" --save --output json
-
-# Check what's in database
-python main.py status
-```
-
-### Backup and Maintenance
-```bash
-# Regular backup
-python main.py backup
-
-# Check database status
-python main.py status
-
-# Test services periodically
-python main.py test
-```
-
-## Troubleshooting
-
-- **Check logs**: Look in `logs/` directory for detailed error information
-- **Use debug logging**: Add `--log-level DEBUG` to any command
-- **Test services**: Run `python main.py test` to verify API credentials
-- **Check database**: Use `python main.py status` to see processing progress
-- **Rate limiting**: If you hit API limits, the system will automatically slow down
-
-### Apple Music API Issues
-
-If Apple Music isn't working properly, check these common issues:
-
-1. **JWT Authentication Problems**:
-   - Ensure your private key file is in PEM format and readable
-   - Verify `key_id`, `team_id`, and `private_key_path` are correct
-   - Check that the private key file path is relative to your working directory
-
-2. **API Access Issues**:
-   - Verify you have an active Apple Developer Program membership ($99/year)
-   - Ensure your MusicKit identifier is properly configured
-   - Check that your private key hasn't expired (they're valid for 1 year)
-
-3. **Search Results Problems**:
-   - The enhanced search now uses Apple's newer `/search/suggestions` endpoint for better results
-   - Interactive mode provides more accurate artist matching
-   - Extended attributes provide richer data (editorial videos, formation dates, etc.)
-
-4. **Configuration Validation**:
-   ```bash
-   # Run the test command for detailed Apple Music diagnostics
-   python main.py test
-   ```
-
-   This will show specific configuration issues and recommendations for fixing them.
-
-## Migration from v1
-
-If you're migrating from the original script:
-
-1. Backup your existing data: `python main.py backup`
-2. Update your configuration to the new format using `python main.py init`
-3. Run `python main.py test` to verify setup
-4. Process your collection: `python main.py collection`
-
-## License
-
-MIT License - see LICENSE file for details.
+| Service | Auth | Rate limit |
+|---|---|---|
+| Discogs | `Authorization: Discogs token=…` | 60/min |
+| Apple Music | ES256 JWT (from the `.p8`), 12h expiry | 60/min |
+| Spotify | client-credentials OAuth, cached token | 100/min |
+| Last.fm | `api_key` param (+ MD5 signing available) | 60/min |
+| Wikipedia | none (User-Agent only) | 120/min |
+| TheAudioDB | token in URL path | 30/min |
+| Perplexity | Bearer key; `sonar` model | from config (20/min) |

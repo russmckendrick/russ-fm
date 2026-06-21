@@ -1,92 +1,16 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Virtual environments
-venv/
-ENV/
-env/
-.venv/
-
-# IDEs
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Project specific
-config.json
-collection_cache.db
+/target
+# The repo-root .gitignore has a blanket `output/` rule (for generated content); re-include
+# our Rust `src/output/` source module so it is tracked.
+!src/output/
+!src/output/**
+# Data assets reused as-is — never commit
+/collection_cache.db
+/collection_cache.db-wal
+/collection_cache.db-shm
+/discogs_cache/
+/config.json
+/secrets/
+/logs/
+/backups/
 *.db-journal
-*.db-wal
-
-# Logs
-logs/
-*.log
-
-# Cache directories
-discogs_cache/
-.cache/
-
-# Backup files
-*.bak
-*.backup
 backup_*.db
-
-# Temporary files
-*.tmp
-*.temp
-problems.txt
-v1_index_cache.json
-
-# Test output
-test_*.json

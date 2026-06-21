@@ -1,6 +1,6 @@
 # Backend Documentation
 
-The russ.fm backend is a Python-based data collection and enrichment system that processes Discogs collections and enriches them with data from multiple music services.
+The russ.fm backend is a Rust-based data collection and enrichment system (a TUI/CLI binary named `scrapper`) that processes Discogs collections and enriches them with data from multiple music services.
 
 ## Quick Links
 
@@ -53,90 +53,78 @@ flowchart TB
 
 ```
 scrapper/
-├── main.py                          # CLI entry point
+├── Cargo.toml                       # Crate manifest
+├── install.sh                       # Build & install to ~/.cargo/bin
 ├── config.json                      # API credentials (not in git)
 ├── config.example.json              # Configuration template
-├── requirements.txt                 # Python dependencies
-├── collection_cache.db              # SQLite database
-├── logs/                            # Processing logs
-└── music_collection_manager/        # Core package
-    ├── __init__.py
-    ├── cli/                         # CLI commands
-    │   ├── main.py                  # Click command group
-    │   ├── commands.py              # Command implementations
-    │   └── base.py                  # Base command class
-    ├── services/                    # API integrations
-    │   ├── base/                    # Base service class
-    │   ├── discogs/                 # Discogs API
-    │   ├── apple_music/             # Apple Music API
-    │   ├── spotify/                 # Spotify API
-    │   ├── lastfm/                  # Last.fm API
-    │   ├── wikipedia/               # Wikipedia API
-    │   ├── theaudiodb/              # TheAudioDB API
-    │   └── perplexity/              # Perplexity AI API
-    ├── utils/                       # Utilities
-    │   ├── orchestrator.py          # Music data orchestration
-    │   ├── artist_orchestrator.py   # Artist data orchestration
-    │   ├── database.py              # Database management
-    │   ├── image_manager.py         # Image downloading
-    │   ├── matching.py              # Album matching
-    │   ├── serializers.py           # JSON serialization
-    │   ├── text_cleaner.py          # Text normalization
-    │   ├── folder_sanitizer.py      # Path sanitization
-    │   ├── json_updater.py          # JSON file updates
-    │   └── collection_generator.py  # collection.json generation
-    ├── models/                      # Data models
-    │   ├── release.py               # Release, Artist, Track
-    │   ├── collection.py            # CollectionItem
-    │   └── enrichment.py            # Service-specific data
-    └── config/                      # Configuration
-        ├── config_manager.py        # Config loading
-        └── logger.py                # Logging setup
+├── collection_cache.db              # SQLite database (not in git)
+├── discogs_cache/                   # Cached Discogs responses (not in git)
+└── src/                             # Rust source
+    ├── main.rs                      # Entry point: TUI when bare, CLI dispatch otherwise
+    ├── lib.rs                       # Library crate root
+    ├── config.rs                    # config.json + env overrides + path resolution
+    ├── db.rs                        # rusqlite/r2d2 layer over collection_cache.db
+    ├── sanitize.rs                  # Folder-name sanitizer (data-contract critical)
+    ├── logging.rs                   # tracing setup (stderr)
+    ├── cli/                         # clap command surface (all commands + flags)
+    ├── ops/                         # Command implementations: release, artist, collection,
+    │                                #   report, descriptions, videos, maintenance, services
+    ├── services/                    # API clients: discogs, apple_music, spotify, lastfm,
+    │                                #   wikipedia, theaudiodb, perplexity (+ rate limiting)
+    ├── output/                      # JSON writer, image manager, collection.json generator
+    └── tui/                         # ratatui app, screens, detail views, modals, runners
 ```
+
+> The installed `scrapper` binary registers `~/.config/scrapper/config.json` pointing
+> at this folder, so the command works from any directory.
 
 ## Quick Start
 
 ### Setup
 
+Requires a Rust toolchain (install via [rustup](https://rustup.rs/)).
+
 ```bash
 cd scrapper
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-pip install -e .
+# Build and install the `scrapper` binary to ~/.cargo/bin.
+# Also registers ~/.config/scrapper/config.json -> this folder,
+# so `scrapper` runs from any directory.
+./install.sh
 
 # Create config file
 cp config.example.json config.json
 # Edit config.json with your API credentials
 ```
 
+> To run against source without installing, use `cargo run -- <cmd>` from inside `scrapper/`.
+
 ### Test Services
 
 ```bash
-python main.py test
+scrapper test
 ```
 
 ### Process Collection
 
 ```bash
-# Full collection
-python main.py collection
+# Full collection (headless)
+scrapper collection
 
 # Resume previous run
-python main.py collection --resume
+scrapper collection --resume
 
 # Process specific range
-python main.py collection --from 100 --to 200
+scrapper collection --from 100 --to 200
+
+# Interactive TUI
+scrapper collection --interactive
 ```
 
 ### Process Single Release
 
 ```bash
-python main.py release 123456 --save
+scrapper release 123456 --save
 ```
 
 ## Configuration
@@ -215,7 +203,7 @@ sequenceDiagram
     participant DB
     participant Files
 
-    User->>CLI: python main.py collection
+    User->>CLI: scrapper collection
     CLI->>Discogs: Fetch collection items
     Discogs-->>CLI: Collection list
 
@@ -245,38 +233,29 @@ sequenceDiagram
 
 The SQLite database tracks processing state:
 
-```python
-# Check if release is already processed
-if db.has_enriched_release(discogs_id):
-    continue  # Skip
-
-# After successful processing
-db.save_release(release)
-db.mark_collection_item_processed(item_id)
+```text
+# Check if release is already enriched -> skip
+# After successful processing -> save release and mark the
+# collection item as processed
 ```
 
 ## Logging
 
-Logs are stored in `scrapper/logs/`:
-
-```
-logs/
-├── music_collection_manager.log       # Main log
-├── session_2024-01-15_10-30-00.log   # Session-specific log
-└── ...
-```
+The binary logs to **stderr** (no log files are written). The interactive TUI shows progress in
+an in-app log pane instead. Control verbosity with `--log-level` (or the `RUST_LOG` env var); to
+keep a record, redirect stderr yourself, e.g. `scrapper collection 2> run.log`.
 
 ### Log Levels
 
 ```bash
 # Default (INFO)
-python main.py collection
+scrapper collection
 
 # Debug output
-python main.py --log-level DEBUG collection
+scrapper --log-level DEBUG collection
 
 # Quiet mode
-python main.py --log-level WARNING collection
+scrapper --log-level WARNING collection
 ```
 
 ## Error Handling
@@ -297,32 +276,25 @@ Each service respects API rate limits:
 
 Failed requests are automatically retried:
 
-```python
+```text
 # Default retry configuration
 retry_attempts: 3
-retry_delay: 5  # seconds
-retryable_codes: [429, 500, 502, 503, 504]
+retry_delay: 5 seconds
+retryable_codes: 429, 500, 502, 503, 504
 ```
 
 ### Graceful Degradation
 
-If a service fails, processing continues with available data:
-
-```python
-# Service failure doesn't stop processing
-try:
-    apple_data = apple_music.search_release(artist, album)
-except ServiceError:
-    logger.warning("Apple Music search failed, continuing...")
-    apple_data = None
-```
+If a service fails, processing continues with available data: a failed enrichment
+call is logged as a warning and the release is saved with whatever data the other
+services returned.
 
 ## Database Management
 
 ### Check Status
 
 ```bash
-python main.py status
+scrapper status
 ```
 
 Output:
@@ -338,7 +310,7 @@ Database Statistics:
 ### Backup
 
 ```bash
-python main.py backup
+scrapper backup
 # Creates: collection_cache.db.backup.2024-01-15
 ```
 
@@ -346,7 +318,7 @@ python main.py backup
 
 ```bash
 # Re-process even if cached
-python main.py release 123456 --force-refresh --save
+scrapper release 123456 --force-refresh --save
 ```
 
 ## Output Files
@@ -402,35 +374,36 @@ python main.py release 123456 --force-refresh --save
 
 1. **Use resume capability**
    ```bash
-   python main.py collection --resume
+   scrapper collection --resume
    ```
 
 2. **Process in batches**
    ```bash
-   python main.py collection --from 0 --to 100
-   python main.py collection --from 100 --to 200
+   scrapper collection --from 0 --to 100
+   scrapper collection --from 100 --to 200
    ```
 
-3. **Monitor logs**
+3. **Monitor logs** (the binary logs to stderr — redirect to capture)
    ```bash
-   tail -f logs/music_collection_manager.log
+   scrapper --log-level DEBUG collection 2> run.log &
+   tail -f run.log
    ```
 
 ### Handling Failures
 
 1. **Check status after processing**
    ```bash
-   python main.py status
+   scrapper status
    ```
 
 2. **Re-process failed items**
    ```bash
-   python main.py release 123456 --force-refresh --save
+   scrapper release 123456 --force-refresh --save
    ```
 
 3. **Backup before major changes**
    ```bash
-   python main.py backup
+   scrapper backup
    ```
 
 ## Related Documentation

@@ -27,15 +27,12 @@ Perplexity AI provides AI-generated album descriptions when other sources are un
 2. Navigate to API settings
 3. Generate an API key
 
-## Service Class
+## Service
 
-**File**: `scrapper/music_collection_manager/services/perplexity/perplexity_service.py`
+**Source**: `scrapper/src/services/perplexity` (Rust)
 
-```python
-from music_collection_manager.services.perplexity import PerplexityService
-
-service = PerplexityService(config)
-```
+The Perplexity service generates album/artist descriptions. The request, prompt, and
+response shapes documented here describe its behaviour.
 
 ## Methods
 
@@ -154,7 +151,7 @@ def generate_description(artist, album, year, genres, labels):
 ### List Albums Missing Descriptions
 
 ```bash
-python main.py enrich-description --list-missing
+scrapper enrich-description --list-missing
 ```
 
 **Output:**
@@ -170,32 +167,32 @@ Total: 42 albums
 
 ```bash
 # By Discogs ID
-python main.py enrich-description 12345678
+scrapper enrich-description 12345678
 
 # Preview without saving
-python main.py enrich-description 12345678 --dry-run
+scrapper enrich-description 12345678 --dry-run
 
 # Force regenerate existing
-python main.py enrich-description 12345678 --force
+scrapper enrich-description 12345678 --force
 ```
 
 ### Generate by Title/Artist
 
 ```bash
-python main.py enrich-description "OK Computer" --artist "Radiohead"
+scrapper enrich-description "OK Computer" --artist "Radiohead"
 ```
 
 ### Batch Processing
 
 ```bash
 # Multiple IDs
-python main.py enrich-description 123,456,789
+scrapper enrich-description 123,456,789
 
 # Process backwards from ID
-python main.py enrich-description --from 33817755
+scrapper enrich-description --from 33817755
 
 # Custom batch size (pause every N)
-python main.py enrich-description --from 33817755 --batch-size 25
+scrapper enrich-description --from 33817755 --batch-size 25
 ```
 
 ---
@@ -314,28 +311,13 @@ except ServiceError as e:
 
 ---
 
-## Usage Example
+## Usage
 
-```python
-from music_collection_manager.services.perplexity import PerplexityService
-
-service = PerplexityService(config)
-
-if service.is_available():
-    result = service.generate_album_description(
-        artist="Radiohead",
-        album="OK Computer",
-        year=1997,
-        genres=["Alternative Rock", "Art Rock"],
-        labels=["Parlophone"]
-    )
-
-    print(f"Description: {result['description']}")
-    print(f"Generated: {result['generated_at']}")
-    print(f"Tokens used: {result['prompt_tokens']} + {result['completion_tokens']}")
-else:
-    print("Perplexity API not configured")
-```
+When a Perplexity API key is configured, the backend generates an album description
+from the artist, album, year, genres, and labels, and stores the returned text plus
+`generated_at`, `model`, and token counts under
+`raw_data.services.perplexity` (see [JSON Structure](#json-structure) above). It is only
+invoked as a fallback when no editorial notes or wiki content are available.
 
 ---
 
