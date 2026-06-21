@@ -9,8 +9,8 @@ use crate::ops::release::UiRequest;
 use crate::services::Services;
 use crate::{Config, Db};
 
-use super::detail::DetailView;
-use super::modals::{PendingDescribe, PendingPick};
+use super::detail::{DetailView, RowAction};
+use super::modals::{PendingDescribe, PendingEdit, PendingPick};
 use super::runners;
 
 /// How the TUI starts.
@@ -89,6 +89,12 @@ pub(crate) struct App {
     // navigation
     pub(crate) nav_stack: Vec<Screen>,
     pub(crate) detail: Option<DetailView>,
+    /// Cursor over the selectable rows of the active detail view.
+    pub(crate) detail_sel: usize,
+    /// A per-field / single-record detail task is running.
+    pub(crate) detail_busy: bool,
+    /// Active manual-edit overlay.
+    pub(crate) edit: Option<PendingEdit>,
 
     // search browsers
     pub(crate) query: String,
@@ -140,6 +146,9 @@ impl App {
             should_quit: false,
             nav_stack: Vec::new(),
             detail: None,
+            detail_sel: 0,
+            detail_busy: false,
+            edit: None,
             query: String::new(),
             releases: Vec::new(),
             artists: Vec::new(),
@@ -286,18 +295,170 @@ impl App {
         });
     }
 
-    /// Enrich one artist on demand (from the artist detail view).
+    /// Re-enrich the whole artist record on demand (from the artist detail view).
     pub(crate) fn start_single_artist(&mut self, name: String) {
-        if self.artist_running {
+        if self.detail_busy {
             return;
         }
-        self.artist_running = true;
+        self.detail_busy = true;
         self.artist_log.clear();
-        self.artist_progress = Some((0, 1));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
         tokio::spawn(async move {
             runners::run_single_artist_task(cfg, db, tx, pick_tx, name).await;
         });
+    }
+
+    /// Re-enrich the whole release record on demand (from the release detail view).
+    pub(crate) fn start_single_release(&mut self, discogs_id: String) {
+        if self.detail_busy {
+            return;
+        }
+        self.detail_busy = true;
+        self.artist_log.clear();
+        let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
+        tokio::spawn(async move {
+            runners::run_single_release_task(cfg, db, tx, pick_tx, discogs_id).await;
+        });
+    }
+
+    // ── detail editor ────────────────────────────────────────────────────────
+
+    /// The selectable rows of the active detail view.
+    fn detail_rows(&self) -> Vec<super::detail::DetailRow> {
+        if self.detail.is_some() {
+            super::detail::selectable(self)
+        } else {
+            Vec::new()
+        }
+    }
+
+    /// Move the detail-field cursor, wrapping around the selectable rows.
+    pub(crate) fn move_detail_selection(&mut self, delta: isize) {
+        let len = self.detail_rows().len();
+        if len == 0 {
+            return;
+        }
+        let cur = self.detail_sel.min(len - 1) as isize;
+        self.detail_sel = (cur + delta).rem_euclid(len as isize) as usize;
+    }
+
+    /// Keep the cursor within bounds after the row set changes.
+    fn clamp_detail_sel(&mut self) {
+        let len = self.detail_rows().len();
+        if len == 0 {
+            self.detail_sel = 0;
+        } else if self.detail_sel >= len {
+            self.detail_sel = len - 1;
+        }
+    }
+
+    fn selected_action(&self) -> Option<RowAction> {
+        self.detail_rows().get(self.detail_sel).map(|r| r.action)
+    }
+
+    /// Re-fetch the selected field's source online (`r`).
+    pub(crate) fn refresh_selected_field(&mut self) {
+        if self.detail_busy {
+            return;
+        }
+        let Some(action) = self.selected_action().filter(|a| a.refreshable()) else { return };
+        let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
+        match (action, self.detail.as_ref()) {
+            (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => {
+                self.detail_busy = true;
+                self.artist_log.clear();
+                let rec = (**rec).clone();
+                tokio::spawn(async move {
+                    runners::run_refresh_artist_field_task(cfg, db, tx, pick_tx, rec, field).await;
+                });
+            }
+            (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => {
+                self.detail_busy = true;
+                self.artist_log.clear();
+                let rec = (**rec).clone();
+                tokio::spawn(async move {
+                    runners::run_refresh_release_field_task(cfg, db, tx, pick_tx, rec, field).await;
+                });
+            }
+            _ => {}
+        }
+    }
+
+    /// Open the manual-edit overlay for the selected field (`e`).
+    pub(crate) fn edit_selected_field(&mut self) {
+        if self.detail_busy {
+            return;
+        }
+        let Some(row) = self.detail_rows().into_iter().nth(self.detail_sel) else { return };
+        if !row.action.editable() {
+            return;
+        }
+        let initial = self.edit_buffer_for(row.action);
+        self.edit = Some(PendingEdit::new(row.label, row.action, initial));
+    }
+
+    /// Current stored value for a field, as editable text.
+    fn edit_buffer_for(&self, action: RowAction) -> String {
+        use crate::ops::artist::ArtistField as AF;
+        use crate::ops::release::ReleaseField as RF;
+        match (action, self.detail.as_ref()) {
+            (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => match field {
+                AF::Discogs => rec.discogs_id.clone().unwrap_or_default(),
+                AF::Apple => rec.apple_music_url.clone().unwrap_or_default(),
+                AF::Spotify => rec.spotify_url.clone().unwrap_or_default(),
+                AF::Lastfm => rec.lastfm_url.clone().unwrap_or_default(),
+                AF::Wikipedia => rec.wikipedia_url.clone().unwrap_or_default(),
+                AF::Biography => rec.biography.clone().unwrap_or_default(),
+                AF::Genres => rec.genres.as_array().map(|a| a.iter().filter_map(|g| g.as_str()).collect::<Vec<_>>().join(", ")).unwrap_or_default(),
+                _ => String::new(),
+            },
+            (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => match field {
+                RF::Apple => rec.apple_music_url.clone().unwrap_or_default(),
+                RF::Spotify => rec.spotify_url.clone().unwrap_or_default(),
+                RF::Lastfm => rec.lastfm_url.clone().unwrap_or_default(),
+                RF::Description => rec
+                    .raw_data
+                    .get("perplexity")
+                    .and_then(|p| p.get("description"))
+                    .and_then(|d| d.as_str())
+                    .unwrap_or_default()
+                    .to_string(),
+                _ => String::new(),
+            },
+            _ => String::new(),
+        }
+    }
+
+    /// Apply a manual edit synchronously, then reload the detail record.
+    pub(crate) fn apply_edit(&mut self, action: RowAction, text: &str) {
+        let result = match (action, self.detail.as_ref()) {
+            (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => {
+                crate::ops::artist::set_artist_value(&self.cfg, &self.db, rec, field, text).map(|_| ())
+            }
+            (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => {
+                crate::ops::release::set_release_value(&self.cfg, &self.db, rec, field, text).map(|_| ())
+            }
+            _ => Ok(()),
+        };
+        if let Err(e) = result {
+            self.artist_log.push(format!("✗ edit failed: {e}"));
+        }
+        self.refresh_detail();
+    }
+
+    /// Trigger a whole-record re-enrich for the active detail view (`a`).
+    pub(crate) fn refresh_all_detail(&mut self) {
+        match self.detail.as_ref() {
+            Some(DetailView::Artist(rec)) => {
+                let name = rec.name.clone();
+                self.start_single_artist(name);
+            }
+            Some(DetailView::Release(rec)) => {
+                let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+                self.start_single_release(id);
+            }
+            None => {}
+        }
     }
 
     fn list_len(&self) -> usize {
@@ -325,6 +486,7 @@ impl App {
 
     /// Open the detail drill-down for the selected release/artist (pushes onto the nav stack).
     pub(crate) fn open_detail(&mut self) {
+        self.detail_sel = 0;
         match self.screen {
             Screen::Releases => {
                 let did = self.list.selected().and_then(|i| self.releases.get(i)).and_then(|s| s.discogs_id.clone());
@@ -346,13 +508,23 @@ impl App {
         }
     }
 
-    /// Re-read the artist currently shown in the detail view (after an enrich completes).
-    fn refresh_detail_artist(&mut self) {
-        if let Some(DetailView::Artist(rec)) = &self.detail {
-            if let Ok(Some(fresh)) = self.db.get_artist_by_id(&rec.id) {
-                self.detail = Some(DetailView::Artist(Box::new(fresh)));
+    /// Re-read the record currently shown in the detail view (after an enrich/edit completes).
+    fn refresh_detail(&mut self) {
+        match &self.detail {
+            Some(DetailView::Artist(rec)) => {
+                if let Ok(Some(fresh)) = self.db.get_artist_by_id(&rec.id) {
+                    self.detail = Some(DetailView::Artist(Box::new(fresh)));
+                }
             }
+            Some(DetailView::Release(rec)) => {
+                let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+                if let Ok(Some(fresh)) = self.db.get_release_by_discogs_id(&id) {
+                    self.detail = Some(DetailView::Release(Box::new(fresh)));
+                }
+            }
+            None => {}
         }
+        self.clamp_detail_sel();
     }
 
     pub(crate) fn drain_messages(&mut self) {
@@ -376,11 +548,15 @@ impl App {
                         self.running = false;
                         self.log.push("— run complete —".into());
                     }
-                    _ => {
-                        // artist_run | artist_one
+                    "artist_run" => {
                         self.artist_running = false;
                         self.artist_log.push("— run complete —".into());
-                        self.refresh_detail_artist();
+                    }
+                    _ => {
+                        // artist_one | release_one | detail_refresh
+                        self.detail_busy = false;
+                        self.artist_log.push("— done —".into());
+                        self.refresh_detail();
                     }
                 },
             }

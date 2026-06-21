@@ -125,7 +125,7 @@ fn cli_describe(artist: &str, album: &str, preview: &str, context: &str) -> Desc
             println!("\n{preview}\n");
             let choice = Select::with_theme(&ColorfulTheme::default())
                 .with_prompt("Description")
-                .items(&["Accept", "Regenerate (new context)", "Skip"])
+                .items(["Accept", "Regenerate (new context)", "Skip"])
                 .default(0)
                 .interact_opt()
                 .ok()
@@ -315,21 +315,7 @@ pub async fn process_release(
         })
         .unwrap_or_default();
 
-    let tracklist_json: Vec<Value> = discogs
-        .get("tracklist")
-        .and_then(|a| a.as_array())
-        .map(|arr| {
-            arr.iter()
-                .map(|t| {
-                    json!({
-                        "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
-                        "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
-                        "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
-                    })
-                })
-                .collect()
-        })
-        .unwrap_or_default();
+    let tracklist_json = tracklist_from_discogs(&discogs);
 
     let videos = crate::services::discogs::DiscogsService::extract_video_uris(&discogs);
     let discogs_url = str_field(&discogs, &["uri"]);
@@ -671,4 +657,219 @@ async fn enrich_lastfm(services: &Services, artist: &str, album: &str) -> Option
         "wiki_content": a.get("wiki").and_then(|w| w.get("content")).cloned().unwrap_or(Value::Null),
         "images": images,
     }))
+}
+
+/// Map a Discogs release's `tracklist` into the stored `[{position,title,duration}]` shape.
+fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
+    discogs
+        .get("tracklist")
+        .and_then(|a| a.as_array())
+        .map(|arr| {
+            arr.iter()
+                .map(|t| {
+                    json!({
+                        "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
+                        "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
+                        "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
+                    })
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+// ── Per-field editing (TUI database editor) ──────────────────────────────────
+
+/// A single editable/refreshable field of a [`ReleaseRecord`], used by the TUI detail editor.
+#[derive(Clone, Copy, PartialEq, Eq)]
+pub enum ReleaseField {
+    /// Re-fetch the Discogs release (refreshes tracklist, videos and artwork sources).
+    Discogs,
+    Apple,
+    Spotify,
+    Lastfm,
+    Tracks,
+    Videos,
+    ArtistBio,
+    Description,
+    Images,
+}
+
+impl ReleaseField {
+    /// Human label used in log lines.
+    pub fn label(self) -> &'static str {
+        match self {
+            ReleaseField::Discogs => "Discogs",
+            ReleaseField::Apple => "Apple Music",
+            ReleaseField::Spotify => "Spotify",
+            ReleaseField::Lastfm => "Last.fm",
+            ReleaseField::Tracks => "Tracks",
+            ReleaseField::Videos => "Videos",
+            ReleaseField::ArtistBio => "Artist bio",
+            ReleaseField::Description => "Description",
+            ReleaseField::Images => "Images",
+        }
+    }
+}
+
+fn first_artist_name(rec: &ReleaseRecord) -> String {
+    rec.artists
+        .as_array()
+        .and_then(|a| a.first())
+        .and_then(|a| a.get("name"))
+        .and_then(|n| n.as_str())
+        .map(clean_artist_name)
+        .unwrap_or_default()
+}
+
+fn string_list(v: &Value) -> Vec<String> {
+    v.as_array()
+        .map(|arr| arr.iter().filter_map(|s| s.as_str().map(String::from)).collect())
+        .unwrap_or_default()
+}
+
+/// Persist an edited release: save to the DB, reload, and rewrite the public `{folder}.json`.
+fn write_release(cfg: &Config, db: &Db, rec: ReleaseRecord) -> Result<ReleaseRecord> {
+    let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+    let folder = release_folder_name(&rec.title, &id);
+    db.save_release(&rec).context("saving release to database")?;
+    let rec = db.get_release_by_discogs_id(&id)?.unwrap_or(rec);
+    let value = release_to_value(&rec, db);
+    let dir = cfg.releases_dir().join(&folder);
+    std::fs::create_dir_all(&dir)?;
+    std::fs::write(dir.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
+    Ok(rec)
+}
+
+/// Re-fetch a single source for an existing release and merge it into the record, leaving every
+/// other field untouched. Returns the saved record and whether the source yielded data. Failed
+/// lookups (or a skipped match) leave the existing value in place — use [`set_release_value`] to
+/// clear a field.
+#[allow(clippy::too_many_arguments)]
+pub async fn refresh_release_field(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    rec: &ReleaseRecord,
+    field: ReleaseField,
+    picker: &MatchPicker,
+) -> Result<(ReleaseRecord, bool)> {
+    let mut rec = rec.clone();
+    let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+    let artist = first_artist_name(&rec);
+    let title = rec.title.clone();
+    let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
+    let mut found = false;
+    let mut download_image = false;
+
+    match field {
+        ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos => {
+            let discogs = services
+                .discogs
+                .get_release(&id)
+                .await
+                .with_context(|| format!("fetching Discogs release {id}"))?;
+            rec.tracklist = Value::Array(tracklist_from_discogs(&discogs));
+            rec.videos = json!(crate::services::discogs::DiscogsService::extract_video_uris(&discogs));
+            raw.insert("discogs".into(), json!({ "images": discogs.get("images").cloned().unwrap_or(json!([])) }));
+            download_image = true;
+            found = true;
+        }
+        ReleaseField::Apple => {
+            if let Some(a) = enrich_apple(services, &artist, &title, picker).await {
+                rec.apple_music_id = a.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.apple_music_url = a.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.release_name_apple_music = a.get("name").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("apple_music".into(), a);
+                download_image = true;
+                found = true;
+            }
+        }
+        ReleaseField::Spotify => {
+            if let Some(s) = enrich_spotify(services, &artist, &title, picker).await {
+                rec.spotify_id = s.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.spotify_url = s.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.release_name_spotify = s.get("name").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("spotify".into(), s);
+                download_image = true;
+                found = true;
+            }
+        }
+        ReleaseField::Lastfm => {
+            if let Some(l) = enrich_lastfm(services, &artist, &title).await {
+                rec.lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
+                rec.lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("lastfm".into(), l);
+                found = true;
+            }
+        }
+        ReleaseField::ArtistBio => {
+            if let Some((url, bio)) = enrich_wikipedia(services, &artist).await {
+                if let Some(first) = rec.artists.as_array_mut().and_then(|a| a.first_mut()).and_then(|a| a.as_object_mut()) {
+                    first.insert("biography".into(), json!(bio));
+                    first.insert("wikipedia_url".into(), url.map(Value::from).unwrap_or(Value::Null));
+                }
+                found = true;
+            }
+        }
+        ReleaseField::Description => {
+            let genres = string_list(&rec.genres);
+            let labels = string_list(&rec.labels);
+            if let Some(desc) = enrich_perplexity(services, picker, &artist, &title, &genres, &labels, None).await {
+                raw.insert("perplexity".into(), desc);
+                found = true;
+            }
+        }
+        ReleaseField::Images => {
+            download_image = true;
+            found = true;
+        }
+    }
+
+    rec.raw_data = Value::Object(raw);
+    rec.updated_at = Some(now_iso());
+
+    if download_image {
+        let folder = release_folder_name(&rec.title, &id);
+        let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
+        let _ = images::download_release_hires(client, &cfg.releases_dir(), &folder, &rec.raw_data, target, None).await;
+    }
+    let rec = write_release(cfg, db, rec)?;
+    Ok((rec, found))
+}
+
+/// Manually set (or clear, when `text` is blank) one release field. No network access.
+pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: ReleaseField, text: &str) -> Result<ReleaseRecord> {
+    let mut rec = rec.clone();
+    let t = text.trim();
+    let opt = (!t.is_empty()).then(|| t.to_string());
+    match field {
+        ReleaseField::Apple => rec.apple_music_url = opt,
+        ReleaseField::Spotify => rec.spotify_url = opt,
+        ReleaseField::Lastfm => rec.lastfm_url = opt,
+        ReleaseField::Description => {
+            let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
+            match opt {
+                Some(text) => {
+                    let mut p = raw.get("perplexity").and_then(|v| v.as_object().cloned()).unwrap_or_default();
+                    p.insert("description".into(), json!(text));
+                    if !p.contains_key("source") {
+                        p.insert("source".into(), json!("manual"));
+                    }
+                    raw.insert("perplexity".into(), Value::Object(p));
+                }
+                None => {
+                    raw.remove("perplexity");
+                }
+            }
+            rec.raw_data = Value::Object(raw);
+        }
+        // Discogs-owned and derived fields are refresh-only.
+        ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::ArtistBio | ReleaseField::Images => {
+            return Ok(rec)
+        }
+    }
+    rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
 }

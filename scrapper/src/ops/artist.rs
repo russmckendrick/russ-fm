@@ -137,44 +137,9 @@ pub async fn process_artist(
 
     let found = Found { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), wikipedia: wiki.is_some() };
 
-    // Biography priority: Wikipedia → Last.fm → TheAudioDB.
-    let biography = wiki
-        .as_ref()
-        .and_then(|w| w.get("biography").and_then(|b| b.as_str()).map(String::from))
-        .or_else(|| lastfm.as_ref().and_then(|l| l.get("bio_content").and_then(|b| b.as_str()).filter(|s| !s.is_empty()).map(String::from)))
-        .or_else(|| theaudiodb.as_ref().and_then(|t| t.get("strBiographyEN").and_then(|b| b.as_str()).map(String::from)));
-
-    let genres = spotify
-        .as_ref()
-        .and_then(|s| s.get("genres").cloned())
-        .filter(|g| g.as_array().map(|a| !a.is_empty()).unwrap_or(false))
-        .or_else(|| apple.as_ref().and_then(|a| a.get("genres").cloned()))
-        .unwrap_or_else(|| json!([]));
-
-    // Combine images (spotify + apple) into {url,type,width,height}.
-    let mut images_json: Vec<Value> = Vec::new();
-    if let Some(s) = &spotify {
-        if let Some(arr) = s.get("images").and_then(|i| i.as_array()) {
-            for img in arr {
-                images_json.push(json!({
-                    "url": img.get("url").cloned().unwrap_or(Value::Null),
-                    "type": "spotify",
-                    "width": img.get("width").cloned().unwrap_or(Value::Null),
-                    "height": img.get("height").cloned().unwrap_or(Value::Null),
-                }));
-            }
-        }
-    }
-    if let Some(a) = &apple {
-        if let Some(url) = a.get("artwork_url").and_then(|u| u.as_str()) {
-            images_json.push(json!({
-                "url": images::artwork_url_with_size(url, 2000),
-                "type": "apple_music",
-                "width": 2000,
-                "height": 2000,
-            }));
-        }
-    }
+    let biography = derive_biography(wiki.as_ref(), lastfm.as_ref(), theaudiodb.as_ref());
+    let genres = derive_genres(spotify.as_ref(), apple.as_ref());
+    let images_value = derive_artist_images(spotify.as_ref(), apple.as_ref());
 
     // Assemble raw_data service blocks (artist services include discogs + theaudiodb).
     let mut raw = Map::new();
@@ -228,7 +193,7 @@ pub async fn process_artist(
         followers: spotify.as_ref().and_then(|s| s.get("followers")).and_then(|v| v.as_i64()),
         country: None,
         formed_date: None,
-        images: Value::Array(images_json),
+        images: images_value,
         local_images,
         enrichment_data: json!({}),
         raw_data: Value::Object(raw),
@@ -386,4 +351,216 @@ async fn enrich_wikipedia(services: &Services, name: &str) -> Option<Value> {
 async fn enrich_theaudiodb(services: &Services, name: &str) -> Option<Value> {
     let resp = services.theaudiodb.search_artist(name).await.ok()?;
     resp.get("artists")?.as_array()?.first().cloned()
+}
+
+// ── Per-field editing (TUI database editor) ──────────────────────────────────
+
+/// A single editable/refreshable field of an [`ArtistRecord`], used by the TUI detail editor.
+#[derive(Clone, Copy, PartialEq, Eq)]
+pub enum ArtistField {
+    Discogs,
+    Apple,
+    Spotify,
+    Lastfm,
+    Wikipedia,
+    Genres,
+    Popularity,
+    Images,
+    Biography,
+}
+
+impl ArtistField {
+    /// Human label used in log lines.
+    pub fn label(self) -> &'static str {
+        match self {
+            ArtistField::Discogs => "Discogs",
+            ArtistField::Apple => "Apple Music",
+            ArtistField::Spotify => "Spotify",
+            ArtistField::Lastfm => "Last.fm",
+            ArtistField::Wikipedia => "Wikipedia",
+            ArtistField::Genres => "Genres",
+            ArtistField::Popularity => "Popularity",
+            ArtistField::Images => "Images",
+            ArtistField::Biography => "Biography",
+        }
+    }
+}
+
+/// Biography priority: Wikipedia → Last.fm → TheAudioDB.
+fn derive_biography(wiki: Option<&Value>, lastfm: Option<&Value>, theaudiodb: Option<&Value>) -> Option<String> {
+    wiki.and_then(|w| w.get("biography").and_then(|b| b.as_str()).map(String::from))
+        .or_else(|| lastfm.and_then(|l| l.get("bio_content").and_then(|b| b.as_str()).filter(|s| !s.is_empty()).map(String::from)))
+        .or_else(|| theaudiodb.and_then(|t| t.get("strBiographyEN").and_then(|b| b.as_str()).map(String::from)))
+}
+
+/// Genre priority: Spotify (if non-empty) → Apple Music.
+fn derive_genres(spotify: Option<&Value>, apple: Option<&Value>) -> Value {
+    spotify
+        .and_then(|s| s.get("genres").cloned())
+        .filter(|g| g.as_array().map(|a| !a.is_empty()).unwrap_or(false))
+        .or_else(|| apple.and_then(|a| a.get("genres").cloned()))
+        .unwrap_or_else(|| json!([]))
+}
+
+/// Combine Spotify + Apple Music artwork into the `[{url,type,width,height}]` images array.
+fn derive_artist_images(spotify: Option<&Value>, apple: Option<&Value>) -> Value {
+    let mut images_json: Vec<Value> = Vec::new();
+    if let Some(s) = spotify {
+        if let Some(arr) = s.get("images").and_then(|i| i.as_array()) {
+            for img in arr {
+                images_json.push(json!({
+                    "url": img.get("url").cloned().unwrap_or(Value::Null),
+                    "type": "spotify",
+                    "width": img.get("width").cloned().unwrap_or(Value::Null),
+                    "height": img.get("height").cloned().unwrap_or(Value::Null),
+                }));
+            }
+        }
+    }
+    if let Some(a) = apple {
+        if let Some(url) = a.get("artwork_url").and_then(|u| u.as_str()) {
+            images_json.push(json!({
+                "url": images::artwork_url_with_size(url, 2000),
+                "type": "apple_music",
+                "width": 2000,
+                "height": 2000,
+            }));
+        }
+    }
+    Value::Array(images_json)
+}
+
+/// Persist an edited artist: save to the DB and rewrite the public `{folder}.json`.
+fn write_artist(cfg: &Config, db: &Db, rec: &ArtistRecord) -> Result<()> {
+    let folder = sanitize_folder_name(&rec.name);
+    db.save_artist(rec).context("saving artist to database")?;
+    let value = artist_to_value(rec);
+    let dir = cfg.artists_dir().join(&folder);
+    std::fs::create_dir_all(&dir)?;
+    std::fs::write(dir.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
+    Ok(())
+}
+
+/// Re-fetch a single source for an existing artist and merge it into the record, leaving every
+/// other field untouched. Returns the saved record and whether the source yielded data. Failed
+/// lookups (or a skipped match) leave the existing value in place — use [`set_artist_value`] to
+/// clear a field.
+#[allow(clippy::too_many_arguments)]
+pub async fn refresh_artist_field(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    rec: &ArtistRecord,
+    field: ArtistField,
+    picker: &MatchPicker,
+) -> Result<(ArtistRecord, bool)> {
+    let mut rec = rec.clone();
+    let name = rec.name.clone();
+    let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
+    let cur_spotify = raw.get("spotify").cloned();
+    let cur_apple = raw.get("apple_music").cloned();
+    let cur_lastfm = raw.get("lastfm").cloned();
+    let cur_theaudiodb = raw.get("theaudiodb").cloned();
+    let mut found = false;
+    let mut download_image = false;
+
+    match field {
+        ArtistField::Discogs => {
+            if let Some(d) = discogs_artist(services, &name, picker).await {
+                rec.discogs_id = d.get("id").map(|i| i.to_string());
+                rec.discogs_url = d.get("uri").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("discogs".into(), d);
+                found = true;
+            }
+        }
+        ArtistField::Apple => {
+            if let Some(a) = enrich_apple_artist(services, &name, picker).await {
+                rec.apple_music_id = a.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.apple_music_url = a.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.genres = derive_genres(cur_spotify.as_ref(), Some(&a));
+                rec.images = derive_artist_images(cur_spotify.as_ref(), Some(&a));
+                raw.insert("apple_music".into(), a);
+                download_image = true;
+                found = true;
+            }
+        }
+        ArtistField::Spotify | ArtistField::Popularity => {
+            if let Some(s) = enrich_spotify_artist(services, &name, picker).await {
+                rec.spotify_id = s.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.spotify_url = s.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.popularity = s.get("popularity").and_then(|v| v.as_i64());
+                rec.followers = s.get("followers").and_then(|v| v.as_i64());
+                rec.genres = derive_genres(Some(&s), cur_apple.as_ref());
+                rec.images = derive_artist_images(Some(&s), cur_apple.as_ref());
+                raw.insert("spotify".into(), s);
+                download_image = true;
+                found = true;
+            }
+        }
+        ArtistField::Lastfm => {
+            if let Some(l) = enrich_lastfm_artist(services, &name).await {
+                rec.lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
+                rec.lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("lastfm".into(), l);
+                found = true;
+            }
+        }
+        ArtistField::Wikipedia | ArtistField::Biography => {
+            let wiki = enrich_wikipedia(services, &name).await;
+            if let Some(w) = &wiki {
+                if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
+                    rec.wikipedia_url = Some(u.to_string());
+                }
+            }
+            let bio = derive_biography(wiki.as_ref(), cur_lastfm.as_ref(), cur_theaudiodb.as_ref());
+            if bio.is_some() {
+                rec.biography = bio;
+                found = true;
+            }
+        }
+        ArtistField::Genres => {
+            rec.genres = derive_genres(cur_spotify.as_ref(), cur_apple.as_ref());
+            found = rec.genres.as_array().map(|a| !a.is_empty()).unwrap_or(false);
+        }
+        ArtistField::Images => {
+            rec.images = derive_artist_images(cur_spotify.as_ref(), cur_apple.as_ref());
+            download_image = true;
+            found = true;
+        }
+    }
+
+    rec.raw_data = Value::Object(raw);
+    rec.updated_at = Some(now_iso());
+
+    if download_image {
+        let folder = sanitize_folder_name(&rec.name);
+        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
+    }
+    write_artist(cfg, db, &rec)?;
+    Ok((rec, found))
+}
+
+/// Manually set (or clear, when `text` is blank) one artist field. No network access.
+pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<ArtistRecord> {
+    let mut rec = rec.clone();
+    let t = text.trim();
+    let opt = (!t.is_empty()).then(|| t.to_string());
+    match field {
+        ArtistField::Discogs => rec.discogs_id = opt,
+        ArtistField::Apple => rec.apple_music_url = opt,
+        ArtistField::Spotify => rec.spotify_url = opt,
+        ArtistField::Lastfm => rec.lastfm_url = opt,
+        ArtistField::Wikipedia => rec.wikipedia_url = opt,
+        ArtistField::Biography => rec.biography = opt,
+        ArtistField::Genres => {
+            let list: Vec<Value> = t.split(',').map(|g| g.trim()).filter(|g| !g.is_empty()).map(|g| json!(g)).collect();
+            rec.genres = Value::Array(list);
+        }
+        // Popularity/Images are derived from sources — refresh them instead of editing by hand.
+        ArtistField::Popularity | ArtistField::Images => return Ok(rec),
+    }
+    rec.updated_at = Some(now_iso());
+    write_artist(cfg, db, &rec)?;
+    Ok(rec)
 }

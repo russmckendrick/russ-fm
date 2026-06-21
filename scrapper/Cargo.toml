@@ -19,30 +19,30 @@ tokio = { version = "1", features = ["full"] }
 futures = "0.3"
 
 # HTTP
-reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls", "stream"] }
+reqwest = { version = "0.13", default-features = false, features = ["json", "rustls", "stream", "query", "form"] }
 
 # CLI / TUI
 clap = { version = "4", features = ["derive"] }
-ratatui = "0.29"
-crossterm = "0.28"
-dialoguer = "0.11"
+ratatui = "0.30"
+crossterm = "0.29"
+dialoguer = "0.12"
 
 # Serialization
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1", features = ["preserve_order"] }
 
 # Database
-rusqlite = { version = "0.32", features = ["bundled"] }
+rusqlite = { version = "0.39", features = ["bundled"] }
 r2d2 = "0.8"
-r2d2_sqlite = "0.25"
+r2d2_sqlite = "0.34"
 
 # Auth / crypto
-jsonwebtoken = "9"
-md-5 = "0.10"
+jsonwebtoken = { version = "10", features = ["aws_lc_rs"] }
+md-5 = "0.11"
 hex = "0.4"
 
 # Rate limiting
-governor = "0.7"
+governor = "0.10"
 nonzero_ext = "0.3"
 
 # Images

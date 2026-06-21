@@ -127,6 +127,40 @@ scrapper collection --interactive
 scrapper release 123456 --save
 ```
 
+## Detail Editor (TUI)
+
+Launching `scrapper` with no subcommand opens the interactive TUI. From the **Releases** or
+**Artists** browser, press `Enter` on a row to open its **detail editor** — a per-field view over
+the record in `collection_cache.db` and the matching files under `public/`.
+
+The detail view is a true editor for the database, not a read-only panel:
+
+| Key   | Action                                                                          |
+|-------|---------------------------------------------------------------------------------|
+| `↑/↓` | Move the cursor between editable fields                                          |
+| `r`   | **Refresh this line** — re-query just that one source online and merge the result (the match picker appears when there are multiple candidates) |
+| `e`   | **Edit this line** — type/paste a value, or leave blank to clear it             |
+| `a`   | **Refresh all** — re-enrich the whole record (artists and releases alike)       |
+| `Esc` | Back to the list                                                                |
+
+Every action saves to the DB **and** rewrites the public `{folder}.json` through the same writers
+the full pipeline uses (`artist_to_value` / `release_to_value` + `to_pretty_sorted`), so the static
+data contract with the frontend is preserved.
+
+Implementation:
+
+- **Per-field refresh / manual set** live in `ops/artist.rs` (`refresh_artist_field`,
+  `set_artist_value`, `ArtistField`) and `ops/release.rs` (`refresh_release_field`,
+  `set_release_value`, `ReleaseField`). Refresh re-fetches a single source and merges it into the
+  existing record (a failed lookup leaves the current value untouched); manual set writes the typed
+  value directly. Shared derivation helpers (`derive_biography` / `derive_genres` /
+  `derive_artist_images`) keep cross-cutting artist fields consistent with a full enrich.
+- The TUI side is `tui/detail.rs` (selectable row model), `tui/modals.rs` (`PendingEdit` overlay),
+  `tui/app.rs` (cursor + action dispatch), and `tui/runners.rs` (background refresh tasks).
+
+> Note: manually editing a service line sets the displayed URL/ID directly — it does **not**
+> repopulate the full service block. Use `r` to pull the complete record from that source.
+
 ## Configuration
 
 ### config.json Structure

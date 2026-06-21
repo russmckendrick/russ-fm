@@ -16,6 +16,10 @@ pub(crate) fn handle_key(app: &mut App, code: KeyCode) {
         modals::handle_pick_key(app, code);
         return;
     }
+    if app.edit.is_some() {
+        modals::handle_edit_key(app, code);
+        return;
+    }
     // Detail drill-down has its own keys.
     if app.detail.is_some() {
         handle_detail_key(app, code);
@@ -95,19 +99,20 @@ pub(crate) fn handle_key(app: &mut App, code: KeyCode) {
     }
 }
 
-/// Keys while a release/artist detail panel is open.
+/// Keys while a release/artist detail editor is open.
 fn handle_detail_key(app: &mut App, code: KeyCode) {
+    // While a refresh/enrich task runs, interactive picks come through the modal layer; ignore
+    // field actions until it finishes.
+    if app.detail_busy {
+        return;
+    }
     match code {
+        KeyCode::Up => app.move_detail_selection(-1),
+        KeyCode::Down => app.move_detail_selection(1),
+        KeyCode::Char('r') => app.refresh_selected_field(),
+        KeyCode::Char('e') => app.edit_selected_field(),
+        KeyCode::Char('a') => app.refresh_all_detail(),
         KeyCode::Esc => pop_nav(app),
-        KeyCode::Char('e') => {
-            let name = match app.detail.as_ref() {
-                Some(super::detail::DetailView::Artist(rec)) if !app.artist_running => Some(rec.name.clone()),
-                _ => None,
-            };
-            if let Some(name) = name {
-                app.start_single_artist(name);
-            }
-        }
         _ => {}
     }
 }

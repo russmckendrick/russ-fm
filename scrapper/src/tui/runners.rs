@@ -3,7 +3,9 @@
 
 use tokio::sync::mpsc::UnboundedSender;
 
-use crate::ops::release::{image_client, MatchPicker};
+use crate::db::{ArtistRecord, ReleaseRecord};
+use crate::ops::artist::ArtistField;
+use crate::ops::release::{image_client, MatchPicker, ReleaseField};
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -175,6 +177,89 @@ pub(crate) async fn run_single_artist_task(
     }
     let _ = tx.send(Msg::ArtistProgress(1, 1));
     let _ = tx.send(Msg::Done("artist_one".into()));
+}
+
+/// Re-enrich a whole release record (from the release detail view's `a` action).
+pub(crate) async fn run_single_release_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    pick_tx: UnboundedSender<UiRequest>,
+    discogs_id: String,
+) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let services = Services::new(&cfg);
+    if !services.discogs.is_configured() {
+        log("Discogs not configured".into());
+        let _ = tx.send(Msg::Done("release_one".into()));
+        return;
+    }
+    let client = image_client();
+    let picker = MatchPicker::Tui(pick_tx);
+
+    log(format!("▶ release {discogs_id} — re-enriching…"));
+    match crate::ops::release::process_release(&cfg, &services, &db, &client, &discogs_id, true, None, &picker, None).await {
+        Ok((rec, f)) => {
+            let m = |b: bool| if b { "✓" } else { "–" };
+            log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
+            log(format!(
+                "    apple {} · spotify {} · lastfm {} · wiki {} · perplexity {} · artwork {} · saved ✓",
+                m(f.apple), m(f.spotify), m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
+            ));
+        }
+        Err(e) => log(format!("  ✗ {e}")),
+    }
+    let _ = tx.send(Msg::Done("release_one".into()));
+}
+
+/// Re-fetch a single artist field (from the artist detail editor's `r` action).
+pub(crate) async fn run_refresh_artist_field_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    pick_tx: UnboundedSender<UiRequest>,
+    rec: ArtistRecord,
+    field: ArtistField,
+) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let services = Services::new(&cfg);
+    let client = image_client();
+    let picker = MatchPicker::Tui(pick_tx);
+
+    log(format!("▶ {} — refreshing {}…", rec.name, field.label()));
+    match crate::ops::artist::refresh_artist_field(&cfg, &services, &db, &client, &rec, field, &picker).await {
+        Ok((_, found)) => log(format!("  {} {}", if found { "✓ updated" } else { "– no data" }, field.label())),
+        Err(e) => log(format!("  ✗ {e}")),
+    }
+    let _ = tx.send(Msg::Done("detail_refresh".into()));
+}
+
+/// Re-fetch a single release field (from the release detail editor's `r` action).
+pub(crate) async fn run_refresh_release_field_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    pick_tx: UnboundedSender<UiRequest>,
+    rec: ReleaseRecord,
+    field: ReleaseField,
+) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let services = Services::new(&cfg);
+    let client = image_client();
+    let picker = MatchPicker::Tui(pick_tx);
+
+    log(format!("▶ {} — refreshing {}…", rec.title, field.label()));
+    match crate::ops::release::refresh_release_field(&cfg, &services, &db, &client, &rec, field, &picker).await {
+        Ok((_, found)) => log(format!("  {} {}", if found { "✓ updated" } else { "– no data" }, field.label())),
+        Err(e) => log(format!("  ✗ {e}")),
+    }
+    let _ = tx.send(Msg::Done("detail_refresh".into()));
 }
 
 fn first_artist(artists: &serde_json::Value) -> String {

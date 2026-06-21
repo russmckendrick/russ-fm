@@ -89,10 +89,14 @@ fn draw(f: &mut Frame, app: &mut App) {
         theme::footer(f, foot, "↑/↓ select · Enter choose · Esc skip this service");
         return;
     }
-    if let Some(d) = app.detail.as_ref() {
-        let hint = if d.is_artist() { "e enrich · Esc back" } else { "Esc back" };
+    if app.edit.is_some() {
+        modals::draw_edit(f, body, app);
+        theme::footer(f, foot, "type to edit · Enter save · Esc cancel");
+        return;
+    }
+    if app.detail.is_some() {
         detail::draw_detail(f, body, app);
-        theme::footer(f, foot, hint);
+        theme::footer(f, foot, "↑/↓ select · r refresh line · e edit · a refresh all · Esc back");
         return;
     }
 

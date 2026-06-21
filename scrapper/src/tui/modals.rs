@@ -8,7 +8,50 @@ use ratatui::widgets::{Block, Borders, Cell, Paragraph, Row, Table, TableState, 
 use crate::ops::release::{DescribeAction, DescribeRequest, PickRequest};
 
 use super::app::App;
+use super::detail::RowAction;
 use super::theme;
+
+/// A manual single-field edit awaiting the user's text.
+pub(crate) struct PendingEdit {
+    pub(crate) label: String,
+    pub(crate) action: RowAction,
+    pub(crate) buffer: String,
+}
+
+impl PendingEdit {
+    pub(crate) fn new(label: String, action: RowAction, initial: String) -> Self {
+        Self { label, action, buffer: initial }
+    }
+}
+
+/// Handle a key while the manual-edit overlay is open.
+pub(crate) fn handle_edit_key(app: &mut App, code: KeyCode) {
+    let Some(e) = app.edit.as_mut() else { return };
+    match code {
+        KeyCode::Enter => {
+            let (action, text) = (e.action, e.buffer.clone());
+            app.edit = None;
+            app.apply_edit(action, &text);
+        }
+        KeyCode::Esc => app.edit = None,
+        KeyCode::Backspace => {
+            e.buffer.pop();
+        }
+        KeyCode::Char(c) => e.buffer.push(c),
+        _ => {}
+    }
+}
+
+pub(crate) fn draw_edit(f: &mut Frame, area: Rect, app: &App) {
+    let e = app.edit.as_ref().expect("edit active");
+    let rows = Layout::vertical([Constraint::Length(3), Constraint::Min(0)]).split(area);
+    let input = Paragraph::new(format!(" {}", e.buffer)).block(theme::panel(&format!("Edit {}", e.label)));
+    f.render_widget(input, rows[0]);
+    let help = Paragraph::new("Type to edit · Enter save · Esc cancel · an empty value clears the field")
+        .style(theme::dim())
+        .block(theme::panel("Help"));
+    f.render_widget(help, rows[1]);
+}
 
 /// A match-picker awaiting the user's choice.
 pub(crate) struct PendingPick {
