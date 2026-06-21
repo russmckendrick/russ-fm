@@ -5,6 +5,7 @@
 //! `utils/database.py`. The pool is opened with WAL; calls are synchronous and intended to be
 //! invoked from blocking contexts (`tokio::task::spawn_blocking`) when used from async code.
 
+use std::collections::HashSet;
 use std::path::{Path, PathBuf};
 
 use anyhow::{Context, Result};
@@ -17,6 +18,14 @@ use serde_json::Value;
 
 pub type SqlitePool = Pool<SqliteConnectionManager>;
 type PooledConn = r2d2::PooledConnection<SqliteConnectionManager>;
+
+/// SQL predicate (mirrors [`Db::has_enriched_release`]) for a release with meaningful enrichment.
+const RELEASE_ENRICHED: &str = "(enrichment_data IS NOT NULL AND enrichment_data != '' AND enrichment_data != '{}') \
+     OR apple_music_id IS NOT NULL OR spotify_id IS NOT NULL OR lastfm_mbid IS NOT NULL";
+
+/// SQL predicate for an artist with meaningful enrichment (service IDs or a biography).
+const ARTIST_ENRICHED: &str = "apple_music_id IS NOT NULL OR spotify_id IS NOT NULL OR lastfm_mbid IS NOT NULL \
+     OR (biography IS NOT NULL AND biography != '')";
 
 #[derive(Clone)]
 pub struct Db {
@@ -204,6 +213,74 @@ impl Db {
             }
         }
         Ok(am.is_some() || sp.is_some() || lf.is_some())
+    }
+
+    /// True if an artist has any meaningful enrichment (service IDs or a biography).
+    pub fn has_enriched_artist(&self, id: &str) -> Result<bool> {
+        let conn = self.conn()?;
+        let ok: Option<i64> = conn
+            .query_row(
+                &format!("SELECT 1 FROM artists WHERE id = ? AND ({ARTIST_ENRICHED})"),
+                [id],
+                |r| r.get(0),
+            )
+            .optional()?;
+        Ok(ok.is_some())
+    }
+
+    /// (enriched, total) artist counts for the dashboard.
+    pub fn artist_enrichment_counts(&self) -> Result<(i64, i64)> {
+        let conn = self.conn()?;
+        let total: i64 = conn.query_row("SELECT COUNT(*) FROM artists", [], |r| r.get(0))?;
+        let enriched: i64 = conn.query_row(
+            &format!("SELECT COUNT(*) FROM artists WHERE {ARTIST_ENRICHED}"),
+            [],
+            |r| r.get(0),
+        )?;
+        Ok((enriched, total))
+    }
+
+    /// Un-enriched artist summaries (name order), excluding Various Artists, capped at `limit`.
+    pub fn list_unenriched_artists(&self, limit: u32) -> Result<Vec<ArtistSummary>> {
+        let conn = self.conn()?;
+        let sql = format!(
+            "SELECT id, name, discogs_id, created_at FROM artists \
+             WHERE NOT ({ARTIST_ENRICHED}) \
+               AND LOWER(name) NOT IN ('various', 'various artists') \
+             ORDER BY name ASC LIMIT {limit}"
+        );
+        let mut stmt = conn.prepare(&sql)?;
+        let rows = stmt
+            .query_map([], |r| {
+                Ok(ArtistSummary {
+                    id: r.get(0)?,
+                    name: r.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                    discogs_id: r.get(2)?,
+                    created_at: r.get(3)?,
+                })
+            })?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(rows)
+    }
+
+    /// Set of artist ids that have meaningful enrichment (for list badges).
+    pub fn enriched_artist_ids(&self) -> Result<HashSet<String>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(&format!("SELECT id FROM artists WHERE {ARTIST_ENRICHED}"))?;
+        let ids = stmt
+            .query_map([], |r| r.get::<_, String>(0))?
+            .collect::<rusqlite::Result<HashSet<_>>>()?;
+        Ok(ids)
+    }
+
+    /// Set of release discogs_ids that have meaningful enrichment (for list badges).
+    pub fn enriched_release_ids(&self) -> Result<HashSet<String>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(&format!("SELECT discogs_id FROM releases WHERE discogs_id IS NOT NULL AND ({RELEASE_ENRICHED})"))?;
+        let ids = stmt
+            .query_map([], |r| r.get::<_, String>(0))?
+            .collect::<rusqlite::Result<HashSet<_>>>()?;
+        Ok(ids)
     }
 
     /// Collection item IDs that haven't been processed yet (resume mechanism).

@@ -6,7 +6,7 @@ use serde_json::{json, Map, Value};
 
 use crate::cli::{ArtistArgs, ArtistBatchArgs, OutputFormat};
 use crate::db::{ArtistRecord, Db};
-use crate::ops::release::{image_client, prefer_key};
+use crate::ops::release::{image_client, prefer_key, MatchPicker};
 use crate::output::{artist_to_value, images, to_pretty_sorted};
 use crate::sanitize::sanitize_folder_name;
 use crate::services::Services;
@@ -21,8 +21,9 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     }
     let client = image_client();
 
+    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
     println!("Searching for artist '{}'...", args.name);
-    let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, prefer_key(args.prefer)).await?;
+    let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, prefer_key(args.prefer), &picker).await?;
 
     let mark = |b: bool| if b { "✓" } else { "–" };
     println!("\n  {}", rec.name);
@@ -71,11 +72,12 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
     let client = image_client();
     let prefer = prefer_key(args.prefer);
+    let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
     let total = slice.len();
     let mut ok = 0usize;
 
     for (i, a) in slice.iter().enumerate() {
-        match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, prefer).await {
+        match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, prefer, &picker).await {
             Ok((_, found)) => {
                 ok += 1;
                 let m = |b: bool| if b { "✓" } else { "–" };
@@ -89,15 +91,15 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     Ok(())
 }
 
-struct Found {
-    apple: bool,
-    spotify: bool,
-    lastfm: bool,
-    wikipedia: bool,
+pub struct Found {
+    pub apple: bool,
+    pub spotify: bool,
+    pub lastfm: bool,
+    pub wikipedia: bool,
 }
 
 #[allow(clippy::too_many_arguments)]
-async fn process_artist(
+pub async fn process_artist(
     cfg: &Config,
     services: &Services,
     db: &Db,
@@ -106,21 +108,31 @@ async fn process_artist(
     write_files: bool,
     use_theaudiodb: bool,
     prefer: Option<&str>,
+    picker: &MatchPicker,
 ) -> Result<(ArtistRecord, Found)> {
-    // Discogs: search → details.
-    let discogs = discogs_artist(services, name).await;
+    // Discogs: search → (pick) → details.
+    let discogs = discogs_artist(services, name, picker).await;
     let display_name = discogs
         .as_ref()
         .and_then(|d| d.get("name").and_then(|n| n.as_str()))
         .unwrap_or(name)
         .to_string();
 
-    let (apple, spotify, lastfm, wiki) = tokio::join!(
-        enrich_apple_artist(services, &display_name),
-        enrich_spotify_artist(services, &display_name),
-        enrich_lastfm_artist(services, &display_name),
-        enrich_wikipedia(services, &display_name),
-    );
+    // Interactive runs sequentially (each may prompt); otherwise concurrently.
+    let (apple, spotify, lastfm, wiki) = if picker.is_interactive() {
+        let apple = enrich_apple_artist(services, &display_name, picker).await;
+        let spotify = enrich_spotify_artist(services, &display_name, picker).await;
+        let lastfm = enrich_lastfm_artist(services, &display_name).await;
+        let wiki = enrich_wikipedia(services, &display_name).await;
+        (apple, spotify, lastfm, wiki)
+    } else {
+        tokio::join!(
+            enrich_apple_artist(services, &display_name, picker),
+            enrich_spotify_artist(services, &display_name, picker),
+            enrich_lastfm_artist(services, &display_name),
+            enrich_wikipedia(services, &display_name),
+        )
+    };
     let theaudiodb = if use_theaudiodb { enrich_theaudiodb(services, &display_name).await } else { None };
 
     let found = Found { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), wikipedia: wiki.is_some() };
@@ -237,18 +249,60 @@ async fn process_artist(
     Ok((rec, found))
 }
 
-async fn discogs_artist(services: &Services, name: &str) -> Option<Value> {
+async fn discogs_artist(services: &Services, name: &str, picker: &MatchPicker) -> Option<Value> {
     let search = services.discogs.search_artist(name, 5).await.ok()?;
-    let id = search.get("results")?.as_array()?.first()?.get("id")?.to_string();
+    let results = search.get("results")?.as_array()?;
+    if results.is_empty() {
+        return None;
+    }
+    let idx = if picker.is_interactive() && results.len() > 1 {
+        let rows: Vec<Vec<String>> = results
+            .iter()
+            .map(|r| {
+                vec![
+                    r.get("title").and_then(|v| v.as_str()).unwrap_or("?").to_string(),
+                    r.get("id").map(|v| v.to_string()).unwrap_or_default(),
+                    r.get("type").and_then(|v| v.as_str()).unwrap_or("artist").to_string(),
+                ]
+            })
+            .collect();
+        picker.pick(&format!("Discogs · {name}"), &["Name", "ID", "Type"], &rows).await?
+    } else {
+        0
+    };
+    let id = results.get(idx)?.get("id")?.to_string();
     services.discogs.get_artist(&id).await.ok()
 }
 
-async fn enrich_apple_artist(services: &Services, name: &str) -> Option<Value> {
+async fn enrich_apple_artist(services: &Services, name: &str, picker: &MatchPicker) -> Option<Value> {
     if !services.apple_music.is_configured() {
         return None;
     }
     let resp = services.apple_music.search_artist(name, 5).await.ok()?;
-    let item = resp.get("results")?.get("artists")?.get("data")?.as_array()?.first()?;
+    let data = resp.get("results")?.get("artists")?.get("data")?.as_array()?;
+    if data.is_empty() {
+        return None;
+    }
+    let idx = if picker.is_interactive() && data.len() > 1 {
+        let rows: Vec<Vec<String>> = data
+            .iter()
+            .map(|item| {
+                let a = item.get("attributes");
+                let aname = a.and_then(|a| a.get("name")).and_then(|v| v.as_str()).unwrap_or("?").to_string();
+                let genres = a
+                    .and_then(|a| a.get("genreNames"))
+                    .and_then(|v| v.as_array())
+                    .map(|g| g.iter().filter_map(|x| x.as_str()).collect::<Vec<_>>().join(", "))
+                    .unwrap_or_default();
+                let origin = a.and_then(|a| a.get("origin")).and_then(|v| v.as_str()).unwrap_or("").to_string();
+                vec![aname, genres, origin]
+            })
+            .collect();
+        picker.pick(&format!("Apple Music · {name}"), &["Name", "Genres", "Origin"], &rows).await?
+    } else {
+        0
+    };
+    let item = data.get(idx)?;
     let attrs = item.get("attributes").cloned().unwrap_or(json!({}));
     Some(json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
@@ -261,12 +315,36 @@ async fn enrich_apple_artist(services: &Services, name: &str) -> Option<Value> {
     }))
 }
 
-async fn enrich_spotify_artist(services: &Services, name: &str) -> Option<Value> {
+async fn enrich_spotify_artist(services: &Services, name: &str, picker: &MatchPicker) -> Option<Value> {
     if !services.spotify.is_configured() {
         return None;
     }
     let resp = services.spotify.search_artist(name, 5).await.ok()?;
-    let item = resp.get("artists")?.get("items")?.as_array()?.first()?;
+    let items = resp.get("artists")?.get("items")?.as_array()?;
+    if items.is_empty() {
+        return None;
+    }
+    let idx = if picker.is_interactive() && items.len() > 1 {
+        let rows: Vec<Vec<String>> = items
+            .iter()
+            .map(|item| {
+                let genres = item
+                    .get("genres")
+                    .and_then(|v| v.as_array())
+                    .map(|g| g.iter().filter_map(|x| x.as_str()).collect::<Vec<_>>().join(", "))
+                    .unwrap_or_default();
+                vec![
+                    item.get("name").and_then(|v| v.as_str()).unwrap_or("?").to_string(),
+                    genres,
+                    item.get("popularity").and_then(|v| v.as_i64()).map(|n| n.to_string()).unwrap_or_default(),
+                ]
+            })
+            .collect();
+        picker.pick(&format!("Spotify · {name}"), &["Name", "Genres", "Popularity"], &rows).await?
+    } else {
+        0
+    };
+    let item = items.get(idx)?;
     Some(json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": item.get("name").cloned().unwrap_or(Value::Null),
