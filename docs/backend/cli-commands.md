@@ -161,6 +161,7 @@ scrapper artist <ARTIST_NAME> [OPTIONS]
 | `--prefer` | CHOICE | - | Preferred data/image source |
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
 | `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
+| `--perplexity-context` | STRING | - | Extra artist identity context for Perplexity |
 
 ### Examples
 
@@ -179,6 +180,9 @@ scrapper artist "Daft Punk" --theaudiodb --save
 
 # Generate a Perplexity description
 scrapper artist "Björk" --perplexity --save
+
+# Generate a Perplexity description with identity context
+scrapper artist "Steve White Trio" --perplexity --perplexity-context "UK acid jazz trio behind Soul Drums" --save
 ```
 
 ---
@@ -205,6 +209,7 @@ scrapper artist-batch [OPTIONS]
 | `--prefer` | CHOICE | - | Preferred data/image source |
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
 | `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
+| `--perplexity-context` | STRING | - | Shared artist identity context for Perplexity |
 
 ### Examples
 
@@ -218,6 +223,11 @@ scrapper artist-batch --from 0 --to 50 --save
 # Show processing statistics
 scrapper artist-batch --stats
 ```
+
+`artist-batch` reads from the SQLite `artists` table. Before listing work it
+backfills missing placeholder rows from saved release credits, and saving
+releases through `collection` or `release` keeps seeding new credited artists as
+unenriched rows.
 
 ---
 

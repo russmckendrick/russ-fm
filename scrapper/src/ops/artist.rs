@@ -23,12 +23,12 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
 
     let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
     println!("Searching for artist '{}'...", args.name);
-    let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, prefer_key(args.prefer), &picker).await?;
+    let (rec, found) = process_artist(cfg, &services, &db, &client, &args.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer_key(args.prefer), &picker).await?;
 
     let mark = |b: bool| if b { "✓" } else { "–" };
     println!("\n  {}", rec.name);
     println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
-    println!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia));
+    println!("  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}", mark(found.apple), mark(found.spotify), mark(found.lastfm), mark(found.wikipedia), mark(found.perplexity));
     if let Some(bio) = &rec.biography {
         let preview: String = bio.chars().take(160).collect();
         println!("  bio: {preview}{}", if bio.chars().count() > 160 { "…" } else { "" });
@@ -48,6 +48,10 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
 
 pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let db = Db::open(cfg.db_path())?;
+    let seeded = db.seed_missing_artists_from_releases()?;
+    if seeded > 0 {
+        println!("Seeded {seeded} missing artist(s) from saved releases.");
+    }
     let mut artists = db.list_artists(u32::MAX, "name")?;
     if !args.include_various {
         artists.retain(|a| !a.name.eq_ignore_ascii_case("various") && !a.name.eq_ignore_ascii_case("various artists"));
@@ -77,11 +81,11 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     let mut ok = 0usize;
 
     for (i, a) in slice.iter().enumerate() {
-        match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, prefer, &picker).await {
+        match process_artist(cfg, &services, &db, &client, &a.name, args.save, args.theaudiodb, args.perplexity, args.perplexity_context.as_deref(), prefer, &picker).await {
             Ok((_, found)) => {
                 ok += 1;
                 let m = |b: bool| if b { "✓" } else { "–" };
-                println!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia));
+                println!("[{}/{total}] ✓ {} (apple {} spotify {} lastfm {} wiki {} perplexity {})", i + 1, a.name, m(found.apple), m(found.spotify), m(found.lastfm), m(found.wikipedia), m(found.perplexity));
             }
             Err(e) => println!("[{}/{total}] ✗ {} — {e}", i + 1, a.name),
         }
@@ -96,6 +100,7 @@ pub struct Found {
     pub spotify: bool,
     pub lastfm: bool,
     pub wikipedia: bool,
+    pub perplexity: bool,
 }
 
 #[allow(clippy::too_many_arguments)]
@@ -107,6 +112,8 @@ pub async fn process_artist(
     name: &str,
     write_files: bool,
     use_theaudiodb: bool,
+    use_perplexity: bool,
+    perplexity_context: Option<&str>,
     prefer: Option<&str>,
     picker: &MatchPicker,
 ) -> Result<(ArtistRecord, Found)> {
@@ -135,10 +142,15 @@ pub async fn process_artist(
     };
     let theaudiodb = if use_theaudiodb { enrich_theaudiodb(services, &display_name).await } else { None };
 
-    let found = Found { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), wikipedia: wiki.is_some() };
+let genres = derive_genres(spotify.as_ref(), apple.as_ref());
+let genre_names = genre_strings(&genres);
+let perplexity = if use_perplexity { enrich_perplexity_artist(services, &display_name, &genre_names, perplexity_context).await } else { None };
+let found = Found { apple: apple.is_some(), spotify: spotify.is_some(), lastfm: lastfm.is_some(), wikipedia: wiki.is_some(), perplexity: perplexity.is_some() };
 
-    let biography = derive_biography(wiki.as_ref(), lastfm.as_ref(), theaudiodb.as_ref());
-    let genres = derive_genres(spotify.as_ref(), apple.as_ref());
+let biography = perplexity
+.as_ref()
+.and_then(|p| p.get("biography").and_then(|b| b.as_str()).map(String::from))
+.or_else(|| derive_biography(wiki.as_ref(), lastfm.as_ref(), theaudiodb.as_ref()));
     let images_value = derive_artist_images(spotify.as_ref(), apple.as_ref());
 
     // Assemble raw_data service blocks (artist services include discogs + theaudiodb).
@@ -157,6 +169,9 @@ pub async fn process_artist(
     }
     if let Some(t) = &theaudiodb {
         raw.insert("theaudiodb".into(), t.clone());
+    }
+    if let Some(p) = &perplexity {
+        raw.insert("perplexity".into(), p.clone());
     }
 
     let existing = db.get_artist_by_name(&display_name)?;
@@ -384,6 +399,25 @@ impl ArtistField {
             ArtistField::Biography => "Biography",
         }
     }
+}
+
+fn genre_strings(genres: &Value) -> Vec<String> {
+    genres
+        .as_array()
+        .map(|arr| arr.iter().filter_map(|g| g.as_str().map(String::from)).collect())
+        .unwrap_or_default()
+}
+
+async fn enrich_perplexity_artist(
+    services: &Services,
+    name: &str,
+    genres: &[String],
+    context: Option<&str>,
+) -> Option<Value> {
+    if !services.perplexity.is_configured() {
+        return None;
+    }
+    services.perplexity.generate_artist_biography(name, genres, context).await.ok()
 }
 
 /// Biography priority: Wikipedia → Last.fm → TheAudioDB.

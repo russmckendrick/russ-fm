@@ -107,6 +107,12 @@ pub(crate) async fn run_artist_task(
         return;
     }
 
+    match db.seed_missing_artists_from_releases() {
+        Ok(seeded) if seeded > 0 => log(format!("Seeded {seeded} missing artist(s) from saved releases.")),
+        Ok(_) => {}
+        Err(e) => log(format!("failed to seed missing artists: {e}")),
+    }
+
     let artists = match db.list_unenriched_artists(limit as u32) {
         Ok(a) => a,
         Err(e) => {
@@ -128,7 +134,7 @@ pub(crate) async fn run_artist_task(
 
     for (i, a) in artists.iter().enumerate() {
         log(format!("▶ [{}/{total}] {} — enriching…", i + 1, a.name));
-        match crate::ops::artist::process_artist(&cfg, &services, &db, &client, &a.name, true, false, None, &picker).await {
+        match crate::ops::artist::process_artist(&cfg, &services, &db, &client, &a.name, true, false, false, None, None, &picker).await {
             Ok((_, found)) => {
                 let m = |b: bool| if b { "✓" } else { "–" };
                 log(format!(
@@ -165,7 +171,7 @@ pub(crate) async fn run_single_artist_task(
     let picker = MatchPicker::Tui(pick_tx);
 
     log(format!("▶ {name} — enriching…"));
-    match crate::ops::artist::process_artist(&cfg, &services, &db, &client, &name, true, false, None, &picker).await {
+    match crate::ops::artist::process_artist(&cfg, &services, &db, &client, &name, true, false, false, None, None, &picker).await {
         Ok((_, found)) => {
             let m = |b: bool| if b { "✓" } else { "–" };
             log(format!(

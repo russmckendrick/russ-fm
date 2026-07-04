@@ -458,6 +458,12 @@ CREATE INDEX idx_artists_name ON artists(name);
 CREATE INDEX idx_artists_discogs_id ON artists(discogs_id);
 ```
 
+Release saves seed missing credited artists into this table as unenriched
+placeholder rows keyed by case-insensitive name or Discogs id. `artist-batch`
+also backfills placeholders from existing release rows before listing work.
+Existing artist rows are preserved so enrichment data is not overwritten by
+collection imports.
+
 #### collection_items
 
 ```sql

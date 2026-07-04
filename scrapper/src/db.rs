@@ -16,6 +16,9 @@ use rusqlite::OptionalExtension;
 use serde::Serialize;
 use serde_json::Value;
 
+use crate::sanitize::sanitize_folder_name;
+use crate::util::now_iso;
+
 pub type SqlitePool = Pool<SqliteConnectionManager>;
 type PooledConn = r2d2::PooledConnection<SqliteConnectionManager>;
 
@@ -140,6 +143,17 @@ pub struct ReleaseBrief {
 fn parse_json(s: Option<String>, fallback: &str) -> Value {
     let raw = s.filter(|v| !v.is_empty()).unwrap_or_else(|| fallback.to_string());
     serde_json::from_str(&raw).unwrap_or_else(|_| serde_json::from_str(fallback).unwrap())
+}
+
+fn value_to_string(value: &Value) -> Option<String> {
+    match value {
+        Value::String(s) => {
+            let trimmed = s.trim();
+            (!trimmed.is_empty()).then(|| trimmed.to_string())
+        }
+        Value::Number(n) => Some(n.to_string()),
+        _ => None,
+    }
 }
 
 fn artist_names(v: &Value) -> Vec<String> {
@@ -705,7 +719,64 @@ impl Db {
                 j(&rec.raw_data),
             ],
         )?;
+        self.seed_release_artists(&conn, &rec.artists)?;
         Ok(())
+    }
+
+    /// Backfill artist placeholder rows from artists already stored on release rows.
+    pub fn seed_missing_artists_from_releases(&self) -> Result<usize> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare("SELECT artists FROM releases WHERE artists IS NOT NULL AND artists != ''")?;
+        let rows = stmt
+            .query_map([], |r| r.get::<_, Option<String>>(0))?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        drop(stmt);
+
+        let mut seeded = 0usize;
+        for raw in rows {
+            let artists = parse_json(raw, "[]");
+            seeded += self.seed_release_artists(&conn, &artists)?;
+        }
+
+        Ok(seeded)
+    }
+
+    /// Ensure artists credited on saved releases are discoverable by artist-batch.
+    fn seed_release_artists(&self, conn: &PooledConn, artists: &Value) -> Result<usize> {
+        let Some(entries) = artists.as_array() else {
+            return Ok(0);
+        };
+
+        let mut seeded = 0usize;
+        for entry in entries {
+            let Some(name) = entry
+                .get("name")
+                .and_then(|n| n.as_str())
+                .map(str::trim)
+                .filter(|n| !n.is_empty())
+            else {
+                continue;
+            };
+
+            let discogs_id = entry.get("discogs_id").and_then(value_to_string);
+            let now = now_iso();
+            let id = format!("{}-{}", sanitize_folder_name(name), chrono::Local::now().timestamp());
+            seeded += conn.execute(
+                "INSERT INTO artists (
+                    id, name, discogs_id, genres, images, local_images,
+                    enrichment_data, raw_data, created_at, updated_at
+                )
+                SELECT ?1, ?2, ?3, '[]', '[]', '{}', '{}', '{}', ?4, ?4
+                WHERE NOT EXISTS (
+                    SELECT 1 FROM artists
+                    WHERE LOWER(name) = LOWER(?2)
+                    OR (?3 IS NOT NULL AND discogs_id = ?3)
+                )",
+                rusqlite::params![id, name, discogs_id, now],
+            )?;
+        }
+
+        Ok(seeded)
     }
 
     /// Delete a release row (db-manager). Caller is responsible for backing up first.

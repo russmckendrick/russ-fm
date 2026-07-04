@@ -181,6 +181,10 @@ pub struct ArtistBatchArgs {
     pub prefer: Option<ImageSource>,
     #[arg(long)]
     pub theaudiodb: bool,
+    #[arg(long)]
+    pub perplexity: bool,
+    #[arg(long)]
+    pub perplexity_context: Option<String>,
 }
 
 #[derive(Debug, Args)]
