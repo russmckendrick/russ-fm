@@ -225,11 +225,7 @@ let biography = perplexity
     if write_files {
         let artist_dir = cfg.artists_dir();
         let _ = images::download_artist_hires(client, &artist_dir, &folder, &rec.raw_data, 2000, prefer).await;
-        db.save_artist(&rec).context("saving artist to database")?;
-        let value = artist_to_value(&rec);
-        let dir = artist_dir.join(&folder);
-        std::fs::create_dir_all(&dir)?;
-        std::fs::write(dir.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
+        persist_artist(cfg, db, &rec)?;
     }
 
     Ok((rec, found))
@@ -470,15 +466,23 @@ fn derive_artist_images(spotify: Option<&Value>, apple: Option<&Value>) -> Value
     Value::Array(images_json)
 }
 
-/// Persist an edited artist: save to the DB and rewrite the public `{folder}.json`.
-fn write_artist(cfg: &Config, db: &Db, rec: &ArtistRecord) -> Result<()> {
+/// Persist an artist and propagate everywhere it renders: save to the DB, rewrite the public
+/// `{folder}.json`, and rewrite every release JSON embedding this artist (bio/wikipedia/service
+/// ids are joined from the artists table at write time, so those files go stale otherwise).
+/// Returns how many release JSONs were rewritten.
+pub fn persist_artist(cfg: &Config, db: &Db, rec: &ArtistRecord) -> Result<usize> {
     let folder = sanitize_folder_name(&rec.name);
     db.save_artist(rec).context("saving artist to database")?;
     let value = artist_to_value(rec);
     let dir = cfg.artists_dir().join(&folder);
     std::fs::create_dir_all(&dir)?;
     std::fs::write(dir.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
-    Ok(())
+
+    let embedding = db.releases_embedding_artist(rec.discogs_id.as_deref(), &rec.name)?;
+    for r in &embedding {
+        crate::ops::release::write_release_json(cfg, db, r)?;
+    }
+    Ok(embedding.len())
 }
 
 /// Re-fetch a single source for an existing artist and merge it into the record, leaving every
@@ -577,12 +581,13 @@ pub async fn refresh_artist_field(
         let folder = sanitize_folder_name(&rec.name);
         let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
     }
-    write_artist(cfg, db, &rec)?;
+    persist_artist(cfg, db, &rec)?;
     Ok((rec, found))
 }
 
 /// Manually set (or clear, when `text` is blank) one artist field. No network access.
-pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<ArtistRecord> {
+/// Returns the saved record and how many embedding release JSONs were rewritten.
+pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<(ArtistRecord, usize)> {
     let mut rec = rec.clone();
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
@@ -598,9 +603,9 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
             rec.genres = Value::Array(list);
         }
         // Popularity/Images are derived from sources — refresh them instead of editing by hand.
-        ArtistField::Popularity | ArtistField::Images => return Ok(rec),
+        ArtistField::Popularity | ArtistField::Images => return Ok((rec, 0)),
     }
     rec.updated_at = Some(now_iso());
-    write_artist(cfg, db, &rec)?;
-    Ok(rec)
+    let fanout = persist_artist(cfg, db, &rec)?;
+    Ok((rec, fanout))
 }

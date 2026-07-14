@@ -454,15 +454,20 @@ impl App {
     pub(crate) fn apply_edit(&mut self, action: RowAction, text: &str) {
         let result = match (action, self.detail.as_ref()) {
             (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => {
-                crate::ops::artist::set_artist_value(&self.cfg, &self.db, rec, field, text).map(|_| ())
+                crate::ops::artist::set_artist_value(&self.cfg, &self.db, rec, field, text).map(|(_, fanout)| fanout)
             }
             (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => {
-                crate::ops::release::set_release_value(&self.cfg, &self.db, rec, field, text).map(|_| ())
+                crate::ops::release::set_release_value(&self.cfg, &self.db, rec, field, text).map(|_| 0)
             }
-            _ => Ok(()),
+            _ => Ok(0),
         };
         match result {
-            Ok(()) => self.schedule_collection_regen(),
+            Ok(fanout) => {
+                if fanout > 0 {
+                    self.artist_log.push(format!("✓ rewrote {fanout} embedding release JSON(s)"));
+                }
+                self.schedule_collection_regen();
+            }
             Err(e) => self.artist_log.push(format!("✗ edit failed: {e}")),
         }
         self.refresh_detail();

@@ -495,6 +495,27 @@ impl Db {
         Ok(rows)
     }
 
+    /// Releases whose `artists[]` embeds the given artist. Matches the way
+    /// `enriched_release_artist` joins at JSON-write time — entry `discogs_id` (string form)
+    /// first, case-insensitive name as the fallback — so a changed artist record fans out to
+    /// every release JSON that would render it.
+    pub fn releases_embedding_artist(&self, discogs_id: Option<&str>, name: &str) -> Result<Vec<ReleaseRecord>> {
+        let name_lower = name.to_lowercase();
+        let all = self.get_all_releases()?;
+        Ok(all
+            .into_iter()
+            .filter(|r| {
+                r.artists.as_array().is_some_and(|entries| {
+                    entries.iter().any(|e| {
+                        let by_id = discogs_id.is_some() && e.get("discogs_id").and_then(|d| d.as_str()) == discogs_id;
+                        let by_name = e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.to_lowercase() == name_lower);
+                        by_id || by_name
+                    })
+                })
+            })
+            .collect())
+    }
+
     /// All release discogs_ids (for batch regeneration/verification).
     pub fn all_release_discogs_ids(&self) -> Result<Vec<String>> {
         let conn = self.conn()?;

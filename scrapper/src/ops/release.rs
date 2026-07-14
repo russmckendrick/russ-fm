@@ -730,16 +730,23 @@ fn string_list(v: &Value) -> Vec<String> {
         .unwrap_or_default()
 }
 
-/// Persist an edited release: save to the DB, reload, and rewrite the public `{folder}.json`.
-fn write_release(cfg: &Config, db: &Db, rec: ReleaseRecord) -> Result<ReleaseRecord> {
+/// Rewrite the public `{folder}/{folder}.json` for an already-saved release record.
+pub(crate) fn write_release_json(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Result<()> {
     let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
     let folder = release_folder_name(&rec.title, &id);
-    db.save_release(&rec).context("saving release to database")?;
-    let rec = db.get_release_by_discogs_id(&id)?.unwrap_or(rec);
-    let value = release_to_value(&rec, db);
+    let value = release_to_value(rec, db);
     let dir = cfg.releases_dir().join(&folder);
     std::fs::create_dir_all(&dir)?;
     std::fs::write(dir.join(format!("{folder}.json")), to_pretty_sorted(&value))?;
+    Ok(())
+}
+
+/// Persist an edited release: save to the DB, reload, and rewrite the public `{folder}.json`.
+fn write_release(cfg: &Config, db: &Db, rec: ReleaseRecord) -> Result<ReleaseRecord> {
+    let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+    db.save_release(&rec).context("saving release to database")?;
+    let rec = db.get_release_by_discogs_id(&id)?.unwrap_or(rec);
+    write_release_json(cfg, db, &rec)?;
     Ok(rec)
 }
 
