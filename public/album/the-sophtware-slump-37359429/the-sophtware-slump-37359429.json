@@ -85,10 +85,11 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2026-07-14T12:49:20.398510",
+    "processed_at": "2026-07-14T19:44:31.378140",
     "services_used": [
       "discogs",
       "apple_music",
+      "spotify",
       "lastfm",
       "wikipedia",
       "perplexity"
@@ -96,7 +97,7 @@
   },
   "release_name_apple_music": "The Sophtware Slump",
   "release_name_discogs": "The Sophtware Slump",
-  "release_name_spotify": null,
+  "release_name_spotify": "The Sophtware Slump",
   "released": "2026",
   "services": {
     "apple_music": {
@@ -192,10 +193,37 @@
       "generated_at": "2026-07-14T12:49:03.133708",
       "model": "sonar",
       "source": "perplexity"
+    },
+    "spotify": {
+      "album_type": "album",
+      "id": "2S3ybnf5C9v8X3M2kl4nvL",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273a6904afc25397231df3654ba",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02a6904afc25397231df3654ba",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851a6904afc25397231df3654ba",
+          "width": 64
+        }
+      ],
+      "name": "The Sophtware Slump",
+      "popularity": null,
+      "release_date": "2000-06-06",
+      "release_date_precision": "day",
+      "total_tracks": 11,
+      "url": "https://open.spotify.com/album/2S3ybnf5C9v8X3M2kl4nvL"
     }
   },
-  "spotify_id": null,
-  "spotify_url": null,
+  "spotify_id": "2S3ybnf5C9v8X3M2kl4nvL",
+  "spotify_url": "https://open.spotify.com/album/2S3ybnf5C9v8X3M2kl4nvL",
   "styles": [
     "Indie Rock"
   ],
@@ -268,7 +296,7 @@
       "title": "So You'll Aim Towards The Sky"
     }
   ],
-  "updated_at": "2026-07-14T12:49:18.876487",
+  "updated_at": "2026-07-14T19:44:31.320644",
   "videos": [
     "https://www.youtube.com/watch?v=IURAKQV7q_o",
     "https://www.youtube.com/watch?v=veqZc8pNz-4",
