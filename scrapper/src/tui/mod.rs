@@ -94,6 +94,11 @@ fn draw(f: &mut Frame, app: &mut App) {
         theme::footer(f, foot, "type to edit · Enter save · Esc cancel");
         return;
     }
+    if app.list_edit.is_some() {
+        modals::draw_list_edit(f, body, app);
+        theme::footer(f, foot, "↑/↓/←/→ move · Enter edit cell · a add row · d delete row · s save · Esc discard");
+        return;
+    }
     if app.detail.is_some() {
         detail::draw_detail(f, body, app);
         theme::footer(f, foot, "↑/↓ select · r refresh line · e edit · a refresh all · Esc back");

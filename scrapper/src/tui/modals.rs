@@ -69,6 +69,170 @@ pub(crate) fn draw_edit(f: &mut Frame, area: Rect, app: &App) {
     f.render_widget(help, rows[2]);
 }
 
+/// A structured list edit (tracklist/videos): a small spreadsheet over the field's rows.
+pub(crate) struct PendingListEdit {
+    pub(crate) title: String,
+    pub(crate) action: RowAction,
+    pub(crate) headers: Vec<&'static str>,
+    pub(crate) rows: Vec<Vec<String>>,
+    pub(crate) row: usize,
+    pub(crate) col: usize,
+    /// Some(buffer) while a single cell is being typed into.
+    pub(crate) cell: Option<String>,
+    pub(crate) error: Option<String>,
+    pub(crate) state: TableState,
+}
+
+impl PendingListEdit {
+    pub(crate) fn new(title: String, action: RowAction, headers: Vec<&'static str>, rows: Vec<Vec<String>>) -> Self {
+        let mut state = TableState::default();
+        state.select(Some(0));
+        Self { title, action, headers, rows, row: 0, col: 0, cell: None, error: None, state }
+    }
+
+    fn clamp(&mut self) {
+        if self.rows.is_empty() {
+            self.row = 0;
+        } else if self.row >= self.rows.len() {
+            self.row = self.rows.len() - 1;
+        }
+        self.col = self.col.min(self.headers.len().saturating_sub(1));
+        self.state.select(Some(self.row));
+    }
+}
+
+/// Handle a key while the structured list editor is open.
+pub(crate) fn handle_list_edit_key(app: &mut App, code: KeyCode) {
+    let Some(le) = app.list_edit.as_mut() else { return };
+
+    // Cell-editing sub-mode: type into one cell, Enter commits, Esc cancels the cell.
+    if let Some(buf) = le.cell.as_mut() {
+        match code {
+            KeyCode::Enter => {
+                if let Some(cell) = le.rows.get_mut(le.row).and_then(|r| r.get_mut(le.col)) {
+                    *cell = le.cell.take().unwrap_or_default();
+                } else {
+                    le.cell = None;
+                }
+            }
+            KeyCode::Esc => le.cell = None,
+            KeyCode::Backspace => {
+                buf.pop();
+            }
+            KeyCode::Char(c) => buf.push(c),
+            _ => {}
+        }
+        return;
+    }
+
+    match code {
+        KeyCode::Up => {
+            le.row = le.row.saturating_sub(1);
+            le.clamp();
+        }
+        KeyCode::Down => {
+            le.row += 1;
+            le.clamp();
+        }
+        KeyCode::Left => {
+            le.col = le.col.saturating_sub(1);
+        }
+        KeyCode::Right => {
+            le.col = (le.col + 1).min(le.headers.len().saturating_sub(1));
+        }
+        KeyCode::Enter => {
+            if let Some(cur) = le.rows.get(le.row).and_then(|r| r.get(le.col)) {
+                le.cell = Some(cur.clone());
+                le.error = None;
+            }
+        }
+        KeyCode::Char('a') => {
+            le.rows.push(vec![String::new(); le.headers.len()]);
+            le.row = le.rows.len() - 1;
+            le.col = 0;
+            le.clamp();
+            le.cell = Some(String::new());
+            le.error = None;
+        }
+        KeyCode::Char('d') if le.row < le.rows.len() => {
+            le.rows.remove(le.row);
+            le.clamp();
+            le.error = None;
+        }
+        KeyCode::Char('s') => {
+            let (action, rows) = (le.action, le.rows.clone());
+            match app.apply_list_edit(action, &rows) {
+                Ok(()) => app.list_edit = None,
+                Err(msg) => {
+                    if let Some(le) = app.list_edit.as_mut() {
+                        le.error = Some(msg);
+                    }
+                }
+            }
+        }
+        KeyCode::Esc => app.list_edit = None,
+        _ => {}
+    }
+}
+
+pub(crate) fn draw_list_edit(f: &mut Frame, area: Rect, app: &mut App) {
+    let le = app.list_edit.as_mut().expect("list edit active");
+    let rows_area = Layout::vertical([Constraint::Min(0), Constraint::Length(2)]).split(area);
+
+    let header = Row::new(le.headers.iter().map(|h| Cell::from(*h))).style(theme::title_style());
+    let cursor = (le.row, le.col);
+    let editing = le.cell.clone();
+    let table_rows: Vec<Row> = le
+        .rows
+        .iter()
+        .enumerate()
+        .map(|(ri, r)| {
+            Row::new(
+                r.iter()
+                    .enumerate()
+                    .map(|(ci, c)| {
+                        if (ri, ci) == cursor {
+                            match &editing {
+                                Some(buf) => Cell::from(format!("{buf}▏")).style(theme::title_style()),
+                                None => Cell::from(c.clone()).style(theme::row_highlight()),
+                            }
+                        } else {
+                            Cell::from(c.clone())
+                        }
+                    })
+                    .collect::<Vec<_>>(),
+            )
+        })
+        .collect();
+
+    let n = le.headers.len().max(1);
+    let widths: Vec<Constraint> = if n == 1 {
+        vec![Constraint::Percentage(100)]
+    } else {
+        (0..n).map(|c| if c == 1 { Constraint::Percentage(60) } else { Constraint::Percentage((40 / (n - 1).max(1)) as u16) }).collect()
+    };
+    let table = Table::new(table_rows, widths)
+        .header(header)
+        .column_spacing(2)
+        .block(
+            Block::default()
+                .borders(Borders::ALL)
+                .title(format!(" Edit {} ({} row(s)) ", le.title, le.rows.len()))
+                .border_style(theme::border()),
+        );
+    f.render_stateful_widget(table, rows_area[0], &mut le.state);
+
+    let msg = match &le.error {
+        Some(err) => format!(" ✗ {err}"),
+        None if le.cell.is_some() => " typing cell · Enter commit · Esc cancel cell".to_string(),
+        None => String::new(),
+    };
+    if !msg.is_empty() {
+        let style = if le.error.is_some() { Style::default().fg(Color::Red) } else { theme::dim() };
+        f.render_widget(Paragraph::new(msg).style(style).wrap(Wrap { trim: true }), rows_area[1]);
+    }
+}
+
 /// A match-picker awaiting the user's choice.
 pub(crate) struct PendingPick {
     prompt: String,

@@ -766,7 +766,8 @@ impl ReleaseField {
             ReleaseField::Year => Int,
             ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
             ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles => CsvList,
-            ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::ArtistBio | ReleaseField::Images => RefreshOnly,
+            ReleaseField::Tracks | ReleaseField::Videos => Structured,
+            ReleaseField::Discogs | ReleaseField::ArtistBio | ReleaseField::Images => RefreshOnly,
         }
     }
 
@@ -1048,6 +1049,69 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
     write_release(cfg, db, rec)
 }
 
+/// Rows for the structured tracklist editor: `[position, title, duration]` per track.
+pub fn tracklist_to_rows(tracklist: &Value) -> Vec<Vec<String>> {
+    let cell = |t: &Value, key: &str| t.get(key).and_then(|v| v.as_str()).unwrap_or("").to_string();
+    tracklist
+        .as_array()
+        .map(|arr| arr.iter().map(|t| vec![cell(t, "position"), cell(t, "title"), cell(t, "duration")]).collect())
+        .unwrap_or_default()
+}
+
+/// Editor rows back to the stored `[{position,title,duration}]` shape; all-blank rows dropped.
+pub fn rows_to_tracklist(rows: &[Vec<String>]) -> Value {
+    Value::Array(
+        rows.iter()
+            .filter(|r| r.iter().any(|c| !c.trim().is_empty()))
+            .map(|r| {
+                let cell = |i: usize| r.get(i).map(|s| s.trim()).unwrap_or("");
+                json!({ "position": cell(0), "title": cell(1), "duration": cell(2) })
+            })
+            .collect(),
+    )
+}
+
+/// Rows for the structured videos editor: one URL column (the stored/published shape is a flat
+/// string array — the frontend types `videos?: string[]`).
+pub fn videos_to_rows(videos: &Value) -> Vec<Vec<String>> {
+    videos
+        .as_array()
+        .map(|arr| arr.iter().filter_map(|v| v.as_str()).map(|u| vec![u.to_string()]).collect())
+        .unwrap_or_default()
+}
+
+/// Editor rows back to the stored flat URL array; blank rows dropped, non-URLs rejected.
+pub fn rows_to_videos(rows: &[Vec<String>]) -> Result<Value> {
+    let mut out = Vec::new();
+    for r in rows {
+        let url = r.first().map(|s| s.trim()).unwrap_or("");
+        if url.is_empty() {
+            continue;
+        }
+        if !url.starts_with("http://") && !url.starts_with("https://") {
+            bail!("\"{url}\" is not an http(s) URL");
+        }
+        out.push(Value::String(url.to_string()));
+    }
+    Ok(Value::Array(out))
+}
+
+/// Save a hand-edited tracklist from the structured editor.
+pub fn set_release_tracklist(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
+    let mut rec = rec.clone();
+    rec.tracklist = rows_to_tracklist(rows);
+    rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
+}
+
+/// Save a hand-edited video URL list from the structured editor.
+pub fn set_release_videos(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
+    let mut rec = rec.clone();
+    rec.videos = rows_to_videos(rows)?;
+    rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
+}
+
 /// Set a release's service identity from user input (a pasted URL or bare ID), re-fetching the
 /// full payload so the public `services{}` block stays consistent with the flat columns.
 /// Blank input clears the service entirely. Errors leave the record untouched.
@@ -1155,5 +1219,31 @@ mod tests {
         assert!(!picker.is_interactive());
         let rows = vec![vec!["A".to_string()], vec!["B".to_string()]];
         assert_eq!(picker.pick("test", &["Title"], &rows).await, Some(0));
+    }
+
+    #[test]
+    fn tracklist_rows_round_trip_and_drop_blank_rows() {
+        let stored = json!([
+            { "position": "A1", "title": "Girls & Boys", "duration": "4:50" },
+            { "position": "A2", "title": "Tracy Jacks", "duration": "" },
+        ]);
+        let rows = tracklist_to_rows(&stored);
+        assert_eq!(rows, vec![vec!["A1", "Girls & Boys", "4:50"], vec!["A2", "Tracy Jacks", ""]]);
+        assert_eq!(rows_to_tracklist(&rows), stored);
+
+        let with_blank = vec![vec!["A1".into(), "Song".into(), "".into()], vec!["  ".into(), "".into(), "".into()]];
+        assert_eq!(rows_to_tracklist(&with_blank).as_array().unwrap().len(), 1);
+    }
+
+    #[test]
+    fn video_rows_round_trip_validate_and_drop_blanks() {
+        let stored = json!(["https://youtu.be/abc", "https://youtu.be/def"]);
+        let rows = videos_to_rows(&stored);
+        assert_eq!(rows, vec![vec!["https://youtu.be/abc"], vec!["https://youtu.be/def"]]);
+        assert_eq!(rows_to_videos(&rows).unwrap(), stored);
+
+        let with_blank = vec![vec!["https://youtu.be/abc".into()], vec!["   ".into()]];
+        assert_eq!(rows_to_videos(&with_blank).unwrap().as_array().unwrap().len(), 1);
+        assert!(rows_to_videos(&[vec!["not a url".into()]]).is_err());
     }
 }

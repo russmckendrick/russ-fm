@@ -20,6 +20,10 @@ pub(crate) fn handle_key(app: &mut App, code: KeyCode) {
         modals::handle_edit_key(app, code);
         return;
     }
+    if app.list_edit.is_some() {
+        modals::handle_list_edit_key(app, code);
+        return;
+    }
     // Detail drill-down has its own keys.
     if app.detail.is_some() {
         handle_detail_key(app, code);

@@ -10,7 +10,7 @@ use crate::services::Services;
 use crate::{Config, Db};
 
 use super::detail::{DetailView, RowAction};
-use super::modals::{PendingDescribe, PendingEdit, PendingPick};
+use super::modals::{PendingDescribe, PendingEdit, PendingListEdit, PendingPick};
 use super::runners;
 
 /// How the TUI starts.
@@ -95,6 +95,8 @@ pub(crate) struct App {
     pub(crate) detail_busy: bool,
     /// Active manual-edit overlay.
     pub(crate) edit: Option<PendingEdit>,
+    /// Active structured list-edit overlay (tracklist/videos).
+    pub(crate) list_edit: Option<PendingListEdit>,
 
     // search browsers
     pub(crate) query: String,
@@ -153,6 +155,7 @@ impl App {
             detail_sel: 0,
             detail_busy: false,
             edit: None,
+            list_edit: None,
             query: String::new(),
             releases: Vec::new(),
             artists: Vec::new(),
@@ -414,12 +417,48 @@ impl App {
         if !row.action.editable() {
             return;
         }
+        // Tracklist/videos open the structured list editor instead of the one-line overlay.
+        if let (RowAction::Release { field }, Some(DetailView::Release(rec))) = (row.action, self.detail.as_ref()) {
+            if field.kind() == crate::ops::FieldKind::Structured {
+                let (headers, rows) = match field {
+                    crate::ops::release::ReleaseField::Tracks => {
+                        (vec!["Position", "Title", "Duration"], crate::ops::release::tracklist_to_rows(&rec.tracklist))
+                    }
+                    _ => (vec!["URL"], crate::ops::release::videos_to_rows(&rec.videos)),
+                };
+                self.list_edit = Some(PendingListEdit::new(row.label, row.action, headers, rows));
+                return;
+            }
+        }
         let initial = match (row.action, self.detail.as_ref()) {
             (RowAction::Artist { field }, Some(DetailView::Artist(rec))) => field.get(rec),
             (RowAction::Release { field }, Some(DetailView::Release(rec))) => field.get(rec),
             _ => String::new(),
         };
         self.edit = Some(PendingEdit::new(row.label, row.action, initial));
+    }
+
+    /// Save a structured list edit (`s` in the list editor). A validation `Err` carries the
+    /// message for the overlay to display.
+    pub(crate) fn apply_list_edit(&mut self, action: RowAction, rows: &[Vec<String>]) -> Result<(), String> {
+        use crate::ops::release::ReleaseField;
+        let result = match (action, self.detail.as_ref()) {
+            (RowAction::Release { field: ReleaseField::Tracks }, Some(DetailView::Release(rec))) => {
+                crate::ops::release::set_release_tracklist(&self.cfg, &self.db, rec, rows)
+            }
+            (RowAction::Release { field: ReleaseField::Videos }, Some(DetailView::Release(rec))) => {
+                crate::ops::release::set_release_videos(&self.cfg, &self.db, rec, rows)
+            }
+            _ => return Ok(()),
+        };
+        match result {
+            Ok(_) => {
+                self.schedule_collection_regen();
+                self.refresh_detail();
+                Ok(())
+            }
+            Err(e) => Err(e.to_string()),
+        }
     }
 
     /// Apply a manual edit, then reload the detail record. A validation `Err` carries the
