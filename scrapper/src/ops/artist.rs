@@ -557,6 +557,42 @@ fn genre_strings(genres: &Value) -> Vec<String> {
         .unwrap_or_default()
 }
 
+/// Interactive Perplexity biography — the same loop as release descriptions: edit context,
+/// (re)generate, preview, accept or skip. Headless (`First`) pickers skip immediately.
+async fn interactive_perplexity_bio(
+    services: &Services,
+    picker: &MatchPicker,
+    name: &str,
+    genres: &[String],
+) -> Option<Value> {
+    if !services.perplexity.is_configured() || matches!(picker, MatchPicker::First) {
+        return None;
+    }
+    let mut context = String::new();
+    let mut preview = String::new();
+    let mut data: Option<Value> = None;
+    loop {
+        match picker.describe(name, "artist biography", &preview, &context).await {
+            crate::ops::release::DescribeAction::Generate(ctx) => {
+                context = ctx;
+                let ctx_opt = (!context.trim().is_empty()).then_some(context.as_str());
+                match services.perplexity.generate_artist_biography(name, genres, ctx_opt).await {
+                    Ok(v) => {
+                        preview = v.get("biography").and_then(|b| b.as_str()).unwrap_or("").to_string();
+                        data = Some(v);
+                    }
+                    Err(e) => {
+                        preview = format!("(generation failed: {e})");
+                        data = None;
+                    }
+                }
+            }
+            crate::ops::release::DescribeAction::Accept => return data,
+            crate::ops::release::DescribeAction::Skip => return None,
+        }
+    }
+}
+
 async fn enrich_perplexity_artist(
     services: &Services,
     name: &str,
@@ -697,7 +733,7 @@ pub async fn refresh_artist_field(
                 found = true;
             }
         }
-        ArtistField::Wikipedia | ArtistField::Biography => {
+        ArtistField::Wikipedia => {
             let wiki = enrich_wikipedia(services, &name).await;
             if let Some(w) = &wiki {
                 if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
@@ -708,6 +744,30 @@ pub async fn refresh_artist_field(
             if bio.is_some() {
                 rec.biography = bio;
                 found = true;
+            }
+        }
+        ArtistField::Biography => {
+            // Interactive runs offer a Perplexity-generated biography (context + preview +
+            // accept/skip, same flow as release descriptions); skipping — or running headless —
+            // falls back to the Wikipedia → Last.fm → TheAudioDB derivation.
+            if let Some(p) = interactive_perplexity_bio(services, picker, &name, &genre_strings(&rec.genres)).await {
+                if let Some(bio) = p.get("biography").and_then(|b| b.as_str()).filter(|s| !s.is_empty()) {
+                    rec.biography = Some(bio.to_string());
+                    found = true;
+                }
+                raw.insert("perplexity".into(), p);
+            } else {
+                let wiki = enrich_wikipedia(services, &name).await;
+                if let Some(w) = &wiki {
+                    if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
+                        rec.wikipedia_url = Some(u.to_string());
+                    }
+                }
+                let bio = derive_biography(wiki.as_ref(), cur_lastfm.as_ref(), cur_theaudiodb.as_ref());
+                if bio.is_some() {
+                    rec.biography = bio;
+                    found = true;
+                }
             }
         }
         ArtistField::Genres => {

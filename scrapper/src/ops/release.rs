@@ -87,7 +87,7 @@ impl MatchPicker {
     }
 
     /// One round of interactive description: show `preview`/`context`, return the user's action.
-    async fn describe(&self, artist: &str, album: &str, preview: &str, context: &str) -> DescribeAction {
+    pub(crate) async fn describe(&self, artist: &str, album: &str, preview: &str, context: &str) -> DescribeAction {
         match self {
             MatchPicker::First => DescribeAction::Skip,
             MatchPicker::Cli => cli_describe(artist, album, preview, context),
@@ -273,7 +273,7 @@ pub async fn process_release(
         .map(clean_artist_name)
         .unwrap_or_default();
 
-    let mut artists_json: Vec<Value> = discogs
+    let artists_json: Vec<Value> = discogs
         .get("artists")
         .and_then(|a| a.as_array())
         .map(|arr| {
@@ -340,14 +340,11 @@ pub async fn process_release(
         ..Default::default()
     };
 
-    // Wikipedia bio for the primary artist (embedded into the first artist entry).
-    if let Some((url, bio)) = enrich_wikipedia(services, &primary_artist).await {
-        flags.wikipedia = true;
-        if let Some(first) = artists_json.first_mut().and_then(|a| a.as_object_mut()) {
-            first.insert("biography".into(), json!(bio));
-            first.insert("wikipedia_url".into(), url.map(Value::from).unwrap_or(Value::Null));
-        }
-    }
+    // Wikipedia bio for the primary artist. This belongs to the ARTIST record (single source of
+    // truth — release JSONs join it at write time); it is seeded onto the artist row below once
+    // save_release has created it, never embedded into the release.
+    let wiki = enrich_wikipedia(services, &primary_artist).await;
+    flags.wikipedia = wiki.is_some();
 
     // Assemble raw_data + external IDs.
     let mut raw = Map::new();
@@ -436,6 +433,20 @@ pub async fn process_release(
         flags.image = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await.is_some();
 
         db.save_release(&rec).context("saving release to database")?;
+        // save_release seeded any missing artist rows; give the primary artist the Wikipedia
+        // find when it has no biography yet, so the release JSON join picks it up right away.
+        if let Some((url, bio)) = &wiki {
+            if let Ok(Some(mut artist)) = db.get_artist_by_name(&primary_artist) {
+                if artist.biography.as_deref().is_none_or(str::is_empty) {
+                    artist.biography = Some(bio.clone());
+                    if artist.wikipedia_url.is_none() {
+                        artist.wikipedia_url = url.clone();
+                    }
+                    artist.updated_at = Some(now_iso());
+                    let _ = crate::ops::artist::persist_artist(cfg, db, &artist);
+                }
+            }
+        }
         if let Some(saved) = db.get_release_by_discogs_id(discogs_id)? {
             rec = saved;
         }
@@ -724,8 +735,6 @@ pub enum ReleaseField {
     Styles,
     Tracks,
     Videos,
-    /// The primary artist's biography as embedded on this release (blank = use the artist's own).
-    ArtistBio,
     Description,
     /// Apple Music editorial notes (`raw_data.apple_music.editorial_notes`).
     AppleNotes,
@@ -748,7 +757,7 @@ impl ReleaseField {
         use ReleaseField::*;
         &[
             Title, Year, Released, Country, Artists, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles,
-            Tracks, Videos, ArtistBio, Description, AppleNotes, WikiSummary, WikiContent, LastfmTags, SpotifyPop,
+            Tracks, Videos, Description, AppleNotes, WikiSummary, WikiContent, LastfmTags, SpotifyPop,
             DateAdded, Images,
         ]
     }
@@ -771,7 +780,6 @@ impl ReleaseField {
             ReleaseField::Styles => "Styles",
             ReleaseField::Tracks => "Tracks",
             ReleaseField::Videos => "Videos",
-            ReleaseField::ArtistBio => "Artist bio",
             ReleaseField::Description => "Description",
             ReleaseField::AppleNotes => "Apple notes",
             ReleaseField::WikiSummary => "Wiki summary",
@@ -788,7 +796,7 @@ impl ReleaseField {
         use crate::ops::FieldKind::*;
         match self {
             ReleaseField::Title | ReleaseField::Country | ReleaseField::Description => Text,
-            ReleaseField::ArtistBio | ReleaseField::AppleNotes | ReleaseField::WikiSummary | ReleaseField::WikiContent => Text,
+            ReleaseField::AppleNotes | ReleaseField::WikiSummary | ReleaseField::WikiContent => Text,
             ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Service,
             ReleaseField::Year | ReleaseField::SpotifyPop => Int,
             ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
@@ -808,7 +816,6 @@ impl ReleaseField {
                 | ReleaseField::Lastfm
                 | ReleaseField::Tracks
                 | ReleaseField::Videos
-                | ReleaseField::ArtistBio
                 | ReleaseField::Description
                 | ReleaseField::Images
         )
@@ -846,7 +853,6 @@ impl ReleaseField {
             ReleaseField::Tracks => rec.tracklist.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
             ReleaseField::Videos => rec.videos.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
             ReleaseField::Images => rec.images.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
-            ReleaseField::ArtistBio => embedded_artist_bio(rec).unwrap_or_default(),
             ReleaseField::Description => release_description(rec).unwrap_or_default(),
             ReleaseField::AppleNotes => raw_service_str(rec, "apple_music", "editorial_notes"),
             ReleaseField::WikiSummary => raw_service_str(rec, "lastfm", "wiki_summary"),
@@ -886,18 +892,6 @@ impl ReleaseField {
             _ => !self.get(rec).is_empty(),
         }
     }
-}
-
-/// The primary artist's biography embedded on this release's first credit (may be absent —
-/// release JSONs then fall back to the artist record's own biography).
-fn embedded_artist_bio(rec: &ReleaseRecord) -> Option<String> {
-    rec.artists
-        .as_array()
-        .and_then(|a| a.first())
-        .and_then(|a| a.get("biography"))
-        .and_then(|b| b.as_str())
-        .filter(|s| !s.is_empty())
-        .map(String::from)
 }
 
 /// A string value nested under `raw_data.<service>.<key>`.
@@ -1030,15 +1024,6 @@ pub async fn refresh_release_field(
                 found = true;
             }
         }
-        ReleaseField::ArtistBio => {
-            if let Some((url, bio)) = enrich_wikipedia(services, &artist).await {
-                if let Some(first) = rec.artists.as_array_mut().and_then(|a| a.first_mut()).and_then(|a| a.as_object_mut()) {
-                    first.insert("biography".into(), json!(bio));
-                    first.insert("wikipedia_url".into(), url.map(Value::from).unwrap_or(Value::Null));
-                }
-                found = true;
-            }
-        }
         ReleaseField::Description => {
             let genres = string_list(&rec.genres);
             let labels = string_list(&rec.labels);
@@ -1132,17 +1117,6 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
                 }
             }
             rec.raw_data = Value::Object(raw);
-        }
-        // The embedded per-release artist bio; blank falls back to the artist's own biography.
-        ReleaseField::ArtistBio => {
-            if let Some(first) = rec.artists.as_array_mut().and_then(|a| a.first_mut()).and_then(|a| a.as_object_mut()) {
-                match opt {
-                    Some(bio) => first.insert("biography".into(), json!(bio)),
-                    None => first.remove("biography"),
-                };
-            } else {
-                bail!("this release has no artist credits to attach a biography to");
-            }
         }
         ReleaseField::AppleNotes => crate::ops::set_raw_service_key(&mut rec.raw_data, "apple_music", "editorial_notes", opt.map(Value::String)),
         ReleaseField::WikiSummary => crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "wiki_summary", opt.map(Value::String)),

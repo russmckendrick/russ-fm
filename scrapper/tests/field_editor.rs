@@ -206,7 +206,6 @@ fn service_content_edits_land_in_raw_data_and_public_services_block() -> Result<
         (ReleaseField::WikiContent, "Long wiki content."),
         (ReleaseField::LastfmTags, "shoegaze, dream pop"),
         (ReleaseField::SpotifyPop, "63"),
-        (ReleaseField::ArtistBio, "Embedded band bio."),
     ];
     for (field, text) in cases {
         rec = set_release_value(&env.cfg, &env.db, &rec, field, text)?;
@@ -223,7 +222,6 @@ fn service_content_edits_land_in_raw_data_and_public_services_block() -> Result<
     assert_eq!(services.pointer("/lastfm/wiki_summary"), Some(&json!("Short wiki summary.")));
     assert_eq!(services.pointer("/lastfm/tags"), Some(&json!(["shoegaze", "dream pop"])));
     assert_eq!(services.pointer("/spotify/popularity"), Some(&json!(63)));
-    assert_eq!(doc.pointer("/artists/0/biography"), Some(&json!("Embedded band bio.")));
 
     // Blank clears the key again.
     let rec = set_release_value(&env.cfg, &env.db, &rec, ReleaseField::AppleNotes, "")?;

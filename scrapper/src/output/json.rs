@@ -101,7 +101,8 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
     let name = entry.get("name").and_then(|n| n.as_str()).unwrap_or("").to_string();
     let role = entry.get("role").cloned().unwrap_or_else(|| json!(""));
     let entry_discogs = entry.get("discogs_id").and_then(|d| d.as_str()).map(String::from);
-    // Biography/Wikipedia URL may be embedded on the entry (fresh Wikipedia lookup); prefer those.
+    // Legacy releases carry an embedded biography/Wikipedia URL from per-release enrichment;
+    // the artist record is the source of truth now, so those only serve as fallbacks.
     let embedded_bio = entry.get("biography").and_then(|b| b.as_str()).filter(|s| !s.is_empty()).map(String::from);
     let embedded_wiki = entry.get("wikipedia_url").and_then(|w| w.as_str()).filter(|s| !s.is_empty()).map(String::from);
 
@@ -117,7 +118,7 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
     obj.insert("name".into(), json!(name));
     obj.insert("role".into(), role);
     if let Some(r) = &rec {
-        let bio = embedded_bio.clone().or_else(|| r.biography.clone());
+        let bio = r.biography.clone().filter(|b| !b.is_empty()).or_else(|| embedded_bio.clone());
         obj.insert("biography".into(), bio.map(Value::from).unwrap_or(Value::Null));
         obj.insert(
             "discogs_id".into(),
@@ -126,7 +127,7 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
         obj.insert("apple_music_id".into(), r.apple_music_id.clone().map(Value::from).unwrap_or(Value::Null));
         obj.insert("spotify_id".into(), r.spotify_id.clone().map(Value::from).unwrap_or(Value::Null));
         obj.insert("lastfm_mbid".into(), r.lastfm_mbid.clone().map(Value::from).unwrap_or(Value::Null));
-        let wiki = embedded_wiki.clone().or_else(|| r.wikipedia_url.clone());
+        let wiki = r.wikipedia_url.clone().filter(|w| !w.is_empty()).or_else(|| embedded_wiki.clone());
         obj.insert("wikipedia_url".into(), wiki.map(Value::from).unwrap_or(Value::Null));
         // discogs_original_name is only present when the artist's raw_data has a discogs section.
         if let Some(discogs) = r.raw_data.get("discogs") {

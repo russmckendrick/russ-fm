@@ -147,12 +147,21 @@ Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()
 `refreshable()`, `editable()`, `get()`, `present()`) and falls into these kinds:
 
 - **Text / numbers / dates** — releases: title, year, released, country, description, date added,
-  the embedded artist bio, Apple editorial notes, Last.fm wiki summary/content, and Spotify
-  popularity; artists: name, country, formed date, popularity, followers, biography, and the
-  Last.fm bio summary/content. Service-block fields write into `raw_data.<service>.<key>`, which
-  is what the public `services{}` block (and the frontend detail pages) render. Input is
-  validated (year bounds, `YYYY[-MM[-DD]]` dates, numeric ranges) and the edit overlay stays open
-  showing the message until it passes. Blank clears a nullable field.
+  Apple editorial notes, Last.fm wiki summary/content, and Spotify popularity; artists: name,
+  country, formed date, popularity, followers, biography, and the Last.fm bio summary/content.
+  Service-block fields write into `raw_data.<service>.<key>`, which is what the public
+  `services{}` block (and the frontend detail pages) render. Input is validated (year bounds,
+  `YYYY[-MM[-DD]]` dates, numeric ranges) and the edit overlay stays open showing the message
+  until it passes. Blank clears a nullable field.
+- **Artist biography lives on the artist, not the release.** Release JSONs join the biography
+  and Wikipedia URL from the artists table at write time (a legacy embedded copy is only a
+  fallback), so there is one bio per artist — edit or refresh it from the **artist** detail view
+  and every embedding release JSON is rewritten automatically. `r` on the artist Biography row
+  offers an interactive **Perplexity-generated biography** (context → generate → preview →
+  `Tab` accept / `Esc` skip, the same flow as release descriptions), falling back to
+  Wikipedia → Last.fm → TheAudioDB when skipped or running headless. `process_release`'s
+  Wikipedia lookup now seeds the artist record (when it has no bio) instead of embedding a copy
+  into the release.
 - **Comma-separated lists** — labels, formats, genres, styles and Last.fm tags (releases);
   genres and Last.fm tags (artists).
 - **Service identities** (`FieldKind::Service`) — Apple Music / Spotify / Last.fm on releases;

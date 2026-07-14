@@ -152,6 +152,30 @@ fn embedded_bio(v: &Value, artist_name: &str) -> Option<String> {
 }
 
 #[test]
+fn artist_record_bio_wins_over_stale_embedded_copy() -> Result<()> {
+    let env = test_env()?;
+    let a = artist("Steve White", "264979");
+    env.db.save_artist(&a)?;
+    // Legacy releases carry an embedded biography from per-release enrichment; the artist
+    // record is the source of truth, so the embedded copy must not shadow it.
+    env.db.save_release(&release(
+        "100",
+        "Stale Embed Album",
+        json!([{ "name": "Steve White", "discogs_id": "264979", "role": "", "biography": "STALE embedded copy" }]),
+    ))?;
+
+    let (_, fanout) =
+        scrapper::ops::artist::set_artist_value(&env.cfg, &env.db, &a, scrapper::ops::artist::ArtistField::Biography, "Fresh artist-page bio")?;
+    assert_eq!(fanout, 1);
+    assert_eq!(
+        embedded_bio(&release_json(&env, "stale-embed-album-100")?, "Steve White").as_deref(),
+        Some("Fresh artist-page bio"),
+        "artist record must beat the stale embedded bio"
+    );
+    Ok(())
+}
+
+#[test]
 fn artist_edit_fans_out_to_embedding_release_jsons() -> Result<()> {
     let env = test_env()?;
     let a = artist("Steve White", "264979");
