@@ -149,11 +149,18 @@ fn enriched_release_artist(entry: &Value, db: &Db) -> Value {
 }
 
 /// Build the `services{}` block from a release's `raw_data` (top-level service dicts, as-is).
+/// Legacy rows written by the Python pipeline stored perplexity under `raw_data.services`;
+/// fall back to it so those descriptions keep rendering without a data migration.
 fn release_services(raw: &Value) -> Value {
     let mut out = Map::new();
     for key in ["apple_music", "spotify", "lastfm", "perplexity"] {
         if let Some(v) = raw.get(key) {
             out.insert(key.into(), v.clone());
+        }
+    }
+    if !out.contains_key("perplexity") {
+        if let Some(v) = raw.get("services").and_then(|s| s.get("perplexity")) {
+            out.insert("perplexity".into(), v.clone());
         }
     }
     Value::Object(out)
@@ -200,6 +207,9 @@ pub fn release_to_value(rec: &ReleaseRecord, db: &Db) -> Value {
     if !wiki.is_empty() {
         services_used.push("wikipedia");
     }
+    // Deliberately only the canonical top-level key: legacy rows (perplexity nested under
+    // raw_data.services) predate services_used tracking on disk, and the fidelity gate pins
+    // that behaviour. The visible services{} block still falls back for them.
     if rec.raw_data.get("perplexity").is_some() {
         services_used.push("perplexity");
     }
@@ -296,4 +306,40 @@ pub fn artist_to_value(rec: &ArtistRecord) -> Value {
     }
 
     Value::Object(obj)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn release_services_reads_canonical_top_level_perplexity() {
+        let raw = json!({
+            "apple_music": {"id": "1"},
+            "perplexity": {"description": "top-level"}
+        });
+        let s = release_services(&raw);
+        assert_eq!(s.get("perplexity").and_then(|p| p.get("description")), Some(&json!("top-level")));
+        assert_eq!(s.get("apple_music").and_then(|a| a.get("id")), Some(&json!("1")));
+    }
+
+    #[test]
+    fn release_services_falls_back_to_legacy_services_perplexity() {
+        let raw = json!({
+            "services": { "perplexity": {"description": "legacy"} }
+        });
+        let s = release_services(&raw);
+        assert_eq!(s.get("perplexity").and_then(|p| p.get("description")), Some(&json!("legacy")));
+    }
+
+    #[test]
+    fn release_services_prefers_top_level_over_legacy() {
+        let raw = json!({
+            "perplexity": {"description": "top-level"},
+            "services": { "perplexity": {"description": "legacy"} }
+        });
+        let s = release_services(&raw);
+        assert_eq!(s.get("perplexity").and_then(|p| p.get("description")), Some(&json!("top-level")));
+    }
 }

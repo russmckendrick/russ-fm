@@ -538,20 +538,19 @@ impl Db {
         let mut rows = stmt.query([])?;
         while let Some(row) = rows.next()? {
             let raw: Value = parse_json(row.get(6)?, "{}");
-            let services = raw.get("services").cloned().unwrap_or(Value::Null);
-            let has_apple = services
-                .get("apple_music")
+            // Rust-written rows store services at the top level of raw_data; legacy Python rows
+            // nested them under raw_data.services. Check both.
+            let svc = |key: &str| raw.get(key).or_else(|| raw.get("services").and_then(|s| s.get(key)));
+            let has_apple = svc("apple_music")
                 .map(|am| {
                     am.get("raw_attributes").and_then(|a| a.get("editorialNotes")).is_some()
                         || am.get("editorial_notes").is_some()
                 })
                 .unwrap_or(false);
-            let has_lastfm = services
-                .get("lastfm")
+            let has_lastfm = svc("lastfm")
                 .map(|lf| lf.get("wiki_summary").is_some() || lf.get("wiki_content").is_some())
                 .unwrap_or(false);
-            let has_perplexity = services
-                .get("perplexity")
+            let has_perplexity = svc("perplexity")
                 .and_then(|p| p.get("description"))
                 .map(|d| !d.is_null())
                 .unwrap_or(false);
@@ -672,7 +671,9 @@ impl Db {
         Ok(n > 0)
     }
 
-    /// Merge a Perplexity description object into `raw_data.services.perplexity`.
+    /// Merge a Perplexity description object into the canonical top-level `raw_data.perplexity`
+    /// (the location the pipeline, TUI editor and `release_services` use), clearing any legacy
+    /// `raw_data.services.perplexity` so a row never carries both.
     pub fn update_release_perplexity_description(&self, discogs_id: &str, data: &Value) -> Result<bool> {
         let conn = self.conn()?;
         let raw: Option<Option<String>> = conn
@@ -684,9 +685,9 @@ impl Db {
             raw_data = serde_json::json!({});
         }
         let obj = raw_data.as_object_mut().unwrap();
-        let services = obj.entry("services").or_insert_with(|| serde_json::json!({}));
-        if let Some(s) = services.as_object_mut() {
-            s.insert("perplexity".to_string(), data.clone());
+        obj.insert("perplexity".to_string(), data.clone());
+        if let Some(s) = obj.get_mut("services").and_then(|s| s.as_object_mut()) {
+            s.remove("perplexity");
         }
         conn.execute(
             "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
