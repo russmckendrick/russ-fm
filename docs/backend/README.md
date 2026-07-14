@@ -146,24 +146,29 @@ Every stored field is a row, and every row that isn't purely derived is editable
 Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()`,
 `refreshable()`, `editable()`, `get()`, `present()`) and falls into these kinds:
 
-- **Text / numbers / dates** — releases: title, year, released, country, description, date added;
-  artists: name, country, formed date, popularity, followers, biography. Input is validated
-  (year bounds, `YYYY[-MM[-DD]]` dates, numeric ranges) and the edit overlay stays open showing
-  the message until it passes. Blank clears a nullable field.
-- **Comma-separated lists** — labels, formats, genres, styles (releases) and genres (artists).
+- **Text / numbers / dates** — releases: title, year, released, country, description, date added,
+  the embedded artist bio, Apple editorial notes, Last.fm wiki summary/content, and Spotify
+  popularity; artists: name, country, formed date, popularity, followers, biography, and the
+  Last.fm bio summary/content. Service-block fields write into `raw_data.<service>.<key>`, which
+  is what the public `services{}` block (and the frontend detail pages) render. Input is
+  validated (year bounds, `YYYY[-MM[-DD]]` dates, numeric ranges) and the edit overlay stays open
+  showing the message until it passes. Blank clears a nullable field.
+- **Comma-separated lists** — labels, formats, genres, styles and Last.fm tags (releases);
+  genres and Last.fm tags (artists).
 - **Service identities** (`FieldKind::Service`) — Apple Music / Spotify / Last.fm on releases;
   Discogs / Apple Music / Spotify / Last.fm / Wikipedia on artists. Paste a share URL, bare ID or
   `spotify:` URI: the editor parses it (`ops/service_input.rs`), fetches the **full payload** from
   the API, sets the ID and URL columns plus the service block in `raw_data`, and re-downloads
   artwork where relevant. Blank clears the service entirely. `r` remains the "search again" path.
 - **Structured lists** — the release artist credits (name/discogs id/role), tracklist
-  (position/title/duration) and videos (URL per row) open a table editor: `↑/↓/←/→` move, `Enter`
+  (position/title/duration), videos (URL per row) and the source image list
+  (type/url/width/height, on releases and artists) open a table editor: `↑/↓/←/→` move, `Enter`
   edits the focused cell, `a` adds a row, `d` deletes the selected row, `s` saves, `Esc` discards.
-  Editing a credit preserves its embedded enrichment (biography/wikipedia); videos are
-  stored/published as a flat URL array (the frontend types `videos?: string[]`), so there is no
-  title column.
-- **Refresh-only** — Discogs identity, release artist bio, and images are derived from sources;
-  refresh them rather than typing.
+  Editing a credit or image preserves its extra keys (embedded biography, `resource_url`);
+  videos are stored/published as a flat URL array (the frontend types `videos?: string[]`), so
+  there is no title column.
+- **Refresh-only** — only the Discogs identity itself; `r` on it re-pulls tracklist, videos and
+  artwork sources from Discogs.
 
 Persistence guarantees after **every** mutating action (edit, field refresh, refresh-all):
 

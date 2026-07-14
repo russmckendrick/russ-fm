@@ -417,21 +417,26 @@ impl App {
         if !row.action.editable() {
             return;
         }
-        // Artists/tracklist/videos open the structured list editor instead of the one-line overlay.
-        if let (RowAction::Release { field }, Some(DetailView::Release(rec))) = (row.action, self.detail.as_ref()) {
-            if field.kind() == crate::ops::FieldKind::Structured {
+        // Structured fields (artists/tracklist/videos/images) open the list editor instead of
+        // the one-line overlay.
+        match (row.action, self.detail.as_ref()) {
+            (RowAction::Release { field }, Some(DetailView::Release(rec))) if field.kind() == crate::ops::FieldKind::Structured => {
+                use crate::ops::release as rel;
                 let (headers, rows) = match field {
-                    crate::ops::release::ReleaseField::Artists => {
-                        (vec!["Name", "Discogs ID", "Role"], crate::ops::release::artists_to_rows(&rec.artists))
-                    }
-                    crate::ops::release::ReleaseField::Tracks => {
-                        (vec!["Position", "Title", "Duration"], crate::ops::release::tracklist_to_rows(&rec.tracklist))
-                    }
-                    _ => (vec!["URL"], crate::ops::release::videos_to_rows(&rec.videos)),
+                    rel::ReleaseField::Artists => (vec!["Name", "Discogs ID", "Role"], rel::artists_to_rows(&rec.artists)),
+                    rel::ReleaseField::Tracks => (vec!["Position", "Title", "Duration"], rel::tracklist_to_rows(&rec.tracklist)),
+                    rel::ReleaseField::Images => (vec!["Type", "URL", "Width", "Height"], rel::images_to_rows(&rec.images)),
+                    _ => (vec!["URL"], rel::videos_to_rows(&rec.videos)),
                 };
                 self.list_edit = Some(PendingListEdit::new(row.label, row.action, headers, rows));
                 return;
             }
+            (RowAction::Artist { field }, Some(DetailView::Artist(rec))) if field.kind() == crate::ops::FieldKind::Structured => {
+                let rows = crate::ops::release::images_to_rows(&rec.images);
+                self.list_edit = Some(PendingListEdit::new(row.label, row.action, vec!["Type", "URL", "Width", "Height"], rows));
+                return;
+            }
+            _ => {}
         }
         let initial = match (row.action, self.detail.as_ref()) {
             (RowAction::Artist { field }, Some(DetailView::Artist(rec))) => field.get(rec),
@@ -444,21 +449,31 @@ impl App {
     /// Save a structured list edit (`s` in the list editor). A validation `Err` carries the
     /// message for the overlay to display.
     pub(crate) fn apply_list_edit(&mut self, action: RowAction, rows: &[Vec<String>]) -> Result<(), String> {
+        use crate::ops::artist::ArtistField;
         use crate::ops::release::ReleaseField;
         let result = match (action, self.detail.as_ref()) {
             (RowAction::Release { field: ReleaseField::Artists }, Some(DetailView::Release(rec))) => {
-                crate::ops::release::set_release_artists(&self.cfg, &self.db, rec, rows)
+                crate::ops::release::set_release_artists(&self.cfg, &self.db, rec, rows).map(|_| 0)
             }
             (RowAction::Release { field: ReleaseField::Tracks }, Some(DetailView::Release(rec))) => {
-                crate::ops::release::set_release_tracklist(&self.cfg, &self.db, rec, rows)
+                crate::ops::release::set_release_tracklist(&self.cfg, &self.db, rec, rows).map(|_| 0)
             }
             (RowAction::Release { field: ReleaseField::Videos }, Some(DetailView::Release(rec))) => {
-                crate::ops::release::set_release_videos(&self.cfg, &self.db, rec, rows)
+                crate::ops::release::set_release_videos(&self.cfg, &self.db, rec, rows).map(|_| 0)
+            }
+            (RowAction::Release { field: ReleaseField::Images }, Some(DetailView::Release(rec))) => {
+                crate::ops::release::set_release_images(&self.cfg, &self.db, rec, rows).map(|_| 0)
+            }
+            (RowAction::Artist { field: ArtistField::Images }, Some(DetailView::Artist(rec))) => {
+                crate::ops::artist::set_artist_images(&self.cfg, &self.db, rec, rows).map(|(_, fanout)| fanout)
             }
             _ => return Ok(()),
         };
         match result {
-            Ok(_) => {
+            Ok(fanout) => {
+                if fanout > 0 {
+                    self.artist_log.push(format!("✓ rewrote {fanout} embedding release JSON(s)"));
+                }
                 let label = match action {
                     RowAction::Release { field } => field.label(),
                     RowAction::Artist { field } => field.label(),

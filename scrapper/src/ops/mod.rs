@@ -37,6 +37,22 @@ pub enum FieldKind {
     RefreshOnly,
 }
 
+/// Set (or clear, when `value` is None) one key nested under `raw_data.<service>`, creating the
+/// service object when needed — this is what the public `services{}` block is derived from.
+pub(crate) fn set_raw_service_key(raw_data: &mut Value, service: &str, key: &str, value: Option<Value>) {
+    if !raw_data.is_object() {
+        *raw_data = serde_json::json!({});
+    }
+    let obj = raw_data.as_object_mut().expect("raw_data is an object");
+    let svc = obj.entry(service.to_string()).or_insert_with(|| serde_json::json!({}));
+    if let Some(svc) = svc.as_object_mut() {
+        match value {
+            Some(v) => svc.insert(key.to_string(), v),
+            None => svc.remove(key),
+        };
+    }
+}
+
 /// Parse a CSV field into a JSON string array: split on commas, trim, drop empties.
 pub(crate) fn csv_list(text: &str) -> Value {
     Value::Array(

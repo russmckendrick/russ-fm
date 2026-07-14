@@ -399,6 +399,13 @@ pub enum ArtistField {
     Popularity,
     Followers,
     Biography,
+    /// Last.fm bio summary (`raw_data.lastfm.bio_summary`).
+    LfmSummary,
+    /// Last.fm bio content (`raw_data.lastfm.bio_content`).
+    LfmContent,
+    /// Last.fm tags (`raw_data.lastfm.tags`).
+    LfmTags,
+    /// The source image list (`images[]` in the public JSON).
     Images,
 }
 
@@ -406,7 +413,10 @@ impl ArtistField {
     /// Every field in detail-view display order.
     pub fn all() -> &'static [ArtistField] {
         use ArtistField::*;
-        &[Name, Country, FormedDate, Discogs, Apple, Spotify, Lastfm, Wikipedia, Genres, Popularity, Followers, Biography, Images]
+        &[
+            Name, Country, FormedDate, Discogs, Apple, Spotify, Lastfm, Wikipedia, Genres, Popularity, Followers,
+            Biography, LfmSummary, LfmContent, LfmTags, Images,
+        ]
     }
 
     /// Human label used in row headers and log lines.
@@ -424,7 +434,10 @@ impl ArtistField {
             ArtistField::Popularity => "Popularity",
             ArtistField::Followers => "Followers",
             ArtistField::Biography => "Biography",
-            ArtistField::Images => "Image hi-res",
+            ArtistField::LfmSummary => "Lfm summary",
+            ArtistField::LfmContent => "Lfm content",
+            ArtistField::LfmTags => "Lfm tags",
+            ArtistField::Images => "Images",
         }
     }
 
@@ -433,11 +446,12 @@ impl ArtistField {
         use crate::ops::FieldKind::*;
         match self {
             ArtistField::Name | ArtistField::Country | ArtistField::Biography => Text,
+            ArtistField::LfmSummary | ArtistField::LfmContent => Text,
             ArtistField::Discogs | ArtistField::Apple | ArtistField::Spotify | ArtistField::Lastfm | ArtistField::Wikipedia => Service,
             ArtistField::FormedDate => DateYmd,
-            ArtistField::Genres => CsvList,
+            ArtistField::Genres | ArtistField::LfmTags => CsvList,
             ArtistField::Popularity | ArtistField::Followers => Int,
-            ArtistField::Images => RefreshOnly,
+            ArtistField::Images => Structured,
         }
     }
 
@@ -480,7 +494,16 @@ impl ArtistField {
             ArtistField::Popularity => rec.popularity.map(|p| p.to_string()).unwrap_or_default(),
             ArtistField::Followers => rec.followers.map(|f| f.to_string()).unwrap_or_default(),
             ArtistField::Biography => opt(&rec.biography),
-            ArtistField::Images => String::new(),
+            ArtistField::LfmSummary => lastfm_str(rec, "bio_summary"),
+            ArtistField::LfmContent => lastfm_str(rec, "bio_content"),
+            ArtistField::LfmTags => rec
+                .raw_data
+                .get("lastfm")
+                .and_then(|l| l.get("tags"))
+                .and_then(|t| t.as_array())
+                .map(|a| a.iter().filter_map(|v| v.as_str()).collect::<Vec<_>>().join(", "))
+                .unwrap_or_default(),
+            ArtistField::Images => rec.images.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
         }
     }
 
@@ -490,9 +513,31 @@ impl ArtistField {
             ArtistField::Apple => rec.apple_music_id.is_some() || rec.apple_music_url.is_some(),
             ArtistField::Spotify => rec.spotify_id.is_some() || rec.spotify_url.is_some(),
             ArtistField::Lastfm => rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(),
+            // The count renders "0" — the badge must reflect the list, not the string.
+            ArtistField::Images => rec.images.as_array().map(|a| !a.is_empty()).unwrap_or(false),
             _ => !self.get(rec).is_empty(),
         }
     }
+}
+
+/// A string value nested under `raw_data.lastfm.<key>`.
+fn lastfm_str(rec: &ArtistRecord, key: &str) -> String {
+    rec.raw_data
+        .get("lastfm")
+        .and_then(|l| l.get(key))
+        .and_then(|v| v.as_str())
+        .unwrap_or_default()
+        .to_string()
+}
+
+/// Save a hand-edited source-image list from the structured editor. Returns the saved record
+/// and the embedding-release fan-out count.
+pub fn set_artist_images(cfg: &Config, db: &Db, rec: &ArtistRecord, rows: &[Vec<String>]) -> Result<(ArtistRecord, usize)> {
+    let mut rec = rec.clone();
+    rec.images = crate::ops::release::rows_to_images(&rec.images, rows)?;
+    rec.updated_at = Some(now_iso());
+    let fanout = persist_artist(cfg, db, &rec)?;
+    Ok((rec, fanout))
 }
 
 /// The stored local-image paths for an artist folder.
@@ -674,8 +719,15 @@ pub async fn refresh_artist_field(
             download_image = true;
             found = true;
         }
-        // Hand-edited-only fields have no online source to refresh.
-        ArtistField::Name | ArtistField::Country | ArtistField::FormedDate | ArtistField::Followers => {}
+        // Hand-edited-only fields have no online source to refresh (the Last.fm row re-fetches
+        // the bio/tags block).
+        ArtistField::Name
+        | ArtistField::Country
+        | ArtistField::FormedDate
+        | ArtistField::Followers
+        | ArtistField::LfmSummary
+        | ArtistField::LfmContent
+        | ArtistField::LfmTags => {}
     }
 
     rec.raw_data = Value::Object(raw);
@@ -760,7 +812,13 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
                 }
             };
         }
-        // Images are derived from sources — refresh them instead of editing by hand.
+        ArtistField::LfmSummary => crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "bio_summary", opt.map(Value::String)),
+        ArtistField::LfmContent => crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "bio_content", opt.map(Value::String)),
+        ArtistField::LfmTags => {
+            let tags = crate::ops::csv_list(t);
+            crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "tags", Some(tags));
+        }
+        // Images are edited in the structured list overlay.
         ArtistField::Images => return Ok((rec, 0)),
     }
     rec.updated_at = Some(now_iso());

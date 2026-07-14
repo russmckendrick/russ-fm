@@ -724,9 +724,21 @@ pub enum ReleaseField {
     Styles,
     Tracks,
     Videos,
+    /// The primary artist's biography as embedded on this release (blank = use the artist's own).
     ArtistBio,
     Description,
+    /// Apple Music editorial notes (`raw_data.apple_music.editorial_notes`).
+    AppleNotes,
+    /// Last.fm wiki summary (`raw_data.lastfm.wiki_summary`).
+    WikiSummary,
+    /// Last.fm wiki content (`raw_data.lastfm.wiki_content`).
+    WikiContent,
+    /// Last.fm tags (`raw_data.lastfm.tags`).
+    LastfmTags,
+    /// Spotify popularity (`raw_data.spotify.popularity`).
+    SpotifyPop,
     DateAdded,
+    /// The source image list (`images[]` in the public JSON).
     Images,
 }
 
@@ -736,7 +748,8 @@ impl ReleaseField {
         use ReleaseField::*;
         &[
             Title, Year, Released, Country, Artists, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles,
-            Tracks, Videos, ArtistBio, Description, DateAdded, Images,
+            Tracks, Videos, ArtistBio, Description, AppleNotes, WikiSummary, WikiContent, LastfmTags, SpotifyPop,
+            DateAdded, Images,
         ]
     }
 
@@ -760,8 +773,13 @@ impl ReleaseField {
             ReleaseField::Videos => "Videos",
             ReleaseField::ArtistBio => "Artist bio",
             ReleaseField::Description => "Description",
+            ReleaseField::AppleNotes => "Apple notes",
+            ReleaseField::WikiSummary => "Wiki summary",
+            ReleaseField::WikiContent => "Wiki content",
+            ReleaseField::LastfmTags => "Lastfm tags",
+            ReleaseField::SpotifyPop => "Spotify pop.",
             ReleaseField::DateAdded => "Added",
-            ReleaseField::Images => "Image hi-res",
+            ReleaseField::Images => "Images",
         }
     }
 
@@ -770,12 +788,13 @@ impl ReleaseField {
         use crate::ops::FieldKind::*;
         match self {
             ReleaseField::Title | ReleaseField::Country | ReleaseField::Description => Text,
+            ReleaseField::ArtistBio | ReleaseField::AppleNotes | ReleaseField::WikiSummary | ReleaseField::WikiContent => Text,
             ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Service,
-            ReleaseField::Year => Int,
+            ReleaseField::Year | ReleaseField::SpotifyPop => Int,
             ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
-            ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles => CsvList,
-            ReleaseField::Artists | ReleaseField::Tracks | ReleaseField::Videos => Structured,
-            ReleaseField::Discogs | ReleaseField::ArtistBio | ReleaseField::Images => RefreshOnly,
+            ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles | ReleaseField::LastfmTags => CsvList,
+            ReleaseField::Artists | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::Images => Structured,
+            ReleaseField::Discogs => RefreshOnly,
         }
     }
 
@@ -826,31 +845,69 @@ impl ReleaseField {
             ReleaseField::Styles => csv(&rec.styles),
             ReleaseField::Tracks => rec.tracklist.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
             ReleaseField::Videos => rec.videos.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
-            ReleaseField::ArtistBio | ReleaseField::Images => String::new(),
+            ReleaseField::Images => rec.images.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
+            ReleaseField::ArtistBio => embedded_artist_bio(rec).unwrap_or_default(),
             ReleaseField::Description => release_description(rec).unwrap_or_default(),
+            ReleaseField::AppleNotes => raw_service_str(rec, "apple_music", "editorial_notes"),
+            ReleaseField::WikiSummary => raw_service_str(rec, "lastfm", "wiki_summary"),
+            ReleaseField::WikiContent => raw_service_str(rec, "lastfm", "wiki_content"),
+            ReleaseField::LastfmTags => rec
+                .raw_data
+                .get("lastfm")
+                .and_then(|l| l.get("tags"))
+                .and_then(|t| t.as_array())
+                .map(|a| a.iter().filter_map(|v| v.as_str()).collect::<Vec<_>>().join(", "))
+                .unwrap_or_default(),
+            ReleaseField::SpotifyPop => rec
+                .raw_data
+                .get("spotify")
+                .and_then(|s| s.get("popularity"))
+                .and_then(|v| v.as_i64())
+                .map(|n| n.to_string())
+                .unwrap_or_default(),
             ReleaseField::DateAdded => opt(&rec.date_added),
         }
     }
 
     /// Whether the field currently holds data (drives the ✓/· badge).
     pub fn present(self, rec: &ReleaseRecord) -> bool {
+        let has_items = |v: &Value| v.as_array().map(|a| !a.is_empty()).unwrap_or(false);
         match self {
             ReleaseField::Title => !rec.title.is_empty(),
             ReleaseField::Year => rec.year.is_some(),
             ReleaseField::Apple => rec.apple_music_id.is_some() || rec.apple_music_url.is_some(),
             ReleaseField::Spotify => rec.spotify_id.is_some() || rec.spotify_url.is_some(),
             ReleaseField::Lastfm => rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(),
-            ReleaseField::ArtistBio => rec
-                .artists
-                .as_array()
-                .and_then(|a| a.first())
-                .and_then(|a| a.get("biography"))
-                .map(|b| !b.is_null())
-                .unwrap_or(false),
+            // Counts render "0" — the badge must reflect the list, not the string.
+            ReleaseField::Tracks => has_items(&rec.tracklist),
+            ReleaseField::Videos => has_items(&rec.videos),
+            ReleaseField::Images => has_items(&rec.images),
             ReleaseField::Description => release_description(rec).is_some(),
             _ => !self.get(rec).is_empty(),
         }
     }
+}
+
+/// The primary artist's biography embedded on this release's first credit (may be absent —
+/// release JSONs then fall back to the artist record's own biography).
+fn embedded_artist_bio(rec: &ReleaseRecord) -> Option<String> {
+    rec.artists
+        .as_array()
+        .and_then(|a| a.first())
+        .and_then(|a| a.get("biography"))
+        .and_then(|b| b.as_str())
+        .filter(|s| !s.is_empty())
+        .map(String::from)
+}
+
+/// A string value nested under `raw_data.<service>.<key>`.
+fn raw_service_str(rec: &ReleaseRecord, service: &str, key: &str) -> String {
+    rec.raw_data
+        .get(service)
+        .and_then(|s| s.get(key))
+        .and_then(|v| v.as_str())
+        .unwrap_or_default()
+        .to_string()
 }
 
 /// The stored local-image paths for a release folder.
@@ -994,8 +1051,8 @@ pub async fn refresh_release_field(
             download_image = true;
             found = true;
         }
-        // Hand-edited-only fields have no online source of their own (Discogs owns them; the
-        // Discogs row re-fetches the lot).
+        // Hand-edited-only fields have no online source of their own (their parent service row
+        // or the Discogs row re-fetches the lot).
         ReleaseField::Title
         | ReleaseField::Year
         | ReleaseField::Released
@@ -1005,6 +1062,11 @@ pub async fn refresh_release_field(
         | ReleaseField::Formats
         | ReleaseField::Genres
         | ReleaseField::Styles
+        | ReleaseField::AppleNotes
+        | ReleaseField::WikiSummary
+        | ReleaseField::WikiContent
+        | ReleaseField::LastfmTags
+        | ReleaseField::SpotifyPop
         | ReleaseField::DateAdded => {}
     }
 
@@ -1071,13 +1133,39 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
             }
             rec.raw_data = Value::Object(raw);
         }
-        // Structured fields are edited in the list overlay; refresh-only fields via `r`.
-        ReleaseField::Artists
-        | ReleaseField::Discogs
-        | ReleaseField::Tracks
-        | ReleaseField::Videos
-        | ReleaseField::ArtistBio
-        | ReleaseField::Images => return Ok(rec),
+        // The embedded per-release artist bio; blank falls back to the artist's own biography.
+        ReleaseField::ArtistBio => {
+            if let Some(first) = rec.artists.as_array_mut().and_then(|a| a.first_mut()).and_then(|a| a.as_object_mut()) {
+                match opt {
+                    Some(bio) => first.insert("biography".into(), json!(bio)),
+                    None => first.remove("biography"),
+                };
+            } else {
+                bail!("this release has no artist credits to attach a biography to");
+            }
+        }
+        ReleaseField::AppleNotes => crate::ops::set_raw_service_key(&mut rec.raw_data, "apple_music", "editorial_notes", opt.map(Value::String)),
+        ReleaseField::WikiSummary => crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "wiki_summary", opt.map(Value::String)),
+        ReleaseField::WikiContent => crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "wiki_content", opt.map(Value::String)),
+        ReleaseField::LastfmTags => {
+            let tags = crate::ops::csv_list(t);
+            crate::ops::set_raw_service_key(&mut rec.raw_data, "lastfm", "tags", Some(tags));
+        }
+        ReleaseField::SpotifyPop => {
+            let pop = if t.is_empty() {
+                None
+            } else {
+                match t.parse::<i64>() {
+                    Ok(n) if (0..=100).contains(&n) => Some(json!(n)),
+                    _ => bail!("Spotify popularity is a number from 0 to 100"),
+                }
+            };
+            crate::ops::set_raw_service_key(&mut rec.raw_data, "spotify", "popularity", pop);
+        }
+        // Structured fields are edited in the list overlay; Discogs identity is refresh-only.
+        ReleaseField::Artists | ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::Images => {
+            return Ok(rec)
+        }
     }
     rec.updated_at = Some(now_iso());
     write_release(cfg, db, rec)
@@ -1188,6 +1276,59 @@ pub fn rows_to_videos(rows: &[Vec<String>]) -> Result<Value> {
         out.push(Value::String(url.to_string()));
     }
     Ok(Value::Array(out))
+}
+
+/// Rows for the structured source-images editor: `[type, url, width, height]` per image.
+pub fn images_to_rows(images: &Value) -> Vec<Vec<String>> {
+    let cell = |img: &Value, key: &str| {
+        img.get(key)
+            .map(|v| v.as_str().map(String::from).unwrap_or_else(|| if v.is_null() { String::new() } else { v.to_string() }))
+            .unwrap_or_default()
+    };
+    images
+        .as_array()
+        .map(|arr| arr.iter().map(|i| vec![cell(i, "type"), cell(i, "url"), cell(i, "width"), cell(i, "height")]).collect())
+        .unwrap_or_default()
+}
+
+/// Editor rows back to stored image entries. `resource_url` (and any other extra key) is
+/// preserved by re-matching rows to original entries via the URL; blank rows are dropped.
+pub fn rows_to_images(original: &Value, rows: &[Vec<String>]) -> Result<Value> {
+    let originals: Vec<Value> = original.as_array().cloned().unwrap_or_default();
+    let mut out = Vec::new();
+    for r in rows {
+        let cell = |i: usize| r.get(i).map(|s| s.trim()).unwrap_or("");
+        let (kind, url, width, height) = (cell(0), cell(1), cell(2), cell(3));
+        if kind.is_empty() && url.is_empty() && width.is_empty() && height.is_empty() {
+            continue;
+        }
+        if !url.starts_with("http://") && !url.starts_with("https://") {
+            bail!("every image needs an http(s) URL");
+        }
+        let dim = |s: &str| -> Result<Value> {
+            if s.is_empty() {
+                Ok(Value::Null)
+            } else {
+                s.parse::<i64>().map(Value::from).map_err(|_| anyhow::anyhow!("width/height must be whole numbers"))
+            }
+        };
+        let matched = originals.iter().find(|o| o.get("url").and_then(|u| u.as_str()) == Some(url));
+        let mut entry = matched.and_then(|o| o.as_object().cloned()).unwrap_or_default();
+        entry.insert("type".into(), json!(if kind.is_empty() { "secondary" } else { kind }));
+        entry.insert("url".into(), json!(url));
+        entry.insert("width".into(), dim(width)?);
+        entry.insert("height".into(), dim(height)?);
+        out.push(Value::Object(entry));
+    }
+    Ok(Value::Array(out))
+}
+
+/// Save a hand-edited source-image list from the structured editor.
+pub fn set_release_images(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
+    let mut rec = rec.clone();
+    rec.images = rows_to_images(&rec.images, rows)?;
+    rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
 }
 
 /// Save a hand-edited tracklist from the structured editor.
@@ -1352,6 +1493,30 @@ mod tests {
         // Validation: blank rows dropped, nameless rows and empty lists rejected.
         assert!(rows_to_release_artists(&stored, &[vec!["".into(), "99".into(), "".into()]]).is_err());
         assert!(rows_to_release_artists(&stored, &[vec!["  ".into(), "".into(), "".into()]]).is_err());
+    }
+
+    #[test]
+    fn image_rows_round_trip_and_preserve_resource_url() {
+        let stored = json!([
+            { "type": "primary", "url": "https://i.discogs.com/a.jpg", "width": 596, "height": 600, "resource_url": "https://r" },
+        ]);
+        let rows = images_to_rows(&stored);
+        assert_eq!(rows, vec![vec!["primary", "https://i.discogs.com/a.jpg", "596", "600"]]);
+
+        // Resize the existing image (matched by URL — resource_url survives) and add a new one.
+        let edited = vec![
+            vec!["primary".into(), "https://i.discogs.com/a.jpg".into(), "1200".into(), "1200".into()],
+            vec!["".into(), "https://example.com/b.jpg".into(), "".into(), "".into()],
+        ];
+        let back = rows_to_images(&stored, &edited).unwrap();
+        let arr = back.as_array().unwrap();
+        assert_eq!(arr[0].get("width"), Some(&json!(1200)));
+        assert_eq!(arr[0].get("resource_url"), Some(&json!("https://r")), "extra key preserved");
+        assert_eq!(arr[1].get("type"), Some(&json!("secondary")), "blank type defaults");
+        assert_eq!(arr[1].get("width"), Some(&Value::Null));
+
+        assert!(rows_to_images(&stored, &[vec!["primary".into(), "not a url".into(), "".into(), "".into()]]).is_err());
+        assert!(rows_to_images(&stored, &[vec!["p".into(), "https://x/a.jpg".into(), "wide".into(), "".into()]]).is_err());
     }
 
     #[test]

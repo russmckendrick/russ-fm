@@ -157,16 +157,10 @@ fn artist_lines(app: &App, rec: &ArtistRecord) -> Vec<DetailLine> {
 
     let mut lines = vec![blank(), heading(rec.name.clone()), blank()];
     for field in ArtistField::all() {
-        // The hi-res badge reflects the file on disk; the biography renders in full below.
-        let (present, value) = match field {
-            ArtistField::Images => (file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()),
-            ArtistField::Biography => (field.present(rec), preview(field.get(rec), 60)),
-            _ => (field.present(rec), field.get(rec)),
-        };
         lines.push(DetailLine::Field(DetailRow {
             label: field.label().to_string(),
-            value,
-            present,
+            value: preview(field.get(rec), 90),
+            present: field.present(rec),
             action: RowAction::Artist { field: *field },
         }));
     }
@@ -175,6 +169,7 @@ fn artist_lines(app: &App, rec: &ArtistRecord) -> Vec<DetailLine> {
     if listeners.is_some() || playcount.is_some() {
         lines.push(plain_field("Last.fm stats", true, format!("{} listeners · {} plays", listeners.unwrap_or_default(), playcount.unwrap_or_default())));
     }
+    lines.push(plain_field("Image hi-res", file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()));
     lines.push(plain_field("Image medium", file_exists(&dir, &format!("{folder}-medium.jpg")), String::new()));
     lines.push(plain_field("Image avatar", file_exists(&dir, &format!("{folder}-avatar.jpg")), String::new()));
     lines.push(plain_field("Public JSON", file_exists(&dir, &format!("{folder}.json")), dir.display().to_string()));
@@ -202,7 +197,6 @@ fn release_lines(app: &App, rec: &ReleaseRecord) -> Vec<DetailLine> {
     let lastfm = rec.raw_data.get("lastfm");
     let listeners = lastfm.and_then(|l| l.get("listeners")).and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|n| n.to_string())));
     let playcount = lastfm.and_then(|l| l.get("playcount")).and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|n| n.to_string())));
-    let spotify_pop = rec.raw_data.get("spotify").and_then(|s| s.get("popularity")).and_then(|v| v.as_i64());
 
     let mut lines = vec![
         blank(),
@@ -211,16 +205,10 @@ fn release_lines(app: &App, rec: &ReleaseRecord) -> Vec<DetailLine> {
         blank(),
     ];
     for field in ReleaseField::all() {
-        // The hi-res badge reflects the file on disk; the description gets a short preview.
-        let (present, value) = match field {
-            ReleaseField::Images => (file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()),
-            ReleaseField::Description => (field.present(rec), preview(field.get(rec), 60)),
-            _ => (field.present(rec), field.get(rec)),
-        };
         lines.push(DetailLine::Field(DetailRow {
             label: field.label().to_string(),
-            value,
-            present,
+            value: preview(field.get(rec), 90),
+            present: field.present(rec),
             action: RowAction::Release { field: *field },
         }));
     }
@@ -229,9 +217,7 @@ fn release_lines(app: &App, rec: &ReleaseRecord) -> Vec<DetailLine> {
     if listeners.is_some() || playcount.is_some() {
         lines.push(plain_field("Last.fm stats", true, format!("{} listeners · {} plays", listeners.unwrap_or_default(), playcount.unwrap_or_default())));
     }
-    if let Some(pop) = spotify_pop {
-        lines.push(plain_field("Spotify pop.", true, pop.to_string()));
-    }
+    lines.push(plain_field("Image hi-res", file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()));
     lines.push(plain_field("Image medium", file_exists(&dir, &format!("{folder}-medium.jpg")), String::new()));
     lines.push(plain_field("Public JSON", file_exists(&dir, &format!("{folder}.json")), dir.display().to_string()));
     lines.push(plain_field("Updated", rec.updated_at.is_some(), opt(&rec.updated_at)));

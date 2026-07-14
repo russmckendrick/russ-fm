@@ -195,6 +195,43 @@ fn release_setters_reject_bad_input_without_saving() -> Result<()> {
 }
 
 #[test]
+fn service_content_edits_land_in_raw_data_and_public_services_block() -> Result<()> {
+    let env = test_env()?;
+    env.db.save_release(&release())?;
+    let mut rec = env.db.get_release_by_discogs_id("100")?.unwrap();
+
+    let cases: Vec<(ReleaseField, &str)> = vec![
+        (ReleaseField::AppleNotes, "A landmark box set."),
+        (ReleaseField::WikiSummary, "Short wiki summary."),
+        (ReleaseField::WikiContent, "Long wiki content."),
+        (ReleaseField::LastfmTags, "shoegaze, dream pop"),
+        (ReleaseField::SpotifyPop, "63"),
+        (ReleaseField::ArtistBio, "Embedded band bio."),
+    ];
+    for (field, text) in cases {
+        rec = set_release_value(&env.cfg, &env.db, &rec, field, text)?;
+        assert_eq!(field.get(&rec), text, "round-trip failed for {}", field.label());
+    }
+    assert!(set_release_value(&env.cfg, &env.db, &rec, ReleaseField::SpotifyPop, "banana").is_err());
+
+    // The public JSON's services{} block (derived from raw_data) carries the edits.
+    let doc: Value = serde_json::from_str(&std::fs::read_to_string(
+        env.data_dir.join("album/test-album-100/test-album-100.json"),
+    )?)?;
+    let services = doc.get("services").expect("services block");
+    assert_eq!(services.pointer("/apple_music/editorial_notes"), Some(&json!("A landmark box set.")));
+    assert_eq!(services.pointer("/lastfm/wiki_summary"), Some(&json!("Short wiki summary.")));
+    assert_eq!(services.pointer("/lastfm/tags"), Some(&json!(["shoegaze", "dream pop"])));
+    assert_eq!(services.pointer("/spotify/popularity"), Some(&json!(63)));
+    assert_eq!(doc.pointer("/artists/0/biography"), Some(&json!("Embedded band bio.")));
+
+    // Blank clears the key again.
+    let rec = set_release_value(&env.cfg, &env.db, &rec, ReleaseField::AppleNotes, "")?;
+    assert_eq!(rec.raw_data.pointer("/apple_music/editorial_notes"), None);
+    Ok(())
+}
+
+#[test]
 fn slug_changing_title_edit_renames_the_public_folder() -> Result<()> {
     let env = test_env()?;
     env.db.save_release(&release())?;
