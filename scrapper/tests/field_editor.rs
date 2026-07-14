@@ -184,8 +184,6 @@ fn release_setters_reject_bad_input_without_saving() -> Result<()> {
     assert!(set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Year, "banana").is_err());
     assert!(set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Released, "01/06/1994").is_err());
     assert!(set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Title, "").is_err());
-    // A slug-changing title edit is refused until folder renames are supported.
-    assert!(set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Title, "Completely Different").is_err());
     // A same-slug title change (case only) is allowed and sets the Discogs name too.
     let rec = set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Title, "TEST ALBUM")?;
     assert_eq!(rec.title, "TEST ALBUM");
@@ -193,6 +191,63 @@ fn release_setters_reject_bad_input_without_saving() -> Result<()> {
 
     let stored = env.db.get_release_by_discogs_id("100")?.unwrap();
     assert_eq!(stored.year, Some(2020), "failed validations must not persist anything");
+    Ok(())
+}
+
+#[test]
+fn slug_changing_title_edit_renames_the_public_folder() -> Result<()> {
+    let env = test_env()?;
+    env.db.save_release(&release())?;
+    let rec = env.db.get_release_by_discogs_id("100")?.unwrap();
+    // Seed the current public folder with an image and JSON under the old slug.
+    let old_dir = env.data_dir.join("album/test-album-100");
+    std::fs::create_dir_all(&old_dir)?;
+    std::fs::write(old_dir.join("test-album-100-hi-res.jpg"), "jpg")?;
+    std::fs::write(old_dir.join("test-album-100.json"), "{}")?;
+
+    let rec = set_release_value(&env.cfg, &env.db, &rec, ReleaseField::Title, "Completely Different")?;
+    assert_eq!(rec.title, "Completely Different");
+
+    let new_dir = env.data_dir.join("album/completely-different-100");
+    assert!(!old_dir.exists(), "old folder moved");
+    assert!(new_dir.join("completely-different-100-hi-res.jpg").exists(), "image carried and renamed");
+    assert!(!new_dir.join("test-album-100.json").exists(), "stale JSON dropped");
+    let doc: Value = serde_json::from_str(&std::fs::read_to_string(new_dir.join("completely-different-100.json"))?)?;
+    assert_eq!(doc.get("title"), Some(&json!("Completely Different")));
+    assert!(
+        doc.get("local_images").and_then(|l| l.get("hi-res")).and_then(|v| v.as_str()).unwrap_or_default().contains("completely-different-100"),
+        "local_images repointed at the new slug"
+    );
+    Ok(())
+}
+
+#[test]
+fn slug_changing_artist_rename_moves_folder_and_renames_release_entries() -> Result<()> {
+    let env = test_env()?;
+    env.db.save_artist(&artist())?;
+    let a = env.db.get_artist_by_discogs_id("1")?.unwrap();
+    env.db.save_release(&release())?; // embeds "Test Band" by discogs_id 1
+    let old_dir = env.data_dir.join("artist/test-band");
+    std::fs::create_dir_all(&old_dir)?;
+    std::fs::write(old_dir.join("test-band-avatar.jpg"), "jpg")?;
+    std::fs::write(old_dir.join("test-band.json"), "{}")?;
+
+    let (a, fanout) = set_artist_value(&env.cfg, &env.db, &a, ArtistField::Name, "Renamed Band")?;
+    assert_eq!(a.name, "Renamed Band");
+    assert_eq!(fanout, 1, "the embedding release JSON was rewritten");
+
+    let new_dir = env.data_dir.join("artist/renamed-band");
+    assert!(!old_dir.exists(), "old folder moved");
+    assert!(new_dir.join("renamed-band-avatar.jpg").exists(), "avatar carried and renamed");
+    assert!(new_dir.join("renamed-band.json").exists(), "fresh artist JSON under the new slug");
+
+    // The embedding release row and its public JSON now carry the new name.
+    let r = env.db.get_release_by_discogs_id("100")?.unwrap();
+    assert_eq!(r.artists[0].get("name"), Some(&json!("Renamed Band")));
+    let doc: Value = serde_json::from_str(&std::fs::read_to_string(
+        env.data_dir.join("album/test-album-100/test-album-100.json"),
+    )?)?;
+    assert_eq!(doc.get("artists").and_then(|a| a.get(0)).and_then(|a| a.get("name")), Some(&json!("Renamed Band")));
     Ok(())
 }
 
@@ -214,8 +269,7 @@ fn artist_setters_validate_and_round_trip() -> Result<()> {
     assert!(set_artist_value(&env.cfg, &env.db, &rec, ArtistField::Popularity, "101").is_err());
     assert!(set_artist_value(&env.cfg, &env.db, &rec, ArtistField::Followers, "-3").is_err());
     assert!(set_artist_value(&env.cfg, &env.db, &rec, ArtistField::Name, "").is_err());
-    assert!(set_artist_value(&env.cfg, &env.db, &rec, ArtistField::Name, "Another Band").is_err());
-    // Same-slug rename (case only) is fine.
+    // Same-slug rename (case only) is fine and needs no folder move.
     let (rec, _) = set_artist_value(&env.cfg, &env.db, &rec, ArtistField::Name, "TEST BAND")?;
     assert_eq!(rec.name, "TEST BAND");
     Ok(())

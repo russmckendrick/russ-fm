@@ -189,12 +189,7 @@ let biography = perplexity
     let created_at = existing.as_ref().and_then(|e| e.created_at.clone()).unwrap_or_else(|| now.clone());
 
     let folder = sanitize_folder_name(&display_name);
-    let data_rel = format!("{}/{}", cfg.data.path, cfg.artists.path);
-    let local_images = json!({
-        "hi-res": format!("{data_rel}/{folder}/{folder}-hi-res.jpg"),
-        "medium": format!("{data_rel}/{folder}/{folder}-medium.jpg"),
-        "avatar": format!("{data_rel}/{folder}/{folder}-avatar.jpg"),
-    });
+    let local_images = artist_local_images(cfg, &folder);
 
     let rec = ArtistRecord {
         id,
@@ -498,6 +493,16 @@ impl ArtistField {
     }
 }
 
+/// The stored local-image paths for an artist folder.
+pub(crate) fn artist_local_images(cfg: &Config, folder: &str) -> Value {
+    let data_rel = format!("{}/{}", cfg.data.path, cfg.artists.path);
+    json!({
+        "hi-res": format!("{data_rel}/{folder}/{folder}-hi-res.jpg"),
+        "medium": format!("{data_rel}/{folder}/{folder}-medium.jpg"),
+        "avatar": format!("{data_rel}/{folder}/{folder}-avatar.jpg"),
+    })
+}
+
 fn genre_strings(genres: &Value) -> Vec<String> {
     genres
         .as_array()
@@ -692,8 +697,35 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
     match field {
         ArtistField::Name => {
             let Some(name) = opt else { bail!("the artist name cannot be blank") };
-            if sanitize_folder_name(&name) != sanitize_folder_name(&rec.name) {
-                bail!("this name changes the public folder slug — folder renames are not supported yet");
+            let old_name = rec.name.clone();
+            if name != old_name {
+                // A slug-changing rename moves the public folder (images carried, stale JSON
+                // dropped; persist_artist then writes the fresh JSON under the new slug).
+                let new_folder = sanitize_folder_name(&name);
+                if let Some(plan) = crate::ops::rename::plan(&cfg.artists_dir(), &sanitize_folder_name(&old_name), &new_folder) {
+                    crate::ops::rename::apply(&plan, crate::ops::rename::ARTIST_SUFFIXES)?;
+                    rec.local_images = artist_local_images(cfg, &new_folder);
+                }
+                // Rename the artist inside every embedding release row: collection.json derives
+                // uri_artist from the release-side name, and persist_artist's fan-out matches on
+                // the new name. JSON rewrites happen in that fan-out, after the row is saved.
+                for mut r in db.releases_embedding_artist(rec.discogs_id.as_deref(), &old_name)? {
+                    if let Some(entries) = r.artists.as_array_mut() {
+                        for e in entries {
+                            let by_id = rec.discogs_id.is_some()
+                                && e.get("discogs_id").and_then(|d| d.as_str()) == rec.discogs_id.as_deref();
+                            let by_name =
+                                e.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(&old_name));
+                            if by_id || by_name {
+                                if let Some(obj) = e.as_object_mut() {
+                                    obj.insert("name".into(), json!(name.clone()));
+                                }
+                            }
+                        }
+                    }
+                    r.updated_at = Some(now_iso());
+                    db.save_release(&r)?;
+                }
             }
             rec.name = name;
         }

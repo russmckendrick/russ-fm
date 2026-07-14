@@ -385,12 +385,7 @@ pub async fn process_release(
         .or_else(|| existing.as_ref().and_then(|r| r.date_added.clone()));
 
     let folder = release_folder_name(&title, discogs_id);
-    let data_rel = format!("{}/{}", cfg.data.path, cfg.releases.path);
-    let local_images = json!({
-        "hi-res": format!("{data_rel}/{folder}/{folder}-hi-res.jpg"),
-        "medium": format!("{data_rel}/{folder}/{folder}-medium.jpg"),
-        "small": format!("{data_rel}/{folder}/{folder}-small.jpg"),
-    });
+    let local_images = release_local_images(cfg, &folder);
 
     let mut rec = ReleaseRecord {
         id: discogs_id.to_string(),
@@ -427,6 +422,16 @@ pub async fn process_release(
 
     if write_files {
         let album_dir = cfg.releases_dir();
+        // If the stored title produced a different folder (manual edit, or the Discogs title
+        // changed upstream), move the old folder along so its images and JSON aren't stranded.
+        if let Some(prev) = existing.as_ref() {
+            let old_folder = release_folder_name(&prev.title, discogs_id);
+            if let Some(plan) = crate::ops::rename::plan(&album_dir, &old_folder, &folder) {
+                if let Err(e) = crate::ops::rename::apply(&plan, crate::ops::rename::RELEASE_SUFFIXES) {
+                    tracing::warn!("could not move {old_folder} to {folder}: {e}");
+                }
+            }
+        }
         let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
         flags.image = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await.is_some();
 
@@ -838,6 +843,16 @@ impl ReleaseField {
     }
 }
 
+/// The stored local-image paths for a release folder.
+pub(crate) fn release_local_images(cfg: &Config, folder: &str) -> Value {
+    let data_rel = format!("{}/{}", cfg.data.path, cfg.releases.path);
+    json!({
+        "hi-res": format!("{data_rel}/{folder}/{folder}-hi-res.jpg"),
+        "medium": format!("{data_rel}/{folder}/{folder}-medium.jpg"),
+        "small": format!("{data_rel}/{folder}/{folder}-small.jpg"),
+    })
+}
+
 /// The stored Perplexity description (canonical top-level key, legacy `services` fallback).
 fn release_description(rec: &ReleaseRecord) -> Option<String> {
     rec.raw_data
@@ -1005,8 +1020,13 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
         ReleaseField::Title => {
             let Some(title) = opt else { bail!("the title cannot be blank") };
             let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
-            if release_folder_name(&title, &id) != release_folder_name(&rec.title, &id) {
-                bail!("this title changes the public folder slug — folder renames are not supported yet");
+            let old_folder = release_folder_name(&rec.title, &id);
+            let new_folder = release_folder_name(&title, &id);
+            // A slug-changing title moves the public folder (images carried, stale JSON dropped;
+            // write_release then writes the fresh JSON under the new slug).
+            if let Some(plan) = crate::ops::rename::plan(&cfg.releases_dir(), &old_folder, &new_folder) {
+                crate::ops::rename::apply(&plan, crate::ops::rename::RELEASE_SUFFIXES)?;
+                rec.local_images = release_local_images(cfg, &new_folder);
             }
             // collection.json prefers the Discogs-sourced name, so a manual title covers both.
             rec.title = title.clone();

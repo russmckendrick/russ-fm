@@ -9,6 +9,7 @@ pub mod descriptions;
 pub mod generate;
 pub mod maintenance;
 pub mod release;
+pub mod rename;
 pub mod report;
 pub mod service_input;
 pub mod services;
