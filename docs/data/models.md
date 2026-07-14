@@ -1,304 +1,91 @@
 # Data Models Reference
 
-This document covers Python data models (backend) and TypeScript interfaces (frontend).
+This document covers the Rust record structs (backend) and TypeScript interfaces (frontend).
 
-## Python Models
+## Rust Records
 
-Located in `scrapper/music_collection_manager/models/`
+Located in [`scrapper/src/db.rs`](../../scrapper/src/db.rs). One struct per SQLite table, loaded
+and saved as full rows (`save_release` / `save_artist` are `INSERT OR REPLACE` upserts). `Value`
+fields are `serde_json::Value` columns stored as JSON text.
 
-### Release Model (`models/release.py`)
+### ReleaseRecord
 
-```python
-from dataclasses import dataclass, field
-from typing import List, Optional, Dict, Any
-from datetime import datetime
-from pathlib import Path
-
-@dataclass
-class Release:
-    """Represents a music release/album."""
-
-    id: str
-    title: str
-    discogs_id: str
-
-    # Metadata
-    year: Optional[int] = None
-    released: Optional[str] = None
-    country: Optional[str] = None
-    formats: List[str] = field(default_factory=list)
-    labels: List[str] = field(default_factory=list)
-    genres: List[str] = field(default_factory=list)
-    styles: List[str] = field(default_factory=list)
-
-    # Related entities
-    artists: List['Artist'] = field(default_factory=list)
-    images: List['Image'] = field(default_factory=list)
-    tracklist: List['Track'] = field(default_factory=list)
-
-    # External service IDs
-    apple_music_id: Optional[str] = None
-    spotify_id: Optional[str] = None
-    lastfm_mbid: Optional[str] = None
-
-    # External URLs
-    discogs_url: Optional[str] = None
-    apple_music_url: Optional[str] = None
-    spotify_url: Optional[str] = None
-    lastfm_url: Optional[str] = None
-
-    # Service-specific names (may differ)
-    release_name_discogs: Optional[str] = None
-    release_name_apple_music: Optional[str] = None
-    release_name_spotify: Optional[str] = None
-
-    # Local image paths
-    local_images: Dict[str, Optional[Path]] = field(default_factory=dict)
-
-    # Raw API responses
-    raw_data: Dict[str, Any] = field(default_factory=dict)
-
-    # Timestamps
-    created_at: Optional[datetime] = None
-    updated_at: Optional[datetime] = None
-    date_added: Optional[datetime] = None
-
-    def get_primary_artist(self) -> Optional['Artist']:
-        """Get the primary artist."""
-        return self.artists[0] if self.artists else None
-
-    def get_primary_image(self) -> Optional['Image']:
-        """Get the primary cover image."""
-        for img in self.images:
-            if img.type == 'primary':
-                return img
-        return self.images[0] if self.images else None
-
-    def has_complete_data(self) -> bool:
-        """Check if release has all required data."""
-        return bool(
-            self.title and
-            self.discogs_id and
-            self.artists and
-            self.images
-        )
+```rust
+pub struct ReleaseRecord {
+    pub id: String,
+    pub discogs_id: Option<String>,
+    pub title: String,
+    pub artists: Value,        // [{name, discogs_id, role, biography?, wikipedia_url?}]
+    pub year: Option<i64>,
+    pub released: Option<String>,
+    pub country: Option<String>,
+    pub formats: Value,        // ["Vinyl", "LP", …]
+    pub labels: Value,
+    pub genres: Value,
+    pub styles: Value,
+    pub images: Value,         // [{url, type, width, height, resource_url}]
+    pub tracklist: Value,      // [{position, title, duration}]
+    pub videos: Value,         // ["https://…", …] — flat URL strings
+    pub apple_music_id: Option<String>,
+    pub spotify_id: Option<String>,
+    pub lastfm_mbid: Option<String>,
+    pub discogs_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub spotify_url: Option<String>,
+    pub lastfm_url: Option<String>,
+    pub release_name_discogs: Option<String>,      // collection.json prefers this over title
+    pub release_name_apple_music: Option<String>,
+    pub release_name_spotify: Option<String>,
+    pub enrichment_data: Value,
+    pub local_images: Value,   // {hi-res, medium, small} relative paths
+    pub raw_data: Value,       // per-service payloads: apple_music/spotify/lastfm/perplexity
+    pub created_at: Option<String>,
+    pub updated_at: Option<String>,
+    pub date_added: Option<String>,   // drives collection.json sort order
+}
 ```
 
-### Artist Model (`models/release.py`)
+### ArtistRecord
 
-```python
-@dataclass
-class Artist:
-    """Represents a music artist."""
-
-    name: str
-    id: Optional[str] = None
-    role: Optional[str] = None  # 'artist', 'featuring', 'producer'
-
-    # Biography
-    biography: Optional[str] = None
-
-    # External IDs
-    discogs_id: Optional[str] = None
-    apple_music_id: Optional[str] = None
-    spotify_id: Optional[str] = None
-    lastfm_mbid: Optional[str] = None
-
-    # External URLs
-    discogs_url: Optional[str] = None
-    apple_music_url: Optional[str] = None
-    spotify_url: Optional[str] = None
-    lastfm_url: Optional[str] = None
-    wikipedia_url: Optional[str] = None
-
-    # Details
-    genres: List[str] = field(default_factory=list)
-    popularity: Optional[int] = None
-    followers: Optional[int] = None
-    country: Optional[str] = None
-    formed_date: Optional[str] = None
-
-    # Images
-    images: List['Image'] = field(default_factory=list)
-    local_images: Dict[str, Optional[Path]] = field(default_factory=dict)
-
-    # Raw API responses
-    raw_data: Dict[str, Any] = field(default_factory=dict)
-
-    def get_slug(self) -> str:
-        """Generate URL-safe slug from name."""
-        from ..utils.folder_sanitizer import sanitize_folder_name
-        return sanitize_folder_name(self.name)
+```rust
+pub struct ArtistRecord {
+    pub id: String,
+    pub name: String,          // folder slug = sanitize_folder_name(name)
+    pub biography: Option<String>,
+    pub discogs_id: Option<String>,
+    pub apple_music_id: Option<String>,
+    pub spotify_id: Option<String>,
+    pub lastfm_mbid: Option<String>,
+    pub discogs_url: Option<String>,
+    pub apple_music_url: Option<String>,
+    pub spotify_url: Option<String>,
+    pub lastfm_url: Option<String>,
+    pub wikipedia_url: Option<String>,
+    pub genres: Value,
+    pub popularity: Option<i64>,
+    pub followers: Option<i64>,
+    pub country: Option<String>,
+    pub formed_date: Option<String>,
+    pub images: Value,
+    pub local_images: Value,   // {hi-res, medium, avatar} relative paths
+    pub enrichment_data: Value,
+    pub raw_data: Value,       // apple_music/spotify/lastfm/discogs/theaudiodb/perplexity
+    pub created_at: Option<String>,
+    pub updated_at: Option<String>,
+}
 ```
 
-### Track Model (`models/release.py`)
+Notes:
 
-```python
-@dataclass
-class Track:
-    """Represents a track on a release."""
-
-    position: str
-    title: str
-    artists: List[Artist] = field(default_factory=list)
-    duration: Optional[str] = None
-    role: Optional[str] = None  # 'track', 'index', 'heading'
-
-    def get_duration_seconds(self) -> Optional[int]:
-        """Parse duration to seconds."""
-        if not self.duration:
-            return None
-        try:
-            parts = self.duration.split(':')
-            if len(parts) == 2:
-                return int(parts[0]) * 60 + int(parts[1])
-            elif len(parts) == 3:
-                return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
-        except ValueError:
-            return None
-        return None
-```
-
-### Image Model (`models/release.py`)
-
-```python
-@dataclass
-class Image:
-    """Represents an image asset."""
-
-    url: str
-    type: str  # 'primary', 'secondary', 'artist'
-    width: Optional[int] = None
-    height: Optional[int] = None
-    resource_url: Optional[str] = None
-
-    def is_high_quality(self) -> bool:
-        """Check if image is high resolution."""
-        if self.width and self.height:
-            return min(self.width, self.height) >= 1000
-        return False
-```
-
-### CollectionItem Model (`models/collection.py`)
-
-```python
-@dataclass
-class CollectionItem:
-    """Represents an item in a user's collection."""
-
-    id: str
-    release: Release
-    folder_id: Optional[str] = None
-    date_added: Optional[datetime] = None
-    notes: Optional[str] = None
-    rating: Optional[int] = None
-    instance_id: Optional[str] = None
-    processed: bool = False
-    enriched: bool = False
-```
-
----
-
-## Enrichment Models (`models/enrichment.py`)
-
-Service-specific data structures.
-
-### DiscogsData
-
-```python
-@dataclass
-class DiscogsData:
-    """Discogs-specific release data."""
-    id: int
-    master_id: Optional[int] = None
-    resource_url: str = ""
-    uri: str = ""
-    status: str = ""
-    data_quality: str = ""
-    community: Optional[Dict] = None
-    companies: List[Dict] = field(default_factory=list)
-    extraartists: List[Dict] = field(default_factory=list)
-    identifiers: List[Dict] = field(default_factory=list)
-    videos: List[Dict] = field(default_factory=list)
-```
-
-### AppleMusicData
-
-```python
-@dataclass
-class AppleMusicData:
-    """Apple Music-specific data."""
-    id: str
-    url: str = ""
-    artwork_url: Optional[str] = None
-    artwork_colors: Optional[Dict] = None
-    editorial_notes: Optional[Dict] = None
-    content_rating: Optional[str] = None
-    is_complete: bool = True
-    track_count: int = 0
-    genre_names: List[str] = field(default_factory=list)
-    release_date: Optional[str] = None
-```
-
-### SpotifyData
-
-```python
-@dataclass
-class SpotifyData:
-    """Spotify-specific data."""
-    id: str
-    url: str = ""
-    uri: str = ""
-    popularity: int = 0
-    total_tracks: int = 0
-    available_markets: List[str] = field(default_factory=list)
-    copyrights: List[Dict] = field(default_factory=list)
-    external_ids: Dict = field(default_factory=dict)
-    images: List[Dict] = field(default_factory=list)
-```
-
-### LastFmData
-
-```python
-@dataclass
-class LastFmData:
-    """Last.fm-specific data."""
-    mbid: Optional[str] = None
-    url: str = ""
-    listeners: int = 0
-    playcount: int = 0
-    wiki_summary: Optional[str] = None
-    wiki_content: Optional[str] = None
-    tags: List[str] = field(default_factory=list)
-    similar: List[str] = field(default_factory=list)
-```
-
-### WikipediaData
-
-```python
-@dataclass
-class WikipediaData:
-    """Wikipedia-specific data."""
-    page_id: Optional[int] = None
-    title: str = ""
-    url: str = ""
-    extract: Optional[str] = None
-    thumbnail: Optional[str] = None
-    original_image: Optional[str] = None
-```
-
-### PerplexityData
-
-```python
-@dataclass
-class PerplexityData:
-    """Perplexity AI-generated data."""
-    description: str
-    generated_at: str
-    model: str = "sonar"
-    prompt_tokens: int = 0
-    completion_tokens: int = 0
-```
+- The public JSON writers (`release_to_value` / `artist_to_value` in
+  [`scrapper/src/output/json.rs`](../../scrapper/src/output/json.rs)) serialize from these
+  records; release `artists[]` entries are enriched at write time by joining the artists table
+  (discogs_id first, case-insensitive name fallback).
+- Per-field editing is declared on the `ReleaseField` / `ArtistField` enums in
+  `scrapper/src/ops/release.rs` / `scrapper/src/ops/artist.rs` — see the Detail Editor section of
+  [`docs/backend/README.md`](../backend/README.md).
+- The canonical Perplexity location is top-level `raw_data.perplexity`; legacy Python-era rows
+  may nest it under `raw_data.services.perplexity` (readers fall back).
 
 ---
 

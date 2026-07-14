@@ -54,12 +54,12 @@ public/
 ├── wrapped.json              # Year-in-review data
 ├── album/
 │   └── {album-slug}/
-│       ├── index.json        # Full album data
+│       ├── {slug}.json       # Full album data
 │       ├── {slug}-hi-res.jpg # High resolution (1400px)
 │       └── {slug}-medium.jpg # Medium resolution (800px)
 └── artist/
     └── {artist-slug}/
-        ├── index.json        # Full artist data
+        ├── {slug}.json       # Full artist data
         ├── {slug}-hi-res.jpg # High resolution
         ├── {slug}-medium.jpg # Medium resolution
         └── {slug}-avatar.jpg # Avatar (128px square)
@@ -81,7 +81,7 @@ public/
 const albums = await fetch('/collection.json').then(r => r.json());
 
 // Individual album (full data)
-const album = await fetch(`/album/${slug}/index.json`).then(r => r.json());
+const album = await fetch(`/album/${slug}/${slug}.json`).then(r => r.json());
 
 // Album colors
 const colors = await fetch('/album-colors.json').then(r => r.json());
@@ -111,7 +111,7 @@ const colors = await fetch('/album-colors.json').then(r => r.json());
 - Image URIs
 - No tracklist, no enrichment details
 
-**album/*/index.json**: Full data for detail views
+**album/{slug}/{slug}.json**: Full data for detail views
 - Complete metadata
 - Tracklist with durations
 - All service data (raw_data)

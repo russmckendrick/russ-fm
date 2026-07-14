@@ -73,11 +73,14 @@ Main collection index used for album listings.
 | albums[].apple_music_url | string? | Apple Music URL |
 | albums[].discogs_url | string | Discogs release URL |
 
-> **Phase 1 data-leverage update (May 2026):** the five fields `styles`, `formats`, `format_primary`, `labels`, `country`, `lastfm_listeners` were added to the collection.json index so faceted browse pages and Stats v2 don't need to lazy-load every per-album JSON. They are denormalised at index time by [`scrapper/music_collection_manager/utils/collection_generator.py`](../../scrapper/music_collection_manager/utils/collection_generator.py).
+> **Phase 1 data-leverage update (May 2026):** the five fields `styles`, `formats`, `format_primary`, `labels`, `country`, `lastfm_listeners` were added to the collection.json index so faceted browse pages and Stats v2 don't need to lazy-load every per-album JSON. They are denormalised at index time by the collection generator ([`scrapper/src/output/collection.rs`](../../scrapper/src/output/collection.rs)).
+>
+> collection.json is regenerated after every mutating scrapper action — collection runs, CLI
+> `--save` commands, and every TUI detail-editor edit/refresh — so it always reflects the DB.
 
 ---
 
-### Album JSON (`album/{slug}/index.json`)
+### Album JSON (`album/{slug}/{slug}.json`)
 
 Full album data for detail views.
 
@@ -188,7 +191,7 @@ Full album data for detail views.
 
 ---
 
-### Artist JSON (`artist/{slug}/index.json`)
+### Artist JSON (`artist/{slug}/{slug}.json`)
 
 Full artist data.
 
@@ -387,6 +390,12 @@ CREATE TABLE releases (
     styles TEXT,   -- JSON array
     images TEXT,   -- JSON array
     tracklist TEXT,  -- JSON array
+    videos TEXT,     -- JSON array of URL strings
+
+    -- Per-source display names
+    release_name_discogs TEXT,
+    release_name_apple_music TEXT,
+    release_name_spotify TEXT,
 
     -- External IDs
     apple_music_id TEXT,
@@ -401,7 +410,8 @@ CREATE TABLE releases (
 
     -- Enrichment data
     enrichment_data TEXT,  -- JSON
-    raw_data TEXT,  -- JSON
+    local_images TEXT,     -- JSON {hi-res, medium, small} relative paths
+    raw_data TEXT,  -- JSON (per-service payloads; see note below)
 
     -- Timestamps
     created_at TEXT,
@@ -412,6 +422,12 @@ CREATE TABLE releases (
 CREATE INDEX idx_releases_discogs_id ON releases(discogs_id);
 CREATE INDEX idx_releases_year ON releases(year);
 ```
+
+> **`raw_data` layout:** each service's payload is stored at the top level of `raw_data`
+> (`raw_data.apple_music`, `raw_data.spotify`, `raw_data.lastfm`, `raw_data.perplexity`) — this
+> is what the public `services{}` block is derived from. The canonical Perplexity location is the
+> top-level `raw_data.perplexity`; rows written by the retired Python pipeline may still nest it
+> under `raw_data.services.perplexity`, and readers fall back to that legacy key.
 
 #### artists
 

@@ -57,6 +57,10 @@ scrapper release <DISCOGS_ID> [OPTIONS]
 
 > Run `scrapper release --help` for the full, authoritative flag list.
 
+> `--interactive` shows the match picker for **every** candidate list, including a single
+> candidate, so you can always confirm or skip a source. `--save` also regenerates
+> `public/collection.json` after writing the release.
+
 ### Examples
 
 ```bash
@@ -157,11 +161,15 @@ scrapper artist <ARTIST_NAME> [OPTIONS]
 |--------|------|---------|-------------|
 | `--save` | FLAG | `false` | Save to public directory |
 | `--force-refresh` | FLAG | `false` | Ignore cache |
-| `--interactive` | FLAG | `false` | Manual selection |
+| `--interactive` | FLAG | `false` | Manual selection (picker appears even for a single candidate) |
 | `--prefer` | CHOICE | - | Preferred data/image source |
 | `--theaudiodb` | FLAG | `false` | Include TheAudioDB |
 | `--perplexity` | FLAG | `false` | Use Perplexity for artist descriptions |
 | `--perplexity-context` | STRING | - | Extra artist identity context for Perplexity |
+
+> `--save` also rewrites every release JSON that embeds the artist (their biography and service
+> IDs are joined into release files at write time) and regenerates `public/collection.json`.
+> The same applies to `artist-batch --save`.
 
 ### Examples
 

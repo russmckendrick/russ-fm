@@ -133,33 +133,59 @@ Launching `scrapper` with no subcommand opens the interactive TUI. From the **Re
 **Artists** browser, press `Enter` on a row to open its **detail editor** — a per-field view over
 the record in `collection_cache.db` and the matching files under `public/`.
 
-The detail view is a true editor for the database, not a read-only panel:
+Every stored field is a row, and every row that isn't purely derived is editable:
 
 | Key   | Action                                                                          |
 |-------|---------------------------------------------------------------------------------|
-| `↑/↓` | Move the cursor between editable fields                                          |
-| `r`   | **Refresh this line** — re-query just that one source online and merge the result (the match picker appears when there are multiple candidates) |
+| `↑/↓` | Move the cursor between fields                                                   |
+| `r`   | **Refresh this line** — re-query just that one source online and merge the result. In interactive mode the match picker always appears, even for a single candidate, with a "Skip this service" row |
 | `e`   | **Edit this line** — type/paste a value, or leave blank to clear it             |
 | `a`   | **Refresh all** — re-enrich the whole record (artists and releases alike)       |
 | `Esc` | Back to the list                                                                |
 
-Every action saves to the DB **and** rewrites the public `{folder}.json` through the same writers
-the full pipeline uses (`artist_to_value` / `release_to_value` + `to_pretty_sorted`), so the static
-data contract with the frontend is preserved.
+Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()`,
+`refreshable()`, `editable()`, `get()`, `present()`) and falls into these kinds:
+
+- **Text / numbers / dates** — releases: title, year, released, country, description, date added;
+  artists: name, country, formed date, popularity, followers, biography. Input is validated
+  (year bounds, `YYYY[-MM[-DD]]` dates, numeric ranges) and the edit overlay stays open showing
+  the message until it passes. Blank clears a nullable field.
+- **Comma-separated lists** — labels, formats, genres, styles (releases) and genres (artists).
+- **Service identities** (`FieldKind::Service`) — Apple Music / Spotify / Last.fm on releases;
+  Discogs / Apple Music / Spotify / Last.fm / Wikipedia on artists. Paste a share URL, bare ID or
+  `spotify:` URI: the editor parses it (`ops/service_input.rs`), fetches the **full payload** from
+  the API, sets the ID and URL columns plus the service block in `raw_data`, and re-downloads
+  artwork where relevant. Blank clears the service entirely. `r` remains the "search again" path.
+- **Structured lists** — the release tracklist (position/title/duration) and videos (URL per row)
+  open a table editor: `↑/↓/←/→` move, `Enter` edits the focused cell, `a` adds a row, `d` deletes
+  the selected row, `s` saves, `Esc` discards. Videos are stored/published as a flat URL array
+  (the frontend types `videos?: string[]`), so there is no title column.
+- **Refresh-only** — Discogs identity, release artist bio, and images are derived from sources;
+  refresh them rather than typing.
+
+Persistence guarantees after **every** mutating action (edit, field refresh, refresh-all):
+
+- The record is saved to the DB and the public `{folder}.json` is rewritten through the same
+  writers the full pipeline uses (`artist_to_value` / `release_to_value` + `to_pretty_sorted`).
+- **`public/collection.json` is regenerated** (debounced, off the UI thread) so the frontend list
+  view never drifts. CLI saves (`release --save`, `artist --save`, `artist-batch`) do the same.
+- **Artist edits fan out**: every release JSON embedding that artist is rewritten too (biography,
+  Wikipedia URL and service IDs are joined from the artists table at write time).
+- **Title/name edits rename the public folder**: the directory is moved, slug-prefixed images are
+  renamed, the stale JSON is dropped and a fresh one written under the new slug
+  (`ops/rename.rs`). Artist renames also update the artist's name inside every embedding release
+  row so `collection.json`'s `uri_artist` follows. A rename that would collide with an existing
+  folder is refused. Note: the public URL for that item changes (static site, no redirects).
 
 Implementation:
 
-- **Per-field refresh / manual set** live in `ops/artist.rs` (`refresh_artist_field`,
-  `set_artist_value`, `ArtistField`) and `ops/release.rs` (`refresh_release_field`,
-  `set_release_value`, `ReleaseField`). Refresh re-fetches a single source and merges it into the
-  existing record (a failed lookup leaves the current value untouched); manual set writes the typed
-  value directly. Shared derivation helpers (`derive_biography` / `derive_genres` /
-  `derive_artist_images`) keep cross-cutting artist fields consistent with a full enrich.
-- The TUI side is `tui/detail.rs` (selectable row model), `tui/modals.rs` (`PendingEdit` overlay),
-  `tui/app.rs` (cursor + action dispatch), and `tui/runners.rs` (background refresh tasks).
-
-> Note: manually editing a service line sets the displayed URL/ID directly — it does **not**
-> repopulate the full service block. Use `r` to pull the complete record from that source.
+- **Per-field refresh / manual set / service set** live in `ops/artist.rs`
+  (`refresh_artist_field`, `set_artist_value`, `set_artist_service`, `persist_artist`,
+  `ArtistField`) and `ops/release.rs` (`refresh_release_field`, `set_release_value`,
+  `set_release_service`, `set_release_tracklist`, `set_release_videos`, `ReleaseField`).
+- The TUI side is `tui/detail.rs` (rows generated from `Field::all()`), `tui/modals.rs`
+  (`PendingEdit` + `PendingListEdit` overlays), `tui/app.rs` (dispatch + debounced
+  `schedule_collection_regen`), and `tui/runners.rs` (background refresh/service/regen tasks).
 
 ## Configuration
 
