@@ -685,33 +685,150 @@ fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
 /// A single editable/refreshable field of a [`ReleaseRecord`], used by the TUI detail editor.
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ReleaseField {
+    Title,
+    Year,
+    Released,
+    Country,
     /// Re-fetch the Discogs release (refreshes tracklist, videos and artwork sources).
     Discogs,
     Apple,
     Spotify,
     Lastfm,
+    Labels,
+    Formats,
+    Genres,
+    Styles,
     Tracks,
     Videos,
     ArtistBio,
     Description,
+    DateAdded,
     Images,
 }
 
 impl ReleaseField {
-    /// Human label used in log lines.
+    /// Every field in detail-view display order.
+    pub fn all() -> &'static [ReleaseField] {
+        use ReleaseField::*;
+        &[
+            Title, Year, Released, Country, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles, Tracks,
+            Videos, ArtistBio, Description, DateAdded, Images,
+        ]
+    }
+
+    /// Human label used in row headers and log lines.
     pub fn label(self) -> &'static str {
         match self {
+            ReleaseField::Title => "Title",
+            ReleaseField::Year => "Year",
+            ReleaseField::Released => "Released",
+            ReleaseField::Country => "Country",
             ReleaseField::Discogs => "Discogs",
             ReleaseField::Apple => "Apple Music",
             ReleaseField::Spotify => "Spotify",
             ReleaseField::Lastfm => "Last.fm",
+            ReleaseField::Labels => "Labels",
+            ReleaseField::Formats => "Formats",
+            ReleaseField::Genres => "Genres",
+            ReleaseField::Styles => "Styles",
             ReleaseField::Tracks => "Tracks",
             ReleaseField::Videos => "Videos",
             ReleaseField::ArtistBio => "Artist bio",
             ReleaseField::Description => "Description",
-            ReleaseField::Images => "Images",
+            ReleaseField::DateAdded => "Added",
+            ReleaseField::Images => "Image hi-res",
         }
     }
+
+    /// How the field is edited/validated.
+    pub fn kind(self) -> crate::ops::FieldKind {
+        use crate::ops::FieldKind::*;
+        match self {
+            ReleaseField::Title | ReleaseField::Country | ReleaseField::Description => Text,
+            ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Text,
+            ReleaseField::Year => Int,
+            ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
+            ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles => CsvList,
+            ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::ArtistBio | ReleaseField::Images => RefreshOnly,
+        }
+    }
+
+    /// True when `refresh_release_field` can re-fetch this field from its source.
+    pub fn refreshable(self) -> bool {
+        matches!(
+            self,
+            ReleaseField::Discogs
+                | ReleaseField::Apple
+                | ReleaseField::Spotify
+                | ReleaseField::Lastfm
+                | ReleaseField::Tracks
+                | ReleaseField::Videos
+                | ReleaseField::ArtistBio
+                | ReleaseField::Description
+                | ReleaseField::Images
+        )
+    }
+
+    /// True when the field can be edited by hand.
+    pub fn editable(self) -> bool {
+        self.kind() != crate::ops::FieldKind::RefreshOnly
+    }
+
+    /// Current stored value as editable text (the edit overlay's initial buffer).
+    pub fn get(self, rec: &ReleaseRecord) -> String {
+        let opt = |o: &Option<String>| o.clone().unwrap_or_default();
+        let csv = |v: &Value| v.as_array().map(|a| a.iter().filter_map(|s| s.as_str()).collect::<Vec<_>>().join(", ")).unwrap_or_default();
+        match self {
+            ReleaseField::Title => rec.title.clone(),
+            ReleaseField::Year => rec.year.map(|y| y.to_string()).unwrap_or_default(),
+            ReleaseField::Released => opt(&rec.released),
+            ReleaseField::Country => opt(&rec.country),
+            ReleaseField::Discogs => opt(&rec.discogs_id),
+            ReleaseField::Apple => opt(&rec.apple_music_url),
+            ReleaseField::Spotify => opt(&rec.spotify_url),
+            ReleaseField::Lastfm => opt(&rec.lastfm_url),
+            ReleaseField::Labels => csv(&rec.labels),
+            ReleaseField::Formats => csv(&rec.formats),
+            ReleaseField::Genres => csv(&rec.genres),
+            ReleaseField::Styles => csv(&rec.styles),
+            ReleaseField::Tracks => rec.tracklist.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
+            ReleaseField::Videos => rec.videos.as_array().map(|a| a.len().to_string()).unwrap_or_default(),
+            ReleaseField::ArtistBio | ReleaseField::Images => String::new(),
+            ReleaseField::Description => release_description(rec).unwrap_or_default(),
+            ReleaseField::DateAdded => opt(&rec.date_added),
+        }
+    }
+
+    /// Whether the field currently holds data (drives the ✓/· badge).
+    pub fn present(self, rec: &ReleaseRecord) -> bool {
+        match self {
+            ReleaseField::Title => !rec.title.is_empty(),
+            ReleaseField::Year => rec.year.is_some(),
+            ReleaseField::Apple => rec.apple_music_id.is_some() || rec.apple_music_url.is_some(),
+            ReleaseField::Spotify => rec.spotify_id.is_some() || rec.spotify_url.is_some(),
+            ReleaseField::Lastfm => rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(),
+            ReleaseField::ArtistBio => rec
+                .artists
+                .as_array()
+                .and_then(|a| a.first())
+                .and_then(|a| a.get("biography"))
+                .map(|b| !b.is_null())
+                .unwrap_or(false),
+            ReleaseField::Description => release_description(rec).is_some(),
+            _ => !self.get(rec).is_empty(),
+        }
+    }
+}
+
+/// The stored Perplexity description (canonical top-level key, legacy `services` fallback).
+fn release_description(rec: &ReleaseRecord) -> Option<String> {
+    rec.raw_data
+        .get("perplexity")
+        .or_else(|| rec.raw_data.get("services").and_then(|s| s.get("perplexity")))
+        .and_then(|p| p.get("description"))
+        .and_then(|d| d.as_str())
+        .filter(|s| !s.is_empty())
+        .map(String::from)
 }
 
 fn first_artist_name(rec: &ReleaseRecord) -> String {
@@ -834,6 +951,17 @@ pub async fn refresh_release_field(
             download_image = true;
             found = true;
         }
+        // Hand-edited-only fields have no online source of their own (Discogs owns them; the
+        // Discogs row re-fetches the lot).
+        ReleaseField::Title
+        | ReleaseField::Year
+        | ReleaseField::Released
+        | ReleaseField::Country
+        | ReleaseField::Labels
+        | ReleaseField::Formats
+        | ReleaseField::Genres
+        | ReleaseField::Styles
+        | ReleaseField::DateAdded => {}
     }
 
     rec.raw_data = Value::Object(raw);
@@ -848,15 +976,35 @@ pub async fn refresh_release_field(
     Ok((rec, found))
 }
 
-/// Manually set (or clear, when `text` is blank) one release field. No network access.
+/// Manually set (or clear, when `text` is blank) one release field. Validates before saving —
+/// a returned `Err` carries a user-readable message and leaves the record untouched.
+/// No network access.
 pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: ReleaseField, text: &str) -> Result<ReleaseRecord> {
     let mut rec = rec.clone();
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
     match field {
+        ReleaseField::Title => {
+            let Some(title) = opt else { bail!("the title cannot be blank") };
+            let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+            if release_folder_name(&title, &id) != release_folder_name(&rec.title, &id) {
+                bail!("this title changes the public folder slug — folder renames are not supported yet");
+            }
+            // collection.json prefers the Discogs-sourced name, so a manual title covers both.
+            rec.title = title.clone();
+            rec.release_name_discogs = Some(title);
+        }
+        ReleaseField::Year => rec.year = crate::ops::parse_year(t)?,
+        ReleaseField::Released => rec.released = crate::ops::parse_date_ymd(t)?,
+        ReleaseField::Country => rec.country = opt,
+        ReleaseField::DateAdded => rec.date_added = crate::ops::parse_date_or_datetime(t)?,
         ReleaseField::Apple => rec.apple_music_url = opt,
         ReleaseField::Spotify => rec.spotify_url = opt,
         ReleaseField::Lastfm => rec.lastfm_url = opt,
+        ReleaseField::Labels => rec.labels = crate::ops::csv_list(t),
+        ReleaseField::Formats => rec.formats = crate::ops::csv_list(t),
+        ReleaseField::Genres => rec.genres = crate::ops::csv_list(t),
+        ReleaseField::Styles => rec.styles = crate::ops::csv_list(t),
         ReleaseField::Description => {
             let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
             match opt {

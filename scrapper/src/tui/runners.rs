@@ -242,7 +242,7 @@ pub(crate) async fn run_refresh_artist_field_task(
 
     log(format!("▶ {} — refreshing {}…", rec.name, field.label()));
     match crate::ops::artist::refresh_artist_field(&cfg, &services, &db, &client, &rec, field, &picker).await {
-        Ok((_, found)) => log(format!("  {} {}", if found { "✓ updated" } else { "– no data" }, field.label())),
+        Ok((rec, found)) => log(refresh_outcome(found, field.label(), &field.get(&rec))),
         Err(e) => log(format!("  ✗ {e}")),
     }
     let _ = tx.send(Msg::Done("detail_refresh".into()));
@@ -266,7 +266,7 @@ pub(crate) async fn run_refresh_release_field_task(
 
     log(format!("▶ {} — refreshing {}…", rec.title, field.label()));
     match crate::ops::release::refresh_release_field(&cfg, &services, &db, &client, &rec, field, &picker).await {
-        Ok((_, found)) => log(format!("  {} {}", if found { "✓ updated" } else { "– no data" }, field.label())),
+        Ok((rec, found)) => log(refresh_outcome(found, field.label(), &field.get(&rec))),
         Err(e) => log(format!("  ✗ {e}")),
     }
     let _ = tx.send(Msg::Done("detail_refresh".into()));
@@ -284,6 +284,15 @@ pub(crate) async fn run_regen_collection_task(cfg: Config, db: Db, tx: Unbounded
         Err(e) => log(format!("✗ collection.json refresh panicked: {e}")),
     }
     let _ = tx.send(Msg::Done("regen".into()));
+}
+
+/// Log line for a field refresh, naming the resulting value when there is one to show.
+fn refresh_outcome(found: bool, label: &str, value: &str) -> String {
+    match (found, value.is_empty()) {
+        (true, false) => format!("  ✓ {label} → {value}"),
+        (true, true) => format!("  ✓ updated {label}"),
+        (false, _) => format!("  – no data for {label}"),
+    }
 }
 
 /// Service tick that names the matched item, so auto- and picked matches are visible in the log.

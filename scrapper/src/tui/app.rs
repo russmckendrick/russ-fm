@@ -414,49 +414,22 @@ impl App {
         if !row.action.editable() {
             return;
         }
-        let initial = self.edit_buffer_for(row.action);
+        let initial = match (row.action, self.detail.as_ref()) {
+            (RowAction::Artist { field }, Some(DetailView::Artist(rec))) => field.get(rec),
+            (RowAction::Release { field }, Some(DetailView::Release(rec))) => field.get(rec),
+            _ => String::new(),
+        };
         self.edit = Some(PendingEdit::new(row.label, row.action, initial));
     }
 
-    /// Current stored value for a field, as editable text.
-    fn edit_buffer_for(&self, action: RowAction) -> String {
-        use crate::ops::artist::ArtistField as AF;
-        use crate::ops::release::ReleaseField as RF;
-        match (action, self.detail.as_ref()) {
-            (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => match field {
-                AF::Discogs => rec.discogs_id.clone().unwrap_or_default(),
-                AF::Apple => rec.apple_music_url.clone().unwrap_or_default(),
-                AF::Spotify => rec.spotify_url.clone().unwrap_or_default(),
-                AF::Lastfm => rec.lastfm_url.clone().unwrap_or_default(),
-                AF::Wikipedia => rec.wikipedia_url.clone().unwrap_or_default(),
-                AF::Biography => rec.biography.clone().unwrap_or_default(),
-                AF::Genres => rec.genres.as_array().map(|a| a.iter().filter_map(|g| g.as_str()).collect::<Vec<_>>().join(", ")).unwrap_or_default(),
-                _ => String::new(),
-            },
-            (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => match field {
-                RF::Apple => rec.apple_music_url.clone().unwrap_or_default(),
-                RF::Spotify => rec.spotify_url.clone().unwrap_or_default(),
-                RF::Lastfm => rec.lastfm_url.clone().unwrap_or_default(),
-                RF::Description => rec
-                    .raw_data
-                    .get("perplexity")
-                    .and_then(|p| p.get("description"))
-                    .and_then(|d| d.as_str())
-                    .unwrap_or_default()
-                    .to_string(),
-                _ => String::new(),
-            },
-            _ => String::new(),
-        }
-    }
-
-    /// Apply a manual edit synchronously, then reload the detail record.
-    pub(crate) fn apply_edit(&mut self, action: RowAction, text: &str) {
+    /// Apply a manual edit synchronously, then reload the detail record. A validation `Err`
+    /// carries the message for the edit overlay to display (nothing was saved).
+    pub(crate) fn apply_edit(&mut self, action: RowAction, text: &str) -> Result<(), String> {
         let result = match (action, self.detail.as_ref()) {
-            (RowAction::Artist { field, .. }, Some(DetailView::Artist(rec))) => {
+            (RowAction::Artist { field }, Some(DetailView::Artist(rec))) => {
                 crate::ops::artist::set_artist_value(&self.cfg, &self.db, rec, field, text).map(|(_, fanout)| fanout)
             }
-            (RowAction::Release { field, .. }, Some(DetailView::Release(rec))) => {
+            (RowAction::Release { field }, Some(DetailView::Release(rec))) => {
                 crate::ops::release::set_release_value(&self.cfg, &self.db, rec, field, text).map(|_| 0)
             }
             _ => Ok(0),
@@ -467,10 +440,11 @@ impl App {
                     self.artist_log.push(format!("✓ rewrote {fanout} embedding release JSON(s)"));
                 }
                 self.schedule_collection_regen();
+                self.refresh_detail();
+                Ok(())
             }
-            Err(e) => self.artist_log.push(format!("✗ edit failed: {e}")),
+            Err(e) => Err(e.to_string()),
         }
-        self.refresh_detail();
     }
 
     /// Trigger a whole-record re-enrich for the active detail view (`a`).

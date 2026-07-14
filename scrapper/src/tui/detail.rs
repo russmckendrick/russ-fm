@@ -19,22 +19,25 @@ pub(crate) enum DetailView {
     Artist(Box<ArtistRecord>),
 }
 
-/// The editor action a selectable row maps to.
+/// The editor action a selectable row maps to. Behaviour (refresh/edit/kind) lives on the
+/// field enums themselves — see `ReleaseField`/`ArtistField` in the ops layer.
 #[derive(Clone, Copy)]
 pub(crate) enum RowAction {
-    Artist { field: ArtistField, refreshable: bool, editable: bool },
-    Release { field: ReleaseField, refreshable: bool, editable: bool },
+    Artist { field: ArtistField },
+    Release { field: ReleaseField },
 }
 
 impl RowAction {
     pub(crate) fn refreshable(self) -> bool {
         match self {
-            RowAction::Artist { refreshable, .. } | RowAction::Release { refreshable, .. } => refreshable,
+            RowAction::Artist { field } => field.refreshable(),
+            RowAction::Release { field } => field.refreshable(),
         }
     }
     pub(crate) fn editable(self) -> bool {
         match self {
-            RowAction::Artist { editable, .. } | RowAction::Release { editable, .. } => editable,
+            RowAction::Artist { field } => field.editable(),
+            RowAction::Release { field } => field.editable(),
         }
     }
 }
@@ -135,71 +138,43 @@ fn file_exists(dir: &std::path::Path, name: &str) -> bool {
     dir.join(name).exists()
 }
 
-fn artist_field(label: &str, present: bool, value: impl Into<String>, field: ArtistField, refreshable: bool, editable: bool) -> DetailLine {
-    DetailLine::Field(DetailRow {
-        label: label.to_string(),
-        value: value.into(),
-        present,
-        action: RowAction::Artist { field, refreshable, editable },
-    })
-}
-
-fn release_field(label: &str, present: bool, value: impl Into<String>, field: ReleaseField, refreshable: bool, editable: bool) -> DetailLine {
-    DetailLine::Field(DetailRow {
-        label: label.to_string(),
-        value: value.into(),
-        present,
-        action: RowAction::Release { field, refreshable, editable },
-    })
-}
-
-fn join_strings(v: &serde_json::Value) -> String {
-    v.as_array()
-        .map(|a| a.iter().filter_map(|g| g.as_str()).collect::<Vec<_>>().join(", "))
-        .unwrap_or_default()
+/// Truncate a row value so one field can't dominate the panel (full text lives in the editor).
+fn preview(s: String, max: usize) -> String {
+    if s.chars().count() > max {
+        let cut: String = s.chars().take(max).collect();
+        format!("{cut}…")
+    } else {
+        s
+    }
 }
 
 fn artist_lines(app: &App, rec: &ArtistRecord) -> Vec<DetailLine> {
     let folder = sanitize_folder_name(&rec.name);
     let dir = app.cfg.artists_dir().join(&folder);
-    let genres = join_strings(&rec.genres);
     let lastfm = rec.raw_data.get("lastfm");
     let listeners = lastfm.and_then(|l| l.get("listeners")).and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|n| n.to_string())));
     let playcount = lastfm.and_then(|l| l.get("playcount")).and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|n| n.to_string())));
 
-    let mut lines = vec![
-        blank(),
-        heading(rec.name.clone()),
-        blank(),
-        artist_field("Discogs", rec.discogs_id.is_some(), opt(&rec.discogs_id), ArtistField::Discogs, true, true),
-        artist_field("Apple Music", rec.apple_music_id.is_some() || rec.apple_music_url.is_some(), opt(&rec.apple_music_url), ArtistField::Apple, true, true),
-        artist_field("Spotify", rec.spotify_id.is_some() || rec.spotify_url.is_some(), opt(&rec.spotify_url), ArtistField::Spotify, true, true),
-        artist_field("Last.fm", rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(), opt(&rec.lastfm_url), ArtistField::Lastfm, true, true),
-        artist_field("Wikipedia", rec.wikipedia_url.is_some(), opt(&rec.wikipedia_url), ArtistField::Wikipedia, true, true),
-        artist_field("Genres", !genres.is_empty(), genres, ArtistField::Genres, true, true),
-        artist_field(
-            "Popularity",
-            rec.popularity.is_some() || rec.followers.is_some(),
-            format!("{} · {} followers", rec.popularity.unwrap_or(0), rec.followers.unwrap_or(0)),
-            ArtistField::Popularity,
-            true,
-            false,
-        ),
-        artist_field("Biography", rec.biography.as_deref().map(|b| !b.is_empty()).unwrap_or(false), String::new(), ArtistField::Biography, true, true),
-        blank(),
-    ];
+    let mut lines = vec![blank(), heading(rec.name.clone()), blank()];
+    for field in ArtistField::all() {
+        // The hi-res badge reflects the file on disk; the biography renders in full below.
+        let (present, value) = match field {
+            ArtistField::Images => (file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()),
+            ArtistField::Biography => (field.present(rec), preview(field.get(rec), 60)),
+            _ => (field.present(rec), field.get(rec)),
+        };
+        lines.push(DetailLine::Field(DetailRow {
+            label: field.label().to_string(),
+            value,
+            present,
+            action: RowAction::Artist { field: *field },
+        }));
+    }
 
-    if let Some(c) = rec.country.as_deref().filter(|c| !c.is_empty()) {
-        lines.push(plain_field("Country", true, c.to_string()));
-    }
-    if let Some(d) = rec.formed_date.as_deref().filter(|d| !d.is_empty()) {
-        lines.push(plain_field("Formed", true, d.to_string()));
-    }
+    lines.push(blank());
     if listeners.is_some() || playcount.is_some() {
         lines.push(plain_field("Last.fm stats", true, format!("{} listeners · {} plays", listeners.unwrap_or_default(), playcount.unwrap_or_default())));
     }
-
-    lines.push(artist_field("Image hi-res", file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new(), ArtistField::Images, true, false));
     lines.push(plain_field("Image medium", file_exists(&dir, &format!("{folder}-medium.jpg")), String::new()));
     lines.push(plain_field("Image avatar", file_exists(&dir, &format!("{folder}-avatar.jpg")), String::new()));
     lines.push(plain_field("Public JSON", file_exists(&dir, &format!("{folder}.json")), dir.display().to_string()));
@@ -224,62 +199,31 @@ fn release_lines(app: &App, rec: &ReleaseRecord) -> Vec<DetailLine> {
         .as_array()
         .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
         .unwrap_or_default();
-    let tracks = rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0);
-    let videos = rec.videos.as_array().map(|a| a.len()).unwrap_or(0);
-    let bio_present = rec
-        .artists
-        .as_array()
-        .and_then(|a| a.first())
-        .and_then(|a| a.get("biography"))
-        .map(|b| !b.is_null())
-        .unwrap_or(false);
-    let perplexity = rec.raw_data.get("perplexity").is_some()
-        || rec.raw_data.get("services").and_then(|s| s.get("perplexity")).is_some();
 
     let mut lines = vec![
         blank(),
         heading(format!("{}  ({})", rec.title, rec.year.unwrap_or(0))),
         DetailLine::Plain(Line::from(Span::styled(format!("   {artists}"), theme::dim()))),
         blank(),
-        release_field("Discogs", rec.discogs_id.is_some(), opt(&rec.discogs_id), ReleaseField::Discogs, true, false),
-        release_field("Apple Music", rec.apple_music_id.is_some() || rec.apple_music_url.is_some(), opt(&rec.apple_music_url), ReleaseField::Apple, true, true),
-        release_field("Spotify", rec.spotify_id.is_some() || rec.spotify_url.is_some(), opt(&rec.spotify_url), ReleaseField::Spotify, true, true),
-        release_field("Last.fm", rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(), opt(&rec.lastfm_url), ReleaseField::Lastfm, true, true),
-        release_field("Tracks", tracks > 0, tracks.to_string(), ReleaseField::Tracks, true, false),
-        release_field("Videos", videos > 0, videos.to_string(), ReleaseField::Videos, true, false),
-        release_field("Artist bio", bio_present, String::new(), ReleaseField::ArtistBio, true, false),
-        release_field("Description", perplexity, if perplexity { "perplexity" } else { "" }, ReleaseField::Description, true, true),
-        blank(),
     ];
-
-    if let Some(r) = rec.released.as_deref().filter(|s| !s.is_empty()) {
-        lines.push(plain_field("Released", true, r.to_string()));
-    }
-    if let Some(c) = rec.country.as_deref().filter(|s| !s.is_empty()) {
-        lines.push(plain_field("Country", true, c.to_string()));
-    }
-    let labels = join_strings(&rec.labels);
-    if !labels.is_empty() {
-        lines.push(plain_field("Labels", true, labels));
-    }
-    let formats = join_strings(&rec.formats);
-    if !formats.is_empty() {
-        lines.push(plain_field("Formats", true, formats));
-    }
-    let genres = join_strings(&rec.genres);
-    if !genres.is_empty() {
-        lines.push(plain_field("Genres", true, genres));
-    }
-    let styles = join_strings(&rec.styles);
-    if !styles.is_empty() {
-        lines.push(plain_field("Styles", true, styles));
+    for field in ReleaseField::all() {
+        // The hi-res badge reflects the file on disk; the description gets a short preview.
+        let (present, value) = match field {
+            ReleaseField::Images => (file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new()),
+            ReleaseField::Description => (field.present(rec), preview(field.get(rec), 60)),
+            _ => (field.present(rec), field.get(rec)),
+        };
+        lines.push(DetailLine::Field(DetailRow {
+            label: field.label().to_string(),
+            value,
+            present,
+            action: RowAction::Release { field: *field },
+        }));
     }
 
     lines.push(blank());
-    lines.push(release_field("Image hi-res", file_exists(&dir, &format!("{folder}-hi-res.jpg")), String::new(), ReleaseField::Images, true, false));
     lines.push(plain_field("Image medium", file_exists(&dir, &format!("{folder}-medium.jpg")), String::new()));
     lines.push(plain_field("Public JSON", file_exists(&dir, &format!("{folder}.json")), dir.display().to_string()));
-    lines.push(plain_field("Added", rec.date_added.is_some(), opt(&rec.date_added)));
     lines.push(plain_field("Updated", rec.updated_at.is_some(), opt(&rec.updated_at)));
 
     push_log(app, &mut lines);

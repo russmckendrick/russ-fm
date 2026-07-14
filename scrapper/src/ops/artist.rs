@@ -375,6 +375,9 @@ async fn enrich_theaudiodb(services: &Services, name: &str) -> Option<Value> {
 /// A single editable/refreshable field of an [`ArtistRecord`], used by the TUI detail editor.
 #[derive(Clone, Copy, PartialEq, Eq)]
 pub enum ArtistField {
+    Name,
+    Country,
+    FormedDate,
     Discogs,
     Apple,
     Spotify,
@@ -382,14 +385,24 @@ pub enum ArtistField {
     Wikipedia,
     Genres,
     Popularity,
-    Images,
+    Followers,
     Biography,
+    Images,
 }
 
 impl ArtistField {
-    /// Human label used in log lines.
+    /// Every field in detail-view display order.
+    pub fn all() -> &'static [ArtistField] {
+        use ArtistField::*;
+        &[Name, Country, FormedDate, Discogs, Apple, Spotify, Lastfm, Wikipedia, Genres, Popularity, Followers, Biography, Images]
+    }
+
+    /// Human label used in row headers and log lines.
     pub fn label(self) -> &'static str {
         match self {
+            ArtistField::Name => "Name",
+            ArtistField::Country => "Country",
+            ArtistField::FormedDate => "Formed",
             ArtistField::Discogs => "Discogs",
             ArtistField::Apple => "Apple Music",
             ArtistField::Spotify => "Spotify",
@@ -397,8 +410,73 @@ impl ArtistField {
             ArtistField::Wikipedia => "Wikipedia",
             ArtistField::Genres => "Genres",
             ArtistField::Popularity => "Popularity",
-            ArtistField::Images => "Images",
+            ArtistField::Followers => "Followers",
             ArtistField::Biography => "Biography",
+            ArtistField::Images => "Image hi-res",
+        }
+    }
+
+    /// How the field is edited/validated.
+    pub fn kind(self) -> crate::ops::FieldKind {
+        use crate::ops::FieldKind::*;
+        match self {
+            ArtistField::Name | ArtistField::Country | ArtistField::Biography => Text,
+            ArtistField::Discogs | ArtistField::Apple | ArtistField::Spotify | ArtistField::Lastfm | ArtistField::Wikipedia => Text,
+            ArtistField::FormedDate => DateYmd,
+            ArtistField::Genres => CsvList,
+            ArtistField::Popularity | ArtistField::Followers => Int,
+            ArtistField::Images => RefreshOnly,
+        }
+    }
+
+    /// True when `refresh_artist_field` can re-fetch this field from its source.
+    pub fn refreshable(self) -> bool {
+        matches!(
+            self,
+            ArtistField::Discogs
+                | ArtistField::Apple
+                | ArtistField::Spotify
+                | ArtistField::Lastfm
+                | ArtistField::Wikipedia
+                | ArtistField::Genres
+                | ArtistField::Popularity
+                | ArtistField::Biography
+                | ArtistField::Images
+        )
+    }
+
+    /// True when the field can be edited by hand.
+    pub fn editable(self) -> bool {
+        self.kind() != crate::ops::FieldKind::RefreshOnly
+    }
+
+    /// Current stored value as editable text (the edit overlay's initial buffer).
+    pub fn get(self, rec: &ArtistRecord) -> String {
+        let opt = |o: &Option<String>| o.clone().unwrap_or_default();
+        match self {
+            ArtistField::Name => rec.name.clone(),
+            ArtistField::Country => opt(&rec.country),
+            ArtistField::FormedDate => opt(&rec.formed_date),
+            ArtistField::Discogs => opt(&rec.discogs_id),
+            ArtistField::Apple => opt(&rec.apple_music_url),
+            ArtistField::Spotify => opt(&rec.spotify_url),
+            ArtistField::Lastfm => opt(&rec.lastfm_url),
+            ArtistField::Wikipedia => opt(&rec.wikipedia_url),
+            ArtistField::Genres => rec.genres.as_array().map(|a| a.iter().filter_map(|g| g.as_str()).collect::<Vec<_>>().join(", ")).unwrap_or_default(),
+            ArtistField::Popularity => rec.popularity.map(|p| p.to_string()).unwrap_or_default(),
+            ArtistField::Followers => rec.followers.map(|f| f.to_string()).unwrap_or_default(),
+            ArtistField::Biography => opt(&rec.biography),
+            ArtistField::Images => String::new(),
+        }
+    }
+
+    /// Whether the field currently holds data (drives the ✓/· badge).
+    pub fn present(self, rec: &ArtistRecord) -> bool {
+        match self {
+            ArtistField::Apple => rec.apple_music_id.is_some() || rec.apple_music_url.is_some(),
+            ArtistField::Spotify => rec.spotify_id.is_some() || rec.spotify_url.is_some(),
+            ArtistField::Lastfm => rec.lastfm_mbid.is_some() || rec.lastfm_url.is_some(),
+            _ => !self.get(rec).is_empty(),
         }
     }
 }
@@ -572,6 +650,8 @@ pub async fn refresh_artist_field(
             download_image = true;
             found = true;
         }
+        // Hand-edited-only fields have no online source to refresh.
+        ArtistField::Name | ArtistField::Country | ArtistField::FormedDate | ArtistField::Followers => {}
     }
 
     rec.raw_data = Value::Object(raw);
@@ -585,25 +665,52 @@ pub async fn refresh_artist_field(
     Ok((rec, found))
 }
 
-/// Manually set (or clear, when `text` is blank) one artist field. No network access.
+/// Manually set (or clear, when `text` is blank) one artist field. Validates before saving —
+/// a returned `Err` carries a user-readable message and leaves the record untouched.
 /// Returns the saved record and how many embedding release JSONs were rewritten.
 pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: ArtistField, text: &str) -> Result<(ArtistRecord, usize)> {
     let mut rec = rec.clone();
     let t = text.trim();
     let opt = (!t.is_empty()).then(|| t.to_string());
     match field {
+        ArtistField::Name => {
+            let Some(name) = opt else { bail!("the artist name cannot be blank") };
+            if sanitize_folder_name(&name) != sanitize_folder_name(&rec.name) {
+                bail!("this name changes the public folder slug — folder renames are not supported yet");
+            }
+            rec.name = name;
+        }
+        ArtistField::Country => rec.country = opt,
+        ArtistField::FormedDate => rec.formed_date = crate::ops::parse_date_ymd(t)?,
         ArtistField::Discogs => rec.discogs_id = opt,
         ArtistField::Apple => rec.apple_music_url = opt,
         ArtistField::Spotify => rec.spotify_url = opt,
         ArtistField::Lastfm => rec.lastfm_url = opt,
         ArtistField::Wikipedia => rec.wikipedia_url = opt,
         ArtistField::Biography => rec.biography = opt,
-        ArtistField::Genres => {
-            let list: Vec<Value> = t.split(',').map(|g| g.trim()).filter(|g| !g.is_empty()).map(|g| json!(g)).collect();
-            rec.genres = Value::Array(list);
+        ArtistField::Genres => rec.genres = crate::ops::csv_list(t),
+        ArtistField::Popularity => {
+            rec.popularity = if t.is_empty() {
+                None
+            } else {
+                match t.parse::<i64>() {
+                    Ok(n) if (0..=100).contains(&n) => Some(n),
+                    _ => bail!("popularity is a number from 0 to 100"),
+                }
+            };
         }
-        // Popularity/Images are derived from sources — refresh them instead of editing by hand.
-        ArtistField::Popularity | ArtistField::Images => return Ok((rec, 0)),
+        ArtistField::Followers => {
+            rec.followers = if t.is_empty() {
+                None
+            } else {
+                match t.parse::<i64>() {
+                    Ok(n) if n >= 0 => Some(n),
+                    _ => bail!("followers must be a non-negative whole number"),
+                }
+            };
+        }
+        // Images are derived from sources — refresh them instead of editing by hand.
+        ArtistField::Images => return Ok((rec, 0)),
     }
     rec.updated_at = Some(now_iso());
     let fanout = persist_artist(cfg, db, &rec)?;

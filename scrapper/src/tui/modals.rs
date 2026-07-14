@@ -16,11 +16,13 @@ pub(crate) struct PendingEdit {
     pub(crate) label: String,
     pub(crate) action: RowAction,
     pub(crate) buffer: String,
+    /// Validation message from the last save attempt; the overlay stays open until it passes.
+    pub(crate) error: Option<String>,
 }
 
 impl PendingEdit {
     pub(crate) fn new(label: String, action: RowAction, initial: String) -> Self {
-        Self { label, action, buffer: initial }
+        Self { label, action, buffer: initial, error: None }
     }
 }
 
@@ -30,27 +32,41 @@ pub(crate) fn handle_edit_key(app: &mut App, code: KeyCode) {
     match code {
         KeyCode::Enter => {
             let (action, text) = (e.action, e.buffer.clone());
-            app.edit = None;
-            app.apply_edit(action, &text);
+            match app.apply_edit(action, &text) {
+                Ok(()) => app.edit = None,
+                Err(msg) => {
+                    if let Some(e) = app.edit.as_mut() {
+                        e.error = Some(msg);
+                    }
+                }
+            }
         }
         KeyCode::Esc => app.edit = None,
         KeyCode::Backspace => {
             e.buffer.pop();
+            e.error = None;
         }
-        KeyCode::Char(c) => e.buffer.push(c),
+        KeyCode::Char(c) => {
+            e.buffer.push(c);
+            e.error = None;
+        }
         _ => {}
     }
 }
 
 pub(crate) fn draw_edit(f: &mut Frame, area: Rect, app: &App) {
     let e = app.edit.as_ref().expect("edit active");
-    let rows = Layout::vertical([Constraint::Length(3), Constraint::Min(0)]).split(area);
+    let rows = Layout::vertical([Constraint::Length(3), Constraint::Length(2), Constraint::Min(0)]).split(area);
     let input = Paragraph::new(format!(" {}", e.buffer)).block(theme::panel(&format!("Edit {}", e.label)));
     f.render_widget(input, rows[0]);
+    if let Some(err) = &e.error {
+        let msg = Paragraph::new(format!(" ✗ {err}")).style(Style::default().fg(Color::Red)).wrap(Wrap { trim: true });
+        f.render_widget(msg, rows[1]);
+    }
     let help = Paragraph::new("Type to edit · Enter save · Esc cancel · an empty value clears the field")
         .style(theme::dim())
         .block(theme::panel("Help"));
-    f.render_widget(help, rows[1]);
+    f.render_widget(help, rows[2]);
 }
 
 /// A match-picker awaiting the user's choice.
