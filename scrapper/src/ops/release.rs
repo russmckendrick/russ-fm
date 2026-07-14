@@ -564,8 +564,14 @@ async fn enrich_apple(services: &Services, artist: &str, album: &str, picker: &M
         0
     };
     let item = data.get(idx)?;
+    Some(map_apple_album(item))
+}
+
+/// Map an Apple Music album resource (search hit or `get_album` item — same shape) into the
+/// stored `raw_data.apple_music` dict.
+fn map_apple_album(item: &Value) -> Value {
     let attrs = item.get("attributes").cloned().unwrap_or(json!({}));
-    Some(json!({
+    json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": attrs.get("name").cloned().unwrap_or(Value::Null),
         "url": attrs.get("url").cloned().unwrap_or(Value::Null),
@@ -576,7 +582,7 @@ async fn enrich_apple(services: &Services, artist: &str, album: &str, picker: &M
         "is_complete": attrs.get("isComplete").cloned().unwrap_or(json!(false)),
         "content_rating": attrs.get("contentRating").cloned().unwrap_or(Value::Null),
         "raw_attributes": attrs,
-    }))
+    })
 }
 
 /// Spotify: search by artist+album; pick the match (interactive) or take the first.
@@ -611,7 +617,13 @@ async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: 
         0
     };
     let item = items.get(idx)?;
-    Some(json!({
+    Some(map_spotify_album(item))
+}
+
+/// Map a Spotify album object (search hit or full `get_album` response — same shape, the full
+/// object additionally carries `popularity`) into the stored `raw_data.spotify` dict.
+fn map_spotify_album(item: &Value) -> Value {
+    json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": item.get("name").cloned().unwrap_or(Value::Null),
         "url": item.get("external_urls").and_then(|e| e.get("spotify")).cloned().unwrap_or(Value::Null),
@@ -621,7 +633,7 @@ async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: 
         "release_date": item.get("release_date").cloned().unwrap_or(Value::Null),
         "release_date_precision": item.get("release_date_precision").cloned().unwrap_or(Value::Null),
         "popularity": item.get("popularity").cloned().unwrap_or(Value::Null),
-    }))
+    })
 }
 
 /// Last.fm: album.getInfo, build the public service dict.
@@ -630,6 +642,11 @@ async fn enrich_lastfm(services: &Services, artist: &str, album: &str) -> Option
         return None;
     }
     let resp = services.lastfm.get_album_info(artist, album).await.ok()?;
+    map_lastfm_album(&resp)
+}
+
+/// Map a Last.fm `album.getInfo` response into the stored `raw_data.lastfm` dict.
+fn map_lastfm_album(resp: &Value) -> Option<Value> {
     let a = resp.get("album")?;
     let tags: Vec<Value> = a
         .get("tags")
@@ -745,7 +762,7 @@ impl ReleaseField {
         use crate::ops::FieldKind::*;
         match self {
             ReleaseField::Title | ReleaseField::Country | ReleaseField::Description => Text,
-            ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Text,
+            ReleaseField::Apple | ReleaseField::Spotify | ReleaseField::Lastfm => Service,
             ReleaseField::Year => Int,
             ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
             ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles => CsvList,
@@ -1028,6 +1045,101 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
         }
     }
     rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
+}
+
+/// Set a release's service identity from user input (a pasted URL or bare ID), re-fetching the
+/// full payload so the public `services{}` block stays consistent with the flat columns.
+/// Blank input clears the service entirely. Errors leave the record untouched.
+pub async fn set_release_service(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    rec: &ReleaseRecord,
+    field: ReleaseField,
+    input: &str,
+) -> Result<ReleaseRecord> {
+    use crate::ops::service_input;
+
+    let mut rec = rec.clone();
+    let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
+    let t = input.trim();
+    let mut download_image = false;
+
+    match field {
+        ReleaseField::Apple => {
+            if t.is_empty() {
+                rec.apple_music_id = None;
+                rec.apple_music_url = None;
+                rec.release_name_apple_music = None;
+                raw.remove("apple_music");
+            } else {
+                let id = service_input::apple_album_id(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected an Apple Music album URL or numeric album id"))?;
+                let resp = services.apple_music.get_album(&id).await.with_context(|| format!("fetching Apple Music album {id}"))?;
+                let item = resp
+                    .get("data")
+                    .and_then(|d| d.as_array())
+                    .and_then(|a| a.first())
+                    .ok_or_else(|| anyhow::anyhow!("Apple Music returned no album for id {id}"))?;
+                let a = map_apple_album(item);
+                rec.apple_music_id = a.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.apple_music_url = a.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.release_name_apple_music = a.get("name").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("apple_music".into(), a);
+                download_image = true;
+            }
+        }
+        ReleaseField::Spotify => {
+            if t.is_empty() {
+                rec.spotify_id = None;
+                rec.spotify_url = None;
+                rec.release_name_spotify = None;
+                raw.remove("spotify");
+            } else {
+                let id = service_input::spotify_album_id(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Spotify album URL, spotify:album: URI or 22-char id"))?;
+                let album = services.spotify.get_album(&id).await.with_context(|| format!("fetching Spotify album {id}"))?;
+                let s = map_spotify_album(&album);
+                rec.spotify_id = s.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.spotify_url = s.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.release_name_spotify = s.get("name").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("spotify".into(), s);
+                download_image = true;
+            }
+        }
+        ReleaseField::Lastfm => {
+            if t.is_empty() {
+                rec.lastfm_mbid = None;
+                rec.lastfm_url = None;
+                raw.remove("lastfm");
+            } else {
+                let (artist, album) = service_input::lastfm_album_parts(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Last.fm album URL like last.fm/music/<artist>/<album>"))?;
+                let resp = services
+                    .lastfm
+                    .get_album_info(&artist, &album)
+                    .await
+                    .with_context(|| format!("fetching Last.fm album {artist} — {album}"))?;
+                let l = map_lastfm_album(&resp).ok_or_else(|| anyhow::anyhow!("Last.fm returned no album for {artist} — {album}"))?;
+                rec.lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
+                rec.lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("lastfm".into(), l);
+            }
+        }
+        other => anyhow::bail!("{} is not a service identity field", other.label()),
+    }
+
+    rec.raw_data = Value::Object(raw);
+    rec.updated_at = Some(now_iso());
+
+    if download_image {
+        let id = rec.discogs_id.clone().unwrap_or_else(|| rec.id.clone());
+        let folder = release_folder_name(&rec.title, &id);
+        let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
+        let _ = images::download_release_hires(client, &cfg.releases_dir(), &folder, &rec.raw_data, target, None).await;
+    }
     write_release(cfg, db, rec)
 }
 

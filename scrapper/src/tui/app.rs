@@ -422,9 +422,36 @@ impl App {
         self.edit = Some(PendingEdit::new(row.label, row.action, initial));
     }
 
-    /// Apply a manual edit synchronously, then reload the detail record. A validation `Err`
-    /// carries the message for the edit overlay to display (nothing was saved).
+    /// Apply a manual edit, then reload the detail record. A validation `Err` carries the
+    /// message for the edit overlay to display (nothing was saved). Service-identity edits
+    /// re-fetch from the API, so they run as a background task instead of applying inline.
     pub(crate) fn apply_edit(&mut self, action: RowAction, text: &str) -> Result<(), String> {
+        use crate::ops::FieldKind;
+        match (action, self.detail.as_ref()) {
+            (RowAction::Release { field }, Some(DetailView::Release(rec))) if field.kind() == FieldKind::Service => {
+                let rec = (**rec).clone();
+                let input = text.to_string();
+                self.detail_busy = true;
+                self.artist_log.clear();
+                let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
+                tokio::spawn(async move {
+                    runners::run_set_release_service_task(cfg, db, tx, rec, field, input).await;
+                });
+                return Ok(());
+            }
+            (RowAction::Artist { field }, Some(DetailView::Artist(rec))) if field.kind() == FieldKind::Service => {
+                let rec = (**rec).clone();
+                let input = text.to_string();
+                self.detail_busy = true;
+                self.artist_log.clear();
+                let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
+                tokio::spawn(async move {
+                    runners::run_set_artist_service_task(cfg, db, tx, rec, field, input).await;
+                });
+                return Ok(());
+            }
+            _ => {}
+        }
         let result = match (action, self.detail.as_ref()) {
             (RowAction::Artist { field }, Some(DetailView::Artist(rec))) => {
                 crate::ops::artist::set_artist_value(&self.cfg, &self.db, rec, field, text).map(|(_, fanout)| fanout)

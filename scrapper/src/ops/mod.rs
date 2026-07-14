@@ -10,6 +10,7 @@ pub mod generate;
 pub mod maintenance;
 pub mod release;
 pub mod report;
+pub mod service_input;
 pub mod services;
 pub mod videos;
 

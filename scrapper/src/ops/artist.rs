@@ -285,8 +285,14 @@ async fn enrich_apple_artist(services: &Services, name: &str, picker: &MatchPick
         0
     };
     let item = data.get(idx)?;
+    Some(map_apple_artist(item))
+}
+
+/// Map an Apple Music artist resource (search hit or `get_artist` item — same shape) into the
+/// stored `raw_data.apple_music` dict.
+fn map_apple_artist(item: &Value) -> Value {
     let attrs = item.get("attributes").cloned().unwrap_or(json!({}));
-    Some(json!({
+    json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": attrs.get("name").cloned().unwrap_or(Value::Null),
         "url": attrs.get("url").cloned().unwrap_or(Value::Null),
@@ -294,7 +300,7 @@ async fn enrich_apple_artist(services: &Services, name: &str, picker: &MatchPick
         "genres": attrs.get("genreNames").cloned().unwrap_or(json!([])),
         "editorial_notes": attrs.get("editorialNotes").and_then(|e| e.get("standard")).cloned().unwrap_or(Value::Null),
         "origin": attrs.get("origin").cloned().unwrap_or(Value::Null),
-    }))
+    })
 }
 
 async fn enrich_spotify_artist(services: &Services, name: &str, picker: &MatchPicker) -> Option<Value> {
@@ -327,7 +333,13 @@ async fn enrich_spotify_artist(services: &Services, name: &str, picker: &MatchPi
         0
     };
     let item = items.get(idx)?;
-    Some(json!({
+    Some(map_spotify_artist(item))
+}
+
+/// Map a Spotify artist object (search hit or full `get_artist` response — same shape) into the
+/// stored `raw_data.spotify` dict.
+fn map_spotify_artist(item: &Value) -> Value {
+    json!({
         "id": item.get("id").cloned().unwrap_or(Value::Null),
         "name": item.get("name").cloned().unwrap_or(Value::Null),
         "url": item.get("external_urls").and_then(|e| e.get("spotify")).cloned().unwrap_or(Value::Null),
@@ -335,7 +347,7 @@ async fn enrich_spotify_artist(services: &Services, name: &str, picker: &MatchPi
         "followers": item.get("followers").and_then(|f| f.get("total")).cloned().unwrap_or(Value::Null),
         "genres": item.get("genres").cloned().unwrap_or(json!([])),
         "images": item.get("images").cloned().unwrap_or(json!([])),
-    }))
+    })
 }
 
 async fn enrich_lastfm_artist(services: &Services, name: &str) -> Option<Value> {
@@ -343,6 +355,11 @@ async fn enrich_lastfm_artist(services: &Services, name: &str) -> Option<Value> 
         return None;
     }
     let resp = services.lastfm.get_artist_info(name).await.ok()?;
+    map_lastfm_artist(&resp)
+}
+
+/// Map a Last.fm `artist.getInfo` response into the stored `raw_data.lastfm` dict.
+fn map_lastfm_artist(resp: &Value) -> Option<Value> {
     let a = resp.get("artist")?;
     Some(json!({
         "mbid": a.get("mbid").cloned().unwrap_or(Value::Null),
@@ -421,7 +438,7 @@ impl ArtistField {
         use crate::ops::FieldKind::*;
         match self {
             ArtistField::Name | ArtistField::Country | ArtistField::Biography => Text,
-            ArtistField::Discogs | ArtistField::Apple | ArtistField::Spotify | ArtistField::Lastfm | ArtistField::Wikipedia => Text,
+            ArtistField::Discogs | ArtistField::Apple | ArtistField::Spotify | ArtistField::Lastfm | ArtistField::Wikipedia => Service,
             ArtistField::FormedDate => DateYmd,
             ArtistField::Genres => CsvList,
             ArtistField::Popularity | ArtistField::Followers => Int,
@@ -713,6 +730,132 @@ pub fn set_artist_value(cfg: &Config, db: &Db, rec: &ArtistRecord, field: Artist
         ArtistField::Images => return Ok((rec, 0)),
     }
     rec.updated_at = Some(now_iso());
+    let fanout = persist_artist(cfg, db, &rec)?;
+    Ok((rec, fanout))
+}
+
+/// Set an artist's service identity from user input (a pasted URL or bare ID), re-fetching the
+/// full payload so `services{}`/`raw_data` stay consistent with the flat columns. Blank input
+/// clears the service. Errors leave the record untouched. Returns the saved record and the
+/// embedding-release fan-out count.
+pub async fn set_artist_service(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    rec: &ArtistRecord,
+    field: ArtistField,
+    input: &str,
+) -> Result<(ArtistRecord, usize)> {
+    use crate::ops::service_input;
+
+    let mut rec = rec.clone();
+    let mut raw: Map<String, Value> = rec.raw_data.as_object().cloned().unwrap_or_default();
+    let t = input.trim();
+    let mut download_image = false;
+
+    match field {
+        ArtistField::Discogs => {
+            if t.is_empty() {
+                rec.discogs_id = None;
+                rec.discogs_url = None;
+                raw.remove("discogs");
+            } else {
+                let id = service_input::discogs_artist_id(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Discogs artist URL or numeric artist id"))?;
+                let d = services.discogs.get_artist(&id).await.with_context(|| format!("fetching Discogs artist {id}"))?;
+                rec.discogs_id = d.get("id").map(|i| i.to_string());
+                rec.discogs_url = d.get("uri").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("discogs".into(), d);
+            }
+        }
+        ArtistField::Apple => {
+            if t.is_empty() {
+                rec.apple_music_id = None;
+                rec.apple_music_url = None;
+                raw.remove("apple_music");
+            } else {
+                let id = service_input::apple_artist_id(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected an Apple Music artist URL or numeric artist id"))?;
+                let resp = services.apple_music.get_artist(&id).await.with_context(|| format!("fetching Apple Music artist {id}"))?;
+                let item = resp
+                    .get("data")
+                    .and_then(|d| d.as_array())
+                    .and_then(|a| a.first())
+                    .ok_or_else(|| anyhow::anyhow!("Apple Music returned no artist for id {id}"))?;
+                let a = map_apple_artist(item);
+                rec.apple_music_id = a.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.apple_music_url = a.get("url").and_then(|v| v.as_str()).map(String::from);
+                let cur_spotify = raw.get("spotify").cloned();
+                rec.genres = derive_genres(cur_spotify.as_ref(), Some(&a));
+                rec.images = derive_artist_images(cur_spotify.as_ref(), Some(&a));
+                raw.insert("apple_music".into(), a);
+                download_image = true;
+            }
+        }
+        ArtistField::Spotify => {
+            if t.is_empty() {
+                rec.spotify_id = None;
+                rec.spotify_url = None;
+                raw.remove("spotify");
+            } else {
+                let id = service_input::spotify_artist_id(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Spotify artist URL, spotify:artist: URI or 22-char id"))?;
+                let artist = services.spotify.get_artist(&id).await.with_context(|| format!("fetching Spotify artist {id}"))?;
+                let s = map_spotify_artist(&artist);
+                rec.spotify_id = s.get("id").and_then(|v| v.as_str()).map(String::from);
+                rec.spotify_url = s.get("url").and_then(|v| v.as_str()).map(String::from);
+                rec.popularity = s.get("popularity").and_then(|v| v.as_i64());
+                rec.followers = s.get("followers").and_then(|v| v.as_i64());
+                let cur_apple = raw.get("apple_music").cloned();
+                rec.genres = derive_genres(Some(&s), cur_apple.as_ref());
+                rec.images = derive_artist_images(Some(&s), cur_apple.as_ref());
+                raw.insert("spotify".into(), s);
+                download_image = true;
+            }
+        }
+        ArtistField::Lastfm => {
+            if t.is_empty() {
+                rec.lastfm_mbid = None;
+                rec.lastfm_url = None;
+                raw.remove("lastfm");
+            } else {
+                let name = service_input::lastfm_artist_name(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Last.fm artist URL or artist name"))?;
+                let resp = services.lastfm.get_artist_info(&name).await.with_context(|| format!("fetching Last.fm artist {name}"))?;
+                let l = map_lastfm_artist(&resp).ok_or_else(|| anyhow::anyhow!("Last.fm returned no artist for {name}"))?;
+                rec.lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
+                rec.lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
+                raw.insert("lastfm".into(), l);
+            }
+        }
+        ArtistField::Wikipedia => {
+            if t.is_empty() {
+                rec.wikipedia_url = None;
+            } else {
+                let title = service_input::wikipedia_title(t)
+                    .ok_or_else(|| anyhow::anyhow!("expected a Wikipedia article URL or page title"))?;
+                let w = enrich_wikipedia(services, &title)
+                    .await
+                    .ok_or_else(|| anyhow::anyhow!("Wikipedia has no usable summary for \"{title}\""))?;
+                if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
+                    rec.wikipedia_url = Some(u.to_string());
+                }
+                if let Some(bio) = w.get("biography").and_then(|b| b.as_str()) {
+                    rec.biography = Some(bio.to_string());
+                }
+            }
+        }
+        other => anyhow::bail!("{} is not a service identity field", other.label()),
+    }
+
+    rec.raw_data = Value::Object(raw);
+    rec.updated_at = Some(now_iso());
+
+    if download_image {
+        let folder = sanitize_folder_name(&rec.name);
+        let _ = images::download_artist_hires(client, &cfg.artists_dir(), &folder, &rec.raw_data, 2000, None).await;
+    }
     let fanout = persist_artist(cfg, db, &rec)?;
     Ok((rec, fanout))
 }

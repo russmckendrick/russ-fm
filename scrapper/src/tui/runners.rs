@@ -286,6 +286,57 @@ pub(crate) async fn run_regen_collection_task(cfg: Config, db: Db, tx: Unbounded
     let _ = tx.send(Msg::Done("regen".into()));
 }
 
+/// Apply a release service-identity edit (URL/ID → parse → fetch → persist) in the background.
+pub(crate) async fn run_set_release_service_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    rec: ReleaseRecord,
+    field: ReleaseField,
+    input: String,
+) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let services = Services::new(&cfg);
+    let client = image_client();
+
+    log(format!("▶ {} — setting {}…", rec.title, field.label()));
+    match crate::ops::release::set_release_service(&cfg, &services, &db, &client, &rec, field, &input).await {
+        Ok(rec) => log(refresh_outcome(true, field.label(), &field.get(&rec))),
+        Err(e) => log(format!("  ✗ {e}")),
+    }
+    let _ = tx.send(Msg::Done("detail_refresh".into()));
+}
+
+/// Apply an artist service-identity edit (URL/ID → parse → fetch → persist) in the background.
+pub(crate) async fn run_set_artist_service_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    rec: ArtistRecord,
+    field: ArtistField,
+    input: String,
+) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let services = Services::new(&cfg);
+    let client = image_client();
+
+    log(format!("▶ {} — setting {}…", rec.name, field.label()));
+    match crate::ops::artist::set_artist_service(&cfg, &services, &db, &client, &rec, field, &input).await {
+        Ok((rec, fanout)) => {
+            log(refresh_outcome(true, field.label(), &field.get(&rec)));
+            if fanout > 0 {
+                log(format!("  ✓ rewrote {fanout} embedding release JSON(s)"));
+            }
+        }
+        Err(e) => log(format!("  ✗ {e}")),
+    }
+    let _ = tx.send(Msg::Done("detail_refresh".into()));
+}
+
 /// Log line for a field refresh, naming the resulting value when there is one to show.
 fn refresh_outcome(found: bool, label: &str, value: &str) -> String {
     match (found, value.is_empty()) {
