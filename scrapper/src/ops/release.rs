@@ -471,6 +471,8 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     if args.save {
         let folder = release_folder_name(&rec.title, &args.discogs_id);
         println!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
+        let n = crate::output::collection::regenerate(cfg, &db)?;
+        println!("Refreshed collection.json ({n} entries)");
     } else {
         println!("\n(dry view — pass --save to write to the database, JSON and artwork)");
     }

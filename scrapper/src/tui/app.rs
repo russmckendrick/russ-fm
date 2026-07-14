@@ -120,6 +120,10 @@ pub(crate) struct App {
     pub(crate) artist_running: bool,
     pub(crate) artist_limit: String,
 
+    // collection.json regeneration (debounced: one run at a time, dirty re-runs)
+    pub(crate) regen_running: bool,
+    pub(crate) regen_dirty: bool,
+
     // interactive modals
     pub(crate) pending: Option<PendingPick>,
     pub(crate) describe: Option<PendingDescribe>,
@@ -165,6 +169,8 @@ impl App {
             artist_progress: None,
             artist_running: false,
             artist_limit: "10".into(),
+            regen_running: false,
+            regen_dirty: false,
             pending: None,
             describe: None,
             autostart: false,
@@ -321,6 +327,21 @@ impl App {
         });
     }
 
+    /// Refresh collection.json off the UI thread after a mutating action. Debounced: while a
+    /// regeneration is running further requests just mark it dirty, and completion re-runs once.
+    pub(crate) fn schedule_collection_regen(&mut self) {
+        if self.regen_running {
+            self.regen_dirty = true;
+            return;
+        }
+        self.regen_running = true;
+        self.regen_dirty = false;
+        let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
+        tokio::spawn(async move {
+            runners::run_regen_collection_task(cfg, db, tx).await;
+        });
+    }
+
     // ── detail editor ────────────────────────────────────────────────────────
 
     /// The selectable rows of the active detail view.
@@ -440,8 +461,9 @@ impl App {
             }
             _ => Ok(()),
         };
-        if let Err(e) = result {
-            self.artist_log.push(format!("✗ edit failed: {e}"));
+        match result {
+            Ok(()) => self.schedule_collection_regen(),
+            Err(e) => self.artist_log.push(format!("✗ edit failed: {e}")),
         }
         self.refresh_detail();
     }
@@ -551,12 +573,20 @@ impl App {
                     "artist_run" => {
                         self.artist_running = false;
                         self.artist_log.push("— run complete —".into());
+                        self.schedule_collection_regen();
+                    }
+                    "regen" => {
+                        self.regen_running = false;
+                        if self.regen_dirty {
+                            self.schedule_collection_regen();
+                        }
                     }
                     _ => {
                         // artist_one | release_one | detail_refresh
                         self.detail_busy = false;
                         self.artist_log.push("— done —".into());
                         self.refresh_detail();
+                        self.schedule_collection_regen();
                     }
                 },
             }

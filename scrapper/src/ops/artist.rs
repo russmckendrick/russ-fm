@@ -40,6 +40,8 @@ pub async fn run(cfg: &Config, args: ArtistArgs) -> Result<()> {
     if args.save {
         let folder = sanitize_folder_name(&rec.name);
         println!("\nSaved to DB and wrote {}/{folder}/", cfg.artists_dir().display());
+        let n = crate::output::collection::regenerate(cfg, &db)?;
+        println!("Refreshed collection.json ({n} entries)");
     } else {
         println!("\n(dry view — pass --save to write to the database, JSON and image)");
     }
@@ -92,6 +94,10 @@ pub async fn run_batch(cfg: &Config, args: ArtistBatchArgs) -> Result<()> {
     }
 
     println!("\nDone: {ok}/{total} artists processed.");
+    if args.save && ok > 0 {
+        let n = crate::output::collection::regenerate(cfg, &db)?;
+        println!("Refreshed collection.json ({n} entries)");
+    }
     Ok(())
 }
 

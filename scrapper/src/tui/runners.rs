@@ -272,6 +272,20 @@ pub(crate) async fn run_refresh_release_field_task(
     let _ = tx.send(Msg::Done("detail_refresh".into()));
 }
 
+/// Rebuild collection.json off the UI thread (a full DB scan) after a mutating detail action.
+pub(crate) async fn run_regen_collection_task(cfg: Config, db: Db, tx: UnboundedSender<Msg>) {
+    let log = |s: String| {
+        let _ = tx.send(Msg::ArtistLog(s));
+    };
+    let result = tokio::task::spawn_blocking(move || crate::output::collection::regenerate(&cfg, &db)).await;
+    match result {
+        Ok(Ok(n)) => log(format!("✓ collection.json refreshed ({n} entries)")),
+        Ok(Err(e)) => log(format!("✗ collection.json refresh failed: {e}")),
+        Err(e) => log(format!("✗ collection.json refresh panicked: {e}")),
+    }
+    let _ = tx.send(Msg::Done("regen".into()));
+}
+
 /// Service tick that names the matched item, so auto- and picked matches are visible in the log.
 fn svc_mark(found: bool, name: Option<&str>) -> String {
     match (found, name) {

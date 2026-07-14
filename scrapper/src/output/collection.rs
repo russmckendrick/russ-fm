@@ -9,6 +9,12 @@ use crate::db::{ArtistRecord, Db, ReleaseRecord};
 use crate::sanitize::{release_folder_name, sanitize_folder_name};
 use crate::Config;
 
+/// Regenerate the frontend index at `<data>/collection.json` (the canonical location every
+/// mutating action must refresh). Returns the entry count.
+pub fn regenerate(cfg: &Config, db: &Db) -> Result<usize> {
+    generate(cfg, db, &cfg.data_dir().join("collection.json"))
+}
+
 /// Generate collection.json into `output_path`. Returns the entry count.
 pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<usize> {
     let releases = db.get_all_releases().context("loading releases")?;
