@@ -543,7 +543,7 @@ async fn enrich_apple(services: &Services, artist: &str, album: &str, picker: &M
     if data.is_empty() {
         return None;
     }
-    let idx = if picker.is_interactive() && data.len() > 1 {
+    let idx = if picker.is_interactive() {
         let rows: Vec<Vec<String>> = data
             .iter()
             .map(|i| {
@@ -587,7 +587,7 @@ async fn enrich_spotify(services: &Services, artist: &str, album: &str, picker: 
     if items.is_empty() {
         return None;
     }
-    let idx = if picker.is_interactive() && items.len() > 1 {
+    let idx = if picker.is_interactive() {
         let rows: Vec<Vec<String>> = items
             .iter()
             .map(|i| {
@@ -872,4 +872,19 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
     }
     rec.updated_at = Some(now_iso());
     write_release(cfg, db, rec)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Headless contract: `MatchPicker::First` never prompts and always takes the first
+    /// candidate, so widening the interactive picker gate cannot change CLI/cron output.
+    #[tokio::test]
+    async fn first_picker_is_non_interactive_and_takes_index_zero() {
+        let picker = MatchPicker::First;
+        assert!(!picker.is_interactive());
+        let rows = vec![vec!["A".to_string()], vec!["B".to_string()]];
+        assert_eq!(picker.pick("test", &["Title"], &rows).await, Some(0));
+    }
 }

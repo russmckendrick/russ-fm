@@ -235,7 +235,7 @@ async fn discogs_artist(services: &Services, name: &str, picker: &MatchPicker) -
     if results.is_empty() {
         return None;
     }
-    let idx = if picker.is_interactive() && results.len() > 1 {
+    let idx = if picker.is_interactive() {
         let rows: Vec<Vec<String>> = results
             .iter()
             .map(|r| {
@@ -263,7 +263,7 @@ async fn enrich_apple_artist(services: &Services, name: &str, picker: &MatchPick
     if data.is_empty() {
         return None;
     }
-    let idx = if picker.is_interactive() && data.len() > 1 {
+    let idx = if picker.is_interactive() {
         let rows: Vec<Vec<String>> = data
             .iter()
             .map(|item| {
@@ -304,7 +304,7 @@ async fn enrich_spotify_artist(services: &Services, name: &str, picker: &MatchPi
     if items.is_empty() {
         return None;
     }
-    let idx = if picker.is_interactive() && items.len() > 1 {
+    let idx = if picker.is_interactive() {
         let rows: Vec<Vec<String>> = items
             .iter()
             .map(|item| {

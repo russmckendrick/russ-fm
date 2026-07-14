@@ -71,7 +71,9 @@ pub(crate) async fn run_collection_task(
                 log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
                 log(format!(
                     "    apple {} · spotify {} · lastfm {} · wiki {} · perplexity {} · artwork {} · saved ✓",
-                    m(f.apple), m(f.spotify), m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
+                    svc_mark(f.apple, rec.release_name_apple_music.as_deref()),
+                    svc_mark(f.spotify, rec.release_name_spotify.as_deref()),
+                    m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
                 ));
             }
             Err(e) => log(format!("  ✗ {id} — {e}")),
@@ -212,7 +214,9 @@ pub(crate) async fn run_single_release_task(
             log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
             log(format!(
                 "    apple {} · spotify {} · lastfm {} · wiki {} · perplexity {} · artwork {} · saved ✓",
-                m(f.apple), m(f.spotify), m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
+                svc_mark(f.apple, rec.release_name_apple_music.as_deref()),
+                svc_mark(f.spotify, rec.release_name_spotify.as_deref()),
+                m(f.lastfm), m(f.wikipedia), m(f.perplexity), m(f.image)
             ));
         }
         Err(e) => log(format!("  ✗ {e}")),
@@ -266,6 +270,15 @@ pub(crate) async fn run_refresh_release_field_task(
         Err(e) => log(format!("  ✗ {e}")),
     }
     let _ = tx.send(Msg::Done("detail_refresh".into()));
+}
+
+/// Service tick that names the matched item, so auto- and picked matches are visible in the log.
+fn svc_mark(found: bool, name: Option<&str>) -> String {
+    match (found, name) {
+        (true, Some(n)) if !n.is_empty() => format!("✓ \"{n}\""),
+        (true, _) => "✓".into(),
+        (false, _) => "–".into(),
+    }
 }
 
 fn first_artist(artists: &serde_json::Value) -> String {
