@@ -114,7 +114,7 @@ fn handle_detail_key(app: &mut App, code: KeyCode) {
         KeyCode::Up => app.move_detail_selection(-1),
         KeyCode::Down => app.move_detail_selection(1),
         KeyCode::Char('r') => app.refresh_selected_field(),
-        KeyCode::Char('e') => app.edit_selected_field(),
+        KeyCode::Enter | KeyCode::Char('e') => app.edit_selected_field(),
         KeyCode::Char('a') => app.refresh_all_detail(),
         KeyCode::Esc => pop_nav(app),
         _ => {}

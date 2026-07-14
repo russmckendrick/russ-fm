@@ -101,7 +101,7 @@ fn draw(f: &mut Frame, app: &mut App) {
     }
     if app.detail.is_some() {
         detail::draw_detail(f, body, app);
-        theme::footer(f, foot, "↑/↓ select · r refresh line · e edit · a refresh all · Esc back");
+        theme::footer(f, foot, "↑/↓ select · Enter/e edit (saves immediately) · r refresh line · a refresh all · Esc back");
         return;
     }
 

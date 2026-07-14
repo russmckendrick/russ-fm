@@ -470,8 +470,10 @@ impl ArtistField {
             ArtistField::Country => opt(&rec.country),
             ArtistField::FormedDate => opt(&rec.formed_date),
             ArtistField::Discogs => opt(&rec.discogs_id),
-            ArtistField::Apple => opt(&rec.apple_music_url),
-            ArtistField::Spotify => opt(&rec.spotify_url),
+            // Fall back to the bare ID when no URL is stored — both display and the service
+            // editor accept either form, and a checked-but-blank row reads as missing data.
+            ArtistField::Apple => rec.apple_music_url.clone().or_else(|| rec.apple_music_id.clone()).unwrap_or_default(),
+            ArtistField::Spotify => rec.spotify_url.clone().or_else(|| rec.spotify_id.clone()).unwrap_or_default(),
             ArtistField::Lastfm => opt(&rec.lastfm_url),
             ArtistField::Wikipedia => opt(&rec.wikipedia_url),
             ArtistField::Genres => rec.genres.as_array().map(|a| a.iter().filter_map(|g| g.as_str()).collect::<Vec<_>>().join(", ")).unwrap_or_default(),

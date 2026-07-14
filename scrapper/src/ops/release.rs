@@ -711,6 +711,8 @@ pub enum ReleaseField {
     Year,
     Released,
     Country,
+    /// The release's artist credits (name / discogs id / role rows).
+    Artists,
     /// Re-fetch the Discogs release (refreshes tracklist, videos and artwork sources).
     Discogs,
     Apple,
@@ -733,8 +735,8 @@ impl ReleaseField {
     pub fn all() -> &'static [ReleaseField] {
         use ReleaseField::*;
         &[
-            Title, Year, Released, Country, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles, Tracks,
-            Videos, ArtistBio, Description, DateAdded, Images,
+            Title, Year, Released, Country, Artists, Discogs, Apple, Spotify, Lastfm, Labels, Formats, Genres, Styles,
+            Tracks, Videos, ArtistBio, Description, DateAdded, Images,
         ]
     }
 
@@ -745,6 +747,7 @@ impl ReleaseField {
             ReleaseField::Year => "Year",
             ReleaseField::Released => "Released",
             ReleaseField::Country => "Country",
+            ReleaseField::Artists => "Artists",
             ReleaseField::Discogs => "Discogs",
             ReleaseField::Apple => "Apple Music",
             ReleaseField::Spotify => "Spotify",
@@ -771,7 +774,7 @@ impl ReleaseField {
             ReleaseField::Year => Int,
             ReleaseField::Released | ReleaseField::DateAdded => DateYmd,
             ReleaseField::Labels | ReleaseField::Formats | ReleaseField::Genres | ReleaseField::Styles => CsvList,
-            ReleaseField::Tracks | ReleaseField::Videos => Structured,
+            ReleaseField::Artists | ReleaseField::Tracks | ReleaseField::Videos => Structured,
             ReleaseField::Discogs | ReleaseField::ArtistBio | ReleaseField::Images => RefreshOnly,
         }
     }
@@ -806,9 +809,16 @@ impl ReleaseField {
             ReleaseField::Year => rec.year.map(|y| y.to_string()).unwrap_or_default(),
             ReleaseField::Released => opt(&rec.released),
             ReleaseField::Country => opt(&rec.country),
+            ReleaseField::Artists => rec
+                .artists
+                .as_array()
+                .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
+                .unwrap_or_default(),
             ReleaseField::Discogs => opt(&rec.discogs_id),
-            ReleaseField::Apple => opt(&rec.apple_music_url),
-            ReleaseField::Spotify => opt(&rec.spotify_url),
+            // Fall back to the bare ID when no URL is stored — both display and the service
+            // editor accept either form, and a checked-but-blank row reads as missing data.
+            ReleaseField::Apple => rec.apple_music_url.clone().or_else(|| rec.apple_music_id.clone()).unwrap_or_default(),
+            ReleaseField::Spotify => rec.spotify_url.clone().or_else(|| rec.spotify_id.clone()).unwrap_or_default(),
             ReleaseField::Lastfm => opt(&rec.lastfm_url),
             ReleaseField::Labels => csv(&rec.labels),
             ReleaseField::Formats => csv(&rec.formats),
@@ -990,6 +1000,7 @@ pub async fn refresh_release_field(
         | ReleaseField::Year
         | ReleaseField::Released
         | ReleaseField::Country
+        | ReleaseField::Artists
         | ReleaseField::Labels
         | ReleaseField::Formats
         | ReleaseField::Genres
@@ -1060,10 +1071,13 @@ pub fn set_release_value(cfg: &Config, db: &Db, rec: &ReleaseRecord, field: Rele
             }
             rec.raw_data = Value::Object(raw);
         }
-        // Discogs-owned and derived fields are refresh-only.
-        ReleaseField::Discogs | ReleaseField::Tracks | ReleaseField::Videos | ReleaseField::ArtistBio | ReleaseField::Images => {
-            return Ok(rec)
-        }
+        // Structured fields are edited in the list overlay; refresh-only fields via `r`.
+        ReleaseField::Artists
+        | ReleaseField::Discogs
+        | ReleaseField::Tracks
+        | ReleaseField::Videos
+        | ReleaseField::ArtistBio
+        | ReleaseField::Images => return Ok(rec),
     }
     rec.updated_at = Some(now_iso());
     write_release(cfg, db, rec)
@@ -1089,6 +1103,66 @@ pub fn rows_to_tracklist(rows: &[Vec<String>]) -> Value {
             })
             .collect(),
     )
+}
+
+/// Rows for the structured artist-credits editor: `[name, discogs_id, role]` per credit.
+pub fn artists_to_rows(artists: &Value) -> Vec<Vec<String>> {
+    let cell = |a: &Value, key: &str| {
+        a.get(key)
+            .map(|v| v.as_str().map(String::from).unwrap_or_else(|| if v.is_null() { String::new() } else { v.to_string() }))
+            .unwrap_or_default()
+    };
+    artists
+        .as_array()
+        .map(|arr| arr.iter().map(|a| vec![cell(a, "name"), cell(a, "discogs_id"), cell(a, "role")]).collect())
+        .unwrap_or_default()
+}
+
+/// Editor rows back to the stored artist-credit entries. Extra keys carried on an existing entry
+/// (embedded biography / wikipedia_url from enrichment) are preserved by re-matching rows to the
+/// original entries via discogs_id first, then case-insensitive name.
+pub fn rows_to_release_artists(original: &Value, rows: &[Vec<String>]) -> Result<Value> {
+    let originals: Vec<Value> = original.as_array().cloned().unwrap_or_default();
+    let mut out = Vec::new();
+    for r in rows {
+        let cell = |i: usize| r.get(i).map(|s| s.trim()).unwrap_or("");
+        let (name, discogs_id, role) = (cell(0), cell(1), cell(2));
+        if name.is_empty() && discogs_id.is_empty() && role.is_empty() {
+            continue;
+        }
+        if name.is_empty() {
+            bail!("every artist credit needs a name");
+        }
+        let matched = originals
+            .iter()
+            .find(|o| !discogs_id.is_empty() && o.get("discogs_id").and_then(|d| d.as_str()) == Some(discogs_id))
+            .or_else(|| {
+                originals
+                    .iter()
+                    .find(|o| o.get("name").and_then(|n| n.as_str()).is_some_and(|n| n.eq_ignore_ascii_case(name)))
+            });
+        let mut entry = matched.and_then(|o| o.as_object().cloned()).unwrap_or_default();
+        entry.insert("name".into(), json!(name));
+        if discogs_id.is_empty() {
+            entry.remove("discogs_id");
+        } else {
+            entry.insert("discogs_id".into(), json!(discogs_id));
+        }
+        entry.insert("role".into(), json!(role));
+        out.push(Value::Object(entry));
+    }
+    if out.is_empty() {
+        bail!("a release needs at least one artist credit");
+    }
+    Ok(Value::Array(out))
+}
+
+/// Save hand-edited artist credits from the structured editor.
+pub fn set_release_artists(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
+    let mut rec = rec.clone();
+    rec.artists = rows_to_release_artists(&rec.artists, rows)?;
+    rec.updated_at = Some(now_iso());
+    write_release(cfg, db, rec)
 }
 
 /// Rows for the structured videos editor: one URL column (the stored/published shape is a flat
@@ -1253,6 +1327,31 @@ mod tests {
 
         let with_blank = vec![vec!["A1".into(), "Song".into(), "".into()], vec!["  ".into(), "".into(), "".into()]];
         assert_eq!(rows_to_tracklist(&with_blank).as_array().unwrap().len(), 1);
+    }
+
+    #[test]
+    fn artist_rows_round_trip_and_preserve_enrichment_keys() {
+        let stored = json!([
+            { "name": "Grandaddy", "discogs_id": "12345", "role": "", "biography": "kept bio", "wikipedia_url": "https://w" },
+            { "name": "Guest", "role": "featuring" },
+        ]);
+        let rows = artists_to_rows(&stored);
+        assert_eq!(rows, vec![vec!["Grandaddy", "12345", ""], vec!["Guest", "", "featuring"]]);
+
+        // Rename the first credit (id match) and edit the second's role (name match).
+        let edited = vec![
+            vec!["Granddaddy Renamed".into(), "12345".into(), "".into()],
+            vec!["guest".into(), "".into(), "producer".into()],
+        ];
+        let back = rows_to_release_artists(&stored, &edited).unwrap();
+        let arr = back.as_array().unwrap();
+        assert_eq!(arr[0].get("name"), Some(&json!("Granddaddy Renamed")));
+        assert_eq!(arr[0].get("biography"), Some(&json!("kept bio")), "embedded enrichment preserved");
+        assert_eq!(arr[1].get("role"), Some(&json!("producer")));
+
+        // Validation: blank rows dropped, nameless rows and empty lists rejected.
+        assert!(rows_to_release_artists(&stored, &[vec!["".into(), "99".into(), "".into()]]).is_err());
+        assert!(rows_to_release_artists(&stored, &[vec!["  ".into(), "".into(), "".into()]]).is_err());
     }
 
     #[test]

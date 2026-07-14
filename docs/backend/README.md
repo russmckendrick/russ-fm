@@ -139,7 +139,7 @@ Every stored field is a row, and every row that isn't purely derived is editable
 |-------|---------------------------------------------------------------------------------|
 | `↑/↓` | Move the cursor between fields                                                   |
 | `r`   | **Refresh this line** — re-query just that one source online and merge the result. In interactive mode the match picker always appears, even for a single candidate, with a "Skip this service" row |
-| `e`   | **Edit this line** — type/paste a value, or leave blank to clear it             |
+| `Enter` / `e` | **Edit this line** — type/paste a value, or leave blank to clear it. Saves immediately on Enter; a "✓ saved" status line confirms what was written |
 | `a`   | **Refresh all** — re-enrich the whole record (artists and releases alike)       |
 | `Esc` | Back to the list                                                                |
 
@@ -156,10 +156,12 @@ Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()
   `spotify:` URI: the editor parses it (`ops/service_input.rs`), fetches the **full payload** from
   the API, sets the ID and URL columns plus the service block in `raw_data`, and re-downloads
   artwork where relevant. Blank clears the service entirely. `r` remains the "search again" path.
-- **Structured lists** — the release tracklist (position/title/duration) and videos (URL per row)
-  open a table editor: `↑/↓/←/→` move, `Enter` edits the focused cell, `a` adds a row, `d` deletes
-  the selected row, `s` saves, `Esc` discards. Videos are stored/published as a flat URL array
-  (the frontend types `videos?: string[]`), so there is no title column.
+- **Structured lists** — the release artist credits (name/discogs id/role), tracklist
+  (position/title/duration) and videos (URL per row) open a table editor: `↑/↓/←/→` move, `Enter`
+  edits the focused cell, `a` adds a row, `d` deletes the selected row, `s` saves, `Esc` discards.
+  Editing a credit preserves its embedded enrichment (biography/wikipedia); videos are
+  stored/published as a flat URL array (the frontend types `videos?: string[]`), so there is no
+  title column.
 - **Refresh-only** — Discogs identity, release artist bio, and images are derived from sources;
   refresh them rather than typing.
 

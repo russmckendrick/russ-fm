@@ -417,10 +417,13 @@ impl App {
         if !row.action.editable() {
             return;
         }
-        // Tracklist/videos open the structured list editor instead of the one-line overlay.
+        // Artists/tracklist/videos open the structured list editor instead of the one-line overlay.
         if let (RowAction::Release { field }, Some(DetailView::Release(rec))) = (row.action, self.detail.as_ref()) {
             if field.kind() == crate::ops::FieldKind::Structured {
                 let (headers, rows) = match field {
+                    crate::ops::release::ReleaseField::Artists => {
+                        (vec!["Name", "Discogs ID", "Role"], crate::ops::release::artists_to_rows(&rec.artists))
+                    }
                     crate::ops::release::ReleaseField::Tracks => {
                         (vec!["Position", "Title", "Duration"], crate::ops::release::tracklist_to_rows(&rec.tracklist))
                     }
@@ -443,6 +446,9 @@ impl App {
     pub(crate) fn apply_list_edit(&mut self, action: RowAction, rows: &[Vec<String>]) -> Result<(), String> {
         use crate::ops::release::ReleaseField;
         let result = match (action, self.detail.as_ref()) {
+            (RowAction::Release { field: ReleaseField::Artists }, Some(DetailView::Release(rec))) => {
+                crate::ops::release::set_release_artists(&self.cfg, &self.db, rec, rows)
+            }
             (RowAction::Release { field: ReleaseField::Tracks }, Some(DetailView::Release(rec))) => {
                 crate::ops::release::set_release_tracklist(&self.cfg, &self.db, rec, rows)
             }
@@ -453,6 +459,11 @@ impl App {
         };
         match result {
             Ok(_) => {
+                let label = match action {
+                    RowAction::Release { field } => field.label(),
+                    RowAction::Artist { field } => field.label(),
+                };
+                self.artist_log.push(format!("✓ saved {label} — DB + public JSON written"));
                 self.schedule_collection_regen();
                 self.refresh_detail();
                 Ok(())
@@ -502,6 +513,11 @@ impl App {
         };
         match result {
             Ok(fanout) => {
+                let label = match action {
+                    RowAction::Release { field } => field.label(),
+                    RowAction::Artist { field } => field.label(),
+                };
+                self.artist_log.push(format!("✓ saved {label} — DB + public JSON written"));
                 if fanout > 0 {
                     self.artist_log.push(format!("✓ rewrote {fanout} embedding release JSON(s)"));
                 }
