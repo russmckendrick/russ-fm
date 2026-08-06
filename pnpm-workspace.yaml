@@ -5,6 +5,11 @@ allowBuilds:
 
 minimumReleaseAgeExclude:
   - ws@8.20.1 || 8.21.0
+  - brace-expansion@1.1.16 || 1.1.17 || 1.1.18 || 5.0.8 || 5.0.9
+  - sharp@0.35.0
+  - react-router@8.3.0
+  - postcss@8.5.18 || 8.5.23
+  - undici@8.9.0
 
 onlyBuiltDependencies:
   - esbuild
@@ -12,6 +17,8 @@ onlyBuiltDependencies:
 overrides:
   esbuild@<=0.24.2: '>=0.25.0'
   fast-xml-parser@>=4.0.0-beta.3 <=5.5.5: '>=5.5.6'
+  react-router@>=7.12.0 <8.3.0: ^8.3.0
+  sharp@<0.35.0: ^0.35.0
   undici@<6.23.0: '>=6.23.0'
   ws@>=8.0.0 <8.20.1: ^8.20.1
   ws@>=8.0.0 <8.21.0: ^8.21.0
