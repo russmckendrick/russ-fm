@@ -1,19 +1,11 @@
 # AGENTS.md
 
-Agent guidance for `/Users/russ.mckendrick/Code/russ-fm`.
-
 ## Project Snapshot
 
-- Full-stack music collection site: React 19 + TypeScript + Vite frontend, Rust backend in `scrapper/` (a TUI/CLI binary), static JSON output in `public/`.
-- Package manager: `pnpm`
 - Frontend data source: static files generated into `public/`; do not assume a live runtime API.
 
 ## Core Commands
 
-- Frontend dev: `pnpm run dev`
-- Frontend build: `pnpm run build`
-- Fast build: `pnpm run build:fast`
-- Lint: `pnpm run lint`
 - Backend build + install (`scrapper` → `~/.cargo/bin`, registers `~/.config/scrapper/config.json` data root): `cd scrapper && ./install.sh`
 - Backend dev build / lint: `cd scrapper && cargo build && cargo clippy`
 - Backend collection run (from anywhere once installed): `scrapper collection --resume` (or `cd scrapper && cargo run -- collection --resume`)
@@ -43,4 +35,4 @@ Agent guidance for `/Users/russ.mckendrick/Code/russ-fm`.
 
 ## Notes
 
-- The previous version of this file duplicated repo documentation and contained stale detail. Keep this root file short and move durable detail into the linked docs above.
+- Keep this root file short and move durable detail into the linked docs above.
