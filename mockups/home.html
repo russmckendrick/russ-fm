@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>(function(){var t=localStorage.getItem('russfm-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>russ.fm — The Listening Room · Home mockup</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&family=Fragment+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="listening-room.css" />
+<style>
+  /* ------ home: the platter hero ------ */
+  .platter-band { padding-block: clamp(36px, 4.5vw, 64px) clamp(44px, 5.5vw, 76px); }
+  .platter-grid {
+    display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+    gap: clamp(28px, 4vw, 72px); align-items: center;
+  }
+  /* the record, slid sideways out of its sleeve — scene box includes the disc */
+  .platter-scene { position: relative; width: min(100%, 690px); aspect-ratio: 1.38; }
+  .platter-scene .sleeve { position: absolute; inset: 0 auto 0 0; width: 72.46%; z-index: 1; box-shadow: 22px 0 44px -20px var(--obj-shadow); }
+  .platter-scene .disc { position: absolute; top: 5%; left: 34.8%; width: 65.2%; z-index: 0; }
+  .added-line {
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-2); margin-bottom: 16px;
+  }
+  .platter-title {
+    font-size: clamp(44px, 5.6vw, 92px); line-height: 0.98; text-transform: uppercase;
+    font-weight: 640; font-variation-settings: "wdth" 85, "wght" 640;
+    letter-spacing: 0.005em; text-wrap: balance; margin-bottom: 14px;
+  }
+  .platter-artist { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+  .platter-artist img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; outline: 1px solid var(--hairline-2); }
+  .platter-artist .a {
+    font-size: 17px; font-weight: 560; font-variation-settings: "wdth" 92, "wght" 560;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .platter-artist .a:hover { color: var(--led); }
+  .platter-spec { margin-bottom: 28px; max-width: 480px; }
+  .platter-actions { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
+  .platter-scene, .feat-info { transition: opacity 220ms ease-out; }
+  .feat-index { display: flex; gap: 16px; margin-top: 30px; }
+  .feat-index button {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    color: var(--ink-3); padding: 4px 0; border-bottom: 2px solid transparent;
+  }
+  .feat-index button:hover { color: var(--ink); }
+  .feat-index button[aria-current] { color: var(--led); border-bottom-color: var(--led-dot); }
+
+  /* ------ recently added scroller ------ */
+  .rack--scroll {
+    display: grid; grid-auto-flow: column;
+    grid-auto-columns: clamp(150px, 12vw, 185px);
+    grid-template-columns: none;
+    overflow-x: auto; scroll-snap-type: x proximity;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--hairline-2);
+    scrollbar-width: thin; scrollbar-color: var(--hairline-2) transparent;
+  }
+  .rack--scroll::after { display: none; }
+  .rack--scroll .record { scroll-snap-align: start; }
+
+  /* ------ source select (genres) ------ */
+  .source-grid { display: grid; grid-template-columns: minmax(300px, 0.9fr) minmax(0, 1.1fr); gap: clamp(28px, 4vw, 64px); align-items: start; }
+  .genre-keys { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .genre-key {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    height: 42px; padding: 0 14px;
+    font-size: 10.5px; font-weight: 580; letter-spacing: 0.18em; text-transform: uppercase;
+    font-variation-settings: "wdth" 100, "wght" 580;
+    color: var(--ink-2);
+    border-bottom: 1px solid var(--hairline);
+    transition: color 130ms ease-out, border-color 130ms ease-out;
+  }
+  .genre-key i { font-family: var(--font-mono); font-style: normal; font-size: 9.5px; color: var(--ink-2); }
+  .genre-key:hover { color: var(--ink); border-bottom-color: var(--hairline-2); }
+  .genre-key.armed { color: var(--led); border-bottom: 2px solid var(--led-dot); font-variation-settings: "wdth" 100, "wght" 660; }
+  .genre-key.armed i { color: var(--led); }
+  .source-note { margin-top: 16px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.06em; color: var(--ink-3); text-transform: uppercase; }
+  .source-covers { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 1.6vw, 22px); padding-bottom: 18px; position: relative; }
+  .source-covers::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: linear-gradient(180deg, var(--hairline-2), var(--well)); }
+
+  /* ------ meters band ------ */
+  .meters-grid { display: grid; grid-template-columns: auto 1fr 1fr; gap: clamp(28px, 4.5vw, 80px); align-items: end; }
+  .meters-counters { display: flex; flex-direction: column; gap: 26px; }
+  .inst-label {
+    font-size: 9.5px; font-weight: 590; letter-spacing: 0.24em; text-transform: uppercase;
+    font-variation-settings: "wdth" 100, "wght" 590; color: var(--ink-3);
+    margin-bottom: 16px;
+  }
+
+  /* ------ artists rotation ------ */
+  .artist-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: clamp(16px, 2vw, 28px); }
+  .artist-cell { display: flex; flex-direction: column; align-items: center; gap: 11px; text-align: center; }
+  .artist-cell .win {
+    position: relative; width: min(100%, 110px); aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+    outline: 1px solid var(--hairline-2); outline-offset: 3px;
+    box-shadow: 0 14px 24px -14px var(--obj-shadow);
+  }
+  .artist-cell .win img { width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92); transition: transform 200ms cubic-bezier(0.2,0.9,0.3,1); }
+  .artist-cell:hover .win img { transform: scale(1.06); }
+  .artist-cell .n {
+    font-size: 12.5px; font-weight: 570; letter-spacing: 0.06em; text-transform: uppercase;
+    font-variation-settings: "wdth" 92, "wght" 570;
+  }
+  .artist-cell:hover .n { color: var(--led); }
+  .artist-cell .c { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-3); }
+
+  @media (max-width: 1020px) {
+    .platter-grid, .source-grid { grid-template-columns: 1fr; }
+    .meters-grid { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+    .source-covers { grid-template-columns: repeat(2, 1fr); }
+    .platter-scene { width: 78%; }
+  }
+</style>
+</head>
+<body>
+
+<header class="rail-nav">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <span class="plate">RUSS<span>.</span>FM</span>
+      <span class="model">a physical record collection</span>
+    </a>
+    <nav class="nav-keys" aria-label="Sources">
+      <a class="nav-key" aria-current="page" href="#"><span class="led"></span>Home</a>
+      <a class="nav-key" href="#"><span class="led"></span>Albums</a>
+      <a class="nav-key" href="#"><span class="led"></span>Artists</a>
+      <a class="nav-key" href="#"><span class="led"></span>Genres</a>
+      <a class="nav-key" href="#"><span class="led"></span>Stats</a>
+    </nav>
+    <div class="search-well" role="search">
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="4.6" cy="4.6" r="3.6"/><path d="m7.5 7.5 2.6 2.6"/></svg>
+      search the collection&nbsp;<span style="opacity:.55">/</span>
+    </div>
+    <button class="theme-key" type="button" aria-label="Switch between day and night mode" onclick="var r=document.documentElement;var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');localStorage.setItem('russfm-theme','light');}else{r.setAttribute('data-theme','dark');localStorage.setItem('russfm-theme','dark');}">
+      <svg class="ic-moon" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M11.5 8.8A5.3 5.3 0 0 1 5.2 2.5a5.3 5.3 0 1 0 6.3 6.3Z"/></svg>
+      <svg class="ic-sun" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="7" cy="7" r="3"/><path d="M7 .8v1.7M7 11.5v1.7M.8 7h1.7M11.5 7h1.7M2.6 2.6l1.2 1.2M10.2 10.2l1.2 1.2M11.4 2.6l-1.2 1.2M3.8 10.2 2.6 11.4"/></svg>
+      <span class="ic-moon">Night</span><span class="ic-sun">Day</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ ON THE PLATTER ============ -->
+<section class="band platter-band">
+  <div class="wrap platter-grid">
+    <div class="platter-scene" id="feat-scene">
+      <div class="disc spinning" aria-hidden="true">
+        <div class="label" id="feat-disclabel" style="background:radial-gradient(circle at 42% 36%, #8a4a38, #773d2e 62%, #5e3024); color:#f4e3ce;">
+          <span class="side">Side A</span>
+          <span class="name" id="feat-discname">Who Asked?</span>
+          <span class="rpm">33⅓ RPM · Stereo</span>
+        </div>
+      </div>
+      <div class="sleeve">
+        <img id="feat-cover" src="https://assets.russ.fm/album/who-asked-38016294/who-asked-38016294-hi-res.jpg" alt="Who Asked? sleeve — DOMi & JD BECK" width="640" height="640" />
+      </div>
+    </div>
+
+    <div class="feat-info" id="feat-info">
+      <p class="added-line">Latest additions · <span id="feat-added">added 06 Aug 2026</span></p>
+      <h1 class="platter-title" id="feat-title">Who Asked?</h1>
+      <div class="platter-artist">
+        <img id="feat-avatar" src="https://assets.russ.fm/artist/domi-jd-beck/domi-jd-beck-avatar.jpg" alt="" width="34" height="34" />
+        <a class="a" id="feat-artist" href="#">DOMi &amp; JD BECK</a>
+      </div>
+      <dl class="spec platter-spec">
+        <div><dt>Pressing</dt><dd id="feat-pressing">2026 · Europe</dd></div>
+        <div><dt>Format</dt><dd id="feat-format">Vinyl · LP</dd></div>
+        <div><dt>Label</dt><dd id="feat-label">Blue Note / APESHIT, INC.</dd></div>
+        <div><dt>Genre</dt><dd id="feat-genre">Jazz · Fusion</dd></div>
+      </dl>
+      <div class="platter-actions">
+        <a class="key" id="feat-link" href="album.html">View album</a>
+        <a class="key key-quiet" href="#">Random album
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1 3.5h7.5M6.5 1.2 8.8 3.5 6.5 5.8M11 8.5H3.5M5.5 10.8 3.2 8.5l2.3-2.3"/></svg>
+        </a>
+      </div>
+      <div class="feat-index" role="tablist" aria-label="Latest additions" id="feat-index"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+var FEATURED = [
+  { slug: 'who-asked-38016294', title: 'Who Asked?', artist: 'DOMi & JD BECK',
+    avatar: 'domi-jd-beck', added: 'added 06 Aug 2026', pressing: '2026 · Europe', format: 'Vinyl · LP',
+    label: 'Blue Note / APESHIT, INC.', genre: 'Jazz · Fusion', bg: '#773d2e', hi: '#8a4a38', fg: '#f4e3ce' },
+  { slug: 'recovering-the-satellites-38020338', title: 'Recovering The Satellites', artist: 'Counting Crows',
+    avatar: 'counting-crows', added: 'added 02 Aug 2026', pressing: '2026 · US · RSD Essentials', format: '2×LP Vinyl',
+    label: 'Geffen / UMe', genre: 'Alternative Rock', bg: '#264a25', hi: '#35592b', fg: '#e2ecc4' },
+  { slug: 'puzzles-like-you-37938126', title: 'Puzzles Like You', artist: 'Mojave 3',
+    avatar: 'mojave-3', added: 'added 31 Jul 2026', pressing: '2026 · UK', format: 'Vinyl · LP',
+    label: '4AD', genre: 'Alternative', bg: '#8d845d', hi: '#9c9469', fg: '#26230f' },
+  { slug: 'spoon-and-rafter-37938009', title: 'Spoon And Rafter', artist: 'Mojave 3',
+    avatar: 'mojave-3', added: 'added 31 Jul 2026', pressing: '2026 · UK', format: 'Vinyl · LP',
+    label: '4AD', genre: 'Indie Rock', bg: '#9bb4c2', hi: '#a9c0cd', fg: '#1f2a33' },
+  { slug: 'excuses-for-travellers-37932327', title: 'Excuses For Travellers', artist: 'Mojave 3',
+    avatar: 'mojave-3', added: 'added 31 Jul 2026', pressing: '2026 · US', format: 'Vinyl · LP',
+    label: '4AD', genre: 'Folk Rock', bg: '#dbd9b5', hi: '#e5e3c2', fg: '#4a452c' }
+];
+(function () {
+  var idx = 0, timer = null;
+  var scene = document.getElementById('feat-scene');
+  var info = document.getElementById('feat-info');
+  var indexEl = document.getElementById('feat-index');
+
+  FEATURED.forEach(function (r, n) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = String(n + 1).padStart(2, '0');
+    b.setAttribute('role', 'tab');
+    b.setAttribute('aria-label', r.title);
+    b.addEventListener('click', function () { show(n); restart(); });
+    indexEl.appendChild(b);
+  });
+
+  function render(r) {
+    document.getElementById('feat-cover').src = 'https://assets.russ.fm/album/' + r.slug + '/' + r.slug + '-hi-res.jpg';
+    document.getElementById('feat-cover').alt = r.title + ' sleeve — ' + r.artist;
+    var lab = document.getElementById('feat-disclabel');
+    lab.style.background = 'radial-gradient(circle at 42% 36%, ' + r.hi + ', ' + r.bg + ' 62%)';
+    lab.style.color = r.fg;
+    document.getElementById('feat-discname').textContent = r.title;
+    document.getElementById('feat-added').textContent = r.added;
+    document.getElementById('feat-title').textContent = r.title;
+    document.getElementById('feat-artist').textContent = r.artist;
+    document.getElementById('feat-avatar').src = 'https://assets.russ.fm/artist/' + r.avatar + '/' + r.avatar + '-avatar.jpg';
+    document.getElementById('feat-pressing').textContent = r.pressing;
+    document.getElementById('feat-format').textContent = r.format;
+    document.getElementById('feat-label').textContent = r.label;
+    document.getElementById('feat-genre').textContent = r.genre;
+  }
+
+  function show(n) {
+    idx = n;
+    var kids = indexEl.children;
+    for (var i = 0; i < kids.length; i++) {
+      if (i === n) kids[i].setAttribute('aria-current', 'true');
+      else kids[i].removeAttribute('aria-current');
+    }
+    scene.style.opacity = '0';
+    info.style.opacity = '0';
+    setTimeout(function () {
+      render(FEATURED[n]);
+      scene.style.opacity = '1';
+      info.style.opacity = '1';
+    }, 220);
+  }
+
+  function restart() {
+    if (timer) clearInterval(timer);
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      timer = setInterval(function () { show((idx + 1) % FEATURED.length); }, 6000);
+    }
+  }
+
+  indexEl.children[0].setAttribute('aria-current', 'true');
+  restart();
+})();
+</script>
+
+<!-- ============ RECENTLY ADDED ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Recently added</h2>
+      <span class="rule"></span>
+      <a class="readout" href="#">last <b>18</b> of 3,300 — view all <svg width="11" height="10" viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="1.3" style="vertical-align:-1px"><path d="M1 5h9.5M7 1.5 10.5 5 7 8.5"/></svg></a>
+    </div>
+    <div class="rack rack--scroll">
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/who-asked-38016294/who-asked-38016294-medium.jpg" alt="Who Asked? — DOMi & JD BECK" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Who Asked?</span>DOMi & JD BECK · 2026<br/>added 06 aug 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/recovering-the-satellites-38020338/recovering-the-satellites-38020338-medium.jpg" alt="Recovering The Satellites — Counting Crows" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Recovering The Satellites</span>Counting Crows · 1996<br/>added 02 aug 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/puzzles-like-you-37938126/puzzles-like-you-37938126-medium.jpg" alt="Puzzles Like You — Mojave 3" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Puzzles Like You</span>Mojave 3 · 2026<br/>added 31 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/spoon-and-rafter-37938009/spoon-and-rafter-37938009-medium.jpg" alt="Spoon And Rafter — Mojave 3" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Spoon And Rafter</span>Mojave 3 · 2026<br/>added 31 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/excuses-for-travellers-37932327/excuses-for-travellers-37932327-medium.jpg" alt="Excuses For Travellers — Mojave 3" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Excuses For Travellers</span>Mojave 3 · 2026<br/>added 31 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/out-of-tune-37932366/out-of-tune-37932366-medium.jpg" alt="Out Of Tune — Mojave 3" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Out Of Tune</span>Mojave 3 · 2026<br/>added 31 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/ask-me-tomorrow-37932294/ask-me-tomorrow-37932294-medium.jpg" alt="Ask Me Tomorrow — Mojave 3" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Ask Me Tomorrow</span>Mojave 3 · 2026<br/>added 31 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/12-golden-country-greats-38007150/12-golden-country-greats-38007150-medium.jpg" alt="12 Golden Country Greats — Ween" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">12 Golden Country Greats</span>Ween · 1996<br/>added 30 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/meet-the-eels-essential-eels-vol1-1996-2006-35889862/meet-the-eels-essential-eels-vol1-1996-2006-35889862-medium.jpg" alt="Meet The Eels — Eels" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Meet The Eels</span>Eels · 2008<br/>added 29 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/songs-to-learn-sing-37970427/songs-to-learn-sing-37970427-medium.jpg" alt="Songs To Learn &amp; Sing — Echo &amp; The Bunnymen" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Songs To Learn &amp; Sing</span>Echo &amp; The Bunnymen · 1985<br/>added 25 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/reality-awaits-37952025/reality-awaits-37952025-medium.jpg" alt="Reality Awaits — The Strokes" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Reality Awaits</span>The Strokes · 2026<br/>added 25 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/before-after-37724502/before-after-37724502-medium.jpg" alt="Before &amp; After — Tim Finn" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Before &amp; After</span>Tim Finn · 1993<br/>added 24 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/best-ii-37947003/best-ii-37947003-medium.jpg" alt="Best ...II — The Smiths" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Best ...II</span>The Smiths · 2026<br/>added 23 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/best-i-37946952/best-i-37946952-medium.jpg" alt="Best... I — The Smiths" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Best... I</span>The Smiths · 2026<br/>added 23 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/doctrine-of-love-37514964/doctrine-of-love-37514964-medium.jpg" alt="Doctrine Of Love — Jalen N'Gonda" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Doctrine Of Love</span>Jalen N'Gonda · 2026<br/>added 21 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/yearnalism-37853625/yearnalism-37853625-medium.jpg" alt="Yearnalism — Baby Rose" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Yearnalism</span>Baby Rose · 2026<br/>added 18 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/a-model-life-24324563/a-model-life-24324563-medium.jpg" alt="A Model Life — Lonely Robot" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">A Model Life</span>Lonely Robot · 2022<br/>added 18 jul 26</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/the-best-of-neworder-37907823/the-best-of-neworder-37907823-medium.jpg" alt="(The Best Of) NewOrder — New Order" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">(The Best Of) NewOrder</span>New Order · 1994<br/>added 18 jul 26</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCE SELECT · GENRES ============ -->
+<section class="band band-recessed">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Browse by genre</h2>
+      <span class="rule"></span>
+      <a class="readout" href="#"><b>267</b> genres — view all <svg width="11" height="10" viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="1.3" style="vertical-align:-1px"><path d="M1 5h9.5M7 1.5 10.5 5 7 8.5"/></svg></a>
+    </div>
+    <div class="source-grid">
+      <div>
+        <div class="genre-keys">
+          <a class="genre-key" href="#">Rock <i>2626</i></a>
+          <a class="genre-key" href="#">Electronic <i>759</i></a>
+          <a class="genre-key" href="#">Alt Rock <i>673</i></a>
+          <a class="genre-key" href="#">Pop <i>582</i></a>
+          <a class="genre-key" href="#">Indie Rock <i>541</i></a>
+          <a class="genre-key armed" aria-current="true" href="#">Prog Rock <i>433</i></a>
+          <a class="genre-key" href="#">Synth-pop <i>268</i></a>
+          <a class="genre-key" href="#">Funk / Soul <i>242</i></a>
+        </div>
+        <p class="source-note">source: PROG ROCK — 433 records in the rack</p>
+      </div>
+      <div class="source-covers">
+        <a class="record" href="#">
+          <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/wish-you-were-here-35907772/wish-you-were-here-35907772-medium.jpg" alt="Wish You Were Here — Pink Floyd" width="320" height="320"/></span>
+          <span class="ticket"><span class="t">Wish You Were Here</span>Pink Floyd</span>
+        </a>
+        <a class="record" href="#">
+          <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/moving-pictures-22876769/moving-pictures-22876769-medium.jpg" alt="Moving Pictures — Rush" width="320" height="320"/></span>
+          <span class="ticket"><span class="t">Moving Pictures</span>Rush</span>
+        </a>
+        <a class="record" href="#">
+          <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/selling-england-by-the-pound-12345619/selling-england-by-the-pound-12345619-medium.jpg" alt="Selling England By The Pound — Genesis" width="320" height="320"/></span>
+          <span class="ticket"><span class="t">Selling England…</span>Genesis</span>
+        </a>
+        <a class="record" href="#">
+          <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/in-absentia-37403472/in-absentia-37403472-medium.jpg" alt="In Absentia — Porcupine Tree" width="320" height="320"/></span>
+          <span class="ticket"><span class="t">In Absentia</span>Porcupine Tree</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE METERS ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>By the numbers</h2>
+      <span class="rule"></span>
+      <span class="readout">counted from the collection data</span>
+    </div>
+    <div class="meters-grid">
+      <div class="meters-counters">
+        <div class="counter">
+          <span class="digits"><span>3</span><span class="sep">,</span><span>3</span><span>0</span><span>0</span></span>
+          <span class="what">Records</span>
+        </div>
+        <div class="counter">
+          <span class="digits"><span>1</span><span class="sep">,</span><span>2</span><span>4</span><span>6</span></span>
+          <span class="what">Artists</span>
+        </div>
+        <div class="counter">
+          <span class="digits"><span>2</span><span>6</span><span>7</span></span>
+          <span class="what">Genres</span>
+        </div>
+      </div>
+      <div>
+        <p class="inst-label">Pressing decades</p>
+        <div class="faders">
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 2%"></span></div><span class="fl">50s</span><span class="fv">1</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 2%"></span></div><span class="fl">60s</span><span class="fv">7</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 5%"></span></div><span class="fl">70s</span><span class="fv">76</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 12%"></span></div><span class="fl">80s</span><span class="fv">177</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 6%"></span></div><span class="fl">90s</span><span class="fv">93</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 6%"></span></div><span class="fl">00s</span><span class="fv">86</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 91%"></span></div><span class="fl">10s</span><span class="fv">1499</span></div>
+          <div class="fader"><div class="slot"><span class="thumb" style="bottom: 81%"></span></div><span class="fl">20s</span><span class="fv">1341</span></div>
+        </div>
+      </div>
+      <div>
+        <p class="inst-label">Records added per year</p>
+        <div class="ledbars">
+          <div class="ledbar"><span class="yl">15</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">205</span></div>
+          <div class="ledbar"><span class="yl">16</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit hot"></i></span><span class="yv">500</span></div>
+          <div class="ledbar"><span class="yl">17</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">436</span></div>
+          <div class="ledbar"><span class="yl">18</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">331</span></div>
+          <div class="ledbar"><span class="yl">19</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">249</span></div>
+          <div class="ledbar"><span class="yl">20</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">273</span></div>
+          <div class="ledbar"><span class="yl">21</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">241</span></div>
+          <div class="ledbar"><span class="yl">22</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">222</span></div>
+          <div class="ledbar"><span class="yl">23</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">250</span></div>
+          <div class="ledbar"><span class="yl">24</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">213</span></div>
+          <div class="ledbar"><span class="yl">25</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">242</span></div>
+          <div class="ledbar"><span class="yl">26</span><span class="segs"><i class="lit"></i><i class="lit"></i><i class="lit"></i></span><span class="yv">138</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FROM THE STACKS ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>From the shelves</h2>
+      <span class="rule"></span>
+      <a class="readout" href="#">8 at random — <b>shuffle <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" style="vertical-align:-1px"><path d="M10.5 6a4.5 4.5 0 1 1-1.4-3.2M10.7 1v2.2H8.5"/></svg></b></a>
+    </div>
+    <div class="rack">
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/the-dark-side-of-the-moon-30414329/the-dark-side-of-the-moon-30414329-medium.jpg" alt="The Dark Side Of The Moon — Pink Floyd" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">The Dark Side Of The Moon</span>Pink Floyd · added 04 may 24</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/unknown-pleasures-13729623/unknown-pleasures-13729623-medium.jpg" alt="Unknown Pleasures — Joy Division" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Unknown Pleasures</span>Joy Division · added 17 jun 19</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/aja-28423303/aja-28423303-medium.jpg" alt="Aja — Steely Dan" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Aja</span>Steely Dan · added 29 sep 23</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/moving-pictures-22876769/moving-pictures-22876769-medium.jpg" alt="Moving Pictures — Rush" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Moving Pictures</span>Rush · added 04 may 22</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/so-379036/so-379036-medium.jpg" alt="So — Peter Gabriel" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">So</span>Peter Gabriel · added 02 sep 15</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/violator-5529916/violator-5529916-medium.jpg" alt="Violator — Depeche Mode" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Violator</span>Depeche Mode · added 30 apr 16</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/ok-computer-3339642/ok-computer-3339642-medium.jpg" alt="OK Computer — Radiohead" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">OK Computer</span>Radiohead · added 17 apr 16</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/blackstar-7932038/blackstar-7932038-medium.jpg" alt="Blackstar — David Bowie" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">★ (Blackstar)</span>David Bowie · added 08 jan 16</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOST FILED ARTISTS ============ -->
+<section class="band band-recessed">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Top artists</h2>
+      <span class="rule"></span>
+      <a class="readout" href="#"><b>1,246</b> artists — view all <svg width="11" height="10" viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="1.3" style="vertical-align:-1px"><path d="M1 5h9.5M7 1.5 10.5 5 7 8.5"/></svg></a>
+    </div>
+    <div class="artist-row">
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/pink-floyd/pink-floyd-avatar.jpg" alt="Pink Floyd" width="220" height="220"/></span>
+        <span class="n">Pink Floyd</span><span class="c">45 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/rush/rush-avatar.jpg" alt="Rush" width="220" height="220"/></span>
+        <span class="n">Rush</span><span class="c">30 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/david-bowie/david-bowie-avatar.jpg" alt="David Bowie" width="220" height="220"/></span>
+        <span class="n">David Bowie</span><span class="c">24 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/matt-berry/matt-berry-avatar.jpg" alt="Matt Berry" width="220" height="220"/></span>
+        <span class="n">Matt Berry</span><span class="c">25 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/steven-wilson/steven-wilson-avatar.jpg" alt="Steven Wilson" width="220" height="220"/></span>
+        <span class="n">Steven Wilson</span><span class="c">24 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/genesis/genesis-avatar.jpg" alt="Genesis" width="220" height="220"/></span>
+        <span class="n">Genesis</span><span class="c">22 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/marillion/marillion-avatar.jpg" alt="Marillion" width="220" height="220"/></span>
+        <span class="n">Marillion</span><span class="c">20 records</span>
+      </a>
+      <a class="artist-cell" href="#">
+        <span class="win"><img loading="lazy" src="https://assets.russ.fm/artist/porcupine-tree/porcupine-tree-avatar.jpg" alt="Porcupine Tree" width="220" height="220"/></span>
+        <span class="n">Porcupine Tree</span><span class="c">20 records</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="rear-panel">
+  <div class="wrap">
+    <a class="jack" href="#">Last.fm</a>
+    <a class="jack" href="#">Discogs</a>
+    <a class="jack" href="#">Spotify</a>
+    <a class="jack" href="#">Apple Music</a>
+    <p class="serial">
+      RUSS.FM · A PHYSICAL RECORD COLLECTION<br/>
+      3,300 records added since 2015 · data: discogs / last.fm / spotify / apple music
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

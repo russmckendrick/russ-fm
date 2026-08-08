@@ -1,0 +1,417 @@
+/* ==========================================================================
+   THE LISTENING ROOM — russ.fm mockup world · daylight edition
+   --------------------------------------------------------------------------
+   THESIS: the site is the hi-fi that plays the collection; the records are
+   the only colour it ever shows. Refuses the cover-grid store page.
+   OWN-WORLD: daylit Braun-style deck — warm paper-aluminium panels, ink
+   silkscreen, flat controls, one amber accent, cream VU meters that keep
+   their intrinsic material in both themes; records as objects (sleeve board
+   + disc with palette centre label). Night mode is the same room with the
+   lamp off, behind a switch; day is the default scene.
+   STORY: a visitor understands "one person's physical shelves", digs the
+   racks, reads provenance as spec plates and listening as meters.
+   FIRST VIEWPORT: rail nav, then the newest record ON THE PLATTER — sleeve
+   with the disc slid out sideways, silkscreen data right, one primary key.
+   FORM: hi-fi fascia grammar, candidate 7 of 7 on the grounded list,
+   assigned by seed bc2db6d6; reworked flat + light on user feedback.
+   ========================================================================== */
+
+:root {
+  /* daylight (default) */
+  --ground: #f1eee7;
+  --panel: #f7f5ee;
+  --panel-2: #eae6db;
+  --well: #e5e0d3;
+  --deep: #dcd6c8;
+  --ink: #211f1b;
+  --ink-2: #56524a;
+  --ink-3: #837d71;
+  --hairline: #d9d4c8;
+  --hairline-2: #c3beb0;
+  --led: #a86a0e;          /* amber, text-capable on light ground */
+  --led-dot: #e39a2d;      /* amber, as light */
+  --led-red: #c04220;
+  --vu-face: #f4e9cd;
+  --vu-ink: #3d3527;
+  --edge-hi: rgba(255, 255, 255, 0.65);
+  --obj-shadow: rgba(75, 62, 38, 0.3);
+  --well-shadow: rgba(90, 78, 52, 0.16);
+  --led-glow: none;
+  --font-plate: "Michroma", sans-serif;
+  --font-silk: "Saira", sans-serif;
+  --font-mono: "Fragment Mono", monospace;
+  --gutter: clamp(20px, 3.2vw, 44px);
+}
+
+[data-theme="dark"] {
+  /* the same room, lamp off */
+  --ground: #1b1a18;
+  --panel: #232120;
+  --panel-2: #1e1d1a;
+  --well: #141312;
+  --deep: #0e0d0c;
+  --ink: #eae6dc;
+  --ink-2: #a49f93;
+  --ink-3: #7c766a;
+  --hairline: #34322e;
+  --hairline-2: #4a4740;
+  --led: #f2a93b;
+  --led-dot: #f2a93b;
+  --led-red: #e0492e;
+  --edge-hi: rgba(255, 255, 255, 0.07);
+  --obj-shadow: rgba(0, 0, 0, 0.75);
+  --well-shadow: rgba(0, 0, 0, 0.55);
+  --led-glow: 0 0 8px 1px rgba(242, 169, 59, 0.45);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font-silk);
+  font-variation-settings: "wdth" 96;
+  font-size: 15px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--led); outline-offset: 3px; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+.wrap { max-width: 1560px; margin: 0 auto; padding-inline: var(--gutter); }
+
+/* --- rail nav ----------------------------------------------------------- */
+
+.rail-nav {
+  position: sticky; top: 0; z-index: 40;
+  background: var(--panel);
+  border-bottom: 1px solid var(--hairline-2);
+}
+.rail-nav .wrap {
+  display: flex; align-items: center; gap: clamp(14px, 2.4vw, 30px);
+  height: 60px;
+}
+.brand { display: flex; align-items: baseline; gap: 12px; flex: none; }
+.brand .plate {
+  font-family: var(--font-plate); font-size: 15px; letter-spacing: 0.1em;
+  color: var(--ink);
+}
+.brand .plate span { color: var(--led); }
+.brand .model {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.08em;
+  color: var(--ink-3); text-transform: uppercase;
+}
+.nav-keys { display: flex; gap: clamp(10px, 1.6vw, 22px); margin-left: auto; }
+.nav-key {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 2px;
+  font-size: 10.5px; font-weight: 570; letter-spacing: 0.2em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 570;
+  color: var(--ink-2);
+  border-bottom: 2px solid transparent;
+  transition: color 140ms ease-out;
+}
+.nav-key:hover { color: var(--ink); }
+.nav-key .led { width: 5px; height: 5px; border-radius: 50%; background: var(--hairline-2); flex: none; }
+.nav-key[aria-current] { color: var(--ink); border-bottom-color: var(--led-dot); }
+.nav-key[aria-current] .led { background: var(--led-dot); box-shadow: var(--led-glow); }
+.search-well {
+  display: flex; align-items: center; gap: 9px;
+  height: 32px; padding: 0 13px; min-width: 200px;
+  background: var(--ground);
+  border: 1px solid var(--hairline-2);
+  border-radius: 6px;
+  color: var(--ink-2);
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.05em;
+}
+.search-well svg { flex: none; }
+
+/* day / night switch */
+.theme-key {
+  display: inline-flex; align-items: center; gap: 8px; flex: none;
+  padding: 6px 2px;
+  font-size: 9.5px; font-weight: 570; letter-spacing: 0.2em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 570;
+  color: var(--ink-2);
+}
+.theme-key:hover { color: var(--ink); }
+.theme-key svg { display: block; }
+.theme-key .ic-sun { display: none; }
+[data-theme="dark"] .theme-key .ic-sun { display: block; }
+[data-theme="dark"] .theme-key .ic-moon { display: none; }
+
+/* --- bands -------------------------------------------------------------- */
+
+.band { position: relative; padding-block: clamp(40px, 5.5vw, 72px); }
+.band + .band::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  border-top: 1px solid var(--hairline-2);
+  border-bottom: 1px solid var(--edge-hi);
+}
+.band-recessed { background: var(--panel-2); }
+
+/* silkscreen panel heading: label ── rule ── readout */
+.silk-head {
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+.silk-head h2 {
+  font-size: 12px; font-weight: 590; letter-spacing: 0.26em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 590;
+  color: var(--ink); white-space: nowrap;
+}
+.silk-head .rule { flex: 1; height: 1px; background: var(--hairline-2); }
+.silk-head .readout {
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.06em;
+  color: var(--ink-2); white-space: nowrap;
+}
+.silk-head .readout b { color: var(--led); font-weight: 400; }
+.silk-head a.readout:hover { color: var(--ink); }
+
+/* --- record objects ----------------------------------------------------- */
+
+.sleeve { position: relative; flex: none; display: block; }
+.sleeve img {
+  width: 100%; height: auto; aspect-ratio: 1; object-fit: cover;
+  outline: 1px solid rgba(30, 25, 15, 0.14); outline-offset: -1px;
+}
+.sleeve::after { /* board edge — the sleeve's opening */
+  content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 3px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.18), rgba(255, 252, 240, 0.5));
+}
+.sleeve::before { /* seam shadow along the spine */
+  content: ""; position: absolute; top: 0; left: 0; bottom: 0; width: 6px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.22), transparent);
+}
+
+/* leaning rack row */
+.rack {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: clamp(14px, 1.8vw, 24px);
+  padding-bottom: 18px;
+  position: relative;
+}
+.rack::after { /* the rail the records rest on */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1px;
+  background: var(--hairline-2);
+}
+.rack .record { display: flex; flex-direction: column; gap: 10px; }
+.rack .sleeve {
+  box-shadow: 0 16px 22px -16px var(--obj-shadow);
+  transition: transform 180ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.rack .record:nth-child(odd) .sleeve { transform: rotate(-2.2deg); }
+.rack .record:nth-child(even) .sleeve { transform: rotate(1.8deg); }
+.rack .record:hover .sleeve { transform: rotate(0deg) translateY(-7px); }
+.ticket {
+  font-family: var(--font-mono); font-size: 9.5px; line-height: 1.5;
+  letter-spacing: 0.04em; color: var(--ink-2);
+  text-transform: uppercase;
+}
+.ticket .t {
+  font-family: var(--font-silk); font-size: 12.5px; font-weight: 560;
+  font-variation-settings: "wdth" 92, "wght" 560;
+  letter-spacing: 0.04em; line-height: 1.25; color: var(--ink);
+  display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.record:hover .ticket .t { color: var(--led); }
+
+/* vinyl disc — keeps its intrinsic material in both themes */
+.disc {
+  position: relative; border-radius: 50%; aspect-ratio: 1;
+  background:
+    conic-gradient(from 130deg,
+      rgba(255, 255, 255, 0.07) 0 14deg, transparent 26deg 158deg,
+      rgba(255, 255, 255, 0.06) 172deg 188deg, transparent 200deg 334deg,
+      rgba(255, 255, 255, 0.055) 346deg 360deg),
+    repeating-radial-gradient(circle at 50%,
+      rgba(255, 255, 255, 0.03) 0 1px, rgba(0, 0, 0, 0) 1px 3px),
+    radial-gradient(circle at 50%, #191715 0 30%, #0c0b0a 68%, #171512 100%);
+  box-shadow: 0 14px 32px -14px var(--obj-shadow), inset 0 0 1px rgba(255, 255, 255, 0.25);
+}
+.disc .label {
+  position: absolute; inset: 31.5%; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 2px; text-align: center; padding: 8%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.disc .label::after { /* spindle hole */
+  content: ""; position: absolute; width: 7%; height: 7%; border-radius: 50%;
+  background: var(--ground); box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.disc .label .side {
+  font-family: var(--font-mono); font-size: clamp(8px, 0.6vw, 10px);
+  letter-spacing: 0.28em; text-transform: uppercase;
+}
+.disc .label .name {
+  font-weight: 640; font-variation-settings: "wdth" 87, "wght" 640;
+  font-size: clamp(11px, 1vw, 16px); line-height: 1.05; letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.disc .label .rpm {
+  font-family: var(--font-mono); font-size: clamp(7px, 0.52vw, 9px); letter-spacing: 0.12em;
+  opacity: 0.8;
+}
+@keyframes platter-spin { to { transform: rotate(360deg); } }
+.disc.spinning { animation: platter-spin 14s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .disc.spinning { animation: none; } }
+
+/* --- controls (flat) ---------------------------------------------------- */
+
+.key {
+  display: inline-flex; align-items: center; gap: 10px;
+  height: 42px; padding: 0 22px;
+  font-size: 11px; font-weight: 590; letter-spacing: 0.22em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 590;
+  color: #f4f1e8;
+  background: var(--ink);
+  border-radius: 3px;
+  transition: background-color 130ms ease-out, transform 120ms ease-out;
+}
+[data-theme="dark"] .key { color: #14130f; }
+.key:hover { background: var(--led); color: #fff; }
+[data-theme="dark"] .key:hover { color: #14130f; }
+.key:active { transform: translateY(1px); }
+.key .led { width: 6px; height: 6px; border-radius: 50%; background: var(--led-dot); flex: none; }
+.key:hover .led { background: #fff; }
+[data-theme="dark"] .key:hover .led { background: #14130f; }
+.key-quiet,
+[data-theme="dark"] .key-quiet {
+  height: auto; padding: 0; background: none; border-radius: 0;
+  color: var(--ink-2); gap: 7px;
+}
+.key-quiet:hover,
+[data-theme="dark"] .key-quiet:hover { background: none; color: var(--led); }
+
+/* rear-panel service jack */
+.jack {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-2);
+  transition: color 130ms ease-out;
+}
+.jack::before {
+  content: ""; width: 11px; height: 11px; border-radius: 50%; flex: none;
+  border: 1px solid var(--ink-3);
+  background: radial-gradient(circle, var(--ink-2) 0 30%, transparent 36%);
+}
+.jack:hover { color: var(--led); }
+.jack:hover::before { border-color: var(--led); }
+
+/* spec plate */
+.spec { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid var(--hairline-2); border-radius: 3px; overflow: hidden; }
+.spec > div {
+  padding: 12px 16px 11px;
+  border-top: 1px solid var(--hairline);
+  background: var(--panel);
+}
+.spec > div:nth-child(-n + 2) { border-top: 0; }
+.spec > div:nth-child(odd) { border-right: 1px solid var(--hairline); }
+.spec dt {
+  font-size: 9px; font-weight: 590; letter-spacing: 0.24em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 590;
+  color: var(--ink-3); margin-bottom: 3px;
+}
+.spec dd { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.02em; color: var(--ink); }
+.spec dd small { color: var(--ink-2); font-size: 10.5px; }
+
+/* --- instrumentation ---------------------------------------------------- */
+
+.meter { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.meter svg { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 1px 2px var(--well-shadow); }
+.meter .meter-name {
+  font-size: 9.5px; font-weight: 590; letter-spacing: 0.24em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 590;
+  color: var(--ink-3);
+}
+.meter .meter-name b { color: var(--ink-2); font-weight: 590; }
+
+/* odometer counters — dark drums in both themes, like the meters */
+.counter { display: flex; flex-direction: column; gap: 9px; }
+.counter .digits { display: inline-flex; gap: 3px; }
+.counter .digits span {
+  font-family: var(--font-mono); font-size: clamp(26px, 2.6vw, 38px); line-height: 1;
+  padding: 10px 4px 8px;
+  min-width: 0.9em; text-align: center;
+  color: #ece7da;
+  background: linear-gradient(180deg, #060606, #131211 46%, #0a0a09 54%, #151412);
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), inset 0 -6px 10px rgba(0, 0, 0, 0.6);
+}
+.counter .digits span.sep { background: none; box-shadow: none; min-width: auto; padding-inline: 1px; color: var(--ink-3); }
+.counter .what {
+  font-size: 9.5px; font-weight: 590; letter-spacing: 0.24em; text-transform: uppercase;
+  font-variation-settings: "wdth" 100, "wght" 590; color: var(--ink-3);
+}
+
+/* fader bank (histogram) */
+.faders { display: flex; gap: clamp(10px, 1.6vw, 26px); align-items: stretch; }
+.fader { display: flex; flex-direction: column; align-items: center; gap: 9px; flex: 1; }
+.fader .slot {
+  position: relative; width: 100%; height: 150px;
+  display: flex; justify-content: center;
+}
+.fader .slot::before {
+  content: ""; position: absolute; top: 0; bottom: 0; width: 3px;
+  background: var(--deep); border-radius: 2px;
+  box-shadow: inset 0 1px 2px var(--well-shadow);
+}
+.fader .thumb {
+  position: absolute; width: 26px; height: 12px; left: 50%; transform: translateX(-50%);
+  background: var(--ink);
+  border-radius: 2px;
+  box-shadow: 0 2px 4px -1px var(--obj-shadow);
+}
+.fader .thumb::after { content: ""; position: absolute; left: 4px; right: 4px; top: 50%; height: 1px; background: var(--led-dot); }
+.fader .fl { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-2); letter-spacing: 0.06em; }
+.fader .fv { font-family: var(--font-mono); font-size: 9px; color: var(--ink-2); }
+
+/* LED bar timeline */
+.ledbars { display: flex; gap: clamp(8px, 1.2vw, 18px); align-items: flex-end; }
+.ledbar { display: flex; flex-direction: column-reverse; align-items: center; gap: 6px; flex: 1; }
+.ledbar .segs { display: flex; flex-direction: column-reverse; gap: 3px; }
+.ledbar .segs i {
+  width: 22px; height: 5px; border-radius: 1.5px; background: var(--deep);
+}
+.ledbar .segs i.lit { background: var(--led-dot); }
+.ledbar .segs i.lit.hot { background: var(--led-red); }
+.ledbar .yl { font-family: var(--font-mono); font-size: 9px; color: var(--ink-2); letter-spacing: 0.04em; }
+.ledbar .yv { font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-2); }
+
+/* --- liner notes -------------------------------------------------------- */
+
+.liner { max-width: 68ch; color: var(--ink-2); font-size: 15.5px; }
+.liner p { margin-bottom: 1.1em; }
+.liner p:last-child { margin-bottom: 0; }
+.liner strong { color: var(--ink); font-weight: 560; }
+
+/* --- footer rear panel -------------------------------------------------- */
+
+.rear-panel {
+  margin-top: clamp(48px, 6vw, 80px);
+  background: var(--panel-2);
+  border-top: 1px solid var(--hairline-2);
+  padding-block: 32px 38px;
+}
+.rear-panel .wrap { display: flex; flex-wrap: wrap; gap: 22px 42px; align-items: center; }
+.rear-panel .serial {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.1em;
+  color: var(--ink-2); text-transform: uppercase; line-height: 1.9;
+  margin-left: auto; text-align: right;
+}
+
+/* --- responsive --------------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .rail-nav .wrap { flex-wrap: wrap; height: auto; padding-block: 10px; row-gap: 8px; }
+  .search-well { display: none; }
+  .nav-keys { margin-left: 0; order: 3; width: 100%; overflow-x: auto; }
+  .theme-key { margin-left: auto; }
+}

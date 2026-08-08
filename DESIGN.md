@@ -1,73 +1,75 @@
 ---
 version: "alpha"
-name: russ.fm Editorial
-description: Warm paper, dense catalogue typography, and album-art-led editorial surfaces for a personal record collection.
+name: The Listening Room (Daylight)
+description: A daylit hi-fi deck — warm paper-aluminium panels, ink silkscreen, flat controls, one amber accent; the records are the only colour. Night mode behind a switch.
 colors:
-  primary: "#0E0D0B"
-  primary-foreground: "#F4F1EA"
-  secondary: "#EBE6DB"
-  tertiary: "#E23B1E"
-  surface: "#F4F1EA"
-  surface-raised: "#FAF7EF"
-  surface-recessed: "#E0D9C8"
-  on-surface: "#0E0D0B"
-  on-surface-muted: "#5A534A"
-  on-surface-dim: "#8A8377"
-  stage: "#080807"
-  stage-2: "#11100D"
-  stage-ink: "#F7F2E8"
-  tint: "#8A8A3D"
-  error: "#E23B1E"
+  ground: "#F1EEE7"
+  panel: "#F7F5EE"
+  panel-recessed: "#EAE6DB"
+  well: "#E5E0D3"
+  deep: "#DCD6C8"
+  ink: "#211F1B"
+  ink-muted: "#56524A"
+  ink-dim: "#837D71"
+  hairline: "#D9D4C8"
+  hairline-strong: "#C3BEB0"
+  amber: "#A86A0E"
+  amber-light: "#E39A2D"
+  meter-red: "#C04220"
+  vu-face: "#F4E9CD"
+  vu-ink: "#3D3527"
+  error: "#C04220"
+  night-ground: "#1B1A18"
+  night-panel: "#232120"
+  night-ink: "#EAE6DC"
+  night-amber: "#F2A93B"
 typography:
+  plate-lg:
+    fontFamily: "Michroma"
+    fontSize: 28px
+    fontWeight: 400
+    lineHeight: 1.1
+    letterSpacing: 0.06em
+  plate-sm:
+    fontFamily: "Michroma"
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: 0.14em
   display-xl:
-    fontFamily: "Archivo Variable"
-    fontSize: 96px
-    fontWeight: 760
-    lineHeight: 0.92
-    letterSpacing: 0em
-    fontVariation: "'wdth' 62, 'wght' 760"
-  headline-lg:
-    fontFamily: "Archivo Variable"
-    fontSize: 32px
-    fontWeight: 760
-    lineHeight: 1
-    letterSpacing: 0em
-    fontVariation: "'wdth' 62, 'wght' 760"
+    fontFamily: "Saira"
+    fontSize: 72px
+    fontWeight: 640
+    lineHeight: 0.98
+    letterSpacing: 0.005em
+    fontVariation: "'wdth' 85, 'wght' 640"
   headline-md:
-    fontFamily: "Archivo Variable"
+    fontFamily: "Saira"
     fontSize: 22px
-    fontWeight: 680
-    lineHeight: 1.15
-    letterSpacing: 0em
-    fontVariation: "'wdth' 72, 'wght' 680"
-  body-lg:
-    fontFamily: "Archivo Variable"
-    fontSize: 17px
-    fontWeight: 480
-    lineHeight: 1.68
-    letterSpacing: 0em
-    fontFeature: "'ss01', 'cv11'"
-    fontVariation: "'wdth' 95, 'wght' 480"
-  body-md:
-    fontFamily: "Archivo Variable"
-    fontSize: 15px
-    fontWeight: 480
-    lineHeight: 1.55
-    letterSpacing: 0em
-    fontFeature: "'ss01', 'cv11'"
-    fontVariation: "'wdth' 95, 'wght' 480"
-  label-md:
-    fontFamily: "JetBrains Mono Variable"
-    fontSize: 11px
-    fontWeight: 500
-    lineHeight: 1.1
-    letterSpacing: 0.08em
-  label-sm:
-    fontFamily: "JetBrains Mono Variable"
+    fontWeight: 560
+    lineHeight: 1.12
+    letterSpacing: 0.02em
+    fontVariation: "'wdth' 92, 'wght' 560"
+  silkscreen-label:
+    fontFamily: "Saira"
     fontSize: 10.5px
-    fontWeight: 500
+    fontWeight: 580
     lineHeight: 1.1
-    letterSpacing: 0.12em
+    letterSpacing: 0.2em
+    fontVariation: "'wdth' 100, 'wght' 580"
+  body-md:
+    fontFamily: "Saira"
+    fontSize: 15px
+    fontWeight: 400
+    lineHeight: 1.62
+    letterSpacing: 0.01em
+    fontVariation: "'wdth' 96, 'wght' 400"
+  readout-md:
+    fontFamily: "Fragment Mono"
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.2
+    letterSpacing: 0.04em
 spacing:
   xxs: 2px
   xs: 4px
@@ -76,151 +78,96 @@ spacing:
   lg: 16px
   xl: 24px
   xxl: 32px
-  section: 48px
+  section: 56px
   page-gutter: 32px
 rounded:
   none: 0px
-  sm: 2px
-  md: 6px
-  lg: 8px
-  full: 9999px
+  machined: 3px
+  soft: 6px
+  dial: 9999px
 components:
-  page-surface:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.on-surface}"
+  panel:
+    backgroundColor: "{colors.panel}"
+    textColor: "{colors.ink}"
     typography: "{typography.body-md}"
-  editorial-card:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.on-surface}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
+    rounded: "{rounded.machined}"
     padding: "{spacing.xl}"
-  editorial-card-raised:
-    backgroundColor: "{colors.surface-raised}"
-    textColor: "{colors.on-surface}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.xl}"
-  metadata-cell:
-    backgroundColor: "{colors.surface-recessed}"
-    textColor: "{colors.on-surface}"
-    typography: "{typography.label-sm}"
-    rounded: "{rounded.none}"
+  recessed-well:
+    backgroundColor: "{colors.well}"
+    textColor: "{colors.ink-muted}"
+    typography: "{typography.readout-md}"
+    rounded: "{rounded.soft}"
     padding: "{spacing.lg}"
-  stage-panel:
-    backgroundColor: "{colors.stage}"
-    textColor: "{colors.stage-ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.xl}"
-  stage-secondary-panel:
-    backgroundColor: "{colors.stage-2}"
-    textColor: "{colors.stage-ink}"
-    typography: "{typography.body-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.xl}"
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.primary-foreground}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.none}"
+  silkscreen-heading:
+    textColor: "{colors.ink}"
+    typography: "{typography.silkscreen-label}"
+  key-button:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.ground}"
+    typography: "{typography.silkscreen-label}"
+    rounded: "{rounded.machined}"
     padding: "{spacing.md}"
-    height: 40px
-  button-primary-hover:
-    backgroundColor: "{colors.tertiary}"
-    textColor: "{colors.primary}"
-    typography: "{typography.label-md}"
+    height: 42px
+  nav-key:
+    textColor: "{colors.ink-muted}"
+    typography: "{typography.silkscreen-label}"
     rounded: "{rounded.none}"
-    padding: "{spacing.md}"
-    height: 40px
-  button-secondary:
-    backgroundColor: "{colors.secondary}"
-    textColor: "{colors.on-surface}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.md}"
-    height: 40px
-  input-search:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.on-surface}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.md}"
-    height: 40px
-  link-accent:
-    textColor: "{colors.tertiary}"
-    typography: "{typography.label-md}"
-  decorative-mono:
-    textColor: "{colors.on-surface-dim}"
-    typography: "{typography.label-sm}"
   quiet-copy:
-    textColor: "{colors.on-surface-muted}"
+    textColor: "{colors.ink-muted}"
     typography: "{typography.body-md}"
-  tint-swatch:
-    backgroundColor: "{colors.tint}"
-    textColor: "{colors.primary}"
-    typography: "{typography.label-sm}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.sm}"
-  error-state:
-    backgroundColor: "{colors.error}"
-    textColor: "{colors.primary}"
-    typography: "{typography.label-md}"
-    rounded: "{rounded.none}"
-    padding: "{spacing.md}"
+  readout:
+    textColor: "{colors.ink-muted}"
+    typography: "{typography.readout-md}"
 ---
 
 ## Overview
 
-russ.fm is an editorial catalogue for a personal record collection: more archive index than streaming app, more printed music journal than glossy SaaS dashboard. The interface should feel warm, tactile, dense, and intentional, with album art carrying the visual emotion and the UI acting as a precise paper-and-ink frame. Core screens are quiet and systematic; feature moments can become more expressive through record sleeves, generated album palettes, and dark stage surfaces.
+russ.fm is a real, finite, physical record collection. The Listening Room renders the site as the equipment and shelves that hold it — but in daylight: a Braun-style deck on a sunny sideboard, not a midnight rack. Warm paper-aluminium panels, ink silkscreen, hairline rules, flat machined controls. **The records are the only colour**: every record appears as a physical object — a sleeve with board edges and a disc with a real centre label, slid out sideways — never as a flat product tile. Provenance reads as spec plates and archive readouts; listening history reads as cream VU meters, fader banks, and LED levels. Night mode is the same room with the lamp off, available behind a day/night switch; day is the default.
 
 ## Colors
 
-- **Primary ink (#0E0D0B):** the core text color and solid action background in the light paper theme.
-- **Paper surfaces (#F4F1EA, #EBE6DB, #FAF7EF, #E0D9C8):** warm off-whites and recessed papers, never neutral gray. Use these for body backgrounds, cards, metadata grids, filters, and empty states.
-- **Highlight red (#E23B1E):** the single fixed accent. Use it for section numbers, active countdown strokes, active links, destructive states, and brief hover emphasis.
-- **Muted ink (#5A534A, #8A8377):** secondary copy, mono catalogue labels, counts, decorative dividers, and low-priority metadata.
-- **Stage tones (#080807, #11100D, #F7F2E8):** off-black presentation surfaces for stats, wrapped, and hero-like music moments. Avoid pure black.
-- **Dynamic album color:** album palettes from `public/album-colors.json` and `public/album-colors.css` may override tint, shadow, hover-strip, and hero wash treatments. They should support the catalogue, not replace the paper/ink system.
+- **Daylight papers (#F1EEE7, #F7F5EE, #EAE6DB, #E5E0D3, #DCD6C8):** warm paper-aluminium layers — ground, panel, recessed band, well, deep. Never cool gray, never pure white.
+- **Ink (#211F1B / #56524A / #837D71):** silkscreen ink at three intensities. #837D71 is decorative engraving only; data-bearing text uses #56524A or darker.
+- **Amber (#A86A0E text · #E39A2D as light):** the single interface accent — active-source underlines, armed labels, LED dots, primary-key hover. Scarce.
+- **Meter red (#C04220):** VU red zones and destructive states only.
+- **Instrument materials are intrinsic:** cream VU faces (#F4E9CD), dark odometer drums, and black vinyl keep their real-world material in both themes.
+- **Night tokens (#1B1A18 ground, #232120 panel, #EAE6DC ink, #F2A93B amber):** the dark variant behind the switch; identical grammar, lamp off, subtle LED glow allowed there only.
+- **Album colour:** sleeves and disc centre labels carry the palette from `public/album-colors.json`; the interface never borrows it.
 
 ## Typography
 
-- **Display:** condensed Archivo Variable, uppercase, heavy, and tight. Use for album titles, browse headers, and section titles where the interface needs a printed-poster cadence.
-- **Body:** Archivo Variable with a slightly narrow width and readable line height. Keep long descriptions around 64-68 characters where practical.
-- **Labels:** JetBrains Mono Variable, uppercase, small, and tracked out. Use for counts, `CAT.`-style metadata, section numbers, filter labels, keyboard hints, and rail headings.
-- **Hierarchy:** pair one large display phrase with small mono metadata rather than stacking many medium-weight headings.
+- **Michroma** — plates only: the RUSS.FM lockup and rare engraved titles. Sparse.
+- **Saira** (variable width) — silkscreen labels (caps, tracked 0.18–0.26em), display headings (width 85–92, weight 560–640), body (width 96).
+- **Fragment Mono** — readouts and data: catalogue numbers, dates, durations, counts, positions. Never as decoration.
 
 ## Layout
 
-The core layout is a wide editorial canvas capped around `1640px`, with `20px` mobile gutters and `32px` desktop gutters. Pages use hairline rules, gridded metadata cells, divide-y catalogue lists, and drag-scroll walls rather than rounded dashboard panels. Dense catalogue screens should preserve scan speed: albums and artists sit in predictable grids, filters occupy a compact border-y row, and page headers establish `num · kicker · title · counts`.
-
-Hero and detail compositions can go full-bleed, but they should still expose a structured information rail. Album art should usually be square, prominent, and anchored to real collection data.
+Full-width horizontal bands, each with a silkscreen heading row (`LABEL ─── rule ─── mono readout`), capped at 1560px. Bands separate with a single hairline pair, and alternate ground/recessed paper. Records sit on rails — rows of gently leaning sleeves (±1.8–2.2°) with mono tickets — or lie in the platter well with the disc slid out sideways, always horizontally, never dropping below the sleeve.
 
 ## Elevation & Depth
 
-Depth is restrained. Prefer hairline borders, tonal paper layers, and slight translate-on-hover motion before shadows. When shadows appear, they should usually come from album palettes, as in cover-color drop shadows and hero sleeve glows. Glass effects are reserved for presentation-style wrapped surfaces and should not become the default catalogue language.
+Flat first. Hairlines and paper-tone changes do the layering; shadows exist only under physical objects (sleeves, discs, fader thumbs) and are soft, warm, and small. No bevels, no gradients on controls, no glass, no glow in daylight. Night mode may add a restrained LED glow to active dots only.
 
 ## Shapes
 
-Corners are mostly square: `--radius` is `0`, cards are sharp, nav controls are squared off, and metadata grids rely on hard edges. Rounded forms are reserved for objects that are naturally photographic or avatar-like: artist portraits may use `6px`, circular avatars use `9999px`, and pills appear only in presentation contexts where the surrounding surface already uses that vocabulary.
+Machined but quiet: 3px on panels, keys and wells (6px for search/platter well), full circles for discs, LED dots, and portrait windows. The vinyl disc is a first-class component: CSS grooves, palette-coloured centre label with title and `33⅓ RPM · STEREO` ring text, spindle hole. Coloured pressings (e.g. lava red) render as their real material.
 
 ## Components
 
-- **Navigation:** sticky paper bar, hairline bottom rule, icon-led links, active state as an underline rather than a filled tab. The brand lockup is uppercase condensed Archivo plus small mono descriptor text.
-- **Buttons:** mono uppercase labels, square corners, solid ink for primary actions, red only on hover or urgent states. Icon buttons use the same border/rule language.
-- **Search and filters:** compact, bordered, and joined to their overlays where possible. Use mono labels for filter categories and Archivo for entered values.
-- **Album cards:** square cover first, then uppercase display title and mono subline. Hover metadata strips may use the album palette's `{background, foreground}` pair for guaranteed cover-aware contrast.
-- **Artist cards:** quiet square portraits with slight rounding, mono rank, uppercase display name, and small release count.
-- **Editorial primitives:** Dossier heroes, fact grids, rail sections, empty states, and skeletons should use paper layers, rule borders, small mono labels, and high-contrast ink text.
-- **Wrapped and stats moments:** may use stage surfaces, full-bleed album imagery, and stronger motion, but should continue to derive color from music data and preserve readable rails.
+- **Navigation:** paper rail — RUSS.FM plate, plain-text source links with a small LED dot, amber underline on the active source, search well, and the day/night switch (sun/moon, persisted).
+- **Record object:** sleeve (cover image, board edge, seam shadow, hairline outline) with optional slid-out disc; rack rows lean alternately and rest on a hairline rail. Every sleeve carries a mono ticket.
+- **Spec plate / archive readout:** hairline-ruled key–value grids; silkscreen caps keys, mono values.
+- **Meters:** cream VU faces with real values; ink fader thumbs on light slots; amber LED bar timelines. All instrument data is real.
+- **Controls:** primary actions are flat ink keys (amber on hover); genre source-select is an underlined key list with counts; scrobble is a flat arm switch; service links are rear-panel jack labels, never coloured brand buttons.
+- **Liner notes:** ≤68ch body beside an archive readout plate, never a lone half-empty band.
 
 ## Do's and Don'ts
 
-- Do use album artwork and extracted album colors as the emotional layer; keep navigation, filters, and catalogue scaffolding in paper and ink.
-- Do keep red scarce: section numerals, active strokes, hover states, destructive feedback, and one primary emphasis per region.
-- Do build dense grids and lists with hairline dividers, predictable gutters, and small mono metadata.
-- Do use `src/lib/image-utils.ts` helpers for frontend album and artist images; keep valid sizes to `hi-res`, `medium`, and `avatar`.
-- Don't introduce broad rounded cards, soft dashboard panels, or generic SaaS spacing into catalogue pages.
-- Don't use pure black, pure white, or cool neutral gray as the base palette; the system is warm paper and warm ink.
-- Don't let decorative mono labels overpower the record titles, artist names, or sleeve imagery.
-- Don't hardcode album palette values in components; consume the generated static JSON/CSS contract.
+- Do keep all chroma in the records: covers, disc labels, coloured pressings, artist photos. The interface stays paper, ink, and one amber.
+- Do render records as objects with edges, thickness, lean, and shadow; the disc slides out sideways, horizontally.
+- Do express data as instrumentation with real values and mono readouts.
+- Do use collection vocabulary: filed, pulled, on the platter, in the rack; never buy/shop/product framing.
+- Don't ship gradient buttons, bevels, inset-glow panels, or dark-dashboard chrome; daylight is flat and calm.
+- Don't let amber spread: one active state per region; red only in meter zones and destructive states.
+- Don't invent hardware fictions (model numbers, fake serials); the site is a collection, not a gadget.
+- Don't hardcode album palette values; consume `public/album-colors.json` / `album-colors.css`.

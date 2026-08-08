@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<script>(function(){var t=localStorage.getItem('russfm-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Recovering The Satellites — russ.fm · The Listening Room mockup</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&family=Fragment+Mono&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="listening-room.css" />
+<style>
+  /* ------ album hero: the record, pulled ------ */
+  .pull-band { padding-block: clamp(30px, 4vw, 54px) clamp(44px, 5.5vw, 76px); }
+  .crumb {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--ink-3); margin-bottom: clamp(22px, 3vw, 36px);
+  }
+  .crumb a:hover { color: var(--led); }
+  .crumb b { color: var(--ink-2); font-weight: 400; }
+  .pull-grid {
+    display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+    gap: clamp(28px, 4vw, 76px); align-items: center;
+  }
+  /* the record, slid sideways out of its sleeve — scene box includes the disc */
+  .pull-scene { position: relative; width: min(100%, 660px); aspect-ratio: 1.38; }
+  .pull-scene .sleeve {
+    position: absolute; inset: 0 auto 0 0; width: 72.46%; z-index: 1;
+    box-shadow: 22px 0 44px -20px var(--obj-shadow);
+  }
+  .pull-scene .disc {
+    position: absolute; z-index: 0; top: 5%; left: 34.8%; width: 65.2%;
+  }
+  /* lava red pressing — colour comes from the record itself */
+  .disc.lava {
+    background:
+      conic-gradient(from 130deg,
+        rgba(255,220,200,0.09) 0 14deg, transparent 26deg 158deg,
+        rgba(255,220,200,0.08) 172deg 188deg, transparent 200deg 334deg,
+        rgba(255,220,200,0.07) 346deg 360deg),
+      repeating-radial-gradient(circle at 50%,
+        rgba(255,120,90,0.06) 0 1px, rgba(0,0,0,0) 1px 3px),
+      radial-gradient(circle at 46% 42%, #6d1a10 0 28%, #47100a 62%, #611709 100%);
+    box-shadow: 0 18px 44px -14px rgba(60, 8, 4, 0.9), inset 0 0 1px rgba(255,200,180,0.35);
+  }
+  .pull-title {
+    font-size: clamp(38px, 4.2vw, 64px); line-height: 0.98; text-transform: uppercase;
+    font-weight: 640; font-variation-settings: "wdth" 85, "wght" 640;
+    letter-spacing: 0.005em; text-wrap: balance; margin-bottom: 14px;
+  }
+  .pull-artist { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+  .pull-artist img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; outline: 1px solid var(--hairline-2); }
+  .pull-artist .a {
+    font-size: 17px; font-weight: 560; font-variation-settings: "wdth" 92, "wght" 560;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .pull-artist .a:hover { color: var(--led); }
+  .pull-genres { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 24px; }
+  .pull-genres a:hover { color: var(--led); }
+  .pull-spec { margin-bottom: 26px; }
+  .arm-row { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; margin-bottom: 22px; }
+  .arm {
+    display: inline-flex; align-items: center; gap: 13px;
+    padding: 9px 16px 9px 12px;
+    background: var(--panel);
+    border: 1px solid var(--hairline-2); border-radius: 3px;
+    transition: border-color 130ms ease-out;
+  }
+  .arm:hover { border-color: var(--led); }
+  .arm .slot {
+    position: relative; width: 40px; height: 18px; border-radius: 3px;
+    background: var(--deep); flex: none;
+  }
+  .arm .lever {
+    position: absolute; top: 2px; left: 2px; width: 16px; height: 14px; border-radius: 2px;
+    background: var(--ink);
+    transition: left 140ms ease-out;
+  }
+  .arm:hover .lever { left: 22px; }
+  .arm .t {
+    font-size: 10.5px; font-weight: 590; letter-spacing: 0.2em; text-transform: uppercase;
+    font-variation-settings: "wdth" 100, "wght" 590; color: var(--ink);
+  }
+  .arm .st { font-family: var(--font-mono); font-size: 9px; color: var(--ink-2); display: block; letter-spacing: 0.08em; margin-top: 2px; }
+  .jack-row { display: flex; gap: 24px; flex-wrap: wrap; }
+
+  /* ------ the sides ------ */
+  .sides-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(18px, 2.4vw, 30px); }
+  .side-well {
+    background: var(--panel);
+    border: 1px solid var(--hairline-2); border-radius: 3px;
+    padding: clamp(18px, 2.2vw, 28px);
+  }
+  .side-well .side-mark {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
+  }
+  .side-well .side-mark .badge {
+    width: 30px; height: 30px; border-radius: 50%; flex: none;
+    display: grid; place-items: center;
+    background: radial-gradient(circle at 42% 36%, #3a5c2c, #254924 66%);
+    color: #d8e3b7;
+    font-family: var(--font-mono); font-size: 12px;
+  }
+  .side-well .side-mark .lp { font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+  .side-well .side-mark .rt { margin-left: auto; font-family: var(--font-mono); font-size: 9.5px; color: var(--ink-2); }
+  .side-well ol { list-style: none; }
+  .side-well li {
+    display: grid; grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 12px; align-items: baseline;
+    padding-block: 8px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .side-well li:last-child { border-bottom: 0; }
+  .side-well .pos { font-family: var(--font-mono); font-size: 10px; color: var(--ink-3); }
+  .side-well .tt { font-size: 14.5px; font-weight: 470; font-variation-settings: "wdth" 94, "wght" 470; color: var(--ink); }
+  .side-well li:hover .tt { color: var(--led); }
+  .side-well .dur { font-family: var(--font-mono); font-size: 10px; color: var(--ink-2); }
+
+  /* ------ liner grid ------ */
+  .liner-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 360px); gap: clamp(28px, 4vw, 72px); align-items: start; }
+  .inst-label {
+    font-size: 9.5px; font-weight: 590; letter-spacing: 0.24em; text-transform: uppercase;
+    font-variation-settings: "wdth" 100, "wght" 590; color: var(--ink-3);
+    margin-bottom: 16px;
+  }
+  .archive-plate .row {
+    display: flex; justify-content: space-between; gap: 18px;
+    padding-block: 10px; border-bottom: 1px solid var(--hairline);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+  }
+  .archive-plate .row:first-of-type { border-top: 1px solid var(--hairline); }
+  .archive-plate .k { color: var(--ink-3); text-transform: uppercase; font-size: 9.5px; letter-spacing: 0.18em; }
+  .archive-plate .v { color: var(--ink); text-align: right; }
+
+  /* ------ provenance ------ */
+  .provenance { max-width: 420px; }
+  .provenance--wide { max-width: none; display: grid; grid-template-columns: repeat(2, minmax(0, 480px)); column-gap: clamp(32px, 5vw, 90px); }
+  .provenance .row {
+    display: flex; justify-content: space-between; gap: 18px;
+    padding-block: 10px; border-bottom: 1px solid var(--hairline);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+  }
+  .provenance .row:first-child { border-top: 1px solid var(--hairline); }
+  .provenance .k { color: var(--ink-3); text-transform: uppercase; font-size: 9.5px; letter-spacing: 0.18em; }
+  .provenance .v { color: var(--ink); text-align: right; }
+  .provenance .v a { color: var(--led); }
+  .provenance .v a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 1020px) {
+    .pull-grid { grid-template-columns: 1fr; }
+    .sides-grid { grid-template-columns: 1fr; }
+    .provenance--wide { grid-template-columns: 1fr; }
+    .liner-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="rail-nav">
+  <div class="wrap">
+    <a class="brand" href="home.html">
+      <span class="plate">RUSS<span>.</span>FM</span>
+      <span class="model">a physical record collection</span>
+    </a>
+    <nav class="nav-keys" aria-label="Sources">
+      <a class="nav-key" href="home.html"><span class="led"></span>Home</a>
+      <a class="nav-key" aria-current="page" href="#"><span class="led"></span>Albums</a>
+      <a class="nav-key" href="artist.html"><span class="led"></span>Artists</a>
+      <a class="nav-key" href="#"><span class="led"></span>Genres</a>
+      <a class="nav-key" href="#"><span class="led"></span>Stats</a>
+    </nav>
+    <div class="search-well" role="search">
+      <svg width="11" height="11" viewBox="0 0 11 11" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="4.6" cy="4.6" r="3.6"/><path d="m7.5 7.5 2.6 2.6"/></svg>
+      search the collection&nbsp;<span style="opacity:.55">/</span>
+    </div>
+    <button class="theme-key" type="button" aria-label="Switch between day and night mode" onclick="var r=document.documentElement;var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');localStorage.setItem('russfm-theme','light');}else{r.setAttribute('data-theme','dark');localStorage.setItem('russfm-theme','dark');}">
+      <svg class="ic-moon" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M11.5 8.8A5.3 5.3 0 0 1 5.2 2.5a5.3 5.3 0 1 0 6.3 6.3Z"/></svg>
+      <svg class="ic-sun" width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="7" cy="7" r="3"/><path d="M7 .8v1.7M7 11.5v1.7M.8 7h1.7M11.5 7h1.7M2.6 2.6l1.2 1.2M10.2 10.2l1.2 1.2M11.4 2.6l-1.2 1.2M3.8 10.2 2.6 11.4"/></svg>
+      <span class="ic-moon">Night</span><span class="ic-sun">Day</span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ THE RECORD, PULLED ============ -->
+<section class="band pull-band">
+  <div class="wrap">
+    <p class="crumb"><a href="home.html">Home</a> / <a href="#">Albums</a> / <b>Recovering The Satellites</b></p>
+    <div class="pull-grid">
+      <div class="pull-scene">
+        <div class="disc lava" aria-hidden="true">
+          <div class="label" style="background:radial-gradient(circle at 42% 36%, #35592b, #254924 62%, #16300f); color:#e2ecc4;">
+            <span class="side">Side A</span>
+            <span class="name">Recovering The Satellites</span>
+            <span class="rpm">33⅓ RPM · Stereo · Geffen</span>
+          </div>
+        </div>
+        <div class="sleeve">
+          <img src="https://assets.russ.fm/album/recovering-the-satellites-38020338/recovering-the-satellites-38020338-hi-res.jpg" alt="Recovering The Satellites sleeve — Counting Crows" width="640" height="640" />
+        </div>
+      </div>
+
+      <div>
+        <h1 class="pull-title">Recovering The Satellites</h1>
+        <div class="pull-artist">
+          <img src="https://assets.russ.fm/artist/counting-crows/counting-crows-avatar.jpg" alt="" width="34" height="34" />
+          <a class="a" href="artist.html">Counting Crows</a>
+        </div>
+        <p class="pull-genres"><a href="#">Alternative Rock</a> · <a href="#">Adult Alternative</a></p>
+        <dl class="spec pull-spec">
+          <div><dt>Released</dt><dd>1996</dd></div>
+          <div><dt>This pressing</dt><dd>2026 <small>RSD Essentials · lava red</small></dd></div>
+          <div><dt>Label</dt><dd>Geffen <small>/ UMe</small></dd></div>
+          <div><dt>Format</dt><dd>2×LP Vinyl · US</dd></div>
+          <div><dt>Added</dt><dd>02 Aug 2026</dd></div>
+          <div><dt>Sides</dt><dd>4 · 14 tracks · 59:21</dd></div>
+        </dl>
+        <div class="arm-row">
+          <button class="arm" type="button">
+            <span class="slot"><span class="lever"></span></span>
+            <span><span class="t">Scrobble to Last.fm</span><span class="st">sends all 14 tracks</span></span>
+          </button>
+        </div>
+        <div class="jack-row">
+          <a class="jack" href="#">Apple Music</a>
+          <a class="jack" href="#">Spotify</a>
+          <a class="jack" href="#">Discogs</a>
+          <a class="jack" href="#">Last.fm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE SIDES ============ -->
+<section class="band band-recessed">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>The sides</h2>
+      <span class="rule"></span>
+      <span class="readout"><b>14</b> tracks · 4 sides · runtime 59:21</span>
+    </div>
+    <div class="sides-grid">
+      <div class="side-well">
+        <div class="side-mark"><span class="badge">A</span><span class="lp">LP one</span><span class="rt">15:59</span></div>
+        <ol>
+          <li><span class="pos">A1</span><span class="tt">Catapult</span><span class="dur">3:34</span></li>
+          <li><span class="pos">A2</span><span class="tt">Angels Of The Silences</span><span class="dur">3:38</span></li>
+          <li><span class="pos">A3</span><span class="tt">Daylight Fading</span><span class="dur">3:50</span></li>
+          <li><span class="pos">A4</span><span class="tt">I'm Not Sleeping</span><span class="dur">4:57</span></li>
+        </ol>
+      </div>
+      <div class="side-well">
+        <div class="side-mark"><span class="badge">B</span><span class="lp">LP one</span><span class="rt">14:54</span></div>
+        <ol>
+          <li><span class="pos">B1</span><span class="tt">Goodnight Elisabeth</span><span class="dur">5:20</span></li>
+          <li><span class="pos">B2</span><span class="tt">Children In Bloom</span><span class="dur">5:23</span></li>
+          <li><span class="pos">B3</span><span class="tt">Have You Seen Me Lately?</span><span class="dur">4:11</span></li>
+        </ol>
+      </div>
+      <div class="side-well">
+        <div class="side-mark"><span class="badge">C</span><span class="lp">LP two</span><span class="rt">16:29</span></div>
+        <ol>
+          <li><span class="pos">C1</span><span class="tt">Miller's Angels</span><span class="dur">6:33</span></li>
+          <li><span class="pos">C2</span><span class="tt">Another Horsedreamer's Blues</span><span class="dur">4:32</span></li>
+          <li><span class="pos">C3</span><span class="tt">Recovering The Satellites</span><span class="dur">5:24</span></li>
+        </ol>
+      </div>
+      <div class="side-well">
+        <div class="side-mark"><span class="badge">D</span><span class="lp">LP two</span><span class="rt">11:59</span></div>
+        <ol>
+          <li><span class="pos">D1</span><span class="tt">Monkey</span><span class="dur">3:02</span></li>
+          <li><span class="pos">D2</span><span class="tt">Mercury</span><span class="dur">2:48</span></li>
+          <li><span class="pos">D3</span><span class="tt">A Long December</span><span class="dur">4:57</span></li>
+          <li><span class="pos">D4</span><span class="tt">Walkaways</span><span class="dur">1:12</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LINER NOTES ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Liner notes</h2>
+      <span class="rule"></span>
+      <span class="readout">notes on this record</span>
+    </div>
+    <div class="liner-grid">
+      <div class="liner">
+        <p><strong>Recovering the Satellites</strong> is Counting Crows' second studio album, originally released in 1996 on Geffen and produced by Gil Norton. It marked a darker, more forceful turn from the band's debut, pairing Adam Duritz's searching, often wounded lyrics with a fuller alternative rock sound on songs like "A Long December," "Angels of the Silences," and "Daylight Fading." The album was a major commercial success, reaching No.&nbsp;1 on the Billboard 200 and earning multi-platinum certifications in the U.S. and Canada.</p>
+        <p>This 2026 RSD Essentials reissue on lava red vinyl brings the record back through Geffen/UMe. Its mix of aching ballads and guitar-driven momentum has kept the album a defining snapshot of mid-'90s rock — a fan favourite with lasting cultural weight.</p>
+      </div>
+      <div class="archive-plate">
+        <p class="inst-label">Quick facts</p>
+        <div class="row"><span class="k">Produced by</span><span class="v">Gil Norton</span></div>
+        <div class="row"><span class="k">Chart peak</span><span class="v">Billboard 200 · no. 1</span></div>
+        <div class="row"><span class="k">Certified</span><span class="v">Multi-platinum US + CA</span></div>
+        <div class="row"><span class="k">This reissue</span><span class="v">RSD Essentials · 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVENANCE ============ -->
+<section class="band band-recessed">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Provenance</h2>
+      <span class="rule"></span>
+      <span class="readout">this copy · release identifiers · reach</span>
+    </div>
+    <div class="provenance provenance--wide">
+      <div class="row"><span class="k">Added to the collection</span><span class="v">02 Aug 2026</span></div>
+      <div class="row"><span class="k">Discogs release</span><span class="v"><a href="#">no. 38020338</a></span></div>
+      <div class="row"><span class="k">Spotify ID</span><span class="v">3nehlgwYexH9ovS9fohKs1</span></div>
+      <div class="row"><span class="k">Country</span><span class="v">US</span></div>
+      <div class="row"><span class="k">Last.fm listeners</span><span class="v">510,264</span></div>
+      <div class="row"><span class="k">Last.fm scrobbles</span><span class="v">4,558,343</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILED NEAR ============ -->
+<section class="band">
+  <div class="wrap">
+    <div class="silk-head">
+      <h2>Similar records</h2>
+      <span class="rule"></span>
+      <a class="readout" href="#">more <b>alternative rock</b> — view all <svg width="11" height="10" viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="1.3" style="vertical-align:-1px"><path d="M1 5h9.5M7 1.5 10.5 5 7 8.5"/></svg></a>
+    </div>
+    <div class="rack">
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/12-golden-country-greats-38007150/12-golden-country-greats-38007150-medium.jpg" alt="12 Golden Country Greats — Ween" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">12 Golden Country Greats</span>Ween · 1996</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/ok-computer-3339642/ok-computer-3339642-medium.jpg" alt="OK Computer — Radiohead" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">OK Computer</span>Radiohead · 1997</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/doolittle-37029006/doolittle-37029006-medium.jpg" alt="Doolittle — Pixies" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Doolittle</span>Pixies · 1989</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/unknown-pleasures-13729623/unknown-pleasures-13729623-medium.jpg" alt="Unknown Pleasures — Joy Division" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Unknown Pleasures</span>Joy Division · 1979</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/meet-the-eels-essential-eels-vol1-1996-2006-35889862/meet-the-eels-essential-eels-vol1-1996-2006-35889862-medium.jpg" alt="Meet The Eels — Eels" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Meet The Eels</span>Eels · 2008</span>
+      </a>
+      <a class="record" href="#">
+        <span class="sleeve"><img loading="lazy" src="https://assets.russ.fm/album/songs-to-learn-sing-37970427/songs-to-learn-sing-37970427-medium.jpg" alt="Songs To Learn & Sing — Echo & The Bunnymen" width="320" height="320"/></span>
+        <span class="ticket"><span class="t">Songs To Learn &amp; Sing</span>Echo &amp; The Bunnymen · 1985</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="rear-panel">
+  <div class="wrap">
+    <a class="jack" href="#">Last.fm</a>
+    <a class="jack" href="#">Discogs</a>
+    <a class="jack" href="#">Spotify</a>
+    <a class="jack" href="#">Apple Music</a>
+    <p class="serial">
+      RUSS.FM · A PHYSICAL RECORD COLLECTION<br/>
+      3,300 records added since 2015 · data: discogs / last.fm / spotify / apple music
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
