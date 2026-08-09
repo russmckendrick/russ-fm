@@ -248,6 +248,9 @@ fn str_field(v: &Value, path: &[&str]) -> Option<String> {
 ///
 /// `boxset_parent` links this release as a member of a boxset (`raw_data.boxset`); when `None`,
 /// any link already stored on the release is preserved so refreshes don't silently unlink it.
+///
+/// `keep_existing_artwork` leaves an already-downloaded hi-res cover untouched (boxset runs:
+/// skipped service pickers would otherwise let a low-res Last.fm/Discogs image replace it).
 #[allow(clippy::too_many_arguments)]
 pub async fn process_release(
     cfg: &Config,
@@ -260,6 +263,7 @@ pub async fn process_release(
     picker: &MatchPicker,
     collection_date_added: Option<&str>,
     boxset_parent: Option<&str>,
+    keep_existing_artwork: bool,
 ) -> Result<(ReleaseRecord, EnrichFlags)> {
     let discogs = services
         .discogs
@@ -457,7 +461,13 @@ pub async fn process_release(
             }
         }
         let target = cfg.image_sizes.hi_res.split('x').next().and_then(|s| s.parse::<u32>().ok()).unwrap_or(2000);
-        flags.image = images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await.is_some();
+        let existing_art = album_dir.join(&folder).join(format!("{folder}-hi-res.jpg"));
+        flags.image = if keep_existing_artwork && existing_art.exists() {
+            tracing::info!("keeping existing hi-res artwork for {folder}");
+            true
+        } else {
+            images::download_release_hires(client, &album_dir, &folder, &rec.raw_data, target, prefer).await.is_some()
+        };
 
         db.save_release(&rec).context("saving release to database")?;
         // save_release seeded any missing artist rows; give the primary artist the Wikipedia
@@ -528,9 +538,11 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     } else {
         services.discogs.collection_date_added(&cfg.discogs.username, &discogs_id).await
     };
+    // In --boxset runs existing artwork is kept; an explicit --prefer re-downloads anyway.
+    let keep_artwork = args.boxset.is_some() && args.prefer.is_none();
     let (rec, flags) = process_release(
         cfg, &services, &db, &client, &discogs_id, save, prefer_key(args.prefer), &picker, date_added.as_deref(),
-        args.boxset.as_deref(),
+        args.boxset.as_deref(), keep_artwork,
     )
     .await?;
 
@@ -611,7 +623,7 @@ async fn run_boxset_discovery(
                 services.discogs.collection_date_added(&cfg.discogs.username, box_id).await
             };
             let (rec, flags) =
-                process_release(cfg, services, db, client, box_id, save, prefer, &picker, date_added.as_deref(), None)
+                process_release(cfg, services, db, client, box_id, save, prefer, &picker, date_added.as_deref(), None, args.prefer.is_none())
                     .await?;
             print_summary(&rec, flags);
             rec
@@ -734,7 +746,7 @@ async fn run_boxset_discovery(
             println!("  {title}: release {main_release} already in the database — refreshing and linking");
         }
         println!("\nProcessing {title} (release {main_release})...");
-        match process_release(cfg, services, db, client, &main_release, save, prefer, &picker, None, Some(box_id)).await {
+        match process_release(cfg, services, db, client, &main_release, save, prefer, &picker, None, Some(box_id), args.prefer.is_none()).await {
             Ok((rec, flags)) => {
                 print_summary(&rec, flags);
                 linked += 1;

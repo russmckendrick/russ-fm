@@ -82,6 +82,11 @@ Spotify) are also picked interactively, which avoids bad first-match artwork for
 that only exist on streaming as combined editions. Requires a terminal; collection.json is
 regenerated once at the end.
 
+In every `--boxset` run (discovery or manual linking), **existing hi-res artwork is kept**:
+skipping a service picker would otherwise let a low-res Last.fm/Discogs image replace a
+good cover. Fresh members with no artwork still download one, and passing `--prefer`
+explicitly always re-downloads from that source.
+
 ### Examples
 
 ```bash

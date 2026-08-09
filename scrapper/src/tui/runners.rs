@@ -64,7 +64,7 @@ pub(crate) async fn run_collection_task(
 
     for (i, (id, date_added, instance)) in items.iter().enumerate() {
         log(format!("▶ [{}/{total}] release {id} — fetching from Discogs…", i + 1));
-        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None, &picker, date_added.as_deref(), None).await {
+        match crate::ops::release::process_release(&cfg, &services, &db, &client, id, true, None, &picker, date_added.as_deref(), None, false).await {
             Ok((rec, f)) => {
                 let _ = db.record_processed(&rec.id, id, instance.as_deref(), date_added.as_deref());
                 let m = |b: bool| if b { "✓" } else { "–" };
@@ -208,7 +208,7 @@ pub(crate) async fn run_single_release_task(
     let picker = MatchPicker::Tui(pick_tx);
 
     log(format!("▶ release {discogs_id} — re-enriching…"));
-    match crate::ops::release::process_release(&cfg, &services, &db, &client, &discogs_id, true, None, &picker, None, None).await {
+    match crate::ops::release::process_release(&cfg, &services, &db, &client, &discogs_id, true, None, &picker, None, None, false).await {
         Ok((rec, f)) => {
             let m = |b: bool| if b { "✓" } else { "–" };
             log(format!("  {} — {}", first_artist(&rec.artists), rec.title));
