@@ -72,11 +72,23 @@ Main collection index used for album listings.
 | albums[].spotify_url | string? | Spotify album URL |
 | albums[].apple_music_url | string? | Apple Music URL |
 | albums[].discogs_url | string | Discogs release URL |
+| albums[].boxset | object? | Present only on boxset members: `{parent_discogs_id, name, uri_release}` linking to the parent box. `name`/`uri_release` are null if the parent has no collection entry |
+| albums[].boxset_contents | object[]? | Present only on boxset parents with linked members: `[{release_name, uri_release, images_uri_release}]`, sorted by release year then name |
 
 > **Phase 1 data-leverage update (May 2026):** the five fields `styles`, `formats`, `format_primary`, `labels`, `country`, `lastfm_listeners` were added to the collection.json index so faceted browse pages and Stats v2 don't need to lazy-load every per-album JSON. They are denormalised at index time by the collection generator ([`scrapper/src/output/collection.rs`](../../scrapper/src/output/collection.rs)).
 >
 > collection.json is regenerated after every mutating scrapper action — collection runs, CLI
 > `--save` commands, and every TUI detail-editor edit/refresh — so it always reflects the DB.
+>
+> **Boxsets (Aug 2026):** albums inside a boxset are added individually via
+> `scrapper release <id> --save --boxset <parent_id>`; the link is stored in the release row's
+> `raw_data.boxset` and the generator denormalises it in both directions (`boxset` on members,
+> `boxset_contents` on parents). Members inherit the parent's `date_added`. Frontend policy: a
+> member (`boxset != null`) stays in search, its own page, sitemap, and album-colors, but is
+> excluded from stats, home recents/hero/walls, `/albums`, `/artists` counts, random pages,
+> facet browse, the genre explorer, and wrapped — the helper is
+> [`src/lib/boxsets.ts`](../../src/lib/boxsets.ts). The `boxset` key inside DB `raw_data` is
+> deliberately not emitted into the public album JSON (`release_services` whitelists keys).
 
 ---
 

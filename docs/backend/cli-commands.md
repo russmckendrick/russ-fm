@@ -44,22 +44,43 @@ scrapper release <DISCOGS_ID> [OPTIONS]
 
 | Argument | Required | Description |
 |----------|----------|-------------|
-| `DISCOGS_ID` | Yes | Discogs release ID |
+| `DISCOGS_ID` | No* | Discogs release ID. *Omit it together with `--boxset <BOX_ID>` to run interactive boxset discovery (see below) |
 
 ### Options
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `--save` | FLAG | `false` | Save to public directory |
-| `--force-refresh` | FLAG | `false` | Ignore cache |
+| `--force-refresh` | FLAG | `false` | Refetch everything from the source APIs (Discogs included) and persist it — implies `--save` |
 | `--interactive` | FLAG | `false` | Manual match selection |
 | `--prefer` | CHOICE | - | Preferred data/image source: `apple-music`, `spotify`, `theaudiodb`, `discogs`, `v1` |
+| `--boxset` | STRING | - | Link this release as a member of a boxset (the parent's Discogs ID) |
 
 > Run `scrapper release --help` for the full, authoritative flag list.
 
 > `--interactive` shows the match picker for **every** candidate list, including a single
 > candidate, so you can always confirm or skip a source. `--save` also regenerates
 > `public/collection.json` after writing the release.
+
+> `--boxset <BOX_ID>` with a release ID requires the parent release to already be in the
+> database (process the box itself first). The link is stored at
+> `raw_data.boxset.parent_discogs_id`, survives refreshes, and makes the member inherit the
+> parent's `date_added` when it has none of its own. The collection generator turns it into
+> `boxset` / `boxset_contents` fields in `collection.json` — see
+> [data schemas](../data/schemas.md). Members get full enrichment (artwork, tracklist,
+> streaming links) and stay searchable, but the frontend excludes them from stats,
+> recently-added, browse listings, and wrapped.
+
+### Boxset discovery
+
+`scrapper release --save --boxset <BOX_ID>` (no release ID) runs the whole boxset workflow
+in one interactive session: it processes/refetches the box itself, reads the album titles
+from the box's tracklist section headers, searches Discogs masters for each album, and
+shows a picker (choose a master or skip). Each match resolves to the master's main release
+and is processed with full enrichment as a linked member — service matches (Apple Music,
+Spotify) are also picked interactively, which avoids bad first-match artwork for albums
+that only exist on streaming as combined editions. Requires a terminal; collection.json is
+regenerated once at the end.
 
 ### Examples
 
@@ -78,6 +99,13 @@ scrapper release 123456 --interactive --save
 
 # Prefer Apple Music as the source
 scrapper release 123456 --prefer apple-music --save
+
+# Interactive boxset discovery: process the box, then search-and-match every album in it
+scrapper release --save --boxset 34349962
+
+# Or link individual albums into a box manually
+scrapper release 12811757 --save
+scrapper release 414374 --save --boxset 12811757
 ```
 
 ---

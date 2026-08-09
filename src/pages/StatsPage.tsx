@@ -6,6 +6,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getArtistImageFromData, getAlbumImageFromData } from '@/lib/image-utils';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { appConfig } from '@/config/app.config';
 import { redesignConfig } from '@/config/redesign.config';
 import { Album } from '@/types/album';
@@ -81,7 +82,7 @@ export function StatsPage() {
     try {
       const response = await fetch('/collection.json');
       const data: Album[] = await response.json();
-      setStats(calculateStats(data));
+      setStats(calculateStats(excludeBoxsetMembers(data)));
     } catch (error) {
       console.error('Error loading collection:', error);
     } finally {

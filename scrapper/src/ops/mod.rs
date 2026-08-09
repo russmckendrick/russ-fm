@@ -124,6 +124,34 @@ fn datetime_rest_valid(rest: &str) -> bool {
             .all(|b| b.is_ascii_digit() || matches!(b, b':' | b'.' | b'+' | b'-' | b'Z' | b'z'))
 }
 
+/// Sørensen-Dice bigram similarity (same algorithm as the report/maintenance matchers), used
+/// to rank an artist's Discogs masters against a boxset's album section headers.
+pub(crate) fn dice_similarity(a: &str, b: &str) -> f64 {
+    if a == b {
+        return 1.0;
+    }
+    let bigrams = |s: &str| -> Vec<[char; 2]> {
+        let c: Vec<char> = s.chars().collect();
+        c.windows(2).map(|w| [w[0], w[1]]).collect()
+    };
+    let (ba, bb) = (bigrams(a), bigrams(b));
+    if ba.is_empty() || bb.is_empty() {
+        return 0.0;
+    }
+    let mut used = vec![false; bb.len()];
+    let mut m = 0;
+    for x in &ba {
+        for (j, y) in bb.iter().enumerate() {
+            if !used[j] && x == y {
+                used[j] = true;
+                m += 1;
+                break;
+            }
+        }
+    }
+    2.0 * m as f64 / (ba.len() + bb.len()) as f64
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -153,6 +181,15 @@ mod tests {
         assert_eq!(parse_date_ymd("1994-06-01").unwrap(), Some("1994-06-01".into()));
         assert!(parse_date_ymd("06/01/1994").is_err());
         assert!(parse_date_ymd("1994-6-1").is_err());
+    }
+
+    #[test]
+    fn dice_similarity_ranks_boxset_title_variants() {
+        // Punctuation variants of the same album must clear the 0.4 candidate threshold…
+        assert!(dice_similarity("new gold dream (81-82-83-84)", "new gold dream (81/82/83/84)") > 0.4);
+        assert!(dice_similarity("real to real cacophony", "real to real cacophony.") > 0.4);
+        // …while unrelated albums by the same artist must not.
+        assert!(dice_similarity("wild planet", "cosmic thing") < 0.4);
     }
 
     #[test]

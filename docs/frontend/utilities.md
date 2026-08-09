@@ -186,6 +186,30 @@ sanitizeJsonPath('/album/some-album'); // '/album/some-album/index.json'
 
 ---
 
+## Boxset Utilities (`src/lib/boxsets.ts`)
+
+Boxset members are full collection entries linked to a parent box via the `boxset` field in
+`collection.json` (see [data schemas](../data/schemas.md)). They keep their own page and stay
+searchable, but must never double-count against the box on aggregate surfaces.
+
+```typescript
+// True when the album carries a `boxset` link
+isBoxsetMember(album): boolean
+
+// The collection without boxset members — use for stats, recents, and browse aggregates
+excludeBoxsetMembers(albums): Album[]
+```
+
+**Where the filter is applied:** `HomePage` (recents, hero, walls, stats aside), `StatsPage`,
+`AlbumsPage`, `ArtistsPage`, `RandomPage`, `GenrePage`, `FacetListPage`, `FacetDetailPage`,
+and `scripts/generate-wrapped-data.ts`. **Deliberately unfiltered:** the search index
+(`searchService`), `AlbumDetailPage` (members need their entry; parents resolve
+`boxset_contents` against the full collection), `ArtistDetailPage` discographies, the
+sitemap, and album-colors generation.
+
+`AlbumDetailPage` renders the relationship both ways: members get a "From the box set" link
+chip in the hero, parents get an "In this box set" card grid.
+
 ## Genre Utilities (`src/lib/genreUtils.ts`)
 
 ### getCleanGenres

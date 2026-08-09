@@ -2,6 +2,7 @@ import { lazy, Suspense, useCallback, useEffect, useState, type ReactNode } from
 import { RefreshCw } from 'lucide-react';
 import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import type { Album } from '@/types/album';
 
 type LoadStatus = 'loading' | 'ready' | 'empty' | 'error';
@@ -23,7 +24,7 @@ export function RandomPage() {
         throw new Error(`Collection request failed: ${response.status}`);
       }
 
-      const collection = (await response.json()) as Album[];
+      const collection = excludeBoxsetMembers((await response.json()) as Album[]);
       const validAlbums = collection.filter(
         (album) => album.uri_release && album.release_name && album.release_artist,
       );

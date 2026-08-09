@@ -9,6 +9,7 @@ import { appConfig } from "@/config/app.config";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { usePageTitle } from "@/hooks/usePageTitle";
 import { slugify } from "@/lib/browseFacets";
+import { excludeBoxsetMembers } from "@/lib/boxsets";
 import {
   ALL_GENRES_VALUE,
   buildGenreExplorer,
@@ -64,7 +65,7 @@ export function GenrePage() {
         const response = await fetch("/collection.json");
         if (!response.ok) throw new Error("Failed to load collection data");
         const data = await response.json();
-        setCollection(Array.isArray(data) ? data : []);
+        setCollection(Array.isArray(data) ? excludeBoxsetMembers(data) : []);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load data");
       } finally {

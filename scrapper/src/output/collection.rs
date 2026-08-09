@@ -18,16 +18,23 @@ pub fn regenerate(cfg: &Config, db: &Db) -> Result<usize> {
 /// Generate collection.json into `output_path`. Returns the entry count.
 pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<usize> {
     let releases = db.get_all_releases().context("loading releases")?;
-    let mut entries: Vec<(String, Value)> = Vec::with_capacity(releases.len());
+    let mut entries: Vec<BuiltEntry> = Vec::with_capacity(releases.len());
     for r in &releases {
         if let Some(entry) = build_entry(cfg, db, r) {
             let date_added = entry.get("date_added").and_then(|d| d.as_str()).unwrap_or("1900-01-01").to_string();
-            entries.push((date_added, entry));
+            entries.push(BuiltEntry {
+                date_added,
+                discogs_id: r.discogs_id.clone(),
+                boxset_parent_id: boxset_parent_id(r),
+                year: r.year,
+                entry,
+            });
         }
     }
+    link_boxsets(&mut entries);
     // Newest first.
-    entries.sort_by(|a, b| b.0.cmp(&a.0));
-    let list: Vec<Value> = entries.into_iter().map(|(_, e)| e).collect();
+    entries.sort_by(|a, b| b.date_added.cmp(&a.date_added));
+    let list: Vec<Value> = entries.into_iter().map(|e| e.entry).collect();
     let count = list.len();
 
     if let Some(parent) = output_path.parent() {
@@ -37,6 +44,88 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
     let text = serde_json::to_string_pretty(&Value::Array(list))?;
     std::fs::write(output_path, text)?;
     Ok(count)
+}
+
+/// A collection.json entry plus the release metadata needed to wire boxset links after the
+/// full set has been built.
+struct BuiltEntry {
+    date_added: String,
+    discogs_id: Option<String>,
+    boxset_parent_id: Option<String>,
+    /// Discogs release year — the sort key for `boxset_contents` (the entry's
+    /// `date_release_year` prefers streaming-service dates, which reflect reissues).
+    year: Option<i64>,
+    entry: Value,
+}
+
+/// The parent Discogs ID stored on a boxset member (`raw_data.boxset.parent_discogs_id`).
+fn boxset_parent_id(rec: &ReleaseRecord) -> Option<String> {
+    rec.raw_data
+        .get("boxset")
+        .and_then(|b| b.get("parent_discogs_id"))
+        .and_then(|p| p.as_str())
+        .map(String::from)
+}
+
+/// Second pass over the built entries: members gain a `boxset` object pointing at their parent,
+/// parents gain a `boxset_contents` list of their members. A member whose parent has vanished
+/// keeps a `boxset` marker (null name/uri) so the frontend still excludes it from aggregates.
+fn link_boxsets(entries: &mut [BuiltEntry]) {
+    use std::collections::HashMap;
+
+    let parents: HashMap<String, Value> = entries
+        .iter()
+        .filter_map(|e| {
+            let id = e.discogs_id.clone()?;
+            let summary = json!({
+                "release_name": e.entry.get("release_name").cloned().unwrap_or(Value::Null),
+                "uri_release": e.entry.get("uri_release").cloned().unwrap_or(Value::Null),
+                "images_uri_release": e.entry.get("images_uri_release").cloned().unwrap_or(Value::Null),
+            });
+            Some((id, summary))
+        })
+        .collect();
+
+    // parent discogs_id → member summaries, ordered by Discogs release year then name.
+    let mut members: HashMap<String, Vec<(i64, String, Value)>> = HashMap::new();
+    for e in entries.iter_mut() {
+        let Some(parent_id) = e.boxset_parent_id.clone() else { continue };
+        let parent = parents.get(&parent_id);
+        if parent.is_none() {
+            tracing::warn!(
+                "boxset member {} references parent {parent_id}, which has no collection entry",
+                e.discogs_id.as_deref().unwrap_or("?")
+            );
+        }
+        let link = json!({
+            "parent_discogs_id": parent_id,
+            "name": parent.and_then(|p| p.get("release_name").cloned()).unwrap_or(Value::Null),
+            "uri_release": parent.and_then(|p| p.get("uri_release").cloned()).unwrap_or(Value::Null),
+        });
+        if let Some(obj) = e.entry.as_object_mut() {
+            obj.insert("boxset".into(), link);
+        }
+        let year = e.year.unwrap_or(i64::MAX);
+        let name = e.entry.get("release_name").and_then(|n| n.as_str()).unwrap_or("").to_string();
+        let summary = json!({
+            "release_name": e.entry.get("release_name").cloned().unwrap_or(Value::Null),
+            "uri_release": e.entry.get("uri_release").cloned().unwrap_or(Value::Null),
+            "images_uri_release": e.entry.get("images_uri_release").cloned().unwrap_or(Value::Null),
+        });
+        members.entry(parent_id).or_default().push((year, name, summary));
+    }
+
+    for e in entries.iter_mut() {
+        let Some(id) = e.discogs_id.as_deref() else { continue };
+        let Some(mut kids) = members.remove(id) else { continue };
+        kids.sort_by(|a, b| a.0.cmp(&b.0).then_with(|| a.1.cmp(&b.1)));
+        if let Some(obj) = e.entry.as_object_mut() {
+            obj.insert(
+                "boxset_contents".into(),
+                Value::Array(kids.into_iter().map(|(_, _, s)| s).collect()),
+            );
+        }
+    }
 }
 
 fn string_list_filtered(v: &Value) -> Vec<String> {
@@ -243,4 +332,60 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     }));
     e.insert("images_uri_artist".into(), artist_image_uris(cfg, &primary_folder));
     Some(Value::Object(e))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn built(id: &str, name: &str, year: i64, parent: Option<&str>) -> BuiltEntry {
+        BuiltEntry {
+            date_added: "2026-01-01".into(),
+            discogs_id: Some(id.into()),
+            boxset_parent_id: parent.map(String::from),
+            year: Some(year),
+            entry: json!({
+                "release_name": name,
+                "uri_release": format!("/album/{id}/"),
+                "images_uri_release": { "hi-res": format!("/album/{id}/hr.jpg"), "medium": format!("/album/{id}/m.jpg") },
+            }),
+        }
+    }
+
+    #[test]
+    fn members_gain_boxset_link_and_parent_gains_sorted_contents() {
+        let mut entries = vec![
+            built("1", "Remastered In Vinyl I", 2018, None),
+            built("3", "Never For Ever", 1980, Some("1")),
+            built("2", "The Kick Inside", 1978, Some("1")),
+        ];
+        link_boxsets(&mut entries);
+
+        let member = &entries[1].entry;
+        assert_eq!(member["boxset"]["parent_discogs_id"], json!("1"));
+        assert_eq!(member["boxset"]["name"], json!("Remastered In Vinyl I"));
+        assert_eq!(member["boxset"]["uri_release"], json!("/album/1/"));
+
+        let contents = entries[0].entry["boxset_contents"].as_array().expect("parent has contents");
+        let names: Vec<&str> = contents.iter().map(|c| c["release_name"].as_str().unwrap()).collect();
+        assert_eq!(names, vec!["The Kick Inside", "Never For Ever"]);
+    }
+
+    #[test]
+    fn orphan_member_keeps_boxset_marker_with_null_parent_fields() {
+        let mut entries = vec![built("2", "The Kick Inside", 1978, Some("999"))];
+        link_boxsets(&mut entries);
+        let member = &entries[0].entry;
+        assert_eq!(member["boxset"]["parent_discogs_id"], json!("999"));
+        assert_eq!(member["boxset"]["name"], Value::Null);
+        assert!(member.get("boxset_contents").is_none());
+    }
+
+    #[test]
+    fn unlinked_entries_are_untouched() {
+        let mut entries = vec![built("1", "OK Computer", 1997, None)];
+        link_boxsets(&mut entries);
+        assert!(entries[0].entry.get("boxset").is_none());
+        assert!(entries[0].entry.get("boxset_contents").is_none());
+    }
 }

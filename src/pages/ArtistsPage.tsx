@@ -17,6 +17,7 @@ import {
 } from '@/components/ui/pagination';
 import { appConfig } from '@/config/app.config';
 import { getArtistImageFromData } from '@/lib/image-utils';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 
 interface Album {
   release_name: string;
@@ -108,7 +109,8 @@ export function ArtistsPage() {
     try {
       const response = await fetch('/collection.json');
       const data = await response.json();
-      setCollection(data);
+      // Keep artist album counts aligned with stats: boxset members don't count.
+      setCollection(excludeBoxsetMembers(data));
       setLoading(false);
     } catch (error) {
       console.error('Error loading collection:', error);

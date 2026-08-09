@@ -83,13 +83,18 @@ pub enum Command {
 
 #[derive(Debug, Args)]
 pub struct ReleaseArgs {
-    pub discogs_id: String,
+    /// Discogs release ID. Omit it (with `--boxset <BOX_ID>`) to run boxset discovery:
+    /// the box is processed, then each album in its tracklist is searched on Discogs
+    /// for you to match interactively and link as a member.
+    pub discogs_id: Option<String>,
     #[arg(short, long, value_enum, default_value = "table")]
     pub output: OutputFormat,
     #[arg(long)]
     pub save: bool,
     #[arg(long, value_delimiter = ',')]
     pub services: Vec<String>,
+    /// Refetch everything from the source APIs (Discogs included) and persist it — implies
+    /// --save, since a non-persisting refresh would change nothing.
     #[arg(short = 'f', long)]
     pub force_refresh: bool,
     #[arg(short, long)]
@@ -106,6 +111,11 @@ pub struct ReleaseArgs {
     pub perplexity: bool,
     #[arg(long)]
     pub perplexity_context: Option<String>,
+    /// Link this release as a member of a boxset (the parent's Discogs ID). Members keep their
+    /// own page and search presence but are excluded from stats and recently-added surfaces.
+    /// With no positional release ID, runs interactive boxset discovery for this box instead.
+    #[arg(long, value_name = "BOX_DISCOGS_ID")]
+    pub boxset: Option<String>,
 }
 
 #[derive(Debug, Args)]

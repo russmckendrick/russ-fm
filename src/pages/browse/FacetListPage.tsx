@@ -6,6 +6,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { appConfig } from '@/config/app.config';
 import { buildFacetValues, FACETS, type FacetKey } from '@/lib/browseFacets';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import type { Album } from '@/types/album';
 
 interface FacetListPageProps {
@@ -32,7 +33,7 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
   useEffect(() => {
     fetch('/collection.json')
       .then((r) => r.json())
-      .then((data: Album[]) => setCollection(data))
+      .then((data: Album[]) => setCollection(excludeBoxsetMembers(data)))
       .catch(() => setCollection([]));
   }, []);
 

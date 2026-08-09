@@ -4,6 +4,7 @@ import { AlbumCard } from '@/components/AlbumCard';
 import { FilterBar } from '@/components/FilterBar';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import {
   Pagination,
   PaginationContent,
@@ -104,7 +105,8 @@ export function AlbumsPage() {
     try {
       const response = await fetch('/collection.json');
       const data = await response.json();
-      setCollection(data);
+      // Boxset members are reachable via search and their boxset's page, not the browse grid.
+      setCollection(excludeBoxsetMembers(data));
       setLoading(false);
     } catch (error) {
       console.error('Error loading collection:', error);

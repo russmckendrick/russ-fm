@@ -1,3 +1,20 @@
+/** Link from a boxset member up to its parent boxset release. */
+export interface BoxsetLink {
+  parent_discogs_id: string;
+  name: string | null;
+  uri_release: string | null;
+}
+
+/** Summary of a member album listed in a boxset's `boxset_contents`. */
+export interface BoxsetContent {
+  release_name: string;
+  uri_release: string;
+  images_uri_release: {
+    'hi-res': string;
+    medium: string;
+  };
+}
+
 export interface Album {
   release_name: string;
   release_artist: string;
@@ -34,6 +51,10 @@ export interface Album {
     medium: string;
     avatar: string;
   };
+  /** Present only on boxset members — excludes the album from stats/recent/browse aggregates. */
+  boxset?: BoxsetLink | null;
+  /** Present only on boxset parents that have linked members. */
+  boxset_contents?: BoxsetContent[];
 }
 
 export interface Artist {

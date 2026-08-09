@@ -817,10 +817,19 @@ export function AlbumDetailPage() {
       .slice(0, 10);
   })();
 
+  // Boxset members resolved to full collection entries so AlbumCard can render them.
+  const boxsetMembers = (() => {
+    if (!album.boxset_contents?.length || !collection.length) return [];
+    const byUri = new Map(collection.map(item => [item.uri_release, item]));
+    return album.boxset_contents
+      .map(member => byUri.get(member.uri_release))
+      .filter((item): item is Album => Boolean(item));
+  })();
+
   // Section numbering — each section that renders gets the next sequential
   // "01", "02"… so toggled sections stay correctly numbered after the
   // Videos / Artist order swap. Must track the current order: About,
-  // Tracklist, Listen, About the artist, Videos, Similar albums.
+  // Tracklist, In this box set, Listen, About the artist, Videos, Similar albums.
   const hasListen = !!(
     detailedAlbum &&
     (detailedAlbum.services?.spotify?.id ||
@@ -838,6 +847,7 @@ export function AlbumDetailPage() {
     return {
       about: description ? pad() : '01',
       tracklist: tracks.length > 0 ? pad() : '01',
+      boxset: boxsetMembers.length > 0 ? pad() : '01',
       listen: hasListen ? pad() : '01',
       artist: hasArtistBio ? pad() : '01',
       videos: hasVideos ? pad() : '01',
@@ -1014,6 +1024,21 @@ export function AlbumDetailPage() {
               </div>
             )}
 
+            {album.boxset && (
+              album.boxset.uri_release ? (
+                <Link
+                  to={album.boxset.uri_release}
+                  className="mt-5 inline-flex items-center gap-2 border border-rule-strong bg-paper px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-ink transition-colors hover:border-hl hover:bg-hl hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
+                >
+                  From the box set · {album.boxset.name ?? 'View box set'} <span aria-hidden>→</span>
+                </Link>
+              ) : (
+                <span className="mt-5 inline-flex items-center gap-2 border border-rule bg-paper px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-dim">
+                  Part of a box set
+                </span>
+              )
+            )}
+
             <div className="mt-7 flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
               {actionButtons}
             </div>
@@ -1177,6 +1202,17 @@ export function AlbumDetailPage() {
                 </section>
               );
             })()}
+
+            {boxsetMembers.length > 0 && (
+              <section>
+                <SectionHeader num={sectionNums.boxset} label="In this box set" count={boxsetMembers.length} />
+                <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                  {boxsetMembers.map((member, i) => (
+                    <AlbumCard key={member.uri_release} album={member} index={i + 1} />
+                  ))}
+                </div>
+              </section>
+            )}
 
             {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
               <section>

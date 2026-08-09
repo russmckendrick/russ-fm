@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/pagination';
 import { appConfig } from '@/config/app.config';
 import { albumsForFacetSlug, FACETS, type FacetKey } from '@/lib/browseFacets';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import type { Album } from '@/types/album';
 
 interface FacetDetailPageProps {
@@ -134,7 +135,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
   useEffect(() => {
     fetch('/collection.json')
       .then((r) => r.json())
-      .then((data: Album[]) => setCollection(data))
+      .then((data: Album[]) => setCollection(excludeBoxsetMembers(data)))
       .catch(() => setCollection([]));
   }, []);
 

@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { appConfig } from '@/config/app.config';
 import type { ColorPalette } from '@/lib/colorExtractor';
 import { getArtistImageFromData, getAlbumImageFromData } from '@/lib/image-utils';
+import { excludeBoxsetMembers } from '@/lib/boxsets';
 import type { Album, Artist } from '@/types/album';
 
 // Section components
@@ -35,7 +36,9 @@ export function HomePage() {
   useEffect(() => {
     fetch('/collection.json')
       .then(res => res.json())
-      .then((data: Album[]) => {
+      .then((collection: Album[]) => {
+        // Boxset members never feature on the home page (recents, hero, walls, stats aside).
+        const data = excludeBoxsetMembers(collection);
         setAlbums(data);
 
         const recentCount = Math.max(

@@ -73,6 +73,8 @@ interface OriginalRelease {
     medium: string;
     avatar: string;
   };
+  /** Present only on boxset members — they never count towards a year's wrapped. */
+  boxset?: unknown;
 }
 
 // Lightweight release for wrapped data
@@ -274,8 +276,9 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
   const collectionPath = path.join(__dirname, '..', 'public', 'collection.json');
   const originalCollection: OriginalRelease[] = JSON.parse(fs.readFileSync(collectionPath, 'utf-8'));
 
-  // Filter releases by year
+  // Filter releases by year, excluding boxset members (they'd double-count against their box)
   const yearReleases = originalCollection.filter(release => {
+    if (release.boxset != null) return false;
     const releaseYear = new Date(release.date_added).getFullYear();
     return releaseYear === year;
   });
