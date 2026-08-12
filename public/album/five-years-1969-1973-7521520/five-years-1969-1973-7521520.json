@@ -569,13 +569,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/qujVnVjo46TpSboMBEMo0JVkLjq2veNgsiIM99VMZbM/rs:fit/g:sm/q:90/h:600/w:599/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc1MjE1/MjAtMTY0MTU2Nzk2/My00NjQ1LmpwZWc.jpeg",
       "width": 599
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/dc/97/0b/dc970ba8-4d70-d788-19d3-16c362459168/825646050369.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -583,7 +576,7 @@
     "Parlophone"
   ],
   "lastfm_mbid": null,
-  "lastfm_url": null,
+  "lastfm_url": "https://www.last.fm/music/David+Bowie/%5BFive+Years+1969+-+1973%5D",
   "local_images": {
     "hi-res": "../public/album/five-years-1969-1973-7521520/five-years-1969-1973-7521520-hi-res.jpg",
     "medium": "../public/album/five-years-1969-1973-7521520/five-years-1969-1973-7521520-medium.jpg",
@@ -592,36 +585,38 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-10T08:56:55.056373",
+    "processed_at": "2026-08-12T18:55:08.161520",
     "services_used": [
       "discogs",
       "apple_music",
       "spotify",
-      "wikipedia"
+      "wikipedia",
+      "perplexity"
     ]
   },
   "release_name_apple_music": "Five Years 1969-1973",
   "release_name_discogs": "[Five Years 1969 - 1973]",
-  "release_name_spotify": "Blackstar",
+  "release_name_spotify": "Five Years (1969 - 1973)",
   "released": "2015-09-25",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/dc/97/0b/dc970ba8-4d70-d788-19d3-16c362459168/825646050369.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/dc/97/0b/dc970ba8-4d70-d788-19d3-16c362459168/825646050369.jpg/{w}x{h}bb.jpg",
       "content_rating": null,
       "copyright": "℗ 2015 Parlophone Records Ltd, a Warner Music Group Company",
       "editorial_notes": "This expansive overview focuses on David Bowie's fertile breakthrough, kicking off with his haunting 1969 hit \"Space Oddity\" and including every studio album up to 1973's <i>Pin Ups</i>, his affectionate Swinging London homage. Tracks from the storming <i>Live Santa Monica '72</i> also showcase Bowie’s onstage reputation, as he balances rollicking workouts like the scuzzy “Hang on to Yourself” with poignant breathers like “Andy Warhol”, a moving acoustic guitar-led tribute from one pop icon to another.",
       "id": "1016484169",
       "is_complete": true,
+      "name": "Five Years 1969-1973",
       "preview_url": null,
       "raw_attributes": {
         "artistName": "David Bowie",
         "artwork": {
           "bgColor": "020202",
           "height": 3000,
-          "textColor1": "f5f5f5",
-          "textColor2": "c9b06f",
-          "textColor3": "c4c4c4",
-          "textColor4": "a18d59",
+          "textColor1": "f2f2f2",
+          "textColor2": "cfcfcf",
+          "textColor3": "c2c2c2",
+          "textColor4": "a6a6a6",
           "url": "https://is1-ssl.mzstatic.com/image/thumb/Music7/v4/dc/97/0b/dc970ba8-4d70-d788-19d3-16c362459168/825646050369.jpg/{w}x{h}bb.jpg",
           "width": 3000
         },
@@ -660,425 +655,77 @@
       },
       "url": "https://music.apple.com/gb/album/five-years-1969-1973/1016484169"
     },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
+    "lastfm": {
+      "images": [
         {
-          "text": "© 2016 Jones/Tintoretto Entertainment Company LLC",
-          "type": "C"
+          "size": "small",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/34s/929074ddc53d2eea7b2929118bacb8d4.jpg"
         },
         {
-          "text": "Under exclusive licence to Parlophone Records Limited, ℗ 2016 Jones/Tintoretto Entertainment Company LLC",
-          "type": "P"
+          "size": "medium",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/64s/929074ddc53d2eea7b2929118bacb8d4.jpg"
+        },
+        {
+          "size": "large",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/174s/929074ddc53d2eea7b2929118bacb8d4.jpg"
+        },
+        {
+          "size": "extralarge",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/929074ddc53d2eea7b2929118bacb8d4.jpg"
+        },
+        {
+          "size": "mega",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/929074ddc53d2eea7b2929118bacb8d4.jpg"
+        },
+        {
+          "size": "",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/929074ddc53d2eea7b2929118bacb8d4.jpg"
         }
       ],
-      "explicit": true,
-      "external_ids": {
-        "upc": "5054197573972"
-      },
-      "id": "0vxg8oJKDu3i0bXQu7vEpi",
+      "listeners": "25",
+      "mbid": "",
+      "playcount": "3301",
+      "tags": [],
+      "url": "https://www.last.fm/music/David+Bowie/%5BFive+Years+1969+-+1973%5D",
+      "wiki_content": null,
+      "wiki_summary": null
+    },
+    "perplexity": {
+      "description": "Five Years (1969–1973) is a 2015 David Bowie box set on Parlophone that documents his breakthrough period from 1969 through 1973, when he moved from acoustic pop and folk-rock into the theatrical glam-rock era. Issued as a 12-CD or 13-LP set, it gathers the six studio albums Bowie released in that span, along with period live material and a bonus compilation of singles, edits, and B-sides.\n\nThe set includes David Bowie (Space Oddity), The Man Who Sold the World, Hunky Dory, The Rise and Fall of Ziggy Stardust and the Spiders from Mars, Aladdin Sane, and Pin Ups, with newly remastered versions for the box set. It also adds Live Santa Monica ’72, Ziggy Stardust: The Motion Picture Soundtrack, and the exclusive Re:Call 1, making it a comprehensive portrait of Bowie’s early artistic transformation and rise to stardom.",
+      "generated_at": "2026-08-12T18:55:05.702959",
+      "model": "sonar",
+      "source": "perplexity"
+    },
+    "spotify": {
+      "album_type": "compilation",
+      "id": "6m9cpSfRCYltkhxl23wq0j",
       "images": [
         {
           "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b273cf871ddf9d67bbdeb0ac6a1a",
+          "url": "https://i.scdn.co/image/ab67616d0000b273a107e8bc5c8dbf65ddcf36f4",
           "width": 640
         },
         {
           "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e02cf871ddf9d67bbdeb0ac6a1a",
+          "url": "https://i.scdn.co/image/ab67616d00001e02a107e8bc5c8dbf65ddcf36f4",
           "width": 300
         },
         {
           "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d00004851cf871ddf9d67bbdeb0ac6a1a",
+          "url": "https://i.scdn.co/image/ab67616d00004851a107e8bc5c8dbf65ddcf36f4",
           "width": 64
         }
       ],
-      "label": "Rhino",
-      "popularity": 54,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-            },
-            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-            "name": "David Bowie",
-            "type": "artist",
-            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 2016 Jones/Tintoretto Entertainment Company LLC",
-            "type": "C"
-          },
-          {
-            "text": "Under exclusive licence to Parlophone Records Limited, ℗ 2016 Jones/Tintoretto Entertainment Company LLC",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "5054197573972"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/0vxg8oJKDu3i0bXQu7vEpi"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/0vxg8oJKDu3i0bXQu7vEpi?market=US",
-        "id": "0vxg8oJKDu3i0bXQu7vEpi",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273cf871ddf9d67bbdeb0ac6a1a",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02cf871ddf9d67bbdeb0ac6a1a",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851cf871ddf9d67bbdeb0ac6a1a",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Rhino",
-        "name": "Blackstar",
-        "popularity": 54,
-        "release_date": "2016-01-08",
-        "release_date_precision": "day",
-        "total_tracks": 7,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/0vxg8oJKDu3i0bXQu7vEpi/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 597933,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Xb5UAKg5OdTHkg48FdQou"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1Xb5UAKg5OdTHkg48FdQou",
-              "id": "1Xb5UAKg5OdTHkg48FdQou",
-              "is_local": false,
-              "is_playable": true,
-              "name": "★",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:1Xb5UAKg5OdTHkg48FdQou"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 292626,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7CEjBoE7psDI0hXyZbl6mv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7CEjBoE7psDI0hXyZbl6mv",
-              "id": "7CEjBoE7psDI0hXyZbl6mv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "'Tis A Pity She Was A Whore",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:7CEjBoE7psDI0hXyZbl6mv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 384453,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7rFN0DhIFPjAWG1EaHO2F0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7rFN0DhIFPjAWG1EaHO2F0",
-              "id": "7rFN0DhIFPjAWG1EaHO2F0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Lazarus",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:7rFN0DhIFPjAWG1EaHO2F0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 280373,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0DEslRB6ry2swHIY0aaNzY"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0DEslRB6ry2swHIY0aaNzY",
-              "id": "0DEslRB6ry2swHIY0aaNzY",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sue (Or In A Season Of Crime)",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:0DEslRB6ry2swHIY0aaNzY"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 291946,
-              "explicit": true,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6v7gMNeD8eK3HsbMPWlfME"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6v7gMNeD8eK3HsbMPWlfME",
-              "id": "6v7gMNeD8eK3HsbMPWlfME",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Girl Loves Me",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:6v7gMNeD8eK3HsbMPWlfME"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 284813,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1k5GEEuEoBiklGgmQcD62s"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1k5GEEuEoBiklGgmQcD62s",
-              "id": "1k5GEEuEoBiklGgmQcD62s",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dollar Days",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:1k5GEEuEoBiklGgmQcD62s"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 347280,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4iXSEbAYfD0G4bqTkQCfSn"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4iXSEbAYfD0G4bqTkQCfSn",
-              "id": "4iXSEbAYfD0G4bqTkQCfSn",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Can't Give Everything Away",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:4iXSEbAYfD0G4bqTkQCfSn"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 7
-        },
-        "type": "album",
-        "uri": "spotify:album:0vxg8oJKDu3i0bXQu7vEpi"
-      },
-      "release_date": "2016-01-08",
+      "name": "Five Years (1969 - 1973)",
+      "popularity": null,
+      "release_date": "2015-09-25",
       "release_date_precision": "day",
-      "total_tracks": 7,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 597933,
-          "explicit": false,
-          "id": "1Xb5UAKg5OdTHkg48FdQou",
-          "name": "★",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 292626,
-          "explicit": true,
-          "id": "7CEjBoE7psDI0hXyZbl6mv",
-          "name": "'Tis A Pity She Was A Whore",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 384453,
-          "explicit": false,
-          "id": "7rFN0DhIFPjAWG1EaHO2F0",
-          "name": "Lazarus",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 280373,
-          "explicit": false,
-          "id": "0DEslRB6ry2swHIY0aaNzY",
-          "name": "Sue (Or In A Season Of Crime)",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 291946,
-          "explicit": true,
-          "id": "6v7gMNeD8eK3HsbMPWlfME",
-          "name": "Girl Loves Me",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 284813,
-          "explicit": false,
-          "id": "1k5GEEuEoBiklGgmQcD62s",
-          "name": "Dollar Days",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 347280,
-          "explicit": false,
-          "id": "4iXSEbAYfD0G4bqTkQCfSn",
-          "name": "I Can't Give Everything Away",
-          "preview_url": null,
-          "track_number": 7
-        }
-      ],
-      "url": "https://open.spotify.com/album/0vxg8oJKDu3i0bXQu7vEpi"
+      "total_tracks": 135,
+      "url": "https://open.spotify.com/album/6m9cpSfRCYltkhxl23wq0j"
     }
   },
-  "spotify_id": "0vxg8oJKDu3i0bXQu7vEpi",
-  "spotify_url": "https://open.spotify.com/album/0vxg8oJKDu3i0bXQu7vEpi",
+  "spotify_id": "6m9cpSfRCYltkhxl23wq0j",
+  "spotify_url": "https://open.spotify.com/album/6m9cpSfRCYltkhxl23wq0j",
   "styles": [
     "Glam"
   ],
@@ -1961,6 +1608,7 @@
       "title": "Velvet Goldmine"
     }
   ],
-  "updated_at": "2025-07-10T08:56:54.613531",
+  "updated_at": "2026-08-12T18:55:08.155670",
+  "videos": [],
   "year": 2015
 }

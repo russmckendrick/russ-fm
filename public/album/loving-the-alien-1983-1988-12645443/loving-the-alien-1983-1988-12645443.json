@@ -645,13 +645,6 @@
       "type": "secondary",
       "url": "https://i.discogs.com/hZIjeE0gaZqk7eNqwdb7mftVdcZ4-MlKBakkG4avSFs/rs:fit/g:sm/q:90/h:600/w:590/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNjQ1/NDQzLTE1NDExNjQz/NzctMTI0Ny5qcGVn.jpeg",
       "width": 590
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a0/31/df/a031dfa8-2fe3-5c7c-97ce-c3da02b10510/190295693428.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
@@ -659,19 +652,22 @@
     "Parlophone"
   ],
   "lastfm_mbid": null,
-  "lastfm_url": null,
+  "lastfm_url": "https://www.last.fm/music/David+Bowie/Loving+The+Alien+%5B+1983%E2%80%931988+%5D",
   "local_images": {
-    "hi-res": "../public/album/loving-the-alien-1983-1988-12645443/loving-the-alien-1983-1988-12645443-hi-res.jpg"
+    "hi-res": "../public/album/loving-the-alien-1983-1988-12645443/loving-the-alien-1983-1988-12645443-hi-res.jpg",
+    "medium": "../public/album/loving-the-alien-1983-1988-12645443/loving-the-alien-1983-1988-12645443-medium.jpg",
+    "small": "../public/album/loving-the-alien-1983-1988-12645443/loving-the-alien-1983-1988-12645443-small.jpg"
   },
   "processing_info": {
     "has_local_images": true,
-    "local_images_count": 1,
-    "processed_at": "2025-07-20T10:30:15.274453",
+    "local_images_count": 3,
+    "processed_at": "2026-08-12T19:17:24.436469",
     "services_used": [
       "discogs",
       "apple_music",
       "spotify",
-      "wikipedia"
+      "wikipedia",
+      "perplexity"
     ]
   },
   "release_name_apple_music": "Loving the Alien (1983-1988) [Remastered]",
@@ -680,22 +676,23 @@
   "released": "2018-10-12",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a0/31/df/a031dfa8-2fe3-5c7c-97ce-c3da02b10510/190295693428.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a0/31/df/a031dfa8-2fe3-5c7c-97ce-c3da02b10510/190295693428.jpg/{w}x{h}bb.jpg",
       "content_rating": null,
       "copyright": "℗ 2018 Jones/Tintoretto Entertainment Company LLC under exclusive license to Parlophone Records Ltd, a Warner Music Group Company",
       "editorial_notes": null,
       "id": "1416872602",
       "is_complete": true,
+      "name": "Loving the Alien (1983-1988) [Remastered]",
       "preview_url": null,
       "raw_attributes": {
         "artistName": "David Bowie",
         "artwork": {
-          "bgColor": "fcfcfc",
+          "bgColor": "f9f9f9",
           "height": 4000,
-          "textColor1": "000000",
-          "textColor2": "282928",
-          "textColor3": "323232",
-          "textColor4": "525353",
+          "textColor1": "0b0b0b",
+          "textColor2": "232323",
+          "textColor3": "3b3b3b",
+          "textColor4": "4d4e4e",
           "url": "https://is1-ssl.mzstatic.com/image/thumb/Music118/v4/a0/31/df/a031dfa8-2fe3-5c7c-97ce-c3da02b10510/190295693428.jpg/{w}x{h}bb.jpg",
           "width": 4000
         },
@@ -731,23 +728,49 @@
       },
       "url": "https://music.apple.com/gb/album/loving-the-alien-1983-1988-remastered/1416872602"
     },
-    "spotify": {
-      "album_type": "compilation",
-      "available_markets": [],
-      "copyrights": [
+    "lastfm": {
+      "images": [
         {
-          "text": "© 2018 Jones/Tintoretto Entertainment Company LLC",
-          "type": "C"
+          "size": "small",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/34s/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
         },
         {
-          "text": "℗ 2018 Jones/Tintoretto Entertainment Company LLC under exclusive license to Parlophone Records Ltd, a Warner Music Group Company",
-          "type": "P"
+          "size": "medium",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/64s/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
+        },
+        {
+          "size": "large",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/174s/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
+        },
+        {
+          "size": "extralarge",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
+        },
+        {
+          "size": "mega",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
+        },
+        {
+          "size": "",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/c94da7e4692e7af04a84d3d81fbd85bd.jpg"
         }
       ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "190295693428"
-      },
+      "listeners": "15",
+      "mbid": "",
+      "playcount": "4775",
+      "tags": [],
+      "url": "https://www.last.fm/music/David+Bowie/Loving+The+Alien+%5B+1983%E2%80%931988+%5D",
+      "wiki_content": null,
+      "wiki_summary": null
+    },
+    "perplexity": {
+      "description": "Loving the Alien [1983–1988] is a 2018 David Bowie box set that documents his commercially dominant and stylistically varied mid-1980s period. Issued by Parlophone, it gathers remastered editions of Let’s Dance (1983), Tonight (1984), and Never Let Me Down (1987), along with related archival material from the same era.\n\nThe set also expands the story with live albums from the Serious Moonlight and Glass Spider tours, a disc of remixes and 12-inch-related material titled Dance, and Re:Call 4, which collects singles, soundtrack contributions, B-sides, alternate versions, and rarities. A key attraction is Never Let Me Down 2018, a newly reworked version of the 1987 album that reimagines one of Bowie’s most debated records.",
+      "generated_at": "2026-08-12T19:17:21.669823",
+      "model": "sonar",
+      "source": "perplexity"
+    },
+    "spotify": {
+      "album_type": "compilation",
       "id": "3UXvwZWxpfUZbb30ccYark",
       "images": [
         {
@@ -766,2241 +789,12 @@
           "width": 64
         }
       ],
-      "label": "Parlophone UK",
-      "popularity": 34,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "compilation",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-            },
-            "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-            "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-            "name": "David Bowie",
-            "type": "artist",
-            "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 2018 Jones/Tintoretto Entertainment Company LLC",
-            "type": "C"
-          },
-          {
-            "text": "℗ 2018 Jones/Tintoretto Entertainment Company LLC under exclusive license to Parlophone Records Ltd, a Warner Music Group Company",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "190295693428"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/3UXvwZWxpfUZbb30ccYark"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/3UXvwZWxpfUZbb30ccYark?market=US",
-        "id": "3UXvwZWxpfUZbb30ccYark",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273a29c55949b9b77dfc4858d97",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02a29c55949b9b77dfc4858d97",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851a29c55949b9b77dfc4858d97",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Parlophone UK",
-        "name": "Loving the Alien (1983 - 1988)",
-        "popularity": 34,
-        "release_date": "2018-10-12",
-        "release_date_precision": "day",
-        "total_tracks": 125,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/3UXvwZWxpfUZbb30ccYark/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 288339,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/17KoYbldfhZV42vE7wG7h6"
-              },
-              "href": "https://api.spotify.com/v1/tracks/17KoYbldfhZV42vE7wG7h6",
-              "id": "17KoYbldfhZV42vE7wG7h6",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Modern Love - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:17KoYbldfhZV42vE7wG7h6"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 333816,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0E2IHQJQAkcW0K86foX8xp"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0E2IHQJQAkcW0K86foX8xp",
-              "id": "0E2IHQJQAkcW0K86foX8xp",
-              "is_local": false,
-              "is_playable": true,
-              "name": "China Girl - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:0E2IHQJQAkcW0K86foX8xp"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 457675,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6RtYZhEfnLQhBBdt5zWDJ8"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6RtYZhEfnLQhBBdt5zWDJ8",
-              "id": "6RtYZhEfnLQhBBdt5zWDJ8",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Let's Dance - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:6RtYZhEfnLQhBBdt5zWDJ8"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 189394,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1SAHpGFZxTHCpTTukdaHVe"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1SAHpGFZxTHCpTTukdaHVe",
-              "id": "1SAHpGFZxTHCpTTukdaHVe",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Without You - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:1SAHpGFZxTHCpTTukdaHVe"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 313653,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1o7N21MLgG8ikJOd2k0Uzo"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1o7N21MLgG8ikJOd2k0Uzo",
-              "id": "1o7N21MLgG8ikJOd2k0Uzo",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ricochet - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:1o7N21MLgG8ikJOd2k0Uzo"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 265007,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3jv5GMlz8RoQskL2w8Y6JY"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3jv5GMlz8RoQskL2w8Y6JY",
-              "id": "3jv5GMlz8RoQskL2w8Y6JY",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Criminal World - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:3jv5GMlz8RoQskL2w8Y6JY"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 309960,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7q8ILUOjV7GJDcbGVzRCds"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7q8ILUOjV7GJDcbGVzRCds",
-              "id": "7q8ILUOjV7GJDcbGVzRCds",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cat People (Putting Out Fire) - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:7q8ILUOjV7GJDcbGVzRCds"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 232338,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6ltQgS51NYmr3I7sVJ18Id"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6ltQgS51NYmr3I7sVJ18Id",
-              "id": "6ltQgS51NYmr3I7sVJ18Id",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Shake It - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:6ltQgS51NYmr3I7sVJ18Id"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 187573,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5tC3s0JADRgJ3v4tBKNYQI"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5tC3s0JADRgJ3v4tBKNYQI",
-              "id": "5tC3s0JADRgJ3v4tBKNYQI",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Look Back In Anger - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:5tC3s0JADRgJ3v4tBKNYQI"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 293066,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2j7ZuOP6fdhV5Tjch6PhYy"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2j7ZuOP6fdhV5Tjch6PhYy",
-              "id": "2j7ZuOP6fdhV5Tjch6PhYy",
-              "is_local": false,
-              "is_playable": true,
-              "name": "\"Heroes\" - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:2j7ZuOP6fdhV5Tjch6PhYy"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 224746,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2V56yz0RdETQgqbFUX6Nf9"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2V56yz0RdETQgqbFUX6Nf9",
-              "id": "2V56yz0RdETQgqbFUX6Nf9",
-              "is_local": false,
-              "is_playable": true,
-              "name": "What In The World - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:2V56yz0RdETQgqbFUX6Nf9"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 211573,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4arAdS8VHo30vYrfKD9ZSA"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4arAdS8VHo30vYrfKD9ZSA",
-              "id": "4arAdS8VHo30vYrfKD9ZSA",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Golden Years - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:4arAdS8VHo30vYrfKD9ZSA"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 163440,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4zQBCXyI6ABEIt4WZEu2F2"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4zQBCXyI6ABEIt4WZEu2F2",
-              "id": "4zQBCXyI6ABEIt4WZEu2F2",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Fashion - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:4zQBCXyI6ABEIt4WZEu2F2"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 274080,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3zRkUICKKxyQYLpP4T3RuF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3zRkUICKKxyQYLpP4T3RuF",
-              "id": "3zRkUICKKxyQYLpP4T3RuF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Let's Dance - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:3zRkUICKKxyQYLpP4T3RuF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 180146,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4Rm16p8OWlpX0kTsXPStMJ"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4Rm16p8OWlpX0kTsXPStMJ",
-              "id": "4Rm16p8OWlpX0kTsXPStMJ",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Breaking Glass - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:4Rm16p8OWlpX0kTsXPStMJ"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 247040,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5s0BzgGr0j9qADSA5CZmsk"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5s0BzgGr0j9qADSA5CZmsk",
-              "id": "5s0BzgGr0j9qADSA5CZmsk",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Life On Mars? - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:5s0BzgGr0j9qADSA5CZmsk"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 169466,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/19oIM0pxP0IfKG8jlkeMgt"
-              },
-              "href": "https://api.spotify.com/v1/tracks/19oIM0pxP0IfKG8jlkeMgt",
-              "id": "19oIM0pxP0IfKG8jlkeMgt",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Sorrow - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:19oIM0pxP0IfKG8jlkeMgt"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 260613,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3TaAP6kw89AbKF6qMC6gRg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3TaAP6kw89AbKF6qMC6gRg",
-              "id": "3TaAP6kw89AbKF6qMC6gRg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cat People (Putting Out Fire) - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:3TaAP6kw89AbKF6qMC6gRg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 327026,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2VfaStjYExwfww8kJgMmlU"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2VfaStjYExwfww8kJgMmlU",
-              "id": "2VfaStjYExwfww8kJgMmlU",
-              "is_local": false,
-              "is_playable": true,
-              "name": "China Girl - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:2VfaStjYExwfww8kJgMmlU"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 222560,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/26Dl053XX9x6zVN5enAoAR"
-              },
-              "href": "https://api.spotify.com/v1/tracks/26Dl053XX9x6zVN5enAoAR",
-              "id": "26Dl053XX9x6zVN5enAoAR",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Scary Monsters (And Super Creeps) - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:26Dl053XX9x6zVN5enAoAR"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 144133,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5cpCydJuhnyiGF3kGgqQFK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5cpCydJuhnyiGF3kGgqQFK",
-              "id": "5cpCydJuhnyiGF3kGgqQFK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Rebel Rebel - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:5cpCydJuhnyiGF3kGgqQFK"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 336346,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/28UnTy3VtroKIIb1SrXDIK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/28UnTy3VtroKIIb1SrXDIK",
-              "id": "28UnTy3VtroKIIb1SrXDIK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "White Light / White Heat - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:28UnTy3VtroKIIb1SrXDIK"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 538413,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3Dryvs09AfnRh1TrO7aGte"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3Dryvs09AfnRh1TrO7aGte",
-              "id": "3Dryvs09AfnRh1TrO7aGte",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Station To Station - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 15,
-              "type": "track",
-              "uri": "spotify:track:3Dryvs09AfnRh1TrO7aGte"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 238280,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1PGLQn1Nl7hZxdFuKZ4ePX"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1PGLQn1Nl7hZxdFuKZ4ePX",
-              "id": "1PGLQn1Nl7hZxdFuKZ4ePX",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Cracked Actor - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 16,
-              "type": "track",
-              "uri": "spotify:track:1PGLQn1Nl7hZxdFuKZ4ePX"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 231266,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/04FANBBRjWfYfVs2mSAy7i"
-              },
-              "href": "https://api.spotify.com/v1/tracks/04FANBBRjWfYfVs2mSAy7i",
-              "id": "04FANBBRjWfYfVs2mSAy7i",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ashes To Ashes - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 17,
-              "type": "track",
-              "uri": "spotify:track:04FANBBRjWfYfVs2mSAy7i"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 392573,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5FeIYw6IaxvRoHgnNfdxkl"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5FeIYw6IaxvRoHgnNfdxkl",
-              "id": "5FeIYw6IaxvRoHgnNfdxkl",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Space Oddity / Band Introduction - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 18,
-              "type": "track",
-              "uri": "spotify:track:5FeIYw6IaxvRoHgnNfdxkl"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 325106,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/0yR7hjkM3VClf5BRABpeUL"
-              },
-              "href": "https://api.spotify.com/v1/tracks/0yR7hjkM3VClf5BRABpeUL",
-              "id": "0yR7hjkM3VClf5BRABpeUL",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Young Americans - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 19,
-              "type": "track",
-              "uri": "spotify:track:0yR7hjkM3VClf5BRABpeUL"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 336346,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6sdyMNGNAdM9USklui4rB6"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6sdyMNGNAdM9USklui4rB6",
-              "id": "6sdyMNGNAdM9USklui4rB6",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Fame - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 20,
-              "type": "track",
-              "uri": "spotify:track:6sdyMNGNAdM9USklui4rB6"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 234866,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/55YnqOT3rmUBVKv8T1NgqV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/55YnqOT3rmUBVKv8T1NgqV",
-              "id": "55YnqOT3rmUBVKv8T1NgqV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Modern Love - Live '83, 2018 Remaster",
-              "preview_url": null,
-              "track_number": 21,
-              "type": "track",
-              "uri": "spotify:track:55YnqOT3rmUBVKv8T1NgqV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 432680,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4AYI6HnqVnFp01POPWc4Wv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4AYI6HnqVnFp01POPWc4Wv",
-              "id": "4AYI6HnqVnFp01POPWc4Wv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Loving The Alien - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:4AYI6HnqVnFp01POPWc4Wv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 251080,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5sIyWrUYCBWZLnc87u9NNq"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5sIyWrUYCBWZLnc87u9NNq",
-              "id": "5sIyWrUYCBWZLnc87u9NNq",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Don't Look Down - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:5sIyWrUYCBWZLnc87u9NNq"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 189386,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6O59HPUpnCM3jncflO9XqF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6O59HPUpnCM3jncflO9XqF",
-              "id": "6O59HPUpnCM3jncflO9XqF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "God Only Knows - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:6O59HPUpnCM3jncflO9XqF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 225000,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1mMTOrNmA0bVBNOhTNAOb0"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1mMTOrNmA0bVBNOhTNAOb0",
-              "id": "1mMTOrNmA0bVBNOhTNAOb0",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Tonight - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:1mMTOrNmA0bVBNOhTNAOb0"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 192666,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4CIeEj6xG7zTabxpB7v8al"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4CIeEj6xG7zTabxpB7v8al",
-              "id": "4CIeEj6xG7zTabxpB7v8al",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Neighborhood Threat - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:4CIeEj6xG7zTabxpB7v8al"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 191906,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5FZnDczegAAyLhu6djNsvD"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5FZnDczegAAyLhu6djNsvD",
-              "id": "5FZnDczegAAyLhu6djNsvD",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Blue Jean - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:5FZnDczegAAyLhu6djNsvD"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 298706,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/27klDfgwlzFRVHWOXMYiEp"
-              },
-              "href": "https://api.spotify.com/v1/tracks/27klDfgwlzFRVHWOXMYiEp",
-              "id": "27klDfgwlzFRVHWOXMYiEp",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Tumble and Twirl - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:27klDfgwlzFRVHWOXMYiEp"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 155440,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1A2iAoKrnXQ35GWOjbUnrz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1A2iAoKrnXQ35GWOjbUnrz",
-              "id": "1A2iAoKrnXQ35GWOjbUnrz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "I Keep Forgettin' - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:1A2iAoKrnXQ35GWOjbUnrz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 3,
-              "duration_ms": 214146,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3DtAdz7PCwC4ygHMa0xOSt"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3DtAdz7PCwC4ygHMa0xOSt",
-              "id": "3DtAdz7PCwC4ygHMa0xOSt",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Dancing with the Big Boys - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:3DtAdz7PCwC4ygHMa0xOSt"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 339386,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/69XMtMPLyeo7zZniKGcWHY"
-              },
-              "href": "https://api.spotify.com/v1/tracks/69XMtMPLyeo7zZniKGcWHY",
-              "id": "69XMtMPLyeo7zZniKGcWHY",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Day-In Day-Out - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:69XMtMPLyeo7zZniKGcWHY"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 260226,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4OKGb1a1ynxkRarek7ZWIw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4OKGb1a1ynxkRarek7ZWIw",
-              "id": "4OKGb1a1ynxkRarek7ZWIw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Time Will Crawl - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4OKGb1a1ynxkRarek7ZWIw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 306133,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5H25M4LMdIYV7E48FFPu0A"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5H25M4LMdIYV7E48FFPu0A",
-              "id": "5H25M4LMdIYV7E48FFPu0A",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Beat of Your Drum - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:5H25M4LMdIYV7E48FFPu0A"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 245373,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1uMTnw5IaTCMxwb65tpPRm"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1uMTnw5IaTCMxwb65tpPRm",
-              "id": "1uMTnw5IaTCMxwb65tpPRm",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Never Let Me Down - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:1uMTnw5IaTCMxwb65tpPRm"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 347173,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/497MTxjeS1Wy6Y4khsaggz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/497MTxjeS1Wy6Y4khsaggz",
-              "id": "497MTxjeS1Wy6Y4khsaggz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Zeroes - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:497MTxjeS1Wy6Y4khsaggz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 334013,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/75DfJGrSm7QSJ1Am1l9prC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/75DfJGrSm7QSJ1Am1l9prC",
-              "id": "75DfJGrSm7QSJ1Am1l9prC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Glass Spider - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:75DfJGrSm7QSJ1Am1l9prC"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 306546,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7IowWKHHEwHMKbzqDpi9lv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7IowWKHHEwHMKbzqDpi9lv",
-              "id": "7IowWKHHEwHMKbzqDpi9lv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Shining Star (Makin' My Love) - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:7IowWKHHEwHMKbzqDpi9lv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 274533,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/72eoChTqLztb36bkgHTUiG"
-              },
-              "href": "https://api.spotify.com/v1/tracks/72eoChTqLztb36bkgHTUiG",
-              "id": "72eoChTqLztb36bkgHTUiG",
-              "is_local": false,
-              "is_playable": true,
-              "name": "New York's in Love - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:72eoChTqLztb36bkgHTUiG"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 261720,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1xOdNMn9lXliLtf37QLH0y"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1xOdNMn9lXliLtf37QLH0y",
-              "id": "1xOdNMn9lXliLtf37QLH0y",
-              "is_local": false,
-              "is_playable": true,
-              "name": "'87 and Cry - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:1xOdNMn9lXliLtf37QLH0y"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 4,
-              "duration_ms": 270413,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2goEfFKcOe5iJqvQSLpEKN"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2goEfFKcOe5iJqvQSLpEKN",
-              "id": "2goEfFKcOe5iJqvQSLpEKN",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Bang Bang - 2018 Remaster",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:2goEfFKcOe5iJqvQSLpEKN"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 5,
-              "duration_ms": 326666,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7ekpMm4kQ7gtfrUU9AfpT4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7ekpMm4kQ7gtfrUU9AfpT4",
-              "id": "7ekpMm4kQ7gtfrUU9AfpT4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Day-In Day-Out - 2018",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7ekpMm4kQ7gtfrUU9AfpT4"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/0oSGxfWSnnOXhD2fKuz2Gy"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/0oSGxfWSnnOXhD2fKuz2Gy",
-                  "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-                  "name": "David Bowie",
-                  "type": "artist",
-                  "uri": "spotify:artist:0oSGxfWSnnOXhD2fKuz2Gy"
-                }
-              ],
-              "disc_number": 5,
-              "duration_ms": 266066,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/63XkGnvIeCIGyXhLCxkLAs"
-              },
-              "href": "https://api.spotify.com/v1/tracks/63XkGnvIeCIGyXhLCxkLAs",
-              "id": "63XkGnvIeCIGyXhLCxkLAs",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Time Will Crawl - 2018",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:63XkGnvIeCIGyXhLCxkLAs"
-            }
-          ],
-          "limit": 50,
-          "next": "https://api.spotify.com/v1/albums/3UXvwZWxpfUZbb30ccYark/tracks?offset=50&limit=50&market=US",
-          "offset": 0,
-          "previous": null,
-          "total": 125
-        },
-        "type": "album",
-        "uri": "spotify:album:3UXvwZWxpfUZbb30ccYark"
-      },
+      "name": "Loving the Alien (1983 - 1988)",
+      "popularity": null,
       "release_date": "2018-10-12",
       "release_date_precision": "day",
       "total_tracks": 125,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 288339,
-          "explicit": false,
-          "id": "17KoYbldfhZV42vE7wG7h6",
-          "name": "Modern Love - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 333816,
-          "explicit": false,
-          "id": "0E2IHQJQAkcW0K86foX8xp",
-          "name": "China Girl - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 457675,
-          "explicit": false,
-          "id": "6RtYZhEfnLQhBBdt5zWDJ8",
-          "name": "Let's Dance - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 189394,
-          "explicit": false,
-          "id": "1SAHpGFZxTHCpTTukdaHVe",
-          "name": "Without You - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 313653,
-          "explicit": false,
-          "id": "1o7N21MLgG8ikJOd2k0Uzo",
-          "name": "Ricochet - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 265007,
-          "explicit": false,
-          "id": "3jv5GMlz8RoQskL2w8Y6JY",
-          "name": "Criminal World - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 309960,
-          "explicit": false,
-          "id": "7q8ILUOjV7GJDcbGVzRCds",
-          "name": "Cat People (Putting Out Fire) - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 232338,
-          "explicit": false,
-          "id": "6ltQgS51NYmr3I7sVJ18Id",
-          "name": "Shake It - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 187573,
-          "explicit": false,
-          "id": "5tC3s0JADRgJ3v4tBKNYQI",
-          "name": "Look Back In Anger - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 293066,
-          "explicit": false,
-          "id": "2j7ZuOP6fdhV5Tjch6PhYy",
-          "name": "\"Heroes\" - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 224746,
-          "explicit": false,
-          "id": "2V56yz0RdETQgqbFUX6Nf9",
-          "name": "What In The World - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 211573,
-          "explicit": false,
-          "id": "4arAdS8VHo30vYrfKD9ZSA",
-          "name": "Golden Years - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 163440,
-          "explicit": false,
-          "id": "4zQBCXyI6ABEIt4WZEu2F2",
-          "name": "Fashion - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 274080,
-          "explicit": false,
-          "id": "3zRkUICKKxyQYLpP4T3RuF",
-          "name": "Let's Dance - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 180146,
-          "explicit": false,
-          "id": "4Rm16p8OWlpX0kTsXPStMJ",
-          "name": "Breaking Glass - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 247040,
-          "explicit": false,
-          "id": "5s0BzgGr0j9qADSA5CZmsk",
-          "name": "Life On Mars? - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 169466,
-          "explicit": false,
-          "id": "19oIM0pxP0IfKG8jlkeMgt",
-          "name": "Sorrow - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 260613,
-          "explicit": false,
-          "id": "3TaAP6kw89AbKF6qMC6gRg",
-          "name": "Cat People (Putting Out Fire) - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 327026,
-          "explicit": false,
-          "id": "2VfaStjYExwfww8kJgMmlU",
-          "name": "China Girl - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 222560,
-          "explicit": false,
-          "id": "26Dl053XX9x6zVN5enAoAR",
-          "name": "Scary Monsters (And Super Creeps) - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 144133,
-          "explicit": false,
-          "id": "5cpCydJuhnyiGF3kGgqQFK",
-          "name": "Rebel Rebel - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 13
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 336346,
-          "explicit": false,
-          "id": "28UnTy3VtroKIIb1SrXDIK",
-          "name": "White Light / White Heat - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 14
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 538413,
-          "explicit": false,
-          "id": "3Dryvs09AfnRh1TrO7aGte",
-          "name": "Station To Station - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 15
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 238280,
-          "explicit": false,
-          "id": "1PGLQn1Nl7hZxdFuKZ4ePX",
-          "name": "Cracked Actor - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 16
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 231266,
-          "explicit": false,
-          "id": "04FANBBRjWfYfVs2mSAy7i",
-          "name": "Ashes To Ashes - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 17
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 392573,
-          "explicit": false,
-          "id": "5FeIYw6IaxvRoHgnNfdxkl",
-          "name": "Space Oddity / Band Introduction - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 18
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 325106,
-          "explicit": false,
-          "id": "0yR7hjkM3VClf5BRABpeUL",
-          "name": "Young Americans - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 19
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 336346,
-          "explicit": false,
-          "id": "6sdyMNGNAdM9USklui4rB6",
-          "name": "Fame - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 20
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 234866,
-          "explicit": false,
-          "id": "55YnqOT3rmUBVKv8T1NgqV",
-          "name": "Modern Love - Live '83, 2018 Remaster",
-          "preview_url": null,
-          "track_number": 21
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 432680,
-          "explicit": false,
-          "id": "4AYI6HnqVnFp01POPWc4Wv",
-          "name": "Loving The Alien - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 251080,
-          "explicit": false,
-          "id": "5sIyWrUYCBWZLnc87u9NNq",
-          "name": "Don't Look Down - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 189386,
-          "explicit": false,
-          "id": "6O59HPUpnCM3jncflO9XqF",
-          "name": "God Only Knows - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 225000,
-          "explicit": false,
-          "id": "1mMTOrNmA0bVBNOhTNAOb0",
-          "name": "Tonight - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 192666,
-          "explicit": false,
-          "id": "4CIeEj6xG7zTabxpB7v8al",
-          "name": "Neighborhood Threat - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 191906,
-          "explicit": false,
-          "id": "5FZnDczegAAyLhu6djNsvD",
-          "name": "Blue Jean - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 298706,
-          "explicit": false,
-          "id": "27klDfgwlzFRVHWOXMYiEp",
-          "name": "Tumble and Twirl - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 155440,
-          "explicit": false,
-          "id": "1A2iAoKrnXQ35GWOjbUnrz",
-          "name": "I Keep Forgettin' - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 214146,
-          "explicit": false,
-          "id": "3DtAdz7PCwC4ygHMa0xOSt",
-          "name": "Dancing with the Big Boys - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 339386,
-          "explicit": false,
-          "id": "69XMtMPLyeo7zZniKGcWHY",
-          "name": "Day-In Day-Out - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 260226,
-          "explicit": false,
-          "id": "4OKGb1a1ynxkRarek7ZWIw",
-          "name": "Time Will Crawl - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 306133,
-          "explicit": false,
-          "id": "5H25M4LMdIYV7E48FFPu0A",
-          "name": "Beat of Your Drum - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 245373,
-          "explicit": false,
-          "id": "1uMTnw5IaTCMxwb65tpPRm",
-          "name": "Never Let Me Down - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 347173,
-          "explicit": false,
-          "id": "497MTxjeS1Wy6Y4khsaggz",
-          "name": "Zeroes - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 334013,
-          "explicit": false,
-          "id": "75DfJGrSm7QSJ1Am1l9prC",
-          "name": "Glass Spider - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 306546,
-          "explicit": false,
-          "id": "7IowWKHHEwHMKbzqDpi9lv",
-          "name": "Shining Star (Makin' My Love) - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 274533,
-          "explicit": false,
-          "id": "72eoChTqLztb36bkgHTUiG",
-          "name": "New York's in Love - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 261720,
-          "explicit": false,
-          "id": "1xOdNMn9lXliLtf37QLH0y",
-          "name": "'87 and Cry - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 270413,
-          "explicit": false,
-          "id": "2goEfFKcOe5iJqvQSLpEKN",
-          "name": "Bang Bang - 2018 Remaster",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 326666,
-          "explicit": false,
-          "id": "7ekpMm4kQ7gtfrUU9AfpT4",
-          "name": "Day-In Day-Out - 2018",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "0oSGxfWSnnOXhD2fKuz2Gy",
-              "name": "David Bowie"
-            }
-          ],
-          "duration_ms": 266066,
-          "explicit": false,
-          "id": "63XkGnvIeCIGyXhLCxkLAs",
-          "name": "Time Will Crawl - 2018",
-          "preview_url": null,
-          "track_number": 2
-        }
-      ],
       "url": "https://open.spotify.com/album/3UXvwZWxpfUZbb30ccYark"
-    },
-    "perplexity": {
-      "description": "Loving the Alien (1983–1988) is not a traditional studio album but a comprehensive box set released in 2018 by David Bowie, compiling material from a pivotal era in his career. The set covers the years following his global breakthrough with Let’s Dance (1983), including the albums Let’s Dance, Tonight (1984), and Never Let Me Down (1987), as well as live recordings, singles, B-sides, and soundtrack contributions. Musically, this period saw Bowie embracing mainstream pop and rock, marked by polished production, danceable rhythms, and accessible songwriting. The sound blends elements of new wave, funk, and art rock, with notable collaborations and a shift toward a more commercial style compared to his earlier experimental work.\n\nThis box set captures a transitional phase in Bowie’s discography, reflecting both his commercial peak and creative challenges. While Let’s Dance was widely acclaimed for its vibrant pop sensibilities and chart-topping success, subsequent releases like Tonight and Never Let Me Down received mixed reviews, with critics noting a decline in originality and depth. The inclusion of live performances and rare tracks in Loving the Alien (1983–1988) offers a fuller picture of Bowie’s evolving artistry during these years, highlighting his ability to adapt to changing musical landscapes while maintaining a distinctive presence in rock and pop.",
-      "generated_at": "2025-11-27T14:01:32.603792",
-      "model": "sonar",
-      "source": "perplexity"
     }
   },
   "spotify_id": "3UXvwZWxpfUZbb30ccYark",
@@ -3017,153 +811,49 @@
       "title": "Let's Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:48",
       "position": "A1",
       "title": "Modern Love"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:33",
       "position": "A2",
       "title": "China Girl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "7:37",
       "position": "A3",
       "title": "Let's Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:09",
       "position": "A4",
       "title": "Without You"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:13",
       "position": "B1",
       "title": "Ricochet"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:25",
       "position": "B2",
       "title": "Criminal World"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:09",
       "position": "B3",
       "title": "Cat People (Putting Out Fire)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:52",
       "position": "B4",
       "title": "Shake It"
@@ -3175,400 +865,127 @@
       "title": "Serious Moonlight [Live '83]"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C1",
       "title": "Look Back In Anger"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C2",
       "title": "\"Heroes\""
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C3",
       "title": "What In The World"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C4",
       "title": "Golden Years"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C5",
       "title": "Fashion"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "C6",
       "title": "Let's Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D1",
       "title": "Breaking Glass"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D2",
       "title": "Life On Mars?"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D3",
       "title": "Sorrow"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D4",
       "title": "Cat People (Putting Out Fire)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D5",
       "title": "China Girl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D6",
       "title": "Scary Monsters (And Super Creeps)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "D7",
       "title": "Rebel Rebel"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "E1",
       "title": "White Light / White Heat"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "E2",
       "title": "Station To Station"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "E3",
       "title": "Cracked Actor"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "E4",
       "title": "Ashes To Ashes"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "F1",
       "title": "Space Oddity / Band Introduction"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "F2",
       "title": "Young Americans"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "F3",
       "title": "Fame"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "F4",
       "title": "Modern Love"
@@ -3580,172 +997,55 @@
       "title": "Tonight"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "7:12",
       "position": "G1",
       "title": "Loving The Alien"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:11",
       "position": "G2",
       "title": "Don't Look Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:09",
       "position": "G3",
       "title": "God Only Knows"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:45",
       "position": "G4",
       "title": "Tonight"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:12",
       "position": "H1",
       "title": "Neighborhood Threat"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:11",
       "position": "H2",
       "title": "Blue Jean"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:58",
       "position": "H3",
       "title": "Tumble And Twirl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "2:35",
       "position": "H4",
       "title": "I Keep Forgettin'"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "3:34",
       "position": "H5",
       "title": "Dancing With The Big Boys"
@@ -3757,191 +1057,61 @@
       "title": "Never Let Me Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:39",
       "position": "I1",
       "title": "Day-In Day-Out"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:20",
       "position": "I2",
       "title": "Time Will Crawl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:06",
       "position": "I3",
       "title": "Beat Of Your Drum"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:05",
       "position": "I4",
       "title": "Never Let Me Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:47",
       "position": "I5",
       "title": "Zeroes"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:34",
       "position": "J1",
       "title": "Glass Spider"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:06",
       "position": "J2",
       "title": "Shining Star (Makin' My Love)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:34",
       "position": "J3",
       "title": "New York's In Love"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:21",
       "position": "J4",
       "title": "'87 And Cry"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:30",
       "position": "J5",
       "title": "Bang Bang"
@@ -3953,191 +1123,61 @@
       "title": "Never Let Me Down [2018]"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "K1",
       "title": "Day-In Day-Out"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "K2",
       "title": "Time Will Crawl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "K3",
       "title": "Beat Of Your Drum"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "L1",
       "title": "Never Let Me Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "L2",
       "title": "Zeroes"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "L3",
       "title": "Glass Spider"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "M1",
       "title": "Shining Star (Makin' My Love)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "M2",
       "title": "New York's In Love"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "M3",
       "title": "'87 And Cry"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "M4",
       "title": "Bang Bang"
@@ -4149,476 +1189,151 @@
       "title": "Glass Spider [Live Montreal '87]"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "N1",
       "title": "Up The Hill Backwards"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "N2",
       "title": "Glass Spider"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "N3",
       "title": "Day-In Day-Out"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "N4",
       "title": "Bang Bang"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "O1",
       "title": "Absolute Beginners"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "O2",
       "title": "Loving The Alien"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "O3",
       "title": "China Girl"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "O4",
       "title": "Rebel Rebel"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "P1",
       "title": "Fashion"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "P2",
       "title": "Scary Monsters (And Super Creeps)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "P3",
       "title": "All The Mad Men"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "P4",
       "title": "Never Let Me Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Q1",
       "title": "Big Brother"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Q2",
       "title": "'87 And Cry"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Q3",
       "title": "\"Heroes\""
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Q4",
       "title": "Sons Of The Silent Age"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Q5",
       "title": "Time Will Crawl / Band Introduction"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "R1",
       "title": "Young Americans"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "R2",
       "title": "Beat Of Your Drum"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "R3",
       "title": "The Jean Genie"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "R4",
       "title": "Let's Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "S1",
       "title": "Fame"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "S2",
       "title": "Time"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "S3",
       "title": "Blue Jean"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "S4",
       "title": "Modern Love"
@@ -4630,229 +1345,73 @@
       "title": "Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:22",
       "position": "T1",
       "title": "Shake It (Re-mix AKA Long Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:18",
       "position": "T2",
       "title": "Blue Jean (Extended Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "7:29",
       "position": "T3",
       "title": "Dancing With The Big Boys (Extended Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:29",
       "position": "U1",
       "title": "Tonight (Vocal Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "4:50",
       "position": "U2",
       "title": "Don't Look Down (Extended Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "7:13",
       "position": "U3",
       "title": "Loving The Alien (Extended Dub Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:03",
       "position": "V1",
       "title": "Tumble And Twirl (Extended Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "7:53",
       "position": "V2",
       "title": "Underground (Extended Dance Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "6:30",
       "position": "V3",
       "title": "Day-In Day-Out (Groucho Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:39",
       "position": "W1",
       "title": "Time Will Crawl (Dance Crew Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "6:27",
       "position": "W2",
       "title": "Shining Star (Makin' My Love) (12\" Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "5:58",
       "position": "W3",
       "title": "Never Let Me Down (Dub / Acapella)"
@@ -4864,624 +1423,187 @@
       "title": "Re:Call 4"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "X1",
       "title": "Let's Dance (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "X2",
       "title": "China Girl (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "X3",
       "title": "Modern Love (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        },
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "38210",
-          "discogs_original_name": "Pat Metheny Group",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "Pat Metheny Group",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "X4",
       "title": "This Is Not America (The Theme From 'The Falcon And The Snowman')"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "X5",
       "title": "Loving The Alien (Re-mixed Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Y1",
       "title": "Don't Look Down (Re-mixed Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        },
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "90541",
-          "discogs_original_name": "Mick Jagger",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "Mick Jagger",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Y2",
       "title": "Dancing In The Street (Clearmountain Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Y3",
       "title": "Absolute Beginners"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Y4",
       "title": "That's Motivation"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Y5",
       "title": "Volare"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Z1",
       "title": "Labyrinth Opening Titles / Underground"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Z2",
       "title": "Magic Dance"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Z3",
       "title": "As The World Falls Down"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Z4",
       "title": "Within You"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "Z5",
       "title": "Underground"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AA1",
       "title": "When The Wind Blows (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AA2",
       "title": "Day-In Day-Out (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AA3",
       "title": "Julie"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AA4",
       "title": "Beat Of Your Drum (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AA5",
       "title": "Glass Spider (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AB1",
       "title": "Shining Star (Makin' My Love) (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AB2",
       "title": "New York's In Love (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AB3",
       "title": "'87 And Cry (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AB4",
       "title": "Bang Bang (Vinyl Album Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AB5",
       "title": "Time Will Crawl (Single Version)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AC1",
       "title": "Girls (Extended Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AC2",
       "title": "Never Let Me Down (7\" Remix Edit)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AC3",
       "title": "Bang Bang (Live – Promotional Mix)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "24221",
-          "discogs_original_name": "Tina Turner",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "Tina Turner",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        },
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AC4",
       "title": "Tonight (Live)"
     },
     {
-      "artists": [
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "24221",
-          "discogs_original_name": "Tina Turner",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "Tina Turner",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        },
-        {
-          "apple_music_id": null,
-          "biography": null,
-          "discogs_id": "10263",
-          "discogs_original_name": "David Bowie",
-          "id": null,
-          "lastfm_mbid": null,
-          "name": "David Bowie",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
-        }
-      ],
+      "artists": [],
       "duration": "",
       "position": "AC5",
       "title": "Let's Dance (Live)"
     }
   ],
-  "updated_at": "2025-07-20T10:30:13.524336",
+  "updated_at": "2026-08-12T19:17:24.430944",
+  "videos": [],
   "year": 2018
 }
