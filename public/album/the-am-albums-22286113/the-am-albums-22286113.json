@@ -1,6 +1,6 @@
 {
-  "apple_music_id": "1522914372",
-  "apple_music_url": "https://music.apple.com/gb/album/trauma-feat-splasha-mskum-single/1522914372",
+  "apple_music_id": null,
+  "apple_music_url": null,
   "artists": [
     {
       "apple_music_id": "13492654",
@@ -114,20 +114,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/Mv5ieMDwOJS8sBQ7v6RWCef0ab_S4zoqlmwUGJz6mDY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMjg2/MTEzLTE2NDU3MjA1/NDItNTcwOS5qcGVn.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/2a/28/50/2a2850ac-37f2-63d1-8cfa-65b3c0949900/190296827709.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
     "Demon Records"
   ],
   "lastfm_mbid": null,
-  "lastfm_url": null,
+  "lastfm_url": "https://www.last.fm/music/Dodgy/The+A&M+Albums",
   "local_images": {
     "hi-res": "../public/album/the-am-albums-22286113/the-am-albums-22286113-hi-res.jpg",
     "medium": "../public/album/the-am-albums-22286113/the-am-albums-22286113-medium.jpg",
@@ -136,788 +129,62 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-10T07:43:40.246199",
+    "processed_at": "2026-08-14T07:43:44.117951",
     "services_used": [
       "discogs",
-      "apple_music",
-      "spotify",
-      "wikipedia"
+      "wikipedia",
+      "perplexity"
     ]
   },
-  "release_name_apple_music": "Trauma (feat. Splasha & M'skum) - Single",
+  "release_name_apple_music": null,
   "release_name_discogs": "The A&M Albums",
-  "release_name_spotify": "Free Peace Sweet",
+  "release_name_spotify": null,
   "released": "2022-02-25",
   "services": {
-    "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/2a/28/50/2a2850ac-37f2-63d1-8cfa-65b3c0949900/190296827709.jpg/2000x2000bb.jpg",
-      "content_rating": "explicit",
-      "copyright": "℗ 2020 Pressplay Records",
-      "editorial_notes": null,
-      "id": "1522914372",
-      "is_complete": true,
-      "preview_url": null,
-      "raw_attributes": {
-        "artistName": "Rack5, TY & Dodgy",
-        "artwork": {
-          "bgColor": "b4b7bc",
-          "height": 1500,
-          "textColor1": "14191a",
-          "textColor2": "1b1e1f",
-          "textColor3": "34393a",
-          "textColor4": "3a3c3f",
-          "url": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/2a/28/50/2a2850ac-37f2-63d1-8cfa-65b3c0949900/190296827709.jpg/{w}x{h}bb.jpg",
-          "width": 1500
-        },
-        "contentRating": "explicit",
-        "copyright": "℗ 2020 Pressplay Records",
-        "genreNames": [
-          "Hip-Hop/Rap",
-          "Music"
-        ],
-        "isCompilation": false,
-        "isComplete": true,
-        "isMasteredForItunes": false,
-        "isSingle": true,
-        "name": "Trauma (feat. Splasha & M'skum) - Single",
-        "playParams": {
-          "id": "1522914372",
-          "kind": "album"
-        },
-        "recordLabel": "Pressplay Media",
-        "releaseDate": "2020-07-10",
-        "trackCount": 1,
-        "upc": "190296827709",
-        "url": "https://music.apple.com/gb/album/trauma-feat-splasha-mskum-single/1522914372"
-      },
-      "url": "https://music.apple.com/gb/album/trauma-feat-splasha-mskum-single/1522914372"
-    },
-    "spotify": {
-      "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "© 1996 A&M Records Limited",
-          "type": "C"
-        },
-        {
-          "text": "℗ 1996 A&M Records Limited",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "00731454057325"
-      },
-      "id": "2C5AMWVyaTWboPCe49JVnl",
+    "lastfm": {
       "images": [
         {
-          "height": 640,
-          "url": "https://i.scdn.co/image/ab67616d0000b27312d78ae76a8b2d7a1c2f593d",
-          "width": 640
+          "size": "small",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/34s/3a0b375df6a84c11be9f37a5f29e1823.jpg"
         },
         {
-          "height": 300,
-          "url": "https://i.scdn.co/image/ab67616d00001e0212d78ae76a8b2d7a1c2f593d",
-          "width": 300
+          "size": "medium",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/64s/3a0b375df6a84c11be9f37a5f29e1823.jpg"
         },
         {
-          "height": 64,
-          "url": "https://i.scdn.co/image/ab67616d0000485112d78ae76a8b2d7a1c2f593d",
-          "width": 64
+          "size": "large",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/174s/3a0b375df6a84c11be9f37a5f29e1823.jpg"
+        },
+        {
+          "size": "extralarge",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a0b375df6a84c11be9f37a5f29e1823.jpg"
+        },
+        {
+          "size": "mega",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a0b375df6a84c11be9f37a5f29e1823.jpg"
+        },
+        {
+          "size": "",
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/3a0b375df6a84c11be9f37a5f29e1823.jpg"
         }
       ],
-      "label": "EMI",
-      "popularity": 49,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-            },
-            "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-            "id": "1dekSPU23UC5hw5b8Uxk9W",
-            "name": "Dodgy",
-            "type": "artist",
-            "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 1996 A&M Records Limited",
-            "type": "C"
-          },
-          {
-            "text": "℗ 1996 A&M Records Limited",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "00731454057325"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2C5AMWVyaTWboPCe49JVnl"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2C5AMWVyaTWboPCe49JVnl?market=US",
-        "id": "2C5AMWVyaTWboPCe49JVnl",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b27312d78ae76a8b2d7a1c2f593d",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e0212d78ae76a8b2d7a1c2f593d",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d0000485112d78ae76a8b2d7a1c2f593d",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "EMI",
-        "name": "Free Peace Sweet",
-        "popularity": 49,
-        "release_date": "1996-01-01",
-        "release_date_precision": "day",
-        "total_tracks": 14,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2C5AMWVyaTWboPCe49JVnl/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 47560,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1Bb8bXcwEybmvFS4C2qgUl"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1Bb8bXcwEybmvFS4C2qgUl",
-              "id": "1Bb8bXcwEybmvFS4C2qgUl",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Intro",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:1Bb8bXcwEybmvFS4C2qgUl"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 255693,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4VwuJl1ih4Z5EreWVi7oa8"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4VwuJl1ih4Z5EreWVi7oa8",
-              "id": "4VwuJl1ih4Z5EreWVi7oa8",
-              "is_local": false,
-              "is_playable": true,
-              "name": "In A Room - Full Version",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4VwuJl1ih4Z5EreWVi7oa8"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 161893,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1h2522p8888AVFfzWef7jg"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1h2522p8888AVFfzWef7jg",
-              "id": "1h2522p8888AVFfzWef7jg",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Trust In Time",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:1h2522p8888AVFfzWef7jg"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 329600,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4pdDONWgql2Yl4WlRd7sXF"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4pdDONWgql2Yl4WlRd7sXF",
-              "id": "4pdDONWgql2Yl4WlRd7sXF",
-              "is_local": false,
-              "is_playable": true,
-              "name": "You've Gotta Look Up",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:4pdDONWgql2Yl4WlRd7sXF"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 353773,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3zMggKRwtwGvDLjcacshR2"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3zMggKRwtwGvDLjcacshR2",
-              "id": "3zMggKRwtwGvDLjcacshR2",
-              "is_local": false,
-              "is_playable": true,
-              "name": "If You're Thinking Of Me",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:3zMggKRwtwGvDLjcacshR2"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 241306,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3uvTySdxejOSPEACJsajdW"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3uvTySdxejOSPEACJsajdW",
-              "id": "3uvTySdxejOSPEACJsajdW",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Good Enough",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:3uvTySdxejOSPEACJsajdW"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 364306,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3LfedwWvVszU8W6yx39ANz"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3LfedwWvVszU8W6yx39ANz",
-              "id": "3LfedwWvVszU8W6yx39ANz",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ain't No Longer Asking",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:3LfedwWvVszU8W6yx39ANz"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 293973,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/56YVP0fXiAiQ1ioSGLR3hu"
-              },
-              "href": "https://api.spotify.com/v1/tracks/56YVP0fXiAiQ1ioSGLR3hu",
-              "id": "56YVP0fXiAiQ1ioSGLR3hu",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Found You",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:56YVP0fXiAiQ1ioSGLR3hu"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 463240,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1YoxHAyYnyg497AJNZbFOb"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1YoxHAyYnyg497AJNZbFOb",
-              "id": "1YoxHAyYnyg497AJNZbFOb",
-              "is_local": false,
-              "is_playable": true,
-              "name": "One Of Those Rivers",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:1YoxHAyYnyg497AJNZbFOb"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 187400,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5me29xPM86P6rQlQJXFovp"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5me29xPM86P6rQlQJXFovp",
-              "id": "5me29xPM86P6rQlQJXFovp",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Prey For Drinking",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:5me29xPM86P6rQlQJXFovp"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 220240,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3naBOgq3iAfT1keEV0USMK"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3naBOgq3iAfT1keEV0USMK",
-              "id": "3naBOgq3iAfT1keEV0USMK",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Jack The Lad",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:3naBOgq3iAfT1keEV0USMK"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 287506,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4m8g2UhXrQCZqiL6vcLZGA"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4m8g2UhXrQCZqiL6vcLZGA",
-              "id": "4m8g2UhXrQCZqiL6vcLZGA",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Long Life",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:4m8g2UhXrQCZqiL6vcLZGA"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 308773,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6kLd9gynCKROcz0atUsjAu"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6kLd9gynCKROcz0atUsjAu",
-              "id": "6kLd9gynCKROcz0atUsjAu",
-              "is_local": false,
-              "is_playable": true,
-              "name": "U.K. R.I.P.",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:6kLd9gynCKROcz0atUsjAu"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1dekSPU23UC5hw5b8Uxk9W"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1dekSPU23UC5hw5b8Uxk9W",
-                  "id": "1dekSPU23UC5hw5b8Uxk9W",
-                  "name": "Dodgy",
-                  "type": "artist",
-                  "uri": "spotify:artist:1dekSPU23UC5hw5b8Uxk9W"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 352173,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2Tls2bbvNI31kSCW1Wwl2K"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2Tls2bbvNI31kSCW1Wwl2K",
-              "id": "2Tls2bbvNI31kSCW1Wwl2K",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Homegrown",
-              "preview_url": null,
-              "track_number": 14,
-              "type": "track",
-              "uri": "spotify:track:2Tls2bbvNI31kSCW1Wwl2K"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 14
-        },
-        "type": "album",
-        "uri": "spotify:album:2C5AMWVyaTWboPCe49JVnl"
-      },
-      "release_date": "1996-01-01",
-      "release_date_precision": "day",
-      "total_tracks": 14,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 47560,
-          "explicit": false,
-          "id": "1Bb8bXcwEybmvFS4C2qgUl",
-          "name": "Intro",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 255693,
-          "explicit": false,
-          "id": "4VwuJl1ih4Z5EreWVi7oa8",
-          "name": "In A Room - Full Version",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 161893,
-          "explicit": false,
-          "id": "1h2522p8888AVFfzWef7jg",
-          "name": "Trust In Time",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 329600,
-          "explicit": false,
-          "id": "4pdDONWgql2Yl4WlRd7sXF",
-          "name": "You've Gotta Look Up",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 353773,
-          "explicit": false,
-          "id": "3zMggKRwtwGvDLjcacshR2",
-          "name": "If You're Thinking Of Me",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 241306,
-          "explicit": false,
-          "id": "3uvTySdxejOSPEACJsajdW",
-          "name": "Good Enough",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 364306,
-          "explicit": false,
-          "id": "3LfedwWvVszU8W6yx39ANz",
-          "name": "Ain't No Longer Asking",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 293973,
-          "explicit": false,
-          "id": "56YVP0fXiAiQ1ioSGLR3hu",
-          "name": "Found You",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 463240,
-          "explicit": false,
-          "id": "1YoxHAyYnyg497AJNZbFOb",
-          "name": "One Of Those Rivers",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 187400,
-          "explicit": false,
-          "id": "5me29xPM86P6rQlQJXFovp",
-          "name": "Prey For Drinking",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 220240,
-          "explicit": false,
-          "id": "3naBOgq3iAfT1keEV0USMK",
-          "name": "Jack The Lad",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 287506,
-          "explicit": false,
-          "id": "4m8g2UhXrQCZqiL6vcLZGA",
-          "name": "Long Life",
-          "preview_url": null,
-          "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 308773,
-          "explicit": false,
-          "id": "6kLd9gynCKROcz0atUsjAu",
-          "name": "U.K. R.I.P.",
-          "preview_url": null,
-          "track_number": 13
-        },
-        {
-          "artists": [
-            {
-              "id": "1dekSPU23UC5hw5b8Uxk9W",
-              "name": "Dodgy"
-            }
-          ],
-          "duration_ms": 352173,
-          "explicit": false,
-          "id": "2Tls2bbvNI31kSCW1Wwl2K",
-          "name": "Homegrown",
-          "preview_url": null,
-          "track_number": 14
-        }
-      ],
-      "url": "https://open.spotify.com/album/2C5AMWVyaTWboPCe49JVnl"
+      "listeners": "2",
+      "mbid": "",
+      "playcount": "74",
+      "tags": [],
+      "url": "https://www.last.fm/music/Dodgy/The+A&M+Albums",
+      "wiki_content": null,
+      "wiki_summary": null
     },
     "perplexity": {
-      "description": "The A&M Albums by Dodgy is a compilation box set released in 2022 by Demon Records, featuring the band's three original studio albums from the 1990s: The Dodgy Album (1993), Homegrown (1994), and Free Peace Sweet (1996). These albums showcase Dodgy's blend of rock and pop with a distinct Britpop influence, characterized by jangly guitars, melodic hooks, and harmonious vocals. The debut album, produced by Ian Broudie, presents a sound reminiscent of The Byrds and The Beatles, with standout singles like \"Water Under The Bridge\" and \"Lovebirds.\" Homegrown built on this foundation with more polished, radio-friendly tracks such as \"Staying Out For The Summer\" and \"Melodies Haunt You,\" while Free Peace Sweet marked the band's commercial peak, achieving Platinum status in the UK largely due to the hit single \"Good Enough\".\n\nMusically, Dodgy's style during their A&M years combined upbeat, catchy pop-rock with introspective lyrics and a strong melodic sensibility, fitting well within the Britpop movement of the early to mid-1990s. The band's evolution across these albums reflects a maturation in songwriting and production, culminating in Free Peace Sweet's broader appeal and commercial success. Critically, Dodgy received praise for their energetic performances and memorable singles, securing nine UK Top 40 hits and maintaining a loyal fanbase. The 2022 box set release, pressed on colored vinyl and including bonus tracks and extensive liner notes, celebrates this influential period in Dodgy's discography and their lasting impact on British rock and pop.",
-      "generated_at": "2025-11-27T12:13:54.019243",
+      "description": "The A&M Albums by Dodgy is a 4LP box set issued by Demon Records that gathers the band’s classic 1990s A&M-era studio albums: The Dodgy Album, Homegrown, and Free Peace Sweet. It was presented as the first dedicated vinyl box set for this period, with the albums newly reissued on 180g coloured vinyl and Free Peace Sweet expanded with the bonus tracks “Grateful Moon” and “Is It Me?” from its initial limited pressing.\n\nThe set captures Dodgy at the heart of their melodic rock/pop sound, moving from the bright, guitar-driven indie-pop of their 1993 debut to the more polished, hook-heavy songwriting that brought them wider recognition on Homegrown and Free Peace Sweet. The Dodgy Album introduced the group’s distinctive blend of chiming guitars and catchy choruses, while Homegrown and Free Peace Sweet refined that formula into the more confident, radio-friendly style that defined their mid-1990s peak.\n\nFor collectors, the box set is significant because it restores these albums to vinyl together for the first time in this form, and it presents Dodgy’s A&M years as a cohesive snapshot of a band that helped define a lighter, melodic strand of British rock in the 1990s. The compilation format also highlights the band’s progression across their most commercially visible era, making it both a convenient overview and a substantial archival release.",
+      "generated_at": "2026-08-14T07:42:43.004315",
       "model": "sonar",
       "source": "perplexity"
     }
   },
-  "spotify_id": "2C5AMWVyaTWboPCe49JVnl",
-  "spotify_url": "https://open.spotify.com/album/2C5AMWVyaTWboPCe49JVnl",
+  "spotify_id": null,
+  "spotify_url": null,
   "styles": [
     "Indie Pop"
   ],
@@ -1146,6 +413,7 @@
       "title": "Is It Me"
     }
   ],
-  "updated_at": "2025-07-10T07:43:39.852362",
+  "updated_at": "2026-08-14T07:43:44.059220",
+  "videos": [],
   "year": 2022
 }
