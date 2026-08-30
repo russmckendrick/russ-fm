@@ -10,6 +10,7 @@ import { AlbumCard } from '@/components/AlbumCard';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
+import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 import { buildGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
 import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
@@ -863,10 +864,7 @@ export function AlbumDetailPage() {
         album={{
           artist: album.release_artist,
           album: album.release_name,
-          tracks: tracks.map(t => ({
-            title: t.name || 'Unknown Track',
-            artist: t.artists?.[0]?.name,
-          })),
+          tracks: toScrobbleTracks(tracks),
         }}
         className="w-full sm:w-auto"
       />

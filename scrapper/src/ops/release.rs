@@ -496,6 +496,20 @@ pub async fn process_release(
     Ok((rec, flags))
 }
 
+/// Map the `--field` CLI value onto the internal field enum.
+fn release_field(field: crate::cli::RefreshField) -> ReleaseField {
+    use crate::cli::RefreshField;
+    match field {
+        RefreshField::Tracks => ReleaseField::Tracks,
+        RefreshField::Videos => ReleaseField::Videos,
+        RefreshField::Discogs => ReleaseField::Discogs,
+        RefreshField::Apple => ReleaseField::Apple,
+        RefreshField::Spotify => ReleaseField::Spotify,
+        RefreshField::Lastfm => ReleaseField::Lastfm,
+        RefreshField::Images => ReleaseField::Images,
+    }
+}
+
 pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     let services = Services::new(cfg);
     let db = Db::open(cfg.db_path())?;
@@ -521,6 +535,29 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
                 "boxset parent {parent_id} is not in the database — process the boxset first: scrapper release {parent_id} --save"
             );
         }
+    }
+
+    // --field refreshes one field in place. It reuses the TUI's per-field refresh rather than
+    // process_release, so raw_data is edited rather than rebuilt and the interactive-only
+    // enrichment on the record (notably the Perplexity description) survives.
+    if let Some(field) = args.field {
+        let field = release_field(field);
+        let Some(rec) = db.get_release_by_discogs_id(&discogs_id)? else {
+            bail!("release {discogs_id} is not in the database — process it first: scrapper release {discogs_id} --save");
+        };
+        println!("Refreshing {} for release {discogs_id}...", field.label());
+        let picker = if args.interactive { MatchPicker::Cli } else { MatchPicker::First };
+        let (rec, _) = refresh_release_field(cfg, &services, &db, &client, &rec, field, &picker).await?;
+
+        print_summary(&rec, EnrichFlags::default());
+        if matches!(args.output, OutputFormat::Json) {
+            println!("{}", to_pretty_sorted(&release_to_value(&rec, &db)));
+        }
+        let folder = release_folder_name(&rec.title, &discogs_id);
+        println!("\nSaved to DB and wrote {}/{folder}/", cfg.releases_dir().display());
+        let n = crate::output::collection::regenerate(cfg, &db)?;
+        println!("Refreshed collection.json ({n} entries)");
+        return Ok(());
     }
 
     // A forced refresh exists to replace stale stored data, so it implies --save — every run
@@ -963,7 +1000,8 @@ fn map_lastfm_album(resp: &Value) -> Option<Value> {
     }))
 }
 
-/// Map a Discogs release's `tracklist` into the stored `[{position,title,duration}]` shape.
+/// Map a Discogs release's `tracklist` into the stored
+/// `[{position,title,duration,artists}]` shape.
 fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
     discogs
         .get("tracklist")
@@ -975,7 +1013,39 @@ fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
                         "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
                         "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
                         "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
+                        "artists": track_artists(t),
                     })
+                })
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+/// Per-track artist credits from one Discogs tracklist row.
+///
+/// Compilations credit each track separately while the release artist stays "Various";
+/// without these the track can only be scrobbled as "Various", which Last.fm filters out.
+///
+/// These credits stay *on the track row only*. They are never merged into
+/// `ReleaseRecord::artists`, so they are not seeded into the artists table by
+/// [`Db::seed_release_artists`] and never reach `collection.json` — no artist pages, no
+/// collection stats. Enrichment fields are omitted for the same reason: this is display
+/// and scrobble metadata, not a collection artist.
+fn track_artists(t: &Value) -> Vec<Value> {
+    t.get("artists")
+        .and_then(|a| a.as_array())
+        .map(|arr| {
+            arr.iter()
+                .filter_map(|a| {
+                    let name = clean_artist_name(a.get("name").and_then(|n| n.as_str()).unwrap_or(""));
+                    if name.is_empty() {
+                        return None;
+                    }
+                    Some(json!({
+                        "name": name,
+                        "role": a.get("role").cloned().unwrap_or_else(|| json!("")),
+                        "discogs_id": a.get("id").map(|i| json!(i.to_string())).unwrap_or(Value::Null),
+                    }))
                 })
                 .collect()
         })
@@ -1424,13 +1494,40 @@ pub fn tracklist_to_rows(tracklist: &Value) -> Vec<Vec<String>> {
 }
 
 /// Editor rows back to the stored `[{position,title,duration}]` shape; all-blank rows dropped.
-pub fn rows_to_tracklist(rows: &[Vec<String>]) -> Value {
+///
+/// The editor only exposes position/title/duration, so per-track `artists` (compilation
+/// credits, see [`track_artists`]) are carried over from `original` by re-matching each row
+/// on position, then case-insensitive title. Without this, hand-editing a compilation's
+/// tracklist would silently strip its credits and leave every track scrobbling as "Various".
+pub fn rows_to_tracklist(original: &Value, rows: &[Vec<String>]) -> Value {
+    let originals = original.as_array().map(Vec::as_slice).unwrap_or_default();
+    let find = |position: &str, title: &str| -> Option<&Value> {
+        let matches = |t: &&Value, key: &str, want: &str| {
+            !want.is_empty()
+                && t.get(key)
+                    .and_then(|v| v.as_str())
+                    .is_some_and(|v| v.trim().eq_ignore_ascii_case(want))
+        };
+        originals
+            .iter()
+            .find(|t| matches(t, "position", position))
+            .or_else(|| originals.iter().find(|t| matches(t, "title", title)))
+    };
+
     Value::Array(
         rows.iter()
             .filter(|r| r.iter().any(|c| !c.trim().is_empty()))
             .map(|r| {
                 let cell = |i: usize| r.get(i).map(|s| s.trim()).unwrap_or("");
-                json!({ "position": cell(0), "title": cell(1), "duration": cell(2) })
+                let (position, title) = (cell(0), cell(1));
+                let mut track = json!({ "position": position, "title": title, "duration": cell(2) });
+                let artists = find(position, title)
+                    .and_then(|t| t.get("artists"))
+                    .filter(|a| a.as_array().is_some_and(|a| !a.is_empty()));
+                if let Some(artists) = artists {
+                    track["artists"] = artists.clone();
+                }
+                track
             })
             .collect(),
     )
@@ -1577,7 +1674,7 @@ pub fn set_release_images(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Ve
 /// Save a hand-edited tracklist from the structured editor.
 pub fn set_release_tracklist(cfg: &Config, db: &Db, rec: &ReleaseRecord, rows: &[Vec<String>]) -> Result<ReleaseRecord> {
     let mut rec = rec.clone();
-    rec.tracklist = rows_to_tracklist(rows);
+    rec.tracklist = rows_to_tracklist(&rec.tracklist, rows);
     rec.updated_at = Some(now_iso());
     write_release(cfg, db, rec)
 }
@@ -1689,6 +1786,43 @@ pub async fn set_release_service(
 mod tests {
     use super::*;
 
+    /// Compilations credit each track separately; those credits must survive the mapping,
+    /// otherwise the track can only be scrobbled as the release artist ("Various").
+    #[test]
+    fn tracklist_keeps_per_track_artists_for_compilations() {
+        let discogs = json!({
+            "tracklist": [
+                {"position": "A1", "title": "Til I Hear It From You", "duration": "3:46",
+                 "artists": [{"name": "Gin Blossoms", "id": 123, "role": ""}]},
+                {"position": "A2", "title": "Liar", "duration": "2:21",
+                 "artists": [{"name": "The Cranberries (2)", "id": 456, "role": ""}]}
+            ]
+        });
+        let tl = tracklist_from_discogs(&discogs);
+        assert_eq!(tl[0]["artists"][0]["name"], json!("Gin Blossoms"));
+        assert_eq!(tl[0]["artists"][0]["discogs_id"], json!("123"));
+        // The Discogs "(n)" disambiguator is stripped, as for release-level artists.
+        assert_eq!(tl[1]["artists"][0]["name"], json!("The Cranberries"));
+    }
+
+    /// Regular albums carry no per-track credits: the field must still exist as `[]` so the
+    /// public JSON shape is identical for every release.
+    #[test]
+    fn tracklist_artists_default_to_empty_array() {
+        let discogs = json!({
+            "tracklist": [
+                {"position": "A1", "title": "Airbag", "duration": "4:44", "artists": []},
+                {"position": "A2", "title": "Paranoid Android", "duration": "6:23"},
+                {"position": "A3", "title": "Exit Music", "duration": "4:24",
+                 "artists": [{"name": "   ", "id": 1}]}
+            ]
+        });
+        let tl = tracklist_from_discogs(&discogs);
+        for t in &tl {
+            assert_eq!(t["artists"], json!([]), "track {t:?} should have an empty artists array");
+        }
+    }
+
     #[test]
     fn boxset_section_headers_are_position_less_titles() {
         let tracklist = json!([
@@ -1732,10 +1866,31 @@ mod tests {
         ]);
         let rows = tracklist_to_rows(&stored);
         assert_eq!(rows, vec![vec!["A1", "Girls & Boys", "4:50"], vec!["A2", "Tracy Jacks", ""]]);
-        assert_eq!(rows_to_tracklist(&rows), stored);
+        assert_eq!(rows_to_tracklist(&stored, &rows), stored);
 
         let with_blank = vec![vec!["A1".into(), "Song".into(), "".into()], vec!["  ".into(), "".into(), "".into()]];
-        assert_eq!(rows_to_tracklist(&with_blank).as_array().unwrap().len(), 1);
+        assert_eq!(rows_to_tracklist(&stored, &with_blank).as_array().unwrap().len(), 1);
+    }
+
+    /// The tracklist editor has no artists column, so a hand-edit must not strip the
+    /// compilation credits that make a track scrobbleable.
+    #[test]
+    fn tracklist_rows_preserve_per_track_artists() {
+        let stored = json!([
+            { "position": "A1", "title": "Liar", "duration": "2:21",
+              "artists": [{"name": "The Cranberries", "role": "", "discogs_id": "456"}] },
+            { "position": "A2", "title": "Free", "duration": "4:24", "artists": [] },
+        ]);
+        // Duration corrected and a title typo fixed; credits must survive both.
+        let rows = vec![
+            vec!["A1".into(), "Liar".into(), "2:22".into()],
+            vec!["A2".into(), "Free (Edit)".into(), "4:24".into()],
+        ];
+        let out = rows_to_tracklist(&stored, &rows);
+        assert_eq!(out[0]["duration"], json!("2:22"));
+        assert_eq!(out[0]["artists"][0]["name"], json!("The Cranberries"));
+        // An empty credit list stays absent rather than being written back as noise.
+        assert!(out[1].get("artists").is_none());
     }
 
     #[test]

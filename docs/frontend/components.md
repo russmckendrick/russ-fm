@@ -379,16 +379,28 @@ import { ScrobbleButton } from '@/components/ScrobbleButton';
 
 ### AlbumScrobbleButton (`src/components/AlbumScrobbleButton.tsx`)
 
-Scrobble entire album to Last.fm.
+Scrobble an entire album to Last.fm.
 
 ```tsx
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
+import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 
 <AlbumScrobbleButton
-  album={album}
-  tracks={album.tracklist}
+  album={{
+    artist: album.release_artist,
+    album: album.release_name,
+    tracks: toScrobbleTracks(tracks),
+  }}
 />
 ```
+
+Build `tracks` with [`toScrobbleTracks`](./utilities.md#toscrobbletracks) rather than mapping
+the tracklist inline — it strips section-header rows and carries per-track compilation
+artists through.
+
+The button reports a partial run ("Scrobbled 13 of 15", amber) when Last.fm ignores or the
+worker skips some tracks, instead of showing a clean tick. See
+[Last.fm integration](../api-integrations/lastfm.md#album-scrobbling).
 
 ---
 

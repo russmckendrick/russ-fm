@@ -116,6 +116,32 @@ pub struct ReleaseArgs {
     /// With no positional release ID, runs interactive boxset discovery for this box instead.
     #[arg(long, value_name = "BOX_DISCOGS_ID")]
     pub boxset: Option<String>,
+    /// Refresh a single field from its source and persist it, leaving every other field alone.
+    /// Unlike --force-refresh this does not rebuild raw_data, so descriptions and service
+    /// matches survive. Implies --save.
+    #[arg(long, value_enum, value_name = "FIELD")]
+    pub field: Option<RefreshField>,
+}
+
+/// The subset of release fields that can be re-fetched from their source on their own.
+/// Mirrors `ReleaseField::refreshable()`, exposed here so the TUI's per-field refresh is
+/// also reachable headlessly.
+#[derive(Debug, Clone, Copy, ValueEnum)]
+pub enum RefreshField {
+    /// Tracklist (including per-track artists for compilations), from Discogs.
+    Tracks,
+    /// Video URLs, from Discogs.
+    Videos,
+    /// Tracklist, videos and artwork sources together, from Discogs.
+    Discogs,
+    /// Apple Music match.
+    Apple,
+    /// Spotify match.
+    Spotify,
+    /// Last.fm match.
+    Lastfm,
+    /// Cover artwork.
+    Images,
 }
 
 #[derive(Debug, Args)]

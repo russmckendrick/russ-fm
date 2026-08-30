@@ -55,8 +55,20 @@ scrapper release <DISCOGS_ID> [OPTIONS]
 | `--interactive` | FLAG | `false` | Manual match selection |
 | `--prefer` | CHOICE | - | Preferred data/image source: `apple-music`, `spotify`, `theaudiodb`, `discogs`, `v1` |
 | `--boxset` | STRING | - | Link this release as a member of a boxset (the parent's Discogs ID) |
+| `--field` | CHOICE | - | Refresh one field in place: `tracks`, `videos`, `discogs`, `apple`, `spotify`, `lastfm`, `images`. Implies `--save` |
 
 > Run `scrapper release --help` for the full, authoritative flag list.
+
+> **`--field` vs `--force-refresh`.** `--force-refresh` rebuilds `raw_data` from scratch, and
+> the Perplexity description is interactive-only — so a headless force-refresh **drops the
+> stored album description**. `--field` re-fetches just the named field and writes it back
+> into the existing record, leaving descriptions, service matches and artwork alone. Prefer
+> it whenever you only need to correct one thing. The release must already be in the
+> database.
+>
+> `--field tracks` is the fix for a compilation whose tracks show no artists: it restores the
+> per-track credits from Discogs, without which every track scrobbles as the release artist
+> ("Various") and Last.fm filters it out.
 
 > `--interactive` shows the match picker for **every** candidate list, including a single
 > candidate, so you can always confirm or skip a source. `--save` also regenerates
@@ -96,8 +108,12 @@ scrapper release 123456
 # Save to public directory
 scrapper release 123456 --save
 
-# Force refresh cached data
+# Force refresh cached data (rebuilds raw_data — drops the description when headless)
 scrapper release 123456 --force-refresh --save
+
+# Refresh only the tracklist, leaving description/service matches intact
+# (restores per-track artists on compilations so they can be scrobbled)
+scrapper release 38185662 --field tracks
 
 # Interactive mode for manual matching
 scrapper release 123456 --interactive --save

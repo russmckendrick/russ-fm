@@ -1,5 +1,23 @@
 import { generateApiSig } from '../utils/lastfm.js';
 
+/// Last.fm `ignoredMessage` codes, mapped to something a listener can act on.
+const IGNORED_REASONS = {
+  '1': 'Last.fm filtered this artist name',
+  '2': 'Last.fm filtered this track name',
+  '3': 'Timestamp was too far in the past',
+  '4': 'Timestamp was too far in the future',
+  '5': 'Daily scrobble limit reached'
+};
+
+/// Artist names Last.fm treats as placeholders rather than performers. A compilation whose
+/// per-track credits are missing falls back to the release artist, which is one of these —
+/// scrobbling it is a guaranteed no-op, so we skip it and say so instead.
+const PLACEHOLDER_ARTISTS = new Set(['various', 'various artists', 'v/a', 'unknown artist', 'soundtrack']);
+
+function isPlaceholderArtist(name) {
+  return PLACEHOLDER_ARTISTS.has(String(name || '').trim().toLowerCase());
+}
+
 export async function handleScrobble(request, env, path) {
   if (path === '/api/scrobble/track') {
     return handleTrackScrobble(request, env);
@@ -79,15 +97,29 @@ async function handleAlbumScrobble(request, env) {
       }, { status: 400 });
     }
     
+    // Resolve each track's artist up front: per-track credit for compilations, album artist
+    // otherwise. Tracks that resolve to a placeholder ("Various") are dropped here rather
+    // than sent — Last.fm filters them, so posting them only produces silent no-ops.
+    const resolved = tracks
+      .filter(track => track.title)
+      .map(track => ({ title: track.title, artist: track.artist || artist }));
+
+    const scrobbleable = resolved.filter(track => !isPlaceholderArtist(track.artist));
+    const skipped = resolved.filter(track => isPlaceholderArtist(track.artist));
+
+    if (scrobbleable.length === 0) {
+      return Response.json({
+        error: `No scrobbleable tracks: this release has no per-track artists, so every track would be credited to "${artist}", which Last.fm filters out.`
+      }, { status: 422 });
+    }
+
     // Scrobble tracks with staggered timestamps (simulate listening to the album)
     const results = [];
-    let currentTimestamp = Math.floor(Date.now() / 1000) - (tracks.length * 180); // Start from past
-    
-    for (const track of tracks) {
-      if (!track.title) continue;
-      
+    let currentTimestamp = Math.floor(Date.now() / 1000) - (scrobbleable.length * 180); // Start from past
+
+    for (const track of scrobbleable) {
       const scrobbleResult = await scrobbleTrack({
-        artist: track.artist || artist, // Use track artist for compilations, fallback to album artist
+        artist: track.artist,
         track: track.title,
         album,
         timestamp: currentTimestamp
@@ -105,18 +137,31 @@ async function handleAlbumScrobble(request, env) {
       // Small delay to avoid rate limiting
       await new Promise(resolve => setTimeout(resolve, 100));
     }
-    
+
+    for (const track of skipped) {
+      results.push({
+        track: track.title,
+        success: false,
+        skipped: true,
+        error: `No track artist — "${track.artist}" is filtered by Last.fm`
+      });
+    }
+
     const successCount = results.filter(r => r.success).length;
     const failureCount = results.length - successCount;
-    
+    const message = skipped.length
+      ? `Scrobbled ${successCount} of ${results.length} tracks (${skipped.length} skipped: no track artist)`
+      : `Scrobbled ${successCount} of ${results.length} tracks`;
+
     return Response.json({
       success: failureCount === 0,
-      message: `Scrobbled ${successCount} of ${results.length} tracks`,
+      message,
       results,
       summary: {
         total: results.length,
         successful: successCount,
-        failed: failureCount
+        failed: failureCount,
+        skipped: skipped.length
       }
     });
   } catch (error) {
@@ -202,6 +247,22 @@ async function scrobbleTrack(trackData, sessionKey, env) {
     const data = await response.json();
     
     if (data.scrobbles && data.scrobbles.scrobble) {
+      // A 200 with an ignoredMessage code means Last.fm accepted the request but binned the
+      // scrobble (filtered artist, timestamp out of range, daily limit). It never reaches the
+      // user's profile, so it is a failure — not the success the response shape implies.
+      const scrobble = Array.isArray(data.scrobbles.scrobble)
+        ? data.scrobbles.scrobble[0]
+        : data.scrobbles.scrobble;
+      const ignored = scrobble && scrobble.ignoredMessage;
+      const code = ignored && String(ignored.code || '0');
+
+      if (code && code !== '0') {
+        return {
+          success: false,
+          error: IGNORED_REASONS[code] || `Last.fm ignored this scrobble (code ${code})`
+        };
+      }
+
       return { success: true };
     } else if (data.error) {
       return { 

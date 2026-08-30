@@ -26,6 +26,8 @@ export interface AlbumScrobbleRequest {
 export interface ScrobbleResult {
   track: string;
   success: boolean;
+  /** Never sent to Last.fm — it would have been credited to a placeholder artist. */
+  skipped?: boolean;
   error?: string;
 }
 
@@ -37,6 +39,7 @@ export interface AlbumScrobbleResponse {
     total: number;
     successful: number;
     failed: number;
+    skipped?: number;
   };
 }
 

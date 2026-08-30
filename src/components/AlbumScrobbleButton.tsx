@@ -6,7 +6,7 @@ import { useScrobble } from '../hooks/useScrobble';
 import { LastFmAuthDialog } from './LastFmAuthDialog';
 import { Check, AlertCircle, Loader2 } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
-import { AlbumScrobbleRequest } from '../types/scrobble';
+import { AlbumScrobbleRequest, AlbumScrobbleResponse } from '../types/scrobble';
 
 interface AlbumScrobbleButtonProps {
   album: AlbumScrobbleRequest;
@@ -26,6 +26,10 @@ export function AlbumScrobbleButton({
   const { scrobbleAlbum, isScrobbling, error } = useScrobble();
   const [scrobbled, setScrobbled] = useState(false);
   const [progress, setProgress] = useState<{ current: number; total: number } | null>(null);
+  // Last.fm accepts a scrobble request and then silently bins individual tracks (filtered
+  // artist, stale timestamp). Keep the summary so a partial run is reported as one, rather
+  // than looking identical to a clean success.
+  const [summary, setSummary] = useState<AlbumScrobbleResponse['summary'] | null>(null);
 
   const handleScrobble = async () => {
     if (!isAuthenticated) return;
@@ -49,28 +53,36 @@ export function AlbumScrobbleButton({
       const response = await scrobbleAlbum(album);
 
       clearInterval(progressInterval);
+      setSummary(response.summary);
 
-      if (response.success) {
-        // Complete the progress animation
+      // Complete the progress animation whenever anything was scrobbled; a partial run still
+      // put plays on the profile and should not read as a total failure.
+      if (response.summary.successful > 0) {
         setProgress({ current: 100, total: 100 });
         setTimeout(() => {
           setScrobbled(true);
           setProgress(null);
         }, 400);
 
-        // Reset scrobbled state after 5 seconds
-        setTimeout(() => setScrobbled(false), 5000);
+        setTimeout(() => {
+          setScrobbled(false);
+          setSummary(null);
+        }, 8000);
       } else {
         setProgress(null);
       }
     } catch (err) {
       console.error('Album scrobble failed:', err);
+      setSummary(null);
       setProgress(null);
     }
   };
 
+  const partial = !!summary && summary.successful > 0 && summary.successful < summary.total;
+
   const getIcon = () => {
     if (progress || isScrobbling) return <Loader2 className="h-4 w-4 animate-spin" />;
+    if (partial) return <AlertCircle className="h-4 w-4" />;
     if (scrobbled) return <Check className="h-4 w-4" />;
     if (error) return <AlertCircle className="h-4 w-4 text-destructive" />;
     return <SiLastdotfm className="h-4 w-4" />;
@@ -81,11 +93,15 @@ export function AlbumScrobbleButton({
       return `Scrobbling…`;
     }
     if (isScrobbling) return 'Scrobbling…';
+    if (partial && summary) return `Scrobbled ${summary.successful} of ${summary.total}`;
     if (scrobbled) return 'Album Scrobbled!';
     return 'Scrobble to Last.fm';
   };
 
   const getBrandColor = () => {
+    if (partial) {
+      return '#d97706'; // amber-600
+    }
     if (scrobbled) {
       return '#22c55e'; // green-600
     }
@@ -98,6 +114,12 @@ export function AlbumScrobbleButton({
   const getTooltipContent = () => {
     if (!isAuthenticated) return 'Connect to Last.fm to scrobble';
     if (isScrobbling) return `Scrobbling "${album.album}" by ${album.artist}…`;
+    if (partial && summary) {
+      const missed = summary.skipped
+        ? `${summary.skipped} had no track artist, so Last.fm would have filtered them`
+        : `${summary.failed} were rejected by Last.fm`;
+      return `Scrobbled ${summary.successful} of ${summary.total} tracks — ${missed}.`;
+    }
     if (scrobbled) return 'Album scrobbled successfully!';
     if (error) return `Failed to scrobble: ${error}`;
     return `Scrobble "${album.album}" by ${album.artist} (${album.tracks.length} tracks)`;

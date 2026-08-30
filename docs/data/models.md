@@ -24,7 +24,7 @@ pub struct ReleaseRecord {
     pub genres: Value,
     pub styles: Value,
     pub images: Value,         // [{url, type, width, height, resource_url}]
-    pub tracklist: Value,      // [{position, title, duration}]
+    pub tracklist: Value,      // [{position, title, duration, artists}] — see note below
     pub videos: Value,         // ["https://…", …] — flat URL strings
     pub apple_music_id: Option<String>,
     pub spotify_id: Option<String>,
@@ -44,6 +44,14 @@ pub struct ReleaseRecord {
     pub date_added: Option<String>,   // drives collection.json sort order
 }
 ```
+
+> **Per-track `artists`.** Compilations credit each track separately while the release
+> artist stays `Various`; those credits are stored on the track row as
+> `{name, role, discogs_id}` and default to `[]` everywhere else. They are display and
+> scrobble metadata **only** — they are deliberately never merged into `ReleaseRecord.artists`,
+> so they are not seeded into the `artists` table and never reach `collection.json`, artist
+> pages, or collection stats. Without them a compilation's tracks can only be scrobbled as
+> "Various", which Last.fm filters out.
 
 ### ArtistRecord
 

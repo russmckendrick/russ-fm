@@ -287,6 +287,39 @@ detail pages share the same data contract.
 
 ---
 
+## Scrobble Utilities (`src/lib/scrobbleTracks.ts`)
+
+### toScrobbleTracks
+
+Builds the track payload for an album scrobble from a rendered tracklist.
+
+```typescript
+import { toScrobbleTracks } from '@/lib/scrobbleTracks';
+
+<AlbumScrobbleButton
+  album={{
+    artist: album.release_artist,
+    album: album.release_name,
+    tracks: toScrobbleTracks(tracks),
+  }}
+/>
+```
+
+It drops two kinds of row that must never reach Last.fm:
+
+- **Position-less section headers** — Discogs marks sides, discs and box set albums with a
+  row that has a title but no position ("Side :/", "Life In A Day"). They render in the
+  tracklist but are not songs. Rows are only treated as headers when the tracklist actually
+  uses positions, so the Spotify/Last.fm fallbacks (which carry none) pass through intact.
+- **Untitled rows**, which Last.fm has nothing to match against.
+
+Per-track artists are carried through for compilations. Tracks without one are still
+returned — the worker resolves them against the release artist and skips the ones that land
+on a placeholder, so it can report exactly what was left out. See
+[Last.fm integration](../api-integrations/lastfm.md#album-scrobbling).
+
+---
+
 ## Color Utilities (`src/lib/color-utils.ts`)
 
 ### Color Conversion

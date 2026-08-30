@@ -280,6 +280,37 @@ const scrobble = async (track: ScrobbleRequest) => {
 };
 ```
 
+### Album Scrobbling
+
+`POST /api/scrobble/album` walks the tracklist, staggering timestamps by 3 minutes to
+simulate a listen. Two rules keep compilations working:
+
+**Artist resolution.** Each track is scrobbled as its own per-track artist
+(`tracklist[].artists[0].name`), falling back to the release artist. Compilations must carry
+per-track credits, or every track resolves to the release artist — `Various` — which Last.fm
+filters. Tracks that resolve to a placeholder (`Various`, `Various Artists`, `V/A`,
+`Unknown Artist`, `Soundtrack`) are **skipped before the request** and reported as skipped,
+rather than posted as guaranteed no-ops. If no track survives, the endpoint returns `422`.
+
+The frontend builds the payload with `toScrobbleTracks()` (`src/lib/scrobbleTracks.ts`),
+which also drops Discogs' position-less section-header rows ("Side :/", box set album
+titles) so they are never scrobbled as songs.
+
+**Ignored scrobbles.** `track.scrobble` returns HTTP 200 with an `ignoredMessage` code when
+Last.fm accepts the request but bins the play. These never reach the profile, so the worker
+treats a non-zero code as a failure rather than a success:
+
+| Code | Meaning |
+|------|---------|
+| `1` | Artist name filtered |
+| `2` | Track name filtered |
+| `3` | Timestamp too far in the past |
+| `4` | Timestamp too far in the future |
+| `5` | Daily scrobble limit reached |
+
+The album response carries `summary.skipped` alongside `successful`/`failed`, and the button
+reports a partial run ("Scrobbled 13 of 15") instead of a clean tick.
+
 ### Signature Generation
 
 Scrobble requests require MD5 signature:
