@@ -134,7 +134,10 @@ async function main() {
 
     // Step 2: Run Vite build without images
     console.log(chalk.blue('\n🔨 Step 2: Running Vite build (without images)...'));
-    execSync('vite build --outDir dist-worker', {
+    // Resolve the local Vite binary explicitly: when this script is run with
+    // plain `node` (as CI does) node_modules/.bin is not on PATH.
+    const viteBin = path.join(process.cwd(), 'node_modules', '.bin', 'vite');
+    execSync(`"${fs.existsSync(viteBin) ? viteBin : 'vite'}" build --outDir dist-worker`, {
       stdio: 'inherit',
       cwd: process.cwd()
     });
