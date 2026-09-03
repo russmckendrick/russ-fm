@@ -143,7 +143,9 @@ Notes on the shape of the job:
   `build:fast`, which would run `tsc` and a throwaway Vite build into `dist/`
   before `build-worker.js` runs its own Vite build into `dist-worker/`.
   The asset step therefore does not run Vite at all; `dist/` only receives
-  processed images and OG images for the R2 sync.
+  processed images and OG images for the R2 sync. Because the script is
+  launched with plain `node`, `node_modules/.bin` is not on `PATH`, so
+  `build-worker.js` resolves the Vite binary from `node_modules/.bin` itself.
 - **The cache key is versioned** (`assets-v2`). Bump the suffix to force a
   full regenerate and a fresh save of the blob. Between bumps, the blob is
   only re-saved when the lockfile or the asset scripts change. Images added
