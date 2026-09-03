@@ -6,7 +6,7 @@
  * Supports caching to speed up builds
  */
 
-import { processAllImages } from '../src/lib/imageProcessor.ts';
+import { processAllImages, linkSourceImages } from '../src/lib/imageProcessor.ts';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
@@ -72,6 +72,14 @@ async function main() {
       console.log(`📝 Processing directly to output: ${outputDir}`);
       await processAllImages(publicDir, distDir);
     }
+
+    // 3. Put the hi-res sources alongside the processed sizes. The R2 sync
+    // reads everything from the output dir, and nothing else copies public/
+    // into it any more (the Vite build used to, before it moved to the
+    // worker build step).
+    console.log(`🔗 Linking hi-res sources into output: ${outputDir}`);
+    const linked = await linkSourceImages(publicDir, distDir);
+    console.log(`   ${linked} hi-res images linked`);
 
     console.log('🎉 Image processing completed successfully!');
   } catch (error) {

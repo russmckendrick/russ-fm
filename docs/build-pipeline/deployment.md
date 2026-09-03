@@ -116,6 +116,8 @@ deploy:
 
     - name: Detect changed files
       run: |
+        # push: diff the pushed range
+        # manual run with `targets`: synthesise public/<target>/manual lines
         git diff --name-only ${{ github.event.before }} HEAD > changed_files.txt
 
     - name: Sync to R2
@@ -137,6 +139,14 @@ deploy:
 ```
 
 Notes on the shape of the job:
+
+- **`dist/` must hold hi-res, medium and avatar for every album and artist**,
+  because the R2 sync reads only from `dist/`. The Vite build used to copy
+  `public/` into `dist/` as a side effect; now that the app builds straight
+  into `dist-worker/`, `process-images` hard-links each hi-res source into
+  `dist/` itself (`linkSourceImages()` in `src/lib/imageProcessor.ts`).
+  When that link step was missing, new albums reached R2 without their
+  hi-res file and album pages showed a broken cover.
 
 - **The app is type-checked and bundled once.** CI calls `build-worker.js`
   directly rather than `pnpm run deploy`, because `deploy` goes through
@@ -184,6 +194,23 @@ node scripts/sync-to-r2.js --size medium
 
 # Force overwrite
 node scripts/sync-to-r2.js --force
+```
+
+### Manual Runs
+
+The workflow also has a `workflow_dispatch` trigger (Actions → Deploy 🚀 →
+Run workflow, or `gh workflow run "Deploy 🚀"`) with two optional inputs:
+
+| Input | Effect |
+|-------|--------|
+| `targets` | Comma-separated `album/<slug>` or `artist/<slug>` entries. The run behaves like a push that touched exactly those folders: their hi-res, medium, avatar and OG image are uploaded with `--force`, overwriting whatever R2 has. Use it when an object on R2 is missing or stale but nothing in git changed. |
+| `repair` | Full sync that lists everything in `dist/` and uploads only objects R2 does not already have (no `--force`, one HEAD request per file, so it is slow). Use it after a run that failed part-way or when several objects are known to be missing. |
+
+Both still rebuild and redeploy the Worker. Example:
+
+```bash
+gh workflow run "Deploy 🚀" -f targets="album/temple-of-low-men-37731753,artist/steve-white-trio"
+gh workflow run "Deploy 🚀" -f repair=true
 ```
 
 ### Changed File Detection

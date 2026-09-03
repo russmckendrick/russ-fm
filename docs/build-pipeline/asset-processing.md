@@ -32,6 +32,12 @@ pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
 3. Generates medium (800px) and avatar (128px) for artists
 4. Copies processed images to dist directory
 
+After processing (or copying from the cache), the script hard-links every
+`*-hi-res.jpg` from `public/` into the output directory next to the
+generated `medium` and `avatar` files, so the output tree is the complete
+set the R2 sync uploads. Hard links cost no disk space; it falls back to a
+copy across filesystems.
+
 ### Image Sizes
 
 | Size | Dimensions | Use Case | Exists For |

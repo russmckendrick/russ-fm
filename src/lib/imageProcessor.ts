@@ -135,6 +135,43 @@ export function getProcessedImagePathsForOutput(
 }
 
 /**
+ * Place every hi-res source image into the output tree next to its processed
+ * sizes, so `dist/` carries the complete set an R2 sync expects
+ * (hi-res, medium, avatar). Hard-links when possible (instant, no extra
+ * disk), falling back to a copy across filesystems.
+ */
+export async function linkSourceImages(publicDir: string, outputDir: string): Promise<number> {
+  let linked = 0;
+  for (const kind of ['album', 'artist']) {
+    const sourceDir = path.join(publicDir, kind);
+    let entries;
+    try {
+      entries = await fs.readdir(sourceDir, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const files = await fs.readdir(path.join(sourceDir, entry.name));
+      const hiResFile = files.find(file => file.endsWith('-hi-res.jpg'));
+      if (!hiResFile) continue;
+
+      const source = path.join(sourceDir, entry.name, hiResFile);
+      const target = path.join(outputDir, kind, entry.name, hiResFile);
+      await fs.mkdir(path.dirname(target), { recursive: true });
+      await fs.rm(target, { force: true });
+      try {
+        await fs.link(source, target);
+      } catch {
+        await fs.copyFile(source, target);
+      }
+      linked++;
+    }
+  }
+  return linked;
+}
+
+/**
  * Process all images in a directory structure
  */
 export async function processAllImages(publicDir: string, outputDir?: string): Promise<void> {
