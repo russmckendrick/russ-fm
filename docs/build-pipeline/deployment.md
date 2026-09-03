@@ -265,7 +265,7 @@ pnpm run r2:clean --confirm
 ### Runtime Requirements
 
 - Node.js 22.19.0 or newer is required for the Workers deployment tooling.
-- Wrangler 3.114.17 resolves Miniflare with Undici 8, which requires Node 22.19.0+.
+- Wrangler 4.x (currently 4.128.0) resolves Miniflare with Undici 8, which requires Node 22.19.0+.
 
 ### Wrangler Configuration
 
