@@ -400,6 +400,10 @@ async function GenericSiteOGCard({ recentAlbums, albumImages, totalAlbums, total
   };
 }
 
+// Artists that never get an OG card (see scripts/og-skip.json).
+const ogSkip = JSON.parse(await fs.readFile(path.join(__dirname, 'og-skip.json'), 'utf-8'));
+const skippedArtistSlugs = new Set(ogSkip.artists ?? []);
+
 // Helper to convert image to base64.
 // Always normalise through sharp: the cards embed a data:image/jpeg URI and
 // satori parses the JPEG header to size it, so a PNG saved with a .jpg
@@ -724,6 +728,7 @@ async function main() {
   console.log('🎤 Generating OG images for artists...\n');
   let artistSuccessCount = 0;
   let artistFailCount = 0;
+  let artistSkippedCount = 0;
 
   // Extract unique artists from collection
   const artistsMap = new Map();
@@ -741,6 +746,12 @@ async function main() {
   console.log(`Found ${uniqueArtists.length} unique artists\n`);
 
   for (const artist of uniqueArtists) {
+    const artistSlug = artist.uri_artist.split('/')[2];
+    if (skippedArtistSlugs.has(artistSlug)) {
+      console.log(`  ⏭️  Skipping ${artist.name} (listed in scripts/og-skip.json)`);
+      artistSkippedCount++;
+      continue;
+    }
     const success = await generateArtistOGImage(artist, targetDir, collection);
     if (success) {
       artistSuccessCount++;
@@ -749,7 +760,7 @@ async function main() {
     }
   }
 
-  console.log(`\n✓ Artists: ${artistSuccessCount} generated, ${artistFailCount} failed\n`);
+  console.log(`\n✓ Artists: ${artistSuccessCount} generated, ${artistFailCount} failed, ${artistSkippedCount} skipped\n`);
 
   // === GENERIC SITE OG IMAGE ===
   console.log('🌐 Generating generic site OG image...\n');

@@ -6,6 +6,10 @@ import path from 'node:path';
 const SITE_URL = (process.env.SITE_URL || 'https://russ.fm').replace(/\/+$/, '');
 const ASSETS_BASE_URL = (process.env.ASSETS_BASE_URL || 'https://assets.russ.fm').replace(/\/+$/, '');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
+// Artists with no OG card (scripts/og-skip.json) fall back to the site-wide image.
+const OG_SKIPPED_ARTISTS = new Set(
+  JSON.parse(await readFile(path.join(process.cwd(), 'scripts', 'og-skip.json'), 'utf8')).artists ?? []
+);
 const COLLECTION_PATH = path.join(PUBLIC_DIR, 'collection.json');
 const WRAPPED_DIR = path.join(PUBLIC_DIR, 'wrapped');
 
@@ -365,7 +369,9 @@ function buildArtistHead({ slug, info, detail }) {
   const albums = info.albumCount;
   const pageTitle = `${name} discography — ${albums} album${albums === 1 ? '' : 's'} in collection | Russ.fm`;
   const canonical = `${SITE_URL}/artist/${slug}`;
-  const image = `${ASSETS_BASE_URL}/artist/${slug}/og-image.png`;
+  const image = OG_SKIPPED_ARTISTS.has(slug)
+    ? `${SITE_URL}/og-image.png`
+    : `${ASSETS_BASE_URL}/artist/${slug}/og-image.png`;
   const description = artistDescription({ info, detail });
   const jsonLd = buildArtistJsonLd({ info, detail, slug, canonical, image, description });
   return renderHead({

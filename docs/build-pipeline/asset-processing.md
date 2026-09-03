@@ -285,6 +285,20 @@ An artist card needs one image. `resolveArtistImagePath()` tries, in order:
 3. The cover of the artist's most recently added album.
 
 If none exists the artist is skipped with a warning rather than an error.
+
+### Artist Skip List
+
+`scripts/og-skip.json` lists artist slugs that should never get an OG card,
+for example session musicians with no artwork anywhere:
+
+```json
+{ "artists": ["chris-hague", "joel-white", "ocean-machine"] }
+```
+
+`generate-og-images.mjs` skips them before doing any work (reported as
+"skipped" in the summary), and `generate-static-meta.mjs` points their
+page's `og:image` at the site-wide `/og-image.png` instead of the per-artist
+card, so social previews never reference a missing file.
 Every image is also normalised through Sharp to a real JPEG before being
 embedded, because the card uses a `data:image/jpeg` URI and Satori parses
 the JPEG header. A PNG saved with a `.jpg` extension used to fail with
