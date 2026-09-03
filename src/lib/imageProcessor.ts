@@ -5,6 +5,7 @@
 import sharp from 'sharp';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { createHash } from 'crypto';
 import chalk from 'chalk';
 
 export interface ImageSizes {
@@ -24,32 +25,47 @@ export interface ProcessedImagePaths {
 }
 
 /**
- * Check if processed images exist and are newer than the source
+ * Path of the sidecar file that records the SHA-1 of the hi-res source the
+ * processed outputs were generated from. It lives next to the outputs so it
+ * travels with the asset cache.
+ */
+export function getSourceHashPath(outputPaths: ProcessedImagePaths): string {
+  const parsed = path.parse(outputPaths.medium);
+  return path.join(parsed.dir, `${parsed.name.replace(/-medium$/, '')}.hi-res.sha1`);
+}
+
+export async function hashFile(filePath: string): Promise<string> {
+  const hash = createHash('sha1');
+  hash.update(await fs.readFile(filePath));
+  return hash.digest('hex');
+}
+
+/**
+ * Check if processed images exist and were generated from this exact source.
+ *
+ * Deliberately content-based rather than mtime-based: a fresh git checkout
+ * (e.g. in CI) stamps every source with the current time, which made an
+ * mtime comparison treat the whole cache as stale on every run.
  */
 export async function areProcessedImagesUpToDate(
-  sourceImagePath: string,
+  sourceHash: string,
   outputPaths: ProcessedImagePaths
 ): Promise<boolean> {
-  try {
-    const sourceStats = await fs.stat(sourceImagePath);
+  for (const [size, outputPath] of Object.entries(outputPaths)) {
+    if (size === 'hi-res') continue; // Skip hi-res as it's the source
 
-    // Check if all output files exist and are newer than source
-    for (const [size, outputPath] of Object.entries(outputPaths)) {
-      if (size === 'hi-res') continue; // Skip hi-res as it's the source
-
-      try {
-        const outputStats = await fs.stat(outputPath);
-        if (outputStats.mtime < sourceStats.mtime) {
-          return false;
-        }
-      } catch {
-        return false; // File doesn't exist
-      }
+    try {
+      await fs.access(outputPath);
+    } catch {
+      return false; // Output missing
     }
+  }
 
-    return true;
+  try {
+    const recorded = (await fs.readFile(getSourceHashPath(outputPaths), 'utf8')).trim();
+    return recorded === sourceHash;
   } catch {
-    return false; // Source file doesn't exist
+    return false; // No record of which source produced the outputs
   }
 }
 
@@ -158,15 +174,16 @@ async function processImagesInDirectory(sourceDirectory: string, outputDirectory
           : getProcessedImagePaths(sourceImagePath);
 
         // Check if processing is needed
-        if (await areProcessedImagesUpToDate(sourceImagePath, outputPaths)) {
+        const sourceHash = await hashFile(sourceImagePath);
+        if (await areProcessedImagesUpToDate(sourceHash, outputPaths)) {
           console.log(chalk.gray(`  Skipping (cached): ${entry.name}/${hiResFile}`));
           continue; // Skip if up to date
         }
 
-
         console.log(`  Processing: ${entry.name}/${hiResFile}`);
         try {
           await processImage(sourceImagePath, outputPaths);
+          await fs.writeFile(getSourceHashPath(outputPaths), `${sourceHash}\n`);
         } catch (error) {
           console.warn(`  ⚠️  Failed to process ${entry.name}/${hiResFile}:`, error.message);
           // Continue processing other images
