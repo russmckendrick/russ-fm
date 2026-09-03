@@ -318,8 +318,9 @@ async function generateAlbumColors() {
     }
 
     // Write CSS file
+    // No timestamp: output must be deterministic so re-running the script
+    // with no new albums leaves the committed files untouched.
     const cssContent = `/* Auto-generated album color palettes */
-/* Generated at ${new Date().toISOString()} */
 ${cssRules.join('\n')}`;
 
     const cssPath = path.join(publicDir, 'album-colors.css');

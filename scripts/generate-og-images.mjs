@@ -400,10 +400,49 @@ async function GenericSiteOGCard({ recentAlbums, albumImages, totalAlbums, total
   };
 }
 
-// Helper to convert image to base64
+// Helper to convert image to base64.
+// Always normalise through sharp: the cards embed a data:image/jpeg URI and
+// satori parses the JPEG header to size it, so a PNG saved with a .jpg
+// extension (or an unusual JPEG) would otherwise fail with
+// "Offset is outside the bounds of the DataView".
 async function imageToBase64(imagePath) {
-  const buffer = await fs.readFile(imagePath);
+  const buffer = await sharp(imagePath).jpeg({ quality: 90 }).toBuffer();
   return buffer.toString('base64');
+}
+
+// Find a usable image for an artist card. Tries, in order: the declared
+// hi-res path, the same path with a .jpeg/.png extension, then the cover of
+// the artist's most recently added album. Returns null when nothing exists,
+// so artists with no artwork are skipped cleanly instead of erroring.
+async function resolveArtistImagePath(artist, publicDir, collection) {
+  const declared = path.join(publicDir, getHiResImagePath(artist, 'artist'));
+  const candidates = [
+    declared,
+    ...['.jpeg', '.png'].map(ext => declared.replace(/\.jpe?g$/i, ext)),
+  ];
+  for (const candidate of candidates) {
+    try {
+      await fs.access(candidate);
+      return candidate;
+    } catch {
+      // try next
+    }
+  }
+
+  const albums = collection
+    .filter(album => album.artists?.some(a => a.uri_artist === artist.uri_artist))
+    .sort((a, b) => new Date(b.date_added).getTime() - new Date(a.date_added).getTime());
+  for (const album of albums) {
+    const cover = path.join(publicDir, getHiResImagePath(album, 'album'));
+    try {
+      await fs.access(cover);
+      return cover;
+    } catch {
+      // try next
+    }
+  }
+
+  return null;
 }
 
 // Helper to get hi-res image path
@@ -566,7 +605,7 @@ async function generateGenericOGImage(collection, baseDir) {
 }
 
 // Generate OG image for a single artist
-async function generateArtistOGImage(artist, baseDir) {
+async function generateArtistOGImage(artist, baseDir, collection) {
   const artistSlug = artist.uri_artist.split('/')[2];
   const outputPath = path.join(baseDir, 'artist', artistSlug, 'og-image.png');
 
@@ -578,11 +617,14 @@ async function generateArtistOGImage(artist, baseDir) {
     // Proceed
   }
 
-  // Read hi-res image from public dir
-  const relativeHiResPath = getHiResImagePath(artist, 'artist');
-  const hiResPath = path.join(publicDir, relativeHiResPath);
+  const hiResPath = await resolveArtistImagePath(artist, publicDir, collection);
+  if (!hiResPath) {
+    console.log(`  ⚠️  No artwork found for ${artist.name}; skipping OG card`);
+    return false;
+  }
 
-  console.log(`Generating OG image for: ${artist.name}`);
+  const usingCover = hiResPath.includes(`${path.sep}album${path.sep}`);
+  console.log(`Generating OG image for: ${artist.name}${usingCover ? ' (no artist photo, using album cover)' : ''}`);
 
   try {
     const imageBase64 = await imageToBase64(hiResPath);
@@ -699,7 +741,7 @@ async function main() {
   console.log(`Found ${uniqueArtists.length} unique artists\n`);
 
   for (const artist of uniqueArtists) {
-    const success = await generateArtistOGImage(artist, targetDir);
+    const success = await generateArtistOGImage(artist, targetDir, collection);
     if (success) {
       artistSuccessCount++;
     } else {
