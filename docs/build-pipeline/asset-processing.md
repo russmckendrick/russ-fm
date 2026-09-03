@@ -65,17 +65,30 @@ await sharp(hiResPath)
 
 ### Caching
 
+Outputs are written to the `--cache-dir` (CI) or straight to `dist/`. Before
+processing, each hi-res source is SHA-1 hashed and compared with a sidecar
+file that sits next to the outputs, e.g.
+`album/<slug>/<slug>.hi-res.sha1`:
+
 ```javascript
-// Check if processing needed
-if (existsInCache(slug, size)) {
-  // Copy from cache
-  copyFromCache(slug, size, destPath);
+const sourceHash = await hashFile(hiResPath);
+
+if (outputsExist(outputPaths) && readSidecar(outputPaths) === sourceHash) {
+  // Skipping (cached)
 } else {
-  // Process and cache
-  await processImage(sourcePath, destPath);
-  copyToCache(destPath, slug, size);
+  await processImage(hiResPath, outputPaths);
+  writeSidecar(outputPaths, sourceHash);
 }
 ```
+
+The check is content-based on purpose. An earlier version compared mtimes,
+but a fresh git checkout stamps every source with the current time, so in CI
+the whole cache looked stale and all ~4,700 images were re-encoded on every
+run. Hashing also means replaced artwork (same filename, new bytes) is
+regenerated, which an existence-only check would miss.
+
+The sidecar files are copied into `dist/` along with the images, but the R2
+sync only globs image extensions, so they are never uploaded.
 
 ---
 
@@ -461,12 +474,12 @@ for (let i = 0; i < albums.length; i += BATCH_SIZE) {
 ### Skip Unchanged
 
 ```javascript
-// Check modification time
-const sourceTime = statSync(sourcePath).mtimeMs;
-const destTime = existsSync(destPath) ? statSync(destPath).mtimeMs : 0;
+// Content hash of the source, recorded in a sidecar next to the outputs
+const sourceHash = sha1(readFileSync(sourcePath));
+const recorded = existsSync(sidecarPath) ? readFileSync(sidecarPath, 'utf8').trim() : null;
 
-if (destTime > sourceTime) {
-  return; // Already processed
+if (outputsExist && recorded === sourceHash) {
+  return; // Already processed from this exact source
 }
 ```
 

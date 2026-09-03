@@ -56,18 +56,28 @@ on:
     branches: [main]
     paths-ignore:
       - 'docs/**'
+      - 'project/**'
       - 'README.md'
+      - 'scrapper/**'
 ```
 
 ### Jobs
 
-#### Assets Job
+The workflow is a single `deploy` job. It used to be split into an "assets" job
+that filled the cache and a "deploy" job that consumed it, but `actions/cache`
+only saves when the primary key misses, so the first job's output was discarded
+on every run and the second job repeated all of its work. Collapsing them
+removed a full checkout of the 2 GB working tree plus a duplicate asset pass.
+
+#### Deploy Job
 
 ```yaml
-assets:
+deploy:
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v5
+      with:
+        fetch-depth: 0  # Full history for git diff
 
     - name: Setup Node.js
       uses: actions/setup-node@v6
@@ -78,62 +88,28 @@ assets:
       uses: pnpm/action-setup@v6
       # version comes from package.json "packageManager"
 
-    - name: Cache assets
+    - name: Setup pnpm + assets cache
       uses: actions/cache@v5
       with:
         path: |
-          node_modules/.cache/assets
-        key: ${{ runner.os }}-assets-${{ hashFiles('pnpm-lock.yaml') }}-${{ hashFiles('scripts/**') }}
+          ${{ env.STORE_PATH }}          # pnpm store
+          node_modules/.cache/assets     # processed images + OG images
+        key: ${{ runner.os }}-assets-v2-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('scripts/**', 'src/lib/imageProcessor.ts') }}
+        restore-keys: |
+          ${{ runner.os }}-assets-v2-
 
     - name: Install dependencies
       run: pnpm install
 
-    - name: Process images
-      run: pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
-
-    - name: Generate colors
-      run: pnpm run generate-colors
-
-    - name: Generate OG images
-      run: pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
-```
-
-#### Deploy Job
-
-```yaml
-deploy:
-  needs: assets
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v5
-      with:
-        fetch-depth: 0  # Full history for git diff
-
-    - name: Setup Node.js & pnpm
-      # ... same as assets job
-
-    - name: Restore assets cache
-      uses: actions/cache@v5
-      # ... same cache config
-
-    - name: Install dependencies
-      run: pnpm install
-
-    - name: Type check
-      run: pnpm run tsc --noEmit
-
-    - name: Build
+    - name: Generate Assets
       run: |
+        rm -rf dist
         pnpm run generate-sitemap
-        pnpm run vite build
-
-    - name: Populate dist from cache
-      run: |
-        pnpm run process-images
+        pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
         pnpm run generate-colors
         pnpm run build:wrapped
         pnpm run generate-sitemap
-        pnpm run generate-og
+        pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 
         # Copy generic og-image.png to public/ for worker build
         cp dist/og-image.png public/og-image.png
@@ -150,12 +126,30 @@ deploy:
         R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
         R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
 
-    - name: Deploy to Cloudflare
-      run: pnpm run deploy
+    - name: Build Worker & Deploy to Cloudflare
+      run: |
+        pnpm tsc --noEmit
+        node scripts/build-worker.js
+        pnpm exec wrangler deploy
       env:
         CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 ```
+
+Notes on the shape of the job:
+
+- **The app is type-checked and bundled once.** CI calls `build-worker.js`
+  directly rather than `pnpm run deploy`, because `deploy` goes through
+  `build:fast`, which would run `tsc` and a throwaway Vite build into `dist/`
+  before `build-worker.js` runs its own Vite build into `dist-worker/`.
+  The asset step therefore does not run Vite at all; `dist/` only receives
+  processed images and OG images for the R2 sync.
+- **The cache key is versioned** (`assets-v2`). Bump the suffix to force a
+  full regenerate and a fresh save of the blob. Between bumps, the blob is
+  only re-saved when the lockfile or the asset scripts change. Images added
+  since the last save are regenerated on each run, which is cheap because the
+  image processor skips anything already present in the cache (see
+  [Asset Processing](./asset-processing.md#caching)).
 
 ---
 

@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy 🚀
 
 on:
   push:
@@ -12,64 +12,7 @@ on:
       - 'scrapper/**'
 
 jobs:
-  assets:
-    runs-on: ubuntu-latest
-    name: Generate Assets 🖼️
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v5
-
-      - name: Setup Node.js 📦
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22.19.0
-
-      - name: Install pnpm 🧊
-        uses: pnpm/action-setup@v6
-        with:
-          run_install: false
-
-      - name: Get pnpm store directory 📂
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: Setup pnpm cache 💾
-        uses: actions/cache@v5
-        with:
-          path: |
-            ${{ env.STORE_PATH }}
-            node_modules/.cache/assets
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('scripts/**') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install dependencies 🔧
-        run: pnpm install
-
-      - name: Generate Assets 🏗️
-        run: |
-          echo "🚀 Starting asset generation..."
-          
-          # Create cache dirs
-          echo "📂 Ensuring cache directories exist..."
-          mkdir -p node_modules/.cache/assets/images
-          mkdir -p node_modules/.cache/assets/og
-          
-          # Process images with cache
-          echo "🖼️  Processing images (filling cache)..."
-          pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
-          
-          # Generate colors (automatically treats public/album-colors.json as cache)
-          echo "🎨 Generating album colors..."
-          pnpm run generate-colors
-          
-          # Generate OG images with cache
-          echo "📸 Generating OG images (filling cache)..."
-          pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
-
   deploy:
-    needs: assets
     runs-on: ubuntu-latest
     name: Build & Deploy 🚀
     steps:
@@ -93,55 +36,65 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Setup pnpm cache 💾
+      # One blob holds the pnpm store plus the processed-image / OG cache.
+      # actions/cache only saves when the primary key misses, so the key is
+      # versioned: bump the `v` suffix to force a full regenerate + re-save.
+      # Between bumps, images added since the blob was saved are cheap to
+      # regenerate because the processor skips anything already in the cache.
+      - name: Setup pnpm + assets cache 💾
         uses: actions/cache@v5
         with:
           path: |
             ${{ env.STORE_PATH }}
             node_modules/.cache/assets
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('scripts/**') }}
+          key: ${{ runner.os }}-assets-v2-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('scripts/**', 'src/lib/imageProcessor.ts') }}
           restore-keys: |
+            ${{ runner.os }}-assets-v2-
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies 🔧
         run: pnpm install
 
-      - name: Build and Prepare 🏗️
+      - name: Generate Assets 🏗️
         run: |
-          echo "🚀 Starting build process..."
-          
-          # Build application (JS/TS)
-          echo "🔨 Compiling application..."
+          echo "🚀 Starting asset generation..."
+          echo "🧹 Cleaning dist/..."
           rm -rf dist
+          echo "📂 Ensuring cache directories exist..."
+          mkdir -p node_modules/.cache/assets/images
+          mkdir -p node_modules/.cache/assets/og
+
+          echo "🗺️  Generating sitemap..."
           pnpm run generate-sitemap
-          pnpm tsc --noEmit
-          pnpm vite build
-          
-          # Re-run generation steps to populate dist from cache
-          echo "📦 Populating dist from cache..."
+
+          echo "🖼️  Processing images (cache-aware)..."
           pnpm run process-images -- --cache-dir node_modules/.cache/assets/images
+
+          echo "🎨 Generating album colors..."
           pnpm run generate-colors
 
-          # Generate wrapped data
           echo "📊 Generating wrapped data..."
           pnpm run build:wrapped
           pnpm run generate-sitemap
 
+          echo "📸 Generating OG images (cache-aware)..."
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 
           # Copy generic og-image.png to public/ so it's included in worker build
-          echo "📸 Copying og-image.png to public/..."
+          echo "🖼️  Copying og-image.png to public/..."
           cp dist/og-image.png public/og-image.png
+          echo "✅ Asset generation complete!"
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
-          VITE_SCROBBLING_ENABLED: ${{ secrets.VITE_SCROBBLING_ENABLED }}
 
       - name: Detect Changed Files 🕵️‍♂️
         id: changed-files
         run: |
+          echo "🔎 Diffing ${{ github.event.before }}..${{ github.sha }}"
           git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
-          echo "Changed files:"
+          echo "📋 Changed files:"
           cat changed_files.txt
+          echo "🧮 $(wc -l < changed_files.txt | tr -d ' ') file(s) changed"
 
       - name: Sync to R2 ☁️
         run: node scripts/sync-to-r2.js --force --changed-files changed_files.txt
@@ -152,12 +105,23 @@ jobs:
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
 
-      - name: Deploy to Cloudflare Workers 🚀
-        run: pnpm run deploy
+      # The app is type-checked and bundled exactly once, straight into
+      # dist-worker (build-worker.js runs Vite itself). `pnpm run deploy` is
+      # not used here because it would run tsc + Vite an extra time via build:fast.
+      - name: Build Worker & Deploy to Cloudflare 🚀
+        run: |
+          echo "🔍 Type checking..."
+          pnpm tsc --noEmit
+          echo "🔨 Building worker bundle..."
+          node scripts/build-worker.js
+          echo "☁️  Deploying to Cloudflare Workers..."
+          pnpm exec wrangler deploy
+          echo "🎉 Deployed!"
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
+          VITE_SCROBBLING_ENABLED: ${{ secrets.VITE_SCROBBLING_ENABLED }}
 
       - name: Job Summary 📝
         if: always()
@@ -166,11 +130,15 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Status | Step |" >> $GITHUB_STEP_SUMMARY
           echo "| :---: | --- |" >> $GITHUB_STEP_SUMMARY
-          echo "| ✅ | **Asset Generation** |" >> $GITHUB_STEP_SUMMARY
-          echo "| 💾 | **Cache Saved** |" >> $GITHUB_STEP_SUMMARY
-          echo "| 🏗️ | **Build & Populate** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🛎️ | **Checkout** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 💾 | **Cache Restore** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🖼️ | **Images & Colours** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 📸 | **OG Images** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🕵️ | **Changed File Detection** |" >> $GITHUB_STEP_SUMMARY
           echo "| ☁️ | **R2 Sync** |" >> $GITHUB_STEP_SUMMARY
-          echo "| ⚡ | **Cloudflare Workers** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔍 | **Type Check** |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🔨 | **Worker Build** |" >> $GITHUB_STEP_SUMMARY
+          echo "| ⚡ | **Cloudflare Workers Deploy** |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### 🌐 Live Site" >> $GITHUB_STEP_SUMMARY
-          echo "Visit [russ.fm](https://russ.fm) to see the changes!" >> $GITHUB_STEP_SUMMARY
+          echo "🎧 Visit [russ.fm](https://russ.fm) to see the changes! 🎶" >> $GITHUB_STEP_SUMMARY
