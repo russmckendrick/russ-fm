@@ -10,6 +10,17 @@ on:
       - 'README.md'
       # Rust backend (scrapper/) is not part of the static-site build — it only writes public/.
       - 'scrapper/**'
+  workflow_dispatch:
+    inputs:
+      targets:
+        description: 'Re-upload these to R2 (comma-separated, e.g. album/<slug>,artist/<slug>). Overwrites existing objects.'
+        required: false
+        type: string
+      repair:
+        description: 'Full R2 sync that uploads only objects missing from the bucket (slow: one HEAD request per file).'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   deploy:
@@ -87,17 +98,40 @@ jobs:
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
 
+      # Push: diff the pushed range. Manual run with `targets`: synthesise the
+      # list so the sync picks exactly those album/artist folders. Manual run
+      # without targets: nothing to target (repair mode below does its own thing).
       - name: Detect Changed Files 🕵️‍♂️
         id: changed-files
+        env:
+          TARGETS: ${{ inputs.targets }}
         run: |
-          echo "🔎 Diffing ${{ github.event.before }}..${{ github.sha }}"
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          if [ -n "$TARGETS" ]; then
+            echo "🎯 Manual targets: $TARGETS"
+            echo "$TARGETS" | tr ',' '\n' | sed 's/^ *//; s/ *$//; s:/*$::' | grep . \
+              | sed 's|^|public/|; s|$|/manual|' > changed_files.txt
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "🛠️  Manual run without targets; no per-folder sync"
+            : > changed_files.txt
+          else
+            echo "🔎 Diffing ${{ github.event.before }}..${{ github.sha }}"
+            git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+          fi
           echo "📋 Changed files:"
           cat changed_files.txt
           echo "🧮 $(wc -l < changed_files.txt | tr -d ' ') file(s) changed"
 
+      # Repair mode lists everything in dist/ and skips objects R2 already has
+      # (no --force). Every other run uploads only the changed folders, with
+      # --force so replaced artwork overwrites the stale object.
       - name: Sync to R2 ☁️
-        run: node scripts/sync-to-r2.js --force --changed-files changed_files.txt
+        run: |
+          if [ "${{ inputs.repair }}" = "true" ]; then
+            echo "🩹 Repair mode: uploading objects missing from R2..."
+            node scripts/sync-to-r2.js
+          else
+            node scripts/sync-to-r2.js --force --changed-files changed_files.txt
+          fi
         env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
