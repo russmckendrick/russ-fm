@@ -30,6 +30,8 @@
     "r2:list": "node scripts/r2-utils.js list",
     "r2:clean": "node scripts/r2-utils.js clean --confirm",
     "clear-cache": "./clear-cache.sh",
+    "hooks:install": "node scripts/install-git-hooks.js",
+    "prepare": "node scripts/install-git-hooks.js",
     "lint": "eslint .",
     "preview": "vite preview --outDir dist-worker"
   },

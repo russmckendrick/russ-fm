@@ -217,6 +217,28 @@ fs.writeFileSync('album-colors.json', JSON.stringify(existing, null, 2));
 
 ---
 
+### Keeping the committed palettes current
+
+`public/album-colors.json` and `public/album-colors.css` are committed, and
+the CI build only extracts palettes for albums missing from the JSON. If the
+committed file falls behind the collection, CI re-extracts the backlog on
+every run (at one point 215 albums), and in any incremental build that lacks
+the hi-res sources those albums would get the default grey palette instead.
+
+Two things keep the files current:
+
+- **The output is deterministic.** The CSS carries no timestamp, so running
+  the script with no new albums leaves both files byte-identical.
+- **A pre-commit hook regenerates them.** `scripts/git-hooks/pre-commit`
+  runs `generate-album-colors.js` and stages the two files whenever a commit
+  includes album artwork (`public/album/*/*-hi-res.jpg`) or
+  `public/collection.json`. `pnpm install` installs it into `.git/hooks`
+  via the `prepare` script (`scripts/install-git-hooks.js`); run
+  `pnpm run hooks:install` to install it by hand. The installer never
+  overwrites a hook it did not create, and does nothing in CI.
+
+---
+
 ## OG Image Generation
 
 ### Overview
@@ -252,6 +274,21 @@ pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 | Generic Site OG | **Always regenerated** | Shows "last 4 albums added", must stay current |
 
 The generic `og-image.png` is always regenerated on each build because it displays the most recently added albums, which changes whenever new albums are added to the collection.
+
+### Artist Card Image Fallback
+
+An artist card needs one image. `resolveArtistImagePath()` tries, in order:
+
+1. The declared hi-res path (`images_uri_artist['hi-res']`, or
+   `artist/<slug>/<slug>-hi-res.jpg`).
+2. The same path with a `.jpeg` or `.png` extension.
+3. The cover of the artist's most recently added album.
+
+If none exists the artist is skipped with a warning rather than an error.
+Every image is also normalised through Sharp to a real JPEG before being
+embedded, because the card uses a `data:image/jpeg` URI and Satori parses
+the JPEG header. A PNG saved with a `.jpg` extension used to fail with
+"Offset is outside the bounds of the DataView" on every run.
 
 ### Image Specifications
 

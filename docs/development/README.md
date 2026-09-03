@@ -27,7 +27,7 @@ This guide covers local development workflows, testing, and best practices.
 git clone https://github.com/russmckendrick/russ-fm.git
 cd russ-fm
 
-# Frontend setup
+# Frontend setup (also installs the repo git hooks into .git/hooks, see below)
 pnpm install
 
 # Backend setup (Rust TUI/CLI binary)
@@ -40,6 +40,19 @@ cp config.example.json config.json
 ```
 
 > To run against source without installing, use `cargo run -- <cmd>` from inside `scrapper/`.
+
+#### Git hooks
+
+`pnpm install` runs `scripts/install-git-hooks.js` (via the `prepare` script),
+which symlinks everything in `scripts/git-hooks/` into `.git/hooks/`. Today
+that is one hook:
+
+- `pre-commit` regenerates `public/album-colors.{json,css}` and stages them
+  whenever the commit includes album artwork or `public/collection.json`, so
+  the committed palettes never fall behind the collection.
+
+The installer skips hooks that already exist and were not created by it, and
+does nothing in CI. Re-run it with `pnpm run hooks:install`.
 
 ## Frontend Development
 

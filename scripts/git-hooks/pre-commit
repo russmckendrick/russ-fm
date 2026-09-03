@@ -1,0 +1,16 @@
+#!/bin/sh
+# Regenerates public/album-colors.{json,css} whenever album artwork or the
+# collection index is part of the commit, and stages the result, so the
+# committed palettes never fall behind the collection.
+#
+# Installed into .git/hooks/pre-commit by scripts/install-git-hooks.js
+# (run automatically by `pnpm install` via the "prepare" script).
+
+set -e
+
+if git diff --cached --name-only --diff-filter=ACMR \
+  | grep -qE '^public/(album/[^/]+/[^/]+-hi-res\.jpe?g|collection\.json)$'; then
+  echo "🎨 pre-commit: album artwork or collection changed, regenerating colour palettes..."
+  node scripts/generate-album-colors.js
+  git add public/album-colors.json public/album-colors.css
+fi
