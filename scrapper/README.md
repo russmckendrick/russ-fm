@@ -147,14 +147,18 @@ All commands and the interactive TUI are implemented.
 
 Running `scrapper` with no arguments launches the interactive TUI: a home menu into a
 **Dashboard** (DB + artist-enrichment stats with gauges), searchable **Releases** and **Artists**
-browsers (with `✓`/`·` enrichment badges and Enter-to-open **detail** drill-downs), live **service
-probes**, a **Collection** runner, and an **Enrich artists** runner. Both runners process a
+browsers (with `✓`/`·` enrichment badges and Enter-to-open **detail** drill-downs), a **Boxsets**
+browser, live **service probes**, a **Collection** runner, and an **Enrich artists** runner. Both runners process a
 configurable number of items (editable with digits or `↑/↓`) in the background with a progress
 gauge and a step-by-step log. When a release *or artist* has more than one Apple Music / Spotify /
 Discogs candidate, a **modal match-picker** pauses the run so you can choose (`↑/↓` select, `Enter`
 confirm, `Esc` skip). From an artist's detail view, press `e` to enrich just that one artist.
-Keys: type to search, `↑/↓` move, `Enter` open detail, `r` run/re-probe, `e` enrich (artist
-detail), `Esc` back, `q` quit.
+The **Boxsets** screen splits box-set releases into *Unprocessed* and *Processed* views
+(`Tab` toggles): `Enter` on an unprocessed box runs boxset discovery in the background (the
+`release --boxset` workflow with modal pickers), `Ctrl+F` refetches the box first, and on a
+processed box `Enter` opens its detail while `Ctrl+R` re-runs discovery.
+Keys: type to search, `↑/↓` move, `Enter` open detail / run, `Tab` switch boxset view, `r`
+run/re-probe, `e` enrich (artist detail), `Esc` back, `q` quit.
 
 **`scrapper collection --interactive` drops straight into this TUI**, pre-set to process the
 first N releases (from `--to`/`--limit`) — interactive enrichment *is* the TUI experience, with

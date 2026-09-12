@@ -5,7 +5,7 @@
 //! `utils/database.py`. The pool is opened with WAL; calls are synchronous and intended to be
 //! invoked from blocking contexts (`tokio::task::spawn_blocking`) when used from async code.
 
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::path::{Path, PathBuf};
 
 use anyhow::{Context, Result};
@@ -140,6 +140,38 @@ pub struct ReleaseBrief {
     pub date_added: Option<String>,
 }
 
+/// A box-format release row for the TUI Boxsets screen.
+#[derive(Debug, Clone, Serialize)]
+pub struct BoxsetSummary {
+    pub discogs_id: String,
+    pub title: String,
+    pub artist_names: Vec<String>,
+    pub year: Option<i64>,
+    pub date_added: Option<String>,
+    /// The tracklist has album section headers, so discovery can find its members.
+    pub has_headers: bool,
+    /// Releases linked to this box via `raw_data.boxset.parent_discogs_id`.
+    pub member_count: usize,
+}
+
+impl BoxsetSummary {
+    /// At least one member album has been linked to this box.
+    pub fn is_processed(&self) -> bool {
+        self.member_count > 0
+    }
+
+    /// Mirrors `search_releases`: an exact Discogs ID, or a case-insensitive substring of the
+    /// title or an artist name. An empty query matches everything.
+    pub fn matches_query(&self, query: &str) -> bool {
+        let q = query.trim();
+        if q.is_empty() || self.discogs_id == q {
+            return true;
+        }
+        let q = q.to_lowercase();
+        self.title.to_lowercase().contains(&q) || self.artist_names.iter().any(|a| a.to_lowercase().contains(&q))
+    }
+}
+
 fn parse_json(s: Option<String>, fallback: &str) -> Value {
     let raw = s.filter(|v| !v.is_empty()).unwrap_or_else(|| fallback.to_string());
     serde_json::from_str(&raw).unwrap_or_else(|_| serde_json::from_str(fallback).unwrap())
@@ -170,6 +202,28 @@ fn string_list(v: &Value) -> Vec<String> {
     v.as_array()
         .map(|arr| arr.iter().filter_map(|s| s.as_str().map(|s| s.to_string())).collect())
         .unwrap_or_default()
+}
+
+/// The album titles inside a boxset: tracklist section headers (rows with a title but no
+/// position), as produced by Discogs box set tracklists.
+pub fn boxset_section_headers(tracklist: &Value) -> Vec<String> {
+    tracklist
+        .as_array()
+        .map(|arr| {
+            arr.iter()
+                .filter(|t| t.get("position").and_then(|p| p.as_str()).unwrap_or("").trim().is_empty())
+                .filter_map(|t| t.get("title").and_then(|v| v.as_str()))
+                .map(|s| s.trim().to_string())
+                .filter(|s| !s.is_empty())
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+/// Whether a release's `formats[]` mark it as a box set — the same rule the collection
+/// generator uses for `format_primary` ("Box Set"): any format string containing "box".
+pub fn is_boxset_format(formats: &Value) -> bool {
+    string_list(formats).iter().any(|f| f.to_lowercase().contains("box"))
 }
 
 impl Db {
@@ -407,6 +461,70 @@ impl Db {
             })?
             .collect::<rusqlite::Result<Vec<_>>>()?;
         Ok(rows)
+    }
+
+    // ---- Boxsets ----
+
+    /// `raw_data.boxset.parent_discogs_id` → number of releases linked to that box.
+    pub fn boxset_member_counts(&self) -> Result<HashMap<String, usize>> {
+        let conn = self.conn()?;
+        // Legacy rows can hold '' or non-JSON text in raw_data, and json_extract errors on
+        // malformed input, so invalid documents are treated as empty.
+        let mut stmt = conn.prepare(
+            "SELECT parent, COUNT(*) FROM ( \
+                SELECT json_extract(CASE WHEN json_valid(raw_data) THEN raw_data ELSE '{}' END, \
+                                    '$.boxset.parent_discogs_id') AS parent FROM releases \
+             ) WHERE parent IS NOT NULL GROUP BY parent",
+        )?;
+        let rows = stmt
+            .query_map([], |r| {
+                let parent = match r.get::<_, rusqlite::types::Value>(0)? {
+                    rusqlite::types::Value::Text(t) => t,
+                    rusqlite::types::Value::Integer(i) => i.to_string(),
+                    other => format!("{other:?}"),
+                };
+                Ok((parent, r.get::<_, i64>(1)?.max(0) as usize))
+            })?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(rows.into_iter().collect())
+    }
+
+    /// Box-format releases (see [`is_boxset_format`]), newest first, with what the Boxsets
+    /// screen needs: whether discovery can run and how many members are already linked.
+    pub fn list_boxsets(&self) -> Result<Vec<BoxsetSummary>> {
+        let members = self.boxset_member_counts()?;
+        let conn = self.conn()?;
+        // LIKE is a cheap superset prefilter on the raw JSON text; the exact rule runs in Rust.
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, title, artists, year, date_added, formats, tracklist FROM releases \
+             WHERE discogs_id IS NOT NULL AND LOWER(formats) LIKE '%box%' ORDER BY date_added DESC",
+        )?;
+        let rows = stmt
+            .query_map([], |r| {
+                Ok((
+                    r.get::<_, String>(0)?,
+                    r.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                    parse_json(r.get(2)?, "[]"),
+                    r.get::<_, Option<i64>>(3)?,
+                    r.get::<_, Option<String>>(4)?,
+                    parse_json(r.get(5)?, "[]"),
+                    parse_json(r.get(6)?, "[]"),
+                ))
+            })?
+            .collect::<rusqlite::Result<Vec<_>>>()?;
+        Ok(rows
+            .into_iter()
+            .filter(|(_, _, _, _, _, formats, _)| is_boxset_format(formats))
+            .map(|(discogs_id, title, artists, year, date_added, _, tracklist)| BoxsetSummary {
+                member_count: members.get(&discogs_id).copied().unwrap_or(0),
+                has_headers: !boxset_section_headers(&tracklist).is_empty(),
+                artist_names: artist_names(&artists),
+                discogs_id,
+                title,
+                year,
+                date_added,
+            })
+            .collect())
     }
 
     pub fn list_artists(&self, limit: u32, sort: &str) -> Result<Vec<ArtistSummary>> {
@@ -922,4 +1040,58 @@ fn row_to_artist(row: &rusqlite::Row) -> rusqlite::Result<ArtistRecord> {
         created_at: get_s("created_at")?,
         updated_at: get_s("updated_at")?,
     })
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use serde_json::json;
+
+    #[test]
+    fn boxset_section_headers_are_position_less_titles() {
+        let tracklist = json!([
+            {"position": "", "title": "Life In A Day", "duration": ""},
+            {"position": "A1", "title": "Someone", "duration": "3:39"},
+            {"position": "", "title": "Real To Real Cacophony.", "duration": ""},
+            {"position": "B1", "title": "Real To Real", "duration": "3:23"},
+            {"position": "  ", "title": "  ", "duration": ""}
+        ]);
+        assert_eq!(boxset_section_headers(&tracklist), vec!["Life In A Day".to_string(), "Real To Real Cacophony.".to_string()]);
+    }
+
+    #[test]
+    fn boxset_section_headers_empty_for_flat_tracklists() {
+        let tracklist = json!([{"position": "A1", "title": "Airbag"}, {"position": "A2", "title": "Paranoid Android"}]);
+        assert!(boxset_section_headers(&tracklist).is_empty());
+        assert!(boxset_section_headers(&json!(null)).is_empty());
+    }
+
+    #[test]
+    fn boxset_format_matches_any_box_entry_case_insensitively() {
+        assert!(is_boxset_format(&json!(["Box Set", "CD"])));
+        assert!(is_boxset_format(&json!(["Vinyl", "LP", "BOX"])));
+        assert!(!is_boxset_format(&json!(["Vinyl", "LP", "Album"])));
+        assert!(!is_boxset_format(&json!([])));
+        assert!(!is_boxset_format(&json!("Box Set")));
+    }
+
+    #[test]
+    fn boxset_summary_query_matches_id_title_or_artist() {
+        let s = BoxsetSummary {
+            discogs_id: "7709507".into(),
+            title: "The Vinyl Collection 79-84".into(),
+            artist_names: vec!["Simple Minds".into()],
+            year: Some(2015),
+            date_added: None,
+            has_headers: true,
+            member_count: 7,
+        };
+        assert!(s.matches_query(""));
+        assert!(s.matches_query("7709507"));
+        assert!(!s.matches_query("770950"));
+        assert!(s.matches_query("vinyl collection"));
+        assert!(s.matches_query("SIMPLE"));
+        assert!(!s.matches_query("Bowie"));
+        assert!(s.is_processed());
+    }
 }

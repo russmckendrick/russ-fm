@@ -4,7 +4,7 @@
 use ratatui::widgets::ListState;
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 
-use crate::db::{ArtistSummary, ReleaseSummary};
+use crate::db::{ArtistSummary, BoxsetSummary, ReleaseSummary};
 use crate::ops::release::UiRequest;
 use crate::services::Services;
 use crate::{Config, Db};
@@ -30,6 +30,32 @@ pub(crate) enum Screen {
     Services,
     Collection,
     ArtistRun,
+    Boxsets,
+}
+
+/// Which half of the Boxsets screen is shown.
+#[derive(Clone, Copy, PartialEq, Debug)]
+pub(crate) enum BoxsetTab {
+    /// Boxes with no linked member albums yet — Enter runs discovery.
+    Unprocessed,
+    /// Boxes with at least one linked member — Enter opens the box's detail.
+    Processed,
+}
+
+impl BoxsetTab {
+    pub(crate) fn toggle(self) -> Self {
+        match self {
+            BoxsetTab::Unprocessed => BoxsetTab::Processed,
+            BoxsetTab::Processed => BoxsetTab::Unprocessed,
+        }
+    }
+
+    pub(crate) fn label(self) -> &'static str {
+        match self {
+            BoxsetTab::Unprocessed => "Unprocessed",
+            BoxsetTab::Processed => "Processed",
+        }
+    }
 }
 
 impl Screen {
@@ -43,6 +69,7 @@ impl Screen {
             Screen::Services => "Services",
             Screen::Collection => "Collection",
             Screen::ArtistRun => "Enrich artists",
+            Screen::Boxsets => "Boxsets",
         }
     }
 
@@ -53,6 +80,7 @@ impl Screen {
             Screen::Releases | Screen::Artists => "type to search · ↑/↓ move · Enter details · Esc back",
             Screen::Services => "r re-probe · Esc back",
             Screen::Collection | Screen::ArtistRun => "type/↑/↓ set count · r run · Esc back",
+            Screen::Boxsets => "Tab switch view · type to search · ↑/↓ move · Enter run/open · ^f force-refetch · ^r re-run · Esc back",
             Screen::Dashboard => "Esc back",
         }
     }
@@ -62,6 +90,7 @@ pub(crate) const MENU: &[(&str, Screen)] = &[
     ("Dashboard", Screen::Dashboard),
     ("Releases", Screen::Releases),
     ("Artists", Screen::Artists),
+    ("Boxsets", Screen::Boxsets),
     ("Test services", Screen::Services),
     ("Collection", Screen::Collection),
     ("Enrich artists", Screen::ArtistRun),
@@ -75,7 +104,10 @@ pub(crate) enum Msg {
     /// Artist runner log line (separate buffer from the collection log).
     ArtistLog(String),
     ArtistProgress(usize, usize),
-    /// A background task finished: "probes" | "collection" | "artist_run" | "artist_one".
+    /// Boxset discovery log line / progress (own buffer on the Boxsets screen).
+    BoxsetLog(String),
+    BoxsetProgress(usize, usize),
+    /// A background task finished: "probes" | "collection" | "artist_run" | "boxset" | "artist_one".
     Done(String),
 }
 
@@ -121,6 +153,17 @@ pub(crate) struct App {
     pub(crate) artist_progress: Option<(usize, usize)>,
     pub(crate) artist_running: bool,
     pub(crate) artist_limit: String,
+
+    // boxsets browser + discovery runner
+    pub(crate) boxset_tab: BoxsetTab,
+    /// Every box-format release in the DB.
+    pub(crate) boxsets_all: Vec<BoxsetSummary>,
+    /// The rows shown: `boxsets_all` narrowed to the active tab and the search query.
+    pub(crate) boxsets: Vec<BoxsetSummary>,
+    pub(crate) boxset_log: Vec<String>,
+    pub(crate) boxset_progress: Option<(usize, usize)>,
+    /// Discogs ID of the box whose discovery run is in progress.
+    pub(crate) boxset_running: Option<String>,
 
     // collection.json regeneration (debounced: one run at a time, dirty re-runs)
     pub(crate) regen_running: bool,
@@ -172,6 +215,12 @@ impl App {
             artist_progress: None,
             artist_running: false,
             artist_limit: "10".into(),
+            boxset_tab: BoxsetTab::Unprocessed,
+            boxsets_all: Vec::new(),
+            boxsets: Vec::new(),
+            boxset_log: Vec::new(),
+            boxset_progress: None,
+            boxset_running: None,
             regen_running: false,
             regen_dirty: false,
             pending: None,
@@ -192,6 +241,10 @@ impl App {
             Screen::Releases => self.run_release_search(),
             Screen::Artists => self.run_artist_search(),
             Screen::Services => self.start_probes(),
+            Screen::Boxsets => {
+                self.boxset_tab = BoxsetTab::Unprocessed;
+                self.load_boxsets();
+            }
             _ => {}
         }
     }
@@ -201,8 +254,74 @@ impl App {
         match self.screen {
             Screen::Releases => self.run_release_search(),
             Screen::Artists => self.run_artist_search(),
+            Screen::Boxsets => self.apply_boxset_filter(),
             _ => {}
         }
+    }
+
+    /// Reload every box from the DB and re-apply the tab/query filter.
+    pub(crate) fn load_boxsets(&mut self) {
+        self.boxsets_all = self.db.list_boxsets().unwrap_or_default();
+        self.apply_boxset_filter();
+    }
+
+    /// Narrow `boxsets_all` to the active tab and query (discoverable boxes first on the
+    /// Unprocessed tab). The cursor is only reset while the
+    /// Boxsets list is actually on screen, so a run completing in the background never moves
+    /// another screen's selection.
+    pub(crate) fn apply_boxset_filter(&mut self) {
+        let processed = self.boxset_tab == BoxsetTab::Processed;
+        let q = self.query.clone();
+        self.boxsets = self
+            .boxsets_all
+            .iter()
+            .filter(|b| b.is_processed() == processed && b.matches_query(&q))
+            .cloned()
+            .collect();
+        // Most Discogs "Box Set" formats are multi-LP editions with a flat tracklist, so on the
+        // Unprocessed tab surface the boxes discovery can actually work on first (stable: each
+        // group stays newest-first).
+        if !processed {
+            self.boxsets.sort_by_key(|b| !b.has_headers);
+        }
+        if self.screen == Screen::Boxsets && self.detail.is_none() {
+            self.list.select((!self.boxsets.is_empty()).then_some(0));
+        }
+    }
+
+    pub(crate) fn toggle_boxset_tab(&mut self) {
+        self.boxset_tab = self.boxset_tab.toggle();
+        self.apply_boxset_filter();
+    }
+
+    /// (unprocessed, processed) counts for the tab bar, respecting the search query.
+    pub(crate) fn boxset_tab_counts(&self) -> (usize, usize) {
+        self.boxsets_all
+            .iter()
+            .filter(|b| b.matches_query(&self.query))
+            .fold((0, 0), |(u, p), b| if b.is_processed() { (u, p + 1) } else { (u + 1, p) })
+    }
+
+    /// Run boxset discovery for the selected box in the background. Refused while any other
+    /// interactive task runs: two tasks would race on the single modal picker slot.
+    pub(crate) fn start_boxset_discovery(&mut self, force_refresh: bool) {
+        if self.boxset_running.is_some() {
+            return;
+        }
+        if self.running || self.artist_running || self.detail_busy {
+            push_capped(&mut self.boxset_log, "another interactive run is in progress — wait for it to finish".into());
+            return;
+        }
+        let Some(id) = self.list.selected().and_then(|i| self.boxsets.get(i)).map(|b| b.discogs_id.clone()) else {
+            return;
+        };
+        self.boxset_log.clear();
+        self.boxset_progress = Some((0, 0));
+        self.boxset_running = Some(id.clone());
+        let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
+        tokio::spawn(async move {
+            runners::run_boxset_task(cfg, db, tx, pick_tx, id, force_refresh).await;
+        });
     }
 
     pub(crate) fn run_release_search(&mut self) {
@@ -563,6 +682,7 @@ impl App {
         match self.screen {
             Screen::Releases => self.releases.len(),
             Screen::Artists => self.artists.len(),
+            Screen::Boxsets => self.boxsets.len(),
             _ => 0,
         }
     }
@@ -570,7 +690,7 @@ impl App {
     pub(crate) fn move_selection(&mut self, delta: isize) {
         let len = match self.screen {
             Screen::Home => MENU.len(),
-            Screen::Releases | Screen::Artists => self.list_len(),
+            Screen::Releases | Screen::Artists | Screen::Boxsets => self.list_len(),
             _ => return,
         };
         if len == 0 {
@@ -586,8 +706,11 @@ impl App {
     pub(crate) fn open_detail(&mut self) {
         self.detail_sel = 0;
         match self.screen {
-            Screen::Releases => {
-                let did = self.list.selected().and_then(|i| self.releases.get(i)).and_then(|s| s.discogs_id.clone());
+            Screen::Releases | Screen::Boxsets => {
+                let did = match self.screen {
+                    Screen::Boxsets => self.list.selected().and_then(|i| self.boxsets.get(i)).map(|b| b.discogs_id.clone()),
+                    _ => self.list.selected().and_then(|i| self.releases.get(i)).and_then(|s| s.discogs_id.clone()),
+                };
                 let Some(did) = did else { return };
                 if let Ok(Some(rec)) = self.db.get_release_by_discogs_id(&did) {
                     self.nav_stack.push(self.screen);
@@ -640,6 +763,8 @@ impl App {
                 Msg::Progress(done, total) => self.progress = Some((done, total)),
                 Msg::ArtistLog(line) => push_capped(&mut self.artist_log, line),
                 Msg::ArtistProgress(done, total) => self.artist_progress = Some((done, total)),
+                Msg::BoxsetLog(line) => push_capped(&mut self.boxset_log, line),
+                Msg::BoxsetProgress(done, total) => self.boxset_progress = Some((done, total)),
                 Msg::Done(what) => match what.as_str() {
                     "probes" => self.probing = false,
                     "collection" => {
@@ -650,6 +775,13 @@ impl App {
                         self.artist_running = false;
                         self.artist_log.push("— run complete —".into());
                         self.schedule_collection_regen();
+                    }
+                    // The discovery core regenerates collection.json itself when saving.
+                    "boxset" => {
+                        self.boxset_running = None;
+                        self.boxset_log.push("— run complete —".into());
+                        self.load_boxsets();
+                        self.refresh_detail();
                     }
                     "regen" => {
                         self.regen_running = false;

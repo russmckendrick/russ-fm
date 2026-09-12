@@ -1,12 +1,13 @@
 //! Keyboard dispatch and the Esc/nav-stack unwinder. Modal overlays and the detail view
 //! capture input first; otherwise input falls through to the active screen.
 
-use crossterm::event::KeyCode;
+use crossterm::event::{KeyCode, KeyEvent, KeyModifiers};
 
-use super::app::{App, Screen, MENU};
+use super::app::{App, BoxsetTab, Screen, MENU};
 use super::modals;
 
-pub(crate) fn handle_key(app: &mut App, code: KeyCode) {
+pub(crate) fn handle_key(app: &mut App, key: KeyEvent) {
+    let (code, mods) = (key.code, key.modifiers);
     // Overlays capture all input while open (description editor, then match picker).
     if app.describe.is_some() {
         modals::handle_describe_key(app, code);
@@ -96,6 +97,27 @@ pub(crate) fn handle_key(app: &mut App, code: KeyCode) {
             }
             KeyCode::Backspace => {
                 app.artist_limit.pop();
+            }
+            _ => {}
+        },
+        Screen::Boxsets => match code {
+            KeyCode::Tab => app.toggle_boxset_tab(),
+            KeyCode::Up => app.move_selection(-1),
+            KeyCode::Down => app.move_selection(1),
+            KeyCode::Enter => match app.boxset_tab {
+                BoxsetTab::Unprocessed => app.start_boxset_discovery(false),
+                BoxsetTab::Processed => app.open_detail(),
+            },
+            // Plain letters go to the search box, so the run actions take a modifier.
+            KeyCode::Char('f') if mods.contains(KeyModifiers::CONTROL) => app.start_boxset_discovery(true),
+            KeyCode::Char('r') if mods.contains(KeyModifiers::CONTROL) => app.start_boxset_discovery(false),
+            KeyCode::Backspace => {
+                app.query.pop();
+                app.refresh_search();
+            }
+            KeyCode::Char(c) if !mods.contains(KeyModifiers::CONTROL) => {
+                app.query.push(c);
+                app.refresh_search();
             }
             _ => {}
         },

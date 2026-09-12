@@ -5,7 +5,7 @@ use tokio::sync::mpsc::UnboundedSender;
 
 use crate::db::{ArtistRecord, ReleaseRecord};
 use crate::ops::artist::ArtistField;
-use crate::ops::release::{image_client, MatchPicker, ReleaseField};
+use crate::ops::release::{image_client, BoxsetDiscoveryOptions, MatchPicker, ProgressSink, ReleaseField};
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -89,6 +89,44 @@ pub(crate) async fn run_collection_task(
         Err(e) => log(format!("✗ collection.json update failed: {e}")),
     }
     let _ = tx.send(Msg::Done("collection".into()));
+}
+
+/// Background boxset discovery for one box (from the Boxsets screen): find the albums inside
+/// it, match each interactively, and enrich + link them as members. `force_refresh` refetches
+/// the box itself from Discogs first.
+pub(crate) async fn run_boxset_task(
+    cfg: Config,
+    db: Db,
+    tx: UnboundedSender<Msg>,
+    pick_tx: UnboundedSender<UiRequest>,
+    box_id: String,
+    force_refresh: bool,
+) {
+    // The core emits CLI-shaped text (blank-line separators, embedded newlines); split it into
+    // pane lines and drop the blanks.
+    let log = |s: String| {
+        for line in s.lines().filter(|l| !l.trim().is_empty()) {
+            let _ = tx.send(Msg::BoxsetLog(line.to_string()));
+        }
+    };
+    let progress = |done: usize, total: usize| {
+        let _ = tx.send(Msg::BoxsetProgress(done, total));
+    };
+    let services = Services::new(&cfg);
+    if !services.discogs.is_configured() {
+        log("Discogs not configured".into());
+        let _ = tx.send(Msg::Done("boxset".into()));
+        return;
+    }
+    let client = image_client();
+    let picker = MatchPicker::Tui(pick_tx);
+    let sink = ProgressSink { log: &log, progress: &progress };
+    let opts = BoxsetDiscoveryOptions { save: true, prefer: None, force_refresh };
+    log(format!("▶ boxset {box_id} — discovering albums{}…", if force_refresh { " (refetching the box first)" } else { "" }));
+    if let Err(e) = crate::ops::release::discover_boxset(&cfg, &services, &db, &client, &box_id, opts, &picker, &sink).await {
+        log(format!("✗ boxset {box_id} — {e}"));
+    }
+    let _ = tx.send(Msg::Done("boxset".into()));
 }
 
 /// Background artist batch: enrich the first N un-enriched artists with interactive match-picking.

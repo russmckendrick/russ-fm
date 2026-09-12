@@ -63,7 +63,7 @@ async fn run_loop(terminal: &mut ratatui::DefaultTerminal, app: &mut App) -> Res
         if event::poll(Duration::from_millis(80))? {
             if let Event::Key(key) = event::read()? {
                 if key.kind == KeyEventKind::Press {
-                    keys::handle_key(app, key.code);
+                    keys::handle_key(app, key);
                 }
             }
         }
@@ -113,6 +113,7 @@ fn draw(f: &mut Frame, app: &mut App) {
         Screen::Services => screens::services::draw(f, body, app),
         Screen::Collection => screens::collection::draw(f, body, app),
         Screen::ArtistRun => screens::artist_run::draw(f, body, app),
+        Screen::Boxsets => screens::boxsets::draw(f, body, app),
     }
     theme::footer(f, foot, app.screen.hint());
 }

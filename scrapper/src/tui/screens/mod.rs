@@ -2,6 +2,7 @@
 
 pub(crate) mod artist_run;
 pub(crate) mod artists;
+pub(crate) mod boxsets;
 pub(crate) mod collection;
 pub(crate) mod dashboard;
 pub(crate) mod home;
@@ -42,7 +43,20 @@ pub(crate) fn draw_runner(
     ]))
     .block(theme::panel("Count").border_style(count_style));
     f.render_widget(count, rows[0]);
+    draw_progress_log(f, rows[1], rows[2], running, progress, log, "press r to run");
+}
 
+/// A progress gauge (`gauge_area`) over a tail-scrolled log (`log_area`), shared by the runner
+/// screens and the Boxsets screen. `idle_label` fills the gauge before the first run.
+pub(crate) fn draw_progress_log(
+    f: &mut Frame,
+    gauge_area: Rect,
+    log_area: Rect,
+    running: bool,
+    progress: Option<(usize, usize)>,
+    log: &[String],
+    idle_label: &str,
+) {
     let (done, total) = progress.unwrap_or((0, 0));
     let ratio = if total > 0 { done as f64 / total as f64 } else { 0.0 };
     let label = if running {
@@ -50,17 +64,17 @@ pub(crate) fn draw_runner(
     } else if total > 0 {
         format!("done {done}/{total}")
     } else {
-        "press r to run".to_string()
+        idle_label.to_string()
     };
     let gauge = Gauge::default()
         .block(theme::panel("Progress"))
         .gauge_style(theme::border())
         .ratio(ratio.clamp(0.0, 1.0))
         .label(label);
-    f.render_widget(gauge, rows[1]);
+    f.render_widget(gauge, gauge_area);
 
-    let visible = rows[2].height.saturating_sub(2) as usize;
+    let visible = log_area.height.saturating_sub(2) as usize;
     let start = log.len().saturating_sub(visible);
     let text: Vec<Line> = log[start..].iter().map(|l| Line::from(l.clone())).collect();
-    f.render_widget(Paragraph::new(text).wrap(Wrap { trim: true }).block(theme::panel("Log")), rows[2]);
+    f.render_widget(Paragraph::new(text).wrap(Wrap { trim: true }).block(theme::panel("Log")), log_area);
 }

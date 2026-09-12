@@ -9,7 +9,7 @@ use regex::Regex;
 use serde_json::{json, Map, Value};
 
 use crate::cli::{ImageSource, OutputFormat, ReleaseArgs};
-use crate::db::{Db, ReleaseRecord};
+use crate::db::{boxset_section_headers, Db, ReleaseRecord};
 use crate::output::{images, release_to_value, to_pretty_sorted};
 use crate::sanitize::release_folder_name;
 use crate::services::Services;
@@ -107,6 +107,45 @@ impl MatchPicker {
             }
         }
     }
+}
+
+/// Where a long-running op reports lines and per-item progress: stdout for the CLI, the
+/// message channel for the TUI. Trait objects (not generics) keep the op futures `Send` for
+/// `tokio::spawn` and keep `ops` free of any UI type.
+pub struct ProgressSink<'a> {
+    pub log: &'a (dyn Fn(String) + Send + Sync),
+    pub progress: &'a (dyn Fn(usize, usize) + Send + Sync),
+}
+
+impl ProgressSink<'_> {
+    pub fn log(&self, line: impl Into<String>) {
+        (self.log)(line.into())
+    }
+
+    pub fn progress(&self, done: usize, total: usize) {
+        (self.progress)(done, total)
+    }
+}
+
+/// Options for [`discover_boxset`] (the `--save` / `--prefer` / `--force-refresh` flags).
+#[derive(Clone, Copy, Debug)]
+pub struct BoxsetDiscoveryOptions {
+    pub save: bool,
+    /// Preferred artwork source key (see [`prefer_key`]); `None` keeps existing artwork.
+    pub prefer: Option<&'static str>,
+    /// Refetch the box itself from Discogs even when the stored record has section headers.
+    pub force_refresh: bool,
+}
+
+/// What a [`discover_boxset`] run achieved.
+#[derive(Clone, Copy, Debug, Default)]
+pub struct BoxsetDiscoveryOutcome {
+    /// Albums processed and linked as members.
+    pub linked: usize,
+    /// Album titles found in the box.
+    pub total: usize,
+    /// Entries written to collection.json (`None` when not saving).
+    pub regenerated: Option<usize>,
 }
 
 /// CLI description loop step via dialoguer.
@@ -602,27 +641,8 @@ pub async fn run(cfg: &Config, args: ReleaseArgs) -> Result<()> {
     Ok(())
 }
 
-/// The album titles inside a boxset: tracklist section headers (rows with a title but no
-/// position), as produced by Discogs box set tracklists.
-fn boxset_section_headers(tracklist: &Value) -> Vec<String> {
-    tracklist
-        .as_array()
-        .map(|arr| {
-            arr.iter()
-                .filter(|t| {
-                    t.get("position").and_then(|p| p.as_str()).unwrap_or("").trim().is_empty()
-                })
-                .filter_map(|t| t.get("title").and_then(|v| v.as_str()))
-                .map(|s| s.trim().to_string())
-                .filter(|s| !s.is_empty())
-                .collect()
-        })
-        .unwrap_or_default()
-}
-
-/// Interactive boxset discovery (`scrapper release --boxset <BOX_ID>` with no release ID):
-/// process the box itself, then walk its tracklist section headers, search Discogs masters
-/// for each album, let the user match or skip, and process every match as a linked member.
+/// Interactive boxset discovery (`scrapper release --boxset <BOX_ID>` with no release ID): the
+/// CLI front for [`discover_boxset`] — prompts via dialoguer and prints to stdout.
 async fn run_boxset_discovery(
     cfg: &Config,
     services: &Services,
@@ -635,34 +655,63 @@ async fn run_boxset_discovery(
     if !std::io::stdin().is_terminal() {
         bail!("boxset discovery is interactive — run it from a terminal");
     }
-    let picker = MatchPicker::Cli;
-    let prefer = prefer_key(args.prefer);
-    let save = args.save || args.force_refresh;
+    let log = |s: String| println!("{s}");
+    let progress = |_: usize, _: usize| {};
+    let sink = ProgressSink { log: &log, progress: &progress };
+    let opts = BoxsetDiscoveryOptions {
+        save: args.save || args.force_refresh,
+        prefer: prefer_key(args.prefer),
+        force_refresh: args.force_refresh,
+    };
+    discover_boxset(cfg, services, db, client, box_id, opts, &MatchPicker::Cli, &sink).await.map(|_| ())
+}
+
+/// Boxset discovery, independent of the front end: process the box itself (when it is unknown,
+/// has no usable tracklist, or `force_refresh` is set), then walk its tracklist section headers,
+/// search Discogs masters for each album, let the user match or skip via `picker`, and process
+/// every match as a linked member. Lines and per-album progress go to `sink`; when `opts.save`
+/// is set, collection.json is regenerated once at the end.
+#[allow(clippy::too_many_arguments)]
+pub async fn discover_boxset(
+    cfg: &Config,
+    services: &Services,
+    db: &Db,
+    client: &reqwest::Client,
+    box_id: &str,
+    opts: BoxsetDiscoveryOptions,
+    picker: &MatchPicker,
+    sink: &ProgressSink<'_>,
+) -> Result<BoxsetDiscoveryOutcome> {
+    // In boxset runs existing artwork is kept; an explicit --prefer re-downloads anyway.
+    let keep_artwork = opts.prefer.is_none();
 
     // The box is usually already in the collection — go straight to member discovery with the
     // stored record. Only (re)process the box when it's unknown, has no usable tracklist, or a
     // refetch was explicitly requested.
     let stored_box = db.get_release_by_discogs_id(box_id)?;
     let box_rec = match stored_box {
-        Some(rec) if !args.force_refresh && !boxset_section_headers(&rec.tracklist).is_empty() => {
-            println!(
+        Some(rec) if !opts.force_refresh && !boxset_section_headers(&rec.tracklist).is_empty() => {
+            sink.log(format!(
                 "Boxset already in the database: {} ({}) — searching for its albums. (--force-refresh refetches the box itself.)",
                 rec.title,
                 rec.year.unwrap_or(0)
-            );
+            ));
             rec
         }
         _ => {
-            println!("Fetching & enriching boxset {box_id}...");
+            sink.log(format!("Fetching & enriching boxset {box_id}..."));
             let date_added = if cfg.discogs.username.is_empty() {
                 None
             } else {
                 services.discogs.collection_date_added(&cfg.discogs.username, box_id).await
             };
-            let (rec, flags) =
-                process_release(cfg, services, db, client, box_id, save, prefer, &picker, date_added.as_deref(), None, args.prefer.is_none())
-                    .await?;
-            print_summary(&rec, flags);
+            let (rec, flags) = process_release(
+                cfg, services, db, client, box_id, opts.save, opts.prefer, picker, date_added.as_deref(), None, keep_artwork,
+            )
+            .await?;
+            for line in summary_lines(&rec, flags) {
+                sink.log(line);
+            }
             rec
         }
     };
@@ -673,143 +722,177 @@ async fn run_boxset_discovery(
             "no album section headers found in the boxset tracklist — link members individually: scrapper release <ALBUM_ID> --save --boxset {box_id}"
         );
     }
-    let artist = box_rec
-        .artists
-        .as_array()
-        .and_then(|a| a.first())
-        .and_then(|a| a.get("name"))
-        .and_then(|n| n.as_str())
-        .unwrap_or("")
-        .to_string();
-    println!("\nFound {} albums in the box:", titles.len());
+    let first_artist = box_rec.artists.as_array().and_then(|a| a.first());
+    let artist = first_artist.and_then(|a| a.get("name")).and_then(|n| n.as_str()).unwrap_or("").to_string();
+    let total = titles.len();
+    sink.log(format!("\nFound {total} albums in the box:"));
     for t in &titles {
-        println!("  · {t}");
+        sink.log(format!("  · {t}"));
     }
+    sink.progress(0, total);
 
     // Browse the artist's masters once and match titles locally — `/database/search`
     // rejects personal access tokens, and an artist-scoped list is tighter anyway.
-    let artist_discogs_id = box_rec
-        .artists
-        .as_array()
-        .and_then(|a| a.first())
-        .and_then(|a| a.get("discogs_id"))
-        .and_then(|d| d.as_str())
-        .map(String::from);
+    let artist_discogs_id = first_artist.and_then(|a| a.get("discogs_id")).and_then(|d| d.as_str()).map(String::from);
     let artist_masters = match &artist_discogs_id {
         Some(id) => match services.discogs.artist_masters(id).await {
             Ok(m) => {
-                println!("Loaded {} Discogs masters for {artist}.", m.len());
+                sink.log(format!("Loaded {} Discogs masters for {artist}.", m.len()));
                 m
             }
             Err(e) => {
-                println!("Could not list Discogs masters for {artist} ({e}) — falling back to search.");
+                sink.log(format!("Could not list Discogs masters for {artist} ({e}) — falling back to search."));
                 Vec::new()
             }
         },
         None => Vec::new(),
     };
-    let normalize = |s: &str| s.to_lowercase().trim().trim_end_matches(['.', ':', '-', ' ']).to_string();
 
+    let ctx = BoxsetContext { cfg, services, db, client, box_id, opts, picker, sink, artist: &artist, artist_masters: &artist_masters };
     let mut linked = 0usize;
-    for title in &titles {
-        // Trailing punctuation in section headers ("Real To Real Cacophony.") hurts matching.
-        let query = title.trim_end_matches(['.', ':', '-', ' ']);
-        let mut candidates: Vec<Value> = Vec::new();
-        if !artist_masters.is_empty() {
-            let target = normalize(query);
-            let mut scored: Vec<(f64, &Value)> = artist_masters
-                .iter()
-                .filter_map(|m| {
-                    let t = m.get("title").and_then(|v| v.as_str())?;
-                    let score = crate::ops::dice_similarity(&normalize(t), &target);
-                    (score >= 0.4).then_some((score, m))
-                })
-                .collect();
-            scored.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
-            candidates = scored.into_iter().take(10).map(|(_, m)| m.clone()).collect();
+    for (i, title) in titles.iter().enumerate() {
+        if link_boxset_album(&ctx, title).await? {
+            linked += 1;
         }
-        if candidates.is_empty() {
-            match services.discogs.search_masters(&artist, query, 10).await {
-                Ok(v) => candidates = v.get("results").and_then(|r| r.as_array()).cloned().unwrap_or_default(),
-                Err(e) => {
-                    println!("  {title}: no master matched and Discogs search failed ({e}) — skipping");
-                    continue;
-                }
-            }
-        }
-        if candidates.is_empty() {
-            println!("  {title}: no Discogs masters found — skipping");
-            continue;
-        }
-        let rows: Vec<Vec<String>> = candidates
+        sink.progress(i + 1, total);
+    }
+
+    let regenerated = if opts.save {
+        let n = crate::output::collection::regenerate(cfg, db)?;
+        sink.log(format!("\nLinked {linked}/{total} albums to boxset {box_id}. Refreshed collection.json ({n} entries)."));
+        Some(n)
+    } else {
+        sink.log(format!("\nMatched {linked}/{total} albums (dry view — pass --save to write to the database, JSON and artwork)."));
+        None
+    };
+    Ok(BoxsetDiscoveryOutcome { linked, total, regenerated })
+}
+
+/// Everything one album of a boxset discovery run needs (shared across titles).
+struct BoxsetContext<'a> {
+    cfg: &'a Config,
+    services: &'a Services,
+    db: &'a Db,
+    client: &'a reqwest::Client,
+    box_id: &'a str,
+    opts: BoxsetDiscoveryOptions,
+    picker: &'a MatchPicker,
+    sink: &'a ProgressSink<'a>,
+    artist: &'a str,
+    artist_masters: &'a [Value],
+}
+
+/// Match one section-header title against Discogs masters, let the user pick, and process the
+/// chosen master's main release as a member of the box. `Ok(true)` when a member was linked;
+/// `Ok(false)` when the title was skipped (every skip reason is logged).
+async fn link_boxset_album(ctx: &BoxsetContext<'_>, title: &str) -> Result<bool> {
+    let BoxsetContext { cfg, services, db, client, box_id, opts, picker, sink, artist, artist_masters } = *ctx;
+    let normalize = |s: &str| s.to_lowercase().trim().trim_end_matches(['.', ':', '-', ' ']).to_string();
+    // Trailing punctuation in section headers ("Real To Real Cacophony.") hurts matching.
+    let query = title.trim_end_matches(['.', ':', '-', ' ']);
+    let mut candidates: Vec<Value> = Vec::new();
+    if !artist_masters.is_empty() {
+        let target = normalize(query);
+        let mut scored: Vec<(f64, &Value)> = artist_masters
             .iter()
-            .map(|r| {
-                vec![
-                    r.get("title").and_then(|v| v.as_str()).unwrap_or("?").to_string(),
-                    r.get("year").and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|y| y.to_string()))).unwrap_or_default(),
-                    r.get("format")
-                        .map(|v| match v {
-                            Value::Array(f) => f.iter().filter_map(|x| x.as_str()).take(3).collect::<Vec<_>>().join(", "),
-                            Value::String(s) => s.clone(),
-                            _ => String::new(),
-                        })
-                        .unwrap_or_default(),
-                ]
+            .filter_map(|m| {
+                let t = m.get("title").and_then(|v| v.as_str())?;
+                let score = crate::ops::dice_similarity(&normalize(t), &target);
+                (score >= 0.4).then_some((score, m))
             })
             .collect();
-        let Some(idx) = picker.pick(&format!("Discogs master · {artist} — {title}"), &["Title", "Year", "Format"], &rows).await
-        else {
-            println!("  {title}: skipped");
-            continue;
-        };
-        let Some(master_id) = candidates[idx].get("id").and_then(|v| v.as_i64()).map(|i| i.to_string()) else {
-            println!("  {title}: candidate has no master id — skipping");
-            continue;
-        };
-        let main_release = match services.discogs.get_master(&master_id).await {
-            Ok(m) => match m.get("main_release").and_then(|v| v.as_i64()) {
-                Some(id) => id.to_string(),
-                None => {
-                    println!("  {title}: master {master_id} has no main release — skipping");
-                    continue;
-                }
-            },
+        scored.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
+        candidates = scored.into_iter().take(10).map(|(_, m)| m.clone()).collect();
+    }
+    if candidates.is_empty() {
+        match services.discogs.search_masters(artist, query, 10).await {
+            Ok(v) => candidates = v.get("results").and_then(|r| r.as_array()).cloned().unwrap_or_default(),
             Err(e) => {
-                println!("  {title}: fetching master {master_id} failed ({e}) — skipping");
-                continue;
+                sink.log(format!("  {title}: no master matched and Discogs search failed ({e}) — skipping"));
+                return Ok(false);
             }
-        };
-        if db.get_release_by_discogs_id(&main_release)?.is_some() {
-            println!("  {title}: release {main_release} already in the database — refreshing and linking");
-        }
-        println!("\nProcessing {title} (release {main_release})...");
-        match process_release(cfg, services, db, client, &main_release, save, prefer, &picker, None, Some(box_id), args.prefer.is_none()).await {
-            Ok((rec, flags)) => {
-                print_summary(&rec, flags);
-                linked += 1;
-            }
-            Err(e) => println!("  {title}: processing failed ({e}) — skipping"),
         }
     }
+    if candidates.is_empty() {
+        sink.log(format!("  {title}: no Discogs masters found — skipping"));
+        return Ok(false);
+    }
+    let rows: Vec<Vec<String>> = candidates
+        .iter()
+        .map(|r| {
+            vec![
+                r.get("title").and_then(|v| v.as_str()).unwrap_or("?").to_string(),
+                r.get("year").and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|y| y.to_string()))).unwrap_or_default(),
+                r.get("format")
+                    .map(|v| match v {
+                        Value::Array(f) => f.iter().filter_map(|x| x.as_str()).take(3).collect::<Vec<_>>().join(", "),
+                        Value::String(s) => s.clone(),
+                        _ => String::new(),
+                    })
+                    .unwrap_or_default(),
+            ]
+        })
+        .collect();
+    let Some(idx) = picker.pick(&format!("Discogs master · {artist} — {title}"), &["Title", "Year", "Format"], &rows).await else {
+        sink.log(format!("  {title}: skipped"));
+        return Ok(false);
+    };
+    let Some(master_id) = candidates[idx].get("id").and_then(|v| v.as_i64()).map(|i| i.to_string()) else {
+        sink.log(format!("  {title}: candidate has no master id — skipping"));
+        return Ok(false);
+    };
+    let main_release = match services.discogs.get_master(&master_id).await {
+        Ok(m) => match m.get("main_release").and_then(|v| v.as_i64()) {
+            Some(id) => id.to_string(),
+            None => {
+                sink.log(format!("  {title}: master {master_id} has no main release — skipping"));
+                return Ok(false);
+            }
+        },
+        Err(e) => {
+            sink.log(format!("  {title}: fetching master {master_id} failed ({e}) — skipping"));
+            return Ok(false);
+        }
+    };
+    if db.get_release_by_discogs_id(&main_release)?.is_some() {
+        sink.log(format!("  {title}: release {main_release} already in the database — refreshing and linking"));
+    }
+    sink.log(format!("\nProcessing {title} (release {main_release})..."));
+    let keep_artwork = opts.prefer.is_none();
+    match process_release(cfg, services, db, client, &main_release, opts.save, opts.prefer, picker, None, Some(box_id), keep_artwork).await {
+        Ok((rec, flags)) => {
+            for line in summary_lines(&rec, flags) {
+                sink.log(line);
+            }
+            Ok(true)
+        }
+        Err(e) => {
+            sink.log(format!("  {title}: processing failed ({e}) — skipping"));
+            Ok(false)
+        }
+    }
+}
 
-    if save {
-        let n = crate::output::collection::regenerate(cfg, db)?;
-        println!("\nLinked {linked}/{} albums to boxset {box_id}. Refreshed collection.json ({n} entries).", titles.len());
-    } else {
-        println!("\nMatched {linked}/{} albums (dry view — pass --save to write to the database, JSON and artwork).", titles.len());
-    }
-    Ok(())
+/// The post-processing summary block, one entry per line. The leading blank keeps the CLI's
+/// spacing unchanged; the TUI log sink drops blank lines.
+fn summary_lines(rec: &ReleaseRecord, flags: EnrichFlags) -> Vec<String> {
+    let mark = |b: bool| if b { "✓" } else { "–" };
+    vec![
+        String::new(),
+        format!("  {}  ({})", rec.title, rec.year.unwrap_or(0)),
+        format!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?")),
+        format!("  tracks: {}", rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0)),
+        format!(
+            "  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}",
+            mark(flags.apple), mark(flags.spotify), mark(flags.lastfm), mark(flags.wikipedia), mark(flags.perplexity)
+        ),
+    ]
 }
 
 fn print_summary(rec: &ReleaseRecord, flags: EnrichFlags) {
-    let mark = |b: bool| if b { "✓" } else { "–" };
-    println!("\n  {}  ({})", rec.title, rec.year.unwrap_or(0));
-    println!("  discogs_id: {}", rec.discogs_id.as_deref().unwrap_or("?"));
-    println!("  tracks: {}", rec.tracklist.as_array().map(|a| a.len()).unwrap_or(0));
-    println!(
-        "  enrichment: apple {} | spotify {} | lastfm {} | wikipedia {} | perplexity {}",
-        mark(flags.apple), mark(flags.spotify), mark(flags.lastfm), mark(flags.wikipedia), mark(flags.perplexity)
-    );
+    for line in summary_lines(rec, flags) {
+        println!("{line}");
+    }
 }
 
 /// CLI fallback picker: render a simple table and read a choice (Esc / blank skips).
@@ -1786,6 +1869,42 @@ pub async fn set_release_service(
 mod tests {
     use super::*;
 
+    /// An empty release record for tests that only care about a few fields.
+    fn blank_record() -> ReleaseRecord {
+        ReleaseRecord {
+            id: String::new(),
+            discogs_id: None,
+            title: String::new(),
+            artists: json!([]),
+            year: None,
+            released: None,
+            country: None,
+            formats: json!([]),
+            labels: json!([]),
+            genres: json!([]),
+            styles: json!([]),
+            images: json!([]),
+            tracklist: json!([]),
+            videos: json!([]),
+            apple_music_id: None,
+            spotify_id: None,
+            lastfm_mbid: None,
+            discogs_url: None,
+            apple_music_url: None,
+            spotify_url: None,
+            lastfm_url: None,
+            release_name_discogs: None,
+            release_name_apple_music: None,
+            release_name_spotify: None,
+            enrichment_data: json!({}),
+            local_images: json!({}),
+            raw_data: json!({}),
+            created_at: None,
+            updated_at: None,
+            date_added: None,
+        }
+    }
+
     /// Compilations credit each track separately; those credits must survive the mapping,
     /// otherwise the track can only be scrobbled as the release artist ("Various").
     #[test]
@@ -1824,28 +1943,20 @@ mod tests {
     }
 
     #[test]
-    fn boxset_section_headers_are_position_less_titles() {
-        let tracklist = json!([
-            {"position": "", "title": "Life In A Day", "duration": ""},
-            {"position": "A1", "title": "Someone", "duration": "3:39"},
-            {"position": "A2", "title": "Chelsea Girl", "duration": "4:27"},
-            {"position": "", "title": "Real To Real Cacophony.", "duration": ""},
-            {"position": "B1", "title": "Real To Real", "duration": "3:23"},
-            {"position": "  ", "title": "  ", "duration": ""}
-        ]);
-        assert_eq!(
-            boxset_section_headers(&tracklist),
-            vec!["Life In A Day".to_string(), "Real To Real Cacophony.".to_string()]
-        );
-    }
-
-    #[test]
-    fn boxset_section_headers_empty_for_flat_tracklists() {
-        let tracklist = json!([
-            {"position": "A1", "title": "Airbag", "duration": "4:44"},
-            {"position": "A2", "title": "Paranoid Android", "duration": "6:23"}
-        ]);
-        assert!(boxset_section_headers(&tracklist).is_empty());
+    fn summary_lines_start_with_a_blank_separator_and_report_every_service() {
+        let mut rec = blank_record();
+        rec.title = "The Vinyl Collection 79-84".into();
+        rec.year = Some(2015);
+        rec.discogs_id = Some("7709507".into());
+        rec.tracklist = json!([{"position": "", "title": "Life In A Day"}, {"position": "A1", "title": "Someone"}]);
+        let flags = EnrichFlags { apple: true, ..EnrichFlags::default() };
+        let lines = summary_lines(&rec, flags);
+        assert_eq!(lines[0], "");
+        assert_eq!(lines[1], "  The Vinyl Collection 79-84  (2015)");
+        assert_eq!(lines[2], "  discogs_id: 7709507");
+        assert_eq!(lines[3], "  tracks: 2");
+        assert_eq!(lines[4], "  enrichment: apple ✓ | spotify – | lastfm – | wikipedia – | perplexity –");
+        assert_eq!(lines.len(), 5);
     }
 
     /// Headless contract: `MatchPicker::First` never prompts and always takes the first
