@@ -90,20 +90,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/cFlWGQgRn-h4sClRp_kLCiYkVOSpOScvrtaDL1BVF0Q/rs:fit/g:sm/q:90/h:348/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQxNDM3/NC0xNTk2MTA1Nzg3/LTgxODAuanBlZw.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/17/d0/9a/17d09a30-0dcb-39ca-a930-1a5bb8178064/dj.zeeingsb.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
     "EMI",
     "EMI"
   ],
-  "lastfm_mbid": null,
+  "lastfm_mbid": "0b1221cf-002d-475a-a050-748976579ca5",
   "lastfm_url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside",
   "local_images": {
     "hi-res": "../public/album/the-kick-inside-414374/the-kick-inside-414374-hi-res.jpg",
@@ -113,12 +106,14 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-10T08:21:13.474792",
+    "processed_at": "2026-09-12T19:47:09.676787",
     "services_used": [
       "discogs",
       "apple_music",
       "spotify",
-      "wikipedia"
+      "lastfm",
+      "wikipedia",
+      "perplexity"
     ]
   },
   "release_name_apple_music": "The Kick Inside",
@@ -127,22 +122,23 @@
   "released": "1978-02-17",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/17/d0/9a/17d09a30-0dcb-39ca-a930-1a5bb8178064/dj.zeeingsb.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/17/d0/9a/17d09a30-0dcb-39ca-a930-1a5bb8178064/dj.zeeingsb.jpg/{w}x{h}bb.jpg",
       "content_rating": null,
       "copyright": "℗ 1978 The copyright in this sound recording is owned by Parlophone Records Ltd",
       "editorial_notes": "Kate Bush knows how to make a grand entrance. At age 19, she spent four weeks at No. 1 on the UK Singles chart with her debut single, “Wuthering Heights”—making her the first female artist ever to top the UK charts with a song she wrote completely by herself. As the title implies, the lyrics were a literary tour de force: Bush wrote the song from the perspective of Catherine, the protagonist of Emily Brontë’s novel of the same name, as she visits her beloved Heathcliff from the afterlife.\n\nWith its marriage of delicate piano and Bush’s siren-like vocals, “Wuthering Heights” was also a blueprint for her 1978 debut album, <i>The Kick Inside</i>. Comprising songs she had amassed for years—the soaring, orchestrated “The Man with the Child in His Eyes” and aptly named “The Saxophone Song” were even on her 1975 demo, which was produced by Pink Floyd’s David Gilmour—the album is elegant and wise, suffused with gratitude and gorgeous music.\n\nBush worked with session musicians who had worked with groups such as Pilot, The Alan Parsons Project and Steve Harley & Cockney Rebel to craft theatrical rock (“James and the Cold Gun”), prog with a jazzy bent (“Strange Phenomena”) and baroque-pop (the synth-driven “Oh to Be in Love”). Lyrically, Bush drew on her own life for perceptive, heartfelt lyrics; notably, “Moving” was inspired by classes she took from mime artist Lindsay Kemp, while “The Man with the Child in His Eyes” is about a relationship with an older man who hasn’t lost his innocence. <i>The Kick Inside</i> made Bush an instant star and, today, it’s considered one of the most striking debut albums of all time—a testament to the power of nurturing original voices.",
       "id": "726230233",
       "is_complete": true,
+      "name": "The Kick Inside",
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Kate Bush",
         "artwork": {
-          "bgColor": "ffe859",
+          "bgColor": "f3a441",
           "height": 1400,
-          "textColor1": "0f0400",
-          "textColor2": "3e1f04",
-          "textColor3": "3f3212",
-          "textColor4": "654715",
+          "textColor1": "180907",
+          "textColor2": "30100b",
+          "textColor3": "442813",
+          "textColor4": "572e15",
           "url": "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/17/d0/9a/17d09a30-0dcb-39ca-a930-1a5bb8178064/dj.zeeingsb.jpg/{w}x{h}bb.jpg",
           "width": 1400
         },
@@ -176,323 +172,32 @@
       "images": [
         {
           "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/34s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         },
         {
           "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/64s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         },
         {
           "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/174s/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         },
         {
           "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         },
         {
           "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         },
         {
           "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png"
         }
       ],
-      "listeners": 894693,
+      "listeners": "1157992",
       "mbid": "0b1221cf-002d-475a-a050-748976579ca5",
-      "playcount": 15501426,
-      "raw_data": {
-        "album": {
-          "artist": "Kate Bush",
-          "image": [
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/34s/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": "small"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/64s/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": "medium"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/174s/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": "large"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": "extralarge"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": "mega"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/23e1f8cfc63dc7c2a564223bb3d8b28b.png",
-              "size": ""
-            }
-          ],
-          "listeners": "894693",
-          "mbid": "0b1221cf-002d-475a-a050-748976579ca5",
-          "name": "The Kick Inside",
-          "playcount": "15501426",
-          "tags": {
-            "tag": [
-              {
-                "name": "1978",
-                "url": "https://www.last.fm/tag/1978"
-              },
-              {
-                "name": "70s",
-                "url": "https://www.last.fm/tag/70s"
-              },
-              {
-                "name": "female vocalists",
-                "url": "https://www.last.fm/tag/female+vocalists"
-              },
-              {
-                "name": "art rock",
-                "url": "https://www.last.fm/tag/art+rock"
-              },
-              {
-                "name": "singer-songwriter",
-                "url": "https://www.last.fm/tag/singer-songwriter"
-              }
-            ]
-          },
-          "tracks": {
-            "track": [
-              {
-                "@attr": {
-                  "rank": 1
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 159,
-                "name": "Moving",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Moving"
-              },
-              {
-                "@attr": {
-                  "rank": 2
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 228,
-                "name": "The Saxophone Song",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/The+Saxophone+Song"
-              },
-              {
-                "@attr": {
-                  "rank": 3
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 178,
-                "name": "Strange Phenomena",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Strange+Phenomena"
-              },
-              {
-                "@attr": {
-                  "rank": 4
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 178,
-                "name": "Kite",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Kite"
-              },
-              {
-                "@attr": {
-                  "rank": 5
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 160,
-                "name": "The Man with the Child in His Eyes",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/The+Man+with+the+Child+in+His+Eyes"
-              },
-              {
-                "@attr": {
-                  "rank": 6
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 205,
-                "name": "Wuthering Heights",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Wuthering+Heights"
-              },
-              {
-                "@attr": {
-                  "rank": 7
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 215,
-                "name": "James and the Cold Gun",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/James+and+the+Cold+Gun"
-              },
-              {
-                "@attr": {
-                  "rank": 8
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 183,
-                "name": "Feel It",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Feel+It"
-              },
-              {
-                "@attr": {
-                  "rank": 9
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": null,
-                "name": "Oh to Be in Love",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Oh+to+Be+in+Love"
-              },
-              {
-                "@attr": {
-                  "rank": 10
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 147,
-                "name": "L'Amour Looks Something Like You",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/L%27Amour+Looks+Something+Like+You"
-              },
-              {
-                "@attr": {
-                  "rank": 11
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 165,
-                "name": "Them Heavy People",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Them+Heavy+People"
-              },
-              {
-                "@attr": {
-                  "rank": 12
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 230,
-                "name": "Room for the Life",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/Room+for+the+Life"
-              },
-              {
-                "@attr": {
-                  "rank": 13
-                },
-                "artist": {
-                  "mbid": "4b585938-f271-45e2-b19a-91c634b5e396",
-                  "name": "Kate Bush",
-                  "url": "https://www.last.fm/music/Kate+Bush"
-                },
-                "duration": 215,
-                "name": "The Kick Inside",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside/The+Kick+Inside"
-              }
-            ]
-          },
-          "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside",
-          "wiki": {
-            "content": "The Kick Inside is the debut studio album by English singer-songwriter and musician Kate Bush . It was released on 17 February 1978 and contains her UK number one hit, \"Wuthering Heights\". The album peaked at number three on the UK Albums Chart and has been certified Platinum by the British Phonographic Industry. The production included efforts by several progressive rock veterans, including Duncan Mackay, Ian Bairnson, David Paton, Andrew Powell, and Stuart Elliott of The Alan Parsons Project, and David Gilmour of Pink Floyd.\n\nAccording to the Guinness Book of World Records, Kate Bush is the first woman in pop music history to have written every track on a million-unit-selling debut LP. She also became the first female artist with a self-penned #1 song in the UK. <a href=\"https://www.last.fm/music/Kate+Bush/The+Kick+Inside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-            "published": "09 Sep 2024, 23:37",
-            "summary": "The Kick Inside is the debut studio album by English singer-songwriter and musician Kate Bush . It was released on 17 February 1978 and contains her UK number one hit, \"Wuthering Heights\". The album peaked at number three on the UK Albums Chart and has been certified Platinum by the British Phonographic Industry. The production included efforts by several progressive rock veterans, including Duncan Mackay, Ian Bairnson, David Paton, Andrew Powell, and Stuart Elliott of The Alan Parsons Project, and David Gilmour of Pink Floyd. According to the Guinness Book of World Records, Kate Bush is the first woman in <a href=\"https://www.last.fm/music/Kate+Bush/The+Kick+Inside\">Read more on Last.fm</a>."
-          }
-        }
-      },
-      "similar_artists": [],
+      "playcount": "21264076",
       "tags": [
         "1978",
         "70s",
@@ -500,29 +205,18 @@
         "art rock",
         "singer-songwriter"
       ],
-      "top_albums": [],
-      "top_tracks": [],
       "url": "https://www.last.fm/music/Kate+Bush/The+Kick+Inside",
       "wiki_content": "The Kick Inside is the debut studio album by English singer-songwriter and musician Kate Bush . It was released on 17 February 1978 and contains her UK number one hit, \"Wuthering Heights\". The album peaked at number three on the UK Albums Chart and has been certified Platinum by the British Phonographic Industry. The production included efforts by several progressive rock veterans, including Duncan Mackay, Ian Bairnson, David Paton, Andrew Powell, and Stuart Elliott of The Alan Parsons Project, and David Gilmour of Pink Floyd.\n\nAccording to the Guinness Book of World Records, Kate Bush is the first woman in pop music history to have written every track on a million-unit-selling debut LP. She also became the first female artist with a self-penned #1 song in the UK. <a href=\"https://www.last.fm/music/Kate+Bush/The+Kick+Inside\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
       "wiki_summary": "The Kick Inside is the debut studio album by English singer-songwriter and musician Kate Bush . It was released on 17 February 1978 and contains her UK number one hit, \"Wuthering Heights\". The album peaked at number three on the UK Albums Chart and has been certified Platinum by the British Phonographic Industry. The production included efforts by several progressive rock veterans, including Duncan Mackay, Ian Bairnson, David Paton, Andrew Powell, and Stuart Elliott of The Alan Parsons Project, and David Gilmour of Pink Floyd. According to the Guinness Book of World Records, Kate Bush is the first woman in <a href=\"https://www.last.fm/music/Kate+Bush/The+Kick+Inside\">Read more on Last.fm</a>."
     },
+    "perplexity": {
+      "description": "The Kick Inside is Kate Bush’s debut album, released by EMI in 1978, and it arrived as one of the most distinctive first statements in British pop of the decade. Built around Bush’s theatrical voice, poetic lyrics, and a blend of piano-led intimacy with ornate rock and pop arrangements, the album introduced a songwriter with an unusually vivid imagination and mature melodic sense for someone so young.\n\nThe record’s centerpiece is “Wuthering Heights,” which became a UK No. 1 hit and gave Bush an immediate breakthrough, but the album is stronger than a one-song success: tracks such as “The Man with the Child in His Eyes,” “The Saxophone Song,” and the title track reveal a style that is dramatic yet carefully controlled, romantic but never merely fragile. The Kick Inside reached No. 3 on the UK Albums Chart and earned platinum certification, and it has long been regarded as a striking debut that helped establish Bush as a singular voice in art-pop and progressive-leaning rock.",
+      "generated_at": "2026-09-12T19:47:03.172152",
+      "model": "sonar",
+      "source": "perplexity"
+    },
     "spotify": {
       "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "1978 Noble & Brite Ltd",
-          "type": "C"
-        },
-        {
-          "text": "1978 Noble & Brite Ltd",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "0077774601252"
-      },
       "id": "6LPR2A12So7G9V2WoZgTwd",
       "images": [
         {
@@ -541,643 +235,11 @@
           "width": 64
         }
       ],
-      "label": "Fish People",
-      "popularity": 40,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-            },
-            "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-            "id": "1aSxMhuvixZ8h9dK9jIDwL",
-            "name": "Kate Bush",
-            "type": "artist",
-            "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "1978 Noble & Brite Ltd",
-            "type": "C"
-          },
-          {
-            "text": "1978 Noble & Brite Ltd",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "0077774601252"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6LPR2A12So7G9V2WoZgTwd"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/6LPR2A12So7G9V2WoZgTwd?market=US",
-        "id": "6LPR2A12So7G9V2WoZgTwd",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273e559673fdbe843f9aa0f38d3",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02e559673fdbe843f9aa0f38d3",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851e559673fdbe843f9aa0f38d3",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Fish People",
-        "name": "The Kick Inside",
-        "popularity": 40,
-        "release_date": "1978-02-17",
-        "release_date_precision": "day",
-        "total_tracks": 13,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/6LPR2A12So7G9V2WoZgTwd/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 181960,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6egShQABjQ53QOIBIfegUx"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6egShQABjQ53QOIBIfegUx",
-              "id": "6egShQABjQ53QOIBIfegUx",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Moving",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:6egShQABjQ53QOIBIfegUx"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 232840,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3z7i9A609zfXm39kdubYLV"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3z7i9A609zfXm39kdubYLV",
-              "id": "3z7i9A609zfXm39kdubYLV",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Saxophone Song",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:3z7i9A609zfXm39kdubYLV"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 178693,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6qbpcPKMAskt9vxatIXiQP"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6qbpcPKMAskt9vxatIXiQP",
-              "id": "6qbpcPKMAskt9vxatIXiQP",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Strange Phenomena",
-              "preview_url": null,
-              "track_number": 3,
-              "type": "track",
-              "uri": "spotify:track:6qbpcPKMAskt9vxatIXiQP"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 177000,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3dB0YlVsRh1Or7YgWfkEWN"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3dB0YlVsRh1Or7YgWfkEWN",
-              "id": "3dB0YlVsRh1Or7YgWfkEWN",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Kite",
-              "preview_url": null,
-              "track_number": 4,
-              "type": "track",
-              "uri": "spotify:track:3dB0YlVsRh1Or7YgWfkEWN"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 158693,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5vtaZT3EUPp8wB1N0jAlWs"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5vtaZT3EUPp8wB1N0jAlWs",
-              "id": "5vtaZT3EUPp8wB1N0jAlWs",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Man with the Child in His Eyes",
-              "preview_url": null,
-              "track_number": 5,
-              "type": "track",
-              "uri": "spotify:track:5vtaZT3EUPp8wB1N0jAlWs"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 269066,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2VyjK8wf0S6J8FgAgoqOkw"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2VyjK8wf0S6J8FgAgoqOkw",
-              "id": "2VyjK8wf0S6J8FgAgoqOkw",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Wuthering Heights",
-              "preview_url": null,
-              "track_number": 6,
-              "type": "track",
-              "uri": "spotify:track:2VyjK8wf0S6J8FgAgoqOkw"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 216506,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7y2DwVaSyLUBEjcAYgq9ws"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7y2DwVaSyLUBEjcAYgq9ws",
-              "id": "7y2DwVaSyLUBEjcAYgq9ws",
-              "is_local": false,
-              "is_playable": true,
-              "name": "James and the Cold Gun",
-              "preview_url": null,
-              "track_number": 7,
-              "type": "track",
-              "uri": "spotify:track:7y2DwVaSyLUBEjcAYgq9ws"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 182866,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5NeqS6m1hrbx4RCQmc28Em"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5NeqS6m1hrbx4RCQmc28Em",
-              "id": "5NeqS6m1hrbx4RCQmc28Em",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Feel It",
-              "preview_url": null,
-              "track_number": 8,
-              "type": "track",
-              "uri": "spotify:track:5NeqS6m1hrbx4RCQmc28Em"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 198093,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7FcnFSwGquIEDhJ18tHWd4"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7FcnFSwGquIEDhJ18tHWd4",
-              "id": "7FcnFSwGquIEDhJ18tHWd4",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Oh to Be in Love",
-              "preview_url": null,
-              "track_number": 9,
-              "type": "track",
-              "uri": "spotify:track:7FcnFSwGquIEDhJ18tHWd4"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 148640,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2WNKe5vU2HsS40l34nGXeE"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2WNKe5vU2HsS40l34nGXeE",
-              "id": "2WNKe5vU2HsS40l34nGXeE",
-              "is_local": false,
-              "is_playable": true,
-              "name": "L'Amour Looks Something Like You",
-              "preview_url": null,
-              "track_number": 10,
-              "type": "track",
-              "uri": "spotify:track:2WNKe5vU2HsS40l34nGXeE"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 185400,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/3SmYS9PgiidYQTgNXHur2b"
-              },
-              "href": "https://api.spotify.com/v1/tracks/3SmYS9PgiidYQTgNXHur2b",
-              "id": "3SmYS9PgiidYQTgNXHur2b",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Them Heavy People",
-              "preview_url": null,
-              "track_number": 11,
-              "type": "track",
-              "uri": "spotify:track:3SmYS9PgiidYQTgNXHur2b"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 245560,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/2tMkcOAiAVo7Tk6zbYMinj"
-              },
-              "href": "https://api.spotify.com/v1/tracks/2tMkcOAiAVo7Tk6zbYMinj",
-              "id": "2tMkcOAiAVo7Tk6zbYMinj",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Room for the Life",
-              "preview_url": null,
-              "track_number": 12,
-              "type": "track",
-              "uri": "spotify:track:2tMkcOAiAVo7Tk6zbYMinj"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/1aSxMhuvixZ8h9dK9jIDwL"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/1aSxMhuvixZ8h9dK9jIDwL",
-                  "id": "1aSxMhuvixZ8h9dK9jIDwL",
-                  "name": "Kate Bush",
-                  "type": "artist",
-                  "uri": "spotify:artist:1aSxMhuvixZ8h9dK9jIDwL"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 214773,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/6rO0vbLQOtPm6uUVNr3sPT"
-              },
-              "href": "https://api.spotify.com/v1/tracks/6rO0vbLQOtPm6uUVNr3sPT",
-              "id": "6rO0vbLQOtPm6uUVNr3sPT",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Kick Inside",
-              "preview_url": null,
-              "track_number": 13,
-              "type": "track",
-              "uri": "spotify:track:6rO0vbLQOtPm6uUVNr3sPT"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 13
-        },
-        "type": "album",
-        "uri": "spotify:album:6LPR2A12So7G9V2WoZgTwd"
-      },
+      "name": "The Kick Inside",
+      "popularity": null,
       "release_date": "1978-02-17",
       "release_date_precision": "day",
       "total_tracks": 13,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 181960,
-          "explicit": false,
-          "id": "6egShQABjQ53QOIBIfegUx",
-          "name": "Moving",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 232840,
-          "explicit": false,
-          "id": "3z7i9A609zfXm39kdubYLV",
-          "name": "The Saxophone Song",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 178693,
-          "explicit": false,
-          "id": "6qbpcPKMAskt9vxatIXiQP",
-          "name": "Strange Phenomena",
-          "preview_url": null,
-          "track_number": 3
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 177000,
-          "explicit": false,
-          "id": "3dB0YlVsRh1Or7YgWfkEWN",
-          "name": "Kite",
-          "preview_url": null,
-          "track_number": 4
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 158693,
-          "explicit": false,
-          "id": "5vtaZT3EUPp8wB1N0jAlWs",
-          "name": "The Man with the Child in His Eyes",
-          "preview_url": null,
-          "track_number": 5
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 269066,
-          "explicit": false,
-          "id": "2VyjK8wf0S6J8FgAgoqOkw",
-          "name": "Wuthering Heights",
-          "preview_url": null,
-          "track_number": 6
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 216506,
-          "explicit": false,
-          "id": "7y2DwVaSyLUBEjcAYgq9ws",
-          "name": "James and the Cold Gun",
-          "preview_url": null,
-          "track_number": 7
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 182866,
-          "explicit": false,
-          "id": "5NeqS6m1hrbx4RCQmc28Em",
-          "name": "Feel It",
-          "preview_url": null,
-          "track_number": 8
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 198093,
-          "explicit": false,
-          "id": "7FcnFSwGquIEDhJ18tHWd4",
-          "name": "Oh to Be in Love",
-          "preview_url": null,
-          "track_number": 9
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 148640,
-          "explicit": false,
-          "id": "2WNKe5vU2HsS40l34nGXeE",
-          "name": "L'Amour Looks Something Like You",
-          "preview_url": null,
-          "track_number": 10
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 185400,
-          "explicit": false,
-          "id": "3SmYS9PgiidYQTgNXHur2b",
-          "name": "Them Heavy People",
-          "preview_url": null,
-          "track_number": 11
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 245560,
-          "explicit": false,
-          "id": "2tMkcOAiAVo7Tk6zbYMinj",
-          "name": "Room for the Life",
-          "preview_url": null,
-          "track_number": 12
-        },
-        {
-          "artists": [
-            {
-              "id": "1aSxMhuvixZ8h9dK9jIDwL",
-              "name": "Kate Bush"
-            }
-          ],
-          "duration_ms": 214773,
-          "explicit": false,
-          "id": "6rO0vbLQOtPm6uUVNr3sPT",
-          "name": "The Kick Inside",
-          "preview_url": null,
-          "track_number": 13
-        }
-      ],
       "url": "https://open.spotify.com/album/6LPR2A12So7G9V2WoZgTwd"
     }
   },
@@ -1268,6 +330,16 @@
       "title": "The Kick Inside"
     }
   ],
-  "updated_at": "2025-07-10T08:21:13.088771",
+  "updated_at": "2026-09-12T19:47:09.673371",
+  "videos": [
+    "https://www.youtube.com/watch?v=ZvLeIi6_5Zg",
+    "https://www.youtube.com/watch?v=-1pMMIe4hb4",
+    "https://www.youtube.com/watch?v=Fk-4lXLM34g",
+    "https://www.youtube.com/watch?v=k2mt7_Xe7Lg",
+    "https://www.youtube.com/watch?v=ZvLeIi6_5Zg",
+    "https://www.youtube.com/watch?v=-1pMMIe4hb4",
+    "https://www.youtube.com/watch?v=Fk-4lXLM34g",
+    "https://www.youtube.com/watch?v=k2mt7_Xe7Lg"
+  ],
   "year": 1978
 }
