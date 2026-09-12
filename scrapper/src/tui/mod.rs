@@ -99,6 +99,12 @@ fn draw(f: &mut Frame, app: &mut App) {
         theme::footer(f, foot, "↑/↓/←/→ move · Enter edit cell · a add row · d delete row · s save · Esc discard");
         return;
     }
+    if app.processing.is_some() {
+        let (running, _, _) = app.processing_state();
+        screens::processing::draw(f, body, app);
+        theme::footer(f, foot, if running { "Esc hide this page (the run keeps going)" } else { "Esc back" });
+        return;
+    }
     if app.detail.is_some() {
         detail::draw_detail(f, body, app);
         theme::footer(f, foot, "↑/↓ select · Enter/e edit (saves immediately) · r refresh line · a refresh all · Esc back");

@@ -152,6 +152,9 @@ pub struct BoxsetSummary {
     pub has_headers: bool,
     /// Releases linked to this box via `raw_data.boxset.parent_discogs_id`.
     pub member_count: usize,
+    /// Flagged by the user as a single album in a box edition (`raw_data.boxset.single_release`),
+    /// so discovery is not offered for it.
+    pub single_release: bool,
 }
 
 impl BoxsetSummary {
@@ -218,6 +221,16 @@ pub fn boxset_section_headers(tracklist: &Value) -> Vec<String> {
                 .collect()
         })
         .unwrap_or_default()
+}
+
+/// `raw_data.boxset.single_release == true`: the user marked this box-format release as a
+/// single album in a box edition (see [`Db::set_boxset_single_release`]).
+pub fn is_single_release_boxset(raw_data: &Value) -> bool {
+    raw_data
+        .get("boxset")
+        .and_then(|b| b.get("single_release"))
+        .and_then(|v| v.as_bool())
+        .unwrap_or(false)
 }
 
 /// Whether a release's `formats[]` mark it as a box set — the same rule the collection
@@ -496,7 +509,7 @@ impl Db {
         let conn = self.conn()?;
         // LIKE is a cheap superset prefilter on the raw JSON text; the exact rule runs in Rust.
         let mut stmt = conn.prepare(
-            "SELECT discogs_id, title, artists, year, date_added, formats, tracklist FROM releases \
+            "SELECT discogs_id, title, artists, year, date_added, formats, tracklist, raw_data FROM releases \
              WHERE discogs_id IS NOT NULL AND LOWER(formats) LIKE '%box%' ORDER BY date_added DESC",
         )?;
         let rows = stmt
@@ -509,15 +522,17 @@ impl Db {
                     r.get::<_, Option<String>>(4)?,
                     parse_json(r.get(5)?, "[]"),
                     parse_json(r.get(6)?, "[]"),
+                    parse_json(r.get(7)?, "{}"),
                 ))
             })?
             .collect::<rusqlite::Result<Vec<_>>>()?;
         Ok(rows
             .into_iter()
-            .filter(|(_, _, _, _, _, formats, _)| is_boxset_format(formats))
-            .map(|(discogs_id, title, artists, year, date_added, _, tracklist)| BoxsetSummary {
+            .filter(|(_, _, _, _, _, formats, _, _)| is_boxset_format(formats))
+            .map(|(discogs_id, title, artists, year, date_added, _, tracklist, raw_data)| BoxsetSummary {
                 member_count: members.get(&discogs_id).copied().unwrap_or(0),
                 has_headers: !boxset_section_headers(&tracklist).is_empty(),
+                single_release: is_single_release_boxset(&raw_data),
                 artist_names: artist_names(&artists),
                 discogs_id,
                 title,
@@ -525,6 +540,40 @@ impl Db {
                 date_added,
             })
             .collect())
+    }
+
+    /// Flag (or unflag) a box-format release as a single album in a box edition. The flag lives
+    /// at `raw_data.boxset.single_release`, beside the member link `process_release` already
+    /// preserves across refreshes; it is never emitted to public JSON. Returns `false` when no
+    /// such release exists.
+    pub fn set_boxset_single_release(&self, discogs_id: &str, single: bool) -> Result<bool> {
+        let conn = self.conn()?;
+        let raw: Option<Option<String>> = conn
+            .query_row("SELECT raw_data FROM releases WHERE discogs_id = ?", [discogs_id], |r| r.get(0))
+            .optional()?;
+        let Some(raw) = raw else { return Ok(false) };
+        let mut raw_data: Value = parse_json(raw, "{}");
+        if !raw_data.is_object() {
+            raw_data = serde_json::json!({});
+        }
+        let obj = raw_data.as_object_mut().unwrap();
+        if single {
+            let boxset = obj.entry("boxset").or_insert_with(|| serde_json::json!({}));
+            if !boxset.is_object() {
+                *boxset = serde_json::json!({});
+            }
+            boxset.as_object_mut().unwrap().insert("single_release".into(), Value::Bool(true));
+        } else if let Some(boxset) = obj.get_mut("boxset").and_then(|b| b.as_object_mut()) {
+            boxset.remove("single_release");
+            if boxset.is_empty() {
+                obj.remove("boxset");
+            }
+        }
+        conn.execute(
+            "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
+            rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
+        )?;
+        Ok(true)
     }
 
     pub fn list_artists(&self, limit: u32, sort: &str) -> Result<Vec<ArtistSummary>> {
@@ -1076,6 +1125,15 @@ mod tests {
     }
 
     #[test]
+    fn single_release_flag_is_read_from_raw_data_boxset() {
+        assert!(is_single_release_boxset(&json!({"boxset": {"single_release": true}})));
+        assert!(!is_single_release_boxset(&json!({"boxset": {"single_release": false}})));
+        assert!(!is_single_release_boxset(&json!({"boxset": {"parent_discogs_id": "1"}})));
+        assert!(!is_single_release_boxset(&json!({})));
+        assert!(!is_single_release_boxset(&json!("")));
+    }
+
+    #[test]
     fn boxset_summary_query_matches_id_title_or_artist() {
         let s = BoxsetSummary {
             discogs_id: "7709507".into(),
@@ -1085,6 +1143,7 @@ mod tests {
             date_added: None,
             has_headers: true,
             member_count: 7,
+            single_release: false,
         };
         assert!(s.matches_query(""));
         assert!(s.matches_query("7709507"));

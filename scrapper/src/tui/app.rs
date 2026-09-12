@@ -1,6 +1,8 @@
 //! Central TUI state: the [`App`] struct, the [`Screen`] enum + menu, the background-task
 //! message channel, and the helpers screens/keys call into.
 
+use std::time::Instant;
+
 use ratatui::widgets::ListState;
 use tokio::sync::mpsc::{unbounded_channel, UnboundedReceiver, UnboundedSender};
 
@@ -40,13 +42,19 @@ pub(crate) enum BoxsetTab {
     Unprocessed,
     /// Boxes with at least one linked member — Enter opens the box's detail.
     Processed,
+    /// Flagged as a single album in a box edition — hidden from Unprocessed; ^x moves it back.
+    Single,
 }
 
 impl BoxsetTab {
-    pub(crate) fn toggle(self) -> Self {
+    pub(crate) const ALL: [BoxsetTab; 3] = [BoxsetTab::Unprocessed, BoxsetTab::Processed, BoxsetTab::Single];
+
+    /// The next tab in display order, wrapping.
+    pub(crate) fn next(self) -> Self {
         match self {
             BoxsetTab::Unprocessed => BoxsetTab::Processed,
-            BoxsetTab::Processed => BoxsetTab::Unprocessed,
+            BoxsetTab::Processed => BoxsetTab::Single,
+            BoxsetTab::Single => BoxsetTab::Unprocessed,
         }
     }
 
@@ -54,6 +62,18 @@ impl BoxsetTab {
         match self {
             BoxsetTab::Unprocessed => "Unprocessed",
             BoxsetTab::Processed => "Processed",
+            BoxsetTab::Single => "Single release",
+        }
+    }
+
+    /// Which tab a box belongs on.
+    pub(crate) fn of(b: &BoxsetSummary) -> Self {
+        if b.is_processed() {
+            BoxsetTab::Processed
+        } else if b.single_release {
+            BoxsetTab::Single
+        } else {
+            BoxsetTab::Unprocessed
         }
     }
 }
@@ -80,7 +100,7 @@ impl Screen {
             Screen::Releases | Screen::Artists => "type to search · ↑/↓ move · Enter details · Esc back",
             Screen::Services => "r re-probe · Esc back",
             Screen::Collection | Screen::ArtistRun => "type/↑/↓ set count · r run · Esc back",
-            Screen::Boxsets => "Tab switch view · type to search · ↑/↓ move · Enter run/open · ^f force-refetch · ^r re-run · Esc back",
+            Screen::Boxsets => "Tab switch view · type to search · ↑/↓ move · Enter run/open · ^x single release ⇄ unprocessed · ^f force-refetch · ^r re-run · Esc back",
             Screen::Dashboard => "Esc back",
         }
     }
@@ -95,6 +115,26 @@ pub(crate) const MENU: &[(&str, Screen)] = &[
     ("Collection", Screen::Collection),
     ("Enrich artists", Screen::ArtistRun),
 ];
+
+/// Which background run a [`Processing`] page is following (selects its log/progress buffers).
+#[derive(Clone, Copy, PartialEq, Debug)]
+pub(crate) enum RunKind {
+    Collection,
+    ArtistRun,
+    Boxset,
+    /// A single-record task started from the detail view (enrich, field refresh, service set).
+    Detail,
+}
+
+/// The full-screen processing page shown while a background run is active. It stays up when
+/// the run finishes (so the summary can be read) until Esc; Esc during the run only hides the
+/// page — the task keeps going and its pickers still surface.
+pub(crate) struct Processing {
+    pub(crate) kind: RunKind,
+    /// What is being processed, e.g. "Boxset discovery · [7709507] Simple Minds — …".
+    pub(crate) title: String,
+    pub(crate) started: Instant,
+}
 
 /// Messages from background tasks to the UI.
 pub(crate) enum Msg {
@@ -169,6 +209,9 @@ pub(crate) struct App {
     pub(crate) regen_running: bool,
     pub(crate) regen_dirty: bool,
 
+    /// Full-screen page for the run in progress (see [`Processing`]).
+    pub(crate) processing: Option<Processing>,
+
     // interactive modals
     pub(crate) pending: Option<PendingPick>,
     pub(crate) describe: Option<PendingDescribe>,
@@ -223,6 +266,7 @@ impl App {
             boxset_running: None,
             regen_running: false,
             regen_dirty: false,
+            processing: None,
             pending: None,
             describe: None,
             autostart: false,
@@ -261,45 +305,75 @@ impl App {
 
     /// Reload every box from the DB and re-apply the tab/query filter.
     pub(crate) fn load_boxsets(&mut self) {
-        self.boxsets_all = self.db.list_boxsets().unwrap_or_default();
+        // A Discogs "Box Set" whose tracklist has no album section headers is almost always a
+        // single album in a box edition, so it is not offered for discovery. Boxes linked by
+        // hand (CLI `--boxset`) still show under Processed, and ones the user flagged as a
+        // single release under that tab.
+        self.boxsets_all = self
+            .db
+            .list_boxsets()
+            .unwrap_or_default()
+            .into_iter()
+            .filter(|b| b.has_headers || b.is_processed() || b.single_release)
+            .collect();
         self.apply_boxset_filter();
     }
 
-    /// Narrow `boxsets_all` to the active tab and query (discoverable boxes first on the
-    /// Unprocessed tab). The cursor is only reset while the
+    /// Narrow `boxsets_all` to the active tab and query. The cursor is only reset while the
     /// Boxsets list is actually on screen, so a run completing in the background never moves
     /// another screen's selection.
     pub(crate) fn apply_boxset_filter(&mut self) {
-        let processed = self.boxset_tab == BoxsetTab::Processed;
+        let tab = self.boxset_tab;
         let q = self.query.clone();
         self.boxsets = self
             .boxsets_all
             .iter()
-            .filter(|b| b.is_processed() == processed && b.matches_query(&q))
+            .filter(|b| BoxsetTab::of(b) == tab && b.matches_query(&q))
             .cloned()
             .collect();
-        // Most Discogs "Box Set" formats are multi-LP editions with a flat tracklist, so on the
-        // Unprocessed tab surface the boxes discovery can actually work on first (stable: each
-        // group stays newest-first).
-        if !processed {
-            self.boxsets.sort_by_key(|b| !b.has_headers);
-        }
         if self.screen == Screen::Boxsets && self.detail.is_none() {
             self.list.select((!self.boxsets.is_empty()).then_some(0));
         }
     }
 
-    pub(crate) fn toggle_boxset_tab(&mut self) {
-        self.boxset_tab = self.boxset_tab.toggle();
+    pub(crate) fn next_boxset_tab(&mut self) {
+        self.boxset_tab = self.boxset_tab.next();
         self.apply_boxset_filter();
     }
 
-    /// (unprocessed, processed) counts for the tab bar, respecting the search query.
-    pub(crate) fn boxset_tab_counts(&self) -> (usize, usize) {
-        self.boxsets_all
-            .iter()
-            .filter(|b| b.matches_query(&self.query))
-            .fold((0, 0), |(u, p), b| if b.is_processed() { (u, p + 1) } else { (u + 1, p) })
+    /// Per-tab counts (in `BoxsetTab::ALL` order) for the tab bar, respecting the search query.
+    pub(crate) fn boxset_tab_counts(&self) -> [usize; 3] {
+        let mut counts = [0; 3];
+        for b in self.boxsets_all.iter().filter(|b| b.matches_query(&self.query)) {
+            let i = BoxsetTab::ALL.iter().position(|t| *t == BoxsetTab::of(b)).unwrap_or(0);
+            counts[i] += 1;
+        }
+        counts
+    }
+
+    /// Flag the selected unprocessed box as a single release (hiding it from Unprocessed), or
+    /// clear the flag on a box in the Single tab so it is offered for discovery again.
+    pub(crate) fn toggle_boxset_single_release(&mut self) {
+        let Some(b) = self.list.selected().and_then(|i| self.boxsets.get(i)) else { return };
+        let single = match self.boxset_tab {
+            BoxsetTab::Unprocessed => true,
+            BoxsetTab::Single => false,
+            BoxsetTab::Processed => return,
+        };
+        let (id, title) = (b.discogs_id.clone(), b.title.clone());
+        let line = match self.db.set_boxset_single_release(&id, single) {
+            Ok(true) if single => format!("[{id}] {title} flagged as a single release — moved to the Single release tab"),
+            Ok(true) => format!("[{id}] {title} is a box set again — moved to Unprocessed"),
+            Ok(false) => format!("[{id}] {title} is no longer in the database"),
+            Err(e) => format!("✗ could not update [{id}] {title}: {e}"),
+        };
+        push_capped(&mut self.boxset_log, line);
+        let sel = self.list.selected();
+        self.load_boxsets();
+        // Keep the cursor near where it was rather than jumping back to the top.
+        if let Some(i) = sel.filter(|_| !self.boxsets.is_empty()) {
+            self.list.select(Some(i.min(self.boxsets.len() - 1)));
+        }
     }
 
     /// Run boxset discovery for the selected box in the background. Refused while any other
@@ -312,9 +386,14 @@ impl App {
             push_capped(&mut self.boxset_log, "another interactive run is in progress — wait for it to finish".into());
             return;
         }
-        let Some(id) = self.list.selected().and_then(|i| self.boxsets.get(i)).map(|b| b.discogs_id.clone()) else {
+        let Some(b) = self.list.selected().and_then(|i| self.boxsets.get(i)) else {
             return;
         };
+        let id = b.discogs_id.clone();
+        self.begin_processing(
+            RunKind::Boxset,
+            format!("Boxset discovery · [{id}] {} — {} ({})", b.artist_names.join(", "), b.title, b.year.unwrap_or(0)),
+        );
         self.boxset_log.clear();
         self.boxset_progress = Some((0, 0));
         self.boxset_running = Some(id.clone());
@@ -350,6 +429,22 @@ impl App {
         let set = self.db.enriched_artist_ids().unwrap_or_default();
         self.artist_enriched = self.artists.iter().map(|a| set.contains(&a.id)).collect();
         self.list.select((!self.artists.is_empty()).then_some(0));
+    }
+
+    /// Switch to the processing page for a run that is starting.
+    fn begin_processing(&mut self, kind: RunKind, title: impl Into<String>) {
+        self.processing = Some(Processing { kind, title: title.into(), started: Instant::now() });
+    }
+
+    /// (still running, progress, log) for the run the processing page follows.
+    pub(crate) fn processing_state(&self) -> (bool, Option<(usize, usize)>, &[String]) {
+        match self.processing.as_ref().map(|p| p.kind) {
+            Some(RunKind::Collection) => (self.running, self.progress, &self.log),
+            Some(RunKind::ArtistRun) => (self.artist_running, self.artist_progress, &self.artist_log),
+            Some(RunKind::Boxset) => (self.boxset_running.is_some(), self.boxset_progress, &self.boxset_log),
+            Some(RunKind::Detail) => (self.detail_busy, None, &self.artist_log),
+            None => (false, None, &[]),
+        }
     }
 
     pub(crate) fn start_probes(&mut self) {
@@ -404,6 +499,7 @@ impl App {
         self.progress = Some((0, 0));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
         let limit = self.collection_count();
+        self.begin_processing(RunKind::Collection, format!("Collection · processing {limit} newest release(s)"));
         tokio::spawn(async move {
             runners::run_collection_task(cfg, db, tx, pick_tx, limit).await;
         });
@@ -418,6 +514,7 @@ impl App {
         self.artist_progress = Some((0, 0));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
         let limit = self.artist_count();
+        self.begin_processing(RunKind::ArtistRun, format!("Enrich artists · up to {limit} un-enriched artist(s)"));
         tokio::spawn(async move {
             runners::run_artist_task(cfg, db, tx, pick_tx, limit).await;
         });
@@ -430,6 +527,7 @@ impl App {
         }
         self.detail_busy = true;
         self.artist_log.clear();
+        self.begin_processing(RunKind::Detail, format!("Enrich artist · {name}"));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
         tokio::spawn(async move {
             runners::run_single_artist_task(cfg, db, tx, pick_tx, name).await;
@@ -443,6 +541,7 @@ impl App {
         }
         self.detail_busy = true;
         self.artist_log.clear();
+        self.begin_processing(RunKind::Detail, format!("Refresh release · {discogs_id}"));
         let (cfg, db, tx, pick_tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone(), self.pick_tx.clone());
         tokio::spawn(async move {
             runners::run_single_release_task(cfg, db, tx, pick_tx, discogs_id).await;
@@ -511,6 +610,7 @@ impl App {
                 self.detail_busy = true;
                 self.artist_log.clear();
                 let rec = (**rec).clone();
+                self.begin_processing(RunKind::Detail, format!("Refresh field · {}", rec.name));
                 tokio::spawn(async move {
                     runners::run_refresh_artist_field_task(cfg, db, tx, pick_tx, rec, field).await;
                 });
@@ -519,6 +619,7 @@ impl App {
                 self.detail_busy = true;
                 self.artist_log.clear();
                 let rec = (**rec).clone();
+                self.begin_processing(RunKind::Detail, format!("Refresh field · {}", rec.title));
                 tokio::spawn(async move {
                     runners::run_refresh_release_field_task(cfg, db, tx, pick_tx, rec, field).await;
                 });
@@ -617,6 +718,7 @@ impl App {
                 let input = text.to_string();
                 self.detail_busy = true;
                 self.artist_log.clear();
+                self.begin_processing(RunKind::Detail, format!("Set service · {}", rec.title));
                 let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
                 tokio::spawn(async move {
                     runners::run_set_release_service_task(cfg, db, tx, rec, field, input).await;
@@ -628,6 +730,7 @@ impl App {
                 let input = text.to_string();
                 self.detail_busy = true;
                 self.artist_log.clear();
+                self.begin_processing(RunKind::Detail, format!("Set service · {}", rec.name));
                 let (cfg, db, tx) = (self.cfg.clone(), self.db.clone(), self.tx.clone());
                 tokio::spawn(async move {
                     runners::run_set_artist_service_task(cfg, db, tx, rec, field, input).await;

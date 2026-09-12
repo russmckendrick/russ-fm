@@ -132,6 +132,30 @@ fn list_boxsets_reports_headers_members_and_order() -> Result<()> {
 }
 
 #[test]
+fn single_release_flag_round_trips_without_touching_other_raw_data() -> Result<()> {
+    let t = test_db()?;
+    let mut rec = release("37324902", "Weezer (Coloring Book)", json!(["Vinyl", "Box Set"]), headered_tracklist(), "2026-01-01T00:00:00");
+    rec.raw_data = json!({ "perplexity": { "description": "kept" } });
+    t.db.save_release(&rec)?;
+
+    assert!(t.db.set_boxset_single_release("37324902", true)?);
+    let b = t.db.list_boxsets()?.into_iter().find(|b| b.discogs_id == "37324902").expect("still listed");
+    assert!(b.single_release);
+    let raw = t.db.get_release_by_discogs_id("37324902")?.unwrap().raw_data;
+    assert_eq!(raw["boxset"]["single_release"], json!(true));
+    assert_eq!(raw["perplexity"]["description"], json!("kept"), "other raw_data untouched: {raw}");
+
+    assert!(t.db.set_boxset_single_release("37324902", false)?);
+    let b = t.db.list_boxsets()?.into_iter().find(|b| b.discogs_id == "37324902").unwrap();
+    assert!(!b.single_release);
+    let raw = t.db.get_release_by_discogs_id("37324902")?.unwrap().raw_data;
+    assert!(raw.get("boxset").is_none(), "empty boxset object removed: {raw}");
+
+    assert!(!t.db.set_boxset_single_release("0", true)?, "unknown release → false");
+    Ok(())
+}
+
+#[test]
 fn boxset_queries_tolerate_malformed_json_columns() -> Result<()> {
     let t = test_db()?;
     t.db.save_release(&release("7709507", "The Vinyl Collection 79-84", json!(["Box Set"]), headered_tracklist(), "2025-01-01T00:00:00"))?;

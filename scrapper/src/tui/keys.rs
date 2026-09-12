@@ -25,6 +25,13 @@ pub(crate) fn handle_key(app: &mut App, key: KeyEvent) {
         modals::handle_list_edit_key(app, code);
         return;
     }
+    // The processing page: Esc hides it (the run itself carries on), everything else waits.
+    if app.processing.is_some() {
+        if code == KeyCode::Esc {
+            app.processing = None;
+        }
+        return;
+    }
     // Detail drill-down has its own keys.
     if app.detail.is_some() {
         handle_detail_key(app, code);
@@ -101,16 +108,21 @@ pub(crate) fn handle_key(app: &mut App, key: KeyEvent) {
             _ => {}
         },
         Screen::Boxsets => match code {
-            KeyCode::Tab => app.toggle_boxset_tab(),
+            KeyCode::Tab => app.next_boxset_tab(),
             KeyCode::Up => app.move_selection(-1),
             KeyCode::Down => app.move_selection(1),
             KeyCode::Enter => match app.boxset_tab {
                 BoxsetTab::Unprocessed => app.start_boxset_discovery(false),
-                BoxsetTab::Processed => app.open_detail(),
+                BoxsetTab::Processed | BoxsetTab::Single => app.open_detail(),
             },
-            // Plain letters go to the search box, so the run actions take a modifier.
-            KeyCode::Char('f') if mods.contains(KeyModifiers::CONTROL) => app.start_boxset_discovery(true),
-            KeyCode::Char('r') if mods.contains(KeyModifiers::CONTROL) => app.start_boxset_discovery(false),
+            // Plain letters go to the search box, so the actions take a modifier.
+            KeyCode::Char('x') if mods.contains(KeyModifiers::CONTROL) => app.toggle_boxset_single_release(),
+            KeyCode::Char('f') if mods.contains(KeyModifiers::CONTROL) && app.boxset_tab != BoxsetTab::Single => {
+                app.start_boxset_discovery(true)
+            }
+            KeyCode::Char('r') if mods.contains(KeyModifiers::CONTROL) && app.boxset_tab != BoxsetTab::Single => {
+                app.start_boxset_discovery(false)
+            }
             KeyCode::Backspace => {
                 app.query.pop();
                 app.refresh_search();

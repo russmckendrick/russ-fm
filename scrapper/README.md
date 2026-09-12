@@ -153,10 +153,15 @@ configurable number of items (editable with digits or `↑/↓`) in the backgrou
 gauge and a step-by-step log. When a release *or artist* has more than one Apple Music / Spotify /
 Discogs candidate, a **modal match-picker** pauses the run so you can choose (`↑/↓` select, `Enter`
 confirm, `Esc` skip). From an artist's detail view, press `e` to enrich just that one artist.
-The **Boxsets** screen splits box-set releases into *Unprocessed* and *Processed* views
-(`Tab` toggles): `Enter` on an unprocessed box runs boxset discovery in the background (the
-`release --boxset` workflow with modal pickers), `Ctrl+F` refetches the box first, and on a
-processed box `Enter` opens its detail while `Ctrl+R` re-runs discovery.
+The **Boxsets** screen splits box-set releases that have album section headers into
+*Unprocessed*, *Processed* and *Single release* views (`Tab` cycles): `Enter` on an unprocessed
+box runs boxset discovery (the `release --boxset` workflow with modal pickers), `Ctrl+F`
+refetches the box first, `Ctrl+X` flags it as a single album in a box edition (moving it to the
+Single release view, where `Ctrl+X` moves it back), and on a processed box `Enter` opens its
+detail while `Ctrl+R` re-runs discovery.
+Every background run opens a full-screen **processing page** (what is being processed, spinner,
+gauge, full log) that the pickers overlay and return to; it stays up with the summary until
+`Esc`, and `Esc` mid-run hides it while the run continues.
 Keys: type to search, `↑/↓` move, `Enter` open detail / run, `Tab` switch boxset view, `r`
 run/re-probe, `e` enrich (artist detail), `Esc` back, `q` quit.
 

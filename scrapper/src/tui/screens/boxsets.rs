@@ -1,6 +1,7 @@
-//! Boxsets browser: box-set releases split into Unprocessed (no linked members yet — Enter
-//! runs album discovery) and Processed (Enter opens the box's detail) tabs, with the discovery
-//! run's progress and log underneath so a run can be watched without leaving the screen.
+//! Boxsets browser: box-set releases with album section headers, split into Unprocessed (no
+//! linked members yet — Enter runs album discovery on the processing page), Processed (Enter
+//! opens the box's detail) and Single release (user-flagged single albums in a box edition;
+//! ^x moves one back) tabs, with the last run's progress and log underneath.
 
 use ratatui::prelude::*;
 use ratatui::widgets::{List, ListItem, Tabs};
@@ -20,15 +21,11 @@ pub(crate) fn draw(f: &mut Frame, area: Rect, app: &mut App) {
     .split(area);
     f.render_widget(search_box(&app.query, app.boxsets.len()), rows[0]);
 
-    let (unprocessed, processed) = app.boxset_tab_counts();
-    let tabs = Tabs::new(vec![
-        format!(" {} ({unprocessed}) ", BoxsetTab::Unprocessed.label()),
-        format!(" {} ({processed}) ", BoxsetTab::Processed.label()),
-    ])
-        .select(match app.boxset_tab {
-            BoxsetTab::Unprocessed => 0,
-            BoxsetTab::Processed => 1,
-        })
+    let counts = app.boxset_tab_counts();
+    let titles: Vec<String> =
+        BoxsetTab::ALL.iter().zip(counts).map(|(t, n)| format!(" {} ({n}) ", t.label())).collect();
+    let tabs = Tabs::new(titles)
+        .select(BoxsetTab::ALL.iter().position(|t| *t == app.boxset_tab).unwrap_or(0))
         .style(theme::dim())
         .highlight_style(theme::highlight_style())
         .divider("│");
@@ -41,7 +38,7 @@ pub(crate) fn draw(f: &mut Frame, area: Rect, app: &mut App) {
         .map(|b| {
             let mut spans = vec![
                 Span::raw("  "),
-                theme::badge(b.is_processed() || b.has_headers),
+                theme::badge(b.is_processed()),
                 Span::raw(format!(
                     " [{}] {} — {} ({})",
                     b.discogs_id,
@@ -50,13 +47,11 @@ pub(crate) fn draw(f: &mut Frame, area: Rect, app: &mut App) {
                     b.year.unwrap_or(0)
                 )),
             ];
-            match app.boxset_tab {
-                BoxsetTab::Unprocessed if !b.has_headers => spans.push(Span::styled(" · no headers", theme::dim())),
-                BoxsetTab::Processed => spans.push(Span::styled(
+            if app.boxset_tab == BoxsetTab::Processed {
+                spans.push(Span::styled(
                     format!(" · {} album{}", b.member_count, if b.member_count == 1 { "" } else { "s" }),
                     theme::dim(),
-                )),
-                _ => {}
+                ));
             }
             if running == Some(b.discogs_id.as_str()) {
                 spans.push(Span::styled(" ▶ running…", theme::title_style()));
@@ -65,14 +60,12 @@ pub(crate) fn draw(f: &mut Frame, area: Rect, app: &mut App) {
         })
         .collect();
     let title = match app.boxset_tab {
-        BoxsetTab::Unprocessed => {
-            let discoverable = app.boxsets.iter().filter(|b| b.has_headers).count();
-            format!("Boxsets · Unprocessed — {discoverable} with album headers listed first · Enter runs discovery")
-        }
-        BoxsetTab::Processed => "Boxsets · Processed — Enter opens detail · ^r re-runs discovery".to_string(),
+        BoxsetTab::Unprocessed => "Boxsets · Unprocessed — Enter runs discovery · ^x flag as a single release",
+        BoxsetTab::Processed => "Boxsets · Processed — Enter opens detail · ^r re-runs discovery",
+        BoxsetTab::Single => "Boxsets · Single release — Enter opens detail · ^x move back to Unprocessed",
     };
     let list = List::new(items)
-        .block(theme::panel(&title))
+        .block(theme::panel(title))
         .highlight_style(theme::highlight_style())
         .highlight_symbol("▶ ");
     f.render_stateful_widget(list, rows[2], &mut app.list);

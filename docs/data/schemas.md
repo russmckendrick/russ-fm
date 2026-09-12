@@ -89,6 +89,9 @@ Main collection index used for album listings.
 > facet browse, the genre explorer, and wrapped — the helper is
 > [`src/lib/boxsets.ts`](../../src/lib/boxsets.ts). The `boxset` key inside DB `raw_data` is
 > deliberately not emitted into the public album JSON (`release_services` whitelists keys).
+> The same `raw_data.boxset` object can instead carry `single_release: true` (set from the TUI
+> Boxsets screen) on a box-format release that is really one album; it has no parent link, so
+> the generator ignores it and nothing reaches collection.json or the album JSON.
 
 ---
 

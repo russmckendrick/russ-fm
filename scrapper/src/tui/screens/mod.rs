@@ -6,6 +6,7 @@ pub(crate) mod boxsets;
 pub(crate) mod collection;
 pub(crate) mod dashboard;
 pub(crate) mod home;
+pub(crate) mod processing;
 pub(crate) mod releases;
 pub(crate) mod services;
 
@@ -59,7 +60,7 @@ pub(crate) fn draw_progress_log(
 ) {
     let (done, total) = progress.unwrap_or((0, 0));
     let ratio = if total > 0 { done as f64 / total as f64 } else { 0.0 };
-    let label = if running {
+    let label = if running && total > 0 {
         format!("{done}/{total}")
     } else if total > 0 {
         format!("done {done}/{total}")
