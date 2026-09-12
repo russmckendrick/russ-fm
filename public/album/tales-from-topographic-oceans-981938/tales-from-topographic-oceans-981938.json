@@ -103,20 +103,13 @@
       "type": "secondary",
       "url": "https://i.discogs.com/qOthADbJPz4UBKMzw4UfNy3c6vQN9i32unVfqepkRNA/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk4MTkz/OC0xNDM3NDE2Mzg0/LTU0MjguanBlZw.jpeg",
       "width": 600
-    },
-    {
-      "height": 2000,
-      "resource_url": null,
-      "type": "apple_music_artwork",
-      "url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/c5/6b/54/c56b5456-32cb-b3a9-e5c7-578f12ccaee8/603497886173.jpg/2000x2000bb.jpg",
-      "width": 2000
     }
   ],
   "labels": [
     "Atlantic",
     "Atlantic"
   ],
-  "lastfm_mbid": null,
+  "lastfm_mbid": "0fcaebb9-a529-47be-b563-6d2b5faff852",
   "lastfm_url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans",
   "local_images": {
     "hi-res": "../public/album/tales-from-topographic-oceans-981938/tales-from-topographic-oceans-981938-hi-res.jpg",
@@ -126,12 +119,14 @@
   "processing_info": {
     "has_local_images": true,
     "local_images_count": 3,
-    "processed_at": "2025-07-10T08:54:03.986302",
+    "processed_at": "2026-09-12T19:55:55.306694",
     "services_used": [
       "discogs",
       "apple_music",
       "spotify",
-      "wikipedia"
+      "lastfm",
+      "wikipedia",
+      "perplexity"
     ]
   },
   "release_name_apple_music": "Tales from Topographic Oceans",
@@ -140,22 +135,23 @@
   "released": "1973-12-07",
   "services": {
     "apple_music": {
-      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/c5/6b/54/c56b5456-32cb-b3a9-e5c7-578f12ccaee8/603497886173.jpg/2000x2000bb.jpg",
+      "artwork_url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/c5/6b/54/c56b5456-32cb-b3a9-e5c7-578f12ccaee8/603497886173.jpg/{w}x{h}bb.jpg",
       "content_rating": null,
       "copyright": "℗ 1973 Atlantic Records. Marketed by Rhino Entertainment Company, a Warner Music Group Company.",
       "editorial_notes": null,
       "id": "1049006570",
       "is_complete": true,
+      "name": "Tales from Topographic Oceans",
       "preview_url": null,
       "raw_attributes": {
         "artistName": "Yes",
         "artwork": {
-          "bgColor": "2a233b",
+          "bgColor": "2f2940",
           "height": 1425,
-          "textColor1": "f7f8fd",
-          "textColor2": "efe0d6",
-          "textColor3": "cecdd6",
-          "textColor4": "c7bab7",
+          "textColor1": "e2dbce",
+          "textColor2": "cababc",
+          "textColor3": "beb7b2",
+          "textColor4": "ab9da3",
           "url": "https://is1-ssl.mzstatic.com/image/thumb/Music6/v4/c5/6b/54/c56b5456-32cb-b3a9-e5c7-578f12ccaee8/603497886173.jpg/{w}x{h}bb.jpg",
           "width": 1425
         },
@@ -189,170 +185,32 @@
       "images": [
         {
           "size": "small",
-          "url": "https://lastfm.freetls.fastly.net/i/u/34s/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/34s/95753961559b45889779c8ba20e3c527.png"
         },
         {
           "size": "medium",
-          "url": "https://lastfm.freetls.fastly.net/i/u/64s/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/64s/95753961559b45889779c8ba20e3c527.png"
         },
         {
           "size": "large",
-          "url": "https://lastfm.freetls.fastly.net/i/u/174s/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/174s/95753961559b45889779c8ba20e3c527.png"
         },
         {
           "size": "extralarge",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
         },
         {
           "size": "mega",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
         },
         {
           "size": "",
-          "url": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
+          "url": "https://lastfm-img.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png"
         }
       ],
-      "listeners": 31194,
+      "listeners": "32405",
       "mbid": "0fcaebb9-a529-47be-b563-6d2b5faff852",
-      "playcount": 355855,
-      "raw_data": {
-        "album": {
-          "artist": "Yes",
-          "image": [
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/34s/95753961559b45889779c8ba20e3c527.png",
-              "size": "small"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/64s/95753961559b45889779c8ba20e3c527.png",
-              "size": "medium"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/174s/95753961559b45889779c8ba20e3c527.png",
-              "size": "large"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png",
-              "size": "extralarge"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png",
-              "size": "mega"
-            },
-            {
-              "#text": "https://lastfm.freetls.fastly.net/i/u/300x300/95753961559b45889779c8ba20e3c527.png",
-              "size": ""
-            }
-          ],
-          "listeners": "31194",
-          "mbid": "0fcaebb9-a529-47be-b563-6d2b5faff852",
-          "name": "Tales from Topographic Oceans",
-          "playcount": "355855",
-          "tags": {
-            "tag": [
-              {
-                "name": "progressive rock",
-                "url": "https://www.last.fm/tag/progressive+rock"
-              },
-              {
-                "name": "concept album",
-                "url": "https://www.last.fm/tag/concept+album"
-              },
-              {
-                "name": "1973",
-                "url": "https://www.last.fm/tag/1973"
-              },
-              {
-                "name": "yes",
-                "url": "https://www.last.fm/tag/yes"
-              },
-              {
-                "name": "symphonic rock",
-                "url": "https://www.last.fm/tag/symphonic+rock"
-              }
-            ]
-          },
-          "tracks": {
-            "track": [
-              {
-                "@attr": {
-                  "rank": 1
-                },
-                "artist": {
-                  "mbid": "8353f93f-163e-48c2-bb75-9f18987a3d46",
-                  "name": "Yes",
-                  "url": "https://www.last.fm/music/Yes"
-                },
-                "duration": 1227,
-                "name": "The Revealing Science Of God",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans/The+Revealing+Science+Of+God"
-              },
-              {
-                "@attr": {
-                  "rank": 2
-                },
-                "artist": {
-                  "mbid": "8353f93f-163e-48c2-bb75-9f18987a3d46",
-                  "name": "Yes",
-                  "url": "https://www.last.fm/music/Yes"
-                },
-                "duration": 1238,
-                "name": "The Remembering",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans/The+Remembering"
-              },
-              {
-                "@attr": {
-                  "rank": 3
-                },
-                "artist": {
-                  "mbid": "8353f93f-163e-48c2-bb75-9f18987a3d46",
-                  "name": "Yes",
-                  "url": "https://www.last.fm/music/Yes"
-                },
-                "duration": null,
-                "name": "The Ancient",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans/The+Ancient"
-              },
-              {
-                "@attr": {
-                  "rank": 4
-                },
-                "artist": {
-                  "mbid": "8353f93f-163e-48c2-bb75-9f18987a3d46",
-                  "name": "Yes",
-                  "url": "https://www.last.fm/music/Yes"
-                },
-                "duration": 1547,
-                "name": "Ritual",
-                "streamable": {
-                  "#text": "0",
-                  "fulltrack": "0"
-                },
-                "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans/Ritual"
-              }
-            ]
-          },
-          "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans",
-          "wiki": {
-            "content": "Tales from Topographic Oceans is the sixth studio album from the English progressive rock band Yes, released in 1973 on Atlantic Records. Presented as a double album with one track on each side, its concept is based on singer Jon Anderson's interpretation of four Shastric scriptures from a footnote in Autobiography of a Yogi by Paramahansa Yogananda. It is the first studio album to feature drummer Alan White who replaced Bill Bruford in 1972.\n\nTales from Topographic Oceans became the first album in the UK to earn a gold certification prior to its release. It reached number-one on the UK Albums Chart for two weeks and peaked at number 6 on the Billboard 200.\n\nYes began to produce longer pieces of music on Close to the Edge (1972), their fifth studio release that features the 18-minute eponymous title track. Following its release, singer Jon Anderson was searching for a theme for a large-scale composition. One evening in March 1973, while on a concert tour of Japan to promote Close to the Edge, Anderson found himself \"caught up in a lengthy footnote on page 83\" of Autobiography of a Yogi by Paramahansa Yogananda which describes four Shastric scriptures that cover religion, art, social life, medicine, music and architecture. Anderson was introduced to Yogananda's work that month at the wedding reception of former Yes drummer Bill Bruford by Jamie Muir, then the percussionist for King Crimson.\n\nAs the group continued to tour in Australia and the United States, Anderson described the idea to guitarist Steve Howe, who took a liking to the concept of four \"interlocking\" pieces of music based around the scriptures. The two held candlelight sessions in their hotel rooms, with the basis of the vocals, lyrics, and instrumentation being put down after a six-hour session that ended at 7 a.m. while in Savannah, Georgia that April. Anderson was originally going to name the album Tales From Tobographic Oceans, claiming he had invented the word \"tobographic\" that was based on one of Fred Hoyle's theories of space. He mentioned the title while having dinner with Phil Carson, the CEO of Atlantic Records, but Carson noted that \"tobographic\" sounded like \"topographic\". Anderson liked the suggestion and changed the title accordingly.\n\nThe album's cover was designed and illustrated by Roger Dean, who also designed artwork for the band's previous albums Fragile (1971), Close to the Edge (1972), and Yessongs (1973)\n\nRehearsals, recording, and the arranging of the music on Tales from Topographic Oceans took place across five months at Morgan Studios in London. The band were split to decide whether the album was to be recorded in the city or the countryside. They agreed to record in the city with a studio decorated like it was outside with white wooden fences and stacks of hay. Rock group Black Sabbath was recording their album Sabbath Bloody Sabbath in the studio next door. Their singer Ozzy Osbourne recalled that placed in the Yes studio was a model cow with electronic udders and a small barn to give the room an \"earthy\" feel. It is the first studio album to feature drummer Alan White, who joined Yes after Bruford's departure prior to the release of Close to the Edge.\n\nThe album is based around four scriptures: Shruti, Smriti, Puranas and Tantras.\n\nTales from Topographic Oceans was first released in Europe on 14 December 1973, followed by a North American release in January 1974. The album was an instant commercial success; it became the first album in the United Kingdom following a change in regulations to qualify for a gold disc, the band's fourth consecutive, based on pre-orders alone. It reached the number one spot in the UK Albums Chart, the first of two Yes albums to do so, for a total of two weeks. In the United States, the record peaked at number 6 on the Billboard 200 chart.\n\nThe album remains Yes' most controversial album that continues to divide listeners. Gordon Fletcher in his review in Rolling Stone magazine described the record as \"psychedelic doodling\". In its fortieth anniversary issue from 9 May 1992, trade publication NME selected Tales from Topographic Oceans for their \"40 Records That Captured The Moment\" for 1974.\n\nAt the time of the album's release, Wakeman expressed a dislike for the record. He criticised Anderson's understanding of the Shastric scriptures after reading a single footnote. His contributions to the music were little, and often spent time drinking at the studio bar, playing darts, and even played keyboards on the Sabbath track \"Sabbra Cadabra\". In recent years, Wakeman has noted that his total dislike of the album is not entirely true. He thinks that there are some \"very nice musical moments in Topographic Oceans, but because of the...format of how records used to be we, had too much for a single album but not enough for a double...so we padded it out and the padding is awful...but there are some beautiful solos like \"Nous sommes du Soleil\"... is one of the most beautiful melodies...and deserved to be developed even more perhaps.\"\n\nIn 2003, the album was digitally remastered which featured the restored introduction to \"The Revealing Science of God\". Studio run-throughs of \"The Ancient\" and \"The Revealing Science of God\" were also included.\n\nCorrect track listing:\n\n1. The Revealing Science of God (Dance of the Dawn)\n2. The Remembering (High the Memory)\n3. The Ancient (Giants Under the Sun)\n4. Ritual (Nous sommes du soleil) <a href=\"https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
-            "published": "06 Jun 2016, 21:25",
-            "summary": "Tales from Topographic Oceans is the sixth studio album from the English progressive rock band Yes, released in 1973 on Atlantic Records. Presented as a double album with one track on each side, its concept is based on singer Jon Anderson's interpretation of four Shastric scriptures from a footnote in Autobiography of a Yogi by Paramahansa Yogananda. It is the first studio album to feature drummer Alan White who replaced Bill Bruford in 1972. Tales from Topographic Oceans became the first album in the UK to earn a gold certification prior to its release. It reached number-one on the UK <a href=\"https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans\">Read more on Last.fm</a>."
-          }
-        }
-      },
-      "similar_artists": [],
+      "playcount": "392453",
       "tags": [
         "progressive rock",
         "concept album",
@@ -360,29 +218,18 @@
         "yes",
         "symphonic rock"
       ],
-      "top_albums": [],
-      "top_tracks": [],
       "url": "https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans",
       "wiki_content": "Tales from Topographic Oceans is the sixth studio album from the English progressive rock band Yes, released in 1973 on Atlantic Records. Presented as a double album with one track on each side, its concept is based on singer Jon Anderson's interpretation of four Shastric scriptures from a footnote in Autobiography of a Yogi by Paramahansa Yogananda. It is the first studio album to feature drummer Alan White who replaced Bill Bruford in 1972.\n\nTales from Topographic Oceans became the first album in the UK to earn a gold certification prior to its release. It reached number-one on the UK Albums Chart for two weeks and peaked at number 6 on the Billboard 200.\n\nYes began to produce longer pieces of music on Close to the Edge (1972), their fifth studio release that features the 18-minute eponymous title track. Following its release, singer Jon Anderson was searching for a theme for a large-scale composition. One evening in March 1973, while on a concert tour of Japan to promote Close to the Edge, Anderson found himself \"caught up in a lengthy footnote on page 83\" of Autobiography of a Yogi by Paramahansa Yogananda which describes four Shastric scriptures that cover religion, art, social life, medicine, music and architecture. Anderson was introduced to Yogananda's work that month at the wedding reception of former Yes drummer Bill Bruford by Jamie Muir, then the percussionist for King Crimson.\n\nAs the group continued to tour in Australia and the United States, Anderson described the idea to guitarist Steve Howe, who took a liking to the concept of four \"interlocking\" pieces of music based around the scriptures. The two held candlelight sessions in their hotel rooms, with the basis of the vocals, lyrics, and instrumentation being put down after a six-hour session that ended at 7 a.m. while in Savannah, Georgia that April. Anderson was originally going to name the album Tales From Tobographic Oceans, claiming he had invented the word \"tobographic\" that was based on one of Fred Hoyle's theories of space. He mentioned the title while having dinner with Phil Carson, the CEO of Atlantic Records, but Carson noted that \"tobographic\" sounded like \"topographic\". Anderson liked the suggestion and changed the title accordingly.\n\nThe album's cover was designed and illustrated by Roger Dean, who also designed artwork for the band's previous albums Fragile (1971), Close to the Edge (1972), and Yessongs (1973)\n\nRehearsals, recording, and the arranging of the music on Tales from Topographic Oceans took place across five months at Morgan Studios in London. The band were split to decide whether the album was to be recorded in the city or the countryside. They agreed to record in the city with a studio decorated like it was outside with white wooden fences and stacks of hay. Rock group Black Sabbath was recording their album Sabbath Bloody Sabbath in the studio next door. Their singer Ozzy Osbourne recalled that placed in the Yes studio was a model cow with electronic udders and a small barn to give the room an \"earthy\" feel. It is the first studio album to feature drummer Alan White, who joined Yes after Bruford's departure prior to the release of Close to the Edge.\n\nThe album is based around four scriptures: Shruti, Smriti, Puranas and Tantras.\n\nTales from Topographic Oceans was first released in Europe on 14 December 1973, followed by a North American release in January 1974. The album was an instant commercial success; it became the first album in the United Kingdom following a change in regulations to qualify for a gold disc, the band's fourth consecutive, based on pre-orders alone. It reached the number one spot in the UK Albums Chart, the first of two Yes albums to do so, for a total of two weeks. In the United States, the record peaked at number 6 on the Billboard 200 chart.\n\nThe album remains Yes' most controversial album that continues to divide listeners. Gordon Fletcher in his review in Rolling Stone magazine described the record as \"psychedelic doodling\". In its fortieth anniversary issue from 9 May 1992, trade publication NME selected Tales from Topographic Oceans for their \"40 Records That Captured The Moment\" for 1974.\n\nAt the time of the album's release, Wakeman expressed a dislike for the record. He criticised Anderson's understanding of the Shastric scriptures after reading a single footnote. His contributions to the music were little, and often spent time drinking at the studio bar, playing darts, and even played keyboards on the Sabbath track \"Sabbra Cadabra\". In recent years, Wakeman has noted that his total dislike of the album is not entirely true. He thinks that there are some \"very nice musical moments in Topographic Oceans, but because of the...format of how records used to be we, had too much for a single album but not enough for a double...so we padded it out and the padding is awful...but there are some beautiful solos like \"Nous sommes du Soleil\"... is one of the most beautiful melodies...and deserved to be developed even more perhaps.\"\n\nIn 2003, the album was digitally remastered which featured the restored introduction to \"The Revealing Science of God\". Studio run-throughs of \"The Ancient\" and \"The Revealing Science of God\" were also included.\n\nCorrect track listing:\n\n1. The Revealing Science of God (Dance of the Dawn)\n2. The Remembering (High the Memory)\n3. The Ancient (Giants Under the Sun)\n4. Ritual (Nous sommes du soleil) <a href=\"https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans\">Read more on Last.fm</a>. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
       "wiki_summary": "Tales from Topographic Oceans is the sixth studio album from the English progressive rock band Yes, released in 1973 on Atlantic Records. Presented as a double album with one track on each side, its concept is based on singer Jon Anderson's interpretation of four Shastric scriptures from a footnote in Autobiography of a Yogi by Paramahansa Yogananda. It is the first studio album to feature drummer Alan White who replaced Bill Bruford in 1972. Tales from Topographic Oceans became the first album in the UK to earn a gold certification prior to its release. It reached number-one on the UK <a href=\"https://www.last.fm/music/Yes/Tales+from+Topographic+Oceans\">Read more on Last.fm</a>."
     },
+    "perplexity": {
+      "description": "Released in 1973, Tales from Topographic Oceans is Yes’s ambitious double album and one of the defining statements of progressive rock. Built around four expansive, side-long compositions, it combines symphonic structure, extended instrumental passages, and Jon Anderson’s mystical concept inspired by Hindu scripture and Autobiography of a Yogi. The album captures the band at their most elaborate, with dense arrangements, layered keyboards, intricate guitar and bass interplay, and Rick Wakeman’s monumental keyboard textures giving the music its sweeping, almost orchestral scale.\n\nThe record was both a commercial triumph and a lightning rod for criticism, arriving on Atlantic at the height of prog’s popularity. It topped the UK chart, reached No. 6 in the U.S., and earned gold status, but its length and conceptual density also made it one of Yes’s most divisive releases. For many listeners, that tension is exactly what gives the album its enduring significance: it is a peak example of 1970s progressive rock’s ambition, excess, and compositional daring.",
+      "generated_at": "2026-09-12T19:55:39.810998",
+      "model": "sonar",
+      "source": "perplexity"
+    },
     "spotify": {
       "album_type": "album",
-      "available_markets": [],
-      "copyrights": [
-        {
-          "text": "© 1973 Atlantic Records",
-          "type": "C"
-        },
-        {
-          "text": "℗ 1973 Atlantic Records. Marketed by Rhino Entertainment Company, a Warner Music Group Company.",
-          "type": "P"
-        }
-      ],
-      "explicit": false,
-      "external_ids": {
-        "upc": "603497907229"
-      },
       "id": "2jyRgoJxPN33rE4pcbozbQ",
       "images": [
         {
@@ -401,263 +248,12 @@
           "width": 64
         }
       ],
-      "label": "Rhino Atlantic",
-      "popularity": 22,
-      "preview_url": null,
-      "raw_data": {
-        "album_type": "album",
-        "artists": [
-          {
-            "external_urls": {
-              "spotify": "https://open.spotify.com/artist/7AC976RDJzL2asmZuz7qil"
-            },
-            "href": "https://api.spotify.com/v1/artists/7AC976RDJzL2asmZuz7qil",
-            "id": "7AC976RDJzL2asmZuz7qil",
-            "name": "Yes",
-            "type": "artist",
-            "uri": "spotify:artist:7AC976RDJzL2asmZuz7qil"
-          }
-        ],
-        "copyrights": [
-          {
-            "text": "© 1973 Atlantic Records",
-            "type": "C"
-          },
-          {
-            "text": "℗ 1973 Atlantic Records. Marketed by Rhino Entertainment Company, a Warner Music Group Company.",
-            "type": "P"
-          }
-        ],
-        "external_ids": {
-          "upc": "603497907229"
-        },
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2jyRgoJxPN33rE4pcbozbQ"
-        },
-        "genres": [],
-        "href": "https://api.spotify.com/v1/albums/2jyRgoJxPN33rE4pcbozbQ?market=US",
-        "id": "2jyRgoJxPN33rE4pcbozbQ",
-        "images": [
-          {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273553b24e297b6c4942cc52edf",
-            "width": 640
-          },
-          {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02553b24e297b6c4942cc52edf",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851553b24e297b6c4942cc52edf",
-            "width": 64
-          }
-        ],
-        "is_playable": true,
-        "label": "Rhino Atlantic",
-        "name": "Tales from Topographic Oceans",
-        "popularity": 22,
-        "release_date": "1973-12-14",
-        "release_date_precision": "day",
-        "total_tracks": 4,
-        "tracks": {
-          "href": "https://api.spotify.com/v1/albums/2jyRgoJxPN33rE4pcbozbQ/tracks?offset=0&limit=50&market=US",
-          "items": [
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7AC976RDJzL2asmZuz7qil"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7AC976RDJzL2asmZuz7qil",
-                  "id": "7AC976RDJzL2asmZuz7qil",
-                  "name": "Yes",
-                  "type": "artist",
-                  "uri": "spotify:artist:7AC976RDJzL2asmZuz7qil"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 1321360,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/1PE2aylH88eOpjAOTY3SaC"
-              },
-              "href": "https://api.spotify.com/v1/tracks/1PE2aylH88eOpjAOTY3SaC",
-              "id": "1PE2aylH88eOpjAOTY3SaC",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Revealing Science of God (Dance of the Dawn)",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:1PE2aylH88eOpjAOTY3SaC"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7AC976RDJzL2asmZuz7qil"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7AC976RDJzL2asmZuz7qil",
-                  "id": "7AC976RDJzL2asmZuz7qil",
-                  "name": "Yes",
-                  "type": "artist",
-                  "uri": "spotify:artist:7AC976RDJzL2asmZuz7qil"
-                }
-              ],
-              "disc_number": 1,
-              "duration_ms": 1234320,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/5z69wdqxT1LAajbMgqoYbv"
-              },
-              "href": "https://api.spotify.com/v1/tracks/5z69wdqxT1LAajbMgqoYbv",
-              "id": "5z69wdqxT1LAajbMgqoYbv",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Remembering / High the Memory",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:5z69wdqxT1LAajbMgqoYbv"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7AC976RDJzL2asmZuz7qil"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7AC976RDJzL2asmZuz7qil",
-                  "id": "7AC976RDJzL2asmZuz7qil",
-                  "name": "Yes",
-                  "type": "artist",
-                  "uri": "spotify:artist:7AC976RDJzL2asmZuz7qil"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 1111520,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/7i4lAnzRjwxO4jtuMXGME8"
-              },
-              "href": "https://api.spotify.com/v1/tracks/7i4lAnzRjwxO4jtuMXGME8",
-              "id": "7i4lAnzRjwxO4jtuMXGME8",
-              "is_local": false,
-              "is_playable": true,
-              "name": "The Ancient / Giants Under the Sun",
-              "preview_url": null,
-              "track_number": 1,
-              "type": "track",
-              "uri": "spotify:track:7i4lAnzRjwxO4jtuMXGME8"
-            },
-            {
-              "artists": [
-                {
-                  "external_urls": {
-                    "spotify": "https://open.spotify.com/artist/7AC976RDJzL2asmZuz7qil"
-                  },
-                  "href": "https://api.spotify.com/v1/artists/7AC976RDJzL2asmZuz7qil",
-                  "id": "7AC976RDJzL2asmZuz7qil",
-                  "name": "Yes",
-                  "type": "artist",
-                  "uri": "spotify:artist:7AC976RDJzL2asmZuz7qil"
-                }
-              ],
-              "disc_number": 2,
-              "duration_ms": 1292773,
-              "explicit": false,
-              "external_urls": {
-                "spotify": "https://open.spotify.com/track/4QusYl9hKgMSmpUf2A4sEG"
-              },
-              "href": "https://api.spotify.com/v1/tracks/4QusYl9hKgMSmpUf2A4sEG",
-              "id": "4QusYl9hKgMSmpUf2A4sEG",
-              "is_local": false,
-              "is_playable": true,
-              "name": "Ritual (Nous Sommes du Soleil)",
-              "preview_url": null,
-              "track_number": 2,
-              "type": "track",
-              "uri": "spotify:track:4QusYl9hKgMSmpUf2A4sEG"
-            }
-          ],
-          "limit": 50,
-          "next": null,
-          "offset": 0,
-          "previous": null,
-          "total": 4
-        },
-        "type": "album",
-        "uri": "spotify:album:2jyRgoJxPN33rE4pcbozbQ"
-      },
+      "name": "Tales from Topographic Oceans",
+      "popularity": null,
       "release_date": "1973-12-14",
       "release_date_precision": "day",
       "total_tracks": 4,
-      "tracks": [
-        {
-          "artists": [
-            {
-              "id": "7AC976RDJzL2asmZuz7qil",
-              "name": "Yes"
-            }
-          ],
-          "duration_ms": 1321360,
-          "explicit": false,
-          "id": "1PE2aylH88eOpjAOTY3SaC",
-          "name": "The Revealing Science of God (Dance of the Dawn)",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "7AC976RDJzL2asmZuz7qil",
-              "name": "Yes"
-            }
-          ],
-          "duration_ms": 1234320,
-          "explicit": false,
-          "id": "5z69wdqxT1LAajbMgqoYbv",
-          "name": "The Remembering / High the Memory",
-          "preview_url": null,
-          "track_number": 2
-        },
-        {
-          "artists": [
-            {
-              "id": "7AC976RDJzL2asmZuz7qil",
-              "name": "Yes"
-            }
-          ],
-          "duration_ms": 1111520,
-          "explicit": false,
-          "id": "7i4lAnzRjwxO4jtuMXGME8",
-          "name": "The Ancient / Giants Under the Sun",
-          "preview_url": null,
-          "track_number": 1
-        },
-        {
-          "artists": [
-            {
-              "id": "7AC976RDJzL2asmZuz7qil",
-              "name": "Yes"
-            }
-          ],
-          "duration_ms": 1292773,
-          "explicit": false,
-          "id": "4QusYl9hKgMSmpUf2A4sEG",
-          "name": "Ritual (Nous Sommes du Soleil)",
-          "preview_url": null,
-          "track_number": 2
-        }
-      ],
       "url": "https://open.spotify.com/album/2jyRgoJxPN33rE4pcbozbQ"
-    },
-    "perplexity": {
-      "description": "Tales From Topographic Oceans is the sixth studio album by the progressive rock band Yes, released in December 1973 on Atlantic Records. This ambitious double album features four extended tracks, each occupying one side of the vinyl, and is conceptually based on singer Jon Anderson’s interpretation of four Shastric scriptures referenced in Autobiography of a Yogi by Paramahansa Yogananda. Musically, the album exemplifies Yes's signature progressive rock style with complex arrangements, intricate musicianship, and expansive, symphonic compositions. It also marks the first studio appearance of drummer Alan White, who replaced Bill Bruford in 1972.\n\nIn the context of Yes's discography, Tales From Topographic Oceans followed the critically acclaimed Close to the Edge (1972) and continued the band's exploration of long-form, conceptual music. While the album initially polarized critics and fans due to its length and dense thematic content, it achieved significant commercial success, reaching number one on the UK album chart and number six on the US Billboard chart. It went gold on pre-sales alone and was nominated for Grammy awards in the US. Over time, it has been recognized as a landmark of 1970s progressive rock, often regarded as part of Yes’s peak creative period between 1970 and 1977.",
-      "generated_at": "2025-11-27T16:34:54.571935",
-      "model": "sonar",
-      "source": "perplexity"
     }
   },
   "spotify_id": "2jyRgoJxPN33rE4pcbozbQ",
@@ -692,8 +288,7 @@
       "title": "Ritual - Nous Sommes Du Soleil"
     }
   ],
-  "updated_at": "2025-07-10T08:54:03.476671",
-  "year": 1973,
+  "updated_at": "2026-09-12T19:55:55.301872",
   "videos": [
     "https://www.youtube.com/watch?v=ap4AjA5OiU4",
     "https://www.youtube.com/watch?v=438-Ii_BueM",
@@ -703,5 +298,6 @@
     "https://www.youtube.com/watch?v=438-Ii_BueM",
     "https://www.youtube.com/watch?v=_HLbVDR_HAg",
     "https://www.youtube.com/watch?v=xQaYwTRLdCM"
-  ]
+  ],
+  "year": 1973
 }
