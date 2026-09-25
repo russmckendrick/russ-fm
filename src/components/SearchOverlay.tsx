@@ -1,5 +1,6 @@
 import { useEffect, useRef, RefObject } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { useInstantSearch } from '@/hooks/useSearch';
 import { SearchResults } from './SearchResults';
 
@@ -76,29 +77,34 @@ export function SearchOverlay({
   return (
     <div
       ref={overlayRef}
-      className="absolute right-0 top-full z-40 w-[min(640px,calc(100vw-40px))] border-x border-b border-rule-strong bg-paper shadow-[0_30px_60px_-20px_rgba(14,13,11,0.35)]"
+      role="dialog"
+      aria-label="Search results"
+      className="absolute right-0 top-full z-40 mt-3 w-[min(640px,calc(100vw-40px))] overflow-hidden rounded-2xl border border-[color:var(--cream-rule)] bg-[var(--ground-2)] text-[color:var(--cream)] shadow-[0_30px_60px_-20px_rgba(0,0,0,0.75)]"
     >
       {/* Status strip ------------------------------------------------ */}
-      <div className="flex items-center justify-between border-b border-rule bg-paper-2/60 px-4 py-2 font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim">
-        <span>{status}</span>
-        <div className="flex items-center gap-3">
+      <div className="flex min-h-[48px] items-center justify-between gap-3 border-b border-[color:var(--cream-rule)] px-5 py-2">
+        <span className="t-mono truncate text-[11px] uppercase text-[color:var(--cream-dim)]" aria-live="polite">
+          {status}
+        </span>
+        <div className="flex shrink-0 items-center gap-3">
           {trimmed && results.length > 0 && (
             <Link
               to={`/search?q=${encodeURIComponent(searchTerm)}`}
               onClick={handleResultClick}
-              className="text-hl transition-colors hover:underline"
+              className="pill px-4 text-[13px] border-[color:var(--cream-rule)] text-[color:var(--cream)] hover:border-[color:var(--cream)]"
             >
-              View all →
+              All results
+              <ArrowRight className="h-4 w-4" aria-hidden />
             </Link>
           )}
-          <span className="flex items-center gap-1">
-            <kbd className="border border-rule-strong bg-paper px-1.5 py-0.5">Esc</kbd>
-          </span>
+          <kbd className="t-mono rounded border border-[color:var(--cream-rule)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream-dim)]">
+            Esc
+          </kbd>
         </div>
       </div>
 
       {/* Results ----------------------------------------------------- */}
-      <div className="max-h-[min(560px,calc(100vh-160px))] overflow-y-auto px-4 py-3">
+      <div className="max-h-[min(560px,calc(100vh-160px))] overflow-y-auto overscroll-contain px-3 py-4">
         <SearchResults
           results={results}
           isLoading={isLoading}

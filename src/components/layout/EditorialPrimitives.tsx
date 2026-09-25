@@ -2,13 +2,18 @@ import { Link } from "react-router-dom";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+/*
+ * Page-level primitives restyled for the player design: dark ground, cream
+ * type, rounded ground-2 panels and plain labels. Props are unchanged so pages
+ * that have not moved to src/components/player yet still match.
+ */
+
 type CountItem = {
   label: string;
   value: string | number;
 };
 
 export function DossierHero({
-  num,
   kicker,
   title,
   subtitle,
@@ -17,6 +22,7 @@ export function DossierHero({
   className,
   titleClassName,
 }: {
+  /** Kept for compatibility; section numbers are no longer shown. */
   num?: string;
   kicker: string;
   title: string;
@@ -27,23 +33,15 @@ export function DossierHero({
   titleClassName?: string;
 }) {
   return (
-    <header
-      className={cn(
-        "mb-10 border-b border-rule pb-8 font-grot text-ink md:mb-14 md:pb-10",
-        className,
-      )}
-    >
-      <div className="mb-5 flex flex-wrap items-baseline justify-between gap-4">
-        <div className="flex items-baseline gap-3 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          {num && <span className="text-hl">{num}</span>}
-          <span>{kicker}</span>
-        </div>
+    <header className={cn("mb-10 font-grot text-[color:var(--cream)] md:mb-14", className)}>
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-4">
+        <p className="t-kicker text-[color:var(--cream-dim)]">{kicker}</p>
         {actions}
       </div>
 
       <h1
         className={cn(
-          "text-display max-w-[12ch] text-[clamp(48px,9vw,112px)] uppercase text-ink",
+          "t-disp max-w-full break-words text-[clamp(44px,8vw,112px)]",
           titleClassName,
         )}
       >
@@ -51,15 +49,18 @@ export function DossierHero({
       </h1>
 
       {subtitle && (
-        <p className="mt-5 max-w-[64ch] text-[15px] leading-[1.68] text-ink-2 md:text-[17px]">
+        <p className="mt-5 max-w-[64ch] text-[16px] leading-[1.6] text-[color:var(--cream-dim)] md:text-[17px]">
           {subtitle}
         </p>
       )}
 
       {counts && counts.length > 0 && (
-        <dl className="mt-7 grid gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-2 lg:max-w-4xl lg:grid-cols-4">
+        <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-5">
           {counts.map((item) => (
-            <FactCell key={item.label} label={item.label} value={item.value} />
+            <div key={item.label} className="flex min-w-0 flex-col-reverse gap-2">
+              <dt className="t-mono text-[12px] uppercase text-[color:var(--cream-dim)]">{item.label}</dt>
+              <dd className="t-cond text-[44px] leading-none md:text-[56px]">{item.value}</dd>
+            </div>
           ))}
         </dl>
       )}
@@ -80,12 +81,7 @@ export function FactGrid({
   if (!facts.length) return null;
 
   return (
-    <dl
-      className={cn(
-        "grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong",
-        className,
-      )}
-    >
+    <dl className={cn("grid grid-cols-2 gap-2", className)}>
       {facts.map((item) => (
         <FactCell
           key={item.label}
@@ -108,11 +104,9 @@ export function FactCell({
   className?: string;
 }) {
   return (
-    <div className={cn("bg-paper px-4 py-3.5", className)}>
-      <dt className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink-dim">
-        {label}
-      </dt>
-      <dd className="mt-1.5 min-w-0 break-words font-grot text-[17px] font-semibold leading-tight text-ink">
+    <div className={cn("rounded-2xl bg-[color:var(--ground-2)] px-4 py-3.5", className)}>
+      <dt className="t-mono text-[11px] uppercase text-[color:var(--cream-dim)]">{label}</dt>
+      <dd className="mt-1.5 min-w-0 break-words text-[17px] font-bold leading-tight text-[color:var(--cream)]">
         {value}
       </dd>
     </div>
@@ -130,9 +124,7 @@ export function RailSection({
 }) {
   return (
     <section className={className}>
-      <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        {title}
-      </h3>
+      <h3 className="t-kicker mb-3 text-[color:var(--cream-dim)]">{title}</h3>
       {children}
     </section>
   );
@@ -146,7 +138,7 @@ export function CatalogueList({
   className?: string;
 }) {
   return (
-    <ul className={cn("divide-y divide-rule border-y border-rule", className)}>
+    <ul className={cn("divide-y divide-[color:var(--cream-rule)] border-y border-[color:var(--cream-rule)]", className)}>
       {children}
     </ul>
   );
@@ -167,22 +159,14 @@ export function EditorialEmpty({
 }) {
   const body = (
     <>
-      <p className="font-grot text-[18px] font-semibold text-ink">{title}</p>
-      {detail && (
-        <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-          {detail}
-        </p>
-      )}
-      {action && actionTo && (
-        <span className="mt-5 inline-flex border border-rule-strong px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-[color,background-color,border-color] duration-200 hover:border-hl hover:bg-hl hover:text-paper">
-          {action}
-        </span>
-      )}
+      <p className="t-disp text-[26px] md:text-[34px]">{title}</p>
+      {detail && <p className="mx-auto mt-3 max-w-[52ch] text-[15px] text-[color:var(--cream-dim)]">{detail}</p>}
+      {action && actionTo && <span className="pill mt-6">{action}</span>}
     </>
   );
 
   const classes = cn(
-    "border border-rule-strong bg-paper-2/50 px-6 py-16 text-center",
+    "rounded-3xl bg-[color:var(--ground-2)] px-6 py-16 text-center text-[color:var(--cream)]",
     className,
   );
 
@@ -203,15 +187,18 @@ export function EditorialSkeleton({
   className?: string;
 }) {
   return (
-    <div className={cn("py-16", className)} aria-live="polite">
-      <div className="mx-auto flex max-w-sm flex-col gap-3">
-        <div className="h-3 w-24 animate-pulse bg-rule" />
-        <div className="h-8 w-full animate-pulse bg-rule" />
-        <div className="h-8 w-2/3 animate-pulse bg-rule" />
-        <p className="mt-2 text-center font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          {label}
-        </p>
+    <div className={cn("py-12", className)} aria-live="polite" aria-busy="true">
+      <div className="mb-8 h-12 w-2/3 max-w-[560px] animate-pulse rounded-xl bg-[color:var(--ground-3)] motion-reduce:animate-none md:h-20" />
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        {Array.from({ length: 6 }, (_, i) => (
+          <div
+            key={i}
+            className="aspect-square animate-pulse bg-[color:var(--ground-2)] motion-reduce:animate-none"
+            style={{ animationDelay: `${i * 90}ms` }}
+          />
+        ))}
       </div>
+      <p className="t-mono mt-6 text-[12px] uppercase text-[color:var(--cream-dim)]">{label}</p>
     </div>
   );
 }
@@ -225,7 +212,7 @@ export function StageVinyl({
     <div
       aria-hidden
       className={cn(
-        "pointer-events-none absolute aspect-square rounded-full border border-current bg-transparent text-ink-dim opacity-[0.42] dark:text-stage-dim dark:opacity-[0.28]",
+        "pointer-events-none absolute aspect-square rounded-full border border-current bg-transparent text-[color:var(--cream-dim)] opacity-[0.28]",
         "before:absolute before:inset-[7%] before:rounded-full before:border before:border-current",
         "after:absolute after:inset-[18%] after:rounded-full after:border after:border-current",
         className,

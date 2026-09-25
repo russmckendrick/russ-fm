@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { TweaksPanel } from './components/TweaksPanel';
+import { FloodProvider } from './components/player/FloodContext';
 import { HomePage } from './pages/HomePage';
 import { AlbumsPage } from './pages/AlbumsPage';
 import { ArtistsPage } from './pages/ArtistsPage';
@@ -34,6 +35,7 @@ function ArtistRouteHandler() {
 
 function App() {
   return (
+    <FloodProvider>
     <div className="min-h-screen bg-background font-grot">
       <a
         href="#main-content"
@@ -43,7 +45,7 @@ function App() {
       </a>
       <Navigation />
 
-      <main id="main-content" className="pb-16">
+      <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
@@ -76,6 +78,7 @@ function App() {
       {/* Dev-only: Cmd/Ctrl+Shift+D to open */}
       <TweaksPanel />
     </div>
+    </FloodProvider>
   );
 }
 

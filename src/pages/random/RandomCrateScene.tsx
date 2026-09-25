@@ -4,8 +4,11 @@ import { ArrowLeft, ArrowRight, ExternalLink, Maximize2, Shuffle } from 'lucide-
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
+import { usePageFlood } from '@/components/player';
+import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { getAlbumImageFromData, getWebGLTextureImageUrl } from '@/lib/image-utils';
+import { floodFor, GROUND } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
 
@@ -71,13 +74,14 @@ interface SceneTheme {
   hemiIntensity: number;
   keyIntensity: number;
   rimIntensity: number;
-  isDark: boolean;
 }
 
 const DEFAULT_TARGET_COUNT = 25;
 const SLEEVE_SIZE = 1.54;
 const controlClassName =
-  'relative grid h-12 min-w-0 place-items-center bg-paper/0 text-ink transition-[background-color,color,opacity,transform] duration-150 hover:bg-ink hover:text-paper focus-visible:z-[1] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px disabled:pointer-events-none disabled:opacity-35 sm:h-11 sm:w-11';
+  'icon-btn relative text-[color:var(--cream)] hover:bg-[color:var(--ground-3)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[color:var(--cream)] disabled:pointer-events-none disabled:opacity-35';
+/** Dark glass behind the overlay panels so they read on any sleeve colour. */
+const PANEL_BG = 'rgba(14, 13, 12, 0.86)';
 
 export default function RandomCrateScene({
   albums,
@@ -92,6 +96,9 @@ export default function RandomCrateScene({
   const [statusText, setStatusText] = useState('Building crate');
   const [statusVisible, setStatusVisible] = useState(true);
   const [inspectActive, setInspectActive] = useState(false);
+  const colorMap = useAlbumColorMap();
+  /** Scene background colour; the render loop fades towards it. */
+  const floodRef = useRef<string>(GROUND);
 
   useEffect(() => {
     albumsRef.current = albums;
@@ -100,9 +107,11 @@ export default function RandomCrateScene({
   }, [albums, targetCount]);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const stage = stageRef.current;
-    if (!canvas || !stage) return;
+    const canvasNode = canvasRef.current;
+    const stageNode = stageRef.current;
+    if (!canvasNode || !stageNode) return;
+    const canvas: HTMLCanvasElement = canvasNode;
+    const stage: HTMLElement = stageNode;
 
     let disposed = false;
     let animationFrame = 0;
@@ -174,6 +183,9 @@ export default function RandomCrateScene({
     const clock = new THREE.Clock();
     const sleeveGeometry = new THREE.BoxGeometry(SLEEVE_SIZE, SLEEVE_SIZE, 0.035);
     const lighting = buildLighting(scene);
+    const backgroundColour = new THREE.Color(GROUND);
+    const backgroundTarget = new THREE.Color(GROUND);
+    let backgroundKey = GROUND;
 
     buildCrate(crateLayer, renderer.capabilities.getMaxAnisotropy());
     applyTheme();
@@ -183,12 +195,6 @@ export default function RandomCrateScene({
 
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(stage);
-
-    const themeObserver = new MutationObserver(applyTheme);
-    themeObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class', 'style'],
-    });
 
     canvas.addEventListener('wheel', handleWheel, { passive: false });
     canvas.addEventListener('pointerdown', handlePointerDown);
@@ -306,7 +312,7 @@ export default function RandomCrateScene({
 
       textureLoader.load(
         textureUrl,
-        (texture) => {
+        (texture: THREE.Texture) => {
           if (generation !== loadGeneration || disposed) {
             texture.dispose();
             return;
@@ -648,6 +654,14 @@ export default function RandomCrateScene({
         sleeve.group.scale.setScalar(scale);
       });
 
+      if (floodRef.current !== backgroundKey) {
+        backgroundKey = floodRef.current;
+        backgroundTarget.set(backgroundKey);
+      }
+      backgroundColour.lerp(backgroundTarget, prefersReducedMotion.matches ? 1 : 1 - Math.exp(-3 * dt));
+      scene.fog?.color.copy(backgroundColour);
+      renderer.setClearColor(backgroundColour, 1);
+
       controls.update();
       renderer.render(scene, camera);
     }
@@ -715,10 +729,11 @@ export default function RandomCrateScene({
 
     function applyTheme() {
       const theme = readSceneTheme();
-      const background = new THREE.Color(theme.background);
-      scene.background = background;
-      scene.fog = new THREE.Fog(background, theme.isDark ? 5.8 : 6, theme.isDark ? 11 : 12);
-      renderer.setClearColor(background, 1);
+      backgroundColour.set(theme.background);
+      // The background fades to the front record's sleeve colour in animate().
+      scene.background = backgroundColour;
+      scene.fog = new THREE.Fog(backgroundColour.clone(), 6, 12);
+      renderer.setClearColor(backgroundColour, 1);
       renderer.toneMappingExposure = theme.exposure;
       lighting.hemi.color.set(theme.skyLight);
       lighting.hemi.groundColor.set(theme.groundLight);
@@ -776,7 +791,6 @@ export default function RandomCrateScene({
       window.cancelAnimationFrame(animationFrame);
       clearStatusTimers();
       resizeObserver.disconnect();
-      themeObserver.disconnect();
       window.removeEventListener('keydown', handleKeyDown);
       canvas.removeEventListener('wheel', handleWheel);
       canvas.removeEventListener('pointerdown', handlePointerDown);
@@ -793,102 +807,117 @@ export default function RandomCrateScene({
   }, []);
 
   const activeRecord = activeView?.record ?? null;
-  const detailLine = activeRecord?.details.slice(0, 4).join(' / ') || 'russ.fm collection';
+  const detailLine = activeRecord?.details.slice(0, 4).join(' · ') || '';
   const titleStyle = useMemo(
-    () => getPanelTitleStyle(activeRecord?.title ?? 'Vinyl Record Crate'),
+    () => getPanelTitleStyle(activeRecord?.title ?? 'Shuffle'),
     [activeRecord?.title],
   );
+  const flood = floodFor(activeRecord ? colorMap?.[activeRecord.id] : null);
+  const floodReady = Boolean(activeRecord && colorMap);
+
+  useEffect(() => {
+    floodRef.current = floodReady ? flood.flood : GROUND;
+  }, [flood.flood, floodReady]);
+
+  // The nav takes the same colour as the scene behind the crate.
+  usePageFlood(floodReady ? flood.flood : null, floodReady ? flood.ink : null);
 
   return (
     <section
       ref={stageRef}
-      className="relative isolate min-h-[calc(100dvh-5rem)] overflow-hidden border-b border-rule bg-paper font-grot text-ink"
-      aria-label="3D vinyl record crate"
+      className="relative isolate min-h-[calc(100svh-64px)] overflow-hidden bg-[color:var(--ground)] font-grot text-[color:var(--cream)] md:min-h-[calc(100svh-84px)]"
+      aria-label="Record crate"
       aria-busy={statusVisible}
     >
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0 block h-full w-full touch-none outline-none"
-        aria-label="Interactive record crate"
+        aria-label="Interactive record crate. Use the arrow keys to flip records and Enter to pull one out."
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-[1] opacity-[0.42] mix-blend-multiply dark:opacity-[0.16] dark:mix-blend-screen"
-        style={{
-          background:
-            'linear-gradient(90deg, color-mix(in oklab, var(--paper-warm) 40%, transparent), transparent 62%), repeating-linear-gradient(0deg, color-mix(in oklab, var(--ink) 4%, transparent) 0, color-mix(in oklab, var(--ink) 4%, transparent) 1px, transparent 1px, transparent 7px)',
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 z-[2] opacity-80 dark:opacity-35 bg-[radial-gradient(ellipse_at_center,transparent_42%,color-mix(in_oklab,var(--ink)_18%,transparent)_100%),linear-gradient(180deg,transparent_56%,color-mix(in_oklab,var(--ink)_10%,transparent)_100%)]"
+        className="pointer-events-none absolute inset-0 z-[1] bg-[linear-gradient(180deg,transparent_55%,rgba(0,0,0,0.32)_100%)]"
       />
 
       <p className="sr-only" aria-live="polite">
         {activeRecord
-          ? `Random crate record selected: ${activeRecord.title} by ${activeRecord.artist}.`
-          : 'Random crate is loading records.'}
+          ? `Front of the crate: ${activeRecord.title} by ${activeRecord.artist}.`
+          : 'Loading records.'}
       </p>
 
       <div
         role="status"
         className={cn(
-          'absolute left-4 top-4 z-20 max-w-[min(380px,calc(100vw-126px))] border border-rule bg-paper px-3 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-3 shadow-[0_12px_32px_-24px_rgba(14,13,11,0.5)] backdrop-blur-xl transition-[opacity,transform] duration-200 md:left-8 md:top-8 rounded-[8px]',
-          statusVisible ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0',
+          't-mono absolute left-4 top-4 z-20 max-w-[min(380px,calc(100vw-140px))] truncate rounded-full px-4 py-2.5 text-[12px] uppercase text-[color:var(--cream)] backdrop-blur-xl transition-[opacity,transform] duration-300 motion-reduce:transition-none md:left-8 md:top-8',
+          statusVisible ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-1 opacity-0',
         )}
+        style={{ background: PANEL_BG }}
       >
         {statusText}
       </div>
 
-      <div className="absolute right-4 top-4 z-20 min-w-20 border border-rule bg-paper px-3 py-2 text-center font-mono text-[12px] font-bold leading-none text-ink shadow-[0_12px_32px_-22px_rgba(14,13,11,0.6)] md:right-8 md:top-8 rounded-[8px]">
+      <div
+        className="t-mono absolute right-4 top-4 z-20 min-w-20 rounded-full px-4 py-2.5 text-center text-[13px] font-bold tabular-nums text-[color:var(--cream)] backdrop-blur-xl md:right-8 md:top-8"
+        style={{ background: PANEL_BG }}
+      >
         {activeView ? `${activeView.index + 1} / ${activeView.total}` : '0 / 0'}
       </div>
 
       <section
-        className="absolute bottom-[92px] left-4 right-4 z-20 border border-rule bg-paper p-4 shadow-[0_20px_54px_-34px_rgba(14,13,11,0.55)] backdrop-blur-xl sm:bottom-8 sm:left-8 sm:right-auto sm:w-[min(440px,calc(100vw-4rem))] sm:p-[18px] rounded-[8px]"
-        aria-live="polite"
+        className="absolute bottom-[92px] left-4 right-4 z-20 overflow-hidden rounded-3xl p-5 backdrop-blur-xl sm:bottom-8 sm:left-8 sm:right-auto sm:w-[min(460px,calc(100vw-4rem))] sm:p-6"
+        style={{ background: PANEL_BG }}
+        aria-label="Record at the front"
       >
-        <p className="mb-2 max-w-full truncate font-mono text-[11px] font-bold uppercase tracking-[0.08em] text-ink-3">
+        <span
+          aria-hidden
+          className="flood-surface absolute inset-x-0 top-0 h-1.5"
+          style={{ background: floodReady ? flood.flood : 'var(--cream-rule)' }}
+        />
+        <p className="mb-2 max-w-full truncate text-[15px] font-bold text-[color:var(--cream-dim)]">
           {activeRecord ? (
-            <Link
-              to={activeRecord.artistHref}
-              className="transition-colors hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
-            >
+            <Link to={activeRecord.artistHref} className="hover:text-[color:var(--cream)] hover:underline">
               {activeRecord.artist}
             </Link>
           ) : (
             'Loading collection'
           )}
         </p>
-        <h1
-          className="font-display uppercase leading-[0.98] text-ink"
-          style={titleStyle}
-        >
+        <h1 className="t-cond" style={titleStyle}>
           {activeRecord ? (
-            <Link
-              to={activeRecord.albumHref}
-              className="transition-colors hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
-            >
+            <Link to={activeRecord.albumHref} className="hover:underline">
               {activeRecord.title}
             </Link>
           ) : (
-            'Vinyl Record Crate'
+            'Shuffle'
           )}
         </h1>
-        <p className="mt-3 max-w-[52ch] font-mono text-[12px] font-semibold leading-[1.45] text-ink-3">
-          {detailLine}
-        </p>
+        {detailLine && (
+          <p className="t-mono mt-3 max-w-[52ch] text-[12px] uppercase leading-[1.5] text-[color:var(--cream-dim)]">
+            {detailLine}
+          </p>
+        )}
+        {activeRecord && (
+          <Link
+            to={activeRecord.albumHref}
+            className="pill pill-solid mt-5"
+            style={{ background: floodReady ? flood.flood : 'var(--cream)', color: floodReady ? flood.ink : 'var(--ground)' }}
+          >
+            Open record
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
+        )}
       </section>
 
       <nav
-        className="absolute bottom-4 left-5 right-5 z-20 mx-auto grid max-w-[380px] grid-cols-5 divide-x divide-rule overflow-hidden border border-rule bg-paper/95 shadow-[0_18px_38px_-32px_rgba(14,13,11,0.55)] backdrop-blur-xl sm:bottom-8 sm:left-auto sm:right-8 sm:mx-0 sm:max-w-none"
-        aria-label="Record crate controls"
+        className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-1 rounded-full p-1.5 backdrop-blur-xl sm:bottom-8 sm:left-auto sm:right-8 sm:translate-x-0"
+        style={{ background: PANEL_BG }}
+        aria-label="Crate controls"
       >
         <ControlButton label="Previous record" onClick={() => apiRef.current?.flip(-1)} disabled={!activeView}>
           <ArrowLeft className="h-5 w-5" aria-hidden />
         </ControlButton>
         <ControlButton
-          label={inspectActive ? 'Return record' : 'Inspect record'}
+          label={inspectActive ? 'Put record back' : 'Pull record out'}
           onClick={() => apiRef.current?.toggleInspect()}
           active={inspectActive}
           disabled={!activeView}
@@ -898,17 +927,11 @@ export default function RandomCrateScene({
         <ControlButton label="Next record" onClick={() => apiRef.current?.flip(1)} disabled={!activeView}>
           <ArrowRight className="h-5 w-5" aria-hidden />
         </ControlButton>
-        <ControlButton label="Shuffle records" onClick={() => apiRef.current?.shuffleRecords()} disabled={!activeView}>
+        <ControlButton label="Shuffle again" onClick={() => apiRef.current?.shuffleRecords()} disabled={!activeView}>
           <Shuffle className="h-5 w-5" aria-hidden />
         </ControlButton>
         {activeRecord ? (
-          <Link
-            to={activeRecord.albumHref}
-            aria-label="Open record"
-            title="Open record"
-            className={controlClassName}
-          >
-            <span className="sr-only">Open record</span>
+          <Link to={activeRecord.albumHref} aria-label="Open record" title="Open record" className={controlClassName}>
             <ExternalLink className="h-5 w-5" aria-hidden />
           </Link>
         ) : (
@@ -944,8 +967,7 @@ function ControlButton({
       onClick={onClick}
       className={cn(
         controlClassName,
-        active &&
-          'bg-ink text-paper after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:bg-hl hover:bg-hl hover:text-paper',
+        active && 'bg-[color:var(--cream)] text-[color:var(--ground)] hover:bg-[color:var(--cream)]',
       )}
     >
       <span className="sr-only">{label}</span>
@@ -1247,40 +1269,19 @@ function normalizeAlbum(album: Album): CrateRecord | null {
 }
 
 function readSceneTheme(): SceneTheme {
-  const styles = window.getComputedStyle(document.documentElement);
-  const readToken = (name: string, fallback: string) => styles.getPropertyValue(name).trim() || fallback;
-  const isDark = document.documentElement.classList.contains('dark');
-
-  if (isDark) {
-    return {
-      background: readToken('--paper-3', '#1d1b16'),
-      skyLight: readToken('--stage-ink', '#f7f2e8'),
-      keyLight: readToken('--stage-ink', '#f7f2e8'),
-      groundLight: readToken('--stage-3', '#1a1713'),
-      highlight: readToken('--hl', '#e23b1e'),
-      shadowColor: readToken('--stage', '#080807'),
-      shadowOpacity: 0.42,
-      exposure: 1.2,
-      hemiIntensity: 2.9,
-      keyIntensity: 4.9,
-      rimIntensity: 2.1,
-      isDark,
-    };
-  }
-
+  // Dark ground only; the background then fades to the front sleeve's colour.
   return {
-    background: readToken('--paper-2', '#ebe6db'),
-    skyLight: readToken('--paper-warm', '#faf7ef'),
-    keyLight: readToken('--paper-warm', '#faf7ef'),
-    groundLight: readToken('--ink-dim', '#8a8377'),
-    highlight: readToken('--hl', '#e23b1e'),
-    shadowColor: readToken('--ink', '#0e0d0b'),
-    shadowOpacity: 0.24,
-    exposure: 1.06,
-    hemiIntensity: 2.2,
-    keyIntensity: 3.8,
-    rimIntensity: 1.55,
-    isDark,
+    background: GROUND,
+    skyLight: '#fbf7ef',
+    keyLight: '#fff4e2',
+    groundLight: '#3a342d',
+    highlight: '#fbf7ef',
+    shadowColor: '#0e0d0c',
+    shadowOpacity: 0.34,
+    exposure: 1.08,
+    hemiIntensity: 2.4,
+    keyIntensity: 4,
+    rimIntensity: 1.6,
   };
 }
 
@@ -1291,7 +1292,7 @@ function isInteractiveTarget(target: EventTarget | null): boolean {
 }
 
 function disposeObject3D(root: THREE.Object3D) {
-  root.traverse((object) => {
+  root.traverse((object: THREE.Object3D) => {
     if (!isMesh(object)) return;
     object.geometry?.dispose();
     if (Array.isArray(object.material)) {
@@ -1355,26 +1356,11 @@ function formatYear(value: string | undefined): string {
   return value.match(/\d{4}/)?.[0] ?? '';
 }
 
+/** Condensed title scaled to the longest word so it never overflows the panel. */
 function getPanelTitleStyle(title: string): CSSProperties {
-  const words = title.split(/\s+/).filter(Boolean);
-  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
-  const charCount = title.length;
-
-  let maxPx = 42;
-  let preferredVw = 3.2;
-
-  if (longestWord >= 18 || charCount >= 46) {
-    maxPx = 27;
-    preferredVw = 2.4;
-  } else if (longestWord >= 13 || charCount >= 34) {
-    maxPx = 32;
-    preferredVw = 2.7;
-  } else if (longestWord >= 11 || charCount >= 24) {
-    maxPx = 36;
-    preferredVw = 3;
-  }
-
+  const longest = title.split(/\s+/).filter(Boolean).reduce((max, word) => Math.max(max, word.length), 1);
+  const divisor = (longest * 0.52).toFixed(2);
   return {
-    fontSize: `clamp(24px, ${preferredVw}vw, ${maxPx}px)`,
+    fontSize: `max(26px, min(64px, calc((min(100vw, 460px) - 88px) / ${divisor})))`,
   };
 }

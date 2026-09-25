@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/archivo':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource-variable/hanken-grotesk':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@fontsource-variable/inter-tight':
         specifier: ^5.2.7
         version: 5.2.7
@@ -655,6 +658,9 @@ packages:
 
   '@fontsource-variable/archivo@5.2.8':
     resolution: {integrity: sha512-R8EotpKHEsKv7d7oiUyjyPENRi2gtAlwdTlzDCOs5BfX/LJP7jvUYJ4fF/qyd3rnbgk3r1xp33g1P57bYJfhzQ==}
+
+  '@fontsource-variable/hanken-grotesk@5.3.0':
+    resolution: {integrity: sha512-DOd0FqL+3cH2dfNy0JtSq9tUfxBz5mLmHMjTU0DOr3E9Zo6wxuatCl53DIPNrSPgCsnuKyM739BTIG5glCLirw==}
 
   '@fontsource-variable/inter-tight@5.2.7':
     resolution: {integrity: sha512-uU0qW9vlzVQQv8GVrhn8SlNl2A44C0CE9IC6N9P0D9mwhmJcg8UF/fxvmdRayDPlMAnYqxlXtYENDIeZyVvxkg==}
@@ -3760,6 +3766,8 @@ snapshots:
   '@floating-ui/utils@0.2.11': {}
 
   '@fontsource-variable/archivo@5.2.8': {}
+
+  '@fontsource-variable/hanken-grotesk@5.3.0': {}
 
   '@fontsource-variable/inter-tight@5.2.7': {}
 

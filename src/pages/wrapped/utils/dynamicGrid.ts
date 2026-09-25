@@ -49,17 +49,21 @@ function getSquareSpan(size: GridSize): GridSpan {
 // Get optimal image size based on card size and type
 function getOptimalImageSize(size: GridSize, type: GridItemType): ImageSize {
   if (type === 'artist') {
-    const artistImageSizes = {
-      small: 'avatar' as ImageSize,
-      medium: 'medium' as ImageSize,
-      large: 'hi-res' as ImageSize
+    const artistImageSizes: Record<GridSize, ImageSize> = {
+      small: 'avatar',
+      medium: 'medium',
+      large: 'hi-res',
+      wide: 'medium',
+      'extra-wide': 'medium',
     };
     return artistImageSizes[size];
   } else {
-    const releaseImageSizes = {
-      small: 'medium' as ImageSize,   // Medium for 1x1 release cards
-      medium: 'medium' as ImageSize,  // Medium for 2x2 release cards
-      large: 'hi-res' as ImageSize    // Hi-res for 3x3 release cards
+    const releaseImageSizes: Record<GridSize, ImageSize> = {
+      small: 'medium',   // Medium for 1x1 release cards
+      medium: 'medium',  // Medium for 2x2 release cards
+      large: 'hi-res',   // Hi-res for 3x3 release cards
+      wide: 'medium',
+      'extra-wide': 'medium',
     };
     return releaseImageSizes[size];
   }
@@ -74,7 +78,7 @@ function getWeightedRandomSize(rng: SeededRandom, type: GridItemType, index: num
 
   // Stat cards sizing based on type
   if (type === 'stat' && data) {
-    const statType = data.type;
+    const statType = (data as StatCardData).type;
     // Timeline gets extra-wide (6x3) layout for better visualization
     if (statType === 'timeline') {
       return 'extra-wide';
@@ -89,7 +93,7 @@ function getWeightedRandomSize(rng: SeededRandom, type: GridItemType, index: num
 
   // Artist size based on release count
   if (type === 'artist' && data) {
-    const releaseCount = data.count || 0;
+    const releaseCount = (data as WrappedArtist).count || 0;
     
     // Artists with 10+ releases get large size
     if (releaseCount >= 10) {
@@ -119,7 +123,7 @@ function getWeightedRandomSize(rng: SeededRandom, type: GridItemType, index: num
 
 // Create stat cards data
 function createStatCards(data: WrappedData): StatCardData[] {
-  const baseStats = [
+  const baseStats: StatCardData[] = [
     {
       type: 'total',
       title: 'Total Releases',
@@ -168,11 +172,11 @@ function createStatCards(data: WrappedData): StatCardData[] {
   ];
 
   // Add individual genre cards (top 6 genres)
-  const genreCards = data.insights.genres.slice(0, 6).map(genre => ({
+  const genreCards: StatCardData[] = data.insights.genres.slice(0, 6).map(genre => ({
     type: 'genre' as const,
     title: genre.name,
     value: genre.count,
-    data: genre
+    data: [{ name: genre.name, count: genre.count }]
   }));
 
   return [...baseStats, ...genreCards];

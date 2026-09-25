@@ -1,398 +1,358 @@
-import { useState, useEffect, useCallback } from 'react';
-import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { AlbumCard } from '@/components/AlbumCard';
-import { FilterBar } from '@/components/FilterBar';
-import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
+import { useEffect, useMemo } from 'react';
+import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { ChevronLeft, ChevronRight, Search, X } from 'lucide-react';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
+import { useCollection } from '@/lib/collection';
+import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
+import { getAlbumImageFromData } from '@/lib/image-utils';
+import { hue, inkOn, vividFrom, vividScore } from '@/lib/sleeveColour';
 import { appConfig } from '@/config/app.config';
-import type { AlbumMember } from '@/types/album';
+import { cn } from '@/lib/utils';
+import { RecordTile } from '@/components/player';
+import type { Album } from '@/types/album';
 
-interface Album {
-  release_name: string;
-  release_artist: string;
-  artists?: Array<{
-    name: string;
-    uri_artist: string;
-    images_uri_artist: {
-      'hi-res': string;
-      medium: string;
-    };
-  }>;
-  members?: AlbumMember[];
-  genre_names: string[];
-  uri_release: string;
-  uri_artist: string;
-  date_added: string;
-  date_release_year: string;
-  json_detailed_release: string;
-  json_detailed_artist: string;
-  images_uri_release: {
-    'hi-res': string;
-    medium: string;
-  };
-  images_uri_artist: {
-    'hi-res': string;
-    medium: string;
-  };
-}
+const SORTS = [
+  { value: 'date_added', label: 'Date added' },
+  { value: 'release_name', label: 'A–Z' },
+  { value: 'release_artist', label: 'Artist' },
+  { value: 'date_release_year', label: 'Year' },
+  { value: 'colour', label: 'Colour' },
+] as const;
+
+/** Formats shown as quick filters; anything else is reachable via the URL. */
+const FORMAT_CHIPS = [
+  { value: 'Vinyl', label: 'Vinyl' },
+  { value: 'Box Set', label: 'Box sets' },
+];
 
 export function AlbumsPage() {
   const { page } = useParams<{ page?: string }>();
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
-  
-  // Check if page parameter is a non-numeric string and redirect to album detail
+  const [params] = useSearchParams();
+  const { albums: collection, loading } = useCollection();
+  const colours = useAlbumColorMap();
+
   useEffect(() => {
-    if (page && isNaN(parseInt(page, 10))) {
-      // If it's not a number, redirect to /album/${page}
-      navigate(`/album/${page}`, { replace: true });
-    }
+    if (page && Number.isNaN(parseInt(page, 10))) navigate(`/album/${page}`, { replace: true });
   }, [page, navigate]);
-  
-  const [collection, setCollection] = useState<Album[]>([]);
-  const [filteredCollection, setFilteredCollection] = useState<Album[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedGenre, setSelectedGenre] = useState(searchParams.get('genre') || 'all');
-  const [selectedYear, setSelectedYear] = useState(searchParams.get('year') || 'all');
-  const [selectedFormat, setSelectedFormat] = useState(searchParams.get('format') || 'all');
-  const [sortBy, setSortBy] = useState(searchParams.get('sort') || 'date_added');
-  const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
-  
-  const itemsPerPage = appConfig.pagination.itemsPerPage.albums;
-  const currentPage = page ? parseInt(page, 10) : 1;
 
-  // Build navigation URL with current query params
-  const buildPageUrl = (pageNum: number) => {
-    const queryString = searchParams.toString();
-    return queryString ? `/albums/${pageNum}?${queryString}` : `/albums/${pageNum}`;
-  };
+  const genre = params.get('genre') || 'all';
+  const year = params.get('year') || 'all';
+  const format = params.get('format') || 'all';
+  const sort = params.get('sort') || 'date_added';
+  const search = params.get('search') || '';
+  const currentPage = page ? Math.max(1, parseInt(page, 10) || 1) : 1;
+  const colourMode = sort === 'colour';
+  const perPage = appConfig.pagination.itemsPerPage.albums * (colourMode ? 2 : 1);
 
-  // Generate dynamic page title
-  const getPageTitle = () => {
-    const parts = ['Record Collection'];
-    
-    if (selectedGenre !== 'all') {
-      parts.push(selectedGenre);
-    }
-    
-    if (selectedYear !== 'all') {
-      parts.push(`${selectedYear} Releases`);
-    }
-    
-    if (searchTerm) {
-      parts.push(`Search: "${searchTerm}"`);
-    }
-    
-    if (currentPage > 1) {
-      parts.push(`Page ${currentPage}`);
-    }
-    
-    parts.push('Russ.fm');
-    return parts.join(' | ');
-  };
-  
-  usePageTitle(getPageTitle());
+  usePageTitle(
+    ['Albums', genre !== 'all' && genre, year !== 'all' && year, search && `“${search}”`, currentPage > 1 && `Page ${currentPage}`, 'russ.fm']
+      .filter(Boolean)
+      .join(' · '),
+  );
 
-  const loadCollection = async () => {
-    try {
-      const response = await fetch('/collection.json');
-      const data = await response.json();
-      // Boxset members are reachable via search and their boxset's page, not the browse grid.
-      setCollection(excludeBoxsetMembers(data));
-      setLoading(false);
-    } catch (error) {
-      console.error('Error loading collection:', error);
-      setLoading(false);
-    }
-  };
+  const albums = useMemo(() => excludeBoxsetMembers(collection), [collection]);
 
-  useEffect(() => {
-    loadCollection();
-  }, []);
-
-  // Listen for URL parameter changes
-  useEffect(() => {
-    const genre = searchParams.get('genre') || 'all';
-    const year = searchParams.get('year') || 'all';
-    const format = searchParams.get('format') || 'all';
-    const sort = searchParams.get('sort') || 'date_added';
-    const search = searchParams.get('search') || '';
-
-    setSelectedGenre(genre);
-    setSelectedYear(year);
-    setSelectedFormat(format);
-    setSortBy(sort);
-    setSearchTerm(search);
-  }, [searchParams]);
-
-  // Update URL params when filters change
-  const updateURLParams = (newParams: Record<string, string>, resetToPage1 = false) => {
-    const params = new URLSearchParams(searchParams);
-    Object.entries(newParams).forEach(([key, value]) => {
-      if ((key === 'genre' || key === 'year' || key === 'format') && value === 'all') {
-        params.delete(key);
-      } else if (key === 'sort' && value === 'date_added') {
-        params.delete(key);
-      } else if (key === 'search' && value === '') {
-        params.delete(key);
-      } else {
-        params.set(key, value);
-      }
+  const update = (next: Record<string, string>) => {
+    const p = new URLSearchParams(params);
+    Object.entries(next).forEach(([k, v]) => {
+      const isDefault = v === '' || v === 'all' || (k === 'sort' && v === 'date_added');
+      if (isDefault) p.delete(k);
+      else p.set(k, v);
     });
-    setSearchParams(params);
-
-    // Navigate to page 1 with preserved query params when filter changes
-    if (resetToPage1 && currentPage !== 1) {
-      const queryString = params.toString();
-      navigate(queryString ? `/albums/1?${queryString}` : '/albums/1');
-    }
+    const qs = p.toString();
+    navigate(qs ? `/albums/1?${qs}` : '/albums/1');
   };
 
-  const filterAndSortCollection = useCallback(() => {
-    let filtered = [...collection];
+  const pageUrl = (n: number) => {
+    const qs = params.toString();
+    return qs ? `/albums/${n}?${qs}` : `/albums/${n}`;
+  };
 
-    // Apply search filter
-    if (searchTerm) {
-      filtered = filtered.filter(album =>
-        album.release_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        album.release_artist.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        album.genre_names.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        (album.artists && album.artists.some(artist => 
-          artist.name.toLowerCase().includes(searchTerm.toLowerCase())
-        )) ||
-        (album.members && album.members.some(member =>
-          member.name.toLowerCase().includes(searchTerm.toLowerCase())
-        ))
-      );
-    }
-
-    // Apply genre filter
-    if (selectedGenre !== 'all') {
-      filtered = filtered.filter(album => 
-        album.genre_names.some(genre => genre === selectedGenre)
-      );
-    }
-
-    // Apply year filter
-    if (selectedYear !== 'all') {
-      filtered = filtered.filter(album => {
-        const albumYear = new Date(album.date_release_year).getFullYear().toString();
-        return albumYear === selectedYear;
-      });
-    }
-
-    // Apply format filter
-    if (selectedFormat !== 'all') {
-      filtered = filtered.filter(album => (album as Album & { format_primary?: string }).format_primary === selectedFormat);
-    }
-
-    // Apply sorting
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'release_name':
-          return a.release_name.localeCompare(b.release_name);
-        case 'release_artist':
-          return a.release_artist.localeCompare(b.release_artist);
-        case 'date_release_year':
-          return new Date(b.date_release_year).getTime() - new Date(a.date_release_year).getTime();
-        default:
-          return new Date(b.date_added).getTime() - new Date(a.date_added).getTime();
+  const filtered = useMemo(() => {
+    const term = search.toLowerCase();
+    let out = albums.filter(a => {
+      if (term) {
+        const hit =
+          a.release_name.toLowerCase().includes(term) ||
+          a.release_artist.toLowerCase().includes(term) ||
+          a.genre_names.some(g => g.toLowerCase().includes(term)) ||
+          a.artists?.some(x => x.name.toLowerCase().includes(term)) ||
+          a.members?.some(m => m.name.toLowerCase().includes(term));
+        if (!hit) return false;
       }
+      if (genre !== 'all' && !a.genre_names.includes(genre)) return false;
+      if (year !== 'all' && String(new Date(a.date_release_year).getFullYear()) !== year) return false;
+      if (format !== 'all' && a.format_primary !== format) return false;
+      return true;
     });
 
-    setFilteredCollection(filtered);
-  }, [collection, searchTerm, selectedGenre, selectedYear, selectedFormat, sortBy]);
-
-  useEffect(() => {
-    filterAndSortCollection();
-  }, [collection, searchTerm, selectedGenre, selectedYear, selectedFormat, sortBy, filterAndSortCollection]);
-
-
-
-  const getAllGenres = () => {
-    const genres = new Set<string>();
-    collection.forEach(album => {
-      album.genre_names.forEach(genre => {
-        if (genre.toLowerCase() !== 'music') { // Filter out "Music"
-          genres.add(genre);
+    if (sort === 'colour') {
+      const key = (a: Album) => {
+        const v = vividFrom(colours?.[a.uri_release]);
+        // Monochrome sleeves go last, ordered light to dark.
+        return v ? hue(v) : 2 - vividScore(colours?.[a.uri_release]?.muted ?? '#000000');
+      };
+      out = [...out].sort((a, b) => key(a) - key(b));
+    } else {
+      out = [...out].sort((a, b) => {
+        switch (sort) {
+          case 'release_name':
+            return a.release_name.localeCompare(b.release_name);
+          case 'release_artist':
+            return a.release_artist.localeCompare(b.release_artist);
+          case 'date_release_year':
+            return new Date(b.date_release_year).getTime() - new Date(a.date_release_year).getTime();
+          default:
+            return new Date(b.date_added).getTime() - new Date(a.date_added).getTime();
         }
       });
-    });
-    return Array.from(genres).sort();
-  };
-
-  const getAllYears = () => {
-    const years = new Set<string>();
-    collection.forEach(album => {
-      const year = new Date(album.date_release_year).getFullYear().toString();
-      years.add(year);
-    });
-    return Array.from(years).sort((a, b) => parseInt(b) - parseInt(a));
-  };
-
-  const getAllFormats = () => {
-    const formats = new Set<string>();
-    collection.forEach(album => {
-      const f = (album as Album & { format_primary?: string }).format_primary;
-      if (f) formats.add(f);
-    });
-    return Array.from(formats).sort();
-  };
-
-  // Pagination calculations
-  const totalPages = Math.ceil(filteredCollection.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedCollection = filteredCollection.slice(startIndex, endIndex);
-
-  // Generate page numbers for pagination
-  const getPageNumbers = () => {
-    const pages = [];
-    const showPages = appConfig.pagination.showPageNumbers;
-    
-    if (totalPages <= showPages + 2) {
-      // Show all pages if total is small
-      for (let i = 1; i <= totalPages; i++) {
-        pages.push(i);
-      }
-    } else {
-      // Always show first page
-      pages.push(1);
-      
-      // Calculate range around current page
-      let start = Math.max(2, currentPage - Math.floor(showPages / 2));
-      const end = Math.min(totalPages - 1, start + showPages - 1);
-      
-      // Adjust start if we're near the end
-      if (end === totalPages - 1) {
-        start = Math.max(2, end - showPages + 1);
-      }
-      
-      // Add ellipsis if needed
-      if (start > 2) pages.push('...');
-      
-      // Add page numbers
-      for (let i = start; i <= end; i++) {
-        pages.push(i);
-      }
-      
-      // Add ellipsis if needed
-      if (end < totalPages - 1) pages.push('...');
-      
-      // Always show last page
-      if (totalPages > 1) pages.push(totalPages);
     }
-    
-    return pages;
-  };
+    return out;
+  }, [albums, colours, search, genre, year, format, sort]);
 
-  if (loading) {
-    return (
-      <PageContainer>
-        <EditorialSkeleton label="Loading catalogue…" />
-      </PageContainer>
-    );
-  }
+  const genres = useMemo(
+    () => [...new Set(albums.flatMap(a => a.genre_names))].filter(g => g.toLowerCase() !== 'music').sort(),
+    [albums],
+  );
+  const years = useMemo(
+    () =>
+      [...new Set(albums.map(a => String(new Date(a.date_release_year).getFullYear())))]
+        .filter(y => y !== 'NaN')
+        .sort((a, b) => Number(b) - Number(a)),
+    [albums],
+  );
+  const formatCounts = useMemo(() => {
+    const c: Record<string, number> = {};
+    albums.forEach(a => {
+      if (a.format_primary) c[a.format_primary] = (c[a.format_primary] ?? 0) + 1;
+    });
+    return c;
+  }, [albums]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  const start = (currentPage - 1) * perPage;
+  const visible = filtered.slice(start, start + perPage);
+  const filteredAny = genre !== 'all' || year !== 'all' || format !== 'all' || !!search;
 
   return (
-    <PageContainer>
-      <FilterBar
-        sortBy={sortBy}
-        setSortBy={(value) => {
-          setSortBy(value);
-          updateURLParams({ sort: value }, true);
-        }}
-        selectedGenre={selectedGenre}
-        setSelectedGenre={(value) => {
-          setSelectedGenre(value);
-          updateURLParams({ genre: value }, true);
-        }}
-        selectedYear={selectedYear}
-        setSelectedYear={(value) => {
-          setSelectedYear(value);
-          updateURLParams({ year: value }, true);
-        }}
-        selectedFormat={selectedFormat}
-        setSelectedFormat={(value) => {
-          setSelectedFormat(value);
-          updateURLParams({ format: value }, true);
-        }}
-        genres={getAllGenres()}
-        years={getAllYears()}
-        formats={getAllFormats()}
-        searchValue={searchTerm}
-        onSearchChange={(value) => {
-          setSearchTerm(value);
-          updateURLParams({ search: value }, true);
-        }}
-        searchPlaceholder="Search albums..."
-      />
+    <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-8 md:px-10 lg:px-14 lg:pt-12">
+      <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
+        <h1 className="t-disp m-0 text-[64px] md:text-[96px] lg:text-[120px]">Albums</h1>
+        <span className="t-disp text-[64px] text-[color:var(--ground-3)] md:text-[96px] lg:text-[120px]" aria-label={`${filtered.length} records`}>
+          {loading ? '' : filtered.length.toLocaleString('en-GB')}
+        </span>
+      </div>
 
+      <div className="mt-8 flex flex-col gap-4">
+        <div className="flex flex-wrap items-center gap-3">
+          <div role="group" aria-label="Sort" className="flex flex-wrap gap-1 rounded-[28px] bg-[color:var(--ground-2)] p-1">
+            {SORTS.map(s => (
+              <button
+                key={s.value}
+                type="button"
+                aria-pressed={sort === s.value}
+                onClick={() => update({ sort: s.value })}
+                className={cn(
+                  'h-11 rounded-full px-4 text-[14px] font-bold transition-colors md:px-5',
+                  sort === s.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
+                )}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+          <div role="group" aria-label="Format" className="flex flex-wrap gap-2">
+            {FORMAT_CHIPS.filter(f => formatCounts[f.value]).map(f => {
+              const on = format === f.value;
+              return (
+                <button
+                  key={f.value}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() => update({ format: on ? 'all' : f.value })}
+                  className={cn('pill pill-sm', on ? 'border-[color:var(--cream)]' : 'border-[color:var(--ground-3)]')}
+                >
+                  {f.label}
+                  <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">{formatCounts[f.value].toLocaleString('en-GB')}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-      {filteredCollection.length === 0 ? (
-        <EditorialEmpty
-          title="No albums found"
-          detail="Try adjusting your search or filters"
-        />
-      ) : (
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {paginatedCollection.map((album, i) => (
-            <AlbumCard
-              key={album.uri_release}
-              album={album}
-              index={startIndex + i + 1}
+        <div className="flex flex-wrap items-center gap-3">
+          <label className="flex h-11 min-w-0 flex-1 items-center gap-2.5 rounded-full border-2 border-[color:var(--ground-3)] px-4 focus-within:border-[color:var(--cream)] sm:max-w-[360px]">
+            <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
+            <input
+              type="search"
+              defaultValue={search}
+              key={search}
+              placeholder="Search albums"
+              aria-label="Search albums"
+              onKeyDown={e => {
+                if (e.key === 'Enter') update({ search: (e.target as HTMLInputElement).value.trim() });
+              }}
+              onBlur={e => {
+                if (e.target.value.trim() !== search) update({ search: e.target.value.trim() });
+              }}
+              className="min-w-0 flex-1 bg-transparent text-[14px] outline-none placeholder:text-[color:var(--cream-dim)]"
             />
-          ))}
+          </label>
+          <PillSelect label="Genre" value={genre} options={genres} onChange={v => update({ genre: v })} />
+          <PillSelect label="Year" value={year} options={years} onChange={v => update({ year: v })} />
+          {filteredAny && (
+            <button type="button" className="pill pill-sm border-transparent opacity-80 hover:opacity-100" onClick={() => navigate(sort === 'date_added' ? '/albums/1' : `/albums/1?sort=${sort}`)}>
+              <X className="h-4 w-4" aria-hidden />
+              Clear filters
+            </button>
+          )}
         </div>
+
+        {colourMode && colours && visible.length > 0 && (
+          <div className="mt-2 flex h-2.5 overflow-hidden rounded-full" aria-hidden>
+            {visible.map(a => (
+              <span key={a.uri_release} className="flex-1" style={{ background: vividFrom(colours[a.uri_release]) ?? '#3a3530' }} />
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="mt-10">
+        {loading ? (
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6" aria-busy="true">
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className="aspect-square animate-pulse bg-[color:var(--ground-2)]" />
+            ))}
+          </div>
+        ) : visible.length === 0 ? (
+          <div className="flex flex-col items-start gap-4 py-20">
+            <p className="t-disp m-0 text-[36px]">No albums found</p>
+            <p className="text-[color:var(--cream-dim)]">Try a different search or clear the filters.</p>
+          </div>
+        ) : colourMode ? (
+          <ColourWall albums={visible} colours={colours} />
+        ) : (
+          <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-7 xl:grid-cols-6">
+            {visible.map(a => (
+              <RecordTile
+                key={a.uri_release}
+                album={a}
+                palette={colours?.[a.uri_release]}
+                meta={[a.date_release_year?.slice(0, 4), a.format_primary].filter(Boolean).join(' · ')}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {totalPages > 1 && <Pager current={currentPage} total={totalPages} url={pageUrl} />}
+    </div>
+  );
+}
+
+function ColourWall({ albums, colours }: { albums: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
+  return (
+    <div className="-mx-5 grid grid-cols-4 sm:grid-cols-6 md:mx-0 lg:grid-cols-8">
+      {albums.map(a => {
+        const bg = vividFrom(colours?.[a.uri_release]) ?? '#e8e2d6';
+        return (
+          <Link key={a.uri_release} to={a.uri_release} className="tile aspect-square" aria-label={`${a.release_name} by ${a.release_artist}`}>
+            <img src={getAlbumImageFromData(a.uri_release, 'medium')} alt="" loading="lazy" />
+            <span className="tile-cap flex flex-col gap-0.5" style={{ background: bg, color: inkOn(bg) }} aria-hidden>
+              <span className="truncate text-[13px] font-bold">{a.release_name}</span>
+              <span className="truncate text-[12px] opacity-80">{a.release_artist}</span>
+            </span>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+function PillSelect({ label, value, options, onChange }: { label: string; value: string; options: string[]; onChange: (v: string) => void }) {
+  const on = value !== 'all';
+  return (
+    <label
+      className={cn(
+        'relative flex h-11 items-center gap-2 rounded-full border-2 pl-4 pr-3 text-[14px] font-bold',
+        on ? 'border-[color:var(--cream)]' : 'border-[color:var(--ground-3)]',
       )}
+    >
+      <span className="text-[color:var(--cream-dim)]">{label}</span>
+      <select
+        value={value}
+        onChange={e => onChange(e.target.value)}
+        className="max-w-[180px] cursor-pointer appearance-none bg-transparent pr-5 outline-none"
+        aria-label={label}
+      >
+        <option value="all" className="bg-[color:var(--ground-2)]">
+          All
+        </option>
+        {options.map(o => (
+          <option key={o} value={o} className="bg-[color:var(--ground-2)]">
+            {o}
+          </option>
+        ))}
+      </select>
+      <ChevronRight className="pointer-events-none absolute right-3 h-4 w-4 rotate-90" aria-hidden />
+    </label>
+  );
+}
 
-      {totalPages > 1 && (
-        <div className="mt-12 border-t border-rule pt-6">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious
-                  onClick={() => navigate(buildPageUrl(Math.max(1, currentPage - 1)))}
-                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-
-              {getPageNumbers().map((pageNum, index) => (
-                <PaginationItem key={index}>
-                  {pageNum === '...' ? (
-                    <PaginationEllipsis />
-                  ) : (
-                    <PaginationLink
-                      onClick={() => navigate(buildPageUrl(pageNum as number))}
-                      isActive={currentPage === pageNum}
-                      className="cursor-pointer"
-                    >
-                      {pageNum}
-                    </PaginationLink>
-                  )}
-                </PaginationItem>
-              ))}
-
-              <PaginationItem>
-                <PaginationNext
-                  onClick={() => navigate(buildPageUrl(Math.min(totalPages, currentPage + 1)))}
-                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
+function Pager({ current, total, url }: { current: number; total: number; url: (n: number) => string }) {
+  const pages: Array<number | '…'> = [];
+  const span = appConfig.pagination.showPageNumbers;
+  if (total <= span + 2) {
+    for (let i = 1; i <= total; i++) pages.push(i);
+  } else {
+    pages.push(1);
+    let lo = Math.max(2, current - Math.floor(span / 2));
+    const hi = Math.min(total - 1, lo + span - 1);
+    lo = Math.max(2, hi - span + 1);
+    if (lo > 2) pages.push('…');
+    for (let i = lo; i <= hi; i++) pages.push(i);
+    if (hi < total - 1) pages.push('…');
+    pages.push(total);
+  }
+  return (
+    <nav aria-label="Pages" className="mt-14 flex flex-wrap items-center justify-center gap-2 border-t border-[color:var(--cream-rule)] pt-8">
+      <Link
+        to={url(Math.max(1, current - 1))}
+        aria-label="Previous page"
+        aria-disabled={current === 1}
+        className={cn('icon-btn border-2 border-[color:var(--ground-3)]', current === 1 && 'pointer-events-none opacity-40')}
+      >
+        <ChevronLeft className="h-5 w-5" />
+      </Link>
+      {pages.map((p, i) =>
+        p === '…' ? (
+          <span key={`e${i}`} className="t-mono px-2 text-[color:var(--cream-dim)]">
+            …
+          </span>
+        ) : (
+          <Link
+            key={p}
+            to={url(p)}
+            aria-current={p === current ? 'page' : undefined}
+            className={cn(
+              'grid h-11 min-w-11 place-items-center rounded-full px-3 text-[14px] font-bold',
+              p === current ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-2)]',
+            )}
+          >
+            {p}
+          </Link>
+        ),
       )}
-    </PageContainer>
+      <Link
+        to={url(Math.min(total, current + 1))}
+        aria-label="Next page"
+        aria-disabled={current === total}
+        className={cn('icon-btn border-2 border-[color:var(--ground-3)]', current === total && 'pointer-events-none opacity-40')}
+      >
+        <ChevronRight className="h-5 w-5" />
+      </Link>
+    </nav>
   );
 }

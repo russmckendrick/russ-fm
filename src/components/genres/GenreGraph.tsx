@@ -28,6 +28,9 @@ import {
   type GenreGraphLink,
   type GenreGraphNode,
 } from "@/components/genres/useGenreGraphLayout";
+import { albumFlood, artistFlood, genreFlood } from "@/components/genres/genreColours";
+import type { ColourMap } from "@/components/browse/facetSleeves";
+import { INK, type Flood } from "@/lib/sleeveColour";
 
 interface GenreGraphProps {
   genre: GenreSummary;
@@ -43,6 +46,10 @@ interface GenreGraphProps {
   onBack: () => void;
   onForward: () => void;
   onClearArtistFocus: () => void;
+  /** album-colors.json map; nodes take the colour of their sleeves. */
+  colorMap?: ColourMap;
+  /** Flood for the centre node (the selected genre's colour). */
+  centreFlood?: Flood;
 }
 
 interface SurfaceSize {
@@ -81,6 +88,8 @@ export function GenreGraph({
   onBack,
   onForward,
   onClearArtistFocus,
+  colorMap = null,
+  centreFlood,
 }: GenreGraphProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const graphRef = useRef<SVGGElement>(null);
@@ -153,6 +162,23 @@ export function GenreGraph({
       })
       .filter((item): item is { link: GenreGraphLink; source: GenreGraphNode; target: GenreGraphNode } => Boolean(item));
   }, [layout.links, nodesById]);
+
+  const nodeFloods = useMemo(() => {
+    const floods = new Map<string, Flood>();
+    layout.nodes.forEach((node) => {
+      const flood = node.role === "center" && node.type === "genre" && centreFlood
+        ? centreFlood
+        : node.album
+          ? albumFlood(node.album, colorMap)
+          : node.artist
+            ? artistFlood(node.artist, colorMap)
+            : node.genre
+              ? genreFlood(node.genre, colorMap)
+              : null;
+      if (flood) floods.set(node.id, flood);
+    });
+    return floods;
+  }, [centreFlood, colorMap, layout.nodes]);
 
   const transition = shouldReduceMotion ? { duration: 0 } : MOTION_SPRING;
   const lineTransition = shouldReduceMotion ? { duration: 0 } : LINE_SPRING;
@@ -270,7 +296,7 @@ export function GenreGraph({
   };
 
   return (
-    <div ref={surfaceRef} className="relative">
+    <div ref={surfaceRef} className="relative bg-[color:var(--ground-2)]">
       <GraphToolbar
         onBack={onBack}
         onForward={onForward}
@@ -280,7 +306,7 @@ export function GenreGraph({
       />
       <svg
         ref={svgRef}
-        className="h-[72dvh] min-h-[680px] w-full touch-none bg-paper-2"
+        className="h-[72dvh] min-h-[560px] w-full touch-none md:min-h-[680px]"
         role="img"
         aria-label={`${genre.name} relationships between genres, artists, and albums`}
         viewBox={`0 0 ${layout.width} ${layout.height}`}
@@ -310,7 +336,7 @@ export function GenreGraph({
             x2={layout.width * 0.7}
             y1={layout.centerY}
             y2={layout.centerY}
-            stroke="var(--rule)"
+            stroke="var(--cream-rule)"
             strokeDasharray="2 10"
             strokeLinecap="round"
             initial={false}
@@ -318,7 +344,7 @@ export function GenreGraph({
             transition={lineTransition}
           />
 
-          <g stroke="var(--rule-strong)" strokeOpacity={0.42}>
+          <g stroke="var(--cream)" strokeOpacity={0.24}>
             <AnimatePresence initial={false}>
               {visibleLinks.map(({ link, source, target }) => (
                 <GraphLinkLine
@@ -340,6 +366,7 @@ export function GenreGraph({
                 key={node.id}
                 node={node}
                 clipPrefix={clipPrefix}
+                flood={nodeFloods.get(node.id) ?? NEUTRAL}
                 selectedArtist={selectedArtist}
                 selectedAlbum={selectedAlbum}
                 isHovered={hoveredId === node.id}
@@ -366,7 +393,7 @@ export function GenreGraph({
       </svg>
 
       <div
-        className="pointer-events-none absolute left-0 top-0 border border-rule-strong bg-paper px-2.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.08em] text-ink shadow-[0_10px_24px_-18px_rgba(14,13,11,0.45)] transition-opacity"
+        className="t-mono pointer-events-none absolute left-0 top-0 max-w-[280px] rounded-full bg-[color:var(--ground)] px-3.5 py-2 text-[12px] text-[color:var(--cream)] shadow-[0_12px_30px_-10px_rgba(0,0,0,.7)] ring-1 ring-[color:var(--cream-rule)] transition-opacity motion-reduce:transition-none"
         style={{
           opacity: tooltip.visible ? 1 : 0,
           transform: `translate(${tooltip.x}px, ${tooltip.y}px)`,
@@ -392,7 +419,7 @@ function GraphToolbar({
   onZoomOut: () => void;
 }) {
   return (
-    <div className="absolute right-3 top-3 z-10 flex border border-rule-strong bg-paper/95 shadow-[0_14px_34px_-24px_rgba(14,13,11,0.45)]">
+    <div className="absolute right-3 top-3 z-10 flex gap-0.5 rounded-full bg-[color:var(--ground)] p-1 shadow-[0_14px_34px_-14px_rgba(0,0,0,.7)] ring-1 ring-[color:var(--cream-rule)]">
       <GraphToolButton label="Back" shortcut="[" onClick={onBack}>
         <ArrowLeft className="h-4 w-4" weight="bold" />
       </GraphToolButton>
@@ -430,7 +457,7 @@ function GraphToolButton({
       aria-keyshortcuts={shortcut}
       title={`${label} (${shortcut})`}
       onClick={onClick}
-      className="flex h-8 w-8 items-center justify-center border-r border-rule text-ink-dim transition-colors last:border-r-0 hover:bg-paper-2 hover:text-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ink"
+      className="flex h-11 w-11 items-center justify-center rounded-full text-[color:var(--cream-dim)] transition-colors hover:bg-[color:var(--ground-3)] hover:text-[color:var(--cream)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[color:var(--cream)]"
     >
       {children}
     </button>
@@ -483,6 +510,7 @@ function GraphLinkLine({
 function GraphNodeGroup({
   node,
   clipPrefix,
+  flood,
   selectedArtist,
   selectedAlbum,
   isHovered,
@@ -499,6 +527,7 @@ function GraphNodeGroup({
 }: {
   node: GenreGraphNode;
   clipPrefix: string;
+  flood: Flood;
   selectedArtist: GenreExplorerArtist | null;
   selectedAlbum: GenreExplorerAlbum | null;
   isHovered: boolean;
@@ -550,21 +579,23 @@ function GraphNodeGroup({
     >
       <title>{node.name}</title>
       {node.role === "center" && node.type === "genre" ? (
-        <CenterGenreNode node={node} />
+        <CenterGenreNode node={node} flood={flood} />
       ) : node.role === "center" && node.type === "artist" ? (
-        <CenterArtistNode node={node} clipPrefix={clipPrefix} />
+        <CenterArtistNode node={node} clipPrefix={clipPrefix} flood={flood} />
       ) : node.type === "album" ? (
         <AlbumNode
           node={node}
+          flood={flood}
           isSelected={isSelectedAlbum}
           isLabelVisible={isHovered || isDragged || isSelectedAlbum}
           clipPrefix={clipPrefix}
         />
       ) : node.type === "genre" ? (
-        <RelatedGenreChip node={node} />
+        <RelatedGenreChip node={node} flood={flood} />
       ) : (
         <OrbitNode
           node={node}
+          flood={flood}
           isSelected={isSelectedArtist}
           clipPrefix={clipPrefix}
         />
@@ -573,24 +604,23 @@ function GraphNodeGroup({
   );
 }
 
-function CenterGenreNode({ node }: { node: GenreGraphNode }) {
+function CenterGenreNode({ node, flood }: { node: GenreGraphNode; flood: Flood }) {
   const titleLines = splitGraphLabel(node.name, 16, 2);
 
   return (
     <>
-      <circle r={44} fill="var(--paper)" stroke="var(--rule-strong)" strokeWidth={1.1} />
-      <circle r={35} fill="var(--paper-2)" stroke="var(--rule)" strokeWidth={0.8} />
-      <BrandRecordGlyph size={48} />
+      <circle r={48} fill={flood.flood} />
+      <BrandRecordGlyph size={52} colour={flood.ink} />
       <text
         textAnchor="middle"
-        y={63}
-        fill="var(--ink)"
+        y={70}
+        fill="var(--cream)"
         fontFamily="var(--font-display)"
-        fontSize={16}
-        fontWeight={760}
+        fontSize={17}
+        fontWeight={900}
         letterSpacing={0}
         paintOrder="stroke"
-        stroke="var(--paper-2)"
+        stroke="var(--ground-2)"
         strokeWidth={6}
         strokeLinejoin="round"
       >
@@ -602,8 +632,8 @@ function CenterGenreNode({ node }: { node: GenreGraphNode }) {
       </text>
       <text
         textAnchor="middle"
-        y={titleLines.length > 1 ? 92 : 78}
-        fill="var(--ink-dim)"
+        y={titleLines.length > 1 ? 100 : 86}
+        fill="var(--cream-dim)"
         fontFamily="var(--font-mono)"
         fontSize={8.5}
         fontWeight={700}
@@ -618,17 +648,19 @@ function CenterGenreNode({ node }: { node: GenreGraphNode }) {
 function CenterArtistNode({
   node,
   clipPrefix,
+  flood,
 }: {
   node: GenreGraphNode;
   clipPrefix: string;
+  flood: Flood;
 }) {
   const titleLines = splitGraphLabel(node.name, 17, 2);
   const portraitSize = CENTER_ARTIST_PORTRAIT_RADIUS * 2;
 
   return (
     <>
-      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 1} fill="var(--paper)" stroke="var(--rule-strong)" strokeWidth={1.1} />
-      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS} fill="var(--paper-2)" stroke="var(--rule)" strokeWidth={0.8} />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 6} fill={flood.flood} />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS} fill="var(--ground-3)" />
       {node.image ? (
         <image
           href={node.image}
@@ -644,7 +676,7 @@ function CenterArtistNode({
         <text
           textAnchor="middle"
           dy={6}
-          fill="var(--ink)"
+          fill="var(--cream)"
           fontFamily="var(--font-display)"
           fontSize={18}
           fontWeight={780}
@@ -653,18 +685,17 @@ function CenterArtistNode({
           {artistInitials(node.name)}
         </text>
       )}
-      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS} fill="none" stroke="var(--rule-strong)" strokeWidth={1} />
-      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 4} fill="none" stroke="var(--hl)" strokeWidth={1.4} strokeDasharray="3 6" />
+      <circle r={CENTER_ARTIST_PORTRAIT_RADIUS + 11} fill="none" stroke={flood.flood} strokeOpacity={0.5} strokeWidth={1.4} strokeDasharray="3 6" />
       <text
         textAnchor="middle"
-        y={67}
-        fill="var(--ink)"
+        y={76}
+        fill="var(--cream)"
         fontFamily="var(--font-display)"
-        fontSize={15.5}
-        fontWeight={760}
+        fontSize={16}
+        fontWeight={900}
         letterSpacing={0}
         paintOrder="stroke"
-        stroke="var(--paper-2)"
+        stroke="var(--ground-2)"
         strokeWidth={6}
         strokeLinejoin="round"
       >
@@ -676,8 +707,8 @@ function CenterArtistNode({
       </text>
       <text
         textAnchor="middle"
-        y={titleLines.length > 1 ? 95 : 82}
-        fill="var(--ink-dim)"
+        y={titleLines.length > 1 ? 104 : 91}
+        fill="var(--cream-dim)"
         fontFamily="var(--font-mono)"
         fontSize={8.5}
         fontWeight={700}
@@ -689,11 +720,11 @@ function CenterArtistNode({
   );
 }
 
-function BrandRecordGlyph({ size }: { size: number }) {
+function BrandRecordGlyph({ size, colour }: { size: number; colour: string }) {
   const scale = size / 512;
 
   return (
-    <g transform={`translate(${-size / 2} ${-size / 2}) scale(${scale})`} fill="var(--ink)">
+    <g transform={`translate(${-size / 2} ${-size / 2}) scale(${scale})`} fill={colour}>
       <path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M256,490.667c-129.387,0-234.667-105.28-234.667-234.667S126.613,21.333,256,21.333S490.667,126.613,490.667,256S385.387,490.667,256,490.667z" />
       <path d="M458.667,245.333c-5.888,0-10.667,4.779-10.667,10.667c0,105.856-86.144,192-192,192c-5.888,0-10.667,4.779-10.667,10.667s4.779,10.667,10.667,10.667c117.632,0,213.333-95.701,213.333-213.333C469.333,250.112,464.555,245.333,458.667,245.333z" />
       <path d="M256,64c5.888,0,10.667-4.779,10.667-10.667S261.888,42.667,256,42.667C138.368,42.667,42.667,138.368,42.667,256c0,5.888,4.779,10.667,10.667,10.667S64,261.888,64,256C64,150.144,150.144,64,256,64z" />
@@ -709,34 +740,24 @@ function BrandRecordGlyph({ size }: { size: number }) {
 
 function OrbitNode({
   node,
+  flood,
   isSelected,
   clipPrefix,
 }: {
   node: GenreGraphNode;
+  flood: Flood;
   isSelected: boolean;
   clipPrefix: string;
 }) {
   return (
     <>
-      <motion.circle
-        r={node.radius}
-        fill={isSelected ? "var(--hl)" : "var(--paper)"}
-        stroke={isSelected ? "var(--hl)" : "var(--rule-strong)"}
-        strokeWidth={1}
-        animate={{
-          filter: isSelected ? "drop-shadow(0 8px 18px rgba(182, 69, 38, 0.22))" : "drop-shadow(0 0 0 rgba(0, 0, 0, 0))",
-        }}
-        transition={{ duration: 0.2 }}
+      <circle
+        r={node.radius + (isSelected ? 5 : 3)}
+        fill={flood.flood}
+        stroke={isSelected ? "var(--cream)" : "none"}
+        strokeWidth={isSelected ? 2 : 0}
       />
-      {node.type === "artist" && (
-        <circle
-          r={node.radius + 5}
-          fill="none"
-          stroke={isSelected ? "var(--hl)" : "var(--rule)"}
-          strokeWidth={isSelected ? 1.4 : 0.8}
-          strokeDasharray="2 5"
-        />
-      )}
+      <circle r={node.radius} fill="var(--ground-3)" />
       {node.image && (
         <image
           href={node.image}
@@ -753,7 +774,7 @@ function OrbitNode({
         <text
           textAnchor="middle"
           dy={5}
-          fill="var(--ink-dim)"
+          fill="var(--cream-dim)"
           fontFamily="var(--font-display)"
           fontSize={15}
           fontWeight={760}
@@ -764,14 +785,14 @@ function OrbitNode({
       )}
       <text
         textAnchor="middle"
-        dy={node.radius + 15}
-        fill="var(--ink)"
+        dy={node.radius + 18}
+        fill="var(--cream)"
         fontFamily="var(--font-grot)"
-        fontSize={11}
+        fontSize={11.5}
         fontWeight={700}
         letterSpacing={0}
         paintOrder="stroke"
-        stroke="var(--paper-2)"
+        stroke="var(--ground-2)"
         strokeWidth={5}
         strokeLinejoin="round"
       >
@@ -781,42 +802,27 @@ function OrbitNode({
   );
 }
 
-function RelatedGenreChip({ node }: { node: GenreGraphNode }) {
-  const width = Math.max(76, Math.min(148, node.radius * 2));
+function RelatedGenreChip({ node, flood }: { node: GenreGraphNode; flood: Flood }) {
+  const width = Math.max(84, Math.min(156, node.radius * 2));
   const label = formatGraphLabel(node.name, width > 120 ? 18 : 13);
 
   return (
     <>
-      <motion.rect
-        x={-width / 2}
-        y={-16}
-        width={width}
-        height={32}
-        rx={7}
-        fill="var(--paper)"
-        stroke="var(--rule-strong)"
-        strokeWidth={0.9}
-        animate={{
-          filter: "drop-shadow(0 12px 18px rgba(14, 13, 11, 0.08))",
-        }}
-        transition={{ duration: 0.2 }}
-      />
       <rect
-        x={-width / 2 + 6}
-        y={-10}
-        width={3}
-        height={20}
-        rx={1.5}
-        fill="var(--hl)"
-        opacity={0.82}
+        x={-width / 2}
+        y={-17}
+        width={width}
+        height={34}
+        rx={17}
+        fill={flood.flood}
       />
       <text
         textAnchor="middle"
         dy={4}
-        fill="var(--ink)"
+        fill={flood.ink}
         fontFamily="var(--font-grot)"
-        fontSize={10.5}
-        fontWeight={760}
+        fontSize={11}
+        fontWeight={800}
         letterSpacing={0}
       >
         {label}
@@ -827,11 +833,13 @@ function RelatedGenreChip({ node }: { node: GenreGraphNode }) {
 
 function AlbumNode({
   node,
+  flood,
   isSelected,
   isLabelVisible,
   clipPrefix,
 }: {
   node: GenreGraphNode;
+  flood: Flood;
   isSelected: boolean;
   isLabelVisible: boolean;
   clipPrefix: string;
@@ -845,9 +853,9 @@ function AlbumNode({
         y={-halfSize}
         width={halfSize * 2}
         height={halfSize * 2}
-        fill="var(--paper-2)"
-        stroke={isSelected ? "var(--hl)" : "var(--rule-strong)"}
-        strokeWidth={isSelected ? 2 : 1}
+        fill="var(--ground-3)"
+        stroke={isSelected ? "var(--cream)" : flood.flood}
+        strokeWidth={isSelected ? 4 : 3}
       />
       {node.image && (
         <image
@@ -864,13 +872,13 @@ function AlbumNode({
       <motion.text
         textAnchor="middle"
         dy={halfSize + 16}
-        fill={isSelected ? "var(--ink)" : "var(--ink-3)"}
+        fill={isSelected ? "var(--cream)" : "var(--cream-dim)"}
         fontFamily="var(--font-grot)"
         fontSize={10}
         fontWeight={700}
         letterSpacing={0}
         paintOrder="stroke"
-        stroke="var(--paper-2)"
+        stroke="var(--ground-2)"
         strokeWidth={5}
         strokeLinejoin="round"
         initial={false}
@@ -882,6 +890,8 @@ function AlbumNode({
     </>
   );
 }
+
+const NEUTRAL: Flood = { flood: "#e8e2d6", ink: INK, sub: "rgba(14,13,12,.7)", ground: "#1c1916" };
 
 function useSurfaceSize(ref: RefObject<HTMLElement | null>): SurfaceSize {
   const [size, setSize] = useState<SurfaceSize>({ width: 0, height: 0 });

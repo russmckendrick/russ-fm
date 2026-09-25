@@ -17,12 +17,12 @@ export const appConfig = {
   // Home page configuration
   homepage: {
     hero: {
-      numberOfFeaturedAlbums: 10, // Number of albums in the hero rotation
-      autoRotateInterval: 12000, // Auto-rotation interval in milliseconds
+      numberOfFeaturedAlbums: 6, // Latest additions rotated through the cover hero
+      autoRotateInterval: 7000, // Auto-rotation interval in milliseconds
       exploreButtonText: 'Vew album', // Text for the main CTA button
     },
     recentlyAdded: {
-      displayCount: 12, // Number of recently added albums to show
+      displayCount: 16, // Number of recently added albums to show
     },
     eras: {
       excludedDecades: [1930], // Array of decades to exclude (e.g., [1960, 1970])

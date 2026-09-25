@@ -1,0 +1,419 @@
+/* =========================================================================
+   russ.fm — "player" design system
+   -------------------------------------------------------------------------
+   Bold colour floods lifted from each sleeve, on a warm near-black ground,
+   with records treated as physical objects (sleeves, discs, stickers,
+   crates). Pages set the flood colour through FloodProvider
+   (src/components/player/FloodContext.tsx); the navigation paints itself in
+   the same colour so the hero and header read as one surface.
+   ========================================================================= */
+
+:root {
+  --ground: #0e0d0c;
+  --ground-2: #171512;
+  --ground-3: #211d19;
+  --cream: #fbf7ef;
+  --cream-dim: #a9a39a;
+  --cream-rule: rgba(251, 247, 239, 0.14);
+  --neutral-flood: #e8e2d6;
+
+  /* Set per page by FloodProvider. */
+  --flood: var(--ground);
+  --flood-ink: var(--cream);
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --- Type ----------------------------------------------------------------- */
+
+.t-disp {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  font-variation-settings: normal;
+  letter-spacing: -0.025em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.t-cond {
+  font-family: var(--font-display);
+  font-stretch: 66%;
+  font-weight: 900;
+  font-variation-settings: normal;
+  letter-spacing: -0.005em;
+  line-height: 0.86;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.t-dispn {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 800;
+  font-variation-settings: normal;
+  letter-spacing: -0.01em;
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.t-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- Sleeves -------------------------------------------------------------- */
+
+.sleeve {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background: var(--ground-3);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 30px 60px -18px rgba(0, 0, 0, 0.6),
+    0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.sleeve > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sleeve::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    inset 2px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Shrink-wrap shine. */
+.shrinkwrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    118deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 38%,
+    transparent 44%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.05) 76%,
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+}
+
+/* --- Vinyl ---------------------------------------------------------------- */
+
+.vinyl {
+  position: absolute;
+  border-radius: 50%;
+  background: #0b0b0b;
+  box-shadow: 0 22px 40px -10px rgba(0, 0, 0, 0.6), inset 0 0 0 1px #000;
+}
+
+.vinyl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: conic-gradient(
+    from 25deg,
+    transparent 0 6%,
+    rgba(255, 255, 255, 0.13) 11%,
+    transparent 17% 50%,
+    rgba(255, 255, 255, 0.09) 60%,
+    transparent 67%
+  );
+}
+
+.vinyl-grooves {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.045) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+.vinyl-label {
+  position: absolute;
+  left: 33%;
+  top: 33%;
+  width: 34%;
+  height: 34%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.35);
+}
+
+.vinyl-label::before {
+  content: '';
+  position: absolute;
+  width: 9%;
+  height: 9%;
+  left: 45.5%;
+  top: 45.5%;
+  border-radius: 50%;
+  background: #0b0b0b;
+}
+
+.spin-33 {
+  animation: spin-33 1.8s linear infinite;
+}
+
+.spin-45 {
+  animation: spin-33 1.2s linear infinite;
+}
+
+@keyframes spin-33 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Record tile: the disc slides sideways out of the sleeve on hover. */
+.rec {
+  position: relative;
+  display: block;
+}
+
+.rec .vinyl {
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.rec .sleeve {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.rec:hover,
+.rec:focus-visible {
+  z-index: 5;
+}
+
+.rec:hover .vinyl,
+.rec:focus-visible .vinyl {
+  transform: translateX(36%);
+}
+
+.rec:hover .sleeve,
+.rec:focus-visible .sleeve {
+  transform: translateX(-6%);
+}
+
+/* --- Stickers ------------------------------------------------------------- */
+
+.sticker {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 50%;
+  transform: rotate(9deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 0 0 3px rgba(255, 255, 255, 0.3);
+  animation: sticker-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 0.9s both;
+}
+
+@keyframes sticker-pop {
+  from {
+    opacity: 0;
+    transform: rotate(9deg) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(9deg) scale(1);
+  }
+}
+
+/* --- Pills / buttons ------------------------------------------------------ */
+
+.pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform 0.2s, background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.2s;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+}
+
+.pill:disabled {
+  cursor: default;
+  transform: none;
+}
+
+.pill-solid {
+  border-color: transparent;
+}
+
+.pill-lg {
+  min-height: 56px;
+  padding: 0 26px;
+  font-size: 16px;
+}
+
+.pill-sm {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.pill-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.28);
+  transition: width 0.25s linear;
+  pointer-events: none;
+}
+
+.pill > .pill-content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.06);
+}
+
+/* Genre / facet chips coloured by a representative sleeve. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.chip:hover {
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+/* Cover tile with a caption that slides up on hover (colour wall, grids). */
+.tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--ground-3);
+}
+
+.tile > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.tile .tile-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  transform: translateY(101%);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.tile:hover > img,
+.tile:focus-visible > img {
+  transform: scale(1.06);
+}
+
+.tile:hover .tile-cap,
+.tile:focus-visible .tile-cap {
+  transform: none;
+}
+
+/* Flood surfaces fade between records. */
+.flood-surface {
+  transition: background-color 0.9s ease, color 0.9s ease;
+}
+
+/* Horizontal shelves that scroll with the trackpad but hide the bar. */
+.shelf-scroll {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.shelf-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.shelf-scroll > * {
+  scroll-snap-align: start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-33,
+  .spin-45 {
+    animation: none;
+  }
+
+  .sticker {
+    animation: none;
+  }
+
+  .rec .vinyl,
+  .rec .sleeve,
+  .flood-surface,
+  .tile > img,
+  .tile .tile-cap {
+    transition: none;
+  }
+}

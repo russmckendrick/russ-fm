@@ -182,3 +182,24 @@ export function useAlbumColorsWithFallback(albumIdentifier?: string): AlbumColor
 export function preloadAlbumColors(): Promise<void> {
   return loadAlbumColors().then(() => {});
 }
+
+/**
+ * The whole uri → palette map (album-colors.json). Null until loaded. Use this
+ * when a page paints many sleeves at once (walls, shelves, crates).
+ */
+export function useAlbumColorMap(): Record<string, AlbumColorPalette> | null {
+  const [map, setMap] = useState<Record<string, AlbumColorPalette> | null>(colorData);
+
+  useEffect(() => {
+    if (map) return;
+    let alive = true;
+    loadAlbumColors().then(data => {
+      if (alive) setMap(data);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [map]);
+
+  return map;
+}

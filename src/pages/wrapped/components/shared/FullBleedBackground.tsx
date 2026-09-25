@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import type { ComponentProps, ElementType, ReactNode } from 'react';
+import type { ComponentProps, ReactNode } from 'react';
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { createGlowGradient } from '@/lib/color-utils';
 
@@ -68,8 +68,8 @@ export function FullBleedBackground({
     }
   };
 
-  const MotionWrapper: ElementType = animate ? motion.div : 'div';
-  const motionProps: ComponentProps<typeof motion.div> | Record<string, never> = animate
+  // A motion.div with no initial/animate props renders as a plain div.
+  const motionProps: ComponentProps<typeof motion.div> = animate
     ? {
       initial: { opacity: 0 },
       animate: { opacity: 1 },
@@ -79,7 +79,7 @@ export function FullBleedBackground({
 
   return (
     <div className={`absolute inset-0 overflow-hidden ${className}`}>
-      <MotionWrapper
+      <motion.div
         className="absolute inset-0"
         {...motionProps}
       >
@@ -186,7 +186,7 @@ export function FullBleedBackground({
           <div className={`absolute inset-0 bg-gradient-to-t from-background ${variant === 'deep' || variant === 'cosmic' ? 'via-[rgba(8,8,7,0.6)]' : 'via-background/50'
             } to-transparent`} />
         )}
-      </MotionWrapper>
+      </motion.div>
 
       {/* Content layer */}
       {children && (

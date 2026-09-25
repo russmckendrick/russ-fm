@@ -1,19 +1,19 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import type { CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { SiSpotify, SiApplemusic, SiLastdotfm, SiDiscogs, SiWikipedia } from 'react-icons/si';
-import { ServiceButton } from '@/components/ui/service-button';
-import { GenreTag } from '@/components/ui/genre-tag';
-import { AlbumCard } from '@/components/AlbumCard';
+import { SkipBack, SkipForward } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
-import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
+import { Crate, type CrateRecord } from '@/components/artist/Crate';
+import { PillLink, SectionHeading, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
-import { useAlbumColors } from '@/hooks/useAlbumColors';
+import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { buildGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
-import { getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
+import { slugify } from '@/lib/browseFacets';
+import { floodFor, inkOn, vividFrom } from '@/lib/sleeveColour';
+import { cn } from '@/lib/utils';
+import { getAlbumImageFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
@@ -36,6 +36,8 @@ interface Album {
   json_detailed_artist: string;
   images_uri_release: { 'hi-res': string; medium: string };
   images_uri_artist: { 'hi-res': string; medium: string };
+  format_primary?: string | null;
+  labels?: string[];
 }
 
 interface ArtistImageEntry {
@@ -148,13 +150,39 @@ export function ArtistDetailPage() {
   const [artistData, setArtistData] = useState<ArtistData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Palette sourced from a random album so the hero gets a per-artist tint
-  const randomAlbum = useMemo(() => {
-    if (albums.length === 0) return null;
-    return albums[Math.floor(Math.random() * albums.length)];
+  // The crate: every record by release year. The front record's sleeve
+  // colour floods the top of the page (and the nav).
+  const colourMap = useAlbumColorMap();
+  const [crateIndex, setCrateIndex] = useState<number | null>(null);
+  const crateRecords = useMemo<CrateRecord[]>(() => {
+    const withYear = albums.map(a => {
+      const y = new Date(a.date_release_year).getFullYear();
+      return { uri_release: a.uri_release, release_name: a.release_name.trim(), year: Number.isFinite(y) && y > 1900 ? String(y) : '—' };
+    });
+    return withYear.sort((a, b) => (a.year === '—' ? 1 : b.year === '—' ? -1 : a.year.localeCompare(b.year)) || a.release_name.localeCompare(b.release_name));
   }, [albums]);
-  const randomAlbumPath = randomAlbum?.uri_release.replace('/album/', '').replace('/', '') || '';
-  const albumColors = useAlbumColors(randomAlbumPath);
+  // Start at the front of the crate (earliest release) so the rest stand behind it.
+  const crateIdx = Math.min(crateIndex ?? 0, Math.max(0, crateRecords.length - 1));
+  const flood = floodFor(colourMap?.[crateRecords[crateIdx]?.uri_release]);
+  usePageFlood(crateRecords.length ? flood.flood : null, crateRecords.length ? flood.ink : null);
+  useEffect(() => setCrateIndex(null), [artistPath]);
+
+  const discography = useMemo(() => {
+    const out: Array<{ kind: 'decade'; label: string; count: number } | { kind: 'album'; album: Album; year: string; flood: string }> = [];
+    const byUri = new Map(albums.map(a => [a.uri_release, a]));
+    const decadeOf = (y: string) => (y === '—' ? 'Undated' : `${y.slice(0, 3)}0s`);
+    let last = '';
+    crateRecords.forEach(r => {
+      const d = decadeOf(r.year);
+      if (d !== last) {
+        out.push({ kind: 'decade', label: d, count: crateRecords.filter(x => decadeOf(x.year) === d).length });
+        last = d;
+      }
+      const album = byUri.get(r.uri_release);
+      if (album) out.push({ kind: 'album', album, year: r.year, flood: floodFor(colourMap?.[r.uri_release]).flood });
+    });
+    return out;
+  }, [albums, crateRecords, colourMap]);
 
   const loadArtistData = useCallback(async () => {
     try {
@@ -243,26 +271,15 @@ export function ArtistDetailPage() {
   });
 
   if (loading) {
-    return (
-      <PageContainer>
-        <EditorialSkeleton label="Loading artist…" />
-      </PageContainer>
-    );
+    return <div className="h-[80vh] bg-[color:var(--ground)]" aria-busy="true" aria-label="Loading artist" />;
   }
 
   if (albums.length === 0) {
     return (
-      <PageContainer>
-        <div className="py-16">
-          <Link to="/artists/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
-            ← Artists
-          </Link>
-          <EditorialEmpty
-            title="Artist not found"
-            detail="The requested artist could not be found"
-          />
-        </div>
-      </PageContainer>
+      <div className="mx-auto flex w-full max-w-[1640px] flex-col items-start gap-6 px-5 py-24 md:px-10 lg:px-14">
+        <p className="t-disp m-0 text-[48px] md:text-[72px]">Artist not found</p>
+        <PillLink to="/artists/1">All artists</PillLink>
+      </div>
     );
   }
 
@@ -291,10 +308,7 @@ export function ArtistDetailPage() {
   const latestYear = years.length ? Math.max(...years) : null;
   const bio = cleanBiography(artistData?.biography);
 
-  const heroTint = albumColors?.background ?? 'var(--paper-2)';
-  const heroAccent = albumColors?.accent ?? 'var(--hl)';
-  const titleStyle = getArtistHeroTitleStyle(artistName);
-  const fanartUrl = pickFanart(artistData?.images);
+  const artistUri = `/artist/${artistPath}/`;
   const wikipediaUrl =
     artistData?.wikipedia_url ||
     `https://en.wikipedia.org/wiki/${encodeURIComponent(artistName)}`;
@@ -310,19 +324,19 @@ export function ArtistDetailPage() {
 
     if (!selectedArtist) return [];
 
-    // The genreExplorer caches `artist.avatar` (the smallest variant), but
-    // ArtistCard renders at 360×360 so we look the medium variant up at the
-    // call site rather than mutating the explorer for every other consumer.
-    const candidates = getRelatedArtistsForArtist(selectedArtist, explorer.genres).map(({ artist }) => ({
-      name: artist.name,
-      uri: artist.uri,
-      image: getArtistImageFromData(artist.uri, 'medium'),
-      albumCount: artist.totalAlbumCount || artist.albumCount,
-    }));
+    const candidates = getRelatedArtistsForArtist(selectedArtist, explorer.genres).map(({ artist }) => {
+      const latest = collection
+        .filter(a => a.uri_artist === artist.uri)
+        .sort((a, b) => b.date_added.localeCompare(a.date_added))[0];
+      return {
+        name: artist.name,
+        uri: artist.uri,
+        image: getArtistImageFromData(artist.uri, 'medium'),
+        albumCount: artist.totalAlbumCount || artist.albumCount,
+        latestUri: latest?.uri_release,
+      };
+    });
 
-    // If Last.fm gave us a similar list, prefer artists in the collection that
-    // appear there. Anything Last.fm names we don't own falls through to the
-    // genre-overlap candidates below it.
     if (lastfmSimilarNames.length > 0) {
       const lastfmRanked = candidates.filter((c) => lastfmSimilarNames.includes(c.name.toLowerCase()));
       const remaining = candidates.filter((c) => !lastfmSimilarNames.includes(c.name.toLowerCase()));
@@ -332,305 +346,202 @@ export function ArtistDetailPage() {
     return candidates.slice(0, 6);
   })();
 
+  const current = crateRecords[crateIdx];
+  const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
+  const listeners = artistData?.services?.lastfm?.listeners;
+  const nameSize = artistName.length <= 12 ? 'text-[64px] md:text-[120px] xl:text-[176px]' : artistName.length <= 22 ? 'text-[48px] md:text-[88px] xl:text-[128px]' : 'text-[40px] md:text-[64px] xl:text-[88px]';
+  const services = [
+    artistData?.services?.spotify?.url && { label: 'Spotify', url: artistData.services.spotify.url },
+    artistData?.services?.apple_music?.url && { label: 'Apple Music', url: artistData.services.apple_music.url },
+    artistData?.services?.lastfm?.url && { label: 'Last.fm', url: artistData.services.lastfm.url },
+    (artistData?.discogs_url || artistData?.services?.discogs?.url) && { label: 'Discogs', url: (artistData?.discogs_url || artistData?.services?.discogs?.url) as string },
+    { label: 'Wikipedia', url: wikipediaUrl },
+  ].filter(Boolean) as Array<{ label: string; url: string }>;
+  const filedAs = artistName.replace(/^the\s+/i, '').toUpperCase();
+  const currentLongest = current ? Math.max(...current.release_name.split(/\s+/).map(w => w.length), 6) : 6;
+  const currentAlbum = current ? albums.find(a => a.uri_release === current.uri_release) : undefined;
+
+  const stats: Array<[string, string]> = [
+    ['Records', String(albums.length)],
+    ...(boxsets ? [['Box sets', String(boxsets)] as [string, string]] : []),
+    ...(firstYear && latestYear ? [[firstYear === latestYear ? 'Released' : 'Releases span', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]] : []),
+    ...(listeners != null ? [['Last.fm listeners', numberShort(Number(listeners))] as [string, string]] : []),
+  ];
+
   return (
-    <PageContainer variant="hero">
-      {/* Hero --------------------------------------------------------- */}
-      <section
-        className="relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]"
-      >
-        {fanartUrl && (
-          <div aria-hidden className="pointer-events-none absolute inset-0">
-            {/* Multiply darkens the cream paper in light mode so the fanart
-                reads like a tinted backdrop. In dark mode multiply against
-                near-black would crush the image to nothing, so swap to
-                screen which lifts the colours instead. */}
+    <div>
+      <div className="flood-surface" style={{ background: flood.flood, color: flood.ink }}>
+        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(280px,420px)_minmax(0,1fr)] lg:gap-16 lg:px-14 lg:pt-10">
+          <div className="aspect-[4/5] w-full max-w-[420px] overflow-hidden bg-black/10">
             <img
-              src={fanartUrl}
-              alt=""
-              className="h-full w-full object-cover opacity-30 mix-blend-multiply dark:opacity-40 dark:mix-blend-screen"
-              loading="lazy"
-            />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  'linear-gradient(180deg, color-mix(in srgb, var(--paper) 45%, transparent) 0%, color-mix(in srgb, var(--paper) 92%, transparent) 80%)',
-              }}
+              src={getArtistImageFromData(artistUri, 'hi-res')}
+              alt={artistName}
+              onError={handleImageError}
+              className="h-full w-full object-cover grayscale contrast-[1.1]"
             />
           </div>
+          <div className="flex min-w-0 flex-col gap-7 lg:pt-4">
+            <h1 className={cn('t-disp m-0 break-words', nameSize)}>{artistName}</h1>
+            <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
+              {stats.map(([k, v]) => (
+                <div key={k} className="flex flex-col-reverse gap-1">
+                  <dt className="t-kicker text-[11px]">{k}</dt>
+                  <dd className="t-disp m-0 text-[36px] md:text-[56px]">{v}</dd>
+                </div>
+              ))}
+            </dl>
+            {bio && <Bio text={bio} />}
+            <div className="flex flex-wrap gap-2.5">
+              {services.map((s, i) => (
+                <PillLink key={s.label} to={s.url} size="sm" solid={i === 0 ? { background: flood.ink, color: flood.flood } : undefined}>
+                  {s.label}
+                </PillLink>
+              ))}
+            </div>
+            {cleanGenres.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {cleanGenres.slice(0, 8).map(g => (
+                  <Link key={g} to={`/genre/${slugify(g)}`} className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100" style={{ borderColor: 'currentColor' }}>
+                    {g}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+
+        {current && (
+          <section className="mx-auto grid w-full max-w-[1640px] items-center gap-10 px-5 pt-16 md:px-10 lg:grid-cols-[minmax(0,720px)_minmax(0,1fr)] lg:gap-12 lg:px-14">
+            <Crate records={crateRecords} index={crateIdx} onChange={setCrateIndex} label={filedAs} tab={filedAs.split(/[\s,]+/)[0]} />
+            <div className="flex min-w-0 flex-col gap-5">
+              <div className="flex items-baseline gap-2.5">
+                <span className="t-cond text-[64px] md:text-[72px]">{String(crateIdx + 1).padStart(2, '0')}</span>
+                <span className="t-mono text-[14px] font-bold">/ {crateRecords.length}</span>
+              </div>
+              <h2 className="t-cond m-0" style={{ fontSize: `clamp(40px, 6vw, ${Math.min(96, Math.floor(520 / (currentLongest * 0.52)))}px)` }}>
+                {current.release_name}
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {[current.year, currentAlbum?.format_primary, currentAlbum?.labels?.[0]].filter(Boolean).map(v => (
+                  <span key={v} className="inline-flex h-8 items-center rounded-full border-2 border-current px-3 text-[13px] font-bold">
+                    {v}
+                  </span>
+                ))}
+              </div>
+              {currentAlbum?.date_added && (
+                <span className="t-kicker" style={{ color: flood.sub }}>
+                  Added {new Date(currentAlbum.date_added).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+                </span>
+              )}
+              <div className="mt-1 flex items-center gap-3">
+                <PillLink to={current.uri_release} solid={{ background: flood.ink, color: flood.flood }}>
+                  View album
+                </PillLink>
+                <span className="flex-1" />
+                <button type="button" className="icon-btn border-2 border-current" onClick={() => setCrateIndex(Math.max(0, crateIdx - 1))} disabled={crateIdx === 0} aria-label="Previous record">
+                  <SkipBack className="h-5 w-5" fill="currentColor" />
+                </button>
+                <button type="button" className="icon-btn border-2 border-current" onClick={() => setCrateIndex(Math.min(crateRecords.length - 1, crateIdx + 1))} disabled={crateIdx === crateRecords.length - 1} aria-label="Next record">
+                  <SkipForward className="h-5 w-5" fill="currentColor" />
+                </button>
+              </div>
+              <span className="t-mono text-[12px] opacity-70">Scroll over the crate, use the arrow keys or click a record to flip</span>
+            </div>
+          </section>
         )}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.18]"
-          style={{
-            background: `radial-gradient(circle at 62% 22%, ${heroTint} 0%, transparent 34%)`,
-          }}
-        />
 
-        <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
-          <div className="order-2 flex min-w-0 flex-col items-start lg:order-none">
-            <nav className="mb-5 flex max-w-full items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-              <Link
-                to="/artists/1"
-                className="shrink-0 transition-colors hover:text-ink"
-              >
-                Artists
-              </Link>
-              <span aria-hidden>/</span>
-              <span className="min-w-0 truncate">{artistName}</span>
-            </nav>
-
-            <h1
-              className="text-display max-w-full uppercase text-ink lg:max-w-[var(--hero-title-max-width)]"
-              style={titleStyle}
-            >
-              {artistName}
-            </h1>
-
-            {cleanGenres.length > 0 && (
-              <div className="mt-5 flex flex-wrap gap-1.5">
-                {cleanGenres.slice(0, 6).map((g) => (
-                  <GenreTag key={g} genre={g} size="md" linkable />
-                ))}
-              </div>
-            )}
-
-            <div className="mt-7 flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-              {artistData?.services?.spotify?.url && (
-                <ServiceButton service="spotify" url={artistData.services.spotify.url} icon={<SiSpotify className="h-4 w-4" />} className="w-full sm:w-auto">
-                  Spotify
-                </ServiceButton>
-              )}
-              {artistData?.services?.apple_music?.url && (
-                <ServiceButton service="apple-music" url={artistData.services.apple_music.url} icon={<SiApplemusic className="h-4 w-4" />} className="w-full sm:w-auto">
-                  Apple Music
-                </ServiceButton>
-              )}
-              {artistData?.services?.lastfm?.url && (
-                <ServiceButton service="lastfm" url={artistData.services.lastfm.url} icon={<SiLastdotfm className="h-4 w-4" />} className="w-full sm:w-auto">
-                  Last.fm
-                </ServiceButton>
-              )}
-              {(artistData?.discogs_url || artistData?.services?.discogs?.url) && (
-                <ServiceButton
-                  service="discogs"
-                  url={artistData?.discogs_url || artistData?.services?.discogs?.url}
-                  icon={<SiDiscogs className="h-4 w-4" />}
-                  className="w-full sm:w-auto"
-                >
-                  Discogs
-                </ServiceButton>
-              )}
-              <ServiceButton
-                service="wikipedia"
-                url={wikipediaUrl}
-                icon={<SiWikipedia className="h-4 w-4" />}
-                className="w-full sm:w-auto"
-              >
-                Wikipedia
-              </ServiceButton>
+        {crateRecords.length >= 4 ? (
+          <section className="mx-auto w-full max-w-[1640px] px-5 pb-20 pt-12 md:px-10 lg:px-14">
+            <div role="group" aria-label="Jump to a record by year" className="flex h-[110px] items-end">
+              {crateRecords.map((r, k) => {
+                const on = k === crateIdx;
+                const colour = vividFrom(colourMap?.[r.uri_release]) ?? colourMap?.[r.uri_release]?.accent ?? '#3a3530';
+                const decade = r.year !== '—' ? `${r.year.slice(0, 3)}0s` : '';
+                const prevDecade = k > 0 && crateRecords[k - 1].year !== '—' ? `${crateRecords[k - 1].year.slice(0, 3)}0s` : '';
+                return (
+                  <button
+                    key={r.uri_release}
+                    type="button"
+                    onClick={() => setCrateIndex(k)}
+                    aria-label={`${r.release_name} (${r.year})`}
+                    aria-current={on}
+                    className="relative min-w-0 flex-1 transition-[height,transform] duration-500 ease-[cubic-bezier(.2,.8,.2,1)] hover:-translate-y-1.5"
+                    style={{ background: colour, height: on ? 80 : 44, boxShadow: on ? `0 0 0 3px ${flood.ink}` : 'inset 1px 0 0 rgba(0,0,0,.18)' }}
+                  >
+                    {on && <span className="t-mono absolute bottom-full left-1/2 mb-2 -translate-x-1/2 whitespace-nowrap text-[13px] font-bold">{r.year}</span>}
+                    {decade && decade !== prevDecade && <span className="t-mono absolute left-0 top-full mt-2.5 whitespace-nowrap text-[11px] font-bold md:text-[12px]">{decade}</span>}
+                  </button>
+                );
+              })}
             </div>
-          </div>
-
-          <div className="order-1 min-w-0 lg:order-none">
-            <div
-              className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden bg-paper-2 shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
-              style={{
-                boxShadow: `0 38px 90px -48px ${heroAccent}, 0 18px 48px -34px rgba(14,13,11,0.42)`,
-              }}
-            >
-              <img
-                src={getArtistImageFromData(`/artist/${decodeURIComponent(artistPath || '')}/`, 'hi-res')}
-                alt={`${artistName} portrait`}
-                width={720}
-                height={720}
-                fetchPriority="high"
-                onError={handleImageError}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <aside className="order-3 grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-3 lg:order-none lg:grid-cols-1 lg:gap-0 lg:border-0 lg:bg-transparent">
-            <ArtistMetaRail label="Releases" value={String(albums.length)} />
-            <ArtistMetaRail label="First" value={firstYear ? String(firstYear) : '—'} />
-            <ArtistMetaRail label="Latest" value={latestYear ? String(latestYear) : '—'} />
-            <ArtistMetaRail label="Styles" value={cleanGenres.length ? cleanGenres.slice(0, 2).join(', ') : 'Collection'} />
-            <div className="hidden border-b border-rule py-8 lg:block">
-              <HeroPulseLine accent={heroAccent} />
-            </div>
-          </aside>
-          </div>
-      </section>
-
-      {/* Main content ------------------------------------------------- */}
-      <div className="mx-auto w-full max-w-[1640px] px-5 py-14 md:px-8 md:py-20">
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-20">
-          <div className="flex flex-col gap-16">
-            {bio && (
-              <section>
-                <SectionHeader num="01" label="Biography" />
-                <div className="mt-6 font-grot text-[16px] leading-[1.7] text-ink-2">
-                  {bio.split('\n').filter(p => p.trim()).map((p, i) => (
-                    <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            <section>
-              <SectionHeader
-                num={bio ? '02' : '01'}
-                label="Releases in collection"
-                count={albums.length}
-              />
-              <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                {sortedAlbums.map((album, i) => (
-                  <AlbumCard key={album.uri_release} album={album} index={i + 1} />
-                ))}
-              </div>
-            </section>
-
-            {similarArtists.length > 0 && (
-              <section>
-                <SectionHeader
-                  num={bio ? '03' : '02'}
-                  label="Similar artists"
-                  count={similarArtists.length}
-                />
-                <div className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
-                  {similarArtists.map((artist, i) => (
-                    <ArtistCard key={artist.uri} artist={artist} index={i + 1} />
-                  ))}
-                </div>
-              </section>
-            )}
-          </div>
-
-          {/* Sidebar */}
-          <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
-            <div>
-              <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                Quick facts
-              </h3>
-              <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
-                <KV label="Releases" value={String(albums.length)} />
-                {firstYear && <KV label="First" value={String(firstYear)} />}
-                {latestYear && <KV label="Latest" value={String(latestYear)} />}
-                {artistData?.country && <KV label="Country" value={artistData.country} />}
-                {artistData?.formed_date && <KV label="Formed" value={artistData.formed_date} />}
-                {artistData?.services?.spotify?.followers?.total != null && (
-                  <KV label="Followers" value={numberShort(artistData.services.spotify.followers.total)} />
-                )}
-                {artistData?.services?.lastfm?.listeners != null && (
-                  <KV label="Listeners" value={numberShort(Number(artistData.services.lastfm.listeners))} />
-                )}
-                {artistData?.services?.lastfm?.playcount != null && (
-                  <KV label="Scrobbles" value={numberShort(Number(artistData.services.lastfm.playcount))} />
-                )}
-              </dl>
-            </div>
-
-            {cleanGenres.length > 0 && (
-              <div>
-                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                  Genres
-                </h3>
-                <div className="flex flex-wrap gap-1.5">
-                  {cleanGenres.map((g) => (
-                    <GenreTag key={g} genre={g} size="sm" linkable />
-                  ))}
-                </div>
-              </div>
-            )}
-          </aside>
-        </div>
+          </section>
+        ) : (
+          <div className="h-20" />
+        )}
       </div>
-    </PageContainer>
-  );
-}
 
-function KV({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="bg-paper px-3 py-2.5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
-        {label}
-      </dt>
-      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
-        {value}
-      </dd>
+      <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
+        <section className="flex flex-col gap-8">
+          <SectionHeading title="Discography" note={`${albums.length} ${albums.length === 1 ? 'record' : 'records'} by release year`} />
+          <div className="grid grid-cols-3 gap-1 sm:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10">
+            {discography.map(item =>
+              item.kind === 'decade' ? (
+                <div key={`d-${item.label}`} className="flex aspect-square flex-col justify-between bg-[color:var(--ground-2)] p-3 md:p-3.5">
+                  <span className="t-disp text-[22px] md:text-[28px]">{item.label}</span>
+                  <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">
+                    {item.count} {item.count === 1 ? 'record' : 'records'}
+                  </span>
+                </div>
+              ) : (
+                <Link key={item.album.uri_release} to={item.album.uri_release} className="tile aspect-square" aria-label={`${item.album.release_name} (${item.year})`}>
+                  <img src={getAlbumImageFromData(item.album.uri_release, 'medium')} alt="" loading="lazy" />
+                  <span className="tile-cap flex flex-col gap-0.5" style={{ background: item.flood, color: inkOn(item.flood) }} aria-hidden>
+                    <span className="truncate text-[13px] font-bold">{item.album.release_name}</span>
+                    <span className="t-mono truncate text-[11px] opacity-80">
+                      {item.year}
+                      {item.album.format_primary ? ` · ${item.album.format_primary}` : ''}
+                    </span>
+                  </span>
+                </Link>
+              ),
+            )}
+          </div>
+        </section>
+
+        {similarArtists.length > 0 && (
+          <section className="flex flex-col gap-8">
+            <SectionHeading title="Similar artists" />
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
+              {similarArtists.map(a => (
+                <ArtistCard key={a.uri} artist={a} palette={a.latestUri ? colourMap?.[a.latestUri] : null} />
+              ))}
+            </div>
+          </section>
+        )}
+      </div>
     </div>
   );
 }
 
-function ArtistMetaRail({ label, value }: { label: string; value: string }) {
+function Bio({ text }: { text: string }) {
+  const [open, setOpen] = useState(false);
+  const paragraphs = text.split('\n').filter(p => p.trim());
+  const long = text.length > 520;
+  const shown = open || !long ? paragraphs : [paragraphs[0].length > 520 ? `${paragraphs[0].slice(0, 520).replace(/\s+\S*$/, '')}…` : paragraphs[0]];
   return (
-    <div className="bg-paper p-4 lg:border-b lg:border-rule lg:bg-transparent lg:px-0 lg:py-5 lg:last:border-b-0">
-      <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        {label}
-      </dt>
-      <dd className="mt-2 break-words font-display text-[19px] uppercase leading-tight text-ink">
-        {value}
-      </dd>
+    <div className="flex max-w-[720px] flex-col gap-4">
+      {shown.map((p, i) => (
+        <p key={i} className="m-0 text-[17px] leading-[1.6] md:text-[18px]">
+          {p}
+        </p>
+      ))}
+      {long && (
+        <button type="button" className="pill pill-sm self-start" onClick={() => setOpen(v => !v)} aria-expanded={open}>
+          {open ? 'Show less' : 'Read more'}
+        </button>
+      )}
     </div>
   );
-}
-
-function HeroPulseLine({ accent }: { accent: string }) {
-  return (
-    <span className="relative block h-10 w-20 overflow-hidden text-ink" aria-hidden>
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 96 48" fill="none">
-        <path
-          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          opacity="0.32"
-        />
-        <path
-          className="waveform-trace"
-          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-          stroke={accent}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          pathLength="1"
-          strokeDasharray="0.34 1"
-        />
-      </svg>
-    </span>
-  );
-}
-
-function getArtistHeroTitleStyle(name: string): CSSProperties {
-  const words = name.split(/\s+/).filter(Boolean);
-  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
-  const charCount = name.length;
-
-  let maxPx = 128;
-  let preferredVw = 9.2;
-  let maxWidth = 'min(100%, 9.6ch)';
-
-  if (longestWord >= 18 || charCount >= 46) {
-    maxPx = 72;
-    preferredVw = 4.9;
-    maxWidth = 'min(100%, 13.8ch)';
-  } else if (longestWord >= 13 || charCount >= 34) {
-    maxPx = 88;
-    preferredVw = 5.8;
-    maxWidth = 'min(100%, 12.4ch)';
-  } else if (longestWord >= 11 || charCount >= 24) {
-    maxPx = 104;
-    preferredVw = 7.1;
-    maxWidth = 'min(100%, 11.2ch)';
-  }
-
-  return {
-    fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
-    '--hero-title-max-width': maxWidth,
-    lineHeight: 0.9,
-  } as CSSProperties;
 }
 
 function cleanBiography(raw?: string): string | null {
@@ -647,15 +558,4 @@ function numberShort(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
   if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
   return n.toLocaleString();
-}
-
-// Pick the widest TheAudioDB fanart image from the artist's images list. Returns
-// undefined when no fanart was matched (sparse artists fall back to the regular
-// portrait-only hero treatment).
-function pickFanart(images: ArtistImageEntry[] | undefined): string | undefined {
-  if (!images?.length) return undefined;
-  const fanart = images
-    .filter((img) => img?.url && img.type?.toLowerCase() === 'fanart')
-    .sort((a, b) => (b.width ?? 0) - (a.width ?? 0));
-  return fanart[0]?.url;
 }

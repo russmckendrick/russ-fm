@@ -1,6 +1,8 @@
 @import '@fontsource-variable/archivo/standard.css';
+@import '@fontsource-variable/hanken-grotesk/index.css';
 @import '@fontsource-variable/jetbrains-mono/index.css';
 @import './styles/design-tokens.css';
+@import './styles/player.css';
 @import url('/album-colors.css');
 
 @tailwind base;
@@ -9,48 +11,7 @@
 
 @layer base {
   :root {
-    /* Paper palette mapped to shadcn HSL slots. HSL values correspond to
-       the hex tokens in design-tokens.css; shadcn components keep using
-       `hsl(var(--background))` etc. unchanged. */
-
-    --background: 42 31% 94%;       /* paper   #f4f1ea */
-    --foreground: 40 12% 5%;        /* ink     #0e0d0b */
-
-    --card: 41 29% 89%;             /* paper-2 #ebe6db */
-    --card-foreground: 40 12% 5%;   /* ink     */
-
-    --popover: 42 31% 94%;          /* paper   */
-    --popover-foreground: 40 12% 5%;/* ink     */
-
-    --primary: 40 12% 5%;           /* ink      */
-    --primary-foreground: 42 31% 94%;/* paper  */
-
-    --secondary: 41 29% 89%;        /* paper-2 */
-    --secondary-foreground: 40 12% 5%;/* ink   */
-
-    --muted: 41 29% 89%;            /* paper-2 */
-    --muted-foreground: 34 10% 32%; /* ink-3   */
-
-    --accent: 43 28% 83%;           /* paper-3 */
-    --accent-foreground: 40 12% 5%; /* ink     */
-
-    --destructive: 9 77% 50%;       /* hl      #e23b1e */
-    --destructive-foreground: 42 31% 94%;/* paper */
-
-    --border: 34 10% 32%;           /* ink-3 — hairline rules read clearly
-                                       on paper without being visually noisy */
-    --input: 34 10% 32%;            /* ink-3  */
-    --ring: 40 12% 5%;              /* ink    */
-
-    --radius: 0;                    /* sharp corners; artist photos use
-                                       explicit `rounded-full` override */
-
-    --glass-border: 42 31% 94% / 0.2;
-    --glass-bg:     42 31% 94% / 0.7;
-  }
-
-  .dark {
-    --background: 40 13% 4%;        /* paper (dark)   #0d0c0a */
+    --background: 30 7% 5%;         /* ground #0e0d0c */
     --foreground: 42 31% 94%;       /* ink (dark)     #f4f1ea */
 
     --card: 40 17% 7%;              /* paper-2 dark   #15130f */
@@ -79,9 +40,15 @@
     --input: 37 9% 56%;             /* ink-3 dark     */
     --ring: 42 31% 94%;             /* ink (dark)     */
 
+    --radius: 0;
+
     --glass-border: 42 31% 94% / 0.1;
     --glass-bg:     40 17% 7% / 0.7;
   }
+
+  .dark {
+  }
+
 }
 
 @layer base {
@@ -95,7 +62,7 @@
     min-width: 320px;
     overflow-x: hidden;
     font-feature-settings: 'ss01', 'cv11';
-    font-variation-settings: 'wdth' 95, 'wght' 480;
+    font-variation-settings: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: color-mix(in oklab, var(--hl) 18%, transparent);

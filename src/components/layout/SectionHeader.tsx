@@ -1,65 +1,42 @@
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
-  /** Zero-padded section number string, e.g. "01". */
+  /** Kept for compatibility; section numbers are no longer shown. */
   num?: string;
-  /** Section title. Shown in grot. */
+  /** Section title. */
   label: string;
-  /** Optional `NN ITEMS` count rendered in mono next to the title. */
+  /** Optional count shown in dim mono beside the title. */
   count?: number;
-  /** Optional right-hand action link (e.g., "View all →"). */
+  /** Optional right-hand action link (e.g., "See all"). */
   action?: string;
   actionTo?: string;
   className?: string;
 }
 
 /**
- * Editorial section heading. One mono number (optional) + one grot label
- * with a rule underneath, plus an optional right-hand link. Used at the
- * head of every home-page block, browse page, and detail-page section.
+ * Plain section heading in the player style: a `t-disp` label, an optional
+ * dim count and an optional "see all" link. Mirrors
+ * `src/components/player/SectionHeading` for pages still using this API.
  */
-export function SectionHeader({
-  num,
-  label,
-  count,
-  action,
-  actionTo,
-  className,
-}: SectionHeaderProps) {
+export function SectionHeader({ label, count, action, actionTo, className }: SectionHeaderProps) {
   return (
-    <header
-      className={cn(
-        "flex flex-wrap items-end justify-between gap-3 border-b border-rule pb-3",
-        className
-      )}
-    >
-      <div className="flex flex-wrap items-baseline gap-4">
-        {num && (
-          <span className="font-mono text-[11px] leading-none tracking-[0.08em] text-hl">
-            {num}
-          </span>
-        )}
-        <h2 className="font-display text-[clamp(22px,2.4vw,32px)] uppercase leading-none text-ink">
-          {label}
-        </h2>
-        {count != null && (
-          <span className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim">
-            {String(count).padStart(3, "0")} items
-          </span>
-        )}
-      </div>
+    <header className={cn("flex flex-wrap items-baseline gap-x-6 gap-y-2 text-[color:var(--cream)]", className)}>
+      <h2 className="t-disp m-0 text-[30px] md:text-[40px] lg:text-[48px]">{label}</h2>
+      <span className="t-mono flex-1 text-[13px] text-[color:var(--cream-dim)]">
+        {count != null ? count.toLocaleString() : null}
+      </span>
       {action &&
         (actionTo ? (
-          <Link
-            to={actionTo}
-            className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-3 transition-colors hover:text-hl"
-          >
-            {action} <span aria-hidden>→</span>
+          <Link to={actionTo} className="inline-flex min-h-[44px] items-center gap-2 font-bold hover:underline">
+            {action}
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
         ) : (
-          <span className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-3">
-            {action} <span aria-hidden>→</span>
+          <span className="inline-flex items-center gap-2 font-bold">
+            {action}
+            <ArrowRight className="h-4 w-4" aria-hidden />
           </span>
         ))}
     </header>

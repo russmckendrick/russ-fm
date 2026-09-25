@@ -138,9 +138,9 @@ export function DragWall({
         aria-label={ariaLabel}
         className={cn(
           "flex w-full select-none overflow-x-auto overflow-y-hidden",
-          "cursor-grab overscroll-x-contain scroll-smooth",
+          "cursor-grab overscroll-x-contain scroll-smooth motion-reduce:scroll-auto",
           showScrollbar
-            ? "pb-3 [scrollbar-color:var(--ink)_var(--paper-2)] [scrollbar-width:thin]"
+            ? "pb-3 [scrollbar-color:var(--cream-dim)_var(--ground-2)] [scrollbar-width:thin]"
             : "[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
           gapClass
         )}
@@ -158,9 +158,9 @@ export function DragWall({
           type="button"
           aria-label="Scroll left"
           onClick={() => scrollBy(-1)}
-          className="absolute left-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-ink bg-ink text-paper shadow-[0_6px_14px_-8px_rgba(14,13,11,0.45)] transition-colors hover:border-hl hover:bg-hl md:flex"
+          className="icon-btn absolute left-2 top-1/2 z-10 hidden -translate-y-1/2 bg-[color:var(--cream)] text-[color:var(--ground)] shadow-[0_12px_30px_-10px_rgba(0,0,0,.7)] md:inline-flex"
         >
-          <ChevronLeft className="h-4 w-4" />
+          <ChevronLeft className="h-5 w-5" aria-hidden />
         </button>
       )}
       {overflow.end && (
@@ -168,9 +168,9 @@ export function DragWall({
           type="button"
           aria-label="Scroll right"
           onClick={() => scrollBy(1)}
-          className="absolute right-0 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-ink bg-ink text-paper shadow-[0_6px_14px_-8px_rgba(14,13,11,0.45)] transition-colors hover:border-hl hover:bg-hl md:flex"
+          className="icon-btn absolute right-2 top-1/2 z-10 hidden -translate-y-1/2 bg-[color:var(--cream)] text-[color:var(--ground)] shadow-[0_12px_30px_-10px_rgba(0,0,0,.7)] md:inline-flex"
         >
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-5 w-5" aria-hidden />
         </button>
       )}
     </div>

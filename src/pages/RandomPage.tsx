@@ -3,6 +3,7 @@ import { RefreshCw } from 'lucide-react';
 import { PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
+import { loadCollection as loadSharedCollection } from '@/lib/collection';
 import type { Album } from '@/types/album';
 
 type LoadStatus = 'loading' | 'ready' | 'empty' | 'error';
@@ -13,18 +14,13 @@ export function RandomPage() {
   const [albums, setAlbums] = useState<Album[]>([]);
   const [status, setStatus] = useState<LoadStatus>('loading');
 
-  usePageTitle('Random Discovery | Russ.fm');
+  usePageTitle('Shuffle | Russ.fm');
 
   const loadCollection = useCallback(async () => {
     setStatus('loading');
 
     try {
-      const response = await fetch('/collection.json');
-      if (!response.ok) {
-        throw new Error(`Collection request failed: ${response.status}`);
-      }
-
-      const collection = excludeBoxsetMembers((await response.json()) as Album[]);
+      const collection = excludeBoxsetMembers(await loadSharedCollection());
       const validAlbums = collection.filter(
         (album) => album.uri_release && album.release_name && album.release_artist,
       );
@@ -49,17 +45,17 @@ export function RandomPage() {
   if (status === 'error') {
     return (
       <RandomPageMessage
-        eyebrow="Random / Collection"
-        title="The crate did not load"
-        detail="Try the random crate again once the collection data is reachable."
+        title="The crate didn't load"
+        detail="The collection couldn't be fetched. Try again in a moment."
         action={
           <button
             type="button"
             onClick={() => void loadCollection()}
-            className="inline-flex items-center gap-2 border border-ink bg-ink px-5 py-3 font-mono text-[11px] uppercase tracking-[0.08em] text-paper transition-[background-color,border-color,color,transform] duration-200 hover:border-hl hover:bg-hl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink active:translate-y-px"
+            className="pill pill-solid pill-lg"
+            style={{ background: 'var(--cream)', color: 'var(--ground)' }}
           >
             <RefreshCw className="h-4 w-4" aria-hidden />
-            Retry Crate
+            Try again
           </button>
         }
       />
@@ -67,17 +63,11 @@ export function RandomPage() {
   }
 
   if (status === 'empty') {
-    return (
-      <RandomPageMessage
-        eyebrow="Random / Collection"
-        title="There are no records to spin"
-        detail="The random crate needs at least one album in collection.json."
-      />
-    );
+    return <RandomPageMessage title="No records to shuffle" detail="The collection is empty." />;
   }
 
   return (
-    <PageContainer variant="hero" className="bg-paper">
+    <PageContainer variant="hero">
       <Suspense fallback={<RandomCrateFallback />}>
         <RandomCrateScene albums={albums} />
       </Suspense>
@@ -87,66 +77,50 @@ export function RandomPage() {
 
 function RandomPageSkeleton() {
   return (
-    <PageContainer variant="hero" className="bg-paper">
-      <RandomCrateFallback label="Loading Random Crate" />
+    <PageContainer variant="hero">
+      <RandomCrateFallback label="Loading collection" />
     </PageContainer>
   );
 }
 
-function RandomCrateFallback({ label = 'Building Random Crate' }: { label?: string }) {
+/** Shown while the collection or the three.js chunk loads: a dark stage with a pulsing sleeve. */
+function RandomCrateFallback({ label = 'Building the crate' }: { label?: string }) {
   return (
     <section
-      className="relative min-h-[calc(100dvh-5rem)] overflow-hidden border-b border-rule bg-paper font-grot text-ink"
+      className="relative min-h-[calc(100svh-64px)] overflow-hidden bg-[color:var(--ground)] font-grot text-[color:var(--cream)] md:min-h-[calc(100svh-84px)]"
       aria-live="polite"
       aria-busy="true"
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-[linear-gradient(90deg,color-mix(in_oklab,var(--paper-warm)_48%,transparent),transparent_58%),repeating-linear-gradient(0deg,color-mix(in_oklab,var(--ink)_4%,transparent)_0,color-mix(in_oklab,var(--ink)_4%,transparent)_1px,transparent_1px,transparent_7px)]"
+        className="absolute left-1/2 top-[42%] aspect-square w-[min(58vw,440px)] -translate-x-1/2 -translate-y-1/2 animate-pulse bg-[color:var(--ground-3)] shadow-[0_40px_90px_-40px_rgba(0,0,0,.8)] motion-reduce:animate-none"
       />
-      <div
-        aria-hidden
-        className="absolute left-1/2 top-1/2 h-[min(58vw,520px)] w-[min(58vw,520px)] -translate-x-1/2 -translate-y-1/2 animate-pulse border border-rule-strong bg-paper-2 shadow-[0_40px_90px_-52px_rgba(14,13,11,0.55)] motion-reduce:animate-none"
-      />
-      <div className="absolute bottom-[92px] left-4 right-4 z-10 border border-rule bg-paper/80 p-4 shadow-[0_18px_46px_-30px_rgba(14,13,11,0.45)] backdrop-blur-xl sm:bottom-8 sm:left-8 sm:right-auto sm:w-[min(440px,calc(100vw-4rem))]">
-        <div className="mb-3 h-3 w-36 animate-pulse bg-rule motion-reduce:animate-none" />
-        <div className="h-10 w-full max-w-[360px] animate-pulse bg-rule motion-reduce:animate-none" />
-        <div className="mt-3 h-4 w-56 max-w-full animate-pulse bg-rule motion-reduce:animate-none" />
-        <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-          {label}
-        </p>
+      <div className="absolute bottom-[92px] left-4 right-4 z-10 rounded-3xl bg-[color:var(--ground-2)] p-5 sm:bottom-8 sm:left-8 sm:right-auto sm:w-[min(460px,calc(100vw-4rem))] sm:p-6">
+        <div className="mb-3 h-4 w-32 animate-pulse rounded-full bg-[color:var(--ground-3)] motion-reduce:animate-none" />
+        <div className="h-10 w-full max-w-[340px] animate-pulse rounded-xl bg-[color:var(--ground-3)] motion-reduce:animate-none" />
+        <p className="t-mono mt-5 text-[12px] uppercase text-[color:var(--cream-dim)]">{label}</p>
       </div>
     </section>
   );
 }
 
 function RandomPageMessage({
-  eyebrow,
   title,
   detail,
   action,
 }: {
-  eyebrow: string;
   title: string;
   detail: string;
   action?: ReactNode;
 }) {
   return (
-    <PageContainer variant="hero" className="bg-paper">
-      <section className="min-h-[calc(100dvh-5rem)] border-b border-rule bg-paper px-5 py-16 font-grot text-ink md:px-8">
-        <div className="mx-auto flex min-h-[56vh] max-w-[1640px] items-center">
-          <div className="max-w-[720px] border-y border-rule-strong py-10">
-            <div className="mb-5 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-              {eyebrow}
-            </div>
-            <h1 className="text-display max-w-[10ch] break-words text-[clamp(48px,8vw,104px)] uppercase text-ink">
-              {title}
-            </h1>
-            <p className="mt-5 max-w-[48ch] text-[16px] leading-[1.65] text-ink-2">
-              {detail}
-            </p>
-            {action && <div className="mt-8">{action}</div>}
-          </div>
+    <PageContainer variant="hero">
+      <section className="mx-auto flex min-h-[calc(100svh-64px)] w-full max-w-[1640px] items-center px-5 py-16 font-grot md:min-h-[calc(100svh-84px)] md:px-10 lg:px-14">
+        <div className="max-w-[760px]">
+          <p className="t-kicker mb-5 text-[color:var(--cream-dim)]">Shuffle</p>
+          <h1 className="t-disp break-words text-[clamp(44px,8vw,104px)]">{title}</h1>
+          <p className="mt-5 max-w-[48ch] text-[17px] leading-[1.6] text-[color:var(--cream-dim)]">{detail}</p>
+          {action && <div className="mt-8">{action}</div>}
         </div>
       </section>
     </PageContainer>
