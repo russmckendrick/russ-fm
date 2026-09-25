@@ -248,7 +248,9 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
         return None;
     };
 
-    let artist_entries = rec.artists.as_array()?;
+    let credits = rec.artists.as_array()?;
+    // Band members are listed separately; everything artist-facing uses the headliners.
+    let artist_entries = crate::credits::headliners(credits);
     let names: Vec<String> = artist_entries
         .iter()
         .filter_map(|a| a.get("name").and_then(|n| n.as_str()).map(String::from))
@@ -286,6 +288,22 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
         })
         .collect();
 
+    // Line-up credits: linked only when the member already has a published artist page.
+    let members: Vec<Value> = crate::credits::members(credits)
+        .into_iter()
+        .filter_map(|a| {
+            let name = a.get("name").and_then(|n| n.as_str()).filter(|s| !s.is_empty())?;
+            let folder = sanitize_folder_name(name);
+            let has_page = cfg.artists_dir().join(&folder).join(format!("{folder}.json")).is_file();
+            let link = |v: String| if has_page { json!(v) } else { Value::Null };
+            Some(json!({
+                "name": name,
+                "uri_artist": link(format!("/{}/{folder}/", cfg.artists.path)),
+                "json_detailed_artist": link(format!("/{}/{folder}/{folder}.json", cfg.artists.path)),
+            }))
+        })
+        .collect();
+
     // Formats are not filtered for "Music" (unlike genres/styles).
     let formats_raw: Vec<String> = rec
         .formats
@@ -313,6 +331,9 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     e.insert("release_name".into(), json!(release_name));
     e.insert("release_artist".into(), json!(release_artist));
     e.insert("artists".into(), Value::Array(artists));
+    if !members.is_empty() {
+        e.insert("members".into(), Value::Array(members));
+    }
     e.insert("genre_names".into(), json!(genre_names(rec)));
     e.insert("styles".into(), json!(styles));
     e.insert("formats".into(), json!(formats_raw));

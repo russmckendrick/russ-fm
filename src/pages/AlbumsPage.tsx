@@ -15,6 +15,7 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import { appConfig } from '@/config/app.config';
+import type { AlbumMember } from '@/types/album';
 
 interface Album {
   release_name: string;
@@ -27,6 +28,7 @@ interface Album {
       medium: string;
     };
   }>;
+  members?: AlbumMember[];
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -167,6 +169,9 @@ export function AlbumsPage() {
         album.genre_names.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase())) ||
         (album.artists && album.artists.some(artist => 
           artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )) ||
+        (album.members && album.members.some(member =>
+          member.name.toLowerCase().includes(searchTerm.toLowerCase())
         ))
       );
     }

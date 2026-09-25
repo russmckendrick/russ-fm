@@ -937,7 +937,8 @@ impl Db {
         };
 
         let mut seeded = 0usize;
-        for entry in entries {
+        // Band members aren't collection artists: no placeholder row, so no artist-batch page.
+        for entry in entries.iter().filter(|e| !crate::credits::is_member(e)) {
             let Some(name) = entry
                 .get("name")
                 .and_then(|n| n.as_str())

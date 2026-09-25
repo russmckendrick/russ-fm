@@ -192,7 +192,7 @@ fn release_lines(app: &App, rec: &ReleaseRecord) -> Vec<DetailLine> {
     let artists = rec
         .artists
         .as_array()
-        .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
+        .map(|a| a.iter().filter_map(crate::ops::release::credit_label).collect::<Vec<_>>().join(", "))
         .unwrap_or_default();
     let lastfm = rec.raw_data.get("lastfm");
     let listeners = lastfm.and_then(|l| l.get("listeners")).and_then(|v| v.as_str().map(String::from).or_else(|| v.as_i64().map(|n| n.to_string())));

@@ -625,6 +625,7 @@ scrapper maintenance <SUBCOMMAND>
 |------------|-------------|
 | `find-missing` | Find releases/artists with missing data |
 | `reconcile` | Reconcile the database against the static JSON output |
+| `band-members` | Flag band line-up credits as `role: "member"` on stored releases, rewrite their album JSON and regenerate `collection.json`. `--dry-run` lists matches without saving |
 
 Run `scrapper maintenance --help` for flags.
 

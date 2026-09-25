@@ -1,5 +1,6 @@
 //! Collection-vs-filesystem maintenance — folds in `tools/find_missing_artists.py` and
-//! `tools/artist_folder_reconciler.py`. Pure local: database + filesystem + sanitizer, no APIs.
+//! `tools/artist_folder_reconciler.py`, plus the band-member credit backfill. Pure local:
+//! database + filesystem + sanitizer, no APIs.
 
 use std::collections::HashSet;
 
@@ -13,6 +14,7 @@ pub fn run(cfg: &Config, cmd: MaintenanceCommand) -> Result<()> {
     match cmd {
         MaintenanceCommand::FindMissing { limit, show_orphaned } => find_missing(cfg, limit, show_orphaned),
         MaintenanceCommand::Reconcile { threshold } => reconcile(cfg, threshold),
+        MaintenanceCommand::BandMembers { dry_run } => band_members(cfg, dry_run),
     }
 }
 
@@ -114,6 +116,40 @@ fn reconcile(cfg: &Config, threshold: f64) -> Result<()> {
             if score >= threshold {
                 println!("  {folder}  ~  {name}  ({score:.2})");
             }
+        }
+    }
+    Ok(())
+}
+
+/// Backfill `role: "member"` onto stored releases whose credits match the band-plus-line-up
+/// shape (see [`crate::credits::mark_band_members`]), rewrite their release JSON and regenerate
+/// `collection.json`. Releases with any hand-set role are skipped.
+fn band_members(cfg: &Config, dry_run: bool) -> Result<()> {
+    let db = Db::open(cfg.db_path())?;
+    let mut changed = 0usize;
+    for mut rec in db.get_all_releases()? {
+        let Some(mut credits) = rec.artists.as_array().cloned() else { continue };
+        if !crate::credits::mark_band_members(&mut credits) {
+            continue;
+        }
+        let names: Vec<String> = credits.iter().filter_map(crate::ops::release::credit_label).collect();
+        println!("  {} — {}", rec.title, names.join(", "));
+        changed += 1;
+        if dry_run {
+            continue;
+        }
+        rec.artists = serde_json::Value::Array(credits);
+        rec.updated_at = Some(crate::util::now_iso());
+        db.save_release(&rec)?;
+        crate::ops::release::write_release_json(cfg, &db, &rec)?;
+    }
+    if dry_run {
+        println!("{changed} release(s) would be updated (dry run)");
+    } else {
+        println!("{changed} release(s) updated");
+        if changed > 0 {
+            let n = crate::output::collection::regenerate(cfg, &db)?;
+            println!("collection.json regenerated ({n} entries)");
         }
     }
     Ok(())

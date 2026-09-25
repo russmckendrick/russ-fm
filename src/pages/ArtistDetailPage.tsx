@@ -15,7 +15,7 @@ import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { getArtistImageFromData, getArtistOGImageUrl, handleImageError, sanitizeJsonPath } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
-import type { Album as CollectionAlbum } from '@/types/album';
+import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
 interface Album {
   release_name: string;
@@ -26,6 +26,7 @@ interface Album {
     json_detailed_artist: string;
     images_uri_artist: { 'hi-res': string; medium: string };
   }>;
+  members?: AlbumMember[];
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -164,15 +165,19 @@ export function ArtistDetailPage() {
       const decodedArtistPath = decodeURIComponent(artistPath || '');
       const targetUri = `/artist/${decodedArtistPath}/`;
 
+      const matchesTarget = (uri: string | null | undefined) => {
+        if (!uri) return false;
+        if (uri === targetUri) return true;
+        const p = uri.replace('/artist/', '').replace('/', '');
+        return decodedArtistPath === sanitizeFolderName(p);
+      };
+      // Band line-up credits (album.members) count too, so a player's page lists the band's albums.
+      const findMember = (album: Album) => album.members?.find(m => matchesTarget(m.uri_artist));
+
       const artistAlbums = collection.filter((album: Album) => {
-        if (album.uri_artist === targetUri) return true;
-        const albumArtistPath = album.uri_artist.replace('/artist/', '').replace('/', '');
-        if (decodedArtistPath === sanitizeFolderName(albumArtistPath)) return true;
-        if (album.artists?.some(a => {
-          if (a.uri_artist === targetUri) return true;
-          const p = a.uri_artist.replace('/artist/', '').replace('/', '');
-          return decodedArtistPath === sanitizeFolderName(p);
-        })) return true;
+        if (matchesTarget(album.uri_artist)) return true;
+        if (album.artists?.some(a => matchesTarget(a.uri_artist))) return true;
+        if (findMember(album)) return true;
         if (decodedArtistPath === sanitizeFolderName(album.release_artist)) return true;
         return false;
       });
@@ -183,14 +188,8 @@ export function ArtistDetailPage() {
         try {
           let artistJsonUrl: string | null = null;
           for (const album of artistAlbums) {
-            if (album.artists) {
-              const found = album.artists.find(a => {
-                if (a.uri_artist === targetUri) return true;
-                const p = a.uri_artist.replace('/artist/', '').replace('/', '');
-                return decodedArtistPath === sanitizeFolderName(p);
-              });
-              if (found) { artistJsonUrl = found.json_detailed_artist; break; }
-            }
+            const found = album.artists?.find(a => matchesTarget(a.uri_artist)) ?? findMember(album);
+            if (found?.json_detailed_artist) { artistJsonUrl = found.json_detailed_artist; break; }
           }
           if (!artistJsonUrl) {
             for (const album of artistAlbums) {
@@ -273,10 +272,9 @@ export function ArtistDetailPage() {
     const decoded = decodeURIComponent(artistPath || '');
     const targetUri = `/artist/${decoded}/`;
     for (const album of albums) {
-      if (album.artists) {
-        const found = album.artists.find(a => a.uri_artist === targetUri);
-        if (found) return found.name;
-      }
+      const found = album.artists?.find(a => a.uri_artist === targetUri)
+        ?? album.members?.find(m => m.uri_artist === targetUri);
+      if (found) return found.name;
     }
     return artist.release_artist;
   })();

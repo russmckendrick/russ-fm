@@ -15,6 +15,16 @@ export interface BoxsetContent {
   };
 }
 
+/**
+ * A band line-up credit (Discogs "X Trio" followed by its players). Links are null when the
+ * member has no published artist page.
+ */
+export interface AlbumMember {
+  name: string;
+  uri_artist: string | null;
+  json_detailed_artist: string | null;
+}
+
 export interface Album {
   release_name: string;
   release_artist: string;
@@ -29,6 +39,8 @@ export interface Album {
     };
     biography?: string;
   }>;
+  /** Present only when the release credits a band's line-up; never part of `artists`. */
+  members?: AlbumMember[];
   genre_names: string[];
   styles?: string[];
   formats?: string[];

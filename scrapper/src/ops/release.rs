@@ -320,7 +320,7 @@ pub async fn process_release(
         .map(clean_artist_name)
         .unwrap_or_default();
 
-    let artists_json: Vec<Value> = discogs
+    let mut artists_json: Vec<Value> = discogs
         .get("artists")
         .and_then(|a| a.as_array())
         .map(|arr| {
@@ -435,6 +435,12 @@ pub async fn process_release(
     }
 
     let raw_data = Value::Object(raw);
+
+    // Keep hand-set credit roles across a re-scrape, then flag a band's line-up as members.
+    if let Some(prev) = existing.as_ref() {
+        crate::credits::carry_over_roles(&mut artists_json, &prev.artists);
+    }
+    crate::credits::mark_band_members(&mut artists_json);
 
     let now = now_iso();
     let created_at = existing.as_ref().and_then(|r| r.created_at.clone()).unwrap_or_else(|| now.clone());
@@ -1260,7 +1266,7 @@ impl ReleaseField {
             ReleaseField::Artists => rec
                 .artists
                 .as_array()
-                .map(|a| a.iter().filter_map(|x| x.get("name").and_then(|n| n.as_str())).collect::<Vec<_>>().join(", "))
+                .map(|a| a.iter().filter_map(credit_label).collect::<Vec<_>>().join(", "))
                 .unwrap_or_default(),
             ReleaseField::Discogs => opt(&rec.discogs_id),
             // Fall back to the bare ID when no URL is stored — both display and the service
@@ -1345,6 +1351,12 @@ fn release_description(rec: &ReleaseRecord) -> Option<String> {
         .and_then(|d| d.as_str())
         .filter(|s| !s.is_empty())
         .map(String::from)
+}
+
+/// A credit's display name, tagged when it is a band member rather than a headliner.
+pub fn credit_label(entry: &Value) -> Option<String> {
+    let name = entry.get("name").and_then(|n| n.as_str())?;
+    Some(if crate::credits::is_member(entry) { format!("{name} (member)") } else { name.to_string() })
 }
 
 fn first_artist_name(rec: &ReleaseRecord) -> String {

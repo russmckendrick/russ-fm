@@ -344,6 +344,12 @@ pub enum MaintenanceCommand {
         #[arg(long, default_value_t = 0.8)]
         threshold: f64,
     },
+    /// Flag band line-ups ("X Trio" followed by X and the players) as member credits.
+    BandMembers {
+        /// Report matching releases without saving anything.
+        #[arg(long)]
+        dry_run: bool,
+    },
 }
 
 impl Cli {

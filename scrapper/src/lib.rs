@@ -5,6 +5,7 @@
 
 pub mod cli;
 pub mod config;
+pub mod credits;
 pub mod db;
 pub mod logging;
 pub mod ops;

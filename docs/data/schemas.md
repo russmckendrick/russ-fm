@@ -66,7 +66,8 @@ Main collection index used for album listings.
 | albums[].labels | string[] | Record label names; powers `/labels` and `/label/:slug` |
 | albums[].country | string \| null | Discogs release country; powers `/countries` and `/country/:slug` |
 | albums[].lastfm_listeners | number \| null | Last.fm `album.getInfo` listener count; powers the Stats "Hidden gems" section |
-| albums[].artists | object[] | Artist objects |
+| albums[].artists | object[] | Headline artist objects (band-member credits are excluded — see `members`) |
+| albums[].members | object[]? | Present only when the release credits a band's line-up: `[{name, uri_artist, json_detailed_artist}]` in credit order. The link fields are null when the member has no published artist page |
 | albums[].images_uri_release | object | Album image paths |
 | albums[].images_uri_artist | object | Artist image paths |
 | albums[].spotify_url | string? | Spotify album URL |
@@ -79,6 +80,14 @@ Main collection index used for album listings.
 >
 > collection.json is regenerated after every mutating scrapper action — collection runs, CLI
 > `--save` commands, and every TUI detail-editor edit/refresh — so it always reflects the DB.
+>
+> **Band members (Sep 2026):** Discogs credits some releases as a band followed by its players
+> ("James Taylor Trio", "James Taylor", "Orlando Le Fleming", …). Those line-up credits carry
+> `role: "member"` in the release row's `artists` (and in the album JSON's `artists[].role`).
+> The generator builds `release_artist`, `uri_artist` and `artists[]` from the headliners only
+> and lists the line-up under `members`. Member credits don't seed artist rows, so they get no
+> artist page of their own unless they headline elsewhere. Auto-detection and the backfill are
+> described in [`docs/backend/README.md`](../backend/README.md).
 >
 > **Boxsets (Aug 2026):** albums inside a boxset are added individually via
 > `scrapper release <id> --save --boxset <parent_id>`; the link is stored in the release row's

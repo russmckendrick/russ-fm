@@ -17,7 +17,7 @@ import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
-import type { Album as CollectionAlbum } from '@/types/album';
+import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 
 interface Album {
@@ -32,6 +32,7 @@ interface Album {
       medium: string;
     };
   }>;
+  members?: AlbumMember[];
   genre_names: string[];
   uri_release: string;
   uri_artist: string;
@@ -68,6 +69,8 @@ interface DetailedAlbum {
   artists: Array<{
     name: string;
     biography?: string;
+    /** "member" marks a band line-up credit; those stay out of the artist sections. */
+    role?: string;
   }>;
   released: string;
   year: number;
@@ -837,10 +840,10 @@ export function AlbumDetailPage() {
       detailedAlbum.services?.spotify?.url ||
       detailedAlbum.services?.apple_music?.url)
   );
-  const hasArtistBio = !!(
-    detailedAlbum?.artists &&
-    detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various')
+  const artistsWithBio = (detailedAlbum?.artists ?? []).filter(
+    a => a.biography && a.role !== 'member' && a.name.toLowerCase() !== 'various',
   );
+  const hasArtistBio = artistsWithBio.length > 0;
   const hasVideos = !!(detailedAlbum?.videos && detailedAlbum.videos.length > 0);
   const sectionNums = (() => {
     let n = 0;
@@ -1007,6 +1010,24 @@ export function AlbumDetailPage() {
                 )}
               </div>
             </div>
+
+            {album.members && album.members.length > 0 && (
+              <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
+                With{' '}
+                {album.members.map((member, index) => (
+                  <React.Fragment key={member.name}>
+                    {index > 0 && (index === album.members!.length - 1 ? ' & ' : ', ')}
+                    {member.uri_artist ? (
+                      <Link to={member.uri_artist} className="text-ink-2 transition-colors hover:text-hl">
+                        {member.name}
+                      </Link>
+                    ) : (
+                      <span className="text-ink-2">{member.name}</span>
+                    )}
+                  </React.Fragment>
+                ))}
+              </p>
+            )}
 
             {cleanGenresList.length > 0 && (
               <div className="mt-5 flex flex-wrap gap-1.5">
@@ -1224,10 +1245,7 @@ export function AlbumDetailPage() {
               </section>
             )}
 
-            {detailedAlbum?.artists && detailedAlbum.artists.some(a => a.biography && a.name.toLowerCase() !== 'various') && (() => {
-              const artistsWithBio = detailedAlbum.artists.filter(
-                a => a.biography && a.name.toLowerCase() !== 'various',
-              );
+            {hasArtistBio && (() => {
               const sectionLabel =
                 artistsWithBio.length === 1
                   ? `About ${artistsWithBio[0].name}`
@@ -1237,8 +1255,8 @@ export function AlbumDetailPage() {
                 <section>
                   <SectionHeader num={sectionNums.artist} label={sectionLabel} />
                   <div className="mt-6 flex flex-col gap-12">
-                    {detailedAlbum.artists.map((artist, index) => {
-                      if (!artist.biography || artist.name.toLowerCase() === 'various') return null;
+                    {artistsWithBio.map((artist, index) => {
+                      if (!artist.biography) return null;
                       const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
                       let bio = artist.biography.replace(/<[^>]*>/g, '').trim();
                       const readMore = bio.indexOf('Read more on Last.fm');

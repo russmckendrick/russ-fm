@@ -176,7 +176,21 @@ Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()
   edits the focused cell, `a` adds a row, `d` deletes the selected row, `s` saves, `Esc` discards.
   Editing a credit or image preserves its extra keys (embedded biography, `resource_url`);
   videos are stored/published as a flat URL array (the frontend types `videos?: string[]`), so
-  there is no title column.
+  there is no title column. A credit role of `member` marks a band line-up credit (see below).
+
+### Band-member credits
+
+`src/credits.rs` separates headline artists from a band's line-up. When a release's first credit
+is an ensemble ("X Trio", "The X Quartet", "X Band", …) and X is also credited, every credit
+after the ensemble gets `role: "member"`. `process_release` runs this on every fetch, after
+carrying over any non-empty roles stored on the previous version of the release (so hand edits
+survive a re-scrape). A credit list that already has any role set is left alone. To stop
+auto-detection on a release, set a non-member role such as `main` on the headliner in the
+credit editor.
+
+Members are skipped when seeding artist placeholder rows, and `collection.json` lists them under
+`members` instead of `artists` (see [data schemas](../data/schemas.md)). For releases saved
+before detection existed, run `scrapper maintenance band-members` (`--dry-run` first).
 - **Refresh-only** — only the Discogs identity itself; `r` on it re-pulls tracklist, videos and
   artwork sources from Discogs.
 

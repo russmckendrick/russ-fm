@@ -17,7 +17,7 @@ This document covers all route-level page components in russ.fm.
 | `/` | Fixed-height paper split hero with configured record selectors → Recent Albums wall → Recent Artists wall → Genres mosaic → Random crate → Random roster. Main column + sticky dark `StatsAside` overview on desktop. Mobile stacks the sleeve before the full-width title and full-row CTA, with hero stats in a 2/3-column grid. |
 | `/albums/:page` | Hairline `FilterBar` → 6-col tile grid with `CAT.` indices → mono pager. |
 | `/artists/:page` | Search+sort row → full-width A–Z strip → 6-col square-portrait grid → mono pager. |
-| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → `Similar albums` grid → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
+| `/album/:slug` | Home-matched paper split hero (breadcrumb + fitted display title + square artist avatars + optional band line-up line + tags + actions + single sleeve + metadata rail) → `About this record` → `Tracklist` with hairline side dividers → `Listen to …` embed panel → videos → per-artist bios → `Similar albums` grid → sticky sidebar with release details / identifiers / copyright. Mobile shows the sleeve first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/artist/:slug` | Album-matched paper split hero (breadcrumb + fitted artist name + single portrait + genre chips + actions + release metadata rail) → `Biography` → numbered release grid → `Similar artists` grid → sticky sidebar with quick facts + genre chips. Mobile shows the portrait first, then the full-width title, one service action per row, and hero stats in a 2/3-column grid. |
 | `/stats` | Hero + 4-wide KPI strip → 12 numbered editorial sections (decade bars, genre donut, golden year, top years, top artists, artist-depth trio, recent additions, additions histogram, from-the-crates, random roster). All charts are hand-rolled inline SVG. |
 | `/random` | Full-screen Three.js vinyl crate with a 25-record shuffled pull from `collection.json`, light/dark paper-ink theming, pointer drag/tap inspect, wheel and arrow-key flipping, and silent React overlay controls for previous, inspect, next, shuffle, and open record. |
@@ -219,6 +219,7 @@ Individual album detail view with rich metadata.
 - Tracklist with durations
 - **Per-track Spotify links** — each track row deep-links to `open.spotify.com/track/<id>` when a Spotify match exists. Matching is by normalised title via [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts); rows without a match render as plain text.
 - Artist links (multi-artist support)
+- **Band line-up** — when `collection.json` carries `members`, a mono "With …" line sits under the artist row; members with an artist page are linked, the rest are plain text. Member credits (`role: "member"` in the album JSON) are left out of the per-artist bio section
 - Service embeds (Spotify, Apple Music)
 - Last.fm scrobbling
 - **Last.fm reach** sidebar card — listeners + scrobbles, when `services.lastfm.listeners` / `playcount` are present
@@ -357,7 +358,7 @@ Individual artist detail with discography.
 - **TheAudioDB fanart** rendered as a low-opacity background behind the hero when available (picked from the `images[]` entry with `type: "fanart"`); silently absent for sparse artists
 - Artist biography
 - External links — Wikipedia uses the artist's stored `wikipedia_url` when available, only constructing a search URL as a last resort
-- Discography grid
+- Discography grid — includes releases where the artist is credited only as a band member (`members[]` in `collection.json`), so a player's page still lists the band's albums
 - Genre associations
 - **Similar artists** — when `services.lastfm.similar_artists[]` is populated, in-collection artists from that list are surfaced first, with the existing genre-overlap candidates filling out the grid
 - Last.fm **listeners + scrobbles** in the sidebar quick-facts panel
