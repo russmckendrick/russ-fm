@@ -12,7 +12,7 @@ The site uses the "player" design: a warm near-black ground, bold colour floods 
 
 ## Tokens
 
-Defined in `src/styles/player.css` (new) and `src/styles/design-tokens.css` (legacy names, now dark values).
+Defined in `src/styles/player.css` and `src/styles/design-tokens.css` (legacy names, now dark values).
 
 | Token | Value | Use |
 | --- | --- | --- |
@@ -21,7 +21,9 @@ Defined in `src/styles/player.css` (new) and `src/styles/design-tokens.css` (leg
 | `--cream` | `#fbf7ef` | primary text on ground |
 | `--cream-dim` | `#a9a39a` | secondary text on ground |
 | `--cream-rule` | `rgba(251,247,239,.14)` | hairlines |
+| `--neutral-flood` | `#e8e2d6` | flood for sleeves with no usable colour |
 | `--flood` / `--flood-ink` | set per page | current hero colour (read by the nav) |
+| `--ease-out` | `cubic-bezier(.2,.8,.2,1)` | record and colour motion |
 
 Legacy Tailwind names (`bg-paper`, `text-ink`, `text-ink-3`, `border-rule`) still resolve and now map to the dark ground/cream values, so older components stay legible.
 
@@ -40,31 +42,34 @@ Scale titles to the longest word in condensed type so long album names never ove
 ## Colour helpers — `src/lib/sleeveColour.ts`
 
 - `floodFor(palette, extra?)` → `{ flood, ink, sub, ground }`. Picks the most vivid swatch (accent, muted, and any `extra` such as Apple Music artwork colours), falls back to `#e8e2d6` for monochrome sleeves, and chooses dark ink or cream for contrast.
-- `vividFrom`, `vividScore`, `hue`, `inkOn`, `subInk`, `appleArtworkColours(services)`.
+- `vividFrom`, `vividScore`, `hue`, `inkOn`, `subInk`, `readableOn(colour, bg)` (the colour if it reaches 3:1 on `bg`, else cream), `appleArtworkColours(services)`, and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` constants.
 - Palettes come from `useAlbumColors(uri)` (one) or `useAlbumColorMap()` (all, for walls/rows).
 
 ## Components — `src/components/player/`
 
 | Component | What it is |
 | --- | --- |
-| `FloodProvider`, `usePageFlood(flood, ink)` | Page sets its flood; the sticky nav paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
+| `FloodProvider`, `usePageFlood(flood, ink)`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
 | `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below. |
 | `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. |
 | `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's dark background swatch. |
 | `RecordTile` | Sleeve in a row/grid; disc slides out on hover; colour bar; title/artist/meta. |
-| `PillLink`, `.pill`, `.pill-solid`, `.pill-lg`, `.pill-sm` | Rounded buttons (min 44px). Solid pills use the flood's ink as fill and the flood as text. |
+| `PillLink`, `.pill`, `.pill-solid`, `.pill-lg`, `.pill-sm` | Rounded buttons (44px; `.pill-lg` 56px, `.pill-sm` 40px). Solid pills use the flood's ink as fill and the flood as text. `.pill-fill` is the progress fill used by the scrobble button. |
+| `.icon-btn` | 48px round icon button (nav, hero transport controls). |
 | `SectionHeading` | Plain `t-disp` title + optional mono note + "see all" link. |
 | `.tile` / `.tile-cap` | Cover tile with a caption sliding up on hover (walls, grids). |
 | `.chip` | Genre/facet pill coloured by a representative sleeve. |
 | `.shelf-scroll` | Horizontal rows that scroll without a visible scrollbar. |
 
+Page-specific pieces built on these: `BoxHeroArt` / `BoxContents` (`src/components/album/BoxSet.tsx`), `Crate` (`src/components/artist/Crate.tsx`) and `BrowseHeader` / `FacetFan` / `FacetCard` (`src/components/browse/BrowseHeader.tsx`). See [components.md](./components.md).
+
 Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (cached) instead of fetching `collection.json` per page. Images always go through `src/lib/image-utils.ts` (`hi-res` for heroes, `medium` for tiles, `avatar` for artist avatars).
 
 ## Page patterns
 
-- **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, browse-by-colour strip.
+- **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
 - **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side with a scrobble button per side; Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
-- **Box set**: the box cover (thick edge) as the hero with member sleeves fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble; unlinked discs from the box tracklist shown as generic sleeves using the box cover.
+- **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
 - **Artist**: the whole top floods with the colour of the record at the front of a flip-through crate; a colour timeline to jump by year; full discography grid with decade tiles.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).
 - **Lists / stats / browse**: `t-disp` page title with the count in dim type beside it, chip filters, tiles in the sleeve colours.

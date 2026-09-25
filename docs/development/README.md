@@ -284,7 +284,7 @@ VITE_SCROBBLING_ENABLED=true
 ### Commit Messages
 
 ```
-feat: Add dark mode toggle
+feat: Add colour sort to the albums page
 fix: Correct image loading on mobile
 docs: Update API documentation
 refactor: Simplify color extraction

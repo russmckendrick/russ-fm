@@ -217,9 +217,8 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    App --> ThemeProvider
-    ThemeProvider --> BrowserRouter
-    BrowserRouter --> Layout
+    App --> FloodProvider
+    FloodProvider --> Layout
 
     Layout --> Navigation
     Layout --> PageContent
@@ -233,17 +232,15 @@ flowchart TB
         AlbumDetailPage
     end
 
-    HomePage --> HeroSection
-    HomePage --> RecentAlbumsSection
-    HomePage --> GenresSection
+    HomePage --> CoverHero
+    HomePage --> RecordTile
+    CoverHero --> HeroRecord
 
-    AlbumsPage --> FilterBar
-    AlbumsPage --> AlbumGrid
-    AlbumGrid --> AlbumCard
+    AlbumsPage --> RecordTile
 
-    AlbumCard --> GenreTag
-    AlbumCard --> ArtistAvatar
-    AlbumCard --> ServiceLinks
+    AlbumDetailPage --> CoverHero
+    AlbumDetailPage --> BoxSet
+    AlbumDetailPage --> AlbumScrobbleButton
 ```
 
 ## Data Architecture

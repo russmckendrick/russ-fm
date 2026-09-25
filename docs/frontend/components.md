@@ -1,363 +1,303 @@
 # Components Reference
 
-This document covers all React components in the russ.fm frontend.
+This document covers the React components in the russ.fm frontend.
 
-> **Editorial redesign (April 2026).** The shell now runs on a warm
-> paper/ink palette with sharp corners, hairline rules, Archivo Variable,
-> and JetBrains Mono. The section below lists the redesign's
-> new shared primitives before moving into the legacy reference.
+> **Player redesign.** The site uses the "player" design: a dark ground,
+> colour floods lifted from each sleeve, big Archivo display type and
+> records drawn as physical objects. [`design-system.md`](./design-system.md)
+> is the canonical design reference (tokens, type, principles, page
+> patterns). This document lists the components that implement it.
 
-## Editorial primitives
+## Player components (`src/components/player/`)
 
-| Component | Path | Role |
+All exported from `@/components/player`.
+
+| Component | File | Role |
 |-----------|------|------|
-| `PageContainer` | `components/layout/PageContainer.tsx` | Page shell. `standard` gives the `max-w-[1640px]` gutter; `hero` goes edge-to-edge for full-bleed detail pages. |
-| `DossierHero` | `components/layout/EditorialPrimitives.tsx` | Large editorial page intro with mono kicker, display title, subtitle, action slot, and optional fact strip. |
-| `FactGrid` | `components/layout/EditorialPrimitives.tsx` | Hairline metadata grid for KPI and quick-fact blocks. |
-| `RailSection` | `components/layout/EditorialPrimitives.tsx` | Sidebar/rail section heading and body wrapper. |
-| `CatalogueList` | `components/layout/EditorialPrimitives.tsx` | Divide-y catalogue list wrapper for dense result rows. |
-| `EditorialEmpty` / `EditorialSkeleton` | `components/layout/EditorialPrimitives.tsx` | Paper/ink empty and loading states. |
-| `StageVinyl` | `components/layout/EditorialPrimitives.tsx` | Blueprint-style outline record used behind feature sleeves without adding a heavy filled disc. |
-| `SectionHeader` | `components/layout/SectionHeader.tsx` | `num · label · count · action` editorial heading with a hairline rule. Used at the top of every home / browse / stats / wrapped block. |
-| `DragWall` | `components/layout/DragWall.tsx` | Horizontal drag-scroll strip with wheel-translation, overflow-aware chevrons, and no `setPointerCapture` (so child links still navigate). |
-| `BrowseHeader` | `components/browse/BrowseHeader.tsx` | `num · kicker · display title · subtitle · counts` header for `/albums`, `/artists`, `/search`. |
-| `StatsAside` | `components/home/StatsAside.tsx` | Compact dark home-page collection overview with configured era exclusions, top-decade percentages, curated genre bars, and yearly additions timeline. |
-| `AlbumCard` | `components/AlbumCard.tsx` | Editorial tile: square cover, cover-colour drop-shadow, optional `CAT. NNN` index badge, hover-reveal meta strip painted with the album's pre-computed `{background, foreground}` pair. |
-| `ArtistCard` | `components/ArtistCard.tsx` | Square rounded portrait + mono rank + grot name + release count. Tinted shadow when a latest album is available. |
-| `TweaksPanel` | `components/TweaksPanel.tsx` | **Dev-only.** `Cmd/Ctrl+Shift+D` opens a 320px bottom-right panel with density / mono / cover-colour / tint knobs. Persists to `localStorage['russfm.tweaks']`. Hidden from the public nav.  |
-| `SearchOverlay` | `components/SearchOverlay.tsx` | Compact right-anchored dropdown under the nav search input. Shares its continuous outline with the input while open. Segregates results into `Albums` / `Artists` groups. |
+| `FloodProvider` | `FloodContext.tsx` | Wraps the app in `App.tsx`. Holds the page's current flood and writes it to `--flood` / `--flood-ink` on `<html>`. |
+| `usePageFlood`, `useFloodValue` | `flood-context.ts` | Set / read the page flood. See [Hooks](./hooks.md#flood-hooks). |
+| `CoverHero`, `AFTER_HERO` | `CoverHero.tsx` | Cover-led hero section. |
+| `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. |
+| `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
+| `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
+| `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker. |
+| `RecordTile` | `RecordTile.tsx` | A record in a row or grid. |
+| `PillLink` | `Pill.tsx` | Rounded link button, outline or solid. |
+| `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
 
-All of these are Tailwind-driven; the tokens they reference live
-in `src/styles/design-tokens.css` and map through `tailwind.config.js`
-(`paper`, `ink`, `rule`, `hl`, `tint`, `font-grot`, `font-mono`).
+The class-based pieces (`.sleeve`, `.vinyl`, `.rec`, `.sticker`, `.pill*`,
+`.icon-btn`, `.chip`, `.tile` / `.tile-cap`, `.shelf-scroll`,
+`.flood-surface`) live in `src/styles/player.css`.
 
-## Component Hierarchy
+### CoverHero
 
-```mermaid
-graph TD
-    App --> ThemeProvider
-    ThemeProvider --> Navigation
-    ThemeProvider --> Pages
+```tsx
+import { AFTER_HERO, CoverHero, HeroRecord } from '@/components/player';
 
-    Pages --> HomePage
-    Pages --> AlbumsPage
-    Pages --> ArtistDetailPage
-    Pages --> WrappedYear
-
-    HomePage --> HeroSection
-    HomePage --> RecentAlbumsSection
-    HomePage --> GenresSection
-    HomePage --> RandomCollectionSection
-
-    AlbumsPage --> FilterBar
-    AlbumsPage --> AlbumCard
-
-    AlbumCard --> GenreTag
-    AlbumCard --> ArtistAvatar
-    AlbumCard --> ServiceLinks
+<CoverHero flood={flood} art={<HeroRecord ... />}>
+  {/* title, meta, actions */}
+</CoverHero>
+<div className={cn('mx-auto max-w-[1640px] px-5', AFTER_HERO)}>…</div>
 ```
+
+| Prop | Type | Description |
+|------|------|-------------|
+| flood | `Flood` | From `floodFor()`; paints the section background and text |
+| art | `ReactNode` | Cover object, usually `HeroRecord`. Sits flush on the bottom edge and hangs over the next section |
+| children | `ReactNode` | Text column (right of the cover on desktop, above it on phones) |
+| className | `string` | Optional |
+
+The section after a `CoverHero` must add the `AFTER_HERO` top padding
+(`pt-24 lg:pt-36`) to clear the overhanging cover.
+
+### HeroRecord
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| src / srcSet | `string` | – | Sleeve image (use `image-utils`, `hi-res`) |
+| alt | `string` | – | Alt text |
+| labelColour | `string` | – | Vinyl centre label, normally `flood.ground` |
+| labelText | `string` | – | Small text printed on the label |
+| discOut | `number` | `15` | How far the disc sits out of the sleeve, % of width |
+| spinning / fast | `boolean` | `true` / `false` | Spin, and spin at 45 (used while scrobbling) |
+| sticker | `{ date, background, color, label? }` | – | Optional `Sticker` on the corner |
+| eager | `boolean` | `true` | Eager-load the image |
+
+### Sleeve, Vinyl, Sticker
+
+- `Sleeve` — `src`, `alt`, optional `shrinkwrap`, `loading`, `srcSet`,
+  `sizes`, `children` (overlays such as the box set "From the box" band).
+  Uses `handleImageError` for fallbacks.
+- `Vinyl` — `label` (centre-label colour, usually the sleeve's dark
+  background swatch), `spin`, `fast`, `text`. Always `aria-hidden`.
+- `Sticker` — `date` (ISO), `label` (default `Added`), `background`,
+  `color`, `size` (`lg` 128px, `sm` 92px). Renders nothing for an invalid
+  date; carries an `aria-label` with the full date.
+
+### RecordTile
+
+```tsx
+<RecordTile album={album} palette={colourMap?.[album.uri_release]} meta="1977 · Vinyl" />
+```
+
+| Prop | Type | Description |
+|------|------|-------------|
+| album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist'>` | Record to show |
+| palette | `AlbumColorPalette \| null` | Sets the colour bar and disc label |
+| meta | `ReactNode` | Mono line under the artist |
+| showArtist / showText | `boolean` | Default `true` |
+| to | `string` | Override the link (defaults to the album page) |
+
+The disc slides out of the sleeve on hover and focus (`.rec` in
+`player.css`). The image is always the `medium` size.
+
+### PillLink and pills
+
+`PillLink` takes `to`, `children`, `solid?: { background, color }`,
+`size` (`sm` | `md` | `lg`), `arrow` (default `true`). External URLs
+(`http…`) open in a new tab with an out-arrow; internal paths use
+`<Link>`. The `.pill` classes are also used directly on `<button>`s.
+
+### SectionHeading
+
+`title`, optional `note` (dim mono text), `link: { to, label }`, `as`
+(`h1`–`h3`, default `h2`), `size` (`lg` | `md` | `sm`) and `children`
+(extra controls placed before the link, e.g. sort pills).
+
+## Album components (`src/components/album/BoxSet.tsx`)
+
+Used by `AlbumDetailPage` when the album has `boxset_contents`. The disc
+list comes from `buildBoxDiscs()` in [`src/lib/boxDiscs.ts`](./utilities.md#box-set-discs-srclibboxdiscsts).
+
+| Component | Props | Role |
+|-----------|-------|------|
+| `BoxHeroArt` | `boxUri`, `boxTitle`, `discs`, `selected`, `onSelect`, `flood`, `added` | Hero art: the box cover with a thick stacked edge, its albums fanned out behind it (the selected one pulled out) and a sticker. Each fanned sleeve is a button that selects that disc. |
+| `BoxContents` | `boxUri`, `discs`, `selected`, `onSelect`, `colours`, `boxFlood`, `artist` | "In this box" section: a tab row of sleeves and a panel in the selected album's flood colour with its sleeve and disc, tracklist grouped by side, a scrobble button for that disc and an "Open album page" link when the disc has its own page. |
+
+Discs with no linked album page use the box cover with a "From the box"
+band and the section header as their title.
+
+## Artist components (`src/components/artist/Crate.tsx`)
+
+`Crate` is the flip-through record crate on the artist page.
+
+| Prop | Type | Description |
+|------|------|-------------|
+| records | `CrateRecord[]` (`uri_release`, `release_name`, `year`) | Records in crate order |
+| index / onChange | `number` / `(i) => void` | Front record, controlled |
+| label | `string` | Text on the crate's label slot, e.g. `BOWIE, DAVID` |
+| tab | `string` | Text on the divider card tab |
+
+The front record stands up, up to 12 records lean back behind it and the
+last two flipped past fold forward. Wheel scroll, clicking a record and
+arrow keys flip through; the stage is focusable with
+`aria-roledescription="record crate"`.
+
+## Browse components (`src/components/browse/BrowseHeader.tsx`)
+
+| Component | Props | Role |
+|-----------|-------|------|
+| `BrowseHeader` | `title`, `note`, `current` (`genres` \| `labels` \| `decades` \| `countries` \| `null`), `hidePills`, `children` | Page title in `t-disp` with the count in dim mono beside it, then pills linking the four browse sections (the current one solid). |
+| `FacetFan` | `albums` (lead first, up to five), `linked`, `large` | A fan of sleeves that spreads further when the surrounding `.group` is hovered. `linked` makes each sleeve a link; `large` loads the lead at `hi-res`. |
+| `FacetCard` | `to`, `title`, `meta`, `flood`, `albums`, `size` (`lg` \| `md`) | A facet as a colour card: the representative sleeve's flood with a `FacetFan`. |
+
+Colours and sleeve picks come from [`facetSleeves.ts`](./utilities.md#browse-sleeve-helpers-srccomponentsbrowsefacetsleevests).
+
+## Genre components (`src/components/genres/`)
+
+`GenreExplorerPanel` and `GenreGraph` take an optional `colorMap`
+(the `useAlbumColorMap()` result). Nodes, the selected-genre control bar
+and atlas rows are coloured from it via [`genreColours.ts`](./utilities.md#genre-colours-srccomponentsgenresgenrecoloursts):
+album nodes use their own sleeve, artist and genre nodes the most vivid
+recent record. `GenreGraph` also takes `centreFlood` for the centre node.
+Menus use the same rounded `--ground-2` panels as the rest of the site.
+
+## Layout primitives (`src/components/layout/`)
+
+| Component | Status |
+|-----------|--------|
+| `PageContainer` | In use. `standard` gives the `max-w-[1640px]` container with the nav's side gutters and cream text; `hero` goes edge to edge. |
+| `EditorialEmpty` / `EditorialSkeleton` | In use by the browse and genre pages for empty and loading states (rounded `--ground-2` panel; pulsing tile grid). |
+| `DossierHero`, `FactGrid` / `FactCell`, `RailSection`, `CatalogueList`, `StageVinyl`, `SectionHeader`, `DragWall` | Restyled for the dark ground with unchanged props, but no page currently uses them. `SectionHeader` mirrors `SectionHeading`; `num` props are accepted and ignored. Prefer the player components for new work. |
 
 ## Core Components
 
 ### Navigation (`src/components/Navigation.tsx`)
 
-Sticky editorial navigation bar with grouped catalogue/insights menus and search integration.
+Sticky header that shares the page's flood colour.
 
-**Features:**
-- `xl+` desktop rail with `Home`, `Albums`, `Artists`, plus `Catalogue` and `Insights` dropdown groups
-- Compact `< xl` header with logo, search icon, menu trigger, and `md+` account/theme actions
-- Full search input on wide desktop only; compact widths open the full-viewport search sheet
-- Scroll-aware behavior
-- Theme toggle integration
-- Search button trigger
-- Ink-colour spinning record mark and aligned `russ.fm / Personal Record Collection` brand lockup, with the tagline reserved for `2xl+`
-- Icon-led primary nav and grouped menu items with hairline active states instead of boxed tabs
+- Reads `useFloodValue()`: while the page is at the top the header is
+  painted in the hero's flood and ink, so header and hero read as one
+  surface. After 120px of scroll it turns to translucent dark ground with
+  cream text.
+- `xl+`: `russ.fm` wordmark, Home / Albums / Artists / Genres links, a
+  Browse dropdown (Overview, Labels, Decades, Countries), Stats and
+  Wrapped, a pill search field (`/` focuses it) with `SearchOverlay`, a
+  Shuffle pill and the Last.fm `UserProfileMenu`.
+- Below `xl`: wordmark, search and menu icon buttons (Shuffle and the
+  profile menu from `md`). The menu opens a full-screen panel in the flood
+  colour with every route in large display type; body scroll is locked
+  while it is open. Search opens `MobileSearchModal`.
+- No theme toggle.
 
-```tsx
-import { Navigation } from '@/components/Navigation';
-
-// Used in App.tsx layout
-<Navigation />
-```
-
-**Props:** None (uses router context)
-
----
+**Props:** none (uses router and flood context).
 
 ### Footer (`src/components/Footer.tsx`)
 
-Site footer with links and copyright.
-
-**Features:**
-- Shared spinning record mark and matching `russ.fm / Personal Record Collection` footer lockup
-- Copyright year is derived at render time rather than hard-coded
-- Icon-only internal and external links in one compact row, with accessible labels retained for screen readers
-- Mobile footer order is icons first, then a stretched colophon row with copyright on the left and the logo/site lockup on the right. Desktop returns to a single row with the colophon left and icons right
-
-```tsx
-import { Footer } from '@/components/Footer';
-
-<Footer />
-```
-
----
+Dark-ground footer: a large `russ.fm` wordmark, a data-sources and
+copyright line (year computed at render), internal links (Albums, Artists,
+Genres, Browse, Stats, Wrapped, Shuffle) and small pills for the external
+links in `appConfig.footer.links.external`.
 
 ### Logo (`src/components/Logo.tsx`)
 
-Brand logo component with optional link.
+Spinning record glyph with an optional `className`, used by the Wrapped
+presentation.
 
 ```tsx
-import { Logo } from '@/components/Logo';
-
-<Logo />
-<Logo size="lg" />
+<Logo className="h-8 w-8" />
 ```
 
-**Props:**
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| size | `'sm' \| 'md' \| 'lg'` | `'md'` | Logo size |
-
----
+The spinning record `BrandMark` has been removed; the header and footer
+use a `t-disp` wordmark instead.
 
 ## Album Components
 
 ### AlbumCard (`src/components/AlbumCard.tsx`)
 
-Primary album display component for grid views.
+Thin wrapper around `RecordTile` for callers that pass a full `Album`. It
+reads the palette from `useAlbumColorMap()` and builds a
+`year · genre` meta line.
 
-```tsx
-import { AlbumCard } from '@/components/AlbumCard';
-
-<AlbumCard album={album} />
-```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| album | `Album` | Yes | Album data object |
-| showArtist | `boolean` | No | Show artist name |
-| showYear | `boolean` | No | Show release year |
-| showGenres | `boolean` | No | Show genre tags |
-
-**Features:**
-- Lazy-loaded images with fallbacks
-- Genre tags with filtering
-- Artist avatars for multi-artist albums
-- Service links (Spotify, Apple Music)
-- Responsive sizing
-
-**Example:**
-```tsx
-import { AlbumCard } from '@/components/AlbumCard';
-import { getAlbumImageFromData } from '@/lib/image-utils';
-
-function AlbumGrid({ albums }) {
-  return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-      {albums.map(album => (
-        <AlbumCard
-          key={album.uri_release}
-          album={album}
-          showGenres
-          showYear
-        />
-      ))}
-    </div>
-  );
-}
-```
-
----
+| Prop | Type | Description |
+|------|------|-------------|
+| album | `Album` | Album data |
+| onClick | `() => void` | Optional: intercept the link (e.g. open a preview) |
+| className | `string` | Optional |
+| index, tinted | – | Accepted for older callers; not rendered |
 
 ### AlbumModal (`src/components/AlbumModal.tsx`)
 
 Album detail overlay/modal dialog.
 
 ```tsx
-import { AlbumModal } from '@/components/AlbumModal';
-
-<AlbumModal
-  album={selectedAlbum}
-  open={isOpen}
-  onClose={() => setIsOpen(false)}
-/>
+<AlbumModal album={selectedAlbum} open={isOpen} onClose={() => setIsOpen(false)} />
 ```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| album | `Album \| null` | Yes | Album to display |
-| open | `boolean` | Yes | Modal visibility |
-| onClose | `() => void` | Yes | Close handler |
-
----
 
 ## Artist Components
 
 ### ArtistCard (`src/components/ArtistCard.tsx`)
 
-Artist display component for grid views.
+Round artist photo with a ring in the flood colour of the artist's latest
+sleeve (the ring widens on hover and focus), name in `t-dispn` and the
+record count in mono.
 
-```tsx
-import { ArtistCard } from '@/components/ArtistCard';
-
-<ArtistCard artist={artist} />
-```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| artist | `Artist` | Yes | Artist data object |
-| showAlbumCount | `boolean` | No | Display album count |
-
----
+| Prop | Type | Description |
+|------|------|-------------|
+| artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils` |
+| palette | `AlbumColorPalette \| null` | Palette of the latest record; neutral ring without one |
+| onClick | `() => void` | Render as a button instead of a link |
+| index | `number` | Accepted; not rendered |
 
 ## Search Components
 
 ### SearchOverlay (`src/components/SearchOverlay.tsx`)
 
-Full-screen search overlay for desktop.
+Drop-down results panel under the desktop nav search field: a rounded
+`--ground-2` panel with a status line, an "All results" pill and an `Esc`
+hint, then `SearchResults` in the `compact` layout.
 
 ```tsx
-import { SearchOverlay } from '@/components/SearchOverlay';
-
 <SearchOverlay
-  isOpen={searchOpen}
-  onClose={() => setSearchOpen(false)}
+  isVisible={open}
+  onClose={close}
+  searchTerm={term}
+  setSearchTerm={setTerm}
+  anchorRef={inputRef}
 />
 ```
-
-**Features:**
-- Full-text fuzzy search
-- Real-time results
-- Keyboard navigation (arrow keys, Enter, Escape)
-- Recent searches
-- Category filtering (albums, artists)
-
----
 
 ### MobileSearchModal (`src/components/MobileSearchModal.tsx`)
 
-Mobile-optimized search modal.
-
-```tsx
-import { MobileSearchModal } from '@/components/MobileSearchModal';
-
-<MobileSearchModal
-  isOpen={searchOpen}
-  onClose={() => setSearchOpen(false)}
-/>
-```
-
----
+Full-screen sheet (`role="dialog"`) with a back button, a pill search
+field and `SearchResults` in the `list` layout. Props: `isOpen`,
+`onClose`.
 
 ### SearchResults (`src/components/SearchResults.tsx`)
 
-Search results display component.
+Results grouped into Albums and Artists. Every sleeve carries its flood
+colour (bar on tiles, edge stripe on rows); artists borrow the colour of
+their first matching record.
 
-```tsx
-import { SearchResults } from '@/components/SearchResults';
-
-<SearchResults
-  results={searchResults}
-  layout="grid"
-  onResultClick={handleClick}
-/>
-```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| results | `SearchResult[]` | Yes | Search results |
-| layout | `'grid' \| 'list'` | No | Display layout |
-| onResultClick | `(result) => void` | No | Click handler |
-| loading | `boolean` | No | Loading state |
-
----
+| Prop | Type | Description |
+|------|------|-------------|
+| results | `SearchResult[]` | From `searchService` |
+| isLoading / isIndexing | `boolean` | Loading states |
+| error | `string \| null` | Error message |
+| searchTerm | `string` | Current query |
+| layout | `'grid' \| 'list' \| 'compact'` | `grid`: `RecordTile`s and `ArtistCard`s (results page); `list`: rows with thumbnails (mobile); `compact`: nav drop-down |
+| onResultClick | `() => void` | Called when a result is chosen |
+| showLimitMessage / showViewAllLink | `boolean` | Optional footers |
 
 ### SearchFAB (`src/components/SearchFAB.tsx`)
 
-Floating action button for mobile search trigger.
-
-```tsx
-import { SearchFAB } from '@/components/SearchFAB';
-
-<SearchFAB onClick={() => setSearchOpen(true)} />
-```
-
----
+Floating action button for a mobile search trigger.
 
 ## Music Player Components
 
 ### MusicPlayerSection (`src/components/MusicPlayerSection.tsx`)
 
-Embedded music player wrapper with service selection.
+Embedded player with service selection, used in the album page's
+"Listen" section.
 
-```tsx
-import { MusicPlayerSection } from '@/components/MusicPlayerSection';
+### SpotifyEmbed / AppleMusicEmbed
 
-<MusicPlayerSection
-  album={album}
-  spotifyUrl={album.spotify_url}
-  appleMusicUrl={album.apple_music_url}
-/>
-```
-
----
-
-### SpotifyEmbed (`src/components/SpotifyEmbed.tsx`)
-
-Spotify embedded player.
-
-```tsx
-import { SpotifyEmbed } from '@/components/SpotifyEmbed';
-
-<SpotifyEmbed
-  albumId="3hUJ7cC5O1ndwKnPqJUHxk"
-  height={352}
-/>
-```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| albumId | `string` | Yes | Spotify album ID |
-| height | `number` | No | Player height (default: 352) |
-
----
-
-### AppleMusicEmbed (`src/components/AppleMusicEmbed.tsx`)
-
-Apple Music embedded player.
-
-```tsx
-import { AppleMusicEmbed } from '@/components/AppleMusicEmbed';
-
-<AppleMusicEmbed
-  albumId="1551901962"
-  height={450}
-/>
-```
-
----
+Service embeds. Both pass `useTheme()` to the embed; see
+[Hooks](./hooks.md#usetheme-srchooksusethemets).
 
 ### PlayerToggle (`src/components/PlayerToggle.tsx`)
 
 Toggle between Spotify and Apple Music players.
-
-```tsx
-import { PlayerToggle } from '@/components/PlayerToggle';
-
-<PlayerToggle
-  activePlayer={player}
-  onChange={setPlayer}
-  hasSpotify={!!spotifyUrl}
-  hasAppleMusic={!!appleMusicUrl}
-/>
-```
-
----
 
 ## Scrobbling Components
 
@@ -365,153 +305,77 @@ import { PlayerToggle } from '@/components/PlayerToggle';
 
 Individual track scrobble button.
 
-```tsx
-import { ScrobbleButton } from '@/components/ScrobbleButton';
-
-<ScrobbleButton
-  artist={track.artist}
-  track={track.title}
-  album={album.title}
-/>
-```
-
----
-
 ### AlbumScrobbleButton (`src/components/AlbumScrobbleButton.tsx`)
 
-Scrobble an entire album to Last.fm.
+Scrobbles a whole album, one side, or one box set disc to Last.fm. Renders
+a `.pill` button with a progress fill (`.pill-fill`) that grows as tracks
+are sent.
 
 ```tsx
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 
 <AlbumScrobbleButton
-  album={{
-    artist: album.release_artist,
-    album: album.release_name,
-    tracks: toScrobbleTracks(tracks),
-  }}
+  album={{ artist: album.release_artist, album: album.release_name, tracks: toScrobbleTracks(tracks) }}
+  tone={{ background: flood.ink, color: flood.flood }}
+  pillSize="lg"
+  onActiveChange={setScrobbling}
 />
 ```
 
-Build `tracks` with [`toScrobbleTracks`](./utilities.md#toscrobbletracks) rather than mapping
-the tracklist inline — it strips section-header rows and carries per-track compilation
-artists through.
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| album | `{ artist, album, tracks }` | – | Payload; build `tracks` with `toScrobbleTracks` |
+| label | `string` | `'Scrobble album'` | Idle label, e.g. `Scrobble side A` |
+| tone | `{ background, color }` | – | Solid fill (flood ink on flood). Omit for an outline pill |
+| pillSize | `'sm' \| 'md' \| 'lg'` | `'md'` | Pill size |
+| onActiveChange | `(active: boolean) => void` | – | Called when a scrobble starts and finishes, so heroes can slide the disc out and spin it at 45 |
+| fullWidth, className, style | – | – | Layout |
 
-The button reports a partial run ("Scrobbled 13 of 15", amber) when Last.fm ignores or the
-worker skips some tracks, instead of showing a clean tick. See
+Build `tracks` with [`toScrobbleTracks`](./utilities.md#toscrobbletracks)
+rather than mapping the tracklist inline — it strips section-header rows
+and carries per-track compilation artists through.
+
+After a run the label reads `Scrobbled N tracks`, or `Scrobbled 13 of 15`
+when Last.fm ignores or the worker skips some tracks. When signed out the
+button opens the Last.fm connect flow. See
 [Last.fm integration](../api-integrations/lastfm.md#album-scrobbling).
-
----
 
 ### ScrobbleProgress (`src/components/ScrobbleProgress.tsx`)
 
 Visual progress indicator for batch scrobbling.
 
-```tsx
-<ScrobbleProgress
-  current={5}
-  total={12}
-  currentTrack="Track Name"
-/>
-```
-
----
-
 ## User Components
 
 ### UserProfileMenu (`src/components/UserProfileMenu.tsx`)
 
-User profile dropdown with Last.fm integration.
-
-```tsx
-import { UserProfileMenu } from '@/components/UserProfileMenu';
-
-<UserProfileMenu />
-```
-
-**Features:**
-- Last.fm authentication status
-- User avatar display
-- Logout functionality
-
----
+Last.fm account control in the nav. A round button that inherits
+`currentColor`, so it sits on the nav's flood like the other icon buttons.
+Signed in, the button shows the user's avatar and opens a dropdown with
+the username, play count, profile link and disconnect; signed out, it
+shows the Last.fm icon and opens `LastFmAuthDialog`.
 
 ### LastFmAuthDialog (`src/components/LastFmAuthDialog.tsx`)
 
-Last.fm authentication dialog.
+Last.fm connect / status dialog, opened by its `children` trigger. Shows
+the connected account (avatar, play count, profile link, disconnect) or a
+connect button, using cream pills on the dark dialog.
 
-```tsx
-import { LastFmAuthDialog } from '@/components/LastFmAuthDialog';
+## Dialogs and menus (`src/components/ui/`)
 
-<LastFmAuthDialog
-  open={showAuth}
-  onClose={() => setShowAuth(false)}
-/>
-```
+`dialog.tsx` and `dropdown-menu.tsx` are restyled for the dark ground:
+rounded `--ground-2` panels with a `--cream-rule` ring, `t-disp` dialog
+titles, 44px close button and menu items, and animations disabled under
+`prefers-reduced-motion`.
 
----
-
-## Theme Components
+## Theme
 
 ### ThemeProvider (`src/components/theme-provider.tsx`)
 
-React context provider for theme management.
-
-```tsx
-import { ThemeProvider } from '@/components/theme-provider';
-
-<ThemeProvider defaultTheme="system" storageKey="russ-fm-theme">
-  <App />
-</ThemeProvider>
-```
-
----
-
-### ThemeToggle (`src/components/theme-toggle.tsx`)
-
-Theme switcher button.
-
-```tsx
-import { ThemeToggle } from '@/components/theme-toggle';
-
-<ThemeToggle />
-```
-
----
-
-## Filter Components
-
-### FilterBar (`src/components/FilterBar.tsx`)
-
-Search, filter, and sort controls for collection pages.
-
-```tsx
-import { FilterBar } from '@/components/FilterBar';
-
-<FilterBar
-  searchQuery={query}
-  onSearchChange={setQuery}
-  sortBy={sort}
-  onSortChange={setSort}
-  genres={allGenres}
-  selectedGenre={genre}
-  onGenreChange={setGenre}
-/>
-```
-
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| searchQuery | `string` | Yes | Current search query |
-| onSearchChange | `(query: string) => void` | Yes | Search handler |
-| sortBy | `string` | Yes | Current sort field |
-| onSortChange | `(sort: string) => void` | Yes | Sort handler |
-| genres | `string[]` | No | Available genres |
-| selectedGenre | `string` | No | Active genre filter |
-| onGenreChange | `(genre: string) => void` | No | Genre handler |
-
----
+Still wraps the app in `main.tsx` and sets a `light`/`dark` class on
+`<html>` from the system preference. The dark ground no longer depends on
+it: `:root` and `.dark` resolve to the same values. The theme toggle
+component has been removed.
 
 ## Statistics Components
 
@@ -520,127 +384,24 @@ import { FilterBar } from '@/components/FilterBar';
 Collection statistics display.
 
 ```tsx
-import { CollectionStats } from '@/components/CollectionStats';
-
 <CollectionStats stats={stats} />
 ```
 
-**Props:**
-| Prop | Type | Required | Description |
-|------|------|----------|-------------|
-| stats | `StatsData` | Yes | Statistics object |
+## Removed components
 
-**StatsData Structure:**
-```typescript
-interface StatsData {
-  totalAlbums: number;
-  totalArtists: number;
-  genreCount: number;
-  decadeBreakdown: Record<string, number>;
-  topGenres: { name: string; count: number }[];
-}
-```
-
----
-
-## Home Page Sections
-
-### HeroSection (`src/components/home/HeroSection.tsx`)
-
-Poster-led featured hero: the configured latest releases form a numbered
-selector row under the active sleeve, while the right metadata rail carries
-a full-width countdown waveform for the next record.
-
-```tsx
-import { HeroSection } from '@/components/home/HeroSection';
-
-<HeroSection
-  currentFeatured={currentFeatured}
-  featuredAlbums={featuredAlbums}
-  featuredIndex={featuredIndex}
-  currentPalette={currentPalette}
-  autoRotateMs={autoRotateMs}
-  timelineKey={heroTimelineKey}
-  onSelectIndex={handleSelectFeaturedIndex}
-/>
-```
-
-**Features:**
-- Featured record count follows `appConfig.homepage.hero.numberOfFeaturedAlbums`
-- Numbered selector row changes the active sleeve and restarts the countdown
-- Metadata rail includes a full-width waveform that fills over `autoRotateInterval`
-- Hero copy is limited to concrete genre/year metadata
-- Mobile/tablet keep the same releases with safe horizontal selector overflow
-
----
-
-### RecentAlbumsSection (`src/components/home/RecentAlbumsSection.tsx`)
-
-Recently added albums carousel.
-
-```tsx
-<RecentAlbumsSection albums={recentAlbums} />
-```
-
----
-
-### RecentArtistsSection (`src/components/home/RecentArtistsSection.tsx`)
-
-Recently added artists carousel.
-
-```tsx
-<RecentArtistsSection artists={recentArtists} />
-```
-
----
-
-### RandomCollectionSection (`src/components/home/RandomCollectionSection.tsx`)
-
-Random album selection grid.
-
-```tsx
-<RandomCollectionSection albums={allAlbums} count={12} />
-```
-
----
-
-### RandomArtistsSection (`src/components/home/RandomArtistsSection.tsx`)
-
-Random artist selection with polaroid styling.
-
-```tsx
-<RandomArtistsSection artists={allArtists} count={12} />
-```
-
----
-
-### GenresSection (`src/components/home/GenresSection.tsx`)
-
-Genre grid display.
-
-```tsx
-<GenresSection genres={topGenres} />
-```
-
----
-
-### StatsAside (`src/components/home/StatsAside.tsx`)
-
-Sticky home-page collection overview. It computes totals from the loaded
-`collection.json`, applies `appConfig.homepage.eras.excludedDecades` to the
-record count and chart inputs, keeps the full collection span for the
-decade total, and renders top-decade percentages, a curated eight-genre
-bar list, and a yearly additions timeline.
-
-```tsx
-<StatsAside albums={albums} />
-```
-
----
+| Removed | Replaced by |
+|---------|-------------|
+| `theme-toggle.tsx` (`ThemeToggle`) | Nothing; the site is dark-ground only |
+| `BrandMark.tsx` | `t-disp` `russ.fm` wordmark in the nav and footer |
+| `FilterBar.tsx` | Inline sort pills, format chips, search and pill selects on `AlbumsPage` / `ArtistsPage` |
+| `components/home/*` (`HeroSection`, `RecentAlbumsSection`, `RecentArtistsSection`, `RandomCollectionSection`, `RandomArtistsSection`, `GenresSection`, `StatsAside`) | Local sections in `HomePage.tsx` built on `CoverHero`, `HeroRecord`, `RecordTile` and `SectionHeading` |
+| `ui/genre-tag.tsx` (`GenreTag`) | Outline mono genre links and `.chip` |
+| `ui/pagination.tsx` | Page-local pill pagers |
+| `ui/service-button.tsx` (`ServiceButton`) | `PillLink` and `.pill` buttons |
 
 ## shadcn/ui Base Components
 
-Located in `src/components/ui/`, these are customized Radix UI primitives:
+Located in `src/components/ui/`:
 
 | Component | File | Description |
 |-----------|------|-------------|
@@ -654,37 +415,12 @@ Located in `src/components/ui/`, these are customized Radix UI primitives:
 | Alert | `alert.tsx` | Alert messages |
 | Switch | `switch.tsx` | Toggle switch |
 | Progress | `progress.tsx` | Progress bar |
-| Pagination | `pagination.tsx` | Pagination controls |
 | Card | `card.tsx` | Card container |
 | Avatar | `avatar.tsx` | Avatar image |
 | AvatarGroup | `avatar-group.tsx` | Grouped avatars |
 | Badge | `badge.tsx` | Status badges |
 | Separator | `separator.tsx` | Visual separator |
-| GenreTag | `genre-tag.tsx` | Genre tag button |
 | MetadataBadge | `metadata-badge.tsx` | Metadata display |
-| ServiceButton | `service-button.tsx` | Service link button |
-
-### Usage Example
-
-```tsx
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-
-function AlbumCard({ album }) {
-  return (
-    <Card>
-      <CardHeader>
-        <h3>{album.title}</h3>
-        <Badge variant="secondary">{album.year}</Badge>
-      </CardHeader>
-      <CardContent>
-        <Button variant="outline">View Details</Button>
-      </CardContent>
-    </Card>
-  );
-}
-```
 
 ---
 
@@ -703,17 +439,11 @@ import { getAlbumImageFromData } from '@/lib/image-utils';
 <img src={album.images_uri_release['medium']} />
 ```
 
-### Error Boundaries
+### Colour
 
-Wrap complex components:
-
-```tsx
-import { ErrorBoundary } from 'react-error-boundary';
-
-<ErrorBoundary fallback={<AlbumCardError />}>
-  <AlbumCard album={album} />
-</ErrorBoundary>
-```
+Take colours from the sleeve with `floodFor()` and put text on a flood
+with its `ink` / `sub` values (or `inkOn()`), never a fixed accent. See
+[design-system.md](./design-system.md#colour-helpers--srclibsleevecolourts).
 
 ### Loading States
 

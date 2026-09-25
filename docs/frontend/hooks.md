@@ -128,83 +128,101 @@ function TypeAhead() {
 
 ## Color Hooks
 
+All colour hooks read the pre-extracted `/album-colors.json` (URI → palette), which is
+fetched once and cached in memory. Turn a palette into page colours with `floodFor()` from
+[`src/lib/sleeveColour.ts`](./utilities.md#sleeve-colours-srclibsleevecolourts).
+
+```typescript
+interface AlbumColorPalette {
+  background: string;  // dark background swatch
+  foreground: string;  // text colour on the background
+  accent: string;      // most vibrant swatch (often near-black on dark covers)
+  muted: string;       // secondary swatch
+}
+```
+
 ### useAlbumColors (`src/hooks/useAlbumColors.ts`)
 
-Load pre-extracted album color palettes.
+Palette for one album.
 
 ```typescript
 import { useAlbumColors } from '@/hooks/useAlbumColors';
+import { floodFor } from '@/lib/sleeveColour';
 
-function AlbumHero({ slug }) {
-  const { colors, loading, error } = useAlbumColors(slug);
-
-  if (loading) return <Skeleton />;
-
-  return (
-    <div style={{
-      background: colors?.background,
-      color: colors?.foreground
-    }}>
-      {/* Content */}
-    </div>
-  );
-}
+const palette = useAlbumColors(album.uri_release); // or a slug
+const flood = floodFor(palette);
 ```
 
-**Returns:**
-| Property | Type | Description |
-|----------|------|-------------|
-| colors | `ColorPalette \| null` | Album colors |
-| loading | `boolean` | Loading state |
-| error | `Error \| null` | Error if failed |
+**Parameters:** `albumIdentifier?: string` — a URI (`/album/slug/`) or a slug.
 
-**ColorPalette Structure:**
+**Returns:** `AlbumColorPalette | null` (`null` while loading or when the album has no entry).
+
+---
+
+### useAlbumColorMap
+
+The whole URI → palette map. Use it when a page paints many sleeves at once (grids, shelves,
+the crate, browse cards, the genre map, Wrapped) instead of calling `useAlbumColors` per
+tile.
+
 ```typescript
-interface ColorPalette {
-  background: string;  // Dark background color
-  foreground: string;  // Text color (usually white)
-  accent: string;      // Most vibrant color
-  muted: string;       // Secondary accent
-}
+import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+
+const colourMap = useAlbumColorMap();
+
+albums.map(album => (
+  <RecordTile key={album.uri_release} album={album} palette={colourMap?.[album.uri_release]} />
+));
 ```
+
+**Returns:** `Record<string, AlbumColorPalette> | null` — `null` until loaded. Keys are album
+URIs with a trailing slash (`/album/slug/`).
 
 ---
 
 ### useAlbumColorsWithFallback
 
-Version with default fallback colors.
-
-```typescript
-import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
-
-function Component({ slug }) {
-  const { colors } = useAlbumColorsWithFallback(slug, {
-    background: '#1a1a2e',
-    foreground: '#ffffff',
-    accent: '#0066cc',
-    muted: '#666666'
-  });
-
-  // colors is never null
-}
-```
+Same as `useAlbumColors` but never `null`: returns a neutral dark palette when the album has
+no entry.
 
 ---
 
 ### preloadAlbumColors
 
-Preload colors for performance.
+`preloadAlbumColors(): Promise<void>` starts loading `album-colors.json` ahead of use.
+
+---
+
+## Flood Hooks
+
+Defined in `src/components/player/flood-context.ts` and exported from
+`@/components/player`. They need `FloodProvider`, which wraps the app in `App.tsx`.
+
+### usePageFlood
+
+Sets the page's flood colour while the calling page is mounted. The sticky navigation paints
+itself in the same colour until the page scrolls, and `--flood` / `--flood-ink` are set on
+`<html>`. Call it in any page with a colour hero.
 
 ```typescript
-import { preloadAlbumColors } from '@/hooks/useAlbumColors';
+import { usePageFlood } from '@/components/player';
 
-// Preload on hover for faster transition
-<Link
-  to={`/album/${slug}`}
-  onMouseEnter={() => preloadAlbumColors(slug)}
->
-  View Album
-</Link>
+const flood = floodFor(palette);
+usePageFlood(album ? flood.flood : null, album ? flood.ink : null);
+```
+
+**Parameters:** `flood`, `ink` (`string | null | undefined`). Passing `null` for either
+resets to the dark ground; the flood is also reset when the page unmounts. Unchanged values
+are ignored, so it is safe to call on every render.
+
+### useFloodValue
+
+Reads the current `{ flood, ink }`. Used by `Navigation`.
+
+```typescript
+import { useFloodValue } from '@/components/player';
+
+const { flood, ink } = useFloodValue();
 ```
 
 ---
@@ -213,29 +231,16 @@ import { preloadAlbumColors } from '@/hooks/useAlbumColors';
 
 ### useTheme (`src/hooks/useTheme.ts`)
 
-Detect current theme (light/dark).
+Returns `'light' | 'dark'` from the `dark` class that `ThemeProvider` sets on `<html>`
+(following the system preference), and updates when it changes. The site itself is
+dark-ground only and does not use it for styling; `SpotifyEmbed` and `AppleMusicEmbed` pass
+it to the embeds.
 
 ```typescript
 import { useTheme } from '@/hooks/useTheme';
 
-function ThemeAwareComponent() {
-  const { theme, isDark, isLight } = useTheme();
-
-  return (
-    <div className={isDark ? 'dark-styles' : 'light-styles'}>
-      Current theme: {theme}
-    </div>
-  );
-}
+const theme = useTheme(); // 'light' | 'dark'
 ```
-
-**Returns:**
-| Property | Type | Description |
-|----------|------|-------------|
-| theme | `'light' \| 'dark' \| 'system'` | Current theme |
-| isDark | `boolean` | Dark mode active |
-| isLight | `boolean` | Light mode active |
-| setTheme | `(theme: string) => void` | Change theme |
 
 ---
 
