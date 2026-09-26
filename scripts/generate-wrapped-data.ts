@@ -61,6 +61,7 @@ interface OriginalRelease {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: {
@@ -83,6 +84,7 @@ interface Release {
   release_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   genre_names: string[];
   slug: string;
   images: {
@@ -301,6 +303,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
         release_artist: release.release_artist,
         date_added: release.date_added,
         date_release_year: release.date_release_year,
+        year_original: release.year_original ?? null,
         genre_names: release.genre_names,
         slug: albumSlug,
         images: {
@@ -369,8 +372,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     }
 
     // Release decades
-    if (release.date_release_year) {
-      const year = parseInt(release.date_release_year);
+    if (release.year_original || release.date_release_year) {
+      const year = release.year_original ?? parseInt(release.date_release_year);
       if (!isNaN(year)) {
         const decade = `${Math.floor(year / 10) * 10}s`;
         decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);

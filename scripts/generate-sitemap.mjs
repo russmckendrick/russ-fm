@@ -127,7 +127,8 @@ function addFacetRoutes(collection, fallbackLastmod) {
       addFacetValue(facetLastmods.country, album.country, album.date_added);
     }
 
-    const decade = getDecade(album.date_release_year);
+    // year_original is the Discogs master year; date_release_year is often the reissue.
+    const decade = getDecade(album.year_original ?? album.date_release_year);
     if (decade) {
       addFacetValue(facetLastmods.decade, decade, album.date_added);
     }

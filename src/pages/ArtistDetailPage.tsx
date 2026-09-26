@@ -12,6 +12,8 @@ import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { slugify } from '@/lib/browseFacets';
 import { blendedFlood, floodFor, INK } from '@/lib/sleeveColour';
+import { originalYear } from '@/lib/releaseYear';
+import { cn } from '@/lib/utils';
 import { getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
@@ -31,6 +33,7 @@ interface Album {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: { 'hi-res': string; medium: string };
@@ -150,18 +153,22 @@ export function ArtistDetailPage() {
   const [detail, setDetail] = useState<{ url: string; data: ArtistData } | null>(null);
   const artistData = detail && detail.url === artistJsonUrl ? detail.data : null;
 
-  // Newest additions first. date_release_year is the pressing's issue date,
-  // not the original release, so the discography doesn't order or group by it.
-  const discography = useMemo(() => [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added)), [albums]);
+  // Newest additions first (also drives the flood below).
+  const byAdded = useMemo(() => [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added)), [albums]);
+  const [order, setOrder] = useState<DiscographyOrder>('added');
+  const discography = useMemo(
+    () => (order === 'added' ? [{ label: '', albums: byAdded }] : groupByDecade(albums)),
+    [order, byAdded, albums],
+  );
 
   // The top of the page blends through the sleeve colours of the last three
   // additions (fewer if that's all there is), newest at the top by the nav.
   const colourMap = useAlbumColorMap();
   const flood = useMemo(
-    () => blendedFlood(discography.slice(0, 3).map(a => floodFor(colourMap?.[a.uri_release]).flood)),
-    [discography, colourMap],
+    () => blendedFlood(byAdded.slice(0, 3).map(a => floodFor(colourMap?.[a.uri_release]).flood)),
+    [byAdded, colourMap],
   );
-  usePageFlood(discography.length ? flood.top : null, discography.length ? flood.ink : null);
+  usePageFlood(byAdded.length ? flood.top : null, byAdded.length ? flood.ink : null);
   // Blend the portrait into the flood. Multiply turns a light backdrop into
   // the flood colour; screen does the same for a dark backdrop, but only on a
   // dark flood; on a pale one it washes the subject out to a ghost, so there
@@ -258,9 +265,15 @@ export function ArtistDetailPage() {
     { label: 'Wikipedia', url: wikipediaUrl },
   ].filter(Boolean) as Array<{ label: string; url: string }>;
 
+  const years = albums.map(originalYear).filter((y): y is number => y !== null);
+  const firstYear = years.length ? Math.min(...years) : null;
+  const latestYear = years.length ? Math.max(...years) : null;
   const stats: Array<[string, string]> = [
     ['Records', String(albums.length)],
     ...(boxsets ? [['Box sets', String(boxsets)] as [string, string]] : []),
+    ...(firstYear && latestYear
+      ? [[firstYear === latestYear ? 'Released' : 'Releases span', firstYear === latestYear ? String(firstYear) : `${firstYear}–${latestYear}`] as [string, string]]
+      : []),
     ...(listeners != null ? [['Last.fm listeners', numberShort(Number(listeners))] as [string, string]] : []),
   ];
 
@@ -317,16 +330,64 @@ export function ArtistDetailPage() {
 
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
         <section className="flex flex-col gap-10">
-          <SectionHeading title="Discography" note={`${albums.length} ${albums.length === 1 ? 'record' : 'records'} · newest additions first`} />
-          <div className="grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 md:gap-x-6 lg:grid-cols-4 xl:grid-cols-6">
-            {discography.map(a => (
-              <RecordTile
-                key={a.uri_release}
-                album={a}
-                palette={colourMap?.[a.uri_release]}
-                showArtist={a.release_artist !== artistName}
-                meta={[`Added ${formatAdded(a.date_added)}`, a.format_primary === 'Box Set' ? 'Box set' : null].filter(Boolean).join(' · ')}
-              />
+          <SectionHeading
+            title="Discography"
+            note={`${albums.length} ${albums.length === 1 ? 'record' : 'records'}${order === 'added' ? ' · newest additions first' : ' · by original release'}`}
+          >
+            {albums.length > 1 && (
+              <div role="group" aria-label="Order" className="flex gap-1 rounded-full bg-[color:var(--ground-2)] p-1">
+                {DISCOGRAPHY_ORDERS.map(o => (
+                  <button
+                    key={o.value}
+                    type="button"
+                    aria-pressed={order === o.value}
+                    onClick={() => setOrder(o.value)}
+                    className={cn(
+                      'h-10 rounded-full px-4 text-[14px] font-bold transition-colors',
+                      order === o.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
+                    )}
+                  >
+                    {o.label}
+                  </button>
+                ))}
+              </div>
+            )}
+          </SectionHeading>
+          <div className="flex flex-col">
+            {discography.map(group => (
+              <div
+                key={group.label || 'all'}
+                className={cn(
+                  'grid gap-6 border-t py-10 first:border-t-0 first:pt-0',
+                  group.label && 'lg:grid-cols-[200px_minmax(0,1fr)] lg:gap-10',
+                )}
+                style={{ borderColor: 'var(--cream-rule)' }}
+              >
+                {group.label && (
+                  <div className="flex items-baseline gap-4 lg:sticky lg:top-28 lg:flex-col lg:gap-2 lg:self-start">
+                    <h3 className="t-disp m-0 text-[36px] md:text-[48px]">{group.label}</h3>
+                    <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">
+                      {group.albums.length} {group.albums.length === 1 ? 'record' : 'records'}
+                    </span>
+                  </div>
+                )}
+                <div className={cn('grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 md:gap-x-6', group.label ? 'xl:grid-cols-5' : 'lg:grid-cols-4 xl:grid-cols-6')}>
+                  {group.albums.map(a => (
+                    <RecordTile
+                      key={a.uri_release}
+                      album={a}
+                      palette={colourMap?.[a.uri_release]}
+                      showArtist={a.release_artist !== artistName}
+                      meta={[
+                        order === 'added' ? `Added ${formatAdded(a.date_added)}` : originalYear(a) ?? 'Undated',
+                        a.format_primary === 'Box Set' ? 'Box set' : null,
+                      ]
+                        .filter(Boolean)
+                        .join(' · ')}
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
@@ -482,3 +543,29 @@ const PORTRAIT_MASK = {
   maskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
   WebkitMaskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
 } as const;
+
+type DiscographyOrder = 'added' | 'year';
+
+const DISCOGRAPHY_ORDERS: Array<{ value: DiscographyOrder; label: string }> = [
+  { value: 'added', label: 'Recently added' },
+  { value: 'year', label: 'By year' },
+];
+
+/** Records grouped by decade of original release (Discogs master year), oldest first. */
+function groupByDecade(albums: Album[]): Array<{ label: string; albums: Album[] }> {
+  const sorted = [...albums].sort((a, b) => {
+    const ya = originalYear(a);
+    const yb = originalYear(b);
+    if (ya !== yb) return ya === null ? 1 : yb === null ? -1 : ya - yb;
+    return a.release_name.localeCompare(b.release_name);
+  });
+  const groups: Array<{ label: string; albums: Album[] }> = [];
+  for (const album of sorted) {
+    const y = originalYear(album);
+    const label = y === null ? 'Undated' : `${Math.floor(y / 10) * 10}s`;
+    const last = groups[groups.length - 1];
+    if (last?.label === label) last.albums.push(album);
+    else groups.push({ label, albums: [album] });
+  }
+  return groups;
+}

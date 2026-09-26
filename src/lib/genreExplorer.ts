@@ -1,4 +1,5 @@
 import type { Album } from "@/types/album";
+import { originalYear } from "@/lib/releaseYear";
 import { getCleanGenreTermsFromAlbum } from "@/lib/genreUtils";
 import {
   getAlbumImageFromData,
@@ -504,7 +505,7 @@ export function getRelatedAlbumsForAlbum(
 
 function toExplorerAlbum(album: Album, genres: string[]): GenreExplorerAlbum {
   const slug = getAlbumSlug(album.uri_release);
-  const year = parseYear(album.date_release_year);
+  const year = originalYear(album);
 
   return {
     title: album.release_name,
@@ -595,11 +596,6 @@ function compareDateDesc(a: string, b: string): number {
 function isAfter(a: string, b: string): boolean {
   if (!b) return true;
   return timestamp(a) > timestamp(b);
-}
-
-function parseYear(value: string): number | null {
-  const year = new Date(value).getFullYear();
-  return Number.isFinite(year) ? year : null;
 }
 
 function minYear(years: number[]): number | null {

@@ -6,6 +6,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { originalYear } from '@/lib/releaseYear';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { loadCollection } from '@/lib/collection';
@@ -677,7 +678,7 @@ function buildPaint(stats: CollectionStats, colours: ColourMap) {
 
   const years = new Map<string, Album[]>();
   for (const a of stats.albums) {
-    const y = String(new Date(a.date_release_year).getFullYear());
+    const y = String(originalYear(a));
     if (!years.has(y)) years.set(y, []);
     years.get(y)!.push(a);
   }
@@ -764,8 +765,8 @@ function calculateStats(data: Album[]): CollectionStats {
 
   const decadeData = rank(
     group(data, a => {
-      const year = new Date(a.date_release_year).getFullYear();
-      const decade = Math.floor(year / 10) * 10;
+      const year = originalYear(a);
+      const decade = year === null ? 0 : Math.floor(year / 10) * 10;
       return decade >= 1960 ? [`${decade}s`] : [];
     }),
   ).sort((a, b) => a.name.localeCompare(b.name));
@@ -807,8 +808,8 @@ function calculateStats(data: Album[]): CollectionStats {
 
   const releaseYears = rank(
     group(data, a => {
-      const y = new Date(a.date_release_year).getFullYear();
-      return Number.isNaN(y) ? [] : [String(y)];
+      const y = originalYear(a);
+      return y === null ? [] : [String(y)];
     }),
   );
   const goldenYear = releaseYears[0] ?? null;

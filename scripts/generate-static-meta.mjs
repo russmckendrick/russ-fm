@@ -183,7 +183,7 @@ function trim(text, max) {
 function albumDescription({ album, detail }) {
   const title = detail?.title || album.release_name;
   const artist = album.release_artist;
-  const year = parseYear(detail?.year || album.date_release_year);
+  const year = parseYear(album.year_original || detail?.year || album.date_release_year);
   const perplexity = detail?.services?.perplexity?.description;
   if (perplexity) {
     return trim(`${title} by ${artist} (${year}). ${perplexity}`, 300);
@@ -230,8 +230,9 @@ function isoDuration(ms) {
 
 function buildAlbumJsonLd({ album, detail, slug, canonical, image, description }) {
   const title = detail?.title || album.release_name;
-  const year = parseYear(detail?.year || album.date_release_year);
-  const released = detail?.released || (year ? `${year}` : null);
+  const year = parseYear(album.year_original || detail?.year || album.date_release_year);
+  // Original release year when known; the pressing's date otherwise.
+  const released = album.year_original ? `${album.year_original}` : detail?.released || (year ? `${year}` : null);
   const genres = uniq([...(album.genre_names || []), ...(detail?.genres || []), ...(detail?.styles || [])]).filter(Boolean);
   const labels = (album.labels || detail?.labels || []).filter(Boolean);
   const formats = (album.formats || detail?.formats || []).filter(Boolean);
@@ -478,7 +479,7 @@ function buildFacetGroups(collection) {
         group.artists.set(uri || name, { name, uri, count: 1 });
       }
     }
-    const y = Number.parseInt(String(album.date_release_year).slice(0, 4), 10);
+    const y = Number.parseInt(String(album.year_original ?? album.date_release_year).slice(0, 4), 10);
     if (Number.isFinite(y) && y >= 1900) {
       if (y < group.firstYear) group.firstYear = y;
       if (y > group.lastYear) group.lastYear = y;
@@ -496,7 +497,7 @@ function buildFacetGroups(collection) {
 
     if (album.country) add('country', album.country, album);
 
-    const decade = getDecade(album.date_release_year);
+    const decade = getDecade(album.year_original ?? album.date_release_year);
     if (decade) add('decade', decade, album);
   }
 

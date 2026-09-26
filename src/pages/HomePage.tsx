@@ -8,6 +8,7 @@ import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { buildFacetValues, FACETS } from '@/lib/browseFacets';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { floodFor, appleArtworkColours, hue, vividScore, inkOn, type Flood } from '@/lib/sleeveColour';
+import { originalYear } from '@/lib/releaseYear';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
@@ -186,7 +187,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                 {title}
               </h1>
               <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: f.sub }}>
-                <span>{album.date_release_year?.slice(0, 4)}</span>
+                {originalYear(album) && <span>{originalYear(album)}</span>}
                 {d?.label && <span>{d.label}</span>}
                 {album.format_primary && <span>{album.format_primary}</span>}
                 {d && d.tracks > 0 && <span>{d.sides > 1 ? `${d.sides} sides · ` : ''}{d.tracks} tracks</span>}
@@ -392,7 +393,7 @@ function RandomPicks({ albums, colours }: { albums: Album[]; colours: Record<str
       </SectionHeading>
       <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 lg:gap-x-7">
         {picks.map(album => (
-          <RecordTile key={album.uri_release} album={album} palette={colours?.[album.uri_release]} meta={album.date_release_year?.slice(0, 4)} />
+          <RecordTile key={album.uri_release} album={album} palette={colours?.[album.uri_release]} meta={originalYear(album) ?? undefined} />
         ))}
       </div>
     </section>

@@ -16,6 +16,7 @@ import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { useAlbumColors, useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { appleArtworkColours, floodFor, readableOn } from '@/lib/sleeveColour';
+import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
@@ -41,6 +42,7 @@ interface Album {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: {
@@ -178,7 +180,7 @@ function clipText(text: string | undefined | null, max: number): string {
 function buildAlbumDescription(detailedAlbum: DetailedAlbum, album: Album | null): string {
   const title = detailedAlbum.title;
   const artist = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
-  const year = detailedAlbum.year;
+  const year = (album && originalYear(album)) || detailedAlbum.year;
   const perplexity = detailedAlbum.services?.perplexity?.description;
   if (perplexity) {
     return clipText(`${title} by ${artist} (${year}). ${perplexity}`, 300);
@@ -219,7 +221,8 @@ function buildAlbumJsonLd({
   const artistName = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
   const artistUri = album?.uri_artist || album?.artists?.[0]?.uri_artist || '';
   const artistSlug = artistUri.replace(/^\/artist\//, '').replace(/\/$/, '');
-  const released = detailedAlbum.released || (detailedAlbum.year ? String(detailedAlbum.year) : undefined);
+  const original = album ? originalYear(album) : null;
+  const released = original ? String(original) : detailedAlbum.released || (detailedAlbum.year ? String(detailedAlbum.year) : undefined);
   const genres = Array.from(new Set([
     ...(album?.genre_names || []),
     ...(detailedAlbum.genres || []),
@@ -670,7 +673,8 @@ export function AlbumDetailPage() {
     );
   }
 
-  const year = new Date(album.date_release_year).getFullYear();
+  // Original release year (Discogs master); the pressing's own date is in detailedAlbum.released.
+  const year = originalYear(album) ?? NaN;
 
   // Get tracks from multiple sources with fallbacks - prioritize Discogs
   const getTracks = (): Track[] => {
@@ -766,7 +770,7 @@ export function AlbumDetailPage() {
   const boxDiscs = isBox ? buildBoxDiscs((tracks as BoxTrack[]) ?? [], album.boxset_contents ?? []) : [];
   const moreByArtist = collection
     .filter(a => a.uri_artist === album.uri_artist && a.uri_release !== album.uri_release && !a.boxset)
-    .sort((a, b) => b.date_release_year.localeCompare(a.date_release_year))
+    .sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0))
     .slice(0, 12);
   const lastfm = detailedAlbum?.services?.lastfm;
   const accent = readableOn(flood.flood, flood.ground);
@@ -788,7 +792,8 @@ export function AlbumDetailPage() {
 
   const facts: Array<[string, string]> = [
     ['Label', detailedAlbum?.labels?.join(', ') ?? ''],
-    ['Released', detailedAlbum?.released ? formatDate(detailedAlbum.released) : String(detailedAlbum?.year ?? (Number.isFinite(year) ? year : ''))],
+    ['Released', Number.isFinite(year) ? String(year) : ''],
+    ['This pressing', pressingDate(detailedAlbum, year)],
     ['Country', detailedAlbum?.country ?? ''],
     ['Format', formatDetail],
     ['Added', formatDate(album.date_added)],
@@ -1110,7 +1115,7 @@ export function AlbumDetailPage() {
             <SectionHeading title={`More by ${album.release_artist}`} link={{ to: album.uri_artist, label: 'Artist page' }} />
             <div className="shelf-scroll -mx-5 mt-2 scroll-px-5 gap-6 px-5 pb-4 pt-6 md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:px-14">
               {moreByArtist.map(a => (
-                <RecordTile key={a.uri_release} album={a} palette={colourMap?.[a.uri_release]} meta={a.date_release_year?.slice(0, 4)} showArtist={false} className="w-[160px] shrink-0 md:w-[190px]" />
+                <RecordTile key={a.uri_release} album={a} palette={colourMap?.[a.uri_release]} meta={originalYear(a) ?? undefined} showArtist={false} className="w-[160px] shrink-0 md:w-[190px]" />
               ))}
             </div>
           </section>
@@ -1180,6 +1185,14 @@ type Grouping = { type: 'lp'; groups: Array<{ lpLabel: string; sides: SideGroup[
 function countSides(grouping: Grouping): number {
   const labels = grouping.type === 'lp' ? grouping.groups.flatMap(g => g.sides.map(s => s.label)) : grouping.groups.map(g => g.label);
   return labels.filter(l => l.startsWith('Side')).length;
+}
+
+/** The pressing's own release date, shown only when it isn't the original year. */
+function pressingDate(detail: { released?: string; year?: number } | null, original: number): string {
+  if (!detail) return '';
+  const year = detail.year ?? Number.parseInt(String(detail.released ?? '').slice(0, 4), 10);
+  if (!Number.isFinite(year) || year === original) return '';
+  return detail.released && detail.released.length >= 7 ? formatDate(detail.released) : String(year);
 }
 
 function formatDate(value: string): string {

@@ -11,6 +11,7 @@ export interface WrappedRelease {
   release_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   genre_names: string[];
   slug: string;
   images: {

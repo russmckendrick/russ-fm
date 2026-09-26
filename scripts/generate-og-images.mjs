@@ -117,7 +117,7 @@ async function AlbumOGCard({ album, colors, imageBase64 }) {
                       type: 'div',
                       props: {
                         style: { display: 'flex' },
-                        children: String(new Date(album.date_release_year).getFullYear())
+                        children: String(album.year_original ?? new Date(album.date_release_year).getFullYear())
                       }
                     },
                     {

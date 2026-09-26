@@ -7,6 +7,7 @@ import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeom
 import { usePageFlood } from '@/components/player';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { originalYear } from '@/lib/releaseYear';
 import { getAlbumImageFromData, getWebGLTextureImageUrl } from '@/lib/image-utils';
 import { floodFor, GROUND } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
@@ -1252,7 +1253,7 @@ function normalizeAlbum(album: Album): CrateRecord | null {
   const cleanGenres = getCleanGenresFromArray(album.genre_names ?? [], album.release_artist).slice(0, 2);
   const styles = (album.styles ?? []).filter(Boolean).slice(0, 2);
   const labels = (album.labels ?? []).filter(Boolean).slice(0, 1);
-  const year = formatYear(album.date_release_year);
+  const year = String(originalYear(album) ?? '');
   const country = album.country ?? '';
   const details = [year, ...cleanGenres, ...styles, ...labels, country].filter(Boolean);
 
@@ -1349,11 +1350,6 @@ function shuffle<T>(items: T[]): T[] {
 
 function getAlbumPath(uriRelease: string): string {
   return uriRelease.replace('/album/', '').replace('/', '');
-}
-
-function formatYear(value: string | undefined): string {
-  if (!value) return '';
-  return value.match(/\d{4}/)?.[0] ?? '';
 }
 
 /** Condensed title scaled to the longest word so it never overflows the panel. */

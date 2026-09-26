@@ -10,6 +10,7 @@ import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
 import { albumsForFacetSlug, FACETS, type FacetKey } from '@/lib/browseFacets';
+import { originalYear } from '@/lib/releaseYear';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { useCollection } from '@/lib/collection';
 import { cn } from '@/lib/utils';
@@ -42,8 +43,7 @@ const FACET_LABEL: Record<FacetKey, string> = {
 };
 
 function releaseYear(album: Album): number {
-  const y = new Date(album.date_release_year).getFullYear();
-  return Number.isFinite(y) && y >= 1900 ? y : 0;
+  return originalYear(album) ?? 0;
 }
 
 function buildFacetStats(albums: Album[]): FacetStats {

@@ -7,6 +7,7 @@ import { useCollection } from '@/lib/collection';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { hue, inkOn, vividFrom, vividScore } from '@/lib/sleeveColour';
+import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
 import { RecordTile } from '@/components/player';
@@ -83,7 +84,7 @@ export function AlbumsPage() {
         if (!hit) return false;
       }
       if (genre !== 'all' && !a.genre_names.includes(genre)) return false;
-      if (year !== 'all' && String(new Date(a.date_release_year).getFullYear()) !== year) return false;
+      if (year !== 'all' && String(originalYear(a)) !== year) return false;
       if (format !== 'all' && a.format_primary !== format) return false;
       return true;
     });
@@ -103,8 +104,9 @@ export function AlbumsPage() {
             return a.release_name.localeCompare(b.release_name);
           case 'release_artist':
             return a.release_artist.localeCompare(b.release_artist);
+          // The URL value predates year_original; it sorts by original release year.
           case 'date_release_year':
-            return new Date(b.date_release_year).getTime() - new Date(a.date_release_year).getTime();
+            return (originalYear(b) ?? 0) - (originalYear(a) ?? 0);
           default:
             return new Date(b.date_added).getTime() - new Date(a.date_added).getTime();
         }
@@ -119,8 +121,7 @@ export function AlbumsPage() {
   );
   const years = useMemo(
     () =>
-      [...new Set(albums.map(a => String(new Date(a.date_release_year).getFullYear())))]
-        .filter(y => y !== 'NaN')
+      [...new Set(albums.map(a => originalYear(a)).filter((y): y is number => y !== null).map(String))]
         .sort((a, b) => Number(b) - Number(a)),
     [albums],
   );
@@ -241,7 +242,7 @@ export function AlbumsPage() {
                 key={a.uri_release}
                 album={a}
                 palette={colours?.[a.uri_release]}
-                meta={[a.date_release_year?.slice(0, 4), a.format_primary].filter(Boolean).join(' · ')}
+                meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')}
               />
             ))}
           </div>

@@ -1,6 +1,7 @@
 import Fuse from 'fuse.js';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
+import { originalYear } from '@/lib/releaseYear';
 
 export interface Album {
   release_name: string;
@@ -19,6 +20,7 @@ export interface Album {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   images_uri_release: {
     'hi-res': string;
     medium: string;
@@ -188,7 +190,7 @@ class FuseSearchService {
             : album.release_artist,
           image: getAlbumImageFromData(album.uri_release, 'medium'),
           url: album.uri_release,
-          year: new Date(album.date_release_year).getFullYear().toString(),
+          year: String(originalYear(album) ?? ''),
           genres: getCleanGenresFromArray(album.genre_names, album.release_artist).slice(0, 3),
           score: result.score,
           matches: includeMatches ? result.matches : undefined
