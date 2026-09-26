@@ -9,6 +9,7 @@
 - Backend build + install (`scrapper` → `~/.cargo/bin`, registers `~/.config/scrapper/config.json` data root): `cd scrapper && ./install.sh`
 - Backend dev build / lint: `cd scrapper && cargo build && cargo clippy`
 - Backend collection run (from anywhere once installed): `scrapper collection --resume` (or `cd scrapper && cargo run -- collection --resume`)
+- After the scrapper adds artists (macOS only, commit the output): `pnpm run generate-artist-images` (new photos only; `-- --full` redoes all, `-- --only <slug>` one artist)
 
 ## Universal Rules
 

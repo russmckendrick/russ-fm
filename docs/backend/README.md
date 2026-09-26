@@ -122,6 +122,16 @@ scrapper collection --from 100 --to 200
 scrapper collection --interactive
 ```
 
+After a run that adds or replaces artist photos, generate their placement and colour
+notes from the repo root (macOS only) and commit them with the scrapper output:
+
+```bash
+pnpm run generate-artist-images
+```
+
+The scrapper does not write these itself. See
+[asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes).
+
 ### Process Single Release
 
 ```bash

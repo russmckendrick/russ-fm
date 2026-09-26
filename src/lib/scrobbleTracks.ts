@@ -24,17 +24,21 @@ export interface ScrobbleTrackPayload {
   artist?: string;
 }
 
-export function toScrobbleTracks(tracks: ScrobbleTrackSource[]): ScrobbleTrackPayload[] {
+/** The tracklist rows that get scrobbled, in order (the same rows toScrobbleTracks sends). */
+export function scrobbleableRows<T extends ScrobbleTrackSource>(tracks: T[]): T[] {
   // Only treat position-less rows as headers when the tracklist actually uses positions.
   // The Spotify/Last.fm fallbacks in getTracks() carry no positions at all, and every row
   // there is a real track.
   const hasPositions = tracks.some(track => !!track.position?.trim());
 
-  return tracks
-    .filter(track => {
-      if (!track.name?.trim()) return false;
-      return hasPositions ? !!track.position?.trim() : true;
-    })
+  return tracks.filter(track => {
+    if (!track.name?.trim()) return false;
+    return hasPositions ? !!track.position?.trim() : true;
+  });
+}
+
+export function toScrobbleTracks(tracks: ScrobbleTrackSource[]): ScrobbleTrackPayload[] {
+  return scrobbleableRows(tracks)
     .map(track => ({
       title: track.name!.trim(),
       artist: track.artists?.[0]?.name?.trim() || undefined,

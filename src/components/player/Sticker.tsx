@@ -4,6 +4,8 @@ interface StickerProps {
   /** ISO date (or anything Date can parse). */
   date: string;
   label?: string;
+  /** Bottom line; defaults to the year. */
+  footer?: string;
   background: string;
   color: string;
   size?: 'lg' | 'sm';
@@ -13,7 +15,7 @@ interface StickerProps {
 const MONTHS = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
 /** Round shop sticker slapped on the sleeve: "Added 25 SEP 2026". */
-export function Sticker({ date, label = 'Added', background, color, size = 'lg', className }: StickerProps) {
+export function Sticker({ date, label = 'Added', footer, background, color, size = 'lg', className }: StickerProps) {
   const d = new Date(date);
   if (Number.isNaN(d.getTime())) return null;
   const dayMonth = `${d.getDate()} ${MONTHS[d.getMonth()]}`;
@@ -32,7 +34,7 @@ export function Sticker({ date, label = 'Added', background, color, size = 'lg',
         {dayMonth}
       </span>
       <span className="t-mono font-bold" style={{ fontSize: lg ? 11 : 9 }}>
-        {d.getFullYear()}
+        {footer ?? d.getFullYear()}
       </span>
     </div>
   );

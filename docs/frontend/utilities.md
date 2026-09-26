@@ -126,6 +126,15 @@ const url = getArtistImageFromData(artist.uri_artist, 'medium');
 
 ---
 
+### getArtistImageInfoUrl
+
+The artist photo's placement and colour notes, `/artist/<slug>/<slug>-image.json`
+(written by `scripts/generate-artist-images.js`). Always site-relative: the JSON ships
+with the site, not R2. Load it with `useArtistImageInfo` (below), not `loadDetailJson`,
+whose path clean-up rewrites any `/artist/` JSON path to the artist's detail file.
+
+---
+
 ### handleImageError
 
 Fallback handler for broken images.
@@ -279,6 +288,22 @@ tile meta, browse decades and facet year stats, the genre explorer, Stats decade
 years, Wrapped `decadeOf`, search results, the home hero and random picks, the random crate
 panel, and the album and artist pages. The album page shows the pressing's own date separately
 ("This pressing"), from the detail JSON.
+
+## Artist Images (`src/lib/artistImage.ts`)
+
+For the artist hero portrait (`ArtistPortrait`). The data comes from
+`scripts/generate-artist-images.js`; see
+[asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) for how
+to generate it and [schemas.md](../data/schemas.md#artist-image-json-artistslugslug-imagejson)
+for the shape.
+
+- `useArtistImageInfo(uriArtist)`: the photo's `ArtistImageInfo`, cached per URL;
+  `undefined` while loading, `null` when there is no file.
+- `portraitLayout(info, stageW, stageH, textX, harsh)`: the desktop placement (photo
+  size and offset, extensions past its edges, right fade in stage px).
+- `edgeGradient(edge, direction, start?, length?)`: an edge's colour profile as a
+  CSS gradient, for carrying the photo on past that edge.
+- `focusPosition(info)`: `object-position` for the phone crop, centred on the faces.
 
 ## Sleeve Colours (`src/lib/sleeveColour.ts`)
 

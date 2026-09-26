@@ -17,12 +17,12 @@ All exported from `@/components/player`.
 | `FloodProvider` | `FloodContext.tsx` | Wraps the app in `App.tsx`. Holds the page's current flood and writes it to `--flood` / `--flood-ink` on `<html>`. Provides two contexts: `FloodValueContext` (the flood / ink value) and `FloodSetterContext` (the setter). |
 | `usePageFlood`, `useFloodValue` | `flood-context.ts` | Set / read the page flood. `usePageFlood` reads only the setter context, so a page that sets the flood does not re-render when it changes; `useFloodValue` (the navigation) reads the value. See [Hooks](./hooks.md#flood-hooks). |
 | `CoverHero`, `AFTER_HERO` | `CoverHero.tsx` | Cover-led hero section. |
-| `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. |
+| `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. The album page passes `scene` (from `useScrobbleScene`) and `ringColour` for the scrobble scene. |
 | `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
-| `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker. |
+| `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker; `label` and `footer` make the "Scrobbled 26 SEP · 11 tracks" one. |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. |
-| `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. Used for the artist name. |
+| `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
 | `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
 

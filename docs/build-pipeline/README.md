@@ -113,6 +113,7 @@ pnpm run build:worker
 | `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists. Decade pages come from `year_original` (falling back to `date_release_year`) |
 | `process-images` | Resize images |
 | `generate-colors` | Extract sleeve palettes (`album-colors.json`) and swatches (`album-swatches.json`); `--force` redoes every album |
+| `generate-artist-images` | Artist photo placement and colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only (Apple Vision, needs the Xcode Command Line Tools), run locally after the scrapper adds artist photos and commit, not part of `build`; by default only artists without a file yet, `--full` redoes all, `--only <slug>` redoes one. See [asset-processing.md](./asset-processing.md#artist-image-notes) |
 | `generate-og` | Create OG images |
 | `build:wrapped` | Generate wrapped.json |
 | `preview` | Preview production build |

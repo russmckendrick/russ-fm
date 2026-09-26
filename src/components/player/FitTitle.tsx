@@ -7,6 +7,12 @@ interface FitTitleProps {
   max: number;
   min?: number;
   as?: 'h1' | 'h2';
+  /**
+   * Also shrink until the parent's content fits the parent's height. For a
+   * title in a fixed-height column (the artist hero on desktop); where the
+   * parent's height is auto this never binds.
+   */
+  fitHeight?: boolean;
   className?: string;
 }
 
@@ -16,7 +22,7 @@ interface FitTitleProps {
  * "Depeche Mode" sets as DEPECHE / MODE rather than DEPEC / HE MODE. Only a
  * word too long to fit even at `min` is allowed to break.
  */
-export function FitTitle({ children, max, min = 20, as: Tag = 'h1', className }: FitTitleProps) {
+export function FitTitle({ children, max, min = 20, as: Tag = 'h1', fitHeight = false, className }: FitTitleProps) {
   const ref = useRef<HTMLHeadingElement>(null);
 
   useLayoutEffect(() => {
@@ -26,7 +32,8 @@ export function FitTitle({ children, max, min = 20, as: Tag = 'h1', className }:
 
     const fits = (size: number) => {
       el.style.fontSize = `${size}px`;
-      return el.scrollWidth <= el.clientWidth + 1;
+      if (el.scrollWidth > el.clientWidth + 1) return false;
+      return !fitHeight || parent.scrollHeight <= parent.clientHeight + 1;
     };
     const fit = () => {
       el.style.overflowWrap = '';
@@ -48,21 +55,41 @@ export function FitTitle({ children, max, min = 20, as: Tag = 'h1', className }:
 
     fit();
     // Refit when the column changes width, and once the display font has loaded.
+    // Fitting the height as well, also when anything else in the column changes
+    // size or is added (stats and links arrive after the page renders).
     let width = parent.clientWidth;
-    const ro = new ResizeObserver(() => {
-      if (parent.clientWidth !== width) {
+    let height = parent.clientHeight;
+    const siblings = new Set<Element>();
+    const ro = new ResizeObserver(entries => {
+      const parentChanged = parent.clientWidth !== width || parent.clientHeight !== height;
+      if (parentChanged || (fitHeight && entries.some(e => e.target !== parent))) {
         width = parent.clientWidth;
+        height = parent.clientHeight;
         fit();
       }
     });
     ro.observe(parent);
+    const watchSiblings = () => {
+      for (const child of Array.from(parent.children)) {
+        if (child !== el && !siblings.has(child)) {
+          siblings.add(child);
+          ro.observe(child);
+        }
+      }
+    };
+    const mo = fitHeight ? new MutationObserver(() => { watchSiblings(); fit(); }) : null;
+    if (fitHeight) {
+      watchSiblings();
+      mo!.observe(parent, { childList: true });
+    }
     let alive = true;
     document.fonts?.ready.then(() => alive && fit());
     return () => {
       alive = false;
       ro.disconnect();
+      mo?.disconnect();
     };
-  }, [children, max, min]);
+  }, [children, max, min, fitHeight]);
 
   return (
     <Tag

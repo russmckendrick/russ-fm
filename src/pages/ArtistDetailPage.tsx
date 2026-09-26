@@ -6,6 +6,8 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { useBackdropTone } from '@/hooks/useBackdropTone';
+import { useArtistImageInfo } from '@/lib/artistImage';
+import { ArtistPortrait } from '@/components/player/ArtistPortrait';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
@@ -14,7 +16,7 @@ import { slugify } from '@/lib/browseFacets';
 import { floodFor, INK } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { cn } from '@/lib/utils';
-import { getAlbumImageFromData, getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
@@ -178,11 +180,18 @@ export function ArtistDetailPage() {
   // Blend the portrait into the flood. Multiply turns a light backdrop into
   // the flood colour; screen does the same for a dark backdrop, but only on a
   // dark flood; on a pale one it washes the subject out to a ghost, so there
-  // the photo multiplies too and keeps its tonal range. Unmeasured → go by
-  // the flood alone.
-  const backdrop = useBackdropTone(artistPath ? getArtistAvatarFromData(`/artist/${artistPath}/`) : undefined);
+  // the photo multiplies too and keeps its tonal range. The backdrop tone
+  // comes from the photo's -image.json; only photos without one are measured
+  // in the browser. Unmeasured → go by the flood alone.
+  const imageInfo = useArtistImageInfo(artistPath ? `/artist/${artistPath}/` : undefined);
+  const measuredTone = useBackdropTone(artistPath && imageInfo === null ? getArtistAvatarFromData(`/artist/${artistPath}/`) : undefined);
+  const backdrop = imageInfo ? imageInfo.backdrop.tone : measuredTone;
   const darkFlood = flood.ink !== INK;
   const portraitBlend = darkFlood && backdrop !== 'light' ? 'screen' : 'multiply';
+  // A dark backdrop multiplied into a pale flood (or the reverse) is a hard
+  // step in lightness; the fade gets more room there.
+  const portraitHarsh = !!backdrop && (backdrop === 'dark') !== darkFlood;
+  const [heroText, setHeroText] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (!artistJsonUrl) return;
@@ -286,23 +295,26 @@ export function ArtistDetailPage() {
   return (
     <div>
       <div className="flood-surface" style={{ background: flood.background, color: flood.ink }}>
-        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(320px,520px)_minmax(0,1fr)] lg:gap-16 lg:px-14 lg:pt-10">
+        {/* From lg every artist hero is the same height (the one grid row is
+            fixed: 56vh, between 420 and 540px); the name shrinks to fit the
+            text column into it (FitTitle fitHeight). */}
+        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(320px,520px)_minmax(0,1fr)] lg:grid-rows-[clamp(420px,56vh,540px)] lg:gap-16 lg:px-14 lg:pt-10">
           {/* The portrait is printed into the flood in greyscale, blended so
               its backdrop takes the sleeve colours (see portraitBlend). The
-              bottom fades out (see PORTRAIT_MASK); the mask sits on the
-              <img> because a mask on the wrapper would isolate it and stop
-              the blend reaching the flood. */}
-          <div className="aspect-[4/5] w-full max-w-[520px] overflow-hidden max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none">
-            <img
+              4:5 cell sets the row height; from lg the portrait's stage breaks
+              out of it to fill the flood (see ArtistPortrait). */}
+          <div className="relative aspect-[4/5] w-full max-w-[520px] max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none lg:aspect-auto lg:h-full">
+            <ArtistPortrait
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
-              onError={handleImageError}
-              className="h-full w-full object-cover object-top grayscale contrast-[1.2]"
-              style={{ mixBlendMode: portraitBlend, ...PORTRAIT_MASK }}
+              info={imageInfo}
+              blend={portraitBlend}
+              harsh={portraitHarsh}
+              textEl={heroText}
             />
           </div>
-          <div className="flex min-w-0 flex-col gap-7 lg:pt-4">
-            <FitTitle max={176} className="t-disp">{artistName}</FitTitle>
+          <div ref={setHeroText} className="relative flex min-w-0 flex-col gap-7 lg:justify-center">
+            <FitTitle max={176} min={40} fitHeight className="t-disp">{artistName}</FitTitle>
             <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map(([k, v]) => (
                 <div key={k} className="flex flex-col-reverse gap-1">
@@ -330,7 +342,7 @@ export function ArtistDetailPage() {
           </div>
         </section>
 
-        <div className="h-16 lg:h-20" />
+        <div className="h-16 lg:h-10" />
       </div>
 
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
@@ -561,27 +573,6 @@ function formatAdded(value: string): string {
   const d = new Date(value);
   return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
-
-/**
- * The artist portrait fades out at the bottom only: a long fade whose stops
- * follow an ease-out curve, so there's no visible line where it starts. The
- * other edges stay crisp.
- */
-const PORTRAIT_FADE = [
-  '#000 40%',
-  'rgba(0,0,0,.94) 52%',
-  'rgba(0,0,0,.82) 62%',
-  'rgba(0,0,0,.64) 71%',
-  'rgba(0,0,0,.44) 79%',
-  'rgba(0,0,0,.26) 86%',
-  'rgba(0,0,0,.12) 92%',
-  'rgba(0,0,0,.04) 97%',
-  'transparent 100%',
-].join(', ');
-const PORTRAIT_MASK = {
-  maskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
-  WebkitMaskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
-} as const;
 
 type DiscographyOrder = 'added' | 'year';
 

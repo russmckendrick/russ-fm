@@ -254,6 +254,111 @@ Two things keep the files current:
 
 ---
 
+## Artist Image Notes
+
+**Files:** `scripts/generate-artist-images.js`, with the Vision helper
+`scripts/lib/vision-detect.swift`
+
+Every artist photo gets a small JSON file next to it,
+`public/artist/<slug>/<slug>-image.json` (about 600 bytes), saying where the faces
+and subject are and what colours its backdrop and edges are. The artist page uses it
+to place the portrait in the desktop hero, keep faces clear of the text, carry the
+photo on past its edges and pick the blend mode (see
+[pages.md](../frontend/pages.md), artist header). The shape is in
+[schemas.md](../data/schemas.md#artist-image-json-artistslugslug-imagejson).
+
+### Requirements
+
+The face and subject detection uses Apple's Vision framework, so the script runs
+**on a Mac only**:
+
+| Need | Why | Check / install |
+|------|-----|-----------------|
+| macOS 12 or later | Vision's person detection (`VNDetectHumanRectanglesRequest`) | `sw_vers` |
+| Xcode Command Line Tools (for `swiftc`) | Compiles the Vision helper on first run | `swiftc --version`, else `xcode-select --install` |
+| Node.js + `pnpm install` | Runs the script; `sharp` measures the colours | as for the rest of the repo |
+
+Full Xcode is not needed. On first run (and whenever `vision-detect.swift` is newer
+than the binary) the script compiles the helper to
+`node_modules/.cache/russfm/vision-detect`, which takes a few seconds. On Linux or
+Windows the script prints a warning and writes nothing.
+
+### When to run it
+
+It is **not** part of `pnpm run build` and does not run in CI (GitHub Actions runs on
+Linux), so the files are generated locally and committed, like the scrapper's own
+output. Run it whenever the scrapper adds artists:
+
+```bash
+# 1. Scrapper adds or updates artists (writes public/artist/<slug>/<slug>-hi-res.jpg)
+scrapper collection --resume
+
+# 2. Measure the new photos (any without an -image.json; the rest aren't read)
+pnpm run generate-artist-images
+
+# 3. Commit the new -image.json files with the scrapper output
+git add public/artist
+```
+
+Options:
+
+| Command | Does |
+|---------|------|
+| `pnpm run generate-artist-images` | Default: only artists with no `-image.json` yet (a no-op run takes well under a second) |
+| `pnpm run generate-artist-images -- --full` | Redo every artist (~20s for ~1,260). `--force` is an alias |
+| `pnpm run generate-artist-images -- --only genesis` | Redo one artist (folder slug), whether or not it has a file |
+
+Because the default run only looks for missing files, **a replaced photo is not
+picked up by it**: rerun that artist with `--only <slug>`, or everything with
+`--full`. Likewise, after bumping `VERSION` in the script (do that whenever the
+measurements or output shape change), run `--full`; the default run prints how
+many files are from an older `VERSION` as a reminder. Each file records the
+photo's `hash` (first 16 hex chars of its sha1) for reference.
+
+### What it measures
+
+1. **Faces, people, subject** (Vision, via the Swift helper): the script starts the
+   helper once, writes every photo path to its stdin, and reads one JSON line back
+   per photo (`faces`, `people`, `salient` boxes, normalised, origin top-left). Faces
+   under 0.5 confidence and people under 0.3 are dropped.
+2. **Placement**: `subject` is the union of the people and faces (or padded faces,
+   or the salient box when nobody is found); `focus` is the centre of the faces, or
+   the upper part of the subject.
+3. **Colour** (sharp, on a 48×48 sample): the backdrop (top quarter plus the outer
+   columns) and each edge get an average colour, relative luminance and evenness;
+   the backdrop also gets a `tone` (`light` at relative luminance ≥ 0.214, about
+   0.5 in sRGB). The left, right and top edges also get a 12-stop `profile`: the
+   outer two pixels averaged and smoothed along the edge. The page draws these as
+   soft gradients to carry the photo on past its edge.
+
+### Output and deployment
+
+The files ship with the site: the worker build keeps JSON under `public/artist/`,
+so they are served from the site origin, not R2. Only the artist page fetches one,
+for the artist being shown.
+
+Committing them has one side effect on deploy. The R2 sync treats any changed file
+under `public/artist/<slug>/` as a changed artist and re-uploads that artist's images
+(`--force`). A normal run touches only the artists that changed, but committing the
+full set, or a `--full` run, re-uploads every artist's images once.
+It's harmless, just a longer sync.
+
+### Troubleshooting
+
+- **`Vision helper unavailable` / `swiftc` not found**: install the Command Line
+  Tools (`xcode-select --install`), or point at them with
+  `sudo xcode-select -s /Library/Developer/CommandLineTools`.
+- **Helper misbehaves after a macOS or Xcode update**: delete
+  `node_modules/.cache/russfm/vision-detect`; the next run recompiles it.
+- **A new artist's portrait isn't placed** (photo just fills the hero, backdrop tone
+  measured in the browser): its `-image.json` is missing, so run the script and
+  commit. The page falls back cleanly, so nothing breaks in the meantime.
+- **Replaced a photo but the placement didn't change**: the default run only fills
+  in missing files, so rerun that artist with `--only <slug>`.
+- **Placement looks wrong for one artist**: rerun with `--only <slug>` after
+  replacing the photo. Placement rules live in `portraitLayout()` in
+  `src/lib/artistImage.ts`, not in the script.
+
 ## OG Image Generation
 
 ### Overview

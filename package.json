@@ -13,6 +13,7 @@
     "build": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build && pnpm run process-images && pnpm run generate-colors && pnpm run build:wrapped && pnpm run generate-sitemap && pnpm run generate-og && pnpm run generate-static-meta",
     "generate-sitemap": "node scripts/generate-sitemap.mjs",
     "generate-colors": "node scripts/generate-album-colors.js",
+    "generate-artist-images": "node scripts/generate-artist-images.js",
     "generate-og": "node scripts/generate-og-images.mjs",
     "generate-static-meta": "node scripts/generate-static-meta.mjs",
     "build:fast": "rm -rf dist && pnpm run generate-sitemap && tsc --noEmit && vite build && pnpm run generate-static-meta",

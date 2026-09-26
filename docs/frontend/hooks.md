@@ -400,6 +400,21 @@ function LastFmStatus() {
 
 ---
 
+### useScrobbleScene (`src/hooks/useScrobbleScene.ts`)
+
+Drives the album hero's scrobble animation from `AlbumScrobbleButton`'s progress reports.
+
+```typescript
+const { scene, onProgress } = useScrobbleScene(albumPath);
+
+<AlbumScrobbleButton album={...} onProgress={onProgress} leadInMs={SCENE_LEAD_IN_MS} trackMs={SCENE_TRACK_MS} />
+<HeroRecord ... scene={scene} ringColour={flood.flood} />
+```
+
+`scene.phase` runs `idle → out → lift → play → done → back → idle`; `scene.done` / `scene.total` light the ring; `scene.stamp` runs `added → scrobbled → returning → returned`, fading "Added" back in 10s after the scene ends. Changing `resetKey` (the album path) resets everything. Timings and the full choreography: [design-system.md](./design-system.md).
+
+---
+
 ### useScrobble (`src/hooks/useScrobble.ts`)
 
 Scrobble tracks to Last.fm.

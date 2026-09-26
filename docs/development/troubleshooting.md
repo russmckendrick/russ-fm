@@ -225,6 +225,30 @@ Ensure `~/.cargo/bin` is on your `PATH`. To run without installing, use `cargo r
 
 ---
 
+### Artist Photo Not Placed / `generate-artist-images` Fails
+
+**Symptom:** a new artist's hero photo just fills the space (faces can sit under the
+name), or `pnpm run generate-artist-images` prints `Vision helper unavailable` or
+`Nothing written`.
+
+**Solutions:**
+
+1. **Generate the notes.** New artist photos need their `-image.json`, which the
+   scrapper does not write (a *replaced* photo needs `-- --only <slug>`, since the
+   default run only fills in missing files):
+   ```bash
+   pnpm run generate-artist-images
+   git add public/artist
+   ```
+2. **Run it on a Mac.** It uses Apple's Vision framework; elsewhere it writes nothing.
+3. **Install the Command Line Tools** if `swiftc` is missing: `xcode-select --install`.
+4. **Recompile the helper** after a macOS or Xcode update:
+   `rm node_modules/.cache/russfm/vision-detect`, then run again.
+
+See [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes).
+
+---
+
 ### Resume Not Working
 
 **Symptom:** Collection processing starts from beginning.

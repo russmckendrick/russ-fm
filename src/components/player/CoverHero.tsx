@@ -18,12 +18,14 @@ export const AFTER_HERO = 'pt-24 lg:pt-36';
 /**
  * Cover-led hero: the page floods with the sleeve colour, the cover sits flush
  * on the bottom edge and hangs over the next section, and the text column
- * sits to the right (below the title on phones, cover last).
+ * sits to the right (below the title on phones, cover last). Sideways overflow is
+ * clipped so a record sliding off the edge (the scrobble scene) never widens the page;
+ * the cover still hangs out of the bottom.
  */
 export function CoverHero({ flood, art, artClassName, children, className }: CoverHeroProps) {
   return (
     <section
-      className={cn('flood-surface relative z-[2]', className)}
+      className={cn('flood-surface relative z-[2] overflow-x-clip', className)}
       style={{ background: flood.flood, color: flood.ink }}
     >
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-8 px-5 pt-4 md:px-10 lg:flex-row lg:items-end lg:gap-0 lg:px-14 lg:pt-14">

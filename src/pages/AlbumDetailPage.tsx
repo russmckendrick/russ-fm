@@ -8,7 +8,8 @@ import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { youTubeVideos } from '@/lib/youtube';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
-import { toScrobbleTracks } from '@/lib/scrobbleTracks';
+import { scrobbleableRows, toScrobbleTracks } from '@/lib/scrobbleTracks';
+import { SCENE_LEAD_IN_MS, SCENE_TRACK_MS, useScrobbleScene } from '@/hooks/useScrobbleScene';
 import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
 import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
 import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
@@ -294,7 +295,7 @@ export function AlbumDetailPage() {
   const palette = useAlbumColors(albumPath ? `/album/${albumPath}/` : undefined);
   const swatches = useAlbumSwatches(albumPath ? `/album/${albumPath}/` : undefined);
   const colourMap = useAlbumColorMap();
-  const [scrobbling, setScrobbling] = useState(false);
+  const { scene: scrobbleScene, onProgress: onScrobbleProgress } = useScrobbleScene(albumPath);
   const [boxSelected, setBoxSelected] = useState(0);
   const flood = floodFor(palette);
   usePageFlood(
@@ -305,7 +306,6 @@ export function AlbumDetailPage() {
 
   useEffect(() => {
     setBoxSelected(0);
-    setScrobbling(false);
   }, [albumPath]);
 
   // Check if URL needs sanitization and redirect if necessary
@@ -788,6 +788,10 @@ export function AlbumDetailPage() {
   const labelName = detailedAlbum?.labels?.[0];
   const scrobbleArtist = album.release_artist;
   const albumTracksForScrobble = toScrobbleTracks(tracks);
+  const scrobbleRows = scrobbleableRows(tracks as Array<{ name?: string; position?: string }>);
+  const scenePhase = scrobbleScene.phase;
+  const showScrobbleReadout = !isBox && (scenePhase === 'lift' || scenePhase === 'play' || scenePhase === 'done');
+  const nowRow = scrobbleRows[Math.min(scrobbleScene.done, scrobbleRows.length - 1)];
   const discCount = Math.ceil(sideCount / 2);
 
   const formatDetail = [
@@ -873,7 +877,10 @@ export function AlbumDetailPage() {
             album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
             tone={{ background: flood.ink, color: flood.flood }}
             mobileLabel="Scrobble"
-            onActiveChange={setScrobbling}
+            key={albumPath}
+            onProgress={onScrobbleProgress}
+            leadInMs={SCENE_LEAD_IN_MS}
+            trackMs={SCENE_TRACK_MS}
           />
         )}
         {serviceLinks.map(s => (
@@ -882,7 +889,20 @@ export function AlbumDetailPage() {
           </PillLink>
         ))}
       </div>
-      {cleanGenresList.length > 0 && (
+      {showScrobbleReadout ? (
+        <div className="scrobble-readout flex min-h-[30px] items-baseline gap-3.5" aria-live="polite">
+          <span className="t-kicker">{scenePhase === 'done' ? 'Done' : 'Now'}</span>
+          <span className="t-dispn truncate text-[17px] md:text-[20px]">
+            {scenePhase === 'done'
+              ? scrobbleScene.successful === scrobbleScene.total
+                ? `All ${scrobbleScene.total} tracks scrobbled`
+                : `${scrobbleScene.successful} of ${scrobbleScene.total} tracks scrobbled`
+              : nowRow
+                ? `${nowRow.position ? `${nowRow.position}  ` : ''}${nowRow.name}`
+                : ''}
+          </span>
+        </div>
+      ) : cleanGenresList.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {cleanGenresList.slice(0, 5).map(genre => (
             <Link
@@ -920,9 +940,9 @@ export function AlbumDetailPage() {
               src={getAlbumImageFromData(album.uri_release, 'hi-res')}
               alt={`${title} by ${album.release_artist}`}
               labelColour={flood.ground}
-              labelText={`${album.release_artist.toUpperCase()} · SIDE A`}
-              discOut={scrobbling ? 34 : 15}
-              fast={scrobbling}
+              labelCover={getAlbumImageFromData(album.uri_release, 'hi-res')}
+              scene={scrobbleScene}
+              ringColour={flood.flood}
               sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
               stickerOnMobile={false}
               discOnMobile={false}

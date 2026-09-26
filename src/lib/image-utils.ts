@@ -161,6 +161,15 @@ export function getArtistImageFromData(uriArtist: string, size: ImageSize = 'med
 }
 
 /**
+ * Placement and colour notes for an artist photo (scripts/generate-artist-images.js).
+ * A JSON file next to the photo, served with the site like the detail JSON, not from R2.
+ */
+export function getArtistImageInfoUrl(uriArtist: string): string {
+  const slug = getArtistSlug(uriArtist);
+  return `/artist/${slug}/${slug}-image.json`;
+}
+
+/**
  * Get artist avatar URL from artist data
  */
 export function getArtistAvatarFromData(uriArtist: string): string {

@@ -342,6 +342,237 @@ body {
   transform: translateX(-6%);
 }
 
+/* --- Artist portrait ------------------------------------------------------ */
+/* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
+   page edge stay crisp.
+
+   Phones: the photo fills the 4:5 cell and fades out at the bottom (a long
+   fade whose stops follow an ease-out curve, so there's no line where it
+   starts). From lg the stage runs from the page
+   edge to 32rem past the cell (well under the text), and from the flood's top (the section's pt-10)
+   to its bottom (the 2.5rem spacer). Once placed (data-placed, sizes from
+   portraitLayout() in src/lib/artistImage.ts) the <img> box is the flood's
+   full height and runs on past the photo under the text (and to the page
+   edge, and up to the top when a wide group shrinks the photo) with
+   background gradients of the photo's own edge colours; object-fit: contain
+   holds the photo at its size. Its right fade runs from --fade-from to
+   --fade-to, finishing under the text. Before it's placed it simply fills
+   the stage. */
+
+.artist-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.artist-portrait {
+  --portrait-fade-bottom: linear-gradient(
+    to bottom,
+    #000 40%,
+    rgba(0, 0, 0, 0.94) 52%,
+    rgba(0, 0, 0, 0.82) 62%,
+    rgba(0, 0, 0, 0.64) 71%,
+    rgba(0, 0, 0, 0.44) 79%,
+    rgba(0, 0, 0, 0.26) 86%,
+    rgba(0, 0, 0, 0.12) 92%,
+    rgba(0, 0, 0, 0.04) 97%,
+    transparent 100%
+  );
+  -webkit-mask-image: var(--portrait-fade-bottom);
+  mask-image: var(--portrait-fade-bottom);
+}
+
+.artist-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .artist-stage {
+    --portrait-bleed: calc(max(0px, (100vw - 1640px) / 2) + 3.5rem);
+    top: -2.5rem;
+    bottom: -2.5rem;
+    left: calc(-1 * var(--portrait-bleed));
+    right: auto;
+    width: calc(100% + var(--portrait-bleed) + 32rem);
+  }
+
+  /* No bottom fade on desktop: the photo fills the flood to its bottom edge.
+     The right fade is laid over the whole stage (--stage-w wide, shifted by
+     --el-left) so its stops are in stage px, and follows a smootherstep curve
+     (flat at both ends, 16 stops) so a big step in lightness, a black
+     backdrop into a pale flood, shows no bands. Unplaced, the photo is the
+     whole stage and the fade covers its right half. */
+  .artist-portrait {
+    --a: var(--fade-from, 42%);
+    --b: var(--fade-to, 100%);
+    --portrait-fade-right: linear-gradient(
+      to right,
+      #000 var(--a),
+      rgba(0, 0, 0, 1.000) calc(var(--a) + (var(--b) - var(--a)) * 0.000),
+      rgba(0, 0, 0, 0.997) calc(var(--a) + (var(--b) - var(--a)) * 0.067),
+      rgba(0, 0, 0, 0.981) calc(var(--a) + (var(--b) - var(--a)) * 0.133),
+      rgba(0, 0, 0, 0.942) calc(var(--a) + (var(--b) - var(--a)) * 0.200),
+      rgba(0, 0, 0, 0.878) calc(var(--a) + (var(--b) - var(--a)) * 0.267),
+      rgba(0, 0, 0, 0.790) calc(var(--a) + (var(--b) - var(--a)) * 0.333),
+      rgba(0, 0, 0, 0.683) calc(var(--a) + (var(--b) - var(--a)) * 0.400),
+      rgba(0, 0, 0, 0.562) calc(var(--a) + (var(--b) - var(--a)) * 0.467),
+      rgba(0, 0, 0, 0.438) calc(var(--a) + (var(--b) - var(--a)) * 0.533),
+      rgba(0, 0, 0, 0.317) calc(var(--a) + (var(--b) - var(--a)) * 0.600),
+      rgba(0, 0, 0, 0.210) calc(var(--a) + (var(--b) - var(--a)) * 0.667),
+      rgba(0, 0, 0, 0.122) calc(var(--a) + (var(--b) - var(--a)) * 0.733),
+      rgba(0, 0, 0, 0.058) calc(var(--a) + (var(--b) - var(--a)) * 0.800),
+      rgba(0, 0, 0, 0.019) calc(var(--a) + (var(--b) - var(--a)) * 0.867),
+      rgba(0, 0, 0, 0.003) calc(var(--a) + (var(--b) - var(--a)) * 0.933),
+      rgba(0, 0, 0, 0.000) calc(var(--a) + (var(--b) - var(--a)) * 1.000)
+    );
+    position: absolute;
+    top: 0;
+    left: var(--el-left, 0px);
+    width: var(--el-w, 100%);
+    height: var(--el-h, 100%);
+    max-width: none;
+    -webkit-mask-image: var(--portrait-fade-right);
+    mask-image: var(--portrait-fade-right);
+    -webkit-mask-size: var(--stage-w, 100%) 100%;
+    mask-size: var(--stage-w, 100%) 100%;
+    -webkit-mask-position: calc(-1 * var(--el-left, 0px)) 0;
+    mask-position: calc(-1 * var(--el-left, 0px)) 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
+
+/* --- Hero record scrobble scene ------------------------------------------ */
+/* HeroRecord's data-scene (useScrobbleScene): the disc slides clear of the
+   sleeve, comes back over the cover and hovers while a ring of one segment
+   per track lights up, then slides home. */
+
+.hero-disc {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  width: 96%;
+  height: 96%;
+  z-index: 1;
+  transition: transform 1s var(--ease-out);
+}
+
+.hero-disc-bob {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.hero-disc .vinyl {
+  transition: box-shadow 0.8s var(--ease-out);
+}
+
+.hero-record .sleeve {
+  transition: filter 0.8s var(--ease-out);
+}
+
+.hero-record[data-scene='out'] .hero-disc {
+  transform: translateX(108%);
+  transition: transform 0.56s cubic-bezier(0.55, 0, 0.35, 1);
+}
+
+.hero-record[data-scene='lift'] .hero-disc,
+.hero-record[data-scene='play'] .hero-disc,
+.hero-record[data-scene='done'] .hero-disc {
+  z-index: 3;
+  transform: translate(0, -1.5%) scale(0.9);
+  transition: transform 0.9s var(--ease-out);
+}
+
+.hero-record[data-scene='back'] .hero-disc {
+  z-index: 3;
+  transform: translateX(108%);
+  transition: transform 0.65s cubic-bezier(0.55, 0, 0.35, 1);
+}
+
+.hero-record[data-scene='lift'] .sleeve,
+.hero-record[data-scene='play'] .sleeve,
+.hero-record[data-scene='done'] .sleeve {
+  filter: brightness(0.72) saturate(0.9);
+}
+
+.hero-record[data-scene='lift'] .hero-disc .vinyl,
+.hero-record[data-scene='play'] .hero-disc .vinyl,
+.hero-record[data-scene='done'] .hero-disc .vinyl {
+  box-shadow:
+    0 50px 70px -24px rgba(0, 0, 0, 0.7),
+    0 16px 26px -10px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px #000;
+}
+
+.hero-record[data-scene='play'] .hero-disc-bob,
+.hero-record[data-scene='done'] .hero-disc-bob {
+  animation: hero-bob 2.8s ease-in-out infinite;
+}
+
+@keyframes hero-bob {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.scrobble-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.hero-record[data-scene='lift'] .scrobble-ring,
+.hero-record[data-scene='play'] .scrobble-ring,
+.hero-record[data-scene='done'] .scrobble-ring {
+  opacity: 1;
+}
+
+.scrobble-seg {
+  fill: none;
+  stroke: rgba(251, 247, 239, 0.14);
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  transition: stroke 0.3s;
+}
+
+.scrobble-seg[data-state='on'],
+.scrobble-seg[data-state='now'] {
+  stroke: var(--ring, var(--cream));
+}
+
+.scrobble-seg[data-state='now'] {
+  animation: seg-blink 0.5s ease-in-out infinite;
+}
+
+.hero-record[data-scene='done'] .scrobble-seg[data-state='on'] {
+  stroke: var(--cream);
+}
+
+/* "Now A2 VHS Sex" under the album hero's buttons while it scrobbles. */
+.scrobble-readout {
+  animation: readout-in 0.4s var(--ease-out) both;
+}
+
+@keyframes readout-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes seg-blink {
+  50% {
+    opacity: 0.35;
+  }
+}
+
 /* --- Stickers ------------------------------------------------------------- */
 
 .sticker {
@@ -366,6 +597,42 @@ body {
   to {
     opacity: 1;
     transform: rotate(9deg) scale(1);
+  }
+}
+
+/* The "Scrobbled" sticker pops straight on; later it fades out as "Added"
+   fades back in over it. */
+.sticker-now {
+  animation-delay: 0s;
+}
+
+.sticker-return {
+  animation: sticker-return 1s ease both;
+}
+
+.sticker-leave {
+  animation: sticker-leave 1s ease both;
+}
+
+@keyframes sticker-return {
+  from {
+    opacity: 0;
+    transform: rotate(9deg) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(9deg) scale(1);
+  }
+}
+
+@keyframes sticker-leave {
+  from {
+    opacity: 1;
+    transform: rotate(9deg) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(9deg) scale(0.96);
   }
 }
 
@@ -661,6 +928,19 @@ body {
 
   .sticker {
     animation: none;
+  }
+
+  .hero-disc,
+  .hero-disc .vinyl,
+  .hero-record .sleeve,
+  .scrobble-ring {
+    transition: none;
+  }
+
+  .hero-disc-bob,
+  .scrobble-seg,
+  .scrobble-readout {
+    animation: none !important;
   }
 
   .rec .vinyl,

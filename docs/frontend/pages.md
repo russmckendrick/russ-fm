@@ -324,10 +324,26 @@ among the artist's last ten additions, via `recordsFlood(uris, map, 10)`.
 The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
 swatch tints the rest of the page. No gradients.
 
-- **Header** — the portrait printed into the flood in greyscale, fading out at the
-  bottom only (`PORTRAIT_MASK`: a long ease-out fade; the other edges stay crisp).
-  Below 640px it bleeds to the full screen width.
-  It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
+- **Header** — from `lg` every artist hero is the same height (the grid row is fixed at
+  56vh, clamped to 420–540px, with 2.5rem of flood above and below) and the text column is
+  centred in it; the name is a `FitTitle` with `fitHeight`, shrinking until the whole text
+  column fits. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`) is
+  printed into the flood in greyscale and placed from the photo's `-image.json`
+  (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). Phones: a 4:5
+  crop centred on the faces, fading out at the bottom. From `lg` there is no bottom fade:
+  the `<img>` box is the flood's full height, from the page edge to 32rem past the cell.
+  The photo inside it is as tall as the flood (down to 85% to fit a wide group, then sat
+  on the bottom edge), slid so every face ends before the text but never so far the
+  leftmost face leaves the page. The box runs on past the photo, under the text (and to
+  the page edge, and up to the top when the photo is shorter), filled with soft gradients
+  of the photo's own edge colours from the `-image.json` profiles; `object-fit: contain`
+  holds the photo at its size, and the filter, blend and fade treat the fill exactly like
+  the photo, so there is no seam. One long smootherstep fade (16 stops, flat at both ends,
+  so a black backdrop into a pale flood shows no bands) finishes under the text: on a harsh
+  step in lightness under a fifth of the photo is left where the text starts, otherwise
+  about half. Without an `-image.json` the photo just fills the stage.
+  The backdrop tone comes from `-image.json` (`useBackdropTone` measures it in the browser
+  only when there is none). It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
   except on a dark flood with a dark backdrop, where it screens so the black takes the
   flood instead. Screening on a pale flood washed subjects out to ghosts, hence the rule.
   The backdrop is judged by `useBackdropTone` from the avatar; unmeasured, it goes by the

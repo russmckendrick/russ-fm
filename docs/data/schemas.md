@@ -284,6 +284,49 @@ JSON.
 
 ---
 
+### Artist image JSON (`artist/{slug}/{slug}-image.json`)
+
+Placement and colour notes for the artist photo next to it, written by
+`scripts/generate-artist-images.js` (macOS only, run locally and committed; see
+[asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes)).
+Read only by the artist page (`useArtistImageInfo` in `src/lib/artistImage.ts`,
+typed as `ArtistImageInfo`). A missing file is fine: the page falls back.
+
+```json
+{
+  "v": 3,
+  "hash": "7ccdd9834c16036f",
+  "width": 1024,
+  "height": 1024,
+  "faces": [[0.456, 0.285, 0.15, 0.15]],
+  "people": [[0.315, 0.237, 0.367, 0.756]],
+  "subject": [0, 0.08, 1, 0.997],
+  "focus": [0.581, 0.296],
+  "backdrop": { "colour": "#16100d", "luminance": 0.02, "even": 0.796, "tone": "dark" },
+  "edges": {
+    "top":    { "colour": "#060605", "luminance": 0.002, "even": 0.99, "profile": ["#050505", "…12 stops"] },
+    "left":   { "colour": "#0a0b0b", "luminance": 0.003, "even": 0.991, "profile": ["…"] },
+    "right":  { "colour": "#0b0908", "luminance": 0.004, "even": 0.963, "profile": ["…"] },
+    "bottom": { "colour": "#34322d", "luminance": 0.086, "even": 0.559 }
+  },
+  "luminance": 0.031
+}
+```
+
+| Field | Meaning |
+|-------|---------|
+| `v` | Script `VERSION`; files from an older version are redone by a `--full` run |
+| `hash` | First 16 hex chars of the photo's sha1, for reference (a replaced photo needs `--only <slug>` or `--full`) |
+| `width`, `height` | Photo size in px |
+| `faces`, `people` | Vision boxes, `[x, y, w, h]` as fractions of the photo, origin top-left |
+| `subject` | `[x0, y0, x1, y1]` fractions: people and faces combined, else the salient area; `null` when nothing is found |
+| `focus` | `[x, y]` fractions: centre of the faces, else the upper part of the subject; `null` when nothing is found. Sets the phone crop |
+| `backdrop` | Top quarter plus outer columns: average `colour`, relative `luminance`, `even` (1 = flat), and `tone` (`light`/`dark`), which picks the blend mode |
+| `edges.*` | Each edge's average colour, luminance and evenness; `left`, `right` and `top` also carry a 12-stop `profile` along the edge, drawn as a gradient to extend the photo |
+| `luminance` | Whole-photo relative luminance |
+
+---
+
 ### album-colors.json
 
 Sleeve colours for every album, decided at build time by

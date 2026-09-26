@@ -19,6 +19,7 @@ This guide covers local development workflows, testing, and best practices.
 | pnpm | 10.x+ | Package manager |
 | Rust | Latest stable (via rustup) | Backend data processing |
 | Git | Latest | Version control |
+| Xcode Command Line Tools (macOS) | macOS 12+ | `swiftc` for `pnpm run generate-artist-images` (Apple Vision); `xcode-select --install` |
 
 ### Initial Setup
 
@@ -76,6 +77,7 @@ pnpm run dev
 | `pnpm exec tsc -b --noEmit` | Type check (`-b` follows the project references; plain `tsc --noEmit` checks nothing) |
 | `pnpm test` | Run the Vitest unit tests (`src/**/__tests__`) |
 | `pnpm run preview` | Preview production build |
+| `pnpm run generate-artist-images` | Artist photo placement/colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only, run after the scrapper adds artist photos, then commit; by default only new photos, `-- --full` redoes all, `-- --only <slug>` one. See [asset-processing.md](../build-pipeline/asset-processing.md#artist-image-notes) |
 
 ### Hot Reload Behavior
 
@@ -247,6 +249,10 @@ scrapper release 123456
 ```
 
 ## Environment Variables
+
+### Scrobbling in dev
+
+`pnpm run dev` never scrobbles. `AlbumScrobbleButton` runs as a dry run whenever `import.meta.env.DEV` is true: it works without a Last.fm login, waits about as long as a real request, and reports every track as scrobbled, so the album hero's scrobble animation plays in full. Nothing is sent to Last.fm. Production builds are unaffected.
 
 ### Frontend (.env)
 
