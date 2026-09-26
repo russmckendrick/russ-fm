@@ -292,7 +292,7 @@ export function ArtistDetailPage() {
               bottom fades out (see PORTRAIT_MASK); the mask sits on the
               <img> because a mask on the wrapper would isolate it and stop
               the blend reaching the flood. */}
-          <div className="aspect-[4/5] w-full max-w-[520px] overflow-hidden">
+          <div className="aspect-[4/5] w-full max-w-[520px] overflow-hidden max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none">
             <img
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
