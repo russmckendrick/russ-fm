@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useDebounce } from 'use-debounce';
-import { searchService, SearchResult, SearchOptions, Album } from '@/services/searchService';
+import { searchService, SearchResult, SearchOptions, type Album as SearchAlbum } from '@/services/searchService';
+import { loadCollection } from '@/lib/collection';
 
 export interface UseSearchOptions {
   debounceMs?: number;
@@ -9,6 +10,7 @@ export interface UseSearchOptions {
   includeMatches?: boolean;
   filterByType?: 'album' | 'artist';
   autoSearch?: boolean; // Whether to search automatically on query change
+  enabled?: boolean; // Build the index only once search is actually used
 }
 
 export interface UseSearchReturn {
@@ -37,7 +39,8 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
     threshold,
     includeMatches = false,
     filterByType,
-    autoSearch = true
+    autoSearch = true,
+    enabled = true
   } = options;
 
   // State
@@ -71,6 +74,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 
   // Initialize search service
   useEffect(() => {
+    if (!enabled) return;
     let isMounted = true;
 
     const initializeSearch = async () => {
@@ -85,16 +89,11 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
           return;
         }
 
-        // Load collection data
-        const response = await fetch('/collection.json');
-        if (!response.ok) {
-          throw new Error(`Failed to load collection: ${response.statusText}`);
-        }
-
-        const collection: Album[] = await response.json();
+        // Shared, cached collection (see src/lib/collection.ts)
+        const collection = await loadCollection();
         
         // Initialize the search service
-        await searchService.initialize(collection);
+        await searchService.initialize(collection as unknown as SearchAlbum[]);
 
         if (isMounted) {
           setIsIndexing(false);
@@ -115,7 +114,7 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [enabled]);
 
   // Perform search function
   const search = useCallback((searchQuery?: string, searchOptions?: SearchOptions): SearchResult[] => {
@@ -192,11 +191,12 @@ export function useSearch(options: UseSearchOptions = {}): UseSearchReturn {
 }
 
 // Specialized hooks for common use cases
-export function useInstantSearch(initialQuery = '') {
+export function useInstantSearch(initialQuery = '', enabled = true) {
   const search = useSearch({
     debounceMs: 100, // Faster for instant search
     limit: 10,
-    autoSearch: true
+    autoSearch: true,
+    enabled
   });
 
   useEffect(() => {
@@ -209,11 +209,12 @@ export function useInstantSearch(initialQuery = '') {
 }
 
 // Mobile-optimized search with minimal interference
-export function useMobileSearch() {
+export function useMobileSearch(enabled = true) {
   return useSearch({
     debounceMs: 200, // Slightly longer to reduce interference
     limit: 15,
-    autoSearch: true
+    autoSearch: true,
+    enabled
   });
 }
 

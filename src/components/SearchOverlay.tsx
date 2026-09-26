@@ -30,7 +30,7 @@ export function SearchOverlay({
   anchorRef,
 }: SearchOverlayProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
-  const { setQuery, results, isLoading, isIndexing, error } = useInstantSearch();
+  const { setQuery, results, isLoading, isIndexing, error } = useInstantSearch('', isVisible);
 
   useEffect(() => {
     setQuery(searchTerm);

@@ -30,7 +30,9 @@ export function RecordTile({ album, palette, meta, showArtist = true, showText =
   return (
     <Link to={to ?? album.uri_release} className={cn('rec group block min-w-0', className)}>
       <div className="relative aspect-square w-full">
-        <Vinyl label={ground} />
+        {/* Hidden behind the sleeve until hover, so it never spins: a wall of
+            spinning discs costs a compositor layer and a repaint each. */}
+        <Vinyl label={ground} spin={false} />
         <Sleeve
           src={getAlbumImageFromData(album.uri_release, 'medium')}
           alt={`${title} by ${album.release_artist}`}

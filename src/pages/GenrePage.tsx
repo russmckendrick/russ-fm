@@ -20,7 +20,7 @@ import type { Flood } from "@/lib/sleeveColour";
 import { cn } from "@/lib/utils";
 import {
   ALL_GENRES_VALUE,
-  buildGenreExplorer,
+  getGenreExplorer,
   filterAlbums,
   filterArtists,
   filterGenres,
@@ -94,7 +94,7 @@ export function GenrePage() {
     return () => window.removeEventListener("resize", updateViewportDefault);
   }, []);
 
-  const explorer = useMemo(() => buildGenreExplorer(collection), [collection]);
+  const explorer = useMemo(() => getGenreExplorer(collection), [collection]);
   const selectedGenre = useMemo(
     () => resolveGenre(explorer.genres, genreParam, explorer.allGenre),
     [explorer.allGenre, explorer.genres, genreParam],

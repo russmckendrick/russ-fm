@@ -25,7 +25,7 @@ export function MobileSearchModal({
     isLoading, 
     isIndexing, 
     error 
-  } = useMobileSearch();
+  } = useMobileSearch(isOpen);
 
   // Clear search when modal closes
   useEffect(() => {

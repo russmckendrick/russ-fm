@@ -2,11 +2,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Pause, Play, Shuffle, SkipBack, SkipForward } from 'lucide-react';
 import { appConfig } from '@/config/app.config';
-import { useCollection } from '@/lib/collection';
+import { loadDetailJson, useCollection } from '@/lib/collection';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { buildFacetValues, FACETS } from '@/lib/browseFacets';
-import { getAlbumImageFromData, getArtistImageFromData, sanitizeJsonPath } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { floodFor, appleArtworkColours, hue, vividScore, inkOn, type Flood } from '@/lib/sleeveColour';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/utils';
@@ -28,6 +28,15 @@ interface FeaturedDetail {
   apple: string[];
   spotify?: string;
   appleUrl?: string;
+}
+
+/** The fields the hero reads from a release's detail JSON. */
+interface HeroDetailJson {
+  tracklist?: Array<{ position?: string }>;
+  labels?: string[];
+  spotify_url?: string;
+  apple_music_url?: string;
+  services?: { spotify?: { url?: string }; apple_music?: { url?: string } };
 }
 
 const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
@@ -65,7 +74,6 @@ export function HomePage() {
 
 function Hero({ featured, colours }: { featured: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
   const [index, setIndex] = useState(0);
-  const [elapsed, setElapsed] = useState(0);
   const [playing, setPlaying] = useState(true);
   const [details, setDetails] = useState<Record<string, FeaturedDetail>>({});
   const reduced = useRef(
@@ -75,8 +83,8 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   useEffect(() => {
     featured.forEach(album => {
       if (!album.json_detailed_release || details[album.uri_release]) return;
-      fetch(sanitizeJsonPath(album.json_detailed_release))
-        .then(r => (r.ok ? r.json() : null))
+      // Shared cache: opening the album from the hero reuses this response.
+      loadDetailJson<HeroDetailJson>(album.json_detailed_release)
         .then(d => {
           if (!d) return;
           const positions: string[] = (d.tracklist ?? []).map((t: { position?: string }) => t.position ?? '').filter(Boolean);
@@ -102,22 +110,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   const go = useCallback((i: number) => {
     if (!count) return;
     setIndex(((i % count) + count) % count);
-    setElapsed(0);
   }, [count]);
-
-  useEffect(() => {
-    if (!playing || !count || reduced.current) return;
-    const t = setInterval(() => {
-      setElapsed(e => {
-        if (e + 100 >= HERO_MS) {
-          setIndex(i => (i + 1) % count);
-          return 0;
-        }
-        return e + 100;
-      });
-    }, 100);
-    return () => clearInterval(t);
-  }, [playing, count]);
 
   const floods: Flood[] = featured.map(a => floodFor(colours?.[a.uri_release], details[a.uri_release]?.apple));
   const current = featured[index];
@@ -128,7 +121,9 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
     return <div className="h-[70vh] bg-[color:var(--ground)]" aria-busy="true" />;
   }
 
-  const pct = Math.min(100, (elapsed / HERO_MS) * 100);
+  // The progress bar is a CSS animation; when it finishes the hero moves on.
+  // Pausing pauses the animation, so the bar and the rotation never drift.
+  const autoRotate = !reduced.current;
 
   return (
     <CoverHero
@@ -154,6 +149,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                     labelColour={f.ground}
                     labelText={album.release_artist.toUpperCase()}
                     discOut={on ? 15 : 0}
+                    spinning={on}
                     eager={i === 0}
                     sticker={on ? { date: album.date_added, background: f.ground, color: f.flood } : undefined}
                   />
@@ -221,7 +217,14 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
               <span className="t-mono text-[12px] font-bold">{String(i + 1).padStart(2, '0')}</span>
               <span className="relative h-[3px] overflow-hidden">
                 <span className="absolute inset-0 opacity-30" style={{ background: 'currentColor' }} />
-                {i === index && <span className="absolute inset-y-0 left-0" style={{ width: `${pct}%`, background: 'currentColor' }} />}
+                {i === index && autoRotate && (
+                  <span
+                    key={index}
+                    className="hero-progress absolute inset-y-0 left-0 w-full origin-left"
+                    style={{ background: 'currentColor', animationDuration: `${HERO_MS}ms`, animationPlayState: playing ? 'running' : 'paused' }}
+                    onAnimationEnd={() => go(index + 1)}
+                  />
+                )}
               </span>
             </button>
           ))}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
@@ -9,7 +9,8 @@ import { MusicPlayerSection } from '@/components/MusicPlayerSection';
 import { VideoSection } from '@/components/VideoSection';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
-import { buildGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
+import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
+import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
 import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
@@ -279,10 +280,12 @@ function buildAlbumJsonLd({
 export function AlbumDetailPage() {
   const { albumPath } = useParams<{ albumPath: string }>();
   const navigate = useNavigate();
-  const [collection, setCollection] = useState<Album[]>([]);
-  const [album, setAlbum] = useState<Album | null>(null);
-  const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { albums: rawCollection, loading } = useCollection();
+  const collection = rawCollection as unknown as Album[];
+  const album = useMemo(() => findAlbum(collection, albumPath), [collection, albumPath]);
+  const [detail, setDetail] = useState<{ path: string; data: DetailedAlbum } | null>(null);
+  const detailedAlbum = detail && detail.path === albumPath ? detail.data : null;
+  const similarAlbums = useMemo(() => (album ? findSimilarAlbums(collection, album) : []), [collection, album]);
 
   // Sleeve colours drive the whole page: flood for the hero, ground for the body.
   const palette = useAlbumColors(albumPath ? `/album/${albumPath}/` : undefined);
@@ -305,8 +308,7 @@ export function AlbumDetailPage() {
         if (/^\d+$/.test(albumPath)) {
           try {
             // Load collection to find the album with this Discogs ID
-            const collectionResponse = await fetch('/collection.json');
-            const collection = await collectionResponse.json() as Album[];
+            const collection = await loadCollection() as unknown as Album[];
 
             // Find album by Discogs ID
             const foundAlbum = collection.find((candidate) => {
@@ -393,66 +395,21 @@ export function AlbumDetailPage() {
     jsonLd: albumJsonLd,
   });
 
-  const loadAlbumData = useCallback(async () => {
-    try {
-      // Load collection to find this specific album
-      const collectionResponse = await fetch('/collection.json');
-      const collection = await collectionResponse.json() as Album[];
-      setCollection(collection);
-
-      // Find the album by its URI
-      const foundAlbum = collection.find((item: Album) => {
-        // First try exact URI match
-        if (item.uri_release === `/album/${albumPath}/`) {
-          return true;
-        }
-
-        // Fallback: try sanitized name matching for URL consistency
-        // Extract album name and discogs ID from the path (format: "album-name-discogsid")
-        const pathMatch = albumPath?.match(/^(.+)-(\d+)$/);
-        if (pathMatch) {
-          const [, , discogsId] = pathMatch;
-          // Verify the item's Discogs ID matches the one from the URL
-          const itemDiscogsId = item.uri_release.match(/(\d+)/)?.[1];
-          if (itemDiscogsId === discogsId) {
-            const sanitizedAlbumName = sanitizeFolderName(item.release_name);
-            const expectedPath = `${sanitizedAlbumName}-${discogsId}`;
-            if (albumPath === expectedPath) {
-              return true;
-            }
-          }
-        }
-
-        return false;
-      });
-
-      if (foundAlbum) {
-        setAlbum(foundAlbum);
-
-        // Load detailed album information
-        try {
-          // Construct JSON path using the current album path (which is already sanitized)
-          const jsonPath = `/album/${albumPath}/${albumPath}.json`;
-          const albumDetailResponse = await fetch(jsonPath);
-          const albumDetail = await albumDetailResponse.json();
-          // Add artist property for MusicPlayerSection compatibility
-          albumDetail.artist = foundAlbum.release_artist;
-          setDetailedAlbum(albumDetail);
-        } catch (error) {
-          console.error('Error loading album details:', error);
-        }
-      }
-
-      setLoading(false);
-    } catch (error) {
-      console.error('Error loading album data:', error);
-      setLoading(false);
-    }
-  }, [albumPath]);
-
+  // The collection gives us enough for the hero straight away; the release's
+  // detail JSON (tracklist, notes, services) fills in the rest when it lands.
   useEffect(() => {
-    loadAlbumData();
-  }, [albumPath, loadAlbumData]);
+    if (!album || !albumPath) return;
+    let alive = true;
+    loadDetailJson<DetailedAlbum>(`/album/${albumPath}/${albumPath}.json`)
+      .then(data => {
+        // MusicPlayerSection expects an `artist` field.
+        if (alive) setDetail({ path: albumPath, data: { ...data, artist: album.release_artist } });
+      })
+      .catch(error => console.error('Error loading album details:', error));
+    return () => {
+      alive = false;
+    };
+  }, [album, albumPath]);
 
   const formatDuration = (ms: number) => {
     if (!ms) return '';
@@ -795,26 +752,6 @@ export function AlbumDetailPage() {
         services: detailedAlbum.services,
       })
     : getCleanGenresFromArray(album.genre_names, album.release_artist);
-
-  const similarAlbums = (() => {
-    if (!collection.length) return [];
-
-    const explorer = buildGenreExplorer(collection as CollectionAlbum[]);
-    const albumBySlug = new Map(collection.map((item) => [getAlbumSlug(item.uri_release), item]));
-    const explorerAlbum = explorer.allGenre.albums.find((candidate) => candidate.slug === getAlbumSlug(album.uri_release));
-
-    if (!explorerAlbum) return [];
-
-    const artistUris = new Set([
-      album.uri_artist,
-      ...(album.artists?.map(a => a.uri_artist) ?? []),
-    ]);
-
-    return getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)
-      .map(({ album: relatedAlbum }) => albumBySlug.get(relatedAlbum.slug))
-      .filter((item): item is Album => !!item && !artistUris.has(item.uri_artist))
-      .slice(0, 10);
-  })();
 
   const hasListen = !!(
     detailedAlbum &&
@@ -1195,6 +1132,47 @@ export function AlbumDetailPage() {
 }
 
 /* --------------------------------------------------------------- helpers -- */
+
+/** Find the release for a URL slug: exact URI first, then by sanitised name + Discogs ID. */
+function findAlbum(collection: Album[], albumPath: string | undefined): Album | null {
+  if (!albumPath || !collection.length) return null;
+  const exact = collection.find(item => item.uri_release === `/album/${albumPath}/`);
+  if (exact) return exact;
+  const pathMatch = albumPath.match(/^(.+)-(\d+)$/);
+  if (!pathMatch) return null;
+  const discogsId = pathMatch[2];
+  return (
+    collection.find(item => {
+      if (item.uri_release.match(/(\d+)/)?.[1] !== discogsId) return false;
+      return albumPath === `${sanitizeFolderName(item.release_name)}-${discogsId}`;
+    }) ?? null
+  );
+}
+
+const albumsBySlug = new WeakMap<Album[], Map<string, Album>>();
+
+/** Up to ten records that share genres with this one, excluding the same artist. */
+function findSimilarAlbums(collection: Album[], album: Album): Album[] {
+  const explorer = getGenreExplorer(collection as unknown as CollectionAlbum[]);
+  const slug = getAlbumSlug(album.uri_release);
+  const explorerAlbum = explorer.allGenre.albums.find(candidate => candidate.slug === slug);
+  if (!explorerAlbum) return [];
+
+  let bySlug = albumsBySlug.get(collection);
+  if (!bySlug) {
+    bySlug = new Map(collection.map(item => [getAlbumSlug(item.uri_release), item]));
+    albumsBySlug.set(collection, bySlug);
+  }
+
+  const artistUris = new Set([album.uri_artist, ...(album.artists?.map(a => a.uri_artist) ?? [])]);
+  const out: Album[] = [];
+  for (const { album: related } of getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)) {
+    const item = bySlug.get(related.slug);
+    if (item && !artistUris.has(item.uri_artist)) out.push(item);
+    if (out.length === 10) break;
+  }
+  return out;
+}
 
 type SideGroup = { label: string; tracks: Track[] };
 type Grouping = { type: 'lp'; groups: Array<{ lpLabel: string; sides: SideGroup[] }> } | { type: 'flat'; groups: SideGroup[] };

@@ -1,4 +1,5 @@
-import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
+import { Routes, Route, Navigate, useLocation, useNavigationType, useParams } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { TweaksPanel } from './components/TweaksPanel';
@@ -18,6 +19,26 @@ import { BrowseIndexPage } from './pages/browse/BrowseIndexPage';
 import { FacetListPage } from './pages/browse/FacetListPage';
 import { FacetDetailPage } from './pages/browse/FacetDetailPage';
 
+/**
+ * New pages start at the top. Back/forward (POP) is left to the browser so it
+ * can restore the previous scroll position.
+ */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  const navigationType = useNavigationType();
+  useLayoutEffect(() => {
+    if (navigationType !== 'POP') window.scrollTo(0, 0);
+  }, [pathname, navigationType]);
+  return null;
+}
+
+// Keyed by slug so moving from one album to another (related records, box set
+// discs) mounts a fresh page instead of re-rendering the old one in place.
+function AlbumRouteHandler() {
+  const { albumPath } = useParams<{ albumPath: string }>();
+  return <AlbumDetailPage key={albumPath} />;
+}
+
 // Component to handle "Various" artist route interception
 function ArtistRouteHandler() {
   const { artistPath } = useParams<{ artistPath: string }>();
@@ -29,7 +50,7 @@ function ArtistRouteHandler() {
   }
 
   // For all other artists, show the normal artist detail page
-  return <ArtistDetailPage />;
+  return <ArtistDetailPage key={artistPath} />;
 }
 
 
@@ -43,6 +64,7 @@ function App() {
       >
         Skip to main content
       </a>
+      <ScrollToTop />
       <Navigation />
 
       <main id="main-content">
@@ -54,7 +76,7 @@ function App() {
           <Route path="/artists" element={<ArtistsPage />} />
           <Route path="/artists/:page" element={<ArtistsPage />} />
           <Route path="/artist/:artistPath" element={<ArtistRouteHandler />} />
-          <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
+          <Route path="/album/:albumPath" element={<AlbumRouteHandler />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="/genres" element={<GenrePage />} />
           <Route path="/browse" element={<BrowseIndexPage />} />

@@ -190,6 +190,22 @@
   }
 }
 
+/* Home hero rotation timer. Advancing is driven by animationend. */
+.hero-progress {
+  animation-name: hero-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 /* Record tile: the disc slides sideways out of the sleeve on hover. */
 .rec {
   position: relative;

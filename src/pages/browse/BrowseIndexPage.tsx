@@ -34,7 +34,7 @@ export function BrowseIndexPage() {
 
   const { albums: raw, loading, error } = useCollection();
   const colorMap = useAlbumColorMap();
-  const albums = useMemo(() => excludeBoxsetMembers(raw).sort(byDateAddedDesc), [raw]);
+  const albums = useMemo(() => [...excludeBoxsetMembers(raw)].sort(byDateAddedDesc), [raw]);
 
   const cards = useMemo(
     () =>

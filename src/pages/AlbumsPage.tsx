@@ -94,7 +94,8 @@ export function AlbumsPage() {
         // Monochrome sleeves go last, ordered light to dark.
         return v ? hue(v) : 2 - vividScore(colours?.[a.uri_release]?.muted ?? '#000000');
       };
-      out = [...out].sort((a, b) => key(a) - key(b));
+      const keys = new Map(out.map(a => [a, key(a)]));
+      out = [...out].sort((a, b) => keys.get(a)! - keys.get(b)!);
     } else {
       out = [...out].sort((a, b) => {
         switch (sort) {

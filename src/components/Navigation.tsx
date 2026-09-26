@@ -112,7 +112,7 @@ export function Navigation() {
   };
 
   const solid = scrolled || menuOpen;
-  const bg = menuOpen ? flood : scrolled ? "rgba(14,13,12,.92)" : flood;
+  const bg = menuOpen ? flood : scrolled ? "rgba(14,13,12,.97)" : flood;
   const fg = menuOpen ? ink : scrolled ? CREAM : ink;
   const browseActive = BROWSE.some(isActive);
 
@@ -121,7 +121,7 @@ export function Navigation() {
       <header
         className={cn(
           "sticky top-0 z-50 w-full transition-[background-color,color,box-shadow] duration-700",
-          solid && !menuOpen && "shadow-[0_1px_0_rgba(251,247,239,.08)] backdrop-blur-xl",
+          solid && !menuOpen && "shadow-[0_1px_0_rgba(251,247,239,.08)]",
         )}
         style={{ background: bg, color: fg }}
       >

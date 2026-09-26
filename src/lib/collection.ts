@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
 import type { Album } from '@/types/album';
+import { sanitizeJsonPath } from '@/lib/image-utils';
 
 /**
  * Shared, cached loader for /collection.json.
  *
- * Pages used to fetch the file independently; the player design moves between
- * pages quickly (crate flips, colour walls, box sets), so the parsed collection
- * is kept for the lifetime of the tab.
+ * The file is several megabytes, so it is fetched and parsed once per tab.
+ * Every page (and search) reads it through here. Once it has loaded,
+ * `useCollection` hands the data back on the first render, so moving between
+ * pages never shows an empty or loading state for data we already hold.
  */
 let collectionPromise: Promise<Album[]> | null = null;
+let collectionData: Album[] | null = null;
 
 export function loadCollection(): Promise<Album[]> {
   if (!collectionPromise) {
@@ -16,6 +19,10 @@ export function loadCollection(): Promise<Album[]> {
       .then(res => {
         if (!res.ok) throw new Error(`Failed to load collection: ${res.status}`);
         return res.json() as Promise<Album[]>;
+      })
+      .then(data => {
+        collectionData = data;
+        return data;
       })
       .catch(err => {
         collectionPromise = null;
@@ -25,12 +32,18 @@ export function loadCollection(): Promise<Album[]> {
   return collectionPromise;
 }
 
+/** The parsed collection if it has already loaded, otherwise null. */
+export function getLoadedCollection(): Album[] | null {
+  return collectionData;
+}
+
 export function useCollection(): { albums: Album[]; loading: boolean; error: string | null } {
-  const [albums, setAlbums] = useState<Album[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [albums, setAlbums] = useState<Album[]>(() => collectionData ?? []);
+  const [loading, setLoading] = useState(() => collectionData === null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (collectionData) return;
     let alive = true;
     loadCollection()
       .then(data => {
@@ -48,4 +61,29 @@ export function useCollection(): { albums: Album[]; loading: boolean; error: str
   }, []);
 
   return { albums, loading, error };
+}
+
+/**
+ * Cached loader for the per-release and per-artist detail JSON files. Going
+ * back to a page you have already seen (or one the home hero prefetched)
+ * skips the network and the parse.
+ */
+const detailCache = new Map<string, Promise<unknown>>();
+
+export function loadDetailJson<T = unknown>(path: string): Promise<T> {
+  const url = sanitizeJsonPath(path);
+  let pending = detailCache.get(url);
+  if (!pending) {
+    pending = fetch(url)
+      .then(res => {
+        if (!res.ok) throw new Error(`Failed to load ${url}: ${res.status}`);
+        return res.json();
+      })
+      .catch(err => {
+        detailCache.delete(url);
+        throw err;
+      });
+    detailCache.set(url, pending);
+  }
+  return pending as Promise<T>;
 }

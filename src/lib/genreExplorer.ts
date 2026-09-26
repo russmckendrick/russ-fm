@@ -96,6 +96,21 @@ interface GenreBucket {
   latestAdded: string;
 }
 
+const explorerCache = new WeakMap<Album[], GenreExplorerData>();
+
+/**
+ * buildGenreExplorer, memoised per collection array. Building the graph walks
+ * every record, so pages share one copy for the lifetime of the tab.
+ */
+export function getGenreExplorer(collection: Album[]): GenreExplorerData {
+  let data = explorerCache.get(collection);
+  if (!data) {
+    data = buildGenreExplorer(collection);
+    explorerCache.set(collection, data);
+  }
+  return data;
+}
+
 export function buildGenreExplorer(collection: Album[]): GenreExplorerData {
   const genres = new Map<string, GenreBucket>();
   const globalArtists = new Map<string, ArtistBucket>();
@@ -559,13 +574,27 @@ function compareArtists(
   );
 }
 
+// The explorer sorts thousands of albums by date added, per genre and per
+// artist. Parsing the same date strings on every comparison made building it
+// take over half a second, so parsed timestamps are cached.
+const timestamps = new Map<string, number>();
+
+function timestamp(value: string): number {
+  let t = timestamps.get(value);
+  if (t === undefined) {
+    t = new Date(value || 0).getTime();
+    timestamps.set(value, t);
+  }
+  return t;
+}
+
 function compareDateDesc(a: string, b: string): number {
-  return new Date(b || 0).getTime() - new Date(a || 0).getTime();
+  return timestamp(b) - timestamp(a);
 }
 
 function isAfter(a: string, b: string): boolean {
   if (!b) return true;
-  return new Date(a || 0).getTime() > new Date(b || 0).getTime();
+  return timestamp(a) > timestamp(b);
 }
 
 function parseYear(value: string): number | null {

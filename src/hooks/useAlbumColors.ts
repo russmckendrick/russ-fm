@@ -8,7 +8,7 @@ export interface AlbumColorPalette {
 }
 
 // In-memory cache for color data
-const colorCache = new Map<string, AlbumColorPalette>();
+const colorCache = new Map<string, AlbumColorPalette | null>();
 let colorData: Record<string, AlbumColorPalette> | null = null;
 let loadingPromise: Promise<void> | null = null;
 
@@ -100,63 +100,48 @@ const getColorsBySlug = (albumSlug: string, colors: Record<string, AlbumColorPal
   return null;
 };
 
+/** Resolve (and cache) a palette from the loaded colour map. */
+const resolveColors = (albumIdentifier: string, allColors: Record<string, AlbumColorPalette>): AlbumColorPalette | null => {
+  if (colorCache.has(albumIdentifier)) return colorCache.get(albumIdentifier) ?? null;
+
+  let albumColors: AlbumColorPalette | null = null;
+  // Try to get colors by URI first (if it looks like a URI)
+  if (albumIdentifier.startsWith('/album/') || albumIdentifier.startsWith('album/')) {
+    albumColors = getColorsByUri(albumIdentifier, allColors);
+  }
+  // If not found, try by slug
+  if (!albumColors) {
+    albumColors = getColorsBySlug(albumIdentifier, allColors);
+  }
+  colorCache.set(albumIdentifier, albumColors);
+  return albumColors;
+};
+
 /**
  * Custom hook to load and manage album colors
- * 
+ *
+ * Once album-colors.json has loaded the palette is returned on the first
+ * render, so pages flood in the right colour without a neutral flash.
+ *
  * @param albumIdentifier - Can be either a URI path (/album/slug/) or just the album slug
  * @returns AlbumColorPalette or null if not found/loading
  */
 export function useAlbumColors(albumIdentifier?: string): AlbumColorPalette | null {
-  const [colors, setColors] = useState<AlbumColorPalette | null>(null);
-  const [loading, setLoading] = useState(false);
+  const [loaded, setLoaded] = useState(() => colorData !== null);
 
   useEffect(() => {
-    if (!albumIdentifier) {
-      setColors(null);
-      return;
-    }
-
-    // Check cache first
-    const cacheKey = albumIdentifier;
-    const cached = colorCache.get(cacheKey);
-    if (cached) {
-      setColors(cached);
-      return;
-    }
-
-    // Load colors
-    const loadColors = async () => {
-      setLoading(true);
-      try {
-        const allColors = await loadAlbumColors();
-        
-        let albumColors: AlbumColorPalette | null = null;
-
-        // Try to get colors by URI first (if it looks like a URI)
-        if (albumIdentifier.startsWith('/album/') || albumIdentifier.startsWith('album/')) {
-          albumColors = getColorsByUri(albumIdentifier, allColors);
-        }
-        
-        // If not found, try by slug
-        if (!albumColors) {
-          albumColors = getColorsBySlug(albumIdentifier, allColors);
-        }
-
-        // Cache the result (even if null)
-        colorCache.set(cacheKey, albumColors);
-        setColors(albumColors);
-      } catch (error) {
-        console.error('Error loading album colors:', error);
-        setColors(null);
-      } finally {
-        setLoading(false);
-      }
+    if (loaded) return;
+    let alive = true;
+    loadAlbumColors().then(() => {
+      if (alive) setLoaded(true);
+    });
+    return () => {
+      alive = false;
     };
+  }, [loaded]);
 
-    loadColors();
-  }, [albumIdentifier]);
-
-  return loading ? null : colors;
+  if (!albumIdentifier || !loaded || !colorData) return null;
+  return resolveColors(albumIdentifier, colorData);
 }
 
 /**

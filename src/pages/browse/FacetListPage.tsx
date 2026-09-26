@@ -69,7 +69,7 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
     type: 'website',
   });
 
-  const albums = useMemo(() => excludeBoxsetMembers(raw).sort(byDateAddedDesc), [raw]);
+  const albums = useMemo(() => [...excludeBoxsetMembers(raw)].sort(byDateAddedDesc), [raw]);
 
   const entries = useMemo<FacetEntry[]>(() => {
     const groups = groupByFacet(facet, albums);

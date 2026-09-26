@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { DEFAULT_FLOOD, FloodContext, type FloodContextValue, type FloodState } from './flood-context';
+import { useCallback, useEffect, useState, type ReactNode } from 'react';
+import { DEFAULT_FLOOD, FloodSetterContext, FloodValueContext, type FloodState } from './flood-context';
 
 export function FloodProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<FloodState>(DEFAULT_FLOOD);
@@ -17,7 +17,9 @@ export function FloodProvider({ children }: { children: ReactNode }) {
     setState(prev => (prev.flood === target.flood && prev.ink === target.ink ? prev : target));
   }, []);
 
-  const value = useMemo<FloodContextValue>(() => ({ ...state, setFlood }), [state, setFlood]);
-
-  return <FloodContext.Provider value={value}>{children}</FloodContext.Provider>;
+  return (
+    <FloodSetterContext.Provider value={setFlood}>
+      <FloodValueContext.Provider value={state}>{children}</FloodValueContext.Provider>
+    </FloodSetterContext.Provider>
+  );
 }
