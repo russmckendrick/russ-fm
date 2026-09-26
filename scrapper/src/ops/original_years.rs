@@ -5,7 +5,8 @@
 //! Resumable: rows that already have a `master_year` key (null included, meaning "looked up,
 //! unknown") are skipped unless `--force`. Releases whose stored raw_data already carries a
 //! `master_id` need only the master lookup; the rest fetch the release first. Masters shared
-//! by several releases are looked up once per run.
+//! by several releases are looked up once per run. A stored master_id can go stale (Discogs
+//! merges and deletes masters); when one 404s, the release is refetched for its current master.
 
 use std::collections::HashMap;
 
@@ -14,6 +15,7 @@ use serde_json::Value;
 
 use crate::cli::BackfillOriginalYearsArgs;
 use crate::services::discogs::DiscogsService;
+use crate::services::http::ServiceError;
 use crate::services::Services;
 use crate::{Config, Db};
 
@@ -54,26 +56,50 @@ pub async fn run(cfg: &Config, args: BackfillOriginalYearsArgs) -> Result<()> {
             },
         };
 
-        let Some(master_id) = master_id else {
+        let Some(mut master_id) = master_id else {
             db.set_release_master(&c.discogs_id, Value::Null, Value::Null)?;
             no_master += 1;
             println!("{label} · no master");
             continue;
         };
 
-        let year = match years.get(&master_id) {
-            Some(y) => *y,
-            None => match services.discogs.master_year(&master_id).await {
-                Ok(y) => {
-                    years.insert(master_id.clone(), y);
-                    y
-                }
-                Err(e) => {
-                    println!("{label} ✗ master {master_id} lookup failed: {e}");
-                    failed += 1;
-                    continue;
-                }
-            },
+        let mut lookup = match years.get(&master_id) {
+            Some(y) => Ok(*y),
+            None => services.discogs.master_year(&master_id).await,
+        };
+        // A stored master_id that 404s is stale: ask the release for its current master.
+        if matches!(lookup, Err(ServiceError::NotFound)) && c.master_id.is_some() {
+            match services.discogs.get_release(&c.discogs_id).await {
+                Ok(release) => match DiscogsService::master_id_of(&release) {
+                    Some(current) if current != master_id => {
+                        println!("{label} · master {master_id} is gone, release now points at {current}");
+                        master_id = current;
+                        lookup = match years.get(&master_id) {
+                            Some(y) => Ok(*y),
+                            None => services.discogs.master_year(&master_id).await,
+                        };
+                    }
+                    Some(_) => {}
+                    None => {
+                        db.set_release_master(&c.discogs_id, Value::Null, Value::Null)?;
+                        no_master += 1;
+                        println!("{label} · master {master_id} is gone and the release no longer has one");
+                        continue;
+                    }
+                },
+                Err(e) => lookup = Err(e),
+            }
+        }
+        let year = match lookup {
+            Ok(y) => {
+                years.insert(master_id.clone(), y);
+                y
+            }
+            Err(e) => {
+                println!("{label} ✗ master {master_id} lookup failed: {e}");
+                failed += 1;
+                continue;
+            }
         };
 
         let id_value = master_id.parse::<i64>().map(Value::from).unwrap_or_else(|_| Value::from(master_id.clone()));

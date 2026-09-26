@@ -448,6 +448,10 @@ scrapper backfill-original-years --force
 - Uses the stored `master_id` when the row has one; otherwise fetches the
   release first to read it. Each master is looked up once per run, so
   releases sharing a master cost one request.
+- Stored master IDs can go stale when Discogs merges or deletes a master.
+  If a stored ID returns "not found", the release is fetched again and its
+  current `master_id` is used instead (or the row is marked as having no
+  master if it no longer has one).
 - `/masters/{id}` is called with the personal token, so it runs in the
   authed 60/min bucket. A full run from scratch is roughly 2,900 master
   lookups plus 500 release lookups, about an hour.
