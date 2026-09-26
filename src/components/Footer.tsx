@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { appConfig } from "@/config/app.config";
+import { PillLink } from "@/components/player";
 
 const FOOTER_LINKS = [
   { label: "Albums", href: "/albums/1" },
@@ -39,9 +40,9 @@ export function Footer() {
           <ul className="flex flex-wrap gap-3">
             {footer.links.external.items.map((item) => (
               <li key={item.href}>
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="pill pill-sm border-[color:var(--cream-rule)]">
+                <PillLink to={item.href} size="sm" arrow={false} className="border-[color:var(--cream-rule)]">
                   {item.label}
-                </a>
+                </PillLink>
               </li>
             ))}
           </ul>

@@ -23,7 +23,7 @@ All exported from `@/components/player`.
 | `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker. |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. |
 | `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. Used for the artist name. |
-| `PillLink` | `Pill.tsx` | Rounded link button, outline or solid. |
+| `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
 | `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
 
 The class-based pieces (`.sleeve`, `.vinyl`, `.rec`, `.sticker`, `.pill*`,
@@ -98,9 +98,15 @@ size.
 ### PillLink and pills
 
 `PillLink` takes `to`, `children`, `solid?: { background, color }`,
-`size` (`sm` | `md` | `lg`), `arrow` (default `true`). External URLs
-(`http…`) open in a new tab with an out-arrow; internal paths use
-`<Link>`. The `.pill` classes are also used directly on `<button>`s.
+`size` (`sm` | `md` | `lg`), `arrow` (default `true`), `serviceIcon`
+(default `true`). External URLs (`http…`) open in a new tab with an
+out-arrow; internal paths use `<Link>`. When an external URL's host is a
+known service (Spotify, Apple Music, Last.fm, Discogs, Wikipedia, YouTube,
+MusicBrainz, GitHub) the pill leads with that brand's `react-icons/si`
+icon, so call sites just pass the URL. The host → icon map lives in
+`service-icon.tsx` (`serviceIconFor(url)`); add new services there. Pass
+`serviceIcon={false}` to drop it. The `.pill` classes are also used
+directly on `<button>`s.
 
 ### SectionHeading
 
