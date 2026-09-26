@@ -20,6 +20,7 @@ Main collection index used for album listings.
       "uri_artist": "/artist/radiohead",
       "date_added": "2024-01-10T15:00:00Z",
       "date_release_year": 1997,
+      "year_original": 1997,
       "discogs_id": "123456",
       "genre_names": ["Alternative Rock", "Art Rock"],
       "artists": [
@@ -57,7 +58,8 @@ Main collection index used for album listings.
 | albums[].uri_release | string | Album URL path |
 | albums[].uri_artist | string | Primary artist URL path |
 | albums[].date_added | string | When added to collection |
-| albums[].date_release_year | number | Release year |
+| albums[].date_release_year | string | Release date (`YYYY-MM-DD`). Prefers Apple Music, then Spotify, then the pressing's Discogs year, so it is often a reissue date |
+| albums[].year_original | number \| null | Original release year: the Discogs master year when known, otherwise the earliest year any source reports. Use this (via `src/lib/releaseYear.ts`) for anything that orders, groups, filters or labels by year |
 | albums[].discogs_id | string | Discogs release ID |
 | albums[].genre_names | string[] | Genre list |
 | albums[].styles | string[] | Discogs styles (excluding generic "Music"); used by detail page + browse |
@@ -80,6 +82,13 @@ Main collection index used for album listings.
 >
 > collection.json is regenerated after every mutating scrapper action — collection runs, CLI
 > `--save` commands, and every TUI detail-editor edit/refresh — so it always reflects the DB.
+>
+> **Original year (Sep 2026):** `year_original` sits right after `date_release_year`. It comes
+> from `raw_data.discogs.master_year` on the release row (the Discogs master's `year`); without
+> one the generator takes the earliest year from the Discogs `year` / `released`, Apple Music
+> `releaseDate` and Spotify `release_date`, including years parsed out of Python-era repr
+> strings. `date_release_year` is unchanged and the album JSON does not carry `year_original`.
+> Backfill older rows with `scrapper backfill-original-years`.
 >
 > **Band members (Sep 2026):** Discogs credits some releases as a band followed by its players
 > ("James Taylor Trio", "James Taylor", "Orlando Le Fleming", …). Those line-up credits carry
@@ -325,6 +334,7 @@ Year-in-review data structure.
           "release_artist": "Artist Name",
           "date_added": "2024-03-15T10:00:00Z",
           "date_release_year": 2024,
+          "year_original": 1997,
           "slug": "artist-album",
           "images": {...},
           "colors": {
@@ -430,6 +440,12 @@ CREATE INDEX idx_releases_year ON releases(year);
 > is what the public `services{}` block is derived from. The canonical Perplexity location is the
 > top-level `raw_data.perplexity`; rows written by the retired Python pipeline may still nest it
 > under `raw_data.services.perplexity`, and readers fall back to that legacy key.
+>
+> `raw_data.discogs` holds the release's source `images`, `master_id` (null when the release has
+> no master) and `master_year`, the master's original release year. `master_year: null` means
+> "looked up, no master or no year"; an absent key means not looked up yet (or the lookup
+> failed), which is what `backfill-original-years` picks up. Set by `process_release`, the
+> detail editor's Discogs refresh and the backfill; no schema change.
 
 #### artists
 
@@ -516,7 +532,8 @@ interface Album {
   release_artist: string;
   discogs_id: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;      // often the reissue/pressing date
+  year_original?: number | null;  // original release year (Discogs master, else earliest known)
   uri_release: string;
   uri_artist: string;
 
@@ -622,7 +639,8 @@ interface WrappedRelease {
   release_name: string;
   release_artist: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;
+  year_original?: number | null;
   slug: string;
   images: {
     'hi-res': string;

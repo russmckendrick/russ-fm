@@ -218,6 +218,27 @@ Implementation:
   (`PendingEdit` + `PendingListEdit` overlays), `tui/app.rs` (dispatch + debounced
   `schedule_collection_regen`), and `tui/runners.rs` (background refresh/service/regen tasks).
 
+## Original release year
+
+A release's own year is the pressing, and the Apple Music / Spotify dates the collection index
+used to prefer often list the remaster, so `date_release_year` in `collection.json` is frequently
+a reissue date. The original year comes from the Discogs **master**:
+
+- `process_release` and the detail editor's Discogs refresh (`r` on the Discogs identity) keep
+  the release's `master_id` and add the master's `year` as `master_year` in `raw_data.discogs`
+  (`discogs_master_fields()` in `ops/release.rs`, `DiscogsService::master_year` /
+  `master_id_of` in `services/discogs.rs`). The stored year is reused while the master is
+  unchanged. `master_year: null` means "looked up, no master or no year"; when the lookup
+  fails the key is left out so the backfill retries it. No SQLite schema change.
+- Rows written before this (including Python-era rows, and the ones where the Rust scrapper had
+  dropped `master_id`) are filled by `scrapper backfill-original-years`
+  (see [cli-commands.md](./cli-commands.md#backfill-original-years)).
+- `collection.json` emits `year_original` after `date_release_year`: the master year when set,
+  otherwise the earliest year from the Discogs `year` / `released`, Apple `releaseDate` or
+  Spotify `release_date`, including years parsed from Python-era repr strings
+  (`year_original()` / `legacy_repr_year()` in `output/collection.rs`). `date_release_year` and
+  the album JSON files are unchanged.
+
 ## Boxsets (TUI)
 
 The **Boxsets** home-menu entry lists the box-set releases in the database (any `formats[]`
@@ -505,6 +526,8 @@ scrapper release 123456 --force-refresh --save
       "release_artist": "Radiohead",
       "uri_release": "/album/radiohead-ok-computer",
       "date_added": "2024-01-10T15:00:00Z",
+      "date_release_year": "2017-06-23",
+      "year_original": 1997,
       "genre_names": ["Rock", "Electronic"],
       "images_uri_release": {...}
     }

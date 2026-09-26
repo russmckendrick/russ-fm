@@ -296,7 +296,8 @@ the JPEG header. A PNG saved with a `.jpg` extension used to fail with
 - **Format:** PNG
 - **Layout:**
   - Left: Album artwork (550x550px)
-  - Right: Album info (title, artist, year, genres)
+  - Right: Album info (title, artist, year, genres). The year is `year_original`,
+    falling back to `date_release_year`
 
 ### Satori Template
 
@@ -413,6 +414,8 @@ pnpm run build:wrapped
 - `wrapped.json` with year-by-year data
 - Album color palettes included
 - Timeline and insight calculations
+- Each release carries `year_original`; `insights.decades` counts by it,
+  falling back to `date_release_year`
 
 ### Data Structure
 

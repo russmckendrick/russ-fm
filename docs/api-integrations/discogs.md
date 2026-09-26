@@ -292,6 +292,30 @@ instances = service.get_collection_release_instances(123456)
 
 ---
 
+### master_year(master_id)
+
+Original release year of a Discogs master (`GET /masters/{id}`), used for
+`year_original` in `collection.json`. Rust: `DiscogsService::master_year` in
+`scrapper/src/services/discogs.rs`.
+
+```rust
+let year: Option<i64> = services.discogs.master_year("48660").await?; // Some(1991)
+```
+
+- Returns the master's `year`; Discogs uses 0 for unknown, which becomes `None`.
+- Sent with the personal token, which `/masters/{id}` accepts (search and large
+  listings do not), so it counts against the authed 60/min bucket rather than
+  the 25/min anonymous one.
+- `DiscogsService::master_id_of(&release)` reads a release's `master_id`
+  (number or string; 0 or absent means no master).
+
+`process_release` and the detail editor's Discogs refresh store the result as
+`raw_data.discogs.master_id` / `master_year`; older rows are filled by
+`scrapper backfill-original-years` (see
+[CLI commands](../backend/cli-commands.md#backfill-original-years)).
+
+---
+
 ## Rate Limiting
 
 Discogs limits to 60 requests per minute:
@@ -399,6 +423,8 @@ if primary:
 | images | images |
 | artists | artists |
 | uri | discogs_url |
+| master_id | raw_data.discogs.master_id |
+| masters/{id} → year | raw_data.discogs.master_year (→ collection.json `year_original`) |
 
 ## Related Documentation
 

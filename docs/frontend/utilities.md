@@ -271,6 +271,32 @@ const detail = await loadDetailJson<DetailedAlbum>(album.json_detailed_release);
 Use these rather than fetching `collection.json` or detail JSON in a page. Search
 (`useSearch`) reads the collection through `loadCollection()` as well.
 
+## Release Years (`src/lib/releaseYear.ts`)
+
+`date_release_year` in `collection.json` is often a reissue date: the pressing's year, or a
+streaming service listing the remaster. The scrapper adds `year_original`, the Discogs master
+year or the earliest year any source reports (see [data schemas](../data/schemas.md)).
+
+```typescript
+import { originalYear, originalDecade } from '@/lib/releaseYear';
+
+originalYear(album);    // 1991, or null when unknown
+originalDecade(album);  // "1990s", or null
+```
+
+| Export | Description |
+|--------|-------------|
+| `originalYear(album)` | `year_original` when present, else the year of `date_release_year` (above 1900), else `null` |
+| `originalDecade(album)` | `"1970s"` for the original year, or `null` |
+
+Both take anything with `year_original` / `date_release_year`, so collection albums, search
+albums and Wrapped releases all work. Anything that orders, groups, filters or labels records
+by year uses these, never `date_release_year` directly: the `/albums` Year sort, filter and
+tile meta, browse decades and facet year stats, the genre explorer, Stats decades and release
+years, Wrapped `decadeOf`, search results, the home hero and random picks, the random crate
+panel, and the album and artist pages. The album page shows the pressing's own date separately
+("This pressing"), from the detail JSON.
+
 ## Sleeve Colours (`src/lib/sleeveColour.ts`)
 
 Turns an `album-colors.json` palette into the colours a page paints with. The palette's
@@ -338,7 +364,7 @@ helpers look colours up in `album-colors.json` first so Wrapped matches the rest
 | `floodForRelease(colours, release)` | `floodFor()` for a Wrapped release |
 | `tileAlbum(release)` | The fields `RecordTile` needs |
 | `groupColour(releases, colours, used?)` | A vivid colour for a group (month, genre, decade), preferring colours not already in `used` so neighbours differ |
-| `decadeOf(release)` | `"1970s"` or `null` |
+| `decadeOf(release)` | `"1970s"` or `null`, from the original year (`originalDecade`) |
 | `formatDay(iso, withYear = true)` | `"25 SEP 2026"` |
 
 ## Genre Utilities (`src/lib/genreUtils.ts`)
@@ -412,7 +438,7 @@ of records by date.
 - A global `All genres` summary for collection-wide graph/search mode
 - Genre summaries with album counts, artist counts, year spans, full related-genre lists, and cover samples
 - Artist summaries with genre-specific albums plus total collection counts
-- Album summaries with slug, cover URL, artist, year, and connected genres
+- Album summaries with slug, cover URL, artist, original year (`originalYear`), and connected genres
 - Helpers for URL state resolution, filtering, and sorting
 - Relationship helpers for detail-page recommendations:
   `getRelatedArtistsForArtist`, `getArtistGenreSummaries`, and
@@ -714,6 +740,17 @@ import { getAlbumImageFromData, handleImageError } from '@/lib/image-utils';
   onError={handleImageError}
   alt={album.release_name || 'Album'}
 />
+```
+
+### Use Original Years
+
+```typescript
+// Correct
+import { originalYear } from '@/lib/releaseYear';
+albums.sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0));
+
+// Incorrect - often the reissue year
+albums.sort((a, b) => b.date_release_year.localeCompare(a.date_release_year));
 ```
 
 ### Use cn for Class Merging

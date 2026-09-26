@@ -110,7 +110,7 @@ pnpm run build:worker
 | `build:worker` | Worker-optimized build |
 | `build:sync` | Build + sync to R2 |
 | `build:sync:dry` | Preview R2 sync |
-| `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists |
+| `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists. Decade pages come from `year_original` (falling back to `date_release_year`) |
 | `process-images` | Resize images |
 | `generate-colors` | Extract color palettes |
 | `generate-og` | Create OG images |

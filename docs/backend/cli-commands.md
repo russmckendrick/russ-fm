@@ -12,7 +12,7 @@ authoritative flag list of any subcommand.
 
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
-`backfill-videos`, `maintenance`.
+`backfill-videos`, `backfill-original-years`, `maintenance`.
 
 ## Global Options
 
@@ -407,6 +407,61 @@ scrapper backfill-videos --batch-size 50 --pause 60
 
 ---
 
+## backfill-original-years
+
+Look up each release's Discogs master and store its original release year,
+then regenerate `collection.json` so `year_original` reaches the frontend.
+
+```bash
+scrapper backfill-original-years [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only process this many releases (newest additions first) |
+| `--dry-run` | | FLAG | `false` | List what would be looked up without calling Discogs |
+| `--force` | `-f` | FLAG | `false` | Look up every release again, including ones already done |
+
+### Examples
+
+```bash
+# Preview how many releases still need an original year
+scrapper backfill-original-years --dry-run
+
+# Try the newest 20 additions
+scrapper backfill-original-years --limit 20
+
+# Full run (resumable; stop and re-run at any point)
+scrapper backfill-original-years
+
+# Redo every release
+scrapper backfill-original-years --force
+```
+
+### Behavior
+
+- Writes `raw_data.discogs.master_id` and `raw_data.discogs.master_year` on
+  each release row, keeping every other `raw_data` key. `master_year: null`
+  means "looked up, no master or no year"; no SQLite schema change.
+- Uses the stored `master_id` when the row has one; otherwise fetches the
+  release first to read it. Each master is looked up once per run, so
+  releases sharing a master cost one request.
+- `/masters/{id}` is called with the personal token, so it runs in the
+  authed 60/min bucket. A full run from scratch is roughly 2,900 master
+  lookups plus 500 release lookups, about an hour.
+- Resumable: rows that already have a `master_year` key are skipped unless
+  `--force`. Failed lookups leave the key absent, so a re-run retries them.
+- Prints one line per release: `→ 1991`, `· no master`, or `✗ … failed`,
+  then a summary.
+- Regenerates `collection.json` when at least one release was updated.
+  Album JSON files are unchanged.
+- New and refreshed releases get the same fields from `process_release`, so
+  this is only needed for rows written before that.
+
+---
+
 ## generate-collection
 
 Generate collection.json for React frontend.
@@ -445,6 +500,7 @@ scrapper generate-collection --output /path/to/collection.json
       "uri_release": "/album/slug",
       "date_added": "2024-01-10T15:00:00Z",
       "date_release_year": 2024,
+      "year_original": 1997,
       "genre_names": ["Genre1", "Genre2"],
       "images_uri_release": {
         "hi-res": "/album/slug/slug-hi-res.jpg",

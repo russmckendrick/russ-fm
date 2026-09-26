@@ -63,14 +63,14 @@ Scale titles to the longest word in condensed type so long album names never ove
 
 Page-specific pieces built on these: `BoxHeroArt` / `BoxContents` (`src/components/album/BoxSet.tsx`) and `BrowseHeader` / `FacetFan` / `FacetCard` (`src/components/browse/BrowseHeader.tsx`). See [components.md](./components.md).
 
-Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (cached) instead of fetching `collection.json` per page, and `loadDetailJson()` for per-release / per-artist JSON. Images always go through `src/lib/image-utils.ts` (`hi-res` for heroes, `medium` for tiles, `avatar` for artist avatars).
+Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (cached) instead of fetching `collection.json` per page, and `loadDetailJson()` for per-release / per-artist JSON. Images always go through `src/lib/image-utils.ts` (`hi-res` for heroes, `medium` for tiles, `avatar` for artist avatars). Years go through `originalYear()` / `originalDecade()` from `src/lib/releaseYear.ts` for anything that orders, groups, filters or labels records by year; never read `date_release_year` directly, as it is often the reissue date.
 
 ## Page patterns
 
 - **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
 - **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side with a scrobble button per side; Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
 - **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
-- **Artist**: the whole top blends through the sleeve colours of the last three additions (`blendedFlood`), newest at the top by the nav; the discography is one `RecordTile` grid ordered by date added. `date_release_year` is the pressing's issue date, not the original release, so don't order or group records by it.
+- **Artist**: the whole top blends through the sleeve colours of the last three additions (`blendedFlood`), newest at the top by the nav; the discography is a `RecordTile` grid with a Recently added (default, date added on each tile) / By year (grouped by decade of original release, oldest first) toggle.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).
 - **Lists / stats / browse**: `t-disp` page title with the count in dim type beside it, chip filters, tiles in the sleeve colours.
 

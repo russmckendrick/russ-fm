@@ -58,7 +58,7 @@ src/
 ├── pages/               # Route-level components
 │   └── wrapped/         # Year-in-review feature
 ├── hooks/               # Custom React hooks
-├── lib/                 # Utilities (collection loader, sleeveColour, boxDiscs, image-utils…)
+├── lib/                 # Utilities (collection loader, sleeveColour, releaseYear, boxDiscs, image-utils…)
 ├── services/            # API/data services
 ├── types/               # TypeScript definitions
 ├── config/              # Application configuration

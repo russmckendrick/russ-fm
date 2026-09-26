@@ -161,7 +161,9 @@ release = orchestrator.get_release_by_discogs_id(
 
 **Process:**
 1. Check database cache
-2. Fetch from Discogs (primary source)
+2. Fetch from Discogs (primary source); in the Rust scrapper `process_release` also keeps the
+   release's `master_id` and the master's original year as `raw_data.discogs.master_year`
+   (see [Original release year](./README.md#original-release-year))
 3. Search matching services (parallel)
 4. Score and select best matches
 5. Download artwork
@@ -660,7 +662,8 @@ generator.generate_collection_json(output_path="public/collection.json")
       "release_artist": "Radiohead",
       "uri_release": "/album/radiohead-ok-computer",
       "date_added": "2024-01-10T15:00:00Z",
-      "date_release_year": 1997,
+      "date_release_year": "2017-06-23",
+      "year_original": 1997,
       "genre_names": ["Alternative Rock", "Art Rock"],
       "styles": ["Art Rock", "Indie Rock"],
       "formats": ["Vinyl", "LP", "Album", "Reissue"],
@@ -678,6 +681,8 @@ generator.generate_collection_json(output_path="public/collection.json")
 ```
 
 The `styles`, `formats`, `format_primary`, `labels`, `country`, and `lastfm_listeners` fields were added in May 2026 so that the `/labels`, `/decade/:slug`, `/country/:slug` browse pages, the `/albums?format=…` filter, and the Stats v2 sections (format donut, label/country bars, hidden-gems wall) can read directly from `collection.json` without lazy-loading per-album JSONs. The denormalisation reads the same DB-backed `Release` objects already loaded for genres and falls back to the per-album JSON only when the object's attribute is missing.
+
+`year_original` (integer or null) is the original release year: the Discogs master year when known, otherwise the earliest year any source reports. `date_release_year` prefers Apple Music, then Spotify, then the pressing's Discogs year, so it is often a reissue date; the frontend orders and groups by `year_original`.
 
 ---
 

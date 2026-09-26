@@ -16,7 +16,7 @@ This document covers the route-level page components in russ.fm.
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side (scrobble per side) → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
-| `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, newest additions first) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
+| `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
@@ -93,7 +93,7 @@ The home page sections are local components in `HomePage.tsx`; the old
   flood fades to each record's colour (`floodFor` over the sleeve palette
   plus Apple Music artwork colours), the active disc slides out and its
   "Added" sticker appears. The text column shows the title, artist,
-  year / label / format / sides / tracks, and pills for the album page,
+  original year / label / format / sides / tracks, and pills for the album page,
   Spotify and Apple Music (read from each record's detailed JSON).
   Numbered progress bars pick a record; previous, pause/resume and next
   buttons control the rotation. Only the active `HeroRecord` spins
@@ -109,7 +109,8 @@ The home page sections are local components in `HomePage.tsx`; the old
 - **Most collected** — top six artists by record count.
 - **Genres** — genre chips sized by count and coloured by a representative
   sleeve, then headline counts (records, on vinyl, box sets, artists).
-- **Random picks** — `RecordTile` grid with a Shuffle pill.
+- **Random picks** — `RecordTile` grid with a Shuffle pill; tiles show the
+  original year.
 - **Browse by colour** — recent vivid vinyl sleeves sorted by hue, shown
   as a colour bar and a strip of cover tiles, linking to
   `/albums/1?sort=colour`.
@@ -145,10 +146,10 @@ dropped from the URL.
 | Parameter | Type | Default | Description |
 |-----------|------|---------|-------------|
 | `:page` | `number` (path) | 1 | Current page. A non-numeric value redirects to `/album/:page` |
-| `sort` | `date_added \| release_name \| release_artist \| date_release_year \| colour` | `date_added` | Sort order |
+| `sort` | `date_added \| release_name \| release_artist \| date_release_year \| colour` | `date_added` | Sort order. `date_release_year` keeps its name for existing links but sorts by original year (`originalYear()`) |
 | `format` | `string` | – | `format_primary` filter (chips for Vinyl and Box sets) |
 | `genre` | `string` | – | Genre filter |
-| `year` | `string` | – | Release year filter |
+| `year` | `string` | – | Original release year filter; the Year select and tile meta use the same year |
 | `search` | `string` | – | Matches title, artist, genres, credited artists and band members |
 
 **Colour sort (`?sort=colour`).** Records are ordered by the hue of their
@@ -183,7 +184,10 @@ Apple Music artwork colours), which the nav also takes.
 **Hero** (`CoverHero` + `HeroRecord`):
 
 - Artist avatars and names (multi-artist support), the title in `t-cond`
-  scaled to its longest word, and year / label / sides / tracks / duration.
+  scaled to its longest word, and original year / label / sides / tracks /
+  duration. The year is `originalYear()` (see
+  [utilities](./utilities.md#release-years-srclibreleaseyearts)), not the
+  pressing's date.
 - **Band line-up** — when `collection.json` carries `members`, a "With …"
   line sits under the title; members with an artist page are linked.
   Member credits (`role: "member"` in the album JSON) are left out of the
@@ -211,8 +215,12 @@ Apple Music artwork colours), which the nav also takes.
 
 **Sidebar:** Last.fm panel in the flood colour (scrobbles, listeners,
 link), release details, identifiers, sleeve colour swatches, copyright.
+In the release details "Released" is the original year; "This pressing"
+shows the pressing's own date (detail JSON `released`, else `year`) and
+appears only when it differs.
 
-**Below:** "More by" the artist (boxset members excluded) and **Similar
+**Below:** "More by" the artist (boxset members excluded; newest original
+year first, labelled with that year) and **Similar
 albums**, ranked by `getRelatedAlbumsForAlbum` from shared clean genres,
 excluding the same artist.
 
@@ -241,7 +249,8 @@ Discogs ID) and `findSimilarAlbums()` reads related records from
 `getGenreExplorer()`, so the hero renders straight from collection data
 while the detail JSON fills in the tracklist, notes and services. The route
 goes through `AlbumRouteHandler`, which keys the page by slug so moving to
-another album mounts a fresh page.
+another album mounts a fresh page. The page meta description and the
+JSON-LD `datePublished` use the original year too.
 
 **Description Fallback Chain:**
 
@@ -303,17 +312,23 @@ at the top so it meets the nav, which follows via `usePageFlood`. See
   The backdrop is judged by `useBackdropTone` from the avatar; unmeasured, it goes by the
   flood alone. The artist name is a `FitTitle` (up to 176px, shrunk until its longest word fits,
   never broken mid-word). Then stats
-  (records, box sets, Last.fm listeners), biography, service
+  (records, box sets, "Releases span" from the earliest to the latest
+  original year, or "Released" when they match, Last.fm listeners), biography, service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
   available, otherwise a constructed URL.
-- **Discography** — one grid of `RecordTile`s on the dark ground, newest
-  additions first, each showing the date added (plus "Box set" where it
-  applies). Tiles show the release artist only when it differs from the
-  page's artist (joint releases, band-member credits). Nothing on the page
-  orders, groups or summarises by `date_release_year`: it is the issue date
-  of the pressing, not the original release date, so a 2016 reissue of a
-  1973 album would land in the wrong place.
+- **Discography** — `RecordTile`s on the dark ground with a two-way
+  toggle in the section heading (hidden when the artist has one record):
+  - **Recently added** (default) — one grid, newest additions first, each
+    tile showing the date added.
+  - **By year** — grouped by decade of original release, oldest first,
+    with a decade label and record count beside each group (sticky on
+    desktop); tiles show the original year, "Undated" groups last.
+  "Box set" is appended to the tile meta where it applies. Tiles show the
+  release artist only when it differs from the page's artist (joint
+  releases, band-member credits). Years come from `originalYear()`, never
+  `date_release_year`, which is often a reissue date. The flood always
+  uses the last three additions, whichever order is showing.
 - **Similar artists** — in-collection artists from
   `services.lastfm.similar_artists[]` first, then genre-overlap candidates,
   shown as `ArtistCard`s.
@@ -355,6 +370,9 @@ takes the colour of a representative record. Boxset members are excluded.
 - Added per month (one block per record) and cumulative growth
 - Decades and genres (linking to `/decades`, `/genres`, `/genre/:slug`)
 - Golden year and top release years
+
+Decades, release years and the release-year colour groups use the
+original year (`originalYear()`).
 - Most collected artists
 - Formats (`format_primary`) and countries
 - Labels
@@ -394,7 +412,9 @@ vivid recent sleeve (the nav follows): a back link, the name scaled to
 its longest word (`heroTitleStyle`), record / artist / year-span counts,
 the most collected artists as pills and a linked `FacetFan` hanging over
 the grid. Below, a `RecordTile` grid with sort pills (Recently added,
-Release year, A–Z) and a pill pager.
+Release year, A–Z) and a pill pager. Decades, the year span and the
+Release year sort all use the original year (`originalDecade()` /
+`originalYear()`).
 
 All four pages use `useCollection()` and `useAlbumColorMap()`, exclude
 boxset members, and share the helpers in
