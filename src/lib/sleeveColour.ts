@@ -73,6 +73,44 @@ export function inkOn(bg: string): string {
   return contrast(bg, INK) >= contrast(bg, CREAM) ? INK : CREAM;
 }
 
+function toHex(rgb: [number, number, number]): string {
+  return `#${rgb.map(c => Math.round(c * 255).toString(16).padStart(2, '0')).join('')}`;
+}
+
+/**
+ * Lighten (for dark ink) or darken (for cream ink) a colour in small steps
+ * until the ink reads on it at `target` contrast, keeping its hue.
+ */
+function settleUnder(colour: string, ink: string, target: number): string {
+  const rgb = parseHex(colour);
+  if (!rgb) return colour;
+  const toward = ink === INK ? 1 : 0;
+  let out = colour;
+  for (let t = 0; t <= 0.8 && contrast(out, ink) < target; t += 0.05) {
+    out = toHex(rgb.map(c => c + (toward - c) * t) as [number, number, number]);
+  }
+  return out;
+}
+
+/**
+ * A vertical flood blended through several sleeve colours (first at the top).
+ * The ink is the one that reads on the top colour (which the nav also uses);
+ * the other colours are lightened or darkened just enough for that ink to
+ * read on them at 4.5:1 (body text). Returns the CSS background, the top colour and the ink.
+ */
+export function blendedFlood(colours: string[]): { background: string; top: string; ink: string } {
+  const top = colours[0] ?? NEUTRAL_FLOOD;
+  const ink = inkOn(top);
+  const rest = colours
+    .slice(1)
+    .filter((c, i, all) => c !== top && all.indexOf(c) === i)
+    .map(c => settleUnder(c, ink, 4.5));
+  if (!rest.length) return { background: top, top, ink };
+  // Hold the top colour for the first stretch so the nav and hero meet cleanly.
+  const stops = rest.map((c, i) => `${c} ${Math.round(40 + (60 * (i + 1)) / rest.length)}%`);
+  return { background: `linear-gradient(180deg, ${top} 0%, ${top} 12%, ${stops.join(', ')})`, top, ink };
+}
+
 /** A softer secondary text colour for the given ink. */
 export function subInk(ink: string): string {
   return ink === INK ? 'rgba(14,13,12,.7)' : 'rgba(251,247,239,.78)';
