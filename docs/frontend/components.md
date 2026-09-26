@@ -62,6 +62,7 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 | discOut | `number` | `15` | How far the disc sits out of the sleeve, % of width |
 | spinning / fast | `boolean` | `true` / `false` | Spin, and spin at 45 (used while scrobbling) |
 | sticker | `{ date, background, color, label? }` | – | Optional `Sticker` on the corner |
+| stickerOnMobile | `boolean` | `true` | `false` hides the sticker below `md` (the home hero) |
 | eager | `boolean` | `true` | Eager-load the image |
 
 ### Sleeve, Vinyl, Sticker
@@ -324,7 +325,6 @@ import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 <AlbumScrobbleButton
   album={{ artist: album.release_artist, album: album.release_name, tracks: toScrobbleTracks(tracks) }}
   tone={{ background: flood.ink, color: flood.flood }}
-  pillSize="lg"
   onActiveChange={setScrobbling}
 />
 ```

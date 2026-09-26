@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Pause, Play, Shuffle, SkipBack, SkipForward } from 'lucide-react';
+import { ArrowRight, Shuffle, SkipBack, SkipForward } from 'lucide-react';
 import { appConfig } from '@/config/app.config';
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
@@ -26,17 +26,12 @@ interface FeaturedDetail {
   tracks: number;
   sides: number;
   label?: string;
-  spotify?: string;
-  appleUrl?: string;
 }
 
 /** The fields the hero reads from a release's detail JSON. */
 interface HeroDetailJson {
   tracklist?: Array<{ position?: string }>;
   labels?: string[];
-  spotify_url?: string;
-  apple_music_url?: string;
-  services?: { spotify?: { url?: string }; apple_music?: { url?: string } };
 }
 
 const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
@@ -57,7 +52,7 @@ export function HomePage() {
   return (
     <>
       <Hero featured={featured} colours={colours} />
-      <div className={cn('mx-auto flex w-full max-w-[1640px] flex-col gap-20 px-5 pb-10 md:px-10 lg:gap-24 lg:px-14', AFTER_HERO)}>
+      <div className={cn('mx-auto flex w-full max-w-[1640px] flex-col gap-20 px-5 pb-10 md:px-10 lg:gap-24 lg:px-14', AFTER_HERO, 'pt-16')}>
         <LatestAdditions recent={recent} colours={colours} />
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
           <MostCollected albums={albums} />
@@ -74,7 +69,6 @@ export function HomePage() {
 
 function Hero({ featured, colours }: { featured: Album[]; colours: Record<string, AlbumColorPalette> | null }) {
   const [index, setIndex] = useState(0);
-  const [playing, setPlaying] = useState(true);
   const [details, setDetails] = useState<Record<string, FeaturedDetail>>({});
   const reduced = useRef(
     typeof window !== 'undefined' && window.matchMedia?.('(prefers-reduced-motion: reduce)').matches,
@@ -95,8 +89,6 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
               tracks: positions.length,
               sides,
               label: d.labels?.[0],
-              spotify: d.spotify_url ?? d.services?.spotify?.url,
-              appleUrl: d.apple_music_url ?? d.services?.apple_music?.url,
             },
           }));
         })
@@ -104,6 +96,18 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [featured.map(a => a.uri_release).join('|')]);
+
+  // The slides share one spot; the stack takes the active slide's height so a
+  // short title doesn't leave the gap a long one would need.
+  const activeSlide = useRef<HTMLDivElement>(null);
+  const [slideHeight, setSlideHeight] = useState<number>();
+  useEffect(() => {
+    const el = activeSlide.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => setSlideHeight(el.offsetHeight));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [index, featured.length]);
 
   const count = featured.length;
   const go = useCallback((i: number) => {
@@ -125,131 +129,136 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   }
 
   // The progress bar is a CSS animation; when it finishes the hero moves on.
-  // Pausing pauses the animation, so the bar and the rotation never drift.
+  // Only the visible copy of the controls animates (display:none stops it).
   const autoRotate = !reduced.current;
 
+  const controls = (className: string) => (
+    <div className={cn('items-center gap-3', className)}>
+      <button type="button" className="icon-btn h-10 w-10 border-2 border-current md:h-12 md:w-12" onClick={() => go(index - 1)} aria-label="Previous record">
+        <SkipBack className="h-5 w-5" fill="currentColor" />
+      </button>
+      <div className="flex min-w-0 flex-1 items-end gap-1.5 md:flex-none md:gap-3" role="group" aria-label="Latest additions">
+        {featured.map((album, i) => (
+          <button
+            key={album.uri_release}
+            type="button"
+            onClick={() => go(i)}
+            aria-label={`Show ${album.release_name} by ${album.release_artist}`}
+            aria-current={i === index}
+            className="flex h-11 min-w-0 flex-1 flex-col justify-end gap-2 text-left md:w-9 md:flex-none"
+          >
+            <span className="t-mono text-[12px] font-bold">{String(i + 1).padStart(2, '0')}</span>
+            <span className="relative h-[3px] overflow-hidden">
+              <span className="absolute inset-0 opacity-30" style={{ background: 'currentColor' }} />
+              {i === index && autoRotate && (
+                <span
+                  key={index}
+                  className="hero-progress absolute inset-y-0 left-0 w-full origin-left"
+                  style={{ background: 'currentColor', animationDuration: `${HERO_MS}ms` }}
+                  onAnimationEnd={() => go(index + 1)}
+                />
+              )}
+            </span>
+          </button>
+        ))}
+      </div>
+      <button type="button" className="icon-btn h-10 w-10 border-2 border-current md:h-12 md:w-12" onClick={() => go(index + 1)} aria-label="Next record">
+        <SkipForward className="h-5 w-5" fill="currentColor" />
+      </button>
+    </div>
+  );
+
   return (
-    <CoverHero
-      flood={flood}
-      art={
-        <div className="grid">
+    <>
+      <CoverHero
+        flood={flood}
+        art={
+          <div className="grid">
+            {featured.map((album, i) => {
+              const on = i === index;
+              const f = floods[i];
+              return (
+                <div
+                  key={album.uri_release}
+                  className={cn(
+                    '[grid-area:1/1] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.8,.2,1)]',
+                    on ? 'opacity-100 delay-200' : 'pointer-events-none translate-y-10 rotate-[-1.5deg] scale-[.97] opacity-0',
+                  )}
+                  aria-hidden={!on}
+                >
+                  <Link to={album.uri_release} tabIndex={on ? 0 : -1} aria-label={`${album.release_name} by ${album.release_artist}`}>
+                    <HeroRecord
+                      src={getAlbumImageFromData(album.uri_release, 'hi-res')}
+                      alt=""
+                      labelColour={f.ground}
+                      labelText={album.release_artist.toUpperCase()}
+                      discOut={on ? 15 : 0}
+                      spinning={on}
+                      eager={i === 0}
+                      sticker={on ? { date: album.date_added, background: f.ground, color: f.flood } : undefined}
+                      stickerOnMobile={false}
+                    />
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        }
+      >
+        <div
+          className="relative transition-[height] duration-700 ease-[cubic-bezier(.2,.8,.2,1)] motion-reduce:transition-none"
+          style={{ height: slideHeight }}
+        >
           {featured.map((album, i) => {
             const on = i === index;
+            const d = details[album.uri_release];
             const f = floods[i];
+            const title = album.release_name.trim();
+            const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
             return (
               <div
                 key={album.uri_release}
+                ref={on ? activeSlide : undefined}
                 className={cn(
-                  '[grid-area:1/1] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(.2,.8,.2,1)]',
-                  on ? 'opacity-100 delay-200' : 'pointer-events-none translate-y-10 rotate-[-1.5deg] scale-[.97] opacity-0',
+                  'absolute inset-x-0 top-0 flex flex-col gap-4 transition-[opacity,transform] duration-700 md:gap-5 lg:gap-6',
+                  on ? 'translate-y-0 opacity-100 delay-200' : 'pointer-events-none translate-y-7 opacity-0',
                 )}
                 aria-hidden={!on}
               >
-                <Link to={album.uri_release} tabIndex={on ? 0 : -1} aria-label={`${album.release_name} by ${album.release_artist}`}>
-                  <HeroRecord
-                    src={getAlbumImageFromData(album.uri_release, 'hi-res')}
-                    alt=""
-                    labelColour={f.ground}
-                    labelText={album.release_artist.toUpperCase()}
-                    discOut={on ? 15 : 0}
-                    spinning={on}
-                    eager={i === 0}
-                    sticker={on ? { date: album.date_added, background: f.ground, color: f.flood } : undefined}
-                  />
-                </Link>
+                <div className="flex items-center justify-between gap-4 md:justify-start md:gap-6">
+                  <Link to={album.artists?.[0]?.uri_artist ?? album.uri_artist} tabIndex={on ? 0 : -1} className="t-dispn min-w-0 break-words text-[22px] leading-[1.1] md:text-[30px]">
+                    {album.release_artist}
+                  </Link>
+                  <PillLink
+                    to={album.uri_release}
+                    solid={{ background: f.ink, color: f.flood }}
+                    className="shrink-0 max-md:min-h-10 max-md:px-4 max-md:text-[13px]"
+                  >
+                    View album
+                  </PillLink>
+                </div>
+                <h1
+                  className="t-cond m-0"
+                  style={{ fontSize: `clamp(52px, ${Math.min(9, 60 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}
+                >
+                  {title}
+                </h1>
+                <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: f.sub }}>
+                  {originalYear(album) && <span>{originalYear(album)}</span>}
+                  {d?.label && <span>{d.label}</span>}
+                  {album.format_primary && <span>{album.format_primary}</span>}
+                  {d && d.tracks > 0 && <span>{d.sides > 1 ? `${d.sides} sides · ` : ''}{d.tracks} tracks</span>}
+                </div>
               </div>
             );
           })}
         </div>
-      }
-    >
-      <div className="grid">
-        {featured.map((album, i) => {
-          const on = i === index;
-          const d = details[album.uri_release];
-          const f = floods[i];
-          const title = album.release_name.trim();
-          const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
-          return (
-            <div
-              key={album.uri_release}
-              className={cn(
-                'flex flex-col gap-5 [grid-area:1/1] transition-[opacity,transform] duration-700 lg:gap-6',
-                on ? 'translate-y-0 opacity-100 delay-200' : 'pointer-events-none translate-y-7 opacity-0',
-              )}
-              aria-hidden={!on}
-            >
-              <Link to={album.artists?.[0]?.uri_artist ?? album.uri_artist} tabIndex={on ? 0 : -1} className="t-dispn text-[22px] md:text-[30px]">
-                {album.release_artist}
-              </Link>
-              <h1
-                className="t-cond m-0"
-                style={{ fontSize: `clamp(52px, ${Math.min(9, 60 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}
-              >
-                {title}
-              </h1>
-              <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: f.sub }}>
-                {originalYear(album) && <span>{originalYear(album)}</span>}
-                {d?.label && <span>{d.label}</span>}
-                {album.format_primary && <span>{album.format_primary}</span>}
-                {d && d.tracks > 0 && <span>{d.sides > 1 ? `${d.sides} sides · ` : ''}{d.tracks} tracks</span>}
-              </div>
-              <div className="mt-1 flex flex-wrap gap-2.5">
-                <PillLink to={album.uri_release} solid={{ background: f.ink, color: f.flood }}>
-                  View album
-                </PillLink>
-                {d?.spotify && <PillLink to={d.spotify}>Spotify</PillLink>}
-                {d?.appleUrl && <PillLink to={d.appleUrl}>Apple Music</PillLink>}
-              </div>
-            </div>
-          );
-        })}
-      </div>
 
-      <div className="mt-8 flex items-end gap-3 lg:mt-10">
-        <div className="flex items-end gap-3" role="group" aria-label="Latest additions">
-          {featured.map((album, i) => (
-            <button
-              key={album.uri_release}
-              type="button"
-              onClick={() => go(i)}
-              aria-label={`Show ${album.release_name} by ${album.release_artist}`}
-              aria-current={i === index}
-              className="flex h-11 w-7 flex-col justify-end gap-2 text-left md:w-9"
-            >
-              <span className="t-mono text-[12px] font-bold">{String(i + 1).padStart(2, '0')}</span>
-              <span className="relative h-[3px] overflow-hidden">
-                <span className="absolute inset-0 opacity-30" style={{ background: 'currentColor' }} />
-                {i === index && autoRotate && (
-                  <span
-                    key={index}
-                    className="hero-progress absolute inset-y-0 left-0 w-full origin-left"
-                    style={{ background: 'currentColor', animationDuration: `${HERO_MS}ms`, animationPlayState: playing ? 'running' : 'paused' }}
-                    onAnimationEnd={() => go(index + 1)}
-                  />
-                )}
-              </span>
-            </button>
-          ))}
-        </div>
-        <div className="flex-1" />
-        <button type="button" className="icon-btn border-2 border-current" onClick={() => go(index - 1)} aria-label="Previous record">
-          <SkipBack className="h-5 w-5" fill="currentColor" />
-        </button>
-        <button
-          type="button"
-          className="icon-btn"
-          style={{ background: flood.ink, color: flood.flood }}
-          onClick={() => setPlaying(p => !p)}
-          aria-label={playing ? 'Pause rotation' : 'Resume rotation'}
-        >
-          {playing ? <Pause className="h-5 w-5" fill="currentColor" /> : <Play className="h-5 w-5" fill="currentColor" />}
-        </button>
-        <button type="button" className="icon-btn border-2 border-current" onClick={() => go(index + 1)} aria-label="Next record">
-          <SkipForward className="h-5 w-5" fill="currentColor" />
-        </button>
-      </div>
-    </CoverHero>
+        {controls("mt-10 hidden lg:flex")}
+      </CoverHero>
+      {/* Below lg the controls sit under the overhanging sleeve, off the flood. */}
+      <div className="mx-auto w-full max-w-[1640px] px-5 pt-[72px] md:px-10 lg:hidden">{controls('flex')}</div>
+    </>
   );
 }
 
