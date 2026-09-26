@@ -1,4 +1,4 @@
-import Fuse from 'fuse.js';
+import Fuse, { type FuseResult, type FuseResultMatch, type IFuseOptions } from 'fuse.js';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { originalYear } from '@/lib/releaseYear';
@@ -42,7 +42,7 @@ export interface SearchResult {
   genres?: string[];
   albumCount?: number;
   score?: number; // Fuse.js match score
-  matches?: Fuse.FuseResultMatch[]; // Fuse.js match details
+  matches?: readonly FuseResultMatch[]; // Fuse.js match details
 }
 
 export interface SearchOptions {
@@ -53,7 +53,7 @@ export interface SearchOptions {
   filterByType?: 'album' | 'artist';
 }
 
-interface FuseSearchResult extends Fuse.FuseResult<Album> {
+interface FuseSearchResult extends FuseResult<Album> {
   item: Album;
 }
 
@@ -72,7 +72,7 @@ class FuseSearchService {
     this.isMobile = window.innerWidth < 768;
   }
 
-  private getMobileConfig(): Fuse.IFuseOptions<Album> {
+  private getMobileConfig(): IFuseOptions<Album> {
     return {
       keys: [
         { name: 'release_name', weight: 0.5 },
@@ -92,7 +92,7 @@ class FuseSearchService {
     };
   }
 
-  private getDesktopConfig(): Fuse.IFuseOptions<Album> {
+  private getDesktopConfig(): IFuseOptions<Album> {
     return {
       keys: [
         { name: 'release_name', weight: 0.35 },
@@ -158,20 +158,14 @@ class FuseSearchService {
     } = options;
 
     try {
-      // Update Fuse options if needed
-      if (threshold !== undefined) {
-        this.albumFuse.setCollection(this.collection, {
-          ...this.albumFuse.options,
-          threshold,
-          includeMatches
-        });
+      // Options are fixed at construction in Fuse, so a different threshold
+      // needs a new instance.
+      if (threshold !== undefined && threshold !== this.albumFuse.options.threshold) {
+        this.albumFuse = new Fuse(this.collection, { ...this.albumFuse.options, threshold });
       }
 
-      // Perform search - always include matches for artist filtering
-      const fuseResults = this.albumFuse.search(query, { 
-        limit: limit * 2,
-        includeMatches: true 
-      }); // Get more results for processing
+      // Get more results than the limit for processing
+      const fuseResults = this.albumFuse.search(query, { limit: limit * 2 });
 
       // Process results
       const albumResults: SearchResult[] = [];
@@ -363,8 +357,9 @@ class FuseSearchService {
   updateIndex(collection: Album[]): void {
     if (this.isInitialized) {
       this.collection = collection;
-      const config = this.isMobile ? this.getMobileConfig() : this.getDesktopConfig();
-      this.albumFuse?.setCollection(collection, config);
+      // setCollection's second argument is a prebuilt index, not options; the
+      // options stay as constructed.
+      this.albumFuse?.setCollection(collection);
     }
   }
 

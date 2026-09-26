@@ -33,6 +33,7 @@
     "hooks:install": "node scripts/install-git-hooks.js",
     "prepare": "node scripts/install-git-hooks.js",
     "lint": "eslint .",
+    "test": "vitest run",
     "preview": "vite preview --outDir dist-worker"
   },
   "packageManager": "pnpm@11.9.0",
@@ -97,6 +98,7 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.62.1",
     "vite": "^7.3.6",
+    "vitest": "^5.0.2",
     "wrangler": "^4.128.0"
   }
 }

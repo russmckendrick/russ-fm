@@ -222,7 +222,7 @@ async function processImagesInDirectory(sourceDirectory: string, outputDirectory
           await processImage(sourceImagePath, outputPaths);
           await fs.writeFile(getSourceHashPath(outputPaths), `${sourceHash}\n`);
         } catch (error) {
-          console.warn(`  ⚠️  Failed to process ${entry.name}/${hiResFile}:`, error.message);
+          console.warn(`  ⚠️  Failed to process ${entry.name}/${hiResFile}:`, error instanceof Error ? error.message : error);
           // Continue processing other images
         }
       }

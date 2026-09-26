@@ -73,7 +73,8 @@ pnpm run dev
 | `pnpm run build` | Production build |
 | `pnpm run build:fast` | Build without assets |
 | `pnpm run lint` | Run ESLint |
-| `pnpm run tsc --noEmit` | Type check |
+| `pnpm exec tsc -b --noEmit` | Type check (`-b` follows the project references; plain `tsc --noEmit` checks nothing) |
+| `pnpm test` | Run the Vitest unit tests (`src/**/__tests__`) |
 | `pnpm run preview` | Preview production build |
 
 ### Hot Reload Behavior
@@ -172,8 +173,9 @@ russ-fm/
 1. Start dev server: `pnpm run dev`
 2. Edit files in `src/`
 3. Changes hot reload automatically
-4. Type check: `pnpm run tsc --noEmit`
+4. Type check: `pnpm exec tsc -b --noEmit`
 5. Lint: `pnpm run lint`
+6. Tests: `pnpm test`
 
 ### Adding Backend Features
 
@@ -219,7 +221,10 @@ export function MyComponent({ className }: { className?: string }) {
 
 ```bash
 # Type checking
-pnpm run tsc --noEmit
+pnpm exec tsc -b --noEmit
+
+# Unit tests (Vitest)
+pnpm test
 
 # Linting
 pnpm run lint
@@ -295,7 +300,8 @@ refactor: Simplify color extraction
 ```bash
 # Before committing
 pnpm run lint
-pnpm run tsc --noEmit
+pnpm exec tsc -b --noEmit
+pnpm test
 pnpm run build
 ```
 

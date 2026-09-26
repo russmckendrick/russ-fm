@@ -47,7 +47,7 @@ export const AppleMusicEmbed = memo(function AppleMusicEmbed({
     retryCount: 0
   });
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const mountedRef = useRef(true);
 
   // Parse Apple Music URL to extract album ID and country
