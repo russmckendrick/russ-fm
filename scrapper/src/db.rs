@@ -66,7 +66,7 @@ pub struct ArtistSummary {
 }
 
 /// Full release record (all columns; JSON columns parsed to [`Value`]).
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, Default)]
 pub struct ReleaseRecord {
     pub id: String,
     pub discogs_id: Option<String>,
@@ -138,6 +138,16 @@ pub struct ReleaseBrief {
     pub genres: Vec<String>,
     pub labels: Vec<String>,
     pub date_added: Option<String>,
+}
+
+/// A release still waiting for its original year (see [`Db::releases_for_original_years`]).
+#[derive(Debug, Clone)]
+pub struct OriginalYearCandidate {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    /// Stored `raw_data.discogs.master_id`, when known.
+    pub master_id: Option<String>,
 }
 
 /// A box-format release row for the TUI Boxsets screen.
@@ -827,6 +837,69 @@ impl Db {
             None => stmt.query_map([], map)?.collect::<rusqlite::Result<_>>()?,
         };
         Ok(rows)
+    }
+
+    /// Releases whose original year hasn't been looked up yet (no `raw_data.discogs.master_year`
+    /// key; a null value means "looked up, unknown" and counts as done), newest first. `force`
+    /// returns every release. Each row carries the stored `master_id`, when there is one, so
+    /// the backfill can skip the release lookup.
+    pub fn releases_for_original_years(&self, force: bool, limit: Option<u32>) -> Result<Vec<OriginalYearCandidate>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, title, artists, raw_data FROM releases WHERE discogs_id IS NOT NULL ORDER BY date_added DESC",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, Option<String>>(2)?,
+                row.get::<_, Option<String>>(3)?,
+            ))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (discogs_id, title, artists, raw) = row?;
+            let raw = parse_json(raw, "{}");
+            let discogs = raw.get("discogs");
+            if !force && discogs.and_then(|d| d.get("master_year")).is_some() {
+                continue;
+            }
+            out.push(OriginalYearCandidate {
+                discogs_id,
+                title,
+                artists: artist_names(&parse_json(artists, "[]")),
+                master_id: discogs.and_then(crate::services::discogs::DiscogsService::master_id_of),
+            });
+            if limit.is_some_and(|l| out.len() >= l as usize) {
+                break;
+            }
+        }
+        Ok(out)
+    }
+
+    /// Set `raw_data.discogs.master_id` / `master_year` on a release, keeping every other key.
+    pub fn set_release_master(&self, discogs_id: &str, master_id: Value, master_year: Value) -> Result<bool> {
+        let conn = self.conn()?;
+        let raw: Option<Option<String>> = conn
+            .query_row("SELECT raw_data FROM releases WHERE discogs_id = ?", [discogs_id], |r| r.get(0))
+            .optional()?;
+        let Some(raw) = raw else { return Ok(false) };
+        let mut raw_data: Value = parse_json(raw, "{}");
+        if !raw_data.is_object() {
+            raw_data = serde_json::json!({});
+        }
+        let discogs = raw_data.as_object_mut().unwrap().entry("discogs").or_insert_with(|| serde_json::json!({}));
+        if !discogs.is_object() {
+            *discogs = serde_json::json!({});
+        }
+        let d = discogs.as_object_mut().unwrap();
+        d.insert("master_id".into(), master_id);
+        d.insert("master_year".into(), master_year);
+        conn.execute(
+            "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
+            rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
+        )?;
+        Ok(true)
     }
 
     pub fn update_release_videos(&self, discogs_id: &str, videos_json: &str) -> Result<bool> {
