@@ -16,6 +16,8 @@ interface AlbumScrobbleButtonProps {
   style?: React.CSSProperties;
   /** Idle label. Defaults to "Scrobble album". */
   label?: string;
+  /** Shorter idle label for phones (below `sm`). */
+  mobileLabel?: string;
   /** Solid fill colours (flood ink on flood). Omit for an outline pill. */
   tone?: { background: string; color: string };
   pillSize?: 'sm' | 'md' | 'lg';
@@ -28,6 +30,7 @@ export function AlbumScrobbleButton({
   className = '',
   fullWidth = false,
   label = 'Scrobble album',
+  mobileLabel,
   tone,
   pillSize = 'md',
   onActiveChange,
@@ -108,7 +111,13 @@ export function AlbumScrobbleButton({
     if (isScrobbling) return 'Scrobbling…';
     if (partial && summary) return `Scrobbled ${summary.successful} of ${summary.total}`;
     if (scrobbled) return `Scrobbled ${album.tracks.length} tracks`;
-    return label;
+    if (!mobileLabel) return label;
+    return (
+      <>
+        <span className="max-sm:hidden">{label}</span>
+        <span className="sm:hidden">{mobileLabel}</span>
+      </>
+    );
   };
 
   const getTooltipContent = () => {

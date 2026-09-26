@@ -417,19 +417,19 @@ body {
 /* A row of pills that tightens on phones, e.g. the album hero's actions. */
 @media (max-width: 639px) {
   .pill-row-compact .pill {
-    min-height: 36px;
-    padding: 0 12px;
-    gap: 6px;
-    font-size: 13px;
+    min-height: 32px;
+    padding: 0 11px;
+    gap: 5px;
+    font-size: 12px;
   }
 
   .pill-row-compact .pill > .pill-content {
-    gap: 6px;
+    gap: 5px;
   }
 
   .pill-row-compact .pill svg {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
 }
 

@@ -872,11 +872,12 @@ export function AlbumDetailPage() {
           <AlbumScrobbleButton
             album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
             tone={{ background: flood.ink, color: flood.flood }}
+            mobileLabel="Scrobble"
             onActiveChange={setScrobbling}
           />
         )}
         {serviceLinks.map(s => (
-          <PillLink key={s.label} to={s.url}>
+          <PillLink key={s.label} to={s.url} iconOnlyOnMobile>
             {s.label}
           </PillLink>
         ))}
