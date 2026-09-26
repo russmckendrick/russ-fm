@@ -43,6 +43,13 @@ function SearchComponent() {
 | search | `(query: string) => void` | Trigger search |
 | clearResults | `() => void` | Clear results |
 
+**Options** (all optional): `debounceMs` (default 150), `limit` (20), `threshold`,
+`includeMatches`, `filterByType` (`'album' | 'artist'`), `autoSearch` (`true`) and `enabled`
+(`true`). The index is built from the shared collection (`loadCollection()` in
+`src/lib/collection.ts`), not a separate fetch. With `enabled: false` the hook does not build
+the Fuse index; it starts when `enabled` becomes `true`, so search UI can defer the work until
+it is opened.
+
 **Search Result Structure:**
 ```typescript
 interface SearchResult {
@@ -63,27 +70,20 @@ interface SearchResult {
 
 ### useInstantSearch
 
-Auto-searching variant with debouncing.
+Auto-searching variant with a 100ms debounce and up to 10 results.
 
 ```typescript
 import { useInstantSearch } from '@/hooks/useSearch';
 
-function InstantSearch() {
-  const { query, setQuery, results } = useInstantSearch({
-    debounceMs: 300,
-    minLength: 2
-  });
+function InstantSearch({ isVisible }: { isVisible: boolean }) {
+  const { query, setQuery, results } = useInstantSearch('', isVisible);
 
   // Results update automatically as user types
 }
 ```
 
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| debounceMs | `number` | 300 | Debounce delay |
-| minLength | `number` | 2 | Minimum query length |
-| limit | `number` | 20 | Max results |
+**Parameters:** `initialQuery` (default `''`) and `enabled` (default `true`). `SearchOverlay`
+passes its `isVisible` prop, so the index is only built once the overlay opens.
 
 ---
 
@@ -94,11 +94,14 @@ Mobile-optimized search with simplified results.
 ```typescript
 import { useMobileSearch } from '@/hooks/useSearch';
 
-function MobileSearch() {
-  const { query, setQuery, results, isLoading } = useMobileSearch();
-  // Uses relaxed matching for touch interfaces
+function MobileSearch({ isOpen }: { isOpen: boolean }) {
+  const { query, setQuery, results, isLoading } = useMobileSearch(isOpen);
+  // 200ms debounce, up to 15 results
 }
 ```
+
+**Parameters:** `enabled` (default `true`). `MobileSearchModal` passes `isOpen`, so the index
+is only built once the modal opens.
 
 ---
 
@@ -157,12 +160,16 @@ const flood = floodFor(palette);
 
 **Returns:** `AlbumColorPalette | null` (`null` while loading or when the album has no entry).
 
+Once `album-colors.json` has loaded, the palette is resolved synchronously and returned on the
+first render (lookups are cached per identifier), so a page floods in the right colour
+without a neutral flash.
+
 ---
 
 ### useAlbumColorMap
 
 The whole URI → palette map. Use it when a page paints many sleeves at once (grids, shelves,
-the crate, browse cards, the genre map, Wrapped) instead of calling `useAlbumColors` per
+the artist discography, browse cards, the genre map, Wrapped) instead of calling `useAlbumColors` per
 tile.
 
 ```typescript
@@ -196,7 +203,10 @@ no entry.
 ## Flood Hooks
 
 Defined in `src/components/player/flood-context.ts` and exported from
-`@/components/player`. They need `FloodProvider`, which wraps the app in `App.tsx`.
+`@/components/player`. They need `FloodProvider`, which wraps the app in `App.tsx`. The value
+and the setter live in separate contexts (`FloodValueContext` and `FloodSetterContext`), so a
+page that sets the flood does not re-render when the flood changes; only the navigation,
+which reads the value, does.
 
 ### usePageFlood
 
@@ -224,92 +234,6 @@ import { useFloodValue } from '@/components/player';
 
 const { flood, ink } = useFloodValue();
 ```
-
----
-
-## Theme Hooks
-
-### useTheme (`src/hooks/useTheme.ts`)
-
-Returns `'light' | 'dark'` from the `dark` class that `ThemeProvider` sets on `<html>`
-(following the system preference), and updates when it changes. The site itself is
-dark-ground only and does not use it for styling; `SpotifyEmbed` and `AppleMusicEmbed` pass
-it to the embeds.
-
-```typescript
-import { useTheme } from '@/hooks/useTheme';
-
-const theme = useTheme(); // 'light' | 'dark'
-```
-
----
-
-## Animation Hooks
-
-### useCountAnimation (`src/hooks/useCountAnimation.ts`)
-
-Animate counting from 0 to target number.
-
-```typescript
-import { useCountAnimation } from '@/hooks/useCountAnimation';
-
-function StatDisplay({ value }) {
-  const count = useCountAnimation(value, {
-    duration: 2000,
-    delay: 500
-  });
-
-  return <span>{count}</span>;
-}
-```
-
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| duration | `number` | 1500 | Animation duration (ms) |
-| delay | `number` | 0 | Start delay (ms) |
-| easing | `(t: number) => number` | easeOutQuad | Easing function |
-
-**Custom Easing:**
-```typescript
-const count = useCountAnimation(1000, {
-  easing: t => t * t * t // Cubic easing
-});
-```
-
----
-
-### useScrollAnimation (`src/hooks/useScrollAnimation.ts`)
-
-Intersection Observer for scroll-triggered animations.
-
-```typescript
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
-function AnimatedSection() {
-  const { ref, isVisible } = useScrollAnimation({
-    threshold: 0.2,
-    once: true
-  });
-
-  return (
-    <div
-      ref={ref}
-      className={isVisible ? 'animate-in' : 'opacity-0'}
-    >
-      Content reveals on scroll
-    </div>
-  );
-}
-```
-
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| threshold | `number` | 0.1 | Visibility threshold |
-| rootMargin | `string` | '0px' | Observer margin |
-| delay | `number` | 0 | Animation delay |
-| once | `boolean` | true | Only animate once |
 
 ---
 

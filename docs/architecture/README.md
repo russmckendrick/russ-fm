@@ -253,7 +253,6 @@ All data is stored as static JSON files for fast loading and CDN caching.
 public/
 ├── collection.json          # Album index (minimal data for listings)
 ├── album-colors.json        # Pre-extracted color palettes
-├── album-colors.css         # CSS custom properties
 ├── wrapped.json             # Year-in-review data
 ├── album/
 │   └── {slug}/

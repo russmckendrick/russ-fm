@@ -192,7 +192,6 @@ flowchart TB
         Medium[medium.jpg<br>800px]
         Avatar[avatar.jpg<br>128px]
         Colors[album-colors.json]
-        CSS[album-colors.css]
         OGImage[OG Images<br>1200x630]
     end
 
@@ -202,7 +201,6 @@ flowchart TB
 
     HiRes --> ColorExtract
     ColorExtract --> Colors
-    ColorExtract --> CSS
 
     HiRes --> Satori
     Colors --> Satori
@@ -247,7 +245,6 @@ dist/
 ├── collection.json
 ├── sitemap.xml
 ├── album-colors.json
-├── album-colors.css
 ├── wrapped.json
 ├── album/
 │   └── {slug}/

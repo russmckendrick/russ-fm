@@ -42,7 +42,7 @@ Scale titles to the longest word in condensed type so long album names never ove
 ## Colour helpers — `src/lib/sleeveColour.ts`
 
 - `floodFor(palette, extra?)` → `{ flood, ink, sub, ground }`. Picks the most vivid swatch (accent, muted, and any `extra` such as Apple Music artwork colours), falls back to `#e8e2d6` for monochrome sleeves, and chooses dark ink or cream for contrast.
-- `vividFrom`, `vividScore`, `hue`, `inkOn`, `subInk`, `readableOn(colour, bg)` (the colour if it reaches 3:1 on `bg`, else cream), `appleArtworkColours(services)`, and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` constants.
+- `vividFrom`, `vividScore`, `hue`, `inkOn`, `subInk`, `readableOn(colour, bg)` (the colour if it reaches 3:1 on `bg`, else cream), `appleArtworkColours(services)`, `blendedFlood(colours)` (a vertical gradient through several floods, the first held at the top for the nav; the ink is chosen for the top colour and the others are lightened or darkened until that ink reads at 4.5:1), and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` constants.
 - Palettes come from `useAlbumColors(uri)` (one) or `useAlbumColorMap()` (all, for walls/rows).
 
 ## Components — `src/components/player/`
@@ -51,9 +51,9 @@ Scale titles to the longest word in condensed type so long album names never ove
 | --- | --- |
 | `FloodProvider`, `usePageFlood(flood, ink)`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
 | `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below. |
-| `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. |
+| `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. `spinning` turns the spin off; the home hero spins only the visible record. |
 | `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's dark background swatch. |
-| `RecordTile` | Sleeve in a row/grid; disc slides out on hover; colour bar; title/artist/meta. |
+| `RecordTile` | Sleeve in a row/grid; disc slides out on hover (it does not spin); colour bar; title/artist/meta. |
 | `PillLink`, `.pill`, `.pill-solid`, `.pill-lg`, `.pill-sm` | Rounded buttons (44px; `.pill-lg` 56px, `.pill-sm` 40px). Solid pills use the flood's ink as fill and the flood as text. `.pill-fill` is the progress fill used by the scrobble button. |
 | `.icon-btn` | 48px round icon button (nav, hero transport controls). |
 | `SectionHeading` | Plain `t-disp` title + optional mono note + "see all" link. |
@@ -61,18 +61,25 @@ Scale titles to the longest word in condensed type so long album names never ove
 | `.chip` | Genre/facet pill coloured by a representative sleeve. |
 | `.shelf-scroll` | Horizontal rows that scroll without a visible scrollbar. |
 
-Page-specific pieces built on these: `BoxHeroArt` / `BoxContents` (`src/components/album/BoxSet.tsx`), `Crate` (`src/components/artist/Crate.tsx`) and `BrowseHeader` / `FacetFan` / `FacetCard` (`src/components/browse/BrowseHeader.tsx`). See [components.md](./components.md).
+Page-specific pieces built on these: `BoxHeroArt` / `BoxContents` (`src/components/album/BoxSet.tsx`) and `BrowseHeader` / `FacetFan` / `FacetCard` (`src/components/browse/BrowseHeader.tsx`). See [components.md](./components.md).
 
-Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (cached) instead of fetching `collection.json` per page. Images always go through `src/lib/image-utils.ts` (`hi-res` for heroes, `medium` for tiles, `avatar` for artist avatars).
+Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (cached) instead of fetching `collection.json` per page, and `loadDetailJson()` for per-release / per-artist JSON. Images always go through `src/lib/image-utils.ts` (`hi-res` for heroes, `medium` for tiles, `avatar` for artist avatars).
 
 ## Page patterns
 
 - **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
 - **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side with a scrobble button per side; Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
 - **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
-- **Artist**: the whole top floods with the colour of the record at the front of a flip-through crate; a colour timeline to jump by year; full discography grid with decade tiles.
+- **Artist**: the whole top blends through the sleeve colours of the last three additions (`blendedFlood`), newest at the top by the nav; the discography is one `RecordTile` grid ordered by date added. `date_release_year` is the pressing's issue date, not the original release, so don't order or group records by it.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).
 - **Lists / stats / browse**: `t-disp` page title with the count in dim type beside it, chip filters, tiles in the sleeve colours.
+
+## Performance
+
+- Only visible, meaningful records spin. `RecordTile` renders its `Vinyl` with `spin={false}`, and the home hero passes `spinning` only to the active `HeroRecord`; a grid of spinning discs costs a compositor layer and a repaint per tile.
+- Timers that only draw progress are CSS animations, not React state. The home hero's bar is `.hero-progress` (`@keyframes hero-progress` in `player.css`) and `onAnimationEnd` advances the record.
+- The scrolled nav is a near-opaque solid (`rgba(14,13,12,.97)`) rather than a `backdrop-blur`.
+- Use the cached loaders (`useCollection`, `loadDetailJson`) and memoised helpers (`getGenreExplorer`, `excludeBoxsetMembers`). Memoised results are shared between pages, so copy before sorting in place: `[...excludeBoxsetMembers(albums)].sort(...)`.
 
 ## Accessibility
 

@@ -50,7 +50,6 @@ flowchart TB
 public/
 ├── collection.json           # Album index for listings
 ├── album-colors.json         # Pre-extracted color palettes
-├── album-colors.css          # CSS custom properties
 ├── wrapped.json              # Year-in-review data
 ├── album/
 │   └── {album-slug}/
@@ -86,6 +85,11 @@ const album = await fetch(`/album/${slug}/${slug}.json`).then(r => r.json());
 // Album colors
 const colors = await fetch('/album-colors.json').then(r => r.json());
 ```
+
+In the app these files are read through cached loaders rather than raw `fetch` calls:
+`loadCollection()` / `useCollection()` and `loadDetailJson()` in `src/lib/collection.ts`, and
+`useAlbumColors()` / `useAlbumColorMap()` for the palettes. See
+[Frontend utilities](../frontend/utilities.md#collection-loader-srclibcollectionts).
 
 ## Key Design Decisions
 

@@ -109,7 +109,6 @@ flowchart LR
     Sample --> Quantize[Median Cut]
     Quantize --> Palette[Color Palette]
     Palette --> JSON[album-colors.json]
-    Palette --> CSS[album-colors.css]
 ```
 
 ### Generate Colors Script
@@ -126,7 +125,7 @@ pnpm run generate-colors
 2. Scans for new albums without colors
 3. Extracts dominant colors using Sharp
 4. Generates palette (background, foreground, accent, muted)
-5. Writes JSON and CSS files
+5. Writes `public/album-colors.json` (the only output; there is no generated stylesheet)
 
 ### Algorithm
 
@@ -192,15 +191,10 @@ function getVibrance(color) {
 }
 ```
 
-**album-colors.css:**
-```css
-.radiohead-ok-computer {
-  --album-bg: #1a1a2e;
-  --album-fg: #ffffff;
-  --album-accent: #4a90a4;
-  --album-muted: #6b7b8a;
-}
-```
+The frontend reads palettes only from this file, through `useAlbumColors`,
+`useAlbumColorMap` and `src/lib/sleeveColour.ts`. The old
+`album-colors.css` (around 510KB of per-album classes, render-blocking and
+unused by any component) is no longer generated or imported.
 
 ### Incremental Processing
 
@@ -225,19 +219,19 @@ fs.writeFileSync('album-colors.json', JSON.stringify(existing, null, 2));
 
 ### Keeping the committed palettes current
 
-`public/album-colors.json` and `public/album-colors.css` are committed, and
+`public/album-colors.json` is committed, and
 the CI build only extracts palettes for albums missing from the JSON. If the
 committed file falls behind the collection, CI re-extracts the backlog on
 every run (at one point 215 albums), and in any incremental build that lacks
 the hi-res sources those albums would get the default grey palette instead.
 
-Two things keep the files current:
+Two things keep the file current:
 
-- **The output is deterministic.** The CSS carries no timestamp, so running
-  the script with no new albums leaves both files byte-identical.
-- **A pre-commit hook regenerates them.** `scripts/git-hooks/pre-commit`
-  runs `generate-album-colors.js` and stages the two files whenever a commit
-  includes album artwork (`public/album/*/*-hi-res.jpg`) or
+- **The output is deterministic.** The JSON carries no timestamp, so running
+  the script with no new albums leaves the file byte-identical.
+- **A pre-commit hook regenerates it.** `scripts/git-hooks/pre-commit`
+  runs `generate-album-colors.js` and stages `album-colors.json` whenever a
+  commit includes album artwork (`public/album/*/*-hi-res.jpg`) or
   `public/collection.json`. `pnpm install` installs it into `.git/hooks`
   via the `prepare` script (`scripts/install-git-hooks.js`); run
   `pnpm run hooks:install` to install it by hand. The installer never

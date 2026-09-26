@@ -50,10 +50,9 @@ src/
 ├── components/           # Reusable UI components
 │   ├── player/          # Player design: FloodProvider, CoverHero, HeroRecord, Sleeve, Vinyl, RecordTile…
 │   ├── album/           # BoxSet (box set hero art and "In this box")
-│   ├── artist/          # Crate (flip-through record crate)
 │   ├── browse/          # BrowseHeader, FacetFan, FacetCard, facetSleeves.ts
 │   ├── genres/          # Genre map, explorer panel, genreColours.ts
-│   ├── layout/          # PageContainer, EditorialEmpty/Skeleton (+ unused legacy primitives)
+│   ├── layout/          # PageContainer, PageStates (EditorialEmpty, EditorialSkeleton)
 │   ├── ui/              # shadcn/ui base components
 │   └── *.tsx            # Feature components
 ├── pages/               # Route-level components
@@ -81,8 +80,7 @@ flowchart TB
 
     subgraph Providers
         main.tsx --> BrowserRouter
-        BrowserRouter --> ThemeProvider
-        ThemeProvider --> FloodProvider
+        BrowserRouter --> FloodProvider
     end
 
     subgraph Layout
@@ -156,20 +154,30 @@ Local development builds do not initialize analytics.
 `src/lib/collection.ts`:
 
 ```typescript
-import { useCollection } from '@/lib/collection';
+import { loadDetailJson, useCollection } from '@/lib/collection';
 
 const { albums, loading, error } = useCollection();
 // or, outside React state: const albums = await loadCollection();
+// or synchronously, if it has already loaded: getLoadedCollection() ?? null
 
-// Detail pages fetch per-item JSON by slug
+// Detail pages load per-item JSON through a second cache, keyed by path
 useEffect(() => {
-  fetch(`/album/${slug}/index.json`)
-    .then(res => res.json())
-    .then(setAlbum);
-}, [slug]);
+  loadDetailJson<AlbumDetail>(album.json_detailed_release).then(setDetail);
+}, [album]);
 ```
 
-The album and artist detail pages still fetch `/collection.json` directly.
+Once the collection has loaded, `useCollection()` returns it on the first render, so moving
+between pages shows no loading state. The album and artist detail pages find their record
+in the shared collection synchronously and render the hero from it straight away; the detail
+JSON fills in the rest when `loadDetailJson` resolves. The home hero prefetches its featured
+releases through the same cache, so opening one from the hero is instant. Search uses
+`loadCollection()` too, and only builds its Fuse index once the search overlay or mobile
+search modal is opened.
+
+Heavy derived data is memoised per collection array: `getGenreExplorer(collection)` in
+`src/lib/genreExplorer.ts` and `excludeBoxsetMembers()` in `src/lib/boxsets.ts` return the
+same object for the same input. `excludeBoxsetMembers()` hands back a shared array, so copy
+it before sorting in place (`[...excludeBoxsetMembers(albums)].sort(...)`).
 
 ## Styling System
 
@@ -186,7 +194,7 @@ Pages use Tailwind utilities plus the player classes. Colours come from CSS vari
 - `src/styles/design-tokens.css` — the older `paper` / `ink` / `rule` names, now set to the
   dark ground and cream values so `bg-paper`, `text-ink-3`, `border-rule` and friends still
   read correctly.
-- `src/index.css` — imports the fonts, both token files and `/album-colors.css`, and maps the
+- `src/index.css` — imports the fonts and both token files, and maps the
   shadcn HSL slots (`--background` etc.) to the dark ground.
 
 ```tsx
@@ -206,10 +214,10 @@ Pages use Tailwind utilities plus the player classes. Colours come from CSS vari
 
 ### Dark ground only
 
-There is no light theme and no theme toggle. `ThemeProvider` still wraps the app in
-`main.tsx` and sets a `light`/`dark` class from the system preference, but `:root` and
-`.dark` resolve to the same values, so the class has no visual effect. `useTheme()` still
-reports it (the Spotify and Apple Music embeds read it).
+There is no light theme and no theme toggle. `index.html` hardcodes
+`<html class="dark" style="color-scheme: dark">`, and there is no theme provider or theme
+hook. The Spotify and Apple Music embeds always request their dark player theme, whatever
+the operating system's light/dark setting.
 
 ### Album colours
 
@@ -236,8 +244,9 @@ usePageFlood(flood.flood, flood.ink);
 <section style={{ background: flood.flood, color: flood.ink }}>…</section>
 ```
 
-`/public/album-colors.css` is still generated and imported, but no current component uses its
-classes.
+`album-colors.json` is the only palette output; there is no generated colour stylesheet.
+`useAlbumColors()` returns the palette on the first render once the JSON has loaded, so pages
+flood in the right colour without a neutral flash.
 
 ## Routing
 
@@ -261,6 +270,13 @@ React Router DOM handles all navigation:
 | `/label/:slug`, `/decade/:slug`, `/country/:slug` | FacetDetailPage | Records for one value |
 | `/random` | RandomPage | Shuffle: random record crate |
 | `/search` | SearchResultsPage | Search results |
+
+`App.tsx` renders a `ScrollToTop` component that scrolls to the top on PUSH and REPLACE
+pathname changes; back and forward (POP) are left to the browser so it can restore the
+previous position. The album and artist routes go through `AlbumRouteHandler` and
+`ArtistRouteHandler`, which key the detail page by slug (`<AlbumDetailPage key={albumPath} />`),
+so moving from one album or artist to another mounts a fresh page rather than re-rendering
+the old one in place.
 
 ## State Management
 
@@ -357,6 +373,9 @@ pnpm run preview
 2. **Optimize images** - Use appropriate sizes
 3. **Memoize expensive operations** - useMemo, useCallback
 4. **Avoid prop drilling** - Use context sparingly
+5. **Reuse the shared caches** - `useCollection()` / `loadCollection()`, `loadDetailJson()`,
+   `getGenreExplorer()` and `excludeBoxsetMembers()` rather than fetching or rebuilding
+   (see [Design System](./design-system.md#performance))
 
 ### Accessibility
 

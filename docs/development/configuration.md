@@ -33,23 +33,9 @@ export const appConfig = {
     recentlyAdded: {
       displayCount: 16
     },
-    eras: {
-      excludedDecades: [1930]
-    },
     randomCollection: {
       displayCount: 12
-    },
-    randomArtists: {
-      displayCount: 12
-    },
-    sectionOrder: [
-      'hero',
-      'recentAlbums',
-      'recentArtists',
-      'genres',
-      'randomCollection',
-      'randomArtists'
-    ]
+    }
   },
 
   // URLs
@@ -93,10 +79,8 @@ export function getConfig<K extends keyof typeof appConfig>(
 ```
 
 The home page reads `homepage.hero`, `homepage.recentlyAdded` and
-`homepage.randomCollection`. `homepage.eras`, `homepage.randomArtists` and
-`homepage.sectionOrder` are no longer read: the `StatsAside` overview and
-the configurable section order went with the player redesign, and the
-home sections are now fixed in `src/pages/HomePage.tsx`.
+`homepage.randomCollection`. The home sections are fixed in
+`src/pages/HomePage.tsx`; there is no configurable section order.
 
 ### Usage
 

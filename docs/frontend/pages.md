@@ -16,7 +16,7 @@ This document covers the route-level page components in russ.fm.
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side (scrobble per side) → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
-| `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → record crate → colour timeline → Discography grid with decade tiles → Similar artists. The flood follows the record at the front of the crate. |
+| `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, newest additions first) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
@@ -96,8 +96,14 @@ The home page sections are local components in `HomePage.tsx`; the old
   year / label / format / sides / tracks, and pills for the album page,
   Spotify and Apple Music (read from each record's detailed JSON).
   Numbered progress bars pick a record; previous, pause/resume and next
-  buttons control the rotation. Rotation is off under
-  `prefers-reduced-motion`.
+  buttons control the rotation. Only the active `HeroRecord` spins
+  (`spinning={on}`). The active bar is a CSS animation (`.hero-progress`
+  in `src/styles/player.css`, `scaleX` 0 → 1 over `autoRotateInterval`)
+  and its `onAnimationEnd` advances to the next record, so there is no
+  interval timer; pause sets `animation-play-state: paused`. Under
+  `prefers-reduced-motion` there is no bar and no auto-rotation. The
+  featured releases' detail JSON is prefetched through `loadDetailJson()`,
+  so opening one from the hero needs no further fetch.
 - **Latest additions** — horizontal `shelf-scroll` row of `RecordTile`s,
   with the number added this year as the note.
 - **Most collected** — top six artists by record count.
@@ -227,8 +233,15 @@ excluding the same artist.
 - The normal tracklist is hidden; "About this record" becomes "About this
   box set".
 
-**Data Source:** `/album/{slug}/index.json`, plus `/collection.json`
-(fetched directly) for artists, box contents and related records.
+**Data Source:** the shared collection from `useCollection()` for the
+hero, artists, box contents and related records, plus the release's detail
+JSON (`/album/{slug}/{slug}.json`) via `loadDetailJson()`. `findAlbum()`
+resolves the slug synchronously (exact URI first, then sanitised name +
+Discogs ID) and `findSimilarAlbums()` reads related records from
+`getGenreExplorer()`, so the hero renders straight from collection data
+while the detail JSON fills in the tracklist, notes and services. The route
+goes through `AlbumRouteHandler`, which keys the page by slug so moving to
+another album mounts a fresh page.
 
 **Description Fallback Chain:**
 
@@ -277,25 +290,23 @@ Loads the collection through the shared `loadCollection()`.
 
 **Route:** `/artist/:slug`
 
-The whole top of the page floods with the colour of the record at the
-front of the crate and changes as you flip; the nav follows via
-`usePageFlood`.
+The top of the page is a vertical blend through the sleeve colours of the
+artist's last three additions (two or one if that's all there is), newest
+at the top so it meets the nav, which follows via `usePageFlood`. See
+`blendedFlood()` in `src/lib/sleeveColour.ts`.
 
 - **Header** — greyscale portrait, artist name in `t-disp`, stats
-  (records, box sets, release span, Last.fm listeners), biography, service
+  (records, box sets, Last.fm listeners), biography, service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
   available, otherwise a constructed URL.
-- **Crate** — the `Crate` component holding the artist's records in
-  release-year order, starting at the earliest. Beside it: position,
-  title, year / format / label, date added, a "View album" pill and
-  previous / next buttons.
-- **Colour timeline** (four or more records) — one bar per record in its
-  sleeve colour; the current one is raised with its year shown, and decade
-  labels mark the axis. Clicking a bar jumps the crate to that record.
-- **Discography** — dense grid of cover tiles in release-year order with a
-  tile at the start of each decade (decade and count). Captions slide up
-  in the sleeve colour.
+- **Discography** — one grid of `RecordTile`s on the dark ground, newest
+  additions first, each showing the date added (plus "Box set" where it
+  applies). Tiles show the release artist only when it differs from the
+  page's artist (joint releases, band-member credits). Nothing on the page
+  orders, groups or summarises by `date_release_year`: it is the issue date
+  of the pressing, not the original release date, so a 2016 reissue of a
+  1973 album would land in the wrong place.
 - **Similar artists** — in-collection artists from
   `services.lastfm.similar_artists[]` first, then genre-overlap candidates,
   shown as `ArtistCard`s.
@@ -303,7 +314,12 @@ front of the crate and changes as you flip; the nav follows via
 Records include releases where the artist is credited only as a band
 member (`members[]` in `collection.json`).
 
-**Data Source:** `/artist/{slug}/index.json` and `/collection.json`.
+**Data Source:** the shared collection from `useCollection()` and the
+artist's detail JSON via `loadDetailJson()`. `findArtistAlbums()` picks the
+artist's records (and the detail JSON path) from the collection
+synchronously, and `findSimilarArtists()` falls back to
+`getGenreExplorer()` for genre-overlap candidates. `ArtistRouteHandler`
+keys the page by slug, so moving to another artist mounts a fresh page.
 
 **"Various" Artist Handling:**
 
@@ -386,7 +402,9 @@ axis is one entry in `FACETS` plus two routes. The format filter on
 ### GenrePage (`src/pages/GenrePage.tsx`)
 
 Single-page hybrid D3/React/Motion genre explorer built from
-`/collection.json` (via `loadCollection()`).
+`/collection.json` (via `loadCollection()`). The explorer data comes from
+`getGenreExplorer()`, which is memoised per collection array and shared
+with the album and artist pages.
 
 **Route:** `/genres`
 
@@ -517,9 +535,9 @@ previous / next buttons. Album and artist links stay live.
 ### Wrapped components
 
 Both views use the player components plus `YearSelector` and
-`presentation/PresentationContainer`. The older bento and section
-components under `src/pages/wrapped/components/` (`DynamicBentoGrid`,
-`AnimatedCard`, `sections/*`, `cards/*`) are not used by either view.
+`presentation/PresentationContainer`, the `useWrappedNavigation` hook and
+the helpers in `utils/sleeves.ts`. The older bento, card and section
+components have been removed.
 
 ---
 
@@ -543,9 +561,12 @@ function ExamplePage() {
 }
 ```
 
-Pages with their own loading flow call `loadCollection()` directly
-(Artists, Genres, Stats, Random, Wrapped). The album and artist detail
-pages still fetch `/collection.json` and their per-item JSON themselves.
+Once the collection has loaded, `useCollection()` returns it on the first
+render, so revisiting a page shows no loading state. Pages with their own
+loading flow call `loadCollection()` directly (Artists, Genres, Stats,
+Random, Wrapped). The album and artist detail pages use `useCollection()`
+and load their per-item JSON through `loadDetailJson()`, which caches each
+response for the tab.
 
 ---
 

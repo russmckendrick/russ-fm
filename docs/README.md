@@ -163,8 +163,7 @@ russ-fm/
 │   ├── collection.json           # Album index
 │   ├── album/{slug}/             # Album data & images
 │   ├── artist/{slug}/            # Artist data & images
-│   ├── album-colors.json         # Color palettes
-│   └── album-colors.css          # CSS custom properties
+│   └── album-colors.json         # Color palettes
 ├── scripts/                      # Build & deploy scripts
 ├── docs/                         # This documentation
 └── .github/workflows/            # CI/CD pipelines

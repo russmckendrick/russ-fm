@@ -200,6 +200,14 @@ isBoxsetMember(album): boolean
 excludeBoxsetMembers(albums): Album[]
 ```
 
+`excludeBoxsetMembers` is memoised per input array (a `WeakMap`), so every caller passing the
+same collection gets the same filtered array back. That keeps downstream caches such as the
+genre explorer warm, but it also means the result is shared: copy it before sorting in place.
+
+```typescript
+const albums = [...excludeBoxsetMembers(raw)].sort(byDateAddedDesc);
+```
+
 **Where the filter is applied:** `HomePage` (hero, latest additions, counts, random picks,
 colour strip), `StatsPage`, `AlbumsPage`, `ArtistsPage`, `RandomPage`, `GenrePage`,
 `BrowseIndexPage`, `FacetListPage`, `FacetDetailPage`, and `scripts/generate-wrapped-data.ts`.
@@ -240,15 +248,28 @@ tab, so moving between pages does not refetch it. A failed request clears the ca
 next call retries.
 
 ```typescript
-import { loadCollection, useCollection } from '@/lib/collection';
+import { getLoadedCollection, loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
 
 const albums = await loadCollection();               // Promise<Album[]>
+const cached = getLoadedCollection();                // Album[] | null, synchronous
 
 const { albums, loading, error } = useCollection();  // in a component
+
+const detail = await loadDetailJson<DetailedAlbum>(album.json_detailed_release);
 ```
 
-Use these rather than fetching `collection.json` in a page. `AlbumDetailPage` and
-`ArtistDetailPage` still fetch it directly.
+- `getLoadedCollection()` returns the parsed collection if it has already loaded, otherwise
+  `null`.
+- `useCollection()` seeds its state from the cache, so once the collection has loaded it
+  returns the data (with `loading: false`) on the first render.
+- `loadDetailJson<T>(path)` is a second cache for the per-release and per-artist detail JSON.
+  The path goes through `sanitizeJsonPath`, responses are cached per URL for the tab, and a
+  failed request is dropped so the next call retries. The home hero prefetches its featured
+  releases through it, and `AlbumDetailPage` / `ArtistDetailPage` load their detail JSON with
+  it.
+
+Use these rather than fetching `collection.json` or detail JSON in a page. Search
+(`useSearch`) reads the collection through `loadCollection()` as well.
 
 ## Sleeve Colours (`src/lib/sleeveColour.ts`)
 
@@ -273,6 +294,7 @@ const flood = floodFor(palette, appleArtworkColours(detailedAlbum?.services));
 | `inkOn(bg)` | `INK` (`#0e0d0c`) or `CREAM` (`#fbf7ef`), whichever contrasts more |
 | `subInk(ink)` | Softer secondary text for that ink |
 | `readableOn(colour, bg)` | The colour if it reaches 3:1 on `bg`, otherwise cream |
+| `blendedFlood(colours)` | `{ background, top, ink }`: a top-to-bottom `linear-gradient` through the given floods (first held for the top 12%, for the nav). `ink` suits the top colour; the other colours are lightened (dark ink) or darkened (cream ink) until it reads at 4.5:1. One colour returns a plain background. Used by the artist page for its last three additions |
 | `appleArtworkColours(services)` | Apple Music artwork `bgColor` / `textColor1` / `textColor2` from a detailed album JSON as `#hex` strings, for use as `extra` |
 | `INK`, `CREAM`, `GROUND`, `NEUTRAL_FLOOD` | Constants |
 
@@ -374,11 +396,17 @@ This is the **recommended function** for genre filtering.
 Builds the `/genres` relationship model from static collection data.
 
 ```typescript
-import { buildGenreExplorer } from '@/lib/genreExplorer';
+import { getGenreExplorer } from '@/lib/genreExplorer';
 
-const explorer = buildGenreExplorer(collection);
+const explorer = getGenreExplorer(collection);
 const rock = explorer.genres.find((genre) => genre.name === 'Rock');
 ```
+
+`getGenreExplorer(collection)` is `buildGenreExplorer` memoised per collection array (a
+`WeakMap`), so `GenrePage`, `AlbumDetailPage` and `ArtistDetailPage` share one copy for the
+lifetime of the tab. Call `buildGenreExplorer` directly only when you need a fresh build.
+Parsed date timestamps are cached inside the module, since the build sorts thousands
+of records by date.
 
 **Provides:**
 - A global `All genres` summary for collection-wide graph/search mode
@@ -426,148 +454,6 @@ Per-track artists are carried through for compilations. Tracks without one are s
 returned — the worker resolves them against the release artist and skips the ones that land
 on a placeholder, so it can report exactly what was left out. See
 [Last.fm integration](../api-integrations/lastfm.md#album-scrobbling).
-
----
-
-## Color Utilities (`src/lib/color-utils.ts`)
-
-> Only the unused legacy Wrapped section components still import this module. Current pages
-> use [`sleeveColour.ts`](#sleeve-colours-srclibsleevecolourts).
-
-### Color Conversion
-
-```typescript
-import { hexToRgb, rgbToHex } from '@/lib/color-utils';
-
-hexToRgb('#ff6600'); // { r: 255, g: 102, b: 0 }
-rgbToHex(255, 102, 0); // '#ff6600'
-```
-
----
-
-### Contrast & Accessibility
-
-```typescript
-import {
-  getLuminance,
-  getContrastRatio,
-  hasGoodContrast,
-  getBestTextColor,
-  getReadableTextColor,
-  getEnhancedTextColor
-} from '@/lib/color-utils';
-
-getLuminance('#ff6600'); // 0.32
-getContrastRatio('#ffffff', '#000000'); // 21
-
-hasGoodContrast('#ffffff', '#000000'); // true (>= 4.5:1)
-hasGoodContrast('#ffffff', '#000000', 'AAA'); // true (>= 7:1)
-
-getBestTextColor('#1a1a2e'); // '#ffffff' or '#000000'
-
-getReadableTextColor('#1a1a2e', { preferLight: true });
-// Returns best readable color with fallbacks
-
-getEnhancedTextColor('#1a1a2e', isDarkMode);
-// Returns { color, textShadow } for maximum readability
-```
-
----
-
-### Color Manipulation
-
-```typescript
-import { lightenColor, darkenColor, addAlpha } from '@/lib/color-utils';
-
-lightenColor('#1a1a2e', 20); // 20% lighter
-darkenColor('#ff6600', 10); // 10% darker
-addAlpha('#ff6600', 0.5); // '#ff660080'
-```
-
----
-
-### Gradient Generation
-
-```typescript
-import {
-  createAlbumGradient,
-  createGlowGradient,
-  createAlbumShadow,
-  createColorBleeding,
-  createHeroBackground
-} from '@/lib/color-utils';
-
-// Context-aware gradient
-createAlbumGradient(colors, 'hero');
-// Returns CSS gradient string for hero sections
-
-createAlbumGradient(colors, 'card');
-// Returns CSS gradient for card backgrounds
-
-createGlowGradient(colors, 'medium');
-// Returns glow effect gradient
-
-createAlbumShadow(colors);
-// Returns CSS box-shadow using album colors
-
-createColorBleeding(colors);
-// Returns vibrant overlay effect
-
-createHeroBackground(colors);
-// Returns bold hero section background
-```
-
----
-
-### CSS Custom Properties
-
-```typescript
-import { generateColorProperties, getComplementaryColors } from '@/lib/color-utils';
-
-generateColorProperties(colors);
-// Returns object for style prop:
-// {
-//   '--album-bg': '#1a1a2e',
-//   '--album-fg': '#ffffff',
-//   '--album-accent': '#ff6600',
-//   '--album-muted': '#666666'
-// }
-
-getComplementaryColors(colors);
-// Returns extended palette with lighter/darker variants
-```
-
----
-
-## Genre Color Generator (`src/lib/genreColors.ts`)
-
-> Not used by any current component. Genre surfaces take sleeve colours from
-> [`genreColours.ts`](#genre-colours-srccomponentsgenresgenrecoloursts) instead.
-
-### getGenreColor
-
-Consistent color hash from genre name.
-
-```typescript
-import { getGenreColor } from '@/lib/genreColors';
-
-getGenreColor('Electronic'); // '#3b82f6' (consistent for same input)
-getGenreColor('Rock'); // '#ef4444'
-```
-
-Uses HSL color space with 0-360° hue range.
-
----
-
-### getGenreTextColor
-
-Text color for genre tags.
-
-```typescript
-import { getGenreTextColor } from '@/lib/genreColors';
-
-getGenreTextColor('Electronic'); // '#ffffff' (always white)
-```
 
 ---
 
@@ -672,6 +558,10 @@ sanitizeFolderName('( )'); // 'unknown'
 - Japanese characters
 - Special symbols (½→half, &→and)
 - Multiple/leading/trailing dashes
+
+Results are cached per input string. The function builds a regex per accent and symbol on
+every uncached call (about 10µs), and the image and slug helpers run it for every sleeve on
+every render; caching it took the genre explorer build from roughly 570ms to 25ms.
 
 ---
 

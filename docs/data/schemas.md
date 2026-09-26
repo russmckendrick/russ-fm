@@ -302,28 +302,6 @@ Pre-extracted color palettes for dynamic theming.
 
 ---
 
-### album-colors.css
-
-CSS custom properties for album colors.
-
-```css
-.radiohead-ok-computer {
-  --album-bg: #1a1a2e;
-  --album-fg: #ffffff;
-  --album-accent: #4a90a4;
-  --album-muted: #6b7b8a;
-}
-
-.radiohead-kid-a {
-  --album-bg: #0d1117;
-  --album-fg: #ffffff;
-  --album-accent: #dc3545;
-  --album-muted: #555555;
-}
-```
-
----
-
 ### wrapped.json
 
 Year-in-review data structure.
