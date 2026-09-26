@@ -68,7 +68,7 @@ Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (c
 ## Page patterns
 
 - **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
-- **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side with a scrobble button per side; Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
+- **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side (scrobbling is whole-album, from the hero); Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
 - **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
 - **Artist**: the whole top blends through the sleeve colours of the last three additions (`blendedFlood`), newest at the top by the nav; the discography is a `RecordTile` grid with a Recently added (default, date added on each tile) / By year (grouped by decade of original release, oldest first) toggle.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).

@@ -14,7 +14,7 @@ interface AlbumScrobbleButtonProps {
   className?: string;
   fullWidth?: boolean;
   style?: React.CSSProperties;
-  /** Idle label, e.g. "Scrobble album" or "Scrobble side A". */
+  /** Idle label. Defaults to "Scrobble album". */
   label?: string;
   /** Solid fill colours (flood ink on flood). Omit for an outline pill. */
   tone?: { background: string; color: string };

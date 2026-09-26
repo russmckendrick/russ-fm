@@ -295,7 +295,7 @@ import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | album | `{ artist, album, tracks }` | – | Payload; build `tracks` with `toScrobbleTracks` |
-| label | `string` | `'Scrobble album'` | Idle label, e.g. `Scrobble side A` |
+| label | `string` | `'Scrobble album'` | Idle label |
 | tone | `{ background, color }` | – | Solid fill (flood ink on flood). Omit for an outline pill |
 | pillSize | `'sm' \| 'md' \| 'lg'` | `'md'` | Pill size |
 | onActiveChange | `(active: boolean) => void` | – | Called when a scrobble starts and finishes, so heroes can slide the disc out and spin it at 45 |

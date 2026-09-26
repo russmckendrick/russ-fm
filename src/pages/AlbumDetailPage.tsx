@@ -966,8 +966,6 @@ export function AlbumDetailPage() {
                   grouping={sides}
                   accent={accent}
                   discColour={flood.flood}
-                  artist={scrobbleArtist}
-                  albumName={album.release_name}
                   spotifyIndex={spotifyTrackIndex}
                   getDuration={getTrackDuration}
                 />
@@ -1205,16 +1203,12 @@ function Tracklist({
   grouping,
   accent,
   discColour,
-  artist,
-  albumName,
   spotifyIndex,
   getDuration,
 }: {
   grouping: Grouping;
   accent: string;
   discColour: string;
-  artist: string;
-  albumName: string;
   spotifyIndex: Map<string, string>;
   getDuration: (t: Track) => string;
 }) {
@@ -1231,7 +1225,6 @@ function Tracklist({
           <div className="grid gap-x-14 gap-y-12 md:grid-cols-2">
             {block.sides.map((side, si) => {
               const rows = side.tracks.filter(t => t.position || t.duration_ms || t.name);
-              const sideLetter = side.label.replace(/^Side\s*/i, '');
               return (
                 <div key={si} className="flex min-w-0 flex-col gap-3">
                   {side.label && (
@@ -1240,14 +1233,6 @@ function Tracklist({
                         <Vinyl label={discColour} spin={false} className="inset-0" />
                       </div>
                       <span className="t-disp flex-1 text-[30px] md:text-[36px]">{side.label}</span>
-                      {toScrobbleTracks(rows).length > 0 && (
-                        <AlbumScrobbleButton
-                          album={{ artist, album: albumName, tracks: toScrobbleTracks(rows) }}
-                          label={side.label.startsWith('Side') ? `Scrobble side ${sideLetter}` : `Scrobble ${side.label.toLowerCase()}`}
-                          pillSize="sm"
-                          className="border-[color:var(--cream-rule)]"
-                        />
-                      )}
                     </div>
                   )}
                   <ol className="m-0 list-none p-0">

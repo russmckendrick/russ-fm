@@ -15,7 +15,7 @@ This document covers the route-level page components in russ.fm.
 |-------|-----------|
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
-| `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side (scrobble per side) → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
+| `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
@@ -203,9 +203,8 @@ Apple Music artwork colours), which the nav also takes.
 
 - **About this record** — description with an expand toggle.
 - **Tracklist** — grouped by side (and by LP for multi-disc sets). Each
-  side has a small disc, its label, and an `AlbumScrobbleButton` that
-  scrobbles only that side ("Scrobble side A"). Section-header rows render
-  as kickers. Each track deep-links to Spotify when a match exists
+  side has a small disc and its label; scrobbling is whole-album only, from
+  the hero. Section-header rows render as kickers. Each track deep-links to Spotify when a match exists
   (matched by normalised title via
   [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)).
 - **Listen** — `MusicPlayerSection` embeds.
