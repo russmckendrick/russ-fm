@@ -319,8 +319,10 @@ Loads the collection through the shared `loadCollection()`.
 
 **Route:** `/artist/:slug`
 
-The top of the page is one solid colour: the boldest (most `vivid`) sleeve
-among the artist's last ten additions, via `recordsFlood(uris, map, 10)`.
+The top of the page is one solid colour: the sleeve of the artist's newest
+addition, skipping monochrome (`vivid` 0) sleeves, via `newestFlood(uris, map)`.
+(Picking the most vivid sleeve instead let saturated red covers win almost
+half of all artist pages.)
 The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
 swatch tints the rest of the page. No gradients.
 

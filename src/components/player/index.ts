@@ -11,4 +11,4 @@ export { CoverHero, AFTER_HERO } from './CoverHero';
 export { RecordTile } from './RecordTile';
 export { FitTitle } from './FitTitle';
 export { FloodBand } from './FloodBand';
-export { bandFromFlood, recordsFlood, usePageBand, useRecordsFlood, type RecordsFlood } from './useRecordsFlood';
+export { bandFromFlood, newestFlood, recordsFlood, usePageBand, useRecordsFlood, type RecordsFlood } from './useRecordsFlood';

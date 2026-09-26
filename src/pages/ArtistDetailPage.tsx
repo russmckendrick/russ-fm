@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo, type CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
-import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, recordsFlood, usePageFlood } from '@/components/player';
+import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
@@ -165,11 +165,11 @@ export function ArtistDetailPage() {
     [order, byAdded, albums],
   );
 
-  // The top of the page is one solid colour: the boldest sleeve among the
-  // artist's last ten additions. Its dark swatch grounds the rest of the page.
+  // The top of the page is one solid colour: the newest addition's sleeve,
+  // skipping monochrome ones. Its dark swatch grounds the rest of the page.
   const colourMap = useAlbumColorMap();
   const flood = useMemo(
-    () => recordsFlood(byAdded.map(a => a.uri_release), colourMap, 10) ?? bandFromFlood(floodFor(null)),
+    () => newestFlood(byAdded.map(a => a.uri_release), colourMap) ?? bandFromFlood(floodFor(null)),
     [byAdded, colourMap],
   );
   usePageFlood(

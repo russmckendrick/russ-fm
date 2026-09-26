@@ -33,6 +33,19 @@ export function recordsFlood(uris: Array<string | null | undefined>, map: Colour
   return bandFromFlood(f);
 }
 
+/**
+ * Colours from the newest record that has a colour of its own: the first
+ * uri whose sleeve is not monochrome, else the first uri's neutral. Unlike
+ * `recordsFlood` this never hunts for the boldest sleeve, which would let one
+ * saturated (usually red) cover win every page it appears on.
+ */
+export function newestFlood(uris: Array<string | null | undefined>, map: ColourMap): RecordsFlood | null {
+  const known = uris.filter((u): u is string => !!u);
+  if (!known.length || !map) return null;
+  const pick = known.find(u => (map[u]?.vivid ?? 0) > 0) ?? known[0];
+  return bandFromFlood(floodFor(map[pick]));
+}
+
 /** A band from a single sleeve's flood (a genre's or facet's lead record). */
 export function bandFromFlood(f: Flood): RecordsFlood {
   return { background: f.flood, top: f.flood, ink: f.ink, sub: f.sub, ground: pageGround(f) };
