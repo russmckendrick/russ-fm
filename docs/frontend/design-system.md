@@ -51,8 +51,8 @@ Scale titles to the longest word in condensed type so long album names never ove
 | Component | What it is |
 | --- | --- |
 | `FloodProvider`, `usePageFlood(flood, ink, { cover?, ground? })`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
-| `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below. |
-| `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. `spinning` turns the spin off; the home hero spins only the visible record. |
+| `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below; `artClassName` adds classes to the art column (the album page widens it to the full content width below `md`). |
+| `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. `spinning` turns the spin off; the home hero spins only the visible record. `discOnMobile={false}` / `stickerOnMobile={false}` leave just the sleeve below `md`. |
 | `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's `ground`; `cover` prints a sleeve on the label (zoomed so framed sleeves fill the circle) and crossfades when it changes. |
 | `SpinningMark` | The logo: a `Vinyl` with a bigger label carrying the page's `cover`, or the page flood with a printed mark. |
 | `.vinyl-lit` | For a record that must read on the dark ground (logo, footer): lighter edge lip, hairline rim, stronger fixed highlights and visible grooves. No halo or blur. |
@@ -73,7 +73,7 @@ Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (c
 ## Page patterns
 
 - **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops from `md` up, text stack sized to the active record), numbered progress bars between previous/next. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
-- **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side (scrobbling is whole-album, from the hero); Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
+- **Album**: `CoverHero` with scrobble as the main action (on phones the cover is sleeve-only, no disc or sticker, and spans the content width); tracklist grouped by side (scrobbling is whole-album, from the hero); Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
 - **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
 - **Artist**: the whole top is one solid colour, the boldest sleeve among the artist's last ten additions (`recordsFlood(uris, map, 10)`), and its dark swatch grounds the page; the discography is a `RecordTile` grid with a Recently added (default, date added on each tile) / By year (grouped by decade of original release, oldest first) toggle.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).

@@ -17,6 +17,8 @@ interface HeroRecordProps {
   sticker?: { date: string; background: string; color: string; label?: string };
   /** Show the sticker below `md` too (phones get the small one). */
   stickerOnMobile?: boolean;
+  /** Show the disc below `md` too; off leaves just the sleeve on phones. */
+  discOnMobile?: boolean;
   eager?: boolean;
   className?: string;
 }
@@ -36,6 +38,7 @@ export function HeroRecord({
   fast = false,
   sticker,
   stickerOnMobile = true,
+  discOnMobile = true,
   eager = true,
   className,
 }: HeroRecordProps) {
@@ -46,7 +49,10 @@ export function HeroRecord({
         text={labelText}
         spin={spinning}
         fast={fast}
-        className="left-[2%] top-[2%] h-[96%] w-[96%] transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)]"
+        className={cn(
+          'left-[2%] top-[2%] h-[96%] w-[96%] transition-transform duration-1000 ease-[cubic-bezier(.2,.8,.2,1)]',
+          !discOnMobile && 'max-md:hidden',
+        )}
         style={{ transform: `translateX(${discOut}%)` }}
       />
       <Sleeve

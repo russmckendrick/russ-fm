@@ -902,6 +902,7 @@ export function AlbumDetailPage() {
     <div style={{ background: flood.ground }} className="flood-surface -mb-24 pb-24">
       <CoverHero
         flood={flood}
+        artClassName={isBox ? undefined : 'max-md:w-full'}
         art={
           isBox ? (
             <BoxHeroArt
@@ -922,6 +923,8 @@ export function AlbumDetailPage() {
               discOut={scrobbling ? 34 : 15}
               fast={scrobbling}
               sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
+              stickerOnMobile={false}
+              discOnMobile={false}
             />
           )
         }
