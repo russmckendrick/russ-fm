@@ -867,7 +867,7 @@ export function AlbumDetailPage() {
           <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
       )}
-      <div className="mt-1 flex flex-wrap gap-2.5">
+      <div className="pill-row-compact mt-1 flex flex-wrap gap-2.5">
         {!isBox && tracks.length > 0 && (
           <AlbumScrobbleButton
             album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
