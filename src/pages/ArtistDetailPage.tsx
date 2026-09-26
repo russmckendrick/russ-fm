@@ -1,18 +1,18 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
-import { PillLink, RecordTile, SectionHeading, usePageFlood } from '@/components/player';
+import { FitTitle, PillLink, RecordTile, SectionHeading, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+import { useBackdropTone } from '@/hooks/useBackdropTone';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { slugify } from '@/lib/browseFacets';
-import { blendedFlood, floodFor } from '@/lib/sleeveColour';
-import { cn } from '@/lib/utils';
-import { getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { blendedFlood, floodFor, INK } from '@/lib/sleeveColour';
+import { getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
@@ -162,6 +162,14 @@ export function ArtistDetailPage() {
     [discography, colourMap],
   );
   usePageFlood(discography.length ? flood.top : null, discography.length ? flood.ink : null);
+  // Blend the portrait into the flood. Multiply turns a light backdrop into
+  // the flood colour; screen does the same for a dark backdrop, but only on a
+  // dark flood; on a pale one it washes the subject out to a ghost, so there
+  // the photo multiplies too and keeps its tonal range. Unmeasured → go by
+  // the flood alone.
+  const backdrop = useBackdropTone(artistPath ? getArtistAvatarFromData(`/artist/${artistPath}/`) : undefined);
+  const darkFlood = flood.ink !== INK;
+  const portraitBlend = darkFlood && backdrop !== 'light' ? 'screen' : 'multiply';
 
   useEffect(() => {
     if (!artistJsonUrl) return;
@@ -242,7 +250,6 @@ export function ArtistDetailPage() {
 
   const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
   const listeners = artistData?.services?.lastfm?.listeners;
-  const nameSize = artistName.length <= 12 ? 'text-[64px] md:text-[120px] xl:text-[176px]' : artistName.length <= 22 ? 'text-[48px] md:text-[88px] xl:text-[128px]' : 'text-[40px] md:text-[64px] xl:text-[88px]';
   const services = [
     artistData?.services?.spotify?.url && { label: 'Spotify', url: artistData.services.spotify.url },
     artistData?.services?.apple_music?.url && { label: 'Apple Music', url: artistData.services.apple_music.url },
@@ -260,17 +267,23 @@ export function ArtistDetailPage() {
   return (
     <div>
       <div className="flood-surface" style={{ background: flood.background, color: flood.ink }}>
-        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(280px,420px)_minmax(0,1fr)] lg:gap-16 lg:px-14 lg:pt-10">
-          <div className="aspect-[4/5] w-full max-w-[420px] overflow-hidden bg-black/10">
+        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(320px,520px)_minmax(0,1fr)] lg:gap-16 lg:px-14 lg:pt-10">
+          {/* The portrait is printed into the flood in greyscale, blended so
+              its backdrop takes the sleeve colours (see portraitBlend). The
+              bottom edge fades out rather than ending on a hard crop; the mask
+              sits on the <img> because a mask on the wrapper would isolate it
+              and stop the blend reaching the flood. */}
+          <div className="aspect-[4/5] w-full max-w-[520px] overflow-hidden">
             <img
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
               onError={handleImageError}
-              className="h-full w-full object-cover grayscale contrast-[1.1]"
+              className="h-full w-full object-cover object-top grayscale contrast-[1.2] [mask-image:linear-gradient(to_bottom,#000_78%,transparent)]"
+              style={{ mixBlendMode: portraitBlend }}
             />
           </div>
           <div className="flex min-w-0 flex-col gap-7 lg:pt-4">
-            <h1 className={cn('t-disp m-0 break-words', nameSize)}>{artistName}</h1>
+            <FitTitle max={176} className="t-disp">{artistName}</FitTitle>
             <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map(([k, v]) => (
                 <div key={k} className="flex flex-col-reverse gap-1">

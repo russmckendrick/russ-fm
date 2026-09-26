@@ -295,7 +295,13 @@ artist's last three additions (two or one if that's all there is), newest
 at the top so it meets the nav, which follows via `usePageFlood`. See
 `blendedFlood()` in `src/lib/sleeveColour.ts`.
 
-- **Header** — greyscale portrait, artist name in `t-disp`, stats
+- **Header** — the portrait printed into the flood in greyscale, fading out at the bottom.
+  It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
+  except on a dark flood with a dark backdrop, where it screens so the black takes the
+  flood instead. Screening on a pale flood washed subjects out to ghosts, hence the rule.
+  The backdrop is judged by `useBackdropTone` from the avatar; unmeasured, it goes by the
+  flood alone. The artist name is a `FitTitle` (up to 176px, shrunk until its longest word fits,
+  never broken mid-word). Then stats
   (records, box sets, Last.fm listeners), biography, service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when

@@ -8,3 +8,4 @@ export { SectionHeading } from './SectionHeading';
 export { HeroRecord } from './HeroRecord';
 export { CoverHero, AFTER_HERO } from './CoverHero';
 export { RecordTile } from './RecordTile';
+export { FitTitle } from './FitTitle';

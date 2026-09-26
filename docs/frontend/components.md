@@ -22,6 +22,7 @@ All exported from `@/components/player`.
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
 | `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker. |
 | `RecordTile` | `RecordTile.tsx` | A record in a row or grid. |
+| `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid. |
 | `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
 

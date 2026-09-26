@@ -198,6 +198,16 @@ no entry.
 
 `preloadAlbumColors(): Promise<void>` starts loading `album-colors.json` ahead of use.
 
+### useBackdropTone (`src/hooks/useBackdropTone.ts`)
+
+`useBackdropTone(src): 'light' | 'dark' | null`. Loads its own CORS-enabled copy of an image
+(pass a small size, e.g. the artist avatar), draws it to a 24×30 canvas and averages the
+luminance of the top quarter and outer columns, where a portrait's backdrop shows. The
+visible `<img>` is untouched. Results are cached per URL. Returns `null` until measured or
+when the host doesn't send CORS headers for the current origin (`assets.russ.fm` allows
+`https://russ.fm`), so callers need a fallback. The artist page uses it to pick the
+portrait's blend mode.
+
 ---
 
 ## Flood Hooks
