@@ -8,7 +8,6 @@ import {
   buildAppleMusicEmbedUrl, 
   MusicServiceError 
 } from '@/lib/musicServiceUtils';
-import { useTheme } from '@/hooks/useTheme';
 
 export interface AppleMusicEmbedProps {
   albumUrl: string;
@@ -50,7 +49,6 @@ export const AppleMusicEmbed = memo(function AppleMusicEmbed({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
   const mountedRef = useRef(true);
-  const theme = useTheme();
 
   // Parse Apple Music URL to extract album ID and country
   const parsedData = (() => {
@@ -197,7 +195,8 @@ export const AppleMusicEmbed = memo(function AppleMusicEmbed({
 
   const embedUrl = buildAppleMusicEmbedUrl(albumId, country, { 
     height, 
-    theme: theme 
+    // The site is dark-ground only, so the players always use their dark theme.
+    theme: 'dark'
   });
 
   return (

@@ -20,6 +20,7 @@ Main collection index used for album listings.
       "uri_artist": "/artist/radiohead",
       "date_added": "2024-01-10T15:00:00Z",
       "date_release_year": 1997,
+      "year_original": 1997,
       "discogs_id": "123456",
       "genre_names": ["Alternative Rock", "Art Rock"],
       "artists": [
@@ -57,7 +58,8 @@ Main collection index used for album listings.
 | albums[].uri_release | string | Album URL path |
 | albums[].uri_artist | string | Primary artist URL path |
 | albums[].date_added | string | When added to collection |
-| albums[].date_release_year | number | Release year |
+| albums[].date_release_year | string | Release date (`YYYY-MM-DD`). Prefers Apple Music, then Spotify, then the pressing's Discogs year, so it is often a reissue date |
+| albums[].year_original | number \| null | Original release year: the Discogs master year when known, otherwise the earliest year any source reports. Use this (via `src/lib/releaseYear.ts`) for anything that orders, groups, filters or labels by year |
 | albums[].discogs_id | string | Discogs release ID |
 | albums[].genre_names | string[] | Genre list |
 | albums[].styles | string[] | Discogs styles (excluding generic "Music"); used by detail page + browse |
@@ -80,6 +82,13 @@ Main collection index used for album listings.
 >
 > collection.json is regenerated after every mutating scrapper action — collection runs, CLI
 > `--save` commands, and every TUI detail-editor edit/refresh — so it always reflects the DB.
+>
+> **Original year (Sep 2026):** `year_original` sits right after `date_release_year`. It comes
+> from `raw_data.discogs.master_year` on the release row (the Discogs master's `year`); without
+> one the generator takes the earliest year from the Discogs `year` / `released`, Apple Music
+> `releaseDate` and Spotify `release_date`, including years parsed out of Python-era repr
+> strings. `date_release_year` is unchanged and the album JSON does not carry `year_original`.
+> Backfill older rows with `scrapper backfill-original-years`.
 >
 > **Band members (Sep 2026):** Discogs credits some releases as a band followed by its players
 > ("James Taylor Trio", "James Taylor", "Orlando Le Fleming", …). Those line-up credits carry
@@ -268,59 +277,62 @@ Full artist data.
 }
 ```
 
+The artist page's biography reads `services.lastfm.bio_content` (Last.fm's full
+biography, HTML with a "Read more on Last.fm" link and licence line at the end)
+and uses it when it is longer than `biography`. Keep that key in the per-artist
+JSON.
+
 ---
 
 ### album-colors.json
 
-Pre-extracted color palettes for dynamic theming.
+Sleeve colours for every album, decided at build time by
+`scripts/generate-album-colors.js` (see
+[asset-processing.md](../build-pipeline/asset-processing.md#color-extraction)).
+Keyed by `uri_release`, one album per line, in `collection.json` order. Albums no
+longer in the collection are dropped.
 
 ```json
 {
-  "radiohead-ok-computer": {
-    "background": "#1a1a2e",
-    "foreground": "#ffffff",
-    "accent": "#4a90a4",
-    "muted": "#6b7b8a"
-  },
-  "radiohead-kid-a": {
-    "background": "#0d1117",
-    "foreground": "#ffffff",
-    "accent": "#dc3545",
-    "muted": "#555555"
-  }
+  "/album/bloom-38528559/": {"v":2,"flood":"#d2d5df","ink":"#0e0d0c","ground":"#1b1b1e","glow":"#d2d5df","secondary":null,"hue":0.762,"vivid":0},
+  "/album/glastonbury-1994-38527017/": {"v":2,"flood":"#05abcb","ink":"#0e0d0c","ground":"#0a232b","glow":"#05abcb","secondary":"#0f5a97","hue":0.605,"vivid":0.94}
 }
 ```
 
-**Color Definitions:**
+**Fields:**
 
-| Color | Description |
+| Field | Description |
 |-------|-------------|
-| background | Dark color derived from album artwork |
-| foreground | Text color (typically white) |
-| accent | Most vibrant color from palette |
-| muted | Secondary/subtle accent color |
+| v | Palette version (currently `2`); the generator redoes entries from older versions |
+| flood | The sleeve's colour, used for heroes, tiles, bars and chips. A pale neutral tinted with the sleeve's own cast when `vivid` is 0 |
+| ink | `#0e0d0c` or `#fbf7ef`, whichever reads better on the flood |
+| ground | The sleeve's own dark (OKLab L 0.17–0.24), used for page bodies and vinyl labels. Never pure black |
+| glow | The flood, lightened (keeping its hue) until it reaches 3:1 on the ground |
+| secondary | A second sleeve colour that clearly differs from the flood, or `null` |
+| hue | Flood hue, 0–1 (OKLCH), for colour sorting |
+| vivid | How bold the flood is: 0 for monochrome sleeves, up to about 2.6 |
+
+Albums without artwork get the default palette (flood `#e8e2d6`, ground `#1c1916`,
+`vivid` 0).
 
 ---
 
-### album-colors.css
+### album-swatches.json
 
-CSS custom properties for album colors.
+The sleeve's main colours, for the "Sleeve colours" section on the album page. Same
+keys as `album-colors.json`; each value is up to six `[hex, percentOfSleeve]` pairs,
+largest first (empty for albums without artwork).
 
-```css
-.radiohead-ok-computer {
-  --album-bg: #1a1a2e;
-  --album-fg: #ffffff;
-  --album-accent: #4a90a4;
-  --album-muted: #6b7b8a;
-}
-
-.radiohead-kid-a {
-  --album-bg: #0d1117;
-  --album-fg: #ffffff;
-  --album-accent: #dc3545;
-  --album-muted: #555555;
+```json
+{
+  "/album/glastonbury-1994-38527017/": [["#183139",23],["#465428",23],["#135084",11],["#efc74e",11],["#9c7f32",10],["#39b7b0",9]]
 }
 ```
+
+It is a separate file because only the album page uses it: folded into
+`album-colors.json` it would roughly double the size of the map every page loads
+(about 138 KB gzipped for the map, 178 KB for the swatches). The frontend fetches it
+on first use through `useAlbumSwatches()`.
 
 ---
 
@@ -347,13 +359,18 @@ Year-in-review data structure.
           "release_artist": "Artist Name",
           "date_added": "2024-03-15T10:00:00Z",
           "date_release_year": 2024,
+          "year_original": 1997,
           "slug": "artist-album",
           "images": {...},
           "colors": {
-            "background": "#1a1a2e",
-            "foreground": "#ffffff",
-            "accent": "#ff6600",
-            "muted": "#666666"
+            "v": 2,
+            "flood": "#e6752f",
+            "ink": "#0e0d0c",
+            "ground": "#281c12",
+            "glow": "#e6752f",
+            "secondary": "#923026",
+            "hue": 0.134,
+            "vivid": 0.88
           }
         }
       ],
@@ -452,6 +469,12 @@ CREATE INDEX idx_releases_year ON releases(year);
 > is what the public `services{}` block is derived from. The canonical Perplexity location is the
 > top-level `raw_data.perplexity`; rows written by the retired Python pipeline may still nest it
 > under `raw_data.services.perplexity`, and readers fall back to that legacy key.
+>
+> `raw_data.discogs` holds the release's source `images`, `master_id` (null when the release has
+> no master) and `master_year`, the master's original release year. `master_year: null` means
+> "looked up, no master or no year"; an absent key means not looked up yet (or the lookup
+> failed), which is what `backfill-original-years` picks up. Set by `process_release`, the
+> detail editor's Discogs refresh and the backfill; no schema change.
 
 #### artists
 
@@ -538,7 +561,8 @@ interface Album {
   release_artist: string;
   discogs_id: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;      // often the reissue/pressing date
+  year_original?: number | null;  // original release year (Discogs master, else earliest known)
   uri_release: string;
   uri_artist: string;
 
@@ -610,14 +634,21 @@ interface Format {
 ### Color Palette Type
 
 ```typescript
-interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+// src/hooks/useAlbumColors.ts; ColorPalette in src/types/wrapped.ts is an alias
+interface AlbumColorPalette {
+  v: number;
+  flood: string;
+  ink: string;
+  ground: string;
+  glow: string;
+  secondary: string | null;
+  hue: number;   // 0–1
+  vivid: number; // 0 for monochrome, up to ~2.6
 }
 
-type AlbumColors = Record<string, ColorPalette>;
+type AlbumColors = Record<string, AlbumColorPalette>;
+type AlbumSwatch = [string, number]; // [hex, percent of the sleeve]
+type AlbumSwatches = Record<string, AlbumSwatch[]>;
 ```
 
 ### Search Result Type
@@ -644,7 +675,8 @@ interface WrappedRelease {
   release_name: string;
   release_artist: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;
+  year_original?: number | null;
   slug: string;
   images: {
     'hi-res': string;

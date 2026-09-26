@@ -294,7 +294,9 @@ rather than posted as guaranteed no-ops. If no track survives, the endpoint retu
 
 The frontend builds the payload with `toScrobbleTracks()` (`src/lib/scrobbleTracks.ts`),
 which also drops Discogs' position-less section-header rows ("Side :/", box set album
-titles) so they are never scrobbled as songs.
+titles) so they are never scrobbled as songs. Besides the whole-album button, the album page
+has one button per side and, on box sets, one per disc; each posts only those tracks to the
+same endpoint.
 
 **Ignored scrobbles.** `track.scrobble` returns HTTP 200 with an `ignoredMessage` code when
 Last.fm accepts the request but bins the play. These never reach the profile, so the worker

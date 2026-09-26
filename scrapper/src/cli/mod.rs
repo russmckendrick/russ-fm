@@ -73,6 +73,9 @@ pub enum Command {
     EnrichDescription(EnrichDescriptionArgs),
     /// Backfill release videos from Discogs.
     BackfillVideos(BackfillVideosArgs),
+    /// Look up each release's Discogs master for its original release year (collection.json
+    /// `year_original`). Resumable; regenerates collection.json when done.
+    BackfillOriginalYears(BackfillOriginalYearsArgs),
     /// Built-in database manager (search/list/delete/stats/backup).
     #[command(subcommand)]
     Db(DbCommand),
@@ -294,6 +297,19 @@ pub struct BackfillVideosArgs {
     pub pause: Option<u64>,
 }
 
+#[derive(Debug, Args)]
+pub struct BackfillOriginalYearsArgs {
+    /// Only process this many releases (newest additions first).
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// List what would be looked up without calling Discogs.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Look up every release again, including ones already done.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+}
+
 #[derive(Debug, Subcommand)]
 pub enum DbCommand {
     /// Search releases or artists.
@@ -399,6 +415,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::GenerateCollection(a) => ops::generate::run(&cfg, a).await,
         Command::EnrichDescription(a) => ops::descriptions::run(&cfg, a).await,
         Command::BackfillVideos(a) => ops::videos::run(&cfg, a).await,
+        Command::BackfillOriginalYears(a) => ops::original_years::run(&cfg, a).await,
     }
 }
 

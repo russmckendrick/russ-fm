@@ -1,39 +1,49 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import type { CSSProperties } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface YearSelectorProps {
   currentYear: number;
   availableYears: number[];
   onYearChange: (year: number) => void;
-  triggerClassName?: string;
-  contentClassName?: string;
+  className?: string;
+  style?: CSSProperties;
 }
 
-export function YearSelector({
-  currentYear,
-  availableYears,
-  onYearChange,
-  triggerClassName = '',
-  contentClassName = '',
-}: YearSelectorProps) {
+/**
+ * Year picker styled as a pill. A native <select> sits invisibly over the
+ * pill so keyboard, screen reader and phone pickers all work as normal.
+ */
+export function YearSelector({ currentYear, availableYears, onYearChange, className, style }: YearSelectorProps) {
+  const thisYear = new Date().getFullYear();
   return (
-    <Select value={currentYear.toString()} onValueChange={(value) => onYearChange(parseInt(value, 10))}>
-      <SelectTrigger className={`w-[180px] ${triggerClassName}`}>
-        <SelectValue placeholder="Select year" />
-      </SelectTrigger>
-      <SelectContent className={contentClassName}>
-        {availableYears.map((year) => (
-          <SelectItem key={year} value={year.toString()}>
+    <label
+      className={cn(
+        'pill relative cursor-pointer focus-within:ring-2 focus-within:ring-current focus-within:ring-offset-2 focus-within:ring-offset-transparent',
+        className,
+      )}
+      style={style}
+    >
+      <span className="t-mono" aria-hidden>
+        {currentYear}
+        {currentYear === thisYear ? ' · YTD' : ''}
+      </span>
+      <ChevronDown className="h-4 w-4" aria-hidden />
+      <select
+        value={String(currentYear)}
+        onChange={e => onYearChange(parseInt(e.target.value, 10))}
+        aria-label="Choose a year"
+        className="absolute inset-0 h-full w-full cursor-pointer appearance-none opacity-0"
+        style={{ colorScheme: 'dark' }}
+      >
+        {!availableYears.includes(currentYear) && <option value={currentYear}>{currentYear}</option>}
+        {availableYears.map(year => (
+          <option key={year} value={year}>
             {year}
-            {year === new Date().getFullYear() && ' (Year to Date)'}
-          </SelectItem>
+            {year === thisYear ? ' (year to date)' : ''}
+          </option>
         ))}
-      </SelectContent>
-    </Select>
+      </select>
+    </label>
   );
 }

@@ -129,6 +129,23 @@ impl DiscogsService {
         .await
     }
 
+    /// The original release year of a master: its `year`, which Discogs sets to 0 when
+    /// unknown (→ `None`). Unlike search and big listings, `/masters/{id}` accepts the personal
+    /// token, so this runs in the 60/min authed bucket rather than the 25/min anonymous one.
+    pub async fn master_year(&self, master_id: &str) -> ServiceResult<Option<i64>> {
+        let v = self.get(&format!("/masters/{master_id}"), &[]).await?;
+        Ok(v.get("year").and_then(|y| y.as_i64()).filter(|y| *y > 0))
+    }
+
+    /// A release's `master_id` (a number on the wire; 0 or absent = no master).
+    pub fn master_id_of(release: &Value) -> Option<String> {
+        match release.get("master_id")? {
+            Value::Number(n) => n.as_i64().filter(|i| *i > 0).map(|i| i.to_string()),
+            Value::String(s) => Some(s.trim().to_string()).filter(|s| !s.is_empty() && s != "0"),
+            _ => None,
+        }
+    }
+
     /// Fetch a master by ID (used to resolve its `main_release`). Anonymous like the other
     /// public catalogue browsing calls.
     pub async fn get_master(&self, master_id: &str) -> ServiceResult<Value> {
@@ -242,5 +259,20 @@ impl DiscogsService {
                     .collect()
             })
             .unwrap_or_default()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::DiscogsService;
+    use serde_json::json;
+
+    #[test]
+    fn master_id_of_reads_numbers_and_strings_and_ignores_zero() {
+        assert_eq!(DiscogsService::master_id_of(&json!({ "master_id": 48660 })), Some("48660".into()));
+        assert_eq!(DiscogsService::master_id_of(&json!({ "master_id": "48660" })), Some("48660".into()));
+        assert_eq!(DiscogsService::master_id_of(&json!({ "master_id": 0 })), None);
+        assert_eq!(DiscogsService::master_id_of(&json!({ "master_id": null })), None);
+        assert_eq!(DiscogsService::master_id_of(&json!({})), None);
     }
 }

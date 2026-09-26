@@ -1,0 +1,654 @@
+/* =========================================================================
+   russ.fm — "player" design system
+   -------------------------------------------------------------------------
+   Bold colour floods lifted from each sleeve, on a warm near-black ground,
+   with records treated as physical objects (sleeves, discs, stickers,
+   crates). Pages set the flood colour through FloodProvider
+   (src/components/player/FloodContext.tsx); the navigation paints itself in
+   the same colour so the hero and header read as one surface.
+   ========================================================================= */
+
+:root {
+  /* --ground is set per page by FloodProvider (the lead sleeve's dark
+     swatch); the raised surfaces are lifted from it so panels keep its tint. */
+  --ground: #0e0d0c;
+  --ground-2: color-mix(in oklab, var(--ground), #fbf7ef 5%);
+  --ground-3: color-mix(in oklab, var(--ground), #fbf7ef 10%);
+  --cream: #fbf7ef;
+  --cream-dim: #a9a39a;
+  --cream-rule: rgba(251, 247, 239, 0.14);
+  --neutral-flood: #e8e2d6;
+
+  /* Set per page by FloodProvider. */
+  --flood: var(--ground);
+  --flood-ink: var(--cream);
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+  background-color: var(--ground);
+  transition: background-color 0.8s var(--ease-out);
+}
+
+/* --- Type ----------------------------------------------------------------- */
+
+.t-disp {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 900;
+  font-variation-settings: normal;
+  letter-spacing: -0.025em;
+  line-height: 0.88;
+  text-transform: uppercase;
+}
+
+.t-cond {
+  font-family: var(--font-display);
+  font-stretch: 66%;
+  font-weight: 900;
+  font-variation-settings: normal;
+  letter-spacing: -0.005em;
+  line-height: 0.86;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.t-dispn {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  font-weight: 800;
+  font-variation-settings: normal;
+  letter-spacing: -0.01em;
+}
+
+.t-mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.t-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --- Sleeves -------------------------------------------------------------- */
+
+.sleeve {
+  position: relative;
+  z-index: 2;
+  display: block;
+  background: var(--ground-3);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 30px 60px -18px rgba(0, 0, 0, 0.6),
+    0 3px 8px rgba(0, 0, 0, 0.35);
+}
+
+.sleeve > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sleeve::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07),
+    inset 2px 0 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Shrink-wrap shine. */
+.shrinkwrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    118deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 38%,
+    transparent 44%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.05) 76%,
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+}
+
+/* --- Vinyl ---------------------------------------------------------------- */
+
+.vinyl {
+  position: absolute;
+  border-radius: 50%;
+  background: #0b0b0b;
+  box-shadow: 0 22px 40px -10px rgba(0, 0, 0, 0.6), inset 0 0 0 1px #000;
+}
+
+.vinyl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  background: conic-gradient(
+    from 25deg,
+    transparent 0 6%,
+    rgba(255, 255, 255, 0.13) 11%,
+    transparent 17% 50%,
+    rgba(255, 255, 255, 0.09) 60%,
+    transparent 67%
+  );
+}
+
+.vinyl-grooves {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.045) 0 1px,
+    transparent 1px 3px
+  );
+}
+
+.vinyl-label {
+  position: absolute;
+  left: 33%;
+  top: 33%;
+  width: 34%;
+  height: 34%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.35);
+}
+
+.vinyl-label::before {
+  content: '';
+  position: absolute;
+  width: 9%;
+  height: 9%;
+  left: 45.5%;
+  top: 45.5%;
+  border-radius: 50%;
+  background: #0b0b0b;
+  z-index: 1;
+}
+
+/* A sleeve printed on the centre label (the logo and the footer record).
+   Zoomed into the artwork so framed sleeves (a border round the picture)
+   fill the circle instead of showing as a square in the middle. */
+.vinyl-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(1.45);
+}
+
+/* A new sleeve fades in over the previous one. */
+.vinyl-cover-in {
+  animation: label-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes label-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* A record that has to read on the dark ground (the logo, the footer):
+   a lighter lip at the edge, a hairline rim, stronger fixed highlights that
+   stay put while the disc turns, and visible grooves. */
+.vinyl-lit {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #121212 0 31%,
+    #0c0c0c 32% 92.5%,
+    #2b2926 95%,
+    #171615 97.5%,
+    #0c0c0c 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(251, 247, 239, 0.2),
+    0 10px 24px -10px rgba(0, 0, 0, 0.8);
+}
+
+.vinyl-lit::after {
+  background: conic-gradient(
+    from 30deg,
+    transparent 0 5%,
+    rgba(255, 255, 255, 0.26) 11%,
+    transparent 18% 50%,
+    rgba(255, 255, 255, 0.18) 61%,
+    transparent 68%
+  );
+}
+
+.vinyl-lit .vinyl-grooves {
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.075) 0 1px,
+    transparent 1px 2.5px
+  );
+}
+
+/* --- Spinning logo -------------------------------------------------------- */
+
+.spin-mark .vinyl {
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.55), inset 0 0 0 1px #000;
+}
+
+/* A bigger label than a real record so the sleeve reads at logo size. */
+.spin-mark .vinyl-label {
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+  transition: background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Plain labels get a printed mark so the spin is visible. */
+.spin-mark-plain .vinyl-label::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 9%;
+  width: 10%;
+  height: 28%;
+  border-radius: 2px;
+  background: var(--mark-tick, var(--ground));
+}
+
+/* The footer's big record turns slower than the logo. */
+.spin-lazy .vinyl-grooves {
+  animation: spin-33 5s linear infinite;
+}
+
+.spin-33 {
+  animation: spin-33 1.8s linear infinite;
+}
+
+.spin-45 {
+  animation: spin-33 1.2s linear infinite;
+}
+
+@keyframes spin-33 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Home hero rotation timer. Advancing is driven by animationend. */
+.hero-progress {
+  animation-name: hero-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Record tile: the disc slides sideways out of the sleeve on hover. */
+.rec {
+  position: relative;
+  display: block;
+}
+
+.rec .vinyl {
+  top: 3%;
+  left: 3%;
+  width: 94%;
+  height: 94%;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.rec .sleeve {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.rec:hover,
+.rec:focus-visible {
+  z-index: 5;
+}
+
+.rec:hover .vinyl,
+.rec:focus-visible .vinyl {
+  transform: translateX(36%);
+}
+
+.rec:hover .sleeve,
+.rec:focus-visible .sleeve {
+  transform: translateX(-6%);
+}
+
+/* --- Stickers ------------------------------------------------------------- */
+
+.sticker {
+  position: absolute;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border-radius: 50%;
+  transform: rotate(9deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35), inset 0 0 0 3px rgba(255, 255, 255, 0.3);
+  animation: sticker-pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) 0.9s both;
+}
+
+@keyframes sticker-pop {
+  from {
+    opacity: 0;
+    transform: rotate(9deg) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(9deg) scale(1);
+  }
+}
+
+/* --- Pills / buttons ------------------------------------------------------ */
+
+.pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 20px;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 2px solid currentColor;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform 0.2s, background-color 0.3s, color 0.3s, border-color 0.3s, opacity 0.2s;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+}
+
+.pill:disabled {
+  cursor: default;
+  transform: none;
+}
+
+.pill-solid {
+  border-color: transparent;
+}
+
+.pill-lg {
+  min-height: 56px;
+  padding: 0 26px;
+  font-size: 16px;
+}
+
+.pill-sm {
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.pill-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.28);
+  transition: width 0.25s linear;
+  pointer-events: none;
+}
+
+.pill > .pill-content {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.06);
+}
+
+/* Genre / facet chips coloured by a representative sleeve. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s;
+}
+
+.chip:hover {
+  transform: translateY(-3px) rotate(-1deg);
+}
+
+/* Cover tile with a caption that slides up on hover (colour wall, grids). */
+.tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: var(--ground-3);
+}
+
+.tile > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.tile .tile-cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  transform: translateY(101%);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.tile:hover > img,
+.tile:focus-visible > img {
+  transform: scale(1.06);
+}
+
+.tile:hover .tile-cap,
+.tile:focus-visible .tile-cap {
+  transform: none;
+}
+
+/* Flood surfaces fade between records. */
+.flood-surface {
+  transition: background-color 0.9s ease, color 0.9s ease;
+}
+
+/* Horizontal shelves that scroll with the trackpad but hide the bar. */
+.shelf-scroll {
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.shelf-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.shelf-scroll > * {
+  scroll-snap-align: start;
+}
+
+/* --- Split-flap board (Shuffle page) --------------------------------------
+   Tiles size themselves from the board's width (container units), so the
+   same markup works for the 20-column desktop board and the 12-column phone
+   board. Flat halves and a split line, no gradients. */
+
+.flap-wrap {
+  container-type: inline-size;
+  --flap-gap: clamp(3px, 0.5cqw, 5px);
+}
+
+.flap-board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flap-gap);
+}
+
+.flap-row {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--flap-gap);
+}
+
+.flap-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flap-gap);
+  border-radius: 6px;
+}
+
+.flap-link:hover .flap > span {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+  text-decoration-thickness: 0.06em;
+}
+
+.flap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 19 / 29;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #161412;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.flap::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 50% 0;
+  background: #1d1b18;
+}
+
+.flap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  margin-top: -0.5px;
+  background: #050504;
+}
+
+.flap > span {
+  position: relative;
+  z-index: 1;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: calc(100cqw / var(--cols) * 1.08);
+  font-stretch: 80%;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.flap-moving::before {
+  background: #24211d;
+}
+
+.flap-moving > span {
+  transform: scaleY(0.82);
+}
+
+/* The next record's colour falls down the page like a flap. */
+.flap-drop {
+  transform-origin: 50% 0;
+  animation: flap-drop 0.45s cubic-bezier(0.55, 0, 0.35, 1) both;
+}
+
+@keyframes flap-drop {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* The cover turns edge-on to show the record behind it, then back. */
+.flap-card {
+  z-index: 2;
+  transition: transform 0.32s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flap-drop {
+    animation: none;
+  }
+
+  .flap-card {
+    transition: none;
+  }
+
+  .spin-33,
+  .spin-45,
+  .spin-lazy .vinyl-grooves,
+  .vinyl-cover-in {
+    animation: none;
+  }
+
+  .sticker {
+    animation: none;
+  }
+
+  .rec .vinyl,
+  .rec .sleeve,
+  .flood-surface,
+  .tile > img,
+  .tile .tile-cap {
+    transition: none;
+  }
+}

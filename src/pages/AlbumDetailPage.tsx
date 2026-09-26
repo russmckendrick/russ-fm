@@ -1,24 +1,28 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { SiSpotify, SiDiscogs, SiApplemusic } from 'react-icons/si';
-import { ServiceButton } from '@/components/ui/service-button';
-import { EditorialEmpty, EditorialSkeleton, PageContainer, SectionHeader } from '@/components/layout';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { SiLastdotfm } from 'react-icons/si';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
-import { AlbumCard } from '@/components/AlbumCard';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
-import { VideoSection } from '@/components/VideoSection';
+import { youTubeVideos } from '@/lib/youtube';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
-import { buildGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
+import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
+import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection';
 import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
-import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
+import { useAlbumColors, useAlbumColorMap, useAlbumSwatches } from '@/hooks/useAlbumColors';
+import { floodFor } from '@/lib/sleeveColour';
+import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
-import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
+import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
+import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
+import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
+import { buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
 
 interface Album {
   release_name: string;
@@ -38,6 +42,7 @@ interface Album {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: {
@@ -48,6 +53,10 @@ interface Album {
     'hi-res': string;
     medium: string;
   };
+  format_primary?: string | null;
+  labels?: string[];
+  boxset?: BoxsetLink | null;
+  boxset_contents?: BoxsetContent[];
 }
 
 interface Track {
@@ -151,6 +160,9 @@ interface DetailedAlbum {
       id?: string;
       url?: string;
     };
+    perplexity?: {
+      description?: string;
+    };
   };
   videos?: string[];
   local_images: {
@@ -168,7 +180,7 @@ function clipText(text: string | undefined | null, max: number): string {
 function buildAlbumDescription(detailedAlbum: DetailedAlbum, album: Album | null): string {
   const title = detailedAlbum.title;
   const artist = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
-  const year = detailedAlbum.year;
+  const year = (album && originalYear(album)) || detailedAlbum.year;
   const perplexity = detailedAlbum.services?.perplexity?.description;
   if (perplexity) {
     return clipText(`${title} by ${artist} (${year}). ${perplexity}`, 300);
@@ -209,7 +221,8 @@ function buildAlbumJsonLd({
   const artistName = album?.release_artist || detailedAlbum.artists?.[0]?.name || 'Unknown Artist';
   const artistUri = album?.uri_artist || album?.artists?.[0]?.uri_artist || '';
   const artistSlug = artistUri.replace(/^\/artist\//, '').replace(/\/$/, '');
-  const released = detailedAlbum.released || (detailedAlbum.year ? String(detailedAlbum.year) : undefined);
+  const original = album ? originalYear(album) : null;
+  const released = original ? String(original) : detailedAlbum.released || (detailedAlbum.year ? String(detailedAlbum.year) : undefined);
   const genres = Array.from(new Set([
     ...(album?.genre_names || []),
     ...(detailedAlbum.genres || []),
@@ -235,7 +248,7 @@ function buildAlbumJsonLd({
   if (labels.length) data.recordLabel = labels.map((name) => ({ '@type': 'Organization', name }));
   if (tracks.length) {
     data.numTracks = tracks.length;
-    data.track = tracks.slice(0, 50).map((track: Record<string, unknown>, idx) => {
+    data.track = (tracks as unknown as Array<Record<string, unknown>>).slice(0, 50).map((track, idx) => {
       const node: Record<string, unknown> = {
         '@type': 'MusicRecording',
         name: (track.title as string) || (track.name as string) || `Track ${idx + 1}`,
@@ -270,13 +283,30 @@ function buildAlbumJsonLd({
 export function AlbumDetailPage() {
   const { albumPath } = useParams<{ albumPath: string }>();
   const navigate = useNavigate();
-  const [collection, setCollection] = useState<Album[]>([]);
-  const [album, setAlbum] = useState<Album | null>(null);
-  const [detailedAlbum, setDetailedAlbum] = useState<DetailedAlbum | null>(null);
-  const [loading, setLoading] = useState(true);
+  const { albums: rawCollection, loading } = useCollection();
+  const collection = rawCollection as unknown as Album[];
+  const album = useMemo(() => findAlbum(collection, albumPath), [collection, albumPath]);
+  const [detail, setDetail] = useState<{ path: string; data: DetailedAlbum } | null>(null);
+  const detailedAlbum = detail && detail.path === albumPath ? detail.data : null;
+  const similarAlbums = useMemo(() => (album ? findSimilarAlbums(collection, album) : []), [collection, album]);
 
-  // Load album colors using the album path
-  const albumColors = useAlbumColorsWithFallback(albumPath);
+  // Sleeve colours drive the whole page: flood for the hero, ground for the body.
+  const palette = useAlbumColors(albumPath ? `/album/${albumPath}/` : undefined);
+  const swatches = useAlbumSwatches(albumPath ? `/album/${albumPath}/` : undefined);
+  const colourMap = useAlbumColorMap();
+  const [scrobbling, setScrobbling] = useState(false);
+  const [boxSelected, setBoxSelected] = useState(0);
+  const flood = floodFor(palette);
+  usePageFlood(
+    album ? flood.flood : null,
+    album ? flood.ink : null,
+    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+  );
+
+  useEffect(() => {
+    setBoxSelected(0);
+    setScrobbling(false);
+  }, [albumPath]);
 
   // Check if URL needs sanitization and redirect if necessary
   useEffect(() => {
@@ -286,8 +316,7 @@ export function AlbumDetailPage() {
         if (/^\d+$/.test(albumPath)) {
           try {
             // Load collection to find the album with this Discogs ID
-            const collectionResponse = await fetch('/collection.json');
-            const collection = await collectionResponse.json() as Album[];
+            const collection = await loadCollection() as unknown as Album[];
 
             // Find album by Discogs ID
             const foundAlbum = collection.find((candidate) => {
@@ -374,66 +403,21 @@ export function AlbumDetailPage() {
     jsonLd: albumJsonLd,
   });
 
-  const loadAlbumData = useCallback(async () => {
-    try {
-      // Load collection to find this specific album
-      const collectionResponse = await fetch('/collection.json');
-      const collection = await collectionResponse.json() as Album[];
-      setCollection(collection);
-
-      // Find the album by its URI
-      const foundAlbum = collection.find((item: Album) => {
-        // First try exact URI match
-        if (item.uri_release === `/album/${albumPath}/`) {
-          return true;
-        }
-
-        // Fallback: try sanitized name matching for URL consistency
-        // Extract album name and discogs ID from the path (format: "album-name-discogsid")
-        const pathMatch = albumPath?.match(/^(.+)-(\d+)$/);
-        if (pathMatch) {
-          const [, , discogsId] = pathMatch;
-          // Verify the item's Discogs ID matches the one from the URL
-          const itemDiscogsId = item.uri_release.match(/(\d+)/)?.[1];
-          if (itemDiscogsId === discogsId) {
-            const sanitizedAlbumName = sanitizeFolderName(item.release_name);
-            const expectedPath = `${sanitizedAlbumName}-${discogsId}`;
-            if (albumPath === expectedPath) {
-              return true;
-            }
-          }
-        }
-
-        return false;
-      });
-
-      if (foundAlbum) {
-        setAlbum(foundAlbum);
-
-        // Load detailed album information
-        try {
-          // Construct JSON path using the current album path (which is already sanitized)
-          const jsonPath = `/album/${albumPath}/${albumPath}.json`;
-          const albumDetailResponse = await fetch(jsonPath);
-          const albumDetail = await albumDetailResponse.json();
-          // Add artist property for MusicPlayerSection compatibility
-          albumDetail.artist = foundAlbum.release_artist;
-          setDetailedAlbum(albumDetail);
-        } catch (error) {
-          console.error('Error loading album details:', error);
-        }
-      }
-
-      setLoading(false);
-    } catch (error) {
-      console.error('Error loading album data:', error);
-      setLoading(false);
-    }
-  }, [albumPath]);
-
+  // The collection gives us enough for the hero straight away; the release's
+  // detail JSON (tracklist, notes, services) fills in the rest when it lands.
   useEffect(() => {
-    loadAlbumData();
-  }, [albumPath, loadAlbumData]);
+    if (!album || !albumPath) return;
+    let alive = true;
+    loadDetailJson<DetailedAlbum>(`/album/${albumPath}/${albumPath}.json`)
+      .then(data => {
+        // MusicPlayerSection expects an `artist` field.
+        if (alive) setDetail({ path: albumPath, data: { ...data, artist: album.release_artist } });
+      })
+      .catch(error => console.error('Error loading album details:', error));
+    return () => {
+      alive = false;
+    };
+  }, [album, albumPath]);
 
   const formatDuration = (ms: number) => {
     if (!ms) return '';
@@ -682,30 +666,20 @@ export function AlbumDetailPage() {
   };
 
   if (loading) {
-    return (
-      <PageContainer>
-        <EditorialSkeleton label="Loading album…" />
-      </PageContainer>
-    );
+    return <div className="h-[80vh] bg-[color:var(--ground)]" aria-busy="true" aria-label="Loading album" />;
   }
 
   if (!album) {
     return (
-      <PageContainer>
-        <div className="py-16">
-          <Link to="/albums/1" className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim hover:text-ink">
-            ← Albums
-          </Link>
-          <EditorialEmpty
-            title="Album not found"
-            detail="The requested album could not be found"
-          />
-        </div>
-      </PageContainer>
+      <div className="mx-auto flex w-full max-w-[1640px] flex-col items-start gap-6 px-5 py-24 md:px-10 lg:px-14">
+        <p className="t-disp m-0 text-[48px] md:text-[72px]">Album not found</p>
+        <PillLink to="/albums/1">All albums</PillLink>
+      </div>
     );
   }
 
-  const year = new Date(album.date_release_year).getFullYear();
+  // Original release year (Discogs master); the pressing's own date is in detailedAlbum.released.
+  const year = originalYear(album) ?? NaN;
 
   // Get tracks from multiple sources with fallbacks - prioritize Discogs
   const getTracks = (): Track[] => {
@@ -788,771 +762,545 @@ export function AlbumDetailPage() {
       })
     : getCleanGenresFromArray(album.genre_names, album.release_artist);
 
-  const heroImage = getAlbumImageFromData(`/album/${albumPath}/`, 'hi-res');
-  const albumTint = albumColors.background || 'var(--paper-2)';
-  const albumAccent = albumColors.accent || 'var(--hl)';
-  const titleStyle = getAlbumHeroTitleStyle(album.release_name);
-  const formattedAdded = album.date_added
-    ? new Date(album.date_added).toLocaleString('en-GB', {
-        day: '2-digit',
-        month: 'short',
-        year: 'numeric',
-        timeZone: 'UTC',
-      }).toUpperCase()
-    : '—';
-  const primaryFormat = detailedAlbum?.formats?.[0] || 'Record';
-  const similarAlbums = (() => {
-    if (!collection.length) return [];
-
-    const explorer = buildGenreExplorer(collection as CollectionAlbum[]);
-    const albumBySlug = new Map(collection.map((item) => [getAlbumSlug(item.uri_release), item]));
-    const explorerAlbum = explorer.allGenre.albums.find((candidate) => candidate.slug === getAlbumSlug(album.uri_release));
-
-    if (!explorerAlbum) return [];
-
-    const artistUris = new Set([
-      album.uri_artist,
-      ...(album.artists?.map(a => a.uri_artist) ?? []),
-    ]);
-
-    return getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)
-      .map(({ album: relatedAlbum }) => albumBySlug.get(relatedAlbum.slug))
-      .filter((item): item is Album => Boolean(item) && !artistUris.has(item.uri_artist))
-      .slice(0, 10);
-  })();
-
-  // Boxset members resolved to full collection entries so AlbumCard can render them.
-  const boxsetMembers = (() => {
-    if (!album.boxset_contents?.length || !collection.length) return [];
-    const byUri = new Map(collection.map(item => [item.uri_release, item]));
-    return album.boxset_contents
-      .map(member => byUri.get(member.uri_release))
-      .filter((item): item is Album => Boolean(item));
-  })();
-
-  // Section numbering — each section that renders gets the next sequential
-  // "01", "02"… so toggled sections stay correctly numbered after the
-  // Videos / Artist order swap. Must track the current order: About,
-  // Tracklist, In this box set, Listen, About the artist, Videos, Similar albums.
   const hasListen = !!(
     detailedAlbum &&
     (detailedAlbum.services?.spotify?.id ||
       detailedAlbum.services?.spotify?.url ||
-      detailedAlbum.services?.apple_music?.url)
+      detailedAlbum.services?.apple_music?.url ||
+      youTubeVideos(detailedAlbum.videos).length > 0)
   );
   const artistsWithBio = (detailedAlbum?.artists ?? []).filter(
     a => a.biography && a.role !== 'member' && a.name.toLowerCase() !== 'various',
   );
-  const hasArtistBio = artistsWithBio.length > 0;
-  const hasVideos = !!(detailedAlbum?.videos && detailedAlbum.videos.length > 0);
-  const sectionNums = (() => {
-    let n = 0;
-    const pad = () => String(++n).padStart(2, '0');
-    return {
-      about: description ? pad() : '01',
-      tracklist: tracks.length > 0 ? pad() : '01',
-      boxset: boxsetMembers.length > 0 ? pad() : '01',
-      listen: hasListen ? pad() : '01',
-      artist: hasArtistBio ? pad() : '01',
-      videos: hasVideos ? pad() : '01',
-      similar: similarAlbums.length > 0 ? pad() : '01',
-    };
-  })();
+  const isBox = !!album.boxset_contents?.length;
+  const boxDiscs = isBox ? buildBoxDiscs((tracks as BoxTrack[]) ?? [], album.boxset_contents ?? []) : [];
+  const moreByArtist = collection
+    .filter(a => a.uri_artist === album.uri_artist && a.uri_release !== album.uri_release && !a.boxset)
+    .sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0))
+    .slice(0, 12);
+  const lastfm = detailedAlbum?.services?.lastfm;
+  const accent = flood.glow;
+  const title = album.release_name.trim();
+  const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
+  const sides = tracks.length ? groupTracksBySide(tracks) : null;
+  const sideCount = sides ? countSides(sides) : 0;
+  const totalDuration = calculateTotalDuration(tracks);
+  const labelName = detailedAlbum?.labels?.[0];
+  const scrobbleArtist = album.release_artist;
+  const albumTracksForScrobble = toScrobbleTracks(tracks);
+  const discCount = Math.ceil(sideCount / 2);
 
-  // Shared action buttons — rendered in the hero on mobile/tablet and in
-  // the sidebar above "Release details" on lg+.
-  const actionButtons = (
-    <>
-      <AlbumScrobbleButton
-        album={{
-          artist: album.release_artist,
-          album: album.release_name,
-          tracks: toScrobbleTracks(tracks),
-        }}
-        className="w-full sm:w-auto"
-      />
-      {detailedAlbum?.services?.apple_music?.url && (
-        <ServiceButton
-          service="apple-music"
-          url={detailedAlbum.services.apple_music.url}
-          icon={<SiApplemusic className="h-4 w-4" />}
-          className="w-full sm:w-auto"
-        >
-          Apple Music
-        </ServiceButton>
+  const formatDetail = [
+    detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record',
+    sideCount > 2 ? `${discCount} discs` : null,
+    sideCount > 1 ? `${sideCount} sides` : null,
+  ].filter(Boolean).join(' · ');
+
+  const facts: Array<[string, string]> = [
+    ['Label', detailedAlbum?.labels?.join(', ') ?? ''],
+    ['Released', Number.isFinite(year) ? String(year) : ''],
+    ['This pressing', pressingDate(detailedAlbum, year)],
+    ['Country', detailedAlbum?.country ?? ''],
+    ['Format', formatDetail],
+    ['Added', formatDate(album.date_added)],
+    ['Styles', (detailedAlbum?.styles ?? []).slice(0, 3).join(', ')],
+  ].filter((f): f is [string, string] => !!f[1]) as Array<[string, string]>;
+
+  const serviceLinks = [
+    detailedAlbum?.services?.spotify?.url && { label: 'Spotify', url: detailedAlbum.services.spotify.url },
+    detailedAlbum?.services?.apple_music?.url && { label: 'Apple Music', url: detailedAlbum.services.apple_music.url },
+    detailedAlbum?.discogs_url && { label: 'Discogs', url: detailedAlbum.discogs_url },
+  ].filter(Boolean) as Array<{ label: string; url: string }>;
+
+  const heroText = (
+    <div className="flex flex-col gap-5 lg:gap-6">
+      {isBox && <span className="t-kicker">Box set</span>}
+      <div className="flex flex-wrap items-center gap-3">
+        {(album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }]).map((artist, i, all) => (
+          <React.Fragment key={artist.uri_artist || artist.name}>
+            <Link to={artist.uri_artist} className="inline-flex items-center gap-3">
+              <img
+                src={getArtistAvatarFromData(artist.uri_artist)}
+                alt=""
+                onError={handleImageError}
+                className="h-10 w-10 rounded-full object-cover md:h-11 md:w-11"
+              />
+              <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
+            </Link>
+            {i < all.length - 1 && <span aria-hidden className="t-mono opacity-60">/</span>}
+          </React.Fragment>
+        ))}
+      </div>
+      <h1 className="t-cond m-0" style={{ fontSize: `clamp(48px, ${Math.min(10, 64 / longest)}vw, ${Math.min(120, Math.floor(420 / (longest * 0.52)))}px)` }}>
+        {title}
+      </h1>
+      <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: flood.sub }}>
+        {Number.isFinite(year) && <span>{year}</span>}
+        {labelName && <span>{labelName}</span>}
+        {isBox ? (
+          <span>{boxDiscs.length} albums</span>
+        ) : (
+          tracks.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{tracks.length} tracks</span>
+        )}
+        {totalDuration && <span>{totalDuration}</span>}
+      </div>
+      {album.members && album.members.length > 0 && (
+        <p className="m-0 text-[14px]" style={{ color: flood.sub }}>
+          With{' '}
+          {album.members.map((member, index) => (
+            <React.Fragment key={member.name}>
+              {index > 0 && (index === album.members!.length - 1 ? ' & ' : ', ')}
+              {member.uri_artist ? (
+                <Link to={member.uri_artist} className="font-bold underline-offset-4 hover:underline">
+                  {member.name}
+                </Link>
+              ) : (
+                <span className="font-bold">{member.name}</span>
+              )}
+            </React.Fragment>
+          ))}
+        </p>
       )}
-      {detailedAlbum?.services?.spotify?.url && (
-        <ServiceButton
-          service="spotify"
-          url={detailedAlbum.services.spotify.url}
-          icon={<SiSpotify className="h-4 w-4" />}
-          className="w-full sm:w-auto"
-        >
-          Spotify
-        </ServiceButton>
+      {album.boxset?.uri_release && (
+        <Link to={album.boxset.uri_release} className="pill pill-sm self-start">
+          From the box set · {album.boxset.name ?? 'View box set'}
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
       )}
-      {detailedAlbum?.discogs_url && (
-        <ServiceButton
-          service="discogs"
-          url={detailedAlbum.discogs_url}
-          icon={<SiDiscogs className="h-4 w-4" />}
-          className="w-full sm:w-auto"
-        >
-          Discogs
-        </ServiceButton>
+      <div className="mt-1 flex flex-wrap gap-2.5">
+        {!isBox && tracks.length > 0 && (
+          <AlbumScrobbleButton
+            album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
+            tone={{ background: flood.ink, color: flood.flood }}
+            pillSize="lg"
+            onActiveChange={setScrobbling}
+          />
+        )}
+        {serviceLinks.map(s => (
+          <PillLink key={s.label} to={s.url} size={isBox ? 'md' : 'sm'} className={isBox ? undefined : 'self-center'}>
+            {s.label}
+          </PillLink>
+        ))}
+      </div>
+      {cleanGenresList.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {cleanGenresList.slice(0, 5).map(genre => (
+            <Link
+              key={genre}
+              to={`/albums/1?genre=${encodeURIComponent(genre)}`}
+              className="t-mono rounded-full border px-3 py-1.5 text-[11px] font-bold uppercase opacity-80 hover:opacity-100"
+              style={{ borderColor: 'currentColor' }}
+            >
+              {genre}
+            </Link>
+          ))}
+        </div>
       )}
-    </>
+    </div>
   );
 
   return (
-    <PageContainer variant="hero">
-      {/* Hero ----------------------------------------------------------- */}
-      <section
-        className={cn(
-          'relative isolate overflow-hidden border-b border-rule bg-paper font-grot lg:h-[720px] xl:h-[760px]',
-          albumPath ? `album-${albumPath}` : undefined,
-        )}
-        style={{
-          '--album-bg-fallback': albumColors.background,
-          '--album-fg-fallback': albumColors.foreground,
-          '--album-accent-fallback': albumColors.accent,
-          '--album-muted-fallback': albumColors.muted,
-        } as React.CSSProperties}
-      >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-[0.18]"
-          style={{
-            background: `radial-gradient(circle at 62% 22%, ${albumTint} 0%, transparent 34%)`,
-          }}
-        />
-
-        <div className="relative mx-auto grid h-full w-full max-w-[1640px] gap-9 px-5 py-10 md:px-8 md:py-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,0.95fr)_220px] lg:items-center lg:gap-12 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.95fr)_260px]">
-          <div className="order-2 flex min-w-0 flex-col items-start lg:order-none">
-            <nav className="mb-5 flex max-w-full items-baseline gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-ink-dim">
-              <Link
-                to="/albums/1"
-                className="shrink-0 transition-colors hover:text-ink"
-              >
-                Albums
-              </Link>
-              <span aria-hidden>/</span>
-              <span className="min-w-0 truncate">{album.release_name}</span>
-            </nav>
-
-            <h1
-              className="text-display max-w-full uppercase text-ink lg:max-w-[var(--hero-title-max-width)]"
-              style={titleStyle}
-            >
-              {album.release_name}
-            </h1>
-
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              {album.artists && album.artists.length > 1 ? (
-                <div className="flex -space-x-2">
-                  {album.artists.map((artist) => (
-                    <Link
-                      key={artist.uri_artist}
-                      to={artist.uri_artist}
-                      className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
-                    >
-                      <img
-                        src={getArtistAvatarFromData(artist.uri_artist)}
-                        alt={artist.name}
-                        width={40}
-                        height={40}
-                        onError={handleImageError}
-                        className="h-10 w-10 rounded-[6px] border border-rule-strong object-cover"
-                      />
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <Link
-                  to={album.uri_artist}
-                  className="shrink-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink"
-                >
-                  <img
-                    src={getArtistAvatarFromData(album.uri_artist)}
-                    alt={album.release_artist}
-                    width={40}
-                    height={40}
-                    onError={handleImageError}
-                    className="h-10 w-10 rounded-[6px] border border-rule-strong object-cover"
-                  />
-                </Link>
-              )}
-
-              <div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-display text-[22px] uppercase leading-none text-ink">
-                {album.artists && album.artists.length > 1 ? (
-                  album.artists.map((artist, index) => (
-                    <React.Fragment key={artist.uri_artist}>
-                      <Link
-                        to={artist.uri_artist}
-                        className="transition-colors hover:text-hl"
-                      >
-                        {artist.name}
-                      </Link>
-                      {index < album.artists!.length - 1 && (
-                        <span className="font-mono text-[13px] text-ink-dim" aria-hidden>
-                          /
-                        </span>
-                      )}
-                    </React.Fragment>
-                  ))
-                ) : (
-                  <Link
-                    to={album.uri_artist}
-                    className="transition-colors hover:text-hl"
-                  >
-                    {album.release_artist}
-                  </Link>
-                )}
-              </div>
-            </div>
-
-            {album.members && album.members.length > 0 && (
-              <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-                With{' '}
-                {album.members.map((member, index) => (
-                  <React.Fragment key={member.name}>
-                    {index > 0 && (index === album.members!.length - 1 ? ' & ' : ', ')}
-                    {member.uri_artist ? (
-                      <Link to={member.uri_artist} className="text-ink-2 transition-colors hover:text-hl">
-                        {member.name}
-                      </Link>
-                    ) : (
-                      <span className="text-ink-2">{member.name}</span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </p>
-            )}
-
-            {cleanGenresList.length > 0 && (
-              <div className="mt-5 flex flex-wrap gap-1.5">
-                {cleanGenresList.slice(0, 6).map((genre) => (
-                  <Link
-                    key={genre}
-                    to={`/albums/1?genre=${encodeURIComponent(genre)}`}
-                    className="border border-rule-strong bg-paper px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink transition-[color,background-color,border-color] duration-200 hover:border-hl hover:bg-hl hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
-                  >
-                    {genre}
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {album.boxset && (
-              album.boxset.uri_release ? (
-                <Link
-                  to={album.boxset.uri_release}
-                  className="mt-5 inline-flex items-center gap-2 border border-rule-strong bg-paper px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-ink transition-colors hover:border-hl hover:bg-hl hover:text-paper focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink"
-                >
-                  From the box set · {album.boxset.name ?? 'View box set'} <span aria-hidden>→</span>
-                </Link>
-              ) : (
-                <span className="mt-5 inline-flex items-center gap-2 border border-rule bg-paper px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.1em] text-ink-dim">
-                  Part of a box set
-                </span>
-              )
-            )}
-
-            <div className="mt-7 flex w-full flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-              {actionButtons}
-            </div>
-          </div>
-
-          <div className="order-1 min-w-0 lg:order-none">
-            <div
-              className="mx-auto aspect-square w-full max-w-[580px] overflow-hidden bg-paper-2 shadow-[0_28px_70px_-36px_rgba(14,13,11,0.45)]"
-              style={{
-                boxShadow: `0 38px 90px -48px ${albumAccent}, 0 18px 48px -34px rgba(14,13,11,0.42)`,
-              }}
-            >
-              <img
-                src={heroImage}
-                onError={handleImageError}
-                alt={`${album.release_name} by ${album.release_artist} album cover`}
-                width={720}
-                height={720}
-                fetchPriority="high"
-                className="h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <aside className="order-3 grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong sm:grid-cols-3 lg:order-none lg:grid-cols-1 lg:gap-0 lg:border-0 lg:bg-transparent">
-            <AlbumMetaRail label="Released" value={Number.isFinite(year) ? String(year) : '—'} />
-            <AlbumMetaRail label="Format" value={primaryFormat} />
-            <AlbumMetaRail label="Added" value={formattedAdded} />
-            <AlbumMetaRail
-              label="Genres"
-              value={cleanGenresList.length ? cleanGenresList.slice(0, 2).join(', ') : 'Collection'}
+    <div style={{ background: flood.ground }} className="flood-surface -mb-24 pb-24">
+      <CoverHero
+        flood={flood}
+        art={
+          isBox ? (
+            <BoxHeroArt
+              boxUri={album.uri_release}
+              boxTitle={title}
+              discs={boxDiscs}
+              selected={boxSelected}
+              onSelect={setBoxSelected}
+              flood={flood}
+              added={album.date_added}
             />
-            <AlbumMetaRail label="Tracks" value={tracks.length ? String(tracks.length) : '—'} />
-            <div className="hidden border-b border-rule py-8 lg:block">
-              <HeroPulseLine accent={albumAccent} />
-            </div>
-          </aside>
-        </div>
-      </section>
+          ) : (
+            <HeroRecord
+              src={getAlbumImageFromData(album.uri_release, 'hi-res')}
+              alt={`${title} by ${album.release_artist}`}
+              labelColour={flood.ground}
+              labelText={`${album.release_artist.toUpperCase()} · SIDE A`}
+              discOut={scrobbling ? 34 : 15}
+              fast={scrobbling}
+              sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
+            />
+          )
+        }
+      >
+        {heroText}
+      </CoverHero>
 
-      {/* Main content --------------------------------------------------- */}
-      <div className="mx-auto w-full max-w-[1640px] px-5 py-14 md:px-8 md:py-20">
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-20">
-          <div className="flex flex-col gap-16">
+      <div className={cn('mx-auto w-full max-w-[1640px] px-5 md:px-10 lg:px-14', AFTER_HERO)} style={{ color: 'var(--cream)' }}>
+        {isBox && (
+          <div className="mb-20">
+            <BoxContents
+              boxUri={album.uri_release}
+              discs={boxDiscs}
+              selected={boxSelected}
+              onSelect={setBoxSelected}
+              colours={colourMap}
+              boxFlood={flood}
+              artist={album.release_artist}
+            />
+          </div>
+        )}
+
+        <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-20">
+          <div className="flex min-w-0 flex-col gap-20">
             {description && (
-              <section>
-                <SectionHeader num={sectionNums.about} label="About this record" />
-                <div className="mt-6">
-                  <ExpandableBody shouldCollapse={description.length > 600}>
-                    <div className="font-grot text-[17px] leading-[1.7] text-ink-2">
-                      {description.includes('\n') ? (
-                        description.split('\n').filter(p => p.trim()).map((p, i) => (
-                          <p key={i} className="mb-5 last:mb-0">{p.trim()}</p>
-                        ))
-                      ) : (
-                        <p>{description}</p>
-                      )}
-                    </div>
-                  </ExpandableBody>
-                </div>
-              </section>
-            )}
-
-            {tracks.length > 0 && (() => {
-              const trackGrouping = groupTracksBySide(tracks);
-              const totalDuration = calculateTotalDuration(tracks);
-
-              const renderTrack = (track: Track, index: number, showSimpleNumbers: boolean) => {
-                const isSectionTitle = !track.position && !getTrackDuration(track) && !track.duration_ms;
-                if (isSectionTitle) {
-                  return (
-                    <li key={index} className="px-0 pb-2 pt-5 font-mono text-[11px] uppercase tracking-[0.12em] text-hl">
-                      {track.name}
-                    </li>
-                  );
-                }
-                const spotifyId = spotifyTrackIndex.get(normaliseTrackTitle(track.name));
-                const trackName = spotifyId ? (
-                  <a
-                    href={`https://open.spotify.com/track/${spotifyId}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-ink underline-offset-4 transition-colors hover:text-hl hover:underline"
-                    title="Open on Spotify"
-                  >
-                    {track.name}
-                  </a>
-                ) : (
-                  track.name
-                );
-                return (
-                  <li
-                    key={index}
-                    className="grid grid-cols-[48px_minmax(0,1fr)_auto] items-baseline gap-3 border-b border-rule py-2.5 font-grot last:border-b-0"
-                  >
-                    <span className="font-mono text-[11px] tracking-[0.04em] text-ink-dim tabular-nums">
-                      {showSimpleNumbers
-                        ? (track.position?.replace(/^[A-Z]/, '') || track.track_number || index + 1)
-                        : (track.position || track.track_number || index + 1)}
-                    </span>
-                    <span className="min-w-0 truncate text-[15px] text-ink">
-                      {trackName}
-                      {track.artists && track.artists.length > 0 && (
-                        <span className="ml-2 font-mono text-[10.5px] uppercase tracking-[0.06em] text-ink-dim">
-                          {track.artists.map(a => a.name).join(', ')}
-                        </span>
-                      )}
-                    </span>
-                    {getTrackDuration(track) && (
-                      <span className="font-mono text-[11px] tabular-nums text-ink-dim">
-                        {getTrackDuration(track)}
-                      </span>
-                    )}
-                  </li>
-                );
-              };
-
-              const renderSide = (label: string, tracks: Track[], index: number) => (
-                <div key={index}>
-                  {label && (
-                    <div className="mb-2 flex items-baseline gap-3 font-mono text-[10.5px] uppercase tracking-[0.12em] text-hl">
-                      <span>{label}</span>
-                      <span className="h-px flex-1 bg-rule" />
-                    </div>
-                  )}
-                  <ul>
-                    {tracks.map((t, i) => renderTrack(t, i, !!label))}
-                  </ul>
-                </div>
-              );
-
-              return (
-                <section>
-                  <SectionHeader num={sectionNums.tracklist} label="Tracklist" count={tracks.length} />
-                  <div className="mt-6">
-                    {trackGrouping.type === 'lp' ? (
-                      <div className="flex flex-col gap-10">
-                        {trackGrouping.groups.map((lpGroup, lpIndex) => (
-                          <div key={lpIndex} className="border border-rule-strong bg-paper p-5 md:p-6">
-                            <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.12em] text-hl">
-                              {lpGroup.lpLabel}
-                            </div>
-                            <div className="flex flex-col gap-6">
-                              {lpGroup.sides.map((side, sideIndex) => renderSide(side.label, side.tracks, sideIndex))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="flex flex-col gap-8">
-                        {trackGrouping.groups.map((group, groupIndex) => renderSide(group.label, group.tracks, groupIndex))}
-                      </div>
-                    )}
-
-                    {totalDuration && (
-                      <div className="mt-6 flex justify-end border-t border-rule pt-3 font-mono text-[11px] uppercase tracking-[0.08em] text-ink-dim">
-                        Total runtime · <span className="ml-2 text-ink">{totalDuration}</span>
-                      </div>
-                    )}
+              <section className="flex flex-col gap-6">
+                <h2 className="t-disp m-0 text-[34px] md:text-[48px]">{isBox ? 'About this box set' : 'About this record'}</h2>
+                <ExpandableBody shouldCollapse={description.length > 900} fade={flood.ground}>
+                  <div className="flex flex-col gap-5 text-[18px] leading-[1.65] text-[color:var(--ink-2)] md:text-[19px]">
+                    {description.split('\n').filter(p => p.trim()).map((p, i) => (
+                      <p key={i} className="m-0">{p.trim()}</p>
+                    ))}
                   </div>
-                </section>
-              );
-            })()}
-
-            {boxsetMembers.length > 0 && (
-              <section>
-                <SectionHeader num={sectionNums.boxset} label="In this box set" count={boxsetMembers.length} />
-                <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {boxsetMembers.map((member, i) => (
-                    <AlbumCard key={member.uri_release} album={member} index={i + 1} />
-                  ))}
-                </div>
+                </ExpandableBody>
               </section>
             )}
 
-            {detailedAlbum && (detailedAlbum.services?.spotify?.id || detailedAlbum.services?.spotify?.url || detailedAlbum.services?.apple_music?.url) && (
-              <section>
-                <SectionHeader
-                  num={sectionNums.listen}
-                  label={`Listen to ${detailedAlbum.title}`}
+            {!isBox && sides && tracks.length > 0 && (
+              <section className="flex flex-col gap-8">
+                <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
+                  <h2 className="t-disp m-0 text-[34px] md:text-[48px]">Tracklist</h2>
+                  <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">
+                    {tracks.length} tracks{sideCount > 2 ? ` · ${discCount} discs` : ''}{totalDuration ? ` · ${totalDuration}` : ''}
+                  </span>
+                </div>
+                <Tracklist
+                  grouping={sides}
+                  accent={accent}
+                  discColour={flood.flood}
+                  spotifyIndex={spotifyTrackIndex}
+                  getDuration={getTrackDuration}
                 />
-                <div className="mt-6 border border-rule-strong bg-paper p-5 md:p-6">
+              </section>
+            )}
+
+            {hasListen && detailedAlbum && (
+              <section className="flex flex-col gap-6">
+                <h2 className="t-disp m-0 text-[34px] md:text-[48px]">Listen</h2>
+                <div className="rounded-[18px] bg-[rgba(0,0,0,.28)] p-4 md:p-6">
                   <MusicPlayerSection album={detailedAlbum} />
                 </div>
               </section>
             )}
 
-            {hasArtistBio && (() => {
-              const sectionLabel =
-                artistsWithBio.length === 1
-                  ? `About ${artistsWithBio[0].name}`
-                  : 'About the artists';
-
+            {artistsWithBio.map(artist => {
+              const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
+              let bio = (artist.biography ?? '').replace(/<[^>]*>/g, '').trim();
+              const readMore = bio.indexOf('Read more on Last.fm');
+              if (readMore !== -1) bio = bio.substring(0, readMore).trim();
+              const wiki = bio.indexOf('Full Wikipedia article:');
+              if (wiki !== -1) bio = bio.substring(0, wiki).trim();
+              const count = collection.filter(a => a.uri_artist === artistUri || a.artists?.some(x => x.uri_artist === artistUri)).length;
               return (
-                <section>
-                  <SectionHeader num={sectionNums.artist} label={sectionLabel} />
-                  <div className="mt-6 flex flex-col gap-12">
-                    {artistsWithBio.map((artist, index) => {
-                      if (!artist.biography) return null;
-                      const artistUri = album.artists?.find(a => a.name === artist.name)?.uri_artist || album.uri_artist;
-                      let bio = artist.biography.replace(/<[^>]*>/g, '').trim();
-                      const readMore = bio.indexOf('Read more on Last.fm');
-                      if (readMore !== -1) bio = bio.substring(0, readMore).trim();
-                      const wiki = bio.indexOf('Full Wikipedia article:');
-                      if (wiki !== -1) bio = bio.substring(0, wiki).trim();
-
-                      const paragraphs = bio.split('\n').filter(p => p.trim());
-
-                      return (
-                        <div key={index} className="grid gap-6 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10">
-                          <div>
-                            <img
-                              src={getArtistImageFromData(artistUri, 'medium')}
-                              alt={artist.name}
-                              onError={handleImageError}
-                              className="aspect-square w-full rounded-[6px] border border-rule-strong object-cover"
-                            />
-                          </div>
-                          <div>
-                            <Link
-                              to={artistUri}
-                              className="mb-5 inline-flex items-center gap-2 border border-rule-strong bg-paper px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
-                            >
-                              View profile <span aria-hidden>→</span>
-                            </Link>
-                            <ExpandableBody shouldCollapse={bio.length > 500}>
-                              <div className="font-grot text-[16px] leading-[1.7] text-ink-2">
-                                {paragraphs.map((p, i) => (
-                                  <p key={i} className="mb-4 last:mb-0">{p.trim()}</p>
-                                ))}
-                              </div>
-                            </ExpandableBody>
-                          </div>
-                        </div>
-                      );
-                    })}
+                <section key={artist.name} className="flex flex-col gap-6 rounded-[18px] bg-[rgba(0,0,0,.24)] p-6 md:flex-row md:gap-8 md:p-8">
+                  <Link to={artistUri} className="h-32 w-32 shrink-0 overflow-hidden rounded-full md:h-44 md:w-44">
+                    <img src={getArtistImageFromData(artistUri, 'medium')} alt={artist.name} onError={handleImageError} className="h-full w-full object-cover" />
+                  </Link>
+                  <div className="flex min-w-0 flex-col gap-4">
+                    <Link to={artistUri} className="t-disp text-[32px] md:text-[44px]">
+                      {artist.name}
+                    </Link>
+                    <ExpandableBody shouldCollapse={bio.length > 600} fade="#141210">
+                      <div className="flex flex-col gap-4 text-[16px] leading-[1.65] text-[color:var(--ink-2)] md:text-[17px]">
+                        {bio.split('\n').filter(p => p.trim()).map((p, i) => (
+                          <p key={i} className="m-0">{p.trim()}</p>
+                        ))}
+                      </div>
+                    </ExpandableBody>
+                    <Link to={artistUri} className="inline-flex items-center gap-2 self-start font-bold" style={{ color: accent }}>
+                      {count} {count === 1 ? 'record' : 'records'} in the collection
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
                   </div>
                 </section>
               );
-            })()}
-
-            {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
-              <section>
-                <SectionHeader num={sectionNums.videos} label="Videos" count={detailedAlbum.videos.length} />
-                <div className="mt-6">
-                  <VideoSection videos={detailedAlbum.videos} />
-                </div>
-              </section>
-            )}
-
-            {similarAlbums.length > 0 && (
-              <section>
-                <SectionHeader num={sectionNums.similar} label="Similar albums" count={similarAlbums.length} />
-                <div className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                  {similarAlbums.map((album, i) => (
-                    <AlbumCard key={album.uri_release} album={album} index={i + 1} />
-                  ))}
-                </div>
-              </section>
-            )}
+            })}
           </div>
 
-          {/* Sidebar ------------------------------------------------------ */}
-          <aside className="flex flex-col gap-8 font-grot lg:sticky lg:top-24 lg:self-start">
-            <div>
-              <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                Release details
-              </h3>
-              <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
-                {detailedAlbum?.year && <KV label="Year" value={String(detailedAlbum.year)} />}
-                {detailedAlbum?.country && <KV label="Country" value={detailedAlbum.country} />}
-                {detailedAlbum?.labels?.[0] && <KV label="Label" value={detailedAlbum.labels.join(', ')} />}
-                {detailedAlbum?.formats?.[0] && <KV label="Format" value={detailedAlbum.formats.join(', ')} />}
-                {detailedAlbum?.styles?.[0] && <KV label="Style" value={detailedAlbum.styles.slice(0, 3).join(', ')} />}
-                <KV
-                  label="Added"
-                  value={new Date(album.date_added).toLocaleString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' })}
-                />
-              </dl>
-            </div>
-
-            {(detailedAlbum?.services?.spotify?.external_ids?.upc ||
-              detailedAlbum?.discogs_id ||
-              detailedAlbum?.spotify_id) && (
-              <div>
-                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                  Identifiers
-                </h3>
-                <dl className="flex flex-col gap-1.5 font-mono text-[11px] text-ink-2">
-                  {detailedAlbum?.services?.spotify?.external_ids?.upc && (
-                    <IdRow label="UPC" value={detailedAlbum.services.spotify.external_ids.upc} />
+          <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
+            {(lastfm?.listeners || lastfm?.playcount) && (
+              <section className="flood-surface flex flex-col gap-4 rounded-[18px] p-6" style={{ background: flood.flood, color: flood.ink }}>
+                <span className="t-kicker inline-flex items-center gap-2">
+                  <SiLastdotfm className="h-4 w-4" aria-hidden /> Last.fm
+                </span>
+                <div className="grid grid-cols-2 gap-3">
+                  {lastfm?.playcount !== undefined && (
+                    <div className="flex flex-col gap-1">
+                      <span className="t-cond text-[56px]">{Number(lastfm.playcount).toLocaleString('en-GB')}</span>
+                      <span className="t-kicker text-[11px]">Scrobbles</span>
+                    </div>
                   )}
-                  {detailedAlbum?.discogs_id && (
-                    <IdRow label="Discogs" value={String(detailedAlbum.discogs_id)} />
+                  {lastfm?.listeners !== undefined && (
+                    <div className="flex flex-col gap-1">
+                      <span className="t-cond text-[56px]">{Number(lastfm.listeners).toLocaleString('en-GB')}</span>
+                      <span className="t-kicker text-[11px]">Listeners</span>
+                    </div>
                   )}
-                  {detailedAlbum?.spotify_id && (
-                    <IdRow label="Spotify" value={detailedAlbum.spotify_id} />
-                  )}
-                </dl>
-              </div>
-            )}
-
-            {(detailedAlbum?.services?.lastfm?.listeners || detailedAlbum?.services?.lastfm?.playcount) && (
-              <div>
-                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                  Last.fm reach
-                </h3>
-                <dl className="grid grid-cols-2 gap-[1px] border border-rule-strong bg-rule-strong">
-                  {detailedAlbum.services.lastfm.listeners !== undefined && (
-                    <KV label="Listeners" value={detailedAlbum.services.lastfm.listeners.toLocaleString()} />
-                  )}
-                  {detailedAlbum.services.lastfm.playcount !== undefined && (
-                    <KV label="Scrobbles" value={detailedAlbum.services.lastfm.playcount.toLocaleString()} />
-                  )}
-                </dl>
-                {detailedAlbum.services.lastfm.url && (
-                  <a
-                    href={detailedAlbum.services.lastfm.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-2 inline-block font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-dim transition-colors hover:text-hl"
-                  >
-                    View on Last.fm →
+                </div>
+                {lastfm?.url && (
+                  <a href={lastfm.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[14px] font-bold">
+                    View on Last.fm
+                    <ArrowUpRight className="h-4 w-4" aria-hidden />
                   </a>
                 )}
-              </div>
+              </section>
             )}
 
-            {detailedAlbum?.services?.spotify?.copyrights && detailedAlbum.services.spotify.copyrights.length > 0 && (
-              <div>
-                <h3 className="mb-3 border-b border-rule pb-2 font-mono text-[10.5px] uppercase tracking-[0.1em] text-ink-dim">
-                  Copyright
-                </h3>
-                <div className="flex flex-col gap-1 font-mono text-[10.5px] leading-relaxed text-ink-dim">
-                  {detailedAlbum.services.spotify.copyrights.map((c, i) => (
-                    <div key={i}>{c.text}</div>
+            <section>
+              <h3 className="t-kicker m-0 mb-2 text-[color:var(--cream-dim)]">Release details</h3>
+              <dl className="m-0">
+                {facts.map(([k, v]) => (
+                  <div key={k} className="flex flex-col gap-1.5 border-t py-4" style={{ borderColor: 'var(--cream-rule)' }}>
+                    <dt className="t-kicker text-[11px]" style={{ color: accent }}>{k}</dt>
+                    <dd className="m-0 text-[16px] font-semibold">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            </section>
+
+            {(detailedAlbum?.services?.spotify?.external_ids?.upc || detailedAlbum?.discogs_id || detailedAlbum?.spotify_id) && (
+              <section>
+                <h3 className="t-kicker m-0 mb-2 text-[color:var(--cream-dim)]">Identifiers</h3>
+                <dl className="m-0">
+                  {[
+                    ['UPC', detailedAlbum?.services?.spotify?.external_ids?.upc],
+                    ['Discogs', detailedAlbum?.discogs_id ? String(detailedAlbum.discogs_id) : undefined],
+                    ['Spotify', detailedAlbum?.spotify_id],
+                  ]
+                    .filter(([, v]) => v)
+                    .map(([k, v]) => (
+                      <div key={k} className="flex flex-col gap-1 border-t py-3" style={{ borderColor: 'var(--cream-rule)' }}>
+                        <dt className="t-kicker text-[11px] text-[color:var(--cream-dim)]">{k}</dt>
+                        <dd className="t-mono m-0 break-all text-[13px]">{v}</dd>
+                      </div>
+                    ))}
+                </dl>
+              </section>
+            )}
+
+            {swatches.length > 0 && (
+              <section className="flex flex-col gap-3">
+                <h3 className="t-kicker m-0 text-[color:var(--cream-dim)]">Sleeve colours</h3>
+                {/* Each swatch is as wide as the share of the sleeve it covers. */}
+                <div
+                  role="img"
+                  aria-label={`Sleeve colours: ${swatches.map(([c, share]) => `${c} ${share}%`).join(', ')}`}
+                  className="flex h-3.5 overflow-hidden rounded-full shadow-[inset_0_0_0_1px_rgba(255,255,255,.08)]"
+                >
+                  {swatches.map(([c, share]) => (
+                    <span key={c} title={`${c} · ${share}%`} style={{ flex: share, background: c }} />
                   ))}
                 </div>
-              </div>
+                <div className="flex gap-2.5">
+                  {[flood.flood, flood.secondary].filter((c): c is string => !!c).map(c => (
+                    <span key={c} title={c} className="h-8 w-8 rounded-full shadow-[inset_0_0_0_2px_rgba(0,0,0,.15)]" style={{ background: c }} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {(detailedAlbum?.services?.spotify?.copyrights?.length || detailedAlbum?.services?.apple_music?.copyright) && (
+              <section className="flex flex-col gap-2">
+                <h3 className="t-kicker m-0 text-[color:var(--cream-dim)]">Copyright</h3>
+                {(detailedAlbum?.services?.spotify?.copyrights?.map(c => c.text) ?? [detailedAlbum?.services?.apple_music?.copyright]).map((c, i) => (
+                  <p key={i} className="t-mono m-0 text-[12px] leading-relaxed text-[color:var(--cream-dim)]">{c}</p>
+                ))}
+              </section>
             )}
           </aside>
         </div>
+
+        {moreByArtist.length > 0 && (
+          <section className="mt-24">
+            <SectionHeading title={`More by ${album.release_artist}`} link={{ to: album.uri_artist, label: 'Artist page' }} />
+            <div className="shelf-scroll -mx-5 mt-2 scroll-px-5 gap-6 px-5 pb-4 pt-6 md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:px-14">
+              {moreByArtist.map(a => (
+                <RecordTile key={a.uri_release} album={a} palette={colourMap?.[a.uri_release]} meta={originalYear(a) ?? undefined} showArtist={false} className="w-[160px] shrink-0 md:w-[190px]" />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {similarAlbums.length > 0 && (
+          <section className="mt-20">
+            <SectionHeading title="Similar albums" />
+            <div className="shelf-scroll -mx-5 mt-2 scroll-px-5 gap-6 px-5 pb-4 pt-6 md:-mx-10 md:scroll-px-10 md:px-10 lg:-mx-14 lg:scroll-px-14 lg:px-14">
+              {similarAlbums.map(a => (
+                <RecordTile key={a.uri_release} album={a} palette={colourMap?.[a.uri_release]} className="w-[160px] shrink-0 md:w-[190px]" />
+              ))}
+            </div>
+          </section>
+        )}
       </div>
-    </PageContainer>
+    </div>
   );
 }
 
-function KV({ label, value }: { label: string; value: string }) {
+/* --------------------------------------------------------------- helpers -- */
+
+/** Find the release for a URL slug: exact URI first, then by sanitised name + Discogs ID. */
+function findAlbum(collection: Album[], albumPath: string | undefined): Album | null {
+  if (!albumPath || !collection.length) return null;
+  const exact = collection.find(item => item.uri_release === `/album/${albumPath}/`);
+  if (exact) return exact;
+  const pathMatch = albumPath.match(/^(.+)-(\d+)$/);
+  if (!pathMatch) return null;
+  const discogsId = pathMatch[2];
   return (
-    <div className="bg-paper px-3 py-2.5">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink-dim">
-        {label}
-      </dt>
-      <dd className="mt-1 font-grot text-[15px] font-semibold leading-tight tracking-[-0.01em] text-ink">
-        {value}
-      </dd>
+    collection.find(item => {
+      if (item.uri_release.match(/(\d+)/)?.[1] !== discogsId) return false;
+      return albumPath === `${sanitizeFolderName(item.release_name)}-${discogsId}`;
+    }) ?? null
+  );
+}
+
+const albumsBySlug = new WeakMap<Album[], Map<string, Album>>();
+
+/** Up to ten records that share genres with this one, excluding the same artist. */
+function findSimilarAlbums(collection: Album[], album: Album): Album[] {
+  const explorer = getGenreExplorer(collection as unknown as CollectionAlbum[]);
+  const slug = getAlbumSlug(album.uri_release);
+  const explorerAlbum = explorer.allGenre.albums.find(candidate => candidate.slug === slug);
+  if (!explorerAlbum) return [];
+
+  let bySlug = albumsBySlug.get(collection);
+  if (!bySlug) {
+    bySlug = new Map(collection.map(item => [getAlbumSlug(item.uri_release), item]));
+    albumsBySlug.set(collection, bySlug);
+  }
+
+  const artistUris = new Set([album.uri_artist, ...(album.artists?.map(a => a.uri_artist) ?? [])]);
+  const out: Album[] = [];
+  for (const { album: related } of getRelatedAlbumsForAlbum(explorerAlbum, explorer.allGenre.albums)) {
+    const item = bySlug.get(related.slug);
+    if (item && !artistUris.has(item.uri_artist)) out.push(item);
+    if (out.length === 10) break;
+  }
+  return out;
+}
+
+type SideGroup = { label: string; tracks: Track[] };
+type Grouping = { type: 'lp'; groups: Array<{ lpLabel: string; sides: SideGroup[] }> } | { type: 'flat'; groups: SideGroup[] };
+
+function countSides(grouping: Grouping): number {
+  const labels = grouping.type === 'lp' ? grouping.groups.flatMap(g => g.sides.map(s => s.label)) : grouping.groups.map(g => g.label);
+  return labels.filter(l => l.startsWith('Side')).length;
+}
+
+/** The pressing's own release date, shown only when it isn't the original year. */
+function pressingDate(detail: { released?: string; year?: number } | null, original: number): string {
+  if (!detail) return '';
+  const year = detail.year ?? Number.parseInt(String(detail.released ?? '').slice(0, 4), 10);
+  if (!Number.isFinite(year) || year === original) return '';
+  return detail.released && detail.released.length >= 7 ? formatDate(detail.released) : String(year);
+}
+
+function formatDate(value: string): string {
+  const d = new Date(value);
+  if (Number.isNaN(d.getTime())) return value;
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+}
+
+function Tracklist({
+  grouping,
+  accent,
+  discColour,
+  spotifyIndex,
+  getDuration,
+}: {
+  grouping: Grouping;
+  accent: string;
+  discColour: string;
+  spotifyIndex: Map<string, string>;
+  getDuration: (t: Track) => string;
+}) {
+  const blocks: Array<{ heading?: string; sides: Array<{ label: string; tracks: Track[] }> }> =
+    grouping.type === 'lp'
+      ? grouping.groups.map(g => ({ heading: g.lpLabel, sides: g.sides }))
+      : [{ sides: grouping.groups }];
+
+  return (
+    <div className="flex flex-col gap-12">
+      {blocks.map((block, bi) => (
+        <div key={bi} className="flex flex-col gap-6">
+          {block.heading && blocks.length > 1 && <h3 className="t-kicker m-0" style={{ color: accent }}>{block.heading}</h3>}
+          <div className="grid gap-x-14 gap-y-12 md:grid-cols-2">
+            {block.sides.map((side, si) => {
+              const rows = side.tracks.filter(t => t.position || t.duration_ms || t.name);
+              return (
+                <div key={si} className="flex min-w-0 flex-col gap-3">
+                  {side.label && (
+                    <div className="flex flex-wrap items-center gap-3.5">
+                      <div className="relative h-12 w-12 shrink-0">
+                        <Vinyl label={discColour} spin={false} className="inset-0" />
+                      </div>
+                      <span className="t-disp flex-1 text-[30px] md:text-[36px]">{side.label}</span>
+                    </div>
+                  )}
+                  <ol className="m-0 list-none p-0">
+                    {rows.map((track, i) => {
+                      const header = !track.position && !track.duration_ms;
+                      if (header) {
+                        return (
+                          <li key={i} className="t-kicker pb-1 pt-4" style={{ color: accent }}>
+                            {track.name}
+                          </li>
+                        );
+                      }
+                      const spotifyId = spotifyIndex.get(normaliseTrackTitle(track.name));
+                      const duration = getDuration(track);
+                      return (
+                        <li key={i} className="flex items-baseline gap-4 border-b py-3.5 text-[16px] md:text-[17px]" style={{ borderColor: 'var(--cream-rule)' }}>
+                          <span className="t-mono w-8 shrink-0 text-[12px] font-bold" style={{ color: accent }}>
+                            {track.position || track.track_number || i + 1}
+                          </span>
+                          <span className="min-w-0 flex-1 font-semibold">
+                            {spotifyId ? (
+                              <a href={`https://open.spotify.com/track/${spotifyId}`} target="_blank" rel="noopener noreferrer" className="underline-offset-4 hover:underline" title="Open on Spotify">
+                                {track.name}
+                              </a>
+                            ) : (
+                              track.name
+                            )}
+                            {track.artists && track.artists.length > 0 && (
+                              <span className="ml-2 text-[13px] font-normal text-[color:var(--cream-dim)]">{track.artists.map(a => a.name).join(', ')}</span>
+                            )}
+                          </span>
+                          {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
+                        </li>
+                      );
+                    })}
+                  </ol>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
 
 /**
- * Collapsible body copy. When the natural content height exceeds
- * `collapsedMaxHeight`, the body clips with a paper-gradient fade and
- * shows a "Read more" toggle beneath. Expanded state reveals the full
- * text with a "Show less" affordance. Used for the About and Artist
- * bio sections — replaces the previous hard-truncate + jump-to-artist
- * pattern.
+ * Collapsible body copy. Clips long text with a fade in the page's ground
+ * colour and a "Read more" pill.
  */
-function ExpandableBody({
-  children,
-  collapsedMaxHeight = 260,
-  shouldCollapse,
-  expandLabel = 'Read more',
-  collapseLabel = 'Show less',
-}: {
-  children: React.ReactNode;
-  collapsedMaxHeight?: number;
-  shouldCollapse: boolean;
-  expandLabel?: string;
-  collapseLabel?: string;
-}) {
+function ExpandableBody({ children, shouldCollapse, fade, collapsedMaxHeight = 300 }: { children: React.ReactNode; shouldCollapse: boolean; fade: string; collapsedMaxHeight?: number }) {
   const [expanded, setExpanded] = useState(false);
-
-  if (!shouldCollapse) {
-    return <>{children}</>;
-  }
-
+  if (!shouldCollapse) return <>{children}</>;
   return (
     <div>
-      <div
-        className="relative overflow-hidden transition-[max-height] duration-500 ease-out"
-        style={{ maxHeight: expanded ? '4000px' : `${collapsedMaxHeight}px` }}
-      >
+      <div className="relative overflow-hidden transition-[max-height] duration-500 ease-out" style={{ maxHeight: expanded ? '4000px' : `${collapsedMaxHeight}px` }}>
         {children}
-        {!expanded && (
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-paper via-paper to-transparent"
-          />
-        )}
+        {!expanded && <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-28" style={{ background: `linear-gradient(to top, ${fade}, transparent)` }} />}
       </div>
-      <button
-        type="button"
-        onClick={() => setExpanded(v => !v)}
-        aria-expanded={expanded}
-        className="mt-4 inline-flex items-center gap-2 border border-rule-strong bg-paper px-4 py-2 font-mono text-[11px] uppercase tracking-[0.08em] text-ink transition-colors hover:bg-paper-2"
-      >
-        {expanded ? collapseLabel : expandLabel}
-        <span
-          aria-hidden
-          className="inline-block transition-transform duration-300"
-          style={{ transform: expanded ? 'rotate(180deg)' : 'none' }}
-        >
-          ↓
-        </span>
+      <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} className="pill pill-sm mt-4 border-[color:var(--cream-rule)]">
+        {expanded ? 'Show less' : 'Read more'}
       </button>
-    </div>
-  );
-}
-
-function AlbumMetaRail({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="bg-paper p-4 lg:border-b lg:border-rule lg:bg-transparent lg:px-0 lg:py-5 lg:last:border-b-0">
-      <dt className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-        {label}
-      </dt>
-      <dd className="mt-2 break-words font-display text-[19px] uppercase leading-tight text-ink">
-        {value}
-      </dd>
-    </div>
-  );
-}
-
-function HeroPulseLine({ accent }: { accent: string }) {
-  return (
-    <span className="relative block h-10 w-20 overflow-hidden text-ink" aria-hidden>
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 96 48" fill="none">
-        <path
-          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          opacity="0.32"
-        />
-        <path
-          className="waveform-trace"
-          d="M2 24h12l5-15 9 30 7-23 7 16 7-8h45"
-          stroke={accent}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          pathLength="1"
-          strokeDasharray="0.34 1"
-        />
-      </svg>
-    </span>
-  );
-}
-
-function getAlbumHeroTitleStyle(title: string): React.CSSProperties {
-  const words = title.split(/\s+/).filter(Boolean);
-  const longestWord = words.reduce((max, word) => Math.max(max, word.length), 0);
-  const charCount = title.length;
-
-  let maxPx = 128;
-  let preferredVw = 9.2;
-  let maxWidth = 'min(100%, 9.6ch)';
-
-  if (longestWord >= 18 || charCount >= 46) {
-    maxPx = 72;
-    preferredVw = 4.9;
-    maxWidth = 'min(100%, 13.8ch)';
-  } else if (longestWord >= 13 || charCount >= 34) {
-    maxPx = 88;
-    preferredVw = 5.8;
-    maxWidth = 'min(100%, 12.4ch)';
-  } else if (longestWord >= 11 || charCount >= 24) {
-    maxPx = 104;
-    preferredVw = 7.1;
-    maxWidth = 'min(100%, 11.2ch)';
-  }
-
-  return {
-    fontSize: `clamp(48px, ${preferredVw}vw, ${maxPx}px)`,
-    '--hero-title-max-width': maxWidth,
-    lineHeight: 0.9,
-  } as React.CSSProperties;
-}
-
-function IdRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="flex items-baseline gap-3">
-      <dt className="w-16 shrink-0 uppercase tracking-[0.08em] text-ink-dim">{label}</dt>
-      <dd className="truncate">{value}</dd>
     </div>
   );
 }

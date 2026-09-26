@@ -170,4 +170,4 @@ Machined but quiet: 3px on panels, keys and wells (6px for search/platter well),
 - Don't ship gradient buttons, bevels, inset-glow panels, or dark-dashboard chrome; daylight is flat and calm.
 - Don't let amber spread: one active state per region; red only in meter zones and destructive states.
 - Don't invent hardware fictions (model numbers, fake serials); the site is a collection, not a gadget.
-- Don't hardcode album palette values; consume `public/album-colors.json` / `album-colors.css`.
+- Don't hardcode album palette values; consume `public/album-colors.json`.

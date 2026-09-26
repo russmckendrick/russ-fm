@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { ServiceButton } from './ui/service-button';
 import { Tooltip, TooltipContent, TooltipTrigger, TooltipProvider } from './ui/tooltip';
 import { useLastFmAuth } from '../hooks/useLastFmAuth';
 import { useScrobble } from '../hooks/useScrobble';
@@ -15,12 +14,23 @@ interface AlbumScrobbleButtonProps {
   className?: string;
   fullWidth?: boolean;
   style?: React.CSSProperties;
+  /** Idle label. Defaults to "Scrobble album". */
+  label?: string;
+  /** Solid fill colours (flood ink on flood). Omit for an outline pill. */
+  tone?: { background: string; color: string };
+  pillSize?: 'sm' | 'md' | 'lg';
+  /** Called when a scrobble starts/finishes, so heroes can spin the record faster. */
+  onActiveChange?: (active: boolean) => void;
 }
 
 export function AlbumScrobbleButton({
   album,
   className = '',
   fullWidth = false,
+  label = 'Scrobble album',
+  tone,
+  pillSize = 'md',
+  onActiveChange,
 }: AlbumScrobbleButtonProps) {
   const { isAuthenticated } = useLastFmAuth();
   const { scrobbleAlbum, isScrobbling, error } = useScrobble();
@@ -34,6 +44,7 @@ export function AlbumScrobbleButton({
   const handleScrobble = async () => {
     if (!isAuthenticated) return;
 
+    onActiveChange?.(true);
     try {
       // Start with progress at 0
       setProgress({ current: 0, total: 100 });
@@ -75,6 +86,8 @@ export function AlbumScrobbleButton({
       console.error('Album scrobble failed:', err);
       setSummary(null);
       setProgress(null);
+    } finally {
+      onActiveChange?.(false);
     }
   };
 
@@ -94,21 +107,8 @@ export function AlbumScrobbleButton({
     }
     if (isScrobbling) return 'Scrobbling…';
     if (partial && summary) return `Scrobbled ${summary.successful} of ${summary.total}`;
-    if (scrobbled) return 'Album Scrobbled!';
-    return 'Scrobble to Last.fm';
-  };
-
-  const getBrandColor = () => {
-    if (partial) {
-      return '#d97706'; // amber-600
-    }
-    if (scrobbled) {
-      return '#22c55e'; // green-600
-    }
-    if (progress || isScrobbling) {
-      return '#2563eb'; // blue-600
-    }
-    return '#D51007'; // Last.fm red
+    if (scrobbled) return `Scrobbled ${album.tracks.length} tracks`;
+    return label;
   };
 
   const getTooltipContent = () => {
@@ -125,18 +125,22 @@ export function AlbumScrobbleButton({
     return `Scrobble "${album.album}" by ${album.artist} (${album.tracks.length} tracks)`;
   };
 
+  const pct = progress ? Math.max(0, Math.min(100, (progress.current / progress.total) * 100)) : scrobbled ? 100 : 0;
   const button = (
-    <ServiceButton
-      service="custom"
-      brandColor={getBrandColor()}
+    <button
+      type="button"
       onClick={handleScrobble}
       disabled={isScrobbling || scrobbled || !!progress}
-      className={`${fullWidth ? 'w-full' : ''} ${className}`}
-      icon={getIcon()}
-      progress={progress}
+      aria-label={getTooltipContent()}
+      className={`pill ${tone ? 'pill-solid' : ''} ${pillSize === 'lg' ? 'pill-lg' : pillSize === 'sm' ? 'pill-sm' : ''} ${fullWidth ? 'w-full' : ''} ${className}`}
+      style={tone ? { background: tone.background, color: tone.color } : undefined}
     >
-      {getButtonText()}
-    </ServiceButton>
+      <span className="pill-fill" style={{ width: `${pct}%` }} aria-hidden />
+      <span className="pill-content">
+        {getIcon()}
+        {getButtonText()}
+      </span>
+    </button>
   );
 
   if (!isAuthenticated) {

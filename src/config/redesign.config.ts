@@ -8,7 +8,6 @@
  */
 
 export type Density = 'sparse' | 'medium' | 'dense';
-export type ThemeDefault = 'light' | 'dark' | 'system';
 export type HeroVariant = 'split' | 'stacked';
 export type ThemeMode = 'paper' | 'stage' | 'mixed';
 export type MotionLevel = 'reduced' | 'measured' | 'expressive';
@@ -89,21 +88,26 @@ export const redesignConfig = {
   /** Section sizing on the Stats page. */
   stats: {
     topArtistsCount: 12,
-    topGenresCount: 8,
+    topGenresCount: 13,
     topYearsCount: 5,
     recentAdditionsCount: 12,
     fromTheCratesCount: 6,
     randomArtistsCount: 6,
     decadeBarsMaxDecades: 10,
-    topLabelsCount: 15,
+    topLabelsCount: 28,
     topCountriesCount: 10,
-    hiddenGemsCount: 12,
+    hiddenGemsCount: 8,
     hiddenGemsListenersThreshold: 500,
   },
 
-  /** Random page "next up if you shuffle" peek strip. */
+  /**
+   * Shuffle page (/shuffle, also /random) split-flap board. `wide` applies from 640px up,
+   * `narrow` below. `tickMs` is how often a flipping tile changes character.
+   */
   random: {
-    peekCount: 8,
+    wide: { cols: 20, artistRows: 1, titleRows: 3 },
+    narrow: { cols: 12, artistRows: 2, titleRows: 4 },
+    tickMs: 42,
   },
 
   /**
@@ -123,11 +127,6 @@ export const redesignConfig = {
   /** Mono-case catalogue labels (CAT. A01 · INDUSTRIAL RECORDS · IR0008). */
   monoLabels: {
     default: true,
-  },
-
-  /** Default theme. Existing ThemeProvider still owns light/dark/system. */
-  theme: {
-    default: 'system' as ThemeDefault,
   },
 } as const;
 

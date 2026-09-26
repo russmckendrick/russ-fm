@@ -5,20 +5,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Color palette interface (matches src/types/wrapped.ts)
+// Sleeve palette from album-colors.json (matches AlbumColorPalette in src/hooks/useAlbumColors.ts)
 interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+  v: number;
+  flood: string;
+  ink: string;
+  ground: string;
+  glow: string;
+  secondary: string | null;
+  hue: number;
+  vivid: number;
 }
 
 // Default fallback palette
 const defaultPalette: ColorPalette = {
-  background: '#1a1a1a',
-  foreground: '#ffffff',
-  accent: '#666666',
-  muted: '#404040'
+  v: 2,
+  flood: '#e8e2d6',
+  ink: '#0e0d0c',
+  ground: '#1c1916',
+  glow: '#e8e2d6',
+  secondary: null,
+  hue: 0.12,
+  vivid: 0,
 };
 
 // Load album colors once at startup
@@ -61,6 +69,7 @@ interface OriginalRelease {
   uri_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: {
@@ -83,6 +92,7 @@ interface Release {
   release_artist: string;
   date_added: string;
   date_release_year: string;
+  year_original?: number | null;
   genre_names: string[];
   slug: string;
   images: {
@@ -301,6 +311,7 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
         release_artist: release.release_artist,
         date_added: release.date_added,
         date_release_year: release.date_release_year,
+        year_original: release.year_original ?? null,
         genre_names: release.genre_names,
         slug: albumSlug,
         images: {
@@ -369,8 +380,8 @@ async function generateWrappedData(year: number, isYearToDate: boolean = false):
     }
 
     // Release decades
-    if (release.date_release_year) {
-      const year = parseInt(release.date_release_year);
+    if (release.year_original || release.date_release_year) {
+      const year = release.year_original ?? parseInt(release.date_release_year);
       if (!isNaN(year)) {
         const decade = `${Math.floor(year / 10) * 10}s`;
         decadeCounts.set(decade, (decadeCounts.get(decade) || 0) + 1);

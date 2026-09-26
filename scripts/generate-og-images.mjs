@@ -13,6 +13,16 @@ const publicDir = path.join(__dirname, '../public');
 const fontRegular = await fs.readFile(path.join(__dirname, '../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff'));
 const fontBold = await fs.readFile(path.join(__dirname, '../node_modules/@fontsource/inter/files/inter-latin-700-normal.woff'));
 
+/**
+ * The card's colours from an album-colors.json palette: the sleeve's own dark
+ * ground behind cream text, with the glow (the flood lifted to read on the
+ * ground) for accents.
+ */
+function ogColours(palette) {
+  if (!palette) return null;
+  return { background: palette.ground, foreground: '#fbf7ef', accent: palette.glow };
+}
+
 // OG Image template using React-like JSX
 async function AlbumOGCard({ album, colors, imageBase64 }) {
   const albumSlug = album.uri_release.split('/')[2];
@@ -117,7 +127,7 @@ async function AlbumOGCard({ album, colors, imageBase64 }) {
                       type: 'div',
                       props: {
                         style: { display: 'flex' },
-                        children: String(new Date(album.date_release_year).getFullYear())
+                        children: String(album.year_original ?? new Date(album.date_release_year).getFullYear())
                       }
                     },
                     {
@@ -702,7 +712,7 @@ async function main() {
   let albumFailCount = 0;
 
   for (const album of collection) {
-    const colors = albumColors[album.uri_release];
+    const colors = ogColours(albumColors[album.uri_release]);
 
     if (!colors) {
       console.log(`⚠ Skipping ${album.release_name} - no colors found`);

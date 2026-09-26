@@ -43,6 +43,13 @@ function SearchComponent() {
 | search | `(query: string) => void` | Trigger search |
 | clearResults | `() => void` | Clear results |
 
+**Options** (all optional): `debounceMs` (default 150), `limit` (20), `threshold`,
+`includeMatches`, `filterByType` (`'album' | 'artist'`), `autoSearch` (`true`) and `enabled`
+(`true`). The index is built from the shared collection (`loadCollection()` in
+`src/lib/collection.ts`), not a separate fetch. With `enabled: false` the hook does not build
+the Fuse index; it starts when `enabled` becomes `true`, so search UI can defer the work until
+it is opened.
+
 **Search Result Structure:**
 ```typescript
 interface SearchResult {
@@ -63,27 +70,20 @@ interface SearchResult {
 
 ### useInstantSearch
 
-Auto-searching variant with debouncing.
+Auto-searching variant with a 100ms debounce and up to 10 results.
 
 ```typescript
 import { useInstantSearch } from '@/hooks/useSearch';
 
-function InstantSearch() {
-  const { query, setQuery, results } = useInstantSearch({
-    debounceMs: 300,
-    minLength: 2
-  });
+function InstantSearch({ isVisible }: { isVisible: boolean }) {
+  const { query, setQuery, results } = useInstantSearch('', isVisible);
 
   // Results update automatically as user types
 }
 ```
 
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| debounceMs | `number` | 300 | Debounce delay |
-| minLength | `number` | 2 | Minimum query length |
-| limit | `number` | 20 | Max results |
+**Parameters:** `initialQuery` (default `''`) and `enabled` (default `true`). `SearchOverlay`
+passes its `isVisible` prop, so the index is only built once the overlay opens.
 
 ---
 
@@ -94,11 +94,14 @@ Mobile-optimized search with simplified results.
 ```typescript
 import { useMobileSearch } from '@/hooks/useSearch';
 
-function MobileSearch() {
-  const { query, setQuery, results, isLoading } = useMobileSearch();
-  // Uses relaxed matching for touch interfaces
+function MobileSearch({ isOpen }: { isOpen: boolean }) {
+  const { query, setQuery, results, isLoading } = useMobileSearch(isOpen);
+  // 200ms debounce, up to 15 results
 }
 ```
+
+**Parameters:** `enabled` (default `true`). `MobileSearchModal` passes `isOpen`, so the index
+is only built once the modal opens.
 
 ---
 
@@ -128,183 +131,170 @@ function TypeAhead() {
 
 ## Color Hooks
 
+The palette hooks read the pre-extracted `/album-colors.json` (URI → palette), which is
+fetched once and cached in memory. Every colour is decided at build time by
+`scripts/generate-album-colors.js`, Apple Music artwork colours included, so pages only read
+it. Turn a palette into page colours with `floodFor()` from
+[`src/lib/sleeveColour.ts`](./utilities.md#sleeve-colours-srclibsleevecolourts).
+
+```typescript
+interface AlbumColorPalette {
+  v: number;                // palette version
+  flood: string;            // the sleeve's colour; a tinted neutral when vivid is 0
+  ink: string;              // dark ink or cream, whichever reads on the flood
+  ground: string;           // the sleeve's own dark (page body, vinyl labels), never pure black
+  glow: string;             // the flood, lightened if needed to reach 3:1 on the ground
+  secondary: string | null; // a second, clearly different sleeve colour
+  hue: number;              // flood hue, 0–1 (OKLCH), for colour sorting
+  vivid: number;            // how bold the flood is: 0 for monochrome, up to ~2.6
+}
+```
+
 ### useAlbumColors (`src/hooks/useAlbumColors.ts`)
 
-Load pre-extracted album color palettes.
+Palette for one album.
 
 ```typescript
 import { useAlbumColors } from '@/hooks/useAlbumColors';
+import { floodFor } from '@/lib/sleeveColour';
 
-function AlbumHero({ slug }) {
-  const { colors, loading, error } = useAlbumColors(slug);
-
-  if (loading) return <Skeleton />;
-
-  return (
-    <div style={{
-      background: colors?.background,
-      color: colors?.foreground
-    }}>
-      {/* Content */}
-    </div>
-  );
-}
+const palette = useAlbumColors(album.uri_release); // or a slug
+const flood = floodFor(palette);
 ```
 
-**Returns:**
-| Property | Type | Description |
-|----------|------|-------------|
-| colors | `ColorPalette \| null` | Album colors |
-| loading | `boolean` | Loading state |
-| error | `Error \| null` | Error if failed |
+**Parameters:** `albumIdentifier?: string` — a URI (`/album/slug/`) or a slug.
 
-**ColorPalette Structure:**
+**Returns:** `AlbumColorPalette | null` (`null` while loading or when the album has no entry).
+
+Once `album-colors.json` has loaded, the palette is resolved synchronously and returned on the
+first render (lookups are cached per identifier), so a page floods in the right colour
+without a neutral flash.
+
+---
+
+### useAlbumColorMap
+
+The whole URI → palette map. Use it when a page paints many sleeves at once (grids, shelves,
+the artist discography, browse cards, the genre map, Wrapped) instead of calling `useAlbumColors` per
+tile.
+
 ```typescript
-interface ColorPalette {
-  background: string;  // Dark background color
-  foreground: string;  // Text color (usually white)
-  accent: string;      // Most vibrant color
-  muted: string;       // Secondary accent
-}
+import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+
+const colourMap = useAlbumColorMap();
+
+albums.map(album => (
+  <RecordTile key={album.uri_release} album={album} palette={colourMap?.[album.uri_release]} />
+));
 ```
+
+**Returns:** `Record<string, AlbumColorPalette> | null` — `null` until loaded. Keys are album
+URIs with a trailing slash (`/album/slug/`).
 
 ---
 
 ### useAlbumColorsWithFallback
 
-Version with default fallback colors.
-
-```typescript
-import { useAlbumColorsWithFallback } from '@/hooks/useAlbumColors';
-
-function Component({ slug }) {
-  const { colors } = useAlbumColorsWithFallback(slug, {
-    background: '#1a1a2e',
-    foreground: '#ffffff',
-    accent: '#0066cc',
-    muted: '#666666'
-  });
-
-  // colors is never null
-}
-```
+Same as `useAlbumColors` but never `null`: returns the neutral palette (flood `#e8e2d6`,
+ground `#1c1916`, `vivid` 0) when the album has no entry.
 
 ---
 
 ### preloadAlbumColors
 
-Preload colors for performance.
+`preloadAlbumColors(): Promise<void>` starts loading `album-colors.json` ahead of use.
+
+---
+
+### useAlbumSwatches
+
+The sleeve's main swatches, largest first, from `/album-swatches.json`. Only the album page
+shows them, so they live in their own file, fetched once on first use.
 
 ```typescript
-import { preloadAlbumColors } from '@/hooks/useAlbumColors';
+import { useAlbumSwatches, type AlbumSwatch } from '@/hooks/useAlbumColors';
 
-// Preload on hover for faster transition
-<Link
-  to={`/album/${slug}`}
-  onMouseEnter={() => preloadAlbumColors(slug)}
->
-  View Album
-</Link>
+const swatches: AlbumSwatch[] = useAlbumSwatches(album.uri_release);
+// [['#183139', 23], ['#465428', 23], ...] — [hex, percent of the sleeve]
+```
+
+**Parameters:** `uri?: string` — the album's `uri_release`.
+
+**Returns:** `AlbumSwatch[]` (`[hex, percent]` pairs, up to six). Empty until loaded, and for
+albums without artwork.
+
+### useBackdropTone (`src/hooks/useBackdropTone.ts`)
+
+`useBackdropTone(src): 'light' | 'dark' | null`. Loads its own CORS-enabled copy of an image
+(pass a small size, e.g. the artist avatar), draws it to a 24×30 canvas and averages the
+luminance of the top quarter and outer columns, where a portrait's backdrop shows. The
+visible `<img>` is untouched. Results are cached per URL. Returns `null` until measured or
+when the host doesn't send CORS headers for the current origin (`assets.russ.fm` allows
+`https://russ.fm`), so callers need a fallback. The artist page uses it to pick the
+portrait's blend mode.
+
+---
+
+## Flood Hooks
+
+Defined in `src/components/player/flood-context.ts` and exported from
+`@/components/player`. They need `FloodProvider`, which wraps the app in `App.tsx`. The value
+and the setter live in separate contexts (`FloodValueContext` and `FloodSetterContext`), so a
+page that sets the flood does not re-render when the flood changes; only the navigation,
+which reads the value, does.
+
+### usePageFlood
+
+Sets the page's flood colour while the calling page is mounted. The sticky navigation paints
+itself in the same colour until the page scrolls, and `--flood` / `--flood-ink` are set on
+`<html>`. Call it in any page with a colour hero.
+
+```typescript
+import { usePageFlood } from '@/components/player';
+
+const flood = floodFor(palette);
+usePageFlood(
+  album ? flood.flood : null,
+  album ? flood.ink : null,
+  album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+);
+```
+
+**Parameters:** `flood`, `ink` (`string | null | undefined`), and an optional
+`{ cover, ground }`. `ground` (usually the sleeve's `ground` swatch) becomes `--ground` for the
+whole page. `cover` is an image URL the page already shows. The spinning logo and the footer record put that sleeve on
+their labels; pass the size the page itself loads so it comes from cache. Only the home hero,
+album and artist (latest addition) pages pass one. Passing `null` for either
+resets to the dark ground; the flood is also reset when the page unmounts. Unchanged values
+are ignored, so it is safe to call on every render.
+
+### useFloodValue
+
+Reads the current `{ flood, ink, cover, ground }`. Used by `Navigation` and `Footer`.
+
+```typescript
+import { useFloodValue } from '@/components/player';
+
+const { flood, ink } = useFloodValue();
 ```
 
 ---
 
-## Theme Hooks
+## Media Query Hooks
 
-### useTheme (`src/hooks/useTheme.ts`)
+### useMediaQuery (`src/hooks/useMediaQuery.ts`)
 
-Detect current theme (light/dark).
-
-```typescript
-import { useTheme } from '@/hooks/useTheme';
-
-function ThemeAwareComponent() {
-  const { theme, isDark, isLight } = useTheme();
-
-  return (
-    <div className={isDark ? 'dark-styles' : 'light-styles'}>
-      Current theme: {theme}
-    </div>
-  );
-}
-```
-
-**Returns:**
-| Property | Type | Description |
-|----------|------|-------------|
-| theme | `'light' \| 'dark' \| 'system'` | Current theme |
-| isDark | `boolean` | Dark mode active |
-| isLight | `boolean` | Light mode active |
-| setTheme | `(theme: string) => void` | Change theme |
-
----
-
-## Animation Hooks
-
-### useCountAnimation (`src/hooks/useCountAnimation.ts`)
-
-Animate counting from 0 to target number.
+Whether a CSS media query matches, updating when it changes
+(`useSyncExternalStore` over `matchMedia`). `false` during server rendering.
 
 ```typescript
-import { useCountAnimation } from '@/hooks/useCountAnimation';
+import { useMediaQuery, usePrefersReducedMotion } from '@/hooks/useMediaQuery';
 
-function StatDisplay({ value }) {
-  const count = useCountAnimation(value, {
-    duration: 2000,
-    delay: 500
-  });
-
-  return <span>{count}</span>;
-}
+const isWide = useMediaQuery('(min-width: 640px)');
+const reducedMotion = usePrefersReducedMotion();
 ```
 
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| duration | `number` | 1500 | Animation duration (ms) |
-| delay | `number` | 0 | Start delay (ms) |
-| easing | `(t: number) => number` | easeOutQuad | Easing function |
-
-**Custom Easing:**
-```typescript
-const count = useCountAnimation(1000, {
-  easing: t => t * t * t // Cubic easing
-});
-```
-
----
-
-### useScrollAnimation (`src/hooks/useScrollAnimation.ts`)
-
-Intersection Observer for scroll-triggered animations.
-
-```typescript
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-
-function AnimatedSection() {
-  const { ref, isVisible } = useScrollAnimation({
-    threshold: 0.2,
-    once: true
-  });
-
-  return (
-    <div
-      ref={ref}
-      className={isVisible ? 'animate-in' : 'opacity-0'}
-    >
-      Content reveals on scroll
-    </div>
-  );
-}
-```
-
-**Options:**
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| threshold | `number` | 0.1 | Visibility threshold |
-| rootMargin | `string` | '0px' | Observer margin |
-| delay | `number` | 0 | Animation delay |
-| once | `boolean` | true | Only animate once |
+The Shuffle page uses both: the board's column count and whether the tiles animate.
 
 ---
 
@@ -588,7 +578,7 @@ Compose hooks for complex functionality:
 ```typescript
 function useAlbumDetail(slug) {
   const [album, setAlbum] = useState(null);
-  const { colors } = useAlbumColors(slug);
+  const palette = useAlbumColors(slug);
   const { isAuthenticated } = useLastFmAuth();
 
   useEffect(() => {
@@ -599,7 +589,7 @@ function useAlbumDetail(slug) {
 
   return {
     album,
-    colors,
+    flood: floodFor(palette),
     canScrobble: isAuthenticated
   };
 }

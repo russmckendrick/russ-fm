@@ -38,7 +38,7 @@ pub struct ReleaseRecord {
     pub release_name_spotify: Option<String>,
     pub enrichment_data: Value,
     pub local_images: Value,   // {hi-res, medium, small} relative paths
-    pub raw_data: Value,       // per-service payloads: apple_music/spotify/lastfm/perplexity
+    pub raw_data: Value,       // per-service payloads: apple_music/spotify/lastfm/perplexity/discogs
     pub created_at: Option<String>,
     pub updated_at: Option<String>,
     pub date_added: Option<String>,   // drives collection.json sort order
@@ -94,6 +94,12 @@ Notes:
   [`docs/backend/README.md`](../backend/README.md).
 - The canonical Perplexity location is top-level `raw_data.perplexity`; legacy Python-era rows
   may nest it under `raw_data.services.perplexity` (readers fall back).
+- `raw_data.discogs` keeps the source `images`, the release's `master_id` and `master_year` (the
+  Discogs master's original release year; null = looked up, unknown; absent = not looked up).
+  `collection.json` derives `year_original` from it — see
+  [Original release year](../backend/README.md#original-release-year).
+- Python-era rows may store `raw_data.apple_music` / `raw_data.spotify` as dataclass repr strings
+  rather than objects; `year_original` parses release dates out of those strings.
 
 ---
 
@@ -109,7 +115,8 @@ export interface Album {
   release_artist: string;
   discogs_id: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;       // often the reissue/pressing date
+  year_original?: number | null;   // original release year; read via src/lib/releaseYear.ts
   uri_release: string;
   uri_artist: string;
 
@@ -282,7 +289,8 @@ export interface WrappedRelease {
   release_name: string;
   release_artist: string;
   date_added: string;
-  date_release_year: number;
+  date_release_year: string;
+  year_original?: number | null;
   slug: string;
   images: ImageUris;
   artists: { name: string; slug: string }[];
@@ -353,14 +361,24 @@ export interface ScrobbleResponse {
 ### Color Types
 
 ```typescript
-export interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+// src/hooks/useAlbumColors.ts
+export interface AlbumColorPalette {
+  v: number;                // palette version
+  flood: string;            // the sleeve's colour
+  ink: string;              // dark ink or cream, whichever reads on the flood
+  ground: string;           // the sleeve's own dark, never pure black
+  glow: string;             // flood lightened to 3:1 on the ground
+  secondary: string | null; // a second, clearly different sleeve colour
+  hue: number;              // flood hue, 0–1 (OKLCH)
+  vivid: number;            // 0 for monochrome sleeves, up to ~2.6
 }
 
-export type AlbumColors = Record<string, ColorPalette>;
+export type AlbumSwatch = [string, number]; // [hex, percent of the sleeve]
+
+// src/types/wrapped.ts
+export type ColorPalette = AlbumColorPalette;
+
+export type AlbumColors = Record<string, AlbumColorPalette>;
 ```
 
 ### Asset Types (`types/assets.ts`)

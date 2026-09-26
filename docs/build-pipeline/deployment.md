@@ -162,6 +162,10 @@ Notes on the shape of the job:
   since the last save are regenerated on each run, which is cheap because the
   image processor skips anything already present in the cache (see
   [Asset Processing](./asset-processing.md#caching)).
+- **Cached album OG cards keep their colours.** `generate-og` only draws cards
+  missing from `node_modules/.cache/assets/og`, so a change to the sleeve
+  palettes in `album-colors.json` does not reach existing cards until that
+  cache is cleared (bumping the suffix does it).
 
 ---
 

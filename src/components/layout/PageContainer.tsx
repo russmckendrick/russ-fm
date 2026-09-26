@@ -15,10 +15,10 @@ interface PageContainerProps {
 }
 
 /**
- * Editorial page shell. Navigation is sticky (not fixed) and lives in the
- * document flow, so pages no longer need to reserve header-height top
- * padding. Standard pages get the max-1640 gutter; hero pages go edge-to-
- * edge.
+ * Page shell on the dark ground. Navigation is sticky (not fixed) and lives
+ * in the document flow, so pages do not reserve header-height top padding.
+ * Standard pages get the max-1640 container with the same side gutters as
+ * the navigation; hero pages go edge-to-edge.
  */
 export function PageContainer({
   children,
@@ -27,8 +27,8 @@ export function PageContainer({
 }: PageContainerProps) {
   const base =
     variant === "standard"
-      ? "mx-auto w-full max-w-[1640px] px-5 py-8 md:px-8 md:py-10"
-      : "min-h-[100dvh]";
+      ? "mx-auto w-full max-w-[1640px] px-5 py-8 text-[color:var(--cream)] md:px-10 md:py-12 lg:px-14"
+      : "min-h-[100dvh] text-[color:var(--cream)]";
 
   return <div className={cn(base, className)}>{children}</div>;
 }

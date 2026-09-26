@@ -1,49 +1,17 @@
-import { useState, useEffect, useCallback } from 'react';
-import { Search, X } from 'lucide-react';
-import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useState, useEffect, useCallback, type ReactNode } from 'react';
+import { ArrowLeft, ArrowRight, Search, X } from 'lucide-react';
+import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
-import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
+import { PageContainer } from '@/components/layout';
+import { FloodBand, useRecordsFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
+import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { cn } from '@/lib/utils';
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination';
 import { appConfig } from '@/config/app.config';
 import { getArtistImageFromData } from '@/lib/image-utils';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
-
-interface Album {
-  release_name: string;
-  release_artist: string;
-  artists?: Array<{
-    name: string;
-    uri_artist: string;
-    json_detailed_artist: string;
-    biography?: string;
-    images_uri_artist: {
-      'hi-res': string;
-      medium: string;
-    };
-  }>;
-  genre_names: string[];
-  uri_release: string;
-  uri_artist: string;
-  date_added: string;
-  date_release_year: string;
-  images_uri_release: {
-    medium: string;
-  };
-  images_uri_artist: {
-    medium: string;
-  };
-}
+import { loadCollection as loadSharedCollection } from '@/lib/collection';
+import type { Album } from '@/types/album';
 
 interface Artist {
   name: string;
@@ -53,8 +21,16 @@ interface Artist {
   genres: string[];
   image: string;
   latestAlbum: string;
+  /** uri_release of the most recently added record; its sleeve colours the card. */
+  latestRelease: string;
   biography?: string;
 }
+
+const SORT_OPTIONS: Array<{ value: string; label: string }> = [
+  { value: 'name', label: 'A–Z' },
+  { value: 'albums', label: 'Most records' },
+  { value: 'latest', label: 'Latest added' },
+];
 
 export function ArtistsPage() {
   const { page } = useParams<{ page?: string }>();
@@ -67,6 +43,7 @@ export function ArtistsPage() {
   const [sortBy, setSortBy] = useState(searchParams.get('sort') || 'name');
   const [selectedLetter, setSelectedLetter] = useState(searchParams.get('letter') || 'all');
   const [searchTerm, setSearchTerm] = useState(searchParams.get('search') || '');
+  const colorMap = useAlbumColorMap();
   
   const itemsPerPage = appConfig.pagination.itemsPerPage.artists;
   const currentPage = page ? parseInt(page, 10) : 1;
@@ -107,8 +84,7 @@ export function ArtistsPage() {
 
   const loadCollection = async () => {
     try {
-      const response = await fetch('/collection.json');
-      const data = await response.json();
+      const data = await loadSharedCollection();
       // Keep artist album counts aligned with stats: boxset members don't count.
       setCollection(excludeBoxsetMembers(data));
       setLoading(false);
@@ -164,6 +140,7 @@ export function ArtistsPage() {
               genres: [],
               image: getArtistImageFromData(artistInfo.uri_artist, 'medium'),
               latestAlbum: album.date_added,
+              latestRelease: album.uri_release,
               biography: artistInfo.biography || undefined
             });
             normalizedToOriginal.set(normalizedName, artistName);
@@ -199,6 +176,7 @@ export function ArtistsPage() {
           // Update latest album if this one is newer
           if (album.date_added > artist.latestAlbum) {
             artist.latestAlbum = album.date_added;
+            artist.latestRelease = album.uri_release;
             artist.image = getArtistImageFromData(artistInfo.uri_artist, 'medium');
           }
         });
@@ -222,6 +200,7 @@ export function ArtistsPage() {
             genres: [],
             image: getArtistImageFromData(album.uri_artist, 'medium'),
             latestAlbum: album.date_added,
+            latestRelease: album.uri_release,
             biography: undefined
           });
           normalizedToOriginal.set(normalizedName, artistName);
@@ -252,6 +231,7 @@ export function ArtistsPage() {
         // Update latest album if this one is newer
         if (album.date_added > artist.latestAlbum) {
           artist.latestAlbum = album.date_added;
+          artist.latestRelease = album.uri_release;
           artist.image = getArtistImageFromData(album.uri_artist, 'medium');
         }
       }
@@ -363,6 +343,8 @@ export function ArtistsPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedArtists = filteredArtists.slice(startIndex, endIndex);
+  // The header band and page ground take the colours of the first artists' latest records.
+  const flood = useRecordsFlood(paginatedArtists.map(a => a.latestRelease));
 
   // Generate page numbers for pagination
   const getPageNumbers = () => {
@@ -397,183 +379,281 @@ export function ArtistsPage() {
     return pages;
   };
 
-  if (loading) {
-    return (
-      <PageContainer>
-        <EditorialSkeleton label="Loading roster…" />
-      </PageContainer>
-    );
-  }
-
   const availableLetters = getAvailableLetters();
+  const hasFilters = !!searchTerm || selectedLetter !== 'all';
+  // Artists are derived in effects after the collection lands; keep the
+  // skeleton up until they exist so "No artists found" never flashes.
+  const pending =
+    loading ||
+    (collection.length > 0 && artists.length === 0) ||
+    (artists.length > 0 && filteredArtists.length === 0 && !hasFilters);
+  const countLabel = pending ? '' : filteredArtists.length.toLocaleString('en-GB');
+
+  const clearFilters = () => {
+    setSearchTerm('');
+    setSelectedLetter('all');
+    updateURLParams({ search: '', letter: 'all' }, true);
+  };
 
   return (
-    <PageContainer>
-      {/* Filter row ------------------------------------------------------ */}
-      <div className="mb-6 flex flex-col gap-3 border-y border-rule-strong bg-paper-2/40 md:flex-row md:items-stretch md:gap-0 md:divide-x md:divide-rule-strong">
-        <label className="relative flex min-w-0 items-center gap-2 px-4 focus-within:text-ink md:flex-1">
-          <Search className="h-4 w-4 shrink-0 text-ink-dim" aria-hidden />
-          <input
-            type="search"
-            placeholder="Search artists…"
-            value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              updateURLParams({ search: e.target.value }, true);
-            }}
-            className="h-10 w-full min-w-0 bg-transparent font-grot text-[14px] text-ink placeholder:text-ink-dim focus:outline-none"
-          />
-          {searchTerm && (
-            <button
-              type="button"
-              onClick={() => {
-                setSearchTerm('');
-                updateURLParams({ search: '' }, true);
-              }}
-              aria-label="Clear search"
-              className="shrink-0 text-ink-dim transition-colors hover:text-ink"
-            >
-              <X className="h-4 w-4" />
-            </button>
+    <>
+      <FloodBand flood={flood}>
+        {/* Title + count ------------------------------------------------- */}
+        <header className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
+          <h1 className="t-disp m-0 text-[44px] md:text-[72px] lg:text-[96px]">Artists</h1>
+          {countLabel && (
+            <span className="t-disp text-[28px] text-[color:var(--cream-dim)] md:text-[44px] lg:text-[56px]" aria-label={`${countLabel} artists`}>
+              {countLabel}
+            </span>
           )}
-        </label>
+        </header>
+      </FloodBand>
 
-        <div className="flex items-center gap-3 px-4 py-2">
-          <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-ink-dim">
-            Sort
-          </span>
-          <Select
-            value={sortBy}
-            onValueChange={(value) => {
-              setSortBy(value);
-              updateURLParams({ sort: value }, true);
-            }}
-          >
-            <SelectTrigger className="h-8 min-w-[140px] gap-2 border-0 bg-transparent px-0 font-grot text-[13px] font-medium tracking-[-0.005em] text-ink shadow-none focus:ring-0 focus:ring-offset-0">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="rounded-none border border-rule-strong font-grot">
-              <SelectItem value="name" className="rounded-none font-grot text-[13px]">Artist Name</SelectItem>
-              <SelectItem value="albums" className="rounded-none font-grot text-[13px]">Album Count</SelectItem>
-              <SelectItem value="latest" className="rounded-none font-grot text-[13px]">Latest Addition</SelectItem>
-            </SelectContent>
-          </Select>
+      <PageContainer className="text-[color:var(--cream)]">
+        {/* Controls ------------------------------------------------------- */}
+        <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-center">
+          <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border-2 border-[color:var(--cream-rule)] bg-[var(--ground-2)] px-5 transition-colors focus-within:border-[color:var(--cream)] lg:w-[360px]">
+            <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
+            <input
+              type="search"
+              placeholder="Search artists"
+              aria-label="Search artists"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                updateURLParams({ search: e.target.value }, true);
+              }}
+              className="h-full w-full min-w-0 bg-transparent text-[15px] text-[color:var(--cream)] placeholder:text-[color:var(--cream-dim)] focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+            />
+            {searchTerm && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchTerm('');
+                  updateURLParams({ search: '' }, true);
+                }}
+                aria-label="Clear search"
+                className="-mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[color:var(--cream-dim)] transition-colors hover:text-[color:var(--cream)]"
+              >
+                <X className="h-4 w-4" aria-hidden />
+              </button>
+            )}
+          </label>
+
+          <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Sort artists">
+            {SORT_OPTIONS.map((option) => {
+              const active = sortBy === option.value;
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => {
+                    setSortBy(option.value);
+                    updateURLParams({ sort: option.value }, true);
+                  }}
+                  className={cn(
+                    'pill px-4 text-[14px]',
+                    active
+                      ? 'pill-solid bg-[var(--cream)] text-[color:var(--ground)]'
+                      : 'text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]',
+                  )}
+                >
+                  {option.label}
+                </button>
+              );
+            })}
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="pill px-4 text-[14px] border-[color:var(--cream-rule)] text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]"
+              >
+                <X className="h-4 w-4" aria-hidden />
+                Clear
+              </button>
+            )}
+          </div>
         </div>
-      </div>
 
-      {/* A-Z alphabet strip --------------------------------------------- */}
-      <div className="mb-8 flex flex-wrap gap-0 border border-rule-strong bg-paper font-mono text-[11px] tracking-[0.04em]">
-        <LetterCell
-          active={selectedLetter === 'all'}
-          available
-          onClick={() => {
-            setSelectedLetter('all');
-            updateURLParams({ letter: 'all' }, true);
-          }}
-        >
-          All
-        </LetterCell>
-        {getAllLetters().map((letter) => {
-          const available = availableLetters.includes(letter);
-          return (
-            <LetterCell
-              key={letter}
-              active={selectedLetter === letter}
-              available={available}
+        {/* A–Z ------------------------------------------------------------- */}
+        <nav aria-label="Filter by first letter" className="-mx-5 mb-10 px-5 md:mx-0 md:px-0">
+          <div className="shelf-scroll gap-1.5 pb-1 md:flex-wrap">
+            <LetterPill
+              active={selectedLetter === 'all'}
+              available
+              wide
               onClick={() => {
-                if (!available) return;
-                setSelectedLetter(letter);
-                updateURLParams({ letter }, true);
+                setSelectedLetter('all');
+                updateURLParams({ letter: 'all' }, true);
               }}
             >
-              {letter}
-            </LetterCell>
-          );
-        })}
-      </div>
+              All
+            </LetterPill>
+            {getAllLetters().map((letter) => {
+              const available = availableLetters.includes(letter);
+              return (
+                <LetterPill
+                  key={letter}
+                  active={selectedLetter === letter}
+                  available={available}
+                  onClick={() => {
+                    if (!available) return;
+                    setSelectedLetter(letter);
+                    updateURLParams({ letter }, true);
+                  }}
+                >
+                  {letter}
+                </LetterPill>
+              );
+            })}
+          </div>
+        </nav>
 
-      {filteredArtists.length === 0 ? (
-        <EditorialEmpty
-          title="No artists found"
-          detail="Try adjusting your search"
-        />
-      ) : (
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {paginatedArtists.map((artist, i) => (
-            <ArtistCard
-              key={artist.uri}
-              artist={artist}
-              index={startIndex + i + 1}
-            />
-          ))}
-        </div>
-      )}
+        {/* Grid ------------------------------------------------------------ */}
+        {pending ? (
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6" aria-live="polite" aria-busy>
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className="flex flex-col items-center p-2">
+                <div className="aspect-square w-full animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
+                <div className="mt-5 h-4 w-2/3 animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
+              </div>
+            ))}
+            <span className="sr-only">Loading artists</span>
+          </div>
+        ) : filteredArtists.length === 0 ? (
+          <div className="flex flex-col items-start gap-4 rounded-2xl bg-[var(--ground-2)] px-6 py-10 md:px-10">
+            <p className="t-disp m-0 text-[26px] md:text-[32px]">No artists found</p>
+            {hasFilters && (
+              <button type="button" onClick={clearFilters} className="pill px-4 text-[14px] text-[color:var(--cream)]">
+                Clear filters
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
+            {paginatedArtists.map((artist, i) => (
+              <ArtistCard
+                key={artist.uri}
+                artist={artist}
+                index={startIndex + i + 1}
+                palette={colorMap?.[artist.latestRelease] ?? null}
+              />
+            ))}
+          </div>
+        )}
 
-      {totalPages > 1 && (
-        <div className="mt-12 border-t border-rule pt-6">
-          <Pagination>
-            <PaginationContent>
-              <PaginationItem>
-                <PaginationPrevious
-                  onClick={() => navigate(buildPageUrl(Math.max(1, currentPage - 1)))}
-                  className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
+        {/* Pagination ------------------------------------------------------ */}
+        {!pending && totalPages > 1 && (
+          <nav aria-label="Pagination" className="mt-14 flex flex-wrap items-center justify-center gap-2 border-t border-[color:var(--cream-rule)] pt-8">
+            <PagePill
+              to={buildPageUrl(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              ariaLabel="Previous page"
+            >
+              <ArrowLeft className="h-4 w-4" aria-hidden />
+              <span className="hidden sm:inline">Prev</span>
+            </PagePill>
 
-              {getPageNumbers().map((pageNum, index) => (
-                <PaginationItem key={index}>
-                  {pageNum === '...' ? (
-                    <PaginationEllipsis />
-                  ) : (
-                    <PaginationLink
-                      onClick={() => navigate(buildPageUrl(pageNum as number))}
-                      isActive={currentPage === pageNum}
-                      className="cursor-pointer"
-                    >
-                      {pageNum}
-                    </PaginationLink>
-                  )}
-                </PaginationItem>
-              ))}
+            {getPageNumbers().map((pageNum, index) =>
+              pageNum === '...' ? (
+                <span key={`gap-${index}`} className="t-mono px-1 text-[13px] text-[color:var(--cream-dim)]" aria-hidden>
+                  …
+                </span>
+              ) : (
+                <PagePill
+                  key={pageNum}
+                  to={buildPageUrl(pageNum as number)}
+                  active={currentPage === pageNum}
+                  ariaLabel={`Page ${pageNum}`}
+                  round
+                >
+                  {pageNum}
+                </PagePill>
+              ),
+            )}
 
-              <PaginationItem>
-                <PaginationNext
-                  onClick={() => navigate(buildPageUrl(Math.min(totalPages, currentPage + 1)))}
-                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
-                />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
-      )}
-    </PageContainer>
+            <PagePill
+              to={buildPageUrl(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              ariaLabel="Next page"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </PagePill>
+          </nav>
+        )}
+      </PageContainer>
+    </>
   );
 }
 
-function LetterCell({
+function LetterPill({
   active,
   available,
+  wide,
   onClick,
   children,
 }: {
   active: boolean;
   available: boolean;
+  wide?: boolean;
   onClick: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
       disabled={!available}
+      aria-pressed={active}
       className={cn(
-        "flex h-9 w-9 items-center justify-center border-r border-rule transition-colors last:border-r-0",
-        active && "bg-ink text-paper",
-        !active && available && "text-ink hover:bg-paper-2",
-        !available && "text-ink-dim opacity-40",
+        't-mono flex h-11 shrink-0 items-center justify-center rounded-full text-[13px] font-bold uppercase transition-colors duration-200 motion-reduce:transition-none',
+        wide ? 'px-4' : 'w-11',
+        active && 'bg-[var(--cream)] text-[color:var(--ground)]',
+        !active && available && 'text-[color:var(--cream)] hover:bg-[var(--ground-3)]',
+        !available && 'cursor-default text-[color:var(--cream-dim)] opacity-35',
       )}
     >
       {children}
     </button>
+  );
+}
+
+function PagePill({
+  to,
+  active,
+  disabled,
+  round,
+  ariaLabel,
+  children,
+}: {
+  to: string;
+  active?: boolean;
+  disabled?: boolean;
+  round?: boolean;
+  ariaLabel: string;
+  children: ReactNode;
+}) {
+  const classes = cn(
+    'pill t-mono px-4 text-[13px]',
+    round && 'w-11 px-0',
+    active
+      ? 'pill-solid bg-[var(--cream)] text-[color:var(--ground)]'
+      : 'border-[color:var(--cream-rule)] text-[color:var(--cream)] hover:border-[color:var(--cream)]',
+  );
+
+  if (disabled) {
+    return (
+      <span className={cn(classes, 'pointer-events-none opacity-35')} aria-disabled="true" aria-label={ariaLabel}>
+        {children}
+      </span>
+    );
+  }
+
+  return (
+    <Link to={to} className={classes} aria-label={ariaLabel} aria-current={active ? 'page' : undefined}>
+      {children}
+    </Link>
   );
 }

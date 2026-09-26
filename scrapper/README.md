@@ -68,6 +68,7 @@ scrapper artist <name> [--save] [--interactive] [--theaudiodb] [--perplexity] ..
 scrapper artist-batch --from N --to N [--save] [--interactive] [--stats] ...
 scrapper enrich-description [<id>] [--list-missing] [--force] [--from <id>] ...
 scrapper backfill-videos [--dry-run] [--from <id>] [--limit N] ...
+scrapper backfill-original-years [--dry-run] [--limit N] [--force]   # Discogs master years
 scrapper report | generate-collection
 scrapper maintenance find-missing [--show-orphaned] | reconcile [--threshold F]
 ```
@@ -139,6 +140,7 @@ the DB has moved on (ids assigned, albums re-matched, videos backfilled), not se
 | Live `artist` (Discogs + Apple/Spotify/Last.fm/Wikipedia/TheAudioDB) | ✅ done |
 | `generate-collection` (collection.json index) | ✅ done — 99.8% match vs existing |
 | `artist-batch`, `enrich-description` (Perplexity), `backfill-videos`, `report` | ✅ done |
+| `backfill-original-years` (Discogs master year → `year_original`) | ✅ done |
 | ratatui TUI (dashboard, browsers, live probes, live collection) | ✅ done |
 
 All commands and the interactive TUI are implemented.

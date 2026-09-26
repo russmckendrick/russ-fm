@@ -1,4 +1,4 @@
-import { ReactNode, forwardRef } from 'react';
+import { forwardRef, type CSSProperties, type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 interface PresentationContainerProps {
@@ -16,13 +16,10 @@ export const PresentationContainer = forwardRef<HTMLDivElement, PresentationCont
         className={`
           min-h-[100dvh] w-full overflow-y-auto overflow-x-hidden
           snap-y snap-mandatory
-          scroll-smooth
+          scroll-smooth motion-reduce:scroll-auto
           ${className}
         `}
-        style={{
-          scrollBehavior: 'smooth',
-          WebkitOverflowScrolling: 'touch',
-        }}
+        style={{ WebkitOverflowScrolling: 'touch' }}
       >
         {children}
       </div>
@@ -36,12 +33,16 @@ interface PresentationSectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
+  style?: CSSProperties;
+  'aria-label'?: string;
 }
 
-export function PresentationSection({ children, className = '', id }: PresentationSectionProps) {
+export function PresentationSection({ children, className = '', id, style, 'aria-label': ariaLabel }: PresentationSectionProps) {
   return (
     <section
       id={id}
+      style={style}
+      aria-label={ariaLabel}
       className={`
         min-h-[100dvh] w-full
         snap-start snap-always

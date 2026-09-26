@@ -217,9 +217,8 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    App --> ThemeProvider
-    ThemeProvider --> BrowserRouter
-    BrowserRouter --> Layout
+    App --> FloodProvider
+    FloodProvider --> Layout
 
     Layout --> Navigation
     Layout --> PageContent
@@ -233,17 +232,15 @@ flowchart TB
         AlbumDetailPage
     end
 
-    HomePage --> HeroSection
-    HomePage --> RecentAlbumsSection
-    HomePage --> GenresSection
+    HomePage --> CoverHero
+    HomePage --> RecordTile
+    CoverHero --> HeroRecord
 
-    AlbumsPage --> FilterBar
-    AlbumsPage --> AlbumGrid
-    AlbumGrid --> AlbumCard
+    AlbumsPage --> RecordTile
 
-    AlbumCard --> GenreTag
-    AlbumCard --> ArtistAvatar
-    AlbumCard --> ServiceLinks
+    AlbumDetailPage --> CoverHero
+    AlbumDetailPage --> BoxSet
+    AlbumDetailPage --> AlbumScrobbleButton
 ```
 
 ## Data Architecture
@@ -255,8 +252,8 @@ All data is stored as static JSON files for fast loading and CDN caching.
 ```
 public/
 ├── collection.json          # Album index (minimal data for listings)
-├── album-colors.json        # Pre-extracted color palettes
-├── album-colors.css         # CSS custom properties
+├── album-colors.json        # Pre-extracted sleeve colour palettes
+├── album-swatches.json      # Sleeve swatches (album page only)
 ├── wrapped.json             # Year-in-review data
 ├── album/
 │   └── {slug}/

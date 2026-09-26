@@ -420,6 +420,12 @@ pub async fn process_release(
 
     let existing = db.get_release_by_discogs_id(discogs_id)?;
 
+    // Discogs master: keep the release's master_id and the master's original year (the
+    // release's own year is the pressing, which for reissues can be decades later).
+    if let Some(d) = raw.get_mut("discogs").and_then(|d| d.as_object_mut()) {
+        d.extend(discogs_master_fields(services, &discogs, existing.as_ref()).await);
+    }
+
     // Boxset membership: a new link wins, otherwise carry over the stored one — raw_data is
     // rebuilt from scratch here, so without this a refresh would drop the link.
     let boxset_link = boxset_parent
@@ -1426,7 +1432,10 @@ pub async fn refresh_release_field(
                 .with_context(|| format!("fetching Discogs release {id}"))?;
             rec.tracklist = Value::Array(tracklist_from_discogs(&discogs));
             rec.videos = json!(crate::services::discogs::DiscogsService::extract_video_uris(&discogs));
-            raw.insert("discogs".into(), json!({ "images": discogs.get("images").cloned().unwrap_or(json!([])) }));
+            let mut d = Map::new();
+            d.insert("images".into(), discogs.get("images").cloned().unwrap_or(json!([])));
+            d.extend(discogs_master_fields(services, &discogs, Some(&rec)).await);
+            raw.insert("discogs".into(), Value::Object(d));
             download_image = true;
             found = true;
         }
@@ -1875,6 +1884,39 @@ pub async fn set_release_service(
         let _ = images::download_release_hires(client, &cfg.releases_dir(), &folder, &rec.raw_data, target, None).await;
     }
     write_release(cfg, db, rec)
+}
+
+
+/// `raw_data.discogs` master fields for a freshly fetched Discogs release: `master_id` (null
+/// when the release has none) and `master_year`, the master's original release year (null =
+/// looked up, unknown). The stored year is reused when the master hasn't changed; when the
+/// lookup fails `master_year` is left out so `backfill-original-years` picks it up later.
+pub(crate) async fn discogs_master_fields(
+    services: &Services,
+    discogs: &Value,
+    existing: Option<&ReleaseRecord>,
+) -> Map<String, Value> {
+    let mut out = Map::new();
+    let Some(master_id) = crate::services::discogs::DiscogsService::master_id_of(discogs) else {
+        out.insert("master_id".into(), Value::Null);
+        out.insert("master_year".into(), Value::Null);
+        return out;
+    };
+    out.insert("master_id".into(), json!(master_id.parse::<i64>().map(Value::from).unwrap_or_else(|_| json!(master_id))));
+    let stored = existing.and_then(|r| r.raw_data.get("discogs")).filter(|d| {
+        crate::services::discogs::DiscogsService::master_id_of(d).as_deref() == Some(master_id.as_str())
+    });
+    if let Some(year) = stored.and_then(|d| d.get("master_year")) {
+        out.insert("master_year".into(), year.clone());
+        return out;
+    }
+    match services.discogs.master_year(&master_id).await {
+        Ok(year) => {
+            out.insert("master_year".into(), year.map(Value::from).unwrap_or(Value::Null));
+        }
+        Err(e) => tracing::warn!("discogs master {master_id}: {e}"),
+    }
+    out
 }
 
 #[cfg(test)]

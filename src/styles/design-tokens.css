@@ -11,65 +11,51 @@
    ========================================================================= */
 
 :root {
+  /* The player redesign is dark-ground only: colour comes from the sleeve
+     floods painted by each page, not from a light/dark theme switch. The
+     legacy paper/ink names are kept so older components keep resolving. */
+
   /* --- Surfaces -------------------------------------------------------- */
-  --paper:    #f4f1ea;   /* body background */
-  --paper-2:  #ebe6db;   /* sunken surface (kv-grid backgrounds) */
-  --paper-3:  #e0d9c8;   /* recessed accent (hover on tiles) */
-  --paper-warm: #faf7ef; /* lifted editorial panels */
+  --paper:    var(--ground);    /* body background (ground, tinted per page) */
+  --paper-2:  var(--ground-2);  /* sunken surface */
+  --paper-3:  var(--ground-3);  /* recessed accent */
+  --paper-warm: #1c1916; /* lifted panels */
 
   /* --- Ink (text) ------------------------------------------------------ */
-  --ink:      #0e0d0b;   /* primary text */
-  --ink-2:    #2a2724;   /* body copy */
-  --ink-3:    #5a534a;   /* secondary text */
-  --ink-dim:  #8a8377;   /* tertiary / mono labels (decorative only) */
+  --ink:      #fbf7ef;   /* primary text (cream) */
+  --ink-2:    #e4ded2;   /* body copy */
+  --ink-3:    #b7b0a5;   /* secondary text */
+  --ink-dim:  #8f887d;   /* tertiary / mono labels */
 
   /* --- Stage (dark editorial surfaces) -------------------------------- */
-  --stage:      #080807;  /* off-black, never pure #000 */
-  --stage-2:    #11100d;
-  --stage-3:    #1a1713;
-  --stage-ink:  #f7f2e8;
-  --stage-dim:  #a9a197;
-
-  /* --- Rules (borders) ------------------------------------------------- */
-  --rule:         rgba(14, 13, 11, 0.16); /* hairline dividers */
-  --rule-strong:  rgba(14, 13, 11, 0.50); /* interactive / header underlines */
-  --stage-rule:   rgba(247, 242, 232, 0.16);
-
-  /* --- Highlight & dynamic tint --------------------------------------- */
-  --hl:       #e23b1e;   /* single accent, active states only */
-  --tint:     #8a8a3d;   /* dynamic; overridden per-record at runtime */
-  --tint-strength: 0.85;
-
-  /* --- Typography ------------------------------------------------------ */
-  --font-grot: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
-  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
-  --font-display-settings: 'wdth' 62, 'wght' 760;
-  --font-display-tracking: 0;
-}
-
-/* Shadcn's dark-mode selector is `.dark` on <html>; we piggyback so all
-   new tokens swap at the same time the shadcn HSL set does. */
-.dark {
-  --paper:    #0d0c0a;
-  --paper-2:  #15130f;
-  --paper-3:  #1d1b16;
-  --paper-warm: #171410;
-
-  --ink:      #f4f1ea;
-  --ink-2:    #d8d3c6;
-  --ink-3:    #9a9285;
-  --ink-dim:  #6a6358;
-
   --stage:      #080807;
   --stage-2:    #11100d;
   --stage-3:    #1a1713;
   --stage-ink:  #f7f2e8;
   --stage-dim:  #a9a197;
 
-  --rule:         rgba(244, 241, 234, 0.14);
-  --rule-strong:  rgba(244, 241, 234, 0.40);
+  /* --- Rules (borders) ------------------------------------------------- */
+  --rule:         rgba(251, 247, 239, 0.14);
+  --rule-strong:  rgba(251, 247, 239, 0.40);
   --stage-rule:   rgba(247, 242, 232, 0.14);
+
+  /* --- Highlight & dynamic tint --------------------------------------- */
+  --hl:       #fccd07;
+  --tint:     #8a8a3d;
+  --tint-strength: 0.85;
+
+  /* --- Typography ------------------------------------------------------ */
+  --font-grot: 'Hanken Grotesk Variable', 'Hanken Grotesk', system-ui, sans-serif;
+  --font-display: 'Archivo Variable', 'Archivo', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+  --font-display-settings: normal;
+  --font-display-tracking: 0;
+}
+
+/* Shadcn's dark-mode selector is `.dark` on <html>; we piggyback so all
+   new tokens swap at the same time the shadcn HSL set does. */
+.dark {
+  /* Same as :root — the site no longer has a light theme. */
 }
 
 /* =========================================================================

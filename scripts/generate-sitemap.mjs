@@ -23,7 +23,7 @@ const STATIC_ROUTES = [
   { path: '/labels', changefreq: 'weekly', priority: '0.7' },
   { path: '/decades', changefreq: 'weekly', priority: '0.7' },
   { path: '/countries', changefreq: 'weekly', priority: '0.7' },
-  { path: '/random', changefreq: 'weekly', priority: '0.4' },
+  { path: '/shuffle', changefreq: 'weekly', priority: '0.4' },
 ];
 
 const routes = new Map();
@@ -127,7 +127,8 @@ function addFacetRoutes(collection, fallbackLastmod) {
       addFacetValue(facetLastmods.country, album.country, album.date_added);
     }
 
-    const decade = getDecade(album.date_release_year);
+    // year_original is the Discogs master year; date_release_year is often the reissue.
+    const decade = getDecade(album.year_original ?? album.date_release_year);
     if (decade) {
       addFacetValue(facetLastmods.decade, decade, album.date_added);
     }

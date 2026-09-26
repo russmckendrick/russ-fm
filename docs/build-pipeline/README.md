@@ -75,7 +75,7 @@ pnpm run build
 # 3. tsc --noEmit (type check)
 # 4. vite build (bundle)
 # 5. process-images (resize)
-# 6. generate-colors (extract palettes)
+# 6. generate-colors (album-colors.json + album-swatches.json)
 # 7. build:wrapped (year data)
 # 8. generate-sitemap (refresh sitemap.xml in public/ and dist/)
 # 9. generate-og (social images)
@@ -110,9 +110,9 @@ pnpm run build:worker
 | `build:worker` | Worker-optimized build |
 | `build:sync` | Build + sync to R2 |
 | `build:sync:dry` | Preview R2 sync |
-| `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists |
+| `generate-sitemap` | Generate `public/sitemap.xml` from static data; also refreshes `dist/sitemap.xml` when `dist/` exists. Decade pages come from `year_original` (falling back to `date_release_year`) |
 | `process-images` | Resize images |
-| `generate-colors` | Extract color palettes |
+| `generate-colors` | Extract sleeve palettes (`album-colors.json`) and swatches (`album-swatches.json`); `--force` redoes every album |
 | `generate-og` | Create OG images |
 | `build:wrapped` | Generate wrapped.json |
 | `preview` | Preview production build |
@@ -191,8 +191,7 @@ flowchart TB
     subgraph Output["Generated Assets"]
         Medium[medium.jpg<br>800px]
         Avatar[avatar.jpg<br>128px]
-        Colors[album-colors.json]
-        CSS[album-colors.css]
+        Colors[album-colors.json<br>album-swatches.json]
         OGImage[OG Images<br>1200x630]
     end
 
@@ -202,7 +201,6 @@ flowchart TB
 
     HiRes --> ColorExtract
     ColorExtract --> Colors
-    ColorExtract --> CSS
 
     HiRes --> Satori
     Colors --> Satori
@@ -247,7 +245,7 @@ dist/
 ├── collection.json
 ├── sitemap.xml
 ├── album-colors.json
-├── album-colors.css
+├── album-swatches.json
 ├── wrapped.json
 ├── album/
 │   └── {slug}/

@@ -69,9 +69,10 @@ export function useWrappedNavigation({
     // Scroll to section
     if (containerRef.current) {
       const sectionHeight = containerRef.current.clientHeight;
+      const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
       containerRef.current.scrollTo({
         top: index * sectionHeight,
-        behavior: smooth ? 'smooth' : 'auto',
+        behavior: smooth && !reduceMotion ? 'smooth' : 'auto',
       });
     }
   }, []);

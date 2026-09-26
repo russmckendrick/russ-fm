@@ -11,11 +11,25 @@ function escapeRegExp(string: string): string {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// sanitizeFolderName is pure but builds a regex per accent and symbol on every
+// call. Image and slug helpers run it for every sleeve on every render, so
+// results are cached.
+const sanitizedNames = new Map<string, string>();
+
 /**
  * Sanitize folder name using the same logic as backend folder_sanitizer.py
  * This function replicates the sanitize_folder_name() Python function
  */
 export function sanitizeFolderName(name: string): string {
+  let cached = sanitizedNames.get(name);
+  if (cached === undefined) {
+    cached = sanitizeFolderNameUncached(name);
+    sanitizedNames.set(name, cached);
+  }
+  return cached;
+}
+
+function sanitizeFolderNameUncached(name: string): string {
   // 1. Handle empty or whitespace-only names
   if (!name || !name.trim()) {
     return "unknown";

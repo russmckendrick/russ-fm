@@ -27,29 +27,15 @@ export const appConfig = {
   // Homepage settings
   homepage: {
     hero: {
-      numberOfFeaturedAlbums: 6,
-      autoRotateInterval: 12000  // 12 seconds
+      numberOfFeaturedAlbums: 6,  // latest additions in the cover hero
+      autoRotateInterval: 7000    // ms per record
     },
     recentlyAdded: {
-      displayCount: 12
-    },
-    eras: {
-      excludedDecades: [1930]
+      displayCount: 16
     },
     randomCollection: {
       displayCount: 12
-    },
-    randomArtists: {
-      displayCount: 12
-    },
-    sectionOrder: [
-      'hero',
-      'recentAlbums',
-      'recentArtists',
-      'genres',
-      'randomCollection',
-      'randomArtists'
-    ]
+    }
   },
 
   // URLs
@@ -92,10 +78,9 @@ export function getConfig<K extends keyof typeof appConfig>(
 }
 ```
 
-`homepage.eras.excludedDecades` is applied by the home `StatsAside`
-overview when calculating its record total, decade bars, genre bars, and
-yearly additions timeline. The displayed decade span still reflects the
-full collection.
+The home page reads `homepage.hero`, `homepage.recentlyAdded` and
+`homepage.randomCollection`. The home sections are fixed in
+`src/pages/HomePage.tsx`; there is no configurable section order.
 
 ### Usage
 

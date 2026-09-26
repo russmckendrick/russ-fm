@@ -51,7 +51,10 @@ export interface Album {
   uri_release: string;
   uri_artist: string;
   date_added: string;
+  /** Often the reissue/pressing date; see `year_original` and src/lib/releaseYear.ts. */
   date_release_year: string;
+  /** Original release year (Discogs master, else the earliest known). */
+  year_original?: number | null;
   json_detailed_release?: string;
   json_detailed_artist?: string;
   images_uri_release: {

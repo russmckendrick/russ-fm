@@ -1,7 +1,9 @@
-import { Routes, Route, Navigate, useParams } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
+import { Routes, Route, Navigate, useLocation, useNavigationType, useParams } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { TweaksPanel } from './components/TweaksPanel';
+import { FloodProvider } from './components/player/FloodContext';
 import { HomePage } from './pages/HomePage';
 import { AlbumsPage } from './pages/AlbumsPage';
 import { ArtistsPage } from './pages/ArtistsPage';
@@ -17,6 +19,26 @@ import { BrowseIndexPage } from './pages/browse/BrowseIndexPage';
 import { FacetListPage } from './pages/browse/FacetListPage';
 import { FacetDetailPage } from './pages/browse/FacetDetailPage';
 
+/**
+ * New pages start at the top. Back/forward (POP) is left to the browser so it
+ * can restore the previous scroll position.
+ */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  const navigationType = useNavigationType();
+  useLayoutEffect(() => {
+    if (navigationType !== 'POP') window.scrollTo(0, 0);
+  }, [pathname, navigationType]);
+  return null;
+}
+
+// Keyed by slug so moving from one album to another (related records, box set
+// discs) mounts a fresh page instead of re-rendering the old one in place.
+function AlbumRouteHandler() {
+  const { albumPath } = useParams<{ albumPath: string }>();
+  return <AlbumDetailPage key={albumPath} />;
+}
+
 // Component to handle "Various" artist route interception
 function ArtistRouteHandler() {
   const { artistPath } = useParams<{ artistPath: string }>();
@@ -28,22 +50,24 @@ function ArtistRouteHandler() {
   }
 
   // For all other artists, show the normal artist detail page
-  return <ArtistDetailPage />;
+  return <ArtistDetailPage key={artistPath} />;
 }
 
 
 function App() {
   return (
-    <div className="min-h-screen bg-background font-grot">
+    <FloodProvider>
+    <div className="min-h-screen bg-[color:var(--ground)] font-grot transition-[background-color] duration-700">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:font-mono focus:text-[11px] focus:uppercase focus:tracking-[0.08em] focus:text-ink"
       >
         Skip to main content
       </a>
+      <ScrollToTop />
       <Navigation />
 
-      <main id="main-content" className="pb-16">
+      <main id="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
@@ -52,7 +76,7 @@ function App() {
           <Route path="/artists" element={<ArtistsPage />} />
           <Route path="/artists/:page" element={<ArtistsPage />} />
           <Route path="/artist/:artistPath" element={<ArtistRouteHandler />} />
-          <Route path="/album/:albumPath" element={<AlbumDetailPage />} />
+          <Route path="/album/:albumPath" element={<AlbumRouteHandler />} />
           <Route path="/stats" element={<StatsPage />} />
           <Route path="/genres" element={<GenrePage />} />
           <Route path="/browse" element={<BrowseIndexPage />} />
@@ -63,6 +87,7 @@ function App() {
           <Route path="/countries" element={<FacetListPage facetKey="country" />} />
           <Route path="/country/:slug" element={<FacetDetailPage facetKey="country" />} />
           <Route path="/genre/:slug" element={<FacetDetailPage facetKey="genre" />} />
+          <Route path="/shuffle" element={<RandomPage />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />
@@ -76,6 +101,7 @@ function App() {
       {/* Dev-only: Cmd/Ctrl+Shift+D to open */}
       <TweaksPanel />
     </div>
+    </FloodProvider>
   );
 }
 

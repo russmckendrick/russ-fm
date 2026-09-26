@@ -1,86 +1,81 @@
-import { 
-  DropdownMenu, 
-  DropdownMenuContent, 
-  DropdownMenuItem, 
-  DropdownMenuLabel, 
-  DropdownMenuSeparator, 
-  DropdownMenuTrigger 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from './ui/dropdown-menu';
-import { Button } from './ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { useLastFmAuth } from '../hooks/useLastFmAuth';
 import { LastFmAuthDialog } from './LastFmAuthDialog';
 import { User, ExternalLink, LogOut } from 'lucide-react';
 import { SiLastdotfm } from 'react-icons/si';
 
+/**
+ * Last.fm account control for the navigation. Sits on the nav's flood colour,
+ * so the round button borrows currentColor like the other header icon buttons.
+ */
 export function UserProfileMenu() {
   const { isAuthenticated, user, isLoading, logout } = useLastFmAuth();
 
   if (isLoading) {
     return (
-      <Button variant="ghost" size="sm" disabled>
-        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
-      </Button>
+      <button type="button" disabled className="icon-btn border-2 border-current opacity-60" aria-label="Checking Last.fm connection">
+        <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent motion-reduce:animate-none" aria-hidden />
+      </button>
     );
   }
 
   if (!isAuthenticated || !user) {
     return (
       <LastFmAuthDialog>
-        <Button 
-          variant="ghost" 
-          className="relative h-8 w-8 rounded-full bg-[#d51007] hover:bg-[#d51007]/90 border-[#d51007]"
-          title="Connect to Last.fm"
-        >
-          <SiLastdotfm className="h-4 w-4 text-white" />
-        </Button>
+        <button type="button" className="icon-btn border-2 border-current" aria-label="Connect to Last.fm" title="Connect to Last.fm">
+          <SiLastdotfm className="h-5 w-5" aria-hidden />
+        </button>
       </LastFmAuthDialog>
     );
   }
 
+  const plays = parseInt(user.userInfo.playcount, 10);
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="relative h-8 w-8 rounded-full">
-          <Avatar className="h-8 w-8">
-            <AvatarImage 
-              src={user.userAvatar || user.lastAlbumArt || undefined} 
-              alt={`${user.username}'s avatar`} 
-            />
-            <AvatarFallback>
-              <User className="h-4 w-4" />
+        <button
+          type="button"
+          className="icon-btn border-2 border-current p-[3px]"
+          aria-label={`Last.fm account: ${user.username}`}
+        >
+          <Avatar className="h-full w-full">
+            <AvatarImage src={user.userAvatar || user.lastAlbumArt || undefined} alt="" />
+            <AvatarFallback className="bg-[color:var(--ground-3)] text-[color:var(--cream)]">
+              <User className="h-4 w-4" aria-hidden />
             </AvatarFallback>
           </Avatar>
-        </Button>
+        </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56" align="end" forceMount>
-        <DropdownMenuLabel className="font-normal">
-          <div className="flex flex-col space-y-1">
-            <p className="text-sm font-medium leading-none">
-              {user.username}
-            </p>
-            <p className="text-xs leading-none text-muted-foreground">
-              {parseInt(user.userInfo.playcount).toLocaleString()} total plays
-            </p>
-          </div>
+      <DropdownMenuContent className="w-64" align="end" sideOffset={10} forceMount>
+        <DropdownMenuLabel className="flex flex-col gap-1.5 px-3 py-3 normal-case tracking-normal">
+          <span className="t-dispn truncate text-[18px] leading-none text-[color:var(--cream)]">{user.username}</span>
+          {Number.isFinite(plays) && (
+            <span className="t-mono text-[12px] font-normal text-[color:var(--cream-dim)]">
+              {plays.toLocaleString()} plays
+            </span>
+          )}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        
+
         <DropdownMenuItem asChild>
-          <a 
-            href={user.userInfo.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center cursor-pointer"
-          >
-            <ExternalLink className="mr-2 h-4 w-4" />
-            <span>View Last.fm Profile</span>
+          <a href={user.userInfo.url} target="_blank" rel="noopener noreferrer">
+            <ExternalLink className="h-4 w-4" aria-hidden />
+            <span>Last.fm profile</span>
           </a>
         </DropdownMenuItem>
-        
-        <DropdownMenuItem onClick={logout} className="cursor-pointer text-red-600">
-          <LogOut className="mr-2 h-4 w-4" />
-          <span>Sign Out</span>
+
+        <DropdownMenuItem onClick={logout}>
+          <LogOut className="h-4 w-4" aria-hidden />
+          <span>Sign out</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

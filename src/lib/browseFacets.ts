@@ -1,5 +1,6 @@
 import type { Album } from '@/types/album';
 import { getCleanGenreTermsFromAlbum } from '@/lib/genreUtils';
+import { originalDecade } from '@/lib/releaseYear';
 
 export type FacetKey = 'label' | 'decade' | 'country' | 'genre';
 
@@ -44,10 +45,8 @@ export function slugify(value: string): string {
 }
 
 function decadeFromAlbum(album: Album): string[] {
-  const year = new Date(album.date_release_year).getFullYear();
-  if (Number.isNaN(year) || year < 1900) return [];
-  const decade = Math.floor(year / 10) * 10;
-  return [`${decade}s`];
+  const decade = originalDecade(album);
+  return decade ? [decade] : [];
 }
 
 export const FACETS: Record<FacetKey, FacetConfig> = {

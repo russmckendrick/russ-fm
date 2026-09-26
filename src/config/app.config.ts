@@ -17,32 +17,15 @@ export const appConfig = {
   // Home page configuration
   homepage: {
     hero: {
-      numberOfFeaturedAlbums: 10, // Number of albums in the hero rotation
-      autoRotateInterval: 12000, // Auto-rotation interval in milliseconds
-      exploreButtonText: 'Vew album', // Text for the main CTA button
+      numberOfFeaturedAlbums: 6, // Latest additions rotated through the cover hero
+      autoRotateInterval: 7000, // Auto-rotation interval in milliseconds
     },
     recentlyAdded: {
-      displayCount: 12, // Number of recently added albums to show
-    },
-    eras: {
-      excludedDecades: [1930], // Array of decades to exclude (e.g., [1960, 1970])
+      displayCount: 16, // Number of recently added albums to show
     },
     randomCollection: {
       displayCount: 12, // Number of random albums to show
     },
-    randomArtists: {
-      displayCount: 12, // Number of random artists to show
-    },
-    // Define the order and visibility of homepage sections
-    // Comment out sections to hide them, reorder array to change sequence
-    sectionOrder: [
-      'hero',             // Editorial split hero
-      'recentAlbums',     // Recently added albums drag-scroll wall
-      'recentArtists',    // Recently added artists drag-scroll wall
-      'genres',           // Top-genre mosaic cards
-      'randomCollection', // From-the-crates grid with shuffle
-      'randomArtists',    // Random-roster grid with shuffle
-    ],
   },
   
   // Site URL
@@ -70,7 +53,7 @@ export const appConfig = {
         title: 'About',
         items: [
           { label: 'Collection Stats', href: '/stats' },
-          { label: 'Random Discovery', href: '/random' },
+          { label: 'Shuffle', href: '/shuffle' },
         ],
       },
       explore: {

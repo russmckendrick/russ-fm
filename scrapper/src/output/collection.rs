@@ -230,6 +230,39 @@ fn date_release_year(rec: &ReleaseRecord) -> Option<String> {
     rec.released.as_ref().filter(|r| r.len() >= 4).map(|r| format!("{}-01-01", &r[..4]))
 }
 
+/// The year the record first came out. `date_release_year` (above) is often the reissue: the
+/// pressing's Discogs year, or a streaming service listing the remaster. The Discogs master's
+/// year (`raw_data.discogs.master_year`) is the original; without one, fall back to the
+/// earliest year any source reports.
+fn year_original(rec: &ReleaseRecord) -> Option<i64> {
+    let raw = &rec.raw_data;
+    if let Some(y) = raw.get("discogs").and_then(|d| d.get("master_year")).and_then(|y| y.as_i64()).filter(|y| *y > 0) {
+        return Some(y);
+    }
+    let year_of = |s: Option<&str>| s.filter(|s| s.len() >= 4).and_then(|s| s[..4].parse::<i64>().ok());
+    [
+        rec.year,
+        year_of(rec.released.as_deref()),
+        year_of(raw.get("apple_music").and_then(|a| a.get("raw_attributes")).and_then(|a| a.get("releaseDate")).and_then(|d| d.as_str())),
+        year_of(raw.get("spotify").and_then(|s| s.get("release_date")).and_then(|d| d.as_str())),
+        legacy_repr_year(raw.get("apple_music"), "releaseDate"),
+        legacy_repr_year(raw.get("spotify"), "release_date"),
+    ]
+    .into_iter()
+    .flatten()
+    .filter(|y| *y > 1800)
+    .min()
+}
+
+/// Python-era rows store service data as a dataclass repr string rather than an object
+/// (`SpotifyData(... release_date='1973-03-01' ...)`); pull the year for `key` out of one.
+fn legacy_repr_year(v: Option<&Value>, key: &str) -> Option<i64> {
+    let text = v?.as_str()?;
+    let at = text.find(key)? + key.len();
+    let rest = text[at..].trim_start_matches(['\'', '"', ' ', '=', ':']);
+    rest.get(..4)?.parse::<i64>().ok()
+}
+
 fn artist_image_uris(cfg: &Config, folder: &str) -> Value {
     let a = &cfg.artists.path;
     json!({
@@ -345,6 +378,7 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     e.insert("uri_artist".into(), json!(format!("/{a}/{primary_folder}/")));
     e.insert("date_added".into(), json!(rec.date_added.as_deref().map(date_only).unwrap_or_else(|| "1900-01-01".into())));
     e.insert("date_release_year".into(), json!(date_release_year(rec).unwrap_or_else(|| "1900-01-01".into())));
+    e.insert("year_original".into(), year_original(rec).map(Value::from).unwrap_or(Value::Null));
     e.insert("json_detailed_release".into(), json!(format!("/{alb}/{release_folder}/{release_folder}.json")));
     e.insert("json_detailed_artist".into(), json!(format!("/{a}/{primary_folder}/{primary_folder}.json")));
     e.insert("images_uri_release".into(), json!({
@@ -400,6 +434,50 @@ mod tests {
         assert_eq!(member["boxset"]["parent_discogs_id"], json!("999"));
         assert_eq!(member["boxset"]["name"], Value::Null);
         assert!(member.get("boxset_contents").is_none());
+    }
+
+    fn rec(year: Option<i64>, raw: Value) -> ReleaseRecord {
+        ReleaseRecord { year, raw_data: raw, ..Default::default() }
+    }
+
+    #[test]
+    fn year_original_prefers_the_master_year() {
+        // A 2026 reissue of Gish: pressing and Apple say 2026, the master says 1991.
+        let r = rec(
+            Some(2026),
+            json!({
+                "discogs": { "master_id": 48660, "master_year": 1991 },
+                "apple_music": { "raw_attributes": { "releaseDate": "2026-03-06" } },
+            }),
+        );
+        assert_eq!(year_original(&r), Some(1991));
+    }
+
+    #[test]
+    fn year_original_falls_back_to_the_earliest_source() {
+        // No master (or an unknown year): take the earliest year any source has.
+        let r = rec(
+            Some(2019),
+            json!({
+                "discogs": { "master_id": null, "master_year": null },
+                "apple_music": { "raw_attributes": { "releaseDate": "2019-05-01" } },
+                "spotify": { "release_date": "1993-01-01" },
+            }),
+        );
+        assert_eq!(year_original(&r), Some(1993));
+        assert_eq!(year_original(&rec(None, json!({}))), None);
+    }
+
+    #[test]
+    fn year_original_reads_python_era_repr_strings() {
+        let r = rec(
+            Some(2024),
+            json!({
+                "spotify": "SpotifyData(id='4LH4', popularity=81, release_date='1973-03-01', release_date_precision='day')",
+                "apple_music": "AppleMusicData(id='1', raw_attributes={'releaseDate': '1973-03-01', 'name': 'x'})",
+            }),
+        );
+        assert_eq!(year_original(&r), Some(1973));
     }
 
     #[test]

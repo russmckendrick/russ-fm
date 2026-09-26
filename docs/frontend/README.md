@@ -2,34 +2,23 @@
 
 The russ.fm frontend is a React 19 single-page application built with TypeScript, Vite, and Tailwind CSS.
 
-**Visual system.** In April 2026 the UI was reskinned as an editorial
-vinyl-catalogue site (see `docs/project/completed/Redesign/CHANGELOG.md`
-for the per-phase log). The shell runs on a warm paper/ink palette with
-sharp corners, hairline rules, Archivo Variable + JetBrains Mono, and
-mono metadata labels. Cover-colour shadows and hero washes come
-from pre-extracted album palettes exposed both as
-`/public/album-colors.json` for hooks and `/public/album-colors.css`
-for class-driven treatments like the home and album-detail heroes.
-The Home hero uses a fixed desktop height, the configured featured-release
-count, album-accent active states, and a reduced-motion-safe countdown
-waveform in the metadata rail. Album detail now mirrors that Home hero grammar
-with a single-record paper split header, tags, actions, and metadata rail.
-Feature-page headers read their visible copy from
-`redesignConfig.pageHeaders` so the Albums, Artists, Search, Stats,
-Genres, and Wrapped intro wording can be edited from one file.
-Wrapped keeps the dossier page as the default view; its optional
-presentation mode is a paper/ink Crate Journey with snap chapters,
-cover-led bookends, monthly tempo controls, and draggable record shelves.
-A dev-only
-`TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) lets the author tune
-density / mono visibility / cover-colour / tint intensity in place
-without shipping knobs to public visitors — defaults live in
-`src/config/redesign.config.ts`.
+**Visual system.** The UI uses the "player" design: a warm near-black
+ground, bold colour floods lifted from each sleeve, Archivo display type
+and records drawn as physical objects (sleeves, discs, stickers, crates,
+box sets). [`design-system.md`](./design-system.md) is the canonical
+reference for tokens, type, components and page patterns. The site is
+dark-ground only; there is no theme toggle. Each page with a colour hero
+sets the flood through `usePageFlood`, and the sticky navigation paints
+itself in the same colour until the page scrolls.
+
+A dev-only `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) still ships in
+`App.tsx`; its defaults live in `src/config/redesign.config.ts`.
 
 ## Quick Links
 
 | Document | Description |
 |----------|-------------|
+| [Design system](./design-system.md) | Player design: principles, tokens, type, colour rules, page patterns |
 | [Components](./components.md) | UI component library and patterns |
 | [Pages](./pages.md) | Route-level components and features |
 | [Hooks](./hooks.md) | Custom React hooks |
@@ -41,38 +30,43 @@ without shipping knobs to public visitors — defaults live in
 |------------|---------|---------|
 | React | 19.x | UI framework |
 | TypeScript | 5.x | Type safety |
-| Vite | 7.0.0 | Build tool and dev server |
-| React Router DOM | 7.6.3 | Client-side routing |
+| Vite | 7.x | Build tool and dev server |
+| React Router DOM | 7.x | Client-side routing |
 | Tailwind CSS | 3.x | Utility-first styling |
 | shadcn/ui | Latest | Component library (Radix UI) |
-| Framer Motion | Latest | Legacy wrapped animation helpers and graph transitions |
+| Framer Motion | Latest | Genre graph transitions |
+| D3 | 7.x | Genre graph layout and zoom |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
-| @fontsource-variable/archivo | Latest | Editorial variable typeface |
-| @fontsource-variable/jetbrains-mono | Latest | Editorial mono typeface |
+| @fontsource-variable/archivo | Latest | Display type (`t-disp`, `t-cond`, `t-dispn`) |
+| @fontsource-variable/hanken-grotesk | Latest | Body type |
+| @fontsource-variable/jetbrains-mono | Latest | Mono labels (`t-mono`, `t-kicker`) |
 
 ## Project Structure
 
 ```
 src/
 ├── components/           # Reusable UI components
+│   ├── player/          # Player design: FloodProvider, CoverHero, HeroRecord, Sleeve, Vinyl, RecordTile…
+│   ├── album/           # BoxSet (box set hero art and "In this box")
+│   ├── browse/          # BrowseHeader, FacetFan, FacetCard, facetSleeves.ts
+│   ├── genres/          # Genre map, explorer panel, genreColours.ts
+│   ├── layout/          # PageContainer, PageStates (EditorialEmpty, EditorialSkeleton)
 │   ├── ui/              # shadcn/ui base components
-│   ├── home/            # Home page sections (hero, walls, stats aside…)
-│   ├── browse/          # Shared browse primitives (BrowseHeader)
-│   ├── layout/          # PageContainer, SectionHeader, DragWall
 │   └── *.tsx            # Feature components
 ├── pages/               # Route-level components
 │   └── wrapped/         # Year-in-review feature
 ├── hooks/               # Custom React hooks
-├── lib/                 # Utility functions
+├── lib/                 # Utilities (collection loader, sleeveColour, releaseYear, boxDiscs, image-utils…)
 ├── services/            # API/data services
 ├── types/               # TypeScript definitions
 ├── config/              # Application configuration
-│   ├── app.config.ts        # Original tunables (pagination, homepage)
-│   └── redesign.config.ts   # Editorial redesign knobs (walls, stats, random, tint)
+│   ├── app.config.ts        # Tunables (pagination, home hero and rows)
+│   └── redesign.config.ts   # Stats counts, tweaks defaults
+├── index.css                # Font imports, shadcn HSL mapping, base typography
 └── styles/
-    ├── design-tokens.css    # Paper/ink palette + density/mono/tint classes
-    └── index.css            # shadcn HSL mapping + base typography
+    ├── player.css           # Player tokens, type classes, sleeve/vinyl/pill/tile/chip classes
+    └── design-tokens.css    # Legacy token names, now mapped to dark values
 ```
 
 ## Component Architecture
@@ -84,14 +78,14 @@ flowchart TB
     end
 
     subgraph Providers
-        App.tsx --> ThemeProvider
-        ThemeProvider --> BrowserRouter
+        main.tsx --> BrowserRouter
+        BrowserRouter --> FloodProvider
     end
 
     subgraph Layout
-        BrowserRouter --> Navigation
-        BrowserRouter --> Routes
-        BrowserRouter --> Footer
+        FloodProvider --> Navigation
+        FloodProvider --> Routes
+        FloodProvider --> Footer
     end
 
     subgraph Routes
@@ -105,11 +99,11 @@ flowchart TB
     end
 
     subgraph SharedComponents
-        AlbumCard
+        CoverHero
+        RecordTile
         ArtistCard
-        FilterBar
         SearchOverlay
-        GenreTag
+        BrowseHeader
     end
 
     Routes --> SharedComponents
@@ -126,11 +120,15 @@ flowchart LR
         album/*/index.json
         artist/*/index.json
         album-colors.json
+        album-swatches.json
     end
 
     subgraph Hooks
-        useSearch
+        useCollection
+        useAlbumColorMap
         useAlbumColors
+        useAlbumSwatches
+        useSearch
     end
 
     subgraph Components
@@ -151,72 +149,108 @@ Production builds initialize Plausible Analytics from
 `window.plausible` available for Plausible installation verification.
 Local development builds do not initialize analytics.
 
-### Data Loading Pattern
+## Data Loading Pattern
+
+`collection.json` is loaded once per tab through the shared, cached loader in
+`src/lib/collection.ts`:
 
 ```typescript
-// Pages fetch data on mount
-useEffect(() => {
-  fetch('/collection.json')
-    .then(res => res.json())
-    .then(setAlbums);
-}, []);
+import { loadDetailJson, useCollection } from '@/lib/collection';
 
-// Detail pages fetch by slug
+const { albums, loading, error } = useCollection();
+// or, outside React state: const albums = await loadCollection();
+// or synchronously, if it has already loaded: getLoadedCollection() ?? null
+
+// Detail pages load per-item JSON through a second cache, keyed by path
 useEffect(() => {
-  fetch(`/album/${slug}/index.json`)
-    .then(res => res.json())
-    .then(setAlbum);
-}, [slug]);
+  loadDetailJson<AlbumDetail>(album.json_detailed_release).then(setDetail);
+}, [album]);
 ```
+
+Once the collection has loaded, `useCollection()` returns it on the first render, so moving
+between pages shows no loading state. The album and artist detail pages find their record
+in the shared collection synchronously and render the hero from it straight away; the detail
+JSON fills in the rest when `loadDetailJson` resolves. The home hero prefetches its featured
+releases through the same cache, so opening one from the hero is instant. Search uses
+`loadCollection()` too, and only builds its Fuse index once the search overlay or mobile
+search modal is opened.
+
+Heavy derived data is memoised per collection array: `getGenreExplorer(collection)` in
+`src/lib/genreExplorer.ts` and `excludeBoxsetMembers()` in `src/lib/boxsets.ts` return the
+same object for the same input. `excludeBoxsetMembers()` hands back a shared array, so copy
+it before sorting in place (`[...excludeBoxsetMembers(albums)].sort(...)`).
 
 ## Styling System
 
-### Tailwind CSS
+### Tailwind and tokens
 
-All styling uses Tailwind utility classes:
+Pages use Tailwind utilities plus the player classes. Colours come from CSS variables:
+
+- `src/styles/player.css` — the player tokens (`--ground`, `--ground-2`, `--ground-3`,
+  `--cream`, `--cream-dim`, `--cream-rule`, `--neutral-flood`, `--flood`, `--flood-ink`,
+  `--ease-out`), the type classes (`t-disp`, `t-cond`, `t-dispn`, `t-mono`, `t-kicker`) and
+  the object classes (`.sleeve`, `.vinyl`, `.rec`, `.sticker`, `.pill*`, `.icon-btn`,
+  `.chip`, `.tile`, `.shelf-scroll`, `.flood-surface`), with a `prefers-reduced-motion`
+  block that stops spinning and transitions.
+- `src/styles/design-tokens.css` — the older `paper` / `ink` / `rule` names, now set to the
+  dark ground and cream values so `bg-paper`, `text-ink-3`, `border-rule` and friends still
+  read correctly.
+- `src/index.css` — imports the fonts and both token files, and maps the
+  shadcn HSL slots (`--background` etc.) to the dark ground.
 
 ```tsx
-<div className="flex items-center gap-4 p-6 bg-background rounded-lg shadow-md">
-  <img className="w-16 h-16 rounded-full object-cover" src={image} />
-  <h2 className="text-xl font-semibold text-foreground">{title}</h2>
-</div>
+<section className="flood-surface" style={{ background: flood.flood, color: flood.ink }}>
+  <h2 className="t-disp text-[48px]">Latest additions</h2>
+  <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">16 added in 2026</span>
+</section>
 ```
 
-### Theme System
+### Fonts
 
-Light/dark mode via CSS custom properties:
+| Family | Package | Use |
+|--------|---------|-----|
+| Archivo Variable | `@fontsource-variable/archivo` | `--font-display`: `t-disp` (125% width), `t-cond` (66%), `t-dispn` (112%) |
+| Hanken Grotesk Variable | `@fontsource-variable/hanken-grotesk` | `--font-grot`: body text (Tailwind `font-grot` / `font-sans`) |
+| JetBrains Mono Variable | `@fontsource-variable/jetbrains-mono` | `--font-mono`: `t-mono`, `t-kicker` |
 
-```tsx
-// ThemeProvider wraps the app
-<ThemeProvider defaultTheme="system" storageKey="russ-fm-theme">
-  <App />
-</ThemeProvider>
+### Dark ground only
 
-// Components use theme-aware classes
-<div className="bg-background text-foreground" />
-<div className="dark:bg-slate-900 dark:text-white" />
-```
+There is no light theme and no theme toggle. `index.html` hardcodes
+`<html class="dark" style="color-scheme: dark">`, and there is no theme provider or theme
+hook. The Spotify and Apple Music embeds always request their dark player theme, whatever
+the operating system's light/dark setting.
 
-### Album Colors
+### Album colours
 
-Dynamic theming from album artwork:
+Colour comes from the sleeve, never a fixed accent. Palettes are decided at build time by
+`scripts/generate-album-colors.js` (Apple Music artwork colours included) and written to
+`/public/album-colors.json`, so a sleeve has the same flood on every page:
+
+- `useAlbumColors(uri)` — palette for one album.
+- `useAlbumColorMap()` — the whole URI → palette map, for grids, shelves and other pages that
+  paint many sleeves.
+- `useAlbumSwatches(uri)` — the sleeve's main swatches from `/public/album-swatches.json`, for
+  the album page's "Sleeve colours" strip. Fetched on first use.
+- `floodFor(palette)` in `src/lib/sleeveColour.ts` — returns `{ flood, ink, sub, ground, glow,
+  secondary }` from the palette, or a neutral flood when there is none.
+- `usePageFlood(flood, ink)` — tells the navigation which colour the hero is.
 
 ```tsx
 import { useAlbumColors } from '@/hooks/useAlbumColors';
+import { floodFor } from '@/lib/sleeveColour';
+import { usePageFlood } from '@/components/player';
 
-function AlbumHero({ slug }) {
-  const { colors, loading } = useAlbumColors(slug);
+const palette = useAlbumColors(album.uri_release);
+const flood = floodFor(palette);
+usePageFlood(flood.flood, flood.ink);
 
-  return (
-    <div style={{
-      background: colors?.background,
-      color: colors?.foreground
-    }}>
-      {/* Album content */}
-    </div>
-  );
-}
+<section style={{ background: flood.flood, color: flood.ink }}>…</section>
 ```
+
+`album-colors.json` and `album-swatches.json` are the only colour outputs; there is no
+generated colour stylesheet.
+`useAlbumColors()` returns the palette on the first render once the JSON has loaded, so pages
+flood in the right colour without a neutral flash.
 
 ## Routing
 
@@ -224,9 +258,9 @@ React Router DOM handles all navigation:
 
 | Route | Component | Description |
 |-------|-----------|-------------|
-| `/` | HomePage | Featured albums, recent additions |
+| `/` | HomePage | Cover hero of recent additions, rows, genres, colour strip |
 | `/albums` | AlbumsPage | Paginated album grid |
-| `/albums/:page` | AlbumsPage | Paginated with page number |
+| `/albums/:page` | AlbumsPage | Paginated with page number (`?sort=colour` for the colour wall) |
 | `/album/:slug` | AlbumDetailPage | Album details |
 | `/artists` | ArtistsPage | Paginated artist grid |
 | `/artist/:slug` | ArtistDetailPage | Artist details |
@@ -234,14 +268,25 @@ React Router DOM handles all navigation:
 | `/wrapped/:year` | WrappedYear | Year-in-review |
 | `/stats` | StatsPage | Collection statistics |
 | `/genres` | GenrePage | Genre browser |
-| `/random` | RandomPage | Random album |
+| `/genre/:slug` | FacetDetailPage | Records in one genre |
+| `/browse` | BrowseIndexPage | Browse by genre, label, decade, country |
+| `/labels`, `/decades`, `/countries` | FacetListPage | Every value of one facet |
+| `/label/:slug`, `/decade/:slug`, `/country/:slug` | FacetDetailPage | Records for one value |
+| `/shuffle`, `/random` | RandomPage | Shuffle: split-flap board to a random record |
 | `/search` | SearchResultsPage | Search results |
+
+`App.tsx` renders a `ScrollToTop` component that scrolls to the top on PUSH and REPLACE
+pathname changes; back and forward (POP) are left to the browser so it can restore the
+previous position. The album and artist routes go through `AlbumRouteHandler` and
+`ArtistRouteHandler`, which key the detail page by slug (`<AlbumDetailPage key={albumPath} />`),
+so moving from one album or artist to another mounts a fresh page rather than re-rendering
+the old one in place.
 
 ## State Management
 
 No global state library - uses:
 
-1. **React Context** - Theme, authentication
+1. **React Context** - Page flood colour (`FloodProvider`), authentication
 2. **URL State** - Pagination, filters, sorting
 3. **Local State** - Component-specific data
 4. **localStorage** - User preferences
@@ -332,6 +377,9 @@ pnpm run preview
 2. **Optimize images** - Use appropriate sizes
 3. **Memoize expensive operations** - useMemo, useCallback
 4. **Avoid prop drilling** - Use context sparingly
+5. **Reuse the shared caches** - `useCollection()` / `loadCollection()`, `loadDetailJson()`,
+   `getGenreExplorer()` and `excludeBoxsetMembers()` rather than fetching or rebuilding
+   (see [Design System](./design-system.md#performance))
 
 ### Accessibility
 
@@ -342,6 +390,7 @@ pnpm run preview
 
 ## Related Documentation
 
+- [Design System](./design-system.md)
 - [Components Reference](./components.md)
 - [Pages Reference](./pages.md)
 - [Hooks Reference](./hooks.md)
