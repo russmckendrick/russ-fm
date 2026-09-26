@@ -10,7 +10,7 @@ import { colourSortKey, inkOn, vividFrom } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
-import { RecordTile } from '@/components/player';
+import { FloodBand, RecordTile, useRecordsFlood } from '@/components/player';
 import type { Album } from '@/types/album';
 
 const SORTS = [
@@ -132,121 +132,127 @@ export function AlbumsPage() {
   const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
   const start = (currentPage - 1) * perPage;
   const visible = filtered.slice(start, start + perPage);
+  // The header band and page ground take the colours of the first records shown.
+  const flood = useRecordsFlood(visible.map(a => a.uri_release));
   const filteredAny = genre !== 'all' || year !== 'all' || format !== 'all' || !!search;
 
   return (
-    <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-8 md:px-10 lg:px-14 lg:pt-12">
-      <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
-        <h1 className="t-disp m-0 text-[64px] md:text-[96px] lg:text-[120px]">Albums</h1>
-        <span className="t-disp text-[64px] text-[color:var(--ground-3)] md:text-[96px] lg:text-[120px]" aria-label={`${filtered.length} records`}>
-          {loading ? '' : filtered.length.toLocaleString('en-GB')}
-        </span>
-      </div>
-
-      <div className="mt-8 flex flex-col gap-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <div role="group" aria-label="Sort" className="flex flex-wrap gap-1 rounded-[28px] bg-[color:var(--ground-2)] p-1">
-            {SORTS.map(s => (
-              <button
-                key={s.value}
-                type="button"
-                aria-pressed={sort === s.value}
-                onClick={() => update({ sort: s.value })}
-                className={cn(
-                  'h-11 rounded-full px-4 text-[14px] font-bold transition-colors md:px-5',
-                  sort === s.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
-                )}
-              >
-                {s.label}
-              </button>
-            ))}
-          </div>
-          <div role="group" aria-label="Format" className="flex flex-wrap gap-2">
-            {FORMAT_CHIPS.filter(f => formatCounts[f.value]).map(f => {
-              const on = format === f.value;
-              return (
-                <button
-                  key={f.value}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => update({ format: on ? 'all' : f.value })}
-                  className={cn('pill pill-sm', on ? 'border-[color:var(--cream)]' : 'border-[color:var(--ground-3)]')}
-                >
-                  {f.label}
-                  <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">{formatCounts[f.value].toLocaleString('en-GB')}</span>
-                </button>
-              );
-            })}
-          </div>
+    <>
+      <FloodBand flood={flood}>
+        <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
+          <h1 className="t-disp m-0 text-[64px] md:text-[96px] lg:text-[120px]">Albums</h1>
+          <span className="t-disp text-[64px] opacity-35 md:text-[96px] lg:text-[120px]" aria-label={`${filtered.length} records`}>
+            {loading ? '' : filtered.length.toLocaleString('en-GB')}
+          </span>
         </div>
+      </FloodBand>
 
-        <div className="flex flex-wrap items-center gap-3">
-          <label className="flex h-11 min-w-0 flex-1 items-center gap-2.5 rounded-full border-2 border-[color:var(--ground-3)] px-4 focus-within:border-[color:var(--cream)] sm:max-w-[360px]">
-            <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
-            <input
-              type="search"
-              defaultValue={search}
-              key={search}
-              placeholder="Search albums"
-              aria-label="Search albums"
-              onKeyDown={e => {
-                if (e.key === 'Enter') update({ search: (e.target as HTMLInputElement).value.trim() });
-              }}
-              onBlur={e => {
-                if (e.target.value.trim() !== search) update({ search: e.target.value.trim() });
-              }}
-              className="min-w-0 flex-1 bg-transparent text-[14px] outline-none placeholder:text-[color:var(--cream-dim)]"
-            />
-          </label>
-          <PillSelect label="Genre" value={genre} options={genres} onChange={v => update({ genre: v })} />
-          <PillSelect label="Year" value={year} options={years} onChange={v => update({ year: v })} />
-          {filteredAny && (
-            <button type="button" className="pill pill-sm border-transparent opacity-80 hover:opacity-100" onClick={() => navigate(sort === 'date_added' ? '/albums/1' : `/albums/1?sort=${sort}`)}>
-              <X className="h-4 w-4" aria-hidden />
-              Clear filters
-            </button>
+      <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-8 md:px-10 lg:px-14 lg:pt-10">
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <div role="group" aria-label="Sort" className="flex flex-wrap gap-1 rounded-[28px] bg-[color:var(--ground-2)] p-1">
+              {SORTS.map(s => (
+                <button
+                  key={s.value}
+                  type="button"
+                  aria-pressed={sort === s.value}
+                  onClick={() => update({ sort: s.value })}
+                  className={cn(
+                    'h-11 rounded-full px-4 text-[14px] font-bold transition-colors md:px-5',
+                    sort === s.value ? 'bg-[color:var(--cream)] text-[color:var(--ground)]' : 'hover:bg-[color:var(--ground-3)]',
+                  )}
+                >
+                  {s.label}
+                </button>
+              ))}
+            </div>
+            <div role="group" aria-label="Format" className="flex flex-wrap gap-2">
+              {FORMAT_CHIPS.filter(f => formatCounts[f.value]).map(f => {
+                const on = format === f.value;
+                return (
+                  <button
+                    key={f.value}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => update({ format: on ? 'all' : f.value })}
+                    className={cn('pill pill-sm', on ? 'border-[color:var(--cream)]' : 'border-[color:var(--ground-3)]')}
+                  >
+                    {f.label}
+                    <span className="t-mono text-[11px] text-[color:var(--cream-dim)]">{formatCounts[f.value].toLocaleString('en-GB')}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <label className="flex h-11 min-w-0 flex-1 items-center gap-2.5 rounded-full border-2 border-[color:var(--ground-3)] px-4 focus-within:border-[color:var(--cream)] sm:max-w-[360px]">
+              <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
+              <input
+                type="search"
+                defaultValue={search}
+                key={search}
+                placeholder="Search albums"
+                aria-label="Search albums"
+                onKeyDown={e => {
+                  if (e.key === 'Enter') update({ search: (e.target as HTMLInputElement).value.trim() });
+                }}
+                onBlur={e => {
+                  if (e.target.value.trim() !== search) update({ search: e.target.value.trim() });
+                }}
+                className="min-w-0 flex-1 bg-transparent text-[14px] outline-none placeholder:text-[color:var(--cream-dim)]"
+              />
+            </label>
+            <PillSelect label="Genre" value={genre} options={genres} onChange={v => update({ genre: v })} />
+            <PillSelect label="Year" value={year} options={years} onChange={v => update({ year: v })} />
+            {filteredAny && (
+              <button type="button" className="pill pill-sm border-transparent opacity-80 hover:opacity-100" onClick={() => navigate(sort === 'date_added' ? '/albums/1' : `/albums/1?sort=${sort}`)}>
+                <X className="h-4 w-4" aria-hidden />
+                Clear filters
+              </button>
+            )}
+          </div>
+
+          {colourMode && colours && visible.length > 0 && (
+            <div className="mt-2 flex h-2.5 overflow-hidden rounded-full" aria-hidden>
+              {visible.map(a => (
+                <span key={a.uri_release} className="flex-1" style={{ background: vividFrom(colours[a.uri_release]) ?? '#3a3530' }} />
+              ))}
+            </div>
           )}
         </div>
 
-        {colourMode && colours && visible.length > 0 && (
-          <div className="mt-2 flex h-2.5 overflow-hidden rounded-full" aria-hidden>
-            {visible.map(a => (
-              <span key={a.uri_release} className="flex-1" style={{ background: vividFrom(colours[a.uri_release]) ?? '#3a3530' }} />
-            ))}
-          </div>
-        )}
-      </div>
+        <div className="mt-10">
+          {loading ? (
+            <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6" aria-busy="true">
+              {Array.from({ length: 12 }).map((_, i) => (
+                <div key={i} className="aspect-square animate-pulse bg-[color:var(--ground-2)]" />
+              ))}
+            </div>
+          ) : visible.length === 0 ? (
+            <div className="flex flex-col items-start gap-4 py-20">
+              <p className="t-disp m-0 text-[36px]">No albums found</p>
+              <p className="text-[color:var(--cream-dim)]">Try a different search or clear the filters.</p>
+            </div>
+          ) : colourMode ? (
+            <ColourWall albums={visible} colours={colours} />
+          ) : (
+            <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-7 xl:grid-cols-6">
+              {visible.map(a => (
+                <RecordTile
+                  key={a.uri_release}
+                  album={a}
+                  palette={colours?.[a.uri_release]}
+                  meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')}
+                />
+              ))}
+            </div>
+          )}
+        </div>
 
-      <div className="mt-10">
-        {loading ? (
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6" aria-busy="true">
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="aspect-square animate-pulse bg-[color:var(--ground-2)]" />
-            ))}
-          </div>
-        ) : visible.length === 0 ? (
-          <div className="flex flex-col items-start gap-4 py-20">
-            <p className="t-disp m-0 text-[36px]">No albums found</p>
-            <p className="text-[color:var(--cream-dim)]">Try a different search or clear the filters.</p>
-          </div>
-        ) : colourMode ? (
-          <ColourWall albums={visible} colours={colours} />
-        ) : (
-          <div className="grid grid-cols-2 gap-x-5 gap-y-9 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-x-7 xl:grid-cols-6">
-            {visible.map(a => (
-              <RecordTile
-                key={a.uri_release}
-                album={a}
-                palette={colours?.[a.uri_release]}
-                meta={[originalYear(a), a.format_primary].filter(Boolean).join(' · ')}
-              />
-            ))}
-          </div>
-        )}
+        {totalPages > 1 && <Pager current={currentPage} total={totalPages} url={pageUrl} />}
       </div>
-
-      {totalPages > 1 && <Pager current={currentPage} total={totalPages} url={pageUrl} />}
-    </div>
+    </>
   );
 }
 

@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
-import { FitTitle, PillLink, RecordTile, SectionHeading, usePageFlood } from '@/components/player';
+import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, recordsFlood, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
@@ -11,10 +11,10 @@ import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
 import { slugify } from '@/lib/browseFacets';
-import { blendedFlood, floodFor, INK } from '@/lib/sleeveColour';
+import { floodFor, INK } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { cn } from '@/lib/utils';
-import { getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
+import { getAlbumImageFromData, getArtistAvatarFromData, getArtistImageFromData, getArtistOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember } from '@/types/album';
 
@@ -72,6 +72,8 @@ interface ArtistData {
       listeners?: number;
       playcount?: number;
       bio?: { content?: string; summary?: string };
+      /** Last.fm's full biography; usually far longer than `biography`. */
+      bio_content?: string;
       similar_artists?: Array<{ name: string; url?: string }>;
     };
     discogs?: { id?: string; url?: string };
@@ -161,14 +163,18 @@ export function ArtistDetailPage() {
     [order, byAdded, albums],
   );
 
-  // The top of the page blends through the sleeve colours of the last three
-  // additions (fewer if that's all there is), newest at the top by the nav.
+  // The top of the page is one solid colour: the boldest sleeve among the
+  // artist's last ten additions. Its dark swatch grounds the rest of the page.
   const colourMap = useAlbumColorMap();
   const flood = useMemo(
-    () => blendedFlood(byAdded.slice(0, 3).map(a => floodFor(colourMap?.[a.uri_release]).flood)),
+    () => recordsFlood(byAdded.map(a => a.uri_release), colourMap, 10) ?? bandFromFlood(floodFor(null)),
     [byAdded, colourMap],
   );
-  usePageFlood(byAdded.length ? flood.top : null, byAdded.length ? flood.ink : null);
+  usePageFlood(
+    byAdded.length ? flood.top : null,
+    byAdded.length ? flood.ink : null,
+    byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground } : undefined,
+  );
   // Blend the portrait into the flood. Multiply turns a light backdrop into
   // the flood colour; screen does the same for a dark backdrop, but only on a
   // dark flood; on a pale one it washes the subject out to a ghost, so there
@@ -245,7 +251,7 @@ export function ArtistDetailPage() {
 
   const allGenres = [...new Set(albums.flatMap(a => a.genre_names))];
   const cleanGenres = getCleanGenresFromArray(allGenres, artistName);
-  const bio = cleanBiography(artistData?.biography);
+  const bio = pickBiography(artistData);
 
   const artistUri = `/artist/${artistPath}/`;
   const wikipediaUrl =
@@ -305,7 +311,6 @@ export function ArtistDetailPage() {
                 </div>
               ))}
             </dl>
-            {bio && <Bio text={bio} />}
             <div className="flex flex-wrap gap-2.5">
               {services.map((s, i) => (
                 <PillLink key={s.label} to={s.url} size="sm" solid={i === 0 ? { background: flood.ink, color: flood.top } : undefined}>
@@ -329,6 +334,13 @@ export function ArtistDetailPage() {
       </div>
 
       <div className="mx-auto flex w-full max-w-[1640px] flex-col gap-24 px-5 pt-20 md:px-10 lg:px-14">
+        {bio && (
+          <section className="flex flex-col gap-8">
+            <SectionHeading title="Biography" />
+            <Bio text={bio} />
+          </section>
+        )}
+
         <section className="flex flex-col gap-10">
           <SectionHeading
             title="Discography"
@@ -407,18 +419,36 @@ export function ArtistDetailPage() {
   );
 }
 
+/** Roughly how much biography shows before Read more. */
+const BIO_PREVIEW = 1500;
+
 function Bio({ text }: { text: string }) {
   const [open, setOpen] = useState(false);
-  const paragraphs = text.split('\n').filter(p => p.trim());
-  const long = text.length > 520;
-  const shown = open || !long ? paragraphs : [paragraphs[0].length > 520 ? `${paragraphs[0].slice(0, 520).replace(/\s+\S*$/, '')}…` : paragraphs[0]];
+  const paragraphs = text.split(/\n+/).map(p => p.trim()).filter(Boolean);
+  const long = text.length > BIO_PREVIEW + 300;
+
+  // Whole paragraphs up to the preview length; a single long opening
+  // paragraph is cut at a word boundary instead.
+  let shown = paragraphs;
+  if (long && !open) {
+    shown = [];
+    let used = 0;
+    for (const p of paragraphs) {
+      if (used && used + p.length > BIO_PREVIEW) break;
+      shown.push(used + p.length > BIO_PREVIEW * 1.2 ? `${p.slice(0, BIO_PREVIEW).replace(/\s+\S*$/, '')}…` : p);
+      used += p.length;
+    }
+  }
+
   return (
-    <div className="flex max-w-[720px] flex-col gap-4">
-      {shown.map((p, i) => (
-        <p key={i} className="m-0 text-[17px] leading-[1.6] md:text-[18px]">
-          {p}
-        </p>
-      ))}
+    <div className="flex flex-col gap-6">
+      <div className="columns-1 gap-12 md:columns-2 xl:columns-3">
+        {shown.map((p, i) => (
+          <p key={i} className="m-0 mb-4 text-[17px] leading-[1.65] last:mb-0 md:text-[18px]">
+            {p}
+          </p>
+        ))}
+      </div>
       {long && (
         <button type="button" className="pill pill-sm self-start" onClick={() => setOpen(v => !v)} aria-expanded={open}>
           {open ? 'Show less' : 'Read more'}
@@ -426,6 +456,15 @@ function Bio({ text }: { text: string }) {
       )}
     </div>
   );
+}
+
+/** The longer of the stored biography and Last.fm's full one, cleaned. */
+function pickBiography(data?: ArtistData | null): string | null {
+  const short = cleanBiography(data?.biography);
+  const full = cleanBiography(data?.services?.lastfm?.bio_content);
+  if (!full) return short;
+  if (!short) return full;
+  return full.length > short.length ? full : short;
 }
 
 function cleanBiography(raw?: string): string | null {

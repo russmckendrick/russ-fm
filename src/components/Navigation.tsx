@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Search, Menu, X, ChevronDown, Shuffle } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -6,11 +6,17 @@ import { SearchOverlay } from "./SearchOverlay";
 import { MobileSearchModal } from "./MobileSearchModal";
 import { UserProfileMenu } from "./UserProfileMenu";
 import { useFloodValue } from "./player/flood-context";
-import { CREAM, GROUND } from "@/lib/sleeveColour";
+import { SpinningMark } from "./player/SpinningMark";
+import { BrowseMenuCards } from "./browse/BrowseMenu";
+import { CREAM, GROUND, INK } from "@/lib/sleeveColour";
+import { excludeBoxsetMembers } from "@/lib/boxsets";
+import { FACETS } from "@/lib/browseFacets";
+import { groupByFacet } from "@/components/browse/facetSleeves";
+import { useCollection } from "@/lib/collection";
+import { shuffleLink, SHUFFLE_PATH, SHUFFLE_PATHS } from "@/lib/shuffleLink";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
@@ -18,20 +24,22 @@ type NavItem = {
   path: string;
   label: string;
   activePrefix?: string | string[];
+  /** Key into the mobile menu's counts. */
+  count?: "records" | "artists" | "genres" | "labels" | "decades" | "countries";
 };
 
 const PRIMARY: NavItem[] = [
   { path: "/", label: "Home" },
-  { path: "/albums/1", label: "Albums", activePrefix: "/albums" },
-  { path: "/artists/1", label: "Artists", activePrefix: "/artists" },
-  { path: "/genres", label: "Genres", activePrefix: "/genres" },
+  { path: "/albums/1", label: "Albums", activePrefix: ["/albums", "/album/"], count: "records" },
+  { path: "/artists/1", label: "Artists", activePrefix: ["/artists", "/artist/"], count: "artists" },
+  { path: "/genres", label: "Genres", activePrefix: "/genres", count: "genres" },
 ];
 
 const BROWSE: NavItem[] = [
   { path: "/browse", label: "Overview", activePrefix: "/browse" },
-  { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"] },
-  { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"] },
-  { path: "/countries", label: "Countries", activePrefix: ["/countries", "/country/"] },
+  { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"], count: "labels" },
+  { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"], count: "decades" },
+  { path: "/countries", label: "Countries", activePrefix: ["/countries", "/country/"], count: "countries" },
 ];
 
 const MORE: NavItem[] = [
@@ -39,20 +47,21 @@ const MORE: NavItem[] = [
   { path: "/wrapped", label: "Wrapped", activePrefix: "/wrapped" },
 ];
 
-const ALL_MOBILE: NavItem[] = [...PRIMARY, ...BROWSE, ...MORE, { path: "/random", label: "Shuffle", activePrefix: "/random" }];
+const ALL_MOBILE: NavItem[] = [...PRIMARY, ...BROWSE, ...MORE, { path: SHUFFLE_PATH, label: "Shuffle", activePrefix: SHUFFLE_PATHS }];
 
 /** Scroll distance after which the header leaves the hero flood for the dark base. */
 const SOLID_AFTER = 120;
 
 export function Navigation() {
   const location = useLocation();
-  const { flood, ink } = useFloodValue();
+  const { flood, ink, cover } = useFloodValue();
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [scrolled, setScrolled] = useState(false);
+  const [browseOpen, setBrowseOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -77,9 +86,12 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Keyed on every navigation, not just path changes, so a Shuffle link that
+  // stays on the Shuffle page still closes the menus.
   useEffect(() => {
     setMenuOpen(false);
-  }, [location.pathname]);
+    setBrowseOpen(false);
+  }, [location.key]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -112,9 +124,17 @@ export function Navigation() {
   };
 
   const solid = scrolled || menuOpen;
-  const bg = menuOpen ? flood : scrolled ? "rgba(14,13,12,.97)" : flood;
+  const bg = menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
   const fg = menuOpen ? ink : scrolled ? CREAM : ink;
   const browseActive = BROWSE.some(isActive);
+  const hasFlood = flood !== GROUND;
+  // The logo's label is the page colour; on plain pages it is cream.
+  const markLabel = hasFlood ? flood : CREAM;
+  // The current page's pill: ink on the flood, then the flood itself once the
+  // header has scrolled onto the dark ground, so the colour follows you down.
+  const activePill = scrolled && !menuOpen
+    ? { background: hasFlood ? flood : CREAM, color: hasFlood ? ink : INK }
+    : { background: fg, color: hasFlood ? flood : "var(--ground)" };
 
   return (
     <>
@@ -125,50 +145,48 @@ export function Navigation() {
         )}
         style={{ background: bg, color: fg }}
       >
-        <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-6 px-5 md:h-[84px] md:px-10 lg:px-14 xl:gap-9">
-          <Link to="/" className="t-disp shrink-0 text-[22px] tracking-[-0.04em] md:text-[26px]" aria-label="russ.fm — home">
-            russ.fm
+        <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-5 px-5 md:h-[84px] md:px-10 lg:px-14 xl:gap-7">
+          <Link to="/" className="flex shrink-0 items-center gap-2.5 md:gap-3" aria-label="russ.fm — home">
+            <SpinningMark size={isCompact ? 36 : 44} label={markLabel} cover={cover} />
+            <span className="t-disp text-[22px] tracking-[-0.04em] md:text-[26px]">russ.fm</span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden flex-1 items-center gap-7 xl:flex">
+          <nav aria-label="Primary" className="hidden flex-1 items-center gap-1 xl:flex">
             {PRIMARY.map((item) => (
-              <NavLink key={item.path} item={item} active={isActive(item)} />
+              <NavLink key={item.path} item={item} active={isActive(item)} activeStyle={activePill} />
             ))}
-            <DropdownMenu>
+            <DropdownMenu open={browseOpen} onOpenChange={setBrowseOpen}>
               <DropdownMenuTrigger asChild>
                 <button
                   type="button"
                   className={cn(
-                    "inline-flex items-center gap-1 text-[15px] font-bold transition-opacity",
-                    browseActive ? "opacity-100 underline decoration-2 underline-offset-8" : "opacity-70 hover:opacity-100",
+                    "inline-flex h-10 items-center gap-1 rounded-full border-2 px-4 text-[15px] font-bold transition-[opacity,background-color,color,border-color] duration-300",
+                    browseOpen ? "border-current opacity-100" : "border-transparent",
+                    !browseOpen && !browseActive && "opacity-70 hover:opacity-100",
                   )}
+                  style={browseActive && !browseOpen ? activePill : undefined}
                 >
                   Browse
-                  <ChevronDown className="h-4 w-4" aria-hidden />
+                  <ChevronDown className={cn("h-4 w-4 transition-transform duration-300", browseOpen && "rotate-180")} aria-hidden />
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 align="start"
-                sideOffset={14}
-                className="min-w-[220px] rounded-2xl border-0 bg-[color:var(--ground-2)] p-2 text-[color:var(--cream)] shadow-[0_30px_60px_-20px_rgba(0,0,0,.7)]"
+                sideOffset={12}
+                collisionPadding={24}
+                className="w-[min(1040px,calc(100vw-48px))] rounded-[26px] border-0 bg-[color:var(--ground-2)] p-3 text-[color:var(--cream)] shadow-[0_40px_80px_-24px_rgba(0,0,0,.7)]"
               >
-                {BROWSE.map((item) => (
-                  <DropdownMenuItem key={item.path} asChild className="cursor-pointer rounded-xl px-3 py-3 text-[15px] font-bold focus:bg-[color:var(--ground-3)] focus:text-[color:var(--cream)]">
-                    <Link to={item.path} aria-current={isActive(item) ? "page" : undefined}>
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
+                <BrowseMenuCards isActive={(path) => location.pathname.startsWith(path)} />
               </DropdownMenuContent>
             </DropdownMenu>
             {MORE.map((item) => (
-              <NavLink key={item.path} item={item} active={isActive(item)} />
+              <NavLink key={item.path} item={item} active={isActive(item)} activeStyle={activePill} />
             ))}
           </nav>
 
           <div className="ml-auto flex items-center gap-2 md:gap-3">
             <div className="relative hidden xl:block">
-              <label className="flex h-11 w-[260px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100 2xl:w-[320px]">
+              <label className="flex h-11 w-[240px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100 2xl:w-[300px]">
                 <Search className="h-[18px] w-[18px] shrink-0" aria-hidden />
                 <input
                   ref={searchInputRef}
@@ -210,7 +228,7 @@ export function Navigation() {
               />
             </div>
 
-            <Link to="/random" className="pill pill-sm hidden md:inline-flex" aria-label="Shuffle — a random record">
+            <Link {...shuffleLink(location.pathname)} className="pill pill-sm hidden md:inline-flex" aria-label="Shuffle — a random record">
               <Shuffle className="h-4 w-4" aria-hidden />
               Shuffle
             </Link>
@@ -233,7 +251,8 @@ export function Navigation() {
               aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="icon-btn border-2 border-current xl:hidden"
+              className={cn("icon-btn border-2 border-current xl:hidden", menuOpen && "border-transparent")}
+              style={menuOpen ? { background: ink, color: flood === GROUND ? "var(--ground-2)" : flood } : undefined}
             >
               {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -242,30 +261,11 @@ export function Navigation() {
       </header>
 
       {menuOpen && (
-        <div
-          className="flood-surface fixed inset-0 z-40 overflow-y-auto pt-16 md:pt-[84px] xl:hidden"
-          style={{ background: flood === GROUND ? "var(--ground-2)" : flood, color: ink }}
-        >
-          <nav aria-label="Menu" className="mx-auto flex max-w-[720px] flex-col px-5 pb-16 pt-6 md:px-10">
-            {ALL_MOBILE.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                aria-current={isActive(item) ? "page" : undefined}
-                className={cn(
-                  "t-disp border-b py-4 text-[38px] md:text-[52px]",
-                  isActive(item) ? "opacity-100" : "opacity-70 hover:opacity-100",
-                )}
-                style={{ borderColor: "currentColor", borderBottomWidth: 1 }}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="mt-8 md:hidden">
-              <UserProfileMenu />
-            </div>
-          </nav>
-        </div>
+        <MobileMenu
+          background={flood === GROUND ? "var(--ground-2)" : flood}
+          ink={ink}
+          isActive={isActive}
+        />
       )}
 
       <MobileSearchModal isOpen={mobileSearchOpen} onClose={() => setMobileSearchOpen(false)} />
@@ -273,15 +273,69 @@ export function Navigation() {
   );
 }
 
-function NavLink({ item, active }: { item: NavItem; active: boolean }) {
+type Counts = Record<NonNullable<NavItem["count"]>, number>;
+
+/** Counts beside each menu entry. Built only while the menu is open. */
+function useMenuCounts(): Counts | null {
+  const { albums: raw } = useCollection();
+  return useMemo(() => {
+    if (!raw.length) return null;
+    const albums = excludeBoxsetMembers(raw);
+    return {
+      records: albums.length,
+      artists: new Set(albums.map((a) => a.release_artist)).size,
+      genres: groupByFacet(FACETS.genre, albums).size,
+      labels: groupByFacet(FACETS.label, albums).size,
+      decades: groupByFacet(FACETS.decade, albums).size,
+      countries: groupByFacet(FACETS.country, albums).size,
+    };
+  }, [raw]);
+}
+
+function MobileMenu({ background, ink, isActive }: { background: string; ink: string; isActive: (item: NavItem) => boolean }) {
+  const counts = useMenuCounts();
+  const { pathname } = useLocation();
+  return (
+    <div className="flood-surface fixed inset-0 z-40 overflow-y-auto pt-16 md:pt-[84px] xl:hidden" style={{ background, color: ink }}>
+      <nav aria-label="Menu" className="mx-auto flex max-w-[720px] flex-col px-5 pb-16 pt-4 md:px-10">
+        {ALL_MOBILE.map((item) => {
+          const active = isActive(item);
+          const count = item.count && counts ? counts[item.count] : null;
+          return (
+            <Link
+              key={item.path}
+              {...(item.path === SHUFFLE_PATH ? shuffleLink(pathname) : { to: item.path })}
+              aria-current={active ? "page" : undefined}
+              className={cn(
+                "flex items-center gap-3 border-b py-3.5 md:py-4",
+                active ? "opacity-100" : "opacity-75 hover:opacity-100",
+              )}
+              style={{ borderColor: "currentColor", borderBottomWidth: 1 }}
+            >
+              {active && <SpinningMark size={30} label={CREAM} className="md:h-10 md:w-10" />}
+              <span className="t-disp flex-1 text-[32px] md:text-[48px]">{item.label}</span>
+              {count != null && <span className="t-mono text-[12px] font-bold md:text-[14px]">{count.toLocaleString()}</span>}
+            </Link>
+          );
+        })}
+        <div className="mt-8 md:hidden">
+          <UserProfileMenu />
+        </div>
+      </nav>
+    </div>
+  );
+}
+
+function NavLink({ item, active, activeStyle }: { item: NavItem; active: boolean; activeStyle: { background: string; color: string } }) {
   return (
     <Link
       to={item.path}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "text-[15px] font-bold transition-opacity",
-        active ? "opacity-100 underline decoration-2 underline-offset-8" : "opacity-70 hover:opacity-100",
+        "inline-flex h-10 items-center rounded-full px-4 text-[15px] font-bold transition-[opacity,background-color,color] duration-300",
+        !active && "opacity-70 hover:opacity-100",
       )}
+      style={active ? activeStyle : undefined}
     >
       {item.label}
     </Link>

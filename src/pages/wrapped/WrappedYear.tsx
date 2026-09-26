@@ -137,7 +137,7 @@ export function WrappedYear() {
   const paint = useMemo(() => (data ? buildPaint(data, releases, colours) : null), [data, releases, colours]);
 
   const showHero = !loading && !!data && viewMode === 'grid';
-  usePageFlood(showHero ? flood.flood : null, showHero ? flood.ink : null);
+  usePageFlood(showHero ? flood.flood : null, showHero ? flood.ink : null, showHero ? { ground: flood.ground } : undefined);
 
   if (!year || !yearNum || Number.isNaN(yearNum)) {
     return <Navigate to={`/wrapped/${currentYear - 1}`} replace />;

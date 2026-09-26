@@ -10,7 +10,7 @@ import {
   pickSleeves,
 } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
-import { SectionHeading } from '@/components/player';
+import { FloodBand, SectionHeading, useRecordsFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
@@ -106,6 +106,11 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
     return sort === 'name' ? [...list].sort((a, b) => a.display.localeCompare(b.display)) : list;
   }, [allCards, entries, filter, sort]);
 
+  // The header band and page ground take the lead sleeves of the first cards.
+  const flood = useRecordsFlood(
+    cardEntries.slice(0, 3).map(e => mostVivid(e.albums, a => a.uri_release, colorMap, 60)?.uri_release),
+  );
+
   if (loading) {
     return (
       <PageContainer>
@@ -137,103 +142,108 @@ export function FacetListPage({ facetKey }: FacetListPageProps) {
   );
 
   return (
-    <PageContainer>
-      <BrowseHeader
-        title={title}
-        note={`${entries.length.toLocaleString()} · ${albums.length.toLocaleString()} records`}
-        current={facet.plural as BrowseSection}
-      />
+    <>
+      <FloodBand flood={flood}>
+        <BrowseHeader
+          className="mb-0 md:mb-0"
+          title={title}
+          note={`${entries.length.toLocaleString()} · ${albums.length.toLocaleString()} records`}
+          current={facet.plural as BrowseSection}
+        />
+      </FloodBand>
 
-      {entries.length === 0 ? (
-        <EditorialEmpty title="Nothing here yet" detail={`No ${facet.plural} found in the collection.`} />
-      ) : (
-        <>
-          <section aria-labelledby="facet-cards" className="mb-14 md:mb-20">
-            <SectionHeading
-              title={<span id="facet-cards">{allCards ? `All ${facet.plural}` : 'Most records'}</span>}
-              size="sm"
-              className="mb-6"
-            >
-              {allCards && sortPills}
-            </SectionHeading>
-            <ul className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-              {cardEntries.map(entry => {
-                const fan = pickSleeves(entry.albums, colorMap, 3);
-                return (
-                  <li key={entry.name} className="min-w-0">
-                    <FacetCard
-                      to={`/${facet.singular}/${entry.slug}`}
-                      title={entry.display}
-                      flood={floodForUri(fan[0]?.uri_release, colorMap)}
-                      albums={fan}
-                      meta={`${entry.count.toLocaleString()} ${entry.count === 1 ? 'record' : 'records'}`}
-                    />
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-
-          {!allCards && (
-            <section aria-labelledby="facet-all">
+      <PageContainer>
+        {entries.length === 0 ? (
+          <EditorialEmpty title="Nothing here yet" detail={`No ${facet.plural} found in the collection.`} />
+        ) : (
+          <>
+            <section aria-labelledby="facet-cards" className="mb-14 md:mb-20">
               <SectionHeading
-                title={<span id="facet-all">All {facet.plural}</span>}
-                note={filter ? `${chipEntries.length.toLocaleString()} of ${entries.length.toLocaleString()}` : undefined}
+                title={<span id="facet-cards">{allCards ? `All ${facet.plural}` : 'Most records'}</span>}
                 size="sm"
                 className="mb-6"
               >
-                {sortPills}
+                {allCards && sortPills}
               </SectionHeading>
-
-              <label className="mb-6 flex h-12 w-full max-w-[420px] items-center gap-3 rounded-full border-2 border-[color:var(--cream-rule)] px-4 focus-within:border-[color:var(--cream)]">
-                <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
-                <span className="sr-only">Filter {facet.plural}</span>
-                <input
-                  type="search"
-                  value={filter}
-                  onChange={e => setFilter(e.target.value)}
-                  placeholder={`Filter ${facet.plural}`}
-                  className="min-w-0 flex-1 bg-transparent text-[15px] text-[color:var(--cream)] outline-none placeholder:text-[color:var(--cream-dim)] [&::-webkit-search-cancel-button]:hidden"
-                />
-                {filter && (
-                  <button
-                    type="button"
-                    onClick={() => setFilter('')}
-                    aria-label="Clear filter"
-                    className="-mr-2 inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-[color:var(--ground-3)]"
-                  >
-                    <X className="h-4 w-4" aria-hidden />
-                  </button>
-                )}
-              </label>
-
-              {chipEntries.length === 0 ? (
-                <p className="text-[15px] text-[color:var(--cream-dim)]">No {facet.plural} match “{filter}”.</p>
-              ) : (
-                <ul className="flex flex-wrap gap-2.5">
-                  {chipEntries.map(entry => {
-                    const flood = floods.get(entry.name) ?? floodForUri(null, colorMap);
-                    return (
-                      <li key={entry.name} className="min-w-0 max-w-full">
-                        <Link
-                          to={`/${facet.singular}/${entry.slug}`}
-                          className="chip min-h-[44px] max-w-full px-4 py-2 text-[15px]"
-                          style={{ background: flood.flood, color: flood.ink }}
-                        >
-                          <span className="truncate">{entry.display}</span>
-                          <span className="t-mono text-[12px] font-normal" style={{ color: flood.sub }}>
-                            {entry.count.toLocaleString()}
-                          </span>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+              <ul className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+                {cardEntries.map(entry => {
+                  const fan = pickSleeves(entry.albums, colorMap, 3);
+                  return (
+                    <li key={entry.name} className="min-w-0">
+                      <FacetCard
+                        to={`/${facet.singular}/${entry.slug}`}
+                        title={entry.display}
+                        flood={floodForUri(fan[0]?.uri_release, colorMap)}
+                        albums={fan}
+                        meta={`${entry.count.toLocaleString()} ${entry.count === 1 ? 'record' : 'records'}`}
+                      />
+                    </li>
+                  );
+                })}
+              </ul>
             </section>
-          )}
-        </>
-      )}
-    </PageContainer>
+
+            {!allCards && (
+              <section aria-labelledby="facet-all">
+                <SectionHeading
+                  title={<span id="facet-all">All {facet.plural}</span>}
+                  note={filter ? `${chipEntries.length.toLocaleString()} of ${entries.length.toLocaleString()}` : undefined}
+                  size="sm"
+                  className="mb-6"
+                >
+                  {sortPills}
+                </SectionHeading>
+
+                <label className="mb-6 flex h-12 w-full max-w-[420px] items-center gap-3 rounded-full border-2 border-[color:var(--cream-rule)] px-4 focus-within:border-[color:var(--cream)]">
+                  <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
+                  <span className="sr-only">Filter {facet.plural}</span>
+                  <input
+                    type="search"
+                    value={filter}
+                    onChange={e => setFilter(e.target.value)}
+                    placeholder={`Filter ${facet.plural}`}
+                    className="min-w-0 flex-1 bg-transparent text-[15px] text-[color:var(--cream)] outline-none placeholder:text-[color:var(--cream-dim)] [&::-webkit-search-cancel-button]:hidden"
+                  />
+                  {filter && (
+                    <button
+                      type="button"
+                      onClick={() => setFilter('')}
+                      aria-label="Clear filter"
+                      className="-mr-2 inline-flex h-10 w-10 items-center justify-center rounded-full hover:bg-[color:var(--ground-3)]"
+                    >
+                      <X className="h-4 w-4" aria-hidden />
+                    </button>
+                  )}
+                </label>
+
+                {chipEntries.length === 0 ? (
+                  <p className="text-[15px] text-[color:var(--cream-dim)]">No {facet.plural} match “{filter}”.</p>
+                ) : (
+                  <ul className="flex flex-wrap gap-2.5">
+                    {chipEntries.map(entry => {
+                      const flood = floods.get(entry.name) ?? floodForUri(null, colorMap);
+                      return (
+                        <li key={entry.name} className="min-w-0 max-w-full">
+                          <Link
+                            to={`/${facet.singular}/${entry.slug}`}
+                            className="chip min-h-[44px] max-w-full px-4 py-2 text-[15px]"
+                            style={{ background: flood.flood, color: flood.ink }}
+                          >
+                            <span className="truncate">{entry.display}</span>
+                            <span className="t-mono text-[12px] font-normal" style={{ color: flood.sub }}>
+                              {entry.count.toLocaleString()}
+                            </span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+              </section>
+            )}
+          </>
+        )}
+      </PageContainer>
+    </>
   );
 }

@@ -186,7 +186,7 @@ export function FacetDetailPage({ facetKey }: FacetDetailPageProps) {
   const fan = useMemo(() => pickSleeves(albums, colorMap, 5), [albums, colorMap]);
   const flood = floodForUri(fan[0]?.uri_release, colorMap);
   const ready = Boolean(match && colorMap);
-  usePageFlood(ready ? flood.flood : null, ready ? flood.ink : null);
+  usePageFlood(ready ? flood.flood : null, ready ? flood.ink : null, ready ? { ground: flood.ground } : undefined);
 
   usePageTitle(meta ? meta.title : `${facet.listTitle} | Russ.fm`);
   useMetaTags({

@@ -53,7 +53,7 @@ export const appConfig = {
         title: 'About',
         items: [
           { label: 'Collection Stats', href: '/stats' },
-          { label: 'Random Discovery', href: '/random' },
+          { label: 'Shuffle', href: '/shuffle' },
         ],
       },
       explore: {

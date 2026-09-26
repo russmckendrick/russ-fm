@@ -1,12 +1,14 @@
 import { memo, useMemo, useState, useCallback } from 'react';
 import { AlertCircle, Music } from 'lucide-react';
-import { SiSpotify, SiApplemusic } from 'react-icons/si';
+import { SiSpotify, SiApplemusic, SiYoutube } from 'react-icons/si';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlayerToggle } from './PlayerToggle';
 import { SpotifyEmbed } from './SpotifyEmbed';
 import { AppleMusicEmbed } from './AppleMusicEmbed';
+import { YouTubeEmbed } from './YouTubeEmbed';
+import { youTubeVideos } from '@/lib/youtube';
 import { useMusicPlayerPreferences } from '@/hooks/useMusicPlayerPreferences';
 import { cn } from '@/lib/utils';
 
@@ -22,6 +24,8 @@ interface DetailedAlbum {
       url?: string;
     };
   };
+  /** YouTube video URLs from the release; shown as a third tab. */
+  videos?: string[];
 }
 
 export interface MusicPlayerSectionProps {
@@ -70,20 +74,24 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
     };
   }, [album.services?.apple_music]);
 
-  // Determine available services (Apple Music first since it's default)
+  const hasVideos = useMemo(() => youTubeVideos(album.videos).length > 0, [album.videos]);
+
+  // Determine available services (Apple Music first since it's default;
+  // YouTube last, never picked as the preferred service).
   const availableServices = useMemo(() => {
-    const services: ('spotify' | 'apple_music')[] = [];
+    const services: ('spotify' | 'apple_music' | 'youtube')[] = [];
     if (appleMusicData?.available) services.push('apple_music');
     if (spotifyData?.available) services.push('spotify');
+    if (hasVideos) services.push('youtube');
     return services;
-  }, [spotifyData, appleMusicData]);
+  }, [spotifyData, appleMusicData, hasVideos]);
 
   // Set initial active tab based on preferences or availability
   useMemo(() => {
     if (availableServices.length === 0) return;
 
     const preferred = preferences.preferredService;
-    if (preferred && availableServices.includes(preferred)) {
+    if (preferred && (availableServices as string[]).includes(preferred)) {
       setActiveTab(preferred);
     } else {
       setActiveTab(availableServices[0]);
@@ -144,15 +152,21 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
             <div className="flex items-center gap-3 mb-4">
               <TabsList className="flex-1">
                 {availableServices.includes('apple_music') && (
-                  <TabsTrigger value="apple_music" className="flex-1 gap-2">
-                    <SiApplemusic className="h-4 w-4 text-red-500" />
-                    Apple Music
+                  <TabsTrigger value="apple_music" className="flex-1 gap-2" aria-label="Apple Music">
+                    <SiApplemusic className="h-5 w-5 sm:h-4 sm:w-4 text-red-500" aria-hidden />
+                    <span className="hidden sm:inline">Apple Music</span>
                   </TabsTrigger>
                 )}
                 {availableServices.includes('spotify') && (
-                  <TabsTrigger value="spotify" className="flex-1 gap-2">
-                    <SiSpotify className="h-4 w-4 text-green-500" />
-                    Spotify
+                  <TabsTrigger value="spotify" className="flex-1 gap-2" aria-label="Spotify">
+                    <SiSpotify className="h-5 w-5 sm:h-4 sm:w-4 text-green-500" aria-hidden />
+                    <span className="hidden sm:inline">Spotify</span>
+                  </TabsTrigger>
+                )}
+                {availableServices.includes('youtube') && (
+                  <TabsTrigger value="youtube" className="flex-1 gap-2" aria-label="YouTube">
+                    <SiYoutube className="h-5 w-5 sm:h-4 sm:w-4 text-[#ff0033]" aria-hidden />
+                    <span className="hidden sm:inline">YouTube</span>
                   </TabsTrigger>
                 )}
               </TabsList>
@@ -175,6 +189,12 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
                   onError={(error) => handlePlayerError('apple_music', error)}
                   onLoad={() => handlePlayerLoad('apple_music')}
                 />
+              </TabsContent>
+            )}
+
+            {availableServices.includes('youtube') && album.videos && (
+              <TabsContent value="youtube" className="mt-0">
+                <YouTubeEmbed videos={album.videos} />
               </TabsContent>
             )}
 

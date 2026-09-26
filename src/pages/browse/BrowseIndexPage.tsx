@@ -1,19 +1,15 @@
 import { useMemo } from 'react';
 import { BrowseHeader, FacetCard } from '@/components/browse/BrowseHeader';
-import {
-  byDateAddedDesc,
-  floodForUri,
-  groupByFacet,
-  pickSleeves,
-} from '@/components/browse/facetSleeves';
+import { byDateAddedDesc, summariseFacet } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { appConfig } from '@/config/app.config';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
-import { FACETS, type FacetKey } from '@/lib/browseFacets';
+import type { FacetKey } from '@/lib/browseFacets';
 import { useCollection } from '@/lib/collection';
+import { FloodBand, useRecordsFlood } from '@/components/player';
 
 const SECTIONS: Array<{ key: FacetKey; to: string; title: string; noun: [string, string] }> = [
   { key: 'genre', to: '/genres', title: 'Genres', noun: ['genre', 'genres'] },
@@ -37,30 +33,12 @@ export function BrowseIndexPage() {
   const albums = useMemo(() => [...excludeBoxsetMembers(raw)].sort(byDateAddedDesc), [raw]);
 
   const cards = useMemo(
-    () =>
-      SECTIONS.map(section => {
-        const groups = groupByFacet(FACETS[section.key], albums);
-        let topName = '';
-        let top: typeof albums = [];
-        for (const [name, list] of groups) {
-          if (list.length > top.length) {
-            topName = name;
-            top = list;
-          }
-        }
-        const fan = pickSleeves(top, colorMap, 5);
-        const facet = FACETS[section.key];
-        return {
-          ...section,
-          distinct: groups.size,
-          topName: facet.displayName ? facet.displayName(topName) : topName,
-          topCount: top.length,
-          fan,
-          flood: floodForUri(fan[0]?.uri_release, colorMap),
-        };
-      }),
+    () => SECTIONS.map(section => ({ ...section, ...summariseFacet(section.key, albums, colorMap) })),
     [albums, colorMap],
   );
+
+  // The header band and page ground take the cards' lead sleeves.
+  const flood = useRecordsFlood(cards.map(card => card.fan[0]?.uri_release));
 
   if (loading) {
     return (
@@ -79,32 +57,36 @@ export function BrowseIndexPage() {
   }
 
   return (
-    <PageContainer>
-      <BrowseHeader title="Browse" note={`${albums.length.toLocaleString()} records`} />
+    <>
+      <FloodBand flood={flood}>
+        <BrowseHeader className="mb-0 md:mb-0" title="Browse" note={`${albums.length.toLocaleString()} records`} />
+      </FloodBand>
 
-      <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
-        {cards.map(card => (
-          <li key={card.key} className="min-w-0">
-            <FacetCard
-              to={card.to}
-              title={card.title}
-              size="lg"
-              flood={card.flood}
-              albums={card.fan}
-              meta={
-                <>
-                  {card.distinct.toLocaleString()} {card.noun[card.distinct === 1 ? 0 : 1]}
-                  {card.topName && (
-                    <>
-                      {' · '}most: {card.topName} ({card.topCount.toLocaleString()})
-                    </>
-                  )}
-                </>
-              }
-            />
-          </li>
-        ))}
-      </ul>
-    </PageContainer>
+      <PageContainer>
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+          {cards.map(card => (
+            <li key={card.key} className="min-w-0">
+              <FacetCard
+                to={card.to}
+                title={card.title}
+                size="lg"
+                flood={card.flood}
+                albums={card.fan}
+                meta={
+                  <>
+                    {card.distinct.toLocaleString()} {card.noun[card.distinct === 1 ? 0 : 1]}
+                    {card.topName && (
+                      <>
+                        {' · '}most: {card.topName} ({card.topCount.toLocaleString()})
+                      </>
+                    )}
+                  </>
+                }
+              />
+            </li>
+          ))}
+        </ul>
+      </PageContainer>
+    </>
   );
 }

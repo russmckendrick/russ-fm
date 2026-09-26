@@ -23,7 +23,7 @@ const STATIC_ROUTES = [
   { path: '/labels', changefreq: 'weekly', priority: '0.7' },
   { path: '/decades', changefreq: 'weekly', priority: '0.7' },
   { path: '/countries', changefreq: 'weekly', priority: '0.7' },
-  { path: '/random', changefreq: 'weekly', priority: '0.4' },
+  { path: '/shuffle', changefreq: 'weekly', priority: '0.4' },
 ];
 
 const routes = new Map();

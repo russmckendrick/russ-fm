@@ -48,42 +48,25 @@ export function inkOn(bg: string): string {
   return contrast(bg, INK) >= contrast(bg, CREAM) ? INK : CREAM;
 }
 
-function toHex(rgb: [number, number, number]): string {
-  return `#${rgb.map(c => Math.round(c * 255).toString(16).padStart(2, '0')).join('')}`;
+/** How far a colour is from grey (0 = neutral), from its RGB spread. */
+function chroma(hex: string): number {
+  const rgb = parseHex(hex);
+  return rgb ? Math.max(...rgb) - Math.min(...rgb) : 0;
 }
 
 /**
- * Lighten (for dark ink) or darken (for cream ink) a colour in small steps
- * until the ink reads on it at `target` contrast, keeping its hue.
+ * The dark a page sits on. Usually the sleeve's own `ground` swatch, but when
+ * that is a neutral near-black and the flood has colour, the ground is the
+ * base dark tinted a fifth of the way toward the flood instead, so the page
+ * never reads as plain black.
  */
-function settleUnder(colour: string, ink: string, target: number): string {
-  const rgb = parseHex(colour);
-  if (!rgb) return colour;
-  const toward = ink === INK ? 1 : 0;
-  let out = colour;
-  for (let t = 0; t <= 0.8 && contrast(out, ink) < target; t += 0.05) {
-    out = toHex(rgb.map(c => c + (toward - c) * t) as [number, number, number]);
-  }
-  return out;
-}
-
-/**
- * A vertical flood blended through several sleeve colours (first at the top).
- * The ink is the one that reads on the top colour (which the nav also uses);
- * the other colours are lightened or darkened just enough for that ink to
- * read on them at 4.5:1 (body text). Returns the CSS background, the top colour and the ink.
- */
-export function blendedFlood(colours: string[]): { background: string; top: string; ink: string } {
-  const top = colours[0] ?? NEUTRAL_FLOOD;
-  const ink = inkOn(top);
-  const rest = colours
-    .slice(1)
-    .filter((c, i, all) => c !== top && all.indexOf(c) === i)
-    .map(c => settleUnder(c, ink, 4.5));
-  if (!rest.length) return { background: top, top, ink };
-  // Hold the top colour for the first stretch so the nav and hero meet cleanly.
-  const stops = rest.map((c, i) => `${c} ${Math.round(40 + (60 * (i + 1)) / rest.length)}%`);
-  return { background: `linear-gradient(180deg, ${top} 0%, ${top} 12%, ${stops.join(', ')})`, top, ink };
+export function pageGround(flood: Pick<Flood, 'flood' | 'ground'>): string {
+  if (chroma(flood.ground) >= 0.04 || chroma(flood.flood) < 0.15) return flood.ground;
+  const base = parseHex(GROUND);
+  const tint = parseHex(flood.flood);
+  if (!base || !tint) return flood.ground;
+  const mix = base.map((c, i) => c + (tint[i] - c) * 0.2);
+  return `#${mix.map(c => Math.round(c * 255).toString(16).padStart(2, '0')).join('')}`;
 }
 
 /** A softer secondary text colour for the given ink. */

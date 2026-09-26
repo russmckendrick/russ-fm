@@ -16,9 +16,9 @@
      legacy paper/ink names are kept so older components keep resolving. */
 
   /* --- Surfaces -------------------------------------------------------- */
-  --paper:    #0e0d0c;   /* body background (ground) */
-  --paper-2:  #171512;   /* sunken surface */
-  --paper-3:  #211d19;   /* recessed accent */
+  --paper:    var(--ground);    /* body background (ground, tinted per page) */
+  --paper-2:  var(--ground-2);  /* sunken surface */
+  --paper-3:  var(--ground-3);  /* recessed accent */
   --paper-warm: #1c1916; /* lifted panels */
 
   /* --- Ink (text) ------------------------------------------------------ */

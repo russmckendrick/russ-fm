@@ -7,7 +7,7 @@ import { genreFlood } from "@/components/genres/genreColours";
 import { GenreExplorerPanel } from "@/components/genres/GenreExplorerPanel";
 import { getGraphNodeCapacity } from "@/components/genres/useGenreGraphLayout";
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from "@/components/layout";
-import { PillLink, SectionHeading } from "@/components/player";
+import { FloodBand, PillLink, SectionHeading, bandFromFlood, usePageBand } from "@/components/player";
 import { appConfig } from "@/config/app.config";
 import { useMetaTags } from "@/hooks/useMetaTags";
 import { useAlbumColorMap } from "@/hooks/useAlbumColors";
@@ -229,6 +229,12 @@ export function GenrePage() {
   );
   const goBack = useCallback(() => navigate(-1), [navigate]);
   const goForward = useCallback(() => navigate(1), [navigate]);
+  // The header band and page ground take the selected genre's lead sleeve.
+  const band = useMemo(
+    () => (selectedGenre ? bandFromFlood(genreFlood(selectedGenre, colorMap)) : null),
+    [selectedGenre, colorMap],
+  );
+  usePageBand(band);
 
   if (loading) {
     return (
@@ -258,62 +264,67 @@ export function GenrePage() {
   const selectedFlood = genreFlood(selectedGenre, colorMap);
 
   return (
-    <PageContainer className="pb-16">
-      <BrowseHeader
-        title="Genres"
-        note={`${formatNumber(explorer.genres.length)} · ${formatNumber(explorer.totalAlbums)} records · ${formatNumber(explorer.totalArtists)} artists · ${formatYearSpan(explorer.yearStart, explorer.yearEnd)}`}
-        current="genres"
-      />
+    <>
+      <FloodBand flood={band}>
+        <BrowseHeader
+          className="mb-0 md:mb-0"
+          title="Genres"
+          note={`${formatNumber(explorer.genres.length)} · ${formatNumber(explorer.totalAlbums)} records · ${formatNumber(explorer.totalArtists)} artists · ${formatYearSpan(explorer.yearStart, explorer.yearEnd)}`}
+          current="genres"
+        />
+      </FloodBand>
 
-      {focusedDossierPath && (
-        <div className="mb-10 flex flex-wrap items-center gap-3">
-          <span
-            className="chip min-h-[44px] px-4 text-[15px]"
-            style={{ background: selectedFlood.flood, color: selectedFlood.ink }}
-          >
-            <span className="t-mono text-[11px] font-normal uppercase" style={{ color: selectedFlood.sub }}>
-              On the map
+      <PageContainer className="pb-16">
+        {focusedDossierPath && (
+          <div className="mb-10 flex flex-wrap items-center gap-3">
+            <span
+              className="chip min-h-[44px] px-4 text-[15px]"
+              style={{ background: selectedFlood.flood, color: selectedFlood.ink }}
+            >
+              <span className="t-mono text-[11px] font-normal uppercase" style={{ color: selectedFlood.sub }}>
+                On the map
+              </span>
+              {selectedGenre.name}
             </span>
-            {selectedGenre.name}
-          </span>
-          <PillLink to={focusedDossierPath} size="sm" className="text-[color:var(--cream)]">
-            {selectedGenre.name} records
-          </PillLink>
-        </div>
-      )}
+            <PillLink to={focusedDossierPath} size="sm" className="text-[color:var(--cream)]">
+              {selectedGenre.name} records
+            </PillLink>
+          </div>
+        )}
 
-      <GenreAtlas
-        genres={explorer.genres}
-        selectedGenre={selectedGenre}
-        colorMap={colorMap}
-        onFocusGenre={focusGenreFromAtlas}
-      />
+        <GenreAtlas
+          genres={explorer.genres}
+          selectedGenre={selectedGenre}
+          colorMap={colorMap}
+          onFocusGenre={focusGenreFromAtlas}
+        />
 
-      <GenreExplorerPanel
-        explorer={explorer}
-        selectedGenre={selectedGenre}
-        graphGenre={graphGenre}
-        artists={artists}
-        albums={albums}
-        selectedArtist={selectedArtist}
-        selectedAlbum={selectedAlbum}
-        query={query}
-        sort={sort}
-        nodeBudget={nodeBudget}
-        nodeCapacity={nodeCapacity}
-        isAutoNodeBudget={!nodesParam}
-        colorMap={colorMap}
-        onQueryChange={(value) => updateParams({ q: value || null })}
-        onSortChange={(value) => updateParams({ sort: value })}
-        onNodeBudgetChange={(value) => updateParams({ nodes: value == null ? null : String(value) })}
-        onGenreChange={selectGenre}
-        onSelectArtist={selectArtist}
-        onOpenAlbum={openAlbum}
-        onBack={goBack}
-        onForward={goForward}
-        onClearArtistFocus={clearArtistFocus}
-      />
-    </PageContainer>
+        <GenreExplorerPanel
+          explorer={explorer}
+          selectedGenre={selectedGenre}
+          graphGenre={graphGenre}
+          artists={artists}
+          albums={albums}
+          selectedArtist={selectedArtist}
+          selectedAlbum={selectedAlbum}
+          query={query}
+          sort={sort}
+          nodeBudget={nodeBudget}
+          nodeCapacity={nodeCapacity}
+          isAutoNodeBudget={!nodesParam}
+          colorMap={colorMap}
+          onQueryChange={(value) => updateParams({ q: value || null })}
+          onSortChange={(value) => updateParams({ sort: value })}
+          onNodeBudgetChange={(value) => updateParams({ nodes: value == null ? null : String(value) })}
+          onGenreChange={selectGenre}
+          onSelectArtist={selectArtist}
+          onOpenAlbum={openAlbum}
+          onBack={goBack}
+          onForward={goForward}
+          onClearArtistFocus={clearArtistFocus}
+        />
+      </PageContainer>
+    </>
   );
 }
 

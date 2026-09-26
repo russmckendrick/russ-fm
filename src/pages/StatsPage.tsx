@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
-import { RecordTile, SectionHeading, Sleeve } from '@/components/player';
+import { FloodBand, RecordTile, SectionHeading, Sleeve, useRecordsFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
@@ -109,6 +109,8 @@ export function StatsPage() {
 
   // Per-album flood colour, and one representative colour per group.
   const paint = useMemo(() => (stats ? buildPaint(stats, colours) : null), [stats, colours]);
+  // The header band and page ground take the colours of the latest additions.
+  const flood = useRecordsFlood(stats?.recentAdditions.map(a => a.uri_release) ?? []);
 
   if (error) {
     return (
@@ -127,13 +129,14 @@ export function StatsPage() {
   return (
     <div className="bg-[var(--ground)] pb-10 text-[color:var(--cream)]">
       {/* Title + headline counts ------------------------------------- */}
-      <header className={`${WRAP} pt-10 md:pt-16`}>
+      <FloodBand flood={flood}>
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <h1 className="t-disp m-0 text-[56px] md:text-[96px] lg:text-[128px]">Stats</h1>
           {since && <span className="t-mono text-[13px] uppercase text-[color:var(--cream-dim)]">Since {since}</span>}
         </div>
-
-        <dl className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 md:mt-14 lg:grid-cols-4 lg:gap-x-10">
+      </FloodBand>
+      <header className={`${WRAP} pt-10 md:pt-14`}>
+        <dl className="grid grid-cols-2 gap-x-5 gap-y-10 md:mt-14 lg:grid-cols-4 lg:gap-x-10">
           <BigCount label="Records" value={stats.totalAlbums.toLocaleString('en-GB')} colour={paint.headline[0]} />
           <BigCount label="Artists" value={stats.uniqueArtists.toLocaleString('en-GB')} colour={paint.headline[1]} />
           <BigCount label="Genres" value={stats.uniqueGenres.toLocaleString('en-GB')} colour={paint.headline[2]} />
@@ -154,123 +157,6 @@ export function StatsPage() {
         </dl>
       </header>
 
-      {/* Additions per month ----------------------------------------- */}
-      {stats.months.length > 0 && (
-        <Section>
-          <SectionHeading title="Added per month" note={`${stats.months.length} months · one block per record`} />
-          <div className="mt-8">
-            <MonthStackChart months={stats.months} albumColour={paint.album} />
-          </div>
-        </Section>
-      )}
-
-      {/* Growth ------------------------------------------------------ */}
-      {stats.addedYears.length > 1 && (
-        <Section>
-          <SectionHeading title="Growth" note={`${stats.totalAlbums.toLocaleString('en-GB')} records in total`} />
-          <div className="mt-8">
-            <GrowthChart months={stats.months} yearColour={paint.addedYear} />
-          </div>
-        </Section>
-      )}
-
-      {/* Decades + genres -------------------------------------------- */}
-      <Section className="grid gap-14 lg:grid-cols-2 lg:gap-16">
-        <div>
-          <SectionHeading title="Decades" size="sm" link={{ to: '/decades', label: 'All decades' }} />
-          <ColourBars
-            className="mt-8"
-            big
-            items={stats.decadeData.slice(-redesignConfig.stats.decadeBarsMaxDecades).map(d => ({
-              name: d.name,
-              count: d.count,
-              colour: paint.decade[d.name],
-              to: `/decade/${slugify(d.name)}`,
-            }))}
-          />
-        </div>
-        <div>
-          <SectionHeading title="Genres" size="sm" link={{ to: '/genres', label: 'All genres' }} />
-          <ColourBars
-            className="mt-8"
-            total={stats.totalAlbums}
-            items={stats.topGenres.map(g => ({
-              name: g.name,
-              count: g.count,
-              colour: paint.genre[g.name],
-              to: `/genre/${slugify(g.name)}`,
-            }))}
-          />
-        </div>
-      </Section>
-
-      {/* Release years ----------------------------------------------- */}
-      {stats.goldenYear && (
-        <Section className="grid gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
-          <GoldenYear year={stats.goldenYear} colour={paint.releaseYear[stats.goldenYear.name] ?? NEUTRAL_FLOOD} />
-          <div>
-            <SectionHeading title="Release years" size="sm" note={`Top ${stats.topYears.length}`} />
-            <ColourBars
-              className="mt-8"
-              big
-              items={stats.topYears.map(y => ({ name: y.name, count: y.count, colour: paint.releaseYear[y.name] }))}
-            />
-          </div>
-        </Section>
-      )}
-
-      {/* Top artists ------------------------------------------------- */}
-      {stats.topArtists.length > 0 && (
-        <Section>
-          <SectionHeading title="Most collected" link={{ to: '/artists/1', label: 'All artists' }} />
-          <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {stats.topArtists.map(a => (
-              <ArtistCard key={a.name} artist={a} palette={paint.artistPalette(a)} />
-            ))}
-          </div>
-        </Section>
-      )}
-
-      {/* Formats + countries ----------------------------------------- */}
-      <Section className="grid gap-14 lg:grid-cols-2 lg:gap-16">
-        {stats.formatData.length > 0 && (
-          <div>
-            <SectionHeading title="Formats" size="sm" />
-            <FormatBar className="mt-8" total={stats.totalAlbums} items={stats.formatData} colours={paint.format} />
-          </div>
-        )}
-        {stats.topCountries.length > 0 && (
-          <div>
-            <SectionHeading title="Countries" size="sm" link={{ to: '/countries', label: 'All countries' }} />
-            <ColourBars
-              className="mt-8"
-              items={stats.topCountries.map(c => ({
-                name: c.name,
-                count: c.count,
-                colour: paint.country[c.name],
-                to: `/country/${slugify(c.name)}`,
-              }))}
-            />
-          </div>
-        )}
-      </Section>
-
-      {/* Labels ------------------------------------------------------ */}
-      {stats.topLabels.length > 0 && (
-        <Section>
-          <SectionHeading title="Labels" link={{ to: '/labels', label: 'All labels' }} />
-          <ChipCloud
-            className="mt-8"
-            items={stats.topLabels.map(l => ({
-              name: l.name,
-              count: l.count,
-              colour: paint.label[l.name],
-              to: `/label/${slugify(l.name)}`,
-            }))}
-          />
-        </Section>
-      )}
-
       {/* Latest additions -------------------------------------------- */}
       {stats.recentAdditions.length > 0 && (
         <Section>
@@ -289,27 +175,94 @@ export function StatsPage() {
         </Section>
       )}
 
-      {/* Hidden gems ------------------------------------------------- */}
-      {stats.hiddenGems.length > 0 && (
+      {/* Most collected + genres: artwork left ----------------------- */}
+      <Section className="grid gap-14 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-16">
+        {stats.topArtists.length > 0 && (
+          <div>
+            <SectionHeading title="Most collected" size="sm" link={{ to: '/artists/1', label: 'All artists' }} />
+            <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 xl:grid-cols-4">
+              {stats.topArtists.map(a => (
+                <ArtistCard key={a.name} artist={a} palette={paint.artistPalette(a)} />
+              ))}
+            </div>
+          </div>
+        )}
+        <div>
+          <SectionHeading title="Genres" size="sm" link={{ to: '/genres', label: 'All genres' }} />
+          <ColourBars
+            className="mt-8"
+            total={stats.totalAlbums}
+            items={stats.topGenres.map(g => ({
+              name: g.name,
+              count: g.count,
+              colour: paint.genre[g.name],
+              to: `/genre/${slugify(g.name)}`,
+            }))}
+          />
+        </div>
+      </Section>
+
+      {/* Additions per month ----------------------------------------- */}
+      {stats.months.length > 0 && (
         <Section>
-          <SectionHeading title="Hidden gems" note={`Under ${threshold.toLocaleString('en-GB')} Last.fm listeners`} />
-          <TileGrid>
-            {stats.hiddenGems.map(a => (
-              <RecordTile
-                key={a.uri_release}
-                album={a}
-                palette={paint.palette(a)}
-                meta={`${(a.lastfm_listeners ?? 0).toLocaleString('en-GB')} listeners`}
-              />
-            ))}
-          </TileGrid>
+          <SectionHeading title="Added per month" note={`${stats.months.length} months · one block per record`} />
+          <div className="mt-8">
+            <MonthStackChart months={stats.months} albumColour={paint.album} />
+          </div>
+        </Section>
+      )}
+
+      {/* Decades + hidden gems: artwork right ------------------------ */}
+      <Section className="grid gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+        <div>
+          <SectionHeading title="Decades" size="sm" link={{ to: '/decades', label: 'All decades' }} />
+          <ColourBars
+            className="mt-8"
+            big
+            items={stats.decadeData.slice(-redesignConfig.stats.decadeBarsMaxDecades).map(d => ({
+              name: d.name,
+              count: d.count,
+              colour: paint.decade[d.name],
+              to: `/decade/${slugify(d.name)}`,
+            }))}
+          />
+        </div>
+        {stats.hiddenGems.length > 0 && (
+          <div>
+            <SectionHeading title="Hidden gems" size="sm" note={`Under ${threshold.toLocaleString('en-GB')} Last.fm listeners`} />
+            <TileGrid narrow>
+              {stats.hiddenGems.map(a => (
+                <RecordTile
+                  key={a.uri_release}
+                  album={a}
+                  palette={paint.palette(a)}
+                  meta={`${(a.lastfm_listeners ?? 0).toLocaleString('en-GB')} listeners`}
+                />
+              ))}
+            </TileGrid>
+          </div>
+        )}
+      </Section>
+
+      {/* Release years ----------------------------------------------- */}
+      {stats.goldenYear && (
+        <Section className="grid gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
+          <GoldenYear year={stats.goldenYear} colour={paint.releaseYear[stats.goldenYear.name] ?? NEUTRAL_FLOOD} />
+          <div>
+            <SectionHeading title="Release years" size="sm" note={`Top ${stats.topYears.length}`} />
+            <ColourBars
+              className="mt-8"
+              big
+              items={stats.topYears.map(y => ({ name: y.name, count: y.count, colour: paint.releaseYear[y.name] }))}
+            />
+          </div>
         </Section>
       )}
 
       {/* Random picks ------------------------------------------------ */}
       {stats.randomAlbums.length > 0 && (
         <Section>
-          <SectionHeading title="Random picks" link={{ to: '/random', label: 'More' }} />
+          <SectionHeading title="Random picks" link={{ to: '/shuffle', label: 'More' }} />
           <TileGrid>
             {stats.randomAlbums.map(a => (
               <RecordTile key={a.uri_release} album={a} palette={paint.palette(a)} />
@@ -318,6 +271,59 @@ export function StatsPage() {
         </Section>
       )}
 
+      {/* Growth + formats -------------------------------------------- */}
+      {(stats.addedYears.length > 1 || stats.formatData.length > 0) && (
+        <Section className="grid gap-14 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] lg:gap-16">
+          {stats.addedYears.length > 1 && (
+            <div>
+              <SectionHeading title="Growth" size="sm" note={`${stats.totalAlbums.toLocaleString('en-GB')} records in total`} />
+              <div className="mt-8">
+                <GrowthChart months={stats.months} yearColour={paint.addedYear} />
+              </div>
+            </div>
+          )}
+          {stats.formatData.length > 0 && (
+            <div>
+              <SectionHeading title="Formats" size="sm" />
+              <FormatBar className="mt-8" total={stats.totalAlbums} items={stats.formatData} colours={paint.format} />
+            </div>
+          )}
+        </Section>
+      )}
+
+      {/* Labels + countries ------------------------------------------ */}
+      <Section className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+        {stats.topLabels.length > 0 && (
+          <div>
+            <SectionHeading title="Labels" size="sm" link={{ to: '/labels', label: 'All labels' }} />
+            <ChipCloud
+              className="mt-8"
+              items={stats.topLabels.map(l => ({
+                name: l.name,
+                count: l.count,
+                colour: paint.label[l.name],
+                to: `/label/${slugify(l.name)}`,
+              }))}
+            />
+          </div>
+        )}
+        {stats.topCountries.length > 0 && (
+          <div>
+            <SectionHeading title="Countries" size="sm" link={{ to: '/countries', label: 'All countries' }} />
+            <ColourBars
+              className="mt-8"
+              items={stats.topCountries.map(c => ({
+                name: c.name,
+                count: c.count,
+                colour: paint.country[c.name],
+                to: `/country/${slugify(c.name)}`,
+              }))}
+            />
+          </div>
+        )}
+      </Section>
+
+      {/* Random artists ---------------------------------------------- */}
       {stats.randomArtists.length > 0 && (
         <Section>
           <SectionHeading title="Random artists" />
@@ -344,8 +350,10 @@ function Section({ children, className }: { children: ReactNode; className?: str
   );
 }
 
-function TileGrid({ children }: { children: ReactNode }) {
-  return <div className="mt-8 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">{children}</div>;
+/** Record tiles: six across at full width, or up to four when sharing a row (`narrow`). */
+function TileGrid({ children, narrow = false }: { children: ReactNode; narrow?: boolean }) {
+  const cols = narrow ? 'sm:grid-cols-3 xl:grid-cols-4' : 'sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6';
+  return <div className={`mt-8 grid grid-cols-2 gap-x-5 gap-y-8 ${cols}`}>{children}</div>;
 }
 
 function BigCount({ label, value, colour }: { label: string; value: string; colour: string }) {
@@ -471,7 +479,7 @@ function FormatBar({ items, total, colours, className }: { items: RankedStat[]; 
           />
         ))}
       </div>
-      <ul className="m-0 mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2">
+      <ul className="m-0 mt-6 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 lg:grid-cols-1">
         {items.map(f => (
           <li key={f.name} className="flex min-w-0 items-center gap-3">
             <span className="h-4 w-4 shrink-0 rounded-full" style={{ background: colours[f.name] ?? NEUTRAL_FLOOD }} aria-hidden />

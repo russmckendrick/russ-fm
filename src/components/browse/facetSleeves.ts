@@ -1,5 +1,5 @@
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
-import type { FacetConfig } from '@/lib/browseFacets';
+import { FACETS, type FacetConfig, type FacetKey } from '@/lib/browseFacets';
 import { floodFor, type Flood } from '@/lib/sleeveColour';
 import type { Album } from '@/types/album';
 
@@ -82,6 +82,45 @@ export function groupByFacet(facet: FacetConfig, albums: Album[]): Map<string, A
     }
   }
   return groups;
+}
+
+export interface FacetSummary<T extends Album = Album> {
+  /** How many distinct values the facet has (labels, decades, …). */
+  distinct: number;
+  /** The value with the most records, as displayed. */
+  topName: string;
+  topCount: number;
+  /** Every record under the top value, in the order given. */
+  topAlbums: T[];
+  /** Sleeves for a fan from the top value, most vivid first. */
+  fan: T[];
+  flood: Flood;
+}
+
+/**
+ * Summarise one facet for a browse card: its size, its biggest value and a fan
+ * of sleeves from that value. `albums` should be sorted newest first.
+ */
+export function summariseFacet(key: FacetKey, albums: Album[], map: ColourMap, fanSize = 5): FacetSummary {
+  const facet = FACETS[key];
+  const groups = groupByFacet(facet, albums);
+  let topName = '';
+  let top: Album[] = [];
+  for (const [name, list] of groups) {
+    if (list.length > top.length) {
+      topName = name;
+      top = list;
+    }
+  }
+  const fan = pickSleeves(top, map, fanSize);
+  return {
+    distinct: groups.size,
+    topName: facet.displayName ? facet.displayName(topName) : topName,
+    topCount: top.length,
+    topAlbums: top,
+    fan,
+    flood: floodForUri(fan[0]?.uri_release, map),
+  };
 }
 
 /**

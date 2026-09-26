@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Search, X } from 'lucide-react';
 import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
 import { PageContainer } from '@/components/layout';
+import { FloodBand, useRecordsFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { cn } from '@/lib/utils';
@@ -342,6 +343,8 @@ export function ArtistsPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const paginatedArtists = filteredArtists.slice(startIndex, endIndex);
+  // The header band and page ground take the colours of the first artists' latest records.
+  const flood = useRecordsFlood(paginatedArtists.map(a => a.latestRelease));
 
   // Generate page numbers for pagination
   const getPageNumbers = () => {
@@ -393,191 +396,195 @@ export function ArtistsPage() {
   };
 
   return (
-    <PageContainer className="text-[color:var(--cream)]">
-      {/* Title + count ------------------------------------------------- */}
-      <header className="mb-8 flex flex-wrap items-baseline gap-x-5 gap-y-2 md:mb-10">
-        <h1 className="t-disp m-0 text-[44px] md:text-[72px] lg:text-[96px]">Artists</h1>
-        {countLabel && (
-          <span className="t-disp text-[28px] text-[color:var(--cream-dim)] md:text-[44px] lg:text-[56px]" aria-label={`${countLabel} artists`}>
-            {countLabel}
-          </span>
-        )}
-      </header>
+    <>
+      <FloodBand flood={flood}>
+        {/* Title + count ------------------------------------------------- */}
+        <header className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
+          <h1 className="t-disp m-0 text-[44px] md:text-[72px] lg:text-[96px]">Artists</h1>
+          {countLabel && (
+            <span className="t-disp text-[28px] text-[color:var(--cream-dim)] md:text-[44px] lg:text-[56px]" aria-label={`${countLabel} artists`}>
+              {countLabel}
+            </span>
+          )}
+        </header>
+      </FloodBand>
 
-      {/* Controls ------------------------------------------------------- */}
-      <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-center">
-        <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border-2 border-[color:var(--cream-rule)] bg-[var(--ground-2)] px-5 transition-colors focus-within:border-[color:var(--cream)] lg:w-[360px]">
-          <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
-          <input
-            type="search"
-            placeholder="Search artists"
-            aria-label="Search artists"
-            value={searchTerm}
-            onChange={(e) => {
-              setSearchTerm(e.target.value);
-              updateURLParams({ search: e.target.value }, true);
-            }}
-            className="h-full w-full min-w-0 bg-transparent text-[15px] text-[color:var(--cream)] placeholder:text-[color:var(--cream-dim)] focus:outline-none [&::-webkit-search-cancel-button]:hidden"
-          />
-          {searchTerm && (
-            <button
-              type="button"
-              onClick={() => {
-                setSearchTerm('');
-                updateURLParams({ search: '' }, true);
+      <PageContainer className="text-[color:var(--cream)]">
+        {/* Controls ------------------------------------------------------- */}
+        <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-center">
+          <label className="flex h-12 min-w-0 items-center gap-3 rounded-full border-2 border-[color:var(--cream-rule)] bg-[var(--ground-2)] px-5 transition-colors focus-within:border-[color:var(--cream)] lg:w-[360px]">
+            <Search className="h-[18px] w-[18px] shrink-0 text-[color:var(--cream-dim)]" aria-hidden />
+            <input
+              type="search"
+              placeholder="Search artists"
+              aria-label="Search artists"
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                updateURLParams({ search: e.target.value }, true);
               }}
-              aria-label="Clear search"
-              className="-mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[color:var(--cream-dim)] transition-colors hover:text-[color:var(--cream)]"
-            >
-              <X className="h-4 w-4" aria-hidden />
-            </button>
-          )}
-        </label>
-
-        <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Sort artists">
-          {SORT_OPTIONS.map((option) => {
-            const active = sortBy === option.value;
-            return (
-              <button
-                key={option.value}
-                type="button"
-                aria-pressed={active}
-                onClick={() => {
-                  setSortBy(option.value);
-                  updateURLParams({ sort: option.value }, true);
-                }}
-                className={cn(
-                  'pill px-4 text-[14px]',
-                  active
-                    ? 'pill-solid bg-[var(--cream)] text-[color:var(--ground)]'
-                    : 'text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]',
-                )}
-              >
-                {option.label}
-              </button>
-            );
-          })}
-          {hasFilters && (
-            <button
-              type="button"
-              onClick={clearFilters}
-              className="pill px-4 text-[14px] border-[color:var(--cream-rule)] text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]"
-            >
-              <X className="h-4 w-4" aria-hidden />
-              Clear
-            </button>
-          )}
-        </div>
-      </div>
-
-      {/* A–Z ------------------------------------------------------------- */}
-      <nav aria-label="Filter by first letter" className="-mx-5 mb-10 px-5 md:mx-0 md:px-0">
-        <div className="shelf-scroll gap-1.5 pb-1 md:flex-wrap">
-          <LetterPill
-            active={selectedLetter === 'all'}
-            available
-            wide
-            onClick={() => {
-              setSelectedLetter('all');
-              updateURLParams({ letter: 'all' }, true);
-            }}
-          >
-            All
-          </LetterPill>
-          {getAllLetters().map((letter) => {
-            const available = availableLetters.includes(letter);
-            return (
-              <LetterPill
-                key={letter}
-                active={selectedLetter === letter}
-                available={available}
-                onClick={() => {
-                  if (!available) return;
-                  setSelectedLetter(letter);
-                  updateURLParams({ letter }, true);
-                }}
-              >
-                {letter}
-              </LetterPill>
-            );
-          })}
-        </div>
-      </nav>
-
-      {/* Grid ------------------------------------------------------------ */}
-      {pending ? (
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6" aria-live="polite" aria-busy>
-          {Array.from({ length: 12 }).map((_, i) => (
-            <div key={i} className="flex flex-col items-center p-2">
-              <div className="aspect-square w-full animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
-              <div className="mt-5 h-4 w-2/3 animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
-            </div>
-          ))}
-          <span className="sr-only">Loading artists</span>
-        </div>
-      ) : filteredArtists.length === 0 ? (
-        <div className="flex flex-col items-start gap-4 rounded-2xl bg-[var(--ground-2)] px-6 py-10 md:px-10">
-          <p className="t-disp m-0 text-[26px] md:text-[32px]">No artists found</p>
-          {hasFilters && (
-            <button type="button" onClick={clearFilters} className="pill px-4 text-[14px] text-[color:var(--cream)]">
-              Clear filters
-            </button>
-          )}
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
-          {paginatedArtists.map((artist, i) => (
-            <ArtistCard
-              key={artist.uri}
-              artist={artist}
-              index={startIndex + i + 1}
-              palette={colorMap?.[artist.latestRelease] ?? null}
+              className="h-full w-full min-w-0 bg-transparent text-[15px] text-[color:var(--cream)] placeholder:text-[color:var(--cream-dim)] focus:outline-none [&::-webkit-search-cancel-button]:hidden"
             />
-          ))}
-        </div>
-      )}
-
-      {/* Pagination ------------------------------------------------------ */}
-      {!pending && totalPages > 1 && (
-        <nav aria-label="Pagination" className="mt-14 flex flex-wrap items-center justify-center gap-2 border-t border-[color:var(--cream-rule)] pt-8">
-          <PagePill
-            to={buildPageUrl(Math.max(1, currentPage - 1))}
-            disabled={currentPage === 1}
-            ariaLabel="Previous page"
-          >
-            <ArrowLeft className="h-4 w-4" aria-hidden />
-            <span className="hidden sm:inline">Prev</span>
-          </PagePill>
-
-          {getPageNumbers().map((pageNum, index) =>
-            pageNum === '...' ? (
-              <span key={`gap-${index}`} className="t-mono px-1 text-[13px] text-[color:var(--cream-dim)]" aria-hidden>
-                …
-              </span>
-            ) : (
-              <PagePill
-                key={pageNum}
-                to={buildPageUrl(pageNum as number)}
-                active={currentPage === pageNum}
-                ariaLabel={`Page ${pageNum}`}
-                round
+            {searchTerm && (
+              <button
+                type="button"
+                onClick={() => {
+                  setSearchTerm('');
+                  updateURLParams({ search: '' }, true);
+                }}
+                aria-label="Clear search"
+                className="-mr-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[color:var(--cream-dim)] transition-colors hover:text-[color:var(--cream)]"
               >
-                {pageNum}
-              </PagePill>
-            ),
-          )}
+                <X className="h-4 w-4" aria-hidden />
+              </button>
+            )}
+          </label>
 
-          <PagePill
-            to={buildPageUrl(Math.min(totalPages, currentPage + 1))}
-            disabled={currentPage === totalPages}
-            ariaLabel="Next page"
-          >
-            <span className="hidden sm:inline">Next</span>
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </PagePill>
+          <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Sort artists">
+            {SORT_OPTIONS.map((option) => {
+              const active = sortBy === option.value;
+              return (
+                <button
+                  key={option.value}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => {
+                    setSortBy(option.value);
+                    updateURLParams({ sort: option.value }, true);
+                  }}
+                  className={cn(
+                    'pill px-4 text-[14px]',
+                    active
+                      ? 'pill-solid bg-[var(--cream)] text-[color:var(--ground)]'
+                      : 'text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]',
+                  )}
+                >
+                  {option.label}
+                </button>
+              );
+            })}
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="pill px-4 text-[14px] border-[color:var(--cream-rule)] text-[color:var(--cream-dim)] hover:text-[color:var(--cream)]"
+              >
+                <X className="h-4 w-4" aria-hidden />
+                Clear
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* A–Z ------------------------------------------------------------- */}
+        <nav aria-label="Filter by first letter" className="-mx-5 mb-10 px-5 md:mx-0 md:px-0">
+          <div className="shelf-scroll gap-1.5 pb-1 md:flex-wrap">
+            <LetterPill
+              active={selectedLetter === 'all'}
+              available
+              wide
+              onClick={() => {
+                setSelectedLetter('all');
+                updateURLParams({ letter: 'all' }, true);
+              }}
+            >
+              All
+            </LetterPill>
+            {getAllLetters().map((letter) => {
+              const available = availableLetters.includes(letter);
+              return (
+                <LetterPill
+                  key={letter}
+                  active={selectedLetter === letter}
+                  available={available}
+                  onClick={() => {
+                    if (!available) return;
+                    setSelectedLetter(letter);
+                    updateURLParams({ letter }, true);
+                  }}
+                >
+                  {letter}
+                </LetterPill>
+              );
+            })}
+          </div>
         </nav>
-      )}
-    </PageContainer>
+
+        {/* Grid ------------------------------------------------------------ */}
+        {pending ? (
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6" aria-live="polite" aria-busy>
+            {Array.from({ length: 12 }).map((_, i) => (
+              <div key={i} className="flex flex-col items-center p-2">
+                <div className="aspect-square w-full animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
+                <div className="mt-5 h-4 w-2/3 animate-pulse rounded-full bg-[var(--ground-3)] motion-reduce:animate-none" />
+              </div>
+            ))}
+            <span className="sr-only">Loading artists</span>
+          </div>
+        ) : filteredArtists.length === 0 ? (
+          <div className="flex flex-col items-start gap-4 rounded-2xl bg-[var(--ground-2)] px-6 py-10 md:px-10">
+            <p className="t-disp m-0 text-[26px] md:text-[32px]">No artists found</p>
+            {hasFilters && (
+              <button type="button" onClick={clearFilters} className="pill px-4 text-[14px] text-[color:var(--cream)]">
+                Clear filters
+              </button>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
+            {paginatedArtists.map((artist, i) => (
+              <ArtistCard
+                key={artist.uri}
+                artist={artist}
+                index={startIndex + i + 1}
+                palette={colorMap?.[artist.latestRelease] ?? null}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Pagination ------------------------------------------------------ */}
+        {!pending && totalPages > 1 && (
+          <nav aria-label="Pagination" className="mt-14 flex flex-wrap items-center justify-center gap-2 border-t border-[color:var(--cream-rule)] pt-8">
+            <PagePill
+              to={buildPageUrl(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              ariaLabel="Previous page"
+            >
+              <ArrowLeft className="h-4 w-4" aria-hidden />
+              <span className="hidden sm:inline">Prev</span>
+            </PagePill>
+
+            {getPageNumbers().map((pageNum, index) =>
+              pageNum === '...' ? (
+                <span key={`gap-${index}`} className="t-mono px-1 text-[13px] text-[color:var(--cream-dim)]" aria-hidden>
+                  …
+                </span>
+              ) : (
+                <PagePill
+                  key={pageNum}
+                  to={buildPageUrl(pageNum as number)}
+                  active={currentPage === pageNum}
+                  ariaLabel={`Page ${pageNum}`}
+                  round
+                >
+                  {pageNum}
+                </PagePill>
+              ),
+            )}
+
+            <PagePill
+              to={buildPageUrl(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              ariaLabel="Next page"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </PagePill>
+          </nav>
+        )}
+      </PageContainer>
+    </>
   );
 }
 

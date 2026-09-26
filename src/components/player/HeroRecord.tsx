@@ -57,7 +57,7 @@ export function HeroRecord({
       />
       {sticker && (
         <>
-          <Sticker {...sticker} size="lg" className="-right-8 top-10 hidden md:flex" />
+          <Sticker {...sticker} size="lg" className="-right-12 -top-6 hidden md:flex" />
           <Sticker {...sticker} size="sm" className="-right-2 -top-5 md:hidden" />
         </>
       )}

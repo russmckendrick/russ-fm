@@ -114,7 +114,11 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   const floods: Flood[] = featured.map(a => floodFor(colours?.[a.uri_release]));
   const current = featured[index];
   const flood = floods[index] ?? floodFor(null);
-  usePageFlood(current ? flood.flood : null, current ? flood.ink : null);
+  usePageFlood(
+    current ? flood.flood : null,
+    current ? flood.ink : null,
+    current ? { cover: getAlbumImageFromData(current.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+  );
 
   if (!current) {
     return <div className="h-[70vh] bg-[color:var(--ground)]" aria-busy="true" />;

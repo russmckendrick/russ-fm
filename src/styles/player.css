@@ -9,9 +9,11 @@
    ========================================================================= */
 
 :root {
+  /* --ground is set per page by FloodProvider (the lead sleeve's dark
+     swatch); the raised surfaces are lifted from it so panels keep its tint. */
   --ground: #0e0d0c;
-  --ground-2: #171512;
-  --ground-3: #211d19;
+  --ground-2: color-mix(in oklab, var(--ground), #fbf7ef 5%);
+  --ground-3: color-mix(in oklab, var(--ground), #fbf7ef 10%);
   --cream: #fbf7ef;
   --cream-dim: #a9a39a;
   --cream-rule: rgba(251, 247, 239, 0.14);
@@ -22,6 +24,11 @@
   --flood-ink: var(--cream);
 
   --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+  background-color: var(--ground);
+  transition: background-color 0.8s var(--ease-out);
 }
 
 /* --- Type ----------------------------------------------------------------- */
@@ -162,6 +169,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.35);
 }
 
@@ -174,6 +182,101 @@
   top: 45.5%;
   border-radius: 50%;
   background: #0b0b0b;
+  z-index: 1;
+}
+
+/* A sleeve printed on the centre label (the logo and the footer record).
+   Zoomed into the artwork so framed sleeves (a border round the picture)
+   fill the circle instead of showing as a square in the middle. */
+.vinyl-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(1.45);
+}
+
+/* A new sleeve fades in over the previous one. */
+.vinyl-cover-in {
+  animation: label-in 1.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes label-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* A record that has to read on the dark ground (the logo, the footer):
+   a lighter lip at the edge, a hairline rim, stronger fixed highlights that
+   stay put while the disc turns, and visible grooves. */
+.vinyl-lit {
+  background: radial-gradient(
+    circle at 50% 50%,
+    #121212 0 31%,
+    #0c0c0c 32% 92.5%,
+    #2b2926 95%,
+    #171615 97.5%,
+    #0c0c0c 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(251, 247, 239, 0.2),
+    0 10px 24px -10px rgba(0, 0, 0, 0.8);
+}
+
+.vinyl-lit::after {
+  background: conic-gradient(
+    from 30deg,
+    transparent 0 5%,
+    rgba(255, 255, 255, 0.26) 11%,
+    transparent 18% 50%,
+    rgba(255, 255, 255, 0.18) 61%,
+    transparent 68%
+  );
+}
+
+.vinyl-lit .vinyl-grooves {
+  background: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.075) 0 1px,
+    transparent 1px 2.5px
+  );
+}
+
+/* --- Spinning logo -------------------------------------------------------- */
+
+.spin-mark .vinyl {
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.55), inset 0 0 0 1px #000;
+}
+
+/* A bigger label than a real record so the sleeve reads at logo size. */
+.spin-mark .vinyl-label {
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+  transition: background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Plain labels get a printed mark so the spin is visible. */
+.spin-mark-plain .vinyl-label::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  top: 9%;
+  width: 10%;
+  height: 28%;
+  border-radius: 2px;
+  background: var(--mark-tick, var(--ground));
+}
+
+/* The footer's big record turns slower than the logo. */
+.spin-lazy .vinyl-grooves {
+  animation: spin-33 5s linear infinite;
 }
 
 .spin-33 {
@@ -415,9 +518,125 @@
   scroll-snap-align: start;
 }
 
+/* --- Split-flap board (Shuffle page) --------------------------------------
+   Tiles size themselves from the board's width (container units), so the
+   same markup works for the 20-column desktop board and the 12-column phone
+   board. Flat halves and a split line, no gradients. */
+
+.flap-wrap {
+  container-type: inline-size;
+  --flap-gap: clamp(3px, 0.5cqw, 5px);
+}
+
+.flap-board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flap-gap);
+}
+
+.flap-row {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  gap: var(--flap-gap);
+}
+
+.flap-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--flap-gap);
+  border-radius: 6px;
+}
+
+.flap-link:hover .flap > span {
+  text-decoration: underline;
+  text-underline-offset: 0.08em;
+  text-decoration-thickness: 0.06em;
+}
+
+.flap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 19 / 29;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #161412;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.flap::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 50% 0;
+  background: #1d1b18;
+}
+
+.flap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  margin-top: -0.5px;
+  background: #050504;
+}
+
+.flap > span {
+  position: relative;
+  z-index: 1;
+  color: var(--cream);
+  font-family: var(--font-display);
+  font-size: calc(100cqw / var(--cols) * 1.08);
+  font-stretch: 80%;
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.flap-moving::before {
+  background: #24211d;
+}
+
+.flap-moving > span {
+  transform: scaleY(0.82);
+}
+
+/* The next record's colour falls down the page like a flap. */
+.flap-drop {
+  transform-origin: 50% 0;
+  animation: flap-drop 0.45s cubic-bezier(0.55, 0, 0.35, 1) both;
+}
+
+@keyframes flap-drop {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* The cover turns edge-on to show the record behind it, then back. */
+.flap-card {
+  z-index: 2;
+  transition: transform 0.32s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .flap-drop {
+    animation: none;
+  }
+
+  .flap-card {
+    transition: none;
+  }
+
   .spin-33,
-  .spin-45 {
+  .spin-45,
+  .spin-lazy .vinyl-grooves,
+  .vinyl-cover-in {
     animation: none;
   }
 

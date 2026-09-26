@@ -57,7 +57,7 @@ function ArtistRouteHandler() {
 function App() {
   return (
     <FloodProvider>
-    <div className="min-h-screen bg-background font-grot">
+    <div className="min-h-screen bg-[color:var(--ground)] font-grot transition-[background-color] duration-700">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:border focus:border-ink focus:bg-paper focus:px-4 focus:py-2 focus:font-mono focus:text-[11px] focus:uppercase focus:tracking-[0.08em] focus:text-ink"
@@ -87,6 +87,7 @@ function App() {
           <Route path="/countries" element={<FacetListPage facetKey="country" />} />
           <Route path="/country/:slug" element={<FacetDetailPage facetKey="country" />} />
           <Route path="/genre/:slug" element={<FacetDetailPage facetKey="genre" />} />
+          <Route path="/shuffle" element={<RandomPage />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />

@@ -6,7 +6,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { getCleanGenres, getCleanGenresFromArray } from '@/lib/genreUtils';
 import { MusicPlayerSection } from '@/components/MusicPlayerSection';
-import { VideoSection } from '@/components/VideoSection';
+import { youTubeVideos } from '@/lib/youtube';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 import { getGenreExplorer, getRelatedAlbumsForAlbum } from '@/lib/genreExplorer';
@@ -297,7 +297,11 @@ export function AlbumDetailPage() {
   const [scrobbling, setScrobbling] = useState(false);
   const [boxSelected, setBoxSelected] = useState(0);
   const flood = floodFor(palette);
-  usePageFlood(album ? flood.flood : null, album ? flood.ink : null);
+  usePageFlood(
+    album ? flood.flood : null,
+    album ? flood.ink : null,
+    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+  );
 
   useEffect(() => {
     setBoxSelected(0);
@@ -762,7 +766,8 @@ export function AlbumDetailPage() {
     detailedAlbum &&
     (detailedAlbum.services?.spotify?.id ||
       detailedAlbum.services?.spotify?.url ||
-      detailedAlbum.services?.apple_music?.url)
+      detailedAlbum.services?.apple_music?.url ||
+      youTubeVideos(detailedAlbum.videos).length > 0)
   );
   const artistsWithBio = (detailedAlbum?.artists ?? []).filter(
     a => a.biography && a.role !== 'member' && a.name.toLowerCase() !== 'various',
@@ -979,16 +984,6 @@ export function AlbumDetailPage() {
                 <div className="rounded-[18px] bg-[rgba(0,0,0,.28)] p-4 md:p-6">
                   <MusicPlayerSection album={detailedAlbum} />
                 </div>
-              </section>
-            )}
-
-            {detailedAlbum?.videos && detailedAlbum.videos.length > 0 && (
-              <section className="flex flex-col gap-6">
-                <div className="flex flex-wrap items-baseline gap-x-5 gap-y-1">
-                  <h2 className="t-disp m-0 text-[34px] md:text-[48px]">Videos</h2>
-                  <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">{detailedAlbum.videos.length} on YouTube</span>
-                </div>
-                <VideoSection videos={detailedAlbum.videos} />
               </section>
             )}
 

@@ -13,6 +13,17 @@ import { CREAM, GROUND } from '@/lib/sleeveColour';
 export interface FloodState {
   flood: string;
   ink: string;
+  /** Sleeve image for the record the page is showing; the logo puts it on its label. */
+  cover?: string | null;
+  /** Dark sleeve swatch the rest of the page sits on (`--ground`). */
+  ground?: string | null;
+}
+
+export interface PageFloodExtras {
+  /** An image URL the page already shows, for the logo's label. */
+  cover?: string | null;
+  /** The page's ground, usually the lead sleeve's `ground` swatch. */
+  ground?: string | null;
 }
 
 export type SetFlood = (next: FloodState | null) => void;
@@ -26,11 +37,19 @@ export function useFloodValue(): FloodState {
   return useContext(FloodValueContext);
 }
 
-/** Paint the header in this colour while the calling page is mounted. */
-export function usePageFlood(flood: string | null | undefined, ink: string | null | undefined) {
+/**
+ * Paint the header in this colour while the calling page is mounted. Pass
+ * `cover` (an image URL the page already shows) to put that sleeve on the
+ * spinning logo's label, and `ground` to tint the whole page's background.
+ */
+export function usePageFlood(
+  flood: string | null | undefined,
+  ink: string | null | undefined,
+  { cover = null, ground = null }: PageFloodExtras = {},
+) {
   const setFlood = useContext(FloodSetterContext);
   useEffect(() => {
-    setFlood(flood && ink ? { flood, ink } : null);
-  }, [flood, ink, setFlood]);
+    setFlood(flood && ink ? { flood, ink, cover, ground } : null);
+  }, [flood, ink, cover, ground, setFlood]);
   useEffect(() => () => setFlood(null), [setFlood]);
 }

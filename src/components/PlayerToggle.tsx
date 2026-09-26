@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 export interface PlayerToggleProps {
   isVisible: boolean;
   onToggle: (visible: boolean) => void;
-  availableServices: ('spotify' | 'apple_music')[];
+  availableServices: ('spotify' | 'apple_music' | 'youtube')[];
   className?: string;
   compact?: boolean;
 }
@@ -26,18 +26,15 @@ export const PlayerToggle = memo(function PlayerToggle({
 }: PlayerToggleProps) {
   const hasSpotify = availableServices.includes('spotify');
   const hasAppleMusic = availableServices.includes('apple_music');
-  const hasAnyService = hasSpotify || hasAppleMusic;
+  const hasYouTube = availableServices.includes('youtube');
+  const hasAnyService = hasSpotify || hasAppleMusic || hasYouTube;
 
   if (!hasAnyService) {
     return null;
   }
 
-  const serviceText = (() => {
-    if (hasSpotify && hasAppleMusic) return 'Spotify & Apple Music';
-    if (hasSpotify) return 'Spotify';
-    if (hasAppleMusic) return 'Apple Music';
-    return '';
-  })();
+  const names = [hasAppleMusic && 'Apple Music', hasSpotify && 'Spotify', hasYouTube && 'YouTube'].filter(Boolean) as string[];
+  const serviceText = names.length > 1 ? `${names.slice(0, -1).join(', ')} & ${names[names.length - 1]}` : names[0] ?? '';
 
   const ariaLabel = isVisible
     ? `Hide ${serviceText} player${availableServices.length > 1 ? 's' : ''}`
