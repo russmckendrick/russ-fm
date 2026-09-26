@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark" style="color-scheme: dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,22 +46,6 @@
 
     <title>Russ.fm - Personal Record Collection</title>
     <!-- META:END -->
-    <script>
-      (function() {
-        const storageKey = "vite-ui-theme";
-        const defaultTheme = "system";
-        let theme = localStorage.getItem(storageKey) || defaultTheme;
-
-        if (theme === "system") {
-          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-          document.documentElement.classList.add(systemTheme);
-        } else {
-          document.documentElement.classList.add(theme);
-        }
-      })();
-    </script>
   </head>
   <body>
     <div id="root"></div>

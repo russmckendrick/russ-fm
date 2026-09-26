@@ -219,11 +219,6 @@ function getDefaultPalette() {
   };
 }
 
-function sanitizeSlugForCSS(slug) {
-  // Replace invalid CSS characters with dashes and ensure it starts with a letter
-  return slug.replace(/[^a-zA-Z0-9-]/g, '-').replace(/^[^a-zA-Z]/, 'a');
-}
-
 async function generateAlbumColors() {
   console.log('🎨 Generating album color palettes...');
 
@@ -233,7 +228,6 @@ async function generateAlbumColors() {
 
   try {
     const collectionData = JSON.parse(await fs.readFile(collectionPath, 'utf8'));
-    const cssRules = [];
     const colorMap = {};
 
     let processed = 0;
@@ -253,24 +247,9 @@ async function generateAlbumColors() {
     // We will overwrite if we re-process, but we populate first to allow skipping
     Object.assign(colorMap, existingColors);
 
-    // Add existing colors to CSS rules to preserve them even if we skip
-    // Actually, we'll just regenerate the CSS at the end from the full map
-
     for (const album of collectionData) {
       // Check if we already have colors for this album
       if (existingColors[album.uri_release]) {
-        // We still need to generate the CSS rule for this cached item
-        const palette = existingColors[album.uri_release];
-        const slug = album.uri_release.replace('/album/', '').replace('/', '');
-        const cssSlug = sanitizeSlugForCSS(slug);
-
-        cssRules.push(`
-.album-${cssSlug} {
-  --album-bg: ${palette.background};
-  --album-fg: ${palette.foreground};
-  --album-accent: ${palette.accent};
-  --album-muted: ${palette.muted};
-}`);
         // Already in colorMap via Object.assign
         continue;
       }
@@ -282,16 +261,6 @@ async function generateAlbumColors() {
       try {
         await fs.access(imagePath);
         const palette = await extractColorsFromImage(imagePath);
-        const cssSlug = sanitizeSlugForCSS(slug);
-
-        // Generate CSS custom properties
-        cssRules.push(`
-.album-${cssSlug} {
-  --album-bg: ${palette.background};
-  --album-fg: ${palette.foreground};
-  --album-accent: ${palette.accent};
-  --album-muted: ${palette.muted};
-}`);
 
         // Store in color map for JavaScript access
         colorMap[album.uri_release] = palette;
@@ -303,34 +272,16 @@ async function generateAlbumColors() {
       } catch (error) {
         // Image file doesn't exist, use default palette
         const palette = getDefaultPalette();
-        const cssSlug = sanitizeSlugForCSS(slug);
-
-        cssRules.push(`
-.album-${cssSlug} {
-  --album-bg: ${palette.background};
-  --album-fg: ${palette.foreground};
-  --album-accent: ${palette.accent};
-  --album-muted: ${palette.muted};
-}`);
 
         colorMap[album.uri_release] = palette;
       }
     }
 
-    // Write CSS file
-    // No timestamp: output must be deterministic so re-running the script
-    // with no new albums leaves the committed files untouched.
-    const cssContent = `/* Auto-generated album color palettes */
-${cssRules.join('\n')}`;
-
-    const cssPath = path.join(publicDir, 'album-colors.css');
-    await fs.writeFile(cssPath, cssContent);
-
-    // Write JSON color map for JavaScript access
+    // Write the JSON colour map. Deterministic output, so re-running the
+    // script with no new albums leaves the committed file untouched.
     await fs.writeFile(jsonPath, JSON.stringify(colorMap, null, 2));
 
     console.log(`✅ Generated colors for ${processed} albums`);
-    console.log(`📝 CSS file: ${cssPath}`);
     console.log(`📋 JSON file: ${jsonPath}`);
 
   } catch (error) {

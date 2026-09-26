@@ -8,7 +8,6 @@
  */
 
 export type Density = 'sparse' | 'medium' | 'dense';
-export type ThemeDefault = 'light' | 'dark' | 'system';
 export type HeroVariant = 'split' | 'stacked';
 export type ThemeMode = 'paper' | 'stage' | 'mixed';
 export type MotionLevel = 'reduced' | 'measured' | 'expressive';
@@ -123,11 +122,6 @@ export const redesignConfig = {
   /** Mono-case catalogue labels (CAT. A01 · INDUSTRIAL RECORDS · IR0008). */
   monoLabels: {
     default: true,
-  },
-
-  /** Default theme. Existing ThemeProvider still owns light/dark/system. */
-  theme: {
-    default: 'system' as ThemeDefault,
   },
 } as const;
 

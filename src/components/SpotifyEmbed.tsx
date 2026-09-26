@@ -8,7 +8,6 @@ import {
   buildSpotifyEmbedUrl, 
   MusicServiceError 
 } from '@/lib/musicServiceUtils';
-import { useTheme } from '@/hooks/useTheme';
 
 export interface SpotifyEmbedProps {
   albumId?: string;
@@ -52,7 +51,6 @@ export const SpotifyEmbed = memo(function SpotifyEmbed({
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
   const mountedRef = useRef(true);
-  const theme = useTheme();
 
   // Extract album ID from URL or use provided ID
   const spotifyAlbumId = (() => {
@@ -165,7 +163,8 @@ export const SpotifyEmbed = memo(function SpotifyEmbed({
   }
 
   const embedUrl = buildSpotifyEmbedUrl(spotifyAlbumId, {
-    theme: theme,
+    // The site is dark-ground only, so the players always use their dark theme.
+    theme: 'dark',
     height
   });
 
