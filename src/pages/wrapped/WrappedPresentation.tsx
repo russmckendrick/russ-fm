@@ -42,12 +42,12 @@ const CHAPTERS = [
   { id: 'years', label: 'Years' },
 ];
 
-const GROUND_FLOOD: Flood = { flood: GROUND, ink: CREAM, sub: subInk(CREAM), ground: GROUND };
+const GROUND_FLOOD: Flood = { flood: GROUND, ink: CREAM, sub: subInk(CREAM), ground: GROUND, glow: CREAM, secondary: null };
 
 /** Solid colour flood as a Flood, with readable ink. */
 function solid(colour: string): Flood {
   const ink = inkOn(colour);
-  return { flood: colour, ink, sub: subInk(ink), ground: GROUND };
+  return { flood: colour, ink, sub: subInk(ink), ground: GROUND, glow: colour, secondary: null };
 }
 
 /**

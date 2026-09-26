@@ -1,10 +1,7 @@
-// Color palette for dynamic theming
-export interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
-}
+import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
+
+// Sleeve palette copied from album-colors.json when the Wrapped data is built
+export type ColorPalette = AlbumColorPalette;
 
 export interface WrappedRelease {
   release_name: string;

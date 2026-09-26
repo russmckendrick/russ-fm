@@ -7,7 +7,7 @@ import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { buildFacetValues, FACETS } from '@/lib/browseFacets';
 import { getAlbumImageFromData, getArtistImageFromData } from '@/lib/image-utils';
-import { floodFor, appleArtworkColours, hue, vividScore, inkOn, type Flood } from '@/lib/sleeveColour';
+import { BOLD_VIVID, floodFor, inkOn, type Flood } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { cn } from '@/lib/utils';
@@ -26,7 +26,6 @@ interface FeaturedDetail {
   tracks: number;
   sides: number;
   label?: string;
-  apple: string[];
   spotify?: string;
   appleUrl?: string;
 }
@@ -96,7 +95,6 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
               tracks: positions.length,
               sides,
               label: d.labels?.[0],
-              apple: appleArtworkColours(d.services),
               spotify: d.spotify_url ?? d.services?.spotify?.url,
               appleUrl: d.apple_music_url ?? d.services?.apple_music?.url,
             },
@@ -113,7 +111,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
     setIndex(((i % count) + count) % count);
   }, [count]);
 
-  const floods: Flood[] = featured.map(a => floodFor(colours?.[a.uri_release], details[a.uri_release]?.apple));
+  const floods: Flood[] = featured.map(a => floodFor(colours?.[a.uri_release]));
   const current = featured[index];
   const flood = floods[index] ?? floodFor(null);
   usePageFlood(current ? flood.flood : null, current ? flood.ink : null);
@@ -329,8 +327,8 @@ function Genres({ albums, colours }: { albums: Album[]; colours: Record<string, 
     if (!colours) return out;
     const byDate = [...albums].sort((a, b) => b.date_added.localeCompare(a.date_added));
     for (const g of genres) {
-      const hit = byDate.find(a => FACETS.genre.extract(a).includes(g.name) && vividScore(colours[a.uri_release]?.accent ?? '') >= 1.2);
-      out[g.name] = hit ? colours[hit.uri_release].accent : '#e8e2d6';
+      const hit = byDate.find(a => FACETS.genre.extract(a).includes(g.name) && (colours[a.uri_release]?.vivid ?? 0) >= BOLD_VIVID);
+      out[g.name] = hit ? colours[hit.uri_release].flood : '#e8e2d6';
     }
     return out;
   }, [albums, colours, genres]);
@@ -406,10 +404,10 @@ function BrowseByColour({ albums, colours }: { albums: Album[]; colours: Record<
   const wall = useMemo(() => {
     if (!colours) return [];
     return albums
-      .filter(a => a.format_primary === 'Vinyl' && vividScore(colours[a.uri_release]?.accent ?? '') >= 1.2)
+      .filter(a => a.format_primary === 'Vinyl' && (colours[a.uri_release]?.vivid ?? 0) >= BOLD_VIVID)
       .sort((a, b) => b.date_added.localeCompare(a.date_added))
       .slice(0, 56)
-      .sort((a, b) => hue(colours[a.uri_release].accent) - hue(colours[b.uri_release].accent));
+      .sort((a, b) => colours[a.uri_release].hue - colours[b.uri_release].hue);
   }, [albums, colours]);
   if (!wall.length) return null;
   const strip = wall.filter((_, i) => i % 4 === 0);
@@ -418,7 +416,7 @@ function BrowseByColour({ albums, colours }: { albums: Album[]; colours: Record<
       <SectionHeading title="Browse by colour" link={{ to: '/albums/1?sort=colour', label: 'Open the colour wall' }} />
       <div className="flex h-3.5 overflow-hidden rounded-full" aria-hidden>
         {wall.map(a => (
-          <span key={a.uri_release} className="flex-1" style={{ background: colours![a.uri_release].accent }} />
+          <span key={a.uri_release} className="flex-1" style={{ background: colours![a.uri_release].flood }} />
         ))}
       </div>
       <div className="grid grid-cols-7 md:grid-cols-[repeat(14,minmax(0,1fr))]">

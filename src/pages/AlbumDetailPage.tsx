@@ -14,8 +14,8 @@ import { loadCollection, loadDetailJson, useCollection } from '@/lib/collection'
 import { getAlbumImageFromData, getAlbumSlug, getArtistImageFromData, getArtistAvatarFromData, getAlbumOGImageUrl, handleImageError } from '@/lib/image-utils';
 import { cn } from '@/lib/utils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
-import { useAlbumColors, useAlbumColorMap } from '@/hooks/useAlbumColors';
-import { appleArtworkColours, floodFor, readableOn } from '@/lib/sleeveColour';
+import { useAlbumColors, useAlbumColorMap, useAlbumSwatches } from '@/hooks/useAlbumColors';
+import { floodFor } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
@@ -292,10 +292,11 @@ export function AlbumDetailPage() {
 
   // Sleeve colours drive the whole page: flood for the hero, ground for the body.
   const palette = useAlbumColors(albumPath ? `/album/${albumPath}/` : undefined);
+  const swatches = useAlbumSwatches(albumPath ? `/album/${albumPath}/` : undefined);
   const colourMap = useAlbumColorMap();
   const [scrobbling, setScrobbling] = useState(false);
   const [boxSelected, setBoxSelected] = useState(0);
-  const flood = floodFor(palette, appleArtworkColours(detailedAlbum?.services));
+  const flood = floodFor(palette);
   usePageFlood(album ? flood.flood : null, album ? flood.ink : null);
 
   useEffect(() => {
@@ -773,7 +774,7 @@ export function AlbumDetailPage() {
     .sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0))
     .slice(0, 12);
   const lastfm = detailedAlbum?.services?.lastfm;
-  const accent = readableOn(flood.flood, flood.ground);
+  const accent = flood.glow;
   const title = album.release_name.trim();
   const longest = Math.max(...title.split(/\s+/).map(w => w.length), 6);
   const sides = tracks.length ? groupTracksBySide(tracks) : null;
@@ -1086,11 +1087,21 @@ export function AlbumDetailPage() {
               </section>
             )}
 
-            {palette && (
+            {swatches.length > 0 && (
               <section className="flex flex-col gap-3">
                 <h3 className="t-kicker m-0 text-[color:var(--cream-dim)]">Sleeve colours</h3>
+                {/* Each swatch is as wide as the share of the sleeve it covers. */}
+                <div
+                  role="img"
+                  aria-label={`Sleeve colours: ${swatches.map(([c, share]) => `${c} ${share}%`).join(', ')}`}
+                  className="flex h-3.5 overflow-hidden rounded-full shadow-[inset_0_0_0_1px_rgba(255,255,255,.08)]"
+                >
+                  {swatches.map(([c, share]) => (
+                    <span key={c} title={`${c} · ${share}%`} style={{ flex: share, background: c }} />
+                  ))}
+                </div>
                 <div className="flex gap-2.5">
-                  {[palette.background, palette.accent, palette.muted, flood.flood].filter((c, i, all) => all.indexOf(c) === i).map(c => (
+                  {[flood.flood, flood.secondary].filter((c): c is string => !!c).map(c => (
                     <span key={c} title={c} className="h-8 w-8 rounded-full shadow-[inset_0_0_0_2px_rgba(0,0,0,.15)]" style={{ background: c }} />
                   ))}
                 </div>

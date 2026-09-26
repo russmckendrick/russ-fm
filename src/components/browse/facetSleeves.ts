@@ -1,6 +1,6 @@
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import type { FacetConfig } from '@/lib/browseFacets';
-import { floodFor, vividFrom, vividScore, type Flood } from '@/lib/sleeveColour';
+import { floodFor, type Flood } from '@/lib/sleeveColour';
 import type { Album } from '@/types/album';
 
 /**
@@ -13,8 +13,7 @@ export type ColourMap = Record<string, AlbumColorPalette> | null | undefined;
 
 /** How vivid a sleeve's best colour is (0 when it has no usable colour). */
 export function sleeveVividness(uri: string, map: ColourMap): number {
-  const colour = vividFrom(map?.[uri]);
-  return colour ? vividScore(colour) : 0;
+  return map?.[uri]?.vivid ?? 0;
 }
 
 /**

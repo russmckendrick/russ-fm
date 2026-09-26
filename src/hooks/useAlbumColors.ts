@@ -1,10 +1,27 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * One album's sleeve colours from album-colors.json, decided at build time by
+ * scripts/generate-album-colors.js. Read them through `floodFor` in
+ * src/lib/sleeveColour.ts rather than directly.
+ */
 export interface AlbumColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+  /** Palette version; the generator redoes entries from older versions. */
+  v: number;
+  /** The sleeve's colour: heroes, tiles, bars, chips. A tinted neutral when `vivid` is 0. */
+  flood: string;
+  /** Dark ink or cream, whichever reads on the flood. */
+  ink: string;
+  /** The sleeve's own dark: page body, vinyl labels. Never pure black. */
+  ground: string;
+  /** The flood, lightened if needed to reach 3:1 on the ground (accents below the hero). */
+  glow: string;
+  /** A second, clearly different sleeve colour, or null. */
+  secondary: string | null;
+  /** Flood hue, 0–1 (OKLCH), for colour sorting. */
+  hue: number;
+  /** How bold the flood is: 0 for monochrome sleeves, up to about 2.6. */
+  vivid: number;
 }
 
 // In-memory cache for color data
@@ -150,12 +167,15 @@ export function useAlbumColors(albumIdentifier?: string): AlbumColorPalette | nu
 export function useAlbumColorsWithFallback(albumIdentifier?: string): AlbumColorPalette {
   const colors = useAlbumColors(albumIdentifier);
   
-  // Fallback colors that work well in both light and dark modes
   const fallbackColors: AlbumColorPalette = {
-    background: '#1a1a1a',
-    foreground: '#ffffff',
-    accent: '#666666',
-    muted: '#404040'
+    v: 2,
+    flood: '#e8e2d6',
+    ink: '#0e0d0c',
+    ground: '#1c1916',
+    glow: '#e8e2d6',
+    secondary: null,
+    hue: 0.12,
+    vivid: 0,
   };
 
   return colors || fallbackColors;
@@ -187,4 +207,40 @@ export function useAlbumColorMap(): Record<string, AlbumColorPalette> | null {
   }, [map]);
 
   return map;
+}
+
+/** A sleeve swatch: `[hex, percent of the sleeve it covers]`. */
+export type AlbumSwatch = [string, number];
+
+let swatchData: Record<string, AlbumSwatch[]> | null = null;
+let swatchPromise: Promise<Record<string, AlbumSwatch[]>> | null = null;
+
+const loadSwatches = (): Promise<Record<string, AlbumSwatch[]>> => {
+  swatchPromise ??= fetch('/album-swatches.json')
+    .then(r => (r.ok ? r.json() : {}))
+    .catch(() => ({}))
+    .then(data => (swatchData = data));
+  return swatchPromise;
+};
+
+/**
+ * The sleeve's main swatches, largest first (album-swatches.json). Kept out
+ * of the colour map because only the album page shows them; fetched on first
+ * use. Empty until loaded.
+ */
+export function useAlbumSwatches(uri?: string): AlbumSwatch[] {
+  const [data, setData] = useState(swatchData);
+
+  useEffect(() => {
+    if (data || !uri) return;
+    let alive = true;
+    loadSwatches().then(d => {
+      if (alive) setData(d);
+    });
+    return () => {
+      alive = false;
+    };
+  }, [data, uri]);
+
+  return (uri && data?.[uri]) || [];
 }

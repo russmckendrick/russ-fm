@@ -891,7 +891,7 @@ function AlbumNode({
   );
 }
 
-const NEUTRAL: Flood = { flood: "#e8e2d6", ink: INK, sub: "rgba(14,13,12,.7)", ground: "#1c1916" };
+const NEUTRAL: Flood = { flood: "#e8e2d6", ink: INK, sub: "rgba(14,13,12,.7)", ground: "#1c1916", glow: "#e8e2d6", secondary: null };
 
 function useSurfaceSize(ref: RefObject<HTMLElement | null>): SurfaceSize {
   const [size, setSize] = useState<SurfaceSize>({ width: 0, height: 0 });

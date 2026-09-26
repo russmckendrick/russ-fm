@@ -12,5 +12,5 @@ if git diff --cached --name-only --diff-filter=ACMR \
   | grep -qE '^public/(album/[^/]+/[^/]+-hi-res\.jpe?g|collection\.json)$'; then
   echo "🎨 pre-commit: album artwork or collection changed, regenerating colour palettes..."
   node scripts/generate-album-colors.js
-  git add public/album-colors.json
+  git add public/album-colors.json public/album-swatches.json
 fi

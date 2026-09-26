@@ -6,7 +6,7 @@ import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { useCollection } from '@/lib/collection';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
-import { hue, inkOn, vividFrom, vividScore } from '@/lib/sleeveColour';
+import { colourSortKey, inkOn, vividFrom } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
@@ -90,12 +90,8 @@ export function AlbumsPage() {
     });
 
     if (sort === 'colour') {
-      const key = (a: Album) => {
-        const v = vividFrom(colours?.[a.uri_release]);
-        // Monochrome sleeves go last, ordered light to dark.
-        return v ? hue(v) : 2 - vividScore(colours?.[a.uri_release]?.muted ?? '#000000');
-      };
-      const keys = new Map(out.map(a => [a, key(a)]));
+      // Bold sleeves by hue, then monochrome sleeves light to dark.
+      const keys = new Map(out.map(a => [a, colourSortKey(colours?.[a.uri_release])]));
       out = [...out].sort((a, b) => keys.get(a)! - keys.get(b)!);
     } else {
       out = [...out].sort((a, b) => {

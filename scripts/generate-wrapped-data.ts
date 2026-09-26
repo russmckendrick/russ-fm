@@ -5,20 +5,28 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Color palette interface (matches src/types/wrapped.ts)
+// Sleeve palette from album-colors.json (matches AlbumColorPalette in src/hooks/useAlbumColors.ts)
 interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+  v: number;
+  flood: string;
+  ink: string;
+  ground: string;
+  glow: string;
+  secondary: string | null;
+  hue: number;
+  vivid: number;
 }
 
 // Default fallback palette
 const defaultPalette: ColorPalette = {
-  background: '#1a1a1a',
-  foreground: '#ffffff',
-  accent: '#666666',
-  muted: '#404040'
+  v: 2,
+  flood: '#e8e2d6',
+  ink: '#0e0d0c',
+  ground: '#1c1916',
+  glow: '#e8e2d6',
+  secondary: null,
+  hue: 0.12,
+  vivid: 0,
 };
 
 // Load album colors once at startup
