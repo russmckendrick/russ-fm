@@ -862,7 +862,7 @@ export function AlbumDetailPage() {
         </p>
       )}
       {album.boxset?.uri_release && (
-        <Link to={album.boxset.uri_release} className="pill pill-sm self-start">
+        <Link to={album.boxset.uri_release} className="pill self-start">
           From the box set · {album.boxset.name ?? 'View box set'}
           <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
@@ -872,12 +872,11 @@ export function AlbumDetailPage() {
           <AlbumScrobbleButton
             album={{ artist: scrobbleArtist, album: album.release_name, tracks: albumTracksForScrobble }}
             tone={{ background: flood.ink, color: flood.flood }}
-            pillSize="lg"
             onActiveChange={setScrobbling}
           />
         )}
         {serviceLinks.map(s => (
-          <PillLink key={s.label} to={s.url} size={isBox ? 'md' : 'sm'} className={isBox ? undefined : 'self-center'}>
+          <PillLink key={s.label} to={s.url}>
             {s.label}
           </PillLink>
         ))}
@@ -1298,7 +1297,7 @@ function ExpandableBody({ children, shouldCollapse, fade, collapsedMaxHeight = 3
         {children}
         {!expanded && <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-28" style={{ background: `linear-gradient(to top, ${fade}, transparent)` }} />}
       </div>
-      <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} className="pill pill-sm mt-4 border-[color:var(--cream-rule)]">
+      <button type="button" onClick={() => setExpanded(v => !v)} aria-expanded={expanded} className="pill mt-4 border-[color:var(--cream-rule)]">
         {expanded ? 'Show less' : 'Read more'}
       </button>
     </div>

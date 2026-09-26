@@ -522,9 +522,10 @@ function WrappedPresentation() {
 }
 ```
 
-`WrappedPresentation` currently uses the hook for scroll-snap section state, chapter jumps,
-and keyboard previous/next navigation. The hook still supports auto-advance, but the Crate
-Journey presentation does not expose timed playback by default.
+`WrappedPresentation` uses the hook for scroll-snap section state, chapter jumps and
+keyboard previous/next navigation. It does not use the hook's auto-advance (which ticks
+React state every 50ms); the transport's Play button drives playback with a CSS
+`.hero-progress` animation per chapter instead, advancing on `animationend`.
 
 ---
 

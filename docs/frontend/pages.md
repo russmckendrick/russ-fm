@@ -91,16 +91,31 @@ The home page sections are local components in `HomePage.tsx`; the old
 - **Hero** — `CoverHero` with a `HeroRecord` for each of the latest
   `numberOfFeaturedAlbums` additions (boxset members excluded). The page
   flood fades to each record's colour (`floodFor` over the sleeve palette,
-  which already folds in Apple Music artwork colours at build time), the active disc slides out and its
-  "Added" sticker appears. The text column shows the title, artist,
-  original year / label / format / sides / tracks, and pills for the album page,
-  Spotify and Apple Music (read from each record's detailed JSON).
-  Numbered progress bars pick a record; previous, pause/resume and next
-  buttons control the rotation. Only the active `HeroRecord` spins
+  which already folds in Apple Music artwork colours at build time) and the active disc slides
+  out and its "Added" sticker appears from `md` up (`stickerOnMobile={false}`
+  drops it on phones). The text column shows the title, artist,
+  original year / label / format / sides / tracks (read from each record's
+  detailed JSON), with the "View album" pill on the artist row (right-aligned
+  and smaller below `md`, straight after the name from `md` up; long names
+  wrap beside it rather than pushing it down). Streaming links live on the
+  album page, not the home hero. The text
+  slides are stacked absolutely and the stack's height follows the active
+  slide (measured with a `ResizeObserver`, eased with a height transition),
+  so a one-line title doesn't reserve the space a two-line title needs. From `lg` up the controls sit under the
+  text column; below `lg` they render after the `CoverHero`, under the
+  overhanging sleeve on the dark ground (the section after the hero drops
+  to `pt-16` below `lg` to make room). Both copies come from one
+  `controls()` render; the hidden one is `display: none`, so its progress
+  animation never runs and only the visible copy advances the rotation.
+  Below `md` the numbered bars stretch to share the width between the 40px
+  previous/next buttons so all eight fit a phone; from `md` up the bars are
+  fixed-width and the buttons are 48px.
+  Numbered progress bars pick a record, flanked by previous and next
+  buttons; there is no pause control. Only the active `HeroRecord` spins
   (`spinning={on}`). The active bar is a CSS animation (`.hero-progress`
   in `src/styles/player.css`, `scaleX` 0 → 1 over `autoRotateInterval`)
   and its `onAnimationEnd` advances to the next record, so there is no
-  interval timer; pause sets `animation-play-state: paused`. Under
+  interval timer. Under
   `prefers-reduced-motion` there is no bar and no auto-rotation. The
   featured releases' detail JSON is prefetched through `loadDetailJson()`,
   so opening one from the hero needs no further fetch.
@@ -124,7 +139,7 @@ record's `json_detailed_release`.
 ```typescript
 homepage: {
   hero: {
-    numberOfFeaturedAlbums: 6, // records in the hero rotation
+    numberOfFeaturedAlbums: 8, // records in the hero rotation
     autoRotateInterval: 7000,  // ms per record
   },
   recentlyAdded: { displayCount: 16 },
@@ -584,22 +599,32 @@ collection.
 
 ### WrappedPresentation (`src/pages/wrapped/WrappedPresentation.tsx`)
 
-Full-screen, snap-scrolling presentation opened from the year page. Each
-chapter floods with a colour from the records it shows; colour changes
-fade and motion respects `prefers-reduced-motion`.
+Full-screen, snap-scrolling presentation opened from the year page, played
+like a record: seven chapters numbered as tracks (side A is the year, side B
+who and what). Each chapter floods with colour from the records it shows.
 
-| Chapter | Description |
-|---------|-------------|
-| Overview | Year intro and counts |
-| First & last | The first and last additions of the year |
-| Months | Monthly activity; selecting a month is shared with Shelves |
-| Artists | Top artists and genres |
-| Shelves | The selected month's records as tiles |
-| Years | Previous / next / all-years navigation |
+| Track | Chapter | What it shows |
+|-------|---------|---------------|
+| A1 | Overview | Kicker, the year in huge `t-disp`, counts that count up on first view (records, artists, per month, busiest month). Three columns of sleeves ride up and down the right side (one row along the bottom on phones). Flood: the first record. |
+| A2 | First & last | Split flood: first record's colour left, last record's right (top/bottom on phones), each with its `HeroRecord` ("First"/"Last" sticker from `md` up), date, title and artist. A round badge on the seam gives the days between them. |
+| A3 | Months | Every record added that month is a spine on that month's stack, in its sleeve colour; stacks scale to the busiest month. Picking a month shows its name, count and a fan of its first sleeves. Dark ground. |
+| A4 | Shelves | The selected month (shared with A3) as a row of `RecordTile`s, with a JAN–DEC switcher. Flood: the month's lead colour. |
+| B1 | Artists | No. 1 artist's portrait blended into the flood of their top album, name in a `FitTitle`, then 2–6 as rows with avatar, bar and count. |
+| B2 | Genres | Full-width bands, each as tall as its genre's count, in the genre's lead sleeve colour; labels scale with band height (container query units). |
+| B3 | Years | The run-out: a large `Vinyl` with the last record on its label, the year, counts, previous/next year pills and every year. Flood: the last record. |
 
-**Controls:** Arrow Down or Space for the next chapter, Arrow Up for the
-previous one, the chapter rail (desktop) or dots (mobile) to jump, and
-previous / next buttons. Album and artist links stay live.
+**Chrome:** the site logo (`SpinningMark`, as in the nav) sits top left with
+the current chapter's lead sleeve on its label. The transport is a solid dark
+bar at the bottom: track and label, previous/next, a numbered bar per chapter
+(click to jump) and Play. Play runs each chapter for 9s with a
+`.hero-progress` bar and stops after B3. Arrow Down / Space and Arrow Up still step chapters. The year
+selector and "Year page" button sit top right (`WrappedYear`).
+
+**Motion:** entrances (`.wr-rise`, `.wr-pop`, `.wr-spine`, `.wr-band`,
+`.wr-fan`, `.wr-shelf` in `player.css`, staggered with `--d`) play the first
+time a chapter comes round (`data-seen`); discs spin and conveyors run only in
+the visible chapter (`data-active`). Under `prefers-reduced-motion` there are
+no entrances, conveyors or spinning, and counts show their final values.
 
 ### Wrapped components
 

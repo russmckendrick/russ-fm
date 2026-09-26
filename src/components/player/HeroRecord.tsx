@@ -15,6 +15,8 @@ interface HeroRecordProps {
   spinning?: boolean;
   fast?: boolean;
   sticker?: { date: string; background: string; color: string; label?: string };
+  /** Show the sticker below `md` too (phones get the small one). */
+  stickerOnMobile?: boolean;
   eager?: boolean;
   className?: string;
 }
@@ -33,6 +35,7 @@ export function HeroRecord({
   spinning = true,
   fast = false,
   sticker,
+  stickerOnMobile = true,
   eager = true,
   className,
 }: HeroRecordProps) {
@@ -58,7 +61,7 @@ export function HeroRecord({
       {sticker && (
         <>
           <Sticker {...sticker} size="lg" className="-right-12 -top-6 hidden md:flex" />
-          <Sticker {...sticker} size="sm" className="-right-2 -top-5 md:hidden" />
+          {stickerOnMobile && <Sticker {...sticker} size="sm" className="-right-2 -top-5 md:hidden" />}
         </>
       )}
     </div>

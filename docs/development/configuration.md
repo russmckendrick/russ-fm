@@ -27,7 +27,7 @@ export const appConfig = {
   // Homepage settings
   homepage: {
     hero: {
-      numberOfFeaturedAlbums: 6,  // latest additions in the cover hero
+      numberOfFeaturedAlbums: 8,  // latest additions in the cover hero
       autoRotateInterval: 7000    // ms per record
     },
     recentlyAdded: {

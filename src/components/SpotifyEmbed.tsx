@@ -49,7 +49,7 @@ export const SpotifyEmbed = memo(function SpotifyEmbed({
     retryCount: 0
   });
   const iframeRef = useRef<HTMLIFrameElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout>();
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const mountedRef = useRef(true);
 
   // Extract album ID from URL or use provided ID

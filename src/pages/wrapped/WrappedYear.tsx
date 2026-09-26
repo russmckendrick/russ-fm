@@ -161,7 +161,7 @@ export function WrappedYear() {
   if (viewMode === 'presentation') {
     return (
       <div key={yearNum} className="relative">
-        <div className="fixed right-3 top-3 z-[80] flex items-center gap-2 rounded-full bg-[rgba(14,13,12,.78)] p-1.5 text-[color:var(--cream)] backdrop-blur-md md:right-5 md:top-4">
+        <div className="fixed right-3 top-3 z-[80] flex items-center gap-2 rounded-full bg-[rgba(14,13,12,.92)] p-1.5 text-[color:var(--cream)] shadow-[0_18px_40px_-18px_rgba(0,0,0,.7)] md:right-5 md:top-4">
           <YearSelector
             currentYear={yearNum}
             availableYears={availableYears}

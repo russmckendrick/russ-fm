@@ -18,9 +18,14 @@ export interface ParsedAppleMusicUrl {
 }
 
 export class MusicServiceError extends Error {
-  constructor(message: string, public service: 'spotify' | 'apple_music', public originalUrl?: string) {
+  service: 'spotify' | 'apple_music';
+  originalUrl?: string;
+
+  constructor(message: string, service: 'spotify' | 'apple_music', originalUrl?: string) {
     super(message);
     this.name = 'MusicServiceError';
+    this.service = service;
+    this.originalUrl = originalUrl;
   }
 }
 

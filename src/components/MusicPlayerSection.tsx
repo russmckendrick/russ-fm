@@ -254,7 +254,7 @@ export const MusicPlayerSectionMinimal = memo(function MusicPlayerSectionMinimal
 
   return (
     <div className={cn('space-y-4', className)}>
-      {hasAppleMusic && appleMusicData && (
+      {hasAppleMusic && appleMusicData?.url && (
         <AppleMusicEmbed
           albumUrl={appleMusicData.url}
           albumTitle={album.title}

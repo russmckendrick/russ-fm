@@ -313,7 +313,7 @@ export function ArtistDetailPage() {
             </dl>
             <div className="flex flex-wrap gap-2.5">
               {services.map((s, i) => (
-                <PillLink key={s.label} to={s.url} size="sm" solid={i === 0 ? { background: flood.ink, color: flood.top } : undefined}>
+                <PillLink key={s.label} to={s.url} solid={i === 0 ? { background: flood.ink, color: flood.top } : undefined}>
                   {s.label}
                 </PillLink>
               ))}
@@ -450,7 +450,7 @@ function Bio({ text }: { text: string }) {
         ))}
       </div>
       {long && (
-        <button type="button" className="pill pill-sm self-start" onClick={() => setOpen(v => !v)} aria-expanded={open}>
+        <button type="button" className="pill self-start" onClick={() => setOpen(v => !v)} aria-expanded={open}>
           {open ? 'Show less' : 'Read more'}
         </button>
       )}
