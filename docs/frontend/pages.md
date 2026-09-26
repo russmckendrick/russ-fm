@@ -90,8 +90,8 @@ The home page sections are local components in `HomePage.tsx`; the old
 
 - **Hero** — `CoverHero` with a `HeroRecord` for each of the latest
   `numberOfFeaturedAlbums` additions (boxset members excluded). The page
-  flood fades to each record's colour (`floodFor` over the sleeve palette
-  plus Apple Music artwork colours), the active disc slides out and its
+  flood fades to each record's colour (`floodFor` over the sleeve palette,
+  which already folds in Apple Music artwork colours at build time), the active disc slides out and its
   "Added" sticker appears. The text column shows the title, artist,
   original year / label / format / sides / tracks, and pills for the album page,
   Spotify and Apple Music (read from each record's detailed JSON).
@@ -107,11 +107,12 @@ The home page sections are local components in `HomePage.tsx`; the old
 - **Latest additions** — horizontal `shelf-scroll` row of `RecordTile`s,
   with the number added this year as the note.
 - **Most collected** — top six artists by record count.
-- **Genres** — genre chips sized by count and coloured by a representative
-  sleeve, then headline counts (records, on vinyl, box sets, artists).
+- **Genres** — genre chips sized by count and coloured by the flood of the
+  newest bold sleeve in the genre (`vivid` ≥ `BOLD_VIVID`, else `#e8e2d6`), then headline counts (records, on vinyl, box sets, artists).
 - **Random picks** — `RecordTile` grid with a Shuffle pill; tiles show the
   original year.
-- **Browse by colour** — recent vivid vinyl sleeves sorted by hue, shown
+- **Browse by colour** — recent bold vinyl sleeves (`vivid` ≥ `BOLD_VIVID`)
+  sorted by the palette's `hue`, shown
   as a colour bar and a strip of cover tiles, linking to
   `/albums/1?sort=colour`.
 
@@ -152,10 +153,9 @@ dropped from the URL.
 | `year` | `string` | – | Original release year filter; the Year select and tile meta use the same year |
 | `search` | `string` | – | Matches title, artist, genres, credited artists and band members |
 
-**Colour sort (`?sort=colour`).** Records are ordered by the hue of their
-most vivid sleeve colour (`vividFrom` + `hue` from
-`src/lib/sleeveColour.ts`); sleeves with no usable colour go last, light
-to dark. The page shows twice as many records per page, a colour bar of
+**Colour sort (`?sort=colour`).** Records are ordered by
+`colourSortKey()` from `src/lib/sleeveColour.ts`: sleeves with a bold
+flood by its hue, then monochrome sleeves, light to dark. The page shows twice as many records per page, a colour bar of
 the visible page above the grid, and a dense wall of `.tile` covers whose
 caption slides up in the sleeve colour.
 
@@ -177,9 +177,10 @@ Boxset members are excluded. Data comes from `useCollection()` and
 
 **Route:** `/album/:slug`
 
-The page background is the sleeve's dark background swatch
-(`flood.ground`) and the hero is the flood colour (sleeve palette plus
-Apple Music artwork colours), which the nav also takes.
+The page background is the sleeve's own dark (`flood.ground`) and the
+hero is the flood colour, which the nav also takes. Accents below the hero
+(links, kickers, track numbers) use `flood.glow`, the flood lifted to 3:1
+on the ground.
 
 **Hero** (`CoverHero` + `HeroRecord`):
 
@@ -213,7 +214,10 @@ Apple Music artwork colours), which the nav also takes.
   link to the artist's records in the collection.
 
 **Sidebar:** Last.fm panel in the flood colour (scrobbles, listeners,
-link), release details, identifiers, sleeve colour swatches, copyright.
+link), release details, identifiers, sleeve colours, copyright. "Sleeve
+colours" is a strip of the sleeve's main swatches (`useAlbumSwatches()`),
+each as wide as the share of the sleeve it covers, plus dots for the flood
+and secondary colour; it appears once `album-swatches.json` has loaded.
 In the release details "Released" is the original year; "This pressing"
 shows the pressing's own date (detail JSON `released`, else `year`) and
 appears only when it differs.

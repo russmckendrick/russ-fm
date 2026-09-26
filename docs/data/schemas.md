@@ -281,33 +281,53 @@ Full artist data.
 
 ### album-colors.json
 
-Pre-extracted color palettes for dynamic theming.
+Sleeve colours for every album, decided at build time by
+`scripts/generate-album-colors.js` (see
+[asset-processing.md](../build-pipeline/asset-processing.md#color-extraction)).
+Keyed by `uri_release`, one album per line, in `collection.json` order. Albums no
+longer in the collection are dropped.
 
 ```json
 {
-  "radiohead-ok-computer": {
-    "background": "#1a1a2e",
-    "foreground": "#ffffff",
-    "accent": "#4a90a4",
-    "muted": "#6b7b8a"
-  },
-  "radiohead-kid-a": {
-    "background": "#0d1117",
-    "foreground": "#ffffff",
-    "accent": "#dc3545",
-    "muted": "#555555"
-  }
+  "/album/bloom-38528559/": {"v":2,"flood":"#d2d5df","ink":"#0e0d0c","ground":"#1b1b1e","glow":"#d2d5df","secondary":null,"hue":0.762,"vivid":0},
+  "/album/glastonbury-1994-38527017/": {"v":2,"flood":"#05abcb","ink":"#0e0d0c","ground":"#0a232b","glow":"#05abcb","secondary":"#0f5a97","hue":0.605,"vivid":0.94}
 }
 ```
 
-**Color Definitions:**
+**Fields:**
 
-| Color | Description |
+| Field | Description |
 |-------|-------------|
-| background | Dark color derived from album artwork |
-| foreground | Text color (typically white) |
-| accent | Most vibrant color from palette |
-| muted | Secondary/subtle accent color |
+| v | Palette version (currently `2`); the generator redoes entries from older versions |
+| flood | The sleeve's colour, used for heroes, tiles, bars and chips. A pale neutral tinted with the sleeve's own cast when `vivid` is 0 |
+| ink | `#0e0d0c` or `#fbf7ef`, whichever reads better on the flood |
+| ground | The sleeve's own dark (OKLab L 0.17–0.24), used for page bodies and vinyl labels. Never pure black |
+| glow | The flood, lightened (keeping its hue) until it reaches 3:1 on the ground |
+| secondary | A second sleeve colour that clearly differs from the flood, or `null` |
+| hue | Flood hue, 0–1 (OKLCH), for colour sorting |
+| vivid | How bold the flood is: 0 for monochrome sleeves, up to about 2.6 |
+
+Albums without artwork get the default palette (flood `#e8e2d6`, ground `#1c1916`,
+`vivid` 0).
+
+---
+
+### album-swatches.json
+
+The sleeve's main colours, for the "Sleeve colours" section on the album page. Same
+keys as `album-colors.json`; each value is up to six `[hex, percentOfSleeve]` pairs,
+largest first (empty for albums without artwork).
+
+```json
+{
+  "/album/glastonbury-1994-38527017/": [["#183139",23],["#465428",23],["#135084",11],["#efc74e",11],["#9c7f32",10],["#39b7b0",9]]
+}
+```
+
+It is a separate file because only the album page uses it: folded into
+`album-colors.json` it would roughly double the size of the map every page loads
+(about 138 KB gzipped for the map, 178 KB for the swatches). The frontend fetches it
+on first use through `useAlbumSwatches()`.
 
 ---
 
@@ -338,10 +358,14 @@ Year-in-review data structure.
           "slug": "artist-album",
           "images": {...},
           "colors": {
-            "background": "#1a1a2e",
-            "foreground": "#ffffff",
-            "accent": "#ff6600",
-            "muted": "#666666"
+            "v": 2,
+            "flood": "#e6752f",
+            "ink": "#0e0d0c",
+            "ground": "#281c12",
+            "glow": "#e6752f",
+            "secondary": "#923026",
+            "hue": 0.134,
+            "vivid": 0.88
           }
         }
       ],
@@ -605,14 +629,21 @@ interface Format {
 ### Color Palette Type
 
 ```typescript
-interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+// src/hooks/useAlbumColors.ts; ColorPalette in src/types/wrapped.ts is an alias
+interface AlbumColorPalette {
+  v: number;
+  flood: string;
+  ink: string;
+  ground: string;
+  glow: string;
+  secondary: string | null;
+  hue: number;   // 0–1
+  vivid: number; // 0 for monochrome, up to ~2.6
 }
 
-type AlbumColors = Record<string, ColorPalette>;
+type AlbumColors = Record<string, AlbumColorPalette>;
+type AlbumSwatch = [string, number]; // [hex, percent of the sleeve]
+type AlbumSwatches = Record<string, AlbumSwatch[]>;
 ```
 
 ### Search Result Type

@@ -41,9 +41,10 @@ Scale titles to the longest word in condensed type so long album names never ove
 
 ## Colour helpers — `src/lib/sleeveColour.ts`
 
-- `floodFor(palette, extra?)` → `{ flood, ink, sub, ground }`. Picks the most vivid swatch (accent, muted, and any `extra` such as Apple Music artwork colours), falls back to `#e8e2d6` for monochrome sleeves, and chooses dark ink or cream for contrast.
-- `vividFrom`, `vividScore`, `hue`, `inkOn`, `subInk`, `readableOn(colour, bg)` (the colour if it reaches 3:1 on `bg`, else cream), `appleArtworkColours(services)`, `blendedFlood(colours)` (a vertical gradient through several floods, the first held at the top for the nav; the ink is chosen for the top colour and the others are lightened or darkened until that ink reads at 4.5:1), and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` constants.
-- Palettes come from `useAlbumColors(uri)` (one) or `useAlbumColorMap()` (all, for walls/rows).
+- Every sleeve's colours are decided at build time by `scripts/generate-album-colors.js` (Apple Music artwork colours included), so a sleeve has the same flood on every page. The helpers only read them.
+- `floodFor(palette)` → `{ flood, ink, sub, ground, glow, secondary }`, straight from the palette. Monochrome sleeves have a pale neutral flood tinted with the sleeve's own cast; a missing palette gets `#e8e2d6` on a dark ground. `glow` is the flood lifted to 3:1 on the ground, for accents below the hero.
+- `vividFrom(palette)` (the flood when `vivid > 0`, else `null`), `colourBar(flood)` (the flood, split 62/38 with `secondary` when there is one), `colourSortKey(palette)` (bold sleeves by hue, then monochrome ones light to dark), `luminance`, `inkOn`, `subInk`, `blendedFlood(colours)` (a vertical gradient through several floods, the first held at the top for the nav; the ink is chosen for the top colour and the others are lightened or darkened until that ink reads at 4.5:1), and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` / `BOLD_VIVID` (`vivid` threshold for "bold" sleeves) constants.
+- Palettes come from `useAlbumColors(uri)` (one) or `useAlbumColorMap()` (all, for walls/rows); the album page's swatch strip comes from `useAlbumSwatches(uri)`.
 
 ## Components — `src/components/player/`
 
@@ -52,8 +53,8 @@ Scale titles to the longest word in condensed type so long album names never ove
 | `FloodProvider`, `usePageFlood(flood, ink)`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
 | `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below. |
 | `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. `spinning` turns the spin off; the home hero spins only the visible record. |
-| `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's dark background swatch. |
-| `RecordTile` | Sleeve in a row/grid; disc slides out on hover (it does not spin); colour bar; title/artist/meta. |
+| `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's `ground`. |
+| `RecordTile` | Sleeve in a row/grid; disc slides out on hover (it does not spin); colour bar (`colourBar()`: two-tone when the sleeve has a secondary colour); title/artist/meta. |
 | `PillLink`, `.pill`, `.pill-solid`, `.pill-lg`, `.pill-sm` | Rounded buttons (44px; `.pill-lg` 56px, `.pill-sm` 40px). Solid pills use the flood's ink as fill and the flood as text. `.pill-fill` is the progress fill used by the scrobble button. |
 | `.icon-btn` | 48px round icon button (nav, hero transport controls). |
 | `SectionHeading` | Plain `t-disp` title + optional mono note + "see all" link. |

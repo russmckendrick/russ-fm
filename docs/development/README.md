@@ -47,8 +47,8 @@ cp config.example.json config.json
 which symlinks everything in `scripts/git-hooks/` into `.git/hooks/`. Today
 that is one hook:
 
-- `pre-commit` regenerates `public/album-colors.json` and stages it
-  whenever the commit includes album artwork or `public/collection.json`, so
+- `pre-commit` regenerates `public/album-colors.json` and
+  `public/album-swatches.json` and stages both whenever the commit includes album artwork or `public/collection.json`, so
   the committed palettes never fall behind the collection.
 
 The installer skips hooks that already exist and were not created by it, and

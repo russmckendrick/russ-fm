@@ -84,7 +84,7 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 | Prop | Type | Description |
 |------|------|-------------|
 | album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist'>` | Record to show |
-| palette | `AlbumColorPalette \| null` | Sets the colour bar and disc label |
+| palette | `AlbumColorPalette \| null` | Sets the colour bar (the flood, two-tone with the secondary colour when the sleeve has one) and the disc label (the ground) |
 | meta | `ReactNode` | Mono line under the artist |
 | showArtist / showText | `boolean` | Default `true` |
 | to | `string` | Override the link (defaults to the album page) |

@@ -104,11 +104,16 @@ sync only globs image extensions, so they are never uploaded.
 
 ```mermaid
 flowchart LR
-    Image[Album Image] --> Resize[Resize to 200x200]
-    Resize --> Sample[Sample Pixels]
-    Sample --> Quantize[Median Cut]
-    Quantize --> Palette[Color Palette]
+    Image[Hi-res sleeve] --> Resize[Resize to 72x72]
+    Resize --> Lab[Pixels to OKLab]
+    Lab --> Swatches[k-means k=8: swatches, dark area, tint]
+    Lab --> Candidates[k-means k=6 on colourful pixels]
+    Apple[Apple Music artwork colours] --> Candidates
+    Candidates --> Score[Score and pick flood]
+    Swatches --> Palette[Palette]
+    Score --> Palette
     Palette --> JSON[album-colors.json]
+    Swatches --> SW[album-swatches.json]
 ```
 
 ### Generate Colors Script
@@ -118,119 +123,129 @@ flowchart LR
 **Usage:**
 ```bash
 pnpm run generate-colors
+
+# Redo every album (about a minute for ~3,700 albums)
+node scripts/generate-album-colors.js --force
 ```
 
 **What it does:**
-1. Loads existing `album-colors.json` (cache)
-2. Scans for new albums without colors
-3. Extracts dominant colors using Sharp
-4. Generates palette (background, foreground, accent, muted)
-5. Writes `public/album-colors.json` (the only output; there is no generated stylesheet)
+1. Loads the existing `album-colors.json` and `album-swatches.json` (cache)
+2. Walks `collection.json`, reusing any entry whose `v` matches the script's `VERSION`
+   and which has swatches
+3. Extracts the rest from `public/album/<slug>/<slug>-hi-res.jpg`, with Apple Music
+   artwork colours from `public/album/<slug>/<slug>.json`
+4. Writes `public/album-colors.json` (palettes) and `public/album-swatches.json`
+   (swatches). There is no generated stylesheet.
+
+Everything the frontend needs (flood, ink, ground, glow, secondary, hue, vividness) is
+decided here, Apple Music colours included, so every page (tiles, walls, nav, album page,
+home hero) shows the same flood for a sleeve.
 
 ### Algorithm
 
-```javascript
-async function extractColors(imagePath) {
-  // 1. Resize for faster processing
-  const { data, info } = await sharp(imagePath)
-    .resize(200, 200, { fit: 'cover' })
-    .raw()
-    .toBuffer({ resolveWithObject: true });
+All colour work is done in OKLab / OKLCH so "colourful" and "light" match what the eye sees.
 
-  // 2. Sample pixels (every 4th pixel)
-  const pixels = [];
-  for (let i = 0; i < data.length; i += 12) {
-    pixels.push({
-      r: data[i],
-      g: data[i + 1],
-      b: data[i + 2]
-    });
-  }
+1. **Swatches.** The sleeve is downsampled to 72×72 and k-means (k=8) runs over every
+   pixel. Near-identical clusters are merged. This gives the sleeve's main swatches
+   (with the share of the sleeve each covers), its darkest area and its overall tint.
+2. **Flood candidates.** A second k-means (k=6) runs over only the colourful pixels
+   (OKLCH chroma ≥ 0.05). Each candidate is the mean of the more colourful half of its
+   cluster rather than the whole cluster, so a small bright area (a red logo on black)
+   is not averaged away.
+3. **Apple Music colours.** `services.apple_music.raw_attributes.artwork` `bgColor`,
+   `textColor1` and `textColor2` join as candidates when they cover at least 1% of the
+   sleeve, with their score multiplied by 1.1.
+4. **Scoring.** Candidates are scored on chroma, lightness (best between OKLab L 0.45
+   and 0.8) and coverage; small areas only count when they are properly colourful. The
+   best candidate becomes the flood if it scores at least 0.3. Otherwise the flood is a
+   pale neutral tinted with the sleeve's own cast (L 0.84–0.92, depending on the
+   sleeve's mean lightness).
+5. **The rest of the palette:**
+   - `ground`: the sleeve's darkest substantial cluster, clamped to OKLab L 0.17–0.24
+     and chroma ≤ 0.045. Never pure black.
+   - `glow`: the flood, lightened (keeping its hue) until it reaches 3:1 on the ground.
+   - `secondary`: the next candidate that differs from the flood by at least 40° of hue
+     or 0.18 of lightness, else `null`.
+   - `ink`: `#0e0d0c` or `#fbf7ef`, whichever has more contrast on the flood.
+   - `hue`: the flood's OKLCH hue as 0–1; `vivid`: the winning score (0 for monochrome
+     sleeves, up to about 2.6).
 
-  // 3. Median cut quantization
-  const palette = medianCut(pixels, 8);
-
-  // 4. Calculate vibrance and select colors
-  const sorted = palette.sort((a, b) => getVibrance(b) - getVibrance(a));
-
-  return {
-    background: getDarkestColor(sorted),
-    foreground: '#ffffff',
-    accent: sorted[0],  // Most vibrant
-    muted: sorted[1]    // Second most vibrant
-  };
-}
-```
-
-### Vibrance Calculation
-
-```javascript
-function getVibrance(color) {
-  const { r, g, b } = color;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  const saturation = max === 0 ? 0 : (max - min) / max;
-  const lightness = (max + min) / 2 / 255;
-
-  // Prefer saturated colors that aren't too dark or light
-  return saturation * (1 - Math.abs(lightness - 0.5));
-}
-```
+k-means is seeded, so re-running on the same sleeve gives the same palette. Albums with
+no hi-res artwork get a default palette (flood `#e8e2d6`, ground `#1c1916`) and no
+swatches.
 
 ### Output Files
+
+Both files are keyed by `uri_release`, one album per line, in `collection.json` order.
+Albums no longer in the collection are dropped. See
+[schemas.md](../data/schemas.md#album-colorsjson) for the fields.
 
 **album-colors.json:**
 ```json
 {
-  "radiohead-ok-computer": {
-    "background": "#1a1a2e",
-    "foreground": "#ffffff",
-    "accent": "#4a90a4",
-    "muted": "#6b7b8a"
-  }
+  "/album/glastonbury-1994-38527017/": {"v":2,"flood":"#05abcb","ink":"#0e0d0c","ground":"#0a232b","glow":"#05abcb","secondary":"#0f5a97","hue":0.605,"vivid":0.94}
 }
 ```
 
-The frontend reads palettes only from this file, through `useAlbumColors`,
-`useAlbumColorMap` and `src/lib/sleeveColour.ts`. The old
+**album-swatches.json:** up to six `[hex, percentOfSleeve]` pairs, largest first.
+```json
+{
+  "/album/glastonbury-1994-38527017/": [["#183139",23],["#465428",23],["#135084",11],["#efc74e",11],["#9c7f32",10],["#39b7b0",9]]
+}
+```
+
+The swatches live in their own file because only the album page shows them; in the
+palette map they would roughly double the gzipped size of a file every page loads
+(about 138 KB for the map, 178 KB for the swatches).
+
+The frontend reads palettes only from these files, through `useAlbumColors`,
+`useAlbumColorMap`, `useAlbumSwatches` and `src/lib/sleeveColour.ts`. The old
 `album-colors.css` (around 510KB of per-album classes, render-blocking and
 unused by any component) is no longer generated or imported.
 
 ### Incremental Processing
 
 ```javascript
-// Load existing colors
-const existing = JSON.parse(fs.readFileSync('album-colors.json'));
+const VERSION = 2; // bump when the algorithm or output shape changes
 
-// Only process new albums
-const albums = getAlbumList();
-for (const album of albums) {
-  if (existing[album.slug]) continue;  // Skip cached
-
-  const colors = await extractColors(album.imagePath);
-  existing[album.slug] = colors;
+for (const album of collection) {
+  const uri = album.uri_release;
+  const kept = existing[uri];
+  if (!force && kept?.v === VERSION && existingSwatches[uri]) {
+    colours[uri] = kept;             // reuse
+    swatches[uri] = existingSwatches[uri];
+    continue;
+  }
+  // ...extract palette and swatches from the sleeve
 }
 
-// Write merged result
-fs.writeFileSync('album-colors.json', JSON.stringify(existing, null, 2));
+// Rebuilt from collection.json each run, so removed albums drop out
+await writeOnePerLine(jsonPath, colours);
+await writeOnePerLine(swatchesPath, swatches);
 ```
+
+Bump `VERSION` whenever the algorithm changes: every older entry is then redone on the
+next run, as if `--force` had been passed.
 
 ---
 
 ### Keeping the committed palettes current
 
-`public/album-colors.json` is committed, and
-the CI build only extracts palettes for albums missing from the JSON. If the
-committed file falls behind the collection, CI re-extracts the backlog on
+`public/album-colors.json` and `public/album-swatches.json` are committed, and
+the CI build only extracts palettes for albums missing from them (or at an older
+`VERSION`). If the
+committed files fall behind the collection, CI re-extracts the backlog on
 every run (at one point 215 albums), and in any incremental build that lacks
-the hi-res sources those albums would get the default grey palette instead.
+the hi-res sources those albums would get the default neutral palette instead.
 
-Two things keep the file current:
+Two things keep the files current:
 
-- **The output is deterministic.** The JSON carries no timestamp, so running
-  the script with no new albums leaves the file byte-identical.
+- **The output is deterministic.** The JSON carries no timestamp, k-means is
+  seeded and entries follow `collection.json` order, so running the script with
+  no new albums leaves both files byte-identical.
 - **A pre-commit hook regenerates it.** `scripts/git-hooks/pre-commit`
-  runs `generate-album-colors.js` and stages `album-colors.json` whenever a
+  runs `generate-album-colors.js` and stages both `album-colors.json` and
+  `album-swatches.json` whenever a
   commit includes album artwork (`public/album/*/*-hi-res.jpg`) or
   `public/collection.json`. `pnpm install` installs it into `.git/hooks`
   via the `prepare` script (`scripts/install-git-hooks.js`); run
@@ -301,6 +316,20 @@ the JPEG header. A PNG saved with a `.jpg` extension used to fail with
 
 ### Satori Template
 
+Album cards take their colours from the album's `album-colors.json` palette through
+`ogColours()`: the sleeve's `ground` as the background, cream (`#fbf7ef`) text, and
+`glow` for accents (the artist name and the site mark).
+
+```javascript
+function ogColours(palette) {
+  if (!palette) return null;
+  return { background: palette.ground, foreground: '#fbf7ef', accent: palette.glow };
+}
+```
+
+Cards already in the CI cache (`node_modules/.cache/assets/og`) are not redrawn, so
+they keep their old colours until that cache is cleared.
+
 ```jsx
 const template = (
   <div style={{
@@ -337,7 +366,7 @@ const template = (
       <h1 style={{ fontSize: '48px', fontWeight: 'bold' }}>
         {album.title}
       </h1>
-      <p style={{ fontSize: '32px', color: colors.muted }}>
+      <p style={{ fontSize: '32px', color: colors.accent }}>
         {album.artist}
       </p>
       <p style={{ fontSize: '24px' }}>
@@ -412,7 +441,7 @@ pnpm run build:wrapped
 ### What it Generates
 
 - `wrapped.json` with year-by-year data
-- Album color palettes included
+- Sleeve palettes copied from `album-colors.json` (each release's `colors` and the theme palettes)
 - Timeline and insight calculations
 - Each release carries `year_original`; `insights.decades` counts by it,
   falling back to `date_release_year`

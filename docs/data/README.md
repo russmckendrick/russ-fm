@@ -49,7 +49,8 @@ flowchart TB
 ```
 public/
 ├── collection.json           # Album index for listings
-├── album-colors.json         # Pre-extracted color palettes
+├── album-colors.json         # Pre-extracted sleeve colour palettes
+├── album-swatches.json       # Sleeve swatches, [hex, percent] pairs (album page only)
 ├── wrapped.json              # Year-in-review data
 ├── album/
 │   └── {album-slug}/
@@ -82,13 +83,15 @@ const albums = await fetch('/collection.json').then(r => r.json());
 // Individual album (full data)
 const album = await fetch(`/album/${slug}/${slug}.json`).then(r => r.json());
 
-// Album colors
-const colors = await fetch('/album-colors.json').then(r => r.json());
+// Sleeve colours (uri_release → palette) and swatches (uri_release → [hex, percent][])
+const colours = await fetch('/album-colors.json').then(r => r.json());
+const swatches = await fetch('/album-swatches.json').then(r => r.json());
 ```
 
 In the app these files are read through cached loaders rather than raw `fetch` calls:
 `loadCollection()` / `useCollection()` and `loadDetailJson()` in `src/lib/collection.ts`, and
-`useAlbumColors()` / `useAlbumColorMap()` for the palettes. See
+`useAlbumColors()` / `useAlbumColorMap()` for the palettes and `useAlbumSwatches()` for the
+swatches. See
 [Frontend utilities](../frontend/utilities.md#collection-loader-srclibcollectionts).
 
 ## Key Design Decisions

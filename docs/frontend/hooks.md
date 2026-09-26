@@ -131,16 +131,22 @@ function TypeAhead() {
 
 ## Color Hooks
 
-All colour hooks read the pre-extracted `/album-colors.json` (URI → palette), which is
-fetched once and cached in memory. Turn a palette into page colours with `floodFor()` from
+The palette hooks read the pre-extracted `/album-colors.json` (URI → palette), which is
+fetched once and cached in memory. Every colour is decided at build time by
+`scripts/generate-album-colors.js`, Apple Music artwork colours included, so pages only read
+it. Turn a palette into page colours with `floodFor()` from
 [`src/lib/sleeveColour.ts`](./utilities.md#sleeve-colours-srclibsleevecolourts).
 
 ```typescript
 interface AlbumColorPalette {
-  background: string;  // dark background swatch
-  foreground: string;  // text colour on the background
-  accent: string;      // most vibrant swatch (often near-black on dark covers)
-  muted: string;       // secondary swatch
+  v: number;                // palette version
+  flood: string;            // the sleeve's colour; a tinted neutral when vivid is 0
+  ink: string;              // dark ink or cream, whichever reads on the flood
+  ground: string;           // the sleeve's own dark (page body, vinyl labels), never pure black
+  glow: string;             // the flood, lightened if needed to reach 3:1 on the ground
+  secondary: string | null; // a second, clearly different sleeve colour
+  hue: number;              // flood hue, 0–1 (OKLCH), for colour sorting
+  vivid: number;            // how bold the flood is: 0 for monochrome, up to ~2.6
 }
 ```
 
@@ -189,14 +195,33 @@ URIs with a trailing slash (`/album/slug/`).
 
 ### useAlbumColorsWithFallback
 
-Same as `useAlbumColors` but never `null`: returns a neutral dark palette when the album has
-no entry.
+Same as `useAlbumColors` but never `null`: returns the neutral palette (flood `#e8e2d6`,
+ground `#1c1916`, `vivid` 0) when the album has no entry.
 
 ---
 
 ### preloadAlbumColors
 
 `preloadAlbumColors(): Promise<void>` starts loading `album-colors.json` ahead of use.
+
+---
+
+### useAlbumSwatches
+
+The sleeve's main swatches, largest first, from `/album-swatches.json`. Only the album page
+shows them, so they live in their own file, fetched once on first use.
+
+```typescript
+import { useAlbumSwatches, type AlbumSwatch } from '@/hooks/useAlbumColors';
+
+const swatches: AlbumSwatch[] = useAlbumSwatches(album.uri_release);
+// [['#183139', 23], ['#465428', 23], ...] — [hex, percent of the sleeve]
+```
+
+**Parameters:** `uri?: string` — the album's `uri_release`.
+
+**Returns:** `AlbumSwatch[]` (`[hex, percent]` pairs, up to six). Empty until loaded, and for
+albums without artwork.
 
 ### useBackdropTone (`src/hooks/useBackdropTone.ts`)
 
@@ -527,7 +552,7 @@ Compose hooks for complex functionality:
 ```typescript
 function useAlbumDetail(slug) {
   const [album, setAlbum] = useState(null);
-  const { colors } = useAlbumColors(slug);
+  const palette = useAlbumColors(slug);
   const { isAuthenticated } = useLastFmAuth();
 
   useEffect(() => {
@@ -538,7 +563,7 @@ function useAlbumDetail(slug) {
 
   return {
     album,
-    colors,
+    flood: floodFor(palette),
     canScrobble: isAuthenticated
   };
 }

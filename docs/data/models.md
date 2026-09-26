@@ -361,14 +361,24 @@ export interface ScrobbleResponse {
 ### Color Types
 
 ```typescript
-export interface ColorPalette {
-  background: string;
-  foreground: string;
-  accent: string;
-  muted: string;
+// src/hooks/useAlbumColors.ts
+export interface AlbumColorPalette {
+  v: number;                // palette version
+  flood: string;            // the sleeve's colour
+  ink: string;              // dark ink or cream, whichever reads on the flood
+  ground: string;           // the sleeve's own dark, never pure black
+  glow: string;             // flood lightened to 3:1 on the ground
+  secondary: string | null; // a second, clearly different sleeve colour
+  hue: number;              // flood hue, 0–1 (OKLCH)
+  vivid: number;            // 0 for monochrome sleeves, up to ~2.6
 }
 
-export type AlbumColors = Record<string, ColorPalette>;
+export type AlbumSwatch = [string, number]; // [hex, percent of the sleeve]
+
+// src/types/wrapped.ts
+export type ColorPalette = AlbumColorPalette;
+
+export type AlbumColors = Record<string, AlbumColorPalette>;
 ```
 
 ### Asset Types (`types/assets.ts`)

@@ -299,29 +299,32 @@ panel, and the album and artist pages. The album page shows the pressing's own d
 
 ## Sleeve Colours (`src/lib/sleeveColour.ts`)
 
-Turns an `album-colors.json` palette into the colours a page paints with. The palette's
-`accent` is often near-black on dark covers, so candidates are scored by saturation weighted
-towards mid lightness and the best one is used. The design rules are in
+Reads an `album-colors.json` palette. Every colour (flood, ink, ground, glow, secondary, hue,
+vividness) is decided at build time by `scripts/generate-album-colors.js`, Apple Music
+artwork colours included, so every page shows the same flood for a sleeve and these helpers
+only read it (see [asset-processing.md](../build-pipeline/asset-processing.md#color-extraction)
+for how the colours are picked). The design rules are in
 [design-system.md](./design-system.md#colour-helpers--srclibsleevecolourts).
 
 ```typescript
-import { floodFor, appleArtworkColours, inkOn, vividFrom, hue } from '@/lib/sleeveColour';
+import { floodFor, colourBar, vividFrom } from '@/lib/sleeveColour';
 
-const flood = floodFor(palette, appleArtworkColours(detailedAlbum?.services));
-// { flood, ink, sub, ground }
+const flood = floodFor(palette);
+// { flood, ink, sub, ground, glow, secondary }
+<div style={{ background: colourBar(flood) }} />
 ```
 
 | Export | Description |
 |--------|-------------|
-| `floodFor(palette, extra?)` | `{ flood, ink, sub, ground }`. `flood` is the most vivid candidate or `NEUTRAL_FLOOD` (`#e8e2d6`); `ink` / `sub` are text colours for it; `ground` is the sleeve's dark background (used for vinyl labels and the album page ground) |
-| `vividFrom(palette, extra?)` | Most vivid of `accent`, `muted` and `extra`, or `null` below the threshold (0.5) |
-| `vividScore(hex)` | 0 for grey, near-black or near-white; up to ~2 for bold mid-lightness colours |
-| `hue(hex)` | Hue 0–1, used by the colour sort |
+| `floodFor(palette)` | `{ flood, ink, sub, ground, glow, secondary }` read from the palette. `ink` / `sub` are text colours for the flood; `ground` is the sleeve's own dark (vinyl labels, the album page ground); `glow` is the flood lifted to 3:1 on the ground (accents below a hero). A missing palette gets `NEUTRAL_FLOOD` (`#e8e2d6`) on `#1c1916` |
+| `vividFrom(palette)` | The flood when `vivid > 0`, otherwise `null` (monochrome sleeves, missing palettes) |
+| `colourBar(flood)` | CSS background for a tile's colour bar: the flood, split 62/38 with the secondary colour when there is one. Used by `RecordTile` |
+| `colourSortKey(palette)` | Sort key for colour walls: bold sleeves by `hue` (0–1), then monochrome sleeves lightest first, then sleeves with no palette. Used by the albums page colour sort |
+| `luminance(hex)` | Relative luminance, 0 (black) to 1 (white) |
 | `inkOn(bg)` | `INK` (`#0e0d0c`) or `CREAM` (`#fbf7ef`), whichever contrasts more |
 | `subInk(ink)` | Softer secondary text for that ink |
-| `readableOn(colour, bg)` | The colour if it reaches 3:1 on `bg`, otherwise cream |
 | `blendedFlood(colours)` | `{ background, top, ink }`: a top-to-bottom `linear-gradient` through the given floods (first held for the top 12%, for the nav). `ink` suits the top colour; the other colours are lightened (dark ink) or darkened (cream ink) until it reads at 4.5:1. One colour returns a plain background. Used by the artist page for its last three additions |
-| `appleArtworkColours(services)` | Apple Music artwork `bgColor` / `textColor1` / `textColor2` from a detailed album JSON as `#hex` strings, for use as `extra` |
+| `BOLD_VIVID` | `vivid` at or above this (1) counts as a bold sleeve. Used by the home genre chips and the home Browse by colour strip |
 | `INK`, `CREAM`, `GROUND`, `NEUTRAL_FLOOD` | Constants |
 
 ## Browse Sleeve Helpers (`src/components/browse/facetSleeves.ts`)
@@ -331,7 +334,7 @@ sleeve. `ColourMap` is the `useAlbumColorMap()` result.
 
 | Export | Description |
 |--------|-------------|
-| `sleeveVividness(uri, map)` | Vivid score of a sleeve's best colour (0 when none) |
+| `sleeveVividness(uri, map)` | The palette's `vivid` score (0 for monochrome sleeves or no palette) |
 | `mostVivid(items, uriOf, map, limit = 240)` | Most vivid item among the first `limit`; callers pass recency-sorted lists so ties go to the newest |
 | `pickSleeves(albums, map, count = 5)` | Sleeves for a `FacetFan`: the most vivid first (it sets the flood), then recent records by different artists |
 | `floodForUri(uri, map)` | `floodFor()` by album URI |

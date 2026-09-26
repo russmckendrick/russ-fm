@@ -121,12 +121,14 @@ flowchart LR
         album/*/index.json
         artist/*/index.json
         album-colors.json
+        album-swatches.json
     end
 
     subgraph Hooks
         useCollection
         useAlbumColorMap
         useAlbumColors
+        useAlbumSwatches
         useSearch
     end
 
@@ -221,15 +223,17 @@ the operating system's light/dark setting.
 
 ### Album colours
 
-Colour comes from the sleeve, never a fixed accent. Palettes are pre-extracted into
-`/public/album-colors.json`:
+Colour comes from the sleeve, never a fixed accent. Palettes are decided at build time by
+`scripts/generate-album-colors.js` (Apple Music artwork colours included) and written to
+`/public/album-colors.json`, so a sleeve has the same flood on every page:
 
 - `useAlbumColors(uri)` — palette for one album.
 - `useAlbumColorMap()` — the whole URI → palette map, for grids, shelves and other pages that
   paint many sleeves.
-- `floodFor(palette, extra?)` in `src/lib/sleeveColour.ts` — picks the most vivid swatch and
-  returns `{ flood, ink, sub, ground }`. Album pages also pass Apple Music artwork colours
-  (`appleArtworkColours`) as extra candidates.
+- `useAlbumSwatches(uri)` — the sleeve's main swatches from `/public/album-swatches.json`, for
+  the album page's "Sleeve colours" strip. Fetched on first use.
+- `floodFor(palette)` in `src/lib/sleeveColour.ts` — returns `{ flood, ink, sub, ground, glow,
+  secondary }` from the palette, or a neutral flood when there is none.
 - `usePageFlood(flood, ink)` — tells the navigation which colour the hero is.
 
 ```tsx
@@ -244,7 +248,8 @@ usePageFlood(flood.flood, flood.ink);
 <section style={{ background: flood.flood, color: flood.ink }}>…</section>
 ```
 
-`album-colors.json` is the only palette output; there is no generated colour stylesheet.
+`album-colors.json` and `album-swatches.json` are the only colour outputs; there is no
+generated colour stylesheet.
 `useAlbumColors()` returns the palette on the first render once the JSON has loaded, so pages
 flood in the right colour without a neutral flash.
 
