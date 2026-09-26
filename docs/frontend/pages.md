@@ -533,7 +533,7 @@ with the album and artist pages.
 - At rest the record sits hidden directly behind the cover; it never slides
   out on this page
 - Board layout comes from `redesignConfig.random`: 20 columns (1 artist row,
-  3 title rows) from 640px up, 12 columns (2 artist rows, 4 title rows) below.
+  3 title rows) from 640px up, 12 columns (2 artist rows, 3 title rows) below.
   Tiles size themselves from the board width with container units. Text is
   upper-cased with accents stripped; titles that run past the last row end in
   an ellipsis, and the genre is the first clean genre that fits

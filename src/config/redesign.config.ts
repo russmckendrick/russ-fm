@@ -106,7 +106,7 @@ export const redesignConfig = {
    */
   random: {
     wide: { cols: 20, artistRows: 1, titleRows: 3 },
-    narrow: { cols: 12, artistRows: 2, titleRows: 4 },
+    narrow: { cols: 12, artistRows: 2, titleRows: 3 },
     tickMs: 42,
   },
 
