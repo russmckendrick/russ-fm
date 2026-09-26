@@ -295,7 +295,8 @@ artist's last three additions (two or one if that's all there is), newest
 at the top so it meets the nav, which follows via `usePageFlood`. See
 `blendedFlood()` in `src/lib/sleeveColour.ts`.
 
-- **Header** — the portrait printed into the flood in greyscale, fading out at the bottom.
+- **Header** — the portrait printed into the flood in greyscale, fading out at the
+  bottom only (`PORTRAIT_MASK`: a long ease-out fade; the other edges stay crisp).
   It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
   except on a dark flood with a dark backdrop, where it screens so the black takes the
   flood instead. Screening on a pale flood washed subjects out to ghosts, hence the rule.

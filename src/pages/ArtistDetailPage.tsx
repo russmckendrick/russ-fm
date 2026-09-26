@@ -270,16 +270,16 @@ export function ArtistDetailPage() {
         <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(320px,520px)_minmax(0,1fr)] lg:gap-16 lg:px-14 lg:pt-10">
           {/* The portrait is printed into the flood in greyscale, blended so
               its backdrop takes the sleeve colours (see portraitBlend). The
-              bottom edge fades out rather than ending on a hard crop; the mask
-              sits on the <img> because a mask on the wrapper would isolate it
-              and stop the blend reaching the flood. */}
+              bottom fades out (see PORTRAIT_MASK); the mask sits on the
+              <img> because a mask on the wrapper would isolate it and stop
+              the blend reaching the flood. */}
           <div className="aspect-[4/5] w-full max-w-[520px] overflow-hidden">
             <img
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
               onError={handleImageError}
-              className="h-full w-full object-cover object-top grayscale contrast-[1.2] [mask-image:linear-gradient(to_bottom,#000_78%,transparent)]"
-              style={{ mixBlendMode: portraitBlend }}
+              className="h-full w-full object-cover object-top grayscale contrast-[1.2]"
+              style={{ mixBlendMode: portraitBlend, ...PORTRAIT_MASK }}
             />
           </div>
           <div className="flex min-w-0 flex-col gap-7 lg:pt-4">
@@ -461,3 +461,24 @@ function formatAdded(value: string): string {
   const d = new Date(value);
   return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
+
+/**
+ * The artist portrait fades out at the bottom only: a long fade whose stops
+ * follow an ease-out curve, so there's no visible line where it starts. The
+ * other edges stay crisp.
+ */
+const PORTRAIT_FADE = [
+  '#000 40%',
+  'rgba(0,0,0,.94) 52%',
+  'rgba(0,0,0,.82) 62%',
+  'rgba(0,0,0,.64) 71%',
+  'rgba(0,0,0,.44) 79%',
+  'rgba(0,0,0,.26) 86%',
+  'rgba(0,0,0,.12) 92%',
+  'rgba(0,0,0,.04) 97%',
+  'transparent 100%',
+].join(', ');
+const PORTRAIT_MASK = {
+  maskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
+  WebkitMaskImage: `linear-gradient(to bottom, ${PORTRAIT_FADE})`,
+} as const;
