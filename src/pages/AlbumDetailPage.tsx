@@ -813,7 +813,7 @@ export function AlbumDetailPage() {
   ].filter(Boolean) as Array<{ label: string; url: string }>;
 
   const heroText = (
-    <div className="flex flex-col gap-5 lg:gap-6">
+    <div className="flex flex-col gap-2.5 sm:gap-5 lg:gap-6">
       {isBox && <span className="t-kicker">Box set</span>}
       <div className="flex flex-wrap items-center gap-3">
         {(album.artists && album.artists.length > 1 ? album.artists : [{ name: album.release_artist, uri_artist: album.uri_artist }]).map((artist, i, all) => (
@@ -823,7 +823,7 @@ export function AlbumDetailPage() {
                 src={getArtistAvatarFromData(artist.uri_artist)}
                 alt=""
                 onError={handleImageError}
-                className="h-10 w-10 rounded-full object-cover md:h-11 md:w-11"
+                className="h-10 w-10 rounded-full object-cover max-sm:hidden md:h-11 md:w-11"
               />
               <span className="t-dispn text-[22px] md:text-[28px]">{artist.name}</span>
             </Link>
