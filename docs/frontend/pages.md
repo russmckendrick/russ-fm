@@ -23,7 +23,7 @@ This document covers the route-level page components in russ.fm.
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
 | `/stats` | `Stats` title → headline counts → month chart → growth → decades / genres → release years → most collected → formats / countries → labels → latest additions → hidden gems → random picks / artists. All bars take sleeve colours. |
-| `/random` | Full-screen Three.js crate; background and nav fade to the active record's flood. |
+| `/shuffle` (also `/random`) | Split-flap board clatters to a random record; its colour drops down the page and the cover turns back over the spinning record. |
 | `/wrapped/:year` | `CoverHero` on the year's first addition → headline counts → month chart → top artists → genres / decades → a shelf per month → year links. `Presentation` opens the full-screen mode. |
 
 ## Route Map
@@ -48,7 +48,7 @@ flowchart TB
         DecadeDetail["/decade/:slug"]
         Countries["/countries"]
         CountryDetail["/country/:slug"]
-        Random["/random"]
+        Random["/shuffle, /random"]
         Search["/search"]
         Wrapped["/wrapped"]
         WrappedYear["/wrapped/:year"]
@@ -208,8 +208,10 @@ on the ground.
   the hero. Section-header rows render as kickers. Each track deep-links to Spotify when a match exists
   (matched by normalised title via
   [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)).
-- **Listen** — `MusicPlayerSection` embeds.
-- **Videos** — `VideoSection`.
+- **Listen** — `MusicPlayerSection`: Apple Music, Spotify and YouTube tabs.
+  The release's YouTube videos live in the YouTube tab (`YouTubeEmbed`), not
+  a separate section, so an album with dozens of videos costs no extra
+  height. The section shows when any of the three is available.
 - **Artist bios** — one panel per credited artist with a biography, with a
   link to the artist's records in the collection.
 
@@ -302,10 +304,10 @@ Loads the collection through the shared `loadCollection()`.
 
 **Route:** `/artist/:slug`
 
-The top of the page is a vertical blend through the sleeve colours of the
-artist's last three additions (two or one if that's all there is), newest
-at the top so it meets the nav, which follows via `usePageFlood`. See
-`blendedFlood()` in `src/lib/sleeveColour.ts`.
+The top of the page is one solid colour: the boldest (most `vivid`) sleeve
+among the artist's last ten additions, via `recordsFlood(uris, map, 10)`.
+The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
+swatch tints the rest of the page. No gradients.
 
 - **Header** — the portrait printed into the flood in greyscale, fading out at the
   bottom only (`PORTRAIT_MASK`: a long ease-out fade; the other edges stay crisp).
@@ -316,11 +318,17 @@ at the top so it meets the nav, which follows via `usePageFlood`. See
   flood alone. The artist name is a `FitTitle` (up to 176px, shrunk until its longest word fits,
   never broken mid-word). Then stats
   (records, box sets, "Releases span" from the earliest to the latest
-  original year, or "Released" when they match, Last.fm listeners), biography, service
+  original year, or "Released" when they match, Last.fm listeners), service
   pills (Spotify, Apple Music, Last.fm, Discogs, Wikipedia) and genre links
   to `/genre/:slug`. Wikipedia uses the stored `wikipedia_url` when
   available, otherwise a constructed URL.
-- **Discography** — `RecordTile`s on the dark ground with a two-way
+- **Biography** — its own full-width section under the hero and above the
+  discography, set in columns (one on phones, two from `md`, three from
+  `xl`). It uses the longer of `biography` and Last.fm's full
+  `services.lastfm.bio_content` (tags and the "Read more on Last.fm" /
+  licence tail stripped), shows whole paragraphs up to about 1,500
+  characters, then a Read more toggle.
+- **Discography** — `RecordTile`s on the page ground with a two-way
   toggle in the section heading (hidden when the artist has one record):
   - **Recently added** (default) — one grid, newest additions first, each
     tile showing the date added.
@@ -364,25 +372,28 @@ Collection statistics. Every bar and chart takes colours from the sleeves
 it counts: a month is a stack of that month's records, a genre or decade
 takes the colour of a representative record. Boxset members are excluded.
 
-**Sections:**
+**Sections**, ordered so sleeves and portraits alternate with charts, and
+paired into columns on `lg`+ (stacked below that) with the artwork side
+swapping from row to row:
 
-- Title with "Since" the first addition
+- Title band ("Since" the first addition) in the latest additions' colour
 - Headline counts (records, artists, genres, records per artist), each in
   a sleeve colour, then smaller counts (labels, countries, one-record
   artists, artists with 5+, busiest month)
-- Added per month (one block per record) and cumulative growth
-- Decades and genres (linking to `/decades`, `/genres`, `/genre/:slug`)
-- Golden year and top release years
+- Latest additions (a shelf of sleeves, full width)
+- Most collected artists (7 cols) | Genres (5 cols, 13 bars)
+- Added per month (one block per record, full width)
+- Decades (5 cols) | **Hidden gems** (7 cols, 8 sleeves under
+  `redesignConfig.stats.hiddenGemsListenersThreshold` Last.fm listeners)
+- Golden year (with four of its sleeves) | top release years
+- Random picks (full width)
+- Cumulative growth (8 cols) | Formats (`format_primary`, 4 cols)
+- Labels (28 chips) | Countries
+- Random artists
 
 Decades, release years and the release-year colour groups use the
-original year (`originalYear()`).
-- Most collected artists
-- Formats (`format_primary`) and countries
-- Labels
-- Latest additions
-- **Hidden gems** — records under
-  `redesignConfig.stats.hiddenGemsListenersThreshold` Last.fm listeners
-- Random picks and random artists
+original year (`originalYear()`). Links go to `/decades`, `/genres`,
+`/genre/:slug`, `/labels`, `/countries`.
 
 Counts are driven by `redesignConfig.stats`. The aggregations read fields
 denormalised into `collection.json` (`format_primary`, `labels`,
@@ -478,18 +489,46 @@ with the album and artist pages.
 
 ### RandomPage (`src/pages/RandomPage.tsx`)
 
-**Route:** `/random` (labelled "Shuffle" in the nav and footer)
+**Routes:** `/shuffle` (what the nav, footer and Stats "More" link use) and
+`/random`, kept for old links. Both render the same page.
 
-- Full-screen Three.js vinyl crate of up to 25 shuffled records from the
-  shared `loadCollection()` (boxset members excluded)
-- The scene background and fog fade towards the active record's flood
-  colour, and the nav takes the same colour through `usePageFlood`
-- Overlay panels sit on dark glass so they read on any colour
-- Pointer tap/drag inspects the active sleeve, wheel and arrow keys flip,
-  Escape exits inspect mode; controls for previous, inspect, next, shuffle
-  and open record
+- Shuffle links (header pill, mobile menu, footer) come from `shuffleLink()`
+  in `src/lib/shuffleLink.ts`. Away from the page they go to `/shuffle`; on it
+  they keep the current URL and pass `{ reshuffle: true }` as navigation state
+  (React Router replaces the entry, so Back is not filled with shuffles), and
+  `ShuffleScene` runs a shuffle for each new location key carrying that state,
+  scrolling to the top first. The nav closes its menus on every navigation
+  (`location.key`), so the mobile menu closes too
+
+- Loads the shared `loadCollection()` (boxset members excluded) and
+  `preloadAlbumColors()` together, so the first record lands in its own colour
+- `ShuffleScene` (`src/pages/random/ShuffleScene.tsx`): the cover and its
+  record on the left (centred above the board below 1024px), the `FlapBoard`
+  (`src/pages/random/FlapBoard.tsx`) on the right with Artist, Title, then
+  Year and Genre rows, and Shuffle / View album pills under it
+- Each shuffle runs three phases:
+  1. **rolling**: the cover turns edge-on so the record hidden behind it shows,
+     spinning at 45 with the incoming sleeve on its label, while the tiles
+     flip to the new record in a left-to-right, top-to-bottom cascade (tiles
+     blank before and after stay still)
+  2. **dropping**: the new flood falls down the page like a flap (`.flap-drop`,
+     a hard edge, no blend)
+  3. **idle**: the page, nav (`usePageFlood` with the cover and ground) and
+     text take the new colours and the cover turns back over the record
+- At rest the record sits hidden directly behind the cover; it never slides
+  out on this page
+- Board layout comes from `redesignConfig.random`: 20 columns (1 artist row,
+  3 title rows) from 640px up, 12 columns (2 artist rows, 4 title rows) below.
+  Tiles size themselves from the board width with container units. Text is
+  upper-cased with accents stripped; titles that run past the last row end in
+  an ellipsis, and the genre is the first clean genre that fits
+  (`src/lib/splitFlap.ts`)
+- Year and genre letters use the record's `glow`; the Artist and Title rows
+  link to the artist and album
+- Reduced motion: tiles and colour switch at once, the cover does not turn
+- Loading skeleton (blank sleeve and board), retryable error ("Try again")
+  and empty states
 - No audio
-- Loading stage, retryable error ("Try again") and empty states
 
 ---
 

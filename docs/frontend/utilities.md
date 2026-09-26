@@ -36,23 +36,6 @@ const url = migrateImageUri(release.images.medium);
 
 ---
 
-### getWebGLTextureImageUrl
-
-Create a texture-loader-safe image URL for WebGL/canvas use.
-
-```typescript
-import { getWebGLTextureImageUrl } from '@/lib/image-utils';
-
-const textureUrl = getWebGLTextureImageUrl(albumCoverUrl);
-```
-
-Production R2 images get a stable `?cors=webgl` cache key so browsers do not
-reuse a previous non-CORS `<img>` response when Three.js loads the same asset
-with `crossOrigin="anonymous"`. Development and non-R2 URLs are returned
-unchanged.
-
----
-
 ### getAlbumImageUrl
 
 Generate album image URL with proper sizing.
@@ -317,13 +300,13 @@ const flood = floodFor(palette);
 | Export | Description |
 |--------|-------------|
 | `floodFor(palette)` | `{ flood, ink, sub, ground, glow, secondary }` read from the palette. `ink` / `sub` are text colours for the flood; `ground` is the sleeve's own dark (vinyl labels, the album page ground); `glow` is the flood lifted to 3:1 on the ground (accents below a hero). A missing palette gets `NEUTRAL_FLOOD` (`#e8e2d6`) on `#1c1916` |
+| `pageGround(flood)` | The dark a page sits on: the sleeve's `ground`, or, when that is a neutral near-black and the flood has colour, `#0e0d0c` mixed 20% toward the flood so the page never reads as plain black. Used by `recordsFlood` / `bandFromFlood` |
 | `vividFrom(palette)` | The flood when `vivid > 0`, otherwise `null` (monochrome sleeves, missing palettes) |
 | `colourBar(flood)` | CSS background for a tile's colour bar: the flood, split 62/38 with the secondary colour when there is one. Used by `RecordTile` |
 | `colourSortKey(palette)` | Sort key for colour walls: bold sleeves by `hue` (0–1), then monochrome sleeves lightest first, then sleeves with no palette. Used by the albums page colour sort |
 | `luminance(hex)` | Relative luminance, 0 (black) to 1 (white) |
 | `inkOn(bg)` | `INK` (`#0e0d0c`) or `CREAM` (`#fbf7ef`), whichever contrasts more |
 | `subInk(ink)` | Softer secondary text for that ink |
-| `blendedFlood(colours)` | `{ background, top, ink }`: a top-to-bottom `linear-gradient` through the given floods (first held for the top 12%, for the nav). `ink` suits the top colour; the other colours are lightened (dark ink) or darkened (cream ink) until it reads at 4.5:1. One colour returns a plain background. Used by the artist page for its last three additions |
 | `BOLD_VIVID` | `vivid` at or above this (1) counts as a bold sleeve. Used by the home genre chips and the home Browse by colour strip |
 | `INK`, `CREAM`, `GROUND`, `NEUTRAL_FLOOD` | Constants |
 

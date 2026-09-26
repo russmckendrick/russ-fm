@@ -16,8 +16,8 @@ Defined in `src/styles/player.css` and `src/styles/design-tokens.css` (legacy na
 
 | Token | Value | Use |
 | --- | --- | --- |
-| `--ground` | `#0e0d0c` | page background |
-| `--ground-2` / `--ground-3` | `#171512` / `#211d19` | raised panels, menus |
+| `--ground` | `#0e0d0c`, then per page | page background; FloodProvider sets it to the page's lead sleeve `ground` swatch so no page sits on plain black. `--ground-2` / `--ground-3` are lifted from it with `color-mix` |
+| `--ground-2` / `--ground-3` | `--ground` + 5% / 10% cream | raised panels, menus |
 | `--cream` | `#fbf7ef` | primary text on ground |
 | `--cream-dim` | `#a9a39a` | secondary text on ground |
 | `--cream-rule` | `rgba(251,247,239,.14)` | hairlines |
@@ -43,17 +43,21 @@ Scale titles to the longest word in condensed type so long album names never ove
 
 - Every sleeve's colours are decided at build time by `scripts/generate-album-colors.js` (Apple Music artwork colours included), so a sleeve has the same flood on every page. The helpers only read them.
 - `floodFor(palette)` → `{ flood, ink, sub, ground, glow, secondary }`, straight from the palette. Monochrome sleeves have a pale neutral flood tinted with the sleeve's own cast; a missing palette gets `#e8e2d6` on a dark ground. `glow` is the flood lifted to 3:1 on the ground, for accents below the hero.
-- `vividFrom(palette)` (the flood when `vivid > 0`, else `null`), `colourBar(flood)` (the flood, split 62/38 with `secondary` when there is one), `colourSortKey(palette)` (bold sleeves by hue, then monochrome ones light to dark), `luminance`, `inkOn`, `subInk`, `blendedFlood(colours)` (a vertical gradient through several floods, the first held at the top for the nav; the ink is chosen for the top colour and the others are lightened or darkened until that ink reads at 4.5:1), and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` / `BOLD_VIVID` (`vivid` threshold for "bold" sleeves) constants.
+- `vividFrom(palette)` (the flood when `vivid > 0`, else `null`), `colourBar(flood)` (the flood, split 62/38 with `secondary` when there is one), `colourSortKey(palette)` (bold sleeves by hue, then monochrome ones light to dark), `luminance`, `inkOn`, `subInk`, and the `INK` / `CREAM` / `GROUND` / `NEUTRAL_FLOOD` / `BOLD_VIVID` (`vivid` threshold for "bold" sleeves) constants.
 - Palettes come from `useAlbumColors(uri)` (one) or `useAlbumColorMap()` (all, for walls/rows); the album page's swatch strip comes from `useAlbumSwatches(uri)`.
 
 ## Components — `src/components/player/`
 
 | Component | What it is |
 | --- | --- |
-| `FloodProvider`, `usePageFlood(flood, ink)`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
+| `FloodProvider`, `usePageFlood(flood, ink, { cover?, ground? })`, `useFloodValue()` | Page sets its flood; the sticky nav reads it with `useFloodValue` and paints itself in the same colour until scrolled, then turns dark. Call `usePageFlood` in any page with a colour hero. |
 | `CoverHero` + `AFTER_HERO` | Cover-led hero layout. `art` hangs over the next section; that section must add `AFTER_HERO` top padding. On phones the text comes first and the cover below. |
 | `HeroRecord` | Big sleeve + spinning disc out to the right (`discOut` %) + shrink-wrap + optional `sticker`. `spinning` turns the spin off; the home hero spins only the visible record. |
-| `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's `ground`. |
+| `Sleeve`, `Vinyl`, `Sticker` | The physical pieces. `Vinyl` label colour is the sleeve's `ground`; `cover` prints a sleeve on the label (zoomed so framed sleeves fill the circle) and crossfades when it changes. |
+| `SpinningMark` | The logo: a `Vinyl` with a bigger label carrying the page's `cover`, or the page flood with a printed mark. |
+| `.vinyl-lit` | For a record that must read on the dark ground (logo, footer): lighter edge lip, hairline rim, stronger fixed highlights and visible grooves. No halo or blur. |
+| `useRecordsFlood(uris)`, `recordsFlood`, `bandFromFlood`, `usePageBand` | Colour a page from the first records it shows: the most vivid of the first three gives one solid band colour (never a blend) and its dark `ground` for the page (`pageGround`: tinted toward the flood when the swatch is a neutral black). Sets the nav and `--ground`. |
+| `FloodBand` | Full-bleed title band in that colour, meeting the nav. Remaps `--cream`, `--cream-dim`, `--cream-rule` and `--ground` inside it, so titles, notes and solid pills written for the dark ground read on the colour. |
 | `RecordTile` | Sleeve in a row/grid; disc slides out on hover (it does not spin); colour bar (`colourBar()`: two-tone when the sleeve has a secondary colour); title/artist/meta. |
 | `PillLink`, `.pill`, `.pill-solid`, `.pill-lg`, `.pill-sm` | Rounded buttons (44px; `.pill-lg` 56px, `.pill-sm` 40px). Solid pills use the flood's ink as fill and the flood as text. `.pill-fill` is the progress fill used by the scrobble button. |
 | `.icon-btn` | 48px round icon button (nav, hero transport controls). |
@@ -71,9 +75,10 @@ Data: use `loadCollection()` / `useCollection()` from `src/lib/collection.ts` (c
 - **Home**: `CoverHero` rotating through recent additions (flood fades per record, disc slides out, sticker pops), numbered progress bars + skip/pause. Then latest additions row, most collected artists, genre chips, headline counts, random picks, browse-by-colour strip.
 - **Album**: `CoverHero` with scrobble as the main action; tracklist grouped by side (scrobbling is whole-album, from the hero); Last.fm panel in the flood colour; about, listen (Spotify/Apple Music), videos, artist, details sidebar, similar albums.
 - **Box set**: the box cover (thick edge) as the hero with its discs fanned out behind; an "In this box" selector whose panel takes the selected album's colour, tracklist and scrobble. Discs come from the box's own tracklist section headers (`buildBoxDiscs` in `src/lib/boxDiscs.ts`); ones without a linked album are shown as generic sleeves using the box cover.
-- **Artist**: the whole top blends through the sleeve colours of the last three additions (`blendedFlood`), newest at the top by the nav; the discography is a `RecordTile` grid with a Recently added (default, date added on each tile) / By year (grouped by decade of original release, oldest first) toggle.
+- **Artist**: the whole top is one solid colour, the boldest sleeve among the artist's last ten additions (`recordsFlood(uris, map, 10)`), and its dark swatch grounds the page; the discography is a `RecordTile` grid with a Recently added (default, date added on each tile) / By year (grouped by decade of original release, oldest first) toggle.
 - **Albums**: sort pills including **Colour** (hue-sorted wall).
-- **Lists / stats / browse**: `t-disp` page title with the count in dim type beside it, chip filters, tiles in the sleeve colours.
+- **Shuffle** (`/shuffle`): a split-flap board (`.flap` tiles: two flat halves and a split line, cream letters, the record's `glow` for year and genre) beside the cover. The record stays hidden behind the cover and only shows while the cover is turned edge-on mid-shuffle; the next flood drops down the page as a hard-edged flap. Cover and record are centred above the board on phones.
+- **Lists / stats / browse / search / genres**: the `t-disp` title (count dim beside it) sits in a `FloodBand` coloured by the first records on the page (Albums: first tiles; Artists: the first artists' latest records; Stats and empty Search: latest additions; Search: first album hits; Browse and facet lists: the first cards' lead sleeves; Genres: the selected genre's lead sleeve). Filters and content sit below on that sleeve's tinted ground. Stats puts Labels beside Countries and Formats full width under them.
 
 ## Performance
 

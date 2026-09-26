@@ -253,22 +253,48 @@ itself in the same colour until the page scrolls, and `--flood` / `--flood-ink` 
 import { usePageFlood } from '@/components/player';
 
 const flood = floodFor(palette);
-usePageFlood(album ? flood.flood : null, album ? flood.ink : null);
+usePageFlood(
+  album ? flood.flood : null,
+  album ? flood.ink : null,
+  album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+);
 ```
 
-**Parameters:** `flood`, `ink` (`string | null | undefined`). Passing `null` for either
+**Parameters:** `flood`, `ink` (`string | null | undefined`), and an optional
+`{ cover, ground }`. `ground` (usually the sleeve's `ground` swatch) becomes `--ground` for the
+whole page. `cover` is an image URL the page already shows. The spinning logo and the footer record put that sleeve on
+their labels; pass the size the page itself loads so it comes from cache. Only the home hero,
+album and artist (latest addition) pages pass one. Passing `null` for either
 resets to the dark ground; the flood is also reset when the page unmounts. Unchanged values
 are ignored, so it is safe to call on every render.
 
 ### useFloodValue
 
-Reads the current `{ flood, ink }`. Used by `Navigation`.
+Reads the current `{ flood, ink, cover, ground }`. Used by `Navigation` and `Footer`.
 
 ```typescript
 import { useFloodValue } from '@/components/player';
 
 const { flood, ink } = useFloodValue();
 ```
+
+---
+
+## Media Query Hooks
+
+### useMediaQuery (`src/hooks/useMediaQuery.ts`)
+
+Whether a CSS media query matches, updating when it changes
+(`useSyncExternalStore` over `matchMedia`). `false` during server rendering.
+
+```typescript
+import { useMediaQuery, usePrefersReducedMotion } from '@/hooks/useMediaQuery';
+
+const isWide = useMediaQuery('(min-width: 640px)');
+const reducedMotion = usePrefersReducedMotion();
+```
+
+The Shuffle page uses both: the board's column count and whether the tiles animate.
 
 ---
 

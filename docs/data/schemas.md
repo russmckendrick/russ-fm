@@ -277,6 +277,11 @@ Full artist data.
 }
 ```
 
+The artist page's biography reads `services.lastfm.bio_content` (Last.fm's full
+biography, HTML with a "Read more on Last.fm" link and licence line at the end)
+and uses it when it is longer than `biography`. Keep that key in the per-artist
+JSON.
+
 ---
 
 ### album-colors.json

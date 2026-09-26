@@ -165,24 +165,45 @@ Sticky header that shares the page's flood colour.
   painted in the hero's flood and ink, so header and hero read as one
   surface. After 120px of scroll it turns to near-opaque dark ground
   (`rgba(14,13,12,.97)`, no backdrop blur) with cream text.
-- `xl+`: `russ.fm` wordmark, Home / Albums / Artists / Genres links, a
-  Browse dropdown (Overview, Labels, Decades, Countries), Stats and
-  Wrapped, a pill search field (`/` focuses it) with `SearchOverlay`, a
-  Shuffle pill and the Last.fm `UserProfileMenu`.
-- Below `xl`: wordmark, search and menu icon buttons (Shuffle and the
-  profile menu from `md`). The menu opens a full-screen panel in the flood
-  colour with every route in large display type; body scroll is locked
-  while it is open. Search opens `MobileSearchModal`.
+- The logo is `SpinningMark` (a record at 33⅓) beside the `russ.fm`
+  wordmark. On pages that pass a `cover` to `usePageFlood` (home hero,
+  album, artist) the label carries that sleeve; elsewhere the label is the
+  page flood (cream on plain pages) with a printed mark so the spin reads.
+  The disc uses `.vinyl-lit` (lit rim and highlights) so it reads on the
+  dark ground. Once scrolled, the header is the page's tinted `--ground`.
+- `xl+`: Home / Albums / Artists / Genres links, a Browse dropdown, Stats
+  and Wrapped as pills. The current page is a solid pill: ink on the flood
+  at the top, the flood itself once scrolled, so the colour follows you
+  down. Then a pill search field (`/` focuses it) with `SearchOverlay`, a
+  Shuffle pill and the Last.fm `UserProfileMenu`. On the Shuffle page the
+  Shuffle pill (and the mobile menu's Shuffle item) runs another shuffle in
+  place instead of reloading the page (`shuffleLink()`, `src/lib/shuffleLink.ts`).
+- Browse opens `BrowseMenuCards` (`src/components/browse/BrowseMenu.tsx`):
+  Overview, Labels, Decades and Countries cards, each painted in its lead
+  sleeve's flood with a `FacetFan` of three sleeves. Leads are chosen so no
+  two cards share a hue. The facet grouping only runs while the menu is open.
+- Below `xl`: search and menu icon buttons (Shuffle and the profile menu
+  from `md`). The menu opens a full-screen panel in the flood colour with
+  every route in large display type and its count (records, artists,
+  genres, labels, decades, countries); the current page has a small
+  spinning record beside it. Body scroll is locked while it is open.
+  Search opens `MobileSearchModal`.
 - No theme toggle.
 
 **Props:** none (uses router and flood context).
 
 ### Footer (`src/components/Footer.tsx`)
 
-Dark-ground footer: a large `russ.fm` wordmark, a data-sources and
-copyright line (year computed at render), internal links (Albums, Artists,
-Genres, Browse, Stats, Wrapped, Shuffle) and small pills for the external
-links in `appConfig.footer.links.external`.
+Dark-ground footer: a colour strip from the last 40 additions along the
+top, a large `russ.fm` wordmark with record / artist counts and the date
+collecting started, link columns (Collection, Browse, More), pills for the
+external links in `appConfig.footer.links.external` and a data-sources and
+copyright line. A large record turns slowly (`.spin-lazy`) off the
+bottom-right corner; it carries the same sleeve as the logo, or on plain
+pages the page flood (else the latest addition's) with `russ.fm` printed on
+the label. It uses `.vinyl-lit` so it stands off the ground. The footer sits on the
+page's tinted `--ground`. Counts exclude box-set members and count artists the way the
+Stats page does.
 
 ### Logo (`src/components/Logo.tsx`)
 
@@ -193,8 +214,8 @@ presentation.
 <Logo className="h-8 w-8" />
 ```
 
-The spinning record `BrandMark` has been removed; the header and footer
-use a `t-disp` wordmark instead.
+The header and footer use `SpinningMark` and `Vinyl` from
+`src/components/player/` instead.
 
 ## Artist Components
 
@@ -260,7 +281,23 @@ their first matching record.
 ### MusicPlayerSection (`src/components/MusicPlayerSection.tsx`)
 
 Embedded player with service selection, used in the album page's
-"Listen" section.
+"Listen" section. Tabs, in order: Apple Music, Spotify, YouTube (when the
+release has `videos`). Only Apple Music and Spotify are remembered as the
+preferred service; YouTube is never the default tab.
+
+### YouTubeEmbed (`src/components/YouTubeEmbed.tsx`)
+
+The YouTube tab, built to sit beside the Apple Music and Spotify embeds:
+450px high on `md`+, a dark card with the YouTube logo, the current video
+(a thumbnail and red play button until clicked, then a
+`youtube.com/embed` iframe that autoplays) and "Watch on YouTube", and a
+numbered, scrolling list of every video with thumbnails. Clicking a row
+plays it; when a video ends the next one starts (the iframe API's
+`onStateChange`). Titles come from YouTube oEmbed, fetched per row only
+when it scrolls into the list (cached per tab), so nothing hits YouTube
+until the tab is opened. On phones the video stacks above a 300px list.
+URL parsing lives in `src/lib/youtube.ts` (`extractYouTubeId`,
+`youTubeVideos`). Replaces the old `VideoSection`.
 
 ### SpotifyEmbed / AppleMusicEmbed
 
@@ -270,7 +307,7 @@ operating system's light/dark setting.
 
 ### PlayerToggle (`src/components/PlayerToggle.tsx`)
 
-Toggle between Spotify and Apple Music players.
+Show or hide the Listen players (Apple Music, Spotify, YouTube).
 
 ## Scrobbling Components
 
@@ -341,7 +378,7 @@ titles, 44px close button and menu items, and animations disabled under
 | `AlbumCard.tsx`, `AlbumModal.tsx`, `CollectionStats.tsx`, `SearchFAB.tsx`, `ScrobbleButton.tsx`, `ScrobbleProgress.tsx` | Nothing; they were no longer used. Use `RecordTile`, `AlbumScrobbleButton` and the nav search |
 | `layout/EditorialPrimitives.tsx` (`DossierHero`, `FactGrid`, `FactCell`, `RailSection`, `CatalogueList`, `StageVinyl`), `layout/SectionHeader.tsx`, `layout/DragWall.tsx` | Player components (`CoverHero`, `SectionHeading`, `.shelf-scroll` rows). `EditorialEmpty` / `EditorialSkeleton` moved to `layout/PageStates.tsx` |
 | `ui/avatar-group.tsx`, `ui/badge.tsx`, `ui/input.tsx`, `ui/metadata-badge.tsx`, `ui/progress.tsx`, `ui/separator.tsx` | Nothing; they were no longer used |
-| `BrandMark.tsx` | `t-disp` `russ.fm` wordmark in the nav and footer |
+| `BrandMark.tsx` | `SpinningMark` + `t-disp` `russ.fm` wordmark in the nav |
 | `FilterBar.tsx` | Inline sort pills, format chips, search and pill selects on `AlbumsPage` / `ArtistsPage` |
 | `components/home/*` (`HeroSection`, `RecentAlbumsSection`, `RecentArtistsSection`, `RandomCollectionSection`, `RandomArtistsSection`, `GenresSection`, `StatsAside`) | Local sections in `HomePage.tsx` built on `CoverHero`, `HeroRecord`, `RecordTile` and `SectionHeading` |
 | `ui/genre-tag.tsx` (`GenreTag`) | Outline mono genre links and `.chip` |

@@ -36,7 +36,6 @@ A dev-only `TweaksPanel` (opened with `Cmd/Ctrl+Shift+D`) still ships in
 | shadcn/ui | Latest | Component library (Radix UI) |
 | Framer Motion | Latest | Genre graph transitions |
 | D3 | 7.x | Genre graph layout and zoom |
-| Three.js | Latest | `/random` crate scene |
 | Fuse.js | Latest | Fuzzy search |
 | Lucide React | Latest | Icon library |
 | @fontsource-variable/archivo | Latest | Display type (`t-disp`, `t-cond`, `t-dispn`) |
@@ -273,7 +272,7 @@ React Router DOM handles all navigation:
 | `/browse` | BrowseIndexPage | Browse by genre, label, decade, country |
 | `/labels`, `/decades`, `/countries` | FacetListPage | Every value of one facet |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug` | FacetDetailPage | Records for one value |
-| `/random` | RandomPage | Shuffle: random record crate |
+| `/shuffle`, `/random` | RandomPage | Shuffle: split-flap board to a random record |
 | `/search` | SearchResultsPage | Search results |
 
 `App.tsx` renders a `ScrollToTop` component that scrolls to the top on PUSH and REPLACE
