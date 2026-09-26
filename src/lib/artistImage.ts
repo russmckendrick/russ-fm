@@ -70,38 +70,35 @@ export interface PortraitLayout {
   stageWidth: number;
   stageHeight: number;
   /**
-   * The <img> box in the stage (px), always the stage's full height. The photo
-   * sits in its content box, after `extendLeft` of left padding and
-   * `extendTop` of top padding, and the box runs `extendRight` past it. The
-   * extensions show soft gradients of the photo's own edge colours (see
-   * ArtistPortrait), which the element's filter, blend and fade treat exactly
-   * like the photo.
+   * The <img> box in the stage (px), always the stage's full height, from the
+   * page edge. The photo sits at the left of it; the box runs `extendRight`
+   * past the photo (a short lead-out, never a long strip) showing a soft
+   * gradient of the photo's own right-edge colours, which the element's
+   * filter, blend and fade treat exactly like the photo, so the end of the
+   * fade isn't the photo's hard edge.
    */
   left: number;
   width: number;
   photoWidth: number;
   photoHeight: number;
-  extendLeft: number;
-  extendTop: number;
   extendRight: number;
   /** Right fade in stage px: fully visible up to `fadeFrom`, gone by `fadeTo`. */
   fadeFrom: number;
   fadeTo: number;
 }
 
-/** Never shrink the photo below this share of the flood's height to fit a group. */
-const MIN_HEIGHT = 0.85;
+/** How far past its edge the photo is carried on to soften the end of the fade. */
+const LEAD_OUT = 96;
 
 /**
- * Where the photo sits in the desktop hero. It is as tall as the flood
- * (shrunk a little, if need be, to fit a wide group, and then sat on the
- * flood's bottom edge with its top edge carried up), slid so every face ends
- * clear of the text, but never so far that the leftmost face leaves the page.
- * It runs on under the text (its right edge carried on) and fades there over
- * a long eased fade that starts after the faces: longer and finishing sooner
- * under the text when the backdrop and flood are far apart in lightness, so
- * the text keeps its contrast. It is carried to the page edge the same way
- * when it stops short of it.
+ * Where the photo sits in the desktop hero. The hero's photo column is sized
+ * to the photo (portraitColumn), so the photo is as tall as the flood, starts
+ * at the page edge and ends about where the column does; the text takes the
+ * rest of the width. The photo fades out over its right side and a short
+ * lead-out past it, finishing just into the gap before the text (or under the
+ * text when a wide photo is capped). The fade is longer on a harsh step in
+ * lightness, and starts no earlier than just before the last face, as long as
+ * that leaves it room.
  *
  * `stageW`/`stageH`: the stage; `textX`: where the text column starts, in
  * stage px; `harsh`: the backdrop and flood are far apart in lightness.
@@ -113,51 +110,43 @@ export function portraitLayout(
   textX: number,
   harsh: boolean,
 ): PortraitLayout {
-  const clearance = harsh ? 150 : 110;
-  const aspect = info.width / info.height;
+  const photoHeight = Math.round(stageH);
+  const photoWidth = (info.width / info.height) * photoHeight;
+  const photoRight = photoWidth;
 
-  // What has to stay clear of the text: the faces, or without any, a band
-  // round the focus (a body can run on under the fade).
-  const faces = info.faces.length ? info.faces : null;
-  const fx = info.focus?.[0] ?? 0.5;
-  const span: [number, number] = faces
-    ? [Math.min(...faces.map(f => f[0])), Math.max(...faces.map(f => f[0] + f[2]))]
-    : [Math.max(0, fx - 0.12), Math.min(1, fx + 0.12)];
+  const length = harsh ? 340 : 300;
+  let fadeTo = photoRight < textX ? Math.min(photoRight + LEAD_OUT, textX + 24) : Math.min(photoRight, textX + 120);
+  fadeTo = Math.min(fadeTo, stageW);
+  let fadeFrom = fadeTo - length;
+  const faces = info.faces;
+  if (faces.length) {
+    const lastFace = Math.max(...faces.map(f => f[0] + f[2])) * photoWidth;
+    fadeFrom = Math.max(fadeFrom, Math.min(lastFace - 40, fadeTo - 200));
+  }
 
-  // Only a group of faces shrinks the photo.
-  let photoHeight = Math.round(stageH);
-  const room = textX - clearance - 16;
-  const spanShare = (span[1] - span[0]) * aspect;
-  if (faces && spanShare * photoHeight > room && room > 0) photoHeight = Math.round(Math.max(stageH * MIN_HEIGHT, room / spanShare));
-  const photoWidth = aspect * photoHeight;
-
-  let photoLeft = Math.min(0, textX - clearance - span[1] * photoWidth);
-  photoLeft = Math.round(Math.max(photoLeft, 16 - span[0] * photoWidth));
-  const photoRight = photoLeft + photoWidth;
-
-  // A long eased fade, placed so the text starts where the photo is mostly
-  // gone (under a fifth left on a harsh step in lightness, half otherwise),
-  // with the faces (`clearance`) still inside its flat opening stretch.
-  const fadeLength = harsh ? 380 : 420;
-  const fadeFrom = Math.max(0, textX - fadeLength * (harsh ? 0.63 : 0.5));
-  const fadeTo = Math.min(stageW, fadeFrom + fadeLength);
-
-  const boxLeft = Math.min(photoLeft, 0);
-  const boxRight = Math.max(photoRight, fadeTo);
-
+  const extendRight = Math.max(0, Math.round(fadeTo - photoRight));
   return {
     stageWidth: stageW,
     stageHeight: stageH,
-    left: boxLeft,
-    width: boxRight - boxLeft,
+    left: 0,
+    width: photoWidth + extendRight,
     photoWidth,
     photoHeight,
-    extendLeft: photoLeft - boxLeft,
-    extendTop: Math.max(0, Math.round(stageH) - photoHeight),
-    extendRight: boxRight - photoRight,
-    fadeFrom,
+    extendRight,
+    fadeFrom: Math.max(0, fadeFrom),
     fadeTo,
   };
+}
+
+/**
+ * The desktop hero's photo column: the photo's width at the stage's height
+ * (the fixed row plus the 2.5rem of flood above and below), between 320px and
+ * half the window, so the text starts where the photo ends and takes the rest.
+ * Before the notes load, a 4:5 photo is assumed.
+ */
+export function portraitColumn(info: ArtistImageInfo | null | undefined, rowHeight: string): string {
+  const aspect = info ? info.width / info.height : 0.8;
+  return `clamp(320px, calc((${rowHeight} + 5rem) * ${aspect.toFixed(4)}), 50vw)`;
 }
 
 /**

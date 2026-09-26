@@ -299,8 +299,10 @@ for the shape.
 
 - `useArtistImageInfo(uriArtist)`: the photo's `ArtistImageInfo`, cached per URL;
   `undefined` while loading, `null` when there is no file.
+- `portraitColumn(info, rowHeight)`: the desktop photo column's CSS width, the
+  photo's width at the hero's height (320px to 50vw).
 - `portraitLayout(info, stageW, stageH, textX, harsh)`: the desktop placement (photo
-  size and offset, extensions past its edges, right fade in stage px).
+  size, the short lead-out past its right edge, right fade in stage px).
 - `edgeGradient(edge, direction, start?, length?)`: an edge's colour profile as a
   CSS gradient, for carrying the photo on past that edge.
 - `focusPosition(info)`: `object-position` for the phone crop, centred on the faces.

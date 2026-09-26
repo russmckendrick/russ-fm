@@ -325,23 +325,25 @@ The nav follows it via `usePageFlood`, and the sleeve's dark `ground`
 swatch tints the rest of the page. No gradients.
 
 - **Header** — from `lg` every artist hero is the same height (the grid row is fixed at
-  56vh, clamped to 420–540px, with 2.5rem of flood above and below) and the text column is
-  centred in it; the name is a `FitTitle` with `fitHeight`, shrinking until the whole text
-  column fits. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`) is
-  printed into the flood in greyscale and placed from the photo's `-image.json`
+  56vh, clamped to 420–540px, with 2.5rem of flood above and below). The photo's column
+  starts at the page edge and is as wide as the photo at that height (`portraitColumn`,
+  320px to half the window), so the photo is never stretched across a wide screen; the
+  text takes the rest of the width (its right edge in line with the page), is centred
+  vertically, and the name is a `FitTitle` (up to 240px) with `fitHeight`, so it grows to
+  fill a wide column and shrinks until the whole text column fits. Stats step up to 68px
+  from 1800px wide. The portrait (`ArtistPortrait`, `.artist-portrait` in `player.css`)
+  is printed into the flood in greyscale and placed from the photo's `-image.json`
   (`useArtistImageInfo` / `portraitLayout` in `src/lib/artistImage.ts`). Phones: a 4:5
   crop centred on the faces, fading out at the bottom. From `lg` there is no bottom fade:
-  the `<img>` box is the flood's full height, from the page edge to 32rem past the cell.
-  The photo inside it is as tall as the flood (down to 85% to fit a wide group, then sat
-  on the bottom edge), slid so every face ends before the text but never so far the
-  leftmost face leaves the page. The box runs on past the photo, under the text (and to
-  the page edge, and up to the top when the photo is shorter), filled with soft gradients
-  of the photo's own edge colours from the `-image.json` profiles; `object-fit: contain`
-  holds the photo at its size, and the filter, blend and fade treat the fill exactly like
-  the photo, so there is no seam. One long smootherstep fade (16 stops, flat at both ends,
-  so a black backdrop into a pale flood shows no bands) finishes under the text: on a harsh
-  step in lightness under a fifth of the photo is left where the text starts, otherwise
-  about half. Without an `-image.json` the photo just fills the stage.
+  the photo is the flood's full height and fades out over its right side on a
+  smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood
+  shows no bands), longer on a harsh step in lightness and starting no earlier than just
+  before the last face when there is room. To soften the end of the fade the `<img>` box
+  runs a short lead-out (at most 96px) past the photo, filled with a gradient of the
+  photo's own right-edge colours from the `-image.json` profile (`object-fit: contain`
+  holds the photo at its size; the filter, blend and fade treat the lead-out like the
+  photo). The fade finishes just into the gap before the text, or under it when a wide
+  photo hits the column's cap. Without an `-image.json` the photo just fills the stage.
   The backdrop tone comes from `-image.json` (`useBackdropTone` measures it in the browser
   only when there is none). It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
   except on a dark flood with a dark backdrop, where it screens so the black takes the

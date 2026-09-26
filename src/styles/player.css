@@ -348,16 +348,15 @@ body {
 
    Phones: the photo fills the 4:5 cell and fades out at the bottom (a long
    fade whose stops follow an ease-out curve, so there's no line where it
-   starts). From lg the stage runs from the page
-   edge to 32rem past the cell (well under the text), and from the flood's top (the section's pt-10)
-   to its bottom (the 2.5rem spacer). Once placed (data-placed, sizes from
-   portraitLayout() in src/lib/artistImage.ts) the <img> box is the flood's
-   full height and runs on past the photo under the text (and to the page
-   edge, and up to the top when a wide group shrinks the photo) with
-   background gradients of the photo's own edge colours; object-fit: contain
-   holds the photo at its size. Its right fade runs from --fade-from to
-   --fade-to, finishing under the text. Before it's placed it simply fills
-   the stage. */
+   starts). From lg the photo's grid column starts at the page edge and is
+   sized to the photo (portraitColumn); the stage runs from the flood's top
+   (the section's pt-10) to its bottom (the 2.5rem spacer) and 32rem past the
+   column. Once placed (data-placed, sizes from portraitLayout() in
+   src/lib/artistImage.ts) the photo is the flood's full height at the left
+   of the <img> box (object-fit: contain), the box runs a short lead-out past
+   it with a gradient of the photo's own right-edge colours as background,
+   and the right fade (--fade-from to --fade-to) finishes just into the gap
+   before the text. Before it's placed the photo simply fills the stage. */
 
 .artist-stage {
   position: absolute;
@@ -390,12 +389,11 @@ body {
 
 @media (min-width: 1024px) {
   .artist-stage {
-    --portrait-bleed: calc(max(0px, (100vw - 1640px) / 2) + 3.5rem);
     top: -2.5rem;
     bottom: -2.5rem;
-    left: calc(-1 * var(--portrait-bleed));
+    left: 0;
     right: auto;
-    width: calc(100% + var(--portrait-bleed) + 32rem);
+    width: calc(100% + 32rem);
   }
 
   /* No bottom fade on desktop: the photo fills the flood to its bottom edge.

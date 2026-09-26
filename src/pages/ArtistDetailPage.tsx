@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, type CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
 import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, recordsFlood, usePageFlood } from '@/components/player';
@@ -6,7 +6,7 @@ import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { useBackdropTone } from '@/hooks/useBackdropTone';
-import { useArtistImageInfo } from '@/lib/artistImage';
+import { portraitColumn, useArtistImageInfo } from '@/lib/artistImage';
 import { ArtistPortrait } from '@/components/player/ArtistPortrait';
 import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/lib/genreExplorer';
 import { loadDetailJson, useCollection } from '@/lib/collection';
@@ -296,14 +296,20 @@ export function ArtistDetailPage() {
     <div>
       <div className="flood-surface" style={{ background: flood.background, color: flood.ink }}>
         {/* From lg every artist hero is the same height (the one grid row is
-            fixed: 56vh, between 420 and 540px); the name shrinks to fit the
-            text column into it (FitTitle fitHeight). */}
-        <section className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:grid-cols-[minmax(320px,520px)_minmax(0,1fr)] lg:grid-rows-[clamp(420px,56vh,540px)] lg:gap-16 lg:px-14 lg:pt-10">
+            fixed: 56vh, between 420 and 540px). The photo column starts at the
+            page edge and is as wide as the photo at that height
+            (portraitColumn); the text takes the rest, its right edge in line
+            with the page, and the name grows or shrinks to fit it (FitTitle
+            fitHeight). */}
+        <section
+          className="mx-auto grid w-full max-w-[1640px] gap-8 px-5 pt-6 md:px-10 lg:max-w-none lg:grid-cols-[var(--portrait-col)_minmax(0,1fr)] lg:grid-rows-[var(--hero-row)] lg:gap-16 lg:pl-0 lg:pr-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] lg:pt-10"
+          style={{ '--hero-row': HERO_ROW, '--portrait-col': portraitColumn(imageInfo, HERO_ROW) } as CSSProperties}
+        >
           {/* The portrait is printed into the flood in greyscale, blended so
-              its backdrop takes the sleeve colours (see portraitBlend). The
-              4:5 cell sets the row height; from lg the portrait's stage breaks
-              out of it to fill the flood (see ArtistPortrait). */}
-          <div className="relative aspect-[4/5] w-full max-w-[520px] max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none lg:aspect-auto lg:h-full">
+              its backdrop takes the sleeve colours (see portraitBlend). On
+              phones the 4:5 cell sets its size; from lg the portrait's stage
+              fills the flood's height (see ArtistPortrait). */}
+          <div className="relative aspect-[4/5] w-full max-w-[520px] max-sm:-mx-5 max-sm:w-[calc(100%+2.5rem)] max-sm:max-w-none lg:aspect-auto lg:h-full lg:max-w-none">
             <ArtistPortrait
               src={getArtistImageFromData(artistUri, 'hi-res')}
               alt={artistName}
@@ -314,12 +320,12 @@ export function ArtistDetailPage() {
             />
           </div>
           <div ref={setHeroText} className="relative flex min-w-0 flex-col gap-7 lg:justify-center">
-            <FitTitle max={176} min={40} fitHeight className="t-disp">{artistName}</FitTitle>
+            <FitTitle max={240} min={40} fitHeight className="t-disp">{artistName}</FitTitle>
             <dl className="m-0 flex flex-wrap gap-x-10 gap-y-4">
               {stats.map(([k, v]) => (
                 <div key={k} className="flex flex-col-reverse gap-1">
                   <dt className="t-kicker text-[11px]">{k}</dt>
-                  <dd className="t-disp m-0 text-[36px] md:text-[56px]">{v}</dd>
+                  <dd className="t-disp m-0 text-[36px] md:text-[56px] min-[1800px]:text-[68px]">{v}</dd>
                 </div>
               ))}
             </dl>
@@ -573,6 +579,9 @@ function formatAdded(value: string): string {
   const d = new Date(value);
   return Number.isNaN(d.getTime()) ? value : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 }
+
+/** The artist hero's one row from lg: every hero is this tall. */
+const HERO_ROW = 'clamp(420px, 56vh, 540px)';
 
 type DiscographyOrder = 'added' | 'year';
 

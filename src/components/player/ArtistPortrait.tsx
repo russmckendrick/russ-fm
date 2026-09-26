@@ -24,11 +24,10 @@ const DESKTOP = '(min-width: 1024px)';
  * The artist hero portrait, printed into the flood in greyscale. On phones it
  * fills a 4:5 box, cropped round the faces. From lg it fills the flood's
  * height on a stage running from the page edge to past the text, placed by
- * portraitLayout() so faces stay clear of the text, with a right fade that
- * finishes under the text. The <img> box runs on past the photo (and to the
- * page edge when it stops short) with a soft gradient of the photo's own edge
- * colours as its background, which the filter, blend and fades treat like
- * the photo.
+ * portraitLayout(): the hero's photo column is sized to the photo
+ * (portraitColumn), and the photo fades out over its right side and a short
+ * lead-out past it, a soft gradient of its own edge colours as the <img>'s
+ * background, which the filter, blend and fade treat like the photo.
  *
  * Masks sit on the <img>, never the stage: a mask on a wrapper
  * isolates it and stops the blend reaching the flood.
@@ -82,40 +81,12 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, textEl }: ArtistP
 }
 
 /**
- * The placed <img>: the photo held at its size in the content box
- * (object-fit: contain), and the box carried on past it (right, and into the
- * left and top padding) by background layers drawn from the photo's own edge
- * colours (edgeGradient: a smoothed profile along that edge, so nothing
- * touching the edge streaks). The right layer is clipped to the content box so
- * it can't paint over the padding; the top layer spans the whole width.
+ * The placed <img>: the photo held at its size at the left of the box
+ * (object-fit: contain), and the box carried a short way past it by a
+ * background gradient of the photo's own right-edge colours (edgeGradient: a
+ * smoothed profile, so nothing touching the edge streaks).
  */
 function placedStyle(layout: PortraitLayout, info: ArtistImageInfo): CSSProperties {
-  const layers: Array<{ image: string; size: string; position: string; box: string }> = [];
-  if (layout.extendRight > 0) {
-    layers.push({
-      image: edgeGradient(info.edges.right, 'to bottom'),
-      size: `${layout.extendRight}px 100%`,
-      position: 'right top',
-      box: 'content-box',
-    });
-  }
-  if (layout.extendTop > 0) {
-    layers.push({
-      image: edgeGradient(info.edges.top, 'to right', layout.extendLeft, layout.photoWidth),
-      // One pixel into the photo so no hairline of flood shows at the join.
-      size: `100% ${layout.extendTop + 1}px`,
-      position: 'left top',
-      box: 'border-box',
-    });
-  }
-  if (layout.extendLeft > 0) {
-    layers.push({
-      image: edgeGradient(info.edges.left, 'to bottom'),
-      size: `${layout.extendLeft + 1}px 100%`,
-      position: 'left top',
-      box: 'border-box',
-    });
-  }
   return {
     '--stage-w': `${layout.stageWidth}px`,
     '--el-left': `${layout.left}px`,
@@ -123,18 +94,13 @@ function placedStyle(layout: PortraitLayout, info: ArtistImageInfo): CSSProperti
     '--el-h': `${layout.stageHeight}px`,
     '--fade-from': `${layout.fadeFrom}px`,
     '--fade-to': `${layout.fadeTo}px`,
-    boxSizing: 'border-box',
-    paddingLeft: layout.extendLeft,
-    paddingTop: layout.extendTop,
     objectFit: 'contain',
     objectPosition: '0 0',
-    ...(layers.length
+    ...(layout.extendRight > 0
       ? {
-          backgroundImage: layers.map(l => l.image).join(', '),
-          backgroundSize: layers.map(l => l.size).join(', '),
-          backgroundPosition: layers.map(l => l.position).join(', '),
-          backgroundOrigin: layers.map(l => l.box).join(', '),
-          backgroundClip: layers.map(l => l.box).join(', '),
+          backgroundImage: edgeGradient(info.edges.right, 'to bottom'),
+          backgroundSize: `${layout.extendRight + 1}px 100%`,
+          backgroundPosition: 'right top',
           backgroundRepeat: 'no-repeat',
         }
       : {}),
