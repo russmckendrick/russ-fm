@@ -147,7 +147,7 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
       </p>
 
       <div className="mx-auto flex min-h-[calc(100svh-64px)] w-full max-w-[1640px] flex-col items-center gap-5 px-5 pb-6 pt-5 sm:gap-7 sm:pb-8 sm:pt-6 md:min-h-[calc(100svh-84px)] md:px-10 lg:flex-row lg:gap-[clamp(48px,5vw,96px)] lg:px-14 lg:py-14">
-        <div className="relative aspect-square w-[min(54vw,300px)] shrink-0 sm:w-[min(50vw,380px)] lg:w-[clamp(340px,34vw,560px)]">
+        <div className="relative aspect-square w-[min(46vw,300px)] shrink-0 sm:w-[min(50vw,380px)] lg:w-[clamp(340px,34vw,560px)]">
           <Vinyl
             label={nextFlood.ground}
             cover={getAlbumImageFromData(next.uri_release, 'medium')}
