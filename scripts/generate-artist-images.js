@@ -13,6 +13,10 @@
  *     left, right and top edges also get a smoothed colour profile along the
  *     edge, which the page draws as a soft gradient to carry the photo on past
  *     that edge without streaking whatever touches it.
+ *   - Before any of that, letterbox or pillarbox bars (flat black or white
+ *     bands a photo was pasted onto) are cut off the -hi-res.jpg itself
+ *     (scripts/lib/letterbox.js), so the hero, the round avatars and the
+ *     sizes built from it all get the photo without them.
  *
  * Only the artist page reads these, so nothing is added to the pages that
  * load collection-wide data.
@@ -31,6 +35,7 @@ import path from 'path';
 import os from 'os';
 import { spawn, execFileSync } from 'child_process';
 import { fileURLToPath } from 'url';
+import { findBars } from './lib/letterbox.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -126,6 +131,23 @@ async function measureColour(file) {
     },
     luminance: summarise(all).luminance,
   };
+}
+
+// ---------------------------------------------------------------- bars
+
+/** Cut letterbox/pillarbox bars off a photo in place: the size change, or false. */
+async function trimBars(file) {
+  const { data, info } = await sharp(file).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+  const bars = findBars(data, info.width, info.height, info.channels);
+  const width = info.width - bars.left - bars.right;
+  const height = info.height - bars.top - bars.bottom;
+  if (width === info.width && height === info.height) return false;
+  const trimmed = await sharp(file)
+    .extract({ left: bars.left, top: bars.top, width, height })
+    .jpeg({ quality: 92, mozjpeg: true })
+    .toBuffer();
+  await fs.writeFile(file, trimmed);
+  return `${info.width}×${info.height} → ${width}×${height}`;
 }
 
 // ---------------------------------------------------------------- placement
@@ -244,6 +266,8 @@ async function main() {
     }
     let bytes;
     try {
+      const trimmed = await trimBars(file);
+      if (trimmed) console.log(`✂️  ${slug}: cut bars, ${trimmed}`);
       bytes = await fs.readFile(file);
     } catch {
       continue;

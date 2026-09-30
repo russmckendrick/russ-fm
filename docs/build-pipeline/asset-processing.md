@@ -317,6 +317,21 @@ photo's `hash` (first 16 hex chars of its sha1) for reference.
 
 ### What it measures
 
+0. **Bars cut first** (`scripts/lib/letterbox.js`, sharp on the full-size photo):
+   letterbox or pillarbox bars, flat near-black or near-white bands a photo was
+   pasted onto, are cut off the `-hi-res.jpg` itself (rewritten as a quality 92
+   JPEG) before anything is measured. Printed into the flood the bars vanish, so
+   the photo looked short and floating (Cream's was 1200×1200 with 152px of black
+   above and below). A bar has to be at least 1.5% of the photo, nearly every pixel
+   on each of its lines within 18 of one colour, and end in a straight edge where
+   at least half the next line changes; so a real black studio backdrop, whose
+   first non-black line is just the top of a head, is kept. When one side passes
+   but the opposite side starts the same shade and fails (a scanned print's ragged
+   border, an album cover floating on black), neither is cut, to avoid a lopsided
+   crop. Two extra lines go with each bar for the JPEG fringe. The run logs
+   `✂️  <slug>: cut bars, W×H → W×H`; a photo without bars is left alone, so reruns
+   change nothing. The build's `avatar`/`medium` sizes follow on their own (the
+   image cache is keyed on the hi-res file's content).
 1. **Faces, people, subject** (Vision, via the Swift helper): the script starts the
    helper once, writes every photo path to its stdin, and reads one JSON line back
    per photo (`faces`, `people`, `salient` boxes, normalised, origin top-left). Faces
