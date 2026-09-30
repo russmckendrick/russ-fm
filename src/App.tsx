@@ -4,6 +4,7 @@ import { Navigation } from './components/Navigation';
 import { Footer } from './components/Footer';
 import { TweaksPanel } from './components/TweaksPanel';
 import { FloodProvider } from './components/player/FloodContext';
+import { TvProvider } from './components/tv/TvProvider';
 import { HomePage } from './pages/HomePage';
 import { AlbumsPage } from './pages/AlbumsPage';
 import { ArtistsPage } from './pages/ArtistsPage';
@@ -12,6 +13,7 @@ import { AlbumDetailPage } from './pages/AlbumDetailPage';
 import { StatsPage } from './pages/StatsPage';
 import { SearchResultsPage } from './pages/SearchResultsPage';
 import { RandomPage } from './pages/RandomPage';
+import { TvGuidePage, TvPage } from './pages/TvPage';
 import { GenrePage } from './pages/GenrePage';
 import { WrappedYear } from './pages/wrapped/WrappedYear';
 import { WrappedYTD } from './pages/wrapped/WrappedYTD';
@@ -25,11 +27,13 @@ import { ColouredVinylPage } from './pages/browse/ColouredVinylPage';
  * can restore the previous scroll position.
  */
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, state } = useLocation();
   const navigationType = useNavigationType();
+  // The TV page rewrites its URL as videos change (`{ tvSync: true }`); that isn't a new page.
+  const tvSync = (state as { tvSync?: boolean } | null)?.tvSync === true;
   useLayoutEffect(() => {
-    if (navigationType !== 'POP') window.scrollTo(0, 0);
-  }, [pathname, navigationType]);
+    if (navigationType !== 'POP' && !tvSync) window.scrollTo(0, 0);
+  }, [pathname, navigationType, tvSync]);
   return null;
 }
 
@@ -66,6 +70,7 @@ function App() {
         Skip to main content
       </a>
       <ScrollToTop />
+      <TvProvider>
       <Navigation />
 
       <main id="main-content">
@@ -91,6 +96,10 @@ function App() {
           <Route path="/coloured-vinyl" element={<ColouredVinylPage />} />
           <Route path="/shuffle" element={<RandomPage />} />
           <Route path="/random" element={<RandomPage />} />
+          <Route path="/tv" element={<TvPage />} />
+          <Route path="/tv/guide" element={<TvGuidePage />} />
+          <Route path="/tv/:channel" element={<TvPage />} />
+          <Route path="/tv/:channel/:video" element={<TvPage />} />
           <Route path="/search" element={<SearchResultsPage />} />
           <Route path="/wrapped" element={<Navigate to={`/wrapped/${new Date().getFullYear() - 1}`} replace />} />
           <Route path="/wrapped/ytd" element={<WrappedYTD />} />
@@ -102,6 +111,7 @@ function App() {
 
       {/* Dev-only: Cmd/Ctrl+Shift+D to open */}
       <TweaksPanel />
+      </TvProvider>
     </div>
     </FloodProvider>
   );

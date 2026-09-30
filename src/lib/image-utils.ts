@@ -41,6 +41,14 @@ export function getArtistAvatarUrl(artistSlug: string): string {
 }
 
 /**
+ * A /tv room photo (the TV screen is cut out, transparent). These are site
+ * assets under public/tv-rooms/, deployed with the app rather than R2.
+ */
+export function getTvRoomUrl(room: string, size: 'hi-res' | 'medium' = 'hi-res'): string {
+  return `/tv-rooms/${room}-${size}.webp`;
+}
+
+/**
  * Get album OG image URL (for social media sharing)
  * Always returns absolute URL for OG/Twitter meta tags
  */

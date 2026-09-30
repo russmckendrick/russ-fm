@@ -25,6 +25,8 @@ const STATIC_ROUTES = [
   { path: '/countries', changefreq: 'weekly', priority: '0.7' },
   { path: '/coloured-vinyl', changefreq: 'weekly', priority: '0.6' },
   { path: '/shuffle', changefreq: 'weekly', priority: '0.4' },
+  { path: '/tv', changefreq: 'weekly', priority: '0.5' },
+  { path: '/tv/guide', changefreq: 'weekly', priority: '0.4' },
 ];
 
 const routes = new Map();

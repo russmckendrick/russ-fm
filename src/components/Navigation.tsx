@@ -34,6 +34,7 @@ const PRIMARY: NavItem[] = [
   { path: "/albums/1", label: "Albums", activePrefix: ["/albums", "/album/"], count: "records" },
   { path: "/artists/1", label: "Artists", activePrefix: ["/artists", "/artist/"], count: "artists" },
   { path: "/genres", label: "Genres", activePrefix: "/genres", count: "genres" },
+  { path: "/tv", label: "TV", activePrefix: "/tv" },
 ];
 
 const BROWSE: NavItem[] = [

@@ -114,6 +114,15 @@ This is the **recommended way** to get album images from album objects.
 
 ---
 
+### getTvRoomUrl
+
+```typescript
+getTvRoomUrl('electronic', 'medium'); // "/tv-rooms/electronic-medium.webp"
+```
+
+The `/tv` room photos (`hi-res` 3072px, `medium` 1536px, screen cut out). They are site
+assets in `public/tv-rooms/`, served with the app, not from R2.
+
 ### getArtistImageFromData
 
 Extract slug from artist data and get image.
@@ -289,6 +298,36 @@ const detail = await loadDetailJson<DetailedAlbum>(album.json_detailed_release);
 
 Use these rather than fetching `collection.json` or detail JSON in a page. Search
 (`useSearch`) reads the collection through `loadCollection()` as well.
+
+## TV (`src/lib/tv.ts`)
+
+Channels and schedules for `/tv` (see [pages](./pages.md#tvpage-srcpagestvpagetsx)).
+
+```typescript
+import { buildChannels, loadTv, onAir, slotsBetween } from '@/lib/tv';
+
+const channels = buildChannels(await loadTv(), await loadCollection());
+const { index, offset } = onAir(channel);            // what is on now, seconds in
+const slots = slotsBetween(channel, from, to);       // guide rows (epoch ms)
+```
+
+- `loadTv()` fetches `/tv.json` once per tab.
+- `buildChannels(tv, albums)` joins releases to the collection by `uri` and builds:
+  01 Latest additions (the newest 100 records with videos), one channel per genre
+  (Discogs genres and styles, after fuzzbox.tv's playlists; "Pop" is dropped when a
+  release matches something more specific), Live (videos of kind `live`) and Everything
+  Else (releases no genre channel takes). A video airs once per channel. Videos longer
+  than 12 minutes stay off every channel but Live; missing durations count as 4 minutes.
+  Each item's `artist` is the video's own `artist` from tv.json (compilations), else the
+  release artist.
+- Running orders are a shuffle seeded by the channel slug, with same-record neighbours
+  pulled apart, and `onAir` counts from a fixed epoch, so every visitor sees the same
+  schedule.
+- `TV_ROOMS` lists the room photos and where each screen sits (% of the image,
+  measured from the chroma-key green before it was cut out).
+- `videoPath(channelSlug, item)` → `/tv/electronic/sneaker-pimps-6-underground-2eBZqmL8ehg`;
+  `videoIdFromParam(segment)` reads the YouTube id back from the last 11 characters.
+- `formatDuration`, `youTubeThumb` (YouTube's stills, external).
 
 ## Release Years (`src/lib/releaseYear.ts`)
 

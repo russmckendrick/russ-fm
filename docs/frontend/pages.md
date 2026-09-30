@@ -51,6 +51,8 @@ flowchart TB
         Countries["/countries"]
         CountryDetail["/country/:slug"]
         Random["/shuffle, /random"]
+        Tv["/tv, /tv/:channel"]
+        TvGuide["/tv/guide"]
         Search["/search"]
         Wrapped["/wrapped"]
         WrappedYear["/wrapped/:year"]
@@ -76,6 +78,8 @@ flowchart TB
     Countries --> FacetListPage
     CountryDetail --> FacetDetailPage
     Random --> RandomPage
+    Tv --> TvPage
+    TvGuide --> TvGuidePage
     Search --> SearchResultsPage
     Wrapped --> WrappedYear
     WrappedYear --> WrappedYearPage
@@ -628,6 +632,76 @@ with the album and artist pages.
 - Loading skeleton (blank sleeve and board), retryable error ("Try again")
   and empty states
 - No audio
+
+---
+
+### TvPage (`src/pages/TvPage.tsx`)
+
+**Routes:** `/tv` (channel 01, Latest additions), `/tv/:channel` (a channel slug such
+as `/tv/electronic`; an unknown slug redirects to `/tv`), `/tv/:channel/:video` (one
+video, e.g. `/tv/electronic/sneaker-pimps-6-underground-2eBZqmL8ehg`) and `/tv/guide`
+(`TvGuidePage`). The nav has a TV item.
+
+- **Shareable URLs.** While the TV page is showing, its address follows the video on
+  screen (`videoPath()`: artist and title words, then the 11-character YouTube id, the
+  only part `videoIdFromParam()` reads). The update replaces the history entry, so Back
+  leaves the TV, and carries `{ tvSync: true }` so `ScrollToTop` leaves the scroll
+  alone. The page title is the song and artist too. Opening a video link tunes its
+  channel and starts that video from the beginning (then the channel plays on); an id
+  the channel doesn't have falls back to what is airing. Guide blocks link to their
+  video, except the one on air, which links to the channel live.
+
+Music television from the collection's videos, after fuzzbox.tv. Data is `/tv.json`
+(written by the scrapper beside `collection.json`, see
+[schemas](../data/schemas.md#tvjson)) joined to the collection by `uri`; channels are
+built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
+[utilities](./utilities.md#tv-srclibtvts)).
+
+- **Channels run on the clock.** Each channel's running order is a fixed seeded
+  shuffle, so `onAir(channel)` gives the same programme at the same time for everyone.
+  Opening a channel starts the video that is on now, part-way through. After that it
+  plays on in order; previous/next and the Up next tiles jump within the channel.
+- **The room.** `TvRoom` (`src/pages/tv/TvRoom.tsx`) draws a room photo whose TV
+  screen has been cut out (transparent), sizes it so the screen is a set size and
+  keeps the photo covering the box, and marks where the screen is with
+  `.tv-screen-slot` (scanlines, channel number, bug and the static burst live there).
+  A masked `mix-blend-mode: color` layer (`.tv-room-tint`) tints the room, never the
+  screen, with the sleeve colour of the video on screen. Each channel has its own room
+  (after fuzzbox's per-genre backgrounds); the room pill cycles through them.
+- **The player lives above the routes.** `TvProvider` (`src/components/tv/`, wrapped
+  round the app in `App.tsx`) owns the one YouTube player (`useTvPlayer`, the IFrame
+  Player API with no controls) and the tuning (channel, position), so leaving the page
+  never stops it; moving an iframe would reload it, so it never moves in the DOM.
+  Its layer (`.tv-layer`) is laid over the TV page's screen slot (`setSlot`) in page
+  coordinates at z-index 1, under the room photo (2) and the slot's overlays (3), so
+  the picture shows through the glass. On any other page it floats bottom left
+  (`data-mode="mini"`) with a bar in the sleeve colour: artist and title, play/pause,
+  sound, back to TV and close (switches the TV off). Clicking the picture goes back to
+  the channel. Plain `/tv` (the nav link) goes to the channel that is already on.
+- **Playback.** The YouTube API only loads once a channel is tuned. The player starts
+  muted so it can autoplay; "Sound on" (or tapping the screen) unmutes. A video that
+  ends moves on, and one YouTube refuses (removed, private, embedding disabled) is
+  skipped. Every change shows a burst of static (`.tv-static`).
+- **Fixed band.** Every line in the now-playing band is a fixed height: the kicker,
+  artist and album lines truncate, and the title scales into a fixed box
+  (`.tv-title-box`, `FitTitle` with `fitHeight`), so the progress bar and controls stay
+  put from video to video.
+- **Colour.** The page takes the current record's colours (`usePageFlood` with the
+  sleeve as the logo label and the sleeve's ground), and the now-playing band is the
+  flood. On desktop the record (`HeroRecord`, disc out, no sticker) hangs over the
+  band; on phones the sleeve is a row in the band.
+- **Full screen** puts the TV layer in full screen, letterboxed, with an MTV-style
+  credit block in the sleeve colour that stays up the whole time: sleeve, channel,
+  artist, title, album · year · label, a progress bar and the controls (previous,
+  play/pause, next, sound, exit full screen).
+- Below: **Up next** (the next six in the channel, YouTube stills with a colour bar)
+  and **Channels**, each tile in the colour of what it is airing now (refreshed every
+  30 seconds).
+- **Guide** (`src/pages/tv/TvGuide.tsx`): a `FloodBand` in the colour of what channel
+  01 is airing, then a half-hour grid of every channel from the current half hour
+  (earlier/later buttons, up to three hours ahead). Blocks are sized by duration and
+  coloured by sleeve; finished ones are dimmed, the one on air is outlined, and a line
+  marks the time. Any block or channel name tunes to that channel.
 
 ---
 

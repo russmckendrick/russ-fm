@@ -169,6 +169,19 @@ album nodes use their own sleeve, artist and genre nodes the most vivid
 recent record. `GenreGraph` also takes `centreFlood` for the centre node.
 Menus use the same rounded `--ground-2` panels as the rest of the site.
 
+## TV components (`src/components/tv/`)
+
+- `TvProvider` wraps the app (inside the router) and owns the site's one YouTube
+  player plus the TV tuning, so a channel keeps playing while you browse. `useTv()`
+  (`tv-context.ts`) gives pages `tune(channel)`, `go`/`next`/`prev`, `close`,
+  `toggleFullscreen`, the current `channel`/`item`/`offset`, the player and
+  `setSlot(el)`.
+- Its layer sits over the element passed to `setSlot` (the TV page's screen, behind
+  the room photo) or, with no slot, floats bottom left as a mini player with a
+  sleeve-coloured bar. See [pages.md](./pages.md#tvpage-srcpagestvpagetsx).
+- `useTvPlayer(host, { enabled, onEnded, onError })` wraps the YouTube IFrame Player
+  API: no controls, starts muted, loads the API only when `enabled`.
+
 ## Layout primitives (`src/components/layout/`)
 
 | Component | Status |
