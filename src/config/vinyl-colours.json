@@ -1,0 +1,86 @@
+{
+  "about": "Vocabulary for coloured vinyl, shared by the scrapper (scrapper/src/formats.rs decides what Discogs text counts as a colour) and the site (src/lib/vinylLook.ts draws it). Words are matched in lower case, one word at a time. Add a word here and both sides pick it up: the scrapper on its next build, the site on the next build. Re-run `scrapper backfill-formats` after changing what counts as a colour.",
+
+  "standard": "black",
+
+  "colours": {
+    "red": "#c81d25", "blue": "#1f4fb5", "green": "#1f8a4c", "yellow": "#f0c419", "orange": "#ee7a1a", "pink": "#ec6fa5",
+    "purple": "#6b2fa0", "violet": "#7b4bc2", "white": "#f1eee6", "gold": "#c9a24a", "silver": "#b9bdc2", "grey": "#8b8f94",
+    "gray": "#8b8f94", "cream": "#efe3c2", "turquoise": "#2fb5b0", "teal": "#1f8f8f", "aqua": "#5fd0d0", "cyan": "#33bfe0",
+    "brown": "#6b4327", "beige": "#d8c7a5", "tan": "#c9a678", "bone": "#e3dccb", "magenta": "#c0208f", "lilac": "#b79ad6",
+    "lavender": "#b9a4e0", "mint": "#8ed9ab", "olive": "#7a7a2e", "maroon": "#6e1523", "burgundy": "#6b1a33", "peach": "#f5b08f",
+    "amber": "#d98a1e", "copper": "#b4693a", "bronze": "#a0743a", "ruby": "#a0122d", "coral": "#f0716a", "navy": "#17296b",
+    "lime": "#a5d62e", "ivory": "#f3ecd6", "mustard": "#d1a326", "oxblood": "#5a0f14", "tangerine": "#f28a1f",
+    "apricot": "#f4b27a", "caramel": "#b8763a", "lemon": "#f2e34a", "rust": "#a34a20", "ochre": "#c48a2a", "black": "#0b0b0b",
+    "glow": "#d3ecbd", "pearl": "#efe9dc", "pearlescent": "#efe9dc", "emerald": "#0f7a4a", "ice": "#cfe6f0", "crimson": "#a3122b",
+    "sunrise": "#f08a4b", "sunset": "#e86a4a", "jade": "#2e9c77", "sapphire": "#1c3f94", "cobalt": "#1c4ea8", "scarlet": "#d1252b"
+  },
+
+  "phrases": {
+    "baby blue": "#9cc7ee", "sky blue": "#63b4e8", "sea blue": "#2f7fa5", "mint green": "#8ed9ab",
+    "army green": "#556b2f", "hot pink": "#f2408f", "neon pink": "#ff4fa0", "neon green": "#57e35f",
+    "neon orange": "#ff7a1f", "neon yellow": "#f5f53d", "coke bottle": "#7c9a86"
+  },
+
+  "glass": ["clear", "crystal", "cloudy"],
+  "translucent": ["transparent", "translucent"],
+  "metallic": ["gold", "silver", "copper", "bronze", "pearl", "pearlescent"],
+  "metalTags": ["gold", "silver", "copper", "bronze"],
+  "shades": { "light": 0.4, "pale": 0.4, "pastel": 0.4, "dark": -0.3, "deep": -0.3 },
+
+  "patterns": {
+    "marble": ["marbl", "blob", "starburst", "galaxy", "nebula", "mixed", "eco"],
+    "swirl": ["swirl"],
+    "splatter": ["splatter", "speckle"],
+    "flake": ["sparkl", "glitter", "flake", "shimmer"],
+    "split": ["split"],
+    "smoke": ["smok", "haze"],
+    "rainbow": ["rainbow"]
+  },
+
+  "generic": ["colou?r", "^multi$", "^tri$", "^opaque$", "^neon$"],
+
+  "flame": {
+    "words": ["flame", "flames", "flaming", "flamed"],
+    "base": "#c4381a",
+    "accents": ["#f7931e", "#f2d21f", "#ff6a2b", "#8f1a0c"]
+  },
+
+  "mixed": {
+    "base": "#ece3d2",
+    "accents": ["#d4553f", "#3f7fb5", "#e3b23c", "#4f9a6b"]
+  },
+
+  "flake": {
+    "fleck": "#cfd4d9",
+    "glint": "#ffffff"
+  },
+
+  "families": [
+    { "name": "Clear", "colour": "#dfe6ea" },
+    { "name": "White", "colour": "#f1eee6" },
+    { "name": "Yellow", "colour": "#f0c419" },
+    { "name": "Orange", "colour": "#ee7a1a" },
+    { "name": "Red", "colour": "#c81d25" },
+    { "name": "Pink", "colour": "#ec6fa5" },
+    { "name": "Purple", "colour": "#6b2fa0" },
+    { "name": "Blue", "colour": "#1f4fb5" },
+    { "name": "Green", "colour": "#1f8a4c" },
+    { "name": "Brown", "colour": "#6b4327" },
+    { "name": "Grey", "colour": "#8b8f94" },
+    { "name": "Gold & silver", "colour": "#c9a24a" },
+    { "name": "Rainbow", "colour": "conic-gradient(#e5322d, #f28b1e, #f2d21f, #3aa655, #2f6fd0, #7a3fb0, #e5322d)" },
+    { "name": "Multicolour", "colour": "conic-gradient(#d4553f, #e3b23c, #4f9a6b, #3f7fb5, #d4553f)" }
+  ],
+
+  "patternTags": { "splatter": "Splatter", "marble": "Marbled", "swirl": "Marbled", "flake": "Sparkle", "split": "Split" },
+
+  "knownNotes": "\\b(\\d+\\s?(g|gr|gm|gram|grams)|grams?|gatefold|sleeve|cover|anniversary|edition|master(ed|ing)?|remaster(ed)?|speed|remix(ed)?|press(ing)?|stereo|mono|numbered|limited|reissue|deluxe|expanded|definitive|signed|autograph(ed)?|poster|insert|obi|foil|embossed|labels?|hype|sticker|slipmat|tri-?fold|die.?cut|barcode|plating|kickstarter|exclusive|bonus|demos?|store)\\b",
+
+  "notVinyl": [
+    "gatefold", "fold", "sleeve", "cover", "label", "labels", "anniversary", "mastered", "remastered", "foil",
+    "obi", "hype", "sticker", "poster", "insert", "booklet", "embossed", "numbered"
+  ],
+
+  "filler": ["gram", "grams", "gr", "gm", "g", "vinyl", "lp", "edition", "expanded"]
+}

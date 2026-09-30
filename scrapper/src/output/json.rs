@@ -61,6 +61,60 @@ pub fn patch_album_service(album_dir: &std::path::Path, folder: &str, service: &
     Ok(true)
 }
 
+/// The public album-JSON keys derived from a release's stored Discogs formats: `format_details`
+/// (present once the formats are stored) and `vinyl_colours` (present only when coloured).
+/// A `None` value means the key is absent from the file.
+pub fn format_fields(raw_data: &Value) -> [(&'static str, Option<Value>); 2] {
+    let details = crate::formats::details_from_raw(raw_data);
+    let colours = details.as_deref().map(crate::formats::colours_from_details).unwrap_or_default();
+    [
+        ("format_details", details.map(Value::from)),
+        ("vinyl_colours", (!colours.is_empty()).then(|| json!(colours))),
+    ]
+}
+
+/// What `patch_album_fields` did to an album's public JSON file.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum Patch {
+    /// No JSON file for the album.
+    Missing,
+    /// The file already held these values, so it was left alone.
+    Unchanged,
+    Written,
+}
+
+/// Set (`Some`) or remove (`None`) top-level fields of an existing public album JSON file in
+/// place. Every other key keeps its position and formatting (some older files are not strictly
+/// key-sorted, and re-sorting them would rewrite unrelated lines); a new key goes before the
+/// first existing key that sorts after it. Nothing is written when nothing would change.
+pub fn patch_album_fields(album_dir: &std::path::Path, folder: &str, edits: &[(&str, Option<Value>)]) -> std::io::Result<Patch> {
+    let path = album_dir.join(folder).join(format!("{folder}.json"));
+    let Ok(text) = std::fs::read_to_string(&path) else { return Ok(Patch::Missing) };
+    let mut doc: Value = serde_json::from_str(&text).map_err(std::io::Error::other)?;
+    if let Some(obj) = doc.as_object_mut() {
+        for (key, value) in edits {
+            match value {
+                Some(v) if obj.contains_key(*key) => {
+                    obj.insert((*key).to_string(), v.clone());
+                }
+                Some(v) => {
+                    let at = obj.keys().position(|k| k.as_str() > *key).unwrap_or(obj.len());
+                    obj.shift_insert(at, (*key).to_string(), v.clone());
+                }
+                None => {
+                    obj.shift_remove(*key);
+                }
+            }
+        }
+    }
+    let out = serde_json::to_string_pretty(&doc).map_err(std::io::Error::other)?;
+    if out == text {
+        return Ok(Patch::Unchanged);
+    }
+    std::fs::write(&path, out)?;
+    Ok(Patch::Written)
+}
+
 fn as_array(v: &Value) -> Vec<Value> {
     v.as_array().cloned().unwrap_or_default()
 }
@@ -221,7 +275,7 @@ pub fn release_to_value(rec: &ReleaseRecord, db: &Db) -> Value {
         .unwrap_or(0);
     let has_local = rec.local_images.as_object().map(|m| !m.is_empty()).unwrap_or(false);
 
-    json!({
+    let mut out = json!({
         "id": rec.id,
         "title": rec.title,
         "discogs_id": rec.discogs_id,
@@ -258,7 +312,15 @@ pub fn release_to_value(rec: &ReleaseRecord, db: &Db) -> Value {
             "has_local_images": has_local,
             "local_images_count": local_count,
         }),
-    })
+    });
+    if let Some(obj) = out.as_object_mut() {
+        for (key, value) in format_fields(&rec.raw_data) {
+            if let Some(v) = value {
+                obj.insert(key.into(), v);
+            }
+        }
+    }
+    out
 }
 
 /// Build the artist `services{}` block from `raw_data` (top-level dicts, as-is).
@@ -342,5 +404,38 @@ mod tests {
         });
         let s = release_services(&raw);
         assert_eq!(s.get("perplexity").and_then(|p| p.get("description")), Some(&json!("top-level")));
+    }
+
+    fn write_album(dir: &std::path::Path, body: &str) {
+        std::fs::create_dir_all(dir.join("a-1")).unwrap();
+        std::fs::write(dir.join("a-1/a-1.json"), body).unwrap();
+    }
+
+    fn read_album(dir: &std::path::Path) -> String {
+        std::fs::read_to_string(dir.join("a-1/a-1.json")).unwrap()
+    }
+
+    #[test]
+    fn patch_album_fields_inserts_sorted_and_leaves_other_keys_alone() {
+        let dir = tempfile::tempdir().unwrap();
+        // `year` before `videos`, as in older files that are not strictly key-sorted.
+        write_album(dir.path(), "{\n  \"discogs_url\": \"u\",\n  \"formats\": [\n    \"Vinyl\"\n  ],\n  \"updated_at\": \"t\",\n  \"year\": 2020,\n  \"videos\": []\n}");
+        let edits = [("format_details", Some(json!([]))), ("vinyl_colours", Some(json!(["Red"])))];
+        assert_eq!(patch_album_fields(dir.path(), "a-1", &edits).unwrap(), Patch::Written);
+        let out = read_album(dir.path());
+        let keys: Vec<String> = serde_json::from_str::<Value>(&out).unwrap().as_object().unwrap().keys().cloned().collect();
+        assert_eq!(keys, ["discogs_url", "format_details", "formats", "updated_at", "vinyl_colours", "year", "videos"]);
+        assert!(out.contains("\"year\": 2020,\n  \"videos\": []"), "untouched keys keep their order: {out}");
+        // A second identical patch is a no-op.
+        assert_eq!(patch_album_fields(dir.path(), "a-1", &edits).unwrap(), Patch::Unchanged);
+    }
+
+    #[test]
+    fn patch_album_fields_removes_and_reports_missing_files() {
+        let dir = tempfile::tempdir().unwrap();
+        assert_eq!(patch_album_fields(dir.path(), "a-1", &[("vinyl_colours", None)]).unwrap(), Patch::Missing);
+        write_album(dir.path(), "{\n  \"vinyl_colours\": [\n    \"Red\"\n  ],\n  \"year\": 1\n}");
+        assert_eq!(patch_album_fields(dir.path(), "a-1", &[("vinyl_colours", None)]).unwrap(), Patch::Written);
+        assert_eq!(read_album(dir.path()), "{\n  \"year\": 1\n}");
     }
 }

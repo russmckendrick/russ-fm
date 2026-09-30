@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shuffle, SkipBack, SkipForward } from 'lucide-react';
 import { appConfig } from '@/config/app.config';
 import { loadDetailJson, useCollection } from '@/lib/collection';
+import { discLooks } from '@/lib/vinylLook';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
 import { buildFacetValues, FACETS } from '@/lib/browseFacets';
@@ -121,7 +122,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
   usePageFlood(
     current ? flood.flood : null,
     current ? flood.ink : null,
-    current ? { cover: getAlbumImageFromData(current.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+    current ? { cover: getAlbumImageFromData(current.uri_release, 'hi-res'), ground: flood.ground, vinyl: current.vinyl_colours?.[0] } : undefined,
   );
 
   if (!current) {
@@ -191,6 +192,7 @@ function Hero({ featured, colours }: { featured: Album[]; colours: Record<string
                       src={getAlbumImageFromData(album.uri_release, 'hi-res')}
                       alt=""
                       labelColour={f.ground}
+                      looks={discLooks(album.vinyl_colours)}
                       labelText={album.release_artist.toUpperCase()}
                       discOut={on ? 15 : 0}
                       spinning={on}

@@ -150,6 +150,16 @@ pub struct OriginalYearCandidate {
     pub master_id: Option<String>,
 }
 
+/// A release row for `backfill-formats` (see [`Db::releases_for_formats`]).
+#[derive(Debug, Clone)]
+pub struct FormatCandidate {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    /// The release's stored `raw_data`, whose `discogs.formats` may be missing.
+    pub raw_data: Value,
+}
+
 /// A box-format release row for the TUI Boxsets screen.
 #[derive(Debug, Clone, Serialize)]
 pub struct BoxsetSummary {
@@ -875,6 +885,59 @@ impl Db {
             }
         }
         Ok(out)
+    }
+
+    /// Every release with a Discogs id, newest first, with its stored `raw_data` so the formats
+    /// backfill can tell which releases still need the Discogs `formats[]` fetched.
+    pub fn releases_for_formats(&self) -> Result<Vec<FormatCandidate>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, title, artists, raw_data FROM releases WHERE discogs_id IS NOT NULL ORDER BY date_added DESC",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, Option<String>>(2)?,
+                row.get::<_, Option<String>>(3)?,
+            ))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (discogs_id, title, artists, raw) = row?;
+            out.push(FormatCandidate {
+                discogs_id,
+                title,
+                artists: artist_names(&parse_json(artists, "[]")),
+                raw_data: parse_json(raw, "{}"),
+            });
+        }
+        Ok(out)
+    }
+
+    /// Set `raw_data.discogs.formats` (the Discogs `formats[]`, colour in each `text`) on a
+    /// release, keeping every other key. Returns the updated `raw_data`, or `None` when the
+    /// release is not in the database.
+    pub fn set_release_discogs_formats(&self, discogs_id: &str, formats: Value) -> Result<Option<Value>> {
+        let conn = self.conn()?;
+        let raw: Option<Option<String>> = conn
+            .query_row("SELECT raw_data FROM releases WHERE discogs_id = ?", [discogs_id], |r| r.get(0))
+            .optional()?;
+        let Some(raw) = raw else { return Ok(None) };
+        let mut raw_data: Value = parse_json(raw, "{}");
+        if !raw_data.is_object() {
+            raw_data = serde_json::json!({});
+        }
+        let discogs = raw_data.as_object_mut().unwrap().entry("discogs").or_insert_with(|| serde_json::json!({}));
+        if !discogs.is_object() {
+            *discogs = serde_json::json!({});
+        }
+        discogs.as_object_mut().unwrap().insert("formats".into(), formats);
+        conn.execute(
+            "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
+            rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
+        )?;
+        Ok(Some(raw_data))
     }
 
     /// Set `raw_data.discogs.master_id` / `master_year` on a release, keeping every other key.

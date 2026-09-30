@@ -6,5 +6,6 @@ pub mod images;
 pub mod json;
 
 pub use json::{
-    artist_to_value, patch_album_field, patch_album_service, release_to_value, to_pretty_sorted,
+    artist_to_value, format_fields, patch_album_field, patch_album_fields, patch_album_service, release_to_value,
+    to_pretty_sorted, Patch,
 };

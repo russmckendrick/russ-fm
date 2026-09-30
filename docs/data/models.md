@@ -95,9 +95,13 @@ Notes:
 - The canonical Perplexity location is top-level `raw_data.perplexity`; legacy Python-era rows
   may nest it under `raw_data.services.perplexity` (readers fall back).
 - `raw_data.discogs` keeps the source `images`, the release's `master_id` and `master_year` (the
-  Discogs master's original release year; null = looked up, unknown; absent = not looked up).
-  `collection.json` derives `year_original` from it — see
-  [Original release year](../backend/README.md#original-release-year).
+  Discogs master's original release year; null = looked up, unknown; absent = not looked up), and
+  `formats` (the Discogs `formats[]` as-is: `{name, qty, descriptions, text}`; absent = not
+  fetched yet). `collection.json` derives `year_original` from the master year — see
+  [Original release year](../backend/README.md#original-release-year) — and the album JSON's
+  `format_details` / `vinyl_colours` (plus collection.json's `vinyl_colours`) from `formats` — see
+  [Pressing detail](./schemas.md#pressing-detail-format_details--vinyl_colours).
+  `release.formats` stays a list of names.
 - Python-era rows may store `raw_data.apple_music` / `raw_data.spotify` as dataclass repr strings
   rather than objects; `year_original` parses release dates out of those strings.
 
@@ -126,6 +130,7 @@ export interface Album {
 
   labels?: Label[];
   formats?: Format[];
+  vinyl_colours?: string[];        // coloured vinyl only, e.g. ["Red", "Yellow"]
   country?: string;
   tracklist?: Track[];
 
@@ -177,6 +182,7 @@ export interface Format {
   name: string;
   qty?: string;
   descriptions?: string[];
+  text?: string | null;            // free text: colour, weight, "Gatefold", …
 }
 ```
 

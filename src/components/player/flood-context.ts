@@ -17,6 +17,8 @@ export interface FloodState {
   cover?: string | null;
   /** Dark sleeve swatch the rest of the page sits on (`--ground`). */
   ground?: string | null;
+  /** Pressing colour of the record the page is showing (a `vinyl_colours` entry); the footer's record takes it. */
+  vinyl?: string | null;
 }
 
 export interface PageFloodExtras {
@@ -24,6 +26,8 @@ export interface PageFloodExtras {
   cover?: string | null;
   /** The page's ground, usually the lead sleeve's `ground` swatch. */
   ground?: string | null;
+  /** The record's pressing colour, e.g. "Red Smoke", so the footer's record matches. */
+  vinyl?: string | null;
 }
 
 export type SetFlood = (next: FloodState | null) => void;
@@ -45,11 +49,11 @@ export function useFloodValue(): FloodState {
 export function usePageFlood(
   flood: string | null | undefined,
   ink: string | null | undefined,
-  { cover = null, ground = null }: PageFloodExtras = {},
+  { cover = null, ground = null, vinyl = null }: PageFloodExtras = {},
 ) {
   const setFlood = useContext(FloodSetterContext);
   useEffect(() => {
-    setFlood(flood && ink ? { flood, ink, cover, ground } : null);
-  }, [flood, ink, cover, ground, setFlood]);
+    setFlood(flood && ink ? { flood, ink, cover, ground, vinyl } : null);
+  }, [flood, ink, cover, ground, vinyl, setFlood]);
   useEffect(() => () => setFlood(null), [setFlood]);
 }

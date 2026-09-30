@@ -10,6 +10,7 @@ import { SpinningMark } from "./player/SpinningMark";
 import { BrowseMenuCards } from "./browse/BrowseMenu";
 import { CREAM, GROUND, INK } from "@/lib/sleeveColour";
 import { excludeBoxsetMembers } from "@/lib/boxsets";
+import { vinylLook } from "@/lib/vinylLook";
 import { FACETS } from "@/lib/browseFacets";
 import { groupByFacet } from "@/components/browse/facetSleeves";
 import { useCollection } from "@/lib/collection";
@@ -25,7 +26,7 @@ type NavItem = {
   label: string;
   activePrefix?: string | string[];
   /** Key into the mobile menu's counts. */
-  count?: "records" | "artists" | "genres" | "labels" | "decades" | "countries";
+  count?: "records" | "artists" | "genres" | "labels" | "decades" | "countries" | "coloured";
 };
 
 const PRIMARY: NavItem[] = [
@@ -40,6 +41,7 @@ const BROWSE: NavItem[] = [
   { path: "/labels", label: "Labels", activePrefix: ["/labels", "/label/"], count: "labels" },
   { path: "/decades", label: "Decades", activePrefix: ["/decades", "/decade/"], count: "decades" },
   { path: "/countries", label: "Countries", activePrefix: ["/countries", "/country/"], count: "countries" },
+  { path: "/coloured-vinyl", label: "Coloured vinyl", activePrefix: "/coloured-vinyl", count: "coloured" },
 ];
 
 const MORE: NavItem[] = [
@@ -54,7 +56,8 @@ const SOLID_AFTER = 120;
 
 export function Navigation() {
   const location = useLocation();
-  const { flood, ink, cover } = useFloodValue();
+  const { flood, ink, cover, vinyl } = useFloodValue();
+  const markLook = useMemo(() => vinylLook(vinyl), [vinyl]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
@@ -147,7 +150,7 @@ export function Navigation() {
       >
         <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-5 px-5 md:h-[84px] md:px-10 lg:px-14 xl:gap-7">
           <Link to="/" className="flex shrink-0 items-center gap-2.5 md:gap-3" aria-label="russ.fm — home">
-            <SpinningMark size={isCompact ? 36 : 44} label={markLabel} cover={cover} />
+            <SpinningMark size={isCompact ? 36 : 44} label={markLabel} cover={cover} look={markLook} />
             <span className="t-disp text-[22px] tracking-[-0.04em] md:text-[26px]">russ.fm</span>
           </Link>
 
@@ -288,6 +291,7 @@ function useMenuCounts(): Counts | null {
       labels: groupByFacet(FACETS.label, albums).size,
       decades: groupByFacet(FACETS.decade, albums).size,
       countries: groupByFacet(FACETS.country, albums).size,
+      coloured: albums.filter((a) => a.vinyl_colours?.length).length,
     };
   }, [raw]);
 }

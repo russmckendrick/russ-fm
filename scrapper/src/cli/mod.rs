@@ -76,6 +76,10 @@ pub enum Command {
     /// Look up each release's Discogs master for its original release year (collection.json
     /// `year_original`). Resumable; regenerates collection.json when done.
     BackfillOriginalYears(BackfillOriginalYearsArgs),
+    /// Store each release's Discogs pressing detail (vinyl colour lives in `formats[].text`) and
+    /// write `format_details` / `vinyl_colours` into the album JSON and collection.json.
+    /// Resumable; only releases without stored formats call Discogs.
+    BackfillFormats(BackfillFormatsArgs),
     /// Built-in database manager (search/list/delete/stats/backup).
     #[command(subcommand)]
     Db(DbCommand),
@@ -310,6 +314,20 @@ pub struct BackfillOriginalYearsArgs {
     pub force: bool,
 }
 
+#[derive(Debug, Args)]
+pub struct BackfillFormatsArgs {
+    /// Only fetch this many releases from Discogs (newest additions first); the album JSON of
+    /// every release that already has stored formats is still synced.
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Report what would be fetched and patched without calling Discogs or writing anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Fetch every release again, including ones that already have stored formats.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+}
+
 #[derive(Debug, Subcommand)]
 pub enum DbCommand {
     /// Search releases or artists.
@@ -416,6 +434,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::EnrichDescription(a) => ops::descriptions::run(&cfg, a).await,
         Command::BackfillVideos(a) => ops::videos::run(&cfg, a).await,
         Command::BackfillOriginalYears(a) => ops::original_years::run(&cfg, a).await,
+        Command::BackfillFormats(a) => ops::formats::run(&cfg, a).await,
     }
 }
 

@@ -23,6 +23,7 @@ const STATIC_ROUTES = [
   { path: '/labels', changefreq: 'weekly', priority: '0.7' },
   { path: '/decades', changefreq: 'weekly', priority: '0.7' },
   { path: '/countries', changefreq: 'weekly', priority: '0.7' },
+  { path: '/coloured-vinyl', changefreq: 'weekly', priority: '0.6' },
   { path: '/shuffle', changefreq: 'weekly', priority: '0.4' },
 ];
 

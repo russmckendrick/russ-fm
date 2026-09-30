@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { BrowseHeader, FacetCard } from '@/components/browse/BrowseHeader';
-import { byDateAddedDesc, summariseFacet } from '@/components/browse/facetSleeves';
+import { byDateAddedDesc, floodForUri, pickSleeves, summariseFacet } from '@/components/browse/facetSleeves';
 import { EditorialEmpty, EditorialSkeleton, PageContainer } from '@/components/layout';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
@@ -22,7 +22,7 @@ export function BrowseIndexPage() {
   usePageTitle('Browse | Russ.fm');
   useMetaTags({
     title: 'Browse | Russ.fm',
-    description: 'Browse the collection by genre, label, decade or country.',
+    description: 'Browse the collection by genre, label, decade, country or coloured vinyl.',
     image: `${appConfig.siteUrl}/og-image.png`,
     url: `${appConfig.siteUrl}/browse`,
     type: 'website',
@@ -37,8 +37,15 @@ export function BrowseIndexPage() {
     [albums, colorMap],
   );
 
+  // Coloured pressings are not a facet, so their card is built from the records that carry `vinyl_colours`.
+  const coloured = useMemo(() => {
+    const list = albums.filter(a => a.vinyl_colours?.length);
+    const fan = pickSleeves(list, colorMap);
+    return { count: list.length, fan, flood: floodForUri(fan[0]?.uri_release, colorMap) };
+  }, [albums, colorMap]);
+
   // The header band and page ground take the cards' lead sleeves.
-  const flood = useRecordsFlood(cards.map(card => card.fan[0]?.uri_release));
+  const flood = useRecordsFlood([...cards.map(card => card.fan[0]?.uri_release), coloured.fan[0]?.uri_release]);
 
   if (loading) {
     return (
@@ -85,6 +92,18 @@ export function BrowseIndexPage() {
               />
             </li>
           ))}
+          {coloured.count > 0 && (
+            <li className="min-w-0 sm:col-span-2">
+              <FacetCard
+                to="/coloured-vinyl"
+                title="Coloured vinyl"
+                size="lg"
+                flood={coloured.flood}
+                albums={coloured.fan}
+                meta={`${coloured.count.toLocaleString()} ${coloured.count === 1 ? 'record' : 'records'} · clear, splatter, marbled and more`}
+              />
+            </li>
+          )}
         </ul>
       </PageContainer>
     </>

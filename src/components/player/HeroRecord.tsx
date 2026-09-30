@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { cn } from '@/lib/utils';
 import type { ScrobbleScene } from '@/hooks/useScrobbleScene';
+import type { VinylLook } from '@/lib/vinylLook';
 import { Sleeve } from './Sleeve';
 import { Vinyl } from './Vinyl';
 import { Sticker } from './Sticker';
@@ -14,6 +15,12 @@ interface HeroRecordProps {
   labelText?: string;
   /** Sleeve image printed on the centre label (zoomed to fill the circle). */
   labelCover?: string;
+  /**
+   * The pressing's colour for each disc, in order; black without any. The first is the
+   * front record (the one that scrobbles); a set's other discs are tucked behind it, each
+   * pulled out a little further than the one in front, up to `discOut` for the last.
+   */
+  looks?: Array<VinylLook | null>;
   /** How far the disc sits out of the sleeve, in % of its width. */
   discOut?: number;
   spinning?: boolean;
@@ -36,6 +43,9 @@ interface HeroRecordProps {
 
 const SCROBBLED_STICKER = { background: 'var(--cream)', color: '#0e0d0c' };
 
+/** More discs than this are not drawn; a big box would fan out across the page. */
+const MAX_DISCS = 4;
+
 /**
  * The cover-as-hero object: a big sleeve with the record half out to the
  * right, shrink-wrap shine and an optional shop sticker.
@@ -47,6 +57,7 @@ export function HeroRecord({
   labelColour,
   labelText,
   labelCover,
+  looks,
   discOut = 15,
   spinning = true,
   fast = false,
@@ -60,6 +71,14 @@ export function HeroRecord({
 }: HeroRecordProps) {
   const phase = scene?.phase ?? 'idle';
   const inScene = phase !== 'idle';
+  const discs = looks?.length ? looks.slice(0, MAX_DISCS) : [null];
+  // The last disc sits at `discOut`, so the fan reaches no further than a single record would.
+  const step = [0, 6, 4.5, 3.5][discs.length - 1];
+  const shiftOf = (k: number) => Math.max(0, discOut - (discs.length - 1 - k) * step);
+  // On hover the CSS sets --pull and every disc slides out a little more, the deeper ones
+  // further, so the fan opens as it goes.
+  const lean = (k: number) => (discs.length > 1 ? 0.5 + 0.5 * (k / (discs.length - 1)) : 1);
+  const offset = (k: number) => `translateX(calc(${shiftOf(k)}% + var(--pull, 0%) * ${lean(k)}))`;
 
   return (
     <div
@@ -67,12 +86,26 @@ export function HeroRecord({
       data-scene={phase}
       style={ringColour ? ({ '--ring': ringColour } as CSSProperties) : undefined}
     >
+      {/* The rest of the set, deepest first so each sits over the one behind it. */}
+      {discs
+        .map((look, k) => ({ look, k }))
+        .slice(1)
+        .reverse()
+        .map(({ look, k }) => (
+          <div
+            key={k}
+            className={cn('hero-disc hero-disc-extra', !discOnMobile && 'max-md:hidden')}
+            style={{ transform: offset(k), zIndex: 0 }}
+          >
+            <Vinyl label={labelColour} look={look} spin={spinning} className="inset-0" />
+          </div>
+        ))}
       <div
         className={cn('hero-disc', !discOnMobile && !inScene && 'max-md:hidden')}
-        style={inScene ? undefined : { transform: `translateX(${discOut}%)` }}
+        style={inScene ? undefined : { transform: offset(0) }}
       >
         <div className="hero-disc-bob">
-          <Vinyl label={labelColour} cover={labelCover} text={labelText} spin={spinning} fast={fast || inScene} className="inset-0" />
+          <Vinyl label={labelColour} cover={labelCover} look={discs[0]} text={labelText} spin={spinning} fast={fast || inScene} className="inset-0" />
           {scene && scene.total > 0 && <ScrobbleRing done={scene.done} total={scene.total} playing={phase === 'play'} />}
         </div>
       </div>

@@ -249,6 +249,36 @@ a reissue date. The original year comes from the Discogs **master**:
   (`year_original()` / `legacy_repr_year()` in `output/collection.rs`). `date_release_year` and
   the album JSON files are unchanged.
 
+## Pressing detail and vinyl colour
+
+`release.formats` keeps only each Discogs format's `name` (`["Vinyl"]`), but the colour of a
+coloured pressing lives in the format's free-text `text` (`"Red Translucent"`, `"Yellow And Black
+Marble [Memphis Dust]"`). The pressing detail is kept alongside it:
+
+- `process_release` and the detail editor's Discogs refresh store the full Discogs `formats[]` as
+  `raw_data.discogs.formats` (`{name, qty, descriptions, text}` per entry). Python-era rows
+  already carry the whole Discogs payload there; rows the Rust scrapper wrote before this only
+  have `images` / `master_*` and are filled by `scrapper backfill-formats`
+  (see [cli-commands.md](./cli-commands.md#backfill-formats)). No SQLite schema change.
+- The colour vocabulary (colour words, pattern prefixes, the words that are not colours) is one
+  file shared with the site, `src/config/vinyl-colours.json`, embedded into `formats.rs` at build time
+  (`include_str!`); see [Vinyl colours](../frontend/utilities.md#vinyl-colours-srclibvinyllookts).
+  Change it and rebuild, then run `scrapper backfill-formats` to re-derive.
+- `formats.rs` normalises that array and derives the colours (`details_from_raw()`,
+  `colours_from_details()`, `vinyl_colours()`). Each Vinyl entry is one disc set, so it gets one
+  `colour` (its colour parts joined, `Yellow, Transparent` → `Yellow Transparent`) and
+  `vinyl_colours` lists one per entry. The derivation is a heuristic over free text, unit
+  tested against real Discogs values; see the rules in
+  [Pressing detail](../data/schemas.md#pressing-detail-format_details--vinyl_colours).
+- The album JSON gains `format_details` and `vinyl_colours` (`output::format_fields()` in
+  `output/json.rs`, called by `release_to_value()`), and `collection.json` gains `vinyl_colours`
+  after `format_primary` (`output/collection.rs`). Both are omitted when there is nothing to
+  say, so uncoloured releases are unchanged.
+- The backfill patches existing album JSON files in place (`patch_album_fields()`), touching only
+  those two keys, so a re-run leaves already-current files byte-identical.
+- The release refresh replaces `raw_data.discogs` wholesale, so it must keep writing `formats`
+  there or the colour is lost on the next refresh.
+
 ## Boxsets (TUI)
 
 The **Boxsets** home-menu entry lists the box-set releases in the database (any `formats[]`

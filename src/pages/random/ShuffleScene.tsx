@@ -10,6 +10,7 @@ import { getAlbumImageFromData, getAlbumImageSrcSet, getAlbumSlug } from '@/lib/
 import { originalYear } from '@/lib/releaseYear';
 import { isReshuffleState } from '@/lib/shuffleLink';
 import { CREAM, floodFor, pageGround, subInk } from '@/lib/sleeveColour';
+import { discLook } from '@/lib/vinylLook';
 import { boardFor, type FlapLayout, type FlapRecord } from '@/lib/splitFlap';
 import type { Album } from '@/types/album';
 import { FlapBoard } from './FlapBoard';
@@ -126,6 +127,7 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
   usePageFlood(shownFlood?.flood, shownFlood?.ink, {
     cover: shownCover,
     ground: shownFlood ? pageGround(shownFlood) : null,
+    vinyl: shown?.vinyl_colours?.[0],
   });
 
   const idle = phase === 'idle';
@@ -151,6 +153,7 @@ export function ShuffleScene({ albums }: { albums: Album[] }) {
           <Vinyl
             label={nextFlood.ground}
             cover={getAlbumImageFromData(next.uri_release, 'medium')}
+            look={discLook(next.vinyl_colours, 0)}
             fast={!idle}
             className="vinyl-lit left-[3%] top-[3%] h-[94%] w-[94%]"
           />

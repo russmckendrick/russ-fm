@@ -269,7 +269,8 @@ React Router DOM handles all navigation:
 | `/stats` | StatsPage | Collection statistics |
 | `/genres` | GenrePage | Genre browser |
 | `/genre/:slug` | FacetDetailPage | Records in one genre |
-| `/browse` | BrowseIndexPage | Browse by genre, label, decade, country |
+| `/browse` | BrowseIndexPage | Browse by genre, label, decade, country or coloured vinyl |
+| `/coloured-vinyl` | ColouredVinylPage | Every coloured pressing as a still record, filterable by colour family and pattern |
 | `/labels`, `/decades`, `/countries` | FacetListPage | Every value of one facet |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug` | FacetDetailPage | Records for one value |
 | `/shuffle`, `/random` | RandomPage | Shuffle: split-flap board to a random record |

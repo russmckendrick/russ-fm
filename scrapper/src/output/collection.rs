@@ -371,6 +371,11 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     e.insert("styles".into(), json!(styles));
     e.insert("formats".into(), json!(formats_raw));
     e.insert("format_primary".into(), format_primary.map(Value::from).unwrap_or(Value::Null));
+    // Coloured pressings only; the album JSON carries the full per-disc detail.
+    let vinyl_colours = crate::formats::vinyl_colours(&rec.raw_data);
+    if !vinyl_colours.is_empty() {
+        e.insert("vinyl_colours".into(), json!(vinyl_colours));
+    }
     e.insert("labels".into(), json!(labels));
     e.insert("country".into(), rec.country.clone().map(Value::from).unwrap_or(Value::Null));
     e.insert("lastfm_listeners".into(), lastfm_listeners.map(Value::from).unwrap_or(Value::Null));

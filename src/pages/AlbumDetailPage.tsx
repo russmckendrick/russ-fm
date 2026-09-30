@@ -22,6 +22,7 @@ import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
+import { discLooks, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
 import { buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
 
@@ -55,6 +56,7 @@ interface Album {
     medium: string;
   };
   format_primary?: string | null;
+  vinyl_colours?: string[];
   labels?: string[];
   boxset?: BoxsetLink | null;
   boxset_contents?: BoxsetContent[];
@@ -72,6 +74,15 @@ interface Track {
   }>;
 }
 
+/** One Discogs format entry (a disc set) from the album JSON's `format_details`. */
+interface FormatEntry {
+  name: string;
+  qty?: string;
+  descriptions?: string[];
+  text?: string | null;
+  colour?: string | null;
+}
+
 interface DetailedAlbum {
   id?: string;
   title: string;
@@ -87,6 +98,9 @@ interface DetailedAlbum {
   country?: string;
   labels?: string[];
   formats?: string[];
+  vinyl_colours?: string[];
+  /** One entry per disc set; `colour` is the disc's derived pressing colour. */
+  format_details?: FormatEntry[];
   genres: string[];
   styles?: string[];
   tracklist?: Track[];
@@ -298,10 +312,15 @@ export function AlbumDetailPage() {
   const { scene: scrobbleScene, onProgress: onScrobbleProgress } = useScrobbleScene(albumPath);
   const [boxSelected, setBoxSelected] = useState(0);
   const flood = floodFor(palette);
+  // The pressing's colour per disc: the hero fans them out, each tracklist side takes its LP's,
+  // and the logo and footer follow the first.
+  const vinylColours = detailedAlbum?.vinyl_colours ?? album?.vinyl_colours ?? [];
+  const discs = pressingDiscs(detailedAlbum?.format_details, vinylColours);
+  const looks = discLooks(discs);
   usePageFlood(
     album ? flood.flood : null,
     album ? flood.ink : null,
-    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+    album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground, vinyl: discs[0] } : undefined,
   );
 
   useEffect(() => {
@@ -796,6 +815,7 @@ export function AlbumDetailPage() {
 
   const formatDetail = [
     detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record',
+    vinylColours.length ? vinylColours.join(' & ') : null,
     sideCount > 2 ? `${discCount} discs` : null,
     sideCount > 1 ? `${sideCount} sides` : null,
   ].filter(Boolean).join(' · ');
@@ -941,6 +961,7 @@ export function AlbumDetailPage() {
               alt={`${title} by ${album.release_artist}`}
               labelColour={flood.ground}
               labelCover={getAlbumImageFromData(album.uri_release, 'hi-res')}
+              looks={looks}
               scene={scrobbleScene}
               ringColour={flood.flood}
               sticker={{ date: album.date_added, background: flood.ground, color: flood.flood }}
@@ -995,6 +1016,7 @@ export function AlbumDetailPage() {
                   grouping={sides}
                   accent={accent}
                   discColour={flood.flood}
+                  looks={looks}
                   spotifyIndex={spotifyTrackIndex}
                   getDuration={getTrackDuration}
                 />
@@ -1104,6 +1126,8 @@ export function AlbumDetailPage() {
                 </dl>
               </section>
             )}
+
+            {!isBox && detailedAlbum?.format_details && <Pressing formats={detailedAlbum.format_details} discColour={flood.flood} />}
 
             {swatches.length > 0 && (
               <section className="flex flex-col gap-3">
@@ -1228,16 +1252,69 @@ function formatDate(value: string): string {
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 }
 
+/**
+ * The pressing, from the Discogs format entries: each vinyl disc set as a little record in its
+ * own colour with what Discogs says about it (LP, 180 gram, gatefold…), other formats as plain
+ * rows, and the edition tags (limited edition, remastered…) that apply to the whole release.
+ */
+function Pressing({ formats, discColour }: { formats: FormatEntry[]; discColour: string }) {
+  const rows = formats.filter(f => f.name !== 'All Media');
+  const edition = [...new Set(formats.filter(f => f.name === 'All Media').flatMap(f => f.descriptions ?? []))];
+  if (!rows.length && !edition.length) return null;
+  return (
+    <section className="flex flex-col gap-4">
+      <h3 className="t-kicker m-0 text-[color:var(--cream-dim)]">Pressing</h3>
+      <ul className="m-0 flex list-none flex-col gap-4 p-0">
+        {rows.map((f, i) => {
+          const vinyl = f.name === 'Vinyl';
+          const qty = Math.max(1, parseInt(f.qty ?? '1', 10) || 1);
+          const { title, extras } = vinyl ? pressingTitle(f.text, f.colour) : { title: f.name, extras: [] as string[] };
+          const meta = [qty > 1 ? `${qty} discs` : null, ...(f.descriptions ?? []), ...extras].filter(Boolean).join(' · ');
+          return (
+            <li key={i} className="flex items-center gap-3.5">
+              {vinyl && (
+                <div className="relative h-11 w-11 shrink-0">
+                  <Vinyl label={discColour} look={vinylLook(f.colour)} spin={false} className="inset-0" />
+                </div>
+              )}
+              <div className="flex min-w-0 flex-col gap-1">
+                <span className="text-[16px] font-semibold leading-tight">{title}</span>
+                {meta && <span className="t-mono text-[12px] leading-snug text-[color:var(--cream-dim)]">{meta}</span>}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      {edition.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {edition.map(tag => (
+            <span
+              key={tag}
+              className="t-mono rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[.08em] text-[color:var(--cream-dim)]"
+              style={{ borderColor: 'var(--cream-rule)' }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function Tracklist({
   grouping,
   accent,
   discColour,
+  looks,
   spotifyIndex,
   getDuration,
 }: {
   grouping: Grouping;
   accent: string;
   discColour: string;
+  /** The look of each disc, so each side's little record matches its LP. */
+  looks: Array<VinylLook | null>;
   spotifyIndex: Map<string, string>;
   getDuration: (t: Track) => string;
 }) {
@@ -1259,7 +1336,12 @@ function Tracklist({
                   {side.label && (
                     <div className="flex flex-wrap items-center gap-3.5">
                       <div className="relative h-12 w-12 shrink-0">
-                        <Vinyl label={discColour} spin={false} className="inset-0" />
+                        <Vinyl
+                          label={discColour}
+                          look={lookAt(looks, grouping.type === 'lp' ? bi : Math.floor(si / 2))}
+                          spin={false}
+                          className="inset-0"
+                        />
                       </div>
                       <span className="t-disp flex-1 text-[30px] md:text-[36px]">{side.label}</span>
                     </div>

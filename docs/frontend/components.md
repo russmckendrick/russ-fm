@@ -21,7 +21,7 @@ All exported from `@/components/player`.
 | `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
 | `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker; `label` and `footer` make the "Scrobbled 26 SEP · 11 tracks" one. |
-| `RecordTile` | `RecordTile.tsx` | A record in a row or grid. |
+| `RecordTile` | `RecordTile.tsx` | A record in a row or grid. Its disc takes the pressing's colour on hover. |
 | `FitTitle` | `FitTitle.tsx` | Display title sized to its column: starts at `max` px and shrinks (binary search on `scrollWidth`) until the longest word fits; wraps only between words, balanced. Refits on column resize and once fonts load. A word too long even at `min` (default 20) may break. `fitHeight` also shrinks it until the parent's content fits the parent's height (the fixed-height artist hero on desktop), refitting as siblings resize or are added; where the parent's height is auto it never binds. Used for the artist name. |
 | `PillLink` | `Pill.tsx` | Rounded link button, outline or solid; external service links get their brand icon. |
 | `SectionHeading` | `SectionHeading.tsx` | Plain section title with optional note and "see all" link. |
@@ -58,6 +58,7 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 | src / srcSet | `string` | – | Sleeve image (use `image-utils`, `hi-res`) |
 | alt | `string` | – | Alt text |
 | labelColour | `string` | – | Vinyl centre label, normally `flood.ground` |
+| looks | `Array<VinylLook \| null>` | – | The pressing's colour for each disc, in order (see [Vinyl colours](./utilities.md#vinyl-colours-srclibvinyllookts)); black without any. The first is the front record and scrobbles; the rest (up to four discs in all) are tucked behind it, each pulled out a little further, the last at `discOut`, so the fan never reaches past a single disc |
 | labelText | `string` | – | Small text printed on the label |
 | discOut | `number` | `15` | How far the disc sits out of the sleeve, % of width |
 | spinning / fast | `boolean` | `true` / `false` | Spin, and spin at 45 (used while scrobbling) |
@@ -65,13 +66,23 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 | stickerOnMobile | `boolean` | `true` | `false` hides the sticker below `md` (the home hero) |
 | eager | `boolean` | `true` | Eager-load the image |
 
+**Hover.** On hover-capable devices (and not with reduced motion) hovering the record sets
+`--pull: 18%` on `.hero-record`, and every disc slides out that much further, the deeper ones of
+a multi-disc set further still so the fan opens. The discs pass over the start of the title beside
+the record, on purpose. It only applies while the scrobble scene is idle. Each disc's offset is
+`calc(<resting shift> + var(--pull) * <lean>)` set inline by `HeroRecord`; the rule is in
+`player.css`.
+
 ### Sleeve, Vinyl, Sticker
 
 - `Sleeve` — `src`, `alt`, optional `shrinkwrap`, `loading`, `srcSet`,
   `sizes`, `children` (overlays such as the box set "From the box" band).
   Uses `handleImageError` for fallbacks.
 - `Vinyl` — `label` (centre-label colour, usually the sleeve's dark
-  background swatch), `spin`, `fast`, `text`. Always `aria-hidden`.
+  background swatch), `look` (a `VinylLook`: the disc body, pattern, groove
+  ink and rim of a coloured pressing, applied as `--vinyl-body` /
+  `--vinyl-pattern` / `--vinyl-groove` / `--vinyl-rim`; `.vinyl-lit` honours
+  them too), `spin`, `fast`, `text`. Always `aria-hidden`.
 - `Sticker` — `date` (ISO), `label` (default `Added`), `background`,
   `color`, `size` (`lg` 128px, `sm` 92px). Renders nothing for an invalid
   date; carries an `aria-label` with the full date.
@@ -84,7 +95,7 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 
 | Prop | Type | Description |
 |------|------|-------------|
-| album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist'>` | Record to show |
+| album | `Pick<Album, 'uri_release' \| 'release_name' \| 'release_artist' \| 'vinyl_colours'>` | Record to show. `vinyl_colours` (optional) paints the disc as the pressing's colour |
 | palette | `AlbumColorPalette \| null` | Sets the colour bar (the flood, two-tone with the secondary colour when the sleeve has one) and the disc label (the ground) |
 | meta | `ReactNode` | Mono line under the artist |
 | showArtist / showText | `boolean` | Default `true` |
@@ -93,7 +104,12 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 The disc slides out of the sleeve on hover and focus (`.rec` in
 `player.css`). It is rendered with `spin={false}`: the disc sits behind
 the sleeve until hover, and a wall of spinning discs would cost a
-compositor layer and a repaint each. The image is always the `medium`
+compositor layer and a repaint each. For the same reason a coloured
+pressing is only painted on first hover or focus (`discLook()` from
+[`vinylLook.ts`](./utilities.md#vinyl-colours-srclibvinyllookts)), so a wall of
+tiles never carries patterns it has not shown. Callers holding a Wrapped
+release or a search result (no `vinyl_colours`) pass them from
+[`useVinylColours`](./hooks.md#usevinylcolours). The image is always the `medium`
 size.
 
 ### PillLink and pills

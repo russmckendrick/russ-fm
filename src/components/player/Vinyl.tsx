@@ -1,12 +1,15 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { inkOn } from '@/lib/sleeveColour';
+import type { VinylLook } from '@/lib/vinylLook';
 
 interface VinylProps {
   /** Centre-label colour, usually the sleeve's dark background swatch. */
   label: string;
   /** Sleeve image printed on the centre label instead of a flat colour. */
   cover?: string | null;
+  /** A coloured pressing; without one the disc is black. */
+  look?: VinylLook | null;
   spin?: boolean;
   /** Spin at 45 instead of 33⅓ (used while scrobbling). */
   fast?: boolean;
@@ -19,9 +22,9 @@ interface VinylProps {
 }
 
 /** A vinyl record: grooves and a coloured centre label, spinning at 33⅓. */
-export function Vinyl({ label, cover, spin = true, fast = false, text, children, className, style }: VinylProps) {
+export function Vinyl({ label, cover, look, spin = true, fast = false, text, children, className, style }: VinylProps) {
   return (
-    <div className={cn('vinyl', className)} style={style} aria-hidden>
+    <div className={cn('vinyl', className)} style={look ? { ...lookVars(look), ...style } : style} aria-hidden>
       <div className={cn('vinyl-grooves', spin && (fast ? 'spin-45' : 'spin-33'))}>
         <div className="vinyl-label" style={{ background: label }}>
           {cover && <LabelCover src={cover} />}
@@ -38,6 +41,15 @@ export function Vinyl({ label, cover, spin = true, fast = false, text, children,
       </div>
     </div>
   );
+}
+
+function lookVars(look: VinylLook): CSSProperties {
+  return {
+    '--vinyl-body': look.body,
+    '--vinyl-pattern': look.pattern ?? 'none',
+    '--vinyl-groove': look.groove,
+    '--vinyl-rim': look.rim,
+  } as CSSProperties;
 }
 
 /**

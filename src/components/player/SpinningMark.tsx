@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import { cn } from '@/lib/utils';
 import { inkOn } from '@/lib/sleeveColour';
+import type { VinylLook } from '@/lib/vinylLook';
 import { Vinyl } from './Vinyl';
 
 interface SpinningMarkProps {
@@ -10,6 +11,8 @@ interface SpinningMarkProps {
   label: string;
   /** Sleeve of the record the page is showing, printed on the label. */
   cover?: string | null;
+  /** The pressing's colour for the record the page is showing; black without one. */
+  look?: VinylLook | null;
   className?: string;
 }
 
@@ -18,14 +21,14 @@ interface SpinningMarkProps {
  * (home hero, album, artist) its label carries that sleeve; elsewhere the label
  * is the page colour with a mark so the spin reads.
  */
-export function SpinningMark({ size, label, cover, className }: SpinningMarkProps) {
+export function SpinningMark({ size, label, cover, look, className }: SpinningMarkProps) {
   return (
     <span
       className={cn('spin-mark relative block shrink-0', !cover && 'spin-mark-plain', className)}
       style={{ width: size, height: size, '--mark-tick': inkOn(label) } as CSSProperties}
       aria-hidden
     >
-      <Vinyl label={label} cover={cover} className="vinyl-lit inset-0" />
+      <Vinyl label={label} cover={cover} look={look} className="vinyl-lit inset-0" />
     </span>
   );
 }
