@@ -62,6 +62,11 @@ function runOf(artist: Pick<Artist, 'name' | 'latestAlbum'>, sortBy: string): { 
   return null;
 }
 
+/** An artist's most recently added records, latest first. */
+function latestRecords(artist: Pick<Artist, 'albums'>, n: number): Album[] {
+  return [...artist.albums].sort((a, b) => b.date_added.localeCompare(a.date_added)).slice(0, n);
+}
+
 /** An artist's most common genres across their records. */
 function topGenres(artist: Pick<Artist, 'albums'>, n: number): string[] {
   const counts = new Map<string, number>();
@@ -617,7 +622,7 @@ export function ArtistsPage() {
                     <ArtistCard
                       artist={artist}
                       feature={feature}
-                      record={artist.albums.find((a) => a.uri_release === artist.latestRelease)}
+                      records={latestRecords(artist, 3)}
                       palette={colorMap?.[artist.latestRelease] ?? null}
                       className={feature ? 'sm:col-span-2 sm:row-span-2' : undefined}
                     />

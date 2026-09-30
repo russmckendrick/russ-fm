@@ -1,12 +1,10 @@
 import { useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import type { AlbumColorPalette } from "@/hooks/useAlbumColors";
-import { Vinyl } from "@/components/player/Vinyl";
 import { circleCrop, useArtistImageInfo } from "@/lib/artistImage";
 import { getAlbumImageFromData, getArtistImageFromData, handleImageError } from "@/lib/image-utils";
 import { floodFor } from "@/lib/sleeveColour";
 import { cn } from "@/lib/utils";
-import { discLook } from "@/lib/vinylLook";
 import type { Album } from "@/types/album";
 
 interface Artist {
@@ -29,45 +27,70 @@ interface ArtistCardProps {
   /** A bigger tile (the caller spans it over two columns and rows): larger name and ring. */
   feature?: boolean;
   /**
-   * The artist's latest record. Its disc sits behind the photo and slides out
-   * sideways on hover, the sleeve on its label, in the pressing's colour.
+   * Up to three of the artist's records, latest first. Their sleeves sit
+   * hidden behind the photo and fan out above it on hover.
    */
-  record?: Pick<Album, "uri_release" | "vinyl_colours"> | null;
+  records?: Array<Pick<Album, "uri_release" | "release_name">>;
   onClick?: () => void;
   className?: string;
 }
 
 /**
- * Artist in a grid: round photo with a ring in the colour of their latest
- * sleeve, name in bold display type and the record count in mono. With a
- * `record`, that record's disc is tucked behind the photo and slides out on
- * hover, as on the album tiles.
+ * Where each sleeve lands on hover by how many there are, latest first:
+ * [x, y] as a share of the sleeve, and the tilt in degrees.
  */
-export function ArtistCard({ artist, palette, feature = false, record, onClick, className }: ArtistCardProps) {
+const FAN: Record<number, Array<[number, number, number]>> = {
+  1: [[0, -96, 0]],
+  2: [[-38, -86, -14], [38, -86, 14]],
+  3: [[0, -98, 0], [-64, -74, -24], [64, -74, 24]],
+};
+
+/**
+ * Artist in a grid: round photo with a ring in the colour of their latest
+ * sleeve, name in bold display type and the record count in mono. With
+ * `records`, up to three sleeves are tucked behind the photo and fan out
+ * above it on hover, the latest in the middle and on top.
+ */
+export function ArtistCard({ artist, palette, feature = false, records, onClick, className }: ArtistCardProps) {
   const colours = floodFor(palette);
   const count = artist.albumCount;
-  // The disc is hidden until hover, so its label sleeve and coloured
-  // pressing load then: a page of cards never fetches what it has not shown.
+  const fan = (records ?? []).slice(0, 3);
+  // The sleeves are hidden until hover, so their covers load then: a page of
+  // cards never fetches what it has not shown.
   const [peeked, setPeeked] = useState(false);
-  const peek = record ? () => setPeeked(true) : undefined;
+  const peek = fan.length ? () => setPeeked(true) : undefined;
 
   const content = (
     <div className="flex min-w-0 flex-col items-center text-center" style={{ "--accent": colours.flood } as CSSProperties}>
-      <div className={cn("relative aspect-square w-full", record && "artist-rec")}>
-        {record && (
-          <Vinyl
-            label={colours.ground}
-            cover={peeked ? getAlbumImageFromData(record.uri_release, "medium") : null}
-            look={peeked ? discLook(record.vinyl_colours, 0) : null}
-            spin={false}
-          />
+      <div className={cn("relative aspect-square w-full", fan.length > 0 && "artist-fan")}>
+        {fan.length > 0 && (
+          <div className="artist-fan-sleeves" aria-hidden>
+            {fan.map((album, i) => (
+              <div
+                key={album.uri_release}
+                className="sleeve"
+                style={
+                  {
+                    "--fan-x": `${FAN[fan.length][i][0]}%`,
+                    "--fan-y": `${FAN[fan.length][i][1]}%`,
+                    "--fan-r": `${FAN[fan.length][i][2]}deg`,
+                    zIndex: fan.length - i,
+                  } as CSSProperties
+                }
+              >
+                {peeked && (
+                  <img src={getAlbumImageFromData(album.uri_release, "medium")} alt="" decoding="async" onError={handleImageError} />
+                )}
+              </div>
+            ))}
+          </div>
         )}
         <ArtistPhoto
           uri={artist.uri}
           image={artist.image}
           size={feature ? 720 : 360}
           className={cn(
-            "artist-rec-photo h-full w-full",
+            "artist-fan-photo h-full w-full",
             "transition-[box-shadow,transform] duration-300 ease-out motion-reduce:transition-none",
             feature
               ? "shadow-[0_0_0_4px_var(--ground),0_0_0_10px_var(--accent)] group-hover:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)] group-focus-visible:shadow-[0_0_0_4px_var(--ground),0_0_0_16px_var(--accent)]"

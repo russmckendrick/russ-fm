@@ -251,11 +251,12 @@ Round artist photo with a ring in the flood colour of the artist's latest
 sleeve (the ring widens on hover and focus), name in `t-dispn` and the
 record count in mono.
 
-With a `record` (the artist's latest album), that record's disc (`Vinyl`)
-sits behind the photo and slides out sideways on hover (`.artist-rec` in
-`player.css`), the sleeve on its label and the pressing's colour from
-`discLook()`. Both load on first hover, so a page of cards fetches nothing it
-has not shown.
+With `records` (up to three, latest first), their sleeves sit hidden behind
+the photo, small enough that their corners stay inside the circle, and fan
+out above it on hover like a hand of cards: the latest in the middle and on
+top, the others tilted out to each side (`.artist-fan` in `player.css`; the
+landing spots are `FAN` in the component). The covers load on first hover, so
+a page of cards fetches nothing it has not shown.
 
 The photo (`ArtistPhoto`, exported for other layouts such as the ranked
 Most records list) is framed from its `-image.json` notes with `circleCrop()`
@@ -272,7 +273,7 @@ never jumps from a centre crop.
 | artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils`; `uri` is the `/artist/<slug>/` path |
 | palette | `AlbumColorPalette \| null` | Palette of the latest record; neutral ring without one |
 | feature | `boolean` | Bigger tile: larger name, count and ring. The caller spans it (`sm:col-span-2 sm:row-span-2`) |
-| record | `Pick<Album, 'uri_release' \| 'vinyl_colours'> \| null` | Latest record: its disc slides out from behind the photo on hover |
+| records | `Pick<Album, 'uri_release' \| 'release_name'>[]` | Up to three records, latest first: their sleeves fan out from behind the photo on hover |
 | onClick | `() => void` | Render as a button instead of a link |
 | index | `number` | Accepted; not rendered |
 

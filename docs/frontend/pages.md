@@ -322,8 +322,8 @@ const description =
 - Each sort has its own layout:
   - **A–Z** and **Latest added**: an `ArtistCard` grid
     (`grid-flow-row-dense`). Each ring takes the flood colour of the artist's
-    latest record from `useAlbumColorMap()`, and that record's disc sits
-    behind the photo and slides out on hover. Artists with 5+ records get a
+    latest record from `useAlbumColorMap()`, and the sleeves of their three
+    most recently added records fan out from behind the photo on hover. Artists with 5+ records get a
     double-size `feature` tile (two columns by two rows from `sm` up). A cream
     divider card (`RunDivider`: label large, the run's artist count, a tab on
     top) leads each run inline in the grid, as tall as the artist tiles: the

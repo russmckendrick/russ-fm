@@ -361,35 +361,37 @@ body {
   transform: translateX(-6%);
 }
 
-/* Artist card (ArtistCard with a `record`): the latest record's disc sits
-   behind the round photo and slides out sideways on hover, less far than a
-   sleeve's so it stays clear of the next card's name. */
-/* z-index keeps the label's spindle hole (z-index 1) under the photo. */
-.artist-rec .vinyl {
+/* Artist card (ArtistCard with `records`): up to three sleeves hidden behind
+   the round photo (small enough that their corners stay inside the circle)
+   fan out above it on hover, pivoting near their foot like a hand of cards. */
+.artist-fan-sleeves {
+  position: absolute;
+  inset: 0;
   z-index: 0;
-  top: 4%;
-  left: 4%;
-  width: 92%;
-  height: 92%;
-  transition: transform 0.7s var(--ease-out);
 }
 
-.artist-rec .artist-rec-photo {
+.artist-fan-sleeves .sleeve {
+  position: absolute;
+  top: 21%;
+  left: 21%;
+  width: 58%;
+  height: 58%;
+  transform-origin: 50% 100%;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.artist-fan .artist-fan-photo {
   position: relative;
+  z-index: 1;
 }
 
-.group:hover .artist-rec .vinyl,
-.group:focus-visible .artist-rec .vinyl {
-  transform: translateX(30%);
-}
-
-.group:hover .artist-rec .artist-rec-photo,
-.group:focus-visible .artist-rec .artist-rec-photo {
-  transform: translateX(-6%);
+.group:hover .artist-fan-sleeves .sleeve,
+.group:focus-visible .artist-fan-sleeves .sleeve {
+  transform: translate(var(--fan-x, 0), var(--fan-y, -96%)) rotate(var(--fan-r, 0deg)) scale(1.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .artist-rec .vinyl {
+  .artist-fan-sleeves .sleeve {
     transition: none;
   }
 }
