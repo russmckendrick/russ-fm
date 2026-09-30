@@ -251,10 +251,20 @@ Round artist photo with a ring in the flood colour of the artist's latest
 sleeve (the ring widens on hover and focus), name in `t-dispn` and the
 record count in mono.
 
+The photo is framed from its `-image.json` notes with `circleCrop()`
+(`src/lib/artistImage.ts`): every face inside the circle, sitting a little
+above the middle, zoomed in up to 1.6× on small or distant subjects. When the
+faces fall outside the centred square that `medium` is cut to, the card loads
+the `hi-res` photo instead (about one in nine artists). On hover the photo
+pushes in on the faces (1.18×, from their middle); photos without faces keep
+the gentle 1.05× zoom. The photo fades in once the notes have loaded, so it
+never jumps from a centre crop.
+
 | Prop | Type | Description |
 |------|------|-------------|
-| artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils` |
+| artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils`; `uri` is the `/artist/<slug>/` path |
 | palette | `AlbumColorPalette \| null` | Palette of the latest record; neutral ring without one |
+| feature | `boolean` | Bigger tile: larger name, count and ring. The caller spans it (`sm:col-span-2 sm:row-span-2`) |
 | onClick | `() => void` | Render as a button instead of a link |
 | index | `number` | Accepted; not rendered |
 

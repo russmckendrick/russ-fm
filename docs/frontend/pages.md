@@ -17,7 +17,7 @@ This document covers the route-level page components in russ.fm.
 | `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
-| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid → pill pager. |
+| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid (double-size tiles for big artists, letter dividers in A–Z) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
@@ -317,8 +317,15 @@ const description =
 - `Artists` title with the count in dim type
 - Pill search field and sort pills (A–Z, Most records, Latest added)
 - Scrollable A–Z strip (letters without artists are disabled)
-- `ArtistCard` grid; each ring takes the flood colour of the artist's
-  latest record from `useAlbumColorMap()`
+- `ArtistCard` grid (`grid-flow-row-dense`); each ring takes the flood colour
+  of the artist's latest record from `useAlbumColorMap()`
+- Heavily collected artists get a double-size `feature` tile (two columns by
+  two rows from `sm` up): 5+ records in A–Z and Latest added, and only the
+  top 6 overall in Most records, where everyone early on is heavy
+- In A–Z order a cream divider card (`LetterDivider`: the letter large, its
+  artist count, a tab on top) leads each new first letter inline in the grid,
+  as tall as the artist tiles; names starting with a digit or punctuation
+  file under `#`, accents are dropped
 - Pill pager
 - "Various Artists" excluded; boxset members excluded
 

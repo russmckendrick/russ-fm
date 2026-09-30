@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, type ReactNode } from 'react';
+import { Fragment, useState, useEffect, useCallback, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Search, X } from 'lucide-react';
 import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import { ArtistCard } from '@/components/ArtistCard';
@@ -31,6 +31,17 @@ const SORT_OPTIONS: Array<{ value: string; label: string }> = [
   { value: 'albums', label: 'Most records' },
   { value: 'latest', label: 'Latest added' },
 ];
+
+/** Records an artist needs for a double-size tile (A–Z and Latest added). */
+const FEATURE_MIN_RECORDS = 5;
+/** Double-size tiles in "Most records": the top few overall. */
+const FEATURE_TOP = 6;
+
+/** The A–Z bucket for a name: its first letter, accents dropped, or "#" for digits and punctuation. */
+function letterOf(name: string): string {
+  const first = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase();
+  return /[A-Z]/.test(first) ? first : '#';
+}
 
 export function ArtistsPage() {
   const { page } = useParams<{ page?: string }>();
@@ -379,6 +390,23 @@ export function ArtistsPage() {
     return pages;
   };
 
+  // Heavily collected artists get a double-size tile. In "Most records"
+  // everyone on the first pages is heavy, so only the very top stand out.
+  const featureRank = new Map(
+    sortBy === 'albums' ? filteredArtists.slice(0, FEATURE_TOP).map((a, i) => [a.uri, i] as const) : [],
+  );
+  const isFeature = (artist: Artist) =>
+    sortBy === 'albums' ? featureRank.has(artist.uri) : artist.albumCount >= FEATURE_MIN_RECORDS;
+
+  // A–Z pages get a divider card inline wherever a new first letter starts.
+  const letterCounts = new Map<string, number>();
+  if (sortBy === 'name') {
+    filteredArtists.forEach((a) => {
+      const letter = letterOf(a.name);
+      letterCounts.set(letter, (letterCounts.get(letter) ?? 0) + 1);
+    });
+  }
+
   const availableLetters = getAvailableLetters();
   const hasFilters = !!searchTerm || selectedLetter !== 'all';
   // Artists are derived in effects after the collection lands; keep the
@@ -531,15 +559,23 @@ export function ArtistsPage() {
             )}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
-            {paginatedArtists.map((artist, i) => (
-              <ArtistCard
-                key={artist.uri}
-                artist={artist}
-                index={startIndex + i + 1}
-                palette={colorMap?.[artist.latestRelease] ?? null}
-              />
-            ))}
+          <div className="grid grid-flow-row-dense grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
+            {paginatedArtists.map((artist, i) => {
+              const feature = isFeature(artist);
+              const letter = sortBy === 'name' ? letterOf(artist.name) : null;
+              const newLetter = letter && (i === 0 || letterOf(paginatedArtists[i - 1].name) !== letter);
+              return (
+                <Fragment key={artist.uri}>
+                  {newLetter && <LetterDivider letter={letter} count={letterCounts.get(letter) ?? 0} />}
+                  <ArtistCard
+                    artist={artist}
+                    feature={feature}
+                    palette={colorMap?.[artist.latestRelease] ?? null}
+                    className={feature ? 'sm:col-span-2 sm:row-span-2' : undefined}
+                  />
+                </Fragment>
+              );
+            })}
           </div>
         )}
 
@@ -585,6 +621,27 @@ export function ArtistsPage() {
         )}
       </PageContainer>
     </>
+  );
+}
+
+/**
+ * A rack divider leading each letter in the A–Z grid: a card as wide as an
+ * artist photo and as tall as the whole tile (photo and name), with a tab on
+ * top, the letter large and the letter's artist count below.
+ */
+function LetterDivider({ letter, count }: { letter: string; count: number }) {
+  return (
+    <div className="flex min-w-0 flex-col p-2 pt-5">
+      <div className="relative min-h-full flex-1 [container-type:inline-size]">
+        <span aria-hidden className="absolute -top-3 left-[12%] h-6 w-2/5 rounded-t-xl bg-[var(--cream)]" />
+        <div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-[var(--cream)] p-[9cqw] text-[color:var(--ground)]">
+          <h2 className="t-disp m-0 text-[78cqw] leading-[0.8]">{letter}</h2>
+          <span className="t-mono text-[11px] font-bold uppercase md:text-[12px]">
+            {count.toLocaleString('en-GB')} {count === 1 ? 'artist' : 'artists'}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
 
