@@ -320,6 +320,23 @@ const slots = slotsBetween(channel, from, to);       // guide rows (epoch ms)
   than 12 minutes stay off every channel but Live; missing durations count as 4 minutes.
   Each item's `artist` is the video's own `artist` from tv.json (compilations), else the
   release artist.
+- Artist channels come from one pass over `tv.json` (`artistIndex`, cached per
+  `tv.json`, about 20ms for the whole collection): each video goes to the artists its
+  record credits (the credited `artists` and band `members`; the `uri_artist` headliner
+  only when a record credits nobody, so a joint "A & B" credit doesn't get a channel of
+  its own), or, when the video carries its own `artist` (compilations), to the artists
+  of that name (compared ignoring case, accents, punctuation and Discogs' `(2)`
+  suffixes). `various` is skipped. Full concerts up to 90 minutes stay in, as on Live.
+- `artistChannel(tv, albums, artistSlug)` is `/tv/artist/<slug>`: on the clock like the
+  other channels, numbered `AR`, in the room its records most often take, or null when
+  the artist has no videos. A slug that isn't an index key is matched as the artist page
+  does (`artistMatcher` in `src/lib/artistMatch.ts`, shared with `ArtistDetailPage`).
+  Channels are cached, so the artist page's video count and the TV share one object.
+  `artistChannelSlug(slug)` is `artist/<slug>`.
+- `artistChannelList(tv, albums)` is every artist with a channel, A–Z, as `{ slug, name,
+  videos, cover }` (`cover` is their newest record with videos), for the guide.
+  `scripts/generate-sitemap.mjs` repeats the same rules to list the channels; change
+  both together.
 - Running orders are a shuffle seeded by the channel slug, with same-record neighbours
   pulled apart, and `onAir` counts from a fixed epoch, so every visitor sees the same
   schedule.

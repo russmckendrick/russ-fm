@@ -1,3 +1,4 @@
+import { artistMatcher } from '@/lib/artistMatch';
 import type { Album } from '@/types/album';
 
 /**
@@ -302,8 +303,7 @@ export function albumChannel(release: TvRelease, album: Album): TvChannel {
     const airsOn = seconds > MAX_SECONDS ? (v.kind === 'live' && seconds <= MAX_LIVE_SECONDS ? 'live' : undefined) : (slugs[0] ?? 'everything-else');
     return { id: v.id, title: v.title, artist: v.artist ?? album.release_artist, kind: v.kind, seconds, album, airsOn };
   });
-  const first = slugs[0];
-  const room = GENRE_CHANNELS.find(c => c.slug === first)?.room ?? 'shelves';
+  const room = roomFor(slugs);
   const starts: number[] = [];
   let t = 0;
   for (const item of items) {
@@ -311,6 +311,153 @@ export function albumChannel(release: TvRelease, album: Album): TvChannel {
     t += item.seconds;
   }
   return { slug: `album:${album.uri_release}`, number: 'LP', name: album.release_name, room, items, starts, loop: t, home: album.uri_release };
+}
+
+/** The room of a release's first genre channel. */
+function roomFor(slugs: string[]): TvRoomId {
+  return GENRE_CHANNELS.find(c => c.slug === slugs[0])?.room ?? 'shelves';
+}
+
+/** Artist names compared loosely: case, accents, punctuation and Discogs' "(2)" suffixes aside. */
+function artistKey(name: string): string {
+  return name
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s*\(\d+\)$/, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+/** The channel slug for an artist's own TV; `videoPath` turns it into /tv/artist/<slug>/…. */
+export function artistChannelSlug(artistSlug: string): string {
+  return `artist/${artistSlug}`;
+}
+
+interface ArtistVideos {
+  slug: string;
+  name: string;
+  items: TvItem[];
+  /** How many of their records with videos each room would take. */
+  rooms: Map<TvRoomId, number>;
+}
+
+interface ArtistIndex {
+  artists: Map<string, ArtistVideos>;
+  channels: Map<string, TvChannel | null>;
+}
+
+const artistIndexes = new WeakMap<TvData, ArtistIndex>();
+
+const slugOf = (uri: string | null | undefined) => uri?.replace(/^\/artist\//, '').replace(/\/$/, '') || null;
+
+/**
+ * Every artist's videos, in one pass over tv.json: each video goes to the
+ * artists its record credits (credited artists and band line-up, else the
+ * headliner), or, when it carries its own artist
+ * (compilations), to the artists of that name. Full concerts stay in, as on
+ * Live. Cached per tv.json.
+ */
+function artistIndex(tv: TvData, albums: Album[]): ArtistIndex {
+  const cached = artistIndexes.get(tv);
+  if (cached) return cached;
+
+  const artists = new Map<string, ArtistVideos>();
+  const byName = new Map<string, Set<string>>();
+  const credits = new Map<string, string[]>();
+  const add = (slug: string | null, name: string) => {
+    if (!slug || slug === 'various') return null;
+    if (!artists.has(slug)) artists.set(slug, { slug, name, items: [], rooms: new Map() });
+    const key = artistKey(name);
+    if (!byName.has(key)) byName.set(key, new Set());
+    byName.get(key)!.add(slug);
+    return slug;
+  };
+  for (const album of albums) {
+    const slugs = new Set<string>();
+    // The credited artists, not the joint "A & B" headliner (each has their own
+    // channel); the headliner only when a record credits nobody.
+    for (const a of album.artists ?? []) slugs.add(add(slugOf(a.uri_artist), a.name) ?? '');
+    if (!album.artists?.length) slugs.add(add(slugOf(album.uri_artist), album.release_artist) ?? '');
+    for (const m of album.members ?? []) slugs.add(add(slugOf(m.uri_artist), m.name) ?? '');
+    slugs.delete('');
+    credits.set(album.uri_release, [...slugs]);
+  }
+
+  const byUri = new Map(albums.map(a => [a.uri_release, a]));
+  const seen = new Map<string, Set<string>>();
+  for (const release of tv.releases) {
+    const album = byUri.get(release.uri);
+    if (!album) continue;
+    const used = new Set<string>();
+    for (const v of release.videos) {
+      const seconds = v.duration && v.duration > 0 ? v.duration : DEFAULT_SECONDS;
+      if (seconds > (v.kind === 'live' ? MAX_LIVE_SECONDS : MAX_SECONDS)) continue;
+      // A video only carries its own artist when it isn't the release's headliner.
+      const slugs = v.artist ? byName.get(artistKey(v.artist)) ?? [] : credits.get(album.uri_release) ?? [];
+      for (const slug of slugs) {
+        let ids = seen.get(slug);
+        if (!ids) seen.set(slug, (ids = new Set()));
+        if (ids.has(v.id)) continue;
+        ids.add(v.id);
+        artists.get(slug)!.items.push({ id: v.id, title: v.title, artist: v.artist ?? album.release_artist, kind: v.kind, seconds, album });
+        used.add(slug);
+      }
+    }
+    if (used.size) {
+      const room = roomFor(genreChannelsFor(release));
+      for (const slug of used) {
+        const rooms = artists.get(slug)!.rooms;
+        rooms.set(room, (rooms.get(room) ?? 0) + 1);
+      }
+    }
+  }
+  for (const [slug, a] of artists) if (!a.items.length) artists.delete(slug);
+
+  const index = { artists, channels: new Map<string, TvChannel | null>() };
+  artistIndexes.set(tv, index);
+  return index;
+}
+
+/**
+ * One artist's videos as a channel (/tv/artist/:slug), on the clock like any
+ * other channel, in the room their records most often take. Null when the
+ * artist has no videos. Cached, so the artist page and the TV share one
+ * channel object.
+ */
+export function artistChannel(tv: TvData, albums: Album[], artistSlug: string): TvChannel | null {
+  const index = artistIndex(tv, albums);
+  if (index.channels.has(artistSlug)) return index.channels.get(artistSlug)!;
+
+  // The URL's slug is normally the artist's own; else match it as the artist page does.
+  let entry = index.artists.get(artistSlug);
+  if (!entry) {
+    const match = artistMatcher(artistSlug);
+    entry = [...index.artists.values()].find(a => match.matches(`/artist/${a.slug}/`));
+  }
+  let result: TvChannel | null = null;
+  if (entry) {
+    const room = [...entry.rooms].sort((a, b) => b[1] - a[1])[0][0];
+    result = { ...channel(artistChannelSlug(artistSlug), 0, entry.name, room, entry.items), number: 'AR' };
+  }
+  index.channels.set(artistSlug, result);
+  return result;
+}
+
+export interface TvArtistListing {
+  slug: string;
+  name: string;
+  videos: number;
+  /** Their newest record with videos, for the tile's colour. */
+  cover: string;
+}
+
+/** Every artist with a channel, A–Z, for the guide. */
+export function artistChannelList(tv: TvData, albums: Album[]): TvArtistListing[] {
+  return [...artistIndex(tv, albums).artists.values()]
+    .sort((a, b) => artistKey(a.name).localeCompare(artistKey(b.name)))
+    .map(a => ({ slug: a.slug, name: a.name, videos: a.items.length, cover: a.items[0].album.uri_release }));
 }
 
 /** Distinct videos across all channels (for the "N videos" count). */

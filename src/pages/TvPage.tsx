@@ -1,30 +1,48 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Navigate, useParams } from 'react-router-dom';
-import { RefreshCw } from 'lucide-react';
+import { Link, Navigate, useParams } from 'react-router-dom';
+import { ArrowRight, RefreshCw } from 'lucide-react';
 import { PageContainer } from '@/components/layout';
 import { preloadAlbumColors } from '@/hooks/useAlbumColors';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { loadCollection } from '@/lib/collection';
 import { useTv } from '@/components/tv/tv-context';
-import { buildChannels, countVideos, loadTv, TV_LATEST, videoIdFromParam, videoPath, type TvChannel } from '@/lib/tv';
+import type { Album } from '@/types/album';
+import {
+  artistChannel,
+  artistChannelList,
+  buildChannels,
+  countVideos,
+  loadTv,
+  TV_LATEST,
+  videoIdFromParam,
+  videoPath,
+  type TvChannel,
+  type TvData,
+} from '@/lib/tv';
 import { TvScene } from './tv/TvScene';
 import { TvGuide } from './tv/TvGuide';
 
 type Status = 'loading' | 'ready' | 'error';
 
-let channelCache: TvChannel[] | null = null;
+interface TvSource {
+  tv: TvData;
+  albums: Album[];
+  channels: TvChannel[];
+}
+
+let sourceCache: TvSource | null = null;
 
 /** tv.json + the collection, built into channels once per tab. */
-function useChannels(): { channels: TvChannel[] | null; status: Status; retry: () => void } {
-  const [channels, setChannels] = useState<TvChannel[] | null>(channelCache);
-  const [status, setStatus] = useState<Status>(channelCache ? 'ready' : 'loading');
+function useChannels(): { source: TvSource | null; channels: TvChannel[] | null; status: Status; retry: () => void } {
+  const [source, setSource] = useState<TvSource | null>(sourceCache);
+  const [status, setStatus] = useState<Status>(sourceCache ? 'ready' : 'loading');
 
   const load = useCallback(() => {
     setStatus('loading');
     Promise.all([loadTv(), loadCollection(), preloadAlbumColors()])
       .then(([tv, albums]) => {
-        channelCache = buildChannels(tv, albums);
-        setChannels(channelCache);
+        sourceCache = { tv, albums, channels: buildChannels(tv, albums) };
+        setSource(sourceCache);
         setStatus('ready');
       })
       .catch(err => {
@@ -34,10 +52,10 @@ function useChannels(): { channels: TvChannel[] | null; status: Status; retry: (
   }, []);
 
   useEffect(() => {
-    if (!channelCache) load();
+    if (!sourceCache) load();
   }, [load]);
 
-  return { channels, status, retry: load };
+  return { source, channels: source?.channels ?? null, status, retry: load };
 }
 
 /**
@@ -70,9 +88,37 @@ export function TvPage() {
   );
 }
 
+/**
+ * /tv/artist/:artist and /tv/artist/:artist/:video: one artist's videos on
+ * their own channel, linked from their artist page.
+ */
+export function TvArtistPage() {
+  const { artist: slug = '', video } = useParams<{ artist: string; video: string }>();
+  const { source, channels, status, retry } = useChannels();
+  const tv = useTv();
+  const channel = useMemo(() => (source ? artistChannel(source.tv, source.albums, slug) : null), [source, slug]);
+  const videoCount = useMemo(() => (channels ? countVideos(channels) : 0), [channels]);
+
+  const playing = tv.channel && tv.channel.slug === channel?.slug ? tv.item : null;
+  usePageTitle(
+    playing ? `${playing.title} – ${playing.artist} | ${channel!.name} on TV | Russ.fm` : channel ? `${channel.name} on TV | Russ.fm` : 'TV | Russ.fm',
+  );
+
+  if (status === 'error') return <TvMessage title="The TV didn't load" retry={retry} />;
+  if (!channels) return <TvLoading />;
+  if (!channel) return <TvMessage title="No videos for this artist yet" link={{ to: `/artist/${slug}`, label: 'Back to the artist' }} />;
+
+  return (
+    <PageContainer variant="hero">
+      <TvScene channels={channels} channel={channel} videoId={videoIdFromParam(video)} videoCount={videoCount} />
+    </PageContainer>
+  );
+}
+
 /** /tv/guide: what is on every channel. */
 export function TvGuidePage() {
-  const { channels, status, retry } = useChannels();
+  const { source, channels, status, retry } = useChannels();
+  const artists = useMemo(() => (source ? artistChannelList(source.tv, source.albums) : []), [source]);
   usePageTitle('TV guide | Russ.fm');
 
   if (status === 'error') return <TvMessage title="The guide didn't load" retry={retry} />;
@@ -80,7 +126,7 @@ export function TvGuidePage() {
 
   return (
     <PageContainer variant="hero">
-      <TvGuide channels={channels} videoCount={countVideos(channels)} />
+      <TvGuide channels={channels} artists={artists} videoCount={countVideos(channels)} />
     </PageContainer>
   );
 }
@@ -93,7 +139,7 @@ function TvLoading() {
   );
 }
 
-function TvMessage({ title, retry }: { title: string; retry?: () => void }) {
+function TvMessage({ title, retry, link }: { title: string; retry?: () => void; link?: { to: string; label: string } }) {
   return (
     <PageContainer>
       <div className="flex min-h-[50vh] flex-col items-start justify-center gap-6">
@@ -103,6 +149,12 @@ function TvMessage({ title, retry }: { title: string; retry?: () => void }) {
             <RefreshCw className="h-4 w-4" aria-hidden />
             Try again
           </button>
+        )}
+        {link && (
+          <Link to={link.to} className="pill">
+            {link.label}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
         )}
       </div>
     </PageContainer>

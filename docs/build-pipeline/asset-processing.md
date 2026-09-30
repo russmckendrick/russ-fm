@@ -476,6 +476,10 @@ pages from the manifest. Video links (`/tv/<channel>/<video>`) aren't static: th
 worker (`injectTvVideoMeta` in `_worker.js`) titles them from `tv.json`
 ("Playgirl – Ladytron | Russ.fm TV") with the video's YouTube still as the image
 (`maxresdefault` when YouTube has one, checked once per isolate, else `hqdefault`).
+Artist channels are dynamic too: `injectTvArtistMeta` gives `/tv/artist/<slug>`
+"Steven Wilson on TV | Russ.fm" with the artist's OG card, and
+`/tv/artist/<slug>/<video>` the video's title and still ("Playing on Steven Wilson's
+channel"). Artist names come from `collection.json`, cached per isolate.
 
 ### Image Specifications
 

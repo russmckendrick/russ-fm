@@ -152,9 +152,12 @@ async function handleStaticAssets(request, env) {
     const indexResponse = await env.ASSETS.fetch(indexRequest);
 
     if (indexResponse.ok) {
-      // A shared TV video link: that video's title and still.
-      if (/^\/tv\/[^/]+\/[^/]+$/.test(pathname)) {
-        const htmlWithMeta = await injectTvVideoMeta(pathname, indexResponse, env, url, request);
+      // An artist's TV channel, or a shared TV video link: its title and still.
+      const tvArtist = pathname.match(/^\/tv\/artist\/([^/]+)(?:\/([^/]+))?\/?$/);
+      if (tvArtist || /^\/tv\/[^/]+\/[^/]+$/.test(pathname)) {
+        const htmlWithMeta = tvArtist
+          ? await injectTvArtistMeta(pathname, tvArtist[1], tvArtist[2], indexResponse, env, url, request)
+          : await injectTvVideoMeta(pathname, indexResponse, env, url, request);
         if (htmlWithMeta) {
           return new Response(htmlWithMeta, {
             status: 200,
@@ -368,23 +371,72 @@ async function youTubeStill(id) {
 async function injectTvVideoMeta(pathname, indexResponse, env, url, request) {
   try {
     const [, , channelSlug, segment] = pathname.split('/');
-    const id = segment?.slice(-11);
-    if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return null;
     if (!(await loadTvIndex(env, url, request))) return null;
-    const video = tvVideos.get(id);
-    if (!video) return null;
+    return await tvVideoMeta(pathname, segment, tvChannels.get(channelSlug)?.name, indexResponse);
+  } catch (error) {
+    console.error('Error injecting TV meta tags:', error);
+    return null;
+  }
+}
 
-    const channel = tvChannels.get(channelSlug);
+async function tvVideoMeta(pathname, segment, channelName, indexResponse) {
+  const id = segment?.slice(-11);
+  if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return null;
+  const video = tvVideos.get(id);
+  if (!video) return null;
+
+  const html = await indexResponse.clone().text();
+  const where = channelName ? ` Playing on ${channelName}, ` : ' Playing on ';
+  return applyMetaTags(html, pathname, {
+    title: `${video.title} – ${video.artist} | Russ.fm TV`,
+    description: `${video.title} by ${video.artist}, from ${video.release}.${where}music TV from the russ.fm record collection.`,
+    imageUrl: await youTubeStill(id),
+    ogType: 'video.other',
+  });
+}
+
+// Per-isolate cache of artist slug → name, from collection.json.
+let artistNames = null;
+
+async function artistNameFor(slug, env, url, request) {
+  if (!artistNames) {
+    const res = await env.ASSETS.fetch(new Request(new URL('/collection.json', url.origin), request));
+    if (!res.ok) return null;
+    const map = new Map();
+    for (const album of await res.json()) {
+      for (const a of album.artists || []) {
+        const s = a.uri_artist?.replace(/^\/artist\//, '').replace(/\/$/, '');
+        if (s && !map.has(s)) map.set(s, a.name);
+      }
+      const s = album.uri_artist?.replace(/^\/artist\//, '').replace(/\/$/, '');
+      if (s && !map.has(s)) map.set(s, album.release_artist);
+    }
+    artistNames = map;
+  }
+  return artistNames.get(slug) || null;
+}
+
+/**
+ * /tv/artist/:slug (an artist's own channel) and /tv/artist/:slug/:video:
+ * the channel with the artist's card, or the video as on any other channel.
+ */
+async function injectTvArtistMeta(pathname, slug, segment, indexResponse, env, url, request) {
+  try {
+    const name = await artistNameFor(decodeURIComponent(slug), env, url, request);
+    if (!name) return null;
+    if (segment) {
+      if (!(await loadTvIndex(env, url, request))) return null;
+      return await tvVideoMeta(pathname, segment, `${name}'s channel`, indexResponse);
+    }
     const html = await indexResponse.clone().text();
-    const where = channel ? ` Playing on ${channel.name}, ` : ' Playing on ';
     return applyMetaTags(html, pathname, {
-      title: `${video.title} – ${video.artist} | Russ.fm TV`,
-      description: `${video.title} by ${video.artist}, from ${video.release}.${where}music TV from the russ.fm record collection.`,
-      imageUrl: await youTubeStill(id),
+      title: `${name} on TV | Russ.fm`,
+      description: `Music videos by ${name}, from the records in the russ.fm collection, on their own TV channel.`,
+      imageUrl: `https://assets.russ.fm/artist/${slug}/og-image.png`,
       ogType: 'video.other',
     });
   } catch (error) {
-    console.error('Error injecting TV meta tags:', error);
+    console.error('Error injecting TV artist meta tags:', error);
     return null;
   }
 }

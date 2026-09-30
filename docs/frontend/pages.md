@@ -16,7 +16,7 @@ This document covers the route-level page components in russ.fm.
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
 | `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
-| `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
+| `/artist/:slug` | Flood panel (portrait, name, stats, bio, a "Watch N videos" pill to the artist's TV channel when they have videos, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
@@ -52,6 +52,7 @@ flowchart TB
         CountryDetail["/country/:slug"]
         Random["/shuffle, /random"]
         Tv["/tv, /tv/:channel"]
+        TvArtist["/tv/artist/:slug"]
         TvGuide["/tv/guide"]
         Search["/search"]
         Wrapped["/wrapped"]
@@ -79,6 +80,7 @@ flowchart TB
     CountryDetail --> FacetDetailPage
     Random --> RandomPage
     Tv --> TvPage
+    TvArtist --> TvArtistPage
     TvGuide --> TvGuidePage
     Search --> SearchResultsPage
     Wrapped --> WrappedYear
@@ -643,6 +645,15 @@ as `/tv/electronic`; an unknown slug redirects to `/tv`), `/tv/:channel/:video` 
 video, e.g. `/tv/electronic/sneaker-pimps-6-underground-2eBZqmL8ehg`) and `/tv/guide`
 (`TvGuidePage`). The nav has a TV item.
 
+- **Artist channels.** `/tv/artist/:slug` and `/tv/artist/:slug/:video`
+  (`TvArtistPage`) play one artist's videos on the same scene: channel `AR`, named after
+  the artist, built by `artistChannel()` (see [utilities](./utilities.md#tv-srclibtvts)).
+  The artist page links to it with a "Watch N videos" pill (a `Tv` icon, first in the
+  service pills), shown only when the channel has videos; an artist with none gets a
+  "No videos for this artist yet" page with a link back. The address follows the video
+  as on any channel (`videoPath('artist/<slug>', item)`), and the floating player links
+  back to it.
+
 - **Shareable URLs.** While the TV page is showing, its address follows the video on
   screen (`videoPath()`: artist and title words, then the 11-character YouTube id, the
   only part `videoIdFromParam()` reads). The update replaces the history entry, so Back
@@ -714,7 +725,13 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   01 is airing, then a half-hour grid of every channel from the current half hour
   (earlier/later buttons, up to three hours ahead). Blocks are sized by duration and
   coloured by sleeve; finished ones are dimmed, the one on air is outlined, and a line
-  marks the time. Any block or channel name tunes to that channel.
+  marks the time. Any block or channel name tunes to that channel. The header counts
+  channels, artist channels, videos and hours. Below the grid, **Artist channels**
+  (`src/pages/tv/TvArtistChannels.tsx`) lists every artist with a channel
+  (`artistChannelList()`): too many for grid rows, so it shows a letter at a time (A–Z
+  pills as on `/artists`, `#` for digits and punctuation, opening on A) or the matches
+  for a search box, each artist a tile in their newest record's sleeve colour with a
+  video count, linking to `/tv/artist/<slug>`.
 
 ---
 

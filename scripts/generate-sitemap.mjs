@@ -8,6 +8,7 @@ const SITE_URL = normalizeSiteUrl(
 );
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const COLLECTION_PATH = path.join(PUBLIC_DIR, 'collection.json');
+const TV_PATH = path.join(PUBLIC_DIR, 'tv.json');
 const WRAPPED_DIR = path.join(PUBLIC_DIR, 'wrapped');
 const OUTPUT_PATH = path.join(PUBLIC_DIR, 'sitemap.xml');
 const ALBUMS_PER_PAGE = 24;
@@ -62,6 +63,7 @@ async function main() {
 
   addFacetRoutes(collection, collectionLastmod);
   await addWrappedRoutes(collection, collectionLastmod);
+  await addTvArtistRoutes(collection, collectionLastmod);
 
   const xml = renderSitemap(Array.from(routes.values()));
   const writtenFiles = await writeSitemap(xml);
@@ -206,6 +208,77 @@ async function addWrappedRoutes(collection, fallbackLastmod) {
       }
     }
   }
+}
+
+// The same limits as src/lib/tv.ts: videos with no duration count as 4 minutes;
+// longer than 12 minutes only airs when it is a live video of up to 90.
+const TV_DEFAULT_SECONDS = 240;
+const TV_MAX_SECONDS = 12 * 60;
+const TV_MAX_LIVE_SECONDS = 90 * 60;
+
+/**
+ * /tv/artist/<slug> for every artist with a channel, following artistChannel()
+ * in src/lib/tv.ts: a video belongs to the artists its record credits
+ * (credited artists and band line-up, else the headliner), or, when it carries its own
+ * artist (compilations), to the artists of that name.
+ */
+async function addTvArtistRoutes(collection, fallbackLastmod) {
+  let tv;
+  try {
+    tv = JSON.parse(await readFile(TV_PATH, 'utf8'));
+  } catch {
+    return;
+  }
+
+  const slugOf = (uri) => (typeof uri === 'string' ? uri.replace(/^\/artist\//, '').replace(/\/$/, '') : '') || null;
+  const byName = new Map();
+  const credits = new Map();
+  const add = (slug, name, set) => {
+    if (!slug || slug === 'various' || !name) return;
+    set.add(slug);
+    const key = tvArtistKey(name);
+    if (!byName.has(key)) byName.set(key, new Set());
+    byName.get(key).add(slug);
+  };
+  for (const album of collection) {
+    const slugs = new Set();
+    for (const a of album.artists || []) add(slugOf(a.uri_artist), a.name, slugs);
+    if (!album.artists?.length) add(slugOf(album.uri_artist), album.release_artist, slugs);
+    for (const m of album.members || []) add(slugOf(m.uri_artist), m.name, slugs);
+    credits.set(album.uri_release, slugs);
+  }
+
+  const lastmods = new Map();
+  for (const release of tv.releases || []) {
+    const credited = credits.get(release.uri);
+    if (!credited) continue;
+    const lastmod = normalizeDate(release.date_added);
+    for (const video of release.videos || []) {
+      const seconds = video.duration > 0 ? video.duration : TV_DEFAULT_SECONDS;
+      if (seconds > (video.kind === 'live' ? TV_MAX_LIVE_SECONDS : TV_MAX_SECONDS)) continue;
+      const slugs = video.artist ? byName.get(tvArtistKey(video.artist)) || [] : credited;
+      for (const slug of slugs) {
+        const current = lastmods.get(slug);
+        if (current === undefined || (lastmod && (!current || lastmod > current))) lastmods.set(slug, lastmod);
+      }
+    }
+  }
+
+  for (const [slug, lastmod] of lastmods) {
+    addRoute(`/tv/artist/${slug}`, { lastmod: lastmod || fallbackLastmod, changefreq: 'monthly', priority: '0.4' });
+  }
+}
+
+/** artistKey() in src/lib/tv.ts: case, accents, punctuation and Discogs' "(2)" aside. */
+function tvArtistKey(name) {
+  return String(name)
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s*\(\d+\)$/, '')
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
 }
 
 async function readWrappedYtdYear() {

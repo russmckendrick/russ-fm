@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, type CSSProperties } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Tv } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
 import { FitTitle, PillLink, RecordTile, SectionHeading, bandFromFlood, newestFlood, usePageFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
@@ -12,6 +13,8 @@ import { getGenreExplorer, getRelatedArtistsForArtist, resolveArtist } from '@/l
 import { loadDetailJson, useCollection } from '@/lib/collection';
 import { getCleanGenresFromArray } from '@/lib/genreUtils';
 import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
+import { artistMatcher } from '@/lib/artistMatch';
+import { artistChannel, loadTv } from '@/lib/tv';
 import { slugify } from '@/lib/browseFacets';
 import { floodFor, INK } from '@/lib/sleeveColour';
 import { originalYear } from '@/lib/releaseYear';
@@ -209,6 +212,22 @@ export function ArtistDetailPage() {
     };
   }, [artistJsonUrl]);
 
+  // How many videos their own TV channel has (/tv/artist/:slug); the link
+  // only shows when there are some. tv.json is shared with the TV and album pages.
+  const [tvVideos, setTvVideos] = useState(0);
+  useEffect(() => {
+    if (!artistPath || !rawCollection.length) return;
+    let alive = true;
+    loadTv()
+      .then(tv => {
+        if (alive) setTvVideos(artistChannel(tv, rawCollection, artistPath)?.items.length ?? 0);
+      })
+      .catch(() => undefined);
+    return () => {
+      alive = false;
+    };
+  }, [artistPath, rawCollection]);
+
   const pageTitle = artistData
     ? `${artistData.name} discography — ${albums.length} album${albums.length !== 1 ? 's' : ''} in collection | Russ.fm`
     : 'Loading Artist… | Russ.fm';
@@ -334,6 +353,12 @@ export function ArtistDetailPage() {
               ))}
             </dl>
             <div className="flex flex-wrap gap-2.5">
+              {tvVideos > 0 && (
+                <Link to={`/tv/artist/${artistPath}`} className="pill" title={`${artistName} on russ.fm/tv`}>
+                  <Tv className="h-[18px] w-[18px] shrink-0" aria-hidden />
+                  Watch {tvVideos} video{tvVideos === 1 ? '' : 's'}
+                </Link>
+              )}
               {services.map((s, i) => (
                 <PillLink key={s.label} to={s.url} solid={i === 0 ? { background: flood.ink, color: flood.top } : undefined}>
                   {s.label}
@@ -512,24 +537,11 @@ function numberShort(n: number): string {
 function findArtistAlbums(collection: Album[], artistPath: string | undefined): { albums: Album[]; artistJsonUrl: string | null } {
   if (!collection.length) return { albums: [], artistJsonUrl: null };
   const decodedArtistPath = decodeURIComponent(artistPath || '');
-  const targetUri = `/artist/${decodedArtistPath}/`;
-
-  const matchesTarget = (uri: string | null | undefined) => {
-    if (!uri) return false;
-    if (uri === targetUri) return true;
-    const p = uri.replace('/artist/', '').replace('/', '');
-    return decodedArtistPath === sanitizeFolderName(p);
-  };
   // Band line-up credits (album.members) count too, so a player's page lists the band's albums.
+  const { matches: matchesTarget, credits } = artistMatcher(artistPath || '');
   const findMember = (album: Album) => album.members?.find(m => matchesTarget(m.uri_artist));
 
-  const albums = collection.filter(album => {
-    if (matchesTarget(album.uri_artist)) return true;
-    if (album.artists?.some(a => matchesTarget(a.uri_artist))) return true;
-    if (findMember(album)) return true;
-    if (decodedArtistPath === sanitizeFolderName(album.release_artist)) return true;
-    return false;
-  });
+  const albums = collection.filter(credits);
   if (!albums.length) return { albums, artistJsonUrl: null };
 
   let artistJsonUrl: string | null = null;

@@ -13,7 +13,7 @@ import { AlbumDetailPage } from './pages/AlbumDetailPage';
 import { StatsPage } from './pages/StatsPage';
 import { SearchResultsPage } from './pages/SearchResultsPage';
 import { RandomPage } from './pages/RandomPage';
-import { TvGuidePage, TvPage } from './pages/TvPage';
+import { TvArtistPage, TvGuidePage, TvPage } from './pages/TvPage';
 import { GenrePage } from './pages/GenrePage';
 import { WrappedYear } from './pages/wrapped/WrappedYear';
 import { WrappedYTD } from './pages/wrapped/WrappedYTD';
@@ -98,6 +98,8 @@ function App() {
           <Route path="/random" element={<RandomPage />} />
           <Route path="/tv" element={<TvPage />} />
           <Route path="/tv/guide" element={<TvGuidePage />} />
+          <Route path="/tv/artist/:artist" element={<TvArtistPage />} />
+          <Route path="/tv/artist/:artist/:video" element={<TvArtistPage />} />
           <Route path="/tv/:channel" element={<TvPage />} />
           <Route path="/tv/:channel/:video" element={<TvPage />} />
           <Route path="/search" element={<SearchResultsPage />} />

@@ -4,8 +4,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { FloodBand, useRecordsFlood } from '@/components/player';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { floodFor } from '@/lib/sleeveColour';
-import { onAir, slotsBetween, videoPath, type TvChannel } from '@/lib/tv';
+import { onAir, slotsBetween, videoPath, type TvArtistListing, type TvChannel } from '@/lib/tv';
 import { cn } from '@/lib/utils';
+import { TvArtistChannels } from './TvArtistChannels';
 
 const WINDOW_MIN = 30;
 const MAX_AHEAD = 6; // half hours
@@ -15,9 +16,9 @@ const time = (ms: number) => new Date(ms).toLocaleTimeString('en-GB', { hour: '2
 /**
  * The TV guide: every channel's running order for a half hour, each programme
  * block in its sleeve's colour, with a line at the current time. Earlier and
- * later half hours are a button away.
+ * later half hours are a button away. Below it, every artist's own channel.
  */
-export function TvGuide({ channels, videoCount }: { channels: TvChannel[]; videoCount: number }) {
+export function TvGuide({ channels, artists, videoCount }: { channels: TvChannel[]; artists: TvArtistListing[]; videoCount: number }) {
   const colours = useAlbumColorMap();
   const [now, setNow] = useState(() => Date.now());
   useEffect(() => {
@@ -48,7 +49,7 @@ export function TvGuide({ channels, videoCount }: { channels: TvChannel[]; video
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <h1 className="t-disp m-0 text-[44px] md:text-[64px] lg:text-[96px]">Guide</h1>
           <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">
-            {channels.length} channels · {videoCount.toLocaleString('en-GB')} videos · {hours.toLocaleString('en-GB')} hours
+            {channels.length} channels · {artists.length.toLocaleString('en-GB')} artist channels · {videoCount.toLocaleString('en-GB')} videos · {hours.toLocaleString('en-GB')} hours
           </span>
         </div>
       </FloodBand>
@@ -136,6 +137,8 @@ export function TvGuide({ channels, videoCount }: { channels: TvChannel[]; video
             )}
           </div>
         </div>
+
+        <TvArtistChannels artists={artists} />
       </div>
     </>
   );
