@@ -369,11 +369,22 @@ const flood = floodFor(palette);
 | `vividFrom(palette)` | The flood when `vivid > 0`, otherwise `null` (monochrome sleeves, missing palettes) |
 | `colourBar(flood)` | CSS background for a tile's colour bar: the flood, split 62/38 with the secondary colour when there is one. Used by `RecordTile` |
 | `colourSortKey(palette)` | Sort key for colour walls: bold sleeves by `hue` (0–1), then monochrome sleeves lightest first, then sleeves with no palette. Used by the albums page colour sort |
+| `colourFamily(palette)` | `pink` \| `red` \| `orange` \| `yellow` \| `green` \| `teal` \| `blue` \| `purple` \| `mono`, from the flood's OKLCH hue for bold sleeves; `mono` for monochrome sleeves and missing palettes. Pink covers both ends of the hue circle (325°–12°) |
+| `COLOUR_FAMILIES` | The families in wall order, each with a `label` and a fixed paint-chip colour (`chip`, a CSS background) |
 | `luminance(hex)` | Relative luminance, 0 (black) to 1 (white) |
 | `inkOn(bg)` | `INK` (`#0e0d0c`) or `CREAM` (`#fbf7ef`), whichever contrasts more |
 | `subInk(ink)` | Softer secondary text for that ink |
 | `BOLD_VIVID` | `vivid` at or above this (1) counts as a bold sleeve. Used by the home genre chips and the home Browse by colour strip |
 | `INK`, `CREAM`, `GROUND`, `NEUTRAL_FLOOD` | Constants |
+
+## Colour Families (`src/lib/colourFamilies.ts`)
+
+`familyJumps(uris, colours)` takes a colour-sorted list of album URIs and
+returns `{ id, label, chip, index, count }` for each colour family in it, in
+list order: `index` is where the family's first record sits, `count` how
+many records it has. Families with no records are left out. Pink starts the
+wall and also closes it, so its `index` is the start and its `count` covers
+both ends. Used by `ColourChips` on the albums page colour wall.
 
 ## Vinyl Colours (`src/lib/vinylLook.ts`)
 

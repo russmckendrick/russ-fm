@@ -144,6 +144,12 @@ list comes from `buildBoxDiscs()` in [`src/lib/boxDiscs.ts`](./utilities.md#box-
 Discs with no linked album page use the box cover with a "From the box"
 band and the section header as their title.
 
+## Albums components (`src/components/albums/`)
+
+| Component | Props | Role |
+|-----------|-------|------|
+| `ColourChips` | `albums` (the whole colour-sorted list), `colours`, `perPage`, `currentPage`, `onJump(index)` | The colour wall's header: one paint chip per colour family present (fixed chip colour, name, record count). Clicking a chip calls `onJump` with the index of the family's first record; the page goes to the page holding it. Chips for the families on the current page sit raised and ringed. On phones the row scrolls sideways and keeps the current chip in view. Families come from [`familyJumps()`](./utilities.md#colour-families-srclibcolourfamiliests). |
+
 ## Browse components (`src/components/browse/BrowseHeader.tsx`)
 
 | Component | Props | Role |

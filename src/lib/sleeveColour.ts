@@ -116,3 +116,39 @@ export function colourSortKey(palette?: AlbumColorPalette | null): number {
   if (!palette) return 3;
   return palette.vivid ? palette.hue : 2 - luminance(palette.flood);
 }
+
+/**
+ * Named colour families for jumping around the colour wall, in wall order,
+ * each with a fixed paint-chip colour (the same whatever the filters).
+ */
+export const COLOUR_FAMILIES = [
+  { id: 'pink', label: 'Pink', chip: '#e2337a' },
+  { id: 'red', label: 'Red', chip: '#d8262c' },
+  { id: 'orange', label: 'Orange', chip: '#ee7d2a' },
+  { id: 'yellow', label: 'Yellow', chip: '#ecc12e' },
+  { id: 'green', label: 'Green', chip: '#4fa64a' },
+  { id: 'teal', label: 'Teal', chip: '#1eb3b3' },
+  { id: 'blue', label: 'Blue', chip: '#2f6fce' },
+  { id: 'purple', label: 'Purple', chip: '#6a4bb0' },
+  { id: 'mono', label: 'Mono', chip: 'linear-gradient(90deg, #1a1816 50%, #cfc9bf 50%)' },
+] as const;
+
+export type ColourFamily = (typeof COLOUR_FAMILIES)[number]['id'];
+
+/**
+ * The family a sleeve belongs to: by flood hue (OKLCH degrees) when it is
+ * bold, `mono` for monochrome sleeves and missing palettes. Pink wraps round
+ * both ends of the hue circle, so the wall opens and closes on it.
+ */
+export function colourFamily(palette?: AlbumColorPalette | null): ColourFamily {
+  if (!palette?.vivid) return 'mono';
+  const deg = palette.hue * 360;
+  if (deg < 12 || deg >= 325) return 'pink';
+  if (deg < 42) return 'red';
+  if (deg < 72) return 'orange';
+  if (deg < 110) return 'yellow';
+  if (deg < 170) return 'green';
+  if (deg < 215) return 'teal';
+  if (deg < 270) return 'blue';
+  return 'purple';
+}

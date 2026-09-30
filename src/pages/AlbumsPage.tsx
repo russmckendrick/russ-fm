@@ -11,6 +11,7 @@ import { originalYear } from '@/lib/releaseYear';
 import { appConfig } from '@/config/app.config';
 import { cn } from '@/lib/utils';
 import { FloodBand, RecordTile, useRecordsFlood } from '@/components/player';
+import { ColourChips } from '@/components/albums/ColourChips';
 import type { Album } from '@/types/album';
 
 const SORTS = [
@@ -136,16 +137,39 @@ export function AlbumsPage() {
   const flood = useRecordsFlood(visible.map(a => a.uri_release));
   const filteredAny = genre !== 'all' || year !== 'all' || format !== 'all' || !!search;
 
+  // Colour chip jumps go to the page holding the record at `index`.
+  const jumpTo = (index: number) => navigate(pageUrl(Math.floor(index / perPage) + 1));
+
   return (
     <>
-      <FloodBand flood={flood}>
-        <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
-          <h1 className="t-disp m-0 text-[64px] md:text-[96px] lg:text-[120px]">Albums</h1>
-          <span className="t-disp text-[64px] opacity-35 md:text-[96px] lg:text-[120px]" aria-label={`${filtered.length} records`}>
-            {loading ? '' : filtered.length.toLocaleString('en-GB')}
-          </span>
-        </div>
-      </FloodBand>
+      {colourMode ? (
+        // The colour wall trades the big title for paint chips that jump to each colour.
+        <FloodBand flood={flood} innerClassName="pb-7 pt-6 md:pb-9 md:pt-8">
+          <div className="mb-5 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <h1 className="t-disp m-0 text-[36px] md:text-[48px]">Albums</h1>
+            <span className="t-disp text-[36px] opacity-35 md:text-[48px]" aria-label={`${filtered.length} records`}>
+              {loading ? '' : filtered.length.toLocaleString('en-GB')}
+            </span>
+            <span className="t-mono ml-auto text-[12px] text-[color:var(--cream-dim)]">
+              Page {currentPage} of {totalPages}
+            </span>
+          </div>
+          {colours && !loading ? (
+            <ColourChips albums={filtered} colours={colours} perPage={perPage} currentPage={currentPage} onJump={jumpTo} />
+          ) : (
+            <div className="h-[86px] animate-pulse rounded-[6px] bg-[color:var(--cream-rule)] md:h-[110px]" aria-busy="true" />
+          )}
+        </FloodBand>
+      ) : (
+        <FloodBand flood={flood}>
+          <div className="flex flex-wrap items-end gap-x-6 gap-y-2">
+            <h1 className="t-disp m-0 text-[64px] md:text-[96px] lg:text-[120px]">Albums</h1>
+            <span className="t-disp text-[64px] opacity-35 md:text-[96px] lg:text-[120px]" aria-label={`${filtered.length} records`}>
+              {loading ? '' : filtered.length.toLocaleString('en-GB')}
+            </span>
+          </div>
+        </FloodBand>
+      )}
 
       <div className="mx-auto w-full max-w-[1640px] px-5 pb-10 pt-8 md:px-10 lg:px-14 lg:pt-10">
         <div className="flex flex-col gap-4">
@@ -213,13 +237,6 @@ export function AlbumsPage() {
             )}
           </div>
 
-          {colourMode && colours && visible.length > 0 && (
-            <div className="mt-2 flex h-2.5 overflow-hidden rounded-full" aria-hidden>
-              {visible.map(a => (
-                <span key={a.uri_release} className="flex-1" style={{ background: vividFrom(colours[a.uri_release]) ?? '#3a3530' }} />
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="mt-10">

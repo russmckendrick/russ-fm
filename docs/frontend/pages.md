@@ -14,7 +14,7 @@ This document covers the route-level page components in russ.fm.
 | Route | Structure |
 |-------|-----------|
 | `/` | `CoverHero` rotating through the latest additions → Latest additions row → Most collected + Genres (with headline counts) → Random picks → Browse by colour strip. |
-| `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
+| `/albums/:page` | `Albums` title with the count in dim type (with `sort=colour`, a compact title and colour-family paint chips that jump through the wall) → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
 | `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
@@ -173,9 +173,16 @@ dropped from the URL.
 
 **Colour sort (`?sort=colour`).** Records are ordered by
 `colourSortKey()` from `src/lib/sleeveColour.ts`: sleeves with a bold
-flood by its hue, then monochrome sleeves, light to dark. The page shows twice as many records per page, a colour bar of
-the visible page above the grid, and a dense wall of `.tile` covers whose
-caption slides up in the sleeve colour.
+flood by its hue, then monochrome sleeves, light to dark. The page shows twice as many records per page and a dense
+wall of `.tile` covers whose caption slides up in the sleeve colour.
+
+The header band swaps the large title for a smaller `Albums` + count line
+with `Page n of N`, and a row of `ColourChips`: one paint chip per colour
+family (Pink, Red, Orange, Yellow, Green, Teal, Blue, Purple, Mono) with its
+record count. A chip jumps to the page holding that family's first record
+(opening at the top, like the pager). The chips for the families on the
+current page are raised and ringed. Families and counts follow the current
+filters.
 
 **Examples:**
 
