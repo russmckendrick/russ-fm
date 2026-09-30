@@ -352,6 +352,11 @@ interface ArtistIndex {
 
 const artistIndexes = new WeakMap<TvData, ArtistIndex>();
 
+/** An artist's own channel (/tv/artist/:slug) rather than a genre channel. */
+export function isArtistChannel(ch: TvChannel): boolean {
+  return ch.slug.startsWith('artist/');
+}
+
 const slugOf = (uri: string | null | undefined) => uri?.replace(/^\/artist\//, '').replace(/\/$/, '') || null;
 
 /**

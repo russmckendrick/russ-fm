@@ -718,7 +718,9 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   bar in the sleeve colour (the album page TV row's scale) that stays up the whole
   time: progress as a line along its top, the sleeve, channel · time, artist, title,
   album · year · label, and previous, play/pause, next, sound and exit buttons.
-- Below: **Up next** (the next six in the channel, YouTube stills with a colour bar)
+- Below: **Up next** (the next six in the channel, YouTube stills with a colour bar; on
+  an artist channel, `isArtistChannel()`, every video in the running order from the next
+  one round to the one before this, as a wrapping grid with the channel's video count)
   and **Channels**, each tile in the colour of what it is airing now (refreshed every
   30 seconds).
 - **Guide** (`src/pages/tv/TvGuide.tsx`): a `FloodBand` in the colour of what channel

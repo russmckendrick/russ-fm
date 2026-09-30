@@ -10,7 +10,7 @@ import { getAlbumImageFromData } from '@/lib/image-utils';
 import { originalYear } from '@/lib/releaseYear';
 import { floodFor, pageGround, colourBar } from '@/lib/sleeveColour';
 import { discLooks } from '@/lib/vinylLook';
-import { formatDuration, onAir, TV_ROOMS, videoPath, youTubeThumb, type TvChannel, type TvItem, type TvRoomId } from '@/lib/tv';
+import { formatDuration, isArtistChannel, onAir, TV_ROOMS, videoPath, youTubeThumb, type TvChannel, type TvItem, type TvRoomId } from '@/lib/tv';
 import { cn } from '@/lib/utils';
 import { TvRoom } from './TvRoom';
 
@@ -106,9 +106,14 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
 
   const year = originalYear(album);
   const label = album.labels?.[0];
+  // An artist's channel shows everything still to come (the whole running
+  // order from the next video round to the one before this); genre channels
+  // the next few.
+  const allUpNext = isArtistChannel(channel);
   const upNext = useMemo(
-    () => Array.from({ length: Math.min(UP_NEXT, channel.items.length - 1) }, (_, k) => (index + 1 + k) % channel.items.length),
-    [channel, index],
+    () =>
+      Array.from({ length: Math.min(allUpNext ? Infinity : UP_NEXT, channel.items.length - 1) }, (_, k) => (index + 1 + k) % channel.items.length),
+    [channel, index, allUpNext],
   );
 
   const btn = { background: f.ink, color: f.flood };
@@ -259,10 +264,20 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
 
       {/* Up next -------------------------------------------------------- */}
       <section className="mx-auto w-full max-w-[1640px] px-5 pt-10 md:px-10 md:pt-14 lg:px-14 lg:pt-16">
-        <SectionHeading title="Up next" size="sm" link={{ to: '/tv/guide', label: 'Full guide' }} />
-        <div className="shelf-scroll mt-5 flex items-start gap-5">
+        <SectionHeading
+          title="Up next"
+          size="sm"
+          note={allUpNext ? `${channel.items.length.toLocaleString('en-GB')} videos` : undefined}
+          link={{ to: '/tv/guide', label: 'Full guide' }}
+        />
+        <div
+          className={cn(
+            'mt-5',
+            allUpNext ? 'grid grid-cols-1 gap-x-5 gap-y-8 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-[1800px]:grid-cols-6' : 'shelf-scroll flex items-start gap-5',
+          )}
+        >
           {upNext.map(i => (
-            <UpNextTile key={`${i}-${channel.items[i].id}`} item={channel.items[i]} onPick={() => tv.go(i)} colours={colours} />
+            <UpNextTile key={`${i}-${channel.items[i].id}`} item={channel.items[i]} onPick={() => tv.go(i)} colours={colours} fill={allUpNext} />
           ))}
         </div>
       </section>
@@ -278,11 +293,12 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
 
 type ColourMap = ReturnType<typeof useAlbumColorMap>;
 
-function UpNextTile({ item, onPick, colours }: { item: TvItem; onPick: () => void; colours: ColourMap }) {
+/** A video still to come; `fill` makes it as wide as its grid cell instead of a fixed shelf width. */
+function UpNextTile({ item, onPick, colours, fill }: { item: TvItem; onPick: () => void; colours: ColourMap; fill?: boolean }) {
   const f = floodFor(colours?.[item.album.uri_release]);
   const year = originalYear(item.album);
   return (
-    <button type="button" onClick={onPick} className="tv-tile group flex w-[240px] shrink-0 flex-col justify-start self-start text-left md:w-[260px]">
+    <button type="button" onClick={onPick} className={cn('tv-tile group flex flex-col justify-start self-start text-left', fill ? 'w-full' : 'w-[240px] shrink-0 md:w-[260px]')}>
       <span className="relative block aspect-video overflow-hidden bg-black">
         <img
           src={youTubeThumb(item.id)}
