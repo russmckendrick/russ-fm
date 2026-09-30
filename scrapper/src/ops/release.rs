@@ -395,7 +395,14 @@ pub async fn process_release(
 
     // Assemble raw_data + external IDs.
     let mut raw = Map::new();
-    raw.insert("discogs".into(), json!({ "images": discogs.get("images").cloned().unwrap_or(json!([])) }));
+    raw.insert(
+        "discogs".into(),
+        json!({
+            "images": discogs.get("images").cloned().unwrap_or(json!([])),
+            // The full per-disc formats (colour lives in `text`); `release.formats` keeps only names.
+            "formats": discogs.get("formats").cloned().unwrap_or(json!([])),
+        }),
+    );
     if let Some(a) = &apple {
         raw.insert("apple_music".into(), a.clone());
     }
@@ -1434,6 +1441,7 @@ pub async fn refresh_release_field(
             rec.videos = json!(crate::services::discogs::DiscogsService::extract_video_uris(&discogs));
             let mut d = Map::new();
             d.insert("images".into(), discogs.get("images").cloned().unwrap_or(json!([])));
+            d.insert("formats".into(), discogs.get("formats").cloned().unwrap_or(json!([])));
             d.extend(discogs_master_fields(services, &discogs, Some(&rec)).await);
             raw.insert("discogs".into(), Value::Object(d));
             download_image = true;

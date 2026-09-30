@@ -6,6 +6,7 @@
 pub mod artist;
 pub mod collection;
 pub mod descriptions;
+pub mod formats;
 pub mod generate;
 pub mod maintenance;
 pub mod original_years;
