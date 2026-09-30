@@ -56,8 +56,9 @@ export function TvPage() {
     playing ? `${playing.title} – ${playing.artist} | TV | Russ.fm` : channel ? `${channel.name} | TV | Russ.fm` : 'TV | Russ.fm',
   );
 
-  // Plain /tv (the nav's TV link) goes back to whatever is already on.
-  if (!slug && tv.active && tv.channel && tv.item) return <Navigate to={videoPath(tv.channel.slug, tv.item)} replace />;
+  // Plain /tv (the nav's TV link) goes back to whatever is already on, unless
+  // that is a record's own channel (album page mini TV), which has no page here.
+  if (!slug && tv.active && tv.channel && !tv.channel.home && tv.item) return <Navigate to={videoPath(tv.channel.slug, tv.item)} replace />;
   if (status === 'error') return <TvMessage title="The TV didn't load" retry={retry} />;
   if (!channels) return <TvLoading />;
   if (!channel) return channels.length ? <Navigate to="/tv" replace /> : <TvMessage title="No videos yet" />;

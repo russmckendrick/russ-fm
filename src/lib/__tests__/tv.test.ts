@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildChannels, onAir, slotsBetween, videoIdFromParam, videoPath, type TvData, type TvRelease } from "../tv";
+import { albumChannel, buildChannels, onAir, slotsBetween, videoIdFromParam, videoPath, type TvData, type TvRelease } from "../tv";
 import type { Album } from "@/types/album";
 
 const album = (uri: string, artist = "Artist"): Album =>
@@ -75,6 +75,22 @@ describe("buildChannels", () => {
     r.videos.push({ id: "aaaaaaaaaaa", title: "Song", artist: "Someone", kind: "video", duration: 200 });
     const [latest] = buildChannels(tv([r]), [album("/album/v/", "Various")]);
     expect(latest.items[0].artist).toBe("Someone");
+  });
+});
+
+describe("albumChannel", () => {
+  it("keeps the release's order, every video and links home to the record", () => {
+    const r = release("/album/a/", ["Electronic"], ["Synth-pop"], ["aaaaaaaaaaa", "bbbbbbbbbbb"]);
+    r.videos.push({ id: "ccccccccccc", title: "Concert", kind: "live", duration: 60 * 60 });
+    const ch = albumChannel(r, album("/album/a/"));
+    expect(ch.items.map(i => i.id)).toEqual(["aaaaaaaaaaa", "bbbbbbbbbbb", "ccccccccccc"]);
+    expect(ch.room).toBe("electronic");
+    expect(ch.home).toBe("/album/a/");
+    expect(ch.starts).toEqual([0, 200, 400]);
+    // Short videos air on the record's genre channel, the full concert on Live.
+    expect(ch.items.map(i => i.airsOn)).toEqual(["electronic", "electronic", "live"]);
+    const channels = buildChannels(tv([r]), [album("/album/a/")]);
+    for (const item of ch.items) expect(channels.find(c => c.slug === item.airsOn)?.items.some(i => i.id === item.id)).toBe(true);
   });
 });
 

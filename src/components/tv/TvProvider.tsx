@@ -158,7 +158,7 @@ function TvLayerVideo({ host, mode, value }: { host: React.RefObject<HTMLDivElem
   const f = floodFor(album ? colours?.[album.uri_release] : null);
   const year = album ? originalYear(album) : null;
   const label = album?.labels?.[0];
-  const back = channel && item ? videoPath(channel.slug, item) : '/tv';
+  const back = channel?.home ?? (channel && item ? videoPath(channel.slug, item) : '/tv');
 
   return (
     <>
@@ -166,7 +166,7 @@ function TvLayerVideo({ host, mode, value }: { host: React.RefObject<HTMLDivElem
         className="tv-layer-video"
         onClick={mode === 'mini' ? () => navigate(back) : undefined}
         role={mode === 'mini' ? 'link' : undefined}
-        aria-label={mode === 'mini' ? 'Back to TV' : undefined}
+        aria-label={mode === 'mini' ? (channel?.home ? 'Back to the record' : 'Back to TV') : undefined}
       >
         <div ref={host} className="tv-player" />
         <div className="tv-scan" aria-hidden />
@@ -197,7 +197,7 @@ function TvLayerVideo({ host, mode, value }: { host: React.RefObject<HTMLDivElem
           >
             {player.muted ? <VolumeX className="h-4 w-4" aria-hidden /> : <Volume2 className="h-4 w-4" aria-hidden />}
           </button>
-          <Link to={back} className="tv-mini-btn" aria-label="Back to TV">
+          <Link to={back} className="tv-mini-btn" aria-label={channel?.home ? 'Back to the record' : 'Back to TV'}>
             <Maximize2 className="h-4 w-4" aria-hidden />
           </Link>
           <button type="button" className="tv-mini-btn" onClick={value.close} aria-label="Turn off TV">

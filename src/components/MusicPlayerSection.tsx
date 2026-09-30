@@ -8,6 +8,8 @@ import { PlayerToggle } from './PlayerToggle';
 import { SpotifyEmbed } from './SpotifyEmbed';
 import { AppleMusicEmbed } from './AppleMusicEmbed';
 import { YouTubeEmbed } from './YouTubeEmbed';
+import { AlbumTv } from './tv/AlbumTv';
+import type { Album } from '@/types/album';
 import { youTubeVideos } from '@/lib/youtube';
 import { useMusicPlayerPreferences } from '@/hooks/useMusicPlayerPreferences';
 import { cn } from '@/lib/utils';
@@ -30,6 +32,8 @@ interface DetailedAlbum {
 
 export interface MusicPlayerSectionProps {
   album: DetailedAlbum;
+  /** The record from the collection: turns the YouTube tab into its mini TV. */
+  tvAlbum?: Album | null;
   className?: string;
   showToggle?: boolean;
   defaultVisible?: boolean;
@@ -41,6 +45,7 @@ export interface MusicPlayerSectionProps {
  */
 export const MusicPlayerSection = memo(function MusicPlayerSection({
   album,
+  tvAlbum,
   className,
   showToggle = true,
   defaultVisible
@@ -76,13 +81,12 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
 
   const hasVideos = useMemo(() => youTubeVideos(album.videos).length > 0, [album.videos]);
 
-  // Determine available services (Apple Music first since it's default;
-  // YouTube last, never picked as the preferred service).
+  // Tab order: YouTube (the mini TV) first, then Apple Music, then Spotify.
   const availableServices = useMemo(() => {
     const services: ('spotify' | 'apple_music' | 'youtube')[] = [];
+    if (hasVideos) services.push('youtube');
     if (appleMusicData?.available) services.push('apple_music');
     if (spotifyData?.available) services.push('spotify');
-    if (hasVideos) services.push('youtube');
     return services;
   }, [spotifyData, appleMusicData, hasVideos]);
 
@@ -90,8 +94,12 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
   useMemo(() => {
     if (availableServices.length === 0) return;
 
+    // YouTube always opens first when the record has videos; the remembered
+    // Apple Music / Spotify choice only applies to records without.
     const preferred = preferences.preferredService;
-    if (preferred && (availableServices as string[]).includes(preferred)) {
+    if (availableServices.includes('youtube')) {
+      setActiveTab('youtube');
+    } else if (preferred && (availableServices as string[]).includes(preferred)) {
       setActiveTab(preferred);
     } else {
       setActiveTab(availableServices[0]);
@@ -151,6 +159,12 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
           <Tabs value={activeTab} onValueChange={handleTabChange}>
             <div className="flex items-center gap-3 mb-4">
               <TabsList className="flex-1">
+                {availableServices.includes('youtube') && (
+                  <TabsTrigger value="youtube" className="flex-1 gap-2" aria-label="YouTube">
+                    <SiYoutube className="h-5 w-5 sm:h-4 sm:w-4 text-[#ff0033]" aria-hidden />
+                    <span className="hidden sm:inline">YouTube</span>
+                  </TabsTrigger>
+                )}
                 {availableServices.includes('apple_music') && (
                   <TabsTrigger value="apple_music" className="flex-1 gap-2" aria-label="Apple Music">
                     <SiApplemusic className="h-5 w-5 sm:h-4 sm:w-4 text-red-500" aria-hidden />
@@ -161,12 +175,6 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
                   <TabsTrigger value="spotify" className="flex-1 gap-2" aria-label="Spotify">
                     <SiSpotify className="h-5 w-5 sm:h-4 sm:w-4 text-green-500" aria-hidden />
                     <span className="hidden sm:inline">Spotify</span>
-                  </TabsTrigger>
-                )}
-                {availableServices.includes('youtube') && (
-                  <TabsTrigger value="youtube" className="flex-1 gap-2" aria-label="YouTube">
-                    <SiYoutube className="h-5 w-5 sm:h-4 sm:w-4 text-[#ff0033]" aria-hidden />
-                    <span className="hidden sm:inline">YouTube</span>
                   </TabsTrigger>
                 )}
               </TabsList>
@@ -194,7 +202,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
 
             {availableServices.includes('youtube') && album.videos && (
               <TabsContent value="youtube" className="mt-0">
-                <YouTubeEmbed videos={album.videos} />
+                {tvAlbum ? <AlbumTv album={tvAlbum} videos={album.videos} /> : <YouTubeEmbed videos={album.videos} />}
               </TabsContent>
             )}
 

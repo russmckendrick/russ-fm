@@ -237,8 +237,9 @@ on the ground.
   the hero. Section-header rows render as kickers. Each track deep-links to Spotify when a match exists
   (matched by normalised title via
   [`src/lib/trackMatching.ts`](../../src/lib/trackMatching.ts)).
-- **Listen** — `MusicPlayerSection`: Apple Music, Spotify and YouTube tabs.
-  The release's YouTube videos live in the YouTube tab (`YouTubeEmbed`), not
+- **Listen** — `MusicPlayerSection`: YouTube (the default when there are videos), Apple Music and Spotify tabs.
+  The release's YouTube videos live in the YouTube tab (`AlbumTv`, a mini
+  russ.fm/tv on the site-wide TV player; `YouTubeEmbed` if `tv.json` lacks the record), not
   a separate section, so an album with dozens of videos costs no extra
   height. The section shows when any of the three is available.
 - **Artist bios** — one panel per credited artist with a biography, with a

@@ -12,6 +12,12 @@ interface TvRoomProps {
    * the site-wide TV layer, laid under this slot and the photo; see TvProvider.
    */
   screen: ReactNode;
+  /**
+   * Shown in the screen under the photo's glass while the TV layer is
+   * elsewhere (a still before the set is switched on), so the CRT's curved
+   * corners still frame it.
+   */
+  picture?: ReactNode;
   /** The screen element, for the TV layer to line up with. */
   slotRef?: (el: HTMLDivElement | null) => void;
   className?: string;
@@ -55,7 +61,7 @@ function layout(room: Room, w: number, h: number): Geometry {
  * has no background of its own for the same reason. A masked colour layer tints the room (never
  * the screen) with the current sleeve's colour.
  */
-export function TvRoom({ room, tint, screen, slotRef, className }: TvRoomProps) {
+export function TvRoom({ room, tint, screen, picture, slotRef, className }: TvRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
 
@@ -98,6 +104,14 @@ export function TvRoom({ room, tint, screen, slotRef, className }: TvRoomProps) 
       </div>
       {g && (
         <>
+          {picture && (
+            <div
+              className="absolute z-[1] overflow-hidden bg-black"
+              style={{ left: g.screen.left, top: g.screen.top, width: g.screen.width, height: g.screen.height }}
+            >
+              {picture}
+            </div>
+          )}
           <img
             src={src}
             srcSet={srcSet}

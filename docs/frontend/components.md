@@ -181,6 +181,19 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
   sleeve-coloured bar. See [pages.md](./pages.md#tvpage-srcpagestvpagetsx).
 - `useTvPlayer(host, { enabled, onEnded, onError })` wraps the YouTube IFrame Player
   API: no controls, starts muted, loads the API only when `enabled`.
+- `AlbumTv` is the album page's YouTube tab: a mini russ.fm/tv. It builds the
+  record's own channel from `tv.json` (`albumChannel()` in `src/lib/tv.ts`: release
+  order, every video, the room of the record's first genre channel, `home` set to
+  the album URL) and shows the room (`TvRoom`, with a YouTube still under the glass
+  via its `picture` prop until switched on), a slim sleeve-coloured now-playing row
+  (progress line along the top, previous/play/next, position and title, then
+  icon buttons for sound, full screen, YouTube and /tv; the /tv one links to the
+  video on the channel it airs on, `item.airsOn`: the record's genre channel, or
+  Live for a full concert)
+  and the running order as a row of tiles. Switching on tunes the site-wide TV, so
+  leaving the page (or the tab) carries on in the floating player, whose link goes
+  back to the record (`channel.home`). Records missing from `tv.json` fall back to
+  `YouTubeEmbed`.
 
 ## Layout primitives (`src/components/layout/`)
 
@@ -348,13 +361,14 @@ their first matching record.
 ### MusicPlayerSection (`src/components/MusicPlayerSection.tsx`)
 
 Embedded player with service selection, used in the album page's
-"Listen" section. Tabs, in order: Apple Music, Spotify, YouTube (when the
-release has `videos`). Only Apple Music and Spotify are remembered as the
-preferred service; YouTube is never the default tab.
+"Listen" section. Tabs, in order: YouTube (when the release has `videos`),
+Apple Music, Spotify. YouTube (the `AlbumTv` mini TV) is always the opening
+tab when present; only Apple Music and Spotify are remembered as the
+preferred service, and that choice opens first on records without videos.
 
 ### YouTubeEmbed (`src/components/YouTubeEmbed.tsx`)
 
-The YouTube tab, built to sit beside the Apple Music and Spotify embeds:
+The YouTube tab's fallback (the tab is normally `AlbumTv`, above), built to sit beside the Apple Music and Spotify embeds:
 450px high on `md`+, a dark card with the YouTube logo, the current video
 (a thumbnail and red play button until clicked, then a
 `youtube.com/embed` iframe that autoplays) and "Watch on YouTube", and a

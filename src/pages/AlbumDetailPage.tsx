@@ -1068,7 +1068,7 @@ export function AlbumDetailPage() {
               <section className="flex flex-col gap-6">
                 <h2 className="t-disp m-0 text-[34px] md:text-[48px]">Listen</h2>
                 <div className="rounded-[18px] bg-[rgba(0,0,0,.28)] p-4 md:p-6">
-                  <MusicPlayerSection album={detailedAlbum} />
+                  <MusicPlayerSection album={detailedAlbum} tvAlbum={album as unknown as CollectionAlbum} />
                 </div>
               </section>
             )}
@@ -1113,7 +1113,8 @@ export function AlbumDetailPage() {
                 <span className="t-kicker inline-flex items-center gap-2">
                   <SiLastdotfm className="h-4 w-4" aria-hidden /> Last.fm
                 </span>
-                <div className="grid grid-cols-2 gap-3">
+                {/* Seven-digit counts don't fit side by side in the 340px sidebar. */}
+                <div className={cn('grid grid-cols-2 gap-3', Math.max(Number(lastfm?.playcount ?? 0), Number(lastfm?.listeners ?? 0)) >= 1e6 && 'xl:grid-cols-1')}>
                   {lastfm?.playcount !== undefined && (
                     <div className="flex flex-col gap-1">
                       <span className="t-cond text-[56px] xl:text-[44px]">{Number(lastfm.playcount).toLocaleString('en-GB')}</span>

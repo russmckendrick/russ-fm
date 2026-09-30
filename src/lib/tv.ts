@@ -50,6 +50,8 @@ export interface TvItem {
   /** Scheduled length in seconds (a default when the real one is unknown). */
   seconds: number;
   album: Album;
+  /** On an album's own channel: the /tv channel this video also airs on, if any. */
+  airsOn?: string;
 }
 
 export interface TvChannel {
@@ -63,6 +65,11 @@ export interface TvChannel {
   starts: number[];
   /** Length of one full loop in seconds. */
   loop: number;
+  /**
+   * Set on an album's own channel (the mini TV in Listen): where the floating
+   * player links back to, since it has no /tv page.
+   */
+  home?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -280,6 +287,30 @@ export function buildChannels(tv: TvData, albums: Album[]): TvChannel[] {
   if (live.length) channels.push(channel('live', n++, 'Live', 'live', live));
   if (other.length) channels.push(channel('everything-else', n++, 'Everything Else', 'shelves', other));
   return channels.filter(c => c.items.length > 0);
+}
+
+/**
+ * One record's videos as a channel, for the mini TV on its album page: in the
+ * release's own order, every video (full concerts included), in the room of
+ * the record's first genre channel.
+ */
+export function albumChannel(release: TvRelease, album: Album): TvChannel {
+  const slugs = genreChannelsFor(release);
+  const items: TvItem[] = release.videos.map(v => {
+    const seconds = v.duration && v.duration > 0 ? v.duration : DEFAULT_SECONDS;
+    // The same rules as buildChannels: long videos only air on Live.
+    const airsOn = seconds > MAX_SECONDS ? (v.kind === 'live' && seconds <= MAX_LIVE_SECONDS ? 'live' : undefined) : (slugs[0] ?? 'everything-else');
+    return { id: v.id, title: v.title, artist: v.artist ?? album.release_artist, kind: v.kind, seconds, album, airsOn };
+  });
+  const first = slugs[0];
+  const room = GENRE_CHANNELS.find(c => c.slug === first)?.room ?? 'shelves';
+  const starts: number[] = [];
+  let t = 0;
+  for (const item of items) {
+    starts.push(t);
+    t += item.seconds;
+  }
+  return { slug: `album:${album.uri_release}`, number: 'LP', name: album.release_name, room, items, starts, loop: t, home: album.uri_release };
 }
 
 /** Distinct videos across all channels (for the "N videos" count). */
