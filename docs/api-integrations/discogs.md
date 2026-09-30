@@ -419,6 +419,7 @@ if primary:
 | styles | styles |
 | labels[].name | labels |
 | formats[].name | formats |
+| formats[] (`name`, `qty`, `descriptions`, `text`) | raw_data.discogs.formats (→ album JSON `format_details`; colours from `text` → `vinyl_colours`) |
 | tracklist | tracklist |
 | images | images |
 | artists | artists |

@@ -12,7 +12,7 @@ authoritative flag list of any subcommand.
 
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
-`backfill-videos`, `backfill-original-years`, `maintenance`.
+`backfill-videos`, `backfill-original-years`, `backfill-formats`, `maintenance`.
 
 ## Global Options
 
@@ -463,6 +463,53 @@ scrapper backfill-original-years --force
   Album JSON files are unchanged.
 - New and refreshed releases get the same fields from `process_release`, so
   this is only needed for rows written before that.
+
+---
+
+## backfill-formats
+
+Store each release's Discogs pressing detail (vinyl colour lives in a format's `text`), write
+`format_details` / `vinyl_colours` into the album JSON files, and regenerate `collection.json`.
+
+```bash
+scrapper backfill-formats [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only fetch this many releases from Discogs (newest additions first); album JSON is still synced for everything already stored |
+| `--dry-run` | | FLAG | `false` | Report how many releases need a Discogs lookup and how many already have stored formats, without calling Discogs or writing anything |
+| `--force` | `-f` | FLAG | `false` | Fetch every release again, including ones that already have stored formats |
+
+### Examples
+
+```bash
+# How many releases still need their formats fetched?
+scrapper backfill-formats --dry-run
+
+# Try the newest 20 additions
+scrapper backfill-formats --limit 20
+
+# Full run (resumable; stop and re-run at any point)
+scrapper backfill-formats
+```
+
+### Behavior
+
+- Writes the Discogs `formats[]` to `raw_data.discogs.formats` on each release row, keeping every
+  other `raw_data` key. Rows that already have it (all Python-era rows) make no Discogs request.
+- Then syncs every release's album JSON from the DB: `format_details` is set once the formats are
+  stored and `vinyl_colours` only when the pressing is coloured. Only those two keys are touched,
+  and a file that already holds the right values is not rewritten.
+- One `GET /releases/{id}` per release that needs it, in the authed 60/min bucket, so a run over
+  the ~450 rows the Rust scrapper wrote before formats were stored takes about eight minutes.
+- Resumable: a failed lookup leaves the row without formats, so a re-run retries only those.
+- Prints one line per fetched release (`→ Red, Yellow` when coloured), then a summary of fetched,
+  failed, updated and already-current files, and regenerates `collection.json`.
+- New and refreshed releases store the formats through `process_release` / the Discogs refresh,
+  so this is only needed for rows written before that.
 
 ---
 

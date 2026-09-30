@@ -21,6 +21,7 @@ This document covers the route-level page components in russ.fm.
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
+| `/coloured-vinyl` | `BrowseHeader` → colour-family and pattern filter chips → a wall of still records: each coloured pressing drawn as a disc in its real colour with the sleeve on its label. |
 | `/label/:slug`, `/decade/:slug`, `/country/:slug`, `/genre/:slug` | Flood hero with a fan of sleeves → paginated `RecordTile` grid. |
 | `/stats` | `Stats` title → headline counts → month chart → growth → decades / genres → release years → most collected → formats / countries → labels → latest additions → hidden gems → random picks / artists. All bars take sleeve colours. |
 | `/shuffle` (also `/random`) | Split-flap board clatters to a random record; its colour drops down the page and the cover turns back over the spinning record. |
@@ -42,6 +43,7 @@ flowchart TB
         Genres["/genres"]
         GenreDetail["/genre/:slug"]
         Browse["/browse"]
+        ColouredVinyl["/coloured-vinyl"]
         Labels["/labels"]
         LabelDetail["/label/:slug"]
         Decades["/decades"]
@@ -66,6 +68,7 @@ flowchart TB
     Genres --> GenrePage
     GenreDetail --> FacetDetailPage
     Browse --> BrowseIndexPage
+    ColouredVinyl --> ColouredVinylPage
     Labels --> FacetListPage
     LabelDetail --> FacetDetailPage
     Decades --> FacetListPage
@@ -231,13 +234,31 @@ on the ground.
   link to the artist's records in the collection.
 
 **Sidebar:** Last.fm panel in the flood colour (scrobbles, listeners,
-link), release details, identifiers, sleeve colours, copyright. "Sleeve
+link), release details, identifiers, pressing, sleeve colours, copyright.
+"Pressing" (`Pressing` in the page file, from the detail JSON's `format_details`;
+not shown on box sets) lists each vinyl disc set as a small record in its own
+colour, titled with the colour (or "Black") and a mono line of what Discogs
+says: disc count when more than one, the format descriptions (LP, Album,
+Reissue…) and the rest of the format text (180 Gram, Gatefold…). Other formats
+(CD, cassette) are plain rows, and the edition tags that apply to the whole
+release (Limited Edition, Remastered…) sit underneath as small outlined tags. "Sleeve
 colours" is a strip of the sleeve's main swatches (`useAlbumSwatches()`),
 each as wide as the share of the sleeve it covers, plus dots for the flood
 and secondary colour; it appears once `album-swatches.json` has loaded.
 In the release details "Released" is the original year; "This pressing"
 shows the pressing's own date (detail JSON `released`, else `year`) and
-appears only when it differs.
+appears only when it differs. "Format" reads e.g. `Vinyl · Red & Yellow ·
+2 discs · 4 sides`: the vinyl colours (`vinyl_colours`, detail JSON first,
+else `collection.json`) come after the format and are left out for black
+vinyl or when Discogs records no colour. The same colours paint the records
+on the page (see [Vinyl colours](./utilities.md#vinyl-colours-srclibvinyllookts)):
+the hero shows every disc of a multi-disc set in its own colour (up to four), the
+front record pulled out furthest in, the rest tucked behind it a little further
+out each and fading while the scrobble scene plays; hovering the record slides the discs out further, over the start of the title;
+each tracklist side's small
+disc takes its LP's colour, and the logo and footer record follow the first disc through
+`usePageFlood`'s `vinyl`. The home hero, artist page, shuffle, Wrapped and every
+`RecordTile` do the same for their records. Black vinyl keeps a black record.
 
 **Below:** "More by" the artist (boxset members excluded; newest original
 year first, labelled with that year) and **Similar
@@ -443,7 +464,8 @@ denormalised into `collection.json` (`format_primary`, `labels`,
 
 | Route | Component | Purpose |
 |-------|-----------|---------|
-| `/browse` | `BrowseIndexPage` | Four large `FacetCard`s (genres, labels, decades, countries), each in the colour of a vivid record from its biggest value, with the distinct count and the top value |
+| `/browse` | `BrowseIndexPage` | Four large `FacetCard`s (genres, labels, decades, countries), each in the colour of a vivid record from its biggest value, with the distinct count and the top value, then a full-width Coloured vinyl card |
+| `/coloured-vinyl` | `ColouredVinylPage` | Every coloured pressing as a still record; see below |
 | `/labels` | `FacetListPage facetKey="label"` | Every label with its record count |
 | `/label/:slug` | `FacetDetailPage facetKey="label"` | Records on one label |
 | `/decades` | `FacetListPage facetKey="decade"` | Every decade |
@@ -451,6 +473,22 @@ denormalised into `collection.json` (`format_primary`, `labels`,
 | `/countries` | `FacetListPage facetKey="country"` | Every Discogs country |
 | `/country/:slug` | `FacetDetailPage facetKey="country"` | Records for one country |
 | `/genre/:slug` | `FacetDetailPage facetKey="genre"` | Records in one genre |
+
+**Coloured vinyl** (`ColouredVinylPage`, also under Browse in the nav
+dropdown, the mobile menu, the footer and the sitemap) is not a facet: it lists
+every record with `vinyl_colours` (boxset members excluded), newest first. Each
+is a still `Vinyl` (`spin={false}`, class `vinyl-wide` for a bigger label) in its
+pressing colour, patterns included, with the sleeve printed on the label; a set
+of several colours draws up to three discs, the first in front and the others
+fanned out behind it in their own colours. Under the header a row of chips
+filters by colour family (Clear, White, Yellow, Orange, Red, Pink, Purple, Blue,
+Green, Brown, Grey, Gold & silver, Rainbow) or pattern (Splatter, Marbled, Split),
+each with its count; the choice is in the URL (`?colour=Red`) so a view can be
+linked. The families and patterns come from `colourTags()` in
+[`vinylLook.ts`](./utilities.md#vinyl-colours-srclibvinyllookts); a record can be
+in several (Clear With Red Splatter is Clear, Red and Splatter). 60 records show
+at first with a "Show more" button, since each disc carries its own pattern. On a
+phone the chips are one scrolling row so the discs stay in view.
 
 **List pages** show every value as a colour `FacetCard` when there are 12
 or fewer; otherwise the top eight are cards and the full list follows as

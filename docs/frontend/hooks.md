@@ -256,12 +256,13 @@ const flood = floodFor(palette);
 usePageFlood(
   album ? flood.flood : null,
   album ? flood.ink : null,
-  album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground } : undefined,
+  album ? { cover: getAlbumImageFromData(album.uri_release, 'hi-res'), ground: flood.ground, vinyl: vinylColours[0] } : undefined,
 );
 ```
 
 **Parameters:** `flood`, `ink` (`string | null | undefined`), and an optional
-`{ cover, ground }`. `ground` (usually the sleeve's `ground` swatch) becomes `--ground` for the
+`{ cover, ground, vinyl }`. `vinyl` is the record's pressing colour (a `vinyl_colours` entry such as
+`"Red Smoke"`); the footer's record turns that colour, and only the album page passes one. `ground` (usually the sleeve's `ground` swatch) becomes `--ground` for the
 whole page. `cover` is an image URL the page already shows. The spinning logo and the footer record put that sleeve on
 their labels; pass the size the page itself loads so it comes from cache. Only the home hero,
 album and artist (latest addition) pages pass one. Passing `null` for either
@@ -270,7 +271,7 @@ are ignored, so it is safe to call on every render.
 
 ### useFloodValue
 
-Reads the current `{ flood, ink, cover, ground }`. Used by `Navigation` and `Footer`.
+Reads the current `{ flood, ink, cover, ground, vinyl }`. Used by `Navigation` and `Footer`.
 
 ```typescript
 import { useFloodValue } from '@/components/player';
@@ -279,6 +280,20 @@ const { flood, ink } = useFloodValue();
 ```
 
 ---
+
+### useVinylColours
+
+`useVinylColours()` (`src/hooks/useVinylColours.ts`) returns a lookup from an album URI to its
+pressing colours (`vinyl_colours`), read from the collection. Use it where the page's own record
+shape does not carry them: Wrapped releases, search results and the box-set panel. Pages that
+already hold a collection album (home, artist, shuffle, albums, stats, browse) read
+`album.vinyl_colours` directly.
+
+```typescript
+const vinylOf = useVinylColours();
+<HeroRecord look={discLook(vinylOf(heroUri), 0)} … />
+<RecordTile album={{ ...tileAlbum(release), vinyl_colours: vinylOf(releaseUri(release.slug)) }} />
+```
 
 ## Media Query Hooks
 

@@ -337,6 +337,82 @@ const flood = floodFor(palette);
 | `BOLD_VIVID` | `vivid` at or above this (1) counts as a bold sleeve. Used by the home genre chips and the home Browse by colour strip |
 | `INK`, `CREAM`, `GROUND`, `NEUTRAL_FLOOD` | Constants |
 
+## Vinyl Colours (`src/lib/vinylLook.ts`)
+
+Turns a coloured pressing into disc styling. The scrapper lifts Discogs' free-text colour
+(`"Red Smoke"`, `"Clear w/ Red Splatter"`, `"Blue [Light]"`) into `vinyl_colours` on
+`collection.json` and the album JSON (see [Pressing detail](../data/schemas.md#pressing-detail-format_details--vinyl_colours));
+this reads one entry.
+
+```typescript
+import { discLook } from '@/lib/vinylLook';
+
+<HeroRecord look={discLook(vinylColours, 0)} … />
+<Vinyl label={flood.ground} look={discLook(vinylColours, discIndex)} />
+```
+
+| Export | Description |
+|--------|-------------|
+| `vinylLook(text)` | `{ body, pattern?, groove, rim }` for one colour string, or `null` for black, empty or unrecognised text (the disc stays black) |
+| `discLook(colours, disc)` | The look for disc `disc` of a set: one colour covers every disc, several are one per disc with the last carrying on |
+| `pressingDiscs(details, colours)` | The colour of each disc, in order (null for a black disc): each Vinyl entry of the album JSON's `format_details` gives `qty` discs of its `colour`; without details it is one disc per `vinyl_colours` entry. Empty when no disc is coloured, so black sets keep one record |
+| `colourTags(text)` / `COLOUR_FAMILIES` / `PATTERN_TAGS` | The filter tags for one pressing colour: its hue families (Clear, Red, Blue…), Gold & silver, Rainbow and its pattern (Splatter, Marbled, Split); used by the Coloured vinyl page. `COLOUR_FAMILIES` also carries a representative colour for each chip's dot |
+| `pressingTitle(text, colour)` | How a vinyl entry reads in a list: its colour, else the text Discogs gave that is not a known note (so an unrecognised "Flame Vinyl" is shown as written), else "Black"; plus the remaining `extras` |
+| `pressingExtras(text, colour)` | What a format's free text says besides its colour (`"Red Smoke, 180 Gram"` → `["180 Gram"]`); used by the album page's Pressing section |
+| `discLooks(discs)` / `lookAt(looks, disc)` | The look of each disc from `pressingDiscs`, and the look of one disc (the last carrying on for a set with fewer entries) |
+
+What it draws: solid colours get a darker edge; `translucent` / `transparent` are see-through
+(the page shows through); `clear` (also `crystal`, `cloudy`) is glass; a colour after `Clear` is
+tinted glass. Patterns are extra background layers on the grooves, so they turn with the record:
+**marble** (soft blobs of the accent colours, also the default when two colours are named),
+**swirl** (soft, streaky bands of the accent colours at half strength: concentric rings round the
+label bent by a low-frequency noise displacement and blurred, so they drift and curl like real swirl
+vinyl rather than stripe it; an SVG),
+**splatter** (radial streaks thrown out from the centre: tapered wedges with a darker head, in
+bursts, drawn as an SVG), **sparkle** (fine silver flecks over the colour, black when none is
+named: sparse specks made with an SVG noise filter, about 0.6% of the disc plus a few brighter
+glints, so they read as glitter and not dots), **split** (two halves), **smoke** (dark wisps),
+**rainbow**, **flame** (made up: splatter in flame colours, fiery red-orange with orange and yellow
+streaks, or those streaks over whatever colour is named, so `Yellow Flame` is yellow with flame
+streaks; words `flame`, `flaming`, `flames`, `flamed`) and a metallic sheen for gold / silver / copper /
+bronze / pearl. `Light` / `Dark` (or a
+trailing `[Light]`) shade the next colour, and a bracketed `[Translucent]` still makes it see-through.
+Other bracketed nicknames are ignored unless they hold the only colour. Patterns are seeded from
+the text, so a record always looks the same.
+
+A colour the scrapper approved is never drawn black. When Discogs says it is coloured without
+saying which colour (`Coloured`, `Tri-Color`, `Multi-Coloured`, `Eco-Mix`, a bare `Marbled` or
+`Splatter`) it is drawn as a mix: marbled blobs of a fixed four-colour palette over cream, clear glass
+for a bare splatter, smoky grey for `Smokey`. Only plain black and text with no colour at all
+(`Honey Vinyl`) return `null`.
+
+**The vocabulary is a config file**, [`src/config/vinyl-colours.json`](../../src/config/vinyl-colours.json),
+shared with the scrapper (which reads the same file at build time to decide what Discogs text
+counts as a colour, so the two cannot drift). It holds the colour words and their hex values, the
+two-word phrases (`baby blue`), the glass, translucent and metallic words, the `Light`/`Dark`
+shades, the pattern words (matched by prefix, so `marbl` covers marble, marbled, marbling), the
+"coloured without saying which" patterns, the mixed-colour palette, the sparkle colours, the
+flame words and palette, the filter chips (families and their dots, pattern tags), the notes that are not colours
+(`knownNotes`) and the scrapper's `notVinyl` and `filler` words. Add a word and rebuild; if it
+changes what counts as a colour, run `scrapper backfill-formats` afterwards. A test checks the
+file's shape (valid hex values, one lower-case word each, patterns that compile).
+
+Looks are cached per colour text (a splatter is an SVG), so the same string is built once.
+Where it shows, all from the same `vinyl_colours`:
+
+- **Album page**: the hero shows every disc of the set (up to four), each in its own colour,
+  fanned out behind the front record; each tracklist side's disc takes its LP's colour; and the
+  box-set panel disc follows the box.
+- **Every record tile** (albums, search, stats, artist, browse, "more by", home rows, Wrapped):
+  the disc that slides out on hover.
+- **Home hero, Wrapped heroes and shuffle**: the big disc (the home and Wrapped heroes fan out a
+  multi-colour set the same way, one disc per colour; shuffle shows the first).
+- **The logo and the footer record**: through `usePageFlood`'s `vinyl`, which the album, home
+  hero, artist (newest record) and shuffle pages set, so both follow the record the page shows.
+
+Records with no colour, black vinyl and other pages keep black discs. Tests:
+`src/lib/__tests__/vinylLook.test.ts`.
+
 ## Browse Sleeve Helpers (`src/components/browse/facetSleeves.ts`)
 
 Colouring for browse surfaces (facet cards, chips, detail floods) from a representative

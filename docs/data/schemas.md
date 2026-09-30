@@ -65,6 +65,7 @@ Main collection index used for album listings.
 | albums[].styles | string[] | Discogs styles (excluding generic "Music"); used by detail page + browse |
 | albums[].formats | string[] | All Discogs format descriptors (Vinyl, LP, Album, Compilation, Box Set, …) |
 | albums[].format_primary | string \| null | Single canonical format bucket: Vinyl / CD / Cassette / Box Set / Digital. Powers the `/albums?format=…` filter and the Stats page format donut. |
+| albums[].vinyl_colours | string[]? | Present only when the pressing is coloured vinyl: the colour of each vinyl disc set as Discogs words it (`["Red"]`, `["Blue Translucent"]`, `["Yellow Transparent", "Blue Transparent"]` for two LPs), in order without repeats. Black vinyl, other formats and releases whose colour is not recorded omit it. See [Pressing detail](#pressing-detail-format_details--vinyl_colours) |
 | albums[].labels | string[] | Record label names; powers `/labels` and `/label/:slug` |
 | albums[].country | string \| null | Discogs release country; powers `/countries` and `/country/:slug` |
 | albums[].lastfm_listeners | number \| null | Last.fm `album.getInfo` listener count; powers the Stats "Hidden gems" section |
@@ -89,6 +90,10 @@ Main collection index used for album listings.
 > `releaseDate` and Spotify `release_date`, including years parsed out of Python-era repr
 > strings. `date_release_year` is unchanged and the album JSON does not carry `year_original`.
 > Backfill older rows with `scrapper backfill-original-years`.
+>
+> **Coloured vinyl (Sep 2026):** `vinyl_colours` sits right after `format_primary` and is left out
+> when empty, so the index only grows for coloured pressings. It is derived at index time from the
+> release's stored Discogs formats — see [Pressing detail](#pressing-detail-format_details--vinyl_colours).
 >
 > **Band members (Sep 2026):** Discogs credits some releases as a band followed by its players
 > ("James Taylor Trio", "James Taylor", "Orlando Le Fleming", …). Those line-up credits carry
@@ -221,6 +226,33 @@ Full album data for detail views.
   }
 }
 ```
+
+#### Pressing detail (`format_details`, `vinyl_colours`)
+
+Discogs records a coloured pressing as free text on the release's format, e.g.
+`{"name": "Vinyl", "qty": "1", "descriptions": ["LP", "Album", "Limited Edition"], "text": "Cloudy Clear Vinyl"}`.
+The plain `formats` list keeps only the names (`["Vinyl"]`), so the colour lives in two extra keys:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `format_details` | object[]? | Discogs `formats[]` normalised to `{name, qty, descriptions, text, colour}` — one entry per disc set (a set of two different colours lists each LP as its own entry). `qty` is a string (the number of discs in the set), `descriptions` is `[]` and `text` is `null` when Discogs has none. `colour` is the vinyl colour derived from `text` (null for other formats and uncoloured vinyl). Present once the release's formats are stored; absent means "not backfilled", `[]` means Discogs lists none |
+| `vinyl_colours` | string[]? | The `colour` of each `Vinyl` entry, in order without repeats. Present only when there is at least one; also copied to `collection.json`. The frontend expands `format_details` by `qty` for one colour per disc, and falls back to one disc per `vinyl_colours` entry where only the index is loaded |
+
+The derivation (`scrapper/src/formats.rs`, with its word lists in the shared
+[`src/config/vinyl-colours.json`](../../src/config/vinyl-colours.json)) is a heuristic over free text. One entry's `text`
+describes a single disc, so its colour parts are one colour: `Yellow, Transparent` is a
+transparent yellow LP (`colour: "Yellow Transparent"`). It splits `text` on
+commas, semicolons and ` - `, keeps a piece that names a colour or pattern (clear, red, blue,
+translucent, marbled, splatter, swirl, …) and drops weights (`180 Gram`), a trailing "Vinyl",
+and pieces about the sleeve, labels or an anniversary (`Gatefold`, `30th Anniversary Edition`,
+`Blue/White Labels`). The word "Edition" is only stripped, so `Crystal Clear Edition` is the colour
+`Crystal Clear` while `Definitive Edition` (no colour) gives none. Plain black is not a colour. Colours Discogs words unusually
+("Flame Vinyl", "Honey") are missed, so read `format_details[].text` when the exact wording
+matters.
+
+The source is `raw_data.discogs.formats` in the SQLite row — the Discogs array stored as-is by
+`process_release` and the Discogs refresh, or filled for older rows by `scrapper backfill-formats`
+(see [cli-commands.md](../backend/cli-commands.md#backfill-formats)). No SQLite schema change.
 
 ---
 
@@ -615,6 +647,8 @@ interface Album {
 
   labels?: Label[];
   formats?: Format[];
+  format_details?: Array<Format & { colour?: string | null }>;   // album JSON; see Pressing detail
+  vinyl_colours?: string[];    // coloured vinyl only; also in collection.json
   country?: string;
   tracklist?: Track[];
 
@@ -671,6 +705,7 @@ interface Format {
   name: string;
   qty?: string;
   descriptions?: string[];
+  text?: string | null;  // free text: colour, weight, "Gatefold", …
 }
 ```
 
