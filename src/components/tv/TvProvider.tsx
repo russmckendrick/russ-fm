@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Maximize2, Minimize, Pause, Play, SkipBack, SkipForward, Volume2, VolumeX, X } from 'lucide-react';
+import { Maximize2, Minimize, Pause, Play, SkipBack, SkipForward, X } from 'lucide-react';
+import { SoundIcon } from './SoundIcon';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { originalYear } from '@/lib/releaseYear';
@@ -196,7 +197,7 @@ function TvLayerVideo({ host, mode, value }: { host: React.RefObject<HTMLDivElem
             onClick={player.muted ? player.unmute : player.mute}
             aria-label={player.muted ? 'Sound on' : 'Mute'}
           >
-            {player.muted ? <VolumeX className="h-4 w-4" aria-hidden /> : <Volume2 className="h-4 w-4" aria-hidden />}
+            <SoundIcon muted={player.muted} />
           </button>
           <Link to={back} className="tv-mini-btn" aria-label={channel?.home ? 'Back to the record' : 'Back to TV'}>
             <Maximize2 className="h-4 w-4" aria-hidden />
@@ -277,7 +278,7 @@ function FullscreenCredit({ value, flood, ink, year, label }: { value: TvState; 
           aria-label={player.muted ? 'Sound on' : 'Mute'}
           title={player.muted ? 'Sound on' : 'Mute'}
         >
-          {player.muted ? <VolumeX className="h-4 w-4" aria-hidden /> : <Volume2 className="h-4 w-4" aria-hidden />}
+          <SoundIcon muted={player.muted} />
         </button>
         <button type="button" className="icon-btn h-9 w-9" style={outline} onClick={value.toggleFullscreen} aria-label="Exit full screen" title="Exit full screen">
           <Minimize className="h-4 w-4" aria-hidden />

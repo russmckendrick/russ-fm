@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv, Volume2, VolumeX } from 'lucide-react';
+import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
+import { SoundIcon } from './SoundIcon';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { floodFor } from '@/lib/sleeveColour';
@@ -143,7 +144,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
               <span className="tv-bug t-disp">russ.fm/tv</span>
               {player.muted && player.ready && (
                 <span className="tv-sound t-mono" aria-hidden>
-                  <VolumeX className="h-3.5 w-3.5" /> Sound off
+                  <SoundIcon muted className="h-3.5 w-3.5" /> Sound off
                 </span>
               )}
               {player.failed && <span className="tv-message t-mono">The YouTube player didn't load</span>}
@@ -202,7 +203,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
               aria-label={player.muted ? 'Sound on' : 'Mute'}
               title={player.muted ? 'Sound on' : 'Mute'}
             >
-              {player.muted ? <VolumeX className="h-4 w-4" aria-hidden /> : <Volume2 className="h-4 w-4" aria-hidden />}
+              <SoundIcon muted={player.muted} />
             </button>
           )}
           {on && (

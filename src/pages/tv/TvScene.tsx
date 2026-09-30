@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { List, Maximize, Pause, Play, SkipBack, SkipForward, Tv, Volume2, VolumeX } from 'lucide-react';
+import { List, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
+import { SoundIcon } from '@/components/tv/SoundIcon';
 import { FitTitle, HeroRecord, SectionHeading, usePageFlood } from '@/components/player';
 import { Scrubber } from '@/components/tv/Scrubber';
 import { useTv } from '@/components/tv/tv-context';
@@ -69,6 +70,15 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
   const slotRef = useCallback((el: HTMLDivElement | null) => setSlot(el), [setSlot]);
   useEffect(() => () => setSlot(null), [setSlot]);
 
+  // The header's height, which the room runs up under (matches Navigation: h-16, md:h-[84px]).
+  const [headerH, setHeaderH] = useState(() => (typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches ? 84 : 64));
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)');
+    const update = () => setHeaderH(mq.matches ? 84 : 64);
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
   const [roomOverride, setRoomOverride] = useState<TvRoomId | null>(null);
   const room = TV_ROOMS.find(r => r.id === (roomOverride ?? channel.room)) ?? TV_ROOMS[0];
   const cycleRoom = () => setRoomOverride(TV_ROOMS[(TV_ROOMS.indexOf(room) + 1) % TV_ROOMS.length].id);
@@ -106,14 +116,16 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
 
   return (
     <div className="tv">
-      {/* Room ----------------------------------------------------------- */}
-      <div className="relative">
+      {/* Room: pulled up under the sticky header (64px, 84px from md), which is
+          see-through here, so the photo fills the top of the page. */}
+      <div className="relative -mt-16 md:-mt-[84px]">
         <TvRoom
           room={room}
           tint={f.flood}
           slotRef={slotRef}
           zoom={1.35}
-          className="h-[340px] sm:h-[440px] lg:h-[clamp(540px,72vh,800px)]"
+          topInset={headerH}
+          className="h-[404px] sm:h-[504px] md:h-[524px] lg:h-[clamp(624px,calc(72vh+84px),884px)]"
           screen={
             <div className="tv-screen" onClick={() => (player.muted ? player.unmute() : undefined)}>
               <div className="tv-scan" aria-hidden />
@@ -130,7 +142,7 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
               <span className="tv-bug t-disp">russ.fm/tv</span>
               {player.muted && player.ready && (
                 <span className="tv-sound t-mono" aria-hidden>
-                  <VolumeX className="h-3.5 w-3.5" /> Sound off
+                  <SoundIcon muted className="h-3.5 w-3.5" /> Sound off
                 </span>
               )}
               {player.failed && <span className="tv-message t-mono">The YouTube player didn't load</span>}
@@ -213,16 +225,17 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
             </div>
 
             <div className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
-              {player.muted ? (
-                <button type="button" className="pill pill-solid pill-sm max-sm:px-3" style={btn} onClick={player.unmute} aria-label="Sound on">
-                  <Volume2 className="h-4 w-4" aria-hidden />
-                  <span className="hidden sm:inline">Sound on</span>
-                </button>
-              ) : (
-                <button type="button" className="icon-btn h-10 w-10 border-2 border-current" style={outline} onClick={player.mute} aria-label="Mute" title="Mute">
-                  <Volume2 className="h-4 w-4" aria-hidden />
-                </button>
-              )}
+              {/* Same shape either way: solid while muted (the one to press first), outlined with sound on. */}
+              <button
+                type="button"
+                className={cn('icon-btn h-10 w-10', !player.muted && 'border-2 border-current')}
+                style={player.muted ? btn : outline}
+                onClick={player.muted ? player.unmute : player.mute}
+                aria-label={player.muted ? 'Sound on' : 'Mute'}
+                title={player.muted ? 'Sound on' : 'Mute'}
+              >
+                <SoundIcon muted={player.muted} />
+              </button>
               <Link to="/tv/guide" className="icon-btn h-10 w-10 border-2 border-current" style={outline} aria-label="Guide" title="Guide">
                 <List className="h-4 w-4" aria-hidden />
               </Link>

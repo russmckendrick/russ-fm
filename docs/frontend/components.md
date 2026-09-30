@@ -182,6 +182,13 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
 - `useTvPlayer(host, { enabled, onEnded, onError })` wraps the YouTube IFrame Player
   API: no controls, starts muted, loads the API only when `enabled`; `time()`,
   `duration()` (YouTube's real length) and `seek(seconds)`.
+- `SoundIcon` (`muted`): the TV's sound icon everywhere (band, full-screen bar, mini
+  player, album page TV, the on-screen "Sound off" tag). A solid speaker with two waves
+  when sound is on, crossed out when muted, so it shows the current state; the
+  button's label says what a press does. Drawn solid because Lucide's outline speaker
+  turns to mush at 16px.
+- `TvMark` (`size`, `cover`, `screen`): the header logo on `/tv` pages, a small CRT in
+  the header's text colour with the page's sleeve on its screen.
 - `Scrubber` (`elapsed`, `duration`, `onSeek`): the progress line along a bar's top
   edge as a `role="slider"`. Pointer click/drag (pointer capture, touch-friendly),
   a taller hit area than the line, a knob and time bubble while dragging, and arrow /
@@ -230,7 +237,8 @@ Sticky header that shares the page's flood colour.
   for older Safari, iOS and Chrome on Android. (A fixed strip over the header,
   WebKit's documented source on iOS, did not tint desktop Safari.)
 - The logo is `SpinningMark` (a record at 33⅓) beside the `russ.fm`
-  wordmark. On pages that pass a `cover` to `usePageFlood` (home hero,
+  wordmark (on `/tv` pages it is `TvMark` instead, and on `/tv` and channel pages the
+  header is see-through with cream text over the room until scrolled). On pages that pass a `cover` to `usePageFlood` (home hero,
   album, artist) the label carries that sleeve; elsewhere the label is the
   page flood (cream on plain pages) with a printed mark so the spin reads.
   The disc uses `.vinyl-lit` (lit rim and highlights) so it reads on the

@@ -15,6 +15,7 @@ import { FACETS } from "@/lib/browseFacets";
 import { groupByFacet } from "@/components/browse/facetSleeves";
 import { useCollection } from "@/lib/collection";
 import { shuffleLink, SHUFFLE_PATH, SHUFFLE_PATHS } from "@/lib/shuffleLink";
+import { TvMark } from "@/components/tv/TvMark";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -130,10 +131,14 @@ export function Navigation() {
     return location.pathname === item.path || (item.path === "/" && location.pathname === "/home");
   };
 
+  // The TV pages (not the guide) run their room photo up under the header, so
+  // at the top it is see-through with cream text instead of the flood.
+  const onTv = location.pathname === "/tv" || location.pathname.startsWith("/tv/");
+  const overRoom = onTv && location.pathname !== "/tv/guide" && !scrolled && !menuOpen;
   const solid = scrolled || menuOpen;
-  const bg = menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  const bg = overRoom ? "transparent" : menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
   // The browser's own toolbar follows the header: the flood, or the page's dark once scrolled.
-  const tint = menuOpen || !scrolled ? flood : ground ?? GROUND;
+  const tint = overRoom ? ground ?? GROUND : menuOpen || !scrolled ? flood : ground ?? GROUND;
   // Desktop Safari 26+ ignores theme-color and tints its toolbar from the <body> background,
   // which it watches live. The page itself is painted by the app root, so the body's colour only
   // shows when overscrolling; giving it the header's colour makes the toolbar follow the header.
@@ -143,16 +148,18 @@ export function Navigation() {
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", tint);
   }, [tint]);
   useEffect(() => () => void document.body.style.removeProperty("background-color"), []);
-  const fg = menuOpen ? ink : scrolled ? CREAM : ink;
+  const fg = overRoom ? CREAM : menuOpen ? ink : scrolled ? CREAM : ink;
   const browseActive = BROWSE.some(isActive);
   const hasFlood = flood !== GROUND;
   // The logo's label is the page colour; on plain pages it is cream.
   const markLabel = hasFlood ? flood : CREAM;
   // The current page's pill: ink on the flood, then the flood itself once the
   // header has scrolled onto the dark ground, so the colour follows you down.
-  const activePill = scrolled && !menuOpen
-    ? { background: hasFlood ? flood : CREAM, color: hasFlood ? ink : INK }
-    : { background: fg, color: hasFlood ? flood : "var(--ground)" };
+  const activePill = overRoom
+    ? { background: CREAM, color: INK }
+    : scrolled && !menuOpen
+      ? { background: hasFlood ? flood : CREAM, color: hasFlood ? ink : INK }
+      : { background: fg, color: hasFlood ? flood : "var(--ground)" };
 
   return (
     <>
@@ -165,7 +172,11 @@ export function Navigation() {
       >
         <div className="mx-auto flex h-16 w-full max-w-[1640px] items-center gap-5 px-5 md:h-[84px] md:px-10 lg:px-14 xl:gap-7">
           <Link to="/" className="flex shrink-0 items-center gap-2.5 md:gap-3" aria-label="russ.fm — home">
-            <SpinningMark size={isCompact ? 36 : 44} label={markLabel} cover={cover} look={markLook} />
+            {onTv ? (
+              <TvMark size={isCompact ? 36 : 44} cover={cover} screen={hasFlood ? flood : INK} />
+            ) : (
+              <SpinningMark size={isCompact ? 36 : 44} label={markLabel} cover={cover} look={markLook} />
+            )}
             <span className="t-disp text-[22px] tracking-[-0.04em] md:text-[26px]">russ.fm</span>
           </Link>
 

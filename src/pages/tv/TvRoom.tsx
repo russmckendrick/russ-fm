@@ -22,6 +22,8 @@ interface TvRoomProps {
   slotRef?: (el: HTMLDivElement | null) => void;
   /** How far to move in on the set: 1 shows the room, higher makes the picture bigger. */
   zoom?: number;
+  /** Pixels at the top covered by something (the see-through header); the set centres below them. */
+  topInset?: number;
   className?: string;
 }
 
@@ -34,8 +36,10 @@ interface Geometry {
  * Size the room photo so its TV screen is a sensible size for the box, centred
  * a little above the middle, while the photo still covers the whole box.
  */
-function layout(room: Room, w: number, h: number, zoom: number): Geometry {
+function layout(room: Room, w: number, fullH: number, zoom: number, inset: number): Geometry {
   const s = room.screen;
+  // Size and centre against the part not covered by the header (`inset` px at the top).
+  const h = Math.max(1, fullH - inset);
   // Screen width: a share of the box's width, capped so the screen's height
   // stays within about half the box (more with zoom). `zoom` moves in on the set.
   const aspect = (s.width / s.height) * TV_ROOM_ASPECT;
@@ -45,7 +49,7 @@ function layout(room: Room, w: number, h: number, zoom: number): Geometry {
   const cx = ((s.left + s.width / 2) / 100) * width;
   const cy = ((s.top + s.height / 2) / 100) * height;
   const left = Math.min(0, Math.max(w - width, w / 2 - cx));
-  const top = Math.min(0, Math.max(h - height, h * 0.47 - cy));
+  const top = Math.min(0, Math.max(fullH - height, inset + h * 0.47 - cy));
   // The player overlaps the bezel a little so no room shows through at the edges.
   const bleed = 4;
   return {
@@ -66,7 +70,7 @@ function layout(room: Room, w: number, h: number, zoom: number): Geometry {
  * has no background of its own for the same reason. A masked colour layer tints the room (never
  * the screen) with the current sleeve's colour.
  */
-export function TvRoom({ room, tint, screen, picture, slotRef, zoom = 1, className }: TvRoomProps) {
+export function TvRoom({ room, tint, screen, picture, slotRef, zoom = 1, topInset = 0, className }: TvRoomProps) {
   const box = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState<{ w: number; h: number } | null>(null);
 
@@ -80,7 +84,7 @@ export function TvRoom({ room, tint, screen, picture, slotRef, zoom = 1, classNa
     return () => ro.disconnect();
   }, []);
 
-  const g = size ? layout(room, size.w, size.h, zoom) : null;
+  const g = size ? layout(room, size.w, size.h, zoom, topInset) : null;
   const src = getTvRoomUrl(room.id, 'hi-res');
   const srcSet = `${getTvRoomUrl(room.id, 'medium')} 1536w, ${src} 3072w`;
   const imgBox = g ? { left: g.img.left, top: g.img.top, width: g.img.width, height: g.img.height } : undefined;

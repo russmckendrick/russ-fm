@@ -691,8 +691,14 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   next on the left, then channel · time, a one-line title (`.tv-title-box`, 40/46/50px
   high, `FitTitle` with `fitHeight` up to 52px, so nothing moves between videos) and
   artist · album · year · label, and the extras on the right as 40px icon buttons
-  (sound, guide, room, full screen; "Sound on" is a solid pill while muted, icon-only on
-  phones). On phones the credit drops below the one row of buttons.
+  (sound, guide, room, full screen). The sound button is the same shape in both
+  states: solid while muted, outlined with sound on. On phones the credit drops below the one row of buttons.
+- **Header.** On `/tv` and channel pages (not the guide) the room is pulled up under
+  the sticky header (`-mt-16 md:-mt-[84px]`, with `TvRoom`'s `topInset` keeping the set
+  centred in the visible part), and `Navigation` draws the header see-through with
+  cream text while at the top; it turns the usual dark once scrolled. On every `/tv`
+  page the logo is `TvMark` (a little CRT with the current sleeve on its screen) in
+  place of the spinning record.
 - **Colour.** The page takes the current record's colours (`usePageFlood` with the
   sleeve as the logo label and the sleeve's ground), and the now-playing band is the
   flood. On desktop the record (`HeroRecord`, 230px, disc out, no sticker) hangs from
