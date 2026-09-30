@@ -1,0 +1,16 @@
+asset: codex-image-20260930-165341.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/gen/post-punk/codex-image-20260930-165341.png
+source_sha256: 667030b669940f29d7c31df42b3205ffada85b26f5cef4c560dd836da4b53be9
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing
+
+--- Original source prompt log (unchanged) ---
+PROMPT: A stark bedsit at night in black, white and grey, a single bare hanging bulb, rain on a tall window with a cold blue streetlight outside, stacks of records against the wall, a narrow iron bed edge, high-contrast monochrome abstract posters. Photorealistic, shot straight-on at eye level with a 35mm lens, symmetrical composition. A large 1980s CRT television sits dead centre of the frame; its screen occupies roughly the middle 30 percent of the image width, and it faces the camera squarely. IMPORTANT: the TV screen glass is filled edge to edge with a perfectly flat, uniform, pure chroma-key green (#00FF00), no reflections, no glare, no texture, no image on it, so it can be keyed out. No other bright green anywhere in the scene. Any posters or artwork have abstract graphic designs with no readable text, no logos, no band names, no brand names. Moody evening light, deep shadows at the edges of the frame, film grain.
+TOOL: codex exec image_gen
+SIZE: 1536x1024
+QUALITY: high
+GENERATED: 2026-09-30T15:53:41Z
+CODEX_SOURCE: /Users/russ.mckendrick/.codex/generated_images/01a0f304-c902-7901-9cf6-5e249840d24a/exec-2343d443-33b5-41ad-8661-fbb07910e5f4.png

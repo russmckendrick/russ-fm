@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-30T15:25:01.443355+00:00",
+  "source": "/Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/room-basement.png",
+  "source_sha256": "14637fe1a27d79de0a05f544c1b9645ebb6a97849b42740287cb4ed3167f7d19",
+  "input_size": [
+    1536,
+    1024
+  ],
+  "output_size": [
+    3072,
+    2048
+  ],
+  "upscaler": "fsrcnn",
+  "scale": 2,
+  "upscale_only": true,
+  "existing_alpha_preserved": false,
+  "cutout_model": "none",
+  "cutout_model_md5": null,
+  "upscaler_model_sha256": "366b33f0084c7b3f2bf6724f0a2c77bca94fcec9d7b6d72389d330073b380d5c",
+  "processing_seconds": 0.4,
+  "packages": {
+    "rembg": "2.0.84",
+    "opencv-contrib-python-headless": "4.14.0.94",
+    "pillow": "12.3.0",
+    "onnxruntime": "1.29.0"
+  },
+  "alpha": {
+    "transparent_fraction": 0.0,
+    "opaque_fraction": 1.0,
+    "soft_edge_fraction": 0.0,
+    "bounds": [
+      0,
+      0,
+      3072,
+      2048
+    ]
+  },
+  "api_calls": 0,
+  "paid_credits": 0
+}

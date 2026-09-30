@@ -1,0 +1,8 @@
+asset: room-shelves.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/room-shelves.png
+source_sha256: 92b74731c3555e4c5223f1806ebf56f613bf01e51b270418fbada89de31a53bf
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing

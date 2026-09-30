@@ -1,0 +1,16 @@
+asset: codex-image-20260930-165600.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/gen/hip-hop/codex-image-20260930-165600.png
+source_sha256: f3e2be0991d2096267631f986157d68843a708295313054ebd9a3c48d0ec9f61
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing
+
+--- Original source prompt log (unchanged) ---
+PROMPT: A 1990s New York apartment at night with exposed brick, a chrome boombox, a pair of turntables and a sampler on a desk, stacked sneaker boxes, colourful abstract spray-paint murals of shapes with no letters, orange street light through blinds. Photorealistic, shot straight-on at eye level with a 35mm lens, symmetrical composition. A large 1980s CRT television sits dead centre of the frame; its screen occupies roughly the middle 30 percent of the image width, and it faces the camera squarely. IMPORTANT: the TV screen glass is filled edge to edge with a perfectly flat, uniform, pure chroma-key green (#00FF00), no reflections, no glare, no texture, no image on it, so it can be keyed out. No other bright green anywhere in the scene. Any posters or artwork have abstract graphic designs with no readable text, no logos, no band names, no brand names. Moody evening light, deep shadows at the edges of the frame, film grain.
+TOOL: codex exec image_gen
+SIZE: 1536x1024
+QUALITY: high
+GENERATED: 2026-09-30T15:56:00Z
+CODEX_SOURCE: /Users/russ.mckendrick/.codex/generated_images/01a0f306-a4b8-72c0-b219-e0bb1c4dd778/exec-ac8b1bc0-dcb6-4fc8-ab02-49ec436b3223.png

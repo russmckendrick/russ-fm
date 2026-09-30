@@ -1,0 +1,16 @@
+asset: codex-image-20260930-170139.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/gen/live/codex-image-20260930-170139.png
+source_sha256: 8479f39660c5a5cc6e438e0ad1fa086ec49ba40b828cffaad78059f7b9923103
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing
+
+--- Original source prompt log (unchanged) ---
+PROMPT: A cramped backstage dressing room at night with a mirror ringed with bare bulbs, black flight cases stencilled with abstract shapes and no words, guitars in stands, set lists taped to the wall as blank paper, a rail of stage clothes, harsh warm light. Photorealistic, shot straight-on at eye level with a 35mm lens, symmetrical composition. A large 1980s CRT television sits dead centre of the frame; its screen occupies roughly the middle 30 percent of the image width, and it faces the camera squarely. IMPORTANT: the TV screen glass is filled edge to edge with a perfectly flat, uniform, pure chroma-key green (#00FF00), no reflections, no glare, no texture, no image on it, so it can be keyed out. No other bright green anywhere in the scene. Any posters or artwork have abstract graphic designs with no readable text, no logos, no band names, no brand names. Moody evening light, deep shadows at the edges of the frame, film grain.
+TOOL: codex exec image_gen
+SIZE: 1536x1024
+QUALITY: high
+GENERATED: 2026-09-30T16:01:39Z
+CODEX_SOURCE: /Users/russ.mckendrick/.codex/generated_images/01a0f30b-f6ea-7313-a0a2-574281e8daf0/exec-698e3a7a-e668-4dd7-b262-902e759db3c0.png

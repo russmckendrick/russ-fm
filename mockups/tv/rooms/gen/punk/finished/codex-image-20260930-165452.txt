@@ -1,0 +1,16 @@
+asset: codex-image-20260930-165452.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/gen/punk/codex-image-20260930-165452.png
+source_sha256: 4defee63d8850b1c68c23b476e5b68b727e7fe69f031eb43787c026448e5c6ea
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing
+
+--- Original source prompt log (unchanged) ---
+PROMPT: A grimy squat bedroom at night with walls covered in torn flyers, spray-painted abstract shapes and stickers with no letters, a battered sofa, Doc Martens boots on the floor, a crate of seven-inch singles, a bare red bulb, safety pins and a leather jacket. Photorealistic, shot straight-on at eye level with a 35mm lens, symmetrical composition. A large 1980s CRT television sits dead centre of the frame; its screen occupies roughly the middle 30 percent of the image width, and it faces the camera squarely. IMPORTANT: the TV screen glass is filled edge to edge with a perfectly flat, uniform, pure chroma-key green (#00FF00), no reflections, no glare, no texture, no image on it, so it can be keyed out. No other bright green anywhere in the scene. Any posters or artwork have abstract graphic designs with no readable text, no logos, no band names, no brand names. Moody evening light, deep shadows at the edges of the frame, film grain.
+TOOL: codex exec image_gen
+SIZE: 1536x1024
+QUALITY: high
+GENERATED: 2026-09-30T15:54:52Z
+CODEX_SOURCE: /Users/russ.mckendrick/.codex/generated_images/01a0f305-8e59-7d11-8664-8748cd3c34a6/exec-c16f0735-7866-41a0-9c46-c55d408167dc.png

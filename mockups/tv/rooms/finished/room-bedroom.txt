@@ -1,0 +1,8 @@
+asset: room-bedroom.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/room-bedroom.png
+source_sha256: 7eb467e90455a7bb4260736244b4e6554de090b2894a064dab8bf216bd014f04
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing

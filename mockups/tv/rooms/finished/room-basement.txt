@@ -1,0 +1,8 @@
+asset: room-basement.png
+operation: local upscale (see cutout field for segmentation)
+source: /Users/russ.mckendrick/Code/russ-fm/mockups/tv/rooms/room-basement.png
+source_sha256: 14637fe1a27d79de0a05f544c1b9645ebb6a97849b42740287cb4ed3167f7d19
+upscaler: fsrcnn 2x
+cutout: none
+note: geometry and canvas preserved; review hair edges before promotion
+prompt: none; deterministic local image processing
