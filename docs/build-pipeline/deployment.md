@@ -61,6 +61,16 @@ on:
       - 'scrapper/**'
 ```
 
+### Concurrency
+
+Deploys run one at a time, in push order (`concurrency: { group: deploy,
+cancel-in-progress: false }`). A push that lands mid-deploy waits rather than
+cancelling the running one part-way through an R2 sync or `wrangler deploy`, so an
+older build can never finish last and put the site back to an earlier version.
+GitHub keeps only the newest waiting run and cancels any older one still waiting;
+that is safe because the R2 diff starts from the last successful deploy (see
+Detect changed files below), so the newest run syncs what the dropped one would have.
+
 ### Jobs
 
 The workflow is a single `deploy` job. It used to be split into an "assets" job
@@ -74,6 +84,9 @@ removed a full checkout of the 2 GB working tree plus a duplicate asset pass.
 ```yaml
 deploy:
   runs-on: ubuntu-latest
+  permissions:
+    contents: read
+    actions: read   # Detect changed files looks up the last successful deploy
   steps:
     - uses: actions/checkout@v5
       with:
@@ -116,10 +129,15 @@ deploy:
         cp dist/og-image.png public/og-image.png
 
     - name: Detect changed files
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
-        # push: diff the pushed range
+        # push: diff from the last successful push deploy (the runs API, highest
+        # run_number; `gh run list --branch` returns runs out of date order), so a
+        # push whose run failed or was dropped from the queue still gets synced.
+        # Falls back to github.event.before if there is none or it isn't an ancestor.
         # manual run with `targets`: synthesise public/<target>/manual lines
-        git diff --name-only ${{ github.event.before }} HEAD > changed_files.txt
+        git diff --name-only "$base" HEAD > changed_files.txt
 
     - name: Sync to R2
       run: node scripts/sync-to-r2.js --force --changed-files changed_files.txt

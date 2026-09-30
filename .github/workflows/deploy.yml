@@ -22,10 +22,23 @@ on:
         type: boolean
         default: false
 
+# One deploy at a time, in push order. A newer push waits for the running
+# deploy rather than cancelling it part-way through an R2 sync or `wrangler
+# deploy`, so an older build can never finish last and put the site back.
+# GitHub keeps only the newest waiting run; the R2 diff below starts from the
+# last successful deploy, so a push whose run was dropped still gets synced.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     name: Build & Deploy 🚀
+    permissions:
+      contents: read
+      # Detect Changed Files looks up the last successful deploy.
+      actions: read
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
@@ -102,13 +115,17 @@ jobs:
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
 
-      # Push: diff the pushed range. Manual run with `targets`: synthesise the
-      # list so the sync picks exactly those album/artist folders. Manual run
-      # without targets: nothing to target (repair mode below does its own thing).
+      # Push: diff from the last successful push deploy (not just the previous
+      # push), so changes whose run failed or was dropped from the concurrency
+      # queue are synced too; falls back to the previous push. Manual run with
+      # `targets`: synthesise the list so the sync picks exactly those
+      # album/artist folders. Manual run without targets: nothing to target
+      # (repair mode below does its own thing).
       - name: Detect Changed Files 🕵️‍♂️
         id: changed-files
         env:
           TARGETS: ${{ inputs.targets }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           if [ -n "$TARGETS" ]; then
             echo "🎯 Manual targets: $TARGETS"
@@ -118,8 +135,19 @@ jobs:
             echo "🛠️  Manual run without targets; no per-folder sync"
             : > changed_files.txt
           else
-            echo "🔎 Diffing ${{ github.event.before }}..${{ github.sha }}"
-            git diff --name-only ${{ github.event.before }} ${{ github.sha }} > changed_files.txt
+            base="${{ github.event.before }}"
+            # The runs API, not `gh run list --branch` (which returns runs out of date order).
+            last=$(gh api "repos/${{ github.repository }}/actions/workflows/deploy.yml/runs?branch=main&event=push&status=success&per_page=20" \
+              --jq '[.workflow_runs[]] | max_by(.run_number) | .head_sha // empty' 2>/dev/null || true)
+            if [ -n "$last" ] && git cat-file -e "$last^{commit}" 2>/dev/null \
+              && git merge-base --is-ancestor "$last" "${{ github.sha }}"; then
+              echo "✅ Last successful deploy: $last"
+              base="$last"
+            else
+              echo "⚠️  No usable last successful deploy; using the previous push"
+            fi
+            echo "🔎 Diffing $base..${{ github.sha }}"
+            git diff --name-only "$base" ${{ github.sha }} > changed_files.txt
           fi
           echo "📋 Changed files:"
           cat changed_files.txt
