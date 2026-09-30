@@ -22,9 +22,9 @@ import { appConfig } from '@/config/app.config';
 import type { Album as CollectionAlbum, AlbumMember, BoxsetContent, BoxsetLink } from '@/types/album';
 import { buildSpotifyTrackIndex, normaliseTrackTitle } from '@/lib/trackMatching';
 import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading, Vinyl, usePageFlood } from '@/components/player';
-import { discLooks, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
+import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
-import { buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
+import { boxMemberDiscs, buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
 
 interface Album {
   release_name: string;
@@ -312,10 +312,37 @@ export function AlbumDetailPage() {
   const { scene: scrobbleScene, onProgress: onScrobbleProgress } = useScrobbleScene(albumPath);
   const [boxSelected, setBoxSelected] = useState(0);
   const flood = floodFor(palette);
+  // A boxset member links to the album's ordinary Discogs release, which is usually black; its
+  // colour lives on the box. The box's detail JSON (cached) says which of its discs are this album's.
+  const parentBox = useMemo(
+    () => (album?.boxset?.uri_release ? collection.find(a => a.uri_release === album.boxset!.uri_release) ?? null : null),
+    [collection, album],
+  );
+  const [boxDetail, setBoxDetail] = useState<{ uri: string; data: DetailedAlbum } | null>(null);
+  useEffect(() => {
+    if (!parentBox?.json_detailed_release) return;
+    let alive = true;
+    loadDetailJson<DetailedAlbum>(parentBox.json_detailed_release)
+      .then(data => {
+        if (alive) setBoxDetail({ uri: parentBox.uri_release, data });
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [parentBox]);
+  const inheritedDiscs = useMemo(() => {
+    if (!album || !parentBox || boxDetail?.uri !== parentBox.uri_release) return [];
+    const map = boxMemberDiscs(boxDetail.data.tracklist ?? [], boxDetail.data.format_details, parentBox.boxset_contents ?? []);
+    return map.get(album.uri_release) ?? [];
+  }, [album, parentBox, boxDetail]);
+
   // The pressing's colour per disc: the hero fans them out, each tracklist side takes its LP's,
-  // and the logo and footer follow the first.
+  // and the logo and footer follow the first. The release's own colours win over the box's.
   const vinylColours = detailedAlbum?.vinyl_colours ?? album?.vinyl_colours ?? [];
-  const discs = pressingDiscs(detailedAlbum?.format_details, vinylColours);
+  const ownDiscs = pressingDiscs(detailedAlbum?.format_details, vinylColours);
+  const inherited = ownDiscs.length ? [] : inheritedDiscs;
+  const discs = ownDiscs.length ? ownDiscs : inherited;
   const looks = discLooks(discs);
   usePageFlood(
     album ? flood.flood : null,
@@ -793,6 +820,9 @@ export function AlbumDetailPage() {
   );
   const isBox = !!album.boxset_contents?.length;
   const boxDiscs = isBox ? buildBoxDiscs((tracks as BoxTrack[]) ?? [], album.boxset_contents ?? []) : [];
+  // Which of the box's own coloured discs each member album is.
+  const boxMembers =
+    isBox && detailedAlbum ? boxMemberDiscs(detailedAlbum.tracklist ?? [], detailedAlbum.format_details, album.boxset_contents ?? []) : undefined;
   const moreByArtist = collection
     .filter(a => a.uri_artist === album.uri_artist && a.uri_release !== album.uri_release && !a.boxset)
     .sort((a, b) => (originalYear(b) ?? 0) - (originalYear(a) ?? 0))
@@ -813,9 +843,12 @@ export function AlbumDetailPage() {
   const nowRow = scrobbleRows[Math.min(scrobbleScene.done, scrobbleRows.length - 1)];
   const discCount = Math.ceil(sideCount / 2);
 
+  // The Format line names each colour once; a box member lists the colours it has in the box.
+  const discColours = [...new Set(discs.filter((c): c is string => !!c))];
   const formatDetail = [
-    detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record',
-    vinylColours.length ? vinylColours.join(' & ') : null,
+    // A member linked to a CD release still has vinyl in the box.
+    (inherited.length ? 'Vinyl' : null) ?? detailedAlbum?.formats?.[0] ?? album.format_primary ?? 'Record',
+    discColours.length ? discColours.join(' & ') : null,
     sideCount > 2 ? `${discCount} discs` : null,
     sideCount > 1 ? `${sideCount} sides` : null,
   ].filter(Boolean).join(' · ');
@@ -983,6 +1016,7 @@ export function AlbumDetailPage() {
               selected={boxSelected}
               onSelect={setBoxSelected}
               colours={colourMap}
+              memberDiscs={boxMembers}
               boxFlood={flood}
               artist={album.release_artist}
             />
@@ -1127,7 +1161,15 @@ export function AlbumDetailPage() {
               </section>
             )}
 
-            {!isBox && detailedAlbum?.format_details && <Pressing formats={detailedAlbum.format_details} discColour={flood.flood} />}
+            {!isBox && inherited.length > 0 && parentBox ? (
+              <Pressing
+                formats={[]}
+                discColour={flood.flood}
+                fromBox={{ discs: inherited, name: parentBox.release_name, uri: parentBox.uri_release }}
+              />
+            ) : (
+              !isBox && detailedAlbum?.format_details && <Pressing formats={detailedAlbum.format_details} discColour={flood.flood} />
+            )}
 
             {swatches.length > 0 && (
               <section className="flex flex-col gap-3">
@@ -1257,9 +1299,25 @@ function formatDate(value: string): string {
  * own colour with what Discogs says about it (LP, 180 gram, gatefold…), other formats as plain
  * rows, and the edition tags (limited edition, remastered…) that apply to the whole release.
  */
-function Pressing({ formats, discColour }: { formats: FormatEntry[]; discColour: string }) {
-  const rows = formats.filter(f => f.name !== 'All Media');
-  const edition = [...new Set(formats.filter(f => f.name === 'All Media').flatMap(f => f.descriptions ?? []))];
+function Pressing({
+  formats,
+  discColour,
+  fromBox,
+}: {
+  formats: FormatEntry[];
+  discColour: string;
+  /** A boxset member showing the discs it has in the box instead of its own release's formats. */
+  fromBox?: { discs: Array<string | null>; name: string; uri: string };
+}) {
+  // A member's discs, runs of the same colour as one row ("2 discs").
+  const boxRows: FormatEntry[] = [];
+  for (const colour of fromBox?.discs ?? []) {
+    const last = boxRows[boxRows.length - 1];
+    if (last && last.colour === colour) last.qty = String(Number(last.qty) + 1);
+    else boxRows.push({ name: 'Vinyl', qty: '1', colour, text: colour, descriptions: [] });
+  }
+  const rows = fromBox ? boxRows : formats.filter(f => f.name !== 'All Media');
+  const edition = fromBox ? [] : [...new Set(formats.filter(f => f.name === 'All Media').flatMap(f => f.descriptions ?? []))];
   if (!rows.length && !edition.length) return null;
   return (
     <section className="flex flex-col gap-4">
@@ -1268,13 +1326,13 @@ function Pressing({ formats, discColour }: { formats: FormatEntry[]; discColour:
         {rows.map((f, i) => {
           const vinyl = f.name === 'Vinyl';
           const qty = Math.max(1, parseInt(f.qty ?? '1', 10) || 1);
-          const { title, extras } = vinyl ? pressingTitle(f.text, f.colour) : { title: f.name, extras: [] as string[] };
+          const { title, extras } = vinyl ? pressingTitle(f.text, f.colour, qty) : { title: f.name, extras: [] as string[] };
           const meta = [qty > 1 ? `${qty} discs` : null, ...(f.descriptions ?? []), ...extras].filter(Boolean).join(' · ');
           return (
             <li key={i} className="flex items-center gap-3.5">
               {vinyl && (
                 <div className="relative h-11 w-11 shrink-0">
-                  <Vinyl label={discColour} look={vinylLook(f.colour)} spin={false} className="inset-0" />
+                  <Vinyl label={discColour} look={vinylLook(entryDiscColours(f).find(Boolean) ?? null)} spin={false} className="inset-0" />
                 </div>
               )}
               <div className="flex min-w-0 flex-col gap-1">
@@ -1285,6 +1343,15 @@ function Pressing({ formats, discColour }: { formats: FormatEntry[]; discColour:
           );
         })}
       </ul>
+      {fromBox && (
+        <p className="t-mono m-0 text-[12px] leading-snug text-[color:var(--cream-dim)]">
+          From the{' '}
+          <Link to={fromBox.uri} className="underline underline-offset-4 hover:text-[color:var(--cream)]">
+            {fromBox.name}
+          </Link>{' '}
+          box set
+        </p>
+      )}
       {edition.length > 0 && (
         <div className="flex flex-wrap gap-2">
           {edition.map(tag => (

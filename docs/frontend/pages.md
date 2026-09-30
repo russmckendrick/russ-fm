@@ -241,7 +241,11 @@ colour, titled with the colour (or "Black") and a mono line of what Discogs
 says: disc count when more than one, the format descriptions (LP, Album,
 Reissue…) and the rest of the format text (180 Gram, Gatefold…). Other formats
 (CD, cassette) are plain rows, and the edition tags that apply to the whole
-release (Limited Edition, Remastered…) sit underneath as small outlined tags. "Sleeve
+release (Limited Edition, Remastered…) sit underneath as small outlined tags. On a
+boxset member with no colour of its own, the section instead lists the discs it has in the
+box, in the colours inherited from the box ([`boxMemberDiscs`](./utilities.md#inherited-vinyl-colours-boxmemberdiscstracklist-formats-contents)),
+with "From the <box> box set" linking to it; the hero, tracklist discs, Format line (which
+then says Vinyl) and the logo and footer records follow the same colours. "Sleeve
 colours" is a strip of the sleeve's main swatches (`useAlbumSwatches()`),
 each as wide as the share of the sleeve it covers, plus dots for the flood
 and secondary colour; it appears once `album-swatches.json` has loaded.

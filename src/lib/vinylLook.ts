@@ -372,7 +372,33 @@ export function discLook(colours: string[] | null | undefined, disc: number): Vi
 export interface FormatDetail {
   name: string;
   qty?: string;
+  descriptions?: string[];
+  text?: string | null;
   colour?: string | null;
+}
+
+/** The number of discs in one format entry (at least one). */
+export function entryQty(entry: Pick<FormatDetail, 'qty'>): number {
+  return Math.max(1, parseInt(entry.qty ?? '1', 10) || 1);
+}
+
+const DISC_PART = /^\s*Disc\s*\d+\s*:?\s*(.+?)\s*$/i;
+
+/**
+ * Per-disc colours written into one entry's text, "Disc 1 White, Disc 2 Black",
+ * when there is one part per disc; otherwise null. (The scrapper folds these into a
+ * single colour such as "Disc White", so the site splits them itself.)
+ */
+export function splitDiscText(text: string | null | undefined, qty: number): string[] | null {
+  if (!text || qty < 2) return null;
+  const parts = text.split(/[,;]/).map(part => DISC_PART.exec(part)?.[1]).filter((c): c is string => !!c);
+  return parts.length === qty ? parts : null;
+}
+
+/** The colour of each disc in one format entry: its per-disc colours when the text gives them, else its colour for every disc. */
+export function entryDiscColours(entry: FormatDetail): Array<string | null> {
+  const qty = entryQty(entry);
+  return splitDiscText(entry.text, qty) ?? Array.from({ length: qty }, () => entry.colour ?? null);
 }
 
 /**
@@ -384,9 +410,7 @@ export interface FormatDetail {
  */
 export function pressingDiscs(details: FormatDetail[] | null | undefined, colours: string[] | null | undefined): Array<string | null> {
   const vinyl = (details ?? []).filter(d => d.name === 'Vinyl');
-  const discs = vinyl.length
-    ? vinyl.flatMap(d => Array.from({ length: Math.max(1, parseInt(d.qty ?? '1', 10) || 1) }, () => d.colour ?? null))
-    : (colours ?? []);
+  const discs = vinyl.length ? vinyl.flatMap(entryDiscColours) : (colours ?? []);
   return discs.some(Boolean) ? discs : [];
 }
 
@@ -484,7 +508,16 @@ const KNOWN_NOTE = new RegExp(config.knownNotes, 'i');
  * text Discogs gave that is not a known note (so an unrecognised "Flame Vinyl" is
  * shown as written, not called black); otherwise "Black". `extras` is the rest.
  */
-export function pressingTitle(text: string | null | undefined, colour: string | null | undefined): { title: string; extras: string[] } {
+export function pressingTitle(
+  text: string | null | undefined,
+  colour: string | null | undefined,
+  qty = 1,
+): { title: string; extras: string[] } {
+  // "Disc 1 White, Disc 2 Black" reads "White / Black".
+  const perDisc = splitDiscText(text, qty);
+  if (perDisc) {
+    return { title: perDisc.join(' / '), extras: pressingExtras(text, null).filter(part => !DISC_PART.test(part)) };
+  }
   if (colour) return { title: colour, extras: pressingExtras(text, colour) };
   const parts = pressingExtras(text, null);
   const unknown = parts.filter(part => !KNOWN_NOTE.test(part));
