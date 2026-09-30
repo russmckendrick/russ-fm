@@ -17,7 +17,7 @@ This document covers the route-level page components in russ.fm.
 | `/albums/:page` | `Albums` title with the count in dim type → sort pills (incl. Colour) → format chips → search + Genre / Year pill selects → `RecordTile` grid, or the colour wall when `sort=colour` → pill pager. |
 | `/album/:slug` | `CoverHero` in the sleeve's flood with `HeroRecord` → About → Tracklist by side → Listen → Videos → artist bios → Last.fm / details sidebar → More by the artist → Similar albums. Box sets swap in the box hero and an "In this box" section. |
 | `/artist/:slug` | Flood panel (portrait, name, stats, bio, service pills, genre links) → Discography (record tiles, Recently added / By year toggle) → Similar artists. The flood blends top to bottom through the sleeve colours of the last three additions. |
-| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid → pill pager. |
+| `/artists/:page` | `Artists` title with count → search + sort pills → A–Z strip → `ArtistCard` grid with letter (A–Z) or month (Latest added) dividers, or a ranked list (Most records) → pill pager. |
 | `/search?q=…` | `Search` title with count → search field → All / Albums / Artists pills → `SearchResults` grid. |
 | `/genres` | `BrowseHeader` → optional "On the map" chip → Most collected ranked rows + A–Z index → D3 genre map, all coloured from sleeves. |
 | `/browse`, `/labels`, `/decades`, `/countries` | `BrowseHeader` → `FacetCard` colour cards → chips for the long tail. |
@@ -314,11 +314,25 @@ const description =
 
 **Route:** `/artists`, `/artists/:page`
 
-- `Artists` title with the count in dim type
+- `Artists` title with the count in dim type, and a mono line about the
+  whole collection under it: records, the most collected artist (linked) and
+  how many artists were first added this year
 - Pill search field and sort pills (A–Z, Most records, Latest added)
 - Scrollable A–Z strip (letters without artists are disabled)
-- `ArtistCard` grid; each ring takes the flood colour of the artist's
-  latest record from `useAlbumColorMap()`
+- Each sort has its own layout:
+  - **A–Z** and **Latest added**: an `ArtistCard` grid
+    (`grid-flow-row-dense`). Each ring takes the flood colour of the artist's
+    latest record from `useAlbumColorMap()`, and the sleeves of their three
+    most recently added records fan out from behind the photo on hover. Artists with 5+ records get a
+    double-size `feature` tile (two columns by two rows from `sm` up). A cream
+    divider card (`RunDivider`: label large, the run's artist count, a tab on
+    top) leads each run inline in the grid, as tall as the artist tiles: the
+    first letter in A–Z (digits and punctuation under `#`, accents dropped),
+    the month of the latest record in Latest added (`SEP` / `2026`)
+  - **Most records**: a ranked list (`RankedArtists`): rank, `ArtistPhoto`,
+    name, the artist's two most common genres, a bar for the record count
+    against the top artist in the current filter (in their latest sleeve's
+    colour) and the count. Two columns from `lg`, read down then across
 - Pill pager
 - "Various Artists" excluded; boxset members excluded
 

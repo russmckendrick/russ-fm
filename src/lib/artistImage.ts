@@ -174,3 +174,107 @@ export function focusPosition(info: ArtistImageInfo | null | undefined): string 
   const [x, y] = info.focus;
   return `${Math.round(x * 100)}% ${Math.round(Math.max(0, y - 0.25) * 100)}%`;
 }
+
+/**
+ * Where an artist photo sits in a round frame (ArtistCard), as percentages of
+ * the frame, from the photo's notes. The `medium` photo is the original
+ * centre-cropped to a square, so the crop is worked out on the original and
+ * then placed in that square; when the faces fall outside it, `full` asks for
+ * the hi-res original instead.
+ */
+export interface CircleCrop {
+  full: boolean;
+  width: number;
+  height: number;
+  left: number;
+  top: number;
+  /**
+   * Where a hover zoom grows from, in the <img> box (%): the middle of the
+   * faces when there are any, so the photo pushes in on them, else the
+   * crop's centre.
+   */
+  originX: number;
+  originY: number;
+  /** Faces were found: the hover can push in harder. */
+  faces: boolean;
+}
+
+/** Tightest crop: 1.6× into the 800px medium still fills a 2× card sharply. */
+const MAX_ZOOM = 1.6;
+/** How far the crop may run outside the centre square before the full photo is used, as a share of it. */
+const FULL_SLACK = 0.04;
+
+export function circleCrop(info: ArtistImageInfo): CircleCrop | null {
+  const w = info.width;
+  const h = info.height;
+  const side = Math.min(w, h);
+
+  // The square wanted, in original px: centre and side.
+  let cx: number;
+  let cy: number;
+  let s: number;
+  let ox: number | null = null;
+  let oy: number | null = null;
+  if (info.faces.length) {
+    const faces = info.faces.map(([x, y, fw, fh]) => ({
+      x: (x + fw / 2) * w,
+      y: (y + fh / 2) * h,
+      size: Math.max(fw * w, fh * h),
+    }));
+    const size = Math.max(...faces.map(f => f.size));
+    const x0 = Math.min(...faces.map(f => f.x));
+    const x1 = Math.max(...faces.map(f => f.x));
+    const y0 = Math.min(...faces.map(f => f.y));
+    const y1 = Math.max(...faces.map(f => f.y));
+    ox = (x0 + x1) / 2;
+    oy = (y0 + y1) / 2;
+    // Faces a little above the middle, leaving room for shoulders.
+    cx = (x0 + x1) / 2;
+    cy = (y0 + y1) / 2 + size * 0.3;
+    // Every face (and its hair) inside the circle, and never tighter than head and shoulders.
+    const reach = Math.max(...faces.map(f => Math.hypot(f.x - cx, f.y - cy) + f.size * 0.8));
+    s = Math.max(reach * 2.2, size * 3.2);
+  } else if (info.people.length) {
+    const x0 = Math.min(...info.people.map(p => p[0])) * w;
+    const x1 = Math.max(...info.people.map(p => p[0] + p[2])) * w;
+    const y0 = Math.min(...info.people.map(p => p[1])) * h;
+    const y1 = Math.max(...info.people.map(p => p[1] + p[3])) * h;
+    s = Math.max(x1 - x0, y1 - y0) * 1.05;
+    cx = (x0 + x1) / 2;
+    // Tall full-length figures keep their heads.
+    cy = y0 + Math.min(y1 - y0, s) / 2;
+  } else if (info.focus) {
+    cx = info.focus[0] * w;
+    cy = info.focus[1] * h;
+    s = side;
+  } else {
+    return null;
+  }
+  s = Math.min(side, Math.max(s, side / MAX_ZOOM));
+
+  const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
+  // The centre square the medium photo was cut to.
+  const mx = (w - side) / 2;
+  const my = (h - side) / 2;
+  // The crop kept inside the whole photo, then inside the centre square.
+  const fx = clamp(cx - s / 2, 0, w - s);
+  const fy = clamp(cy - s / 2, 0, h - s);
+  const sx = clamp(fx, mx, mx + side - s);
+  const sy = clamp(fy, my, my + side - s);
+  const full = Math.max(Math.abs(fx - sx), Math.abs(fy - sy)) > side * FULL_SLACK;
+
+  // The region the <img> shows: the whole photo, or the medium's square.
+  const [rx, ry, rw, rh] = full ? [0, 0, w, h] : [mx, my, side, side];
+  const [x, y] = full ? [fx, fy] : [sx, sy];
+  const pct = (v: number) => Math.round(v * 10000) / 100;
+  return {
+    full,
+    width: pct(rw / s),
+    height: pct(rh / s),
+    left: pct(-(x - rx) / s),
+    top: pct(-(y - ry) / s),
+    originX: pct(((ox ?? x + s / 2) - rx) / rw),
+    originY: pct(((oy ?? y + s / 2) - ry) / rh),
+    faces: ox != null,
+  };
+}

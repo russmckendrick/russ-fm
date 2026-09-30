@@ -333,6 +333,13 @@ for the shape.
 - `edgeGradient(edge, direction, start?, length?)`: an edge's colour profile as a
   CSS gradient, for carrying the photo on past that edge.
 - `focusPosition(info)`: `object-position` for the phone crop, centred on the faces.
+- `circleCrop(info)`: where the photo sits in `ArtistCard`'s round frame, as
+  percentages of the frame (`width`, `height`, `left`, `top`), plus the hover
+  zoom origin (the middle of the faces). Worked out on the original photo and
+  placed in the centred square `medium` is cut to (both the dev server and
+  `imageProcessor` crop `cover`/`center` to 800×800); `full: true` when the
+  faces fall outside that square, so the card loads `hi-res` instead. Falls
+  back to people boxes, then the focus point; `null` without any of them.
 
 ## Sleeve Colours (`src/lib/sleeveColour.ts`)
 

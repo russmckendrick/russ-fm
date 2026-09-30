@@ -1,12 +1,13 @@
-import { useState, useEffect, useCallback, type ReactNode } from 'react';
+import { Fragment, useState, useEffect, useCallback, type CSSProperties, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Search, X } from 'lucide-react';
 import { Link, useParams, useNavigate, useSearchParams } from 'react-router-dom';
-import { ArtistCard } from '@/components/ArtistCard';
+import { ArtistCard, ArtistPhoto } from '@/components/ArtistCard';
 import { PageContainer } from '@/components/layout';
 import { FloodBand, useRecordsFlood } from '@/components/player';
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { cn } from '@/lib/utils';
+import { floodFor } from '@/lib/sleeveColour';
 import { appConfig } from '@/config/app.config';
 import { getArtistImageFromData } from '@/lib/image-utils';
 import { excludeBoxsetMembers } from '@/lib/boxsets';
@@ -23,6 +24,8 @@ interface Artist {
   latestAlbum: string;
   /** uri_release of the most recently added record; its sleeve colours the card. */
   latestRelease: string;
+  /** date_added of the first record filed under them. */
+  firstAdded: string;
   biography?: string;
 }
 
@@ -31,6 +34,45 @@ const SORT_OPTIONS: Array<{ value: string; label: string }> = [
   { value: 'albums', label: 'Most records' },
   { value: 'latest', label: 'Latest added' },
 ];
+
+/** Records an artist needs for a double-size tile in the grid. */
+const FEATURE_MIN_RECORDS = 5;
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+/** The A–Z bucket for a name: its first letter, accents dropped, or "#" for digits and punctuation. */
+function letterOf(name: string): string {
+  const first = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').charAt(0).toUpperCase();
+  return /[A-Z]/.test(first) ? first : '#';
+}
+
+/**
+ * The run a card is filed under in the grid, each led by a divider card: the
+ * first letter in A–Z, the month of their latest record in Latest added.
+ */
+function runOf(artist: Pick<Artist, 'name' | 'latestAlbum'>, sortBy: string): { key: string; label: string; year?: string } | null {
+  if (sortBy === 'name') {
+    const letter = letterOf(artist.name);
+    return { key: letter, label: letter };
+  }
+  if (sortBy === 'latest') {
+    const [year, month] = artist.latestAlbum.split('-');
+    return { key: `${year}-${month}`, label: MONTHS[Number(month) - 1] ?? month, year };
+  }
+  return null;
+}
+
+/** An artist's most recently added records, latest first. */
+function latestRecords(artist: Pick<Artist, 'albums'>, n: number): Album[] {
+  return [...artist.albums].sort((a, b) => b.date_added.localeCompare(a.date_added)).slice(0, n);
+}
+
+/** An artist's most common genres across their records. */
+function topGenres(artist: Pick<Artist, 'albums'>, n: number): string[] {
+  const counts = new Map<string, number>();
+  artist.albums.forEach((album) => album.genre_names.forEach((g) => counts.set(g, (counts.get(g) ?? 0) + 1)));
+  return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, n).map(([g]) => g);
+}
 
 export function ArtistsPage() {
   const { page } = useParams<{ page?: string }>();
@@ -141,6 +183,7 @@ export function ArtistsPage() {
               image: getArtistImageFromData(artistInfo.uri_artist, 'medium'),
               latestAlbum: album.date_added,
               latestRelease: album.uri_release,
+              firstAdded: album.date_added,
               biography: artistInfo.biography || undefined
             });
             normalizedToOriginal.set(normalizedName, artistName);
@@ -173,6 +216,8 @@ export function ArtistsPage() {
             }
           });
 
+          if (album.date_added < artist.firstAdded) artist.firstAdded = album.date_added;
+
           // Update latest album if this one is newer
           if (album.date_added > artist.latestAlbum) {
             artist.latestAlbum = album.date_added;
@@ -201,6 +246,7 @@ export function ArtistsPage() {
             image: getArtistImageFromData(album.uri_artist, 'medium'),
             latestAlbum: album.date_added,
             latestRelease: album.uri_release,
+            firstAdded: album.date_added,
             biography: undefined
           });
           normalizedToOriginal.set(normalizedName, artistName);
@@ -227,6 +273,8 @@ export function ArtistsPage() {
             artist.genres.push(genre);
           }
         });
+
+        if (album.date_added < artist.firstAdded) artist.firstAdded = album.date_added;
 
         // Update latest album if this one is newer
         if (album.date_added > artist.latestAlbum) {
@@ -379,6 +427,20 @@ export function ArtistsPage() {
     return pages;
   };
 
+  // A–Z and Latest added are a grid of cards with a divider card inline
+  // wherever a new letter or month starts; Most records is a ranked list.
+  const runCounts = new Map<string, number>();
+  filteredArtists.forEach((a) => {
+    const run = runOf(a, sortBy);
+    if (run) runCounts.set(run.key, (runCounts.get(run.key) ?? 0) + 1);
+  });
+  const topCount = filteredArtists[0]?.albumCount ?? 1;
+
+  // The header's line about the collection as a whole.
+  const thisYear = String(new Date().getFullYear());
+  const mostCollected = artists.reduce<Artist | null>((top, a) => (!top || a.albumCount > top.albumCount ? a : top), null);
+  const newThisYear = artists.filter((a) => a.firstAdded.startsWith(thisYear)).length;
+
   const availableLetters = getAvailableLetters();
   const hasFilters = !!searchTerm || selectedLetter !== 'all';
   // Artists are derived in effects after the collection lands; keep the
@@ -407,6 +469,21 @@ export function ArtistsPage() {
             </span>
           )}
         </header>
+        {!pending && mostCollected && (
+          <p className="t-mono m-0 mt-5 text-[12px] uppercase leading-relaxed text-[color:var(--cream-dim)] md:text-[13px]">
+            <span className="whitespace-nowrap">{collection.length.toLocaleString('en-GB')} records ·</span>{' '}
+            <span className="whitespace-nowrap">
+              Most collected{' '}
+              <Link to={mostCollected.uri} className="text-[color:var(--cream)] underline decoration-[color:var(--cream-rule)] underline-offset-4 hover:decoration-current">
+                {mostCollected.name}
+              </Link>
+              , {mostCollected.albumCount.toLocaleString('en-GB')} ·
+            </span>{' '}
+            <span className="whitespace-nowrap">
+              {newThisYear.toLocaleString('en-GB')} new in {thisYear}
+            </span>
+          </p>
+        )}
       </FloodBand>
 
       <PageContainer className="text-[color:var(--cream)]">
@@ -531,16 +608,29 @@ export function ArtistsPage() {
             )}
           </div>
         ) : (
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
-            {paginatedArtists.map((artist, i) => (
-              <ArtistCard
-                key={artist.uri}
-                artist={artist}
-                index={startIndex + i + 1}
-                palette={colorMap?.[artist.latestRelease] ?? null}
-              />
-            ))}
-          </div>
+          sortBy === 'albums' ? (
+            <RankedArtists artists={paginatedArtists} firstRank={startIndex + 1} topCount={topCount} colorMap={colorMap} />
+          ) : (
+            <div className="grid grid-flow-row-dense grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:grid-cols-5 xl:grid-cols-6">
+              {paginatedArtists.map((artist, i) => {
+                const feature = artist.albumCount >= FEATURE_MIN_RECORDS;
+                const run = runOf(artist, sortBy);
+                const newRun = run && (i === 0 || runOf(paginatedArtists[i - 1], sortBy)?.key !== run.key);
+                return (
+                  <Fragment key={artist.uri}>
+                    {newRun && <RunDivider label={run.label} year={run.year} count={runCounts.get(run.key) ?? 0} />}
+                    <ArtistCard
+                      artist={artist}
+                      feature={feature}
+                      records={latestRecords(artist, 3)}
+                      palette={colorMap?.[artist.latestRelease] ?? null}
+                      className={feature ? 'sm:col-span-2 sm:row-span-2' : undefined}
+                    />
+                  </Fragment>
+                );
+              })}
+            </div>
+          )
         )}
 
         {/* Pagination ------------------------------------------------------ */}
@@ -585,6 +675,92 @@ export function ArtistsPage() {
         )}
       </PageContainer>
     </>
+  );
+}
+
+/**
+ * A rack divider leading each run in the grid (a letter in A–Z, a month in
+ * Latest added): a card as wide as an artist photo and as tall as the whole
+ * tile, with a tab on top, the label large and the run's artist count below.
+ */
+function RunDivider({ label, year, count }: { label: string; year?: string; count: number }) {
+  const artistsLabel = `${count.toLocaleString('en-GB')} ${count === 1 ? 'artist' : 'artists'}`;
+  return (
+    <div className="flex min-w-0 flex-col p-2 pt-5">
+      <div className="relative min-h-full flex-1 [container-type:inline-size]">
+        <span aria-hidden className="absolute -top-3 left-[12%] h-6 w-2/5 rounded-t-xl bg-[var(--cream)]" />
+        <div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-[var(--cream)] p-[9cqw] text-[color:var(--ground)]">
+          <h2 className={cn('t-disp m-0 leading-[0.8]', label.length > 1 ? 'text-[36cqw]' : 'text-[78cqw]')}>
+            {label}
+            {year && <span className="mt-[4cqw] block text-[20cqw] opacity-60">{year}</span>}
+          </h2>
+          <span className="t-mono text-[11px] font-bold uppercase md:text-[12px]">{artistsLabel}</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/**
+ * Most records as a chart: rank, photo, name and main genres, and a bar for
+ * the record count against the most collected artist, in the colour of their
+ * latest sleeve. Two columns from lg, read down then across.
+ */
+function RankedArtists({
+  artists,
+  firstRank,
+  topCount,
+  colorMap,
+}: {
+  artists: Artist[];
+  firstRank: number;
+  topCount: number;
+  colorMap: ReturnType<typeof useAlbumColorMap>;
+}) {
+  return (
+    <ol
+      className="m-0 grid list-none grid-cols-1 gap-x-10 gap-y-2 p-0 lg:grid-flow-col lg:grid-cols-2"
+      style={{ gridTemplateRows: `repeat(${Math.ceil(artists.length / 2)}, auto)` }}
+    >
+      {artists.map((artist, i) => {
+        const { flood } = floodFor(colorMap?.[artist.latestRelease] ?? null);
+        const count = artist.albumCount;
+        return (
+          <li key={artist.uri} className="min-w-0">
+            <Link
+              to={artist.uri}
+              className="group grid grid-cols-[2.25rem_3.5rem_minmax(0,1fr)_auto] items-center gap-x-4 rounded-2xl px-2 py-2.5 text-[color:var(--cream)] outline-none transition-colors hover:bg-[var(--ground-2)] focus-visible:ring-2 focus-visible:ring-[color:var(--cream)] md:grid-cols-[2.75rem_4rem_minmax(0,1.5fr)_minmax(0,1fr)_auto]"
+              style={{ '--accent': flood } as CSSProperties}
+            >
+              <span className="t-mono text-right text-[13px] font-bold text-[color:var(--cream-dim)]">
+                {(firstRank + i).toLocaleString('en-GB')}
+              </span>
+              <ArtistPhoto
+                uri={artist.uri}
+                image={artist.image}
+                size={128}
+                className="aspect-square w-full shadow-[0_0_0_2px_var(--ground),0_0_0_4px_var(--accent)]"
+              />
+              <span className="flex min-w-0 flex-col gap-1">
+                <span className="t-dispn truncate text-[16px] leading-tight md:text-[18px]">{artist.name}</span>
+                <span className="t-mono truncate text-[11px] uppercase text-[color:var(--cream-dim)]">
+                  {topGenres(artist, 2).join(' · ')}
+                </span>
+              </span>
+              <span aria-hidden className="col-span-3 col-start-2 row-start-2 mt-2 h-2 overflow-hidden rounded-full bg-[var(--ground-3)] md:col-span-1 md:col-start-auto md:row-start-auto md:mt-0">
+                <span
+                  className="block h-full rounded-full bg-[var(--accent)]"
+                  style={{ width: `${Math.max(2, (count / topCount) * 100)}%` }}
+                />
+              </span>
+              <span className="t-disp col-start-4 row-start-1 text-right text-[22px] md:col-start-5 md:text-[26px]" aria-label={`${count} records`}>
+                {count.toLocaleString('en-GB')}
+              </span>
+            </Link>
+          </li>
+        );
+      })}
+    </ol>
   );
 }
 

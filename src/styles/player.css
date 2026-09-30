@@ -361,6 +361,41 @@ body {
   transform: translateX(-6%);
 }
 
+/* Artist card (ArtistCard with `records`): up to three sleeves hidden behind
+   the round photo (small enough that their corners stay inside the circle)
+   fan out above it on hover, pivoting near their foot like a hand of cards. */
+.artist-fan-sleeves {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.artist-fan-sleeves .sleeve {
+  position: absolute;
+  top: 21%;
+  left: 21%;
+  width: 58%;
+  height: 58%;
+  transform-origin: 50% 100%;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.artist-fan .artist-fan-photo {
+  position: relative;
+  z-index: 1;
+}
+
+.group:hover .artist-fan-sleeves .sleeve,
+.group:focus-visible .artist-fan-sleeves .sleeve {
+  transform: translate(var(--fan-x, 0), var(--fan-y, -96%)) rotate(var(--fan-r, 0deg)) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-fan-sleeves .sleeve {
+    transition: none;
+  }
+}
+
 /* --- Artist portrait ------------------------------------------------------ */
 /* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
    page edge stay crisp.
