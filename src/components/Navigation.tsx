@@ -63,6 +63,9 @@ export function Navigation() {
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [isCompact, setIsCompact] = useState(false);
+  // Below 1536px the inline search field doesn't fit beside the full nav (iPad
+  // landscape is 1366px), so search is the icon button + modal there too.
+  const [searchIsIcon, setSearchIsIcon] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [scrolled, setScrolled] = useState(false);
   const [browseOpen, setBrowseOpen] = useState(false);
@@ -71,12 +74,12 @@ export function Navigation() {
   useEffect(() => {
     const check = () => {
       const compact = window.innerWidth < 1280;
+      const iconSearch = window.innerWidth < 1536;
       setIsCompact(compact);
-      if (compact) setSearchOverlayOpen(false);
-      else {
-        setMenuOpen(false);
-        setMobileSearchOpen(false);
-      }
+      setSearchIsIcon(iconSearch);
+      if (!compact) setMenuOpen(false);
+      if (iconSearch) setSearchOverlayOpen(false);
+      else setMobileSearchOpen(false);
     };
     check();
     window.addEventListener("resize", check);
@@ -112,12 +115,12 @@ export function Navigation() {
       if (target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
       if (target?.isContentEditable) return;
       e.preventDefault();
-      if (isCompact) setMobileSearchOpen(true);
+      if (searchIsIcon) setMobileSearchOpen(true);
       else searchInputRef.current?.focus();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [isCompact]);
+  }, [searchIsIcon]);
 
   const isActive = (item: NavItem) => {
     if (item.activePrefix) {
@@ -200,8 +203,8 @@ export function Navigation() {
           </nav>
 
           <div className="ml-auto flex items-center gap-2 md:gap-3">
-            <div className="relative hidden xl:block">
-              <label className="flex h-11 w-[240px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100 2xl:w-[300px]">
+            <div className="relative hidden min-[1536px]:block">
+              <label className="flex h-11 w-[260px] items-center gap-2.5 rounded-full border-2 border-current px-4 opacity-90 focus-within:opacity-100">
                 <Search className="h-[18px] w-[18px] shrink-0" aria-hidden />
                 <input
                   ref={searchInputRef}
@@ -243,16 +246,16 @@ export function Navigation() {
               />
             </div>
 
-            <Link {...shuffleLink(location.pathname)} className="pill pill-sm hidden md:inline-flex" aria-label="Shuffle — a random record">
+            <Link {...shuffleLink(location.pathname)} className="pill pill-sm hidden md:inline-flex xl:max-[1535px]:px-3.5" aria-label="Shuffle — a random record">
               <Shuffle className="h-4 w-4" aria-hidden />
-              Shuffle
+              <span className="xl:max-[1535px]:hidden">Shuffle</span>
             </Link>
 
             <button
               type="button"
               aria-label="Search"
               onClick={() => setMobileSearchOpen(true)}
-              className="icon-btn border-2 border-current xl:hidden"
+              className="icon-btn border-2 border-current min-[1536px]:hidden"
             >
               <Search className="h-5 w-5" />
             </button>

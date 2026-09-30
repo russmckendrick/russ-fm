@@ -113,7 +113,7 @@ export function MobileSearchModal({
   return (
     <div
       className={cn(
-        "fixed inset-0 z-50 xl:hidden",
+        "fixed inset-0 z-50 min-[1536px]:hidden",
         "transition-[visibility] duration-300",
         isOpen ? "visible" : "invisible"
       )}

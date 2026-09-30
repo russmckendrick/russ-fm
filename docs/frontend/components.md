@@ -220,7 +220,10 @@ Sticky header that shares the page's flood colour.
   and Wrapped as pills. The current page is a solid pill: ink on the flood
   at the top, the flood itself once scrolled, so the colour follows you
   down. Then a pill search field (`/` focuses it) with `SearchOverlay`, a
-  Shuffle pill and the Last.fm `UserProfileMenu`. On the Shuffle page the
+  Shuffle pill and the Last.fm `UserProfileMenu`. Between `xl` and 1536px
+  (iPad landscape is 1366px) the links plus the search field don't fit, so
+  search stays the icon button + `MobileSearchModal` (`/` opens it) and the
+  Shuffle pill drops to its icon. On the Shuffle page the
   Shuffle pill (and the mobile menu's Shuffle item) runs another shuffle in
   place instead of reloading the page (`shuffleLink()`, `src/lib/shuffleLink.ts`).
 - Browse opens `BrowseMenuCards` (`src/components/browse/BrowseMenu.tsx`):
