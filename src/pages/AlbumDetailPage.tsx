@@ -1027,7 +1027,10 @@ export function AlbumDetailPage() {
           </div>
         )}
 
-        <div className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-20">
+        {/* Sidebar only from xl: at lg (iPad portrait) a 340px column squeezes the
+            main copy to half the width. Below xl the aside sits under the main
+            column and flows into two balanced columns from md. */}
+        <div className="grid gap-16 xl:grid-cols-[minmax(0,1fr)_340px] xl:gap-20">
           <div className="flex min-w-0 flex-col gap-20">
             {description && (
               <section className="flex flex-col gap-6">
@@ -1104,7 +1107,7 @@ export function AlbumDetailPage() {
             })}
           </div>
 
-          <aside className="flex flex-col gap-10 lg:sticky lg:top-28 lg:self-start">
+          <aside className="flex flex-col gap-10 md:block md:columns-2 md:gap-12 md:[&>*]:mb-10 md:[&>*]:break-inside-avoid xl:flex xl:columns-auto xl:[&>*]:mb-0 xl:sticky xl:top-28 xl:self-start">
             {(lastfm?.listeners || lastfm?.playcount) && (
               <section className="flood-surface flex flex-col gap-4 rounded-[18px] p-6" style={{ background: flood.flood, color: flood.ink }}>
                 <span className="t-kicker inline-flex items-center gap-2">
@@ -1113,13 +1116,13 @@ export function AlbumDetailPage() {
                 <div className="grid grid-cols-2 gap-3">
                   {lastfm?.playcount !== undefined && (
                     <div className="flex flex-col gap-1">
-                      <span className="t-cond text-[56px]">{Number(lastfm.playcount).toLocaleString('en-GB')}</span>
+                      <span className="t-cond text-[56px] xl:text-[44px]">{Number(lastfm.playcount).toLocaleString('en-GB')}</span>
                       <span className="t-kicker text-[11px]">Scrobbles</span>
                     </div>
                   )}
                   {lastfm?.listeners !== undefined && (
                     <div className="flex flex-col gap-1">
-                      <span className="t-cond text-[56px]">{Number(lastfm.listeners).toLocaleString('en-GB')}</span>
+                      <span className="t-cond text-[56px] xl:text-[44px]">{Number(lastfm.listeners).toLocaleString('en-GB')}</span>
                       <span className="t-kicker text-[11px]">Listeners</span>
                     </div>
                   )}
