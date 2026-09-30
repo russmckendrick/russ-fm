@@ -18,6 +18,7 @@ import { WrappedYTD } from './pages/wrapped/WrappedYTD';
 import { BrowseIndexPage } from './pages/browse/BrowseIndexPage';
 import { FacetListPage } from './pages/browse/FacetListPage';
 import { FacetDetailPage } from './pages/browse/FacetDetailPage';
+import { ColouredVinylPage } from './pages/browse/ColouredVinylPage';
 
 /**
  * New pages start at the top. Back/forward (POP) is left to the browser so it
@@ -87,6 +88,7 @@ function App() {
           <Route path="/countries" element={<FacetListPage facetKey="country" />} />
           <Route path="/country/:slug" element={<FacetDetailPage facetKey="country" />} />
           <Route path="/genre/:slug" element={<FacetDetailPage facetKey="genre" />} />
+          <Route path="/coloured-vinyl" element={<ColouredVinylPage />} />
           <Route path="/shuffle" element={<RandomPage />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchResultsPage />} />

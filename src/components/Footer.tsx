@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { appConfig } from "@/config/app.config";
 import { PillLink, Vinyl } from "@/components/player";
 import { useFloodValue } from "@/components/player/flood-context";
+import { vinylLook } from "@/lib/vinylLook";
 import { useAlbumColorMap } from "@/hooks/useAlbumColors";
 import { excludeBoxsetMembers } from "@/lib/boxsets";
 import { useCollection } from "@/lib/collection";
@@ -26,6 +27,7 @@ const COLUMNS = [
       { label: "Labels", href: "/labels" },
       { label: "Decades", href: "/decades" },
       { label: "Countries", href: "/countries" },
+      { label: "Coloured vinyl", href: "/coloured-vinyl" },
     ],
   },
   {
@@ -44,7 +46,8 @@ export function Footer() {
   const { footer } = appConfig;
   const year = new Date().getFullYear();
   const { pathname } = useLocation();
-  const { flood, cover } = useFloodValue();
+  const { flood, cover, vinyl } = useFloodValue();
+  const look = useMemo(() => vinylLook(vinyl), [vinyl]);
   const { albums: raw } = useCollection();
   const colourMap = useAlbumColorMap();
 
@@ -78,7 +81,7 @@ export function Footer() {
         className="spin-lazy pointer-events-none absolute -bottom-[160px] -right-[120px] block h-[340px] w-[340px] md:-bottom-[260px] md:-right-[150px] md:h-[560px] md:w-[560px] lg:-bottom-[330px] lg:-right-[170px] lg:h-[760px] lg:w-[760px]"
         aria-hidden
       >
-        <Vinyl label={discLabel} cover={cover} spin={false} className="vinyl-lit inset-0">
+        <Vinyl label={discLabel} cover={cover} look={look} spin={false} className="vinyl-lit inset-0">
           {!cover && (
             <span
               className="t-disp -mt-[46%] text-[11px] tracking-[-0.04em] md:text-[18px] lg:text-[24px]"

@@ -5,9 +5,11 @@ import { PresentationContainer, PresentationSection } from './components/present
 import { useWrappedNavigation } from './hooks/useWrappedNavigation';
 import { FitTitle, HeroRecord, RecordTile, Sleeve, SpinningMark, Vinyl } from '@/components/player';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+import { useVinylColours } from '@/hooks/useVinylColours';
 import { getAlbumImageFromData, getArtistAvatarFromData, getArtistImageFromData, handleImageError } from '@/lib/image-utils';
 import { slugify } from '@/lib/browseFacets';
 import { GROUND, CREAM, INK, inkOn, subInk, type Flood } from '@/lib/sleeveColour';
+import { discLook, discLooks } from '@/lib/vinylLook';
 import { cn } from '@/lib/utils';
 import type { WrappedData, WrappedRelease } from '@/types/wrapped';
 import {
@@ -67,6 +69,7 @@ const reducedMotion = () =>
  */
 export function WrappedPresentation({ data, availableYears, previousYear, nextYear }: WrappedPresentationProps) {
   const colours = useAlbumColorMap();
+  const vinylOf = useVinylColours();
 
   const releases = useMemo(
     () => data.releases.map(r => r.release).sort((a, b) => new Date(a.date_added).getTime() - new Date(b.date_added).getTime()),
@@ -159,7 +162,7 @@ export function WrappedPresentation({ data, availableYears, previousYear, nextYe
     <div id="wrapped-presentation" className="fixed inset-0 z-50 overflow-hidden bg-[var(--ground)] text-[color:var(--cream)]">
       {/* The site logo, as in the nav: a spinning record carrying the chapter's lead sleeve. */}
       <Link to="/" className="fixed left-3 top-3 z-[70] md:left-5 md:top-4" aria-label="russ.fm — home">
-        <SpinningMark size={48} label={leadLabel} cover={leadCover} />
+        <SpinningMark size={48} label={leadLabel} cover={leadCover} look={discLook(vinylOf(lead ? releaseUri(lead.slug) : null), 0)} />
       </Link>
 
       <Transport
@@ -501,6 +504,7 @@ function Bookend({
   active: boolean;
   side: 'first' | 'last';
 }) {
+  const vinylOf = useVinylColours();
   const uri = releaseUri(release.slug);
   const artist = release.artists[0];
   const d = side === 'first' ? 0 : 160;
@@ -524,6 +528,7 @@ function Bookend({
           src={getAlbumImageFromData(uri, 'hi-res')}
           alt=""
           labelColour={flood.ground}
+          looks={discLooks(vinylOf(uri))}
           discOut={active ? 18 : 0}
           spinning={active}
           eager={false}
@@ -654,6 +659,7 @@ function Shelves({
   flood: Flood;
   colours: ColourMap;
 }) {
+  const vinylOf = useVinylColours();
   const current = activeMonth && activeMonth.releases.length > 0 ? activeMonth : timeline.find(m => m.releases.length > 0);
   if (!current) return <EmptyChapter title="Shelves" detail="No records this year." />;
   // RecordTile paints its text in cream-dim; on a flood we override with the flood's ink.
@@ -702,7 +708,7 @@ function Shelves({
               className="wr-shelf w-[42vw] max-w-[190px] shrink-0 md:w-[min(20vw,40dvh)] md:max-w-[300px]"
               style={{ ...tileStyle, '--d': `${Math.min(index, 8) * 50}ms` } as CSSProperties}
             >
-              <RecordTile album={tileAlbum(release)} palette={paletteForRelease(colours, release)} meta={formatDay(release.date_added, false)} />
+              <RecordTile album={tileAlbum(release, vinylOf(releaseUri(release.slug)))} palette={paletteForRelease(colours, release)} meta={formatDay(release.date_added, false)} />
             </div>
           ))}
         </div>
@@ -875,12 +881,13 @@ function Years({
   nextYear?: number;
   active: boolean;
 }) {
+  const vinylOf = useVinylColours();
   const cover = last ? getAlbumImageFromData(releaseUri(last.slug), 'hi-res') : null;
   return (
     <Frame>
       <div className="grid w-full min-w-0 grid-cols-1 content-center items-center gap-8 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-14">
         <div className="wr-rise relative mx-auto aspect-square w-[min(58vw,32dvh)] md:w-[min(100%,62dvh)]">
-          <Vinyl label={flood.ground} cover={cover} spin={active} className="inset-0 h-full w-full" />
+          <Vinyl label={flood.ground} cover={cover} look={discLook(vinylOf(last ? releaseUri(last.slug) : null), 0)} spin={active} className="inset-0 h-full w-full" />
         </div>
         <div className="min-w-0 [container-type:inline-size]">
           <div className="wr-rise t-kicker" style={{ color: flood.sub, '--d': '100ms' } as CSSProperties}>

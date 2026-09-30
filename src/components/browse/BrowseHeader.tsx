@@ -7,13 +7,14 @@ import { cn } from '@/lib/utils';
 import type { Album } from '@/types/album';
 import { heroTitleStyle } from './facetSleeves';
 
-export type BrowseSection = 'genres' | 'labels' | 'decades' | 'countries';
+export type BrowseSection = 'genres' | 'labels' | 'decades' | 'countries' | 'coloured';
 
 const SECTIONS: Array<{ key: BrowseSection; label: string; to: string }> = [
   { key: 'genres', label: 'Genres', to: '/genres' },
   { key: 'labels', label: 'Labels', to: '/labels' },
   { key: 'decades', label: 'Decades', to: '/decades' },
   { key: 'countries', label: 'Countries', to: '/countries' },
+  { key: 'coloured', label: 'Coloured vinyl', to: '/coloured-vinyl' },
 ];
 
 interface BrowseHeaderProps {

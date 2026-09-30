@@ -124,11 +124,13 @@ body {
 
 /* --- Vinyl ---------------------------------------------------------------- */
 
+/* A coloured pressing (Vinyl's `look`) sets --vinyl-body / -pattern / -groove / -rim;
+   without one the disc is plain black. */
 .vinyl {
   position: absolute;
   border-radius: 50%;
-  background: #0b0b0b;
-  box-shadow: 0 22px 40px -10px rgba(0, 0, 0, 0.6), inset 0 0 0 1px #000;
+  background: var(--vinyl-body, #0b0b0b);
+  box-shadow: 0 22px 40px -10px rgba(0, 0, 0, 0.6), inset 0 0 0 1px var(--vinyl-rim, #000);
 }
 
 .vinyl::after {
@@ -147,15 +149,18 @@ body {
   );
 }
 
+/* The pattern layers (marble, splatter, split…) share this layer, so they turn with the grooves. */
 .vinyl-grooves {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: repeating-radial-gradient(
-    circle at 50% 50%,
-    rgba(255, 255, 255, 0.045) 0 1px,
-    transparent 1px 3px
-  );
+  background:
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      var(--vinyl-groove, rgba(255, 255, 255, 0.045)) 0 1px,
+      transparent 1px 3px
+    ),
+    var(--vinyl-pattern, none);
 }
 
 .vinyl-label {
@@ -183,6 +188,15 @@ body {
   border-radius: 50%;
   background: #0b0b0b;
   z-index: 1;
+}
+
+/* A bigger label than a real record's, so a sleeve printed on it reads at wall
+   size (the Coloured vinyl page) while the pressing's colour still shows round it. */
+.vinyl-wide .vinyl-label {
+  left: 26%;
+  top: 26%;
+  width: 48%;
+  height: 48%;
 }
 
 /* A sleeve printed on the centre label (the logo and the footer record).
@@ -213,13 +227,16 @@ body {
    a lighter lip at the edge, a hairline rim, stronger fixed highlights that
    stay put while the disc turns, and visible grooves. */
 .vinyl-lit {
-  background: radial-gradient(
-    circle at 50% 50%,
-    #121212 0 31%,
-    #0c0c0c 32% 92.5%,
-    #2b2926 95%,
-    #171615 97.5%,
-    #0c0c0c 100%
+  background: var(
+    --vinyl-body,
+    radial-gradient(
+      circle at 50% 50%,
+      #121212 0 31%,
+      #0c0c0c 32% 92.5%,
+      #2b2926 95%,
+      #171615 97.5%,
+      #0c0c0c 100%
+    )
   );
   box-shadow:
     0 0 0 1px rgba(251, 247, 239, 0.2),
@@ -238,11 +255,13 @@ body {
 }
 
 .vinyl-lit .vinyl-grooves {
-  background: repeating-radial-gradient(
-    circle at 50% 50%,
-    rgba(255, 255, 255, 0.075) 0 1px,
-    transparent 1px 2.5px
-  );
+  background:
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      var(--vinyl-groove, rgba(255, 255, 255, 0.075)) 0 1px,
+      transparent 1px 2.5px
+    ),
+    var(--vinyl-pattern, none);
 }
 
 /* --- Spinning logo -------------------------------------------------------- */
@@ -463,6 +482,30 @@ body {
   border-radius: 50%;
 }
 
+/* The rest of a multi-disc set sits behind the front record, a little further
+   out each. Their position is inline, so the scrobble scene (which moves the
+   front record) leaves them alone; they simply fade while it plays. */
+.hero-disc-extra {
+  transition: transform 1s var(--ease-out), opacity 0.4s;
+}
+
+.hero-record:not([data-scene='idle']) .hero-disc-extra {
+  opacity: 0;
+}
+
+/* Hovering the record slides the discs out a little more (HeroRecord sets each
+   disc's offset from --pull). Only while idle, and only where hover exists. */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-record[data-scene='idle']:hover {
+    /* Far enough that the discs slide over the start of the title beside the record. */
+    --pull: 18%;
+  }
+
+  .hero-record[data-scene='idle']:hover .hero-disc {
+    transition-duration: 0.6s;
+  }
+}
+
 .hero-disc .vinyl {
   transition: box-shadow 0.8s var(--ease-out);
 }
@@ -502,7 +545,7 @@ body {
   box-shadow:
     0 50px 70px -24px rgba(0, 0, 0, 0.7),
     0 16px 26px -10px rgba(0, 0, 0, 0.45),
-    inset 0 0 0 1px #000;
+    inset 0 0 0 1px var(--vinyl-rim, #000);
 }
 
 .hero-record[data-scene='play'] .hero-disc-bob,

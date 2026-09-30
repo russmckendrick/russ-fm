@@ -1,15 +1,16 @@
-import type { ReactNode } from 'react';
+import { useMemo, useState, type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import type { Album } from '@/types/album';
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { colourBar, floodFor } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
+import { discLook } from '@/lib/vinylLook';
 import { Sleeve } from './Sleeve';
 import { Vinyl } from './Vinyl';
 
 interface RecordTileProps {
-  album: Pick<Album, 'uri_release' | 'release_name' | 'release_artist'>;
+  album: Pick<Album, 'uri_release' | 'release_name' | 'release_artist' | 'vinyl_colours'>;
   palette?: AlbumColorPalette | null;
   /** Mono line under the artist, e.g. "25 SEP · VINYL". */
   meta?: ReactNode;
@@ -28,12 +29,21 @@ interface RecordTileProps {
 export function RecordTile({ album, palette, meta, showArtist = true, showText = true, className, to }: RecordTileProps) {
   const colours = floodFor(palette);
   const title = album.release_name.trim();
+  // The disc only shows once it slides out on hover, so a coloured pressing is
+  // painted then: a wall of tiles never carries a pattern it has not shown.
+  const [peeked, setPeeked] = useState(false);
+  const look = useMemo(() => (peeked ? discLook(album.vinyl_colours, 0) : null), [peeked, album.vinyl_colours]);
   return (
-    <Link to={to ?? album.uri_release} className={cn('rec group block min-w-0', className)}>
+    <Link
+      to={to ?? album.uri_release}
+      className={cn('rec group block min-w-0', className)}
+      onPointerEnter={() => setPeeked(true)}
+      onFocus={() => setPeeked(true)}
+    >
       <div className="relative aspect-square w-full">
         {/* Hidden behind the sleeve until hover, so it never spins: a wall of
             spinning discs costs a compositor layer and a repaint each. */}
-        <Vinyl label={colours.ground} spin={false} />
+        <Vinyl label={colours.ground} look={look} spin={false} />
         <Sleeve
           src={getAlbumImageFromData(album.uri_release, 'medium')}
           alt={`${title} by ${album.release_artist}`}

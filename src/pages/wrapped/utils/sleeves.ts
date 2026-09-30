@@ -32,12 +32,13 @@ export function floodForRelease(colours: ColourMap, release?: WrappedRelease | n
   return floodFor(paletteForRelease(colours, release));
 }
 
-/** The fields RecordTile needs, from a Wrapped release. */
-export function tileAlbum(release: WrappedRelease) {
+/** The fields RecordTile needs, from a Wrapped release (plus its pressing colours, which Wrapped data does not carry). */
+export function tileAlbum(release: WrappedRelease, vinylColours?: string[]) {
   return {
     uri_release: releaseUri(release.slug),
     release_name: release.release_name,
     release_artist: release.release_artist,
+    vinyl_colours: vinylColours,
   };
 }
 

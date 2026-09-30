@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 import { ArtistCard } from '@/components/ArtistCard';
 import { RecordTile } from '@/components/player';
 import { useAlbumColorMap, type AlbumColorPalette } from '@/hooks/useAlbumColors';
+import { useVinylColours } from '@/hooks/useVinylColours';
 import { handleImageError } from '@/lib/image-utils';
 import { floodFor } from '@/lib/sleeveColour';
 import { cn } from '@/lib/utils';
@@ -45,6 +46,7 @@ export function SearchResults({
   className = '',
 }: SearchResultsProps) {
   const colorMap = useAlbumColorMap();
+  const vinylOf = useVinylColours();
   const compact = layout === 'compact';
 
   if (isLoading || isIndexing) {
@@ -110,7 +112,7 @@ export function SearchResults({
               {albums.map(result => (
                 <div key={`album-${result.id}`} onClickCapture={onResultClick}>
                   <RecordTile
-                    album={{ uri_release: result.url, release_name: result.title, release_artist: result.subtitle }}
+                    album={{ uri_release: result.url, release_name: result.title, release_artist: result.subtitle, vinyl_colours: vinylOf(result.url) }}
                     palette={colorMap?.[result.url]}
                     meta={[result.year, result.genres?.[0]].filter(Boolean).join(' · ') || undefined}
                   />

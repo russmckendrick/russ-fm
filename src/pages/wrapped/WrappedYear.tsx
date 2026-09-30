@@ -6,11 +6,13 @@ import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading
 import { usePageTitle } from '@/hooks/usePageTitle';
 import { useMetaTags } from '@/hooks/useMetaTags';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
+import { useVinylColours } from '@/hooks/useVinylColours';
 import { appConfig } from '@/config/app.config';
 import { getAlbumImageFromData, getAlbumImageSrcSet, getAlbumSlug, getArtistImageFromData } from '@/lib/image-utils';
 import { loadCollection } from '@/lib/collection';
 import { slugify } from '@/lib/browseFacets';
 import { NEUTRAL_FLOOD } from '@/lib/sleeveColour';
+import { discLooks } from '@/lib/vinylLook';
 import type { WrappedData, WrappedRelease } from '@/types/wrapped';
 import { YearSelector } from './components/YearSelector';
 import { WrappedPresentation } from './WrappedPresentation';
@@ -48,6 +50,7 @@ export function WrappedYear() {
   const [availableYears, setAvailableYears] = useState<number[]>([]);
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const colours = useAlbumColorMap();
+  const vinylOf = useVinylColours();
 
   const yearNum = year ? parseInt(year, 10) : null;
   const currentYear = new Date().getFullYear();
@@ -201,6 +204,7 @@ export function WrappedYear() {
               srcSet={getAlbumImageSrcSet(getAlbumSlug(heroUri))}
               alt={`${heroRelease.release_name} by ${heroRelease.release_artist}`}
               labelColour={flood.ground}
+              looks={discLooks(vinylOf(heroUri))}
               labelText={String(yearNum)}
               discOut={20}
               sticker={{ date: heroRelease.date_added, background: flood.ink, color: flood.flood, label: 'First in' }}
@@ -510,6 +514,7 @@ function MonthColumns({ timeline, releaseColour, className }: { timeline: Timeli
 }
 
 function MonthShelf({ month, colour, colours }: { month: TimelineMonth; colour: string; colours: ColourMap }) {
+  const vinylOf = useVinylColours();
   return (
     <div id={`month-${slugify(month.month)}`} className="scroll-mt-24">
       <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -523,7 +528,7 @@ function MonthShelf({ month, colour, colours }: { month: TimelineMonth; colour: 
         {month.releases.map((r, i) => (
           <RecordTile
             key={`${r.slug}-${i}`}
-            album={tileAlbum(r)}
+            album={tileAlbum(r, vinylOf(releaseUri(r.slug)))}
             palette={paletteForRelease(colours, r)}
             meta={formatDay(r.date_added, false)}
             className="w-[150px] shrink-0 md:w-[190px]"

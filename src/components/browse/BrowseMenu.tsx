@@ -67,6 +67,20 @@ export function BrowseMenuCards({ isActive }: { isActive: (path: string) => bool
     if (!albums.length) return [];
     const used: number[] = [];
     const overviewFan = withDistinctLead(pickSleeves(albums, colorMap, 3), albums, colorMap, used);
+    const facetCards = FACET_CARDS.map(card => {
+      const summary = summariseFacet(card.key, albums, colorMap, 3);
+      const fan = withDistinctLead(summary.fan, summary.topAlbums, colorMap, used);
+      return {
+        to: card.to,
+        title: card.title,
+        meta: `${summary.distinct.toLocaleString()} ${card.noun[summary.distinct === 1 ? 0 : 1]}`,
+        fan,
+        flood: floodForUri(fan[0]?.uri_release, colorMap),
+      };
+    });
+    // Coloured pressings have no facet of their own, so this card is built from the records that carry `vinyl_colours`.
+    const coloured = albums.filter(a => a.vinyl_colours?.length);
+    const colouredFan = withDistinctLead(pickSleeves(coloured, colorMap, 3), coloured, colorMap, used);
     return [
       {
         to: '/browse',
@@ -75,17 +89,18 @@ export function BrowseMenuCards({ isActive }: { isActive: (path: string) => bool
         fan: overviewFan,
         flood: floodForUri(overviewFan[0]?.uri_release, colorMap),
       },
-      ...FACET_CARDS.map(card => {
-        const summary = summariseFacet(card.key, albums, colorMap, 3);
-        const fan = withDistinctLead(summary.fan, summary.topAlbums, colorMap, used);
-        return {
-          to: card.to,
-          title: card.title,
-          meta: `${summary.distinct.toLocaleString()} ${card.noun[summary.distinct === 1 ? 0 : 1]}`,
-          fan,
-          flood: floodForUri(fan[0]?.uri_release, colorMap),
-        };
-      }),
+      ...facetCards,
+      ...(coloured.length
+        ? [
+            {
+              to: '/coloured-vinyl',
+              title: 'Coloured',
+              meta: `${coloured.length.toLocaleString()} ${coloured.length === 1 ? 'record' : 'records'}`,
+              fan: colouredFan,
+              flood: floodForUri(colouredFan[0]?.uri_release, colorMap),
+            },
+          ]
+        : []),
     ];
   }, [raw, colorMap]);
 
@@ -94,7 +109,7 @@ export function BrowseMenuCards({ isActive }: { isActive: (path: string) => bool
   }
 
   return (
-    <div className="grid grid-cols-4 gap-3">
+    <div className="grid grid-cols-5 gap-3">
       {cards.map(card => (
         <DropdownMenuItem key={card.to} asChild className="p-0 focus:bg-transparent">
           <Link

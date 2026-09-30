@@ -2,10 +2,12 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import type { AlbumColorPalette } from '@/hooks/useAlbumColors';
+import { useVinylColours } from '@/hooks/useVinylColours';
 import type { BoxDisc, BoxTrack } from '@/lib/boxDiscs';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { floodFor, type Flood } from '@/lib/sleeveColour';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
+import { discLook } from '@/lib/vinylLook';
 import { cn } from '@/lib/utils';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { Sleeve, Sticker, Vinyl } from '@/components/player';
@@ -86,6 +88,7 @@ interface BoxContentsProps {
 /** "In this box": pick a disc, its panel takes the sleeve's colour, tracklist and scrobble. */
 export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlood, artist }: BoxContentsProps) {
   const [scrobbling, setScrobbling] = useState(false);
+  const vinylOf = useVinylColours();
   const disc = discs[selected];
   const f = disc?.member ? floodFor(colours?.[disc.member.uri_release]) : boxFlood;
   const sides = useMemo(() => {
@@ -148,6 +151,7 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
           <div className="relative aspect-square w-full">
             <Vinyl
               label={f.ground}
+              look={discLook(vinylOf(disc.member?.uri_release ?? boxUri), 0)}
               fast={scrobbling}
               className="left-[2%] top-[2%] h-[96%] w-[96%] transition-transform duration-1000"
               style={{ transform: `translateX(${scrobbling ? 38 : 18}%)` }}

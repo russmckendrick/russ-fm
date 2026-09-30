@@ -36,6 +36,7 @@ interface Album {
   date_added: string;
   date_release_year: string;
   year_original?: number | null;
+  vinyl_colours?: string[];
   json_detailed_release: string;
   json_detailed_artist: string;
   images_uri_release: { 'hi-res': string; medium: string };
@@ -175,7 +176,7 @@ export function ArtistDetailPage() {
   usePageFlood(
     byAdded.length ? flood.top : null,
     byAdded.length ? flood.ink : null,
-    byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground } : undefined,
+    byAdded.length ? { cover: getAlbumImageFromData(byAdded[0].uri_release, 'medium'), ground: flood.ground, vinyl: byAdded[0].vinyl_colours?.[0] } : undefined,
   );
   // Blend the portrait into the flood. Multiply turns a light backdrop into
   // the flood colour; screen does the same for a dark backdrop, but only on a
