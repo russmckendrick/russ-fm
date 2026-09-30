@@ -439,6 +439,44 @@ embedded, because the card uses a `data:image/jpeg` URI and Satori parses
 the JPEG header. A PNG saved with a `.jpg` extension used to fail with
 "Offset is outside the bounds of the DataView" on every run.
 
+### TV and genre cards
+
+**File:** `scripts/generate-og-sections.ts` (`pnpm run generate-og-sections`, add
+`-- --only tv` or `-- --only genres` for one set). It runs in `pnpm run build` and in
+the deploy workflow after `generate-og`, and writes 1200×630 JPEGs to `public/og/`
+(gitignored, rebuilt every run in about 30 seconds) so the worker build ships them:
+
+| File | Page | Card |
+| --- | --- | --- |
+| `og/tv/index.jpg` | `/tv` | Latest additions' room with a sleeve on the set, "russ.fm/tv" band |
+| `og/tv/<channel>.jpg` | `/tv/<channel>` | The channel's room, tinted, with its newest bold sleeve on the set; band with the channel number and name |
+| `og/tv/guide.jpg` | `/tv/guide` | Guide band and seven channels' programme blocks in sleeve colours |
+| `og/genres.jpg` | `/genres` | "Genres" with the 14 biggest genres as chips in their lead sleeves' colours |
+| `og/genre/<slug>.jpg` | `/genre/<slug>` | Lead sleeve's flood, the name in condensed type, a record slid out of its sleeve with two sleeves behind, counts and year span |
+| `og/manifest.json` | — | Channel list and counts for `generate-static-meta.mjs` |
+
+- It imports `buildChannels` from `src/lib/tv.ts`, so the channels match the site.
+  Genre slugs and groups copy `generate-static-meta.mjs` (genre names plus styles).
+- The lead sleeve is the most vivid of a page's first three records, as on the site.
+- Room shots are composited with Sharp: the room photo from `public/tv-rooms/`, a
+  40% soft-light wash of the sleeve's flood cut back to the room's alpha, and the
+  sleeve in the cut-out screen. Sharp extracts before it composites, so the shot is
+  flattened first and then cropped.
+- Type uses static instances of the site fonts in `scripts/og-fonts/`, because
+  Satori can't use variable fonts or woff2: Archivo condensed black (62% width),
+  extended black (125%) and semi-expanded extrabold (112%), JetBrains Mono 500 and
+  Hanken Grotesk 600. They were cut from the `@fontsource-variable` files with
+  fontTools' `varLib.instancer`; redo that if the site's fonts change.
+- Characters the Latin subsets can't draw are dropped from titles, so they don't
+  render as boxes.
+
+`generate-static-meta.mjs` points `/genre/<slug>` at its card when the file exists
+(else the site card) and writes `/tv`, `/tv/guide`, `/tv/<channel>` and `/genres`
+pages from the manifest. Video links (`/tv/<channel>/<video>`) aren't static: the
+worker (`injectTvVideoMeta` in `_worker.js`) titles them from `tv.json`
+("Playgirl – Ladytron | Russ.fm TV") with the video's YouTube still as the image
+(`maxresdefault` when YouTube has one, checked once per isolate, else `hqdefault`).
+
 ### Image Specifications
 
 - **Dimensions:** 1200x630px (standard OG size)

@@ -152,6 +152,21 @@ async function handleStaticAssets(request, env) {
     const indexResponse = await env.ASSETS.fetch(indexRequest);
 
     if (indexResponse.ok) {
+      // A shared TV video link: that video's title and still.
+      if (/^\/tv\/[^/]+\/[^/]+$/.test(pathname)) {
+        const htmlWithMeta = await injectTvVideoMeta(pathname, indexResponse, env, url, request);
+        if (htmlWithMeta) {
+          return new Response(htmlWithMeta, {
+            status: 200,
+            headers: {
+              ...Object.fromEntries(indexResponse.headers),
+              'Content-Type': 'text/html; charset=utf-8',
+              'Cache-Control': 'public, max-age=3600',
+            },
+          });
+        }
+      }
+
       // Inject meta tags for all album/artist pages
       if (pathname.startsWith('/album/') || pathname.startsWith('/artist/')) {
         const htmlWithMeta = await injectMetaTags(pathname, indexResponse, env, url, request);
@@ -244,55 +259,132 @@ async function injectMetaTags(pathname, indexResponse, env, url, request) {
       ogType = 'music.musician';
     }
 
-    // Build the canonical URL
-    const canonicalUrl = `https://russ.fm${pathname.endsWith('/') ? pathname.slice(0, -1) : pathname}`;
-
-    // Inject meta tags into HTML
-    let modifiedHtml = html;
-
-    // Replace or inject Open Graph tags
-    const ogTags = `
-    <meta property="og:type" content="${ogType}" />
-    <meta property="og:url" content="${canonicalUrl}" />
-    <meta property="og:title" content="${escapeHtml(title)}" />
-    <meta property="og:description" content="${escapeHtml(description)}" />
-    <meta property="og:image" content="${imageUrl}" />`;
-
-    // Replace or inject Twitter tags
-    const twitterTags = `
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="${canonicalUrl}" />
-    <meta name="twitter:title" content="${escapeHtml(title)}" />
-    <meta name="twitter:description" content="${escapeHtml(description)}" />
-    <meta name="twitter:image" content="${imageUrl}" />`;
-
-    // Replace title
-    modifiedHtml = modifiedHtml.replace(
-      /<title>.*?<\/title>/,
-      `<title>${escapeHtml(title)}</title>`
-    );
-
-    // Replace description
-    modifiedHtml = modifiedHtml.replace(
-      /<meta name="description" content="[^"]*" \/>/,
-      `<meta name="description" content="${escapeHtml(description)}" />`
-    );
-
-    // Replace Open Graph tags (find the block and replace all at once)
-    modifiedHtml = modifiedHtml.replace(
-      /<!-- Open Graph \/ Facebook -->[\s\S]*?(?=<!-- Twitter -->)/,
-      `<!-- Open Graph / Facebook -->${ogTags}\n\n    `
-    );
-
-    // Replace Twitter tags
-    modifiedHtml = modifiedHtml.replace(
-      /<!-- Twitter -->[\s\S]*?(?=<title>|<\/head>)/,
-      `<!-- Twitter -->${twitterTags}\n\n    `
-    );
-
-    return modifiedHtml;
+    return applyMetaTags(html, pathname, { title, description, imageUrl, ogType });
   } catch (error) {
     console.error('Error injecting meta tags:', error);
+    return null;
+  }
+}
+
+/**
+ * Rewrite the title, description, Open Graph and Twitter tags of index.html
+ * for one page.
+ */
+function applyMetaTags(html, pathname, { title, description, imageUrl, ogType }) {
+  // Build the canonical URL
+  const canonicalUrl = `https://russ.fm${pathname.endsWith('/') ? pathname.slice(0, -1) : pathname}`;
+
+  // Inject meta tags into HTML
+  let modifiedHtml = html;
+
+  // Replace or inject Open Graph tags
+  const ogTags = `
+  <meta property="og:type" content="${ogType}" />
+  <meta property="og:url" content="${canonicalUrl}" />
+  <meta property="og:title" content="${escapeHtml(title)}" />
+  <meta property="og:description" content="${escapeHtml(description)}" />
+  <meta property="og:image" content="${imageUrl}" />`;
+
+  // Replace or inject Twitter tags
+  const twitterTags = `
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="${canonicalUrl}" />
+  <meta name="twitter:title" content="${escapeHtml(title)}" />
+  <meta name="twitter:description" content="${escapeHtml(description)}" />
+  <meta name="twitter:image" content="${imageUrl}" />`;
+
+  // Replace title
+  modifiedHtml = modifiedHtml.replace(
+    /<title>.*?<\/title>/,
+    `<title>${escapeHtml(title)}</title>`
+  );
+
+  // Replace description
+  modifiedHtml = modifiedHtml.replace(
+    /<meta name="description" content="[^"]*" \/>/,
+    `<meta name="description" content="${escapeHtml(description)}" />`
+  );
+
+  // Replace Open Graph tags (find the block and replace all at once)
+  modifiedHtml = modifiedHtml.replace(
+    /<!-- Open Graph \/ Facebook -->[\s\S]*?(?=<!-- Twitter -->)/,
+    `<!-- Open Graph / Facebook -->${ogTags}\n\n    `
+  );
+
+  // Replace Twitter tags
+  modifiedHtml = modifiedHtml.replace(
+    /<!-- Twitter -->[\s\S]*?(?=<title>|<\/head>)/,
+    `<!-- Twitter -->${twitterTags}\n\n    `
+  );
+
+  return modifiedHtml;
+}
+
+// Per-isolate caches for /tv video links: tv.json flattened to id → video,
+// the channel names, and which YouTube still each video has.
+let tvVideos = null;
+let tvChannels = null;
+const tvStills = new Map();
+
+async function loadTvIndex(env, url, request) {
+  if (!tvVideos) {
+    const res = await env.ASSETS.fetch(new Request(new URL('/tv.json', url.origin), request));
+    if (!res.ok) return false;
+    const data = await res.json();
+    const map = new Map();
+    for (const release of data.releases || []) {
+      for (const v of release.videos || []) {
+        if (!map.has(v.id)) map.set(v.id, { title: v.title, artist: v.artist || release.artist, release: release.name });
+      }
+    }
+    tvVideos = map;
+  }
+  if (!tvChannels) {
+    const res = await env.ASSETS.fetch(new Request(new URL('/og/manifest.json', url.origin), request));
+    const manifest = res.ok ? await res.json() : {};
+    tvChannels = new Map((manifest.tv?.channels || []).map((c) => [c.slug, c]));
+  }
+  return true;
+}
+
+/** maxresdefault when YouTube has one (not all older uploads do), else hqdefault. */
+async function youTubeStill(id) {
+  if (tvStills.has(id)) return tvStills.get(id);
+  let still = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  try {
+    const res = await fetch(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`, { method: 'HEAD' });
+    if (res.ok) still = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
+  } catch {
+    // keep hqdefault
+  }
+  tvStills.set(id, still);
+  return still;
+}
+
+/**
+ * /tv/:channel/:video (see src/lib/tv.ts videoPath): the video's song, artist
+ * and record, with its YouTube still, so a shared link previews the video.
+ */
+async function injectTvVideoMeta(pathname, indexResponse, env, url, request) {
+  try {
+    const [, , channelSlug, segment] = pathname.split('/');
+    const id = segment?.slice(-11);
+    if (!id || !/^[A-Za-z0-9_-]{11}$/.test(id)) return null;
+    if (!(await loadTvIndex(env, url, request))) return null;
+    const video = tvVideos.get(id);
+    if (!video) return null;
+
+    const channel = tvChannels.get(channelSlug);
+    const html = await indexResponse.clone().text();
+    const where = channel ? ` Playing on ${channel.name}, ` : ' Playing on ';
+    return applyMetaTags(html, pathname, {
+      title: `${video.title} – ${video.artist} | Russ.fm TV`,
+      description: `${video.title} by ${video.artist}, from ${video.release}.${where}music TV from the russ.fm record collection.`,
+      imageUrl: await youTubeStill(id),
+      ogType: 'video.other',
+    });
+  } catch (error) {
+    console.error('Error injecting TV meta tags:', error);
     return null;
   }
 }

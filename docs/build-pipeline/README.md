@@ -79,6 +79,7 @@ pnpm run build
 # 7. build:wrapped (year data)
 # 8. generate-sitemap (refresh sitemap.xml in public/ and dist/)
 # 9. generate-og (social images)
+# 9b. generate-og-sections (TV and genre cards into public/og/)
 # 10. cp dist/og-image.png public/og-image.png (for worker build)
 ```
 
@@ -115,6 +116,7 @@ pnpm run build:worker
 | `generate-colors` | Extract sleeve palettes (`album-colors.json`) and swatches (`album-swatches.json`); `--force` redoes every album |
 | `generate-artist-images` | Artist photo placement and colour notes (`public/artist/<slug>/<slug>-image.json`); macOS only (Apple Vision, needs the Xcode Command Line Tools), run locally after the scrapper adds artist photos and commit, not part of `build`; by default only artists without a file yet, `--full` redoes all, `--only <slug>` redoes one. See [asset-processing.md](./asset-processing.md#artist-image-notes) |
 | `generate-og` | Create OG images |
+| `generate-og-sections` | TV and genre OG cards into `public/og/` (see [asset-processing](./asset-processing.md#tv-and-genre-cards)) |
 | `build:wrapped` | Generate wrapped.json |
 | `preview` | Preview production build |
 | `deploy` | Deploy to Cloudflare |
@@ -244,6 +246,8 @@ dist/
 │   ├── index-[hash].css
 │   └── vendor-[hash].js
 ├── collection.json
+├── tv.json              # /tv videos, written by the scrapper
+├── tv-rooms/            # /tv room photos (site assets, not R2)
 ├── sitemap.xml
 ├── album-colors.json
 ├── album-swatches.json

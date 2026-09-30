@@ -11,6 +11,8 @@ const OG_SKIPPED_ARTISTS = new Set(
   JSON.parse(await readFile(path.join(process.cwd(), 'scripts', 'og-skip.json'), 'utf8')).artists ?? []
 );
 const COLLECTION_PATH = path.join(PUBLIC_DIR, 'collection.json');
+// Section OG cards from scripts/generate-og-sections.ts (optional: pages fall back to the site card).
+const OG_DIR = path.join(PUBLIC_DIR, 'og');
 const WRAPPED_DIR = path.join(PUBLIC_DIR, 'wrapped');
 
 const META_START = '<!-- META:START';
@@ -24,6 +26,10 @@ async function main() {
   }
 
   const collection = JSON.parse(await readFile(COLLECTION_PATH, 'utf8'));
+  const ogManifest = await readJsonOrNull(path.join(OG_DIR, 'manifest.json'));
+  const genreCards = new Set(
+    (await readdir(path.join(OG_DIR, 'genre')).catch(() => [])).map((f) => f.replace(/\.jpg$/, '')),
+  );
 
   let totalAlbums = 0;
   let totalArtists = 0;
@@ -74,7 +80,8 @@ async function main() {
     for (const [facetKey, slugMap] of Object.entries(facetGroups)) {
       const singular = facetSingular(facetKey);
       for (const [slug, group] of slugMap) {
-        const head = buildFacetHead({ facetKey, singular, slug, group });
+        const card = facetKey === 'genre' && genreCards.has(slug) ? `${SITE_URL}/og/genre/${slug}.jpg` : null;
+        const head = buildFacetHead({ facetKey, singular, slug, group, image: card });
         const html = injectHead(template, head);
         await writeRouteHtml(target, singular, slug, html);
         hubCount++;
@@ -89,8 +96,17 @@ async function main() {
       wrappedCount++;
     }
 
+    let sectionCount = 0;
+    for (const page of buildSectionPages(ogManifest, genreCards.size)) {
+      const html = injectHead(template, renderHead(page.head));
+      const dir = path.join(target, ...page.path.split('/').filter(Boolean));
+      await mkdir(dir, { recursive: true });
+      await writeFile(path.join(dir, 'index.html'), html);
+      sectionCount++;
+    }
+
     console.log(
-      `generate-static-meta: ${path.relative(process.cwd(), target)} — ${albumCount} album pages, ${artistCount} artist pages, ${hubCount} hub pages, ${wrappedCount} wrapped pages` +
+      `generate-static-meta: ${path.relative(process.cwd(), target)} — ${albumCount} album pages, ${artistCount} artist pages, ${hubCount} hub pages, ${wrappedCount} wrapped pages, ${sectionCount} section pages` +
       (skipped ? `, ${skipped} skipped` : '')
     );
 
@@ -544,13 +560,13 @@ function facetTitle(facetKey, displayName) {
   }
 }
 
-function buildFacetHead({ facetKey, singular, slug, group }) {
+function buildFacetHead({ facetKey, singular, slug, group, image: card = null }) {
   const displayNameRaw = group.displayName;
   const displayName = facetKey === 'decade' ? `The ${displayNameRaw}` : displayNameRaw;
   const intro = trim(buildFacetIntro(facetKey, displayName, group), 300);
   const canonical = `${SITE_URL}/${singular}/${slug}`;
   const title = facetTitle(facetKey, displayName);
-  const image = `${SITE_URL}/og-image.png`;
+  const image = card ?? `${SITE_URL}/og-image.png`;
 
   const collectionPage = {
     '@context': 'https://schema.org',
@@ -575,6 +591,70 @@ function buildFacetHead({ facetKey, singular, slug, group }) {
     url: canonical,
     jsonLd: [collectionPage, breadcrumb],
   });
+}
+
+/**
+ * /tv, /tv/guide, /tv/:channel and /genres, each with its section card. Only
+ * written when generate-og-sections has run (it writes the channel list).
+ */
+function buildSectionPages(manifest, genreCount) {
+  const pages = [];
+  const page = (routePath, { title, description, image, name }) => {
+    const canonical = `${SITE_URL}${routePath}`;
+    const crumbs = [{ name: 'Home', url: `${SITE_URL}/` }];
+    if (routePath.startsWith('/tv/')) crumbs.push({ name: 'TV', url: `${SITE_URL}/tv` });
+    crumbs.push({ name });
+    pages.push({
+      path: routePath,
+      head: {
+        title,
+        description,
+        canonical,
+        ogType: 'website',
+        image,
+        url: canonical,
+        jsonLd: [
+          { '@context': 'https://schema.org', '@type': 'CollectionPage', '@id': canonical, url: canonical, name: title, description },
+          breadcrumbList(crumbs),
+        ],
+      },
+    });
+  };
+
+  const tv = manifest?.tv;
+  if (tv?.channels?.length) {
+    const videos = Number(tv.videos).toLocaleString('en-GB');
+    page('/tv', {
+      name: 'TV',
+      title: 'TV | Russ.fm',
+      description: `Music videos from the russ.fm record collection as ${tv.channels.length} TV channels: ${videos} videos, running on the clock like broadcast TV.`,
+      image: `${SITE_URL}/og/tv/index.jpg`,
+    });
+    page('/tv/guide', {
+      name: 'Guide',
+      title: 'TV guide | Russ.fm',
+      description: `What is on every russ.fm/tv channel now and for the next few hours: ${tv.channels.length} channels, ${videos} videos from the collection.`,
+      image: `${SITE_URL}/og/tv/guide.jpg`,
+    });
+    for (const ch of tv.channels) {
+      page(`/tv/${ch.slug}`, {
+        name: ch.name,
+        title: `${ch.name} | TV | Russ.fm`,
+        description: `Channel ${ch.number}, ${ch.name}: ${Number(ch.videos).toLocaleString('en-GB')} music videos from the russ.fm record collection, playing around the clock.`,
+        image: `${SITE_URL}/og/tv/${ch.slug}.jpg`,
+      });
+    }
+  }
+
+  if (manifest?.genres) {
+    page('/genres', {
+      name: 'Genres',
+      title: 'Genres | Russ.fm',
+      description: `${genreCount || manifest.genres.count} genres and styles across the russ.fm record collection, each in the colours of its records.`,
+      image: `${SITE_URL}/og/genres.jpg`,
+    });
+  }
+  return pages;
 }
 
 async function listWrappedYears() {

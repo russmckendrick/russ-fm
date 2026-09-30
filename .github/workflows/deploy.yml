@@ -91,6 +91,10 @@ jobs:
           echo "📸 Generating OG images (cache-aware)..."
           pnpm run generate-og -- --cache-dir node_modules/.cache/assets/og
 
+          # TV and genre cards go to public/og/ so the worker build ships them
+          echo "📺 Generating TV and genre OG cards..."
+          pnpm run generate-og-sections
+
           # Copy generic og-image.png to public/ so it's included in worker build
           echo "🖼️  Copying og-image.png to public/..."
           cp dist/og-image.png public/og-image.png
