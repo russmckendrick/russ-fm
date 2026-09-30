@@ -182,6 +182,15 @@ Sticky header that shares the page's flood colour.
   painted in the hero's flood and ink, so header and hero read as one
   surface. After 120px of scroll it turns to near-opaque dark ground
   (`rgba(14,13,12,.97)`, no backdrop blur) with cream text.
+- The browser's own toolbar follows the header (the flood at the top, the
+  page's `--ground` once scrolled). Desktop Safari 26+ ignores `theme-color`
+  and tints its toolbar from the `<body>` background, which it watches live.
+  The page is painted by the app root (`min-h-screen` on `--ground`), so the
+  body's own colour only shows when overscrolling; `Navigation` sets it to the
+  header's colour (`tint`), and the body's existing `transition` fades it.
+  The `<meta name="theme-color">` in `index.html` is updated at the same time
+  for older Safari, iOS and Chrome on Android. (A fixed strip over the header,
+  WebKit's documented source on iOS, did not tint desktop Safari.)
 - The logo is `SpinningMark` (a record at 33⅓) beside the `russ.fm`
   wordmark. On pages that pass a `cover` to `usePageFlood` (home hero,
   album, artist) the label carries that sleeve; elsewhere the label is the
