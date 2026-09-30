@@ -37,6 +37,8 @@ interface HeroDetailJson {
 
 const HERO_COUNT = appConfig.homepage.hero.numberOfFeaturedAlbums;
 const HERO_MS = appConfig.homepage.hero.autoRotateInterval;
+/** Side-by-side headings (Most collected, Genres) step down so "Most collected" stays on one line in a half column. */
+const PAIR_HEADING = 'xl:[&>h2]:text-[44px] 2xl:[&>h2]:text-[52px]';
 
 export function HomePage() {
   usePageTitle('russ.fm — record collection');
@@ -55,9 +57,12 @@ export function HomePage() {
       <Hero featured={featured} colours={colours} />
       <div className={cn('mx-auto flex w-full max-w-[1640px] flex-col gap-20 px-5 pb-10 md:px-10 lg:gap-24 lg:px-14', AFTER_HERO, 'pt-16')}>
         <LatestAdditions recent={recent} colours={colours} />
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
-          <MostCollected albums={albums} />
-          <Genres albums={albums} colours={colours} />
+        <div className="flex flex-col gap-10">
+          <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-20">
+            <MostCollected albums={albums} />
+            <Genres albums={albums} colours={colours} />
+          </div>
+          <Counts albums={albums} />
         </div>
         <RandomPicks albums={albums} colours={colours} />
         <BrowseByColour albums={albums} colours={colours} />
@@ -310,8 +315,8 @@ function MostCollected({ albums }: { albums: Album[] }) {
 
   return (
     <section className="flex flex-col gap-8">
-      <SectionHeading title="Most collected" link={{ to: '/artists/1', label: `${artistCount.toLocaleString('en-GB')} artists` }} />
-      <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3">
+      <SectionHeading className={PAIR_HEADING} title="Most collected" link={{ to: '/artists/1', label: `${artistCount.toLocaleString('en-GB')} artists` }} />
+      <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6 xl:grid-cols-3">
         {top.map(artist => (
           <Link key={artist.uri} to={artist.uri} className="group flex flex-col gap-3.5">
             <div className="aspect-square overflow-hidden rounded-full bg-[color:var(--ground-3)]">
@@ -322,9 +327,11 @@ function MostCollected({ albums }: { albums: Album[] }) {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="flex items-baseline justify-between gap-2">
-              <span className="truncate text-[16px] font-bold">{artist.name}</span>
-              <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">{artist.count}</span>
+            <div className="flex min-w-0 flex-col gap-1">
+              <span className="text-[16px] font-bold leading-tight">{artist.name}</span>
+              <span className="t-mono text-[13px] text-[color:var(--cream-dim)]">
+                {artist.count} {artist.count === 1 ? 'record' : 'records'}
+              </span>
             </div>
           </Link>
         ))}
@@ -348,14 +355,11 @@ function Genres({ albums, colours }: { albums: Album[]; colours: Record<string, 
     return out;
   }, [albums, colours, genres]);
 
-  const vinyl = albums.filter(a => a.format_primary === 'Vinyl').length;
-  const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
-  const artists = new Set(albums.flatMap(a => a.artists?.map(x => x.name) ?? [])).size;
   const max = genres[0]?.count ?? 1;
 
   return (
     <section className="flex flex-col gap-8">
-      <SectionHeading title="Genres" link={{ to: '/genres', label: 'All genres' }} />
+      <SectionHeading className={PAIR_HEADING} title="Genres" link={{ to: '/genres', label: 'All genres' }} />
       <div className="flex flex-wrap content-start gap-3">
         {genres.map(g => {
           const bg = genreColour[g.name] ?? '#e8e2d6';
@@ -373,20 +377,30 @@ function Genres({ albums, colours }: { albums: Album[]; colours: Record<string, 
           );
         })}
       </div>
-      <dl className="mt-2 grid grid-cols-2 border-t-2 border-[color:var(--cream)] sm:grid-cols-4">
-        {[
-          ['Records', albums.length],
-          ['On vinyl', vinyl],
-          ['Box sets', boxsets],
-          ['Artists', artists],
-        ].map(([label, value]) => (
-          <div key={label} className="flex flex-col-reverse gap-1.5 py-5">
-            <dt className="t-kicker text-[color:var(--cream-dim)]">{label}</dt>
-            <dd className="t-disp m-0 text-[36px] md:text-[44px]">{Number(value).toLocaleString('en-GB')}</dd>
-          </div>
-        ))}
-      </dl>
     </section>
+  );
+}
+
+/* -------------------------------------------------------------- Counts -- */
+
+function Counts({ albums }: { albums: Album[] }) {
+  const vinyl = albums.filter(a => a.format_primary === 'Vinyl').length;
+  const boxsets = albums.filter(a => a.format_primary === 'Box Set').length;
+  const artists = new Set(albums.flatMap(a => a.artists?.map(x => x.name) ?? [])).size;
+  return (
+    <dl className="m-0 grid grid-cols-2 gap-x-6 border-t-2 border-[color:var(--cream)] md:grid-cols-4">
+      {[
+        ['Records', albums.length],
+        ['On vinyl', vinyl],
+        ['Box sets', boxsets],
+        ['Artists', artists],
+      ].map(([label, value]) => (
+        <div key={label} className="flex min-w-0 flex-col-reverse gap-1.5 py-5">
+          <dt className="t-kicker text-[color:var(--cream-dim)]">{label}</dt>
+          <dd className="t-disp m-0 text-[36px] md:text-[44px] lg:text-[56px]">{Number(value).toLocaleString('en-GB')}</dd>
+        </div>
+      ))}
+    </dl>
   );
 }
 
