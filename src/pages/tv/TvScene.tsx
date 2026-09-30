@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { List, Maximize, Pause, Play, SkipBack, SkipForward, Tv, Volume2, VolumeX } from 'lucide-react';
 import { FitTitle, HeroRecord, SectionHeading, usePageFlood } from '@/components/player';
+import { Scrubber } from '@/components/tv/Scrubber';
 import { useTv } from '@/components/tv/tv-context';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
@@ -81,6 +82,13 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [item.id, player.ready]);
 
+  // YouTube's own length once it knows it (the schedule's is an estimate).
+  const duration = (onThis && player.duration()) || item.seconds;
+  const seek = (seconds: number) => {
+    player.seek(seconds);
+    setElapsed(seconds);
+  };
+
   const album = item.album;
   const f = floodFor(colours?.[album.uri_release]);
   const cover = getAlbumImageFromData(album.uri_release, 'medium');
@@ -104,6 +112,7 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
           room={room}
           tint={f.flood}
           slotRef={slotRef}
+          zoom={1.35}
           className="h-[340px] sm:h-[440px] lg:h-[clamp(540px,72vh,800px)]"
           screen={
             <div className="tv-screen" onClick={() => (player.muted ? player.unmute() : undefined)}>
@@ -132,7 +141,7 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
         {/* The record, hanging over the band (desktop). */}
         <Link
           to={album.uri_release}
-          className="absolute bottom-[-150px] right-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] z-10 hidden w-[300px] lg:block"
+          className="absolute bottom-[-110px] right-[max(3.5rem,calc((100vw-1640px)/2+3.5rem))] z-10 hidden w-[230px] lg:block"
           aria-label={`${album.release_name} by ${album.release_artist}`}
         >
           <HeroRecord
@@ -146,97 +155,92 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
         </Link>
       </div>
 
-      {/* Now playing: every line is a fixed height, so the controls never move. */}
-      <section className="tv-band" style={{ background: f.flood, color: f.ink }} aria-label="Now playing">
-        <div className="mx-auto w-full max-w-[1640px] px-5 pb-8 pt-6 md:px-10 md:pb-10 md:pt-8 lg:px-14">
-          <div className="lg:pr-[400px]">
-            <p className="t-mono m-0 truncate text-[11px] uppercase tracking-[0.08em] opacity-75 md:text-[13px]">
-              Channel {channel.number} · {channel.name}
-            </p>
-            {item.artist === album.release_artist ? (
-              <Link to={album.uri_artist} className="t-dispn mt-2 block truncate text-[20px] leading-tight hover:underline md:text-[30px]">
-                {item.artist}
-              </Link>
-            ) : (
-              <p className="t-dispn m-0 mt-2 truncate text-[20px] leading-tight md:text-[30px]">{item.artist}</p>
-            )}
-            <div className="tv-title-box">
-              <FitTitle key={item.id} max={132} min={24} fitHeight className="t-cond leading-[0.86]">
-                {item.title}
-              </FitTitle>
-            </div>
-            <p className="t-mono m-0 mt-2 truncate text-[12px] opacity-80 md:mt-3 md:text-[14px]">
-              <Link to={album.uri_release} className="hover:underline">
-                {album.release_name}
-              </Link>
-              {year ? ` · ${year}` : ''}
-              {label ? ` · ${label}` : ''}
-              {item.kind === 'live' ? ' · Live' : ''}
-            </p>
+      {/* Now playing: one slim row, like the album page's TV and the full-screen
+          bar. Progress runs along the top edge; transport on the left, the credit
+          in the middle (a one-line title box, so nothing moves between videos),
+          the extras as small buttons on the right. */}
+      <section className="tv-band relative" style={{ background: f.flood, color: f.ink }} aria-label="Now playing">
+        {/* White on a dark track, so it shows on any sleeve colour; drag to seek. */}
+        <Scrubber elapsed={elapsed} duration={duration} onSeek={seek} />
 
-            <div className="mt-5 flex items-center gap-3">
-              <div className="relative h-1.5 flex-1 overflow-hidden rounded-full md:max-w-[320px]">
-                <div className="absolute inset-0 opacity-25" style={{ background: f.ink }} />
-                <div
-                  className="absolute inset-y-0 left-0 transition-[width] duration-1000 ease-linear"
-                  style={{ background: f.ink, width: `${Math.min(100, (elapsed / item.seconds) * 100)}%` }}
-                />
-              </div>
-              <span className="t-mono w-[92px] shrink-0 text-[12px] tabular-nums md:text-[13px]">
-                {formatDuration(elapsed)} / {formatDuration(item.seconds)}
-              </span>
-            </div>
-
-            <div className="mt-5 flex flex-wrap items-center gap-2.5 md:gap-3">
-              <button type="button" className="icon-btn" style={btn} onClick={tv.prev} aria-label="Previous video">
-                <SkipBack className="h-5 w-5 fill-current" aria-hidden />
+        <div className="mx-auto w-full max-w-[1640px] px-5 py-4 md:px-10 md:py-5 lg:px-14 lg:pr-[340px]">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-3 md:flex-nowrap md:gap-x-5">
+            <div className="flex shrink-0 items-center gap-2">
+              <button type="button" className="icon-btn h-10 w-10" style={btn} onClick={tv.prev} aria-label="Previous video">
+                <SkipBack className="h-4 w-4 fill-current" aria-hidden />
               </button>
               <button
                 type="button"
-                className="icon-btn h-14 w-14"
+                className="icon-btn h-12 w-12"
                 style={btn}
                 onClick={() => (player.playing ? player.pause() : player.play())}
                 aria-label={player.playing ? 'Pause' : 'Play'}
               >
-                {player.playing ? <Pause className="h-6 w-6 fill-current" aria-hidden /> : <Play className="h-6 w-6 fill-current" aria-hidden />}
+                {player.playing ? <Pause className="h-5 w-5 fill-current" aria-hidden /> : <Play className="h-5 w-5 fill-current" aria-hidden />}
               </button>
-              <button type="button" className="icon-btn" style={btn} onClick={tv.next} aria-label="Next video">
-                <SkipForward className="h-5 w-5 fill-current" aria-hidden />
+              <button type="button" className="icon-btn h-10 w-10" style={btn} onClick={tv.next} aria-label="Next video">
+                <SkipForward className="h-4 w-4 fill-current" aria-hidden />
               </button>
+            </div>
+
+            <div className="order-last min-w-0 basis-full md:order-none md:basis-auto md:flex-1">
+              <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] opacity-75 md:text-[11px]">
+                CH {channel.number} · {channel.name} · <span className="tabular-nums">{formatDuration(elapsed)} / {formatDuration(duration)}</span>
+                {item.kind === 'live' ? ' · Live' : ''}
+              </p>
+              <div className="tv-title-box">
+                <FitTitle key={item.id} max={52} min={18} fitHeight className="t-cond leading-[0.9]">
+                  {item.title}
+                </FitTitle>
+              </div>
+              <p className="m-0 truncate text-[13px] leading-snug md:text-[14px]">
+                {item.artist === album.release_artist ? (
+                  <Link to={album.uri_artist} className="t-dispn hover:underline">
+                    {item.artist}
+                  </Link>
+                ) : (
+                  <span className="t-dispn">{item.artist}</span>
+                )}
+                <span className="t-mono text-[11px] opacity-80 md:text-[12px]">
+                  {' · '}
+                  <Link to={album.uri_release} className="hover:underline">
+                    {album.release_name}
+                  </Link>
+                  {year ? ` · ${year}` : ''}
+                  {label ? ` · ${label}` : ''}
+                </span>
+              </p>
+            </div>
+
+            <div className="ml-auto flex shrink-0 items-center gap-2 md:ml-0">
               {player.muted ? (
-                <button type="button" className="pill pill-solid w-[136px]" style={btn} onClick={player.unmute}>
+                <button type="button" className="pill pill-solid pill-sm max-sm:px-3" style={btn} onClick={player.unmute} aria-label="Sound on">
                   <Volume2 className="h-4 w-4" aria-hidden />
-                  Sound on
+                  <span className="hidden sm:inline">Sound on</span>
                 </button>
               ) : (
-                <button type="button" className="pill w-[136px]" style={outline} onClick={player.mute}>
-                  <VolumeX className="h-4 w-4" aria-hidden />
-                  Mute
+                <button type="button" className="icon-btn h-10 w-10 border-2 border-current" style={outline} onClick={player.mute} aria-label="Mute" title="Mute">
+                  <Volume2 className="h-4 w-4" aria-hidden />
                 </button>
               )}
-              <span className="hidden w-2 md:block" />
-              <Link to="/tv/guide" className="pill" style={outline}>
+              <Link to="/tv/guide" className="icon-btn h-10 w-10 border-2 border-current" style={outline} aria-label="Guide" title="Guide">
                 <List className="h-4 w-4" aria-hidden />
-                Guide
               </Link>
-              <button type="button" className="pill hidden w-[190px] sm:inline-flex" style={outline} onClick={cycleRoom}>
+              <button
+                type="button"
+                className="icon-btn hidden h-10 w-10 border-2 border-current sm:inline-flex"
+                style={outline}
+                onClick={cycleRoom}
+                aria-label={`Change room (now ${room.name})`}
+                title={`Room: ${room.name}`}
+              >
                 <Tv className="h-4 w-4" aria-hidden />
-                {room.name}
               </button>
-              <button type="button" className="pill px-3" style={outline} onClick={tv.toggleFullscreen} aria-label="Full screen">
+              <button type="button" className="icon-btn h-10 w-10 border-2 border-current" style={outline} onClick={tv.toggleFullscreen} aria-label="Full screen" title="Full screen">
                 <Maximize className="h-4 w-4" aria-hidden />
               </button>
             </div>
           </div>
-
-          {/* Phones and tablets: the record sits in the band. */}
-          <Link to={album.uri_release} className="mt-6 flex items-center gap-3 lg:hidden">
-            <img src={cover} alt="" className="h-16 w-16 object-cover" />
-            <span className="flex min-w-0 flex-1 flex-col">
-              <span className="truncate text-[15px] font-bold">{album.release_name}</span>
-              <span className="t-mono text-[11px] opacity-80">View album</span>
-            </span>
-          </Link>
         </div>
       </section>
 

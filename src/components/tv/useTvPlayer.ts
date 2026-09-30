@@ -12,6 +12,7 @@ import { useCallback, useEffect, useRef, useState, type RefObject } from 'react'
 
 interface YTPlayer {
   loadVideoById(opts: { videoId: string; startSeconds?: number }): void;
+  seekTo(seconds: number, allowSeekAhead: boolean): void;
   playVideo(): void;
   pauseVideo(): void;
   mute(): void;
@@ -85,6 +86,10 @@ export interface TvPlayer {
   unmute: () => void;
   /** Seconds into the current video (0 before it starts). */
   time: () => number;
+  /** The video's real length in seconds (0 until YouTube knows it). */
+  duration: () => number;
+  /** Jump to a point in the current video. */
+  seek: (seconds: number) => void;
 }
 
 export function useTvPlayer(
@@ -184,5 +189,7 @@ export function useTvPlayer(
       setMuted(false);
     },
     time: () => player.current?.getCurrentTime() ?? 0,
+    duration: () => player.current?.getDuration() ?? 0,
+    seek: (seconds: number) => player.current?.seekTo(Math.max(0, seconds), true),
   };
 }

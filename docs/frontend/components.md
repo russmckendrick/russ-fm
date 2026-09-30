@@ -180,7 +180,13 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
   the room photo) or, with no slot, floats bottom left as a mini player with a
   sleeve-coloured bar. See [pages.md](./pages.md#tvpage-srcpagestvpagetsx).
 - `useTvPlayer(host, { enabled, onEnded, onError })` wraps the YouTube IFrame Player
-  API: no controls, starts muted, loads the API only when `enabled`.
+  API: no controls, starts muted, loads the API only when `enabled`; `time()`,
+  `duration()` (YouTube's real length) and `seek(seconds)`.
+- `Scrubber` (`elapsed`, `duration`, `onSeek`): the progress line along a bar's top
+  edge as a `role="slider"`. Pointer click/drag (pointer capture, touch-friendly),
+  a taller hit area than the line, a knob and time bubble while dragging, and arrow /
+  Page / Home / End keys. `tv-scrub-inset` keeps it inside a clipped box (the
+  full-screen bar).
 - `AlbumTv` is the album page's YouTube tab: a mini russ.fm/tv. It builds the
   record's own channel from `tv.json` (`albumChannel()` in `src/lib/tv.ts`: release
   order, every video, the room of the record's first genre channel, `home` set to

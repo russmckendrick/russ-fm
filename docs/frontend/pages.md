@@ -664,7 +664,8 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   plays on in order; previous/next and the Up next tiles jump within the channel.
 - **The room.** `TvRoom` (`src/pages/tv/TvRoom.tsx`) draws a room photo whose TV
   screen has been cut out (transparent), sizes it so the screen is a set size and
-  keeps the photo covering the box, and marks where the screen is with
+  keeps the photo covering the box (the TV page passes `zoom={1.35}` to move in on
+  the set), and marks where the screen is with
   `.tv-screen-slot` (scanlines, channel number, bug and the static burst live there).
   A masked `mix-blend-mode: color` layer (`.tv-room-tint`) tints the room, never the
   screen, with the sleeve colour of the video on screen. Each channel has its own room
@@ -683,18 +684,23 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   muted so it can autoplay; "Sound on" (or tapping the screen) unmutes. A video that
   ends moves on, and one YouTube refuses (removed, private, embedding disabled) is
   skipped. Every change shows a burst of static (`.tv-static`).
-- **Fixed band.** Every line in the now-playing band is a fixed height: the kicker,
-  artist and album lines truncate, and the title scales into a fixed box
-  (`.tv-title-box`, `FitTitle` with `fitHeight`), so the progress bar and controls stay
-  put from video to video.
+- **Now-playing band** is one slim row (about 130px on desktop), like the album page's
+  TV and the full-screen bar: progress as a white line on a dark track along its top
+  edge (so it shows on any sleeve colour) that is also a scrubber (`Scrubber`: click or
+  drag to jump, with a time bubble; arrows ±5s, Page Up/Down ±30s, Home/End), previous/play/
+  next on the left, then channel · time, a one-line title (`.tv-title-box`, 40/46/50px
+  high, `FitTitle` with `fitHeight` up to 52px, so nothing moves between videos) and
+  artist · album · year · label, and the extras on the right as 40px icon buttons
+  (sound, guide, room, full screen; "Sound on" is a solid pill while muted, icon-only on
+  phones). On phones the credit drops below the one row of buttons.
 - **Colour.** The page takes the current record's colours (`usePageFlood` with the
   sleeve as the logo label and the sleeve's ground), and the now-playing band is the
-  flood. On desktop the record (`HeroRecord`, disc out, no sticker) hangs over the
-  band; on phones the sleeve is a row in the band.
-- **Full screen** puts the TV layer in full screen, letterboxed, with an MTV-style
-  credit block in the sleeve colour that stays up the whole time: sleeve, channel,
-  artist, title, album · year · label, a progress bar and the controls (previous,
-  play/pause, next, sound, exit full screen).
+  flood. On desktop the record (`HeroRecord`, 230px, disc out, no sticker) hangs from
+  the room into the band.
+- **Full screen** puts the TV layer in full screen, letterboxed, with a slim credit
+  bar in the sleeve colour (the album page TV row's scale) that stays up the whole
+  time: progress as a line along its top, the sleeve, channel · time, artist, title,
+  album · year · label, and previous, play/pause, next, sound and exit buttons.
 - Below: **Up next** (the next six in the channel, YouTube stills with a colour bar)
   and **Channels**, each tile in the colour of what it is airing now (refreshed every
   30 seconds).

@@ -1409,27 +1409,27 @@ body {
   transition: transform 0.2s, background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
 }
 
-/* Song title: a fixed box the title scales into (FitTitle), so the lines
-   and controls below never move between videos. column-reverse sits the
+/* Song title: a one-line box the title scales into (FitTitle), so the lines
+   and controls below never move between videos and short titles leave no gap. column-reverse sits the
    title on the box's bottom edge while any overflow still counts in
    scrollHeight, which FitTitle's height check reads. */
 .tv-title-box {
   display: flex;
   flex-direction: column-reverse;
-  height: 112px;
-  margin-top: 4px;
+  height: 40px;
+  margin: 2px 0 1px;
   overflow: hidden;
 }
 
 @media (min-width: 640px) {
   .tv-title-box {
-    height: 150px;
+    height: 46px;
   }
 }
 
 @media (min-width: 1024px) {
   .tv-title-box {
-    height: 200px;
+    height: 50px;
   }
 }
 
@@ -1455,21 +1455,25 @@ body {
 
 .tv-credit {
   position: absolute;
-  left: 56px;
-  bottom: 56px;
+  left: 40px;
+  bottom: 40px;
   display: flex;
-  align-items: stretch;
-  width: min(1040px, calc(100vw - 112px));
+  align-items: center;
+  gap: 16px;
+  width: min(820px, calc(100vw - 80px));
+  padding: 12px 14px 12px 12px;
+  overflow: hidden;
   transition: background-color 0.8s var(--ease-out), color 0.8s var(--ease-out);
 }
 
+/* Progress as a line along the top edge, as on the album page's TV row. */
+
+
 .tv-credit img {
-  width: 240px;
-  height: auto;
-  aspect-ratio: 1;
+  width: 104px;
+  height: 104px;
   object-fit: cover;
   flex-shrink: 0;
-  align-self: stretch;
 }
 
 .tv-credit-text {
@@ -1477,72 +1481,156 @@ body {
   min-width: 0;
   flex: 1;
   flex-direction: column;
-  justify-content: center;
   gap: 2px;
-  padding: 20px 26px 20px 24px;
+}
+
+.tv-credit-text > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tv-credit-text .tv-credit-kicker {
-  margin: 0 0 4px;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.75;
 }
 
 .tv-credit-text .t-dispn {
-  font-size: 22px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  margin-top: 2px;
+  font-size: 15px;
 }
 
 .tv-credit-text .t-cond {
-  font-size: 76px;
-  line-height: 0.86;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 40px;
+  line-height: 0.95;
 }
 
-.tv-credit-text > .t-mono:not(.tv-credit-kicker) {
-  margin-top: 8px;
-  font-size: 13px;
+.tv-credit-text .tv-credit-meta {
+  font-size: 11px;
   opacity: 0.8;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.tv-credit-progress {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 14px;
-  font-size: 13px;
 }
 
 .tv-credit-controls {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-  gap: 10px;
-  margin-top: 14px;
+  gap: 8px;
 }
 
 @media (max-width: 767px) {
   .tv-credit {
-    left: 16px;
-    bottom: 16px;
-    width: calc(100vw - 32px);
+    left: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    gap: 10px;
   }
 
-  .tv-credit img {
+  .tv-credit img,
+  .tv-credit-text .tv-credit-meta {
     display: none;
   }
 
   .tv-credit-text .t-cond {
-    font-size: 44px;
+    font-size: 26px;
   }
+}
+
+/* Scrubber: the progress line along a bar's top edge, white on a dark track.
+   The hit area is taller than the line and straddles the edge; hovering or
+   dragging thickens the line and shows a knob. */
+.tv-scrub {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  z-index: 2;
+  height: 22px;
+  cursor: pointer;
+  touch-action: none;
+}
+
+.tv-scrub-inset {
+  top: 0;
+}
+
+.tv-scrub-track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.35);
+  transition: top 0.15s, height 0.15s;
+}
+
+.tv-scrub-inset .tv-scrub-track {
+  top: 0;
+}
+
+.tv-scrub:hover .tv-scrub-track,
+.tv-scrub[data-drag] .tv-scrub-track,
+.tv-scrub:focus-visible .tv-scrub-track {
+  top: 6px;
+  height: 10px;
+}
+
+.tv-scrub-inset:hover .tv-scrub-track,
+.tv-scrub-inset[data-drag] .tv-scrub-track,
+.tv-scrub-inset:focus-visible .tv-scrub-track {
+  top: 0;
+}
+
+.tv-scrub-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: #fff;
+}
+
+.tv-scrub-knob {
+  position: absolute;
+  top: 11px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.15s;
+  pointer-events: none;
+}
+
+.tv-scrub-inset .tv-scrub-knob {
+  top: 5px;
+}
+
+.tv-scrub:hover .tv-scrub-knob,
+.tv-scrub[data-drag] .tv-scrub-knob,
+.tv-scrub:focus-visible .tv-scrub-knob {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.tv-scrub:focus-visible {
+  outline: none;
+}
+
+.tv-scrub-time {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  padding: 3px 7px;
+  background: #0e0d0c;
+  color: #fbf7ef;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.tv-scrub-inset .tv-scrub-time {
+  bottom: auto;
+  top: 18px;
 }
 
 /* Guide programme blocks. */

@@ -6,6 +6,7 @@ import { getAlbumImageFromData } from '@/lib/image-utils';
 import { originalYear } from '@/lib/releaseYear';
 import { floodFor } from '@/lib/sleeveColour';
 import { formatDuration, onAir, videoPath, type TvChannel } from '@/lib/tv';
+import { Scrubber } from './Scrubber';
 import { TvContext, type TvState } from './tv-context';
 import { useTvPlayer } from './useTvPlayer';
 
@@ -225,64 +226,62 @@ function FullscreenCredit({ value, flood, ink, year, label }: { value: TvState; 
   }, [item?.id]);
   if (!item || !channel) return null;
   const album = item.album;
-  const btn = { background: ink, color: flood };
 
+  const duration = player.duration() || item.seconds;
+  const seek = (seconds: number) => {
+    player.seek(seconds);
+    setElapsed(seconds);
+  };
+  const icon = { background: ink, color: flood };
+  const outline = { color: ink, border: `2px solid ${ink}` };
+
+  // A slim bar, the same scale as the album page's TV row: progress along the
+  // top, the sleeve, one line of detail over the title, then the controls.
   return (
     <div className="tv-credit" style={{ background: flood, color: ink }}>
+      <Scrubber className="tv-scrub-inset" elapsed={elapsed} duration={duration} onSeek={seek} />
       <img src={getAlbumImageFromData(album.uri_release, 'medium')} alt="" />
       <div className="tv-credit-text">
         <span className="t-mono tv-credit-kicker">
-          CH {channel.number} · {channel.name}
+          CH {channel.number} · {channel.name} · {formatDuration(elapsed)} / {formatDuration(duration)}
         </span>
         <span className="t-dispn">{item.artist}</span>
         <span className="t-cond">{item.title}</span>
-        <span className="t-mono">
+        <span className="t-mono tv-credit-meta">
           {album.release_name}
           {year ? ` · ${year}` : ''}
           {label ? ` · ${label}` : ''}
         </span>
-        <div className="tv-credit-progress">
-          <div className="relative h-1.5 flex-1 overflow-hidden rounded-full">
-            <div className="absolute inset-0 opacity-25" style={{ background: ink }} />
-            <div
-              className="absolute inset-y-0 left-0 transition-[width] duration-1000 ease-linear"
-              style={{ background: ink, width: `${Math.min(100, (elapsed / item.seconds) * 100)}%` }}
-            />
-          </div>
-          <span className="t-mono w-[92px] shrink-0 tabular-nums">
-            {formatDuration(elapsed)} / {formatDuration(item.seconds)}
-          </span>
-        </div>
-        <div className="tv-credit-controls">
-          <button type="button" className="icon-btn" style={btn} onClick={value.prev} aria-label="Previous video">
-            <SkipBack className="h-5 w-5 fill-current" aria-hidden />
-          </button>
-          <button
-            type="button"
-            className="icon-btn h-14 w-14"
-            style={btn}
-            onClick={() => (player.playing ? player.pause() : player.play())}
-            aria-label={player.playing ? 'Pause' : 'Play'}
-          >
-            {player.playing ? <Pause className="h-6 w-6 fill-current" aria-hidden /> : <Play className="h-6 w-6 fill-current" aria-hidden />}
-          </button>
-          <button type="button" className="icon-btn" style={btn} onClick={value.next} aria-label="Next video">
-            <SkipForward className="h-5 w-5 fill-current" aria-hidden />
-          </button>
-          <button
-            type="button"
-            className="icon-btn"
-            style={{ color: ink, border: `2px solid ${ink}` }}
-            onClick={player.muted ? player.unmute : player.mute}
-            aria-label={player.muted ? 'Sound on' : 'Mute'}
-          >
-            {player.muted ? <VolumeX className="h-5 w-5" aria-hidden /> : <Volume2 className="h-5 w-5" aria-hidden />}
-          </button>
-          <button type="button" className="pill ml-auto" style={{ color: ink }} onClick={value.toggleFullscreen}>
-            <Minimize className="h-4 w-4" aria-hidden />
-            Exit full screen
-          </button>
-        </div>
+      </div>
+      <div className="tv-credit-controls">
+        <button type="button" className="icon-btn h-9 w-9" style={icon} onClick={value.prev} aria-label="Previous video">
+          <SkipBack className="h-4 w-4 fill-current" aria-hidden />
+        </button>
+        <button
+          type="button"
+          className="icon-btn h-11 w-11"
+          style={icon}
+          onClick={() => (player.playing ? player.pause() : player.play())}
+          aria-label={player.playing ? 'Pause' : 'Play'}
+        >
+          {player.playing ? <Pause className="h-5 w-5 fill-current" aria-hidden /> : <Play className="h-5 w-5 fill-current" aria-hidden />}
+        </button>
+        <button type="button" className="icon-btn h-9 w-9" style={icon} onClick={value.next} aria-label="Next video">
+          <SkipForward className="h-4 w-4 fill-current" aria-hidden />
+        </button>
+        <button
+          type="button"
+          className="icon-btn h-9 w-9"
+          style={player.muted ? icon : outline}
+          onClick={player.muted ? player.unmute : player.mute}
+          aria-label={player.muted ? 'Sound on' : 'Mute'}
+          title={player.muted ? 'Sound on' : 'Mute'}
+        >
+          {player.muted ? <VolumeX className="h-4 w-4" aria-hidden /> : <Volume2 className="h-4 w-4" aria-hidden />}
+        </button>
+        <button type="button" className="icon-btn h-9 w-9" style={outline} onClick={value.toggleFullscreen} aria-label="Exit full screen" title="Exit full screen">
+          <Minimize className="h-4 w-4" aria-hidden />
+        </button>
       </div>
     </div>
   );
