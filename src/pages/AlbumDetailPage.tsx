@@ -495,14 +495,18 @@ export function AlbumDetailPage() {
     return text?.replace(/<[^>]*>/g, '').replace(/\n\s*\n/g, '\n').trim();
   };
 
+  // The Perplexity description when there is one; otherwise the longest of
+  // Apple Music's editorial notes and the Last.fm wiki.
   const getAlbumDescription = () => {
+    const perplexity = cleanDescription(detailedAlbum?.services?.perplexity?.description ?? '');
+    if (perplexity) return perplexity;
+
     const candidates: (string | undefined | null)[] = [
       detailedAlbum?.services?.apple_music?.raw_attributes?.editorialNotes?.short,
       detailedAlbum?.services?.apple_music?.raw_attributes?.editorialNotes?.standard,
       detailedAlbum?.services?.apple_music?.editorial_notes,
       detailedAlbum?.services?.lastfm?.wiki_summary,
       detailedAlbum?.services?.lastfm?.wiki_content,
-      detailedAlbum?.services?.perplexity?.description,  // Perplexity AI fallback
     ];
 
     let longest: string | null = null;

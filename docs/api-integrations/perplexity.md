@@ -1,6 +1,8 @@
 # Perplexity AI Integration
 
-Perplexity AI provides AI-generated album descriptions when other sources are unavailable.
+Perplexity AI provides AI-generated album descriptions. When a release has one, the
+album page shows it ahead of Apple Music's editorial notes and the Last.fm wiki, which
+are the fallback (see [pages.md](../frontend/pages.md), AlbumDetailPage).
 
 ## Overview
 

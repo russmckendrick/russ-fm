@@ -297,16 +297,11 @@ goes through `AlbumRouteHandler`, which keys the page by slug so moving to
 another album mounts a fresh page. The page meta description and the
 JSON-LD `datePublished` use the original year too.
 
-**Description Fallback Chain:**
-
-```typescript
-const description =
-  album.apple_music?.editorial_notes?.short ||
-  album.apple_music?.editorial_notes?.standard ||
-  album.lastfm?.wiki_summary ||
-  album.perplexity?.description ||
-  null;
-```
+**Description:** `services.perplexity.description` when there is one. Without
+it, the longest of Apple Music's editorial notes (`raw_attributes.editorialNotes`
+short/standard, `editorial_notes`) and the Last.fm wiki (`wiki_summary`,
+`wiki_content`), HTML stripped (`getAlbumDescription`). The page meta
+description (`buildAlbumDescription`) also leads with Perplexity.
 
 ---
 
