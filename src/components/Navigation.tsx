@@ -56,7 +56,7 @@ const SOLID_AFTER = 120;
 
 export function Navigation() {
   const location = useLocation();
-  const { flood, ink, cover, vinyl } = useFloodValue();
+  const { flood, ink, cover, vinyl, ground } = useFloodValue();
   const markLook = useMemo(() => vinylLook(vinyl), [vinyl]);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOverlayOpen, setSearchOverlayOpen] = useState(false);
@@ -128,6 +128,17 @@ export function Navigation() {
 
   const solid = scrolled || menuOpen;
   const bg = menuOpen ? flood : scrolled ? "color-mix(in oklab, var(--ground) 97%, transparent)" : flood;
+  // The browser's own toolbar follows the header: the flood, or the page's dark once scrolled.
+  const tint = menuOpen || !scrolled ? flood : ground ?? GROUND;
+  // Desktop Safari 26+ ignores theme-color and tints its toolbar from the <body> background,
+  // which it watches live. The page itself is painted by the app root, so the body's colour only
+  // shows when overscrolling; giving it the header's colour makes the toolbar follow the header.
+  // theme-color still covers older Safari, iOS and Chrome on Android.
+  useEffect(() => {
+    document.body.style.backgroundColor = tint;
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", tint);
+  }, [tint]);
+  useEffect(() => () => void document.body.style.removeProperty("background-color"), []);
   const fg = menuOpen ? ink : scrolled ? CREAM : ink;
   const browseActive = BROWSE.some(isActive);
   const hasFlood = flood !== GROUND;

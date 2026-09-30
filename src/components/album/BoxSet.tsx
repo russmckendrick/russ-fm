@@ -7,7 +7,7 @@ import type { BoxDisc, BoxTrack } from '@/lib/boxDiscs';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { floodFor, type Flood } from '@/lib/sleeveColour';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
-import { discLook } from '@/lib/vinylLook';
+import { discLook, vinylLook } from '@/lib/vinylLook';
 import { cn } from '@/lib/utils';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
 import { Sleeve, Sticker, Vinyl } from '@/components/player';
@@ -83,10 +83,12 @@ interface BoxContentsProps {
   colours: Record<string, AlbumColorPalette> | null;
   boxFlood: Flood;
   artist: string;
+  /** The colours of each member's discs in this box (`boxMemberDiscs`), keyed by `uri_release`. */
+  memberDiscs?: Map<string, Array<string | null>>;
 }
 
 /** "In this box": pick a disc, its panel takes the sleeve's colour, tracklist and scrobble. */
-export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlood, artist }: BoxContentsProps) {
+export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlood, artist, memberDiscs }: BoxContentsProps) {
   const [scrobbling, setScrobbling] = useState(false);
   const vinylOf = useVinylColours();
   const disc = discs[selected];
@@ -151,7 +153,11 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
           <div className="relative aspect-square w-full">
             <Vinyl
               label={f.ground}
-              look={discLook(vinylOf(disc.member?.uri_release ?? boxUri), 0)}
+              look={
+                disc.member && memberDiscs?.has(disc.member.uri_release)
+                  ? vinylLook(memberDiscs.get(disc.member.uri_release)!.find(Boolean) ?? null)
+                  : discLook(vinylOf(disc.member?.uri_release ?? boxUri), 0)
+              }
               fast={scrobbling}
               className="left-[2%] top-[2%] h-[96%] w-[96%] transition-transform duration-1000"
               style={{ transform: `translateX(${scrobbling ? 38 : 18}%)` }}

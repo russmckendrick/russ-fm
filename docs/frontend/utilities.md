@@ -233,6 +233,33 @@ const discs = buildBoxDiscs(tracks as BoxTrack[], album.boxset_contents ?? []);
 - `sides` lists the side letters in box order (e.g. `["E", "F"]`), taken from the first
   character of each position.
 
+### Inherited vinyl colours: `boxMemberDiscs(tracklist, formats, contents)`
+
+A boxset member links to the album's ordinary Discogs release, which is usually black; the
+colour of its disc in the box lives only on the box. This returns the colour of each disc of
+every linked member, keyed by `uri_release`, from the box's own detail JSON (`tracklist` and
+`format_details`). It is best effort and needs no data change:
+
+- The box's vinyl entries are laid out as discs in order (`qty` discs each, per-disc colours
+  split from "Disc 1 White, Disc 2 Black", a single-sided disc taking one side), and the box's
+  sides are handed to them in the order the tracklist first uses them. A member gets the discs
+  that play its section's sides.
+- Sides are read from positions: `A1` → A, `AA3` → AA, and a prefix is kept for boxes that
+  restart the letters per disc (`1-C2` → 1C, `LP-B4` → LPB). CD and USB positions have none.
+  A section may carry on the side before it (bonus sub-sections); if a side otherwise comes
+  back, the sides are not trusted and the member takes the vinyl entry at its section's place.
+- Members are matched to sections by title, preferring sections with vinyl sides (so
+  "LP 1: Slayed? (Brown Vinyl)" beats a CD copy titled "Slayed?"), then exact, then loose
+  matches, including a section title contained in the album's ("Vol. 4" for "Black Sabbath
+  Vol 4"). Titles are compared with accents and Greek or Cyrillic look-alike letters folded
+  ("Master Οf Reality" with an Omicron).
+- Members with no coloured disc are left out, so they stay black.
+
+Against the collection, 91 of the 107 members of coloured boxes inherit a colour; nearly all
+the rest are genuinely black discs. The album page uses it for a member (when the release has
+no colour of its own it loads the box's cached detail JSON) and for the box's "In this box"
+panel (`BoxContents`'s `memberDiscs`). Tests: `src/lib/__tests__/boxDiscs.test.ts`.
+
 ## Collection Loader (`src/lib/collection.ts`)
 
 Shared loader for `/collection.json`. The parsed collection is cached for the lifetime of the
@@ -355,6 +382,7 @@ import { discLook } from '@/lib/vinylLook';
 |--------|-------------|
 | `vinylLook(text)` | `{ body, pattern?, groove, rim }` for one colour string, or `null` for black, empty or unrecognised text (the disc stays black) |
 | `discLook(colours, disc)` | The look for disc `disc` of a set: one colour covers every disc, several are one per disc with the last carrying on |
+| `entryDiscColours(entry)` / `splitDiscText(text, qty)` | The colour of each disc in one format entry, splitting "Disc 1 White, Disc 2 Black" into `["White", "Black"]` (the scrapper folds it into one colour, "Disc White"); `pressingTitle(text, colour, qty)` titles such an entry "White / Black" |
 | `pressingDiscs(details, colours)` | The colour of each disc, in order (null for a black disc): each Vinyl entry of the album JSON's `format_details` gives `qty` discs of its `colour`; without details it is one disc per `vinyl_colours` entry. Empty when no disc is coloured, so black sets keep one record |
 | `colourTags(text)` / `COLOUR_FAMILIES` / `PATTERN_TAGS` | The filter tags for one pressing colour: its hue families (Clear, Red, Blue…), Gold & silver, Rainbow and its pattern (Splatter, Marbled, Split); used by the Coloured vinyl page. `COLOUR_FAMILIES` also carries a representative colour for each chip's dot |
 | `pressingTitle(text, colour)` | How a vinyl entry reads in a list: its colour, else the text Discogs gave that is not a known note (so an unrecognised "Flame Vinyl" is shown as written), else "Black"; plus the remaining `extras` |
@@ -402,7 +430,9 @@ Where it shows, all from the same `vinyl_colours`:
 
 - **Album page**: the hero shows every disc of the set (up to four), each in its own colour,
   fanned out behind the front record; each tracklist side's disc takes its LP's colour; and the
-  box-set panel disc follows the box.
+  box-set panel disc takes the selected member's colour in the box. A boxset member with no
+  colour of its own inherits its discs' colours from the box (`boxMemberDiscs`, see
+  [Box Set Discs](#inherited-vinyl-colours-boxmemberdiscstracklist-formats-contents)).
 - **Every record tile** (albums, search, stats, artist, browse, "more by", home rows, Wrapped):
   the disc that slides out on hover.
 - **Home hero, Wrapped heroes and shuffle**: the big disc (the home and Wrapped heroes fan out a

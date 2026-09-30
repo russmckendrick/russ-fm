@@ -1,6 +1,6 @@
 import config from "@/config/vinyl-colours.json";
 import { describe, expect, it } from "vitest";
-import { colourTags, discLook, discLooks, lookAt, pressingDiscs, pressingExtras, pressingTitle, vinylLook } from "../vinylLook";
+import { colourTags, discLook, discLooks, entryDiscColours, lookAt, pressingDiscs, pressingExtras, pressingTitle, splitDiscText, vinylLook } from "../vinylLook";
 
 describe("vinylLook", () => {
   it("leaves black, empty and unrecognised text as a black disc", () => {
@@ -175,6 +175,16 @@ describe("pressingDiscs", () => {
     expect(pressingDiscs(details, ["Red"])).toEqual(["Red", "Red", null]);
   });
 
+  it("splits per-disc colours written into one entry", () => {
+    // Queen II in the Studio Collection box: a white disc and a black one.
+    const details = [{ name: "Vinyl", qty: "2", text: "Disc 1 White, Disc 2 Black", colour: "Disc White" }];
+    expect(pressingDiscs(details, ["Disc White"])).toEqual(["White", "Black"]);
+    expect(entryDiscColours({ name: "Vinyl", qty: "2", text: "Disc 1 Blue, Disc 2 Clear" })).toEqual(["Blue", "Clear"]);
+    // A part per disc is needed; otherwise the entry's colour covers every disc.
+    expect(splitDiscText("Disc 1 Blue", 2)).toBeNull();
+    expect(entryDiscColours({ name: "Vinyl", qty: "2", text: "Blue, 180g", colour: "Blue" })).toEqual(["Blue", "Blue"]);
+  });
+
   it("reads one disc per colour when there are no details (the collection index)", () => {
     expect(pressingDiscs(undefined, ["Red", "Yellow"])).toEqual(["Red", "Yellow"]);
   });
@@ -272,6 +282,11 @@ describe("pressingTitle", () => {
     expect(pressingTitle(null, null)).toEqual({ title: "Black", extras: [] });
     expect(pressingTitle("Gatefold, 180g", null)).toEqual({ title: "Black", extras: ["Gatefold", "180g"] });
     expect(pressingTitle("Crimson Nebula Edition", null).title).toBe("Black");
+  });
+
+  it("titles a per-disc entry by its disc colours", () => {
+    expect(pressingTitle("Disc 1 White, Disc 2 Black", "Disc White", 2)).toEqual({ title: "White / Black", extras: [] });
+    expect(pressingTitle("Disc 1 Blue, Disc 2 Purple, 180g", "Disc Blue Disc Purple", 2)).toEqual({ title: "Blue / Purple", extras: ["180g"] });
   });
 
   it("shows Discogs' own wording when the colour is not recognised", () => {
