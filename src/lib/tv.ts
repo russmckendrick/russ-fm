@@ -1,4 +1,6 @@
-import { artistMatcher } from '@/lib/artistMatch';
+// Relative, not @/: scripts/generate-og-sections.ts runs this file under plain tsx,
+// which doesn't know the alias (type-only imports are erased, so they're fine).
+import { artistMatcher } from './artistMatch';
 import type { Album } from '@/types/album';
 
 /**

@@ -1,4 +1,5 @@
-import { sanitizeFolderName } from '@/lib/sigurRosNormalizer';
+// Relative, not @/: src/lib/tv.ts imports this, and the OG script runs that under plain tsx.
+import { sanitizeFolderName } from './sigurRosNormalizer';
 
 /** The parts of an album that say who is on it. */
 export interface ArtistCredits {
