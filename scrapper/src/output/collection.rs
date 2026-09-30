@@ -1,6 +1,7 @@
 //! `collection.json` generator — the flat index the React frontend reads. Port of
 //! `collection_generator.py`. Output is `indent=2, ensure_ascii=False`, insertion-order keys,
-//! no trailing newline, sorted by `date_added` descending.
+//! no trailing newline, sorted by `date_added` descending. Every write also refreshes the
+//! sibling `tv.json` (see [`super::tv`]).
 
 use anyhow::{Context, Result};
 use serde_json::{json, Map, Value};
@@ -43,7 +44,55 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
     // Preserve insertion order (no sort) to match the Python writer.
     let text = serde_json::to_string_pretty(&Value::Array(list))?;
     std::fs::write(output_path, text)?;
+
+    // The /tv page's video index always travels with collection.json.
+    let tv_path = output_path.with_file_name("tv.json");
+    super::tv::write(cfg, &releases, &tv_path).with_context(|| format!("writing {}", tv_path.display()))?;
     Ok(count)
+}
+
+/// The naming shared by every per-release index (`collection.json`, `tv.json`): the display
+/// name, headliner credits and the album page URI. `None` when the release has no usable name
+/// or no named headliner — such releases are left out of every index.
+pub(crate) struct ReleaseIdentity<'a> {
+    pub release_name: String,
+    /// Headliner credit objects (band members excluded), in credit order.
+    pub headliners: Vec<&'a Value>,
+    /// Non-empty headliner names, in credit order.
+    pub names: Vec<String>,
+    pub release_folder: String,
+    /// `/{releases.path}/{release_folder}/` — `uri_release` in collection.json.
+    pub uri_release: String,
+}
+
+pub(crate) fn release_identity<'a>(cfg: &Config, rec: &'a ReleaseRecord) -> Option<ReleaseIdentity<'a>> {
+    let release_name = if let Some(n) = &rec.release_name_discogs {
+        n.clone()
+    } else if !rec.title.is_empty() {
+        rec.title.clone()
+    } else {
+        return None;
+    };
+
+    let credits = rec.artists.as_array()?;
+    // Band members are listed separately; everything artist-facing uses the headliners.
+    let headliners = crate::credits::headliners(credits);
+    let names: Vec<String> = headliners
+        .iter()
+        .filter_map(|a| a.get("name").and_then(|n| n.as_str()).map(String::from))
+        .filter(|n| !n.is_empty())
+        .collect();
+    if names.is_empty() {
+        return None;
+    }
+    let release_folder = release_folder_name(&release_name, rec.discogs_id.as_deref().unwrap_or(""));
+    let uri_release = format!("/{}/{release_folder}/", cfg.releases.path);
+    Some(ReleaseIdentity { release_name, headliners, names, release_folder, uri_release })
+}
+
+/// `date_added` as written to the indexes: the date part only, `1900-01-01` when unknown.
+pub(crate) fn date_added(rec: &ReleaseRecord) -> String {
+    rec.date_added.as_deref().map(date_only).unwrap_or_else(|| "1900-01-01".into())
 }
 
 /// A collection.json entry plus the release metadata needed to wire boxset links after the
@@ -128,7 +177,7 @@ fn link_boxsets(entries: &mut [BuiltEntry]) {
     }
 }
 
-fn string_list_filtered(v: &Value) -> Vec<String> {
+pub(crate) fn string_list_filtered(v: &Value) -> Vec<String> {
     v.as_array()
         .map(|a| a.iter().filter_map(|s| s.as_str()).filter(|s| *s != "Music").map(String::from).collect())
         .unwrap_or_default()
@@ -273,29 +322,12 @@ fn artist_image_uris(cfg: &Config, folder: &str) -> Value {
 }
 
 fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
-    let release_name = if let Some(n) = &rec.release_name_discogs {
-        n.clone()
-    } else if !rec.title.is_empty() {
-        rec.title.clone()
-    } else {
-        return None;
-    };
-
+    let ReleaseIdentity { release_name, headliners: artist_entries, names, release_folder, uri_release } =
+        release_identity(cfg, rec)?;
     let credits = rec.artists.as_array()?;
-    // Band members are listed separately; everything artist-facing uses the headliners.
-    let artist_entries = crate::credits::headliners(credits);
-    let names: Vec<String> = artist_entries
-        .iter()
-        .filter_map(|a| a.get("name").and_then(|n| n.as_str()).map(String::from))
-        .filter(|n| !n.is_empty())
-        .collect();
-    if names.is_empty() {
-        return None;
-    }
     let release_artist = names.join(" & ");
     // The primary (backward-compat) artist URI sanitizes the *joined* artist string.
     let primary_folder = sanitize_folder_name(&release_artist);
-    let release_folder = release_folder_name(&release_name, rec.discogs_id.as_deref().unwrap_or(""));
 
     // Per-artist sub-entries (with truncated biography looked up from the artists table).
     let artists: Vec<Value> = artist_entries
@@ -379,9 +411,9 @@ fn build_entry(cfg: &Config, db: &Db, rec: &ReleaseRecord) -> Option<Value> {
     e.insert("labels".into(), json!(labels));
     e.insert("country".into(), rec.country.clone().map(Value::from).unwrap_or(Value::Null));
     e.insert("lastfm_listeners".into(), lastfm_listeners.map(Value::from).unwrap_or(Value::Null));
-    e.insert("uri_release".into(), json!(format!("/{alb}/{release_folder}/")));
+    e.insert("uri_release".into(), json!(uri_release));
     e.insert("uri_artist".into(), json!(format!("/{a}/{primary_folder}/")));
-    e.insert("date_added".into(), json!(rec.date_added.as_deref().map(date_only).unwrap_or_else(|| "1900-01-01".into())));
+    e.insert("date_added".into(), json!(date_added(rec)));
     e.insert("date_release_year".into(), json!(date_release_year(rec).unwrap_or_else(|| "1900-01-01".into())));
     e.insert("year_original".into(), year_original(rec).map(Value::from).unwrap_or(Value::Null));
     e.insert("json_detailed_release".into(), json!(format!("/{alb}/{release_folder}/{release_folder}.json")));

@@ -411,6 +411,86 @@ on first use through `useAlbumSwatches()`.
 
 ---
 
+### tv.json
+
+The video index behind the `/tv` page. Written by the scrapper next to
+`collection.json` every time that file is generated (`scrapper/src/output/tv.rs`), as
+compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
+
+```json
+{
+  "version": 1,
+  "releases": [
+    {
+      "uri": "/album/becoming-x-15763685/",
+      "name": "Becoming X",
+      "artist": "Sneaker Pimps",
+      "date_added": "2026-06-02",
+      "genres": ["Electronic"],
+      "styles": ["Trip Hop"],
+      "videos": [
+        { "id": "2eBZqmL8ehg", "title": "6 Underground", "kind": "video", "duration": 236 }
+      ]
+    },
+    {
+      "uri": "/album/now-80s-alternative-27441879/",
+      "name": "Now 80s Alternative",
+      "artist": "Various",
+      "date_added": "2026-03-14",
+      "genres": ["Electronic", "Rock"],
+      "styles": ["New Wave", "Synth-pop"],
+      "videos": [
+        { "id": "…", "title": "A Forest", "artist": "The Cure", "kind": "other", "duration": 297 }
+      ]
+    }
+  ]
+}
+```
+
+- **Source**: `raw_data.discogs.videos` on each release (the album JSON `videos` field
+  only has bare URLs).
+- **`uri`** is byte-identical to the release's `uri_release` in `collection.json` (both
+  come from the same helper), so it doubles as the join key. `date_added` matches too.
+- **`name`** / **`artist`**: the release's `release_name` and `release_artist` as in
+  `collection.json`, so the worker can title a shared video link (`/tv/<channel>/<video>`)
+  without loading the collection.
+- **`genres`** / **`styles`**: Discogs genres and styles, with `"Music"` removed.
+- **Releases** are listed only when at least one video survives, sorted by `date_added`
+  descending then `uri`, so regenerating is deterministic.
+- **`id`**: the 11-character YouTube id from a `v=`, `youtu.be/` or `/embed/` URL.
+  Videos without one, with `embed: false`, or repeating an id already seen on the
+  release are dropped.
+- **Audio-only uploads are dropped**: a description starting "Provided to YouTube by"
+  (auto-generated art tracks), or a title tagged `(Official Audio)`, `[Audio]`,
+  `- Official Audio`, `Official Audio` or `Visualiser`/`Visualizer`.
+- **Whole-record uploads are dropped**: titles containing "full album/concert/show/LP/EP",
+  "full length", "album full", "complete album/LP/EP", "album/audio/vinyl rip", or "side
+  A/B" together with "full", and anything over 30 minutes (90 minutes for `live`).
+- **`kind`**: `live` when "live" is a tag or performance phrase: inside brackets
+  (`(Live at …)`, `[Live]`), closing a dash/pipe segment (`- Live`), or followed by
+  at/from/in/on/@/session/performance/version/studio/vol and similar. Song names such as
+  "Live Forever" or "I Live To Make You Smile" don't count. Otherwise `video` for
+  official video / music video / promo / `(Video)` / `MV` tags; otherwise `other`.
+- **`title`** is cleaned for on-screen credits: a leading `Artist - ` / `Artist: ` /
+  `Artist "…"` credit is removed when it matches a headliner, the joined credit, or a Discogs
+  track artist (compilations, guest tracks); so is a trailing ` - Artist`. Bracketed
+  tags mentioning official, video, audio, HD, 4K, remaster(ed), lyric(s), visualiser,
+  promo, MV, clip, HQ or high quality go, as do ` - Official …` and ` | …` tails,
+  leading `01. ` track numbers and wrapping quotes. Bare trailing tags without brackets
+  go too: `HD`, `HQ`, `in HD`, `Full HD`, `4K`, `1080p`, `720p`, `HD Remaster`,
+  `Official (Music) Video`, `Music Video`, `Promo`. Other brackets, such as
+  `(Live at …)`, stay. If nothing is left, the raw title is used.
+- **`artist`** (optional, between `title` and `kind`): the credit found on the title
+  when it is not the release's headliner, i.e. a compilation's track artist. A matched
+  Discogs track artist (by name or name variation) is shown by its canonical `name`,
+  without a `(2)` suffix or trailing `*`. On a "Various" release, an unmatched `X - Song`
+  title with a single dash also yields `X`, unless `X` doesn't look like an artist
+  (brackets, quotes, `#`, `:`, "trailer", "OST", "vol", over 40 characters). Omitted
+  whenever it would equal the headliner.
+- **`duration`** (seconds) is omitted when Discogs has none or `0`.
+
+---
+
 ### wrapped.json
 
 Year-in-review data structure.

@@ -71,7 +71,7 @@ scrapper/
     │                                #   report, descriptions, videos, maintenance, services
     ├── services/                    # API clients: discogs, apple_music, spotify, lastfm,
     │                                #   wikipedia, theaudiodb, perplexity (+ rate limiting)
-    ├── output/                      # JSON writer, image manager, collection.json generator
+    ├── output/                      # JSON writer, image manager, collection.json + tv.json generators
     └── tui/                         # ratatui app, screens (incl. screens/boxsets.rs), detail
     │                                #   views, modals, runners
 ```
@@ -574,6 +574,12 @@ scrapper release 123456 --force-refresh --save
   ]
 }
 ```
+
+Every write of `collection.json` also writes `tv.json` beside it (same directory), the
+video index for the `/tv` page, built from each release's `raw_data.discogs.videos` by
+`output/tv.rs`. Both files go through `output::collection::generate`, so every command
+that refreshes the collection index refreshes the TV index too. See
+[tv.json](../data/schemas.md#tvjson) for the format and filtering rules.
 
 ## Best Practices
 

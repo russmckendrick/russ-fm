@@ -515,7 +515,9 @@ scrapper backfill-formats
 
 ## generate-collection
 
-Generate collection.json for React frontend.
+Generate collection.json for React frontend. A `tv.json` video index for the `/tv` page is
+written alongside it, in the same directory as `--output` (see
+[tv.json](../data/schemas.md#tvjson)).
 
 ```bash
 scrapper generate-collection [OPTIONS]
