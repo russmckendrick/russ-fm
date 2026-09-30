@@ -89,6 +89,8 @@ export interface PortraitLayout {
 
 /** How far past its edge the photo is carried on to soften the end of the fade. */
 const LEAD_OUT = 96;
+/** The shortest the right fade gets when a face sits near the photo's right edge. */
+const FADE_ROOM = 300;
 
 /**
  * Where the photo sits in the desktop hero. The hero's photo column is sized
@@ -98,7 +100,8 @@ const LEAD_OUT = 96;
  * lead-out past it, finishing just into the gap before the text (or under the
  * text when a wide photo is capped). The fade is longer on a harsh step in
  * lightness, and starts no earlier than just before the last face, as long as
- * that leaves it room.
+ * that leaves it room (FADE_ROOM: a photo with someone at its right edge lets
+ * them go soft rather than keep a short fade that reads as an edge).
  *
  * `stageW`/`stageH`: the stage; `textX`: where the text column starts, in
  * stage px; `harsh`: the backdrop and flood are far apart in lightness.
@@ -121,7 +124,7 @@ export function portraitLayout(
   const faces = info.faces;
   if (faces.length) {
     const lastFace = Math.max(...faces.map(f => f[0] + f[2])) * photoWidth;
-    fadeFrom = Math.max(fadeFrom, Math.min(lastFace - 40, fadeTo - 200));
+    fadeFrom = Math.max(fadeFrom, Math.min(lastFace - 40, fadeTo - FADE_ROOM));
   }
 
   const extendRight = Math.max(0, Math.round(fadeTo - photoRight));
@@ -136,6 +139,33 @@ export function portraitLayout(
     fadeFrom: Math.max(0, fadeFrom),
     fadeTo,
   };
+}
+
+/**
+ * Where the lifted portrait's black and backdrop land (0–1, sRGB). The floor
+ * eases off for a backdrop that's only mid-dark, which keeps more contrast.
+ */
+const LIFT_FLOOR = 0.28;
+const LIFT_FLOOR_MID = 0.12;
+const LIFT_BACKDROP = 0.53;
+
+/**
+ * The portrait's filter when a dark-backdrop photo multiplies into a pale
+ * flood. Multiplied as it is, the backdrop prints near-black: a dark block
+ * with a hard step into the flood that no fade hides. Lifted, its blacks land
+ * at the floor and its backdrop at LIFT_BACKDROP, so it prints as a duotone
+ * of the flood colour and fades out over a much smaller step. Contrast and
+ * brightness are solved from the backdrop's luminance (from the photo's
+ * notes; unmeasured, a typical dark backdrop), capped so a near-black one
+ * doesn't blow the faces out.
+ */
+export function liftedPortraitFilter(backdropLuminance = 0.05): string {
+  const l = Math.max(0, backdropLuminance);
+  const backdrop = l <= 0.0031308 ? 12.92 * l : 1.055 * l ** (1 / 2.4) - 0.055;
+  const floor = LIFT_FLOOR - (LIFT_FLOOR - LIFT_FLOOR_MID) * Math.min(1, Math.max(0, (backdrop - 0.25) / 0.25));
+  const brightness = Math.min(1.8, 2 * floor + (LIFT_BACKDROP - floor) / Math.max(backdrop, 0.05));
+  const contrast = Math.min(1.2, Math.max(0.5, 1 - (2 * floor) / brightness));
+  return `grayscale(1) contrast(${contrast.toFixed(2)}) brightness(${brightness.toFixed(2)})`;
 }
 
 /**

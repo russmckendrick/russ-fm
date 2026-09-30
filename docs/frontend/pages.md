@@ -379,8 +379,9 @@ swatch tints the rest of the page. No gradients.
   the photo is the flood's full height and fades out over its right side on a
   smootherstep curve (16 stops, flat at both ends, so a black backdrop into a pale flood
   shows no bands), longer on a harsh step in lightness and starting no earlier than just
-  before the last face when there is room. To soften the end of the fade the `<img>` box
-  runs a short lead-out (at most 96px) past the photo, filled with a gradient of the
+  before the last face when that leaves it at least 300px (less than that read as an
+  edge on photos with someone at the right edge, so they go soft instead). To soften the
+  end of the fade the `<img>` box runs a short lead-out (at most 96px) past the photo, filled with a gradient of the
   photo's own right-edge colours from the `-image.json` profile (`object-fit: contain`
   holds the photo at its size; the filter, blend and fade treat the lead-out like the
   photo). The fade finishes just into the gap before the text, or under it when a wide
@@ -389,6 +390,10 @@ swatch tints the rest of the page. No gradients.
   only when there is none). It multiplies (a light backdrop takes the flood colour; a dark one stays a tinted print),
   except on a dark flood with a dark backdrop, where it screens so the black takes the
   flood instead. Screening on a pale flood washed subjects out to ghosts, hence the rule.
+  A dark backdrop multiplied into a pale flood printed as a near-black block with a hard
+  step into the flood, so there the photo is lifted first (`liftedPortraitFilter`): its
+  blacks and backdrop are raised to fixed tones, solved from the backdrop's luminance, so
+  it prints as a duotone of the flood colour.
   The backdrop is judged by `useBackdropTone` from the avatar; unmeasured, it goes by the
   flood alone. The artist name is a `FitTitle` (up to 176px, shrunk until its longest word fits,
   never broken mid-word). Then stats

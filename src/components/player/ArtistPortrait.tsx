@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState, type CSSProperties } from 'react';
 import { handleImageError } from '@/lib/image-utils';
-import { edgeGradient, focusPosition, portraitLayout, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
+import { edgeGradient, focusPosition, liftedPortraitFilter, portraitLayout, type ArtistImageInfo, type PortraitLayout } from '@/lib/artistImage';
 
 interface ArtistPortraitProps {
   src: string;
@@ -10,6 +10,8 @@ interface ArtistPortraitProps {
   blend: 'multiply' | 'screen';
   /** Backdrop and flood far apart in lightness: give the right fade more room. */
   harsh: boolean;
+  /** A dark backdrop multiplied into a pale flood: lift its tones (liftedPortraitFilter). */
+  lift: boolean;
   /**
    * The hero's text column; the photo is placed to end before it. An element
    * (from a callback ref), not a ref object: the column renders after the
@@ -32,7 +34,7 @@ const DESKTOP = '(min-width: 1024px)';
  * Masks sit on the <img>, never the stage: a mask on a wrapper
  * isolates it and stops the blend reaching the flood.
  */
-export function ArtistPortrait({ src, alt, info, blend, harsh, textEl }: ArtistPortraitProps) {
+export function ArtistPortrait({ src, alt, info, blend, harsh, lift, textEl }: ArtistPortraitProps) {
   const stageRef = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<PortraitLayout | null>(null);
 
@@ -74,7 +76,7 @@ export function ArtistPortrait({ src, alt, info, blend, harsh, textEl }: ArtistP
         onError={handleImageError}
         className="artist-portrait object-cover object-top grayscale contrast-[1.2]"
         data-placed={layout ? '' : undefined}
-        style={{ mixBlendMode: blend, ...placed }}
+        style={{ mixBlendMode: blend, ...(lift ? { filter: liftedPortraitFilter(info?.backdrop.luminance) } : {}), ...placed }}
       />
     </div>
   );

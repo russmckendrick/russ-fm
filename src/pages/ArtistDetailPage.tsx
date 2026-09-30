@@ -192,6 +192,8 @@ export function ArtistDetailPage() {
   // A dark backdrop multiplied into a pale flood (or the reverse) is a hard
   // step in lightness; the fade gets more room there.
   const portraitHarsh = !!backdrop && (backdrop === 'dark') !== darkFlood;
+  // That dark backdrop would print as a near-black block; lift it instead.
+  const portraitLift = portraitBlend === 'multiply' && backdrop === 'dark';
   const [heroText, setHeroText] = useState<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -317,6 +319,7 @@ export function ArtistDetailPage() {
               info={imageInfo}
               blend={portraitBlend}
               harsh={portraitHarsh}
+              lift={portraitLift}
               textEl={heroText}
             />
           </div>

@@ -330,6 +330,10 @@ for the shape.
   photo's width at the hero's height (320px to 50vw).
 - `portraitLayout(info, stageW, stageH, textX, harsh)`: the desktop placement (photo
   size, the short lead-out past its right edge, right fade in stage px).
+- `liftedPortraitFilter(backdropLuminance?)`: the portrait's CSS filter when a dark
+  backdrop multiplies into a pale flood: greyscale, then contrast and brightness
+  solved so blacks land near 0.28 (easing to 0.12 for a mid-dark backdrop) and the
+  backdrop at 0.53, brightness capped at 1.8.
 - `edgeGradient(edge, direction, start?, length?)`: an edge's colour profile as a
   CSS gradient, for carrying the photo on past that edge.
 - `focusPosition(info)`: `object-position` for the phone crop, centred on the faces.
