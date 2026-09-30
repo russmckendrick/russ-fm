@@ -251,7 +251,14 @@ Round artist photo with a ring in the flood colour of the artist's latest
 sleeve (the ring widens on hover and focus), name in `t-dispn` and the
 record count in mono.
 
-The photo is framed from its `-image.json` notes with `circleCrop()`
+With a `record` (the artist's latest album), that record's disc (`Vinyl`)
+sits behind the photo and slides out sideways on hover (`.artist-rec` in
+`player.css`), the sleeve on its label and the pressing's colour from
+`discLook()`. Both load on first hover, so a page of cards fetches nothing it
+has not shown.
+
+The photo (`ArtistPhoto`, exported for other layouts such as the ranked
+Most records list) is framed from its `-image.json` notes with `circleCrop()`
 (`src/lib/artistImage.ts`): every face inside the circle, sitting a little
 above the middle, zoomed in up to 1.6× on small or distant subjects. When the
 faces fall outside the centred square that `medium` is cut to, the card loads
@@ -265,6 +272,7 @@ never jumps from a centre crop.
 | artist | `{ name, uri, albumCount, image }` | `image` is built by the caller with `image-utils`; `uri` is the `/artist/<slug>/` path |
 | palette | `AlbumColorPalette \| null` | Palette of the latest record; neutral ring without one |
 | feature | `boolean` | Bigger tile: larger name, count and ring. The caller spans it (`sm:col-span-2 sm:row-span-2`) |
+| record | `Pick<Album, 'uri_release' \| 'vinyl_colours'> \| null` | Latest record: its disc slides out from behind the photo on hover |
 | onClick | `() => void` | Render as a button instead of a link |
 | index | `number` | Accepted; not rendered |
 

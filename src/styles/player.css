@@ -361,6 +361,39 @@ body {
   transform: translateX(-6%);
 }
 
+/* Artist card (ArtistCard with a `record`): the latest record's disc sits
+   behind the round photo and slides out sideways on hover, less far than a
+   sleeve's so it stays clear of the next card's name. */
+/* z-index keeps the label's spindle hole (z-index 1) under the photo. */
+.artist-rec .vinyl {
+  z-index: 0;
+  top: 4%;
+  left: 4%;
+  width: 92%;
+  height: 92%;
+  transition: transform 0.7s var(--ease-out);
+}
+
+.artist-rec .artist-rec-photo {
+  position: relative;
+}
+
+.group:hover .artist-rec .vinyl,
+.group:focus-visible .artist-rec .vinyl {
+  transform: translateX(30%);
+}
+
+.group:hover .artist-rec .artist-rec-photo,
+.group:focus-visible .artist-rec .artist-rec-photo {
+  transform: translateX(-6%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artist-rec .vinyl {
+    transition: none;
+  }
+}
+
 /* --- Artist portrait ------------------------------------------------------ */
 /* ArtistPortrait (src/components/player/ArtistPortrait.tsx). The top and
    page edge stay crisp.
