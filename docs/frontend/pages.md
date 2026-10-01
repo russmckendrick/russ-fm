@@ -649,7 +649,8 @@ video, e.g. `/tv/electronic/sneaker-pimps-6-underground-2eBZqmL8ehg`) and `/tv/g
   (`TvArtistPage`) play one artist's videos on the same scene: channel `AR`, named after
   the artist, built by `artistChannel()` (see [utilities](./utilities.md#tv-srclibtvts)).
   The artist page links to it with a "Watch N videos" pill (a `Tv` icon, first in the
-  service pills), shown only when the channel has videos; an artist with none gets a
+  service pills and the filled one; without videos the first service is filled instead), shown
+  only when the channel has videos; an artist with none gets a
   "No videos for this artist yet" page with a link back. The address follows the video
   as on any channel (`videoPath('artist/<slug>', item)`), and the floating player links
   back to it.

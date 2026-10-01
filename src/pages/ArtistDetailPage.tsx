@@ -353,14 +353,20 @@ export function ArtistDetailPage() {
               ))}
             </dl>
             <div className="flex flex-wrap gap-2.5">
+              {/* Only the first pill in the row is filled: Watch when there are videos. */}
               {tvVideos > 0 && (
-                <Link to={`/tv/artist/${artistPath}`} className="pill" title={`${artistName} on russ.fm/tv`}>
+                <Link
+                  to={`/tv/artist/${artistPath}`}
+                  className="pill pill-solid"
+                  style={{ background: flood.ink, color: flood.top }}
+                  title={`${artistName} on russ.fm/tv`}
+                >
                   <Tv className="h-[18px] w-[18px] shrink-0" aria-hidden />
                   Watch {tvVideos} video{tvVideos === 1 ? '' : 's'}
                 </Link>
               )}
               {services.map((s, i) => (
-                <PillLink key={s.label} to={s.url} solid={i === 0 ? { background: flood.ink, color: flood.top } : undefined}>
+                <PillLink key={s.label} to={s.url} solid={i === 0 && tvVideos === 0 ? { background: flood.ink, color: flood.top } : undefined}>
                   {s.label}
                 </PillLink>
               ))}
