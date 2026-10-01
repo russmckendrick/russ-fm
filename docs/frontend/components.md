@@ -67,9 +67,11 @@ The section after a `CoverHero` must add the `AFTER_HERO` top padding
 | eager | `boolean` | `true` | Eager-load the image |
 
 **Hover.** On hover-capable devices (and not with reduced motion) hovering the record sets
-`--pull: 18%` on `.hero-record`, and every disc slides out that much further, the deeper ones of
-a multi-disc set further still so the fan opens. The discs pass over the start of the title beside
-the record, on purpose. It only applies while the scrobble scene is idle. Each disc's offset is
+`--pull: 6%` on `.hero-record`, and every disc slides out that much further, the deeper ones of
+a multi-disc set further still so the fan opens. It's a nudge: the discs stay clear of the title
+beside the record (18% used to cover it). It only applies while the scrobble scene is idle. The
+hero disc idles at a slow 6s turn (`.hero-disc .spin-33`) rather than a true 33⅓, which looked
+frantic at that size; the scrobble scene's `spin-45` is unchanged. Each disc's offset is
 `calc(<resting shift> + var(--pull) * <lean>)` set inline by `HeroRecord`; the rule is in
 `player.css`.
 

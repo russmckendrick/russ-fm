@@ -532,8 +532,8 @@ body {
    disc's offset from --pull). Only while idle, and only where hover exists. */
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .hero-record[data-scene='idle']:hover {
-    /* Far enough that the discs slide over the start of the title beside the record. */
-    --pull: 18%;
+    /* A nudge, not a reveal: the disc stays clear of the title beside the record. */
+    --pull: 6%;
   }
 
   .hero-record[data-scene='idle']:hover .hero-disc {
@@ -543,6 +543,12 @@ body {
 
 .hero-disc .vinyl {
   transition: box-shadow 0.8s var(--ease-out);
+}
+
+/* At hero size a true 33⅓ looks frantic; the big record idles at a lazy turn.
+   The scrobble scene's spin-45 keeps its pace. */
+.hero-disc .spin-33 {
+  animation-duration: 6s;
 }
 
 .hero-record .sleeve {
