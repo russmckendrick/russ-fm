@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
+import { Scrubber } from './Scrubber';
 import { SoundIcon } from './SoundIcon';
 import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
@@ -88,6 +89,13 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [on, item.id, player.ready]);
 
+  // YouTube's own length once it knows it (tv.json's is an estimate).
+  const duration = (on && player.duration()) || item.seconds;
+  const seek = (seconds: number) => {
+    player.seek(seconds);
+    setElapsed(seconds);
+  };
+
   const play = (i: number) => {
     if (on) tv.go(i);
     else {
@@ -116,6 +124,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
         room={room}
         tint={f.flood}
         slotRef={on ? slotRef : undefined}
+        zoom={1.5}
         className="h-[260px] sm:h-[340px] lg:h-[400px]"
         picture={
           on ? undefined : (
@@ -159,15 +168,14 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
         }
       />
 
-      {/* Now playing: one slim row, with the progress as a line along the top. */}
+      {/* Now playing: one slim row, with the progress along the top: a
+          scrubber like /tv's while it's on, a plain line before. */}
       <section className="tv-band relative px-3 pb-3 pt-4 md:px-4" style={{ background: f.flood, color: f.ink }} aria-label="Now playing">
-        <div className="absolute inset-x-0 top-0 h-1" aria-hidden>
-          <div className="absolute inset-0 opacity-25" style={{ background: f.ink }} />
-          <div
-            className="absolute inset-y-0 left-0 transition-[width] duration-1000 ease-linear"
-            style={{ background: f.ink, width: `${Math.min(100, (elapsed / item.seconds) * 100)}%` }}
-          />
-        </div>
+        {on ? (
+          <Scrubber elapsed={elapsed} duration={duration} onSeek={seek} />
+        ) : (
+          <div className="absolute inset-x-0 top-0 h-1.5 bg-[rgba(0,0,0,.35)]" aria-hidden />
+        )}
 
         <div className="flex items-center gap-2 md:gap-3">
           {many && (
@@ -187,7 +195,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
           <div className="ml-1 min-w-0 flex-1">
             <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] opacity-75 md:text-[11px]">
               {index + 1} of {channel.items.length} · {on ? `${formatDuration(elapsed)} / ` : ''}
-              {formatDuration(item.seconds)}
+              {formatDuration(duration)}
               {item.kind === 'live' ? ' · Live' : ''}
               {item.artist !== album.release_artist ? ` · ${item.artist}` : ''}
             </p>

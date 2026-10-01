@@ -60,6 +60,9 @@ export function TvProvider({ children }: { children: ReactNode }) {
   const host = useRef<HTMLDivElement>(null);
   const player = useTvPlayer(host, { enabled, onEnded: next, onError: next });
 
+  const timeRef = useRef(player.time);
+  timeRef.current = player.time;
+
   const tune = useCallback((ch: TvChannel, videoId?: string | null) => {
     const wasOn = activeRef.current;
     setEnabled(true);
@@ -68,7 +71,11 @@ export function TvProvider({ children }: { children: ReactNode }) {
       const asked = videoId ? ch.items.findIndex(i => i.id === videoId) : -1;
       const sameChannel = wasOn && t.channel?.slug === ch.slug;
       if (asked >= 0) {
-        if (sameChannel && t.channel!.items[t.index % t.channel!.items.length]?.id === videoId) return t;
+        const playing = wasOn && t.channel?.items[t.index % t.channel.items.length]?.id === videoId;
+        if (playing && sameChannel) return t;
+        // The video that's on, on another channel (the album page's /tv
+        // button): carry on with it there, without reloading it.
+        if (playing) return { channel: ch, index: asked, offset: timeRef.current(), seq: t.seq };
         return { channel: ch, index: asked, offset: 0, seq: t.seq + 1 };
       }
       return sameChannel ? t : { channel: ch, ...onAir(ch), seq: t.seq + 1 };

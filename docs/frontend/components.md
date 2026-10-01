@@ -173,7 +173,8 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
 
 - `TvProvider` wraps the app (inside the router) and owns the site's one YouTube
   player plus the TV tuning, so a channel keeps playing while you browse. `useTv()`
-  (`tv-context.ts`) gives pages `tune(channel)`, `go`/`next`/`prev`, `close`,
+  (`tv-context.ts`) gives pages `tune(channel, videoId?)` (a video already
+  playing on another channel moves across without reloading), `go`/`next`/`prev`, `close`,
   `toggleFullscreen`, the current `channel`/`item`/`offset`, the player and
   `setSlot(el)`.
 - Its layer sits over the element passed to `setSlot` (the TV page's screen, behind
@@ -193,16 +194,21 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
   edge as a `role="slider"`. Pointer click/drag (pointer capture, touch-friendly),
   a taller hit area than the line, a knob and time bubble while dragging, and arrow /
   Page / Home / End keys. `tv-scrub-inset` keeps it inside a clipped box (the
-  full-screen bar).
+  full-screen bar). Used on /tv's now-playing band, the full-screen credit and the
+  album page's `AlbumTv` row.
 - `AlbumTv` is the album page's YouTube tab: a mini russ.fm/tv. It builds the
   record's own channel from `tv.json` (`albumChannel()` in `src/lib/tv.ts`: release
   order, every video, the room of the record's first genre channel, `home` set to
-  the album URL) and shows the room (`TvRoom`, with a YouTube still under the glass
-  via its `picture` prop until switched on), a slim sleeve-coloured now-playing row
-  (progress line along the top, previous/play/next, position and title, then
+  the album URL) and shows the room (`TvRoom` at
+  `zoom={1.5}`, a little closer than /tv, so the set fills most of the box, with
+  a YouTube still under the glass via its `picture` prop until switched on), a
+  slim sleeve-coloured now-playing row
+  (progress along the top, a `Scrubber` like /tv's once it is on, so you can
+  drag or click to seek; previous/play/next, position and title, then
   icon buttons for sound, full screen, YouTube and /tv; the /tv one links to the
   video on the channel it airs on, `item.airsOn`: the record's genre channel, or
-  Live for a full concert)
+  Live for a full concert; when that video is already playing, /tv takes it
+  over where it is rather than starting it again)
   and the running order as a row of tiles. Switching on tunes the site-wide TV, so
   leaving the page (or the tab) carries on in the floating player, whose link goes
   back to the record (`channel.home`). Records missing from `tv.json` fall back to

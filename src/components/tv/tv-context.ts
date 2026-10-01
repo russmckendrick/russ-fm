@@ -20,7 +20,8 @@ export interface TvState {
   /**
    * Tune to a channel: to `videoId` from its start when the channel has it (a
    * shared link), else to whatever it is airing now. No-op when that is
-   * already what is on.
+   * already what is on; when `videoId` is playing on another channel, it moves
+   * to this channel and keeps playing without a reload.
    */
   tune: (channel: TvChannel, videoId?: string | null) => void;
   go: (index: number) => void;
