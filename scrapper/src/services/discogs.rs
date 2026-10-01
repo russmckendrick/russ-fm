@@ -129,12 +129,20 @@ impl DiscogsService {
         .await
     }
 
-    /// The original release year of a master: its `year`, which Discogs sets to 0 when
-    /// unknown (→ `None`). Unlike search and big listings, `/masters/{id}` accepts the personal
-    /// token, so this runs in the 60/min authed bucket rather than the 25/min anonymous one.
+    /// Fetch a master with the personal token. Unlike search and big listings, `/masters/{id}`
+    /// accepts it, so this runs in the 60/min authed bucket rather than the 25/min anonymous one.
+    pub async fn master(&self, master_id: &str) -> ServiceResult<Value> {
+        self.get(&format!("/masters/{master_id}"), &[]).await
+    }
+
+    /// The original release year of a master (see [`Self::master_year_of`]).
     pub async fn master_year(&self, master_id: &str) -> ServiceResult<Option<i64>> {
-        let v = self.get(&format!("/masters/{master_id}"), &[]).await?;
-        Ok(v.get("year").and_then(|y| y.as_i64()).filter(|y| *y > 0))
+        Ok(Self::master_year_of(&self.master(master_id).await?))
+    }
+
+    /// A master's `year`, which Discogs sets to 0 when unknown (→ `None`).
+    pub fn master_year_of(master: &Value) -> Option<i64> {
+        master.get("year").and_then(|y| y.as_i64()).filter(|y| *y > 0)
     }
 
     /// A release's `master_id` (a number on the wire; 0 or absent = no master).
@@ -246,6 +254,12 @@ impl DiscogsService {
             .and_then(|r| r.get("date_added"))
             .and_then(|d| d.as_str())
             .map(String::from)
+    }
+
+    /// The full `videos[]` objects (uri, title, description, duration, embed) of a release or
+    /// master payload — what `raw_data.discogs.videos` / `master_videos` store for tv.json.
+    pub fn videos_of(payload: &Value) -> Value {
+        payload.get("videos").filter(|v| v.is_array()).cloned().unwrap_or_else(|| Value::Array(Vec::new()))
     }
 
     /// Extract YouTube/video URIs from a release payload (`videos[].uri`).

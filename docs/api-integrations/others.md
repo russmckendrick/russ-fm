@@ -140,8 +140,9 @@ sources instead (see Data Priority in the [API Integrations overview](./README.m
 ### Overview
 
 - **Base URL**: `https://theaudiodb.com/api/v1/json/`
-- **Auth**: Free tier token (optional)
-- **Rate Limit**: No official limit
+- **Auth**: Token in the URL path. The public test key `2` is used when none is set.
+- **Rate Limit**: 30 requests a minute with the test keys (`2`, `123`) and 100 a minute
+  with a premium key. The client's limiter picks the rate from the token.
 - **Documentation**: [theaudiodb.com/api_guide.php](https://www.theaudiodb.com/api_guide.php)
 
 ### Configuration
@@ -226,6 +227,22 @@ results = service.search_artist("Radiohead")
     }
 ]
 ```
+
+---
+
+#### get_music_videos(artist_id)
+
+`mvid.php?i=<artist id>`: an artist's music videos (`{"mvids": null}` when there are
+none). Each entry carries `idAlbum`, `idTrack`, `strTrack`, `strMusicVid` (a YouTube
+URL) and `strDescriptionEN`.
+
+`backfill-videos --theaudiodb`, `process_artist`, and saving a new release (its headline
+artists, via `ops::videos::refresh_release_artist_videos`) store these on the artist as
+`raw_data.theaudiodb_videos`, as `{ id, uri, track, album }`, with `album` resolved from
+`album.php` (fetched only when there are videos). `tv.json` matches them to records and
+favours them over Discogs uploads; see [tv.json](../data/schemas.md#tvjson).
+`TheAudioDbService::artist_id_of` reads the id from a stored `raw_data.theaudiodb`
+block: `idArtist` on API payloads, `id` on the legacy mapped shape.
 
 ---
 

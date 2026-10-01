@@ -23,10 +23,12 @@ impl TheAudioDbService {
             base.push('/');
         }
         let token = if cfg.theaudiodb.api_token.is_empty() { "2".to_string() } else { cfg.theaudiodb.api_token.clone() };
+        // The public test keys get 30 requests a minute; a premium key gets 100.
+        let per_minute = if matches!(token.as_str(), "2" | "123") { 30 } else { 100 };
         Self {
             client: build_client(USER_AGENT),
             base: format!("{base}{token}/"),
-            limiter: Limiter::per_minute(30),
+            limiter: Limiter::per_minute(per_minute),
             retries: cfg.processing.retry_attempts,
             retry_delay: std::time::Duration::from_secs(cfg.processing.retry_delay),
         }
@@ -73,5 +75,21 @@ impl TheAudioDbService {
 
     pub async fn get_artist_albums(&self, artist_id: &str) -> ServiceResult<Value> {
         self.get("album.php", &[("i", artist_id.to_string())]).await
+    }
+
+    /// An artist's music videos (`mvids[]`: `idAlbum`, `idTrack`, `strTrack`, `strMusicVid`, …).
+    /// TheAudioDB returns `{"mvids": null}` when there are none.
+    pub async fn get_music_videos(&self, artist_id: &str) -> ServiceResult<Value> {
+        self.get("mvid.php", &[("i", artist_id.to_string())]).await
+    }
+
+    /// The TheAudioDB artist id from a stored `raw_data.theaudiodb` block: `idArtist` on raw
+    /// API payloads, `id` on the legacy mapped shape.
+    pub fn artist_id_of(stored: &Value) -> Option<String> {
+        ["idArtist", "id"].iter().find_map(|k| match stored.get(*k)? {
+            Value::String(s) => Some(s.trim().to_string()).filter(|s| !s.is_empty()),
+            Value::Number(n) => Some(n.to_string()),
+            _ => None,
+        })
     }
 }

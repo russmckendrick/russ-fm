@@ -401,6 +401,8 @@ pub async fn process_release(
             "images": discogs.get("images").cloned().unwrap_or(json!([])),
             // The full per-disc formats (colour lives in `text`); `release.formats` keeps only names.
             "formats": discogs.get("formats").cloned().unwrap_or(json!([])),
+            // Full video objects (title, duration, embed) for tv.json; `release.videos` keeps URLs.
+            "videos": crate::services::discogs::DiscogsService::videos_of(&discogs),
         }),
     );
     if let Some(a) = &apple {
@@ -528,6 +530,11 @@ pub async fn process_release(
         };
 
         db.save_release(&rec).context("saving release to database")?;
+        // A newly added record: refetch its artists' TheAudioDB videos so a new album's
+        // official videos reach tv.json (save_release has just seeded any new artist rows).
+        if existing.is_none() {
+            crate::ops::videos::refresh_release_artist_videos(services, db, &rec).await;
+        }
         // save_release seeded any missing artist rows; give the primary artist the Wikipedia
         // find when it has no biography yet, so the release JSON join picks it up right away.
         if let Some((url, bio)) = &wiki {
@@ -1442,6 +1449,7 @@ pub async fn refresh_release_field(
             let mut d = Map::new();
             d.insert("images".into(), discogs.get("images").cloned().unwrap_or(json!([])));
             d.insert("formats".into(), discogs.get("formats").cloned().unwrap_or(json!([])));
+            d.insert("videos".into(), crate::services::discogs::DiscogsService::videos_of(&discogs));
             d.extend(discogs_master_fields(services, &discogs, Some(&rec)).await);
             raw.insert("discogs".into(), Value::Object(d));
             download_image = true;
@@ -1896,31 +1904,42 @@ pub async fn set_release_service(
 
 
 /// `raw_data.discogs` master fields for a freshly fetched Discogs release: `master_id` (null
-/// when the release has none) and `master_year`, the master's original release year (null =
-/// looked up, unknown). The stored year is reused when the master hasn't changed; when the
-/// lookup fails `master_year` is left out so `backfill-original-years` picks it up later.
+/// when the release has none), `master_year`, the master's original release year (null =
+/// looked up, unknown), and `master_videos`, the master's full `videos[]` (usually far more
+/// than one pressing lists; tv.json merges them in). Stored values are reused when the master
+/// hasn't changed and both are present; otherwise the master is fetched once for both. When
+/// the lookup fails they are left out so `backfill-original-years` / `backfill-videos --masters`
+/// pick them up later.
 pub(crate) async fn discogs_master_fields(
     services: &Services,
     discogs: &Value,
     existing: Option<&ReleaseRecord>,
 ) -> Map<String, Value> {
+    use crate::services::discogs::DiscogsService;
     let mut out = Map::new();
-    let Some(master_id) = crate::services::discogs::DiscogsService::master_id_of(discogs) else {
+    let Some(master_id) = DiscogsService::master_id_of(discogs) else {
         out.insert("master_id".into(), Value::Null);
         out.insert("master_year".into(), Value::Null);
         return out;
     };
     out.insert("master_id".into(), json!(master_id.parse::<i64>().map(Value::from).unwrap_or_else(|_| json!(master_id))));
-    let stored = existing.and_then(|r| r.raw_data.get("discogs")).filter(|d| {
-        crate::services::discogs::DiscogsService::master_id_of(d).as_deref() == Some(master_id.as_str())
-    });
-    if let Some(year) = stored.and_then(|d| d.get("master_year")) {
-        out.insert("master_year".into(), year.clone());
-        return out;
+    let stored = existing
+        .and_then(|r| r.raw_data.get("discogs"))
+        .filter(|d| DiscogsService::master_id_of(d).as_deref() == Some(master_id.as_str()));
+    if let Some(d) = stored {
+        for key in ["master_year", "master_videos"] {
+            if let Some(v) = d.get(key) {
+                out.insert(key.into(), v.clone());
+            }
+        }
+        if out.contains_key("master_year") && out.contains_key("master_videos") {
+            return out;
+        }
     }
-    match services.discogs.master_year(&master_id).await {
-        Ok(year) => {
-            out.insert("master_year".into(), year.map(Value::from).unwrap_or(Value::Null));
+    match services.discogs.master(&master_id).await {
+        Ok(master) => {
+            out.insert("master_year".into(), DiscogsService::master_year_of(&master).map(Value::from).unwrap_or(Value::Null));
+            out.insert("master_videos".into(), DiscogsService::videos_of(&master));
         }
         Err(e) => tracing::warn!("discogs master {master_id}: {e}"),
     }

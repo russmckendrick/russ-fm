@@ -357,53 +357,78 @@ The system checks multiple sources before generating:
 
 ## backfill-videos
 
-Backfill YouTube video URLs from Discogs for existing releases.
+Backfill the videos behind `tv.json`, from one of three sources, then regenerate
+`collection.json` and `tv.json`.
 
 ```bash
 scrapper backfill-videos [OPTIONS]
 ```
 
+| Mode | Source | Stored at |
+|------|--------|-----------|
+| default | The Discogs release's own `videos[]` | `videos` column + album JSON (URLs), `raw_data.discogs.videos` (full objects) |
+| `--masters` | The Discogs master's `videos[]`, which covers every edition and usually lists far more than one pressing | `raw_data.discogs.master_videos` |
+| `--theaudiodb` | Each artist's official music videos from TheAudioDB (`mvid.php`), with album names resolved from `album.php` | the artist's `raw_data.theaudiodb_videos` |
+| `--check` | Whether each video `tv.json` could list plays in an embed, read from YouTube's public embed page (`previewPlayabilityStatus`, no API key) | `video_playability` table; unplayable ids are left out of `tv.json` |
+
 ### Options
 
 | Option | Short | Type | Default | Description |
 |--------|-------|------|---------|-------------|
-| `--batch-size` | `-b` | INT | `25` | Releases per batch before prompting |
-| `--limit` | `-l` | INT | all | Maximum total releases to process |
+| `--masters` | | FLAG | `false` | Fetch Discogs master videos instead |
+| `--theaudiodb` | | FLAG | `false` | Fetch TheAudioDB artist music videos instead |
+| `--check` | | FLAG | `false` | Check playability instead: new ids plus those last checked over 30 days ago (`--force`: all) |
+| `--batch-size` | `-b` | INT | `25` | Rows per batch (used with `--pause`) |
+| `--limit` | `-l` | INT | all | Maximum releases (or artists) to process |
 | `--dry-run` | | FLAG | `false` | Show what would be fetched |
-| `--from` | | STRING | - | Start from this Discogs ID |
-| `--force` | `-f` | FLAG | `false` | Re-fetch even if videos exist |
-| `--pause` | `-p` | INT | - | Pause for N seconds between batches instead of prompting |
+| `--from` | | STRING | - | Start from this Discogs ID (default mode only) |
+| `--force` | `-f` | FLAG | `false` | Re-fetch rows that are already done |
+| `--pause` | `-p` | INT | - | Pause for N seconds between batches |
 
 ### Examples
 
 ```bash
-# Preview which releases need videos
+# Preview which releases still need their Discogs video objects
 scrapper backfill-videos --dry-run --limit 5
 
-# Process a small batch
-scrapper backfill-videos --batch-size 10 --limit 10
+# Releases' own Discogs videos
+scrapper backfill-videos
 
-# Start from a specific release
-scrapper backfill-videos --from 33817755
+# Discogs master videos (one request per master, about an hour for the whole collection)
+scrapper backfill-videos --masters
 
-# Re-fetch videos for all releases
-scrapper backfill-videos --force --limit 5
+# TheAudioDB music videos for every artist with a TheAudioDB id
+scrapper backfill-videos --theaudiodb
 
-# Run unattended with a 30-second pause between batches
-scrapper backfill-videos --pause 30
+# Check which videos still play in an embed (about 8 a second)
+scrapper backfill-videos --check
 
-# Larger batches with a longer pause
-scrapper backfill-videos --batch-size 50 --pause 60
+# Re-fetch everything
+scrapper backfill-videos --force
 ```
 
 ### Behavior
 
-- Fetches full release details from Discogs API and extracts video URLs
-- Updates both the SQLite database and album JSON files in `public/album/`
-- Respects Discogs rate limits with a 1-second delay between requests
-- Prompts to continue after each batch by default
-- Use `--pause` to run unattended with an automatic delay between batches
-- Skips releases that already have videos (unless `--force`)
+- Resumable. The default mode skips releases that already have `raw_data.discogs.videos`.
+  `--masters` skips those with `master_videos`, and releases already found to have no master.
+  `--theaudiodb` skips artists with `theaudiodb_videos` and artists without a TheAudioDB id.
+  `--force` redoes them all.
+- `--masters` fetches each master once per run, even when several releases share it. A
+  release with no stored `master_id` is fetched first to find its master. A master that
+  404s is stored as empty; `backfill-original-years --force` re-points the release.
+- New releases and refreshes get the full video objects and master videos from
+  `process_release`. Saving a *new* release also refetches its headline artists'
+  TheAudioDB videos, because a new album's official videos are often added after the
+  artist was last fetched. An artist with no TheAudioDB match yet, such as a brand-new one,
+  is searched by name, and the match is kept only when the names agree. Artist refreshes
+  keep the stored TheAudioDB match and videos.
+- These writes don't bump `updated_at`. The video data only feeds `tv.json`, and the
+  album and artist JSON show `updated_at`, so a backfill doesn't rewrite every JSON file.
+- Every mode ends by checking the playability of any video ids it added, then
+  regenerates. `scrapper collection` does the same for new ids. The check stops early
+  and keeps what it has if YouTube starts asking for a bot check. It never marks a
+  video dead on that answer.
+- How `tv.json` merges the three sources: see [tv.json](../data/schemas.md#tvjson).
 
 ---
 

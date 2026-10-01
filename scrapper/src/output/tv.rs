@@ -2,9 +2,17 @@
 //! `collection.json` by [`super::collection::generate`]. Compact JSON (the file is large), fixed
 //! key order via the structs below, releases sorted by `date_added` descending then `uri`.
 //!
-//! Videos come from the Discogs release's `raw_data.discogs.videos` (the `videos` column only
-//! holds bare URLs). Audio-only uploads are dropped — a static sleeve is no use on TV — and each
-//! kept video gets a cleaned song title plus a `kind` (`live` / `video` / `other`).
+//! Videos come from three sources, merged per release:
+//! - TheAudioDB's official music videos, stored per artist (`raw_data.theaudiodb_videos`) and
+//!   matched to records by album or track title. They go first, and stand in for any Discogs
+//!   upload of the same song.
+//! - the Discogs release's `raw_data.discogs.videos` (the `videos` column only holds bare URLs);
+//! - the Discogs master's `raw_data.discogs.master_videos`, every edition's videos.
+//!
+//! Videos last found unplayable in an embed (`video_playability`, filled by
+//! `backfill-videos --check`) are dropped first. Audio-only uploads are dropped — a static
+//! sleeve is no use on TV — and each kept video gets
+//! a cleaned song title plus a `kind` (`live` / `video` / `other`).
 
 use std::collections::{HashMap, HashSet};
 use std::path::Path;
@@ -15,7 +23,7 @@ use regex::Regex;
 use serde::Serialize;
 use serde_json::Value;
 
-use super::collection::{date_added, release_identity, string_list_filtered};
+use super::collection::{date_added, release_identity, string_list_filtered, ReleaseIdentity};
 use crate::db::ReleaseRecord;
 use crate::Config;
 
@@ -50,10 +58,20 @@ struct TvVideo {
     duration: Option<u64>,
 }
 
-/// Build and write `tv.json` to `path` from the already-loaded releases. Returns the number of
-/// releases listed (those with at least one kept video).
-pub fn write(cfg: &Config, releases: &[ReleaseRecord], path: &Path) -> Result<usize> {
-    let file = build(cfg, releases);
+/// One artist's TheAudioDB music videos as stored on the artist row
+/// (`raw_data.theaudiodb_videos`): `(discogs id, name, videos)`.
+pub type ArtistVideos = (Option<String>, String, Vec<Value>);
+
+/// Build and write `tv.json` to `path` from the already-loaded releases and the artists'
+/// TheAudioDB videos. Returns the number of releases listed (those with at least one kept video).
+pub fn write(
+    cfg: &Config,
+    releases: &[ReleaseRecord],
+    artist_videos: &[ArtistVideos],
+    unplayable: &HashSet<String>,
+    path: &Path,
+) -> Result<usize> {
+    let file = build(cfg, releases, artist_videos, unplayable);
     let count = file.releases.len();
     if let Some(parent) = path.parent() {
         std::fs::create_dir_all(parent)?;
@@ -62,21 +80,52 @@ pub fn write(cfg: &Config, releases: &[ReleaseRecord], path: &Path) -> Result<us
     Ok(count)
 }
 
-fn build(cfg: &Config, releases: &[ReleaseRecord]) -> TvFile {
-    let mut out: Vec<TvRelease> = releases
+/// Every video id tv.json could list — each source's videos after the per-video filters, before
+/// the playability filter and before official videos displace Discogs uploads (a dead official
+/// video lets its Discogs stand-ins back in, so they need checking too).
+pub fn candidate_ids(cfg: &Config, releases: &[ReleaseRecord], artist_videos: &[ArtistVideos]) -> HashSet<String> {
+    let listed = listed_releases(cfg, releases);
+    let mut ids: HashSet<String> = theaudiodb_assignments(&listed, artist_videos).into_values().flatten().map(|v| v.id).collect();
+    for (rec, _, artist) in &listed {
+        ids.extend(release_videos(rec, artist).into_iter().map(|v| v.id));
+    }
+    ids
+}
+
+fn listed_releases<'a>(cfg: &Config, releases: &'a [ReleaseRecord]) -> Vec<(&'a ReleaseRecord, ReleaseIdentity<'a>, ArtistMatch)> {
+    releases
         .iter()
         .filter_map(|rec| {
             let identity = release_identity(cfg, rec)?;
             let artist = ArtistMatch::new(&identity.names, &track_artists(rec));
-            let videos = release_videos(rec, &artist);
+            Some((rec, identity, artist))
+        })
+        .collect()
+}
+
+fn build(cfg: &Config, releases: &[ReleaseRecord], artist_videos: &[ArtistVideos], unplayable: &HashSet<String>) -> TvFile {
+    let listed = listed_releases(cfg, releases);
+    let mut official = theaudiodb_assignments(&listed, artist_videos);
+    let playable = |v: &TvVideo| !unplayable.contains(&v.id);
+
+    let mut out: Vec<TvRelease> = listed
+        .iter()
+        .enumerate()
+        .filter_map(|(i, (rec, identity, artist))| {
+            // Dead videos go before official ones displace Discogs uploads, so a working
+            // upload of a song survives its official video going private.
+            let mut official = official.remove(&i).unwrap_or_default();
+            official.retain(playable);
+            let mut discogs = release_videos(rec, artist);
+            discogs.retain(playable);
+            let videos = favour_official(official, discogs);
             if videos.is_empty() {
                 return None;
             }
-            let release_artist = identity.names.join(" & ");
             Some(TvRelease {
-                uri: identity.uri_release,
+                uri: identity.uri_release.clone(),
                 name: identity.release_name.clone(),
-                artist: release_artist,
+                artist: identity.names.join(" & "),
                 date_added: date_added(rec),
                 genres: string_list_filtered(&rec.genres),
                 styles: string_list_filtered(&rec.styles),
@@ -88,16 +137,159 @@ fn build(cfg: &Config, releases: &[ReleaseRecord]) -> TvFile {
     TvFile { version: 1, releases: out }
 }
 
-/// The kept videos for one release, in Discogs order, de-duplicated by YouTube id.
+/// The release's Discogs videos, in Discogs order, de-duplicated by YouTube id: the pressing's
+/// own (`raw_data.discogs.videos`) first, then the master's (`master_videos`), which collects
+/// the videos of every edition.
 fn release_videos(rec: &ReleaseRecord, artist: &ArtistMatch) -> Vec<TvVideo> {
-    let Some(list) = rec.raw_data.get("discogs").and_then(|d| d.get("videos")).and_then(|v| v.as_array()) else {
+    let Some(discogs) = rec.raw_data.get("discogs") else {
         return Vec::new();
     };
     let mut seen = HashSet::new();
-    list.iter()
+    ["videos", "master_videos"]
+        .iter()
+        .filter_map(|k| discogs.get(*k).and_then(|v| v.as_array()))
+        .flatten()
         .filter_map(|v| video_entry(v, artist))
         .filter(|v| seen.insert(v.id.clone()))
         .collect()
+}
+
+/// Official videos first, then the Discogs ones they don't already cover: the same YouTube id
+/// (its Discogs duration is kept — TheAudioDB has none), or another upload of the same song.
+/// Live performances are different footage, so they always stay.
+fn favour_official(mut official: Vec<TvVideo>, discogs: Vec<TvVideo>) -> Vec<TvVideo> {
+    if official.is_empty() {
+        return discogs;
+    }
+    let by_id: HashMap<&str, Option<u64>> = discogs.iter().map(|v| (v.id.as_str(), v.duration)).collect();
+    for v in &mut official {
+        if v.duration.is_none() {
+            v.duration = by_id.get(v.id.as_str()).copied().flatten();
+        }
+    }
+    let ids: HashSet<String> = official.iter().map(|v| v.id.clone()).collect();
+    let songs: HashSet<String> =
+        official.iter().filter(|v| v.kind != "live").map(|v| normalise_title(&v.title)).filter(|t| !t.is_empty()).collect();
+    official.extend(
+        discogs
+            .into_iter()
+            .filter(|v| !ids.contains(&v.id) && (v.kind == "live" || !songs.contains(&normalise_title(&v.title)))),
+    );
+    official
+}
+
+/// TheAudioDB videos per listed release (by index into `listed`), in TheAudioDB order. Each
+/// video goes to the artist's records whose title matches its album; failing that, to the
+/// artist's earliest record (by original year) with the song in its tracklist, so a single
+/// lands on its album rather than on every compilation and live record. Unmatched videos
+/// are dropped.
+fn theaudiodb_assignments(
+    listed: &[(&ReleaseRecord, ReleaseIdentity, ArtistMatch)],
+    artist_videos: &[ArtistVideos],
+) -> HashMap<usize, Vec<TvVideo>> {
+    let mut by_discogs: HashMap<String, Vec<usize>> = HashMap::new();
+    let mut by_name: HashMap<String, Vec<usize>> = HashMap::new();
+    for (i, (_, identity, _)) in listed.iter().enumerate() {
+        for h in &identity.headliners {
+            if let Some(id) = h.get("discogs_id").and_then(id_string) {
+                by_discogs.entry(id).or_default().push(i);
+            }
+            if let Some(name) = h.get("name").and_then(|n| n.as_str()) {
+                by_name.entry(normalise_artist(name)).or_default().push(i);
+            }
+        }
+    }
+
+    let mut out: HashMap<usize, Vec<TvVideo>> = HashMap::new();
+    for (discogs_id, name, videos) in artist_videos {
+        let mut records: Vec<usize> = discogs_id.as_deref().and_then(|d| by_discogs.get(d)).cloned().unwrap_or_default();
+        records.extend(by_name.get(&normalise_artist(name)).into_iter().flatten());
+        records.sort_unstable();
+        records.dedup();
+        if records.is_empty() {
+            continue;
+        }
+        for v in videos {
+            let Some(id) = v.get("uri").and_then(|u| u.as_str()).and_then(youtube_id) else { continue };
+            let track = v.get("track").and_then(|t| t.as_str()).unwrap_or("").trim();
+            if track.is_empty() || is_audio_only(track, "") {
+                continue;
+            }
+            let song = normalise_title(track);
+            let album = v.get("album").and_then(|a| a.as_str()).map(normalise_title).filter(|a| !a.is_empty());
+            let mut targets: Vec<usize> = records
+                .iter()
+                .copied()
+                .filter(|&i| album.as_deref().is_some_and(|a| release_titles(&listed[i]).iter().any(|t| t == a)))
+                .collect();
+            if targets.is_empty() {
+                targets = records
+                    .iter()
+                    .copied()
+                    .filter(|&i| tracklist_titles(listed[i].0).contains(&song))
+                    .min_by_key(|&i| (original_year(listed[i].0).unwrap_or(i64::MAX), i))
+                    .into_iter()
+                    .collect();
+            }
+            for i in targets {
+                let (title, _) = title_and_credit(track, &listed[i].2);
+                // TheAudioDB only lists music videos: anything not tagged live is a promo.
+                let kind = match video_kind(track) {
+                    "live" => "live",
+                    _ => "video",
+                };
+                let list = out.entry(i).or_default();
+                if !list.iter().any(|x| x.id == id) {
+                    list.push(TvVideo { id: id.clone(), title, artist: None, kind, duration: None });
+                }
+            }
+        }
+    }
+    out
+}
+
+/// A stored Discogs id as a plain string (`"123"` or `123`).
+fn id_string(v: &Value) -> Option<String> {
+    match v {
+        Value::String(s) => Some(s.trim().trim_matches('"').to_string()).filter(|s| !s.is_empty()),
+        Value::Number(n) => Some(n.to_string()),
+        _ => None,
+    }
+}
+
+/// The record's title(s) for album matching: the display name and the stored title.
+fn release_titles(entry: &(&ReleaseRecord, ReleaseIdentity, ArtistMatch)) -> Vec<String> {
+    let mut titles = vec![normalise_title(&entry.1.release_name), normalise_title(&entry.0.title)];
+    titles.dedup();
+    titles.retain(|t| !t.is_empty());
+    titles
+}
+
+fn tracklist_titles(rec: &ReleaseRecord) -> Vec<String> {
+    rec.tracklist
+        .as_array()
+        .into_iter()
+        .flatten()
+        .filter_map(|t| t.get("title").and_then(|t| t.as_str()))
+        .map(normalise_title)
+        .filter(|t| !t.is_empty())
+        .collect()
+}
+
+/// The master's original year when known, else the pressing's.
+fn original_year(rec: &ReleaseRecord) -> Option<i64> {
+    rec.raw_data.get("discogs").and_then(|d| d.get("master_year")).and_then(|y| y.as_i64()).or(rec.year)
+}
+
+/// A song or album title for matching: bracketed asides (`(Remastered)`, `[Deluxe Edition]`)
+/// and a leading "The" dropped, `&` read as "and", lowercase alphanumerics only.
+fn normalise_title(s: &str) -> String {
+    static BRACKETS: Lazy<Regex> = Lazy::new(|| Regex::new(r"\s*[(\[][^()\[\]]*[)\]]").expect("bracket pattern"));
+    let s = BRACKETS.replace_all(s, "");
+    let lower = s.to_lowercase().replace('&', " and ");
+    let lower = lower.trim_start();
+    let lower = lower.strip_prefix("the ").unwrap_or(lower);
+    lower.chars().filter(|c| c.is_alphanumeric()).collect()
 }
 
 fn video_entry(v: &Value, artist: &ArtistMatch) -> Option<TvVideo> {
@@ -108,7 +300,7 @@ fn video_entry(v: &Value, artist: &ArtistMatch) -> Option<TvVideo> {
     let id = youtube_id(v.get("uri")?.as_str()?)?;
     let raw_title = v.get("title").and_then(|t| t.as_str()).unwrap_or("").trim();
     let description = v.get("description").and_then(|d| d.as_str()).unwrap_or("");
-    if is_audio_only(raw_title, description) {
+    if is_audio_only(raw_title, description) || is_about_the_record(raw_title) {
         return None;
     }
     let duration = v
@@ -147,6 +339,20 @@ fn youtube_id(uri: &str) -> Option<String> {
         Regex::new(r"(?:[?&]v=|youtu\.be/|/embed/)([A-Za-z0-9_-]{11})(?:[^A-Za-z0-9_-]|$)").expect("youtube id pattern")
     });
     ID.captures(uri).map(|c| c[1].to_string())
+}
+
+/// Videos about a record rather than of it, which Discogs masters collect: unboxings, reviews,
+/// "ranked" lists, reactions. Only as a tag (a closing word, or before `&`, a bracket or a
+/// dash), so a song called "Review" or "Karaoke Queen" stays.
+fn is_about_the_record(title: &str) -> bool {
+    static ABOUT: Lazy<Regex> = Lazy::new(|| {
+        Regex::new(concat!(
+            r"(?i)\bunboxing\b|\b(?:album\s+)?review\s*(?:$|[&)\]:|–—-])|\branked\s*$|\brank\s*#\s*\d",
+            r"|\breacts?\s+to\b|\breaction\s+(?:to|video)\b|[(\[]\s*reaction\s*[)\]]|\bfirst\s+listen\b",
+        ))
+        .expect("about-the-record pattern")
+    });
+    ABOUT.is_match(title.trim())
 }
 
 /// Audio-only uploads: YouTube's auto-generated art tracks, and anything tagged as (official)
@@ -491,6 +697,27 @@ mod tests {
     }
 
     #[test]
+    fn skips_videos_about_the_record() {
+        for t in [
+            "Happy Mondays - ultra limited 'Pill Edition' box set unboxing",
+            "De La Soul - CABIN IN THE SKY [Marvel Variant Cover Vinyl Unboxing]",
+            "Tron Ares Soundtrack - New Album Review & Unboxing",
+            "\"Intrigue: Progressive Sounds in UK alternative music 1979-89\" ALBUM REVIEW",
+            "Giants of All Sizes: Review",
+            "The Queen Is Dead, Rank #1",
+            "Studio Albums Ranked",
+            "Producer Reacts to Abbey Road",
+            "Hounds Of Love (Reaction)",
+            "First Listen: Rough And Rowdy Ways",
+        ] {
+            assert!(is_about_the_record(t), "{t}");
+        }
+        for t in ["Karaoke Queen", "The Hearts Filthy Lesson", "Review My Kitchen", "Chain Reaction Man", "Ranking Full Stop", "Interview (Live)"] {
+            assert!(!is_about_the_record(t), "{t}");
+        }
+    }
+
+    #[test]
     fn classifies_kind() {
         assert_eq!(video_kind("Pink Floyd - Have A Cigar (Live From The LA Sports Arena, 1975)"), "live");
         assert_eq!(video_kind("Monster Magnet -  Monolithic (live @ With Full Force 2004)"), "live");
@@ -656,4 +883,79 @@ mod tests {
         let text = serde_json::to_string(&videos[1]).unwrap();
         assert_eq!(text, r#"{"id":"CCCCCCCCCCC","title":"Tesko Suicide","kind":"other"}"#);
     }
+
+    fn tv(id: &str, title: &str, kind: &'static str, duration: Option<u64>) -> TvVideo {
+        TvVideo { id: id.into(), title: title.into(), artist: None, kind, duration }
+    }
+
+    #[test]
+    fn release_videos_append_master_videos() {
+        let rec = ReleaseRecord {
+            raw_data: json!({ "discogs": {
+                "videos": [{ "uri": "https://www.youtube.com/watch?v=AAAAAAAAAAA", "title": "Losing My Religion", "duration": 270, "embed": true }],
+                "master_videos": [
+                    { "uri": "https://www.youtube.com/watch?v=AAAAAAAAAAA", "title": "dupe", "duration": 270, "embed": true },
+                    { "uri": "https://www.youtube.com/watch?v=BBBBBBBBBBB", "title": "Shiny Happy People", "duration": 230, "embed": true },
+                ],
+            } }),
+            ..Default::default()
+        };
+        let ids: Vec<String> = release_videos(&rec, &artist(&["R.E.M."])).into_iter().map(|v| v.id).collect();
+        assert_eq!(ids, ["AAAAAAAAAAA", "BBBBBBBBBBB"]);
+    }
+
+    #[test]
+    fn official_videos_go_first_and_replace_discogs_uploads_of_the_same_song() {
+        let official = vec![tv("OOOOOOOOOOO", "Losing My Religion", "video", None), tv("SSSSSSSSSSS", "Shiny Happy People", "video", None)];
+        let discogs = vec![
+            tv("DDDDDDDDDDD", "Drive", "other", Some(200)),
+            tv("FANFANFANFA", "Losing My Religion (Remastered)", "other", Some(268)),
+            tv("SSSSSSSSSSS", "Shiny Happy People", "video", Some(230)),
+            tv("LLLLLLLLLLL", "Losing My Religion (Live in Athens)", "live", Some(300)),
+        ];
+        let merged = favour_official(official, discogs);
+        let got: Vec<(&str, Option<u64>)> = merged.iter().map(|v| (v.id.as_str(), v.duration)).collect();
+        assert_eq!(
+            got,
+            [("OOOOOOOOOOO", None), ("SSSSSSSSSSS", Some(230)), ("DDDDDDDDDDD", Some(200)), ("LLLLLLLLLLL", Some(300))]
+        );
+    }
+
+    #[test]
+    fn theaudiodb_videos_match_album_then_earliest_tracklist() {
+        let record = |id: &str, title: &str, year: i64, tracks: &[&str]| ReleaseRecord {
+            discogs_id: Some(id.into()),
+            title: title.into(),
+            year: Some(year),
+            artists: json!([{ "name": "R.E.M.", "role": "", "discogs_id": "1001" }]),
+            tracklist: json!(tracks.iter().map(|t| json!({ "title": t })).collect::<Vec<_>>()),
+            ..Default::default()
+        };
+        let releases = [
+            record("1", "Out Of Time", 1991, &["Losing My Religion", "Shiny Happy People"]),
+            record("2", "In Time: The Best Of R.E.M. 1988-2003", 2003, &["Losing My Religion", "Imitation Of Life"]),
+            record("3", "Reveal", 2001, &["Imitation Of Life"]),
+        ];
+        let cfg = Config::default();
+        let listed: Vec<_> = releases
+            .iter()
+            .filter_map(|rec| {
+                let identity = release_identity(&cfg, rec)?;
+                let artist = ArtistMatch::new(&identity.names, &[]);
+                Some((rec, identity, artist))
+            })
+            .collect();
+        let videos = vec![
+            json!({ "uri": "https://www.youtube.com/watch?v=OOOOOOOOOOO", "track": "Losing My Religion", "album": "Out of Time (Deluxe)" }),
+            json!({ "uri": "https://www.youtube.com/watch?v=IIIIIIIIIII", "track": "Imitation of Life", "album": null }),
+            json!({ "uri": "https://www.youtube.com/watch?v=NNNNNNNNNNN", "track": "Not On Any Record", "album": null }),
+        ];
+        let got = theaudiodb_assignments(&listed, &[(Some("1001".into()), "R.E.M.".into(), videos)]);
+        let ids = |i: usize| got.get(&i).map(|v| v.iter().map(|x| x.id.as_str()).collect::<Vec<_>>()).unwrap_or_default();
+        assert_eq!(ids(0), ["OOOOOOOOOOO"]);
+        assert!(ids(1).is_empty(), "compilation gets nothing");
+        assert_eq!(ids(2), ["IIIIIIIIIII"]);
+        assert_eq!(got[&0][0].kind, "video");
+    }
+
 }

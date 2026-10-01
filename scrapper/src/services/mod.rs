@@ -9,6 +9,7 @@ pub mod perplexity;
 pub mod spotify;
 pub mod theaudiodb;
 pub mod wikipedia;
+pub mod youtube;
 
 pub use apple_music::AppleMusicService;
 pub use discogs::DiscogsService;
@@ -17,6 +18,7 @@ pub use perplexity::PerplexityService;
 pub use spotify::SpotifyService;
 pub use theaudiodb::TheAudioDbService;
 pub use wikipedia::WikipediaService;
+pub use youtube::YouTubeService;
 
 use crate::config::Config;
 
@@ -37,6 +39,7 @@ pub struct Services {
     pub wikipedia: WikipediaService,
     pub theaudiodb: TheAudioDbService,
     pub perplexity: PerplexityService,
+    pub youtube: YouTubeService,
 }
 
 impl Services {
@@ -49,6 +52,7 @@ impl Services {
             wikipedia: WikipediaService::new(cfg),
             theaudiodb: TheAudioDbService::new(cfg),
             perplexity: PerplexityService::new(cfg),
+            youtube: YouTubeService::new(),
         }
     }
 

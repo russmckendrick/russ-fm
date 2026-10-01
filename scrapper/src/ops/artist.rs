@@ -173,14 +173,29 @@ let biography = perplexity
     if let Some(l) = &lastfm {
         raw.insert("lastfm".into(), l.clone());
     }
-    if let Some(t) = &theaudiodb {
-        raw.insert("theaudiodb".into(), t.clone());
-    }
     if let Some(p) = &perplexity {
         raw.insert("perplexity".into(), p.clone());
     }
 
     let existing = db.get_artist_by_name(&display_name)?;
+
+    // TheAudioDB: a fresh match when asked for, else the stored one — raw_data is rebuilt
+    // here, and the stored match is what tv.json's music videos hang off.
+    if let Some(t) = theaudiodb.clone().or_else(|| existing.as_ref().and_then(|e| e.raw_data.get("theaudiodb").cloned())) {
+        raw.insert("theaudiodb".into(), t);
+    }
+
+    // TheAudioDB music videos (for tv.json): fetched alongside a fresh TheAudioDB match,
+    // otherwise carried over — raw_data is rebuilt here, so a refresh would drop them.
+    let tadb_id = theaudiodb.as_ref().and_then(crate::services::theaudiodb::TheAudioDbService::artist_id_of);
+    let tadb_videos = match tadb_id {
+        Some(id) => crate::ops::videos::theaudiodb_videos(services, &id).await.ok(),
+        None => None,
+    }
+    .or_else(|| existing.as_ref().and_then(|e| e.raw_data.get("theaudiodb_videos").cloned()));
+    if let Some(v) = tadb_videos {
+        raw.insert("theaudiodb_videos".into(), v);
+    }
     let now = now_iso();
     let id = existing
         .as_ref()

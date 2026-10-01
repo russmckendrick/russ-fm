@@ -309,8 +309,15 @@ let year: Option<i64> = services.discogs.master_year("48660").await?; // Some(19
 - `DiscogsService::master_id_of(&release)` reads a release's `master_id`
   (number or string; 0 or absent means no master).
 
-`process_release` and the detail editor's Discogs refresh store the result as
-`raw_data.discogs.master_id` / `master_year`; older rows are filled by
+`DiscogsService::master(id)` returns the whole master payload, so one request gives
+both the year (`master_year_of`) and the master's `videos[]` (`videos_of`, which also
+reads a release payload). The master's videos cover every edition, so there are usually
+far more of them than on one pressing.
+
+`process_release` and the detail editor's Discogs refresh store the results as
+`raw_data.discogs.master_id` / `master_year` / `master_videos`, beside the release's own
+full `videos` objects. Stored values are reused while the master is unchanged.
+Missing master videos are filled by `scrapper backfill-videos --masters`; older rows are filled by
 `scrapper backfill-original-years` (see
 [CLI commands](../backend/cli-commands.md#backfill-original-years)).
 

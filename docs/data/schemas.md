@@ -447,8 +447,27 @@ compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
 }
 ```
 
-- **Source**: `raw_data.discogs.videos` on each release (the album JSON `videos` field
-  only has bare URLs).
+- **Playability**: videos last found unplayable in an embed are left out before
+  anything else, so a dead official video never displaces a working Discogs upload.
+  That covers private, deleted, age-gated and label-blocked videos (YouTube error 150);
+  oEmbed misses the last kind. `scrapper backfill-videos --check` reads each video's
+  `previewPlayabilityStatus` from YouTube's public embed page and caches the verdict in
+  the `video_playability` table (`id`, `playable`, `detail`, `checked_at`). Every
+  backfill and `collection` run checks the new ids it adds.
+- **Sources**, merged per release (filled by `scrapper backfill-videos`; see
+  [CLI commands](../backend/cli-commands.md#backfill-videos)):
+  1. **TheAudioDB** official music videos, stored per artist at `raw_data.theaudiodb_videos`
+     as `{ id, uri, track, album }`. Each video goes to the artist's records whose title
+     matches its `album`, ignoring case, punctuation, a leading "The" and bracketed asides
+     like `(Deluxe)`. With no album match, it goes to the artist's earliest record (by
+     master year) that has the `track` in its tracklist. Otherwise it is dropped. These
+     videos are **favoured**: they come first, they are always `kind: "video"` (or `live`
+     when tagged so), and they replace any Discogs upload with the same id or the same song
+     title. Live Discogs uploads are kept, because they are different footage. They borrow
+     the Discogs `duration` when the id matches; TheAudioDB has none of its own.
+  2. **Discogs release** `raw_data.discogs.videos` (the album JSON `videos` field only
+     has bare URLs).
+  3. **Discogs master** `raw_data.discogs.master_videos`, the videos of every edition.
 - **`uri`** is byte-identical to the release's `uri_release` in `collection.json` (both
   come from the same helper), so it doubles as the join key. `date_added` matches too.
 - **`name`** / **`artist`**: the release's `release_name` and `release_artist` as in
@@ -463,6 +482,11 @@ compact JSON because it is large (about 1.4 MB, 390 KB gzipped).
 - **Audio-only uploads are dropped**: a description starting "Provided to YouTube by"
   (auto-generated art tracks), or a title tagged `(Official Audio)`, `[Audio]`,
   `- Official Audio`, `Official Audio` or `Visualiser`/`Visualizer`.
+- **Videos about a record rather than of it are dropped**, mostly from Discogs masters:
+  unboxings, album reviews, "Rank #N" and "… Ranked" lists, reactions ("reacts to",
+  "reaction to/video", `(Reaction)`) and "first listen". Each counts only as a tag, so
+  song titles like "Chain Reaction" stay. Trailers, interviews, documentaries and TV
+  adverts stay too.
 - **Whole-record uploads are dropped**: titles containing "full album/concert/show/LP/EP",
   "full length", "album full", "complete album/LP/EP", "album/audio/vinyl rip", or "side
   A/B" together with "full", and anything over 30 minutes (90 minutes for `live`).

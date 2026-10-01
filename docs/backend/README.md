@@ -576,8 +576,9 @@ scrapper release 123456 --force-refresh --save
 ```
 
 Every write of `collection.json` also writes `tv.json` beside it (same directory), the
-video index for the `/tv` page, built from each release's `raw_data.discogs.videos` by
-`output/tv.rs`. Both files go through `output::collection::generate`, so every command
+video index for the `/tv` page, built by `output/tv.rs` from each release's Discogs videos
+(`raw_data.discogs.videos` and the master's `master_videos`) plus the artists' TheAudioDB
+music videos (`raw_data.theaudiodb_videos`, favoured over Discogs uploads). Both files go through `output::collection::generate`, so every command
 that refreshes the collection index refreshes the TV index too. See
 [tv.json](../data/schemas.md#tvjson) for the format and filtering rules.
 

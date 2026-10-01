@@ -71,7 +71,8 @@ pub enum Command {
     GenerateCollection(GenerateCollectionArgs),
     /// Generate album descriptions via Perplexity.
     EnrichDescription(EnrichDescriptionArgs),
-    /// Backfill release videos from Discogs.
+    /// Backfill the videos behind tv.json: Discogs releases (default), Discogs masters
+    /// (`--masters`) or TheAudioDB music videos (`--theaudiodb`).
     BackfillVideos(BackfillVideosArgs),
     /// Look up each release's Discogs master for its original release year (collection.json
     /// `year_original`). Resumable; regenerates collection.json when done.
@@ -287,6 +288,18 @@ pub struct EnrichDescriptionArgs {
 
 #[derive(Debug, Args)]
 pub struct BackfillVideosArgs {
+    /// Fetch each release's Discogs master videos (every edition's videos, not just this
+    /// pressing's) instead of the release's own.
+    #[arg(long, conflicts_with_all = ["theaudiodb", "from"])]
+    pub masters: bool,
+    /// Fetch each artist's official music videos from TheAudioDB instead.
+    #[arg(long, conflicts_with = "from")]
+    pub theaudiodb: bool,
+    /// Check videos against YouTube's embed page instead, so tv.json leaves out private,
+    /// deleted and embed-blocked ones (new ids and those checked over 30 days ago; `--force`
+    /// rechecks all).
+    #[arg(long, conflicts_with_all = ["masters", "theaudiodb", "from"])]
+    pub check: bool,
     #[arg(short, long, default_value_t = 25)]
     pub batch_size: u32,
     #[arg(short, long)]

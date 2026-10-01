@@ -140,7 +140,8 @@ pub struct ReleaseBrief {
     pub date_added: Option<String>,
 }
 
-/// A release still waiting for its original year (see [`Db::releases_for_original_years`]).
+/// A release still waiting for a master lookup (see [`Db::releases_for_original_years`] and
+/// [`Db::releases_for_master_videos`]).
 #[derive(Debug, Clone)]
 pub struct OriginalYearCandidate {
     pub discogs_id: String,
@@ -148,6 +149,8 @@ pub struct OriginalYearCandidate {
     pub artists: Vec<String>,
     /// Stored `raw_data.discogs.master_id`, when known.
     pub master_id: Option<String>,
+    /// `raw_data.discogs.master_id` is stored as null: looked up, and the release has no master.
+    pub no_master: bool,
 }
 
 /// A release row for `backfill-formats` (see [`Db::releases_for_formats`]).
@@ -762,7 +765,8 @@ impl Db {
         Ok(out)
     }
 
-    /// Releases with no videos populated (mirrors `get_releases_without_videos`).
+    /// Releases whose full Discogs video objects (`raw_data.discogs.videos`) were never stored —
+    /// never fetched, or written before the scrapper kept them (only the URL column was set).
     pub fn get_releases_without_videos(
         &self,
         limit: Option<u32>,
@@ -771,7 +775,8 @@ impl Db {
         let conn = self.conn()?;
         let mut sql = String::from(
             "SELECT discogs_id, title, artists, year, genres, date_added FROM releases \
-             WHERE discogs_id IS NOT NULL AND (videos IS NULL OR videos = '[]')",
+             WHERE discogs_id IS NOT NULL \
+             AND json_extract(CASE WHEN json_valid(raw_data) THEN raw_data ELSE '{}' END, '$.discogs.videos') IS NULL",
         );
         let mut start_date: Option<String> = None;
         if let Some(fid) = from_id {
@@ -806,8 +811,8 @@ impl Db {
         Ok(rows)
     }
 
-    /// Release briefs for the video backfill. When `force`, includes releases that already have
-    /// videos; otherwise only those missing them.
+    /// Release briefs for the video backfill. When `force`, every release; otherwise only those
+    /// without stored `raw_data.discogs.videos`.
     pub fn releases_for_backfill(&self, force: bool, limit: Option<u32>, from_id: Option<&str>) -> Result<Vec<ReleaseBrief>> {
         if !force {
             return self.get_releases_without_videos(limit, from_id);
@@ -854,6 +859,22 @@ impl Db {
     /// returns every release. Each row carries the stored `master_id`, when there is one, so
     /// the backfill can skip the release lookup.
     pub fn releases_for_original_years(&self, force: bool, limit: Option<u32>) -> Result<Vec<OriginalYearCandidate>> {
+        self.releases_missing_discogs_key("master_year", force, limit)
+    }
+
+    /// Releases whose master videos haven't been fetched yet (no `raw_data.discogs.master_videos`
+    /// key), newest first, as [`Self::releases_for_original_years`]. Releases already looked up
+    /// and found to have no master (`master_id: null`) are skipped too.
+    pub fn releases_for_master_videos(&self, force: bool, limit: Option<u32>) -> Result<Vec<OriginalYearCandidate>> {
+        let mut out = self.releases_missing_discogs_key("master_videos", force, None)?;
+        out.retain(|c| c.master_id.is_some() || !c.no_master);
+        if let Some(l) = limit {
+            out.truncate(l as usize);
+        }
+        Ok(out)
+    }
+
+    fn releases_missing_discogs_key(&self, key: &str, force: bool, limit: Option<u32>) -> Result<Vec<OriginalYearCandidate>> {
         let conn = self.conn()?;
         let mut stmt = conn.prepare(
             "SELECT discogs_id, title, artists, raw_data FROM releases WHERE discogs_id IS NOT NULL ORDER BY date_added DESC",
@@ -871,7 +892,7 @@ impl Db {
             let (discogs_id, title, artists, raw) = row?;
             let raw = parse_json(raw, "{}");
             let discogs = raw.get("discogs");
-            if !force && discogs.and_then(|d| d.get("master_year")).is_some() {
+            if !force && discogs.and_then(|d| d.get(key)).is_some() {
                 continue;
             }
             out.push(OriginalYearCandidate {
@@ -879,6 +900,7 @@ impl Db {
                 title,
                 artists: artist_names(&parse_json(artists, "[]")),
                 master_id: discogs.and_then(crate::services::discogs::DiscogsService::master_id_of),
+                no_master: discogs.and_then(|d| d.get("master_id")).is_some_and(|m| m.is_null()),
             });
             if limit.is_some_and(|l| out.len() >= l as usize) {
                 break;
@@ -919,6 +941,24 @@ impl Db {
     /// release, keeping every other key. Returns the updated `raw_data`, or `None` when the
     /// release is not in the database.
     pub fn set_release_discogs_formats(&self, discogs_id: &str, formats: Value) -> Result<Option<Value>> {
+        self.merge_release_discogs(discogs_id, [("formats", formats)], true)
+    }
+
+    /// Set `raw_data.discogs.master_id` / `master_year` on a release, keeping every other key.
+    pub fn set_release_master(&self, discogs_id: &str, master_id: Value, master_year: Value) -> Result<bool> {
+        Ok(self.merge_release_discogs(discogs_id, [("master_id", master_id), ("master_year", master_year)], true)?.is_some())
+    }
+
+    /// Set keys under `raw_data.discogs` on a release, keeping every other key. Returns the
+    /// updated `raw_data`, or `None` when the release is not in the database. `touch` bumps
+    /// `updated_at`, which the album JSON shows: pass `false` for keys that never reach it (the
+    /// video objects only feed tv.json), so a backfill doesn't churn every album JSON.
+    pub fn merge_release_discogs<'a>(
+        &self,
+        discogs_id: &str,
+        entries: impl IntoIterator<Item = (&'a str, Value)>,
+        touch: bool,
+    ) -> Result<Option<Value>> {
         let conn = self.conn()?;
         let raw: Option<Option<String>> = conn
             .query_row("SELECT raw_data FROM releases WHERE discogs_id = ?", [discogs_id], |r| r.get(0))
@@ -932,37 +972,130 @@ impl Db {
         if !discogs.is_object() {
             *discogs = serde_json::json!({});
         }
-        discogs.as_object_mut().unwrap().insert("formats".into(), formats);
-        conn.execute(
-            "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
-            rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
-        )?;
+        let d = discogs.as_object_mut().unwrap();
+        for (k, v) in entries {
+            d.insert(k.to_string(), v);
+        }
+        if touch {
+            conn.execute(
+                "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
+                rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
+            )?;
+        } else {
+            conn.execute(
+                "UPDATE releases SET raw_data = ? WHERE discogs_id = ?",
+                rusqlite::params![raw_data.to_string(), discogs_id],
+            )?;
+        }
         Ok(Some(raw_data))
     }
 
-    /// Set `raw_data.discogs.master_id` / `master_year` on a release, keeping every other key.
-    pub fn set_release_master(&self, discogs_id: &str, master_id: Value, master_year: Value) -> Result<bool> {
+    /// Artists with a TheAudioDB id whose music videos haven't been fetched yet (no
+    /// `raw_data.theaudiodb_videos` key; `force` returns them all), by name: `(artist id, name,
+    /// TheAudioDB id)`.
+    pub fn artists_for_theaudiodb_videos(&self, force: bool, limit: Option<u32>) -> Result<Vec<(String, String, String)>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare("SELECT id, name, raw_data FROM artists ORDER BY name COLLATE NOCASE")?;
+        let rows = stmt.query_map([], |row| {
+            Ok((row.get::<_, String>(0)?, row.get::<_, Option<String>>(1)?.unwrap_or_default(), row.get::<_, Option<String>>(2)?))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (id, name, raw) = row?;
+            let raw = parse_json(raw, "{}");
+            if !force && raw.get("theaudiodb_videos").is_some() {
+                continue;
+            }
+            let Some(tadb_id) = raw.get("theaudiodb").and_then(crate::services::theaudiodb::TheAudioDbService::artist_id_of)
+            else {
+                continue;
+            };
+            out.push((id, name, tadb_id));
+            if limit.is_some_and(|l| out.len() >= l as usize) {
+                break;
+            }
+        }
+        Ok(out)
+    }
+
+    /// Set one top-level `raw_data` key on an artist, keeping every other key. Leaves
+    /// `updated_at` alone: it is used for keys the artist JSON doesn't show (TheAudioDB data
+    /// that only feeds tv.json), and the artist JSON does show `updated_at`.
+    pub fn set_artist_raw_key(&self, artist_id: &str, key: &str, value: Value) -> Result<bool> {
         let conn = self.conn()?;
         let raw: Option<Option<String>> = conn
-            .query_row("SELECT raw_data FROM releases WHERE discogs_id = ?", [discogs_id], |r| r.get(0))
+            .query_row("SELECT raw_data FROM artists WHERE id = ?", [artist_id], |r| r.get(0))
             .optional()?;
         let Some(raw) = raw else { return Ok(false) };
         let mut raw_data: Value = parse_json(raw, "{}");
         if !raw_data.is_object() {
             raw_data = serde_json::json!({});
         }
-        let discogs = raw_data.as_object_mut().unwrap().entry("discogs").or_insert_with(|| serde_json::json!({}));
-        if !discogs.is_object() {
-            *discogs = serde_json::json!({});
-        }
-        let d = discogs.as_object_mut().unwrap();
-        d.insert("master_id".into(), master_id);
-        d.insert("master_year".into(), master_year);
-        conn.execute(
-            "UPDATE releases SET raw_data = ?, updated_at = ? WHERE discogs_id = ?",
-            rusqlite::params![raw_data.to_string(), Utc::now().to_rfc3339(), discogs_id],
-        )?;
+        raw_data.as_object_mut().unwrap().insert(key.to_string(), value);
+        conn.execute("UPDATE artists SET raw_data = ? WHERE id = ?", rusqlite::params![raw_data.to_string(), artist_id])?;
         Ok(true)
+    }
+
+    /// Every artist's stored TheAudioDB music videos (`raw_data.theaudiodb_videos`), for
+    /// tv.json: `(discogs id, name, videos)`, artists with none left out.
+    pub fn theaudiodb_artist_videos(&self) -> Result<Vec<crate::output::tv::ArtistVideos>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, name, json_extract(raw_data, '$.theaudiodb_videos') FROM artists \
+             WHERE json_valid(raw_data) AND json_array_length(raw_data, '$.theaudiodb_videos') > 0",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((row.get::<_, Option<String>>(0)?, row.get::<_, Option<String>>(1)?.unwrap_or_default(), row.get::<_, Option<String>>(2)?))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (discogs_id, name, videos) = row?;
+            let videos = parse_json(videos, "[]").as_array().cloned().unwrap_or_default();
+            out.push((discogs_id.filter(|d| !d.is_empty()), name, videos));
+        }
+        Ok(out)
+    }
+
+    /// The YouTube playability cache behind tv.json (`video_playability`, created on first use):
+    /// one row per video id, as last checked against the embed page.
+    fn ensure_video_playability(conn: &rusqlite::Connection) -> Result<()> {
+        conn.execute_batch(
+            "CREATE TABLE IF NOT EXISTS video_playability (\
+                id TEXT PRIMARY KEY, \
+                playable INTEGER NOT NULL, \
+                detail TEXT, \
+                checked_at TEXT NOT NULL)",
+        )?;
+        Ok(())
+    }
+
+    /// Every checked video id → `(playable, checked_at)`.
+    pub fn video_playability(&self) -> Result<HashMap<String, (bool, String)>> {
+        let conn = self.conn()?;
+        Self::ensure_video_playability(&conn)?;
+        let mut stmt = conn.prepare("SELECT id, playable, checked_at FROM video_playability")?;
+        let rows = stmt.query_map([], |r| Ok((r.get::<_, String>(0)?, (r.get::<_, i64>(1)? != 0, r.get::<_, String>(2)?))))?;
+        Ok(rows.collect::<rusqlite::Result<_>>()?)
+    }
+
+    /// Video ids last found unplayable in an embed (tv.json leaves them out).
+    pub fn unplayable_video_ids(&self) -> Result<HashSet<String>> {
+        let conn = self.conn()?;
+        Self::ensure_video_playability(&conn)?;
+        let mut stmt = conn.prepare("SELECT id FROM video_playability WHERE playable = 0")?;
+        let rows = stmt.query_map([], |r| r.get::<_, String>(0))?;
+        Ok(rows.collect::<rusqlite::Result<_>>()?)
+    }
+
+    pub fn set_video_playability(&self, id: &str, playable: bool, detail: Option<&str>) -> Result<()> {
+        let conn = self.conn()?;
+        Self::ensure_video_playability(&conn)?;
+        conn.execute(
+            "INSERT INTO video_playability (id, playable, detail, checked_at) VALUES (?1, ?2, ?3, ?4) \
+             ON CONFLICT(id) DO UPDATE SET playable = ?2, detail = ?3, checked_at = ?4",
+            rusqlite::params![id, playable as i64, detail, Utc::now().to_rfc3339()],
+        )?;
+        Ok(())
     }
 
     pub fn update_release_videos(&self, discogs_id: &str, videos_json: &str) -> Result<bool> {

@@ -123,6 +123,11 @@ pub async fn run(cfg: &Config, args: CollectionArgs) -> Result<()> {
 
     println!("\nDone: {ok} processed, {failed} failed, of {total}.");
 
+    // Check any new videos, so tv.json leaves out ones that won't play.
+    if let Err(e) = crate::ops::videos::check_playability(cfg, &db, &services, crate::ops::videos::CheckScope::New, None).await {
+        println!("Warning: video playability check failed: {e}");
+    }
+
     // Refresh the frontend index.
     let out = cfg.data_dir().join("collection.json");
     match crate::output::collection::generate(cfg, &db, &out) {
