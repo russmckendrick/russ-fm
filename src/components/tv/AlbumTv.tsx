@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
 import { Scrubber } from './Scrubber';
 import { SoundIcon } from './SoundIcon';
-import { YouTubeEmbed } from '@/components/YouTubeEmbed';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { floodFor } from '@/lib/sleeveColour';
-import { albumChannel, formatDuration, loadTv, TV_ROOMS, videoPath, youTubeThumb, type TvChannel } from '@/lib/tv';
+import { albumChannel, albumVideosRelease, formatDuration, loadTv, TV_ROOMS, videoPath, youTubeThumb, type TvChannel } from '@/lib/tv';
 import { cn } from '@/lib/utils';
+import { fetchYouTubeTitle, youTubeVideos } from '@/lib/youtube';
 import type { Album } from '@/types/album';
 import { TvRoom } from '@/pages/tv/TvRoom';
 import { useTv } from './tv-context';
@@ -16,7 +16,26 @@ import { useTv } from './tv-context';
 // when you come back to the page.
 const channelCache = new Map<string, TvChannel | null>();
 
-function useAlbumChannel(album: Album): TvChannel | null | undefined {
+/**
+ * The record's channel: its tv.json entry, or, for a record tv.json leaves out
+ * (every video a full-album rip or an audio upload), one built from the
+ * release's own YouTube links with titles from YouTube. Either way the tab is
+ * always the TV; null only when no link has a video id.
+ */
+async function buildChannel(album: Album, urls: string[]): Promise<TvChannel | null> {
+  const release = await loadTv()
+    .then(tv => tv.releases.find(r => r.uri === album.uri_release))
+    .catch(() => undefined);
+  if (release?.videos.length) return albumChannel(release, album);
+
+  const seen = new Set<string>();
+  const videos = youTubeVideos(urls).filter(v => !seen.has(v.id) && !!seen.add(v.id));
+  if (!videos.length) return null;
+  const titles = await Promise.all(videos.map(v => fetchYouTubeTitle(v.url)));
+  return albumChannel(albumVideosRelease(album, videos.map((v, i) => ({ id: v.id, title: titles[i] }))), album, true);
+}
+
+function useAlbumChannel(album: Album, videos: string[]): TvChannel | null | undefined {
   const uri = album.uri_release;
   const [channel, setChannel] = useState<TvChannel | null | undefined>(() => channelCache.get(uri));
 
@@ -26,19 +45,15 @@ function useAlbumChannel(album: Album): TvChannel | null | undefined {
       return;
     }
     let alive = true;
-    loadTv()
-      .then(tv => {
-        const release = tv.releases.find(r => r.uri === uri);
-        return release?.videos.length ? albumChannel(release, album) : null;
-      })
-      .catch(() => null)
-      .then(ch => {
-        channelCache.set(uri, ch);
-        if (alive) setChannel(ch);
-      });
+    buildChannel(album, videos).then(ch => {
+      channelCache.set(uri, ch);
+      if (alive) setChannel(ch);
+    });
     return () => {
       alive = false;
     };
+    // `videos` comes with the record, so `uri` covers it.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uri, album]);
 
   return channel;
@@ -46,7 +61,7 @@ function useAlbumChannel(album: Album): TvChannel | null | undefined {
 
 interface AlbumTvProps {
   album: Album;
-  /** The release's YouTube URLs: the plain player if tv.json doesn't have the record. */
+  /** The release's YouTube URLs, for records tv.json leaves out. */
   videos: string[];
 }
 
@@ -57,9 +72,9 @@ interface AlbumTvProps {
  * Nothing loads from YouTube until the set is switched on.
  */
 export function AlbumTv({ album, videos }: AlbumTvProps) {
-  const channel = useAlbumChannel(album);
+  const channel = useAlbumChannel(album, videos);
   if (channel === undefined) return <div className="h-[520px] animate-pulse rounded-[14px] bg-[rgba(255,255,255,.04)] md:h-[640px]" aria-label="Loading videos" />;
-  if (channel === null) return <YouTubeEmbed videos={videos} />;
+  if (channel === null) return null;
   return <AlbumTvSet channel={channel} />;
 }
 
@@ -89,8 +104,9 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [on, item.id, player.ready]);
 
-  // YouTube's own length once it knows it (tv.json's is an estimate).
-  const duration = (on && player.duration()) || item.seconds;
+  // YouTube's own length once it knows it (tv.json's is an estimate); 0 while
+  // a video with no known length is still loading.
+  const duration = (on && player.duration()) || (item.untimed ? 0 : item.seconds);
   const seek = (seconds: number) => {
     player.seek(seconds);
     setElapsed(seconds);
@@ -194,8 +210,9 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
           <div className="ml-1 min-w-0 flex-1">
             <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] opacity-75 md:text-[11px]">
-              {index + 1} of {channel.items.length} · {on ? `${formatDuration(elapsed)} / ` : ''}
-              {formatDuration(duration)}
+              {index + 1} of {channel.items.length}
+              {on ? ` · ${formatDuration(elapsed)}` : ''}
+              {duration ? `${on ? ' / ' : ' · '}${formatDuration(duration)}` : ''}
               {item.kind === 'live' ? ' · Live' : ''}
               {item.artist !== album.release_artist ? ` · ${item.artist}` : ''}
             </p>
@@ -268,9 +285,11 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
                     <span className="t-mono absolute left-2 top-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">
                       {current && on ? 'On now' : String(i + 1).padStart(2, '0')}
                     </span>
-                    <span className="t-mono absolute bottom-2 right-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">
-                      {formatDuration(v.seconds)}
-                    </span>
+                    {!v.untimed && (
+                      <span className="t-mono absolute bottom-2 right-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">
+                        {formatDuration(v.seconds)}
+                      </span>
+                    )}
                   </span>
                   <span className="t-cond mt-2 line-clamp-2 block text-[15px] leading-[1]">{v.title}</span>
                   {v.artist !== album.release_artist && <span className="mt-1 block truncate text-[13px] font-semibold">{v.artist}</span>}

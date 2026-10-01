@@ -10,3 +10,20 @@ export function youTubeVideos(urls?: string[] | null): Array<{ url: string; id: 
     .map(url => ({ url, id: extractYouTubeId(url) }))
     .filter((v): v is { url: string; id: string } => v.id !== null);
 }
+
+// Titles come from YouTube oEmbed (no key needed). Cached for the tab so
+// switching albums and back doesn't refetch.
+const titleCache = new Map<string, Promise<string | null>>();
+
+/** A video's title from YouTube oEmbed, or null if YouTube won't say. */
+export function fetchYouTubeTitle(url: string): Promise<string | null> {
+  let pending = titleCache.get(url);
+  if (!pending) {
+    pending = fetch(`https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`)
+      .then(res => (res.ok ? res.json() : null))
+      .then(data => (typeof data?.title === 'string' ? data.title : null))
+      .catch(() => null);
+    titleCache.set(url, pending);
+  }
+  return pending;
+}

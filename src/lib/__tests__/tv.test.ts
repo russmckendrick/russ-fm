@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { albumChannel, buildChannels, onAir, slotsBetween, videoIdFromParam, videoPath, type TvData, type TvRelease } from "../tv";
+import { albumChannel, albumVideosRelease, buildChannels, onAir, slotsBetween, videoIdFromParam, videoPath, type TvData, type TvRelease } from "../tv";
 import type { Album } from "@/types/album";
 
 const album = (uri: string, artist = "Artist"): Album =>
@@ -131,5 +131,21 @@ describe("video URLs", () => {
     expect(videoIdFromParam("short")).toBeNull();
     expect(videoIdFromParam("bad-id-with-a.dot.in.it")).toBeNull();
     expect(videoIdFromParam(undefined)).toBeNull();
+  });
+});
+
+describe("albumVideosRelease", () => {
+  it("builds an off-air album channel from a record's own links", () => {
+    const a = { ...album("/album/holy-bible/", "Manic Street Preachers"), genre_names: ["Rock"] } as Album;
+    const r = albumVideosRelease(a, [
+      { id: "aaaaaaaaaaa", title: "Manic Street Preachers - The Holy Bible (US Mix Full Album)" },
+      { id: "bbbbbbbbbbb", title: "Someone Else - Cover" },
+      { id: "ccccccccccc", title: null },
+    ]);
+    expect(r.videos.map(v => v.title)).toEqual(["The Holy Bible (US Mix Full Album)", "Someone Else - Cover", "Video 3"]);
+
+    const ch = albumChannel(r, a, true);
+    expect(ch.items.every(i => i.airsOn === undefined && i.untimed)).toBe(true);
+    expect(ch.home).toBe("/album/holy-bible/");
   });
 });

@@ -7,7 +7,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlayerToggle } from './PlayerToggle';
 import { SpotifyEmbed } from './SpotifyEmbed';
 import { AppleMusicEmbed } from './AppleMusicEmbed';
-import { YouTubeEmbed } from './YouTubeEmbed';
 import { AlbumTv } from './tv/AlbumTv';
 import type { Album } from '@/types/album';
 import { youTubeVideos } from '@/lib/youtube';
@@ -32,8 +31,8 @@ interface DetailedAlbum {
 
 export interface MusicPlayerSectionProps {
   album: DetailedAlbum;
-  /** The record from the collection: turns the YouTube tab into its mini TV. */
-  tvAlbum?: Album | null;
+  /** The record from the collection: the YouTube tab is its mini TV. */
+  tvAlbum: Album;
   className?: string;
   showToggle?: boolean;
   defaultVisible?: boolean;
@@ -202,7 +201,7 @@ export const MusicPlayerSection = memo(function MusicPlayerSection({
 
             {availableServices.includes('youtube') && album.videos && (
               <TabsContent value="youtube" className="mt-0">
-                {tvAlbum ? <AlbumTv album={tvAlbum} videos={album.videos} /> : <YouTubeEmbed videos={album.videos} />}
+                <AlbumTv album={tvAlbum} videos={album.videos} />
               </TabsContent>
             )}
 

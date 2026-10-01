@@ -55,6 +55,8 @@ export interface TvItem {
   album: Album;
   /** On an album's own channel: the /tv channel this video also airs on, if any. */
   airsOn?: string;
+  /** On an album's own channel: `seconds` is a stand-in, the real length is unknown. */
+  untimed?: boolean;
 }
 
 export interface TvChannel {
@@ -295,15 +297,23 @@ export function buildChannels(tv: TvData, albums: Album[]): TvChannel[] {
 /**
  * One record's videos as a channel, for the mini TV on its album page: in the
  * release's own order, every video (full concerts included), in the room of
- * the record's first genre channel.
+ * the record's first genre channel. `offAir` is for videos tv.json left out
+ * (see albumVideosRelease), which don't air on any /tv channel.
  */
-export function albumChannel(release: TvRelease, album: Album): TvChannel {
+export function albumChannel(release: TvRelease, album: Album, offAir = false): TvChannel {
   const slugs = genreChannelsFor(release);
   const items: TvItem[] = release.videos.map(v => {
-    const seconds = v.duration && v.duration > 0 ? v.duration : DEFAULT_SECONDS;
+    const timed = !!v.duration && v.duration > 0;
+    const seconds = timed ? v.duration! : DEFAULT_SECONDS;
     // The same rules as buildChannels: long videos only air on Live.
-    const airsOn = seconds > MAX_SECONDS ? (v.kind === 'live' && seconds <= MAX_LIVE_SECONDS ? 'live' : undefined) : (slugs[0] ?? 'everything-else');
-    return { id: v.id, title: v.title, artist: v.artist ?? album.release_artist, kind: v.kind, seconds, album, airsOn };
+    const airsOn = offAir
+      ? undefined
+      : seconds > MAX_SECONDS
+        ? v.kind === 'live' && seconds <= MAX_LIVE_SECONDS
+          ? 'live'
+          : undefined
+        : (slugs[0] ?? 'everything-else');
+    return { id: v.id, title: v.title, artist: v.artist ?? album.release_artist, kind: v.kind, seconds, album, airsOn, ...(timed ? {} : { untimed: true }) };
   });
   const room = roomFor(slugs);
   const starts: number[] = [];
@@ -313,6 +323,31 @@ export function albumChannel(release: TvRelease, album: Album): TvChannel {
     t += item.seconds;
   }
   return { slug: `album:${album.uri_release}`, number: 'LP', name: album.release_name, room, items, starts, loop: t, home: album.uri_release };
+}
+
+/**
+ * A stand-in tv.json entry for a record the scrapper left out of it because
+ * none of its videos suit a channel (full-album rips, audio uploads), built
+ * from the release's own YouTube ids and titles so its album page still gets
+ * the mini TV. Titles lose a leading "Artist - " as the scrapper's do.
+ */
+export function albumVideosRelease(album: Album, videos: Array<{ id: string; title: string | null }>): TvRelease {
+  const artist = album.release_artist.trim().toLowerCase();
+  const title = (raw: string | null, i: number) => {
+    const t = raw?.trim() ?? '';
+    const dash = t.search(/\s[-–—]\s/);
+    const cleaned = dash > 0 && t.slice(0, dash).trim().toLowerCase() === artist ? t.slice(dash).replace(/^\s[-–—]\s+/, '') : t;
+    return cleaned || `Video ${i + 1}`;
+  };
+  return {
+    uri: album.uri_release,
+    name: album.release_name,
+    artist: album.release_artist,
+    date_added: album.date_added,
+    genres: album.genre_names ?? [],
+    styles: album.styles ?? [],
+    videos: videos.map((v, i) => ({ id: v.id, title: title(v.title, i), kind: 'other' })),
+  };
 }
 
 /** The room of a release's first genre channel. */

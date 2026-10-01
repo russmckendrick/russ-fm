@@ -211,8 +211,15 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
   over where it is rather than starting it again)
   and the running order as a row of tiles. Switching on tunes the site-wide TV, so
   leaving the page (or the tab) carries on in the floating player, whose link goes
-  back to the record (`channel.home`). Records missing from `tv.json` fall back to
-  `YouTubeEmbed`.
+  back to the record (`channel.home`). The tab is always the TV: a record missing
+  from `tv.json` (the scrapper drops full-album rips and audio uploads, so some
+  records have no channel-worthy video) gets a channel built from the release's own
+  YouTube links (`albumVideosRelease()` + `albumChannel(…, offAir = true)`), with
+  titles from YouTube oEmbed (`fetchYouTubeTitle()` in `src/lib/youtube.ts`, leading
+  "Artist - " stripped). Those videos don't air on /tv (no `airsOn`, so the /tv
+  button goes to /tv) and are `untimed`: no length is shown until YouTube reports it.
+  `useTvPlayer` only calls the YouTube player once it is ready (its methods don't
+  exist before then).
 
 ## Layout primitives (`src/components/layout/`)
 
@@ -385,20 +392,6 @@ Embedded player with service selection, used in the album page's
 Apple Music, Spotify. YouTube (the `AlbumTv` mini TV) is always the opening
 tab when present; only Apple Music and Spotify are remembered as the
 preferred service, and that choice opens first on records without videos.
-
-### YouTubeEmbed (`src/components/YouTubeEmbed.tsx`)
-
-The YouTube tab's fallback (the tab is normally `AlbumTv`, above), built to sit beside the Apple Music and Spotify embeds:
-450px high on `md`+, a dark card with the YouTube logo, the current video
-(a thumbnail and red play button until clicked, then a
-`youtube.com/embed` iframe that autoplays) and "Watch on YouTube", and a
-numbered, scrolling list of every video with thumbnails. Clicking a row
-plays it; when a video ends the next one starts (the iframe API's
-`onStateChange`). Titles come from YouTube oEmbed, fetched per row only
-when it scrolls into the list (cached per tab), so nothing hits YouTube
-until the tab is opened. On phones the video stacks above a 300px list.
-URL parsing lives in `src/lib/youtube.ts` (`extractYouTubeId`,
-`youTubeVideos`). Replaces the old `VideoSection`.
 
 ### SpotifyEmbed / AppleMusicEmbed
 
