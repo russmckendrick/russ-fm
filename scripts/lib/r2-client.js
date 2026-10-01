@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, HeadObjectCommand, ListObjectsV2Command } from '@aws-sdk/client-s3';
 import { Upload } from '@aws-sdk/lib-storage';
 import fs from 'fs';
 import path from 'path';
@@ -94,6 +94,30 @@ class R2Client {
   }
 
   /**
+   * List every object under the given prefixes
+   * @param {Array<string>} prefixes - Key prefixes, e.g. ['album/', 'artist/']
+   * @returns {Promise<Map<string, {etag: string, size: number}>>} Key → ETag (quotes stripped) and size
+   */
+  async listObjects(prefixes) {
+    const objects = new Map();
+    for (const prefix of prefixes) {
+      let token;
+      do {
+        const page = await this.client.send(new ListObjectsV2Command({
+          Bucket: this.config.bucketName,
+          Prefix: prefix,
+          ContinuationToken: token
+        }));
+        for (const obj of page.Contents || []) {
+          objects.set(obj.Key, { etag: (obj.ETag || '').replace(/"/g, ''), size: obj.Size });
+        }
+        token = page.IsTruncated ? page.NextContinuationToken : undefined;
+      } while (token);
+    }
+    return objects;
+  }
+
+  /**
    * Upload multiple files with progress tracking
    * @param {Array} fileList - Array of {localPath, key} objects
    * @param {object} options - Upload options
@@ -109,51 +133,55 @@ class R2Client {
       uploaded: []
     };
 
-    console.log(chalk.blue(`🚀 Starting upload of ${fileList.length} files...`));
+    const concurrency = Math.max(1, options.concurrency || 1);
+    console.log(chalk.blue(`🚀 Starting upload of ${fileList.length} files (${concurrency} at a time)...`));
 
-    for (let i = 0; i < fileList.length; i++) {
-      const { localPath, key } = fileList[i];
-      
-      // Skip if file doesn't exist locally
-      if (!fs.existsSync(localPath)) {
-        console.log(chalk.yellow(`⚠️  Skipping ${key} - file not found locally`));
-        results.skipped++;
-        continue;
+    let next = 0;
+    let done = 0;
+    const worker = async () => {
+      while (next < fileList.length) {
+        const { localPath, key } = fileList[next++];
+
+        // Skip if file doesn't exist locally
+        if (!fs.existsSync(localPath)) {
+          console.log(chalk.yellow(`⚠️  Skipping ${key} - file not found locally`));
+          results.skipped++;
+        // Skip if already exists and not forcing overwrite
+        } else if (!options.force && await this.objectExists(key)) {
+          console.log(chalk.gray(`⏭️  Skipping ${key} - already exists`));
+          results.skipped++;
+        } else {
+          const result = await this.uploadFile(localPath, key, {
+            onProgress: options.onProgress,
+            metadata: options.metadata
+          });
+
+          if (result.success) {
+            results.success++;
+            results.uploaded.push(result);
+            console.log(chalk.green(`✅ Uploaded: ${key} (${this.formatBytes(result.size)})`));
+          } else {
+            results.failed++;
+            results.errors.push(result);
+            console.log(chalk.red(`❌ Failed: ${key} - ${result.error}`));
+          }
+        }
+
+        // Progress update
+        done++;
+        if (options.onBatchProgress) {
+          options.onBatchProgress({
+            current: done,
+            total: fileList.length,
+            success: results.success,
+            failed: results.failed,
+            skipped: results.skipped
+          });
+        }
       }
+    };
 
-      // Skip if already exists and not forcing overwrite
-      if (!options.force && await this.objectExists(key)) {
-        console.log(chalk.gray(`⏭️  Skipping ${key} - already exists`));
-        results.skipped++;
-        continue;
-      }
-
-      const result = await this.uploadFile(localPath, key, {
-        onProgress: options.onProgress,
-        metadata: options.metadata
-      });
-
-      if (result.success) {
-        results.success++;
-        results.uploaded.push(result);
-        console.log(chalk.green(`✅ Uploaded: ${key} (${this.formatBytes(result.size)})`));
-      } else {
-        results.failed++;
-        results.errors.push(result);
-        console.log(chalk.red(`❌ Failed: ${key} - ${result.error}`));
-      }
-
-      // Progress update
-      if (options.onBatchProgress) {
-        options.onBatchProgress({
-          current: i + 1,
-          total: fileList.length,
-          success: results.success,
-          failed: results.failed,
-          skipped: results.skipped
-        });
-      }
-    }
+    await Promise.all(Array.from({ length: Math.min(concurrency, fileList.length) }, worker));
 
     return results;
   }

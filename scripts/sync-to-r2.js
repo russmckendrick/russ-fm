@@ -4,6 +4,7 @@ import 'dotenv/config';
 import chalk from 'chalk';
 import path from 'path';
 import fs from 'fs';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 import R2Client from './lib/r2-client.js';
 import FileUtils from './lib/file-utils.js';
@@ -17,6 +18,8 @@ const args = process.argv.slice(2);
 const options = {
   dryRun: args.includes('--dry-run'),
   force: args.includes('--force'),
+  compare: args.includes('--compare'),
+  concurrency: parseInt(getArgValue(args, '--concurrency') || '1', 10),
   filter: getArgValue(args, '--filter'),
   changedFiles: getArgValue(args, '--changed-files'),
   type: getArgValue(args, '--type'), // album or artist
@@ -39,7 +42,10 @@ Options:
   --dry-run               List files that would be uploaded without uploading
   --force                 Overwrite existing files in R2
   --filter <pattern>      Filter files by regex pattern
+  --compare               List the bucket once and upload only files that are missing
+                          from R2 or whose content differs (MD5 vs ETag). Implies --force
   --changed-files <file>  Only upload files impacted by changes listed in <file>
+  --concurrency <n>       Upload <n> files at a time (default 1)
   --type <type>           Upload only 'album' or 'artist' images
   --size <size>           Upload only specific size: hi-res, medium, small, avatar
   --help, -h              Show this help message
@@ -49,6 +55,7 @@ Examples:
   node scripts/sync-to-r2.js --dry-run          # Preview what would be uploaded
   node scripts/sync-to-r2.js --type album       # Upload only album images
   node scripts/sync-to-r2.js --changed-files changes.txt  # Upload only changed content
+  node scripts/sync-to-r2.js --compare --dry-run          # Show what differs from R2
 
 Environment Variables Required:
   R2_ACCOUNT_ID         Cloudflare account ID
@@ -77,6 +84,48 @@ async function validateEnvironment() {
     bucketName: process.env.R2_BUCKET_NAME,
     publicDomain: process.env.R2_PUBLIC_DOMAIN
   };
+}
+
+// lib-storage's Upload sends files up to 5 MB as a single PUT (ETag = MD5 of the
+// body) and larger files as 5 MB multipart parts (ETag = MD5 of the part MD5s,
+// suffixed with -<parts>). Hash the local file the same way so the two compare.
+const MULTIPART_PART_SIZE = 5 * 1024 * 1024;
+
+function localEtag(filePath) {
+  const data = fs.readFileSync(filePath);
+  if (data.length <= MULTIPART_PART_SIZE) {
+    return crypto.createHash('md5').update(data).digest('hex');
+  }
+  const partHashes = [];
+  for (let start = 0; start < data.length; start += MULTIPART_PART_SIZE) {
+    partHashes.push(crypto.createHash('md5').update(data.subarray(start, start + MULTIPART_PART_SIZE)).digest());
+  }
+  const combined = crypto.createHash('md5').update(Buffer.concat(partHashes)).digest('hex');
+  return `${combined}-${partHashes.length}`;
+}
+
+async function compareWithBucket(uploadList, r2Client) {
+  console.log(chalk.blue('\n🔍 Listing objects already in R2...'));
+  const remote = await r2Client.listObjects(['album/', 'artist/', 'og-image.png']);
+  console.log(chalk.green(`✅ ${remote.size} objects in R2`));
+
+  let missing = 0;
+  let changed = 0;
+  const differs = uploadList.filter(item => {
+    const existing = remote.get(item.key);
+    if (!existing) {
+      missing++;
+      return true;
+    }
+    if (existing.size !== item.size || existing.etag !== localEtag(item.localPath)) {
+      changed++;
+      return true;
+    }
+    return false;
+  });
+
+  console.log(chalk.blue(`🧮 ${missing} missing, ${changed} changed, ${uploadList.length - differs.length} unchanged`));
+  return differs;
 }
 
 async function main() {
@@ -181,6 +230,18 @@ async function main() {
     console.log(chalk.yellow(`⚠️  ${verification.missing.length} files are missing locally and will be skipped`));
   }
 
+  // Compare mode: keep only files missing from R2 or different from the stored copy
+  let r2Client = null;
+  if (options.compare) {
+    console.log(chalk.blue('🔌 Connecting to R2...'));
+    r2Client = new R2Client(config);
+    uploadList = await compareWithBucket(uploadList, r2Client);
+    if (uploadList.length === 0) {
+      console.log(chalk.green('✅ R2 already matches dist/. Nothing to upload.'));
+      return;
+    }
+  }
+
   // Print summary
   FileUtils.printUploadSummary(uploadList);
 
@@ -196,14 +257,16 @@ async function main() {
   }
 
   // Confirm upload
-  if (!options.force) {
+  if (!options.force && !options.compare) {
     console.log(chalk.yellow('⚠️  This will upload files to R2. Use --dry-run to preview first.'));
     console.log(chalk.gray('   To skip this confirmation, use --force\n'));
   }
 
   // Initialize R2 client
-  console.log(chalk.blue('🔌 Connecting to R2...'));
-  const r2Client = new R2Client(config);
+  if (!r2Client) {
+    console.log(chalk.blue('🔌 Connecting to R2...'));
+    r2Client = new R2Client(config);
+  }
 
   // Initialize progress tracker
   const progress = new UploadProgress({
@@ -222,7 +285,9 @@ async function main() {
 
   try {
     const results = await r2Client.uploadFiles(uploadList, {
-      force: options.force,
+      // Compare mode already knows these differ, so overwrite without a HEAD per file
+      force: options.force || options.compare,
+      concurrency: options.concurrency,
       onProgress: (fileProgress) => {
         progress.updateFileProgress(fileProgress.key, fileProgress);
       },

@@ -16,17 +16,12 @@ on:
         description: 'Re-upload these to R2 (comma-separated, e.g. album/<slug>,artist/<slug>). Overwrites existing objects.'
         required: false
         type: string
-      repair:
-        description: 'Full R2 sync that uploads only objects missing from the bucket (slow: one HEAD request per file).'
-        required: false
-        type: boolean
-        default: false
 
 # One deploy at a time, in push order. A newer push waits for the running
 # deploy rather than cancelling it part-way through an R2 sync or `wrangler
 # deploy`, so an older build can never finish last and put the site back.
-# GitHub keeps only the newest waiting run; the R2 diff below starts from the
-# last successful deploy, so a push whose run was dropped still gets synced.
+# GitHub keeps only the newest waiting run; the R2 sync compares dist/ with
+# the bucket itself, so a push whose run was dropped still gets synced.
 concurrency:
   group: deploy
   cancel-in-progress: false
@@ -37,13 +32,9 @@ jobs:
     name: Build & Deploy 🚀
     permissions:
       contents: read
-      # Detect Changed Files looks up the last successful deploy.
-      actions: read
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
 
       - name: Setup Node.js 📦
         uses: actions/setup-node@v6
@@ -115,61 +106,28 @@ jobs:
         env:
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
 
-      # Push: diff from the last successful push deploy (not just the previous
-      # push), so changes whose run failed or was dropped from the concurrency
-      # queue are synced too; falls back to the previous push. Manual run with
-      # `targets`: synthesise the list so the sync picks exactly those
-      # album/artist folders. Manual run without targets: nothing to target
-      # (repair mode below does its own thing).
-      - name: Detect Changed Files 🕵️‍♂️
-        id: changed-files
+      # Normal runs list the bucket once and upload only images that are
+      # missing from R2 or whose MD5 differs from the stored ETag, so the sync
+      # never depends on git history (an old diff base used to re-upload all
+      # ~20k images). A manual run with `targets` force-uploads exactly those
+      # album/artist folders instead.
+      - name: Sync to R2 ☁️
         env:
           TARGETS: ${{ inputs.targets }}
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          if [ -n "$TARGETS" ]; then
-            echo "🎯 Manual targets: $TARGETS"
-            echo "$TARGETS" | tr ',' '\n' | sed 's/^ *//; s/ *$//; s:/*$::' | grep . \
-              | sed 's|^|public/|; s|$|/manual|' > changed_files.txt
-          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "🛠️  Manual run without targets; no per-folder sync"
-            : > changed_files.txt
-          else
-            base="${{ github.event.before }}"
-            # The runs API, not `gh run list --branch` (which returns runs out of date order).
-            last=$(gh api "repos/${{ github.repository }}/actions/workflows/deploy.yml/runs?branch=main&event=push&status=success&per_page=20" \
-              --jq '[.workflow_runs[]] | max_by(.run_number) | .head_sha // empty' 2>/dev/null || true)
-            if [ -n "$last" ] && git cat-file -e "$last^{commit}" 2>/dev/null \
-              && git merge-base --is-ancestor "$last" "${{ github.sha }}"; then
-              echo "✅ Last successful deploy: $last"
-              base="$last"
-            else
-              echo "⚠️  No usable last successful deploy; using the previous push"
-            fi
-            echo "🔎 Diffing $base..${{ github.sha }}"
-            git diff --name-only "$base" ${{ github.sha }} > changed_files.txt
-          fi
-          echo "📋 Changed files:"
-          cat changed_files.txt
-          echo "🧮 $(wc -l < changed_files.txt | tr -d ' ') file(s) changed"
-
-      # Repair mode lists everything in dist/ and skips objects R2 already has
-      # (no --force). Every other run uploads only the changed folders, with
-      # --force so replaced artwork overwrites the stale object.
-      - name: Sync to R2 ☁️
-        run: |
-          if [ "${{ inputs.repair }}" = "true" ]; then
-            echo "🩹 Repair mode: uploading objects missing from R2..."
-            node scripts/sync-to-r2.js
-          else
-            node scripts/sync-to-r2.js --force --changed-files changed_files.txt
-          fi
-        env:
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
           R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           R2_BUCKET_NAME: ${{ secrets.R2_BUCKET_NAME }}
           R2_PUBLIC_DOMAIN: ${{ secrets.R2_PUBLIC_DOMAIN }}
+        run: |
+          if [ -n "$TARGETS" ]; then
+            echo "🎯 Manual targets: $TARGETS"
+            echo "$TARGETS" | tr ',' '\n' | sed 's/^ *//; s/ *$//; s:/*$::' | grep . \
+              | sed 's|^|public/|; s|$|/manual|' > changed_files.txt
+            node scripts/sync-to-r2.js --force --concurrency 16 --changed-files changed_files.txt
+          else
+            node scripts/sync-to-r2.js --compare --concurrency 16
+          fi
 
       # The app is type-checked and bundled exactly once, straight into
       # dist-worker (build-worker.js runs Vite itself). `pnpm run deploy` is
@@ -200,7 +158,6 @@ jobs:
           echo "| 💾 | **Cache Restore** |" >> $GITHUB_STEP_SUMMARY
           echo "| 🖼️ | **Images & Colours** |" >> $GITHUB_STEP_SUMMARY
           echo "| 📸 | **OG Images** |" >> $GITHUB_STEP_SUMMARY
-          echo "| 🕵️ | **Changed File Detection** |" >> $GITHUB_STEP_SUMMARY
           echo "| ☁️ | **R2 Sync** |" >> $GITHUB_STEP_SUMMARY
           echo "| 🔍 | **Type Check** |" >> $GITHUB_STEP_SUMMARY
           echo "| 🔨 | **Worker Build** |" >> $GITHUB_STEP_SUMMARY

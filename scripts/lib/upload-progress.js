@@ -52,14 +52,11 @@ class UploadProgress {
    * @param {object} progress - Progress info {loaded, total}
    */
   updateFileProgress(fileKey, progress) {
+    // Add only this file's new bytes; re-summing every file is O(n²) over a full sync
+    const previous = this.fileProgress.get(fileKey)?.loaded || 0;
     this.fileProgress.set(fileKey, progress);
     this.stats.currentFile = fileKey;
-    
-    // Calculate total uploaded bytes
-    this.stats.uploadedBytes = 0;
-    for (const [key, fileProgress] of this.fileProgress) {
-      this.stats.uploadedBytes += fileProgress.loaded || 0;
-    }
+    this.stats.uploadedBytes += (progress.loaded || 0) - previous;
     
     if (this.spinner && this.options.showProgress) {
       this.spinner.text = this.getProgressText();

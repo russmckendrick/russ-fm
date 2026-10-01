@@ -68,8 +68,8 @@ cancel-in-progress: false }`). A push that lands mid-deploy waits rather than
 cancelling the running one part-way through an R2 sync or `wrangler deploy`, so an
 older build can never finish last and put the site back to an earlier version.
 GitHub keeps only the newest waiting run and cancels any older one still waiting;
-that is safe because the R2 diff starts from the last successful deploy (see
-Detect changed files below), so the newest run syncs what the dropped one would have.
+that is safe because the R2 sync compares `dist/` with the bucket itself (see
+[Compare mode](#compare-mode) below), so the newest run uploads whatever the dropped one would have.
 
 ### Jobs
 
@@ -86,11 +86,8 @@ deploy:
   runs-on: ubuntu-latest
   permissions:
     contents: read
-    actions: read   # Detect changed files looks up the last successful deploy
   steps:
-    - uses: actions/checkout@v5
-      with:
-        fetch-depth: 0  # Full history for git diff
+    - uses: actions/checkout@v5   # shallow: the R2 sync no longer uses git history
 
     - name: Setup Node.js
       uses: actions/setup-node@v6
@@ -128,20 +125,13 @@ deploy:
         # Copy generic og-image.png to public/ for worker build
         cp dist/og-image.png public/og-image.png
 
-    - name: Detect changed files
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        # push: diff from the last successful push deploy (the runs API, highest
-        # run_number; `gh run list --branch` returns runs out of date order), so a
-        # push whose run failed or was dropped from the queue still gets synced.
-        # Falls back to github.event.before if there is none or it isn't an ancestor.
-        # manual run with `targets`: synthesise public/<target>/manual lines
-        git diff --name-only "$base" HEAD > changed_files.txt
-
     - name: Sync to R2
-      run: node scripts/sync-to-r2.js --force --changed-files changed_files.txt
+      run: |
+        # manual run with `targets`: force-upload exactly those folders
+        # otherwise: upload only what is missing from R2 or differs from it
+        node scripts/sync-to-r2.js --compare --concurrency 16
       env:
+        TARGETS: ${{ inputs.targets }}
         R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
         R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
         R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
@@ -184,9 +174,9 @@ Notes on the shape of the job:
 - **Artist image notes are not generated in CI.** `public/artist/<slug>/<slug>-image.json`
   needs macOS (Apple Vision), so it is generated locally with
   `pnpm run generate-artist-images` and committed (see
-  [Asset Processing](./asset-processing.md#artist-image-notes)). Because the R2 sync
-  treats a changed file under `public/artist/<slug>/` as a changed artist, committing
-  a full (`--full`) regeneration re-uploads every artist's images once.
+  [Asset Processing](./asset-processing.md#artist-image-notes)). The R2 sync compares
+  image bytes, not git changes, so committing a full (`--full`) regeneration (or any
+  bulk JSON change) uploads nothing unless the images themselves differ.
 - **Cached album OG cards keep their colours.** `generate-og` only draws cards
   missing from `node_modules/.cache/assets/og`, so a change to the sleeve
   palettes in `album-colors.json` does not reach existing cards until that
@@ -212,7 +202,11 @@ pnpm run build:sync
 # Dry run (preview)
 pnpm run build:sync:dry
 
-# Sync only changed files
+# Upload only what is missing from R2 or differs from it (what CI runs)
+node scripts/sync-to-r2.js --compare --concurrency 16
+node scripts/sync-to-r2.js --compare --dry-run   # preview
+
+# Sync only the album/artist folders touched by the paths in a file
 node scripts/sync-to-r2.js --changed-files changed_files.txt
 
 # Sync specific types
@@ -228,21 +222,42 @@ node scripts/sync-to-r2.js --force
 ### Manual Runs
 
 The workflow also has a `workflow_dispatch` trigger (Actions → Deploy 🚀 →
-Run workflow, or `gh workflow run "Deploy 🚀"`) with two optional inputs:
+Run workflow, or `gh workflow run "Deploy 🚀"`) with one optional input:
 
 | Input | Effect |
 |-------|--------|
-| `targets` | Comma-separated `album/<slug>` or `artist/<slug>` entries. The run behaves like a push that touched exactly those folders: their hi-res, medium, avatar and OG image are uploaded with `--force`, overwriting whatever R2 has. Use it when an object on R2 is missing or stale but nothing in git changed. |
-| `repair` | Full sync that lists everything in `dist/` and uploads only objects R2 does not already have (no `--force`, one HEAD request per file, so it is slow). Use it after a run that failed part-way or when several objects are known to be missing. |
+| `targets` | Comma-separated `album/<slug>` or `artist/<slug>` entries. Their hi-res, medium, avatar and OG image are uploaded with `--force`, overwriting whatever R2 has, instead of the usual compare. Rarely needed, since a run without inputs already uploads anything missing or different. |
 
-Both still rebuild and redeploy the Worker. Example:
+A run without inputs is a normal compare-mode sync, which also repairs objects
+missing from R2 after a run that failed part-way (this replaced the old `repair`
+input). Either way the Worker is rebuilt and redeployed. Example:
 
 ```bash
+gh workflow run "Deploy 🚀"
 gh workflow run "Deploy 🚀" -f targets="album/temple-of-low-men-37731753,artist/steve-white-trio"
-gh workflow run "Deploy 🚀" -f repair=true
 ```
 
-### Changed File Detection
+### Compare Mode
+
+`--compare` is what every push runs. It lists the `album/`, `artist/` and
+`og-image.png` keys in the bucket once (about 20 `ListObjectsV2` calls for ~20k
+objects), hashes each image in `dist/`, and uploads only files that are missing
+or whose size or MD5 differs from the stored ETag. `lib-storage` sends files up to
+5 MB as a single PUT (ETag is the MD5) and larger ones as 5 MB multipart parts
+(ETag is the MD5 of the part MD5s plus `-<parts>`), and `localEtag()` hashes the
+same way. Uploads run 16 at a time (`--concurrency`). A run with no new images
+finishes the step in seconds.
+
+It replaced a git diff of `public/album/` and `public/artist/` between the last
+deploy and the pushed commit. That diff needed a base commit: first the previous
+push (`github.event.before`), then (Sep 30, 2026) the last successful deploy found
+through the Actions runs API. The runs lookup returned run #272 (Sep 10) instead
+of #321, so the diff spanned 87 commits and 4,944 folders, and the sync
+force-uploaded all ~20k images (5.1 GB, one at a time) in close to three hours.
+Bulk commits that touched every album JSON had the same effect before that. The
+compare does not use git history, so neither can happen.
+
+### Changed File Detection (`--changed-files`, manual `targets`)
 
 ```javascript
 // Parse git diff output
