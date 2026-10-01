@@ -335,6 +335,7 @@ main = "./_worker.js"
 [assets]
 directory = "./dist-worker"
 binding = "ASSETS"
+html_handling = "drop-trailing-slash"   # serve <path>/index.html at <path>
 
 [[kv_namespaces]]
 binding = "SESSIONS"
@@ -447,7 +448,15 @@ async function handleAPI(request, env) {
 | Slug rename map | `SLUG_REDIRECTS` lookup table | 301 to current slug |
 | Genre query-string | `/albums(/<n>)?` with `?genre=<value>` | 301 to `/genre/<slugified>` |
 
-The canonical form (matching `<link rel="canonical">` and the sitemap) is **non-www, no trailing slash, lowercase**. Any new redirect rules should be added to `seoRedirect()` in [_worker.js](../../_worker.js); add the matching unit-test case if you extend the table.
+The canonical form (matching `<link rel="canonical">` and the sitemap) is **non-www, no trailing slash, lowercase**.
+
+When a request matches a static asset, Cloudflare's asset layer answers before the
+worker runs, so `seoRedirect()` never sees it. `generate-static-meta.mjs` writes pages as
+`<path>/index.html` (`/tv`, `/tv/guide`, `/tv/<channel>`, `/genres`, `/genre/<slug>`,
+artist pages), and under the default `html_handling` (`auto-trailing-slash`) those
+answered `/tv/guide` with a 307 to `/tv/guide/`. `wrangler.toml` sets
+`html_handling = "drop-trailing-slash"`, so they are served at `/tv/guide` (200) and
+`/tv/guide/` redirects there (307), matching the canonical form. Any new redirect rules should be added to `seoRedirect()` in [_worker.js](../../_worker.js); add the matching unit-test case if you extend the table.
 
 The `/albums/<slug>/` → `/album/<slug>` family of redirects (157 URLs in GSC) is handled by a Cloudflare zone-level rule outside this repo. If that rule is ever removed, port it to `seoRedirect()`.
 

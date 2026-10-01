@@ -6,6 +6,11 @@ main = "./_worker.js"
 [assets]
 directory = "./dist-worker"
 binding = "ASSETS"
+# URLs are canonical without a trailing slash. generate-static-meta writes pages as
+# <path>/index.html (/tv/guide, /genre/<slug>, /artist/<slug>, …); the default
+# auto-trailing-slash would 307 those to <path>/. This serves them at <path> and
+# redirects <path>/ there instead.
+html_handling = "drop-trailing-slash"
 
 # KV storage for Last.fm sessions
 [[kv_namespaces]]
