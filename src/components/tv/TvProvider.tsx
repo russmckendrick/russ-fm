@@ -44,11 +44,27 @@ export function TvProvider({ children }: { children: ReactNode }) {
   const index = count ? tuning.index % count : 0;
   const item = channel?.items[index] ?? null;
 
-  const step = useCallback((delta: number) => {
+  // Videos that turned out not to play this visit (see TvState.dead).
+  const [dead, setDead] = useState<ReadonlySet<string>>(() => new Set());
+  const deadRef = useRef(dead);
+  deadRef.current = dead;
+  const markDead = useCallback((id: string) => {
+    setDead(d => (d.has(id) ? d : new Set(d).add(id)));
+  }, []);
+
+  // Move `delta` places, passing over dead videos; stays put if all are dead.
+  const step = useCallback((delta: number, skip?: string) => {
     setTuning(t => {
       if (!t.channel) return t;
-      const n = t.channel.items.length;
-      return { ...t, index: (((t.index + delta) % n) + n) % n, offset: 0, seq: t.seq + 1 };
+      const items = t.channel.items;
+      const n = items.length;
+      const gone = (i: number) => deadRef.current.has(items[i].id) || items[i].id === skip;
+      let i = t.index;
+      for (let tries = 0; tries < n; tries++) {
+        i = (((i + delta) % n) + n) % n;
+        if (!gone(i)) return { ...t, index: i, offset: 0, seq: t.seq + 1 };
+      }
+      return t;
     });
   }, []);
   const next = useCallback(() => step(1), [step]);
@@ -58,7 +74,8 @@ export function TvProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const host = useRef<HTMLDivElement>(null);
-  const player = useTvPlayer(host, { enabled, onEnded: next, onError: next });
+  const failedRef = useRef(() => {});
+  const player = useTvPlayer(host, { enabled, onEnded: next, onError: () => failedRef.current() });
 
   const timeRef = useRef(player.time);
   timeRef.current = player.time;
@@ -111,6 +128,17 @@ export function TvProvider({ children }: { children: ReactNode }) {
     setActive(false);
   }, [pause]);
 
+  // YouTube refused the video (removed, private, embedding disabled): mark it
+  // dead so lists drop it, and move on — or switch off when nothing is left.
+  failedRef.current = () => {
+    const id = item?.id;
+    if (!id) return;
+    markDead(id);
+    const left = channel?.items.some(v => v.id !== id && !dead.has(v.id));
+    if (left) step(1, id);
+    else close();
+  };
+
   // Where the layer goes ----------------------------------------------------
   const [slot, setSlot] = useState<HTMLElement | null>(null);
   const [rect, setRect] = useState<Rect | null>(null);
@@ -145,8 +173,8 @@ export function TvProvider({ children }: { children: ReactNode }) {
       : undefined;
 
   const value = useMemo<TvState>(
-    () => ({ active, channel, index, item, offset: tuning.offset, player, fullscreen, tune, go, next, prev, close, toggleFullscreen, setSlot }),
-    [active, channel, index, item, tuning.offset, player, fullscreen, tune, go, next, prev, close, toggleFullscreen],
+    () => ({ active, channel, index, item, offset: tuning.offset, player, fullscreen, tune, go, next, prev, close, toggleFullscreen, setSlot, dead, markDead }),
+    [active, channel, index, item, tuning.offset, player, fullscreen, tune, go, next, prev, close, toggleFullscreen, dead, markDead],
   );
 
   return (

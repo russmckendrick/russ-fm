@@ -4,7 +4,7 @@ import { List, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-r
 import { SoundIcon } from '@/components/tv/SoundIcon';
 import { FitTitle, HeroRecord, SectionHeading, usePageFlood } from '@/components/player';
 import { Scrubber } from '@/components/tv/Scrubber';
-import { useTv } from '@/components/tv/tv-context';
+import { isMissingThumb, useTv } from '@/components/tv/tv-context';
 import { useAlbumColorMap } from '@/hooks/useAlbumColors';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { originalYear } from '@/lib/releaseYear';
@@ -276,9 +276,18 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
             allUpNext ? 'grid grid-cols-1 gap-x-5 gap-y-8 min-[480px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 min-[1800px]:grid-cols-6' : 'shelf-scroll flex items-start gap-5',
           )}
         >
-          {upNext.map(i => (
-            <UpNextTile key={`${i}-${channel.items[i].id}`} item={channel.items[i]} onPick={() => tv.go(i)} colours={colours} fill={allUpNext} />
-          ))}
+          {upNext
+            .filter(i => !tv.dead.has(channel.items[i].id))
+            .map(i => (
+              <UpNextTile
+                key={`${i}-${channel.items[i].id}`}
+                item={channel.items[i]}
+                onPick={() => tv.go(i)}
+                onMissing={() => tv.markDead(channel.items[i].id)}
+                colours={colours}
+                fill={allUpNext}
+              />
+            ))}
         </div>
       </section>
 
@@ -294,7 +303,20 @@ export function TvScene({ channels, channel, videoId, videoCount }: TvSceneProps
 type ColourMap = ReturnType<typeof useAlbumColorMap>;
 
 /** A video still to come; `fill` makes it as wide as its grid cell instead of a fixed shelf width. */
-function UpNextTile({ item, onPick, colours, fill }: { item: TvItem; onPick: () => void; colours: ColourMap; fill?: boolean }) {
+function UpNextTile({
+  item,
+  onPick,
+  onMissing,
+  colours,
+  fill,
+}: {
+  item: TvItem;
+  onPick: () => void;
+  /** The thumbnail is YouTube's placeholder for a missing video. */
+  onMissing: () => void;
+  colours: ColourMap;
+  fill?: boolean;
+}) {
   const f = floodFor(colours?.[item.album.uri_release]);
   const year = originalYear(item.album);
   return (
@@ -304,6 +326,7 @@ function UpNextTile({ item, onPick, colours, fill }: { item: TvItem; onPick: () 
           src={youTubeThumb(item.id)}
           alt=""
           loading="lazy"
+          onLoad={e => isMissingThumb(e.currentTarget) && onMissing()}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
         />
         <span className="t-mono absolute bottom-2 right-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">

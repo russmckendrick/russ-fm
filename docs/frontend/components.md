@@ -179,6 +179,17 @@ Menus use the same rounded `--ground-2` panels as the rest of the site.
   playing on another channel moves across without reloading), `go`/`next`/`prev`, `close`,
   `toggleFullscreen`, the current `channel`/`item`/`offset`, the player and
   `setSlot(el)`.
+- **Dead videos.** `useTv()` also gives `dead` and `markDead(id)`: the videos found
+  not to play during this visit. A video lands there when YouTube refuses it in the
+  player (removed, private, embedding disabled), or when its thumbnail is YouTube's
+  placeholder for a missing video. The placeholder comes with a 404 but browsers still
+  draw it, so `onError` never fires; `isMissingThumb(img)` spots it by its 120 px
+  width on load. Next and previous skip dead videos. When a channel runs out of
+  playable ones, the TV switches off rather than leaving an error in the mini player.
+  `AlbumTv`'s tiles, position and count, and /tv's "Up next" tiles, leave dead videos
+  out; `AlbumTv` shows a one-line note when none are left. This catches what dies
+  after a scrape; `tv.json` already leaves out what the scrapper's playability check
+  found (see [tv.json](../data/schemas.md#tvjson)).
 - Its layer sits over the element passed to `setSlot` (the TV page's screen, behind
   the room photo) or, with no slot, floats bottom left as a mini player with a
   sleeve-coloured bar. See [pages.md](./pages.md#tvpage-srcpagestvpagetsx).

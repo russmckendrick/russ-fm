@@ -694,8 +694,9 @@ built once per tab by `buildChannels()` in `src/lib/tv.ts` (see
   the channel. Plain `/tv` (the nav link) goes to the channel that is already on.
 - **Playback.** The YouTube API only loads once a channel is tuned. The player starts
   muted so it can autoplay; "Sound on" (or tapping the screen) unmutes. A video that
-  ends moves on, and one YouTube refuses (removed, private, embedding disabled) is
-  skipped. Every change shows a burst of static (`.tv-static`).
+  ends moves on. One YouTube refuses (removed, private, embedding disabled) is
+  skipped and dropped from the channel's lists for the visit; see "Dead videos" in
+  [components.md](./components.md#tv-components-srccomponentstv). Every change shows a burst of static (`.tv-static`).
 - **Now-playing band** is one slim row (about 130px on desktop), like the album page's
   TV and the full-screen bar: progress as a white line on a dark track along its top
   edge (so it shows on any sleeve colour) that is also a scrubber (`Scrubber`: click or

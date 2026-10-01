@@ -32,6 +32,22 @@ export interface TvState {
   toggleFullscreen: () => void;
   /** The TV page's screen element, or null when the page is not showing. */
   setSlot: (el: HTMLElement | null) => void;
+  /**
+   * Videos found dead this visit: YouTube refused them in the player, or their
+   * thumbnail is missing (deleted and private videos). Lists hide them and
+   * next/previous skip them; tv.json leaves out the ones the scrapper found.
+   */
+  dead: ReadonlySet<string>;
+  markDead: (id: string) => void;
+}
+
+/**
+ * Whether a loaded YouTube thumbnail is the grey placeholder YouTube serves for
+ * a video that is gone. It comes with a 404 status, but browsers still draw it
+ * (so `onError` never fires), and it is 120 px wide where real ones are 320+.
+ */
+export function isMissingThumb(img: HTMLImageElement): boolean {
+  return img.naturalWidth > 0 && img.naturalWidth <= 120;
 }
 
 export const TvContext = createContext<TvState | null>(null);

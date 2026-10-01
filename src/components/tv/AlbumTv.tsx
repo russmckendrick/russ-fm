@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState, type SyntheticEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight, Maximize, Pause, Play, SkipBack, SkipForward, Tv } from 'lucide-react';
 import { Scrubber } from './Scrubber';
@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 import { fetchYouTubeTitle, youTubeVideos } from '@/lib/youtube';
 import type { Album } from '@/types/album';
 import { TvRoom } from '@/pages/tv/TvRoom';
-import { useTv } from './tv-context';
+import { isMissingThumb, useTv } from './tv-context';
 
 // One channel object per record for the tab, so the TV sees the same channel
 // when you come back to the page.
@@ -88,8 +88,16 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
   const on = tv.active && tv.channel?.slug === channel.slug;
   const [picked, setPicked] = useState(0);
-  const index = on ? tv.index : picked;
+  // The videos still worth showing: dead ones (refused by YouTube, or with a
+  // missing thumbnail) drop out of the list, the count and next/previous.
+  const live = channel.items.map((_, i) => i).filter(i => !tv.dead.has(channel.items[i].id));
+  const wanted = on ? tv.index : picked;
+  const index = live.includes(wanted) ? wanted : (live.find(i => i > wanted) ?? live[0] ?? wanted);
   const item = channel.items[index];
+  const position = live.indexOf(index);
+  const markIfMissing = (id: string) => (e: SyntheticEvent<HTMLImageElement>) => {
+    if (isMissingThumb(e.currentTarget)) tv.markDead(id);
+  };
 
   // The picture only comes to this room while it's showing this record.
   const slotRef = useCallback((el: HTMLDivElement | null) => setSlot(el), [setSlot]);
@@ -120,9 +128,9 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
     }
   };
   const step = (delta: number) => {
-    const n = channel.items.length;
     if (on) return delta > 0 ? tv.next() : tv.prev();
-    setPicked(i => (((i + delta) % n) + n) % n);
+    const n = live.length;
+    if (n) setPicked(live[(((position + delta) % n) + n) % n]);
   };
   const playPause = () => {
     if (!on) return play(index);
@@ -132,7 +140,11 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
   const btn = { background: f.ink, color: f.flood };
   const outline = { color: f.ink };
-  const many = channel.items.length > 1;
+  const many = live.length > 1;
+  // Every video has turned out dead.
+  if (!live.length) {
+    return <p className="t-mono m-0 rounded-[14px] bg-[rgba(255,255,255,.04)] p-6 text-[12px] uppercase tracking-[0.08em] opacity-70">None of this record's videos will play right now.</p>;
+  }
 
   return (
     <div className="tv overflow-hidden rounded-[14px]">
@@ -145,7 +157,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
         picture={
           on ? undefined : (
             <>
-              <img src={youTubeThumb(item.id, 'hq')} alt="" className="h-full w-full object-cover opacity-70" />
+              <img src={youTubeThumb(item.id, 'hq')} alt="" onLoad={markIfMissing(item.id)} className="h-full w-full object-cover opacity-70" />
               <div className="tv-scan" aria-hidden />
             </>
           )
@@ -164,7 +176,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
                 </svg>
               </div>
               <span className="tv-osd t-mono">
-                {index + 1}/{channel.items.length}
+                {position + 1}/{live.length}
               </span>
               <span className="tv-bug t-disp">russ.fm/tv</span>
               {player.muted && player.ready && (
@@ -210,7 +222,7 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
 
           <div className="ml-1 min-w-0 flex-1">
             <p className="t-mono m-0 truncate text-[10px] uppercase tracking-[0.08em] opacity-75 md:text-[11px]">
-              {index + 1} of {channel.items.length}
+              {position + 1} of {live.length}
               {on ? ` · ${formatDuration(elapsed)}` : ''}
               {duration ? `${on ? ' / ' : ' · '}${formatDuration(duration)}` : ''}
               {item.kind === 'live' ? ' · Live' : ''}
@@ -262,7 +274,8 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
       {/* The running order. */}
       {many && (
         <ol className="shelf-scroll m-0 flex list-none gap-3 bg-[rgba(0,0,0,.28)] p-3 md:gap-4 md:p-4" aria-label="Videos">
-          {channel.items.map((v, i) => {
+          {live.map((i, n) => {
+            const v = channel.items[i];
             const current = i === index;
             return (
               <li key={`${i}-${v.id}`} className="shrink-0">
@@ -280,10 +293,11 @@ function AlbumTvSet({ channel }: { channel: TvChannel }) {
                       src={youTubeThumb(v.id)}
                       alt=""
                       loading="lazy"
+                      onLoad={markIfMissing(v.id)}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                     <span className="t-mono absolute left-2 top-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">
-                      {current && on ? 'On now' : String(i + 1).padStart(2, '0')}
+                      {current && on ? 'On now' : String(n + 1).padStart(2, '0')}
                     </span>
                     {!v.untimed && (
                       <span className="t-mono absolute bottom-2 right-2 bg-[rgba(14,13,12,.85)] px-1.5 py-0.5 text-[11px] text-[color:var(--cream)]">
