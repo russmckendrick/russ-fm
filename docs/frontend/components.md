@@ -17,7 +17,7 @@ All exported from `@/components/player`.
 | `FloodProvider` | `FloodContext.tsx` | Wraps the app in `App.tsx`. Holds the page's current flood and writes it to `--flood` / `--flood-ink` on `<html>`. Provides two contexts: `FloodValueContext` (the flood / ink value) and `FloodSetterContext` (the setter). |
 | `usePageFlood`, `useFloodValue` | `flood-context.ts` | Set / read the page flood. `usePageFlood` reads only the setter context, so a page that sets the flood does not re-render when it changes; `useFloodValue` (the navigation) reads the value. See [Hooks](./hooks.md#flood-hooks). |
 | `CoverHero`, `AFTER_HERO` | `CoverHero.tsx` | Cover-led hero section. |
-| `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. The album page passes `scene` (from `useScrobbleScene`) and `ringColour` for the scrobble scene. |
+| `HeroRecord` | `HeroRecord.tsx` | Big sleeve with the disc out to the right, shrink-wrap and an optional sticker. The home hero passes `spinning={on}` so only the visible record spins. The album page passes `scene` (from `useScrobbleScene`) and `ringColour` for the scrobble scene; `ringColour` lights the ring on black vinyl, while a coloured disc gets cream (or ink when `look.light`). |
 | `Sleeve` | `Sleeve.tsx` | Cover art with a card edge and drop shadow. |
 | `Vinyl` | `Vinyl.tsx` | Grooved disc with a coloured centre label, spinning at 33⅓ (or 45). |
 | `Sticker` | `Sticker.tsx` | Round "Added 25 SEP 2026" shop sticker; `label` and `footer` make the "Scrobbled 26 SEP · 11 tracks" one. |

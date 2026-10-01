@@ -35,13 +35,29 @@ interface HeroRecordProps {
    * the cover with a ring of one segment per track, then slides home.
    */
   scene?: ScrobbleScene;
-  /** Colour of the lit track segments. */
+  /** Colour of the lit track segments on black vinyl (coloured discs get cream or ink). */
   ringColour?: string;
   eager?: boolean;
   className?: string;
 }
 
-const SCROBBLED_STICKER = { background: 'var(--cream)', color: '#0e0d0c' };
+const INK = '#0e0d0c';
+const SCROBBLED_STICKER = { background: 'var(--cream)', color: INK };
+
+/**
+ * The scrobble ring's lit, unlit and finished segment colours. Black vinyl takes the page's
+ * flood colour; a coloured pressing is often that same colour, which hid the lit segments, so
+ * there the ring is cream, or ink on a pale disc.
+ */
+function ringVars(look: VinylLook | null, flood?: string): CSSProperties | undefined {
+  if (!look) return flood ? ({ '--ring': flood } as CSSProperties) : undefined;
+  const ink = look.light ? INK : 'var(--cream)';
+  return {
+    '--ring': ink,
+    '--ring-done': ink,
+    '--ring-off': look.light ? 'rgba(14, 13, 12, 0.2)' : 'rgba(251, 247, 239, 0.3)',
+  } as CSSProperties;
+}
 
 /** More discs than this are not drawn; a big box would fan out across the page. */
 const MAX_DISCS = 4;
@@ -84,7 +100,7 @@ export function HeroRecord({
     <div
       className={cn('hero-record relative aspect-square w-full', className)}
       data-scene={phase}
-      style={ringColour ? ({ '--ring': ringColour } as CSSProperties) : undefined}
+      style={ringVars(discs[0], ringColour)}
     >
       {/* The rest of the set, deepest first so each sits over the one behind it. */}
       {discs

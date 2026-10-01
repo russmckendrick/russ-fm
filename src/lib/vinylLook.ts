@@ -24,6 +24,8 @@ export interface VinylLook {
   groove: string;
   /** The 1px edge round the disc. */
   rim: string;
+  /** A pale body, where cream marks drawn over the disc would vanish (dark ones read instead). */
+  light?: boolean;
 }
 
 // Every word list below lives in src/config/vinyl-colours.json, shared with the scrapper (which
@@ -356,6 +358,7 @@ function buildLook(text: string): VinylLook | null {
     pattern: layers.length ? layers.join(', ') : undefined,
     groove: glass ? GLASS_GROOVE : light ? DARK_GROOVE : LIGHT_GROOVE,
     rim: glass || translucent ? GLASS_RIM : '#000',
+    light,
   };
 }
 

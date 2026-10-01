@@ -458,7 +458,7 @@ import { discLook } from '@/lib/vinylLook';
 
 | Export | Description |
 |--------|-------------|
-| `vinylLook(text)` | `{ body, pattern?, groove, rim }` for one colour string, or `null` for black, empty or unrecognised text (the disc stays black) |
+| `vinylLook(text)` | `{ body, pattern?, groove, rim, light? }` (`light`: a pale body, where cream marks would vanish) for one colour string, or `null` for black, empty or unrecognised text (the disc stays black) |
 | `discLook(colours, disc)` | The look for disc `disc` of a set: one colour covers every disc, several are one per disc with the last carrying on |
 | `entryDiscColours(entry)` / `splitDiscText(text, qty)` | The colour of each disc in one format entry, splitting "Disc 1 White, Disc 2 Black" into `["White", "Black"]` (the scrapper folds it into one colour, "Disc White"); `pressingTitle(text, colour, qty)` titles such an entry "White / Black" |
 | `pressingDiscs(details, colours)` | The colour of each disc, in order (null for a black disc): each Vinyl entry of the album JSON's `format_details` gives `qty` discs of its `colour`; without details it is one disc per `vinyl_colours` entry. Empty when no disc is coloured, so black sets keep one record |

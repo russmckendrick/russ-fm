@@ -618,7 +618,7 @@ body {
 
 .scrobble-seg {
   fill: none;
-  stroke: rgba(251, 247, 239, 0.14);
+  stroke: var(--ring-off, rgba(251, 247, 239, 0.14));
   stroke-width: 1.7;
   stroke-linecap: round;
   transition: stroke 0.3s;
@@ -634,7 +634,7 @@ body {
 }
 
 .hero-record[data-scene='done'] .scrobble-seg[data-state='on'] {
-  stroke: var(--cream);
+  stroke: var(--ring-done, var(--cream));
 }
 
 /* "Now A2 VHS Sex" under the album hero's buttons while it scrobbles. */
