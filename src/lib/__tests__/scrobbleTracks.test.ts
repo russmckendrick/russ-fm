@@ -41,4 +41,26 @@ describe('toScrobbleTracks', () => {
       ])
     ).toEqual([{ title: 'Prologue 1945', artist: undefined }]);
   });
+
+  it('scrobbles a suite as its movements, each prefixed with the suite', () => {
+    // Rush, 2112 (Discogs 38066922): side A is one suite in seven movements.
+    expect(
+      toScrobbleTracks([
+        { name: '2112', position: '', type: 'index' },
+        { name: 'Overture', position: 'A-I', parent: '2112' },
+        { name: 'The Temples Of Syrinx', position: 'A-II', parent: '2112' },
+        { name: 'A Passage To Bangkok', position: 'B1' },
+      ]).map(t => t.title)
+    ).toEqual(['2112: Overture', '2112: The Temples Of Syrinx', 'A Passage To Bangkok']);
+  });
+
+  it('keeps medley songs under their own titles and drops typed headings', () => {
+    expect(
+      toScrobbleTracks([
+        { name: 'Side One', position: '', type: 'heading' },
+        { name: 'Medley', position: '', type: 'index' },
+        { name: '17 Days', position: 'A1.1', parent: 'Medley' },
+      ]).map(t => t.title)
+    ).toEqual(['17 Days']);
+  });
 });

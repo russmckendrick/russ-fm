@@ -12,7 +12,7 @@ use crate::util::now_iso;
 
 /// Recursively rebuild a value with object keys in sorted order (so pretty-printing emits sorted
 /// keys regardless of the `preserve_order` feature).
-fn sort_value(v: &Value) -> Value {
+pub(crate) fn sort_value(v: &Value) -> Value {
     match v {
         Value::Object(map) => {
             let mut keys: Vec<&String> = map.keys().collect();
@@ -141,13 +141,20 @@ fn artist_image(img: &Value) -> Value {
 }
 
 /// Rebuild a track to `{position,title,duration,artists}` (artists default `[]`).
-fn track(t: &Value) -> Value {
-    json!({
+pub(crate) fn track(t: &Value) -> Value {
+    let mut out = json!({
         "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
         "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
         "duration": t.get("duration").cloned().unwrap_or(Value::Null),
         "artists": t.get("artists").cloned().unwrap_or_else(|| json!([])),
-    })
+    });
+    // Only on headings/suites (`type`) and suite movements (`parent`); plain tracks omit both.
+    for key in ["type", "parent"] {
+        if let Some(v) = t.get(key).filter(|v| !v.is_null()) {
+            out[key] = v.clone();
+        }
+    }
+    out
 }
 
 /// Build the enriched artist entry for a release's `artists[]`, joining the artists table.

@@ -7,6 +7,7 @@ import type { BoxDisc, BoxTrack } from '@/lib/boxDiscs';
 import { getAlbumImageFromData } from '@/lib/image-utils';
 import { floodFor, type Flood } from '@/lib/sleeveColour';
 import { toScrobbleTracks } from '@/lib/scrobbleTracks';
+import { isSuiteRow, sidingPosition } from '@/lib/tracklistRows';
 import { discLook, vinylLook } from '@/lib/vinylLook';
 import { cn } from '@/lib/utils';
 import { AlbumScrobbleButton } from '@/components/AlbumScrobbleButton';
@@ -96,8 +97,8 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
   const sides = useMemo(() => {
     if (!disc) return [];
     const groups: Array<{ label: string; tracks: BoxTrack[] }> = [];
-    disc.tracks.forEach(t => {
-      const letter = (t.position ?? '').charAt(0);
+    disc.tracks.forEach((t, i) => {
+      const letter = sidingPosition(disc.tracks, i).charAt(0);
       const label = /[A-Z]/i.test(letter) ? `Side ${letter.toUpperCase()}` : 'Tracks';
       const last = groups[groups.length - 1];
       if (last && last.label === label) last.tracks.push(t);
@@ -105,9 +106,10 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
     });
     return groups;
   }, [disc]);
-  const totalTracks = discs.reduce((n, d) => n + d.tracks.length, 0);
+  const totalTracks = discs.reduce((n, d) => n + d.tracks.filter(t => !isSuiteRow(t)).length, 0);
   if (!disc) return null;
   const longest = Math.max(...disc.title.split(/\s+/).map(w => w.length), 6);
+  const songCount = disc.tracks.filter(t => !isSuiteRow(t)).length;
   const sideRange = disc.sides.length > 1 ? `Sides ${disc.sides[0]}–${disc.sides[disc.sides.length - 1]}` : disc.sides.length ? `Side ${disc.sides[0]}` : '';
 
   return (
@@ -197,7 +199,7 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
           </h3>
           <div className="t-kicker flex flex-wrap gap-x-4 gap-y-1" style={{ color: f.sub }}>
             {!disc.member && <span>Box set disc</span>}
-            {disc.tracks.length > 0 && <span>{disc.tracks.length} tracks</span>}
+            {songCount > 0 && <span>{songCount} tracks</span>}
             {sideRange && <span>{sideRange}</span>}
           </div>
           {sides.length > 0 && (
@@ -206,12 +208,16 @@ export function BoxContents({ boxUri, discs, selected, onSelect, colours, boxFlo
                 <div key={s.label} className="flex flex-col gap-2">
                   <span className="t-disp text-[20px]">{s.label}</span>
                   <ol className="m-0 list-none p-0">
-                    {s.tracks.map((t, i) => (
-                      <li key={`${t.position}-${i}`} className="flex gap-3 border-b py-2 text-[14px]" style={{ borderColor: f.ink === '#0e0d0c' ? 'rgba(14,13,12,.18)' : 'rgba(251,247,239,.2)' }}>
-                        <span className="t-mono w-8 shrink-0 pt-0.5 text-[11px] font-bold opacity-70">{t.position}</span>
-                        <span className="font-semibold">{t.name}</span>
-                      </li>
-                    ))}
+                    {s.tracks.map((t, i) =>
+                      isSuiteRow(t) ? (
+                        <li key={`suite-${i}`} className="t-kicker pb-1 pt-3">{t.name}</li>
+                      ) : (
+                        <li key={`${t.position}-${i}`} className="flex gap-3 border-b py-2 text-[14px]" style={{ borderColor: f.ink === '#0e0d0c' ? 'rgba(14,13,12,.18)' : 'rgba(251,247,239,.2)' }}>
+                          <span className="t-mono min-w-8 shrink-0 whitespace-nowrap pt-0.5 text-[11px] font-bold opacity-70">{t.position}</span>
+                          <span className="font-semibold">{t.name}</span>
+                        </li>
+                      ),
+                    )}
                   </ol>
                 </div>
               ))}

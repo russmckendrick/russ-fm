@@ -81,6 +81,10 @@ pub enum Command {
     /// write `format_details` / `vinyl_colours` into the album JSON and collection.json.
     /// Resumable; only releases without stored formats call Discogs.
     BackfillFormats(BackfillFormatsArgs),
+    /// Re-fetch the Discogs tracklist of releases stored before headings and suites (Discogs
+    /// index tracks, e.g. "2112") were told apart, so each suite's movements are kept.
+    /// Resumable; only releases with an untyped position-less row call Discogs.
+    BackfillTracklists(BackfillTracklistsArgs),
     /// Built-in database manager (search/list/delete/stats/backup).
     #[command(subcommand)]
     Db(DbCommand),
@@ -341,6 +345,19 @@ pub struct BackfillFormatsArgs {
     pub force: bool,
 }
 
+#[derive(Debug, Args)]
+pub struct BackfillTracklistsArgs {
+    /// Only fetch this many releases from Discogs (newest additions first).
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Report what would be fetched without calling Discogs or writing anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Fetch every release again, including ones whose tracklist is already typed.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+}
+
 #[derive(Debug, Subcommand)]
 pub enum DbCommand {
     /// Search releases or artists.
@@ -448,6 +465,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::BackfillVideos(a) => ops::videos::run(&cfg, a).await,
         Command::BackfillOriginalYears(a) => ops::original_years::run(&cfg, a).await,
         Command::BackfillFormats(a) => ops::formats::run(&cfg, a).await,
+        Command::BackfillTracklists(a) => ops::tracklists::run(&cfg, a).await,
     }
 }
 

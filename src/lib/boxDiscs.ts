@@ -1,11 +1,15 @@
 import type { BoxsetContent } from '@/types/album';
 import { entryDiscColours, type FormatDetail } from '@/lib/vinylLook';
+import { basePosition, isSuiteRow } from '@/lib/tracklistRows';
 
 /** A tracklist row as it appears in the box set's own Discogs tracklist. */
 export interface BoxTrack {
   name: string;
   position?: string;
   duration_ms?: number;
+  /** "heading" or "index" (a suite, which is a song, not an album). */
+  type?: string;
+  parent?: string;
   artists?: Array<{ name: string }>;
 }
 
@@ -46,7 +50,9 @@ const normNoParens = (s: string) => norm(s.replace(/\(.*?\)/g, ''));
 export function buildBoxDiscs(tracklist: BoxTrack[], contents: BoxsetContent[]): BoxDisc[] {
   const sections: Array<{ header: string; tracks: BoxTrack[] }> = [];
   for (const t of tracklist) {
-    if (!t.position?.trim()) {
+    if (isSuiteRow(t)) {
+      if (sections.length) sections[sections.length - 1].tracks.push(t);
+    } else if (!t.position?.trim()) {
       if (t.name?.trim()) sections.push({ header: t.name.trim(), tracks: [] });
     } else if (sections.length) {
       sections[sections.length - 1].tracks.push(t);
@@ -90,7 +96,7 @@ export function buildBoxDiscs(tracklist: BoxTrack[], contents: BoxsetContent[]):
     .map((s) => {
       const i = sections.indexOf(s);
       const member = matches.get(i) ?? null;
-      const sides = [...new Set(s.tracks.map(t => (t.position ?? '').charAt(0)).filter(c => /[A-Z]/i.test(c)))];
+      const sides = [...new Set(s.tracks.map(t => basePosition(t).charAt(0)).filter(c => /[A-Z]/i.test(c)))];
       return { title: member ? member.release_name.trim() : s.header, member, tracks: s.tracks, sides };
     });
 
@@ -108,6 +114,8 @@ export interface BoxTracklistRow {
   position?: string | null;
   title?: string;
   name?: string;
+  type?: string;
+  parent?: string;
 }
 
 /**
@@ -145,6 +153,8 @@ export function boxMemberDiscs(
   const sections: Array<{ header: string; keys: string[]; tracks: number }> = [];
   for (const row of tracklist) {
     const name = (row.title ?? row.name ?? '').trim();
+    // A suite plays on its movements' side; they follow it and are counted there.
+    if (isSuiteRow(row)) continue;
     if (!row.position?.trim()) {
       if (name) sections.push({ header: name, keys: [], tracks: 0 });
       continue;
@@ -152,7 +162,7 @@ export function boxMemberDiscs(
     const section = sections[sections.length - 1];
     if (!section) continue;
     section.tracks++;
-    const key = sideKey(row.position);
+    const key = sideKey(basePosition(row));
     if (key && !section.keys.includes(key)) section.keys.push(key);
   }
   // Headers with nothing under them ("CD1") are not albums.

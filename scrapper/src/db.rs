@@ -163,6 +163,16 @@ pub struct FormatCandidate {
     pub raw_data: Value,
 }
 
+/// A release for `backfill-tracklists`.
+#[derive(Debug, Clone)]
+pub struct TracklistCandidate {
+    pub discogs_id: String,
+    pub title: String,
+    pub artists: Vec<String>,
+    /// The stored tracklist, as last mapped from Discogs (or hand-edited).
+    pub tracklist: Value,
+}
+
 /// A box-format release row for the TUI Boxsets screen.
 #[derive(Debug, Clone, Serialize)]
 pub struct BoxsetSummary {
@@ -231,12 +241,14 @@ fn string_list(v: &Value) -> Vec<String> {
 }
 
 /// The album titles inside a boxset: tracklist section headers (rows with a title but no
-/// position), as produced by Discogs box set tracklists.
+/// position), as produced by Discogs box set tracklists. Suites (`type: "index"`, e.g.
+/// "Supper's Ready") are position-less too but are songs, not albums, so they are skipped.
 pub fn boxset_section_headers(tracklist: &Value) -> Vec<String> {
     tracklist
         .as_array()
         .map(|arr| {
             arr.iter()
+                .filter(|t| t.get("type").and_then(|k| k.as_str()) != Some("index"))
                 .filter(|t| t.get("position").and_then(|p| p.as_str()).unwrap_or("").trim().is_empty())
                 .filter_map(|t| t.get("title").and_then(|v| v.as_str()))
                 .map(|s| s.trim().to_string())
@@ -937,6 +949,43 @@ impl Db {
         Ok(out)
     }
 
+    /// Every release with a Discogs id, newest additions first, with its stored tracklist.
+    pub fn releases_for_tracklists(&self) -> Result<Vec<TracklistCandidate>> {
+        let conn = self.conn()?;
+        let mut stmt = conn.prepare(
+            "SELECT discogs_id, title, artists, tracklist FROM releases WHERE discogs_id IS NOT NULL ORDER BY date_added DESC",
+        )?;
+        let rows = stmt.query_map([], |row| {
+            Ok((
+                row.get::<_, String>(0)?,
+                row.get::<_, Option<String>>(1)?.unwrap_or_default(),
+                row.get::<_, Option<String>>(2)?,
+                row.get::<_, Option<String>>(3)?,
+            ))
+        })?;
+        let mut out = Vec::new();
+        for row in rows {
+            let (discogs_id, title, artists, tracklist) = row?;
+            out.push(TracklistCandidate {
+                discogs_id,
+                title,
+                artists: artist_names(&parse_json(artists, "[]")),
+                tracklist: parse_json(tracklist, "[]"),
+            });
+        }
+        Ok(out)
+    }
+
+    /// Replace a release's stored tracklist. Returns `false` when the release is not in the
+    /// database.
+    pub fn set_release_tracklist(&self, discogs_id: &str, tracklist: &Value) -> Result<bool> {
+        let n = self.conn()?.execute(
+            "UPDATE releases SET tracklist = ?, updated_at = ? WHERE discogs_id = ?",
+            rusqlite::params![tracklist.to_string(), Utc::now().to_rfc3339(), discogs_id],
+        )?;
+        Ok(n > 0)
+    }
+
     /// Set `raw_data.discogs.formats` (the Discogs `formats[]`, colour in each `text`) on a
     /// release, keeping every other key. Returns the updated `raw_data`, or `None` when the
     /// release is not in the database.
@@ -1376,6 +1425,16 @@ mod tests {
             {"position": "  ", "title": "  ", "duration": ""}
         ]);
         assert_eq!(boxset_section_headers(&tracklist), vec!["Life In A Day".to_string(), "Real To Real Cacophony.".to_string()]);
+    }
+
+    #[test]
+    fn boxset_section_headers_skip_suites() {
+        let tracklist = json!([
+            {"position": "", "title": "Close To The Edge (2013 Remix)", "type": "heading"},
+            {"position": "", "title": "Close To The Edge", "type": "index"},
+            {"position": "E1-I", "title": "The Solid Time Of Change", "parent": "Close To The Edge"}
+        ]);
+        assert_eq!(boxset_section_headers(&tracklist), vec!["Close To The Edge (2013 Remix)".to_string()]);
     }
 
     #[test]

@@ -427,7 +427,7 @@ if primary:
 | labels[].name | labels |
 | formats[].name | formats |
 | formats[] (`name`, `qty`, `descriptions`, `text`) | raw_data.discogs.formats (→ album JSON `format_details`; colours from `text` → `vinyl_colours`) |
-| tracklist | tracklist |
+| tracklist (`type_` heading/index kept as `type`; an index row's `sub_tracks` flattened in after it with `parent`) | tracklist (see [Tracklist rows](../data/schemas.md#tracklist-rows-headings-suites-and-movements)) |
 | images | images |
 | artists | artists |
 | uri | discogs_url |

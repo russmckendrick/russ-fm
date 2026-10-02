@@ -1111,23 +1111,47 @@ fn map_lastfm_album(resp: &Value) -> Option<Value> {
 
 /// Map a Discogs release's `tracklist` into the stored
 /// `[{position,title,duration,artists}]` shape.
-fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
-    discogs
-        .get("tracklist")
-        .and_then(|a| a.as_array())
-        .map(|arr| {
-            arr.iter()
-                .map(|t| {
-                    json!({
-                        "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
-                        "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
-                        "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
-                        "artists": track_artists(t),
-                    })
-                })
-                .collect()
+///
+/// Two Discogs row types are not plain tracks and keep their kind in `type`:
+///
+/// - `heading` — a side, disc or box set album title ("Bonus Tracks", "Low").
+/// - `index` — a suite whose movements Discogs nests in `sub_tracks` ("2112" with
+///   "A-I Overture" … "A-VII Grand Finale"). The suite row is kept for display, then each
+///   movement follows it as an ordinary track carrying `parent` (the suite's title), so the
+///   movements can be shown and scrobbled one by one. A movement without its own credits
+///   inherits the suite's.
+///
+/// Plain tracks carry no `type`, so existing releases keep their exact shape.
+pub(crate) fn tracklist_from_discogs(discogs: &Value) -> Vec<Value> {
+    let row = |t: &Value, artists: Vec<Value>| {
+        json!({
+            "position": t.get("position").cloned().unwrap_or_else(|| json!("")),
+            "title": t.get("title").cloned().unwrap_or_else(|| json!("")),
+            "duration": t.get("duration").cloned().unwrap_or_else(|| json!("")),
+            "artists": artists,
         })
-        .unwrap_or_default()
+    };
+    let mut out = Vec::new();
+    for t in discogs.get("tracklist").and_then(|a| a.as_array()).into_iter().flatten() {
+        let kind = t.get("type_").and_then(|k| k.as_str()).unwrap_or("track");
+        let artists = track_artists(t);
+        let mut r = row(t, artists.clone());
+        if matches!(kind, "heading" | "index") {
+            r["type"] = json!(kind);
+        }
+        out.push(r);
+        if kind != "index" {
+            continue;
+        }
+        let parent = t.get("title").cloned().unwrap_or_else(|| json!(""));
+        for sub in t.get("sub_tracks").and_then(|s| s.as_array()).into_iter().flatten() {
+            let own = track_artists(sub);
+            let mut r = row(sub, if own.is_empty() { artists.clone() } else { own });
+            r["parent"] = parent.clone();
+            out.push(r);
+        }
+    }
+    out
 }
 
 /// Per-track artist credits from one Discogs tracklist row.
@@ -1641,11 +1665,18 @@ pub fn rows_to_tracklist(original: &Value, rows: &[Vec<String>]) -> Value {
                 let cell = |i: usize| r.get(i).map(|s| s.trim()).unwrap_or("");
                 let (position, title) = (cell(0), cell(1));
                 let mut track = json!({ "position": position, "title": title, "duration": cell(2) });
-                let artists = find(position, title)
+                let original = find(position, title);
+                let artists = original
                     .and_then(|t| t.get("artists"))
                     .filter(|a| a.as_array().is_some_and(|a| !a.is_empty()));
                 if let Some(artists) = artists {
                     track["artists"] = artists.clone();
+                }
+                // Heading/suite kinds and suite membership aren't editable columns either.
+                for key in ["type", "parent"] {
+                    if let Some(v) = original.and_then(|t| t.get(key)) {
+                        track[key] = v.clone();
+                    }
                 }
                 track
             })
@@ -2023,6 +2054,39 @@ mod tests {
         }
     }
 
+    /// Discogs nests a suite's movements under an `index` row ("2112", Discogs 38066922);
+    /// dropping `sub_tracks` used to leave a bare "2112" with all of side A missing.
+    #[test]
+    fn tracklist_flattens_index_sub_tracks_under_their_suite() {
+        let discogs = json!({
+            "tracklist": [
+                {"position": "", "type_": "heading", "title": "Side One", "duration": ""},
+                {"position": "", "type_": "index", "title": "2112", "duration": "",
+                 "artists": [{"name": "Rush", "id": 1}],
+                 "sub_tracks": [
+                    {"position": "A-I", "type_": "track", "title": "Overture", "duration": "4:32"},
+                    {"position": "A-II", "type_": "track", "title": "The Temples Of Syrinx", "duration": "2:13",
+                     "artists": [{"name": "Geddy Lee", "id": 2}]}
+                 ]},
+                {"position": "B1", "type_": "track", "title": "A Passage To Bangkok", "duration": "3:30"}
+            ]
+        });
+        let tl = tracklist_from_discogs(&discogs);
+        let titles: Vec<_> = tl.iter().map(|t| t["title"].as_str().unwrap()).collect();
+        assert_eq!(titles, ["Side One", "2112", "Overture", "The Temples Of Syrinx", "A Passage To Bangkok"]);
+        assert_eq!(tl[0]["type"], json!("heading"));
+        assert_eq!(tl[1]["type"], json!("index"));
+        assert_eq!(tl[2]["position"], json!("A-I"));
+        assert_eq!(tl[2]["duration"], json!("4:32"));
+        assert_eq!(tl[2]["parent"], json!("2112"));
+        // A movement without its own credit takes the suite's; one with a credit keeps it.
+        assert_eq!(tl[2]["artists"][0]["name"], json!("Rush"));
+        assert_eq!(tl[3]["artists"][0]["name"], json!("Geddy Lee"));
+        // Plain tracks keep the old shape: no `type`, no `parent`.
+        assert!(tl[4].get("type").is_none() && tl[4].get("parent").is_none());
+        assert!(tl[2].get("type").is_none());
+    }
+
     #[test]
     fn summary_lines_start_with_a_blank_separator_and_report_every_service() {
         let mut rec = blank_record();
@@ -2083,6 +2147,20 @@ mod tests {
         assert_eq!(out[0]["artists"][0]["name"], json!("The Cranberries"));
         // An empty credit list stays absent rather than being written back as noise.
         assert!(out[1].get("artists").is_none());
+    }
+
+    /// Nor does it have kind/suite columns: a hand-edit keeps headings, suites and movements.
+    #[test]
+    fn tracklist_rows_preserve_suite_structure() {
+        let stored = json!([
+            { "position": "", "title": "2112", "duration": "", "type": "index" },
+            { "position": "A-I", "title": "Overture", "duration": "4:32", "parent": "2112" },
+        ]);
+        let rows = vec![vec!["".into(), "2112".into(), "".into()], vec!["A-I".into(), "Overture".into(), "4:33".into()]];
+        let out = rows_to_tracklist(&stored, &rows);
+        assert_eq!(out[0]["type"], json!("index"));
+        assert_eq!(out[1]["parent"], json!("2112"));
+        assert_eq!(out[1]["duration"], json!("4:33"));
     }
 
     #[test]

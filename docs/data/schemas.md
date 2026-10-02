@@ -254,6 +254,29 @@ The source is `raw_data.discogs.formats` in the SQLite row — the Discogs array
 `process_release` and the Discogs refresh, or filled for older rows by `scrapper backfill-formats`
 (see [cli-commands.md](../backend/cli-commands.md#backfill-formats)). No SQLite schema change.
 
+#### Tracklist rows: headings, suites and movements
+
+Each `tracklist` row is `{position, title, duration, artists}`. Discogs has two row types that
+aren't plain tracks, and those rows also carry `type`:
+
+| Row | `position` | Extra keys | Example |
+|-----|------------|------------|---------|
+| Plain track | `"A1"`, `"1-4"`, … | none | `B1 A Passage To Bangkok` |
+| Heading (side, disc, box set album) | `""` | `type: "heading"` | `Bonus Tracks`, `Low` |
+| Suite (Discogs `index` track) | `""` | `type: "index"` | `2112`, `Supper's Ready` |
+| Suite movement | `"A-I"`, `"B2 i"`, `"A1.1"`, `"A3-a"`, `"A2a"`, … | `parent: "<suite title>"` | `A-I Overture` |
+
+Discogs nests a suite's movements in the suite row's `sub_tracks`. The scrapper flattens them, so
+the suite row comes first and each movement follows it as an ordinary row with `parent` set. A
+movement with no credit of its own takes the suite's `artists`. Sometimes only the suite has a
+duration ("Supper's Ready" `23:06`) and sometimes only its movements do ("2112").
+
+Rows written before this have neither key, so readers still treat an untyped position-less row as
+a heading. `scrapper backfill-tracklists` re-maps those releases (see
+[cli-commands.md](../backend/cli-commands.md#backfill-tracklists)). The frontend reads rows
+through `src/lib/tracklistRows.ts` (see
+[utilities.md](../frontend/utilities.md#tracklist-rows-srclibtracklistrowsts)).
+
 ---
 
 ### Artist JSON (`artist/{slug}/{slug}.json`)

@@ -53,6 +53,11 @@ pub struct ReleaseRecord {
 > pages, or collection stats. Without them a compilation's tracks can only be scrobbled as
 > "Various", which Last.fm filters out.
 
+> **Headings and suites.** Heading and suite rows carry `type` (`"heading"` / `"index"`), and a
+> suite's movements (Discogs `sub_tracks`) follow it as rows with `parent` set to its title. Plain
+> tracks carry neither key. See
+> [Tracklist rows](./schemas.md#tracklist-rows-headings-suites-and-movements).
+
 ### ArtistRecord
 
 ```rust

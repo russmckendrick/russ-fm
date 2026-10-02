@@ -25,6 +25,7 @@ import { AFTER_HERO, CoverHero, HeroRecord, PillLink, RecordTile, SectionHeading
 import { discLooks, entryDiscColours, lookAt, pressingDiscs, pressingTitle, vinylLook, type VinylLook } from '@/lib/vinylLook';
 import { BoxContents, BoxHeroArt } from '@/components/album/BoxSet';
 import { boxMemberDiscs, buildBoxDiscs, type BoxTrack } from '@/lib/boxDiscs';
+import { isHeadingRow, isSuiteRow, sidingPosition, vinylSide } from '@/lib/tracklistRows';
 
 interface Album {
   release_name: string;
@@ -67,6 +68,10 @@ interface Track {
   name: string;
   duration_ms?: number;
   position?: string;
+  /** "heading" or "index" (a suite); plain tracks have none. See lib/tracklistRows. */
+  type?: string;
+  /** The suite a movement belongs to. */
+  parent?: string;
   artists?: Array<{
     name: string;
     discogs_id?: string;
@@ -531,15 +536,19 @@ export function AlbumDetailPage() {
     type LPGroup = { lpLabel: string; sides: SideGroup[] };
 
     // Check if this is a box set with section headers (tracks with no position acting as headers)
+    // Suites ("2112") are position-less too, but they're songs, not sections.
     const hasSectionHeaders = trackList.some((track, index) => {
-      const isHeader = !track.position && !track.duration_ms && track.name;
+      const isHeader = isHeadingRow(track) && track.name;
       const nextTrack = trackList[index + 1];
-      const nextHasPosition = nextTrack && (nextTrack.position || nextTrack.duration_ms);
+      const nextHasPosition = nextTrack && (nextTrack.position || nextTrack.duration_ms || isSuiteRow(nextTrack));
       return isHeader && nextHasPosition;
     });
 
+    // The position each row sides by: a movement's base ("A-I" → "A"), a suite its first movement's.
+    const sidingPositions = trackList.map((_, index) => sidingPosition(trackList, index));
+
     // Check if tracks have vinyl-style positions (A1, B1, etc.)
-    const hasVinylPositions = trackList.some(track => /^[A-Z]\d/.test(track.position || ''));
+    const hasVinylPositions = sidingPositions.some(position => vinylSide(position));
 
     if (hasSectionHeaders) {
       // Box set format: use section headers as group labels
@@ -548,8 +557,8 @@ export function AlbumDetailPage() {
       let currentSide: SideGroup | null = null;
       let currentSideKey = '';
 
-      trackList.forEach((track) => {
-        const isHeader = !track.position && !track.duration_ms && track.name;
+      trackList.forEach((track, index) => {
+        const isHeader = isHeadingRow(track) && track.name;
 
         if (isHeader) {
           // Parse header like "Mental Notes (2025 Remaster) - Side 1"
@@ -577,11 +586,9 @@ export function AlbumDetailPage() {
           }
         } else {
           // Check if track has vinyl position (A1, B2, etc.)
-          const position = track.position || '';
-          const vinylMatch = position.match(/^([A-Z])\d/);
+          const sideKey = vinylSide(sidingPositions[index]);
 
-          if (hasVinylPositions && vinylMatch) {
-            const sideKey = vinylMatch[1];
+          if (hasVinylPositions && sideKey) {
 
             // If side changed within current LP section, create new side group
             if (sideKey !== currentSideKey) {
@@ -625,13 +632,14 @@ export function AlbumDetailPage() {
     const sides: { sideKey: string; tracks: Track[] }[] = [];
     let currentSide: { sideKey: string; tracks: Track[] } | null = null;
 
-    trackList.forEach((track) => {
-      const position = track.position || '';
+    trackList.forEach((track, index) => {
+      const position = sidingPositions[index];
       let sideKey = '';
+      const side = vinylSide(position);
 
-      if (/^[A-Z]\d/.test(position)) {
+      if (side) {
         // Vinyl format: A1, B2, etc.
-        sideKey = position[0];
+        sideKey = side;
       } else if (/^\d+-\d+/.test(position)) {
         // Multi-disc format: 1-5, 2-3, etc.
         sideKey = `disc-${position.split('-')[0]}`;
@@ -698,7 +706,10 @@ export function AlbumDetailPage() {
 
   // Calculate total album duration
   const calculateTotalDuration = (trackList: Track[]) => {
+    // A suite counts once: by its movements when they're timed, otherwise by its own length.
+    const timedSuites = new Set(trackList.filter(t => t.parent && t.duration_ms).map(t => t.parent));
     const totalMs = trackList.reduce((sum, track) => {
+      if (isSuiteRow(track) && timedSuites.has(track.name)) return sum;
       if (track.duration_ms) return sum + track.duration_ms;
       return sum;
     }, 0);
@@ -744,6 +755,8 @@ export function AlbumDetailPage() {
           name: track.title || 'Unknown Track',
           duration_ms: track.duration ? convertDurationToMs(track.duration) : undefined,
           position: track.position,
+          type: track.type,
+          parent: track.parent,
           artists: track.artists // Keep artist info for compilations
         }));
       } else {
@@ -841,7 +854,7 @@ export function AlbumDetailPage() {
   const labelName = detailedAlbum?.labels?.[0];
   const scrobbleArtist = album.release_artist;
   const albumTracksForScrobble = toScrobbleTracks(tracks);
-  const scrobbleRows = scrobbleableRows(tracks as Array<{ name?: string; position?: string }>);
+  const scrobbleRows = scrobbleableRows(tracks);
   const scenePhase = scrobbleScene.phase;
   const showScrobbleReadout = !isBox && (scenePhase === 'lift' || scenePhase === 'play' || scenePhase === 'done');
   const nowRow = scrobbleRows[Math.min(scrobbleScene.done, scrobbleRows.length - 1)];
@@ -901,7 +914,7 @@ export function AlbumDetailPage() {
         {isBox ? (
           <span>{boxDiscs.length} albums</span>
         ) : (
-          tracks.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{tracks.length} tracks</span>
+          scrobbleRows.length > 0 && <span>{sideCount > 1 ? `${sideCount} sides · ` : ''}{scrobbleRows.length} tracks</span>
         )}
         {totalDuration && <span>{totalDuration}</span>}
       </div>
@@ -1423,8 +1436,17 @@ function Tracklist({
                   )}
                   <ol className="m-0 list-none p-0">
                     {rows.map((track, i) => {
-                      const header = !track.position && !track.duration_ms;
-                      if (header) {
+                      if (isSuiteRow(track)) {
+                        // A suite heads its movements, which follow it with their own positions.
+                        const duration = getDuration(track);
+                        return (
+                          <li key={i} className="flex items-baseline gap-4 pb-1 pt-4">
+                            <span className="t-kicker flex-1" style={{ color: accent }}>{track.name}</span>
+                            {duration && <span className="t-mono text-[12px] text-[color:var(--cream-dim)]">{duration}</span>}
+                          </li>
+                        );
+                      }
+                      if (isHeadingRow(track)) {
                         return (
                           <li key={i} className="t-kicker pb-1 pt-4" style={{ color: accent }}>
                             {track.name}
@@ -1435,7 +1457,7 @@ function Tracklist({
                       const duration = getDuration(track);
                       return (
                         <li key={i} className="flex items-baseline gap-4 border-b py-3.5 text-[16px] md:text-[17px]" style={{ borderColor: 'var(--cream-rule)' }}>
-                          <span className="t-mono w-8 shrink-0 text-[12px] font-bold" style={{ color: accent }}>
+                          <span className="t-mono min-w-8 shrink-0 whitespace-nowrap text-[12px] font-bold" style={{ color: accent }}>
                             {track.position || track.track_number || i + 1}
                           </span>
                           <span className="min-w-0 flex-1 font-semibold">

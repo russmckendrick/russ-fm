@@ -15,6 +15,7 @@ pub mod rename;
 pub mod report;
 pub mod service_input;
 pub mod services;
+pub mod tracklists;
 pub mod videos;
 
 use anyhow::{bail, Result};

@@ -219,6 +219,25 @@ need their entry; parents resolve `boxset_contents` against the full collection)
 `AlbumDetailPage` renders the relationship both ways: members get a "From the box set" pill
 in the hero, parents get the box set view (see [Box Set Discs](#box-set-discs-srclibboxdiscsts)).
 
+## Tracklist Rows (`src/lib/tracklistRows.ts`)
+
+Shared rules for what a tracklist row is and which side it plays on. The album page, the box
+set helpers and the scrobbler all use them. See
+[Tracklist rows](../data/schemas.md#tracklist-rows-headings-suites-and-movements) for the data.
+
+| Helper | Returns |
+|--------|---------|
+| `isSuiteRow(row)` | `type === "index"` |
+| `isHeadingRow(row)` | `type === "heading"`, or (untyped older rows) no `parent`, position or duration |
+| `basePosition(row)` | A movement's position without its suffix (`A-I` → `A`, `B2 i` → `B2`, `A1.1` → `A1`, `A3-a` → `A3`, `A2a` → `A2`, `2-4.1` → `2-4`). Other rows keep their position |
+| `vinylSide(position)` | The side letter (`A1` → `A`, `B` → `B`), or `null` for CD and digital positions (`CD-1`, `1-4`) |
+| `sidingPosition(rows, i)` | The position that decides a row's side: a movement's base position, or for a suite row its first movement's |
+
+On the album page a suite is drawn as a subheading inside its side (with its length when
+Discogs has one), and its movements are listed under it. The total running time counts a suite
+once: by its movements when they have durations, otherwise by the suite's own length. The
+hero's track count is the number of rows that get scrobbled.
+
 ## Box Set Discs (`src/lib/boxDiscs.ts`)
 
 Builds the "In this box" disc list for a box set page from the **box's own Discogs
@@ -232,7 +251,9 @@ const discs = buildBoxDiscs(tracks as BoxTrack[], album.boxset_contents ?? []);
 ```
 
 - Rows with no `position` are section headers; each header starts a disc and the positioned
-  rows after it are its tracks. Headers with no tracks are dropped.
+  rows after it are its tracks. Headers with no tracks are dropped. Suite rows (`type:
+  "index"`) have no position either but are songs: they stay in the current disc. Their
+  movements are sided by `basePosition()`.
 - Each section is linked to a `boxset_contents` member by title: exact normalised matches
   first (so "Ziggy (2003 Mix)" cannot take the original's slot), then a looser match that
   ignores bracketed text and allows prefixes. Each member is used once.
@@ -671,12 +692,16 @@ import { toScrobbleTracks } from '@/lib/scrobbleTracks';
 />
 ```
 
-It drops two kinds of row that must never reach Last.fm:
+It drops these rows, which must never reach Last.fm:
 
 - **Position-less section headers** — Discogs marks sides, discs and box set albums with a
   row that has a title but no position ("Side :/", "Life In A Day"). They render in the
   tracklist but are not songs. Rows are only treated as headers when the tracklist actually
   uses positions, so the Spotify/Last.fm fallbacks (which carry none) pass through intact.
+  Rows typed `heading` are always dropped.
+- **Suite rows** (`type: "index"`, e.g. "2112"). A suite is scrobbled as its movements instead.
+  Each movement is titled `Suite: Movement` (`2112: Overture`) by `scrobbleTitle()`. A suite
+  called "Medley" is a run of separate songs, so its movements keep their own titles.
 - **Untitled rows**, which Last.fm has nothing to match against.
 
 Per-track artists are carried through for compilations. Tracks without one are still

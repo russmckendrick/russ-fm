@@ -12,7 +12,8 @@ authoritative flag list of any subcommand.
 
 `status`, `test`, `init`, `backup`, `db`, `release`, `collection`, `artist`,
 `artist-batch`, `report`, `generate-collection`, `enrich-description`,
-`backfill-videos`, `backfill-original-years`, `backfill-formats`, `maintenance`.
+`backfill-videos`, `backfill-original-years`, `backfill-formats`, `backfill-tracklists`,
+`maintenance`.
 
 ## Global Options
 
@@ -535,6 +536,42 @@ scrapper backfill-formats
   failed, updated and already-current files, and regenerates `collection.json`.
 - New and refreshed releases store the formats through `process_release` / the Discogs refresh,
   so this is only needed for rows written before that.
+
+---
+
+## backfill-tracklists
+
+Re-fetch the Discogs tracklist of releases stored before headings and suites were told apart,
+and patch the result into their album JSON. Older rows kept only the top-level Discogs rows, so a
+suite (Discogs `index` track, e.g. Rush's "2112") was stored as a bare title and its movements
+were lost.
+
+```bash
+scrapper backfill-tracklists [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only fetch this many releases from Discogs (newest additions first) |
+| `--dry-run` | | FLAG | `false` | List the releases that would be fetched, without calling Discogs or writing anything |
+| `--force` | `-f` | FLAG | `false` | Fetch every release again, including ones whose tracklist is already typed |
+
+### Behavior
+
+- Candidates are releases with a position-less row that has no `type`. Only those can hide a
+  suite. That was 393 releases when this was added.
+- One `GET /releases/{id}` per candidate. The tracklist is mapped by the same
+  `tracklist_from_discogs()` as `process_release`: headings and suites get `type`, and movements
+  are flattened in after their suite with `parent` set (see
+  [Tracklist rows](../data/schemas.md#tracklist-rows-headings-suites-and-movements)). This
+  replaces the stored tracklist, so hand edits to those releases are overwritten.
+- Then every release whose tracklist is typed has its album JSON `tracklist` patched from the DB,
+  with keys sorted. Only that key is touched, and a file that is already current is not
+  rewritten. `collection.json` doesn't use tracklists, so it isn't regenerated.
+- Resumable: a failed lookup keeps the old tracklist, and a re-run retries only those.
+- Prints `→ N movement(s)` for releases with suites.
 
 ---
 
