@@ -1227,21 +1227,15 @@
       "artists": [],
       "duration": "",
       "position": "",
-      "title": "Live Album"
+      "title": "Live Album",
+      "type": "heading"
     },
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "45467",
-          "discogs_original_name": "Pink Floyd",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Pink Floyd",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1251,16 +1245,9 @@
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "45467",
-          "discogs_original_name": "Pink Floyd",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Pink Floyd",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1270,16 +1257,9 @@
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "45467",
-          "discogs_original_name": "Pink Floyd",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Pink Floyd",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1289,16 +1269,9 @@
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "45467",
-          "discogs_original_name": "Pink Floyd",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Pink Floyd",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1309,40 +1282,80 @@
       "artists": [],
       "duration": "",
       "position": "",
-      "title": "Studio Album"
+      "title": "Studio Album",
+      "type": "heading"
     },
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "110861",
-          "discogs_original_name": "Richard Wright",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Richard Wright",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
       "position": "",
-      "title": "Sysyphus"
+      "title": "Sysyphus",
+      "type": "index"
     },
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
+          "discogs_id": "110861",
+          "name": "Richard Wright",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "Sysyphus",
+      "position": "C1.1",
+      "title": "Part 1"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "110861",
+          "name": "Richard Wright",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "Sysyphus",
+      "position": "C1.2",
+      "title": "Part 2"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "110861",
+          "name": "Richard Wright",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "Sysyphus",
+      "position": "C1.3",
+      "title": "Part 3"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "110861",
+          "name": "Richard Wright",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "Sysyphus",
+      "position": "C1.4",
+      "title": "Part 4"
+    },
+    {
+      "artists": [
+        {
           "discogs_id": "110862",
-          "discogs_original_name": "Roger Waters",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Roger Waters",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1352,16 +1365,9 @@
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "110862",
-          "discogs_original_name": "Roger Waters",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Roger Waters",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
@@ -1371,40 +1377,106 @@
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
           "discogs_id": "110863",
-          "discogs_original_name": "David Gilmour",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "David Gilmour",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
       "position": "",
-      "title": "The Narrow Way"
+      "title": "The Narrow Way",
+      "type": "index"
     },
     {
       "artists": [
         {
-          "apple_music_id": null,
-          "biography": null,
+          "discogs_id": "110863",
+          "name": "David Gilmour",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Narrow Way",
+      "position": "D1.1",
+      "title": "Part 1"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "110863",
+          "name": "David Gilmour",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Narrow Way",
+      "position": "D1.2",
+      "title": "Part 2"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "110863",
+          "name": "David Gilmour",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Narrow Way",
+      "position": "D1.3",
+      "title": "Part 3"
+    },
+    {
+      "artists": [
+        {
           "discogs_id": "246097",
-          "discogs_original_name": "Nick Mason",
-          "id": null,
-          "lastfm_mbid": null,
           "name": "Nick Mason",
-          "role": "",
-          "spotify_id": null,
-          "wikipedia_url": null
+          "role": ""
         }
       ],
       "duration": "",
       "position": "",
-      "title": "The Grand Vizier's Garden Party"
+      "title": "The Grand Vizier's Garden Party",
+      "type": "index"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "246097",
+          "name": "Nick Mason",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Grand Vizier's Garden Party",
+      "position": "D2.1",
+      "title": "Part 1 - Entrance"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "246097",
+          "name": "Nick Mason",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Grand Vizier's Garden Party",
+      "position": "D2.2",
+      "title": "Part 2 - Entertainment"
+    },
+    {
+      "artists": [
+        {
+          "discogs_id": "246097",
+          "name": "Nick Mason",
+          "role": ""
+        }
+      ],
+      "duration": "",
+      "parent": "The Grand Vizier's Garden Party",
+      "position": "D2.3",
+      "title": "Part 3 - Exit"
     }
   ],
   "updated_at": "2025-07-10T08:50:38.499371",
