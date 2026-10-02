@@ -10,7 +10,7 @@ import { luminance } from '@/lib/sleeveColour';
  *
  * - `body` is the disc itself: solid, translucent (the sleeve or page shows
  *   through) or clear glass.
- * - `pattern` is extra image layers for marble, splatter, split, smoke,
+ * - `pattern` is extra image layers for marble, splatter, liquid, split, smoke,
  *   rainbow and metallic sheen. It sits on the grooves layer, so it turns
  *   with the record.
  *
@@ -46,7 +46,7 @@ const MIX_BASE = config.mixed.base;
 const BLACK = COLOURS[config.standard];
 const CLEAR = 'clear';
 
-type Pattern = 'marble' | 'swirl' | 'splatter' | 'flake' | 'split' | 'smoke' | 'rainbow';
+type Pattern = 'marble' | 'swirl' | 'splatter' | 'liquid' | 'flake' | 'split' | 'smoke' | 'rainbow';
 
 /** Pattern words are matched by prefix ("marbl" covers marble, marbled and marbling). */
 const PATTERNS = (Object.entries(config.patterns) as Array<[Pattern, string[]]>).map(
@@ -251,6 +251,85 @@ function flakes(rnd: () => number): string {
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / 100% 100% no-repeat`;
 }
 
+/**
+ * Liquid: big opaque pools of the accent colour with hard, rounded edges, poured
+ * round the label, with clear bubbles caught inside and droplets thrown off into
+ * the clear. Each pool is a chain of circles along an arc, fat at the head and
+ * thinning to a tail; the droplets nearby are scattered circles. A goo filter
+ * (blur, then a steep alpha cut) melts them into one smooth shape, noise wobbles
+ * the edge, a mask punches out the bubbles, and a faint blurred copy underneath
+ * gives the haze where the colour thins out. Drawn as an SVG so it stays one
+ * background layer that turns with the disc.
+ *
+ * It moves: every circle drifts on its own slow loop (CSS animations inside the
+ * SVG, which still run in a background image), so the goo filter re-melts them
+ * each frame and the pools ooze, droplets pinch off and rejoin, and bubbles
+ * wander. The whole pour sloshes a few degrees back and forth on top of the spin.
+ * Reduced motion keeps it still.
+ */
+function liquid(accents: string[], rnd: () => number): string {
+  const at = (r: number, a: number) => [50 + Math.cos(a) * r, 50 + Math.sin(a) * r] as const;
+  // A drift of up to `reach` in a random direction, over 5-11s, started part way through.
+  const drift = (reach: number) => {
+    const a = rnd() * Math.PI * 2;
+    const d = reach * (0.4 + rnd() * 0.6);
+    return ` style="--x:${num(Math.cos(a) * d)}px;--y:${num(Math.sin(a) * d)}px;animation-duration:${num(5 + rnd() * 6)}s;animation-delay:-${num(rnd() * 11)}s"`;
+  };
+  // One list of circles per pool: each is melted on its own, so two colours never smear together.
+  const blobs: string[][] = [];
+  const bubbles: string[] = [];
+  const start = rnd() * Math.PI * 2;
+  // The main pool sweeps most of the way round; a smaller one sits across from its head.
+  const pools = [
+    { from: start, sweep: 3.4 + rnd() * 0.9, head: 15 + rnd() * 3, colour: accents[0] },
+    { from: start + Math.PI * (0.85 + rnd() * 0.3), sweep: 1 + rnd() * 0.8, head: 8 + rnd() * 3, colour: accents[1] ?? accents[0] },
+  ];
+  for (const pool of pools) {
+    const circles: string[] = [];
+    blobs.push(circles);
+    const steps = Math.round(pool.sweep * 9);
+    const wander = (rnd() - 0.5) * 10;
+    for (let i = 0; i <= steps; i++) {
+      const t = i / steps;
+      const a = pool.from + pool.sweep * t;
+      // Keep the pool off the label and inside the rim as it drifts in and out.
+      const size = Math.max(2.5, pool.head * (1 - t * 0.8) + (rnd() - 0.5) * 2.5);
+      const r = Math.min(49 - size * 0.6, Math.max(18 + size * 0.7, 33 + wander * Math.sin(t * Math.PI) + (rnd() - 0.5) * 3));
+      const [x, y] = at(r, a);
+      circles.push(`<circle cx="${num(x)}" cy="${num(y)}" r="${num(size)}" fill="${pool.colour}"${drift(size * 0.35)}/>`);
+      // Bubbles sit in the body of the pool, mostly toward its edges.
+      if (rnd() < 0.55) {
+        const [bx, by] = at(r + (rnd() - 0.5) * size * 1.3, a + (rnd() - 0.5) * 0.12);
+        bubbles.push(`<circle cx="${num(bx)}" cy="${num(by)}" r="${num(0.5 + rnd() ** 2 * 2.6)}"${drift(2)}/>`);
+      }
+    }
+    // Droplets thrown off round the pool (some close enough to be pulled into it), with a fine spray past its ends.
+    for (let i = 0; i < 26; i++) {
+      const [x, y] = at(19 + rnd() * 30, pool.from + (rnd() * 1.5 - 0.25) * pool.sweep);
+      circles.push(`<circle cx="${num(x)}" cy="${num(y)}" r="${num(0.6 + rnd() ** 2 * 2.2)}" fill="${pool.colour}"${drift(4)}/>`);
+    }
+  }
+  const seed = Math.floor(rnd() * 900) + 1;
+  const svg =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">' +
+    '<style>circle{animation:o ease-in-out infinite alternate}' +
+    '.s{transform-origin:50px 50px;animation:s 13s ease-in-out infinite alternate}' +
+    '@keyframes o{to{transform:translate(var(--x),var(--y))}}' +
+    '@keyframes s{from{transform:rotate(-7deg)}to{transform:rotate(7deg)}}' +
+    '@media (prefers-reduced-motion:reduce){*{animation:none!important}}</style>' +
+    '<filter id="g" filterUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" color-interpolation-filters="sRGB">' +
+    `<feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="2" seed="${seed}" result="t"/>` +
+    '<feDisplacementMap in="SourceGraphic" in2="t" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/>' +
+    '<feGaussianBlur in="d" stdDeviation="1.6"/>' +
+    '<feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 24 -11"/>' +
+    '</filter>' +
+    '<filter id="h" filterUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><feGaussianBlur stdDeviation="3.5"/></filter>' +
+    `<mask id="m" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><rect width="100" height="100" fill="#fff"/><g class="s" fill="#000">${bubbles.join('')}</g></mask>` +
+    `<g filter="url(#h)" opacity="0.28"><g class="s">${blobs.flat().join('')}</g></g>` +
+    `<g mask="url(#m)">${blobs.map(circles => `<g filter="url(#g)"><g class="s">${circles.join('')}</g></g>`).join('')}</g></svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / 100% 100% no-repeat`;
+}
+
 /** Dark wisps through a coloured or clear disc. */
 function smoke(rnd: () => number): string {
   return Array.from({ length: 4 }, () => {
@@ -342,6 +421,7 @@ function buildLook(text: string): VinylLook | null {
   if (pattern === 'marble') layers.push(marble(accents, rnd));
   if (pattern === 'swirl') layers.push(swirl(accents, rnd));
   if (pattern === 'splatter') layers.push(splatter(accents, rnd));
+  if (pattern === 'liquid') layers.push(liquid(accents, rnd));
   if (pattern === 'flake') layers.push(flakes(rnd));
   if (pattern === 'smoke') layers.push(smoke(rnd));
   if (pattern === 'split') {

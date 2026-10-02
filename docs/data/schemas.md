@@ -243,7 +243,7 @@ The derivation (`scrapper/src/formats.rs`, with its word lists in the shared
 describes a single disc, so its colour parts are one colour: `Yellow, Transparent` is a
 transparent yellow LP (`colour: "Yellow Transparent"`). It splits `text` on
 commas, semicolons and ` - `, keeps a piece that names a colour or pattern (clear, red, blue,
-translucent, marbled, splatter, swirl, …) and drops weights (`180 Gram`), a trailing "Vinyl",
+translucent, marbled, splatter, swirl, liquid, …) and drops weights (`180 Gram`), a trailing "Vinyl",
 and pieces about the sleeve, labels or an anniversary (`Gatefold`, `30th Anniversary Edition`,
 `Blue/White Labels`). The word "Edition" is only stripped, so `Crystal Clear Edition` is the colour
 `Crystal Clear` while `Definitive Edition` (no colour) gives none. Plain black is not a colour. Colours Discogs words unusually

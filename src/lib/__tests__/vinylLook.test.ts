@@ -43,6 +43,17 @@ describe("vinylLook", () => {
     expect(vinylLook("Psychedelic Swirl")?.pattern).toContain("feDisplacementMap");
   });
 
+  it("pours liquid as hard-edged pools on clear glass that move on their own", () => {
+    const look = vinylLook("Clear w/ Black Liquid");
+    expect(look?.body).toContain("rgba(255, 255, 255");
+    expect(look?.pattern).toContain("data:image/svg+xml");
+    expect(look?.pattern).toContain("%230b0b0b");
+    expect(look?.pattern).toContain("%40keyframes");
+    expect(look?.pattern).toContain("prefers-reduced-motion");
+    expect(look?.pattern).not.toContain("radial-gradient(ellipse");
+    expect(colourTags("Clear w/ Black Liquid")).toEqual(["Clear"]);
+  });
+
   it("makes Flame up as splatter in flame colours", () => {
     const flame = vinylLook("Flame");
     expect(flame?.body).toContain("#c4381a");
@@ -313,7 +324,7 @@ describe("vinyl-colours.json", () => {
 
   it("compiles every pattern, generic and known-note expression", () => {
     for (const pattern of [...config.generic, config.knownNotes]) expect(() => new RegExp(pattern, "i")).not.toThrow();
-    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "flake", "split", "smoke", "rainbow"]);
+    expect(Object.keys(config.patterns)).toEqual(["marble", "swirl", "splatter", "liquid", "flake", "split", "smoke", "rainbow"]);
   });
 
   it("names each family once and has a tag for every pattern it filters by", () => {

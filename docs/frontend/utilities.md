@@ -475,7 +475,13 @@ tinted glass. Patterns are extra background layers on the grooves, so they turn 
 label bent by a low-frequency noise displacement and blurred, so they drift and curl like real swirl
 vinyl rather than stripe it; an SVG),
 **splatter** (radial streaks thrown out from the centre: tapered wedges with a darker head, in
-bursts, drawn as an SVG), **sparkle** (fine silver flecks over the colour, black when none is
+bursts, drawn as an SVG), **liquid** (`Clear w/ Black Liquid`: big opaque pools of the accent colour
+with hard, rounded edges poured round the label, clear bubbles caught inside and droplets sprayed
+into the clear; circles along an arc melted together by an SVG goo filter, blur then a steep alpha
+cut, one filter per pool so two colours never smear. It is the one pattern that moves on its own:
+CSS animations inside the SVG drift every circle on a slow loop, so the pools ooze and droplets
+pinch off and rejoin, and the pour sloshes a few degrees back and forth on top of the spin. It is
+held still under `prefers-reduced-motion`), **sparkle** (fine silver flecks over the colour, black when none is
 named: sparse specks made with an SVG noise filter, about 0.6% of the disc plus a few brighter
 glints, so they read as glitter and not dots), **split** (two halves), **smoke** (dark wisps),
 **rainbow**, **flame** (made up: splatter in flame colours, fiery red-orange with orange and yellow
