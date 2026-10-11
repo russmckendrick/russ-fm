@@ -9,6 +9,7 @@
 - Backend build + install (`scrapper` → `~/.cargo/bin`, registers `~/.config/scrapper/config.json` data root): `cd scrapper && ./install.sh`
 - Backend dev build / lint: `cd scrapper && cargo build && cargo clippy`
 - Backend collection run (from anywhere once installed): `scrapper collection --resume` (or `cd scrapper && cargo run -- collection --resume`)
+- Draft a Discogs submission for a record that isn't on Discogs yet: `cd discogs-sub && cargo run -- draft "Artist" "Title" -i` (see `docs/backend/discogs-sub.md`)
 - After the scrapper adds artists (macOS only, commit the output): `pnpm run generate-artist-images` (new photos only; `-- --full` redoes all, `-- --only <slug>` one artist)
 
 ## Universal Rules

@@ -323,6 +323,23 @@ Missing master videos are filled by `scrapper backfill-videos --masters`; older 
 
 ---
 
+### Anonymous catalogue search (discogs-sub)
+
+`search_barcode(barcode)`, `search_releases(artist, title, limit)` and
+`master_versions(master_id)` in `scrapper/src/services/discogs.rs` back the
+[`discogs-sub`](../backend/discogs-sub.md) draft builder.
+
+- All three call `/database/search` or `/masters/{id}/versions` **without** the token,
+  because Discogs answers token-authenticated search with 401 "Invalid consumer token".
+- Anonymous calls share the client's 60/min limiter, but Discogs allows about 25/min
+  anonymously. Callers that must not mistake a 429/401 for "no results" should retry
+  after a minute, as `discogs-sub` does.
+- An empty `artist` searches by title alone (compilations credited differently from what was typed).
+- `master_versions` returns one page of up to 100 versions. A new release appears in
+  search before anyone links it to its master, so search and versions are merged.
+
+---
+
 ## Rate Limiting
 
 Discogs limits to 60 requests per minute:

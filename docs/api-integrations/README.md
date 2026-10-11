@@ -48,6 +48,7 @@ flowchart TB
 | [Last.fm](./lastfm.md) | Enrichment | Wiki content, scrobbling |
 | [Perplexity](./perplexity.md) | AI generation | Album descriptions |
 | [Others](./others.md) | Metadata and frontend integrations | Wikipedia, TheAudioDB, Plausible analytics |
+| MusicBrainz | Draft submissions only | Used by [`discogs-sub`](../backend/discogs-sub.md) for vinyl side layouts, durations and variant hints |
 
 ## Rate Limits
 
@@ -58,6 +59,7 @@ flowchart TB
 | Spotify | 100/minute | OAuth client credentials |
 | Last.fm | 60/minute | API key auth |
 | Perplexity | 20/minute | API key auth |
+| MusicBrainz | 1/second | No auth; descriptive User-Agent required (`discogs-sub` only) |
 | Wikipedia | No limit | No auth required |
 | TheAudioDB | No official limit | Free tier API |
 

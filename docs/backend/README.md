@@ -9,6 +9,7 @@ The russ.fm backend is a Rust-based data collection and enrichment system (a TUI
 | [CLI Commands](./cli-commands.md) | All available commands and options |
 | [Services](./services.md) | API service implementations |
 | [Orchestration](./orchestration.md) | Data flow and coordination |
+| [discogs-sub](./discogs-sub.md) | Separate binary: draft Discogs submissions for records not yet on Discogs |
 
 ## Overview
 

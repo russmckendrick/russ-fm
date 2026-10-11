@@ -129,6 +129,35 @@ impl DiscogsService {
         .await
     }
 
+    /// Releases carrying a barcode (any identifier Discogs indexes as `barcode`, which includes
+    /// matrix/runout text). Anonymous for the same reason as [`Self::search_masters`].
+    pub async fn search_barcode(&self, barcode: &str) -> ServiceResult<Value> {
+        self.get_anon(
+            "/database/search",
+            &[("barcode", barcode.to_string()), ("type", "release".into()), ("per_page", "50".into())],
+        )
+        .await
+    }
+
+    /// Releases by artist and release title (every format and version); an empty `artist`
+    /// searches by title alone. Anonymous.
+    pub async fn search_releases(&self, artist: &str, title: &str, limit: u32) -> ServiceResult<Value> {
+        let mut query = vec![
+            ("release_title", title.to_string()),
+            ("type", "release".into()),
+            ("per_page", limit.min(100).to_string()),
+        ];
+        if !artist.trim().is_empty() {
+            query.push(("artist", artist.to_string()));
+        }
+        self.get_anon("/database/search", &query).await
+    }
+
+    /// Every version (release) of a master, one page of up to 100. Anonymous.
+    pub async fn master_versions(&self, master_id: &str) -> ServiceResult<Value> {
+        self.get_anon(&format!("/masters/{master_id}/versions"), &[("per_page", "100".into())]).await
+    }
+
     /// Fetch a master with the personal token. Unlike search and big listings, `/masters/{id}`
     /// accepts it, so this runs in the 60/min authed bucket rather than the 25/min anonymous one.
     pub async fn master(&self, master_id: &str) -> ServiceResult<Value> {
