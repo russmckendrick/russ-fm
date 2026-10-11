@@ -2,6 +2,8 @@
 
 use std::fmt::Write;
 
+use serde_json::Value;
+
 use crate::draft::{Credit, Draft, Level};
 
 fn esc(s: &str) -> String {
@@ -190,4 +192,19 @@ fn short(source: &str) -> &str {
         // Discogs versions are already short ("r38574621").
         other => other,
     }
+}
+
+/// The CSV_To_Draft route for this draft: what the upload carries and what's left for the form.
+pub fn csv_section(v: &Value) -> String {
+    let mut o = String::from(
+        "\n## Or: CSV_To_Draft upload\n\n`draft.csv` (or `discogs-sub csv` for several drafts at once) uploads at \
+         https://www.discogs.com/release/csv_to_draft and appears in https://www.discogs.com/users/drafts. \
+         Upload a file only once, because each upload creates new drafts. The CSV carries artist, title, one label + catno, \
+         format name, one genre, styles, track titles, A/B runouts, notes, date and barcode. \
+         Copy to Draft keeps more when the closest version is the same format.\n\nAfter uploading, add in the form:\n\n",
+    );
+    for item in crate::csv::left_for_form(v) {
+        let _ = writeln!(o, "- [ ] {item}");
+    }
+    o
 }

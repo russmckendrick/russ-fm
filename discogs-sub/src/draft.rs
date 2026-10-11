@@ -532,7 +532,13 @@ pub fn build(g: &Gathered, q: Query, base_override: Option<u64>) -> Draft {
         formats.push(Format { name: fam_name.into(), qty: "1".into(), descriptions: kind_desc.clone(), text: String::new() });
     }
     let sibling_text: Vec<String> = formats.iter().map(|f| f.text.clone()).filter(|t| !t.is_empty()).collect();
-    let free_text = [hand.colour.clone(), hand.weight.clone()].into_iter().flatten().collect::<Vec<_>>().join(", ");
+    // Black is standard, so it isn't entered (§6.1.5); "" means the user answered "black".
+    let free_text = [hand.colour.clone(), hand.weight.clone()]
+        .into_iter()
+        .flatten()
+        .filter(|t| !t.is_empty() && !t.eq_ignore_ascii_case("black"))
+        .collect::<Vec<_>>()
+        .join(", ");
     for f in formats.iter_mut().filter(|f| f.name == fam_name) {
         f.text = free_text.clone();
         if let Some(limited) = hand.limited {

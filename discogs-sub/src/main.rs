@@ -5,6 +5,7 @@
 //! Apple Music and Spotify, applying the Release Submission Guidelines. You then enter it via
 //! "Copy to Draft" or https://www.discogs.com/release/add and submit it yourself.
 
+mod csv;
 mod draft;
 mod musicbrainz;
 mod render;
@@ -40,6 +41,21 @@ enum Command {
     Check {
         barcode: String,
     },
+    /// Bundle drafts into one CSV for https://www.discogs.com/release/csv_to_draft.
+    Csv(CsvArgs),
+}
+
+#[derive(Args)]
+struct CsvArgs {
+    /// Draft folders (names under discogs-sub/drafts, or paths). Default: every draft not
+    /// exported before — re-uploading a row creates a duplicate draft on Discogs.
+    drafts: Vec<String>,
+    /// Include drafts already exported to a CSV.
+    #[arg(long)]
+    all: bool,
+    /// Drafts folder (default: discogs-sub/drafts).
+    #[arg(long)]
+    dir: Option<PathBuf>,
 }
 
 #[derive(Args)]
@@ -103,11 +119,15 @@ struct DraftArgs {
 #[tokio::main]
 async fn main() -> Result<()> {
     let cli = Cli::parse();
+    if let Command::Csv(args) = &cli.command {
+        return csv_cmd(args);
+    }
     let cfg = scrapper::Config::load(cli.config.as_deref()).context("loading scrapper config")?;
     let clients = Clients::new(&cfg);
     match cli.command {
         Command::Check { barcode } => check(&clients, &barcode).await,
         Command::Draft(args) => draft_cmd(&clients, *args).await,
+        Command::Csv(_) => unreachable!("handled before loading config"),
     }
 }
 
@@ -196,11 +216,12 @@ async fn draft_cmd(c: &Clients, a: DraftArgs) -> Result<()> {
         }
     }
 
-    let out = a.out.clone().unwrap_or_else(|| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("drafts"));
-    let dir = out.join(slug(&format!("{} {} {}", a.artist, a.title, a.format.discogs_name())));
+    let dir = drafts_dir(a.out.clone()).join(slug(&format!("{} {} {}", a.artist, a.title, a.format.discogs_name())));
     std::fs::create_dir_all(&dir)?;
-    std::fs::write(dir.join("draft.json"), serde_json::to_string_pretty(&d)?)?;
-    std::fs::write(dir.join("draft.md"), render::markdown(&d))?;
+    let value = serde_json::to_value(&d)?;
+    std::fs::write(dir.join("draft.json"), serde_json::to_string_pretty(&value)?)?;
+    std::fs::write(dir.join("draft.md"), render::markdown(&d) + &render::csv_section(&value))?;
+    std::fs::write(dir.join("draft.csv"), csv::render(&[csv::row(&value)]))?;
 
     println!("\n{} – {}", d.artists.iter().map(|x| x.name.as_str()).collect::<Vec<_>>().join(", "), d.title);
     match &d.base {
@@ -226,7 +247,12 @@ fn ask_in_hand(hand: &mut InHand, d: &draft::Draft, family: Family) -> Result<()
     }
     if family == Family::Vinyl && hand.colour.is_none() {
         let c: String = Input::new().with_prompt("Vinyl colour, most distinctive word first (blank = black)").allow_empty(true).interact_text()?;
-        hand.colour = Some(c.trim().to_string()).filter(|c| !c.is_empty());
+        // Blank is an answer (black), not "unknown" — keep Some("") so no TODO is raised.
+        hand.colour = Some(c.trim().to_string());
+    }
+    if family == Family::Vinyl && hand.weight.is_none() {
+        let w: String = Input::new().with_prompt("Weight printed on the release, e.g. 180g (blank if none)").allow_empty(true).interact_text()?;
+        hand.weight = Some(w.trim().to_string());
     }
     if hand.limited.is_none() {
         let pick = Select::new()
@@ -279,6 +305,66 @@ fn parse_matrix(items: &[String]) -> Result<Vec<(String, String)>> {
             Ok((side.trim().to_uppercase(), text.trim().to_string()))
         })
         .collect()
+}
+
+fn drafts_dir(out: Option<PathBuf>) -> PathBuf {
+    out.unwrap_or_else(|| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("drafts"))
+}
+
+/// Marker left in a draft folder once it has gone into an upload CSV.
+const EXPORTED: &str = "csv-exported.txt";
+
+fn csv_cmd(a: &CsvArgs) -> Result<()> {
+    let root = drafts_dir(a.dir.clone());
+    let named = !a.drafts.is_empty();
+    let mut dirs: Vec<PathBuf> = if named {
+        a.drafts.iter().map(|d| if PathBuf::from(d).is_dir() { PathBuf::from(d) } else { root.join(d) }).collect()
+    } else {
+        std::fs::read_dir(&root)
+            .with_context(|| format!("reading {}", root.display()))?
+            .filter_map(|e| e.ok().map(|e| e.path()))
+            .filter(|p| p.join("draft.json").is_file())
+            .collect()
+    };
+    dirs.sort();
+
+    let mut rows = Vec::new();
+    let mut used = Vec::new();
+    for dir in dirs {
+        let json = dir.join("draft.json");
+        let text = std::fs::read_to_string(&json).with_context(|| format!("no draft at {}", json.display()))?;
+        let exported = dir.join(EXPORTED).is_file();
+        if exported && !named && !a.all {
+            eprintln!("  skip {} (already exported — name it or pass --all to include)", dir.display());
+            continue;
+        }
+        if exported {
+            eprintln!("  ! {} was exported before — uploading it again makes a duplicate draft", dir.display());
+        }
+        rows.push(csv::row(&serde_json::from_str(&text)?));
+        used.push(dir);
+    }
+    if rows.is_empty() {
+        println!("Nothing to export.");
+        return Ok(());
+    }
+    if rows.len() > csv::MAX_ROWS {
+        bail!("{} drafts — CSV_To_Draft takes {} per upload; name the ones to include", rows.len(), csv::MAX_ROWS);
+    }
+
+    let stamp = chrono::Local::now().format("%Y%m%d-%H%M%S");
+    let path = root.join(format!("csv-to-draft-{stamp}.csv"));
+    std::fs::write(&path, csv::render(&rows))?;
+    for dir in &used {
+        std::fs::write(dir.join(EXPORTED), format!("{}\n", path.display()))?;
+        println!("  + {}", dir.file_name().map(|n| n.to_string_lossy()).unwrap_or_default());
+    }
+    println!(
+        "\n{} draft(s) → {}\nUpload once at https://www.discogs.com/release/csv_to_draft, then finish each one from https://www.discogs.com/users/drafts\n(each draft.md has an \"After a CSV_To_Draft upload\" list of what the CSV can't carry).",
+        rows.len(),
+        path.display()
+    );
+    Ok(())
 }
 
 fn slug(s: &str) -> String {

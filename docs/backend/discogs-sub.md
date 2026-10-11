@@ -6,8 +6,15 @@ Apple Music and Spotify that follows the Discogs Release Submission Guidelines (
 what to change after Discogs' "Copy to Draft" and marks every field you need to fill in or
 check against the record.
 
-It never submits anything. The Discogs API has no endpoint for adding releases, so you enter
-the draft through the website. Once the release is live, add it to your Discogs collection
+It never submits anything. The Discogs API has no endpoint for adding releases or drafts.
+There are two website routes into your Drafts folder:
+
+- **Copy to Draft:** copy the closest existing version on its release page, then work through
+  the edit list in `draft.md`. This keeps the most data (linked artists, credits, companies),
+  so use it when that version is the same format as yours.
+- **CSV_To_Draft:** `discogs-sub csv` bundles drafts into one file for the beta page
+  https://www.discogs.com/release/csv_to_draft (up to 100 per upload). Each `draft.md` ends
+  with a checklist of what the CSV can't carry. Once the release is live, add it to your Discogs collection
 and `scrapper collection --resume` handles it like any other record.
 
 ## Usage
@@ -21,6 +28,18 @@ cargo run -- draft "The Fierce & The Dead" "Regional Theatre" \
 cargo run -- draft "Various" "Clowns and Jugglers = The Songs of Syd Barrett" --lps 3
 ```
 
+Bundle drafts for CSV_To_Draft:
+
+```bash
+cargo run -- csv                      # every draft not exported before
+cargo run -- csv held-by-trees-the-call-of-home-vinyl   # just these (warns if exported before)
+cargo run -- csv --all                # include ones already exported
+```
+
+This writes `drafts/csv-to-draft-<timestamp>.csv` and leaves a `csv-exported.txt` marker in each
+draft folder. The marker matters because uploading a row twice creates a second draft, and
+Discogs only lets you delete drafts one at a time. `csv` doesn't need the scrapper config.
+
 Or install it: `cargo install --path discogs-sub`. It reads the scrapper's `config.json` the
 same way `scrapper` does (`./config.json`, then `~/.config/scrapper/config.json`). Apple Music
 and Spotify are skipped when their credentials are missing.
@@ -30,6 +49,7 @@ Output goes to `discogs-sub/drafts/<artist-title-format>/` (git-ignored):
 | File | Contents |
 |------|----------|
 | `draft.md` | The draft in "Add Release" form order. It starts with the Copy to Draft edit list, followed by TODO/Verify notes on each field, reference durations, hints and source links. |
+| `draft.csv` | This draft as a one-row CSV_To_Draft upload. |
 | `draft.json` | Same data in Discogs API release shape (`artists`, `labels`, `formats`, `tracklist[].type_`, `extraartists`, `companies`, `identifiers`…) plus `flags`, `hints` and `copy_to_draft_edits`. |
 
 ### Flags
@@ -38,7 +58,7 @@ Output goes to `discogs-sub/drafts/<artist-title-format>/` (git-ignored):
 |------|--------|
 | `--format vinyl\|cd\|cassette` | Carrier of your copy (default vinyl). |
 | `--barcode` | Checked against Discogs first, and drafting stops if the barcode is already there (`--force` overrides). Written as Printed (usual spacing) and Scanned rows. If the label numbers each variant from its barcode (Sony: catno = barcode minus check digit), the catalogue number is derived from it. |
-| `--colour`, `--weight` | Format free text, most distinctive word first. |
+| `--colour`, `--weight` | Format free text, most distinctive word first. `--colour ""` or `black` means standard black, which isn't entered (§6.1.5). `-i` asks for both, and a blank answer counts as "none". |
 | `--limited` / `--not-limited`, `--numbered` | Adjust format descriptions. |
 | `--lps`, `--sides 5,4` | Vinyl layout when the closest version is a CD and nothing knows the sides. |
 | `--matrix "A=…"` | Runout per side, verbatim. |
@@ -81,6 +101,28 @@ Output goes to `discogs-sub/drafts/<artist-title-format>/` (git-ignored):
    - When most tracks have their own artist, there's a warning to use "Various" (§2.3.1).
    - Submission Notes are generated (§1.3.1).
 
+### CSV_To_Draft mapping
+
+Field rules come from the help article (beta, last updated 2026-03-31). Columns:
+`artist,title,label,catno,format,genre,style,tracks,a runout,b runout,notes,date,barcode,images`.
+
+| Column | From `draft.json` |
+|--------|-------------------|
+| artist | Main artist names, comma-separated, keeping Discogs' "(4)" suffixes so the form matches the right entity |
+| label, catno | The first label only |
+| format | The first format's name ("Vinyl"). The CSV has no descriptions, quantity or free text. |
+| genre | One genre: the one the styles belong to ("Prog Rock" → Rock), else the first |
+| style | All styles |
+| tracks | Track titles, one per line inside the quoted cell. Positions become 1, 2, 3…, and headings are skipped. |
+| a runout, b runout | `Side A runout` / `Side B runout` identifiers |
+| notes, date, barcode | Release notes, `released`, the Printed barcode |
+| images | Left empty. The column takes public URLs only, and the photos must be your own. |
+
+Rows end with CRLF, and newlines inside the tracks cell are LF. The "After uploading, add in the form"
+checklist in `draft.md` is generated from what this mapping leaves out: positions, track artists,
+durations, credits, other labels, format details, country, companies, other identifiers,
+Submission Notes, entity links and images.
+
 ### Durations and credits
 
 The RSG is strict about both, and the tool follows it rather than the quickest fill:
@@ -108,7 +150,8 @@ The RSG is strict about both, and the tool follows it rather than the quickest f
 | `src/musicbrainz.rs` | MusicBrainz client (1 request per 1.1 s, descriptive User-Agent) |
 | `src/draft.rs` | Draft model (Discogs API shape) and `build()` |
 | `src/rules.rs` | RSG conventions as pure functions: capitalisation, durations, side splits, positions, barcode spacing, catno derivation, credit-track remapping (unit-tested) |
-| `src/render.rs` | Markdown in form order |
+| `src/render.rs` | Markdown in form order, plus the CSV_To_Draft checklist |
+| `src/csv.rs` | CSV_To_Draft rows, quoting and the what's-left-for-the-form list (unit-tested) |
 
 The crate depends on `scrapper` as a path dependency for `Config`, `DiscogsService`,
 `AppleMusicService`, `SpotifyService` and the HTTP helpers. It uses the anonymous Discogs
