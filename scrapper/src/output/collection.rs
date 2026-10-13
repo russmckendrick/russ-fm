@@ -25,6 +25,7 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
             let date_added = entry.get("date_added").and_then(|d| d.as_str()).unwrap_or("1900-01-01").to_string();
             entries.push(BuiltEntry {
                 date_added,
+                added_at: added_at(r),
                 discogs_id: r.discogs_id.clone(),
                 boxset_parent_id: boxset_parent_id(r),
                 year: r.year,
@@ -33,8 +34,9 @@ pub fn generate(cfg: &Config, db: &Db, output_path: &std::path::Path) -> Result<
         }
     }
     link_boxsets(&mut entries);
-    // Newest first.
-    entries.sort_by(|a, b| b.date_added.cmp(&a.date_added));
+    // Newest first. The entry only carries the day, so same-day additions are ordered by
+    // the full Discogs timestamp.
+    entries.sort_by(|a, b| b.date_added.cmp(&a.date_added).then(b.added_at.cmp(&a.added_at)));
     let list: Vec<Value> = entries.into_iter().map(|e| e.entry).collect();
     let count = list.len();
 
@@ -97,10 +99,18 @@ pub(crate) fn date_added(rec: &ReleaseRecord) -> String {
     rec.date_added.as_deref().map(date_only).unwrap_or_else(|| "1900-01-01".into())
 }
 
+/// Full `date_added` timestamp (UTC seconds) — the tie-break between same-day additions.
+fn added_at(rec: &ReleaseRecord) -> Option<i64> {
+    let raw = rec.date_added.as_deref()?;
+    chrono::DateTime::parse_from_rfc3339(raw).ok().map(|d| d.timestamp())
+}
+
 /// A collection.json entry plus the release metadata needed to wire boxset links after the
 /// full set has been built.
 struct BuiltEntry {
     date_added: String,
+    /// Sort-only: see [`added_at`].
+    added_at: Option<i64>,
     discogs_id: Option<String>,
     boxset_parent_id: Option<String>,
     /// Discogs release year — the sort key for `boxset_contents` (the entry's
@@ -435,6 +445,7 @@ mod tests {
     fn built(id: &str, name: &str, year: i64, parent: Option<&str>) -> BuiltEntry {
         BuiltEntry {
             date_added: "2026-01-01".into(),
+            added_at: None,
             discogs_id: Some(id.into()),
             boxset_parent_id: parent.map(String::from),
             year: Some(year),

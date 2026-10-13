@@ -57,7 +57,7 @@ Main collection index used for album listings.
 | albums[].release_artist | string | Primary artist name |
 | albums[].uri_release | string | Album URL path |
 | albums[].uri_artist | string | Primary artist URL path |
-| albums[].date_added | string | When added to collection |
+| albums[].date_added | string | Day added to the collection (`YYYY-MM-DD`, no time). Entries are written newest first; same-day additions are ordered by the full Discogs timestamp (kept in the album JSON), so the file order is the true add order |
 | albums[].date_release_year | string | Release date (`YYYY-MM-DD`). Prefers Apple Music, then Spotify, then the pressing's Discogs year, so it is often a reissue date |
 | albums[].year_original | number \| null | Original release year: the Discogs master year when known, otherwise the earliest year any source reports. Use this (via `src/lib/releaseYear.ts`) for anything that orders, groups, filters or labels by year |
 | albums[].discogs_id | string | Discogs release ID |
