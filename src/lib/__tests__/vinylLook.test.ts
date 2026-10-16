@@ -2,6 +2,19 @@ import config from "@/config/vinyl-colours.json";
 import { describe, expect, it } from "vitest";
 import { colourTags, discLook, discLooks, entryDiscColours, lookAt, pressingDiscs, pressingExtras, pressingTitle, splitDiscText, vinylLook } from "../vinylLook";
 
+/** The SVG inside a pattern's data URL, decoded. */
+const svgOf = (pattern: string | undefined) => decodeURIComponent(/data:image\/svg\+xml,([^"]*)/.exec(pattern ?? "")?.[1] ?? "");
+/** Marble: torn spiral arms in the accent colours. */
+const isMarble = (pattern: string | undefined) => {
+  const svg = svgOf(pattern);
+  return svg.includes("<path") && svg.includes("feDisplacementMap") && !svg.includes('fill="#000"');
+};
+/** Smoke: the same arms, in black. */
+const isSmoke = (pattern: string | undefined) => {
+  const svg = svgOf(pattern);
+  return svg.includes("<path") && svg.includes('fill="#000"');
+};
+
 describe("vinylLook", () => {
   it("leaves black, empty and unrecognised text as a black disc", () => {
     expect(vinylLook(undefined)).toBeNull();
@@ -14,11 +27,11 @@ describe("vinylLook", () => {
     for (const text of ["Coloured", "Tri-Color", "Multi-Coloured [Recycled]", "Eco-Mix", "Marbled", "Venetian Marble", "Opaque"]) {
       const look = vinylLook(text);
       expect(look, text).not.toBeNull();
-      expect(look?.pattern, text).toContain("radial-gradient(ellipse");
+      expect(isMarble(look?.pattern), text).toBe(true);
     }
     expect(vinylLook("Splatter")?.body).toContain("rgba(255, 255, 255");
     expect(vinylLook("Splatter")?.pattern).toContain("data:image/svg+xml");
-    expect(vinylLook("Smokey")?.pattern).toContain("rgba(0, 0, 0, 0.42)");
+    expect(isSmoke(vinylLook("Smokey")?.pattern)).toBe(true);
   });
 
   it("draws Sparkle as black with silver flakes", () => {
@@ -71,7 +84,7 @@ describe("vinylLook", () => {
   it("knows pearl, sunrise and emerald, and finish words in brackets", () => {
     const pearl = vinylLook("Pearl Sunrise Coloured");
     expect(pearl?.body).toContain("#efe9dc");
-    expect(pearl?.pattern).toContain("radial-gradient(ellipse");
+    expect(isMarble(pearl?.pattern)).toBe(true);
     expect(pearl?.pattern).toContain("conic-gradient");
     expect(vinylLook("Emerald [Translucent]")?.body).toContain("rgba(15, 122, 74");
     expect(vinylLook("Transparent Black")?.body).toContain("rgba(11, 11, 11");
@@ -106,18 +119,21 @@ describe("vinylLook", () => {
   });
 
   it("builds marble, splatter, split and smoke patterns from the accent colours", () => {
-    expect(vinylLook("Yellow And Black Marble [Memphis Dust]")?.pattern).toContain("radial-gradient(ellipse");
+    expect(isMarble(vinylLook("Yellow And Black Marble [Memphis Dust]")?.pattern)).toBe(true);
     const splatter = vinylLook("Clear w/ Red Splatter")?.pattern;
     expect(splatter).toContain("data:image/svg+xml");
     expect(splatter).toContain("%23c81d25");
     expect(vinylLook("Blue/Black Split")?.pattern).toContain("linear-gradient(90deg");
-    expect(vinylLook("Red Smoke")?.pattern).toContain("rgba(0, 0, 0, 0.42)");
+    expect(isSmoke(vinylLook("Red Smoke")?.pattern)).toBe(true);
     // Two colours and no pattern word are taken as a mix.
-    expect(vinylLook("Red / Blue")?.pattern).toContain("radial-gradient");
+    expect(isMarble(vinylLook("Red / Blue")?.pattern)).toBe(true);
   });
 
   it("gives a single-colour pattern its own light and dark shades", () => {
-    expect(vinylLook("Red Marbled")?.pattern).toContain("rgba(");
+    // Red's own shades, lighter and darker, wound through the red.
+    const fills = new Set([...svgOf(vinylLook("Red Marbled")?.pattern).matchAll(/fill="(#[0-9a-f]{6})"/g)].map(m => m[1]));
+    expect(fills.size).toBeGreaterThan(1);
+    expect(fills.has("#c81d25")).toBe(false);
     expect(vinylLook("Black Splatter")?.pattern).toContain("data:image/svg+xml");
   });
 

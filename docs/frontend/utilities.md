@@ -491,7 +491,15 @@ import { discLook } from '@/lib/vinylLook';
 What it draws: solid colours get a darker edge; `translucent` / `transparent` are see-through
 (the page shows through); `clear` (also `crystal`, `cloudy`) is glass; a colour after `Clear` is
 tinted glass. Patterns are extra background layers on the grooves, so they turn with the record:
-**marble** (soft blobs of the accent colours, also the default when two colours are named),
+**marble** (also the default when two colours are named; modelled on real pressings, both layers
+running round the disc as the puck is stretched out by the press. *Clouds* are broad arcs of the
+accent colours bent by slow noise and blurred until they melt into the base and each other, the soft
+red and orange of a sunburst. *Streaks* are many short slivers tapering to a point at both ends, in
+the accent colours plus lighter and darker shades of the base, bent by finer noise and barely
+blurred: the fine veining through an orange marbled disc, or dark wisps through yellow. A seeded
+"calm" value trades one for the other, big clouds and few streaks or busy veining over faint clouds;
+black clouds are thinned, since black reads better as streaks. Thinner on clear and translucent
+discs, with no base shades on clear; an SVG),
 **swirl** (soft, streaky bands of the accent colours at half strength: concentric rings round the
 label bent by a low-frequency noise displacement and blurred, so they drift and curl like real swirl
 vinyl rather than stripe it; an SVG),
@@ -503,8 +511,9 @@ cut, one filter per pool so two colours never smear. It is the one pattern that 
 CSS animations inside the SVG drift every circle on a slow loop, so the pools ooze and droplets
 pinch off and rejoin, and the pour sloshes a few degrees back and forth on top of the spin. It is
 held still under `prefers-reduced-motion`), **sparkle** (fine silver flecks over the colour, black when none is
-named: sparse specks made with an SVG noise filter, about 0.6% of the disc plus a few brighter
-glints, so they read as glitter and not dots), **split** (two halves), **smoke** (dark wisps),
+named: sparse specks made with an SVG noise filter, kept thin so the disc's colour stays the main
+thing. Faint flecks at under half strength give a shimmer, about 0.2% of the disc, and a rarer
+scatter of bright glints catches the eye, so it reads as glitter and not a starfield), **split** (two halves), **smoke** (dark wisps: marble's clouds and streaks in faint black, bent harder and blurred more, so they drift rather than vein; an SVG),
 **rainbow**, **flame** (made up: splatter in flame colours, fiery red-orange with orange and yellow
 streaks, or those streaks over whatever colour is named, so `Yellow Flame` is yellow with flame
 streaks; words `flame`, `flaming`, `flames`, `flamed`) and a metallic sheen for gold / silver / copper /
@@ -515,7 +524,8 @@ the text, so a record always looks the same.
 
 A colour the scrapper approved is never drawn black. When Discogs says it is coloured without
 saying which colour (`Coloured`, `Tri-Color`, `Multi-Coloured`, `Eco-Mix`, a bare `Marbled` or
-`Splatter`) it is drawn as a mix: marbled blobs of a fixed four-colour palette over cream, clear glass
+`Splatter`) it is drawn as a mix: a fixed four-colour palette, one colour (picked from the text, so it never
+changes) as the body and the other three plus cream wound through it as marble, so it never reads as white; clear glass
 for a bare splatter, smoky grey for `Smokey`. Only plain black and text with no colour at all
 (`Honey Vinyl`) return `null`.
 

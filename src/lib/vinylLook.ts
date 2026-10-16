@@ -40,7 +40,7 @@ const TRANSLUCENT = new Set<string>(config.translucent);
 /** "Flame" has no fixed colour, so it is made up: splatter in flame colours over a fiery base. */
 const FLAME = new Set<string>(config.flame.words);
 const GENERIC = config.generic.map(pattern => new RegExp(pattern));
-/** The mix drawn when a pressing is coloured but Discogs does not say which colours ("Coloured", "Eco-Mix"). */
+/** The mix drawn when a pressing is coloured but Discogs does not say which colours ("Coloured", "Eco-Mix"): one of the accents as the body, the rest and the cream base through it. */
 const MIXED = config.mixed.accents;
 const MIX_BASE = config.mixed.base;
 const BLACK = COLOURS[config.standard];
@@ -149,20 +149,102 @@ function seeded(text: string): () => number {
   };
 }
 
-const pct = (n: number) => `${n.toFixed(1)}%`;
+const num = (n: number) => n.toFixed(1);
 
-/** Soft blobs of the accent colours. */
-function marble(accents: string[], rnd: () => number): string {
-  return Array.from({ length: 6 }, (_, i) => {
-    const rx = 18 + rnd() * 22;
-    const ry = 8 + rnd() * 16;
-    const x = 15 + rnd() * 70;
-    const y = 15 + rnd() * 70;
-    return `radial-gradient(ellipse ${pct(rx)} ${pct(ry)} at ${pct(x)} ${pct(y)}, ${rgba(accents[i % accents.length], 0.85)}, transparent 72%)`;
-  }).join(', ');
+const TAU = Math.PI * 2;
+
+/**
+ * One sliver laid along the grooves: an arc of radius `r` from angle `from`
+ * through `sweep` radians, drifting `drift` in or out as it goes, `width` wide
+ * in the middle and tapering to a point at both ends. Marbled vinyl is
+ * stretched round the disc as the puck is pressed out, so its streaks and
+ * clouds mostly run this way.
+ */
+function arc(r: number, from: number, sweep: number, drift: number, width: number, colour: string, opacity: number): string {
+  const steps = Math.max(4, Math.ceil(sweep / 0.06));
+  const left: string[] = [];
+  const right: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = i / steps;
+    const a = from + sweep * t;
+    const w = (width / 2) * Math.sin(Math.PI * t) ** 0.6;
+    const p = (rr: number) => `${(50 + Math.cos(a) * rr).toFixed(2)} ${(50 + Math.sin(a) * rr).toFixed(2)}`;
+    left.push(p(r + drift * t - w));
+    right.unshift(p(r + drift * t + w));
+  }
+  return `<path d="M${left.join('L')}L${right.join('L')}Z" fill="${colour}" fill-opacity="${opacity.toFixed(2)}"/>`;
 }
 
-const num = (n: number) => n.toFixed(1);
+/** One SVG background layer that turns with the disc. */
+function svgLayer(filters: string, body: string): string {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">${filters}${body}</svg>`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / 100% 100% no-repeat`;
+}
+
+/**
+ * Noise that drags clean arcs about (`scale`, at noise `frequency`) so they
+ * bend and wander like poured colour, then a blur to soften them: a heavy one
+ * melts broad strokes into clouds, a light one leaves fine streaks.
+ */
+function warp(id: string, seed: number, frequency: number, scale: number, blur: number): string {
+  return (
+    `<filter id="${id}" filterUnits="userSpaceOnUse" x="0" y="0" width="100" height="100" color-interpolation-filters="sRGB">` +
+    `<feTurbulence type="fractalNoise" baseFrequency="${frequency}" numOctaves="3" seed="${seed}" result="t"/>` +
+    `<feDisplacementMap in="SourceGraphic" in2="t" scale="${scale}" xChannelSelector="R" yChannelSelector="G" result="d"/>` +
+    `<feGaussianBlur in="d" stdDeviation="${blur}"/></filter>`
+  );
+}
+
+/** A colour nudged lighter (positive) or darker (negative). */
+const shade = (hex: string, amount: number) => mix(hex, amount > 0 ? '#ffffff' : '#000000', Math.abs(amount));
+
+/**
+ * Marble, after real pressings: two things laid over the base, both running
+ * round the disc. Clouds are broad strokes of the accent colours, bent by slow
+ * noise and blurred until they melt into the base and each other (the soft
+ * red and orange of a sunburst). Streaks are many short, thin strokes, bent by
+ * finer noise and barely blurred: the accent colours plus lighter and darker
+ * shades of the base, the fine veining through an "orange marbled" disc or the
+ * dark wisps through yellow. How calm a record is (seeded, so it never
+ * changes) trades one for the other: big clouds and few streaks, or busy
+ * veining over faint clouds. `alpha` thins it all on clear and translucent
+ * discs, and a clear disc (`base` null) gets no base shades. Drawn as an SVG
+ * so it stays one background layer that turns with the disc.
+ */
+function marble(accents: string[], rnd: () => number, alpha: number, base: string | null): string {
+  const calm = rnd();
+  const pick = (from: string[]) => from[Math.floor(rnd() * from.length)];
+  const clouds = Array.from({ length: 3 + Math.round(calm * 5) }, (_, i) =>
+    arc(
+      20 + rnd() * 29,
+      rnd() * TAU,
+      1.2 + rnd() * 3,
+      (rnd() - 0.5) * 12,
+      6 + rnd() * (6 + calm * 12),
+      shade(accents[i % accents.length], (rnd() - 0.5) * 0.3),
+      // Black and near-black clouds go muddy; they read better as streaks.
+      (0.35 + calm * 0.3 + rnd() * 0.3) * (luminance(accents[i % accents.length]) < 0.08 ? 0.55 : 1),
+    ),
+  );
+  const tones = base ? [...accents, ...accents, shade(base, -0.3), shade(base, 0.3)] : accents;
+  const streaks = Array.from({ length: Math.round(50 + (1 - calm) * 80) }, () =>
+    arc(
+      18 + rnd() * 31,
+      rnd() * TAU,
+      0.2 + rnd() * 1.1,
+      (rnd() - 0.5) * 7,
+      0.25 + rnd() ** 2.5 * 1.6,
+      shade(pick(tones), (rnd() - 0.5) * 0.3),
+      0.4 + rnd() * 0.5,
+    ),
+  );
+  const seed = () => Math.floor(rnd() * 900) + 1;
+  return svgLayer(
+    warp('c', seed(), 0.02, 22, 2.6) + warp('s', seed(), 0.03, 7, 0.3),
+    `<g filter="url(#c)" opacity="${alpha}">${clouds.join('')}</g>` +
+      `<g filter="url(#s)" opacity="${alpha}">${streaks.join('')}</g>`,
+  );
+}
 
 /**
  * Swirl: flowing bands of the accent colours, not blobs. Concentric rings round the
@@ -227,26 +309,27 @@ function splatter(accents: string[], rnd: () => number): string {
 
 /**
  * Sparkle: small flecks of silver, not dots. Fine noise thresholded down to sparse,
- * irregular specks (`feTurbulence`), in two layers: many dim flecks, and a few
- * brighter glints. The size is set by the noise frequency, in the SVG's own units,
+ * irregular specks (`feTurbulence`), in two layers: faint flecks that only read as a
+ * shimmer, and a scatter of bright glints that catch the eye. Kept thin, so the
+ * disc's own colour stays the main thing. The size is set by the noise frequency, in the SVG's own units,
  * so the flecks scale with the record. Drawn as an SVG so it stays one background
  * layer that turns with the disc.
  */
 function flakes(rnd: () => number): string {
-  const layer = (id: string, seed: number, frequency: number, gain: number, cutoff: number, colour: string) => {
+  const layer = (id: string, seed: number, frequency: number, gain: number, cutoff: number, colour: string, opacity: number) => {
     const [r, g, b] = channels(colour).map(v => (v / 255).toFixed(3));
     return (
       `<filter id="${id}" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">` +
       `<feTurbulence type="fractalNoise" baseFrequency="${frequency}" numOctaves="2" seed="${seed}"/>` +
       `<feColorMatrix type="matrix" values="0 0 0 0 ${r}  0 0 0 0 ${g}  0 0 0 0 ${b}  ${gain} 0 0 0 ${-cutoff}"/>` +
-      `</filter><rect width="100" height="100" filter="url(#${id})"/>`
+      `</filter><rect width="100" height="100" filter="url(#${id})" opacity="${opacity}"/>`
     );
   };
   const svg =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">' +
-    // Cutoffs tuned by measuring coverage: about 0.6% of the disc for the flecks, 0.1% for the glints.
-    layer('a', Math.floor(rnd() * 900) + 1, 5.5, 34, 26.2, config.flake.fleck) +
-    layer('b', Math.floor(rnd() * 900) + 1, 5.5, 60, 49.5, config.flake.glint) +
+    // Cutoffs tuned by measuring: about 0.2% of the disc shows any fleck, and only a few hundredths of a percent glint bright.
+    layer('a', Math.floor(rnd() * 900) + 1, 5.5, 34, 27.4, config.flake.fleck, 0.45) +
+    layer('b', Math.floor(rnd() * 900) + 1, 5.5, 60, 51, config.flake.glint, 1) +
     '</svg>';
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / 100% 100% no-repeat`;
 }
@@ -330,13 +413,23 @@ function liquid(accents: string[], rnd: () => number): string {
   return `url("data:image/svg+xml,${encodeURIComponent(svg)}") center / 100% 100% no-repeat`;
 }
 
-/** Dark wisps through a coloured or clear disc. */
+/**
+ * Smoke: dark wisps curling through a coloured or clear disc. Marble's clouds
+ * and streaks in faint black, bent harder and blurred more, so they drift like
+ * smoke rather than vein like paint.
+ */
 function smoke(rnd: () => number): string {
-  return Array.from({ length: 4 }, () => {
-    const rx = 22 + rnd() * 20;
-    const ry = 10 + rnd() * 16;
-    return `radial-gradient(ellipse ${pct(rx)} ${pct(ry)} at ${pct(15 + rnd() * 70)} ${pct(15 + rnd() * 70)}, rgba(0, 0, 0, 0.42), transparent 75%)`;
-  }).join(', ');
+  const clouds = Array.from({ length: 5 + Math.floor(rnd() * 3) }, () =>
+    arc(20 + rnd() * 29, rnd() * TAU, 1 + rnd() * 2.5, (rnd() - 0.5) * 14, 5 + rnd() * 9, '#000', 0.25 + rnd() * 0.25),
+  );
+  const wisps = Array.from({ length: 30 + Math.floor(rnd() * 20) }, () =>
+    arc(18 + rnd() * 31, rnd() * TAU, 0.3 + rnd() * 1.2, (rnd() - 0.5) * 8, 0.3 + rnd() ** 2 * 1.6, '#000', 0.15 + rnd() * 0.3),
+  );
+  const seed = () => Math.floor(rnd() * 900) + 1;
+  return svgLayer(
+    warp('c', seed(), 0.02, 26, 3.2) + warp('w', seed(), 0.035, 14, 0.9),
+    `<g filter="url(#c)">${clouds.join('')}</g><g filter="url(#w)">${wisps.join('')}</g>`,
+  );
 }
 
 const SHEEN =
@@ -399,6 +492,13 @@ function buildLook(text: string): VinylLook | null {
     glass = p.pattern === 'splatter';
     base = glass ? CLEAR : smoky ? COLOURS.grey : flaky ? BLACK : p.flame ? config.flame.base : MIX_BASE;
     accents = p.flame ? config.flame.accents : smoky || flaky ? [] : MIXED;
+    if (base === MIX_BASE) {
+      // A mix over cream reads as a white disc, so one of the mix colours (picked from the text, so it
+      // never changes) is the body, and the rest, cream included, are wound through it.
+      const pick = Math.floor(seeded(`${text} mix`)() * MIXED.length);
+      base = MIXED[pick];
+      accents = [...MIXED.filter((_, i) => i !== pick), MIX_BASE];
+    }
     translucent = glass || smoky;
   } else {
     // "Clear Blue" is blue glass; "Clear w/ Red Splatter" is clear glass with red on it.
@@ -418,7 +518,7 @@ function buildLook(text: string): VinylLook | null {
 
   const rnd = seeded(text);
   const layers: string[] = [];
-  if (pattern === 'marble') layers.push(marble(accents, rnd));
+  if (pattern === 'marble') layers.push(marble(accents, rnd, translucent ? 0.8 : 0.95, base === CLEAR ? null : base));
   if (pattern === 'swirl') layers.push(swirl(accents, rnd));
   if (pattern === 'splatter') layers.push(splatter(accents, rnd));
   if (pattern === 'liquid') layers.push(liquid(accents, rnd));
