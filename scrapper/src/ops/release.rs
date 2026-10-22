@@ -224,17 +224,13 @@ async fn enrich_perplexity(
     }
 }
 
-/// Look up the primary artist's Wikipedia summary; returns (url, biography).
-async fn enrich_wikipedia(services: &Services, artist: &str) -> Option<(Option<String>, String)> {
-    let summary = services.wikipedia.get_page_summary(artist).await.ok()?;
-    let extract = summary.get("extract").and_then(|e| e.as_str()).filter(|s| s.len() > 50)?;
-    let url = summary
-        .get("content_urls")
-        .and_then(|c| c.get("desktop"))
-        .and_then(|d| d.get("page"))
-        .and_then(|p| p.as_str())
-        .map(String::from);
-    Some((url, extract.to_string()))
+/// The primary artist's Wikipedia summary, from the article Wikidata links to its Discogs
+/// artist ID (never guessed from the name); returns (url, biography).
+async fn enrich_wikipedia(services: &Services, discogs_artist_id: Option<&str>) -> Option<(Option<String>, String)> {
+    let identity = crate::ops::identity::resolve(services, discogs_artist_id?).await.ok()?;
+    let summary = crate::ops::artist::wikipedia_summary(services, identity.wikipedia_title.as_deref()?).await?;
+    let bio = summary.get("biography").and_then(|b| b.as_str())?.to_string();
+    Some((summary.get("url").and_then(|u| u.as_str()).map(String::from), bio))
 }
 
 /// Which services contributed enrichment for a release, and whether artwork was saved.
@@ -390,7 +386,8 @@ pub async fn process_release(
     // Wikipedia bio for the primary artist. This belongs to the ARTIST record (single source of
     // truth — release JSONs join it at write time); it is seeded onto the artist row below once
     // save_release has created it, never embedded into the release.
-    let wiki = enrich_wikipedia(services, &primary_artist).await;
+    let primary_artist_id = discogs.pointer("/artists/0/id").map(|i| i.to_string());
+    let wiki = enrich_wikipedia(services, primary_artist_id.as_deref()).await;
     flags.wikipedia = wiki.is_some();
 
     // Assemble raw_data + external IDs.

@@ -8,6 +8,7 @@ pub mod collection;
 pub mod descriptions;
 pub mod formats;
 pub mod generate;
+pub mod identity;
 pub mod maintenance;
 pub mod original_years;
 pub mod release;

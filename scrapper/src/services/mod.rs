@@ -5,18 +5,22 @@ pub mod http;
 pub mod apple_music;
 pub mod discogs;
 pub mod lastfm;
+pub mod musicbrainz;
 pub mod perplexity;
 pub mod spotify;
 pub mod theaudiodb;
+pub mod wikidata;
 pub mod wikipedia;
 pub mod youtube;
 
 pub use apple_music::AppleMusicService;
 pub use discogs::DiscogsService;
 pub use lastfm::LastfmService;
+pub use musicbrainz::MusicBrainzService;
 pub use perplexity::PerplexityService;
 pub use spotify::SpotifyService;
 pub use theaudiodb::TheAudioDbService;
+pub use wikidata::WikidataService;
 pub use wikipedia::WikipediaService;
 pub use youtube::YouTubeService;
 
@@ -37,6 +41,8 @@ pub struct Services {
     pub spotify: SpotifyService,
     pub lastfm: LastfmService,
     pub wikipedia: WikipediaService,
+    pub wikidata: WikidataService,
+    pub musicbrainz: MusicBrainzService,
     pub theaudiodb: TheAudioDbService,
     pub perplexity: PerplexityService,
     pub youtube: YouTubeService,
@@ -50,6 +56,8 @@ impl Services {
             spotify: SpotifyService::new(cfg),
             lastfm: LastfmService::new(cfg),
             wikipedia: WikipediaService::new(cfg),
+            wikidata: WikidataService::new(cfg),
+            musicbrainz: MusicBrainzService::new(cfg),
             theaudiodb: TheAudioDbService::new(cfg),
             perplexity: PerplexityService::new(cfg),
             youtube: YouTubeService::new(),

@@ -101,7 +101,7 @@ pub struct ReleaseRecord {
 }
 
 /// Full artist record (all columns; JSON columns parsed to [`Value`]).
-#[derive(Debug, Clone, Serialize)]
+#[derive(Debug, Clone, Serialize, Default)]
 pub struct ArtistRecord {
     pub id: String,
     pub name: String,

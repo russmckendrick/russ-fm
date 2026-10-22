@@ -85,6 +85,10 @@ pub enum Command {
     /// index tracks, e.g. "2112") were told apart, so each suite's movements are kept.
     /// Resumable; only releases with an untyped position-less row call Discogs.
     BackfillTracklists(BackfillTracklistsArgs),
+    /// Find each artist's Wikidata item, MusicBrainz ID and Wikipedia article from its Discogs
+    /// ID, then fix TheAudioDB matches, Wikipedia links and biographies a name lookup got wrong.
+    /// Resumable; artists with a stored identity aren't looked up again (unless `--force`).
+    BackfillIdentities(BackfillIdentitiesArgs),
     /// Built-in database manager (search/list/delete/stats/backup).
     #[command(subcommand)]
     Db(DbCommand),
@@ -332,6 +336,22 @@ pub struct BackfillOriginalYearsArgs {
 }
 
 #[derive(Debug, Args)]
+pub struct BackfillIdentitiesArgs {
+    /// Only resolve this many artists (by name); artists already resolved are still checked.
+    #[arg(short, long)]
+    pub limit: Option<u32>,
+    /// Only this artist (exact name, any case).
+    #[arg(short, long)]
+    pub artist: Option<String>,
+    /// Resolve and report what would change, without writing anything.
+    #[arg(long)]
+    pub dry_run: bool,
+    /// Resolve every artist again, including ones with a stored identity.
+    #[arg(short = 'f', long)]
+    pub force: bool,
+}
+
+#[derive(Debug, Args)]
 pub struct BackfillFormatsArgs {
     /// Only fetch this many releases from Discogs (newest additions first); the album JSON of
     /// every release that already has stored formats is still synced.
@@ -466,6 +486,7 @@ pub async fn run(cli: Cli, cfg: Config) -> anyhow::Result<()> {
         Command::BackfillOriginalYears(a) => ops::original_years::run(&cfg, a).await,
         Command::BackfillFormats(a) => ops::formats::run(&cfg, a).await,
         Command::BackfillTracklists(a) => ops::tracklists::run(&cfg, a).await,
+        Command::BackfillIdentities(a) => ops::identity::run(&cfg, a).await,
     }
 }
 

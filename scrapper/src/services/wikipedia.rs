@@ -70,6 +70,22 @@ impl WikipediaService {
         .await
     }
 
+    /// The article URL for a page title, as Wikipedia writes it (`Santana_(band)`).
+    pub fn page_url(&self, title: &str) -> String {
+        let mut path = String::new();
+        for c in title.trim().replace(' ', "_").chars() {
+            if c.is_ascii_alphanumeric() || "_-.()',!~*:/".contains(c) {
+                path.push(c);
+            } else {
+                let mut buf = [0u8; 4];
+                for b in c.encode_utf8(&mut buf).bytes() {
+                    path.push_str(&format!("%{b:02X}"));
+                }
+            }
+        }
+        format!("{}/wiki/{path}", self.action_api.trim_end_matches("/w/api.php"))
+    }
+
     /// REST summary for a page title (extract, thumbnail, content URLs).
     pub async fn get_page_summary(&self, title: &str) -> ServiceResult<Value> {
         let url = format!("{}/page/summary/{}", self.rest_api, urlencoding::encode(title));

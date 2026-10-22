@@ -131,22 +131,31 @@ pub async fn process_artist(
         .unwrap_or(name)
         .to_string();
 
+    // Wikidata/MusicBrainz from the Discogs ID, so Wikipedia, Last.fm and TheAudioDB are
+    // matched by ID rather than by name (see ops::identity).
+    let identity = match discogs.as_ref().and_then(|d| d.get("id")).map(|i| i.to_string()) {
+        Some(id) => crate::ops::identity::resolve(services, &id).await.ok(),
+        None => None,
+    };
+    let mbid = identity.as_ref().and_then(|i| i.musicbrainz_id.clone());
+    let wiki_title = identity.as_ref().and_then(|i| i.wikipedia_title.clone());
+
     // Interactive runs sequentially (each may prompt); otherwise concurrently.
     let (apple, spotify, lastfm, wiki) = if picker.is_interactive() {
         let apple = enrich_apple_artist(services, &display_name, picker).await;
         let spotify = enrich_spotify_artist(services, &display_name, picker).await;
-        let lastfm = enrich_lastfm_artist(services, &display_name).await;
-        let wiki = enrich_wikipedia(services, &display_name).await;
+        let lastfm = enrich_lastfm_artist(services, &display_name, mbid.as_deref()).await;
+        let wiki = enrich_wikipedia(services, wiki_title.as_deref()).await;
         (apple, spotify, lastfm, wiki)
     } else {
         tokio::join!(
             enrich_apple_artist(services, &display_name, picker),
             enrich_spotify_artist(services, &display_name, picker),
-            enrich_lastfm_artist(services, &display_name),
-            enrich_wikipedia(services, &display_name),
+            enrich_lastfm_artist(services, &display_name, mbid.as_deref()),
+            enrich_wikipedia(services, wiki_title.as_deref()),
         )
     };
-    let theaudiodb = if use_theaudiodb { enrich_theaudiodb(services, &display_name).await } else { None };
+    let theaudiodb = if use_theaudiodb { enrich_theaudiodb(services, &display_name, mbid.as_deref()).await } else { None };
 
 let genres = derive_genres(spotify.as_ref(), apple.as_ref());
 let genre_names = genre_strings(&genres);
@@ -176,12 +185,19 @@ let biography = perplexity
     if let Some(p) = &perplexity {
         raw.insert("perplexity".into(), p.clone());
     }
+    if let Some(i) = &identity {
+        raw.insert(crate::ops::identity::RAW_KEY.into(), i.to_value());
+    }
 
     let existing = db.get_artist_by_name(&display_name)?;
 
-    // TheAudioDB: a fresh match when asked for, else the stored one — raw_data is rebuilt
-    // here, and the stored match is what tv.json's music videos hang off.
-    if let Some(t) = theaudiodb.clone().or_else(|| existing.as_ref().and_then(|e| e.raw_data.get("theaudiodb").cloned())) {
+    // TheAudioDB: a fresh match when asked for, else the stored one when it is this artist —
+    // raw_data is rebuilt here, and the stored match is what tv.json's music videos hang off.
+    let stored_theaudiodb = existing
+        .as_ref()
+        .and_then(|e| e.raw_data.get("theaudiodb").cloned())
+        .filter(|t| crate::ops::identity::theaudiodb_fits(t, &display_name, mbid.as_deref()));
+    if let Some(t) = theaudiodb.clone().or_else(|| stored_theaudiodb.clone()) {
         raw.insert("theaudiodb".into(), t);
     }
 
@@ -192,7 +208,7 @@ let biography = perplexity
         Some(id) => crate::ops::videos::theaudiodb_videos(services, &id).await.ok(),
         None => None,
     }
-    .or_else(|| existing.as_ref().and_then(|e| e.raw_data.get("theaudiodb_videos").cloned()));
+    .or_else(|| stored_theaudiodb.as_ref().and_then(|_| existing.as_ref()?.raw_data.get("theaudiodb_videos").cloned()));
     if let Some(v) = tadb_videos {
         raw.insert("theaudiodb_videos".into(), v);
     }
@@ -213,7 +229,7 @@ let biography = perplexity
         discogs_id: discogs.as_ref().and_then(|d| d.get("id")).map(|i| i.to_string()),
         apple_music_id: apple.as_ref().and_then(|a| a.get("id")).and_then(|v| v.as_str()).map(String::from),
         spotify_id: spotify.as_ref().and_then(|s| s.get("id")).and_then(|v| v.as_str()).map(String::from),
-        lastfm_mbid: lastfm.as_ref().and_then(|l| l.get("mbid")).and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from),
+        lastfm_mbid: mbid.clone().or_else(|| lastfm.as_ref().and_then(|l| l.get("mbid")).and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from)),
         discogs_url: discogs.as_ref().and_then(|d| d.get("uri")).and_then(|v| v.as_str()).map(String::from),
         apple_music_url: apple.as_ref().and_then(|a| a.get("url")).and_then(|v| v.as_str()).map(String::from),
         spotify_url: spotify.as_ref().and_then(|s| s.get("url")).and_then(|v| v.as_str()).map(String::from),
@@ -360,9 +376,16 @@ fn map_spotify_artist(item: &Value) -> Value {
     })
 }
 
-async fn enrich_lastfm_artist(services: &Services, name: &str) -> Option<Value> {
+/// Last.fm by MusicBrainz ID when there is one (a name can land on a page shared by several
+/// artists), falling back to the name for MBIDs Last.fm doesn't know.
+async fn enrich_lastfm_artist(services: &Services, name: &str, mbid: Option<&str>) -> Option<Value> {
     if !services.lastfm.is_configured() {
         return None;
+    }
+    if let Some(m) = mbid {
+        if let Some(found) = services.lastfm.get_artist_info_by_mbid(m).await.ok().as_ref().and_then(map_lastfm_artist) {
+            return Some(found);
+        }
     }
     let resp = services.lastfm.get_artist_info(name).await.ok()?;
     map_lastfm_artist(&resp)
@@ -381,8 +404,40 @@ fn map_lastfm_artist(resp: &Value) -> Option<Value> {
     }))
 }
 
-async fn enrich_wikipedia(services: &Services, name: &str) -> Option<Value> {
-    let summary = services.wikipedia.get_page_summary(name).await.ok()?;
+/// The artist's stored identity, or one resolved now from its Discogs ID (and stored in `raw`).
+async fn identity_of(services: &Services, rec: &ArtistRecord, raw: &mut Map<String, Value>) -> Option<crate::ops::identity::ArtistIdentity> {
+    use crate::ops::identity::{resolve, ArtistIdentity, RAW_KEY};
+    if let Some(i) = raw.get(RAW_KEY).and_then(ArtistIdentity::from_value) {
+        return Some(i);
+    }
+    let i = resolve(services, rec.discogs_id.as_deref()?).await.ok()?;
+    raw.insert(RAW_KEY.into(), i.to_value());
+    Some(i)
+}
+
+/// Point `wikipedia_url` at the fetched article; clear it when Wikidata knows the artist and
+/// says there is no article. Otherwise (no Wikidata match, failed fetch) leave it.
+fn set_wikipedia_url(rec: &mut ArtistRecord, identity: Option<&crate::ops::identity::ArtistIdentity>, wiki: Option<&Value>) {
+    if let Some(u) = wiki.and_then(|w| w.get("url")).and_then(|v| v.as_str()) {
+        rec.wikipedia_url = Some(u.to_string());
+    } else if identity.is_some_and(|i| i.wikidata_id.is_some() && i.wikipedia_title.is_none()) {
+        rec.wikipedia_url = None;
+    }
+}
+
+/// The Wikipedia summary for the article an artist's identity names. There is no guessing from
+/// the name: an artist without a verified article gets no Wikipedia bio.
+async fn enrich_wikipedia(services: &Services, title: Option<&str>) -> Option<Value> {
+    wikipedia_summary(services, title?).await
+}
+
+/// `{ biography, url }` from a Wikipedia page's summary; None for a missing page, a
+/// disambiguation page or a stub extract.
+pub(crate) async fn wikipedia_summary(services: &Services, title: &str) -> Option<Value> {
+    let summary = services.wikipedia.get_page_summary(title).await.ok()?;
+    if summary.get("type").and_then(|t| t.as_str()) == Some("disambiguation") {
+        return None;
+    }
     let extract = summary.get("extract").and_then(|e| e.as_str()).filter(|s| s.len() > 50)?;
     let url = summary
         .get("content_urls")
@@ -392,9 +447,18 @@ async fn enrich_wikipedia(services: &Services, name: &str) -> Option<Value> {
     Some(json!({ "biography": extract, "url": url }))
 }
 
-async fn enrich_theaudiodb(services: &Services, name: &str) -> Option<Value> {
+/// TheAudioDB by MusicBrainz ID when there is one; otherwise (or when TheAudioDB doesn't know
+/// the MBID) the first name-search hit that really is this artist.
+pub(crate) async fn enrich_theaudiodb(services: &Services, name: &str, mbid: Option<&str>) -> Option<Value> {
+    use crate::ops::identity::theaudiodb_fits;
+    if let Some(m) = mbid {
+        let resp = services.theaudiodb.get_artist_by_mbid(m).await.ok();
+        if let Some(found) = resp.as_ref().and_then(|r| r.get("artists")?.as_array()?.first().cloned()) {
+            return Some(found);
+        }
+    }
     let resp = services.theaudiodb.search_artist(name).await.ok()?;
-    resp.get("artists")?.as_array()?.first().cloned()
+    resp.get("artists")?.as_array()?.iter().find(|a| theaudiodb_fits(a, name, mbid)).cloned()
 }
 
 // ── Per-field editing (TUI database editor) ──────────────────────────────────
@@ -621,10 +685,10 @@ async fn enrich_perplexity_artist(
 }
 
 /// Biography priority: Wikipedia → Last.fm → TheAudioDB.
-fn derive_biography(wiki: Option<&Value>, lastfm: Option<&Value>, theaudiodb: Option<&Value>) -> Option<String> {
+pub(crate) fn derive_biography(wiki: Option<&Value>, lastfm: Option<&Value>, theaudiodb: Option<&Value>) -> Option<String> {
     wiki.and_then(|w| w.get("biography").and_then(|b| b.as_str()).map(String::from))
         .or_else(|| lastfm.and_then(|l| l.get("bio_content").and_then(|b| b.as_str()).filter(|s| !s.is_empty()).map(String::from)))
-        .or_else(|| theaudiodb.and_then(|t| t.get("strBiographyEN").and_then(|b| b.as_str()).map(String::from)))
+        .or_else(|| theaudiodb.and_then(crate::ops::identity::theaudiodb_biography).map(String::from))
 }
 
 /// Genre priority: Spotify (if non-empty) → Apple Music.
@@ -703,9 +767,15 @@ pub async fn refresh_artist_field(
     let cur_spotify = raw.get("spotify").cloned();
     let cur_apple = raw.get("apple_music").cloned();
     let cur_lastfm = raw.get("lastfm").cloned();
-    let cur_theaudiodb = raw.get("theaudiodb").cloned();
     let mut found = false;
     let mut download_image = false;
+    // The verified Wikipedia article / MBID, for the fields that look them up.
+    let identity = match field {
+        ArtistField::Lastfm | ArtistField::Wikipedia | ArtistField::Biography => identity_of(services, &rec, &mut raw).await,
+        _ => None,
+    };
+    let mbid = identity.as_ref().and_then(|i| i.musicbrainz_id.clone());
+    let cur_theaudiodb = raw.get("theaudiodb").cloned().filter(|t| crate::ops::identity::theaudiodb_fits(t, &name, mbid.as_deref()));
 
     match field {
         ArtistField::Discogs => {
@@ -713,6 +783,8 @@ pub async fn refresh_artist_field(
                 rec.discogs_id = d.get("id").map(|i| i.to_string());
                 rec.discogs_url = d.get("uri").and_then(|v| v.as_str()).map(String::from);
                 raw.insert("discogs".into(), d);
+                // Resolved again from the new Discogs ID on next use.
+                raw.remove(crate::ops::identity::RAW_KEY);
                 found = true;
             }
         }
@@ -741,20 +813,16 @@ pub async fn refresh_artist_field(
             }
         }
         ArtistField::Lastfm => {
-            if let Some(l) = enrich_lastfm_artist(services, &name).await {
-                rec.lastfm_mbid = l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from);
+            if let Some(l) = enrich_lastfm_artist(services, &name, mbid.as_deref()).await {
+                rec.lastfm_mbid = mbid.clone().or_else(|| l.get("mbid").and_then(|v| v.as_str()).filter(|s| !s.is_empty()).map(String::from));
                 rec.lastfm_url = l.get("url").and_then(|v| v.as_str()).map(String::from);
                 raw.insert("lastfm".into(), l);
                 found = true;
             }
         }
         ArtistField::Wikipedia => {
-            let wiki = enrich_wikipedia(services, &name).await;
-            if let Some(w) = &wiki {
-                if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
-                    rec.wikipedia_url = Some(u.to_string());
-                }
-            }
+            let wiki = enrich_wikipedia(services, identity.as_ref().and_then(|i| i.wikipedia_title.as_deref())).await;
+            set_wikipedia_url(&mut rec, identity.as_ref(), wiki.as_ref());
             let bio = derive_biography(wiki.as_ref(), cur_lastfm.as_ref(), cur_theaudiodb.as_ref());
             if bio.is_some() {
                 rec.biography = bio;
@@ -772,12 +840,8 @@ pub async fn refresh_artist_field(
                 }
                 raw.insert("perplexity".into(), p);
             } else {
-                let wiki = enrich_wikipedia(services, &name).await;
-                if let Some(w) = &wiki {
-                    if let Some(u) = w.get("url").and_then(|v| v.as_str()) {
-                        rec.wikipedia_url = Some(u.to_string());
-                    }
-                }
+                let wiki = enrich_wikipedia(services, identity.as_ref().and_then(|i| i.wikipedia_title.as_deref())).await;
+                set_wikipedia_url(&mut rec, identity.as_ref(), wiki.as_ref());
                 let bio = derive_biography(wiki.as_ref(), cur_lastfm.as_ref(), cur_theaudiodb.as_ref());
                 if bio.is_some() {
                     rec.biography = bio;
@@ -935,6 +999,7 @@ pub async fn set_artist_service(
                 rec.discogs_url = d.get("uri").and_then(|v| v.as_str()).map(String::from);
                 raw.insert("discogs".into(), d);
             }
+            raw.remove(crate::ops::identity::RAW_KEY);
         }
         ArtistField::Apple => {
             if t.is_empty() {
@@ -1002,7 +1067,7 @@ pub async fn set_artist_service(
             } else {
                 let title = service_input::wikipedia_title(t)
                     .ok_or_else(|| anyhow::anyhow!("expected a Wikipedia article URL or page title"))?;
-                let w = enrich_wikipedia(services, &title)
+                let w = wikipedia_summary(services, &title)
                     .await
                     .ok_or_else(|| anyhow::anyhow!("Wikipedia has no usable summary for \"{title}\""))?;
                 if let Some(u) = w.get("url").and_then(|v| v.as_str()) {

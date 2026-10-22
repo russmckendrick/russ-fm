@@ -341,6 +341,12 @@ biography, HTML with a "Read more on Last.fm" link and licence line at the end)
 and uses it when it is longer than `biography`. Keep that key in the per-artist
 JSON.
 
+`raw_data.identity` (`{wikidata_id, musicbrainz_id, wikipedia_title, resolved_at}`) records the
+Wikidata item, MusicBrainz ID and Wikipedia article found from the artist's Discogs ID. Any of
+the first three may be null; a stored identity means "looked up", so it isn't looked up again.
+`lastfm_mbid` holds the resolved MusicBrainz ID when there is one. See
+[Wikidata and MusicBrainz](../api-integrations/others.md#wikidata-and-musicbrainz).
+
 ---
 
 ### Artist image JSON (`artist/{slug}/{slug}-image.json`)

@@ -88,6 +88,12 @@ impl LastfmService {
         self.call("artist.getInfo", vec![("artist", artist.into())]).await
     }
 
+    /// `artist.getInfo` by MusicBrainz ID, which avoids Last.fm's same-name pages; Last.fm doesn't
+    /// know every MBID, so callers fall back to the name.
+    pub async fn get_artist_info_by_mbid(&self, mbid: &str) -> ServiceResult<Value> {
+        self.call("artist.getInfo", vec![("mbid", mbid.into())]).await
+    }
+
     pub async fn search_release(&self, artist: &str, album: &str) -> ServiceResult<Value> {
         self.call("album.search", vec![("album", format!("{artist} {album}"))]).await
     }

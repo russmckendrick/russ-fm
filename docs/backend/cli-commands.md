@@ -494,6 +494,61 @@ scrapper backfill-original-years --force
 
 ---
 
+## backfill-identities
+
+Find each artist's Wikidata item, MusicBrainz ID and Wikipedia article from its Discogs ID, store
+them as `raw_data.identity`, and fix what an earlier name lookup got wrong: TheAudioDB matches,
+Wikipedia links and the biographies that came from them.
+
+```bash
+scrapper backfill-identities [OPTIONS]
+```
+
+### Options
+
+| Option | Short | Type | Default | Description |
+|--------|-------|------|---------|-------------|
+| `--limit` | `-l` | INT | all | Only resolve this many artists (by name); artists already resolved are still checked |
+| `--artist` | `-a` | TEXT | all | Only this artist (exact name, any case) |
+| `--dry-run` | | FLAG | `false` | Resolve and print what would change for each artist, without writing anything |
+| `--force` | `-f` | FLAG | `false` | Resolve every artist again, including ones with a stored identity |
+
+### Examples
+
+```bash
+# What would change for one artist?
+scrapper backfill-identities --dry-run --artist "Stevie Wonder"
+
+# Everything (resumable)
+scrapper backfill-identities
+```
+
+### Behavior
+
+- Resolves artists with a Discogs ID and no stored identity: one Wikidata query per 200
+  artists, then one MusicBrainz request (one a second) for each artist whose MBID Wikidata didn't
+  settle, so a full run over ~1,250 artists takes about four minutes. An artist whose
+  MusicBrainz lookup fails isn't stored, so a re-run retries it.
+- For each resolved artist, works out what is wrong without further requests, then fixes it:
+  - **TheAudioDB:** a stored match whose MBID differs from the resolved one (or, without MBIDs,
+    whose name doesn't match) is re-matched by MBID or dropped, and its music videos are
+    re-fetched or dropped with it. Empty "not found" placeholders are left alone.
+  - **Wikipedia link:** set to the resolved article; cleared when Wikidata knows the artist and
+    it has no article. Links on artists Wikidata doesn't know are left, and listed at the end
+    for checking by hand.
+  - **Biography:** re-derived (Wikipedia → Last.fm → TheAudioDB) only when it came from the
+    wrong TheAudioDB match or the wrong Wikipedia page, or is empty and an article exists.
+    Perplexity and Last.fm biographies are kept.
+  - **`lastfm_mbid`:** set to the resolved MBID.
+- Changed artists are saved with `persist_artist`, which rewrites the artist JSON and every
+  release JSON that embeds the artist; artists with nothing to fix only get the identity stored
+  in the DB. Then regenerates `collection.json`. Rebuild `tv.json` afterwards if any TheAudioDB
+  match changed.
+- New artists resolve their identity in `process_artist`, and `process_release` finds the primary
+  artist's Wikipedia article the same way, so this is only needed for artists stored before.
+
+---
+
 ## backfill-formats
 
 Store each release's Discogs pressing detail (vinyl colour lives in a format's `text`), write

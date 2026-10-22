@@ -174,6 +174,13 @@ Field behaviour is declared on the `ReleaseField` / `ArtistField` enums (`kind()
   Wikipedia → Last.fm → TheAudioDB when skipped or running headless. `process_release`'s
   Wikipedia lookup now seeds the artist record (when it has no bio) instead of embedding a copy
   into the release.
+- **Artist identity.** Wikipedia, TheAudioDB and Last.fm are matched through the artist's
+  Discogs ID, not its name: Wikidata (and MusicBrainz as a fallback) give the Wikipedia article
+  and MusicBrainz ID, stored as `raw_data.identity` (`ops/identity.rs`). The Last.fm, Wikipedia
+  and Biography refreshes use the stored identity, resolving it first when missing; changing the
+  Discogs identity drops it so it is resolved again. A stored TheAudioDB match that isn't this
+  artist is not carried over by a refresh. See
+  [Wikidata and MusicBrainz](../api-integrations/others.md#wikidata-and-musicbrainz).
 - **Comma-separated lists** — labels, formats, genres, styles and Last.fm tags (releases);
   genres and Last.fm tags (artists).
 - **Service identities** (`FieldKind::Service`) — Apple Music / Spotify / Last.fm on releases;

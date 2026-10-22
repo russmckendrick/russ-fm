@@ -1,6 +1,6 @@
 # Other API Integrations
 
-This document covers Wikipedia, TheAudioDB, and lightweight frontend analytics integrations.
+This document covers Wikipedia, Wikidata, MusicBrainz, TheAudioDB, and lightweight frontend analytics integrations.
 
 ## Wikipedia
 
@@ -21,6 +21,13 @@ This document covers Wikipedia, TheAudioDB, and lightweight frontend analytics i
   }
 }
 ```
+
+### Matching
+
+The scrapper never looks an artist's article up by name. The article title comes from Wikidata,
+keyed by the artist's Discogs ID (see [Wikidata and MusicBrainz](#wikidata-and-musicbrainz)), and
+the summary is fetched for that exact title. An artist Wikidata doesn't know gets no Wikipedia
+biography, and a summary whose `type` is `disambiguation` is ignored.
 
 ### Service Class
 
@@ -132,6 +139,38 @@ sources instead (see Data Priority in the [API Integrations overview](./README.m
 | extract | biography |
 | thumbnail.source | images |
 | originalimage.source | raw_data.services.wikipedia.image |
+
+---
+
+## Wikidata and MusicBrainz
+
+Used to find an artist's other pages by ID instead of by name (`scrapper/src/ops/identity.rs`).
+Name lookups go wrong for shared and common names: a TheAudioDB search for "Stevie Wonder"
+returned The Supremes, and the Wikipedia page titled "Santana" is a disambiguation page.
+
+- **Wikidata** (`scrapper/src/services/wikidata.rs`): one SPARQL query to
+  `https://query.wikidata.org/sparql` maps up to 200 Discogs artist IDs (property P1953) to the
+  item, its MusicBrainz artist IDs (P434) and its article on the configured Wikipedia. No auth;
+  the client sends a descriptive User-Agent and runs 30 queries a minute at most. A Discogs ID
+  claimed by two items is ignored. In a sample of the collection about 86% of artists resolve.
+- **MusicBrainz** (`scrapper/src/services/musicbrainz.rs`): `GET /ws/2/url?resource=https://www.discogs.com/artist/{id}&inc=artist-rels`
+  gives the MusicBrainz artist linked to a Discogs page. Used when Wikidata has no MBID for the
+  artist or several (aliases, unmerged duplicates). No auth; one request a second (the client
+  runs 50 a minute).
+
+The result is stored on the artist row as `raw_data.identity`
+(`{wikidata_id, musicbrainz_id, wikipedia_title, resolved_at}`; any of the first three may be
+null). It is then used for:
+
+| Service | Lookup |
+|---------|--------|
+| Wikipedia | Summary of `wikipedia_title`; nothing when there is none |
+| TheAudioDB | `artist-mb.php?i={mbid}`, then a name search that only accepts a hit whose name matches (`&`/"and", a leading "The", accents and punctuation ignored) and whose MBID, when both are known, agrees |
+| Last.fm | `artist.getInfo` by `mbid`, then by name when Last.fm doesn't know the MBID |
+| `lastfm_mbid` | The resolved MBID, when there is one |
+
+`scrapper backfill-identities` resolves stored artists and repairs what earlier name lookups got
+wrong (see [cli-commands.md](../backend/cli-commands.md#backfill-identities)).
 
 ---
 
