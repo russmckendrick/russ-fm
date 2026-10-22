@@ -122,11 +122,14 @@ fn colour_of_text(text: &str) -> Option<String> {
 /// `colour` is the vinyl colour derived from `text` (null for other formats and uncoloured
 /// vinyl). `None` when the release has no stored formats yet, which is how "not backfilled"
 /// differs from "no formats".
+///
+/// Discogs' "All Media" entry describes every disc in the release, and some submitters put the
+/// colour there instead of on the Vinyl entries ("Orange, Tour Exclusive"). When no Vinyl entry
+/// names a colour of its own, the All Media colour is given to each Vinyl entry.
 pub fn details_from_raw(raw_data: &Value) -> Option<Vec<Value>> {
     let formats = raw_data.get("discogs")?.get("formats")?.as_array()?;
-    Some(
-        formats
-            .iter()
+    let mut details: Vec<Value> = formats
+        .iter()
             .filter_map(|f| {
                 let name = f.get("name")?.as_str()?;
                 let qty = match f.get("qty") {
@@ -143,17 +146,27 @@ pub fn details_from_raw(raw_data: &Value) -> Option<Vec<Value>> {
                 let colour = if name == "Vinyl" { text.and_then(colour_of_text) } else { None };
                 Some(json!({ "name": name, "qty": qty, "descriptions": descriptions, "text": text, "colour": colour }))
             })
-            .collect(),
-    )
+            .collect();
+    let named = |f: &Value, name: &str| f["name"].as_str() == Some(name);
+    let has_own_colour = details.iter().any(|f| named(f, "Vinyl") && !f["colour"].is_null());
+    let all_media = details.iter().filter(|f| named(f, "All Media")).find_map(|f| f["text"].as_str().and_then(colour_of_text));
+    if let (false, Some(colour)) = (has_own_colour, all_media) {
+        for f in details.iter_mut().filter(|f| named(f, "Vinyl")) {
+            f["colour"] = json!(colour);
+        }
+    }
+    Some(details)
 }
 
 /// The colours of a release's vinyl, one per disc set in order, without repeats
-/// (case-insensitive). Empty for black vinyl, non-vinyl releases and vinyl whose text names no
-/// colour.
+/// (case-insensitive): each Vinyl entry's `colour` (which may come from the All Media entry), or
+/// the colour in its `text` when it has none. Empty for black vinyl, non-vinyl releases and vinyl
+/// whose text names no colour.
 pub fn colours_from_details(details: &[Value]) -> Vec<String> {
     let mut out: Vec<String> = Vec::new();
     for f in details.iter().filter(|f| f.get("name").and_then(|n| n.as_str()) == Some("Vinyl")) {
-        let Some(colour) = f.get("text").and_then(|t| t.as_str()).and_then(colour_of_text) else { continue };
+        let colour = f.get("colour").and_then(|c| c.as_str()).map(String::from);
+        let Some(colour) = colour.or_else(|| f.get("text").and_then(|t| t.as_str()).and_then(colour_of_text)) else { continue };
         if !out.iter().any(|c| c.eq_ignore_ascii_case(&colour)) {
             out.push(colour);
         }
@@ -313,6 +326,32 @@ mod tests {
         assert_eq!(details[2]["colour"], Value::Null);
         assert_eq!(colours_from_details(&details), ["Yellow Transparent", "Blue Transparent"]);
         assert_eq!(colours("Clear, Red Splatter"), ["Clear Red Splatter"]);
+    }
+
+    #[test]
+    fn an_all_media_colour_colours_vinyl_that_names_none() {
+        // Songs In The Key Of Life (38736561): the colour is only on the All Media entry.
+        let raw = json!({ "discogs": { "formats": [
+            { "name": "Vinyl", "qty": "2", "descriptions": ["LP", "Stereo"] },
+            { "name": "Vinyl", "qty": "1", "descriptions": ["7\""] },
+            { "name": "All Media", "qty": "1", "descriptions": ["Album", "Limited Edition"], "text": "Orange, Tour Exclusive" },
+        ] } });
+        let details = details_from_raw(&raw).unwrap();
+        assert_eq!(details[0]["colour"], "Orange");
+        assert_eq!(details[1]["colour"], "Orange");
+        assert_eq!(details[2]["colour"], Value::Null);
+        assert_eq!(vinyl_colours(&raw), ["Orange"]);
+    }
+
+    #[test]
+    fn an_all_media_note_that_is_not_a_colour_leaves_vinyl_black() {
+        let raw = json!({ "discogs": { "formats": [
+            { "name": "Vinyl", "qty": "2" },
+            { "name": "All Media", "text": "30th Anniversary Edition, Gatefold" },
+            { "name": "Box Set", "text": "Blue" },
+        ] } });
+        assert!(vinyl_colours(&raw).is_empty());
+        assert_eq!(details_from_raw(&raw).unwrap()[0]["colour"], Value::Null);
     }
 
     #[test]

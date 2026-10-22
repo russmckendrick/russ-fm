@@ -241,7 +241,11 @@ The plain `formats` list keeps only the names (`["Vinyl"]`), so the colour lives
 The derivation (`scrapper/src/formats.rs`, with its word lists in the shared
 [`src/config/vinyl-colours.json`](../../src/config/vinyl-colours.json)) is a heuristic over free text. One entry's `text`
 describes a single disc, so its colour parts are one colour: `Yellow, Transparent` is a
-transparent yellow LP (`colour: "Yellow Transparent"`). It splits `text` on
+transparent yellow LP (`colour: "Yellow Transparent"`). Some releases put the colour on the
+"All Media" entry (which covers every disc) and leave the Vinyl entries blank, e.g.
+`{"name": "All Media", "text": "Orange, Tour Exclusive"}`; when no Vinyl entry names a colour of its
+own, each Vinyl entry takes the All Media colour (the All Media entry's own `colour` stays null).
+"Box Set" text is never used, as it describes the box. It splits `text` on
 commas, semicolons and ` - `, keeps a piece that names a colour or pattern (clear, red, blue,
 translucent, marbled, splatter, swirl, liquid, …) and drops weights (`180 Gram`), a trailing "Vinyl",
 and pieces about the sleeve, labels or an anniversary (`Gatefold`, `30th Anniversary Edition`,
